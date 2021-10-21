@@ -32,7 +32,7 @@ browser-compat: webextensions.api.tabs.create
  <dt><code>createProperties</code></dt>
  <dd><code>object</code>. Properties to give the new tab. To learn more about these properties, see the {{WebExtAPIRef("tabs.Tab")}} documentation.</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>active</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Whether the tab should become the active tab in the window. If <code>false</code>, it has no effect. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). Defaults to <code>true</code>.</dd>
   <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
@@ -49,7 +49,9 @@ browser-compat: webextensions.api.tabs.create
   <dd><code>boolean</code>. Whether the tab should be pinned. Defaults to <code>false</code>.</dd>
   <dt><code>selected</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Whether the tab should become the selected tab in the window. Defaults to <code>true</code>.
-  <div class="warning">This property is deprecated, and is not supported in Firefox. Use <code>active</code> instead.</div>
+  <div class="warning">
+    <p><strong>Warning:</strong> This property is deprecated, and is not supported in Firefox. Use <code>active</code> instead.</p>
+  </div>
   </dd>
   <dt><code>title</code> {{optional_inline}}</dt>
   <dd><code>string</code>. The title of the tab. Allowed only if the tab is created with <code>discarded</code> set to <code>true</code>.</dd>
@@ -106,9 +108,8 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-create"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-create"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

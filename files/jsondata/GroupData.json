@@ -406,8 +406,7 @@
         "MediaKeys",
         "MediaKeySession",
         "MediaKeyStatusMap",
-        "MediaKeySystemAccess",
-        "MediaKeySystemConfiguration"
+        "MediaKeySystemAccess"
       ],
       "methods": [
         "Navigator.requestMediaKeySystemAccess()",
@@ -849,8 +848,7 @@
       "interfaces": [
         "MediaCapabilities",
         "ScreenLuminance",
-        "Screen",
-        "MediaCapabilitiesInfo"
+        "Screen"
       ],
       "methods": [
         "mediaCapabilities.decodingInfo()",

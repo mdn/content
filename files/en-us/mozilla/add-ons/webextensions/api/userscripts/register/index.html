@@ -35,7 +35,7 @@ await registeredUserScript.unregister();</pre>
  <p><br>
   The <code>UserScriptOptions</code> object has the following properties:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>scriptMetadata</code> {{Optional_Inline}}</dt>
   <dd>A <code>JSON</code> object containing arbitrary metadata properties associated with the registered user scripts. However, while arbitrary, the object must be serializable, so it is compatible with <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">the structured clone algorithm.</a> This metadata is used to pass details from the script to the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">API script</a></code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts"></a>. For example, providing details of a subset of the APIs that need to be injected by the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">API script</a></code>. The API  does not use this metadata,</dd>
   <dt><code>allFrames</code> {{Optional_Inline}}</dt>
@@ -66,7 +66,7 @@ await registeredUserScript.unregister();</pre>
 <p>A {{JSxRef("Promise")}} that is fulfilled with a {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} object that is use to unregister the user scripts.</p>
 
 <div class="notecard note">
-<p>Note: User scripts are unregistered when the related extension page (from which the user scripts were registered) is unloaded, so you should register user scripts from an extension page that persists at least as long as you want the user scripts to stay registered.</p>
+<p><strong>Note:</strong> User scripts are unregistered when the related extension page (from which the user scripts were registered) is unloaded, so you should register user scripts from an extension page that persists at least as long as you want the user scripts to stay registered.</p>
 </div>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>

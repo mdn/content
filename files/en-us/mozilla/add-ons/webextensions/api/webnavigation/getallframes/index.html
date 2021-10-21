@@ -32,7 +32,7 @@ browser-compat: webextensions.api.webNavigation.getAllFrames
  <dt><code>details</code></dt>
  <dd><code>object</code>. Information about the tab to retrieve all frames from.</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>tabId</code></dt>
   <dd><code>integer</code>. The ID of the tab.</dd>
  </dl>
@@ -43,7 +43,7 @@ browser-compat: webextensions.api.webNavigation.getAllFrames
 
 <p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an array of objects, each of which has the following properties:</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>errorOccurred</code></dt>
  <dd><code>boolean</code>. True if the last navigation in this frame was interrupted by an error, i.e. the {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} event fired.</dd>
  <dt><code>processId</code></dt>
@@ -94,9 +94,8 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webNavigation#method-getAllFrames"><code>chrome.webNavigation</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webNavigation#method-getAllFrames"><code>chrome.webNavigation</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

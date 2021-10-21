@@ -97,10 +97,10 @@ tags:
 <h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
 
 <ul>
- <li>The "<code>align</code>" attribute on the <code>urlbar-wrapper</code> (formerly on the <code>urlbar-container</code>) which was set to "<code>center</code>" since <a href="http://bonsai.mozilla.org/cvsview2.cgi?diff_mode=context&amp;whitespace_mode=show&amp;root=/cvsroot&amp;subdir=mozilla/browser/base/content&amp;command=DIFF_FRAMESET&amp;file=browser.xul&amp;rev2=1.10&amp;rev1=1.9">time immemorial</a>, has been removed. This is known to affect third-party themes. You should look carefully at what the right fix is for your theme, but for maintaining the equivalent effect, you can add the following CSS rule to your theme:<br>
-  <code>#urlbar-wrapper {<br>
-    -moz-box-align: center;<br>
-  }</code></li>
+ <li>The "<code>align</code>" attribute on the <code>urlbar-wrapper</code> (formerly on the <code>urlbar-container</code>) which was set to "<code>center</code>" since <a href="http://bonsai.mozilla.org/cvsview2.cgi?diff_mode=context&amp;whitespace_mode=show&amp;root=/cvsroot&amp;subdir=mozilla/browser/base/content&amp;command=DIFF_FRAMESET&amp;file=browser.xul&amp;rev2=1.10&amp;rev1=1.9">time immemorial</a>, has been removed. This is known to affect third-party themes. You should look carefully at what the right fix is for your theme, but for maintaining the equivalent effect, you can add the following CSS rule to your theme:
+  <pre class="brush: css">#urlbar-wrapper {
+  -moz-box-align: center;
+}</pre></li>
  <li><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendQueryContentEvent()"><code>nsIDOMWindowUtils.sendQueryContentEvent()</code></a> and <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendSelectionSetEvent%28%29"><code>nsIDOMWindowUtils.sendSelectionSetEvent()</code></a> have <code>aAdditionalFlags</code> as optional argument. If you called <code>nsIDOMWindowUtils.sendSelectionSetEvent()</code> with <code>true</code> for <code>aReverse</code>, the behavior would be broken by this change. See <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#Constants">explanation of each flag</a> (<code>QUERY_CONTENT_FLAG_*</code> and <code>SELECTION_SET_FLAG_*</code>) for the detail of <code>aAdditionalFlags</code>.</li>
 </ul>
 

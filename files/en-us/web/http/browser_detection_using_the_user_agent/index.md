@@ -84,7 +84,7 @@ var splitUpString = isLookBehindSupported ? function(str) {
 
 As the above code demonstrates, there is **always** a way to test browser support without user agent sniffing. There is **never** any reason to check the user agent string for this.
 
-Lastly, the above code snippets bring about a critical issue with cross-browser coding that must always be taken into account. Don't unintentionally use the API you are testing for in unsupported browsers. This may sound obvious and simple, but sometimes it is not. For example, in the above code snippets, using lookbehind in short-regexp notation (e.g. /reg/igm) will cause a parser error in unsupported browsers. Thus, in the above example, you would use _new RegExp("(?<=look_behind_stuff)");_ instead of _/(?<=look_behind_stuff)/_, even in the lookbehind supported section of your code.
+Lastly, the above code snippets bring about a critical issue with cross-browser coding that must always be taken into account. Don't unintentionally use the API you are testing for in unsupported browsers. This may sound obvious and simple, but sometimes it is not. For example, in the above code snippets, using lookbehind in short-regexp notation (for example, /reg/igm) will cause a parser error in unsupported browsers. Thus, in the above example, you would use _new RegExp("(?<=look_behind_stuff)");_ instead of _/(?<=look_behind_stuff)/_, even in the lookbehind supported section of your code.
 
 - Progressive enhancement
   - : This design technique involves developing your Web site in 'layers', using a bottom-up approach, starting with a simpler layer and improving the capabilities of the site in successive layers, each using more features.

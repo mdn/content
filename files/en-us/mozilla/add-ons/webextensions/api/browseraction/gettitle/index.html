@@ -34,7 +34,7 @@ browser-compat: webextensions.api.browserAction.getTitle
  <dt><code>details</code></dt>
  <dd><code>object</code>.</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>tabId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. Specify the tab to get the title from.</dd>
   <dt><code>windowId</code>{{optional_inline}}</dt>
@@ -60,7 +60,7 @@ browser-compat: webextensions.api.browserAction.getTitle
 
 <p>This code switches the title between "this" and "that" each time the user clicks the browser action:</p>
 
-<pre class="brush: js line-numbers language-js">function toggleTitle(title) {
+<pre class="brush: js">function toggleTitle(title) {
   if (title == &quot;this&quot;) {
     browser.browserAction.setTitle({title: &quot;that&quot;});
   } else {
@@ -75,9 +75,8 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction#method-getTitle"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction#method-getTitle"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

@@ -10,7 +10,7 @@ browser-compat: webextensions.manifest.sidebar_action
 <table class="fullwidth-table standard-table">
  <tbody>
   <tr>
-   <th scope="row" style="width: 30%;">Type</th>
+   <th scope="row">Type</th>
    <td><code>Object</code></td>
   </tr>
   <tr>
@@ -20,7 +20,7 @@ browser-compat: webextensions.manifest.sidebar_action
   <tr>
    <th scope="row">Example</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "sidebar_action": {
   "default_icon": {
     "16": "button/geo-16.png",
@@ -79,12 +79,12 @@ browser-compat: webextensions.manifest.sidebar_action
 
     <p>You can specify a single icon file by supplying a string here:</p>
 
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "default_icon": "path/to/geo.svg"</pre>
 
     <p>To specify multiple icons in different sizes, specify an object here. The name of each property is the icon's height in pixels, and must be convertible to an integer. The value is the URL. For example:</p>
 
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
     "default_icon": {
       "16": "path/to/geo-16.png",
       "32": "path/to/geo-32.png"
@@ -131,7 +131,7 @@ browser-compat: webextensions.manifest.sidebar_action
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: json no-line-numbers">"sidebar_action": {
+<pre class="brush: json">"sidebar_action": {
   "default_icon": "sidebar.svg",
   "default_title": "My sidebar!",
   "default_panel": "sidebar.html",

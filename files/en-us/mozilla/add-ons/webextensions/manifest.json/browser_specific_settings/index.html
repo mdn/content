@@ -13,17 +13,17 @@ browser-compat: webextensions.manifest.browser_specific_settings
 <table class="fullwidth-table standard-table">
 	<tbody>
 		<tr>
-			<th scope="row" style="width: 30%;">Type</th>
+			<th scope="row">Type</th>
 			<td><code>Object</code></td>
 		</tr>
 		<tr>
 			<th scope="row">Mandatory</th>
-			<td>Usually, no (but see also <a href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when-do-you-need-an-add-on-id">When do you need an Add-on ID?</a>). Mandatory if the extension ID cannot be determined, see <a href="#browser_specific_settings_gecko_id"><code>browser_specific_settings.gecko.id</code></a>.</td>
+			<td>Usually, no (but see also <a href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when-do-you-need-an-add-on-id">When do you need an Add-on ID?</a>). Mandatory if the extension ID cannot be determined, see <a href="#firefox_gecko_properties"><code>browser_specific_settings.gecko.id</code></a>.</td>
 		</tr>
 		<tr>
 			<th scope="row">Example</th>
 			<td>
-			<pre class="brush: json; no-line-numbers">
+			<pre class="brush: json;">
 "browser_specific_settings": {
   "gecko": {
     "id": "addon@example.com",
@@ -45,7 +45,7 @@ browser-compat: webextensions.manifest.browser_specific_settings
 <p>Firefox stores its browser specific settings in the <code>gecko</code> subkey, which has the following properties:</p>
 
 <dl>
-	<dt id="browser_specific_settings_gecko_id"><code>id</code></dt>
+	<dt><code>id</code></dt>
 	<dd>Is the extension ID. Optional since Firefox 48, where the extension ID is derived from the extension's signature. Mandatory if the extension is unsigned (and not loaded via <code>about:debugging</code>). See <a href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/">Extensions and the Add-on ID</a> to see when you need to specify an add-on ID.</dd>
 	<dt><code>strict_min_version</code></dt>
 	<dd>Minimum version of Gecko to support. Versions containing a "*" are not valid in this field. Defaults to "42a1".</dd>
@@ -63,21 +63,21 @@ browser-compat: webextensions.manifest.browser_specific_settings
 
 <ul>
 	<li><a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" title="Generating_GUIDs">GUID</a></li>
-	<li>A string formatted like an email address: <code class="plain">extensionname@example.org</code></li>
+	<li>A string formatted like an email address: <code>extensionname@example.org</code></li>
 </ul>
 
 <p>The latter format is easier to generate and manipulate. Be aware that using a real email address here may attract spam.</p>
 
 <p>For example:</p>
 
-<pre class="brush: json; auto-links: false; no-line-numbers">"id": "extensionname@example.org"</pre>
+<pre class="brush: json">"id": "extensionname@example.org"</pre>
 
-<pre class="brush: json; auto-links: false; no-line-numbers">"id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"</pre>
+<pre class="brush: json">"id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"</pre>
 
 <h3 id="Microsoft_Edge_properties">Microsoft Edge properties</h3>
 
 <div class="notecard warning">
-<p><strong>Warning</strong>: Adding Edge-specific properties to the manifest caused an error prior to Firefox 69 which can prevent the extension from installing.</p>
+<p><strong>Warning:</strong> Adding Edge-specific properties to the manifest caused an error prior to Firefox 69 which can prevent the extension from installing.</p>
 </div>
 
 <p>Microsoft Edge stores its browser specific settings in the <code>edge</code> subkey, which has the following properties:</p>
@@ -97,7 +97,7 @@ browser-compat: webextensions.manifest.browser_specific_settings
 <h3 id="Safari_properties">Safari properties</h3>
 
 <div class="notecard warning">
-<p><strong>Warning</strong>: Adding Safari-specific properties to the manifest caused an error prior to Firefox 69 which can prevent the extension from installing.</p>
+<p><strong>Warning:</strong> Adding Safari-specific properties to the manifest caused an error prior to Firefox 69 which can prevent the extension from installing.</p>
 </div>
 
 <p>Safari stores its browser specific settings in the <code>safari</code> subkey, which has the following properties:</p>
@@ -113,7 +113,7 @@ browser-compat: webextensions.manifest.browser_specific_settings
 
 <p>Example with all possible keys. Note that most extensions will omit <code>strict_max_version</code> and <code>update_url</code>.</p>
 
-<pre class="brush: json; auto-links: false; no-line-numbers">"browser_specific_settings": {
+<pre class="brush: json">"browser_specific_settings": {
   "gecko": {
     "id": "addon@example.com",
     "strict_min_version": "42.0",

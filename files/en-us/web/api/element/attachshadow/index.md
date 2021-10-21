@@ -56,7 +56,7 @@ attachShadow(init)
 
     - `mode`
 
-      - : A string specifying the _encapsulation mode_ for the shadow DOM tree.
+      - : A string specifying the _encapsulation mode_ for the shadow DOM tree.
         This can be one of:
 
         - `open`: Elements of the shadow root are accessible from JavaScript outside the root,
@@ -66,7 +66,7 @@ attachShadow(init)
           element.shadowRoot; // Returns a ShadowRoot obj
           ```
 
-        - `closed`: Denies access to the node(s) of a closed shadow root
+        - `closed`: Denies access to the node(s) of a closed shadow root
           from JavaScript outside it:
 
           ```js
@@ -88,7 +88,6 @@ Returns a {{domxref("ShadowRoot")}} object.
 - `NotSupportedError`
   - : You are trying to attach a shadow root to an element outside the HTML namespace, the element cannot have a shadow attached to it, 
     or the static property `disabledFeatures` has been given a value of `"shadow"` in the element definition.
-
 
 ## Examples
 

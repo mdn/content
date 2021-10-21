@@ -7,7 +7,7 @@ tags:
 ---
 {{draft}}
 
-There are many [reasons](https://developers.google.com/web/fundamentals/performance/why-performance-matters/) why your website should perform as well as possible.
+There are many [reasons](https://web.dev/why-speed-matters/) why your website should perform as well as possible.
 Below is a quick review of best practices, tools, APIs with links to provide more information about each topic.
 
 ## Best practices
@@ -69,8 +69,8 @@ If possible avoid icon web fonts and use compressed SVGs. To further optimize i
 
 ### APIs
 
-- Gather user metrics using <https://github.com/akamai/boomerang>
-- Or directly gather with [window.performance.timing](/en-US/docs/Web/API/Window/performance)
+- Gather user metrics using the [boomerang](https://github.com/akamai/boomerang) library.
+- Or directly gather with [window.performance.timing](/en-US/docs/Web/API/Performance/timing)
 
 ### Things not to do (bad practices)
 

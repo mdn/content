@@ -625,7 +625,7 @@ That may seem a little silly, but functions have access to an additional variabl
 ```js
 function add() {
   var sum = 0;
-  for (var i = 0, j = arguments.length; i < j; i++) {
+  for (var i = 0; i < arguments.length; i++) {
     sum += arguments[i];
   }
   return sum;
@@ -639,7 +639,7 @@ That's really not any more useful than writing `2 + 3 + 4 + 5` though. Let's cre
 ```js
 function avg() {
   var sum = 0;
-  for (var i = 0, j = arguments.length; i < j; i++) {
+  for (var i = 0; i < arguments.length; i++) {
     sum += arguments[i];
   }
   return sum / arguments.length;

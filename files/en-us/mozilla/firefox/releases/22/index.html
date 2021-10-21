@@ -29,11 +29,11 @@ tags:
 <h3 id="DOM">DOM</h3>
 
 <ul>
- <li>Support for the <code>multipart</code> property on <code>XMLHttpRequest</code> and <code>multipart/x-mixed-replace</code> responses in <code>XMLHttpRequest</code> has been removed. This was a Gecko-only feature that was never standardized. <a href="/en-US/docs/Web/API/Server-sent_events" title="Server-sent_events">Server-Sent Events</a>, <a href="/en-US/docs/Web/API/WebSockets_API">Web Sockets</a> or inspecting <code>responseText</code> from progress events can be used instead.</li>
+ <li>Support for the <code>multipart</code> property on <code>XMLHttpRequest</code> and <code>multipart/x-mixed-replace</code> responses in <code>XMLHttpRequest</code> has been removed. This was a Gecko-only feature that was never standardized. <a href="/en-US/docs/Web/API/Server-sent_events">Server-Sent Events</a>, <a href="/en-US/docs/Web/API/WebSockets_API">Web Sockets</a> or inspecting <code>responseText</code> from progress events can be used instead.</li>
  <li>Support for <a href="/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Web Notifications</a> has been landed ({{bug(782211)}}).</li>
  <li>The {{domxref("FormData")}} <code>append</code> method now accepts a third optional <code>filename</code> parameter ({{bug(690659)}}).</li>
  <li>{{domxref("Node.isSupported")}} has been removed ({{bug(801562)}}).</li>
- <li><strong><code>Node.setUserData</code></strong> and <strong><code>Node.getUserData</code></strong> has been removed for web content and are deprecated for chrome content ({{bug(842372)}}).</li>
+ <li><code>Node.setUserData</code> and <code>Node.getUserData</code> has been removed for web content and are deprecated for chrome content ({{bug(842372)}}).</li>
  <li>The {{domxref("Element.attributes")}} property has been moved there from {{domxref("Node")}} as required by the spec ({{bug("844134")}}).</li>
  <li>The Mac OS X backend for <strong>Ambient Light Events</strong> has been implemented.</li>
  <li>Elements in the HTML namespace with local names {{HTMLElement("bgsound")}}, {{HTMLElement("multicol")}}, and {{HTMLElement("image")}} no longer implement the {{domxref("HTMLSpanElement")}} interface. {{HTMLElement("bgsound")}} and {{HTMLElement("bgsound")}} implement {{domxref("HTMLUnknownElement")}} and {{HTMLElement("image")}} implements {{domxref("HTMLElement")}}.</li>
@@ -71,7 +71,7 @@ tags:
  <li><a href="https://hacks.mozilla.org/2013/04/developer-tools-update-firefox-22/">Font inspector</a> shows which fonts on your computer are applied to the page.</li>
  <li>Visual paint feedback mode shows when and where a page is repainted.</li>
  <li>The dev tools may now be docked to the right side, not just the bottom of the browser.</li>
- <li>Some panes within the dev tools have switched from <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=875727">XUL to HTML</a>. For example, the css rule viewer is now chrome://browser/content/devtools/cssruleview.xhtml, not <span class="comment-copy"><code>cssruleview.xul</code></span>. Instead of adding an overlay directly to extend features of these panes, you may add an overlay and script to the outer xul document, to add load listeners and change these html documents.</li>
+ <li>Some panes within the dev tools have switched from <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=875727">XUL to HTML</a>. For example, the css rule viewer is now chrome://browser/content/devtools/cssruleview.xhtml, not <code>cssruleview.xul</code>. Instead of adding an overlay directly to extend features of these panes, you may add an overlay and script to the outer xul document, to add load listeners and change these html documents.</li>
  <li>The stack trace is now shown as a breadcrumb near the top, and the script listing is now at the left panel of the debugger.</li>
 </ul>
 

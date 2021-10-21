@@ -48,16 +48,17 @@ tags:
 
 <p>This specifies that we'll have a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background script</a> named "background.js", and a browser action (button) whose icons will live in the "icons" directory.</p>
 
-<div class="pull-aside">
-<div class="moreinfo">These icons are from the <a href="https://www.iconfinder.com/iconsets/bitsies">bitsies!</a> iconset created by Recep Kütük.</div>
-</div>
-
 <p>Next, create the "icons" directory inside the "buttons" directory, and save the two icons shown below inside it:</p>
 
-<ul>
- <li>"page-16.png" (<img alt="" src="page-16.png">)</li>
- <li>"page-32.png" (<img alt="" src="page-32.png">).</li>
-</ul>
+<p><strong>"page-16.png":</strong></p>
+<p><img alt="" src="page-16.png"></p>
+
+ <p><strong>"page-32.png":</strong></p>
+ <p><img alt="" src="page-32.png"></p>
+
+ <div class="note">
+ <p><strong>Note:</strong> These icons are from the <a href="https://www.iconfinder.com/iconsets/bitsies">bitsies!</a> iconset created by Recep Kütük.</p>
+ </div>
 
 <p>We have two icons so we can use the bigger one in high-density displays. The browser will take care of selecting the best icon for the current display.</p>
 
@@ -75,12 +76,12 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
 
 <p>At this point the complete extension should look like this:</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">button/
+<pre class="brush: plain">button/
     icons/
         page-16.png
         page-32.png
     background.js
-    manifest.json</code></pre>
+    manifest.json</pre>
 
 <p>Now <a href="https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/">install the extension</a> and click the button:</p>
 

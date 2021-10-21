@@ -30,14 +30,14 @@ browser-compat: webextensions.api.browserAction.setPopup
  <dt><code>details</code></dt>
  <dd><code>object</code>.</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>tabId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. Sets the popup only for a specific tab. The popup is reset when the user navigates this tab to a new page.</dd>
   <dt><code>windowId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. Sets the popup only for the specified window.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>popup</code></dt>
   <dd>
   <p><code>string</code> or <code>null</code>. The HTML file to show in a popup, specified as a URL.</p>
@@ -105,9 +105,8 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction#method-setPopup"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction#method-setPopup"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

@@ -26,7 +26,7 @@ browser-compat: webextensions.api.runtime.sendMessage
 <p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
 
 <div class="notecard note">
-<p>You can also use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging">connection-based approach to exchange messages</a>.</p>
+<p><strong>Note:</strong> You can also use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging">connection-based approach to exchange messages</a>.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -48,7 +48,7 @@ browser-compat: webextensions.api.runtime.sendMessage
  <dd><code>any</code>. An object that can be structured clone serialized (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm">Data cloning algorithm</a>).</dd>
  <dt><code>options</code>{{optional_inline}}</dt>
  <dd><code>object</code>.
- <dl class="reference-values">
+ <dl>
   <dt><code>includeTlsChannelId</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. Whether the TLS channel ID will be passed into {{WebExtAPIRef('runtime.onMessageExternal')}} for processes that are listening for the connection event.</dd>
   <dd>This option is only supported in Chromium-based browsers.</dd>
@@ -122,9 +122,8 @@ browser.runtime.onMessage.addListener(handleMessage);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#method-sendMessage"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#method-sendMessage"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

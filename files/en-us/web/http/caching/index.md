@@ -153,7 +153,7 @@ The {{HTTPHeader("Vary")}} HTTP response header determines how to match future r
 
 When a cache receives a request that has a `Vary` header field, it must not use a cached response by default unless all header fields specified in the `Vary` header match in both the original (cached) request and the new request.
 
-![The Vary header leads cache to use more HTTP headers as key for the cache.](http_vary.png)This feature is commonly used to allow a resource to be cached in uncompressed and (various) compressed forms, and served appropriately to user agents based on the encodings that they support. For example, a server can set `Vary: Accept-Encoding` to ensure that a separate version of a resource is cached for all requests that specify support for a particular set of encodings, e.g. `Accept-Encoding: gzip,deflate,sdch`.
+![The Vary header leads cache to use more HTTP headers as key for the cache.](http_vary.png)This feature is commonly used to allow a resource to be cached in uncompressed and (various) compressed forms, and served appropriately to user agents based on the encodings that they support. For example, a server can set `Vary: Accept-Encoding` to ensure that a separate version of a resource is cached for all requests that specify support for a particular set of encodings, for example, `Accept-Encoding: gzip,deflate,sdch`.
 
 ```
 Vary: Accept-Encoding

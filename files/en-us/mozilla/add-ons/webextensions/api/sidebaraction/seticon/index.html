@@ -47,14 +47,14 @@ browser-compat: webextensions.api.sidebarAction.setIcon
  <dt><code>details</code></dt>
  <dd><code>object</code>. An object with the following properties:</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>imageData</code>{{optional_inline}}</dt>
   <dd>
   <p><code>{{WebExtAPIRef('sidebarAction.ImageDataType')}}</code> or <code>object</code>. This is either a single <code>ImageData</code> object or a dictionary object.</p>
 
   <p>Use a dictionary object to specify multiple <code>ImageData</code> objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>imageData</code> is a dictionary, the value of each property is an <code>ImageData</code> object, and its name is its size, like this:</p>
 
-  <pre class="brush: json line-numbers  language-json">{
+  <pre class="brush: json">{
   16: image16,
   32: image32
 }</pre>
@@ -67,7 +67,7 @@ browser-compat: webextensions.api.sidebarAction.setIcon
 
   <p>Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>path</code> is a dictionary, the value of each property is a relative path, and its name is its size, like this:</p>
 
-  <pre class="brush: json line-numbers  language-json">{
+  <pre class="brush: json">{
   16: &quot;path/to/image16.jpg&quot;,
   32: &quot;path/to/image32.jpg&quot;
 }</pre>
@@ -129,7 +129,6 @@ browser.browserAction.onClicked.addListener(toggle);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Opera's <a class="external external-icon" href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a> API.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Opera's <a class="external external-icon" href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a> API.</p>
 </div>

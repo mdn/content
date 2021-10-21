@@ -37,13 +37,13 @@ browser-compat: webextensions.api.i18n.detectLanguage
 
 <p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a result object. The result object has two properties:</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>isReliable</code></dt>
  <dd><code>boolean</code>. Whether the language was detected reliably.</dd>
  <dt><code>languages</code></dt>
  <dd><code>array</code> of objects, each of which has two properties:</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>language</code></dt>
   <dd>{{WebExtAPIRef('i18n.LanguageCode')}}. The detected language.</dd>
   <dt><code>percentage</code></dt>
@@ -74,9 +74,8 @@ detecting.then(onLanguageDetected);
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/i18n#method-detectLanguage"><code>chrome.i18n</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json"><code>i18n.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/i18n#method-detectLanguage"><code>chrome.i18n</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json"><code>i18n.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

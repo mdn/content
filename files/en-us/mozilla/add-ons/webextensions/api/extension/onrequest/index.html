@@ -16,7 +16,7 @@ browser-compat: webextensions.api.extension.onRequest
 <div>{{AddonSidebar()}}</div>
 
 <div class="warning">
-<p><strong>Not implemented:</strong> This is not implemented in Firefox because it has been deprecated since Chrome 33. Please use <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a> instead.</p>
+<p><strong>Warning:</strong> This is not implemented in Firefox because it has been deprecated since Chrome 33. Please use <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a> instead.</p>
 </div>
 
 <p>Fired when a request is sent from either an extension process or a content script.</p>
@@ -52,17 +52,17 @@ chrome.extension.onRequest.hasListener(listener)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>request</code></dt>
   <dd><code>any</code>. The request sent by the calling script.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>sender</code></dt>
   <dd>{{WebExtAPIRef('runtime.MessageSender')}}.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>sendResponse</code></dt>
   <dd><code>function</code>. Function to call (at most once) when you have a response. The argument should be any JSON-ifiable object, or undefined if there is no response. If you have more than one <code>onRequest</code> listener in the same document, then only one may send a response.</dd>
  </dl>
@@ -75,9 +75,8 @@ chrome.extension.onRequest.hasListener(listener)
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/extension#event-onRequest"><code>chrome.extension</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/extension#event-onRequest"><code>chrome.extension</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

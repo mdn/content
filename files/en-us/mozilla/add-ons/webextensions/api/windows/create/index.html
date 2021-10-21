@@ -42,7 +42,7 @@ browser-compat: webextensions.api.windows.create
  <dt><code>createData</code> {{optional_inline}}</dt>
  <dd><code>object</code>.</dd>
  <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>allowScriptsToClose</code> {{optional_inline}}</dt>
   <dd>
   <p><code>boolean</code>. When the window is opened, it will contain a single tab, or more than one tab if <code>url</code> is given and includes an array containing more than one URL. By default scripts running in these pages are not allowed to close their tab using <code><a href="/en-US/docs/Web/API/Window/close">window.close()</a></code>.  If you include <code>allowScriptsToClose</code> and set it to <code>true</code> , then this default behavior is changed, so scripts can close their tabs. Note that:</p>
@@ -151,9 +151,8 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/windows#method-create"><code>chrome.windows</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/windows#method-create"><code>chrome.windows</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

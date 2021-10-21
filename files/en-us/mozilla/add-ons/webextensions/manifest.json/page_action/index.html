@@ -12,7 +12,7 @@ browser-compat: webextensions.manifest.page_action
 <table class="fullwidth-table standard-table">
  <tbody>
   <tr>
-   <th scope="row" style="width: 30%;">Type</th>
+   <th scope="row">Type</th>
    <td><code>Object</code></td>
   </tr>
   <tr>
@@ -22,7 +22,7 @@ browser-compat: webextensions.manifest.page_action
   <tr>
    <th scope="row">Example</th>
    <td>
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "page_action": {
   "browser_style": true,
   "default_icon": {
@@ -85,7 +85,7 @@ browser-compat: webextensions.manifest.page_action
 
     <p>It's recommended that you supply two icons here (19×19 pixels and 38×38 pixels), and specify them in an object with properties named <code>"19"</code> and <code>"38"</code>, like this:</p>
 
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
     "default_icon": {
       "19": "geo-19.png",
       "38": "geo-38.png"
@@ -95,7 +95,7 @@ browser-compat: webextensions.manifest.page_action
 
     <p>You can just supply a string here:</p>
 
-    <pre class="brush: json no-line-numbers">
+    <pre class="brush: json">
 "default_icon": "geo.png"</pre>
 
     <p>If you do this, then the icon will be scaled to fit the toolbar, and may appear blurry.</p>
@@ -166,7 +166,7 @@ browser-compat: webextensions.manifest.page_action
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: json no-line-numbers">"page_action": {
+<pre class="brush: json">"page_action": {
   "default_icon": {
     "19": "button/geo-19.png",
     "38": "button/geo-38.png"
@@ -175,9 +175,9 @@ browser-compat: webextensions.manifest.page_action
 
 <p>A page action with just an icon, specified in 2 different sizes. The extension's background scripts can receive click events when the user clicks the icon using code like this:</p>
 
-<pre class="brush: js no-line-numbers"> browser.pageAction.onClicked.addListener(handleClick);</pre>
+<pre class="brush: js"> browser.pageAction.onClicked.addListener(handleClick);</pre>
 
-<pre class="brush: json no-line-numbers">"page_action": {
+<pre class="brush: json">"page_action": {
   "default_icon": {
     "19": "button/geo-19.png",
     "38": "button/geo-38.png"

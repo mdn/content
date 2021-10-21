@@ -64,12 +64,12 @@ An {{domxref("AudioBuffer")}} configured based on the specified options.
 
 ### Exceptions
 
-- `NotSupportedError`
-  - : One or more of the options are negative or otherwise has an invalid value (such as
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if one or more of the options are negative or otherwise has an invalid value (such as
     `numberOfChannels` being higher than supported, or a
     `sampleRate` outside the nominal range).
-- `RangeError`
-  - : There isn't enough memory available to allocate the buffer.
+- `RangeError` {{domxref("DOMException")}}
+  - : Thrown if there isn't enough memory available to allocate the buffer.
 
 ## Examples
 
@@ -103,7 +103,7 @@ on an `AudioContext` running at 44100Hz, will be automatically \*resampled\* to
 > reproduce high frequency content (treble sound).
 
 Now let's look at a more complex `createBuffer()` example, in which we
-create a three second buffer, fill it with white noise, and then play it via an {{
+create a three-second buffer, fill it with white noise, and then play it via an {{
   domxref("AudioBufferSourceNode") }}. The comment should clearly explain what is going
 on. You can also [run the
 code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view
