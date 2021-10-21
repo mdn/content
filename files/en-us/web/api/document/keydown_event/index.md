@@ -54,6 +54,8 @@ This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press
 ```
 
 ```js
+const log = document.getElementById('log');
+
 document.addEventListener('keydown', logKey);
 
 function logKey(e) {
