@@ -74,6 +74,9 @@ Content-Security-Policy: script-src <source> <source>;
   - : Allows the use of `eval()` and similar methods for creating code from strings. You must include the single quotes.
 - `'unsafe-hashes'`
   - : Allows enabling specific inline [event handlers](/en-US/docs/Web/Events/Event_handlers). If you only need to allow inline event handlers and not inline {{HTMLElement("script")}} elements or `javascript:` URLs, this is a safer method than using the `unsafe-inline` expression.
+
+    For every inline event-handler attribute in the document, you must generate a hash from the value of the attribute (that is, the complete code in the attribute’s value), using a particular hash algorithm (e.g., `sha256`, `sha384`, or `sha512`), and then add a `<hash-algorithm>-<base64-value>` source expression for that hash to the value of the `script-src` directive.
+
 - `'unsafe-inline'`
   - : Allows the use of inline resources, such as inline {{HTMLElement("script")}} elements, `javascript:` URLs, and inline event handlers. The single quotes are required.
 - `'none'`
