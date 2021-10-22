@@ -36,7 +36,7 @@ All of this is called _project ideation_ and is a necessary first step to reach 
 
 ## Active Learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Contribute/Getting_started)._
+- [How to Start Coding Projects: Planning](https://www.youtube.com/watch?v=Qq9JRO8KI1w) A detailed walk-through of how one developer plans a specific project they wish to accomplish.
 
 ## Deeper dive
 
