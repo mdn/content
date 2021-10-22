@@ -50,7 +50,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if this {{domxref("IDBObjectStore")}}'s transaction is inactive.
 - `DataError` {{domxref("DOMException")}}
-  - : Thrown if key or key range provided contains an invalid key or is null.
+  - : Thrown if key or key range provided contains an invalid key.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBObjectStore")}} has been deleted or removed.
 
