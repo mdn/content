@@ -61,7 +61,7 @@ Let's compare the library with a web server:
 
 ## Active learning
 
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Contribute/Getting_started)._
+- [What is Domain Name, URL, Web Page, Website, WWW, Web Hosting?](https://www.youtube.com/watch?v=sh7fe05mUfA) A video by TechTerms explaining the differences between a domain name, URL, webpage, website, world wide web, and web hosting.
 
 ## Deeper dive
 
