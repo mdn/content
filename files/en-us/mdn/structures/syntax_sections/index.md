@@ -138,10 +138,10 @@ filter(callbackFn)
 filter(callbackFn, thisArg)
 
 // Inline callback function
-filter(function callbackFn(currentValue) { ... })
-filter(function callbackFn(currentValue, index) { ... })
-filter(function callbackFn(currentValue, index, array){ ... })
-filter(function callbackFn(currentValue, index, array) { ... }, thisArg)
+filter(function(currentValue) { ... })
+filter(function(currentValue, index) { ... })
+filter(function(currentValue, index, array){ ... })
+filter(function(currentValue, index, array) { ... }, thisArg)
 ```
 
 ##### Syntax for arbitrary number of parameters
