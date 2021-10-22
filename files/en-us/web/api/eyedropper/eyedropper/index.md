@@ -17,10 +17,6 @@ The **`EyeDropper()`** constructor returns a newly created {{DOMxRef("EyeDropper
 let eyeDropper = new EyeDropper();
 ```
 
-## Specifications
-
-{{Specifications}}
-
 ## See also
 
 - The {{DOMxRef("EyeDropper")}} interface it belongs to.
