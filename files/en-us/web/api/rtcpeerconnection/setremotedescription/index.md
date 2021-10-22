@@ -105,9 +105,9 @@ The following exceptions are reported to the rejection handler for the promise r
 by `setRemoteDescription()`:
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Thrown if the content of the description is invalid.
+  - : Returned if the content of the description is invalid.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the {{domxref("RTCPeerConnection")}} is closed, or it's in a state that is not
+  - : Returned if the {{domxref("RTCPeerConnection")}} is closed, or it's in a state that is not
     compatible with the specified description's
     {{domxref("RTCSessionDescription.type", "type")}}. For example, this exception is thrown if the
     `type` is `rollback` and the signaling state is one of
@@ -116,15 +116,15 @@ by `setRemoteDescription()`:
     roll back a connection that's either fully established or is in the final stage of
     becoming connected.
 - `OperationError` {{domxref("DOMException")}}
-  - : Thrown if an error does not match the ones specified here. This includes identity validation errors.
+  - : Returned if an error does not match the ones specified here. This includes identity validation errors.
 - `RTCError` {{domxref("DOMException")}}
-  - : Thrown with the {{domxref("RTCError.errorDetail",
+  - : Returned with the {{domxref("RTCError.errorDetail",
 		"errorDetail")}} set to `sdp-syntax-error` if the
     {{Glossary("SDP")}} specified by {{domxref("RTCSessionDescription.sdp")}}. The
     error object's {{domxref("RTCError.sdpLineNumber", "sdpLineNumber")}} property
     indicates the line number within the SDP on which the syntax error was detected.
 - `TypeError` {{domxref("DOMException")}}
-  - : Thrown if the specified `RTCSessionDescriptionInit` or
+  - : Returned if the specified `RTCSessionDescriptionInit` or
     `RTCSessionDescription` object is missing the
     {{domxref("RTCSessionDescription.type", "type")}} property, or no description
     parameter was provided at all.

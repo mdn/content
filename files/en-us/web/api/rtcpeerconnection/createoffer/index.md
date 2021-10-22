@@ -82,13 +82,13 @@ These exceptions are returned by rejecting the returned promise. Your rejection 
 should examine the received exception to determine which occurred.
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the `RTCPeerConnection` is closed.
+  - : Returned if the `RTCPeerConnection` is closed.
 - `NotReadableError` {{domxref("DOMException")}}
-  - : Thrown if no certificate or set of certificates was provided for securing the connection, and
+  - : Returned if no certificate or set of certificates was provided for securing the connection, and
     `createOffer()` was unable to create a new one. Since all WebRTC
     connections are required to be secured, that results in an error.
 - `OperationError` {{domxref("DOMException")}}
-  - : Thrown if examining the state of the system to determine resource availability in order to
+  - : Returned if examining the state of the system to determine resource availability in order to
     generate the offer failed for some reason.
 
 ## Example

@@ -29,8 +29,10 @@ A {{jsxref("Promise")}} that resolves with undefined.
 
 ### Exceptions
 
+If an error occurs, the promise will resolve with one of the following exceptions:
+
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the Promise is rejected because the {{domxref("AudioDecoder.state","state")}} is not `"configured"`.
+  - : Returned if the Promise is rejected because the {{domxref("AudioDecoder.state","state")}} is not `configured`.
 
 ## Examples
 
