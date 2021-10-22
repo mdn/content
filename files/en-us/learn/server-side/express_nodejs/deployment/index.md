@@ -182,7 +182,7 @@ app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 ...
 ```
 
-> **Note:** For a high-traffic website in production you wouldn't use this middleware. Instead, you would use a reverse proxy like _nginx_.
+> **Note:** For a high-traffic website in production you wouldn't use this middleware. Instead, you would use a reverse proxy like [Nginx](https://nginx.org/).
 
 ### Use Helmet to protect against well known vulnerabilities
 

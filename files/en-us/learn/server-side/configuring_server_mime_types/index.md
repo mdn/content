@@ -97,7 +97,7 @@ There are several ways to determine the correct MIME type value to be used to se
 The goal is to configure your server to send the correct {{HTTPHeader("Content-Type")}} header for each document.
 
 - If you're using the Apache web server, check the **_Media Types and Character Encodings_** section of [Apache Configuration: .htaccess](/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess) for examples of different document types and their corresponding MIME types.
-- If you're using NGINX, note that NGINX does not have a `.htaccess` equivalent tool, so all changes will go into the main configuration file.
+- If you're using Nginx, note that Nginx does not have a `.htaccess` equivalent tool, so all changes will go into the main configuration file.
 - If you're using a server-side script or framework to generate content, the way to indicate the content type will depend on the tool you're using. Check the framework or library's documentation.
 
 Regardless of what server system you use, the effect you need to achieve is to set a response header with the name {{httpheader("Content-Type")}}, followed by a colon and space, followed by a MIME type. High-level environments often allow such headers to be set when generating the page. For example, in a PHP environment, you could set the response header for PDF resources like this:
@@ -114,7 +114,7 @@ Trying to instead set it with just `header('application/pdf')` won’t work.
 - [Hypertext Transfer Protocol — HTTP/1.1](https://www.w3.org/Protocols/HTTP/1.1/spec.html)
 - [MIME types (IANA media types)](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
 - [Apache vs Nginx: Practical Considerations](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations)
-- [Migrate Apache .htaccess to NGINX server block](https://barryvanveen.nl/blog/56-migrate-apache-htaccess-to-nginx-server-block)
+- [Migrate Apache .htaccess to Nginx server block](https://barryvanveen.nl/blog/56-migrate-apache-htaccess-to-nginx-server-block)
 - [Microsoft - 293336 - INFO: WebCast: MIME Type Handling in Microsoft Internet Explorer](https://support.microsoft.com/default.aspx?sd=msdn&scid=kb;en-us;293336)
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
