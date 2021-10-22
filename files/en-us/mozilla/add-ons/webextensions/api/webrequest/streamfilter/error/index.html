@@ -23,7 +23,7 @@ browser-compat: webextensions.api.webRequest.StreamFilter.error
 
 <p>This example adds an {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} listener which logs the value of <code>error</code>.</p>
 
-<pre class="brush: js line-numbers  language-js">function listener(details) {
+<pre class="brush: js">function listener(details) {
   let filter = browser.webRequest.filterResponseData(&quot;12345&quot;);
 
   filter.onerror = event =&gt; {

@@ -16,7 +16,9 @@ The **`clearAppBadge()`** method of the {{domxref("Navigator")}} interface clear
 
 ## Syntax
 
-    let promise = Navigator.clearAppBadge();
+```js
+let promise = Navigator.clearAppBadge();
+```
 
 ### Parameters
 
@@ -28,8 +30,8 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 ### Exceptions
 
-- `NotSupportedError`
-  - : The {{domxref("Navigator")}} does not have a document that this action can be acted on.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("Navigator")}} does not have a document that this action can be acted on.
 
 ## Examples
 

@@ -17,14 +17,14 @@ tags:
 <p>The <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> API has a rather handy module available for internationalizing extensions — <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n</a>. In this article we'll explore its features and provide a practical example of how it works. The i18n system for extensions built using WebExtension APIs is similar to common JavaScript libraries for i18n such as <a href="http://i18njs.com/">i18n.js</a>.</p>
 
 <div class="note">
-<p>The example extension featured in this article — <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> — is available on GitHub. Follow along with the source code as you go through the sections below.</p>
+<p><strong>Note:</strong> The example extension featured in this article — <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> — is available on GitHub. Follow along with the source code as you go through the sections below.</p>
 </div>
 
 <h2 id="Anatomy_of_an_internationalized_extension">Anatomy of an internationalized extension</h2>
 
 <p>An internationalized extension can contain the same features as any other extension — <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background scripts</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a>, etc. — but it also has some extra parts to allow it to switch between different locales. These are summarized in the following directory tree:</p>
 
-<ul class="directory-tree">
+<ul>
  <li>extension-root-directory/
   <ul>
    <li>_locales
@@ -73,8 +73,8 @@ tags:
 
 <h2 id="Providing_localized_strings_in__locales">Providing localized strings in _locales</h2>
 
-<div class="pull-aside">
-<div class="moreinfo">You can look up language subtags using the <em>Find</em> tool on the <a href="https://r12a.github.io/app-subtags/">Language subtag lookup page</a>. Note that you need to search for the English name of the language.</div>
+<div class="note">
+  <p><strong>Note:</strong> You can look up language subtags using the <em>Find</em> tool on the <a href="https://r12a.github.io/app-subtags/">Language subtag lookup page</a>. Note that you need to search for the English name of the language.</p>
 </div>
 
 <p>Every i18n system requires the provision of strings translated into all the different locales you want to support. In extensions, these are contained within a directory called <code>_locales</code>, placed inside the extension root. Each individual locale has its strings (referred to as messages) contained within a file called <code>messages.json</code>, which is placed inside a subdirectory of <code>_locales</code>, named using the language subtag for that locale's language.</p>
@@ -116,7 +116,7 @@ tags:
 <p>This file is standard JSON — each one of its members is an object with a name, which contains a <code>message</code> and a <code>description</code>. All of these items are strings; <code>$URL$</code> is a placeholder, which is replaced with a substring at the time the <code>notificationContent</code> member is called by the extension. You'll learn how to do this in the {{anch("Retrieving message strings from JavaScript")}} section.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find much more information about the contents of <code>messages.json</code> files in our <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference">Locale-Specific Message reference</a>.</p>
+<p><strong>Note:</strong> You can find much more information about the contents of <code>messages.json</code> files in our <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference">Locale-Specific Message reference</a>.</p>
 </div>
 
 <h2 id="Internationalizing_manifest.json">Internationalizing manifest.json</h2>
@@ -245,7 +245,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <p>Take the following example:</p>
 
-<ul class="directory-tree">
+<ul>
  <li>extension-root-directory/
   <ul>
    <li>_locales
@@ -394,7 +394,7 @@ padding-left: 1.5em;</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: This works to change the browser's locale, even if you haven't got the <a href="https://addons.mozilla.org/en-US/firefox/language-tools/">language pack</a> installed for that language. You'll just get the browser UI in your default language if this is the case.</p>
+<p><strong>Note:</strong> This works to change the browser's locale, even if you haven't got the <a href="https://addons.mozilla.org/en-US/firefox/language-tools/">language pack</a> installed for that language. You'll just get the browser UI in your default language if this is the case.</p>
 </div>
 
 <div class="note">

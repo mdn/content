@@ -45,48 +45,48 @@ browser-compat: webextensions.api.sidebarAction.setIcon
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>. An object with the following properties:</dd>
  <dd>
- <dl class="reference-values">
-  <dt><code>imageData</code>{{optional_inline}}</dt>
-  <dd>
-  <p><code>{{WebExtAPIRef('sidebarAction.ImageDataType')}}</code> or <code>object</code>. This is either a single <code>ImageData</code> object or a dictionary object.</p>
+   <p><code>object</code>. An object with the following properties:</p>
+   <dl>
+    <dt><code>imageData</code>{{optional_inline}}</dt>
+    <dd>
+    <p><code>{{WebExtAPIRef('sidebarAction.ImageDataType')}}</code> or <code>object</code>. This is either a single <code>ImageData</code> object or a dictionary object.</p>
 
-  <p>Use a dictionary object to specify multiple <code>ImageData</code> objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>imageData</code> is a dictionary, the value of each property is an <code>ImageData</code> object, and its name is its size, like this:</p>
+    <p>Use a dictionary object to specify multiple <code>ImageData</code> objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>imageData</code> is a dictionary, the value of each property is an <code>ImageData</code> object, and its name is its size, like this:</p>
 
-  <pre class="brush: json line-numbers  language-json">{
-  16: image16,
-  32: image32
-}</pre>
+    <pre class="brush: json">{
+    16: image16,
+    32: image32
+  }</pre>
 
-  <p>The browser will choose the image to use depending on the screen's pixel density. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes">Choosing icon sizes</a> for more information on this.</p>
-  </dd>
-  <dt><code>path</code>{{optional_inline}}</dt>
-  <dd>
-  <p><code>string</code> or <code>object</code>. This is either a relative path to an icon file or it is a dictionary object. </p>
+    <p>The browser will choose the image to use depending on the screen's pixel density. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes">Choosing icon sizes</a> for more information on this.</p>
+    </dd>
+    <dt><code>path</code>{{optional_inline}}</dt>
+    <dd>
+    <p><code>string</code> or <code>object</code>. This is either a relative path to an icon file or it is a dictionary object. </p>
 
-  <p>Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>path</code> is a dictionary, the value of each property is a relative path, and its name is its size, like this:</p>
+    <p>Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>path</code> is a dictionary, the value of each property is a relative path, and its name is its size, like this:</p>
 
-  <pre class="brush: json line-numbers  language-json">{
-  16: &quot;path/to/image16.jpg&quot;,
-  32: &quot;path/to/image32.jpg&quot;
-}</pre>
+    <pre class="brush: json">{
+    16: &quot;path/to/image16.jpg&quot;,
+    32: &quot;path/to/image32.jpg&quot;
+  }</pre>
 
-  <p>The browser will choose the image to use depending on the screen's pixel density. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes">Choosing icon sizes</a> for more information on this.</p>
+    <p>The browser will choose the image to use depending on the screen's pixel density. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes">Choosing icon sizes</a> for more information on this.</p>
 
-  <p>If <code>path</code> is an empty string, the browser will use the default icon.</p>
+    <p>If <code>path</code> is an empty string, the browser will use the default icon.</p>
 
-  <p>If <code>path</code> is not empty but does not point to an icon file, then the icon is hidden.</p>
+    <p>If <code>path</code> is not empty but does not point to an icon file, then the icon is hidden.</p>
 
-  <p>If <code>path</code> is <code>null</code>, and <code>tabId</code> was specified, and the specified tab had a tab-specific icon set: then the tab-specific icon is reset to the global icon (if a global icon is set) or the manifest icon.</p>
+    <p>If <code>path</code> is <code>null</code>, and <code>tabId</code> was specified, and the specified tab had a tab-specific icon set: then the tab-specific icon is reset to the global icon (if a global icon is set) or the manifest icon.</p>
 
-  <p>if <code>path</code> is <code>null</code>, and <code>tabId</code> was omitted, and there was a global icon set, it will be reset to the manifest icon.</p>
-  </dd>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Sets the icon only for the given tab.</dd>
-  <dt><code>windowId</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. Sets the icon only for the given window.</dd>
- </dl>
+    <p>if <code>path</code> is <code>null</code>, and <code>tabId</code> was omitted, and there was a global icon set, it will be reset to the manifest icon.</p>
+    </dd>
+    <dt><code>tabId</code>{{optional_inline}}</dt>
+    <dd><code>integer</code>. Sets the icon only for the given tab.</dd>
+    <dt><code>windowId</code> {{optional_inline}}</dt>
+    <dd><code>integer</code>. Sets the icon only for the given window.</dd>
+   </dl>
  </dd>
 </dl>
 
@@ -129,7 +129,6 @@ browser.browserAction.onClicked.addListener(toggle);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Opera's <a class="external external-icon" href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a> API.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Opera's <a class="external external-icon" href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a> API.</p>
 </div>

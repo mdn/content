@@ -76,7 +76,7 @@ The following example creates a web server that listens for any kind of HTTP req
     const port = 8000;
 
     // Create HTTP server
-    const server = http.createServer((req, res) => {
+    const server = http.createServer(function(req, res) {
 
        // Set the response HTTP header with HTTP status and Content type
        res.writeHead(200, {'Content-Type': 'text/plain'});
@@ -86,7 +86,7 @@ The following example creates a web server that listens for any kind of HTTP req
     });
 
     // Prints a log once the server starts listening
-    server.listen(port, hostname, () => {
+    server.listen(port, hostname, function() {
        console.log(`Server running at http://${hostname}:${port}/`);
     })
     ```
@@ -162,11 +162,11 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
+app.get('/', function(req, res) {
   res.send('Hello World!')
 });
 
-app.listen(port, () => {
+app.listen(port, function() {
   console.log(`Example app listening on port ${port}!`)
 });
 ```
@@ -257,7 +257,7 @@ There are a number of ways for an asynchronous API to notify your application th
 In our _Hello World_ Express example (see above), we defined a (callback) route handler function for HTTP `GET` requests to the site root (`'/'`).
 
 ```js
-app.get('/', (req, res) => {
+app.get('/', function(req, res) {
   res.send('Hello World!')
 });
 ```

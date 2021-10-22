@@ -17,7 +17,7 @@ The `AnimationEffect` interface of the [Web Animations API](/en-US/docs/Web/API/
 ## Methods
 
 - {{domxref("AnimationEffect.getTiming()")}}
-  - : Returns the {{domxref("EffectTiming")}} object associated with the animation containing all the animation's timing values.
+  - : Returns the object associated with the animation containing all the animation's timing values.
 - {{domxref("AnimationEffect.getComputedTiming()")}}
   - : Returns the calculated timing properties for this `AnimationEffect`.
 - {{domxref("AnimationEffect.updateTiming()")}}

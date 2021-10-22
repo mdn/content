@@ -602,7 +602,7 @@ It could also include more complex markup, and other forms of contact informatio
 </address>
 ```
 
-Note that something like this would also be ok, if the linked page contained the contact information:
+Note that something like this would also be OK, if the linked page contained the contact information:
 
 ```html
 <address>

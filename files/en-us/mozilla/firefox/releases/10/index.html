@@ -10,7 +10,9 @@ tags:
 
 <p>Firefox 10 shipped on January 31, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.</p>
 
-<div class="note"><strong>Important note:</strong> Firefox 10 is the first release of this browser with two digits. This may lead to problem with some UA-sniffing scripts. Be sure to check them, and those contained in 3rd-party software you embed in your pages, like libraries. For more information about this, look at the <a class="external" href="https://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/">Firefox goes 2-digit article on hack.mozilla.org</a>.</div>
+<div class="note">
+  <p><strong>Note:</strong> Firefox 10 is the first release of this browser with two digits. This may lead to problem with some UA-sniffing scripts. Be sure to check them, and those contained in 3rd-party software you embed in your pages, like libraries. For more information about this, look at the <a href="https://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/">Firefox goes 2-digit article on hack.mozilla.org</a>.
+</p></div>
 
 <h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
 
@@ -26,7 +28,7 @@ tags:
 <ul>
  <li>The method <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap">WeakMap</a>.set()</code> now returns <em><code>undefined</code></em>, instead of itself.</li>
  <li>A bug was introduced in regular expression handling in Firefox 7; this has been fixed. See {{ bug(683838) }} if you want the gory details.</li>
- <li>You can no longer use <a href="/en-US/docs/E4X">E4X</a> syntax while in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode" title="Strict mode">ECMAScript 5 strict mode</a> (that is, after <code>"use strict;"</code>).</li>
+ <li>You can no longer use <a href="/en-US/docs/E4X">E4X</a> syntax while in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">ECMAScript 5 strict mode</a> (that is, after <code>"use strict;"</code>).</li>
 </ul>
 
 <h3 id="DOM">DOM</h3>
@@ -34,7 +36,7 @@ tags:
 <h4 id="DOM3_Events">DOM3 Events</h4>
 
 <ul>
- <li>The DOM Event method <a href="/en-US/docs/Web/API/Event/stopImmediatePropagation" title="event.stopImmediatePropagation"><code>event.stopImmediatePropagation</code></a> has been implemented.</li>
+ <li>The DOM Event method <a href="/en-US/docs/Web/API/Event/stopImmediatePropagation"><code>event.stopImmediatePropagation</code></a> has been implemented.</li>
  <li>The mouse events <code>mouseenter</code> and <code>mouseleave</code> have been implemented.</li>
 </ul>
 
@@ -52,7 +54,7 @@ tags:
 <h4 id="Page_Visibility_API">Page Visibility API</h4>
 
 <ul>
- <li>The <a href="/en-US/docs/Web/API/Page_Visibility_API" title="Using the Page Visibility API">Page Visibility API</a> has been implemented (prefixed): <code>document.mozHidden</code>, <code>document.mozVisibilityState</code> are available and the event <code>mozvisibilitychanged</code> is sent when the state is modified.</li>
+ <li>The <a href="/en-US/docs/Web/API/Page_Visibility_API">Page Visibility API</a> has been implemented (prefixed): <code>document.mozHidden</code>, <code>document.mozVisibilityState</code> are available and the event <code>mozvisibilitychanged</code> is sent when the state is modified.</li>
 </ul>
 
 <h4 id="Full_Screen_API">Full Screen API</h4>
@@ -78,7 +80,7 @@ tags:
 <h4 id="WebGL">WebGL</h4>
 
 <ul>
- <li>Firefox 10 now supports the <a class="external" href="https://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/"><code>OES_standard_derivatives</code></a> extension.</li>
+ <li>Firefox 10 now supports the <a href="https://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/"><code>OES_standard_derivatives</code></a> extension.</li>
  <li><a href="/en-US/docs/Web/API/WebGL_API#webgl_debugging_and_testing">New preferences have been added</a> to help test WebGL code for compatibility with minimally-capable devices on your full development platform.</li>
 </ul>
 
@@ -86,7 +88,7 @@ tags:
 
 <ul>
  <li>The attribute <code>XMLHttpRequest.responseType</code> and <code>XMLHttpRequest.response</code> are now available from inside <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#section_2">Workers</a>.</li>
- <li>The <a href="/en-US/docs/Web/API/Worker#worker()"><code>Worker()</code></a> constructor now accepts <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs" title="data URIs">data URIs</a>.</li>
+ <li>The <a href="/en-US/docs/Web/API/Worker#worker()"><code>Worker()</code></a> constructor now accepts <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data URIs</a>.</li>
 </ul>
 
 <h4 id="IndexedDB">IndexedDB</h4>
@@ -143,14 +145,16 @@ tags:
 
 <ul>
  <li>The {{ domxref("console") }} object has two new methods,  {{ domxref("console.time()") }} and {{ domxref("console.timeEnd()") }}, which can be used to set timers on a page.</li>
- <li>The new <a href="/en-US/docs/Tools/Page_Inspector" title="Page Inspector">Page Inspector</a> has been added, providing an excellent way to examine and manipulate the HTML and CSS behind your content.</li>
+ <li>The new <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a> has been added, providing an excellent way to examine and manipulate the HTML and CSS behind your content.</li>
 </ul>
 
 <h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
 
 <p>For an overview of likely issues that may arise when updating your add-ons to support Firefox 10, see <a href="/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_10">Updating add-ons for Firefox 10</a>.</p>
 
-<div class="note"><strong>Note:</strong> The old <a href="/en-US/docs/PRBool"><code>PRBool</code></a> data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ <code>bool</code> type instead. Documentation will be updated in the future, but for now, just keep this in mind.</div>
+<div class="note">
+  <p><strong>Note:</strong> The old <a href="/en-US/docs/PRBool"><code>PRBool</code></a> data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ <code>bool</code> type instead. Documentation will be updated in the future, but for now, just keep this in mind.</p>
+</div>
 
 <h3 id="Manifests">Manifests</h3>
 
@@ -168,7 +172,7 @@ tags:
 <h3 id="XPConnect">XPConnect</h3>
 
 <ul>
- <li>Several new properties and methods have been added to <a href="/en-US/docs/Components.utils" title="Components.utils"><code>Components.utils</code></a>, granting access to assorted debugging-related information.</li>
+ <li>Several new properties and methods have been added to <a href="/en-US/docs/Components.utils"><code>Components.utils</code></a>, granting access to assorted debugging-related information.</li>
 </ul>
 
 <h3 id="Interface_changes">Interface changes</h3>

@@ -406,8 +406,7 @@
         "MediaKeys",
         "MediaKeySession",
         "MediaKeyStatusMap",
-        "MediaKeySystemAccess",
-        "MediaKeySystemConfiguration"
+        "MediaKeySystemAccess"
       ],
       "methods": [
         "Navigator.requestMediaKeySystemAccess()",
@@ -849,8 +848,7 @@
       "interfaces": [
         "MediaCapabilities",
         "ScreenLuminance",
-        "Screen",
-        "MediaCapabilitiesInfo"
+        "Screen"
       ],
       "methods": [
         "mediaCapabilities.decodingInfo()",
@@ -1562,7 +1560,6 @@
         "AnimationTimeline",
         "AnimationPlaybackEvent",
         "DocumentTimeline",
-        "EffectTiming",
         "KeyframeEffect"
       ],
       "methods": ["Document.getAnimations()", "Element.animate()"],
@@ -1896,7 +1893,6 @@
         "RTCErrorEvent"
       ],
       "dictionaries": [
-        "RTCConfiguration",
         "RTCOAuthCredential",
         "RTCIceServer",
         "RTCSessionDescriptionInit",

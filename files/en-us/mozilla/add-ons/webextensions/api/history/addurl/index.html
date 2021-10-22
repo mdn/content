@@ -30,18 +30,18 @@ browser-compat: webextensions.api.history.addUrl
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>. Object containing the URL to add.</dd>
  <dd>
- <dl class="reference-values">
-  <dt><code>url</code></dt>
-  <dd><code>string</code>. The URL to add.</dd>
-  <dt><code>title</code>{{optional_inline}}</dt>
-  <dd>string: The title of the page. If this is not supplied, the title will be recorded as <code>null</code>.</dd>
-  <dt><code>transition</code>{{optional_inline}}</dt>
-  <dd>{{WebExtAPIRef("history.TransitionType")}}. Describes how the browser navigated to the page on this occasion. If this is not supplied, a transition type of "link" will be recorded.</dd>
-  <dt><code>visitTime</code>{{optional_inline}}</dt>
-  <dd><code>number</code> or <code>string</code> or <code>object</code>. A value indicating a date and time.  This can be represented as: a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> object, an <a class="external external-icon" href="https://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 date string</a>, or the number of milliseconds since the epoch. Sets the visit time to this value. If this is not supplied, the current time will be recorded.</dd>
- </dl>
+   <p><code>object</code>. Object containing the URL to add.</p>
+   <dl>
+    <dt><code>url</code></dt>
+    <dd><code>string</code>. The URL to add.</dd>
+    <dt><code>title</code>{{optional_inline}}</dt>
+    <dd>string: The title of the page. If this is not supplied, the title will be recorded as <code>null</code>.</dd>
+    <dt><code>transition</code>{{optional_inline}}</dt>
+    <dd>{{WebExtAPIRef("history.TransitionType")}}. Describes how the browser navigated to the page on this occasion. If this is not supplied, a transition type of "link" will be recorded.</dd>
+    <dt><code>visitTime</code>{{optional_inline}}</dt>
+    <dd><code>number</code> or <code>string</code> or <code>object</code>. A value indicating a date and time.  This can be represented as: a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> object, an <a class="external external-icon" href="https://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 date string</a>, or the number of milliseconds since the epoch. Sets the visit time to this value. If this is not supplied, the current time will be recorded.</dd>
+   </dl>
  </dd>
 </dl>
 
@@ -109,9 +109,8 @@ addingUrl.then(onAdded);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/history#method-addUrl"><code>chrome.history</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/history#method-addUrl"><code>chrome.history</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

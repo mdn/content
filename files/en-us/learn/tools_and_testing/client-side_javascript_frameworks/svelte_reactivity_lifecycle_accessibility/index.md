@@ -212,7 +212,7 @@ const checkAllTodos = (completed) => {
 }
 ```
 
-This will solve the problem. Internally Svelte will flag `todos` as changed and remove the apparently redundant self-assignment. Apart from the fact that it looks weird, it's perfectly ok to use this technique, and sometimes it's the most concise way to do it.
+This will solve the problem. Internally Svelte will flag `todos` as changed and remove the apparently redundant self-assignment. Apart from the fact that it looks weird, it's perfectly OK to use this technique, and sometimes it's the most concise way to do it.
 
 We could also access the `todos` array by index, like this:
 

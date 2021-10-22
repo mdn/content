@@ -117,7 +117,7 @@ Next, add the following just below your previous CSS:
 }
 ```
 
-This sets a specific width and height on the content, and centers it on the screen using the old `margin: 0 auto` trick. Previously in the course we advised against setting a fixed height on content containers if at all possible; it is ok in this circumstance because we have fixed content in our tabs. It also looks a bit jarring to have different tabs at different heights.
+This sets a specific width and height on the content, and centers it on the screen using the old `margin: 0 auto` trick. Previously in the course we advised against setting a fixed height on content containers if at all possible; it is OK in this circumstance because we have fixed content in our tabs. It also looks a bit jarring to have different tabs at different heights.
 
 ### Styling our tabs
 

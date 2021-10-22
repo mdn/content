@@ -18,7 +18,7 @@ browser-compat: webextensions.api.bookmarks.move
 <p>The <strong><code>bookmarks.move()</code></strong> method moves the specified {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} to the specified destination within the tree of bookmarks. This lets you move a bookmark to a new folder and/or position within the folder.</p>
 
 <div class="notecard warning">
-<p>If your extension attempts to move a bookmark into the bookmarks tree root node, the call will raise an error with the message: "<em>The bookmark root cannot be modified</em>" and the move won't be completed.</p>
+<p><strong>Warning:</strong> If your extension attempts to move a bookmark into the bookmarks tree root node, the call will raise an error with the message: "<em>The bookmark root cannot be modified</em>" and the move won't be completed.</p>
 </div>
 
 <p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
@@ -37,14 +37,14 @@ browser-compat: webextensions.api.bookmarks.move
  <dt><code>id</code></dt>
  <dd>A {{jsxref("string")}} containing the ID of the bookmark or folder to move.</dd>
  <dt><code>destination</code></dt>
- <dd>An {{jsxref("object")}} which specifies the destination for the bookmark. This object must contain one or both of the following fields:</dd>
  <dd>
- <dl class="reference-values">
-  <dt><code>parentId</code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("string")}} which specifies the ID of the destination folder. If this value is left out, the bookmark is moved to a new location within its current folder.</dd>
-  <dt><code>index</code> {{optional_inline}}</dt>
-  <dd>A 0-based index specifying the position within the folder to which to move the bookmark. A value of 0 moves the bookmark to the top of the folder. If this value is omitted, the bookmark is placed at the end of the new parent folder.</dd>
- </dl>
+   <p>An {{jsxref("object")}} which specifies the destination for the bookmark. This object must contain one or both of the following fields:</p>
+   <dl>
+    <dt><code>parentId</code> {{optional_inline}}</dt>
+    <dd>A {{jsxref("string")}} which specifies the ID of the destination folder. If this value is left out, the bookmark is moved to a new location within its current folder.</dd>
+    <dt><code>index</code> {{optional_inline}}</dt>
+    <dd>A 0-based index specifying the position within the folder to which to move the bookmark. A value of 0 moves the bookmark to the top of the folder. If this value is omitted, the bookmark is placed at the end of the new parent folder.</dd>
+   </dl>
  </dd>
 </dl>
 
@@ -77,9 +77,8 @@ movingBookmark.then(onMoved, onRejected);</pre>
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#method-move"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#method-move"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

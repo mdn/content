@@ -14,7 +14,7 @@ tags:
 <table class="standard-table">
  <tbody>
   <tr>
-   <td style="width: 40%;"><a href="#native_messaging_manifests">Native messaging manifests</a></td>
+   <td><a href="#native_messaging_manifests">Native messaging manifests</a></td>
    <td>Enable a feature called <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">native messaging</a>, in which an extension can communicate with a native app installed on the device.</td>
   </tr>
   <tr>
@@ -149,7 +149,7 @@ tags:
 
 <p>For example:</p>
 
-<pre class="brush: json line-numbers  language-json">{
+<pre class="brush: json">{
   &quot;name&quot;: &quot;favourite-color-examples@mozilla.org&quot;,
   &quot;description&quot;: &quot;ignored&quot;,
   &quot;type&quot;: &quot;storage&quot;,
@@ -161,7 +161,7 @@ tags:
 
 <p>Given this JSON manifest, the <code>favourite-color-examples@mozilla.org</code> extension could access the data using code like this:</p>
 
-<pre class="brush: js line-numbers language-js">let storageItem = browser.storage.managed.get('color');
+<pre class="brush: js">let storageItem = browser.storage.managed.get('color');
 storageItem.then((res) =&gt; {
   console.log(`Managed color is: ${res.color}`);
 });</pre>
@@ -233,7 +233,7 @@ storageItem.then((res) =&gt; {
 
 <p>For example:</p>
 
-<pre class="brush: json line-numbers  language-json">{
+<pre class="brush: json">{
   "name": "my_module",
   "description": "My test module",
   "type": "pkcs11",
@@ -243,7 +243,7 @@ storageItem.then((res) =&gt; {
 
 <p>Given this JSON manifest, saved as <code>my_module.json</code>, the <code>my-extension@mozilla.org</code> extension could install the security module at <code>/path/to/libpkcs11testmodule.dylib</code> using code like this:</p>
 
-<pre class="brush: js line-numbers language-js">browser.pkcs11.installModule("my_module");</pre>
+<pre class="brush: js">browser.pkcs11.installModule("my_module");</pre>
 
 <h2 id="Manifest_location">Manifest location</h2>
 
@@ -264,7 +264,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<var>&lt;name&gt;</var></pre>
 <p>The key should have a single default value, which is the path to the manifest.</p>
 
 <div class="notecard warning">
-<p><strong>As of Firefox 64:</strong> The 32-bit registry view (<a href="https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system">Wow6432Node) </a>will be checked first for these keys, followed by the "native" registry view. Use whichever is appropriate for your application.</p>
+<p><strong>Warning:</strong> As of Firefox 64, the 32-bit registry view (<a href="https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system">Wow6432Node) </a>will be checked first for these keys, followed by the "native" registry view. Use whichever is appropriate for your application.</p>
 
 <p><strong>For Firefox 63 and older:</strong> This key should <em>not</em> be created under <a href="https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system">Wow6432Node</a>, even if the app is 32-bit. Previous versions of the browser will always look for the key under the "native" view of the registry, not the 32-bit emulation. To ensure that the key is created in the "native" view, you can pass the <code>KEY_WOW64_64KEY</code> or <code>KEY_WOW64_32KEY</code> flags into <code>RegCreateKeyEx</code>. See <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa384129(v=vs.85).aspx">Accessing an Alternate Registry View</a>.</p>
 </div>

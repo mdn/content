@@ -32,20 +32,18 @@ browser-compat: webextensions.api.windows.getCurrent
 
 <dl>
  <dt><code>getInfo</code>{{optional_inline}}</dt>
- <dd><code>object</code>.</dd>
  <dd>
- <dl class="reference-values">
-  <dt><code>populate</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. If true, the {{WebExtAPIRef('windows.Window')}} object will have a <code>tabs</code> property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs in the window. The <code>Tab</code> objects only contain the <code>url</code>, <code>title</code> and <code>favIconUrl</code> properties if the extension's manifest file includes the <code>"tabs"</code> permission or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> that match the tab's URL.</dd>
-  <dt><code>windowTypes</code>{{deprecated_inline}}{{optional_inline}}</dt>
-  <dd>An <code>array</code> of <code>{{WebExtAPIRef('windows.WindowType')}}</code> objects. If set, the {{WebExtAPIRef('windows.Window')}} returned will be filtered based on its type. If unset the default filter is set to <code>['normal', 'panel', 'popup']</code>, with <code>'panel'</code> window types limited to the extension's own windows.</dd>
- </dl>
+   <p><code>object</code>.</p>
+   <dl>
+    <dt><code>populate</code>{{optional_inline}}</dt>
+    <dd><code>boolean</code>. If true, the {{WebExtAPIRef('windows.Window')}} object will have a <code>tabs</code> property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs in the window. The <code>Tab</code> objects only contain the <code>url</code>, <code>title</code> and <code>favIconUrl</code> properties if the extension's manifest file includes the <code>"tabs"</code> permission or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> that match the tab's URL.</dd>
+    <dt><code>windowTypes</code>{{deprecated_inline}}{{optional_inline}}</dt>
+    <dd>An <code>array</code> of <code>{{WebExtAPIRef('windows.WindowType')}}</code> objects. If set, the {{WebExtAPIRef('windows.Window')}} returned will be filtered based on its type. If unset the default filter is set to <code>['normal', 'panel', 'popup']</code>, with <code>'panel'</code> window types limited to the extension's own windows.</dd>
+   </dl>
  </dd>
 </dl>
 
-<div class="note"><strong>Note:</strong>
-
-<p>If supplied, the <code>windowTypes</code> component of <code>getInfo</code> is ignored. The use of <code>windowTypes</code> has been deprecated as of Firefox 62.</p>
+<div class="note"><p><strong>Note:</strong> If supplied, the <code>windowTypes</code> component of <code>getInfo</code> is ignored. The use of <code>windowTypes</code> has been deprecated as of Firefox 62.</p>
 </div>
 
 <h3 id="Return_value">Return value</h3>
@@ -78,9 +76,8 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/windows#method-getCurrent"><code>chrome.windows</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/windows#method-getCurrent"><code>chrome.windows</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

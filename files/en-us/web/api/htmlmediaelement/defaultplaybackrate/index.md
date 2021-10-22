@@ -22,9 +22,12 @@ audio.defaultPlaybackRate = 1.0;
 
 ### Value
 
-A double. 1.0 is "normal speed," values lower than 1.0 make the media play slower than normal, higher values make it play faster.
+A double. `1.0` is "normal speed," values lower than `1.0` make the media play slower than normal, higher values make it play faster.
 
-The user agent will throw a `NotSupportedError` exception if the specified value is not supported.
+### Exceptions
+
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the specified value is not supported.
 
 ## Example
 

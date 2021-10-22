@@ -236,8 +236,8 @@ through a preference, turns off chrome errors/warnings in the console, and enabl
         "log": {"level": "trace"},
         "env": {
           "MOZ_LOG": "nsHttp:5",
-          "MOZ_LOG_FILE": "/path/to/my/profile/log",
-        },
+          "MOZ_LOG_FILE": "/path/to/my/profile/log"
+        }
       }
     }
   }

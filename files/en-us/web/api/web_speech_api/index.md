@@ -66,9 +66,9 @@ The [Web Speech API repo](https://github.com/mdn/web-speech-api/) on GitHub cont
 
 ## Specifications
 
-| Specification       |
-| ------------------- |
-| [Web Speech APII]() |
+| Specification      |
+| ------------------ |
+| [Web Speech API]() |
 
 ## Browser compatibility
 

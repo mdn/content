@@ -51,7 +51,7 @@ browser-compat: webextensions.api.browsingData.removeLocalStorage
 
 <p>Remove all local storage:</p>
 
-<pre class="brush: js line-numbers  language-js">function onRemoved() {
+<pre class="brush: js">function onRemoved() {
   console.log(&quot;removed&quot;);
 }
 
@@ -64,9 +64,8 @@ then(onRemoved, onError);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a> API.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a> API.</p>
 </div>
 
 <div class="hidden">

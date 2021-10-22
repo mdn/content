@@ -34,7 +34,7 @@ browser-compat: webextensions.api.tabs.removeCSS
  <dd><code>integer</code>. The ID of the tab from which to remove the CSS. Defaults to the active tab of the current window.</dd>
  <dt><code>details</code></dt>
  <dd>An object describing the CSS to remove from the page. It contains the following properties:
- <dl class="reference-values">
+ <dl>
   <dt><code>allFrames</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. If <code>true</code>, the code will be removed from all frames of the current page. If it is <code>false</code>, code is only removed from the top frame. Defaults to <code>false</code>.</dd>
   <dt><code>code</code>{{optional_inline}}</dt>
@@ -79,9 +79,8 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-insertCSS"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-insertCSS"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

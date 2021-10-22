@@ -5,6 +5,7 @@ tags:
   - Deprecated
   - JavaScript
   - Method
+  - Polyfill
 browser-compat: javascript.builtins.escape
 ---
 {{jsSidebar("Objects")}}
@@ -81,6 +82,7 @@ escape('@*_+-./');    // "@*_+-./"
 
 ## See also
 
+- A polyfill of `escape` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("encodeURI")}}
 - {{jsxref("encodeURIComponent")}}
 - {{jsxref("unescape")}}

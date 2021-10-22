@@ -16,7 +16,9 @@ tags:
 
 <p>The first and most important thing to note is that starting in Firefox 10, add-ons are assumed to be compatible by default. Unless you use the <a href="/en-US/docs/Install_Manifests#strictCompatibility"><code>&lt;em:strictCompatibility&gt;</code></a> flag in your manifest, Firefox will no longer mark your add-on as incompatible after an upgrade to Firefox 10 or later. You can use that flag to ensure that an add-on that is likely to break will not try to run in updated copies of Firefox. It's worth noting that add-ons that have binary components will always be strictly checked for compatibility, since binary components always need to be recompiled for each major Firefox release.</p>
 
-<div class="note"><strong>Note:</strong> You should still test your add-on on Firefox 10, even in the world of compatibility by default. Read over the rest of this article to see if there's anything you need to change.</div>
+<div class="note">
+  <p><strong>Note:</strong> You should still test your add-on on Firefox 10, even in the world of compatibility by default. Read over the rest of this article to see if there's anything you need to change.</p>
+</div>
 
 <h2 id="DOM_changes">DOM changes</h2>
 
@@ -55,7 +57,7 @@ tags:
 
 <ul>
  <li><code>nsNavHistory</code> no longer implements the {{ interface("nsICharsetResolver") }} interface. <strong>Note that {{ interface("nsICharsetResolver") }} is no longer used and is being removed in Gecko 11.0 {{ geckoRelease("11.0") }}</strong>.</li>
- <li>The {{ interface("mozISpellCheckingEngine") }} and {{ interface("nsIEditorSpellCheck") }} interfaces have been updated to let restartless add-ons add dictionaries to the spell checker. See <a href="/en-US/Using_an_External_Spell-checker" title="Using an external spell checker">Using an external spell checker</a> for details (note this article has not yet been updated, but will be soon).</li>
+ <li>The {{ interface("mozISpellCheckingEngine") }} and {{ interface("nsIEditorSpellCheck") }} interfaces have been updated to let restartless add-ons add dictionaries to the spell checker. See <a href="/en-US/Using_an_External_Spell-checker">Using an external spell checker</a> for details (note this article has not yet been updated, but will be soon).</li>
  <li>The {{ ifattribute("nsIBrowserHistory", "lastPageVisited") }} attribute has been removed, as it hasn't been supported for some time.</li>
  <li>Several <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> internal interfaces have changed to support revised APIs. This shouldn't affect you but is worth noting on the off chance you were doing something unusual.</li>
 </ul>

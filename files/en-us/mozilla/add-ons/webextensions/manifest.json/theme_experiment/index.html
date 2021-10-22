@@ -18,7 +18,7 @@ browser-compat: webextensions.manifest.theme_experiment
 <table class="fullwidth-table standard-table">
  <tbody>
   <tr>
-   <th scope="row" style="width: 30%;">Type</th>
+   <th scope="row">Type</th>
    <td><code>Object</code></td>
   </tr>
   <tr>
@@ -47,31 +47,21 @@ browser-compat: webextensions.manifest.theme_experiment
  </tbody>
 </table>
 
-<div class="cl-preview-section">
 <p>This key enables the definition of experimental <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">theme</a></code> key properties for the Firefox interface. These experiments are a precursor to proposing new theme features for inclusion in Firefox. Experimentation is done by:</p>
-</div>
 
-<div class="cl-preview-section">
 <ul>
  <li>creating a stylesheet that defines mappings between internal CSS selectors for Firefox UI elements and arbitrary CSS variables. The CSS variables are then mapped in the <code>colors</code>, <code>images</code>, and <code>properties</code> objects to new <code>theme</code> key properties.</li>
  <li>(without a stylesheet) using <code>colors</code>, <code>images</code>, and <code>properties</code> to map internal Firefox CSS selectors, such as <code>--arrowpanel-dimmed</code> to new <code>theme</code> key properties. This option limits experimentation to UI components that are associated with an inbuilt CSS variable.</li>
 </ul>
-</div>
 
-<div class="cl-preview-section">
 <p>To discover the CSS selectors for Firefox UI elements or internal Firefox CSS variables use the <a href="/en-US/docs/Tools/Browser_Toolbox">browser toolbox</a>.</p>
-</div>
 
-<div class="cl-preview-section">
 <div class="notecard note">
-<p>This key is only available for use in Firefox Developer Edition and Firefox Nightly channels and requires the <code>extensions.experiments.enabled</code> preference to be enabled. In Firefox 73 and earlier, the <code>extensions.legacy.enabled</code> had to be used instead.</p>
-</div>
+<p><strong>Note:</strong> This key is only available for use in Firefox Developer Edition and Firefox Nightly channels and requires the <code>extensions.experiments.enabled</code> preference to be enabled. In Firefox 73 and earlier, the <code>extensions.legacy.enabled</code> had to be used instead.</p>
 </div>
 
-<div class="cl-preview-section">
 <div class="notecard warning">
-<p>This feature is experimental and could be subject to change.</p>
-</div>
+<p><strong>Warning:</strong> This feature is experimental and could be subject to change.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -128,30 +118,19 @@ browser-compat: webextensions.manifest.theme_experiment
 
 <h2 id="Examples">Examples</h2>
 
-<div class="cl-preview-section">
 <p>This example uses a stylesheet named <code>style.css</code> to provide the ability to set a color for the browser reload button in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">theme</a></code> key.</p>
-</div>
 
-<div class="cl-preview-section">
 <p>The stylesheet defines:</p>
-</div>
 
-<div class="cl-preview-section">
 <pre><code>#reload-button {
   fill: var(--reload-button-color);
 }
 </code></pre>
-</div>
 
-<div class="cl-preview-section">
 <p>where <code>#reload-button</code> is the Firefox internal CSS selector for the reload button and <code>--reload-button-color</code> is an arbitrary name.</p>
-</div>
 
-<div class="cl-preview-section">
 <p>In the <code>manifest.json</code> file, <code>--reload-button-color</code> is then mapped to the name to be used in the <code>theme</code> <code>colors</code> property:</p>
-</div>
 
-<div class="cl-preview-section">
 <pre><code>"theme_experiment": {
   "stylesheet": "style.css",
   "colors": {
@@ -159,32 +138,21 @@ browser-compat: webextensions.manifest.theme_experiment
   }
 }
 </code></pre>
-</div>
 
-<div class="cl-preview-section">
 <p>The argument <code>reload_button</code> is used in the same way as any other <code>theme</code> property:</p>
-</div>
 
-<div class="cl-preview-section">
 <pre><code>"theme": {
   "colors": {
     "reload_button": "orange"
   }
 }
 </code></pre>
-</div>
 
-<div class="cl-preview-section">
 <p>This has the effect of making the reload icon orange.</p>
-</div>
 
-<div class="cl-preview-section"><img alt="Outcome of a theme experiment, showing the reload button colored orange." src="theme_experiment.png"></div>
+<img alt="Outcome of a theme experiment, showing the reload button colored orange." src="theme_experiment.png">
 
-<div class="cl-preview-section"></div>
-
-<div class="cl-preview-section">
 <p>This property can also be used in <code>browser.theme.update()</code>. <code>images</code> and <code>properties</code> work in a similar way to <code>colors</code>.</p>
-</div>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 

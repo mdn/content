@@ -55,17 +55,17 @@ browser-compat: webextensions.api.clipboard.setImageData
 
 <p>Copy a remote image:</p>
 
-<pre class="brush: js" id="ct-71"><span class="quote">// requires:
+<pre class="brush: js">// requires:
 // * the host permission for "<a href="https://cdn.mdn.mozilla.net/" rel="nofollow">https://cdn.mdn.mozilla.net/</a>*"
 // * the API permission "clipboardWrite"
 
 fetch('<a href="https://cdn.mdn.mozilla.net/static/img/favicon144.png" rel="nofollow">https://cdn.mdn.mozilla.net/static/img/favicon144.png</a>')
 .then(response =&gt; response.arrayBuffer())
-.then(buffer =&gt; browser.clipboard.setImageData(buffer, 'png'));</span></pre>
+.then(buffer =&gt; browser.clipboard.setImageData(buffer, 'png'));</pre>
 
-<p><span class="quote">Copy an image that was bundled with the extension:</span></p>
+<p>Copy an image that was bundled with the extension:</p>
 
-<pre class="brush: js" id="ct-70">// requires <span class="quote">the API permission </span>"clipboardWrite"
+<pre class="brush: js">// requires the API permission "clipboardWrite"
 
 fetch(browser.runtime.getURL('image.png'))
 .then(response =&gt; response.arrayBuffer())
@@ -73,7 +73,6 @@ fetch(browser.runtime.getURL('image.png'))
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/apps/clipboard"><code>chrome.clipboard</code></a> API.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/apps/clipboard"><code>chrome.clipboard</code></a> API.</p>
 </div>

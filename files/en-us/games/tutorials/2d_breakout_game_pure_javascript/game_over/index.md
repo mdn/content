@@ -89,6 +89,6 @@ Here's the working code for you to compare yours against:
 
 ## Next steps
 
-We're doing quite well so far and our game is starting to feel a lot more worth playing now you can lose! But it is still missing something. Let's move on  to the sixth chapter — [Build the brick field](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field) — and create some bricks for the ball to destroy.
+We're doing quite well so far and our game is starting to feel a lot more worth playing now that you can lose! But it is still missing something. Let's move on  to the sixth chapter — [Build the brick field](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field) — and create some bricks for the ball to destroy.
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
