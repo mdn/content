@@ -59,10 +59,10 @@ RTCDTMFSender.insertDTMF(tones[, duration[, interToneGap]]);
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : The DTMF tones couldn't be sent because the track has been stopped, or is in a
+  - : Thrown if the DTMF tones couldn't be sent because the track has been stopped or is in a
     read-only or inactive state.
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : One or more of the characters in `tones` is not valid DTMF (0-9, A-Z, # or ,).
+  - : Thrown if one or more of the characters in `tones` is not valid DTMF (0-9, A-Z, # or ,).
 
 ## Example
 

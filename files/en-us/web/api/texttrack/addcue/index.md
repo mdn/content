@@ -32,8 +32,8 @@ Undefined.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `InvalidStateError`
-  - : Thrown if the rules for this {{domxref("TextTrackList")}} do not match those which are appropriate for the incoming {{domxref("TextTrackCue")}}.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the rules for this {{domxref("TextTrackList")}} do not match those that are appropriate for the incoming {{domxref("TextTrackCue")}}.
 
 ## Examples
 

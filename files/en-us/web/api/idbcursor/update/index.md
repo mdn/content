@@ -46,47 +46,18 @@ operation are fired.
 
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>This IDBCursor's transaction is inactive.</td>
-    </tr>
-    <tr>
-      <td><code>ReadOnlyError</code></td>
-      <td>The transaction mode is read only.</td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>
-        The cursor was created using
-        {{domxref("IDBIndex.openKeyCursor")}}, is currently being
-        iterated, or has iterated past its end.
-      </td>
-    </tr>
-    <tr>
-      <td><code>DataError</code></td>
-      <td>
-        The underlying object store uses in-line keys and the property in the
-        value at the object store's key path does not match the key in this
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if this IDBCursor's transaction is inactive.
+- `ReadOnlyError` {{domxref("DOMException")}}
+  - : Thrown if the transaction mode is read-only.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the cursor was created using {{domxref("IDBindex.openKeyCursor")}}, is currently being iterated, or has iterated past its end.
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if the underlying object store uses in-line keys and the property in the value at the object store's key path does not match the key in this
         cursor's position.
-      </td>
-    </tr>
-    <tr>
-      <td><code>DataCloneError</code></td>
-      <td>
-        The data being stored could not be cloned by the internal structured
+- `DataCloneError` {{domxref("DOMException")}}
+  - : Thrown if the data being stored could not be cloned by the internal structured
         cloning algorithm.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Example
 

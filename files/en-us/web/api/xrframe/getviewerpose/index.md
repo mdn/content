@@ -42,8 +42,8 @@ to the specified reference space.
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : A {{domxref('DOMException')}} indicating that `getViewerPose()` was not
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `getViewerPose()` was not
     called within the context of a callback to a
     session's {{domxref("XRSession.requestAnimationFrame",
     "XRSession.requestAnimationFrame()")}}.

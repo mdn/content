@@ -55,13 +55,13 @@ of this interface return `undefined`.
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : The specified array of `values` has fewer than 2 items in it.
-- `RangeError`
-  - : The specified `startTime` is either negative or a non-finite value, or
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the specified array of `values` has fewer than 2 items in it.
+- `RangeError` {{domxref("DOMException")}}
+  - : Thrown if the specified `startTime` is either negative or a non-finite value, or
     `duration` is not a finite, strictly positive number.
-- `TypeError`
-  - : One or more of the values in the `values` array is non-finite. Non-finite
+- `TypeError` {{domxref("DOMException")}}
+  - : Thrown if one or more of the values in the `values` array is non-finite. Non-finite
     values are `NaN`, `Infinity`, and `-Infinity`.
 
 ## Usage notes
