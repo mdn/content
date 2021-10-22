@@ -15,17 +15,17 @@ Common targets are {{domxref("Element")}}, or its children, {{domxref("Document"
 but the target may be any object that supports events (such as {{domxref("XMLHttpRequest")}}).
 
 > **Warning:** The `addEventListener()` method is the _recommended_ way to register an event listener. The benefits are as follows:
-> - It allows adding more than a single handler for an event. This is particularly
+> - It allows adding more than one handler for an event. This is particularly
 >   useful for libraries, JavaScript modules, or any other kind of
 >   code that needs to work well with other libraries or extensions.
-> - Contrarily to using an `onXYZ` property, it gives you finer-grained control of the phase when the listener is activated (capturing vs. bubbling).
+> - In contrast to using an `onXYZ` property, it gives you finer-grained control of the phase when the listener is activated (capturing vs. bubbling).
 > - It works on any event target, not just HTML or SVG elements.
 
 The method `addEventListener()` works by adding a function, or an object that implements
 {{domxref("EventListener")}}, to the list of event listeners for the specified event type
-on the {{domxref("EventTarget")}} on which it's called. If the function, or the object, are already in the list of event listeners for this target, they are not added a second time.
+on the {{domxref("EventTarget")}} on which it's called. If the function or object, is already in the list of event listeners for this target, they are not added a second time.
 
-They do not need to be removed manually with the {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} method.
+They do not need to be removed manually with {{domxref("EventTarget.removeEventListener", "removeEventListener()")}}.
 
 > **Note:** Two identical anonymous functions are considered as different for `addEventListener` and the second one will _also_ be added to the list of event listener for that target.
 >
@@ -39,7 +39,7 @@ If an event listener is added to an {{domxref("EventTarget")}} from inside anoth
 that is during the processing of the event,
 that event will not trigger the new listener.
 However, the new listener may be triggered during a later stage of event flow,
-such as the bubbling phase.
+such as during the bubbling phase.
 
 ## Syntax
 
@@ -80,7 +80,7 @@ target.addEventListener(type, listener, useCapture);
         generate a console warning.
         See [Improving scrolling performance with passive listeners](#improving_scrolling_performance_with_passive_listeners) to learn more.
     - `signal`
-      - : An {{domxref("AbortSignal")}}. The listener will be removed when the given `AbortSignal`'s {{domxref("AbortController/abort()", "abort()")}} method is called.
+      - : An {{domxref("AbortSignal")}}. The listener will be removed when the given `AbortSignal` object's {{domxref("AbortController/abort()", "abort()")}} method is called.
 
 - `useCapture` {{optional_inline}}
 
@@ -281,7 +281,7 @@ function modifyText() {
 }
 ```
 
-In the above example just above, we modify the code in the previous example such that after the second row's content changes to "three", we call `abort()` from the {{domxref("AbortController")}} we passed to the `addEventListener()` call. That results in the value remaining as "three" forever — because we no longer have any code listening for a click event.
+In the example above, we modify the code in the previous example such that after the second row's content changes to "three", we call `abort()` from the {{domxref("AbortController")}} we passed to the `addEventListener()` call. That results in the value remaining as "three" forever because we no longer have any code listening for a click event.
 
 #### Result
 
@@ -637,7 +637,7 @@ to pass them any data, much less to get any data back from them after they execu
 Event listeners only take one argument,
 the [Event Object](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_objects),
 which is automatically passed to the listener, and the return value is ignored.
-So how can we get data in and back out of them again? There are a number of
+So how can we get data in and back out of them? There are a number of
 good methods for doing this.
 
 #### Getting data into an event listener using "this"

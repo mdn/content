@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-An newly-created instance of the {{domxref("EventTarget")}} object.
+A new instance of the {{domxref("EventTarget")}} object.
 
 ## Examples
 

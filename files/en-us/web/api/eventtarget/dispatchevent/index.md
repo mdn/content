@@ -8,12 +8,12 @@ browser-compat: api.EventTarget.dispatchEvent
 ---
 {{APIRef("DOM")}}
 
-The **`dispatchEvent()`** method of the {{domxref("EventTarget")}} actually send an {{domxref("Event")}} at the object, (synchronously) invoking the affected
+The **`dispatchEvent()`** method of the {{domxref("EventTarget")}} sends an {{domxref("Event")}} to the object, (synchronously) invoking the affected
 {{domxref("EventListener")}}s in the appropriate order. The normal event processing
 rules (including the capturing and optional bubbling phase) also apply to events
 dispatched manually with `dispatchEvent()`.
 
-Calling the `dispatchEvent()` method is the last step to _fire an event_. The event
+Calling `dispatchEvent()` is the last step to _firing an event_. The event
 should have already been created and initialized using an [Event constructor](/en-US/docs/Web/API/Event/Event).
 
 > **Note:** When calling this method, the {{domxref("Event.target")}} property is initialized to the current `EventTarget`.
@@ -42,7 +42,7 @@ cancelled = target.dispatchEvent(event)
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DomException")}}
-  - : Thrown if the event's type was not specified by initializing the event before the method was called.
+  - : Thrown if the event's type was not specified during event initialization.
 
 > **Warning:** Exceptions thrown by event handlers are reported as uncaught exceptions. The event
 > handlers run on a nested callstack; they block the caller until they complete, but
