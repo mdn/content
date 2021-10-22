@@ -131,7 +131,7 @@
   },
   "Cookie Prefixes": {
     "name": "Cookie Prefixes",
-    "url": "https://tools.ietf.org/html/draft-west-cookie-prefixes-05",
+    "url": "https://datatracker.ietf.org/doc/html/draft-west-cookie-prefixes-05",
     "status": "Draft"
   },
   "Cookie Store API": {
@@ -936,7 +936,7 @@
   },
   "HSTS": {
     "name": "HTTP Strict Transport Security (HSTS)",
-    "url": "https://tools.ietf.org/html/rfc6797",
+    "url": "https://datatracker.ietf.org/doc/html/rfc6797",
     "status": "RFC"
   },
   "HTML Editing": {
@@ -1576,7 +1576,7 @@
   },
   "vCard": {
     "name": "vCard Format Specification",
-    "url": "https://tools.ietf.org/html/rfc6350",
+    "url": "https://datatracker.ietf.org/doc/html/rfc6350",
     "status": "RFC"
   },
   "Vibration API": {
