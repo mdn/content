@@ -92,8 +92,7 @@ one of the following types:
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the method was not called from a
-        `versionchange` transaction callback. For older WebKit
-        browsers, you must first call {{APIRef("IDBVersionChangeRequest.setVersion")}}.
+        `versionchange` transaction callback.
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if a request is made on a source database that does not exist
         (for example, when the database has been deleted or removed). In Firefox previous to version 41,
