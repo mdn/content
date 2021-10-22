@@ -35,7 +35,7 @@ RTCPeerConnection.createAnswer(successCallback, failureCallback[, options]); {{d
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : An ooptional object providing options requested for the answer. Currently, there are no available options.
+  - : An optional object providing options requested for the answer. Currently, there are no available options.
 
 ### Deprecated parameters
 
