@@ -27,7 +27,7 @@ handlers will execute and return before the code continues on after the call to
 ## Syntax
 
 ```js
-cancelled = target.dispatchEvent(event)
+target.dispatchEvent(event)
 ```
 
 ### Parameter
