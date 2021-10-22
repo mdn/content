@@ -55,7 +55,7 @@ Except when using the `not` or `only` logical operators, the media type is optio
 - `speech`
   - : Intended for speech synthesizers.
 
-> **Note:** CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`), but they were deprecated in [Media Queries 4](http://dev.w3.org/csswg/mediaqueries/#media-types) and shouldn't be used.
+> **Note:** CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`), but they were deprecated in [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) and shouldn't be used.
 > The `aural` type has been replaced by `speech`, which is similar.
 
 ### Media features
@@ -136,6 +136,30 @@ Media feature expressions test for their presence or value, and are entirely opt
   - : Width of the viewport including width of scrollbar.
 
 
+### Logical operators
+
+The _logical operators_ `not`, `and`, and `only` can be used to compose a complex media query.
+You can also combine multiple media queries into a single rule by separating them with commas.
+
+- `and`
+  - : Used for combining multiple media features together into a single media query, requiring each chained feature to return `true` for the query to be `true`.
+    It is also used for joining media features with media types.
+- `not`
+  - : Used to negate a media query, returning `true` if the query would otherwise return `false`.
+    If present in a comma-separated list of queries, it will only negate the specific query to which it is applied.
+    If you use the `not` operator, you _must also_ specify a media type.
+
+    > **Note:** In Level 3, the `not` keyword can't be used to negate an individual media feature expression, only an entire media query.
+- `only`
+  - : Applies a style only if an entire query matches.
+    It is useful for preventing older browsers from applying selected styles.
+    When not using `only`, older browsers would interpret the query `screen and (max-width: 500px)` as `screen`, ignoring the remainder of the query, and applying its styles on all screens.
+    If you use the `only` operator, you _must also_ specify a media type.
+- `,` (comma)
+  - : Commas are used to combine multiple media queries into a single rule.
+    Each query in a comma-separated list is treated separately from the others
+     Thus, if any of the queries in a list is `true`, the entire media statement returns `true`.
+     In other words, lists behave like a logical `or` operator.
 
 
 ## Accessibility concerns
