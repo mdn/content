@@ -37,25 +37,25 @@ browser-compat: webextensions.api.sidebarAction.setTitle
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>. An object with the following properties:</dd>
  <dd>
- <dl>
-  <dt><code>title</code></dt>
-  <dd><code>string</code> or <code>null</code>. The sidebar's new title.</dd>
-  <dd>If <code>title</code> is an empty string, the used title will be the extension name, but {{WebExtAPIRef("sidebarAction.getTitle")}} will still provide the empty string.</dd>
-  <dd>If <code>title</code> is <code>null</code>, then a previously set title will be removed, so that:</dd>
-  <dd>
-  <ul>
-   <li>If <code>tabId</code> is specified, and the tab has a tab-specific title set, then the tab will inherit the title from the window it belongs to.</li>
-   <li>If <code>windowId</code> is specified, and the window has a window-specific title set, then the window will inherit the global title.</li>
-   <li>Otherwise, the global title will be reset to the manifest title.</li>
-  </ul>
-  </dd>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Sets the title only for the given tab.</dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Sets the title only for the given window.</dd>
- </dl>
+   <p><code>object</code>. An object with the following properties:</p>
+   <dl>
+    <dt><code>title</code></dt>
+    <dd>
+      <p><code>string</code> or <code>null</code>. The sidebar's new title.</p>
+      <p>If <code>title</code> is an empty string, the used title will be the extension name, but {{WebExtAPIRef("sidebarAction.getTitle")}} will still provide the empty string.</p>
+      <p>If <code>title</code> is <code>null</code>, then a previously set title will be removed, so that:</p>
+      <ul>
+       <li>If <code>tabId</code> is specified, and the tab has a tab-specific title set, then the tab will inherit the title from the window it belongs to.</li>
+       <li>If <code>windowId</code> is specified, and the window has a window-specific title set, then the window will inherit the global title.</li>
+       <li>Otherwise, the global title will be reset to the manifest title.</li>
+      </ul>
+    </dd>
+    <dt><code>tabId</code>{{optional_inline}}</dt>
+    <dd><code>integer</code>. Sets the title only for the given tab.</dd>
+    <dt><code>windowId</code>{{optional_inline}}</dt>
+    <dd><code>integer</code>. Sets the title only for the given window.</dd>
+   </dl>
  </dd>
 </dl>
 

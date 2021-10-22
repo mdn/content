@@ -29,16 +29,18 @@ browser-compat: webextensions.api.i18n.getMessage
 
 <dl>
  <dt><code>messageName</code></dt>
- <dd><code>string</code>. The name of the message, as specified in the messages.json file. If the message can't be found in messages.json:</dd>
  <dd>
- <ul>
-  <li>Firefox returns "" and logs an error.</li>
-  <li>Chrome returns "" and does not log an error.</li>
- </ul>
+   <p><code>string</code>. The name of the message, as specified in the messages.json file. If the message can't be found in messages.json:</p>
+   <ul>
+    <li>Firefox returns "" and logs an error.</li>
+    <li>Chrome returns "" and does not log an error.</li>
+   </ul>
  </dd>
  <dt><code>substitutions</code>{{optional_inline}}</dt>
- <dd><code>string</code> or <code>array</code> of <code>string</code>. A single substitution string, or an array of substitution strings.</dd>
- <dd>In Chrome, if you supply more than 9 substitution strings, <code>getMessage()</code> will return <code>undefined</code>.</dd>
+ <dd>
+   <p><code>string</code> or <code>array</code> of <code>string</code>. A single substitution string, or an array of substitution strings.</p>
+   <p>In Chrome, if you supply more than 9 substitution strings, <code>getMessage()</code> will return <code>undefined</code>.</p>
+ </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>

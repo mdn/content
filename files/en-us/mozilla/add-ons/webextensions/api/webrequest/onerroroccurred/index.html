@@ -134,24 +134,23 @@ browser.webRequest.onErrorOccurred.hasListener(listener)
  <dt><code>url</code></dt>
  <dd><code>string</code>. Target of the request.</dd>
  <dt><code>urlClassification</code></dt>
- <dd><code>object</code>. The type of tracking associated with the request, if with the request has been classified by <a class="external external-icon" href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" rel="noopener">Firefox Tracking Protection</a>. This is an object with the following properties:</dd>
  <dd>
- <dl>
-  <dt><code>firstParty</code></dt>
-  <dd><code>array</code> of <code>strings</code>. Classification flags for the request's first party.</dd>
-  <dt><code>thirdParty</code></dt>
-  <dd><code>array</code> of <code>strings</code>. Classification flags for the request or its window hierarchy's third parties.</dd>
- </dl>
- </dd>
- <dd>The classification flags include:
- <ul>
-  <li><code>fingerprinting</code> and <code>fingerprinting_content</code>: indicates the request is involved in fingerprinting. <code>fingerprinting_content</code> indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.</li>
-  <li><code>cryptomining</code> and <code>cryptomining_content</code>: similar to the fingerprinting category but for cryptomining resources.</li>
-  <li><code>tracking</code>, <code>tracking_ad</code>, <code>tracking_analytics</code>, <code>tracking_social</code>,  and <code>tracking_content</code>: indicates the request is involved in tracking. <code>tracking</code> is any generic tracking request, the <code>ad</code>, <code>analytics</code>, <code>social</code>, and <code>content</code> suffixes identify the type of tracker.</li>
-  <li><code>any_basic_tracking</code>: a meta flag that combines any tracking and fingerprinting flags, excluding <code>tracking_content</code> and <code>fingerprinting_content</code>.</li>
-  <li><code>any_strict_tracking</code>: a meta flag that combines any tracking and fingerprinting flags, including <code>tracking_content</code> and <code>fingerprinting_content</code>.</li>
-  <li><code>any_social_tracking</code>: a meta flag that combines any social tracking flags.</li>
- </ul>
+   <p><code>object</code>. The type of tracking associated with the request, if with the request has been classified by <a class="external external-icon" href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" rel="noopener">Firefox Tracking Protection</a>. This is an object with the following properties:</p>
+   <dl>
+    <dt><code>firstParty</code></dt>
+    <dd><code>array</code> of <code>strings</code>. Classification flags for the request's first party.</dd>
+    <dt><code>thirdParty</code></dt>
+    <dd><code>array</code> of <code>strings</code>. Classification flags for the request or its window hierarchy's third parties.</dd>
+   </dl>
+   <p>The classification flags include:</p>
+   <ul>
+    <li><code>fingerprinting</code> and <code>fingerprinting_content</code>: indicates the request is involved in fingerprinting. <code>fingerprinting_content</code> indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.</li>
+    <li><code>cryptomining</code> and <code>cryptomining_content</code>: similar to the fingerprinting category but for cryptomining resources.</li>
+    <li><code>tracking</code>, <code>tracking_ad</code>, <code>tracking_analytics</code>, <code>tracking_social</code>,  and <code>tracking_content</code>: indicates the request is involved in tracking. <code>tracking</code> is any generic tracking request, the <code>ad</code>, <code>analytics</code>, <code>social</code>, and <code>content</code> suffixes identify the type of tracker.</li>
+    <li><code>any_basic_tracking</code>: a meta flag that combines any tracking and fingerprinting flags, excluding <code>tracking_content</code> and <code>fingerprinting_content</code>.</li>
+    <li><code>any_strict_tracking</code>: a meta flag that combines any tracking and fingerprinting flags, including <code>tracking_content</code> and <code>fingerprinting_content</code>.</li>
+    <li><code>any_social_tracking</code>: a meta flag that combines any social tracking flags.</li>
+   </ul>
  </dd>
 </dl>
 

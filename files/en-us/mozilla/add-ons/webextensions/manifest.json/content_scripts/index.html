@@ -61,11 +61,11 @@ browser-compat: webextensions.manifest.content_scripts
    <td>
     <dl>
      <dt><code>true</code></dt>
-     <dd>Inject the scripts specified in <code><a href="#js">js</a></code> and <code><a href="#css">css</a></code> into all frames matching the specified URL requirements, even if the frame is not the topmost frame in a tab. This does not inject into child frames where only their parent matches the URL requirements and the child frame does not match the URL requirements. The URL requirements are checked for each frame independently.</dd>
      <dd>
-     <div class="notecard note">
-     <p><strong>Note:</strong> This also applies to any tracker or ad that uses iframes, which means that enabling this could make your content script get called dozens of times on some pages.</p>
-     </div>
+       <p>Inject the scripts specified in <code><a href="#js">js</a></code> and <code><a href="#css">css</a></code> into all frames matching the specified URL requirements, even if the frame is not the topmost frame in a tab. This does not inject into child frames where only their parent matches the URL requirements and the child frame does not match the URL requirements. The URL requirements are checked for each frame independently.</p>
+       <div class="notecard note">
+       <p><strong>Note:</strong> This also applies to any tracker or ad that uses iframes, which means that enabling this could make your content script get called dozens of times on some pages.</p>
+       </div>
      </dd>
      <dt><code>false</code></dt>
      <dd>Inject only into frames matching the URL requirements which are the topmost frame in a tab.</dd>

@@ -13,7 +13,7 @@ tags:
   - get
 browser-compat: webextensions.api.windows.get
 ---
-<div><{{AddonSidebar()}}</div>
+<div>{{AddonSidebar()}}</div>
 
 <p>Gets details about a window, given its ID. The details are passed into a callback.</p>
 
@@ -33,7 +33,7 @@ browser-compat: webextensions.api.windows.get
  <dt><code>windowId</code></dt>
  <dd><code>integer</code>. The ID of the window object you want returned.</dd>
  <dt><code>getInfo</code>{{optional_inline}}</dt>
- <dd><code>object</code>. Contains options to filter the type of window.
+ <dd><p><code>object</code>. Contains options to filter the type of window.</p>
  <dl>
   <dt><code>populate</code>{{optional_inline}}</dt>
   <dd><code>boolean</code>. If <code>true</code>, the {{WebExtAPIRef('windows.Window')}} object will have a <code>tabs</code> property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs open in the window. The <code>Tab</code> objects only contain the <code>url</code>, <code>title</code> and <code>favIconUrl</code> properties if the extension's manifest file includes the <code>"tabs"</code> permission or a matching <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission</a>.</dd>

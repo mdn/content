@@ -37,25 +37,25 @@ browser-compat: webextensions.api.sidebarAction.setPanel
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>. An object with the following properties:</dd>
  <dd>
- <dl>
-  <dt><code>panel</code></dt>
-  <dd><code>string</code> or <code>null</code>. The panel to load into the sidebar, specified as a URL pointing to an HTML document, or <code>null</code>, or an empty string.</dd>
-  <dd>This can point to a file packaged within the extension (for example, created using {{WebExtAPIRef("runtime.getURL")}}), or a remote document (e.g. <code>https://example.org/</code>). It must be a valid URL.</dd>
-  <dd>If <code>panel</code> is <code>null</code> or <code>""</code>, then a previously set panel will be removed, so that:</dd>
-  <dd>
-  <ul>
-   <li>If <code>tabId</code> is specified, and the tab has a tab-specific panel set, then the tab will inherit the panel from the window it belongs to.</li>
-   <li>If <code>windowId</code> is specified, and the window has a window-specific panel set, then the window will inherit the global panel.</li>
-   <li>Otherwise, the global panel will be reset to the manifest panel.</li>
-  </ul>
-  </dd>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Sets the panel only for the given tab.</dd>
-  <dt><code>windowId</code> {{optional_inline}}</dt>
-  <dd><code>integer</code>. Sets the panel only for the given window.</dd>
- </dl>
+   <p><code>object</code>. An object with the following properties:</p>
+   <dl>
+    <dt><code>panel</code></dt>
+    <dd>
+      <p><code>string</code> or <code>null</code>. The panel to load into the sidebar, specified as a URL pointing to an HTML document, or <code>null</code>, or an empty string.</p>
+      <p>This can point to a file packaged within the extension (for example, created using {{WebExtAPIRef("runtime.getURL")}}), or a remote document (e.g. <code>https://example.org/</code>). It must be a valid URL.</p>
+      <p>If <code>panel</code> is <code>null</code> or <code>""</code>, then a previously set panel will be removed, so that:</p>
+      <ul>
+       <li>If <code>tabId</code> is specified, and the tab has a tab-specific panel set, then the tab will inherit the panel from the window it belongs to.</li>
+       <li>If <code>windowId</code> is specified, and the window has a window-specific panel set, then the window will inherit the global panel.</li>
+       <li>Otherwise, the global panel will be reset to the manifest panel.</li>
+      </ul>
+    </dd>
+    <dt><code>tabId</code>{{optional_inline}}</dt>
+    <dd><code>integer</code>. Sets the panel only for the given tab.</dd>
+    <dt><code>windowId</code> {{optional_inline}}</dt>
+    <dd><code>integer</code>. Sets the panel only for the given window.</dd>
+   </dl>
  </dd>
 </dl>
 

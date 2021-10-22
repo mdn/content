@@ -55,16 +55,16 @@ browser.cookies.onChanged.hasListener(listener)
 
  <dl>
   <dt><code>changeInfo</code></dt>
-  <dd>An <code>object</code> containing details of the change that occurred. Its properties are as follows:</dd>
   <dd>
-  <dl>
-   <dt><code>removed</code></dt>
-   <dd>A <code>boolean</code> that is set to <code>true</code> if a cookie was removed, and false if not.</dd>
-   <dt><code>cookie</code></dt>
-   <dd>A {{WebExtAPIRef('cookies.Cookie')}} object  containing information about the cookie that was set or removed.</dd>
-   <dt><code>cause</code></dt>
-   <dd>A {{WebExtAPIRef('cookies.OnChangedCause')}} value representing the underlying reason behind the cookie's change.</dd>
-  </dl>
+    <p>An <code>object</code> containing details of the change that occurred. Its properties are as follows:</p>
+    <dl>
+     <dt><code>removed</code></dt>
+     <dd>A <code>boolean</code> that is set to <code>true</code> if a cookie was removed, and false if not.</dd>
+     <dt><code>cookie</code></dt>
+     <dd>A {{WebExtAPIRef('cookies.Cookie')}} object  containing information about the cookie that was set or removed.</dd>
+     <dt><code>cause</code></dt>
+     <dd>A {{WebExtAPIRef('cookies.OnChangedCause')}} value representing the underlying reason behind the cookie's change.</dd>
+    </dl>
   </dd>
  </dl>
  </dd>

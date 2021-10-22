@@ -42,16 +42,20 @@ browser-compat: webextensions.api.runtime.sendMessage
 
 <dl>
  <dt><code>extensionId</code>{{optional_inline}}</dt>
- <dd><code>string</code>. The ID of the extension to send the message to. Include this to send the message to a different extension. If the intended recipient has set an ID explicitly using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">applications</a> key in manifest.json, then <code>extensionId</code> should have that value. Otherwise it should have the ID that was generated for the intended recipient.</dd>
- <dd>If <code>extensionId</code> is omitted, the message will be sent to your own extension.</dd>
+ <dd>
+   <p><code>string</code>. The ID of the extension to send the message to. Include this to send the message to a different extension. If the intended recipient has set an ID explicitly using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">applications</a> key in manifest.json, then <code>extensionId</code> should have that value. Otherwise it should have the ID that was generated for the intended recipient.</p>
+   <p>If <code>extensionId</code> is omitted, the message will be sent to your own extension.</p>
+ </dd>
  <dt><code>message</code></dt>
  <dd><code>any</code>. An object that can be structured clone serialized (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm">Data cloning algorithm</a>).</dd>
  <dt><code>options</code>{{optional_inline}}</dt>
- <dd><code>object</code>.
+ <dd><p><code>object</code>.</p>
  <dl>
   <dt><code>includeTlsChannelId</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Whether the TLS channel ID will be passed into {{WebExtAPIRef('runtime.onMessageExternal')}} for processes that are listening for the connection event.</dd>
-  <dd>This option is only supported in Chromium-based browsers.</dd>
+  <dd>
+    <p><code>boolean</code>. Whether the TLS channel ID will be passed into {{WebExtAPIRef('runtime.onMessageExternal')}} for processes that are listening for the connection event.</p>
+    <p>This option is only supported in Chromium-based browsers.</p>
+  </dd>
  </dl>
  </dd>
 </dl>

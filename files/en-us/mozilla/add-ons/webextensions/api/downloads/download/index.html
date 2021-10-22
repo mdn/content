@@ -38,44 +38,44 @@ browser-compat: webextensions.api.downloads.download
 
 <dl>
  <dt><code>options</code></dt>
- <dd>An <code>object</code> specifying what file you wish to download, and any other preferences you wish to set concerning the download. It can contain the following properties:</dd>
  <dd>
- <dl>
-  <dt><code>allowHttpErrors</code>{{optional_inline}}</dt>
-  <dd>A <code>boolean</code> flag that enables downloads to continue even if they encounter HTTP errors. Using this flag, for example, enables the download of server error pages. Default value <code>false</code>. When set to:
-  <ul>
-   <li><code>false</code>, the download is canceled when it encounters an HTTP error.</li>
-   <li><code>true</code>, the download continues when an HTTP error is encountered and the HTTP server error is not reported. However, if the download fails due to file-related, network-related, user-related, or other error, that error is reported.</li>
-  </ul>
-  </dd>
-  <dt><code>body</code>{{optional_inline}}</dt>
-  <dd>A <code>string</code> representing the post body of the request.</dd>
-  <dt><code>conflictAction</code>{{optional_inline}}</dt>
-  <dd>A string representing the action you want taken if there is a filename conflict, as defined in the {{WebExtAPIRef('downloads.FilenameConflictAction')}} type (defaults to "uniquify" when it is not specified).</dd>
-  <dt><code>cookieStoreId</code>{{optional_inline}}</dt>
-  <dd>The cookie store ID of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">contextual identity</a> the download is associated with. If omitted, the default cookie store is used. Use requires the "cookies" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a>.
-  </dd>
-  <dt><code>filename</code>{{optional_inline}}</dt>
-  <dd>A <code>string</code> representing a file path relative to the default downloads directory — this provides the location where you want the file to be saved, and what filename you want to use. Absolute paths, empty paths, path components that start and/or end with a dot (.), and paths containing back-references (<code>../</code>) will cause an error. If omitted, this value will default to the filename already given to the download file, and a location immediately inside the downloads directory.</dd>
-  <dt><code>headers</code>{{optional_inline}}</dt>
-  <dd>If the URL uses the HTTP or HTTPS protocols, an <code>array</code> of <code>objects</code> representing additional HTTP headers to send with the request. Each header is represented as a dictionary object containing the keys <code>name</code> and either <code>value</code> or <code>binaryValue</code>. The headers that are forbidden by <code>XMLHttpRequest</code> and <code>fetch</code> cannot be specified, however, Firefox 70 and later enables the use of the <code>Referer</code> header. Attempting to use a forbidden header throws an error.</dd>
-  <dt><code>incognito</code>{{optional_inline}}</dt>
-  <dd>A <code>boolean</code>: if present and set to true, then associate this download with a private browsing session. This means that it will only appear in the download manager for any private windows that are currently open.</dd>
-  <dt><code>method</code>{{optional_inline}}</dt>
-  <dd>A <code>string</code> representing the HTTP method to use if the <code>url</code> uses the HTTP[S] protocol. This may be either "GET" or "POST".</dd>
-  <dt><code>saveAs</code>{{optional_inline}}</dt>
-  <dd>
-  <p>A <code>boolean</code> that specifies whether to provide a file chooser dialog to allow the user to select a filename (<code>true</code>), or not (<code>false</code>).</p>
+   <p>An <code>object</code> specifying what file you wish to download, and any other preferences you wish to set concerning the download. It can contain the following properties:</p>
+   <dl>
+    <dt><code>allowHttpErrors</code>{{optional_inline}}</dt>
+    <dd>A <code>boolean</code> flag that enables downloads to continue even if they encounter HTTP errors. Using this flag, for example, enables the download of server error pages. Default value <code>false</code>. When set to:
+    <ul>
+     <li><code>false</code>, the download is canceled when it encounters an HTTP error.</li>
+     <li><code>true</code>, the download continues when an HTTP error is encountered and the HTTP server error is not reported. However, if the download fails due to file-related, network-related, user-related, or other error, that error is reported.</li>
+    </ul>
+    </dd>
+    <dt><code>body</code>{{optional_inline}}</dt>
+    <dd>A <code>string</code> representing the post body of the request.</dd>
+    <dt><code>conflictAction</code>{{optional_inline}}</dt>
+    <dd>A string representing the action you want taken if there is a filename conflict, as defined in the {{WebExtAPIRef('downloads.FilenameConflictAction')}} type (defaults to "uniquify" when it is not specified).</dd>
+    <dt><code>cookieStoreId</code>{{optional_inline}}</dt>
+    <dd>The cookie store ID of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">contextual identity</a> the download is associated with. If omitted, the default cookie store is used. Use requires the "cookies" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a>.
+    </dd>
+    <dt><code>filename</code>{{optional_inline}}</dt>
+    <dd>A <code>string</code> representing a file path relative to the default downloads directory — this provides the location where you want the file to be saved, and what filename you want to use. Absolute paths, empty paths, path components that start and/or end with a dot (.), and paths containing back-references (<code>../</code>) will cause an error. If omitted, this value will default to the filename already given to the download file, and a location immediately inside the downloads directory.</dd>
+    <dt><code>headers</code>{{optional_inline}}</dt>
+    <dd>If the URL uses the HTTP or HTTPS protocols, an <code>array</code> of <code>objects</code> representing additional HTTP headers to send with the request. Each header is represented as a dictionary object containing the keys <code>name</code> and either <code>value</code> or <code>binaryValue</code>. The headers that are forbidden by <code>XMLHttpRequest</code> and <code>fetch</code> cannot be specified, however, Firefox 70 and later enables the use of the <code>Referer</code> header. Attempting to use a forbidden header throws an error.</dd>
+    <dt><code>incognito</code>{{optional_inline}}</dt>
+    <dd>A <code>boolean</code>: if present and set to true, then associate this download with a private browsing session. This means that it will only appear in the download manager for any private windows that are currently open.</dd>
+    <dt><code>method</code>{{optional_inline}}</dt>
+    <dd>A <code>string</code> representing the HTTP method to use if the <code>url</code> uses the HTTP[S] protocol. This may be either "GET" or "POST".</dd>
+    <dt><code>saveAs</code>{{optional_inline}}</dt>
+    <dd>
+    <p>A <code>boolean</code> that specifies whether to provide a file chooser dialog to allow the user to select a filename (<code>true</code>), or not (<code>false</code>).</p>
 
-  <p>If this option is omitted, the browser will show the file chooser or not based on the general user preference for this behavior (in Firefox this preference is labeled "Always ask you where to save files" in about:preferences, or <code>browser.download.useDownloadDir</code> in about:config).</p>
+    <p>If this option is omitted, the browser will show the file chooser or not based on the general user preference for this behavior (in Firefox this preference is labeled "Always ask you where to save files" in about:preferences, or <code>browser.download.useDownloadDir</code> in about:config).</p>
 
-  <div class="note">
-  <p><strong>Note:</strong> Firefox for Android raises an error if <code>saveAs</code> is set to <code>true</code>. The parameter is ignored when <code>saveAs</code> is <code>false</code> or not included.</p>
-  </div>
-  </dd>
-  <dt><code>url</code></dt>
-  <dd>A <code>string</code> representing the URL to download.</dd>
- </dl>
+    <div class="note">
+    <p><strong>Note:</strong> Firefox for Android raises an error if <code>saveAs</code> is set to <code>true</code>. The parameter is ignored when <code>saveAs</code> is <code>false</code> or not included.</p>
+    </div>
+    </dd>
+    <dt><code>url</code></dt>
+    <dd>A <code>string</code> representing the URL to download.</dd>
+   </dl>
  </dd>
 </dl>
 

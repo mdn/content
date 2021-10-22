@@ -63,12 +63,13 @@ browser.webNavigation.onErrorOccurred.hasListener(<var>listener</var>)
 			<dt><code>processId</code></dt>
 			<dd><code>integer</code>. The ID of the process in which this tab is being rendered.</dd>
 			<dt><code>frameId</code></dt>
-			<dd><code>integer</code>. Frame in which the navigation was happening.
-			<p><code>0</code> indicates that navigation happened in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}.</p>
+			<dd>
+        <p><code>integer</code>. Frame in which the navigation was happening.</p>
+  			<p><code>0</code> indicates that navigation happened in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}.</p>
 
-			<p>A positive value indicates that navigation happened in a nested iframe.</p>
+			  <p>A positive value indicates that navigation happened in a nested iframe.</p>
 
-			<p>Frame IDs are unique for a given tab and process.</p>
+			  <p>Frame IDs are unique for a given tab and process.</p>
 			</dd>
 			<dt><code>timeStamp</code></dt>
 			<dd><code>number</code>. The time at which the error occurred, in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
