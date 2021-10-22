@@ -36,8 +36,9 @@ var notification = new Notification(title, options);
       behavior, but you can override that behavior by setting values of `ltr`
       and `rtl` (although most browsers seem to ignore these settings.)
     - `lang`: The notification's language, as specified using a
-      {{domxref("DOMString")}} representing a [BCP 47 language tag](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). See
-      the Sitepoint [ISO
+      {{domxref("DOMString")}} representing a language tag
+      according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+      See the Sitepoint [ISO
       2 letter language codes](https://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/) page for a simple reference.
     - `badge`: A {{domxref("USVString")}} containing the URL of the image
       used to represent the notification when there isn't enough space to display the
