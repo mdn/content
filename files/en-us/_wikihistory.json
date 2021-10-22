@@ -72017,21 +72017,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCRtpSynchronizationSource": {
-    "modified": "2020-10-15T22:01:29.628Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCRtpSynchronizationSource/voiceActivityFlag": {
-    "modified": "2020-12-08T23:40:05.037Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCRtpTransceiver": {
     "modified": "2020-10-15T22:01:30.406Z",
     "contributors": [
