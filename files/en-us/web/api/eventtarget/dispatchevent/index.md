@@ -21,8 +21,7 @@ should have already been created and initialized using an [Event constructor](/e
 Unlike "native" events, which are fired by the browser and invoke event handlers
 asynchronously via the [event loop](/en-US/docs/Web/JavaScript/EventLoop),
 `dispatchEvent()` invokes event handlers _synchronously_. All applicable event
-handlers will execute and return before the code continues on after the call to
-`dispatchEvent()`.
+handlers are called and return before `dispatchEvent()` returns.
 
 ## Syntax
 
