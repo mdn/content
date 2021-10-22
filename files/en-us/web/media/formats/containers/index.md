@@ -95,8 +95,16 @@ To learn more about a specific container format, find it in this list and click 
       <th scope="row">{{anch("WebM")}}</th>
       <td>Web Media</td>
       <td>
-        <p>Chrome 6, Edge 17 (desktop only), Firefox 4, Opera 10.6, Safari (WebRTC only)</p>
+        <p>Chrome 6, Edge 17 (desktop only), Firefox 4, Opera 10.6, Safari 14.1 (macOS).</p>
         <p>Edge requires <a href="https://www.microsoft.com/store/productId/9N5TDP8VCMHS">Web Media Extensions</a> to be installed.</p>
+        <p>Additional detail for Safari support:</p>
+        <ul>
+          <li>Safari 12.1: (macOS, iOS) initial support for VP8 in WebM for WebRTC only</li>
+          <li>Safari 14: (macOS, iOS) supports VP9 in WebM for WebRTC.</li>
+          <li>Safari 14: (macOS) Supports VP9 in <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">MSE</a> from MacOS 11.3.</li>
+          <li>Safari 14.1: (macOS) supports WebM files containing VP8 or VP9 video tracks and Vorbis audio tracks.</li>
+          <li>Safari 15: (macOS) supports VP9 in WebM in <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">MSE</a> and the Opus audio codec in WebM.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
