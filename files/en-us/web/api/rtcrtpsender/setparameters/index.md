@@ -66,7 +66,7 @@ If an error occurs, the returned promise is rejected with the appropriate except
 from the list below.
 
 - `InvalidModificationError` {{domxref("DOMException")}}
-  - : Thrown if one of the following problems is detected:
+  - : Returned if one of the following problems is detected:
     - The number of encodings specified in the `parameters` object's
       {{domxref("RTCRtpSendParameters.encodings", "encodings")}} property does not match
       the number of encodings currently listed for the `RTCRtpSender`. You
@@ -76,12 +76,12 @@ from the list below.
     - An attempt has been made to alter a property that cannot be changed after the
       sender is first created.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the transceiver, of which the `RTCRtpSender` is a part, is not running or
+  - : Returned if the transceiver, of which the `RTCRtpSender` is a part, is not running or
     has no parameters to set.
 - `OperationError` {{domxref("DOMException")}}
-  - : Thrown if an error occurs that does not match the ones specified here.
+  - : Returned if an error occurs that does not match the ones specified here.
 - `RangeError` {{domxref("DOMException")}}
-  - : Thrown if the value specified for {{domxref("RTCRtpSendParameters.scaleResolutionDownBy",
+  - : Returned if the value specified for {{domxref("RTCRtpSendParameters.scaleResolutionDownBy",
     "scaleResolutionDownBy")}} is less than 1.0, which would result in scaling up rather
     than down, which is not allowed; or one or more of the specified encodings'
     {{domxref("RTCRtpEncodingParameters.maxFramerate", "maxFramerate")}} values is less

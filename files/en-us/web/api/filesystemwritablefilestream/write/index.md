@@ -56,11 +56,11 @@ FileSystemWritableFileStream.write(data).then(...);
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if {{domxref('PermissionStatus')}} is not granted.
+  - : Returned if {{domxref('PermissionStatus')}} is not granted.
 - `TypeError` {{domxref("DOMException")}}
-  - : Thrown if data is undefined, or if `position` or `size` aren't valid.
+  - : Returned if data is undefined, or if `position` or `size` aren't valid.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the `position` is set and larger than the bytes available.
+  - : Returned if the `position` is set and larger than the bytes available.
 
 ## Examples
 

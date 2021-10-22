@@ -39,9 +39,9 @@ A {{jsxref("Promise")}}.
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the port is not open. Call {{domxref("SerialPort.open()")}} to avoid this error.
+  - : Returned if the port is not open. Call {{domxref("SerialPort.open()")}} to avoid this error.
 - `NetworkError` {{domxref("DOMException")}}
-  - : Thrown if the signals on the device could not be set.
+  - : Returned if the signals on the device could not be set.
 
 ## Specifications
 

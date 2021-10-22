@@ -75,15 +75,15 @@ passing into it a {{domxref("DOMException")}} whose `name` is one of the
 following:
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the requested session mode is `immersive-vr` but there is already an
+  - : Returned if the requested session mode is `immersive-vr` but there is already an
     immersive VR session either currently active or in the process of being set up. There
     can only be one immersive VR session at a time.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if there is no WebXR-compatible device available, or the device does not support the
+  - : Returned if there is no WebXR-compatible device available, or the device does not support the
     specified `sessionMode`; this can also be thrown if any of the
     _required_ options are unsupported.
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if permission to enter the specified XR mode is denied. This can happen for a number
+  - : Returned if permission to enter the specified XR mode is denied. This can happen for a number
     of reasons, which are covered in more detail in [Permissions and security](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security).
 
 ## Session features

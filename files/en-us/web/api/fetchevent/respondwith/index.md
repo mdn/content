@@ -90,12 +90,12 @@ A {{domxref("Response")}} or a {{jsxref("Promise")}} that resolves to a
 ### Exceptions
 
 - `NetworkError` {{domxref("DOMException")}}
-  - : Thrown if a network error is triggered on certain combinations of
+  - : Returned if a network error is triggered on certain combinations of
     {{domxref("Request.mode","FetchEvent.request.mode")}} and
     {{domxref("Response.type")}}  values, as hinted at in the "global rules"
     listed above.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the event has not been dispatched or `respondWith()` has
+  - : Returned if the event has not been dispatched or `respondWith()` has
     already been invoked.
 
 ## Examples

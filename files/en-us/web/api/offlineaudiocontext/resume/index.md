@@ -39,7 +39,7 @@ A {{jsxref("Promise")}} resolving to void.
 The promise is rejected when an exception is encountered.
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the context is not currently suspended or the rendering has not started.
+  - : Returned if the context is not currently suspended or the rendering has not started.
 
 ## Specifications
 

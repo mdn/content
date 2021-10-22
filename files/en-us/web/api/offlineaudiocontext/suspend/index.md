@@ -45,7 +45,7 @@ A {{jsxref("Promise")}} resolving to void.
 The promise is rejected when any exception is encountered.
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the quantized frame number is one of the following:
+  - : Returned if the quantized frame number is one of the following:
     - a negative number
     - less than or equal to the current time
     - greater than or equal to the total render duration
