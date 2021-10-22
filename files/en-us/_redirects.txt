@@ -8419,8 +8419,8 @@
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.RTCPeerConnectionIceEven	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.candidate	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/candidate
-/en-US/docs/Web/API/RTCRtpSynchronizationSource	/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSource
-/en-US/docs/Web/API/RTCRtpSynchronizationSource/voiceActivityFlag /en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSource
+/en-US/docs/Web/API/RTCRtpSynchronizationSource	/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources
+/en-US/docs/Web/API/RTCRtpSynchronizationSource/voiceActivityFlag /en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources
 /en-US/docs/Web/API/RTCRtpSender/getCapabilities()	/en-US/docs/Web/API/RTCRtpSender/getCapabilities
 /en-US/docs/Web/API/RTCRtpTransceiverInit	/en-US/docs/Web/API/RTCPeerConnection/addTransceiver
 /en-US/docs/Web/API/RTCSctpTransportState	/en-US/docs/Web/API/RTCSctpTransport/state
