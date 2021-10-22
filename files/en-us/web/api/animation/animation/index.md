@@ -29,7 +29,7 @@ var animation = new Animation([effect][, timeline]);
 
 ## Examples
 
-In the [Follow the White Rabbit example](http://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), the `Animation()` constructor is used to create an `Animation` for the `rabbitDownKeyframes` using the document's `timeline`:
+In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), the `Animation()` constructor is used to create an `Animation` for the `rabbitDownKeyframes` using the document's `timeline`:
 
 ```js
 var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
