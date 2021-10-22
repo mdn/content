@@ -7365,6 +7365,7 @@
 /en-US/docs/Web/API/Event/createEvent	/en-US/docs/Web/API/Document/createEvent
 /en-US/docs/Web/API/Event/deepPath	/en-US/docs/Web/API/Event/composedPath
 /en-US/docs/Web/API/Event/detail	/en-US/docs/Web/API/UIEvent/detail
+/en-US/docs/Web/API/Event/msConvertURL	/en-US/docs/Web/API/Event
 /en-US/docs/Web/API/Event/scoped	/en-US/docs/Web/API/Event/composed
 /en-US/docs/Web/API/EventHandler	/en-US/docs/Web/Events/Event_handlers
 /en-US/docs/Web/API/EventTarget.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
@@ -9304,7 +9305,7 @@
 /en-US/docs/Web/API/mozRTCSessionDescription.type	/en-US/docs/Web/API/RTCSessionDescription/type
 /en-US/docs/Web/API/mozRTCSessionDescription/mozRTCSessionDescription	/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription
 /en-US/docs/Web/API/mozRTCSessionDescription/toJSON	/en-US/docs/Web/API/RTCSessionDescription/toJSON
-/en-US/docs/Web/API/msConvertURL	/en-US/docs/Web/API/Event/msConvertURL
+/en-US/docs/Web/API/msConvertURL	/en-US/docs/Web/API/Event
 /en-US/docs/Web/API/msFrameStep	/en-US/docs/Web/API/HTMLVideoElement/msFrameStep
 /en-US/docs/Web/API/msMatchesSelector	/en-US/docs/Web/API/Element/matches
 /en-US/docs/Web/API/mute	/en-US/docs/Web/API/MediaStreamTrack/mute_event
