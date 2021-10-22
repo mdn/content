@@ -137,7 +137,7 @@ In this case, the server can send back a {{HTTPStatus("303")}} (See Other) respo
 
 ### Temporary responses to long requests
 
-Some requests may need more time on the server, like {{HTTPHeader("DELETE")}} requests that are scheduled for later processing. In this case, the response is a {{HTTPStatus("303")}} (See Other) redirect that links to a page indicating that the action has been scheduled, and eventually informs about its progress, or allows to cancel it.
+Some requests may need more time on the server, like {{HTTPMethod("DELETE")}} requests that are scheduled for later processing. In this case, the response is a {{HTTPStatus("303")}} (See Other) redirect that links to a page indicating that the action has been scheduled, and eventually informs about its progress, or allows to cancel it.
 
 ## Configuring redirects in common servers
 
