@@ -1,5 +1,5 @@
 ---
-title: <time>
+title: '<time>: The (Date) Time element'
 slug: Web/HTML/Element/time
 tags:
   - Element
@@ -13,15 +13,16 @@ tags:
   - Web
 browser-compat: html.elements.time
 ---
+
 {{HTMLRef}}
 
 The **`<time>`** [HTML](/en-US/docs/Web/HTML) element represents a specific period in time. It may include the `datetime` attribute to translate dates into machine-readable format, allowing for better search engine results or custom features such as reminders.
 
 It may represent one of the following:
 
-*   A time on a 24-hour clock.
-*   A precise date in the {{interwiki("wikipedia", "Gregorian calendar")}} (with optional time and timezone information).
-*   [A valid time duration](https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string).
+- A time on a 24-hour clock.
+- A precise date in the {{interwiki("wikipedia", "Gregorian calendar")}} (with optional time and timezone information).
+- [A valid time duration](https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string).
 
 {{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}
 
@@ -86,8 +87,8 @@ It may represent one of the following:
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("datetime")}}
-    *   : This attribute indicates the time and/or date of the element and must be in one of the formats described below.
+- {{htmlattrdef("datetime")}}
+  - : This attribute indicates the time and/or date of the element and must be in one of the formats described below.
 
 ## Usage notes
 
@@ -95,44 +96,50 @@ This element is for presenting dates and times in a machine readable format. For
 
 This element should not be used for dates prior to the introduction of the Gregorian calendar (due to complications in calculating those dates).
 
-The *datetime value* (the machine-readable value of the datetime) is the value of the element’s `datetime` attribute, which must be in the proper format (see below). If the element does not have a `datetime` attribute, **it must not have any element descendants**, and the *datetime value* is the element’s child text content.
+The _datetime value_ (the machine-readable value of the datetime) is the value of the element’s `datetime` attribute, which must be in the proper format (see below). If the element does not have a `datetime` attribute, **it must not have any element descendants**, and the _datetime value_ is the element’s child text content.
 
 ### Valid datetime Values
 
-*   a valid year string
-    *   : `2011`
-*   a valid month string
-    *   : `2011-11`
-*   a valid date string
-    *   : `2011-11-18`
-*   a valid yearless date string
-    *   : `11-18`
-*   a valid week string
-    *   : `2011-W47`
-*   a valid time string
-    *   : `14:54`
+- a valid year string
+  - : `2011`
+- a valid month string
+  - : `2011-11`
+- a valid date string
+  - : `2011-11-18`
+- a valid yearless date string
+  - : `11-18`
+- a valid week string
+  - : `2011-W47`
+- a valid time string
 
-        `14:54:39`
+  - : `14:54`
 
-        `14:54:39.929`
-*   a valid local date and time string
-    *   : `2011-11-18T14:54:39.929`
+    `14:54:39`
 
-        `2011-11-18 14:54:39.929`
-*   a valid global date and time string
-    *   : `2011-11-18T14:54:39.929Z`
+    `14:54:39.929`
 
-        `2011-11-18T14:54:39.929-0400`
+- a valid local date and time string
 
-        `2011-11-18T14:54:39.929-04:00`
+  - : `2011-11-18T14:54:39.929`
 
-        `2011-11-18 14:54:39.929Z`
+    `2011-11-18 14:54:39.929`
 
-        `2011-11-18 14:54:39.929-0400`
+- a valid global date and time string
 
-        `2011-11-18 14:54:39.929-04:00`
-*   a valid duration string
-    *   : `PT4H18M3S`
+  - : `2011-11-18T14:54:39.929Z`
+
+    `2011-11-18T14:54:39.929-0400`
+
+    `2011-11-18T14:54:39.929-04:00`
+
+    `2011-11-18 14:54:39.929Z`
+
+    `2011-11-18 14:54:39.929-0400`
+
+    `2011-11-18 14:54:39.929-04:00`
+
+- a valid duration string
+  - : `PT4H18M3S`
 
 ## Examples
 
@@ -171,4 +178,4 @@ The *datetime value* (the machine-readable value of the datetime) is the value o
 
 ## See also
 
-*   The {{HTMLElement("data")}} element, allowing to signal other kind of values.
+- The {{HTMLElement("data")}} element, allowing to signal other kind of values.

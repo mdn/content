@@ -6,7 +6,8 @@ tags:
   - application cache
 browser-compat: html.elements.html.manifest
 ---
-{{Deprecated_Header}}{{Non-standard_Header}}
+
+{{securecontext_header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`manifest`** attribute of the `<html>` element specifies a URL of a application cache manifest that is downloaded in the early stages of page load.
 
@@ -20,6 +21,6 @@ The manifest attribute has only effect during early stages of page load, thus ch
 
 ## See also
 
-*   {{domxref("Window.applicationCache")}}
-*   [Using the application cache](/en-US/docs/Web/HTML/Using_the_application_cache)
-*   [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
+- {{domxref("Window.applicationCache")}}
+- [Using the application cache](/en-US/docs/Web/HTML/Using_the_application_cache)
+- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)

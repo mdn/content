@@ -46,7 +46,7 @@ browser.commands.onCommand.hasListener(listener)
  <dd>
  <p>Function that will be called when a user enters the command's shortcut. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>name</code></dt>
   <dd><code>string</code>. Name of the command. This matches the name given to the command in its <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">manifest.json entry</a>.</dd>
  </dl>
@@ -62,7 +62,7 @@ browser.commands.onCommand.hasListener(listener)
 <div>Given a manifest.json entry like this:</div>
 
 
-<pre class="brush: json line-numbers language-json">&quot;commands&quot;: {
+<pre class="brush: json">&quot;commands&quot;: {
   &quot;toggle-feature&quot;: {
     &quot;suggested_key&quot;: {
       &quot;default&quot;: &quot;Ctrl+Shift+Y&quot;
@@ -75,7 +75,7 @@ browser.commands.onCommand.hasListener(listener)
 
 
 <div>
-<pre class="brush: js line-numbers language-js">browser.commands.onCommand.addListener(function(command) {
+<pre class="brush: js">browser.commands.onCommand.addListener(function(command) {
   if (command == &quot;toggle-feature&quot;) {
     console.log(&quot;toggling the feature!&quot;);
   }
@@ -84,7 +84,6 @@ browser.commands.onCommand.hasListener(listener)
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/commands"><code>chrome.commands</code></a> API.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/commands"><code>chrome.commands</code></a> API.</p>
 </div>

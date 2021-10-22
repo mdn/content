@@ -45,7 +45,7 @@ The HTML and CSS for the app is really trivial. We have a title, instructions pa
 </div>
 ```
 
-The CSS provides a very simple responsive styling so that it looks ok across devices.
+The CSS provides a very simple responsive styling so that it looks OK across devices.
 
 ### JavaScript
 

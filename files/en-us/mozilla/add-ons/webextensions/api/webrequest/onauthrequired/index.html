@@ -96,7 +96,7 @@ browser.webRequest.onAuthRequired.hasListener(<var>listener</var>)
  <dd>
  <p>A function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code><var>details</var></code></dt>
   <dd><a href="#details"><code>object</code></a>. Details about the request. See <code><a href="#details">details</a></code> below.</dd>
  </dl>
@@ -111,12 +111,12 @@ browser.webRequest.onAuthRequired.hasListener(<var>listener</var>)
  <dt><code><var>filter</var></code></dt>
  <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.</dd>
  <dt><code><var>extraInfoSpec</var></code>{{optional_inline}}</dt>
- <dd><code>array</code> of <code>string</code>. <span class="im">Extra options for the event. You can pass any of the following values:</span></dd>
  <dd>
- <ul>
-  <li><code>"blocking"</code>: make the request block, so you can cancel the request or supply authentication credentials</li>
-  <li><span class="im"><code>"</code></span><code>responseHeaders</code><span class="im"><code>"</code>: include <code>responseHeaders</code> in the <code>details</code> object passed to the listener</span></li>
- </ul>
+   <p><code>array</code> of <code>string</code>. Extra options for the event. You can pass any of the following values:</p>
+   <ul>
+    <li><code>"blocking"</code>: make the request block, so you can cancel the request or supply authentication credentials</li>
+    <li><code>"</code><code>responseHeaders</code><code>"</code>: include <code>responseHeaders</code> in the <code>details</code> object passed to the listener</li>
+   </ul>
  </dd>
 </dl>
 
@@ -124,12 +124,12 @@ browser.webRequest.onAuthRequired.hasListener(<var>listener</var>)
 
 <h3 id="details">details</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>challenger</code></dt>
  <dd>
  <p><code>object</code>. The server requesting authentication. This is an object with the following properties:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>host</code></dt>
   <dd><code>string</code>. The server's <a href="https://en.wikipedia.org/wiki/Hostname#Internet_hostnames">hostname</a>.<br>
   <strong>Warning</strong>: Unlike Chrome, Firefox will return the requested host instead of the proxy requesting the authentication, even if <code>isProxy</code> is <code>true</code>.</dd>
@@ -183,10 +183,6 @@ browser.webRequest.onAuthRequired.hasListener(<var>listener</var>)
  <dd><code>string</code>. The authentication <a href="https://datatracker.ietf.org/doc/html/rfc1945#section-11">realm</a> provided by the server, if there is one.</dd>
  <dt><code>requestId</code></dt>
  <dd><code>string</code>. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.</dd>
- <dd>
- <dl class="reference-values">
- </dl>
- </dd>
  <dt><code>responseHeaders</code>{{optional_inline}}</dt>
  <dd>{{WebExtAPIRef('webRequest.HttpHeaders')}}. The HTTP response headers that were received along with this response.</dd>
  <dt><code>scheme</code></dt>
@@ -206,24 +202,23 @@ browser.webRequest.onAuthRequired.hasListener(<var>listener</var>)
  <dt><code>url</code></dt>
  <dd><code>string</code>. Target of the request.</dd>
  <dt><code>urlClassification</code></dt>
- <dd><code>object</code>. The type of tracking associated with the request, if with the request has been classified by <a class="external external-icon" href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" rel="noopener">Firefox Tracking Protection</a>. This is an object with the following properties:</dd>
  <dd>
- <dl class="reference-values">
-  <dt><code>firstParty</code></dt>
-  <dd><code>array</code> of <code>strings</code>. Classification flags for the request's first party.</dd>
-  <dt><code>thirdParty</code></dt>
-  <dd><code>array</code> of <code>strings</code>. Classification flags for the request or its window hierarchy's third parties.</dd>
- </dl>
- </dd>
- <dd>The classification flags include:
- <ul>
-  <li><code>fingerprinting</code> and <code>fingerprinting_content</code>: indicates the request is involved in fingerprinting. <code>fingerprinting_content</code> indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.</li>
-  <li><code>cryptomining</code> and <code>cryptomining_content</code>: similar to the fingerprinting category but for cryptomining resources.</li>
-  <li><code>tracking</code>, <code>tracking_ad</code>, <code>tracking_analytics</code>, <code>tracking_social</code>,  and <code>tracking_content</code>: indicates the request is involved in tracking. <code>tracking</code> is any generic tracking request, the <code>ad</code>, <code>analytics</code>, <code>social</code>, and <code>content</code> suffixes identify the type of tracker.</li>
-  <li><code>any_basic_tracking</code>: a meta flag that combines any tracking and fingerprinting flags, excluding <code>tracking_content</code> and <code>fingerprinting_content</code>.</li>
-  <li><code>any_strict_tracking</code>: a meta flag that combines any tracking and fingerprinting flags, including <code>tracking_content</code> and <code>fingerprinting_content</code>.</li>
-  <li><code>any_social_tracking</code>: a meta flag that combines any social tracking flags.</li>
- </ul>
+   <p><code>object</code>. The type of tracking associated with the request, if with the request has been classified by <a class="external external-icon" href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" rel="noopener">Firefox Tracking Protection</a>. This is an object with the following properties:</p>
+   <dl>
+    <dt><code>firstParty</code></dt>
+    <dd><code>array</code> of <code>strings</code>. Classification flags for the request's first party.</dd>
+    <dt><code>thirdParty</code></dt>
+    <dd><code>array</code> of <code>strings</code>. Classification flags for the request or its window hierarchy's third parties.</dd>
+   </dl>
+   <p>The classification flags include:</p>
+   <ul>
+    <li><code>fingerprinting</code> and <code>fingerprinting_content</code>: indicates the request is involved in fingerprinting. <code>fingerprinting_content</code> indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.</li>
+    <li><code>cryptomining</code> and <code>cryptomining_content</code>: similar to the fingerprinting category but for cryptomining resources.</li>
+    <li><code>tracking</code>, <code>tracking_ad</code>, <code>tracking_analytics</code>, <code>tracking_social</code>,  and <code>tracking_content</code>: indicates the request is involved in tracking. <code>tracking</code> is any generic tracking request, the <code>ad</code>, <code>analytics</code>, <code>social</code>, and <code>content</code> suffixes identify the type of tracker.</li>
+    <li><code>any_basic_tracking</code>: a meta flag that combines any tracking and fingerprinting flags, excluding <code>tracking_content</code> and <code>fingerprinting_content</code>.</li>
+    <li><code>any_strict_tracking</code>: a meta flag that combines any tracking and fingerprinting flags, including <code>tracking_content</code> and <code>fingerprinting_content</code>.</li>
+    <li><code>any_social_tracking</code>: a meta flag that combines any social tracking flags.</li>
+   </ul>
  </dd>
 </dl>
 
@@ -363,9 +358,7 @@ browser.webRequest.onErrorOccurred.addListener(
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgments</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest#event-onAuthRequired"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest#event-onAuthRequired"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

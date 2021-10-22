@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: html.elements.header
 ---
+
 {{HTMLRef}}
 
 The **`<header>`** [HTML](/en-US/docs/Web/HTML) element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.
@@ -163,5 +164,5 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
 
 ## See also
 
-*   Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}.
-*   [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
+- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}.
+- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)

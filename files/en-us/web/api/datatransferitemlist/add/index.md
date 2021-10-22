@@ -45,16 +45,16 @@ has no data store), `null` is returned.
 
 ### Exceptions
 
-- `NotSupportedError`
-  - : A string `data` parameter was provided, and the list already contains an
-    item whose {{domxref("DataTransferItem.kind","kind")}} is "Plain Unicode string" and
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the string `data` parameter was provided, and the list already contains an
+    item whose {{domxref("DataTransferItem.kind","kind")}} is `"Plain Unicode string"` and
     whose type is equal to the specified type parameter.
 
 ## Example
 
 This example shows the use of the `add()` method.
 
-#### HTML
+### HTML
 
 ```html
 <div>
@@ -64,7 +64,7 @@ This example shows the use of the `add()` method.
 <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
 ```
 
-#### CSS
+### CSS
 
 ```css
 div {
@@ -80,7 +80,7 @@ div {
 }
 ```
 
-Javascript
+### Javascript
 
 ```js
 function dragstart_handler(ev) {
@@ -137,7 +137,7 @@ function dragend_handler(ev) {
 }
 ```
 
-#### Result
+### Result
 
 {{EmbedLiveSample('Example', 400, 300)}}
 

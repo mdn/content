@@ -9,6 +9,7 @@ tags:
   - Web
 browser-compat: html.elements.frameset
 ---
+
 {{HTMLRef}}{{Deprecated_header}}
 
 The **`<frameset>`** [HTML](/en-US/docs/Web/HTML) element is used to contain {{HTMLElement("frame")}} elements.
@@ -19,10 +20,10 @@ The **`<frameset>`** [HTML](/en-US/docs/Web/HTML) element is used to contain {{H
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("cols")}}
-    *   : This attribute specifies the number and size of horizontal spaces in a frameset.
-*   {{htmlattrdef("rows")}}
-    *   : This attribute specifies the number and size of vertical spaces in a frameset.
+- {{htmlattrdef("cols")}}
+  - : This attribute specifies the number and size of horizontal spaces in a frameset.
+- {{htmlattrdef("rows")}}
+  - : This attribute specifies the number and size of vertical spaces in a frameset.
 
 ## Example
 
@@ -43,5 +44,5 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 ## See also
 
-*   {{HTMLElement("frame")}}
-*   {{HTMLElement("iframe")}}
+- {{HTMLElement("frame")}}
+- {{HTMLElement("iframe")}}

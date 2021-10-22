@@ -648,34 +648,23 @@ Workers are mainly useful for allowing your code to perform processor-intensive 
 The following JavaScript code is stored in the "fibonacci.js" file referenced by the HTML in the next section.
 
 ```js
-var results = [];
-
-function resultReceiver(event) {
-  results.push(parseInt(event.data));
-  if (results.length == 2) {
-    postMessage(results[0] + results[1]);
-  }
+self.onmessage = function(e) {
+  let userNum = Number(e.data);
+  fibonacci(userNum);
 }
 
-function errorReceiver(event) {
-  throw event.data;
+
+function fibonacci(num){
+let a = 1, b = 0, temp;
+  while (num >= 0){
+    temp = a;
+    a = a + b;
+    b = temp;
+    num--;
+  }
+
+  self.postMessage(b);
 }
-
-onmessage = function(event) {
-  var n = parseInt(event.data);
-
-  if (n == 0 || n == 1) {
-    postMessage(n);
-    return;
-  }
-
-  for (var i = 1; i <= 2; i++) {
-    var worker = new Worker('fibonacci.js');
-    worker.onmessage = resultReceiver;
-    worker.onerror = errorReceiver;
-    worker.postMessage(n - i);
-  }
- };
 ```
 
 The worker sets the property `onmessage` to a function which will receive messages sent when the worker object's `postMessage()` is called (note that this differs from defining a global _variable_ of that name, or defining a _function_ with that name. `var onmessage` and `function onmessage` will define global properties with those names, but they will not register the function to receive messages sent by the web page that created the worker). This starts the recursion, spawning new copies of itself to handle each iteration of the calculation.
@@ -687,18 +676,39 @@ The worker sets the property `onmessage` to a function which will receive messag
 <html>
   <head>
     <meta charset="UTF-8"  />
-    <title>Test threads fibonacci</title>
+    <title>Fibonacci number generator</title>
+    <style>
+      body {
+        width: 500px;
+      }
+
+      div, p {
+        margin-bottom: 20px;
+      }
+    </style>
   </head>
   <body>
 
-  <div id="result"></div>
+  <form>
+    <div>
+      <label for="number">Enter a number that is an index position in the fibonacci sequence to see what number is in that position (e.g. enter 5 and you'll get a result of 8 — fibonacci index position 5 is 8).</label>
+      <input type="number" id="number">
+    </div>
+    <div>
+      <input type="submit">
+    </div>
+  </form>
+
+  <p id="result"></p>
 
   <script language="javascript">
-
+    var form = document.querySelector('form');
+    var input = document.querySelector('input[type="number"]');
+    var result = document.querySelector('p#result');
     var worker = new Worker('fibonacci.js');
 
     worker.onmessage = function(event) {
-      document.getElementById('result').textContent = event.data;
+      result.textContent = event.data;
       console.log('Got: ' + event.data + '\n');
     };
 
@@ -707,11 +717,16 @@ The worker sets the property `onmessage` to a function which will receive messag
       throw error;
     };
 
-    worker.postMessage('5');
+    form.onsubmit = function(e) {
+      e.preventDefault();
+      worker.postMessage(input.value);
+      input.value = '';
+    }
 
   </script>
   </body>
 </html>
+
 ```
 
 The web page creates a `div` element with the ID `result` , which gets used to display the result, then spawns the worker. After spawning the worker, the `onmessage` handler is configured to display the results by setting the contents of the `div` element, and the `onerror` handler is set to log the error message to the devtools console.

@@ -17,6 +17,7 @@ tags:
   - control
 browser-compat: html.elements.input.input-url
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} elements of type **`url`** are used to let the user enter and edit a URL.
@@ -111,7 +112,7 @@ See the section {{anch("Pattern validation")}} for details and an example.
 
 ### placeholder
 
-The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text *must not* include carriage returns or line feeds.
+The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text _must not_ include carriage returns or line feeds.
 
 If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}} for those characters.
 
@@ -127,18 +128,18 @@ A Boolean attribute which, if present, means this field cannot be edited by the 
 
 The `size` attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font ({{cssxref("font")}} settings in use).
 
-This does *not* set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
+This does _not_ set a limit on how many characters the user can enter into the field. It only specifies approximately how many can be seen at a time. To set an upper limit on the length of the input data, use the `{{anch("maxlength")}}` attribute.
 
 ### spellcheck
 
 `spellcheck` is a global attribute which is used to indicate whether or not to enable spell checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
 
-*   `false`
-    *   : Disable spell checking for this element.
-*   `true`
-    *   : Enable spell checking for this element.
-*   "" (empty string) or no value
-    *   : Follow the element's default behavior for spell checking. This may be based upon a parent's `spellcheck` setting or other factors.
+- `false`
+  - : Disable spell checking for this element.
+- `true`
+  - : Enable spell checking for this element.
+- "" (empty string) or no value
+  - : Follow the element's default behavior for spell checking. This may be based upon a parent's `spellcheck` setting or other factors.
 
 An input field can have spell checking enabled if it doesn't have the {{anch("readonly")}} attribute set and is not disabled.
 
@@ -152,10 +153,10 @@ The following non-standard attributes are also available on some browsers. As a 
 
 A Safari extension, the `autocorrect` attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:
 
-*   `on`
-    *   : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
-*   `off`
-    *   : Disable automatic correction and text substitutions.
+- `on`
+  - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
+- `off`
+  - : Disable automatic correction and text substitutions.
 
 ### mozactionhint
 
@@ -171,7 +172,7 @@ When you create a URL input with the proper `type` value, `url`, you get automat
 
 It's important, however, to note that this is not enough to ensure that the specified text is a URL which actually exists, corresponds to the user of the site, or is acceptable in any other way. It ensures that the value of the field is properly formatted to be a URL.
 
-> **Note:** A user can tinker with your HTML behind the scenes, so your site *must not* use this validation for any security purposes. You *must* verify the URL on the server-side of any transaction in which the provided text may have any security implications of any kind.
+> **Note:** A user can tinker with your HTML behind the scenes, so your site _must not_ use this validation for any security purposes. You _must_ verify the URL on the server-side of any transaction in which the provided text may have any security implications of any kind.
 
 ### A simple URL input
 
@@ -287,7 +288,7 @@ You can opt to include the {{htmlattrxref("label", "option")}} attribute on one 
 
 There are two levels of content validation available for `url` inputs. First, there's the standard level of validation offered to all {{HTMLElement("input")}}s, which automatically ensures that the contents meet the requirements to be a valid URL. But there's also the option to add additional filtering to ensure that your own specialized needs are met, if you have any.
 
-> **Warning:** HTML form validation is *not* a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
+> **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
 
 ### Basic validation
 
@@ -316,7 +317,7 @@ If you need the entered URL to be restricted further than just "any string that 
 
 For example, let's say you're building a support page for employees of Myco, Inc. which will let them contact their IT department for help if one of their pages has a problem. In our simplified form, the user needs to enter the URL of the page that has a problem, and a message describing what is wrong. But we want the URL to only successfully validate if the entered URL is in a Myco domain.
 
-Since inputs of type `url` validate against both the standard URL validation *and* the specified {{htmlattrxref("pattern", "input")}}, you can implement this easily. Let's see how:
+Since inputs of type `url` validate against both the standard URL validation _and_ the specified {{htmlattrxref("pattern", "input")}}, you can implement this easily. Let's see how:
 
 ```css hidden
 div {
@@ -369,11 +370,11 @@ div {
 
 First of all, the {{htmlattrxref("required", "input")}} attribute is specified, making it mandatory that a valid email address be provided.
 
-Second, in the `url` input we set `pattern` to `".*\.myco\..*"`. This simple regular expression requests a string that has any number of characters, followed by a dot, followed by "myco", followed by a dot, followed by any number of characters. And because the browser runs both the standard URL filter *and* our custom pattern against the specified text, we wind up with a validation which says "make sure this is a valid URL, and also in a Myco domain."
+Second, in the `url` input we set `pattern` to `".*\.myco\..*"`. This simple regular expression requests a string that has any number of characters, followed by a dot, followed by "myco", followed by a dot, followed by any number of characters. And because the browser runs both the standard URL filter _and_ our custom pattern against the specified text, we wind up with a validation which says "make sure this is a valid URL, and also in a Myco domain."
 
 This isn't perfect, but it is good enough for this simple demo's requirements.
 
-It's advisable to use the {{htmlattrxref("title")}} attribute along with `pattern`. If you do, the `title` *must* describe the pattern; it should explain what format the data should take on, rather than any other information. That's because the `title` may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified `title`. If your `title` is something like "URL", the result would be the message "The entered text doesn't match the required pattern. URL", which is not a good user experience.
+It's advisable to use the {{htmlattrxref("title")}} attribute along with `pattern`. If you do, the `title` _must_ describe the pattern; it should explain what format the data should take on, rather than any other information. That's because the `title` may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified `title`. If your `title` is something like "URL", the result would be the message "The entered text doesn't match the required pattern. URL", which is not a good user experience.
 
 That's why, instead, we specify the string "The URL must be in a myco domain". By doing that, the resulting full error message might be something like "The entered text doesn't match the required pattern. The URL should be in a myco domain."
 
@@ -395,8 +396,8 @@ You can also find our [pattern validation example on GitHub](https://github.com/
 
 ## See also
 
-*   [HTML forms guide](/en-US/docs/Learn/Forms)
-*   {{HTMLElement("input")}}
-*   [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
-*   [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [HTML forms guide](/en-US/docs/Learn/Forms)
+- {{HTMLElement("input")}}
+- [`<input type="tel">`](/en-US/docs/Web/HTML/Element/input/tel)
+- [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

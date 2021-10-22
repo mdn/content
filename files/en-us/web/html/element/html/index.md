@@ -9,9 +9,10 @@ tags:
   - Web
 browser-compat: html.elements.html
 ---
+
 {{HTMLRef}}
 
-The **`<html>`** [HTML](/en-US/docs/Web/HTML) element represents the root (top-level element) of an HTML document, so it is also referred to as the *root element*. All other elements must be descendants of this element.
+The **`<html>`** [HTML](/en-US/docs/Web/HTML) element represents the root (top-level element) of an HTML document, so it is also referred to as the _root element_. All other elements must be descendants of this element.
 
 <table class="properties">
   <tbody>
@@ -66,12 +67,12 @@ The **`<html>`** [HTML](/en-US/docs/Web/HTML) element represents the root (top-l
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("manifest")}} {{deprecated_inline}}
-    *   : Specifies the {{glossary("URI")}} of a resource manifest indicating resources that should be cached locally. See [Using the application cache](/en-US/docs/Web/HTML/Using_the_application_cache) for details.
-*   {{htmlattrdef("version")}} {{deprecated_inline}}
-    *   : Specifies the version of the HTML {{glossary("Doctype", "Document Type Definition")}} that governs the current document. This attribute is not needed, because it is redundant with the version information in the document type declaration.
-*   {{htmlattrdef("xmlns")}}
-    *   : Specifies the {{glossary("XML")}} {{glossary("Namespace")}} of the document. Default value is `"http://www.w3.org/1999/xhtml"`. This is required in documents parsed with XML {{glossary("parser", "parsers")}}, and optional in text/html documents.
+- {{htmlattrdef("manifest")}} {{deprecated_inline}}
+  - : Specifies the {{glossary("URI")}} of a resource manifest indicating resources that should be cached locally. See [Using the application cache](/en-US/docs/Web/HTML/Using_the_application_cache) for details.
+- {{htmlattrdef("version")}} {{deprecated_inline}}
+  - : Specifies the version of the HTML {{glossary("Doctype", "Document Type Definition")}} that governs the current document. This attribute is not needed, because it is redundant with the version information in the document type declaration.
+- {{htmlattrdef("xmlns")}}
+  - : Specifies the {{glossary("XML")}} {{glossary("Namespace")}} of the document. Default value is `"http://www.w3.org/1999/xhtml"`. This is required in documents parsed with XML {{glossary("parser", "parsers")}}, and optional in text/html documents.
 
 ## Example
 
@@ -89,8 +90,8 @@ Providing a {{htmlattrxref("lang")}} attribute with a [valid IETF identifying la
 
 Including a valid `lang` declaration on the `<html>` element also ensures that important metadata contained in the page's {{HTMLElement("head")}}, such as the page's {{HTMLElement("title")}}, are also announced properly.
 
-*   [MDN Understanding WCAG, Guideline 3.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline\_3.1\_%e2%80%94\_readable_make_text_content_readable_and_understandable)
-*   [Understanding Success Criterion 3.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/meaning-doc-lang-id.html)
+- [MDN Understanding WCAG, Guideline 3.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.1_%e2%80%94_readable_make_text_content_readable_and_understandable)
+- [Understanding Success Criterion 3.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/meaning-doc-lang-id.html)
 
 ## Specifications
 
@@ -102,5 +103,5 @@ Including a valid `lang` declaration on the `<html>` element also ensures that i
 
 ## See also
 
-*   MathML top-level element: {{MathMLElement("math")}}
-*   SVG top-level element: {{SVGElement("svg")}}
+- MathML top-level element: {{MathMLElement("math")}}
+- SVG top-level element: {{SVGElement("svg")}}

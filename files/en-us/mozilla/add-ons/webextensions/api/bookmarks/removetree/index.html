@@ -18,7 +18,7 @@ browser-compat: webextensions.api.bookmarks.removeTree
 <p>The <strong><code>bookmarks.removeTree()</code></strong> method recursively removes a bookmark folder and all of its contents.</p>
 
 <div class="notecard warning">
-<p>If your extension attempts to remove a bookmark tree from the bookmarks tree root node, the call will raise an error with the message: "The bookmark root cannot be modified" and the bookmark won't be removed.</p>
+<p><strong>Warning:</strong> If your extension attempts to remove a bookmark tree from the bookmarks tree root node, the call will raise an error with the message: "The bookmark root cannot be modified" and the bookmark won't be removed.</p>
 </div>
 
 <p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
@@ -71,9 +71,8 @@ searchingBookmarks.then(removeMDN, onRejected);</pre>
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#method-removeTree"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#method-removeTree"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

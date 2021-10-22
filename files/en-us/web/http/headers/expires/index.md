@@ -10,10 +10,10 @@ browser-compat: http.headers.Expires
 ---
 {{HTTPSidebar}}
 
-The **`Expires`** header contains the date/time after which the
-response is considered stale.
+The **`Expires`** HTTP header contains the date/time after which the
+response is considered expired.
 
-Invalid dates, like the value 0, represent a date in the past and mean that the
+Invalid expiration dates with value 0 represent a date in the past and mean that the
 resource is already expired.
 
 > **Note:** If there is a {{HTTPHeader("Cache-Control")}} header

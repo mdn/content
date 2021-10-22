@@ -49,11 +49,11 @@ feedforward coefficient arrays.
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : All of the `feedforward` coefficients are 0, and/or the first
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if all of the `feedforward` coefficients are 0, or if the first
     `feedback` coefficient is 0.
-- `NotSupportedError`
-  - : One or both of the input arrays exceeds 20 members.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if one or both of the input arrays exceeds 20 members.
 
 ## Specifications
 

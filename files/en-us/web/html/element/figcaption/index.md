@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: html.elements.figcaption
 ---
+
 {{HTMLRef}}
 
 The **`<figcaption>`** [HTML](/en-US/docs/Web/HTML) element represents a caption or legend describing the rest of the contents of its parent {{HTMLElement("figure")}} element.
@@ -83,4 +84,4 @@ Please see the {{HTMLElement("figure")}} page for examples on `<figcaption>`.
 
 ## See also
 
-*   The {{HTMLElement("figure")}} element.
+- The {{HTMLElement("figure")}} element.

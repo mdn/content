@@ -68,7 +68,7 @@ tags:
 
 <ul>
  <li><span class="MSAA_decision">Don't use MSAA</span> if you're not running on a Windows platform ... hope that one was obvious.</li>
- <li><span class="MSAA_decision">Don't use MSAA</span> if you're only Windows target for accessibility is Longhorn.</li>
+ <li><span class="MSAA_decision">Don't use MSAA</span> if your only Windows target for accessibility is Longhorn.</li>
  <li><span class="MSAA_decision">Don't use MSAA</span> if you're not going to take it all the way via testing with assistive technologies and working with AT vendors.</li>
  <li><span class="MSAA_decision">Don't use MSAA</span> for exposing documents or other specialized data, if it's important that the user get access to formatting information. You will have to expose interfaces that contain more info than MSAA does. This information may be in the form of extensions to MSAA, like Mozilla has done with <a href="at-apis#externaldom">ISimpleDOMNode</a> (you can QI to it from IAccessible). This is likely to be a painful road even if you are a major player, in terms of getting the cooperation of AT vendors. It may be a good enough solution; however, if what you need is JAWS, Dragon and ZoomText support. ZoomText and Dragon can get by with your MSAA support., and JAWS can be scripted (even by external developers) to support alternative interfaces.</li>
  <li><span class="MSAA_decision">Don't use MSAA</span> if you're working with a small number of AT vendors, you can get everyone to agree on a different solution, and you're sure that you won't be needing to support other assistive technologies later.</li>
@@ -301,7 +301,7 @@ tags:
 
 <h2 id="Dealing_with_the_Quirks_of_MSAA">Dealing with the Quirks of MSAA</h2>
 
-<p>MSAA has a well deserved reputation for quirkiness. It is not "plug and play", and will take a lot of testing/refinement before your solution works with any product. Here are some of it's quirks and some solutions/workarounds:</p>
+<p>MSAA has a well deserved reputation for quirkiness. It is not "plug and play", and will take a lot of testing/refinement before your solution works with any product. Here are some of its quirks and some solutions/workarounds:</p>
 
 <h3 id="MSAA_can_be_crash_prone">MSAA can be crash prone</h3>
 
@@ -331,7 +331,7 @@ tags:
 
 <h3 id="Confusion_with_system-generated_events">Confusion with system-generated events</h3>
 
-<p><span class="c1">Problem</span>: When you test with Accessible Event Watcher in the MSAA SDK, you will see many events that your application did not generate. Microsoft Windows generates some events for you. These can be problematic, because the assistive technology has no way to tell whether the event came from your application or from Windows. For example, when you set window focus, Windows will generate an EVENT_OBJECT_FOCUS event an a ROLE_WINDOW object it also generated for you. If you happen to set window focus after you fired your own EVENT_OBJECT_FOCUS event on an object in the window, your event will be ignored, because assistive technology software tends to pay attention only to the last focus event.</p>
+<p><span class="c1">Problem</span>: When you test with Accessible Event Watcher in the MSAA SDK, you will see many events that your application did not generate. Microsoft Windows generates some events for you. These can be problematic, because the assistive technology has no way to tell whether the event came from your application or from Windows. For example, when you set window focus, Windows will generate an EVENT_OBJECT_FOCUS event and a ROLE_WINDOW object it also generated for you. If you happen to set window focus after you fired your own EVENT_OBJECT_FOCUS event on an object in the window, your event will be ignored, because assistive technology software tends to pay attention only to the last focus event.</p>
 
 <p><span class="c1">Solution</span>: When an object is about to get focused in a different window, make sure you focus a window before you fire your own focus events for objects inside it. Test using Accessible Event Watcher in the MSAA SDK, and use the settings panel to watch subsets of accessibility events. Count on the assistive technology to make sense out the jumble of extra system-generated events, it's not your problem.</p>
 
@@ -368,7 +368,7 @@ tags:
 
 <h3 id="Issues_with_Links">Issues with Links</h3>
 
-<p><span class="c1">Problem</span>: Some assistive technologies have inflexible heuristics when it comes to reading links. They may not read the object unless the states are correctly set. Second, they can mishandle the object if it cannot parse the whitespace according to its own rules. Most assistive technologies don't know what to do with links embedded in a dialog, as is becoming more common.</p>
+<p><span class="c1">Problem</span>: Some assistive technologies have inflexible heuristics when it comes to reading links. They may not read the object unless the states are correctly set. Second, they can mishandle the object if it cannot parse the whitespace according to its own rules. Most assistive technologies don't know what to do with links embedded in a dialog, as it's becoming more common.</p>
 
 <p><span class="c1">Solution</span>: For links inside documents, make sure the ROLE_LINK object and its child ROLE_TEXT objects all have STATE_LINKED set. For multi-line links with a line break in the middle, make sure there is no whitespace at the beginning or end of any of the accessible names, and make sure there is a \r\n where the line breaks occur in the accessible name for the ROLE_LINK. For an example of how to do this properly, see Internet Explorer or Gecko. Again, if it's not done exactly this way, some links will not be read.</p>
 
@@ -398,7 +398,7 @@ tags:
 
 <p>Some assistive technologies will look for MSAA if it doesn't already know that the given window class is used for something common. Common examples are Button, ListBox, ComboBox, msctls_statusbar32, msctls_trackbar32, #32770 (dialog class), SysTreeView32, Static, Edit and RichEdit. Other assistive technologies use an allowlist, and must list your window classes somewhere in their implementation, and then turn on MSAA support when a window of that class receives focus. The window class is also used to determine a host of hard-coded behaviors, such as whether or not a screen reader will load the entire MSAA tree into a special buffer for the user to navigate with screen reader commands. This is only supposed to occur for document navigation, not for UI/dialogs. where your application's keyboard commands will be solely used to navigate.</p>
 
-<p><span class="c1">Solution</span>: Contact each vendor who's product isn't using your MSAA, and let them know what window classes you will be using MSAA for. If possible, use a different window class name for documents/content than you use for UI/dialogs. Or, do what Mozilla does - expose a control ID (GWL_ID) of 1 for content, and 0 for UI. Consistent window class names are important for the assistive technology vendors, so that they can determine what code to run for a given window. Don't change window class names after you have shipped a version.</p>
+<p><span class="c1">Solution</span>: Contact each vendor whose product isn't using your MSAA, and let them know what window classes you will be using MSAA for. If possible, use a different window class name for documents/content than you use for UI/dialogs. Or, do what Mozilla does - expose a control ID (GWL_ID) of 1 for content, and 0 for UI. Consistent window class names are important for the assistive technology vendors, so that they can determine what code to run for a given window. Don't change window class names after you have shipped a version.</p>
 
 <h3 id="WindowFromAccessibleObject_depends_on_client-window_relationship">WindowFromAccessibleObject depends on client-window relationship</h3>
 

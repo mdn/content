@@ -13,6 +13,7 @@ tags:
   - picture
 browser-compat: html.elements.picture
 ---
+
 {{HTMLRef}}
 
 The **`<picture>`** [HTML](/en-US/docs/Web/HTML) element contains zero or more {{HTMLElement("source")}} elements and one {{HTMLElement("img")}} element to offer alternative versions of an image for different display/device scenarios.
@@ -30,11 +31,12 @@ The `<img>` element serves two purposes:
 
 Common use cases for `<picture>`:
 
-*   **Art direction.** Cropping or modifying images for different `media` conditions (for example, loading a simpler version of an image which has too many details, on smaller displays).
-*   **Offering alternative image formats**, for cases where certain formats are not supported.
+- **Art direction.** Cropping or modifying images for different `media` conditions (for example, loading a simpler version of an image which has too many details, on smaller displays).
+- **Offering alternative image formats**, for cases where certain formats are not supported.
 
-    > **Note:** For example, newer formats like [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif) or [WEBP](/en-US/docs/Web/Media/Formats/Image_types#webp) have many advantages, but  might not be supported by the browser. A list of supported image formats can be found in: [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types).
-*   **Saving bandwidth and speeding page load times** by loading the most appropriate image for the viewer's display.
+  > **Note:** For example, newer formats like [AVIF](/en-US/docs/Web/Media/Formats/Image_types#AVIF_image) or [WEBP](/en-US/docs/Web/Media/Formats/Image_types#WebP_image) have many advantages, but  might not be supported by the browser. A list of supported image formats can be found in: [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types).
+
+- **Saving bandwidth and speeding page load times** by loading the most appropriate image for the viewer's display.
 
 If providing higher-density versions of an image for high-DPI (Retina) display, use {{htmlattrxref("srcset", "img")}} on the `<img>` element instead. This lets browsers opt for lower-density versions in data-saving modes, and you don't have to write explicit `media` conditions.
 
@@ -116,13 +118,13 @@ If the {{HTMLElement("source")}}'s media condition evaluates to `false`, the bro
 
 ### The srcset attribute
 
-The [{{htmlattrdef("srcset")}}](/en-US/docs/Web/HTML/Element/source#attr-srcset) attribute is used to offer list of possible images *based on size*.
+The [{{htmlattrdef("srcset")}}](/en-US/docs/Web/HTML/Element/source#attr-srcset) attribute is used to offer list of possible images _based on size_.
 
-It is composed of a comma-separated list of image descriptors. Each image descriptor is composed of a URL of the image, and *either...*
+It is composed of a comma-separated list of image descriptors. Each image descriptor is composed of a URL of the image, and _either..._
 
-*   a *width descriptor*, followed by a `w` (such as `300w`);
-    *OR*
-*   a *pixel density descriptor*, followed by an `x` (such as `2x`) to serve a high-res image for high-DPI screens.
+- a _width descriptor_, followed by a `w` (such as `300w`);
+  _OR_
+- a _pixel density descriptor_, followed by an `x` (such as `2x`) to serve a high-res image for high-DPI screens.
 
 ```html
 <picture>
@@ -153,7 +155,7 @@ The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP
 
 ## See also
 
-*   {{HTMLElement("img")}} element
-*   {{HTMLElement("source")}} element
-*   Positioning and sizing the picture within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
-*   [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
+- {{HTMLElement("img")}} element
+- {{HTMLElement("source")}} element
+- Positioning and sizing the picture within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
+- [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)

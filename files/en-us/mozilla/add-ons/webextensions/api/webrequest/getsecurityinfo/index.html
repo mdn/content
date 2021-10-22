@@ -36,14 +36,14 @@ browser-compat: webextensions.api.webRequest.getSecurityInfo
  <dt><code>requestId</code></dt>
  <dd><code>string</code>. ID of the request for which you want security info. You can get this from the <code>details</code> object that is passed into any <code>webRequest</code> event listeners.</dd>
  <dt><code>options</code></dt>
- <dd><code>object</code>. An object which may contain any of the following properties, all optional:</dd>
  <dd>
- <dl class="reference-values">
-  <dt><code>certificateChain</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. If <code>true</code>, the {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object returned will include the entire certificate chain up to and including the trust root. If <code>false</code>,  it will include only the server certificate. Defaults to <code>false</code>.</dd>
-  <dt><code>rawDER</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. If true, every {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}} in the {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo.certificates")}} property will contain a property <code>rawDER</code>. This contains the DER-encoded ASN.1 that comprises the certificate data.</dd>
- </dl>
+   <p><code>object</code>. An object which may contain any of the following properties, all optional:</p>
+   <dl>
+    <dt><code>certificateChain</code> {{optional_inline}}</dt>
+    <dd><code>boolean</code>. If <code>true</code>, the {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object returned will include the entire certificate chain up to and including the trust root. If <code>false</code>,  it will include only the server certificate. Defaults to <code>false</code>.</dd>
+    <dt><code>rawDER</code> {{optional_inline}}</dt>
+    <dd><code>boolean</code>. If true, every {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}} in the {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo.certificates")}} property will contain a property <code>rawDER</code>. This contains the DER-encoded ASN.1 that comprises the certificate data.</dd>
+   </dl>
  </dd>
 </dl>
 

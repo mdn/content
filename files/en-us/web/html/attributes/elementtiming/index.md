@@ -9,6 +9,7 @@ tags:
   - Performance
   - Reference
 ---
+
 {{HTMLSidebar}}
 
 The **`elementtiming`** attribute is used to indicate that an element is flagged for tracking by the {{domxref("Element Timing API")}}. This attribute may be applied to {{htmlelement("img")}}, {{SVGElement("image")}} elements inside an {{htmlelement("svg")}}, poster images of {{htmlelement("video")}} elements, elements which have a {{cssxref("background-image")}}, and elements containing text nodes, such as a {{htmlelement("p")}}.
@@ -23,10 +24,10 @@ The value given for `elementtiming` becomes an identifier for the observed eleme
 
 Good contenders for elements you might want to observe are:
 
-*   The main image for an article.
-*   A blog post title
-*   Images in a carousel for a shopping site.
-*   The poster image for the main video on a page.
+- The main image for an article.
+- A blog post title
+- Images in a carousel for a shopping site.
+- The poster image for the main video on a page.
 
 ## Examples
 
@@ -63,4 +64,4 @@ Good contenders for elements you might want to observe are:
 
 ## See also
 
-*   [Custom metrics](https://web.dev/custom-metrics/)
+- [Custom metrics](https://web.dev/custom-metrics/)

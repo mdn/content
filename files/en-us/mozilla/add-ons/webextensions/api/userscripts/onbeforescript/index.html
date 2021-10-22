@@ -46,22 +46,22 @@ browser.userScripts.onBeforeScript.hasListener(listener)
  <dd>
  <p>A function that is called when this event occurs. The function is passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>script</code></dt>
-  <dd>An <code>object</code> that represents the user script that matched a web page. Its properties and methods are as follows:</dd>
   <dd>
-  <dl class="reference-values">
-   <dt><code>defineGlobals</code></dt>
-   <dd>A method that exports an object containing properties and methods available globally to the user script sandbox. This method must be called synchronously to guarantee that the user script has not executed.</dd>
-   <dt><code>export</code></dt>
-   <dd>A method that converts a value to one that the user script code can access. This method is used in API methods exported to the user script to result or resolve non-primitive values. The exported objects can also provide methods that the user script code can access and call.</dd>
-   <dt><code>global</code></dt>
-   <dd> An <code>object</code> that provides access to the sandbox for the user script.</dd>
-   <dt><code>metadata</code></dt>
-   <dd>The <code>scriptMetadata</code> property set when the user script was registered using <code>userScripts.register</code>.</dd>
-  </dl>
-  </dd>
- </dl>
+    <p>An <code>object</code> that represents the user script that matched a web page. Its properties and methods are as follows:</p>
+    <dl>
+     <dt><code>defineGlobals</code></dt>
+     <dd>A method that exports an object containing properties and methods available globally to the user script sandbox. This method must be called synchronously to guarantee that the user script has not executed.</dd>
+     <dt><code>export</code></dt>
+     <dd>A method that converts a value to one that the user script code can access. This method is used in API methods exported to the user script to result or resolve non-primitive values. The exported objects can also provide methods that the user script code can access and call.</dd>
+     <dt><code>global</code></dt>
+     <dd> An <code>object</code> that provides access to the sandbox for the user script.</dd>
+     <dt><code>metadata</code></dt>
+     <dd>The <code>scriptMetadata</code> property set when the user script was registered using <code>userScripts.register</code>.</dd>
+    </dl>
+    </dd>
+   </dl>
  </dd>
 </dl>
 

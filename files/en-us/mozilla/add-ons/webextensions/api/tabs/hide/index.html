@@ -44,9 +44,11 @@ browser-compat: webextensions.api.tabs.hide
 
 <dl>
  <dt><code>tabIds</code></dt>
- <dd><code>integer</code> or <code>array</code> of <code>integer</code>. The IDs of the tab or tabs to hide.</dd>
- <dd>If any of these tabs are not eligible for being hidden, they will not be hidden, but the call will still succeed and eligible tabs will still be hidden. For example, if you pass <code>[1, 3]</code>, and <code>1</code> identifies the active tab, then only <code>3</code> will be hidden.</dd>
- <dd>However, if any of the tab IDs are invalid, the call will fail and no tabs will be hidden.</dd>
+ <dd>
+   <p><code>integer</code> or <code>array</code> of <code>integer</code>. The IDs of the tab or tabs to hide.</p>
+   <p>If any of these tabs are not eligible for being hidden, they will not be hidden, but the call will still succeed and eligible tabs will still be hidden. For example, if you pass <code>[1, 3]</code>, and <code>1</code> identifies the active tab, then only <code>3</code> will be hidden.</p>
+   <p>However, if any of the tab IDs are invalid, the call will fail and no tabs will be hidden.</p>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>

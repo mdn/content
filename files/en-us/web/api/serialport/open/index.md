@@ -42,10 +42,10 @@ A {{jsxref("Promise")}}.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `"InvalidStateError"`
-  - : Indicates that the port is already open.
-- {{domxref("DOMException")}} `NetworkError`
-  - : Indicates that the attempt to open the port failed.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the port is already open.
+- `NetworkError` {{domxref("DOMException")}}
+  - : Returned if the attempt to open the port failed.
 
 ## Examples
 

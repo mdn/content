@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: html.elements.footer
 ---
+
 {{HTMLRef}}
 
 The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for its nearest [sectioning content](/en-US/docs/Web/Guide/HTML/Content_categories#sectioning_content) or [sectioning root](/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_root) element. A `<footer>` typically contains information about the author of the section, copyright data or links to related documents.
@@ -107,8 +108,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-*   Enclose information about the author in an {{HTMLElement("address")}} element that can be included into the `<footer>` element.
-*   The `<footer>` element is not sectioning content and therefore doesn't introduce a new section in the [outline](/en-US/docs/Web/HTML/Element/Heading_Elements "Sections and Outlines of an HTML5 document").
+- Enclose information about the author in an {{HTMLElement("address")}} element that can be included into the `<footer>` element.
+- The `<footer>` element is not sectioning content and therefore doesn't introduce a new section in the [outline](/en-US/docs/Web/HTML/Element/Heading_Elements "Sections and Outlines of an HTML5 document").
 
 ## Examples
 
@@ -123,7 +124,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 Prior to the release of Safari 13, the `contentinfo` [landmark role](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) was not properly exposed by [VoiceOver](https://help.apple.com/voiceover/info/guide/). If needing to support legacy Safari browsers, add `role="contentinfo"` to the `footer` element to ensure the landmark will be properly exposed.
 
-*   Related: [WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't](https://bugs.webkit.org/show_bug.cgi?id=146930)
+- Related: [WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't](https://bugs.webkit.org/show_bug.cgi?id=146930)
 
 ## Specifications
 
@@ -135,6 +136,6 @@ Prior to the release of Safari 13, the `contentinfo` [landmark role](/en-US/docs
 
 ## See also
 
-*   Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};
-*   [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
-*   [ARIA: Contentinfo role](/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)
+- Other section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};
+- [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
+- [ARIA: Contentinfo role](/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)

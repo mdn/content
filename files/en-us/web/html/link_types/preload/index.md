@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: html.elements.link.rel.preload
 ---
+
 {{HTMLSidebar}}
 
 The `preload` value of the {{htmlelement("link")}} element's {{htmlattrxref("rel", "link")}} attribute lets you declare fetch requests in the
@@ -25,8 +26,8 @@ You most commonly use `<link>` to load a CSS file to style your page with:
 
 Here however, we will use a `rel` value of `preload`, which turns `<link>` into a preloader for any resource we want. You will also need to specify:
 
-*   The path to the resource in the {{htmlattrxref("href", "link")}} attribute.
-*   The type of resource in the {{htmlattrxref("as", "link")}} attribute.
+- The path to the resource in the {{htmlattrxref("href", "link")}} attribute.
+- The type of resource in the {{htmlattrxref("as", "link")}} attribute.
 
 A simple example might look like this (see our [JS and CSS example source](https://github.com/mdn/html-examples/tree/master/link-rel-preload/js-and-css), and [also live](https://mdn.github.io/html-examples/link-rel-preload/js-and-css/)):
 
@@ -51,33 +52,33 @@ A simple example might look like this (see our [JS and CSS example source](https
 
 Here we preload our CSS and JavaScript files so they will be available as soon as they are required for the rendering of the page later on. This example is trivial, as the browser probably discovers the `<link rel="stylesheet">` and `<script>` elements in the same chunk of HTML as the preloads, but the benefits can be seen much more clearly the later resources are discovered and the larger they are. For example:
 
-*   Resources that are pointed to from inside CSS, like fonts or images.
-*   Resources that JavaScript can request, like JSON, imported scripts, or web workers.
-*   Larger images and video files.
+- Resources that are pointed to from inside CSS, like fonts or images.
+- Resources that JavaScript can request, like JSON, imported scripts, or web workers.
+- Larger images and video files.
 
 `preload` has other advantages too. Using `as` to specify the type of content to be preloaded allows the browser to:
 
-*   Prioritize resource loading more accurately.
-*   Store in the cache for future requests, reusing the resource if appropriate.
-*   Apply the correct [content security policy](/en-US/docs/Web/HTTP/CSP) to the resource.
-*   Set the correct {{HTTPHeader("Accept")}} request headers for it.
+- Prioritize resource loading more accurately.
+- Store in the cache for future requests, reusing the resource if appropriate.
+- Apply the correct [content security policy](/en-US/docs/Web/HTTP/CSP) to the resource.
+- Set the correct {{HTTPHeader("Accept")}} request headers for it.
 
 ### What types of content can be preloaded?
 
 Many different content types can be preloaded. The possible `as` attribute values are:
 
-*   `audio`: Audio file, as typically used in {{htmlelement("audio")}}.
-*   `document`: An HTML document intended to be embedded by a {{htmlelement("frame")}} or {{htmlelement("iframe")}}.
-*   `embed`: A resource to be embedded inside an {{htmlelement("embed")}} element.
-*   `fetch`: Resource to be accessed by a fetch or XHR request, such as an ArrayBuffer or JSON file.
-*   `font`: Font file.
-*   `image`: Image file.
-*   `object`: A resource to be embedded inside an {{htmlelement("object")}} element.
-*   `script`: JavaScript file.
-*   `style`: CSS stylesheet.
-*   `track`: WebVTT file.
-*   `worker`: A JavaScript web worker or shared worker.
-*   `video`: Video file, as typically used in {{htmlelement("video")}}. 
+- `audio`: Audio file, as typically used in {{htmlelement("audio")}}.
+- `document`: An HTML document intended to be embedded by a {{htmlelement("frame")}} or {{htmlelement("iframe")}}.
+- `embed`: A resource to be embedded inside an {{htmlelement("embed")}} element.
+- `fetch`: Resource to be accessed by a fetch or XHR request, such as an ArrayBuffer or JSON file.
+- `font`: Font file.
+- `image`: Image file.
+- `object`: A resource to be embedded inside an {{htmlelement("object")}} element.
+- `script`: JavaScript file.
+- `style`: CSS stylesheet.
+- `track`: WebVTT file.
+- `worker`: A JavaScript web worker or shared worker.
+- `video`: Video file, as typically used in {{htmlelement("video")}}.
 
 > **Note:** `video` preloading is included in the Preload spec, but is not currently implemented by browsers.
 
@@ -107,7 +108,7 @@ You can see an example of this in our video example (see the [full source code](
 
 The code in the example above causes the `video/mp4` video to be preloaded only in supporting browsers — and for users who have `video/mp4` support in their browsers, causes the `video/mp4` video to actually be used (since it’s the first {{htmlelement("source")}} specified). That makes the video player hopefully smoother/more responsive for users who have `video/mp4` support in their browsers.
 
-Note that for users whose browsers have both `video/mp4` and `video/webm` support, if in that code a `<link rel="preload" href="sintel-short.webm" as="video" type="video/webm">` element were also specified, then *both* the `video/mp4` and `video/webm` videos would be preloaded — even though only one of them would actually be used.
+Note that for users whose browsers have both `video/mp4` and `video/webm` support, if in that code a `<link rel="preload" href="sintel-short.webm" as="video" type="video/webm">` element were also specified, then _both_ the `video/mp4` and `video/webm` videos would be preloaded — even though only one of them would actually be used.
 
 Therefore, specifying preloading for multiple types of the same resource is discouraged. Instead, the best practice is to specify preloading only for the type the majority of your users are likely to actually use. That’s why the code in the example above doesn’t specify preloading for the `video/webm` video.
 
@@ -204,10 +205,10 @@ This is useful when you want to preload a script, but then defer execution until
 
 Other preloading features exist, but none are quite as fit for purpose as `<link rel="preload">`:
 
-*   `<link rel="prefetch">` has been supported in browsers for a long time, but it is intended for prefetching resources that will be used in the ***next*** navigation/page load (e.g. when you go to the next page). This is fine, but isn't useful for the current page! In addition, browsers will give `prefetch` resources a lower priority than `preload` ones — the current page is more important than the next. See [Link prefetching FAQ](/en-US/docs/Web/HTTP/Link_prefetching_FAQ) for more details.
-*   `<link rel="prerender">` renders a specified webpage in the background, speeding up its load if the user navigates to it. Because of the potential to waste users bandwidth, Chrome treats `prerender` as a [NoState prefetch](https://developers.google.com/web/updates/2018/07/nostate-prefetch) instead.
-*   `<link rel="subresource">` {{non-standard_inline}} was supported in Chrome a while ago, and was intended to tackle the same issue as `preload`, but it had a problem: there was no way to work out a priority for the items (`as` didn't exist back then), so they all got fetched with fairly low priority.
-*   There are a number of script-based resource loaders out there, but they don't have any power over the browser's fetch prioritization queue, and are subject to much the same performance problems.
+- `<link rel="prefetch">` has been supported in browsers for a long time, but it is intended for prefetching resources that will be used in the **_next_** navigation/page load (e.g. when you go to the next page). This is fine, but isn't useful for the current page! In addition, browsers will give `prefetch` resources a lower priority than `preload` ones — the current page is more important than the next. See [Link prefetching FAQ](/en-US/docs/Web/HTTP/Link_prefetching_FAQ) for more details.
+- `<link rel="prerender">` renders a specified webpage in the background, speeding up its load if the user navigates to it. Because of the potential to waste users bandwidth, Chrome treats `prerender` as a [NoState prefetch](https://developers.google.com/web/updates/2018/07/nostate-prefetch) instead.
+- `<link rel="subresource">` {{non-standard_inline}} was supported in Chrome a while ago, and was intended to tackle the same issue as `preload`, but it had a problem: there was no way to work out a priority for the items (`as` didn't exist back then), so they all got fetched with fairly low priority.
+- There are a number of script-based resource loaders out there, but they don't have any power over the browser's fetch prioritization queue, and are subject to much the same performance problems.
 
 ## Specifications
 
@@ -219,4 +220,4 @@ Other preloading features exist, but none are quite as fit for purpose as `<link
 
 ## See also
 
-*   [Preload: What Is It Good For?](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/) by Yoav Weiss
+- [Preload: What Is It Good For?](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/) by Yoav Weiss

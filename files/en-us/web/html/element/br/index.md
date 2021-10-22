@@ -9,6 +9,7 @@ tags:
   - Web
 browser-compat: html.elements.br
 ---
+
 {{HTMLRef}}
 
 The **`<br>`** [HTML](/en-US/docs/Web/HTML) element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.
@@ -25,8 +26,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ### Deprecated attributes
 
-*   {{htmlattrdef("clear")}}
-    *   : Indicates where to begin the next line after the break.
+- {{htmlattrdef("clear")}}
+  - : Indicates where to begin the next line after the break.
 
 ## Styling with CSS
 
@@ -128,6 +129,6 @@ Use `<p>` elements, and use CSS properties like {{cssxref("margin")}} to control
 
 ## See also
 
-*   {{HTMLElement("address")}} element
-*   {{HTMLElement("p")}} element
-*   {{HTMLElement("wbr")}} element
+- {{HTMLElement("address")}} element
+- {{HTMLElement("p")}} element
+- {{HTMLElement("wbr")}} element

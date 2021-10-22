@@ -8,6 +8,7 @@ tags:
   - for
   - Reference
 ---
+
 {{HTMLSidebar}}
 
 The **`for`** attribute is an allowed attribute for {{htmlelement("label")}} and {{htmlelement("output")}}. When used on a `<label>` element it indicates the form element that this label describes. When used on an `<output>` element it allows for an explicit relationship between the elements that represent values which are used in the output.

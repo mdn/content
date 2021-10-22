@@ -9,6 +9,7 @@ tags:
   - Web
 browser-compat: html.elements.h1
 ---
+
 {{HTMLRef}}
 
 The **`<h1>`** to **`<h6>`** [HTML](/en-US/docs/Web/HTML) elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest.
@@ -81,22 +82,22 @@ These elements only include the [global attributes](/en-US/docs/Web/HTML/Global_
 
 ## Usage notes
 
-*   Heading information can be used by user agents to construct a table of contents for a document automatically.
-*   Avoid using heading elements to resize text. Instead, use the {{glossary("CSS")}} {{cssxref("font-size")}} property.
-*   Avoid skipping heading levels: always start from `<h1>`, followed by `<h2>` and so on.
-*   Use only one `<h1>` per page or view. It should concisely describe the overall purpose of the content.
+- Heading information can be used by user agents to construct a table of contents for a document automatically.
+- Avoid using heading elements to resize text. Instead, use the {{glossary("CSS")}} {{cssxref("font-size")}} property.
+- Avoid skipping heading levels: always start from `<h1>`, followed by `<h2>` and so on.
+- Use only one `<h1>` per page or view. It should concisely describe the overall purpose of the content.
 
 ### Multiple `<h1>` elements on one page
 
 Using more than one `<h1>` is allowed by the HTML specification, but is not considered a best practice. Using only one `<h1>` is beneficial for screenreader users.
 
-The HTML specification includes the concept of an *outline* formed by the use of {{htmlelement("section")}} elements.
+The HTML specification includes the concept of an _outline_ formed by the use of {{htmlelement("section")}} elements.
 If this were implemented it would enable the use of multiple `<h1>` elements, giving user agents—including screen readers—a way to understand that an \<h1> nested inside a defined section is a subheading. This functionality has never been implemented; therefore it is important to use your headings to describe the outline of your document.
 
 The following articles give more information about the status of outlines:
 
-*   [Computer says no to the HTML5 outline](https://html5doctor.com/computer-says-no-to-html5-document-outline/)
-*   [A decade + a year of heading backwards](https://html5accessibility.com/stuff/2021/03/21/a-decade-a-year-of-heading-backwards/)
+- [Computer says no to the HTML5 outline](https://html5doctor.com/computer-says-no-to-html5-document-outline/)
+- [A decade + a year of heading backwards](https://html5accessibility.com/stuff/2021/03/21/a-decade-a-year-of-heading-backwards/)
 
 ## Examples
 
@@ -177,28 +178,31 @@ Headings may be nested as subsections to reflect the organization of the content
         2.  `h3` Jurassic
         3.  `h3` Cretaceous
         4.  `h3` Cenozoic
+
     4.  `h2` External Morphology
 
         1.  `h3` Head
 
             1.  `h4` Mouthparts
+
         2.  `h3` Thorax
 
             1.  `h4` Prothorax
             2.  `h4` Pterothorax
+
         3.  `h3` Legs
         4.  `h3` Wings
         5.  `h3` Abdomen
 
 When headings are nested, heading levels may be "skipped" when closing a subsection.
 
-*   [Headings • Page Structure • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/headings/)
-*   [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline\_1.3\_—\_create_content_that_can_be_presented_in_different_ways)
-*   [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
-*   [MDN Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline\_2.4\_—\_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-*   [Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
-*   [Understanding Success Criterion 2.4.6 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
-*   [Understanding Success Criterion 2.4.10 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
+- [Headings • Page Structure • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/headings/)
+- [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
+- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- [MDN Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+- [Understanding Success Criterion 2.4.6 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
+- [Understanding Success Criterion 2.4.10 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
 
 ### Labeling section content
 
@@ -228,8 +232,8 @@ Sectioning content can be labeled using a combination of the [`aria-labelledby`]
 
 In this example, screen reading technology would announce that there are two {{HTMLElement("nav")}} sections, one called "Primary navigation" and one called "Footer navigation". If labels were not provided, the person using screen reading software may have to investigate each `nav` element's contents to determine their purpose.
 
-*   [Using the aria-labelledby attribute](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
-*   [Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
+- [Using the aria-labelledby attribute](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
+- [Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
 
 ## Specifications
 
@@ -241,6 +245,6 @@ In this example, screen reading technology would announce that there are two {{H
 
 ## See also
 
-*   {{HTMLElement("p")}}
-*   {{HTMLElement("div")}}
-*   {{HTMLElement("section")}}
+- {{HTMLElement("p")}}
+- {{HTMLElement("div")}}
+- {{HTMLElement("section")}}

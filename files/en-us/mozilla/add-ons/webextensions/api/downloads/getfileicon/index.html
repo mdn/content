@@ -37,12 +37,12 @@ browser-compat: webextensions.api.downloads.getFileIcon
  <dt><code>downloadId</code></dt>
  <dd>An <code>integer</code> representing the ID of the download.</dd>
  <dt><code>options</code>{{optional_inline}}</dt>
- <dd>An options <code>object</code> representing preferences for the icon to be retrieved. It can take the following properties:</dd>
  <dd>
- <dl class="reference-values">
-  <dt><code>size</code>{{optional_inline}}</dt>
-  <dd>An <code>integer</code> representing the size of the icon. The returned icon's size will be the provided size squared (in pixels). If omitted, the default size for the icon is 32x32 pixels.</dd>
- </dl>
+   <p>An options <code>object</code> representing preferences for the icon to be retrieved. It can take the following properties:</p>
+   <dl>
+    <dt><code>size</code>{{optional_inline}}</dt>
+    <dd>An <code>integer</code> representing the size of the icon. The returned icon's size will be the provided size squared (in pixels). If omitted, the default size for the icon is 32x32 pixels.</dd>
+   </dl>
  </dd>
 </dl>
 
@@ -83,9 +83,8 @@ searching.then(getIcon, onError);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#method-getFileIcon"><code>chrome.downloads</code></a> API.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#method-getFileIcon"><code>chrome.downloads</code></a> API.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

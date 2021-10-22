@@ -14,6 +14,7 @@ tags:
   - color
 browser-compat: html.elements.input.input-color
 ---
+
 {{HTMLRef}}
 
 {{HTMLElement("input")}} elements of type **`color`** provide a user interface element that lets a user specify a color, either by using a visual color picker interface or by entering the color into a text field in `#rrggbb` hexadecimal format.
@@ -64,7 +65,7 @@ The element's presentation may vary substantially from one browser and/or platfo
 
 The {{htmlattrxref("value", "input")}} of an {{HTMLElement("input")}} element of type `color` is always a {{domxref("DOMString")}} which contains a 7-character string specifying an RGB color in hexadecimal format. While you can input the color in either upper- or lower-case, it will be stored in lower-case form. The value is never in any other form, and is never empty.
 
-> **Note:** Setting the value to anything that isn't a valid, fully-opaque, RGB color *in hexadecimal notation* will result in the value being set to `#000000`. In particular, you can't use CSS's standardized color names, or any CSS function syntax, to set the value. This makes sense when you keep in mind that HTML and CSS are separate languages and specifications. In addition, colors with an alpha channel are not supported; specifying a color in 9-character hexadecimal notation (e.g. `#009900aa`) will also result in the color being set to `#000000`.
+> **Note:** Setting the value to anything that isn't a valid, fully-opaque, RGB color _in hexadecimal notation_ will result in the value being set to `#000000`. In particular, you can't use CSS's standardized color names, or any CSS function syntax, to set the value. This makes sense when you keep in mind that HTML and CSS are separate languages and specifications. In addition, colors with an alpha channel are not supported; specifying a color in 9-character hexadecimal notation (e.g. `#009900aa`) will also result in the color being set to `#000000`.
 
 ## Using color inputs
 
@@ -207,4 +208,4 @@ The final result looks like this:
 
 ## See also
 
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

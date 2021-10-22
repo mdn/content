@@ -30,40 +30,42 @@ browser-compat: webextensions.api.cookies.getAll
 
 <dl>
  <dt><code>details</code></dt>
- <dd>An <code>object</code> containing details that can be used to match cookies to be retrieved. Included properties are as follows (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/Cookie#type">Cookie type</a> for more information on these):</dd>
  <dd>
- <dl class="reference-values">
-  <dt><code>domain</code>{{optional_inline}}</dt>
-  <dd>A <code>string</code> representing a domain that cookies must be associated with (they can be associated either with this exact domain or one of its subdomains).</dd>
-  <dt><code>firstPartyDomain</code>{{optional_inline}}</dt>
-  <dd>A <code>string</code> representing the first-party domain with which the cookie to retrieve is associated.</dd>
-  <dd>This property must be supplied if the browser has first-party isolation enabled. You can however pass <code>null</code> in this situation. If you do this, then cookies with any value for <code>firstPartyDomain</code>, as well as cookies which do not have <code>firstPartyDomain</code> set at all, will be included in the results. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation">First-party isolation</a>.</dd>
-  <dt><code>name</code>{{optional_inline}}</dt>
-  <dd>A <code>string</code> representing a name that the cookies should have.</dd>
-  <dt><code>partitionKey</code>{{optional_inline}}</dt>
-  <dd>An <code>object</code> defining which <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning">storage partitions</a> to return cookies from:
-    <ul>
-      <li>if omitted, returns only cookies from unpartitioned storage.</li>
-      <li>if included without <code>topLevelSite</code>, returns all cookies from partitioned and unpartitioned storage.</li>
-      <li>if included with <code>topLevelSite</code> specified, returns cookies from the specified partition storage.</li>
-    </ul>
-   This object contains:
-   <dl class="reference-values">
-   <dt><code>topLevelSite</code>{{optional_inline}}</dt>
-   <dd>A <code>string</code> representing the first-party URL of the top-level site storage partition containing the cookies.</dd>
+   <p>An <code>object</code> containing details that can be used to match cookies to be retrieved. Included properties are as follows (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/Cookie#type">Cookie type</a> for more information on these):</p>
+   <dl>
+    <dt><code>domain</code>{{optional_inline}}</dt>
+    <dd>A <code>string</code> representing a domain that cookies must be associated with (they can be associated either with this exact domain or one of its subdomains).</dd>
+    <dt><code>firstPartyDomain</code>{{optional_inline}}</dt>
+    <dd>
+      <p>A <code>string</code> representing the first-party domain with which the cookie to retrieve is associated.</p>
+      <p>This property must be supplied if the browser has first-party isolation enabled. You can however pass <code>null</code> in this situation. If you do this, then cookies with any value for <code>firstPartyDomain</code>, as well as cookies which do not have <code>firstPartyDomain</code> set at all, will be included in the results. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation">First-party isolation</a>.</p>
+    </dd>
+    <dt><code>name</code>{{optional_inline}}</dt>
+    <dd>A <code>string</code> representing a name that the cookies should have.</dd>
+    <dt><code>partitionKey</code>{{optional_inline}}</dt>
+    <dd>An <code>object</code> defining which <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning">storage partitions</a> to return cookies from:
+      <ul>
+        <li>if omitted, returns only cookies from unpartitioned storage.</li>
+        <li>if included without <code>topLevelSite</code>, returns all cookies from partitioned and unpartitioned storage.</li>
+        <li>if included with <code>topLevelSite</code> specified, returns cookies from the specified partition storage.</li>
+     </ul>
+     This object contains:
+     <dl>
+     <dt><code>topLevelSite</code>{{optional_inline}}</dt>
+     <dd>A <code>string</code> representing the first-party URL of the top-level site storage partition containing the cookies.</dd>
+     </dl>
+    </dd>
+    <dt><code>path</code>{{optional_inline}}</dt>
+    <dd>A <code>string</code> representing a path — the cookies' path must be identical to this one.</dd>
+    <dt><code>secure</code>{{optional_inline}}</dt>
+    <dd>A <code>boolean</code> — filters cookies by their <code>secure</code> property, allowing you to filter secure cookies vs. non-secure cookies..</dd>
+    <dt><code>session</code>{{optional_inline}}</dt>
+    <dd>A <code>boolean</code>— filters the cookies by their <code>session</code> property, allowing you to filter session cookies vs. persistent cookies.</dd>
+    <dt><code>storeId</code>{{optional_inline}}</dt>
+    <dd>A <code>string</code> representing the cookie store to retrieve cookies from. If omitted, the current execution context's cookie store will be used.</dd>
+    <dt><code>url</code>{{optional_inline}}</dt>
+    <dd>A <code>string</code> representing a URL that the retrieved cookies must be associated with.</dd>
    </dl>
-  </dd>
-  <dt><code>path</code>{{optional_inline}}</dt>
-  <dd>A <code>string</code> representing a path — the cookies' path must be identical to this one.</dd>
-  <dt><code>secure</code>{{optional_inline}}</dt>
-  <dd>A <code>boolean</code> — filters cookies by their <code>secure</code> property, allowing you to filter secure cookies vs. non-secure cookies..</dd>
-  <dt><code>session</code>{{optional_inline}}</dt>
-  <dd>A <code>boolean</code>— filters the cookies by their <code>session</code> property, allowing you to filter session cookies vs. persistent cookies.</dd>
-  <dt><code>storeId</code>{{optional_inline}}</dt>
-  <dd>A <code>string</code> representing the cookie store to retrieve cookies from. If omitted, the current execution context's cookie store will be used.</dd>
-  <dt><code>url</code>{{optional_inline}}</dt>
-  <dd>A <code>string</code> representing a URL that the retrieved cookies must be associated with.</dd>
- </dl>
  </dd>
 </dl>
 
@@ -92,9 +94,8 @@ gettingAll.then(logCookies);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/cookies#method-getAll"><code>chrome.cookies</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/cookies#method-getAll"><code>chrome.cookies</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

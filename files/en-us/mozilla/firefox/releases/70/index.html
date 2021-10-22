@@ -9,7 +9,7 @@ tags:
 ---
 <p>{{FirefoxSidebar}}</p>
 
-<p class="summary">This article provides information about the changes in Firefox 70 that will affect developers. Firefox 70 was released on October 22, 2019.</p>
+<p>This article provides information about the changes in Firefox 70 that will affect developers. Firefox 70 was released on October 22, 2019.</p>
 
 <h2 id="Changes_for_web_developers">Changes for web developers</h2>
 
@@ -18,7 +18,7 @@ tags:
 <h4 id="Debugger_updates">Debugger updates</h4>
 
 <ul>
- <li>In the <a class="gr-progress" href="/en-US/docs/Tools/Debugger">Debugger</a> you can now set breakpoints for <a href="/en-US/docs/Tools/Debugger/Break_on_DOM_mutation">DOM Mutation</a>, so execution will pause when a node or its attributes are changed or when a node is removed from the DOM ({{bug(1576219)}}).</li>
+ <li>In the <a href="/en-US/docs/Tools/Debugger">Debugger</a> you can now set breakpoints for <a href="/en-US/docs/Tools/Debugger/Break_on_DOM_mutation">DOM Mutation</a>, so execution will pause when a node or its attributes are changed or when a node is removed from the DOM ({{bug(1576219)}}).</li>
  <li>The Debugger now shows an overlay on the page when it is paused, with basic stepping buttons to let you step and continue ({{bug(1574646)}}).</li>
  <li>The Debugger now shows sources that already got discarded by the engine (usually scripts that execute once during page load), so you can properly set breakpoints to debug when they execute next ({{bug(1572280)}}).</li>
  <li>The Debugger's <a href="/en-US/docs/Tools/Debugger/Using_the_Debugger_map_scopes_feature">scopes panel</a> grouping has been simplified, consolidating additional scopes previously shown above the top level function (e.g. blocks created by <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/with">with</a></code>, or <a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else"><code>if</code>/<code>else</code></a>) ({{bug(1448166)}})</li>
@@ -62,7 +62,7 @@ tags:
  </li>
  <li>The {{cssxref("display")}} property now accepts two keyword values representing the inner and outer display type ({{Bug(1038294)}}, {{Bug(1105868)}} and {{Bug(1557825)}}).</li>
  <li>The {{cssxref("font-size")}} property now accepts the new keyword value <code>xxx-large</code>. ({{Bug(1553545)}}).</li>
- <li>The {{cssxref(":visited")}} pseudo-class no longer matches {{htmlelement("link")}} elements, for logic and performance reasons ({{bug(1572246)}}; see <span class="F0XO1GC-mb-Z" id="t-t"><a href="https://groups.google.com/forum/#!msg/mozilla.dev.platform/1NP6oJzK6zg/ftAz_TajAAAJ">Intent to ship: Make &lt;link&gt; elements always unvisited</a> and </span><a href="https://github.com/w3c/csswg-drafts/issues/3817">[selectors] :link and &lt;link&gt;</a> for more reasoning as to why).</li>
+ <li>The {{cssxref(":visited")}} pseudo-class no longer matches {{htmlelement("link")}} elements, for logic and performance reasons ({{bug(1572246)}}; see <a href="https://groups.google.com/forum/#!msg/mozilla.dev.platform/1NP6oJzK6zg/ftAz_TajAAAJ">Intent to ship: Make &lt;link&gt; elements always unvisited</a> and <a href="https://github.com/w3c/csswg-drafts/issues/3817">[selectors] :link and &lt;link&gt;</a> for more reasoning as to why).</li>
  <li>We now support an <code>auto</code> value for the {{cssxref("quotes")}} property ({{bug(1421938)}}).</li>
  <li>Stylesheets contained in {{htmlelement("style")}} elements are now cached for reuse, to improve performance ({{bug(1480146)}}). Note that this currently doesn't include stylesheets that contain <code>@import</code> rules.</li>
  <li>The <code>&lt;ratio&gt;</code> type now accepts <code>&lt;number&gt;/&lt;number&gt;</code> or a single <code>&lt;number&gt;</code> as a value. ({{bug(1565562)}}).</li>

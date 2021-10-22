@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: html.elements.optgroup
 ---
+
 {{HTMLRef}}
 
 The **`<optgroup>`** [HTML](/en-US/docs/Web/HTML) element creates a grouping of options within a {{HTMLElement("select")}} element.
@@ -63,10 +64,10 @@ The **`<optgroup>`** [HTML](/en-US/docs/Web/HTML) element creates a grouping of 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("disabled")}}
-    *   : If this Boolean attribute is set, none of the items in this option group is selectable. Often browsers grey out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.
-*   {{htmlattrdef("label")}}
-    *   : The name of the group of options, which the browser can use when labeling the options in the user interface. This attribute is mandatory if this element is used.
+- {{htmlattrdef("disabled")}}
+  - : If this Boolean attribute is set, none of the items in this option group is selectable. Often browsers grey out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.
+- {{htmlattrdef("label")}}
+  - : The name of the group of options, which the browser can use when labeling the options in the user interface. This attribute is mandatory if this element is used.
 
 ## Examples
 
@@ -101,4 +102,4 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## See also
 
-*   Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
+- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.

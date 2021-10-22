@@ -50,14 +50,14 @@ browser.history.onVisitRemoved.hasListener(listener)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed the following argument:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>removed</code></dt>
-  <dd><code>object</code>. Details of the removal. This is an object containing two properties: a boolean <code>allHistory</code> and an array <code>urls</code>.</dd>
   <dd>
-  <ul>
-   <li>If this event is firing because all history was cleared, <code>allHistory</code> will be <code>true</code> and <code>urls</code> will be an empty array.</li>
-   <li>Otherwise,  <code>allHistory</code> will be <code>false</code> and <code>urls</code> will contain one item, which is the URL of the removed page.</li>
-  </ul>
+    <p><code>object</code>. Details of the removal. This is an object containing two properties: a boolean <code>allHistory</code> and an array <code>urls</code>.</p>
+    <ul>
+     <li>If this event is firing because all history was cleared, <code>allHistory</code> will be <code>true</code> and <code>urls</code> will be an empty array.</li>
+     <li>Otherwise,  <code>allHistory</code> will be <code>false</code> and <code>urls</code> will contain one item, which is the URL of the removed page.</li>
+    </ul>
   </dd>
  </dl>
  </dd>
@@ -81,9 +81,8 @@ browser.history.onVisitRemoved.addListener(onRemoved);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/history#event-onVisitRemoved"><code>chrome.history</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/history#event-onVisitRemoved"><code>chrome.history</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

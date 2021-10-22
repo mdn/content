@@ -2,21 +2,25 @@
 title: Event.explicitOriginalTarget
 slug: Web/API/Event/explicitOriginalTarget
 tags:
-  - API
-  - DOM
-  - Gecko
   - Non-standard
   - Property
+  - Read-only
   - Reference
 browser-compat: api.Event.explicitOriginalTarget
 ---
 {{APIRef("DOM")}}{{Non-standard_Header}}
 
-The explicit original target of the event. (Mozilla-specific)
+The read-only **`explicitOriginalTarget`** property of the {{domxref("Event")}} interface returns the non-anonymous original target of the event.
 
-If the event was [retargeted](/en-US/docs/DOM/event_retargeting) for some reason other than an [anonymous boundary crossing](/en-US/docs/DOM/anonymous_boundary_crossing), this will be set to the target before the retargeting occurs. For example, mouse events are retargeted to their parent node when they happen over text nodes (see {{Bug(185889)}}), and in that case [`currentTarget`](/en-US/docs/Web/API/Event/currentTarget) will show the parent and `explicitOriginalTarget` will show the text node.
+If the event was retargeted for some reason other than an anonymous boundary crossing, this will be set to the target before the retargeting occurs.
 
-`explicitOriginalTarget` differs from [`originalTarget`](/en-US/docs/Web/API/Event/originalTarget) in that it will never contain [anonymous content](/en-US/docs/DOM/anonymous_content).
+For example, mouse events are retargeted to their parent node when they happen over text nodes (see {{Bug(185889)}}), and in that case [`currentTarget`](/en-US/docs/Web/API/Event/currentTarget) will show the parent while this property will show the text node.
+
+This property also differs from [`originalTarget`](/en-US/docs/Web/API/Event/originalTarget) in that it will never contain anonymous content.
+
+## Value
+
+Returns the {{domxref("EventTarget")}} object, or null if there isn't one.
 
 ## Example
 
@@ -40,9 +44,7 @@ function myCommand(ev) {
 
 ## Specifications
 
-_This is a Mozilla-specific property._ Defined in {{Source("/dom/public/idl/events/nsIDOMNSEvent.idl")}}
-
-This event property is **not defined** in the [W3.org DOM Level 2 Events](https://www.w3.org/TR/DOM-Level-2-Events/events.html)
+_This is a Mozilla-specific property and is not part of any current specification. It is not on track to become a standard._
 
 ## Browser compatibility
 

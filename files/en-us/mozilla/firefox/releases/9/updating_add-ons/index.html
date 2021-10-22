@@ -6,12 +6,18 @@ tags:
   - Firefox 9
   - Guide
 ---
-<div>{{FirefoxSidebar}}</div><p>Firefox 9 doesn't have a lot of changes that should be compatibility issues for add-on developers. However, there are a few possible items that might trip you up, so let's take a look.</p>
+<div>{{FirefoxSidebar}}</div>
+
+<p>Firefox 9 doesn't have a lot of changes that should be compatibility issues for add-on developers. However, there are a few possible items that might trip you up, so let's take a look.</p>
+
 <h2 id="Do_you_need_to_do_anything_at_all">Do you need to do anything at all?</h2>
-<p>If your add-on is distributed on <a class="external" href="http://addons.mozilla.org">addons.mozilla.org</a> (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 8, and have no binary components (which <a href="/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces">need to be recompiled for every major Firefox release</a>), have automatically been updated on AMO to indicate that they work in Firefox 9.</p>
+
+<p>If your add-on is distributed on <a href="http://addons.mozilla.org">addons.mozilla.org</a> (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 8, and have no binary components (which <a href="/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces">need to be recompiled for every major Firefox release</a>), have automatically been updated on AMO to indicate that they work in Firefox 9.</p>
 <p>So you should start by visiting AMO and looking to see if your add-on needs any work done at all.</p>
 <div class="note">
- <strong>Note:</strong> You should still test your add-on on Firefox 9, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.</div>
+ <p><strong>Note:</strong> You should still test your add-on on Firefox 9, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.</p>
+</div>
+
 <p>Once you've confirmed that you need to make changes, come on back to this page and read on.</p>
 <h2 id="Bootstrapped_add-ons_can_remove_delayed-load_scripts">Bootstrapped add-ons can remove delayed-load scripts</h2>
 <p>If your add-on uses {{ ifmethod("nsIChromeFrameMessageManager", "loadFrameScript") }} with the delayed-load flag set, the script gets loaded into every frame created from that point on. This is great, except that until Firefox 9, there was no way to stop loading the script, so it would keep happening even after your add-on was shut down.</p>

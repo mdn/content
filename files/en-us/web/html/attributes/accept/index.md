@@ -9,6 +9,7 @@ tags:
   - Input
   - Reference
 ---
+
 {{HTMLSidebar}}
 
 The **`accept`** attribute takes as its value a comma-separated list of one or more file types, or {{anch("Unique file type specifiers", "unique file type specifiers")}}, describing which file types to allow.
@@ -63,11 +64,11 @@ Note the last example allows you to select multiple images. See the [`multiple`]
 
 A **unique file type specifier** is a string that describes a type of file that may be selected by the user in an {{HTMLElement("input")}} element of type `file`. Each unique file type specifier may take one of the following forms:
 
-*   A valid case-insensitive filename extension, starting with a period (".") character. For example: `.jpg`, `.pdf`, or `.doc`.
-*   A valid MIME type string, with no extensions.
-*   The string `audio/*` meaning "any audio file".
-*   The string `video/*` meaning "any video file".
-*   The string `image/*` meaning "any image file".
+- A valid case-insensitive filename extension, starting with a period (".") character. For example: `.jpg`, `.pdf`, or `.doc`.
+- A valid MIME type string, with no extensions.
+- The string `audio/*` meaning "any audio file".
+- The string `video/*` meaning "any video file".
+- The string `image/*` meaning "any image file".
 
 The `accept` attribute takes as its value a string containing one or more of these unique file type specifiers, separated by commas. For example, a file picker that needs content that can be presented as an image, including both standard image formats and PDF files, might look like this:
 
@@ -113,10 +114,10 @@ Often you won't want the user to be able to pick any arbitrary type of file; ins
 
 Acceptable file types can be specified with the {{htmlattrxref("accept","input/file")}} attribute, which takes a comma-separated list of allowed file extensions or MIME types. Some examples:
 
-*   `accept="image/png"` or `accept=".png"` — Accepts PNG files.
-*   `accept="image/png, image/jpeg"` or `accept=".png, .jpg, .jpeg"` — Accept PNG or JPEG files.
-*   `accept="image/*"` — Accept any file with an `image/*` MIME type. (Many mobile devices also let the user take a picture with the camera when this is used.)
-*   `accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"` — accept anything that smells like an MS Word document.
+- `accept="image/png"` or `accept=".png"` — Accepts PNG files.
+- `accept="image/png, image/jpeg"` or `accept=".png, .jpg, .jpeg"` — Accept PNG or JPEG files.
+- `accept="image/*"` — Accept any file with an `image/*` MIME type. (Many mobile devices also let the user take a picture with the camera when this is used.)
+- `accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"` — accept anything that smells like an MS Word document.
 
 Let's look at a more complete example:
 
@@ -143,8 +144,8 @@ div {
 
 ## Specifications
 
-| Specification                                                                                            | Status                           |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| Specification                                                                   | Status                   |
+| ------------------------------------------------------------------------------- | ------------------------ |
 | {{SpecName('HTML WHATWG', 'input.html#attr-input-accept', 'accept attribute')}} | {{Spec2('HTML WHATWG')}} |
 | {{SpecName('HTML5.1', 'sec-forms.html#attr-input-accept', 'accept attribute')}} | {{Spec2('HTML5.1')}}     |
 
@@ -154,5 +155,5 @@ div {
 
 ## See also
 
-*   [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
-*   [File API](/en-US/docs/Web/API/File)
+- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+- [File API](/en-US/docs/Web/API/File)

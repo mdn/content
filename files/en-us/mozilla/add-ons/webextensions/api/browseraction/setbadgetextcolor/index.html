@@ -27,16 +27,16 @@ browser-compat: webextensions.api.browserAction.setBadgeTextColor
 
 <dl>
  <dt><code>details</code></dt>
- <dd><code>object</code>.
- <dl class="reference-values">
+ <dd><p>An object with the following properties:</p>
+ <dl>
   <dt><code>color</code></dt>
-  <dd>The color, specified as one of:</dd>
   <dd>
-  <ul>
-   <li>a string: any CSS <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> value, for example <code>"red"</code>, <code>"#FF0000"</code>, or <code>"rgb(255,0,0)"</code>. If the string is not a valid color, the returned promise will be rejected and the text color won't be altered.</li>
-   <li>a <code>{{WebExtAPIRef('browserAction.ColorArray')}}</code> object.</li>
-   <li><code>null</code>. If a <code>tabId</code> is specified, it removes the tab-specific badge text color so that the tab inherits the global badge text color. Otherwise it reverts the global badge text color to the default value.</li>
-  </ul>
+    <p>The color, specified as one of:</p>
+    <ul>
+     <li>a string: any CSS <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> value, for example <code>"red"</code>, <code>"#FF0000"</code>, or <code>"rgb(255,0,0)"</code>. If the string is not a valid color, the returned promise will be rejected and the text color won't be altered.</li>
+     <li>a <code>{{WebExtAPIRef('browserAction.ColorArray')}}</code> object.</li>
+     <li><code>null</code>. If a <code>tabId</code> is specified, it removes the tab-specific badge text color so that the tab inherits the global badge text color. Otherwise it reverts the global badge text color to the default value.</li>
+    </ul>
   </dd>
   <dt><code>tabId</code>{{optional_inline}}</dt>
   <dd><code>integer</code>. Sets the badge text color only for the given tab. The color is reset when the user navigates this tab to a new page.</dd>
@@ -80,9 +80,8 @@ browser.browserAction.onClicked.addListener((tab)=&gt; {
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction#method-setBadgeBackgroundColor"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction#method-setBadgeBackgroundColor"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> in the Chromium code.</p>
 </div>
 
 <div class="hidden">

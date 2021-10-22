@@ -9,9 +9,10 @@ tags:
   - Reference
   - x-ms-format-detection
 ---
+
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}
 
-The [`x-ms-format-detection`](https://docs.microsoft.com/en-us/previous-versions/dn337007\(v%3Dvs.85\)) attribute determines whether data formats within the element’s text, like phone numbers, are automatically converted to followable links.
+The [`x-ms-format-detection`](<https://docs.microsoft.com/en-us/previous-versions/dn337007(v%3Dvs.85)>) attribute determines whether data formats within the element’s text, like phone numbers, are automatically converted to followable links.
 
 Existing links, such as ones with the `tel:` scheme, are unaffected.
 
@@ -27,14 +28,14 @@ Existing links, such as ones with the `tel:` scheme, are unaffected.
 
 ## Value
 
-*   `all`
-    *   : All supported data formats are detected.
-*   `none`
-    *   : Format detection is turned off.
-*   `phone`
-    *   : Phone number patterns are autolinked.
+- `all`
+  - : All supported data formats are detected.
+- `none`
+  - : Format detection is turned off.
+- `phone`
+  - : Phone number patterns are autolinked.
 
 ## See also
 
-*   [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
-*   [Safari Supported Meta Tags](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html)
+- [Microsoft API extensions](/en-US/docs/Web/API/Microsoft_API_extensions)
+- [Safari Supported Meta Tags](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html)

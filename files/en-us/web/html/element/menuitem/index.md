@@ -17,11 +17,12 @@ tags:
   - menuitem
 browser-compat: html.elements.menuitem
 ---
+
 {{HTMLRef}}{{Deprecated_Header}}
 
 The **`<menuitem>`** [HTML](/en-US/docs/Web/HTML) element represents a command that a user is able to invoke through a popup menu. This includes context menus, as well as menus that might be attached to a menu button.
 
-A command can either be defined explicitly, with a textual label and optional icon to describe its appearance, or alternatively as an *indirect command* whose behavior is defined by a separate element. Commands can also optionally include a checkbox or be grouped to share radio buttons. (Menu items for indirect commands gain checkboxes or radio buttons when defined against elements `<input type="checkbox">` and `<input type="radio">`.)
+A command can either be defined explicitly, with a textual label and optional icon to describe its appearance, or alternatively as an _indirect command_ whose behavior is defined by a separate element. Commands can also optionally include a checkbox or be grouped to share radio buttons. (Menu items for indirect commands gain checkboxes or radio buttons when defined against elements `<input type="checkbox">` and `<input type="radio">`.)
 
 <table class="properties">
   <tbody>
@@ -67,26 +68,27 @@ A command can either be defined explicitly, with a textual label and optional ic
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes); in particular `title` can be used to describe the command, or provide usage hints.
 
-*   {{HTMLAttrDef("checked")}}
-    *   : Boolean attribute which indicates whether the command is selected. May only be used when the `type` attribute is `checkbox` or `radio`.
-*   {{HTMLAttrDef("command")}}
-    *   : Specifies the ID of a separate element, indicating a command to be invoked indirectly. May not be used within a menu item that also includes the attributes `checked`, `disabled`, `icon`, `label`, `radiogroup` or `type`.
-*   {{HTMLAttrDef("default")}}
-    *   : This Boolean attribute indicates use of the same command as the menu's subject element (such as a `button` or `input`).
-*   {{HTMLAttrDef("disabled")}}
-    *   : Boolean attribute which indicates that the command is not available in the current state. Note that `disabled` is distinct from `hidden`; the `disabled` attribute is appropriate in any context where a change in circumstances might render the command relevant.
-*   {{HTMLAttrDef("icon")}}
-    *   : Image URL, used to provide a picture to represent the command.
-*   {{HTMLAttrDef("label")}}
-    *   : The name of the command as shown to the user. Required when a `command` attribute is not present.
-*   {{HTMLAttrDef("radiogroup")}}
-    *   : This attribute specifies the name of a group of commands to be toggled as radio buttons when selected. May only be used where the `type` attribute is `radio`.
-*   {{HTMLAttrDef("type")}}
-    *   : This attribute indicates the kind of command, and can be one of three values.
+- {{HTMLAttrDef("checked")}}
+  - : Boolean attribute which indicates whether the command is selected. May only be used when the `type` attribute is `checkbox` or `radio`.
+- {{HTMLAttrDef("command")}}
+  - : Specifies the ID of a separate element, indicating a command to be invoked indirectly. May not be used within a menu item that also includes the attributes `checked`, `disabled`, `icon`, `label`, `radiogroup` or `type`.
+- {{HTMLAttrDef("default")}}
+  - : This Boolean attribute indicates use of the same command as the menu's subject element (such as a `button` or `input`).
+- {{HTMLAttrDef("disabled")}}
+  - : Boolean attribute which indicates that the command is not available in the current state. Note that `disabled` is distinct from `hidden`; the `disabled` attribute is appropriate in any context where a change in circumstances might render the command relevant.
+- {{HTMLAttrDef("icon")}}
+  - : Image URL, used to provide a picture to represent the command.
+- {{HTMLAttrDef("label")}}
+  - : The name of the command as shown to the user. Required when a `command` attribute is not present.
+- {{HTMLAttrDef("radiogroup")}}
+  - : This attribute specifies the name of a group of commands to be toggled as radio buttons when selected. May only be used where the `type` attribute is `radio`.
+- {{HTMLAttrDef("type")}}
 
-        *   `command`: A regular command with an associated action. This is the missing value default.
-        *   `checkbox`: Represents a command that can be toggled between two different states.
-        *   `radio`: Represent one selection from a group of commands that can be toggled as radio buttons.
+  - : This attribute indicates the kind of command, and can be one of three values.
+
+    - `command`: A regular command with an associated action. This is the missing value default.
+    - `checkbox`: Represents a command that can be toggled between two different states.
+    - `radio`: Represent one selection from a group of commands that can be toggled as radio buttons.
 
 ## Example
 
@@ -137,4 +139,4 @@ Not part of any current specifications.
 
 ## See also
 
-*   [HTML5 context menus in Firefox (Screencast and Code)](https://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/)
+- [HTML5 context menus in Firefox (Screencast and Code)](https://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/)

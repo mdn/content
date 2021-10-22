@@ -8,6 +8,7 @@ tags:
   - is
 browser-compat: html.global_attributes.is
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 The **`is`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) allows you to specify that a standard HTML element should behave like a defined custom built-in element (see [Using custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) for more details).
@@ -49,4 +50,4 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ## See also
 
-*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- All [global attributes](/en-US/docs/Web/HTML/Global_attributes).

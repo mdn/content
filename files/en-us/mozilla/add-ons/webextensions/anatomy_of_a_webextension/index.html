@@ -27,7 +27,7 @@ tags:
  <dd>Make packaged content accessible to web pages and content scripts.</dd>
 </dl>
 
-<p><img alt="" src="webextension-anatomy.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="webextension-anatomy.png"></p>
 
 <p>See the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> reference page for all the details.</p>
 
@@ -53,26 +53,21 @@ tags:
 
 <p>Instead of specifying background scripts, you can specify a background page which has the added advantage of supporting ES6 modules:</p>
 
-<dl>
- <dt><strong>manifest.json</strong></dt>
- <dd>
- <pre class="brush: json">// manifest.json
+<strong>manifest.json</strong>
+<pre class="brush: json">// manifest.json
 
 "background": {
   "page": "background-page.html"
 }</pre>
- </dd>
- <dt><strong>background-page.html</strong></dt>
- <dd>
- <pre class="brush: html">&lt;!DOCTYPE html&gt;
+
+<strong>background-page.html</strong>
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
     &lt;script type="module" src="background-script.js"&gt;&lt;/script&gt;
   &lt;/head&gt;
 &lt;/html&gt;</pre>
- </dd>
-</dl>
 
 <h3 id="Background_script_environment">Background script environment</h3>
 
@@ -81,7 +76,7 @@ tags:
 <p>Background scripts run in the context of a special page called a background page. This gives them a <code><a href="/en-US/docs/Web/API/Window">window</a></code> global, along with all the standard DOM APIs provided by that object.</p>
 
 <div class="notecard warning">
-<p> In Firefox, background pages do not support the use of <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code>, <code><a href="/en-US/docs/Web/API/Window/confirm">confirm()</a></code>, or <code><a href="/en-US/docs/Web/API/Window/prompt">prompt()</a></code>.</p>
+<p><strong>Warning:</strong> In Firefox, background pages do not support the use of <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code>, <code><a href="/en-US/docs/Web/API/Window/confirm">confirm()</a></code>, or <code><a href="/en-US/docs/Web/API/Window/prompt">prompt()</a></code>.</p>
 </div>
 
 <h4 id="WebExtension_APIs">WebExtension APIs</h4>

@@ -8,13 +8,13 @@ tags:
 
 <p><span class="seoSummary">This user interface option adds one or more items to a browser context menu.</span> This is the context menu available when a user right-clicks on a web page. Tabs can have context menus also, available through the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus">browser.menus API</a>.</p>
 
-<p><img alt="Example of content menu items added by a WebExtension, from the context-menu-demo example" src="context_menu_example.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="Example of content menu items added by a WebExtension, from the context-menu-demo example" src="context_menu_example.png"></p>
 
 <p>You would use this option to expose features that are relevant to specific browser or web page contexts. For example, you could show features to open a graphic editor when the user clicks on an image or offer a feature to save page content when part of a page is selected. You can add plain menu items, checkbox items, radio button groups, and separators to menus. Once a context menu item has been added using {{WebExtAPIRef("contextMenus.create")}} it's displayed in all browser tabs, but you can hide it by removing it with {{WebExtAPIRef("contextMenus.remove")}}.</p>
 
 <p>The full list of supported contexts is available at {{WebExtAPIRef("menus.ContextType")}} and includes contexts outside of a web page, such as bookmark items in the browser UI. For example, the "<a href="https://github.com/Rob--W/bookmark-container-tab">Open bookmark in Container Tab</a>" extension adds a menu item that allows the user to open a bookmark URL in a new container tab:</p>
 
-<p><img alt="" src="extension_context_menu.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+<p><img alt="" src="extension_context_menu.png"></p>
 
 <h2 id="Specifying_context_menu_items">Specifying context menu items</h2>
 
@@ -43,7 +43,7 @@ tags:
 
 <h2 id="Icons">Icons</h2>
 
-<p>For details on how to create icons to use with your context menu, see <a href="https://design.firefox.com/photon/visuals/iconography.html">Iconography</a> in the <a class="grey-90 no-underline hover-no-underline" href="https://design.firefox.com/photon/index.html">Photon Design System</a> documentation.</p>
+<p>For details on how to create icons to use with your context menu, see <a href="https://design.firefox.com/photon/visuals/iconography.html">Iconography</a> in the <a href="https://design.firefox.com/photon/index.html">Photon Design System</a> documentation.</p>
 
 <h2 id="Examples">Examples</h2>
 

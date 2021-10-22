@@ -49,43 +49,16 @@ Void.
 
 ### Exceptions
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>NotSupportedError</code></td>
-      <td>
-        The {{domxref("CustomElementRegistry")}} already contains an
-        entry with the same name or the same constructor (or is otherwise
-        already defined), or <code>extends</code> is specified and it is a
-        <a
-          href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name"
-          >valid custom element name</a
-        >, or <code>extends</code> is specified but the element it is trying to
-        extend is an unknown element.
-      </td>
-    </tr>
-    <tr>
-      <td><code>SyntaxError</code></td>
-      <td>
-        The provided name is not a
-        <a
-          href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name"
-          >valid custom element name</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td><code>TypeError</code></td>
-      <td>The referenced constructor is not a constructor.</td>
-    </tr>
-  </tbody>
-</table>
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("CustomElementRegistry")}} already contains an
+    entry with the same name or the same constructor (or is otherwise
+    already defined), or <code>extends</code> is specified and it is a
+    [valid custom element name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name),
+    or <code>extends</code> is specified but the element it is trying to extend is an unknown element.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if the provided name is not a [valid custom element name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name).
+- `TypeError` {{domxref("DOMException")}}
+  - : Thrown if the referenced constructor is not a constructor.
 
 > **Note:** You'll often get `NotSupportedError`s thrown that
 > seem like `define()` is failing, but instead it is likely a problem with
@@ -96,8 +69,7 @@ Void.
 ### Autonomous custom element
 
 The following code is taken from our [popup-info-box-web-component](https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component)
-example ([see
-it live also](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)).
+example ([see it live also](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)).
 
 ```js
 // Create a class for the element
@@ -189,8 +161,7 @@ customElements.define('popup-info', PopUpInfo);
 ### Customized built-in element
 
 The following code is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component)
-example ([see it
-live also](https://mdn.github.io/web-components-examples/word-count-web-component/)).
+example ([see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)).
 
 ```js
 // Create a class for the element

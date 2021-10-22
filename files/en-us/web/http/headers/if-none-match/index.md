@@ -11,11 +11,11 @@ browser-compat: http.headers.If-None-Match
 ---
 {{HTTPSidebar}}
 
-The **`If-None-Match`** HTTP request header makes the request conditional. For {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}} methods, the server will send back the requested resource, with a {{HTTPStatus("200")}} status, only if it doesn't have an {{HTTPHeader("ETag")}} matching the given ones. For other methods, the request will be processed only if the eventually existing resource's {{HTTPHeader("ETag")}} doesn't match any of the values listed.
+The **`If-None-Match`** HTTP request header makes the request conditional. For {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}} methods, the server will return the requested resource, with a {{HTTPStatus("200")}} status, only if it doesn't have an {{HTTPHeader("ETag")}} matching the given ones. For other methods, the request will be processed only if the eventually existing resource's {{HTTPHeader("ETag")}} doesn't match any of the values listed.
 
 When the condition fails for {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}} methods, then the server must return HTTP status code 304 (Not Modified). For methods that apply server-side changes, the status code 412 (Precondition Failed) is used. Note that the server generating a 304 response MUST generate any of the following header fields that would have been sent in a 200 (OK) response to the same request: Cache-Control, Content-Location, Date, ETag, Expires, and Vary.
 
-The comparison with the stored {{HTTPHeader("ETag")}} uses the _weak comparison algorithm_, meaning two files are considered identical if the content is equivalent — they don't have to be identical byte for byte. For example, two pages that differ by the date of generation in the footer would still be considered as identical.
+The comparison with the stored {{HTTPHeader("ETag")}} uses the _weak comparison algorithm_, meaning two files are considered identical if the content is equivalent — they don't have to be identical byte by byte. For example, two pages that differ by their creation date in the footer would still be considered identical.
 
 When used in combination with {{HTTPHeader("If-Modified-Since")}}, **`If-None-Match`** has precedence (if the server supports it).
 
@@ -48,7 +48,7 @@ If-None-Match: *
 ## Directives
 
 - \<etag_value>
-  - : Entity tags uniquely representing the requested resources. They are a string of ASCII characters placed between double quotes (Like `"675af34563dc-tr34"`) and may be prefixed by `W/` to indicate that the weak comparison algorithm should be used (This is useless with `If-None-Match` as it only uses that algorithm).
+  - : Entity tags uniquely representing the requested resources. They are a string of ASCII characters placed between double quotes (Like `"675af34563dc-tr34"`) and may be prefixed by `W/` to indicate that the weak comparison algorithm should be used (this is useless with `If-None-Match` as it only uses that algorithm).
 - `*`
   - : The asterisk is a special value representing any resource. They are only useful when uploading a resource, usually with {{HTTPMethod("PUT")}}, to check if another resource with the identity has already been uploaded before.
 

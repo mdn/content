@@ -11,6 +11,7 @@ tags:
   - itemid
 browser-compat: html.global_attributes.itemid
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 The **`itemid`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) provides microdata in the form of a unique, global identifier of an item.
@@ -76,11 +77,11 @@ The exact meaning of an `itemtype`'s global identifier is provided by the defini
 
 ## See also
 
-*   All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-*   Other, microdata related, global attributes:
+- All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- Other, microdata related, global attributes:
 
-    *   {{htmlattrxref("itemid")}}
-    *   {{htmlattrxref("itemprop")}}
-    *   {{htmlattrxref("itemref")}}
-    *   {{htmlattrxref("itemscope")}}
-    *   {{htmlattrxref("itemtype")}}
+  - {{htmlattrxref("itemid")}}
+  - {{htmlattrxref("itemprop")}}
+  - {{htmlattrxref("itemref")}}
+  - {{htmlattrxref("itemscope")}}
+  - {{htmlattrxref("itemtype")}}

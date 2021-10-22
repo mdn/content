@@ -14,6 +14,7 @@ tags:
   - caption
 browser-compat: html.elements.caption
 ---
+
 {{HTMLRef}}
 
 The **`<caption>`** [HTML](/en-US/docs/Web/HTML) element specifies the caption (or title) of a table.
@@ -78,19 +79,20 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
-*   {{htmlattrdef("align")}} {{deprecated_inline}}
-    *   : This enumerated attribute indicates how the caption must be aligned with respect to the table. It may have one of the following values:
+- {{htmlattrdef("align")}} {{deprecated_inline}}
 
-        *   `left`
-            *   : The caption is displayed to the left of the table.
-        *   `top`
-            *   : The caption is displayed above the table.
-        *   `right`
-            *   : The caption is displayed to the right of the table.
-        *   `bottom`
-            *   : The caption is displayed below the table.
+  - : This enumerated attribute indicates how the caption must be aligned with respect to the table. It may have one of the following values:
 
-        > **Warning:** Do not use this attribute, as it has been deprecated. The {{HTMLElement("caption")}} element should be styled using the [CSS](/en-US/docs/Web/CSS) properties {{cssxref("caption-side")}} and {{cssxref("text-align")}}.
+    - `left`
+      - : The caption is displayed to the left of the table.
+    - `top`
+      - : The caption is displayed above the table.
+    - `right`
+      - : The caption is displayed to the right of the table.
+    - `bottom`
+      - : The caption is displayed below the table.
+
+    > **Warning:** Do not use this attribute, as it has been deprecated. The {{HTMLElement("caption")}} element should be styled using the [CSS](/en-US/docs/Web/CSS) properties {{cssxref("caption-side")}} and {{cssxref("text-align")}}.
 
 ## Usage notes
 
@@ -147,6 +149,6 @@ table, th, td {
 
 ## See also
 
-*   CSS properties that may be specially useful to style the {{HTMLElement("caption")}} element:
+- CSS properties that may be specially useful to style the {{HTMLElement("caption")}} element:
 
-    *   {{cssxref("text-align")}}, {{cssxref("caption-side")}}.
+  - {{cssxref("text-align")}}, {{cssxref("caption-side")}}.

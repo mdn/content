@@ -321,7 +321,7 @@ const i32 = new Int32Array(new ArrayBuffer(3));
 ```
 
 ```js example-good
-const i32 = new Int32Array(new ArrayBuffer(4);
+const i32 = new Int32Array(new ArrayBuffer(4));
 ```
 
 ## Specifications

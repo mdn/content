@@ -9,9 +9,10 @@ tags:
   - Reference
 browser-compat: html.elements.base
 ---
+
 {{HTMLRef}}
 
-The **`<base>`** [HTML](/en-US/docs/Web/HTML) element specifies the base URL to use for all *relative* URLs in a document. There can be only one `<base>` element in a document.
+The **`<base>`** [HTML](/en-US/docs/Web/HTML) element specifies the base URL to use for all _relative_ URLs in a document. There can be only one `<base>` element in a document.
 
 A document's used base URL can be accessed by scripts with {{domxref('Node/baseURI')}}. If the document has no `<base>` elements, then `baseURI` defaults to {{domxref("location.href")}}.
 
@@ -65,15 +66,16 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 > **Warning:** If either of the following attributes are specified, this element **must** come before other elements with attribute values of URLs, such as {{HTMLElement("link")}}’s `href` attribute.
 
-*   {{htmlattrdef("href")}}
-    *   : The base URL to be used throughout the document for relative URLs. Absolute and relative URLs are allowed.
-*   {{htmlattrdef("target")}}
-    *   : A **keyword** or **author-defined name** of the default {{Glossary("browsing context")}} to show the results of navigation from {{HTMLElement("a")}}, {{HTMLElement("area")}}, or {{HTMLElement("form")}} elements without explicit `target` attributes. The following keywords have special meanings:
+- {{htmlattrdef("href")}}
+  - : The base URL to be used throughout the document for relative URLs. Absolute and relative URLs are allowed.
+- {{htmlattrdef("target")}}
 
-        *   `_self` (default): Show the result in the current browsing context.
-        *   `_blank`: Show the result in a new, unnamed browsing context.
-        *   `_parent`: Show the result in the parent browsing context of the current one, if the current page is inside a frame. If there is no parent, acts the same as `_self`.
-        *   `_top`: Show the result in the topmost browsing context (the browsing context that is an ancestor of the current one and has no parent). If there is no parent, acts the same as `_self`.
+  - : A **keyword** or **author-defined name** of the default {{Glossary("browsing context")}} to show the results of navigation from {{HTMLElement("a")}}, {{HTMLElement("area")}}, or {{HTMLElement("form")}} elements without explicit `target` attributes. The following keywords have special meanings:
+
+    - `_self` (default): Show the result in the current browsing context.
+    - `_blank`: Show the result in a new, unnamed browsing context.
+    - `_parent`: Show the result in the parent browsing context of the current one, if the current page is inside a frame. If there is no parent, acts the same as `_self`.
+    - `_top`: Show the result in the topmost browsing context (the browsing context that is an ancestor of the current one and has no parent). If there is no parent, acts the same as `_self`.
 
 ## Usage notes
 

@@ -22,12 +22,12 @@ browser-compat: webextensions.api.webRequest.CertificateInfo
 
 <p>Values of this type are objects. They contain the following properties:</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>fingerprint</code></dt>
  <dd>
  <p><code>Object</code>. An object with the following properties:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>sha1</code></dt>
   <dd><code>String</code>. SHA-1 hash of the certificate's DER encoding.</dd>
   <dt><code>sha256</code></dt>
@@ -39,20 +39,24 @@ browser-compat: webextensions.api.webRequest.CertificateInfo
  <p><code>Boolean</code>. <code>true</code> if the certificate is one of the trust roots installed in the browser, <code>false</code> otherwise.</p>
  </dd>
  <dt><code>issuer</code></dt>
- <dd><code>String</code>. Name of the organization that issued this certificate, represented as a Distinguished Name and formatted as a comma-separated list of Relative Distinguished Names, each of the form "type=value".</dd>
- <dd>For example: "CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US".</dd>
+ <dd>
+   <p><code>String</code>. Name of the organization that issued this certificate, represented as a Distinguished Name and formatted as a comma-separated list of Relative Distinguished Names, each of the form "type=value".</p>
+   <p>For example: "CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US".</p>
+ </dd>
  <dt><code>rawDER</code></dt>
  <dd><code>Array</code> of <code>Number</code>. If <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo" title="Use this function to get detailed information about the TLS connection associated with a particular request."><code>webRequest.getSecurityInfo()</code></a> was called with the <code>rawDER</code> option present and set to <code>true</code>, this will contain the DER encoding of the certificate.</dd>
  <dt><code>serialNumber</code></dt>
  <dd><code>String</code>. The certificate's <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.2">serial number</a>.</dd>
  <dt><code>subject</code></dt>
- <dd><code>String</code>. Name of the organization that issued this certificate, represented as a Distinguished Name and formatted as a comma-separated list of Relative Distinguished Names, each of the form "type=value".</dd>
- <dd>For example: "CN=*.cdn.mozilla.net,O=Mozilla Corporation,L=Mountain View,ST=California,C=US".</dd>
+ <dd>
+   <p><code>String</code>. Name of the organization that issued this certificate, represented as a Distinguished Name and formatted as a comma-separated list of Relative Distinguished Names, each of the form "type=value".</p>
+   <p>For example: "CN=*.cdn.mozilla.net,O=Mozilla Corporation,L=Mountain View,ST=California,C=US".</p>
+ </dd>
  <dt><code>subjectPublicKeyInfoDigest</code></dt>
  <dd>
  <p><code>Object</code>. An object containing the following properties:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>sha256</code></dt>
   <dd><code>String</code>. Base64 encoded SHA-256 hash of the DER-encoded <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.7">public key info</a>.</dd>
  </dl>
@@ -61,7 +65,7 @@ browser-compat: webextensions.api.webRequest.CertificateInfo
  <dd>
  <p><code>Object</code>. Validity period for the certificate. An object containing the following properties:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>start</code></dt>
   <dd><code>Number</code>. The start of the certificate's validity period, in <a class="external external-icon" href="https://en.wikipedia.org/wiki/Unix_time" rel="noopener">milliseconds since the epoch</a>.</dd>
   <dt><code>end</code></dt>

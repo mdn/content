@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: html.elements.datalist
 ---
+
 {{HTMLRef}}
 
 The **`<datalist>`** [HTML](/en-US/docs/Web/HTML) element contains a set of {{HTMLElement("option")}} elements that represent the permissible or recommended options available to choose from within other controls.
@@ -110,5 +111,5 @@ This element has no other attributes than the [global attributes](/en-US/docs/We
 
 ## See also
 
-*   The {{HTMLElement("input")}} element, and more specifically its {{htmlattrxref("list", "input")}} attribute;
-*   The {{HTMLElement("option")}} element.
+- The {{HTMLElement("input")}} element, and more specifically its {{htmlattrxref("list", "input")}} attribute;
+- The {{HTMLElement("option")}} element.

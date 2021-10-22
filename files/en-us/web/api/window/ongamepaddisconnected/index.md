@@ -12,7 +12,7 @@ tags:
   - ongamepaddisconnected
 browser-compat: api.Window.ongamepaddisconnected
 ---
-{{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}
 
 The **`ongamepaddisconnected`** property of the
 {{domxref("Window")}} interface represents an event handler that will run when a gamepad

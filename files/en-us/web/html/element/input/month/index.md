@@ -17,6 +17,7 @@ tags:
   - month
 browser-compat: html.elements.input.input-month
 ---
+
 {{HTMLRef("Input_types")}}
 
 {{HTMLElement("input")}} elements of type **`month`** create input fields that let the user enter a month and year allowing a month and year to be easily entered. The value is a string whose value is in the format "`YYYY-MM`", where `YYYY` is the four-digit year and `MM` is the month number.
@@ -179,8 +180,8 @@ You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "inpu
 
 The result here is that:
 
-*   Only months between in January 1900 and December 1999 can be selected; months outside that range can't be scrolled to in the control.
-*   Depending on what browser you are using, you might find that months outside the specified range might not be selectable in the month picker (e.g. Edge), or invalid (see {{anch("Validation")}}) but still available (e.g. Chrome).
+- Only months between in January 1900 and December 1999 can be selected; months outside that range can't be scrolled to in the control.
+- Depending on what browser you are using, you might find that months outside the specified range might not be selectable in the month picker (e.g. Edge), or invalid (see {{anch("Validation")}}) but still available (e.g. Chrome).
 
 ### Controlling input size
 
@@ -245,7 +246,7 @@ input:valid+span:after {
 }
 ```
 
-> **Warning:** HTML form validation is *not* a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
+> **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
 
 ## Handling browser support
 
@@ -257,12 +258,12 @@ Non-supporting browsers gracefully degrade to a text input, but this creates pro
 
 The second problem is the more serious of the two. As mentioned earlier, with a `month` input the actual value is always normalized to the format `yyyy-mm`. On the other hand, in its default configuration, a `text` input has no idea what format the date should be in, and this is an issue because of the number of different ways in which people write dates. For example:
 
-*   `mmyyyy` (072018)
-*   `mm/yyyy` (07/2018)
-*   `mm-yyyy` (07-2018)
-*   `yyyy-mm` (2018-07)
-*   `Month yyyy` (July 2018)
-*   ... and so forth.
+- `mmyyyy` (072018)
+- `mm/yyyy` (07/2018)
+- `mm-yyyy` (07-2018)
+- `yyyy-mm` (2018-07)
+- `Month yyyy` (July 2018)
+- ... and so forth.
 
 One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your `month` input. Even though the `month` input doesn't use it, if the browser falls back to treating it like a `text` input, the pattern will be used. For example, try viewing the following demo in a browser that doesn't support `month` inputs:
 
@@ -460,8 +461,8 @@ function populateYears() {
 
 ## See also
 
-*   The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-*   [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
-*   [Date and Time picker tutorial](/en-US/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
-*   [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time), and [`<input type="week">`](/en-US/docs/Web/HTML/Element/input/week)
-*   [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
+- [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
+- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
+- [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time), and [`<input type="week">`](/en-US/docs/Web/HTML/Element/input/week)
+- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

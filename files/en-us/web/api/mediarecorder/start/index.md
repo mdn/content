@@ -31,7 +31,7 @@ been recorded, an event will be delivered to let you act upon the recorded media
 a new `Blob` is created to record the next slice of the media
 
 Assuming the `MediaRecorder`'s {{domxref("MediaRecorder.state", "state")}}
-is `inactive`, `start()` sets the `state`  to
+is `inactive`, `start()` sets the `state`  to
 `recording`, then begins capturing media from the input stream. A
 `Blob` is created and the data is collected in it until the time slice period
 elapses or the source media ends. Each time a `Blob` is filled up to that
@@ -75,23 +75,23 @@ are reported through {{event("error")}} events sent to the `MediaRecorder`
 object. You can implement the {{domxref("MediaRecorder.onerror", "onerror")}} event
 handler to respond to these errors.
 
-- `InvalidModificationError`
+- `InvalidModificationError` {{domxref("DOMException")}}
   - : The number of tracks on the stream being recorded has changed. You can't add or
     remove tracks while recording media.
-- `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : The `MediaRecorder` is not in the `inactive` state; you can't
     start recording media if it's already being recorded. See the
     {{domxref("MediaRecorder.state", "state")}} property.
-- `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : The media stream you're attempting to record is inactive, or one or more of the
     stream's tracks is in a format that can't be recorded using the current configuration.
-- `SecurityError`
+- `SecurityError` {{domxref("DOMException")}}
   - : The {{domxref("MediaStream")}} is configured to disallow recording. This may be the
     case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
-    "getUserMedia()")}} when the user denies permission to use an input device. This
+    "getUserMedia()")}} when the user denies permission to use an input device. This
     exception may also be delivered as an {{event("error")}} event if
     the security options for the source media change after recording begins.
-- `UnknownError`
+- `UnknownError` {{domxref("DOMException")}}
   - : Something else went wrong during the recording process.
 
 ## Example
@@ -117,10 +117,8 @@ handler to respond to these errors.
 
 ## See also
 
-- [Using
-  the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder +
   getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
-- [simpl.info MediaStream Recording
-  demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
+- [simpl.info MediaStream Recording demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}

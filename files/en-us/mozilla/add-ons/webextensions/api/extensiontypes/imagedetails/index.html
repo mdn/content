@@ -21,22 +21,21 @@ browser-compat: webextensions.api.extensionTypes.ImageDetails
 
 <p>Values of this type are objects. They contain the following properties:</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>format</code>{{optional_inline}}</dt>
  <dd>{{WebExtAPIRef('extensionTypes.ImageFormat')}}. The format of the resulting image. Default is <code>"png"</code>.</dd>
  <dt><code>quality</code>{{optional_inline}}</dt>
  <dd><code>integer</code>. When format is <code>"jpeg"</code>, this controls the quality of the resulting image. It is a number between 0 and 100, which is converted to a value between 0 and 1 and then used as the <code>encoderOptions</code> argument to <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/toDataURL">HTMLCanvasElement.toDataURL()</a></code>. If it is omitted, 92 is used. As quality is decreased, the resulting image will have more visual artifacts, and the number of bytes needed to store it will decrease. This value is ignored for PNG images.</dd>
  <dt><code>rect</code>{{optional_inline}}</dt>
- <dd>An <code>object</code> specifying the area of the document to capture, in CSS pixels, relative to the page. All properties default to <code>0</code>. The properties are:</dd>
  <dd>
- <ul>
-  <li><code>x</code>: The coordinate of the left side of the rectangle.</li>
-  <li><code>y</code>: The coordinate of the top side of the rectangle.</li>
-  <li><code>width</code>: The width of the rectangle.</li>
-  <li><code>height</code>: The height of the rectangle.</li>
- </ul>
-
- <p>This option was introduced in Firefox 82.  If omitted, the currently visible viewport is captured.</p>
+   <p>An <code>object</code> specifying the area of the document to capture, in CSS pixels, relative to the page. All properties default to <code>0</code>. The properties are:</p>
+   <ul>
+    <li><code>x</code>: The coordinate of the left side of the rectangle.</li>
+    <li><code>y</code>: The coordinate of the top side of the rectangle.</li>
+    <li><code>width</code>: The width of the rectangle.</li>
+    <li><code>height</code>: The height of the rectangle.</li>
+   </ul>
+   <p>This option was introduced in Firefox 82.  If omitted, the currently visible viewport is captured.</p>
  </dd>
  <dt><code>scale</code>{{optional_inline}}</dt>
  <dd><code>number</code>. The scale to render at, defaults to <code><a href="/en-US/docs/Web/API/Window/devicePixelRatio">devicePixelRatio</a></code>. This option was introduced in Firefox 82.</dd>
@@ -48,9 +47,8 @@ browser-compat: webextensions.api.extensionTypes.ImageDetails
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/extensionTypes#type-ImageDetails"><code>chrome.extensionTypes</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json"><code>extension_types.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/extensionTypes#type-ImageDetails"><code>chrome.extensionTypes</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json"><code>extension_types.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: html.elements.rb
 ---
+
 {{HTMLRef}}{{deprecated_header}}
 
 The **`<rb>`** [HTML](/en-US/docs/Web/HTML) element is used to delimit the base text component of a  {{HTMLElement("ruby") }} annotation, i.e. the text that is being annotated. One `<rb>` element should wrap each separate atomic segment of the base text.
@@ -60,9 +61,9 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Usage notes
 
-*   Ruby annotations are for showing pronunciation of East Asian characters, like using Japanese furigana or Taiwanese bopomofo characters. The `<rb>` element is used to separate out each segment of the ruby base text.
-*   Even though `<rb>` is not an empty element, it is common to just include the opening tag of each element in the source code, so that the ruby markup is less complex and easier to read. The browser can then fill in the full element in the rendered version.
-*   You need to include one {{htmlelement("rt")}} element for each base segment/`<rb>` element that you want to annotate.
+- Ruby annotations are for showing pronunciation of East Asian characters, like using Japanese furigana or Taiwanese bopomofo characters. The `<rb>` element is used to separate out each segment of the ruby base text.
+- Even though `<rb>` is not an empty element, it is common to just include the opening tag of each element in the source code, so that the ruby markup is less complex and easier to read. The browser can then fill in the full element in the rendered version.
+- You need to include one {{htmlelement("rt")}} element for each base segment/`<rb>` element that you want to annotate.
 
 ## Examples
 
@@ -104,7 +105,7 @@ See the article about the {{HTMLElement("ruby")}} element for further examples.
 
 ## See also
 
-*   {{HTMLElement("ruby")}}
-*   {{HTMLElement("rt")}}
-*   {{HTMLElement("rp")}}
-*   {{HTMLElement("rtc")}}
+- {{HTMLElement("ruby")}}
+- {{HTMLElement("rt")}}
+- {{HTMLElement("rp")}}
+- {{HTMLElement("rtc")}}

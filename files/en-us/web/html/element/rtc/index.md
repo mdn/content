@@ -13,6 +13,7 @@ tags:
   - rtc
 browser-compat: html.elements.rtc
 ---
+
 {{HTMLRef}}{{deprecated_header}}
 
 The **`<rtc>`** [HTML](/en-US/docs/Web/HTML) element embraces semantic annotations of characters presented in a ruby of {{HTMLElement("rb")}} elements used inside of {{ HTMLElement("ruby") }} element. {{HTMLElement("rb")}} elements can have both pronunciation ({{HTMLElement("rt")}}) and semantic ({{HTMLElement("rtc")}}) annotations.
@@ -100,8 +101,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## See also
 
-*   {{HTMLElement("ruby")}}
-*   {{HTMLElement("rp")}}
-*   {{HTMLElement("rb")}}
-*   {{HTMLElement("rt")}}
-*   {{HTMLElement("rbc")}}
+- {{HTMLElement("ruby")}}
+- {{HTMLElement("rp")}}
+- {{HTMLElement("rb")}}
+- {{HTMLElement("rt")}}
+- {{HTMLElement("rbc")}}

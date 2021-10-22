@@ -164,7 +164,7 @@ actual events you can monitor to determine the state of an ongoing transfer are:
 
 - {{event("progress")}}
   - : The amount of data that has been retrieved has changed.
-- {{event("load")}}
+- {{domxref("XMLHttpRequest/load_event", "load")}}
   - : The transfer is complete; all data is now in the `response`
 
 ```js

@@ -1,5 +1,5 @@
 ---
-title: <span>
+title: '<span>: The Content Span element'
 slug: Web/HTML/Element/span
 tags:
   - Element
@@ -10,6 +10,7 @@ tags:
   - Web
 browser-compat: html.elements.span
 ---
+
 {{HTMLRef}}
 
 The **`<span>`** [HTML](/en-US/docs/Web/HTML) element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the {{htmlattrxref("class")}} or {{htmlattrxref("id")}} attributes), or because they share attribute values, such as {{htmlattrxref("lang")}}. It should be used only when no other semantic element is appropriate. `<span>` is very much like a {{HTMLElement("div")}} element, but {{HTMLElement("div")}} is a [block-level element](/en-US/docs/Web/HTML/Block-level_elements) whereas a `<span>` is an [inline element](/en-US/docs/Web/HTML/Inline_elements).
@@ -130,4 +131,4 @@ li span {
 
 ## See also
 
-*   HTML {{HTMLElement("div")}} element
+- HTML {{HTMLElement("div")}} element

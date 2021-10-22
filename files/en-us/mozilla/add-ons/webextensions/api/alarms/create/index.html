@@ -29,9 +29,11 @@ browser-compat: webextensions.api.alarms.create
 
 <dl>
  <dt><code>name</code>{{optional_inline}}</dt>
- <dd><code>string</code>. A name for the alarm. Defaults to the empty string.</dd>
- <dd>This can be used to refer to a particular alarm in {{WebExtAPIRef('alarms.get()')}} and {{WebExtAPIRef('alarms.clear()')}}. It will also be available in {{WebExtAPIRef('alarms.onAlarm')}} as the <code>name</code> property of the {{WebExtAPIRef('alarms.Alarm')}} object passed into the listener function.</dd>
- <dd>Alarm names are unique within the scope of a single extension. If an alarm with an identical name exists, the existing alarm will be cleared and the alarm being created will replace it.</dd>
+ <dd>
+   <p><code>string</code>. A name for the alarm. Defaults to the empty string.</p>
+   <p>This can be used to refer to a particular alarm in {{WebExtAPIRef('alarms.get()')}} and {{WebExtAPIRef('alarms.clear()')}}. It will also be available in {{WebExtAPIRef('alarms.onAlarm')}} as the <code>name</code> property of the {{WebExtAPIRef('alarms.Alarm')}} object passed into the listener function.</p>
+   <p>Alarm names are unique within the scope of a single extension. If an alarm with an identical name exists, the existing alarm will be cleared and the alarm being created will replace it.</p>
+ </dd>
  <dt><code>alarmInfo</code>{{optional_inline}}</dt>
  <dd>
  <p><code>object</code>. You can use this to specify when the alarm will initially fire, either as an absolute value (<code>when</code>), or as a delay from the time the alarm is set (<code>delayInMinutes</code>). To make the alarm recur, specify <code>periodInMinutes</code>.</p>
@@ -39,9 +41,7 @@ browser-compat: webextensions.api.alarms.create
  <p>On Chrome, unless the extension is loaded unpackaged, alarms it creates are not allowed to fire more than once per minute. If an extension tries to set <code>delayInMinutes</code> to a value &lt; 1, or <code>when</code> to a value &lt; 1 minute in the future, then the alarm will fire after 1 minute. If an extension tries to set <code>periodInMinutes</code> to a value &lt; 1, then the alarm will fire every minute.</p>
 
  <p>The <code>alarmInfo</code> object may contain the following properties:</p>
- </dd>
- <dd>
- <dl class="reference-values">
+ <dl>
   <dt><code>when</code>{{optional_inline}}</dt>
   <dd><code>double</code>. The time the alarm will fire first, given as <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>. To get the number of milliseconds between the epoch and the current time, use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now">Date.now()</a></code>. If you specify <code>when</code>, don't specify <code>delayInMinutes</code>.</dd>
   <dt><code>delayInMinutes</code>{{optional_inline}}</dt>
@@ -86,9 +86,8 @@ browser.alarms.create("my-periodic-alarm", {
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a> API.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a> API.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

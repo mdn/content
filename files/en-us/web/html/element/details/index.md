@@ -12,6 +12,7 @@ tags:
   - details
 browser-compat: html.elements.details
 ---
+
 {{HTMLRef}}
 
 The **`<details>`** [HTML](/en-US/docs/Web/HTML) element creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state. A summary or label must be provided using the {{HTMLElement("summary")}} element.
@@ -20,7 +21,7 @@ A disclosure widget is typically presented onscreen using a small triangle which
 
 {{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-shorter")}}
 
-A `<details>` widget can be in one of two states. The default *closed* state displays only the triangle and the label inside `<summary>` (or a {{Glossary("user agent")}}-defined default string if no `<summary>`).
+A `<details>` widget can be in one of two states. The default _closed_ state displays only the triangle and the label inside `<summary>` (or a {{Glossary("user agent")}}-defined default string if no `<summary>`).
 
 When the user clicks on the widget or focuses it then presses the space bar, it "twists" open, revealing its contents. The common use of a triangle which rotates or twists around to represent opening or closing the widget is why these are sometimes called "twisties".
 
@@ -85,14 +86,15 @@ Fully standards-compliant implementations automatically apply the CSS `{{cssxref
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-*   {{htmlattrdef("open")}}
-    *   : This Boolean attribute indicates whether or not the details — that is, the contents of the `<details>` element — are currently visible. The details are shown when this attribute exists, or hidden when this attribute is absent. By default this attribute is absent which means the details are not visible.
+- {{htmlattrdef("open")}}
 
-        > **Note:** You have to remove this attribute entirely to make the details hidden. `open="false"` makes the details visible because this attribute is Boolean.
+  - : This Boolean attribute indicates whether or not the details — that is, the contents of the `<details>` element — are currently visible. The details are shown when this attribute exists, or hidden when this attribute is absent. By default this attribute is absent which means the details are not visible.
+
+    > **Note:** You have to remove this attribute entirely to make the details hidden. `open="false"` makes the details visible because this attribute is Boolean.
 
 ## Events
 
-In addition to the usual events supported by HTML elements, the `<details>` element supports the {{event("toggle")}} event, which is dispatched to the `<details>` element whenever its state changes between open and closed. It is sent *after* the state is changed, although if the state changes multiple times before the browser can dispatch the event, the events are coalesced so that only one is sent.
+In addition to the usual events supported by HTML elements, the `<details>` element supports the {{event("toggle")}} event, which is dispatched to the `<details>` element whenever its state changes between open and closed. It is sent _after_ the state is changed, although if the state changes multiple times before the browser can dispatch the event, the events are coalesced so that only one is sent.
 
 You can use an event listener for the `toggle` event to detect when the widget changes state:
 
@@ -259,4 +261,4 @@ This CSS creates a look similar to a tabbed interface, where activating the tab 
 
 ## See also
 
-*   {{HTMLElement("summary")}}
+- {{HTMLElement("summary")}}

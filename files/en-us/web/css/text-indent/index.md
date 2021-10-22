@@ -187,7 +187,7 @@ p {
   - [`text-justify`](/en-US/docs/Web/CSS/text-justify)
   - [`text-orientation`](/en-US/docs/Web/CSS/text-orientation)
   - [`text-overflow`](/en-US/docs/Web/CSS/text-overflow)
-  - [`text-rendering`](/en-US/docs/Web/SVG/Attribute/text-rendering)
+  - [`text-rendering`](/en-US/docs/Web/CSS/text-rendering)
   - [`text-transform`](/en-US/docs/Web/CSS/text-transform)
 
 - [CSS Text Decoration](/en-US/docs/Web/CSS/CSS_Text_Decoration) CSS module

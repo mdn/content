@@ -40,26 +40,26 @@ browser-compat: webextensions.api.topSites.get
 
 <dl>
  <dt><code>options</code></dt>
- <dd><code>object</code>. Options to modify the list of pages returned. This may include any of the following properties:</dd>
  <dd>
- <dl class="reference-values">
-  <dt><code>includeBlocked</code> {{optional_inline}}</dt>
-  <dd><code>Boolean</code>. Include pages that the user has removed from the "New Tab" page. Defaults to <code>false</code>.</dd>
-  <dt><code>includeFavicon</code> {{optional_inline}}</dt>
-  <dd><code>Boolean</code>. Include favicons in the results, for pages where they are available. Defaults to <code>false</code>.</dd>
-  <dt><code>includePinned</code> {{optional_inline}}</dt>
-  <dd><code>Boolean</code>. Includes sites that the user has pinned to the Firefox new tab.<br>
-  Defaults to <code>false</code>.</dd>
-  <dt><code>includeSearchShortcuts</code> {{optional_inline}}</dt>
-  <dd><code>Boolean</code>. Includes search shortcuts that appear on the Firefox new tab.<br>
-  Defaults to <code>false</code>.</dd>
-  <dt><code>limit</code> {{optional_inline}}</dt>
-  <dd><code>Integer</code>. The number of pages to return. This must be a number between 1 and 100, inclusive. Defaults to 12.</dd>
-  <dt><code>newtab</code> {{optional_inline}}</dt>
-  <dd><code>Boolean</code>. If included, the method returns the list of pages returned when the user opens a new tab. If included, and set to <code>true</code>, the method ignores all other parameters except <code>limit</code> and <code>includeFavicon</code>. Defaults to <code>false</code>.</dd>
-  <dt><code>onePerDomain</code> {{optional_inline}}</dt>
-  <dd><code>Boolean</code>. Only include one page per domain. Defaults to <code>true</code>.</dd>
- </dl>
+   <p><code>object</code>. Options to modify the list of pages returned. This may include any of the following properties:</p>
+   <dl>
+    <dt><code>includeBlocked</code> {{optional_inline}}</dt>
+    <dd><code>Boolean</code>. Include pages that the user has removed from the "New Tab" page. Defaults to <code>false</code>.</dd>
+    <dt><code>includeFavicon</code> {{optional_inline}}</dt>
+    <dd><code>Boolean</code>. Include favicons in the results, for pages where they are available. Defaults to <code>false</code>.</dd>
+    <dt><code>includePinned</code> {{optional_inline}}</dt>
+    <dd><code>Boolean</code>. Includes sites that the user has pinned to the Firefox new tab.<br>
+    Defaults to <code>false</code>.</dd>
+    <dt><code>includeSearchShortcuts</code> {{optional_inline}}</dt>
+    <dd><code>Boolean</code>. Includes search shortcuts that appear on the Firefox new tab.<br>
+    Defaults to <code>false</code>.</dd>
+    <dt><code>limit</code> {{optional_inline}}</dt>
+    <dd><code>Integer</code>. The number of pages to return. This must be a number between 1 and 100, inclusive. Defaults to 12.</dd>
+    <dt><code>newtab</code> {{optional_inline}}</dt>
+    <dd><code>Boolean</code>. If included, the method returns the list of pages returned when the user opens a new tab. If included, and set to <code>true</code>, the method ignores all other parameters except <code>limit</code> and <code>includeFavicon</code>. Defaults to <code>false</code>.</dd>
+    <dt><code>onePerDomain</code> {{optional_inline}}</dt>
+    <dd><code>Boolean</code>. Only include one page per domain. Defaults to <code>true</code>.</dd>
+   </dl>
  </dd>
 </dl>
 
@@ -110,9 +110,8 @@ gettingTopSites.then(logTopSites, onError);</pre>
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/topSites"><code>chrome.topSites</code></a> API.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/topSites"><code>chrome.topSites</code></a> API.</p>
 </div>
 
 <div class="hidden">

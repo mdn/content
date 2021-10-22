@@ -39,7 +39,7 @@ browser-compat: webextensions.api.contentScripts.register
 
  <p>The <code>RegisteredContentScriptOptions</code> object has the following properties:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>allFrames</code>{{optional_inline}}</dt>
   <dd>Same as <code>all_frames</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
   <dt><code>css</code>{{optional_inline}}</dt>
@@ -66,8 +66,7 @@ browser-compat: webextensions.api.contentScripts.register
 
 <p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef("contentScripts.RegisteredContentScript")}} object that you can use to unregister the content scripts.</p>
 
-<p><br>
- <span class="message"><span class="content">Currently, content scripts are unregistered when the related extension page (from which the content scripts were registered) is unloaded</span></span>, so you should register a content script from an extension page that persists at least as long as you want the content scripts to stay registered.</p>
+<p>Currently, content scripts are unregistered when the related extension page (from which the content scripts were registered) is unloaded, so you should register a content script from an extension page that persists at least as long as you want the content scripts to stay registered.</p>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
@@ -94,7 +93,7 @@ var registered = register(defaultHosts, defaultCode);</pre>
 
 <p>This code registers the JS file at content_scripts/example.js:</p>
 
-<pre class="brush: js" id="ct-3">const scriptObj = await browser.contentScripts.register({
+<pre class="brush: js">const scriptObj = await browser.contentScripts.register({
   "js": [{file: "/content_scripts/example.js"}],
   "matches": ["&lt;all_urls&gt;"],
   "allFrames": true,
