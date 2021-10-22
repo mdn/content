@@ -45,7 +45,9 @@ tags:
 <h4 id="DOM">DOM</h4>
 
 <ul>
+  <li>Developers can now provide a hint for the enter key label/icon used on virtual keyboards, using either <a href="/en-US/docs/Web/API/HTMLElement/enterkeyhint"><code>HTMLElement.enterkeyhint</code></a> or the global attribute <a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> ({{bug(1648332)}}).</li>
   <li>The {{domxref("HTMLScriptElement.supports()")}} static method is now supported. This provides a simple and unified method for feature checking whether a browser supports particular types of scripts, such as JavaScript modules or classic scripts ({{bug(1729239)}}).</li>
+  <li>The {{domxref("ShadowRoot.delegatesFocus")}} property is now supported, allowing code to check whether the <code>delegatesFocus</code> property was set when the <a href="/en-US/docs/Web/API/Element/attachShadow">shadow DOM was attached</a> ({{bug(1413836)}}).</li>
 </ul>
 
 <h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
@@ -57,6 +59,10 @@ tags:
 <h4 id="removals_wasm">Removals</h4>
 
 <h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
+
+<ul>
+  <li><code>WebDriver:GetWindowHandle</code> and <code>WebDriver:GetWindowHandles</code> now return handles for browser windows instead of tabs, when chrome scope is enabled ({{bug(1729291)}})</li>
+</ul>
 
 <h4 id="removals_webdriver">Removals</h4>
 

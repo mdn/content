@@ -48,20 +48,20 @@ browser.runtime.onInstalled.hasListener(listener)
 
  <dl>
   <dt><code>details</code></dt>
-  <dd>An object with the following properties:</dd>
   <dd>
-  <dl>
-   <dt><code>id</code>{{optional_inline}}</dt>
-   <dd><code>string</code>. The ID of the imported shared module extension that updated. This is present only if the <code>reason</code> value is <code>shared_module_update</code>.</dd>
-   <dt><code>previousVersion</code>{{optional_inline}}</dt>
-   <dd><code>string</code>. The previous version of the extension just updated. This is only present if the <code>reason</code> value is <code>update</code>.</dd>
-   <dt><code>reason</code></dt>
-   <dd>An {{WebExtAPIRef('runtime.OnInstalledReason')}} value, stating the reason that this event is being dispatched.</dd>
-   <dt><code>temporary</code></dt>
-   <dd><code>boolean</code>. True if the add-on was installed temporarily. For example, using the "about:debugging" page in Firefox or using <a href="https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/">web-ext run</a>. False otherwise.</dd>
-  </dl>
-  </dd>
- </dl>
+    <p>An object with the following properties:</p>
+    <dl>
+     <dt><code>id</code>{{optional_inline}}</dt>
+     <dd><code>string</code>. The ID of the imported shared module extension that updated. This is present only if the <code>reason</code> value is <code>shared_module_update</code>.</dd>
+     <dt><code>previousVersion</code>{{optional_inline}}</dt>
+     <dd><code>string</code>. The previous version of the extension just updated. This is only present if the <code>reason</code> value is <code>update</code>.</dd>
+     <dt><code>reason</code></dt>
+     <dd>An {{WebExtAPIRef('runtime.OnInstalledReason')}} value, stating the reason that this event is being dispatched.</dd>
+     <dt><code>temporary</code></dt>
+     <dd><code>boolean</code>. True if the add-on was installed temporarily. For example, using the "about:debugging" page in Firefox or using <a href="https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/">web-ext run</a>. False otherwise.</dd>
+    </dl>
+    </dd>
+   </dl>
  </dd>
 </dl>
 

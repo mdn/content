@@ -52,12 +52,12 @@ browser.history.onVisitRemoved.hasListener(listener)
 
  <dl>
   <dt><code>removed</code></dt>
-  <dd><code>object</code>. Details of the removal. This is an object containing two properties: a boolean <code>allHistory</code> and an array <code>urls</code>.</dd>
   <dd>
-  <ul>
-   <li>If this event is firing because all history was cleared, <code>allHistory</code> will be <code>true</code> and <code>urls</code> will be an empty array.</li>
-   <li>Otherwise,  <code>allHistory</code> will be <code>false</code> and <code>urls</code> will contain one item, which is the URL of the removed page.</li>
-  </ul>
+    <p><code>object</code>. Details of the removal. This is an object containing two properties: a boolean <code>allHistory</code> and an array <code>urls</code>.</p>
+    <ul>
+     <li>If this event is firing because all history was cleared, <code>allHistory</code> will be <code>true</code> and <code>urls</code> will be an empty array.</li>
+     <li>Otherwise,  <code>allHistory</code> will be <code>false</code> and <code>urls</code> will contain one item, which is the URL of the removed page.</li>
+    </ul>
   </dd>
  </dl>
  </dd>

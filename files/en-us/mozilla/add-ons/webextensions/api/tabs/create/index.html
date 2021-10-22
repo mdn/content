@@ -30,50 +30,50 @@ browser-compat: webextensions.api.tabs.create
 
 <dl>
  <dt><code>createProperties</code></dt>
- <dd><code>object</code>. Properties to give the new tab. To learn more about these properties, see the {{WebExtAPIRef("tabs.Tab")}} documentation.</dd>
  <dd>
- <dl>
-  <dt><code>active</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Whether the tab should become the active tab in the window. If <code>false</code>, it has no effect. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). Defaults to <code>true</code>.</dd>
-  <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
-  <dd><code>string</code>. Use this to create a tab whose cookie store ID is <code>cookieStoreId</code>. This option is only available if the extension has the <code>"cookies"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
-  <dt><code>discarded</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. Whether the tab is created and made visible in the tab bar without any content loaded into memory, a state known as discarded. The tab’s content is loaded when the tab is activated.</dd>
-  <dt><code>index</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. The position the tab should take in the window. The provided value will be clamped to between zero and the number of tabs in the window.</dd>
-  <dt><code>openerTabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. The ID of the tab that opened this tab. If specified, the opener tab must be in the same window as the newly created tab.</dd>
-  <dt><code>openInReaderMode</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. If <code>true</code>, open this tab in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode">Reader Mode</a>. Defaults to <code>false</code>.</dd>
-  <dt><code>pinned</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Whether the tab should be pinned. Defaults to <code>false</code>.</dd>
-  <dt><code>selected</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Whether the tab should become the selected tab in the window. Defaults to <code>true</code>.
-  <div class="warning">
-    <p><strong>Warning:</strong> This property is deprecated, and is not supported in Firefox. Use <code>active</code> instead.</p>
-  </div>
-  </dd>
-  <dt><code>title</code> {{optional_inline}}</dt>
-  <dd><code>string</code>. The title of the tab. Allowed only if the tab is created with <code>discarded</code> set to <code>true</code>.</dd>
-  <dt><code>url</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. The URL to navigate the tab to initially. Defaults to the New Tab Page.</dd>
-  <dd>Fully-qualified URLs must include a scheme (for example, 'http://www.google.com' not 'www.google.com').</dd>
-  <dd>For security reasons, in Firefox, this may not be a privileged URL. So passing any of the following URLs will fail:</dd>
-  <dd>
-  <ul>
-   <li>chrome: URLs</li>
-   <li>javascript: URLs</li>
-   <li>data: URLs</li>
-   <li>file: URLs (i.e., files on the filesystem. However, to use a file packaged inside the extension, see below)</li>
-   <li>privileged about: URLs (for example, <code>about:config</code>, <code>about:addons</code>, <code>about:debugging</code>). Non-privileged URLs (e.g., <code>about:blank</code>) are allowed.</li>
-   <li>The New Tab page (<code>about:newtab</code>) can be opened if no value for URL is provided.</li>
-  </ul>
+   <p><code>object</code>. Properties to give the new tab. To learn more about these properties, see the {{WebExtAPIRef("tabs.Tab")}} documentation.</p>
+   <dl>
+    <dt><code>active</code>{{optional_inline}}</dt>
+    <dd><code>boolean</code>. Whether the tab should become the active tab in the window. If <code>false</code>, it has no effect. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). Defaults to <code>true</code>.</dd>
+    <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
+    <dd><code>string</code>. Use this to create a tab whose cookie store ID is <code>cookieStoreId</code>. This option is only available if the extension has the <code>"cookies"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
+    <dt><code>discarded</code> {{optional_inline}}</dt>
+    <dd><code>boolean</code>. Whether the tab is created and made visible in the tab bar without any content loaded into memory, a state known as discarded. The tab’s content is loaded when the tab is activated.</dd>
+    <dt><code>index</code>{{optional_inline}}</dt>
+    <dd><code>integer</code>. The position the tab should take in the window. The provided value will be clamped to between zero and the number of tabs in the window.</dd>
+    <dt><code>openerTabId</code>{{optional_inline}}</dt>
+    <dd><code>integer</code>. The ID of the tab that opened this tab. If specified, the opener tab must be in the same window as the newly created tab.</dd>
+    <dt><code>openInReaderMode</code>{{optional_inline}}</dt>
+    <dd><code>boolean</code>. If <code>true</code>, open this tab in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode">Reader Mode</a>. Defaults to <code>false</code>.</dd>
+    <dt><code>pinned</code>{{optional_inline}}</dt>
+    <dd><code>boolean</code>. Whether the tab should be pinned. Defaults to <code>false</code>.</dd>
+    <dt><code>selected</code>{{optional_inline}}</dt>
+    <dd><p><code>boolean</code>. Whether the tab should become the selected tab in the window. Defaults to <code>true</code>.</p>
+    <div class="warning">
+      <p><strong>Warning:</strong> This property is deprecated, and is not supported in Firefox. Use <code>active</code> instead.</p>
+    </div>
+    </dd>
+    <dt><code>title</code> {{optional_inline}}</dt>
+    <dd><code>string</code>. The title of the tab. Allowed only if the tab is created with <code>discarded</code> set to <code>true</code>.</dd>
+    <dt><code>url</code>{{optional_inline}}</dt>
+    <dd>
+      <p><code>string</code>. The URL to navigate the tab to initially. Defaults to the New Tab Page.</p>
+      <p>Fully-qualified URLs must include a scheme (for example, 'http://www.google.com' not 'www.google.com').</p>
+      <p>For security reasons, in Firefox, this may not be a privileged URL. So passing any of the following URLs will fail:</p>
+      <ul>
+       <li>chrome: URLs</li>
+       <li>javascript: URLs</li>
+       <li>data: URLs</li>
+       <li>file: URLs (i.e., files on the filesystem. However, to use a file packaged inside the extension, see below)</li>
+       <li>privileged about: URLs (for example, <code>about:config</code>, <code>about:addons</code>, <code>about:debugging</code>). Non-privileged URLs (e.g., <code>about:blank</code>) are allowed.</li>
+       <li>The New Tab page (<code>about:newtab</code>) can be opened if no value for URL is provided.</li>
+      </ul>
 
-  <p>To load a page that's packaged with your extension, specify an absolute URL starting at the extension's manifest.json file. For example: '/path/to/my-page.html'. If you omit the leading '/', the URL is treated as a relative URL, and different browsers may construct different absolute URLs.</p>
-  </dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. The window to create the new tab in. Defaults to the current window.</dd>
- </dl>
+      <p>To load a page that's packaged with your extension, specify an absolute URL starting at the extension's manifest.json file. For example: '/path/to/my-page.html'. If you omit the leading '/', the URL is treated as a relative URL, and different browsers may construct different absolute URLs.</p>
+    </dd>
+    <dt><code>windowId</code>{{optional_inline}}</dt>
+    <dd><code>integer</code>. The window to create the new tab in. Defaults to the current window.</dd>
+   </dl>
  </dd>
 </dl>
 

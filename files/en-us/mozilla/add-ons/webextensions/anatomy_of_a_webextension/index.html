@@ -53,26 +53,21 @@ tags:
 
 <p>Instead of specifying background scripts, you can specify a background page which has the added advantage of supporting ES6 modules:</p>
 
-<dl>
- <dt><strong>manifest.json</strong></dt>
- <dd>
- <pre class="brush: json">// manifest.json
+<strong>manifest.json</strong>
+<pre class="brush: json">// manifest.json
 
 "background": {
   "page": "background-page.html"
 }</pre>
- </dd>
- <dt><strong>background-page.html</strong></dt>
- <dd>
- <pre class="brush: html">&lt;!DOCTYPE html&gt;
+
+<strong>background-page.html</strong>
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
     &lt;script type="module" src="background-script.js"&gt;&lt;/script&gt;
   &lt;/head&gt;
 &lt;/html&gt;</pre>
- </dd>
-</dl>
 
 <h3 id="Background_script_environment">Background script environment</h3>
 

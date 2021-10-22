@@ -32,7 +32,7 @@ browser-compat: webextensions.api.management.ExtensionInfo
  <dt><code>hostPermissions</code></dt>
  <dd><code>array</code> of <code>string</code>. The add-on's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>.</dd>
  <dt><code>icons</code></dt>
- <dd><code>array</code> of <code>object</code>. Information about the add-on's icons. An array of objects, one for each icon. Each object contains two properties:
+ <dd><p><code>array</code> of <code>object</code>. Information about the add-on's icons. An array of objects, one for each icon. Each object contains two properties:</p>
  <ul>
   <li><code>size</code>: an integer representing the icon's width and height in pixels.</li>
   <li><code>url</code>: a string containing a relative URL to the icon, starting at the add-on's root.</li>
@@ -41,7 +41,7 @@ browser-compat: webextensions.api.management.ExtensionInfo
  <dt><code>id</code></dt>
  <dd><code>string</code>. The add-on's ID.</dd>
  <dt><code>installType</code></dt>
- <dd><code>string</code>. String describing how the add-on was installed. One of the following:
+ <dd><p><code>string</code>. String describing how the add-on was installed. One of the following:</p>
  <ul>
   <li>"admin": the add-on was installed because of an administrative policy.</li>
   <li>"development": the add-on was installed unpacked from disk.</li>
@@ -63,15 +63,15 @@ browser-compat: webextensions.api.management.ExtensionInfo
  <dt><code>shortName</code></dt>
  <dd><code>string</code>. A short version of the add-on's name, taken from the manifest.json <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name">short_name</a> key.</dd>
  <dt><code>type</code></dt>
- <dd><code>string</code>. String describing the type of add-on. This is used to distinguish extensions from apps and themes. It may take any of the following values:</dd>
  <dd>
- <ul>
-  <li>"extension": most common type of add-on.</li>
-  <li>"hosted_app"</li>
-  <li>"packaged_app"</li>
-  <li>"legacy_packaged_app"</li>
-  <li>"theme"</li>
- </ul>
+   <p><code>string</code>. String describing the type of add-on. This is used to distinguish extensions from apps and themes. It may take any of the following values:</p>
+   <ul>
+    <li>"extension": most common type of add-on.</li>
+    <li>"hosted_app"</li>
+    <li>"packaged_app"</li>
+    <li>"legacy_packaged_app"</li>
+    <li>"theme"</li>
+   </ul>
  </dd>
  <dt><code>updateUrl</code></dt>
  <dd><code>string</code>. URL for updates to this add-on, taken from the manifest.json <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">applications</a> key.</dd>
