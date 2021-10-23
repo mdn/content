@@ -42,7 +42,7 @@ tags:
 
 <h3 id="Using_the_Clipboard_API">Using the Clipboard API</h3>
 
-<p>The Clipboard API writes arbitrary data to the clipboard from your extension in <a href="/en-US/docs/Web/Security/Secure_Contexts">secure contexts</a>. Using the API requires the permission <code>"clipboardRead"</code> or <code>"clipboardWrite"</code> in your <code>manifest.json</code> file.</p>
+<p>The Clipboard API writes arbitrary data to the clipboard from your extension. Using the API requires the permission <code>"clipboardRead"</code> or <code>"clipboardWrite"</code> in your <code>manifest.json</code> file. As the API is only available to <a href="/en-US/docs/Web/Security/Secure_Contexts">Secure Contexts</a>, it cannot be used from a content script running on http:-pages, only https:.</p>
 
 <p>For page scripts, the <code>"clipboard-write"</code> permission needs to be requested using the Web API {{domxref("Permissions", "navigator.permissions")}}. You can check for that permission using {{domxref("Permissions.query", "navigator.permissions.query()")}}:</p>
 
