@@ -137,7 +137,56 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
   - : The request was aborted due to a call to the {{domxref("AbortController")}}
     {{domxref("AbortController.abort", "abort()")}} method.
 - `TypeError`
-  - : The specified URL string includes user credentials that should instead be passed with an {{HTTPHeader("Authorization")}} header, or a `NetworkError` has happened (this can include [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)).
+  - : The error can occur because of one of the following reasons-
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Reason</th>
+      <th scope="col">Failing examples</th>
+      <th scope="col">Passing examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Invalid header names</td>
+      <td>
+        <pre>
+// space in "C ontent-Type"
+const headers = {
+    "C ontent-Type": "text/xml",
+    "Breaking-Bad": "<3"
+};
+fetch('https://example.com/', { headers });
+        </pre>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        Invalid header value- the header object must contain exactly two elements.
+      </td>
+      <td>
+        <pre>
+const headers = [
+    ["Content-Type", "text/html", "extra"],
+    ["Accept"],
+];
+fetch('https://example.com/', { headers });
+        </pre>
+      </td>
+      <td>
+        <pre>
+const headers = [
+    ["Content-Type", "application/json"],
+    ["Accept", "*"],
+];
+fetch('https://example.com/', { headers });
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Examples
 
