@@ -42,9 +42,9 @@ scale: unset;
 
 - Single number value
   - : A {{CSSxRef("&lt;number&gt;")}} specifying a scale factor to make the affected element scale by the same factor along both the X and Y axes. Equivalent to a `scale()` (2D scaling) function with a single value specified.
-- Two length/percentage values
+- Two number values
   - : Two {{CSSxRef("&lt;number&gt;")}}s that specify the X and Y axis scaling values (respectively) of a 2D scale. Equivalent to a `scale()` (2D scaling) function with two values specified.
-- Three length/percentage values
+- Three number values
   - : Three {{CSSxRef("&lt;number&gt;")}}s that specify the X, Y, and Z axis scaling values (respectively) of a 3D scale. Equivalent to a `scale3d()` (3D scaling) function.
 - `none`
   - : Specifies that no scaling should be applied.
