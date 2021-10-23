@@ -35,8 +35,8 @@ browser-compat: webextensions.api.cookies.Cookie
  <dt><code>name</code></dt>
  <dd>A <code>string</code> representing the name of the cookie.</dd>
  <dt><code>partitionKey</code>{{optional_inline}}</dt>
- <dd>An <code>object</code> representing the description of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning">storage partition</a> containing the cookie. This object is omitted (null) if the cookie is not in partitioned storage. This object contains:
-   <dl class="reference-values">
+ <dd><p>An <code>object</code> representing the description of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning">storage partition</a> containing the cookie. This object is omitted (null) if the cookie is not in partitioned storage. This object contains the following properties:</p>
+   <dl>
    <dt><code>topLevelSite</code></dt>
    <dd>A <code>string</code> representing the first-party URL of the cookie's storage partition, if the cookie is in storage that is partitioned by top-level site.</dd>
    </dl>
