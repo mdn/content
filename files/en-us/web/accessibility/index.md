@@ -34,7 +34,7 @@ The MDN [Accessibility Learning Area](/en-US/docs/Learn/Accessibility) contains 
 
   - [Understanding the Web Content Accessibility Guidelines](/en-US/docs/Web/Accessibility/Understanding_WCAG)
     - : This set of articles provides quick explanations to help you understand the steps that need to be taken to conform to the recommendations outlined in the W3C Web Content Accessibility Guidelines 2.0 (WCAG 2.0 or just WCAG, for the purposes of this writing).
-  - [Introduction to color and accessibility]/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance()
+  - [Introduction to color and accessibility](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
     - : This article discusses our perception of light and color, provides a foundation for the use of color in accessible designs, and demonstrates best practices for visual and readable content. 
   - [Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
     - : Until now, web developers who want to make their styled &lt;div&gt; and &lt;span&gt; based widgets accessible have lacked the proper techniques. **Keyboard accessibility** is part of the minimum accessibility requirements which a developer should be aware of.
