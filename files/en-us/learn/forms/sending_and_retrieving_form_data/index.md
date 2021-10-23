@@ -46,7 +46,7 @@ First we'll discuss what happens to the data when a form is submitted.
 
 ## Client/server architecture
 
-At its most basic, the web uses a client/server architecture that can be summarized as follows: a client (usually a web browser) sends a request to a server (most of the time a web server like [Apache](https://httpd.apache.org/), [Nginx](https://www.nginx.com/), [IIS](https://www.iis.net/), [Tomcat](https://tomcat.apache.org/), etc.), using the [HTTP protocol](/en-US/docs/Web/HTTP). The server answers the request using the same protocol.
+At its most basic, the web uses a client/server architecture that can be summarized as follows: a client (usually a web browser) sends a request to a server (most of the time a web server like [Apache](https://httpd.apache.org/), [Nginx](https://nginx.org/), [IIS](https://www.iis.net/), [Tomcat](https://tomcat.apache.org/), etc.), using the [HTTP protocol](/en-US/docs/Web/HTTP). The server answers the request using the same protocol.
 
 ![A basic schema of the Web client/server architecture](client-server.png)
 
