@@ -37,15 +37,15 @@ browser-compat: webextensions.api.bookmarks.update
  <dt><code>id</code></dt>
  <dd>A {{jsxref("string")}} specifying the ID of the bookmark or bookmark folder to update.</dd>
  <dt><code>changes</code></dt>
- <dd>An {{jsxref("object")}} specifying the changes to apply, with some combination of the following fields. Any items not specified aren't changed in the referenced bookmark or folder:</dd>
  <dd>
- <dl>
-  <dt><code>title</code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("string")}} containing the new title of the bookmark, or the new name of the folder if <code>id</code> refers to a folder.</dd>
-  <dt><code>url</code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("string")}} providing a new URL for the bookmark.</dd>
- </dl>
- </dd>
+   <p>An {{jsxref("object")}} specifying the changes to apply, with some combination of the following fields. Any items not specified aren't changed in the referenced bookmark or folder:</p>
+   <dl>
+    <dt><code>title</code> {{optional_inline}}</dt>
+    <dd>A {{jsxref("string")}} containing the new title of the bookmark, or the new name of the folder if <code>id</code> refers to a folder.</dd>
+    <dt><code>url</code> {{optional_inline}}</dt>
+    <dd>A {{jsxref("string")}} providing a new URL for the bookmark.</dd>
+   </dl>
+  </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>

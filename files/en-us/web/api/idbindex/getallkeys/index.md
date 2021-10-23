@@ -43,10 +43,10 @@ operation are fired.
 
 This method may raise a {{domxref("DOMException")}} of the following types:
 
-| Exception                  | Description                                                         |
-| -------------------------- | ------------------------------------------------------------------- |
-| `TransactionInactiveError` | This {{domxref("IDBIndex")}}'s transaction is inactive.    |
-| `InvalidStateError`        | The {{domxref("IDBIndex")}} has been deleted or removed.   |
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if this {{domxref("IDBIndex")}}'s transaction is inactive.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("IDBIndex")}} has been deleted or removed.
 
 A {{jsxref("TypeError")}} exception is thrown if the `count` parameter is
 not between `0` and `2^32 - 1` included.

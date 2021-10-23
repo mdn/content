@@ -12,7 +12,7 @@ tags:
   - Overview
   - working with files
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The File System Access API allows read, write and file management capabilities.
 
@@ -173,9 +173,6 @@ writableStream.write({ type: "truncate", size: size })
 | ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
 | {{SpecName('File System Access API')}} | {{Spec2('File System Access API')}} | Initial definition. |
 
-## Browser compatibility
-
-{{Compat("api.FileSystemAccess")}}
 
 ## See also
 

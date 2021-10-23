@@ -28,7 +28,7 @@ record the entire duration of the media into a single `Blob` (or until you
 call {{domxref("MediaRecorder.requestData", "requestData()")}}), or you can specify the
 number of milliseconds to record at a time. Then, each time that amount of media has
 been recorded, an event will be delivered to let you act upon the recorded media, while
-a new `Blob` is created to record the next slice of the media
+a new `Blob` is created to record the next slice of the media.
 
 Assuming the `MediaRecorder`'s {{domxref("MediaRecorder.state", "state")}}
 is `inactive`, `start()` sets the `state`  to
@@ -76,23 +76,23 @@ object. You can implement the {{domxref("MediaRecorder.onerror", "onerror")}} ev
 handler to respond to these errors.
 
 - `InvalidModificationError` {{domxref("DOMException")}}
-  - : The number of tracks on the stream being recorded has changed. You can't add or
+  - : Thrown if the number of tracks on the stream being recorded has changed. You cannot add or
     remove tracks while recording media.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : The `MediaRecorder` is not in the `inactive` state; you can't
-    start recording media if it's already being recorded. See the
+  - : Thrown if the `MediaRecorder` is not in the `inactive` state; you cannot
+    start recording media if it is already being recorded. See the
     {{domxref("MediaRecorder.state", "state")}} property.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : The media stream you're attempting to record is inactive, or one or more of the
-    stream's tracks is in a format that can't be recorded using the current configuration.
+  - : Thrown if the media stream you are attempting to record is inactive, or one or more of the
+    stream's tracks is in a format that cannot be recorded using the current configuration.
 - `SecurityError` {{domxref("DOMException")}}
-  - : The {{domxref("MediaStream")}} is configured to disallow recording. This may be the
+  - : Thrown if the {{domxref("MediaStream")}} is configured to disallow recording. This may be the
     case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
     "getUserMedia()")}} when the user denies permission to use an input device. This
     exception may also be delivered as an {{event("error")}} event if
     the security options for the source media change after recording begins.
 - `UnknownError` {{domxref("DOMException")}}
-  - : Something else went wrong during the recording process.
+  - : Thrown if something else went wrong during the recording process.
 
 ## Example
 

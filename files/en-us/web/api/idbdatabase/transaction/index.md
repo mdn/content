@@ -109,9 +109,9 @@ An {{domxref("IDBTransaction")}} object.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBDatabase.close", "close()")}} method has previously been called on this {{domxref("IDBDatabase")}} instance.
 - `NotFoundError` {{domxref("DOMException")}}
-  - : Thrown if tn object store specified in the 'storeNames' parameter has been deleted or removed.
+  - : Thrown if an object store specified in the 'storeNames' parameter has been deleted or removed.
 - `TypeError` {{domxref("DOMException")}}
-  - : Thrown if the value for the `mode`parameter is invalid.
+  - : Thrown if the value for the `mode` parameter is invalid.
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if the function was called with an empty list of store names.
 

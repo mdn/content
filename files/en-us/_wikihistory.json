@@ -42562,18 +42562,6 @@
       "zef"
     ]
   },
-  "Web/API/Element/overflow_event": {
-    "modified": "2020-10-15T21:19:37.947Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "gfritzsche",
-      "Sheppy",
-      "ethertank",
-      "louisremi"
-    ]
-  },
   "Web/API/Element/part": {
     "modified": "2020-10-15T22:24:18.533Z",
     "contributors": [
@@ -43459,20 +43447,6 @@
       "Csson"
     ]
   },
-  "Web/API/Element/underflow_event": {
-    "modified": "2020-10-15T21:19:37.033Z",
-    "contributors": [
-      "mfuji09",
-      "Sheppy",
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "gfritzsche",
-      "dflanagan",
-      "ethertank",
-      "louisremi"
-    ]
-  },
   "Web/API/Element/webkitmouseforcechanged_event": {
     "modified": "2020-10-15T21:41:16.889Z",
     "contributors": [
@@ -43952,13 +43926,6 @@
       "teoli",
       "alicebeckett",
       "ziyunfei"
-    ]
-  },
-  "Web/API/Event/msConvertURL": {
-    "modified": "2019-03-18T21:30:40.545Z",
-    "contributors": [
-      "ExE-Boss",
-      "mattwojo"
     ]
   },
   "Web/API/Event/originalTarget": {
@@ -69448,13 +69415,6 @@
       "dvincent"
     ]
   },
-  "Web/API/RTCAnswerOptions": {
-    "modified": "2020-10-15T22:08:24.120Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCCertificate": {
     "modified": "2020-10-15T21:42:29.375Z",
     "contributors": [
@@ -70612,36 +70572,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/RTCOfferAnswerOptions": {
-    "modified": "2020-10-15T22:08:23.550Z",
-    "contributors": [
-      "sideshowbarker",
-      "chrisdavidmills",
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCOfferAnswerOptions/voiceActivityDetection": {
-    "modified": "2020-10-15T22:08:25.025Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCOfferOptions": {
-    "modified": "2020-10-15T22:08:26.218Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCOfferOptions/iceRestart": {
-    "modified": "2020-11-04T00:00:29.134Z",
-    "contributors": [
-      "realityforge",
-      "Sheppy",
-      "larspa"
-    ]
-  },
   "Web/API/RTCOutboundRtpStreamStats": {
     "modified": "2020-10-15T22:17:14.806Z",
     "contributors": [
@@ -71737,21 +71667,6 @@
   "Web/API/RTCRtpStreamStats/transportId": {
     "modified": "2020-10-15T22:08:53.444Z",
     "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCRtpSynchronizationSource": {
-    "modified": "2020-10-15T22:01:29.628Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/RTCRtpSynchronizationSource/voiceActivityFlag": {
-    "modified": "2020-12-08T23:40:05.037Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
       "Sheppy"
     ]
   },

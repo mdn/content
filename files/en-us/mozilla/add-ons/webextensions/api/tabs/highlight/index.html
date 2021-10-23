@@ -32,22 +32,22 @@ browser-compat: webextensions.api.tabs.highlight
 
 <dl>
  <dt><code>highlightInfo</code></dt>
- <dd><code>object</code>.</dd>
  <dd>
- <dl>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. ID of the window that contains the tabs.</dd>
-  <dt><code>populate</code>{{optional_inline}}</dt>
-  <dd>
-  <p><code>boolean</code>. Defaults to <code>true</code>. If set to <code>false</code>, the {{WebExtAPIRef('windows.Window')}} object won't have a <code>tabs</code> property containing a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs open in the window.</p>
+   <p><code>object</code>.</p>
+   <dl>
+    <dt><code>windowId</code>{{optional_inline}}</dt>
+    <dd><code>integer</code>. ID of the window that contains the tabs.</dd>
+    <dt><code>populate</code>{{optional_inline}}</dt>
+    <dd>
+    <p><code>boolean</code>. Defaults to <code>true</code>. If set to <code>false</code>, the {{WebExtAPIRef('windows.Window')}} object won't have a <code>tabs</code> property containing a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs open in the window.</p>
 
-  <div class="note">
-  <p><strong>Note:</strong> Populating the window (the default behavior) can be an expensive operation if there are lots of tabs. For better performance it's recommended to manually set <code>populate</code> to <code>false</code> if you don't need tab details.</p>
-  </div>
-  </dd>
-  <dt><code>tabs</code></dt>
-  <dd><code>array</code> of integer values specifying one or more tab indices to highlight. Previously highlighted tabs not included in <code>tabs</code> will stop being highlighted. The first tab in <code>tabs</code> will become active.</dd>
- </dl>
+    <div class="note">
+    <p><strong>Note:</strong> Populating the window (the default behavior) can be an expensive operation if there are lots of tabs. For better performance it's recommended to manually set <code>populate</code> to <code>false</code> if you don't need tab details.</p>
+    </div>
+    </dd>
+    <dt><code>tabs</code></dt>
+    <dd><code>array</code> of integer values specifying one or more tab indices to highlight. Previously highlighted tabs not included in <code>tabs</code> will stop being highlighted. The first tab in <code>tabs</code> will become active.</dd>
+   </dl>
  </dd>
 </dl>
 

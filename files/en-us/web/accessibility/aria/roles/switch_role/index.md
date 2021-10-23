@@ -17,8 +17,8 @@ This example creates a widget and assigns the ARIA `switch` role to it.
 
     <button type="button" role="switch" aria-checked="true"
         id="speakerPower" class="switch">
-        <span>off</span>
-        <span>on</span>
+        <span aria-hidden="true">off</span>
+        <span aria-hidden="true">on</span>
     </button>
     <label for="speakerPower" class="switch">Speaker power</label>
 
@@ -165,6 +165,7 @@ The result looks like this:
 
 - [ARIA: checkbox role](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
 - [`<input type="checkbox">`](en-US/docs/Web/HTML/Element/input/checkbox)
+- [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 
 <section id="Quick_links">
 

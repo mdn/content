@@ -42,34 +42,13 @@ sourceBuffer.remove(start, end);
 
 ### Exceptions
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>InvalidAccessError</code></td>
-      <td>
-        The {{domxref("MediaSource.duration")}} property is equal
-        to <code>NaN</code>, the <code>start</code> parameter is negative or
-        greater than {{domxref("MediaSource.duration")}}, or the
-        end parameter is less than or equal to start or equal to
-        <code>NaN</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>
-        The {{domxref("SourceBuffer.updating")}} property is equal
-        to <code>true</code>, or this <code>SourceBuffer</code> has been removed
-        from the {{domxref("MediaSource")}}.
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if either the {{domxref("MediaSource.duration")}} property is equal to `NaN`, the `start` parameter is negative or greater than {{domxref("MediaSource.duration")}}, or the `end` parameter is less than or equal to `start` or equal to `NaN`.
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("SourceBuffer.updating")}} property is equal
+        to `true`, or this `SourceBuffer` has been removed
+        from {{domxref("MediaSource")}}.
 
 ## Example
 

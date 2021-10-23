@@ -32,20 +32,20 @@ browser-compat: webextensions.api.dns.resolve
  <dt><code>hostname</code></dt>
  <dd><code>string</code>. The hostname to resolve.</dd>
  <dt><code>flags</code> {{optional_inline}}</dt>
- <dd><code>array</code> of <code>string</code>. Flags to modify the way the hostname is resolved. Any omitted flags default to <code>false</code>. You can pass zero or more of the following flags:</dd>
  <dd>
- <ul>
-  <li><code>"allow_name_collisions"</code>: Allow name collision results which are normally filtered out.</li>
-  <li><code>"bypass_cache"</code>: Suppresses the internal DNS lookup cache.</li>
-  <li><code>"canonical_name"</code>: The canonical name of the specified host will be queried.</li>
-  <li><code>"disable_ipv4"</code>: Only IPv6 addresses will be returned.</li>
-  <li><code>"disable_ipv6"</code>: Only IPv4 addresses will be returned.</li>
-  <li><code>"disable_trr"</code>: Do not use the Trusted Recursive Resolver (TRR) for resolving the host name. A TRR enables resolving of host names using a dedicated <a href="https://datatracker.ietf.org/doc/html/draft-ietf-doh-dns-over-https-02">DNS-over-HTTPS</a> server.</li>
-  <li><code>"offline"</code>: Only literals and cached entries will be returned.</li>
-  <li><code>"priority_low"</code>: The request is given lower priority. If "priority_medium" is also given, the query is given medium priority.</li>
-  <li><code>"priority_medium"</code>: The request is given medium priority. If "priority_low" is also given, the query is given medium priority.</li>
-  <li><code>"speculate"</code>: Indicates that the request is speculative. Speculative requests return errors if prefetching is disabled by the browser's configuration.</li>
- </ul>
+   <p><code>array</code> of <code>string</code>. Flags to modify the way the hostname is resolved. Any omitted flags default to <code>false</code>. You can pass zero or more of the following flags:</p>
+   <ul>
+    <li><code>"allow_name_collisions"</code>: Allow name collision results which are normally filtered out.</li>
+    <li><code>"bypass_cache"</code>: Suppresses the internal DNS lookup cache.</li>
+    <li><code>"canonical_name"</code>: The canonical name of the specified host will be queried.</li>
+    <li><code>"disable_ipv4"</code>: Only IPv6 addresses will be returned.</li>
+    <li><code>"disable_ipv6"</code>: Only IPv4 addresses will be returned.</li>
+    <li><code>"disable_trr"</code>: Do not use the Trusted Recursive Resolver (TRR) for resolving the host name. A TRR enables resolving of host names using a dedicated <a href="https://datatracker.ietf.org/doc/html/draft-ietf-doh-dns-over-https-02">DNS-over-HTTPS</a> server.</li>
+    <li><code>"offline"</code>: Only literals and cached entries will be returned.</li>
+    <li><code>"priority_low"</code>: The request is given lower priority. If "priority_medium" is also given, the query is given medium priority.</li>
+    <li><code>"priority_medium"</code>: The request is given medium priority. If "priority_low" is also given, the query is given medium priority.</li>
+    <li><code>"speculate"</code>: Indicates that the request is speculative. Speculative requests return errors if prefetching is disabled by the browser's configuration.</li>
+   </ul>
  </dd>
 </dl>
 

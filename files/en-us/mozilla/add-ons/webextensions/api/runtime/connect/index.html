@@ -41,14 +41,14 @@ browser-compat: webextensions.api.runtime.connect
  <dt><code>extensionId</code>{{optional_inline}}</dt>
  <dd><code>string</code>. The ID of the extension to connect to. If the target has set an ID explicitly using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">applications</a> key in manifest.json, then <code>extensionId</code> should have that value. Otherwise it should have the ID that was generated for the target.</dd>
  <dt><code>connectInfo</code>{{optional_inline}}</dt>
- <dd><code>object</code>. Details of the connection:</dd>
  <dd>
- <dl>
-  <dt><code>name</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} for processes that are listening for the connection event.</dd>
-  <dt><code>includeTlsChannelId</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Whether the TLS channel ID will be passed into {{WebExtAPIRef("runtime.onConnectExternal")}} for processes that are listening for the connection event.</dd>
- </dl>
+   <p><code>object</code>. Details of the connection:</p>
+   <dl>
+    <dt><code>name</code>{{optional_inline}}</dt>
+    <dd><code>string</code>. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} for processes that are listening for the connection event.</dd>
+    <dt><code>includeTlsChannelId</code>{{optional_inline}}</dt>
+    <dd><code>boolean</code>. Whether the TLS channel ID will be passed into {{WebExtAPIRef("runtime.onConnectExternal")}} for processes that are listening for the connection event.</dd>
+   </dl>
  </dd>
 </dl>
 

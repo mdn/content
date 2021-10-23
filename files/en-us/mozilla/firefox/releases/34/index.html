@@ -65,7 +65,7 @@ tags:
  <li>A new ES2015 object {{jsxref("WeakSet")}} has been added ({{bug(792439)}}).</li>
  <li>ES2015 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbols</a> (only available in the Nightly channel) have been updated to conform with recent specification changes ({{bug(1042602)}}):
   <ul>
-   <li>When trying to convert a symbol to a number, a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError" title="The TypeError object represents an error when a value is not of the expected type."><code>TypeError</code></a> will be thrown now.</li>
+   <li>When trying to convert a symbol to a number, a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError"><code>TypeError</code></a> will be thrown now.</li>
    <li>When using loose equality, <code>Object(sym) == sym</code> returns <code>true</code> now.</li>
   </ul>
  </li>
@@ -74,7 +74,7 @@ tags:
  <li>In regular expressions (including <code>String.replace</code>), the matched text for a capturing group is now <code>undefined</code> instead of the empty string when that capturing group didn't get consulted because quantifiers prevented its exercise (see {{bug(369778)}} and <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#gecko_specific_notes">this example code</a>). Note that due to web compatibility, RegExp.$N will still return an empty string ({{bug(1053944)}}).</li>
  <li>The ES2015 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread operator</a> is now supported in <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructuring</a> ({{bug(933276)}}).</li>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring</a> now uses iterator protocol instead of array-like protocol ({{bug(933276)}}).</li>
- <li><span class="message"><span class="content">{{jsxref("Proxy.revocable()")}} has been implemented</span></span> ({{bug(978279)}}).</li>
+ <li>{{jsxref("Proxy.revocable()")}} has been implemented ({{bug(978279)}}).</li>
 </ul>
 
 <h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
