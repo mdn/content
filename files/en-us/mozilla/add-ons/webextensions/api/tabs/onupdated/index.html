@@ -48,7 +48,7 @@ browser.tabs.onUpdated.hasListener(listener)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>tabId</code></dt>
   <dd><code>integer</code>. ID of the tab that was updated.</dd>
   <dt><code>changeInfo</code></dt>
@@ -61,7 +61,7 @@ browser.tabs.onUpdated.hasListener(listener)
  <dd>
  <p><code>object</code>. A set of filters that restricts the events that will be sent to this listener. This is an object which may have one or more of the following properties. Events will only be sent if they satisfy all the filters given.</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>urls</code></dt>
   <dd><code>Array</code>. An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. Fire the event only for tabs whose current <code>url</code> property matches any one of the patterns.</dd>
   <dt><code>properties</code></dt>
@@ -101,7 +101,7 @@ browser.tabs.onUpdated.hasListener(listener)
 
 <p>Lists the changes to the state of the tab that was updated. To learn more about these properties, see the {{WebExtAPIRef("tabs.Tab")}} documentation.</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>attention</code> {{optional_inline}}</dt>
  <dd><code>boolean</code>. Indicates whether the tab is drawing attention. For example, when the tab displays a modal dialog, <code>attention</code> will be <code>true</code>.</dd>
  <dt><code>audible</code>{{optional_inline}}</dt>
@@ -242,9 +242,8 @@ browser.tabs.onUpdated.addListener(
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#event-onUpdated"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#event-onUpdated"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
 </div>
 
 <div class="hidden">

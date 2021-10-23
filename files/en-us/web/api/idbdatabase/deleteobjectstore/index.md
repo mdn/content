@@ -14,7 +14,7 @@ browser-compat: api.IDBDatabase.deleteObjectStore
 {{ APIRef("IndexedDB") }}
 
 The **`deleteObjectStore()`** method of the
-{{domxref("IDBDatabase")}} interface destroys the object store with the given name in
+{{domxref("IDBDatabase")}} interface destroys the object store with the given name in
 the connected database, along with any indexes that reference it.
 
 As with {{ domxref("IDBDatabase.createObjectStore") }}, this method can be called
@@ -32,47 +32,17 @@ dbInstance.deleteObjectStore(name);
 ### Parameters
 
 - `name`
-  - : The name of the object store you want to delete.
+  - : The name of the object store you want to delete. Names are
+        case sensitive.
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}}  of one of the following types:
-
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>
-        Occurs if the method was not called from
-        a <code>versionchange</code> transaction callback. For older WebKit
-        browsers, you must call
-        {{ APIRef("IDBVersionChangeRequest.setVersion")}} first.
-      </td>
-    </tr>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>
-        Occurs if a request is made on a source database that doesn't exist
-        (e.g. has been deleted or removed.) In Firefox previous to version 41,
-        an <code>InvalidStateError</code> was raised in this case as well, which
-        was misleading; this has now been fixed (see {{Bug("1176165")}}.)
-      </td>
-    </tr>
-    <tr>
-      <td><code>NotFoundError</code></td>
-      <td>
-        You are trying to delete an object store that does not exist. Names are
-        case sensitive.
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the method was not called from a `versionchange` transaction callback.
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if a request is made on a source database that doesn't exist (E.g. has been deleted or removed.)
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown when trying to delete an object store that does not exist.
 
 ## Example
 

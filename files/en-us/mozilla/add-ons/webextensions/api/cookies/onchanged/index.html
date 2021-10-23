@@ -15,7 +15,9 @@ browser-compat: webextensions.api.cookies.onChanged
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>The <code>onChanged</code> event of the {{WebExtAPIRef("cookies")}} API is fired when a cookie is set or removed.</p>
+<p>The <code>onChanged</code> event of the {{WebExtAPIRef("cookies")}} API fires when a cookie that the extension can access is set or removed.</p>
+
+<div class="note"><p><strong>Note:</strong> When <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning">storage partitioning</a> is active, <code>cookies.Cookie.partitionKey</code> contains the description of the cookie's storage partition. When modifying cookies, it's important to pass this value to {{WebExtAPIRef("cookies.set()")}} or {{WebExtAPIRef("cookies.remove()")}} to ensure the extension works with the correct cookie.</div>
 
 <p>Note that updating a cookie's properties is implemented as a two step process:</p>
 
@@ -53,18 +55,18 @@ browser.cookies.onChanged.hasListener(listener)
  <dd>
  <p>A callback function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>changeInfo</code></dt>
-  <dd>An <code>object</code> containing details of the change that occurred. Its properties are as follows:</dd>
   <dd>
-  <dl class="reference-values">
-   <dt><code>removed</code></dt>
-   <dd>A <code>boolean</code> that is set to <code>true</code> if a cookie was removed, and false if not.</dd>
-   <dt><code>cookie</code></dt>
-   <dd>A {{WebExtAPIRef('cookies.Cookie')}} object  containing information about the cookie that was set or removed.</dd>
-   <dt><code>cause</code></dt>
-   <dd>A {{WebExtAPIRef('cookies.OnChangedCause')}} value representing the underlying reason behind the cookie's change.</dd>
-  </dl>
+    <p>An <code>object</code> containing details of the change that occurred. Its properties are as follows:</p>
+    <dl>
+     <dt><code>removed</code></dt>
+     <dd>A <code>boolean</code> that is set to <code>true</code> if a cookie was removed, and false if not.</dd>
+     <dt><code>cookie</code></dt>
+     <dd>A {{WebExtAPIRef('cookies.Cookie')}} object  containing information about the cookie that was set or removed.</dd>
+     <dt><code>cause</code></dt>
+     <dd>A {{WebExtAPIRef('cookies.OnChangedCause')}} value representing the underlying reason behind the cookie's change.</dd>
+    </dl>
   </dd>
  </dl>
  </dd>
@@ -78,7 +80,7 @@ browser.cookies.onChanged.hasListener(listener)
 
 <p>This example listens for <code>onChanged</code> events and logs details from the <code>changeInfo</code> argument:</p>
 
-<pre class="brush: js line-numbers  language-js">browser.cookies.onChanged.addListener(function(changeInfo) {
+<pre class="brush: js">browser.cookies.onChanged.addListener(function(changeInfo) {
   console.log('Cookie changed: ' +
               '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
               '\n * Cause: ' + changeInfo.cause +
@@ -87,9 +89,8 @@ browser.cookies.onChanged.hasListener(listener)
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/cookies#event-onChanged"><code>chrome.cookies</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/cookies#event-onChanged"><code>chrome.cookies</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

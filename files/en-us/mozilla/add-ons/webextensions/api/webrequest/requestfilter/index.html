@@ -21,7 +21,7 @@ browser-compat: webextensions.api.webRequest.RequestFilter
 
 <p>Values of this type are objects. They contain the following properties:</p>
 
-<dl class="reference-values">
+<dl>
  <dt><code>urls</code></dt>
  <dd><code>array</code> of <code>string</code>. An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. The listener will only be called for requests whose targets match any of the given patterns. Only requests made using HTTP or HTTPS will trigger events, other protocols (such as data: and file:) supported by pattern matching do not trigger events. <code>view-source:</code> requests may be matched based on its inner URL.</dd>
  <dt><code>types</code>{{optional_inline}}</dt>
@@ -40,9 +40,8 @@ browser-compat: webextensions.api.webRequest.RequestFilter
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest#type-RequestFilter"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest#type-RequestFilter"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
 </div>
 
 <div class="hidden">

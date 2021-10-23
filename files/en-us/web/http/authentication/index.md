@@ -25,7 +25,11 @@ The challenge and response flow works like this:
 
 ![A sequence diagram illustrating HTTP messages between a client and a server lifeline.](http-auth-sequence-diagram.png "Sequence Diagram of Client-server HTTP Authentication")
 
-In the case of a "Basic" authentication like shown in the figure, the exchange **must** happen over an HTTPS (TLS) connection to be secure.
+The general message flow above is the same for most (if not all) [authentication schemes](#authentication_schemes).
+The actual information in the headers and the way it is encoded does change!
+
+> **Warning:** The "Basic" authentication scheme used in the diagram above sends the credentials encoded but not encrypted.
+> This would be completely insecure unless the exchange was over a secure connection (HTTPS/TLS).
 
 ### Proxy authentication
 
@@ -73,15 +77,13 @@ Authorization: <type> <credentials>
 Proxy-Authorization: <type> <credentials>
 ```
 
-### Authentication schemes
+## Authentication schemes
 
-The general HTTP authentication framework is used by several authentication schemes.
-Schemes can differ in security strength and in their availability in client or server software.
+The general HTTP authentication framework is the base for a number of authentication schemes.
 
-The most common authentication scheme is the "Basic" authentication scheme, which is introduced in more detail below.
 IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), but there are other schemes offered by host services, such as Amazon AWS.
 
-Common authentication schemes include:
+Some common authentication schemes include:
 
 - **Basic**
   - : See {{rfc(7617)}}, base64-encoded credentials. More information below.
@@ -93,8 +95,20 @@ Common authentication schemes include:
   - : See {{rfc(7486)}}, Section 3, **H**TTP **O**rigin-**B**ound **A**uthentication, digital-signature-based
 - **Mutual**
   - : See {{rfc(8120)}}
+- **Negotiate** / **NTLM**
+  - : See [RFC4599](https://www.ietf.org/rfc/rfc4559.txt)
+- **VAPID**
+  - : See {{rfc(8292)}}
+- **SCRAM**
+  - : See {{rfc(7804)}} 
 - **AWS4-HMAC-SHA256**
-  - : See [AWS docs](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)
+  - : See [AWS docs](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html). This scheme is used for AWS3 server authentication.
+
+Schemes can differ in security strength and in their availability in client or server software.
+
+The "Basic" authentication scheme offers very poor security, but is widely supported and easy to set up.
+It is introduced in more detail below.
+
 
 ## Basic authentication scheme
 
@@ -124,9 +138,9 @@ aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
 user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 ```
 
-### Restricting access with nginx and basic authentication
+### Restricting access with Nginx and basic authentication
 
-For nginx, you will need to specify a location that you are going to protect and the `auth_basic` directive that provides the name to the password-protected area.
+For Nginx, you will need to specify a location that you are going to protect and the `auth_basic` directive that provides the name to the password-protected area.
 The `auth_basic_user_file` directive then points to a `.htpasswd` file containing the encrypted user credentials, just like in the Apache example above.
 
 ```

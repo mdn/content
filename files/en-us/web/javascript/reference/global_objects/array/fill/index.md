@@ -12,10 +12,8 @@ browser-compat: javascript.builtins.Array.fill
 ---
 {{JSRef}}
 
-The **`fill()`** method changes all
-elements in an array to a static value, from a start index (default `0`) to
-an end index (default `array.length`). It returns the modified
-array.
+The **`fill()`** method changes all elements in an array to a static value, from a start index (default `0`) to an end index (default `array.length`).
+It returns the modified array.
 
 {{EmbedInteractiveExample("pages/js/array-fill.html")}}
 
@@ -32,9 +30,9 @@ fill(value, start, end)
 - `value`
   - : Value to fill the array with. (Note all elements in the array will be this exact value.)
 - `start` {{optional_inline}}
-  - : Start index, default `0`.
+  - : Start index (inclusive), default `0`.
 - `end` {{optional_inline}}
-  - : End index, default `arr.length`.
+  - : End index (exclusive), default `arr.length`.
 
 ### Return value
 
@@ -48,10 +46,10 @@ The modified array, filled with `value`.
 - `fill` is a mutator method: it will change the array itself and return it, not a copy of it.
 - If the first parameter is an object, each slot in the array will reference that object.
 
-<div class="note notecard">
-<b>Note</b>: Using Array.prototype.fill() on an empty array would not modify it as the array has nothing to be modified. To use Array.prototype.fill() when declaring an array, make sure to assign slots to the array.
-<a href="#using_fill_to_populate_an_empty_array">See Example</a>
-</div>
+> **Note:** Using `Array.prototype.fill()` on an empty array would not modify it as the array has nothing to be modified.
+> To use `Array.prototype.fill()` when declaring an array, make sure to assign slots to the array.
+> [See example](#using_fill_to_populate_an_empty_array).
+
 
 ## Polyfill
 
@@ -127,7 +125,7 @@ arr[0].hi = "hi"            // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
 
 ### Using fill() to create a matrix of all 1
 
-This example shows how to create a matrix of all 1, like the _ones()_ function of Octave or MATLAB.
+This example shows how to create a matrix of all 1, like the `ones()` function of Octave or MATLAB.
 
 ```js
 const arr = new Array(3);
@@ -140,10 +138,10 @@ console.log(arr[1][0]); // 1
 console.log(arr[2][0]); // 1
 ```
 
-### Using fill() to populate an Empty Array
+### Using fill() to populate an empty array
 
-This example shows how to populate an array with random values. The end value 
-does not have to be specified.
+This example shows how to populate an array, setting all elements to a specific value.
+The `end` parameter does not have to be specified.
 
 ```js
 let tempGirls = Array(5).fill("girl",0);

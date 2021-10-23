@@ -50,8 +50,7 @@ var promise = CredentialsContainer.get([options])
     - `password`: a boolean value indicating that returned
       {{domxref("Credential")}} instances should include user (as opposed to federated)
       credentials.
-    - `federated`: A {{domxref("FederatedCredentialRequestOptions")}}
-      object containing requirements for returned federated credentials. The available
+    - `federated`: An object containing requirements for returned federated credentials. The available
       options are:
 
       - `providers`: An array of {{domxref("DOMString")}} instances of
@@ -59,8 +58,13 @@ var promise = CredentialsContainer.get([options])
       - `protocols` An array of {{domxref("DOMString")}} instances of
         federation protocols to search for.
 
-    - `publicKey`: An {{domxref("PublicKeyCredentialRequestOptions")}}
-      object containing requirements for returned [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) credentials.
+    - `publicKey`: An object containing requirements for returned [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) credentials. The available options are:
+      - challenge: A {{domxref("BufferSource")}}, emitted by the relying party's server and used as a [cryptographic challenge](https://en.wikipedia.org/wiki/Challenge%E2%80%93response_authentication). This value will be signed by the authenticator and the signature will be sent back as part of {{domxref("AuthenticatorAssertionResponse.signature")}}.
+      - timeout {{optional_inline}}: A numerical hint, in milliseconds, which indicates the time the caller is willing to wait for the retrieval operation to complete. This hint may be overridden by the browser.
+      - rpId {{optional_inline}}: A {{domxref("USVString")}} which indicates the relying party's identifier (ex. `"login.example.org"`). If this option is not provided, the client will use the current origin's domain.
+      - allowCredentials {{optional_inline}}: An {{jsxref("Array")}} of credentials descriptor which restricts the acceptable existing credentials for retrieval.
+      - userVerification {{optional_inline}}: A string qualifying how the user verification should be part of the authentication process.
+      - extensions {{optional_inline}}: An object with several client extensions' inputs. Those extensions are used to request additional processing (e.g. dealing with legacy FIDO APIs credentials, prompting a specific text on the authenticator, etc.).
     - `mediation`: A {{jsxref("String")}} indicating whether the user will
       be required to log on for every visit to the website. Valid values are
       `"silent"`, `"optional"`, or `"required"`.

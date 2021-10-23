@@ -14,7 +14,7 @@ browser-compat: api.RTCPeerConnection.setConfiguration
 
 The **`RTCPeerConnection.setConfiguration()`** method sets the
 current configuration of the {{domxref("RTCPeerConnection")}} based on the values
-included in the specified {{domxref("RTCConfiguration")}} object. This lets you change
+included in the specified object. This lets you change
 the ICE servers used by the connection and which transport policies to use.
 
 The most common use case for this method (and even then, probably not a very common use
@@ -45,9 +45,8 @@ RTCPeerConnection.setConfiguration(configuration);
 ### Parameters
 
 - `configuration`
-  - : An {{domxref("RTCConfiguration")}} object which provides the options to be set. The
-    changes are not additive; instead, the new values completely replace the existing
-    ones.
+  - : An object which provides the options to be set. The
+    changes are not additive; instead, the new values completely replace the existing ones. See [`RTCPeerConnection()`](/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#parameters) for more information on what options are allowed.
 
 ### Exceptions
 
@@ -93,7 +92,7 @@ myPeerConnection.createOffer({"iceRestart": true}).then(function(offer) {
 .catch(reportError);
 ```
 
-First, a new {{domxref("RTCConfiguration")}} is created, `restartConfig`,
+First, a new object is created, `restartConfig`,
 specifying the new ICE server and its credentials. This is then passed into
 `setConfiguration()`. ICE negotiation is restarted by calling
 {{domxref("RTCPeerConnection.createOffer()", "createOffer()")}}, specifying
@@ -112,5 +111,5 @@ then sending that offer to the other peer.
 ## See also
 
 - {{domxref("RTCPeerConnection.getConfiguration()")}}
-- {{domxref("RTCConfiguration")}}
+- {{domxref("RTCPeerConnection.RTCPeerConnection")}}
 - {{domxref("RTCPeerConnection")}}

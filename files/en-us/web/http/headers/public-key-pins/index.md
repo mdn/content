@@ -13,13 +13,13 @@ browser-compat: http.headers.Public-Key-Pins
 ---
 {{HTTPSidebar}}{{deprecated_header}}
 
-> **Note:** Public Key Pinning mechanism was deprecated
+> **Note:** The Public Key Pinning mechanism was deprecated
 > in favor of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency)
 > and {{HTTPHeader("Expect-CT")}} header.
 
 The HTTP **`Public-Key-Pins`** response header used to
 associate a specific cryptographic public {{Glossary("key")}} with a certain web server
-to decrease the risk of {{Glossary("MITM")}} attacks with forged certificates, however,
+to decrease the risk of {{Glossary("MITM")}} attacks with forged certificates. However,
 it has been removed from modern browsers and is no longer supported. Use [Certificate
 Transparency](/en-US/docs/Web/Security/Certificate_Transparency) and {{HTTPHeader("Expect-CT")}} header instead.
 

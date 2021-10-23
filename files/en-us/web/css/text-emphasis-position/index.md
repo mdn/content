@@ -124,6 +124,7 @@ Some editors prefer to hide emphasis marks when they conflict with ruby. In HTML
 
 ```css
 ruby {
+  -webkit-text-emphasis: none;
   text-emphasis: none;
 }
 ```
@@ -134,6 +135,7 @@ Some other editors prefer to hide ruby when they conflict with emphasis marks. I
 
 ```css
 em {
+  -webkit-text-emphasis: dot;
   text-emphasis: dot; /* Set text-emphasis for <em> elements */
 }
 

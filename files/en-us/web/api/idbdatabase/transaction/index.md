@@ -13,8 +13,7 @@ browser-compat: api.IDBDatabase.transaction
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`transaction`** method of the
-{{domxref("IDBDatabase")}} interface immediately
+The **`transaction`** method of the {{domxref("IDBDatabase")}} interface immediately
 returns a transaction object ({{domxref("IDBTransaction")}}) containing the
 {{domxref("IDBTransaction.objectStore")}} method, which you can use to access your
 object store.
@@ -90,7 +89,7 @@ IDBDatabase.transaction(storeNames, mode, options);
     > `dom.indexedDB.experimental` pref is set to `true` in
     > `about:config`.
 
-- `options` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : Dictionary of other options. Available options are:
 
@@ -107,52 +106,20 @@ An {{domxref("IDBTransaction")}} object.
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of one of the following types:
-
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/IDBDatabaseException#not_allowed_err"
-            >InvalidStateError</a
-          ></code
-        >
-      </td>
-      <td>
-        The <code>close()</code> method has previously been called on this
-        {{domxref("IDBDatabase")}} instance.
-      </td>
-    </tr>
-    <tr>
-      <td><code>NotFoundError</code></td>
-      <td>
-        An object store specified in the <code>storeNames</code> parameter has
-        been deleted or removed.
-      </td>
-    </tr>
-    <tr>
-      <td><code>TypeError</code></td>
-      <td>The value for the <code>mode</code> parameter is invalid.</td>
-    </tr>
-    <tr>
-      <td><code>InvalidAccessError</code></td>
-      <td>The function was called with an empty list of store names.</td>
-    </tr>
-  </tbody>
-</table>
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("IDBDatabase.close", "close()")}} method has previously been called on this {{domxref("IDBDatabase")}} instance.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if an object store specified in the 'storeNames' parameter has been deleted or removed.
+- `TypeError` {{domxref("DOMException")}}
+  - : Thrown if the value for the `mode` parameter is invalid.
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if the function was called with an empty list of store names.
 
 ## Example
 
 In this example we open a database connection, then use transaction() to open a
-transaction on the database. For a complete example, see our [To-do
-Notifications](https://github.com/mdn/to-do-notifications/) app ([view
+transaction on the database. For a complete example, see our
+[To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view
 example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
@@ -165,11 +132,11 @@ DBOpenRequest.onsuccess = function(event) {
   note.innerHTML += '<li>Database initialised.</li>';
 
   // store the result of opening the database in the db variable.
-  // This is used a lot below
+  // This is used a lot below
   db = DBOpenRequest.result;
 
   // Run the displayData() function to populate the task list with
-  // all the to-do list data already in the IDB
+  // all the to-do list data already in the IDB
   displayData();
 
 };

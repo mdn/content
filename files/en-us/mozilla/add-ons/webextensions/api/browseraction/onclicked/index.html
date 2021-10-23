@@ -46,12 +46,12 @@ browser.browserAction.onClicked.hasListener(listener)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>tab</code></dt>
   <dd>{{WebExtAPIRef('tabs.Tab')}}. The tab that was active when the icon was clicked.</dd>
   <dt><code>OnClickData</code></dt>
   <dd>An object containing information about the click.
-  <dl class="reference-values">
+  <dl>
    <dt><code>modifiers</code></dt>
    <dd>An <code>array</code>. The keyboard modifiers active at the time of the click, being one or more of <code>Shift</code>, <code>Alt</code>, <code>Command</code>, <code>Ctrl</code>, or <code>MacCtrl</code>.</dd>
    <dt><code>button</code></dt>
@@ -78,7 +78,7 @@ browser.browserAction.onClicked.hasListener(listener)
 
  <p>{{WebExtExamples}}</p>
 
- <div class="note"><strong>Acknowledgements</strong>
+ <div class="note"><p><strong>Note:</strong></p>
 
  <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction#event-onClicked"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> in the Chromium code.</p>
 
@@ -86,7 +86,7 @@ browser.browserAction.onClicked.hasListener(listener)
  </div>
 
  <div class="hidden">
- <pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are

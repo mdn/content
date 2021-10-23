@@ -18,7 +18,7 @@ browser-compat: webextensions.api.extension.getBackgroundPage
 <p>Alias for {{WebExtAPIRef("runtime.getBackgroundPage()")}}.</p>
 
 <div class="note">
-<p><strong>Note</strong>: This method cannot be used in Private Browsing mode — it always returns an empty array. Consider using {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}. For more info see {{bug(1329304)}}.</p>
+<p><strong>Note:</strong> This method cannot be used in Private Browsing mode — it always returns an empty array. Consider using {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}. For more info see {{bug(1329304)}}.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -57,9 +57,8 @@ page.foo(); // -&gt; "I'm defined in background.js"</pre>
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/extension#method-getBackgroundPage"><code>chrome.extension</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/extension#method-getBackgroundPage"><code>chrome.extension</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

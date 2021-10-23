@@ -20,7 +20,7 @@ tags:
  <li>{{ HTMLElement("input") }} and {{ HTMLElement("textarea") }} elements <a href="/en-US/docs/Web/HTML/Global_attributes/spellcheck#controlling_the_spellchecker_language">now respect the value of the <code>lang</code> attribute</a> when invoking the spell checker.</li>
  <li>Firefox on Android now lets users snap photos with their phone's camera without leaving the browser when the {{ HTMLElement("input") }} element is used with <code>type="file"</code> and <code>accept="image/*"</code>.</li>
  <li>Windows Vista style PNG ICO images are now supported.</li>
- <li>Drawing images that use the <a href="/en-US/docs/Web/HTML/Attributes/crossorigin" title="CORS settings attributes"><code>crossorigin</code></a> attribute to request CORS access no longer incorrectly <a href="/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f">taint the canvas</a> when CORS is granted.</li>
+ <li>Drawing images that use the <a href="/en-US/docs/Web/HTML/Attributes/crossorigin"><code>crossorigin</code></a> attribute to request CORS access no longer incorrectly <a href="/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f">taint the canvas</a> when CORS is granted.</li>
  <li>The value of the {{ htmlattrxref("rowspan", "td") }} attribute may now be as large as 65,534, up from 8190.</li>
 </ul>
 
@@ -106,16 +106,16 @@ tags:
 <h3 id="XUL">XUL</h3>
 
 <ul>
- <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/tab">&lt;xul:tab&gt;</a></code> element now has a <code id="a-pending"><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/pending">pending</a></code> attribute, whose value is <code>true</code>, when the tab is in the process of being restored by the session store service. This can be used for styling the tab in themes. The attribute isn't present on tabs that aren't pending.</li>
- <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/tab">&lt;xul:tab&gt;</a></code> element now has an <code id="a-unread"><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/unread">unread</a></code> attribute, whose value is <code>true</code>, when the tab has changed since the last time it was the active tab or if it hasn't been selected since the current session began. The attribute isn't present on tabs that are not unread.</li>
+ <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/tab">&lt;xul:tab&gt;</a></code> element now has a <code><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/pending">pending</a></code> attribute, whose value is <code>true</code>, when the tab is in the process of being restored by the session store service. This can be used for styling the tab in themes. The attribute isn't present on tabs that aren't pending.</li>
+ <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/tab">&lt;xul:tab&gt;</a></code> element now has an <code><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/unread">unread</a></code> attribute, whose value is <code>true</code>, when the tab has changed since the last time it was the active tab or if it hasn't been selected since the current session began. The attribute isn't present on tabs that are not unread.</li>
  <li>You can now use a <code><a href="/en-US/docs/Mozilla/Tech/XUL/panel">&lt;xul:panel&gt;</a></code> as a drag image for DOM drag and drop operations. This lets you use the standard drag &amp; drop API for <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#using_xul_panels_as_drag_images">drag and drop of XUL content</a>.</li>
- <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/notificationbox">&lt;xul:notificationbox&gt;</a></code> element's <span id="m-appendNotification"><code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/appendNotification">appendNotification</a></code></span> method now lets you specify a callback that gets called for interesting events related to the notification box. Currently, the only event is "removed", which tells you the box has been removed from its window.</li>
+ <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/notificationbox">&lt;xul:notificationbox&gt;</a></code> element's <code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/appendNotification">appendNotification</a></code> method now lets you specify a callback that gets called for interesting events related to the notification box. Currently, the only event is "removed", which tells you the box has been removed from its window.</li>
 </ul>
 
 <h3 id="JavaScript_code_module_changes">JavaScript code module changes</h3>
 
 <ul>
- <li><a href="/en-US/docs/JavaScript_code_modules/FileUtils.jsm" title="FileUtils.jsm"><code>FileUtils.jsm</code></a> now has a <code>File</code> constructor that returns an {{ interface("nsIFile") }} object representing a file specified by its pathname.</li>
+ <li><a href="/en-US/docs/JavaScript_code_modules/FileUtils.jsm"><code>FileUtils.jsm</code></a> now has a <code>File</code> constructor that returns an {{ interface("nsIFile") }} object representing a file specified by its pathname.</li>
 </ul>
 
 <h3 id="Service_changes">Service changes</h3>

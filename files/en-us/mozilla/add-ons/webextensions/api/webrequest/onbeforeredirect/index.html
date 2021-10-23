@@ -50,7 +50,7 @@ browser.webRequest.onBeforeRedirect.hasListener(listener)
  <dd>
  <p>A function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>details</code></dt>
   <dd><a href="#details"><code>object</code></a>. Details about the request. See <code><a href="#details">details</a></code> below.</dd>
  </dl>
@@ -58,11 +58,11 @@ browser.webRequest.onBeforeRedirect.hasListener(listener)
  <dt><code>filter</code></dt>
  <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.</dd>
  <dt><code>extraInfoSpec</code>{{optional_inline}}</dt>
- <dd><code>array</code> of <code>string</code>. <span class="im">Extra options for the event. You can pass just one value:</span></dd>
  <dd>
- <ul>
-  <li><span class="im"><code>"</code></span><code>responseHeaders</code><span class="im"><code>"</code>: include <code>responseHeaders</code> in the <code>details</code> object passed to the listener</span></li>
- </ul>
+   <p><code>array</code> of <code>string</code>. Extra options for the event. You can pass just one value:</p>
+   <ul>
+    <li><code>"</code><code>responseHeaders</code><code>"</code>: include <code>responseHeaders</code> in the <code>details</code> object passed to the listener</li>
+   </ul>
  </dd>
 </dl>
 
@@ -70,7 +70,7 @@ browser.webRequest.onBeforeRedirect.hasListener(listener)
 
 <h3 id="details">details</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>cookieStoreId</code></dt>
  <dd><code>string</code>. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity.</dd>
  <dt><code>documentUrl</code></dt>
@@ -144,24 +144,23 @@ browser.webRequest.onBeforeRedirect.hasListener(listener)
  <dt><code>url</code></dt>
  <dd><code>string</code>. Target of the request.</dd>
  <dt><code>urlClassification</code></dt>
- <dd><code>object</code>. The type of tracking associated with the request, if with the request has been classified by <a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop">Firefox Tracking Protection</a>. This is an object with the following properties:</dd>
  <dd>
- <dl class="reference-values">
-  <dt><code>firstParty</code></dt>
-  <dd><code>array</code> of <code>strings</code>. Classification flags for the request's first party.</dd>
-  <dt><code>thirdParty</code></dt>
-  <dd><code>array</code> of <code>strings</code>. Classification flags for the request or its window hierarchy's third parties.</dd>
- </dl>
- </dd>
- <dd>The classification flags include:
- <ul>
-  <li><code>fingerprinting</code> and <code>fingerprinting_content</code>: indicates the request is involved in fingerprinting. <code>fingerprinting_content</code> indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.</li>
-  <li><code>cryptomining</code> and <code>cryptomining_content</code>: similar to the fingerprinting category but for cryptomining resources.</li>
-  <li><code>tracking</code>, <code>tracking_ad</code>, <code>tracking_analytics</code>, <code>tracking_social</code>,  and <code>tracking_content</code>: indicates the request is involved in tracking. <code>tracking</code> is any generic tracking request, the <code>ad</code>, <code>analytics</code>, <code>social</code>, and <code>content</code> suffixes identify the type of tracker.</li>
-  <li><code>any_basic_tracking</code>: a meta flag that combines any tracking and fingerprinting flags, excluding <code>tracking_content</code> and <code>fingerprinting_content</code>.</li>
-  <li><code>any_strict_tracking</code>: a meta flag that combines any tracking and fingerprinting flags, including <code>tracking_content</code> and <code>fingerprinting_content</code>.</li>
-  <li><code>any_social_tracking</code>: a meta flag that combines any social tracking flags.</li>
- </ul>
+   <p><code>object</code>. The type of tracking associated with the request, if with the request has been classified by <a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop">Firefox Tracking Protection</a>. This is an object with the following properties:</p>
+   <dl>
+    <dt><code>firstParty</code></dt>
+    <dd><code>array</code> of <code>strings</code>. Classification flags for the request's first party.</dd>
+    <dt><code>thirdParty</code></dt>
+    <dd><code>array</code> of <code>strings</code>. Classification flags for the request or its window hierarchy's third parties.</dd>
+   </dl>
+   <p>The classification flags include:</p>
+   <ul>
+    <li><code>fingerprinting</code> and <code>fingerprinting_content</code>: indicates the request is involved in fingerprinting. <code>fingerprinting_content</code> indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.</li>
+    <li><code>cryptomining</code> and <code>cryptomining_content</code>: similar to the fingerprinting category but for cryptomining resources.</li>
+    <li><code>tracking</code>, <code>tracking_ad</code>, <code>tracking_analytics</code>, <code>tracking_social</code>,  and <code>tracking_content</code>: indicates the request is involved in tracking. <code>tracking</code> is any generic tracking request, the <code>ad</code>, <code>analytics</code>, <code>social</code>, and <code>content</code> suffixes identify the type of tracker.</li>
+    <li><code>any_basic_tracking</code>: a meta flag that combines any tracking and fingerprinting flags, excluding <code>tracking_content</code> and <code>fingerprinting_content</code>.</li>
+    <li><code>any_strict_tracking</code>: a meta flag that combines any tracking and fingerprinting flags, including <code>tracking_content</code> and <code>fingerprinting_content</code>.</li>
+    <li><code>any_social_tracking</code>: a meta flag that combines any social tracking flags.</li>
+   </ul>
  </dd>
 </dl>
 
@@ -191,9 +190,7 @@ browser.webRequest.onBeforeRedirect.addListener(
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgments</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest#event-onBeforeRedirect"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest#event-onBeforeRedirect"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

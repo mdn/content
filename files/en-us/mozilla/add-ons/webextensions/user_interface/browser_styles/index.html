@@ -23,16 +23,16 @@ tags:
 <p>When considering using <code>browser_style: true</code>, you need to test your extension with various themes (built-in or from AMO) to make sure that the extension UI behaves the way you expect it to.</p>
 
 <div class="notecard warning">
-<p>When <code>browser_style: true</code> is included in your web extension's manifest, text selection in your extension's UI is disabled except in input controls. If this will cause a problem, include browser_style:false instead.</p>
+<p><strong>Warning:</strong> When <code>browser_style: true</code> is included in your web extension's manifest, text selection in your extension's UI is disabled except in input controls. If this will cause a problem, include browser_style:false instead.</p>
 </div>
 
 <div class="notecard note">
-<p><strong>Google Chrome</strong> and <strong>Opera</strong> use <code>chrome_style</code> instead of <code>browser_style</code>, so if you wish to support them, you need to add both keys.</p>
+<p><strong>Note:</strong> <strong>Google Chrome</strong> and <strong>Opera</strong> use <code>chrome_style</code> instead of <code>browser_style</code>, so if you wish to support them, you need to add both keys.</p>
 </div>
 
 <p>In Firefox, the stylesheet can be seen at <code>chrome://browser/content/extension.css</code>. The extra stylesheet at <code>chrome://browser/content/extension-mac.css</code> is also included on OS X.</p>
 
-<p>Most styles are automatically applied, but some elements require you to add the <span style="white-space: nowrap;">non-standard</span> <code style="white-space: nowrap;">browser-style</code> class to get their styling, as detailed in the table below:</p>
+<p>Most styles are automatically applied, but some elements require you to add the non-standard <code>browser-style</code> class to get their styling, as detailed in the table below:</p>
 
 <table class="fullwidth-table standard-table">
  <thead>
@@ -45,7 +45,7 @@ tags:
   <tr>
    <td><code><a href="/en-US/docs/Web/HTML/Element/button">&lt;button&gt;</a></code></td>
    <td>
-    <pre class="brush: html no-line-numbers">
+    <pre class="brush: html">
 &lt;button class="browser-style"&gt;Click me&lt;/button&gt;</pre>
    </td>
   </tr>
@@ -54,7 +54,7 @@ tags:
     <p><code><a href="/en-US/docs/Web/HTML/Element/select">&lt;select&gt;</a></code></p>
    </td>
    <td>
-    <pre class="brush: html no-line-numbers">
+    <pre class="brush: html">
 &lt;select class="browser-style" name="select"&gt;
   &lt;option value="value1"&gt;Value 1&lt;/option&gt;
   &lt;option value="value2" selected&gt;Value 2&lt;/option&gt;
@@ -65,14 +65,14 @@ tags:
   <tr>
    <td><code><a href="/en-US/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code></td>
    <td>
-    <pre class="brush: html no-line-numbers">
+    <pre class="brush: html">
 &lt;textarea class="browser-style"&gt;Write here&lt;/textarea&gt;</pre>
    </td>
   </tr>
   <tr>
    <td>Parent of an <code><a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt;</a></code></td>
    <td>
-    <pre class="brush: html no-line-numbers">
+    <pre class="brush: html">
 &lt;div class="browser-style"&gt;
   &lt;input type="radio" id="op1" name="choices" value="op1"/&gt;
   &lt;label for="op1"&gt;Option 1&lt;/label&gt;
@@ -86,7 +86,7 @@ tags:
 </table>
 
 <div class="notecard note">
-<p>See {{bug(1465256)}} for removal of this unnecessary requirement.</p>
+<p><strong>Note:</strong> See {{bug(1465256)}} for removal of this unnecessary requirement.</p>
 </div>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
@@ -95,9 +95,8 @@ tags:
 
 <h2 id="Firefox_Panel_Components">Firefox Panel Components</h2>
 
-<div class="blockIndicator nonStandard">
-<p><strong>Non-Standard</strong><br>
- This feature is non-standard and only works in Firefox.</p>
+<div class="note">
+<p><strong>Note:</strong> This feature is non-standard and only works in Firefox.</p>
 </div>
 
 <p>The <code>chrome://browser/content/extension.css</code> stylesheet also contains the styles for the Firefox Panel Components.</p>
@@ -266,10 +265,7 @@ tags:
   &lt;button class="panel-section-footer-button default"&gt;Confirm&lt;/button&gt;
 &lt;/footer&gt;</pre>
 
-<div class="hidden">
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css">/* Global */
+<pre class="brush: css hidden">/* Global */
 html,
 body {
   background: white;
@@ -437,8 +433,7 @@ button.panel-section-tabs-button {
   z-index: 99;
 }</pre>
 
-<hr>
-<pre class="brush: css">/* Example specific – not part of chrome://browser/content/extension.css */
+<pre class="brush: css hidden">/* Example specific – not part of chrome://browser/content/extension.css */
 body {
   background: #fcfcfc;
   background-clip: padding-box;
@@ -460,7 +455,6 @@ html &gt; body {
 .icon-section-header {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48Y2lyY2xlIGZpbGw9IiMzNjM5NTkiIGN4PSIxNSIgY3k9IjE1IiByPSIxNSIvPjwvc3ZnPg==");
 }</pre>
-</div>
 
 <h4 id="Result">Result</h4>
 

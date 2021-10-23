@@ -12,7 +12,7 @@ browser-compat: css.properties.orphans
 ---
 {{CSSRef}}
 
-The **`orphans`** [CSS](/en-US/docs/CSS) property sets the minimum number of lines in a block container that must be shown at the _bottom_ of a [page](/en-US/docs/Web/CSS/Paged_Media), region, or [column](/en-US/docs/Web/CSS/CSS_Columns).
+The **`orphans`** [CSS](/en-US/docs/Web/CSS) property sets the minimum number of lines in a block container that must be shown at the _bottom_ of a [page](/en-US/docs/Web/CSS/Paged_Media), region, or [column](/en-US/docs/Web/CSS/CSS_Columns).
 
 ```css
 /* <integer> values */

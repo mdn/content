@@ -18,7 +18,7 @@ browser-compat: webextensions.api.webRequest
 
 <p>Each event is fired at a particular stage of the request. The typical sequence of events is like this:</p>
 
-<p><img alt="" src="webrequest-flow.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="webrequest-flow.png"></p>
 
 <p>{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} can be fired at any time during the request. Also, note that sometimes the sequence of events may differ from this: for example, in Firefox, on an <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HSTS</a> upgrade, the <code>onBeforeRedirect</code> event will be triggered immediately after <code>onBeforeRequest</code>.</p>
 
@@ -159,9 +159,7 @@ browser-compat: webextensions.api.webRequest
 
 <p>{{WebExtExamples("h2")}}</p>
 
-<div class="note"><strong>Acknowledgments</strong>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

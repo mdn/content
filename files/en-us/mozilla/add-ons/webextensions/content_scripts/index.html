@@ -15,9 +15,9 @@ tags:
 <p>Content scripts can only access <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis">a small subset of the WebExtension APIs</a>, but they can <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts">communicate with background scripts</a> using a messaging system, and thereby indirectly access the WebExtension APIs.</p>
 
 <div class="note">
-<p>Note that content scripts are blocked on the following domains:</p>
+<p><strong>Note:</strong> Content scripts are blocked on the following domains:</p>
 
-<ul style="display: grid;">
+<ul>
  <li>accounts-static.cdn.mozilla.net</li>
  <li>accounts.firefox.com</li>
  <li>addons.cdn.mozilla.net</li>
@@ -41,7 +41,7 @@ tags:
 </div>
 
 <div class="note">
-<p>Values added to the global scope of a content script with <code>let foo</code> or <code>window.foo = "bar"</code> may disappear due to bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1408996">1408996</a>.</p>
+<p><strong>Note:</strong> Values added to the global scope of a content script with <code>let foo</code> or <code>window.foo = "bar"</code> may disappear due to bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1408996">1408996</a>.</p>
 </div>
 
 <h2 id="Loading_content_scripts">Loading content scripts</h2>
@@ -76,8 +76,7 @@ tags:
 <p>Using method (3), you can also load scripts into pages packaged with your extension, but you can't load scripts into privileged browser pages (like "<code>about:debugging</code>" or "<code>about:addons</code>").</p>
 
 <div class="note notecard">
-  <h4>Note</h4>
-  <p><a href="/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading">Dynamic JS module imports</a> are now working in content scripts. For more details, see {{bug(1536094)}}.
+  <p><strong>Note:</strong> <a href="/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading">Dynamic JS module imports</a> are now working in content scripts. For more details, see {{bug(1536094)}}.
   Only URLs with the <em>moz-extension</em> scheme are allowed, which excludes data URLs ({{bug(1587336)}}).</p>
   </div>
 
@@ -166,50 +165,46 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
 
 <p>In addition to the standard DOM APIs, content scripts can use the following WebExtension APIs:</p>
 
-<dl>
- <dt>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension">extension</a></code>:</dt>
- <dd>
- <ul>
+<p><strong>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension">extension</a></code>:</strong></p>
+<ul>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL">getURL()</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext">inIncognitoContext</a></code></li>
- </ul>
- </dd>
- <dt>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime">runtime</a></code>:</dt>
- <dd>
- <ul>
+</ul>
+
+<p><strong>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime">runtime</a></code>:</strong></p>
+<ul>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect">connect()</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getManifest">getManifest()</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL">getURL()</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">onConnect</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">onMessage</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">sendMessage()</a></code></li>
- </ul>
- </dd>
- <dt>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n</a></code>:</dt>
- <dd>
- <ul>
+</ul>
+
+<p><strong>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n</a></code>:</strong></p>
+<ul>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getMessage">getMessage()</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages">getAcceptLanguages()</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage">getUILanguage()</a></code></li>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage">detectLanguage()</a></code></li>
  </ul>
- </dd>
- <dt>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus">menus</a></code>:</dt>
- <dd>
- <ul>
+
+<p><strong>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus">menus</a></code>:</strong></p>
+<ul>
   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement">getTargetElement</a></code></li>
- </ul>
- </dd>
- <dt>Everything from:</dt>
- <dd><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code></dd>
-</dl>
+</ul>
+
+<p><strong>Everything from:</strong></p>
+<ul>
+  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code></li>
+</ul>
 
 <h3 id="XHR_and_Fetch">XHR and Fetch</h3>
 
 <p>Content scripts can make requests using the normal <code><a href="/en-US/docs/Web/API/XMLHttpRequest">window.XMLHttpRequest</a></code> and <code><a href="/en-US/docs/Web/API/Fetch_API">window.fetch()</a></code> APIs.</p>
 
 <div class="notecard note">
-<p>In Firefox, content script requests (for example, using <code><a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch">fetch()</a></code>) happen in the context of an extension, so you must provide an absolute URL to reference page content.</p>
+<p><strong>Note:</strong> In Firefox, content script requests (for example, using <code><a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch">fetch()</a></code>) happen in the context of an extension, so you must provide an absolute URL to reference page content.</p>
 
 <p>In Chrome, these requests happen in context of the page, so they are made to a relative URL.  For example, <code>/api</code> is sent to <code>https://<strong>«</strong><var>current page URL</var><strong>»</strong>/api</code>.</p>
 </div>
@@ -219,13 +214,13 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
 <p>This is accomplished by exposing more privileged XHR and fetch instances in the content script, which has the side-effect of not setting the <code><a href="/en-US/docs/Web/HTTP/Headers/Origin">Origin</a></code> and <code><a href="/en-US/docs/Web/HTTP/Headers/Referer">Referer</a></code> headers like a request from the page itself would; this is often preferable to prevent the request from revealing its cross-origin nature.</p>
 
 <div class="notecard note">
-<p>In Firefox, extensions that need to perform requests that behave as if they were sent by the content itself can use  <code>content.XMLHttpRequest</code> and <code>content.fetch()</code> instead.</p>
+<p><strong>Note:</strong> In Firefox, extensions that need to perform requests that behave as if they were sent by the content itself can use  <code>content.XMLHttpRequest</code> and <code>content.fetch()</code> instead.</p>
 
 <p>For cross-browser extensions, the presence of these methods must be feature-detected.</p>
 </div>
 
 <div class="notecard note">
-<p>In Chrome, starting with version 73, content scripts are subject to the same CORS policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See "<span id="sites-page-title" style="outline: none;"><a href="https://www.chromium.org/Home/chromium-security/extension-content-script-fetches">Changes to Cross-Origin Requests in Chrome Extension Content Scripts</a></span>".</p>
+<p><strong>Note:</strong> In Chrome, starting with version 73, content scripts are subject to the same CORS policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See <a href="https://www.chromium.org/Home/chromium-security/extension-content-script-fetches">Changes to Cross-Origin Requests in Chrome Extension Content Scripts</a>.</p>
 </div>
 
 <h2 id="Communicating_with_background_scripts">Communicating with background scripts</h2>
@@ -413,22 +408,17 @@ browser.browserAction.onClicked.addListener(function() {
 
 <p>The recommended best practices are:</p>
 
-<dl>
- <dt>Use one-off messages when…</dt>
- <dd>
- <ul>
-  <li>Only one response is expected to a message.</li>
-  <li>A small number of scripts listen to receive messages ({{WebExtAPIRef("runtime.onMessage")}} calls).</li>
- </ul>
- </dd>
- <dt>Use connection-based messaging when…</dt>
- <dd>
- <ul>
-  <li>Scripts engage in sessions where multiple messages are exchanged.</li>
-  <li>The extension needs to know about task progress or if a task is interrupted, or wants to interrupt a task initiated using messaging.</li>
- </ul>
- </dd>
-</dl>
+<p><strong>Use one-off messages when…</strong></p>
+<ul>
+<li>Only one response is expected to a message.</li>
+<li>A small number of scripts listen to receive messages ({{WebExtAPIRef("runtime.onMessage")}} calls).</li>
+</ul>
+
+<p><strong>Use connection-based messaging when…</strong></p>
+<ul>
+<li>Scripts engage in sessions where multiple messages are exchanged.</li>
+<li>The extension needs to know about task progress or if a task is interrupted, or wants to interrupt a task initiated using messaging.</li>
+</ul>
 
 <h2 id="Communicating_with_the_web_page">Communicating with the web page</h2>
 
@@ -463,7 +453,7 @@ window.addEventListener("message", function(event) {
 <p>For a complete working example of this, <a href="https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html">visit the demo page on GitHub</a> and follow the instructions.</p>
 
 <div class="warning">
-<p><strong>Be very careful when interacting with untrusted web content in this manner!</strong> Extensions are privileged code which can have powerful capabilities and hostile web pages can easily trick them into accessing those capabilities.</p>
+<p><strong>Warning:</strong> Be very careful when interacting with untrusted web content in this manner! Extensions are privileged code which can have powerful capabilities and hostile web pages can easily trick them into accessing those capabilities.</p>
 
 <p>To give a trivial example, suppose the content script code that receives the message does something like this:</p>
 
@@ -518,27 +508,24 @@ window.postMessage({
   }
 });</pre>
 
-<dl>
- <dt>In Chrome, this produces output like this:</dt>
- <dd>
- <pre>In content script, window.x: 1
+<p>In Chrome, this produces output like this:</p>
+
+<pre>In content script, window.x: 1
 In content script, window.y: 2
 In page script, window.x: undefined
 In page script, window.y: undefined</pre>
- </dd>
- <dt>In Firefox, this produces output like this:</dt>
- <dd>
- <pre>In content script, window.x: undefined
+
+<p>In Firefox, this produces output like this:</p>
+
+<pre>In content script, window.x: undefined
 In content script, window.y: 2
 In page script, window.x: 1
 In page script, window.y: undefined</pre>
- </dd>
-</dl>
 
 <p>The same applies to <code><a href="/en-US/docs/Web/API/setTimeout">setTimeout()</a></code>, <code><a href="/en-US/docs/Web/API/setInterval">setInterval()</a></code>, and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code>.</p>
 
 <div class="notecard warning">
-<p><strong>Be very careful when running code in the context of the page!</strong> </p>
+<p><strong>Warning:</strong> Be very careful when running code in the context of the page!</p>
 
 <p>The page's environment is controlled by potentially malicious web pages, which can redefine objects you interact with to behave in unexpected ways:</p>
 

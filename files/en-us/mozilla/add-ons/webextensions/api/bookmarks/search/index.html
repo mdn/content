@@ -32,27 +32,22 @@ browser-compat: webextensions.api.bookmarks.search
 
 <dl>
  <dt><code>query</code></dt>
- <dd>A {{jsxref("string")}} or {{jsxref("object")}} describing the query to perform.</dd>
  <dd>
- <p>If <code>query</code> is a <strong>string</strong>, it consists of zero or more space-delimited search terms. Each search term matches if it is a substring in the bookmark's URL or title. Matching is case-insensitive. For a bookmark to match the query, all the query's search terms must be matched.</p>
+   <p>A {{jsxref("string")}} or {{jsxref("object")}} describing the query to perform.</p>
+   <p>If <code>query</code> is a <strong>string</strong>, it consists of zero or more space-delimited search terms. Each search term matches if it is a substring in the bookmark's URL or title. Matching is case-insensitive. For a bookmark to match the query, all the query's search terms must be matched.</p>
 
- <p>If <code>query</code> is an <strong>object</strong>, it consists of zero or more of 3 properties: <code>query</code>, <code>title</code>, and <code>url</code>, which are described below. For a bookmark to match the query, all the properties' terms must be matched.</p>
- </dd>
- <dd>
- <dl class="reference-values">
-  <dt><code>query</code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("string")}} specifying one or more terms to match against; the format is identical to the string form of the <code>query</code> parameter. If this isn't a string, an exception is thrown.</dd>
-  <dt><code>url</code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("string")}} that must exactly match the bookmark's URL. Matching is case-insensitive, and trailing slashes are ignored.</dd>
-  <dd>
-  <p>If you pass an invalid URL, the function will throw an exception.</p>
-  </dd>
- </dl>
-
- <dl class="reference-values">
-  <dt><code>title</code> {{optional_inline}}</dt>
-  <dd>A {{jsxref("string")}} that must exactly match the bookmark tree node's title. Matching is case-sensitive.</dd>
- </dl>
+   <p>If <code>query</code> is an <strong>object</strong>, it consists of zero or more of 3 properties: <code>query</code>, <code>title</code>, and <code>url</code>, which are described below. For a bookmark to match the query, all the properties' terms must be matched.</p>
+   <dl>
+    <dt><code>query</code> {{optional_inline}}</dt>
+    <dd>A {{jsxref("string")}} specifying one or more terms to match against; the format is identical to the string form of the <code>query</code> parameter. If this isn't a string, an exception is thrown.</dd>
+    <dt><code>url</code> {{optional_inline}}</dt>
+    <dd>
+      <p>A {{jsxref("string")}} that must exactly match the bookmark's URL. Matching is case-insensitive, and trailing slashes are ignored.</p>
+      <p>If you pass an invalid URL, the function will throw an exception.</p>
+    </dd>
+    <dt><code>title</code> {{optional_inline}}</dt>
+    <dd>A {{jsxref("string")}} that must exactly match the bookmark tree node's title. Matching is case-sensitive.</dd>
+   </dl>
  </dd>
 </dl>
 
@@ -108,9 +103,8 @@ browser.browserAction.onClicked.addListener(checkActiveTab);
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <code><a href="https://developer.chrome.com/extensions/bookmarks#method-search">chrome.bookmarks</a></code> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <code><a href="https://developer.chrome.com/extensions/bookmarks#method-search">chrome.bookmarks</a></code> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

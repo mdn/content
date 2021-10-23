@@ -34,7 +34,7 @@ tags:
  <li>Implemented the <a href="/en-US/docs/Web/CSS/easing-function#the_frames()_class_of_timing-functions">frames() timing function</a> ({{bug(1248340)}}).</li>
  <li>Implemented the {{cssxref("text-justify")}} property ({{bug(1343512)}}, {{bug("276079")}}).</li>
  <li>[css-grid] {{cssxref("fit-content")}} unexpectedly reserves space for full clamp size in {{cssxref("repeat()")}} ({{bug(1359060)}}).</li>
- <li>The {{cssxref("float")}} / {{cssxref("clear")}} logical values — <code>inline-start</code> and <code>inline-end</code> — which were previously implemented but preffed off in release channels, are now available in all channels by default ({{bug(1253919)}}).</li>
+ <li>The {{cssxref("float")}} / {{cssxref("clear")}} logical values — <code>inline-start</code> and <code>inline-end</code> — which were previously implemented but preffed off in release channels, are now available in all channels by default ({{bug(1253919)}}).</li>
  <li>The <code>layout.css.variables.enabled</code> preference has been removed completely meaning that the <a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS variables</a> feature is enabled all the time and can no longer be disabled ({{bug(1312328)}}).</li>
  <li>Implemented the proprietary {{cssxref("-moz-context-properties")}} property ({{bug(1058040)}}).</li>
  <li>Zero (0) angle value without degree unit is not correctly interpreted in {{cssxref("linear-gradient()")}} ({{bug(1363292)}}).</li>
@@ -65,9 +65,9 @@ tags:
 <h4 id="New_APIs">New APIs</h4>
 
 <ul>
- <li>The <strong><a href="/en-US/docs/Web/API/Background_Tasks_API">Collaborative Scheduling of Background Tasks API</a></strong> (also known as the <strong>Background Tasks API</strong> or the <strong><code>requestIdleCallback</code> API</strong>) is now enabled by default after being available behind a preference since Firefox 53. This API lets you schedule tasks to be executed when the browser determines that there's free time available before the next repaint occurs, so that your code can make use of that time without causing visible performance lag ({{bug(1314959)}}).</li>
- <li>The <strong><a href="/en-US/docs/Web/API/WebVR_API">WebVR 1.1 API</a></strong> is now turned on by default on Windows (and is available on macOS in Nightly). This API exposes virtual reality devices — for example head-mounted displays like the Oculus Rift or HTC Vive — to web apps, enabling developers to translate position and movement information from the display into movement around a 3D scene, and present content into such displays.</li>
- <li>The <strong><a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a></strong> — which provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's <a href="/en-US/docs/Glossary/Viewport">viewport</a> — has been added ({{bug(1321865)}}).</li>
+ <li>The <a href="/en-US/docs/Web/API/Background_Tasks_API">Collaborative Scheduling of Background Tasks API</a> (also known as the <strong>Background Tasks API</strong> or the <code>requestIdleCallback</code> API) is now enabled by default after being available behind a preference since Firefox 53. This API lets you schedule tasks to be executed when the browser determines that there's free time available before the next repaint occurs, so that your code can make use of that time without causing visible performance lag ({{bug(1314959)}}).</li>
+ <li>The <a href="/en-US/docs/Web/API/WebVR_API">WebVR 1.1 API</a> is now turned on by default on Windows (and is available on macOS in Nightly). This API exposes virtual reality devices — for example head-mounted displays like the Oculus Rift or HTC Vive — to web apps, enabling developers to translate position and movement information from the display into movement around a 3D scene, and present content into such displays.</li>
+ <li>The <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> — which provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's <a href="/en-US/docs/Glossary/Viewport">viewport</a> — has been added ({{bug(1321865)}}).</li>
 </ul>
 
 <h4 id="DOM">DOM</h4>
@@ -85,7 +85,7 @@ tags:
 <ul>
  <li>The event types supported by the {{domxref("Document.createEvent()")}} method have been updated as per the latest DOM spec ({{bug(1251198)}}).</li>
  <li>The {{domxref("MessageEvent.origin")}} property value is now of type {{domxref("USVString")}}, not {{domxref("DOMString")}}, and the {{domxref("MessageEvent.source")}} property now takes a <code>MessageEventSource</code> value (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) ({{bug(1311324)}}).</li>
- <li>The pinch-to-zoom gesture has now been mapped to the {{event("wheel")}} event plus the + <kbd>Ctrl</kbd> key. This mapping was implemented to allow developers to implement simple zooming functionality using the pinch-to-zoom gesture on mobile screens/trackpads (mousewheel + <kbd>Ctrl</kbd> commonly zooms) ({{bug(1052253)}}).</li>
+ <li>The pinch-to-zoom gesture has now been mapped to the {{event("wheel")}} event plus the + <code>Ctrl</code> key. This mapping was implemented to allow developers to implement simple zooming functionality using the pinch-to-zoom gesture on mobile screens/trackpads (mousewheel + <code>Ctrl</code> commonly zooms) ({{bug(1052253)}}).</li>
 </ul>
 
 <h4 id="Selection_API">Selection API</h4>
@@ -203,7 +203,7 @@ tags:
  <li>The proprietary Firefox OS Device Storage API has been removed from the platform ({{bug(1299500)}}).</li>
  <li>The <code>aShowDialog</code> parameter of the non-standard {{domxref("Window.find()")}} method (which could be specified to open up a "Find" dialog in the browser) has been removed ({{bug(1348409)}}).</li>
  <li>The <code>HTMLFormElement.requestAutoComplete()</code> method has been removed (see {{domxref("HTMLFormElement")}}) ({{bug(1270740)}}).</li>
- <li>The non-standard, Mozilla-specific, WebRTC offer options <code>mozDontOfferDataChannel</code> and <code>mozBundleOnly</code> have been removed from the <code><a href="/en-US/docs/Web/API/RTCPeerConnection/createOffer#rtcofferoptions_dictionary">RTCOfferOptions</a></code> dictionary and are no longer supported by {{domxref("RTCPeerConnection.createOffer()")}} ({{bug(1196974)}}).</li>
+ <li>The non-standard, Mozilla-specific, WebRTC offer options <code>mozDontOfferDataChannel</code> and <code>mozBundleOnly</code> have been removed from the <code>RTCOfferOptions</code> dictionary and are no longer supported by {{domxref("RTCPeerConnection.createOffer()")}} ({{bug(1196974)}}).</li>
  <li>Support for the proprietary Firefox OS <a href="/en-US/docs/Archive/B2G_OS/API/Audio_Channels_API">Audio Channels API</a> has been removed from {{domxref("HTMLMediaElement")}} and {{domxref("AudioContext")}} ({{bug(1358061)}}).</li>
 </ul>
 

@@ -34,9 +34,8 @@ Void.
 
 ### Exceptions
 
-| **Exception**                                | **Description**                      |
-| -------------------------------------------- | ------------------------------------ |
-| {{exception("InvalidStateError")}} | The transaction state is not active. |
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the transaction state is not active.
 
 ## Examples
 

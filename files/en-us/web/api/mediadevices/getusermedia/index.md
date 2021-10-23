@@ -17,7 +17,7 @@ tags:
   - getusermedia
 browser-compat: api.MediaDevices.getUserMedia
 ---
-{{APIRef("Media Capture and Streams")}}
+{{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
 The
 {{domxref("MediaDevices")}}**`.getUserMedia()`** method
@@ -31,7 +31,7 @@ like a microphone, A/D converter, or the like), and possibly other track types.
 
 It returns a {{jsxref("Promise")}} that resolves to a {{domxref("MediaStream")}}
 object. If the user denies permission, or matching media is not available, then the
-promise is rejected with `NotAllowedError` or `NotFoundError`
+promise is rejected with `NotAllowedError` or `NotFoundError` {{domxref("DOMException")}}
 respectively.
 
 > **Note:** It's possible for the returned promise to _neither_
@@ -89,7 +89,7 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
     `audio`, describing the media types requested. Either or both must be
     specified. If the browser cannot find all media tracks with the specified types that
     meet the constraints given, then the returned promise is rejected with
-    `NotFoundError`.
+    `NotFoundError` {{domxref("DOMException")}}.
 
     The following requests both audio and video without any specific requirements:
 
@@ -202,16 +202,12 @@ object when the requested media has successfully been obtained.
 
 ### Exceptions
 
-Rejections of the returned promise are made by passing a {{domxref("DOMException")}}
-error object to the promise's failure handler. Possible errors are:
-
-- `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : Although the user and operating system both granted access to the hardware device,
-    and no hardware issues occurred that would cause a `NotReadableError`, some
+    and no hardware issues occurred that would cause a `NotReadableError` {{domxref("DOMException")}}, throw if some
     problem occurred which prevented the device from being used.
-- `NotAllowedError`
-
-  - : One or more of the requested source devices cannot be used at this time. This will
+- `NotAllowedError`  {{domxref("DOMException")}}
+  - : Thrown if one or more of the requested source devices cannot be used at this time. This will
     happen if the browsing context is insecure (that is, the page was loaded using HTTP
     rather than HTTPS). It also happens if the user has specified that the current
     browsing instance is not permitted access to the device, the user has denied access
@@ -221,16 +217,14 @@ error object to the promise's failure handler. Possible errors are:
 
     > **Note:** Older versions of the specification used `SecurityError`
     > for this instead; `SecurityError` has taken on a new meaning.
-
-- `NotFoundError`
-  - : No media tracks of the type specified were found that satisfy the given constraints.
-- `NotReadableError`
-  - : Although the user granted permission to use the matching devices, a hardware error
+- `NotFoundError`  {{domxref("DOMException")}}
+  - : Thrown if no media tracks of the type specified were found that satisfy the given constraints.
+- `NotReadableError`  {{domxref("DOMException")}}
+  - : Thrown if, although the user granted permission to use the matching devices, a hardware error
     occurred at the operating system, browser, or Web page level which prevented access to
     the device.
-- `OverconstrainedError`
-
-  - : The specified constraints resulted in no candidate devices which met the criteria
+- `OverconstrainedError`  {{domxref("DOMException")}}
+  - : Thrown if the specified constraints resulted in no candidate devices which met the criteria
     requested. The error is an object of type `OverconstrainedError`, and has a
     `constraint` property whose string value is the name of a constraint which
     was impossible to meet, and a `message` property containing a
@@ -239,13 +233,12 @@ error object to the promise's failure handler. Possible errors are:
     > **Note:** Because this error can occur even when the user has not yet granted
     > permission to use the underlying device, it can potentially be used as a
     > fingerprinting surface.
-
-- `SecurityError`
-  - : User media support is disabled on the {{domxref("Document")}} on which
+- `SecurityError`  {{domxref("DOMException")}}
+  - : Thrown if user media support is disabled on the {{domxref("Document")}} on which
     `getUserMedia()` was called. The mechanism by which user media support is
     enabled and disabled is left up to the individual user agent.
-- `TypeError`
-  - : The list of constraints specified is empty, or has all constraints set to
+- `TypeError`  {{domxref("DOMException")}}
+  - : Thrown if the list of constraints specified is empty, or has all constraints set to
     `false`. This can also happen if you try to call
     `getUserMedia()` in an insecure context, since
     {{domxref("navigator.mediaDevices")}} is `undefined` in an insecure

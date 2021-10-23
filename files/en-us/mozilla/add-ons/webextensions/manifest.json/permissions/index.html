@@ -15,7 +15,7 @@ browser-compat: webextensions.manifest.permissions
 <table class="fullwidth-table standard-table">
  <tbody>
   <tr>
-   <th scope="row" style="width: 30%;">Type</th>
+   <th scope="row">Type</th>
    <td><code>Array</code></td>
   </tr>
   <tr>
@@ -25,7 +25,7 @@ browser-compat: webextensions.manifest.permissions
   <tr>
    <th scope="row">Example</th>
    <td>
-    <pre class="brush: json; no-line-numbers">
+    <pre class="brush: json;">
 "permissions": [
   "*://developer.mozilla.org/*",
   "webRequest"
@@ -197,15 +197,15 @@ browser-compat: webextensions.manifest.permissions
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: json no-line-numbers"> "permissions": ["*://developer.mozilla.org/*"]</pre>
+<pre class="brush: json"> "permissions": ["*://developer.mozilla.org/*"]</pre>
 
 <p>Request privileged access to pages under <code>developer.mozilla.org</code>.</p>
 
-<pre class="brush: json no-line-numbers">  "permissions": ["tabs"]</pre>
+<pre class="brush: json">  "permissions": ["tabs"]</pre>
 
 <p>Request access to the privileged pieces of the <code>tabs</code> API.</p>
 
-<pre class="brush: json no-line-numbers">  "permissions": ["*://developer.mozilla.org/*", "tabs"]</pre>
+<pre class="brush: json">  "permissions": ["*://developer.mozilla.org/*", "tabs"]</pre>
 
 <p>Request both of the above permissions.</p>
 

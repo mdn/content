@@ -44,8 +44,8 @@ key based on the specified options.
 
 ### Exceptions
 
-- `NotSupportedError`
-  - : The normalized form of `keygenAlgorithm` specifies an algorithm or
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the normalized form of `keygenAlgorithm` specifies an algorithm or
     algorithm settings that the browser doesn't support, or which it does not allow for
     use with an {{domxref("RTCPeerConnection")}}.
 
@@ -55,15 +55,14 @@ dictionary, the error that occurs during that conversion will be thrown.
 
 ## Description
 
-If a string is specified, it must be a [Web
-Crypto API](/en-US/docs/Web/API/Web_Crypto_API)-compatible algorithm name string. Alternatively, you can provide
+If a string is specified, it must be a [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)-compatible algorithm name string. Alternatively, you can provide
 specific details for the algorithm's configuration by providing an object based on one
 of the Web Crypto API's {{domxref("Algorithm")}} class's subclasses.
 
 ### Standard configurations
 
 All browsers are required to support the following two configurations. It's entirely
-possible that a browser's *default* settings may be different, but these are
+possible that a browser's *default* settings may be different, but these are
 always supported.
 
 #### RSASSA-PKCS1-v1_5
@@ -102,12 +101,12 @@ modulus length of 2048.
 
 ```js
 RTCPeerConnection.generateCertificate({
-    name: 'RSASSA-PKCS1-v1_5',
-    hash: 'SHA-256',
-    modulusLength: 2048,
-    publicExponent: new Uint8Array([1, 0, 1])
+    name: 'RSASSA-PKCS1-v1_5',
+    hash: 'SHA-256',
+    modulusLength: 2048,
+    publicExponent: new Uint8Array([1, 0, 1])
 }).then(function(cert) {
-  var pc = new RTCPeerConnection({certificates: [cert]});
+  var pc = new RTCPeerConnection({certificates: [cert]});
 });
 ```
 
@@ -132,8 +131,7 @@ RTCPeerConnection.generateCertificate("ECDSA");
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
-- [Web site
-  security](/en-US/docs/Learn/Server-side/First_steps/Website_security)
+- [Web site security](/en-US/docs/Learn/Server-side/First_steps/Website_security)
 - [Web security](/en-US/docs/Web/Security)
 - {{Glossary("Symmetric-key cryptography")}}
-- [`Window.crypto`](/en-US/docs/Web/API/Window/crypto)
+- [`crypto`](/en-US/docs/Web/API/crypto)

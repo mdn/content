@@ -23,13 +23,7 @@ that this is better supported than {{domxref("ResizeObserverEntry.borderBoxSize"
 implementation of the Resize Observer API, is still included in the spec for web compat
 reasons, and may be deprecated in future versions.
 
-## Syntax
-
-```js
-var contentRect = resizeObserverEntry.contentRect;
-```
-
-### Value
+## Value
 
 A {{domxref('DOMRectReadOnly')}} object containing the new size of the element
 indicated by the {{domxref("ResizeObserverEntry.target", "target")}} property.

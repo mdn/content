@@ -110,14 +110,14 @@ slug: Tools/about:debugging/about:debugging_before_Firefox_68
 
 <p>In Firefox 49 onwards, a Tabs page is available in <code>about:debugging</code> — this provides a complete list of all the debuggable tabs open in the current Firefox instance.</p>
 
-<p><img alt="" src="about-debugging-tabs.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="about-debugging-tabs.png"></p>
 
 <p>Each tab entry has a <em>Debug</em> button next to it — when clicked, this will open up a toolbox specific to that tab, allowing you to debug that tab's contents.</p>
 
-<p><img alt="" src="about-debugging-tabs-toolbox.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="about-debugging-tabs-toolbox.png"></p>
 
 <div class="note">
-<p>Note that this feature isn't that immediately useful to debugging desktop tabs — you can open up a toolbox to debug a tab easily enough already — but this will become far more useful when <code>about:debugging</code> starts to support remote debugging, and this page can begin to list tabs available for debugging on mobile device browsers, simulators, etc. See {{bug(1212802)}} for the latest on this work.</p>
+<p><strong>Note:</strong>Note that this feature isn't that immediately useful to debugging desktop tabs — you can open up a toolbox to debug a tab easily enough already — but this will become far more useful when <code>about:debugging</code> starts to support remote debugging, and this page can begin to list tabs available for debugging on mobile device browsers, simulators, etc. See {{bug(1212802)}} for the latest on this work.</p>
 </div>
 
 <h2 id="Workers">Workers</h2>
@@ -136,7 +136,7 @@ slug: Tools/about:debugging/about:debugging_before_Firefox_68
 
 <h3 id="Service_worker_state">Service worker state</h3>
 
-<p>From Firefox 52, the list of service workers shows the state of the service worker in its <a href="https://developers.google.com/web/fundamentals/instant-and-offline/service-worker/lifecycle">lifecycle</a>. Three states are distinguished:</p>
+<p>From Firefox 52, the list of service workers shows the state of the service worker in its <a href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle">lifecycle</a>. Three states are distinguished:</p>
 
 <ul>
 	<li><em>"Registering"</em>: this covers all states between the service worker's initial registration, and its assuming control of pages. That is, it subsumes the "installing", "activating", and "waiting" states.</li>

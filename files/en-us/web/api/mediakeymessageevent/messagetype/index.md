@@ -13,7 +13,7 @@ browser-compat: api.MediaKeyMessageEvent.messageType
 ---
 {{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 
-The **MediaKeyMessageEvent.messageType** read-only property indicates the
+The **`MediaKeyMessageEvent.messageType`** read-only property indicates the
 type of message. It may be one of `license-request`,
 `license-renewal`, `license-release`, or
 `individualization-request`.

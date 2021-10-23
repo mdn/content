@@ -39,10 +39,10 @@ reduce(callbackFn)
 reduce(callbackFn, initialValue)
 
 // Inline callback function
-reduce(function callbackFn(previousValue, currentValue) { ... })
-reduce(function callbackFn(previousValue, currentValue, currentIndex) { ... })
-reduce(function callbackFn(previousValue, currentValue, currentIndex, array){ ... })
-reduce(function callbackFn(previousValue, currentValue, currentIndex, array) { ... }, initialValue)
+reduce(function(previousValue, currentValue) { ... })
+reduce(function(previousValue, currentValue, currentIndex) { ... })
+reduce(function(previousValue, currentValue, currentIndex, array) { ... })
+reduce(function(previousValue, currentValue, currentIndex, array) { ... }, initialValue)
 ```
 
 ### Parameters
@@ -443,7 +443,7 @@ console.log(myArrayWithNoDuplicates)
 
 Using {{jsxref("Array.filter()")}} then {{jsxref("Array.map()")}} traverses the array
 twice, but you can achieve the same effect while traversing only once with
-{{jsxref("Array.reduce()")}}, thereby being more efficient. (If you like for loops, you
+{{jsxref("Array.reduce()")}}, thereby being more efficient. (If you like `for` loops, you
 can filter and map while traversing once with {{jsxref("Array.forEach()")}}).
 
 ```js

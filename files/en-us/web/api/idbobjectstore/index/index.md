@@ -16,7 +16,7 @@ browser-compat: api.IDBObjectStore.index
 {{ APIRef("IndexedDB") }}
 
 The **`index()`** method of the {{domxref("IDBObjectStore")}}
-interface opens a named index in the current object store, after which it can be used
+interface opens a named index in the current object store, after which it can be used
 to, for example, return a series of records sorted by that index using a cursor.
 
 {{AvailableInWorkers}}
@@ -24,7 +24,7 @@ to, for example, return a series of records sorted by that index using a cursor.
 ## Syntax
 
 ```js
-var index = objectStore.index(name);
+var index = objectStore.index(name);
 ```
 
 ### Parameters
@@ -34,22 +34,20 @@ var index = objectStore.index(name);
 
 ### Return value
 
-An {{domxref("IDBIndex")}} object for accessing the index.
+An {{domxref("IDBIndex")}} object for accessing the index.
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of one of the following types:
-
-| Exception           | Description                                                                                     |
-| ------------------- | ----------------------------------------------------------------------------------------------- |
-| `InvalidStateError` | The source object store has been deleted, or the transaction for the object store has finished. |
-| `NotFoundError`     | There is no index with the given name (case-sensitive) in the database.                         |
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the source object store has been deleted, or the transaction for the object store has finished.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if there is no index with the given name (case-sensitive) in the database.
 
 ## Example
 
 In the following example we open a transaction and an object store, then get the index
 `lName` from a simple contacts database. We then open a basic cursor on the
-index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a cursor
+index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a cursor
 directly on an `ObjectStore` using {{domxref("IDBObjectStore.openCursor")}}
 except that the returned records are sorted based on the index, not the primary key.
 

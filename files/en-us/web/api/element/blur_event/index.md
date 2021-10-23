@@ -125,3 +125,4 @@ The value of {{DOMxRef("Document.activeElement")}} varies across browsers while 
 
 - Related events: {{domxref("Element/focus_event", "focus")}}, {{domxref("Element/focusin_event", "focusin")}}, {{domxref("Element/focusout_event", "focusout")}}
 - This event on `Window` targets: {{domxref("Window/blur_event", "blur")}} event
+- [Focusing: focus/blur](https://javascript.info/focus-blur)

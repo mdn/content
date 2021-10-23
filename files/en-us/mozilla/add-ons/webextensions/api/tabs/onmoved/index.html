@@ -46,12 +46,12 @@ browser.tabs.onMoved.hasListener(listener)
  <dd>
  <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>tabId</code></dt>
   <dd><code>integer</code>. ID of the tab the user moved.</dd>
  </dl>
 
- <dl class="reference-values">
+ <dl>
   <dt><code>moveInfo</code></dt>
   <dd><a href="#moveinfo"><code>object</code></a>. Information about the move.</dd>
  </dl>
@@ -62,7 +62,7 @@ browser.tabs.onMoved.hasListener(listener)
 
 <h3 id="moveInfo">moveInfo</h3>
 
-<dl class="reference-values">
+<dl>
  <dt><code>windowId</code></dt>
  <dd><code>integer</code>. ID of this tab's window.</dd>
  <dt><code>fromIndex</code></dt>
@@ -89,9 +89,8 @@ browser.tabs.onMoved.addListener(handleMoved);</pre>
 
 <p>{{Compat}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#event-onMoved"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#event-onMoved"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

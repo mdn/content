@@ -10,7 +10,7 @@ tags:
 
 <p><span class="seoSummary">You can include HTML pages in your extension to provide forms, help, or any other content your extension needs.</span></p>
 
-<p><img alt="Example of a simple bundled page displayed as a detached panel." src="bundled_page_as_panel_small.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="Example of a simple bundled page displayed as a detached panel." src="bundled_page_as_panel_small.png"></p>
 
 <p>These pages also get access to the same privileged JavaScript APIs that are available to your extension's background scripts. However, they are in their own tab, with their own JavaScript event queue, their own globals, etc.</p>
 
@@ -52,7 +52,7 @@ let creating = browser.windows.create(createData);</pre>
 
 <p>By default, pages you open in this way will be stored in the user's history, just like normal web pages. If you don't want to have this behavior, use {{WebExtAPIRef("history.deleteUrl()")}} to remove the browser's record:</p>
 
-<pre class="brush: js" id="ct-4">function onVisited(historyItem) {
+<pre class="brush: js">function onVisited(historyItem) {
   if (historyItem.url == browser.extension.getURL(myPage)) {
     browser.history.deleteUrl({url: historyItem.url});
   }
@@ -64,7 +64,7 @@ browser.history.onVisited.addListener(onVisited);</pre>
 
 <h2 id="Web_page_design">Web page design</h2>
 
-<p>For details on how to design your web page's to match the style of Firefox, see the <a class="grey-90 no-underline hover-no-underline" href="https://design.firefox.com/photon/index.html">Photon Design System</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">browser styles</a> documentation.</p>
+<p>For details on how to design your web page's to match the style of Firefox, see the <a href="https://design.firefox.com/photon/index.html">Photon Design System</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">browser styles</a> documentation.</p>
 
 <h2 id="Examples">Examples</h2>
 

@@ -25,7 +25,7 @@ A boolean value, true if the element is a candidate for constraint validation.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the element does not have its `formAssociated` property set to `true`.
 
 ## Examples

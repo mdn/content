@@ -14,7 +14,7 @@ tags:
 > - [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
 > - [WebKit CSS Extensions](/en-US/docs/Web/CSS/Webkit_Extensions)
 
-This list includes proprietary extensions to CSS in different browser engines which are not experimental implementations of features being standardized (see [Draft Implementations of CSS Features](/en-US/docs/CSS/Draft_Implementations_of_CSS_Features) for a list of these).
+This list includes proprietary extensions to CSS in different browser engines which are not experimental implementations of features being standardized (see [Draft Implementations of CSS Features](/en-US/docs/Web/CSS/Draft_Implementations_of_CSS_Features) for a list of these).
 
 ## Gecko
 

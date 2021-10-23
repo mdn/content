@@ -12,7 +12,7 @@ browser-compat: css.properties.aspect-ratio
 ---
 {{CSSRef}}
 
-The **`aspect-ratio`**  [CSS](/en-US/docs/CSS) property sets a **preferred aspect ratio** for the box, which will be used in the calculation of auto sizes and some other layout functions.
+The **`aspect-ratio`**  [CSS](/en-US/docs/Web/CSS) property sets a **preferred aspect ratio** for the box, which will be used in the calculation of auto sizes and some other layout functions.
 
 ```css
 aspect-ratio: 1 / 1;
@@ -27,7 +27,7 @@ aspect-ratio: unset;
 
 ### Values
 
-- {{cssxref("&lt;auto&gt;")}}
+- `auto`
   - : [Replaced elements](/en-US/docs/Web/CSS/Replaced_element) with an intrinsic aspect ratio use _that_ aspect ratio, otherwise the box has no preferred aspect ratio. Size calculations involving intrinsic aspect ratio always work with the content box dimensions.
 - {{cssxref("&lt;ratio&gt;")}}
   - : The box’s preferred aspect ratio is the specified ratio of `width` / `height`. If `height` and the preceding slash character are omitted, `height` defaults to `1`. Size calculations involving preferred aspect ratio work with the dimensions of the box specified by `box-sizing`.
@@ -76,3 +76,4 @@ You can read more about this feature in [Setting Height And Width On Images Is I
 
 - [Mapping the width and height attributes of media container elements to their aspect-ratio](/en-US/docs/Web/Media/images/aspect_ratio_mapping)
 - [Designing an aspect ratio unit for CSS](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
+- [Setting Height And Width On Images Is Important Again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)

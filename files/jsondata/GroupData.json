@@ -353,7 +353,6 @@
         "KeyboardEvent",
         "MouseEvent",
         "MouseScrollEvent",
-        "MouseWheelEvent",
         "MutationEvent",
         "ProgressEvent",
         "UIEvent",
@@ -407,8 +406,7 @@
         "MediaKeys",
         "MediaKeySession",
         "MediaKeyStatusMap",
-        "MediaKeySystemAccess",
-        "MediaKeySystemConfiguration"
+        "MediaKeySystemAccess"
       ],
       "methods": [
         "Navigator.requestMediaKeySystemAccess()",
@@ -525,19 +523,6 @@
         "Element: fullscreenerror"
       ]
     },
-    "Frame Timing API": {
-      "overview": ["Frame Timing API"],
-      "guides": ["/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API"],
-      "interfaces": [
-        "Performance",
-        "PerformanceEntry",
-        "PerformanceFrameTiming",
-        "PerformanceObserver"
-      ],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
     "Gamepad API": {
       "overview": ["Gamepad API"],
       "guides": [
@@ -555,7 +540,6 @@
     "Geolocation API": {
       "overview": ["Geolocation API"],
       "guides": ["/docs/Web/API/Geolocation_API/Using_the_Geolocation_API"],
-      "dictionaries": ["PositionOptions"],
       "interfaces": [
         "Geolocation",
         "GeolocationCoordinates",
@@ -864,8 +848,7 @@
       "interfaces": [
         "MediaCapabilities",
         "ScreenLuminance",
-        "Screen",
-        "MediaCapabilitiesInfo"
+        "Screen"
       ],
       "methods": [
         "mediaCapabilities.decodingInfo()",
@@ -930,9 +913,7 @@
         "MediaSource",
         "SourceBuffer",
         "SourceBufferList",
-        "VideoPlaybackQuality",
-        "TrackDefault",
-        "TrackDefaultList"
+        "VideoPlaybackQuality"
       ],
       "methods": [
         "HTMLVideoElement.getVideoPlaybackQuality()",
@@ -995,8 +976,6 @@
       ],
       "dictionaries": [
         "AddressErrors",
-        "BasicCardRequest",
-        "BasicCardResponse",
         "PaymentMethodData",
         "PaymentCurrencyAmount",
         "PaymentDetailsModifier",
@@ -1026,7 +1005,6 @@
       "interfaces": [
         "Performance",
         "PerformanceEntry",
-        "PerformanceFrameTiming",
         "PerformanceLongTaskTiming",
         "PerformanceMark",
         "PerformanceMeasure",
@@ -1312,7 +1290,7 @@
     },
     "Storage": {
       "overview": ["Storage API"],
-      "interfaces": ["StorageManager", "StorageEstimate"],
+      "interfaces": ["StorageManager"],
       "methods": [],
       "properties": ["Navigator.storage", "WorkerNavigator.storage"],
       "events": []
@@ -1536,6 +1514,13 @@
       "properties": [],
       "events": []
     },
+    "URL Pattern API": {
+      "overview": ["URL Pattern API"],
+      "interfaces": ["URLPattern"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "User Timing API": {
       "interfaces": [
         "Performance",
@@ -1575,7 +1560,6 @@
         "AnimationTimeline",
         "AnimationPlaybackEvent",
         "DocumentTimeline",
-        "EffectTiming",
         "KeyframeEffect"
       ],
       "methods": ["Document.getAnimations()", "Element.animate()"],
@@ -1694,7 +1678,7 @@
         "AudioData",
         "AudioDecoder",
         "AudioEncoder",
-        "AudioEncoderChunk",
+        "EncodedAudioChunk",
         "EncodedVideoChunk",
         "ImageDecoder",
         "ImageTrack",
@@ -1909,12 +1893,8 @@
         "RTCErrorEvent"
       ],
       "dictionaries": [
-        "RTCConfiguration",
         "RTCOAuthCredential",
         "RTCIceServer",
-        "RTCOfferAnswerOptions",
-        "RTCOfferOptions",
-        "RTCAnswerOptions",
         "RTCSessionDescriptionInit",
         "RTCIceCandidateInit",
         "RTCPeerConnectionIceEventInit",

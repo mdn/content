@@ -2,31 +2,21 @@
 title: Event.target
 slug: Web/API/Event/target
 tags:
-  - API
-  - DOM
-  - Event
   - Property
   - Reference
-  - delegation
-  - target
+  - Read-only
 browser-compat: api.Event.target
 ---
 {{ApiRef("DOM")}}
 
-The **`target`** property of the
+The read-only **`target`** property of the
 {{domxref("Event")}} interface is a reference to the object onto which the event was
 dispatched. It is different from {{domxref("Event.currentTarget")}} when the event
 handler is called during the bubbling or capturing phase of the event.
 
-## Syntax
+## Value
 
-```js
-const theTarget = someEvent.target;
-```
-
-### Value
-
-{{domxref("EventTarget")}}
+The associated {{domxref("EventTarget")}}.
 
 ## Example
 
@@ -64,5 +54,4 @@ ul.addEventListener('click', hide, false);
 
 ## See also
 
-- [Comparison of Event
-  Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)

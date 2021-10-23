@@ -746,10 +746,10 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` s
 ```
 
 - UnicodeBinaryPropertyName
-  - : The name of a [binary property](https://tc39.es/ecma262/#table-binary-unicode-properties). E.g.: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property), [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacritic`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`White_space`](https://unicode.org/reports/tr44/#White_Space), etc. See [Unicode Data PropList.txt ](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt)for more info.
+  - : The name of a [binary property](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties). E.g.: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property), [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacritic`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`White_space`](https://unicode.org/reports/tr44/#White_Space), etc. See [Unicode Data PropList.txt ](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt)for more info.
 - UnicodePropertyName
 
-  - : The name of a [non-binary](https://tc39.es/ecma262/#table-nonbinary-unicode-properties) property:
+  - : The name of a [non-binary](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties) property:
 
     - [General_Category](https://unicode.org/reports/tr18/#General_Category_Property) (`gc`)
     - [Script](https://unicode.org/reports/tr24/#Script) (`sc`)

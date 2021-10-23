@@ -29,16 +29,18 @@ browser-compat: webextensions.api.i18n.getMessage
 
 <dl>
  <dt><code>messageName</code></dt>
- <dd><code>string</code>. The name of the message, as specified in the messages.json file. If the message can't be found in messages.json:</dd>
  <dd>
- <ul>
-  <li>Firefox returns "" and logs an error.</li>
-  <li>Chrome returns "" and does not log an error.</li>
- </ul>
+   <p><code>string</code>. The name of the message, as specified in the messages.json file. If the message can't be found in messages.json:</p>
+   <ul>
+    <li>Firefox returns "" and logs an error.</li>
+    <li>Chrome returns "" and does not log an error.</li>
+   </ul>
  </dd>
  <dt><code>substitutions</code>{{optional_inline}}</dt>
- <dd><code>string</code> or <code>array</code> of <code>string</code>. A single substitution string, or an array of substitution strings.</dd>
- <dd>In Chrome, if you supply more than 9 substitution strings, <code>getMessage()</code> will return <code>undefined</code>.</dd>
+ <dd>
+   <p><code>string</code> or <code>array</code> of <code>string</code>. A single substitution string, or an array of substitution strings.</p>
+   <p>In Chrome, if you supply more than 9 substitution strings, <code>getMessage()</code> will return <code>undefined</code>.</p>
+ </dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
@@ -78,9 +80,8 @@ console.log(message);
 
 <p>{{WebExtExamples}}</p>
 
-<div class="note"><strong>Acknowledgements</strong>
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/i18n#method-getMessage"><code>chrome.i18n</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json"><code>i18n.json</code></a> in the Chromium code.</p>
+<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/i18n#method-getMessage"><code>chrome.i18n</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json"><code>i18n.json</code></a> in the Chromium code.</p>
 
 <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>

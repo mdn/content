@@ -8,7 +8,7 @@ tags:
   - Property
 browser-compat: api.NDEFReader.onreading
 ---
-{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 The `onreading` property of the {{DOMxRef("NDEFReader")}} interface is called whenever a new reading is available from compatible NFC devices, e.g. NFC tags supporting NDEF, when these devices are within the reader's magnetic induction field.
 
