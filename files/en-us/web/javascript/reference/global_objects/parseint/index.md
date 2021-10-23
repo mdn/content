@@ -46,7 +46,7 @@ An integer parsed from the given `string`.
 
 Or {{jsxref("NaN")}} when
 
-- the `radix` is smaller than `2` or bigger than
+- the `radix` modulo 32 is smaller than `2` or bigger than
   `36`, or
 - the first non-whitespace character cannot be converted to a number.
 
