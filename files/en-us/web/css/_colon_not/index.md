@@ -42,6 +42,7 @@ There are several unusual effects and outcomes when using `:not()` that you shou
 - This pseudo-class can increase the [specificity](/en-US/docs/Web/CSS/Specificity) of a rule. For example, `#foo:not(#bar)` will match the same element as the simpler `#foo`, but has a higher specificity.
 - `:not(.foo)` will match anything that isn't `.foo`, _including {{HTMLElement("html")}} and {{HTMLElement("body")}}._
 - This selector only applies to one element; you cannot use it to exclude all ancestors. For instance, `body :not(table) a` will still apply to links inside of a table, since {{HTMLElement("tr")}} will match with the `:not()` part of the selector.
+- The descendant combinator is not supported. So, if you want to select all `foo` elements except those that are descendants of `bar` elements, you **cannot** do that with `foo:not(bar foo)`.
 - Using two selectors at the same time is not yet supported in all browsers. Example: `:not(.foo, .bar)`. For wider support you could use, `:not(.foo):not(.bar)`
 
 ## Examples
