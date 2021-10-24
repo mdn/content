@@ -13,51 +13,50 @@ tags:
   - getBadgeBackgroundColor
 browser-compat: webextensions.api.browserAction.getBadgeBackgroundColor
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Gets the background color of the browser action's badge.</p>
+Gets the background color of the browser action's badge.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.browserAction.getBadgeBackgroundColor(
+```js
+browser.browserAction.getBadgeBackgroundColor(
   details // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p>An object with the following properties:</p>
- <dl>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Specifies the tab to get the badge background color from.</dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Specifies the window from which to get the badge background color.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
-<ul>
- <li>If <code>windowId</code> and <code>tabId</code> are both supplied, the function fails.</li>
- <li>If <code>windowId</code> and <code>tabId</code> are both omitted, the global badge background color is returned.</li>
-</ul>
+  - : An object with the following properties:
 
-<h3 id="Return_value">Return value</h3>
+    - `tabId`{{optional_inline}}
+      - : `integer`. Specifies the tab to get the badge background color from.
+    - `windowId`{{optional_inline}}
+      - : `integer`. Specifies the window from which to get the badge background color.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with the retrieved color as a {{WebExtAPIRef('browserAction.ColorArray')}}.</p>
+<!---->
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- If `windowId` and `tabId` are both supplied, the function fails.
+- If `windowId` and `tabId` are both omitted, the global badge background color is returned.
 
-<p>{{Compat}}</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with the retrieved color as a {{WebExtAPIRef('browserAction.ColorArray')}}.
 
-<p>Log the badge's background color:</p>
+## Browser compatibility
 
-<pre class="brush: js">function onGot(color) {
+{{Compat}}
+
+## Examples
+
+Log the badge's background color:
+
+```js
+function onGot(color) {
   console.log(color);
 }
 
@@ -65,18 +64,16 @@ function onFailure(error) {
   console.log(error);
 }
 
-browser.browserAction.getBadgeBackgroundColor({}).then(onGot, onFailure);</pre>
+browser.browserAction.getBadgeBackgroundColor({}).then(onGot, onFailure);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-getBadgeBackgroundColor) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction#method-getBadgeBackgroundColor"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -103,5 +100,4 @@ browser.browserAction.getBadgeBackgroundColor({}).then(onGot, onFailure);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

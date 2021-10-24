@@ -13,106 +13,100 @@ tags:
   - events
 browser-compat: webextensions.api.events.UrlFilter
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Describes various criteria for filtering URLs. If all of the criteria specified in the filter's properties match the URL, then the filter matches. Filters are often provided to API methods in an <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a> of UrlFilters. For example, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation">webNavigation</a> listeners can be added with a filter which is an object with a single <code>url</code> property that is an <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a> of UrlFilters, e.g. <code>{url:[UrlFilter,UrlFilter,...]}</code>. If any filter within the Array of UrlFilters matches, then it is considered a match for the Array. Effectively, the criteria specified within a single filter are AND'ed together, while all of the individual filters within an Array are OR'ed.</p>
+Describes various criteria for filtering URLs. If all of the criteria specified in the filter's properties match the URL, then the filter matches. Filters are often provided to API methods in an [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of UrlFilters. For example, [webNavigation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation) listeners can be added with a filter which is an object with a single `url` property that is an [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of UrlFilters, e.g. `{url:[UrlFilter,UrlFilter,...]}`. If any filter within the Array of UrlFilters matches, then it is considered a match for the Array. Effectively, the criteria specified within a single filter are AND'ed together, while all of the individual filters within an Array are OR'ed.
 
-<p>All criteria are case sensitive.</p>
+All criteria are case sensitive.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<p>However, note that these last two patterns will not match the last component of the hostname, because no implicit dot is added at the end of the hostname. So for example, <code>"org."</code> will match "https://borg.com" but not "https://example.org". To match these patterns, use <code>hostSuffix</code>.</p>
+However, note that these last two patterns will not match the last component of the hostname, because no implicit dot is added at the end of the hostname. So for example, `"org."` will match "https\://borg.com" but not "https\://example.org". To match these patterns, use `hostSuffix`.
 
-<dl>
-	<dt><code>hostContains</code>{{optional_inline}}</dt>
-	<dd><p><code>string</code>. Matches if the <a href="/en-US/docs/Web/API/HTMLAnchorElement/hostname">hostname</a> of the URL (without protocol or port – see <code>schemes</code> and <code>ports</code>) contains the given string.</p>
-	<ul>
-		<li>To test whether a hostname component starts with "foo", use <code>".foo"</code>. This matches "www.foobar.com" and "foo.com", because an implicit dot is added at the beginning of the hostname.</li>
-		<li>To test whether a hostname component ends with "foo", use <code>"foo."</code>.</li>
-		<li>To test whether a hostname component exactly matches "foo", use <code>".foo."</code>.</li>
-	</ul>
-	</dd>
-	<dt><code>hostEquals</code>{{optional_inline}}</dt>
-	<dd><p><code>string</code>. Matches if the hostname of the URL is equal to a specified string.</p>
-	<ul>
-		<li>Example: <code>"www.example.com"</code> matches "http://www.example.com/" and "https://www.example.com/", but not "http://example.com/".</li>
-	</ul>
-	</dd>
-	<dt><code>hostPrefix</code>{{optional_inline}}</dt>
-	<dd><code>string</code>. Matches if the hostname of the URL starts with a specified string.</dd>
-	<dt><code>hostSuffix</code>{{optional_inline}}</dt>
-	<dd><p><code>string</code>. Matches if the hostname of the URL ends with a specified string.</p>
-	<ul>
-		<li>Example: <code>".example.com"</code> matches "http://www.example.com/", but not "http://example.com/".</li>
-		<li>Example: <code>"example.com"</code> matches "http://www.example.com/", and "http://fakeexample.com/".</li>
-	</ul>
-	</dd>
-	<dt><code>pathContains</code>{{optional_inline}}</dt>
-	<dd><code>string</code>. Matches if the path segment of the URL contains a specified string.</dd>
-	<dt><code>pathEquals</code>{{optional_inline}}</dt>
-	<dd><code>string</code>. Matches if the path segment of the URL is equal to a specified string.</dd>
-	<dt><code>pathPrefix</code>{{optional_inline}}</dt>
-	<dd><code>string</code>. Matches if the path segment of the URL starts with a specified string.</dd>
-	<dt><code>pathSuffix</code>{{optional_inline}}</dt>
-	<dd><code>string</code>. Matches if the path segment of the URL ends with a specified string.</dd>
-	<dt><code>queryContains</code>{{optional_inline}}</dt>
-	<dd><code>string</code>. Matches if the query segment of the URL contains a specified string.</dd>
-	<dt><code>queryEquals</code>{{optional_inline}}</dt>
-	<dd><code>string</code>. Matches if the query segment of the URL is equal to a specified string.</dd>
-	<dt><code>queryPrefix</code>{{optional_inline}}</dt>
-	<dd><code>string</code>. Matches if the query segment of the URL starts with a specified string.</dd>
-	<dt><code>querySuffix</code>{{optional_inline}}</dt>
-	<dd><code>string</code>. Matches if the query segment of the URL ends with a specified string.</dd>
-	<dt><code>urlContains</code>{{optional_inline}}</dt>
-	<dd><code>string</code>. Matches if the URL (without fragment identifier) contains a specified string. Port numbers are stripped from the URL if they match the default port number.</dd>
-	<dt><code>urlEquals</code>{{optional_inline}}</dt>
-	<dd><code>string</code>. Matches if the URL (without fragment identifier) is equal to a specified string. Port numbers are stripped from the URL if they match the default port number.</dd>
-	<dt><code>urlMatches</code>{{optional_inline}}</dt>
-	<dd><p><code>string</code>. Matches if the URL (without fragment identifier) matches a specified <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a>. Port numbers are stripped from the URL if they match the default port number.</p>
-	<ul>
-		<li>For example: <code>urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"</code> matches "https://mozilla.org/", "https://developer.mozilla.org/", but not "https://developer.fakemozilla.org/".</li>
-	</ul>
-	</dd>
-	<dt><code>originAndPathMatches</code>{{optional_inline}}</dt>
-	<dd><code>string</code>. Matches if the URL without query segment and fragment identifier matches a specified <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expression</a>. Port numbers are stripped from the URL if they match the default port number.</dd>
-	<dt><code>urlPrefix</code>{{optional_inline}}</dt>
-	<dd><p><code>string</code>. Matches if the URL (without fragment identifier) starts with a specified string. Port numbers are stripped from the URL if they match the default port number.</p>
-	<ul>
-		<li>Example: <code>"https://developer"</code> matches "https://developer.mozilla.org/" and "https://developers.facebook.com/".</li>
-	</ul>
-	</dd>
-	<dt><code>urlSuffix</code>{{optional_inline}}</dt>
-	<dd><code>string</code>. Matches if the URL (without fragment identifier) ends with a specified string. Port numbers are stripped from the URL if they match the default port number. Note that an implicit forward slash "/" is added after the host, so <code>"com/"</code> matches "https://example.com", but <code>"com"</code> does not.</dd>
-	<dt><code>schemes</code>{{optional_inline}}</dt>
-	<dd><p><code>array</code> of <code>string</code>. Matches if the scheme of the URL is equal to any of the schemes specified in the array. Because schemes are always converted to lowercase, this should always be given in lowercase or it will never match.</p>
-	<ul>
-		<li>Example: <code>["https"]</code> will match only HTTPS URLs.</li>
-	</ul>
-	</dd>
-	<dt><code>ports</code>{{optional_inline}}</dt>
-	<dd><p><code>array</code> of (<code>integer</code> or (<code>array</code> of <code>integer</code>)). An array which may contain integers and arrays of integers. Integers are interpreted as port numbers, while arrays of integers are interpreted as port ranges. Matches if the port of the URL matches any port number or is contained in any ranges.</p>
-	<ul>
-		<li>For example: <code>[80, 443, [1000, 1200]]</code> matches all requests on ports 80, 443, and in the range 1000-1200.</li>
-	</ul>
-	</dd>
-</dl>
+- `hostContains`{{optional_inline}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+  - : `string`. Matches if the [hostname](/en-US/docs/Web/API/HTMLAnchorElement/hostname) of the URL (without protocol or port – see `schemes` and `ports`) contains the given string.
 
-<p>{{Compat}}</p>
+    - To test whether a hostname component starts with "foo", use `".foo"`. This matches "www\.foobar.com" and "foo.com", because an implicit dot is added at the beginning of the hostname.
+    - To test whether a hostname component ends with "foo", use `"foo."`.
+    - To test whether a hostname component exactly matches "foo", use `".foo."`.
 
-<p>{{WebExtExamples}}</p>
+- `hostEquals`{{optional_inline}}
 
-<div class="notecard note">
-	<p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/events#type-UrlFilter"><code>chrome.events</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json"><code>events.json</code></a> in the Chromium code.</p>
+  - : `string`. Matches if the hostname of the URL is equal to a specified string.
 
-	<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+    - Example: `"www.example.com"` matches "http\://www\.example.com/" and "https\://www\.example.com/", but not "http\://example.com/".
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+- `hostPrefix`{{optional_inline}}
+  - : `string`. Matches if the hostname of the URL starts with a specified string.
+- `hostSuffix`{{optional_inline}}
+
+  - : `string`. Matches if the hostname of the URL ends with a specified string.
+
+    - Example: `".example.com"` matches "http\://www\.example.com/", but not "http\://example.com/".
+    - Example: `"example.com"` matches "http\://www\.example.com/", and "http\://fakeexample.com/".
+
+- `pathContains`{{optional_inline}}
+  - : `string`. Matches if the path segment of the URL contains a specified string.
+- `pathEquals`{{optional_inline}}
+  - : `string`. Matches if the path segment of the URL is equal to a specified string.
+- `pathPrefix`{{optional_inline}}
+  - : `string`. Matches if the path segment of the URL starts with a specified string.
+- `pathSuffix`{{optional_inline}}
+  - : `string`. Matches if the path segment of the URL ends with a specified string.
+- `queryContains`{{optional_inline}}
+  - : `string`. Matches if the query segment of the URL contains a specified string.
+- `queryEquals`{{optional_inline}}
+  - : `string`. Matches if the query segment of the URL is equal to a specified string.
+- `queryPrefix`{{optional_inline}}
+  - : `string`. Matches if the query segment of the URL starts with a specified string.
+- `querySuffix`{{optional_inline}}
+  - : `string`. Matches if the query segment of the URL ends with a specified string.
+- `urlContains`{{optional_inline}}
+  - : `string`. Matches if the URL (without fragment identifier) contains a specified string. Port numbers are stripped from the URL if they match the default port number.
+- `urlEquals`{{optional_inline}}
+  - : `string`. Matches if the URL (without fragment identifier) is equal to a specified string. Port numbers are stripped from the URL if they match the default port number.
+- `urlMatches`{{optional_inline}}
+
+  - : `string`. Matches if the URL (without fragment identifier) matches a specified [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). Port numbers are stripped from the URL if they match the default port number.
+
+    - For example: `urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"` matches "https\://mozilla.org/", "https\://developer.mozilla.org/", but not "https\://developer.fakemozilla.org/".
+
+- `originAndPathMatches`{{optional_inline}}
+  - : `string`. Matches if the URL without query segment and fragment identifier matches a specified [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). Port numbers are stripped from the URL if they match the default port number.
+- `urlPrefix`{{optional_inline}}
+
+  - : `string`. Matches if the URL (without fragment identifier) starts with a specified string. Port numbers are stripped from the URL if they match the default port number.
+
+    - Example: `"https://developer"` matches "https\://developer.mozilla.org/" and "https\://developers.facebook.com/".
+
+- `urlSuffix`{{optional_inline}}
+  - : `string`. Matches if the URL (without fragment identifier) ends with a specified string. Port numbers are stripped from the URL if they match the default port number. Note that an implicit forward slash "/" is added after the host, so `"com/"` matches "https\://example.com", but `"com"` does not.
+- `schemes`{{optional_inline}}
+
+  - : `array` of `string`. Matches if the scheme of the URL is equal to any of the schemes specified in the array. Because schemes are always converted to lowercase, this should always be given in lowercase or it will never match.
+
+    - Example: `["https"]` will match only HTTPS URLs.
+
+- `ports`{{optional_inline}}
+
+  - : `array` of (`integer` or (`array` of `integer`)). An array which may contain integers and arrays of integers. Integers are interpreted as port numbers, while arrays of integers are interpreted as port ranges. Matches if the port of the URL matches any port number or is contained in any ranges.
+
+    - For example: `[80, 443, [1000, 1200]]` matches all requests on ports 80, 443, and in the range 1000-1200.
+
+## Browser compatibility
+
+{{Compat}}
+
+{{WebExtExamples}}
+
+> **Note:** This API is based on Chromium's [`chrome.events`](https://developer.chrome.com/extensions/events#type-UrlFilter) API. This documentation is derived from [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -139,5 +133,4 @@ browser-compat: webextensions.api.events.UrlFilter
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

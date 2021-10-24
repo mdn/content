@@ -7,42 +7,45 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.omnibox
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>Object</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json">
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>Object</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json">
 "omnibox": {
   "keyword": "mdn"
-}</pre>
-   </td>
-  </tr>
- </tbody>
+}</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Use the <code>omnibox</code> key to define an omnibox keyword for your extension.</p>
+Use the `omnibox` key to define an omnibox keyword for your extension.
 
-<p>When the user types this keyword into the browser's address bar, followed by a space, then any subsequent characters will be sent to the extension using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox">omnibox</a></code> API. The extension will then be able to populate the address bar's drop-down suggestions list with its own suggestions.</p>
+When the user types this keyword into the browser's address bar, followed by a space, then any subsequent characters will be sent to the extension using the [`omnibox`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox) API. The extension will then be able to populate the address bar's drop-down suggestions list with its own suggestions.
 
-<p>If two or more extensions define the same keyword, then the extension that was installed last gets to control the keyword. Any previously installed extensions that defined the same keyword will no longer be able to use the <code>omnibox</code> API.</p>
+If two or more extensions define the same keyword, then the extension that was installed last gets to control the keyword. Any previously installed extensions that defined the same keyword will no longer be able to use the `omnibox` API.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: json">"omnibox": {
+```json
+"omnibox": {
   "keyword": "mdn"
-}</pre>
+}
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

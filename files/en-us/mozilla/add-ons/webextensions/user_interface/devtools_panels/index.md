@@ -7,33 +7,36 @@ tags:
   - User Interface
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div class="note">
-<p><strong>Note:</strong> This feature is available since Firefox 54.</p>
-</div>
+> **Note:** This feature is available since Firefox 54.
 
-<p>When an extension provides tools that are of use to developers, it's possible to add a UI for them to the browser's developer tools as a new panel.</p>
+When an extension provides tools that are of use to developers, it's possible to add a UI for them to the browser's developer tools as a new panel.
 
-<p><img alt='Simple example showing the addition of "My panel" to the Developer Tools tabs.' src="developer_panel_tab.png"></p>
+![Simple example showing the addition of "My panel" to the Developer Tools tabs.](developer_panel_tab.png)
 
-<h2 id="Specifying_a_developer_tools_panel">Specifying a developer tools panel</h2>
+## Specifying a developer tools panel
 
-<p>A developer tools panel is added using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels">devtools.panels</a></code> API, which in turn needs to be run from a special devtools page.</p>
+A developer tools panel is added using the [`devtools.panels`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels) API, which in turn needs to be run from a special devtools page.
 
-<p>Add the devtools page by including the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a></code> key in extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> and provide the location of the page's HTML file in the extension:</p>
+Add the devtools page by including the [`devtools_page`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) key in extension's [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) and provide the location of the page's HTML file in the extension:
 
-<pre class="brush: json">&quot;devtools_page&quot;: &quot;devtools-page.html&quot;</pre>
+```json
+"devtools_page": "devtools-page.html"
+```
 
-<p>From the devtools page, call a script that will add the devtools panel:</p>
+From the devtools page, call a script that will add the devtools panel:
 
-<pre class="brush: html">&lt;body&gt;
-  &lt;script src="devtools.js"&gt;&lt;/script&gt;
-&lt;/body&gt;</pre>
+```html
+<body>
+  <script src="devtools.js"></script>
+</body>
+```
 
-<p>In the script, create the devtools panel by specifying the panel's title, icon, and HTML file that provides the panel's content:</p>
+In the script, create the devtools panel by specifying the panel's title, icon, and HTML file that provides the panel's content:
 
-<pre class="brush: js">function handleShown() {
+```js
+function handleShown() {
   console.log("panel is being shown");
 }
 
@@ -45,21 +48,22 @@ browser.devtools.panels.create(
   "My Panel",           // title
   "icons/star.png",           // icon
   "devtools/panel/panel.html"          // content
-).then((newPanel) =&gt; {
+).then((newPanel) => {
   newPanel.onShown.addListener(handleShown);
   newPanel.onHidden.addListener(handleHidden);
-});</pre>
+});
+```
 
-<p>The extension can now run code in the inspected window using <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval">devtools.inspectedWindow.eval()</a></code> or by injecting a content script via the background script by passing a message. You can find more details on how to do this in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">Extending the developer tools.</a></p>
+The extension can now run code in the inspected window using [`devtools.inspectedWindow.eval()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval) or by injecting a content script via the background script by passing a message. You can find more details on how to do this in [Extending the developer tools.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
 
-<h2 id="Developer_panel_design">Developer panel design</h2>
+## Developer panel design
 
-<p>For details on how to design your developer panel's web page to match the style of Firefox, see the <a href="https://design.firefox.com/photon/index.html">Photon Design System</a> documentation.</p>
+For details on how to design your developer panel's web page to match the style of Firefox, see the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
 
-<h2 id="Icons">Icons</h2>
+## Icons
 
-<p>For details on how to create icons to use with your developer tools panel, see <a href="https://design.firefox.com/photon/visuals/iconography.html">Iconography</a> in the <a href="https://design.firefox.com/photon/index.html">Photon Design System</a> documentation.</p>
+For details on how to create icons to use with your developer tools panel, see [Iconography](https://design.firefox.com/photon/visuals/iconography.html) in the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repository on GitHub includes the <a href="https://github.com/mdn/webextensions-examples/blob/master/devtools-panels/">devtools-panels</a> example which implements a devtools panel.</p>
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [devtools-panels](https://github.com/mdn/webextensions-examples/blob/master/devtools-panels/) example which implements a devtools panel.

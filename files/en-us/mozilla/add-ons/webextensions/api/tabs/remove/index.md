@@ -13,35 +13,35 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.remove
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Closes one or more tabs.</p>
+Closes one or more tabs.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var removing = browser.tabs.remove(
+```js
+var removing = browser.tabs.remove(
   tabIds          // integer or integer array
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>tabIds</code></dt>
- <dd><code>integer</code> or <code>array</code> of <code>integer</code> The ids of the tab or tabs to close.</dd>
-</dl>
+- `tabIds`
+  - : `integer` or `array` of `integer` The ids of the tab or tabs to close.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when all the specified tabs have been removed or their <code>beforeunload</code> prompts have been handled. If any error occurs, the promise will be rejected with an error message.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the specified tabs have been removed or their `beforeunload` prompts have been handled. If any error occurs, the promise will be rejected with an error message.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Close a single tab:</p>
+Close a single tab:
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log(`Removed`);
 }
 
@@ -50,11 +50,13 @@ function onError(error) {
 }
 
 var removing = browser.tabs.remove(2);
-removing.then(onRemoved, onError);</pre>
+removing.then(onRemoved, onError);
+```
 
-<p>Close multiple tabs:</p>
+Close multiple tabs:
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log(`Removed`);
 }
 
@@ -63,22 +65,20 @@ function onError(error) {
 }
 
 var removing = browser.tabs.remove([15, 14, 1]);
-removing.then(onRemoved, onError);</pre>
+removing.then(onRemoved, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-remove) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-remove"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -105,5 +105,4 @@ removing.then(onRemoved, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

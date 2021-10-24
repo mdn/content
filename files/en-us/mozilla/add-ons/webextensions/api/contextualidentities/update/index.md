@@ -12,89 +12,77 @@ tags:
   - contextualIdentities
 browser-compat: webextensions.api.contextualIdentities.update
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Updates properties of a contextual identity, given its cookie store ID.</p>
+Updates properties of a contextual identity, given its cookie store ID.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var createContext = browser.contextualIdentities.update(
+```js
+var createContext = browser.contextualIdentities.update(
   cookieStoreId,           // string
   details                  // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>cookieStoreId</code></dt>
- <dd>
- <p><code>string</code>. The ID of this contextual identity's cookie store. Because contextual identities each have their own cookie store, this serves as an identifier for the contextual identity itself.</p>
- </dd>
- <dt><code>details</code></dt>
- <dd>
- <p><code>object</code>. An object containing new values for the properties that you wish to change. This may contain any of the following properties:</p>
+- `cookieStoreId`
+  - : `string`. The ID of this contextual identity's cookie store. Because contextual identities each have their own cookie store, this serves as an identifier for the contextual identity itself.
+- `details`
 
- <dl>
-  <dt><code>name</code> {{optional_inline}}</dt>
-  <dd>
-  <p><code>string</code>. A new name for the identity. This will be displayed in the browser's UI, enabling them to open a new tab in the identity. It will also be displayed in the URL bar for tabs belonging to this identity.</p>
-  </dd>
-  <dt><code>color</code> {{optional_inline}}</dt>
-  <dd>
-  <p><code>string</code>. A new color for the identity. This will be used to highlight tabs belonging to this identity. You can supply any of the following values here:</p>
+  - : `object`. An object containing new values for the properties that you wish to change. This may contain any of the following properties:
 
-  <ul>
-   <li>"blue"</li>
-   <li>"turquoise"</li>
-   <li>"green"</li>
-   <li>"yellow"</li>
-   <li>"orange"</li>
-   <li>"red"</li>
-   <li>"pink"</li>
-   <li>"purple"</li>
-   <li>"toolbar"</li>
-  </ul>
-  </dd>
-  <dt><code>icon</code> {{optional_inline}}</dt>
-  <dd>
-  <p><code>string</code>. A new icon for the identity. You can supply any of the following values here:</p>
+    - `name` {{optional_inline}}
+      - : `string`. A new name for the identity. This will be displayed in the browser's UI, enabling them to open a new tab in the identity. It will also be displayed in the URL bar for tabs belonging to this identity.
+    - `color` {{optional_inline}}
 
-  <ul>
-   <li>"fingerprint"</li>
-   <li>"briefcase"</li>
-   <li>"dollar"</li>
-   <li>"cart"</li>
-   <li>"circle"</li>
-   <li>"gift"</li>
-   <li>"vacation"</li>
-   <li>"food"</li>
-   <li>"fruit"</li>
-   <li>"pet"</li>
-   <li>"tree"</li>
-   <li>"chill"</li>
-   <li>"fence"</li>
-  </ul>
-  </dd>
- </dl>
- </dd>
-</dl>
+      - : `string`. A new color for the identity. This will be used to highlight tabs belonging to this identity. You can supply any of the following values here:
 
-<h3 id="Return_value">Return value</h3>
+        - "blue"
+        - "turquoise"
+        - "green"
+        - "yellow"
+        - "orange"
+        - "red"
+        - "pink"
+        - "purple"
+        - "toolbar"
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} that describes the updated identity. If the identity could not be found or the contextual identities feature is not enabled, the promise is rejected.</p>
+    - `icon` {{optional_inline}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+      - : `string`. A new icon for the identity. You can supply any of the following values here:
 
-<p>{{Compat}}</p>
+        - "fingerprint"
+        - "briefcase"
+        - "dollar"
+        - "cart"
+        - "circle"
+        - "gift"
+        - "vacation"
+        - "food"
+        - "fruit"
+        - "pet"
+        - "tree"
+        - "chill"
+        - "fence"
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<p>This example updates the contextual identity whose ID is "firefox-container-1" to have a new name, color, and icon:</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} that describes the updated identity. If the identity could not be found or the contextual identities feature is not enabled, the promise is rejected.
 
-<pre class="brush: js">function onUpdated(context) {
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+This example updates the contextual identity whose ID is "firefox-container-1" to have a new name, color, and icon:
+
+```js
+function onUpdated(context) {
   console.log(`New identity's name: ${context.name}.`);
 }
 
@@ -107,6 +95,7 @@ browser.contextualIdentities.update(
     name: "my-thing",
     color: "purple",
     icon: "briefcase"
-  }).then(onUpdated, onError);</pre>
+  }).then(onUpdated, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

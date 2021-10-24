@@ -13,67 +13,61 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onStartup
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when a profile that has this extension installed first starts up. This event is not fired when a private browsing/incognito profile is started, even if this extension is operating in 'split' incognito mode.</p>
+Fired when a profile that has this extension installed first starts up. This event is not fired when a private browsing/incognito profile is started, even if this extension is operating in 'split' incognito mode.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">browser.runtime.onStartup.addListener(<var>listener</var>)
-browser.runtime.onStartup.removeListener(<var>listener</var>)
-browser.runtime.onStartup.hasListener(<var>listener</var>)
-</pre>
+```js
+browser.runtime.onStartup.addListener(listener)
+browser.runtime.onStartup.removeListener(listener)
+browser.runtime.onStartup.hasListener(listener)
+```
 
-<h3 id="Event_Functions">Event Functions</h3>
+### Event Functions
 
-<p>All events have three functions:</p>
+All events have three functions:
 
-<dl>
-	<dt><code>addListener(<var>listener</var>)</code></dt>
-	<dd>Adds a <code><var>listener</var></code> to the calling event.</dd>
-	<dt><code>removeListener(<var>listener</var>)</code></dt>
-	<dd>Stop listening to the calling event. The <code>listener</code> argument is the listener to remove.</dd>
-	<dt><code>hasListener(<var>listener</var>)</code></dt>
-	<dd>Checks whether a <code>listener</code> is registered for the calling event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(listener)`
+  - : Adds a `listener` to the calling event.
+- `removeListener(listener)`
+  - : Stop listening to the calling event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Checks whether a `listener` is registered for the calling event. Returns `true` if it is listening, `false` otherwise.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>The only parameter is <code><var>listener</var></code>, used for any of the above functions.</p>
+The only parameter is `listener`, used for any of the above functions.
 
-<dl>
-	<dt><code><var>listener</var></code></dt>
-	<dd>
-	<p>A function that will be called when this event occurs.</p>
-	</dd>
-</dl>
+- `listener`
+  - : A function that will be called when this event occurs.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Open <a href="https://giphy.com/explore/cat">https://giphy.com/explore/cat</a> when the browser starts up:</p>
+Open <https://giphy.com/explore/cat> when the browser starts up:
 
-<pre class="brush: js">function handleStartup() {
+```js
+function handleStartup() {
   browser.tabs.create({
     url: "https://giphy.com/explore/cat"
   });
 }
 
-browser.runtime.onStartup.addListener(handleStartup);</pre>
+browser.runtime.onStartup.addListener(handleStartup);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onStartup) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#event-onStartup"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -100,5 +94,4 @@ browser.runtime.onStartup.addListener(handleStartup);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

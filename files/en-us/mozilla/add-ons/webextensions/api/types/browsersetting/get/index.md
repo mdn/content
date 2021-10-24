@@ -11,85 +11,82 @@ tags:
   - WebExtensions
   - get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code>BrowserSetting.get()</code> method gets the current value of the browser setting, and an enumeration indicating how the setting's value is currently controlled.</p>
+The `BrowserSetting.get()` method gets the current value of the browser setting, and an enumeration indicating how the setting's value is currently controlled.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var getting = setting.get(
+```js
+var getting = setting.get(
   details     // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>An empty object.</dd>
-</dl>
+- `details`
+  - : An empty object.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an object with the following properties:</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object with the following properties:
 
-<dl>
- <dt><code>value</code></dt>
- <dd>The value of the setting. The type of this property is determined by the particular setting.</dd>
- <dt><code>levelOfControl</code></dt>
- <dd><code>string</code>. This represents the way the setting is currently controlled. You can use it to check whether you can modify the setting. See <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set">BrowserSetting.set()</a></code> for details. Its value may be any of the following:
- <table class="fullwidth-table standard-table">
-  <tbody>
-   <tr>
-    <td><code>"not_controllable"</code></td>
-    <td>Extensions are not allowed to modify this setting.</td>
-   </tr>
-   <tr>
-    <td><code>"controlled_by_other_extensions"</code></td>
-    <td>Another extension that was installed after this one has modified this setting.</td>
-   </tr>
-   <tr>
-    <td><code>"controllable_by_this_extension"</code></td>
-    <td>This extension is allowed to modify the setting.</td>
-   </tr>
-   <tr>
-    <td><code>"controlled_by_this_extension"</code></td>
-    <td>This extension has already modified the setting.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+- `value`
+  - : The value of the setting. The type of this property is determined by the particular setting.
+- `levelOfControl`
+  - : `string`. This represents the way the setting is currently controlled. You can use it to check whether you can modify the setting. See [`BrowserSetting.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) for details. Its value may be any of the following:<table class="fullwidth-table standard-table">
+      <tbody>
+        <tr>
+          <td><code>"not_controllable"</code></td>
+          <td>Extensions are not allowed to modify this setting.</td>
+        </tr>
+        <tr>
+          <td><code>"controlled_by_other_extensions"</code></td>
+          <td>
+            Another extension that was installed after this one has modified this
+            setting.
+          </td>
+        </tr>
+        <tr>
+          <td><code>"controllable_by_this_extension"</code></td>
+          <td>This extension is allowed to modify the setting.</td>
+        </tr>
+        <tr>
+          <td><code>"controlled_by_this_extension"</code></td>
+          <td>This extension has already modified the setting.</td>
+        </tr>
+      </tbody>
+    </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>See {{WebExtAPIRef("types.BrowserSetting")}}.</p>
+See {{WebExtAPIRef("types.BrowserSetting")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Log the value and level of control for the <code>networkPredictionEnabled</code> property of the {{WebExtAPIRef("privacy.network")}} object, for private browsing windows. Note that this requires the "privacy" browser permission.</p>
+Log the value and level of control for the `networkPredictionEnabled` property of the {{WebExtAPIRef("privacy.network")}} object, for private browsing windows. Note that this requires the "privacy" browser permission.
 
-<pre class="brush: js">var getting = browser.privacy.network.networkPredictionEnabled.get({});
+```js
+var getting = browser.privacy.network.networkPredictionEnabled.get({});
 
-getting.then((got) =&gt; {
+getting.then((got) => {
   console.log(`Value: ${got.value}`);
   console.log(`Control: ${got.levelOfControl}`);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note:</strong></p>
+> **Note:**
+>
+> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/extensions/types) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/types"><code>chrome.types</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -116,5 +113,4 @@ getting.then((got) =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

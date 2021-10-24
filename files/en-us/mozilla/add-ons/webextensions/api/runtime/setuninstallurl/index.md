@@ -13,37 +13,37 @@ tags:
   - setUninstallURL
 browser-compat: webextensions.api.runtime.setUninstallURL
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Sets the URL to be visited when the extension is uninstalled. This may be used to clean up server-side data, do analytics, or implement surveys. The URL can be a maximum 255 characters.</p>
+Sets the URL to be visited when the extension is uninstalled. This may be used to clean up server-side data, do analytics, or implement surveys. The URL can be a maximum 255 characters.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var settingUrl = browser.runtime.setUninstallURL(
+```js
+var settingUrl = browser.runtime.setUninstallURL(
   url             // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>url</code></dt>
- <dd><code>string</code>. URL to be opened after the extension is uninstalled. This URL must have an <code>http</code> or <code>https</code> scheme. Set it to an empty string to not open a new tab upon uninstallation.</dd>
-</dl>
+- `url`
+  - : `string`. URL to be opened after the extension is uninstalled. This URL must have an `http` or `https` scheme. Set it to an empty string to not open a new tab upon uninstallation.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when the URL has been set, or rejected with an error message if the operation failed.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the URL has been set, or rejected with an error message if the operation failed.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">function onSetURL() {
+```js
+function onSetURL() {
   console.log("set uninstall URL");
 }
 
@@ -52,18 +52,16 @@ function onError(error) {
 }
 
 var settingUrl = browser.runtime.setUninstallURL("https://example.org");
-settingUrl.then(onSetURL, onError);</pre>
+settingUrl.then(onSetURL, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-setUninstallURL) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#method-setUninstallURL"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -90,5 +88,4 @@ settingUrl.then(onSetURL, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

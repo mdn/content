@@ -13,58 +13,54 @@ tags:
   - webNavigation
 browser-compat: webextensions.api.webNavigation.getFrame
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested <a href="/en-US/docs/Web/HTML/Element/iframe">iframe</a>, and is uniquely identified by a tab ID and a frame ID.</p>
+Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [iframe](/en-US/docs/Web/HTML/Element/iframe), and is uniquely identified by a tab ID and a frame ID.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var gettingFrame = browser.webNavigation.getFrame(
+```js
+var gettingFrame = browser.webNavigation.getFrame(
   details                // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p><code>object</code>. Information about the frame to retrieve information about.</p>
-   <dl>
-    <dt><code>tabId</code></dt>
-    <dd><code>integer</code>. The ID of the tab in which the frame is.</dd>
-    <dt><code>processId</code> {{optional_inline}}</dt>
-    <dd><code>integer</code>. The ID of the process running the renderer for this tab.</dd>
-    <dt><code>frameId</code></dt>
-    <dd><code>integer</code>. The ID of the frame in the given tab.</dd>
-   </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Return_value">Return value</h3>
+  - : `object`. Information about the frame to retrieve information about.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an object containing the following properties:</p>
+    - `tabId`
+      - : `integer`. The ID of the tab in which the frame is.
+    - `processId` {{optional_inline}}
+      - : `integer`. The ID of the process running the renderer for this tab.
+    - `frameId`
+      - : `integer`. The ID of the frame in the given tab.
 
-<dl>
- <dt><code>errorOccurred</code></dt>
- <dd><code>boolean</code>. True if the last navigation in this frame was interrupted by an error, i.e. the {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} event fired.</dd>
- <dt><code>url</code></dt>
- <dd><code>string</code>. The URL currently associated with this frame, if the frame identified by <code>frameId</code> existed at one point in the tab identified by <code>tabId</code>. The fact that an URL is associated with a given <code>frameId</code> does not imply that the corresponding frame still exists.</dd>
- <dt><code>parentFrameId</code></dt>
- <dd><code>integer</code>. ID of this frame's parent. This is -1 if there is no parent frame: that is, if this frame is the top-level browsing context in the tab.</dd>
-</dl>
+### Return value
 
-<p>If the tab is discarded, the promise will instead resolve with a <code>null</code> value. If the specified tab or frame ID could not be found, or some other error occurs, the promise will be rejected with an error message.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object containing the following properties:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- `errorOccurred`
+  - : `boolean`. True if the last navigation in this frame was interrupted by an error, i.e. the {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} event fired.
+- `url`
+  - : `string`. The URL currently associated with this frame, if the frame identified by `frameId` existed at one point in the tab identified by `tabId`. The fact that an URL is associated with a given `frameId` does not imply that the corresponding frame still exists.
+- `parentFrameId`
+  - : `integer`. ID of this frame's parent. This is -1 if there is no parent frame: that is, if this frame is the top-level browsing context in the tab.
 
-<p>{{Compat}}</p>
+If the tab is discarded, the promise will instead resolve with a `null` value. If the specified tab or frame ID could not be found, or some other error occurs, the promise will be rejected with an error message.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<pre class="brush: js">function onGot(frameInfo) {
+{{Compat}}
+
+## Examples
+
+```js
+function onGot(frameInfo) {
   console.log(frameInfo);
 }
 
@@ -81,18 +77,15 @@ var gettingFrame = browser.webNavigation.getFrame({
 //var gettingFrame = browser.webNavigation.getFrame({ tabId: 19, processId: 0, frameId: 1537 });
 
 gettingFrame.then(onGot, onError);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation#method-getFrame) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webNavigation#method-getFrame"><code>chrome.webNavigation</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -119,5 +112,4 @@ gettingFrame.then(onGot, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

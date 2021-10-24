@@ -13,85 +13,80 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.DownloadQuery
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code>DownloadQuery</code> type of the {{WebExtAPIRef("downloads")}} API defines a set of parameters that can be used to search the downloads manager for a specific set of downloads.</p>
+The `DownloadQuery` type of the {{WebExtAPIRef("downloads")}} API defines a set of parameters that can be used to search the downloads manager for a specific set of downloads.
 
-<p>This type is used for example in {{WebExtAPIRef("downloads.search()")}} and {{WebExtAPIRef("downloads.erase()")}}, as a query object to filter the set of {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} to return or erase.</p>
+This type is used for example in {{WebExtAPIRef("downloads.search()")}} and {{WebExtAPIRef("downloads.erase()")}}, as a query object to filter the set of {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} to return or erase.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>cookieStoreId</code>{{optional_inline}}</dt>
- <dd>The cookie store ID of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">contextual identity</a> in which the download took place.</dd>
- <dt><code>query</code>{{optional_inline}}</dt>
- <dd>An <code>array</code> of <code>string</code>s. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} whose <code>filename</code> or <code>url</code> contains all of the given strings. You can also include terms beginning with a dash (-) — these terms <strong>must not</strong> be contained in the item's <code>filename</code> or <code>url</code> for it to be included.</dd>
- <dt><code>startedBefore</code>{{optional_inline}}</dt>
- <dd>A {{WebExtAPIRef('downloads.DownloadTime', "DownloadTime")}}. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} that started before the given time.</dd>
- <dt><code>startedAfter</code>{{optional_inline}}</dt>
- <dd>A {{WebExtAPIRef('downloads.DownloadTime', "DownloadTime")}}. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} that started after the given time.</dd>
- <dt><code>endedBefore</code>{{optional_inline}}</dt>
- <dd>A {{WebExtAPIRef('downloads.DownloadTime', "DownloadTime")}}. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} that ended before the given time.</dd>
- <dt><code>endedAfter</code>{{optional_inline}}</dt>
- <dd>A {{WebExtAPIRef('downloads.DownloadTime', "DownloadTime")}}. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} that ended after the given time.</dd>
- <dt><code>totalBytesGreater</code>{{optional_inline}}</dt>
- <dd>A <code>number</code> representing a number of bytes. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} whose <code>totalBytes</code> is greater than the given number.</dd>
- <dt><code>totalBytesLess</code>{{optional_inline}}</dt>
- <dd>A <code>number</code> representing a number of bytes. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} whose <code>totalBytes</code> is less than the given number.</dd>
- <dt><code>filenameRegex</code>{{optional_inline}}</dt>
- <dd>A <code>string</code> representing a regular expression. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} whose <code>filename</code> value matches the given regular expression.</dd>
- <dt><code>urlRegex</code>{{optional_inline}}</dt>
- <dd>A <code>string</code> representing a regular expression. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} whose <code>url</code> value matches the given regular expression.</dd>
- <dt><code>limit</code>{{optional_inline}}</dt>
- <dd>An <code>integer</code> representing a number of results. Include only the specified number of {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}.</dd>
- <dt><code>orderBy</code>{{optional_inline}}</dt>
- <dd>An <code>array</code> of <code>string</code>s representing {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} properties the search results should be sorted by. For example, including <code>startTime</code> then <code>totalBytes</code> in the array would sort the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} by their start time, then total bytes — in ascending order. To specify sorting by a property in descending order, prefix it with a hyphen, for example <code>-startTime</code>.</dd>
- <dt><code>id</code>{{optional_inline}}</dt>
- <dd>An <code>integer</code> representing the ID of the {{WebExtAPIRef("downloads.DownloadItem")}} you want to query.</dd>
- <dt><code>url</code>{{optional_inline}}</dt>
- <dd>A <code>string</code> representing the absolute URL that the download was initiated from, before any redirects.</dd>
- <dt><code>filename</code>{{optional_inline}}</dt>
- <dd>A string representing the absolute local path of the download file you want to query.</dd>
- <dt><code>danger</code>{{optional_inline}}</dt>
- <dd>A string representing a {{WebExtAPIRef('downloads.DangerType')}} — include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this <code>danger</code> value.</dd>
- <dt><code>mime</code>{{optional_inline}}</dt>
- <dd>A <code>string</code> representing a MIME type. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this <code>mime</code> value.</dd>
- <dt><code>startTime</code>{{optional_inline}}</dt>
- <dd>A <code>string</code> representing an <a class="external external-icon" href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format time. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this <code>startTime</code> value.</dd>
- <dt><code>endTime</code>{{optional_inline}}</dt>
- <dd>A <code>string</code> representing an <a class="external external-icon" href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format time. Include only will limited to {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this <code>endTime</code> value.</dd>
- <dt><code>state</code>{{optional_inline}}</dt>
- <dd>A <code>string</code> representing a download {{WebExtAPIRef('downloads.State')}} (<code>in_progress</code>, <code>interrupted</code>, or <code>complete</code>). Include only{{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this <code>state</code> value.</dd>
- <dt><code>paused</code>{{optional_inline}}</dt>
- <dd>A <code>boolean</code> that indicates whether a download is paused — i.e. has stopped reading data from the host, but kept the connection open (<code>true</code>), or not (<code>false</code>). Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this <code>paused</code> value.</dd>
- <dt><code>error</code>{{optional_inline}}</dt>
- <dd>A string representing an {{WebExtAPIRef('downloads.InterruptReason')}} — a reason why a download was interrupted. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this <code>error</code> value.</dd>
- <dt><code>bytesReceived</code>{{optional_inline}}</dt>
- <dd>A <code>number</code> representing the number of bytes received so far from the host, without considering file compression. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this <code>bytesReceived</code> value.</dd>
- <dt><code>totalBytes</code>{{optional_inline}}</dt>
- <dd>A <code>number</code> representing the total number of bytes in the downloaded file, without considering file compression. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this <code>totalBytes</code> value.</dd>
- <dt><code>fileSize</code>{{optional_inline}}</dt>
- <dd><code>number</code>. Number of bytes in the whole file post-decompression, or -1 if unknown. A <code>number</code> representing the total number of bytes in the file after decompression. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this <code>fileSize</code> value.</dd>
- <dt><code>exists</code>{{optional_inline}}</dt>
- <dd>A <code>boolean</code> indicating whether a downloaded file still exists (<code>true</code>) or not (<code>false</code>). Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this <code>exists</code> value.</dd>
-</dl>
+- `cookieStoreId`{{optional_inline}}
+  - : The cookie store ID of the [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) in which the download took place.
+- `query`{{optional_inline}}
+  - : An `array` of `string`s. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} whose `filename` or `url` contains all of the given strings. You can also include terms beginning with a dash (-) — these terms **must not** be contained in the item's `filename` or `url` for it to be included.
+- `startedBefore`{{optional_inline}}
+  - : A {{WebExtAPIRef('downloads.DownloadTime', "DownloadTime")}}. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} that started before the given time.
+- `startedAfter`{{optional_inline}}
+  - : A {{WebExtAPIRef('downloads.DownloadTime', "DownloadTime")}}. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} that started after the given time.
+- `endedBefore`{{optional_inline}}
+  - : A {{WebExtAPIRef('downloads.DownloadTime', "DownloadTime")}}. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} that ended before the given time.
+- `endedAfter`{{optional_inline}}
+  - : A {{WebExtAPIRef('downloads.DownloadTime', "DownloadTime")}}. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} that ended after the given time.
+- `totalBytesGreater`{{optional_inline}}
+  - : A `number` representing a number of bytes. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} whose `totalBytes` is greater than the given number.
+- `totalBytesLess`{{optional_inline}}
+  - : A `number` representing a number of bytes. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} whose `totalBytes` is less than the given number.
+- `filenameRegex`{{optional_inline}}
+  - : A `string` representing a regular expression. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} whose `filename` value matches the given regular expression.
+- `urlRegex`{{optional_inline}}
+  - : A `string` representing a regular expression. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} whose `url` value matches the given regular expression.
+- `limit`{{optional_inline}}
+  - : An `integer` representing a number of results. Include only the specified number of {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}.
+- `orderBy`{{optional_inline}}
+  - : An `array` of `string`s representing {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} properties the search results should be sorted by. For example, including `startTime` then `totalBytes` in the array would sort the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} by their start time, then total bytes — in ascending order. To specify sorting by a property in descending order, prefix it with a hyphen, for example `-startTime`.
+- `id`{{optional_inline}}
+  - : An `integer` representing the ID of the {{WebExtAPIRef("downloads.DownloadItem")}} you want to query.
+- `url`{{optional_inline}}
+  - : A `string` representing the absolute URL that the download was initiated from, before any redirects.
+- `filename`{{optional_inline}}
+  - : A string representing the absolute local path of the download file you want to query.
+- `danger`{{optional_inline}}
+  - : A string representing a {{WebExtAPIRef('downloads.DangerType')}} — include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `danger` value.
+- `mime`{{optional_inline}}
+  - : A `string` representing a MIME type. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `mime` value.
+- `startTime`{{optional_inline}}
+  - : A `string` representing an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format time. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `startTime` value.
+- `endTime`{{optional_inline}}
+  - : A `string` representing an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format time. Include only will limited to {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `endTime` value.
+- `state`{{optional_inline}}
+  - : A `string` representing a download {{WebExtAPIRef('downloads.State')}} (`in_progress`, `interrupted`, or `complete`). Include only{{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `state` value.
+- `paused`{{optional_inline}}
+  - : A `boolean` that indicates whether a download is paused — i.e. has stopped reading data from the host, but kept the connection open (`true`), or not (`false`). Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `paused` value.
+- `error`{{optional_inline}}
+  - : A string representing an {{WebExtAPIRef('downloads.InterruptReason')}} — a reason why a download was interrupted. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `error` value.
+- `bytesReceived`{{optional_inline}}
+  - : A `number` representing the number of bytes received so far from the host, without considering file compression. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `bytesReceived` value.
+- `totalBytes`{{optional_inline}}
+  - : A `number` representing the total number of bytes in the downloaded file, without considering file compression. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `totalBytes` value.
+- `fileSize`{{optional_inline}}
+  - : `number`. Number of bytes in the whole file post-decompression, or -1 if unknown. A `number` representing the total number of bytes in the file after decompression. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `fileSize` value.
+- `exists`{{optional_inline}}
+  - : A `boolean` indicating whether a downloaded file still exists (`true`) or not (`false`). Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `exists` value.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#type-DownloadQuery) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#type-DownloadQuery"><code>chrome.downloads</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,5 +113,4 @@ browser-compat: webextensions.api.downloads.DownloadQuery
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,51 +13,49 @@ tags:
   - i18n
 browser-compat: webextensions.api.i18n.getAcceptLanguages
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Gets the <a href="/en-US/docs/Web/HTTP/Content_negotiation#the_accept-language_header">accept-languages</a> of the browser. This is different from the locale used by the browser. To get the locale, use {{WebExtAPIRef('i18n.getUILanguage')}}.</p>
+Gets the [accept-languages](/en-US/docs/Web/HTTP/Content_negotiation#the_accept-language_header) of the browser. This is different from the locale used by the browser. To get the locale, use {{WebExtAPIRef('i18n.getUILanguage')}}.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var gettingAcceptLanguages = browser.i18n.getAcceptLanguages()
-</pre>
+```js
+var gettingAcceptLanguages = browser.i18n.getAcceptLanguages()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an <code>array</code> of <code>{{WebExtAPIRef('i18n.LanguageCode')}}</code> objects.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of `{{WebExtAPIRef('i18n.LanguageCode')}}` objects.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">function onGot(languages) {
+```js
+function onGot(languages) {
   console.log(languages);
   //e.g. Array [ "en-US", "en" ]
 }
 
 var gettingAcceptLanguages = browser.i18n.getAcceptLanguages();
 gettingAcceptLanguages.then(onGot);
-</pre>
+```
 
+{{WebExtExamples}}
 
-<p>{{WebExtExamples}}</p>
+> **Note:** This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/extensions/i18n#method-getAcceptLanguages) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/i18n#method-getAcceptLanguages"><code>chrome.i18n</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json"><code>i18n.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -84,5 +82,4 @@ gettingAcceptLanguages.then(onGot);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

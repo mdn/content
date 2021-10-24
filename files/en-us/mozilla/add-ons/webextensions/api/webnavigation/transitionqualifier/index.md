@@ -13,43 +13,32 @@ tags:
   - webNavigation
 browser-compat: webextensions.api.webNavigation.TransitionQualifier
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Extra information about a transition.Note that many values here are not currently supported in Firefox: see the [browser compatibility table](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionQualifier#browser_compatibility) for details.
 
-<div>Extra information about a transition.</div>
+## Type
 
+Values of this type are strings. Possible values are:
 
-<div>Note that many values here are not currently supported in Firefox: see the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionQualifier#browser_compatibility">browser compatibility table</a> for details.</div>
+- "client_redirect"
+  - : Redirect(s) caused by JavaScript running in the page or a "refresh" pragma in the page's [meta](/en-US/docs/Web/HTML/Element/meta) tag.
+- "server_redirect"
+  - : Redirect(s) caused by a [3XX HTTP status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) sent from the server.
+- "forward_back"
+  - : The user used the forward or back button to trigger the navigation.
+- "from_address_bar"
+  - : The user triggered the navigation from the address bar.
 
+## Browser compatibility
 
-<h2 id="Type">Type</h2>
+{{Compat}}
 
-<p>Values of this type are strings. Possible values are:</p>
+{{WebExtExamples}}
 
-<dl>
- <dt>"client_redirect"</dt>
- <dd>Redirect(s) caused by JavaScript running in the page or a "refresh" pragma in the page's <a href="/en-US/docs/Web/HTML/Element/meta">meta</a> tag.</dd>
- <dt>"server_redirect"</dt>
- <dd>Redirect(s) caused by a <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection">3XX HTTP status code</a> sent from the server.</dd>
- <dt>"forward_back"</dt>
- <dd>The user used the forward or back button to trigger the navigation.</dd>
- <dt>"from_address_bar"</dt>
- <dd>The user triggered the navigation from the address bar.</dd>
-</dl>
+> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation#type-TransitionQualifier) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
-
-<p>{{WebExtExamples}}</p>
-
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webNavigation#type-TransitionQualifier"><code>chrome.webNavigation</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -76,5 +65,4 @@ browser-compat: webextensions.api.webNavigation.TransitionQualifier
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

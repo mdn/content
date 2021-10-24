@@ -13,52 +13,49 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.cookies.OnChangedCause
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code>OnChangedCause</code> type of the {{WebExtAPIRef("cookies")}} API represents the reason a cookie changed.</p>
+The `OnChangedCause` type of the {{WebExtAPIRef("cookies")}} API represents the reason a cookie changed.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are strings. Possible values are:</p>
+Values of this type are strings. Possible values are:
 
-<dl>
- <dt><code>evicted</code></dt>
- <dd>A cookie has been automatically removed due to garbage collection.</dd>
- <dt><code>expired</code></dt>
- <dd>A cookie has been automatically removed due to expiry.</dd>
- <dt><code>explicit</code></dt>
- <dd>A cookie has been inserted or removed via an explicit call to {{WebExtAPIRef("cookies.remove()")}}.</dd>
- <dt><code>expired_overwrite</code></dt>
- <dd>A cookie has been overwritten by a cookie with an already-expired expiration date.</dd>
- <dt><code>overwrite</code></dt>
- <dd>A call to {{WebExtAPIRef("cookies.set()")}} overwrote this cookie with a different one.</dd>
-</dl>
+- `evicted`
+  - : A cookie has been automatically removed due to garbage collection.
+- `expired`
+  - : A cookie has been automatically removed due to expiry.
+- `explicit`
+  - : A cookie has been inserted or removed via an explicit call to {{WebExtAPIRef("cookies.remove()")}}.
+- `expired_overwrite`
+  - : A cookie has been overwritten by a cookie with an already-expired expiration date.
+- `overwrite`
+  - : A call to {{WebExtAPIRef("cookies.set()")}} overwrote this cookie with a different one.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>You can listen to the {{WebExtAPIRef("cookies.onChanged")}} event to be notified when cookies change. The listener is passed a <code>changeInfo</code> object that contains a <code>cause</code> property, whose value is the <code>OnChangeCaused</code> string:</p>
+You can listen to the {{WebExtAPIRef("cookies.onChanged")}} event to be notified when cookies change. The listener is passed a `changeInfo` object that contains a `cause` property, whose value is the `OnChangeCaused` string:
 
-<pre class="brush: js">browser.cookies.onChanged.addListener(function(changeInfo) {
+```js
+browser.cookies.onChanged.addListener(function(changeInfo) {
   console.log('Cookie changed: ' +
               '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
               '\n * Cause: ' + changeInfo.cause +
               '\n * Removed: ' + changeInfo.removed);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#type-OnChangedCause) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/cookies#type-OnChangedCause"><code>chrome.cookies</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -85,5 +82,4 @@ browser-compat: webextensions.api.cookies.OnChangedCause
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

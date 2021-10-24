@@ -12,66 +12,65 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.isOpen
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Returns <code>true</code> if the extension's sidebar is open in a given window.</p>
+Returns `true` if the extension's sidebar is open in a given window.
 
-<p>This function accepts a <code>windowId</code> as a parameter:</p>
+This function accepts a `windowId` as a parameter:
 
-<ul>
-	<li>If you supply <code>windowId</code>, the function will check the given browser window.</li>
-	<li>If you omit <code>windowId</code>, the function will check the topmost browser window.</li>
-</ul>
+- If you supply `windowId`, the function will check the given browser window.
+- If you omit `windowId`, the function will check the topmost browser window.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">let gettingIsOpen = browser.sidebarAction.isOpen(
+```js
+let gettingIsOpen = browser.sidebarAction.isOpen(
   details // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>details</code></dt>
-	<dd>
-    <p><code>object</code>. An object optionally containing the <code>windowId</code> to check.</p>
-  	<dl>
-  		<dt><code>windowId</code> {{optional_inline}}</dt>
-  		<dd><code>integer</code>. ID of a browser window to check. If omitted defaults to {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}, which refers to the topmost browser window.</dd>
-  	</dl>
-	</dd>
-</dl>
+- `details`
 
-<h3 id="Return_value">Return value</h3>
+  - : `object`. An object optionally containing the `windowId` to check.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with <code>true</code> if the extension's sidebar is open in the given window, or <code>false</code> otherwise.</p>
+    - `windowId` {{optional_inline}}
+      - : `integer`. ID of a browser window to check. If omitted defaults to {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}, which refers to the topmost browser window.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+### Return value
 
-<p>{{Compat}}</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension's sidebar is open in the given window, or `false` otherwise.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>Check the topmost window:</p>
+{{Compat}}
 
-<pre class="brush: js">browser.sidebarAction.isOpen({}).then(result =&gt; {
+## Examples
+
+Check the topmost window:
+
+```js
+browser.sidebarAction.isOpen({}).then(result => {
   console.log(result);
-});</pre>
+});
+```
 
-<p>  Check all open windows:</p>
+Check all open windows:
 
-<pre class="brush: js">async function checkWindow(windowId) {
+```js
+async function checkWindow(windowId) {
   let result = await browser.sidebarAction.isOpen({windowId});
   console.log(`window: ${windowId} status: ${result}`);
 }
 
-browser.windows.getAll().then(all =&gt; {
+browser.windows.getAll().then(all => {
   for (let {id} of all) {
     checkWindow(id);
   }
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

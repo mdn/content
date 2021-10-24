@@ -13,36 +13,31 @@ tags:
   - extensionTypes
 browser-compat: webextensions.api.extensionTypes.RunAt
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The soonest that the JavaScript or CSS will be injected into the tab.</p>
+The soonest that the JavaScript or CSS will be injected into the tab.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are strings. Possible values are: <code>"document_start"</code>, <code>"document_end"</code>, <code>"document_idle"</code>.</p>
+Values of this type are strings. Possible values are: `"document_start"`, `"document_end"`, `"document_idle"`.
 
-<ul>
- <li><code>"document_start"</code>: corresponds to <code>loading</code>. The DOM is still loading.</li>
- <li><code>"document_end"</code>: corresponds to <code>interactive</code>. The DOM has finished loading, but resources such as scripts and images may still be loading.</li>
- <li><code>"document_idle"</code>: corresponds to <code>complete</code>. The document and all its resources have finished loading.</li>
-</ul>
+- `"document_start"`: corresponds to `loading`. The DOM is still loading.
+- `"document_end"`: corresponds to `interactive`. The DOM has finished loading, but resources such as scripts and images may still be loading.
+- `"document_idle"`: corresponds to `complete`. The document and all its resources have finished loading.
 
-<p>The default value is <code>"document_idle"</code>.</p>
+The default value is `"document_idle"`.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.extensionTypes`](https://developer.chrome.com/extensions/extensionTypes#type-RunAt) API. This documentation is derived from [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/extensionTypes#type-RunAt"><code>chrome.extensionTypes</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json"><code>extension_types.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -69,5 +64,4 @@ browser-compat: webextensions.api.extensionTypes.RunAt
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

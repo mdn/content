@@ -4,29 +4,26 @@ slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 tags:
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Toolbar buttons are one of the main UI components available to extensions. Toolbar buttons live in the main browser toolbar and contain an icon. When the user clicks the icon, one of two things can happen:</p>
+Toolbar buttons are one of the main UI components available to extensions. Toolbar buttons live in the main browser toolbar and contain an icon. When the user clicks the icon, one of two things can happen:
 
-<ul>
- <li>If you have specified a popup for the icon, the popup is shown. Popups are transient dialogs specified using HTML, CSS, and JavaScript.</li>
- <li>If you have not specified a popup, a click event is generated, which you can listen for in your code and perform some other kind of action in response to.</li>
-</ul>
+- If you have specified a popup for the icon, the popup is shown. Popups are transient dialogs specified using HTML, CSS, and JavaScript.
+- If you have not specified a popup, a click event is generated, which you can listen for in your code and perform some other kind of action in response to.
 
-<p>With WebExtension APIs, these kinds of buttons are called "browser actions", and are set up like so:</p>
+With WebExtension APIs, these kinds of buttons are called "browser actions", and are set up like so:
 
-<ul>
- <li>The manifest.json key <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> is used to define the button.</li>
- <li>The JavaScript API <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code> is used to listen for clicks and change the button or perform actions via your code.</li>
-</ul>
+- The manifest.json key [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) is used to define the button.
+- The JavaScript API [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) is used to listen for clicks and change the button or perform actions via your code.
 
-<h2 id="A_simple_button">A simple button</h2>
+## A simple button
 
-<p>In this section we'll create an extension that adds a button to the toolbar. When the user clicks the button, we'll open <a href="https://developer.mozilla.org">https://developer.mozilla.org</a> in a new tab.</p>
+In this section we'll create an extension that adds a button to the toolbar. When the user clicks the button, we'll open <https://developer.mozilla.org> in a new tab.
 
-<p>First, create a new directory, "button", and create a file called "manifest.json" inside it with the following contents:</p>
+First, create a new directory, "button", and create a file called "manifest.json" inside it with the following contents:
 
-<pre class="brush: json">{
+```json
+{
 
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
@@ -44,54 +41,60 @@ tags:
     }
   }
 
-}</pre>
+}
+```
 
-<p>This specifies that we'll have a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background script</a> named "background.js", and a browser action (button) whose icons will live in the "icons" directory.</p>
+This specifies that we'll have a [background script](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) named "background.js", and a browser action (button) whose icons will live in the "icons" directory.
 
-<p>Next, create the "icons" directory inside the "buttons" directory, and save the two icons shown below inside it:</p>
+Next, create the "icons" directory inside the "buttons" directory, and save the two icons shown below inside it:
 
-<p><strong>"page-16.png":</strong></p>
-<p><img alt="" src="page-16.png"></p>
+**"page-16.png":**
 
- <p><strong>"page-32.png":</strong></p>
- <p><img alt="" src="page-32.png"></p>
+![](page-16.png)
 
- <div class="note">
- <p><strong>Note:</strong> These icons are from the <a href="https://www.iconfinder.com/iconsets/bitsies">bitsies!</a> iconset created by Recep Kütük.</p>
- </div>
+**"page-32.png":**
 
-<p>We have two icons so we can use the bigger one in high-density displays. The browser will take care of selecting the best icon for the current display.</p>
+![](page-32.png)
 
-<p>Next, create "background.js" in the extension's root directory, and give it the following contents:</p>
+> **Note:** These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies) iconset created by Recep Kütük.
 
-<pre class="brush: js">function openPage() {
+We have two icons so we can use the bigger one in high-density displays. The browser will take care of selecting the best icon for the current display.
+
+Next, create "background.js" in the extension's root directory, and give it the following contents:
+
+```js
+function openPage() {
   browser.tabs.create({
     url: "https://developer.mozilla.org"
   });
 }
 
-browser.browserAction.onClicked.addListener(openPage);</pre>
+browser.browserAction.onClicked.addListener(openPage);
+```
 
-<p>This listens for the browser action's click event; when the event fires, the <code>openPage()</code> function is run, which opens the specified page using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs">tabs</a></code> API.</p>
+This listens for the browser action's click event; when the event fires, the `openPage()` function is run, which opens the specified page using the [`tabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs) API.
 
-<p>At this point the complete extension should look like this:</p>
+At this point the complete extension should look like this:
 
-<pre class="brush: plain">button/
+```plain
+button/
     icons/
         page-16.png
         page-32.png
     background.js
-    manifest.json</pre>
+    manifest.json
+```
 
-<p>Now <a href="https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/">install the extension</a> and click the button:</p>
+Now [install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) and click the button:
 
-<p>{{EmbedYouTube("kwwTowgT-Ys")}}</p>
+{{EmbedYouTube("kwwTowgT-Ys")}}
 
-<h2 id="Adding_a_popup">Adding a popup</h2>
+## Adding a popup
 
-<p>Let's try adding a popup to the button. Replace manifest.json with this:</p>
+Let's try adding a popup to the button. Replace manifest.json with this:
 
-<pre class="brush: json">{
+```json
+{
 
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
@@ -107,40 +110,42 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
     }
   }
 
-}</pre>
+}
+```
 
-<p>We've made three changes from the original:</p>
+We've made three changes from the original:
 
-<ul>
- <li>We no longer reference "background.js", because now we're going to handle the extension's logic in the popup's script (you are allowed background.js as well as a popup, it's just that we don't need it in this case).</li>
- <li>We've added <code>"browser_style": true</code>, which will help the styling of our popup look more like part of the browser.</li>
- <li>Finally, we've added <code>"default_popup": "popup/choose_page.html"</code>, which is telling the browser that this browser action is now going to display a popup when clicked, the document for which can be found at "popup/choose_page.html".</li>
-</ul>
+- We no longer reference "background.js", because now we're going to handle the extension's logic in the popup's script (you are allowed background.js as well as a popup, it's just that we don't need it in this case).
+- We've added `"browser_style": true`, which will help the styling of our popup look more like part of the browser.
+- Finally, we've added `"default_popup": "popup/choose_page.html"`, which is telling the browser that this browser action is now going to display a popup when clicked, the document for which can be found at "popup/choose_page.html".
 
-<p>So now we need to create that popup. Create a directory called "popup" then create a file called "choose_page.html" inside it. Give it the following contents:</p>
+So now we need to create that popup. Create a directory called "popup" then create a file called "choose_page.html" inside it. Give it the following contents:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+```html
+<!DOCTYPE html>
 
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;link rel="stylesheet" href="choose_page.css"/&gt;
-  &lt;/head&gt;
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="choose_page.css"/>
+  </head>
 
-&lt;body&gt;
-  &lt;div class="page-choice"&gt;developer.mozilla.org&lt;/div&gt;
-  &lt;div class="page-choice"&gt;support.mozilla.org&lt;/div&gt;
-  &lt;div class="page-choice"&gt;addons.mozilla.org&lt;/div&gt;
-  &lt;script src="choose_page.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
+<body>
+  <div class="page-choice">developer.mozilla.org</div>
+  <div class="page-choice">support.mozilla.org</div>
+  <div class="page-choice">addons.mozilla.org</div>
+  <script src="choose_page.js"></script>
+</body>
 
-&lt;/html&gt;</pre>
+</html>
+```
 
-<p>You can see that this is a normal HTML page containing three {{htmlelement("div")}} elements, each with the name of a Mozilla site inside. It also includes a CSS file and a JavaScript file, which we'll add next.</p>
+You can see that this is a normal HTML page containing three {{htmlelement("div")}} elements, each with the name of a Mozilla site inside. It also includes a CSS file and a JavaScript file, which we'll add next.
 
-<p>Create a file called "choose_page.css" inside the "popup" directory, and give it these contents:</p>
+Create a file called "choose_page.css" inside the "popup" directory, and give it these contents:
 
-<pre class="brush: css">html, body {
+```css
+html, body {
   width: 300px;
 }
 
@@ -154,13 +159,15 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
 
 .page-choice:hover {
   background-color: #CFF2F2;
-}</pre>
+}
+```
 
-<p>This is just a bit of styling for our popup.</p>
+This is just a bit of styling for our popup.
 
-<p>Next, create a "choose_page.js" file inside the "popup" directory, and give it these contents:</p>
+Next, create a "choose_page.js" file inside the "popup" directory, and give it these contents:
 
-<pre class="brush: js">document.addEventListener("click", function(e) {
+```js
+document.addEventListener("click", function(e) {
   if (!e.target.classList.contains("page-choice")) {
     return;
   }
@@ -170,50 +177,46 @@ browser.browserAction.onClicked.addListener(openPage);</pre>
     url: chosenPage
   });
 
-});</pre>
+});
+```
 
-<p>In our JavaScript, we listen for clicks on the popup choices. We first check to see if the click landed on one of the page-choices; if not, we don't do anything else. If the click did land on a page-choice, we construct a URL from it, and open a new tab containing the corresponding page. Note that we can use WebExtension APIs in popup scripts, just as we can in background scripts.</p>
+In our JavaScript, we listen for clicks on the popup choices. We first check to see if the click landed on one of the page-choices; if not, we don't do anything else. If the click did land on a page-choice, we construct a URL from it, and open a new tab containing the corresponding page. Note that we can use WebExtension APIs in popup scripts, just as we can in background scripts.
 
-<p>The extension's final structure should look like this:</p>
+The extension's final structure should look like this:
 
-<pre>button/
-    icons/
-        page-16.png
-        page-32.png
-    popup/
-        choose_page.css
-        choose_page.html
-        choose_page.js
-    manifest.json</pre>
+    button/
+        icons/
+            page-16.png
+            page-32.png
+        popup/
+            choose_page.css
+            choose_page.html
+            choose_page.js
+        manifest.json
 
-<p>Now reload the extension, click the button again, and try clicking on the choices in the popup:</p>
+Now reload the extension, click the button again, and try clicking on the choices in the popup:
 
-<p>{{EmbedYouTube("QPEh1L1xq0Y")}}</p>
+{{EmbedYouTube("QPEh1L1xq0Y")}}
 
-<h2 id="Page_actions">Page actions</h2>
+## Page actions
 
-<p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">Page actions</a> are just like browser actions, except that they are for actions which are relevant only for particular pages, rather than the browser as a whole.</p>
+[Page actions](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) are just like browser actions, except that they are for actions which are relevant only for particular pages, rather than the browser as a whole.
 
-<p>While browser actions are always shown, page actions are only shown in tabs where they are relevant. Page action buttons are displayed in the URL bar, rather than the browser toolbar.</p>
+While browser actions are always shown, page actions are only shown in tabs where they are relevant. Page action buttons are displayed in the URL bar, rather than the browser toolbar.
 
-<h2 id="Learn_more">Learn more</h2>
+## Learn more
 
-<ul>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> manifest key</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code> API</li>
- <li>Browser action examples:
-  <ul>
-   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">beastify</a></li>
-   <li><a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/bookmark-it">Bookmark it!</a></li>
-   <li><a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/favourite-colour">favourite-colour</a></li>
-   <li><a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button">open-my-page-button</a></li>
-  </ul>
- </li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code> manifest key</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">pageAction</a></code> API</li>
- <li>Page action examples:
-  <ul>
-   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/chill-out">chill-out</a></li>
-  </ul>
- </li>
-</ul>
+- [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key
+- [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
+- Browser action examples:
+
+  - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
+  - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
+  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
+  - [open-my-page-button](https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button)
+
+- [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key
+- [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
+- Page action examples:
+
+  - [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out)

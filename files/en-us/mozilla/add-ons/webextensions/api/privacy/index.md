@@ -10,35 +10,30 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.privacy
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Access and modify various privacy-related browser settings.</p>
+Access and modify various privacy-related browser settings.
 
-<p>To use the privacy API, you must have the "privacy" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a>.</p>
+To use the privacy API, you must have the "privacy" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{WebExtAPIRef("privacy.network")}}</dt>
- <dd>Access and modify privacy settings relating to the network.</dd>
- <dt>{{WebExtAPIRef("privacy.services")}}</dt>
- <dd>Access and modify privacy settings relating to the services provided by the browser or third parties.</dd>
- <dt>{{WebExtAPIRef("privacy.websites")}}</dt>
- <dd>Access and modify privacy settings relating to the behavior of websites.</dd>
-</dl>
+- {{WebExtAPIRef("privacy.network")}}
+  - : Access and modify privacy settings relating to the network.
+- {{WebExtAPIRef("privacy.services")}}
+  - : Access and modify privacy settings relating to the services provided by the browser or third parties.
+- {{WebExtAPIRef("privacy.websites")}}
+  - : Access and modify privacy settings relating to the behavior of websites.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
+> **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/extensions/privacy) API.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/privacy"><code>chrome.privacy</code></a> API.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -65,5 +60,4 @@ browser-compat: webextensions.api.privacy
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

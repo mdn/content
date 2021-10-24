@@ -11,43 +11,41 @@ tags:
   - zoomSiteSpecific
 browser-compat: webextensions.api.browserSettings.zoomSiteSpecific
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.</p>
+A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.
 
-<p>This property sets the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">configuration setting</a> <code>browser.zoom.siteSpecific</code>,  which controls  how zoom settings are applied to sites and tabs.</p>
+This property sets the [configuration setting](https://support.mozilla.org/en-US/kb/about-config-editor-firefox) `browser.zoom.siteSpecific`,  which controls  how zoom settings are applied to sites and tabs.
 
-<p>If <code>browser.zoom.siteSpecific</code> is true, zoom operations apply to all pages from the same site so that:</p>
+If `browser.zoom.siteSpecific` is true, zoom operations apply to all pages from the same site so that:
 
-<ul>
- <li>when a page loads, if there is a zoom level for that site it is applied to the page otherwise the global default zoom level is applied.</li>
- <li>when the zoom level for a page changes, the zoom levels of other pages from the site in other tabs are also changed.</li>
-</ul>
+- when a page loads, if there is a zoom level for that site it is applied to the page otherwise the global default zoom level is applied.
+- when the zoom level for a page changes, the zoom levels of other pages from the site in other tabs are also changed.
 
-<p>If <code>browser.zoom.siteSpecific</code> is set false, zoom operations apply to the active tab only so that:</p>
+If `browser.zoom.siteSpecific` is set false, zoom operations apply to the active tab only so that:
 
-<ul>
- <li>when a new tab opens, the global default zoom level is applied.</li>
- <li>when the zoom level in a tab changes, it persists across page loads and does not affect the zoom level in any other tab.</li>
-</ul>
+- when a new tab opens, the global default zoom level is applied.
+- when the zoom level in a tab changes, it persists across page loads and does not affect the zoom level in any other tab.
 
-<p>When Firefox is installed, <code>browser.zoom.siteSpecific</code> is true.</p>
+When Firefox is installed, `browser.zoom.siteSpecific` is true.
 
-<p>If <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites"><code>privacy.websites</code></a><code>.resistFingerprinting</code> is true, this setting has no effect and zoom is set on a per-tab basis.</p>
+If [`privacy.websites`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)`.resistFingerprinting` is true, this setting has no effect and zoom is set on a per-tab basis.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Set the setting to <code>false</code>:</p>
+Set the setting to `false`:
 
-<pre class="brush: js">function logResult(result) {
+```js
+function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
 browser.browserSettings.zoomSiteSpecific.set({value: false}).
-  then(logResult);</pre>
+  then(logResult);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

@@ -13,64 +13,62 @@ tags:
   - setObject
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setObject
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Displays a JSON object in the extension's sidebar pane.</p>
+Displays a JSON object in the extension's sidebar pane.
 
-<p>The object is displayed as an expandable tree, as in the <a href="/en-US/docs/Tools/JSON_viewer">JSON viewer</a> in Firefox. You can optionally specify a <code>rootTitle</code> string: this will be displayed as the title of the tree's root.</p>
+The object is displayed as an expandable tree, as in the [JSON viewer](/en-US/docs/Tools/JSON_viewer) in Firefox. You can optionally specify a `rootTitle` string: this will be displayed as the title of the tree's root.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var setting = browser.devtools.panels.setObject(
+```js
+var setting = browser.devtools.panels.setObject(
   jsonObject,       // string, array, or JSON object
   rootTitle         // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>jsonObject</code></dt>
- <dd><code>String</code> or <code>Array</code> or <code>Object</code>. The object to display. If this is an object it is JSON-serialized, so properties like functions will be omitted.</dd>
- <dt><code>rootTitle</code> {{optional_inline}}</dt>
- <dd><code>String</code>. The title of the root of the tree in which the object is displayed.</dd>
-</dl>
+- `jsonObject`
+  - : `String` or `Array` or `Object`. The object to display. If this is an object it is JSON-serialized, so properties like functions will be omitted.
+- `rootTitle` {{optional_inline}}
+  - : `String`. The title of the root of the tree in which the object is displayed.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments, once the object has been set.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments, once the object has been set.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Create a new pane, and populate it with a JSON object. You could run this code in a script loaded by your extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools page</a>.</p>
+Create a new pane, and populate it with a JSON object. You could run this code in a script loaded by your extension's [devtools page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page).
 
-<pre class="brush: js">function onCreated(sidebarPane) {
+```js
+function onCreated(sidebarPane) {
   sidebarPane.setObject({
     someBool: true,
-    someString: &quot;hello there&quot;,
+    someString: "hello there",
     someObject: {
       someNumber: 42,
-      someOtherString: &quot;this is my pane's content&quot;
+      someOtherString: "this is my pane's content"
     }
   });
 }
 
-browser.devtools.panels.elements.createSidebarPane(&quot;My pane&quot;).then(onCreated);</pre>
+browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a> API.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -97,5 +95,4 @@ browser.devtools.panels.elements.createSidebarPane(&quot;My pane&quot;).then(onC
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,98 +13,99 @@ tags:
   - setIcon
 browser-compat: webextensions.api.browserAction.setIcon
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Sets the icon for the browser action.</p>
+Sets the icon for the browser action.
 
-<p>You can specify a single icon as either the path to an image file or a {{WebExtAPIRef('browserAction.ImageDataType')}} object.</p>
+You can specify a single icon as either the path to an image file or a {{WebExtAPIRef('browserAction.ImageDataType')}} object.
 
-<p>You can specify multiple icons in different sizes by supplying a dictionary containing multiple paths or <code>ImageData</code> objects. This means the icon doesn't have to be scaled for a device with a different pixel density.</p>
+You can specify multiple icons in different sizes by supplying a dictionary containing multiple paths or `ImageData` objects. This means the icon doesn't have to be scaled for a device with a different pixel density.
 
-<p>Tabs without a specific icon will inherit the global icon, which defaults to the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action"><code>default_icon</code></a> specified in the manifest.</p>
+Tabs without a specific icon will inherit the global icon, which defaults to the [`default_icon`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) specified in the manifest.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var settingIcon = browser.browserAction.setIcon(
+```js
+var settingIcon = browser.browserAction.setIcon(
   details         // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>. An object containing either <code>imageData</code> or <code>path</code> properties, and optionally a <code>tabId</code> property.</p>
- <dl>
-  <dt><code>imageData</code>{{optional_inline}}</dt>
-  <dd>
-  <p><code>{{WebExtAPIRef('browserAction.ImageDataType')}}</code> or <code>object</code>. This is either a single <code>ImageData</code> object or a dictionary object.</p>
+- `details`
 
-  <p>Use a dictionary object to specify multiple <code>ImageData</code> objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>imageData</code> is a dictionary, the value of each property is an <code>ImageData</code> object, and its name is its size, like this:</p>
+  - : `object`. An object containing either `imageData` or `path` properties, and optionally a `tabId` property.
 
-  <pre class="brush: json">{
-  16: image16,
-  32: image32
-}</pre>
+    - `imageData`{{optional_inline}}
 
-  <p>The browser will choose the image to use depending on the screen's pixel density. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes">Choosing icon sizes</a> for more information on this.</p>
-  </dd>
-  <dt><code>path</code>{{optional_inline}}</dt>
-  <dd>
-  <p><code>string</code> or <code>object</code>. This is either a relative path to an icon file or it is a dictionary object.</p>
+      - : `{{WebExtAPIRef('browserAction.ImageDataType')}}` or `object`. This is either a single `ImageData` object or a dictionary object.
 
-  <p>Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>path</code> is a dictionary, the value of each property is a relative path, and its name is its size, like this:</p>
+        Use a dictionary object to specify multiple `ImageData` objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `imageData` is a dictionary, the value of each property is an `ImageData` object, and its name is its size, like this:
 
-  <pre class="brush: json">{
-  16: &quot;path/to/image16.jpg&quot;,
-  32: &quot;path/to/image32.jpg&quot;
-}</pre>
+        ```json
+        {
+          16: image16,
+          32: image32
+        }
+        ```
 
-  <p>The browser will choose the image to use depending on the screen's pixel density. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes">Choosing icon sizes</a> for more information on this.</p>
-  </dd>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Sets the icon only for the given tab. The icon is reset when the user navigates this tab to a new page.</dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Sets the icon for the given window.</dd>
- </dl>
- </dd>
-</dl>
+        The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
 
-<ul>
- <li>If <code>windowId</code> and <code>tabId</code> are both supplied, the function fails and the icon is not set.</li>
- <li>If <code>windowId</code> and <code>tabId</code> are both omitted, the global icon is set.</li>
-</ul>
+    - `path`{{optional_inline}}
 
-<p>If each one of <code>imageData</code> and <code>path</code> is one of <code>undefined</code>, <code>null</code> or empty object:</p>
+      - : `string` or `object`. This is either a relative path to an icon file or it is a dictionary object.
 
-<ul>
- <li>If <code>tabId</code> is specified, and the tab has a tab-specific icon set, then the tab will inherit the icon from the window to which it belongs.</li>
- <li>If <code>windowId</code> is specified, and the window has a window-specific icon set, then the window will inherit the global icon.</li>
- <li>Otherwise, the global icon will be reset to the manifest icon.</li>
-</ul>
+        Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `path` is a dictionary, the value of each property is a relative path, and its name is its size, like this:
 
-<h3 id="Return_value">Return value</h3>
+        ```json
+        {
+          16: "path/to/image16.jpg",
+          32: "path/to/image32.jpg"
+        }
+        ```
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments once the icon has been set.</p>
+        The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    - `tabId`{{optional_inline}}
+      - : `integer`. Sets the icon only for the given tab. The icon is reset when the user navigates this tab to a new page.
+    - `windowId`{{optional_inline}}
+      - : `integer`. Sets the icon for the given window.
 
-<p>{{Compat}}</p>
+<!---->
 
-<h2 id="Examples">Examples</h2>
+- If `windowId` and `tabId` are both supplied, the function fails and the icon is not set.
+- If `windowId` and `tabId` are both omitted, the global icon is set.
 
-<p>The code below uses a browser action to toggle a listener for {{WebExtAPIRef("webRequest.onHeadersReceived")}}, and uses <code>setIcon()</code> to indicate whether listening is on or off:</p>
+If each one of `imageData` and `path` is one of `undefined`, `null` or empty object:
 
-<pre class="brush: js">function logResponseHeaders(requestDetails) {
+- If `tabId` is specified, and the tab has a tab-specific icon set, then the tab will inherit the icon from the window to which it belongs.
+- If `windowId` is specified, and the window has a window-specific icon set, then the window will inherit the global icon.
+- Otherwise, the global icon will be reset to the manifest icon.
+
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments once the icon has been set.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+The code below uses a browser action to toggle a listener for {{WebExtAPIRef("webRequest.onHeadersReceived")}}, and uses `setIcon()` to indicate whether listening is on or off:
+
+```js
+function logResponseHeaders(requestDetails) {
   console.log(requestDetails);
 }
 
 function startListening() {
   browser.webRequest.onHeadersReceived.addListener(
     logResponseHeaders,
-    {urls: ["&lt;all_urls&gt;"]},
+    {urls: ["<all_urls>"]},
     ["responseHeaders"]
   );
   browser.browserAction.setIcon({path: "icons/listening-on.svg"});
@@ -123,11 +124,13 @@ function toggleListener() {
   }
 }
 
-browser.browserAction.onClicked.addListener(toggleListener);</pre>
+browser.browserAction.onClicked.addListener(toggleListener);
+```
 
-<p>The code below sets the icon using an <code><a href="/en-US/docs/Web/API/ImageData">ImageData</a></code> object:</p>
+The code below sets the icon using an [`ImageData`](/en-US/docs/Web/API/ImageData) object:
 
-<pre class="brush: js">function getImageData() {
+```js
+function getImageData() {
   var canvas = document.createElement("canvas");
   var ctx = canvas.getContext("2d");
 
@@ -137,29 +140,28 @@ browser.browserAction.onClicked.addListener(toggleListener);</pre>
   return ctx.getImageData(50, 50, 100, 100);
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   browser.browserAction.setIcon({imageData: getImageData()});
 });
-</pre>
+```
 
-<p>The following snippet updates the icon when the user clicks it, but only for the active tab:</p>
+The following snippet updates the icon when the user clicks it, but only for the active tab:
 
-<pre class="brush: js">browser.browserAction.onClicked.addListener((tab) =&gt; {
+```js
+browser.browserAction.onClicked.addListener((tab) => {
   browser.browserAction.setIcon({
     tabId: tab.id, path: "icons/updated-48.png"
   });
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-setIcon) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction#method-setIcon"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -186,5 +188,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

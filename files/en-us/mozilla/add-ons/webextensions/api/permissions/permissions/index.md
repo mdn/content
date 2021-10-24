@@ -10,29 +10,25 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.permissions.Permissions
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A <code>Permissions</code> object represents a collection of permissions.</p>
+A `Permissions` object represents a collection of permissions.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>An {{jsxref("object")}} with the following properties:</p>
+An {{jsxref("object")}} with the following properties:
 
-<dl>
- <dt><code>origins</code>{{optional_inline}}</dt>
- <dd>An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>, representing <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>.</dd>
- <dt><code>permissions</code>{{optional_inline}}</dt>
- <dd>An array of named permissions, including <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permissions</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboard_access">clipboard permissions</a>.</dd>
-</dl>
+- `origins`{{optional_inline}}
+  - : An array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), representing [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions).
+- `permissions`{{optional_inline}}
+  - : An array of named permissions, including [API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) and [clipboard permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboard_access).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/permissions"><code>chrome.permissions</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/extensions/permissions) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

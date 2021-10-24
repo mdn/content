@@ -9,59 +9,59 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.storage
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>Object</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json">
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>Object</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json">
 "storage": {
   "managed_schema": "schema.json"
-}</pre>
-   </td>
-  </tr>
- </tbody>
+}</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Use the <code>storage</code> key to specify the name of the schema file that defines the structure of data in managed storage.</p>
+Use the `storage` key to specify the name of the schema file that defines the structure of data in managed storage.
 
-<p>Managed data declares the enterprise policies supported by the app. Policies are analogous to options but are configured by a system administrator instead of the user, enabling the app to be configured for all users of an organization.</p>
+Managed data declares the enterprise policies supported by the app. Policies are analogous to options but are configured by a system administrator instead of the user, enabling the app to be configured for all users of an organization.
 
-<p>After declaring the policies, they are read from the {{WebExtAPIRef("storage.managed")}} API. However, if a policy value does not conform to the schema, then it is not published by the <code>storage.managed</code> API. It's up to the app to enforce the policies configured by the administrator.</p>
+After declaring the policies, they are read from the {{WebExtAPIRef("storage.managed")}} API. However, if a policy value does not conform to the schema, then it is not published by the `storage.managed` API. It's up to the app to enforce the policies configured by the administrator.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Firefox does not define a schema for managed storage, see {{WebExtAPIRef("storage.managed")}} for more details.</p>
-</div>
+> **Note:** Firefox does not define a schema for managed storage, see {{WebExtAPIRef("storage.managed")}} for more details.
 
-<p>The <code>storage</code> key is an object that has the following required property:</p>
+The `storage` key is an object that has the following required property:
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>managed_schema</code></td>
-   <td>
-    <p>A <code>String</code> specifying the full path of the file within the extension that defines the schema of the manage storage.</p>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><code>managed_schema</code></td>
+      <td>
+        <p>
+          A <code>String</code> specifying the full path of the file within the
+          extension that defines the schema of the manage storage.
+        </p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div class="notecard note">
-<p><strong>Note:</strong></p>
-
-<p>This page includes details from the Chrome developer website page <a href="https://developer.chrome.com/apps/manifest/storage">Manifest for storage areas</a> included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:**
+>
+> This page includes details from the Chrome developer website page [Manifest for storage areas](https://developer.chrome.com/apps/manifest/storage) included here under the Creative Commons Attribution 3.0 United States License.

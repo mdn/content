@@ -11,39 +11,39 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.permissions.contains
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Check whether the extension has the permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.</p>
+Check whether the extension has the permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
 
-<p>The <code>Permissions</code> argument may contain either an origins property, which is an array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>, or a <code>permissions</code> property, which is an array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permissions</a>, or both.</p>
+The `Permissions` argument may contain either an origins property, which is an array of [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), or a `permissions` property, which is an array of [API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), or both.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. The promise is fulfilled with true only if all the extension currently has all the given permissions. For host permissions, if the extension's permissions <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">pattern-match</a> the permissions listed in <code>origins</code>, then they are considered to match.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). The promise is fulfilled with true only if all the extension currently has all the given permissions. For host permissions, if the extension's permissions [pattern-match](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) the permissions listed in `origins`, then they are considered to match.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var getContains = browser.permissions.contains(
+```js
+var getContains = browser.permissions.contains(
   permissions                // Permissions object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>permissions</code></dt>
- <dd>A {{WebExtAPIRef("permissions.Permissions")}} object.</dd>
-</dl>
+- `permissions`
+  - : A {{WebExtAPIRef("permissions.Permissions")}} object.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with <code>true</code> if the extension already has all the permissions listed in the <code>permissions</code> argument, or <code>false</code> otherwise.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension already has all the permissions listed in the `permissions` argument, or `false` otherwise.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">// Extension permissions are:
+```js
+// Extension permissions are:
 // "webRequest", "tabs", "*://*.mozilla.org/*"
 
 var testPermissions1 = {
@@ -51,7 +51,7 @@ var testPermissions1 = {
   permissions: ["tabs"]
 };
 
-browser.permissions.contains(testPermissions1).then((result) =&gt; {
+browser.permissions.contains(testPermissions1).then((result) => {
   console.log(result);    // true
 });
 
@@ -60,7 +60,7 @@ var testPermissions2 = {
   permissions: ["tabs", "alarms"]
 };
 
-browser.permissions.contains(testPermissions2).then((result) =&gt; {
+browser.permissions.contains(testPermissions2).then((result) => {
   console.log(result);   // false, "alarms" doesn't match
 });
 
@@ -69,7 +69,7 @@ var testPermissions3 = {
   permissions: ["tabs", "webRequest"]
 };
 
-browser.permissions.contains(testPermissions3).then((result) =&gt; {
+browser.permissions.contains(testPermissions3).then((result) => {
   console.log(result);   // true: "https://developer.mozilla.org/"
 });                      // matches: "*://*.mozilla.org/*"
 
@@ -77,16 +77,13 @@ var testPermissions4 = {
   origins: ["https://example.org/"]
 };
 
-browser.permissions.contains(testPermissions4).then((result) =&gt; {
+browser.permissions.contains(testPermissions4).then((result) => {
   console.log(result);   // false, "https://example.org/"
 });                      // does not match
+```
 
-</pre>
+{{WebExtExamples}}
 
-<p>{{WebExtExamples}}</p>
-
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/permissions"><code>chrome.permissions</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/extensions/permissions) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

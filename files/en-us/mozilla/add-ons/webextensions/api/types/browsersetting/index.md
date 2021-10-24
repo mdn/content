@@ -12,44 +12,37 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.types.BrowserSetting
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A <code>BrowserSetting</code> is an object representing a browser setting.</p>
+A `BrowserSetting` is an object representing a browser setting.
 
-<p>It provides methods to set and get the setting's underlying value, to clear any change you've made to it, and to listen for changes to its value.</p>
+It provides methods to set and get the setting's underlying value, to clear any change you've made to it, and to listen for changes to its value.
 
-<p>Note that while this object is based on the <a href="https://developer.chrome.com/extensions/types#type-ChromeSetting">ChromeSetting</a> type, this object does not distinguish between setting the value in normal browsing windows and in private browsing windows. This means that all parts of the API relating to private browsing (such as the <code>scope</code> option to <code>ChromeSetting.set()</code>) are not implemented.</p>
+Note that while this object is based on the [ChromeSetting](https://developer.chrome.com/extensions/types#type-ChromeSetting) type, this object does not distinguish between setting the value in normal browsing windows and in private browsing windows. This means that all parts of the API relating to private browsing (such as the `scope` option to `ChromeSetting.set()`) are not implemented.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{WebExtAPIRef("types.BrowserSetting.get()")}}</dt>
- <dd>Get the current value of the setting, and an enumeration representing how the setting is currently controlled.</dd>
- <dt>{{WebExtAPIRef("types.BrowserSetting.set()")}}</dt>
- <dd>Set the setting to a new value.</dd>
- <dt>{{WebExtAPIRef("types.BrowserSetting.clear()")}}</dt>
- <dd>Clear any change made to the setting by this extension.</dd>
-</dl>
+- {{WebExtAPIRef("types.BrowserSetting.get()")}}
+  - : Get the current value of the setting, and an enumeration representing how the setting is currently controlled.
+- {{WebExtAPIRef("types.BrowserSetting.set()")}}
+  - : Set the setting to a new value.
+- {{WebExtAPIRef("types.BrowserSetting.clear()")}}
+  - : Clear any change made to the setting by this extension.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("types.BrowserSetting.onChange")}}</dt>
- <dd>Fired when the setting's value changes.</dd>
-</dl>
+- {{WebExtAPIRef("types.BrowserSetting.onChange")}}
+  - : Fired when the setting's value changes.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/extensions/types) API.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/types"><code>chrome.types</code></a> API.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -76,5 +69,4 @@ browser-compat: webextensions.api.types.BrowserSetting
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

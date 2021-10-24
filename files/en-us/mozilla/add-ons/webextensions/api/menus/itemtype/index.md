@@ -13,41 +13,32 @@ tags:
   - itemtype
 browser-compat: webextensions.api.menus.ItemType
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The type of menu item.</p>
+The type of menu item.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are strings. Possible values are:</p>
+Values of this type are strings. Possible values are:
 
-<dl>
- <dt>normal</dt>
- <dd>A menu item that just displays a label.</dd>
- <dt>checkbox</dt>
- <dd>
- <p>A menu item that represents a binary state. It displays a checkmark next to the label. Clicking the item toggles the checkmark. The {{WebExtAPIRef("menus.onClicked")}} listener will be passed two extra properties: "checked", indicating whether the item is checked now, and "wasChecked", indicating whether the item was checked before the click event.</p>
- </dd>
- <dt>radio</dt>
- <dd>
- <p>A menu item that represents one of a group of choices. Just like a checkbox, this also displays a checkmark next to the label, and its {{WebExtAPIRef("menus.onClicked")}} listener is passed "checked" and "wasChecked". However, if you create more than one radio item, then the items function as a group of radio items: only one item in the group can be checked, and clicking an item makes it the checked item.</p>
- </dd>
- <dt>separator</dt>
- <dd>A line separating a group of items.</dd>
-</dl>
+- normal
+  - : A menu item that just displays a label.
+- checkbox
+  - : A menu item that represents a binary state. It displays a checkmark next to the label. Clicking the item toggles the checkmark. The {{WebExtAPIRef("menus.onClicked")}} listener will be passed two extra properties: "checked", indicating whether the item is checked now, and "wasChecked", indicating whether the item was checked before the click event.
+- radio
+  - : A menu item that represents one of a group of choices. Just like a checkbox, this also displays a checkmark next to the label, and its {{WebExtAPIRef("menus.onClicked")}} listener is passed "checked" and "wasChecked". However, if you create more than one radio item, then the items function as a group of radio items: only one item in the group can be checked, and clicking an item makes it the checked item.
+- separator
+  - : A line separating a group of items.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#type-ItemType) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/contextMenus#type-ItemType"><code>chrome.contextMenus</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a> in the Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -74,5 +65,4 @@ browser-compat: webextensions.api.menus.ItemType
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

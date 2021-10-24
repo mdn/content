@@ -13,48 +13,42 @@ tags:
   - getExtensionTabs
 browser-compat: webextensions.api.extension.getExtensionTabs
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<div class="warning">
-<p><strong>Warning:</strong> This method has been deprecated. Use {{WebExtAPIRef("extension.getViews()")}} instead.</p>
-</div>
+> **Warning:** This method has been deprecated. Use {{WebExtAPIRef("extension.getViews()")}} instead.
 
-<p>Returns an array of the JavaScript <a href="/en-US/docs/Web/API/Window">Window</a> objects for each of the tabs running inside the current extension. If <code>windowId</code> is specified, returns only the Window objects of tabs attached to the specified window.</p>
+Returns an array of the JavaScript [Window](/en-US/docs/Web/API/Window) objects for each of the tabs running inside the current extension. If `windowId` is specified, returns only the Window objects of tabs attached to the specified window.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">chrome.extension.getExtensionTabs(
+```js
+chrome.extension.getExtensionTabs(
   windowId // optional integer
 )
-</pre>
+```
 
-<p>This API is also available as <code>browser.extension.getExtensionTabs()</code>.</p>
+This API is also available as `browser.extension.getExtensionTabs()`.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>windowId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>.</dd>
-</dl>
+- `windowId`{{optional_inline}}
+  - : `integer`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>array</code> of <code>object</code>. Array of global window objects</p>
+`array` of `object`. Array of global window objects
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/extensions/extension#method-getExtensionTabs) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/extension#method-getExtensionTabs"><code>chrome.extension</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -81,5 +75,4 @@ browser-compat: webextensions.api.extension.getExtensionTabs
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

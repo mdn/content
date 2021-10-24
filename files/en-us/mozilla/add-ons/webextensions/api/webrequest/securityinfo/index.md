@@ -11,88 +11,81 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.SecurityInfo
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>An object describing the security properties of a particular web request. An object of this type is returned from the {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API.</p>
+An object describing the security properties of a particular web request. An object of this type is returned from the {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API.
 
-<p>If the request is not secured using <a href="/en-US/docs/Glossary/TLS">TLS</a>, then this object will contain only the property <code>state</code>, whose value will be <code>"insecure"</code>.</p>
+If the request is not secured using [TLS](/en-US/docs/Glossary/TLS), then this object will contain only the property `state`, whose value will be `"insecure"`.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>certificates</code></dt>
- <dd>
-   <p><code>Array</code> of {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}}. If {{WebExtAPIRef("webRequest.getSecurityInfo()")}} was called with the <code>certificateChain</code> option present and set to <code>true</code>, this will contain a <code>CertificateInfo</code> object for every certificate in the chain, from the server certificate up to and including the trust root.</p>
-   <p>Otherwise it will contain a single <code>CertificateInfo</code> object, for the server certificate.</p>
- </dd>
- <dt><code>certificateTransparencyStatus</code> {{optional_inline}}</dt>
- <dd>
- <p><code>String</code>. Indicates the <a href="https://www.certificate-transparency.org/">Certificate Transparency</a> status for the connection. This may take any one of the following values:</p>
+- `certificates`
 
- <ul>
-  <li>"not_applicable"</li>
-  <li>"policy_compliant"</li>
-  <li>"policy_not_enough_scts"</li>
-  <li>"policy_not_diverse_scts"</li>
- </ul>
- </dd>
- <dt><code>cipherSuite</code> {{optional_inline}}</dt>
- <dd><code>String</code>. Cipher suite used for the connection, formatted as per the <a href="https://datatracker.ietf.org/doc/html/rfc5246#appendix-A.5">TLS specification</a>: for example, "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256".</dd>
- <dt><code>errorMessage</code> {{optional_inline}}</dt>
- <dd>
- <p><code>String</code>. If there was a problem with the TLS handshake (for example, the certificate had expired, or a trusted root could not be found, or a certificate was revoked) then <code>status</code> will be "broken" and the <code>errorMessage</code> property will contain a string describing the error, taken from Firefox's internal list of error codes.</p>
+  - : `Array` of {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}}. If {{WebExtAPIRef("webRequest.getSecurityInfo()")}} was called with the `certificateChain` option present and set to `true`, this will contain a `CertificateInfo` object for every certificate in the chain, from the server certificate up to and including the trust root.
 
- <p>Note though that at present you can only call <code>getSecurityInfo()</code> in the <code>onHeaderReceived</code> listener, and the <code>onHeaderReceived</code> event is not fired when the handshake fails. So in practice this will never be set. </p>
- </dd>
- <dt><code>hpkp</code> {{optional_inline}}</dt>
- <dd><code>Boolean</code>. <code>true</code> if the host uses <a href="/en-US/docs/Web/HTTP/Public_Key_Pinning">Public Key Pinning</a>, <code>false</code> otherwise.</dd>
- <dt><code>hsts</code> {{optional_inline}}</dt>
- <dd><code>Boolean</code>. <code>true</code> if the host uses <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">Strict Transport Security</a>, <code>false</code> otherwise.</dd>
- <dt><code>isDomainMismatch</code> {{optional_inline}}</dt>
- <dd><code>Boolean</code>. <code>true</code> if the server's domain name does not match the domain name in its certificate, <code>false</code> otherwise.</dd>
- <dt><code>isExtendedValidation</code> {{optional_inline}}</dt>
- <dd><code>Boolean</code>. <code>true</code> if the server has an <a href="https://en.wikipedia.org/wiki/Extended_Validation_Certificate">Extended Validation Certificate</a>, <code>false</code> otherwise.</dd>
- <dt><code>isNotValidAtThisTime</code> {{optional_inline}}</dt>
- <dd><code>Boolean</code>. <code>true</code> if the current time falls outside the server certificate's validity period (i.e. the certificate has expired or is not yet valid), <code>false</code> otherwise.</dd>
- <dt><code>isUntrusted</code> {{optional_inline}}</dt>
- <dd><code>Boolean</code>. <code>true</code> if a chain back to a trusted root certificate could not be constructed, <code>false</code> otherwise.</dd>
- <dt><code>keaGroupName</code> {{optional_inline}}</dt>
- <dd><code>String</code>. If <code>state</code> is "secure" this describes the key exchange algorithm used in this request.</dd>
- <dt><code>protocolVersion</code> {{optional_inline}}</dt>
- <dd>
- <p><code>String</code>. Version of the TLS protocol used. One of:</p>
+    Otherwise it will contain a single `CertificateInfo` object, for the server certificate.
 
- <ul>
-  <li>"TLSv1"</li>
-  <li>"TLSv1.1"</li>
-  <li>"TLSv1.2"</li>
-  <li>"TLSv1.3"</li>
-  <li>"unknown" (if the version is not valid)</li>
- </ul>
- </dd>
- <dt><code>signatureSchemeName</code> {{optional_inline}}</dt>
- <dd><code>String</code>. If <code>state</code> is "secure" this describes the signature scheme used in this request.</dd>
- <dt><code>state</code></dt>
- <dd>
- <p><code>String</code>. State of the connection. One of:</p>
+- `certificateTransparencyStatus` {{optional_inline}}
 
- <ul>
-  <li>"broken": the TLS handshake failed (for example, the certificate had expired)</li>
-  <li>"insecure": the connection is not a TLS connection</li>
-  <li>"secure": the connection is a secure TLS connection</li>
-  <li>"weak": the connection is a TLS connection but is considered weak. You can examine <code>weaknessReasons</code> to find out the problem.</li>
- </ul>
+  - : `String`. Indicates the [Certificate Transparency](https://www.certificate-transparency.org/) status for the connection. This may take any one of the following values:
 
- <p>Note though that at present you can only call <code>getSecurityInfo()</code> in the <code>onHeaderReceived</code> listener, and the <code>onHeaderReceived</code> event is not fired when the handshake fails. So in practice this will never be set to "broke".</p>
- </dd>
- <dt><code>weaknessReasons</code> {{optional_inline}}</dt>
- <dd><code>String</code>. If <code>state</code> is "weak", this indicates the reason. Currently this may contain only a single value "cipher", indicating that the negotiated cipher suite is considered weak.</dd>
-</dl>
+    - "not_applicable"
+    - "policy_compliant"
+    - "policy_not_enough_scts"
+    - "policy_not_diverse_scts"
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- `cipherSuite` {{optional_inline}}
+  - : `String`. Cipher suite used for the connection, formatted as per the [TLS specification](https://datatracker.ietf.org/doc/html/rfc5246#appendix-A.5): for example, "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256".
+- `errorMessage` {{optional_inline}}
 
-<p>{{Compat}}</p>
+  - : `String`. If there was a problem with the TLS handshake (for example, the certificate had expired, or a trusted root could not be found, or a certificate was revoked) then `status` will be "broken" and the `errorMessage` property will contain a string describing the error, taken from Firefox's internal list of error codes.
 
-<p>{{WebExtExamples}}</p>
+    Note though that at present you can only call `getSecurityInfo()` in the `onHeaderReceived` listener, and the `onHeaderReceived` event is not fired when the handshake fails. So in practice this will never be set.
+
+- `hpkp` {{optional_inline}}
+  - : `Boolean`. `true` if the host uses [Public Key Pinning](/en-US/docs/Web/HTTP/Public_Key_Pinning), `false` otherwise.
+- `hsts` {{optional_inline}}
+  - : `Boolean`. `true` if the host uses [Strict Transport Security](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security), `false` otherwise.
+- `isDomainMismatch` {{optional_inline}}
+  - : `Boolean`. `true` if the server's domain name does not match the domain name in its certificate, `false` otherwise.
+- `isExtendedValidation` {{optional_inline}}
+  - : `Boolean`. `true` if the server has an [Extended Validation Certificate](https://en.wikipedia.org/wiki/Extended_Validation_Certificate), `false` otherwise.
+- `isNotValidAtThisTime` {{optional_inline}}
+  - : `Boolean`. `true` if the current time falls outside the server certificate's validity period (i.e. the certificate has expired or is not yet valid), `false` otherwise.
+- `isUntrusted` {{optional_inline}}
+  - : `Boolean`. `true` if a chain back to a trusted root certificate could not be constructed, `false` otherwise.
+- `keaGroupName` {{optional_inline}}
+  - : `String`. If `state` is "secure" this describes the key exchange algorithm used in this request.
+- `protocolVersion` {{optional_inline}}
+
+  - : `String`. Version of the TLS protocol used. One of:
+
+    - "TLSv1"
+    - "TLSv1.1"
+    - "TLSv1.2"
+    - "TLSv1.3"
+    - "unknown" (if the version is not valid)
+
+- `signatureSchemeName` {{optional_inline}}
+  - : `String`. If `state` is "secure" this describes the signature scheme used in this request.
+- `state`
+
+  - : `String`. State of the connection. One of:
+
+    - "broken": the TLS handshake failed (for example, the certificate had expired)
+    - "insecure": the connection is not a TLS connection
+    - "secure": the connection is a secure TLS connection
+    - "weak": the connection is a TLS connection but is considered weak. You can examine `weaknessReasons` to find out the problem.
+
+    Note though that at present you can only call `getSecurityInfo()` in the `onHeaderReceived` listener, and the `onHeaderReceived` event is not fired when the handshake fails. So in practice this will never be set to "broke".
+
+- `weaknessReasons` {{optional_inline}}
+  - : `String`. If `state` is "weak", this indicates the reason. Currently this may contain only a single value "cipher", indicating that the negotiated cipher suite is considered weak.
+
+## Browser compatibility
+
+{{Compat}}
+
+{{WebExtExamples}}

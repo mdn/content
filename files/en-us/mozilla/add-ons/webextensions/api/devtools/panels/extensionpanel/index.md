@@ -11,28 +11,27 @@ tags:
   - devtools.panels
 browser-compat: webextensions.api.devtools.panels.ExtensionPanel
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>An <code>ExtensionPanel</code> represents a panel added to the devtools. It's the resolution of the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> returned by <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/create">browser.devtools.panels.create()</a></code>.</p>
+An `ExtensionPanel` represents a panel added to the devtools. It's the resolution of the [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) returned by [`browser.devtools.panels.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/create).
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. The define two events, <code>onShown</code> and <code>onHidden</code>.</p>
+Values of this type are objects. The define two events, `onShown` and `onHidden`.
 
-<ul>
- <li><code>onShown</code> is emitted when the panel is shown in the devtools (for example, because the user clicked on the panel's tab in the devtools window).</li>
- <li><code>onHidden</code> is emitted when the panel is hidden (for example, because the user switched to a different tab in the devtools window).</li>
-</ul>
+- `onShown` is emitted when the panel is shown in the devtools (for example, because the user clicked on the panel's tab in the devtools window).
+- `onHidden` is emitted when the panel is hidden (for example, because the user switched to a different tab in the devtools window).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code creates a new panel, then adds handlers for its <code>onShown</code> and <code>onHidden</code> events.</p>
+This code creates a new panel, then adds handlers for its `onShown` and `onHidden` events.
 
-<pre class="brush: js">function handleShown(e) {
+```js
+function handleShown(e) {
   console.log(e);
   console.log("panel is being shown");
 }
@@ -46,21 +45,19 @@ browser.devtools.panels.create(
   "My Panel",                 // title
   "icons/star.png",           // icon
   "devtools/panel/panel.html" // content
-).then((newPanel) =&gt; {
+).then((newPanel) => {
   newPanel.onShown.addListener(handleShown);
   newPanel.onHidden.addListener(handleHidden);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -87,5 +84,4 @@ browser.devtools.panels.create(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

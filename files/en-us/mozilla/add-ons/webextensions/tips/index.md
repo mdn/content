@@ -8,19 +8,20 @@ tags:
   - WebExtensions
   - tricks
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>This page contains various tips and tricks which should be useful to many people developing extensions using WebExtension APIs.</p>
+This page contains various tips and tricks which should be useful to many people developing extensions using WebExtension APIs.
 
-<h2 id="Using_advanced_JavaScript_features_from_ECMAScript_2015_and_2016">Using advanced JavaScript features from ECMAScript 2015 and 2016</h2>
+## Using advanced JavaScript features from ECMAScript 2015 and 2016
 
-<p>Firefox <a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla">supports many features of ECMAScript 2015</a> out of the box. Several new and experimental features, however, are not available to the Web or WebExtensions by default. If you want to use these features, it's best to transpile your code using a tool such as <a href="https://babeljs.io/">Babel</a>.</p>
+Firefox [supports many features of ECMAScript 2015](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) out of the box. Several new and experimental features, however, are not available to the Web or WebExtensions by default. If you want to use these features, it's best to transpile your code using a tool such as [Babel](https://babeljs.io/).
 
-<p>Beware that anything below this line is outdated information and has been removed from Babel 6.</p>
+Beware that anything below this line is outdated information and has been removed from Babel 6.
 
-<p>Babel provides transformations for the vast majority of ES2015 features, and enables them by default. Since Firefox already fully supports most of these, it's best to configure Babel to ignore them. We suggest creating a <code>.babelrc</code> file, or a <code>babel</code> section in your project's <code>package.json</code> file containing the following:</p>
+Babel provides transformations for the vast majority of ES2015 features, and enables them by default. Since Firefox already fully supports most of these, it's best to configure Babel to ignore them. We suggest creating a `.babelrc` file, or a `babel` section in your project's `package.json` file containing the following:
 
-<pre class="brush: js">{
+```js
+{
   "env": {
     "firefox": {
       "sourceMaps": "inline",
@@ -42,14 +43,16 @@ tags:
     }
   }
 }
-</pre>
+```
 
-<p>Then, to compile an individual script, run:</p>
+Then, to compile an individual script, run:
 
-<pre class="brush: bash">BABEL_ENV=firefox babel &lt;filename&gt;
-</pre>
+```bash
+BABEL_ENV=firefox babel <filename>
+```
 
-<p>Or, to compile every JavaScript file under the directory <code>src</code> and place the compiled files in <code>compiled</code>, copying over non-JavaScript files in the process, run:</p>
+Or, to compile every JavaScript file under the directory `src` and place the compiled files in `compiled`, copying over non-JavaScript files in the process, run:
 
-<pre class="brush: bash">BABEL_ENV=firefox babel -Dd compiled src
-</pre>
+```bash
+BABEL_ENV=firefox babel -Dd compiled src
+```

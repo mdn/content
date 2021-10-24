@@ -11,74 +11,61 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.extension
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Utilities related to your extension. Get URLs to resources packages with your extension. Get the <code><a href="/en-US/docs/Web/API/Window">Window</a></code> object for your extension's pages. Get the values for various settings.</p>
+Utilities related to your extension. Get URLs to resources packages with your extension. Get the [`Window`](/en-US/docs/Web/API/Window) object for your extension's pages. Get the values for various settings.
 
-<div class="notecard note">
-<p><strong>Note:</strong> <strong>The messaging APIs in this module are deprecated</strong> in favor of the equivalent APIs in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime">runtime</a></code> module.</p>
-</div>
+> **Note:** **The messaging APIs in this module are deprecated** in favor of the equivalent APIs in the [`runtime`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime) module.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
-	<dt>{{WebExtAPIRef("extension.ViewType")}}</dt>
-	<dd>The type of extension view.</dd>
-</dl>
+- {{WebExtAPIRef("extension.ViewType")}}
+  - : The type of extension view.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
-	<dt>{{WebExtAPIRef("extension.lastError")}}</dt>
-	<dd>Set for the lifetime of a callback if an asynchronous extension API has resulted in an error. If no error has occurred, <code>lastError</code> will be {{jsxref("undefined")}}.</dd>
-	<dt>{{WebExtAPIRef("extension.inIncognitoContext")}}</dt>
-	<dd><code>True</code> for content scripts running inside incognito tabs, and for extension pages running inside an incognito process. (The latter only applies to extensions with '<code>split</code>' <code>incognito_behavior</code>.)</dd>
-</dl>
+- {{WebExtAPIRef("extension.lastError")}}
+  - : Set for the lifetime of a callback if an asynchronous extension API has resulted in an error. If no error has occurred, `lastError` will be {{jsxref("undefined")}}.
+- {{WebExtAPIRef("extension.inIncognitoContext")}}
+  - : `True` for content scripts running inside incognito tabs, and for extension pages running inside an incognito process. (The latter only applies to extensions with '`split`' `incognito_behavior`.)
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
-	<dt>{{WebExtAPIRef("extension.getBackgroundPage()")}}</dt>
-	<dd>Returns the <code><a href="/en-US/docs/Web/API/Window">Window</a></code> object for the background page running inside the current extension. Returns {{jsxref("null")}} if the extension has no background page.</dd>
-	<dt>{{WebExtAPIRef("extension.getExtensionTabs()")}} {{deprecated_inline}}</dt>
-	<dd>Returns an array of the JavaScript <a href="/en-US/docs/Web/API/Window">Window</a> objects for each of the tabs running inside the current extension.</dd>
-	<dt>{{WebExtAPIRef("extension.getURL()")}} {{deprecated_inline}}</dt>
-	<dd>Converts a relative path within an extension install directory to a fully-qualified URL.</dd>
-	<dt>{{WebExtAPIRef("extension.getViews()")}}</dt>
-	<dd>Returns an array of the <code><a href="/en-US/docs/Web/API/Window">Window</a></code> objects for each of the pages running inside the current extension.</dd>
-	<dt>{{WebExtAPIRef("extension.isAllowedIncognitoAccess()")}}</dt>
-	<dd>Retrieves the state of the extension's access to Incognito-mode (as determined by the user-controlled '<em>Allowed in Incognito</em>' checkbox).</dd>
-	<dt>{{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}}</dt>
-	<dd>Retrieves the state of the extension's access to the <code>file://</code> scheme (as determined by the user-controlled '<em>Allow access to File URLs</em>' checkbox).</dd>
-	<dt>{{WebExtAPIRef("extension.sendRequest()")}} {{deprecated_inline}}</dt>
-	<dd>Sends a single request to other listeners within the extension.</dd>
-	<dt>{{WebExtAPIRef("extension.setUpdateUrlData()")}}</dt>
-	<dd>Sets the value of the ap CGI parameter used in the extension's update URL. This value is ignored for extensions that are hosted in the browser vendor's store.</dd>
-</dl>
+- {{WebExtAPIRef("extension.getBackgroundPage()")}}
+  - : Returns the [`Window`](/en-US/docs/Web/API/Window) object for the background page running inside the current extension. Returns {{jsxref("null")}} if the extension has no background page.
+- {{WebExtAPIRef("extension.getExtensionTabs()")}} {{deprecated_inline}}
+  - : Returns an array of the JavaScript [Window](/en-US/docs/Web/API/Window) objects for each of the tabs running inside the current extension.
+- {{WebExtAPIRef("extension.getURL()")}} {{deprecated_inline}}
+  - : Converts a relative path within an extension install directory to a fully-qualified URL.
+- {{WebExtAPIRef("extension.getViews()")}}
+  - : Returns an array of the [`Window`](/en-US/docs/Web/API/Window) objects for each of the pages running inside the current extension.
+- {{WebExtAPIRef("extension.isAllowedIncognitoAccess()")}}
+  - : Retrieves the state of the extension's access to Incognito-mode (as determined by the user-controlled '_Allowed in Incognito_' checkbox).
+- {{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}}
+  - : Retrieves the state of the extension's access to the `file://` scheme (as determined by the user-controlled '_Allow access to File URLs_' checkbox).
+- {{WebExtAPIRef("extension.sendRequest()")}} {{deprecated_inline}}
+  - : Sends a single request to other listeners within the extension.
+- {{WebExtAPIRef("extension.setUpdateUrlData()")}}
+  - : Sets the value of the ap CGI parameter used in the extension's update URL. This value is ignored for extensions that are hosted in the browser vendor's store.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
-	<dt>{{WebExtAPIRef("extension.onRequest")}} {{deprecated_inline}}</dt>
-	<dd>Fired when a request is sent from either an extension process or a content script.</dd>
-	<dt>{{WebExtAPIRef("extension.onRequestExternal")}} {{deprecated_inline}}</dt>
-	<dd>Fired when a request is sent from another extension.</dd>
-</dl>
+- {{WebExtAPIRef("extension.onRequest")}} {{deprecated_inline}}
+  - : Fired when a request is sent from either an extension process or a content script.
+- {{WebExtAPIRef("extension.onRequestExternal")}} {{deprecated_inline}}
+  - : Fired when a request is sent from another extension.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
+> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/extensions/extension) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/extension"><code>chrome.extension</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -105,5 +92,4 @@ browser-compat: webextensions.api.extension
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

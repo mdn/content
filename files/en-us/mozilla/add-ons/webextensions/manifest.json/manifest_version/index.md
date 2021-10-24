@@ -7,37 +7,35 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.manifest_version
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>Number</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json">
-"manifest_version": 2</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>Number</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td><pre class="brush: json">"manifest_version": 2</pre></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>This key specifies the version of manifest.json used by this extension.</p>
+This key specifies the version of manifest.json used by this extension.
 
-<p>Currently, this must always be 2.</p>
+Currently, this must always be 2.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: json">"manifest_version": 2
-</pre>
+```json
+"manifest_version": 2
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -13,77 +13,75 @@ tags:
   - getViews
 browser-compat: webextensions.api.extension.getViews
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Returns an array of the <a href="/en-US/docs/Web/API/Window">Window</a> objects for each of the pages running inside the current extension. This includes, for example:</p>
+Returns an array of the [Window](/en-US/docs/Web/API/Window) objects for each of the pages running inside the current extension. This includes, for example:
 
-<ul>
- <li>the background page, if one is defined</li>
- <li>any popup pages, if defined and loaded</li>
- <li>any options pages, if defined and loaded</li>
- <li>any browser tabs that host content packaged with the extension</li>
-</ul>
+- the background page, if one is defined
+- any popup pages, if defined and loaded
+- any options pages, if defined and loaded
+- any browser tabs that host content packaged with the extension
 
-<p>In Firefox, if this method is called from a page that is part of a private browsing window, such as a sidebar in a private window or a popup opened from a private window, then its return value will not include the extension's background page.</p>
+In Firefox, if this method is called from a page that is part of a private browsing window, such as a sidebar in a private window or a popup opened from a private window, then its return value will not include the extension's background page.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var windows = browser.extension.getViews(
+```js
+var windows = browser.extension.getViews(
   fetchProperties // optional object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>fetchProperties</code>{{optional_inline}}</dt>
- <dd>
-   <p>An object with the following properties:</p>
-   <dl>
-    <dt><code>type</code>{{optional_inline}}</dt>
-    <dd><code>string</code>. An {{WebExtAPIRef('extension.ViewType')}} indicating the type of view to get. If omitted, this function returns all views.</dd>
-    <dt><code>windowId</code>{{optional_inline}}</dt>
-    <dd><code>integer</code>. The window to restrict the search to. If omitted, this function returns all views. In Firefox version 92 and earlier, sidebar views are not matched and, therefore, not returned.</dd>
-   </dl>
- </dd>
-</dl>
+- `fetchProperties`{{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An object with the following properties:
 
-<p><code>array</code> of <code>object</code>. Array of <a href="/en-US/docs/Web/API/Window">Window</a> objects.</p>
+    - `type`{{optional_inline}}
+      - : `string`. An {{WebExtAPIRef('extension.ViewType')}} indicating the type of view to get. If omitted, this function returns all views.
+    - `windowId`{{optional_inline}}
+      - : `integer`. The window to restrict the search to. If omitted, this function returns all views. In Firefox version 92 and earlier, sidebar views are not matched and, therefore, not returned.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+### Return value
 
-<p>{{Compat}}</p>
+`array` of `object`. Array of [Window](/en-US/docs/Web/API/Window) objects.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>Get all windows belonging to this extension, and log their URLs:</p>
+{{Compat}}
 
-<pre class="brush: js">var windows = browser.extension.getViews();
+## Examples
+
+Get all windows belonging to this extension, and log their URLs:
+
+```js
+var windows = browser.extension.getViews();
 
 for (var extensionWindow of windows) {
   console.log(extensionWindow.location.href);
-}</pre>
+}
+```
 
-<p>Get only windows in browser tabs hosting content packaged with the extension:</p>
+Get only windows in browser tabs hosting content packaged with the extension:
 
-<pre class="brush: js">var windows = browser.extension.getViews({type: "tab"});</pre>
+```js
+var windows = browser.extension.getViews({type: "tab"});
+```
 
-<p>Get only windows in popups:</p>
+Get only windows in popups:
 
-<pre class="brush: js">var windows = browser.extension.getViews({type: "popup"});</pre>
+```js
+var windows = browser.extension.getViews({type: "popup"});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/extensions/extension#method-getViews) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/extension#method-getViews"><code>chrome.extension</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -110,5 +108,4 @@ for (var extensionWindow of windows) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

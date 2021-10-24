@@ -5,6 +5,6 @@ tags:
   - Draft
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>All you need is Firefox 45 or higher. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">Your first extension</a> to get started.</p>
+All you need is Firefox 45 or higher. See [Your first extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) to get started.

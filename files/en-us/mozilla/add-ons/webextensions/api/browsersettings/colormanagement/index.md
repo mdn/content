@@ -12,58 +12,47 @@ tags:
   - colorManagement
 browser-compat: webextensions.api.browserSettings.colorManagement
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object used to query and set the browser's color management features.</p> 
+A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object used to query and set the browser's color management features.
 
-<p>By default, Firefox applies color management to tagged media and defaults to sRGB for untagged media. This behavior means that some untagged media, such as that used in animation and movie production, may have undesired color corrections made to it. Use these settings to prevent that.</p>
+By default, Firefox applies color management to tagged media and defaults to sRGB for untagged media. This behavior means that some untagged media, such as that used in animation and movie production, may have undesired color corrections made to it. Use these settings to prevent that.
 
-<p>The object has these properties:</p>
+The object has these properties:
 
-<dl>
-  <dt><code>mode</code></dt>
-  <dd>
-    <p>
-      A string that represents the mode used for color management. Valid values are <code>off</code>, <code>full</code>, and <code>tagged_only</code>.
-    </p>
-  </dd>
-  <dt><code>useNativeSRGB</code></dt>
-  <dd>
-    <p>
-      A boolean representing whether or not built-in sRGB color management is used.
-    </p>
-  </dd>
-  <dt><code>useWebRenderCompositor</code></dt>
-  <dd>
-    <p>
-      A boolean representing whether or not the WebRender compositor is used.
-    </p>
-  </dd>
-</dl>
+- `mode`
+  - : A string that represents the mode used for color management. Valid values are `off`, `full`, and `tagged_only`.
+- `useNativeSRGB`
+  - : A boolean representing whether or not built-in sRGB color management is used.
+- `useWebRenderCompositor`
+  - : A boolean representing whether or not the WebRender compositor is used.
 
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+Set color mode to "full":
 
-<p>Set color mode to "full":</p>
-
-<pre class="brush: js">function logResult(result) {
+```js
+function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
 browser.browserSettings.colorManagement.mode.set({value: "full"}).
-  then(logResult);</pre>
+  then(logResult);
+```
 
-<p>Get the native sRGB color management color mode:</p>
+Get the native sRGB color management color mode:
 
-<pre class="brush: js">function logResult(result) {
+```js
+function logResult(result) {
   console.log(`Current useNativeSRGB value: ${result.value}`);
 }
 
 browser.browserSettings.colorManagement.useNativeSRGB.get({}).
-  then(logResult);</pre>
+  then(logResult);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

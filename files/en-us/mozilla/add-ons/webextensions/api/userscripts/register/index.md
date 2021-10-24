@@ -11,70 +11,65 @@ tags:
   - userScripts
 browser-compat: webextensions.api.userScripts.register
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>This method enables user scripts to be registered from an extension's pages (such as the background page).</p>
+This method enables user scripts to be registered from an extension's pages (such as the background page).
 
-<p>This method is very similar to the {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} API method (for example, they both return a promise that resolves to an API object with an {{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","unregister()")}} method for unregistering the script). There are, however, differences in the options supported.</p>
+This method is very similar to the {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} API method (for example, they both return a promise that resolves to an API object with an {{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","unregister()")}} method for unregistering the script). There are, however, differences in the options supported.
 
-<p>This is an asynchronous method that returns a {{JSxRef("Promise")}}.</p>
+This is an asynchronous method that returns a {{JSxRef("Promise")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const registeredUserScript = await browser.userScripts.register(
+```js
+const registeredUserScript = await browser.userScripts.register(
   userScriptOptions       // object
 );
 ….
-await registeredUserScript.unregister();</pre>
+await registeredUserScript.unregister();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>userScriptOptions</code></dt>
- <dd><p><code>object</code>. Represents the user scripts to register. It has similar syntax to {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}}.</p>
- <p>The <code>UserScriptOptions</code> object has the following properties:</p>
+- `userScriptOptions`
 
- <dl>
-  <dt><code>scriptMetadata</code> {{Optional_Inline}}</dt>
-  <dd>A <code>JSON</code> object containing arbitrary metadata properties associated with the registered user scripts. However, while arbitrary, the object must be serializable, so it is compatible with <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">the structured clone algorithm.</a> This metadata is used to pass details from the script to the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">API script</a></code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts"></a>. For example, providing details of a subset of the APIs that need to be injected by the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">API script</a></code>. The API  does not use this metadata,</dd>
-  <dt><code>allFrames</code> {{Optional_Inline}}</dt>
-  <dd>Same as <code>all_frames</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
-  <dt><code>excludeGlobs</code> {{Optional_Inline}}</dt>
-  <dd>Same as <code>exclude_globs</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
-  <dt><code>excludeMatches</code> {{Optional_Inline}}</dt>
-  <dd>Same as <code>exclude_matches</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
-  <dt><code>includeGlobs</code> {{Optional_Inline}}</dt>
-  <dd>Same as <code>include_globs</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
-  <dt><code>js</code></dt>
-  <dd>An array of objects. Each object has either a property named <code>file</code>, which is a URL starting at the extension's manifest.json and pointing to a JavaScript file to register, or a property named <code>code</code>, which contains JavaScript code to register.</dd>
-  <dt><code>matchAboutBlank</code> {{Optional_Inline}}</dt>
-  <dd>Same as <code>match_about_blank</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
-  <dt><code>matches</code></dt>
-  <dd>Same as <code>matches</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.<br>
-  The URL patterns provided in <code>matches</code> must be enabled by the host permissions defined in the manifest <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a></code> property or enabled by the user from the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></code> list. For example, if matches includes <code>https://mozilla.org/a</code> a script is only registered if host permissions include, for example, <code>https://mozilla.org/*</code>. If the URL pattern isn't enabled, the call to register fails with the error "Permission denied to register a user script for ORIGIN".</dd>
-  <dt><code>runAt</code> {{Optional_Inline}}</dt>
-  <dd>Same as <code>run_at</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
- </dl>
- </dd>
-</dl>
+  - : `object`. Represents the user scripts to register. It has similar syntax to {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}}.
 
-<p>Unlike content script options, the userScriptOptions object does not have a css property. Use {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} to dynamically register and unregister stylesheets.</p>
+    The `UserScriptOptions` object has the following properties:
 
-<h3 id="Return_value">Return value</h3>
+    - `scriptMetadata` {{Optional_Inline}}
+      - : A `JSON` object containing arbitrary metadata properties associated with the registered user scripts. However, while arbitrary, the object must be serializable, so it is compatible with [the structured clone algorithm.](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) This metadata is used to pass details from the script to the [`API script`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts)[](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts). For example, providing details of a subset of the APIs that need to be injected by the [`API script`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts). The API  does not use this metadata,
+    - `allFrames` {{Optional_Inline}}
+      - : Same as `all_frames` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+    - `excludeGlobs` {{Optional_Inline}}
+      - : Same as `exclude_globs` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+    - `excludeMatches` {{Optional_Inline}}
+      - : Same as `exclude_matches` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+    - `includeGlobs` {{Optional_Inline}}
+      - : Same as `include_globs` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+    - `js`
+      - : An array of objects. Each object has either a property named `file`, which is a URL starting at the extension's manifest.json and pointing to a JavaScript file to register, or a property named `code`, which contains JavaScript code to register.
+    - `matchAboutBlank` {{Optional_Inline}}
+      - : Same as `match_about_blank` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+    - `matches`
+      - : Same as `matches` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+        The URL patterns provided in `matches` must be enabled by the host permissions defined in the manifest [`permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) property or enabled by the user from the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) list. For example, if matches includes `https://mozilla.org/a` a script is only registered if host permissions include, for example, `https://mozilla.org/*`. If the URL pattern isn't enabled, the call to register fails with the error "Permission denied to register a user script for ORIGIN".
+    - `runAt` {{Optional_Inline}}
+      - : Same as `run_at` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
 
-<p>A {{JSxRef("Promise")}} that is fulfilled with a {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} object that is use to unregister the user scripts.</p>
+Unlike content script options, the userScriptOptions object does not have a css property. Use {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} to dynamically register and unregister stylesheets.
 
-<div class="notecard note">
-<p><strong>Note:</strong> User scripts are unregistered when the related extension page (from which the user scripts were registered) is unloaded, so you should register user scripts from an extension page that persists at least as long as you want the user scripts to stay registered.</p>
-</div>
+### Return value
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+A {{JSxRef("Promise")}} that is fulfilled with a {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} object that is use to unregister the user scripts.
 
-<p>{{Compat}}</p>
+> **Note:** User scripts are unregistered when the related extension page (from which the user scripts were registered) is unloaded, so you should register user scripts from an extension page that persists at least as long as you want the user scripts to stay registered.
 
-<h2 id="See_also">See also</h2>
+## Browser compatibility
 
-<ul>
- <li>{{WebExtAPIRef("contentScripts.register","contentScripts.register()")}}</li>
- <li>{{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","RegisteredUserScript.unregister()")}}</li>
-</ul>
+{{Compat}}
+
+## See also
+
+- {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}}
+- {{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","RegisteredUserScript.unregister()")}}

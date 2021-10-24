@@ -12,77 +12,73 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.PageSettings
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>The type <strong><code>tabs.PageSettings</code></strong> is used to control how a tab is rendered as a PDF by the {{WebExtAPIRef("tabs.saveAsPDF()")}} method.</p>
+The type **`tabs.PageSettings`** is used to control how a tab is rendered as a PDF by the {{WebExtAPIRef("tabs.saveAsPDF()")}} method.
 
-<p>All its properties are optional.</p>
+All its properties are optional.
 
-<p>For setting headers and footers, you can include certain special characters in the strings you supply. These will be replaced in the rendered output as follows:</p>
+For setting headers and footers, you can include certain special characters in the strings you supply. These will be replaced in the rendered output as follows:
 
-<ul>
- <li>"&amp;P": the page number, like "2"</li>
- <li>"&amp;PT": the page number and the total number of pages, like "2 of 3"</li>
- <li>"&amp;D": the current date/time</li>
- <li>"&amp;T": the page title</li>
- <li>"&amp;U": the page URL</li>
-</ul>
+- "\&P": the page number, like "2"
+- "\&PT": the page number and the total number of pages, like "2 of 3"
+- "\&D": the current date/time
+- "\&T": the page title
+- "\&U": the page URL
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>edgeBottom</code>{{optional_inline}}</dt>
- <dd><code>number</code>. The spacing between the bottom of the footers and the bottom edge of the paper (inches). Default: 0.</dd>
- <dt><code>edgeLeft</code>{{optional_inline}}</dt>
- <dd><code>number</code>. The spacing between the left header/footer and the left edge of the paper (inches). Default: 0.</dd>
- <dt><code>edgeRight</code>{{optional_inline}}</dt>
- <dd><code>number</code>. The spacing between the right header/footer and the left edge of the paper (inches). Default: 0.</dd>
- <dt><code>edgeTop</code>{{optional_inline}}</dt>
- <dd><code>number</code>. The spacing between the top of the headers and the top edge of the paper (inches). Default: 0</dd>
- <dt><code>footerCenter</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The text for the page's center footer. Default: ''.</dd>
- <dt><code>footerLeft</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The text for the page's left footer. Default: '&amp;PT'.</dd>
- <dt><code>footerRight</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The text for the page's right footer. Default: '&amp;D'.</dd>
- <dt><code>headerCenter</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The text for the page's center header. Default: ''.</dd>
- <dt><code>headerLeft</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The text for the page's left header. Default: '&amp;T'.</dd>
- <dt><code>headerRight</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The text for the page's right header. Default: '&amp;U'.</dd>
- <dt><code>marginBottom</code>{{optional_inline}}</dt>
- <dd><code>number</code>. The margin between the page content and the bottom edge of the paper (inches). Default: 0.5.</dd>
- <dt><code>marginLeft</code>{{optional_inline}}</dt>
- <dd><code>number</code>. The margin between the page content and the left edge of the paper (inches). Default: 0.5.</dd>
- <dt><code>marginRight</code>{{optional_inline}}</dt>
- <dd><code>number</code>. The margin between the page content and the right edge of the paper (inches). Default: 0.5.</dd>
- <dt><code>marginTop</code>{{optional_inline}}</dt>
- <dd><code>number</code>. The margin between the page content and the top edge of the paper (inches). Default: 0.5.</dd>
- <dt><code>orientation</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. Page orientation: 0 means "portrait", 1 means "landscape". Default: 0.</dd>
- <dt><code>paperHeight</code>{{optional_inline}}</dt>
- <dd><code>number</code>. The paper height in paper size units. Default: 11.0.</dd>
- <dt><code>paperSizeUnit</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. The paper size unit: 0 = inches, 1 = millimeters. Default: 0.</dd>
- <dt><code>paperWidth</code> {{optional_inline}}</dt>
- <dd><code>number</code>. The paper width in paper size units. Default: 8.5.</dd>
- <dt><code>scaling</code> {{optional_inline}}</dt>
- <dd><code>number</code>. Page content scaling factor. 1 means 100% or normal size. Default: 1.</dd>
- <dt><code>showBackgroundColors</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Whether the page background colors should be shown. Default: false.</dd>
- <dt><code>showBackgroundImages</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Whether the page background images should be shown. Default: false.</dd>
- <dt><code>shrinkToFit</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Whether the page content should shrink to fit the page width (overrides scaling). Default: true.</dd>
- <dt><code>toFileName</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The name of the file the PDF is saved in, with or without the <code>.pdf</code> extension.</dd>
-</dl>
+- `edgeBottom`{{optional_inline}}
+  - : `number`. The spacing between the bottom of the footers and the bottom edge of the paper (inches). Default: 0.
+- `edgeLeft`{{optional_inline}}
+  - : `number`. The spacing between the left header/footer and the left edge of the paper (inches). Default: 0.
+- `edgeRight`{{optional_inline}}
+  - : `number`. The spacing between the right header/footer and the left edge of the paper (inches). Default: 0.
+- `edgeTop`{{optional_inline}}
+  - : `number`. The spacing between the top of the headers and the top edge of the paper (inches). Default: 0
+- `footerCenter` {{optional_inline}}
+  - : `string`. The text for the page's center footer. Default: ''.
+- `footerLeft` {{optional_inline}}
+  - : `string`. The text for the page's left footer. Default: '\&PT'.
+- `footerRight` {{optional_inline}}
+  - : `string`. The text for the page's right footer. Default: '\&D'.
+- `headerCenter` {{optional_inline}}
+  - : `string`. The text for the page's center header. Default: ''.
+- `headerLeft` {{optional_inline}}
+  - : `string`. The text for the page's left header. Default: '\&T'.
+- `headerRight` {{optional_inline}}
+  - : `string`. The text for the page's right header. Default: '\&U'.
+- `marginBottom`{{optional_inline}}
+  - : `number`. The margin between the page content and the bottom edge of the paper (inches). Default: 0.5.
+- `marginLeft`{{optional_inline}}
+  - : `number`. The margin between the page content and the left edge of the paper (inches). Default: 0.5.
+- `marginRight`{{optional_inline}}
+  - : `number`. The margin between the page content and the right edge of the paper (inches). Default: 0.5.
+- `marginTop`{{optional_inline}}
+  - : `number`. The margin between the page content and the top edge of the paper (inches). Default: 0.5.
+- `orientation` {{optional_inline}}
+  - : `integer`. Page orientation: 0 means "portrait", 1 means "landscape". Default: 0.
+- `paperHeight`{{optional_inline}}
+  - : `number`. The paper height in paper size units. Default: 11.0.
+- `paperSizeUnit` {{optional_inline}}
+  - : `integer`. The paper size unit: 0 = inches, 1 = millimeters. Default: 0.
+- `paperWidth` {{optional_inline}}
+  - : `number`. The paper width in paper size units. Default: 8.5.
+- `scaling` {{optional_inline}}
+  - : `number`. Page content scaling factor. 1 means 100% or normal size. Default: 1.
+- `showBackgroundColors` {{optional_inline}}
+  - : `boolean`. Whether the page background colors should be shown. Default: false.
+- `showBackgroundImages` {{optional_inline}}
+  - : `boolean`. Whether the page background images should be shown. Default: false.
+- `shrinkToFit` {{optional_inline}}
+  - : `boolean`. Whether the page content should shrink to fit the page width (overrides scaling). Default: true.
+- `toFileName` {{optional_inline}}
+  - : `string`. The name of the file the PDF is saved in, with or without the `.pdf` extension.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

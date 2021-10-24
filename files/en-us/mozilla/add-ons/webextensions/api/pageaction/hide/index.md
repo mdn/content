@@ -13,48 +13,46 @@ tags:
   - pageAction
 browser-compat: webextensions.api.pageAction.hide
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Hides the page action for a given tab.</p>
+Hides the page action for a given tab.
 
-<p><code>hide()</code> overrides pattern matching, so the page action will not be shown in the specified tab even if its URL is matched by <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action"><code>show_matches</code></a>.</p>
+`hide()` overrides pattern matching, so the page action will not be shown in the specified tab even if its URL is matched by [`show_matches`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.pageAction.hide(
+```js
+browser.pageAction.hide(
   tabId // integer
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. The ID of the tab for which you want to hide the page action.</dd>
-</dl>
+- `tabId`
+  - : `integer`. The ID of the tab for which you want to hide the page action.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Hide the page action for the current tab when the user clicks it:</p>
+Hide the page action for the current tab when the user clicks it:
 
-<pre class="brush: js">browser.pageAction.onClicked.addListener((tab) =&gt; {
+```js
+browser.pageAction.onClicked.addListener((tab) => {
   browser.pageAction.hide(tab.id);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction#method-hide) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/pageAction#method-hide"><code>chrome.pageAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json"><code>page_action.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -81,5 +79,4 @@ browser-compat: webextensions.api.pageAction.hide
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

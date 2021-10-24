@@ -7,39 +7,42 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.homepage_url
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json">
-"homepage_url": "https://example.org/my-addon"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json">
+"homepage_url": "https://example.org/my-addon"</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>URL for the extension's home page.</p>
+URL for the extension's home page.
 
-<p>If a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer">developer</a> key containing the "url" property and "homepage_url" are defined, Firefox uses "developer.url" while Opera uses "homepage_url". 
-Chrome and Safari do not support the "developer" key.</p>
+If a [developer](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) key containing the "url" property and "homepage_url" are defined, Firefox uses "developer.url" while Opera uses "homepage_url".
+Chrome and Safari do not support the "developer" key.
 
-<p>This is a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json">localizable property</a>.</p>
+This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: json">"homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify"</pre>
+```json
+"homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify"
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

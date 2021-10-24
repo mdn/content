@@ -13,49 +13,48 @@ tags:
   - get
 browser-compat: webextensions.api.alarms.get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Gets an alarm, given its name.</p>
+Gets an alarm, given its name.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var getAlarm = browser.alarms.get(
+```js
+var getAlarm = browser.alarms.get(
   name                   // optional string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>name</code>{{optional_inline}}</dt>
- <dd><code>string</code>. The name of the alarm to get. If you don't supply this, the empty string "" will be used.</dd>
-</dl>
+- `name`{{optional_inline}}
+  - : `string`. The name of the alarm to get. If you don't supply this, the empty string "" will be used.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an <code>{{WebExtAPIRef('alarms.Alarm', "Alarm")}}</code> object. This represents the alarm whose name matches <code>name</code>. If no alarms match, this will be <code>undefined</code>.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `{{WebExtAPIRef('alarms.Alarm', "Alarm")}}` object. This represents the alarm whose name matches `name`. If no alarms match, this will be `undefined`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">function gotAlarm(alarm) {
+```js
+function gotAlarm(alarm) {
   if (alarm) {
     console.log(alarm.name);
   }
 }
 
 var getAlarm = browser.alarms.get("my-periodic-alarm");
-getAlarm.then(gotAlarm);</pre>
+getAlarm.then(gotAlarm);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

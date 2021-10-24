@@ -13,45 +13,43 @@ tags:
   - show
 browser-compat: webextensions.api.pageAction.show
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Shows the {{WebExtAPIRef("pageAction")}} for a given {{WebExtAPIRef("tabs/Tab", "tab")}}. The page action is shown whenever the given tab is the active tab.</p>
+Shows the {{WebExtAPIRef("pageAction")}} for a given {{WebExtAPIRef("tabs/Tab", "tab")}}. The page action is shown whenever the given tab is the active tab.
 
-<p><code>show()</code> overrides pattern matching, so the page action will be shown in the specified tab even if <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action"><code>show_matches</code></a> does not match the URL or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action"><code>hide_matches</code></a> does.</p>
+`show()` overrides pattern matching, so the page action will be shown in the specified tab even if [`show_matches`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) does not match the URL or [`hide_matches`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) does.
 
-<p>Note that calling <code>show()</code> has no effect on a tab with no content loaded.</p>
+Note that calling `show()` has no effect on a tab with no content loaded.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.pageAction.show(
+```js
+browser.pageAction.show(
   tabId // integer
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. The ID of the {{WebExtAPIRef("tabs/Tab", "tab")}} for which you want to show the page action.</dd>
-</dl>
+- `tabId`
+  - : `integer`. The ID of the {{WebExtAPIRef("tabs/Tab", "tab")}} for which you want to show the page action.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with <code>undefined</code>.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `undefined`.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example shows the {{WebExtAPIRef("pageAction")}} for the active tab when the user selects a context menu item.</p>
+This example shows the {{WebExtAPIRef("pageAction")}} for the active tab when the user selects a context menu item.
 
-<div class="notecard note">
-<p><strong>Note:</strong> You'll need the <code>contextMenus</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> in your <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest</a> to create context menu items.</p>
-</div>
+> **Note:** You'll need the `contextMenus` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in your [manifest](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to create context menu items.
 
-<pre class="brush: js">browser.contextMenus.create({
+```js
+browser.contextMenus.create({
   id: "show",
   title: "Show page action"
 })
@@ -61,18 +59,15 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
     browser.pageAction.show(tab.id)
   }
 })
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction#method-show) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/pageAction#method-show"><code>chrome.pageAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json"><code>page_action.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -99,5 +94,4 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

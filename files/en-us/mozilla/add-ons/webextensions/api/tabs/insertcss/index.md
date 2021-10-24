@@ -13,73 +13,69 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.insertCSS
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Injects CSS into a page.</p>
+Injects CSS into a page.
 
-<p>To use this API you must have the permission for the page's URL, either explicitly as a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission</a>, or using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission">activeTab permission</a>.</p>
+To use this API you must have the permission for the page's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 
-<p>You can only inject CSS into pages whose URL can be expressed using a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match pattern</a>: meaning, its scheme must be one of "http", "https", or "file". This means that you can't inject CSS into any of the browser's built-in pages, such as about:debugging, about:addons, or the page that opens when you open a new empty tab.</p>
+You can only inject CSS into pages whose URL can be expressed using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns): meaning, its scheme must be one of "http", "https", or "file". This means that you can't inject CSS into any of the browser's built-in pages, such as about:debugging, about:addons, or the page that opens when you open a new empty tab.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Firefox resolves URLs in injected CSS files relative to the CSS file itself, rather than to the page it's injected into.</p>
-</div>
+> **Note:** Firefox resolves URLs in injected CSS files relative to the CSS file itself, rather than to the page it's injected into.
 
-<p>The inserted CSS may be removed again by calling {{WebExtAPIRef("tabs.removeCSS()")}}.</p>
+The inserted CSS may be removed again by calling {{WebExtAPIRef("tabs.removeCSS()")}}.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> (on Firefox only).</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) (on Firefox only).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var inserting = browser.tabs.insertCSS(
+```js
+var inserting = browser.tabs.insertCSS(
   tabId,           // optional integer
   details          // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>tabId</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. The ID of the tab in which to insert the CSS. Defaults to the active tab of the current window.</dd>
- <dt><code>details</code></dt>
- <dd>
-   <p>An object describing the CSS to insert. It contains the following properties:</p>
-   <dl>
-    <dt><code>allFrames</code>{{optional_inline}}</dt>
-    <dd><code>boolean</code>. If <code>true</code>, the CSS will be injected into all frames of the current page. If it is <code>false</code>, CSS is only injected into the top frame. Defaults to <code>false</code>.</dd>
-    <dt><code>code</code>{{optional_inline}}</dt>
-    <dd><code>string</code>. Code to inject, as a text string.</dd>
-    <dt><code>cssOrigin</code>{{optional_inline}}</dt>
-    <dd><p><code>string</code>. This can take one of two values: "user", to add the CSS as a user stylesheet or "author" to add it as an author stylesheet. If this option is omitted, the CSS is added as an author stylesheet.</p>
-    <ul>
-     <li>"user" enables you to prevent websites from overriding the CSS you insert: see <a href="/en-US/docs/Web/CSS/Cascade#cascading_order">Cascading order</a>.</li>
-     <li>"author" stylesheets behave as if they appear after all author rules specified by the web page. This behavior includes any author stylesheets added dynamically by the page’s scripts, even if that addition happens after the <code>insertCSS</code> call completes.</li>
-    </ul>
-    </dd>
-    <dt><code>file</code>{{optional_inline}}</dt>
-    <dd><code>string</code>. Path to a file containing the code to inject. In Firefox, relative URLs are resolved relative to the current page URL. In Chrome, these URLs are resolved relative to the extension's base URL. To work cross-browser, you can specify the path as an absolute URL, starting at the extension's root, like this: <code>"/path/to/stylesheet.css"</code>.</dd>
-    <dt><code>frameId</code>{{optional_inline}}</dt>
-    <dd><code>integer</code>. The frame where the CSS should be injected. Defaults to <code>0</code> (the top-level frame).</dd>
-    <dt><code>matchAboutBlank</code>{{optional_inline}}</dt>
-    <dd><code>boolean</code>. If <code>true</code>, the code will be injected into embedded "about:blank" and "about:srcdoc" frames if your extension has access to their parent document. The code cannot be inserted in top-level about: frames. Defaults to <code>false</code>.</dd>
-    <dt><code>runAt</code>{{optional_inline}}</dt>
-    <dd>{{WebExtAPIRef('extensionTypes.RunAt')}}. The soonest that the code will be injected into the tab. Defaults to "document_idle".</dd>
-   </dl>
- </dd>
-</dl>
+- `tabId` {{optional_inline}}
+  - : `integer`. The ID of the tab in which to insert the CSS. Defaults to the active tab of the current window.
+- `details`
 
-<h3 id="Return_value">Return value</h3>
+  - : An object describing the CSS to insert. It contains the following properties:
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when all the CSS has been inserted. If any error occurs, the promise will be rejected with an error message.</p>
+    - `allFrames`{{optional_inline}}
+      - : `boolean`. If `true`, the CSS will be injected into all frames of the current page. If it is `false`, CSS is only injected into the top frame. Defaults to `false`.
+    - `code`{{optional_inline}}
+      - : `string`. Code to inject, as a text string.
+    - `cssOrigin`{{optional_inline}}
 
-<h2 id="Examples">Examples</h2>
+      - : `string`. This can take one of two values: "user", to add the CSS as a user stylesheet or "author" to add it as an author stylesheet. If this option is omitted, the CSS is added as an author stylesheet.
 
-<p>This example inserts into the currently active tab CSS which is taken from a string.</p>
+        - "user" enables you to prevent websites from overriding the CSS you insert: see [Cascading order](/en-US/docs/Web/CSS/Cascade#cascading_order).
+        - "author" stylesheets behave as if they appear after all author rules specified by the web page. This behavior includes any author stylesheets added dynamically by the page’s scripts, even if that addition happens after the `insertCSS` call completes.
 
-<pre class="brush: js">var css = "body { border: 20px dotted pink; }";
+    - `file`{{optional_inline}}
+      - : `string`. Path to a file containing the code to inject. In Firefox, relative URLs are resolved relative to the current page URL. In Chrome, these URLs are resolved relative to the extension's base URL. To work cross-browser, you can specify the path as an absolute URL, starting at the extension's root, like this: `"/path/to/stylesheet.css"`.
+    - `frameId`{{optional_inline}}
+      - : `integer`. The frame where the CSS should be injected. Defaults to `0` (the top-level frame).
+    - `matchAboutBlank`{{optional_inline}}
+      - : `boolean`. If `true`, the code will be injected into embedded "about:blank" and "about:srcdoc" frames if your extension has access to their parent document. The code cannot be inserted in top-level about: frames. Defaults to `false`.
+    - `runAt`{{optional_inline}}
+      - : {{WebExtAPIRef('extensionTypes.RunAt')}}. The soonest that the code will be injected into the tab. Defaults to "document_idle".
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the CSS has been inserted. If any error occurs, the promise will be rejected with an error message.
+
+## Examples
+
+This example inserts into the currently active tab CSS which is taken from a string.
+
+```js
+var css = "body { border: 20px dotted pink; }";
+
+browser.browserAction.onClicked.addListener(() => {
 
   function onError(error) {
     console.log(`Error: ${error}`);
@@ -87,11 +83,13 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
   var insertingCSS = browser.tabs.insertCSS({code: css});
   insertingCSS.then(null, onError);
-});</pre>
+});
+```
 
-<p>This example inserts CSS which is loaded from a file packaged with the extension. The CSS is inserted into the tab whose ID is 2:</p>
+This example inserts CSS which is loaded from a file packaged with the extension. The CSS is inserted into the tab whose ID is 2:
 
-<pre class="brush: js">browser.browserAction.onClicked.addListener(() =&gt; {
+```js
+browser.browserAction.onClicked.addListener(() => {
 
   function onError(error) {
     console.log(`Error: ${error}`);
@@ -99,22 +97,20 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 
   var insertingCSS = browser.tabs.insertCSS(2, {file: "content-style.css"});
   insertingCSS.then(null, onError);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-insertCSS"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-insertCSS) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-  <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -141,5 +137,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

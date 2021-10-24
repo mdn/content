@@ -12,56 +12,42 @@ tags:
   - userScripts
 browser-compat: webextensions.api.userScripts
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>Use this API to register user scripts, third-party scripts designed to manipulate webpages or provide new features. Registering a user script instructs the browser to attach the script to pages that match the URL patterns specified during registration.</p>
+Use this API to register user scripts, third-party scripts designed to manipulate webpages or provide new features. Registering a user script instructs the browser to attach the script to pages that match the URL patterns specified during registration.
 
-<p>This API offers similar capabilities to {{WebExtAPIRef("contentScripts")}} but with features suited to handling third-party scripts:</p>
+This API offers similar capabilities to {{WebExtAPIRef("contentScripts")}} but with features suited to handling third-party scripts:
 
-<ul>
- <li>execution is in an isolated sandbox: each user script is run in an isolated sandbox within the web content processes, preventing accidental or deliberate interference among scripts.</li>
- <li>access to the <code>window</code> and <code>document</code> global values related to the webpage the user script is attached to.</li>
- <li>no access to WebExtension APIs or associated permissions granted to the extension: the API script, which inherits the extension’s permissions, can provide packaged WebExtension APIs to registered user scripts. An API script is declared in the extension's manifest file using the "user_scripts" manifest key.</li>
-</ul>
+- execution is in an isolated sandbox: each user script is run in an isolated sandbox within the web content processes, preventing accidental or deliberate interference among scripts.
+- access to the `window` and `document` global values related to the webpage the user script is attached to.
+- no access to WebExtension APIs or associated permissions granted to the extension: the API script, which inherits the extension’s permissions, can provide packaged WebExtension APIs to registered user scripts. An API script is declared in the extension's manifest file using the "user_scripts" manifest key.
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> This API requires the presence of the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_scripts</a></code> key in the manifest.json, even if no API script is specified. For example. <code>user_scripts: {}</code>.</p>
-</div>
+> **Warning:** This API requires the presence of the [`user_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) key in the manifest.json, even if no API script is specified. For example. `user_scripts: {}`.
 
-<p>To use the API, call <code>{{WebExtAPIRef("userScripts.register","register()")}}</code> passing in an object defining the scripts to register. The method returns a Promise that is resolved with a <code>{{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}</code> object.</p>
+To use the API, call `{{WebExtAPIRef("userScripts.register","register()")}}` passing in an object defining the scripts to register. The method returns a Promise that is resolved with a `{{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}` object.
 
-<div class="notecard note">
-<p><strong>Note:</strong> User scripts are unregistered when the related extension page (from which the user scripts were registered) is unloaded, so you should register a user script from an extension page that persists at least as long as you want the user scripts to stay registered.</p>
-</div>
+> **Note:** User scripts are unregistered when the related extension page (from which the user scripts were registered) is unloaded, so you should register a user script from an extension page that persists at least as long as you want the user scripts to stay registered.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("userScripts.RegisteredUserScript")}}</dt>
- <dd>The <code>object</code> returned by the {{WebExtAPIRef("userScripts.register","register()")}} method. It represents the registered user scripts and is used to deregister the user scripts.</dd>
-</dl>
+- {{WebExtAPIRef("userScripts.RegisteredUserScript")}}
+  - : The `object` returned by the {{WebExtAPIRef("userScripts.register","register()")}} method. It represents the registered user scripts and is used to deregister the user scripts.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{WebExtAPIRef("userScripts.register()")}}</dt>
- <dd>Registers user scripts.</dd>
-</dl>
+- {{WebExtAPIRef("userScripts.register()")}}
+  - : Registers user scripts.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("userScripts.onBeforeScript")}}</dt>
- <dd>An event available to the API script, registered in<code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">"user_scripts"</a></code>, that execute before a user script executes. Use it to trigger the export of the additional APIs provided by the API script, so they are available to the user script.</dd>
-</dl>
+- {{WebExtAPIRef("userScripts.onBeforeScript")}}
+  - : An event available to the API script, registered in[`"user_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), that execute before a user script executes. Use it to trigger the export of the additional APIs provided by the API script, so they are available to the user script.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts">Working with <code>userScripts</code></a></li>
- <li>{{WebExtAPIRef("contentScripts","browser.contentScripts")}}</li>
-</ul>
+- [Working with `userScripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts)
+- {{WebExtAPIRef("contentScripts","browser.contentScripts")}}

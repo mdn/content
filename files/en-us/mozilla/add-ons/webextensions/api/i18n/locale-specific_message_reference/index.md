@@ -14,17 +14,16 @@ tags:
 ---
 {{AddonSidebar()}}
 
-<p>Each internationalized extension has at least one file named <code>messages.json</code> that provides locale-specific strings. This page describes the format of <code>messages.json</code> files.</p>
+Each internationalized extension has at least one file named `messages.json` that provides locale-specific strings. This page describes the format of `messages.json` files.
 
-<div class="note">
-<p><strong>Note:</strong> For information on how to internationalize your extensions, see our <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization">i18n</a> guide.</p>
-</div>
+> **Note:** For information on how to internationalize your extensions, see our [i18n](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) guide.
 
-<h2 id="messages.json_example">messages.json example</h2>
+## messages.json example
 
-<p>The following code shows an example <code>messages.json file</code>, taken from our <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n example</a> extension. Only the "<em>name</em>" and "message" fields are required.</p>
+The following code shows an example `messages.json file`, taken from our [notify-link-clicks-i18n example](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension. Only the "_name_" and "message" fields are required.
 
-<pre class="brush: json">{
+```json
+{
   "extensionName": {
     "message": "Notify link clicks i18n",
     "description": "Name of the extension."
@@ -50,81 +49,76 @@ tags:
       }
     }
   }
-}</pre>
+}
+```
 
-<h2 id="Placement">Placement</h2>
+## Placement
 
-<p>Your <code>messages.json</code> files need to be placed inside directories named after the locale each one is supporting — <code>en</code>, <code>de</code>, <code>ja</code>, etc. These in turn need to be placed inside a directory called <code>_locales</code>, inside the root of your extension.</p>
+Your `messages.json` files need to be placed inside directories named after the locale each one is supporting — `en`, `de`, `ja`, etc. These in turn need to be placed inside a directory called `_locales`, inside the root of your extension.
 
-<h2 id="Member_details">Member details</h2>
+## Member details
 
-<p>This section describes each member that can appear in a <code>messages.json</code> file.</p>
+This section describes each member that can appear in a `messages.json` file.
 
-<h3 id="name">name</h3>
+### name
 
-<p>Each top-level member is named after the name of the message string you are localizing, for example <code>"extensionName"</code> or <code>"notificationContent"</code> in the example above. Each name is case-insensitive, and acts as a key allowing you to retrieve the localized message text.</p>
+Each top-level member is named after the name of the message string you are localizing, for example `"extensionName"` or `"notificationContent"` in the example above. Each name is case-insensitive, and acts as a key allowing you to retrieve the localized message text.
 
-<p>The name can include the following characters:</p>
+The name can include the following characters:
 
-<ul>
- <li>A-Z</li>
- <li>a-z</li>
- <li>0-9</li>
- <li>_ (underscore)</li>
- <li>@</li>
-</ul>
+- A-Z
+- a-z
+- 0-9
+- \_ (underscore)
+- @
 
-<div class="note">
-<p><strong>Note:</strong> You shouldn't define names that start with @@. Such names are reserved for <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#predefined_messages">predefined messages</a>.</p>
-</div>
+> **Note:** You shouldn't define names that start with @@. Such names are reserved for [predefined messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#predefined_messages).
 
-<h3 id="message">message</h3>
+### message
 
-<p>At least this property must be set for every string. The <code>"message"</code> member contains a localized string that can contain {{anch("placeholders")}}. You can use:</p>
+At least this property must be set for every string. The `"message"` member contains a localized string that can contain {{anch("placeholders")}}. You can use:
 
-<ul>
- <li><em>$placeholder_name$</em> (case insensitive) to insert a particular placeholder (for example $URL$ in the example above) into your string.</li>
- <li><code>$1</code>, <code>$2</code>,<code> $3</code>, etc. to directly insert values obtained from a {{WebExtAPIRef("i18n.getMessage()")}} call into your string.</li>
-</ul>
+- _$placeholder_name$_ (case insensitive) to insert a particular placeholder (for example $URL$ in the example above) into your string.
+- `$1`, `$2`,` $3`, etc. to directly insert values obtained from a {{WebExtAPIRef("i18n.getMessage()")}} call into your string.
 
-<p>Other points to note:</p>
+Other points to note:
 
-<ul>
- <li>Any number of consecutive dollar signs appearing in strings are replaced by the same number of dollar signs minus one. So, $$ &gt; $, $$$ &gt; $$, etc.</li>
- <li>When the locale file is read, tokens matching <code>/\$([a-z0-9_@]+)\$/i</code> are replaced with the matching value from the string's "placeholders" object. These substitutions happen prior to processing any <code>/\$\d/</code> tokens in the message.</li>
- <li>When a locale string is used, tokens matching <code>/\$\d+/</code> are replaced with the replacements passed to {{WebExtAPIRef("i18n.getMessage()")}}.</li>
- <li><code>getMessage()</code> won't process calls with more than 9 placeholders/substitutions.</li>
-</ul>
+- Any number of consecutive dollar signs appearing in strings are replaced by the same number of dollar signs minus one. So, $$ > $, $$$ > $$, etc.
+- When the locale file is read, tokens matching `/\$([a-z0-9_@]+)\$/i` are replaced with the matching value from the string's "placeholders" object. These substitutions happen prior to processing any `/\$\d/` tokens in the message.
+- When a locale string is used, tokens matching `/\$\d+/` are replaced with the replacements passed to {{WebExtAPIRef("i18n.getMessage()")}}.
+- `getMessage()` won't process calls with more than 9 placeholders/substitutions.
 
-<h3 id="description">description</h3>
+### description
 
-<p>{{optional_inline}}</p>
+{{optional_inline}}
 
-<p>The <code>"description"</code> member should contain a description of the message string's contents, aimed to provide a translator with help to create the best translation possible of the string.</p>
+The `"description"` member should contain a description of the message string's contents, aimed to provide a translator with help to create the best translation possible of the string.
 
-<h3 id="placeholders">placeholders</h3>
+### placeholders
 
-<p>{{optional_inline}}</p>
+{{optional_inline}}
 
-<p>The <code>"placeholders"</code> member defines one or more placeholder substrings to be used within the message — these can be used to hardcode items that you don't want translated, or refer to variables.</p>
+The `"placeholders"` member defines one or more placeholder substrings to be used within the message — these can be used to hardcode items that you don't want translated, or refer to variables.
 
-<p>Each placeholder substring definition has a number of values of its own:</p>
+Each placeholder substring definition has a number of values of its own:
 
-<pre class="brush: json">"url" : {
+```json
+"url" : {
   "content" : "$1",
   "example" : "https://developer.mozilla.org"
-}</pre>
+}
+```
 
-<h4 id="placeholder_name">placeholder name</h4>
+#### placeholder name
 
-<p>The placeholder name is used to represent the placeholder in the substitution string (e.g. <code>"url"</code> becomes <code>$url$</code>). It is case insensitive and can contain the same characters as a message string {{anch("name")}}.</p>
+The placeholder name is used to represent the placeholder in the substitution string (e.g. `"url"` becomes `$url$`). It is case insensitive and can contain the same characters as a message string {{anch("name")}}.
 
-<h4 id="content">content</h4>
+#### content
 
-<p>The "content" item defines the content of the placeholder. This can be a hardcoded string, such as "My placeholder", but it can also include values obtained from a {{WebExtAPIRef("i18n.getMessage()")}} call. This property is required. For more information, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#retrieving_message_strings_from_javascript">Retrieving message strings from JavaScript</a>.</p>
+The "content" item defines the content of the placeholder. This can be a hardcoded string, such as "My placeholder", but it can also include values obtained from a {{WebExtAPIRef("i18n.getMessage()")}} call. This property is required. For more information, see [Retrieving message strings from JavaScript](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#retrieving_message_strings_from_javascript).
 
-<h4 id="example">example</h4>
+#### example
 
-<p>{{optional_inline}}</p>
+{{optional_inline}}
 
-<p>The optional "example" item is again intended to help translators by showing them an example of how the placeholder would appear to end users, allowing them to make the best choice when localizing the file.</p>
+The optional "example" item is again intended to help translators by showing them an example of how the placeholder would appear to end users, allowing them to make the best choice when localizing the file.

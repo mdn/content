@@ -14,45 +14,45 @@ tags:
   - devtools.panels
 browser-compat: webextensions.api.devtools.panels.ElementsPanel.createSidebarPane
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Adds a new pane to the sidebar in the HTML/CSS inspector.</p>
+Adds a new pane to the sidebar in the HTML/CSS inspector.
 
-<p>The HTML/CSS inspector, called the <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a> in Firefox and the <a href="https://developers.google.com/web/tools/chrome-devtools/inspect-styles/">Elements panel</a> in Chrome, displays the page DOM in the main part of its window, and has a sidebar that displays various other aspects of the page HTML/CSS in a tabbed interface. For example, in Firefox, the sidebar can display the CSS rules for the selected element, or its fonts, or its box model.</p>
+The HTML/CSS inspector, called the [Page Inspector](/en-US/docs/Tools/Page_Inspector) in Firefox and the [Elements panel](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/) in Chrome, displays the page DOM in the main part of its window, and has a sidebar that displays various other aspects of the page HTML/CSS in a tabbed interface. For example, in Firefox, the sidebar can display the CSS rules for the selected element, or its fonts, or its box model.
 
-<p>The <code>createSidebarPane()</code> function adds a new pane to the sidebar. For example, the screenshot below shows a new pane titled "My pane", that displays a JSON object:</p>
+The `createSidebarPane()` function adds a new pane to the sidebar. For example, the screenshot below shows a new pane titled "My pane", that displays a JSON object:
 
-<p><img alt="" src="inspector-sidebar.png"></p>
+![](inspector-sidebar.png)
 
-<p>This function takes one argument, which is a string representing the pane's title. It returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that resolves to an <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane">ExtensionSidebarPane</a></code> object representing the new pane. You can use that object to define the pane's content and behavior.</p>
+This function takes one argument, which is a string representing the pane's title. It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to an [`ExtensionSidebarPane`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane) object representing the new pane. You can use that object to define the pane's content and behavior.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var creating = browser.devtools.panels.elements.createSidebarPane(
+```js
+var creating = browser.devtools.panels.elements.createSidebarPane(
   title       // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>title</code></dt>
- <dd><code>string</code>. The pane's title. This will appear in the row of tabs along the top of the sidebar, and is the main way the user will be able to identify your pane.</dd>
-</dl>
+- `title`
+  - : `string`. The pane's title. This will appear in the row of tabs along the top of the sidebar, and is the main way the user will be able to identify your pane.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane">ExtensionSidebarPane</a></code> object representing the new pane.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an [`ExtensionSidebarPane`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane) object representing the new pane.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Create a new pane, and populate it with a JSON object. You could run this code in a script loaded by your extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools page</a>.</p>
+Create a new pane, and populate it with a JSON object. You could run this code in a script loaded by your extension's [devtools page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page).
 
-<pre class="brush: js">function onCreated(sidebarPane) {
+```js
+function onCreated(sidebarPane) {
   sidebarPane.setObject({
     someBool: true,
     someString: "hello there",
@@ -64,16 +64,13 @@ browser-compat: webextensions.api.devtools.panels.ElementsPanel.createSidebarPan
 }
 
 browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/docs/extensions/reference/devtools_panels/"><code>chrome.devtools.panels</code></a> API.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -100,5 +97,4 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

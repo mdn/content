@@ -11,53 +11,55 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.onerror
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<div>
-<p>An event handler that will be called when an error occurs. This is most often because an invalid request ID was passed into {{WebExtAPIRef("webRequest.filterResponseData()")}}.</p>
+An event handler that will be called when an error occurs. This is most often because an invalid request ID was passed into {{WebExtAPIRef("webRequest.filterResponseData()")}}.
 
-<p>After this event is fired, the {{WebExtAPIRef("webRequest.StreamFilter.error")}} property will contain a message giving more information about the error.</p>
+After this event is fired, the {{WebExtAPIRef("webRequest.StreamFilter.error")}} property will contain a message giving more information about the error.
 
-<p>Note that this event is <strong>not</strong> triggered for network errors.</p>
-</div>
+Note that this event is **not** triggered for network errors.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example adds an <code>onerror</code> listener which logs the value of {{WebExtAPIRef("webRequest.StreamFilter.error")}}.</p>
+This example adds an `onerror` listener which logs the value of {{WebExtAPIRef("webRequest.StreamFilter.error")}}.
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   // This example seems not useful because,
   // a extension would use "details.requestId"
   let filter = browser.webRequest.filterResponseData("12345");
 
-  filter.onerror = event =&gt; {
+  filter.onerror = event => {
     console.log(`Error: ${filter.error}`);
   }
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["&lt;all_urls&gt;"], types: ["main_frame"]},
+  {urls: ["<all_urls>"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>This example uses no <code>"blocking"</code>.</p>
+This example uses no `"blocking"`.
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onerror = event =&gt; {
+  filter.onerror = event => {
     console.log(`Error: ${filter.error}`); // Error: Invalid request ID
   }
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["&lt;all_urls&gt;"], types: ["main_frame"]}
-);</pre>
+  {urls: ["<all_urls>"], types: ["main_frame"]}
+);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

@@ -7,111 +7,129 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.content_security_policy
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json">
-"content_security_policy": "default-src 'self'"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json">
+"content_security_policy": "default-src 'self'"</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Extensions have a content security policy applied to them by default. The default policy restricts the sources from which they can load <a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a> and <a href="/en-US/docs/Web/HTML/Element/object">&lt;object&gt;</a> resources, and disallows potentially unsafe practices such as the use of <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#default_content_security_policy">Default content security policy</a> to learn more about the implications of this.</p>
+Extensions have a content security policy applied to them by default. The default policy restricts the sources from which they can load [\<script>](/en-US/docs/Web/HTML/Element/script) and [\<object>](/en-US/docs/Web/HTML/Element/object) resources, and disallows potentially unsafe practices such as the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). See [Default content security policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#default_content_security_policy) to learn more about the implications of this.
 
-<p>You can use the <code>"content_security_policy"</code> manifest key to loosen or tighten the default policy. This key is specified in just the same way as the Content-Security-Policy HTTP header. See <a href="/en-US/docs/Web/HTTP/CSP">Using Content Security Policy</a> for a general description of CSP syntax.</p>
+You can use the `"content_security_policy"` manifest key to loosen or tighten the default policy. This key is specified in just the same way as the Content-Security-Policy HTTP header. See [Using Content Security Policy](/en-US/docs/Web/HTTP/CSP) for a general description of CSP syntax.
 
-<p>For example, you can use this key to:</p>
+For example, you can use this key to:
 
-<ul>
- <li>Allow the extension to load scripts and objects from outside its package, by supplying their URL in the {{CSP("script-src")}} or {{CSP("object-src")}} directives.</li>
- <li>Allow the extension to execute inline scripts, by <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script">supplying the hash of the script in the <code>"script-src"</code> directive</a>.</li>
- <li>Allow the extension to use <code>eval()</code> and similar features, by including <code>'unsafe-eval'</code> in the {{CSP("script-src")}} directive.</li>
- <li>Restrict permitted sources for other types of content, such as images and stylesheets, using the appropriate <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">policy directive</a>.</li>
-</ul>
+- Allow the extension to load scripts and objects from outside its package, by supplying their URL in the {{CSP("script-src")}} or {{CSP("object-src")}} directives.
+- Allow the extension to execute inline scripts, by [supplying the hash of the script in the `"script-src"` directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script).
+- Allow the extension to use `eval()` and similar features, by including `'unsafe-eval'` in the {{CSP("script-src")}} directive.
+- Restrict permitted sources for other types of content, such as images and stylesheets, using the appropriate [policy directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy).
 
-<p>There are restrictions on the policy you can specify here:</p>
+There are restrictions on the policy you can specify here:
 
-<ul>
- <li>The policy must include at least the {{CSP("script-src")}} and the {{CSP("object-src")}} directives, and the {{CSP("script-src")}} directive must contain the keyword <code>'self'</code>.</li>
- <li>Remote sources must use <code>https:</code> schemes.</li>
- <li>Remote sources must not use wildcards for any domains in the <a href="https://publicsuffix.org/list/">public suffix list</a> (so "*.co.uk" and "*.blogspot.com" are not allowed, although "*.foo.blogspot.com" is allowed).</li>
- <li>All sources must specify a host.</li>
- <li>The only permitted schemes for sources are: <code>blob:</code>, <code>filesystem:</code>, <code>moz-extension:</code>, <code>https:</code>, and <code>wss:</code>.</li>
- <li>The only permitted <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src#sources">keywords</a> are: <code>'none'</code>, <code>'self'</code>, and <code>'unsafe-eval'</code>.</li>
-</ul>
+- The policy must include at least the {{CSP("script-src")}} and the {{CSP("object-src")}} directives, and the {{CSP("script-src")}} directive must contain the keyword `'self'`.
+- Remote sources must use `https:` schemes.
+- Remote sources must not use wildcards for any domains in the [public suffix list](https://publicsuffix.org/list/) (so "\*.co.uk" and "\*.blogspot.com" are not allowed, although "\*.foo.blogspot.com" is allowed).
+- All sources must specify a host.
+- The only permitted schemes for sources are: `blob:`, `filesystem:`, `moz-extension:`, `https:`, and `wss:`.
+- The only permitted [keywords](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src#sources) are: `'none'`, `'self'`, and `'unsafe-eval'`.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<h3 id="Valid_examples">Valid examples</h3>
+### Valid examples
 
-<div class="note">
-  <p><strong>Note:</strong> Valid examples demonstrate the correct use of keys in CSP. However, extensions with 'unsafe-eval', remote script, blob, or remote sources in their CSP are not allowed for Firefox extensions as per the <a href="https://extensionworkshop.com/documentation/publish/add-on-policies/">add-on policies</a> and due to major security issues.</p>
-</div>
+> **Note:** Valid examples demonstrate the correct use of keys in CSP. However, extensions with 'unsafe-eval', remote script, blob, or remote sources in their CSP are not allowed for Firefox extensions as per the [add-on policies](https://extensionworkshop.com/documentation/publish/add-on-policies/) and due to major security issues.
 
-<p>Allow remote scripts from "https://example.com":</p>
+Allow remote scripts from "https\://example.com":
 
-<pre class="brush: json">"content_security_policy": "script-src 'self' https://example.com; object-src 'self'"</pre>
+```json
+"content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
+```
 
-<p>Allow remote scripts from any subdomain of "jquery.com":</p>
+Allow remote scripts from any subdomain of "jquery.com":
 
-<pre class="brush: json">"content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'"</pre>
+```json
+"content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'"
+```
 
-<p>Allow <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval%28%29_and_friends"><code>eval()</code> and friends</a>:</p>
+Allow [`eval()` and friends](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#eval%28%29_and_friends):
 
-<pre class="brush: json">"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"</pre>
+```json
+"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"
+```
 
-<p>Allow the inline script: <code>"&lt;script&gt;alert('Hello, world.');&lt;/script&gt;"</code>:</p>
+Allow the inline script: `"<script>alert('Hello, world.');</script>"`:
 
-<pre class="brush: json">"content_security_policy": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='; object-src 'self'"</pre>
+```json
+"content_security_policy": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='; object-src 'self'"
+```
 
-<p>Keep the rest of the policy, but also require that images should be packaged with the extension:</p>
+Keep the rest of the policy, but also require that images should be packaged with the extension:
 
-<pre class="brush: json">"content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'"</pre>
+```json
+"content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'"
+```
 
-<p>Require that all types of content should be packaged with the extension:</p>
+Require that all types of content should be packaged with the extension:
 
-<pre class="brush: json">"content_security_policy": "default-src 'self'"
-</pre>
+```json
+"content_security_policy": "default-src 'self'"
+```
 
-<h3 id="Invalid_examples">Invalid examples</h3>
+### Invalid examples
 
-<p>Policy that omits the <code>"object-src"</code> directive:</p>
+Policy that omits the `"object-src"` directive:
 
-<pre class="brush: json">"content_security_policy": "script-src 'self' https://*.jquery.com;"</pre>
+```json
+"content_security_policy": "script-src 'self' https://*.jquery.com;"
+```
 
-<p>Policy that omits the <code>"self"</code> keyword in the <code>"script-src"</code> directive:</p>
+Policy that omits the `"self"` keyword in the `"script-src"` directive:
 
-<pre class="brush: json">"content_security_policy": "script-src https://*.jquery.com; object-src 'self'"</pre>
+```json
+"content_security_policy": "script-src https://*.jquery.com; object-src 'self'"
+```
 
-<p>Scheme for a remote source is not <code>https</code>:</p>
+Scheme for a remote source is not `https`:
 
-<pre class="brush: json">"content_security_policy": "script-src 'self' http://code.jquery.com; object-src 'self'"</pre>
+```json
+"content_security_policy": "script-src 'self' http://code.jquery.com; object-src 'self'"
+```
 
-<p>Wildcard is used with a generic domain:</p>
+Wildcard is used with a generic domain:
 
-<pre class="brush: json">"content_security_policy": "script-src 'self' https://*.blogspot.com; object-src 'self'"</pre>
+```json
+"content_security_policy": "script-src 'self' https://*.blogspot.com; object-src 'self'"
+```
 
-<p>Source specifies a scheme but no host:</p>
+Source specifies a scheme but no host:
 
-<pre class="brush: json">"content_security_policy": "script-src 'self' https:; object-src 'self'"</pre>
+```json
+"content_security_policy": "script-src 'self' https:; object-src 'self'"
+```
 
-<p>Directive includes the unsupported keyword <code>'unsafe-inline'</code>:</p>
+Directive includes the unsupported keyword `'unsafe-inline'`:
 
-<pre class="brush: json">"content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self'"</pre>
+```json
+"content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self'"
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

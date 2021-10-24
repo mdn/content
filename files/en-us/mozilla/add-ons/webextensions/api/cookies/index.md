@@ -12,144 +12,118 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.cookies
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Enables extensions to get and set cookies, and be notified when they change.</p>
+Enables extensions to get and set cookies, and be notified when they change.
 
-<h2 id="Permissions">Permissions</h2>
+## Permissions
 
-<p>To use this API, an add-on must specify the "cookies" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a> in its <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file, along with <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> for any sites for which it wishes to access cookies. The add-on may read or write any cookies which could be read or written by a URL matching the host permissions. For example:</p>
+To use this API, an add-on must specify the "cookies" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in its [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, along with [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for any sites for which it wishes to access cookies. The add-on may read or write any cookies which could be read or written by a URL matching the host permissions. For example:
 
-<dl>
- <dt><code>http://*.example.com/</code></dt>
- <dd>
- <p>An add-on with this host permission may:</p>
+- `http://*.example.com/`
 
- <ul>
-  <li>Read a non-secure cookie for <code>www.example.com</code>, with any path.</li>
-  <li>Write a secure or non-secure cookie for <code>www.example.com</code>, with any path.</li>
- </ul>
+  - : An add-on with this host permission may:
 
- <p>It may <em>not</em>:</p>
+    - Read a non-secure cookie for `www.example.com`, with any path.
+    - Write a secure or non-secure cookie for `www.example.com`, with any path.
 
- <ul>
-  <li>Read a secure cookie for <code>www.example.com</code>.</li>
- </ul>
- </dd>
- <dt><code>http://www.example.com/</code></dt>
- <dd>
- <p>An add-on with this host permission may:</p>
+    It may _not_:
 
- <ul>
-  <li>Read a non-secure cookie for <code>www.example.com</code>, with any path.</li>
-  <li>Read a non-secure cookie for <code>.example.com</code>, with any path.</li>
-  <li>Write a secure or non-secure cookie for <code>www.example.com</code> with any path.</li>
-  <li>Write a secure or non-secure cookie for <code>.example.com</code> with any path.</li>
- </ul>
+    - Read a secure cookie for `www.example.com`.
 
- <p>It may <em>not</em>:</p>
+- `http://www.example.com/`
 
- <ul>
-  <li>Read or write a cookie for <code>foo.example.com</code>.</li>
-  <li>Read or write a cookie for <code>foo.www.example.com</code>.</li>
- </ul>
- </dd>
- <dt><code>*://*.example.com/</code></dt>
- <dd>
- <p>An add-on with this host permission may:</p>
+  - : An add-on with this host permission may:
 
- <ul>
-  <li>Read or write a secure or non-secure cookie for <code>www.example.com</code> with any path.</li>
- </ul>
- </dd>
-</dl>
+    - Read a non-secure cookie for `www.example.com`, with any path.
+    - Read a non-secure cookie for `.example.com`, with any path.
+    - Write a secure or non-secure cookie for `www.example.com` with any path.
+    - Write a secure or non-secure cookie for `.example.com` with any path.
 
-<h2 id="Tracking_protection">Tracking protection</h2>
+    It may _not_:
 
-<p>Trackers use third-party cookies, that is, cookies set by a website other than the one you are on, to identify the websites you visit. For example:</p>
+    - Read or write a cookie for `foo.example.com`.
+    - Read or write a cookie for `foo.www.example.com`.
 
-<ol>
- <li>You visit <code>a-shopping-site.com</code>, which uses <code>ad-tracker.com</code> to deliver its adverts on the web. <code>ad-tracker.com</code> sets a cookie associated with the <code>ad-tracker.com</code> domain. While you are on <code>a-shopping-site.com</code>, <code>ad-tracker.com</code> receives information about the products you browse.</li>
- <li>You now visit <code>a-news-site.com</code> that uses <code>ad-tracker.com</code> to deliver adverts. <code>ad-tracker.com</code> read its cookie and use the information collected from <code>a-shopping-site.com</code> to decide which adverts to display to you.</li>
-</ol>
+- `*://*.example.com/`
 
-<p>Firefox includes features to prevent tracking. These features separate cookies so that trackers cannot make an association between websites visited. So, in the preceding example, <code>ad-tracker.com</code> cannot see the cookie created on <code>a-news-site.com</code> when visiting <code>a-shopping-site.com</code>. The first iteration of this protection was first-party isolation which is now being superseded by <a href="/en-US/docs/Web/Privacy/State_Partitioning#dynamic_partitioning">dynamic partitioning</a>.</p>
+  - : An add-on with this host permission may:
 
-<div class="note notecard">
-<p><strong>Note:</strong> First-party isolation and dynamic partitioning will not be active at the same time. If the user or an extension turns on first-party isolation, it takes precedence over dynamic partitioning. However, when private browsing uses dynamic partitioning, normal browsing may not be partitioning cookies. See <a href="/en-US/docs/Web/Privacy/State_Partitioning#status_of_partitioning_in_firefox">Status of partitioning in Firefox</a>, for details.</p>
-</div>
+    - Read or write a secure or non-secure cookie for `www.example.com` with any path.
 
-<h3 id="Storage_partitioning">Storage partitioning</h3>
+## Tracking protection
 
-<p>When using <a href="/en-US/docs/Web/Privacy/State_Partitioning#dynamic_partitioning">dynamic partitioning</a>, Firefox partitions the storage accessible to JavaScript APIs by top-level site while providing appropriate access to unpartitioned storage to enable common use cases. This feature is being rolled out progressively. See <a href="/en-US/docs/Web/Privacy/State_Partitioning#status_of_partitioning_in_firefox">Status of partitioning in Firefox</a>, for implementation details.</p>
+Trackers use third-party cookies, that is, cookies set by a website other than the one you are on, to identify the websites you visit. For example:
 
-<p>Storage partitions are keyed by the schemeful URL of the top-level {{glossary("Site","website")}} and, when dynamic partitioning is active, the key value is available through the <code>partitionKey.topLevelSite</code> property in the cookies API, for example, <code>partitionKey: {topLevelSite: "http://site"}</code>.</p>
+1.  You visit `a-shopping-site.com`, which uses `ad-tracker.com` to deliver its adverts on the web. `ad-tracker.com` sets a cookie associated with the `ad-tracker.com` domain. While you are on `a-shopping-site.com`, `ad-tracker.com` receives information about the products you browse.
+2.  You now visit `a-news-site.com` that uses `ad-tracker.com` to deliver adverts. `ad-tracker.com` read its cookie and use the information collected from `a-shopping-site.com` to decide which adverts to display to you.
 
-<p>Generally, top-level documents are in unpartitioned storage, while third-party iframes are in partitioned storage. If a partition key cannot be determined, the default (unpartitioned storage) is used. For example, while all HTTP(S) sites can be used as a partition key, <code>moz-extension:-</code> URLs cannot. Therefore, iframes in Firefox's extension documents do not use partitioned storage.</p>
+Firefox includes features to prevent tracking. These features separate cookies so that trackers cannot make an association between websites visited. So, in the preceding example, `ad-tracker.com` cannot see the cookie created on `a-news-site.com` when visiting `a-shopping-site.com`. The first iteration of this protection was first-party isolation which is now being superseded by [dynamic partitioning](/en-US/docs/Web/Privacy/State_Partitioning#dynamic_partitioning).
 
-<p>By default, {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}}, and {{WebExtAPIRef("cookies.remove()")}} work with cookies in unpartitioned storage. To work with cookies in partitioned storage in these APIs, <code>topLevelSite</code> in <code>partitionKey</code> must be set. The exception is <code>getAll</code> where setting <code>partitionKey</code> without <code>topLevelSite</code> returned cookies in partitioned and unpartitioned storage. {{WebExtAPIRef("cookies.onChanged")}} fires for any cookie that the extension can access, including cookies in partitioned storage. To ensure that the correct cookie is modified, extensions should read the <code>cookie.partitionKey</code> property from the event and pass its value to  {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}}.</p> 
+> **Note:** First-party isolation and dynamic partitioning will not be active at the same time. If the user or an extension turns on first-party isolation, it takes precedence over dynamic partitioning. However, when private browsing uses dynamic partitioning, normal browsing may not be partitioning cookies. See [Status of partitioning in Firefox](/en-US/docs/Web/Privacy/State_Partitioning#status_of_partitioning_in_firefox), for details.
 
-<h3 id="First-party_isolation">First-party isolation</h3>
+### Storage partitioning
 
-<p>When first-party isolation is on, cookies are qualified by the domain of the original page the user visited (essentially, the domain shown to the user in the URL bar, also known as the "first party domain").</p>
+When using [dynamic partitioning](/en-US/docs/Web/Privacy/State_Partitioning#dynamic_partitioning), Firefox partitions the storage accessible to JavaScript APIs by top-level site while providing appropriate access to unpartitioned storage to enable common use cases. This feature is being rolled out progressively. See [Status of partitioning in Firefox](/en-US/docs/Web/Privacy/State_Partitioning#status_of_partitioning_in_firefox), for implementation details.
 
-<p>First-party isolation can be enabled by the user by adjusting the browser's configuration and set by extensions using the {{WebExtAPIRef("privacy.websites","firstPartyIsolate")}} setting in the {{WebExtAPIRef("privacy")}} API. Note that first-party isolation is enabled by default in <a href="https://www.torproject.org/">Tor Browser</a>.</p>
+Storage partitions are keyed by the schemeful URL of the top-level {{glossary("Site","website")}} and, when dynamic partitioning is active, the key value is available through the `partitionKey.topLevelSite` property in the cookies API, for example, `partitionKey: {topLevelSite: "http://site"}`.
 
-<p>In the <code>cookies</code> API, the first party domain is represented using the <code>firstPartyDomain</code> attribute. All cookies set while first-party isolation is on have this attribute set to the domain of the original page. In the preceding example, this is <code>a-shopping-site.com</code> for one cookie and <code>a-news-site.com</code> for the other. When first-party isolation is off, all cookies set by websites have this property set to an empty string.</p>
+Generally, top-level documents are in unpartitioned storage, while third-party iframes are in partitioned storage. If a partition key cannot be determined, the default (unpartitioned storage) is used. For example, while all HTTP(S) sites can be used as a partition key, `moz-extension:-` URLs cannot. Therefore, iframes in Firefox's extension documents do not use partitioned storage.
 
-<p>The {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}} APIs all accept a <code>firstPartyDomain</code> option.</p>
+By default, {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}}, and {{WebExtAPIRef("cookies.remove()")}} work with cookies in unpartitioned storage. To work with cookies in partitioned storage in these APIs, `topLevelSite` in `partitionKey` must be set. The exception is `getAll` where setting `partitionKey` without `topLevelSite` returned cookies in partitioned and unpartitioned storage. {{WebExtAPIRef("cookies.onChanged")}} fires for any cookie that the extension can access, including cookies in partitioned storage. To ensure that the correct cookie is modified, extensions should read the `cookie.partitionKey` property from the event and pass its value to {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}}.
 
-<p>When first-party isolation is on, you must provide this option or the API call will fail and return a rejected promise. For <code>get()</code>, <code>set()</code>, and <code>remove()</code> you must pass a string value. For <code>getAll()</code>, you may also pass <code>null</code> here, and this will get all cookies, whether or not they have a non-empty value for <code>firstPartyDomain</code>.</p>
+### First-party isolation
 
- <p>When first-party isolation is off, the <code>firstPartyDomain</code> parameter is optional and defaults to an empty string. A non-empty string can be used to retrieve or modify first-party isolation cookies. Likewise, passing <code>null</code> as <code>firstPartyDomain</code> to <code>getAll()</code> will return all cookies.</p>
+When first-party isolation is on, cookies are qualified by the domain of the original page the user visited (essentially, the domain shown to the user in the URL bar, also known as the "first party domain").
 
-<h2 id="Types">Types</h2>
+First-party isolation can be enabled by the user by adjusting the browser's configuration and set by extensions using the {{WebExtAPIRef("privacy.websites","firstPartyIsolate")}} setting in the {{WebExtAPIRef("privacy")}} API. Note that first-party isolation is enabled by default in [Tor Browser](https://www.torproject.org/).
 
-<dl>
- <dt>{{WebExtAPIRef("cookies.Cookie")}}</dt>
- <dd>Represents information about an HTTP cookie.</dd>
- <dt>{{WebExtAPIRef("cookies.CookieStore")}}</dt>
- <dd>Represents a cookie store in the browser.</dd>
- <dt>{{WebExtAPIRef("cookies.OnChangedCause")}}</dt>
- <dd>Represents the reason a cookie changed.</dd>
- <dt>{{WebExtAPIRef("cookies.SameSiteStatus")}}</dt>
- <dd>Represents the same-site status of the cookie.</dd>
-</dl>
+In the `cookies` API, the first party domain is represented using the `firstPartyDomain` attribute. All cookies set while first-party isolation is on have this attribute set to the domain of the original page. In the preceding example, this is `a-shopping-site.com` for one cookie and `a-news-site.com` for the other. When first-party isolation is off, all cookies set by websites have this property set to an empty string.
 
-<h2 id="Methods">Methods</h2>
+The {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}} and {{WebExtAPIRef("cookies.remove()")}} APIs all accept a `firstPartyDomain` option.
 
-<dl>
- <dt>{{WebExtAPIRef("cookies.get()")}}</dt>
- <dd>Retrieves information about a single cookie.</dd>
- <dt>{{WebExtAPIRef("cookies.getAll()")}}</dt>
- <dd>Retrieves all cookies that match a given set of filters.</dd>
- <dt>{{WebExtAPIRef("cookies.set()")}}</dt>
- <dd>Sets a cookie with the given cookie data; may overwrite equivalent cookies if they exist.</dd>
- <dt>{{WebExtAPIRef("cookies.remove()")}}</dt>
- <dd>Deletes a cookie by name.</dd>
- <dt>{{WebExtAPIRef("cookies.getAllCookieStores()")}}</dt>
- <dd>Lists all existing cookie stores.</dd>
-</dl>
+When first-party isolation is on, you must provide this option or the API call will fail and return a rejected promise. For `get()`, `set()`, and `remove()` you must pass a string value. For `getAll()`, you may also pass `null` here, and this will get all cookies, whether or not they have a non-empty value for `firstPartyDomain`.
 
-<h2 id="Event_handlers">Event handlers</h2>
+When first-party isolation is off, the `firstPartyDomain` parameter is optional and defaults to an empty string. A non-empty string can be used to retrieve or modify first-party isolation cookies. Likewise, passing `null` as `firstPartyDomain` to `getAll()` will return all cookies.
 
-<dl>
- <dt>{{WebExtAPIRef("cookies.onChanged")}}</dt>
- <dd>Fired when a cookie is set or removed.</dd>
-</dl>
+## Types
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- {{WebExtAPIRef("cookies.Cookie")}}
+  - : Represents information about an HTTP cookie.
+- {{WebExtAPIRef("cookies.CookieStore")}}
+  - : Represents a cookie store in the browser.
+- {{WebExtAPIRef("cookies.OnChangedCause")}}
+  - : Represents the reason a cookie changed.
+- {{WebExtAPIRef("cookies.SameSiteStatus")}}
+  - : Represents the same-site status of the cookie.
 
-<p>{{Compat}}</p>
+## Methods
 
-<p>{{WebExtExamples("h2")}}</p>
+- {{WebExtAPIRef("cookies.get()")}}
+  - : Retrieves information about a single cookie.
+- {{WebExtAPIRef("cookies.getAll()")}}
+  - : Retrieves all cookies that match a given set of filters.
+- {{WebExtAPIRef("cookies.set()")}}
+  - : Sets a cookie with the given cookie data; may overwrite equivalent cookies if they exist.
+- {{WebExtAPIRef("cookies.remove()")}}
+  - : Deletes a cookie by name.
+- {{WebExtAPIRef("cookies.getAllCookieStores()")}}
+  - : Lists all existing cookie stores.
 
+## Event handlers
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/cookies"><code>chrome.cookies</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> in the Chromium code.</p>
-</div>
+- {{WebExtAPIRef("cookies.onChanged")}}
+  - : Fired when a cookie is set or removed.
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+## Browser compatibility
+
+{{Compat}}
+
+{{WebExtExamples("h2")}}
+
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -176,5 +150,4 @@ browser-compat: webextensions.api.cookies
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

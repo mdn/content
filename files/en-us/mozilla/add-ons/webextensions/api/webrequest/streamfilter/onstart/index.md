@@ -11,33 +11,35 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.onstart
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p><span class="summary">An event handler that will be called when the stream is opened and is about to begin delivering data.</span> From this point on, the extension may use filter functions like {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}, or {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}.</p>
+An event handler that will be called when the stream is opened and is about to begin delivering data. From this point on, the extension may use filter functions like {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}, or {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example will replace the page content with "replacement text":</p>
+This example will replace the page content with "replacement text":
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event =&gt; {
-    console.log(&quot;started&quot;);
+  filter.onstart = event => {
+    console.log("started");
     let encoder = new TextEncoder();
-    filter.write(encoder.encode(&quot;replacement content&quot;));
+    filter.write(encoder.encode("replacement content"));
     filter.close();
   }
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: [&quot;https://example.org/&quot;], types: [&quot;main_frame&quot;]},
-  [&quot;blocking&quot;]
-);</pre>
+  {urls: ["https://example.org/"], types: ["main_frame"]},
+  ["blocking"]
+);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

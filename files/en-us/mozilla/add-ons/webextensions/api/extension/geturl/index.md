@@ -14,56 +14,51 @@ tags:
   - getURL
 browser-compat: webextensions.api.extension.getURL
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
+> **Warning:** This function is deprecated. Please use [`runtime.getURL`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL).
 
-<div class="warning">
-<p><strong>Warning:</strong> This function is deprecated. Please use <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL"><code>runtime.getURL</code></a>.</p>
-</div>
+Converts a relative path within an extension's install directory to a fully-qualified URL.
 
-<p>Converts a relative path within an extension's install directory to a fully-qualified URL.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:js">browser.extension.getURL(
+```js
+browser.extension.getURL(
   path // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>path</code></dt>
- <dd><code>string</code>. A path to a resource within an extension expressed relative to its install directory.</dd>
-</dl>
+- `path`
+  - : `string`. A path to a resource within an extension expressed relative to its install directory.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>string</code>. The fully-qualified URL to the resource.</p>
+`string`. The fully-qualified URL to the resource.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Given a file packaged with the add-on at "beasts/frog.html", get the full URL like this:</p>
+Given a file packaged with the add-on at "beasts/frog.html", get the full URL like this:
 
-<pre class="brush: js">var fullURL = browser.extension.getURL("beasts/frog.html");
+```js
+var fullURL = browser.extension.getURL("beasts/frog.html");
 
-// -&gt; something like:
-// moz-extension://2c127fa4-62c7-7e4f-90e5-472b45eecfdc/beasts/frog.html</pre>
+// -> something like:
+// moz-extension://2c127fa4-62c7-7e4f-90e5-472b45eecfdc/beasts/frog.html
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/extensions/extension#method-getURL) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/extension#method-getURL"><code>chrome.extension</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -90,5 +85,4 @@ browser-compat: webextensions.api.extension.getURL
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

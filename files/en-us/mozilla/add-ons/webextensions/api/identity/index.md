@@ -10,78 +10,68 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.identity
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Use the identity API to get an <a href="https://oauth.net/2/">OAuth2</a> authorization code or access token, which an extension can then use to access user data from a service that supports OAuth2 access (such as Google or Facebook).</p>
+Use the identity API to get an [OAuth2](https://oauth.net/2/) authorization code or access token, which an extension can then use to access user data from a service that supports OAuth2 access (such as Google or Facebook).
 
-<p>OAuth2 flows vary between service provider so, to use this API with a particular service provider, consult their documentation. For example:</p>
+OAuth2 flows vary between service provider so, to use this API with a particular service provider, consult their documentation. For example:
 
-<ul>
- <li><a href="https://developers.google.com/identity/protocols/OAuth2UserAgent">Google</a></li>
- <li><a href="https://developer.github.com/v3/oauth/">GitHub</a></li>
-</ul>
+- [Google](https://developers.google.com/identity/protocols/OAuth2UserAgent)
+- [GitHub](https://developer.github.com/v3/oauth/)
 
-<p>The identity API provides the {{WebExtAPIRef("identity.launchWebAuthFlow()")}} function. This authenticates the user with the service, if necessary, and asks the user to authorize the extension to access data, if necessary. The function completes with an access token or authorization code, depending on the provider.</p>
+The identity API provides the {{WebExtAPIRef("identity.launchWebAuthFlow()")}} function. This authenticates the user with the service, if necessary, and asks the user to authorize the extension to access data, if necessary. The function completes with an access token or authorization code, depending on the provider.
 
-<p>The extension then completes the OAuth2 flow to get a validated access token, and uses the token in HTTPS requests to access the user's data according to the authorization the user gave.</p>
+The extension then completes the OAuth2 flow to get a validated access token, and uses the token in HTTPS requests to access the user's data according to the authorization the user gave.
 
-<p>To use this API, you must have the "identity" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a>.</p>
+To use this API, you must have the "identity" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
 
-<h2 id="Setup">Setup</h2>
+## Setup
 
-<p>There's some setup you must do before publishing your extension.</p>
+There's some setup you must do before publishing your extension.
 
-<h3 id="Getting_the_redirect_URL">Getting the redirect URL</h3>
+### Getting the redirect URL
 
-<p>The <a href="https://www.oauth.com/oauth2-servers/redirect-uris/">redirect URL</a> represents the end point of {{WebExtAPIRef("identity.launchWebAuthFlow()")}}, in which the access token or authorization code is delivered to the extension. The browser extracts the result from the redirect URL without loading its response.</p>
+The [redirect URL](https://www.oauth.com/oauth2-servers/redirect-uris/) represents the end point of {{WebExtAPIRef("identity.launchWebAuthFlow()")}}, in which the access token or authorization code is delivered to the extension. The browser extracts the result from the redirect URL without loading its response.
 
-<p>You get the redirect URL by calling {{WebExtAPIRef("identity.getRedirectURL()")}}. This function derives a redirect URL from the add-on's ID.  To simplify testing, set your add-on's ID explicitly using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> key (otherwise, each time you <a href="https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/">temporarily install the add-on</a>, you get a different redirect URL).</p>
+You get the redirect URL by calling {{WebExtAPIRef("identity.getRedirectURL()")}}. This function derives a redirect URL from the add-on's ID.  To simplify testing, set your add-on's ID explicitly using the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key (otherwise, each time you [temporarily install the add-on](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), you get a different redirect URL).
 
-<p>{{WebExtAPIRef("identity.getRedirectURL()")}} returns a URL at a fixed domain name and a subdomain derived from the add-on's ID. Some OAuth servers (such as Google) only accept domains with a verified ownership as the redirect URL. As the dummy domain cannot be controlled by extension developers, the default domain cannot always be used.</p>
+{{WebExtAPIRef("identity.getRedirectURL()")}} returns a URL at a fixed domain name and a subdomain derived from the add-on's ID. Some OAuth servers (such as Google) only accept domains with a verified ownership as the redirect URL. As the dummy domain cannot be controlled by extension developers, the default domain cannot always be used.
 
-<p>However, loopback addresses are an accepted alternative that do not require domain validation (based on <a href="https://datatracker.ietf.org/doc/html/rfc8252#section-7.3">RFC 8252, section 7.3</a>). Starting from Firefox 86, a loopback address with the format <code>http://127.0.0.1/mozoauth2/[subdomain of URL returned by identity.getRedirectURL()]</code> is permitted as a value for the redirect URL.</p>
+However, loopback addresses are an accepted alternative that do not require domain validation (based on [RFC 8252, section 7.3](https://datatracker.ietf.org/doc/html/rfc8252#section-7.3)). Starting from Firefox 86, a loopback address with the format `http://127.0.0.1/mozoauth2/[subdomain of URL returned by identity.getRedirectURL()]` is permitted as a value for the redirect URL.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Starting with Firefox 75, you must use the redirect URL returned by {{WebExtAPIRef("identity.getRedirectURL()")}}.  Earlier versions allowed you to supply any redirect url.</p>
-<p>Starting with Firefox 86, the special loopback address described above can be used too.</p>
-</div>
+> **Note:** Starting with Firefox 75, you must use the redirect URL returned by {{WebExtAPIRef("identity.getRedirectURL()")}}.  Earlier versions allowed you to supply any redirect url.
+>
+> Starting with Firefox 86, the special loopback address described above can be used too.
 
-<p>You'll use the redirect URL in two places:</p>
+You'll use the redirect URL in two places:
 
-<ul>
- <li>supply it when registering your extension as an OAuth2 client.</li>
- <li>pass it into <code>identity.launchWebAuthFlow()</code>, as a URL parameter added to that function's <code>url</code> argument.</li>
-</ul>
+- supply it when registering your extension as an OAuth2 client.
+- pass it into `identity.launchWebAuthFlow()`, as a URL parameter added to that function's `url` argument.
 
-<h3 id="Registering_your_extension">Registering your extension</h3>
+### Registering your extension
 
-<p>Before you use OAuth2 with a service provider, you must register the extension with the provider as an OAuth2 client.</p>
+Before you use OAuth2 with a service provider, you must register the extension with the provider as an OAuth2 client.
 
-<p>This will tend to be specific to the service provider, but in general it means creating an entry for your extension on the provider's website. In this process you supply your redirect URL, and receive a client ID (and sometimes also a secret). You need to pass both of these into {{WebExtAPIRef("identity.launchWebAuthFlow()")}}.</p>
+This will tend to be specific to the service provider, but in general it means creating an entry for your extension on the provider's website. In this process you supply your redirect URL, and receive a client ID (and sometimes also a secret). You need to pass both of these into {{WebExtAPIRef("identity.launchWebAuthFlow()")}}.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("identity.getRedirectURL()")}}</dt>
- <dd>Gets the redirect URL.</dd>
- <dt>{{WebExtAPIRef("identity.launchWebAuthFlow()")}}</dt>
- <dd>Launches WAF.</dd>
-</dl>
+- {{WebExtAPIRef("identity.getRedirectURL()")}}
+  - : Gets the redirect URL.
+- {{WebExtAPIRef("identity.launchWebAuthFlow()")}}
+  - : Launches WAF.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
+> **Note:** This API is based on Chromium's [`chrome.identity`](https://developer.chrome.com/extensions/identity) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/identity"><code>chrome.identity</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -108,5 +98,4 @@ browser-compat: webextensions.api.identity
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -12,96 +12,87 @@ tags:
   - eval
 browser-compat: webextensions.api.devtools.inspectedWindow.eval
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Executes JavaScript in the window that the devtools are attached to.</p>
+Executes JavaScript in the window that the devtools are attached to.
 
-<p>This is somewhat like using {{WebExtAPIRef("tabs.executeScript()")}} to attach a content script, but with two main differences:</p>
+This is somewhat like using {{WebExtAPIRef("tabs.executeScript()")}} to attach a content script, but with two main differences:
 
-<p>First, the JavaScript can use a set of <a href="#helpers">special commands that browsers typically provide in their devtools console implementation</a>: for example, using "$0" to refer to the element currently selected in the Inspector.</p>
+First, the JavaScript can use a set of [special commands that browsers typically provide in their devtools console implementation](#helpers): for example, using "$0" to refer to the element currently selected in the Inspector.
 
-<p>Second, the JavaScript you execute can see any changes made to the page by scripts that the page loaded. This is in contrast to content scripts, which see the page <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#dom_access">as it would exist if no page scripts were loaded</a>. However, note that the isolation provided by content scripts is a deliberate security feature, intended to make it harder for malicious or uncooperative web pages to confuse or subvert WebExtensions APIs by redefining DOM functions and properties. This means you need to be very careful if you waive this protection by using <code>eval()</code>, and should use content scripts unless you need to use <code>eval()</code>.</p>
+Second, the JavaScript you execute can see any changes made to the page by scripts that the page loaded. This is in contrast to content scripts, which see the page [as it would exist if no page scripts were loaded](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#dom_access). However, note that the isolation provided by content scripts is a deliberate security feature, intended to make it harder for malicious or uncooperative web pages to confuse or subvert WebExtensions APIs by redefining DOM functions and properties. This means you need to be very careful if you waive this protection by using `eval()`, and should use content scripts unless you need to use `eval()`.
 
-<p>The script is evaluated by default in the main frame of the page. The script must evaluate to a value that can be represented as JSON (meaning that, for example, it may not evaluate to a function or an object that contains any functions). By default, the script does not see any content scripts attached to the page.</p>
+The script is evaluated by default in the main frame of the page. The script must evaluate to a value that can be represented as JSON (meaning that, for example, it may not evaluate to a function or an object that contains any functions). By default, the script does not see any content scripts attached to the page.
 
-<p>You can't call <code>eval()</code> on privileged browser windows such as "about:addons".</p>
+You can't call `eval()` on privileged browser windows such as "about:addons".
 
-<p>You can optionally provide an <code>options</code> parameter, which includes options to evaluate the script in a different frame or in the context of attached content scripts. Note that Firefox does not yet support the <code>options</code> parameter.</p>
+You can optionally provide an `options` parameter, which includes options to evaluate the script in a different frame or in the context of attached content scripts. Note that Firefox does not yet support the `options` parameter.
 
-<p>The <code>eval()</code> function returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that resolves to the evaluated result of the script or to an error.</p>
+The `eval()` function returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to the evaluated result of the script or to an error.
 
-<h2 id="Helpers">Helpers</h2>
+## Helpers
 
-<p>The script gets access to a number of objects that help the injected script interact with the developer tools. The following helpers are currently supported:</p>
+The script gets access to a number of objects that help the injected script interact with the developer tools. The following helpers are currently supported:
 
-<dl>
- <dt><code>$0</code></dt>
- <dd>Contains a reference to the element that's currently selected in the devtools Inspector.</dd>
- <dt><code>inspect()</code></dt>
- <dd>Given an object, if it is an DOM element in the page, selects it in the devtools Inspector, otherwise it creates an object preview in the webconsole.</dd>
-</dl>
+- `$0`
+  - : Contains a reference to the element that's currently selected in the devtools Inspector.
+- `inspect()`
+  - : Given an object, if it is an DOM element in the page, selects it in the devtools Inspector, otherwise it creates an object preview in the webconsole.
 
-<p><a href="#examples">See some examples.</a></p>
+[See some examples.](#examples)
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var evaluating = browser.devtools.inspectedWindow.eval(
+```js
+var evaluating = browser.devtools.inspectedWindow.eval(
   expression,       // string
   options           // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>expression</code></dt>
- <dd><code>string</code>. The JavaScript expression to evaluate. The string must evaluate to a object that can be represented as JSON, or an exception will be thrown. For example, <code>expression</code> must not evaluate to a function.</dd>
- <dt><code>options</code>{{optional_inline}}</dt>
- <dd>
-   <p><code>object</code>. Options for the function (Note that Firefox does not yet support this options), as follows:</p>
-   <dl>
-    <dt><code>frameURL</code>{{optional_inline}}</dt>
-    <dd><code>string</code>. The URL of the frame in which to evaluate the expression. If this is omitted, the expression is evaluated in the main frame of the window.</dd>
-    <dt><code>useContentScriptContext</code>{{optional_inline}}</dt>
-    <dd><code>boolean</code>. If <code>true</code>, evaluate the expression in the context of any content scripts that this extension has attached to the page. If you set this option, then you must have actually attached some content scripts to the page, or a Devtools error will be thrown.</dd>
-    <dt><code>contextSecurityOrigin</code> {{optional_inline}}</dt>
-    <dd><code>string</code>. Evaluate the expression in the context of a content script attached by a different extension, whose origin matches the value given here. This overrides <code>useContentScriptContext</code>.</dd>
-   </dl>
- </dd>
-</dl>
+- `expression`
+  - : `string`. The JavaScript expression to evaluate. The string must evaluate to a object that can be represented as JSON, or an exception will be thrown. For example, `expression` must not evaluate to a function.
+- `options`{{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : `object`. Options for the function (Note that Firefox does not yet support this options), as follows:
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an <code>array</code> containing two elements.</p>
+    - `frameURL`{{optional_inline}}
+      - : `string`. The URL of the frame in which to evaluate the expression. If this is omitted, the expression is evaluated in the main frame of the window.
+    - `useContentScriptContext`{{optional_inline}}
+      - : `boolean`. If `true`, evaluate the expression in the context of any content scripts that this extension has attached to the page. If you set this option, then you must have actually attached some content scripts to the page, or a Devtools error will be thrown.
+    - `contextSecurityOrigin` {{optional_inline}}
+      - : `string`. Evaluate the expression in the context of a content script attached by a different extension, whose origin matches the value given here. This overrides `useContentScriptContext`.
 
-<p>If no error occurred, element 0 will contain the result of evaluating the expression, and element 1 will be <code>undefined</code>.</p>
+### Return value
 
-<p>If an error occurred, element 0 will be <code>undefined</code>, and element 1 will contain an object giving details about the error. Two different sorts of errors are distinguished:</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` containing two elements.
 
-<ul>
- <li>errors encountered evaluating the JavaScript (for example, syntax errors in the expression). In this case, element 1 will contain:
-  <ul>
-   <li>a boolean property <code>isException</code>, set to <code>true</code></li>
-   <li>a string property <code>value</code>, giving more details.</li>
-  </ul>
- </li>
- <li>other errors (for example, an expression that evaluates to an object that can't be represented as JSON). In this case, element 1 will contain:
-  <ul>
-   <li>a boolean property <code>isError</code>, set to <code>true</code></li>
-   <li>a string property <code>code</code> containing an error code.</li>
-  </ul>
- </li>
-</ul>
+If no error occurred, element 0 will contain the result of evaluating the expression, and element 1 will be `undefined`.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+If an error occurred, element 0 will be `undefined`, and element 1 will contain an object giving details about the error. Two different sorts of errors are distinguished:
 
-<p>{{Compat}}</p>
+- errors encountered evaluating the JavaScript (for example, syntax errors in the expression). In this case, element 1 will contain:
 
-<h2 id="Examples">Examples</h2>
+  - a boolean property `isException`, set to `true`
+  - a string property `value`, giving more details.
 
-<p>This tests whether jQuery is defined in the inspected window, and logs the result. Note that this wouldn't work in a content script, because even if jQuery were defined, the content script would not see it.</p>
+- other errors (for example, an expression that evaluates to an object that can't be represented as JSON). In this case, element 1 will contain:
 
-<pre class="brush: js">function handleError(error) {
+  - a boolean property `isError`, set to `true`
+  - a string property `code` containing an error code.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+This tests whether jQuery is defined in the inspected window, and logs the result. Note that this wouldn't work in a content script, because even if jQuery were defined, the content script would not see it.
+
+```js
+function handleError(error) {
   if (error.isError) {
     console.log(`Devtools error: ${error.code}`);
   } else {
@@ -120,16 +111,18 @@ function handleResult(result) {
 
 const checkjQuery = "typeof jQuery != 'undefined'";
 
-evalButton.addEventListener("click", () =&gt; {
+evalButton.addEventListener("click", () => {
   browser.devtools.inspectedWindow.eval(checkjQuery)
     .then(handleResult);
-});</pre>
+});
+```
 
-<h3 id="Helper_examples">Helper examples</h3>
+### Helper examples
 
-<p>This uses the <code>$0</code> helper to set the background color of the element that's currently selected in the Inspector:</p>
+This uses the `$0` helper to set the background color of the element that's currently selected in the Inspector:
 
-<pre class="brush: js">const evalButton = document.querySelector("#reddinate");
+```js
+const evalButton = document.querySelector("#reddinate");
 const evalString = "$0.style.backgroundColor = 'red'";
 
 function handleError(error) {
@@ -146,15 +139,16 @@ function handleResult(result) {
   }
 }
 
-evalButton.addEventListener("click", () =&gt; {
+evalButton.addEventListener("click", () => {
   browser.devtools.inspectedWindow.eval(evalString)
     .then(handleResult);
 });
-</pre>
+```
 
-<p>This uses the <code>inspect()</code> helper to select the first &lt;h1&gt; element in the page:</p>
+This uses the `inspect()` helper to select the first \<h1> element in the page:
 
-<pre class="brush: js">const inspectButton = document.querySelector("#inspect");
+```js
+const inspectButton = document.querySelector("#inspect");
 const inspectString = "inspect(document.querySelector('h1'))";
 
 function handleError(error) {
@@ -171,22 +165,19 @@ function handleResult(result) {
   }
 }
 
-inspectButton.addEventListener("click", () =&gt; {
+inspectButton.addEventListener("click", () => {
   browser.devtools.inspectedWindow.eval(inspectString)
     .then(handleResult);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools"><code>chrome.devtools</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -213,5 +204,4 @@ inspectButton.addEventListener("click", () =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

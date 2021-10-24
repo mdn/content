@@ -12,78 +12,55 @@ tags:
   - WebExtensions
   - pkcs11
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>The <code>pkcs11</code> API enables an extension to enumerate <a href="https://en.wikipedia.org/wiki/PKCS_11">PKCS #11</a> security modules and to make them accessible to the browser as sources of keys and certificates.</p>
+The `pkcs11` API enables an extension to enumerate [PKCS #11](https://en.wikipedia.org/wiki/PKCS_11) security modules and to make them accessible to the browser as sources of keys and certificates.
 
-<p>To use this API you need to have the "pkcs11" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
+To use this API you need to have the "pkcs11" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<h2 id="Using_the_Firefox_Preferences_Dialog_to_Install_PKCS_11_Modules">Using the Firefox Preferences Dialog to Install PKCS #11 Modules</h2>
+## Using the Firefox Preferences Dialog to Install PKCS #11 Modules
 
-<p>Perform the following steps:</p>
+Perform the following steps:
 
-<ol>
- <li>
-  <p>Save the PKCS #11 module to a permanent location on your local computer</p>
- </li>
- <li>
-  <p>Select <strong>Tools &gt; Options</strong> or select the <strong>Firefox menu</strong> and then <strong>Options</strong></p>
- </li>
- <li>
-  <p>Once the Options page opens, select <strong>Privacy &amp; Security</strong></p>
- </li>
- <li>
-  <p>Scroll down to the bottom of the page and under <strong>Certificates</strong> click or tap on <strong>Security Devices...<br>
-   <img alt="" src="device_manager.png"></strong></p>
- </li>
- <li>
-  <p>Click or tap the <strong>Load</strong> button<br>
-   <img alt="" src="load_device_driver.png"></p>
- </li>
- <li>
-  <p>Enter a name for the security module, such as "<em>My Client Database</em>"</p>
+1.  Save the PKCS #11 module to a permanent location on your local computer
+2.  Select **Tools > Options** or select the **Firefox menu** and then **Options**
+3.  Once the Options page opens, select **Privacy & Security**
+4.  Scroll down to the bottom of the page and under **Certificates** click or tap on **Security Devices...
+    ![](device_manager.png)**
+5.  Click or tap the **Load** button
+    ![](load_device_driver.png)
+6.  Enter a name for the security module, such as "_My Client Database_"
 
-  <div class="notecard warning">
-  <p><strong>Warning:</strong> Be careful about using international characters as there is currently a bug in Firefox where international characters may cause problems.</p>
-  </div>
- </li>
- <li>
-  <p>Choose <strong>Browse...</strong> to find the location of the PKCS #11 module on your local computer, and then click or tap <strong>OK</strong> to confirm.</p>
- </li>
-</ol>
+    > **Warning:** Be careful about using international characters as there is currently a bug in Firefox where international characters may cause problems.
 
-<h2 id="Provisioning_PKCS_11_modules">Provisioning PKCS #11 modules</h2>
+7.  Choose **Browse...** to find the location of the PKCS #11 module on your local computer, and then click or tap **OK** to confirm.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Starting with Firefox 58, extensions can use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11">pkcs11</a> API to enumerate PKCS #11 modules and make them accessible to the browser as sources of keys and certificates.</p>
-</div>
+## Provisioning PKCS #11 modules
 
-<p>There are two environmental prerequisites for using this <strong>API</strong>:</p>
+> **Note:** Starting with Firefox 58, extensions can use the [pkcs11](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11) API to enumerate PKCS #11 modules and make them accessible to the browser as sources of keys and certificates.
 
-<ul>
- <li>One or more <code>PKCS #11</code> modules must be installed on the user's computer</li>
- <li>For each installed <code>PKCS #11</code> module, there must be a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests">native manifest</a> file that enables the browser to locate the module.</li>
-</ul>
+There are two environmental prerequisites for using this **API**:
 
-<p>Most probably, the user or device administrator would install the <code>PKCS #11</code>module, and its installer would install the native manifest file at the same time.</p>
+- One or more `PKCS #11` modules must be installed on the user's computer
+- For each installed `PKCS #11` module, there must be a [native manifest](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) file that enables the browser to locate the module.
 
-<p>However, the module and manifest can't be installed as part of the extension's own installation process.</p>
+Most probably, the user or device administrator would install the `PKCS #11`module, and its installer would install the native manifest file at the same time.
 
-<p>For details about the manifest file's contents and location, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests">Native manifests</a>.</p>
+However, the module and manifest can't be installed as part of the extension's own installation process.
 
-<h2 id="Functions">Functions</h2>
+For details about the manifest file's contents and location, see [Native manifests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
 
-<dl>
- <dt>{{WebExtAPIRef("pkcs11.getModuleSlots()")}}</dt>
- <dd>For each slot in a module, get its name and whether it contains a token.</dd>
- <dt>{{WebExtAPIRef("pkcs11.installModule()")}}</dt>
- <dd>Installs the named PKCS #11 module.</dd>
- <dt>{{WebExtAPIRef("pkcs11.isModuleInstalled()")}}</dt>
- <dd>Checks whether the named PKCS #11 module is installed.</dd>
- <dt>{{WebExtAPIRef("pkcs11.uninstallModule()")}}</dt>
- <dd>Uninstalls the named PKCS #11 module.</dd>
-</dl>
+## Functions
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- {{WebExtAPIRef("pkcs11.getModuleSlots()")}}
+  - : For each slot in a module, get its name and whether it contains a token.
+- {{WebExtAPIRef("pkcs11.installModule()")}}
+  - : Installs the named PKCS #11 module.
+- {{WebExtAPIRef("pkcs11.isModuleInstalled()")}}
+  - : Checks whether the named PKCS #11 module is installed.
+- {{WebExtAPIRef("pkcs11.uninstallModule()")}}
+  - : Uninstalls the named PKCS #11 module.
 
-<p>{{Compat("webextensions.api.pkcs11", 1, 1)}} {{WebExtExamples("h2")}}</p>
+## Browser compatibility
+
+{{Compat("webextensions.api.pkcs11", 1, 1)}} {{WebExtExamples("h2")}}

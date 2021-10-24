@@ -13,81 +13,78 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.ResourceType
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>This type is a string, which represents the context in which a resource was fetched in a web request.</p>
+This type is a string, which represents the context in which a resource was fetched in a web request.
 
-<p>It's used to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter">filter</a> the requests you listen to using the webRequest API. For example: you can listen to requests only for images, or only for scripts.</p>
+It's used to [filter](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter) the requests you listen to using the webRequest API. For example: you can listen to requests only for images, or only for scripts.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are strings. Possible values are:</p>
+Values of this type are strings. Possible values are:
 
-<dl>
- <dt><code>beacon</code></dt>
- <dd>Requests sent through the <a href="/en-US/docs/Web/API/Beacon_API">Beacon API</a>.</dd>
- <dt><code>csp_report</code></dt>
- <dd>Requests sent to the {{CSP("report-uri")}} given in the {{HTTPHeader("Content-Security-Policy")}} header, when an attempt to violate the policy is detected.</dd>
- <dt><code>font</code></dt>
- <dd>Web fonts loaded for a {{cssxref("@font-face")}} CSS rule.</dd>
- <dt><code>image</code></dt>
- <dd>Resources loaded to be rendered as image, except for <code>imageset</code> on browsers that support that type (see browser compatibility below).</dd>
- <dt><code>imageset</code></dt>
- <dd>Images loaded by a {{HTMLElement("picture")}} element or given in an <code>&lt;img&gt;</code> element's {{htmlattrxref("srcset", "img")}} attribute.</dd>
- <dt><code>main_frame</code></dt>
- <dd>Top-level documents loaded into a tab.</dd>
- <dt><code>media</code></dt>
- <dd>Resources loaded by a  {{HTMLElement("video")}} or  {{HTMLElement("audio")}} element.</dd>
- <dt><code>object</code></dt>
- <dd>
-   <p>Resources loaded by an {{HTMLElement("object")}} or {{HTMLElement("embed")}} element.</p>
-   <p>Browsers that don't have a dedicated <code>object_subrequest</code> type (see browser compatibility below), also label subsequent requests sent by the plugin as <code>object</code>.</p>
- </dd>
- <dt><code>object_subrequest</code></dt>
- <dd>Requests sent by plugins.</dd>
- <dt><code>ping</code></dt>
- <dd>
-   <p>Requests sent to the URL given in a hyperlink's {{htmlattrxref("ping", "a")}} attribute, when the hyperlink is followed.</p>
-   <p>Browsers that don't have a dedicated <code>beacon</code> type (see browser compatibility below), also label requests sent through the Beacon API as <code>ping</code>.</p>
- </dd>
- <dt><code>script</code></dt>
- <dd>Code that is loaded to be executed by a {{HTMLElement("script")}} element or running in a <a href="/en-US/docs/Web/API/Web_Workers_API">Worker</a>.</dd>
- <dt><code>speculative</code></dt>
- <dd>In a speculative connection the browser has determined that a request to a URI may be coming soon, so it starts a TCP and/or TLS handshake immediately, so it is ready more quickly when the resource is actually requested.</dd>
- <dt><code>stylesheet</code></dt>
- <dd><a href="/en-US/docs/Web/CSS">CSS</a> stylesheets loaded to describe the representation of a document.</dd>
- <dt><code>sub_frame</code></dt>
- <dd>Documents loaded into an {{HTMLElement("iframe")}} or {{HTMLElement("frame")}} element.</dd>
- <dt><code>web_manifest</code></dt>
- <dd><a href="/en-US/docs/Web/Manifest">Web App Manifests</a> loaded for websites that can be installed to the homescreen.</dd>
- <dt><code>websocket</code></dt>
- <dd>Requests initiating a connection to a server through the <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket API</a>.</dd>
- <dt><code>xbl</code></dt>
- <dd><a href="/en-US/docs/Mozilla/Tech/XBL">XBL</a> bindings loaded to extend the behavior of elements in a document.</dd>
- <dt><code>xml_dtd</code></dt>
- <dd><a href="/en-US/docs/Glossary/Doctype">DTDs</a> loaded for an XML document.</dd>
- <dt><code>xmlhttprequest</code></dt>
- <dd>Requests sent by an {{domxref("XMLHttpRequest")}} object or through the <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</dd>
- <dt><code>xslt</code></dt>
- <dd><a href="/en-US/docs/Web/XSLT">XSLT</a> stylesheets loaded for transforming an XML document.</dd>
- <dt><code>other</code></dt>
- <dd>Resources that aren't covered by any other available type.</dd>
-</dl>
+- `beacon`
+  - : Requests sent through the [Beacon API](/en-US/docs/Web/API/Beacon_API).
+- `csp_report`
+  - : Requests sent to the {{CSP("report-uri")}} given in the {{HTTPHeader("Content-Security-Policy")}} header, when an attempt to violate the policy is detected.
+- `font`
+  - : Web fonts loaded for a {{cssxref("@font-face")}} CSS rule.
+- `image`
+  - : Resources loaded to be rendered as image, except for `imageset` on browsers that support that type (see browser compatibility below).
+- `imageset`
+  - : Images loaded by a {{HTMLElement("picture")}} element or given in an `<img>` element's {{htmlattrxref("srcset", "img")}} attribute.
+- `main_frame`
+  - : Top-level documents loaded into a tab.
+- `media`
+  - : Resources loaded by a  {{HTMLElement("video")}} or  {{HTMLElement("audio")}} element.
+- `object`
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+  - : Resources loaded by an {{HTMLElement("object")}} or {{HTMLElement("embed")}} element.
 
-<p>{{Compat}}</p>
+    Browsers that don't have a dedicated `object_subrequest` type (see browser compatibility below), also label subsequent requests sent by the plugin as `object`.
 
-<p>{{WebExtExamples}}</p>
+- `object_subrequest`
+  - : Requests sent by plugins.
+- `ping`
 
+  - : Requests sent to the URL given in a hyperlink's {{htmlattrxref("ping", "a")}} attribute, when the hyperlink is followed.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest#type-ResourceType"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
+    Browsers that don't have a dedicated `beacon` type (see browser compatibility below), also label requests sent through the Beacon API as `ping`.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+- `script`
+  - : Code that is loaded to be executed by a {{HTMLElement("script")}} element or running in a [Worker](/en-US/docs/Web/API/Web_Workers_API).
+- `speculative`
+  - : In a speculative connection the browser has determined that a request to a URI may be coming soon, so it starts a TCP and/or TLS handshake immediately, so it is ready more quickly when the resource is actually requested.
+- `stylesheet`
+  - : [CSS](/en-US/docs/Web/CSS) stylesheets loaded to describe the representation of a document.
+- `sub_frame`
+  - : Documents loaded into an {{HTMLElement("iframe")}} or {{HTMLElement("frame")}} element.
+- `web_manifest`
+  - : [Web App Manifests](/en-US/docs/Web/Manifest) loaded for websites that can be installed to the homescreen.
+- `websocket`
+  - : Requests initiating a connection to a server through the [WebSocket API](/en-US/docs/Web/API/WebSockets_API).
+- `xbl`
+  - : [XBL](/en-US/docs/Mozilla/Tech/XBL) bindings loaded to extend the behavior of elements in a document.
+- `xml_dtd`
+  - : [DTDs](/en-US/docs/Glossary/Doctype) loaded for an XML document.
+- `xmlhttprequest`
+  - : Requests sent by an {{domxref("XMLHttpRequest")}} object or through the [Fetch API](/en-US/docs/Web/API/Fetch_API).
+- `xslt`
+  - : [XSLT](/en-US/docs/Web/XSLT) stylesheets loaded for transforming an XML document.
+- `other`
+  - : Resources that aren't covered by any other available type.
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+## Browser compatibility
+
+{{Compat}}
+
+{{WebExtExamples}}
+
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#type-ResourceType) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -114,5 +111,4 @@ browser-compat: webextensions.api.webRequest.ResourceType
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -11,47 +11,47 @@ tags:
   - request
 browser-compat: webextensions.api.permissions.request
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Ask for the set of permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.</p>
+Ask for the set of permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
 
-<p>The <code>Permissions</code> argument may contain either an <code>origins</code> property, which is an array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>, or a <code>permissions</code> property, which is an array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permissions</a>, or both. Permissions must come from the set of permissions defined in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions">optional_permissions</a></code> manifest.json key. The <code>origins</code> property may include permissions that match a subset of the hosts matched by an optional permission: for example, if optional_permissions include "*://mozilla.org/", then <code>permissions.origins</code> may include "https://developer.mozilla.org/".</p>
+The `Permissions` argument may contain either an `origins` property, which is an array of [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), or a `permissions` property, which is an array of [API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), or both. Permissions must come from the set of permissions defined in the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest.json key. The `origins` property may include permissions that match a subset of the hosts matched by an optional permission: for example, if optional_permissions include "\*://mozilla.org/", then `permissions.origins` may include "https\://developer.mozilla.org/".
 
-<p>The request can only be made inside the handler for a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions">user action</a>.</p>
+The request can only be made inside the handler for a [user action](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions).
 
-<p>Depending on a circumstances, the browser will probably handle the request by asking the user whether to grant the requested permissions. Only a single request is made for all requested permissions: thus either all permissions are granted or none of them are.</p>
+Depending on a circumstances, the browser will probably handle the request by asking the user whether to grant the requested permissions. Only a single request is made for all requested permissions: thus either all permissions are granted or none of them are.
 
-<p>Any permissions granted are retained by the extension, even over upgrade and disable/enable cycling.</p>
+Any permissions granted are retained by the extension, even over upgrade and disable/enable cycling.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var requesting = browser.permissions.request(
+```js
+var requesting = browser.permissions.request(
   permissions                // Permissions object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>permissions</code></dt>
- <dd>A {{WebExtAPIRef("permissions.Permissions")}} object.</dd>
-</dl>
+- `permissions`
+  - : A {{WebExtAPIRef("permissions.Permissions")}} object.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with <code>true</code> if the extension was granted all the permissions listed in the <code>permissions</code> argument, or <code>false</code> otherwise.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension was granted all the permissions listed in the `permissions` argument, or `false` otherwise.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code adds a click handler that asks for various permissions, then logs the result of the request and the extension's permissions after the request completed.</p>
+This code adds a click handler that asks for various permissions, then logs the result of the request and the extension's permissions after the request completed.
 
-<pre class="brush: js">const permissionsToRequest = {
+```js
+const permissionsToRequest = {
   permissions: ["bookmarks", "history"],
   origins: ["https://developer.mozilla.org/"]
 }
@@ -69,21 +69,18 @@ function requestPermissions() {
 
   browser.permissions.request(permissionsToRequest)
     .then(onResponse)
-    .then((currentPermissions) =&gt; {
+    .then((currentPermissions) => {
     console.log(`Current permissions:`, currentPermissions);
   });
 }
 
 document.querySelector("#request").addEventListener("click", requestPermissions);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note">
-<p><strong>Note:</strong> Currently has a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1411873">bug with requesting origins</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1382953">requesting permissions on the about:addons page</a>.</p>
-</div>
+> **Note:** Currently has a [bug with requesting origins](https://bugzilla.mozilla.org/show_bug.cgi?id=1411873) and [requesting permissions on the about:addons page](https://bugzilla.mozilla.org/show_bug.cgi?id=1382953).
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/permissions"><code>chrome.permissions</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/extensions/permissions) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

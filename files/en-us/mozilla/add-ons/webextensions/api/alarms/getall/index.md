@@ -13,44 +13,45 @@ tags:
   - getAll
 browser-compat: webextensions.api.alarms.getAll
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Gets all active alarms for the extension.</p>
+Gets all active alarms for the extension.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var getAlarms = browser.alarms.getAll()
-</pre>
+```js
+var getAlarms = browser.alarms.getAll()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an array of <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/Alarm" title="Information about a single alarm. This object is returned from alarms.get() and alarms.getAll(), and is passed into the alarms.onAlarm listener.">Alarm</a></code> objects. Each of these represents an active alarm that belongs to the extension. If no alarms are active, the array will be empty.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of [`Alarm`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/Alarm "Information about a single alarm. This object is returned from alarms.get() and alarms.getAll(), and is passed into the alarms.onAlarm listener.") objects. Each of these represents an active alarm that belongs to the extension. If no alarms are active, the array will be empty.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">function gotAll(alarms) {
+```js
+function gotAll(alarms) {
   for (var alarm of alarms) {
     console.log(alarm.name);
   }
 }
 
 var getAlarms = browser.alarms.getAll();
-getAlarms.then(gotAll);</pre>
+getAlarms.then(gotAll);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

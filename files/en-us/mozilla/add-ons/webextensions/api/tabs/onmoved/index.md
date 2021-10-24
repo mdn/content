@@ -13,90 +13,81 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onMoved
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when a tab is moved within a window.</p>
+Fired when a tab is moved within a window.
 
-<p>Only one move event is fired, representing the tab the user directly moved. Move events are not fired for the other tabs that must move in response. This event is not fired when a tab is moved between windows. For that, see {{WebExtAPIRef('tabs.onDetached')}}.</p>
+Only one move event is fired, representing the tab the user directly moved. Move events are not fired for the other tabs that must move in response. This event is not fired when a tab is moved between windows. For that, see {{WebExtAPIRef('tabs.onDetached')}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.tabs.onMoved.addListener(listener)
+```js
+browser.tabs.onMoved.addListener(listener)
 browser.tabs.onMoved.removeListener(listener)
 browser.tabs.onMoved.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>tabId</code></dt>
-  <dd><code>integer</code>. ID of the tab the user moved.</dd>
- </dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
- <dl>
-  <dt><code>moveInfo</code></dt>
-  <dd><a href="#moveinfo"><code>object</code></a>. Information about the move.</dd>
- </dl>
- </dd>
-</dl>
+    - `tabId`
+      - : `integer`. ID of the tab the user moved.
 
-<h2 id="Additional_objects">Additional objects</h2>
+    <!---->
 
-<h3 id="moveInfo">moveInfo</h3>
+    - `moveInfo`
+      - : [`object`](#moveinfo). Information about the move.
 
-<dl>
- <dt><code>windowId</code></dt>
- <dd><code>integer</code>. ID of this tab's window.</dd>
- <dt><code>fromIndex</code></dt>
- <dd><code>integer</code>. Initial index of this tab in the window.</dd>
- <dt><code>toIndex</code></dt>
- <dd><code>integer</code>. Final index of this tab in the window.</dd>
-</dl>
+## Additional objects
 
-<h2 id="Examples">Examples</h2>
+### moveInfo
 
-<p>Listen for and log move events:</p>
+- `windowId`
+  - : `integer`. ID of this tab's window.
+- `fromIndex`
+  - : `integer`. Initial index of this tab in the window.
+- `toIndex`
+  - : `integer`. Final index of this tab in the window.
 
-<pre class="brush: js">function handleMoved(tabId, moveInfo) {
+## Examples
+
+Listen for and log move events:
+
+```js
+function handleMoved(tabId, moveInfo) {
   console.log("Tab " + tabId +
               " moved from " + moveInfo.fromIndex +
               " to " + moveInfo.toIndex);
 }
 
-browser.tabs.onMoved.addListener(handleMoved);</pre>
+browser.tabs.onMoved.addListener(handleMoved);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onMoved) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#event-onMoved"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -123,5 +114,4 @@ browser.tabs.onMoved.addListener(handleMoved);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

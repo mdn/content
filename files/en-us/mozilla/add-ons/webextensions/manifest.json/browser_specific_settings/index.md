@@ -8,112 +8,112 @@ tags:
   - manifest.json
 browser-compat: webextensions.manifest.browser_specific_settings
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
-	<tbody>
-		<tr>
-			<th scope="row">Type</th>
-			<td><code>Object</code></td>
-		</tr>
-		<tr>
-			<th scope="row">Mandatory</th>
-			<td>Usually, no (but see also <a href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when-do-you-need-an-add-on-id">When do you need an Add-on ID?</a>). Mandatory if the extension ID cannot be determined, see <a href="#firefox_gecko_properties"><code>browser_specific_settings.gecko.id</code></a>.</td>
-		</tr>
-		<tr>
-			<th scope="row">Example</th>
-			<td>
-			<pre class="brush: json;">
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>Object</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>
+        Usually, no (but see also
+        <a
+          href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when-do-you-need-an-add-on-id"
+          >When do you need an Add-on ID?</a
+        >). Mandatory if the extension ID cannot be determined, see
+        <a href="#firefox_gecko_properties"
+          ><code>browser_specific_settings.gecko.id</code></a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json;">
 "browser_specific_settings": {
   "gecko": {
     "id": "addon@example.com",
     "strict_min_version": "42.0"
   }
 }
-</pre>
-			</td>
-		</tr>
-	</tbody>
+</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>The <code>browser_specific_settings</code> key contains keys that are specific to a particular host application.</p>
+The `browser_specific_settings` key contains keys that are specific to a particular host application.
 
-<h3 id="Firefox_Gecko_properties">Firefox (Gecko) properties</h3>
+### Firefox (Gecko) properties
 
-<p>Firefox stores its browser specific settings in the <code>gecko</code> subkey, which has the following properties:</p>
+Firefox stores its browser specific settings in the `gecko` subkey, which has the following properties:
 
-<dl>
-	<dt><code>id</code></dt>
-	<dd>Is the extension ID. Optional since Firefox 48, where the extension ID is derived from the extension's signature. Mandatory if the extension is unsigned (and not loaded via <code>about:debugging</code>). See <a href="https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/">Extensions and the Add-on ID</a> to see when you need to specify an add-on ID.</dd>
-	<dt><code>strict_min_version</code></dt>
-	<dd>Minimum version of Gecko to support. Versions containing a "*" are not valid in this field. Defaults to "42a1".</dd>
-	<dt><code>strict_max_version</code></dt>
-	<dd>Maximum version of Gecko to support. If the Firefox version on which the extension is being installed or run is above this version, then the extension will be disabled, or not permitted to be installed. Defaults to "*", which disables checking for a maximum version.</dd>
-	<dt><code>update_url</code></dt>
-	<dd>Is a link to an <a href="https://extensionworkshop.com/documentation/manage/updating-your-extension/">extension update manifest</a>. Note that the link must begin with "https". This key is for managing extension updates yourself (i.e. not through AMO).</dd>
-</dl>
+- `id`
+  - : Is the extension ID. Optional since Firefox 48, where the extension ID is derived from the extension's signature. Mandatory if the extension is unsigned (and not loaded via `about:debugging`). See [Extensions and the Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) to see when you need to specify an add-on ID.
+- `strict_min_version`
+  - : Minimum version of Gecko to support. Versions containing a "\*" are not valid in this field. Defaults to "42a1".
+- `strict_max_version`
+  - : Maximum version of Gecko to support. If the Firefox version on which the extension is being installed or run is above this version, then the extension will be disabled, or not permitted to be installed. Defaults to "\*", which disables checking for a maximum version.
+- `update_url`
+  - : Is a link to an [extension update manifest](https://extensionworkshop.com/documentation/manage/updating-your-extension/). Note that the link must begin with "https". This key is for managing extension updates yourself (i.e. not through AMO).
 
-<p>See the list of <a href="https://addons.mozilla.org/en-US/firefox/pages/appversions/">valid Gecko versions</a>.</p>
+See the list of [valid Gecko versions](https://addons.mozilla.org/en-US/firefox/pages/appversions/).
 
-<h4 id="Extension_ID_format">Extension ID format</h4>
+#### Extension ID format
 
-<p>The extension ID must be one of the following:</p>
+The extension ID must be one of the following:
 
-<ul>
-	<li><a href="https://en.wikipedia.org/wiki/Universally_unique_identifier" title="Generating_GUIDs">GUID</a></li>
-	<li>A string formatted like an email address: <code>extensionname@example.org</code></li>
-</ul>
+- [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier "Generating_GUIDs")
+- A string formatted like an email address: `extensionname@example.org`
 
-<p>The latter format is easier to generate and manipulate. Be aware that using a real email address here may attract spam.</p>
+The latter format is easier to generate and manipulate. Be aware that using a real email address here may attract spam.
 
-<p>For example:</p>
+For example:
 
-<pre class="brush: json">"id": "extensionname@example.org"</pre>
+```json
+"id": "extensionname@example.org"
+```
 
-<pre class="brush: json">"id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"</pre>
+```json
+"id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"
+```
 
-<h3 id="Microsoft_Edge_properties">Microsoft Edge properties</h3>
+### Microsoft Edge properties
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> Adding Edge-specific properties to the manifest caused an error prior to Firefox 69 which can prevent the extension from installing.</p>
-</div>
+> **Warning:** Adding Edge-specific properties to the manifest caused an error prior to Firefox 69 which can prevent the extension from installing.
 
-<p>Microsoft Edge stores its browser specific settings in the <code>edge</code> subkey, which has the following properties:</p>
+Microsoft Edge stores its browser specific settings in the `edge` subkey, which has the following properties:
 
-<dl>
-	<dt><code>browser_action_next_to_addressbar</code></dt>
-	<dd>
-	<p>Boolean property which controls the placement of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_actions">browser action</a>.</p>
+- `browser_action_next_to_addressbar`
 
-	<ul>
-		<li><code>true</code> is equivalent to setting <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax">browser_action.default_area</a></code> to <code>navbar</code>.</li>
-		<li><code>false</code> is equivalent to setting <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax">browser_action.default_area</a></code> to <code>menupanel</code>.</li>
-	</ul>
-	</dd>
-</dl>
+  - : Boolean property which controls the placement of the [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_actions).
 
-<h3 id="Safari_properties">Safari properties</h3>
+    - `true` is equivalent to setting [`browser_action.default_area`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax) to `navbar`.
+    - `false` is equivalent to setting [`browser_action.default_area`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax) to `menupanel`.
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> Adding Safari-specific properties to the manifest caused an error prior to Firefox 69 which can prevent the extension from installing.</p>
-</div>
+### Safari properties
 
-<p>Safari stores its browser specific settings in the <code>safari</code> subkey, which has the following properties:</p>
+> **Warning:** Adding Safari-specific properties to the manifest caused an error prior to Firefox 69 which can prevent the extension from installing.
 
-<dl>
-	<dt><code>strict_min_version</code></dt>
-	<dd>Minimum version of Safari to support.</dd>
-	<dt><code>strict_max_version</code></dt>
-	<dd>Maximum version of Safari to support.</dd>
-</dl>
+Safari stores its browser specific settings in the `safari` subkey, which has the following properties:
 
-<h2 id="Examples">Examples</h2>
+- `strict_min_version`
+  - : Minimum version of Safari to support.
+- `strict_max_version`
+  - : Maximum version of Safari to support.
 
-<p>Example with all possible keys. Note that most extensions will omit <code>strict_max_version</code> and <code>update_url</code>.</p>
+## Examples
 
-<pre class="brush: json">"browser_specific_settings": {
+Example with all possible keys. Note that most extensions will omit `strict_max_version` and `update_url`.
+
+```json
+"browser_specific_settings": {
   "gecko": {
     "id": "addon@example.com",
     "strict_min_version": "42.0",
@@ -124,8 +124,9 @@ browser-compat: webextensions.manifest.browser_specific_settings
     "strict_min_version": "14",
     "strict_max_version": "20"
   }
-}</pre>
+}
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

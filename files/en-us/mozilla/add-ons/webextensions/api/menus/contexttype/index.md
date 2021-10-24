@@ -14,65 +14,82 @@ tags:
   - menus
 browser-compat: webextensions.api.menus.ContextType
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The different contexts a menu item can appear in.</p>
+The different contexts a menu item can appear in.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are strings. The item is displayed when the given context applies. Possible values are:</p>
+Values of this type are strings. The item is displayed when the given context applies. Possible values are:
 
-<dl>
- <dt>all</dt>
- <dd>Specifying 'all' is equivalent to the combination of all other contexts except for 'bookmark', 'tab' and 'tools_menu'.</dd>
- <dt>audio</dt>
- <dd>Applies when the user context-clicks an <a href="/en-US/docs/Web/HTML/Element/audio">audio</a> element.</dd>
- <dt>bookmark</dt>
- <dd>Applies when the user context-clicks a bookmark item in the bookmarks toolbar, bookmarks menu, bookmarks sidebar (<kbd>Ctrl</kbd> + <kbd>B</kbd>) and the Library window (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>). The latter two are supported as of Firefox 66. Requires the "bookmarks" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a> in the manifest.</dd>
- <dt>browser_action</dt>
- <dd>Applies when the user context-clicks your browser action. The maximum number of items that can be added to the top-level browser action context menu is {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, but you can add any number of items to submenus.</dd>
- <dt>editable</dt>
- <dd>Applies when the user context-clicks an editable element, like a <a href="/en-US/docs/Web/HTML/Element/textarea">textarea</a>.</dd>
- <dt>frame</dt>
- <dd>Applies when the user context-clicks in a nested <a href="/en-US/docs/Web/HTML/Element/iframe">iframe</a>.</dd>
- <dt>image</dt>
- <dd>Applies when the user context-clicks an image.</dd>
- <dt>link</dt>
- <dd>Applies when the user context-clicks on a link.</dd>
- <dt>page</dt>
- <dd>Applies when the user context-clicks in the page, but none of the other page contexts apply (for example, the click is not on an image or a nested iframe or a link).</dd>
- <dt>page_action</dt>
- <dd>Applies when the user context-clicks your page action. The maximum number of items that can be added to the top-level page action context menu is {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, but you can add any number of items to submenus.</dd>
- <dt>password</dt>
- <dd>Applies when the user context-clicks on a <a href="/en-US/docs/Web/HTML/Element/input/password">password input element</a>.</dd>
- <dt>selection</dt>
- <dd>Applies when part of the page is selected.</dd>
- <dt>tab</dt>
- <dd>
- <p>Applies when the user context-clicks on a tab (specifically, this refers to the tab-strip or other user interface element enabling the user to switch from one browser tab to another, not to the page itself).</p>
+- all
+  - : Specifying 'all' is equivalent to the combination of all other contexts except for 'bookmark', 'tab' and 'tools_menu'.
+- audio
+  - : Applies when the user context-clicks an [audio](/en-US/docs/Web/HTML/Element/audio) element.
+- bookmark
 
- <p>From Firefox 63, clicking the menu item on a tab grants the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission">activeTab</a> permission for the tab clicked, even if that isn't the currently active tab.</p>
- </dd>
- <dt>tools_menu</dt>
- <dd>The item will be added to the browser's tools menu. Note that this is only available if you access <code>ContextType</code> through the <code>menus</code> namespace. It is not available if you access it through the <code>contextMenus</code> namespace.</dd>
- <dt>video</dt>
- <dd>Applies when the user context-clicks a <a href="/en-US/docs/Web/HTML/Element/video">video</a> element.</dd>
-</dl>
+  - : Applies when the user context-clicks a bookmark item in the bookmarks toolbar, bookmarks menu, bookmarks sidebar (
 
-<p>Note that "launcher" is not supported.</p>
+    <kbd>Ctrl</kbd>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    \+
 
-<p>{{Compat}}</p>
+    <kbd>B</kbd>
 
-<p>{{WebExtExamples}}</p>
+    ) and the Library window (
 
+    <kbd>Ctrl</kbd>
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/contextMenus#type-ContextType"><code>chrome.contextMenus</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a> in the Chromium code.</p>
-</div>
+    \+
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+    <kbd>Shift</kbd>
+
+    \+
+
+    <kbd>B</kbd>
+
+    ). The latter two are supported as of Firefox 66. Requires the "bookmarks" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in the manifest.
+
+- browser_action
+  - : Applies when the user context-clicks your browser action. The maximum number of items that can be added to the top-level browser action context menu is {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, but you can add any number of items to submenus.
+- editable
+  - : Applies when the user context-clicks an editable element, like a [textarea](/en-US/docs/Web/HTML/Element/textarea).
+- frame
+  - : Applies when the user context-clicks in a nested [iframe](/en-US/docs/Web/HTML/Element/iframe).
+- image
+  - : Applies when the user context-clicks an image.
+- link
+  - : Applies when the user context-clicks on a link.
+- page
+  - : Applies when the user context-clicks in the page, but none of the other page contexts apply (for example, the click is not on an image or a nested iframe or a link).
+- page_action
+  - : Applies when the user context-clicks your page action. The maximum number of items that can be added to the top-level page action context menu is {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, but you can add any number of items to submenus.
+- password
+  - : Applies when the user context-clicks on a [password input element](/en-US/docs/Web/HTML/Element/input/password).
+- selection
+  - : Applies when part of the page is selected.
+- tab
+
+  - : Applies when the user context-clicks on a tab (specifically, this refers to the tab-strip or other user interface element enabling the user to switch from one browser tab to another, not to the page itself).
+
+    From Firefox 63, clicking the menu item on a tab grants the [activeTab](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) permission for the tab clicked, even if that isn't the currently active tab.
+
+- tools_menu
+  - : The item will be added to the browser's tools menu. Note that this is only available if you access `ContextType` through the `menus` namespace. It is not available if you access it through the `contextMenus` namespace.
+- video
+  - : Applies when the user context-clicks a [video](/en-US/docs/Web/HTML/Element/video) element.
+
+Note that "launcher" is not supported.
+
+## Browser compatibility
+
+{{Compat}}
+
+{{WebExtExamples}}
+
+> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#type-ContextType) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -99,5 +116,4 @@ browser-compat: webextensions.api.menus.ContextType
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

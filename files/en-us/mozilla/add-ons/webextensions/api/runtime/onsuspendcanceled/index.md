@@ -13,63 +13,57 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onSuspendCanceled
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Sent after {{WebExtAPIRef("runtime.onSuspend")}} to indicate that the app won't be unloaded after all.</p>
+Sent after {{WebExtAPIRef("runtime.onSuspend")}} to indicate that the app won't be unloaded after all.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.runtime.onSuspendCanceled.addListener(listener)
+```js
+browser.runtime.onSuspendCanceled.addListener(listener)
 browser.runtime.onSuspendCanceled.removeListener(listener)
 browser.runtime.onSuspendCanceled.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Checks whether a <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Checks whether a `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs.</p>
- </dd>
-</dl>
+- `callback`
+  - : Function that will be called when this event occurs.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Listen for <code>SuspendCanceled</code> events:</p>
+Listen for `SuspendCanceled` events:
 
-<pre class="brush: js">function handleSuspendCanceled() {
+```js
+function handleSuspendCanceled() {
   console.log("Suspend canceled");
 }
 
-browser.runtime.onSuspendCanceled.addListener(handleSuspendCanceled);</pre>
+browser.runtime.onSuspendCanceled.addListener(handleSuspendCanceled);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onSuspendCanceled) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#event-onSuspendCanceled"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -96,5 +90,4 @@ browser.runtime.onSuspendCanceled.addListener(handleSuspendCanceled);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

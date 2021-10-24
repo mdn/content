@@ -11,69 +11,66 @@ tags:
   - setEnabled
 browser-compat: webextensions.api.management.setEnabled
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Enables or disables the given add-on.</p>
+Enables or disables the given add-on.
 
-<p>This function must usually be called in the context of a user action, such as the click handler for a button. The browser may also ask the user to confirm the change.</p>
+This function must usually be called in the context of a user action, such as the click handler for a button. The browser may also ask the user to confirm the change.
 
-<p>This API requires the "management" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">API permission</a>.</p>
+This API requires the "management" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<p>It is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+It is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<p>The function allows enabling/disabling of theme addons, but will return an error if used to enable or disable other types of web extension.</p>
+The function allows enabling/disabling of theme addons, but will return an error if used to enable or disable other types of web extension.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var settingEnabled = browser.management.setEnabled(
+```js
+var settingEnabled = browser.management.setEnabled(
   id,              // string
   enabled         // boolean
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>id</code></dt>
- <dd><code>string</code>. ID of the add-on to enable/disable.</dd>
- <dt><code>enabled</code></dt>
- <dd><code>boolean</code>. Whether to enable or disable the add-on.</dd>
-</dl>
+- `id`
+  - : `string`. ID of the add-on to enable/disable.
+- `enabled`
+  - : `boolean`. Whether to enable or disable the add-on.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when the add-on has been disabled or enabled.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the add-on has been disabled or enabled.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Toggle enable/disable for the add-on whose ID is "my-add-on":</p>
+Toggle enable/disable for the add-on whose ID is "my-add-on":
 
-<pre class="brush: js">var id = "my-add-on";
+```js
+var id = "my-add-on";
 
 function toggleEnabled(id) {
   var getting = browser.management.get(id);
-  getting.then((info) =&gt; {
+  getting.then((info) => {
     browser.management.setEnabled(id, !info.enabled);
   });
 }
 
 toggleEnabled(id);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/extensions/management#method-setEnabled) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/management#method-setEnabled"><code>chrome.management</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -100,5 +97,4 @@ toggleEnabled(id);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,48 +13,48 @@ tags:
   - sendNativeMessage
 browser-compat: webextensions.api.runtime.sendNativeMessage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Sends a single message from an extension to a native application.</p>
+Sends a single message from an extension to a native application.
 
-<p>This takes two mandatory parameters: the name of the native application and a JSON object which is the message to send it. The browser will launch the native application and deliver the message.</p>
+This takes two mandatory parameters: the name of the native application and a JSON object which is the message to send it. The browser will launch the native application and deliver the message.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. The first message sent by the native application is treated as a response to the <code>sendNativeMessage()</code> call, and the promise will be fulfilled with this message as a parameter. Note that you can't use {{WebExtAPIRef("runtime.onMessage")}} to get responses from the application: you must use the callback function instead.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). The first message sent by the native application is treated as a response to the `sendNativeMessage()` call, and the promise will be fulfilled with this message as a parameter. Note that you can't use {{WebExtAPIRef("runtime.onMessage")}} to get responses from the application: you must use the callback function instead.
 
-<p>A new instance of the application is launched for call to <code>runtime.sendNativeMessage()</code>. The browser will terminate the native application after getting a reply. To terminate a native application, the browser will close the pipe, give the process a few seconds to exit gracefully, and then kill it if it has not exited.</p>
+A new instance of the application is launched for call to `runtime.sendNativeMessage()`. The browser will terminate the native application after getting a reply. To terminate a native application, the browser will close the pipe, give the process a few seconds to exit gracefully, and then kill it if it has not exited.
 
-<p>For more information, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a>.</p>
+For more information, see [Native messaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var sending = browser.runtime.sendNativeMessage(
+```js
+var sending = browser.runtime.sendNativeMessage(
   application,             // string
   message                  // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>application</code></dt>
- <dd><code>string</code>. The name of the native application. This must match the "name" property in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#app_manifest">native application's manifest file</a>.</dd>
- <dt><code>message</code></dt>
- <dd><code>object</code>. A JSON object that will be sent to the native application.</dd>
-</dl>
+- `application`
+  - : `string`. The name of the native application. This must match the "name" property in the [native application's manifest file](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#app_manifest).
+- `message`
+  - : `object`. A JSON object that will be sent to the native application.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. If the sender sent a response, this will be fulfilled with the response as a JSON object. Otherwise it will be fulfilled with no arguments. If an error occurs while connecting to the native application, the promise will be rejected with an error message.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the sender sent a response, this will be fulfilled with the response as a JSON object. Otherwise it will be fulfilled with no arguments. If an error occurs while connecting to the native application, the promise will be rejected with an error message.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Here's a background script that sends a "ping" message to the "ping_pong" app and logs the response, whenever the user clicks the browser action:</p>
+Here's a background script that sends a "ping" message to the "ping_pong" app and logs the response, whenever the user clicks the browser action:
 
-<pre class="brush: js">function onResponse(response) {
+```js
+function onResponse(response) {
   console.log(`Received ${response}`);
 }
 
@@ -70,19 +70,15 @@ browser.browserAction.onClicked.addListener(() => {
   var sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
   sending.then(onResponse, onError);
 });
-</pre>
+```
 
+{{WebExtExamples}}
 
-<p>{{WebExtExamples}}</p>
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-sendNativeMessage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#method-sendNativeMessage"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -109,5 +105,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

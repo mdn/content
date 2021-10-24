@@ -13,72 +13,63 @@ tags:
   - onStateChanged
 browser-compat: webextensions.api.idle.onStateChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when the system changes to an active, idle or locked state. The event listener is passed a string that has one of three values:</p>
+Fired when the system changes to an active, idle or locked state. The event listener is passed a string that has one of three values:
 
-<ul>
- <li>"locked" if the screen is locked or the screensaver activates</li>
- <li>"idle" if the system is unlocked and the user has not generated any input for a specified number of seconds. This number defaults to 60, but can be set using {{WebExtAPIRef("idle.setDetectionInterval()")}}.</li>
- <li>"active" when the user generates input on an idle system.</li>
-</ul>
+- "locked" if the screen is locked or the screensaver activates
+- "idle" if the system is unlocked and the user has not generated any input for a specified number of seconds. This number defaults to 60, but can be set using {{WebExtAPIRef("idle.setDetectionInterval()")}}.
+- "active" when the user generates input on an idle system.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.idle.onStateChanged.addListener(listener)
+```js
+browser.idle.onStateChanged.addListener(listener)
 browser.idle.onStateChanged.removeListener(listener)
 browser.idle.onStateChanged.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>newState</code></dt>
-  <dd>{{WebExtAPIRef('idle.IdleState')}}. The new idle state.</dd>
- </dl>
- </dd>
-</dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    - `newState`
+      - : {{WebExtAPIRef('idle.IdleState')}}. The new idle state.
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="Examples">Examples</h2>
+{{Compat}}
 
-<pre class="brush: js">function newState(state) {
+## Examples
+
+```js
+function newState(state) {
   console.log(`New state: ${state}`);
 }
 
-browser.idle.onStateChanged.addListener(newState);</pre>
+browser.idle.onStateChanged.addListener(newState);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.idle`](https://developer.chrome.com/extensions/idle#event-onStateChanged) API. This documentation is derived from [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/idle#event-onStateChanged"><code>chrome.idle</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json"><code>idle.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -105,5 +96,4 @@ browser.idle.onStateChanged.addListener(newState);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,54 +13,44 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.notifications.TemplateType
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>This is a string, and represents the type of notification to create. There are four types of notification: "basic", "image", "list", "progress".</p>
+This is a string, and represents the type of notification to create. There are four types of notification: "basic", "image", "list", "progress".
 
-<p>This is passed into {{WebExtAPIRef("notifications.create()")}} and {{WebExtAPIRef("notifications.update()")}} as the <code>type</code> property of {{WebExtAPIRef("notifications.NotificationOptions", "NotificationOptions")}}.</p>
+This is passed into {{WebExtAPIRef("notifications.create()")}} and {{WebExtAPIRef("notifications.update()")}} as the `type` property of {{WebExtAPIRef("notifications.NotificationOptions", "NotificationOptions")}}.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are strings. Possible values are:</p>
+Values of this type are strings. Possible values are:
 
-<ul>
- <li><code>"basic"</code>: the notification includes:
+- `"basic"`: the notification includes:
 
-  <ul>
-   <li>a title (<code>NotificationOptions.title</code>)</li>
-   <li>a message (<code>NotificationOptions.message</code>)</li>
-   <li>an icon (<code>NotificationOptions.iconUrl</code>){{optional_inline}}</li>
-   <li>an extra message (<code>NotificationOptions.contextMessage</code>){{optional_inline}}</li>
-   <li>up to two buttons (<code>NotificationOptions.buttons</code>){{optional_inline}}</li>
-  </ul>
- </li>
- <li><code>"image"</code>: everything in <code>"basic"</code> and also:
-  <ul>
-   <li>an image (<code>NotificationOptions.imageUrl</code>)</li>
-  </ul>
- </li>
- <li><code>"list"</code>: everything in <code>"basic"</code> and also:
-  <ul>
-   <li>a list of items (<code>NotificationOptions.items</code>)</li>
-  </ul>
- </li>
- <li><code>"progress"</code>: everything in <code>"basic"</code> and also:
-  <ul>
-   <li>a progress indicator (<code>NotificationOptions.progress</code>)</li>
-  </ul>
- </li>
-</ul>
+  - a title (`NotificationOptions.title`)
+  - a message (`NotificationOptions.message`)
+  - an icon (`NotificationOptions.iconUrl`){{optional_inline}}
+  - an extra message (`NotificationOptions.contextMessage`){{optional_inline}}
+  - up to two buttons (`NotificationOptions.buttons`){{optional_inline}}
 
-<p>Currently Firefox only supports "basic" here.</p>
+- `"image"`: everything in `"basic"` and also:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+  - an image (`NotificationOptions.imageUrl`)
 
-<p>{{Compat}}</p>
+- `"list"`: everything in `"basic"` and also:
 
-<p>{{WebExtExamples}}</p>
+  - a list of items (`NotificationOptions.items`)
 
+- `"progress"`: everything in `"basic"` and also:
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/notifications"><code>chrome.notifications</code></a> API.</p>
+  - a progress indicator (`NotificationOptions.progress`)
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+Currently Firefox only supports "basic" here.
+
+## Browser compatibility
+
+{{Compat}}
+
+{{WebExtExamples}}
+
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

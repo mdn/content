@@ -13,19 +13,20 @@ tags:
   - managed
 browser-compat: webextensions.api.storage.managed
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A {{WebExtAPIRef("storage.StorageArea")}} object that represents the <code>managed</code> storage area. Items in <code>managed</code> storage are set by the domain administrator or other native applications installed on user's computer, and are read-only for the extension. Trying to modify this storage area results in an error.</p>
+A {{WebExtAPIRef("storage.StorageArea")}} object that represents the `managed` storage area. Items in `managed` storage are set by the domain administrator or other native applications installed on user's computer, and are read-only for the extension. Trying to modify this storage area results in an error.
 
-<h2 id="Provisioning_managed_storage">Provisioning managed storage</h2>
+## Provisioning managed storage
 
-<p>The procedure for provisioning managed storage is different for different browsers. For Chrome instructions, see the <a href="https://developer.chrome.com/extensions/manifest/storage">"Manifest for storage areas"</a> article.</p>
+The procedure for provisioning managed storage is different for different browsers. For Chrome instructions, see the ["Manifest for storage areas"](https://developer.chrome.com/extensions/manifest/storage) article.
 
-<p>For Firefox, you need to create a JSON manifest file in a specific format, in a specific location. For the details of manifest syntax and location, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests">Native manifests</a>.</p>
+For Firefox, you need to create a JSON manifest file in a specific format, in a specific location. For the details of manifest syntax and location, see [Native manifests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
 
-<p>Here's an example manifest:</p>
+Here's an example manifest:
 
-<pre class="brush: json">{
+```json
+{
   "name": "favorite-color-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
@@ -33,27 +34,27 @@ browser-compat: webextensions.api.storage.managed
   {
     "color": "management thinks it should be blue!"
   }
-}</pre>
+}
+```
 
-<p>Given this manifest, the "favorite-color-examples@mozilla.org" extension could access the data using code like this:</p>
+Given this manifest, the "favorite-color-examples\@mozilla.org" extension could access the data using code like this:
 
-<pre class="brush: js">var storageItem = browser.storage.managed.get('color');
-storageItem.then((res) =&gt; {
+```js
+var storageItem = browser.storage.managed.get('color');
+storageItem.then((res) => {
   console.log(`Managed color is: ${res.color}`);
-});</pre>
+});
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#property-managed) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/storage#property-managed"><code>chrome.storage</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> in the Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -80,5 +81,4 @@ storageItem.then((res) =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -4,44 +4,49 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 tags:
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p><span class="seoSummary">Notifications allow you to communicate information about your extension or its content using the underlying operating system's notification service.</span></p>
+Notifications allow you to communicate information about your extension or its content using the underlying operating system's notification service.
 
-<p><img alt="" src="notify-shadowed.png"></p>
+![](notify-shadowed.png)
 
-<p>Notifications can include a call to action for the user, and your add-on can listen for the user clicking the notification or the notification closing.</p>
+Notifications can include a call to action for the user, and your add-on can listen for the user clicking the notification or the notification closing.
 
-<h2 id="Specifying_notifications">Specifying notifications</h2>
+## Specifying notifications
 
-<p>You manage notifications programmatically, using the {{WebExtAPIRef("notifications")}} API. To use this API you must request the <code>notifications</code> permission in your manifest.json:</p>
+You manage notifications programmatically, using the {{WebExtAPIRef("notifications")}} API. To use this API you must request the `notifications` permission in your manifest.json:
 
-<pre class="brush: json"><span class="pl-s"><span class="pl-pds">"</span>permissions<span class="pl-pds">"</span></span>: [<span class="pl-s"><span class="pl-pds">"</span>notifications<span class="pl-pds">"</span></span>]</pre>
+```json
+"permissions": ["notifications"]
+```
 
-<p>You then use {{WebExtAPIRef("notifications.create")}} to create your notifications, as in this example from <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n:</a></p>
+You then use {{WebExtAPIRef("notifications.create")}} to create your notifications, as in this example from [notify-link-clicks-i18n:](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
 
-<pre class="brush: js">var title = browser.i18n.getMessage("notificationTitle");
+```js
+var title = browser.i18n.getMessage("notificationTitle");
 var content = browser.i18n.getMessage("notificationContent", message.url);
 browser.notifications.create({
   "type": "basic",
   "iconUrl": browser.extension.getURL("icons/link-48.png"),
   "title": title,
   "message": content
-});</pre>
+});
+```
 
-<p>This code creates a notification with an icon, title, and message.</p>
+This code creates a notification with an icon, title, and message.
 
-<p>If the notification includes a call to action, you can listen for the user clicking the notification to call the function to handle the action:</p>
+If the notification includes a call to action, you can listen for the user clicking the notification to call the function to handle the action:
 
-<pre class="brush: js">browser.notifications.onClicked.addListener(handleClick);
-</pre>
+```js
+browser.notifications.onClicked.addListener(handleClick);
+```
 
-<p>If you are issuing calls to action through notifications, you will also want to define the optional notification <code>id</code>, so you can figure out which call to action the user has selected.</p>
+If you are issuing calls to action through notifications, you will also want to define the optional notification `id`, so you can figure out which call to action the user has selected.
 
-<h2 id="Icons">Icons</h2>
+## Icons
 
-<p>For details on how to create icons to use with your notification, see <a href="https://design.firefox.com/photon/visuals/iconography.html">Iconography</a> in the <a href="https://design.firefox.com/photon/index.html">Photon Design System</a> documentation.</p>
+For details on how to create icons to use with your notification, see [Iconography](https://design.firefox.com/photon/visuals/iconography.html) in the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repository on GitHub includes the <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> example which implements notifications.</p>
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) example which implements notifications.

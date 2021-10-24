@@ -10,46 +10,37 @@ tags:
   - devtools.inspectedWindow
 browser-compat: webextensions.api.devtools.inspectedWindow
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div class="note">
-<p><strong>Note:</strong> This page describes the WebExtensions devtools APIs as they exist in Firefox 54. Although the APIs are based on the <a href="https://developer.chrome.com/extensions/devtools">Chrome devtools APIs</a>, there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis">Limitations of the devtools APIs</a>.</p>
-</div>
+> **Note:** This page describes the WebExtensions devtools APIs as they exist in Firefox 54. Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools), there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see [Limitations of the devtools APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis).
 
-<p>The <code>devtools.inspectedWindow</code> API lets a devtools extension interact with the window that the developer tools are attached to.</p>
+The `devtools.inspectedWindow` API lets a devtools extension interact with the window that the developer tools are attached to.
 
-<p>Like all the <code>devtools</code> APIs, this API is only available to code running in the document defined in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a> manifest.json key, or in other devtools documents created by the extension (such as the document hosted by a panel the extension created). See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">Extending the developer tools</a> for more.</p>
+Like all the `devtools` APIs, this API is only available to code running in the document defined in the [devtools_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) manifest.json key, or in other devtools documents created by the extension (such as the document hosted by a panel the extension created). See [Extending the developer tools](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools) for more.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId">devtools.inspectedWindow.tabId</a></code></dt>
- <dd>The ID of the window that the developer tools are attached to.</dd>
-</dl>
+- [`devtools.inspectedWindow.tabId`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId)
+  - : The ID of the window that the developer tools are attached to.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval">devtools.inspectedWindow.eval()</a></code></dt>
- <dd>Evaluate some JavaScript in the target window.</dd>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload">devtools.inspectedWindow.reload()</a></code></dt>
- <dd>Reload the target window's document.</dd>
-</dl>
+- [`devtools.inspectedWindow.eval()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval)
+  - : Evaluate some JavaScript in the target window.
+- [`devtools.inspectedWindow.reload()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload)
+  - : Reload the target window's document.
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.devtools.inspectedWindow`](https://developer.chrome.com/extensions/devtools_inspectedWindow) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools_inspectedWindow"><code>chrome.devtools.inspectedWindow</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -76,5 +67,4 @@ browser-compat: webextensions.api.devtools.inspectedWindow
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

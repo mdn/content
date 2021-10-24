@@ -6,6 +6,4 @@ tags:
   - Index
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
-
-<div>{{Index("/en-US/docs/Mozilla/Add-ons/WebExtensions")}}</div>
+{{AddonSidebar}}{{Index("/en-US/docs/Mozilla/Add-ons/WebExtensions")}}

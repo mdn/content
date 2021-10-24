@@ -13,37 +13,37 @@ tags:
   - pause
 browser-compat: webextensions.api.downloads.pause
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code><strong>pause</strong></code><strong><code>()</code></strong> function of the {{WebExtAPIRef("downloads")}} API pauses a download.</p>
+The **`pause`\*\***`()`\*\* function of the {{WebExtAPIRef("downloads")}} API pauses a download.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var pausing = browser.downloads.pause(
+```js
+var pausing = browser.downloads.pause(
   downloadId      // integer
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>downloadId</code></dt>
- <dd>An <code>integer</code> representing the <code>id</code> of the download to pause.</dd>
-</dl>
+- `downloadId`
+  - : An `integer` representing the `id` of the download to pause.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. If the call was successful, the download will be put in a paused state, and the promise will be fulfilled with no arguments. If the call fails, the promise will be rejected with an error message. The call will fail if the download is not active: for example, because it has finished downloading.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the call was successful, the download will be put in a paused state, and the promise will be fulfilled with no arguments. If the call fails, the promise will be rejected with an error message. The call will fail if the download is not active: for example, because it has finished downloading.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">function onPaused() {
+```js
+function onPaused() {
   console.log(`Paused download`);
 }
 
@@ -52,18 +52,16 @@ function onError(error) {
 }
 
 var pausing = browser.downloads.pause(downloadId);
-pausing.then(onPaused, onError);</pre>
+pausing.then(onPaused, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-pause) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#method-pause"><code>chrome.downloads</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -90,5 +88,4 @@ pausing.then(onPaused, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

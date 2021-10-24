@@ -12,47 +12,45 @@ tags:
   - removeHistory
 browser-compat: webextensions.api.browsingData.removeHistory
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Clears the record of web pages that the user has visited (browsing history).</p>
+Clears the record of web pages that the user has visited (browsing history).
 
-<p>You can use the <code>removalOptions</code> parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:</p>
+You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
 
-<ul>
- <li>clear only records of web pages visited after a given time</li>
- <li>control whether to clear only records of normal web pages or to clear records of hosted apps and extensions as well.</li>
-</ul>
+- clear only records of web pages visited after a given time
+- control whether to clear only records of normal web pages or to clear records of hosted apps and extensions as well.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var removing = browser.browsingData.removeHistory(
+```js
+var removing = browser.browsingData.removeHistory(
   removalOptions            // RemovalOptions object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>removalOptions</code></dt>
- <dd><code>object</code>. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which may be used to clear only records of web pages visited after a given time, and whether to clear only records of normal web pages or to clear records of hosted apps and extensions as well.</dd>
-</dl>
+- `removalOptions`
+  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which may be used to clear only records of web pages visited after a given time, and whether to clear only records of normal web pages or to clear records of hosted apps and extensions as well.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when the removal has finished. If any error occurs, the promise will be rejected with an error message.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the removal has finished. If any error occurs, the promise will be rejected with an error message.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Remove records of pages visited in the last week:</p>
+Remove records of pages visited in the last week:
 
-<pre class="brush: js">function onRemoved() {
-  console.log(&quot;removed&quot;);
+```js
+function onRemoved() {
+  console.log("removed");
 }
 
 function onError(error) {
@@ -67,12 +65,14 @@ var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
 
 browser.browsingData.removeHistory(
   {since: oneWeekAgo}).
-then(onRemoved, onError);</pre>
+then(onRemoved, onError);
+```
 
-<p>Remove all records of visited pages:</p>
+Remove all records of visited pages:
 
-<pre class="brush: js">function onRemoved() {
-  console.log(&quot;removed&quot;);
+```js
+function onRemoved() {
+  console.log("removed");
 }
 
 function onError(error) {
@@ -80,18 +80,16 @@ function onError(error) {
 }
 
 browser.browsingData.removeHistory({}).
-then(onRemoved, onError);</pre>
+then(onRemoved, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,5 +116,4 @@ then(onRemoved, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

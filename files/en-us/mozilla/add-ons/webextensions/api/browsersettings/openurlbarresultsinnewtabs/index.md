@@ -12,27 +12,29 @@ tags:
   - openUrlbarResultsInNewTabs
 browser-compat: webextensions.api.browserSettings.openUrlbarResultsInNewTabs
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.</p>
+A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.
 
-<p>When the user focuses the address bar and starts typing, the browser offers autocomplete suggestions: a dropdown list of web pages based on the user's incomplete input and their browsing history.</p>
+When the user focuses the address bar and starts typing, the browser offers autocomplete suggestions: a dropdown list of web pages based on the user's incomplete input and their browsing history.
 
-<p>If set to <code>true</code>, then when the user selects one of these items, the item is opened in a new tab. If set to <code>false</code> (the default) the item is opened in the current tab.</p>
+If set to `true`, then when the user selects one of these items, the item is opened in a new tab. If set to `false` (the default) the item is opened in the current tab.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Set the setting to <code>true</code>:</p>
+Set the setting to `true`:
 
-<pre class="brush: js">function logResult(result) {
+```js
+function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
 browser.browserSettings.openUrlbarResultsInNewTabs.set({value: true}).
-  then(logResult);</pre>
+  then(logResult);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

@@ -13,46 +13,47 @@ tags:
   - getAll
 browser-compat: webextensions.api.commands.getAll
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Gets all commands for the extension that you have registered using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands"><code>commands</code> manifest.json key</a>.</p>
+Gets all commands for the extension that you have registered using the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
-<p>The commands are returned as an array of {{WebExtAPIRef('commands.Command')}} objects. Alternately, if you are using the promise-based version of the API, <code>browser.commands.getAll()</code>, the commands are passed into the <code>onFulfilled</code> argument to <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">Promise.then()</a></code>.</p>
+The commands are returned as an array of {{WebExtAPIRef('commands.Command')}} objects. Alternately, if you are using the promise-based version of the API, `browser.commands.getAll()`, the commands are passed into the `onFulfilled` argument to [`Promise.then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then).
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var getCommands = browser.commands.getAll();
-</pre>
+```js
+var getCommands = browser.commands.getAll();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an array of <code>{{WebExtAPIRef('commands.Command')}}</code> objects, one for each command registered for the extension. If no commands were registered, the array will be empty.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of `{{WebExtAPIRef('commands.Command')}}` objects, one for each command registered for the extension. If no commands were registered, the array will be empty.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">function logCommands(commands) {
+```js
+function logCommands(commands) {
   commands.forEach(function(command) {
     console.log(command);
   });
 }
 
 var getCommands = browser.commands.getAll();
-getCommands.then(logCommands);</pre>
+getCommands.then(logCommands);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/commands"><code>chrome.commands</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/extensions/commands) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

@@ -11,70 +11,67 @@ tags:
   - uninstall
 browser-compat: webextensions.api.management.uninstall
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Uninstalls an add-on, given its ID.</p>
+Uninstalls an add-on, given its ID.
 
-<p>This API requires the "management" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">API permission</a>.</p>
+This API requires the "management" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var uninstalling = browser.management.uninstall(
+```js
+var uninstalling = browser.management.uninstall(
   id,                  // string
   options              // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>id</code></dt>
- <dd><code>string</code>. ID of the add-on to uninstall.</dd>
- <dt><code>options{{optional_inline}}</code></dt>
- <dd><p><code>object</code>. Object which may contain a single property, <code>showConfirmDialog</code>. If <code>showConfirmDialog</code> is <code>true</code>, the browser will show a dialog asking the user to confirm that the add-on should be uninstalled.</p>
- </dd>
-</dl>
+- `id`
+  - : `string`. ID of the add-on to uninstall.
+- `options{{optional_inline}}`
+  - : `object`. Object which may contain a single property, `showConfirmDialog`. If `showConfirmDialog` is `true`, the browser will show a dialog asking the user to confirm that the add-on should be uninstalled.
 
-<ul>
- <li>If <code>id</code> is the calling add-on's ID, <code>showConfirmDialog</code> defaults to <code>false</code>.</li>
- <li>If <code>id</code> is a the ID of a different add-on, the <code>showConfirmDialog</code> option is ignored and the confirmation dialog is always shown.</li>
-</ul>
+<!---->
 
-<h3 id="Return_value">Return value</h3>
+- If `id` is the calling add-on's ID, `showConfirmDialog` defaults to `false`.
+- If `id` is a the ID of a different add-on, the `showConfirmDialog` option is ignored and the confirmation dialog is always shown.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be rejected with an error message if the user canceled uninstall.</p>
+### Return value
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be rejected with an error message if the user canceled uninstall.
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="Examples">Examples</h2>
+{{Compat}}
 
-<p>Uninstall the add-on whose ID is "my-addon-id", asking the user to confirm. In the callback, check whether the user canceled uninstallation.</p>
+## Examples
 
-<p>Note that we haven't passed a fulfillment handler because if uninstallation succeeds, the add-on is no longer around to handle it.</p>
+Uninstall the add-on whose ID is "my-addon-id", asking the user to confirm. In the callback, check whether the user canceled uninstallation.
 
-<pre class="brush: js">var id = "my-addon-id";
+Note that we haven't passed a fulfillment handler because if uninstallation succeeds, the add-on is no longer around to handle it.
+
+```js
+var id = "my-addon-id";
 
 function onCanceled(error) {
   console.log(`Uninstall canceled: ${error}`);
 }
 
 var uninstalling = browser.management.uninstall(id);
-uninstalling.then(null, onCanceled);</pre>
+uninstalling.then(null, onCanceled);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/extensions/management#method-uninstall) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/management#method-uninstall"><code>chrome.management</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -101,5 +98,4 @@ uninstalling.then(null, onCanceled);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

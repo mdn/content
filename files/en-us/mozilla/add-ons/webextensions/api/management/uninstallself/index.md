@@ -11,51 +11,49 @@ tags:
   - uninstallSelf
 browser-compat: webextensions.api.management.uninstallSelf
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Uninstalls the calling add-on.</p>
+Uninstalls the calling add-on.
 
-<p>This API <em>does not</em> require the "management" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">API permission</a>.</p>
+This API _does not_ require the "management" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var uninstallingSelf = browser.management.uninstallSelf(
+```js
+var uninstallingSelf = browser.management.uninstallSelf(
   options              // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>options{{optional_inline}}</code></dt>
- <dd>
-   <p><code>object</code>. Object which may two properties, both optional:</p>
-   <dl>
-    <dt><code>showConfirmDialog{{optional_inline}}</code></dt>
-    <dd>Boolean. If <code>showConfirmDialog</code> is <code>true</code>, the browser will show a dialog asking the user to confirm that the add-on should be uninstalled. Defaults to <code>false</code>.</dd>
-    <dt><code>dialogMessage{{optional_inline}}</code></dt>
-    <dd>String. An extra message that will be displayed in the confirmation dialog.</dd>
-   </dl>
-  </dd>
-</dl>
+- `options{{optional_inline}}`
 
- <h3 id="Return_value">Return value</h3>
+  - : `object`. Object which may two properties, both optional:
 
- <p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be rejected with an error message if the user canceled uninstall.</p>
+    - `showConfirmDialog{{optional_inline}}`
+      - : Boolean. If `showConfirmDialog` is `true`, the browser will show a dialog asking the user to confirm that the add-on should be uninstalled. Defaults to `false`.
+    - `dialogMessage{{optional_inline}}`
+      - : String. An extra message that will be displayed in the confirmation dialog.
 
- <h2 id="Browser_compatibility">Browser compatibility</h2>
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be rejected with an error message if the user canceled uninstall.
+
+## Browser compatibility
 
 {{Compat}}
 
- <h2 id="Examples">Examples</h2>
+## Examples
 
- <p>Uninstall the add-on, asking the user to confirm. In the callback, check whether the user canceled uninstallation.</p>
+Uninstall the add-on, asking the user to confirm. In the callback, check whether the user canceled uninstallation.
 
- <p>Note that we haven't passed a fulfillment handler because if uninstallation succeeds, the add-on is no longer around to handle it.</p>
+Note that we haven't passed a fulfillment handler because if uninstallation succeeds, the add-on is no longer around to handle it.
 
- <pre class="brush: js">function onCanceled(error) {
+```js
+function onCanceled(error) {
   console.log(`Canceled: ${error}`);
 }
 
@@ -63,11 +61,13 @@ var uninstalling = browser.management.uninstallSelf({
   showConfirmDialog: true
 });
 
-uninstalling.then(null, onCanceled);</pre>
+uninstalling.then(null, onCanceled);
+```
 
- <p>The same, but also adding a custom message to the dialog:</p>
+The same, but also adding a custom message to the dialog:
 
- <pre class="brush: js">function onCanceled(error) {
+```js
+function onCanceled(error) {
   console.log(`Canceled: ${error}`);
 }
 
@@ -76,19 +76,18 @@ var uninstalling = browser.management.uninstallSelf({
   dialogMessage: "Testing self-uninstall"
 });
 
-uninstalling.then(null, onCanceled);</pre>
+uninstalling.then(null, onCanceled);
+```
 
- <p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
- <div class="note"><p><strong>Note:</strong></p>
+> **Note:**
+>
+> This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/extensions/management#method-uninstallSelf) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
- <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/management#method-uninstallSelf"><code>chrome.management</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> in the Chromium code.</p>
-
- <p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
- </div>
-
- <div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -115,7 +114,4 @@ uninstalling.then(null, onCanceled);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
- </div>
- </dd>
-</dl>
+</pre></div>

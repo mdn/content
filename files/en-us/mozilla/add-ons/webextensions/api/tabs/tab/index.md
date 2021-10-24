@@ -13,92 +13,88 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.Tab
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The type <strong><code>tabs.Tab</code></strong> contains information about a tab. This provides access to information about what content is in the tab, how large the content is, what special states or restrictions are in effect, and so forth.</p>
+The type **`tabs.Tab`** contains information about a tab. This provides access to information about what content is in the tab, how large the content is, what special states or restrictions are in effect, and so forth.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>active</code></dt>
- <dd>
- <p><code>boolean</code>. Whether the tab is active in its window. This may be true even if the tab's window is not currently focused.</p>
+- `active`
 
- <p>The active tab is usually the selected one. However, on Firefox for Android, extension popups open in a new tab. When this popup tab is selected, the active tab will instead be the one in which the popup opened.</p>
- </dd>
- <dt><code>attention</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Indicates whether the tab is drawing attention. For example, when the tab displays a modal dialog, <code>attention</code> will be <code>true</code>.</dd>
- <dt><code>audible</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Indicates whether the tab is producing sound. However, the user will not hear the sound if the tab is muted (see the <code>mutedInfo</code> property).</dd>
- <dt><code>autoDiscardable</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Whether the tab can be discarded automatically by the browser when resources are low.</dd>
- <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The cookie store of the tab. If different tabs can have different cookie stores (for example, to support <a href="https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers">contextual identity</a>), you can pass this as the <code>storeId</code> option into various methods of the {{WebExtAPIRef("cookies")}} API, to set and get cookies associated with this tab's cookie store. Only present if the extension has the <code>"cookies"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
- <dt><code>discarded</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Whether the tab is discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content gets reloaded the next time it's activated.</dd>
- <dt><code>favIconUrl</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The URL of the tab's favicon. Only present if the extension has the <code>"tabs"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>. It may also be an empty string if the tab is loading.</dd>
- <dt><code>height</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. The height of the tab in pixels.</dd>
- <dt><code>hidden</code></dt>
- <dd><code>boolean</code>. Whether the tab is hidden.</dd>
- <dt><code>highlighted</code></dt>
- <dd>
- <p><code>boolean</code>. Whether the tab is highlighted, i.e. part of the current tab selection. An active tab is always highlighted, but some browsers may allow additional tabs to be highlighted, for example by clicking them while holding <kbd>Ctrl</kbd>, <kbd>Shift</kbd> or <kbd>⌘ Command</kbd> keys.</p>
+  - : `boolean`. Whether the tab is active in its window. This may be true even if the tab's window is not currently focused.
 
- <p>Firefox for Android doesn't support highlighting multiple tabs, and Firefox desktop requires the <code>browser.tabs.multiselect</code> preference (enabled by default).</p>
- </dd>
- <dt><code>id</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. The tab's ID. Tab IDs are unique within a browser session. The tab ID may also be set to {{WebExtAPIRef('tabs.TAB_ID_NONE')}} for browser windows that don't host content tabs (for example, devtools windows).</dd>
- <dt><code>incognito</code></dt>
- <dd><code>boolean</code>. Whether the tab is in a private browsing window.</dd>
- <dt><code>index</code></dt>
- <dd><code>integer</code>. The zero-based index of the tab within its window.</dd>
- <dt><code>isArticle</code></dt>
- <dd><code>boolean</code>. True if the tab can be <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode">rendered in Reader Mode</a>, false otherwise.</dd>
- <dt><code>isInReaderMode</code></dt>
- <dd><code>boolean</code>. True if the tab is currently being <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode">rendered in Reader Mode</a>, false otherwise.</dd>
- <dt><code>lastAccessed</code></dt>
- <dd><code>double</code>. Time at which the tab was last accessed, in <a class="external external-icon" href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
- <dt><code>mutedInfo</code> {{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('tabs.MutedInfo')}}. The current muted state for the tab and the reason for the last state change.</dd>
- <dt><code>openerTabId</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. The ID of the tab that opened this tab, if any. This property is only present if the opener tab still exists and is in the same window.</dd>
- <dt><code>pinned</code></dt>
- <dd><code>boolean</code>. Whether the tab is pinned.</dd>
- <dt><code>selected</code> {{deprecated_inline}}</dt>
- <dd><code>boolean</code>. Whether the tab is selected. This property has been replaced by <code>active</code> and <code>highlighted</code>.</dd>
- <dt><code>sessionId</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The session ID used to uniquely identify a <code>Tab</code> obtained from the {{WebExtAPIRef('sessions')}} API.</dd>
- <dt><code>status</code> {{optional_inline}}</dt>
- <dd><code>string</code>. Either <em>loading</em> or <em>complete</em>.</dd>
- <dt><code>successorTabId</code> {{optional_inline}}</dt>
- <dd><code>integer</code> The ID of the tab's successor.</dd>
- <dt><code>title</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The title of the tab. Only present if the extension has the <code>"tabs"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> that matches the tab's URL.</dd>
- <dt><code>url</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The URL of the document that the tab is displaying. Only present if the extension has the <code>"tabs"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or a matching <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>.</dd>
- <dt><code>width</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. The width of the tab in pixels.</dd>
- <dt><code>windowId</code></dt>
- <dd><code>integer</code>. The ID of the window that hosts this tab.</dd>
-</dl>
+    The active tab is usually the selected one. However, on Firefox for Android, extension popups open in a new tab. When this popup tab is selected, the active tab will instead be the one in which the popup opened.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- `attention` {{optional_inline}}
+  - : `boolean`. Indicates whether the tab is drawing attention. For example, when the tab displays a modal dialog, `attention` will be `true`.
+- `audible` {{optional_inline}}
+  - : `boolean`. Indicates whether the tab is producing sound. However, the user will not hear the sound if the tab is muted (see the `mutedInfo` property).
+- `autoDiscardable` {{optional_inline}}
+  - : `boolean`. Whether the tab can be discarded automatically by the browser when resources are low.
+- `cookieStoreId` {{optional_inline}}
+  - : `string`. The cookie store of the tab. If different tabs can have different cookie stores (for example, to support [contextual identity](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)), you can pass this as the `storeId` option into various methods of the {{WebExtAPIRef("cookies")}} API, to set and get cookies associated with this tab's cookie store. Only present if the extension has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+- `discarded` {{optional_inline}}
+  - : `boolean`. Whether the tab is discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content gets reloaded the next time it's activated.
+- `favIconUrl` {{optional_inline}}
+  - : `string`. The URL of the tab's favicon. Only present if the extension has the `"tabs"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). It may also be an empty string if the tab is loading.
+- `height` {{optional_inline}}
+  - : `integer`. The height of the tab in pixels.
+- `hidden`
+  - : `boolean`. Whether the tab is hidden.
+- `highlighted`
 
-<p>{{Compat}}</p>
+  - : `boolean`. Whether the tab is highlighted, i.e. part of the current tab selection. An active tab is always highlighted, but some browsers may allow additional tabs to be highlighted, for example by clicking them while holding <kbd>Ctrl</kbd>, <kbd>Shift</kbd> or <kbd>⌘ Command</kbd> keys.
 
-<p>{{WebExtExamples}}</p>
+    Firefox for Android doesn't support highlighting multiple tabs, and Firefox desktop requires the `browser.tabs.multiselect` preference (enabled by default).
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#type-Tab"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
+- `id` {{optional_inline}}
+  - : `integer`. The tab's ID. Tab IDs are unique within a browser session. The tab ID may also be set to {{WebExtAPIRef('tabs.TAB_ID_NONE')}} for browser windows that don't host content tabs (for example, devtools windows).
+- `incognito`
+  - : `boolean`. Whether the tab is in a private browsing window.
+- `index`
+  - : `integer`. The zero-based index of the tab within its window.
+- `isArticle`
+  - : `boolean`. True if the tab can be [rendered in Reader Mode](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode), false otherwise.
+- `isInReaderMode`
+  - : `boolean`. True if the tab is currently being [rendered in Reader Mode](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode), false otherwise.
+- `lastAccessed`
+  - : `double`. Time at which the tab was last accessed, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+- `mutedInfo` {{optional_inline}}
+  - : {{WebExtAPIRef('tabs.MutedInfo')}}. The current muted state for the tab and the reason for the last state change.
+- `openerTabId` {{optional_inline}}
+  - : `integer`. The ID of the tab that opened this tab, if any. This property is only present if the opener tab still exists and is in the same window.
+- `pinned`
+  - : `boolean`. Whether the tab is pinned.
+- `selected` {{deprecated_inline}}
+  - : `boolean`. Whether the tab is selected. This property has been replaced by `active` and `highlighted`.
+- `sessionId` {{optional_inline}}
+  - : `string`. The session ID used to uniquely identify a `Tab` obtained from the {{WebExtAPIRef('sessions')}} API.
+- `status` {{optional_inline}}
+  - : `string`. Either _loading_ or _complete_.
+- `successorTabId` {{optional_inline}}
+  - : `integer` The ID of the tab's successor.
+- `title` {{optional_inline}}
+  - : `string`. The title of the tab. Only present if the extension has the `"tabs"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) that matches the tab's URL.
+- `url` {{optional_inline}}
+  - : `string`. The URL of the document that the tab is displaying. Only present if the extension has the `"tabs"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or a matching [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions).
+- `width` {{optional_inline}}
+  - : `integer`. The width of the tab in pixels.
+- `windowId`
+  - : `integer`. The ID of the window that hosts this tab.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+## Browser compatibility
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+{{Compat}}
+
+{{WebExtExamples}}
+
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-Tab) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -125,5 +121,4 @@ browser-compat: webextensions.api.tabs.Tab
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

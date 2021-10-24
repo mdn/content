@@ -13,37 +13,32 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.ZoomSettings
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Defines zoom settings for a tab: {{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}, {{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}}, and default zoom factor.</p>
+Defines zoom settings for a tab: {{WebExtAPIRef("tabs.ZoomSettingsMode", "mode")}}, {{WebExtAPIRef("tabs.ZoomSettingsScope", "scope")}}, and default zoom factor.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>defaultZoomFactor</code>{{optional_inline}}</dt>
- <dd><code>number</code>. The default zoom level for the current tab. Note that this is only used in {{WebExtAPIRef("tabs.getZoomSettings")}}.</dd>
- <dt><code>mode</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('tabs.ZoomSettingsMode')}}. Defines whether zoom changes are handled by the browser, by the extension, or are disabled.</dd>
- <dt><code>scope</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('tabs.ZoomSettingsScope')}}. Defines whether zoom changes will persist for the page's origin, or only take effect in this tab.</dd>
-</dl>
+- `defaultZoomFactor`{{optional_inline}}
+  - : `number`. The default zoom level for the current tab. Note that this is only used in {{WebExtAPIRef("tabs.getZoomSettings")}}.
+- `mode`{{optional_inline}}
+  - : {{WebExtAPIRef('tabs.ZoomSettingsMode')}}. Defines whether zoom changes are handled by the browser, by the extension, or are disabled.
+- `scope`{{optional_inline}}
+  - : {{WebExtAPIRef('tabs.ZoomSettingsScope')}}. Defines whether zoom changes will persist for the page's origin, or only take effect in this tab.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-ZoomSettings) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#type-ZoomSettings"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -70,5 +65,4 @@ browser-compat: webextensions.api.tabs.ZoomSettings
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

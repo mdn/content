@@ -12,54 +12,53 @@ tags:
   - contextMenus
   - menus
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Add items to the browser's menu system.</p>
+Add items to the browser's menu system.
 
-<p>This API is modeled on Chrome's <a href="https://developer.chrome.com/extensions/contextMenus">"contextMenus"</a> API, which enables Chrome extensions to add items to the browser's context menu. The <code>browser.menus</code> API adds a few features to Chrome's API.</p>
+This API is modeled on Chrome's ["contextMenus"](https://developer.chrome.com/extensions/contextMenus) API, which enables Chrome extensions to add items to the browser's context menu. The `browser.menus` API adds a few features to Chrome's API.
 
-<p>Before Firefox 55 this API was also originally named <code>contextMenus</code>, and that name has been retained as an alias, so you can use <code>contextMenus</code> to write code that works in Firefox and also in other browsers.</p>
+Before Firefox 55 this API was also originally named `contextMenus`, and that name has been retained as an alias, so you can use `contextMenus` to write code that works in Firefox and also in other browsers.
 
-<p>To use this API you need to have the <code>menus</code>  <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>. You may also use the <code>contextMenus</code> alias instead of <code>menus</code>, but if you do, the APIs must be accessed as <code>browser.contextMenus</code> instead.</p>
+To use this API you need to have the `menus`  [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). You may also use the `contextMenus` alias instead of `menus`, but if you do, the APIs must be accessed as `browser.contextMenus` instead.
 
-<p>Except for <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement">menus.getTargetElement()</a></code>, this API cannot be used from content scripts.</p>
+Except for [`menus.getTargetElement()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement), this API cannot be used from content scripts.
 
-<h2 id="Creating_menu_items">Creating menu items</h2>
+## Creating menu items
 
-<p>To create a menu item call the {{WebExtAPIRef("menus.create()")}} method. You pass this method an object containing options for the item, including the item ID, item type, and the contexts in which it should be shown.</p>
+To create a menu item call the {{WebExtAPIRef("menus.create()")}} method. You pass this method an object containing options for the item, including the item ID, item type, and the contexts in which it should be shown.
 
-<p>Listen for clicks on your menu item by adding a listener to the {{WebExtAPIRef("menus.onClicked")}} event. This listener will be passed a {{WebExtAPIRef("menus.OnClickData")}} object containing the event's details.</p>
+Listen for clicks on your menu item by adding a listener to the {{WebExtAPIRef("menus.onClicked")}} event. This listener will be passed a {{WebExtAPIRef("menus.OnClickData")}} object containing the event's details.
 
-<p>You can create four different types of menu item, based on the value of the <code>type</code> property you supply in the options to <code>create()</code>:</p>
+You can create four different types of menu item, based on the value of the `type` property you supply in the options to `create()`:
 
-<ul>
- <li>"normal": a menu item that just displays a label</li>
- <li>"checkbox": a menu item that represents a binary state. It displays a checkmark next to the label. Clicking the item toggles the checkmark. The click listener will be passed two extra properties: "checked", indicating whether the item is checked now, and "wasChecked", indicating whether the item was checked before the click event.</li>
- <li>"radio": a menu item that represents one of a group of choices. Just like a checkbox, this also displays a checkmark next to the label, and its click listener is passed "checked" and "wasChecked". However, if you create more than one radio item, then the items function as a group of radio items: only one item in the group can be checked, and clicking an item makes it the checked item.</li>
- <li>"separator": a line separating a group of items.</li>
-</ul>
+- "normal": a menu item that just displays a label
+- "checkbox": a menu item that represents a binary state. It displays a checkmark next to the label. Clicking the item toggles the checkmark. The click listener will be passed two extra properties: "checked", indicating whether the item is checked now, and "wasChecked", indicating whether the item was checked before the click event.
+- "radio": a menu item that represents one of a group of choices. Just like a checkbox, this also displays a checkmark next to the label, and its click listener is passed "checked" and "wasChecked". However, if you create more than one radio item, then the items function as a group of radio items: only one item in the group can be checked, and clicking an item makes it the checked item.
+- "separator": a line separating a group of items.
 
-<p>If you have created more than one context menu item or more than one tools menu item, then the items will be placed in a submenu. The submenu's parent will be labeled with the name of the extension. For example, here's an extension called "Menu demo" that's added two context menu items:</p>
+If you have created more than one context menu item or more than one tools menu item, then the items will be placed in a submenu. The submenu's parent will be labeled with the name of the extension. For example, here's an extension called "Menu demo" that's added two context menu items:
 
-<p><img alt="" src="menus-1.png"></p>
+![](menus-1.png)
 
-<h2 id="Icons">Icons</h2>
+## Icons
 
-<p>If you've specified icons for your extension using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">"icons" manifest key</a>, your menu item will display the specified icon next to its label. The browser will try to choose a 16x16 pixel icon for a normal display or a 32x32 pixel icon for a high-density display:</p>
+If you've specified icons for your extension using the ["icons" manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons), your menu item will display the specified icon next to its label. The browser will try to choose a 16x16 pixel icon for a normal display or a 32x32 pixel icon for a high-density display:
 
-<p><img alt="" src="menus-2.png"></p>
+![](menus-2.png)
 
-<p>Only for items in a submenu, you can specify custom icons by passing the <code>icons</code> option to {{WebExtAPIRef("menus.create()")}}:</p>
+Only for items in a submenu, you can specify custom icons by passing the `icons` option to {{WebExtAPIRef("menus.create()")}}:
 
-<p><img alt="" src="menus-3.png"></p>
+![](menus-3.png)
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Here's a context menu containing 4 items: a normal item, two radio items with separators on each side, and a checkbox. The radio items are given custom icons.</p>
+Here's a context menu containing 4 items: a normal item, two radio items with separators on each side, and a checkbox. The radio items are given custom icons.
 
-<p><img alt="" src="menus-4.png">You could create a submenu like this using code like:</p>
+![](menus-4.png)You could create a submenu like this using code like:
 
-<pre class="brush: js">browser.menus.create({
+```js
+browser.menus.create({
   id: "remove-me",
   title: browser.i18n.getMessage("menuItemRemoveMe"),
   contexts: ["all"]
@@ -109,69 +108,60 @@ browser.menus.create({
   title: browser.i18n.getMessage("menuItemUncheckMe"),
   contexts: ["all"],
   checked: checkedState
-}, onCreated);</pre>
+}, onCreated);
+```
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("menus.ContextType")}}</dt>
- <dd>The different contexts a menu can appear in.</dd>
- <dt>{{WebExtAPIRef("menus.ItemType")}}</dt>
- <dd>The type of menu item: "normal", "checkbox", "radio", "separator".</dd>
- <dt>{{WebExtAPIRef("menus.OnClickData")}}</dt>
- <dd>Information sent when a menu item is clicked.</dd>
-</dl>
+- {{WebExtAPIRef("menus.ContextType")}}
+  - : The different contexts a menu can appear in.
+- {{WebExtAPIRef("menus.ItemType")}}
+  - : The type of menu item: "normal", "checkbox", "radio", "separator".
+- {{WebExtAPIRef("menus.OnClickData")}}
+  - : Information sent when a menu item is clicked.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}</dt>
- <dd>The maximum number of top level extension items that can be added to a menu item whose ContextType is "browser_action" or "page_action".</dd>
-</dl>
+- {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}
+  - : The maximum number of top level extension items that can be added to a menu item whose ContextType is "browser_action" or "page_action".
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("menus.create()")}}</dt>
- <dd>Creates a new menu item.</dd>
- <dt>{{WebExtApiRef("menus.getTargetElement()")}}</dt>
- <dd>Returns the element for a given <code>info.targetElementId</code>.</dd>
- <dt>{{WebExtApiRef("menus.overrideContext()")}}</dt>
- <dd>Hide all default Firefox menu items in favor of providing a custom context menu UI.</dd>
- <dt>{{WebExtAPIRef("menus.refresh()")}}</dt>
- <dd>Update a menu that's currently being displayed.</dd>
- <dt>{{WebExtAPIRef("menus.remove()")}}</dt>
- <dd>Removes a menu item.</dd>
- <dt>{{WebExtAPIRef("menus.removeAll()")}}</dt>
- <dd>Removes all menu items added by this extension.</dd>
- <dt>{{WebExtAPIRef("menus.update()")}}</dt>
- <dd>Updates a previously created menu item.</dd>
-</dl>
+- {{WebExtAPIRef("menus.create()")}}
+  - : Creates a new menu item.
+- {{WebExtApiRef("menus.getTargetElement()")}}
+  - : Returns the element for a given `info.targetElementId`.
+- {{WebExtApiRef("menus.overrideContext()")}}
+  - : Hide all default Firefox menu items in favor of providing a custom context menu UI.
+- {{WebExtAPIRef("menus.refresh()")}}
+  - : Update a menu that's currently being displayed.
+- {{WebExtAPIRef("menus.remove()")}}
+  - : Removes a menu item.
+- {{WebExtAPIRef("menus.removeAll()")}}
+  - : Removes all menu items added by this extension.
+- {{WebExtAPIRef("menus.update()")}}
+  - : Updates a previously created menu item.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("menus.onClicked")}}</dt>
- <dd>Fired when a menu item is clicked.</dd>
- <dt>{{WebExtAPIRef("menus.onHidden")}}</dt>
- <dd>Fired when the browser hides a menu.</dd>
- <dt>{{WebExtAPIRef("menus.onShown")}}</dt>
- <dd>Fired when the browser shows a menu.</dd>
-</dl>
+- {{WebExtAPIRef("menus.onClicked")}}
+  - : Fired when a menu item is clicked.
+- {{WebExtAPIRef("menus.onHidden")}}
+  - : Fired when the browser hides a menu.
+- {{WebExtAPIRef("menus.onShown")}}
+  - : Fired when the browser shows a menu.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{ Compat("webextensions.api.menus", 1, "true") }}</p>
+{{ Compat("webextensions.api.menus", 1, "true") }}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="note"><p><strong>Note:</strong></p>
+> **Note:**
+>
+> This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/contextMenus"><code>chrome.contextMenus</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a> in the Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -198,5 +188,4 @@ browser.menus.create({
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

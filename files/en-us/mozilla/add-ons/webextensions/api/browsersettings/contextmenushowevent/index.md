@@ -12,27 +12,29 @@ tags:
   - contextMenuShowEvent
 browser-compat: webextensions.api.browserSettings.contextMenuShowEvent
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object which determines whether the browser's context menu is shown on the mouseup event or on the mousedown event.</p>
+A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object which determines whether the browser's context menu is shown on the mouseup event or on the mousedown event.
 
-<p>Its underlying value is a string that may be either "mouseup" or "mousedown".</p>
+Its underlying value is a string that may be either "mouseup" or "mousedown".
 
-<p>The default value is "mouseup" on Windows, and "mousedown" on macOS and Linux. Assigning to it on Windows has no effect - the setting is only designed to allow the context menu to be opened on mouseup instead of mousedown, not the inverse.</p>
+The default value is "mouseup" on Windows, and "mousedown" on macOS and Linux. Assigning to it on Windows has no effect - the setting is only designed to allow the context menu to be opened on mouseup instead of mousedown, not the inverse.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Set the setting to "mouseup":</p>
+Set the setting to "mouseup":
 
-<pre class="brush: js">function logResult(result) {
+```js
+function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
 browser.browserSettings.contextMenuShowEvent.set({value: "mouseup"}).
-  then(logResult);</pre>
+  then(logResult);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

@@ -13,32 +13,31 @@ tags:
   - inIncognitoContext
 browser-compat: webextensions.api.extension.inIncognitoContext
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Boolean value, <code>true</code> for content scripts running inside private browsing tabs and for extension pages running inside a private browsing process.</p>
+Boolean value, `true` for content scripts running inside private browsing tabs and for extension pages running inside a private browsing process.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let isPrivate = browser.extension.inIncognitoContext;  // true or false</pre>
+```js
+let isPrivate = browser.extension.inIncognitoContext;  // true or false
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>A <em>boolean</em> value indicate if the current script is running in a private tab or process.</p>
+A _boolean_ value indicate if the current script is running in a private tab or process.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/extensions/extension#property-inIncognitoContext) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/extension#property-inIncognitoContext"><code>chrome.extension</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -65,5 +64,4 @@ browser-compat: webextensions.api.extension.inIncognitoContext
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

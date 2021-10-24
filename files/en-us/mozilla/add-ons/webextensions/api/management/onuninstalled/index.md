@@ -11,68 +11,61 @@ tags:
   - onUninstalled
 browser-compat: webextensions.api.management.onUninstalled
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when an add-on is uninstalled.</p>
+Fired when an add-on is uninstalled.
 
-<p>This API requires the "management" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">API permission</a>.</p>
+This API requires the "management" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.management.onUninstalled.addListener(listener)
+```js
+browser.management.onUninstalled.addListener(listener)
 browser.management.onUninstalled.removeListener(listener)
 browser.management.onUninstalled.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Checks whether a <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Checks whether a `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>function</code></dt>
- <dd>
- <p>Callback function that will be called when this event occurs. The function will be passed the following argument:</p>
+- `function`
 
- <dl>
-  <dt><code>info</code></dt>
-  <dd><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo">ExtensionInfo</a></code>: info about the add-on that was uninstalled.</dd>
- </dl>
- </dd>
-</dl>
+  - : Callback function that will be called when this event occurs. The function will be passed the following argument:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    - `info`
+      - : [`ExtensionInfo`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): info about the add-on that was uninstalled.
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="Examples">Examples</h2>
+{{Compat}}
 
-<p>Log the names of add-ons when they are uninstalled:</p>
+## Examples
 
-<pre class="brush: js">browser.management.onUninstalled.addListener((info) =&gt; {
+Log the names of add-ons when they are uninstalled:
+
+```js
+browser.management.onUninstalled.addListener((info) => {
   console.log(info.name + " was uninstalled");
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/extensions/management#event-onUninstalled) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a class="external-icon external" href="https://developer.chrome.com/extensions/management#event-onUninstalled"><code>chrome.management</code></a> API. This documentation is derived from <a class="external-icon external" href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -99,5 +92,4 @@ browser.management.onUninstalled.hasListener(listener)
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

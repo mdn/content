@@ -13,78 +13,64 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.connectNative
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Connects the extension to a native application on the user's computer.This takes the name of a native application as a parameter. It starts the native application and returns a {{WebExtAPIRef("runtime.Port")}} object to the caller.The caller can then use the `Port` to exchange messages with the native application using `Port.postMessage()` and `port.onMessage`.The native application will run until it exits itself, or the caller calls `Port.disconnect()`, or the page that created the `Port` is destroyed. Once the `Port` is disconnected the browser will give the process a few seconds to exit gracefully, and then kill it if it has not exited.
 
-<div>Connects the extension to a native application on the user's computer.</div>
+For more information, see [Native messaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging).
 
+## Syntax
 
-<div>This takes the name of a native application as a parameter. It starts the native application and returns a {{WebExtAPIRef("runtime.Port")}} object to the caller.</div>
-
-
-<div>The caller can then use the <code>Port</code> to exchange messages with the native application using <code>Port.postMessage()</code> and <code>port.onMessage</code>.</div>
-
-
-<div>The native application will run until it exits itself, or the caller calls <code>Port.disconnect()</code>, or the page that created the <code>Port</code> is destroyed. Once the <code>Port</code> is disconnected the browser will give the process a few seconds to exit gracefully, and then kill it if it has not exited.</div>
-
-
-<p>For more information, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a>.</p>
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:js">var port = browser.runtime.connectNative(
+```js
+var port = browser.runtime.connectNative(
   application // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>application</code></dt>
- <dd><code>string</code>. The name of the native application to connect to. This must match the "name" property in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#app_manifest">native application's manifest file</a>.</dd>
-</dl>
+- `application`
+  - : `string`. The name of the native application to connect to. This must match the "name" property in the [native application's manifest file](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#app_manifest).
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{WebExtAPIRef('runtime.Port')}} object. The port which the caller can use to exchange messages with the native application.</p>
+A {{WebExtAPIRef('runtime.Port')}} object. The port which the caller can use to exchange messages with the native application.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example connects to the native application "ping_pong" and starts listening for messages from it. It also sends the native application a message when the user clicks a browser action icon:</p>
+This example connects to the native application "ping_pong" and starts listening for messages from it. It also sends the native application a message when the user clicks a browser action icon:
 
-<pre class="brush: js">/*
-On startup, connect to the &quot;ping_pong&quot; app.
+```js
+/*
+On startup, connect to the "ping_pong" app.
 */
-var port = browser.runtime.connectNative(&quot;ping_pong&quot;);
+var port = browser.runtime.connectNative("ping_pong");
 
 /*
 Listen for messages from the app.
 */
-port.onMessage.addListener((response) =&gt; {
-  console.log(&quot;Received: &quot; + response);
+port.onMessage.addListener((response) => {
+  console.log("Received: " + response);
 });
 
 /*
 On a click on the browser action, send the app a message.
 */
-browser.browserAction.onClicked.addListener(() =&gt; {
-  console.log(&quot;Sending:  ping&quot;);
-  port.postMessage(&quot;ping&quot;);
-});</pre>
+browser.browserAction.onClicked.addListener(() => {
+  console.log("Sending:  ping");
+  port.postMessage("ping");
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-connectNative) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#method-connectNative"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,5 +97,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

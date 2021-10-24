@@ -13,58 +13,58 @@ tags:
   - getBackgroundPage
 browser-compat: webextensions.api.extension.getBackgroundPage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Alias for {{WebExtAPIRef("runtime.getBackgroundPage()")}}.</p>
+Alias for {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
 
-<div class="note">
-<p><strong>Note:</strong> This method cannot be used in Private Browsing mode — it always returns an empty array. Consider using {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}. For more info see {{bug(1329304)}}.</p>
-</div>
+> **Note:** This method cannot be used in Private Browsing mode — it always returns an empty array. Consider using {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}. For more info see {{bug(1329304)}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var page = browser.extension.getBackgroundPage()
-</pre>
+```js
+var page = browser.extension.getBackgroundPage()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>object</code>. <a href="/en-US/docs/Web/API/Window">Window</a> of the background page.</p>
+`object`. [Window](/en-US/docs/Web/API/Window) of the background page.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Suppose a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background script</a> defines a function <code>foo()</code>:</p>
+Suppose a [background script](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) defines a function `foo()`:
 
-<pre class="brush: js">// background.js
+```js
+// background.js
 
 function foo() {
   console.log("I'm defined in background.js");
-}</pre>
+}
+```
 
-<p>A script running in a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2">popup</a> can call this function directly like this:</p>
+A script running in a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) can call this function directly like this:
 
-<pre class="brush: js">// popup.js
+```js
+// popup.js
 
 var page = browser.extension.getBackgroundPage();
-page.foo(); // -&gt; "I'm defined in background.js"</pre>
+page.foo(); // -> "I'm defined in background.js"
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/extensions/extension#method-getBackgroundPage) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/extension#method-getBackgroundPage"><code>chrome.extension</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -91,5 +91,4 @@ page.foo(); // -&gt; "I'm defined in background.js"</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

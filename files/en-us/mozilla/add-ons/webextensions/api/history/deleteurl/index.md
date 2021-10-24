@@ -13,45 +13,43 @@ tags:
   - deleteUrl
 browser-compat: webextensions.api.history.deleteUrl
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Removes all visits to the given URL from the browser history.</p>
+Removes all visits to the given URL from the browser history.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var deletingUrl = browser.history.deleteUrl(
+```js
+var deletingUrl = browser.history.deleteUrl(
   details         // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p><code>object</code>. Object containing the URL whose visits to remove.</p>
-   <dl>
-    <dt><code>url</code></dt>
-    <dd><code>string</code>. The URL whose visits should be removed.</dd>
-   </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Return_value">Return value</h3>
+  - : `object`. Object containing the URL whose visits to remove.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> will be fulfilled with no parameters when the visits have been removed.</p>
+    - `url`
+      - : `string`. The URL whose visits should be removed.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+### Return value
 
-<p>{{Compat}}</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) will be fulfilled with no parameters when the visits have been removed.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>Remove all visits to "https://example.org/" from history, then check that this URL no longer returned from {{WebExtAPIRef("history.search()")}}:</p>
+{{Compat}}
 
-<pre class="brush: js">var urlToRemove = "https://example.org/";
+## Examples
+
+Remove all visits to "https\://example.org/" from history, then check that this URL no longer returned from {{WebExtAPIRef("history.search()")}}:
+
+```js
+var urlToRemove = "https://example.org/";
 
 function onGot(results) {
   if (!results.length) {
@@ -72,11 +70,13 @@ function onRemoved() {
 
 var deletingUrl = browser.history.deleteUrl({url: urlToRemove});
 
-deletingUrl.then(onRemoved);</pre>
+deletingUrl.then(onRemoved);
+```
 
-<p>Remove the last-visited page from history, with a listener to {{WebExtAPIRef("history.onVisitRemoved")}} to log the URL of the removed page:</p>
+Remove the last-visited page from history, with a listener to {{WebExtAPIRef("history.onVisitRemoved")}} to log the URL of the removed page:
 
-<pre class="brush: js">function onRemoved(removeInfo) {
+```js
+function onRemoved(removeInfo) {
   if (removeInfo.urls.length) {
     console.log("Removed: " + removeInfo.urls[0]);
   }
@@ -97,18 +97,16 @@ var searching = browser.history.search({
   maxResults: 1
 });
 
-searching.then(onGot);</pre>
+searching.then(onGot);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#method-deleteUrl) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/history#method-deleteUrl"><code>chrome.history</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -135,5 +133,4 @@ searching.then(onGot);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,39 +13,39 @@ tags:
   - queryState
 browser-compat: webextensions.api.idle.queryState
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Returns <code>"locked"</code> if the system is locked, <code>"idle"</code> if the user has not generated any input for a specified number of seconds, or <code>"active"</code> otherwise.</p>
+Returns `"locked"` if the system is locked, `"idle"` if the user has not generated any input for a specified number of seconds, or `"active"` otherwise.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var querying = browser.idle.queryState(
+```js
+var querying = browser.idle.queryState(
   detectionIntervalInSeconds // integer
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>detectionIntervalInSeconds</code></dt>
- <dd><code>integer</code>. The system is considered idle if <code>detectionIntervalInSeconds</code> seconds have elapsed since the last user input detected.</dd>
-</dl>
+- `detectionIntervalInSeconds`
+  - : `integer`. The system is considered idle if `detectionIntervalInSeconds` seconds have elapsed since the last user input detected.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an {{WebExtAPIRef('idle.IdleState')}} string, indicating the current state.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an {{WebExtAPIRef('idle.IdleState')}} string, indicating the current state.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this simple snippet, we call <code>queryState()</code> and then check if the returned <code>newState</code> is <code>idle</code> or <code>active</code>, logging a message as appropriate. Because we have specified  a <code>detectionIntervalInSeconds</code> of 15, an <code>idle</code> state will only be reported if there has been no user activity for at least 15 seconds</p>
+In this simple snippet, we call `queryState()` and then check if the returned `newState` is `idle` or `active`, logging a message as appropriate. Because we have specified  a `detectionIntervalInSeconds` of 15, an `idle` state will only be reported if there has been no user activity for at least 15 seconds
 
-<pre class="brush: js">function onGot(newState) {
+```js
+function onGot(newState) {
   if (newState === 'idle') {
     console.log('Please come back — we miss you!');
   } else if (newState === 'active') {
@@ -54,18 +54,16 @@ browser-compat: webextensions.api.idle.queryState
 }
 
 var querying = browser.idle.queryState(15);
-querying.then(onGot);</pre>
+querying.then(onGot);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.idle`](https://developer.chrome.com/extensions/idle#method-queryState) API. This documentation is derived from [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/idle#method-queryState"><code>chrome.idle</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json"><code>idle.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -92,5 +90,4 @@ querying.then(onGot);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -12,16 +12,14 @@ tags:
   - devtools.panels
 browser-compat: webextensions.api.devtools.panels.elements
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>An <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel">ElementsPanel</a></code> object, which represents the browser's HTML/CSS inspector.</p>
+An [`ElementsPanel`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel) object, which represents the browser's HTML/CSS inspector.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a> API.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API.

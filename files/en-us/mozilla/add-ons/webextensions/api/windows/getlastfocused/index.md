@@ -13,50 +13,47 @@ tags:
   - getLastFocused
 browser-compat: webextensions.api.windows.getLastFocused
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Gets the window that was most recently focused — typically the window 'on top'.</p>
+Gets the window that was most recently focused — typically the window 'on top'.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var gettingWindow = browser.windows.getLastFocused(
+```js
+var gettingWindow = browser.windows.getLastFocused(
   getInfo               // optional object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>getInfo</code>{{optional_inline}}</dt>
- <dd>
-   <p><code>object</code>.</p>
-   <dl>
-    <dt><code>populate</code>{{optional_inline}}</dt>
-    <dd><code>boolean</code>. If <code>true</code>, the {{WebExtAPIRef('windows.Window')}} object will have a <code>tabs</code> property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs in the window. The <code>Tab</code> objects only contain the <code>url</code>, <code>title</code> and <code>favIconUrl</code> properties if the extension's manifest file includes the <code>"tabs"</code> permission or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> matching the tab's URL.</dd>
-    <dt><code>windowTypes</code>{{optional_inline}}</dt>
-    <dd>An <code>array</code> of {{WebExtAPIRef('windows.WindowType')}} objects. If set, the {{WebExtAPIRef('windows.Window')}} returned will be filtered based on its type. If unset the default filter is set to <code>['normal', 'panel', 'popup']</code>, with <code>'panel'</code> window types limited to the extension's own windows.</dd>
-   </dl>
- </dd>
-</dl>
+- `getInfo`{{optional_inline}}
 
-<div class="note"><p><strong>Note:</strong> If supplied, the <code>windowTypes</code> component of <code>getInfo</code> is ignored. The use of <code>windowTypes</code> has been deprecated as of Firefox 62.</p>
-</div>
+  - : `object`.
 
-<h3 id="Return_value">Return value</h3>
+    - `populate`{{optional_inline}}
+      - : `boolean`. If `true`, the {{WebExtAPIRef('windows.Window')}} object will have a `tabs` property that contains a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs in the window. The `Tab` objects only contain the `url`, `title` and `favIconUrl` properties if the extension's manifest file includes the `"tabs"` permission or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) matching the tab's URL.
+    - `windowTypes`{{optional_inline}}
+      - : An `array` of {{WebExtAPIRef('windows.WindowType')}} objects. If set, the {{WebExtAPIRef('windows.Window')}} returned will be filtered based on its type. If unset the default filter is set to `['normal', 'panel', 'popup']`, with `'panel'` window types limited to the extension's own windows.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing the details of the last focused window. If any error occurs, the promise will be rejected with an error message.</p>
+> **Note:** If supplied, the `windowTypes` component of `getInfo` is ignored. The use of `windowTypes` has been deprecated as of Firefox 62.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+### Return value
 
-<p>{{Compat}}</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing the details of the last focused window. If any error occurs, the promise will be rejected with an error message.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>Get the last focused window, and log the tabs it contains. Note that you'll need the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or matching <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> to access tab URLs.</p>
+{{Compat}}
 
-<pre class="brush: js">function logTabs(windowInfo) {
+## Examples
+
+Get the last focused window, and log the tabs it contains. Note that you'll need the "tabs" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or matching [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) to access tab URLs.
+
+```js
+function logTabs(windowInfo) {
   for (tabInfo of windowInfo.tabs) {
     console.log(tabInfo.url);
   }
@@ -66,22 +63,19 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
   var getting = browser.windows.getLastFocused({populate: true});
   getting.then(logTabs, onError);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#method-getLastFocused) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/windows#method-getLastFocused"><code>chrome.windows</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -108,5 +102,4 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

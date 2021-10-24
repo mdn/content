@@ -12,23 +12,24 @@ tags:
   - onShown
 browser-compat: webextensions.api.menus.onShown
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when the browser has shown a menu.</p>
+Fired when the browser has shown a menu.
 
-<p>An extension can use this event to update its menu items using information that's only available once the menu is shown. Typically an extension will figure out the update in its <code>onShown</code> handler and then call {{WebExtAPIRef("menus.refresh()")}} to update the menu itself.</p>
+An extension can use this event to update its menu items using information that's only available once the menu is shown. Typically an extension will figure out the update in its `onShown` handler and then call {{WebExtAPIRef("menus.refresh()")}} to update the menu itself.
 
-<p>The handler can add, remove, or update menu items.</p>
+The handler can add, remove, or update menu items.
 
-<p>For example, the <a href="https://github.com/mdn/webextensions-examples/tree/master/menu-labelled-open">menu-labelled-open</a> example extension adds a menu item that's shown when the user clicks a link, and that, when clicked, just opens the link. It uses <code>onShown</code> and <code>refresh()</code> to annotate the menu item with the hostname for the link, so the user can easily see where they will go before they click.</p>
+For example, the [menu-labelled-open](https://github.com/mdn/webextensions-examples/tree/master/menu-labelled-open) example extension adds a menu item that's shown when the user clicks a link, and that, when clicked, just opens the link. It uses `onShown` and `refresh()` to annotate the menu item with the hostname for the link, so the user can easily see where they will go before they click.
 
-<p>Note that an extension should not take too much time before calling <code>refresh()</code>, or the update will be noticeable to the user.</p>
+Note that an extension should not take too much time before calling `refresh()`, or the update will be noticeable to the user.
 
-<p>The handler is passed some information about the menu and its contents, and some information from the page (such as the link and/or selection text). To get access to the information from the page, your extension must have the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission</a> for it.</p>
+The handler is passed some information about the menu and its contents, and some information from the page (such as the link and/or selection text). To get access to the information from the page, your extension must have the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for it.
 
-<p>If the <code>onShown</code> handler calls any asynchronous APIs, then it's possible that the menu has been closed again before the handler resumes execution. Because of this, if a handler calls any asynchronous APIs, it should check that the menu is still being displayed before it updates the menu. For example:</p>
+If the `onShown` handler calls any asynchronous APIs, then it's possible that the menu has been closed again before the handler resumes execution. Because of this, if a handler calls any asynchronous APIs, it should check that the menu is still being displayed before it updates the menu. For example:
 
-<pre class="brush: js">var lastMenuInstanceId = 0;
+```js
+var lastMenuInstanceId = 0;
 var nextMenuInstanceId = 1;
 
 browser.menus.onShown.addListener(async function(info, tab) {
@@ -47,19 +48,23 @@ browser.menus.onShown.addListener(async function(info, tab) {
 
 browser.menus.onHidden.addListener(function() {
   lastMenuInstanceId = 0;
-});</pre>
+});
+```
 
-<p>Note that it is possible to call menus API functions synchronously, and in this case you don't have to perform this check:</p>
+Note that it is possible to call menus API functions synchronously, and in this case you don't have to perform this check:
 
-<pre class="brush: js">browser.menus.onShown.addListener(async function(info, tab) {
+```js
+browser.menus.onShown.addListener(async function(info, tab) {
   browser.menus.update(menuId, ...);
    // Note: Not waiting for returned promise.
   browser.menus.refresh();
-});</pre>
+});
+```
 
-<p>However, if you call these APIs asynchronously, then you do have to perform the check:</p>
+However, if you call these APIs asynchronously, then you do have to perform the check:
 
-<pre class="brush: js">browser.menus.onShown.addListener(async function(info, tab) {
+```js
+browser.menus.onShown.addListener(async function(info, tab) {
   var menuInstanceId = nextMenuInstanceId++;
   lastMenuInstanceId = menuInstanceId;
 
@@ -69,76 +74,69 @@ browser.menus.onHidden.addListener(function() {
     return;
   }
   browser.menus.refresh();
-});</pre>
+});
+```
 
-<p>Firefox makes this event available via the <code>contextMenus</code> namespace as well as the <code>menus</code> namespace.</p>
+Firefox makes this event available via the `contextMenus` namespace as well as the `menus` namespace.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.menus.onShown.addListener(listener)
+```js
+browser.menus.onShown.addListener(listener)
 browser.menus.onShown.removeListener(listener)
 browser.menus.onShown.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(listener)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>info</code></dt>
-  <dd>
-  <p><code>Object</code>. This is just like the {{WebExtAPIRef('menus.OnClickData')}} object, except it contains two extra properties:</p>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
-  <ul>
-   <li><code>contexts</code>: an array of all the {{WebExtAPIRef("menus.ContextType", "contexts")}} that are applicable to this menu.</li>
-   <li><code>menuIds</code>: an array of IDs of all menu items belonging to this extension that are being shown in this menu.</li>
-  </ul>
+    - `info`
 
-  <p>Compared with <code>menus.OnClickData</code>, the <code>info</code> object also omits the <code>menuItemId</code> and <code>modifiers</code> properties, because of course these are not available until a menu item has been selected.</p>
+      - : `Object`. This is just like the {{WebExtAPIRef('menus.OnClickData')}} object, except it contains two extra properties:
 
-  <p>The <code>contexts</code>, <code>menuIds</code>, <code>frameId</code>, and <code>editable</code> properties are always provided. All the other properties in <code>info</code> are only provided if the extension has the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission</a> for the page.</p>
-  </dd>
- </dl>
+        - `contexts`: an array of all the {{WebExtAPIRef("menus.ContextType", "contexts")}} that are applicable to this menu.
+        - `menuIds`: an array of IDs of all menu items belonging to this extension that are being shown in this menu.
 
- <dl>
-  <dt><code>tab</code></dt>
-  <dd>{{WebExtAPIRef('tabs.Tab')}}. The details of the tab where the click took place. If the click did not take place in or on a tab, this parameter will be missing.</dd>
- </dl>
- </dd>
-</dl>
+        Compared with `menus.OnClickData`, the `info` object also omits the `menuItemId` and `modifiers` properties, because of course these are not available until a menu item has been selected.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+        The `contexts`, `menuIds`, `frameId`, and `editable` properties are always provided. All the other properties in `info` are only provided if the extension has the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the page.
 
-<p>{{Compat}}</p>
+    <!---->
 
-<h2 id="Examples">Examples</h2>
+    - `tab`
+      - : {{WebExtAPIRef('tabs.Tab')}}. The details of the tab where the click took place. If the click did not take place in or on a tab, this parameter will be missing.
 
-<p>This example listens for the context menu to be shown over a link, then updates the <code>openLabelledId</code> menu item with the link's hostname:</p>
+## Browser compatibility
 
-<pre class="brush: js">function updateMenuItem(linkHostname) {
+{{Compat}}
+
+## Examples
+
+This example listens for the context menu to be shown over a link, then updates the `openLabelledId` menu item with the link's hostname:
+
+```js
+function updateMenuItem(linkHostname) {
   browser.menus.update(openLabelledId, {
     title: `Open (${linkHostname})`
   });
   browser.menus.refresh();
 }
 
-browser.menus.onShown.addListener(info =&gt; {
+browser.menus.onShown.addListener(info => {
   if (!info.linkUrl) {
     return;
   }
@@ -146,6 +144,6 @@ browser.menus.onShown.addListener(info =&gt; {
   linkElement.href = info.linkUrl;
   updateMenuItem(linkElement.hostname);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

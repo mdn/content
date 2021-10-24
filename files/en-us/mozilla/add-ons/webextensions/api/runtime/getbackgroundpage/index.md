@@ -13,58 +13,60 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.getBackgroundPage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Retrieves the {{DOMxRef("Window")}} object for the background page running inside the current extension.</p>
+Retrieves the {{DOMxRef("Window")}} object for the background page running inside the current extension.
 
-<p>This provides a convenient way for other privileged extension scripts to get direct access to the background script's scope. This enables them to access variables or call functions defined in that scope. "Privileged script" here includes scripts running in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages">options pages</a>, or scripts running in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2">browser action</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#page_actions">page action</a> popups, but does <em>not</em> include <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts">content scripts</a>.</p>
+This provides a convenient way for other privileged extension scripts to get direct access to the background script's scope. This enables them to access variables or call functions defined in that scope. "Privileged script" here includes scripts running in [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages), or scripts running in [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#page_actions) popups, but does _not_ include [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts).
 
-<p>Note that variables that were declared using <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/const">const</a></code> or <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/let">let</a></code> do not appear in the <code>Window</code> object returned by this function.</p>
+Note that variables that were declared using [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) or [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) do not appear in the `Window` object returned by this function.
 
-<p><strong>Also note that this method cannot be used in a private window in Firefox</strong>—it always returns <code>null</code>. For more info see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1329304">related bug at bugzilla</a>.</p>
+**Also note that this method cannot be used in a private window in Firefox**—it always returns `null`. For more info see [related bug at bugzilla](https://bugzilla.mozilla.org/show_bug.cgi?id=1329304).
 
-<p>If the background page is an event page, the system will ensure it is loaded before resolving the promise.</p>
+If the background page is an event page, the system will ensure it is loaded before resolving the promise.
 
-<p>This is an asynchronous function that returns a {{JSxRef("Promise")}}.</p>
+This is an asynchronous function that returns a {{JSxRef("Promise")}}.
 
-<div class="note">
-<p><strong>Note:</strong> In Firefox, this method cannot be used in Private Browsing mode — it always returns <code>null</code>. For more info see {{bug(1329304)}}.</p>
+> **Note:** In Firefox, this method cannot be used in Private Browsing mode — it always returns `null`. For more info see {{bug(1329304)}}.
+>
+> In Chrome, this method is available only with persistent background pages, which are not available in Manifest V3, so consider using Manifest V2. See the [this](https://developer.chrome.com/extensions/migrating_to_service_workers) for details.
+>
+> Consider using {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}, which work correctly in both scenarios above.
 
-<p>In Chrome, this method is available only with persistent background pages, which are not available in Manifest V3, so consider using Manifest V2. See the <a href="https://developer.chrome.com/extensions/migrating_to_service_workers">this</a> for details.</p>
+## Syntax
 
-<p>Consider using {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}, which work correctly in both scenarios above.</p>
-</div>
+```js
+var gettingPage = browser.runtime.getBackgroundPage()
+```
 
-<h2 id="Syntax">Syntax</h2>
+### Parameters
 
-<pre class="brush:js">var gettingPage = browser.runtime.getBackgroundPage()
-</pre>
+None.
 
-<h3 id="Parameters">Parameters</h3>
+### Return value
 
-<p>None.</p>
+A {{JSxRef("Promise")}} that will be fulfilled with the {{DOMxRef("Window")}} object for the background page, if there is one. If the extension does not include a background page, the promise is rejected with an error message.
 
-<h3 id="Return_value">Return value</h3>
+## Browser compatibility
 
-<p>A {{JSxRef("Promise")}} that will be fulfilled with the {{DOMxRef("Window")}} object for the background page, if there is one. If the extension does not include a background page, the promise is rejected with an error message.</p>
+{{Compat}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Examples
 
-<p>{{Compat}}</p>
+Suppose a [background script](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) defines a function `foo()`:
 
-<h2 id="Examples">Examples</h2>
-
-<p>Suppose a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background script</a> defines a function <code>foo()</code>:</p>
-
-<pre class="brush: js">// background.js
+```js
+// background.js
 
 function foo() {
   console.log("I'm defined in background.js");
-}</pre>
+}
+```
 
-<p>A script running in a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2">popup</a> can call this function directly like this:</p>
+A script running in a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) can call this function directly like this:
 
-<pre class="brush: js">// popup.js
+```js
+// popup.js
 
 function onGot(page) {
   page.foo();
@@ -75,18 +77,16 @@ function onError(error) {
 }
 
 var getting = browser.runtime.getBackgroundPage();
-getting.then(onGot, onError);</pre>
+getting.then(onGot, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-getBackgroundPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#method-getBackgroundPage"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -113,5 +113,4 @@ getting.then(onGot, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

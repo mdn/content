@@ -5,58 +5,54 @@ tags:
   - Extensions
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> If you are already familiar with the basic concepts of browser extensions, skip this section to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">see how extension files are put together</a>. Then, use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions#reference">reference documentation</a> to start building your extension. Visit <a href="https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension">Firefox Extension Workshop</a> to learn more about the workflow for testing, publishing, and extensions for Firefox.</p>
-</div>
+> **Note:** If you are already familiar with the basic concepts of browser extensions, skip this section to [see how extension files are put together](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Then, use the [reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions#reference) to start building your extension. Visit [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) to learn more about the workflow for testing, publishing, and extensions for Firefox.
 
-<p>An extension adds features and functions to a browser. It’s created using familiar web-based technologies—HTML, CSS, and JavaScript. It can take advantage of the same web APIs as JavaScript on a web page, but an extension also has access to its own set of JavaScript APIs. This means that you can do a lot more in an extension than you can with code in a web page. Here are just a few examples of the things you can do:</p>
+An extension adds features and functions to a browser. It’s created using familiar web-based technologies—HTML, CSS, and JavaScript. It can take advantage of the same web APIs as JavaScript on a web page, but an extension also has access to its own set of JavaScript APIs. This means that you can do a lot more in an extension than you can with code in a web page. Here are just a few examples of the things you can do:
 
-<p><strong>Enhance or complement a website</strong>: Use an add-on to deliver additional in-browser features or information from your website. Allow users to collect details from pages they visit to enhance the service you offer.</p>
+**Enhance or complement a website**: Use an add-on to deliver additional in-browser features or information from your website. Allow users to collect details from pages they visit to enhance the service you offer.
 
-<p><img alt="" src="amazon_add_on.png"></p>
+![](amazon_add_on.png)
 
-<p>Examples: <a href="https://addons.mozilla.org/en-US/firefox/addon/amazon-browser-bar/">Amazon Assistant for Firefox</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/onenote-clipper/">OneNote Web Clipper</a>, and <a href="https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/">Grammarly for Firefox</a></p>
+Examples: [Amazon Assistant for Firefox](https://addons.mozilla.org/en-US/firefox/addon/amazon-browser-bar/), [OneNote Web Clipper](https://addons.mozilla.org/en-US/firefox/addon/onenote-clipper/), and [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/)
 
-<p><strong>Let users show their personality</strong>: Browser extensions can manipulate the content of web pages; for example, letting users add their favorite logo or picture as a background to every page they visit. Extensions may also enable users to update the look of the Firefox UI, the same way standalone <a href="/en-US/docs/Mozilla/Add-ons/Themes/Theme_concepts">theme add-ons</a> do.</p>
+**Let users show their personality**: Browser extensions can manipulate the content of web pages; for example, letting users add their favorite logo or picture as a background to every page they visit. Extensions may also enable users to update the look of the Firefox UI, the same way standalone [theme add-ons](/en-US/docs/Mozilla/Add-ons/Themes/Theme_concepts) do.
 
-<p><img alt="" src="myweb_new_tab_add_on.png"></p>
+![](myweb_new_tab_add_on.png)
 
-<p>Examples: <a href="https://addons.mozilla.org/en-US/firefox/addon/myweb-new-tab/">MyWeb New Tab</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/tabliss/">Tabliss</a>, and <a href="https://addons.mozilla.org/en-US/firefox/addon/vivaldifox/">VivaldiFox</a></p>
+Examples: [MyWeb New Tab](https://addons.mozilla.org/en-US/firefox/addon/myweb-new-tab/), [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/), and [VivaldiFox](https://addons.mozilla.org/en-US/firefox/addon/vivaldifox/)
 
-<p><strong>Add or remove content from web pages</strong>: You might want to help users block intrusive ads from web pages, provide access to a travel guide whenever a country or city is mentioned in a web page, or reformat page content to offer a consistent reading experience. With the ability to access and update both a page’s HTML and CSS, extensions can help users see the web the way they want to.</p>
+**Add or remove content from web pages**: You might want to help users block intrusive ads from web pages, provide access to a travel guide whenever a country or city is mentioned in a web page, or reformat page content to offer a consistent reading experience. With the ability to access and update both a page’s HTML and CSS, extensions can help users see the web the way they want to.
 
-<p><img alt="" src="ublock_origin_add_on.png"></p>
+![](ublock_origin_add_on.png)
 
-<p>Examples: <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/reader/">Reader</a>, and <a href="https://addons.mozilla.org/en-US/firefox/addon/toolbox-google-play-store/">Toolbox for Google Play Store™</a></p>
+Examples: [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/), [Reader](https://addons.mozilla.org/en-US/firefox/addon/reader/), and [Toolbox for Google Play Store™](https://addons.mozilla.org/en-US/firefox/addon/toolbox-google-play-store/)
 
-<p><strong>Add tools and new browsing features</strong>: Add new features to a taskboard, or generate QR code images from URLs, hyperlinks, or page text. With flexible UI options and the power of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions APIs</a> you can easily add new features to a browser. And, you can enhance almost any website’s features or functionality, it doesn't have to be your website.</p>
+**Add tools and new browsing features**: Add new features to a taskboard, or generate QR code images from URLs, hyperlinks, or page text. With flexible UI options and the power of the [WebExtensions APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions) you can easily add new features to a browser. And, you can enhance almost any website’s features or functionality, it doesn't have to be your website.
 
-<p><img alt="" src="qr_code_image_generator_add_on.png"></p>
+![](qr_code_image_generator_add_on.png)
 
-<p>Examples: <a href="https://addons.mozilla.org/en-US/firefox/addon/swimlanes-for-trello/">Swimlanes for Trello</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/tomato-clock/">Tomato Clock</a></p>
+Examples: [Swimlanes for Trello](https://addons.mozilla.org/en-US/firefox/addon/swimlanes-for-trello/) and [Tomato Clock](https://addons.mozilla.org/en-US/firefox/addon/tomato-clock/)
 
-<p><strong>Games</strong>: Offer traditional computer games with off-line play features, or explore new game possibilities; for example, by incorporating gameplay into everyday browsing.</p>
+**Games**: Offer traditional computer games with off-line play features, or explore new game possibilities; for example, by incorporating gameplay into everyday browsing.
 
-<p> <img alt="" src="asteroids_in_popup_add_on_.png"></p>
+![](asteroids_in_popup_add_on_.png)
 
-<p>Examples: <a href="https://addons.mozilla.org/en-US/firefox/addon/asteroids-in-popup/">Asteroids in Popup</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/solitaire-card-game-new-tab/">Solitaire Card Game New Tab</a>, and <a href="https://addons.mozilla.org/en-US/firefox/addon/2048-prime/">2048 Prime</a>.</p>
+Examples: [Asteroids in Popup](https://addons.mozilla.org/en-US/firefox/addon/asteroids-in-popup/), [Solitaire Card Game New Tab](https://addons.mozilla.org/en-US/firefox/addon/solitaire-card-game-new-tab/), and [2048 Prime](https://addons.mozilla.org/en-US/firefox/addon/2048-prime/).
 
-<p><strong>Add development tools</strong>: You may provide web development tools as your business or have developed a useful technique or approach to web development that you want to share. Either way, you can enhance the built-in Firefox developer tools by adding a new tab to the developer toolbar.</p>
+**Add development tools**: You may provide web development tools as your business or have developed a useful technique or approach to web development that you want to share. Either way, you can enhance the built-in Firefox developer tools by adding a new tab to the developer toolbar.
 
-<p><img alt="" src="axe_developer_tools_add_on.png"></p>
+![](axe_developer_tools_add_on.png)
 
-<p>Examples: <a href="https://addons.mozilla.org/en-US/firefox/addon/web-developer/">Web Developer</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/react-devtools/">Web React Developer Tools</a>, and <a href="https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/">aXe Developer Tools</a></p>
+Examples: [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/), and [aXe Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/)
 
-<p>Extensions for Firefox are built using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions APIs</a>, a cross-browser system for developing extensions. To a large extent, the API is compatible with the <a class="external external-icon" href="https://developer.chrome.com/extensions">extension API</a> supported by Google Chrome and Opera. Extensions written for these browsers will in most cases run in Firefox or Microsoft Edge with just a few <a href="https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/">changes</a>. The API is also fully compatible with <a href="/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox">multiprocess Firefox</a>.</p>
+Extensions for Firefox are built using the [WebExtensions APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions), a cross-browser system for developing extensions. To a large extent, the API is compatible with the [extension API](https://developer.chrome.com/extensions) supported by Google Chrome and Opera. Extensions written for these browsers will in most cases run in Firefox or Microsoft Edge with just a few [changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). The API is also fully compatible with [multiprocess Firefox](/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox).
 
-<p>If you have ideas or questions, or need help <a href="https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension">migrating a legacy add-on to WebExtensions APIs</a>, you can reach us on the <a class="external external-icon" href="https://mail.mozilla.org/listinfo/dev-addons">dev-addons mailing list</a> or in the <a href="https://chat.mozilla.org/#/room/#addons:mozilla.org">Add-ons room</a> on <a href="https://wiki.mozilla.org/Matrix">Matrix</a>.</p>
+If you have ideas or questions, or need help [migrating a legacy add-on to WebExtensions APIs](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension), you can reach us on the [dev-addons mailing list](https://mail.mozilla.org/listinfo/dev-addons) or in the [Add-ons room](https://chat.mozilla.org/#/room/#addons:mozilla.org) on [Matrix](https://wiki.mozilla.org/Matrix).
 
-<h2 id="Whats_next">What's next?</h2>
+## What's next?
 
-<ul>
- <li>Walk through the development of a simple extension in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">Your first extension</a>.</li>
- <li>Learn about the structure of an extension in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">Anatomy of an extension</a>.</li>
- <li>Try out some example extensions in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples">Example extensions</a>.</li>
-</ul>
+- Walk through the development of a simple extension in [Your first extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension).
+- Learn about the structure of an extension in [Anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension).
+- Try out some example extensions in [Example extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples).

@@ -12,25 +12,27 @@ tags:
   - openBookmarksInNewTabs
 browser-compat: webextensions.api.browserSettings.openBookmarksInNewTabs
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.</p>
+A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.
 
-<p>If set to <code>true</code>, then when the user selects a bookmark, it will be opened in a new tab. If set to <code>false</code> (the default) bookmarks are opened in the current tab.</p>
+If set to `true`, then when the user selects a bookmark, it will be opened in a new tab. If set to `false` (the default) bookmarks are opened in the current tab.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Set the setting to <code>true</code>:</p>
+Set the setting to `true`:
 
-<pre class="brush: js">function logResult(result) {
+```js
+function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
 browser.browserSettings.openBookmarksInNewTabs.set({value: true}).
-  then(logResult);</pre>
+  then(logResult);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

@@ -12,59 +12,54 @@ tags:
   - get
 browser-compat: webextensions.api.search.search
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Gets an array of all installed search engines.</p>
+Gets an array of all installed search engines.
 
-<p>Each search engine returned is identified with a name, which you can pass into {{WebExtAPIRef("search.search()")}} to use that particular engine to make a search.</p>
+Each search engine returned is identified with a name, which you can pass into {{WebExtAPIRef("search.search()")}} to use that particular engine to make a search.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var gettingEngines = browser.search.get()
-</pre>
+```js
+var gettingEngines = browser.search.get()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an <a href="Web/JavaScript/Reference/Global_Objects/array">array</a> of search engine objects. Each search engine object may contain the following properties:</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an [array](Web/JavaScript/Reference/Global_Objects/array) of search engine objects. Each search engine object may contain the following properties:
 
-<dl>
- <dt><code>name</code></dt>
- <dd><code>string</code>. The search engine's name.</dd>
- <dt><code>isDefault</code></dt>
- <dd>
- <p><code>boolean</code>. <code>true</code> if the search engine is the default. Only one search engine can be the default at any given time.</p>
- </dd>
- <dt><code>alias</code>{{optional_inline}}</dt>
- <dd>
- <p><code>string</code>. If a search engine has an alias, the user can search with a particular search engine by entering the alias in address bar before the search term. For example, if the Wikipedia engine has an alias "wk", the user can search Wikipedia for pandas by entering "wk pandas" in the address bar. The alias is sometimes also called a "keyword".</p>
- </dd>
- <dt><code>favIconUrl</code>{{optional_inline}}</dt>
- <dd>
- <p><code>string</code>. The search engine's icon, as a data: URL.</p>
- </dd>
-</dl>
+- `name`
+  - : `string`. The search engine's name.
+- `isDefault`
+  - : `boolean`. `true` if the search engine is the default. Only one search engine can be the default at any given time.
+- `alias`{{optional_inline}}
+  - : `string`. If a search engine has an alias, the user can search with a particular search engine by entering the alias in address bar before the search term. For example, if the Wikipedia engine has an alias "wk", the user can search Wikipedia for pandas by entering "wk pandas" in the address bar. The alias is sometimes also called a "keyword".
+- `favIconUrl`{{optional_inline}}
+  - : `string`. The search engine's icon, as a data: URL.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Get all installed search engines:</p>
+Get all installed search engines:
 
-<pre class="brush: js">function retrieved(results) {
+```js
+function retrieved(results) {
   console.log(`There were: ${results.length} search engines retrieved.`);
   for (let searchEngine of results) {
     console.log(JSON.stringify(searchEngine.name));
   }
 }
 
-browser.search.get().then(retrieved);</pre>
+browser.search.get().then(retrieved);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

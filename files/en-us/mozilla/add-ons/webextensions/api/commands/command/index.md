@@ -13,31 +13,27 @@ tags:
   - commands
 browser-compat: webextensions.api.commands.Command
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Information about a command. This contains the information specified for the command in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands"><code>commands</code> manifest.json key</a>.</p>
+Information about a command. This contains the information specified for the command in the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
-<p>An array of these objects is returned from {{WebExtAPIRef('commands.getAll()')}}.</p>
+An array of these objects is returned from {{WebExtAPIRef('commands.getAll()')}}.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>name</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Name of this command. This will be passed into the {{WebExtAPIRef('commands.onCommand')}} event listener.</dd>
- <dt><code>description</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Description of this command. This is primarily used to explain to the user what this command does.</dd>
- <dt><code>shortcut</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Key(s) used to execute this command, specified as a string like "Ctrl+Shift+Y".</dd>
-</dl>
+- `name`{{optional_inline}}
+  - : `string`. Name of this command. This will be passed into the {{WebExtAPIRef('commands.onCommand')}} event listener.
+- `description`{{optional_inline}}
+  - : `string`. Description of this command. This is primarily used to explain to the user what this command does.
+- `shortcut`{{optional_inline}}
+  - : `string`. Key(s) used to execute this command, specified as a string like "Ctrl+Shift+Y".
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/commands"><code>chrome.commands</code></a> API.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/extensions/commands) API.

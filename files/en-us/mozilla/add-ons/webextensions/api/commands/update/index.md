@@ -12,54 +12,51 @@ tags:
   - commands
 browser-compat: webextensions.api.commands.update
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Change the description or keyboard shortcut for the given command.</p>
+Change the description or keyboard shortcut for the given command.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.commands.update(
+```js
+browser.commands.update(
   details // object
 );
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p><code>object</code>. An object with the following properties:</p>
-   <dl>
-    <dt><code>name</code></dt>
-    <dd><code>string</code>. The name of the command to update. This must match the name of an existing command, as given for example in the <code>name</code> property of the {{WebExtAPIRef("commands.Command")}} object.</dd>
-    <dt><code>description</code>{{optional_inline}}</dt>
-    <dd><code>string</code>. A new description to set for the command.</dd>
-    <dt><code>shortcut</code>{{optional_inline}}</dt>
-    <dd><p><code>string</code>. A new shortcut to set for the command. This can be:</p>
-    <ul>
-     <li>an empty string to clear the shortcut.</li>
-     <li>a string matching the format of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands"><code>commands</code> manifest.json key</a> to set a new shortcut key. If the string does not match this format, the function throws an error.</li>
-    </ul>
-    </dd>
-   </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Return_value">Return value</h3>
+  - : `object`. An object with the following properties:
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when the shortcut has been updated. The promise will be rejected with an error if the command could not be found.</p>
+    - `name`
+      - : `string`. The name of the command to update. This must match the name of an existing command, as given for example in the `name` property of the {{WebExtAPIRef("commands.Command")}} object.
+    - `description`{{optional_inline}}
+      - : `string`. A new description to set for the command.
+    - `shortcut`{{optional_inline}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+      - : `string`. A new shortcut to set for the command. This can be:
 
-<p>{{Compat}}</p>
+        - an empty string to clear the shortcut.
+        - a string matching the format of the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) to set a new shortcut key. If the string does not match this format, the function throws an error.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<p>Updates the command named "my-command" with the given shortcut value, when the user clicks "update":</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the shortcut has been updated. The promise will be rejected with an error if the command could not be found.
 
-<pre class="brush: js">const commandName = 'my-command';
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+Updates the command named "my-command" with the given shortcut value, when the user clicks "update":
+
+```js
+const commandName = 'my-command';
 
 function updateShortcut() {
   browser.commands.update({
@@ -68,6 +65,7 @@ function updateShortcut() {
   });
 }
 
-document.querySelector('#update').addEventListener('click', updateShortcut);</pre>
+document.querySelector('#update').addEventListener('click', updateShortcut);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

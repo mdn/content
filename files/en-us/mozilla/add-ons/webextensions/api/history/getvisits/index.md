@@ -13,45 +13,43 @@ tags:
   - getVisits
 browser-compat: webextensions.api.history.getVisits
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Retrieves information about all visits to the given URL.</p>
+Retrieves information about all visits to the given URL.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var getting = browser.history.getVisits(
+```js
+var getting = browser.history.getVisits(
   details                // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p>An object with the following properties:</p>
-   <dl>
-    <dt><code>url</code></dt>
-    <dd><code>string</code>. The URL for which to retrieve visit information.</dd>
-   </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Return_value">Return value</h3>
+  - : An object with the following properties:
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> will be fulfilled with an array of <code>{{WebExtAPIRef('history.VisitItem')}}</code> objects each representing a visit to the given URL. Visits are sorted in reverse chronological order.</p>
+    - `url`
+      - : `string`. The URL for which to retrieve visit information.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+### Return value
 
-<p>{{Compat}}</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) will be fulfilled with an array of `{{WebExtAPIRef('history.VisitItem')}}` objects each representing a visit to the given URL. Visits are sorted in reverse chronological order.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>List all visits to the most recently-visited page:</p>
+{{Compat}}
 
-<pre class="brush: js">function gotVisits(visits) {
+## Examples
+
+List all visits to the most recently-visited page:
+
+```js
+function gotVisits(visits) {
   console.log("Visit count: " + visits.length);
   for (visit of visits) {
     console.log(visit.visitTime);
@@ -74,18 +72,16 @@ var searching = browser.history.search({
   maxResults: 1
 });
 
-searching.then(listVisits);</pre>
+searching.then(listVisits);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#method-getVisits) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/history#method-getVisits"><code>chrome.history</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,5 +108,4 @@ searching.then(listVisits);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

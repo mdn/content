@@ -13,90 +13,80 @@ tags:
   - webNavigation
 browser-compat: webextensions.api.webNavigation.onCreatedNavigationTarget
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when a new window, or a new tab in an existing window, is created to host the target of a navigation. For example, this event is sent when:</p>
+Fired when a new window, or a new tab in an existing window, is created to host the target of a navigation. For example, this event is sent when:
 
-<ul>
-	<li>the user opens a link in a new tab or window</li>
-	<li>a web page loads a resource into a new tab or window using {{domxref("window.open()")}} (but note that the event is not sent if the browser's popup blocker blocks the load).</li>
-</ul>
+- the user opens a link in a new tab or window
+- a web page loads a resource into a new tab or window using {{domxref("window.open()")}} (but note that the event is not sent if the browser's popup blocker blocks the load).
 
-<p>The event is not sent if a tab or window is created without a navigation target (for example, if the user opens a new tab by pressing <kbd>Ctrl+T</kbd>).</p>
+The event is not sent if a tab or window is created without a navigation target (for example, if the user opens a new tab by pressing <kbd>Ctrl+T</kbd>).
 
-<p>If this event is fired, it will be fired before {{WebExtAPIRef("webNavigation.onBeforeNavigate")}}.</p>
+If this event is fired, it will be fired before {{WebExtAPIRef("webNavigation.onBeforeNavigate")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">browser.webNavigation.onCreatedNavigationTarget.addListener(
-  <var>listener</var>,                   // function
-  <var>filter</var>                      // optional object
+```js
+browser.webNavigation.onCreatedNavigationTarget.addListener(
+  listener,                   // function
+  filter                      // optional object
 )
-browser.webNavigation.onCreatedNavigationTarget.removeListener(<var>listener</var>)
-browser.webNavigation.onCreatedNavigationTarget.hasListener(<var>listener</var>)
-</pre>
+browser.webNavigation.onCreatedNavigationTarget.removeListener(listener)
+browser.webNavigation.onCreatedNavigationTarget.hasListener(listener)
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
-	<dt><code>addListener(<var>callback</var>)</code></dt>
-	<dd>Adds a listener to this event.</dd>
-	<dt><code>removeListener(<var>listener</var>)</code></dt>
-	<dd>Stop listening to this event. The <code><var>listener</var></code> argument is the listener to remove.</dd>
-	<dt><code>hasListener(<var>listener</var>)</code></dt>
-	<dd>Check whether <code><var>listener</var></code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code><var>callback</var></code></dt>
-	<dd>
-	<p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
-	<dl>
-		<dt><code><var>details</var></code></dt>
-		<dd><a href="#details"><code>object</code></a>. Details about the navigation event. See <a href="#details">details</a> below.</dd>
-	</dl>
-	</dd>
-	<dt><code><var>filter</var></code>{{optional_inline}}</dt>
-	<dd>
-	<p><code>object</code>. An object containing a single property <code>url</code>, which is an <code>Array</code> of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event will fire only for transitions to URLs which match at least one <code>UrlFilter</code> in the array. If you omit this parameter, the event will fire for all transitions. Note that <code>filter</code> is not supported in Firefox.</p>
-	</dd>
-</dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
-<h2 id="Additional_objects">Additional objects</h2>
+    - `details`
+      - : [`object`](#details). Details about the navigation event. See [details](#details) below.
 
-<h3 id="details">details</h3>
+- `filter`{{optional_inline}}
+  - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event will fire only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event will fire for all transitions. Note that `filter` is not supported in Firefox.
 
-<dl>
-	<dt><code>sourceFrameId</code></dt>
-	<dd><code>integer</code>. ID of the frame from which the navigation is initiated. <code>0</code> indicates that the frame is the tab's top-level browsing context, not a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation is initiated from a nested iframe. Frame IDs are unique for a given tab and process.</dd>
-	<dt><code>sourceProcessId</code></dt>
-	<dd><code>integer</code>. The ID of the process from which the navigation is initiated.</dd>
-	<dt><code>sourceTabId</code></dt>
-	<dd><code>integer</code>. The ID of the tab from which the navigation is initiated. For example, if the user opens a link in a new tab, this will be the ID of the tab containing the link.</dd>
-	<dt><code>tabId</code></dt>
-	<dd><code>integer</code>. The ID of the newly created tab.</dd>
-	<dt><code>timeStamp</code></dt>
-	<dd><code>number</code>. The time when the browser created the navigation target, in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
-	<dt><code>url</code></dt>
-	<dd><code>string</code>. The URL which will be loaded in the new tab.</dd>
-	<dt><code>windowId</code></dt>
-	<dd><code>number</code>. The ID of the window in which the new tab is created.</dd>
-</dl>
+## Additional objects
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+### details
 
-<p>{{Compat}}</p>
+- `sourceFrameId`
+  - : `integer`. ID of the frame from which the navigation is initiated. `0` indicates that the frame is the tab's top-level browsing context, not a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation is initiated from a nested iframe. Frame IDs are unique for a given tab and process.
+- `sourceProcessId`
+  - : `integer`. The ID of the process from which the navigation is initiated.
+- `sourceTabId`
+  - : `integer`. The ID of the tab from which the navigation is initiated. For example, if the user opens a link in a new tab, this will be the ID of the tab containing the link.
+- `tabId`
+  - : `integer`. The ID of the newly created tab.
+- `timeStamp`
+  - : `number`. The time when the browser created the navigation target, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+- `url`
+  - : `string`. The URL which will be loaded in the new tab.
+- `windowId`
+  - : `number`. The ID of the window in which the new tab is created.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>Logs the target URL, source Tab ID, and source frame ID for <code>onCreatedNavigationTarget</code>, if the target's hostname contains "example.com" or starts with "developer".</p>
+{{Compat}}
 
-<pre class="brush: js">const filter = {
+## Examples
+
+Logs the target URL, source Tab ID, and source frame ID for `onCreatedNavigationTarget`, if the target's hostname contains "example.com" or starts with "developer".
+
+```js
+const filter = {
   url:
   [
     {hostContains: "example.com"},
@@ -111,18 +101,15 @@ function logOnCreatedNavigationTarget(details) {
 }
 
 browser.webNavigation.onCreatedNavigationTarget.addListener(logOnCreatedNavigationTarget, filter);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webNavigation#event-onBeforeNavigate"><code>chrome.webNavigation</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -149,5 +136,4 @@ browser.webNavigation.onCreatedNavigationTarget.addListener(logOnCreatedNavigati
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

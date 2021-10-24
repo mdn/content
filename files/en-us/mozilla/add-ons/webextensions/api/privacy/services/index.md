@@ -11,25 +11,25 @@ tags:
   - Services
 browser-compat: webextensions.api.privacy.services
 ---
-<div>{{AddonSidebar}}
-<p>The {{WebExtAPIRef("privacy.services")}} property contains privacy-related settings controlling services offered by the browser or by third parties. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.</p>
+{{AddonSidebar}}
 
-<h2 id="Properties">Properties</h2>
+The {{WebExtAPIRef("privacy.services")}} property contains privacy-related settings controlling services offered by the browser or by third parties. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.
 
-<dl>
- <dt><code>passwordSavingEnabled</code></dt>
- <dd>A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If <code>true</code>, the browser's password manager will offer to store passwords when the user enters them. Defaults to <code>true</code>.</dd>
-</dl>
+## Properties
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- `passwordSavingEnabled`
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `true`, the browser's password manager will offer to store passwords when the user enters them. Defaults to `true`.
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="Examples">Examples</h2>
+{{Compat}}
 
-<p>Disable the password manager if possible.</p>
+## Examples
 
-<pre class="brush: js">function onSet(result) {
+Disable the password manager if possible.
+
+```js
+function onSet(result) {
   if (result) {
     console.log("success");
   } else {
@@ -38,7 +38,7 @@ browser-compat: webextensions.api.privacy.services
 }
 
   var getting = browser.privacy.services.passwordSavingEnabled.get({});
-  getting.then((got) =&gt; {
+  getting.then((got) => {
     console.log(got.value);
     if ((got.levelOfControl === "controlled_by_this_extension") ||
         (got.levelOfControl === "controllable_by_this_extension")) {
@@ -49,11 +49,9 @@ browser-compat: webextensions.api.privacy.services
     } else {
       console.log("Not able to set passwordSavingEnabled");
     }
-  });</pre>
+  });
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/privacy"><code>chrome.privacy</code></a> API.</p>
-</div>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/extensions/privacy) API.

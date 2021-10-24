@@ -11,38 +11,40 @@ tags:
   - management
 browser-compat: webextensions.api.management.getAll
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Retrieves an array of {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} objects, one for each installed add-on.</p>
+Retrieves an array of {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} objects, one for each installed add-on.
 
-<p>Note that Google Chrome retrieves apps as well as add-ons. In Chrome you can distinguish apps from add-ons using the <code>type</code> property of {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}}.</p>
+Note that Google Chrome retrieves apps as well as add-ons. In Chrome you can distinguish apps from add-ons using the `type` property of {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}}.
 
-<p>This API requires the "management" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">API permission</a>.</p>
+This API requires the "management" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var gettingAll = browser.management.getAll()
-</pre>
+```js
+var gettingAll = browser.management.getAll()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an array of {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} objects, one for each installed add-on.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} objects, one for each installed add-on.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Log the name of all installed add-ons:</p>
+Log the name of all installed add-ons:
 
-<pre class="brush: js">function gotAll(infoArray) {
+```js
+function gotAll(infoArray) {
   for (info of infoArray) {
     if (info.type == "extension") {
       console.log(info.name);
@@ -51,18 +53,16 @@ browser-compat: webextensions.api.management.getAll
 }
 
 var gettingAll = browser.management.getAll();
-gettingAll.then(gotAll);</pre>
+gettingAll.then(gotAll);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/extensions/management#method-getAll) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/management#method-getAll"><code>chrome.management</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -89,5 +89,4 @@ gettingAll.then(gotAll);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

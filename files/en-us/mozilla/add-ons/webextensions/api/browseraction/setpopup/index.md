@@ -13,62 +13,57 @@ tags:
   - setPopup
 browser-compat: webextensions.api.browserAction.setPopup
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Sets the HTML document that will be opened as a popup when the user clicks on the browser action's icon. Tabs without a specific popup will inherit the global popup, which defaults to the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action"><code>default_popup</code></a> specified in the manifest.</p>
+Sets the HTML document that will be opened as a popup when the user clicks on the browser action's icon. Tabs without a specific popup will inherit the global popup, which defaults to the [`default_popup`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) specified in the manifest.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.browserAction.setPopup(
+```js
+browser.browserAction.setPopup(
   details // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p>An object with the following properties:</p>
-   <dl>
-    <dt><code>tabId</code>{{optional_inline}}</dt>
-    <dd><code>integer</code>. Sets the popup only for a specific tab. The popup is reset when the user navigates this tab to a new page.</dd>
-    <dt><code>windowId</code>{{optional_inline}}</dt>
-    <dd><code>integer</code>. Sets the popup only for the specified window.</dd>
-    <dt><code>popup</code></dt>
-    <dd>
-    <p><code>string</code> or <code>null</code>. The HTML file to show in a popup, specified as a URL.</p>
+- `details`
 
-    <p>This can point to a file packaged within the extension (for example, created using {{WebExtAPIRef("extension.getURL")}}), or a remote document (e.g. <code>https://example.org/</code>).</p>
+  - : An object with the following properties:
 
-    <p>If an empty string (<code>""</code>) is passed here, the popup is disabled, and the extension will receive {{WebExtAPIRef("browserAction.onClicked")}} events.</p>
+    - `tabId`{{optional_inline}}
+      - : `integer`. Sets the popup only for a specific tab. The popup is reset when the user navigates this tab to a new page.
+    - `windowId`{{optional_inline}}
+      - : `integer`. Sets the popup only for the specified window.
+    - `popup`
 
-    <p>If <code>popup</code> is <code>null</code>:</p>
+      - : `string` or `null`. The HTML file to show in a popup, specified as a URL.
 
-    <ul>
-      <li>If <code>tabId</code> is specified, removes the tab-specific popup so that the tab inherits the global popup.</li>
-      <li>If <code>windowId</code> is specified, removes the window-specific popup so that the window inherits the global popup.</li>
-      <li>If <code>tabId</code> and <code>windowId</code> are both omitted, reverts the global popup to the default value.</li>
-    </ul>
-    </dd>
-   </dl>
- </dd>
-</dl>
+        This can point to a file packaged within the extension (for example, created using {{WebExtAPIRef("extension.getURL")}}), or a remote document (e.g. `https://example.org/`).
 
-<ul>
- <li>If <code>windowId</code> and <code>tabId</code> are both supplied, the function fails and the popup is not set.</li>
- <li>If <code>windowId</code> and <code>tabId</code> are both omitted, the global popup is set.</li>
-</ul>
+        If an empty string (`""`) is passed here, the popup is disabled, and the extension will receive {{WebExtAPIRef("browserAction.onClicked")}} events.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+        If `popup` is `null`:
 
-<p>{{Compat}}</p>
+        - If `tabId` is specified, removes the tab-specific popup so that the tab inherits the global popup.
+        - If `windowId` is specified, removes the window-specific popup so that the window inherits the global popup.
+        - If `tabId` and `windowId` are both omitted, reverts the global popup to the default value.
 
-<h2 id="Examples">Examples</h2>
+<!---->
 
-<p>This code adds a pair of context menu items that you can use to switch between two popups. Note that you'll need the "contextMenus" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> set in the extension's manifest to create context menu items.</p>
+- If `windowId` and `tabId` are both supplied, the function fails and the popup is not set.
+- If `windowId` and `tabId` are both omitted, the global popup is set.
 
-<pre class="brush: js">function onCreated() {
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+This code adds a pair of context menu items that you can use to switch between two popups. Note that you'll need the "contextMenus" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) set in the extension's manifest to create context menu items.
+
+```js
+function onCreated() {
   if (browser.runtime.lastError) {
     console.log("error creating item:" + browser.runtime.lastError);
   } else {
@@ -98,18 +93,16 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
   } else if (info.menuItemId == "popup-2") {
     browser.browserAction.setPopup({popup: "/popup/popup2.html"})
   }
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-setPopup) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction#method-setPopup"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -136,5 +129,4 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

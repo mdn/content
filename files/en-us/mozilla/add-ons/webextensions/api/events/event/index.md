@@ -13,47 +13,42 @@ tags:
   - events
 browser-compat: webextensions.api.events.Event
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>An object which allows the addition and removal of listeners for a browser event.</p>
+An object which allows the addition and removal of listeners for a browser event.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects.</p>
+Values of this type are objects.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{WebExtAPIRef("events.Event.addListener","events.Event.addListener()")}}</dt>
- <dd>Registers an event listener callback to an event.</dd>
- <dt>{{WebExtAPIRef("events.Event.removeListener","events.Event.removeListener()")}}</dt>
- <dd>Deregisters an event listener callback from an event.</dd>
- <dt>{{WebExtAPIRef("events.Event.hasListener","events.Event.hasListener()")}}</dt>
- <dd>Tests registration status of a listener.</dd>
- <dt>{{WebExtAPIRef("events.Event.hasListeners","events.Event.hasListeners()")}}</dt>
- <dd>Tests whether any listeners are registered to the event.</dd>
- <dt>{{WebExtAPIRef("events.Event.addRules","events.Event.addRules()")}}</dt>
- <dd>Registers rules to handle events.</dd>
- <dt>{{WebExtAPIRef("events.Event.getRules","events.Event.getRules()")}}</dt>
- <dd>Returns currently registered rules.</dd>
- <dt>{{WebExtAPIRef("events.Event.removeRules","events.Event.removeRules()")}}</dt>
- <dd>Unregisters currently registered rules.</dd>
-</dl>
+- {{WebExtAPIRef("events.Event.addListener","events.Event.addListener()")}}
+  - : Registers an event listener callback to an event.
+- {{WebExtAPIRef("events.Event.removeListener","events.Event.removeListener()")}}
+  - : Deregisters an event listener callback from an event.
+- {{WebExtAPIRef("events.Event.hasListener","events.Event.hasListener()")}}
+  - : Tests registration status of a listener.
+- {{WebExtAPIRef("events.Event.hasListeners","events.Event.hasListeners()")}}
+  - : Tests whether any listeners are registered to the event.
+- {{WebExtAPIRef("events.Event.addRules","events.Event.addRules()")}}
+  - : Registers rules to handle events.
+- {{WebExtAPIRef("events.Event.getRules","events.Event.getRules()")}}
+  - : Returns currently registered rules.
+- {{WebExtAPIRef("events.Event.removeRules","events.Event.removeRules()")}}
+  - : Unregisters currently registered rules.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.events`](https://developer.chrome.com/extensions/events#type-Event) API. This documentation is derived from [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/events#type-Event"><code>chrome.events</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json"><code>events.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -80,5 +75,4 @@ browser-compat: webextensions.api.events.Event
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

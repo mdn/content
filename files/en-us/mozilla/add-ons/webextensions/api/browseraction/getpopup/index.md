@@ -13,68 +13,64 @@ tags:
   - getPopup
 browser-compat: webextensions.api.browserAction.getPopup
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Gets the HTML document set as the popup for this browser action.</p>
+Gets the HTML document set as the popup for this browser action.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var gettingPopup = browser.browserAction.getPopup(
+```js
+var gettingPopup = browser.browserAction.getPopup(
   details               // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p>An object with the following properties:</p>
-   <dl>
-    <dt><code>tabId</code>{{optional_inline}}</dt>
-    <dd><code>integer</code>. The tab whose popup to get.</dd>
-    <dt><code>windowId</code>{{optional_inline}}</dt>
-    <dd><code>integer</code>. The windows whose popup to get.</dd>
-   </dl>
- </dd>
-</dl>
+- `details`
 
-<ul>
- <li>If <code>windowId</code> and <code>tabId</code> are both supplied, the function fails.</li>
- <li>If <code>windowId</code> and <code>tabId</code> are both omitted, the global popup is returned.</li>
-</ul>
+  - : An object with the following properties:
 
-<h3 id="Return_value">Return value</h3>
+    - `tabId`{{optional_inline}}
+      - : `integer`. The tab whose popup to get.
+    - `windowId`{{optional_inline}}
+      - : `integer`. The windows whose popup to get.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a string containing the URL for the popup's document. This will be a fully qualifed URL, such as <code>moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/popups/popup2.html</code>.</p>
+<!---->
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- If `windowId` and `tabId` are both supplied, the function fails.
+- If `windowId` and `tabId` are both omitted, the global popup is returned.
 
-<p>{{Compat}}</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string containing the URL for the popup's document. This will be a fully qualifed URL, such as `moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/popups/popup2.html`.
 
-<p>Get the popup's URL:</p>
+## Browser compatibility
 
-<pre class="brush: js">function gotPopup(popupURL) {
+{{Compat}}
+
+## Examples
+
+Get the popup's URL:
+
+```js
+function gotPopup(popupURL) {
   console.log(popupURL)
 }
 
 var gettingPopup = browser.browserAction.getPopup({});
-gettingPopup.then(gotPopup); </pre>
+gettingPopup.then(gotPopup);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-getPopup) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction#method-getPopup"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -101,5 +97,4 @@ gettingPopup.then(gotPopup); </pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

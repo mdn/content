@@ -13,45 +13,44 @@ tags:
   - setPopup
 browser-compat: webextensions.api.pageAction.setPopup
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Sets the HTML document to be opened as a popup when the user clicks on the page action's icon.</p>
+Sets the HTML document to be opened as a popup when the user clicks on the page action's icon.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.pageAction.setPopup(
+```js
+browser.pageAction.setPopup(
   details // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p><code>object</code>.</p>
-   <dl>
-    <dt><code>tabId</code></dt>
-    <dd><code>integer</code>. The ID of the tab for which you want to set the popup.</dd>
-    <dt><code>popup</code></dt>
-    <dd>
-      <p><code>string</code> or <code>null</code>. URL to the HTML file to show in a popup.</p>
-      <p>If an empty string (<code>""</code>) is passed here, the popup is disabled, and the extension will receive {{WebExtAPIRef("pageAction.onClicked")}} events.</p>
-      <p>If <code>null</code> is passed here, the popup is reset to the popup that was specified in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code> manifest key.</p>
-    </dd>
-   </dl>
- </dd>
-</dl>
+- `details`
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+  - : `object`.
 
-<p>{{Compat}}</p>
+    - `tabId`
+      - : `integer`. The ID of the tab for which you want to set the popup.
+    - `popup`
 
-<h2 id="Examples">Examples</h2>
+      - : `string` or `null`. URL to the HTML file to show in a popup.
 
-<p>Listen for {{WebExtAPIRef("tabs.onUpdated")}} events, and switch the popup if the loading status changes:</p>
+        If an empty string (`""`) is passed here, the popup is disabled, and the extension will receive {{WebExtAPIRef("pageAction.onClicked")}} events.
 
-<pre class="brush: js">browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) =&gt; {
+        If `null` is passed here, the popup is reset to the popup that was specified in the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+Listen for {{WebExtAPIRef("tabs.onUpdated")}} events, and switch the popup if the loading status changes:
+
+```js
+browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
   if (changeInfo.status) {
     browser.pageAction.show(tabId);
     if (changeInfo.status == "loading") {
@@ -66,18 +65,16 @@ browser-compat: webextensions.api.pageAction.setPopup
       });
     }
   }
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction#method-setPopup) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/pageAction#method-setPopup"><code>chrome.pageAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json"><code>page_action.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -104,5 +101,4 @@ browser-compat: webextensions.api.pageAction.setPopup
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

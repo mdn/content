@@ -13,52 +13,50 @@ tags:
   - getFileIcon
 browser-compat: webextensions.api.downloads.getFileIcon
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code><strong>getFileIcon</strong></code><strong><code>()</code></strong> function of the {{WebExtAPIRef("downloads")}} API retrieves an icon for the specified download.</p>
+The **`getFileIcon`\*\***`()`\*\* function of the {{WebExtAPIRef("downloads")}} API retrieves an icon for the specified download.
 
-<p>For new downloads, file icons are available after the {{WebExtAPIRef("downloads.onCreated")}} event has been received. The image returned by this function while a download is in progress may be different from the image returned after the download is complete.</p>
+For new downloads, file icons are available after the {{WebExtAPIRef("downloads.onCreated")}} event has been received. The image returned by this function while a download is in progress may be different from the image returned after the download is complete.
 
-<p>Icon retrieval is done by querying the underlying platform. The icon that is returned will therefore depend on a number of factors including state of the download, platform, registered file types and visual theme.</p>
+Icon retrieval is done by querying the underlying platform. The icon that is returned will therefore depend on a number of factors including state of the download, platform, registered file types and visual theme.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var gettingIcon = browser.downloads.getFileIcon(
+```js
+var gettingIcon = browser.downloads.getFileIcon(
   downloadId,           // integer
   options               // optional object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>downloadId</code></dt>
- <dd>An <code>integer</code> representing the ID of the download.</dd>
- <dt><code>options</code>{{optional_inline}}</dt>
- <dd>
-   <p>An options <code>object</code> representing preferences for the icon to be retrieved. It can take the following properties:</p>
-   <dl>
-    <dt><code>size</code>{{optional_inline}}</dt>
-    <dd>An <code>integer</code> representing the size of the icon. The returned icon's size will be the provided size squared (in pixels). If omitted, the default size for the icon is 32x32 pixels.</dd>
-   </dl>
- </dd>
-</dl>
+- `downloadId`
+  - : An `integer` representing the ID of the download.
+- `options`{{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An options `object` representing preferences for the icon to be retrieved. It can take the following properties:
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. If the request succeeds, the promise will be fulfilled with a string representing the absolute URL of the icon. If the request fails, the promise will be rejected with an error message.</p>
+    - `size`{{optional_inline}}
+      - : An `integer` representing the size of the icon. The returned icon's size will be the provided size squared (in pixels). If omitted, the default size for the icon is 32x32 pixels.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+### Return value
 
-<p>{{Compat}}</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the request succeeds, the promise will be fulfilled with a string representing the absolute URL of the icon. If the request fails, the promise will be rejected with an error message.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>This example logs the icon URL for the most recent download:</p>
+{{Compat}}
 
-<pre class="brush: js">function gotIcon(iconUrl) {
+## Examples
+
+This example logs the icon URL for the most recent download:
+
+```js
+function gotIcon(iconUrl) {
   console.log(iconUrl);
 }
 
@@ -67,7 +65,7 @@ function onError(error) {
 }
 
 function getIcon(downloadItems) {
-    if (downloadItems.length &gt; 0) {
+    if (downloadItems.length > 0) {
       latestDownloadId = downloadItems[0].id;
       var gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
       gettingIcon.then(gotIcon, onError);
@@ -79,18 +77,16 @@ var searching = browser.downloads.search({
   orderBy: ["-startTime"]
 });
 
-searching.then(getIcon, onError);</pre>
+searching.then(getIcon, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-getFileIcon) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#method-getFileIcon"><code>chrome.downloads</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -117,5 +113,4 @@ searching.then(getIcon, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

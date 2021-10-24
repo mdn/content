@@ -12,63 +12,55 @@ tags:
   - onInputChanged
 browser-compat: webextensions.api.omnibox.onInputChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired whenever the user changes their input, after they have started interacting with your extension by entering its keyword in the address bar and then pressing the space key.</p>
+Fired whenever the user changes their input, after they have started interacting with your extension by entering its keyword in the address bar and then pressing the space key.
 
-<p>This is the event you'll use to populate the address bar's drop-down list with suggestions. The event listener is passed:</p>
+This is the event you'll use to populate the address bar's drop-down list with suggestions. The event listener is passed:
 
-<ul>
- <li>the current user input (not including the keyword itself or the space after it)</li>
- <li>a callback function which the listener can call with an array of {{WebExtAPIRef("omnibox.SuggestResult")}} objects, one for each suggestion. Only the first six suggestions will be displayed.</li>
-</ul>
+- the current user input (not including the keyword itself or the space after it)
+- a callback function which the listener can call with an array of {{WebExtAPIRef("omnibox.SuggestResult")}} objects, one for each suggestion. Only the first six suggestions will be displayed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.omnibox.onInputChanged.addListener(listener)
+```js
+browser.omnibox.onInputChanged.addListener(listener)
 browser.omnibox.onInputChanged.removeListener(listener)
 browser.omnibox.onInputChanged.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(listener)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<p>The listener function will be passed two parameters: a string <code>text</code>, and a callback function <code>suggest</code>.</p>
+The listener function will be passed two parameters: a string `text`, and a callback function `suggest`.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>text</code></dt>
- <dd>
- <p><code>String</code>. The current user input in the address bar, not including the extension's keyword itself or the space after the keyword. Use this to decide which suggestions to display in the drop-down list.</p>
- </dd>
- <dt><code>suggest</code></dt>
- <dd>
- <p><code>Function</code>. A callback function that the event listener can call to supply suggestions for the address bar's drop-down list. The callback function expects to receive an array of {{WebExtAPIRef("omnibox.SuggestResult")}} objects, one for each suggestion. Only the first six suggestions will be displayed.</p>
- </dd>
-</dl>
+- `text`
+  - : `String`. The current user input in the address bar, not including the extension's keyword itself or the space after the keyword. Use this to decide which suggestions to display in the drop-down list.
+- `suggest`
+  - : `Function`. A callback function that the event listener can call to supply suggestions for the address bar's drop-down list. The callback function expects to receive an array of {{WebExtAPIRef("omnibox.SuggestResult")}} objects, one for each suggestion. Only the first six suggestions will be displayed.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example interprets the user's input as a CSS property name and populates the drop-down list with one {{WebExtAPIRef("omnibox.SuggestResult")}} object for each CSS property matching the input. The <code>SuggestResult</code> <code>description</code> is the full name of the property, and the <code>content</code> is the MDN page for that property.</p>
+This example interprets the user's input as a CSS property name and populates the drop-down list with one {{WebExtAPIRef("omnibox.SuggestResult")}} object for each CSS property matching the input. The `SuggestResult` `description` is the full name of the property, and the `content` is the MDN page for that property.
 
-<p>The example also listens to {{WebExtAPIRef("omnibox.onInputEntered")}}, and opens the MDN page corresponding to the selection, according to the  {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} argument.</p>
+The example also listens to {{WebExtAPIRef("omnibox.onInputEntered")}}, and opens the MDN page corresponding to the selection, according to the  {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} argument.
 
-<pre class="brush: js">browser.omnibox.setDefaultSuggestion({
+```js
+browser.omnibox.setDefaultSuggestion({
   description: "Type the name of a CSS property"
 });
 
@@ -121,11 +113,11 @@ function getMatchingProperties(input) {
   return result;
 }
 
-browser.omnibox.onInputChanged.addListener((input, suggest) =&gt; {
+browser.omnibox.onInputChanged.addListener((input, suggest) => {
   suggest(getMatchingProperties(input));
 });
 
-browser.omnibox.onInputEntered.addListener((url, disposition) =&gt; {
+browser.omnibox.onInputEntered.addListener((url, disposition) => {
   switch (disposition) {
     case "currentTab":
       browser.tabs.update({url});
@@ -138,13 +130,10 @@ browser.omnibox.onInputEntered.addListener((url, disposition) =&gt; {
       break;
   }
 });
+```
 
-</pre>
+{{WebExtExamples}}
 
-<p>{{WebExtExamples}}</p>
-
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/omnibox"><code>chrome.omnibox</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

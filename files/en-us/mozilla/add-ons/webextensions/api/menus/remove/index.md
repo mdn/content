@@ -13,37 +13,37 @@ tags:
   - remove
 browser-compat: webextensions.api.menus.remove
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Removes a menu item.</p>
+Removes a menu item.
 
-<p>For compatibility with other browsers, Firefox makes this method available via the <code>contextMenus</code> namespace as well as the <code>menus</code> namespace.</p>
+For compatibility with other browsers, Firefox makes this method available via the `contextMenus` namespace as well as the `menus` namespace.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var removing = browser.menus.remove(
+```js
+var removing = browser.menus.remove(
   menuItemId      // integer or string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>menuItemId</code></dt>
- <dd><code>integer</code> or <code>string</code>. The ID of the menu item to remove.</dd>
-</dl>
+- `menuItemId`
+  - : `integer` or `string`. The ID of the menu item to remove.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments if removal was successful, or rejected with an error message if removal failed (for example, because the item could not be found).</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments if removal was successful, or rejected with an error message if removal failed (for example, because the item could not be found).
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This extension adds a menu item labeled "Remove me!". If you click the item, the extension removes it.</p>
+This extension adds a menu item labeled "Remove me!". If you click the item, the extension removes it.
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log("item removed successfully");
 }
 
@@ -62,22 +62,18 @@ browser.menus.onClicked.addListener(function(info, tab) {
     var removing = browser.menus.remove(info.menuItemId);
     removing.then(onRemoved, onError);
   }
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#method-remove) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
-
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/contextMenus#method-remove"><code>chrome.contextMenus</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a> in the Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -104,5 +100,4 @@ browser.menus.onClicked.addListener(function(info, tab) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

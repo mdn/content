@@ -13,26 +13,23 @@ tags:
   - contextMenus
 browser-compat: webextensions.api.menus.ACTION_MENU_TOP_LEVEL_LIMIT
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The maximum number of top level extension items that can be added to a menu item whose {{WebExtAPIRef("contextMenus.ContextType", "ContextType")}} is "browser_action" or "page_action". Any items beyond this limit will be ignored.</p>
+The maximum number of top level extension items that can be added to a menu item whose {{WebExtAPIRef("contextMenus.ContextType", "ContextType")}} is "browser_action" or "page_action". Any items beyond this limit will be ignored.
 
-<p>Its value is <code>6</code> on Firefox and Chrome.</p>
+Its value is `6` on Firefox and Chrome.
 
-<p>For compatibility with other browsers, Firefox makes this property available via the <code>contextMenus</code> namespace as well as the <code>menus</code> namespace.</p>
+For compatibility with other browsers, Firefox makes this property available via the `contextMenus` namespace as well as the `menus` namespace.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#property-ACTION_MENU_TOP_LEVEL_LIMIT) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/contextMenus#property-ACTION_MENU_TOP_LEVEL_LIMIT"><code>chrome.contextMenus</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a> in the Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -59,5 +56,4 @@ browser-compat: webextensions.api.menus.ACTION_MENU_TOP_LEVEL_LIMIT
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,51 +13,49 @@ tags:
   - addUrl
 browser-compat: webextensions.api.history.addUrl
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Adds a record to the browser's history of a visit to the given URL. The visit's time is recorded as the time of the call, and the {{WebExtAPIRef("history.TransitionType", "TransitionType")}} is recorded as "link".</p>
+Adds a record to the browser's history of a visit to the given URL. The visit's time is recorded as the time of the call, and the {{WebExtAPIRef("history.TransitionType", "TransitionType")}} is recorded as "link".
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var addingUrl = browser.history.addUrl(
+```js
+var addingUrl = browser.history.addUrl(
   details         // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p><code>object</code>. Object containing the URL to add.</p>
-   <dl>
-    <dt><code>url</code></dt>
-    <dd><code>string</code>. The URL to add.</dd>
-    <dt><code>title</code>{{optional_inline}}</dt>
-    <dd>string: The title of the page. If this is not supplied, the title will be recorded as <code>null</code>.</dd>
-    <dt><code>transition</code>{{optional_inline}}</dt>
-    <dd>{{WebExtAPIRef("history.TransitionType")}}. Describes how the browser navigated to the page on this occasion. If this is not supplied, a transition type of "link" will be recorded.</dd>
-    <dt><code>visitTime</code>{{optional_inline}}</dt>
-    <dd><code>number</code> or <code>string</code> or <code>object</code>. A value indicating a date and time.  This can be represented as: a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> object, an <a class="external external-icon" href="https://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 date string</a>, or the number of milliseconds since the epoch. Sets the visit time to this value. If this is not supplied, the current time will be recorded.</dd>
-   </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Return_value">Return value</h3>
+  - : `object`. Object containing the URL to add.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> will be fulfilled with no parameters when the item has been added.</p>
+    - `url`
+      - : `string`. The URL to add.
+    - `title`{{optional_inline}}
+      - : string: The title of the page. If this is not supplied, the title will be recorded as `null`.
+    - `transition`{{optional_inline}}
+      - : {{WebExtAPIRef("history.TransitionType")}}. Describes how the browser navigated to the page on this occasion. If this is not supplied, a transition type of "link" will be recorded.
+    - `visitTime`{{optional_inline}}
+      - : `number` or `string` or `object`. A value indicating a date and time.  This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso/home/standards/iso8601.htm), or the number of milliseconds since the epoch. Sets the visit time to this value. If this is not supplied, the current time will be recorded.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+### Return value
 
-<p>{{Compat}}</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) will be fulfilled with no parameters when the item has been added.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>Add a record of a visit to "https://example.org/", then check that the new visit was recorded by searching history for the most recent item and logging it:</p>
+{{Compat}}
 
-<pre class="brush: js">function onGot(results) {
+## Examples
+
+Add a record of a visit to "https\://example.org/", then check that the new visit was recorded by searching history for the most recent item and logging it:
+
+```js
+function onGot(results) {
   if (results.length) {
     console.log(results[0].url);
     console.log(new Date(results[0].lastVisitTime));
@@ -74,11 +72,13 @@ function onAdded() {
 }
 
 var addingUrl = browser.history.addUrl({url: "https://example.org/"});
-addingUrl.then(onAdded);</pre>
+addingUrl.then(onAdded);
+```
 
-<p>Add a record of a visit to "https://example.org", but give it a <code>visitTime</code> 24 hours in the past, and a <code>transition</code> of "typed":</p>
+Add a record of a visit to "https\://example.org", but give it a `visitTime` 24 hours in the past, and a `transition` of "typed":
 
-<pre class="brush: js">const DAY = 24 * 60* 60 * 1000;
+```js
+const DAY = 24 * 60* 60 * 1000;
 
 function oneDayAgo() {
   return Date.now() - DAY;
@@ -105,18 +105,16 @@ var addingUrl = browser.history.addUrl({
   transition: "typed"
 });
 
-addingUrl.then(onAdded);</pre>
+addingUrl.then(onAdded);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#method-addUrl) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/history#method-addUrl"><code>chrome.history</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -143,5 +141,4 @@ addingUrl.then(onAdded);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

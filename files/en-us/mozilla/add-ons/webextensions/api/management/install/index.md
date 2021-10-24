@@ -12,40 +12,37 @@ tags:
   - management
 browser-compat: webextensions.api.management.install
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Installs and enables a theme extension from the given URL.
 
-<div>Installs and enables a theme extension from the given URL.</div>
+This API requires the "management" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and will only work with signed themes.
 
+This is an asynchronous function that returns a [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<p>This API requires the "management" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">API permission</a> and will only work with signed themes.</p>
+## Syntax
 
-<p>This is an asynchronous function that returns a <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>.</p>
+```js
+let {id} = await browser.management.install({url});
+```
 
-<h2 id="Syntax">Syntax</h2>
+### Parameters
 
-<pre class="brush:js">let {id} = await browser.management.install({url});
-</pre>
+- options
+  - : An object that includes the URL of the XPI file of the theme at [addons.mozilla.org](https://addons.mozilla.org) and an optional a hash of the XPI file, using sha256 or stronger.
 
-<h3 id="Parameters">Parameters</h3>
+### Return value
 
-<dl>
- <dt>options</dt>
- <dd>An object that includes the URL of the XPI file of the theme at <a href="https://addons.mozilla.org">addons.mozilla.org</a> and an optional a hash of the XPI file, using sha256 or stronger.</dd>
-</dl>
+A [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object, containing the `ExtensionID` defined for the theme in manifest.json.
 
-<h3 id="Return_value">Return value</h3>
+## Browser compatibility
 
-<p>A <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> that will be fulfilled with an object, containing the <code>ExtensionID</code> defined for the theme in manifest.json.</p>
+{{Compat}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Examples
 
-<p>{{Compat}}</p>
+Cycle through a list of themes:
 
-<h2 id="Examples">Examples</h2>
-
-<p>Cycle through a list of themes:</p>
-
-<pre class="brush: js">"use strict";
+```js
+"use strict";
 
 let themes = [
     "https://addons.mozilla.org/firefox/downloads/file/1063216/insightscare-1.0-fx.xpi",
@@ -66,7 +63,7 @@ async function install(url) {
     }
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
     let id = themes.indexOf(current);
     install(themes[(id + 1) % themes.length]);
 });
@@ -74,9 +71,10 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 for (let url of themes) {
     browser.menus.create({
         title: url,
-        onclick: () =&gt; install(url),
+        onclick: () => install(url),
         contexts: ["browser_action"],
     });
-}</pre>
+}
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

@@ -13,43 +13,38 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.history.HistoryItem
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p>A <code>HistoryItem</code> object provides information about a page in the browser history.</p>
+A `HistoryItem` object provides information about a page in the browser history.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>This is an object with the following properties:</p>
+This is an object with the following properties:
 
-<dl>
- <dt><code>id</code></dt>
- <dd><code>string</code>. Unique identifier for the item.</dd>
- <dt><code>url</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The URL of the page.</dd>
- <dt><code>title</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The title of the page.</dd>
- <dt><code>lastVisitTime</code> {{optional_inline}}</dt>
- <dd><code>number</code>. The date and time the page was last loaded, represented in milliseconds since the epoch.</dd>
- <dt><code>visitCount</code> {{optional_inline}}</dt>
- <dd><code>number</code>. The number of times the user has visited the page.</dd>
- <dt><code>typedCount</code> {{optional_inline}}</dt>
- <dd><code>number</code>. The number of times the user has navigated to this page by typing in the address.</dd>
-</dl>
+- `id`
+  - : `string`. Unique identifier for the item.
+- `url` {{optional_inline}}
+  - : `string`. The URL of the page.
+- `title` {{optional_inline}}
+  - : `string`. The title of the page.
+- `lastVisitTime` {{optional_inline}}
+  - : `number`. The date and time the page was last loaded, represented in milliseconds since the epoch.
+- `visitCount` {{optional_inline}}
+  - : `number`. The number of times the user has visited the page.
+- `typedCount` {{optional_inline}}
+  - : `number`. The number of times the user has navigated to this page by typing in the address.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#type-HistoryItem) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/history#type-HistoryItem"><code>chrome.history</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -76,5 +71,4 @@ browser-compat: webextensions.api.history.HistoryItem
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

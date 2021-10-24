@@ -13,53 +13,52 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.removeCSS
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Removes from a page CSS which was previously injected by a call to {{WebExtAPIRef("tabs.insertCSS()")}}.</p>
+Removes from a page CSS which was previously injected by a call to {{WebExtAPIRef("tabs.insertCSS()")}}.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var removing = browser.tabs.removeCSS(
+```js
+var removing = browser.tabs.removeCSS(
   tabId,           // optional integer
   details          // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>tabId</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. The ID of the tab from which to remove the CSS. Defaults to the active tab of the current window.</dd>
- <dt><code>details</code></dt>
- <dd>An object describing the CSS to remove from the page. It contains the following properties:
- <dl>
-  <dt><code>allFrames</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. If <code>true</code>, the code will be removed from all frames of the current page. If it is <code>false</code>, code is only removed from the top frame. Defaults to <code>false</code>.</dd>
-  <dt><code>code</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. CSS to remove, as a text string. This must exactly match a CSS string previously inserted into the page using {{WebExtAPIRef("tabs.insertCSS()")}}.</dd>
-  <dt><code>cssOrigin</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. This can take one of two values: "user", for CSS added as a user stylesheet, or "author" for CSS added as an author stylesheet. If this option was set previously by {{WebExtAPIRef("tabs.insertCSS()")}}, then it must exactly match.</dd>
-  <dt><code>file</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Path to a file containing the CSS to remove. This must exactly match a CSS file previously inserted into the page using {{WebExtAPIRef("tabs.insertCSS()")}}.</dd>
-  <dt><code>frameId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. The frame from which to remove the CSS. Defaults to <code>0</code> (the top-level frame).</dd>
-  <dt><code>matchAboutBlank</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. If <code>true</code>, the CSS will be removed from embedded "about:blank" and "about:srcdoc" frames if your extension has access to their parent document. Defaults to <code>false</code>.</dd>
- </dl>
- </dd>
-</dl>
+- `tabId` {{optional_inline}}
+  - : `integer`. The ID of the tab from which to remove the CSS. Defaults to the active tab of the current window.
+- `details`
 
-<h3 id="Return_value">Return value</h3>
+  - : An object describing the CSS to remove from the page. It contains the following properties:
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when all the CSS has been removed. If any error occurs, the promise will be rejected with an error message.</p>
+    - `allFrames`{{optional_inline}}
+      - : `boolean`. If `true`, the code will be removed from all frames of the current page. If it is `false`, code is only removed from the top frame. Defaults to `false`.
+    - `code`{{optional_inline}}
+      - : `string`. CSS to remove, as a text string. This must exactly match a CSS string previously inserted into the page using {{WebExtAPIRef("tabs.insertCSS()")}}.
+    - `cssOrigin`{{optional_inline}}
+      - : `string`. This can take one of two values: "user", for CSS added as a user stylesheet, or "author" for CSS added as an author stylesheet. If this option was set previously by {{WebExtAPIRef("tabs.insertCSS()")}}, then it must exactly match.
+    - `file`{{optional_inline}}
+      - : `string`. Path to a file containing the CSS to remove. This must exactly match a CSS file previously inserted into the page using {{WebExtAPIRef("tabs.insertCSS()")}}.
+    - `frameId`{{optional_inline}}
+      - : `integer`. The frame from which to remove the CSS. Defaults to `0` (the top-level frame).
+    - `matchAboutBlank`{{optional_inline}}
+      - : `boolean`. If `true`, the CSS will be removed from embedded "about:blank" and "about:srcdoc" frames if your extension has access to their parent document. Defaults to `false`.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<p>This example adds some CSS using {{WebExtAPIRef("tabs.insertCSS")}}, then removes it again when the user clicks a browser action:</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the CSS has been removed. If any error occurs, the promise will be rejected with an error message.
 
-<pre class="brush: js">var css = "body { border: 20px dotted pink; }";
+## Examples
+
+This example adds some CSS using {{WebExtAPIRef("tabs.insertCSS")}}, then removes it again when the user clicks a browser action:
+
+```js
+var css = "body { border: 20px dotted pink; }";
 
 function onError(error) {
   console.log(`Error: ${error}`);
@@ -68,25 +67,23 @@ function onError(error) {
 var insertingCSS = browser.tabs.insertCSS(2, {code: css});
 insertingCSS.then(null, onError);
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   var removing = browser.tabs.removeCSS(2, {code: css});
   removing.then(null, onError);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-insertCSS) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-insertCSS"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -113,5 +110,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

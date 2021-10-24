@@ -13,36 +13,36 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.getCurrent
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Get a {{WebExtAPIRef("tabs.Tab")}} containing information about the tab that this script is running in.</p>
+Get a {{WebExtAPIRef("tabs.Tab")}} containing information about the tab that this script is running in.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This function is only useful in contexts where there is a browser tab, such as an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages">options page</a>.</p>
+> **Note:** This function is only useful in contexts where there is a browser tab, such as an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages).
+>
+> If you call it from a background script or a popup, it will return `undefined`.
 
-<p>If you call it from a background script or a popup, it will return <code>undefined</code>.</p>
-</div>
+This is an asynchronous function that returns a {{jsxref("Promise")}}.
 
-<p>This is an asynchronous function that returns a {{jsxref("Promise")}}.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+const gettingCurrent = browser.tabs.getCurrent()
+```
 
-<pre class="brush: js">const gettingCurrent = browser.tabs.getCurrent()
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+None.
 
-<p>None.</p>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A {{jsxref("Promise")}} that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing information about the current tab. If any error occurs the promise will be rejected with an error message.
 
-<p>A {{jsxref("Promise")}} that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing information about the current tab. If any error occurs the promise will be rejected with an error message.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+Get information about the current tab:
 
-<p>Get information about the current tab:</p>
-
-<pre class="brush: js">function onGot(tabInfo) {
+```js
+function onGot(tabInfo) {
   console.log(tabInfo);
 }
 
@@ -51,22 +51,20 @@ function onError(error) {
 }
 
 const gettingCurrent = browser.tabs.getCurrent();
-gettingCurrent.then(onGot, onError);</pre>
+gettingCurrent.then(onGot, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-getCurrent) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-getCurrent"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -93,5 +91,4 @@ gettingCurrent.then(onGot, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

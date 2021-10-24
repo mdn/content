@@ -13,36 +13,29 @@ tags:
   - devtools.panels.ElementsPanel
 browser-compat: webextensions.api.devtools.panels.ElementsPanel
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>An <code>ElementsPanel</code> represents the HTML/CSS inspector in the browser's devtools. This is called the Page Inspector in Firefox and the Elements panel in Chrome.</p>
+An `ElementsPanel` represents the HTML/CSS inspector in the browser's devtools. This is called the Page Inspector in Firefox and the Elements panel in Chrome.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane">devtools.panels.ElementsPanel.createSidebarPane()</a></code></dt>
- <dd>Creates a pane in the inspector's sidebar.</dd>
-</dl>
+- [`devtools.panels.ElementsPanel.createSidebarPane()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane)
+  - : Creates a pane in the inspector's sidebar.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged">devtools.panels.ElementsPanel.onSelectionChanged</a></code></dt>
- <dd>Fired when the user selects a different element in the page, for example using the "Inspect element" context menu item.</dd>
-</dl>
+- [`devtools.panels.ElementsPanel.onSelectionChanged`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged)
+  - : Fired when the user selects a different element in the page, for example using the "Inspect element" context menu item.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools"><code>chrome.devtools</code></a> API.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -69,5 +62,4 @@ browser-compat: webextensions.api.devtools.panels.ElementsPanel
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

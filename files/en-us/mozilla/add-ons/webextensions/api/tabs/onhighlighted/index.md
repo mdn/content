@@ -13,79 +13,70 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onHighlighted
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when the set of highlighted tabs in a window changes.</p>
+Fired when the set of highlighted tabs in a window changes.
 
-<p>Note that before version 63, Firefox didn't have the concept of highlighting multiple tabs,  so this event was just an alias for {{WebExtAPIRef("tabs.onActivated")}}.</p>
+Note that before version 63, Firefox didn't have the concept of highlighting multiple tabs,  so this event was just an alias for {{WebExtAPIRef("tabs.onActivated")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.tabs.onHighlighted.addListener(listener)
+```js
+browser.tabs.onHighlighted.addListener(listener)
 browser.tabs.onHighlighted.removeListener(listener)
 browser.tabs.onHighlighted.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>highlightInfo</code></dt>
-  <dd><a href="#highlightinfo"><code>object</code></a>. ID(s) of the highlighted tabs, and ID of their window.</dd>
- </dl>
- </dd>
-</dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
-<h2 id="Additional_objects">Additional objects</h2>
+    - `highlightInfo`
+      - : [`object`](#highlightinfo). ID(s) of the highlighted tabs, and ID of their window.
 
-<h3 id="highlightInfo">highlightInfo</h3>
+## Additional objects
 
-<dl>
- <dt><code>windowId</code></dt>
- <dd><code>integer</code>. ID of the window whose tabs changed.</dd>
- <dt><code>tabIds</code></dt>
- <dd><code>array</code> of <code>integer</code>. IDs of the highlighted tabs in the window.</dd>
-</dl>
+### highlightInfo
 
-<h2 id="Examples">Examples</h2>
+- `windowId`
+  - : `integer`. ID of the window whose tabs changed.
+- `tabIds`
+  - : `array` of `integer`. IDs of the highlighted tabs in the window.
 
-<p>Listen for highlighting events, and log the IDs of highlighted tabs:</p>
+## Examples
 
-<pre class="brush: js">function handleHighlighted(highlightInfo) {
+Listen for highlighting events, and log the IDs of highlighted tabs:
+
+```js
+function handleHighlighted(highlightInfo) {
   console.log("Highlighted tabs: " + highlightInfo.tabIds);
 }
 
-browser.tabs.onHighlighted.addListener(handleHighlighted);</pre>
+browser.tabs.onHighlighted.addListener(handleHighlighted);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onHighlighted) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#event-onHighlighted"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,5 +103,4 @@ browser.tabs.onHighlighted.addListener(handleHighlighted);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

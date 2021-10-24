@@ -13,54 +13,54 @@ tags:
   - getAllCookieStores
 browser-compat: webextensions.api.cookies.getAllCookieStores
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <strong><code>getAllCookieStores()</code></strong> method of the {{WebExtAPIRef("cookies")}} API returns a list of all cookie stores.</p>
+The **`getAllCookieStores()`** method of the {{WebExtAPIRef("cookies")}} API returns a list of all cookie stores.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var gettingStores = browser.cookies.getAllCookieStores()
-</pre>
+```js
+var gettingStores = browser.cookies.getAllCookieStores()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an <code>array</code> of {{WebExtAPIRef('cookies.CookieStore')}} objects representing all the existing cookie stores.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of {{WebExtAPIRef('cookies.CookieStore')}} objects representing all the existing cookie stores.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In the following snippet, the <code>getAllCookieStores()</code> method is used to retrieve all the cookie stores currently available in the browser, and print out each cookie store ID, and the tabs that currently share each cookie store.</p>
+In the following snippet, the `getAllCookieStores()` method is used to retrieve all the cookie stores currently available in the browser, and print out each cookie store ID, and the tabs that currently share each cookie store.
 
-<pre class="brush: js">function logStores(cookieStores) {
+```js
+function logStores(cookieStores) {
   for (let store of cookieStores) {
     console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
   }
 }
 
 var getting = browser.cookies.getAllCookieStores();
-getting.then(logStores);</pre>
+getting.then(logStores);
+```
 
-<p>Each member of the <code>cookieStores</code> array is a {{WebExtAPIRef("cookies.CookieStore")}} object.</p>
+Each member of the `cookieStores` array is a {{WebExtAPIRef("cookies.CookieStore")}} object.
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#method-getAllCookieStores) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/cookies#method-getAllCookieStores"><code>chrome.cookies</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -87,5 +87,4 @@ getting.then(logStores);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

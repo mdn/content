@@ -12,32 +12,32 @@ tags:
   - zoomFullPage
 browser-compat: webextensions.api.browserSettings.zoomFullPage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.</p>
+A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object whose underlying value is a boolean.
 
-<p>By default zoom applies to all the content of a web page. Using the <a href="https://support.mozilla.org/en-US/kb/font-size-and-zoom-increase-size-of-web-pages#w_how-to-only-change-the-size-of-the-text/en-US/docs/">Zoom Text Only setting</a> users can choose to zoom only the text on a page. This settings enables web extensions to control this setting and determine whether zoom is applied to the entire page or to text only.</p>
+By default zoom applies to all the content of a web page. Using the [Zoom Text Only setting](https://support.mozilla.org/en-US/kb/font-size-and-zoom-increase-size-of-web-pages#w_how-to-only-change-the-size-of-the-text/en-US/docs/) users can choose to zoom only the text on a page. This settings enables web extensions to control this setting and determine whether zoom is applied to the entire page or to text only.
 
-<p>The settings are:</p>
+The settings are:
 
-<ul>
- <li><code>true</code>: zoom applies to all the content of a web page (default).</li>
- <li><code>false</code>: zoom applies to web page text only.</li>
-</ul>
+- `true`: zoom applies to all the content of a web page (default).
+- `false`: zoom applies to web page text only.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Set the setting to <code>false</code>:</p>
+Set the setting to `false`:
 
-<pre class="brush: js">function logResult(result) {
+```js
+function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
 browser.browserSettings.zoomFullPage.set({value: false}).
-  then(logResult);</pre>
+  then(logResult);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

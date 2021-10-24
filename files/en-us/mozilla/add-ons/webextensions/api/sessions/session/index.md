@@ -13,48 +13,41 @@ tags:
   - sessions
 browser-compat: webextensions.api.sessions.Session
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code>Session</code> object represents a tab or window that the user has closed in the current browsing session.</p>
+The `Session` object represents a tab or window that the user has closed in the current browsing session.
 
-<p>Sessions are represented as {{WebExtAPIRef("tabs.Tab", "Tab")}} objects if the tab was closed but its window was not closed: for example, because the user clicked the "Close tab" button, and this tab was not the only tab in its window.</p>
+Sessions are represented as {{WebExtAPIRef("tabs.Tab", "Tab")}} objects if the tab was closed but its window was not closed: for example, because the user clicked the "Close tab" button, and this tab was not the only tab in its window.
 
-<p>Sessions are represented as {{WebExtAPIRef("windows.Window", "Window")}} objects if the window was closed: for example, because the user clicked the "Close window" button, or closed the only tab open in a window.</p>
+Sessions are represented as {{WebExtAPIRef("windows.Window", "Window")}} objects if the window was closed: for example, because the user clicked the "Close window" button, or closed the only tab open in a window.
 
-<p>Note that different browsers might have a different idea of when a session is a Tab and when it is a Window. For example:</p>
+Note that different browsers might have a different idea of when a session is a Tab and when it is a Window. For example:
 
-<ul>
- <li>In Chrome a session is recorded as a Window if the user closes a window that contained more than one tab. If the user closed a window that contained only one tab, this is recorded as a Tab.</li>
- <li>In Firefox, a session is recorded as a Window if the user closes a window (or a tab that was the last tab in the window), and a Tab if the user closes a tab that wasn't the last tab in its window.</li>
-</ul>
+- In Chrome a session is recorded as a Window if the user closes a window that contained more than one tab. If the user closed a window that contained only one tab, this is recorded as a Tab.
+- In Firefox, a session is recorded as a Window if the user closes a window (or a tab that was the last tab in the window), and a Tab if the user closes a tab that wasn't the last tab in its window.
 
-<p>The Tab object for a tab that is open will not have a <code>sessionId</code>. When the tab is closed, it will have a <code>sessionId</code> but will not have a tab <code>id</code>. If the tab is restored, it will get a new tab <code>id</code> and will lose the <code>sessionId</code>.</p>
+The Tab object for a tab that is open will not have a `sessionId`. When the tab is closed, it will have a `sessionId` but will not have a tab `id`. If the tab is restored, it will get a new tab `id` and will lose the `sessionId`.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>lastModified</code></dt>
- <dd><code>number</code>. The time the tab or window was closed, in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
- <dt><code>tab</code>{{optional_inline}}</dt>
- <dd><code>object</code>. If the object represents a closed tab, then this property is present and will be a {{WebExtAPIRef("tabs.Tab")}} object. This will contain <code>url</code>, <code>title</code>, and <code>favIconUrl</code> only if the extension has the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> to access the tab's URL.</dd>
- <dt><code>window</code>{{optional_inline}}</dt>
- <dd><code>object</code>. If the object represents a closed window, then this property is present and will be a {{WebExtAPIRef("windows.Window")}} object.</dd>
-</dl>
+- `lastModified`
+  - : `number`. The time the tab or window was closed, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+- `tab`{{optional_inline}}
+  - : `object`. If the object represents a closed tab, then this property is present and will be a {{WebExtAPIRef("tabs.Tab")}} object. This will contain `url`, `title`, and `favIconUrl` only if the extension has the "tabs" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) to access the tab's URL.
+- `window`{{optional_inline}}
+  - : `object`. If the object represents a closed window, then this property is present and will be a {{WebExtAPIRef("windows.Window")}} object.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/extensions/sessions) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/sessions"><code>chrome.sessions</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -81,5 +74,4 @@ browser-compat: webextensions.api.sessions.Session
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

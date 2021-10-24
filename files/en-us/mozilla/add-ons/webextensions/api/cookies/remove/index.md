@@ -13,60 +13,58 @@ tags:
   - remove
 browser-compat: webextensions.api.cookies.remove
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <strong><code>remove()</code></strong> method of the {{WebExtAPIRef("cookies")}} API deletes a cookie, given its name and URL.</p>
+The **`remove()`** method of the {{WebExtAPIRef("cookies")}} API deletes a cookie, given its name and URL.
 
-<p>The call succeeds only if you include the "cookies" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a> in your <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file, as well as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> for the given URL specified in its manifest.</p>
+The call succeeds only if you include the "cookies" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, as well as [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the given URL specified in its manifest.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var removing = browser.cookies.remove(
+```js
+var removing = browser.cookies.remove(
   details               // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p>An <code>object</code> containing information to identify the cookie to remove. It contains the following properties:</p>
-   <dl>
-    <dt><code>firstPartyDomain</code>{{optional_inline}}</dt>
-    <dd>A <code>string</code> representing the first-party domain with which the cookie to remove is associated. This property must be supplied if the browser has first-party isolation enabled. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation">First-party isolation</a>.</dd>
-    <dt><code>name</code></dt>
-    <dd>A <code>string</code> representing the name of the cookie to remove.</dd>
-    <dt><code>partitionKey</code>{{optional_inline}}</dt>
-    <dd>An <code>object</code> representing the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning">storage partition</a> containing the cookie. Include this object to remove a cookie from partitioned storage. This object contains:
-     <dl>
-     <dt><code>topLevelSite</code>{{optional_inline}}</dt>
-     <dd>A <code>string</code> representing the first-party URL of the top-level site storage partition containing the cookie.</dd>
-     </dl>
-    </dd>
-    <dt><code>storeId</code>{{optional_inline}}</dt>
-    <dd>A <code>string</code> representing the ID of the cookie store to find the cookie in. If unspecified, the cookie is looked for by default in the current execution context's cookie store.</dd>
-    <dt><code>url</code></dt>
-    <dd>A <code>string</code> representing the URL associated with the cookie. If the extension does not have <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> for this URL, the API call will fail.</dd>
-   </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Return_value">Return value</h3>
+  - : An `object` containing information to identify the cookie to remove. It contains the following properties:
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('cookies.Cookie')}} object containing details about the cookie that's been removed. If a cookie matching the <code>details</code> parameter could not be found, the promise is fulfilled with <code>null</code>.  If the call fails for any reason, the promise will be rejected with an error message.</p>
+    - `firstPartyDomain`{{optional_inline}}
+      - : A `string` representing the first-party domain with which the cookie to remove is associated. This property must be supplied if the browser has first-party isolation enabled. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
+    - `name`
+      - : A `string` representing the name of the cookie to remove.
+    - `partitionKey`{{optional_inline}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+      - : An `object` representing the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning) containing the cookie. Include this object to remove a cookie from partitioned storage. This object contains:
 
-<p>{{Compat}}</p>
+        - `topLevelSite`{{optional_inline}}
+          - : A `string` representing the first-party URL of the top-level site storage partition containing the cookie.
 
-<h2 id="Examples">Examples</h2>
+    - `storeId`{{optional_inline}}
+      - : A `string` representing the ID of the cookie store to find the cookie in. If unspecified, the cookie is looked for by default in the current execution context's cookie store.
+    - `url`
+      - : A `string` representing the URL associated with the cookie. If the extension does not have [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for this URL, the API call will fail.
 
-<p>This example tries to remove the cookie named "favorite-color", whose URL matches the URL of the document hosted by the currently active tab:</p>
+### Return value
 
-<pre class="brush: js">function onRemoved(cookie) {
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('cookies.Cookie')}} object containing details about the cookie that's been removed. If a cookie matching the `details` parameter could not be found, the promise is fulfilled with `null`.  If the call fails for any reason, the promise will be rejected with an error message.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+This example tries to remove the cookie named "favorite-color", whose URL matches the URL of the document hosted by the currently active tab:
+
+```js
+function onRemoved(cookie) {
   console.log(`Removed: ${cookie}`);
 }
 
@@ -83,18 +81,16 @@ function removeCookie(tabs) {
 }
 
 var getActive = browser.tabs.query({active: true, currentWindow: true});
-getActive.then(removeCookie);</pre>
+getActive.then(removeCookie);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#method-remove) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/cookies#method-remove"><code>chrome.cookies</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -121,5 +117,4 @@ getActive.then(removeCookie);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

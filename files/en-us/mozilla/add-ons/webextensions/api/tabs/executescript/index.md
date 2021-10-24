@@ -13,126 +13,122 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.executeScript
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p><span class="seoSummary">Injects JavaScript code into a page.</span></p>
+Injects JavaScript code into a page.
 
-<p>You can inject code into pages whose URL can be expressed using a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match pattern</a>. To do so, its scheme must be one of: <code>http</code>, <code>https</code>, or <code>file</code>.</p>
+You can inject code into pages whose URL can be expressed using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). To do so, its scheme must be one of: `http`, `https`, or `file`.
 
-<p>You must have the permission for the page's URL—either explicitly, as a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission</a>—or, via the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission">activeTab permission</a>.</p>
+You must have the permission for the page's URL—either explicitly, as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)—or, via the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 
-<p>You can also inject code into pages packaged with your own extension:</p>
+You can also inject code into pages packaged with your own extension:
 
-<pre class="brush: js">browser.tabs.create({url: "/my-page.html"}).then(() =&gt; {
+```js
+browser.tabs.create({url: "/my-page.html"}).then(() => {
   browser.tabs.executeScript({
     code: `console.log('location:', window.location.href);`
   });
-});</pre>
+});
+```
 
-<p>You don't need any special permissions to do this.</p>
+You don't need any special permissions to do this.
 
-<p>You <em>cannot</em> inject code into any of the browser's built-in pages, such as: <code>about:debugging</code>, <code>about:addons</code>, or the page that opens when you open a new empty tab.</p>
+You _cannot_ inject code into any of the browser's built-in pages, such as: `about:debugging`, `about:addons`, or the page that opens when you open a new empty tab.
 
-<p>The scripts you inject are called <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a>.</p>
+The scripts you inject are called [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts).
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">let <var>executing</var> = browser.tabs.executeScript(
-  <var>tabId</var>,                 // optional integer
-  <var>details</var>                // object
+```js
+let executing = browser.tabs.executeScript(
+  tabId,                 // optional integer
+  details                // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code><var>tabId</var></code> {{optional_inline}}</dt>
-	<dd>
-	<p><code>integer</code>. The ID of the tab in which to run the script.</p>
+- `tabId` {{optional_inline}}
 
-	<p>Defaults to the active tab of the current window.</p>
-	</dd>
-	<dt><code><var>details</var></code></dt>
-	<dd>
-	<p>An object describing the script to run.</p>
+  - : `integer`. The ID of the tab in which to run the script.
 
-	<p>It contains the following properties:</p>
-	<dl>
-		<dt><code><var>allFrames</var></code> {{optional_inline}}</dt>
-		<dd>
-      <p><code>boolean</code>. If <code>true</code>, the code will be injected into all frames of the current page.</p>
-		  <p>If <code>true</code> and <code><var>frameId</var></code> is set, then it will raise an error. (<code><var>frameId</var></code> and <code><var>allFrames</var></code> are mutually exclusive.)</p>
+    Defaults to the active tab of the current window.
 
-		  <p>If it is <code>false</code>, code is only injected into the top frame.</p>
+- `details`
 
-		  <p>Defaults to <code>false</code>.</p>
-		</dd>
-		<dt><code><var>code</var></code> {{optional_inline}}</dt>
-		<dd>
-		  <p><code>string</code>. Code to inject, as a text string.</p>
+  - : An object describing the script to run.
 
-		  <div class="notecard warning">
-		    <p><strong>Warning:</strong> Don’t use this property to interpolate untrusted data into JavaScript, as this could lead to a security issue.</p>
-		  </div>
-		</dd>
-		<dt><code><var>file</var></code> {{optional_inline}}</dt>
-		<dd>
-		  <p><code>string</code>. Path to a file containing the code to inject.</p>
+    It contains the following properties:
 
-  		<ul>
-  			<li>In Firefox, relative URLs not starting at the extension root are resolved relative to the current page URL.</li>
-  			<li>In Chrome, these URLs are resolved relative to the extension's base URL.</li>
-  		</ul>
+    - `allFrames` {{optional_inline}}
 
-		<p>To work cross-browser, you can specify the path as a relative URL, starting at the extension's root, like this: <code>"/path/to/script.js"</code>.</p>
-		</dd>
-		<dt><code><var>frameId</var></code> {{optional_inline}}</dt>
-		<dd>
-		<p><code>integer</code>. The frame where the code should be injected.</p>
+      - : `boolean`. If `true`, the code will be injected into all frames of the current page.
 
-		<p>Defaults to <code>0</code> (the top-level frame).</p>
-		</dd>
-		<dt><code><var>matchAboutBlank</var></code> {{optional_inline}}</dt>
-		<dd>
-		<p><code>boolean</code>. If <code>true</code>, the code will be injected into embedded <code>about:blank</code> and <code>about:srcdoc</code> frames if your extension has access to their parent document. The code cannot be inserted in top-level <code>about:</code> frames.</p>
+        If `true` and `frameId` is set, then it will raise an error. (`frameId` and `allFrames` are mutually exclusive.)
 
-		<p>Defaults to <code>false</code>.</p>
-		</dd>
-		<dt><code><var>runAt</var></code> {{optional_inline}}</dt>
-		<dd>
-		<p>{{WebExtAPIRef('extensionTypes.RunAt')}}. The soonest that the code will be injected into the tab.</p>
+        If it is `false`, code is only injected into the top frame.
 
-		<p>Defaults to <code>"document_idle"</code>.</p>
-		</dd>
-	</dl>
-	</dd>
-</dl>
+        Defaults to `false`.
 
-<h3 id="Return_value">Return value</h3>
+    - `code` {{optional_inline}}
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will resolve to an array of objects. The array's values represent the result of the script in every injected frame.</p>
+      - : `string`. Code to inject, as a text string.
 
-<p>The result of the script is the last evaluated statement, which is similar to what would be output (the results, not any <code>console.log()</code> output) if you executed the script in the <a href="/en-US/docs/Tools/Web_Console">Web Console</a>. For example, consider a script like this:</p>
+        > **Warning:** Don’t use this property to interpolate untrusted data into JavaScript, as this could lead to a security issue.
 
-<pre class="brush: js">let foo='my result'; foo;</pre>
+    - `file` {{optional_inline}}
 
-<p>Here the results array will contain the string "<code>my result</code>" as an element.</p>
+      - : `string`. Path to a file containing the code to inject.
 
-<p>The result values must be <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured clonable</a> (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm">Data cloning algorithm</a>).</p>
+        - In Firefox, relative URLs not starting at the extension root are resolved relative to the current page URL.
+        - In Chrome, these URLs are resolved relative to the extension's base URL.
 
-<div class="notecard note">
-<p><strong>Note:</strong> The last statement may be also a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>, but this feature is unsupported by <a href="https://github.com/mozilla/webextension-polyfill#tabsexecutescript">webextension-polyfill</a> library.</p>
-</div>
+        To work cross-browser, you can specify the path as a relative URL, starting at the extension's root, like this: `"/path/to/script.js"`.
 
-<p>If any error occurs, the promise will be rejected with an error message.</p>
+    - `frameId` {{optional_inline}}
 
-<h2 id="Examples">Examples</h2>
+      - : `integer`. The frame where the code should be injected.
 
-<p>This example executes a one-line code snippet in the currently active tab:</p>
+        Defaults to `0` (the top-level frame).
 
-<pre class="brush: js">function onExecuted(result) {
+    - `matchAboutBlank` {{optional_inline}}
+
+      - : `boolean`. If `true`, the code will be injected into embedded `about:blank` and `about:srcdoc` frames if your extension has access to their parent document. The code cannot be inserted in top-level `about:` frames.
+
+        Defaults to `false`.
+
+    - `runAt` {{optional_inline}}
+
+      - : {{WebExtAPIRef('extensionTypes.RunAt')}}. The soonest that the code will be injected into the tab.
+
+        Defaults to `"document_idle"`.
+
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will resolve to an array of objects. The array's values represent the result of the script in every injected frame.
+
+The result of the script is the last evaluated statement, which is similar to what would be output (the results, not any `console.log()` output) if you executed the script in the [Web Console](/en-US/docs/Tools/Web_Console). For example, consider a script like this:
+
+```js
+let foo='my result'; foo;
+```
+
+Here the results array will contain the string "`my result`" as an element.
+
+The result values must be [structured clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
+
+> **Note:** The last statement may be also a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), but this feature is unsupported by [webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript) library.
+
+If any error occurs, the promise will be rejected with an error message.
+
+## Examples
+
+This example executes a one-line code snippet in the currently active tab:
+
+```js
+function onExecuted(result) {
   console.log(`We made it green`);
 }
 
@@ -145,11 +141,13 @@ const makeItGreen = 'document.body.style.border = "5px solid green"';
 const executing = browser.tabs.executeScript({
   code: makeItGreen
 });
-executing.then(onExecuted, onError);</pre>
+executing.then(onExecuted, onError);
+```
 
-<p>This example executes a script from a file (packaged with the extension) called <code>"content-script.js"</code>. The script is executed in the currently active tab. The script is executed in subframes as well as the main document:</p>
+This example executes a script from a file (packaged with the extension) called `"content-script.js"`. The script is executed in the currently active tab. The script is executed in subframes as well as the main document:
 
-<pre class="brush: js">function onExecuted(result) {
+```js
+function onExecuted(result) {
   console.log(`We executed in all subframes`);
 }
 
@@ -161,11 +159,13 @@ const executing = browser.tabs.executeScript({
   file: "/content-script.js",
   allFrames: true
 });
-executing.then(onExecuted, onError);</pre>
+executing.then(onExecuted, onError);
+```
 
-<p>This example executes a script from a file (packaged with the extension) called <code>"content-script.js"</code>. The script is executed in the tab with an ID of <code>2</code>:</p>
+This example executes a script from a file (packaged with the extension) called `"content-script.js"`. The script is executed in the tab with an ID of `2`:
 
-<pre class="brush: js">function onExecuted(result) {
+```js
+function onExecuted(result) {
   console.log(`We executed in tab 2`);
 }
 
@@ -177,20 +177,18 @@ const executing = browser.tabs.executeScript(
   2, {
     file: "/content-script.js"
 });
-executing.then(onExecuted, onError);</pre>
+executing.then(onExecuted, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div class="notecard note">
-	<p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -217,5 +215,4 @@ executing.then(onExecuted, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

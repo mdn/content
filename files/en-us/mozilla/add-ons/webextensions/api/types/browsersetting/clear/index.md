@@ -11,41 +11,41 @@ tags:
   - WebExtensions
   - clear
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Use <code>BrowserSetting.clear()</code> to clear any changes the extension has made to the browser setting. The browser setting will revert to its previous value.</p>
+Use `BrowserSetting.clear()` to clear any changes the extension has made to the browser setting. The browser setting will revert to its previous value.
 
-<p>The extension will also give up control of the setting, allowing an extension with lower precedence (that is, an extension that was installed before this one) to modify the setting. See <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set">BrowserSetting.set()</a></code> to learn more about controlling settings.</p>
+The extension will also give up control of the setting, allowing an extension with lower precedence (that is, an extension that was installed before this one) to modify the setting. See [`BrowserSetting.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) to learn more about controlling settings.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. If clearing the value failed, the promise resolves to <code>false</code>. If clearing the value succeeded it resolves to <code>true</code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If clearing the value failed, the promise resolves to `false`. If clearing the value succeeded it resolves to `true`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var clearing = setting.clear(
+```js
+var clearing = setting.clear(
   details     // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>An empty object.</dd>
-</dl>
+- `details`
+  - : An empty object.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a <code>boolean</code>: <code>true</code> if the setting was cleared, <code>false</code> otherwise.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a `boolean`: `true` if the setting was cleared, `false` otherwise.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>See {{WebExtAPIRef("types.BrowserSetting")}}.</p>
+See {{WebExtAPIRef("types.BrowserSetting")}}.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>Clear the <code>webRTCIPHandlingPolicy</code> setting:</p>
+Clear the `webRTCIPHandlingPolicy` setting:
 
-<pre class="brush: js">function onCleared(result) {
+```js
+function onCleared(result) {
   if (result) {
     console.log("Setting was cleared");
   } else {
@@ -54,19 +54,18 @@ tags:
 }
 
 var clearing = browser.privacy.network.webRTCIPHandlingPolicy.clear({});
-clearing.then(onCleared);</pre>
+clearing.then(onCleared);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note:</strong></p>
+> **Note:**
+>
+> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/extensions/types) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/types"><code>chrome.types</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -93,5 +92,4 @@ clearing.then(onCleared);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

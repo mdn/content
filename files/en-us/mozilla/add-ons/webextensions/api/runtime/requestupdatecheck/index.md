@@ -13,47 +13,45 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.requestUpdateCheck
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Checks to see if an update for the extension is available.</p>
+Checks to see if an update for the extension is available.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var requestingCheck = browser.runtime.requestUpdateCheck()
-</pre>
+```js
+var requestingCheck = browser.runtime.requestUpdateCheck()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with two arguments:</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with two arguments:
 
-<dl>
- <dt><code>status</code></dt>
- <dd>A {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}} value — the result of the update check.</dd>
- <dt><code>details</code>{{optional_inline}}</dt>
- <dd>
-   <p><code>object</code>. If <code>status</code> is <code>update_available</code>, this contains more information about the update. It is an object containing a single property:</p>
-   <dl>
-    <dt><code>version</code></dt>
-    <dd><code>string</code>. The update's version.</dd>
-   </dl>
- </dd>
-</dl>
+- `status`
+  - : A {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}} value — the result of the update check.
+- `details`{{optional_inline}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+  - : `object`. If `status` is `update_available`, this contains more information about the update. It is an object containing a single property:
 
-<p>{{Compat}}</p>
+    - `version`
+      - : `string`. The update's version.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>Request an update, and log the new version if one is available:</p>
+{{Compat}}
 
-<pre class="brush: js">function onRequested(status, details) {
+## Examples
+
+Request an update, and log the new version if one is available:
+
+```js
+function onRequested(status, details) {
   console.log(status);
   if (status === "update_available") {
     console.log(details.version);
@@ -65,18 +63,16 @@ function onError(error) {
 }
 
 var requestingCheck = browser.runtime.requestUpdateCheck(onRequested);
-requestingCheck.then(onRequested, onError);</pre>
+requestingCheck.then(onRequested, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-requestUpdateCheck) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#method-requestUpdateCheck"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -103,5 +99,4 @@ requestingCheck.then(onRequested, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

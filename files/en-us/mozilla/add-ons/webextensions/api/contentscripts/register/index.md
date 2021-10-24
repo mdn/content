@@ -10,74 +10,69 @@ tags:
   - register
 browser-compat: webextensions.api.contentScripts.register
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Use this function to register one or more content scripts.</p>
+Use this function to register one or more content scripts.
 
-<p>It accepts one parameter, which is an object with similar properties to the objects given in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> manifest key (but note that <code>content_scripts</code> is an array of objects, while the argument to <code>register()</code> is a single object).</p>
+It accepts one parameter, which is an object with similar properties to the objects given in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest key (but note that `content_scripts` is an array of objects, while the argument to `register()` is a single object).
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var registering = browser.contentScripts.register(
+```js
+var registering = browser.contentScripts.register(
   contentScriptOptions       // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>contentScriptOptions</code></dt>
- <dd>
- <p><code>object</code>. A <code>RegisteredContentScriptOptions</code> object representing the content scripts to register. It has similar syntax to the objects in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> manifest key array. The differences are:</p>
+- `contentScriptOptions`
 
- <ul>
-  <li>property names use camelCase, rather than underscores (for example, <code>excludeMatches</code>, not <code>exclude_matches</code></li>
-  <li>the <code>js</code> and <code>css</code> properties allow you to register strings as well as URLs, so their syntax has to distinguish these types.</li>
- </ul>
+  - : `object`. A `RegisteredContentScriptOptions` object representing the content scripts to register. It has similar syntax to the objects in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest key array. The differences are:
 
- <p>The <code>RegisteredContentScriptOptions</code> object has the following properties:</p>
+    - property names use camelCase, rather than underscores (for example, `excludeMatches`, not `exclude_matches`
+    - the `js` and `css` properties allow you to register strings as well as URLs, so their syntax has to distinguish these types.
 
- <dl>
-  <dt><code>allFrames</code>{{optional_inline}}</dt>
-  <dd>Same as <code>all_frames</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
-  <dt><code>css</code>{{optional_inline}}</dt>
-  <dd>An array of objects. Each object has either a property named <code>file</code>, which is a URL starting at the extension's manifest.json and pointing to a CSS file to register, or a property named <code>code</code>, which is some CSS code to register.</dd>
-  <dt><code>excludeGlobs</code>{{optional_inline}}</dt>
-  <dd>Same as <code>exclude_globs</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
-  <dt><code>excludeMatches</code>{{optional_inline}}</dt>
-  <dd>Same as <code>exclude_matches</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
-  <dt><code>includeGlobs</code>{{optional_inline}}</dt>
-  <dd>Same as <code>include_globs</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
-  <dt><code>js</code>{{optional_inline}}</dt>
-  <dd>An array of objects. Each object has either a property named <code>file</code>, which is a URL starting at the extension's manifest.json and pointing to a JavaScript file to register, or a property named <code>code</code>, which is some JavaScript code to register.</dd>
-  <dt><code>matchAboutBlank</code>{{optional_inline}}</dt>
-  <dd>Same as <code>match_about_blank</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
-  <dt><code>matches</code></dt>
-  <dd>Same as <code>matches</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
-  <dt><code>runAt</code>{{optional_inline}}</dt>
-  <dd>Same as <code>run_at</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
- </dl>
- </dd>
-</dl>
+    The `RegisteredContentScriptOptions` object has the following properties:
 
-<h3 id="Return_value">Return value</h3>
+    - `allFrames`{{optional_inline}}
+      - : Same as `all_frames` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+    - `css`{{optional_inline}}
+      - : An array of objects. Each object has either a property named `file`, which is a URL starting at the extension's manifest.json and pointing to a CSS file to register, or a property named `code`, which is some CSS code to register.
+    - `excludeGlobs`{{optional_inline}}
+      - : Same as `exclude_globs` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+    - `excludeMatches`{{optional_inline}}
+      - : Same as `exclude_matches` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+    - `includeGlobs`{{optional_inline}}
+      - : Same as `include_globs` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+    - `js`{{optional_inline}}
+      - : An array of objects. Each object has either a property named `file`, which is a URL starting at the extension's manifest.json and pointing to a JavaScript file to register, or a property named `code`, which is some JavaScript code to register.
+    - `matchAboutBlank`{{optional_inline}}
+      - : Same as `match_about_blank` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+    - `matches`
+      - : Same as `matches` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+    - `runAt`{{optional_inline}}
+      - : Same as `run_at` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef("contentScripts.RegisteredContentScript")}} object that you can use to unregister the content scripts.</p>
+### Return value
 
-<p>Currently, content scripts are unregistered when the related extension page (from which the content scripts were registered) is unloaded, so you should register a content script from an extension page that persists at least as long as you want the content scripts to stay registered.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef("contentScripts.RegisteredContentScript")}} object that you can use to unregister the content scripts.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Currently, content scripts are unregistered when the related extension page (from which the content scripts were registered) is unloaded, so you should register a content script from an extension page that persists at least as long as you want the content scripts to stay registered.
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="Examples">Examples</h2>
+{{Compat}}
 
-<p>This example registers the <code>defaultCode</code> content script for all <code>.org</code> URLs:</p>
+## Examples
 
-<pre class="brush: js">const defaultHosts = "*://*.org/*";
-const defaultCode = "document.body.innerHTML = '&lt;h1&gt;This page has been eaten&lt;h1&gt;'";
+This example registers the `defaultCode` content script for all `.org` URLs:
+
+```js
+const defaultHosts = "*://*.org/*";
+const defaultCode = "document.body.innerHTML = '<h1>This page has been eaten<h1>'";
 
 async function register(hosts, code) {
 
@@ -89,16 +84,18 @@ async function register(hosts, code) {
 
 }
 
-var registered = register(defaultHosts, defaultCode);</pre>
+var registered = register(defaultHosts, defaultCode);
+```
 
-<p>This code registers the JS file at content_scripts/example.js:</p>
+This code registers the JS file at content_scripts/example.js:
 
-<pre class="brush: js">const scriptObj = await browser.contentScripts.register({
+```js
+const scriptObj = await browser.contentScripts.register({
   "js": [{file: "/content_scripts/example.js"}],
-  "matches": ["&lt;all_urls&gt;"],
+  "matches": ["<all_urls>"],
   "allFrames": true,
   "runAt": "document_start"
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

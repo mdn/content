@@ -13,91 +13,87 @@ tags:
   - webNavigation
 browser-compat: webextensions.api.webNavigation.onErrorOccurred
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when an error occurs and the navigation is aborted. This can happen if either a network error occurred, or the user aborted the navigation.</p>
+Fired when an error occurs and the navigation is aborted. This can happen if either a network error occurred, or the user aborted the navigation.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">browser.webNavigation.onErrorOccurred.addListener(
-  <var>listener</var>,                   // function
-  <var>filter</var>                      // optional object
+```js
+browser.webNavigation.onErrorOccurred.addListener(
+  listener,                   // function
+  filter                      // optional object
 )
-browser.webNavigation.onErrorOccurred.removeListener(<var>listener</var>)
-browser.webNavigation.onErrorOccurred.hasListener(<var>listener</var>)
-</pre>
+browser.webNavigation.onErrorOccurred.removeListener(listener)
+browser.webNavigation.onErrorOccurred.hasListener(listener)
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
-	<dt><code>addListener(<var>listener</var>)</code></dt>
-	<dt><code>addListener(<var>listener</var>, <var>filter</var>)</code></dt>
-	<dd>Adds a listener to this event.</dd>
-	<dt><code>removeListener(<var>listener</var>)</code></dt>
-	<dd>Stop listening to this event. The <code><var>listener</var></code> argument is the listener to remove.</dd>
-	<dt><code>hasListener(<var>listener</var>)</code></dt>
-	<dd>Check whether <code><var>listener</var></code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(listener)`
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+  `addListener(listener, filter)`
 
-<h3 id="Parameters">Parameters</h3>
+  - : Adds a listener to this event.
 
-<dl>
-	<dt><code><var>listener</var></code></dt>
-	<dd>
-	<p>Function that will be called when this event occurs.</p>
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-	<p>The <code><var>listener</var></code> function will be called with the following arguments:</p>
+## addListener syntax
 
-	<dl>
-		<dt><code>details</code></dt>
-		<dd>
-		<p><a href="#details"><code>object</code></a>. Details about the navigation event. <strong><code>details</code></strong> has the following properties:</p>
+### Parameters
 
-		<dl>
-			<dt><code>tabId</code></dt>
-			<dd><code>integer</code>. The ID of the tab in which the navigation was happening.</dd>
-			<dt><code>url</code></dt>
-			<dd><code>string</code>. The URL to which the given frame was navigating.</dd>
-			<dt><code>processId</code></dt>
-			<dd><code>integer</code>. The ID of the process in which this tab is being rendered.</dd>
-			<dt><code>frameId</code></dt>
-			<dd>
-        <p><code>integer</code>. Frame in which the navigation was happening.</p>
-  			<p><code>0</code> indicates that navigation happened in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}.</p>
+- `listener`
 
-			  <p>A positive value indicates that navigation happened in a nested iframe.</p>
+  - : Function that will be called when this event occurs.
 
-			  <p>Frame IDs are unique for a given tab and process.</p>
-			</dd>
-			<dt><code>timeStamp</code></dt>
-			<dd><code>number</code>. The time at which the error occurred, in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
-			<dt><code>error</code></dt>
-			<dd><code>string</code>. The error code. This is an internal error code, and is not guaranteed to stay the same or be consistent from one browser to another.</dd>
-		</dl>
-		</dd>
-	</dl>
-	</dd>
-	<dt><code><var>filter</var></code>{{optional_inline}}</dt>
-	<dd>
-	<p><code>object</code>. An object containing a single property <code>url</code>, which is an <code>Array</code> of {{WebExtAPIRef("events.UrlFilter")}} objects.</p>
+    The `listener` function will be called with the following arguments:
 
-	<p>If you include this parameter, then the event will fire only for transitions to URLs which match at least one <code>UrlFilter</code> in the array.</p>
+    - `details`
 
-	<p>If you omit this parameter, the event will fire for all transitions.</p>
-	</dd>
-</dl>
+      - : [`object`](#details). Details about the navigation event. **`details`** has the following properties:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+        - `tabId`
+          - : `integer`. The ID of the tab in which the navigation was happening.
+        - `url`
+          - : `string`. The URL to which the given frame was navigating.
+        - `processId`
+          - : `integer`. The ID of the process in which this tab is being rendered.
+        - `frameId`
 
-<p>{{Compat}}</p>
+          - : `integer`. Frame in which the navigation was happening.
 
-<h2 id="Examples">Examples</h2>
+            `0` indicates that navigation happened in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}.
 
-<p>Logs the target URLs for <code>onErrorOccurred</code>, if the target URL's <code>hostname</code> contains <code>"example.com"</code> or starts with <code>"developer"</code>.</p>
+            A positive value indicates that navigation happened in a nested iframe.
 
-<pre class="brush: js">const filter = {
+            Frame IDs are unique for a given tab and process.
+
+        - `timeStamp`
+          - : `number`. The time at which the error occurred, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+        - `error`
+          - : `string`. The error code. This is an internal error code, and is not guaranteed to stay the same or be consistent from one browser to another.
+
+- `filter`{{optional_inline}}
+
+  - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects.
+
+    If you include this parameter, then the event will fire only for transitions to URLs which match at least one `UrlFilter` in the array.
+
+    If you omit this parameter, the event will fire for all transitions.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+Logs the target URLs for `onErrorOccurred`, if the target URL's `hostname` contains `"example.com"` or starts with `"developer"`.
+
+```js
+const filter = {
   url:
   [
     {hostContains: "example.com"},
@@ -111,18 +107,15 @@ function logOnErrorOccurred(details) {
 }
 
 browser.webNavigation.onErrorOccurred.addListener(logOnErrorOccurred, filter);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webNavigation#event-onBeforeNavigate"><code>chrome.webNavigation</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -149,5 +142,4 @@ browser.webNavigation.onErrorOccurred.addListener(logOnErrorOccurred, filter);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

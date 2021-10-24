@@ -7,33 +7,28 @@ tags:
   - Web
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div class="note">
-<p><strong>Note:</strong> The following example may not work, since the storage API doesn't work with a temporary Addon ID, see also https://bugzil.la/1323228.</p>
-</div>
+> **Note:** The following example may not work, since the storage API doesn't work with a temporary Addon ID, see also https\://bugzil.la/1323228.
 
-<p>A settings page gives users a way to see and change settings (sometimes also called "preferences" or "options") for the extension.</p>
+A settings page gives users a way to see and change settings (sometimes also called "preferences" or "options") for the extension.
 
-<p>With WebExtension APIs, settings are generally stored using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code> API. Implementing a settings page is a three-step process:</p>
+With WebExtension APIs, settings are generally stored using the [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API. Implementing a settings page is a three-step process:
 
-<ul>
- <li>Write an HTML file that displays settings and lets the user change them.</li>
- <li>Write a script, included from the HTML file, that populates the settings page from storage and updates stored settings when the user changes them.</li>
- <li>Set the path to the HTML file as the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code> key in <code>manifest.json</code>. By doing this, the HTML document will be shown in the browser's add-on manager, alongside the extension's name and description.</li>
-</ul>
+- Write an HTML file that displays settings and lets the user change them.
+- Write a script, included from the HTML file, that populates the settings page from storage and updates stored settings when the user changes them.
+- Set the path to the HTML file as the [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) key in `manifest.json`. By doing this, the HTML document will be shown in the browser's add-on manager, alongside the extension's name and description.
 
-<div class="note">
-<p><strong>Note:</strong> You can also open this page programmatically using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage">runtime.openOptionsPage()</a></code> function.</p>
-</div>
+> **Note:** You can also open this page programmatically using the [`runtime.openOptionsPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) function.
 
-<h2 id="A_simple_extension">A simple extension</h2>
+## A simple extension
 
-<p>First, we'll write an extension that adds a blue border to every page the user visits.</p>
+First, we'll write an extension that adds a blue border to every page the user visits.
 
-<p>Create a new directory called <code>settings</code>, then create a file called <code>manifest.json</code> inside it with the following contents:</p>
+Create a new directory called `settings`, then create a file called `manifest.json` inside it with the following contents:
 
-<pre class="brush: json">{
+```json
+{
 
   "manifest_version": 2,
   "name": "Settings example",
@@ -41,32 +36,36 @@ tags:
 
   "content_scripts": [
     {
-      "matches": ["&lt;all_urls&gt;"],
+      "matches": ["<all_urls>"],
       "js": ["borderify.js"]
     }
   ]
 
-}</pre>
+}
+```
 
-<p>This extension instructs the browser to load a content script called "borderify.js" into all web pages the user visits.</p>
+This extension instructs the browser to load a content script called "borderify.js" into all web pages the user visits.
 
-<p>Next, create a file called <code>borderify.js</code> inside the <code>settings</code> directory, and give it these contents:</p>
+Next, create a file called `borderify.js` inside the `settings` directory, and give it these contents:
 
-<pre class="brush: js">document.body.style.border = "10px solid blue";</pre>
+```js
+document.body.style.border = "10px solid blue";
+```
 
-<p>This just adds a blue border to the page.</p>
+This just adds a blue border to the page.
 
-<p>Now <a href="https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/">install the extension</a> and test it — open up any web page you like:</p>
+Now [install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) and test it — open up any web page you like:
 
-<p>{{EmbedYouTube("E-WUhihF8fw")}}</p>
+{{EmbedYouTube("E-WUhihF8fw")}}
 
-<h2 id="Adding_settings">Adding settings</h2>
+## Adding settings
 
-<p>Now let's create a settings page to allow the user to set the color of the border.</p>
+Now let's create a settings page to allow the user to set the color of the border.
 
-<p>First, update <code>manifest.json</code> so it has these contents:</p>
+First, update `manifest.json` so it has these contents:
 
-<pre class="brush: json">{
+```json
+{
 
   "manifest_version": 2,
   "name": "Settings example",
@@ -74,7 +73,7 @@ tags:
 
   "content_scripts": [
     {
-      "matches": ["&lt;all_urls&gt;"],
+      "matches": ["<all_urls>"],
       "js": ["borderify.js"]
     }
   ],
@@ -92,47 +91,47 @@ tags:
   }
 
 }
-</pre>
+```
 
-<p>We've added three new manifest keys:</p>
+We've added three new manifest keys:
 
-<dl>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code></dt>
- <dd>This sets an HTML document to be the settings page (also called options page) for this extension.</dd>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code></dt>
- <dd>We'll use the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code> API to store the settings, and we need to ask permission to use this API.</dd>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code></dt>
- <dd>You have to include an extension id in order to save and retrieve settings from synchronized storage.</dd>
-</dl>
+- [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)
+  - : This sets an HTML document to be the settings page (also called options page) for this extension.
+- [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)
+  - : We'll use the [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API to store the settings, and we need to ask permission to use this API.
+- [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
+  - : You have to include an extension id in order to save and retrieve settings from synchronized storage.
 
-<p>Next, because we've promised to provide <code>options.html</code>, let's create it. Create a file with that name inside the <code>settings</code> directory, and give it the following contents:</p>
+Next, because we've promised to provide `options.html`, let's create it. Create a file with that name inside the `settings` directory, and give it the following contents:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+```html
+<!DOCTYPE html>
 
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-  &lt;/head&gt;
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
 
-  &lt;body&gt;
+  <body>
 
-    &lt;form&gt;
-        &lt;label&gt;Border color&lt;input type="text" id="color" &gt;&lt;/label&gt;
-        &lt;button type="submit"&gt;Save&lt;/button&gt;
-    &lt;/form&gt;
+    <form>
+        <label>Border color<input type="text" id="color" ></label>
+        <button type="submit">Save</button>
+    </form>
 
-    &lt;script src="options.js"&gt;&lt;/script&gt;
+    <script src="options.js"></script>
 
-  &lt;/body&gt;
+  </body>
 
-&lt;/html&gt;
-</pre>
+</html>
+```
 
-<p>This defines a {{htmlelement("form")}} with a labeled text {{htmlelement("input")}} and a submit {{htmlelement("button")}}. It also includes a script called <code>options.js</code>.</p>
+This defines a {{htmlelement("form")}} with a labeled text {{htmlelement("input")}} and a submit {{htmlelement("button")}}. It also includes a script called `options.js`.
 
-<p>Create <code>options.js</code>, again in the <code>settings</code> directory, and give it the following contents:</p>
+Create `options.js`, again in the `settings` directory, and give it the following contents:
 
-<pre class="brush: js">function saveOptions(e) {
+```js
+function saveOptions(e) {
   e.preventDefault();
   browser.storage.sync.set({
     color: document.querySelector("#color").value
@@ -155,34 +154,31 @@ function restoreOptions() {
 
 document.addEventListener("DOMContentLoaded", restoreOptions);
 document.querySelector("form").addEventListener("submit", saveOptions);
-</pre>
+```
 
-<p>This does two things:</p>
+This does two things:
 
-<ul>
- <li>When the document has loaded, it fetches the value of <code>"color"</code> from storage using <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get">storage.sync.get()</a></code>. If the value isn't set, it uses the default <code>"blue"</code>. This retrieves the values from the <code>sync</code> storage area.</li>
- <li>When the user submits the form by clicking <kbd><strong>Save</strong></kbd>, it stores the value of the textbox using <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set">storage.sync.set()</a></code>. This saves the value to the <code>sync</code> storage area.</li>
-</ul>
+- When the document has loaded, it fetches the value of `"color"` from storage using [`storage.sync.get()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get). If the value isn't set, it uses the default `"blue"`. This retrieves the values from the `sync` storage area.
+- When the user submits the form by clicking
 
-<div class="notecard note">
-<p><strong>Note:</strong> Specifying a separate <code>.js</code> file is required. You cannot use inline JavaScript.</p>
-</div>
+  <kbd><strong>Save</strong></kbd>
 
-<p>You could store the settings values in local storage instead if you feel that local storage is preferable for your extension.</p>
+  , it stores the value of the textbox using [`storage.sync.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set). This saves the value to the `sync` storage area.
 
-<div class="note">
-<p><strong>Note:</strong> The implementation of <code>storage.sync</code> in Firefox relies on the Add-on ID. If you use <code>storage.sync</code>, you must set an ID for your extension using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> key in <code>manifest.json</code>, as shown in the sample manifest above.</p>
-</div>
+> **Note:** Specifying a separate `.js` file is required. You cannot use inline JavaScript.
 
-<p>Finally, update <code>borderify.js</code> to read the border color from storage:</p>
+You could store the settings values in local storage instead if you feel that local storage is preferable for your extension.
 
-<div class="warning">
-<p><strong>Warning:</strong> Due to a bug in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get">browser.storage.local.get()</a></code> in Firefox versions prior to 52, the following code will not function.</p>
+> **Note:** The implementation of `storage.sync` in Firefox relies on the Add-on ID. If you use `storage.sync`, you must set an ID for your extension using the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in `manifest.json`, as shown in the sample manifest above.
 
-<p>To make it function in Firefox versions below 52, the two occurrences of <code>item.color</code> in <code>onGot()</code> must be changed to <code>item[0].color</code>.</p>
-</div>
+Finally, update `borderify.js` to read the border color from storage:
 
-<pre class="brush: js"> function onError(error) {
+> **Warning:** Due to a bug in [`browser.storage.local.get()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) in Firefox versions prior to 52, the following code will not function.
+>
+> To make it function in Firefox versions below 52, the two occurrences of `item.color` in `onGot()` must be changed to `item[0].color`.
+
+```js
+ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
@@ -196,38 +192,32 @@ function onGot(item) {
 
 let getting = browser.storage.sync.get("color");
 getting.then(onGot, onError);
-</pre>
+```
 
-<p>At this point, the complete extension should look like this:</p>
+At this point, the complete extension should look like this:
 
-<pre>settings/
-    borderify.js
-    manifest.json
-    options.html
-    options.js</pre>
+    settings/
+        borderify.js
+        manifest.json
+        options.html
+        options.js
 
-<p>Now:</p>
+Now:
 
-<ul>
- <li><a href="https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on">reload the extension</a></li>
- <li>load a web page</li>
- <li>open the settings page and change the border color</li>
- <li>reload the web page to see the difference.</li>
-</ul>
+- [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on)
+- load a web page
+- open the settings page and change the border color
+- reload the web page to see the difference.
 
-<p>In Firefox you can access the settings page by visiting about:addons and clicking the <kbd><strong>Preferences</strong></kbd> button next to the extension's entry.</p>
+In Firefox you can access the settings page by visiting about:addons and clicking the <kbd><strong>Preferences</strong></kbd> button next to the extension's entry.
 
-<p>{{EmbedYouTube("ECt9cbWh1qs")}}</p>
+{{EmbedYouTube("ECt9cbWh1qs")}}
 
-<h2 id="Learn_more">Learn more</h2>
+## Learn more
 
-<ul>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code> key of <code>manifest.json</code> reference documentation</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code> API reference documentation</li>
- <li>open the settings page directly from your extension using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage">runtime.openOptionsPage()</a></code> API</li>
- <li>Settings page example:
-  <ul>
-   <li><a href="https://github.com/mdn/webextensions-examples/tree/master/favourite-colour">favourite-colour</a></li>
-  </ul>
- </li>
-</ul>
+- [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) key of `manifest.json` reference documentation
+- [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API reference documentation
+- open the settings page directly from your extension using the [`runtime.openOptionsPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) API
+- Settings page example:
+
+  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)

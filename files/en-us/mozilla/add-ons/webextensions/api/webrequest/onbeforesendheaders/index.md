@@ -13,179 +13,167 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.onBeforeSendHeaders
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>This event is triggered before sending any HTTP data, but after all HTTP headers are available. This is a good place to listen if you want to modify HTTP request headers.</p>
+This event is triggered before sending any HTTP data, but after all HTTP headers are available. This is a good place to listen if you want to modify HTTP request headers.
 
-<p>To have the request headers passed into the listener along with the rest of the request data, pass <code>"requestHeaders"</code> in the <code>extraInfoSpec</code> array.</p>
+To have the request headers passed into the listener along with the rest of the request data, pass `"requestHeaders"` in the `extraInfoSpec` array.
 
-<p>To modify the headers synchronously: pass <code>"blocking"</code> in <code>extraInfoSpec</code>, then in your event listener, return a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse" title='An object of this type is returned by event listeners that have set "blocking" in their extraInfoSpec argument.'><code>BlockingResponse</code></a> with a property named <code>requestHeaders</code>, whose value is the set of request headers to send.</p>
+To modify the headers synchronously: pass `"blocking"` in `extraInfoSpec`, then in your event listener, return a [`BlockingResponse`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse 'An object of this type is returned by event listeners that have set "blocking" in their extraInfoSpec argument.') with a property named `requestHeaders`, whose value is the set of request headers to send.
 
-<p>To modify the headers asynchronously: pass <code>"blocking"</code> in <code>extraInfoSpec</code>, then in your event listener, return a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which is resolved with a <code>BlockingResponse</code>.</p>
+To modify the headers asynchronously: pass `"blocking"` in `extraInfoSpec`, then in your event listener, return a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with a `BlockingResponse`.
 
-<p>If you use <code>"blocking"</code>, you must have the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">"webRequestBlocking" API permission</a> in your manifest.json.</p>
+If you use `"blocking"`, you must have the ["webRequestBlocking" API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in your manifest.json.
 
-<p>It is possible for extensions to conflict here. If two extensions listen to <code>onBeforeSendHeaders</code> for the same request, then the second listener will see modifications made by the first listener, and will be able to undo any changes made by the first listener. For example, if the first listener adds a <code>Cookie</code> header, and the second listener strips all <code>Cookie</code> headers, then the first listener's modifications will be lost. If you want to see the headers that are actually sent, without the risk that another extension will subsequently alter them, use {{WebExtAPIRef("webRequest.onSendHeaders", "onSendHeaders")}}, although you can't modify headers on this event.</p>
+It is possible for extensions to conflict here. If two extensions listen to `onBeforeSendHeaders` for the same request, then the second listener will see modifications made by the first listener, and will be able to undo any changes made by the first listener. For example, if the first listener adds a `Cookie` header, and the second listener strips all `Cookie` headers, then the first listener's modifications will be lost. If you want to see the headers that are actually sent, without the risk that another extension will subsequently alter them, use {{WebExtAPIRef("webRequest.onSendHeaders", "onSendHeaders")}}, although you can't modify headers on this event.
 
-<p>Not all headers actually sent are always included in <code>requestHeaders</code>. In particular, headers related to caching (for example, <code>Cache-Control</code>, <code>If-Modified-Since</code>, <code>If-None-Match</code>) are never sent. Also, behavior here may differ across browsers.</p>
+Not all headers actually sent are always included in `requestHeaders`. In particular, headers related to caching (for example, `Cache-Control`, `If-Modified-Since`, `If-None-Match`) are never sent. Also, behavior here may differ across browsers.
 
-<p>According to the specification, header names are case-insensitive. This means that be to sure of matching a particular header, the listener should lowercase the name before comparing it:</p>
+According to the specification, header names are case-insensitive. This means that be to sure of matching a particular header, the listener should lowercase the name before comparing it:
 
-<pre class="brush: js">for (let header of e.requestHeaders) {
+```js
+for (let header of e.requestHeaders) {
   if (header.name.toLowerCase() === desiredHeader) {
     // process header
   }
-}</pre>
+}
+```
 
-<p>The browser preserves the original case of the header name as generated by the browser. If the extension's listener changes the case, this change will not be kept.</p>
+The browser preserves the original case of the header name as generated by the browser. If the extension's listener changes the case, this change will not be kept.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.webRequest.onBeforeSendHeaders.addListener(
+```js
+browser.webRequest.onBeforeSendHeaders.addListener(
   listener,             //  function
   filter,               //  object
   extraInfoSpec         //  optional array of strings
 )
 browser.webRequest.onBeforeSendHeaders.removeListener(listener)
 browser.webRequest.onBeforeSendHeaders.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback, filter, extraInfoSpec)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback, filter, extraInfoSpec)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>details</code></dt>
-  <dd><a href="#details"><code>object</code></a>. Details of the request. This will include request headers if you have included <code>"requestHeaders"</code> in <code>extraInfoSpec</code>.</dd>
- </dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
- <p>Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If <code>"blocking"</code> is specified in the <code>extraInfoSpec</code> parameter, the event listener should return a <code>BlockingResponse</code> object, and can set its <code>requestHeaders</code> property.</p>
- </dd>
- <dt><code>filter</code></dt>
- <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events that will be sent to this listener.</dd>
- <dt><code>extraInfoSpec</code>{{optional_inline}}</dt>
- <dd>
-   <p><code>array</code> of <code>string</code>. Extra options for the event. You can pass any of the following values:</p>
-   <ul>
-    <li><code>"blocking"</code>: make the request synchronous, so you can modify request headers</li>
-    <li><code>"requestHeaders"</code>: include the request headers in the <code>details</code> object passed to the listener</li>
-   </ul>
- </dd>
-</dl>
+    - `details`
+      - : [`object`](#details). Details of the request. This will include request headers if you have included `"requestHeaders"` in `extraInfoSpec`.
 
-<h2 id="Additional_objects">Additional objects</h2>
+    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener should return a `BlockingResponse` object, and can set its `requestHeaders` property.
 
-<h3 id="details">details</h3>
+- `filter`
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events that will be sent to this listener.
+- `extraInfoSpec`{{optional_inline}}
 
-<dl>
- <dt><code>cookieStoreId</code></dt>
- <dd><code>string</code>. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity.</dd>
- <dt><code>documentUrl</code></dt>
- <dd><code>string</code>. URL of the document in which the resource will be loaded. For example, if the web page at "https://example.com" contains an image or an iframe, then the <code>documentUrl</code> for the image or iframe will be "https://example.com". For a top-level document, <code>documentUrl</code> is undefined.</dd>
- <dt><code>frameId</code></dt>
- <dd><code>integer</code>. Zero if the request happens in the main frame; a positive value is the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (<code>type</code> is <code>main_frame</code> or <code>sub_frame</code>), <code>frameId</code> indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.</dd>
- <dt><code>incognito</code></dt>
- <dd><code>boolean</code>. Whether the request is from a private browsing window.</dd>
- <dt><code>method</code></dt>
- <dd><code>string</code>. Standard HTTP method: for example, "GET" or "POST".</dd>
- <dt><code>originUrl</code></dt>
- <dd>
- <p><code>string</code>. URL of the resource which triggered the request. For example, if "https://example.com" contains a link, and the user clicks the link, then the <code>originUrl</code> for the resulting request is "https://example.com".</p>
+  - : `array` of `string`. Extra options for the event. You can pass any of the following values:
 
- <p>The <code>originUrl</code> is often but not always the same as the <code>documentUrl</code>. For example, if a page contains an iframe, and the iframe contains a link that loads a new document into the iframe, then the <code>documentUrl</code> for the resulting request will be the iframe's parent document, but the <code>originUrl</code> will be the URL of the document in the iframe that contained the link.</p>
- </dd>
- <dt><code>parentFrameId</code></dt>
- <dd><code>integer</code>. ID of the frame that contains the frame which sent the request. Set to -1 if no parent frame exists.</dd>
- <dt><code>proxyInfo</code></dt>
- <dd>
- <p><code>object</code>. This property is present only if the request is being proxied. It contains the following properties:</p>
+    - `"blocking"`: make the request synchronous, so you can modify request headers
+    - `"requestHeaders"`: include the request headers in the `details` object passed to the listener
 
- <dl>
-  <dt><code>host</code></dt>
-  <dd><code>string</code>. The hostname of the proxy server.</dd>
-  <dt><code>port</code></dt>
-  <dd><code>integer</code>. The port number of the proxy server.</dd>
-  <dt><code>type</code></dt>
-  <dd>
-  <p><code>string</code>. The type of proxy server. One of:</p>
+## Additional objects
 
-  <ul>
-   <li>"http": HTTP proxy (or SSL CONNECT for HTTPS)</li>
-   <li>"https": HTTP proxying over TLS connection to proxy</li>
-   <li>"socks": SOCKS v5 proxy</li>
-   <li>"socks4": SOCKS v4 proxy</li>
-   <li>"direct": no proxy</li>
-   <li>"unknown": unknown proxy</li>
-  </ul>
-  </dd>
-  <dt><code>username</code></dt>
-  <dd><code>string</code>. Username for the proxy service.</dd>
-  <dt><code>proxyDNS</code></dt>
-  <dd><code>boolean</code>. True if the proxy will perform domain name resolution based on the hostname supplied, meaning that the client should not do its own DNS lookup.</dd>
-  <dt><code>failoverTimeout</code></dt>
-  <dd><code>integer</code>. Failover timeout in seconds. If the proxy connection fails, the proxy will not be used again for this period.</dd>
- </dl>
- </dd>
- <dt><code>requestHeaders</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('webRequest.HttpHeaders')}}. The HTTP request headers that will be sent with this request.</dd>
- <dt><code>requestId</code></dt>
- <dd><code>string</code>. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.</dd>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab.</dd>
- <dt><code>thirdParty</code></dt>
- <dd><code>boolean</code>. Indicates whether the request and its content window hierarchy are third party.</dd>
- <dt><code>timeStamp</code></dt>
- <dd><code>number</code>. The time when this event fired, in <a class="external external-icon" href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
- <dt><code>type</code></dt>
- <dd>{{WebExtAPIRef('webRequest.ResourceType')}}. The type of resource being requested: for example, "image", "script", "stylesheet".</dd>
- <dt><code>url</code></dt>
- <dd><code>string</code>. Target of the request.</dd>
- <dt><code>urlClassification</code></dt>
- <dd>
-   <p><code>object</code>. The type of tracking associated with the request, if with the request has been classified by <a class="external external-icon" href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" rel="noopener">Firefox Tracking Protection</a>. This is an object with the following properties:</p>
-   <dl>
-    <dt><code>firstParty</code></dt>
-    <dd><code>array</code> of <code>strings</code>. Classification flags for the request's first party.</dd>
-    <dt><code>thirdParty</code></dt>
-    <dd><code>array</code> of <code>strings</code>. Classification flags for the request or its window hierarchy's third parties.</dd>
-   </dl>
-   <p>The classification flags include:</p>
-   <ul>
-    <li><code>fingerprinting</code> and <code>fingerprinting_content</code>: indicates the request is involved in fingerprinting. <code>fingerprinting_content</code> indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.</li>
-    <li><code>cryptomining</code> and <code>cryptomining_content</code>: similar to the fingerprinting category but for cryptomining resources.</li>
-    <li><code>tracking</code>, <code>tracking_ad</code>, <code>tracking_analytics</code>, <code>tracking_social</code>,  and <code>tracking_content</code>: indicates the request is involved in tracking. <code>tracking</code> is any generic tracking request, the <code>ad</code>, <code>analytics</code>, <code>social</code>, and <code>content</code> suffixes identify the type of tracker.</li>
-    <li><code>any_basic_tracking</code>: a meta flag that combines any tracking and fingerprinting flags, excluding <code>tracking_content</code> and <code>fingerprinting_content</code>.</li>
-    <li><code>any_strict_tracking</code>: a meta flag that combines any tracking and fingerprinting flags, including <code>tracking_content</code> and <code>fingerprinting_content</code>.</li>
-    <li><code>any_social_tracking</code>: a meta flag that combines any social tracking flags.</li>
-   </ul>
- </dd>
-</dl>
+### details
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- `cookieStoreId`
+  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity.
+- `documentUrl`
+  - : `string`. URL of the document in which the resource will be loaded. For example, if the web page at "https\://example.com" contains an image or an iframe, then the `documentUrl` for the image or iframe will be "https\://example.com". For a top-level document, `documentUrl` is undefined.
+- `frameId`
+  - : `integer`. Zero if the request happens in the main frame; a positive value is the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
+- `incognito`
+  - : `boolean`. Whether the request is from a private browsing window.
+- `method`
+  - : `string`. Standard HTTP method: for example, "GET" or "POST".
+- `originUrl`
 
-<p>{{Compat}}</p>
+  - : `string`. URL of the resource which triggered the request. For example, if "https\://example.com" contains a link, and the user clicks the link, then the `originUrl` for the resulting request is "https\://example.com".
 
-<h2 id="Examples">Examples</h2>
+    The `originUrl` is often but not always the same as the `documentUrl`. For example, if a page contains an iframe, and the iframe contains a link that loads a new document into the iframe, then the `documentUrl` for the resulting request will be the iframe's parent document, but the `originUrl` will be the URL of the document in the iframe that contained the link.
 
-<p>This code changes the "User-Agent" header so the browser identifies itself as Opera 12.16, but only when visiting pages under https://httpbin.org/".</p>
+- `parentFrameId`
+  - : `integer`. ID of the frame that contains the frame which sent the request. Set to -1 if no parent frame exists.
+- `proxyInfo`
 
-<pre class="brush: js">"use strict";
+  - : `object`. This property is present only if the request is being proxied. It contains the following properties:
+
+    - `host`
+      - : `string`. The hostname of the proxy server.
+    - `port`
+      - : `integer`. The port number of the proxy server.
+    - `type`
+
+      - : `string`. The type of proxy server. One of:
+
+        - "http": HTTP proxy (or SSL CONNECT for HTTPS)
+        - "https": HTTP proxying over TLS connection to proxy
+        - "socks": SOCKS v5 proxy
+        - "socks4": SOCKS v4 proxy
+        - "direct": no proxy
+        - "unknown": unknown proxy
+
+    - `username`
+      - : `string`. Username for the proxy service.
+    - `proxyDNS`
+      - : `boolean`. True if the proxy will perform domain name resolution based on the hostname supplied, meaning that the client should not do its own DNS lookup.
+    - `failoverTimeout`
+      - : `integer`. Failover timeout in seconds. If the proxy connection fails, the proxy will not be used again for this period.
+
+- `requestHeaders`{{optional_inline}}
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. The HTTP request headers that will be sent with this request.
+- `requestId`
+  - : `string`. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.
+- `tabId`
+  - : `integer`. ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab.
+- `thirdParty`
+  - : `boolean`. Indicates whether the request and its content window hierarchy are third party.
+- `timeStamp`
+  - : `number`. The time when this event fired, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+- `type`
+  - : {{WebExtAPIRef('webRequest.ResourceType')}}. The type of resource being requested: for example, "image", "script", "stylesheet".
+- `url`
+  - : `string`. Target of the request.
+- `urlClassification`
+
+  - : `object`. The type of tracking associated with the request, if with the request has been classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with the following properties:
+
+    - `firstParty`
+      - : `array` of `strings`. Classification flags for the request's first party.
+    - `thirdParty`
+      - : `array` of `strings`. Classification flags for the request or its window hierarchy's third parties.
+
+    The classification flags include:
+
+    - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting. `fingerprinting_content` indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.
+    - `cryptomining` and `cryptomining_content`: similar to the fingerprinting category but for cryptomining resources.
+    - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`,  and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
+    - `any_basic_tracking`: a meta flag that combines any tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
+    - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
+    - `any_social_tracking`: a meta flag that combines any social tracking flags.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+This code changes the "User-Agent" header so the browser identifies itself as Opera 12.16, but only when visiting pages under https\://httpbin.org/".
+
+```js
+"use strict";
 
 /*
 This is the page for which we want to rewrite the User-Agent header.
@@ -220,11 +208,12 @@ browser.webRequest.onBeforeSendHeaders.addListener(
   {urls: [targetPage]},
   ["blocking", "requestHeaders"]
 );
-</pre>
+```
 
-<p>This code is exactly like the previous example, except that the listener is asynchronous, returning a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which is resolved with the new headers:</p>
+This code is exactly like the previous example, except that the listener is asynchronous, returning a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with the new headers:
 
-<pre class="brush: js">"use strict";
+```js
+"use strict";
 
 /*
 This is the page for which we want to rewrite the User-Agent header.
@@ -240,8 +229,8 @@ var ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.
 Rewrite the User-Agent header to "ua".
 */
 function rewriteUserAgentHeaderAsync(e) {
-  var asyncRewrite = new Promise((resolve, reject) =&gt; {
-    window.setTimeout(() =&gt; {
+  var asyncRewrite = new Promise((resolve, reject) => {
+    window.setTimeout(() => {
       for (var header of e.requestHeaders) {
         if (header.name.toLowerCase() === "user-agent") {
           header.value = ua;
@@ -265,18 +254,15 @@ browser.webRequest.onBeforeSendHeaders.addListener(
   {urls: [targetPage]},
   ["blocking", "requestHeaders"]
 );
+```
 
-</pre>
+{{WebExtExamples}}
 
-<p>{{WebExtExamples}}</p>
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#event-onBeforeSendHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest#event-onBeforeSendHeaders"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -303,5 +289,4 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

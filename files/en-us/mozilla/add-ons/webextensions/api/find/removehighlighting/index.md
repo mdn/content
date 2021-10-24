@@ -12,28 +12,30 @@ tags:
   - removeHighlighting
 browser-compat: webextensions.api.find.removeHighlighting
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Remove any highlighting of a previous search that was applied by a previous call to {{WebExtAPIRef("find.highlightResults()")}}, or by the browser's native UI.</p>
+Remove any highlighting of a previous search that was applied by a previous call to {{WebExtAPIRef("find.highlightResults()")}}, or by the browser's native UI.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.find.removeHighlighting()
-</pre>
+```js
+browser.find.removeHighlighting()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">browser.find.removeHighlighting();
-</pre>
+```js
+browser.find.removeHighlighting();
+```

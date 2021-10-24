@@ -12,89 +12,83 @@ tags:
   - management
 browser-compat: webextensions.api.management.ExtensionInfo
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>An <code>ExtensionInfo</code> object contains information about an add-on.</p>
+An `ExtensionInfo` object contains information about an add-on.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>It is an object with the following properties:</p>
+It is an object with the following properties:
 
-<dl>
- <dt><code>description</code></dt>
- <dd><code>string</code>. The add-on's description, taken from the manifest.json <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a> key.</dd>
- <dt><code>disabledReason</code></dt>
- <dd><code>string</code>. If the add-on is disabled, the reason it was disabled. One of "unknown" or "permissions_increase".</dd>
- <dt><code>enabled</code></dt>
- <dd><code>boolean</code>. Whether or not the add-on is currently enabled.</dd>
- <dt><code>homepageUrl</code></dt>
- <dd><code>string</code>. The add-on's homepage URL, taken from the manifest.json <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a> key.</dd>
- <dt><code>hostPermissions</code></dt>
- <dd><code>array</code> of <code>string</code>. The add-on's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>.</dd>
- <dt><code>icons</code></dt>
- <dd><p><code>array</code> of <code>object</code>. Information about the add-on's icons. An array of objects, one for each icon. Each object contains two properties:</p>
- <ul>
-  <li><code>size</code>: an integer representing the icon's width and height in pixels.</li>
-  <li><code>url</code>: a string containing a relative URL to the icon, starting at the add-on's root.</li>
- </ul>
- </dd>
- <dt><code>id</code></dt>
- <dd><code>string</code>. The add-on's ID.</dd>
- <dt><code>installType</code></dt>
- <dd><p><code>string</code>. String describing how the add-on was installed. One of the following:</p>
- <ul>
-  <li>"admin": the add-on was installed because of an administrative policy.</li>
-  <li>"development": the add-on was installed unpacked from disk.</li>
-  <li>"normal": the add-on was installed normally from an install package.</li>
-  <li>"sideload": the add-on was installed by some other software on the user's computer.</li>
-  <li>"other": the add-on was installed in some other way.</li>
- </ul>
- </dd>
- <dt><code>mayDisable</code></dt>
- <dd><code>boolean</code>. Whether this add-on can be disabled or uninstalled by the user.</dd>
- <dt><code>name</code></dt>
- <dd><code>string</code>. The add-on's name, taken from the manifest.json <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a> key.</dd>
- <dt><code>offlineEnabled</code></dt>
- <dd><code>boolean</code>. Whether the add-on claims to support offline.</dd>
- <dt><code>optionsUrl</code></dt>
- <dd><code>string</code>. URL for the item's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">options page</a>, if it has one. This is a relative URL, starting at the add-on's root.</dd>
- <dt><code>permissions</code></dt>
- <dd><code>array</code> of <code>string</code>. The add-on's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permissions</a>.</dd>
- <dt><code>shortName</code></dt>
- <dd><code>string</code>. A short version of the add-on's name, taken from the manifest.json <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name">short_name</a> key.</dd>
- <dt><code>type</code></dt>
- <dd>
-   <p><code>string</code>. String describing the type of add-on. This is used to distinguish extensions from apps and themes. It may take any of the following values:</p>
-   <ul>
-    <li>"extension": most common type of add-on.</li>
-    <li>"hosted_app"</li>
-    <li>"packaged_app"</li>
-    <li>"legacy_packaged_app"</li>
-    <li>"theme"</li>
-   </ul>
- </dd>
- <dt><code>updateUrl</code></dt>
- <dd><code>string</code>. URL for updates to this add-on, taken from the manifest.json <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">applications</a> key.</dd>
- <dt><code>version</code></dt>
- <dd><code>string</code>. Version of this add-on, taken from the manifest.json <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a> key.</dd>
- <dt><code>versionName</code></dt>
- <dd><code>string</code>. Descriptive name for this add-on's version, taken from the manifest.json <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name">version_name</a> key.</dd>
-</dl>
+- `description`
+  - : `string`. The add-on's description, taken from the manifest.json [description](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) key.
+- `disabledReason`
+  - : `string`. If the add-on is disabled, the reason it was disabled. One of "unknown" or "permissions_increase".
+- `enabled`
+  - : `boolean`. Whether or not the add-on is currently enabled.
+- `homepageUrl`
+  - : `string`. The add-on's homepage URL, taken from the manifest.json [homepage_url](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) key.
+- `hostPermissions`
+  - : `array` of `string`. The add-on's [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions).
+- `icons`
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+  - : `array` of `object`. Information about the add-on's icons. An array of objects, one for each icon. Each object contains two properties:
 
-<p>{{Compat}}</p>
+    - `size`: an integer representing the icon's width and height in pixels.
+    - `url`: a string containing a relative URL to the icon, starting at the add-on's root.
 
-<p>{{WebExtExamples}}</p>
+- `id`
+  - : `string`. The add-on's ID.
+- `installType`
 
+  - : `string`. String describing how the add-on was installed. One of the following:
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/management#type-ExtensionInfo"><code>chrome.management</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> in the Chromium code.</p>
+    - "admin": the add-on was installed because of an administrative policy.
+    - "development": the add-on was installed unpacked from disk.
+    - "normal": the add-on was installed normally from an install package.
+    - "sideload": the add-on was installed by some other software on the user's computer.
+    - "other": the add-on was installed in some other way.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+- `mayDisable`
+  - : `boolean`. Whether this add-on can be disabled or uninstalled by the user.
+- `name`
+  - : `string`. The add-on's name, taken from the manifest.json [name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) key.
+- `offlineEnabled`
+  - : `boolean`. Whether the add-on claims to support offline.
+- `optionsUrl`
+  - : `string`. URL for the item's [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages), if it has one. This is a relative URL, starting at the add-on's root.
+- `permissions`
+  - : `array` of `string`. The add-on's [API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
+- `shortName`
+  - : `string`. A short version of the add-on's name, taken from the manifest.json [short_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name) key.
+- `type`
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+  - : `string`. String describing the type of add-on. This is used to distinguish extensions from apps and themes. It may take any of the following values:
+
+    - "extension": most common type of add-on.
+    - "hosted_app"
+    - "packaged_app"
+    - "legacy_packaged_app"
+    - "theme"
+
+- `updateUrl`
+  - : `string`. URL for updates to this add-on, taken from the manifest.json [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key.
+- `version`
+  - : `string`. Version of this add-on, taken from the manifest.json [version](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) key.
+- `versionName`
+  - : `string`. Descriptive name for this add-on's version, taken from the manifest.json [version_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name) key.
+
+## Browser compatibility
+
+{{Compat}}
+
+{{WebExtExamples}}
+
+> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/extensions/management#type-ExtensionInfo) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -121,5 +115,4 @@ browser-compat: webextensions.api.management.ExtensionInfo
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,37 +13,37 @@ tags:
   - getChildren
 browser-compat: webextensions.api.bookmarks.getChildren
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p><strong><code>bookmarks.getChildren()</code></strong> retrieves all the immediate children of a given bookmark folder, identified as a {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} ID.</p>
+**`bookmarks.getChildren()`** retrieves all the immediate children of a given bookmark folder, identified as a {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} ID.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var gettingChildren = browser.bookmarks.getChildren(
+```js
+var gettingChildren = browser.bookmarks.getChildren(
   id                     // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>id</code></dt>
- <dd>A {{jsxref("string")}} which specifies the ID of the folder whose children are to be retrieved.</dd>
-</dl>
+- `id`
+  - : A {{jsxref("string")}} which specifies the ID of the folder whose children are to be retrieved.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode" title="An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders."><code>BookmarkTreeNode</code></a> objects. Each entry represents a single child node. The list is ordered in the same order in which the bookmarks appear in the user interface. Separators are currently not included in the results. The list includes subfolders, but does not include any children contained in subfolders.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of [`BookmarkTreeNode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode "An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders.") objects. Each entry represents a single child node. The list is ordered in the same order in which the bookmarks appear in the user interface. Separators are currently not included in the results. The list includes subfolders, but does not include any children contained in subfolders.
 
-<p>If the specified node has no children, the array is empty.</p>
+If the specified node has no children, the array is empty.
 
-<p>If the node identified by <code>id</code> is not found, the promise is rejected with an error message.</p>
+If the node identified by `id` is not found, the promise is rejected with an error message.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">function onFulfilled(children) {
+```js
+function onFulfilled(children) {
   for (child of children) {
     console.log(child.id);
   }
@@ -54,22 +54,20 @@ function onRejected(error) {
 }
 
 var gettingChildren = browser.bookmarks.getChildren("unfiled_____");
-gettingChildren.then(onFulfilled, onRejected);</pre>
+gettingChildren.then(onFulfilled, onRejected);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-getChildren) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#method-getChildren"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -96,5 +94,4 @@ gettingChildren.then(onFulfilled, onRejected);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

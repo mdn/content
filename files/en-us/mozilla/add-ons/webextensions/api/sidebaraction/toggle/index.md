@@ -12,43 +12,46 @@ tags:
   - toggle
 browser-compat: webextensions.api.sidebarAction.toggle
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Toggles the visibility of the sidebar in the active window, if the sidebar belongs to the extension.</p>
+Toggles the visibility of the sidebar in the active window, if the sidebar belongs to the extension.
 
-<p>You can only call this function from inside the handler for a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions">user action</a>.</p>
+You can only call this function from inside the handler for a [user action](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions).
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.sidebarAction.toggle()
-</pre>
+```js
+browser.sidebarAction.toggle()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that is resolved with no arguments.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is resolved with no arguments.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Toggles the sidebar when the user selects an item from the context menu:</p>
+Toggles the sidebar when the user selects an item from the context menu:
 
-<pre class="brush: js">browser.menus.create({
+```js
+browser.menus.create({
   id: "toggle-sidebar",
   title: "Toggle sidebar",
   contexts: ["all"]
 });
 
-browser.menus.onClicked.addListener(() =&gt; {
+browser.menus.onClicked.addListener(() => {
   browser.sidebarAction.toggle();
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

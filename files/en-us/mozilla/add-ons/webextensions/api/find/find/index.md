@@ -11,150 +11,142 @@ tags:
   - find
 browser-compat: webextensions.api.find.find
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Searches for text in a tab.</p>
+Searches for text in a tab.
 
-<p>You can use this function to search normal HTTP(S) web pages. It searches a single tab: you can specify the ID of a particular tab to search, or it will search the active tab by default. It searches all frames in the tab.</p>
+You can use this function to search normal HTTP(S) web pages. It searches a single tab: you can specify the ID of a particular tab to search, or it will search the active tab by default. It searches all frames in the tab.
 
-<p>You can make the search case-sensitive and make it match whole words only.</p>
+You can make the search case-sensitive and make it match whole words only.
 
-<p>By default, the function just returns the number of matches found. By passing in the <code>includeRangeData</code> and <code>includeRectData</code> options, you can get more information about the location of the matches in the target tab.</p>
+By default, the function just returns the number of matches found. By passing in the `includeRangeData` and `includeRectData` options, you can get more information about the location of the matches in the target tab.
 
-<p>This function stores the results internally, so the next time any extension calls {{WebExtAPIRef("find.highlightResults()")}}, then the results of this find call will be highlighted, until the next time someone calls <code>find()</code>.</p>
+This function stores the results internally, so the next time any extension calls {{WebExtAPIRef("find.highlightResults()")}}, then the results of this find call will be highlighted, until the next time someone calls `find()`.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.find.find(
+```js
+browser.find.find(
   queryphrase,       // string
   options            // optional object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>queryphrase</code></dt>
- <dd><code>string</code>. The text to search for.</dd>
- <dt><code>options</code>{{optional_inline}}</dt>
- <dd>
- <p><code>object</code>. An object specifying additional options. It may take any of the following properties, all optional:</p>
+- `queryphrase`
+  - : `string`. The text to search for.
+- `options`{{optional_inline}}
 
- <dl>
-  <dt><code>tabId</code></dt>
-  <dd><code>integer</code>. ID of the tab to search. Defaults to the active tab.</dd>
-  <dt><code>caseSensitive</code></dt>
-  <dd><code>boolean</code>. If true, the search is case-sensitive. Defaults to <code>false</code>.</dd>
-  <dt><code>entireWord</code></dt>
-  <dd><code>boolean</code>. Match only entire words: so "Tok" will not be matched inside "Tokyo". Defaults to <code>false</code>.</dd>
-  <dt><code>includeRangeData</code></dt>
-  <dd><code>boolean</code>. Include range data in the response, which describe where in the page DOM the match was found. Defaults to <code>false</code>.</dd>
-  <dt><code>includeRectData</code></dt>
-  <dd><code>boolean</code>. Include rectangle data in the response, which describes where in the rendered page the match was found. Defaults to <code>false</code>.</dd>
- </dl>
- </dd>
-</dl>
+  - : `object`. An object specifying additional options. It may take any of the following properties, all optional:
 
-<h3 id="Return_value">Return value</h3>
+    - `tabId`
+      - : `integer`. ID of the tab to search. Defaults to the active tab.
+    - `caseSensitive`
+      - : `boolean`. If true, the search is case-sensitive. Defaults to `false`.
+    - `entireWord`
+      - : `boolean`. Match only entire words: so "Tok" will not be matched inside "Tokyo". Defaults to `false`.
+    - `includeRangeData`
+      - : `boolean`. Include range data in the response, which describe where in the page DOM the match was found. Defaults to `false`.
+    - `includeRectData`
+      - : `boolean`. Include rectangle data in the response, which describes where in the rendered page the match was found. Defaults to `false`.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an object containing up to three properties:</p>
+### Return value
 
-<dl>
- <dt><code>count</code></dt>
- <dd><code>integer</code>. The number of results found.</dd>
- <dt><code>rangeData</code>{{optional_inline}}</dt>
- <dd>
- <p><code>array</code>. If <code>includeRangeData</code> was given in the <code>options</code> parameter, then this property will be included. It is provided as an array of <code>RangeData</code> objects, one for each match. Each <code>RangeData</code> object describes where in the DOM tree the match was found. This would enable, for example, an extension to get the text surrounding each match, so as to display context for the matches.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object containing up to three properties:
 
- <p>The items correspond to the items given in <code>rectData</code>, so <code>rangeData[i]</code> describes the same match as <code>rectData[i]</code>.</p>
+- `count`
+  - : `integer`. The number of results found.
+- `rangeData`{{optional_inline}}
 
- <p>Each <code>RangeData</code> contains the following properties:</p>
+  - : `array`. If `includeRangeData` was given in the `options` parameter, then this property will be included. It is provided as an array of `RangeData` objects, one for each match. Each `RangeData` object describes where in the DOM tree the match was found. This would enable, for example, an extension to get the text surrounding each match, so as to display context for the matches.
 
- <dl>
-  <dt><code>framePos</code></dt>
-  <dd>The index of the frame containing the match. 0 corresponds to the parent window. Note that the order of objects in the <code>rangeData</code> array will sequentially line up with the order of frame indexes: for example, <code>framePos</code> for the first sequence of <code>rangeData</code> objects will be 0, <code>framePos</code> for the next sequence will be 1, and so on.</dd>
-  <dt><code>startTextNodePos</code></dt>
-  <dd>The ordinal position of the text node in which the match started.</dd>
-  <dt><code>endTextNodePos</code></dt>
-  <dd>The ordinal position of the text node in which the match ended.</dd>
-  <dt><code>startOffset</code></dt>
-  <dd>The ordinal position of the start of the match within its text node.</dd>
-  <dt><code>endOffset</code></dt>
-  <dd>The ordinal position of the end of the match within its text node.</dd>
- </dl>
- </dd>
- <dt><code>rectData</code>{{optional_inline}}</dt>
- <dd>
- <p><code>array</code>. If <code>includeRectData</code> was given in the <code>options</code> parameter, then this property will be included. It is an array of <code>RectData</code> objects. It contains client rectangles for all the text matched in the search, relative to the top-left of the viewport. Extensions can use this to provide custom highlighting of the results.</p>
+    The items correspond to the items given in `rectData`, so `rangeData[i]` describes the same match as `rectData[i]`.
 
- <p>Each <code>RectData</code> object contains rectangle data for a single match. It has two properties:</p>
+    Each `RangeData` contains the following properties:
 
- <dl>
-  <dt><code>rectsAndTexts</code></dt>
-  <dd>An object containing two properties, both arrays:
-  <ul>
-   <li><code>rectList</code>: an array of objects which each have four integer properties: <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>. These describe a rectangle relative to the top-left of the viewport.</li>
-   <li><code>textList</code>: an array of strings, corresponding to the <code>rectList</code> array. The entry at <code>textList[i]</code> contains the part of the match bounded by the rectangle at <code>rectList[i]</code>.</li>
-  </ul>
+    - `framePos`
+      - : The index of the frame containing the match. 0 corresponds to the parent window. Note that the order of objects in the `rangeData` array will sequentially line up with the order of frame indexes: for example, `framePos` for the first sequence of `rangeData` objects will be 0, `framePos` for the next sequence will be 1, and so on.
+    - `startTextNodePos`
+      - : The ordinal position of the text node in which the match started.
+    - `endTextNodePos`
+      - : The ordinal position of the text node in which the match ended.
+    - `startOffset`
+      - : The ordinal position of the start of the match within its text node.
+    - `endOffset`
+      - : The ordinal position of the end of the match within its text node.
 
-  <p>For example, consider part of a web page that looks like this:</p>
+- `rectData`{{optional_inline}}
 
-  <p><img alt="" src="rects-1.png">If you search for "You may", the match needs to be described by two rectangles:</p>
+  - : `array`. If `includeRectData` was given in the `options` parameter, then this property will be included. It is an array of `RectData` objects. It contains client rectangles for all the text matched in the search, relative to the top-left of the viewport. Extensions can use this to provide custom highlighting of the results.
 
-  <p><img alt="" src="rects-2.png">In this case, in the <code>RectData</code> that describes this match, <code>rectsAndTexts.rectList</code> and <code>rectsAndTexts.textList</code> will each have 2 items.</p>
+    Each `RectData` object contains rectangle data for a single match. It has two properties:
 
-  <ul>
-   <li><code>textList[0]</code> will contain "You ", and <code>rectList[0]</code> will contain its bounding rectangle.</li>
-   <li><code>textList[1]</code> will contain "may", and <code>rectList[1]</code> will contain <em>its</em> bounding rectangle.</li>
-  </ul>
-  </dd>
-  <dt><code>text</code></dt>
-  <dd>The complete text of the match, "You may" in the example above.</dd>
- </dl>
- </dd>
-</dl>
+    - `rectsAndTexts`
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+      - : An object containing two properties, both arrays:
 
-<p>{{Compat}}</p>
+        - `rectList`: an array of objects which each have four integer properties: `top`, `left`, `bottom`, `right`. These describe a rectangle relative to the top-left of the viewport.
+        - `textList`: an array of strings, corresponding to the `rectList` array. The entry at `textList[i]` contains the part of the match bounded by the rectangle at `rectList[i]`.
 
-<h2 id="Examples">Examples</h2>
+        For example, consider part of a web page that looks like this:
 
-<h3 id="Basic_examples">Basic examples</h3>
+        ![](rects-1.png)If you search for "You may", the match needs to be described by two rectangles:
 
-<p>Search the active tab for "banana", log the number of matches, and highlight them:</p>
+        ![](rects-2.png)In this case, in the `RectData` that describes this match, `rectsAndTexts.rectList` and `rectsAndTexts.textList` will each have 2 items.
 
-<pre class="brush: js">function found(results) {
+        - `textList[0]` will contain "You ", and `rectList[0]` will contain its bounding rectangle.
+        - `textList[1]` will contain "may", and `rectList[1]` will contain _its_ bounding rectangle.
+
+    - `text`
+      - : The complete text of the match, "You may" in the example above.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+### Basic examples
+
+Search the active tab for "banana", log the number of matches, and highlight them:
+
+```js
+function found(results) {
   console.log(`There were: ${results.count} matches.`);
-  if (results.count &gt; 0) {
+  if (results.count > 0) {
     browser.find.highlightResults();
   }
 }
 
-browser.find.find("banana").then(found);</pre>
+browser.find.find("banana").then(found);
+```
 
-<p>Search for "banana" across all tabs (note that this requires the "tabs" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> or matching <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>, because it accesses <code>tab.url</code>):</p>
+Search for "banana" across all tabs (note that this requires the "tabs" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or matching [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), because it accesses `tab.url`):
 
-<pre class="brush: js">async function findInAllTabs(allTabs) {
+```js
+async function findInAllTabs(allTabs) {
   for (let tab of allTabs) {
     let results = await browser.find.find("banana", {tabId: tab.id});
     console.log(`In page "${tab.url}": ${results.count} matches.`)
   }
 }
 
-browser.tabs.query({}).then(findInAllTabs);</pre>
+browser.tabs.query({}).then(findInAllTabs);
+```
 
-<h3 id="Using_rangeData">Using rangeData</h3>
+### Using rangeData
 
-<p>In this example the extension uses <code>rangeData</code> to get the context in which the match was found. The context is the complete <code>textContent</code> of the node in which the match was found. If the match spanned nodes, the context is the concatenation of the <code>textContent</code> of all spanned nodes.</p>
+In this example the extension uses `rangeData` to get the context in which the match was found. The context is the complete `textContent` of the node in which the match was found. If the match spanned nodes, the context is the concatenation of the `textContent` of all spanned nodes.
 
-<p>Note that for simplicity, this example doesn't handle pages that contain frames. To support this you'd need to split <code>rangeData</code> into groups, one per frame, and execute the script in each frame.</p>
+Note that for simplicity, this example doesn't handle pages that contain frames. To support this you'd need to split `rangeData` into groups, one per frame, and execute the script in each frame.
 
-<p>The background script:</p>
+The background script:
 
-<pre class="brush: js">// background.js
+```js
+// background.js
 
 async function getContexts(matches) {
 
@@ -176,14 +168,15 @@ async function getContexts(matches) {
 
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
   browser.find.find("example", {includeRangeData: true}).then(getContexts);
 });
-</pre>
+```
 
-<p>The content script:</p>
+The content script:
 
-<pre class="brush: js">/**
+```js
+/**
  * Get all the text nodes into a single array
  */
 function getNodes() {
@@ -210,7 +203,7 @@ function getContexts(ranges) {
   for (let range of ranges) {
     let context = nodes[range.startTextNodePos].textContent;
     let pos = range.startTextNodePos;
-    while (pos &lt; range.endTextNodePos) {
+    while (pos < range.endTextNodePos) {
       pos++;
       context += nodes[pos].textContent;
     }
@@ -219,20 +212,21 @@ function getContexts(ranges) {
   return contexts;
 }
 
-browser.runtime.onMessage.addListener((message, sender, sendResponse) =&gt; {
+browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
   sendResponse(getContexts(message.ranges));
 });
-</pre>
+```
 
-<h3 id="Using_rectData">Using rectData</h3>
+### Using rectData
 
-<p>In this example the extension uses <code>rectData</code> to "redact" the matches, by adding black DIVs over the top of their bounding rectangles:</p>
+In this example the extension uses `rectData` to "redact" the matches, by adding black DIVs over the top of their bounding rectangles:
 
-<p><img alt="" src="redacted.png">Note that in many ways this is a poor way to redact pages.</p>
+![](redacted.png)Note that in many ways this is a poor way to redact pages.
 
-<p>The background script:</p>
+The background script:
 
-<pre class="brush: js">// background.js
+```js
+// background.js
 
 async function redact(matches) {
 
@@ -248,14 +242,15 @@ async function redact(matches) {
   await browser.tabs.sendMessage(tabId, {rects: matches.rectData});
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
   browser.find.find("banana", {includeRectData: true}).then(redact);
 });
-</pre>
+```
 
-<p>The content script:</p>
+The content script:
 
-<pre class="brush: js">// redact.js
+```js
+// redact.js
 
 /**
  * Add a black DIV where the rect is.
@@ -282,9 +277,9 @@ function redactAll(rectData) {
   }
 }
 
-browser.runtime.onMessage.addListener((message) =&gt; {
+browser.runtime.onMessage.addListener((message) => {
   redactAll(message.rects);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

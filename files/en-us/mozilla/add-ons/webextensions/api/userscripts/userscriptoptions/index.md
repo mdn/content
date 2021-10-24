@@ -12,36 +12,32 @@ tags:
   - WebExtensions
   - userScripts
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>The UserScriptOptions object represents the content scripts to register. It has similar syntax to the contentScript options supported by browser.contentScripts.register. The differences are:</p>
+The UserScriptOptions object represents the content scripts to register. It has similar syntax to the contentScript options supported by browser.contentScripts.register. The differences are:
 
-<ul>
- <li>it does not support a css property (use browser.contentScripts.register to dynamically register/unregister stylesheets)</li>
- <li>It does support an optional scriptMetadata property (as a plain JSON object which contains some metadata properties associated to the registered userScripts)</li>
-</ul>
+- it does not support a css property (use browser.contentScripts.register to dynamically register/unregister stylesheets)
+- It does support an optional scriptMetadata property (as a plain JSON object which contains some metadata properties associated to the registered userScripts)
 
-<p>The UserScriptOptions object has the following properties:</p>
+The UserScriptOptions object has the following properties:
 
-<dl>
- <dt><code>allFrames</code>{{optional_inline}}</dt>
- <dd>Same as <code>all_frames</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
- <dt><code>excludeGlobs</code>{{optional_inline}}</dt>
- <dd>Same as <code>exclude_globs</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
- <dt><code>excludeMatches</code>{{optional_inline}}</dt>
- <dd>Same as <code>exclude_matches</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
- <dt><code>includeGlobs</code>{{optional_inline}}</dt>
- <dd>Same as <code>include_globs</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
- <dt><code>js</code>{{optional_inline}}</dt>
- <dd>An array of objects. Each object has either a property named <code>file</code>, which is a URL starting at the extension's manifest.json and pointing to a JavaScript file to register, or a property named <code>code</code>, which is some JavaScript code to register.</dd>
- <dt><code>matchAboutBlank</code>{{optional_inline}}</dt>
- <dd>Same as <code>match_about_blank</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
- <dt><code>matches</code></dt>
- <dd>Same as <code>matches</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
- <dt><code>runAt</code>{{optional_inline}}</dt>
- <dd>Same as <code>run_at</code> in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key.</dd>
- <dt><code>scriptMetadata</code> {{optional_inline}}</dt>
- <dd>A user script metadata value</dd>
-</dl>
+- `allFrames`{{optional_inline}}
+  - : Same as `all_frames` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+- `excludeGlobs`{{optional_inline}}
+  - : Same as `exclude_globs` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+- `excludeMatches`{{optional_inline}}
+  - : Same as `exclude_matches` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+- `includeGlobs`{{optional_inline}}
+  - : Same as `include_globs` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+- `js`{{optional_inline}}
+  - : An array of objects. Each object has either a property named `file`, which is a URL starting at the extension's manifest.json and pointing to a JavaScript file to register, or a property named `code`, which is some JavaScript code to register.
+- `matchAboutBlank`{{optional_inline}}
+  - : Same as `match_about_blank` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+- `matches`
+  - : Same as `matches` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+- `runAt`{{optional_inline}}
+  - : Same as `run_at` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+- `scriptMetadata` {{optional_inline}}
+  - : A user script metadata value
 
-<p>It has similar syntax to the contentScript options supported by browser.contentScripts.register.</p>
+It has similar syntax to the contentScript options supported by browser.contentScripts.register.

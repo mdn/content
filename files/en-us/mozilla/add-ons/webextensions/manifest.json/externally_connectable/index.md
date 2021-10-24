@@ -7,22 +7,22 @@ tags:
   - manifest.json
 browser-compat: webextensions.manifest.externally_connectable
 ---
-<p>{{AddonSidebar}}{{SeeCompatTable}}</p>
+{{AddonSidebar}}{{SeeCompatTable}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>Object</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>Object</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre>
 "externally_connectable": {
   // List of extension IDs that extension wishes to communicate with
   // If "browser_action" is specified but "browser_action.ids" is not,
@@ -40,26 +40,25 @@ browser-compat: webextensions.manifest.externally_connectable
     "https://example1.com/*",
     "*://*.example2.com/*"
   ]
-}</pre>
-   </td>
-  </tr>
- </tbody>
+}</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Externally connectable allows extension developer to control which other extensions and web pages can communicate with this extension via {{WebExtAPIRef("runtime.connect","runtime.connect()")}} and {{WebExtAPIRef("runtime.sendMessage", "runtime.sendMessage()")}} message passing. If <code>externally_connectable</code> is not specified, all extensions can communicate with each other but not with web pages.</p>
+Externally connectable allows extension developer to control which other extensions and web pages can communicate with this extension via {{WebExtAPIRef("runtime.connect","runtime.connect()")}} and {{WebExtAPIRef("runtime.sendMessage", "runtime.sendMessage()")}} message passing. If `externally_connectable` is not specified, all extensions can communicate with each other but not with web pages.
 
-<h3 id="ids_attribute">"ids" attribute</h3>
+### "ids" attribute
 
-<p><code>ids</code> enables communication between this extension and other installed extensions specified by extension identifiers. Use the pattern <code>"*"</code> if you wish to communicate with all extensions. </p>
+`ids` enables communication between this extension and other installed extensions specified by extension identifiers. Use the pattern `"*"` if you wish to communicate with all extensions.
 
-<h3 id="matches_attribute">"matches" attribute</h3>
+### "matches" attribute
 
-<p><code>matches</code> enables communication between this extension and the web pages. This is a list of regular expressions for page URLs that you wish to communicate with.</p>
+`matches` enables communication between this extension and the web pages. This is a list of regular expressions for page URLs that you wish to communicate with.
 
-<div class="notecard note">
-<p><strong>Note:</strong> If <code>browser_action</code> is not specified, communication among extensions is still allowed as if <code>browser_action</code> was <code>{"ids": ["*"] }</code>, therefore if you specify <code>browser_action.matches</code> don't forget to add <code>ids</code> if you still want to communicate with other extensions.</p>
-</div>
+> **Note:** If `browser_action` is not specified, communication among extensions is still allowed as if `browser_action` was `{"ids": ["*"] }`, therefore if you specify `browser_action.matches` don't forget to add `ids` if you still want to communicate with other extensions.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

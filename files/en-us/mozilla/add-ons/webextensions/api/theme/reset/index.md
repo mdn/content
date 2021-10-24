@@ -12,44 +12,44 @@ tags:
   - reset
 browser-compat: webextensions.api.theme.reset
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Resets any theme that was applied using the {{WebExtAPIRef("theme.update()")}} method.</p>
+Resets any theme that was applied using the {{WebExtAPIRef("theme.update()")}} method.
 
-<p>Note that this will always reset the theme back to the original default theme, even if the user had selected a different theme before this extension's theme was applied (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1415267">bug 1415267</a>).</p>
+Note that this will always reset the theme back to the original default theme, even if the user had selected a different theme before this extension's theme was applied (see [bug 1415267](https://bugzilla.mozilla.org/show_bug.cgi?id=1415267)).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.theme.reset(
+```js
+browser.theme.reset(
   windowId     // integer
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>windowId</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. The ID of a window. If this is provided, the theme applied to that window will be reset. If it is omitted the theme will be reset on all windows.</dd>
-</dl>
+- `windowId` {{optional_inline}}
+  - : `integer`. The ID of a window. If this is provided, the theme applied to that window will be reset. If it is omitted the theme will be reset on all windows.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code applies a theme, then removes it when the user clicks a browser action:</p>
+This code applies a theme, then removes it when the user clicks a browser action:
 
-<pre class="brush: js">browser.theme.update(themes.night);
+```js
+browser.theme.update(themes.night);
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   browser.theme.reset();
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -76,5 +76,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

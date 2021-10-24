@@ -12,36 +12,36 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.theme.update
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Updates the browser theme according to the content of given {{WebExtAPIRef("theme.Theme", "Theme")}} object.</p>
+Updates the browser theme according to the content of given {{WebExtAPIRef("theme.Theme", "Theme")}} object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.theme.update(
+```js
+browser.theme.update(
   windowId,    // integer
   theme        // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>windowId</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. The ID of a window. If this is provided, the theme is applied only to that window. If it is omitted the theme is applied to all windows.</dd>
- <dt><code>theme</code></dt>
- <dd><code>object</code>. A {{WebExtAPIRef("theme.Theme", "Theme")}} object specifying values for the UI elements you want to modify.</dd>
-</dl>
+- `windowId` {{optional_inline}}
+  - : `integer`. The ID of a window. If this is provided, the theme is applied only to that window. If it is omitted the theme is applied to all windows.
+- `theme`
+  - : `object`. A {{WebExtAPIRef("theme.Theme", "Theme")}} object specifying values for the UI elements you want to modify.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Sets the browser theme to use a sun graphic with complementary background color:</p>
+Sets the browser theme to use a sun graphic with complementary background color:
 
-<pre class="brush: js">const suntheme = {
+```js
+const suntheme = {
  images: {
    theme_frame: 'sun.jpg',
  },
@@ -51,11 +51,13 @@ browser-compat: webextensions.api.theme.update
  }
 };
 
-browser.theme.update(suntheme);</pre>
+browser.theme.update(suntheme);
+```
 
-<p>Set the theme for just the currently focused window:</p>
+Set the theme for just the currently focused window:
 
-<pre class="brush: js">const day = {
+```js
+const day = {
     images: {
       theme_frame: 'sun.jpg',
     },
@@ -76,6 +78,7 @@ async function updateThemeForCurrentWindow() {
   browser.theme.update(currentWindow.id, day);
 }
 
-browser.menus.onClicked.addListener(updateThemeForCurrentWindow);</pre>
+browser.menus.onClicked.addListener(updateThemeForCurrentWindow);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

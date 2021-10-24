@@ -13,52 +13,48 @@ tags:
   - i18n
 browser-compat: webextensions.api.i18n.detectLanguage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Detects the language of the provided text using the <a href="https://github.com/CLD2Owners/cld2">Compact Language Detector</a> (CLD).</p>
+Detects the language of the provided text using the [Compact Language Detector](https://github.com/CLD2Owners/cld2) (CLD).
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var detectingLanguages = browser.i18n.detectLanguage(
+```js
+var detectingLanguages = browser.i18n.detectLanguage(
   text                  // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>text</code></dt>
- <dd><code>string</code>. User input string to be translated.</dd>
-</dl>
+- `text`
+  - : `string`. User input string to be translated.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a result object. The result object has two properties:</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a result object. The result object has two properties:
 
-<dl>
- <dt><code>isReliable</code></dt>
- <dd><code>boolean</code>. Whether the language was detected reliably.</dd>
- <dt><code>languages</code></dt>
- <dd>
-   <p><code>array</code> of objects, each of which has two properties:</p>
-   <dl>
-    <dt><code>language</code></dt>
-    <dd>{{WebExtAPIRef('i18n.LanguageCode')}}. The detected language.</dd>
-    <dt><code>percentage</code></dt>
-    <dd><code>integer</code>. The percentage of the input string that was in the detected language.</dd>
-   </dl>
- </dd>
-</dl>
+- `isReliable`
+  - : `boolean`. Whether the language was detected reliably.
+- `languages`
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+  - : `array` of objects, each of which has two properties:
 
-<p>{{Compat}}</p>
+    - `language`
+      - : {{WebExtAPIRef('i18n.LanguageCode')}}. The detected language.
+    - `percentage`
+      - : `integer`. The percentage of the input string that was in the detected language.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<pre class="brush: js">function onLanguageDetected(langInfo) {
+{{Compat}}
+
+## Examples
+
+```js
+function onLanguageDetected(langInfo) {
   for (lang of  langInfo.languages) {
     console.log("Language is: " + lang.language);
     console.log("Percentage is: " + lang.percentage);
@@ -69,19 +65,15 @@ var text = "L'homme est né libre, et partout il est dans les fers."
 
 var detecting = browser.i18n.detectLanguage(text);
 detecting.then(onLanguageDetected);
+```
 
-</pre>
+{{WebExtExamples}}
 
-<p>{{WebExtExamples}}</p>
+> **Note:** This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/extensions/i18n#method-detectLanguage) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/i18n#method-detectLanguage"><code>chrome.i18n</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json"><code>i18n.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -108,5 +100,4 @@ detecting.then(onLanguageDetected);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

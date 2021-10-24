@@ -13,109 +13,101 @@ tags:
   - pageAction
 browser-compat: webextensions.api.pageAction.onClicked
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when a page action icon is clicked. This event will not fire if the page action has a popup.</p>
+Fired when a page action icon is clicked. This event will not fire if the page action has a popup.
 
-<p>To define a right-click action, use the {{WebExtAPIRef('contextMenus')}} API with the "page_action" {{WebExtAPIRef('contextMenus/ContextType', 'context type', '', 'nocode')}}.</p>
+To define a right-click action, use the {{WebExtAPIRef('contextMenus')}} API with the "page_action" {{WebExtAPIRef('contextMenus/ContextType', 'context type', '', 'nocode')}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.pageAction.onClicked.addListener(listener)
+```js
+browser.pageAction.onClicked.addListener(listener)
 browser.pageAction.onClicked.removeListener(listener)
 browser.pageAction.onClicked.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
-	<dt><code>addListener(callback)</code></dt>
-	<dd>Adds a listener to this event.</dd>
-	<dt><code>removeListener(listener)</code></dt>
-	<dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
-	<dt><code>hasListener(listener)</code></dt>
-	<dd>Checks whether a <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Checks whether a `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>callback</code></dt>
-	<dd>
-	<p>A function that will be called when this event occurs. The function is passed the following arguments:</p>
+- `callback`
 
-	<dl>
-		<dt><code>tab</code></dt>
-		<dd>A {{WebExtAPIRef('tabs.Tab')}} object representing the tab whose page action was clicked.</dd>
-		<dt><code>OnClickData</code></dt>
-		<dd>An object containing information about the click.
-		<dl>
-			<dt><code>modifiers</code></dt>
-			<dd>An <code>array</code>. The keyboard modifiers active at the time of the click, being one or more of <code>Shift</code>, <code>Alt</code>, <code>Command</code>, <code>Ctrl</code>, or <code>MacCtrl</code>.</dd>
-			<dt><code>button</code></dt>
-			<dd>An <code>integer</code>. Indicates the button used to click the page action icon: <code>0</code> for a left-click or a click not associated with a mouse, such as one from the keyboard and <code>1</code> for a middle button or wheel click. Note that the right-click is not supported because Firefox consumes that click to display the context menu before this event is triggered.</dd>
-		</dl>
-		</dd>
-	</dl>
+  - : A function that will be called when this event occurs. The function is passed the following arguments:
 
-	<h2 id="Browser_compatibility">Browser compatibility</h2>
+    - `tab`
+      - : A {{WebExtAPIRef('tabs.Tab')}} object representing the tab whose page action was clicked.
+    - `OnClickData`
 
-	<p>{{Compat}}</p>
+      - : An object containing information about the click.
 
-	<h2 id="Examples">Examples</h2>
+        - `modifiers`
+          - : An `array`. The keyboard modifiers active at the time of the click, being one or more of `Shift`, `Alt`, `Command`, `Ctrl`, or `MacCtrl`.
+        - `button`
+          - : An `integer`. Indicates the button used to click the page action icon: `0` for a left-click or a click not associated with a mouse, such as one from the keyboard and `1` for a middle button or wheel click. Note that the right-click is not supported because Firefox consumes that click to display the context menu before this event is triggered.
 
-	<p>When the user clicks the page action, hide it, and navigate the active tab to "<a href="https://giphy.com/explore/cat">https://giphy.com/explore/cat</a>":</p>
+    ## Browser compatibility
 
-	<pre class="brush: js">var CATGIFS = "https://giphy.com/explore/cat";
+    {{Compat}}
 
-browser.pageAction.onClicked.addListener((tab) =&gt; {
-  browser.pageAction.hide(tab.id);
-  browser.tabs.update({url: CATGIFS});
-});
+    ## Examples
 
-browser.pageAction.onClicked.addListener(function () {
-});</pre>
+    When the user clicks the page action, hide it, and navigate the active tab to "<https://giphy.com/explore/cat>":
 
-	<p>{{WebExtExamples}}</p>
+    ```js
+    var CATGIFS = "https://giphy.com/explore/cat";
 
-	<div class="note"><p><strong>Note:</strong></p>
+    browser.pageAction.onClicked.addListener((tab) => {
+      browser.pageAction.hide(tab.id);
+      browser.tabs.update({url: CATGIFS});
+    });
 
-	<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/pageAction#event-onClicked"><code>chrome.pageAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json"><code>page_action.json</code></a> in the Chromium code.</p>
+    browser.pageAction.onClicked.addListener(function () {
+    });
+    ```
 
-	<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-	</div>
+    {{WebExtExamples}}
 
-	<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
-//
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
-//
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
-//
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-	</div>
-	</dd>
-</dl>
+    > **Note:**
+    >
+    > This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction#event-onClicked) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
+    >
+    > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+
+    <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+    //
+    // Redistribution and use in source and binary forms, with or without
+    // modification, are permitted provided that the following conditions are
+    // met:
+    //
+    //    * Redistributions of source code must retain the above copyright
+    // notice, this list of conditions and the following disclaimer.
+    //    * Redistributions in binary form must reproduce the above
+    // copyright notice, this list of conditions and the following disclaimer
+    // in the documentation and/or other materials provided with the
+    // distribution.
+    //    * Neither the name of Google Inc. nor the names of its
+    // contributors may be used to endorse or promote products derived from
+    // this software without specific prior written permission.
+    //
+    // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+    // "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+    // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+    // A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+    // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+    // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+    // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+    // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+    // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+    // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+    // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    </pre></div>

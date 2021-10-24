@@ -13,42 +13,43 @@ tags:
   - clearAll
 browser-compat: webextensions.api.alarms.clearAll
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Cancels all active alarms.</p>
+Cancels all active alarms.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var clearAlarms = browser.alarms.clearAll()
-</pre>
+```js
+var clearAlarms = browser.alarms.clearAll()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a boolean. This will be <code>true</code> if any alarms were cleared, <code>false</code> otherwise. Note that Chrome always passes <code>true</code> here.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a boolean. This will be `true` if any alarms were cleared, `false` otherwise. Note that Chrome always passes `true` here.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">function onClearedAll(wasCleared) {
+```js
+function onClearedAll(wasCleared) {
   console.log(wasCleared);  // true/false
 }
 
 var clearAlarms = browser.alarms.clearAll();
-clearAlarms.then(onClearedAll);</pre>
+clearAlarms.then(onClearedAll);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

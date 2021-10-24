@@ -10,41 +10,43 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.close
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Closes the request. After this is called, no further response data will be passed to the browser's rendering engine and no more filter events will be given to the extension.</p>
+Closes the request. After this is called, no further response data will be passed to the browser's rendering engine and no more filter events will be given to the extension.
 
-<p>Note the difference between this function and {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}. With <code>disconnect()</code>, the browser will continue to process any further response data, but it won't be accessible through the filter. With <code>close()</code>, the browser will ignore any response data that hasn't already been passed through to the rendering engine.</p>
+Note the difference between this function and {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}. With `disconnect()`, the browser will continue to process any further response data, but it won't be accessible through the filter. With `close()`, the browser will ignore any response data that hasn't already been passed through to the rendering engine.
 
-<p>You should always call <code>close()</code> or <code>disconnect()</code> once you don't need to interact with the response any further.</p>
+You should always call `close()` or `disconnect()` once you don't need to interact with the response any further.
 
-<p>You can't call this function until after the {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} event has fired.</p>
+You can't call this function until after the {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} event has fired.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">filter.close()
-</pre>
+```js
+filter.close()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example will replace the page content with "replacement text":</p>
+This example will replace the page content with "replacement text":
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event =&gt; {
+  filter.onstart = event => {
     console.log("started");
     let encoder = new TextEncoder();
     filter.write(encoder.encode("replacement content"));
@@ -56,6 +58,7 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["https://example.org/"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

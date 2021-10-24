@@ -12,35 +12,35 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.show
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Shows one or more tabs that were previously hidden by a call to {{WebExtAPIRef("tabs.hide")}}.</p>
+Shows one or more tabs that were previously hidden by a call to {{WebExtAPIRef("tabs.hide")}}.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var showing = browser.tabs.show(
+```js
+var showing = browser.tabs.show(
   tabIds          // integer or integer array
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>tabIds</code></dt>
- <dd><code>integer</code> or <code>array</code> of <code>integer</code>. The IDs of the tab or tabs to show.</dd>
-</dl>
+- `tabIds`
+  - : `integer` or `array` of `integer`. The IDs of the tab or tabs to show.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments. If any error occurs, the promise will be rejected with an error message.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments. If any error occurs, the promise will be rejected with an error message.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Show a single tab:</p>
+Show a single tab:
 
-<pre class="brush: js">function onShown() {
+```js
+function onShown() {
   console.log(`Shown`);
 }
 
@@ -48,11 +48,13 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.tabs.show(2).then(onShown, onError);</pre>
+browser.tabs.show(2).then(onShown, onError);
+```
 
-<p>Show multiple tabs:</p>
+Show multiple tabs:
 
-<pre class="brush: js">function onShown() {
+```js
+function onShown() {
   console.log(`Shown`);
 }
 
@@ -60,10 +62,11 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.tabs.show([15, 14, 1]).then(onShown, onError);</pre>
+browser.tabs.show([15, 14, 1]).then(onShown, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -5,28 +5,22 @@ tags:
   - Interface
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>To illustrate how to use the WebExtension APIs, we maintain a repository of example extensions at <a href="https://github.com/mdn/webextensions-examples">https://github.com/mdn/webextensions-examples</a>. This article describes how to run these examples and lists the examples along with the WebExtension APIs they demonstrate.</p>
+To illustrate how to use the WebExtension APIs, we maintain a repository of example extensions at <https://github.com/mdn/webextensions-examples>. This article describes how to run these examples and lists the examples along with the WebExtension APIs they demonstrate.
 
-<p>These examples work in Firefox Nightly: most work in earlier versions of Firefox, but check the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">strict_min_version</a> key in the extension's manifest.json to make sure.</p>
+These examples work in Firefox Nightly: most work in earlier versions of Firefox, but check the [strict_min_version](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in the extension's manifest.json to make sure.
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> Some examples work only on specific domains or pages. Details of any restrictions are provided in each example's readme file. None of the examples work in private browsing windows by default, see <a href="https://support.mozilla.org/en-US/kb/extensions-private-browsing#w_enabling-or-disabling-extensions-in-private-windows">Extensions in Private Browsing</a> for details.</p>
-</div>
+> **Warning:** Some examples work only on specific domains or pages. Details of any restrictions are provided in each example's readme file. None of the examples work in private browsing windows by default, see [Extensions in Private Browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing#w_enabling-or-disabling-extensions-in-private-windows) for details.
 
-<p>To try these examples, clone the repository then:</p>
+To try these examples, clone the repository then:
 
-<ol>
- <li>load the extension from its source folder using the <a href="https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/">Load Temporary Add-on</a> feature. The extension stays loaded until you restart Firefox.</li>
- <li>open the extension's source folder at the command-line and use <code><a href="https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/">web-ext</a></code> to run the extension. The extension stays loaded until you restart Firefox.</li>
- <li>in Firefox use <strong>File</strong> &gt; <strong>Open File</strong> and find the example in the <code><a href="https://github.com/mdn/webextensions-examples/tree/master/build">build</a></code> folder. The <code>build</code> folder contains built and signed versions of all the examples. This permanently installs the example.</li>
-</ol>
+1.  load the extension from its source folder using the [Load Temporary Add-on](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) feature. The extension stays loaded until you restart Firefox.
+2.  open the extension's source folder at the command-line and use [`web-ext`](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) to run the extension. The extension stays loaded until you restart Firefox.
+3.  in Firefox use **File** > **Open File** and find the example in the [`build`](https://github.com/mdn/webextensions-examples/tree/master/build) folder. The `build` folder contains built and signed versions of all the examples. This permanently installs the example.
 
-<div class="warning">
-<p><strong>Warning:</strong> Please do not submit these WebExtension examples to addons.mozilla.org (AMO); you do not have to sign the add-on WebExtension examples to run them. Follow the steps above.</p>
-</div>
+> **Warning:** Please do not submit these WebExtension examples to addons.mozilla.org (AMO); you do not have to sign the add-on WebExtension examples to run them. Follow the steps above.
 
-<p>If you want to contribute to the repository, <a href="https://github.com/mdn/webextensions-examples/blob/master/CONTRIBUTING.md">send us a pull request.</a></p>
+If you want to contribute to the repository, [send us a pull request.](https://github.com/mdn/webextensions-examples/blob/master/CONTRIBUTING.md)
 
-<p>{{WebExtAllExamples}}</p>
+{{WebExtAllExamples}}

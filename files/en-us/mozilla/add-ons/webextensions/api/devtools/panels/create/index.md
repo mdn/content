@@ -12,45 +12,45 @@ tags:
   - devtools.panels
 browser-compat: webextensions.api.devtools.panels.create
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Adds a new panel to the devtools.</p>
+Adds a new panel to the devtools.
 
-<p>This function takes: a title, a URL to an icon file, and a URL to an HTML file. It creates a new panel in the devtools, whose content is specified by the HTML file. It returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that resolves to an <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel">ExtensionPanel</a></code> object representing the new panel.</p>
+This function takes: a title, a URL to an icon file, and a URL to an HTML file. It creates a new panel in the devtools, whose content is specified by the HTML file. It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to an [`ExtensionPanel`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel) object representing the new panel.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var creating = browser.devtools.panels.create(
+```js
+var creating = browser.devtools.panels.create(
   title,       // string
   iconPath,    // string
   pagePath     // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>title</code></dt>
- <dd><code>string</code>. The panel's title. This will appear in the row of tabs along the top of the devtools window, and is the main way the user will be able to identify your panel.</dd>
- <dt><code>iconPath</code></dt>
- <dd><code>string</code>. Specifies an icon which will be shown next to the title. It's provided as a URL to an image file that's been bundled with your extension. The URL is resolved as relative to the current extension page (unless expressed as an absolute url, e.g. "/icons/panel.png").</dd>
- <dt><code>pagePath</code></dt>
- <dd>string. Specifies an HTML file that defines the actual content of the panel. It's provided as a URL to an HTML file that's been bundled with your extension. The URL is resolved as relative to the current extension page (unless expressed as an absolute url, e.g. "/devtools/panel.html"). The HTML file may include CSS and JavaScript files, just like a normal web page. The JavaScript running in the panel will be able to use the devtools APIs. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">Extending the developer tools</a>.</dd>
-</dl>
+- `title`
+  - : `string`. The panel's title. This will appear in the row of tabs along the top of the devtools window, and is the main way the user will be able to identify your panel.
+- `iconPath`
+  - : `string`. Specifies an icon which will be shown next to the title. It's provided as a URL to an image file that's been bundled with your extension. The URL is resolved as relative to the current extension page (unless expressed as an absolute url, e.g. "/icons/panel.png").
+- `pagePath`
+  - : string. Specifies an HTML file that defines the actual content of the panel. It's provided as a URL to an HTML file that's been bundled with your extension. The URL is resolved as relative to the current extension page (unless expressed as an absolute url, e.g. "/devtools/panel.html"). The HTML file may include CSS and JavaScript files, just like a normal web page. The JavaScript running in the panel will be able to use the devtools APIs. See [Extending the developer tools](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools).
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel">ExtensionPanel</a></code> object representing the new panel.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an [`ExtensionPanel`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel) object representing the new panel.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Create a new panel, and add listeners to its onShown and onHidden events:</p>
+Create a new panel, and add listeners to its onShown and onHidden events:
 
-<pre class="brush: js">function handleShown() {
+```js
+function handleShown() {
   console.log("panel is being shown");
 }
 
@@ -62,22 +62,19 @@ browser.devtools.panels.create(
   "My Panel",                 // title
   "/icons/star.png",           // icon
   "/devtools/panel/panel.html" // content
-).then((newPanel) =&gt; {
+).then((newPanel) => {
   newPanel.onShown.addListener(handleShown);
   newPanel.onHidden.addListener(handleHidden);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -104,5 +101,4 @@ browser.devtools.panels.create(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

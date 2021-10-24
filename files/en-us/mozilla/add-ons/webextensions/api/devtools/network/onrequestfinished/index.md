@@ -12,74 +12,67 @@ tags:
   - onRequestFinished
 browser-compat: webextensions.api.devtools.network.onRequestFinished
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when a network request has finished and its details are available to the extension.</p>
+Fired when a network request has finished and its details are available to the extension.
 
-<p>The request is given as a <a href="http://www.softwareishard.com/blog/har-12-spec/#entries">HAR entry object</a>, which is also given an asynchronous <code>getContent()</code> method that gets the response body content.</p>
+The request is given as a [HAR entry object](http://www.softwareishard.com/blog/har-12-spec/#entries), which is also given an asynchronous `getContent()` method that gets the response body content.
 
-<p>Note that although your extension can add a listener at any time, it will only start firing after the user has activated the browser's <a href="/en-US/docs/Tools/Network_Monitor">network panel</a> at least once.</p>
+Note that although your extension can add a listener at any time, it will only start firing after the user has activated the browser's [network panel](/en-US/docs/Tools/Network_Monitor) at least once.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.devtools.network.onRequestFinished.addListener(listener)
+```js
+browser.devtools.network.onRequestFinished.addListener(listener)
 browser.devtools.network.onRequestFinished.removeListener(listener)
 browser.devtools.network.onRequestFinished.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(listener)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>request</code></dt>
-  <dd><code>object</code>. An object representing the request. This object is a single <a href="http://www.softwareishard.com/blog/har-12-spec/#entries">HAR entry</a> object. It also defines an asynchronous <code>getContent()</code> method, which returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that resolves with an array of two elements. The first element is the HTTP response body as a string, while the second element is the <a href="/en-US/docs/Glossary/MIME_type">MIME type</a> of the HTTP response also as a string.</dd>
- </dl>
- </dd>
-</dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    - `request`
+      - : `object`. An object representing the request. This object is a single [HAR entry](http://www.softwareishard.com/blog/har-12-spec/#entries) object. It also defines an asynchronous `getContent()` method, which returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves with an array of two elements. The first element is the HTTP response body as a string, while the second element is the [MIME type](/en-US/docs/Glossary/MIME_type) of the HTTP response also as a string.
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="Examples">Examples</h2>
+{{Compat}}
 
-<p>Add a listener that logs the server IP address and response body for every network request.</p>
+## Examples
 
-<pre class="brush: js">function handleRequestFinished(request) {
+Add a listener that logs the server IP address and response body for every network request.
+
+```js
+function handleRequestFinished(request) {
   console.log("Server IP: ", request.serverIPAddress);
-  request.getContent().then(([content, mimeType]) =&gt; {
+  request.getContent().then(([content, mimeType]) => {
     console.log("Content: ", content);
     console.log("MIME type: ", mimeType);
   });
 }
 
-browser.devtools.network.onRequestFinished.addListener(handleRequestFinished);</pre>
+browser.devtools.network.onRequestFinished.addListener(handleRequestFinished);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools"><code>chrome.devtools</code></a> API.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,5 +99,4 @@ browser.devtools.network.onRequestFinished.addListener(handleRequestFinished);</
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

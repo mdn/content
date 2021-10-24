@@ -13,76 +13,65 @@ tags:
   - onRequestExternal
 browser-compat: webextensions.api.extension.onRequestExternal
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<div class="warning">
-<p><strong>Warning:</strong> This is not implemented in Firefox because it has been deprecated since Chrome 33. Please use <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal">runtime.onMessageExternal</a> instead.</p>
-</div>
+> **Warning:** This is not implemented in Firefox because it has been deprecated since Chrome 33. Please use [runtime.onMessageExternal](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal) instead.
 
-<p>Fired when a request is sent from another extension.</p>
+Fired when a request is sent from another extension.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">chrome.extension.onRequestExternal.addListener(function(
+```js
+chrome.extension.onRequestExternal.addListener(function(
   request,         // optional any
   sender,          // runtime.MessageSender
   function() {...} // function
 ) {...})
 chrome.extension.onRequestExternal.removeListener(listener)
 chrome.extension.onRequestExternal.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>request</code></dt>
-  <dd><code>any</code>. The request sent by the calling script.</dd>
- </dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
- <dl>
-  <dt><code>sender</code></dt>
-  <dd>{{WebExtAPIRef('runtime.MessageSender')}}.</dd>
- </dl>
+    - `request`
+      - : `any`. The request sent by the calling script.
 
- <dl>
-  <dt><code>sendResponse</code></dt>
-  <dd><code>function</code>. Function to call when you have a response. The argument should be any JSON-ifiable object, or undefined if there is no response.</dd>
- </dl>
- </dd>
-</dl>
+    <!---->
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    - `sender`
+      - : {{WebExtAPIRef('runtime.MessageSender')}}.
 
-<p>{{Compat}}</p>
+    <!---->
 
-<p>{{WebExtExamples}}</p>
+    - `sendResponse`
+      - : `function`. Function to call when you have a response. The argument should be any JSON-ifiable object, or undefined if there is no response.
 
+## Browser compatibility
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/extension#event-onRequestExternal"><code>chrome.extension</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json"><code>extension.json</code></a> in the Chromium code.</p>
+{{Compat}}
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+{{WebExtExamples}}
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/extensions/extension#event-onRequestExternal) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -109,5 +98,4 @@ chrome.extension.onRequestExternal.hasListener(listener)
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

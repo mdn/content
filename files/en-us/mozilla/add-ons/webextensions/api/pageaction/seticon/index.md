@@ -13,98 +13,98 @@ tags:
   - setIcon
 browser-compat: webextensions.api.pageAction.setIcon
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Sets the icon for the page action.</p>
+Sets the icon for the page action.
 
-<p>You can specify a single icon as either the path to an image file or a {{WebExtAPIRef('pageAction.ImageDataType')}} object.</p>
+You can specify a single icon as either the path to an image file or a {{WebExtAPIRef('pageAction.ImageDataType')}} object.
 
-<p>You can specify multiple icons in different sizes by supplying a dictionary containing multiple paths or <code>ImageData</code> objects. This means the icon doesn't have to be scaled for a device with a different pixel density.</p>
+You can specify multiple icons in different sizes by supplying a dictionary containing multiple paths or `ImageData` objects. This means the icon doesn't have to be scaled for a device with a different pixel density.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var settingIcon = browser.pageAction.setIcon(
+```js
+var settingIcon = browser.pageAction.setIcon(
   details         // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
- <p><code>object</code>. An object containing either <code>imageData</code> or <code>path</code> properties, and a <code>tabId</code> property.</p>
+- `details`
 
- <dl>
-  <dt><code>imageData</code>{{optional_inline}}</dt>
-  <dd>
-  <p><code>{{WebExtAPIRef('pageAction.ImageDataType')}}</code> or <code>object</code>. This is either a single <code>ImageData</code> object or a dictionary object.</p>
+  - : `object`. An object containing either `imageData` or `path` properties, and a `tabId` property.
 
-  <p>Use a dictionary object to specify multiple <code>ImageData</code> objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>imageData</code> is a dictionary, the value of each property is an <code>ImageData</code> object, and its name is its size, like this:</p>
+    - `imageData`{{optional_inline}}
 
-  <pre class="brush: json">{
-  16: image16,
-  32: image32
-}</pre>
+      - : `{{WebExtAPIRef('pageAction.ImageDataType')}}` or `object`. This is either a single `ImageData` object or a dictionary object.
 
-  <p>The browser will choose the image to use depending on the screen's pixel density. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes">Choosing icon sizes</a> for more information on this.</p>
-  </dd>
-  <dt><code>path</code>{{optional_inline}}</dt>
-  <dd>
-  <p><code>string</code> or <code>object</code>. This is either a relative path to an icon file or a dictionary object. </p>
+        Use a dictionary object to specify multiple `ImageData` objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `imageData` is a dictionary, the value of each property is an `ImageData` object, and its name is its size, like this:
 
-  <p>Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>path</code> is a dictionary, the value of each property is a relative path, and its name is its size, like this:</p>
+        ```json
+        {
+          16: image16,
+          32: image32
+        }
+        ```
 
-  <pre class="brush: json">{
-  16: &quot;path/to/image16.jpg&quot;,
-  32: &quot;path/to/image32.jpg&quot;
-}</pre>
+        The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
 
-  <p>The browser will choose the image to use depending on the screen's pixel density. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes">Choosing icon sizes</a> for more information on this.</p>
+    - `path`{{optional_inline}}
 
-  <p>If <code>path</code> is <code>null</code>, this will reset the page action's icon to the icon that was given in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code> manifest key.</p>
+      - : `string` or `object`. This is either a relative path to an icon file or a dictionary object.
 
-  <p>If <code>path</code> is <code>""</code>, this will reset the icon to the browser's global default icon (that is, the icon used if no icon is given in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code> manifest key).</p>
+        Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `path` is a dictionary, the value of each property is a relative path, and its name is its size, like this:
 
-  <p>If <code>path</code> does not point to a valid icon, then no icon will be displayed.</p>
-  </dd>
-  <dt><code>tabId</code></dt>
-  <dd><code>integer</code>. The ID of the tab whose icon you want to set.</dd>
- </dl>
- </dd>
-</dl>
+        ```json
+        {
+          16: "path/to/image16.jpg",
+          32: "path/to/image32.jpg"
+        }
+        ```
 
-<h3 id="Return_value">Return value</h3>
+        The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments once the icon has been set.</p>
+        If `path` is `null`, this will reset the page action's icon to the icon that was given in the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+        If `path` is `""`, this will reset the icon to the browser's global default icon (that is, the icon used if no icon is given in the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key).
 
-<div>{{Compat}}</div>
+        If `path` does not point to a valid icon, then no icon will be displayed.
 
-<h2 id="Examples">Examples</h2>
+    - `tabId`
+      - : `integer`. The ID of the tab whose icon you want to set.
 
-<p>Set the icon for the page action when the user clicks it:</p>
+### Return value
 
-<pre class="brush: js">browser.pageAction.onClicked.addListener((tab) =&gt; {
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments once the icon has been set.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+Set the icon for the page action when the user clicks it:
+
+```js
+browser.pageAction.onClicked.addListener((tab) => {
   browser.pageAction.setIcon({
     tabId: tab.id, path: "icons/icon-48.png"
   });
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note:</strong></p>
+> **Note:**
+>
+> This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction#method-setIcon) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/pageAction#method-setIcon"><code>chrome.pageAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json"><code>page_action.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -131,5 +131,4 @@ browser-compat: webextensions.api.pageAction.setIcon
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

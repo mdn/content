@@ -13,36 +13,38 @@ tags:
   - getAll
 browser-compat: webextensions.api.notifications.getAll
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Gets all currently active notifications created by the extension.</p>
+Gets all currently active notifications created by the extension.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var gettingAll = browser.notifications.getAll()
-</pre>
+```js
+var gettingAll = browser.notifications.getAll()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an object. Each currently active notification is a property of this object: the name of the property is the ID of the notification, and the value of the property is a {{WebExtAPIRef("notifications.NotificationOptions")}} object describing that notification.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object. Each currently active notification is a property of this object: the name of the property is the ID of the notification, and the value of the property is a {{WebExtAPIRef("notifications.NotificationOptions")}} object describing that notification.
 
-<p>Note that you can define an ID for a notification explicitly by passing it into {{WebExtAPIRef("notifications.create()")}}. If you don't do this, the browser will generate one. Explicitly-specified IDs are strings, but generated IDs are numbers. </p>
+Note that you can define an ID for a notification explicitly by passing it into {{WebExtAPIRef("notifications.create()")}}. If you don't do this, the browser will generate one. Explicitly-specified IDs are strings, but generated IDs are numbers.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example shows a notification when the user clicks a browser action, unless the notification was already being shown, in which case it clears the notification. It uses getAll() to figure out whether the notification is being shown:</p>
+This example shows a notification when the user clicks a browser action, unless the notification was already being shown, in which case it clears the notification. It uses getAll() to figure out whether the notification is being shown:
 
-<pre class="brush: js">var myNotification = "my-notification";
+```js
+var myNotification = "my-notification";
 
 function toggleAlarm(all) {
   let ids = Object.keys(all);
@@ -64,22 +66,23 @@ function handleClick() {
   browser.notifications.getAll().then(toggleAlarm);
 }
 
-browser.browserAction.onClicked.addListener(handleClick);</pre>
+browser.browserAction.onClicked.addListener(handleClick);
+```
 
-<p>This example logs the title of all active notifications:</p>
+This example logs the title of all active notifications:
 
-<pre class="brush: js">function logNotifications(all) {
+```js
+function logNotifications(all) {
   for (let id in all) {
     console.log(`Title: ${all[id].title}`);
   }
 }
 
-browser.notifications.getAll().then(logNotifications);</pre>
+browser.notifications.getAll().then(logNotifications);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/notifications"><code>chrome.notifications</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

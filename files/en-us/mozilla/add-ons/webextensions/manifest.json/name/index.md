@@ -7,38 +7,37 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.name
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json">
-"name": "My Extension"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td><pre class="brush: json">"name": "My Extension"</pre></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Name of the extension. This is used to identify the extension in the browser's user interface and on sites like addons.mozilla.org.</p>
+Name of the extension. This is used to identify the extension in the browser's user interface and on sites like addons.mozilla.org.
 
-<p>It's good practice to keep the name short enough to display in the UI. Google Chrome and Microsoft Edge restrict the name length to 45 characters.</p>
+It's good practice to keep the name short enough to display in the UI. Google Chrome and Microsoft Edge restrict the name length to 45 characters.
 
-<p>This is a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json">localizable property</a>.</p>
+This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: json">"name": "My Extension"</pre>
+```json
+"name": "My Extension"
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

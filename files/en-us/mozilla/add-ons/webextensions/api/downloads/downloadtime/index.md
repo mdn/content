@@ -13,39 +13,33 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.DownloadTime
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code>DownloadTime</code> type of the {{WebExtAPIRef("downloads")}} API represents the time a download took to complete.</p>
+The `DownloadTime` type of the {{WebExtAPIRef("downloads")}} API represents the time a download took to complete.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>A <code>DownloadTime</code> can be one of three different types:</p>
+A `DownloadTime` can be one of three different types:
 
-<ul>
- <li>a JavaScript <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> object.</li>
- <li>a string:
-  <ul>
-   <li>if this contains only digits, it's interpreted as the number of milliseconds since the UNIX epoch.</li>
-   <li>otherwise, it's interpreted as an <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> string.</li>
-  </ul>
- </li>
- <li>a number: this is interpreted as the number of milliseconds since the UNIX epoch.</li>
-</ul>
+- a JavaScript [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object.
+- a string:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+  - if this contains only digits, it's interpreted as the number of milliseconds since the UNIX epoch.
+  - otherwise, it's interpreted as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) string.
 
-<p>{{Compat}}</p>
+- a number: this is interpreted as the number of milliseconds since the UNIX epoch.
 
-<p>{{WebExtExamples}}</p>
+## Browser compatibility
 
+{{Compat}}
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#type-DownloadTime"><code>chrome.downloads</code></a> API.</p>
+{{WebExtExamples}}
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#type-DownloadTime) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -72,5 +66,4 @@ browser-compat: webextensions.api.downloads.DownloadTime
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -8,33 +8,31 @@ tags:
   - Landing
   - Mozilla
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Use the links below to get help, to keep up to date with add-ons news, and to give us feedback.</p>
+Use the links below to get help, to keep up to date with add-ons news, and to give us feedback.
 
-<h3 id="Add-ons_forum">Add-ons forum</h3>
+### Add-ons forum
 
-<p>Use the <a href="https://discourse.mozilla.org/c/add-ons">Add-ons Discourse forum</a> to discuss all aspects of add-on development and to request help.</p>
+Use the [Add-ons Discourse forum](https://discourse.mozilla.org/c/add-ons) to discuss all aspects of add-on development and to request help.
 
-<h3 id="Mailing_lists">Mailing lists</h3>
+### Mailing lists
 
-<p>The <strong>dev-addons mailing list</strong> was retired on December 1, 2020. You can view the <a href="https://mail.mozilla.org/pipermail/dev-addons/">dev-addons archives</a> to see past discussions about the WebExtensions API and addons.mozilla.org.</p>
+The **dev-addons mailing list** was retired on December 1, 2020. You can view the [dev-addons archives](https://mail.mozilla.org/pipermail/dev-addons/) to see past discussions about the WebExtensions API and addons.mozilla.org.
 
-<h3 id="Chat">Chat</h3>
+### Chat
 
-<p><a href="https://matrix.org/">Matrix</a> is an open, lightweight protocol for decentralized, real-time communications. For information on how to join Mozilla's Matrix instance, refer to the <a href="https://wiki.mozilla.org/Matrix">Matrix page on MozillaWiki</a>.</p>
+[Matrix](https://matrix.org/) is an open, lightweight protocol for decentralized, real-time communications. For information on how to join Mozilla's Matrix instance, refer to the [Matrix page on MozillaWiki](https://wiki.mozilla.org/Matrix).
 
-<ul>
- <li><a href="https://chat.mozilla.org/#/room/#addons:mozilla.org">Add-ons</a> (support for extensions, themes, and the WebExtensions API)</li>
- <li><a href="https://chat.mozilla.org/#/room/#amo:mozilla.org">AMO</a> (discussion around addons.mozilla.org)</li>
-</ul>
+- [Add-ons](https://chat.mozilla.org/#/room/#addons:mozilla.org) (support for extensions, themes, and the WebExtensions API)
+- [AMO](https://chat.mozilla.org/#/room/#amo:mozilla.org) (discussion around addons.mozilla.org)
 
-<h3 id="Report_problems">Report problems</h3>
+### Report problems
 
-<h4 id="Security_vulnerabilities">Security vulnerabilities</h4>
+#### Security vulnerabilities
 
-<p>If you discover an add-on security vulnerability, even if the add-on is not hosted on a Mozilla site, please notify us. We will work with the developer to correct the issue. Please report security vulnerabilities <a href="https://www.mozilla.org/projects/security/security-bugs-policy.html">confidentially </a>in <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=addons.mozilla.org&amp;component=Add-on%20Security&amp;maketemplate=Add-on%20Security%20Bug&amp;bit-23=1&amp;rep_platform=All&amp;op_sys=All">Bugzilla </a>or by emailing <a href="mailto:amo-admins@mozilla.com">amo-admins@mozilla.com</a>.</p>
+If you discover an add-on security vulnerability, even if the add-on is not hosted on a Mozilla site, please notify us. We will work with the developer to correct the issue. Please report security vulnerabilities [confidentially ](https://www.mozilla.org/projects/security/security-bugs-policy.html)in [Bugzilla ](https://bugzilla.mozilla.org/enter_bug.cgi?product=addons.mozilla.org&component=Add-on%20Security&maketemplate=Add-on%20Security%20Bug&bit-23=1&rep_platform=All&op_sys=All)or by emailing <amo-admins@mozilla.com>.
 
-<h4 id="Bugs_on_addons.mozilla.org_AMO">Bugs on addons.mozilla.org (AMO)</h4>
+#### Bugs on addons.mozilla.org (AMO)
 
-<p>If you find a problem with the site, we'd love to fix it. Please <a href="https://github.com/mozilla/addons/issues/new">file a bug report </a>and include as much detail as possible.</p>
+If you find a problem with the site, we'd love to fix it. Please [file a bug report ](https://github.com/mozilla/addons/issues/new)and include as much detail as possible.

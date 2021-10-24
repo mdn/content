@@ -12,22 +12,19 @@ tags:
   - Type
   - WebExtensions
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
+The `SameSiteStatus` type of the {{WebExtAPIRef("cookies")}} API represents information about the `SameSite` state of a cookie.
 
-<p>The <code>SameSiteStatus</code> type of the {{WebExtAPIRef("cookies")}} API represents information about the <code>SameSite</code> state of a cookie.</p>
+## Type
 
-<h2 id="Type">Type</h2>
+Values of this type are strings. Possible values are:
 
-<p>Values of this type are strings. Possible values are:</p>
+- `no_restriction`
+  - : Represents a cookie set without a `SameSite` attribute.
+- `lax`
+  - : Corresponds to `SameSite=Lax`
+- `strict`
+  - : Corresponds to a cookie set with `SameSite=Strict`
 
-<dl>
- <dt><code>no_restriction</code></dt>
- <dd>Represents a cookie set without a <code>SameSite</code> attribute.</dd>
- <dt><code>lax</code></dt>
- <dd>Corresponds to <code>SameSite=Lax</code></dd>
- <dt><code>strict</code></dt>
- <dd>Corresponds to a cookie set with <code>SameSite=Strict</code></dd>
-</dl>
-
-<p>See <a href="/en-US/docs/Web/HTTP/Cookies#samesite_cookies">SameSite cookies</a> for more information.</p>
+See [SameSite cookies](/en-US/docs/Web/HTTP/Cookies#samesite_cookies) for more information.

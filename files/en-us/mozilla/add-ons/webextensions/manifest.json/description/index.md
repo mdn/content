@@ -7,36 +7,39 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.description
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json">
-"description": "Replaces pictures with pictures of cats."</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json">
+"description": "Replaces pictures with pictures of cats."</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>A short description of the extension, intended for display in the browser's user interface.</p>
+A short description of the extension, intended for display in the browser's user interface.
 
-<p>This is a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json">localizable property</a>.</p>
+This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: json">"description": "Replaces pictures with pictures of cats."</pre>
+```json
+"description": "Replaces pictures with pictures of cats."
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

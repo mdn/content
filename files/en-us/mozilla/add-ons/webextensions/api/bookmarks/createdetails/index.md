@@ -13,41 +13,36 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.bookmarks.CreateDetails
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code>CreateDetails</code> type is used to describe the properties of a new, bookmark, bookmark folder, or separator when calling the {{WebExtAPIRef("bookmarks.create()")}} method.</p>
+The `CreateDetails` type is used to describe the properties of a new, bookmark, bookmark folder, or separator when calling the {{WebExtAPIRef("bookmarks.create()")}} method.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>An {{jsxref("object")}} containing some combination of the following fields:</p>
+An {{jsxref("object")}} containing some combination of the following fields:
 
-<dl>
- <dt><code>index</code> {{optional_inline}}</dt>
- <dd>An integer {{jsxref("Number")}} which specifies the position at which to place the new bookmark under its parent. A value of 0 will put it at the top of the list.</dd>
- <dt><code>parentId</code> {{optional_inline}}</dt>
- <dd>A {{jsxref("string")}} which indicates the ID of the parent folder into which to place the new bookmark or bookmark folder. On Chrome and Firefox, the default is the "Other Bookmarks" folder on the Bookmarks menu.</dd>
- <dt><code>title</code> {{optional_inline}}</dt>
- <dd>A {{jsxref("string")}} which specifies the title for the bookmark or the name of the folder to be created. If this isn't specified, the title is <code>""</code>.</dd>
- <dt><code>type</code>{{optional_inline}}</dt>
- <dd>A {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} object indicating whether this is a bookmark, a folder, or a separator. Defaults to <code>"bookmark"</code> unless <code>url</code> is omitted, in which case it defaults to <code>"folder"</code>.</dd>
- <dt><code>url</code> {{optional_inline}}</dt>
- <dd><code>string</code>. A {{jsxref("string")}} which specifies the URL of the page to bookmark. If this is omitted or is <code>null</code>, a folder is created instead of a bookmark.</dd>
-</dl>
+- `index` {{optional_inline}}
+  - : An integer {{jsxref("Number")}} which specifies the position at which to place the new bookmark under its parent. A value of 0 will put it at the top of the list.
+- `parentId` {{optional_inline}}
+  - : A {{jsxref("string")}} which indicates the ID of the parent folder into which to place the new bookmark or bookmark folder. On Chrome and Firefox, the default is the "Other Bookmarks" folder on the Bookmarks menu.
+- `title` {{optional_inline}}
+  - : A {{jsxref("string")}} which specifies the title for the bookmark or the name of the folder to be created. If this isn't specified, the title is `""`.
+- `type`{{optional_inline}}
+  - : A {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} object indicating whether this is a bookmark, a folder, or a separator. Defaults to `"bookmark"` unless `url` is omitted, in which case it defaults to `"folder"`.
+- `url` {{optional_inline}}
+  - : `string`. A {{jsxref("string")}} which specifies the URL of the page to bookmark. If this is omitted or is `null`, a folder is created instead of a bookmark.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#type-CreateDetails) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#type-CreateDetails"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -74,5 +69,4 @@ browser-compat: webextensions.api.bookmarks.CreateDetails
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

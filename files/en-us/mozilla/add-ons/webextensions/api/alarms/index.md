@@ -11,51 +11,43 @@ tags:
   - alarms
 browser-compat: webextensions.api.alarms
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p><span class="seoSummary">Schedule code to run at a specific time in the future.</span> This is like <code><a href="/en-US/docs/Web/API/setTimeout">setTimeout()</a></code> and <code><a href="/en-US/docs/Web/API/setInterval">setInterval()</a></code>, except that those functions don't work with background pages that are loaded on demand.</p>
+Schedule code to run at a specific time in the future. This is like [`setTimeout()`](/en-US/docs/Web/API/setTimeout) and [`setInterval()`](/en-US/docs/Web/API/setInterval), except that those functions don't work with background pages that are loaded on demand.
 
-<p>Alarms do not persist across browser sessions. They are created globally across all contexts of a single extension. E.g. alarm created in background script will fire <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm"><code>onAlarm</code></a> event in background script, options page, popup page and extension tabs (and vice versa). Alarms API is not available in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis"><code>Content scripts</code></a>.</p>
+Alarms do not persist across browser sessions. They are created globally across all contexts of a single extension. E.g. alarm created in background script will fire [`onAlarm`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm) event in background script, options page, popup page and extension tabs (and vice versa). Alarms API is not available in [`Content scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis).
 
-<p>To use this API you need to have the "alarms" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
+To use this API you need to have the "alarms" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("alarms.Alarm")}}</dt>
- <dd>Information about a particular alarm.</dd>
-</dl>
+- {{WebExtAPIRef("alarms.Alarm")}}
+  - : Information about a particular alarm.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{WebExtAPIRef("alarms.clear()")}}</dt>
- <dd>Clear a specific alarm, given its name.</dd>
- <dt>{{WebExtAPIRef("alarms.clearAll()")}}</dt>
- <dd>Clear all scheduled alarms.</dd>
- <dt>{{WebExtAPIRef("alarms.create()")}}</dt>
- <dd>Create a new alarm.</dd>
- <dt>{{WebExtAPIRef("alarms.get()")}}</dt>
- <dd>Retrieves a specific alarm, given its name.</dd>
- <dt>{{WebExtAPIRef("alarms.getAll()")}}</dt>
- <dd>Retrieve all scheduled alarms.</dd>
-</dl>
+- {{WebExtAPIRef("alarms.clear()")}}
+  - : Clear a specific alarm, given its name.
+- {{WebExtAPIRef("alarms.clearAll()")}}
+  - : Clear all scheduled alarms.
+- {{WebExtAPIRef("alarms.create()")}}
+  - : Create a new alarm.
+- {{WebExtAPIRef("alarms.get()")}}
+  - : Retrieves a specific alarm, given its name.
+- {{WebExtAPIRef("alarms.getAll()")}}
+  - : Retrieve all scheduled alarms.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("alarms.onAlarm")}}</dt>
- <dd>Fired when an alarm goes off.</dd>
-</dl>
+- {{WebExtAPIRef("alarms.onAlarm")}}
+  - : Fired when an alarm goes off.
 
 {{WebExtExamples("h2")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

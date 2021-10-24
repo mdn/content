@@ -12,82 +12,79 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.setTitle
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Sets the sidebar's title. The title is displayed anywhere the browser lists available sidebars. For example, Firefox will show it in the "View &gt; Sidebar" menu. It's also shown at the top o the sidebar when the sidebar is open.</p>
+Sets the sidebar's title. The title is displayed anywhere the browser lists available sidebars. For example, Firefox will show it in the "View > Sidebar" menu. It's also shown at the top o the sidebar when the sidebar is open.
 
-<h2 id="Types_of_title">Types of title</h2>
+## Types of title
 
-<p>Your extension should specify an title for the sidebar in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a> manifest key. This is called the <em>"manifest title"</em>. If you don't specify the manifest title, it will default to the extension name.</p>
+Your extension should specify an title for the sidebar in the [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key. This is called the _"manifest title"_. If you don't specify the manifest title, it will default to the extension name.
 
-<p>If you set a new title using <code>setTitle()</code>, and include the <code>tabId</code> option, then the title is set only for the given tab. This title is called the <em>"tab-specific title"</em>.</p>
+If you set a new title using `setTitle()`, and include the `tabId` option, then the title is set only for the given tab. This title is called the _"tab-specific title"_.
 
-<p>If you set a new title using <code>setTitle()</code>, and include the <code>windowId</code> option, then the title is set only for the given window. This title is called the <em>"window-specific title"</em>, and will appear in all tabs of that window that do not have a tab-specific title set.</p>
+If you set a new title using `setTitle()`, and include the `windowId` option, then the title is set only for the given window. This title is called the _"window-specific title"_, and will appear in all tabs of that window that do not have a tab-specific title set.
 
-<p>If you set a new title using <code>setTitle()</code>, and omit both the <code>tabId</code> and <code>windowId</code> options, then this sets the <em>"global title"</em>. The global title will then appear in all tabs that do not have a tab-specific title set and whose window does not have a window-specific title.</p>
+If you set a new title using `setTitle()`, and omit both the `tabId` and `windowId` options, then this sets the _"global title"_. The global title will then appear in all tabs that do not have a tab-specific title set and whose window does not have a window-specific title.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.sidebarAction.setTitle(
+```js
+browser.sidebarAction.setTitle(
   details // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p><code>object</code>. An object with the following properties:</p>
-   <dl>
-    <dt><code>title</code></dt>
-    <dd>
-      <p><code>string</code> or <code>null</code>. The sidebar's new title.</p>
-      <p>If <code>title</code> is an empty string, the used title will be the extension name, but {{WebExtAPIRef("sidebarAction.getTitle")}} will still provide the empty string.</p>
-      <p>If <code>title</code> is <code>null</code>, then a previously set title will be removed, so that:</p>
-      <ul>
-       <li>If <code>tabId</code> is specified, and the tab has a tab-specific title set, then the tab will inherit the title from the window it belongs to.</li>
-       <li>If <code>windowId</code> is specified, and the window has a window-specific title set, then the window will inherit the global title.</li>
-       <li>Otherwise, the global title will be reset to the manifest title.</li>
-      </ul>
-    </dd>
-    <dt><code>tabId</code>{{optional_inline}}</dt>
-    <dd><code>integer</code>. Sets the title only for the given tab.</dd>
-    <dt><code>windowId</code>{{optional_inline}}</dt>
-    <dd><code>integer</code>. Sets the title only for the given window.</dd>
-   </dl>
- </dd>
-</dl>
+- `details`
 
-<ul>
- <li>If <code>windowId</code> and <code>tabId</code> are both supplied, the function fails and the title is not set.</li>
- <li>If <code>windowId</code> and <code>tabId</code> are both omitted, the global title is set.</li>
-</ul>
+  - : `object`. An object with the following properties:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    - `title`
 
-<p>{{Compat}}</p>
+      - : `string` or `null`. The sidebar's new title.
 
-<h2 id="Examples">Examples</h2>
+        If `title` is an empty string, the used title will be the extension name, but {{WebExtAPIRef("sidebarAction.getTitle")}} will still provide the empty string.
 
-<p>This code changes the title for the sidebar when the user clicks a browser action, but only for the current tab:</p>
+        If `title` is `null`, then a previously set title will be removed, so that:
 
-<pre class="brush: js">var title = "A different title";
+        - If `tabId` is specified, and the tab has a tab-specific title set, then the tab will inherit the title from the window it belongs to.
+        - If `windowId` is specified, and the window has a window-specific title set, then the window will inherit the global title.
+        - Otherwise, the global title will be reset to the manifest title.
+
+    - `tabId`{{optional_inline}}
+      - : `integer`. Sets the title only for the given tab.
+    - `windowId`{{optional_inline}}
+      - : `integer`. Sets the title only for the given window.
+
+<!---->
+
+- If `windowId` and `tabId` are both supplied, the function fails and the title is not set.
+- If `windowId` and `tabId` are both omitted, the global title is set.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+This code changes the title for the sidebar when the user clicks a browser action, but only for the current tab:
+
+```js
+var title = "A different title";
 
 function setTitleForTab(tab) {
   browser.sidebarAction.setTitle({title, tabId: tab.id});
 }
 
-browser.browserAction.onClicked.addListener(setTitleForTab);</pre>
+browser.browserAction.onClicked.addListener(setTitleForTab);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Opera's <a class="external external-icon" href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a> API.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -114,5 +111,4 @@ browser.browserAction.onClicked.addListener(setTitleForTab);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

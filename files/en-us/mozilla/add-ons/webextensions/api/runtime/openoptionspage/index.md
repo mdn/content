@@ -13,35 +13,34 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.openOptionsPage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}If your extension has an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) defined, this method opens it.
 
-<div>If your extension has an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">options page</a> defined, this method opens it.</div>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
+## Syntax
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+```js
+var openingPage = browser.runtime.openOptionsPage()
+```
 
-<h2 id="Syntax">Syntax</h2>
+### Parameters
 
-<pre class="brush:js">var openingPage = browser.runtime.openOptionsPage()
-</pre>
+None.
 
-<h3 id="Parameters">Parameters</h3>
+### Return value
 
-<p>None.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the options page has been created successfully, or rejected with an error message if the operation failed.
 
-<h3 id="Return_value">Return value</h3>
+## Browser compatibility
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when the options page has been created successfully, or rejected with an error message if the operation failed.</p>
+{{Compat}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Examples
 
-<p>{{Compat}}</p>
+Open the options page when the user clicks a browser action's icon:
 
-<h2 id="Examples">Examples</h2>
-
-<p>Open the options page when the user clicks a browser action's icon:</p>
-
-<pre class="brush: js">function onOpened() {
+```js
+function onOpened() {
   console.log(`Options page opened`);
 }
 
@@ -50,18 +49,16 @@ function onError(error) {
 }
 
 var opening = browser.runtime.openOptionsPage();
-opening.then(onOpened, onError);</pre>
+opening.then(onOpened, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-openOptionsPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#method-openOptionsPage"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -88,5 +85,4 @@ opening.then(onOpened, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,75 +13,74 @@ tags:
   - getAll
 browser-compat: webextensions.api.cookies.getAll
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <strong><code>getAll()</code></strong> method of the {{WebExtAPIRef("cookies")}} API retrieves all cookies from a single cookie store that match the given information.</p>
+The **`getAll()`** method of the {{WebExtAPIRef("cookies")}} API retrieves all cookies from a single cookie store that match the given information.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var getting = browser.cookies.getAll(
+```js
+var getting = browser.cookies.getAll(
   details                // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p>An <code>object</code> containing details that can be used to match cookies to be retrieved. Included properties are as follows (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/Cookie#type">Cookie type</a> for more information on these):</p>
-   <dl>
-    <dt><code>domain</code>{{optional_inline}}</dt>
-    <dd>A <code>string</code> representing a domain that cookies must be associated with (they can be associated either with this exact domain or one of its subdomains).</dd>
-    <dt><code>firstPartyDomain</code>{{optional_inline}}</dt>
-    <dd>
-      <p>A <code>string</code> representing the first-party domain with which the cookie to retrieve is associated.</p>
-      <p>This property must be supplied if the browser has first-party isolation enabled. You can however pass <code>null</code> in this situation. If you do this, then cookies with any value for <code>firstPartyDomain</code>, as well as cookies which do not have <code>firstPartyDomain</code> set at all, will be included in the results. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation">First-party isolation</a>.</p>
-    </dd>
-    <dt><code>name</code>{{optional_inline}}</dt>
-    <dd>A <code>string</code> representing a name that the cookies should have.</dd>
-    <dt><code>partitionKey</code>{{optional_inline}}</dt>
-    <dd>An <code>object</code> defining which <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning">storage partitions</a> to return cookies from:
-      <ul>
-        <li>if omitted, returns only cookies from unpartitioned storage.</li>
-        <li>if included without <code>topLevelSite</code>, returns all cookies from partitioned and unpartitioned storage.</li>
-        <li>if included with <code>topLevelSite</code> specified, returns cookies from the specified partition storage.</li>
-     </ul>
-     This object contains:
-     <dl>
-     <dt><code>topLevelSite</code>{{optional_inline}}</dt>
-     <dd>A <code>string</code> representing the first-party URL of the top-level site storage partition containing the cookies.</dd>
-     </dl>
-    </dd>
-    <dt><code>path</code>{{optional_inline}}</dt>
-    <dd>A <code>string</code> representing a path — the cookies' path must be identical to this one.</dd>
-    <dt><code>secure</code>{{optional_inline}}</dt>
-    <dd>A <code>boolean</code> — filters cookies by their <code>secure</code> property, allowing you to filter secure cookies vs. non-secure cookies..</dd>
-    <dt><code>session</code>{{optional_inline}}</dt>
-    <dd>A <code>boolean</code>— filters the cookies by their <code>session</code> property, allowing you to filter session cookies vs. persistent cookies.</dd>
-    <dt><code>storeId</code>{{optional_inline}}</dt>
-    <dd>A <code>string</code> representing the cookie store to retrieve cookies from. If omitted, the current execution context's cookie store will be used.</dd>
-    <dt><code>url</code>{{optional_inline}}</dt>
-    <dd>A <code>string</code> representing a URL that the retrieved cookies must be associated with.</dd>
-   </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Return_value">Return value</h3>
+  - : An `object` containing details that can be used to match cookies to be retrieved. Included properties are as follows (see [Cookie type](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/Cookie#type) for more information on these):
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an array of  <code>{{WebExtAPIRef('cookies.Cookie')}}</code> objects that match the properties given in the <code>details</code> parameter. Only unexpired cookies are returned. The cookies returned will be sorted by path length, longest to shortest. If multiple cookies have the same path length, those with the earliest creation time will be first.</p>
+    - `domain`{{optional_inline}}
+      - : A `string` representing a domain that cookies must be associated with (they can be associated either with this exact domain or one of its subdomains).
+    - `firstPartyDomain`{{optional_inline}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+      - : A `string` representing the first-party domain with which the cookie to retrieve is associated.
 
-<p>{{Compat}}</p>
+        This property must be supplied if the browser has first-party isolation enabled. You can however pass `null` in this situation. If you do this, then cookies with any value for `firstPartyDomain`, as well as cookies which do not have `firstPartyDomain` set at all, will be included in the results. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
 
-<h2 id="Examples">Examples</h2>
+    - `name`{{optional_inline}}
+      - : A `string` representing a name that the cookies should have.
+    - `partitionKey`{{optional_inline}}
 
-<p>In the following snippet, we are making a call to get all of the cookies the browser currently has stored that have a name of "favorite-color". When the result is returned, we are printing the value of each result to the console.</p>
+      - : An `object` defining which [storage partitions](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning) to return cookies from:
 
-<pre class="brush: js">function logCookies(cookies) {
+        - if omitted, returns only cookies from unpartitioned storage.
+        - if included without `topLevelSite`, returns all cookies from partitioned and unpartitioned storage.
+        - if included with `topLevelSite` specified, returns cookies from the specified partition storage.
+
+        This object contains:
+
+        - `topLevelSite`{{optional_inline}}
+          - : A `string` representing the first-party URL of the top-level site storage partition containing the cookies.
+
+    - `path`{{optional_inline}}
+      - : A `string` representing a path — the cookies' path must be identical to this one.
+    - `secure`{{optional_inline}}
+      - : A `boolean` — filters cookies by their `secure` property, allowing you to filter secure cookies vs. non-secure cookies..
+    - `session`{{optional_inline}}
+      - : A `boolean`— filters the cookies by their `session` property, allowing you to filter session cookies vs. persistent cookies.
+    - `storeId`{{optional_inline}}
+      - : A `string` representing the cookie store to retrieve cookies from. If omitted, the current execution context's cookie store will be used.
+    - `url`{{optional_inline}}
+      - : A `string` representing a URL that the retrieved cookies must be associated with.
+
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of  `{{WebExtAPIRef('cookies.Cookie')}}` objects that match the properties given in the `details` parameter. Only unexpired cookies are returned. The cookies returned will be sorted by path length, longest to shortest. If multiple cookies have the same path length, those with the earliest creation time will be first.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+In the following snippet, we are making a call to get all of the cookies the browser currently has stored that have a name of "favorite-color". When the result is returned, we are printing the value of each result to the console.
+
+```js
+function logCookies(cookies) {
   for (let cookie of cookies) {
     console.log(cookie.value);
   }
@@ -90,18 +89,16 @@ browser-compat: webextensions.api.cookies.getAll
 var gettingAll = browser.cookies.getAll({
   name: "favorite-color"
 });
-gettingAll.then(logCookies);</pre>
+gettingAll.then(logCookies);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#method-getAll) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/cookies#method-getAll"><code>chrome.cookies</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -128,5 +125,4 @@ gettingAll.then(logCookies);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

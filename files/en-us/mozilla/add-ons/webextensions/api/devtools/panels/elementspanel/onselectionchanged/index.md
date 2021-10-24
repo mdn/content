@@ -14,58 +14,53 @@ tags:
   - devtools.panelsElementsPanel
 browser-compat: webextensions.api.devtools.panels.ElementsPanel.onSelectionChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fires when the user selects a different page element for inspection with the browser's developer tools, for example by selecting the "Inspect Element" context menu item in Firefox.</p>
+Fires when the user selects a different page element for inspection with the browser's developer tools, for example by selecting the "Inspect Element" context menu item in Firefox.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.devtools.panels.elements.onSelectionChanged.addListener(listener)
+```js
+browser.devtools.panels.elements.onSelectionChanged.addListener(listener)
 browser.devtools.panels.elements.onSelectionChanged.removeListener(listener)
 browser.devtools.panels.elements.onSelectionChanged.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(listener)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed no arguments.</p>
- </dd>
-</dl>
+- `callback`
+  - : Function that will be called when this event occurs. The function will be passed no arguments.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Listen for selection changed events, and log the text content of the newly selected element:</p>
+Listen for selection changed events, and log the text content of the newly selected element:
 
-<pre class="brush: js">function handleSelectedElement() {
+```js
+function handleSelectedElement() {
   browser.devtools.inspectedWindow.eval("$0.textContent")
-    .then((result) =&gt; {
+    .then((result) => {
       console.log(result[0]);
     });
 }
 
-browser.devtools.panels.elements.onSelectionChanged.addListener(handleSelectedElement);</pre>
+browser.devtools.panels.elements.onSelectionChanged.addListener(handleSelectedElement);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools"><code>chrome.devtools</code></a> API.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API.

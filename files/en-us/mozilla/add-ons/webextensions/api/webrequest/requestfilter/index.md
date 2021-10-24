@@ -13,39 +13,34 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.RequestFilter
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>An object describing filters to apply to webRequest events.</p>
+An object describing filters to apply to webRequest events.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>urls</code></dt>
- <dd><code>array</code> of <code>string</code>. An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. The listener will only be called for requests whose targets match any of the given patterns. Only requests made using HTTP or HTTPS will trigger events, other protocols (such as data: and file:) supported by pattern matching do not trigger events. <code>view-source:</code> requests may be matched based on its inner URL.</dd>
- <dt><code>types</code>{{optional_inline}}</dt>
- <dd><code>array</code> of <code>{{WebExtAPIRef('webRequest.ResourceType')}}</code>. A list of resource types (for example, stylesheets, images, scripts). The listener will only be called for requests for resources which are one of the given types.</dd>
- <dt><code>tabId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. The listener will only be called for requests from the {{WebExtAPIRef("tabs.Tab", "tab")}} identified by this ID.</dd>
- <dt><code>windowId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. The listener will only be called for requests from the {{WebExtAPIRef("windows.Window", "window")}} identified by this ID.</dd>
- <dt><code>incognito</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. If provided, requests that do not match the incognito state (<code>true</code> or <code>false</code>) will be filtered out.</dd>
-</dl>
+- `urls`
+  - : `array` of `string`. An array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). The listener will only be called for requests whose targets match any of the given patterns. Only requests made using HTTP or HTTPS will trigger events, other protocols (such as data: and file:) supported by pattern matching do not trigger events. `view-source:` requests may be matched based on its inner URL.
+- `types`{{optional_inline}}
+  - : `array` of `{{WebExtAPIRef('webRequest.ResourceType')}}`. A list of resource types (for example, stylesheets, images, scripts). The listener will only be called for requests for resources which are one of the given types.
+- `tabId`{{optional_inline}}
+  - : `integer`. The listener will only be called for requests from the {{WebExtAPIRef("tabs.Tab", "tab")}} identified by this ID.
+- `windowId`{{optional_inline}}
+  - : `integer`. The listener will only be called for requests from the {{WebExtAPIRef("windows.Window", "window")}} identified by this ID.
+- `incognito` {{optional_inline}}
+  - : `boolean`. If provided, requests that do not match the incognito state (`true` or `false`) will be filtered out.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#type-RequestFilter) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest#type-RequestFilter"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -72,5 +67,4 @@ browser-compat: webextensions.api.webRequest.RequestFilter
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

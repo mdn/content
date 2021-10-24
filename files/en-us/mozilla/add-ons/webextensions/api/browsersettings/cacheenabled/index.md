@@ -12,35 +12,39 @@ tags:
   - cacheEnabled
 browser-compat: webextensions.api.browserSettings.cacheEnabled
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to globally enable or disable the browser cache.</p>
+A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to globally enable or disable the browser cache.
 
-<p>The underlying value is a boolean.</p>
+The underlying value is a boolean.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Getting the current value of this setting:</p>
+Getting the current value of this setting:
 
-<pre class="brush: js">function logResult(result) {
+```js
+function logResult(result) {
   console.log(`Current value: ${result.value}`);
   console.log(`Current level of control: ${result.levelOfControl}`);
 }
 
 browser.browserSettings.cacheEnabled.get({}).
-  then(logResult);</pre>
+  then(logResult);
+```
 
-<p>Disabling the browser cache:</p>
+Disabling the browser cache:
 
-<pre class="brush: js">function logResult(result) {
+```js
+function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
 browser.browserSettings.cacheEnabled.set({value: false}).
-  then(logResult);</pre>
+  then(logResult);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

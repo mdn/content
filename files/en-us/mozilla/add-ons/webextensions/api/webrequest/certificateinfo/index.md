@@ -12,70 +12,61 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.CertificateInfo
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>An object describing a single <a href="https://datatracker.ietf.org/doc/html/rfc5280">X.509 certificate</a>.</p>
+An object describing a single [X.509 certificate](https://datatracker.ietf.org/doc/html/rfc5280).
 
-<p>The {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object returned from the {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API includes a <code>certificates</code> property which is an array of these objects.</p>
+The {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object returned from the {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API includes a `certificates` property which is an array of these objects.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>fingerprint</code></dt>
- <dd>
- <p><code>Object</code>. An object with the following properties:</p>
+- `fingerprint`
 
- <dl>
-  <dt><code>sha1</code></dt>
-  <dd><code>String</code>. SHA-1 hash of the certificate's DER encoding.</dd>
-  <dt><code>sha256</code></dt>
-  <dd><code>String</code>. SHA-256 hash of the certificate's DER encoding.</dd>
- </dl>
- </dd>
- <dt><code>isBuiltInRoot</code></dt>
- <dd>
- <p><code>Boolean</code>. <code>true</code> if the certificate is one of the trust roots installed in the browser, <code>false</code> otherwise.</p>
- </dd>
- <dt><code>issuer</code></dt>
- <dd>
-   <p><code>String</code>. Name of the organization that issued this certificate, represented as a Distinguished Name and formatted as a comma-separated list of Relative Distinguished Names, each of the form "type=value".</p>
-   <p>For example: "CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US".</p>
- </dd>
- <dt><code>rawDER</code></dt>
- <dd><code>Array</code> of <code>Number</code>. If <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo" title="Use this function to get detailed information about the TLS connection associated with a particular request."><code>webRequest.getSecurityInfo()</code></a> was called with the <code>rawDER</code> option present and set to <code>true</code>, this will contain the DER encoding of the certificate.</dd>
- <dt><code>serialNumber</code></dt>
- <dd><code>String</code>. The certificate's <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.2">serial number</a>.</dd>
- <dt><code>subject</code></dt>
- <dd>
-   <p><code>String</code>. Name of the organization that issued this certificate, represented as a Distinguished Name and formatted as a comma-separated list of Relative Distinguished Names, each of the form "type=value".</p>
-   <p>For example: "CN=*.cdn.mozilla.net,O=Mozilla Corporation,L=Mountain View,ST=California,C=US".</p>
- </dd>
- <dt><code>subjectPublicKeyInfoDigest</code></dt>
- <dd>
- <p><code>Object</code>. An object containing the following properties:</p>
+  - : `Object`. An object with the following properties:
 
- <dl>
-  <dt><code>sha256</code></dt>
-  <dd><code>String</code>. Base64 encoded SHA-256 hash of the DER-encoded <a href="https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.7">public key info</a>.</dd>
- </dl>
- </dd>
- <dt><code>validity</code></dt>
- <dd>
- <p><code>Object</code>. Validity period for the certificate. An object containing the following properties:</p>
+    - `sha1`
+      - : `String`. SHA-1 hash of the certificate's DER encoding.
+    - `sha256`
+      - : `String`. SHA-256 hash of the certificate's DER encoding.
 
- <dl>
-  <dt><code>start</code></dt>
-  <dd><code>Number</code>. The start of the certificate's validity period, in <a class="external external-icon" href="https://en.wikipedia.org/wiki/Unix_time" rel="noopener">milliseconds since the epoch</a>.</dd>
-  <dt><code>end</code></dt>
-  <dd><code>Number</code>. The end of the certificate's validity period, in <a class="external external-icon" href="https://en.wikipedia.org/wiki/Unix_time" rel="noopener">milliseconds since the epoch</a>.</dd>
- </dl>
- </dd>
-</dl>
+- `isBuiltInRoot`
+  - : `Boolean`. `true` if the certificate is one of the trust roots installed in the browser, `false` otherwise.
+- `issuer`
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+  - : `String`. Name of the organization that issued this certificate, represented as a Distinguished Name and formatted as a comma-separated list of Relative Distinguished Names, each of the form "type=value".
 
-<p>{{Compat}}</p>
+    For example: "CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US".
 
-<p>{{WebExtExamples}}</p>
+- `rawDER`
+  - : `Array` of `Number`. If [`webRequest.getSecurityInfo()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo "Use this function to get detailed information about the TLS connection associated with a particular request.") was called with the `rawDER` option present and set to `true`, this will contain the DER encoding of the certificate.
+- `serialNumber`
+  - : `String`. The certificate's [serial number](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.2).
+- `subject`
+
+  - : `String`. Name of the organization that issued this certificate, represented as a Distinguished Name and formatted as a comma-separated list of Relative Distinguished Names, each of the form "type=value".
+
+    For example: "CN=\*.cdn.mozilla.net,O=Mozilla Corporation,L=Mountain View,ST=California,C=US".
+
+- `subjectPublicKeyInfoDigest`
+
+  - : `Object`. An object containing the following properties:
+
+    - `sha256`
+      - : `String`. Base64 encoded SHA-256 hash of the DER-encoded [public key info](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.7).
+
+- `validity`
+
+  - : `Object`. Validity period for the certificate. An object containing the following properties:
+
+    - `start`
+      - : `Number`. The start of the certificate's validity period, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+    - `end`
+      - : `Number`. The end of the certificate's validity period, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+
+## Browser compatibility
+
+{{Compat}}
+
+{{WebExtExamples}}

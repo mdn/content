@@ -7,94 +7,88 @@ tags:
   - User Interface
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Commonly referred to as a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">page action</a> button, this user interface option is a button added to the browser address bar. Users click the button to interact with extensions.</p>
+Commonly referred to as a [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) button, this user interface option is a button added to the browser address bar. Users click the button to interact with extensions.
 
-<p><img alt="" src="address_bar_button.png"></p>
+![](address_bar_button.png)
 
-<h2 id="Page_actions_and_browser_actions">Page actions and browser actions</h2>
+## Page actions and browser actions
 
-<p>The address bar button (or page action) is similar to the toolbar button (or browser action).</p>
+The address bar button (or page action) is similar to the toolbar button (or browser action).
 
-<p>The differences are:</p>
+The differences are:
 
-<ul>
- <li><strong>The button’s location:</strong>
+- **The button’s location:**
 
-  <ul>
-   <li>The page action is displayed inside the browser address bar.</li>
-   <li>The browser action is displayed outside the address bar, in the browser toolbar.</li>
-  </ul>
- </li>
- <li><strong>The button’s visibility:</strong>
-  <ul>
-   <li>The page action is hidden by default (although this default can be changed via the <code>show_matches</code> and <code>hide_matches</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">manifest key</a> properties), and you call <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show" title="Shows the page action for a given tab. The page action is shown whenever the given tab is the active tab."><code>pageAction.show()</code></a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide" title="Hides the page action for a given tab."><code>pageAction.hide()</code></a> to show or hide it in specific tabs.</li>
-   <li>The browser action is always displayed.</li>
-  </ul>
- </li>
-</ul>
+  - The page action is displayed inside the browser address bar.
+  - The browser action is displayed outside the address bar, in the browser toolbar.
 
-<p>Use a page action when the action relates to the current page. Use a browser action when the action relates to the browser as a whole or to many pages. For example:</p>
+- **The button’s visibility:**
+
+  - The page action is hidden by default (although this default can be changed via the `show_matches` and `hide_matches` [manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) properties), and you call [`pageAction.show()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show "Shows the page action for a given tab. The page action is shown whenever the given tab is the active tab.") and [`pageAction.hide()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide "Hides the page action for a given tab.") to show or hide it in specific tabs.
+  - The browser action is always displayed.
+
+Use a page action when the action relates to the current page. Use a browser action when the action relates to the browser as a whole or to many pages. For example:
 
 <table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="row">Type</th>
-   <th scope="col">Bookmarks action</th>
-   <th scope="col">Content action</th>
-   <th scope="col">Tabs operation</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">page action</th>
-   <td>Bookmark this page</td>
-   <td>Reddit enhancement</td>
-   <td>Send tab</td>
-  </tr>
-  <tr>
-   <th scope="row">browser action</th>
-   <td>Show all bookmarks</td>
-   <td>Enable ad-blocking</td>
-   <td>Sync all open tabs</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="row">Type</th>
+      <th scope="col">Bookmarks action</th>
+      <th scope="col">Content action</th>
+      <th scope="col">Tabs operation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">page action</th>
+      <td>Bookmark this page</td>
+      <td>Reddit enhancement</td>
+      <td>Send tab</td>
+    </tr>
+    <tr>
+      <th scope="row">browser action</th>
+      <td>Show all bookmarks</td>
+      <td>Enable ad-blocking</td>
+      <td>Sync all open tabs</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Specifying_the_page_action">Specifying the page action</h2>
+## Specifying the page action
 
-<p>You define the page action's properties using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code> key in manifest.json:</p>
+You define the page action's properties using the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) key in manifest.json:
 
-<pre class="brush: json">&quot;page_action&quot;: {
-  &quot;browser_style&quot;: true,
-  &quot;default_icon&quot;: {
-    &quot;19&quot;: &quot;button/geo-19.png&quot;,
-    &quot;38&quot;: &quot;button/geo-38.png&quot;
+```json
+"page_action": {
+  "browser_style": true,
+  "default_icon": {
+    "19": "button/geo-19.png",
+    "38": "button/geo-38.png"
   },
-  &quot;default_title&quot;: &quot;Whereami?&quot;
-}</pre>
+  "default_title": "Whereami?"
+}
+```
 
-<p>The only mandatory key is <code>default_icon</code>.</p>
+The only mandatory key is `default_icon`.
 
-<p>There are two ways to specify a page action: with or without a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">popup</a>.</p>
+There are two ways to specify a page action: with or without a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups).
 
-<ul>
- <li><strong>Without a popup:</strong> When the user clicks the button, an event is dispatched to the extension, which the extension listens for using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>pageAction.onClicked</code></a>:</li>
- <li>
-  <pre class="brush: js">browser.pageAction.onClicked.addListener(handleClick);</pre>
- </li>
- <li><strong>With a popup:</strong> the <code>click</code> event is not dispatched. Instead, the popup appears when the user clicks the button. The user then interacts with the popup. When the user clicks outside of the popup, it closes automatically. See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">Popup </a>article for more details on creating and managing popups.</li>
-</ul>
+- **Without a popup:** When the user clicks the button, an event is dispatched to the extension, which the extension listens for using [`pageAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked "Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."):
+- ```js
+  browser.pageAction.onClicked.addListener(handleClick);
+  ```
+- **With a popup:** the `click` event is not dispatched. Instead, the popup appears when the user clicks the button. The user then interacts with the popup. When the user clicks outside of the popup, it closes automatically. See the [Popup ](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)article for more details on creating and managing popups.
 
-<p>Note that your extension can have just one page action.</p>
+Note that your extension can have just one page action.
 
-<p>You can change any of the page action properties programmatically using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">pageAction</a></code> API.</p>
+You can change any of the page action properties programmatically using the [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API.
 
-<h2 id="Icons">Icons</h2>
+## Icons
 
-<p>For details on how to create icons to use with your page action, see <a href="https://design.firefox.com/photon/visuals/iconography.html">Iconography</a> in the <a href="https://design.firefox.com/photon/index.html">Photon Design System</a> documentation.</p>
+For details on how to create icons to use with your page action, see [Iconography](https://design.firefox.com/photon/visuals/iconography.html) in the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repository on GitHub includes the <a href="https://github.com/mdn/webextensions-examples/tree/master/chill-out">chill-out</a> example which implements a page action without a popup.</p>
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out) example which implements a page action without a popup.

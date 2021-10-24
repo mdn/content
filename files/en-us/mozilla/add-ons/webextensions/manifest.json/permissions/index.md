@@ -10,205 +10,191 @@ tags:
   - manifest.json
 browser-compat: webextensions.manifest.permissions
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>Array</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json;">
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>Array</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json;">
 "permissions": [
   "*://developer.mozilla.org/*",
   "webRequest"
-]</pre>
-   </td>
-  </tr>
- </tbody>
+]</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Use the <code>permissions</code> key to request special powers for your extension. This key is an array of strings, and each string is a request for a permission.</p>
+Use the `permissions` key to request special powers for your extension. This key is an array of strings, and each string is a request for a permission.
 
-<p>If you request permissions using this key, then the browser may inform the user at install time that the extension is requesting certain privileges, and ask them to confirm that they are happy to grant these privileges. The browser may also allow the user to inspect an extension's privileges after installation. As the request to grant privileges may impact on users' willingness to install your extension, requesting privileges is worth careful consideration. For example, you want to avoid requesting unnecessary permissions and may want to provide information about why you are requesting permissions in your extension's store description. More information on the issues you should consider is provided in the article <a href="https://extensionworkshop.com/documentation/develop/request-the-right-permissions/">Request the right permissions</a>.</p>
+If you request permissions using this key, then the browser may inform the user at install time that the extension is requesting certain privileges, and ask them to confirm that they are happy to grant these privileges. The browser may also allow the user to inspect an extension's privileges after installation. As the request to grant privileges may impact on users' willingness to install your extension, requesting privileges is worth careful consideration. For example, you want to avoid requesting unnecessary permissions and may want to provide information about why you are requesting permissions in your extension's store description. More information on the issues you should consider is provided in the article [Request the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/).
 
-<p>For information on how to test and preview permission requests, see <a href="https://extensionworkshop.com/documentation/develop/test-permission-requests/">Test permission requests</a> on the Extension Workshop site.</p>
+For information on how to test and preview permission requests, see [Test permission requests](https://extensionworkshop.com/documentation/develop/test-permission-requests/) on the Extension Workshop site.
 
-<p>The key can contain three kinds of permissions:</p>
+The key can contain three kinds of permissions:
 
-<ul>
- <li>host permissions</li>
- <li>API permissions</li>
- <li>the <code>activeTab</code> permission</li>
-</ul>
+- host permissions
+- API permissions
+- the `activeTab` permission
 
-<h2 id="Host_permissions">Host permissions</h2>
+## Host permissions
 
-<p>Host permissions are specified as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>, and each pattern identifies a group of URLs for which the extension is requesting extra privileges. For example, a host permission could be <code>"*://developer.mozilla.org/*"</code>.</p>
+Host permissions are specified as [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), and each pattern identifies a group of URLs for which the extension is requesting extra privileges. For example, a host permission could be `"*://developer.mozilla.org/*"`.
 
-<p>The extra privileges include:</p>
+The extra privileges include:
 
-<ul>
- <li><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> and <a href="/en-US/docs/Web/API/Fetch_API">fetch</a> access to those origins without cross-origin restrictions (even for requests made from content scripts)</li>
- <li>the ability to read tab-specific metadata without the "tabs" permission, such as the <code>url</code>, <code>title</code>, and <code>favIconUrl</code> properties of {{WebExtAPIRef("tabs.Tab")}} objects</li>
- <li>the ability to inject scripts programmatically (using {{webextAPIref("tabs/executeScript", "tabs.executeScript()")}}) into pages served from those origins</li>
- <li>the ability to receive events from the {{webextAPIref("webrequest")}} API for these hosts</li>
- <li>the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the <code>"cookies"</code> API permission is also included.</li>
- <li>bypassing tracking protection for extension pages where a host is specified as a full domain or with wildcards. Content scripts, however, can only bypass tracking protection for hosts specified with a full domain.</li>
-</ul>
+- [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [fetch](/en-US/docs/Web/API/Fetch_API) access to those origins without cross-origin restrictions (even for requests made from content scripts)
+- the ability to read tab-specific metadata without the "tabs" permission, such as the `url`, `title`, and `favIconUrl` properties of {{WebExtAPIRef("tabs.Tab")}} objects
+- the ability to inject scripts programmatically (using {{webextAPIref("tabs/executeScript", "tabs.executeScript()")}}) into pages served from those origins
+- the ability to receive events from the {{webextAPIref("webrequest")}} API for these hosts
+- the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the `"cookies"` API permission is also included.
+- bypassing tracking protection for extension pages where a host is specified as a full domain or with wildcards. Content scripts, however, can only bypass tracking protection for hosts specified with a full domain.
 
-<p>In Firefox, from version 56 onwards, extensions automatically get host permissions for their own origin, which is of the form:</p>
+In Firefox, from version 56 onwards, extensions automatically get host permissions for their own origin, which is of the form:
 
-<pre><code>moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/</code></pre>
+    moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
 
-<p>where <code>60a20a9b-1ad4-af49-9b6c-c64c98c37920</code> is the extension's internal ID. The extension can get this URL programmatically by calling {{webextAPIref("extension/getURL", "extension.getURL()")}}:</p>
+where `60a20a9b-1ad4-af49-9b6c-c64c98c37920` is the extension's internal ID. The extension can get this URL programmatically by calling {{webextAPIref("extension/getURL", "extension.getURL()")}}:
 
-<pre class="brush: js">browser.extension.getURL("");
+```js
+browser.extension.getURL("");
 // moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
-</pre>
+```
 
-<h2 id="API_permissions">API permissions</h2>
+## API permissions
 
-<p>API permissions are specified as keywords, and each keyword names a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension API</a> that the extension would like to use.</p>
+API permissions are specified as keywords, and each keyword names a [WebExtension API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) that the extension would like to use.
 
-<p>The following keywords are currently available:</p>
+The following keywords are currently available:
 
-<div class="threecolumns">
-<ul>
- <li><code>activeTab</code></li>
- <li><code>alarms</code></li>
- <li><code>background</code></li>
- <li><code>bookmarks</code></li>
- <li><code>browserSettings</code></li>
- <li><code>browsingData</code></li>
- <li><code>captivePortal</code></li>
- <li><code>clipboardRead</code></li>
- <li><code>clipboardWrite</code></li>
- <li><code>contentSettings</code></li>
- <li><code>contextMenus</code></li>
- <li><code>contextualIdentities</code></li>
- <li><code>cookies</code></li>
- <li><code>debugger</code></li>
- <li><code>dns</code></li>
- <li><code>downloads</code></li>
- <li><code>downloads.open</code></li>
- <li><code>find</code></li>
- <li><code>geolocation</code></li>
- <li><code>history</code></li>
- <li><code>identity</code></li>
- <li><code>idle</code></li>
- <li><code>management</code></li>
- <li><code>menus</code></li>
- <li><code>menus.overrideContext</code></li>
- <li><code>nativeMessaging</code></li>
- <li><code>notifications</code></li>
- <li><code>pageCapture</code></li>
- <li><code>pkcs11</code></li>
- <li><code>privacy</code></li>
- <li><code>proxy</code></li>
- <li><code>search</code></li>
- <li><code>sessions</code></li>
- <li><code>storage</code></li>
- <li><code>tabHide</code></li>
- <li><code>tabs</code></li>
- <li><code>theme</code></li>
- <li><code>topSites</code></li>
- <li><code>unlimitedStorage</code></li>
- <li><code>webNavigation</code></li>
- <li><code>webRequest</code></li>
- <li><code>webRequestBlocking</code></li>
-</ul>
-</div>
+- `activeTab`
+- `alarms`
+- `background`
+- `bookmarks`
+- `browserSettings`
+- `browsingData`
+- `captivePortal`
+- `clipboardRead`
+- `clipboardWrite`
+- `contentSettings`
+- `contextMenus`
+- `contextualIdentities`
+- `cookies`
+- `debugger`
+- `dns`
+- `downloads`
+- `downloads.open`
+- `find`
+- `geolocation`
+- `history`
+- `identity`
+- `idle`
+- `management`
+- `menus`
+- `menus.overrideContext`
+- `nativeMessaging`
+- `notifications`
+- `pageCapture`
+- `pkcs11`
+- `privacy`
+- `proxy`
+- `search`
+- `sessions`
+- `storage`
+- `tabHide`
+- `tabs`
+- `theme`
+- `topSites`
+- `unlimitedStorage`
+- `webNavigation`
+- `webRequest`
+- `webRequestBlocking`
 
-<p>In most cases the permission just grants access to the API, with the following exceptions:</p>
+In most cases the permission just grants access to the API, with the following exceptions:
 
-<ul>
- <li><code>tabs</code> gives you access to {{webextAPIref("tabs", "privileged parts of the <code>tabs</code> API")}} without the need for <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>: <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.faviconUrl</code>.
+- `tabs` gives you access to {{webextAPIref("tabs", "privileged parts of the <code>tabs</code> API")}} without the need for [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions): `Tab.url`, `Tab.title`, and `Tab.faviconUrl`.
 
-  <ul>
-   <li>In Firefox 85 and earlier, you also need <code>tabs</code> if you want to include <code>url</code> in the <code>queryInfo</code> parameter to {{webextAPIref("tabs/query", "tabs.query()")}}. The rest of the <code>tabs</code> API can be used without requesting any permission.</li>
-   <li>As of Firefox 86 and Chrome 50, matching <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> can also be used instead of the "tabs" permission.</li>
-  </ul>
- </li>
- <li><code>webRequestBlocking</code> enables you to use the <code>"blocking"</code> argument, so you can {{webextAPIref("WebRequest", "modify and cancel requests")}}.</li>
- <li><code>downloads.open</code> lets you use the {{WebExtAPIRef("downloads.open()")}} API.</li>
- <li><code>tabHide</code> lets you use the {{WebExtAPIRef("tabs.hide()")}} API.</li>
-</ul>
+  - In Firefox 85 and earlier, you also need `tabs` if you want to include `url` in the `queryInfo` parameter to {{webextAPIref("tabs/query", "tabs.query()")}}. The rest of the `tabs` API can be used without requesting any permission.
+  - As of Firefox 86 and Chrome 50, matching [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) can also be used instead of the "tabs" permission.
 
-<h2 id="activeTab_permission">activeTab permission</h2>
+- `webRequestBlocking` enables you to use the `"blocking"` argument, so you can {{webextAPIref("WebRequest", "modify and cancel requests")}}.
+- `downloads.open` lets you use the {{WebExtAPIRef("downloads.open()")}} API.
+- `tabHide` lets you use the {{WebExtAPIRef("tabs.hide()")}} API.
 
-<p>This permission is specified as <code>"activeTab"</code>. If an extension has the <code>activeTab</code> permission, then when the user interacts with the extension, the extension is granted extra privileges for the active tab only.</p>
+## activeTab permission
 
-<p>"User interaction" includes:</p>
+This permission is specified as `"activeTab"`. If an extension has the `activeTab` permission, then when the user interacts with the extension, the extension is granted extra privileges for the active tab only.
 
-<ul>
- <li>the user clicks the extension's {{webextAPIref("browserAction", "browser action", "", 1)}} or page action</li>
- <li>the user selects its context menu item</li>
- <li>the user activates a keyboard shortcut defined by the extension</li>
-</ul>
+"User interaction" includes:
 
-<p>The extra privileges are:</p>
+- the user clicks the extension's {{webextAPIref("browserAction", "browser action", "", 1)}} or page action
+- the user selects its context menu item
+- the user activates a keyboard shortcut defined by the extension
 
-<ul>
- <li>The ability to inject JavaScript or CSS into the tab programmatically, using {{webextAPIref("tabs/executeScript", "browser.tabs.executeScript()")}} and {{webextAPIref("tabs/insertCSS", "browser.tabs.insertCSS()")}}</li>
- <li>Access to the privileged parts of the tabs API for the current tab: <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.faviconUrl</code>.</li>
-</ul>
+The extra privileges are:
 
-<p>The intention of this permission is to enable extensions to fulfill a common use case, without having to give them very powerful permissions. Many extensions want to "do something to the current page when the user asks".</p>
+- The ability to inject JavaScript or CSS into the tab programmatically, using {{webextAPIref("tabs/executeScript", "browser.tabs.executeScript()")}} and {{webextAPIref("tabs/insertCSS", "browser.tabs.insertCSS()")}}
+- Access to the privileged parts of the tabs API for the current tab: `Tab.url`, `Tab.title`, and `Tab.faviconUrl`.
 
-<p>For example, consider an extension that wants to run a script in the current page when the user clicks a browser action. If the  <code>activeTab</code> permission did not exist, the extension would need to ask for the host permission <code>&lt;all_urls&gt;</code>. But this gives the extension more power than it needs: it could now execute scripts in <em>any tab</em>, <em>any time</em> it likes, instead of just the active tab and only in response to a user action.</p>
+The intention of this permission is to enable extensions to fulfill a common use case, without having to give them very powerful permissions. Many extensions want to "do something to the current page when the user asks".
 
-<div class="notecard note">
-<p><strong>Note:</strong> You can only get access to the tab/data that was there, when the user interaction occurred (e.g. the click). When the active tab navigates away (e.g., due to finishing loading or some other event), the permission does not grant you access to the tab anymore.</p>
-</div>
+For example, consider an extension that wants to run a script in the current page when the user clicks a browser action. If the `activeTab` permission did not exist, the extension would need to ask for the host permission `<all_urls>`. But this gives the extension more power than it needs: it could now execute scripts in _any tab_, _any time_ it likes, instead of just the active tab and only in response to a user action.
 
-<p>Usually the tab that's granted <code>activeTab</code> is just the currently active tab, except in one case.  The {{webextAPIref("menus")}} API enables an extension to create a menu item which is shown if the user context-clicks on a tab (that is, on the element in the tabstrip that enables the user to switch from one tab to another).</p>
+> **Note:** You can only get access to the tab/data that was there, when the user interaction occurred (e.g. the click). When the active tab navigates away (e.g., due to finishing loading or some other event), the permission does not grant you access to the tab anymore.
 
-<p>If the user clicks such an item, then the <code>activeTab</code> permission is granted for the tab the user clicked, even if it's not the currently active tab (as of Firefox 63, {{bug(1446956)}}).</p>
+Usually the tab that's granted `activeTab` is just the currently active tab, except in one case. The {{webextAPIref("menus")}} API enables an extension to create a menu item which is shown if the user context-clicks on a tab (that is, on the element in the tabstrip that enables the user to switch from one tab to another).
 
-<h2 id="Clipboard_access">Clipboard access</h2>
+If the user clicks such an item, then the `activeTab` permission is granted for the tab the user clicked, even if it's not the currently active tab (as of Firefox 63, {{bug(1446956)}}).
 
-<p>There are two permissions which enables the extension to interact with the clipboard:</p>
+## Clipboard access
 
-<dl>
- <dt><code>clipboardWrite</code></dt>
- <dd>Write to the clipboard using {{DOMxRef("Clipboard.write()")}}, {{DOMxRef("Clipboard.writeText()")}}, <code>document.execCommand("copy")</code> or <code>document.execCommand("cut")</code></dd>
- <dt><code>clipboardRead</code></dt>
- <dd>Read from the clipboard using {{DOMxRef("Clipboard.read()")}}, {{DOMxRef("Clipboard.readText()")}} or <code>document.execCommand("paste")</code></dd>
-</dl>
+There are two permissions which enables the extension to interact with the clipboard:
 
-<p>See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard">Interact with the clipboard</a> for more details.</p>
+- `clipboardWrite`
+  - : Write to the clipboard using {{DOMxRef("Clipboard.write()")}}, {{DOMxRef("Clipboard.writeText()")}}, `document.execCommand("copy")` or `document.execCommand("cut")`
+- `clipboardRead`
+  - : Read from the clipboard using {{DOMxRef("Clipboard.read()")}}, {{DOMxRef("Clipboard.readText()")}} or `document.execCommand("paste")`
 
-<h2 id="Unlimited_storage">Unlimited storage</h2>
+See [Interact with the clipboard](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard) for more details.
 
-<p>The <code>unlimitedStorage</code> permission:</p>
+## Unlimited storage
 
-<ul>
- <li>Enables extensions to exceed any quota imposed by the {{WebExtAPIRef("storage/local", "storage.local")}} API</li>
- <li>In Firefox, enables extensions to create a <a href="/en-US/docs/Web/API/IndexedDB_API">"persistent" IndexedDB database</a> without the browser prompting the user for permission at the time the database is created.</li>
-</ul>
+The `unlimitedStorage` permission:
 
-<h2 id="Example">Example</h2>
+- Enables extensions to exceed any quota imposed by the {{WebExtAPIRef("storage/local", "storage.local")}} API
+- In Firefox, enables extensions to create a ["persistent" IndexedDB database](/en-US/docs/Web/API/IndexedDB_API) without the browser prompting the user for permission at the time the database is created.
 
-<pre class="brush: json"> "permissions": ["*://developer.mozilla.org/*"]</pre>
+## Example
 
-<p>Request privileged access to pages under <code>developer.mozilla.org</code>.</p>
+```json
+ "permissions": ["*://developer.mozilla.org/*"]
+```
 
-<pre class="brush: json">  "permissions": ["tabs"]</pre>
+Request privileged access to pages under `developer.mozilla.org`.
 
-<p>Request access to the privileged pieces of the <code>tabs</code> API.</p>
+```json
+  "permissions": ["tabs"]
+```
 
-<pre class="brush: json">  "permissions": ["*://developer.mozilla.org/*", "tabs"]</pre>
+Request access to the privileged pieces of the `tabs` API.
 
-<p>Request both of the above permissions.</p>
+```json
+  "permissions": ["*://developer.mozilla.org/*", "tabs"]
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+Request both of the above permissions.
 
-<p>{{Compat}}</p>
+## Browser compatibility
+
+{{Compat}}

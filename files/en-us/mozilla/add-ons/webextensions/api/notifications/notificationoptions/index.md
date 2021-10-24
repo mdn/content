@@ -13,79 +13,73 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.notifications.NotificationOptions
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>This type contains all the data needed to:</p>
+This type contains all the data needed to:
 
-<ul>
- <li>create a notification using {{WebExtAPIRef("notifications.create()")}},</li>
- <li>update an existing notification using {{WebExtAPIRef("notifications.update()")}}.</li>
-</ul>
+- create a notification using {{WebExtAPIRef("notifications.create()")}},
+- update an existing notification using {{WebExtAPIRef("notifications.update()")}}.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the properties listed below.</p>
+Values of this type are objects. They contain the properties listed below.
 
-<p>The first three properties - <code>type</code>, <code>title</code>, <code>message</code> - are mandatory in {{WebExtAPIRef("notifications.create()")}}, but optional in {{WebExtAPIRef("notifications.update()")}}. Firefox currently: only supports the <code>type</code>, <code>title</code>, <code>message</code>, and <code>iconUrl</code> properties; and the only supported value for <code>type</code> is <code>'basic'</code>.</p>
+The first three properties - `type`, `title`, `message` - are mandatory in {{WebExtAPIRef("notifications.create()")}}, but optional in {{WebExtAPIRef("notifications.update()")}}. Firefox currently: only supports the `type`, `title`, `message`, and `iconUrl` properties; and the only supported value for `type` is `'basic'`.
 
-<dl>
- <dt><code>type</code></dt>
- <dd>{{WebExtAPIRef("notifications.TemplateType")}}. The type of notification you want. Depending on your choice here, certain other properties are either mandatory or are not permitted.</dd>
- <dt><code>message</code></dt>
- <dd><code>string</code>. The notification's main content.</dd>
- <dt><code>title</code></dt>
- <dd><code>string</code>. The notification's title.</dd>
- <dt><code>iconUrl</code>{{optional_inline}}</dt>
- <dd><code>string</code>. A URL pointing to an icon to display in the notification. The URL can be: a data URL, a blob URL, a http or https URL, or the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#relative_urls">relative URL of a file within the extension.</a></dd>
- <dt><code>contextMessage</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Supplementary content to display.</dd>
- <dt><code>priority</code>{{optional_inline}}</dt>
- <dd><code>number</code>. The notification's priority: may be 0, 1, or 2. Defaults to 0 if omitted.</dd>
- <dt><code>eventTime</code>{{optional_inline}}</dt>
- <dd><code>number</code>. A timestamp for the notification in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
- <dt><code>buttons</code>{{optional_inline}}</dt>
- <dd>
-   <p><code>array</code> of <code>button</code>. An array of up to 2 buttons to include in the notification. You can listen for button clicks using {{WebExtAPIRef("notifications.onButtonClicked")}}. Each button is specified as an object with the following properties:</p>
- <dl>
-  <dt><code>title</code></dt>
-  <dd><code>string</code>. Title for the button.</dd>
-  <dt><code>iconUrl</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. URL pointing to an icon for the button.</dd>
- </dl>
- </dd>
- <dt><code>imageUrl</code></dt>
- <dd>
- <p><code>string</code>. A URL pointing to an image to use in the notification. The URL can be: a data URL, a blob URL, or the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#relative_urls">relative URL</a> of a file within the extension.</p>
+- `type`
+  - : {{WebExtAPIRef("notifications.TemplateType")}}. The type of notification you want. Depending on your choice here, certain other properties are either mandatory or are not permitted.
+- `message`
+  - : `string`. The notification's main content.
+- `title`
+  - : `string`. The notification's title.
+- `iconUrl`{{optional_inline}}
+  - : `string`. A URL pointing to an icon to display in the notification. The URL can be: a data URL, a blob URL, a http or https URL, or the [relative URL of a file within the extension.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#relative_urls)
+- `contextMessage`{{optional_inline}}
+  - : `string`. Supplementary content to display.
+- `priority`{{optional_inline}}
+  - : `number`. The notification's priority: may be 0, 1, or 2. Defaults to 0 if omitted.
+- `eventTime`{{optional_inline}}
+  - : `number`. A timestamp for the notification in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+- `buttons`{{optional_inline}}
 
- <p><em>This property is only permitted if <code>type</code> is <code>"image"</code>. In this case, it is mandatory if the <code>NotificationOptions</code> is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}.</em></p>
- </dd>
- <dt><code>items</code></dt>
- <dd><p><code>array</code> of <code>item</code>. An array of items to include in the notification. Depending on the settings for the operating system's notification mechanism, some of the items you provide might not be displayed. Each item is specified as an object with the following properties:</p>
-   <dl>
-    <dt><code>title</code></dt>
-    <dd><code>string</code>. Title to display in the item.</dd>
-    <dt><code>message</code></dt>
-    <dd><code>string</code>. Message to display in the item.</dd>
-   </dl>
-   <em>This property is only permitted if <code>type</code> is <code>"list"</code>. In this case, it is mandatory if the <code>NotificationOptions</code> is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}.</em>
- </dd>
- <dt><code>progress</code></dt>
- <dd>
-   <p><code>integer</code>. An integer between 0 and 100, used to represent the current progress in a progress indicator.</p>
-   <p><em>This property is only permitted if <code>type</code> is <code>"progress"</code>. In this case, it is mandatory if the <code>NotificationOptions</code> is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}.</em></p>
- </dd>
-</dl>
+  - : `array` of `button`. An array of up to 2 buttons to include in the notification. You can listen for button clicks using {{WebExtAPIRef("notifications.onButtonClicked")}}. Each button is specified as an object with the following properties:
 
-<p>Note that <code>appIconMaskUrl</code> and <code>isClickable</code> are not supported.</p>
+    - `title`
+      - : `string`. Title for the button.
+    - `iconUrl`{{optional_inline}}
+      - : `string`. URL pointing to an icon for the button.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- `imageUrl`
 
-<p>{{Compat}}</p>
+  - : `string`. A URL pointing to an image to use in the notification. The URL can be: a data URL, a blob URL, or the [relative URL](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#relative_urls) of a file within the extension.
 
-<p>{{WebExtExamples}}</p>
+    _This property is only permitted if `type` is `"image"`. In this case, it is mandatory if the `NotificationOptions` is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}._
 
+- `items`
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/notifications"><code>chrome.notifications</code></a> API.</p>
+  - : `array` of `item`. An array of items to include in the notification. Depending on the settings for the operating system's notification mechanism, some of the items you provide might not be displayed. Each item is specified as an object with the following properties:
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+    - `title`
+      - : `string`. Title to display in the item.
+    - `message`
+      - : `string`. Message to display in the item.
+
+    _This property is only permitted if `type` is `"list"`. In this case, it is mandatory if the `NotificationOptions` is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}._
+
+- `progress`
+
+  - : `integer`. An integer between 0 and 100, used to represent the current progress in a progress indicator.
+
+    _This property is only permitted if `type` is `"progress"`. In this case, it is mandatory if the `NotificationOptions` is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}._
+
+Note that `appIconMaskUrl` and `isClickable` are not supported.
+
+## Browser compatibility
+
+{{Compat}}
+
+{{WebExtExamples}}
+
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

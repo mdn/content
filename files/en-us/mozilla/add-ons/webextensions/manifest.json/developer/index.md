@@ -7,44 +7,47 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.developer
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>Object</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json">
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>Object</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json">
 "developer": {
   "name": "Walt Whitman",
   "url": "https://en.wikipedia.org/wiki/Walt_Whitman"
-}</pre>
-   </td>
-  </tr>
- </tbody>
+}</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The name of the extension's developer and their homepage URL, intended for display in the browser's user interface.</p>
+The name of the extension's developer and their homepage URL, intended for display in the browser's user interface.
 
-<p>The object, and both of its properties, are optional. The "name" and "url" properties, if present, will override the  <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author">author</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a> keys, respectively. This object only allows for a single developer name and URL to be specified.</p>
+The object, and both of its properties, are optional. The "name" and "url" properties, if present, will override the  [author](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author) and [homepage_url](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) keys, respectively. This object only allows for a single developer name and URL to be specified.
 
-<p>This is a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json">localizable property</a>.</p>
+This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: json">"developer": {
+```json
+"developer": {
   "name": "Walt Whitman",
   "url": "https://en.wikipedia.org/wiki/Walt_Whitman"
-}</pre>
+}
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

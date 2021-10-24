@@ -8,22 +8,18 @@ tags:
   - WebExtensions
   - thunderbird
 ---
-<p>{{AddonSidebar}}{{Draft}}</p>
+{{AddonSidebar}}{{Draft}}
 
-<p>You'll approach the coding of an extension for Thunderbird in the same way as you would for a Firefox extension; using a text editor or tool of your choice to write the code.</p>
+You'll approach the coding of an extension for Thunderbird in the same way as you would for a Firefox extension; using a text editor or tool of your choice to write the code.
 
-<h2 id="API_differences">API differences</h2>
+## API differences
 
-<div class="notecard note">
-<p><strong>Note:</strong> See <a href="https://thunderbird-webextensions.readthedocs.io/en/latest/">ReadTheDocs</a> for Thunderbird specific WebExtension API documentation.</p>
-</div>
+> **Note:** See [ReadTheDocs](https://thunderbird-webextensions.readthedocs.io/en/latest/) for Thunderbird specific WebExtension API documentation.
 
-<p>Being both Gecko based, Thunderbird supports many of the APIs Firefox supports, with some differences, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">browser compatibility for manifest.json</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">browser support for JavaScript APIs</a> for details.</p>
+Being both Gecko based, Thunderbird supports many of the APIs Firefox supports, with some differences, see [browser compatibility for manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) and [browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) for details.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://thunderbird-webextensions.readthedocs.io/en/latest/">Thunderbird specific WebExtension API documentation</a></li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a></li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">Browser compatibility for manifest.json</a></li>
-</ul>
+- [Thunderbird specific WebExtension API documentation](https://thunderbird-webextensions.readthedocs.io/en/latest/)
+- [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
+- [Browser compatibility for manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)

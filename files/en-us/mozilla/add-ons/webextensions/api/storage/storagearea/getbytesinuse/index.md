@@ -14,44 +14,41 @@ tags:
   - getBytesInUse
 browser-compat: webextensions.api.storage.StorageArea.getBytesInUse
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Gets the amount of storage space, in bytes, used one or more items being stored in the storage area.</p>
+Gets the amount of storage space, in bytes, used one or more items being stored in the storage area.
 
-<p>This function only exists in browser.storage.sync<br>
- It does not exist in browser.storage.local<br>
- See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1385832">https://bugzilla.mozilla.org/show_bug.cgi?id=1385832</a></p>
+This function only exists in browser.storage.sync
+It does not exist in browser.storage.local
+See <https://bugzilla.mozilla.org/show_bug.cgi?id=1385832>
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var gettingSpace = browser.storage.&lt;storageType&gt;.getBytesInUse(
+```js
+var gettingSpace = browser.storage.<storageType>.getBytesInUse(
   keys                      // null, string, or array of strings
 )
-</pre>
+```
 
-<p><code>&lt;storageType&gt;</code> can only be {{WebExtAPIRef("storage.sync")}}, not {{WebExtAPIRef("storage.local")}} because of <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1385832">this bug</a>.</p>
+`<storageType>` can only be {{WebExtAPIRef("storage.sync")}}, not {{WebExtAPIRef("storage.local")}} because of [this bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1385832).
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>keys</code></dt>
- <dd>A key (string) or keys (an array of strings) to identify the item(s) whose storage space you want to retrieve. If an array is passed in, 0 will be returned. If you pass <code>null</code> or <code>undefined</code> here, the function will return the space used by the entire storage area.</dd>
-</dl>
+- `keys`
+  - : A key (string) or keys (an array of strings) to identify the item(s) whose storage space you want to retrieve. If an array is passed in, 0 will be returned. If you pass `null` or `undefined` here, the function will return the space used by the entire storage area.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an integer, <code>bytesUsed</code>, representing the storage space used by the objects that were specified in <code>keys</code>. If the operation failed, the promise will be rejected with an error message.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an integer, `bytesUsed`, representing the storage space used by the objects that were specified in `keys`. If the operation failed, the promise will be rejected with an error message.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/storage"><code>chrome.storage</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

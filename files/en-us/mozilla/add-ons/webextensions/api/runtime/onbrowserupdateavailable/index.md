@@ -14,63 +14,57 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onBrowserUpdateAvailable
 ---
-<p>{{AddonSidebar}}{{Deprecated_header}}</p>
+{{AddonSidebar}}{{Deprecated_header}}
 
-<p>Fired when an update for the browser is available, but it isn't installed immediately because a browser restart is required.</p>
+Fired when an update for the browser is available, but it isn't installed immediately because a browser restart is required.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.runtime.onBrowserUpdateAvailable.addListener(listener)
+```js
+browser.runtime.onBrowserUpdateAvailable.addListener(listener)
 browser.runtime.onBrowserUpdateAvailable.removeListener(listener)
 browser.runtime.onBrowserUpdateAvailable.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Checks whether a <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Checks whether a `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>function</code></dt>
- <dd>
- <p>A callback function that will be called when this event occurs.</p>
- </dd>
-</dl>
+- `function`
+  - : A callback function that will be called when this event occurs.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Listen for this event:</p>
+Listen for this event:
 
-<pre class="brush: js">function handleBrowserUpdateAvailable() {
+```js
+function handleBrowserUpdateAvailable() {
   // handle event
 }
 
-browser.runtime.onBrowserUpdateAvailable.addListener(handleBrowserUpdateAvailable);</pre>
+browser.runtime.onBrowserUpdateAvailable.addListener(handleBrowserUpdateAvailable);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onBrowserUpdateAvailable) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#event-onBrowserUpdateAvailable"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -97,5 +91,4 @@ browser.runtime.onBrowserUpdateAvailable.addListener(handleBrowserUpdateAvailabl
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -4,113 +4,92 @@ slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 tags:
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>A content script is a part of your extension that runs in the context of a particular web page (as opposed to background scripts which are part of the extension, or scripts which are part of the web site itself, such as those loaded using the {{HTMLElement("script")}} element).</p>
+A content script is a part of your extension that runs in the context of a particular web page (as opposed to background scripts which are part of the extension, or scripts which are part of the web site itself, such as those loaded using the {{HTMLElement("script")}} element).
 
-<p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">Background scripts</a> can access all the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension JavaScript APIs</a>, but they can't directly access the content of web pages. So if your extension needs to do that, you need content scripts.</p>
+[Background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) can access all the [WebExtension JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API), but they can't directly access the content of web pages. So if your extension needs to do that, you need content scripts.
 
-<p>Just like the scripts loaded by normal web pages, content scripts can read and modify the content of their pages using the standard DOM APIs.</p>
+Just like the scripts loaded by normal web pages, content scripts can read and modify the content of their pages using the standard DOM APIs.
 
-<p>Content scripts can only access <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis">a small subset of the WebExtension APIs</a>, but they can <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts">communicate with background scripts</a> using a messaging system, and thereby indirectly access the WebExtension APIs.</p>
+Content scripts can only access [a small subset of the WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis), but they can [communicate with background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts) using a messaging system, and thereby indirectly access the WebExtension APIs.
 
-<div class="note">
-<p><strong>Note:</strong> Content scripts are blocked on the following domains:</p>
+> **Note:** Content scripts are blocked on the following domains:
+>
+> - accounts-static.cdn.mozilla.net
+> - accounts.firefox.com
+> - addons.cdn.mozilla.net
+> - addons.mozilla.org
+> - api.accounts.firefox.com
+> - content.cdn.mozilla.net
+> - content.cdn.mozilla.net
+> - discovery.addons.mozilla.org
+> - input.mozilla.org
+> - install.mozilla.org
+> - oauth.accounts.firefox.com
+> - profile.accounts.firefox.com
+> - support.mozilla.org
+> - sync.services.mozilla.com
+> - testpilot.firefox.com
+>
+> If you try to inject a content script into a page in these domains, it fails and the page logs a [CSP](/en-US/docs/Web/HTTP/CSP) error.
+>
+> Because these restrictions include addons.mozilla.org, users may attempt to use your extension immediately after installation—only to find that it doesn't work! You may want to add an appropriate warning, or an [onboarding page](https://extensionworkshop.com/documentation/develop/onboard-upboard-offboard-users/) to move users away from `addons.mozilla.org`.
 
-<ul>
- <li>accounts-static.cdn.mozilla.net</li>
- <li>accounts.firefox.com</li>
- <li>addons.cdn.mozilla.net</li>
- <li>addons.mozilla.org</li>
- <li>api.accounts.firefox.com</li>
- <li>content.cdn.mozilla.net</li>
- <li>content.cdn.mozilla.net</li>
- <li>discovery.addons.mozilla.org</li>
- <li>input.mozilla.org</li>
- <li>install.mozilla.org</li>
- <li>oauth.accounts.firefox.com</li>
- <li>profile.accounts.firefox.com</li>
- <li>support.mozilla.org</li>
- <li>sync.services.mozilla.com</li>
- <li>testpilot.firefox.com</li>
-</ul>
+> **Note:** Values added to the global scope of a content script with `let foo` or `window.foo = "bar"` may disappear due to bug [1408996](https://bugzilla.mozilla.org/show_bug.cgi?id=1408996).
 
-<p>If you try to inject a content script into a page in these domains, it fails and the page logs a <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> error.</p>
+## Loading content scripts
 
-<p>Because these restrictions include addons.mozilla.org, users may attempt to use your extension immediately after installation—only to find that it doesn't work! You may want to add an appropriate warning, or an <a href="https://extensionworkshop.com/documentation/develop/onboard-upboard-offboard-users/">onboarding page</a> to move users away from <code>addons.mozilla.org</code>.</p>
-</div>
+You can load a content script into a web page in one of three ways:
 
-<div class="note">
-<p><strong>Note:</strong> Values added to the global scope of a content script with <code>let foo</code> or <code>window.foo = "bar"</code> may disappear due to bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1408996">1408996</a>.</p>
-</div>
+1.  - At install time, into pages that match URL patterns.
+      - : Using the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key in your `manifest.json`, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
+2.  - At runtime, into pages that match URL patterns.
+      - : Using the {{WebExtAPIRef("contentScripts")}} API, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). (This is similar to method 1, _except_ that you can add and remove content scripts at runtime.)
+3.  - At runtime, into specific tabs.
+      - : Using the [`tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API, you can load a content script into a specific tab whenever you want. (For example, in response to the user clicking on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action).)
 
-<h2 id="Loading_content_scripts">Loading content scripts</h2>
+There is only one global scope _per frame, per extension_. This means that variables from one content script can directly be accessed by another content script, regardless of how the content script was loaded.
 
-<p>You can load a content script into a web page in one of three ways:</p>
+Using methods (1) and (2), you can only load scripts into pages whose URLs can be represented using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 
-<ol>
- <li>
-  <dl>
-   <dt>At install time, into pages that match URL patterns.</dt>
-   <dd>Using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code> key in your <code>manifest.json</code>, you can ask the browser to load a content script whenever the browser loads a page whose URL <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">matches a given pattern</a>.</dd>
-  </dl>
- </li>
- <li>
-  <dl>
-   <dt>At runtime, into pages that match URL patterns.</dt>
-   <dd>Using the {{WebExtAPIRef("contentScripts")}} API, you can ask the browser to load a content script whenever the browser loads a page whose URL <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">matches a given pattern</a>. (This is similar to method 1, <em>except</em> that you can add and remove content scripts at runtime.)</dd>
-  </dl>
- </li>
- <li>
-  <dl>
-   <dt>At runtime, into specific tabs.</dt>
-   <dd>Using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript">tabs.executeScript()</a></code> API, you can load a content script into a specific tab whenever you want. (For example, in response to the user clicking on a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">browser action</a>.)</dd>
-  </dl>
- </li>
-</ol>
+Using method (3), you can also load scripts into pages packaged with your extension, but you can't load scripts into privileged browser pages (like "`about:debugging`" or "`about:addons`").
 
-<p>There is only one global scope <em>per frame, per extension</em>. This means that variables from one content script can directly be accessed by another content script, regardless of how the content script was loaded.</p>
+> **Note:** [Dynamic JS module imports](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading) are now working in content scripts. For more details, see {{bug(1536094)}}.
+> Only URLs with the _moz-extension_ scheme are allowed, which excludes data URLs ({{bug(1587336)}}).
 
-<p>Using methods (1) and (2), you can only load scripts into pages whose URLs can be represented using a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match pattern</a>.</p>
+## Content script environment
 
-<p>Using method (3), you can also load scripts into pages packaged with your extension, but you can't load scripts into privileged browser pages (like "<code>about:debugging</code>" or "<code>about:addons</code>").</p>
+### DOM access
 
-<div class="note notecard">
-  <p><strong>Note:</strong> <a href="/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading">Dynamic JS module imports</a> are now working in content scripts. For more details, see {{bug(1536094)}}.
-  Only URLs with the <em>moz-extension</em> scheme are allowed, which excludes data URLs ({{bug(1587336)}}).</p>
-  </div>
+Content scripts can access and modify the page's DOM, just like normal page scripts can. They can also see any changes that were made to the DOM by page scripts.
 
-<h2 id="Content_script_environment">Content script environment</h2>
+However, content scripts get a "clean" view of the DOM. This means:
 
-<h3 id="DOM_access">DOM access</h3>
+- Content scripts cannot see JavaScript variables defined by page scripts.
+- If a page script redefines a built-in DOM property, the content script sees the original version of the property, not the redefined version.
 
-<p>Content scripts can access and modify the page's DOM, just like normal page scripts can. They can also see any changes that were made to the DOM by page scripts.</p>
+In Firefox, this behavior is called [Xray vision](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#xray_vision_in_firefox).
 
-<p>However, content scripts get a "clean" view of the DOM. This means:</p>
+Consider a web page like this:
 
-<ul>
- <li>Content scripts cannot see JavaScript variables defined by page scripts.</li>
- <li>If a page script redefines a built-in DOM property, the content script sees the original version of the property, not the redefined version.</li>
-</ul>
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  </head>
 
-<p>In Firefox, this behavior is called <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#xray_vision_in_firefox">Xray vision</a>.</p>
+  <body>
+    <script src="page-scripts/page-script.js"></script>
+  </body>
+</html>
+```
 
-<p>Consider a web page like this:</p>
+The script `page-script.js` does this:
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
-  &lt;/head&gt;
-
-  &lt;body&gt;
-    &lt;script src="page-scripts/page-script.js"&gt;&lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-
-<p>The script <code>page-script.js</code> does this:</p>
-
-<pre class="brush: js">// page-script.js
+```js
+// page-script.js
 
 // add a new element to the DOM
 let p = document.createElement("p");
@@ -124,11 +103,13 @@ window.foo = "This global variable was added by a page script";
 // redefine the built-in window.confirm() function
 window.confirm = function() {
   alert("The page script has also redefined 'confirm'");
-}</pre>
+}
+```
 
-<p>Now an extension injects a content script into the page:</p>
+Now an extension injects a content script into the page:
 
-<pre class="brush: js">// content-script.js
+```js
+// content-script.js
 
 // can access and modify the DOM
 let pageScriptPara = document.getElementById("page-script-para");
@@ -138,133 +119,150 @@ pageScriptPara.style.backgroundColor = "blue";
 console.log(window.foo);  // undefined
 
 // sees the original form of redefined properties
-window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
+window.confirm("Are you sure?"); // calls the original window.confirm()
+```
 
-<p>The same is true in reverse; page scripts cannot see JavaScript properties added by content scripts.</p>
+The same is true in reverse; page scripts cannot see JavaScript properties added by content scripts.
 
-<p>This means that content scripts can rely on DOM properties behaving predictably, without worrying about its variables clashing with variables from the page script.</p>
+This means that content scripts can rely on DOM properties behaving predictably, without worrying about its variables clashing with variables from the page script.
 
-<p>One practical consequence of this behavior is that a content script doesn't have access to any JavaScript libraries loaded by the page. So, for example, if the page includes jQuery, the content script can't see it.</p>
+One practical consequence of this behavior is that a content script doesn't have access to any JavaScript libraries loaded by the page. So, for example, if the page includes jQuery, the content script can't see it.
 
-<p>If a content script needs to use a JavaScript library, then the library itself should be injected as a content script <em>alongside</em> the content script that wants to use it:</p>
+If a content script needs to use a JavaScript library, then the library itself should be injected as a content script _alongside_ the content script that wants to use it:
 
-<pre class="brush: json">"content_scripts": [
+```json
+"content_scripts": [
   {
     "matches": ["*://*.mozilla.org/*"],
     "js": ["jquery.js", "content-script.js"]
   }
-]</pre>
+]
+```
 
-<div class="notecard note">
-<p><strong>Note:</strong> Firefox <em>does</em> provide some APIs that enable content scripts to access JavaScript objects created by page scripts, and to expose their own JavaScript objects to page scripts.</p>
+> **Note:** Firefox _does_ provide some APIs that enable content scripts to access JavaScript objects created by page scripts, and to expose their own JavaScript objects to page scripts.
+>
+> See [Sharing objects with page scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) for more details.
 
-<p>See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts">Sharing objects with page scripts</a> for more details.</p>
-</div>
+### WebExtension APIs
 
-<h3 id="WebExtension_APIs">WebExtension APIs</h3>
+In addition to the standard DOM APIs, content scripts can use the following WebExtension APIs:
 
-<p>In addition to the standard DOM APIs, content scripts can use the following WebExtension APIs:</p>
+**From [`extension`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension):**
 
-<p><strong>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension">extension</a></code>:</strong></p>
-<ul>
-  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL">getURL()</a></code></li>
-  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext">inIncognitoContext</a></code></li>
-</ul>
+- [`getURL()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL)
+- [`inIncognitoContext`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext)
 
-<p><strong>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime">runtime</a></code>:</strong></p>
-<ul>
-  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect">connect()</a></code></li>
-  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getManifest">getManifest()</a></code></li>
-  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL">getURL()</a></code></li>
-  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">onConnect</a></code></li>
-  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">onMessage</a></code></li>
-  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">sendMessage()</a></code></li>
-</ul>
+**From [`runtime`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime):**
 
-<p><strong>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n</a></code>:</strong></p>
-<ul>
-  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getMessage">getMessage()</a></code></li>
-  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages">getAcceptLanguages()</a></code></li>
-  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage">getUILanguage()</a></code></li>
-  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage">detectLanguage()</a></code></li>
- </ul>
+- [`connect()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect)
+- [`getManifest()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getManifest)
+- [`getURL()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL)
+- [`onConnect`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect)
+- [`onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
+- [`sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
 
-<p><strong>From <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus">menus</a></code>:</strong></p>
-<ul>
-  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement">getTargetElement</a></code></li>
-</ul>
+**From [`i18n`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n):**
 
-<p><strong>Everything from:</strong></p>
-<ul>
-  <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code></li>
-</ul>
+- [`getMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getMessage)
+- [`getAcceptLanguages()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages)
+- [`getUILanguage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage)
+- [`detectLanguage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage)
 
-<h3 id="XHR_and_Fetch">XHR and Fetch</h3>
+**From [`menus`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus):**
 
-<p>Content scripts can make requests using the normal <code><a href="/en-US/docs/Web/API/XMLHttpRequest">window.XMLHttpRequest</a></code> and <code><a href="/en-US/docs/Web/API/Fetch_API">window.fetch()</a></code> APIs.</p>
+- [`getTargetElement`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement)
 
-<div class="notecard note">
-<p><strong>Note:</strong> In Firefox, content script requests (for example, using <code><a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch">fetch()</a></code>) happen in the context of an extension, so you must provide an absolute URL to reference page content.</p>
+**Everything from:**
 
-<p>In Chrome, these requests happen in context of the page, so they are made to a relative URL.  For example, <code>/api</code> is sent to <code>https://<strong>«</strong><var>current page URL</var><strong>»</strong>/api</code>.</p>
-</div>
+- [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage)
 
-<p>Content scripts get the same cross-domain privileges as the rest of the extension: so if the extension has requested cross-domain access for a domain using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> key in <code>manifest.json</code>, then its content scripts get access that domain as well.</p>
+### XHR and Fetch
 
-<p>This is accomplished by exposing more privileged XHR and fetch instances in the content script, which has the side-effect of not setting the <code><a href="/en-US/docs/Web/HTTP/Headers/Origin">Origin</a></code> and <code><a href="/en-US/docs/Web/HTTP/Headers/Referer">Referer</a></code> headers like a request from the page itself would; this is often preferable to prevent the request from revealing its cross-origin nature.</p>
+Content scripts can make requests using the normal [`window.XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) and [`window.fetch()`](/en-US/docs/Web/API/Fetch_API) APIs.
 
-<div class="notecard note">
-<p><strong>Note:</strong> In Firefox, extensions that need to perform requests that behave as if they were sent by the content itself can use  <code>content.XMLHttpRequest</code> and <code>content.fetch()</code> instead.</p>
+> **Note:** In Firefox, content script requests (for example, using [`fetch()`](/en-US/docs/Web/API/Fetch_API/Using_Fetch)) happen in the context of an extension, so you must provide an absolute URL to reference page content.
+>
+> In Chrome, these requests happen in context of the page, so they are made to a relative URL.  For example, `/api` is sent to `https://«current page URL»/api`.
 
-<p>For cross-browser extensions, the presence of these methods must be feature-detected.</p>
-</div>
+Content scripts get the same cross-domain privileges as the rest of the extension: so if the extension has requested cross-domain access for a domain using the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) key in `manifest.json`, then its content scripts get access that domain as well.
 
-<div class="notecard note">
-<p><strong>Note:</strong> In Chrome, starting with version 73, content scripts are subject to the same CORS policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See <a href="https://www.chromium.org/Home/chromium-security/extension-content-script-fetches">Changes to Cross-Origin Requests in Chrome Extension Content Scripts</a>.</p>
-</div>
+This is accomplished by exposing more privileged XHR and fetch instances in the content script, which has the side-effect of not setting the [`Origin`](/en-US/docs/Web/HTTP/Headers/Origin) and [`Referer`](/en-US/docs/Web/HTTP/Headers/Referer) headers like a request from the page itself would; this is often preferable to prevent the request from revealing its cross-origin nature.
 
-<h2 id="Communicating_with_background_scripts">Communicating with background scripts</h2>
+> **Note:** In Firefox, extensions that need to perform requests that behave as if they were sent by the content itself can use  `content.XMLHttpRequest` and `content.fetch()` instead.
+>
+> For cross-browser extensions, the presence of these methods must be feature-detected.
 
-<p>Although content scripts can't directly use most of the WebExtension APIs, they can communicate with the extension's background scripts using the messaging APIs, and can therefore indirectly access all the same APIs that the background scripts can.</p>
+> **Note:** In Chrome, starting with version 73, content scripts are subject to the same CORS policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See [Changes to Cross-Origin Requests in Chrome Extension Content Scripts](https://www.chromium.org/Home/chromium-security/extension-content-script-fetches).
 
-<p>There are two basic patterns for communicating between the background scripts and content scripts:</p>
+## Communicating with background scripts
 
-<ul>
- <li>You can send <strong>one-off messages</strong> (with an optional response).</li>
- <li>You can set up a <strong>longer-lived connection between the two sides</strong>, and use that connection to exchange messages.</li>
-</ul>
+Although content scripts can't directly use most of the WebExtension APIs, they can communicate with the extension's background scripts using the messaging APIs, and can therefore indirectly access all the same APIs that the background scripts can.
 
-<h3 id="One-off_messages">One-off messages</h3>
+There are two basic patterns for communicating between the background scripts and content scripts:
 
-<p>To send one-off messages, with an optional response, you can use the following APIs:</p>
+- You can send **one-off messages** (with an optional response).
+- You can set up a **longer-lived connection between the two sides**, and use that connection to exchange messages.
+
+### One-off messages
+
+To send one-off messages, with an optional response, you can use the following APIs:
 
 <table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="row"></th>
-   <th scope="col">In content script</th>
-   <th scope="col">In background script</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Send a message</th>
-   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">browser.runtime.sendMessage()</a></code></td>
-   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage">browser.tabs.sendMessage()</a></code></td>
-  </tr>
-  <tr>
-   <th scope="row">Receive a message</th>
-   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">browser.runtime.onMessage</a></code></td>
-   <td><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">browser.runtime.onMessage</a></code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="row"></th>
+      <th scope="col">In content script</th>
+      <th scope="col">In background script</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Send a message</th>
+      <td>
+        <code
+          ><a
+            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage"
+            >browser.runtime.sendMessage()</a
+          ></code
+        >
+      </td>
+      <td>
+        <code
+          ><a
+            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage"
+            >browser.tabs.sendMessage()</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Receive a message</th>
+      <td>
+        <code
+          ><a
+            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage"
+            >browser.runtime.onMessage</a
+          ></code
+        >
+      </td>
+      <td>
+        <code
+          ><a
+            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage"
+            >browser.runtime.onMessage</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>For example, here's a content script that listens for click events in the web page.</p>
+For example, here's a content script that listens for click events in the web page.
 
-<p>If the click was on a link, it sends a message to the background page with the target URL:</p>
+If the click was on a link, it sends a message to the background page with the target URL:
 
-<pre class="brush: js">// content-script.js
+```js
+// content-script.js
 
 window.addEventListener("click", notifyExtension);
 
@@ -273,11 +271,13 @@ function notifyExtension(e) {
     return;
   }
   browser.runtime.sendMessage({"url": e.target.href});
-}</pre>
+}
+```
 
-<p>The background script listens for these messages and displays a notification using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></code> API:</p>
+The background script listens for these messages and displays a notification using the [`notifications`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications) API:
 
-<pre class="brush: js">// background-script.js
+```js
+// background-script.js
 
 browser.runtime.onMessage.addListener(notify);
 
@@ -289,51 +289,42 @@ function notify(message) {
     "message": message.url
   });
 }
-</pre>
+```
 
-<p>(This example code is lightly adapted from the <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> example on GitHub.)</p>
+(This example code is lightly adapted from the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) example on GitHub.)
 
-<h3 id="Connection-based_messaging">Connection-based messaging</h3>
+### Connection-based messaging
 
-<p>Sending one-off messages can get cumbersome if you are exchanging a lot of messages between a background script and a content script. So an alternative pattern is to establish a longer-lived connection between the two contexts, and use this connection to exchange messages.</p>
+Sending one-off messages can get cumbersome if you are exchanging a lot of messages between a background script and a content script. So an alternative pattern is to establish a longer-lived connection between the two contexts, and use this connection to exchange messages.
 
-<p>Both sides have a <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> object, which they can use to exchange messages.</p>
+Both sides have a [`runtime.Port`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) object, which they can use to exchange messages.
 
-<p>To create the connection:</p>
+To create the connection:
 
-<ul>
- <li>One side listens for connections using <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code></li>
- <li>The other side calls:
-  <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect">tabs.connect()</a></code> (if connecting to a content script)</li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect">runtime.connect()</a></code> (if connecting to a background script)</li>
-  </ul>
- </li>
-</ul>
+- One side listens for connections using [`runtime.onConnect`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect)
+- The other side calls:
 
-<p>This returns a <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> object.</p>
+  - [`tabs.connect()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect) (if connecting to a content script)
+  - [`runtime.connect()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect) (if connecting to a background script)
 
-<ul>
- <li>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect">runtime.onConnect</a></code> listener gets passed its own <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port">runtime.Port</a></code> object.</li>
-</ul>
+This returns a [`runtime.Port`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) object.
 
-<p>Once each side has a port, the two sides can:</p>
+- The [`runtime.onConnect`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect) listener gets passed its own [`runtime.Port`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) object.
 
-<ul>
- <li>Send messages using <code>runtime.Port.postMessage()</code></li>
- <li>Receive messages using <code>runtime.Port.onMessage()</code></li>
-</ul>
+Once each side has a port, the two sides can:
 
-<p>For example, as soon as it loads, the following content script:</p>
+- Send messages using `runtime.Port.postMessage()`
+- Receive messages using `runtime.Port.onMessage()`
 
-<ul>
- <li>Connects to the background script</li>
- <li>Stores the <code>Port</code> in a variable <code>myPort</code></li>
- <li>Listens for messages on <code>myPort</code>  (and logs them)</li>
- <li>Uses <code>myPort</code> to sends messages to the background script when the user clicks the document</li>
-</ul>
+For example, as soon as it loads, the following content script:
 
-<pre class="brush: js">// content-script.js
+- Connects to the background script
+- Stores the `Port` in a variable `myPort`
+- Listens for messages on `myPort`  (and logs them)
+- Uses `myPort` to sends messages to the background script when the user clicks the document
+
+```js
+// content-script.js
 
 let myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
@@ -345,23 +336,22 @@ myPort.onMessage.addListener(function(m) {
 
 document.body.addEventListener("click", function() {
   myPort.postMessage({greeting: "they clicked the page!"});
-});</pre>
+});
+```
 
-<p>The corresponding background script:</p>
+The corresponding background script:
 
-<ul>
- <li>Listens for connection attempts from the content script</li>
- <li>When receiving a connection attempt:
-  <ul>
-   <li>Stores the port in a variable named <code>portFromCS</code></li>
-   <li>Sends the content script a message using the port</li>
-   <li>Starts listening to messages received on the port, and logs them</li>
-  </ul>
- </li>
- <li>Sends messages to the content script, using <code>portFromCS</code>, when the user clicks the extension's browser action</li>
-</ul>
+- Listens for connection attempts from the content script
+- When receiving a connection attempt:
 
-<pre class="brush: js">// background-script.js
+  - Stores the port in a variable named `portFromCS`
+  - Sends the content script a message using the port
+  - Starts listening to messages received on the port, and logs them
+
+- Sends messages to the content script, using `portFromCS`, when the user clicks the extension's browser action
+
+```js
+// background-script.js
 
 let portFromCS;
 
@@ -378,13 +368,14 @@ browser.runtime.onConnect.addListener(connected);
 browser.browserAction.onClicked.addListener(function() {
   portFromCS.postMessage({greeting: "they clicked the button!"});
 });
-</pre>
+```
 
-<h4 id="Multiple_content_scripts">Multiple content scripts</h4>
+#### Multiple content scripts
 
-<p>If you have multiple content scripts communicating at the same time, you might want to store connections to them in an array.</p>
+If you have multiple content scripts communicating at the same time, you might want to store connections to them in an array.
 
-<pre class="brush: js">// background-script.js
+```js
+// background-script.js
 
 let ports = []
 
@@ -396,37 +387,36 @@ function connected(p) {
 browser.runtime.onConnect.addListener(connected)
 
 browser.browserAction.onClicked.addListener(function() {
-  ports.forEach( p =&gt; {
+  ports.forEach( p => {
         p.postMessage({greeting: "they clicked the button!"})
     })
 });
-</pre>
+```
 
-<h3 id="Choosing_between_one-off_messages_and_connection-based_messaging">Choosing between one-off messages and connection-based messaging</h3>
+### Choosing between one-off messages and connection-based messaging
 
-<p>The choice between one-off and connection-based messaging depends on how your extension expects to make use of messaging.</p>
+The choice between one-off and connection-based messaging depends on how your extension expects to make use of messaging.
 
-<p>The recommended best practices are:</p>
+The recommended best practices are:
 
-<p><strong>Use one-off messages when…</strong></p>
-<ul>
-<li>Only one response is expected to a message.</li>
-<li>A small number of scripts listen to receive messages ({{WebExtAPIRef("runtime.onMessage")}} calls).</li>
-</ul>
+**Use one-off messages when…**
 
-<p><strong>Use connection-based messaging when…</strong></p>
-<ul>
-<li>Scripts engage in sessions where multiple messages are exchanged.</li>
-<li>The extension needs to know about task progress or if a task is interrupted, or wants to interrupt a task initiated using messaging.</li>
-</ul>
+- Only one response is expected to a message.
+- A small number of scripts listen to receive messages ({{WebExtAPIRef("runtime.onMessage")}} calls).
 
-<h2 id="Communicating_with_the_web_page">Communicating with the web page</h2>
+**Use connection-based messaging when…**
 
-<p>By default, content scripts don't get access to objects created by page scripts. However, they can communicate with page scripts using the DOM <code><a href="/en-US/docs/Web/API/Window/postMessage">window.postMessage</a></code> and <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">window.addEventListener</a></code> APIs.</p>
+- Scripts engage in sessions where multiple messages are exchanged.
+- The extension needs to know about task progress or if a task is interrupted, or wants to interrupt a task initiated using messaging.
 
-<p>For example:</p>
+## Communicating with the web page
 
-<pre class="brush: js">// page-script.js
+By default, content scripts don't get access to objects created by page scripts. However, they can communicate with page scripts using the DOM [`window.postMessage`](/en-US/docs/Web/API/Window/postMessage) and [`window.addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) APIs.
+
+For example:
+
+```js
+// page-script.js
 
 let messenger = document.getElementById("from-page-script");
 
@@ -438,54 +428,54 @@ function messageContentScript() {
     message: "Message from the page"
   }, "*");
 }
-</pre>
+```
 
-<pre class="brush: js">// content-script.js
+```js
+// content-script.js
 
 window.addEventListener("message", function(event) {
-  if (event.source == window &amp;&amp;
-      event.data &amp;&amp;
+  if (event.source == window &&
+      event.data &&
       event.data.direction == "from-page-script") {
     alert("Content script received message: \"" + event.data.message + "\"");
   }
-});</pre>
+});
+```
 
-<p>For a complete working example of this, <a href="https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html">visit the demo page on GitHub</a> and follow the instructions.</p>
+For a complete working example of this, [visit the demo page on GitHub](https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html) and follow the instructions.
 
-<div class="warning">
-<p><strong>Warning:</strong> Be very careful when interacting with untrusted web content in this manner! Extensions are privileged code which can have powerful capabilities and hostile web pages can easily trick them into accessing those capabilities.</p>
+> **Warning:** Be very careful when interacting with untrusted web content in this manner! Extensions are privileged code which can have powerful capabilities and hostile web pages can easily trick them into accessing those capabilities.
+>
+> To give a trivial example, suppose the content script code that receives the message does something like this:
+>
+> ```js example-bad
+> // content-script.js
+>
+> window.addEventListener("message", function(event) {
+>   if (event.source == window &&
+>       event.data.direction   &&
+>       event.data.direction == "from-page-script") {
+>     eval(event.data.message);
+>   }
+> });
+> ```
+>
+> Now the page script can run any code with all the privileges of the content script.
 
-<p>To give a trivial example, suppose the content script code that receives the message does something like this:</p>
+## Using `eval()` in content scripts
 
-<pre class="brush: js example-bad">// content-script.js
+- In Chrome
+  - : {{jsxref("Global_Objects/eval", "eval")}} always runs code in the context of the **content script**, not in the context of the page.
+- In Firefox
 
-window.addEventListener("message", function(event) {
-  if (event.source == window &amp;&amp;
-      event.data.direction   &amp;&amp;
-      event.data.direction == "from-page-script") {
-    eval(event.data.message);
-  }
-});</pre>
+  - : If you call `eval()`, it runs code in the context of the **content script**.
 
-<p>Now the page script can run any code with all the privileges of the content script.</p>
-</div>
+    If you call `window.eval()`, it runs code in the context of the **page**.
 
-<h2 id="Using_eval_in_content_scripts">Using <code>eval()</code> in content scripts</h2>
+For example, consider a content script like this:
 
-<dl>
- <dt>In Chrome</dt>
- <dd>{{jsxref("Global_Objects/eval", "eval")}} always runs code in the context of the <strong>content script</strong>, not in the context of the page.</dd>
- <dt>In Firefox</dt>
- <dd>
- <p>If you call <code>eval()</code>, it runs code in the context of the <strong>content script</strong>.</p>
-
- <p>If you call <code>window.eval()</code>, it runs code in the context of the <strong>page</strong>.</p>
- </dd>
-</dl>
-
-<p>For example, consider a content script like this:</p>
-
-<pre class="brush: js">// content-script.js
+```js
+// content-script.js
 
 window.eval('window.x = 1;');
 eval('window.y = 2');
@@ -495,51 +485,54 @@ console.log(`In content script, window.y: ${window.y}`);
 
 window.postMessage({
   message: "check"
-}, "*");</pre>
+}, "*");
+```
 
-<p>This code just creates some variables <code><var>x</var></code> and <code><var>y</var></code> using <code>window.eval()</code> and <code>eval()</code>,  logs their values, and then messages the page.</p>
+This code just creates some variables `x` and `y` using `window.eval()` and `eval()`,  logs their values, and then messages the page.
 
-<p>On receiving the message, the page script logs the same variables:</p>
+On receiving the message, the page script logs the same variables:
 
-<pre class="brush: js">window.addEventListener("message", function(event) {
-  if (event.source === window &amp;&amp; event.data &amp;&amp; event.data.message === "check") {
+```js
+window.addEventListener("message", function(event) {
+  if (event.source === window && event.data && event.data.message === "check") {
     console.log(`In page script, window.x: ${window.x}`);
     console.log(`In page script, window.y: ${window.y}`);
   }
-});</pre>
+});
+```
 
-<p>In Chrome, this produces output like this:</p>
+In Chrome, this produces output like this:
 
-<pre>In content script, window.x: 1
-In content script, window.y: 2
-In page script, window.x: undefined
-In page script, window.y: undefined</pre>
+    In content script, window.x: 1
+    In content script, window.y: 2
+    In page script, window.x: undefined
+    In page script, window.y: undefined
 
-<p>In Firefox, this produces output like this:</p>
+In Firefox, this produces output like this:
 
-<pre>In content script, window.x: undefined
-In content script, window.y: 2
-In page script, window.x: 1
-In page script, window.y: undefined</pre>
+    In content script, window.x: undefined
+    In content script, window.y: 2
+    In page script, window.x: 1
+    In page script, window.y: undefined
 
-<p>The same applies to <code><a href="/en-US/docs/Web/API/setTimeout">setTimeout()</a></code>, <code><a href="/en-US/docs/Web/API/setInterval">setInterval()</a></code>, and <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code>.</p>
+The same applies to [`setTimeout()`](/en-US/docs/Web/API/setTimeout), [`setInterval()`](/en-US/docs/Web/API/setInterval), and [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function).
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> Be very careful when running code in the context of the page!</p>
-
-<p>The page's environment is controlled by potentially malicious web pages, which can redefine objects you interact with to behave in unexpected ways:</p>
-
-<pre class="brush: js example-bad">// page.js redefines console.log
-
-let original = console.log;
-
-console.log = function() {
-  original(true);
-}
-</pre>
-
-<pre class="brush: js example-bad">// content-script.js calls the redefined version
-
-window.eval('console.log(false)');
-</pre>
-</div>
+> **Warning:** Be very careful when running code in the context of the page!
+>
+> The page's environment is controlled by potentially malicious web pages, which can redefine objects you interact with to behave in unexpected ways:
+>
+> ```js example-bad
+> // page.js redefines console.log
+>
+> let original = console.log;
+>
+> console.log = function() {
+>   original(true);
+> }
+> ```
+>
+> ```js example-bad
+> // content-script.js calls the redefined version
+>
+> window.eval('console.log(false)');
+> ```

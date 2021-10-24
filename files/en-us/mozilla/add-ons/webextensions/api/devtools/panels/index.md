@@ -10,74 +10,59 @@ tags:
   - devtools.panels
 browser-compat: webextensions.api.devtools.panels
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div class="note">
-<p><strong>Note:</strong> Although the APIs are based on the <a href="https://developer.chrome.com/extensions/devtools">Chrome devtools APIs</a>, there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis">Limitations of the devtools APIs</a>.</p>
-</div>
+> **Note:** Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools), there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see [Limitations of the devtools APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis).
 
-<p>The <code>devtools.panels</code> API lets a devtools extension define its user interface inside the devtools window.</p>
+The `devtools.panels` API lets a devtools extension define its user interface inside the devtools window.
 
-<p>The devtools window hosts a number of separate tools - the JavaScript Debugger, Network Monitor, and so on. A row of tabs across the top lets the user switch between the different tools. The window hosting each tool's user interface is called a "panel".</p>
+The devtools window hosts a number of separate tools - the JavaScript Debugger, Network Monitor, and so on. A row of tabs across the top lets the user switch between the different tools. The window hosting each tool's user interface is called a "panel".
 
-<p>With the <code>devtools.panels</code> API you can create new panels in the devtools window.</p>
+With the `devtools.panels` API you can create new panels in the devtools window.
 
-<p>Like all the <code>devtools</code> APIs, this API is only available to code running in the document defined in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a> manifest.json key, or in other devtools documents created by the extension (such as the panel's own document). See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">Extending the developer tools</a> for more.</p>
+Like all the `devtools` APIs, this API is only available to code running in the document defined in the [devtools_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) manifest.json key, or in other devtools documents created by the extension (such as the panel's own document). See [Extending the developer tools](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools) for more.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel">devtools.panels.ElementsPanel</a></code></dt>
- <dd>Represents the HTML/CSS inspector in the browser's devtools.</dd>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel">devtools.panels.ExtensionPanel</a></code></dt>
- <dd>Represents a devtools panel created by the extension.</dd>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane">devtools.panels.ExtensionSidebarPane</a></code></dt>
- <dd>Represents a pane that an extension has added to the HTML/CSS inspector in the browser's devtools.</dd>
-</dl>
+- [`devtools.panels.ElementsPanel`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel)
+  - : Represents the HTML/CSS inspector in the browser's devtools.
+- [`devtools.panels.ExtensionPanel`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel)
+  - : Represents a devtools panel created by the extension.
+- [`devtools.panels.ExtensionSidebarPane`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane)
+  - : Represents a pane that an extension has added to the HTML/CSS inspector in the browser's devtools.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/elements">devtools.panels.elements</a></code></dt>
- <dd>A reference to an <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel">ElementsPanel</a></code> object.</dd>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/themeName">devtools.panels.themeName</a></code></dt>
- <dd>The name of the current devtools theme.</dd>
-</dl>
+- [`devtools.panels.elements`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/elements)
+  - : A reference to an [`ElementsPanel`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel) object.
+- [`devtools.panels.themeName`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/themeName)
+  - : The name of the current devtools theme.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/create">devtools.panels.create()</a></code></dt>
- <dd>Creates a new devtools panel.</dd>
-</dl>
+- [`devtools.panels.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/create)
+  - : Creates a new devtools panel.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/onThemeChanged">devtools.panels.onThemeChanged</a></code></dt>
- <dd>Fired when the devtools theme changes.</dd>
-</dl>
+- [`devtools.panels.onThemeChanged`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/onThemeChanged)
+  - : Fired when the devtools theme changes.
 
-<h2 id="Example_extensions">Example extensions</h2>
+## Example extensions
 
-<ul>
- <li><a class="external" href="https://github.com/mdn/webextensions-examples/tree/master/devtools-panels" rel="noopener">devtools-panels</a></li>
-</ul>
+- [devtools-panels](https://github.com/mdn/webextensions-examples/tree/master/devtools-panels)
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
+> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -104,5 +89,4 @@ browser-compat: webextensions.api.devtools.panels
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

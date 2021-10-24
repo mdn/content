@@ -13,69 +13,67 @@ tags:
   - topSites
 browser-compat: webextensions.api.topSites.get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Gets an array containing information about pages that the user has visited often and recently. </p>
+Gets an array containing information about pages that the user has visited often and recently.
 
-<p>Browsers keep a list of pages that the user visits often and recently. They use this list to help the user get back to these places easily. For example, Firefox by default provides a list of the most-visited pages in the "New Tab" page.</p>
+Browsers keep a list of pages that the user visits often and recently. They use this list to help the user get back to these places easily. For example, Firefox by default provides a list of the most-visited pages in the "New Tab" page.
 
-<p>To determine which pages appear in the list, and the order in which they appear, the browser combines "frequency" - how often the user has visited the page - and "recency" - how recently the user visited the page.</p>
+To determine which pages appear in the list, and the order in which they appear, the browser combines "frequency" - how often the user has visited the page - and "recency" - how recently the user visited the page.
 
-<p>The browser may then apply further filtering to this list before presenting it to the user. For example, in Firefox the "New Tab" page only lists one page per domain, and the user is able to block pages from appearing in the list.</p>
+The browser may then apply further filtering to this list before presenting it to the user. For example, in Firefox the "New Tab" page only lists one page per domain, and the user is able to block pages from appearing in the list.
 
-<p>The <code>topSites.get()</code> API enables an extension to get access to this list. Called without any options, it will provide the filtered list of pages -  that is, the one that appears in the "New Tab" page. However, by providing various options it's possible for an extension to get the unfiltered list of pages.</p>
+The `topSites.get()` API enables an extension to get access to this list. Called without any options, it will provide the filtered list of pages -  that is, the one that appears in the "New Tab" page. However, by providing various options it's possible for an extension to get the unfiltered list of pages.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<p>To use the topSites API you must have the "topSites" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a>.</p>
+To use the topSites API you must have the "topSites" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var gettingTopSites = browser.topSites.get(
+```js
+var gettingTopSites = browser.topSites.get(
     options  // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>options</code></dt>
- <dd>
-   <p><code>object</code>. Options to modify the list of pages returned. This may include any of the following properties:</p>
-   <dl>
-    <dt><code>includeBlocked</code> {{optional_inline}}</dt>
-    <dd><code>Boolean</code>. Include pages that the user has removed from the "New Tab" page. Defaults to <code>false</code>.</dd>
-    <dt><code>includeFavicon</code> {{optional_inline}}</dt>
-    <dd><code>Boolean</code>. Include favicons in the results, for pages where they are available. Defaults to <code>false</code>.</dd>
-    <dt><code>includePinned</code> {{optional_inline}}</dt>
-    <dd><code>Boolean</code>. Includes sites that the user has pinned to the Firefox new tab.<br>
-    Defaults to <code>false</code>.</dd>
-    <dt><code>includeSearchShortcuts</code> {{optional_inline}}</dt>
-    <dd><code>Boolean</code>. Includes search shortcuts that appear on the Firefox new tab.<br>
-    Defaults to <code>false</code>.</dd>
-    <dt><code>limit</code> {{optional_inline}}</dt>
-    <dd><code>Integer</code>. The number of pages to return. This must be a number between 1 and 100, inclusive. Defaults to 12.</dd>
-    <dt><code>newtab</code> {{optional_inline}}</dt>
-    <dd><code>Boolean</code>. If included, the method returns the list of pages returned when the user opens a new tab. If included, and set to <code>true</code>, the method ignores all other parameters except <code>limit</code> and <code>includeFavicon</code>. Defaults to <code>false</code>.</dd>
-    <dt><code>onePerDomain</code> {{optional_inline}}</dt>
-    <dd><code>Boolean</code>. Only include one page per domain. Defaults to <code>true</code>.</dd>
-   </dl>
- </dd>
-</dl>
+- `options`
 
-<h3 id="Return_value">Return value</h3>
+  - : `object`. Options to modify the list of pages returned. This may include any of the following properties:
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. This will be fulfilled with an array of {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}} objects, one for each page listed in the browser's "New Tab" page. If an error occurs, the promise will be rejected with an error message.</p>
+    - `includeBlocked` {{optional_inline}}
+      - : `Boolean`. Include pages that the user has removed from the "New Tab" page. Defaults to `false`.
+    - `includeFavicon` {{optional_inline}}
+      - : `Boolean`. Include favicons in the results, for pages where they are available. Defaults to `false`.
+    - `includePinned` {{optional_inline}}
+      - : `Boolean`. Includes sites that the user has pinned to the Firefox new tab.
+        Defaults to `false`.
+    - `includeSearchShortcuts` {{optional_inline}}
+      - : `Boolean`. Includes search shortcuts that appear on the Firefox new tab.
+        Defaults to `false`.
+    - `limit` {{optional_inline}}
+      - : `Integer`. The number of pages to return. This must be a number between 1 and 100, inclusive. Defaults to 12.
+    - `newtab` {{optional_inline}}
+      - : `Boolean`. If included, the method returns the list of pages returned when the user opens a new tab. If included, and set to `true`, the method ignores all other parameters except `limit` and `includeFavicon`. Defaults to `false`.
+    - `onePerDomain` {{optional_inline}}
+      - : `Boolean`. Only include one page per domain. Defaults to `true`.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+### Return value
 
-<p>{{Compat}}</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). This will be fulfilled with an array of {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}} objects, one for each page listed in the browser's "New Tab" page. If an error occurs, the promise will be rejected with an error message.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>This code logs the title and URL for all pages in the "New Tab" page:</p>
+{{Compat}}
 
-<pre class="brush: js">function logTopSites(topSitesArray) {
+## Examples
+
+This code logs the title and URL for all pages in the "New Tab" page:
+
+```js
+function logTopSites(topSitesArray) {
   for (topSite of topSitesArray) {
     console.log(`Title: ${topSite.title}, URL: ${topSite.url}`);
   }
@@ -87,11 +85,12 @@ function onError(error) {
 
 var gettingTopSites = browser.topSites.get();
 gettingTopSites.then(logTopSites, onError);
-</pre>
+```
 
-<p>This code logs the title and URL for all top pages, including ones the user has blocked, and potentially including multiple pages in the same domain:</p>
+This code logs the title and URL for all top pages, including ones the user has blocked, and potentially including multiple pages in the same domain:
 
-<pre class="brush: js">function logTopSites(topSitesArray) {
+```js
+function logTopSites(topSitesArray) {
   for (topSite of topSitesArray) {
     console.log(`Title: ${topSite.title}, URL: ${topSite.url}`);
   }
@@ -106,16 +105,14 @@ var gettingTopSites = browser.topSites.get({
   onePerDomain: false
 });
 
-gettingTopSites.then(logTopSites, onError);</pre>
+gettingTopSites.then(logTopSites, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/extensions/topSites) API.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/topSites"><code>chrome.topSites</code></a> API.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -142,5 +139,4 @@ gettingTopSites.then(logTopSites, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -11,84 +11,73 @@ tags:
   - browsingData
 browser-compat: webextensions.api.browsingData
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Enables extensions to clear the data that is accumulated while the user is browsing.</p>
+Enables extensions to clear the data that is accumulated while the user is browsing.
 
-<p>In the <code>browsingData</code> API, browsing data is divided into types:</p>
+In the `browsingData` API, browsing data is divided into types:
 
-<ul>
-	<li>browser cache</li>
-	<li>cookies</li>
-	<li>downloads</li>
-	<li>history</li>
-	<li>local storage</li>
-	<li>plugin data</li>
-	<li>saved form data</li>
-	<li>saved passwords</li>
-</ul>
+- browser cache
+- cookies
+- downloads
+- history
+- local storage
+- plugin data
+- saved form data
+- saved passwords
 
-<p>You can use the {{WebExtAPIRef("browsingData.remove()")}} function to remove any combination of these types. There are also dedicated functions to remove each particular type of data, such as {{WebExtAPIRef("browsingData.removePasswords()", "removePasswords()")}}, {{WebExtAPIRef("browsingData.removeHistory()", "removeHistory()")}} and so on.</p>
+You can use the {{WebExtAPIRef("browsingData.remove()")}} function to remove any combination of these types. There are also dedicated functions to remove each particular type of data, such as {{WebExtAPIRef("browsingData.removePasswords()", "removePasswords()")}}, {{WebExtAPIRef("browsingData.removeHistory()", "removeHistory()")}} and so on.
 
-<p>All the <code>browsingData.remove[X]()</code> functions take a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which you can use to control two further aspects of data removal:</p>
+All the `browsingData.remove[X]()` functions take a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which you can use to control two further aspects of data removal:
 
-<ul>
-	<li>how far back in time to remove data</li>
-	<li>whether to remove data only from normal web pages, or also from hosted web apps and add-ons. Note that this option is not yet supported in Firefox.</li>
-</ul>
+- how far back in time to remove data
+- whether to remove data only from normal web pages, or also from hosted web apps and add-ons. Note that this option is not yet supported in Firefox.
 
-<p>Finally, this API gives you a {{WebExtAPIRef("browsingData.settings()")}} function that gives you the current value of the settings for the browser's built-in "Clear History" feature.</p>
+Finally, this API gives you a {{WebExtAPIRef("browsingData.settings()")}} function that gives you the current value of the settings for the browser's built-in "Clear History" feature.
 
-<p>To use this API you must have the "browsingData" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a>.</p>
+To use this API you must have the "browsingData" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
-	<dt>{{WebExtAPIRef("browsingData.DataTypeSet")}}</dt>
-	<dd>Object used to specify the type of data to remove: for example, history, downloads, passwords, and so on.</dd>
-	<dt>{{WebExtAPIRef("browsingData.RemovalOptions")}}</dt>
-	<dd>Object used to specify how far back in time to remove data, and whether to remove data added through normal web browsing, by hosted apps, or by add-ons.</dd>
-</dl>
+- {{WebExtAPIRef("browsingData.DataTypeSet")}}
+  - : Object used to specify the type of data to remove: for example, history, downloads, passwords, and so on.
+- {{WebExtAPIRef("browsingData.RemovalOptions")}}
+  - : Object used to specify how far back in time to remove data, and whether to remove data added through normal web browsing, by hosted apps, or by add-ons.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
-	<dt>{{WebExtAPIRef("browsingData.remove()")}}</dt>
-	<dd>Removes browsing data for the data types specified.</dd>
-	<dt>{{WebExtAPIRef("browsingData.removeCache()")}}</dt>
-	<dd>Clears the browser's cache.</dd>
-	<dt>{{WebExtAPIRef("browsingData.removeCookies()")}}</dt>
-	<dd>Removes cookies.</dd>
-	<dt>{{WebExtAPIRef("browsingData.removeDownloads()")}}</dt>
-	<dd>Removes the list of downloaded files.</dd>
-	<dt>{{WebExtAPIRef("browsingData.removeFormData()")}}</dt>
-	<dd>Clears saved form data.</dd>
-	<dt>{{WebExtAPIRef("browsingData.removeHistory()")}}</dt>
-	<dd>Clears the browser's history.</dd>
-	<dt>{{WebExtAPIRef("browsingData.removeLocalStorage()")}}</dt>
-	<dd>Clears any <a href="/en-US/docs/Web/API/Window/localStorage">local storage</a> created by websites.</dd>
-	<dt>{{WebExtAPIRef("browsingData.removePasswords()")}}</dt>
-	<dd>Clears saved passwords.</dd>
-	<dt>{{WebExtAPIRef("browsingData.removePluginData()")}}</dt>
-	<dd>Clears data associated with plugins.</dd>
-	<dt>{{WebExtAPIRef("browsingData.settings()")}}</dt>
-	<dd>Gets the current value of settings in the browser's "Clear History" feature.</dd>
-</dl>
+- {{WebExtAPIRef("browsingData.remove()")}}
+  - : Removes browsing data for the data types specified.
+- {{WebExtAPIRef("browsingData.removeCache()")}}
+  - : Clears the browser's cache.
+- {{WebExtAPIRef("browsingData.removeCookies()")}}
+  - : Removes cookies.
+- {{WebExtAPIRef("browsingData.removeDownloads()")}}
+  - : Removes the list of downloaded files.
+- {{WebExtAPIRef("browsingData.removeFormData()")}}
+  - : Clears saved form data.
+- {{WebExtAPIRef("browsingData.removeHistory()")}}
+  - : Clears the browser's history.
+- {{WebExtAPIRef("browsingData.removeLocalStorage()")}}
+  - : Clears any [local storage](/en-US/docs/Web/API/Window/localStorage) created by websites.
+- {{WebExtAPIRef("browsingData.removePasswords()")}}
+  - : Clears saved passwords.
+- {{WebExtAPIRef("browsingData.removePluginData()")}}
+  - : Clears data associated with plugins.
+- {{WebExtAPIRef("browsingData.settings()")}}
+  - : Gets the current value of settings in the browser's "Clear History" feature.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
+> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -115,5 +104,4 @@ browser-compat: webextensions.api.browsingData
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

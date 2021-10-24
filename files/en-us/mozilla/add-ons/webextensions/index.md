@@ -6,60 +6,54 @@ tags:
   - Landing
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p><span class="seoSummary">Extensions, or add-ons, can modify and enhance the capability of a browser. Extensions for Firefox are built using the WebExtensions API cross-browser technology.</span></p>
+Extensions, or add-ons, can modify and enhance the capability of a browser. Extensions for Firefox are built using the WebExtensions API cross-browser technology.
 
-<p>The technology for extensions in Firefox is, to a large extent, compatible with the <a href="https://developer.chrome.com/extensions">extension API</a> supported by Chromium-based browsers (such as Google Chrome, Microsoft Edge, Opera, Vivaldi). In most cases, extensions written for Chromium-based browsers run in Firefox with <a href="https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/">just a few changes</a>.</p>
+The technology for extensions in Firefox is, to a large extent, compatible with the [extension API](https://developer.chrome.com/extensions) supported by Chromium-based browsers (such as Google Chrome, Microsoft Edge, Opera, Vivaldi). In most cases, extensions written for Chromium-based browsers run in Firefox with [just a few changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).
 
-<h2 id="Key_resources">Key resources</h2>
+## Key resources
 
-<dl>
- <dt>Guides</dt>
- <dd>Whether you’re just beginning or looking for more advanced advice, learn about how extensions work and use the WebExtensions API from our extensive range of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions">tutorials and guides</a>.</dd>
- <dt>References</dt>
- <dd>Get comprehensive details about the methods, properties, types, and events of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">WebExtensions APIs</a> and full details about the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest keys</a>.</dd>
- <dt>Firefox workflow</dt>
- <dd>Discover how to build and publish extensions for Firefox: get the lowdown on developer tools, publication and distribution, and porting on <a href="https://extensionworkshop.com/">Extension Workshop</a>.</dd>
-</dl>
+- Guides
+  - : Whether you’re just beginning or looking for more advanced advice, learn about how extensions work and use the WebExtensions API from our extensive range of [tutorials and guides](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions).
+- References
+  - : Get comprehensive details about the methods, properties, types, and events of the [WebExtensions APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) and full details about the [manifest keys](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
+- Firefox workflow
+  - : Discover how to build and publish extensions for Firefox: get the lowdown on developer tools, publication and distribution, and porting on [Extension Workshop](https://extensionworkshop.com/).
 
-<div class="notecard note">
-<p><strong>Note:</strong> If you have ideas or questions or need help, you can reach us on the <a href="https://discourse.mozilla.org/c/add-ons">community forum</a> or in the <a href="https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&amp;via=matrix.org&amp;via=humanoids.be">Add-ons Room</a> on <a href="https://wiki.mozilla.org/Matrix">Matrix</a>.</p>
-</div>
+> **Note:** If you have ideas or questions or need help, you can reach us on the [community forum](https://discourse.mozilla.org/c/add-ons) or in the [Add-ons Room](https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&via=matrix.org&via=humanoids.be) on [Matrix](https://wiki.mozilla.org/Matrix).
 
-<h2 id="Get_started">Get started</h2>
+## Get started
 
-<p>Discover <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions">what extensions can do</a> before building <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">your first extension.</a> Learn about the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">anatomy of an extension</a> and get an overview of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview">extension development and publication workflow, Firefox style</a>. Explore a little deeper with a comprehensive selection of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples">example extensions</a> that you can run right in Firefox.</p>
+Discover [what extensions can do](/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions) before building [your first extension.](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) Learn about the [anatomy of an extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) and get an overview of the [extension development and publication workflow, Firefox style](/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview). Explore a little deeper with a comprehensive selection of [example extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples) that you can run right in Firefox.
 
-<h2 id="Concepts">Concepts</h2>
+## Concepts
 
-<p>Get detailed information on the concept that underpin extensions <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">from an overview of the JavaScript API</a>, through <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts,</a> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files">working with files</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization">internationalization</a>, and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">content security policy</a>, to more advanced subjects such as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">native messaging</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">using the devtools APIs</a>, and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests">native manifests</a>.</p>
+Get detailed information on the concept that underpin extensions [from an overview of the JavaScript API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API), through [content scripts,](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), [working with files](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_files), [internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization), and [content security policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy), to more advanced subjects such as [native messaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging), [using the devtools APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools), and [native manifests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
 
-<h2 id="User_interface">User interface</h2>
+## User interface
 
-<p>Discover all the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface">user interface</a> components you can use in your extensions, with coding examples and tips.</p>
+Discover all the [user interface](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface) components you can use in your extensions, with coding examples and tips.
 
-<h2 id="How_to">How to</h2>
+## How to
 
-<p>From patterns you’ll regularly use such as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API">work with the Tabs API</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar">adding a button to the toolbar</a> to more advanced topics such as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests">intercepting HTTP requests</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">working with contextual identities</a>, you’ll find a range of tutorials to get you started.</p>
+From patterns you’ll regularly use such as [work with the Tabs API](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API) and [adding a button to the toolbar](/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar) to more advanced topics such as [intercepting HTTP requests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests) and [working with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities), you’ll find a range of tutorials to get you started.
 
-<h2 id="Firefox_workflow">Firefox workflow</h2>
+## Firefox workflow
 
-<p>When you are ready to create your extension for Firefox or port your Chrome extension head over to <a href="https://extensionworkshop.com/">Extension Workshop</a>. It has details on:</p>
+When you are ready to create your extension for Firefox or port your Chrome extension head over to [Extension Workshop](https://extensionworkshop.com/). It has details on:
 
-<ul>
- <li>The Firefox workflow, such as <a href="https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/">temporarily installing  extensions during development</a>, <a href="https://extensionworkshop.com/documentation/develop/debugging/">debugging</a>, <a href="https://extensionworkshop.com/documentation/develop/request-the-right-permissions/">request the right permissions</a>, and more.</li>
- <li>The <a href="https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/">web-ext</a> developer tool.</li>
- <li><a href="https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/">Porting a Google Chrome extension</a>, <a href="https://extensionworkshop.com/documentation/develop/differences-between-desktop-and-android-extensions/">differences between desktop and Android</a>, and more.</li>
- <li><a href="https://extensionworkshop.com/documentation/publish/">Publishing and distribution overview</a>, <a href="https://extensionworkshop.com/documentation/publish/promoting-your-extension/">promoting your extension</a>, the <a href="https://extensionworkshop.com/documentation/manage/">extension lifecycle best practices</a>, and more.</li>
-</ul>
+- The Firefox workflow, such as [temporarily installing  extensions during development](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), [debugging](https://extensionworkshop.com/documentation/develop/debugging/), [request the right permissions](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/), and more.
+- The [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) developer tool.
+- [Porting a Google Chrome extension](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/), [differences between desktop and Android](https://extensionworkshop.com/documentation/develop/differences-between-desktop-and-android-extensions/), and more.
+- [Publishing and distribution overview](https://extensionworkshop.com/documentation/publish/), [promoting your extension](https://extensionworkshop.com/documentation/publish/promoting-your-extension/), the [extension lifecycle best practices](https://extensionworkshop.com/documentation/manage/), and more.
 
-<h2 id="Reference">Reference</h2>
+## Reference
 
-<h3 id="JavaScript_APIs">JavaScript APIs</h3>
+### JavaScript APIs
 
-<p>Get comprehensive details about the methods, properties, types, and events for all the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">JavaScript APIs</a>. There is also detailed information about the compatibility of each API with the major browsers. Most reference pages also include coding examples and links to the extension examples that use the API.</p>
+Get comprehensive details about the methods, properties, types, and events for all the [JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API). There is also detailed information about the compatibility of each API with the major browsers. Most reference pages also include coding examples and links to the extension examples that use the API.
 
-<h3 id="Manifest_keys">Manifest keys</h3>
+### Manifest keys
 
-<p>Get full details about the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest keys</a>, including all their properties and settings. There’s also detailed information on the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">compatibility</a> of each key with the major browsers.</p>
+Get full details about the [manifest keys](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), including all their properties and settings. There’s also detailed information on the [compatibility](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) of each key with the major browsers.

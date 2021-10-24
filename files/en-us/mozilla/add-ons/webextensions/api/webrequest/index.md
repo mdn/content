@@ -12,160 +12,138 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>Add event listeners for the various stages of making an HTTP request, which includes websocket requests on <code>ws://</code> and <code>wss://</code>. The event listener receives detailed information about the request and can modify or cancel the request.</p>
+Add event listeners for the various stages of making an HTTP request, which includes websocket requests on `ws://` and `wss://`. The event listener receives detailed information about the request and can modify or cancel the request.
 
-<p>Each event is fired at a particular stage of the request. The typical sequence of events is like this:</p>
+Each event is fired at a particular stage of the request. The typical sequence of events is like this:
 
-<p><img alt="" src="webrequest-flow.png"></p>
+![](webrequest-flow.png)
 
-<p>{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} can be fired at any time during the request. Also, note that sometimes the sequence of events may differ from this: for example, in Firefox, on an <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HSTS</a> upgrade, the <code>onBeforeRedirect</code> event will be triggered immediately after <code>onBeforeRequest</code>.</p>
+{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} can be fired at any time during the request. Also, note that sometimes the sequence of events may differ from this: for example, in Firefox, on an [HSTS](/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) upgrade, the `onBeforeRedirect` event will be triggered immediately after `onBeforeRequest`.
 
-<p>All events—<em>except</em> <code>onErrorOccurred</code>—can take three arguments to <code>addListener()</code>:</p>
+All events—_except_ `onErrorOccurred`—can take three arguments to `addListener()`:
 
-<ul>
- <li>the listener itself</li>
- <li>a {{WebExtAPIRef("webRequest.RequestFilter", "filter")}} object, so you can only be notified for requests made to particular URLs or for particular types of resource</li>
- <li>an optional <code>extraInfoSpec</code> object. You can use this to pass additional event-specific instructions.</li>
-</ul>
+- the listener itself
+- a {{WebExtAPIRef("webRequest.RequestFilter", "filter")}} object, so you can only be notified for requests made to particular URLs or for particular types of resource
+- an optional `extraInfoSpec` object. You can use this to pass additional event-specific instructions.
 
-<p>The listener function is passed a <code>details</code> object containing information about the request. This includes a request ID, which is provided to enable an add-on to correlate events associated with a single request. It is unique within a browser session and the add-on's context. It stays the same throughout a request, even across redirections and authentication exchanges.</p>
+The listener function is passed a `details` object containing information about the request. This includes a request ID, which is provided to enable an add-on to correlate events associated with a single request. It is unique within a browser session and the add-on's context. It stays the same throughout a request, even across redirections and authentication exchanges.
 
-<p>To use the <code>webRequest</code> API for a given host, an extension must have the <code>"webRequest"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a> and the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission </a>for that host. To use the <code>"blocking"</code> feature, the extension must also have the <code>"webRequestBlocking"</code> API permission.</p>
+To use the `webRequest` API for a given host, an extension must have the `"webRequest"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) and the [host permission ](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)for that host. To use the `"blocking"` feature, the extension must also have the `"webRequestBlocking"` API permission.
 
-<p>To intercept resources loaded by a page (such as images, scripts, or stylesheets), the extension must have the host permission for the resource as well as for the main page requesting the resource. For example, if a page at <code>https://developer.mozilla.org</code> loads an image from <code>https://mdn.mozillademos.org</code>, then an extension must have both host permissions if it is to intercept the image request.</p>
+To intercept resources loaded by a page (such as images, scripts, or stylesheets), the extension must have the host permission for the resource as well as for the main page requesting the resource. For example, if a page at `https://developer.mozilla.org` loads an image from `https://mdn.mozillademos.org`, then an extension must have both host permissions if it is to intercept the image request.
 
-<h2 id="Modifying_requests">Modifying requests</h2>
+## Modifying requests
 
-<p>On some of these events, you can modify the request. Specifically, you can:</p>
+On some of these events, you can modify the request. Specifically, you can:
 
-<ul>
- <li>cancel the request in:
-  <ul>
-   <li>{{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}</li>
-   <li>{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}</li>
-   <li>{{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}</li>
-  </ul>
- </li>
- <li>redirect the request in:
-  <ul>
-   <li>{{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}</li>
-   <li>{{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}</li>
-  </ul>
- </li>
- <li>modify request headers in:
-  <ul>
-   <li>{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}</li>
-  </ul>
- </li>
- <li>modify response headers in:
-  <ul>
-   <li>{{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}</li>
-  </ul>
- </li>
- <li>supply authentication credentials in:
-  <ul>
-   <li>{{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}</li>
-  </ul>
- </li>
-</ul>
+- cancel the request in:
 
-<p>To do this, you need to pass an option with the value <code>"blocking"</code> in the <code>extraInfoSpec</code> argument to the event's <code>addListener()</code>. This makes the listener synchronous.</p>
+  - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
+  - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
+  - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
-<p>In the listener, you can then return a {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} object, which indicates the modification you need to make: for example, the modified request header you want to send.</p>
+- redirect the request in:
 
-<h2 id="Accessing_security_information">Accessing security information</h2>
+  - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
+  - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
-<p>In the {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} listener you can access the <a href="/en-US/docs/Glossary/TLS">TLS</a> properties of a request by calling {{WebExtAPIRef("webRequest.getSecurityInfo()", "getSecurityInfo()")}}. To do this you must also pass "blocking" in the <code>extraInfoSpec</code> argument to the event's <code>addListener()</code>.</p>
+- modify request headers in:
 
-<p>You can read details of the TLS handshake, but can't modify them or override the browser's trust decisions.</p>
+  - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
 
-<h2 id="Modifying_responses">Modifying responses</h2>
+- modify response headers in:
 
-<p>To modify the HTTP response bodies for a request, call {{WebExtAPIRef("webRequest.filterResponseData")}}, passing it the ID of the request. This returns a {{WebExtAPIRef("webRequest.StreamFilter")}} object that you can use to examine and modify the data as it is received by the browser.</p>
+  - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
-<p>To do this, you must have the <code>"webRequestBlocking"</code> API permission as well as the <code>"webRequest"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a> and the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission </a>for the relevant host.</p>
+- supply authentication credentials in:
 
-<h2 id="Types">Types</h2>
+  - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
-<dl>
- <dt>{{WebExtAPIRef("webRequest.BlockingResponse")}}</dt>
- <dd>
- <p>An object of this type is returned by event listeners that have set <code>"blocking"</code> in their <code>extraInfoSpec</code> argument. By setting particular properties in <code>BlockingResponse</code>, the listener can modify network requests.</p>
- </dd>
- <dt>{{WebExtAPIRef("webRequest.CertificateInfo")}}</dt>
- <dd>An object describing a single X.509 certificate.</dd>
- <dt>{{WebExtAPIRef("webRequest.HttpHeaders")}}</dt>
- <dd>An array of HTTP headers. Each header is represented as an object with two properties: <code>name</code> and either <code>value</code> or <code>binaryValue</code>.</dd>
- <dt>{{WebExtAPIRef("webRequest.RequestFilter")}}</dt>
- <dd>An object describing filters to apply to <code>webRequest</code> events.</dd>
- <dt>{{WebExtAPIRef("webRequest.ResourceType")}}</dt>
- <dd>Represents a particular kind of resource fetched in a web request.</dd>
- <dt>{{WebExtAPIRef("webRequest.SecurityInfo")}}</dt>
- <dd>An object describing the security properties of a particular web request.</dd>
- <dt>{{WebExtAPIRef("webRequest.StreamFilter")}}</dt>
- <dd>An object that can be used to monitor and modify HTTP responses while they are being received.</dd>
- <dt>{{WebExtAPIRef("webRequest.UploadData")}}</dt>
- <dd>Contains data uploaded in a URL request.</dd>
-</dl>
+To do this, you need to pass an option with the value `"blocking"` in the `extraInfoSpec` argument to the event's `addListener()`. This makes the listener synchronous.
 
-<h2 id="Properties">Properties</h2>
+In the listener, you can then return a {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} object, which indicates the modification you need to make: for example, the modified request header you want to send.
 
-<dl>
- <dt>{{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}</dt>
- <dd>The maximum number of times that {{WebExtAPIRef("WebRequest.handlerBehaviorChanged", "handlerBehaviorChanged()")}} can be called in a 10 minute period.</dd>
-</dl>
+## Accessing security information
 
-<h2 id="Methods">Methods</h2>
+In the {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} listener you can access the [TLS](/en-US/docs/Glossary/TLS) properties of a request by calling {{WebExtAPIRef("webRequest.getSecurityInfo()", "getSecurityInfo()")}}. To do this you must also pass "blocking" in the `extraInfoSpec` argument to the event's `addListener()`.
 
-<dl>
- <dt>{{WebExtAPIRef("webRequest.handlerBehaviorChanged()")}}</dt>
- <dd>This method can be used to ensure that event listeners are applied correctly when pages are in the browser's in-memory cache.</dd>
- <dt>{{WebExtAPIRef("webRequest.filterResponseData()")}}</dt>
- <dd>Returns a {{WebExtAPIRef("webRequest.StreamFilter")}} object for a given request.</dd>
- <dt>{{WebExtAPIRef("webRequest.getSecurityInfo()")}}</dt>
- <dd>Gets detailed information about the <a href="/en-US/docs/Glossary/TLS">TLS</a> connection associated with a given request.</dd>
-</dl>
+You can read details of the TLS handshake, but can't modify them or override the browser's trust decisions.
 
-<h2 id="Events">Events</h2>
+## Modifying responses
 
-<dl>
- <dt>{{WebExtAPIRef("webRequest.onBeforeRequest")}}</dt>
- <dd>Fired when a request is about to be made, and before headers are available. This is a good place to listen if you want to cancel or redirect the request.</dd>
- <dt>{{WebExtAPIRef("webRequest.onBeforeSendHeaders")}}</dt>
- <dd>Fired before sending any HTTP data, but after HTTP headers are available. This is a good place to listen if you want to modify HTTP request headers.</dd>
- <dt>{{WebExtAPIRef("webRequest.onSendHeaders")}}</dt>
- <dd>Fired just before sending headers. If your add-on or some other add-on modified headers in <code>{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}</code>, you'll see the modified version here.</dd>
- <dt>{{WebExtAPIRef("webRequest.onHeadersReceived")}}</dt>
- <dd>Fired when the HTTP response headers associated with a request have been received. You can use this event to modify HTTP response headers.</dd>
- <dt>{{WebExtAPIRef("webRequest.onAuthRequired")}}</dt>
- <dd>Fired when the server asks the client to provide authentication credentials. The listener can do nothing, cancel the request, or supply authentication credentials.</dd>
- <dt>{{WebExtAPIRef("webRequest.onResponseStarted")}}</dt>
- <dd>Fired when the first byte of the response body is received. For HTTP requests, this means that the status line and response headers are available.</dd>
- <dt>{{WebExtAPIRef("webRequest.onBeforeRedirect")}}</dt>
- <dd>Fired when a server-initiated redirect is about to occur.</dd>
- <dt>{{WebExtAPIRef("webRequest.onCompleted")}}</dt>
- <dd>Fired when a request is completed.</dd>
- <dt>{{WebExtAPIRef("webRequest.onErrorOccurred")}}</dt>
- <dd>Fired when an error occurs.</dd>
-</dl>
+To modify the HTTP response bodies for a request, call {{WebExtAPIRef("webRequest.filterResponseData")}}, passing it the ID of the request. This returns a {{WebExtAPIRef("webRequest.StreamFilter")}} object that you can use to examine and modify the data as it is received by the browser.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+To do this, you must have the `"webRequestBlocking"` API permission as well as the `"webRequest"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) and the [host permission ](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)for the relevant host.
 
-<p>{{Compat}}</p>
+## Types
 
-<p><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webrequest_incompatibilities">Extra notes on Chrome incompatibilities</a>.</p>
+- {{WebExtAPIRef("webRequest.BlockingResponse")}}
+  - : An object of this type is returned by event listeners that have set `"blocking"` in their `extraInfoSpec` argument. By setting particular properties in `BlockingResponse`, the listener can modify network requests.
+- {{WebExtAPIRef("webRequest.CertificateInfo")}}
+  - : An object describing a single X.509 certificate.
+- {{WebExtAPIRef("webRequest.HttpHeaders")}}
+  - : An array of HTTP headers. Each header is represented as an object with two properties: `name` and either `value` or `binaryValue`.
+- {{WebExtAPIRef("webRequest.RequestFilter")}}
+  - : An object describing filters to apply to `webRequest` events.
+- {{WebExtAPIRef("webRequest.ResourceType")}}
+  - : Represents a particular kind of resource fetched in a web request.
+- {{WebExtAPIRef("webRequest.SecurityInfo")}}
+  - : An object describing the security properties of a particular web request.
+- {{WebExtAPIRef("webRequest.StreamFilter")}}
+  - : An object that can be used to monitor and modify HTTP responses while they are being received.
+- {{WebExtAPIRef("webRequest.UploadData")}}
+  - : Contains data uploaded in a URL request.
 
-<p>{{WebExtExamples("h2")}}</p>
+## Properties
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
+- {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}
+  - : The maximum number of times that {{WebExtAPIRef("WebRequest.handlerBehaviorChanged", "handlerBehaviorChanged()")}} can be called in a 10 minute period.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+## Methods
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+- {{WebExtAPIRef("webRequest.handlerBehaviorChanged()")}}
+  - : This method can be used to ensure that event listeners are applied correctly when pages are in the browser's in-memory cache.
+- {{WebExtAPIRef("webRequest.filterResponseData()")}}
+  - : Returns a {{WebExtAPIRef("webRequest.StreamFilter")}} object for a given request.
+- {{WebExtAPIRef("webRequest.getSecurityInfo()")}}
+  - : Gets detailed information about the [TLS](/en-US/docs/Glossary/TLS) connection associated with a given request.
+
+## Events
+
+- {{WebExtAPIRef("webRequest.onBeforeRequest")}}
+  - : Fired when a request is about to be made, and before headers are available. This is a good place to listen if you want to cancel or redirect the request.
+- {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}}
+  - : Fired before sending any HTTP data, but after HTTP headers are available. This is a good place to listen if you want to modify HTTP request headers.
+- {{WebExtAPIRef("webRequest.onSendHeaders")}}
+  - : Fired just before sending headers. If your add-on or some other add-on modified headers in `{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}`, you'll see the modified version here.
+- {{WebExtAPIRef("webRequest.onHeadersReceived")}}
+  - : Fired when the HTTP response headers associated with a request have been received. You can use this event to modify HTTP response headers.
+- {{WebExtAPIRef("webRequest.onAuthRequired")}}
+  - : Fired when the server asks the client to provide authentication credentials. The listener can do nothing, cancel the request, or supply authentication credentials.
+- {{WebExtAPIRef("webRequest.onResponseStarted")}}
+  - : Fired when the first byte of the response body is received. For HTTP requests, this means that the status line and response headers are available.
+- {{WebExtAPIRef("webRequest.onBeforeRedirect")}}
+  - : Fired when a server-initiated redirect is about to occur.
+- {{WebExtAPIRef("webRequest.onCompleted")}}
+  - : Fired when a request is completed.
+- {{WebExtAPIRef("webRequest.onErrorOccurred")}}
+  - : Fired when an error occurs.
+
+## Browser compatibility
+
+{{Compat}}
+
+[Extra notes on Chrome incompatibilities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webrequest_incompatibilities).
+
+{{WebExtExamples("h2")}}
+
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -192,5 +170,4 @@ browser-compat: webextensions.api.webRequest
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

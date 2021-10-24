@@ -10,40 +10,33 @@ tags:
   - devtools.network
 browser-compat: webextensions.api.devtools.network
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>The <code>devtools.network</code> API lets a devtools extension get information about network requests associated with the window that the devtools are attached to (the inspected window).</p>
+The `devtools.network` API lets a devtools extension get information about network requests associated with the window that the devtools are attached to (the inspected window).
 
-<p>Like all the <code>devtools</code> APIs, this API is only available to code running in the document defined in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page">devtools_page</a> manifest.json key, or in other devtools documents created by the extension (such as the panel's own document). See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">Extending the developer tools</a> for more.</p>
+Like all the `devtools` APIs, this API is only available to code running in the document defined in the [devtools_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) manifest.json key, or in other devtools documents created by the extension (such as the panel's own document). See [Extending the developer tools](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools) for more.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR">devtools.network.getHAR()</a></code></dt>
- <dd>Get a <a class="external external-icon" href="http://www.softwareishard.com/blog/har-12-spec/#log" rel="noopener">HAR log</a> for the page loaded in the current tab.</dd>
-</dl>
+- [`devtools.network.getHAR()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR)
+  - : Get a [HAR log](http://www.softwareishard.com/blog/har-12-spec/#log) for the page loaded in the current tab.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onNavigated">devtools.network.onNavigated</a></code></dt>
- <dd>Fired when the user navigates the inspected window to a new page.</dd>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished">devtools.network.onRequestFinished</a></code></dt>
- <dd>Fired when the a network request has finished and its details are available to the extension.</dd>
-</dl>
+- [`devtools.network.onNavigated`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onNavigated)
+  - : Fired when the user navigates the inspected window to a new page.
+- [`devtools.network.onRequestFinished`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished)
+  - : Fired when the a network request has finished and its details are available to the extension.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
+> **Note:** This API is based on Chromium's [`chrome.devtools.network`](https://developer.chrome.com/extensions/devtools_network) API.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools_network"><code>chrome.devtools.network</code></a> API.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -70,5 +63,4 @@ browser-compat: webextensions.api.devtools.network
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

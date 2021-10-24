@@ -13,48 +13,47 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.connect
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Call this function to set up a connection between the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> that belong to this extension and are running in the specified tab. This function returns a {{WebExtAPIRef("runtime.Port")}} object.</p>
+Call this function to set up a connection between the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) that belong to this extension and are running in the specified tab. This function returns a {{WebExtAPIRef("runtime.Port")}} object.
 
-<p>When this is called, the {{WebExtAPIRef('runtime.onConnect')}} event will be fired in any content script belonging to this extension that are running in the specified tab. The event listener will be passed another {{WebExtAPIRef("runtime.Port")}} object. The two sides can then use the <code>Port</code> objects to exchange messages.</p>
+When this is called, the {{WebExtAPIRef('runtime.onConnect')}} event will be fired in any content script belonging to this extension that are running in the specified tab. The event listener will be passed another {{WebExtAPIRef("runtime.Port")}} object. The two sides can then use the `Port` objects to exchange messages.
 
-<p>For more details, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging">connection-based messaging</a>. You can message without creating a connection, for advice on choosing between the options, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#choosing_between_one-off_messages_and_connection-based_messaging">Choosing between one-off messages and connection-based messaging</a>.</p>
+For more details, see [connection-based messaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging). You can message without creating a connection, for advice on choosing between the options, see [Choosing between one-off messages and connection-based messaging](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#choosing_between_one-off_messages_and_connection-based_messaging).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.tabs.connect(
+```js
+browser.tabs.connect(
   tabId,      // integer
   connectInfo // optional object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. ID of the tab whose content scripts we want to connect to.</dd>
- <dt><code>connectInfo</code>{{optional_inline}}</dt>
- <dd><p>An object with the following properties:</p>
- <dl>
-  <dt><code>name</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} event listeners in content scripts belonging to this extension and running in the specified tab.</dd>
-  <dt><code>frameId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Open a port to a specific frame identified by <code>frameId</code> instead of all frames in the tab.</dd>
- </dl>
- </dd>
-</dl>
+- `tabId`
+  - : `integer`. ID of the tab whose content scripts we want to connect to.
+- `connectInfo`{{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : An object with the following properties:
 
-<p>{{WebExtAPIRef('runtime.Port')}}. A port that can be used to communicate with the content scripts running in the specified tab.</p>
+    - `name`{{optional_inline}}
+      - : `string`. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} event listeners in content scripts belonging to this extension and running in the specified tab.
+    - `frameId`{{optional_inline}}
+      - : `integer`. Open a port to a specific frame identified by `frameId` instead of all frames in the tab.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<p>In this example a background script listens for a click on a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2">browser action</a>, then connects to the currently active tab, then sends a message using the <code>Port</code> that's returned from <code>connect()</code>:</p>
+{{WebExtAPIRef('runtime.Port')}}. A port that can be used to communicate with the content scripts running in the specified tab.
 
-<pre class="brush: js">function connectToTab(tabs) {
-  if (tabs.length &gt; 0) {
+## Examples
+
+In this example a background script listens for a click on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2), then connects to the currently active tab, then sends a message using the `Port` that's returned from `connect()`:
+
+```js
+function connectToTab(tabs) {
+  if (tabs.length > 0) {
     var examplePort = browser.tabs.connect(
       tabs[0].id,
       {name: "tabs-connect-example"}
@@ -73,22 +72,19 @@ browser.browserAction.onClicked.addListener(function() {
   });
   gettingActive.then(connectToTab, onError);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-connect) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-connect"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -115,5 +111,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

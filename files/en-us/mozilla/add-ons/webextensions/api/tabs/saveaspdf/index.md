@@ -12,50 +12,48 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.saveAsPDF
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Saves the current page as a PDF file. This will open a dialog, supplied by the underlying operating system, asking the user where they want to save the PDF file.</p>
+Saves the current page as a PDF file. This will open a dialog, supplied by the underlying operating system, asking the user where they want to save the PDF file.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var saving = browser.tabs.saveAsPDF(
+```js
+var saving = browser.tabs.saveAsPDF(
   pageSettings   // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>pageSettings</code></dt>
- <dd><code>object</code>. Settings for the saved page, as a {{WebExtAPIRef("tabs.PageSettings")}} object. This object must be given, but all its properties are optional. Any properties not specified here will get the default values listed in the {{WebExtAPIRef("tabs.PageSettings", "PageSettings")}} documentation.</dd>
-</dl>
+- `pageSettings`
+  - : `object`. Settings for the saved page, as a {{WebExtAPIRef("tabs.PageSettings")}} object. This object must be given, but all its properties are optional. Any properties not specified here will get the default values listed in the {{WebExtAPIRef("tabs.PageSettings", "PageSettings")}} documentation.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a status string when the dialog has closed. The string may be any of:</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a status string when the dialog has closed. The string may be any of:
 
-<ul>
- <li>"saved"</li>
- <li>"replaced"</li>
- <li>"canceled"</li>
- <li>"not_saved"</li>
- <li>"not_replaced"</li>
-</ul>
+- "saved"
+- "replaced"
+- "canceled"
+- "not_saved"
+- "not_replaced"
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example a background script listens for a click on a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2">browser action</a>, then tries to save the currently active tab as a PDF file, then logs the result:</p>
+In this example a background script listens for a click on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2), then tries to save the currently active tab as a PDF file, then logs the result:
 
-<pre class="brush: js">browser.browserAction.onClicked.addListener(() =&gt; {
+```js
+browser.browserAction.onClicked.addListener(() => {
   browser.tabs.saveAsPDF({})
-    .then((status) =&gt; {
+    .then((status) => {
       console.log(status);
     });
 });
-</pre>
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
