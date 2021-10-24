@@ -204,14 +204,14 @@ Another example of `aria-atomic` - an update/notification made as a result of a 
 
 ```html
 <div id="date-input">
-<label>Year:
-<input type="text" id="year" value="1990" onblur="change(event)"/>
-</label>
+  <label>Year:
+    <input type="text" id="year" value="1990" onblur="change(event)"/>
+  </label>
 </div>
 
 <div id="date-output" aria-atomic="true" aria-live="polite">
-The set year is:
-<span id="year-output">1990</span>
+  The set year is:
+  <span id="year-output">1990</span>
 </div>
 ```
 
@@ -239,7 +239,7 @@ As an example, consider a chat site that wants to display a list of users curren
 
 ```html
 <ul id="roster" aria-live="polite" aria-relevant="additions removals">
-	<!-- use JavaScript to add remove users here-->
+  <!-- use JavaScript to add remove users here-->
 </ul>
 ```
 
