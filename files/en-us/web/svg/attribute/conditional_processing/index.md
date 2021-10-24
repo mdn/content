@@ -25,7 +25,7 @@ The SVG conditional processing attributes are all the attributes that can be spe
         *Value*: A list of space-separated URI; *Animatable*: **No**
 *   {{SVGAttr('systemLanguage')}}
     *   : Indicates which language the user must have chosen to render the associated element.
-        *Value*: [A list of comma-separated language ID](http://www.ietf.org/rfc/bcp/bcp47.txt); *Animatable*: **No**
+        *Value*: A list of comma-separated language tags according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}; *Animatable*: **No**
 
 ## Browser compatibility
 

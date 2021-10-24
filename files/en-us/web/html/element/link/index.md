@@ -170,7 +170,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - {{HTMLAttrDef("href")}}
   - : This attribute specifies the {{glossary("URL")}} of the linked resource. A URL can be absolute or relative.
 - {{HTMLAttrDef("hreflang")}}
-  - : This attribute indicates the language of the linked resource. It is purely advisory. Allowed values are determined by [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt). Use this attribute only if the {{HTMLAttrxRef("href", "a")}} attribute is present.
+  - : This attribute indicates the language of the linked resource. It is purely advisory. Allowed values are specified by {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. Use this attribute only if the {{HTMLAttrxRef("href", "a")}} attribute is present.
 - {{HTMLAttrDef("imagesizes")}}
   - : For `rel="preload"` and `as="image"` only, the `imagesizes` attribute is [a sizes attribute](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute) that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
 - {{HTMLAttrDef("imagesrcset")}}
