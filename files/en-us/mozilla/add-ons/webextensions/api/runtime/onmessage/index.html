@@ -50,12 +50,6 @@ browser-compat: webextensions.api.runtime.onMessage
  <li>return a <code>Promise</code> from the event listener, and resolve when you have the response (or reject it in case of an error). <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_a_promise">See an example</a>.</li>
 </ul>
 
-<div class="warning">
-<p><strong>Warning:</strong> Returning a <code>Promise</code> is now preferred, as <code>sendResponse()</code> <a href="https://github.com/mozilla/webextension-polyfill/issues/16#issuecomment-296693219">will be removed from the W3C spec</a>.</p>
-
-<p>The popular <a href="https://github.com/mozilla/webextension-polyfill">webextension-polyfill</a> library has already removed the <code>sendResponse()</code> function from its implementation.</p>
-</div>
-
 <div class="notecard note">
 <p><strong>Note:</strong> You can also use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging">connection-based approach to exchange messages</a>.</p>
 </div>
