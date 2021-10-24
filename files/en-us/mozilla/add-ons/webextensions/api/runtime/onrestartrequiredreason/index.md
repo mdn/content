@@ -13,34 +13,29 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.OnRestartRequiredReason
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The reason that the {{WebExtAPIRef("runtime.onRestartRequired", "onRestartRequired")}} event is being dispatched.</p>
+The reason that the {{WebExtAPIRef("runtime.onRestartRequired", "onRestartRequired")}} event is being dispatched.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are strings. Possible values are:</p>
+Values of this type are strings. Possible values are:
 
-<ul>
- <li><code>"app_update"</code>: The application is being updated to a newer version.</li>
- <li><code>"os_update"</code>: The browser/OS is updated to a newer version.</li>
- <li><code>"periodic"</code>: The system has run for more than the permitted uptime set in the enterprise policy.</li>
-</ul>
+- `"app_update"`: The application is being updated to a newer version.
+- `"os_update"`: The browser/OS is updated to a newer version.
+- `"periodic"`: The system has run for more than the permitted uptime set in the enterprise policy.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#type-OnRestartRequiredReason) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#type-OnRestartRequiredReason"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -67,5 +62,4 @@ browser-compat: webextensions.api.runtime.OnRestartRequiredReason
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

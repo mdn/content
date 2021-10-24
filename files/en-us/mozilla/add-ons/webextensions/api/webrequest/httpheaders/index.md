@@ -13,37 +13,32 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.HttpHeaders
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>An array of HTTP headers. Each header is represented as an object with two properties: <code>name</code> and either <code>value</code> or <code>binaryValue</code>.</p>
+An array of HTTP headers. Each header is represented as an object with two properties: `name` and either `value` or `binaryValue`.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>An <code>array</code> of <code>object</code>s. Each object has the following properties:</p>
+An `array` of `object`s. Each object has the following properties:
 
-<dl>
- <dt><code>name</code></dt>
- <dd><code>string</code>. Name of the HTTP header.</dd>
- <dt><code>value</code>{{optional_inline}}</dt>
- <dd><code>string</code>. Value of the HTTP header if it can be represented by UTF-8. Either this property or <code>binaryValue</code> must be present.</dd>
- <dt><code>binaryValue</code>{{optional_inline}}</dt>
- <dd><code>array</code> of <code>integer</code>. Value of the HTTP header if it cannot be represented by UTF-8, represented as bytes (0..255). Either this property or <code>value</code> must be present.</dd>
-</dl>
+- `name`
+  - : `string`. Name of the HTTP header.
+- `value`{{optional_inline}}
+  - : `string`. Value of the HTTP header if it can be represented by UTF-8. Either this property or `binaryValue` must be present.
+- `binaryValue`{{optional_inline}}
+  - : `array` of `integer`. Value of the HTTP header if it cannot be represented by UTF-8, represented as bytes (0..255). Either this property or `value` must be present.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#type-HttpHeaders) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest#type-HttpHeaders"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -70,5 +65,4 @@ browser-compat: webextensions.api.webRequest.HttpHeaders
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

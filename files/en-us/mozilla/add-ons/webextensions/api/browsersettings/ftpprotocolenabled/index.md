@@ -13,25 +13,24 @@ tags:
   - ftpProtocolEnabled
 browser-compat: webextensions.api.browserSettings.ftpProtocolEnabled
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that determines whether the FTP protocol is enabled in the browser.</p>
+A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that determines whether the FTP protocol is enabled in the browser.
 
-<p>The underlying value is a boolean.</p>
+The underlying value is a boolean.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> From Firefox version 88 this setting is read-only.</p>
-</div>
+> **Note:** From Firefox version 88 this setting is read-only.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Toggle the setting:</p>
+Toggle the setting:
 
-<pre class="brush: js">function toggleAllowFtp() {
+```js
+function toggleAllowFtp() {
 
   function toggle(current) {
     console.log(`Current value: ${current.value}`);
@@ -41,9 +40,9 @@ browser-compat: webextensions.api.browserSettings.ftpProtocolEnabled
   browser.browserSettings.ftpProtocolEnabled.get({}).then(toggle);
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   toggleAllowFtp();
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

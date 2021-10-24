@@ -13,64 +13,57 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.connect
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
+Make a connection between different contexts inside the extension.
 
-<p>Make a connection between different contexts inside the extension.</p>
+You can call this:
 
-<p>You can call this:</p>
+- in an extension's content scripts, to establish a connection with the extension's background scripts (or similarly privileged scripts, like popup scripts or options page scripts).
+- in an extension's background scripts (or similarly privileged scripts), to establish a connection with a different extension.
 
-<ul>
- <li>in an extension's content scripts, to establish a connection with the extension's background scripts (or similarly privileged scripts, like popup scripts or options page scripts).</li>
- <li>in an extension's background scripts (or similarly privileged scripts), to establish a connection with a different extension.</li>
-</ul>
+Note that you can't use this function to connect an extension to its content scripts. To do this, use {{WebExtAPIRef('tabs.connect()')}}.
 
-<p>Note that you can't use this function to connect an extension to its content scripts. To do this, use {{WebExtAPIRef('tabs.connect()')}}.</p>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:js">var port = browser.runtime.connect(
+```js
+var port = browser.runtime.connect(
   extensionId, // optional string
   connectInfo  // optional object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>extensionId</code>{{optional_inline}}</dt>
- <dd><code>string</code>. The ID of the extension to connect to. If the target has set an ID explicitly using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">applications</a> key in manifest.json, then <code>extensionId</code> should have that value. Otherwise it should have the ID that was generated for the target.</dd>
- <dt><code>connectInfo</code>{{optional_inline}}</dt>
- <dd>
-   <p><code>object</code>. Details of the connection:</p>
-   <dl>
-    <dt><code>name</code>{{optional_inline}}</dt>
-    <dd><code>string</code>. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} for processes that are listening for the connection event.</dd>
-    <dt><code>includeTlsChannelId</code>{{optional_inline}}</dt>
-    <dd><code>boolean</code>. Whether the TLS channel ID will be passed into {{WebExtAPIRef("runtime.onConnectExternal")}} for processes that are listening for the connection event.</dd>
-   </dl>
- </dd>
-</dl>
+- `extensionId`{{optional_inline}}
+  - : `string`. The ID of the extension to connect to. If the target has set an ID explicitly using the [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `extensionId` should have that value. Otherwise it should have the ID that was generated for the target.
+- `connectInfo`{{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : `object`. Details of the connection:
 
-<p>{{WebExtAPIRef('runtime.Port')}}. Port through which messages can be sent and received. The port's  <code>onDisconnect</code> event is fired if the extension does not exist.</p>
+    - `name`{{optional_inline}}
+      - : `string`. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} for processes that are listening for the connection event.
+    - `includeTlsChannelId`{{optional_inline}}
+      - : `boolean`. Whether the TLS channel ID will be passed into {{WebExtAPIRef("runtime.onConnectExternal")}} for processes that are listening for the connection event.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+### Return value
 
-<p>{{Compat}}</p>
+{{WebExtAPIRef('runtime.Port')}}. Port through which messages can be sent and received. The port's  `onDisconnect` event is fired if the extension does not exist.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>This content script:</p>
+{{Compat}}
 
-<ul>
- <li>connects to the background script and stores the <code>Port</code> in a variable called <code>myPort</code>.</li>
- <li>listens for messages on <code>myPort</code> and logs them.</li>
- <li>sends messages to the background script, using <code>myPort</code>, when the user clicks the document.</li>
-</ul>
+## Examples
 
-<pre class="brush: js">// content-script.js
+This content script:
+
+- connects to the background script and stores the `Port` in a variable called `myPort`.
+- listens for messages on `myPort` and logs them.
+- sends messages to the background script, using `myPort`, when the user clicks the document.
+
+```js
+// content-script.js
 
 var myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
@@ -82,23 +75,22 @@ myPort.onMessage.addListener(function(m) {
 
 document.body.addEventListener("click", function() {
   myPort.postMessage({greeting: "they clicked the page!"});
-});</pre>
+});
+```
 
-<p>The corresponding background script:</p>
+The corresponding background script:
 
-<ul>
- <li>listens for connection attempts from the content script.</li>
- <li>when it receives a connection attempt:
-  <ul>
-   <li>stores the port in a variable named <code>portFromCS</code>.</li>
-   <li>sends the content script a message using the port.</li>
-   <li>starts listening to messages received on the port, and logs them.</li>
-  </ul>
- </li>
- <li>sends messages to the content script, using <code>portFromCS</code>, when the user clicks the extension's browser action.</li>
-</ul>
+- listens for connection attempts from the content script.
+- when it receives a connection attempt:
 
-<pre class="brush: js">// background-script.js
+  - stores the port in a variable named `portFromCS`.
+  - sends the content script a message using the port.
+  - starts listening to messages received on the port, and logs them.
+
+- sends messages to the content script, using `portFromCS`, when the user clicks the extension's browser action.
+
+```js
+// background-script.js
 
 var portFromCS;
 
@@ -115,18 +107,16 @@ browser.runtime.onConnect.addListener(connected);
 
 browser.browserAction.onClicked.addListener(function() {
   portFromCS.postMessage({greeting: "they clicked the button!"});
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-connect) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#method-connect"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -153,5 +143,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

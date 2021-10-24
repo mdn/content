@@ -13,35 +13,35 @@ tags:
   - get
 browser-compat: webextensions.api.bookmarks.get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Given the ID of a {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} or an array of such IDs, the <strong><code>bookmarks.get()</code></strong> method retrieves the matching nodes.</p>
+Given the ID of a {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} or an array of such IDs, the **`bookmarks.get()`** method retrieves the matching nodes.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var getBookmarks = browser.bookmarks.get(
+```js
+var getBookmarks = browser.bookmarks.get(
   idOrIdList                // string or string array
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>idOrIdList</code></dt>
- <dd><code>string</code> A {{jsxref("string")}} or {{jsxref("array")}} of strings specifying the IDs of one or more {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} objects to retrieve.</dd>
-</dl>
+- `idOrIdList`
+  - : `string` A {{jsxref("string")}} or {{jsxref("array")}} of strings specifying the IDs of one or more {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} objects to retrieve.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode" title="An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders."><code>BookmarkTreeNode</code></a>, one for each matching node. Separators are not included in the results. If no nodes could be found, the promise will be rejected with an error message.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of [`BookmarkTreeNode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode "An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders."), one for each matching node. Separators are not included in the results. If no nodes could be found, the promise will be rejected with an error message.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example tries to get the bookmark whose ID is <code>bookmarkAAAA</code>. If no bookmark with this ID exists, <code>onRejected</code> is called:</p>
+This example tries to get the bookmark whose ID is `bookmarkAAAA`. If no bookmark with this ID exists, `onRejected` is called:
 
-<pre class="brush: js">function onFulfilled(bookmarks) {
+```js
+function onFulfilled(bookmarks) {
   console.log(bookmarks);
 }
 
@@ -50,22 +50,20 @@ function onRejected(error) {
 }
 
 var gettingBookmarks = browser.bookmarks.get("bookmarkAAAA");
-gettingBookmarks.then(onFulfilled, onRejected);</pre>
+gettingBookmarks.then(onFulfilled, onRejected);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-get) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#method-get"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -92,5 +90,4 @@ gettingBookmarks.then(onFulfilled, onRejected);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

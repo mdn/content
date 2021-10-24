@@ -6,17 +6,14 @@ tags:
   - WebExtensions
   - manifest.json
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>{{Compat("webextensions.manifest",2)}}</p>
+{{Compat("webextensions.manifest",2)}}
 
-<div class="note"><p><strong>Note:</strong></p>
+> **Note:**
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a></li>
-</ul>
+- [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)

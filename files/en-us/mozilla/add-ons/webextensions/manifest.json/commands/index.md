@@ -8,22 +8,22 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.commands
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>Object</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json">
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>Object</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json">
 "commands": {
   "toggle-feature": {
     "suggested_key": {
@@ -32,44 +32,42 @@ browser-compat: webextensions.manifest.commands
     },
     "description": "Send a 'toggle-feature' event"
   }
-}</pre>
-   </td>
-  </tr>
- </tbody>
+}</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p><span class="seoSummary">Use the <strong><code>commands</code></strong> key to define one or more keyboard shortcuts for your extension.</span></p>
+Use the **`commands`** key to define one or more keyboard shortcuts for your extension.
 
-<p>Each keyboard shortcut is defined with a <strong>name</strong>, a <strong>combination of keys</strong>, and a <strong>description</strong>. Once you've defined commands in your extension's <code>manifest.json</code>, you can listen for their associated key combinations with the {{WebExtAPIRef("commands")}} JavaScript API.</p>
+Each keyboard shortcut is defined with a **name**, a **combination of keys**, and a **description**. Once you've defined commands in your extension's `manifest.json`, you can listen for their associated key combinations with the {{WebExtAPIRef("commands")}} JavaScript API.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<p>The <code>commands</code> key is an object, and each shortcut is a property of it. <strong>The property's name is the name of the shortcut.</strong></p>
+The `commands` key is an object, and each shortcut is a property of it. **The property's name is the name of the shortcut.**
 
-<p>Each shortcut's value is an object, with up to 2 properties:</p>
+Each shortcut's value is an object, with up to 2 properties:
 
-<ol>
- <li><code>suggested_key</code>: the combination of keys that activate the shortcut.</li>
- <li><code>description</code>: a string that describes the shortcut; i.e. what it does.</li>
-</ol>
+1.  `suggested_key`: the combination of keys that activate the shortcut.
+2.  `description`: a string that describes the shortcut; i.e. what it does.
 
-<p>The <code>suggested_key</code> property is an object with any of the following properties (all strings):</p>
+The `suggested_key` property is an object with any of the following properties (all strings):
 
-<ul>
- <li><code>"default"</code></li>
- <li><code>"mac"</code></li>
- <li><code>"linux"</code></li>
- <li><code>"windows"</code></li>
- <li><code>"chromeos"</code></li>
- <li><code>"android"</code></li>
- <li><code>"ios"</code></li>
-</ul>
+- `"default"`
+- `"mac"`
+- `"linux"`
+- `"windows"`
+- `"chromeos"`
+- `"android"`
+- `"ios"`
 
-<p>The value of each property is the keyboard shortcut for the command on that platform, as a string containing keys separated by "<code>+</code>". The value for <code>"default"</code> is used on all platforms that are not explicitly listed.</p>
+The value of each property is the keyboard shortcut for the command on that platform, as a string containing keys separated by "`+`". The value for `"default"` is used on all platforms that are not explicitly listed.
 
-<p>For example:</p>
+For example:
 
-<pre class="brush: json">"commands": {
+```json
+"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Alt+Shift+U",
@@ -82,103 +80,136 @@ browser-compat: webextensions.manifest.commands
       "default": "Ctrl+Shift+Y"
     }
   }
-}</pre>
+}
+```
 
-<p>This JSON defines 2 shortcuts:</p>
+This JSON defines 2 shortcuts:
 
-<ol>
- <li><code>"toggle-feature"</code>, accessed with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd> on Linux, and <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd> on all other platforms.</li>
- <li><code>"do-another-thing"</code>, accessed with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Y</kbd> on all platforms.</li>
-</ol>
+1.  `"toggle-feature"`, accessed with
 
-<p>You could then listen for the <code>"toggle-feature"</code> command with code like this:</p>
+    <kbd>Ctrl</kbd>
 
-<pre class="brush: js">browser.commands.onCommand.addListener(function (command) {
+    \+
+
+    <kbd>Shift</kbd>
+
+    \+
+
+    <kbd>U</kbd>
+
+    on Linux, and
+
+    <kbd>Alt</kbd>
+
+    \+
+
+    <kbd>Shift</kbd>
+
+    \+
+
+    <kbd>U</kbd>
+
+    on all other platforms.
+
+2.  `"do-another-thing"`, accessed with
+
+    <kbd>Ctrl</kbd>
+
+    \+
+
+    <kbd>Shift</kbd>
+
+    \+
+
+    <kbd>Y</kbd>
+
+    on all platforms.
+
+You could then listen for the `"toggle-feature"` command with code like this:
+
+```js
+browser.commands.onCommand.addListener(function (command) {
   if (command === "toggle-feature") {
     console.log("Toggling the feature!");
   }
-});</pre>
+});
+```
 
-<h3 id="Special_shortcuts">Special shortcuts</h3>
+### Special shortcuts
 
-<p>There are 3 <strong>special shortcuts with default actions</strong>, for which the {{WebExtAPIRef("commands.onCommand")}} event is not fired:</p>
+There are 3 **special shortcuts with default actions**, for which the {{WebExtAPIRef("commands.onCommand")}} event is not fired:
 
-<ul>
- <li><code>_execute_browser_action</code>: works like a click on the extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">browser action</a>.</li>
- <li><code>_execute_page_action</code>: works like a click on the extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">page action</a>.</li>
- <li><code>_execute_sidebar_action</code>: opens the extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">sidebar</a>. Only supported in Firefox 54 and newer.</li>
-</ul>
+- `_execute_browser_action`: works like a click on the extension's [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action).
+- `_execute_page_action`: works like a click on the extension's [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions).
+- `_execute_sidebar_action`: opens the extension's [sidebar](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars). Only supported in Firefox 54 and newer.
 
-<p>For example, this JSON defines a key combination that clicks the extension's browser action:</p>
+For example, this JSON defines a key combination that clicks the extension's browser action:
 
-<pre class="brush: js">"commands": {
+```js
+"commands": {
   "_execute_browser_action": {
     "suggested_key": {
       "default": "Ctrl+Shift+Y"
     }
   }
-}</pre>
+}
+```
 
-<h2 id="Shortcut_values">Shortcut values</h2>
+## Shortcut values
 
-<p>There are two valid formats for shortcut keys: as a <strong>key combination</strong> or as a <strong>media key</strong>.</p>
+There are two valid formats for shortcut keys: as a **key combination** or as a **media key**.
 
-<h3 id="Key_combinations">Key combinations</h3>
+### Key combinations
 
-<div class="note">
-  <p><strong>Note:</strong> On Macs, <code>"Ctrl"</code> is interpreted as<code> "Command"</code>, so if you actually need <code>"Ctrl"</code>, specify <code>"MacCtrl"</code>.</p>
-</div>
+> **Note:** On Macs, `"Ctrl"` is interpreted as` "Command"`, so if you actually need `"Ctrl"`, specify `"MacCtrl"`.
 
-<p>Key combinations must consist of 2 or 3 keys:</p>
+Key combinations must consist of 2 or 3 keys:
 
-<ol>
- <li><strong>modifier</strong> (mandatory, except for function keys). This can be any of: <code>"Ctrl"</code>, <code>"Alt"</code>, <code>"Command"</code>, or <code>"MacCtrl"</code>.</li>
- <li><strong>secondary modifier</strong> (optional). If supplied, this must be either <code>"Shift"</code> or (for Firefox ≥ 63) any one of <code>"Ctrl"</code>, <code>"Alt"</code>, <code>"Command"</code>, or <code>"MacCtrl"</code>. Must not be the modifier already used as the main modifier.</li>
- <li><strong>key</strong> (mandatory). This can be any one of:
-  <ul>
-   <li>the letters <code>A</code>–<code>Z</code></li>
-   <li>the numbers <code>0</code>–<code>9</code></li>
-   <li>the function keys <code>F1</code>–<code>F12</code></li>
-   <li><code>Comma</code>, <code>Period</code>, <code>Home</code>, <code>End</code>, <code>PageUp</code>, <code>PageDown</code>, <code>Space</code>, <code>Insert</code>, <code>Delete</code>, <code>Up</code>, <code>Down</code>, <code>Left</code>, <code>Right</code></li>
-  </ul>
- </li>
-</ol>
+1.  **modifier** (mandatory, except for function keys). This can be any of: `"Ctrl"`, `"Alt"`, `"Command"`, or `"MacCtrl"`.
+2.  **secondary modifier** (optional). If supplied, this must be either `"Shift"` or (for Firefox ≥ 63) any one of `"Ctrl"`, `"Alt"`, `"Command"`, or `"MacCtrl"`. Must not be the modifier already used as the main modifier.
+3.  **key** (mandatory). This can be any one of:
 
-<p>The key is then given as a string containing the set of key values, in the order listed above, separated by "<code>+</code>". For example, <code>"Ctrl+Shift+Z"</code>.</p>
+    - the letters `A`–`Z`
+    - the numbers `0`–`9`
+    - the function keys `F1`–`F12`
+    - `Comma`, `Period`, `Home`, `End`, `PageUp`, `PageDown`, `Space`, `Insert`, `Delete`, `Up`, `Down`, `Left`, `Right`
 
-<p>If a key combination is already used by the browser (like <code>"Ctrl+P"</code>) or by an existing add-on, then you can't override it. You can define it, but your event handler will not be called when the user presses the key combination.</p>
+The key is then given as a string containing the set of key values, in the order listed above, separated by "`+`". For example, `"Ctrl+Shift+Z"`.
 
-<h3 id="Media_keys">Media keys</h3>
+If a key combination is already used by the browser (like `"Ctrl+P"`) or by an existing add-on, then you can't override it. You can define it, but your event handler will not be called when the user presses the key combination.
 
-<p>Alternatively, the shortcut may be specified as one of the following media keys:</p>
+### Media keys
 
-<ul>
- <li><code>"MediaNextTrack"</code></li>
- <li><code>"MediaPlayPause"</code></li>
- <li><code>"MediaPrevTrack"</code></li>
- <li><code>"MediaStop"</code></li>
-</ul>
+Alternatively, the shortcut may be specified as one of the following media keys:
 
-<h2 id="Updating_shortcuts">Updating shortcuts</h2>
+- `"MediaNextTrack"`
+- `"MediaPlayPause"`
+- `"MediaPrevTrack"`
+- `"MediaStop"`
 
-<p>Shortcuts can be updated via {{WebExtAPIRef("commands.update()")}}. Users can also update shortcuts via the "Manage Extension Shortcuts" option at <code>about:addons</code> in Firefox, as shown in <a href="https://bug1303384.bmoattachments.org/attachment.cgi?id=9051647">this video</a>. In Chrome, users can change shortcuts at <code>chrome://extensions/shortcuts</code>.</p>
+## Updating shortcuts
 
-<h2 id="Example">Example</h2>
+Shortcuts can be updated via {{WebExtAPIRef("commands.update()")}}. Users can also update shortcuts via the "Manage Extension Shortcuts" option at `about:addons` in Firefox, as shown in [this video](https://bug1303384.bmoattachments.org/attachment.cgi?id=9051647). In Chrome, users can change shortcuts at `chrome://extensions/shortcuts`.
 
-<p>Define a single keyboard shortcut, using only the default key combination:</p>
+## Example
 
-<pre class="brush: json">"commands": {
+Define a single keyboard shortcut, using only the default key combination:
+
+```json
+"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Ctrl+Shift+Y"
     },
     "description": "Send a 'toggle-feature' event"
   }
-}</pre>
+}
+```
 
-<p>Define two keyboard shortcuts, one with a platform-specific key combination:</p>
+Define two keyboard shortcuts, one with a platform-specific key combination:
 
-<pre class="brush: json">"commands": {
+```json
+"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Alt+Shift+U",
@@ -191,8 +222,9 @@ browser-compat: webextensions.manifest.commands
       "default": "Ctrl+Shift+Y"
     }
   }
-}</pre>
+}
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

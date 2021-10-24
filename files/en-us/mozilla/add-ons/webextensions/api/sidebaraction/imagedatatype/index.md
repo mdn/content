@@ -12,28 +12,25 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.ImageDataType
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Pixel data for an image. Must be an <code><a href="/en-US/docs/Web/API/ImageData">ImageData</a></code> object (for example, from a {{htmlelement("canvas")}} element).</p>
+Pixel data for an image. Must be an [`ImageData`](/en-US/docs/Web/API/ImageData) object (for example, from a {{htmlelement("canvas")}} element).
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>An <code><a href="/en-US/docs/Web/API/ImageData">ImageData</a></code> object.</p>
+An [`ImageData`](/en-US/docs/Web/API/ImageData) object.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Opera's <a class="external external-icon" href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -60,5 +57,4 @@ browser-compat: webextensions.api.sidebarAction.ImageDataType
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

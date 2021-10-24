@@ -10,21 +10,19 @@ tags:
   - Search Engines
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Retrieves search engines and executes a search with a specific search engine.</p>
+Retrieves search engines and executes a search with a specific search engine.
 
-<p>To use this API you need to have the <code>"search"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
+To use this API you need to have the `"search"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("search.get()")}}</dt>
- <dd>Retrieve all search engines.</dd>
- <dt>{{WebExtAPIRef("search.search()")}}</dt>
- <dd>Search using the specified search engine.</dd>
-</dl>
+- {{WebExtAPIRef("search.get()")}}
+  - : Retrieve all search engines.
+- {{WebExtAPIRef("search.search()")}}
+  - : Search using the specified search engine.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("webextensions.api.search", 1, 1)}} {{WebExtExamples("h2")}}</p>
+{{Compat("webextensions.api.search", 1, 1)}} {{WebExtExamples("h2")}}

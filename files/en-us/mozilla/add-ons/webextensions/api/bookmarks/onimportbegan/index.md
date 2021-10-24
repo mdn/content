@@ -13,48 +13,44 @@ tags:
   - onImportBegan
 browser-compat: webextensions.api.bookmarks.onImportBegan
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when the browser has started importing a set of bookmarks.</p>
+Fired when the browser has started importing a set of bookmarks.
 
-<p>While a set of bookmarks is being imported, {{WebExtAPIRef("bookmarks.onCreated", "onCreated")}} may fire a lot of times. If your extension is listening to <code>onCreated</code>, and the listener is expensive, you should also listen for <code>onImportBegan</code> and {{WebExtAPIRef("bookmarks.onImportEnded", "onImportEnded")}}. When you receive <code>onImportBegan</code>, ignore <code>onCreated</code> until you receive <code>onImportEnded</code>. You can handle all other notifications as usual.</p>
+While a set of bookmarks is being imported, {{WebExtAPIRef("bookmarks.onCreated", "onCreated")}} may fire a lot of times. If your extension is listening to `onCreated`, and the listener is expensive, you should also listen for `onImportBegan` and {{WebExtAPIRef("bookmarks.onImportEnded", "onImportEnded")}}. When you receive `onImportBegan`, ignore `onCreated` until you receive `onImportEnded`. You can handle all other notifications as usual.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.bookmarks.onImportBegan.addListener(listener)
+```js
+browser.bookmarks.onImportBegan.addListener(listener)
 browser.bookmarks.onImportBegan.removeListener(listener)
 browser.bookmarks.onImportBegan.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. It's passed no parameters.</p>
- </dd>
-</dl>
+- `callback`
+  - : Function that will be called when this event occurs. It's passed no parameters.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">function handleImportBegan() {
+```js
+function handleImportBegan() {
   console.log("Importing...");
 }
 
@@ -68,18 +64,15 @@ function handleClick() {
 }
 
 browser.browserAction.onClicked.addListener(handleClick);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#event-onImportBegan) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#event-onImportBegan"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,5 +99,4 @@ browser.browserAction.onClicked.addListener(handleClick);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

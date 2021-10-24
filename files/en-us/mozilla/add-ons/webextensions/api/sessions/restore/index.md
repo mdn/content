@@ -12,39 +12,39 @@ tags:
   - sessions
 browser-compat: webextensions.api.sessions.restore
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Restores a closed tab or window. Restoring doesn't just reopen the tab or window: it also restores the tab's navigation history so the back/forward buttons will work. Restoring a window will restore all the tabs that the window contained when it was closed.</p>
+Restores a closed tab or window. Restoring doesn't just reopen the tab or window: it also restores the tab's navigation history so the back/forward buttons will work. Restoring a window will restore all the tabs that the window contained when it was closed.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var restoringSession = browser.sessions.restore(
+```js
+var restoringSession = browser.sessions.restore(
   sessionId             // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>sessionId</code></dt>
- <dd><code>string</code>. A string containing the session ID for the window or tab to restore. This can be found in the <code>sessionId</code> property of the {{WebExtAPIRef("tabs.Tab", "Tab")}} or {{WebExtAPIRef("windows.Window", "Window")}} object in the {{WebExtAPIRef("sessions.Session", "Session")}} returned from {{WebExtAPIRef("sessions.getRecentlyClosed()")}}.</dd>
-</dl>
+- `sessionId`
+  - : `string`. A string containing the session ID for the window or tab to restore. This can be found in the `sessionId` property of the {{WebExtAPIRef("tabs.Tab", "Tab")}} or {{WebExtAPIRef("windows.Window", "Window")}} object in the {{WebExtAPIRef("sessions.Session", "Session")}} returned from {{WebExtAPIRef("sessions.getRecentlyClosed()")}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. This will be fulfilled with a {{WebExtAPIRef("sessions.Session", "Session")}} object representing the session that was restored.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). This will be fulfilled with a {{WebExtAPIRef("sessions.Session", "Session")}} object representing the session that was restored.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This restores the single most recently-closed session, whether it's a window or tab:</p>
+This restores the single most recently-closed session, whether it's a window or tab:
 
-<pre class="brush: js">function restoreMostRecent(sessionInfos) {
+```js
+function restoreMostRecent(sessionInfos) {
   if (!sessionInfos.length) {
     console.log("No sessions found")
     return;
@@ -67,18 +67,15 @@ browser.browserAction.onClicked.addListener(function() {
   });
   gettingSessions.then(restoreMostRecent, onError);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/extensions/sessions) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/sessions"><code>chrome.sessions</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -105,9 +102,8 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>
 
-<h2 id="Known_issues">Known issues</h2>
+## Known issues
 
-<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1538119">Bug 1538119</a> -  Duplicate sessionId in browser.sessions.getRecentlyClosed() after "Restore previous session"</p>
+[Bug 1538119](https://bugzilla.mozilla.org/show_bug.cgi?id=1538119) -  Duplicate sessionId in browser.sessions.getRecentlyClosed() after "Restore previous session"

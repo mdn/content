@@ -11,47 +11,38 @@ tags:
   - captivePortal
 browser-compat: webextensions.api.captivePortal
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Determine the captive portal state of the user’s connection. A captive portal is a web page displayed when a user first connects to a Wi-Fi network. The user provides information or acts on the captive portal web page to gain broader access to network resources, such as accepting terms and conditions or making a payment. </p>
+Determine the captive portal state of the user’s connection. A captive portal is a web page displayed when a user first connects to a Wi-Fi network. The user provides information or acts on the captive portal web page to gain broader access to network resources, such as accepting terms and conditions or making a payment.
 
-<p>To use this API you need to have the "captivePortal" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
+To use this API you need to have the "captivePortal" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{WebExtAPIRef("captivePortal.canonicalURL")}}</dt>
- <dd>Return the canonical URL of the captive-portal detection page. Read-only.</dd>
-</dl>
+- {{WebExtAPIRef("captivePortal.canonicalURL")}}
+  - : Return the canonical URL of the captive-portal detection page. Read-only.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("captivePortal.getLastChecked()")}}</dt>
- <dd>Returns the time, in milliseconds, since the last request was completed.</dd>
- <dt>{{WebExtAPIRef("captivePortal.getState()")}}</dt>
- <dd>Returns the portal state as one of <code>unknown</code>, <code>not_captive</code>, <code>unlocked_portal</code>, or <code>locked_portal</code>.</dd>
-</dl>
+- {{WebExtAPIRef("captivePortal.getLastChecked()")}}
+  - : Returns the time, in milliseconds, since the last request was completed.
+- {{WebExtAPIRef("captivePortal.getState()")}}
+  - : Returns the portal state as one of `unknown`, `not_captive`, `unlocked_portal`, or `locked_portal`.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("captivePortal.onConnectivityAvailable")}}</dt>
- <dd>Fires when the captive portal service determines that the user can connect to the internet.</dd>
- <dt>{{WebExtAPIRef("captivePortal.onStateChanged")}}</dt>
- <dd>
- <p>Fires when the captive portal state changes.</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("captivePortal.onConnectivityAvailable")}}
+  - : Fires when the captive portal service determines that the user can connect to the internet.
+- {{WebExtAPIRef("captivePortal.onStateChanged")}}
+  - : Fires when the captive portal state changes.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -78,5 +69,4 @@ browser-compat: webextensions.api.captivePortal
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

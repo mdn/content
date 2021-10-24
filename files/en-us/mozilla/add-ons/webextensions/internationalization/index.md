@@ -12,80 +12,62 @@ tags:
   - placeholders
   - predefined messages
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>The <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> API has a rather handy module available for internationalizing extensions — <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n</a>. In this article we'll explore its features and provide a practical example of how it works. The i18n system for extensions built using WebExtension APIs is similar to common JavaScript libraries for i18n such as <a href="http://i18njs.com/">i18n.js</a>.</p>
+The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) API has a rather handy module available for internationalizing extensions — [i18n](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n). In this article we'll explore its features and provide a practical example of how it works. The i18n system for extensions built using WebExtension APIs is similar to common JavaScript libraries for i18n such as [i18n.js](http://i18njs.com/).
 
-<div class="note">
-<p><strong>Note:</strong> The example extension featured in this article — <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> — is available on GitHub. Follow along with the source code as you go through the sections below.</p>
-</div>
+> **Note:** The example extension featured in this article — [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) — is available on GitHub. Follow along with the source code as you go through the sections below.
 
-<h2 id="Anatomy_of_an_internationalized_extension">Anatomy of an internationalized extension</h2>
+## Anatomy of an internationalized extension
 
-<p>An internationalized extension can contain the same features as any other extension — <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background scripts</a>, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a>, etc. — but it also has some extra parts to allow it to switch between different locales. These are summarized in the following directory tree:</p>
+An internationalized extension can contain the same features as any other extension — [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts), [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts), etc. — but it also has some extra parts to allow it to switch between different locales. These are summarized in the following directory tree:
 
-<ul>
- <li>extension-root-directory/
-  <ul>
-   <li>_locales
-    <ul>
-     <li>en
-      <ul>
-       <li>messages.json
-        <ul>
-         <li>English messages (strings)</li>
-        </ul>
-       </li>
-      </ul>
-     </li>
-     <li>de
-      <ul>
-       <li>messages.json
-        <ul>
-         <li>German messages (strings)</li>
-        </ul>
-       </li>
-      </ul>
-     </li>
-     <li>etc.</li>
-    </ul>
-   </li>
-   <li>manifest.json
-    <ul>
-     <li>locale-dependent metadata</li>
-    </ul>
-   </li>
-   <li>myJavascript.js
-    <ul>
-     <li>JavaScript for retrieving browser locale, locale-specific messages, etc.</li>
-    </ul>
-   </li>
-   <li>myStyles.css
-    <ul>
-     <li>locale-dependent CSS</li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+- extension-root-directory/
 
-<p>Let's explore each of the new features in turn — each of the below sections represents a step to follow when internationalizing your extension.</p>
+  - \_locales
 
-<h2 id="Providing_localized_strings_in__locales">Providing localized strings in _locales</h2>
+    - en
 
-<div class="note">
-  <p><strong>Note:</strong> You can look up language subtags using the <em>Find</em> tool on the <a href="https://r12a.github.io/app-subtags/">Language subtag lookup page</a>. Note that you need to search for the English name of the language.</p>
-</div>
+      - messages.json
 
-<p>Every i18n system requires the provision of strings translated into all the different locales you want to support. In extensions, these are contained within a directory called <code>_locales</code>, placed inside the extension root. Each individual locale has its strings (referred to as messages) contained within a file called <code>messages.json</code>, which is placed inside a subdirectory of <code>_locales</code>, named using the language subtag for that locale's language.</p>
+        - English messages (strings)
 
-<p>Note that if the subtag includes a basic language plus a regional variant, then the language and variant are conventionally separated using a hyphen: for example, "en-US". However, in the directories under <code>_locales</code>, <strong>the separator must be an underscore</strong>: "en_US".</p>
+    - de
 
-<p>So <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n/_locales">for example, in our sample app</a> we have directories for "en" (English), "de" (German), "nl" (Dutch), and "ja" (Japanese). Each one of these has a <code>messages.json</code> file inside it.</p>
+      - messages.json
 
-<p>Let's now look at the structure of one of these files (<a href="https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/_locales/en/messages.json">_locales/en/messages.json</a>):</p>
+        - German messages (strings)
 
-<pre class="brush: json">{
+    - etc.
+
+  - manifest.json
+
+    - locale-dependent metadata
+
+  - myJavascript.js
+
+    - JavaScript for retrieving browser locale, locale-specific messages, etc.
+
+  - myStyles.css
+
+    - locale-dependent CSS
+
+Let's explore each of the new features in turn — each of the below sections represents a step to follow when internationalizing your extension.
+
+## Providing localized strings in \_locales
+
+> **Note:** You can look up language subtags using the _Find_ tool on the [Language subtag lookup page](https://r12a.github.io/app-subtags/). Note that you need to search for the English name of the language.
+
+Every i18n system requires the provision of strings translated into all the different locales you want to support. In extensions, these are contained within a directory called `_locales`, placed inside the extension root. Each individual locale has its strings (referred to as messages) contained within a file called `messages.json`, which is placed inside a subdirectory of `_locales`, named using the language subtag for that locale's language.
+
+Note that if the subtag includes a basic language plus a regional variant, then the language and variant are conventionally separated using a hyphen: for example, "en-US". However, in the directories under `_locales`, **the separator must be an underscore**: "en_US".
+
+So [for example, in our sample app](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n/_locales) we have directories for "en" (English), "de" (German), "nl" (Dutch), and "ja" (Japanese). Each one of these has a `messages.json` file inside it.
+
+Let's now look at the structure of one of these files ([\_locales/en/messages.json](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/_locales/en/messages.json)):
+
+```json
+{
   "extensionName": {
     "message": "Notify link clicks i18n",
     "description": "Name of the extension."
@@ -111,77 +93,83 @@ tags:
       }
     }
   }
-}</pre>
+}
+```
 
-<p>This file is standard JSON — each one of its members is an object with a name, which contains a <code>message</code> and a <code>description</code>. All of these items are strings; <code>$URL$</code> is a placeholder, which is replaced with a substring at the time the <code>notificationContent</code> member is called by the extension. You'll learn how to do this in the {{anch("Retrieving message strings from JavaScript")}} section.</p>
+This file is standard JSON — each one of its members is an object with a name, which contains a `message` and a `description`. All of these items are strings; `$URL$` is a placeholder, which is replaced with a substring at the time the `notificationContent` member is called by the extension. You'll learn how to do this in the {{anch("Retrieving message strings from JavaScript")}} section.
 
-<div class="note">
-<p><strong>Note:</strong> You can find much more information about the contents of <code>messages.json</code> files in our <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference">Locale-Specific Message reference</a>.</p>
-</div>
+> **Note:** You can find much more information about the contents of `messages.json` files in our [Locale-Specific Message reference](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference).
 
-<h2 id="Internationalizing_manifest.json">Internationalizing manifest.json</h2>
+## Internationalizing manifest.json
 
-<p>There are a couple of different tasks to carry out to internationalize your manifest.json.</p>
+There are a couple of different tasks to carry out to internationalize your manifest.json.
 
-<h3 id="Retrieving_localized_strings_in_manifests">Retrieving localized strings in manifests</h3>
+### Retrieving localized strings in manifests
 
-<p>Your <a href="https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/manifest.json">manifest.json</a> includes strings that are displayed to the user, such as the extension's name and description. If you internationalize these strings and put the appropriate translations of them in messages.json, then the correct translation of the string will be displayed to the user, based on the current locale, like so.</p>
+Your [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/manifest.json) includes strings that are displayed to the user, such as the extension's name and description. If you internationalize these strings and put the appropriate translations of them in messages.json, then the correct translation of the string will be displayed to the user, based on the current locale, like so.
 
-<p>To internationalize strings, specify them like this:</p>
+To internationalize strings, specify them like this:
 
-<pre class="brush: json">"name": "__MSG_extensionName__",
-"description": "__MSG_extensionDescription__",</pre>
+```json
+"name": "__MSG_extensionName__",
+"description": "__MSG_extensionDescription__",
+```
 
-<p>Here, we are retrieving message strings dependant on the browser's locale, rather than just including static strings.</p>
+Here, we are retrieving message strings dependant on the browser's locale, rather than just including static strings.
 
-<p>To call a message string like this, you need to specify it like this:</p>
+To call a message string like this, you need to specify it like this:
 
-<ol>
- <li>Two underscores, followed by</li>
- <li>The string "MSG", followed by</li>
- <li>One underscore, followed by</li>
- <li>The name of the message you want to call as defined in <code>messages.json</code>, followed by</li>
- <li>Two underscores</li>
-</ol>
+1.  Two underscores, followed by
+2.  The string "MSG", followed by
+3.  One underscore, followed by
+4.  The name of the message you want to call as defined in `messages.json`, followed by
+5.  Two underscores
 
-<pre><strong>__MSG_</strong> + <em>messageName</em> + <strong>__</strong></pre>
+<!---->
 
-<h3 id="Specifying_a_default_locale">Specifying a default locale</h3>
+    __MSG_ + messageName + __
 
-<p>Another field you should specify in your manifest.json is <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale">default_locale</a>:</p>
+### Specifying a default locale
 
-<pre class="brush: json">"default_locale": "en"</pre>
+Another field you should specify in your manifest.json is [default_locale](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale):
 
-<p>This specifies a default locale to use if the extension doesn't include a localized string for the browser's current locale. Any message strings that are not available in the browser locale are taken from the default locale instead. There are some more details to be aware of in terms of how the browser selects strings — see {{anch("Localized string selection")}}.</p>
+```json
+"default_locale": "en"
+```
 
-<h2 id="Locale-dependent_CSS">Locale-dependent CSS</h2>
+This specifies a default locale to use if the extension doesn't include a localized string for the browser's current locale. Any message strings that are not available in the browser locale are taken from the default locale instead. There are some more details to be aware of in terms of how the browser selects strings — see {{anch("Localized string selection")}}.
 
-<p>Note that you can also retrieve localized strings from CSS files in the extension. For example, you might want to construct a locale-dependent CSS rule, like this:</p>
+## Locale-dependent CSS
 
-<pre class="brush: css">header {
+Note that you can also retrieve localized strings from CSS files in the extension. For example, you might want to construct a locale-dependent CSS rule, like this:
+
+```css
+header {
   background-image: url(../images/__MSG_extensionName__/header.png);
-}</pre>
+}
+```
 
-<p>This is useful, although you might be better off handling such a situation using {{anch("Predefined messages")}}.</p>
+This is useful, although you might be better off handling such a situation using {{anch("Predefined messages")}}.
 
-<h2 id="Retrieving_message_strings_from_JavaScript">Retrieving message strings from JavaScript</h2>
+## Retrieving message strings from JavaScript
 
-<p>So, you've got your message strings set up, and your manifest. Now you just need to start calling your message strings from JavaScript so your extension can talk the right language as much as possible. The actual <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n API</a> is pretty simple, containing just four main methods:</p>
+So, you've got your message strings set up, and your manifest. Now you just need to start calling your message strings from JavaScript so your extension can talk the right language as much as possible. The actual [i18n API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n) is pretty simple, containing just four main methods:
 
-<ul>
- <li>You'll probably use {{WebExtAPIRef("i18n.getMessage()")}} most often — this is the method you use to retrieve a specific language string, as mentioned above. We'll see specific usage examples of this below.</li>
- <li>The {{WebExtAPIRef("i18n.getAcceptLanguages()")}} and {{WebExtAPIRef("i18n.getUILanguage()")}} methods could be used if you needed to customize the UI depending on the locale — perhaps you might want to show preferences specific to the users' preferred languages higher up in a prefs list, or display cultural information relevant only to a certain language, or format displayed dates appropriately according to the browser locale.</li>
- <li>The {{WebExtAPIRef("i18n.detectLanguage()")}} method could be used to detect the language of user-submitted content, and format it appropriately.</li>
-</ul>
+- You'll probably use {{WebExtAPIRef("i18n.getMessage()")}} most often — this is the method you use to retrieve a specific language string, as mentioned above. We'll see specific usage examples of this below.
+- The {{WebExtAPIRef("i18n.getAcceptLanguages()")}} and {{WebExtAPIRef("i18n.getUILanguage()")}} methods could be used if you needed to customize the UI depending on the locale — perhaps you might want to show preferences specific to the users' preferred languages higher up in a prefs list, or display cultural information relevant only to a certain language, or format displayed dates appropriately according to the browser locale.
+- The {{WebExtAPIRef("i18n.detectLanguage()")}} method could be used to detect the language of user-submitted content, and format it appropriately.
 
-<p>In our <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> example, the<a href="https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js"> background script</a> contains the following lines:</p>
+In our [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) example, the[ background script](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js) contains the following lines:
 
-<pre class="brush: js">var title = browser.i18n.getMessage("notificationTitle");
-var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
+```js
+var title = browser.i18n.getMessage("notificationTitle");
+var content = browser.i18n.getMessage("notificationContent", message.url);
+```
 
-<p>The first one just retrieves the <code>notificationTitle message</code> field from the available <code>messages.json</code> file most appropriate for the browser's current locale. The second one is similar, but it is being passed a URL as a second parameter. What gives? This is how you specify the content to replace the <code>$URL$</code> placeholder we see in the <code>notificationContent message</code> field:</p>
+The first one just retrieves the `notificationTitle message` field from the available `messages.json` file most appropriate for the browser's current locale. The second one is similar, but it is being passed a URL as a second parameter. What gives? This is how you specify the content to replace the `$URL$` placeholder we see in the `notificationContent message` field:
 
-<pre class="brush: json">"notificationContent": {
+```json
+"notificationContent": {
   "message": "You clicked $URL$.",
   "description": "Tells the user which link they clicked.",
   "placeholders": {
@@ -191,34 +179,37 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
     }
   }
 }
-</pre>
+```
 
-<p>The <code>"placeholders"</code> member defines all the placeholders, and where they are retrieved from. The <code>"url"</code> placeholder specifies that its content is taken from $1, which is the first value given inside the second parameter of <code>getMessage()</code>. Since the placeholder is called <code>"url"</code>, we use <code>$URL$</code> to call it inside the actual message string (so for <code>"name"</code> you'd use <code>$NAME$</code>, etc.) If you have multiple placeholders, you can provide them inside an array that is given to {{WebExtAPIRef("i18n.getMessage()")}} as the second parameter — <code>[a, b, c]</code> will be available as <code>$1</code>, <code>$2</code>, and <code>$3</code>, and so on, inside <code>messages.json</code>.</p>
+The `"placeholders"` member defines all the placeholders, and where they are retrieved from. The `"url"` placeholder specifies that its content is taken from $1, which is the first value given inside the second parameter of `getMessage()`. Since the placeholder is called `"url"`, we use `$URL$` to call it inside the actual message string (so for `"name"` you'd use `$NAME$`, etc.) If you have multiple placeholders, you can provide them inside an array that is given to {{WebExtAPIRef("i18n.getMessage()")}} as the second parameter — `[a, b, c]`will be available as`$1`, `$2`, and `$3`, and so on, inside `messages.json`.
 
-<p>Let's run through an example: the original <code>notificationContent</code> message string in the <code>en/messages.json</code> file is</p>
+Let's run through an example: the original `notificationContent` message string in the `en/messages.json` file is
 
-<pre>You clicked $URL$.</pre>
+    You clicked $URL$.
 
-<p>Let's say the link clicked on points to <code>https://developer.mozilla.org</code>. After the {{WebExtAPIRef("i18n.getMessage()")}} call, the contents of the second parameter are made available in messages.json as <code>$1</code>, which replaces the <code>$URL$</code> placeholder as defined in the <code>"url"</code> placeholder. So the final message string is</p>
+Let's say the link clicked on points to `https://developer.mozilla.org`. After the {{WebExtAPIRef("i18n.getMessage()")}} call, the contents of the second parameter are made available in messages.json as `$1`, which replaces the `$URL$` placeholder as defined in the `"url"` placeholder. So the final message string is
 
-<pre>You clicked https://developer.mozilla.org.</pre>
+    You clicked https://developer.mozilla.org.
 
-<h3 id="Direct_placeholder_usage">Direct placeholder usage</h3>
+### Direct placeholder usage
 
-<p>It is possible to insert your variables (<code>$1</code>, <code>$2</code>, <code>$3</code>, etc.) directly into the message strings, for example we could rewrite the above <code>"notificationContent"</code> member like this:</p>
+It is possible to insert your variables (`$1`, `$2`, `$3`, etc.) directly into the message strings, for example we could rewrite the above `"notificationContent"` member like this:
 
-<pre class="brush: json">"notificationContent": {
+```json
+"notificationContent": {
   "message": "You clicked $1.",
   "description": "Tells the user which link they clicked."
-}</pre>
+}
+```
 
-<p>This may seem quicker and less complex, but the other way (using <code>"placeholders"</code>) is seen as best practice. This is because having the placeholder name (e.g. <code>"url"</code>) and example helps you to remember what the placeholder is for — a week after you write your code, you'll probably forget what <code>$1</code>–<code>$8</code> refer to, but you'll be more likely to know what your placeholder names refer to.</p>
+This may seem quicker and less complex, but the other way (using `"placeholders"`) is seen as best practice. This is because having the placeholder name (e.g. `"url"`) and example helps you to remember what the placeholder is for — a week after you write your code, you'll probably forget what `$1`–`$8` refer to, but you'll be more likely to know what your placeholder names refer to.
 
-<h3 id="Hardcoded_substitution">Hardcoded substitution</h3>
+### Hardcoded substitution
 
-<p>It is also possible to include hardcoded strings in placeholders, so that the same value is used every time, instead of getting the value from a variable in your code. For example:</p>
+It is also possible to include hardcoded strings in placeholders, so that the same value is used every time, instead of getting the value from a variable in your code. For example:
 
-<pre class="brush: json">"mdn_banner": {
+```json
+"mdn_banner": {
   "message": "For more information on web technologies, go to $MDN$.",
   "description": "Tell the user about MDN",
   "placeholders": {
@@ -226,134 +217,150 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
       "content": "https://developer.mozilla.org/"
     }
   }
-}</pre>
+}
+```
 
-<p>In this case we are just hardcoding the placeholder content, rather than getting it from a variable value like <code>$1</code>. This can sometimes be useful when your message file is very complex, and you want to split up different values to make the strings more readable in the file, plus then these values could be accessed programmatically.</p>
+In this case we are just hardcoding the placeholder content, rather than getting it from a variable value like `$1`. This can sometimes be useful when your message file is very complex, and you want to split up different values to make the strings more readable in the file, plus then these values could be accessed programmatically.
 
-<p>In addition, you can use such substitutions to specify parts of the string that you don't want to be translated, such as person or business names.</p>
+In addition, you can use such substitutions to specify parts of the string that you don't want to be translated, such as person or business names.
 
-<h2 id="Localized_string_selection">Localized string selection</h2>
+## Localized string selection
 
-<p>Locales can be specified using only a language code, like <code>fr</code> or <code>en</code>, or they may be further qualified with a region code, like <code>en_US</code> or <code>en_GB</code>, which describes a regional variant of the same basic language. When you ask the i18n system for a string, it will select a string using the following algorithm:</p>
+Locales can be specified using only a language code, like `fr` or `en`, or they may be further qualified with a region code, like `en_US` or `en_GB`, which describes a regional variant of the same basic language. When you ask the i18n system for a string, it will select a string using the following algorithm:
 
-<ol>
- <li>if there is a <code>messages.json</code> file for the exact current locale, and it contains the string, return it.</li>
- <li>Otherwise, if the current locale is qualified with a region (e.g. <code>en_US</code>) and there is a <code>messages.json</code> file for the regionless version of that locale (e.g. <code>en</code>), and that file contains the string, return it.</li>
- <li>Otherwise, if there is a <code>messages.json</code> file for the <code>default_locale</code> defined in the <code>manifest.json</code>, and it contains the string, return it.</li>
- <li>Otherwise return an empty string.</li>
-</ol>
+1.  if there is a `messages.json` file for the exact current locale, and it contains the string, return it.
+2.  Otherwise, if the current locale is qualified with a region (e.g. `en_US`) and there is a `messages.json` file for the regionless version of that locale (e.g. `en`), and that file contains the string, return it.
+3.  Otherwise, if there is a `messages.json` file for the `default_locale` defined in the `manifest.json`, and it contains the string, return it.
+4.  Otherwise return an empty string.
 
-<p>Take the following example:</p>
+Take the following example:
 
-<ul>
- <li>extension-root-directory/
-  <ul>
-   <li>_locales
-    <ul>
-     <li>en_GB
-      <ul>
-       <li>messages.json
-        <ul>
-         <li><code>{ "colorLocalised": { "message": "colour", "description": "Color." }, ... }</code></li>
-        </ul>
-       </li>
-      </ul>
+- extension-root-directory/
+
+  - \_locales
+
+    - en_GB
+
+      - messages.json
+
+        - `{ "colorLocalised": { "message": "colour", "description": "Color." }, ... }`
+
       en
 
-      <ul>
-       <li>messages.json
-        <ul>
-         <li><code>{ "colorLocalised": { "message": "color", "description": "Color." }, ... }</code></li>
-        </ul>
-       </li>
-      </ul>
-     </li>
-     <li>fr
-      <ul>
-       <li>messages.json
-        <ul>
-         <li><code>{ "colorLocalised": { "message": "<span lang="fr">couleur</span>", "description": "Color." }, ...}</code></li>
-        </ul>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+      - messages.json
 
-<p>Suppose the <code>default_locale</code> is set to <code>fr</code>, and the browser's current locale is <code>en_GB</code>:</p>
+        - `{ "colorLocalised": { "message": "color", "description": "Color." }, ... }`
 
-<ul>
- <li>If the extension calls <code>getMessage("colorLocalised")</code>, it will return "colour".</li>
- <li>If "colorLocalised" were not present in <code>en_GB</code>, then <code>getMessage("colorLocalised")</code>, would return "color", not "couleur".</li>
-</ul>
+    - fr
 
-<h2 id="Predefined_messages">Predefined messages</h2>
+      - messages.json
 
-<p>The i18n module provides us with some predefined messages, which we can call in the same way as we saw earlier in {{anch("Calling message strings from manifests and extension CSS")}}. For example:</p>
+        - `{ "colorLocalised": { "message": "couleur", "description": "Color." }, ...}`
 
-<pre>__MSG_extensionName__</pre>
+Suppose the `default_locale` is set to `fr`, and the browser's current locale is `en_GB`:
 
-<p>Predefined messages use exactly the same syntax, except with <code>@@</code> before the message name, for example</p>
+- If the extension calls `getMessage("colorLocalised")`, it will return "colour".
+- If "colorLocalised" were not present in `en_GB`, then `getMessage("colorLocalised")`, would return "color", not "couleur".
 
-<pre>__MSG_@@ui_locale__</pre>
+## Predefined messages
 
-<p>The following table shows the different available predefined messages:</p>
+The i18n module provides us with some predefined messages, which we can call in the same way as we saw earlier in {{anch("Calling message strings from manifests and extension CSS")}}. For example:
+
+    __MSG_extensionName__
+
+Predefined messages use exactly the same syntax, except with `@@` before the message name, for example
+
+    __MSG_@@ui_locale__
+
+The following table shows the different available predefined messages:
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Message name</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>@@extension_id</code></td>
-   <td>
-    <p>The extension's internally-generated UUID. You might use this string to construct URLs for resources inside the extension. Even unlocalized extensions can use this message.</p>
-
-    <p>You can't use this message in a manifest file.</p>
-
-    <p>Also note that this ID is <em>not</em> the add-on ID returned by {{WebExtAPIRef("runtime.id")}}, and that can be set using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">applications</a> key in manifest.json. It's the generated UUID that appears in the add-on's URL. This means that you can't use this value as the <code>extensionId</code> parameter to {{WebExtAPIRef("runtime.sendMessage()")}}, and can't use it to check against the <code>id</code> property of a {{WebExtAPIRef("runtime.MessageSender")}} object.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>@@ui_locale</code></td>
-   <td>The current locale; you might use this string to construct locale-specific URLs.</td>
-  </tr>
-  <tr>
-   <td><code>@@bidi_dir</code></td>
-   <td>The text direction for the current locale, either "ltr" for left-to-right languages such as English or "rtl" for right-to-left languages such as Arabic.</td>
-  </tr>
-  <tr>
-   <td><code>@@bidi_reversed_dir</code></td>
-   <td>If the <code>@@bidi_dir</code> is "ltr", then this is "rtl"; otherwise, it's "ltr".</td>
-  </tr>
-  <tr>
-   <td><code>@@bidi_start_edge</code></td>
-   <td>If the <code>@@bidi_dir</code> is "ltr", then this is "left"; otherwise, it's "right".</td>
-  </tr>
-  <tr>
-   <td><code>@@bidi_end_edge</code></td>
-   <td>If the <code>@@bidi_dir</code> is "ltr", then this is "right"; otherwise, it's "left".</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Message name</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>@@extension_id</code></td>
+      <td>
+        <p>
+          The extension's internally-generated UUID. You might use this string
+          to construct URLs for resources inside the extension. Even unlocalized
+          extensions can use this message.
+        </p>
+        <p>You can't use this message in a manifest file.</p>
+        <p>
+          Also note that this ID is <em>not</em> the add-on ID returned by
+          {{WebExtAPIRef("runtime.id")}}, and that can be set using
+          the
+          <a
+            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
+            >applications</a
+          >
+          key in manifest.json. It's the generated UUID that appears in the
+          add-on's URL. This means that you can't use this value as the
+          <code>extensionId</code> parameter to
+          {{WebExtAPIRef("runtime.sendMessage()")}}, and can't
+          use it to check against the <code>id</code> property of a
+          {{WebExtAPIRef("runtime.MessageSender")}} object.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>@@ui_locale</code></td>
+      <td>
+        The current locale; you might use this string to construct
+        locale-specific URLs.
+      </td>
+    </tr>
+    <tr>
+      <td><code>@@bidi_dir</code></td>
+      <td>
+        The text direction for the current locale, either "ltr" for
+        left-to-right languages such as English or "rtl" for right-to-left
+        languages such as Arabic.
+      </td>
+    </tr>
+    <tr>
+      <td><code>@@bidi_reversed_dir</code></td>
+      <td>
+        If the <code>@@bidi_dir</code> is "ltr", then this is "rtl"; otherwise,
+        it's "ltr".
+      </td>
+    </tr>
+    <tr>
+      <td><code>@@bidi_start_edge</code></td>
+      <td>
+        If the <code>@@bidi_dir</code> is "ltr", then this is "left"; otherwise,
+        it's "right".
+      </td>
+    </tr>
+    <tr>
+      <td><code>@@bidi_end_edge</code></td>
+      <td>
+        If the <code>@@bidi_dir</code> is "ltr", then this is "right";
+        otherwise, it's "left".
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Going back to our earlier example, it would make more sense to write it like this:</p>
+Going back to our earlier example, it would make more sense to write it like this:
 
-<pre class="brush: css">header {
+```css
+header {
   background-image: url(../images/__MSG_@@ui_locale__/header.png);
-}</pre>
+}
+```
 
-<p>Now we can just store our local specific images in directories that match the different locales we are supporting — en, de, etc. — which makes a lot more sense.</p>
+Now we can just store our local specific images in directories that match the different locales we are supporting — en, de, etc. — which makes a lot more sense.
 
-<p>Let's look at an example of using <code>@@bidi_*</code> messages in a CSS file:</p>
+Let's look at an example of using `@@bidi_*` messages in a CSS file:
 
-<pre class="brush: css">body {
+```css
+body {
   direction: __MSG_@@bidi_dir__;
 }
 
@@ -364,48 +371,44 @@ div#header {
   padding-__MSG_@@bidi_start_edge__: 0;
   padding-__MSG_@@bidi_end_edge__: 1.5em;
   position: relative;
-}</pre>
+}
+```
 
-<p>For left-to-right languages such as English, the CSS declarations involving the predefined messages above would translate to the following final code lines:</p>
+For left-to-right languages such as English, the CSS declarations involving the predefined messages above would translate to the following final code lines:
 
-<pre class="brush: css">direction: ltr;
+```css
+direction: ltr;
 padding-left: 0;
 padding-right: 1.5em;
-</pre>
+```
 
-<p>For a right-to-left language like Arabic, you'd get:</p>
+For a right-to-left language like Arabic, you'd get:
 
-<pre class="brush: css">direction: rtl;
+```css
+direction: rtl;
 padding-right: 0;
-padding-left: 1.5em;</pre>
+padding-left: 1.5em;
+```
 
-<h2 id="Testing_out_your_extension">Testing out your extension</h2>
+## Testing out your extension
 
-<p>Starting in Firefox 45, you can <a href="https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox">install extensions temporarily from disk</a>. Do this, and then try testing out our <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> extension. Go to one of your favorite websites and click a link to see if a notification appears reporting the URL of the clicked link.</p>
+Starting in Firefox 45, you can [install extensions temporarily from disk](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox). Do this, and then try testing out our [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension. Go to one of your favorite websites and click a link to see if a notification appears reporting the URL of the clicked link.
 
-<p>Next, change Firefox's locale to one supported in the extension that you want to test.</p>
+Next, change Firefox's locale to one supported in the extension that you want to test.
 
-<ol>
- <li>Open "about:config" in Firefox, and search for the <code>intl.locale.requested</code> preference (bear in mind that before Firefox 59, this pref is called <code>general.useragent.locale</code>).</li>
- <li>If the preference exists, double-click it (or press Return/Enter) to select it, enter the language code for the locale you want to test, then click "OK" (or press Return/Enter). For example in our example extension, "en" (English), "de" (German), "nl" (Dutch), and "ja" (Japanese) are supported. You can also set the value to an empty string (<code>""</code>), which will cause the browser to use the OS default locale.</li>
- <li>If the <code>intl.locale.requested</code> preference does not exist, right-click the list of preferences (or activate the context menu using the keyboard), and choose "New" followed by "String". Enter <code>intl.locale.requested</code> for the preference name and, "de", or "nl", etc. for the preference value, as described in step 2 above.</li>
- <li>Search for <code>intl.locale.matchOS</code> and, if the preference exists and has the value <code>true</code>, double-click it  so that it is set to <code>false</code>.</li>
- <li>Restart your browser to complete the change.</li>
-</ol>
+1.  Open "about:config" in Firefox, and search for the `intl.locale.requested` preference (bear in mind that before Firefox 59, this pref is called `general.useragent.locale`).
+2.  If the preference exists, double-click it (or press Return/Enter) to select it, enter the language code for the locale you want to test, then click "OK" (or press Return/Enter). For example in our example extension, "en" (English), "de" (German), "nl" (Dutch), and "ja" (Japanese) are supported. You can also set the value to an empty string (`""`), which will cause the browser to use the OS default locale.
+3.  If the `intl.locale.requested` preference does not exist, right-click the list of preferences (or activate the context menu using the keyboard), and choose "New" followed by "String". Enter `intl.locale.requested` for the preference name and, "de", or "nl", etc. for the preference value, as described in step 2 above.
+4.  Search for `intl.locale.matchOS` and, if the preference exists and has the value `true`, double-click it  so that it is set to `false`.
+5.  Restart your browser to complete the change.
 
-<div class="note">
-<p><strong>Note:</strong> This works to change the browser's locale, even if you haven't got the <a href="https://addons.mozilla.org/en-US/firefox/language-tools/">language pack</a> installed for that language. You'll just get the browser UI in your default language if this is the case.</p>
-</div>
+> **Note:** This works to change the browser's locale, even if you haven't got the [language pack](https://addons.mozilla.org/en-US/firefox/language-tools/) installed for that language. You'll just get the browser UI in your default language if this is the case.
 
-<div class="note">
-<p><strong>Note:</strong> To change the result of <code>getUILanguage</code> the language pack is required, since it reflects the browser UI language and not the language used for extension messages.</p>
-</div>
+> **Note:** To change the result of `getUILanguage` the language pack is required, since it reflects the browser UI language and not the language used for extension messages.
 
-<p>Load the extension temporarily from disk again, then test your new locale:</p>
+Load the extension temporarily from disk again, then test your new locale:
 
-<ul>
- <li>Visit "about:addons" again — you should now see the extension listed, with its icon, plus name and description in the chosen language.</li>
- <li>Test your extension again. In our example, you'd go to another website and click a link, to see if the notification now appears in the chosen language.</li>
-</ul>
+- Visit "about:addons" again — you should now see the extension listed, with its icon, plus name and description in the chosen language.
+- Test your extension again. In our example, you'd go to another website and click a link, to see if the notification now appears in the chosen language.
 
-<p>{{EmbedYouTube("R7--fp5pPGg")}}</p>
+{{EmbedYouTube("R7--fp5pPGg")}}

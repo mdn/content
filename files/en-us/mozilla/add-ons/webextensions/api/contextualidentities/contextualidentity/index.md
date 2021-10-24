@@ -12,63 +12,57 @@ tags:
   - contextualIdentities
 browser-compat: webextensions.api.contextualIdentities.ContextualIdentity
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code><strong>contextualIdentities</strong></code><strong><code>.ContextualIdentity</code></strong> type describes a single contextual identity.</p>
+The **`contextualIdentities`\*\***`.ContextualIdentity`\*\* type describes a single contextual identity.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>cookieStoreId</code></dt>
- <dd><code>string</code>. The cookie store ID for the identity. Since contextual identities don't share cookie stores, this serves as a unique identifier.</dd>
- <dt><code>color</code></dt>
- <dd>
- <p><code>string</code>. The color for the identity. This will be shown in tabs belonging to this identity. The following values are valid:</p>
+- `cookieStoreId`
+  - : `string`. The cookie store ID for the identity. Since contextual identities don't share cookie stores, this serves as a unique identifier.
+- `color`
 
- <ul>
-  <li>"blue"</li>
-  <li>"turquoise"</li>
-  <li>"green"</li>
-  <li>"yellow"</li>
-  <li>"orange"</li>
-  <li>"red"</li>
-  <li>"pink"</li>
-  <li>"purple"</li>
-  <li>"toolbar"</li>
- </ul>
+  - : `string`. The color for the identity. This will be shown in tabs belonging to this identity. The following values are valid:
 
- <p>The value "toolbar" represents a theme-dependent color.  Identities with color "toolbar" will be displayed in the same color as text in the toolbar (corresponding to the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#colors">theme key</a> <code>"toolbar_field_text"</code>).</p>
- </dd>
- <dt><code>colorCode</code></dt>
- <dd><code>string</code>. A hex code representing the exact color used for the identity. For example: <code>"#37adff"</code>. In the special case of the "toolbar" color, <code>colorCode</code> is always <code>"#7c7c7d"</code>, regardless of the displayed color.</dd>
- <dt><code>icon</code></dt>
- <dd>
- <p><code>string</code>. The name of an icon for the identity. This will be shown in the URL bar for tabs belonging to this identity. The following values are valid:</p>
+    - "blue"
+    - "turquoise"
+    - "green"
+    - "yellow"
+    - "orange"
+    - "red"
+    - "pink"
+    - "purple"
+    - "toolbar"
 
- <ul>
-  <li>"fingerprint"</li>
-  <li>"briefcase"</li>
-  <li>"dollar"</li>
-  <li>"cart"</li>
-  <li>"circle"</li>
-  <li>"gift"</li>
-  <li>"vacation"</li>
-  <li>"food"</li>
-  <li>"fruit"</li>
-  <li>"pet"</li>
-  <li>"tree"</li>
-  <li>"chill"</li>
-  <li>"fence"</li>
- </ul>
- </dd>
- <dt><code>iconUrl</code></dt>
- <dd><code>string</code>. A full resource:// URL pointing to the identity's icon. For example: "resource://usercontext-content/fingerprint.svg".</dd>
- <dt><code>name</code></dt>
- <dd><code>string</code>. Name of the identity. This will be shown in the URL bar for tabs belonging to this identity. Note that names don't have to be unique.</dd>
-</dl>
+    The value "toolbar" represents a theme-dependent color.  Identities with color "toolbar" will be displayed in the same color as text in the toolbar (corresponding to the [theme key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#colors) `"toolbar_field_text"`).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- `colorCode`
+  - : `string`. A hex code representing the exact color used for the identity. For example: `"#37adff"`. In the special case of the "toolbar" color, `colorCode` is always `"#7c7c7d"`, regardless of the displayed color.
+- `icon`
 
-<p>{{Compat}}</p>
+  - : `string`. The name of an icon for the identity. This will be shown in the URL bar for tabs belonging to this identity. The following values are valid:
+
+    - "fingerprint"
+    - "briefcase"
+    - "dollar"
+    - "cart"
+    - "circle"
+    - "gift"
+    - "vacation"
+    - "food"
+    - "fruit"
+    - "pet"
+    - "tree"
+    - "chill"
+    - "fence"
+
+- `iconUrl`
+  - : `string`. A full resource:// URL pointing to the identity's icon. For example: "resource://usercontext-content/fingerprint.svg".
+- `name`
+  - : `string`. Name of the identity. This will be shown in the URL bar for tabs belonging to this identity. Note that names don't have to be unique.
+
+## Browser compatibility
+
+{{Compat}}

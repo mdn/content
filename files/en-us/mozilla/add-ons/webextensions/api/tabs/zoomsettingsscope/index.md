@@ -13,39 +13,34 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.ZoomSettingsScope
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Defines whether zoom changes will persist for the page's origin, or only take effect in this tab. This defaults to <code>per-origin</code> when {{WebExtAPIRef("tabs.zoomSettingsMode")}} is "automatic", and is always <code>per-tab</code> otherwise.</p>
+Defines whether zoom changes will persist for the page's origin, or only take effect in this tab. This defaults to `per-origin` when {{WebExtAPIRef("tabs.zoomSettingsMode")}} is "automatic", and is always `per-tab` otherwise.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are strings. Possible values are:</p>
+Values of this type are strings. Possible values are:
 
-<dl>
- <dt>"per-origin"</dt>
- <dd>All other tabs with the same origin as this tab will have the zoom changes applied to them. This scope is only available if {{WebExtAPIRef("tabs.zoomSettingsMode")}} is "automatic".</dd>
- <dt>"per-tab"</dt>
- <dd>Zoom changes only take effect in this tab, and zoom changes in other tabs will not affect the zooming of this tab. Also:
- <ul>
-  <li>in Firefox the zoom level persists across page loads and navigation within the tab.</li>
-  <li>in Chrome-based browsers zoom changes are reset on navigation; navigating a tab will always load pages with their per-origin zoom factors.</li>
- </ul>
- </dd>
-</dl>
+- "per-origin"
+  - : All other tabs with the same origin as this tab will have the zoom changes applied to them. This scope is only available if {{WebExtAPIRef("tabs.zoomSettingsMode")}} is "automatic".
+- "per-tab"
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+  - : Zoom changes only take effect in this tab, and zoom changes in other tabs will not affect the zooming of this tab. Also:
 
-<p>{{Compat}}</p>
+    - in Firefox the zoom level persists across page loads and navigation within the tab.
+    - in Chrome-based browsers zoom changes are reset on navigation; navigating a tab will always load pages with their per-origin zoom factors.
 
-<p>{{WebExtExamples}}</p>
+## Browser compatibility
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#type-ZoomSettingsScope"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
+{{Compat}}
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+{{WebExtExamples}}
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-ZoomSettingsScope) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -72,5 +67,4 @@ browser-compat: webextensions.api.tabs.ZoomSettingsScope
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

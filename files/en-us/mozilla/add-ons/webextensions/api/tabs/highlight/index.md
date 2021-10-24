@@ -13,62 +13,50 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.highlight
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Highlights (selects) one or more tabs. Tabs are specified using a window ID and a range of tab indices.
 
-<div>Highlights (selects) one or more tabs. Tabs are specified using a window ID and a range of tab indices.</div>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<div>
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:js">var highlighting = browser.tabs.highlight(
+```js
+var highlighting = browser.tabs.highlight(
   highlightInfo         // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>highlightInfo</code></dt>
- <dd>
-   <p><code>object</code>.</p>
-   <dl>
-    <dt><code>windowId</code>{{optional_inline}}</dt>
-    <dd><code>integer</code>. ID of the window that contains the tabs.</dd>
-    <dt><code>populate</code>{{optional_inline}}</dt>
-    <dd>
-    <p><code>boolean</code>. Defaults to <code>true</code>. If set to <code>false</code>, the {{WebExtAPIRef('windows.Window')}} object won't have a <code>tabs</code> property containing a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs open in the window.</p>
+- `highlightInfo`
 
-    <div class="note">
-    <p><strong>Note:</strong> Populating the window (the default behavior) can be an expensive operation if there are lots of tabs. For better performance it's recommended to manually set <code>populate</code> to <code>false</code> if you don't need tab details.</p>
-    </div>
-    </dd>
-    <dt><code>tabs</code></dt>
-    <dd><code>array</code> of integer values specifying one or more tab indices to highlight. Previously highlighted tabs not included in <code>tabs</code> will stop being highlighted. The first tab in <code>tabs</code> will become active.</dd>
-   </dl>
- </dd>
-</dl>
+  - : `object`.
 
-<h3 id="Return_value">Return value</h3>
+    - `windowId`{{optional_inline}}
+      - : `integer`. ID of the window that contains the tabs.
+    - `populate`{{optional_inline}}
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing details about the window whose tabs were highlighted. If the window could not be found or some other error occurs, the promise will be rejected with an error message.</p>
+      - : `boolean`. Defaults to `true`. If set to `false`, the {{WebExtAPIRef('windows.Window')}} object won't have a `tabs` property containing a list of {{WebExtAPIRef('tabs.Tab')}} objects representing the tabs open in the window.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+        > **Note:** Populating the window (the default behavior) can be an expensive operation if there are lots of tabs. For better performance it's recommended to manually set `populate` to `false` if you don't need tab details.
 
-<p>{{Compat}}</p>
+    - `tabs`
+      - : `array` of integer values specifying one or more tab indices to highlight. Previously highlighted tabs not included in `tabs` will stop being highlighted. The first tab in `tabs` will become active.
 
-<p>{{WebExtExamples}}</p>
+### Return value
 
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing details about the window whose tabs were highlighted. If the window could not be found or some other error occurs, the promise will be rejected with an error message.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-highlight"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
+## Browser compatibility
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+{{Compat}}
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+{{WebExtExamples}}
+
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-highlight) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,5 +83,4 @@ browser-compat: webextensions.api.tabs.highlight
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

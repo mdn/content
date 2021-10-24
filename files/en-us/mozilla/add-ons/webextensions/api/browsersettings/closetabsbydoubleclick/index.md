@@ -12,15 +12,14 @@ tags:
   - closeTabsByDoubleClick
 browser-compat: webextensions.api.browserSettings.closeTabsByDoubleClick
 ---
+{{AddonSidebar()}}
 
-<div>{{AddonSidebar()}}</div>
+A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to enable or disable the user's ability to close a tab using double-click.
 
-<p>A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to enable or disable the user's ability to close a tab using double-click.</p>
+The underlying value is a boolean.
 
-<p>The underlying value is a boolean.</p>
+By default, closeTabsByDoubleClick is false. The setting can be changed by the user in about:config.
 
-<p>By default, closeTabsByDoubleClick is false. The setting can be changed by the user in about:config.</p>
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<p>{{Compat}}</p>
+{{Compat}}

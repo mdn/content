@@ -13,35 +13,30 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.StringDelta
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code>StringDelta</code> type of the {{WebExtAPIRef("downloads")}} API represents the difference between two strings.</p>
+The `StringDelta` type of the {{WebExtAPIRef("downloads")}} API represents the difference between two strings.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>current</code>{{optional_inline}}</dt>
- <dd>A <code>string</code> representing the current string value.</dd>
- <dt><code>previous</code>{{optional_inline}}</dt>
- <dd>A <code>string</code> representing the previous string value.</dd>
-</dl>
+- `current`{{optional_inline}}
+  - : A `string` representing the current string value.
+- `previous`{{optional_inline}}
+  - : A `string` representing the previous string value.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#type-StringDelta) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#type-StringDelta"><code>chrome.downloads</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -68,5 +63,4 @@ browser-compat: webextensions.api.downloads.StringDelta
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

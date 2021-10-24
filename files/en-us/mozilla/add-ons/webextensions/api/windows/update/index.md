@@ -13,62 +13,60 @@ tags:
   - Windows
 browser-compat: webextensions.api.windows.update
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Updates the properties of a window. Use this to move, resize, and (un)focus a window, etc.</p>
+Updates the properties of a window. Use this to move, resize, and (un)focus a window, etc.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var updating = browser.windows.update(
+```js
+var updating = browser.windows.update(
   windowId,              // integer
   updateInfo             // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>windowId</code></dt>
- <dd><code>integer</code>. ID of the window to update.</dd>
- <dt><code>updateInfo</code></dt>
- <dd>
-   <p><code>object</code>. Object containing the properties to update.</p>
-   <dl>
-    <dt><code>drawAttention</code> {{optional_inline}}</dt>
-    <dd><code>boolean</code>. If <code>true</code>, causes the window to be displayed in a manner that draws the user's attention to the window, without changing the focused window. The effect lasts until the user changes focus to the window. This option has no effect if the window already has focus. Set to <code>false</code> to cancel a previous <code>drawAttention</code> request.</dd>
-    <dt><code>focused</code> {{optional_inline}}</dt>
-    <dd><code>boolean</code>. If <code>true</code>, brings the window to the front. If false, brings the next window in the z-order to the front.</dd>
-    <dt><code>height</code> {{optional_inline}}</dt>
-    <dd><code>integer</code>. The height to resize the window to in pixels. This value is ignored for panels.</dd>
-    <dt><code>left</code> {{optional_inline}}</dt>
-    <dd><code>integer</code>. The offset from the left edge of the screen to move the window to in pixels. This value is ignored for panels.</dd>
-    <dt><code>state</code> {{optional_inline}}</dt>
-    <dd>{{WebExtAPIRef('windows.WindowState')}}. The new state of the window. The <code>minimized</code>, <code>maximized</code> and <code>fullscreen</code> states cannot be combined with <code>left</code>, <code>top</code>, <code>width</code> or <code>height</code>.</dd>
-    <dt><code>titlePreface</code> {{optional_inline}}</dt>
-    <dd><code>string</code>. Use this to add a string to the beginning of the browser window's title. Depending on the underlying operating system, this might not work on browser windows that don't have a title (such as about:blank in Firefox).</dd>
-    <dt><code>top</code> {{optional_inline}}</dt>
-    <dd><code>integer</code>. The offset from the top edge of the screen to move the window to in pixels. This value is ignored for panels.</dd>
-    <dt><code>width</code> {{optional_inline}}</dt>
-    <dd><code>integer</code>. The width to resize the window to in pixels. This value is ignored for panels.</dd>
-   </dl>
- </dd>
-</dl>
+- `windowId`
+  - : `integer`. ID of the window to update.
+- `updateInfo`
 
-<h3 id="Return_value">Return value</h3>
+  - : `object`. Object containing the properties to update.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing the details of the updated window. If any error occurs, the promise will be rejected with an error message.</p>
+    - `drawAttention` {{optional_inline}}
+      - : `boolean`. If `true`, causes the window to be displayed in a manner that draws the user's attention to the window, without changing the focused window. The effect lasts until the user changes focus to the window. This option has no effect if the window already has focus. Set to `false` to cancel a previous `drawAttention` request.
+    - `focused` {{optional_inline}}
+      - : `boolean`. If `true`, brings the window to the front. If false, brings the next window in the z-order to the front.
+    - `height` {{optional_inline}}
+      - : `integer`. The height to resize the window to in pixels. This value is ignored for panels.
+    - `left` {{optional_inline}}
+      - : `integer`. The offset from the left edge of the screen to move the window to in pixels. This value is ignored for panels.
+    - `state` {{optional_inline}}
+      - : {{WebExtAPIRef('windows.WindowState')}}. The new state of the window. The `minimized`, `maximized` and `fullscreen` states cannot be combined with `left`, `top`, `width` or `height`.
+    - `titlePreface` {{optional_inline}}
+      - : `string`. Use this to add a string to the beginning of the browser window's title. Depending on the underlying operating system, this might not work on browser windows that don't have a title (such as about:blank in Firefox).
+    - `top` {{optional_inline}}
+      - : `integer`. The offset from the top edge of the screen to move the window to in pixels. This value is ignored for panels.
+    - `width` {{optional_inline}}
+      - : `integer`. The width to resize the window to in pixels. This value is ignored for panels.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+### Return value
 
-<p>{{Compat}}</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing the details of the updated window. If any error occurs, the promise will be rejected with an error message.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>When the user clicks a browser action's icon, move the window to the top left corner:</p>
+{{Compat}}
 
-<pre class="brush: js">function onUpdated(windowInfo) {
+## Examples
+
+When the user clicks a browser action's icon, move the window to the top left corner:
+
+```js
+function onUpdated(windowInfo) {
   console.log(`Updated window: ${windowInfo.id}`);
 }
 
@@ -76,7 +74,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
 
   var updating = browser.windows.update(tab.windowId, {
     left: 0,
@@ -85,18 +83,15 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
   updating.then(onUpdated, onError);
 
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#method-update) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/windows#method-update"><code>chrome.windows</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -123,5 +118,4 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

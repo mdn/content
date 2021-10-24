@@ -12,82 +12,75 @@ tags:
   - websites
 browser-compat: webextensions.api.privacy.websites
 ---
-<div>{{AddonSidebar}}
-<p>The {{WebExtAPIRef("privacy.websites")}} property contains privacy-related settings controlling the way to browser interacts with websites. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.</p>
+{{AddonSidebar}}
 
-<p>Default values for these properties tend to vary across browsers.</p>
+The {{WebExtAPIRef("privacy.websites")}} property contains privacy-related settings controlling the way to browser interacts with websites. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.
 
-<h2 id="Properties">Properties</h2>
+Default values for these properties tend to vary across browsers.
 
-<dl>
- <dt><code>cookieConfig</code></dt>
- <dd>
- <p>A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is an object.</p>
+## Properties
 
- <p>The object has two properties:</p>
+- `cookieConfig`
 
- <ul>
-  <li><code>behavior</code>: a string which may take any of the following values:
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is an object.
 
-   <ul>
-    <li>"allow_all": accept all cookies</li>
-    <li>"reject_all": reject all cookies</li>
-    <li>"reject_third_party": reject all third-party cookies</li>
-    <li>"allow_visited": accept a third-party cookie only if the cookie's top-level domain already has at least one cookie.</li>
-    <li>"reject_trackers": reject tracking cookies</li>
-    <li>"reject_trackers_and_partition_foreign": reject trackers and partition third-party cookies.</li>
-   </ul>
-  </li>
-  <li><code>nonPersistentCookies</code>: a boolean. If true, all cookies will be treated as session cookies.</li>
- </ul>
- </dd>
- <dt><code>firstPartyIsolate</code></dt>
- <dd>
- <p>A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean.</p>
+    The object has two properties:
 
- <p>If <code>true</code>, the <code>firstPartyIsolate</code> preference makes the browser associate all data (including cookies, HSTS data, cached images, and more) for any third party domains with the domain in the address bar. This prevents third party trackers from using directly stored information to identify the user across different websites, but may break websites where the user logs in with a third party account (such as a Facebook or Google account).</p>
+    - `behavior`: a string which may take any of the following values:
 
- <p>Defaults to <code>false</code>.</p>
- </dd>
- <dt><code>hyperlinkAuditingEnabled</code></dt>
- <dd>A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If <code>true</code>, the browser sends auditing pings when a website uses the <code>ping</code> attribute to request them.</dd>
- <dt><code>protectedContentEnabled</code></dt>
- <dd>A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. Available on Windows only. If <code>true</code>, the browser provides a unique ID to plugins in order to run protected content.</dd>
- <dt><code>referrersEnabled</code></dt>
- <dd>A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If enabled, the browser sends <a href="/en-US/docs/Web/HTTP/Headers/Referer">referer</a> headers with your requests.</dd>
- <dt><code>resistFingerprinting</code></dt>
- <dd>
- <p>A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean.</p>
+      - "allow_all": accept all cookies
+      - "reject_all": reject all cookies
+      - "reject_third_party": reject all third-party cookies
+      - "allow_visited": accept a third-party cookie only if the cookie's top-level domain already has at least one cookie.
+      - "reject_trackers": reject tracking cookies
+      - "reject_trackers_and_partition_foreign": reject trackers and partition third-party cookies.
 
- <p>Browser fingerprinting is the practice by which websites use Web APIs to collect status or configuration data associated with the browser or the device it's running on. By doing this, they can build up a digital fingerprint that they can use to identify and track a particular user.</p>
+    - `nonPersistentCookies`: a boolean. If true, all cookies will be treated as session cookies.
 
- <p>If <code>true</code>, the <code>resistFingerprinting</code> preference makes the browser report generic spoofed information for data that's commonly used for fingerprinting. Such data includes the number of CPU cores, precision of JavaScript timers, and the local timezone. It will also disable features that are used in fingerprinting, such as GamePad support, and the WebSpeech and Navigator APIs.</p>
+- `firstPartyIsolate`
 
- <p>Defaults to <code>false</code>.</p>
- </dd>
- <dt><code>thirdPartyCookiesAllowed</code></dt>
- <dd>A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If <code>false</code>, the browser blocks <a href="/en-US/docs/Web/HTTP/Cookies#third-party_cookies">third-party cookies</a>.</dd>
- <dt><code>trackingProtectionMode</code></dt>
- <dd>
- <p>"Tracking protection" is a browser feature that blocks requests made to domains that are known to engage in cross-site tracking of users. Sites that track users are most commonly third-party advertising and analytics sites. This setting is a {{WebExtAPIRef("types.BrowserSetting")}} object that determines whether the browser should enable tracking protection. Its underlying value is a string that may take one of three values:</p>
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean.
 
- <ul>
-  <li><code>"always"</code>: tracking protection is on.</li>
-  <li><code>"never"</code>: tracking protection is off.</li>
-  <li><code>"private_browsing"</code>: tracking protection is on in private browsing windows only.</li>
- </ul>
- </dd>
-</dl>
+    If `true`, the `firstPartyIsolate` preference makes the browser associate all data (including cookies, HSTS data, cached images, and more) for any third party domains with the domain in the address bar. This prevents third party trackers from using directly stored information to identify the user across different websites, but may break websites where the user logs in with a third party account (such as a Facebook or Google account).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    Defaults to `false`.
 
-<p>{{Compat}}</p>
+- `hyperlinkAuditingEnabled`
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `true`, the browser sends auditing pings when a website uses the `ping` attribute to request them.
+- `protectedContentEnabled`
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. Available on Windows only. If `true`, the browser provides a unique ID to plugins in order to run protected content.
+- `referrersEnabled`
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If enabled, the browser sends [referer](/en-US/docs/Web/HTTP/Headers/Referer) headers with your requests.
+- `resistFingerprinting`
 
-<h2 id="Examples">Examples</h2>
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean.
 
-<p>Set the <code>hyperlinkAuditingEnabled</code> property.</p>
+    Browser fingerprinting is the practice by which websites use Web APIs to collect status or configuration data associated with the browser or the device it's running on. By doing this, they can build up a digital fingerprint that they can use to identify and track a particular user.
 
-<pre class="brush: js">function onSet(result) {
+    If `true`, the `resistFingerprinting` preference makes the browser report generic spoofed information for data that's commonly used for fingerprinting. Such data includes the number of CPU cores, precision of JavaScript timers, and the local timezone. It will also disable features that are used in fingerprinting, such as GamePad support, and the WebSpeech and Navigator APIs.
+
+    Defaults to `false`.
+
+- `thirdPartyCookiesAllowed`
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `false`, the browser blocks [third-party cookies](/en-US/docs/Web/HTTP/Cookies#third-party_cookies).
+- `trackingProtectionMode`
+
+  - : "Tracking protection" is a browser feature that blocks requests made to domains that are known to engage in cross-site tracking of users. Sites that track users are most commonly third-party advertising and analytics sites. This setting is a {{WebExtAPIRef("types.BrowserSetting")}} object that determines whether the browser should enable tracking protection. Its underlying value is a string that may take one of three values:
+
+    - `"always"`: tracking protection is on.
+    - `"never"`: tracking protection is off.
+    - `"private_browsing"`: tracking protection is on in private browsing windows only.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+Set the `hyperlinkAuditingEnabled` property.
+
+```js
+function onSet(result) {
   if (result) {
     console.log("success");
   } else {
@@ -95,10 +88,10 @@ browser-compat: webextensions.api.privacy.websites
   }
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
 
   var getting = browser.privacy.websites.hyperlinkAuditingEnabled.get({});
-  getting.then((got) =&gt; {
+  getting.then((got) => {
     console.log(got.value);
     if ((got.levelOfControl === "controlled_by_this_extension") ||
         (got.levelOfControl === "controllable_by_this_extension")) {
@@ -111,18 +104,16 @@ browser.browserAction.onClicked.addListener(() =&gt; {
     }
   });
 
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/extensions/privacy) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/privacy"><code>chrome.privacy</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json"><code>privacy.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -149,6 +140,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
-</div>
+</pre></div>

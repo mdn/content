@@ -10,41 +10,39 @@ tags:
   - menus
 browser-compat: webextensions.api.menus.getTargetElement
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Returns the element for a given <code>targetElementId</code></p>
+Returns the element for a given `targetElementId`
 
-<p>This method is available to all extension script contexts (content scripts, background pages and other extension pages) and returns the element for a given <code>info.targetElementId</code>, provided that the element still exists in the document where the method is invoked.</p>
+This method is available to all extension script contexts (content scripts, background pages and other extension pages) and returns the element for a given `info.targetElementId`, provided that the element still exists in the document where the method is invoked.
 
-<p>The method only works in the document that includes the right-clicked element and the <code>targetElementId</code> expires when the user opens another context menu.</p>
+The method only works in the document that includes the right-clicked element and the `targetElementId` expires when the user opens another context menu.
 
-<div class="notecard note">
-<p><strong>Note:</strong> <code>menus.getTargetElement</code> only return the requested element if called in the same context as the document that contains the element, for example using content scripts (as shown in the example below).</p>
-</div>
+> **Note:** `menus.getTargetElement` only return the requested element if called in the same context as the document that contains the element, for example using content scripts (as shown in the example below).
 
-<p>An extension requires the "menus" permission to use this API.</p>
+An extension requires the "menus" permission to use this API.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let elem = browser.menus.getTargetElement(targetElementId);
-</pre>
+```js
+let elem = browser.menus.getTargetElement(targetElementId);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>targetElementId</code></dt>
- <dd>The property of the <code>{{WebExtAPIRef("menus.OnClickData")}}</code> object passed to the <code>{{WebExtAPIRef("menus.onClicked")}}</code> handler or <code>{{WebExtAPIRef("menus.onShown")}}</code> event.</dd>
-</dl>
+- `targetElementId`
+  - : The property of the `{{WebExtAPIRef("menus.OnClickData")}}` object passed to the `{{WebExtAPIRef("menus.onClicked")}}` handler or `{{WebExtAPIRef("menus.onShown")}}` event.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>The element referred to by the <code>targetElementId</code> parameter. If the <code>targetElementId</code> parameter is not valid, the method returns <code>null</code>.</p>
+The element referred to by the `targetElementId` parameter. If the `targetElementId` parameter is not valid, the method returns `null`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following example uses the <code>getTargetElement</code> method to get the element referred to by the <code>info.targetElementId</code> property and then removes it.</p>
+The following example uses the `getTargetElement` method to get the element referred to by the `info.targetElementId` property and then removes it.
 
-<pre class="brush: js">browser.menus.create({
+```js
+browser.menus.create({
   title: "Remove element",
   documentUrlPatterns: ["*://*/*"],
   contexts: ["audio", "editable", "frame", "image", "link", "page", "password", "video"],
@@ -55,17 +53,15 @@ browser-compat: webextensions.api.menus.getTargetElement
     });
   },
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{WebExtAPIRef("menus.create")}}</li>
- <li>{{WebExtAPIRef("menus.OnClickData")}}</li>
-</ul>
+- {{WebExtAPIRef("menus.create")}}
+- {{WebExtAPIRef("menus.OnClickData")}}

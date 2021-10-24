@@ -13,75 +13,72 @@ tags:
   - getTitle
 browser-compat: webextensions.api.browserAction.getTitle
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Gets the browser action's title.</p>
+Gets the browser action's title.
 
-<p>Just as you can set the title on a per-tab basis using {{WebExtAPIRef("browserAction.setTitle()")}}, so you can retrieve a tab-specific title by passing the tab's ID into this function.</p>
+Just as you can set the title on a per-tab basis using {{WebExtAPIRef("browserAction.setTitle()")}}, so you can retrieve a tab-specific title by passing the tab's ID into this function.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var gettingTitle = browser.browserAction.getTitle(
+```js
+var gettingTitle = browser.browserAction.getTitle(
   details               // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p>An object with the following properties:</p>
- <dl>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Specify the tab to get the title from.</dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Specify the window to get the title from.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
-<ul>
- <li>If <code>windowId</code> and <code>tabId</code> are both supplied, the function fails and the promise it returns is rejected.</li>
- <li>If <code>windowId</code> and <code>tabId</code> are both omitted, the global title is returned.</li>
-</ul>
+  - : An object with the following properties:
 
-<h3 id="Return_value">Return value</h3>
+    - `tabId`{{optional_inline}}
+      - : `integer`. Specify the tab to get the title from.
+    - `windowId`{{optional_inline}}
+      - : `integer`. Specify the window to get the title from.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a string containing the browser action's title.</p>
+<!---->
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- If `windowId` and `tabId` are both supplied, the function fails and the promise it returns is rejected.
+- If `windowId` and `tabId` are both omitted, the global title is returned.
 
-<p>{{Compat}}</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string containing the browser action's title.
 
-<p>This code switches the title between "this" and "that" each time the user clicks the browser action:</p>
+## Browser compatibility
 
-<pre class="brush: js">function toggleTitle(title) {
-  if (title == &quot;this&quot;) {
-    browser.browserAction.setTitle({title: &quot;that&quot;});
+{{Compat}}
+
+## Examples
+
+This code switches the title between "this" and "that" each time the user clicks the browser action:
+
+```js
+function toggleTitle(title) {
+  if (title == "this") {
+    browser.browserAction.setTitle({title: "that"});
   } else {
-    browser.browserAction.setTitle({title: &quot;this&quot;});
+    browser.browserAction.setTitle({title: "this"});
   }
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   var gettingTitle = browser.browserAction.getTitle({});
   gettingTitle.then(toggleTitle);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-getTitle) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction#method-getTitle"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -108,5 +105,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

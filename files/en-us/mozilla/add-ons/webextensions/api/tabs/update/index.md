@@ -13,85 +13,83 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.update
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Navigate the tab to a new URL, or modify other properties of the tab.</p>
+Navigate the tab to a new URL, or modify other properties of the tab.
 
-<p>To use this function, pass the ID of the tab to update, and an <code>updateProperties</code> object containing the properties you want to update. Properties that are not specified in <code>updateProperties</code> are not modified.</p>
+To use this function, pass the ID of the tab to update, and an `updateProperties` object containing the properties you want to update. Properties that are not specified in `updateProperties` are not modified.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var updating = browser.tabs.update(
+```js
+var updating = browser.tabs.update(
   tabId,              // optional integer
   updateProperties    // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>tabId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. Defaults to the selected tab of the current window.</dd>
- <dt><code>updateProperties</code></dt>
- <dd>
-   <p><code>object</code>. The set of properties to update for this tab. To learn more about these properties, see the {{WebExtAPIRef("tabs.Tab")}} documentation.</p>
-   <dl>
-    <dt><code>active</code>{{optional_inline}}</dt>
-    <dd><code>boolean</code>. Whether the tab should become active. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). If <code>true</code>, non-active highlighted tabs will stop being highlighted. If <code>false</code>, does nothing.</dd>
-    <dt><code>autoDiscardable</code>{{optional_inline}}</dt>
-    <dd><code>boolean</code>. Whether the tab should be discarded automatically by the browser when resources are low.</dd>
-    <dt><code>highlighted</code>{{optional_inline}}</dt>
-    <dd>
-    <p><code>boolean</code>. Adds or removes the tab from the current selection. If <code>true</code> and the tab is not highlighted, it will become active by default.</p>
+- `tabId`{{optional_inline}}
+  - : `integer`. Defaults to the selected tab of the current window.
+- `updateProperties`
 
-    <p>If you only want to highlight the tab without activating it, Firefox accepts setting <code>highlighted</code> to <code>true</code> and <code>active</code> to <code>false</code>. Other browsers may activate the tab even in this case.</p>
-    </dd>
-    <dt><code>loadReplace</code>{{optional_inline}}</dt>
-    <dd>
-    <p><code>boolean</code>. Whether the new URL should replace the old URL in the tab's navigation history, as accessed via the "Back" button.</p>
+  - : `object`. The set of properties to update for this tab. To learn more about these properties, see the {{WebExtAPIRef("tabs.Tab")}} documentation.
 
-    <p>For example, suppose the user creates a new tab using Ctrl+T. By default, in Firefox, this would load "about:newtab". If your extension then updates this page using {{WebExtAPIRef("tabs.update")}}, without <code>loadReplace</code>, the "Back" button will be enabled and will take the user back to "about:newtab". If the extension sets <code>loadReplace</code>, then the "Back" button will be disabled and it will be just as if the URL supplied by the extension was the first page visited in that tab.</p>
+    - `active`{{optional_inline}}
+      - : `boolean`. Whether the tab should become active. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). If `true`, non-active highlighted tabs will stop being highlighted. If `false`, does nothing.
+    - `autoDiscardable`{{optional_inline}}
+      - : `boolean`. Whether the tab should be discarded automatically by the browser when resources are low.
+    - `highlighted`{{optional_inline}}
 
-    <p>Note though that the original URL will still appear in the browser's global history.</p>
-    </dd>
-    <dt><code>muted</code>{{optional_inline}}</dt>
-    <dd><code>boolean</code>. Whether the tab should be muted.</dd>
-    <dt><code>openerTabId</code>{{optional_inline}}</dt>
-    <dd><code>integer</code>. The ID of the tab that opened this tab. If specified, the opener tab must be in the same window as this tab.</dd>
-    <dt><code>pinned</code>{{optional_inline}}</dt>
-    <dd><code>boolean</code>. Whether the tab should be pinned.</dd>
-    <dt><code>selected</code> {{deprecated_inline}} {{optional_inline}}</dt>
-    <dd><code>boolean</code>. Whether the tab should be selected. This property has been replaced by <code>active</code> and <code>highlighted</code>.</dd>
-    <dt><code>successorTabId</code> {{optional_inline}}</dt>
-    <dd><code>integer</code>. The id of the ID of the tab's successor.</dd>
-    <dt><code>url</code>{{optional_inline}}</dt>
-    <dd>
-      <p><code>string</code>. A URL to navigate the tab to.</p>
-      <p>For security reasons, in Firefox, this may not be a privileged URL. So passing any of the following URLs will fail, with {{WebExtAPIRef("runtime.lastError")}} being set to an error message:</p>
-      <ul>
-       <li>chrome: URLs</li>
-       <li>javascript: URLs</li>
-       <li>data: URLs</li>
-       <li>file: URLs (i.e., files on the filesystem. However, to use a file packaged inside the extension, see below)</li>
-       <li>privileged about: URLs (for example, <code>about:config</code>, <code>about:addons</code>, <code>about:debugging</code>, <code>about:newtab</code>). Non-privileged URLs (e.g., <code>about:blank</code>) are allowed.</li>
-      </ul>
-      <p>To load a page that's packaged with your extension, specify an absolute URL starting at the extension's manifest.json file. For example: '/path/to/my-page.html'. If you omit the leading '/', the URL is treated as a relative URL, and different browsers may construct different absolute URLs.</p>
-    </dd>
-   </dl>
- </dd>
-</dl>
+      - : `boolean`. Adds or removes the tab from the current selection. If `true` and the tab is not highlighted, it will become active by default.
 
-<h3 id="Return_value">Return value</h3>
+        If you only want to highlight the tab without activating it, Firefox accepts setting `highlighted` to `true` and `active` to `false`. Other browsers may activate the tab even in this case.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the updated tab. The {{WebExtAPIRef('tabs.Tab')}} object doesn't contain <code>url</code>, <code>title</code> and <code>favIconUrl</code> unless matching <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> or the <code>"tabs"</code> permission has been requested. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.</p>
+    - `loadReplace`{{optional_inline}}
 
-<h2 id="Examples">Examples</h2>
+      - : `boolean`. Whether the new URL should replace the old URL in the tab's navigation history, as accessed via the "Back" button.
 
-<p>Navigate the active tab in the current window to https://developer.mozilla.org:</p>
+        For example, suppose the user creates a new tab using Ctrl+T. By default, in Firefox, this would load "about:newtab". If your extension then updates this page using {{WebExtAPIRef("tabs.update")}}, without `loadReplace`, the "Back" button will be enabled and will take the user back to "about:newtab". If the extension sets `loadReplace`, then the "Back" button will be disabled and it will be just as if the URL supplied by the extension was the first page visited in that tab.
 
-<pre class="brush: js">function onUpdated(tab) {
+        Note though that the original URL will still appear in the browser's global history.
+
+    - `muted`{{optional_inline}}
+      - : `boolean`. Whether the tab should be muted.
+    - `openerTabId`{{optional_inline}}
+      - : `integer`. The ID of the tab that opened this tab. If specified, the opener tab must be in the same window as this tab.
+    - `pinned`{{optional_inline}}
+      - : `boolean`. Whether the tab should be pinned.
+    - `selected` {{deprecated_inline}} {{optional_inline}}
+      - : `boolean`. Whether the tab should be selected. This property has been replaced by `active` and `highlighted`.
+    - `successorTabId` {{optional_inline}}
+      - : `integer`. The id of the ID of the tab's successor.
+    - `url`{{optional_inline}}
+
+      - : `string`. A URL to navigate the tab to.
+
+        For security reasons, in Firefox, this may not be a privileged URL. So passing any of the following URLs will fail, with {{WebExtAPIRef("runtime.lastError")}} being set to an error message:
+
+        - chrome: URLs
+        - javascript: URLs
+        - data: URLs
+        - file: URLs (i.e., files on the filesystem. However, to use a file packaged inside the extension, see below)
+        - privileged about: URLs (for example, `about:config`, `about:addons`, `about:debugging`, `about:newtab`). Non-privileged URLs (e.g., `about:blank`) are allowed.
+
+        To load a page that's packaged with your extension, specify an absolute URL starting at the extension's manifest.json file. For example: '/path/to/my-page.html'. If you omit the leading '/', the URL is treated as a relative URL, and different browsers may construct different absolute URLs.
+
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the updated tab. The {{WebExtAPIRef('tabs.Tab')}} object doesn't contain `url`, `title` and `favIconUrl` unless matching [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or the `"tabs"` permission has been requested. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
+
+## Examples
+
+Navigate the active tab in the current window to https\://developer.mozilla.org:
+
+```js
+function onUpdated(tab) {
   console.log(`Updated tab: ${tab.id}`);
 }
 
@@ -100,11 +98,13 @@ function onError(error) {
 }
 
 var updating = browser.tabs.update({url: "https://developer.mozilla.org"});
-updating.then(onUpdated, onError);</pre>
+updating.then(onUpdated, onError);
+```
 
-<p>Activate the first tab in the current window, and navigate it to https://developer.mozilla.org:</p>
+Activate the first tab in the current window, and navigate it to https\://developer.mozilla.org:
 
-<pre class="brush: js">function onUpdated(tab) {
+```js
+function onUpdated(tab) {
   console.log(`Updated tab: ${tab.id}`);
 }
 
@@ -121,22 +121,20 @@ function updateFirstTab(tabs) {
 }
 
 var querying = browser.tabs.query({currentWindow:true});
-querying.then(updateFirstTab, onError);</pre>
+querying.then(updateFirstTab, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-update) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-update"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -163,5 +161,4 @@ querying.then(updateFirstTab, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

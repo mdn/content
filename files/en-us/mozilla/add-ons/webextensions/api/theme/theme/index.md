@@ -9,16 +9,16 @@ tags:
   - add-on
 browser-compat: webextensions.api.theme.Theme
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A Theme object represents the specification of a theme.</p>
+A Theme object represents the specification of a theme.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>A JSON <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a> that takes the same properties as the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">"theme"</a> manifest key.</p>
+A JSON [object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) that takes the same properties as the ["theme"](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) manifest key.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

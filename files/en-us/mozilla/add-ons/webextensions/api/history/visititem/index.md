@@ -13,41 +13,36 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.history.VisitItem
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>An object describing a single visit to a page.</p>
+An object describing a single visit to a page.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>id</code></dt>
- <dd><code>string</code>. The unique identifier for the {{WebExtAPIRef("history.HistoryItem")}} associated with this visit.</dd>
- <dt><code>visitId</code></dt>
- <dd><code>string</code>. The unique identifier for this visit.</dd>
- <dt><code>visitTime</code>{{optional_inline}}</dt>
- <dd><code>number</code>. When this visit occurred, represented in milliseconds since the epoch.</dd>
- <dt><code>referringVisitId</code></dt>
- <dd><code>string</code>. The visit ID of the referrer.</dd>
- <dt><code>transition</code></dt>
- <dd>{{WebExtAPIRef('history.TransitionType')}}. Describes how the browser navigated to the page on this occasion.</dd>
-</dl>
+- `id`
+  - : `string`. The unique identifier for the {{WebExtAPIRef("history.HistoryItem")}} associated with this visit.
+- `visitId`
+  - : `string`. The unique identifier for this visit.
+- `visitTime`{{optional_inline}}
+  - : `number`. When this visit occurred, represented in milliseconds since the epoch.
+- `referringVisitId`
+  - : `string`. The visit ID of the referrer.
+- `transition`
+  - : {{WebExtAPIRef('history.TransitionType')}}. Describes how the browser navigated to the page on this occasion.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#type-VisitItem) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/history#type-VisitItem"><code>chrome.history</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -74,5 +69,4 @@ browser-compat: webextensions.api.history.VisitItem
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

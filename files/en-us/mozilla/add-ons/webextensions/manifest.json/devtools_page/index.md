@@ -11,38 +11,39 @@ tags:
   - devtools_page
 browser-compat: webextensions.manifest.devtools_page
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json">
-"devtools_page": "devtools/my-page.html"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json">"devtools_page": "devtools/my-page.html"</pre>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Use this key to enable your extension to extend the browser's built-in devtools.</p>
+Use this key to enable your extension to extend the browser's built-in devtools.
 
-<p>This key is defined as a URL to an HTML file. The HTML file must be bundled with the extension, and the URL is relative to the extension's root.</p>
+This key is defined as a URL to an HTML file. The HTML file must be bundled with the extension, and the URL is relative to the extension's root.
 
-<p>See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools">Extending the developer tools</a> to learn more.</p>
+See [Extending the developer tools](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools) to learn more.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: json">"devtools_page": "devtools/my-page.html"</pre>
+```json
+"devtools_page": "devtools/my-page.html"
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -10,39 +10,41 @@ tags:
   - contentScripts
 browser-compat: webextensions.api.contentScripts.RegisteredContentScript.unregister
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Unregisters the content scripts represented by this <code>RegisteredContentScript</code> object.</p>
+Unregisters the content scripts represented by this `RegisteredContentScript` object.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">registered.unregister()
-</pre>
+```js
+registered.unregister()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code toggles a registered content script on a browser action click:</p>
+This code toggles a registered content script on a browser action click:
 
-<pre class="brush: js">var registered = null;
+```js
+var registered = null;
 
 async function register() {
 
   registered = await browser.contentScripts.register({
     matches: ["*://*.org/*"],
     js: [{
-      code: "document.body.innerHTML = '&lt;h1&gt;This page has been eaten&lt;h1&gt;'"
+      code: "document.body.innerHTML = '<h1>This page has been eaten<h1>'"
     }],
     runAt: "document_idle"
   });
@@ -59,6 +61,6 @@ function toggle() {
 }
 
 browser.browserAction.onClicked.addListener(toggle);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

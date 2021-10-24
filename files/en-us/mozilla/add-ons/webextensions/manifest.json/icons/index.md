@@ -7,77 +7,78 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.icons
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>Object</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json">
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>Object</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json">
 "icons": {
   "48": "icon.png",
   "96": "icon@2x.png"
-}</pre>
-   </td>
-  </tr>
- </tbody>
+}</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The <code>icons</code> key specifies icons for your extension. Those icons will be used to represent the extension in components such as the Add-ons Manager.</p>
+The `icons` key specifies icons for your extension. Those icons will be used to represent the extension in components such as the Add-ons Manager.
 
-<p>It consists of key-value pairs of image size in px and image path relative to the root directory of the extension.</p>
+It consists of key-value pairs of image size in px and image path relative to the root directory of the extension.
 
-<p>If <code>icons</code> is not supplied, a standard extension icon will be used by default.</p>
+If `icons` is not supplied, a standard extension icon will be used by default.
 
-<p>You should supply at least a main extension icon, ideally 48x48 px in size. This is the default icon that will be used in the Add-ons Manager. You may, however, supply icons of any size and Firefox will attempt to find the best icon to display in different components.</p>
+You should supply at least a main extension icon, ideally 48x48 px in size. This is the default icon that will be used in the Add-ons Manager. You may, however, supply icons of any size and Firefox will attempt to find the best icon to display in different components.
 
-<p>Firefox will consider the screen resolution when choosing an icon. To deliver the best visual experience to users with high-resolution displays, such as Retina displays, provide double-sized versions of all your icons.</p>
+Firefox will consider the screen resolution when choosing an icon. To deliver the best visual experience to users with high-resolution displays, such as Retina displays, provide double-sized versions of all your icons.
 
-<h2 id="Example">Example</h2>
+## Example
 
-<p>The keys in the <code>icons</code> object specify the icon size in px, values specify the relative icon path. This example contains a 48px extension icon and a larger version for high-resolution displays.</p>
+The keys in the `icons` object specify the icon size in px, values specify the relative icon path. This example contains a 48px extension icon and a larger version for high-resolution displays.
 
-<pre class="brush: json">"icons": {
+```json
+"icons": {
   "48": "icon.png",
   "96": "icon@2x.png"
-}</pre>
+}
+```
 
-<h2 id="SVG">SVG</h2>
+## SVG
 
-<p>You can use SVG and the browser will scale your icon appropriately. There are currently two caveats though:</p>
+You can use SVG and the browser will scale your icon appropriately. There are currently two caveats though:
 
-<ol>
- <li>You need to specify a viewBox in the image. E.g.:
-  <pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48"&gt;
-  &lt;!-- your svg content --&gt;
-&lt;/svg&gt;
-</pre>
- </li>
- <li>Even though you can use one file, you still need to specify various size of the icon in your manifest. E.g.:
-  <pre class="brush: json">"icons": {
-  "48": "icon.svg",
-  "96": "icon.svg"
-}</pre>
- </li>
-</ol>
+1.  You need to specify a viewBox in the image. E.g.:
 
-<div class="notecard note">
-<p><strong>Note:</strong> Remember to include the <code>xmlns</code> attribute when creating the SVG. Otherwise, Firefox won't be able to display the icon.</p>
-</div>
+    ```html
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+      <!-- your svg content -->
+    </svg>
+    ```
 
-<div class="note">
-<p><strong>Note:</strong> If you are using a program like Inkscape for creating SVG, you might want to save it as a "plain SVG". Firefox might be confused by various special namespaces and not display your icon.</p>
-</div>
+2.  Even though you can use one file, you still need to specify various size of the icon in your manifest. E.g.:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    ```json
+    "icons": {
+      "48": "icon.svg",
+      "96": "icon.svg"
+    }
+    ```
 
-<p>{{Compat}}</p>
+> **Note:** Remember to include the `xmlns` attribute when creating the SVG. Otherwise, Firefox won't be able to display the icon.
+
+> **Note:** If you are using a program like Inkscape for creating SVG, you might want to save it as a "plain SVG". Firefox might be confused by various special namespaces and not display your icon.
+
+## Browser compatibility
+
+{{Compat}}

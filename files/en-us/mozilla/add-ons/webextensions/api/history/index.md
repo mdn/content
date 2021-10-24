@@ -12,95 +12,72 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.history
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Use the <code>history</code> API to interact with the browser history.</p>
+Use the `history` API to interact with the browser history.
 
-<p>If you are looking for information about the browser session history, see the <a href="/en-US/docs/Web/API/History">History interface</a>.</p>
+If you are looking for information about the browser session history, see the [History interface](/en-US/docs/Web/API/History).
 
-<div class="note">
-<p><strong>Note:</strong> Downloads are treated as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem" title="A HistoryItem object provides information about a page in the browser history."><code>HistoryItem</code></a> objects. Therefore, events such as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited" title="Fired each time the user visits a page. A history.HistoryItem object is passed to the listener. This event fires before the page has loaded."><code>history.onVisited</code></a> fire for downloads.</p>
-</div>
+> **Note:** Downloads are treated as [`HistoryItem`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem "A HistoryItem object provides information about a page in the browser history.") objects. Therefore, events such as [`history.onVisited`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited "Fired each time the user visits a page. A history.HistoryItem object is passed to the listener. This event fires before the page has loaded.") fire for downloads.
 
-<p>Browser history is a chronological record of pages the user has visited. The history API enables you to:</p>
+Browser history is a chronological record of pages the user has visited. The history API enables you to:
 
-<ul>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/search">search for pages that appear in the browser history</a></li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteUrl">remove individual pages from the browser history</a></li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/addUrl">add pages to the browser history</a></li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteAll">remove all pages from the browser history</a>.</li>
-</ul>
+- [search for pages that appear in the browser history](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/search)
+- [remove individual pages from the browser history](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteUrl)
+- [add pages to the browser history](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/addUrl)
+- [remove all pages from the browser history](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteAll).
 
-<p>However, the user may have visited a single page multiple times, so the API also has the concept of "visits". So you can also use this API to:</p>
+However, the user may have visited a single page multiple times, so the API also has the concept of "visits". So you can also use this API to:
 
-<ul>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/getVisits">retrieve the complete set of visits the user made to a particular page</a></li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteRange">remove visits to any pages made during a given time period</a>.</li>
-</ul>
+- [retrieve the complete set of visits the user made to a particular page](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/getVisits)
+- [remove visits to any pages made during a given time period](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteRange).
 
-<p>To use this API, an extension must request the "history" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> in its <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> file.</p>
+To use this API, an extension must request the "history" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("history.TransitionType")}}</dt>
- <dd>Describes how the browser navigated to a particular page.</dd>
- <dt>{{WebExtAPIRef("history.HistoryItem")}}</dt>
- <dd>
- <p>Provides information about a particular page in the browser history.</p>
- </dd>
- <dt>{{WebExtAPIRef("history.VisitItem")}}</dt>
- <dd>
- <p>Describes a single visit to a page.</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("history.TransitionType")}}
+  - : Describes how the browser navigated to a particular page.
+- {{WebExtAPIRef("history.HistoryItem")}}
+  - : Provides information about a particular page in the browser history.
+- {{WebExtAPIRef("history.VisitItem")}}
+  - : Describes a single visit to a page.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("history.search()")}}</dt>
- <dd>Searches the browser history for <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem" title="A HistoryItem object provides information about one result from a history query."><code>history.HistoryItem</code></a> objects matching the given criteria.</dd>
- <dt>{{WebExtAPIRef("history.getVisits()")}}</dt>
- <dd>Retrieves information about visits to a given page.</dd>
- <dt>{{WebExtAPIRef("history.addUrl()")}}</dt>
- <dd>Adds a record to the browser history of a visit to the given page.</dd>
- <dt>{{WebExtAPIRef("history.deleteUrl()")}}</dt>
- <dd>Removes all visits to the given URL from the browser history.</dd>
- <dt>{{WebExtAPIRef("history.deleteRange()")}}</dt>
- <dd>Removes all visits to pages that the user made during the given time range.</dd>
- <dt>{{WebExtAPIRef("history.deleteAll()")}}</dt>
- <dd>Removes all visits from the browser history.</dd>
-</dl>
+- {{WebExtAPIRef("history.search()")}}
+  - : Searches the browser history for [`history.HistoryItem`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem "A HistoryItem object provides information about one result from a history query.") objects matching the given criteria.
+- {{WebExtAPIRef("history.getVisits()")}}
+  - : Retrieves information about visits to a given page.
+- {{WebExtAPIRef("history.addUrl()")}}
+  - : Adds a record to the browser history of a visit to the given page.
+- {{WebExtAPIRef("history.deleteUrl()")}}
+  - : Removes all visits to the given URL from the browser history.
+- {{WebExtAPIRef("history.deleteRange()")}}
+  - : Removes all visits to pages that the user made during the given time range.
+- {{WebExtAPIRef("history.deleteAll()")}}
+  - : Removes all visits from the browser history.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("history.onTitleChanged")}}</dt>
- <dd>
- <div>Fired when the title of a page visited by the user is recorded.</div>
- </dd>
- <dt>{{WebExtAPIRef("history.onVisited")}}</dt>
- <dd>Fired each time the user visits a page, providing the {{WebExtAPIRef("history.HistoryItem")}} data for that page.</dd>
- <dt>{{WebExtAPIRef("history.onVisitRemoved")}}</dt>
- <dd>
- <p>Fired when a URL is removed completely from the browser history.</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("history.onTitleChanged")}}
+  - : Fired when the title of a page visited by the user is recorded.
+- {{WebExtAPIRef("history.onVisited")}}
+  - : Fired each time the user visits a page, providing the {{WebExtAPIRef("history.HistoryItem")}} data for that page.
+- {{WebExtAPIRef("history.onVisitRemoved")}}
+  - : Fired when a URL is removed completely from the browser history.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
+> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/history"><code>chrome.history</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -127,5 +104,4 @@ browser-compat: webextensions.api.history
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

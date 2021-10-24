@@ -15,61 +15,52 @@ tags:
   - userScripts
 browser-compat: webextensions.api.userScripts.onBeforeScript
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}The `onBeforeScript` event of the {{WebExtAPIRef("userScripts","browser.userScripts")}} is fired before a user script is executed. It can only be included in the API script, the script registered in [`"user_scripts"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts), where it is used to detect that the custom API methods should be exported to the user script.
 
-<div>The <code>onBeforeScript</code> event of the {{WebExtAPIRef("userScripts","browser.userScripts")}} is fired before a user script is executed. It can only be included in the API script, the script registered in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">"user_scripts"</a></code>, where it is used to detect that the custom API methods should be exported to the user script.</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush: js">browser.userScripts.onBeforeScript.addListener(listener)
+```js
+browser.userScripts.onBeforeScript.addListener(listener)
 browser.userScripts.onBeforeScript.removeListener(listener)
 browser.userScripts.onBeforeScript.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(listener)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>listener</code></dt>
- <dd>
- <p>A function that is called when this event occurs. The function is passed the following arguments:</p>
+- `listener`
 
- <dl>
-  <dt><code>script</code></dt>
-  <dd>
-    <p>An <code>object</code> that represents the user script that matched a web page. Its properties and methods are as follows:</p>
-    <dl>
-     <dt><code>defineGlobals</code></dt>
-     <dd>A method that exports an object containing properties and methods available globally to the user script sandbox. This method must be called synchronously to guarantee that the user script has not executed.</dd>
-     <dt><code>export</code></dt>
-     <dd>A method that converts a value to one that the user script code can access. This method is used in API methods exported to the user script to result or resolve non-primitive values. The exported objects can also provide methods that the user script code can access and call.</dd>
-     <dt><code>global</code></dt>
-     <dd> An <code>object</code> that provides access to the sandbox for the user script.</dd>
-     <dt><code>metadata</code></dt>
-     <dd>The <code>scriptMetadata</code> property set when the user script was registered using <code>userScripts.register</code>.</dd>
-    </dl>
-    </dd>
-   </dl>
- </dd>
-</dl>
+  - : A function that is called when this event occurs. The function is passed the following arguments:
 
-<h2 id="Examples">Examples</h2>
+    - `script`
 
-<p>An example of how the listener might be used:</p>
+      - : An `object` that represents the user script that matched a web page. Its properties and methods are as follows:
 
-<pre class="brush: js">browser.userScripts.onBeforeScript.addListener(function (script) {
+        - `defineGlobals`
+          - : A method that exports an object containing properties and methods available globally to the user script sandbox. This method must be called synchronously to guarantee that the user script has not executed.
+        - `export`
+          - : A method that converts a value to one that the user script code can access. This method is used in API methods exported to the user script to result or resolve non-primitive values. The exported objects can also provide methods that the user script code can access and call.
+        - `global`
+          - :  An `object` that provides access to the sandbox for the user script.
+        - `metadata`
+          - : The `scriptMetadata` property set when the user script was registered using `userScripts.register`.
+
+## Examples
+
+An example of how the listener might be used:
+
+```js
+browser.userScripts.onBeforeScript.addListener(function (script) {
 
   script // This is an API object that represents the user script
          // that is going to be executed.
@@ -109,17 +100,13 @@ browser.userScripts.onBeforeScript.hasListener(listener)
     // exported methods can also be declared as async
     },
   });
-});</pre>
+});
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<div>
+{{Compat}}
 
-<p>{{Compat}}</p>
-</div>
+## See also
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>{{WebExtAPIRef("contentScripts")}}</li>
-</ul>
+- {{WebExtAPIRef("contentScripts")}}

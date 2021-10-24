@@ -9,57 +9,49 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.notifications
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Display notifications to the user, using the underlying operating system's notification mechanism. Because this API uses the operating system's notification mechanism, the details of how notifications appear and behave may differ according to the operating system and the user's settings.</p>
+Display notifications to the user, using the underlying operating system's notification mechanism. Because this API uses the operating system's notification mechanism, the details of how notifications appear and behave may differ according to the operating system and the user's settings.
 
-<p>To use this API you need to have the "notifications" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
+To use this API you need to have the "notifications" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<p>The notification looks the same on all desktop operating systems. Something like:</p>
+The notification looks the same on all desktop operating systems. Something like:
 
-<p><img alt="" src="notification.png"></p>
+![](notification.png)
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("notifications.NotificationOptions")}}</dt>
- <dd>Defines the content of a notification.</dd>
- <dt>{{WebExtAPIRef("notifications.TemplateType")}}</dt>
- <dd>The type of notification. For example, this defines whether the notification can contain an image.</dd>
-</dl>
+- {{WebExtAPIRef("notifications.NotificationOptions")}}
+  - : Defines the content of a notification.
+- {{WebExtAPIRef("notifications.TemplateType")}}
+  - : The type of notification. For example, this defines whether the notification can contain an image.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("notifications.clear()")}}</dt>
- <dd>Clear a specific notification, given its ID.</dd>
- <dt>{{WebExtAPIRef("notifications.create()")}}</dt>
- <dd>Create and display a new notification.</dd>
- <dt>{{WebExtAPIRef("notifications.getAll()")}}</dt>
- <dd>Get all notifications.</dd>
- <dt>{{WebExtAPIRef("notifications.update()")}}</dt>
- <dd>Update a notification.</dd>
-</dl>
+- {{WebExtAPIRef("notifications.clear()")}}
+  - : Clear a specific notification, given its ID.
+- {{WebExtAPIRef("notifications.create()")}}
+  - : Create and display a new notification.
+- {{WebExtAPIRef("notifications.getAll()")}}
+  - : Get all notifications.
+- {{WebExtAPIRef("notifications.update()")}}
+  - : Update a notification.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("notifications.onButtonClicked")}}</dt>
- <dd>Fired when the user clicked a button in the notification.</dd>
- <dt>{{WebExtAPIRef("notifications.onClicked")}}</dt>
- <dd>Fired when the user clicked the notification, but not on a button.</dd>
- <dt>{{WebExtAPIRef("notifications.onClosed")}}</dt>
- <dd>Fired when a notification closed, either by the system or because the user dismissed it.</dd>
- <dt>{{WebExtAPIRef("notifications.onShown")}}</dt>
- <dd>Fired immediately after a notification has been shown.</dd>
-</dl>
+- {{WebExtAPIRef("notifications.onButtonClicked")}}
+  - : Fired when the user clicked a button in the notification.
+- {{WebExtAPIRef("notifications.onClicked")}}
+  - : Fired when the user clicked the notification, but not on a button.
+- {{WebExtAPIRef("notifications.onClosed")}}
+  - : Fired when a notification closed, either by the system or because the user dismissed it.
+- {{WebExtAPIRef("notifications.onShown")}}
+  - : Fired immediately after a notification has been shown.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/notifications"><code>chrome.notifications</code></a> API.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.

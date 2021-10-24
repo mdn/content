@@ -11,32 +11,34 @@ tags:
   - browserSettings
 browser-compat: webextensions.api.browserSettings.allowPopupsForUserEvents
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to enable or disable the ability of web pages to open popups in response to user actions.</p>
+A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to enable or disable the ability of web pages to open popups in response to user actions.
 
-<p>The underlying value is a boolean.</p>
+The underlying value is a boolean.
 
-<p>By default, browsers allow web pages to open popups in response to a particular set of events: for example, <a href="/en-US/docs/Web/API/Element/click_event">click</a>, <a href="/en-US/docs/Web/API/Element/mouseup_event">mouseup</a>, <a href="/en-US/docs/Web/API/HTMLFormElement/submit_event">submit</a>. If <code>allowPopupsForUserEvents</code> is set to <code>false</code>, no user events will be able to open popups. If it is set to <code>true</code>, the default set of events will be allowed to open popups.</p>
+By default, browsers allow web pages to open popups in response to a particular set of events: for example, [click](/en-US/docs/Web/API/Element/click_event), [mouseup](/en-US/docs/Web/API/Element/mouseup_event), [submit](/en-US/docs/Web/API/HTMLFormElement/submit_event). If `allowPopupsForUserEvents` is set to `false`, no user events will be able to open popups. If it is set to `true`, the default set of events will be allowed to open popups.
 
-<p>For example, suppose a web page has code like this:</p>
+For example, suppose a web page has code like this:
 
-<pre class="brush: js">window.addEventListener("click", (e) =&gt; {
+```js
+window.addEventListener("click", (e) => {
   window.open("https://example.com","myPopup",'height=400,width=400');
 });
-</pre>
+```
 
-<p>By default, this will open a popup window. If your extension sets <code>allowPopupsForUserEvents</code> to <code>false</code>, then it will not open a popup, and the user will be informed that the popup was blocked.</p>
+By default, this will open a popup window. If your extension sets `allowPopupsForUserEvents` to `false`, then it will not open a popup, and the user will be informed that the popup was blocked.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Toggle the setting:</p>
+Toggle the setting:
 
-<pre class="brush: js">function toggleAllowPopup() {
+```js
+function toggleAllowPopup() {
 
   function toggle(current) {
     console.log(`Current value: ${current.value}`);
@@ -46,9 +48,9 @@ browser-compat: webextensions.api.browserSettings.allowPopupsForUserEvents
   browser.browserSettings.allowPopupsForUserEvents.get({}).then(toggle);
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   toggleAllowPopup();
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

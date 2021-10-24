@@ -12,34 +12,36 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.print
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Call this function to print the contents of the active tab. If this function is called, the user will be presented with the print dialog from the underlying platform, and will have the chance to change the print settings and then print the currently active tab.</p>
+Call this function to print the contents of the active tab. If this function is called, the user will be presented with the print dialog from the underlying platform, and will have the chance to change the print settings and then print the currently active tab.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.tabs.print()
-</pre>
+```js
+browser.tabs.print()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In this example a background script listens for a click on a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2">browser action</a>, then tries to print the currently active tab:</p>
+In this example a background script listens for a click on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2), then tries to print the currently active tab:
 
-<pre class="brush: js">browser.browserAction.onClicked.addListener(() =&gt; {
+```js
+browser.browserAction.onClicked.addListener(() => {
   browser.tabs.print();
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -11,98 +11,69 @@ tags:
   - sessions
 browser-compat: webextensions.api.sessions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Use the sessions API to list, and restore, tabs and windows that have been closed while the browser has been running.</p>
+Use the sessions API to list, and restore, tabs and windows that have been closed while the browser has been running.
 
-<p>The {{WebExtAPIRef("sessions.getRecentlyClosed()")}} function returns an array of {{WebExtAPIRef("tabs.Tab")}} and {{WebExtAPIRef("windows.Window")}} objects, representing tabs and windows that have been closed since the browser was running, up to the maximum defined in {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}.</p>
+The {{WebExtAPIRef("sessions.getRecentlyClosed()")}} function returns an array of {{WebExtAPIRef("tabs.Tab")}} and {{WebExtAPIRef("windows.Window")}} objects, representing tabs and windows that have been closed since the browser was running, up to the maximum defined in {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}.
 
-<p>You can then restore a window or tab using the {{WebExtAPIRef("sessions.restore()")}} function. Restoring doesn't just reopen the tab: it also restores the tab's navigation history so the back/forward buttons will work.</p>
+You can then restore a window or tab using the {{WebExtAPIRef("sessions.restore()")}} function. Restoring doesn't just reopen the tab: it also restores the tab's navigation history so the back/forward buttons will work.
 
-<p>This API also provides a group of functions that enable an extension to store additional state associated with a tab or a window. Then, if the tab or window is closed and subsequently restored, the extension can retrieve the state. For example, a tab grouping extension might use this to remember which group a tab is in, so as to restore it into the right group if the user restores the tab.</p>
+This API also provides a group of functions that enable an extension to store additional state associated with a tab or a window. Then, if the tab or window is closed and subsequently restored, the extension can retrieve the state. For example, a tab grouping extension might use this to remember which group a tab is in, so as to restore it into the right group if the user restores the tab.
 
-<p>To use the sessions API you must have the "sessions" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a>.</p>
+To use the sessions API you must have the "sessions" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("sessions.Filter")}}</dt>
- <dd>Enables you to restrict the number of {{WebExtAPIRef("sessions.Session", "Session")}} objects returned by a call to {{WebExtAPIRef("sessions.getRecentlyClosed()")}}.</dd>
- <dt>{{WebExtAPIRef("sessions.Session")}}</dt>
- <dd>
- <p>Represents a tab or window that the user has closed in the current browsing session.</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("sessions.Filter")}}
+  - : Enables you to restrict the number of {{WebExtAPIRef("sessions.Session", "Session")}} objects returned by a call to {{WebExtAPIRef("sessions.getRecentlyClosed()")}}.
+- {{WebExtAPIRef("sessions.Session")}}
+  - : Represents a tab or window that the user has closed in the current browsing session.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}</dt>
- <dd>The maximum number of sessions that will be returned by a call to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed" title="Returns an array Session objects, representing windows and tabs that were closed in the current browsing session (that is: the time since the browser was started)."><code>sessions.getRecentlyClosed()</code></a>.</dd>
-</dl>
+- {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}
+  - : The maximum number of sessions that will be returned by a call to [`sessions.getRecentlyClosed()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed "Returns an array Session objects, representing windows and tabs that were closed in the current browsing session (that is: the time since the browser was started).").
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("sessions.forgetClosedTab()")}}</dt>
- <dd>Removes a closed tab from the browser's list of recently closed tabs.</dd>
- <dt>{{WebExtAPIRef("sessions.forgetClosedWindow()")}}</dt>
- <dd>Removes a closed window from the browser's list of recently closed windows.</dd>
- <dt>{{WebExtAPIRef("sessions.getRecentlyClosed()")}}</dt>
- <dd>Returns an array of {{WebExtAPIRef("sessions.Session", "Session")}} objects, representing windows and tabs that were closed in the current browsing session (that is: the time since the browser was started).</dd>
- <dt>{{WebExtAPIRef("sessions.restore()")}}</dt>
- <dd>
- <p>Restores a closed tab or window.</p>
- </dd>
- <dt>{{WebExtAPIRef("sessions.setTabValue()")}}</dt>
- <dd>
- <p>Store a key/value pair associated with a given tab.</p>
- </dd>
- <dt>{{WebExtAPIRef("sessions.getTabValue()")}}</dt>
- <dd>
- <p>Retrieve a previously stored value for a given tab, given its key.</p>
- </dd>
- <dt>{{WebExtAPIRef("sessions.removeTabValue()")}}</dt>
- <dd>
- <p>Remove a key/value pair from a given tab.</p>
- </dd>
- <dt>{{WebExtAPIRef("sessions.setWindowValue()")}}</dt>
- <dd>
- <p>Store a key/value pair associated with a given window.</p>
- </dd>
- <dt>{{WebExtAPIRef("sessions.getWindowValue()")}}</dt>
- <dd>
- <p>Retrieve a previously stored value for a given window, given its key.</p>
- </dd>
- <dt>{{WebExtAPIRef("sessions.removeWindowValue()")}}</dt>
- <dd>
- <p>Remove a key/value pair from a given window.</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("sessions.forgetClosedTab()")}}
+  - : Removes a closed tab from the browser's list of recently closed tabs.
+- {{WebExtAPIRef("sessions.forgetClosedWindow()")}}
+  - : Removes a closed window from the browser's list of recently closed windows.
+- {{WebExtAPIRef("sessions.getRecentlyClosed()")}}
+  - : Returns an array of {{WebExtAPIRef("sessions.Session", "Session")}} objects, representing windows and tabs that were closed in the current browsing session (that is: the time since the browser was started).
+- {{WebExtAPIRef("sessions.restore()")}}
+  - : Restores a closed tab or window.
+- {{WebExtAPIRef("sessions.setTabValue()")}}
+  - : Store a key/value pair associated with a given tab.
+- {{WebExtAPIRef("sessions.getTabValue()")}}
+  - : Retrieve a previously stored value for a given tab, given its key.
+- {{WebExtAPIRef("sessions.removeTabValue()")}}
+  - : Remove a key/value pair from a given tab.
+- {{WebExtAPIRef("sessions.setWindowValue()")}}
+  - : Store a key/value pair associated with a given window.
+- {{WebExtAPIRef("sessions.getWindowValue()")}}
+  - : Retrieve a previously stored value for a given window, given its key.
+- {{WebExtAPIRef("sessions.removeWindowValue()")}}
+  - : Remove a key/value pair from a given window.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("sessions.onChanged")}}</dt>
- <dd>
- <p>Fired when a tab or window is closed.</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("sessions.onChanged")}}
+  - : Fired when a tab or window is closed.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
+> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/extensions/sessions) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/sessions"><code>chrome.sessions</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -129,5 +100,4 @@ browser-compat: webextensions.api.sessions
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

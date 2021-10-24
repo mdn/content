@@ -12,45 +12,43 @@ tags:
   - pageAction
 browser-compat: webextensions.api.pageAction.isShown
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Returns <code>true</code> if the page action is being shown for the given tab.</p>
+Returns `true` if the page action is being shown for the given tab.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">let gettingIsShown = browser.pageAction.isShown(
+```js
+let gettingIsShown = browser.pageAction.isShown(
   details // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p><code>object</code>. An object containing the <code>tabId</code> to check.</p>
-   <dl>
-    <dt><code>tabId</code></dt>
-    <dd><code>integer</code>. ID of the tab to check.</dd>
-   </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Return_value">Return value</h3>
+  - : `object`. An object containing the `tabId` to check.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with <code>true</code> if the extension's page action is being shown for the given tab, and <code>false</code> otherwise.</p>
+    - `tabId`
+      - : `integer`. ID of the tab to check.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+### Return value
 
-<p>{{Compat}}</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension's page action is being shown for the given tab, and `false` otherwise.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>Check the state of the currently active tab:</p>
+{{Compat}}
 
-<pre class="brush: js">async function shownInActiveTab() {
+## Examples
+
+Check the state of the currently active tab:
+
+```js
+async function shownInActiveTab() {
   let tabs = await browser.tabs.query({
     currentWindow:true,
     active: true
@@ -59,6 +57,7 @@ browser-compat: webextensions.api.pageAction.isShown
     tabId: tabs[0].id
   });
   console.log(shown);
-}</pre>
+}
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

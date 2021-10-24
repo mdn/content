@@ -12,39 +12,34 @@ tags:
   - extensionTypes
 browser-compat: webextensions.api.extensionTypes
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Some common types used in other WebExtension APIs.</p>
+Some common types used in other WebExtension APIs.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("extensionTypes.ImageDetails")}}</dt>
- <dd>Details about the format and quality of an image.</dd>
- <dt>{{WebExtAPIRef("extensionTypes.ImageFormat")}}</dt>
- <dd>The format of an image.</dd>
- <dt>{{WebExtAPIRef("extensionTypes.InjectDetails")}}</dt>
- <dd>Injects details into a page.</dd>
- <dt>{{WebExtAPIRef("extensionTypes.RunAt")}}</dt>
- <dd>The soonest that the JavaScript or CSS will be injected into the tab.</dd>
- <dt><code>extensionTypes.CSSOrigin</code></dt>
- <dd>Indicates whether a CSS stylesheet injected by <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS">tabs.insertCSS</a></code> should be treated as an "author" or "user" stylesheet.</dd>
-</dl>
+- {{WebExtAPIRef("extensionTypes.ImageDetails")}}
+  - : Details about the format and quality of an image.
+- {{WebExtAPIRef("extensionTypes.ImageFormat")}}
+  - : The format of an image.
+- {{WebExtAPIRef("extensionTypes.InjectDetails")}}
+  - : Injects details into a page.
+- {{WebExtAPIRef("extensionTypes.RunAt")}}
+  - : The soonest that the JavaScript or CSS will be injected into the tab.
+- `extensionTypes.CSSOrigin`
+  - : Indicates whether a CSS stylesheet injected by [`tabs.insertCSS`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) should be treated as an "author" or "user" stylesheet.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
+> **Note:** This API is based on Chromium's [`chrome.extensionTypes`](https://developer.chrome.com/extensions/extensionTypes) API. This documentation is derived from [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/extensionTypes"><code>chrome.extensionTypes</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json"><code>extension_types.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -71,5 +66,4 @@ browser-compat: webextensions.api.extensionTypes
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

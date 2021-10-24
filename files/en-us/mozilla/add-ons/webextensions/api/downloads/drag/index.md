@@ -13,40 +13,36 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.drag
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code><strong>drag</strong></code><strong><code>()</code></strong> function of the {{WebExtAPIRef("downloads")}} API initiates dragging the downloaded file to another application.</p>
+The **`drag`\*\***`()`\*\* function of the {{WebExtAPIRef("downloads")}} API initiates dragging the downloaded file to another application.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">chrome.downloads.drag(
+```js
+chrome.downloads.drag(
   downloadId // integer
 )
-</pre>
+```
 
-<p>This API is also available as <code>browser.downloads.drag()</code>.</p>
+This API is also available as `browser.downloads.drag()`.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>downloadId</code></dt>
- <dd>An <code>integer</code> representing the <code>id</code> of the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} in question.</dd>
-</dl>
+- `downloadId`
+  - : An `integer` representing the `id` of the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} in question.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-drag) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#method-drag"><code>chrome.downloads</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -73,5 +69,4 @@ browser-compat: webextensions.api.downloads.drag
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

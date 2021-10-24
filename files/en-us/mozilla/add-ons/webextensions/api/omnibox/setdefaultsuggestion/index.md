@@ -12,44 +12,43 @@ tags:
   - setDefaultSuggestion
 browser-compat: webextensions.api.omnibox.setDefaultSuggestion
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Set the default suggestion to appear in the address bar drop-down list when the user starts interacting with your extension.</p>
+Set the default suggestion to appear in the address bar drop-down list when the user starts interacting with your extension.
 
-<p>Once the user has entered your keyword and started interacting with your extension, the default suggestion will always appear first in the drop-down list. Unlike the suggestions you supply in {{WebExtAPIRef("omnibox.onInputChanged")}}, this item can't be selected. Use it to provide the user with some guidance about what to type and what they can expect to see when they do.</p>
+Once the user has entered your keyword and started interacting with your extension, the default suggestion will always appear first in the drop-down list. Unlike the suggestions you supply in {{WebExtAPIRef("omnibox.onInputChanged")}}, this item can't be selected. Use it to provide the user with some guidance about what to type and what they can expect to see when they do.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.omnibox.setDefaultSuggestion(
+```js
+browser.omnibox.setDefaultSuggestion(
   suggestion            // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>suggestion</code></dt>
- <dd><code>object</code>. An object containing a single string property <code>description</code>, which will be displayed as the first item in the drop-down when the user starts interacting with your extension.</dd>
-</dl>
+- `suggestion`
+  - : `object`. An object containing a single string property `description`, which will be displayed as the first item in the drop-down when the user starts interacting with your extension.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">browser.omnibox.setDefaultSuggestion({
+```js
+browser.omnibox.setDefaultSuggestion({
   description: "Type the name of a CSS property"
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/omnibox">chrome.omnibox</a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [chrome.omnibox](https://developer.chrome.com/extensions/omnibox) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

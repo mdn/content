@@ -12,67 +12,66 @@ tags:
   - setImageData
 browser-compat: webextensions.api.clipboard.setImageData
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Copies an image to the clipboard. The image is re-encoded before it is written to the clipboard. If the image is invalid, the clipboard is not modified.</p>
+Copies an image to the clipboard. The image is re-encoded before it is written to the clipboard. If the image is invalid, the clipboard is not modified.
 
-<p>The image is provided as an <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> containing the encoded image. JPEG and PNG formats are supported.</p>
+The image is provided as an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) containing the encoded image. JPEG and PNG formats are supported.
 
-<p>Although this API is based on Chrome's <code><a href="https://developer.chrome.com/apps/clipboard">clipboard.setImageData()</a></code> API, there are some differences:</p>
+Although this API is based on Chrome's [`clipboard.setImageData()`](https://developer.chrome.com/apps/clipboard) API, there are some differences:
 
-<ul>
- <li>The Chrome API is only for apps, not extensions.</li>
- <li>This API requires only the <code>"clipboardWrite"</code> permission, while the Chrome version also requires the <code>"clipboard"</code> permission.</li>
- <li>Chrome's API uses callbacks, and this API only supports promises.</li>
- <li>This API does not support the <code>additionalItems</code> parameter.</li>
-</ul>
+- The Chrome API is only for apps, not extensions.
+- This API requires only the `"clipboardWrite"` permission, while the Chrome version also requires the `"clipboard"` permission.
+- Chrome's API uses callbacks, and this API only supports promises.
+- This API does not support the `additionalItems` parameter.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.clipboard.setImageData(<em>imageData</em>, <em>imageType</em>)
-</pre>
+```js
+browser.clipboard.setImageData(imageData, imageType)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>imageData</code></dt>
- <dd>An <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code> containing the encoded image data to copy to the clipboard.</dd>
- <dt><code>imageType</code></dt>
- <dd>A {{domxref("DOMString")}} indicating the type of image contained in <code>imageData</code>: <code>"png"</code> or <code>"jpeg"</code>.</dd>
-</dl>
+- `imageData`
+  - : An [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) containing the encoded image data to copy to the clipboard.
+- `imageType`
+  - : A {{domxref("DOMString")}} indicating the type of image contained in `imageData`: `"png"` or `"jpeg"`.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be resolved with no arguments if the operation succeeded, or rejected if there was an error (for example, because the data did not represent a valid image).</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be resolved with no arguments if the operation succeeded, or rejected if there was an error (for example, because the data did not represent a valid image).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Copy a remote image:</p>
+Copy a remote image:
 
-<pre class="brush: js">// requires:
-// * the host permission for "<a href="https://cdn.mdn.mozilla.net/" rel="nofollow">https://cdn.mdn.mozilla.net/</a>*"
+```js
+// requires:
+// * the host permission for "https://cdn.mdn.mozilla.net/*"
 // * the API permission "clipboardWrite"
 
-fetch('<a href="https://cdn.mdn.mozilla.net/static/img/favicon144.png" rel="nofollow">https://cdn.mdn.mozilla.net/static/img/favicon144.png</a>')
-.then(response =&gt; response.arrayBuffer())
-.then(buffer =&gt; browser.clipboard.setImageData(buffer, 'png'));</pre>
+fetch('https://cdn.mdn.mozilla.net/static/img/favicon144.png')
+.then(response => response.arrayBuffer())
+.then(buffer => browser.clipboard.setImageData(buffer, 'png'));
+```
 
-<p>Copy an image that was bundled with the extension:</p>
+Copy an image that was bundled with the extension:
 
-<pre class="brush: js">// requires the API permission "clipboardWrite"
+```js
+// requires the API permission "clipboardWrite"
 
 fetch(browser.runtime.getURL('image.png'))
-.then(response =&gt; response.arrayBuffer())
-.then(buffer =&gt; browser.clipboard.setImageData(buffer, 'png'));</pre>
+.then(response => response.arrayBuffer())
+.then(buffer => browser.clipboard.setImageData(buffer, 'png'));
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/apps/clipboard"><code>chrome.clipboard</code></a> API.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API.

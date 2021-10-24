@@ -13,55 +13,50 @@ tags:
   - onErased
 browser-compat: webextensions.api.downloads.onErased
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code><strong>onErased</strong></code><strong><code>()</code></strong> event of the {{WebExtAPIRef("downloads")}} API fires when a download is erased from the browser history.</p>
+The **`onErased`\*\***`()`\*\* event of the {{WebExtAPIRef("downloads")}} API fires when a download is erased from the browser history.
 
-<p>The listener is passed the <code>downloadId</code> of the {{WebExtAPIRef('downloads.DownloadItem')}} object in question as a parameter.</p>
+The listener is passed the `downloadId` of the {{WebExtAPIRef('downloads.DownloadItem')}} object in question as a parameter.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.downloads.onErased.addListener(listener)
+```js
+browser.downloads.onErased.addListener(listener)
 browser.downloads.onErased.removeListener(listener)
 browser.downloads.onErased.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether a given <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether a given `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>A callback function that will be called when this event occurs. This function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>downloadId</code></dt>
-  <dd>An <code>integer</code> representing the <code>id</code> of the {{WebExtAPIRef('downloads.DownloadItem')}} that was erased.</dd>
- </dl>
- </dd>
-</dl>
+  - : A callback function that will be called when this event occurs. This function will be passed the following arguments:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    - `downloadId`
+      - : An `integer` representing the `id` of the {{WebExtAPIRef('downloads.DownloadItem')}} that was erased.
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="Examples">Examples</h2>
+{{Compat}}
 
-<p>Add a listener for <code>onErased</code> events, then erase the most recent download:</p>
+## Examples
 
-<pre class="brush: js">function handleErased(item) {
+Add a listener for `onErased` events, then erase the most recent download:
+
+```js
+function handleErased(item) {
   console.log(`Erased: ${item}`);
 }
 
@@ -70,18 +65,16 @@ browser.downloads.onErased.addListener(handleErased);
 var erasing = browser.downloads.erase({
   limit: 1,
   orderBy: ["-startTime"]
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#event-onErased) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#event-onErased"><code>chrome.downloads</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -108,5 +101,4 @@ var erasing = browser.downloads.erase({
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

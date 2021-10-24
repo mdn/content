@@ -12,29 +12,25 @@ tags:
   - omnibox
 browser-compat: webextensions.api.omnibox.SuggestResult
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <strong><code>omnibox.SuggestResult</code></strong> type defines a single suggestion that the extension can add to the address bar's drop-down list.</p>
+The **`omnibox.SuggestResult`** type defines a single suggestion that the extension can add to the address bar's drop-down list.
 
-<p>The extension's {{WebExtAPIRef("omnibox.onInputChanged")}} event listener is passed a callback. To populate the address bar's drop-down list in response to the user's input, the extension can pass an array of <code>omnibox.SuggestResult</code> objects into this callback.</p>
+The extension's {{WebExtAPIRef("omnibox.onInputChanged")}} event listener is passed a callback. To populate the address bar's drop-down list in response to the user's input, the extension can pass an array of `omnibox.SuggestResult` objects into this callback.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They have the following properties:</p>
+Values of this type are objects. They have the following properties:
 
-<dl>
- <dt><code>content</code></dt>
- <dd>This is the value that will appear in the address bar itself when the user highlights this suggestion in the drop-down list. This is also the string sent to the {{WebExtAPIRef("omnibox.onInputEntered")}} event listener if the user selects this suggestion. If the string is the same as what the user has already typed, this entry will not appear in the drop-down list.</dd>
- <dt><code>description</code></dt>
- <dd>This is the string that's displayed in the address bar's drop-down list.</dd>
-</dl>
+- `content`
+  - : This is the value that will appear in the address bar itself when the user highlights this suggestion in the drop-down list. This is also the string sent to the {{WebExtAPIRef("omnibox.onInputEntered")}} event listener if the user selects this suggestion. If the string is the same as what the user has already typed, this entry will not appear in the drop-down list.
+- `description`
+  - : This is the string that's displayed in the address bar's drop-down list.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/omnibox"><code>chrome.omnibox</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

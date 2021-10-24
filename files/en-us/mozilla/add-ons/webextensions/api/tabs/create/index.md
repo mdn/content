@@ -13,81 +13,80 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.create
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Creates a new tab.</p>
+Creates a new tab.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var creating = browser.tabs.create(
+```js
+var creating = browser.tabs.create(
   createProperties   // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>createProperties</code></dt>
- <dd>
-   <p><code>object</code>. Properties to give the new tab. To learn more about these properties, see the {{WebExtAPIRef("tabs.Tab")}} documentation.</p>
-   <dl>
-    <dt><code>active</code>{{optional_inline}}</dt>
-    <dd><code>boolean</code>. Whether the tab should become the active tab in the window. If <code>false</code>, it has no effect. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). Defaults to <code>true</code>.</dd>
-    <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
-    <dd><code>string</code>. Use this to create a tab whose cookie store ID is <code>cookieStoreId</code>. This option is only available if the extension has the <code>"cookies"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
-    <dt><code>discarded</code> {{optional_inline}}</dt>
-    <dd><code>boolean</code>. Whether the tab is created and made visible in the tab bar without any content loaded into memory, a state known as discarded. The tab’s content is loaded when the tab is activated.</dd>
-    <dt><code>index</code>{{optional_inline}}</dt>
-    <dd><code>integer</code>. The position the tab should take in the window. The provided value will be clamped to between zero and the number of tabs in the window.</dd>
-    <dt><code>openerTabId</code>{{optional_inline}}</dt>
-    <dd><code>integer</code>. The ID of the tab that opened this tab. If specified, the opener tab must be in the same window as the newly created tab.</dd>
-    <dt><code>openInReaderMode</code>{{optional_inline}}</dt>
-    <dd><code>boolean</code>. If <code>true</code>, open this tab in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode">Reader Mode</a>. Defaults to <code>false</code>.</dd>
-    <dt><code>pinned</code>{{optional_inline}}</dt>
-    <dd><code>boolean</code>. Whether the tab should be pinned. Defaults to <code>false</code>.</dd>
-    <dt><code>selected</code>{{optional_inline}}</dt>
-    <dd><p><code>boolean</code>. Whether the tab should become the selected tab in the window. Defaults to <code>true</code>.</p>
-    <div class="warning">
-      <p><strong>Warning:</strong> This property is deprecated, and is not supported in Firefox. Use <code>active</code> instead.</p>
-    </div>
-    </dd>
-    <dt><code>title</code> {{optional_inline}}</dt>
-    <dd><code>string</code>. The title of the tab. Allowed only if the tab is created with <code>discarded</code> set to <code>true</code>.</dd>
-    <dt><code>url</code>{{optional_inline}}</dt>
-    <dd>
-      <p><code>string</code>. The URL to navigate the tab to initially. Defaults to the New Tab Page.</p>
-      <p>Fully-qualified URLs must include a scheme (for example, 'http://www.google.com' not 'www.google.com').</p>
-      <p>For security reasons, in Firefox, this may not be a privileged URL. So passing any of the following URLs will fail:</p>
-      <ul>
-       <li>chrome: URLs</li>
-       <li>javascript: URLs</li>
-       <li>data: URLs</li>
-       <li>file: URLs (i.e., files on the filesystem. However, to use a file packaged inside the extension, see below)</li>
-       <li>privileged about: URLs (for example, <code>about:config</code>, <code>about:addons</code>, <code>about:debugging</code>). Non-privileged URLs (e.g., <code>about:blank</code>) are allowed.</li>
-       <li>The New Tab page (<code>about:newtab</code>) can be opened if no value for URL is provided.</li>
-      </ul>
+- `createProperties`
 
-      <p>To load a page that's packaged with your extension, specify an absolute URL starting at the extension's manifest.json file. For example: '/path/to/my-page.html'. If you omit the leading '/', the URL is treated as a relative URL, and different browsers may construct different absolute URLs.</p>
-    </dd>
-    <dt><code>windowId</code>{{optional_inline}}</dt>
-    <dd><code>integer</code>. The window to create the new tab in. Defaults to the current window.</dd>
-   </dl>
- </dd>
-</dl>
+  - : `object`. Properties to give the new tab. To learn more about these properties, see the {{WebExtAPIRef("tabs.Tab")}} documentation.
 
-<h3 id="Return_value">Return value</h3>
+    - `active`{{optional_inline}}
+      - : `boolean`. Whether the tab should become the active tab in the window. If `false`, it has no effect. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). Defaults to `true`.
+    - `cookieStoreId` {{optional_inline}}
+      - : `string`. Use this to create a tab whose cookie store ID is `cookieStoreId`. This option is only available if the extension has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+    - `discarded` {{optional_inline}}
+      - : `boolean`. Whether the tab is created and made visible in the tab bar without any content loaded into memory, a state known as discarded. The tab’s content is loaded when the tab is activated.
+    - `index`{{optional_inline}}
+      - : `integer`. The position the tab should take in the window. The provided value will be clamped to between zero and the number of tabs in the window.
+    - `openerTabId`{{optional_inline}}
+      - : `integer`. The ID of the tab that opened this tab. If specified, the opener tab must be in the same window as the newly created tab.
+    - `openInReaderMode`{{optional_inline}}
+      - : `boolean`. If `true`, open this tab in [Reader Mode](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode). Defaults to `false`.
+    - `pinned`{{optional_inline}}
+      - : `boolean`. Whether the tab should be pinned. Defaults to `false`.
+    - `selected`{{optional_inline}}
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the created tab. If the tab could not be created (for example, because <code>url</code> used a privileged scheme) the promise will be rejected with an error message.</p>
+      - : `boolean`. Whether the tab should become the selected tab in the window. Defaults to `true`.
 
-<p>The promise returned by <code>browser.tabs.create()</code> resolves as soon as the tab has been created. The tab may still be loading. To detect when the tab has finished loading, listen to the {{WebExtAPIRef('tabs.onUpdated')}} or the {{WebExtAPIRef('webNavigation.onCompleted')}} event before calling <code>tabs.create</code>.</p>
+        > **Warning:** This property is deprecated, and is not supported in Firefox. Use `active` instead.
 
-<h2 id="Examples">Examples</h2>
+    - `title` {{optional_inline}}
+      - : `string`. The title of the tab. Allowed only if the tab is created with `discarded` set to `true`.
+    - `url`{{optional_inline}}
 
-<p>Open "https://example.org" in a new tab:</p>
+      - : `string`. The URL to navigate the tab to initially. Defaults to the New Tab Page.
 
-<pre class="brush: js">function onCreated(tab) {
+        Fully-qualified URLs must include a scheme (for example, 'http\://www\.google.com' not 'www\.google.com').
+
+        For security reasons, in Firefox, this may not be a privileged URL. So passing any of the following URLs will fail:
+
+        - chrome: URLs
+        - javascript: URLs
+        - data: URLs
+        - file: URLs (i.e., files on the filesystem. However, to use a file packaged inside the extension, see below)
+        - privileged about: URLs (for example, `about:config`, `about:addons`, `about:debugging`). Non-privileged URLs (e.g., `about:blank`) are allowed.
+        - The New Tab page (`about:newtab`) can be opened if no value for URL is provided.
+
+        To load a page that's packaged with your extension, specify an absolute URL starting at the extension's manifest.json file. For example: '/path/to/my-page.html'. If you omit the leading '/', the URL is treated as a relative URL, and different browsers may construct different absolute URLs.
+
+    - `windowId`{{optional_inline}}
+      - : `integer`. The window to create the new tab in. Defaults to the current window.
+
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the created tab. If the tab could not be created (for example, because `url` used a privileged scheme) the promise will be rejected with an error message.
+
+The promise returned by `browser.tabs.create()` resolves as soon as the tab has been created. The tab may still be loading. To detect when the tab has finished loading, listen to the {{WebExtAPIRef('tabs.onUpdated')}} or the {{WebExtAPIRef('webNavigation.onCompleted')}} event before calling `tabs.create`.
+
+## Examples
+
+Open "https\://example.org" in a new tab:
+
+```js
+function onCreated(tab) {
   console.log(`Created new tab: ${tab.id}`)
 }
 
@@ -100,22 +99,20 @@ browser.browserAction.onClicked.addListener(function() {
     url:"https://example.org"
   });
   creating.then(onCreated, onError);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-create) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-create"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -142,5 +139,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

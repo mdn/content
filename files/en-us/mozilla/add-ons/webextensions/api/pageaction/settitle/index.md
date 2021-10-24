@@ -13,62 +13,57 @@ tags:
   - setTitle
 browser-compat: webextensions.api.pageAction.setTitle
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Sets the title of the page action. The title is displayed in a tooltip when the user hovers over the page action.</p>
+Sets the title of the page action. The title is displayed in a tooltip when the user hovers over the page action.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.pageAction.setTitle(
+```js
+browser.pageAction.setTitle(
   details // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p><code>object</code>.</p>
-   <dl>
-    <dt><code>tabId</code></dt>
-    <dd><code>integer</code>. The ID of the tab whose title you want to set.</dd>
-    <dt><code>title</code></dt>
-    <dd>
-      <p><code>string</code> or <code>null</code>. The tooltip text.</p>
-      <p>If <code>null</code> is passed here, the title is reset to the title that was specified in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code> manifest key.</p>
-    </dd>
-   </dl>
- </dd>
-</dl>
+- `details`
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+  - : `object`.
 
-<p>{{Compat}}</p>
+    - `tabId`
+      - : `integer`. The ID of the tab whose title you want to set.
+    - `title`
 
-<h2 id="Examples">Examples</h2>
+      - : `string` or `null`. The tooltip text.
 
-<p>Whenever a tab is updated, show the page action for that tab, and set its title to show the tab's ID:</p>
+        If `null` is passed here, the title is reset to the title that was specified in the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key.
 
-<pre class="brush: js">browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) =&gt; {
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+Whenever a tab is updated, show the page action for that tab, and set its title to show the tab's ID:
+
+```js
+browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
   browser.pageAction.show(tabId);
   browser.pageAction.setTitle({
     tabId: tabId,
     title: "Tab ID: " + tabId
   });
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction#method-setTitle) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/pageAction#method-setTitle"><code>chrome.pageAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json"><code>page_action.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,5 +90,4 @@ browser-compat: webextensions.api.pageAction.setTitle
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

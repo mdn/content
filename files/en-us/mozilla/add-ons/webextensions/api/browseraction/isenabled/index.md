@@ -12,58 +12,58 @@ tags:
   - isEnabled
 browser-compat: webextensions.api.browserAction.isEnabled
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Returns <code>true</code> if the browser action is enabled.</p>
+Returns `true` if the browser action is enabled.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">let gettingIsEnabled = browser.browserAction.isEnabled(
+```js
+let gettingIsEnabled = browser.browserAction.isEnabled(
   details // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p><code>object</code>. An object optionally containing the <code>tabId</code> or <code>windowId</code> to check.</p>
-   <dl>
-    <dt><code>tabId</code> {{optional_inline}}</dt>
-    <dd><code>integer</code>. ID of a tab to check.</dd>
-    <dt><code>windowId</code> {{optional_inline}}</dt>
-    <dd><code>integer</code>. ID of a window to check.</dd>
-   </dl>
- </dd>
-</dl>
+- `details`
 
-<ul>
- <li>If windowId and tabId are both supplied, the function fails.</li>
- <li>If windowId and tabId are both omitted, the global enabled/disabled status is returned.</li>
-</ul>
+  - : `object`. An object optionally containing the `tabId` or `windowId` to check.
 
-<h3 id="Return_value">Return value</h3>
+    - `tabId` {{optional_inline}}
+      - : `integer`. ID of a tab to check.
+    - `windowId` {{optional_inline}}
+      - : `integer`. ID of a window to check.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with <code>true</code> if the extension's browser action is enabled, and <code>false</code> otherwise.</p>
+<!---->
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- If windowId and tabId are both supplied, the function fails.
+- If windowId and tabId are both omitted, the global enabled/disabled status is returned.
 
-<p>{{Compat}}</p>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension's browser action is enabled, and `false` otherwise.
 
-<p>Check the global state:</p>
+## Browser compatibility
 
-<pre class="brush: js">browser.browserAction.isEnabled({}).then(result =&gt; {
+{{Compat}}
+
+## Examples
+
+Check the global state:
+
+```js
+browser.browserAction.isEnabled({}).then(result => {
   console.log(result);
-});</pre>
+});
+```
 
-<p>  Check the state of the currently active tab:</p>
+Check the state of the currently active tab:
 
-<pre class="brush: js">async function enabledInActiveTab() {
+```js
+async function enabledInActiveTab() {
   let tabs = await browser.tabs.query({
     currentWindow:true,
     active: true
@@ -72,6 +72,7 @@ browser-compat: webextensions.api.browserAction.isEnabled
     tabId: tabs[0].id
   });
   console.log(enabled);
-}</pre>
+}
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

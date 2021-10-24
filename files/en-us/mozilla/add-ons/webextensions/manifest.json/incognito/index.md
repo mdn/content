@@ -8,61 +8,58 @@ tags:
   - manifest.json
 browser-compat: webextensions.manifest.incognito
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json">
-"incognito": "spanning"</pre>
-
-    <pre class="brush: json">
-"incognito": "split"</pre>
-
-    <pre class="brush: json">
-"incognito": "not_allowed"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json">"incognito": "spanning"</pre>
+        <pre class="brush: json">"incognito": "split"</pre>
+        <pre class="brush: json">"incognito": "not_allowed"</pre>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Use the <code>incognito</code> key to control how the extension works with private browsing windows.</p>
+Use the `incognito` key to control how the extension works with private browsing windows.
 
-<p>This is a string which may take any of the following values:</p>
+This is a string which may take any of the following values:
 
-<ul>
- <li>
-  <p>"spanning" (the default): the extension will see events from private and non-private windows and tabs. Windows and tabs will get an <code>incognito</code> property in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window">Window</a></code> or <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab">Tab</a></code> that represents them. This property indicates whether or not the object is private:</p>
+- "spanning" (the default): the extension will see events from private and non-private windows and tabs. Windows and tabs will get an `incognito` property in the [`Window`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) or [`Tab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) that represents them. This property indicates whether or not the object is private:
 
-  <pre class="brush: js">browser.windows.getLastFocused().then((windowInfo) =&gt; {
-  console.log(`Window is private: ${windowInfo.incognito}`);
-});</pre>
- </li>
- <li>"split": the extension will be split between private and non-private windows. There are effectively two copies of the extension running: one sees only non-private windows, the other sees only private windows. Each copy has isolated access to Web APIs (so, for example, <code><a href="/en-US/docs/Web/API/Window/localStorage">localStorage</a></code> is not shared). However, the WebExtension API <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local">storage.local</a></code> is shared. (<strong>Note:</strong> this setting is not supported by Firefox.)</li>
- <li>"not_allowed": private tabs and windows are invisible to the extension.</li>
-</ul>
+  ```js
+  browser.windows.getLastFocused().then((windowInfo) => {
+    console.log(`Window is private: ${windowInfo.incognito}`);
+  });
+  ```
 
-<h2 id="Example">Example</h2>
+- "split": the extension will be split between private and non-private windows. There are effectively two copies of the extension running: one sees only non-private windows, the other sees only private windows. Each copy has isolated access to Web APIs (so, for example, [`localStorage`](/en-US/docs/Web/API/Window/localStorage) is not shared). However, the WebExtension API [`storage.local`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) is shared. (**Note:** this setting is not supported by Firefox.)
+- "not_allowed": private tabs and windows are invisible to the extension.
 
-<pre class="brush: json">"incognito": "spanning"
-</pre>
+## Example
 
-<pre class="brush: json">"incognito": "split"
-</pre>
+```json
+"incognito": "spanning"
+```
 
-<pre class="brush: json">"incognito": "not_allowed"
-</pre>
+```json
+"incognito": "split"
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+```json
+"incognito": "not_allowed"
+```
 
-<p>{{Compat}}</p>
+## Browser compatibility
+
+{{Compat}}

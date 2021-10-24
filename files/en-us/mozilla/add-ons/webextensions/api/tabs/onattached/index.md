@@ -13,86 +13,77 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onAttached
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when a tab is attached to a window, for example because it was moved between windows.</p>
+Fired when a tab is attached to a window, for example because it was moved between windows.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.tabs.onAttached.addListener(listener)
+```js
+browser.tabs.onAttached.addListener(listener)
 browser.tabs.onAttached.removeListener(listener)
 browser.tabs.onAttached.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>tabId</code></dt>
-  <dd><code>integer</code>. ID of the tab that was attached to a new window.</dd>
- </dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
- <dl>
-  <dt><code>attachInfo</code></dt>
-  <dd><a href="#attachinfo"><code>object</code></a>. ID of the new window, and index of the tab within it.</dd>
- </dl>
- </dd>
-</dl>
+    - `tabId`
+      - : `integer`. ID of the tab that was attached to a new window.
 
-<h2 id="Additional_objects">Additional objects</h2>
+    <!---->
 
-<h3 id="attachInfo">attachInfo</h3>
+    - `attachInfo`
+      - : [`object`](#attachinfo). ID of the new window, and index of the tab within it.
 
-<dl>
- <dt><code>newWindowId</code></dt>
- <dd><code>integer</code>. ID of the new window.</dd>
- <dt><code>newPosition</code></dt>
- <dd><code>integer</code>. Index position that the tab has in the new window.</dd>
-</dl>
+## Additional objects
 
-<h2 id="Examples">Examples</h2>
+### attachInfo
 
-<p>Listen for attach events, and log the info:</p>
+- `newWindowId`
+  - : `integer`. ID of the new window.
+- `newPosition`
+  - : `integer`. Index position that the tab has in the new window.
 
-<pre class="brush: js">function handleAttached(tabId, attachInfo) {
+## Examples
+
+Listen for attach events, and log the info:
+
+```js
+function handleAttached(tabId, attachInfo) {
   console.log("Tab: " + tabId + " attached");
   console.log("New window: " + attachInfo.newWindowId);
   console.log("New index: " + attachInfo.newPosition);
 }
 
-browser.tabs.onAttached.addListener(handleAttached);</pre>
+browser.tabs.onAttached.addListener(handleAttached);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onAttached) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#event-onAttached"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -119,5 +110,4 @@ browser.tabs.onAttached.addListener(handleAttached);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

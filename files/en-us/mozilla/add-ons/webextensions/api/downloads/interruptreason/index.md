@@ -13,79 +13,66 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.InterruptReason
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code>InterruptReason</code> type of the {{WebExtAPIRef("downloads")}} API defines a set of possible reasons why a download was interrupted.</p>
+The `InterruptReason` type of the {{WebExtAPIRef("downloads")}} API defines a set of possible reasons why a download was interrupted.
 
-<p>A {{WebExtAPIRef('downloads.DownloadItem')}}'s <code>error</code> property will contain a string taken from the values defined in this type.</p>
+A {{WebExtAPIRef('downloads.DownloadItem')}}'s `error` property will contain a string taken from the values defined in this type.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are strings. Possible values are split into categories, with each set having the same substring at the beginning:</p>
+Values of this type are strings. Possible values are split into categories, with each set having the same substring at the beginning:
 
-<p>File-related errors:</p>
+File-related errors:
 
-<ul>
- <li><code>"FILE_FAILED"</code></li>
- <li><code>"FILE_ACCESS_DENIED"</code></li>
- <li><code>"FILE_NO_SPACE"</code></li>
- <li><code>"FILE_NAME_TOO_LONG"</code></li>
- <li><code>"FILE_TOO_LARGE"</code></li>
- <li><code>"FILE_VIRUS_INFECTED"</code></li>
- <li><code>"FILE_TRANSIENT_ERROR"</code></li>
- <li><code>"FILE_BLOCKED"</code></li>
- <li><code>"FILE_SECURITY_CHECK_FAILED"</code></li>
- <li><code>"FILE_TOO_SHORT"</code></li>
-</ul>
+- `"FILE_FAILED"`
+- `"FILE_ACCESS_DENIED"`
+- `"FILE_NO_SPACE"`
+- `"FILE_NAME_TOO_LONG"`
+- `"FILE_TOO_LARGE"`
+- `"FILE_VIRUS_INFECTED"`
+- `"FILE_TRANSIENT_ERROR"`
+- `"FILE_BLOCKED"`
+- `"FILE_SECURITY_CHECK_FAILED"`
+- `"FILE_TOO_SHORT"`
 
-<p>Network-related errors:</p>
+Network-related errors:
 
-<ul>
- <li><code>"NETWORK_FAILED"</code></li>
- <li><code>"NETWORK_TIMEOUT"</code></li>
- <li><code>"NETWORK_DISCONNECTED"</code></li>
- <li><code>"NETWORK_SERVER_DOWN"</code></li>
- <li><code>"NETWORK_INVALID_REQUEST"</code></li>
-</ul>
+- `"NETWORK_FAILED"`
+- `"NETWORK_TIMEOUT"`
+- `"NETWORK_DISCONNECTED"`
+- `"NETWORK_SERVER_DOWN"`
+- `"NETWORK_INVALID_REQUEST"`
 
-<p>Server-related errors:</p>
+Server-related errors:
 
-<ul>
- <li><code>"SERVER_FAILED"</code></li>
- <li><code>"SERVER_NO_RANGE"</code></li>
- <li><code>"SERVER_BAD_CONTENT"</code></li>
- <li><code>"SERVER_UNAUTHORIZED"</code></li>
- <li><code>"SERVER_CERT_PROBLEM"</code></li>
- <li><code>"SERVER_FORBIDDEN"</code></li>
-</ul>
+- `"SERVER_FAILED"`
+- `"SERVER_NO_RANGE"`
+- `"SERVER_BAD_CONTENT"`
+- `"SERVER_UNAUTHORIZED"`
+- `"SERVER_CERT_PROBLEM"`
+- `"SERVER_FORBIDDEN"`
 
-<p>User-related errors:</p>
+User-related errors:
 
-<ul>
- <li><code>"USER_CANCELED"</code></li>
- <li><code>"USER_SHUTDOWN"</code></li>
-</ul>
+- `"USER_CANCELED"`
+- `"USER_SHUTDOWN"`
 
-<p>Miscellaneous:</p>
+Miscellaneous:
 
-<ul>
- <li><code>"CRASH"</code></li>
-</ul>
+- `"CRASH"`
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#type-InterruptReason) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#type-InterruptReason"><code>chrome.downloads</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,5 +99,4 @@ browser-compat: webextensions.api.downloads.InterruptReason
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

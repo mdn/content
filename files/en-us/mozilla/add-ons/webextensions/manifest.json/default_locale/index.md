@@ -7,36 +7,38 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.default_locale
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>Contingent: must be present if the _locales subdirectory is present, must be absent otherwise.</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json">
-"default_locale": "en"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>
+        Contingent: must be present if the _locales subdirectory is present,
+        must be absent otherwise.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td><pre class="brush: json">"default_locale": "en"</pre></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>This key must be present if the extension contains the _locales directory, and must be absent otherwise. It identifies a subdirectory of _locales, and this subdirectory will be used to find the default strings for your extension.</p>
+This key must be present if the extension contains the \_locales directory, and must be absent otherwise. It identifies a subdirectory of \_locales, and this subdirectory will be used to find the default strings for your extension.
 
-<p>See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization">Internationalization</a>.</p>
+See [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: json">"default_locale": "en"</pre>
+```json
+"default_locale": "en"
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

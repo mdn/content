@@ -11,22 +11,23 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.error
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A string that will contain an error message after the {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} event has fired.</p>
+A string that will contain an error message after the {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} event has fired.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example adds an {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} listener which logs the value of <code>error</code>.</p>
+This example adds an {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} listener which logs the value of `error`.
 
-<pre class="brush: js">function listener(details) {
-  let filter = browser.webRequest.filterResponseData(&quot;12345&quot;);
+```js
+function listener(details) {
+  let filter = browser.webRequest.filterResponseData("12345");
 
-  filter.onerror = event =&gt; {
+  filter.onerror = event => {
     console.log(`Error: ${filter.error}`);
   }
 
@@ -35,8 +36,9 @@ browser-compat: webextensions.api.webRequest.StreamFilter.error
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: [&quot;&lt;all_urls&gt;&quot;], types: [&quot;main_frame&quot;]},
-  [&quot;blocking&quot;]
-);</pre>
+  {urls: ["<all_urls>"], types: ["main_frame"]},
+  ["blocking"]
+);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

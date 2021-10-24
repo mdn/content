@@ -12,61 +12,51 @@ tags:
   - browsingData
 browser-compat: webextensions.api.browsingData.RemovalOptions
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <strong><code>browsingData.RemovalOptions</code></strong> type contains options to control certain aspects of browsing data removal.</p>
+The **`browsingData.RemovalOptions`** type contains options to control certain aspects of browsing data removal.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
- <dd>
- <p><code>string</code>. This property only applies to cookies and indexedDB items. The removal is limited to items belonging to a specific <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore">cookie store</a> as specified by the ID.</p>
+- `cookieStoreId` {{optional_inline}}
 
- <div class="notecard note">
- <p><strong>Note:</strong> On Firefox Nightly removal of localStorage items by <code>cookieStoreId</code> is also supported.</p>
- </div>
- </dd>
-</dl>
+  - : `string`. This property only applies to cookies and indexedDB items. The removal is limited to items belonging to a specific [cookie store](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore) as specified by the ID.
 
-<dl>
- <dt><code>hostnames</code> {{optional_inline}}</dt>
- <dd>
- <p><code>Array</code> of <code>string</code>. This property only applies to cookies and local storage items. Only remove cookies and local storage items which are associated with these hostnames.</p>
+    > **Note:** On Firefox Nightly removal of localStorage items by `cookieStoreId` is also supported.
 
- <p>You must pass in just a hostname here, without protocol (for example: "google.com" not https://google.com"). You can use the <code><a href="/en-US/docs/Web/API/URL">URL</a></code> interface to parse a raw URL and retrieve just the hostname. Items associated with subdomains of a given hostname will <em>not</em> be removed: you must explicitly list subdomains.</p>
- </dd>
- <dt><code>originTypes</code> {{optional_inline}}</dt>
- <dd>
- <p><code>object</code>. Used to control whether to remove data only from normal web pages, or also from hosted web apps and extensions. If this option is omitted, only data from normal web pages ("<code>unprotectedWeb</code>") is removed. Before removing data from web apps or extensions, be very careful to ensure that this is really what the user wants.</p>
+<!---->
 
- <p>This object may contain any of the following properties:</p>
+- `hostnames` {{optional_inline}}
 
- <dl>
-  <dt><code>unprotectedWeb</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. If present and <code>true</code>, remove data from normal web pages.</dd>
-  <dt><code>protectedWeb</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. If present and <code>true</code>, remove data from websites that have been installed as hosted apps.</dd>
-  <dt><code>extension</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. If present and <code>true</code>, remove data from extensions.</dd>
- </dl>
- </dd>
- <dt><code>since</code> {{optional_inline}}</dt>
- <dd><code>number</code>. How far back in time to remove data, given in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the UNIX epoch</a>. Note that when removing the browser cache, the entire cache is always removed and this option is ignored. If the <code>since</code> property is omitted, it defaults to 0, which means "forever".</dd>
-</dl>
+  - : `Array` of `string`. This property only applies to cookies and local storage items. Only remove cookies and local storage items which are associated with these hostnames.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    You must pass in just a hostname here, without protocol (for example: "google.com" not https\://google.com"). You can use the [`URL`](/en-US/docs/Web/API/URL) interface to parse a raw URL and retrieve just the hostname. Items associated with subdomains of a given hostname will _not_ be removed: you must explicitly list subdomains.
 
-<p>{{Compat}}</p>
+- `originTypes` {{optional_inline}}
 
+  - : `object`. Used to control whether to remove data only from normal web pages, or also from hosted web apps and extensions. If this option is omitted, only data from normal web pages ("`unprotectedWeb`") is removed. Before removing data from web apps or extensions, be very careful to ensure that this is really what the user wants.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a> API.</p>
-</div>
+    This object may contain any of the following properties:
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+    - `unprotectedWeb` {{optional_inline}}
+      - : `boolean`. If present and `true`, remove data from normal web pages.
+    - `protectedWeb` {{optional_inline}}
+      - : `boolean`. If present and `true`, remove data from websites that have been installed as hosted apps.
+    - `extension` {{optional_inline}}
+      - : `boolean`. If present and `true`, remove data from extensions.
+
+- `since` {{optional_inline}}
+  - : `number`. How far back in time to remove data, given in [milliseconds since the UNIX epoch](https://en.wikipedia.org/wiki/Unix_time). Note that when removing the browser cache, the entire cache is always removed and this option is ignored. If the `since` property is omitted, it defaults to 0, which means "forever".
+
+## Browser compatibility
+
+{{Compat}}
+
+> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API.
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -93,5 +83,4 @@ browser-compat: webextensions.api.browsingData.RemovalOptions
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

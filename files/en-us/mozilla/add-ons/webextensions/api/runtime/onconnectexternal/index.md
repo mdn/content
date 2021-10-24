@@ -13,100 +13,93 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.onConnectExternal
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when an extension receives a connection request from a different extension.</p>
+Fired when an extension receives a connection request from a different extension.
 
-<p>To send a message which will be received by the <code>onConnectExternal</code> listener, use {{WebExtAPIRef("runtime.connect()")}}, passing the ID of the recipient in the <code>extensionId</code> parameter.</p>
+To send a message which will be received by the `onConnectExternal` listener, use {{WebExtAPIRef("runtime.connect()")}}, passing the ID of the recipient in the `extensionId` parameter.
 
-<p>The listener is passed a {{WebExtAPIRef('runtime.Port')}} object which it can then use to send and receive messages. The <code>Port</code> object also contains a <code>sender</code> property, which is a {{WebExtAPIRef("runtime.MessageSender")}} object, and which the recipient can use to check the sender's ID.</p>
+The listener is passed a {{WebExtAPIRef('runtime.Port')}} object which it can then use to send and receive messages. The `Port` object also contains a `sender` property, which is a {{WebExtAPIRef("runtime.MessageSender")}} object, and which the recipient can use to check the sender's ID.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.runtime.onConnectExternal.addListener(listener)
+```js
+browser.runtime.onConnectExternal.addListener(listener)
 browser.runtime.onConnectExternal.removeListener(listener)
 browser.runtime.onConnectExternal.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Checks whether a <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Checks whether a `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>function</code></dt>
- <dd>
- <p>A callback function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `function`
 
- <dl>
-  <dt><code>port</code></dt>
-  <dd>A {{WebExtAPIRef('runtime.Port')}} object connecting the current script to the other extension it is connecting to.</dd>
- </dl>
- </dd>
-</dl>
+  - : A callback function that will be called when this event occurs. The function will be passed the following arguments:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    - `port`
+      - : A {{WebExtAPIRef('runtime.Port')}} object connecting the current script to the other extension it is connecting to.
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="Examples">Examples</h2>
+{{Compat}}
 
-<p>In this example the extension Hansel connects to the extension Gretel:</p>
+## Examples
 
-<pre class="brush: js">console.log("connecting to Gretel");
+In this example the extension Hansel connects to the extension Gretel:
+
+```js
+console.log("connecting to Gretel");
 var myPort = browser.runtime.connect(
   "gretel@mozilla.org"
 );
 
-myPort.onMessage.addListener((message) =&gt; {
+myPort.onMessage.addListener((message) => {
   console.log(`From Gretel: ${message.content}`);
 });
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   myPort.postMessage({content: "Hello from Hansel"});
-});</pre>
+});
+```
 
-<p>Gretel listens for the connection and checks that the sender is really Hansel:</p>
+Gretel listens for the connection and checks that the sender is really Hansel:
 
-<pre class="brush: js">var portFromHansel;
+```js
+var portFromHansel;
 
-browser.runtime.onConnectExternal.addListener((port) =&gt; {
+browser.runtime.onConnectExternal.addListener((port) => {
   console.log(port);
   if (port.sender.id === "hansel@mozilla.org") {
     console.log("connection attempt from Hansel");
     portFromHansel = port;
-    portFromHansel.onMessage.addListener((message) =&gt; {
+    portFromHansel.onMessage.addListener((message) => {
       console.log(`From Hansel: ${message.content}`);
     });
   }
 });
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
    portFromHansel.postMessage({content: "Message from Gretel"});
 });
+```
 
-</pre>
+{{WebExtExamples}}
 
-<p>{{WebExtExamples}}</p>
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#event-onConnectExternal) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#event-onConnectExternal"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -133,5 +126,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

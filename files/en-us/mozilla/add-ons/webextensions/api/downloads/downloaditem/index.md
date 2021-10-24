@@ -13,73 +13,68 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.DownloadItem
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code>DownloadItem</code> type of the {{WebExtAPIRef("downloads")}} API represents a downloaded file.</p>
+The `DownloadItem` type of the {{WebExtAPIRef("downloads")}} API represents a downloaded file.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>byExtensionId</code>{{optional_inline}}</dt>
- <dd>A <code>string</code> representing the ID of the extension that triggered the download (if it was triggered by an extension). This does not change once set. If the download was not triggered by an extension this is undefined.</dd>
- <dt><code>byExtensionName</code>{{optional_inline}}</dt>
- <dd>A <code>string</code> representing the name of the extension that triggered the download (if it was triggered by an extension). This may change if the extension changes its name or the user changes their locale. If the download was not triggered by an extension this is undefined.</dd>
- <dt><code>bytesReceived</code></dt>
- <dd>A <code>number</code> representing the number of bytes received so far from the host during the download; this does not take file compression into consideration.</dd>
- <dt><code>canResume</code></dt>
- <dd>A <code>boolean</code> indicating whether a currently-interrupted (e.g. paused) download can be resumed from the point where it was interrupted (<code>true</code>), or not (<code>false</code>).</dd>
- <dt><code>cookieStoreId</code>{{optional_inline}}</dt>
- <dd>The cookie store ID of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">contextual identity</a> in which the download took place.</dd>
- <dt><code>danger</code></dt>
- <dd>A string indicating whether this download is thought to be safe or known to be suspicious. Its possible values are defined in the {{WebExtAPIRef('downloads.DangerType')}} type.</dd>
- <dt><code>endTime</code>{{optional_inline}}</dt>
- <dd>A <code>string</code> (in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format) representing the number of milliseconds between the UNIX epoch and when this download ended. This is undefined if the download has not yet finished.</dd>
- <dt><code>error</code>{{optional_inline}}</dt>
- <dd>A string indicating why a download was interrupted. Possible values are defined in the {{WebExtAPIRef('downloads.InterruptReason')}} type. This is undefined if an error has not occurred.</dd>
- <dt><code>estimatedEndTime</code>{{optional_inline}}</dt>
- <dd>A <code>string</code> (in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format) representing the estimated number of milliseconds between the UNIX epoch and when this download is estimated to be completed. This is undefined if it is not known (in particular, it is undefined in the <code>DownloadItem</code> that's passed into {{WebExtAPIRef("downloads.onCreated")}}).</dd>
- <dt><code>exists</code></dt>
- <dd>A <code>boolean</code> indicating whether a downloaded file still exists (<code>true</code>) or not (<code>false</code>). This information might be out-of-date, as browsers do not automatically watch for file removal — to check whether a file exists, call the {{WebExtAPIRef('downloads.search()')}} method, filtering for the file in question.</dd>
- <dt><code>filename</code></dt>
- <dd>A <code>string</code> representing the file's absolute local path.</dd>
- <dt><code>fileSize</code></dt>
- <dd>A <code>number</code> indicating the total number of bytes in the whole file, after decompression. A value of -1 here means that the total file size is unknown.</dd>
- <dt><code>id</code></dt>
- <dd>An <code>integer</code> representing a unique identifier for the downloaded file that is persistent across browser sessions.</dd>
- <dt><code>incognito</code></dt>
- <dd>A <code>boolean</code> that indicates whether the download is recorded in the browser's history (<code>false</code>), or not (<code>true</code>).</dd>
- <dt><code>mime</code></dt>
- <dd>A <code>string</code> representing the downloaded file's MIME type.</dd>
- <dt><code>paused</code></dt>
- <dd>A <code>boolean</code> indicating whether the download is paused, i.e. if the download has stopped reading data from the host but has kept the connection open. If so, the value is <code>true</code>, <code>false</code> if not.</dd>
- <dt><code>referrer</code></dt>
- <dd>A <code>string</code> representing the downloaded file's referrer.</dd>
- <dt><code>startTime</code></dt>
- <dd>A <code>string</code> (in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format) representing the number of milliseconds between the UNIX epoch and when this download began.</dd>
- <dt><code>state</code></dt>
- <dd>A <code>string</code> Indicating whether the download is progressing, interrupted, or complete. Possible values are defined in the {{WebExtAPIRef('downloads.State')}} type.</dd>
- <dt><code>totalBytes</code></dt>
- <dd>A <code>number</code> indicating the total number of bytes in the file being downloaded. This does not take file compression into consideration. A value of -1 here means that the total number of bytes is unknown.</dd>
- <dt><code>url</code></dt>
- <dd>A <code>string</code> representing the absolute URL from which the file was downloaded.</dd>
-</dl>
+- `byExtensionId`{{optional_inline}}
+  - : A `string` representing the ID of the extension that triggered the download (if it was triggered by an extension). This does not change once set. If the download was not triggered by an extension this is undefined.
+- `byExtensionName`{{optional_inline}}
+  - : A `string` representing the name of the extension that triggered the download (if it was triggered by an extension). This may change if the extension changes its name or the user changes their locale. If the download was not triggered by an extension this is undefined.
+- `bytesReceived`
+  - : A `number` representing the number of bytes received so far from the host during the download; this does not take file compression into consideration.
+- `canResume`
+  - : A `boolean` indicating whether a currently-interrupted (e.g. paused) download can be resumed from the point where it was interrupted (`true`), or not (`false`).
+- `cookieStoreId`{{optional_inline}}
+  - : The cookie store ID of the [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) in which the download took place.
+- `danger`
+  - : A string indicating whether this download is thought to be safe or known to be suspicious. Its possible values are defined in the {{WebExtAPIRef('downloads.DangerType')}} type.
+- `endTime`{{optional_inline}}
+  - : A `string` (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format) representing the number of milliseconds between the UNIX epoch and when this download ended. This is undefined if the download has not yet finished.
+- `error`{{optional_inline}}
+  - : A string indicating why a download was interrupted. Possible values are defined in the {{WebExtAPIRef('downloads.InterruptReason')}} type. This is undefined if an error has not occurred.
+- `estimatedEndTime`{{optional_inline}}
+  - : A `string` (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format) representing the estimated number of milliseconds between the UNIX epoch and when this download is estimated to be completed. This is undefined if it is not known (in particular, it is undefined in the `DownloadItem` that's passed into {{WebExtAPIRef("downloads.onCreated")}}).
+- `exists`
+  - : A `boolean` indicating whether a downloaded file still exists (`true`) or not (`false`). This information might be out-of-date, as browsers do not automatically watch for file removal — to check whether a file exists, call the {{WebExtAPIRef('downloads.search()')}} method, filtering for the file in question.
+- `filename`
+  - : A `string` representing the file's absolute local path.
+- `fileSize`
+  - : A `number` indicating the total number of bytes in the whole file, after decompression. A value of -1 here means that the total file size is unknown.
+- `id`
+  - : An `integer` representing a unique identifier for the downloaded file that is persistent across browser sessions.
+- `incognito`
+  - : A `boolean` that indicates whether the download is recorded in the browser's history (`false`), or not (`true`).
+- `mime`
+  - : A `string` representing the downloaded file's MIME type.
+- `paused`
+  - : A `boolean` indicating whether the download is paused, i.e. if the download has stopped reading data from the host but has kept the connection open. If so, the value is `true`, `false` if not.
+- `referrer`
+  - : A `string` representing the downloaded file's referrer.
+- `startTime`
+  - : A `string` (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format) representing the number of milliseconds between the UNIX epoch and when this download began.
+- `state`
+  - : A `string` Indicating whether the download is progressing, interrupted, or complete. Possible values are defined in the {{WebExtAPIRef('downloads.State')}} type.
+- `totalBytes`
+  - : A `number` indicating the total number of bytes in the file being downloaded. This does not take file compression into consideration. A value of -1 here means that the total number of bytes is unknown.
+- `url`
+  - : A `string` representing the absolute URL from which the file was downloaded.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#type-DownloadItem) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#type-DownloadItem"><code>chrome.downloads</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,5 +101,4 @@ browser-compat: webextensions.api.downloads.DownloadItem
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

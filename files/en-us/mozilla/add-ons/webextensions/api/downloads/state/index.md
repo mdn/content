@@ -13,43 +13,36 @@ tags:
   - state
 browser-compat: webextensions.api.downloads.State
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p>The <code>State</code> type of the {{WebExtAPIRef("downloads")}} API defines different states that a current download can be in.</p>
+The `State` type of the {{WebExtAPIRef("downloads")}} API defines different states that a current download can be in.
 
-<p>A {{WebExtAPIRef('downloads.DownloadItem')}}'s <code>state</code> property will contain a string taken from the values defined in this type.</p>
+A {{WebExtAPIRef('downloads.DownloadItem')}}'s `state` property will contain a string taken from the values defined in this type.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are strings. Possible values are:</p>
+Values of this type are strings. Possible values are:
 
-<dl>
- <dt><code>in_progress</code></dt>
- <dd>The browser is currently receiving download data from the server.</dd>
- <dt><code>interrupted</code></dt>
- <dd>An error broke the connection with the server.</dd>
- <dt><code>complete</code></dt>
- <dd>The download completed successfully.</dd>
-</dl>
+- `in_progress`
+  - : The browser is currently receiving download data from the server.
+- `interrupted`
+  - : An error broke the connection with the server.
+- `complete`
+  - : The download completed successfully.
 
-<div class="note">
-<p><strong>Note:</strong> These string constants will never change, but new constants may be added.</p>
-</div>
+> **Note:** These string constants will never change, but new constants may be added.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#type-State) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#type-State"><code>chrome.downloads</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -76,5 +69,4 @@ browser-compat: webextensions.api.downloads.State
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

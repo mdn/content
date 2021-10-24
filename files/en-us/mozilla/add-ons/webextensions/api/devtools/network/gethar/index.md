@@ -10,34 +10,36 @@ tags:
   - getHAR
 browser-compat: webextensions.api.devtools.network.getHAR
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Get a <a href="http://www.softwareishard.com/blog/har-12-spec/#log">HAR log</a> for the page loaded in the current tab.</p>
+Get a [HAR log](http://www.softwareishard.com/blog/har-12-spec/#log) for the page loaded in the current tab.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var getting = browser.devtools.network.getHAR()
-</pre>
+```js
+var getting = browser.devtools.network.getHAR()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a object containing the HAR log for the current tab. For details of what the log object contains, refer to the <a href="http://www.softwareishard.com/blog/har-12-spec/#log">HAR specification</a>.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a object containing the HAR log for the current tab. For details of what the log object contains, refer to the [HAR specification](http://www.softwareishard.com/blog/har-12-spec/#log).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Log the URLs of requests contained in the HAR log:</p>
+Log the URLs of requests contained in the HAR log:
 
-<pre class="brush: js">async function logRequests() {
+```js
+async function logRequests() {
   let harLog = await browser.devtools.network.getHAR();
   console.log(`HAR version: ${harLog.version}`);
   for (let entry of harLog.entries) {
@@ -46,16 +48,13 @@ browser-compat: webextensions.api.devtools.network.getHAR
 }
 
 logRequestsButton.addEventListener("click", logRequests);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.devtools.network`](https://developer.chrome.com/extensions/devtools_network) API.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools_network"><code>chrome.devtools.network</code></a> API.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -82,5 +81,4 @@ logRequestsButton.addEventListener("click", logRequests);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

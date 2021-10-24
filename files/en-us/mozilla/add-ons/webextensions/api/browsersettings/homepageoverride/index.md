@@ -12,23 +12,24 @@ tags:
   - homepageOverride
 browser-compat: webextensions.api.browserSettings.homepageOverride
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to get a string representing the URL currently set as the browser's homepage.</p>
+A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to get a string representing the URL currently set as the browser's homepage.
 
-<p>Note that this is a read-only setting. To change the homepage, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides">chrome_settings_overrides</a>.</p>
+Note that this is a read-only setting. To change the homepage, see [chrome_settings_overrides](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Get the current value of the homepage URL:</p>
+Get the current value of the homepage URL:
 
-<pre class="brush: js">browser.browserSettings.homepageOverride.get({}).then(result =&gt; {
+```js
+browser.browserSettings.homepageOverride.get({}).then(result => {
   console.log(result.value);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

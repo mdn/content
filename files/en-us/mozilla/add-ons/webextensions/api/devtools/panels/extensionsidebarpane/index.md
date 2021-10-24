@@ -13,52 +13,39 @@ tags:
   - devtools.panels.ExtensionSidebarPane
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>The <code>ExtensionSidebarPane</code> object represents a pane that an extension has added to the sidebar in the browser's HTML/CSS inspector.</p>
+The `ExtensionSidebarPane` object represents a pane that an extension has added to the sidebar in the browser's HTML/CSS inspector.
 
-<p><img alt="" src="inspector-sidebar.png"></p>
+![](inspector-sidebar.png)
 
-<p>To create an <code>ExtensionSidebarPane</code>, call the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane">browser.devtools.panels.elements.createSidebarPane()</a></code> function.</p>
+To create an `ExtensionSidebarPane`, call the [`browser.devtools.panels.elements.createSidebarPane()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane) function.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression">devtools.panels.ExtensionSidebarPane.setExpression()</a></code></dt>
- <dd>
- <p>Evaluate a JavaScript expression in the web page that the inspector is inspecting. The result is displayed in the sidebar pane.</p>
- </dd>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setObject">devtools.panels.ExtensionSidebarPane.setObject()</a></code></dt>
- <dd>
- <p>Sets a JSON object that will be displayed in the sidebar pane.</p>
- </dd>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setPage">devtools.panels.ExtensionSidebarPane.setPage()</a></code></dt>
- <dd>
- <p>Loads the page pointed to by the supplied URL.</p>
- </dd>
-</dl>
+- [`devtools.panels.ExtensionSidebarPane.setExpression()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression)
+  - : Evaluate a JavaScript expression in the web page that the inspector is inspecting. The result is displayed in the sidebar pane.
+- [`devtools.panels.ExtensionSidebarPane.setObject()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setObject)
+  - : Sets a JSON object that will be displayed in the sidebar pane.
+- [`devtools.panels.ExtensionSidebarPane.setPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setPage)
+  - : Loads the page pointed to by the supplied URL.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onShown">devtools.panels.ExtensionSidebarPane.onShown</a></code></dt>
- <dd>Fired when the sidebar pane is shown.</dd>
- <dt><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden">devtools.panels.ExtensionSidebarPane.onHidden</a></code></dt>
- <dd>Fired when the sidebar pane is hidden.</dd>
-</dl>
+- [`devtools.panels.ExtensionSidebarPane.onShown`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onShown)
+  - : Fired when the sidebar pane is shown.
+- [`devtools.panels.ExtensionSidebarPane.onHidden`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden)
+  - : Fired when the sidebar pane is hidden.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
+> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a> API.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -85,5 +72,4 @@ browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

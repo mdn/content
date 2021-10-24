@@ -13,39 +13,39 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.search
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <strong><code>search()</code></strong> function of the {{WebExtAPIRef("downloads")}} API queries the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} available in the browser's downloads manager, and returns those that match the specified search criteria.</p>
+The **`search()`** function of the {{WebExtAPIRef("downloads")}} API queries the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} available in the browser's downloads manager, and returns those that match the specified search criteria.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var searching = browser.downloads.search(query);
-</pre>
+```js
+var searching = browser.downloads.search(query);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>query</code></dt>
- <dd>A {{WebExtAPIRef('downloads.DownloadQuery')}} object.</dd>
-</dl>
+- `query`
+  - : A {{WebExtAPIRef('downloads.DownloadQuery')}} object.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. The promise is fulfilled with an <code>array</code> of <code>{{WebExtAPIRef('downloads.DownloadItem')}}</code> objects that match the given criteria.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). The promise is fulfilled with an `array` of `{{WebExtAPIRef('downloads.DownloadItem')}}` objects that match the given criteria.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>In general, you restrict the items retrieved using the <code>query</code> parameter.</p>
+In general, you restrict the items retrieved using the `query` parameter.
 
-<h3 id="Get_downloads_matching_query">Get downloads matching "query"</h3>
+### Get downloads matching "query"
 
-<pre class="brush: js">function logDownloads(downloads) {
+```js
+function logDownloads(downloads) {
   for (let download of downloads) {
     console.log(download.id);
     console.log(download.url);
@@ -60,13 +60,15 @@ var searching = browser.downloads.search({
   query:["imgur"]
 });
 
-searching.then(logDownloads, onError);</pre>
+searching.then(logDownloads, onError);
+```
 
-<h3 id="Get_a_specific_item">Get a specific item</h3>
+### Get a specific item
 
-<p>To get a specific {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}, the easiest way is to set only the <code>id</code> field, as seen in the snippet below:</p>
+To get a specific {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}, the easiest way is to set only the `id` field, as seen in the snippet below:
 
-<pre class="brush: js">function logDownloads(downloads) {
+```js
+function logDownloads(downloads) {
   for (let download of downloads) {
     console.log(download.id);
     console.log(download.url);
@@ -81,13 +83,14 @@ var id = 13;
 
 var searching = browser.downloads.search({id});
 searching.then(logDownloads, onError);
-</pre>
+```
 
-<h3 id="Get_all_downloads">Get all downloads</h3>
+### Get all downloads
 
-<p>If you want to return all {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}, set <code>query</code> to an empty object.</p>
+If you want to return all {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}, set `query` to an empty object.
 
-<pre class="brush: js">function logDownloads(downloads) {
+```js
+function logDownloads(downloads) {
   for (let download of downloads) {
     console.log(download.id);
     console.log(download.url);
@@ -99,13 +102,15 @@ function onError(error) {
 }
 
 var searching = browser.downloads.search({});
-searching.then(logDownloads, onError);</pre>
+searching.then(logDownloads, onError);
+```
 
-<h3 id="Get_the_most_recent_download">Get the most recent download</h3>
+### Get the most recent download
 
-<p>You can get the most recent download by specifying the following search parameters:</p>
+You can get the most recent download by specifying the following search parameters:
 
-<pre class="brush: js">function logDownloads(downloads) {
+```js
+function logDownloads(downloads) {
   for (let download of downloads) {
     console.log(download.id);
     console.log(download.url);
@@ -120,20 +125,18 @@ var searching = browser.downloads.search({
    limit: 1,
    orderBy: ["-startTime"]
 });
-searching.then(logDownloads, onError);</pre>
+searching.then(logDownloads, onError);
+```
 
-<p>You can see this code in action in our <a href="https://github.com/mdn/webextensions-examples/blob/master/latest-download/popup/latest_download.js">latest-download</a> example.</p>
+You can see this code in action in our [latest-download](https://github.com/mdn/webextensions-examples/blob/master/latest-download/popup/latest_download.js) example.
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-search) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#method-search"><code>chrome.downloads</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -160,5 +163,4 @@ searching.then(logDownloads, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

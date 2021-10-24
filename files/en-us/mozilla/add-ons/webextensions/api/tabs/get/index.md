@@ -13,35 +13,35 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Given a tab ID, get the tab's details as a {{WebExtAPIRef("tabs.Tab")}} object.</p>
+Given a tab ID, get the tab's details as a {{WebExtAPIRef("tabs.Tab")}} object.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var getting = browser.tabs.get(
+```js
+var getting = browser.tabs.get(
   tabId              // integer
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. ID of the tab to get.</dd>
-</dl>
+- `tabId`
+  - : `integer`. ID of the tab to get.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing information about the tab. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing information about the tab. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Get information about a tab when it is activated:</p>
+Get information about a tab when it is activated:
 
-<pre class="brush: js">async function logListener(info) {
+```js
+async function logListener(info) {
   try {
     let tabInfo = await browser.tabs.get(info.tabId);
     console.log(tabInfo);
@@ -50,20 +50,18 @@ browser-compat: webextensions.api.tabs.get
   }
 }
 
-browser.tabs.onActivated.addListener(logListener);</pre>
+browser.tabs.onActivated.addListener(logListener);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-get) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-get"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -90,5 +88,4 @@ browser.tabs.onActivated.addListener(logListener);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

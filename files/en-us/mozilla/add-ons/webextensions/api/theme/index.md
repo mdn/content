@@ -8,43 +8,35 @@ tags:
   - add-on
 browser-compat: webextensions.api.theme
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Enables browser extensions to update the browser theme.</p>
+Enables browser extensions to update the browser theme.
 
-<p>To use this API, an extension must request the "theme" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> in its<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"> manifest.json</a> file.</p>
+To use this API, an extension must request the "theme" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its[ manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
-<div class="note">
-<p><strong>Note:</strong> When we set up a theme in a background file, we must declare the 'theme' <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> and therefore we cannot use the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">theme</a> function of the manifest, since it's not compatible.</p>
-</div>
+> **Note:** When we set up a theme in a background file, we must declare the 'theme' [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and therefore we cannot use the [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) function of the manifest, since it's not compatible.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("theme.Theme")}}</dt>
- <dd>Represents the content of a theme.</dd>
-</dl>
+- {{WebExtAPIRef("theme.Theme")}}
+  - : Represents the content of a theme.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("theme.getCurrent()")}}</dt>
- <dd>Gets the current browser theme.</dd>
- <dt>{{WebExtAPIRef("theme.update()")}}</dt>
- <dd>Updates the browser’s theme.</dd>
- <dt>{{WebExtAPIRef("theme.reset()")}}</dt>
- <dd>Removes any theme updates made in a call to {{WebExtAPIRef("theme.update()")}}.</dd>
-</dl>
+- {{WebExtAPIRef("theme.getCurrent()")}}
+  - : Gets the current browser theme.
+- {{WebExtAPIRef("theme.update()")}}
+  - : Updates the browser’s theme.
+- {{WebExtAPIRef("theme.reset()")}}
+  - : Removes any theme updates made in a call to {{WebExtAPIRef("theme.update()")}}.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("theme.onUpdated")}}</dt>
- <dd>Fired when the browser theme has been changed.</dd>
-</dl>
+- {{WebExtAPIRef("theme.onUpdated")}}
+  - : Fired when the browser theme has been changed.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}

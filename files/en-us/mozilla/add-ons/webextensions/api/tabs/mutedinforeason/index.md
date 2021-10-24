@@ -13,37 +13,32 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.MutedInfoReason
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Specifies the reason a tab was muted or unmuted.</p>
+Specifies the reason a tab was muted or unmuted.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are strings. Possible values are:</p>
+Values of this type are strings. Possible values are:
 
-<dl>
- <dt>"capture"</dt>
- <dd>Tab capture started, forcing a muted state change.</dd>
- <dt>"extension"</dt>
- <dd>An extension set the muted state. If this is the reason, <code>extensionId</code> in {{WebExtAPIRef("tabs.mutedInfo")}} will contain the ID of the extension responsible.</dd>
- <dt>"user"</dt>
- <dd>The user set the muted state.</dd>
-</dl>
+- "capture"
+  - : Tab capture started, forcing a muted state change.
+- "extension"
+  - : An extension set the muted state. If this is the reason, `extensionId` in {{WebExtAPIRef("tabs.mutedInfo")}} will contain the ID of the extension responsible.
+- "user"
+  - : The user set the muted state.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-MutedInfoReason) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#type-MutedInfoReason"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -70,5 +65,4 @@ browser-compat: webextensions.api.tabs.MutedInfoReason
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

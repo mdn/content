@@ -12,26 +12,22 @@ tags:
   - themeName
 browser-compat: webextensions.api.devtools.panels.themeName
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The name of the currently selected devtools theme.</p>
+The name of the currently selected devtools theme.
 
-<p>This is a string whose possible values are:</p>
+This is a string whose possible values are:
 
-<ul>
- <li>"light"</li>
- <li>"dark"</li>
- <li>"firebug"</li>
-</ul>
+- "light"
+- "dark"
+- "firebug"
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

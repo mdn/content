@@ -12,80 +12,78 @@ tags:
   - setBadgeTextColor
 browser-compat: webextensions.api.browserAction.setBadgeTextColor
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Sets the text color for the browser action's badge. Tabs without a specific badge text color will inherit the global badge text color.</p>
+Sets the text color for the browser action's badge. Tabs without a specific badge text color will inherit the global badge text color.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.browserAction.setBadgeTextColor(
+```js
+browser.browserAction.setBadgeTextColor(
   details // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p>An object with the following properties:</p>
- <dl>
-  <dt><code>color</code></dt>
-  <dd>
-    <p>The color, specified as one of:</p>
-    <ul>
-     <li>a string: any CSS <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a> value, for example <code>"red"</code>, <code>"#FF0000"</code>, or <code>"rgb(255,0,0)"</code>. If the string is not a valid color, the returned promise will be rejected and the text color won't be altered.</li>
-     <li>a <code>{{WebExtAPIRef('browserAction.ColorArray')}}</code> object.</li>
-     <li><code>null</code>. If a <code>tabId</code> is specified, it removes the tab-specific badge text color so that the tab inherits the global badge text color. Otherwise it reverts the global badge text color to the default value.</li>
-    </ul>
-  </dd>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Sets the badge text color only for the given tab. The color is reset when the user navigates this tab to a new page.</dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Sets the badge text color only for the given tab.</dd>
- </dl>
- </dd>
-</dl>
+- `details`
 
-<ul>
- <li>If <code>windowId</code> and <code>tabId</code> are both supplied, the function fails and the color is not set.</li>
- <li>If <code>windowId</code> and <code>tabId</code> are both omitted, the global badge text color is set instead.</li>
-</ul>
+  - : An object with the following properties:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    - `color`
 
-<p>{{Compat}}</p>
+      - : The color, specified as one of:
 
-<h2 id="Examples">Examples</h2>
+        - a string: any CSS [\<color>](/en-US/docs/Web/CSS/color_value) value, for example `"red"`, `"#FF0000"`, or `"rgb(255,0,0)"`. If the string is not a valid color, the returned promise will be rejected and the text color won't be altered.
+        - a `{{WebExtAPIRef('browserAction.ColorArray')}}` object.
+        - `null`. If a `tabId` is specified, it removes the tab-specific badge text color so that the tab inherits the global badge text color. Otherwise it reverts the global badge text color to the default value.
 
-<p>A badge text color that starts off as red, and turns green when the browser action is clicked:</p>
+    - `tabId`{{optional_inline}}
+      - : `integer`. Sets the badge text color only for the given tab. The color is reset when the user navigates this tab to a new page.
+    - `windowId`{{optional_inline}}
+      - : `integer`. Sets the badge text color only for the given tab.
 
-<pre class="brush: js">browser.browserAction.setBadgeText({text: "1234"});
+<!---->
+
+- If `windowId` and `tabId` are both supplied, the function fails and the color is not set.
+- If `windowId` and `tabId` are both omitted, the global badge text color is set instead.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+A badge text color that starts off as red, and turns green when the browser action is clicked:
+
+```js
+browser.browserAction.setBadgeText({text: "1234"});
 browser.browserAction.setBadgeTextColor({color: "red"});
 
-browser.browserAction.onClicked.addListener(()=&gt; {
+browser.browserAction.onClicked.addListener(()=> {
   browser.browserAction.setBadgeTextColor({color: "green"});
-});</pre>
+});
+```
 
-<p>Set the badge text color only for the active tab:</p>
+Set the badge text color only for the active tab:
 
-<pre class="brush: js">browser.browserAction.setBadgeText({text: "1234"});
+```js
+browser.browserAction.setBadgeText({text: "1234"});
 browser.browserAction.setBadgeTextColor({color: "red"});
 
-browser.browserAction.onClicked.addListener((tab)=&gt; {
+browser.browserAction.onClicked.addListener((tab)=> {
   browser.browserAction.setBadgeTextColor({
     color: "green",
     tabId: tab.id
   });
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-setBadgeBackgroundColor) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction#method-setBadgeBackgroundColor"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> in the Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,5 +110,4 @@ browser.browserAction.onClicked.addListener((tab)=&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

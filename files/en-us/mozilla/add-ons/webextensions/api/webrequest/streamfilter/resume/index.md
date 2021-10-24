@@ -11,40 +11,42 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.resume
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Resumes a request that was previously suspended through a call to {{WebExtAPIRef("webRequest.StreamFilter.suspend()", "suspend()")}}.</p>
+Resumes a request that was previously suspended through a call to {{WebExtAPIRef("webRequest.StreamFilter.suspend()", "suspend()")}}.
 
-<p>You can't call this function until after the {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} event has fired.</p>
+You can't call this function until after the {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} event has fired.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js"><em>StreamFilter</em>.resume()
-</pre>
+```js
+StreamFilter.resume()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>None.</p>
+None.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example uses suspend/resume to delay a web request.</p>
+This example uses suspend/resume to delay a web request.
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event =&gt; {
+  filter.onstart = event => {
     filter.suspend();
 
-    setTimeout(() =&gt; {
+    setTimeout(() => {
       filter.resume();
       filter.disconnect();
     }, 1000);
@@ -56,6 +58,7 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["https://example.org/"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

@@ -12,60 +12,55 @@ tags:
   - onCreated
 browser-compat: webextensions.api.contextualIdentities.onCreated
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when a new contextual identity is created. Contextual identities may be created by extensions using the <code>contextualIdentities</code> API, or directly by the user, using the browser's user interface.</p>
+Fired when a new contextual identity is created. Contextual identities may be created by extensions using the `contextualIdentities` API, or directly by the user, using the browser's user interface.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.contextualIdentities.onCreated.addListener(listener)
+```js
+browser.contextualIdentities.onCreated.addListener(listener)
 browser.contextualIdentities.onCreated.removeListener(listener)
 browser.contextualIdentities.onCreated.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(listener)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>changeInfo</code></dt>
-  <dd><code>object</code>. An object that contains a single property, <code>contextualIdentity</code>, which is a {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} object, representing the identity that was created.</dd>
- </dl>
- </dd>
-</dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    - `changeInfo`
+      - : `object`. An object that contains a single property, `contextualIdentity`, which is a {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} object, representing the identity that was created.
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="Examples">Examples</h2>
+{{Compat}}
 
-<pre class="brush: js">function handleCreated(changeInfo) {
+## Examples
+
+```js
+function handleCreated(changeInfo) {
   console.log(`Created: ${changeInfo.contextualIdentity.name}`);
 }
 
-browser.contextualIdentities.onCreated.addListener(handleCreated);</pre>
+browser.contextualIdentities.onCreated.addListener(handleCreated);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -92,5 +87,4 @@ browser.contextualIdentities.onCreated.addListener(handleCreated);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

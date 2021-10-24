@@ -12,48 +12,42 @@ tags:
   - sessions
 browser-compat: webextensions.api.sessions.forgetClosedTab
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Removes a closed tab from the browser's list of recently closed tabs.Note that the sites visited by that tab are not removed from the browser's history. Use the {{WebExtAPIRef("browsingData")}} or {{WebExtAPIRef("history")}} APIs to remove history.
 
-<div>Removes a closed tab from the browser's list of recently closed tabs.</div>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
+## Syntax
 
-<div>Note that the sites visited by that tab are not removed from the browser's history. Use the {{WebExtAPIRef("browsingData")}} or {{WebExtAPIRef("history")}} APIs to remove history.</div>
-
-
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:js">var forgettingTab = browser.sessions.forgetClosedTab(
+```js
+var forgettingTab = browser.sessions.forgetClosedTab(
   windowId,            // integer
   sessionId            // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>windowId</code></dt>
- <dd><code>Integer</code>. The ID of the window that hosted the tab you want to forget.</dd>
- <dt><code>sessionId</code></dt>
- <dd><code>String</code>. The ID of the session you want to forget.</dd>
-</dl>
+- `windowId`
+  - : `Integer`. The ID of the window that hosted the tab you want to forget.
+- `sessionId`
+  - : `String`. The ID of the session you want to forget.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. This will be fulfilled with no arguments when the session has been removed.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). This will be fulfilled with no arguments when the session has been removed.
 
-<p>If an error occurs, the promise will be rejected with an error message.</p>
+If an error occurs, the promise will be rejected with an error message.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code forgets the single most recently-closed session, whether it's a tab or a window:</p>
+This code forgets the single most recently-closed session, whether it's a tab or a window:
 
-<pre class="brush: js">function forgetMostRecent(sessionInfos) {
+```js
+function forgetMostRecent(sessionInfos) {
   if (!sessionInfos.length) {
     console.log("No sessions found")
     return;
@@ -71,6 +65,7 @@ function onError(error) {
 }
 
 browser.sessions.getRecentlyClosed({maxResults: 1})
-.then(forgetMostRecent, onError);</pre>
+.then(forgetMostRecent, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

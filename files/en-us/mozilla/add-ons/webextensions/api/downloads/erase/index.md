@@ -13,45 +13,43 @@ tags:
   - erase
 browser-compat: webextensions.api.downloads.erase
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code><strong>erase</strong></code><strong><code>()</code></strong> function of the {{WebExtAPIRef("downloads")}} API erases matching {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} from the browser's download history, without deleting the downloaded files from disk.</p>
+The **`erase`\*\***`()`\*\* function of the {{WebExtAPIRef("downloads")}} API erases matching {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} from the browser's download history, without deleting the downloaded files from disk.
 
-<p>To remove the files from disk, you need to use {{WebExtAPIRef("downloads.removeFile()")}}.</p>
+To remove the files from disk, you need to use {{WebExtAPIRef("downloads.removeFile()")}}.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<div class="note">
-<p><strong>Note:</strong> If you want to remove a downloaded file from disk <em>and</em> erase it from history, you have to call {{WebExtAPIRef("downloads.removeFile()")}} before you call <code>erase()</code>. If you try it the other way around you'll get an error when calling {{WebExtAPIRef("downloads.removeFile()")}}, because it no longer exists according to the browser.</p>
-</div>
+> **Note:** If you want to remove a downloaded file from disk _and_ erase it from history, you have to call {{WebExtAPIRef("downloads.removeFile()")}} before you call `erase()`. If you try it the other way around you'll get an error when calling {{WebExtAPIRef("downloads.removeFile()")}}, because it no longer exists according to the browser.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var erasing = browser.downloads.erase(
+```js
+var erasing = browser.downloads.erase(
   query                    // DownloadQuery
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>query</code></dt>
- <dd>A {{WebExtAPIRef('downloads.DownloadQuery')}} object.</dd>
-</dl>
+- `query`
+  - : A {{WebExtAPIRef('downloads.DownloadQuery')}} object.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. If the call was successful, the promise will be fulfilled with an array of integers representing the ids of the erased {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}. If no items matching the query parameter could be found, the array will be empty. If the call failed, the promise will be rejected with an error message.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the call was successful, the promise will be fulfilled with an array of integers representing the ids of the erased {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}. If no items matching the query parameter could be found, the array will be empty. If the call failed, the promise will be rejected with an error message.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Erase the most recent download:</p>
+Erase the most recent download:
 
-<pre class="brush: js">function onErased(ids) {
+```js
+function onErased(ids) {
   console.log(`Erased: ${ids}`);
 }
 
@@ -64,11 +62,13 @@ var erasing = browser.downloads.erase({
   orderBy: ["-startTime"]
 });
 
-erasing.then(onErased, onError);</pre>
+erasing.then(onErased, onError);
+```
 
-<p>Erase everything:</p>
+Erase everything:
 
-<pre class="brush: js">function onErased(ids) {
+```js
+function onErased(ids) {
   console.log(`Erased: ${ids}`);
 }
 
@@ -77,18 +77,16 @@ function onError(error) {
 }
 
 var erasing = browser.downloads.erase({});
-erasing.then(onErased, onError);</pre>
+erasing.then(onErased, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-erase) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#method-erase"><code>chrome.downloads</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -115,5 +113,4 @@ erasing.then(onErased, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

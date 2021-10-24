@@ -13,73 +13,65 @@ tags:
   - onVisited
 browser-compat: webextensions.api.history.onVisited
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired each time the user visits a page. A {{WebExtAPIRef("history.HistoryItem")}} object is passed to the listener. This event fires before the page has loaded.</p>
+Fired each time the user visits a page. A {{WebExtAPIRef("history.HistoryItem")}} object is passed to the listener. This event fires before the page has loaded.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.history.onVisited.addListener(listener)
+```js
+browser.history.onVisited.addListener(listener)
 browser.history.onVisited.removeListener(listener)
 browser.history.onVisited.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>result</code></dt>
-  <dd>
-  <p>{{WebExtAPIRef('history.HistoryItem')}}. An object representing the item in the browser's history.</p>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
-  <p>At the time that this event is sent, the browser doesn't yet know the title of the page. If the browser has visited this page before and has remembered its old title, then the <code>HistoryItem.title</code> object will contain the old title of the page. If the browser doesn't have a record of the page's old title, then <code>HistoryItem.title</code> will be empty. To get the titles of pages as soon as they are known, listen for {{WebExtAPIRef("history.onTitleChanged")}}.</p>
-  </dd>
- </dl>
- </dd>
-</dl>
+    - `result`
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+      - : {{WebExtAPIRef('history.HistoryItem')}}. An object representing the item in the browser's history.
 
-<p>{{Compat}}</p>
+        At the time that this event is sent, the browser doesn't yet know the title of the page. If the browser has visited this page before and has remembered its old title, then the `HistoryItem.title` object will contain the old title of the page. If the browser doesn't have a record of the page's old title, then `HistoryItem.title` will be empty. To get the titles of pages as soon as they are known, listen for {{WebExtAPIRef("history.onTitleChanged")}}.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>Listen for visits, and log the URL and visit time.</p>
+{{Compat}}
 
-<pre class="brush: js">function onVisited(historyItem) {
+## Examples
+
+Listen for visits, and log the URL and visit time.
+
+```js
+function onVisited(historyItem) {
   console.log(historyItem.url);
   console.log(new Date(historyItem.lastVisitTime));
 }
 
-browser.history.onVisited.addListener(onVisited);</pre>
+browser.history.onVisited.addListener(onVisited);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#event-onVisited) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/history#event-onVisited"><code>chrome.history</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,5 +98,4 @@ browser.history.onVisited.addListener(onVisited);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

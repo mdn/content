@@ -13,55 +13,55 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.bookmarks.search
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <strong><code>bookmarks.search()</code></strong> function searches for bookmark tree nodes matching the given query.</p>
+The **`bookmarks.search()`** function searches for bookmark tree nodes matching the given query.
 
-<p>This function throws an exception if any of the input parameters are invalid or are not of an appropriate type; look in the <a href="https://extensionworkshop.com/documentation/develop/debugging/">console</a> for the error message. The exceptions don't have error IDs, and the messages themselves may change, so don't write code that tries to interpret them.</p>
+This function throws an exception if any of the input parameters are invalid or are not of an appropriate type; look in the [console](https://extensionworkshop.com/documentation/develop/debugging/) for the error message. The exceptions don't have error IDs, and the messages themselves may change, so don't write code that tries to interpret them.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var searching = browser.bookmarks.search(
+```js
+var searching = browser.bookmarks.search(
   query                  // string or object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>query</code></dt>
- <dd>
-   <p>A {{jsxref("string")}} or {{jsxref("object")}} describing the query to perform.</p>
-   <p>If <code>query</code> is a <strong>string</strong>, it consists of zero or more space-delimited search terms. Each search term matches if it is a substring in the bookmark's URL or title. Matching is case-insensitive. For a bookmark to match the query, all the query's search terms must be matched.</p>
+- `query`
 
-   <p>If <code>query</code> is an <strong>object</strong>, it consists of zero or more of 3 properties: <code>query</code>, <code>title</code>, and <code>url</code>, which are described below. For a bookmark to match the query, all the properties' terms must be matched.</p>
-   <dl>
-    <dt><code>query</code> {{optional_inline}}</dt>
-    <dd>A {{jsxref("string")}} specifying one or more terms to match against; the format is identical to the string form of the <code>query</code> parameter. If this isn't a string, an exception is thrown.</dd>
-    <dt><code>url</code> {{optional_inline}}</dt>
-    <dd>
-      <p>A {{jsxref("string")}} that must exactly match the bookmark's URL. Matching is case-insensitive, and trailing slashes are ignored.</p>
-      <p>If you pass an invalid URL, the function will throw an exception.</p>
-    </dd>
-    <dt><code>title</code> {{optional_inline}}</dt>
-    <dd>A {{jsxref("string")}} that must exactly match the bookmark tree node's title. Matching is case-sensitive.</dd>
-   </dl>
- </dd>
-</dl>
+  - : A {{jsxref("string")}} or {{jsxref("object")}} describing the query to perform.
 
-<h3 id="Return_value">Return value</h3>
+    If `query` is a **string**, it consists of zero or more space-delimited search terms. Each search term matches if it is a substring in the bookmark's URL or title. Matching is case-insensitive. For a bookmark to match the query, all the query's search terms must be matched.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an array of {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} objects, each representing a single matching bookmark tree node. Results are returned in the order that the nodes were created. The array is empty if no results were found.</p>
+    If `query` is an **object**, it consists of zero or more of 3 properties: `query`, `title`, and `url`, which are described below. For a bookmark to match the query, all the properties' terms must be matched.
 
-<p>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode">BookmarkTreeNodes</a></code>—even nodes of the <code>"folder"</code> type—returned by <code>bookmarks.search()</code> are missing the <code>children</code> property. To get a complete <code>BookmarkTreeNode</code> use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree">bookmarks.getSubTree()</a></code>.</p>
+    - `query` {{optional_inline}}
+      - : A {{jsxref("string")}} specifying one or more terms to match against; the format is identical to the string form of the `query` parameter. If this isn't a string, an exception is thrown.
+    - `url` {{optional_inline}}
 
-<h2 id="Example">Example</h2>
+      - : A {{jsxref("string")}} that must exactly match the bookmark's URL. Matching is case-insensitive, and trailing slashes are ignored.
 
-<p>This example logs the IDs of all bookmarks:</p>
+        If you pass an invalid URL, the function will throw an exception.
 
-<pre class="brush: js">function onFulfilled(bookmarkItems) {
+    - `title` {{optional_inline}}
+      - : A {{jsxref("string")}} that must exactly match the bookmark tree node's title. Matching is case-sensitive.
+
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} objects, each representing a single matching bookmark tree node. Results are returned in the order that the nodes were created. The array is empty if no results were found.
+
+The [`BookmarkTreeNodes`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode)—even nodes of the `"folder"` type—returned by `bookmarks.search()` are missing the `children` property. To get a complete `BookmarkTreeNode` use [`bookmarks.getSubTree()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree).
+
+## Example
+
+This example logs the IDs of all bookmarks:
+
+```js
+function onFulfilled(bookmarkItems) {
   for (item of bookmarkItems) {
     console.log(item.id);
   }
@@ -73,11 +73,13 @@ function onRejected(error) {
 
 var searching = browser.bookmarks.search({});
 
-searching.then(onFulfilled, onRejected);</pre>
+searching.then(onFulfilled, onRejected);
+```
 
-<p>This example looks to see if the currently active tab is bookmarked:</p>
+This example looks to see if the currently active tab is bookmarked:
 
-<pre class="brush: js">function onFulfilled(bookmarkItems) {
+```js
+function onFulfilled(bookmarkItems) {
   if (bookmarkItems.length) {
     console.log("active tab is bookmarked");
   } else {
@@ -95,22 +97,19 @@ function checkActiveTab(tab) {
 }
 
 browser.browserAction.onClicked.addListener(checkActiveTab);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-search) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <code><a href="https://developer.chrome.com/extensions/bookmarks#method-search">chrome.bookmarks</a></code> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -137,5 +136,4 @@ browser.browserAction.onClicked.addListener(checkActiveTab);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

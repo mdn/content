@@ -12,51 +12,47 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.privacy.network
 ---
-<div>{{AddonSidebar}}
-<p>The {{WebExtAPIRef("privacy.network")}} property contains privacy-related network settings. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.</p>
+{{AddonSidebar}}
 
-<p>Default values for these properties tend to vary across browsers.</p>
+The {{WebExtAPIRef("privacy.network")}} property contains privacy-related network settings. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.
 
-<h2 id="Properties">Properties</h2>
+Default values for these properties tend to vary across browsers.
 
-<dl>
- <dt><code>networkPredictionEnabled</code></dt>
- <dd>A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If <code>true</code>, the browser attempts to speed up web browsing by pre-resolving DNS entries, prerendering sites (using, for example, <code>&lt;link rel='prefetch' ...&gt;</code>), and preemptively opening TCP and SSL connections to servers.</dd>
- <dt><code>peerConnectionEnabled</code></dt>
- <dd>A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If <code>false</code>, the <code><a href="/en-US/docs/Web/API/RTCPeerConnection">RTCPeerConnection</a></code> interface is disabled. Note that <code><a href="/en-US/docs/Web/API/MediaDevices/getUserMedia">getUserMedia()</a></code> is <em>not</em> affected by this setting.</dd>
- <dt><code>webRTCIPHandlingPolicy</code></dt>
- <dd>
- <p>A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a string. This setting allows users to specify the media performance/privacy tradeoffs which affect how WebRTC traffic will be routed and how much local address information is exposed. It may take any one of the following values, from least private to most private:</p>
+## Properties
 
- <ul>
-  <li><code>default</code></li>
-  <li><code>default_public_and_private_interfaces</code></li>
-  <li><code>default_public_interface_only</code></li>
-  <li><code>disable_non_proxied_udp</code></li>
-  <li><code>proxy_only</code> (only connections using TURN on a TCP connection through a proxy are allowed)</li>
- </ul>
- </dd>
- <dt><code>httpsOnlyMode</code></dt>
-<dd>
-  <p>This setting allows your extension to determine if a user has enabled
-  <a href="https://support.mozilla.org/kb/https-only-prefs"> HTTPS-Only mode</a>. This property is read-only on all platforms. Its underlying value is a string that may take one of three values:</p>
-  <ul>
-    <li><code>"always"</code>: HTTPS-Only mode is on.</li>
-    <li><code>"never"</code>: HTTPS-Only mode is off.</li>
-    <li><code>"private_browsing"</code>: HTTPS-Only mode is on in private browsing windows only.</li>
-  </ul>
-</dd>
-</dl>
+- `networkPredictionEnabled`
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `true`, the browser attempts to speed up web browsing by pre-resolving DNS entries, prerendering sites (using, for example, `<link rel='prefetch' ...>`), and preemptively opening TCP and SSL connections to servers.
+- `peerConnectionEnabled`
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `false`, the [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection) interface is disabled. Note that [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) is _not_ affected by this setting.
+- `webRTCIPHandlingPolicy`
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+  - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a string. This setting allows users to specify the media performance/privacy tradeoffs which affect how WebRTC traffic will be routed and how much local address information is exposed. It may take any one of the following values, from least private to most private:
 
-<p>{{Compat}}</p>
+    - `default`
+    - `default_public_and_private_interfaces`
+    - `default_public_interface_only`
+    - `disable_non_proxied_udp`
+    - `proxy_only` (only connections using TURN on a TCP connection through a proxy are allowed)
 
-<h2 id="Examples">Examples</h2>
+- `httpsOnlyMode`
 
-<p>Set the <code>webRTCIPHandlingPolicy</code> property:</p>
+  - : This setting allows your extension to determine if a user has enabled
+    [HTTPS-Only mode](https://support.mozilla.org/kb/https-only-prefs). This property is read-only on all platforms. Its underlying value is a string that may take one of three values:
 
-<pre class="brush: js">function onSet(result) {
+    - `"always"`: HTTPS-Only mode is on.
+    - `"never"`: HTTPS-Only mode is off.
+    - `"private_browsing"`: HTTPS-Only mode is on in private browsing windows only.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+Set the `webRTCIPHandlingPolicy` property:
+
+```js
+function onSet(result) {
   if (result) {
     console.log("success");
   } else {
@@ -64,10 +60,10 @@ browser-compat: webextensions.api.privacy.network
   }
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
 
   var getting = browser.privacy.network.webRTCIPHandlingPolicy.get({});
-  getting.then((got) =&gt; {
+  getting.then((got) => {
     console.log(got.value);
     if ((got.levelOfControl === "controlled_by_this_extension") ||
         (got.levelOfControl === "controllable_by_this_extension")) {
@@ -81,19 +77,15 @@ browser.browserAction.onClicked.addListener(() =&gt; {
   });
 
 });
+```
 
-</pre>
+{{WebExtExamples}}
 
-<p>{{WebExtExamples}}</p>
+> **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/extensions/privacy) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/privacy"><code>chrome.privacy</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json"><code>privacy.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -120,6 +112,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
-</div>
+</pre></div>

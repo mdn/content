@@ -10,60 +10,50 @@ tags:
   - omnibox
 browser-compat: webextensions.api.omnibox
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Enables extensions to implement customised behavior when the user types into the browser's address bar.</p>
+Enables extensions to implement customised behavior when the user types into the browser's address bar.
 
-<p>When the user focuses the browser's address bar and starts typing, the browser displays a drop-down list containing suggested pages, based on what they typed. This gives the user a quick way to access, for example, pages from their history or bookmarks.</p>
+When the user focuses the browser's address bar and starts typing, the browser displays a drop-down list containing suggested pages, based on what they typed. This gives the user a quick way to access, for example, pages from their history or bookmarks.
 
-<p>The omnibox API provides the extension a way to customise the suggestions displayed in the drop-down, when the user enters a keyword defined by the extension. It works as follows:</p>
+The omnibox API provides the extension a way to customise the suggestions displayed in the drop-down, when the user enters a keyword defined by the extension. It works as follows:
 
-<ol>
- <li>First, the extension must include an "<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox">omnibox</a>" key in its <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file, which defines a keyword.</li>
- <li>When the user focuses the address bar and types the keyword, followed by a space, the extension will get an {{WebExtAPIRef("omnibox.onInputStarted")}} event.</li>
- <li>Optionally, the extension can call {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}} to define the first suggestion that will be displayed in the address bar drop-down.</li>
- <li>As the user continues to type characters after this, the extension will get {{WebExtAPIRef("omnibox.onInputChanged")}} events. The event listener will be passed the current value the user has typed, and will be able to populate the address bar drop-down with suggestions. If the extension set a default suggestion using {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, then this will appear first in the drop-down.</li>
- <li>If the user accepts a suggestion, the extension will get an {{WebExtAPIRef("omnibox.onInputEntered")}} event. The event listener will be passed the accepted suggestion.</li>
- <li>If the user dismisses the drop-down, the extension will get an {{WebExtAPIRef("omnibox.onInputCancelled")}} event.</li>
-</ol>
+1.  First, the extension must include an "[omnibox](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)" key in its [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, which defines a keyword.
+2.  When the user focuses the address bar and types the keyword, followed by a space, the extension will get an {{WebExtAPIRef("omnibox.onInputStarted")}} event.
+3.  Optionally, the extension can call {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}} to define the first suggestion that will be displayed in the address bar drop-down.
+4.  As the user continues to type characters after this, the extension will get {{WebExtAPIRef("omnibox.onInputChanged")}} events. The event listener will be passed the current value the user has typed, and will be able to populate the address bar drop-down with suggestions. If the extension set a default suggestion using {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, then this will appear first in the drop-down.
+5.  If the user accepts a suggestion, the extension will get an {{WebExtAPIRef("omnibox.onInputEntered")}} event. The event listener will be passed the accepted suggestion.
+6.  If the user dismisses the drop-down, the extension will get an {{WebExtAPIRef("omnibox.onInputCancelled")}} event.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}</dt>
- <dd>Describes the recommended method to handle the selected suggestion: open in the current tab, open in a new foreground tab, or open in a new background tab.</dd>
- <dt>{{WebExtAPIRef("omnibox.SuggestResult")}}</dt>
- <dd>Object representing a suggestion to add to the address bar drop-down.</dd>
-</dl>
+- {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}
+  - : Describes the recommended method to handle the selected suggestion: open in the current tab, open in a new foreground tab, or open in a new background tab.
+- {{WebExtAPIRef("omnibox.SuggestResult")}}
+  - : Object representing a suggestion to add to the address bar drop-down.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}</dt>
- <dd>Defines the first suggestion that appears in the drop-down when the user enters the keyword for your extension, followed by a space.</dd>
-</dl>
+- {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}
+  - : Defines the first suggestion that appears in the drop-down when the user enters the keyword for your extension, followed by a space.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("omnibox.onInputStarted")}}</dt>
- <dd>Fired when the user focuses the address bar and types your extension's omnibox keyword, followed by a space.</dd>
- <dt>{{WebExtAPIRef("omnibox.onInputChanged")}}</dt>
- <dd>Fired whenever the user's input changes, after they have focused the address bar and typed your extension's omnibox keyword, followed by a space.</dd>
- <dt>{{WebExtAPIRef("omnibox.onInputEntered")}}</dt>
- <dd>Fired when the user accepts one of your extension's suggestions.</dd>
- <dt>{{WebExtAPIRef("omnibox.onInputCancelled")}}</dt>
- <dd>Fired when the user dismisses the address bar drop-down, after they have focused the address bar and typed your extension's omnibox keyword.</dd>
-</dl>
+- {{WebExtAPIRef("omnibox.onInputStarted")}}
+  - : Fired when the user focuses the address bar and types your extension's omnibox keyword, followed by a space.
+- {{WebExtAPIRef("omnibox.onInputChanged")}}
+  - : Fired whenever the user's input changes, after they have focused the address bar and typed your extension's omnibox keyword, followed by a space.
+- {{WebExtAPIRef("omnibox.onInputEntered")}}
+  - : Fired when the user accepts one of your extension's suggestions.
+- {{WebExtAPIRef("omnibox.onInputCancelled")}}
+  - : Fired when the user dismisses the address bar drop-down, after they have focused the address bar and typed your extension's omnibox keyword.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/omnibox"><code>chrome.omnibox</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/extensions/omnibox) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

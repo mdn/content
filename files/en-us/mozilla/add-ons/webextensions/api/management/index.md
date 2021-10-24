@@ -10,79 +10,68 @@ tags:
   - management
 browser-compat: webextensions.api.management
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Get information about installed add-ons.</p>
+Get information about installed add-ons.
 
-<p>With the <code>management</code> API you can:</p>
+With the `management` API you can:
 
-<ul>
- <li>get information about installed add-ons</li>
- <li>enable/disable add-ons</li>
- <li>uninstall add-ons</li>
- <li>find out which permission warnings are given for particular add-ons or manifests</li>
- <li>get notifications of add-ons being installed, uninstalled, enabled, or disabled.</li>
-</ul>
+- get information about installed add-ons
+- enable/disable add-ons
+- uninstall add-ons
+- find out which permission warnings are given for particular add-ons or manifests
+- get notifications of add-ons being installed, uninstalled, enabled, or disabled.
 
-<p>Most of these operations require the "management" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">API permission</a>. Operations that don't provide access to other add-ons don't require this permission.</p>
+Most of these operations require the "management" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). Operations that don't provide access to other add-ons don't require this permission.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("management.ExtensionInfo")}}</dt>
- <dd>An object that contains information about an installed add-on.</dd>
-</dl>
+- {{WebExtAPIRef("management.ExtensionInfo")}}
+  - : An object that contains information about an installed add-on.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("management.getAll()")}}</dt>
- <dd>Returns information about all installed add-ons.</dd>
- <dt>{{WebExtAPIRef("management.get()")}}</dt>
- <dd>Returns information about a particular add-on, given its ID.</dd>
- <dt>{{WebExtAPIRef("management.getSelf()")}}</dt>
- <dd>Returns information about the calling add-on.</dd>
- <dt>{{WebExtAPIRef("management.install()")}}</dt>
- <dd>Installs a particular theme, given its URL at <a href="https://addons.mozilla.org">addons.mozilla.org</a>.</dd>
- <dt>{{WebExtAPIRef("management.uninstall()")}}</dt>
- <dd>Uninstalls a particular add-on, given its ID.</dd>
- <dt>{{WebExtAPIRef("management.uninstallSelf()")}}</dt>
- <dd>Uninstalls the calling add-on.</dd>
- <dt>{{WebExtAPIRef("management.getPermissionWarningsById()")}}</dt>
- <dd>Get the set of permission warnings for a particular add-on, given its ID.</dd>
- <dt>{{WebExtAPIRef("management.getPermissionWarningsByManifest()")}}</dt>
- <dd>Get the set of permission warnings that would be displayed for the given manifest string.</dd>
- <dt>{{WebExtAPIRef("management.setEnabled()")}}</dt>
- <dd>Enable/disable a particular add-on, given its ID.</dd>
-</dl>
+- {{WebExtAPIRef("management.getAll()")}}
+  - : Returns information about all installed add-ons.
+- {{WebExtAPIRef("management.get()")}}
+  - : Returns information about a particular add-on, given its ID.
+- {{WebExtAPIRef("management.getSelf()")}}
+  - : Returns information about the calling add-on.
+- {{WebExtAPIRef("management.install()")}}
+  - : Installs a particular theme, given its URL at [addons.mozilla.org](https://addons.mozilla.org).
+- {{WebExtAPIRef("management.uninstall()")}}
+  - : Uninstalls a particular add-on, given its ID.
+- {{WebExtAPIRef("management.uninstallSelf()")}}
+  - : Uninstalls the calling add-on.
+- {{WebExtAPIRef("management.getPermissionWarningsById()")}}
+  - : Get the set of permission warnings for a particular add-on, given its ID.
+- {{WebExtAPIRef("management.getPermissionWarningsByManifest()")}}
+  - : Get the set of permission warnings that would be displayed for the given manifest string.
+- {{WebExtAPIRef("management.setEnabled()")}}
+  - : Enable/disable a particular add-on, given its ID.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("management.onInstalled")}}</dt>
- <dd>Fired when an add-on is installed.</dd>
- <dt>{{WebExtAPIRef("management.onUninstalled")}}</dt>
- <dd>Fired when an add-on is uninstalled.</dd>
- <dt>{{WebExtAPIRef("management.onEnabled")}}</dt>
- <dd>Fired when an add-on is enabled.</dd>
- <dt>{{WebExtAPIRef("management.onDisabled")}}</dt>
- <dd>Fired when an add-on is disabled.</dd>
-</dl>
+- {{WebExtAPIRef("management.onInstalled")}}
+  - : Fired when an add-on is installed.
+- {{WebExtAPIRef("management.onUninstalled")}}
+  - : Fired when an add-on is uninstalled.
+- {{WebExtAPIRef("management.onEnabled")}}
+  - : Fired when an add-on is enabled.
+- {{WebExtAPIRef("management.onDisabled")}}
+  - : Fired when an add-on is disabled.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
+> **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/extensions/management) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/management"><code>chrome.management</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2012 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2012 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -109,5 +98,4 @@ browser-compat: webextensions.api.management
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

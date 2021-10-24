@@ -11,26 +11,26 @@ tags:
   - imageAnimationBehavior
 browser-compat: webextensions.api.browserSettings.imageAnimationBehavior
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to change the way the browser handles animated images, such as GIFs.</p>
+A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to change the way the browser handles animated images, such as GIFs.
 
-<p>The underlying value is a string that can take one of three values:</p>
+The underlying value is a string that can take one of three values:
 
-<ul>
- <li>"normal": the default. Play animated images as normal.</li>
- <li>"none": don't animate images at all.</li>
- <li>"once": play the animation once.</li>
-</ul>
+- "normal": the default. Play animated images as normal.
+- "none": don't animate images at all.
+- "once": play the animation once.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Disable animated images:</p>
+Disable animated images:
 
-<pre class="brush: js">  browser.browserSettings.imageAnimationBehavior.set({value: "none"});</pre>
+```js
+  browser.browserSettings.imageAnimationBehavior.set({value: "none"});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

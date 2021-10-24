@@ -13,61 +13,52 @@ tags:
   - onChanged
 browser-compat: webextensions.api.bookmarks.onChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when there is a change to:</p>
+Fired when there is a change to:
 
-<ul>
-	<li>the title or URL of a bookmark</li>
-	<li>the name of a folder.</li>
-</ul>
+- the title or URL of a bookmark
+- the name of a folder.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.bookmarks.onChanged.addListener(listener)
+```js
+browser.bookmarks.onChanged.addListener(listener)
 browser.bookmarks.onChanged.removeListener(listener)
 browser.bookmarks.onChanged.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
-	<dt><code>addListener(callback)</code></dt>
-	<dd>Adds a listener to this event.</dd>
-	<dt><code>removeListener(listener)</code></dt>
-	<dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
-	<dt><code>hasListener(listener)</code></dt>
-	<dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code>callback</code></dt>
-	<dd>
-	<p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
-	<dl>
-		<dt><code>id</code></dt>
-		<dd><code>string</code>. ID of the item that changed.</dd>
-	</dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
-	<dl>
-		<dt><code>changeInfo</code></dt>
-		<dd><a href="#changeinfo"><code>object</code></a>. Object containing two properties: <code>title</code>, a string containing the item's title, and <code>url</code>, a string containing the item's URL. If the item is a folder, <code>url</code> is omitted.</dd>
-	</dl>
-	</dd>
-</dl>
+    - `id`
+      - : `string`. ID of the item that changed.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Multiple events may occur when a bookmark changes, and that changeInfo object may contain only the data that has changed, rather than all the data for the bookmark. In other words, if the <code>url</code> for a bookmark changes, the changeInfo may only contain the new <code>url</code> information.</p>
-</div>
+    <!---->
 
-<h2 id="Examples">Examples</h2>
+    - `changeInfo`
+      - : [`object`](#changeinfo). Object containing two properties: `title`, a string containing the item's title, and `url`, a string containing the item's URL. If the item is a folder, `url` is omitted.
 
-<pre class="brush: js">function handleChanged(id, changeInfo) {
+> **Note:** Multiple events may occur when a bookmark changes, and that changeInfo object may contain only the data that has changed, rather than all the data for the bookmark. In other words, if the `url` for a bookmark changes, the changeInfo may only contain the new `url` information.
+
+## Examples
+
+```js
+function handleChanged(id, changeInfo) {
   console.log("Item: " + id + " changed");
   console.log("Title: " + changeInfo.title);
   console.log("Url: " + changeInfo.url);
@@ -78,22 +69,19 @@ function handleClick() {
 }
 
 browser.browserAction.onClicked.addListener(handleClick);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#event-onChanged) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#event-onChanged"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -120,5 +108,4 @@ browser.browserAction.onClicked.addListener(handleClick);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

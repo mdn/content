@@ -9,40 +9,37 @@ tags:
   - Deprecated
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<div class="notecard note">
-<p><strong>Note:</strong> This article explains how you can debug extensions using WebExtension APIs on versions of Firefox earlier than version 50.</p>
+> **Note:** This article explains how you can debug extensions using WebExtension APIs on versions of Firefox earlier than version 50.
+>
+> If you're using Firefox 50 or later, see the [main article on debugging extensions](https://extensionworkshop.com/documentation/develop/debugging/).
 
-<p>If you're using Firefox 50 or later, see the <a href="https://extensionworkshop.com/documentation/develop/debugging/">main article on debugging extensions</a>.</p>
-</div>
+This article explains how you can use the built-in Firefox developer tools to debug extensions developed with WebExtension APIs. If you're trying to debug an add-on developed with the Add-on SDK, please see the guide to the [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger).
 
-<p>This article explains how you can use the built-in Firefox developer tools to debug extensions developed with WebExtension APIs. If you're trying to debug an add-on developed with the Add-on SDK, please see the guide to the <a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a>.</p>
+## A simple example: notify-link-clicks-i18n
 
-<h2 id="A_simple_example_notify-link-clicks-i18n">A simple example: notify-link-clicks-i18n</h2>
+To show how to connect the debugging tools, we'll use a simple example extension called "notify-link-clicks-i18n". The code is in the [Extensions examples repository on GitHub](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n).
 
-<p>To show how to connect the debugging tools, we'll use a simple example extension called "notify-link-clicks-i18n". The code is in the <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">Extensions examples repository on GitHub</a>.</p>
+The extension consists of:
 
-<p>The extension consists of:</p>
+- a background script, "background-script.js"
+- a content script, "content-script.js", that is injected into all pages.
 
-<ul>
- <li>a background script, "background-script.js"</li>
- <li>a content script, "content-script.js", that is injected into all pages.</li>
-</ul>
+The content script listens for clicks on links in the page: when a click on a link happens, the content script sends a message to the background script containing the link's href.
 
-<p>The content script listens for clicks on links in the page: when a click on a link happens, the content script sends a message to the background script containing the link's href.</p>
+When the background script receives the message, it displays a notification containing the href.
 
-<p>When the background script receives the message, it displays a notification containing the href.</p>
+Here's "content-script.js":
 
-<p>Here's "content-script.js":</p>
-
-<pre class="brush: js">/*
+```js
+/*
 If the click was on a link, send a message to the background page.
 The message contains the link's URL.
 */
 function notifyExtension(e) {
   var target = e.target;
-  while ((target.tagName != "A" || !target.href) &amp;&amp; target.parentNode) {
+  while ((target.tagName != "A" || !target.href) && target.parentNode) {
     target = target.parentNode;
   }
   if (target.tagName != "A")
@@ -56,11 +53,12 @@ function notifyExtension(e) {
 Add notifyExtension() as a listener to click events.
 */
 window.addEventListener("click", notifyExtension);
-</pre>
+```
 
-<p>Here's "background-script.js":</p>
+Here's "background-script.js":
 
-<pre class="brush: js">/*
+```js
+/*
 Log that we received the message.
 Then display a notification. The notification contains the URL,
 which we read from the message.
@@ -81,150 +79,134 @@ function notify(message) {
 Assign `notify()` as a listener to messages from the content script.
 */
 chrome.runtime.onMessage.addListener(notify);
-</pre>
+```
 
-<p>If you want to follow along, clone the <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repository, then <a href="https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox">package and install</a> "notify-link-clicks-i18n".</p>
+If you want to follow along, clone the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository, then [package and install](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox) "notify-link-clicks-i18n".
 
-<h2 id="The_Browser_Toolbox">The Browser Toolbox</h2>
+## The Browser Toolbox
 
-<p>We'll use the Browser Toolbox to debug the extension.</p>
+We'll use the Browser Toolbox to debug the extension.
 
-<h3 id="Prerequisites">Prerequisites</h3>
+### Prerequisites
 
-<p>Before you can use the Browser Toolbox, you have to get set up.</p>
+Before you can use the Browser Toolbox, you have to get set up.
 
-<ul>
- <li>open the Firefox Developer Tools</li>
- <li>open the <a href="/en-US/docs/Tools/Settings">Settings</a> for the tools</li>
- <li>under Advanced settings, make sure that the following two settings are checked:
-  <ul>
-   <li><em>Enable browser chrome and add-on debugging toolboxes</em></li>
-   <li><em>Enable remote debugging</em></li>
-  </ul>
- </li>
-</ul>
+- open the Firefox Developer Tools
+- open the [Settings](/en-US/docs/Tools/Settings) for the tools
+- under Advanced settings, make sure that the following two settings are checked:
 
-<p>{{EmbedYouTube("LJAM2vXJ790")}}</p>
+  - _Enable browser chrome and add-on debugging toolboxes_
+  - _Enable remote debugging_
 
-<h3 id="Opening_the_Browser_Toolbox">Opening the Browser Toolbox</h3>
+{{EmbedYouTube("LJAM2vXJ790")}}
 
-<p>Next, we'll open the Browser Toolbox.</p>
+### Opening the Browser Toolbox
 
-<ul>
- <li>open the Web Developer menu in Firefox, and select the "Browser Toolbox" (note: <em>not</em> "Browser Console").</li>
- <li>you'll be presented with a warning dialog: click OK.</li>
-</ul>
+Next, we'll open the Browser Toolbox.
 
-<p>The Browser Toolbox will then open in a new window. The main Firefox window will be switched into the foreground, so you'll have to click on the Browser Toolbox to bring it back in front:</p>
+- open the Web Developer menu in Firefox, and select the "Browser Toolbox" (note: _not_ "Browser Console").
+- you'll be presented with a warning dialog: click OK.
 
-<p>{{EmbedYouTube("fZ492zAAy3o")}}</p>
+The Browser Toolbox will then open in a new window. The main Firefox window will be switched into the foreground, so you'll have to click on the Browser Toolbox to bring it back in front:
 
-<p>In Firefox, a "Toolbox" is the name for a separate window containing a set of tools in a tabbed interface, like this:</p>
+{{EmbedYouTube("fZ492zAAy3o")}}
 
-<p><img alt="" src="browser-toolbox.png">The above toolbox contains five tools, which you can switch between using the tabs at the top of the window: "Inspector", "Console", "Debugger", "Style Editor", and "Scratchpad". We'll be using only two of these tools: "Console" and "Debugger".</p>
+In Firefox, a "Toolbox" is the name for a separate window containing a set of tools in a tabbed interface, like this:
 
-<h3 id="Viewing_log_output">Viewing log output</h3>
+![](browser-toolbox.png)The above toolbox contains five tools, which you can switch between using the tabs at the top of the window: "Inspector", "Console", "Debugger", "Style Editor", and "Scratchpad". We'll be using only two of these tools: "Console" and "Debugger".
 
-<p>We can use the Console to see log output: this includes messages from:</p>
+### Viewing log output
 
-<ul>
- <li>background scripts</li>
- <li>scripts running in popups</li>
- <li>content scripts.</li>
-</ul>
+We can use the Console to see log output: this includes messages from:
 
-<p>It includes messages your code logs using the <a href="/en-US/docs/Web/API/console">Console API</a> as well as any error messages logged by the JavaScript engine as it executes your code.</p>
+- background scripts
+- scripts running in popups
+- content scripts.
 
-<p>Let's try it with the example above: select the Console tab in the Browser Toolbox, open a web page, and click a link to see messages logged from the content script and the background script:</p>
+It includes messages your code logs using the [Console API](/en-US/docs/Web/API/console) as well as any error messages logged by the JavaScript engine as it executes your code.
 
-<p>{{EmbedYouTube("Qpx0n8gP3Qw")}}</p>
+Let's try it with the example above: select the Console tab in the Browser Toolbox, open a web page, and click a link to see messages logged from the content script and the background script:
 
-<p>One problem here is that the console shows you messages from the entire browser, so there can be a lot of noise. Read about <a href="/en-US/docs/Tools/Web_Console/Console_messages#filtering_and_searching">how to filter log messages</a> for help with this.</p>
+{{EmbedYouTube("Qpx0n8gP3Qw")}}
 
-<h3 id="Debugging_JavaScript">Debugging JavaScript</h3>
+One problem here is that the console shows you messages from the entire browser, so there can be a lot of noise. Read about [how to filter log messages](/en-US/docs/Tools/Web_Console/Console_messages#filtering_and_searching) for help with this.
 
-<p>With the Browser Toolbox you can use the JavaScript Debugger to set breakpoints in background scripts and scripts running in browser or page action popups.</p>
+### Debugging JavaScript
 
-<p>Background scripts are always available in the debugger if the extension is installed and enabled. Popup scripts only become visible when the popup is opened. If you need to access popup scripts as soon as they load, try adding a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/debugger">debugger</a></code> ; statement at the start of the script.</p>
+With the Browser Toolbox you can use the JavaScript Debugger to set breakpoints in background scripts and scripts running in browser or page action popups.
 
-<p>To use the JavaScript Debugger, select the Debugger tab in the Browser Toolbox. This will list every source file in the entire browser, so the next job is to find your extension's code: do this by <a href="/en-US/docs/Tools/Debugger/How_to/Search">clicking in the Search box and typing the name of the source</a>.</p>
+Background scripts are always available in the debugger if the extension is installed and enabled. Popup scripts only become visible when the popup is opened. If you need to access popup scripts as soon as they load, try adding a [`debugger`](/en-US/docs/Web/JavaScript/Reference/Statements/debugger) ; statement at the start of the script.
 
-<p>Once you've found your source, you can set breakpoints, step through code, and do <a href="/en-US/docs/Tools/Debugger">everything else you'd expect to be able to do in a debugger</a>.</p>
+To use the JavaScript Debugger, select the Debugger tab in the Browser Toolbox. This will list every source file in the entire browser, so the next job is to find your extension's code: do this by [clicking in the Search box and typing the name of the source](/en-US/docs/Tools/Debugger/How_to/Search).
 
-<p>{{EmbedYouTube("3edeJiG38ZA")}}</p>
+Once you've found your source, you can set breakpoints, step through code, and do [everything else you'd expect to be able to do in a debugger](/en-US/docs/Tools/Debugger).
 
-<h3 id="JavaScript_command_line_interpreter">JavaScript command line interpreter</h3>
+{{EmbedYouTube("3edeJiG38ZA")}}
 
-<p>The Console includes a <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter">command line interpreter</a> that you can use to interrogate and manipulate the state of a running program. This feature is commonly used when the Console is attached to a web page, but is generally hard to use with the Browser Toolbox, because the scope of that console is the entire browser rather than the specific extension you're trying to debug.</p>
+### JavaScript command line interpreter
 
-<p>However, there's a trick that can help you with that: while the Debugger is paused at a breakpoint, the scope of the Console is the scope at the point in the program in which the Debugger is paused. So if you have hit a breakpoint in your extension's code, you can interact directly with your extension: you can call extension functions, reassign variable values, and so on.</p>
+The Console includes a [command line interpreter](/en-US/docs/Tools/Web_Console/The_command_line_interpreter) that you can use to interrogate and manipulate the state of a running program. This feature is commonly used when the Console is attached to a web page, but is generally hard to use with the Browser Toolbox, because the scope of that console is the entire browser rather than the specific extension you're trying to debug.
 
-<p>This feature is especially useful in combination with another feature: the <a href="/en-US/docs/Tools/Web_Console/Split_console">split console</a>. This enables you to split the toolbox in half: one half contains the Console, and the other half contains a different tool (in this case, the JavaScript Debugger):</p>
+However, there's a trick that can help you with that: while the Debugger is paused at a breakpoint, the scope of the Console is the scope at the point in the program in which the Debugger is paused. So if you have hit a breakpoint in your extension's code, you can interact directly with your extension: you can call extension functions, reassign variable values, and so on.
 
-<p>{{EmbedYouTube("xprf58qOtLY")}}</p>
+This feature is especially useful in combination with another feature: the [split console](/en-US/docs/Tools/Web_Console/Split_console). This enables you to split the toolbox in half: one half contains the Console, and the other half contains a different tool (in this case, the JavaScript Debugger):
 
-<h3 id="Debugging_content_scripts">Debugging content scripts</h3>
+{{EmbedYouTube("xprf58qOtLY")}}
 
-<p>One big limitation of the Browser Toolbox is this: if you are developing with <a href="/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox">multiprocess Firefox</a>, you can't use the Browser Toolbox to attach the JavaScript Debugger to content scripts.</p>
+### Debugging content scripts
 
-<p>In multiprocess Firefox, the browser is split into (at least) two processes: one to run the browser's own UI and system code, and one (or more) <em>content processes</em>, which run scripts loaded from web pages. The Browser Toolbox attaches to the first of these processes: but content scripts run in content processes, so they just don't appear in the Browser Toolbox's source listing.</p>
+One big limitation of the Browser Toolbox is this: if you are developing with [multiprocess Firefox](/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox), you can't use the Browser Toolbox to attach the JavaScript Debugger to content scripts.
 
-<p>To debug content scripts in multiprocess Firefox, you'll need to use the Browser Content Toolbox. The Browser Content Toolbox is just like the Browser Toolbox, except that it attaches the developer tools to the browser's content process, so content scripts are visible.</p>
+In multiprocess Firefox, the browser is split into (at least) two processes: one to run the browser's own UI and system code, and one (or more) _content processes_, which run scripts loaded from web pages. The Browser Toolbox attaches to the first of these processes: but content scripts run in content processes, so they just don't appear in the Browser Toolbox's source listing.
 
-<p>Note that content scripts won't appear in the source listing until they are loaded. If you need to access them as soon as they load, try adding a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/debugger">debugger;</a></code> statement at the start of your script.</p>
+To debug content scripts in multiprocess Firefox, you'll need to use the Browser Content Toolbox. The Browser Content Toolbox is just like the Browser Toolbox, except that it attaches the developer tools to the browser's content process, so content scripts are visible.
 
-<div class="notecard note">
-<p><strong>Note:</strong> You only need, and can only access, the Browser Content Toolbox if you are developing against multiprocess Firefox.</p>
-</div>
+Note that content scripts won't appear in the source listing until they are loaded. If you need to access them as soon as they load, try adding a [`debugger;`](/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statement at the start of your script.
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> Enabling worker debugging in Toolbox Options will disable Browser Content Toolbox debugging, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1236892">Bug 1236892</a> should address this.</p>
-</div>
+> **Note:** You only need, and can only access, the Browser Content Toolbox if you are developing against multiprocess Firefox.
 
-<p>{{EmbedYouTube("xAt3Q0PgJP4")}}</p>
+> **Warning:** Enabling worker debugging in Toolbox Options will disable Browser Content Toolbox debugging, [Bug 1236892](https://bugzilla.mozilla.org/show_bug.cgi?id=1236892) should address this.
 
-<h3 id="Debugging_popups">Debugging popups</h3>
+{{EmbedYouTube("xAt3Q0PgJP4")}}
 
-<p>Starting in Firefox 47, you can use the Browser Toolbox to debug the content of popups. This is a three-step process:</p>
+### Debugging popups
 
-<ul>
- <li>disable autohide for panels</li>
- <li>open the popup</li>
- <li>select the document containing the popup</li>
-</ul>
+Starting in Firefox 47, you can use the Browser Toolbox to debug the content of popups. This is a three-step process:
 
-<p>{{EmbedYouTube("EEU4NeAS1s4")}}</p>
+- disable autohide for panels
+- open the popup
+- select the document containing the popup
 
-<h4 id="Disable_autohide">Disable autohide</h4>
+{{EmbedYouTube("EEU4NeAS1s4")}}
 
-<p>The problem with debugging panels in general is that they are hidden when you click outside them. So the first step is to disable this behavior. In the Browser Toolbox, click the icon that looks like four little squares:</p>
+#### Disable autohide
 
-<p><img alt="" src="disable-autohide.png">Now, when you open a panel in Firefox, it will stay open until you press Escape.</p>
+The problem with debugging panels in general is that they are hidden when you click outside them. So the first step is to disable this behavior. In the Browser Toolbox, click the icon that looks like four little squares:
 
-<div class="notecard note">
-<p><strong>Note:</strong> This change applies to <a href="/en-US/docs/Tools/Browser_Toolbox#debugging_popups">built-in browser popups</a>, like the Hamburger menu, as well as extension popups.</p>
+![](disable-autohide.png)Now, when you open a panel in Firefox, it will stay open until you press Escape.
 
-<p>Also note that the change is persistent, even across browser restarts. We're working on addressing this in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1251658">bug 1251658</a>, but until then you may prefer to re-enable autohide by clicking the button again before you close the Browser Toolbox.</p>
+> **Note:** This change applies to [built-in browser popups](/en-US/docs/Tools/Browser_Toolbox#debugging_popups), like the Hamburger menu, as well as extension popups.
+>
+> Also note that the change is persistent, even across browser restarts. We're working on addressing this in [bug 1251658](https://bugzilla.mozilla.org/show_bug.cgi?id=1251658), but until then you may prefer to re-enable autohide by clicking the button again before you close the Browser Toolbox.
+>
+> Internally, this button just toggles the `ui.popup.disable_autohide` preference, which you can toggle manually using about:config.
 
-<p>Internally, this button just toggles the <code>ui.popup.disable_autohide</code> preference, which you can toggle manually using about:config.</p>
-</div>
+#### Open the popup
 
-<h4 id="Open_the_popup">Open the popup</h4>
+Next, open the popup. You can then switch back to the Browser Toolbox, and the panel will stay open.
 
-<p>Next, open the popup. You can then switch back to the Browser Toolbox, and the panel will stay open.</p>
+#### Select the popup's frame
 
-<h4 id="Select_the_popup's_frame">Select the popup's frame</h4>
+The popup is loaded into its own frame. So next, select your popup's document with the Browser Toolbox's [frame selection button](/en-US/docs/Tools/Browser_Toolbox#targeting_a_document):![](frame-selection.png)The document will be called something like
 
-<p>The popup is loaded into its own frame. So next, select your popup's document with the Browser Toolbox's <a href="/en-US/docs/Tools/Browser_Toolbox#targeting_a_document">frame selection button</a>:<img alt="" src="frame-selection.png">The document will be called something like</p>
+    moz-extension://<some-uuid>/path/to/your-popup.html
 
-<pre>moz-extension://&lt;some-uuid&gt;/path/to/your-popup.html</pre>
+{{EmbedYouTube("9jdHDCKIN-U")}}
 
-<p>{{EmbedYouTube("9jdHDCKIN-U")}}</p>
+Now the scope of the toolbox is the popup. In the Inspector, you can examine and modify the popup's HTML and CSS. In the Debugger, you can search for any scripts loaded into the popup, and set breakpoints in them.
 
-<p>Now the scope of the toolbox is the popup. In the Inspector, you can examine and modify the popup's HTML and CSS. In the Debugger, you can search for any scripts loaded into the popup, and set breakpoints in them.</p>
+## What about the Add-on Debugger?
 
-<h2 id="What_about_the_Add-on_Debugger">What about the Add-on Debugger?</h2>
+The [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger) is intended to be the future of add-on debugging in Firefox.
 
-<p>The <a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a> is intended to be the future of add-on debugging in Firefox.</p>
-
-<p>Its big advantage over the Browser Toolbox is that it only shows you your extension's files, so it's much easier to find your code. However, at the moment you can't see console messages from your extension in the Add-on Debugger, so the Browser Toolbox is more functional.</p>
+Its big advantage over the Browser Toolbox is that it only shows you your extension's files, so it's much easier to find your code. However, at the moment you can't see console messages from your extension in the Add-on Debugger, so the Browser Toolbox is more functional.

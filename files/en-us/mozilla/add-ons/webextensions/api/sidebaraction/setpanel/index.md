@@ -12,63 +12,62 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.setPanel
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Sets the sidebar's panel: that is, the HTML document that defines the content of this sidebar.</p>
+Sets the sidebar's panel: that is, the HTML document that defines the content of this sidebar.
 
-<h2 id="Types_of_panel">Types of panel</h2>
+## Types of panel
 
-<p>Sidebars always have a <em>"manifest panel"</em>, which is the panel defined in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code> manifest key.</p>
+Sidebars always have a _"manifest panel"_, which is the panel defined in the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key.
 
-<p>If you set a new panel using <code>setPanel()</code>, and include the <code>tabId</code> option, then the panel is set only for the given tab. This panel is referred to as the <em>"tab-specific panel"</em>.</p>
+If you set a new panel using `setPanel()`, and include the `tabId` option, then the panel is set only for the given tab. This panel is referred to as the _"tab-specific panel"_.
 
-<p>If you set a new panel using <code>setPanel()</code>, and include the <code>windowId</code> option, then the panel is set only for the given window. This panel is referred to as the <em>"window-specific panel"</em>, and will appear in all tabs of that window that do not have a tab-specific panel set.</p>
+If you set a new panel using `setPanel()`, and include the `windowId` option, then the panel is set only for the given window. This panel is referred to as the _"window-specific panel"_, and will appear in all tabs of that window that do not have a tab-specific panel set.
 
-<p>If you set a new panel using <code>setPanel()</code>, and omit both the <code>tabId</code> and <code>windowId</code> options, then this sets the <em>"global panel"</em>. The global panel will then appear in all tabs that do not have a tab-specific panel set and whose window does not have a window-specific panel.</p>
+If you set a new panel using `setPanel()`, and omit both the `tabId` and `windowId` options, then this sets the _"global panel"_. The global panel will then appear in all tabs that do not have a tab-specific panel set and whose window does not have a window-specific panel.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.sidebarAction.setPanel(
+```js
+browser.sidebarAction.setPanel(
   details // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p><code>object</code>. An object with the following properties:</p>
-   <dl>
-    <dt><code>panel</code></dt>
-    <dd>
-      <p><code>string</code> or <code>null</code>. The panel to load into the sidebar, specified as a URL pointing to an HTML document, or <code>null</code>, or an empty string.</p>
-      <p>This can point to a file packaged within the extension (for example, created using {{WebExtAPIRef("runtime.getURL")}}), or a remote document (e.g. <code>https://example.org/</code>). It must be a valid URL.</p>
-      <p>If <code>panel</code> is <code>null</code> or <code>""</code>, then a previously set panel will be removed, so that:</p>
-      <ul>
-       <li>If <code>tabId</code> is specified, and the tab has a tab-specific panel set, then the tab will inherit the panel from the window it belongs to.</li>
-       <li>If <code>windowId</code> is specified, and the window has a window-specific panel set, then the window will inherit the global panel.</li>
-       <li>Otherwise, the global panel will be reset to the manifest panel.</li>
-      </ul>
-    </dd>
-    <dt><code>tabId</code>{{optional_inline}}</dt>
-    <dd><code>integer</code>. Sets the panel only for the given tab.</dd>
-    <dt><code>windowId</code> {{optional_inline}}</dt>
-    <dd><code>integer</code>. Sets the panel only for the given window.</dd>
-   </dl>
- </dd>
-</dl>
+- `details`
 
-<ul>
- <li>If <code>windowId</code> and <code>tabId</code> are both specified, the function fails and the panel is not set.</li>
- <li>If <code>windowId</code> and <code>tabId</code> are both omitted, the global panel is set.</li>
-</ul>
+  - : `object`. An object with the following properties:
 
-<h2 id="Examples">Examples</h2>
+    - `panel`
 
-<p>This code toggles the sidebar document when the user clicks a browser action:</p>
+      - : `string` or `null`. The panel to load into the sidebar, specified as a URL pointing to an HTML document, or `null`, or an empty string.
 
-<pre class="brush: js">var thisPanel = browser.runtime.getURL("/this.html");
+        This can point to a file packaged within the extension (for example, created using {{WebExtAPIRef("runtime.getURL")}}), or a remote document (e.g. `https://example.org/`). It must be a valid URL.
+
+        If `panel` is `null` or `""`, then a previously set panel will be removed, so that:
+
+        - If `tabId` is specified, and the tab has a tab-specific panel set, then the tab will inherit the panel from the window it belongs to.
+        - If `windowId` is specified, and the window has a window-specific panel set, then the window will inherit the global panel.
+        - Otherwise, the global panel will be reset to the manifest panel.
+
+    - `tabId`{{optional_inline}}
+      - : `integer`. Sets the panel only for the given tab.
+    - `windowId` {{optional_inline}}
+      - : `integer`. Sets the panel only for the given window.
+
+<!---->
+
+- If `windowId` and `tabId` are both specified, the function fails and the panel is not set.
+- If `windowId` and `tabId` are both omitted, the global panel is set.
+
+## Examples
+
+This code toggles the sidebar document when the user clicks a browser action:
+
+```js
+var thisPanel = browser.runtime.getURL("/this.html");
 var thatPanel = browser.runtime.getURL("/that.html");
 
 function toggle(panel) {
@@ -79,26 +78,22 @@ function toggle(panel) {
   }
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   browser.sidebarAction.getPanel({}).then(toggle);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+## Browser compatibility
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+{{Compat}}
 
-<p>{{Compat}}</p>
+> **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Opera's <a class="external external-icon" href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -125,5 +120,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

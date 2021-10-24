@@ -11,51 +11,48 @@ tags:
   - options_page
 browser-compat: webextensions.manifest.options_page
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json;">
-"options_page": "options/options.html"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json;">"options_page": "options/options.html"</pre>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<div>{{Deprecated_Header}}</div>
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This manifest key has been deprecated. Use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code> instead.</p>
-</div>
+{{Deprecated_Header}}
 
-<p>Use the <code>options_page</code> key to define an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">options page</a> for your extension.</p>
+> **Warning:** This manifest key has been deprecated. Use [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) instead.
 
-<p>The options page contains settings for the extension. The user can access it from the browser's add-ons manager, and you can open it from within your extension using {{WebExtAPIRef("runtime.openOptionsPage()")}}.</p>
+Use the `options_page` key to define an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) for your extension.
 
-<p>Unlike options pages specified using the newer <code>options_ui</code> key, options pages specified using the deprecated <code>options_page</code> key don't receive browser styles and always open in a normal browser tab.</p>
+The options page contains settings for the extension. The user can access it from the browser's add-ons manager, and you can open it from within your extension using {{WebExtAPIRef("runtime.openOptionsPage()")}}.
 
-<h2 id="Example">Example</h2>
+Unlike options pages specified using the newer `options_ui` key, options pages specified using the deprecated `options_page` key don't receive browser styles and always open in a normal browser tab.
 
-<pre class="brush: json;">"options_page": "options/options.html"
-</pre>
+## Example
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+```json
+"options_page": "options/options.html"
+```
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code></li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">Options pages</a></li>
-</ul>
+## See also
+
+- [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)
+- [Options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)

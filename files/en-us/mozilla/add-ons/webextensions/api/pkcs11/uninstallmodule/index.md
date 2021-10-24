@@ -12,40 +12,41 @@ tags:
   - uninstallModule
 browser-compat: webextensions.api.pkcs11.uninstallModule
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Uninstalls the named PKCS #11 module from Firefox.</p>
+Uninstalls the named PKCS #11 module from Firefox.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var uninstalling = browser.pkcs11.uninstallModule(
+```js
+var uninstalling = browser.pkcs11.uninstallModule(
   name              // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>name</code></dt>
- <dd><code>string</code>. Name of the module to uninstall. This must match the <code>name</code> property in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#pkcs_11_manifests">PKCS #11 manifest</a> for the module.</dd>
-</dl>
+- `name`
+  - : `string`. Name of the module to uninstall. This must match the `name` property in the [PKCS #11 manifest](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#pkcs_11_manifests) for the module.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments once the module is uninstalled.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments once the module is uninstalled.
 
-<p>If the module could not be found or some other error occurs, the promise will be rejected with an error message.</p>
+If the module could not be found or some other error occurs, the promise will be rejected with an error message.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Uninstalls the module named "pkcs11_module":</p>
+Uninstalls the module named "pkcs11_module":
 
-<pre class="brush: js">browser.pkcs11.uninstallModule("pkcs11_module");</pre>
+```js
+browser.pkcs11.uninstallModule("pkcs11_module");
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

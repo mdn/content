@@ -13,46 +13,42 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.acceptDanger
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code><strong>acceptDanger</strong></code><strong><code>()</code></strong> function of the {{WebExtAPIRef("downloads")}} API prompts the user to either accept or cancel a potentially dangerous download.</p>
+The **`acceptDanger`\*\***`()`\*\* function of the {{WebExtAPIRef("downloads")}} API prompts the user to either accept or cancel a potentially dangerous download.
 
-<p>This function can't be called from background scripts, only in scripts that are running in a visible window (such as a browser or page action's popup).</p>
+This function can't be called from background scripts, only in scripts that are running in a visible window (such as a browser or page action's popup).
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var prompting = browser.downloads.acceptDanger(
+```js
+var prompting = browser.downloads.acceptDanger(
   downloadId      // integer
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>downloadId</code></dt>
- <dd>An <code>integer</code> representing the <code>id</code> of the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} in question.</dd>
-</dl>
+- `downloadId`
+  - : An `integer` representing the `id` of the {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} in question.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. When the dialog closes, the promise will be fulfilled with no arguments.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). When the dialog closes, the promise will be fulfilled with no arguments.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-acceptDanger) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#method-acceptDanger"><code>chrome.downloads</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -79,5 +75,4 @@ browser-compat: webextensions.api.downloads.acceptDanger
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

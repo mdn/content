@@ -12,87 +12,78 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.bookmarks
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>The <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> {{WebExtAPIRef("bookmarks")}} API lets an extension interact with and manipulate the browser's bookmarking system. You can use it to bookmark pages, retrieve existing bookmarks, and edit, remove, and organize bookmarks.</p>
+The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} API lets an extension interact with and manipulate the browser's bookmarking system. You can use it to bookmark pages, retrieve existing bookmarks, and edit, remove, and organize bookmarks.
 
-<p>To use this API, an extension must request the "bookmarks" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> in its <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> file.</p>
+To use this API, an extension must request the "bookmarks" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
-<p>Extensions cannot create, modify, or delete bookmarks in the root node of the bookmarks tree. Doing so causes an error with the message: "<em>The bookmark root cannot be modified</em>"</p>
+Extensions cannot create, modify, or delete bookmarks in the root node of the bookmarks tree. Doing so causes an error with the message: "_The bookmark root cannot be modified_"
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}</dt>
- <dd>Represents a bookmark or folder in the bookmarks tree.</dd>
- <dt>{{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}</dt>
- <dd>A {{jsxref("String")}} enum which describes whether a node in the tree is a bookmark, a folder, or a separator.</dd>
- <dt>{{WebExtAPIRef("bookmarks.BookmarkTreeNodeUnmodifiable")}}</dt>
- <dd>A {{jsxref("String")}} enum which specifies why a bookmark or folder is unmodifiable.</dd>
- <dt>{{WebExtAPIRef("bookmarks.CreateDetails")}}</dt>
- <dd>Contains information which is passed to the {{WebExtAPIRef("bookmarks.create()")}} function when creating a new bookmark.</dd>
-</dl>
+- {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}
+  - : Represents a bookmark or folder in the bookmarks tree.
+- {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}
+  - : A {{jsxref("String")}} enum which describes whether a node in the tree is a bookmark, a folder, or a separator.
+- {{WebExtAPIRef("bookmarks.BookmarkTreeNodeUnmodifiable")}}
+  - : A {{jsxref("String")}} enum which specifies why a bookmark or folder is unmodifiable.
+- {{WebExtAPIRef("bookmarks.CreateDetails")}}
+  - : Contains information which is passed to the {{WebExtAPIRef("bookmarks.create()")}} function when creating a new bookmark.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("bookmarks.create()")}}</dt>
- <dd>Creates a bookmark or folder.</dd>
- <dt>{{WebExtAPIRef("bookmarks.get()")}}</dt>
- <dd>Retrieves one or more {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}s, given a bookmark's ID or an array of bookmark IDs.</dd>
- <dt>{{WebExtAPIRef("bookmarks.getChildren()")}}</dt>
- <dd>Retrieves the children of the specified {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}.</dd>
- <dt>{{WebExtAPIRef("bookmarks.getRecent()")}}</dt>
- <dd>Retrieves a requested number of recently added bookmarks.</dd>
- <dt>{{WebExtAPIRef("bookmarks.getSubTree()")}}</dt>
- <dd>Retrieves part of the bookmarks tree, starting at the specified node.</dd>
- <dt>{{WebExtAPIRef("bookmarks.getTree()")}}</dt>
- <dd>Retrieves the entire bookmarks tree into an array of {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} objects.</dd>
- <dt>{{WebExtAPIRef("bookmarks.move()")}}</dt>
- <dd>Moves the specified {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} to a new location in the bookmark tree.</dd>
- <dt>{{WebExtAPIRef("bookmarks.remove()")}}</dt>
- <dd>Removes a bookmark or an empty bookmark folder, given the node's ID.</dd>
- <dt>{{WebExtAPIRef("bookmarks.removeTree()")}}</dt>
- <dd>Recursively removes a bookmark folder; that is, given the ID of a folder node, removes that node and all its descendants.</dd>
- <dt>{{WebExtAPIRef("bookmarks.search()")}}</dt>
- <dd>Searches for {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}s matching a specified set of criteria.</dd>
- <dt>{{WebExtAPIRef("bookmarks.update()")}}</dt>
- <dd>Updates the title and/or URL of a bookmark, or the name of a bookmark folder, given the bookmark's ID.</dd>
-</dl>
+- {{WebExtAPIRef("bookmarks.create()")}}
+  - : Creates a bookmark or folder.
+- {{WebExtAPIRef("bookmarks.get()")}}
+  - : Retrieves one or more {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}s, given a bookmark's ID or an array of bookmark IDs.
+- {{WebExtAPIRef("bookmarks.getChildren()")}}
+  - : Retrieves the children of the specified {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}.
+- {{WebExtAPIRef("bookmarks.getRecent()")}}
+  - : Retrieves a requested number of recently added bookmarks.
+- {{WebExtAPIRef("bookmarks.getSubTree()")}}
+  - : Retrieves part of the bookmarks tree, starting at the specified node.
+- {{WebExtAPIRef("bookmarks.getTree()")}}
+  - : Retrieves the entire bookmarks tree into an array of {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} objects.
+- {{WebExtAPIRef("bookmarks.move()")}}
+  - : Moves the specified {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} to a new location in the bookmark tree.
+- {{WebExtAPIRef("bookmarks.remove()")}}
+  - : Removes a bookmark or an empty bookmark folder, given the node's ID.
+- {{WebExtAPIRef("bookmarks.removeTree()")}}
+  - : Recursively removes a bookmark folder; that is, given the ID of a folder node, removes that node and all its descendants.
+- {{WebExtAPIRef("bookmarks.search()")}}
+  - : Searches for {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}s matching a specified set of criteria.
+- {{WebExtAPIRef("bookmarks.update()")}}
+  - : Updates the title and/or URL of a bookmark, or the name of a bookmark folder, given the bookmark's ID.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("bookmarks.onCreated")}}</dt>
- <dd>Fired when a bookmark or folder is created.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onRemoved")}}</dt>
- <dd>Fired when a bookmark or folder is removed. When a folder is removed recursively, a single notification is fired for the folder, and none for its contents.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onChanged")}}</dt>
- <dd>Fired when a bookmark or folder changes. Currently, only <code>title</code> and <code>url</code> changes trigger this.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onMoved")}}</dt>
- <dd>Fired when a bookmark or folder is moved to a different parent folder or to a new offset within its folder.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onChildrenReordered")}}</dt>
- <dd>Fired when the user has sorted the children of a folder in the browser's UI. This is not called as a result of a {{WebExtAPIRef("bookmarks.move", "move()")}}.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onImportBegan")}}</dt>
- <dd>Fired when a bookmark import session is begun. Expensive observers should ignore {{WebExtAPIRef("bookmarks.onCreated")}} updates until {{WebExtAPIRef("bookmarks.onImportEnded")}} is fired. Observers should still handle other notifications immediately.</dd>
- <dt>{{WebExtAPIRef("bookmarks.onImportEnded")}}</dt>
- <dd>Fired when a bookmark import session has finished.</dd>
-</dl>
+- {{WebExtAPIRef("bookmarks.onCreated")}}
+  - : Fired when a bookmark or folder is created.
+- {{WebExtAPIRef("bookmarks.onRemoved")}}
+  - : Fired when a bookmark or folder is removed. When a folder is removed recursively, a single notification is fired for the folder, and none for its contents.
+- {{WebExtAPIRef("bookmarks.onChanged")}}
+  - : Fired when a bookmark or folder changes. Currently, only `title` and `url` changes trigger this.
+- {{WebExtAPIRef("bookmarks.onMoved")}}
+  - : Fired when a bookmark or folder is moved to a different parent folder or to a new offset within its folder.
+- {{WebExtAPIRef("bookmarks.onChildrenReordered")}}
+  - : Fired when the user has sorted the children of a folder in the browser's UI. This is not called as a result of a {{WebExtAPIRef("bookmarks.move", "move()")}}.
+- {{WebExtAPIRef("bookmarks.onImportBegan")}}
+  - : Fired when a bookmark import session is begun. Expensive observers should ignore {{WebExtAPIRef("bookmarks.onCreated")}} updates until {{WebExtAPIRef("bookmarks.onImportEnded")}} is fired. Observers should still handle other notifications immediately.
+- {{WebExtAPIRef("bookmarks.onImportEnded")}}
+  - : Fired when a bookmark import session has finished.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -119,5 +110,4 @@ browser-compat: webextensions.api.bookmarks
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

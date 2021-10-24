@@ -13,39 +13,37 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.bookmarks.create
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Creates a bookmark or folder as a child of the {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} with the specified <code>parentId</code>. To create a folder, omit or leave empty the {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}} parameter.</p>
+Creates a bookmark or folder as a child of the {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} with the specified `parentId`. To create a folder, omit or leave empty the {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}} parameter.
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> If your extension tries to create a new bookmark in the bookmark tree's root node, it raises an error: "<em>The bookmark root cannot be modified</em>" and the bookmark won't be created.</p>
-</div>
+> **Warning:** If your extension tries to create a new bookmark in the bookmark tree's root node, it raises an error: "_The bookmark root cannot be modified_" and the bookmark won't be created.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var createBookmark = browser.bookmarks.create(
+```js
+var createBookmark = browser.bookmarks.create(
   bookmark                  // CreateDetails object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>bookmark</code></dt>
- <dd>A {{WebExtAPIRef("bookmarks.CreateDetails")}} object.</dd>
-</dl>
+- `bookmark`
+  - : A {{WebExtAPIRef("bookmarks.CreateDetails")}} object.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} that describes the new bookmark node.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} that describes the new bookmark node.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example creates a bookmark for this page, placing it in the default folder ("Other Bookmarks" in Firefox and Chrome).</p>
+This example creates a bookmark for this page, placing it in the default folder ("Other Bookmarks" in Firefox and Chrome).
 
-<pre class="brush: js">function onCreated(node) {
+```js
+function onCreated(node) {
   console.log(node);
 }
 
@@ -54,22 +52,20 @@ var createBookmark = browser.bookmarks.create({
   url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create"
 });
 
-createBookmark.then(onCreated);</pre>
+createBookmark.then(onCreated);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-create) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#method-create"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -96,5 +92,4 @@ createBookmark.then(onCreated);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

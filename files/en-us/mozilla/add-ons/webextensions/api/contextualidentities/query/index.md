@@ -12,46 +12,43 @@ tags:
   - query
 browser-compat: webextensions.api.contextualIdentities.query
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Gets information about all contextual identities, or about those contextual identities that match a given filter argument.</p>
+Gets information about all contextual identities, or about those contextual identities that match a given filter argument.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var getContext = browser.contextualIdentities.query(
+```js
+var getContext = browser.contextualIdentities.query(
   details                  // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
- <p><code>object</code>. An object that can be used to filter the contextual identities returned. This may contain any of the following properties:</p>
+- `details`
 
- <dl>
-  <dt><code>name</code> {{optional_inline}}</dt>
-  <dd><code>string</code>. Return only contextual identities with this name.</dd>
- </dl>
- </dd>
-</dl>
+  - : `object`. An object that can be used to filter the contextual identities returned. This may contain any of the following properties:
 
-<h3 id="Return_value">Return value</h3>
+    - `name` {{optional_inline}}
+      - : `string`. Return only contextual identities with this name.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an array of {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} objects, each describing a single identity. If the contextual identities feature is not enabled, the promise is rejected.</p>
+### Return value
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array of {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} objects, each describing a single identity. If the contextual identities feature is not enabled, the promise is rejected.
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="Examples">Examples</h2>
+{{Compat}}
 
-<p>Retrieve all contextual identities, and log their names:</p>
+## Examples
 
-<pre class="brush: js">function onGot(contexts) {
+Retrieve all contextual identities, and log their names:
+
+```js
+function onGot(contexts) {
   for (let context of contexts) {
     console.log(`Name: ${context.name}`);
   }
@@ -61,11 +58,13 @@ function onError(e) {
   console.error(e);
 }
 
-browser.contextualIdentities.query({}).then(onGot, onError);</pre>
+browser.contextualIdentities.query({}).then(onGot, onError);
+```
 
-<p>Retrieve all contextual identities whose names are "my-thing", and log their names:</p>
+Retrieve all contextual identities whose names are "my-thing", and log their names:
 
-<pre class="brush: js">function onGot(contexts) {
+```js
+function onGot(contexts) {
   for (let context of contexts) {
     console.log(`Name: ${context.name}`);
   }
@@ -78,6 +77,6 @@ function onError(e) {
 browser.contextualIdentities.query({
   name: "my-thing"
 }).then(onGot, onError);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

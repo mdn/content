@@ -12,45 +12,45 @@ tags:
   - pkcs11
 browser-compat: webextensions.api.pkcs11.installModule
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Installs the named PKCS #11 module, making it available to Firefox.</p>
+Installs the named PKCS #11 module, making it available to Firefox.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var installing = browser.pkcs11.installModule(
+```js
+var installing = browser.pkcs11.installModule(
   name,              // string
   flags              // integer
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>name</code></dt>
- <dd><code>string</code>. Name of the module to install. This must match the <code>name</code> property in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#pkcs_11_manifests">PKCS #11 manifest</a> for the module.</dd>
- <dt><code>flags</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. Flags to pass to the module.</dd>
-</dl>
+- `name`
+  - : `string`. Name of the module to install. This must match the `name` property in the [PKCS #11 manifest](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#pkcs_11_manifests) for the module.
+- `flags`{{optional_inline}}
+  - : `integer`. Flags to pass to the module.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments once the module is installed.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments once the module is installed.
 
-<p>If the module could not be found or some other error occurs, the promise will be rejected with an error message.</p>
+If the module could not be found or some other error occurs, the promise will be rejected with an error message.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Installs a module, then lists its slots and list the tokens they contain:</p>
+Installs a module, then lists its slots and list the tokens they contain:
 
-<pre class="brush: js">function onInstalled() {
-  return browser.pkcs11.getModuleSlots(&quot;my_module&quot;);
+```js
+function onInstalled() {
+  return browser.pkcs11.getModuleSlots("my_module");
 }
 
 function onGotSlots(slots) {
@@ -64,8 +64,9 @@ function onGotSlots(slots) {
   }
 }
 
-browser.pkcs11.installModule(&quot;my_module&quot;)
+browser.pkcs11.installModule("my_module")
 .then(onInstalled)
-.then(onGotSlots);</pre>
+.then(onGotSlots);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

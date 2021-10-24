@@ -12,48 +12,48 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.getBrowserInfo
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Returns information about the browser in which the extension is installed.</p>
+Returns information about the browser in which the extension is installed.
 
-<p>This is an asynchronous function that returns a {{JSxRef("Promise")}}.</p>
+This is an asynchronous function that returns a {{JSxRef("Promise")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var gettingInfo = browser.runtime.getBrowserInfo()
-</pre>
+```js
+var gettingInfo = browser.runtime.getBrowserInfo()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{JSxRef("Promise")}} that will be fulfilled with an object which has the following properties:</p>
+A {{JSxRef("Promise")}} that will be fulfilled with an object which has the following properties:
 
-<ul>
- <li><strong><code>name</code></strong>: string value representing the browser name, for example "Firefox".</li>
- <li><strong><code>vendor</code></strong>: string value representing the browser's vendor, for example "Mozilla".</li>
- <li><strong><code>version</code></strong>: string representing the browser's version, for example "51.0" or "51.0a2".</li>
- <li><strong><code>buildID</code></strong>: string representing the specific build of the browser, for example "20161018004015".</li>
-</ul>
+- **`name`**: string value representing the browser name, for example "Firefox".
+- **`vendor`**: string value representing the browser's vendor, for example "Mozilla".
+- **`version`**: string representing the browser's version, for example "51.0" or "51.0a2".
+- **`buildID`**: string representing the specific build of the browser, for example "20161018004015".
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Get and log the browser's name:</p>
+Get and log the browser's name:
 
-<pre class="brush: js">function gotBrowserInfo(info) {
+```js
+function gotBrowserInfo(info) {
   console.log(info.name);
 }
 
 var gettingInfo = browser.runtime.getBrowserInfo();
-gettingInfo.then(gotBrowserInfo);</pre>
+gettingInfo.then(gotBrowserInfo);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note:</strong> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

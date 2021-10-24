@@ -13,76 +13,73 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.query
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Gets all tabs that have the specified properties, or all tabs if no properties are specified.</p>
+Gets all tabs that have the specified properties, or all tabs if no properties are specified.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">let querying = browser.tabs.query(<var>queryObj</var>)
-</pre>
+```js
+let querying = browser.tabs.query(queryObj)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code><var>queryObj</var></code></dt>
- <dd>
- <p><code>object</code>. The <code>query()</code> function will only get tabs whose properties match the properties included here.</p>
+- `queryObj`
 
- <p>See the {{WebExtAPIRef("tabs.Tab")}} documentation to learn more about these properties.</p>
+  - : `object`. The `query()` function will only get tabs whose properties match the properties included here.
 
- <dl>
-  <dt><code>active</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Whether the tabs are active in their windows.</dd>
-  <dt><code>audible</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Whether the tabs are audible.</dd>
-  <dt><code>autoDiscardable</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Whether the tabs can be discarded automatically by the browser when resources are low.</dd>
-  <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
-  <dd><code>string</code>. Use this to return only tabs whose cookie store ID is <code>cookieStoreId</code>. This option is only available if the add-on has the <code>"cookies"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</dd>
-  <dt><code>currentWindow</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Whether the tabs are in the current window.</dd>
-  <dt><code>discarded</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Whether the tabs are discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content gets reloaded the next time it's activated.</dd>
-  <dt><code>hidden</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Whether the tabs are hidden.</dd>
-  <dt><code>highlighted</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Whether the tabs are highlighted.</dd>
-  <dt><code>index</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. The position of the tabs within their windows.</dd>
-  <dt><code>muted</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Whether the tabs are muted.</dd>
-  <dt><code>lastFocusedWindow</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Whether the tabs are in the last focused window.</dd>
-  <dt><code>pinned</code>{{optional_inline}}</dt>
-  <dd><code>boolean</code>. Whether the tabs are pinned.</dd>
-  <dt><code>status</code>{{optional_inline}}</dt>
-  <dd>{{WebExtAPIRef('tabs.TabStatus')}}. Whether the tabs have completed loading.</dd>
-  <dt><code>title</code>{{optional_inline}}</dt>
-  <dd><code>string</code>. Match page titles against a pattern. Requires the "tabs" permission or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> for the tab to match.</dd>
-  <dt><code>url</code>{{optional_inline}}</dt>
-  <dd><code>string</code> or <code>array</code> of <code>string</code>. Match tabs against one or more <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. Note that fragment identifiers are not matched. Requires the "tabs" permission or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> for the tab to match.</dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. The <code>id</code> of the parent window, or {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} for the current window.</dd>
-  <dt><code>windowType</code>{{optional_inline}}</dt>
-  <dd>{{WebExtAPIRef('tabs.WindowType')}}. The type of window the tabs are in.</dd>
- </dl>
- </dd>
-</dl>
+    See the {{WebExtAPIRef("tabs.Tab")}} documentation to learn more about these properties.
 
-<h3 id="Return_value">Return value</h3>
+    - `active`{{optional_inline}}
+      - : `boolean`. Whether the tabs are active in their windows.
+    - `audible`{{optional_inline}}
+      - : `boolean`. Whether the tabs are audible.
+    - `autoDiscardable`{{optional_inline}}
+      - : `boolean`. Whether the tabs can be discarded automatically by the browser when resources are low.
+    - `cookieStoreId` {{optional_inline}}
+      - : `string`. Use this to return only tabs whose cookie store ID is `cookieStoreId`. This option is only available if the add-on has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+    - `currentWindow`{{optional_inline}}
+      - : `boolean`. Whether the tabs are in the current window.
+    - `discarded`{{optional_inline}}
+      - : `boolean`. Whether the tabs are discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content gets reloaded the next time it's activated.
+    - `hidden`{{optional_inline}}
+      - : `boolean`. Whether the tabs are hidden.
+    - `highlighted`{{optional_inline}}
+      - : `boolean`. Whether the tabs are highlighted.
+    - `index`{{optional_inline}}
+      - : `integer`. The position of the tabs within their windows.
+    - `muted`{{optional_inline}}
+      - : `boolean`. Whether the tabs are muted.
+    - `lastFocusedWindow`{{optional_inline}}
+      - : `boolean`. Whether the tabs are in the last focused window.
+    - `pinned`{{optional_inline}}
+      - : `boolean`. Whether the tabs are pinned.
+    - `status`{{optional_inline}}
+      - : {{WebExtAPIRef('tabs.TabStatus')}}. Whether the tabs have completed loading.
+    - `title`{{optional_inline}}
+      - : `string`. Match page titles against a pattern. Requires the "tabs" permission or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the tab to match.
+    - `url`{{optional_inline}}
+      - : `string` or `array` of `string`. Match tabs against one or more [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Note that fragment identifiers are not matched. Requires the "tabs" permission or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the tab to match.
+    - `windowId`{{optional_inline}}
+      - : `integer`. The `id` of the parent window, or {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} for the current window.
+    - `windowType`{{optional_inline}}
+      - : {{WebExtAPIRef('tabs.WindowType')}}. The type of window the tabs are in.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an <code>array</code> of <code>{{WebExtAPIRef('tabs.Tab')}}</code> objects, containing information about each matching tab.</p>
+### Return value
 
-<p>If any error occurs, the promise will be rejected with an error message.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of `{{WebExtAPIRef('tabs.Tab')}}` objects, containing information about each matching tab.
 
-<h2 id="Examples">Examples</h2>
+If any error occurs, the promise will be rejected with an error message.
 
-<p>Get all tabs:</p>
+## Examples
 
-<pre class="brush: js">function logTabs(tabs) {
+Get all tabs:
+
+```js
+function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission or a matching host permission.
     console.log(tab.url);
@@ -94,11 +91,13 @@ function onError(error) {
 }
 
 let querying = browser.tabs.query({});
-querying.then(logTabs, onError);</pre>
+querying.then(logTabs, onError);
+```
 
-<p>Get all tabs in the current window:</p>
+Get all tabs in the current window:
 
-<pre class="brush: js">function logTabs(tabs) {
+```js
+function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission or a matching host permission.
     console.log(tab.url);
@@ -110,11 +109,13 @@ function onError(error) {
 }
 
 let querying = browser.tabs.query({currentWindow: true});
-querying.then(logTabs, onError);</pre>
+querying.then(logTabs, onError);
+```
 
-<p>Get the active tab in the current window:</p>
+Get the active tab in the current window:
 
-<pre class="brush: js">function logTabs(tabs) {
+```js
+function logTabs(tabs) {
   // tabs[0].url requires the `tabs` permission or a matching host permission.
   console.log(tabs[0].url);
 }
@@ -124,11 +125,13 @@ function onError(error) {
 }
 
 let querying = browser.tabs.query({currentWindow: true, active: true});
-querying.then(logTabs, onError);</pre>
+querying.then(logTabs, onError);
+```
 
-<p>Get tabs for all HTTP and HTTPS URLs under <code>"mozilla.org"</code> or any of its subdomains:</p>
+Get tabs for all HTTP and HTTPS URLs under `"mozilla.org"` or any of its subdomains:
 
-<pre class="brush: js">function logTabs(tabs) {
+```js
+function logTabs(tabs) {
   for (let tab of tabs) {
     // tab.url requires the `tabs` permission or a matching host permission.
     console.log(tab.url);
@@ -140,22 +143,20 @@ function onError(error) {
 }
 
 let querying = browser.tabs.query({url: "*://*.mozilla.org/*"});
-querying.then(logTabs, onError);</pre>
+querying.then(logTabs, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-query) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-query"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -182,5 +183,4 @@ querying.then(logTabs, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,124 +13,111 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onUpdated
 ---
-<p>Fired when a tab is updated.</p>
+Fired when a tab is updated.
 
-<p>When the user navigates to a new URL in a tab, this will typically generate several  <code>onUpdated</code> events as various properties of the {{WebExtAPIRef("tabs.Tab")}} object are updated. This includes the <code>url</code>, but also potentially the <code>title</code> and <code>favIconUrl</code> properties. The <code>status</code> property will cycle through <code>"loading"</code> and <code>"complete"</code>.</p>
+When the user navigates to a new URL in a tab, this will typically generate several  `onUpdated` events as various properties of the {{WebExtAPIRef("tabs.Tab")}} object are updated. This includes the `url`, but also potentially the `title` and `favIconUrl` properties. The `status` property will cycle through `"loading"` and `"complete"`.
 
-<p>This event will also be fired for changes to a tab's properties that don't involve navigation, like pinning and unpinning (which updates the <code>pinned</code> property) and muting or unmuting (which updates the <code>audible</code> and <code>mutedInfo</code> properties).</p>
+This event will also be fired for changes to a tab's properties that don't involve navigation, like pinning and unpinning (which updates the `pinned` property) and muting or unmuting (which updates the `audible` and `mutedInfo` properties).
 
-<p>You can filter this event, making it only fire for tabs whose urls match specific <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">patterns</a>, or for changes to specific properties, or for changes to a specific tab or window, or any combinations of these restrictions.</p>
+You can filter this event, making it only fire for tabs whose urls match specific [patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), or for changes to specific properties, or for changes to a specific tab or window, or any combinations of these restrictions.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.tabs.onUpdated.addListener(listener[, extraParameters])
+```js
+browser.tabs.onUpdated.addListener(listener[, extraParameters])
 browser.tabs.onUpdated.removeListener(listener)
 browser.tabs.onUpdated.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback[, extraParameters])</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback[, extraParameters])`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>tabId</code></dt>
-  <dd><code>integer</code>. ID of the tab that was updated.</dd>
-  <dt><code>changeInfo</code></dt>
-  <dd><a href="#changeinfo"><code>object</code></a>. Contains properties for the tab properties that have changed. See <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated#changeinfo">changeInfo</a></code> below.</dd>
-  <dt><code>tab</code></dt>
-  <dd>{{WebExtAPIRef('tabs.Tab')}}. The new state of the tab.</dd>
- </dl>
- </dd>
- <dt><code>extraParameters</code>{{optional_inline}}</dt>
- <dd>
- <p><code>object</code>. A set of filters that restricts the events that will be sent to this listener. This is an object which may have one or more of the following properties. Events will only be sent if they satisfy all the filters given.</p>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
- <dl>
-  <dt><code>urls</code></dt>
-  <dd><code>Array</code>. An array of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. Fire the event only for tabs whose current <code>url</code> property matches any one of the patterns.</dd>
-  <dt><code>properties</code></dt>
-  <dd>
-  <p><code>Array</code>. An array of strings, which are the names of properties of the {{WebExtAPIRef("tabs.Tab")}} object. Fire this event only for changes to one of the properties named in this array. The following properties may be listed here:</p>
+    - `tabId`
+      - : `integer`. ID of the tab that was updated.
+    - `changeInfo`
+      - : [`object`](#changeinfo). Contains properties for the tab properties that have changed. See [`changeInfo`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated#changeinfo) below.
+    - `tab`
+      - : {{WebExtAPIRef('tabs.Tab')}}. The new state of the tab.
 
-  <ul>
-   <li>"attention"</li>
-   <li>"audible"</li>
-   <li>"discarded"</li>
-   <li>"favIconUrl"</li>
-   <li>"hidden"</li>
-   <li>"isArticle"</li>
-   <li>"mutedInfo"</li>
-   <li>"pinned"</li>
-   <li>"sharingState"</li>
-   <li>"status"</li>
-   <li>"title"</li>
-   <li>"url"</li>
-  </ul>
+- `extraParameters`{{optional_inline}}
 
-  <div class="notecard note">
-    <p><strong>Note:</strong> The "url" value is supported since Firefox 88. In Firefox 87 and earlier, "url" changes can be observed by filtering by "status".</p>
-  </div>
-  </dd>
-  <dt><code>tabId</code></dt>
-  <dd><code>Integer</code>. Fire this event only for the tab identified by this ID.</dd>
-  <dt><code>windowId</code></dt>
-  <dd><code>Integer</code>. Fire this event only for tabs which are currently in the window identified by this ID.</dd>
- </dl>
- </dd>
-</dl>
+  - : `object`. A set of filters that restricts the events that will be sent to this listener. This is an object which may have one or more of the following properties. Events will only be sent if they satisfy all the filters given.
 
-<h2 id="Additional_objects">Additional objects</h2>
+    - `urls`
+      - : `Array`. An array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Fire the event only for tabs whose current `url` property matches any one of the patterns.
+    - `properties`
 
-<h3 id="changeInfo">changeInfo</h3>
+      - : `Array`. An array of strings, which are the names of properties of the {{WebExtAPIRef("tabs.Tab")}} object. Fire this event only for changes to one of the properties named in this array. The following properties may be listed here:
 
-<p>Lists the changes to the state of the tab that was updated. To learn more about these properties, see the {{WebExtAPIRef("tabs.Tab")}} documentation.</p>
+        - "attention"
+        - "audible"
+        - "discarded"
+        - "favIconUrl"
+        - "hidden"
+        - "isArticle"
+        - "mutedInfo"
+        - "pinned"
+        - "sharingState"
+        - "status"
+        - "title"
+        - "url"
 
-<dl>
- <dt><code>attention</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Indicates whether the tab is drawing attention. For example, when the tab displays a modal dialog, <code>attention</code> will be <code>true</code>.</dd>
- <dt><code>audible</code>{{optional_inline}}</dt>
- <dd><code>boolean</code>. The tab's new audible state.</dd>
- <dt><code>discarded</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Whether the tab is discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content gets reloaded the next time it's activated.</dd>
- <dt><code>favIconUrl</code>{{optional_inline}}</dt>
- <dd><code>string</code>. The tab's new favicon URL.</dd>
- <dt><code>hidden</code>{{optional_inline}}</dt>
- <dd><code>boolean</code>. True if the tab is {{WebExtAPIRef("tabs.hide()", "hidden")}}.</dd>
- <dt><code>isArticle</code>{{optional_inline}}</dt>
- <dd><code>boolean</code>. True if the tab is an article and is therefore eligible for display in  {{WebExtAPIRef("tabs.toggleReaderMode()", "Reader Mode")}}.</dd>
- <dt><code>mutedInfo</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('tabs.MutedInfo')}}. The tab's new muted state and the reason for the change.</dd>
- <dt><code>pinned</code>{{optional_inline}}</dt>
- <dd><code>boolean</code>. The tab's new pinned state.</dd>
- <dt><code>status</code>{{optional_inline}}</dt>
- <dd><code>string</code>. The status of the tab. Can be either <em>loading</em> or <em>complete</em>.</dd>
- <dt><code>title</code>{{optional_inline}}</dt>
- <dd><code>string</code>. The tab's new title.</dd>
- <dt><code>url</code>{{optional_inline}}</dt>
- <dd><code>string</code>. The tab's URL if it has changed.</dd>
-</dl>
+        > **Note:** The "url" value is supported since Firefox 88. In Firefox 87 and earlier, "url" changes can be observed by filtering by "status".
 
-<h2 id="Examples">Examples</h2>
+    - `tabId`
+      - : `Integer`. Fire this event only for the tab identified by this ID.
+    - `windowId`
+      - : `Integer`. Fire this event only for tabs which are currently in the window identified by this ID.
 
-<p>Listen for and log all the change info and new state:</p>
+## Additional objects
 
-<pre class="brush: js">function handleUpdated(tabId, changeInfo, tabInfo) {
+### changeInfo
+
+Lists the changes to the state of the tab that was updated. To learn more about these properties, see the {{WebExtAPIRef("tabs.Tab")}} documentation.
+
+- `attention` {{optional_inline}}
+  - : `boolean`. Indicates whether the tab is drawing attention. For example, when the tab displays a modal dialog, `attention` will be `true`.
+- `audible`{{optional_inline}}
+  - : `boolean`. The tab's new audible state.
+- `discarded` {{optional_inline}}
+  - : `boolean`. Whether the tab is discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content gets reloaded the next time it's activated.
+- `favIconUrl`{{optional_inline}}
+  - : `string`. The tab's new favicon URL.
+- `hidden`{{optional_inline}}
+  - : `boolean`. True if the tab is {{WebExtAPIRef("tabs.hide()", "hidden")}}.
+- `isArticle`{{optional_inline}}
+  - : `boolean`. True if the tab is an article and is therefore eligible for display in  {{WebExtAPIRef("tabs.toggleReaderMode()", "Reader Mode")}}.
+- `mutedInfo`{{optional_inline}}
+  - : {{WebExtAPIRef('tabs.MutedInfo')}}. The tab's new muted state and the reason for the change.
+- `pinned`{{optional_inline}}
+  - : `boolean`. The tab's new pinned state.
+- `status`{{optional_inline}}
+  - : `string`. The status of the tab. Can be either _loading_ or _complete_.
+- `title`{{optional_inline}}
+  - : `string`. The tab's new title.
+- `url`{{optional_inline}}
+  - : `string`. The tab's URL if it has changed.
+
+## Examples
+
+Listen for and log all the change info and new state:
+
+```js
+function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log("Updated tab: " + tabId);
   console.log("Changed attributes: ");
   console.log(changeInfo);
@@ -138,24 +125,28 @@ browser.tabs.onUpdated.hasListener(listener)
   console.log(tabInfo);
 }
 
-browser.tabs.onUpdated.addListener(handleUpdated);</pre>
+browser.tabs.onUpdated.addListener(handleUpdated);
+```
 
-<p>Log changes to URLs:</p>
+Log changes to URLs:
 
-<pre class="brush: js">function handleUpdated(tabId, changeInfo, tabInfo) {
+```js
+function handleUpdated(tabId, changeInfo, tabInfo) {
   if (changeInfo.url) {
     console.log("Tab: " + tabId +
                 " URL changed to " + changeInfo.url);
   }
 }
 
-browser.tabs.onUpdated.addListener(handleUpdated);</pre>
+browser.tabs.onUpdated.addListener(handleUpdated);
+```
 
-<h3 id="Filtering_examples">Filtering examples</h3>
+### Filtering examples
 
-<p>Log changes only to tabs whose <code>url</code> property is <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">matched</a> by "https://developer.mozilla.org/*" or "https://twitter.com/mozdevnet":</p>
+Log changes only to tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by "https\://developer.mozilla.org/\*" or "https\://twitter.com/mozdevnet":
 
-<pre class="brush: js">const pattern1 = "https://developer.mozilla.org/*";
+```js
+const pattern1 = "https://developer.mozilla.org/*";
 const pattern2 = "https://twitter.com/mozdevnet";
 
 const filter = {
@@ -168,11 +159,13 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log("New tab Info: ", tabInfo);
 }
 
-browser.tabs.onUpdated.addListener(handleUpdated, filter);</pre>
+browser.tabs.onUpdated.addListener(handleUpdated, filter);
+```
 
-<p>Log changes only to the <code>pinned</code> property of tabs (i.e. pin and unpin actions):</p>
+Log changes only to the `pinned` property of tabs (i.e. pin and unpin actions):
 
-<pre class="brush: js">const filter = {
+```js
+const filter = {
   properties: ["pinned"]
 }
 
@@ -182,16 +175,16 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
   console.log("New tab Info: ", tabInfo);
 }
 
-browser.tabs.onUpdated.addListener(handleUpdated, filter);</pre>
+browser.tabs.onUpdated.addListener(handleUpdated, filter);
+```
 
-<p>Combine both the previous filters: log changes only:</p>
+Combine both the previous filters: log changes only:
 
-<ul>
- <li>to the <code>pinned</code> property of tabs</li>
- <li>whose <code>url</code> property is <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">matched</a> by "https://developer.mozilla.org/*" or "https://twitter.com/mozdevnet":</li>
-</ul>
+- to the `pinned` property of tabs
+- whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by "https\://developer.mozilla.org/\*" or "https\://twitter.com/mozdevnet":
 
-<pre class="brush: js">const pattern1 = "https://developer.mozilla.org/*";
+```js
+const pattern1 = "https://developer.mozilla.org/*";
 const pattern2 = "https://twitter.com/mozdevnet";
 
 const filter = {
@@ -207,17 +200,17 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
 
 browser.tabs.onUpdated.addListener(
   handleUpdated,
-  filter);</pre>
+  filter);
+```
 
-<p>Log changes only:</p>
+Log changes only:
 
-<ul>
- <li>to the <code>pinned</code> property of tabs</li>
- <li>whose <code>url</code> property is <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">matched</a> by "https://developer.mozilla.org/*" or "https://twitter.com/mozdevnet"</li>
- <li>and which are part of the current browser window at the time the update event is fired:</li>
-</ul>
+- to the `pinned` property of tabs
+- whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by "https\://developer.mozilla.org/\*" or "https\://twitter.com/mozdevnet"
+- and which are part of the current browser window at the time the update event is fired:
 
-<pre class="brush: js">const pattern1 = "https://developer.mozilla.org/*";
+```js
+const pattern1 = "https://developer.mozilla.org/*";
 const pattern2 = "https://twitter.com/mozdevnet";
 
 const filter = {
@@ -234,20 +227,18 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
 
 browser.tabs.onUpdated.addListener(
   handleUpdated,
-  filter);</pre>
+  filter);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onUpdated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#event-onUpdated"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -274,7 +265,6 @@ browser.tabs.onUpdated.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>
 
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}

@@ -13,51 +13,46 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.bookmarks.BookmarkTreeNode
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>An object of type <code>bookmarks.BookmarkTreeNode</code> represents a node in the bookmark tree, where each node is a bookmark, a bookmark folder, or a separator. Child nodes are ordered by an <code>index</code> within their respective parent folders.</p>
+An object of type `bookmarks.BookmarkTreeNode` represents a node in the bookmark tree, where each node is a bookmark, a bookmark folder, or a separator. Child nodes are ordered by an `index` within their respective parent folders.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>An {{jsxref("object")}} with the following properties:</p>
+An {{jsxref("object")}} with the following properties:
 
-<dl>
- <dt><code>children</code> {{optional_inline}}</dt>
- <dd>An {{jsxref("array")}} of {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} objects which represent the node's children. The list is ordered in the list in which the children appear in the user interface. This field is omitted if the node isn't a folder.</dd>
- <dt><code>dateAdded</code> {{optional_inline}}</dt>
- <dd>A number representing the creation date of the node in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
- <dt><code>dateGroupModified</code> {{optional_inline}}</dt>
- <dd>A number representing the date and time the contents of this folder last changed, in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
- <dt><code>id</code></dt>
- <dd>A {{jsxref("string")}} which uniquely identifies the node. Each ID is unique within the user's profile and remains unchanged across browser restarts.</dd>
- <dt><code>index</code> {{optional_inline}}</dt>
- <dd>A number which represents the zero-based position of this node within its parent folder, where zero represents the first entry.</dd>
- <dt><code>parentId</code> {{optional_inline}}</dt>
- <dd>A {{jsxref("string")}} which specifies the ID of the parent folder. This property is not present in the root node.</dd>
- <dt><code>title</code></dt>
- <dd>A {{jsxref("string")}} which contains the text displayed for the node in menus and lists of bookmarks.</dd>
- <dt><code>type</code>{{optional_inline}}</dt>
- <dd>A {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} object indicating whether this is a bookmark, a folder, or a separator. Defaults to <code>"bookmark"</code> unless <code>url</code> is omitted, in which case it defaults to <code>"folder"</code>.</dd>
- <dt><code>unmodifiable</code> {{optional_inline}}</dt>
- <dd>A {{jsxref("string")}} as described by the type {{WebExtAPIRef('bookmarks.BookmarkTreeNodeUnmodifiable')}}. Represents the reason that the node can't be changed. If the node can be changed, this is omitted.</dd>
- <dt><code>url</code> {{optional_inline}}</dt>
- <dd>A {{jsxref("string")}} which represents the URL for the bookmark. If the node represents a folder, this property is omitted.</dd>
-</dl>
+- `children` {{optional_inline}}
+  - : An {{jsxref("array")}} of {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} objects which represent the node's children. The list is ordered in the list in which the children appear in the user interface. This field is omitted if the node isn't a folder.
+- `dateAdded` {{optional_inline}}
+  - : A number representing the creation date of the node in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+- `dateGroupModified` {{optional_inline}}
+  - : A number representing the date and time the contents of this folder last changed, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+- `id`
+  - : A {{jsxref("string")}} which uniquely identifies the node. Each ID is unique within the user's profile and remains unchanged across browser restarts.
+- `index` {{optional_inline}}
+  - : A number which represents the zero-based position of this node within its parent folder, where zero represents the first entry.
+- `parentId` {{optional_inline}}
+  - : A {{jsxref("string")}} which specifies the ID of the parent folder. This property is not present in the root node.
+- `title`
+  - : A {{jsxref("string")}} which contains the text displayed for the node in menus and lists of bookmarks.
+- `type`{{optional_inline}}
+  - : A {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} object indicating whether this is a bookmark, a folder, or a separator. Defaults to `"bookmark"` unless `url` is omitted, in which case it defaults to `"folder"`.
+- `unmodifiable` {{optional_inline}}
+  - : A {{jsxref("string")}} as described by the type {{WebExtAPIRef('bookmarks.BookmarkTreeNodeUnmodifiable')}}. Represents the reason that the node can't be changed. If the node can be changed, this is omitted.
+- `url` {{optional_inline}}
+  - : A {{jsxref("string")}} which represents the URL for the bookmark. If the node represents a folder, this property is omitted.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#type-BookmarkTreeNode) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#type-BookmarkTreeNode"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -84,5 +79,4 @@ browser-compat: webextensions.api.bookmarks.BookmarkTreeNode
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

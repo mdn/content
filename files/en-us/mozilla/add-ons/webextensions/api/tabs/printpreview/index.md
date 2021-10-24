@@ -12,45 +12,45 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.printPreview
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Opens print preview for the active tab.</p>
+Opens print preview for the active tab.
 
-<div>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</div>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).An extension can detect when print preview has been closed by listening to the [afterprint](/en-US/docs/Web/API/Window/afterprint_event) event:
 
-<div>An extension can detect when print preview has been closed by listening to the <a href="/en-US/docs/Web/API/Window/afterprint_event">afterprint</a> event:</div>
+```js
+window.addEventListener("afterprint", resumeFunction, false);
+```
 
-<div>
-<pre class="brush: js">window.addEventListener("afterprint", resumeFunction, false);</pre>
-</div>
+## Syntax
 
-<h2 id="Syntax">Syntax</h2>
+```js
+var openingPreview = browser.tabs.printPreview()
+```
 
-<pre class="brush:js">var openingPreview = browser.tabs.printPreview()
-</pre>
+### Parameters
 
-<h3 id="Parameters">Parameters</h3>
+None.
 
-<p>None.</p>
+### Return value
 
-<h3 id="Return_value">Return value</h3>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the preview page has opened.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when the preview page has opened.</p>
+## Examples
 
-<h2 id="Examples">Examples</h2>
+In this example a background script listens for a click on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2), then opens print preview for the currently active tab:
 
-<p>In this example a background script listens for a click on a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2">browser action</a>, then opens print preview for the currently active tab:</p>
-
-<pre class="brush: js">browser.browserAction.onClicked.addListener(() =&gt; {
+```js
+browser.browserAction.onClicked.addListener(() => {
   browser.tabs.printPreview()
-    .then(() =&gt; {
+    .then(() => {
       console.log("Entered print preview");
     });
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

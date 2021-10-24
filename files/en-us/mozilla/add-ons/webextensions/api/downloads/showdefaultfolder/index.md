@@ -13,43 +13,43 @@ tags:
   - showDefaultFolder
 browser-compat: webextensions.api.downloads.showDefaultFolder
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code><strong>showDefaultFolder</strong></code><strong><code>()</code></strong> function of the {{WebExtAPIRef("downloads")}} API opens the default downloads folder in the platform's file manager.</p>
+The **`showDefaultFolder`\*\***`()`\*\* function of the {{WebExtAPIRef("downloads")}} API opens the default downloads folder in the platform's file manager.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.downloads.showDefaultFolder();
-</pre>
+```js
+browser.downloads.showDefaultFolder();
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The following snippet contains a show button, which when clicked invokes <code>showDefaultFolder()</code> to open the default downloads folder in the platform's file manager:</p>
+The following snippet contains a show button, which when clicked invokes `showDefaultFolder()` to open the default downloads folder in the platform's file manager:
 
-<pre class="brush: js">var showBtn = document.querySelector('.show');
+```js
+var showBtn = document.querySelector('.show');
 
 showBtn.onclick = function() {
   browser.downloads.showDefaultFolder();
-}</pre>
+}
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-showDefaultFolder) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#method-showDefaultFolder"><code>chrome.downloads</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -76,5 +76,4 @@ showBtn.onclick = function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

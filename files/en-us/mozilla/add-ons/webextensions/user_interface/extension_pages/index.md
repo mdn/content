@@ -6,66 +6,72 @@ tags:
   - User Interface
   - WebExtensions
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p><span class="seoSummary">You can include HTML pages in your extension to provide forms, help, or any other content your extension needs.</span></p>
+You can include HTML pages in your extension to provide forms, help, or any other content your extension needs.
 
-<p><img alt="Example of a simple bundled page displayed as a detached panel." src="bundled_page_as_panel_small.png"></p>
+![Example of a simple bundled page displayed as a detached panel.](bundled_page_as_panel_small.png)
 
-<p>These pages also get access to the same privileged JavaScript APIs that are available to your extension's background scripts. However, they are in their own tab, with their own JavaScript event queue, their own globals, etc.</p>
+These pages also get access to the same privileged JavaScript APIs that are available to your extension's background scripts. However, they are in their own tab, with their own JavaScript event queue, their own globals, etc.
 
-<p>Think of the background page as a "hidden extension page". </p>
+Think of the background page as a "hidden extension page".
 
-<h2 id="Specifying_extension_pages">Specifying extension pages</h2>
+## Specifying extension pages
 
-<p>You can include HTML files—and associated CSS or JavaScript files—in your extension. The files can be included in the root or organized within meaningful sub-folders.</p>
+You can include HTML files—and associated CSS or JavaScript files—in your extension. The files can be included in the root or organized within meaningful sub-folders.
 
-<pre>/my-extension
-    /manifest.json
-    /my-page.html
-    /my-page.js</pre>
+    /my-extension
+        /manifest.json
+        /my-page.html
+        /my-page.js
 
-<h2 id="Displaying_extension_pages">Displaying extension pages</h2>
+## Displaying extension pages
 
-<p>There are two options for displaying extension pages: {{WebExtAPIRef("windows.create()")}} and {{WebExtAPIRef("tabs.create()")}}.</p>
+There are two options for displaying extension pages: {{WebExtAPIRef("windows.create()")}} and {{WebExtAPIRef("tabs.create()")}}.
 
-<p>Using <code>windows.create()</code>, for example, you can open an HTML page into a detached panel (a window without the normal browser UI of address bar, bookmark bar, and alike) to create a dialog-like user experience:</p>
+Using `windows.create()`, for example, you can open an HTML page into a detached panel (a window without the normal browser UI of address bar, bookmark bar, and alike) to create a dialog-like user experience:
 
-<pre class="brush: js">let createData = {
+```js
+let createData = {
   type: "detached_panel",
   url: "panel.html",
   width: 250,
   height: 100
 };
-let creating = browser.windows.create(createData);</pre>
+let creating = browser.windows.create(createData);
+```
 
-<p>When the window is no longer needed, it can be closed programmatically.</p>
+When the window is no longer needed, it can be closed programmatically.
 
-<p>For example, after the user clicks a button, you may pass the current window's id to {{WebExtAPIRef("windows.remove()")}}:</p>
+For example, after the user clicks a button, you may pass the current window's id to {{WebExtAPIRef("windows.remove()")}}:
 
-<pre class="brush: js">document.getElementById("closeme").addEventListener("click", function(){
+```js
+document.getElementById("closeme").addEventListener("click", function(){
   let winId = browser.windows.WINDOW_ID_CURRENT;
   let removing = browser.windows.remove(winId);
-}); </pre>
+});
+```
 
-<h2 id="Extension_pages_and_history">Extension pages and history</h2>
+## Extension pages and history
 
-<p>By default, pages you open in this way will be stored in the user's history, just like normal web pages. If you don't want to have this behavior, use {{WebExtAPIRef("history.deleteUrl()")}} to remove the browser's record:</p>
+By default, pages you open in this way will be stored in the user's history, just like normal web pages. If you don't want to have this behavior, use {{WebExtAPIRef("history.deleteUrl()")}} to remove the browser's record:
 
-<pre class="brush: js">function onVisited(historyItem) {
+```js
+function onVisited(historyItem) {
   if (historyItem.url == browser.extension.getURL(myPage)) {
     browser.history.deleteUrl({url: historyItem.url});
   }
 }
 
-browser.history.onVisited.addListener(onVisited);</pre>
+browser.history.onVisited.addListener(onVisited);
+```
 
-<p>To use the history API, you must request the "<code>history</code>" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> in your <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> file.</p>
+To use the history API, you must request the "`history`" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in your [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
-<h2 id="Web_page_design">Web page design</h2>
+## Web page design
 
-<p>For details on how to design your web page's to match the style of Firefox, see the <a href="https://design.firefox.com/photon/index.html">Photon Design System</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">browser styles</a> documentation.</p>
+For details on how to design your web page's to match the style of Firefox, see the [Photon Design System](https://design.firefox.com/photon/index.html) and [browser styles](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) documentation.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The <a class="external external-icon" href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repository on GitHub includes the <a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/window-manipulator">window-manipulator</a> example, which implements several of the options for creating windows.</p>
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [window-manipulator](https://github.com/mdn/webextensions-examples/tree/master/window-manipulator) example, which implements several of the options for creating windows.

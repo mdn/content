@@ -13,65 +13,58 @@ tags:
   - onChildrenReordered
 browser-compat: webextensions.api.bookmarks.onChildrenReordered
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when the children of a folder have changed their order due to the order being sorted in the UI. This is not called as a result of a call to {{WebExtAPIRef("bookmarks.move()")}} or a drag operation in the UI.</p>
+Fired when the children of a folder have changed their order due to the order being sorted in the UI. This is not called as a result of a call to {{WebExtAPIRef("bookmarks.move()")}} or a drag operation in the UI.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.bookmarks.onChildrenReordered.addListener(listener)
+```js
+browser.bookmarks.onChildrenReordered.addListener(listener)
 browser.bookmarks.onChildrenReordered.removeListener(listener)
 browser.bookmarks.onChildrenReordered.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>id</code></dt>
-  <dd><code>string</code>. ID of the folder whose children were reordered.</dd>
- </dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
- <dl>
-  <dt><code>reorderInfo</code></dt>
-  <dd><a href="#reorderinfo"><code>object</code></a>. Object containing Additional objects.</dd>
- </dl>
- </dd>
-</dl>
+    - `id`
+      - : `string`. ID of the folder whose children were reordered.
 
-<h2 id="Additional_objects">Additional objects</h2>
+    <!---->
 
-<h3 id="reorderInfo">reorderInfo</h3>
+    - `reorderInfo`
+      - : [`object`](#reorderinfo). Object containing Additional objects.
 
-<dl>
- <dt><code>childIds</code></dt>
- <dd><code>array</code> of <code>string</code>. Array containing the IDs of all the bookmark items in this folder, in the order they now appear in the UI.</dd>
-</dl>
+## Additional objects
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+### reorderInfo
 
-<p>{{Compat}}</p>
+- `childIds`
+  - : `array` of `string`. Array containing the IDs of all the bookmark items in this folder, in the order they now appear in the UI.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<pre class="brush: js">function handleChildrenReordered(id, reorderInfo) {
+{{Compat}}
+
+## Examples
+
+```js
+function handleChildrenReordered(id, reorderInfo) {
   console.log("Item: " + id + " children reordered");
   console.log("Children: " + reorderInfo.childIds);
 }
@@ -81,18 +74,15 @@ function handleClick() {
 }
 
 browser.browserAction.onClicked.addListener(handleClick);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#event-onChildrenReordered) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#event-onChildrenReordered"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -119,5 +109,4 @@ browser.browserAction.onClicked.addListener(handleClick);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

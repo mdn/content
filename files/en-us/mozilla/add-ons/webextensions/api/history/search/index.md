@@ -13,58 +13,61 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.history.search
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Searches the browser's history for {{WebExtAPIRef("history.HistoryItem")}} objects matching the given criteria.</p>
+Searches the browser's history for {{WebExtAPIRef("history.HistoryItem")}} objects matching the given criteria.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var searching = browser.history.search(
+```js
+var searching = browser.history.search(
   query                  // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>query</code></dt>
- <dd>
-   <p>An object which indicates what to look for in the browser's history. This object has the following fields:</p>
-   <dl>
-    <dt><code>text</code></dt>
-    <dd>
-      <p><code>string</code>. Search history items by URL and title. The string is split up into separate search terms at space boundaries. Each search term is matched case-insensitively against the history item's URL and title. The history item will be returned if all search terms match.</p>
-      <p>For example, consider this item:</p>
-      <p>URL: <code>"http://example.org"</code><p>
-      <p>Title: <code>"Example Domain"</code></p>
-      <pre>"http"              -&gt; matches
-  "domain"            -&gt; matches
-  "MAIN ample"        -&gt; matches
-  "main tt"           -&gt; matches
-  "main https"        -&gt; does not match</pre>
-      <p>Specify an empty string (<code>""</code>) to retrieve all {{WebExtAPIRef("history.HistoryItem")}} objects that meet all the other criteria.</p>
-    </dd>
-    <dt><code>startTime</code> {{optional_inline}}</dt>
-    <dd><code>number</code> or <code>string</code> or <code>object</code>. A value indicating a date and time. This can be represented as: a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> object, an <a href="https://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 date string</a>, or the number of milliseconds since the epoch. If it is supplied, this option excludes results whose <code>lastVisitTime</code> is earlier than this time. If it is omitted, the search is limited to the last 24 hours.</dd>
-    <dt><code>endTime</code> {{optional_inline}}</dt>
-    <dd><code>number</code> or <code>string</code> or <code>object</code>. A value indicating a date and time.  This can be represented as: a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> object, an <a href="https://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 date string</a>, or the number of milliseconds since the epoch. If it is supplied, this option limits results to those visited before this date. If it is omitted, then all entries are considered from the start time onwards.</dd>
-    <dt><code>maxResults</code> {{optional_inline}}</dt>
-    <dd><code>number</code>. The maximum number of results to retrieve. Defaults to 100, with a minimum value of 1. The function will throw an error if you pass it a <code>maxResults</code> value less than 1.</dd>
-   </dl>
- </dd>
-</dl>
+- `query`
 
-<h3 id="Return_value">Return value</h3>
+  - : An object which indicates what to look for in the browser's history. This object has the following fields:
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> will be fulfilled with an array of objects of type {{WebExtAPIRef("history.HistoryItem")}}, each describing a single matching history item. Items are sorted in reverse chronological order.</p>
+    - `text`
 
-<h2 id="Examples">Examples</h2>
+      - : `string`. Search history items by URL and title. The string is split up into separate search terms at space boundaries. Each search term is matched case-insensitively against the history item's URL and title. The history item will be returned if all search terms match.
 
-<p>Logs the URL and last visit time for all history items visited in the last 24 hours:</p>
+        For example, consider this item:
 
-<pre class="brush: js">function onGot(historyItems) {
+        URL: `"http://example.org"`
+
+        Title: `"Example Domain"`
+
+            "http"              -> matches
+              "domain"            -> matches
+              "MAIN ample"        -> matches
+              "main tt"           -> matches
+              "main https"        -> does not match
+
+        Specify an empty string (`""`) to retrieve all {{WebExtAPIRef("history.HistoryItem")}} objects that meet all the other criteria.
+
+    - `startTime` {{optional_inline}}
+      - : `number` or `string` or `object`. A value indicating a date and time. This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso/home/standards/iso8601.htm), or the number of milliseconds since the epoch. If it is supplied, this option excludes results whose `lastVisitTime` is earlier than this time. If it is omitted, the search is limited to the last 24 hours.
+    - `endTime` {{optional_inline}}
+      - : `number` or `string` or `object`. A value indicating a date and time.  This can be represented as: a [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, an [ISO 8601 date string](https://www.iso.org/iso/home/standards/iso8601.htm), or the number of milliseconds since the epoch. If it is supplied, this option limits results to those visited before this date. If it is omitted, then all entries are considered from the start time onwards.
+    - `maxResults` {{optional_inline}}
+      - : `number`. The maximum number of results to retrieve. Defaults to 100, with a minimum value of 1. The function will throw an error if you pass it a `maxResults` value less than 1.
+
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) will be fulfilled with an array of objects of type {{WebExtAPIRef("history.HistoryItem")}}, each describing a single matching history item. Items are sorted in reverse chronological order.
+
+## Examples
+
+Logs the URL and last visit time for all history items visited in the last 24 hours:
+
+```js
+function onGot(historyItems) {
   for (item of historyItems) {
     console.log(item.url);
     console.log(new Date(item.lastVisitTime));
@@ -73,11 +76,13 @@ browser-compat: webextensions.api.history.search
 
 var searching = browser.history.search({text: ""});
 
-searching.then(onGot);</pre>
+searching.then(onGot);
+```
 
-<p>Logs the URL and last visit time for all history items ever visited:</p>
+Logs the URL and last visit time for all history items ever visited:
 
-<pre class="brush: js">function onGot(historyItems) {
+```js
+function onGot(historyItems) {
   for (item of historyItems) {
     console.log(item.url);
     console.log(new Date(item.lastVisitTime));
@@ -89,11 +94,13 @@ var searching = browser.history.search({
    startTime: 0
 });
 
-searching.then(onGot);</pre>
+searching.then(onGot);
+```
 
-<p>Logs the URL and last visit time of the most recent visit to a page that contain the string "mozilla":</p>
+Logs the URL and last visit time of the most recent visit to a page that contain the string "mozilla":
 
-<pre class="brush: js">function onGot(historyItems) {
+```js
+function onGot(historyItems) {
   for (item of historyItems) {
     console.log(item.url);
     console.log(new Date(item.lastVisitTime));
@@ -106,22 +113,20 @@ var searching = browser.history.search({
  maxResults: 1
 });
 
-searching.then(onGot);</pre>
+searching.then(onGot);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#method-search) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/history#method-search"><code>chrome.history</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -148,5 +153,4 @@ searching.then(onGot);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

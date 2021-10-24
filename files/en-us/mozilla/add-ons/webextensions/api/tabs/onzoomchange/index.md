@@ -13,85 +13,76 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onZoomChange
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when a tab is zoomed.</p>
+Fired when a tab is zoomed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.tabs.onZoomChange.addListener(listener)
+```js
+browser.tabs.onZoomChange.addListener(listener)
 browser.tabs.onZoomChange.removeListener(listener)
 browser.tabs.onZoomChange.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>ZoomChangeInfo</code></dt>
-  <dd><a href="#zoomchangeinfo"><code>object</code></a>. Information about the zoom event.</dd>
- </dl>
- </dd>
-</dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
-<h2 id="Additional_objects">Additional objects</h2>
+    - `ZoomChangeInfo`
+      - : [`object`](#zoomchangeinfo). Information about the zoom event.
 
-<h3 id="ZoomChangeInfo">ZoomChangeInfo</h3>
+## Additional objects
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. ID of the tab that was zoomed.</dd>
- <dt><code>oldZoomFactor</code></dt>
- <dd><code>number</code>. The previous zoom factor.</dd>
- <dt><code>newZoomFactor</code></dt>
- <dd><code>number</code>. The new zoom factor.</dd>
- <dt><code>zoomSettings</code></dt>
- <dd>{{WebExtAPIRef('tabs.ZoomSettings')}}. Zoom settings for the tab.</dd>
-</dl>
+### ZoomChangeInfo
 
-<h2 id="Examples">Examples</h2>
+- `tabId`
+  - : `integer`. ID of the tab that was zoomed.
+- `oldZoomFactor`
+  - : `number`. The previous zoom factor.
+- `newZoomFactor`
+  - : `number`. The new zoom factor.
+- `zoomSettings`
+  - : {{WebExtAPIRef('tabs.ZoomSettings')}}. Zoom settings for the tab.
 
-<p>Listen for zoom events and log the info:</p>
+## Examples
 
-<pre class="brush: js">function handleZoomed(zoomChangeInfo) {
+Listen for zoom events and log the info:
+
+```js
+function handleZoomed(zoomChangeInfo) {
   console.log("Tab: " + zoomChangeInfo.tabId + " zoomed");
   console.log("Old zoom: " + zoomChangeInfo.oldZoomFactor);
   console.log("New zoom: " + zoomChangeInfo.newZoomFactor);
 }
 
-browser.tabs.onZoomChange.addListener(handleZoomed);</pre>
+browser.tabs.onZoomChange.addListener(handleZoomed);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onZoomChange) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#event-onZoomChange"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,5 +109,4 @@ browser.tabs.onZoomChange.addListener(handleZoomed);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

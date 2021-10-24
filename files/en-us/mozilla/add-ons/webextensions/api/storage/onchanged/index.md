@@ -13,53 +13,48 @@ tags:
   - onChanged
 browser-compat: webextensions.api.storage.onChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when one or more items change.</p>
+Fired when one or more items change.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">browser.storage.onChanged.addListener(<var>callback</var>)
-browser.storage.onChanged.removeListener(<var>listener</var>)
-browser.storage.onChanged.hasListener(<var>listener</var>)
-</pre>
+```js
+browser.storage.onChanged.addListener(callback)
+browser.storage.onChanged.removeListener(listener)
+browser.storage.onChanged.hasListener(listener)
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(<var>callback</var>)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(<var>listener</var>)</code></dt>
- <dd>Stop listening to this event. The <code><var>listener</var></code> argument is the listener to remove.</dd>
- <dt><code>hasListener(<var>listener</var>)</code></dt>
- <dd>Check whether <code><var>listener</var></code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code><var>callback</var></code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code><var>changes</var></code></dt>
-  <dd><code>object</code>. Object describing the change. This contains one property for each key that changed. The name of the property is the name of the key that changed, and its value is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.</dd>
-  <dt><code><var>areaName</var></code></dt>
-  <dd><code>string</code>. The name of the storage area (<code>"sync"</code>, <code>"local"</code>, or <code>"managed"</code>) to which the changes were made.</dd>
- </dl>
- </dd>
-</dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    - `changes`
+      - : `object`. Object describing the change. This contains one property for each key that changed. The name of the property is the name of the key that changed, and its value is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.
+    - `areaName`
+      - : `string`. The name of the storage area (`"sync"`, `"local"`, or `"managed"`) to which the changes were made.
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="Examples">Examples</h2>
+{{Compat}}
 
-<pre class="brush: js">/*
+## Examples
+
+```js
+/*
 Log the storage area that changed,
 then for each item changed,
 log its old value and its new value.
@@ -79,18 +74,15 @@ function logStorageChange(changes, area) {
 }
 
 browser.storage.onChanged.addListener(logStorageChange);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#event-onChanged) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/storage#event-onChanged"><code>chrome.storage</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -117,5 +109,4 @@ browser.storage.onChanged.addListener(logStorageChange);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

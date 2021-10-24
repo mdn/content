@@ -11,27 +11,27 @@ tags:
   - captivePortal
 browser-compat: webextensions.api.captivePortal.getState
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Returns the portal state as one of <code>unknown</code>, <code>not_captive</code>, <code>unlocked_portal</code>, or <code>locked_portal</code>.</p>
+Returns the portal state as one of `unknown`, `not_captive`, `unlocked_portal`, or `locked_portal`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var state = browser.captivePortal.getState()
-</pre>
+```js
+var state = browser.captivePortal.getState()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> that is fulfilled with a string containing one of <code>unknown</code>, <code>not_captive</code>, <code>unlocked_portal</code>, or <code>locked_portal</code>.</p>
+A [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with a string containing one of `unknown`, `not_captive`, `unlocked_portal`, or `locked_portal`.
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -58,5 +58,4 @@ browser-compat: webextensions.api.captivePortal.getState
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

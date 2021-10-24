@@ -12,51 +12,42 @@ tags:
   - i18n
 browser-compat: webextensions.api.i18n
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Functions to internationalize your extension. You can use these APIs to get localized strings from locale files packaged with your extension, find out the browser's current language, and find out the value of its <a href="/en-US/docs/Web/HTTP/Content_negotiation#the_accept-language_header">Accept-Language header</a>.</p>
+Functions to internationalize your extension. You can use these APIs to get localized strings from locale files packaged with your extension, find out the browser's current language, and find out the value of its [Accept-Language header](/en-US/docs/Web/HTTP/Content_negotiation#the_accept-language_header).
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("i18n.LanguageCode")}}</dt>
- <dd>A <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10">language tag</a> such as <code>"en-US"</code> or "<code>fr</code>".</dd>
-</dl>
+- {{WebExtAPIRef("i18n.LanguageCode")}}
+  - : A [language tag](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10) such as `"en-US"` or "`fr`".
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("i18n.getAcceptLanguages()")}}</dt>
- <dd>Gets the <a href="/en-US/docs/Web/HTTP/Content_negotiation#the_accept-language_header">accept-languages</a> of the browser. This is different from the locale used by the browser. To get the locale, use {{WebExtAPIRef('i18n.getUILanguage')}}.</dd>
- <dt>{{WebExtAPIRef("i18n.getMessage()")}}</dt>
- <dd>Gets the localized string for the specified message.</dd>
- <dt>{{WebExtAPIRef("i18n.getUILanguage()")}}</dt>
- <dd>Gets the UI language of the browser. This is different from {{WebExtAPIRef('i18n.getAcceptLanguages')}} which returns the preferred user languages.</dd>
- <dt>{{WebExtAPIRef("i18n.detectLanguage()")}}</dt>
- <dd>Detects the language of the provided text using the <a href="https://github.com/CLD2Owners/cld2">Compact Language Detector</a>.</dd>
-</dl>
+- {{WebExtAPIRef("i18n.getAcceptLanguages()")}}
+  - : Gets the [accept-languages](/en-US/docs/Web/HTTP/Content_negotiation#the_accept-language_header) of the browser. This is different from the locale used by the browser. To get the locale, use {{WebExtAPIRef('i18n.getUILanguage')}}.
+- {{WebExtAPIRef("i18n.getMessage()")}}
+  - : Gets the localized string for the specified message.
+- {{WebExtAPIRef("i18n.getUILanguage()")}}
+  - : Gets the UI language of the browser. This is different from {{WebExtAPIRef('i18n.getAcceptLanguages')}} which returns the preferred user languages.
+- {{WebExtAPIRef("i18n.detectLanguage()")}}
+  - : Detects the language of the provided text using the [Compact Language Detector](https://github.com/CLD2Owners/cld2).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
+> **Note:** This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/extensions/i18n) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/i18n"><code>chrome.i18n</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json"><code>i18n.json</code></a> in the Chromium code.</p>
+## See also
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+- [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization): a guide to using the WebExtension i18n system.
+- [Locale-Specific Message reference](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference): extensions supply locale-specific strings in files called `messages.json`. This page describes the format of `messages.json`.
 
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization">Internationalization</a>: a guide to using the WebExtension i18n system.</li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference">Locale-Specific Message reference</a>: extensions supply locale-specific strings in files called <code>messages.json</code>. This page describes the format of <code>messages.json</code>.</li>
-</ul>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -83,5 +74,4 @@ browser-compat: webextensions.api.i18n
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

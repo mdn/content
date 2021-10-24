@@ -13,78 +13,71 @@ tags:
   - onClicked
 browser-compat: webextensions.api.menus.onClicked
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when a menu item is clicked.</p>
+Fired when a menu item is clicked.
 
-<p>For compatibility with other browsers, Firefox makes this event available via the <code>contextMenus</code> namespace as well as the <code>menus</code> namespace.</p>
+For compatibility with other browsers, Firefox makes this event available via the `contextMenus` namespace as well as the `menus` namespace.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.menus.onClicked.addListener(listener)
+```js
+browser.menus.onClicked.addListener(listener)
 browser.menus.onClicked.removeListener(listener)
 browser.menus.onClicked.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>info</code></dt>
-  <dd>{{WebExtAPIRef('menus.OnClickData')}}. Information about the item clicked and the context where the click happened.</dd>
- </dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
- <dl>
-  <dt><code>tab</code></dt>
-  <dd>{{WebExtAPIRef('tabs.Tab')}}. The details of the tab where the click took place. If the click did not take place in or on a tab, this parameter will be missing.</dd>
- </dl>
- </dd>
-</dl>
+    - `info`
+      - : {{WebExtAPIRef('menus.OnClickData')}}. Information about the item clicked and the context where the click happened.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    <!---->
 
-<p>{{Compat}}</p>
+    - `tab`
+      - : {{WebExtAPIRef('tabs.Tab')}}. The details of the tab where the click took place. If the click did not take place in or on a tab, this parameter will be missing.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>This example listens for clicks on a menu item, then log the item's ID and the tab ID:</p>
+{{Compat}}
 
-<pre class="brush: js">browser.menus.create({
+## Examples
+
+This example listens for clicks on a menu item, then log the item's ID and the tab ID:
+
+```js
+browser.menus.create({
   id: "click-me",
   title: "Click me!",
   contexts: ["all"]
 });
 
-browser.menus.onClicked.addListener((info, tab) =&gt; {
+browser.menus.onClicked.addListener((info, tab) => {
   console.log("Item " + info.menuItemId + " clicked " +
               "in tab " + tab.id);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#event-onClicked) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/contextMenus#event-onClicked"><code>chrome.contextMenus</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a> in the Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,5 +104,4 @@ browser.menus.onClicked.addListener((info, tab) =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

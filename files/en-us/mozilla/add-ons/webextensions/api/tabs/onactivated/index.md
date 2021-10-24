@@ -13,80 +13,71 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.onActivated
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fires when the active tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to {{WebExtAPIRef("tabs.onUpdated")}} events to be notified when a URL is set.</p>
+Fires when the active tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to {{WebExtAPIRef("tabs.onUpdated")}} events to be notified when a URL is set.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.tabs.onActivated.addListener(listener)
+```js
+browser.tabs.onActivated.addListener(listener)
 browser.tabs.onActivated.removeListener(listener)
 browser.tabs.onActivated.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>activeInfo</code></dt>
-  <dd><a href="#activeinfo"><code>object</code></a>. ID of the tab that was made active, and ID of its window.</dd>
- </dl>
- </dd>
-</dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
-<h2 id="Additional_objects">Additional objects</h2>
+    - `activeInfo`
+      - : [`object`](#activeinfo). ID of the tab that was made active, and ID of its window.
 
-<h3 id="activeInfo">activeInfo</h3>
+## Additional objects
 
-<dl>
- <dt><code>previousTabId</code></dt>
- <dd><code>integer</code>. The ID of the previous activated tab, if that tab is still open.</dd>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. The ID of the tab that has become active.</dd>
- <dt><code>windowId</code></dt>
- <dd><code>integer</code>. The ID of the tab's window.</dd>
-</dl>
+### activeInfo
 
-<h2 id="Examples">Examples</h2>
+- `previousTabId`
+  - : `integer`. The ID of the previous activated tab, if that tab is still open.
+- `tabId`
+  - : `integer`. The ID of the tab that has become active.
+- `windowId`
+  - : `integer`. The ID of the tab's window.
 
-<p>Listen for and log tab activation events:</p>
+## Examples
 
-<pre class="brush: js">function handleActivated(activeInfo) {
+Listen for and log tab activation events:
+
+```js
+function handleActivated(activeInfo) {
   console.log("Tab " + activeInfo.tabId +
               " was activated");
 }
 
-browser.tabs.onActivated.addListener(handleActivated);</pre>
+browser.tabs.onActivated.addListener(handleActivated);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onActivated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#event-onActivated"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -113,5 +104,4 @@ browser.tabs.onActivated.addListener(handleActivated);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

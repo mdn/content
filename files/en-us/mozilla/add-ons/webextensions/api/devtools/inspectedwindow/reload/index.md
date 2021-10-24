@@ -12,62 +12,57 @@ tags:
   - reload
 browser-compat: webextensions.api.devtools.inspectedWindow.reload
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Reloads the window that the devtools are attached to.</p>
+Reloads the window that the devtools are attached to.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.devtools.inspectedWindow.reload(
+```js
+browser.devtools.inspectedWindow.reload(
   reloadOptions       // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>reloadOptions</code>{{optional_inline}}</dt>
- <dd>
-   <p><code>object</code>. Options for the function, as follows:</p>
-   <dl>
-    <dt><code>ignoreCache</code>{{optional_inline}}</dt>
-    <dd><code>boolean</code>. If true, this makes the reload ignore the browser cache (as if the user had pressed Shift+Ctrl+R).</dd>
-    <dt><code>userAgent</code>{{optional_inline}}</dt>
-    <dd><code>string</code>. Set a custom user agent for the page. The string supplied here will be sent in the browser's <a href="/en-US/docs/Web/HTTP/Headers/User-Agent">User-Agent</a> header, and will be returned by calls to <code><a href="/en-US/docs/Web/API/NavigatorID/userAgent">navigator.userAgent</a></code> made by scripts running in the page.</dd>
-    <dt><code>injectedScript</code> {{optional_inline}}</dt>
-    <dd><code>string</code>. Inject the given JavaScript expression into all frames in the page, before any other scripts.</dd>
-   </dl>
- </dd>
-</dl>
+- `reloadOptions`{{optional_inline}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+  - : `object`. Options for the function, as follows:
 
-<p>{{Compat}}</p>
+    - `ignoreCache`{{optional_inline}}
+      - : `boolean`. If true, this makes the reload ignore the browser cache (as if the user had pressed Shift+Ctrl+R).
+    - `userAgent`{{optional_inline}}
+      - : `string`. Set a custom user agent for the page. The string supplied here will be sent in the browser's [User-Agent](/en-US/docs/Web/HTTP/Headers/User-Agent) header, and will be returned by calls to [`navigator.userAgent`](/en-US/docs/Web/API/NavigatorID/userAgent) made by scripts running in the page.
+    - `injectedScript` {{optional_inline}}
+      - : `string`. Inject the given JavaScript expression into all frames in the page, before any other scripts.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>Reload the inspected window, setting the user agent and injecting a script:</p>
+{{Compat}}
 
-<pre class="brush: js">const reloadButton = document.querySelector("#reload-button");
+## Examples
 
-reloadButton.addEventListener("click", () =&gt; {
+Reload the inspected window, setting the user agent and injecting a script:
+
+```js
+const reloadButton = document.querySelector("#reload-button");
+
+reloadButton.addEventListener("click", () => {
   browser.devtools.inspectedWindow.reload({
     injectedScript:"alert(navigator.userAgent);",
     userAgent: "Not a real UA"
   });
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools"><code>chrome.devtools</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -94,5 +89,4 @@ reloadButton.addEventListener("click", () =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

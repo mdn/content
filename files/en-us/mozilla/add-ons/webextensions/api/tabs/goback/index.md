@@ -12,42 +12,42 @@ tags:
   - goBack
 browser-compat: webextensions.api.tabs.goBack
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Navigate to the previous page in tab's history, if available.</p>
+Navigate to the previous page in tab's history, if available.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var withGoingBack = browser.tabs.goBack(
+```js
+var withGoingBack = browser.tabs.goBack(
   tabId,                  // optional integer
   callback                  // optional function
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>tabId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. The ID of the tab to navigate. Defaults to the active tab of the current window.</dd>
- <dt><code>callback</code>{{optional_inline}}</dt>
- <dd><code>function</code>. When the page navigation finishes, this function is called without parameters.</dd>
-</dl>
+- `tabId`{{optional_inline}}
+  - : `integer`. The ID of the tab to navigate. Defaults to the active tab of the current window.
+- `callback`{{optional_inline}}
+  - : `function`. When the page navigation finishes, this function is called without parameters.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that is fulfilled when the page navigation finishes.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled when the page navigation finishes.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Go back to the previous page in the current tab:</p>
+Go back to the previous page in the current tab:
 
-<pre class="brush: js">function onGoBack() {
+```js
+function onGoBack() {
   console.log("Gone back");
 }
 
@@ -56,17 +56,16 @@ function onError(error) {
 }
 
 var goingBack = browser.tabs.goBack();
-goingBack.then(onGoBack, onError);</pre>
+goingBack.then(onGoBack, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-getZoomSettings"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-getZoomSettings) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -93,5 +92,4 @@ goingBack.then(onGoBack, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

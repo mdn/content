@@ -11,63 +11,57 @@ tags:
   - WebExtensions
   - set
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Use <code>BrowserSetting.set()</code> to change the browser setting to a new value.</p>
+Use `BrowserSetting.set()` to change the browser setting to a new value.
 
-<p>There are some rules that can restrict when extensions are able to change settings:</p>
+There are some rules that can restrict when extensions are able to change settings:
 
-<ul>
- <li>some settings are locked, so they can't be changed by extensions at all</li>
- <li>if multiple extensions try to modify the same setting, then extensions are given a precedence ordering based on when they were installed. More-recently installed extensions have precedence over less-recently installed extension.</li>
-</ul>
+- some settings are locked, so they can't be changed by extensions at all
+- if multiple extensions try to modify the same setting, then extensions are given a precedence ordering based on when they were installed. More-recently installed extensions have precedence over less-recently installed extension.
 
-<p>This means that if extension X tries to change a setting:</p>
+This means that if extension X tries to change a setting:
 
-<ol>
- <li>If the setting is locked, then the setting is not changed. However, X's change is remembered, and it is stored in a queue, ordered by X's precedence relative to any other extensions that tried to change the setting. If the setting becomes unlocked later on, the first extension in the queue gets to change the setting.</li>
- <li>Otherwise, if no other extension has already changed the setting, then X succeeds in changing the setting, and is then said to "control" the setting.</li>
- <li>Otherwise, if a lower-precedence extension Y has already changed the setting, then X succeeds in changing the setting, and now controls the setting. However, Y's change is remembered, and is stored in a queue in precedence order. If X subsequently clears its value, or if X is disabled or uninstalled,  the first extension in the queue gets to make its change to the setting.</li>
- <li>Otherwise, if a higher-precedence extension Z has already changed the setting, then X does not succeed in changing the setting, but its change is queued. If Z subsequently clears its value, or if Z is disabled or uninstalled, the first extension in the queue gets to make its change to the setting.</li>
-</ol>
+1.  If the setting is locked, then the setting is not changed. However, X's change is remembered, and it is stored in a queue, ordered by X's precedence relative to any other extensions that tried to change the setting. If the setting becomes unlocked later on, the first extension in the queue gets to change the setting.
+2.  Otherwise, if no other extension has already changed the setting, then X succeeds in changing the setting, and is then said to "control" the setting.
+3.  Otherwise, if a lower-precedence extension Y has already changed the setting, then X succeeds in changing the setting, and now controls the setting. However, Y's change is remembered, and is stored in a queue in precedence order. If X subsequently clears its value, or if X is disabled or uninstalled,  the first extension in the queue gets to make its change to the setting.
+4.  Otherwise, if a higher-precedence extension Z has already changed the setting, then X does not succeed in changing the setting, but its change is queued. If Z subsequently clears its value, or if Z is disabled or uninstalled, the first extension in the queue gets to make its change to the setting.
 
-<p>An extension can find out which of these scenarios applies by examining the "<code>levelOfControl</code>" property returned from a call to <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get">BrowserSetting.get()</a></code>.</p>
+An extension can find out which of these scenarios applies by examining the "`levelOfControl`" property returned from a call to [`BrowserSetting.get()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get).
 
-<p>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set">BrowserSetting.set()</a></code> method returns a Promise that resolves to a boolean: if an attempt to change a setting actually results in the setting being changed (scenarios 2 and 3 above) the boolean is <code>true</code>: otherwise it is <code>false</code>.</p>
+The [`BrowserSetting.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) method returns a Promise that resolves to a boolean: if an attempt to change a setting actually results in the setting being changed (scenarios 2 and 3 above) the boolean is `true`: otherwise it is `false`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var setting = setting.set(
+```js
+var setting = setting.set(
   details     // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p>An object that must contain the following property:</p>
-   <dl>
-    <dt><code>value</code></dt>
-    <dd><code>any</code>. The value you want to change the setting to. Its type depends on the particular setting.</dd>
-   </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Return_value">Return value</h3>
+  - : An object that must contain the following property:
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a <code>boolean</code>: <code>true</code> if the setting was modified, <code>false</code> otherwise (for example, because the extension did not control the setting).</p>
+    - `value`
+      - : `any`. The value you want to change the setting to. Its type depends on the particular setting.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+### Return value
 
-<p>See {{WebExtAPIRef("types.BrowserSetting")}}.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a `boolean`: `true` if the setting was modified, `false` otherwise (for example, because the extension did not control the setting).
 
-<h2 id="Example">Example</h2>
+## Browser compatibility
 
-<p>Modify the <code>hyperlinkAuditingEnabled</code> setting (this requires the "privacy" permission):</p>
+See {{WebExtAPIRef("types.BrowserSetting")}}.
 
-<pre class="brush: js">function onSet(result) {
+## Example
+
+Modify the `hyperlinkAuditingEnabled` setting (this requires the "privacy" permission):
+
+```js
+function onSet(result) {
   if (result) {
     console.log("Value was updated");
   } else {
@@ -75,7 +69,7 @@ tags:
   }
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
 
     var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
       value: false
@@ -83,19 +77,17 @@ browser.browserAction.onClicked.addListener(() =&gt; {
     setting.then(onSet);
 
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note:</strong></p>
+> **Note:**
+>
+> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/extensions/types) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/types"><code>chrome.types</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -122,5 +114,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,90 +13,81 @@ tags:
   - onchange
 browser-compat: webextensions.api.types.BrowserSetting.onChange
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <code>BrowserSetting.onChange</code> event is fired when the setting is changed.</p>
+The `BrowserSetting.onChange` event is fired when the setting is changed.
 
-<p>On Firefox, it doesn’t fire if the change has been made through <code>about:config</code>.</p>
+On Firefox, it doesn’t fire if the change has been made through `about:config`.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">BrowserSetting.onChange.addListener(listener)
+```js
+BrowserSetting.onChange.addListener(listener)
 BrowserSetting.onChange.removeListener(listener)
 BrowserSetting.onChange.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(listener)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>A callback function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>details</code></dt>
-  <dd>An <code>object</code> containing details of the change that occurred. Its properties are as follows:
-  <dl>
-   <dt><code>value</code></dt>
-   <dd>The new value of the setting. The type of this property is determined by the particular setting.</dd>
-   <dt><code>levelOfControl</code></dt>
-   <dd><code>string</code>. This represents the way the setting is currently controlled. You can use it to check whether you can modify the setting. See <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set">BrowserSetting.set()</a></code> for details. Its value may be any of the following:
-   <table class="fullwidth-table standard-table">
-    <tbody>
-     <tr>
-      <td><code>"not_controllable"</code></td>
-      <td>Extensions are not allowed to modify this setting.</td>
-     </tr>
-     <tr>
-      <td><code>"controlled_by_other_extensions"</code></td>
-      <td>Another extension that was installed after this one has modified this setting.</td>
-     </tr>
-     <tr>
-      <td><code>"controllable_by_this_extension"</code></td>
-      <td>This extension is allowed to modify the setting.</td>
-     </tr>
-     <tr>
-      <td><code>controlled_by_this_extension"</code></td>
-      <td>This extension has already modified the setting.</td>
-     </tr>
-    </tbody>
-   </table>
-   </dd>
-  </dl>
-  </dd>
- </dl>
- </dd>
-</dl>
+  - : A callback function that will be called when this event occurs. The function will be passed the following arguments:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    - `details`
 
-<p>{{Compat}}</p>
+      - : An `object` containing details of the change that occurred. Its properties are as follows:
 
-<h2 id="Examples">Examples</h2>
+        - `value`
+          - : The new value of the setting. The type of this property is determined by the particular setting.
+        - `levelOfControl`
+          - : `string`. This represents the way the setting is currently controlled. You can use it to check whether you can modify the setting. See [`BrowserSetting.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) for details. Its value may be any of the following:<table class="fullwidth-table standard-table">
+              <tbody>
+                <tr>
+                  <td><code>"not_controllable"</code></td>
+                  <td>Extensions are not allowed to modify this setting.</td>
+                </tr>
+                <tr>
+                  <td><code>"controlled_by_other_extensions"</code></td>
+                  <td>
+                    Another extension that was installed after this one has modified this
+                    setting.
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>"controllable_by_this_extension"</code></td>
+                  <td>This extension is allowed to modify the setting.</td>
+                </tr>
+                <tr>
+                  <td><code>controlled_by_this_extension"</code></td>
+                  <td>This extension has already modified the setting.</td>
+                </tr>
+              </tbody>
+            </table>
 
-<p>{{WebExtExamples}}</p>
+## Browser compatibility
 
+{{Compat}}
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/types"><code>chrome.types</code></a> API.</p>
+## Examples
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+{{WebExtExamples}}
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+> **Note:** This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/extensions/types) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -123,5 +114,4 @@ BrowserSetting.onChange.hasListener(listener)
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

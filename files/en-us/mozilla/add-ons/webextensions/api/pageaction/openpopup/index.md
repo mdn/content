@@ -12,44 +12,42 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.pageAction.openPopup
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Open the page action's popup.
 
-<div>Open the page action's popup.</div>
+You can only call this function from inside the handler for a [user action](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions).
 
+## Syntax
 
-<div>
-<p>You can only call this function from inside the handler for a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions">user action</a>.</p>
-</div>
+```js
+browser.pageAction.openPopup()
+```
 
-<h2 id="Syntax">Syntax</h2>
+### Parameters
 
-<pre class="brush:js">browser.pageAction.openPopup()
-</pre>
+None.
 
-<h3 id="Parameters">Parameters</h3>
+### Return value
 
-<p>None.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is resolved with no arguments.
 
-<h3 id="Return_value">Return value</h3>
+## Browser compatibility
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that is resolved with no arguments.</p>
+{{Compat}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Examples
 
-<p>{{Compat}}</p>
+Open the popup when the user selects a context menu item:
 
-<h2 id="Examples">Examples</h2>
-
-<p>Open the popup when the user selects a context menu item:</p>
-
-<pre class="brush: js">browser.menus.create({
+```js
+browser.menus.create({
   id: "open-popup",
   title: "open popup",
   contexts: ["all"]
 });
 
-browser.menus.onClicked.addListener(() =&gt; {
+browser.menus.onClicked.addListener(() => {
   browser.pageAction.openPopup();
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

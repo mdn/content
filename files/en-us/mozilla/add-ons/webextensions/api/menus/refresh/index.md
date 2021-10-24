@@ -12,53 +12,56 @@ tags:
   - refresh
 browser-compat: webextensions.api.menus.refresh
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Refreshes a menu that's being shown.</p>
+Refreshes a menu that's being shown.
 
-<p>Updates the extension's menu items in the menu that the browser is currently showing, including changes that have been made since the menu was shown. Has no effect if the menu is not being shown. Rebuilding a shown menu is an expensive operation, only invoke this method when necessary.</p>
+Updates the extension's menu items in the menu that the browser is currently showing, including changes that have been made since the menu was shown. Has no effect if the menu is not being shown. Rebuilding a shown menu is an expensive operation, only invoke this method when necessary.
 
-<p>This would typically be called from inside a {{WebExtAPIRef("menus.onShown")}} event handler, after the handler has made any updates to the menu.</p>
+This would typically be called from inside a {{WebExtAPIRef("menus.onShown")}} event handler, after the handler has made any updates to the menu.
 
-<p>Firefox makes this function available via the <code>contextMenus</code> namespace as well as the <code>menus</code> namespace.</p>
+Firefox makes this function available via the `contextMenus` namespace as well as the `menus` namespace.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.menus.refresh()
-</pre>
+```js
+browser.menus.refresh()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that is fulfilled with no arguments.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with no arguments.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example listens for the context menu to be shown over a link, then updates the <code>openLabelledId</code> menu item with the link's hostname:</p>
+This example listens for the context menu to be shown over a link, then updates the `openLabelledId` menu item with the link's hostname:
 
-<pre class="brush: js">function updateMenuItem(linkHostname) {
+```js
+function updateMenuItem(linkHostname) {
   browser.menus.update(openLabelledId, {
     title: `Open (${linkHostname})`
   });
   browser.menus.refresh();
 }
 
-browser.menus.onShown.addListener(info =&gt; {
+browser.menus.onShown.addListener(info => {
   if (!info.linkUrl) {
     return;
   }
-  let linkElement = document.createElement(&quot;a&quot;);
+  let linkElement = document.createElement("a");
   linkElement.href = info.linkUrl;
   updateMenuItem(linkElement.hostname);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

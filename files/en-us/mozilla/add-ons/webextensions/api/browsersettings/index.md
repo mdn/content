@@ -11,57 +11,55 @@ tags:
   - browserSettings
 browser-compat: webextensions.api.browserSettings
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Enables an extension to modify certain global browser settings. Each property of this API is a {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object, providing the ability to modify a particular setting.</p>
+Enables an extension to modify certain global browser settings. Each property of this API is a {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object, providing the ability to modify a particular setting.
 
-<p>Because these are global settings, it's possible for extensions to conflict. See the documentation for <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set">BrowserSetting.set()</a></code> for details of how conflicts are handled.</p>
+Because these are global settings, it's possible for extensions to conflict. See the documentation for [`BrowserSetting.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) for details of how conflicts are handled.
 
-<p>To use this API you need to have the "browserSettings" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
+To use this API you need to have the "browserSettings" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{WebExtAPIRef("browserSettings.allowPopupsForUserEvents")}}</dt>
- <dd>Determines whether code running in web pages can display popups in response to user events.</dd>
- <dt>{{WebExtAPIRef("browserSettings.cacheEnabled")}}</dt>
- <dd>Determines whether the browser cache is enabled or not.</dd>
- <dt>{{WebExtAPIRef("browserSettings.closeTabsByDoubleClick")}}</dt>
- <dd>Determines whether the selected tab can be closed with a double click.</dd>
- <dt>{{WebExtAPIRef("browserSettings.colorManagement")}}</dt>
- <dd>Determines various settings for color management.</dd>
- <dt>{{WebExtAPIRef("browserSettings.contextMenuShowEvent")}}</dt>
- <dd>Determines the mouse event that triggers a context menu popup.</dd>
- <dt>{{WebExtAPIRef("browserSettings.ftpProtocolEnabled")}}</dt>
- <dd>Determines whether the FTP protocol is enabled.</dd>
- <dt>{{WebExtAPIRef("browserSettings.homepageOverride")}}</dt>
- <dd>Read the value of the browser's home page.</dd>
- <dt>{{WebExtAPIRef("browserSettings.imageAnimationBehavior")}}</dt>
- <dd>Determines how the browser treats animated images.</dd>
- <dt>{{WebExtAPIRef("browserSettings.newTabPageOverride")}}</dt>
- <dd>Reads the value of the browser's new tab page.</dd>
- <dt>{{WebExtAPIRef("browserSettings.newTabPosition")}}</dt>
- <dd>Controls the position of newly opened tabs relative to already open tabs.</dd>
- <dt>{{WebExtAPIRef("browserSettings.openBookmarksInNewTabs")}}</dt>
- <dd>Determines whether bookmarks are opened in the current tab or a new tab.</dd>
- <dt>{{WebExtAPIRef("browserSettings.openSearchResultsInNewTabs")}}</dt>
- <dd>Determines whether search results are opened in the current tab or a new tab.</dd>
- <dt>{{WebExtAPIRef("browserSettings.openUrlbarResultsInNewTabs")}}</dt>
- <dd>Determines whether address bar autocomplete suggestions are opened in the current tab or a new tab.</dd>
- <dt>{{WebExtAPIRef("browserSettings.overrideDocumentColors")}}</dt>
- <dd>Controls whether the user-chosen colors override the page's colors.</dd>
- <dt>{{WebExtAPIRef("browserSettings.useDocumentFonts")}}</dt>
- <dd>Controls whether the browser will use the fonts specified by a web page or use only built-in fonts.</dd>
- <dt>{{WebExtAPIRef("browserSettings.webNotificationsDisabled")}}</dt>
- <dd>Prevents websites from showing notifications using the <code><a href="/en-US/docs/Web/API/Notification">Notification</a></code> Web API.</dd>
- <dt>{{WebExtAPIRef("browserSettings.zoomFullPage")}}</dt>
- <dd>Controls whether zoom is applied to the entire page or to text only.</dd>
- <dt>{{WebExtAPIRef("browserSettings.zoomSiteSpecific")}}</dt>
- <dd>Controls whether page zoom is applied on a per-site or per-tab basis. If {{WebExtAPIRef("privacy.websites")}}<code>.resistFingerprinting</code> is true, this setting has no effect and zoom is applied on a per-tab basis.</dd>
-</dl>
+- {{WebExtAPIRef("browserSettings.allowPopupsForUserEvents")}}
+  - : Determines whether code running in web pages can display popups in response to user events.
+- {{WebExtAPIRef("browserSettings.cacheEnabled")}}
+  - : Determines whether the browser cache is enabled or not.
+- {{WebExtAPIRef("browserSettings.closeTabsByDoubleClick")}}
+  - : Determines whether the selected tab can be closed with a double click.
+- {{WebExtAPIRef("browserSettings.colorManagement")}}
+  - : Determines various settings for color management.
+- {{WebExtAPIRef("browserSettings.contextMenuShowEvent")}}
+  - : Determines the mouse event that triggers a context menu popup.
+- {{WebExtAPIRef("browserSettings.ftpProtocolEnabled")}}
+  - : Determines whether the FTP protocol is enabled.
+- {{WebExtAPIRef("browserSettings.homepageOverride")}}
+  - : Read the value of the browser's home page.
+- {{WebExtAPIRef("browserSettings.imageAnimationBehavior")}}
+  - : Determines how the browser treats animated images.
+- {{WebExtAPIRef("browserSettings.newTabPageOverride")}}
+  - : Reads the value of the browser's new tab page.
+- {{WebExtAPIRef("browserSettings.newTabPosition")}}
+  - : Controls the position of newly opened tabs relative to already open tabs.
+- {{WebExtAPIRef("browserSettings.openBookmarksInNewTabs")}}
+  - : Determines whether bookmarks are opened in the current tab or a new tab.
+- {{WebExtAPIRef("browserSettings.openSearchResultsInNewTabs")}}
+  - : Determines whether search results are opened in the current tab or a new tab.
+- {{WebExtAPIRef("browserSettings.openUrlbarResultsInNewTabs")}}
+  - : Determines whether address bar autocomplete suggestions are opened in the current tab or a new tab.
+- {{WebExtAPIRef("browserSettings.overrideDocumentColors")}}
+  - : Controls whether the user-chosen colors override the page's colors.
+- {{WebExtAPIRef("browserSettings.useDocumentFonts")}}
+  - : Controls whether the browser will use the fonts specified by a web page or use only built-in fonts.
+- {{WebExtAPIRef("browserSettings.webNotificationsDisabled")}}
+  - : Prevents websites from showing notifications using the [`Notification`](/en-US/docs/Web/API/Notification) Web API.
+- {{WebExtAPIRef("browserSettings.zoomFullPage")}}
+  - : Controls whether zoom is applied to the entire page or to text only.
+- {{WebExtAPIRef("browserSettings.zoomSiteSpecific")}}
+  - : Controls whether page zoom is applied on a per-site or per-tab basis. If {{WebExtAPIRef("privacy.websites")}}`.resistFingerprinting` is true, this setting has no effect and zoom is applied on a per-tab basis.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}

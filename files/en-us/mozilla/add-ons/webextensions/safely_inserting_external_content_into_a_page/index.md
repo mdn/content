@@ -9,92 +9,100 @@ tags:
   - Security
   - WebExtensions
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>There are times when you might want or need to include content from an external source in your extension. But, there is the risk that the source may have malicious scripts embedded in it—added by either the developer of the source or by a malicious third-party.</p>
+There are times when you might want or need to include content from an external source in your extension. But, there is the risk that the source may have malicious scripts embedded in it—added by either the developer of the source or by a malicious third-party.
 
-<p>Take an RSS reader as an example. You don’t know what RSS feeds your extension will open and have no control over the content of those RSS feeds. So, it’s possible the user could subscribe to a feed where, for example, a feed item’s title includes a script. This could be something as simple as including JavaScript code within <code>&lt;script&gt;&lt;/script&gt;</code> tags. If you were to extract the title, assume it was plain text, and add it to the DOM of a page created by your extension, your user now has an unknown script running in their browser. Therefore, care needs to be taken to avoid evaluating arbitrary text as HTML.</p>
+Take an RSS reader as an example. You don’t know what RSS feeds your extension will open and have no control over the content of those RSS feeds. So, it’s possible the user could subscribe to a feed where, for example, a feed item’s title includes a script. This could be something as simple as including JavaScript code within `<script></script>` tags. If you were to extract the title, assume it was plain text, and add it to the DOM of a page created by your extension, your user now has an unknown script running in their browser. Therefore, care needs to be taken to avoid evaluating arbitrary text as HTML.
 
-<p>You also need to remember that extensions have privileged contexts, for example in background scripts and content scripts. In the worst case, an embedded script could run in one of these contexts, a situation known as privilege escalation. This situation can leave a user’s browser open to remote attack by enabling the website that injected the code to access critical user data, such as passwords, browser history, or browsing behavior.</p>
+You also need to remember that extensions have privileged contexts, for example in background scripts and content scripts. In the worst case, an embedded script could run in one of these contexts, a situation known as privilege escalation. This situation can leave a user’s browser open to remote attack by enabling the website that injected the code to access critical user data, such as passwords, browser history, or browsing behavior.
 
-<p>This article examines how to work safely with remote data and add it to a DOM.</p>
+This article examines how to work safely with remote data and add it to a DOM.
 
-<h2 id="Working_with_arbitrary_strings">Working with arbitrary strings</h2>
+## Working with arbitrary strings
 
-<p>When working with strings, there are a couple of recommended options to safely add them to a page: the standard DOM node creation methods or jQuery.</p>
+When working with strings, there are a couple of recommended options to safely add them to a page: the standard DOM node creation methods or jQuery.
 
-<h3 id="DOM_node_creation_methods">DOM node creation methods</h3>
+### DOM node creation methods
 
-<p>A lightweight approach to inserting strings into a page is to use the native DOM manipulation methods: <a href="/en-US/docs/Web/API/Document/createElement"><code>document.createElement</code></a>, <a href="/en-US/docs/Web/API/Element/setAttribute"><code>Element.setAttribute</code></a>, and <a href="/en-US/docs/Web/API/Node/textContent"><code>Node.textContent</code></a>. The safe approach is to create the nodes separately and assign their content using textContent:</p>
+A lightweight approach to inserting strings into a page is to use the native DOM manipulation methods: [`document.createElement`](/en-US/docs/Web/API/Document/createElement), [`Element.setAttribute`](/en-US/docs/Web/API/Element/setAttribute), and [`Node.textContent`](/en-US/docs/Web/API/Node/textContent). The safe approach is to create the nodes separately and assign their content using textContent:
 
-<pre class="brush: js example-good">var data = JSON.parse(responseText);
+```js example-good
+var data = JSON.parse(responseText);
 var div = document.createElement("div");
 div.className = data.className;
 div.textContent = "Your favorite color is now " + data.color;
-addonElement.appendChild(div);</pre>
+addonElement.appendChild(div);
+```
 
-<p>This approach is safe because the use of <code>.textContent</code> automatically escapes any remote HTML in <code>data.color</code>.</p>
+This approach is safe because the use of `.textContent` automatically escapes any remote HTML in `data.color`.
 
-<p>However, beware, you can use native methods that aren’t safe. Take the following code:</p>
+However, beware, you can use native methods that aren’t safe. Take the following code:
 
-<pre class="brush: js example-bad">var data = JSON.parse(responseText);
-addonElement.innerHTML = "&lt;div class='" + data.className + "'&gt;" +
+```js example-bad
+var data = JSON.parse(responseText);
+addonElement.innerHTML = "<div class='" + data.className + "'>" +
                          "Your favorite color is now " + data.color +
-                         "&lt;/div&gt;";</pre>
+                         "</div>";
+```
 
-<p>Here, the contents of <code>data.className</code> or <code>data.color</code> could contain HTML that can close the tag early, insert arbitrary further HTML content, then open another tag.</p>
+Here, the contents of `data.className` or `data.color` could contain HTML that can close the tag early, insert arbitrary further HTML content, then open another tag.
 
-<h3 id="jQuery">jQuery</h3>
+### jQuery
 
-<p>When using jQuery, functions such as <code>attr()</code> and <code>text()</code> escape content as it’s added to a DOM. So, the “favorite color” example from above, implemented in jQuery, would look like this:</p>
+When using jQuery, functions such as `attr()` and `text()` escape content as it’s added to a DOM. So, the “favorite color” example from above, implemented in jQuery, would look like this:
 
-<pre class="brush: js example-good">var node = $("&lt;/div&gt;");
+```js example-good
+var node = $("</div>");
 node.addClass(data.className);
-node.text("Your favorite color is now " + data.color); </pre>
+node.text("Your favorite color is now " + data.color);
+```
 
-<h2 id="Working_with_HTML_content">Working with HTML content</h2>
+## Working with HTML content
 
-<p>When working with externally sourced content that you know is HTML, sanitizing the HTML is essential before it’s added to a page. Best practice for sanitizing HTML is to use an HTML sanitization library or a template engine with HTML sanitization features. In this section, we look at some suitable tools and how to use them.</p>
+When working with externally sourced content that you know is HTML, sanitizing the HTML is essential before it’s added to a page. Best practice for sanitizing HTML is to use an HTML sanitization library or a template engine with HTML sanitization features. In this section, we look at some suitable tools and how to use them.
 
-<h3 id="HTML_sanitization">HTML sanitization</h3>
+### HTML sanitization
 
-<p>An HTML sanitization library strips anything that could lead to script execution from HTML, so you can safely inject complete sets of HTML nodes from a remote source into your DOM. <a href="https://github.com/cure53/DOMPurify">DOMPurify</a>, which has been reviewed by various security experts, is a suitable library for this task in extensions.</p>
+An HTML sanitization library strips anything that could lead to script execution from HTML, so you can safely inject complete sets of HTML nodes from a remote source into your DOM. [DOMPurify](https://github.com/cure53/DOMPurify), which has been reviewed by various security experts, is a suitable library for this task in extensions.
 
-<p>For production use, <a href="https://github.com/cure53/DOMPurify">DOMPurify</a> comes as a minified version: purify.min.js. You can use this script in the way that best suits your extension. For example, you could add it as a content script:</p>
+For production use, [DOMPurify](https://github.com/cure53/DOMPurify) comes as a minified version: purify.min.js. You can use this script in the way that best suits your extension. For example, you could add it as a content script:
 
-<pre class="brush: json">"content_scripts": [
+```json
+"content_scripts": [
   {
-    "matches" : ["&lt;all_urls&gt;"],
+    "matches" : ["<all_urls>"],
     "js": ["purify.min.js", "myinjectionscript.js"]
   }
-]</pre>
+]
+```
 
-<p>Then, in myinjectionscript.js you can read the external HTML, sanitize it, and add it to a page’s DOM:</p>
+Then, in myinjectionscript.js you can read the external HTML, sanitize it, and add it to a page’s DOM:
 
-<pre class="brush: js">var elem = document.createElement("div");
+```js
+var elem = document.createElement("div");
 var cleanHTML = DOMPurify.sanitize(externalHTML);
-elem.innerHTML = cleanHTML;</pre>
+elem.innerHTML = cleanHTML;
+```
 
-<p>You can use any method to add the sanitized HTML to your DOM, for example jQuery’s <code>.html()</code> function. Remember though that the <code>SAFE_FOR_JQUERY</code> flag needs to be used in this case:</p>
+You can use any method to add the sanitized HTML to your DOM, for example jQuery’s `.html()` function. Remember though that the `SAFE_FOR_JQUERY` flag needs to be used in this case:
 
-<pre class="brush: js">var elem = $("&lt;div/&gt;");
+```js
+var elem = $("<div/>");
 var cleanHTML = DOMPurify.sanitize(externalHTML, { SAFE_FOR_JQUERY: true });
-elem.html(cleanHTML);</pre>
+elem.html(cleanHTML);
+```
 
-<h3 id="Template_engines">Template engines</h3>
+### Template engines
 
-<p>Another common pattern is to create a local HTML template for a page and use remote values to fill in the blanks. While this approach is generally acceptable, care should be taken to avoid use of constructs that would allow the insertion of executable code. This can happen when the templating engine uses constructs that insert raw HTML into the document. If the variable used to insert raw HTML is of a remote source, it is subject to the same security risk mentioned in the introduction.</p>
+Another common pattern is to create a local HTML template for a page and use remote values to fill in the blanks. While this approach is generally acceptable, care should be taken to avoid use of constructs that would allow the insertion of executable code. This can happen when the templating engine uses constructs that insert raw HTML into the document. If the variable used to insert raw HTML is of a remote source, it is subject to the same security risk mentioned in the introduction.
 
-<p>For example, when using <a href="https://mustache.github.io/">mustache templates</a> you must use the double mustache, <code>\{{variable}}</code>, which escapes any HTML. Use of the triple mustache, <code>\{\{{variable}}}</code>, must be avoided as this injects a raw HTML string and could add executable code to your template. <a href="https://handlebarsjs.com/">Handlebars</a> works in a similar way, with variables in double handlebars, <code>\{{variable}}</code>, being escaped. Whereas, variables in triple handlebars are left raw and must be avoided. Also, if you create a Handlebars helper using <code>Handlebars.SafeString</code> use <code>Handlebars.escapeExpression()</code> to escape any dynamic parameters passed to the helper. This is a requirement because the resulting variable from <code>Handlebars.SafeString</code> is considered safe and it isn’t escaped when inserted with double handlebars.</p>
+For example, when using [mustache templates](https://mustache.github.io/) you must use the double mustache, `\{{variable}}`, which escapes any HTML. Use of the triple mustache, `\{\{{variable}}}`, must be avoided as this injects a raw HTML string and could add executable code to your template. [Handlebars](https://handlebarsjs.com/) works in a similar way, with variables in double handlebars, `\{{variable}}`, being escaped. Whereas, variables in triple handlebars are left raw and must be avoided. Also, if you create a Handlebars helper using `Handlebars.SafeString` use `Handlebars.escapeExpression()` to escape any dynamic parameters passed to the helper. This is a requirement because the resulting variable from `Handlebars.SafeString` is considered safe and it isn’t escaped when inserted with double handlebars.
 
-<p>There are similar constructs in other templating systems that need to be approached with the same level of care.</p>
+There are similar constructs in other templating systems that need to be approached with the same level of care.
 
-<h2 id="Additional_reading">Additional reading</h2>
+## Additional reading
 
-<p>For more information on this subject, see the following articles:</p>
+For more information on this subject, see the following articles:
 
-<ul>
- <li>
-  <p><a href="https://owasp.org/www-community/xss-filter-evasion-cheatsheet">XSS (Cross Site Scripting) Prevention Cheat Sheet</a></p>
- </li>
-</ul>
+- [XSS (Cross Site Scripting) Prevention Cheat Sheet](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)

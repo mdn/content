@@ -4,52 +4,56 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 tags:
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p><span class="seoSummary">This user interface option adds one or more items to a browser context menu.</span> This is the context menu available when a user right-clicks on a web page. Tabs can have context menus also, available through the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus">browser.menus API</a>.</p>
+This user interface option adds one or more items to a browser context menu. This is the context menu available when a user right-clicks on a web page. Tabs can have context menus also, available through the [browser.menus API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus).
 
-<p><img alt="Example of content menu items added by a WebExtension, from the context-menu-demo example" src="context_menu_example.png"></p>
+![Example of content menu items added by a WebExtension, from the context-menu-demo example](context_menu_example.png)
 
-<p>You would use this option to expose features that are relevant to specific browser or web page contexts. For example, you could show features to open a graphic editor when the user clicks on an image or offer a feature to save page content when part of a page is selected. You can add plain menu items, checkbox items, radio button groups, and separators to menus. Once a context menu item has been added using {{WebExtAPIRef("contextMenus.create")}} it's displayed in all browser tabs, but you can hide it by removing it with {{WebExtAPIRef("contextMenus.remove")}}.</p>
+You would use this option to expose features that are relevant to specific browser or web page contexts. For example, you could show features to open a graphic editor when the user clicks on an image or offer a feature to save page content when part of a page is selected. You can add plain menu items, checkbox items, radio button groups, and separators to menus. Once a context menu item has been added using {{WebExtAPIRef("contextMenus.create")}} it's displayed in all browser tabs, but you can hide it by removing it with {{WebExtAPIRef("contextMenus.remove")}}.
 
-<p>The full list of supported contexts is available at {{WebExtAPIRef("menus.ContextType")}} and includes contexts outside of a web page, such as bookmark items in the browser UI. For example, the "<a href="https://github.com/Rob--W/bookmark-container-tab">Open bookmark in Container Tab</a>" extension adds a menu item that allows the user to open a bookmark URL in a new container tab:</p>
+The full list of supported contexts is available at {{WebExtAPIRef("menus.ContextType")}} and includes contexts outside of a web page, such as bookmark items in the browser UI. For example, the "[Open bookmark in Container Tab](https://github.com/Rob--W/bookmark-container-tab)" extension adds a menu item that allows the user to open a bookmark URL in a new container tab:
 
-<p><img alt="" src="extension_context_menu.png"></p>
+![](extension_context_menu.png)
 
-<h2 id="Specifying_context_menu_items">Specifying context menu items</h2>
+## Specifying context menu items
 
-<p>You manage context menu items programmatically, using the {{WebExtAPIRef("contextMenus")}} API. However, you need to request the <code>contextMenus</code> permission in your manifest.json to be able to take advantage of the API.</p>
+You manage context menu items programmatically, using the {{WebExtAPIRef("contextMenus")}} API. However, you need to request the `contextMenus` permission in your manifest.json to be able to take advantage of the API.
 
-<pre class="brush: json">"permissions": ["contextMenus"]</pre>
+```json
+"permissions": ["contextMenus"]
+```
 
-<p>You can then add (and update or delete) the context menu items in your extension's background script. To create a menu item you specify an id, its title, and the context menus it should appear on:</p>
+You can then add (and update or delete) the context menu items in your extension's background script. To create a menu item you specify an id, its title, and the context menus it should appear on:
 
-<pre class="brush: js">browser.contextMenus.create({
+```js
+browser.contextMenus.create({
   id: "log-selection",
   title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
   contexts: ["selection"]
-}, onCreated);</pre>
+}, onCreated);
+```
 
-<p>Your extension then listens for clicks on the menu items. The passed information about the item clicked, the context where the click happened, and details of the tab where the click took place can then be used to invoke the appropriate extension functionality.</p>
+Your extension then listens for clicks on the menu items. The passed information about the item clicked, the context where the click happened, and details of the tab where the click took place can then be used to invoke the appropriate extension functionality.
 
-<pre class="brush: js">browser.contextMenus.onClicked.addListener(function(info, tab) {
+```js
+browser.contextMenus.onClicked.addListener(function(info, tab) {
   switch (info.menuItemId) {
     case "log-selection":
       console.log(info.selectionText);
       break;
     ...
   }
-})</pre>
+})
+```
 
-<h2 id="Icons">Icons</h2>
+## Icons
 
-<p>For details on how to create icons to use with your context menu, see <a href="https://design.firefox.com/photon/visuals/iconography.html">Iconography</a> in the <a href="https://design.firefox.com/photon/index.html">Photon Design System</a> documentation.</p>
+For details on how to create icons to use with your context menu, see [Iconography](https://design.firefox.com/photon/visuals/iconography.html) in the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The <a class="external external-icon" href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repository on GitHub contains two examples of extensions that implement context menu items:</p>
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub contains two examples of extensions that implement context menu items:
 
-<ul>
- <li><a href="https://github.com/mdn/webextensions-examples/tree/master/menu-demo">menu-demo</a> adds several items to the browser's context menu.</li>
- <li><a href="https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types">context-menu-copy-link-with-types</a> adds a context menu item to links that copies the link URL to the clipboard, as plain text and rich HTML.</li>
-</ul>
+- [menu-demo](https://github.com/mdn/webextensions-examples/tree/master/menu-demo) adds several items to the browser's context menu.
+- [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types) adds a context menu item to links that copies the link URL to the clipboard, as plain text and rich HTML.

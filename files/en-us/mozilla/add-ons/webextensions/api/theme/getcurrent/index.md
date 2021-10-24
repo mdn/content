@@ -12,39 +12,39 @@ tags:
   - getCurrent
 browser-compat: webextensions.api.theme.getCurrent
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Gets the currently used theme as a {{WebExtAPIRef("theme.Theme", "Theme")}} object. The arguments available in the color object are listed in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#colors">properties of the color</a>.</p>
+Gets the currently used theme as a {{WebExtAPIRef("theme.Theme", "Theme")}} object. The arguments available in the color object are listed in the [properties of the color](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#colors).
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var <em>getting</em> = browser.theme.getCurrent(
-  <em>windowId</em>    // integer
+```js
+var getting = browser.theme.getCurrent(
+  windowId    // integer
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>windowId</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. The ID of a window. If this is provided, the theme applied on that window will be provided. If it is omitted the theme applied on the last focused window will be provided.</dd>
-</dl>
+- `windowId` {{optional_inline}}
+  - : `integer`. The ID of a window. If this is provided, the theme applied on that window will be provided. If it is omitted the theme applied on the last focused window will be provided.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. The promise will be fulfilled with a {{WebExtAPIRef("theme.Theme")}} object representing the theme applied to the given window. If no extension-supplied theme has been applied to the given window, it will be fulfilled with an empty object.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). The promise will be fulfilled with a {{WebExtAPIRef("theme.Theme")}} object representing the theme applied to the given window. If no extension-supplied theme has been applied to the given window, it will be fulfilled with an empty object.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Gets the properties <code>frame</code> and <code>toolbar</code> colors of the current theme</p>
+Gets the properties `frame` and `toolbar` colors of the current theme
 
-<pre class="brush: js">function getStyle(themeInfo)
+```js
+function getStyle(themeInfo)
 {
   if (themeInfo.colors)
   {
@@ -59,6 +59,7 @@ async function getCurrentThemeInfo()
   getStyle(themeInfo);
 }
 
-getCurrentThemeInfo();</pre>
+getCurrentThemeInfo();
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

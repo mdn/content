@@ -12,102 +12,104 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction.setIcon
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Sets the icon for the sidebar.</p>
+Sets the icon for the sidebar.
 
-<p>You can specify a single icon as either the path to an image file or a {{WebExtAPIRef('sidebarAction.ImageDataType')}} object.</p>
+You can specify a single icon as either the path to an image file or a {{WebExtAPIRef('sidebarAction.ImageDataType')}} object.
 
-<p>You can specify multiple icons in different sizes by supplying a dictionary containing multiple paths or <code>ImageData</code> objects. This means the icon doesn't have to be scaled for a device with a different pixel density.</p>
+You can specify multiple icons in different sizes by supplying a dictionary containing multiple paths or `ImageData` objects. This means the icon doesn't have to be scaled for a device with a different pixel density.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Types_of_icon">Types of icon</h2>
+## Types of icon
 
-<p>Your extension should specify an icon for the sidebar in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a> manifest key. This is called the <em>"manifest icon"</em>.</p>
+Your extension should specify an icon for the sidebar in the [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key. This is called the _"manifest icon"_.
 
-<p>If you don't specify an icon in the sidebar_action key, you get the browser's default icon. This is called the <em>"default icon"</em>.</p>
+If you don't specify an icon in the sidebar_action key, you get the browser's default icon. This is called the _"default icon"_.
 
-<p>If you set a new icon using <code>setIcon()</code>, and include the <code>tabId</code> option, then the icon is set only for the given tab. This icon is called the <em>"tab-specific icon"</em>.</p>
+If you set a new icon using `setIcon()`, and include the `tabId` option, then the icon is set only for the given tab. This icon is called the _"tab-specific icon"_.
 
-<p>If you set a new icon using <code>setIcon()</code>, and include the <code>windowId</code> option, then the icon is set only for the given window. This icon is called the <em>"window-specific icon"</em>, and will appear in all tabs of that window that do not have a tab-specific icon set.</p>
+If you set a new icon using `setIcon()`, and include the `windowId` option, then the icon is set only for the given window. This icon is called the _"window-specific icon"_, and will appear in all tabs of that window that do not have a tab-specific icon set.
 
-<p>If you set a new icon using <code>setIcon()</code>, and omit both the <code>tabId</code> and <code>windowId</code> options, then this sets the <em>"global icon"</em>. The global icon will then appear in all tabs that do not have a tab-specific icon set and whose window does not have a window-specific icon.</p>
+If you set a new icon using `setIcon()`, and omit both the `tabId` and `windowId` options, then this sets the _"global icon"_. The global icon will then appear in all tabs that do not have a tab-specific icon set and whose window does not have a window-specific icon.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var settingIcon = browser.sidebarAction.setIcon(
+```js
+var settingIcon = browser.sidebarAction.setIcon(
   details         // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p><code>object</code>. An object with the following properties:</p>
-   <dl>
-    <dt><code>imageData</code>{{optional_inline}}</dt>
-    <dd>
-    <p><code>{{WebExtAPIRef('sidebarAction.ImageDataType')}}</code> or <code>object</code>. This is either a single <code>ImageData</code> object or a dictionary object.</p>
+- `details`
 
-    <p>Use a dictionary object to specify multiple <code>ImageData</code> objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>imageData</code> is a dictionary, the value of each property is an <code>ImageData</code> object, and its name is its size, like this:</p>
+  - : `object`. An object with the following properties:
 
-    <pre class="brush: json">{
-    16: image16,
-    32: image32
-  }</pre>
+    - `imageData`{{optional_inline}}
 
-    <p>The browser will choose the image to use depending on the screen's pixel density. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes">Choosing icon sizes</a> for more information on this.</p>
-    </dd>
-    <dt><code>path</code>{{optional_inline}}</dt>
-    <dd>
-    <p><code>string</code> or <code>object</code>. This is either a relative path to an icon file or it is a dictionary object. </p>
+      - : `{{WebExtAPIRef('sidebarAction.ImageDataType')}}` or `object`. This is either a single `ImageData` object or a dictionary object.
 
-    <p>Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If <code>path</code> is a dictionary, the value of each property is a relative path, and its name is its size, like this:</p>
+        Use a dictionary object to specify multiple `ImageData` objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `imageData` is a dictionary, the value of each property is an `ImageData` object, and its name is its size, like this:
 
-    <pre class="brush: json">{
-    16: &quot;path/to/image16.jpg&quot;,
-    32: &quot;path/to/image32.jpg&quot;
-  }</pre>
+        ```json
+        {
+            16: image16,
+            32: image32
+          }
+        ```
 
-    <p>The browser will choose the image to use depending on the screen's pixel density. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes">Choosing icon sizes</a> for more information on this.</p>
+        The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
 
-    <p>If <code>path</code> is an empty string, the browser will use the default icon.</p>
+    - `path`{{optional_inline}}
 
-    <p>If <code>path</code> is not empty but does not point to an icon file, then the icon is hidden.</p>
+      - : `string` or `object`. This is either a relative path to an icon file or it is a dictionary object.
 
-    <p>If <code>path</code> is <code>null</code>, and <code>tabId</code> was specified, and the specified tab had a tab-specific icon set: then the tab-specific icon is reset to the global icon (if a global icon is set) or the manifest icon.</p>
+        Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `path` is a dictionary, the value of each property is a relative path, and its name is its size, like this:
 
-    <p>if <code>path</code> is <code>null</code>, and <code>tabId</code> was omitted, and there was a global icon set, it will be reset to the manifest icon.</p>
-    </dd>
-    <dt><code>tabId</code>{{optional_inline}}</dt>
-    <dd><code>integer</code>. Sets the icon only for the given tab.</dd>
-    <dt><code>windowId</code> {{optional_inline}}</dt>
-    <dd><code>integer</code>. Sets the icon only for the given window.</dd>
-   </dl>
- </dd>
-</dl>
+        ```json
+        {
+            16: "path/to/image16.jpg",
+            32: "path/to/image32.jpg"
+          }
+        ```
 
-<ul>
- <li>If <code>windowId</code> and <code>tabId</code> are both specified, the function fails and the icon is not set.</li>
- <li>If <code>windowId</code> and <code>tabId</code> are both omitted, the icon is set globally.</li>
-</ul>
+        The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
 
-<h3 id="Return_value">Return value</h3>
+        If `path` is an empty string, the browser will use the default icon.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments once the icon has been set.</p>
+        If `path` is not empty but does not point to an icon file, then the icon is hidden.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+        If `path` is `null`, and `tabId` was specified, and the specified tab had a tab-specific icon set: then the tab-specific icon is reset to the global icon (if a global icon is set) or the manifest icon.
 
-<p>{{Compat}}</p>
+        if `path` is `null`, and `tabId` was omitted, and there was a global icon set, it will be reset to the manifest icon.
 
-<h2 id="Examples">Examples</h2>
+    - `tabId`{{optional_inline}}
+      - : `integer`. Sets the icon only for the given tab.
+    - `windowId` {{optional_inline}}
+      - : `integer`. Sets the icon only for the given window.
 
-<p>The code below toggles the sidebar icon for the active tab when the user clicks a browser action:</p>
+<!---->
 
-<pre class="brush: js">var on = false;
+- If `windowId` and `tabId` are both specified, the function fails and the icon is not set.
+- If `windowId` and `tabId` are both omitted, the icon is set globally.
+
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments once the icon has been set.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+The code below toggles the sidebar icon for the active tab when the user clicks a browser action:
+
+```js
+var on = false;
 
 function toggle(tab) {
   if (on) {
@@ -125,10 +127,9 @@ function toggle(tab) {
   }
 }
 
-browser.browserAction.onClicked.addListener(toggle);</pre>
+browser.browserAction.onClicked.addListener(toggle);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Opera's <a class="external external-icon" href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a> API.</p>
-</div>
+> **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.

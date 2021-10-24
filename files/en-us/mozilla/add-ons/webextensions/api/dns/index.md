@@ -9,25 +9,21 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.dns
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Enables an extension to resolve domain names.</p>
+Enables an extension to resolve domain names.
 
-<p>To use this API, an extension must request the "dns" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> in its <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> file.</p>
+To use this API, an extension must request the "dns" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
-<div class="notecard note">
-<p><strong>Note:</strong> DNS will fail with NS_ERROR_UNKNOWN_PROXY_HOST if proxying DNS over socks is enabled.</p>
-</div>
+> **Note:** DNS will fail with NS_ERROR_UNKNOWN_PROXY_HOST if proxying DNS over socks is enabled.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("dns.resolve()")}}</dt>
- <dd>Resolves the given hostname to a DNS record.</dd>
-</dl>
+- {{WebExtAPIRef("dns.resolve()")}}
+  - : Resolves the given hostname to a DNS record.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}

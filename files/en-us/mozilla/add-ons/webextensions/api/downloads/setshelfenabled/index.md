@@ -13,44 +13,38 @@ tags:
   - setShelfEnabled
 browser-compat: webextensions.api.downloads.setShelfEnabled
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p>The <code><strong>setShelfEnabled</strong></code><strong><code>()</code></strong> function of the {{WebExtAPIRef("downloads")}} API enables or disables the gray shelf at the bottom of every window associated with the current browser profile. The shelf will be disabled as long as at least one extension has disabled it.</p>
+The **`setShelfEnabled`\*\***`()`\*\* function of the {{WebExtAPIRef("downloads")}} API enables or disables the gray shelf at the bottom of every window associated with the current browser profile. The shelf will be disabled as long as at least one extension has disabled it.
 
-<p>If you try to enable the shelf when at least one other extension has already disabled it, the call will fail and {{WebExtAPIRef("runtime.lastError")}} will be set with an appropriate error message.</p>
+If you try to enable the shelf when at least one other extension has already disabled it, the call will fail and {{WebExtAPIRef("runtime.lastError")}} will be set with an appropriate error message.
 
-<div class="note">
-<p><strong>Note:</strong> To use this function in your extension you must ask for the <code>"downloads.shelf"</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">manifest permission</a>, as well as the <code>"downloads"</code> permission.</p>
-</div>
+> **Note:** To use this function in your extension you must ask for the `"downloads.shelf"` [manifest permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), as well as the `"downloads"` permission.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">chrome.downloads.setShelfEnabled(enabled);
-</pre>
+```js
+chrome.downloads.setShelfEnabled(enabled);
+```
 
-<p>This API is also available as <code>browser.downloads.setShelfEnabled()</code>.</p>
+This API is also available as `browser.downloads.setShelfEnabled()`.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>enabled</code></dt>
- <dd>A <code>boolean</code> representing the state that you want to set <code>setShelfEnabled()</code> to — <code>true</code> for enable, and <code>false</code> for disable.</dd>
-</dl>
+- `enabled`
+  - : A `boolean` representing the state that you want to set `setShelfEnabled()` to — `true` for enable, and `false` for disable.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-setShelfEnabled) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#method-setShelfEnabled"><code>chrome.downloads</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -77,5 +71,4 @@ browser-compat: webextensions.api.downloads.setShelfEnabled
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,26 +13,25 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.ondata
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>An event handler that will be called repeatedly when response data is available. The handler is passed an <code>event</code> object which contains a <code>data</code> property, which contains a chunk of the response data as an {{jsxref("ArrayBuffer")}}.</p>
+An event handler that will be called repeatedly when response data is available. The handler is passed an `event` object which contains a `data` property, which contains a chunk of the response data as an {{jsxref("ArrayBuffer")}}.
 
-<p>To decode the data use either {{domxref("TextDecoder")}} or {{domxref("Blob")}}.</p>
+To decode the data use either {{domxref("TextDecoder")}} or {{domxref("Blob")}}.
 
-<h2 id="WebExtension_Examples">WebExtension Examples</h2>
+## WebExtension Examples
 
-<p>This example adds an <code>ondata</code> listener which replaces "WebExtension Example" in the response with "WebExtension WebExtension Example" using the {{jsxref("String.prototype.replace()", "replace()")}} method.</p>
+This example adds an `ondata` listener which replaces "WebExtension Example" in the response with "WebExtension WebExtension Example" using the {{jsxref("String.prototype.replace()", "replace()")}} method.
 
-<div class="notecard note">
-<p><strong>Note:</strong> This example only works for occurrences of "WebExtension Example" that are entirely contained within a data chunk, and not ones that straddle two chunks (which might happen ~0.1% of the time for large documents). Additionally it only deals with UTF-8-coded documents. A real implementation of this would have to be more complex.</p>
-</div>
+> **Note:** This example only works for occurrences of "WebExtension Example" that are entirely contained within a data chunk, and not ones that straddle two chunks (which might happen \~0.1% of the time for large documents). Additionally it only deals with UTF-8-coded documents. A real implementation of this would have to be more complex.
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
 
-  filter.ondata = event =&gt; {
+  filter.ondata = event => {
     let str = decoder.decode(event.data, {stream: true});
     // Just change any instance of WebExtension Example in the HTTP response
     // to WebExtension WebExtension Example.
@@ -44,7 +43,7 @@ browser-compat: webextensions.api.webRequest.StreamFilter.ondata
     // the chunk boundary!
   }
 
-  filter.onstop = event =&gt; {
+  filter.onstop = event => {
     filter.close();
   }
 
@@ -55,34 +54,36 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["https://example.com/*"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>Another example for handling large documents:</p>
+Another example for handling large documents:
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
 
   let data = [];
-  filter.ondata = event =&gt; {
+  filter.ondata = event => {
     data.push(event.data);
   };
 
-  filter.onstop = event =&gt; {
+  filter.onstop = event => {
     let str = "";
     if (data.length == 1) {
       str = decoder.decode(data[0]);
     }
     else {
-      for (let i = 0; i &lt; data.length; i++) {
+      for (let i = 0; i < data.length; i++) {
         let stream = (i == data.length - 1) ? false : true;
         str += decoder.decode(data[i], {stream});
       }
     }
     // Just change any instance of WebExtension Example in the HTTP response
     // to WebExtension WebExtension Example.
-    str = str.replace(/WebExtension Example/g, 'WebExtension $&amp;');
+    str = str.replace(/WebExtension Example/g, 'WebExtension $&');
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -92,21 +93,23 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["https://example.com/"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>Here's another version:</p>
+Here's another version:
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
 
   let data = [];
-  filter.ondata = event =&gt; {
+  filter.ondata = event => {
     data.push(event.data);
   };
 
-  filter.onstop = event =&gt; {
+  filter.onstop = event => {
     let str = "";
     for (let buffer of data) {
       str += decoder.decode(buffer, {stream: true});
@@ -115,7 +118,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
     // Just change any instance of WebExtension Example in the HTTP response
     // to WebExtension WebExtension Example.
-    str = str.replace(/WebExtension Example/g, 'WebExtension $&amp;');
+    str = str.replace(/WebExtension Example/g, 'WebExtension $&');
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -125,27 +128,29 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["https://example.com/"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>The above example can also be written like so:</p>
+The above example can also be written like so:
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
 
   let data = [];
-  filter.ondata = event =&gt; {
+  filter.ondata = event => {
     data.push(decoder.decode(event.data, {stream: true}));
   };
 
-  filter.onstop = event =&gt; {
+  filter.onstop = event => {
     data.push(decoder.decode());
 
     let str = data.join("");
     // Just change any instance of WebExtension Example in the HTTP response
     // to WebExtension WebExtension Example.
-    str = str.replace(/WebExtension Example/g, 'WebExtension $&amp;');
+    str = str.replace(/WebExtension Example/g, 'WebExtension $&');
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -155,26 +160,28 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["https://example.com/"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>This example uses a {{domxref("Blob")}}:</p>
+This example uses a {{domxref("Blob")}}:
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let encoder = new TextEncoder();
 
   let data = [];
-  filter.ondata = event =&gt; {
+  filter.ondata = event => {
     data.push(event.data);
   };
 
-  filter.onstop = async event =&gt; {
+  filter.onstop = async event => {
     let blob = new Blob(data, {type: 'text/html'});
     let str = await blob.text();
 
     // Just change any instance of WebExtension Example in the HTTP response
     // to WebExtension WebExtension Example.
-    str = str.replace(/WebExtension Example/g, 'WebExtension $&amp;');
+    str = str.replace(/WebExtension Example/g, 'WebExtension $&');
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -184,27 +191,29 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["https://example.com/"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>This example makes use of the {{domxref("DOMParser")}} interface:</p>
+This example makes use of the {{domxref("DOMParser")}} interface:
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let encoder = new TextEncoder();
   let parser = new DOMParser();
 
   let data = [];
-  filter.ondata = event =&gt; {
+  filter.ondata = event => {
     data.push(event.data);
   };
 
-  filter.onstop = async event =&gt; {
+  filter.onstop = async event => {
     let blob = new Blob(data, {type: 'text/html'});
     let str = await blob.text();
     let doc = parser.parseFromString(str, blob.type);
     let nodes = doc.querySelectorAll("title, h1");
     for (let node of nodes) {
-      node.innerText = node.innerText.replace('WebExtension Example', 'WebExtension $&amp;');
+      node.innerText = node.innerText.replace('WebExtension Example', 'WebExtension $&');
     }
     filter.write(encoder.encode(doc.documentElement.outerHTML));
     filter.close();
@@ -215,21 +224,23 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["https://example.com/"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>This example combines all buffers into a single buffer:</p>
+This example combines all buffers into a single buffer:
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
 
   let data = [];
-  filter.ondata = event =&gt; {
+  filter.ondata = event => {
     data.push(new Uint8Array(event.data));
   };
 
-  filter.onstop = event =&gt; {
+  filter.onstop = event => {
     let combinedLength = 0;
     for (let buffer of data) {
       combinedLength += buffer.length;
@@ -243,7 +254,7 @@ browser.webRequest.onBeforeRequest.addListener(
     let str = decoder.decode(combinedArray);
     // Just change any instance of WebExtension Example in the HTTP response
     // to WebExtension WebExtension Example.
-    str = str.replace(/WebExtension Example/g, 'WebExtension $&amp;');
+    str = str.replace(/WebExtension Example/g, 'WebExtension $&');
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -253,25 +264,27 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["https://example.com/"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>The above example can also be written like so:</p>
+The above example can also be written like so:
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let decoder = new TextDecoder('utf-8');
   let encoder = new TextEncoder();
 
   let data = [];
-  filter.ondata = event =&gt; {
+  filter.ondata = event => {
     data.push(event.data);
   };
 
-  filter.onstop = async event =&gt; {
+  filter.onstop = async event => {
     let blob = new Blob(data, {type: 'text/html'});
     let buffer = await blob.arrayBuffer();
     let str = decoder.decode(buffer);
-    str = str.replace(/WebExtension Example/g, 'WebExtension $&amp;');
+    str = str.replace(/WebExtension Example/g, 'WebExtension $&');
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -281,29 +294,31 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["https://example.com/"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>This example demonstrates, how one can detect, if it's the final chunk in the response:</p>
+This example demonstrates, how one can detect, if it's the final chunk in the response:
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let encoder = new TextEncoder();
   let decoder = new TextDecoder("utf-8");
 
   let str = "";
-  filter.ondata = event =&gt; {
+  filter.ondata = event => {
     let stream = true;
     let data = new Uint8Array(event.data.slice(-8, -1));
-    if (String.fromCharCode(...data) == "&lt;/html&gt;") {
+    if (String.fromCharCode(...data) == "</html>") {
       stream = false; // end-of-stream
     }
     str += decoder.decode(event.data, {stream});
   };
 
-  filter.onstop = event =&gt; {
+  filter.onstop = event => {
     // Just change any instance of WebExtension Example in the HTTP response
     // to WebExtension WebExtension Example.
-    str = str.replace(/WebExtension Example/g, 'WebExtension $&amp;');
+    str = str.replace(/WebExtension Example/g, 'WebExtension $&');
     filter.write(encoder.encode(str));
     filter.close();
   };
@@ -313,10 +328,11 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["https://example.com/"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

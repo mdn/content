@@ -12,62 +12,55 @@ tags:
   - browsingData
 browser-compat: webextensions.api.browsingData.DataTypeSet
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <strong><code>browsingData.DataTypeSet</code></strong> type describes a set of data types.</p>
+The **`browsingData.DataTypeSet`** type describes a set of data types.
 
-<p>It contains a number of boolean properties. The name of each property is the name of a particular type of browsing data: "downloads", "history" and so on. All properties are optional.</p>
+It contains a number of boolean properties. The name of each property is the name of a particular type of browsing data: "downloads", "history" and so on. All properties are optional.
 
-<p>This type is used:</p>
+This type is used:
 
-<ul>
- <li>in {{WebExtAPIRef("browsingData.remove()")}} to describe which data types to remove</li>
- <li>in {{WebExtAPIRef("browsingData.settings()")}} to describe which data types are currently selected in the browser's "Clear History" feature.</li>
-</ul>
+- in {{WebExtAPIRef("browsingData.remove()")}} to describe which data types to remove
+- in {{WebExtAPIRef("browsingData.settings()")}} to describe which data types are currently selected in the browser's "Clear History" feature.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>cache</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. The browser's cache.</dd>
- <dt><code>cookies</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Cookies acquired while browsing.</dd>
- <dt><code>downloads</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. The user's download history.</dd>
- <dt><code>fileSystems</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Website's file systems.</dd>
- <dt><code>formData</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Saved form data, for autocomplete.</dd>
- <dt><code>history</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. The user's browsing history.</dd>
- <dt><code>indexedDB</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. IndexedDB data.</dd>
- <dt><code>localStorage</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Local storage data.</dd>
- <dt><code>passwords</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Saved passwords, for autocomplete.</dd>
- <dt><code>pluginData</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Stored data associated with plugins.</dd>
- <dt><code>serverBoundCertificates</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Stored server-bound certificates.</dd>
- <dt><code>serviceWorkers</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. Data cached by service workers.</dd>
-</dl>
+- `cache` {{optional_inline}}
+  - : `boolean`. The browser's cache.
+- `cookies` {{optional_inline}}
+  - : `boolean`. Cookies acquired while browsing.
+- `downloads` {{optional_inline}}
+  - : `boolean`. The user's download history.
+- `fileSystems` {{optional_inline}}
+  - : `boolean`. Website's file systems.
+- `formData` {{optional_inline}}
+  - : `boolean`. Saved form data, for autocomplete.
+- `history` {{optional_inline}}
+  - : `boolean`. The user's browsing history.
+- `indexedDB` {{optional_inline}}
+  - : `boolean`. IndexedDB data.
+- `localStorage` {{optional_inline}}
+  - : `boolean`. Local storage data.
+- `passwords` {{optional_inline}}
+  - : `boolean`. Saved passwords, for autocomplete.
+- `pluginData` {{optional_inline}}
+  - : `boolean`. Stored data associated with plugins.
+- `serverBoundCertificates` {{optional_inline}}
+  - : `boolean`. Stored server-bound certificates.
+- `serviceWorkers` {{optional_inline}}
+  - : `boolean`. Data cached by service workers.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -94,5 +87,4 @@ browser-compat: webextensions.api.browsingData.DataTypeSet
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

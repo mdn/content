@@ -12,49 +12,49 @@ tags:
   - browsingData
 browser-compat: webextensions.api.browsingData.settings
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Browsers have a built-in "Clear History" feature, which enables the user to clear various types of browsing data. This has a UI that enables the user to select what type of data to remove (e.g. history, downloads, ...) and how far back in time to remove data.</p>
+Browsers have a built-in "Clear History" feature, which enables the user to clear various types of browsing data. This has a UI that enables the user to select what type of data to remove (e.g. history, downloads, ...) and how far back in time to remove data.
 
-<p>This function returns the current value of these settings.</p>
+This function returns the current value of these settings.
 
-<p>Note that not all data types will always be removable through the UI, and some UI options may map to more than one data type.</p>
+Note that not all data types will always be removable through the UI, and some UI options may map to more than one data type.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var getSettings = browser.browsingData.settings()
-</pre>
+```js
+var getSettings = browser.browsingData.settings()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an object containing the settings information. This object has three properties:</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object containing the settings information. This object has three properties:
 
-<dl>
- <dt><code>options</code></dt>
- <dd><code>{{WebExtAPIRef("browsingData.RemovalOptions")}}</code>. A <code>RemovalOptions</code> object describing the removal options currently selected.</dd>
- <dt><code>dataToRemove</code></dt>
- <dd><code>{{WebExtAPIRef("browsingData.DataTypeSet")}}</code>. This will contain a property for every data type that can be toggled in the browser's UI. Each property will have a value of <code>true</code> if that type is selected for removal and <code>false</code> otherwise.</dd>
- <dt><code>dataRemovalPermitted</code></dt>
- <dd><code>{{WebExtAPIRef("browsingData.DataTypeSet")}}</code>. This will contain a property for every data type that can be toggled in the browser's UI. Each will have a value of <code>true</code> if the administrator of the device has allowed the user to remove that type, and <code>false</code> otherwise.</dd>
-</dl>
+- `options`
+  - : `{{WebExtAPIRef("browsingData.RemovalOptions")}}`. A `RemovalOptions` object describing the removal options currently selected.
+- `dataToRemove`
+  - : `{{WebExtAPIRef("browsingData.DataTypeSet")}}`. This will contain a property for every data type that can be toggled in the browser's UI. Each property will have a value of `true` if that type is selected for removal and `false` otherwise.
+- `dataRemovalPermitted`
+  - : `{{WebExtAPIRef("browsingData.DataTypeSet")}}`. This will contain a property for every data type that can be toggled in the browser's UI. Each will have a value of `true` if the administrator of the device has allowed the user to remove that type, and `false` otherwise.
 
-<p>If any error occurs, the promise will be rejected with an error message.</p>
+If any error occurs, the promise will be rejected with an error message.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Log current settings:</p>
+Log current settings:
 
-<pre class="brush: js">function onGotSettings(settings) {
+```js
+function onGotSettings(settings) {
   console.log(settings.options);
   console.log(settings.dataToRemove);
   console.log(settings.dataRemovalPermitted);
@@ -64,18 +64,16 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.settings().then(onGotSettings, onError);</pre>
+browser.browsingData.settings().then(onGotSettings, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/extensions/browsingData) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browsingData"><code>chrome.browsingData</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -102,5 +100,4 @@ browser.browsingData.settings().then(onGotSettings, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

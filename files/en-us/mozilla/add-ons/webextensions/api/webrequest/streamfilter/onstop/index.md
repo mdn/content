@@ -11,28 +11,29 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.StreamFilter.onstop
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p><span class="summary">An event handler that will be called when the stream has no more data to deliver.</span> In the event handler you can still call filter functions such as {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}, or {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}.</p>
+An event handler that will be called when the stream has no more data to deliver. In the event handler you can still call filter functions such as {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}, or {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example will append "extra stuff" to the response:</p>
+This example will append "extra stuff" to the response:
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let encoder = new TextEncoder();
 
-  filter.ondata = event =&gt; {
+  filter.ondata = event => {
     // pass through all the response data
     filter.write(event.data);
   }
 
-  filter.onstop = event =&gt; {
+  filter.onstop = event => {
     filter.write(encoder.encode("extra stuff"));
     filter.disconnect();
   }
@@ -42,20 +43,22 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["https://example.com/*"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>Here's another version of the example above:</p>
+Here's another version of the example above:
 
-<pre class="brush: js">function listener(details) {
+```js
+function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let encoder = new TextEncoder();
 
   let data = [];
-  filter.ondata = event =&gt; {
+  filter.ondata = event => {
     data.push(event.data);
   };
 
-  filter.onstop = event =&gt; {
+  filter.onstop = event => {
     for (let buffer of data) {
       filter.write(buffer);
     }
@@ -68,6 +71,7 @@ browser.webRequest.onBeforeRequest.addListener(
   listener,
   {urls: ["https://example.com/"], types: ["main_frame"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

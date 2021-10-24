@@ -13,52 +13,46 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.duplicate
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Duplicates a tab, given its ID.</p>
+Duplicates a tab, given its ID.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var duplicating = browser.tabs.duplicate(
+```js
+var duplicating = browser.tabs.duplicate(
   tabId,              // integer
   duplicateProperties // optional object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. The ID of the tab to be duplicated.</dd>
- <dt><code>duplicateProperties</code> Optional</dt>
- <dd>
-   <p><code>object</code>. An object describing how the tab is duplicated. It contains the following properties:</p>
-   <dl>
-    <dt><code><var>index</var></code> Optional</dt>
-    <dd><code>integer</code>. The position of the new tab in the window. The value is constrained to the range zero to the number of tabs in the window.</dd>
-    <dt><code><var>active</var></code> Optional</dt>
-    <dd>
-    <p><code>boolean</code>. Whether the tab becomes the active tab in the window. Does not affect whether the window is focused. Defaults to <code>true</code>.</p>
-    </dd>
-   </dl>
- </dd>
-</dl>
+- `tabId`
+  - : `integer`. The ID of the tab to be duplicated.
+- `duplicateProperties` Optional
 
-<h3 id="Return_value">Return value</h3>
+  - : `object`. An object describing how the tab is duplicated. It contains the following properties:
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the duplicated tab. The <code>Tab</code> object only contains <code>url</code>, <code>title</code> and <code>favIconUrl</code> if the extension has the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"><code>"tabs"</code> permission</a> or matching <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>. If any error occurs the promise will be rejected with an error message.</p>
+    - `index` Optional
+      - : `integer`. The position of the new tab in the window. The value is constrained to the range zero to the number of tabs in the window.
+    - `active` Optional
+      - : `boolean`. Whether the tab becomes the active tab in the window. Does not affect whether the window is focused. Defaults to `true`.
 
-<div class="notecard note">
-<p><strong>Note:</strong> Beginning with Firefox 68, the promise returned by browser.tabs.duplicate() resolves as soon as the tab has been duplicated. Previously, the promise only resolved once the tab had fully been loaded.</p>
-</div>
+### Return value
 
-<h2 id="Examples">Examples</h2>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the duplicated tab. The `Tab` object only contains `url`, `title` and `favIconUrl` if the extension has the [`"tabs"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or matching [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). If any error occurs the promise will be rejected with an error message.
 
-<p>Duplicate the first tab, and then log the ID of the newly created tab:</p>
+> **Note:** Beginning with Firefox 68, the promise returned by browser.tabs.duplicate() resolves as soon as the tab has been duplicated. Previously, the promise only resolved once the tab had fully been loaded.
 
-<pre class="brush: js">function onDuplicated(tabInfo) {
+## Examples
+
+Duplicate the first tab, and then log the ID of the newly created tab:
+
+```js
+function onDuplicated(tabInfo) {
   console.log(tabInfo.id);
 }
 
@@ -69,7 +63,7 @@ function onError(error) {
 // Duplicate the first tab in the array
 function duplicateFirstTab(tabs) {
   console.log(tabs);
-  if (tabs.length &gt; 0) {
+  if (tabs.length > 0) {
     var duplicating = browser.tabs.duplicate(tabs[0].id);
     duplicating.then(onDuplicated, onError);
   }
@@ -77,22 +71,20 @@ function duplicateFirstTab(tabs) {
 
 // Query for all open tabs
 var querying = browser.tabs.query({});
-querying.then(duplicateFirstTab, onError);</pre>
+querying.then(duplicateFirstTab, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-duplicate) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-duplicate"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -119,5 +111,4 @@ querying.then(duplicateFirstTab, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

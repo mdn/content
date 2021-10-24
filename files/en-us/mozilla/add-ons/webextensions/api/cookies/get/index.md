@@ -13,60 +13,58 @@ tags:
   - get
 browser-compat: webextensions.api.cookies.get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <strong><code>get()</code></strong> method of the {{WebExtAPIRef("cookies")}} API retrieves information about a single cookie, given its name and URL.</p>
+The **`get()`** method of the {{WebExtAPIRef("cookies")}} API retrieves information about a single cookie, given its name and URL.
 
-<p>If more than one cookie with the same name exists for a given URL, the one with the longest path will be returned. For cookies with the same path length, the cookie with the earliest creation time will be returned. If no matching cookie could be found, <code>null</code> is returned.</p>
+If more than one cookie with the same name exists for a given URL, the one with the longest path will be returned. For cookies with the same path length, the cookie with the earliest creation time will be returned. If no matching cookie could be found, `null` is returned.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var getting = browser.cookies.get(
+```js
+var getting = browser.cookies.get(
   details                // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd>
-   <p>An <code>object</code> containing details that can be used to match a cookie to be retrieved. It can include the following properties:</p>
-   <dl>
-    <dt><code>firstPartyDomain</code>{{optional_inline}}</dt>
-    <dd>A <code>string</code> representing the first-party domain with which the cookie to retrieve is associated. This property must be supplied if the browser has first-party isolation enabled. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation">First-party isolation</a>.</dd>
-    <dt><code>name</code></dt>
-    <dd>A <code>string</code> representing the name of the cookie to retrieve.</dd>
-    <dt><code>partitionKey</code>{{optional_inline}}</dt>
-    <dd>An <code>object</code> representing the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning">storage partition</a> containing the cookie. Include this object with <code>topLevelSite</code> to obtain a cookie from partitioned storage. Otherwise, returns the cookie from unpartitioned storage. This object contains:
-     <dl>
-      <dt><code>topLevelSite</code>{{optional_inline}}</dt>
-      <dd>A <code>string</code> representing the first-party URL of the top-level site storage partition containing the cookie.</dd>
-     </dl>
-    </dd>
-    <dt><code>storeId</code>{{optional_inline}}</dt>
-    <dd>A <code>string</code> representing the ID of the {{WebExtAPIRef("cookies.CookieStore", "cookie store")}} in which to look for the cookie (as returned by {{WebExtAPIRef("cookies.getAllCookieStores()")}}). By default, the current execution context's cookie store will be used.</dd>
-    <dt><code>url</code></dt>
-    <dd>A <code>string</code> representing the URL with which the cookie to retrieve is associated. This argument may be a full URL, in which case any data following the URL path (e.g. the query string) is ignored. If <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">host permissions</a> for this URL are not specified in the extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest file</a>, the API call will fail.</dd>
-   </dl>
- </dd>
-</dl>
+- `details`
 
-<h3 id="Return_value">Return value</h3>
+  - : An `object` containing details that can be used to match a cookie to be retrieved. It can include the following properties:
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('cookies.Cookie', 'Cookie')}} object containing details about the cookie, or <code>null</code> if the cookie was not found.</p>
+    - `firstPartyDomain`{{optional_inline}}
+      - : A `string` representing the first-party domain with which the cookie to retrieve is associated. This property must be supplied if the browser has first-party isolation enabled. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
+    - `name`
+      - : A `string` representing the name of the cookie to retrieve.
+    - `partitionKey`{{optional_inline}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+      - : An `object` representing the [storage partition](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#Storage_partitioning) containing the cookie. Include this object with `topLevelSite` to obtain a cookie from partitioned storage. Otherwise, returns the cookie from unpartitioned storage. This object contains:
 
-<p>{{Compat}}</p>
+        - `topLevelSite`{{optional_inline}}
+          - : A `string` representing the first-party URL of the top-level site storage partition containing the cookie.
 
-<h2 id="Examples">Examples</h2>
+    - `storeId`{{optional_inline}}
+      - : A `string` representing the ID of the {{WebExtAPIRef("cookies.CookieStore", "cookie store")}} in which to look for the cookie (as returned by {{WebExtAPIRef("cookies.getAllCookieStores()")}}). By default, the current execution context's cookie store will be used.
+    - `url`
+      - : A `string` representing the URL with which the cookie to retrieve is associated. This argument may be a full URL, in which case any data following the URL path (e.g. the query string) is ignored. If [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) for this URL are not specified in the extension's [manifest file](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), the API call will fail.
 
-<p>This example tries to get the cookie named "favorite-color", associated with the URL for the currently active tab:</p>
+### Return value
 
-<pre class="brush: js">function logCookie(cookie) {
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('cookies.Cookie', 'Cookie')}} object containing details about the cookie, or `null` if the cookie was not found.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+This example tries to get the cookie named "favorite-color", associated with the URL for the currently active tab:
+
+```js
+function logCookie(cookie) {
   if (cookie) {
     console.log(cookie.value);
   }
@@ -84,18 +82,16 @@ var getActive = browser.tabs.query({
   active: true,
   currentWindow: true
 });
-getActive.then(getCookie);</pre>
+getActive.then(getCookie);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#method-get) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/cookies#method-get"><code>chrome.cookies</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json"><code>cookies.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -122,5 +118,4 @@ getActive.then(getCookie);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

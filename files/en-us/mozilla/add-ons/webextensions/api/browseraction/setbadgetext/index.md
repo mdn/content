@@ -13,76 +13,73 @@ tags:
   - setBadgeText
 browser-compat: webextensions.api.browserAction.setBadgeText
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Sets the badge text for the browser action. The badge is displayed on top of the icon.</p>
+Sets the badge text for the browser action. The badge is displayed on top of the icon.
 
-<p>Tabs without an specific badge text will inherit the global badge text, which is <code>""</code> by default.</p>
+Tabs without an specific badge text will inherit the global badge text, which is `""` by default.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.browserAction.setBadgeText(
+```js
+browser.browserAction.setBadgeText(
   details // object
 )
-</pre>
+```
 
-<p>This API is also available as <code>chrome.browserAction.setBadgeText()</code>.</p>
+This API is also available as `chrome.browserAction.setBadgeText()`.
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p>An object with the following properties:</p>
- <dl>
-  <dt><code>text</code></dt>
-  <dd>
-  <p><code>string</code> or <code>null</code>. Any number of characters can be passed, but only about four can fit in the space.</p>
+- `details`
 
-  <p>Use an empty string - <code>""</code> - if you don't want any badge.</p>
+  - : An object with the following properties:
 
-  <p>If a <code>tabId</code> is specified, <code>null</code> removes the tab-specific badge text so that the tab inherits the global badge text. Otherwise it reverts the global badge text to <code>""</code>.</p>
+    - `text`
 
-  <p>If a <code>windowId</code> is specified, <code>null</code> removes the window-specific badge text so that the tab inherits the global badge text. Otherwise it reverts the global badge text to <code>""</code>.</p>
-  </dd>
-  <dt><code>tabId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Set the badge text only for the given tab. The text is reset when the user navigates this tab to a new page.</dd>
-  <dt><code>windowId</code>{{optional_inline}}</dt>
-  <dd><code>integer</code>. Set the badge text for the given window.</dd>
- </dl>
- </dd>
-</dl>
+      - : `string` or `null`. Any number of characters can be passed, but only about four can fit in the space.
 
-<ul>
- <li>If <code>windowId</code> and <code>tabId</code> are both supplied, the function fails.</li>
- <li>If <code>windowId</code> and <code>tabId</code> are both omitted, the global badge is set.</li>
-</ul>
+        Use an empty string - `""` - if you don't want any badge.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+        If a `tabId` is specified, `null` removes the tab-specific badge text so that the tab inherits the global badge text. Otherwise it reverts the global badge text to `""`.
 
-<p>{{Compat}}</p>
+        If a `windowId` is specified, `null` removes the window-specific badge text so that the tab inherits the global badge text. Otherwise it reverts the global badge text to `""`.
 
-<h2 id="Examples">Examples</h2>
+    - `tabId`{{optional_inline}}
+      - : `integer`. Set the badge text only for the given tab. The text is reset when the user navigates this tab to a new page.
+    - `windowId`{{optional_inline}}
+      - : `integer`. Set the badge text for the given window.
 
-<p>Add a badge indicating how many times the user clicked the button:</p>
+<!---->
 
-<pre class="brush: js">var clicks = 0;
+- If `windowId` and `tabId` are both supplied, the function fails.
+- If `windowId` and `tabId` are both omitted, the global badge is set.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+Add a badge indicating how many times the user clicked the button:
+
+```js
+var clicks = 0;
 
 function increment() {
   browser.browserAction.setBadgeText({text: (++clicks).toString()});
 }
 
-browser.browserAction.onClicked.addListener(increment);</pre>
+browser.browserAction.onClicked.addListener(increment);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-setBadgeText) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction#method-setBadgeText"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -109,5 +106,4 @@ browser.browserAction.onClicked.addListener(increment);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

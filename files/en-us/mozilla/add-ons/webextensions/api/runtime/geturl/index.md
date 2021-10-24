@@ -13,53 +13,51 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.getURL
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Given a relative path from the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> to a resource packaged with the extension, return a fully-qualified URL.</p>
+Given a relative path from the [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to a resource packaged with the extension, return a fully-qualified URL.
 
-<div>This function does <em>not</em> check that the resource actually exists at that URL.</div>
+This function does _not_ check that the resource actually exists at that URL.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.runtime.getURL(
+```js
+browser.runtime.getURL(
   path // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>path</code></dt>
- <dd><code>string</code>. A relative path from the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> to a resource packaged with the extension.</dd>
-</dl>
+- `path`
+  - : `string`. A relative path from the [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to a resource packaged with the extension.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p><code>string</code>. The fully-qualified URL to the resource.</p>
+`string`. The fully-qualified URL to the resource.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Given a file packaged with the extension at "beasts/frog.html", get the full URL like this:</p>
+Given a file packaged with the extension at "beasts/frog.html", get the full URL like this:
 
-<pre class="brush: js">var fullURL = browser.runtime.getURL("beasts/frog.html");
+```js
+var fullURL = browser.runtime.getURL("beasts/frog.html");
 console.log(fullURL);
 // Returns something like:
-// moz-extension://2c127fa4-62c7-7e4f-90e5-472b45eecfdc/beasts/frog.html</pre>
+// moz-extension://2c127fa4-62c7-7e4f-90e5-472b45eecfdc/beasts/frog.html
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-getURL) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#method-getURL"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -86,5 +84,4 @@ console.log(fullURL);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,62 +13,56 @@ tags:
   - onAlarm
 browser-compat: webextensions.api.alarms.onAlarm
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when any alarm set by the extension goes off.</p>
+Fired when any alarm set by the extension goes off.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.alarms.onAlarm.addListener(listener)
+```js
+browser.alarms.onAlarm.addListener(listener)
 browser.alarms.onAlarm.removeListener(listener)
 browser.alarms.onAlarm.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(listener)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>listener</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `listener`
 
- <dl>
-  <dt><code>alarm</code></dt>
-  <dd>{{WebExtAPIRef('alarms.Alarm')}}. The alarm that fired. Use <code>Alarm.name</code> to figure out which alarm fired.</dd>
- </dl>
- </dd>
-</dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
-<h2 id="Examples">Examples</h2>
+    - `alarm`
+      - : {{WebExtAPIRef('alarms.Alarm')}}. The alarm that fired. Use `Alarm.name` to figure out which alarm fired.
 
-<p>Handle an alarm going off:</p>
+## Examples
 
-<pre class="brush: js">function handleAlarm(alarmInfo) {
+Handle an alarm going off:
+
+```js
+function handleAlarm(alarmInfo) {
   console.log("on alarm: " + alarmInfo.name);
 }
 
-browser.alarms.onAlarm.addListener(handleAlarm);</pre>
+browser.alarms.onAlarm.addListener(handleAlarm);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

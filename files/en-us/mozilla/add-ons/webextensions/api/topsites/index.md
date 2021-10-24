@@ -12,42 +12,35 @@ tags:
   - topSites
 browser-compat: webextensions.api.topSites
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Use the topSites API to get an array containing pages that the user has visited frequently.</p>
+Use the topSites API to get an array containing pages that the user has visited frequently.
 
-<p>Browsers maintain this to help the user get back to these places easily. For example, Firefox by default provides a list of the most-visited pages in the "New Tab" page.</p>
+Browsers maintain this to help the user get back to these places easily. For example, Firefox by default provides a list of the most-visited pages in the "New Tab" page.
 
-<p>To use the topSites API you must have the "topSites" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a>.</p>
+To use the topSites API you must have the "topSites" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("topSites.MostVisitedURL")}}</dt>
- <dd>An object containing the title and URL of a website.</dd>
-</dl>
+- {{WebExtAPIRef("topSites.MostVisitedURL")}}
+  - : An object containing the title and URL of a website.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{WebExtAPIRef("topSites.get()")}}</dt>
- <dd>Gets an array containing all the sites listed in the browser's "New Tab" page. Note that the number of sites returned here is browser-specific, and the particular sites returned will probably be specific to the user, based on their browsing history.</dd>
-</dl>
+- {{WebExtAPIRef("topSites.get()")}}
+  - : Gets an array containing all the sites listed in the browser's "New Tab" page. Note that the number of sites returned here is browser-specific, and the particular sites returned will probably be specific to the user, based on their browsing history.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
+> **Note:** This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/extensions/topSites) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/topSites"><code>chrome.topSites</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -74,5 +67,4 @@ browser-compat: webextensions.api.topSites
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

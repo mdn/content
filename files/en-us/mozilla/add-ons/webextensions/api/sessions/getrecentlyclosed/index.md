@@ -13,41 +13,41 @@ tags:
   - sessions
 browser-compat: webextensions.api.sessions.getRecentlyClosed
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Returns an array of {{WebExtAPIRef("sessions.Session", "Session")}} objects, representing windows and tabs that were closed in the current browsing session (that is: the time since the browser was started).</p>
+Returns an array of {{WebExtAPIRef("sessions.Session", "Session")}} objects, representing windows and tabs that were closed in the current browsing session (that is: the time since the browser was started).
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var gettingSessions = browser.sessions.getRecentlyClosed(
+```js
+var gettingSessions = browser.sessions.getRecentlyClosed(
   filter             // optional object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>filter</code>{{optional_inline}}</dt>
- <dd><code>object</code>. A {{WebExtAPIRef("sessions.Filter")}} object that limits the set of sessions returned.</dd>
-</dl>
+- `filter`{{optional_inline}}
+  - : `object`. A {{WebExtAPIRef("sessions.Filter")}} object that limits the set of sessions returned.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. This will be fulfilled with an array of {{WebExtAPIRef("sessions.Session", "Session")}} objects, one for each of the most recently closed tabs or windows in the current browsing session, up to {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}} or the number included in the <code>filter</code> argument, whichever is smaller. The array is given in the reverse of the order in which tabs or windows were closed, so the most recently closed will be at index 0.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). This will be fulfilled with an array of {{WebExtAPIRef("sessions.Session", "Session")}} objects, one for each of the most recently closed tabs or windows in the current browsing session, up to {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}} or the number included in the `filter` argument, whichever is smaller. The array is given in the reverse of the order in which tabs or windows were closed, so the most recently closed will be at index 0.
 
-<p>If an error occurs, the promise will be rejected with an error message.</p>
+If an error occurs, the promise will be rejected with an error message.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code restores the single most recently-closed session, whether it's a tab or a window:</p>
+This code restores the single most recently-closed session, whether it's a tab or a window:
 
-<pre class="brush: js">function restoreMostRecent(sessionInfos) {
+```js
+function restoreMostRecent(sessionInfos) {
   if (!sessionInfos.length) {
     console.log("No sessions found")
     return;
@@ -70,18 +70,15 @@ browser.browserAction.onClicked.addListener(function() {
   });
   gettingSessions.then(restoreMostRecent, onError);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/extensions/sessions) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/sessions"><code>chrome.sessions</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -108,5 +105,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

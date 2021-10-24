@@ -13,50 +13,46 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.bookmarks.update
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p><strong><code>bookmarks.update()</code></strong> updates the title and/or URL of a bookmark, or the name of a bookmark folder.</p>
+**`bookmarks.update()`** updates the title and/or URL of a bookmark, or the name of a bookmark folder.
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> If your extension attempts to update a bookmark in the bookmarks tree root node, the call will raise an error with the message: "The bookmark root cannot be modified" and the bookmark won't be updated.</p>
-</div>
+> **Warning:** If your extension attempts to update a bookmark in the bookmarks tree root node, the call will raise an error with the message: "The bookmark root cannot be modified" and the bookmark won't be updated.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var updating = browser.bookmarks.update(
+```js
+var updating = browser.bookmarks.update(
   id,                    // string
   changes                // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>id</code></dt>
- <dd>A {{jsxref("string")}} specifying the ID of the bookmark or bookmark folder to update.</dd>
- <dt><code>changes</code></dt>
- <dd>
-   <p>An {{jsxref("object")}} specifying the changes to apply, with some combination of the following fields. Any items not specified aren't changed in the referenced bookmark or folder:</p>
-   <dl>
-    <dt><code>title</code> {{optional_inline}}</dt>
-    <dd>A {{jsxref("string")}} containing the new title of the bookmark, or the new name of the folder if <code>id</code> refers to a folder.</dd>
-    <dt><code>url</code> {{optional_inline}}</dt>
-    <dd>A {{jsxref("string")}} providing a new URL for the bookmark.</dd>
-   </dl>
-  </dd>
-</dl>
+- `id`
+  - : A {{jsxref("string")}} specifying the ID of the bookmark or bookmark folder to update.
+- `changes`
 
-<h3 id="Return_value">Return value</h3>
+  - : An {{jsxref("object")}} specifying the changes to apply, with some combination of the following fields. Any items not specified aren't changed in the referenced bookmark or folder:
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a single <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode" title="An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders."><code>bookmarks.BookmarkTreeNode</code></a> object, representing the updated bookmark. If the bookmark item corresponding to the <code>id</code> parameter can't be found, the promise is rejected.</p>
+    - `title` {{optional_inline}}
+      - : A {{jsxref("string")}} containing the new title of the bookmark, or the new name of the folder if `id` refers to a folder.
+    - `url` {{optional_inline}}
+      - : A {{jsxref("string")}} providing a new URL for the bookmark.
 
-<h2 id="Examples">Examples</h2>
+### Return value
 
-<p>This example renames all folders named "MDN" to "Mozilla Developer Network (MDN)".</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a single [`bookmarks.BookmarkTreeNode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode "An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders.") object, representing the updated bookmark. If the bookmark item corresponding to the `id` parameter can't be found, the promise is rejected.
 
-<pre class="brush: js">function onFulfilled(bookmarkItem) {
+## Examples
+
+This example renames all folders named "MDN" to "Mozilla Developer Network (MDN)".
+
+```js
+function onFulfilled(bookmarkItem) {
   console.log(bookmarkItem.title);
 }
 
@@ -77,22 +73,20 @@ function updateFolders(items) {
 }
 
 var searching = browser.bookmarks.search({ title: "MDN" });
-searching.then(updateFolders, onRejected);</pre>
+searching.then(updateFolders, onRejected);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#method-update"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -119,5 +113,4 @@ searching.then(updateFolders, onRejected);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -13,51 +13,48 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.MessageSender
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>An object containing information about the sender of a message or connection request; this is passed to the {{WebExtAPIRef("runtime.onMessage()")}} listener.</p>
+An object containing information about the sender of a message or connection request; this is passed to the {{WebExtAPIRef("runtime.onMessage()")}} listener.
 
-<p>It is also a property of {{WebExtAPIRef("runtime.Port")}}, but only in the <code>Port</code> instance passed into the {{WebExtAPIRef("runtime.onConnect()")}} or {{WebExtAPIRef("runtime.onConnectExternal()")}} listeners.</p>
+It is also a property of {{WebExtAPIRef("runtime.Port")}}, but only in the `Port` instance passed into the {{WebExtAPIRef("runtime.onConnect()")}} or {{WebExtAPIRef("runtime.onConnectExternal()")}} listeners.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>tab</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('tabs.Tab')}}. The {{WebExtAPIRef('tabs.Tab')}} which opened the connection. This property will only be present when the connection was opened from a tab (including content scripts).</dd>
- <dt><code>frameId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. The frame that opened the connection. Zero for top-level frames, positive for child frames. This will only be set when <code>tab</code> is set.</dd>
- <dt><code>id</code>{{optional_inline}}</dt>
- <dd>
-   <p><code>string</code>. The ID of the extension that sent the message, if the message was sent by an extension. If the sender set an ID explicitly using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">applications</a> key in manifest.json, then <code>id</code> will have this value. Otherwise it will have the ID that was generated for the sender.</p>
-   <p>Note that in Firefox, before version 54, this value was the extension's internal ID (that is, the <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID</a> that appears in the extension's URL).</p>
- </dd>
- <dt><code>url</code>{{optional_inline}}</dt>
- <dd>
-   <p><code>string</code>. The URL of the page or frame hosting the script that sent the message.</p>
-   <p>If the sender is a script running in an extension page (such as a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background page</a>, an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages">options page</a>, or a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2">browser action</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#page_actions">page action</a> popup), the URL will be in the form <code>"moz-extension://&lt;extension-internal-id&gt;/path/to/page.html"</code>. If the sender is a background script and you haven't included a background page, it will be <code>"moz-extension://&lt;extension-internal-id&gt;/_generated_background_page.html"</code>.</p>
-   <p>>If the sender is a script running in a web page (including content scripts as well as normal page scripts), then <code>url</code> will be the web page URL. If the script is running in an iframe, <code>url</code> will be the iframe's URL.
-  </p>
- </dd>
- <dt><code>tlsChannelId</code>{{optional_inline}}</dt>
- <dd><code>string</code>. The TLS channel ID of the page or frame that opened the connection, if requested by the extension, and if available.</dd>
-</dl>
+- `tab`{{optional_inline}}
+  - : {{WebExtAPIRef('tabs.Tab')}}. The {{WebExtAPIRef('tabs.Tab')}} which opened the connection. This property will only be present when the connection was opened from a tab (including content scripts).
+- `frameId`{{optional_inline}}
+  - : `integer`. The frame that opened the connection. Zero for top-level frames, positive for child frames. This will only be set when `tab` is set.
+- `id`{{optional_inline}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+  - : `string`. The ID of the extension that sent the message, if the message was sent by an extension. If the sender set an ID explicitly using the [applications](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `id` will have this value. Otherwise it will have the ID that was generated for the sender.
 
-<p>{{Compat}}</p>
+    Note that in Firefox, before version 54, this value was the extension's internal ID (that is, the [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) that appears in the extension's URL).
 
-<p>{{WebExtExamples}}</p>
+- `url`{{optional_inline}}
 
+  - : `string`. The URL of the page or frame hosting the script that sent the message.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#type-MessageSender"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
+    If the sender is a script running in an extension page (such as a [background page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts), an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages), or a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#page_actions) popup), the URL will be in the form `"moz-extension://<extension-internal-id>/path/to/page.html"`. If the sender is a background script and you haven't included a background page, it will be `"moz-extension://<extension-internal-id>/_generated_background_page.html"`.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+    \>If the sender is a script running in a web page (including content scripts as well as normal page scripts), then `url` will be the web page URL. If the script is running in an iframe, `url` will be the iframe's URL.
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+- `tlsChannelId`{{optional_inline}}
+  - : `string`. The TLS channel ID of the page or frame that opened the connection, if requested by the extension, and if available.
+
+## Browser compatibility
+
+{{Compat}}
+
+{{WebExtExamples}}
+
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#type-MessageSender) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -84,5 +81,4 @@ browser-compat: webextensions.api.runtime.MessageSender
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -12,78 +12,65 @@ tags:
   - Windows
 browser-compat: webextensions.api.windows
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Interact with browser windows. You can use this API to get information about open windows and to open, modify, and close windows. You can also listen for window open, close, and activate events.</p>
+Interact with browser windows. You can use this API to get information about open windows and to open, modify, and close windows. You can also listen for window open, close, and activate events.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("windows.WindowType")}}</dt>
- <dd>The type of browser window this is.</dd>
- <dt>{{WebExtAPIRef("windows.WindowState")}}</dt>
- <dd>The state of this browser window.</dd>
- <dt>{{WebExtAPIRef("windows.Window")}}</dt>
- <dd>Contains information about a browser window.</dd>
- <dt>{{WebExtAPIRef("windows.CreateType")}}</dt>
- <dd>Specifies the type of browser window to create.</dd>
-</dl>
+- {{WebExtAPIRef("windows.WindowType")}}
+  - : The type of browser window this is.
+- {{WebExtAPIRef("windows.WindowState")}}
+  - : The state of this browser window.
+- {{WebExtAPIRef("windows.Window")}}
+  - : Contains information about a browser window.
+- {{WebExtAPIRef("windows.CreateType")}}
+  - : Specifies the type of browser window to create.
 
-<h2 id="Constants">Constants</h2>
+## Constants
 
-<dl>
- <dt>{{WebExtAPIRef("windows.WINDOW_ID_NONE")}}</dt>
- <dd>The <code>windowId</code> value that represents the absence of a browser window.</dd>
- <dt>{{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}</dt>
- <dd>A value that can be used in place of a <code>windowId</code> in some APIs to represent the current window.</dd>
-</dl>
+- {{WebExtAPIRef("windows.WINDOW_ID_NONE")}}
+  - : The `windowId` value that represents the absence of a browser window.
+- {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}
+  - : A value that can be used in place of a `windowId` in some APIs to represent the current window.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<dl>
- <dt>{{WebExtAPIRef("windows.get()")}}</dt>
- <dd>Gets details about a window, given its ID.</dd>
- <dt>{{WebExtAPIRef("windows.getCurrent()")}}</dt>
- <dd>Gets the current window.</dd>
- <dt>{{WebExtAPIRef("windows.getLastFocused()")}}</dt>
- <dd>Gets the window that was most recently focused — typically the window 'on top'.</dd>
- <dt>{{WebExtAPIRef("windows.getAll()")}}</dt>
- <dd>Gets all windows.</dd>
- <dt>{{WebExtAPIRef("windows.create()")}}</dt>
- <dd>
- <p>Creates a new window.</p>
- </dd>
- <dt>{{WebExtAPIRef("windows.update()")}}</dt>
- <dd>Updates the properties of a window. Use this to move, resize, and (un)focus a window, etc.</dd>
- <dt>{{WebExtAPIRef("windows.remove()")}}</dt>
- <dd>Closes a window, and all its tabs.</dd>
-</dl>
+- {{WebExtAPIRef("windows.get()")}}
+  - : Gets details about a window, given its ID.
+- {{WebExtAPIRef("windows.getCurrent()")}}
+  - : Gets the current window.
+- {{WebExtAPIRef("windows.getLastFocused()")}}
+  - : Gets the window that was most recently focused — typically the window 'on top'.
+- {{WebExtAPIRef("windows.getAll()")}}
+  - : Gets all windows.
+- {{WebExtAPIRef("windows.create()")}}
+  - : Creates a new window.
+- {{WebExtAPIRef("windows.update()")}}
+  - : Updates the properties of a window. Use this to move, resize, and (un)focus a window, etc.
+- {{WebExtAPIRef("windows.remove()")}}
+  - : Closes a window, and all its tabs.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("windows.onCreated")}}</dt>
- <dd>Fired when a window is created.</dd>
- <dt>{{WebExtAPIRef("windows.onRemoved")}}</dt>
- <dd>Fired when a window is closed.</dd>
- <dt>{{WebExtAPIRef("windows.onFocusChanged")}}</dt>
- <dd>Fired when the currently focused window changes.</dd>
-</dl>
+- {{WebExtAPIRef("windows.onCreated")}}
+  - : Fired when a window is created.
+- {{WebExtAPIRef("windows.onRemoved")}}
+  - : Fired when a window is closed.
+- {{WebExtAPIRef("windows.onFocusChanged")}}
+  - : Fired when the currently focused window changes.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
+> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/windows"><code>chrome.windows</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -110,5 +97,4 @@ browser-compat: webextensions.api.windows
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

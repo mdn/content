@@ -11,37 +11,35 @@ tags:
   - userScripts
 browser-compat: webextensions.api.userScripts.RegisteredUserScript.unregister
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>The <code>unregister()</code> method of the {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} object unregisters the user scripts represented by the object, user scripts that were registered using  {{WebExtAPIRef("userScripts.register","userScripts.register()")}}.</p>
+The `unregister()` method of the {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} object unregisters the user scripts represented by the object, user scripts that were registered using  {{WebExtAPIRef("userScripts.register","userScripts.register()")}}.
 
-<div class="notecard note">
-<p><strong>Note:</strong> User Scripts are automatically unregistered when the related extension page (from which the user scripts were registered) is unloaded, so you should register a user script from an extension page that persists at least as long as you want the user scripts to stay registered.</p>
-</div>
+> **Note:** User Scripts are automatically unregistered when the related extension page (from which the user scripts were registered) is unloaded, so you should register a user script from an extension page that persists at least as long as you want the user scripts to stay registered.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">const registeredUserScript = await browser.userScripts.register(
+```js
+const registeredUserScript = await browser.userScripts.register(
   userScriptOptions       // object
 );
 …
-await registeredUserScript.unregister()</pre>
+await registeredUserScript.unregister()
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<p>None.</p>
+None.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A {{JSxRef("Promise")}} that is resolved once the user scripts are unregistered. The promise does not return a value.</p>
+A {{JSxRef("Promise")}} that is resolved once the user scripts are unregistered. The promise does not return a value.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{WebExtAPIRef("userScripts.register","userScripts.register()")}}</li>
- <li>{{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}</li>
-</ul>
+- {{WebExtAPIRef("userScripts.register","userScripts.register()")}}
+- {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}

@@ -13,81 +13,73 @@ tags:
   - webNavigation
 browser-compat: webextensions.api.webNavigation.onHistoryStateUpdated
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when the page used the <a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">>history API</a> to update the URL displayed in the browser's location bar. All future events for this frame will use the updated URL.</p>
+Fired when the page used the [>history API](/en-US/docs/Web/API/History_API/Working_with_the_History_API) to update the URL displayed in the browser's location bar. All future events for this frame will use the updated URL.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">browser.webNavigation.onHistoryStateUpdated.addListener(
-  <var>listener</var>,                   // function
-  <var>filter</var>                      // optional object
+```js
+browser.webNavigation.onHistoryStateUpdated.addListener(
+  listener,                   // function
+  filter                      // optional object
 )
-browser.webNavigation.onHistoryStateUpdated.removeListener(<var>listener</var>)
-browser.webNavigation.onHistoryStateUpdated.hasListener(<var>listener</var>)
-</pre>
+browser.webNavigation.onHistoryStateUpdated.removeListener(listener)
+browser.webNavigation.onHistoryStateUpdated.hasListener(listener)
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
-	<dt><code>addListener(<var>callback</var>)</code></dt>
-	<dd>Adds a listener to this event.</dd>
-	<dt><code>removeListener(<var>listener</var>)</code></dt>
-	<dd>Stop listening to this event. The <code><var>listener</var></code> argument is the listener to remove.</dd>
-	<dt><code>hasListener(<var>listener</var>)</code></dt>
-	<dd>Check whether <code><var>listener</var></code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
-	<dt><code><var>callback</var></code></dt>
-	<dd>
-	<p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
-	<dl>
-		<dt><code><var>details</var></code></dt>
-		<dd><a href="#details"><code>object</code></a>. Details about the navigation event.</dd>
-	</dl>
-	</dd>
-	<dt><code><var>filter</var></code>{{optional_inline}}</dt>
-	<dd>
-	<p><code>object</code>. An object containing a single property <code>url</code>, which is an <code>Array</code> of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event will fire only for transitions to URLs which match at least one <code>UrlFilter</code> in the array. If you omit this parameter, the event will fire for all transitions.</p>
-	</dd>
-</dl>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
-<h2 id="Additional_objects">Additional objects</h2>
+    - `details`
+      - : [`object`](#details). Details about the navigation event.
 
-<h3 id="details">details</h3>
+- `filter`{{optional_inline}}
+  - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event will fire only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event will fire for all transitions.
 
-<dl>
-	<dt><code>tabId</code></dt>
-	<dd><code>integer</code>. The ID of the tab in which the navigation is about to occur.</dd>
-	<dt><code>url</code></dt>
-	<dd><code>string</code>. The URL to which the given frame will navigate.</dd>
-	<dt><code>processId</code></dt>
-	<dd><code>integer</code>. The ID of the process in which this tab is being rendered.</dd>
-	<dt><code>frameId</code></dt>
-	<dd><code>integer</code>. Frame in which the navigation will occur. <code>0</code> indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.</dd>
-	<dt><code>timeStamp</code></dt>
-	<dd><code>number</code>. The time that the URL was changed by the history API, in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
-	<dt><code>transitionType</code></dt>
-	<dd><code>{{WebExtAPIRef("webNavigation.transitionType", "transitionType")}}</code>. The reason for the navigation: for example, <code>"link"</code> if the user clicked a link.</dd>
-	<dt><code>transitionQualifiers</code></dt>
-	<dd><code>Array</code> of {{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}}. Extra information about the navigation: for example, whether there was a server or client redirect.</dd>
-</dl>
+## Additional objects
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+### details
 
-<p>{{Compat}}</p>
+- `tabId`
+  - : `integer`. The ID of the tab in which the navigation is about to occur.
+- `url`
+  - : `string`. The URL to which the given frame will navigate.
+- `processId`
+  - : `integer`. The ID of the process in which this tab is being rendered.
+- `frameId`
+  - : `integer`. Frame in which the navigation will occur. `0` indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
+- `timeStamp`
+  - : `number`. The time that the URL was changed by the history API, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+- `transitionType`
+  - : `{{WebExtAPIRef("webNavigation.transitionType", "transitionType")}}`. The reason for the navigation: for example, `"link"` if the user clicked a link.
+- `transitionQualifiers`
+  - : `Array` of {{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}}. Extra information about the navigation: for example, whether there was a server or client redirect.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<p>Logs the target URLs and extra transition information for <code>onHistoryStateUpdated</code>, if the target URL's hostname contains "example.com" or starts with "developer".</p>
+{{Compat}}
 
-<pre class="brush: js">const filter = {
+## Examples
+
+Logs the target URLs and extra transition information for `onHistoryStateUpdated`, if the target URL's hostname contains "example.com" or starts with "developer".
+
+```js
+const filter = {
   url:
   [
     {hostContains: "example.com"},
@@ -102,18 +94,15 @@ function logOnHistoryStateUpdated(details) {
 }
 
 browser.webNavigation.onHistoryStateUpdated.addListener(logOnHistoryStateUpdated, filter);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webNavigation#event-onBeforeNavigate"><code>chrome.webNavigation</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -140,5 +129,4 @@ browser.webNavigation.onHistoryStateUpdated.addListener(logOnHistoryStateUpdated
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

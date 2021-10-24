@@ -11,64 +11,55 @@ tags:
   - sidebarAction
 browser-compat: webextensions.api.sidebarAction
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p><span class="seoSummary">Gets and sets properties of an extension's sidebar.</span></p>
+Gets and sets properties of an extension's sidebar.
 
-<p>A <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">sidebar</a> is a pane that is displayed at the left-hand or right-hand side of the browser window, next to the web page. The browser provides a UI that enables the user to see the currently available sidebars and to select a sidebar to display. Using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code> manifest.json key, an extension can define its own sidebar. Using the <code>sidebarAction</code> API described here, an extension can get and set the sidebar's properties.</p>
+A [sidebar](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) is a pane that is displayed at the left-hand or right-hand side of the browser window, next to the web page. The browser provides a UI that enables the user to see the currently available sidebars and to select a sidebar to display. Using the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json key, an extension can define its own sidebar. Using the `sidebarAction` API described here, an extension can get and set the sidebar's properties.
 
-<p>The <code>sidebarAction</code> API is closely modeled on the {{WebExtAPIRef("browserAction")}} API.</p>
+The `sidebarAction` API is closely modeled on the {{WebExtAPIRef("browserAction")}} API.
 
-<p>The sidebarAction API is based on Opera's <a href="https://dev.opera.com/extensions/sidebar-action-api/">sidebarAction API</a>. However, note that the following are not yet supported: <code>setBadgeText()</code>, <code>getBadgeText()</code>, <code>setBadgeBackgroundColor()</code>, <code>getBadgeBackgroundColor()</code>, <code>onFocus</code>, <code>onBlur</code>.</p>
+The sidebarAction API is based on Opera's [sidebarAction API](https://dev.opera.com/extensions/sidebar-action-api/). However, note that the following are not yet supported: `setBadgeText()`, `getBadgeText()`, `setBadgeBackgroundColor()`, `getBadgeBackgroundColor()`, `onFocus`, `onBlur`.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("sidebarAction.ImageDataType")}}</dt>
- <dd>Pixel data for an image. Must be an <code><a href="/en-US/docs/Web/API/ImageData">ImageData</a></code> object (for example, from a {{htmlelement("canvas")}} element).</dd>
-</dl>
+- {{WebExtAPIRef("sidebarAction.ImageDataType")}}
+  - : Pixel data for an image. Must be an [`ImageData`](/en-US/docs/Web/API/ImageData) object (for example, from a {{htmlelement("canvas")}} element).
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("sidebarAction.close()")}}</dt>
- <dd>Closes the sidebar.</dd>
- <dt>{{WebExtAPIRef("sidebarAction.getPanel()")}}</dt>
- <dd>Gets the sidebar's panel.</dd>
- <dt>{{WebExtAPIRef("sidebarAction.getTitle()")}}</dt>
- <dd>Gets the sidebar's title.</dd>
- <dt>{{WebExtAPIRef("sidebarAction.isOpen()")}}</dt>
- <dd>Checks whether the sidebar is open or not.</dd>
- <dt>{{WebExtAPIRef("sidebarAction.open()")}}</dt>
- <dd>Opens the sidebar.</dd>
- <dt>{{WebExtAPIRef("sidebarAction.setIcon()")}}</dt>
- <dd>Sets the sidebar's icon.</dd>
- <dt>{{WebExtAPIRef("sidebarAction.setPanel()")}}</dt>
- <dd>Sets the sidebar's panel.</dd>
- <dt>{{WebExtAPIRef("sidebarAction.setTitle()")}}</dt>
- <dd>Sets the sidebar's title. This will be displayed in any UI provided by the browser to list sidebars, such as a menu.</dd>
- <dt>{{WebExtAPIRef("sidebarAction.toggle()")}}</dt>
- <dd>Toggles the visibility of the sidebar.</dd>
-</dl>
+- {{WebExtAPIRef("sidebarAction.close()")}}
+  - : Closes the sidebar.
+- {{WebExtAPIRef("sidebarAction.getPanel()")}}
+  - : Gets the sidebar's panel.
+- {{WebExtAPIRef("sidebarAction.getTitle()")}}
+  - : Gets the sidebar's title.
+- {{WebExtAPIRef("sidebarAction.isOpen()")}}
+  - : Checks whether the sidebar is open or not.
+- {{WebExtAPIRef("sidebarAction.open()")}}
+  - : Opens the sidebar.
+- {{WebExtAPIRef("sidebarAction.setIcon()")}}
+  - : Sets the sidebar's icon.
+- {{WebExtAPIRef("sidebarAction.setPanel()")}}
+  - : Sets the sidebar's panel.
+- {{WebExtAPIRef("sidebarAction.setTitle()")}}
+  - : Sets the sidebar's title. This will be displayed in any UI provided by the browser to list sidebars, such as a menu.
+- {{WebExtAPIRef("sidebarAction.toggle()")}}
+  - : Toggles the visibility of the sidebar.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Example_add-ons">Example add-ons</h2>
+## Example add-ons
 
-<ul>
- <li><a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/annotate-page">annotate-page</a></li>
-</ul>
+- [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page)
 
+> **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Opera's <a href="https://dev.opera.com/extensions/sidebar-action-api/"><code>chrome.sidebarAction</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,5 +86,4 @@ browser-compat: webextensions.api.sidebarAction
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

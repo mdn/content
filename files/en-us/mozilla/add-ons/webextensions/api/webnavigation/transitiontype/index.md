@@ -13,55 +13,50 @@ tags:
   - webNavigation
 browser-compat: webextensions.api.webNavigation.TransitionType
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Cause of the navigation: for example, the user clicked a link, or typed an address, or clicked a bookmark.</p>
+Cause of the navigation: for example, the user clicked a link, or typed an address, or clicked a bookmark.
 
-<p>Note that many values here are not currently supported in Firefox: see the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType#browser_compatibility">browser compatibility table</a> for details.</p>
+Note that many values here are not currently supported in Firefox: see the [browser compatibility table](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType#browser_compatibility) for details.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are strings. Possible values are:</p>
+Values of this type are strings. Possible values are:
 
-<dl>
- <dt>"link"</dt>
- <dd>The user clicked a link in another page.</dd>
- <dt>"typed"</dt>
- <dd>The user typed the URL into the address bar. This is also used if the user started typing into the address bar, then selected a URL from the suggestions it offered. See also "generated".</dd>
- <dt>"auto_bookmark"</dt>
- <dd>The user clicked a bookmark or an item in the browser history.</dd>
- <dt>"auto_subframe"</dt>
- <dd>Any nested iframes that are automatically loaded by their parent.</dd>
- <dt>"manual_subframe"</dt>
- <dd>Any nested iframes that are loaded as an explicit user action. Loading such an iframe will generate an entry in the back/forward navigation list.</dd>
- <dt>"generated"</dt>
- <dd>The user started typing in the address bar, then clicked on a suggested entry that didn't contain a URL.</dd>
- <dt>"start_page"</dt>
- <dd>The page was passed to the command line or is the start page.</dd>
- <dt>"form_submit"</dt>
- <dd>The user submitted a form. Note that in some situations, such as when a form uses a script to submit its contents, submitting a form does not result in this transition type.</dd>
- <dt>"reload"</dt>
- <dd>The user reloaded the page, using the Reload button or by pressing Enter in the address bar. This is also used for session restore and reopening closed tabs.</dd>
- <dt>"keyword"</dt>
- <dd>The URL was generated using a <a href="https://support.mozilla.org/en-US/kb/how-search-from-address-bar">keyword search</a> configured by the user.</dd>
- <dt>"keyword_generated"</dt>
- <dd>Corresponds to a visit generated for a keyword.</dd>
-</dl>
+- "link"
+  - : The user clicked a link in another page.
+- "typed"
+  - : The user typed the URL into the address bar. This is also used if the user started typing into the address bar, then selected a URL from the suggestions it offered. See also "generated".
+- "auto_bookmark"
+  - : The user clicked a bookmark or an item in the browser history.
+- "auto_subframe"
+  - : Any nested iframes that are automatically loaded by their parent.
+- "manual_subframe"
+  - : Any nested iframes that are loaded as an explicit user action. Loading such an iframe will generate an entry in the back/forward navigation list.
+- "generated"
+  - : The user started typing in the address bar, then clicked on a suggested entry that didn't contain a URL.
+- "start_page"
+  - : The page was passed to the command line or is the start page.
+- "form_submit"
+  - : The user submitted a form. Note that in some situations, such as when a form uses a script to submit its contents, submitting a form does not result in this transition type.
+- "reload"
+  - : The user reloaded the page, using the Reload button or by pressing Enter in the address bar. This is also used for session restore and reopening closed tabs.
+- "keyword"
+  - : The URL was generated using a [keyword search](https://support.mozilla.org/en-US/kb/how-search-from-address-bar) configured by the user.
+- "keyword_generated"
+  - : Corresponds to a visit generated for a keyword.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation#type-TransitionType) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webNavigation#type-TransitionType"><code>chrome.webNavigation</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json"><code>web_navigation.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -88,5 +83,4 @@ browser-compat: webextensions.api.webNavigation.TransitionType
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

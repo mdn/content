@@ -9,68 +9,58 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.theme.onUpdated
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fires when a theme supplied as a browser extension is applied or removed. Specifically:</p>
+Fires when a theme supplied as a browser extension is applied or removed. Specifically:
 
-<ul>
- <li>when a <a href="/en-US/docs/Mozilla/Add-ons/Themes/Theme_concepts#static_themes">static theme</a> is installed</li>
- <li>when a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme">dynamic theme</a> calls <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/update">theme.update()</a></code> or <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/update">theme.reset()</a></code></li>
- <li>when a theme gets uninstalled.</li>
-</ul>
+- when a [static theme](/en-US/docs/Mozilla/Add-ons/Themes/Theme_concepts#static_themes) is installed
+- when a [dynamic theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme) calls [`theme.update()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/update) or [`theme.reset()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/update)
+- when a theme gets uninstalled.
 
-<p>Note that this event is not fired for changes to the built-in themes.</p>
+Note that this event is not fired for changes to the built-in themes.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.theme.onUpdated.addListener(listener)
+```js
+browser.theme.onUpdated.addListener(listener)
 browser.theme.onUpdated.removeListener(listener)
 browser.theme.onUpdated.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(listener)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>updateInfo</code></dt>
-  <dd>
-  <p><code>object</code>. An object containing two properties:</p>
+  - : Function that will be called when this event occurs. The function will be passed the following arguments:
 
-  <dl>
-   <dt><code>theme</code></dt>
-   <dd><code>object</code>. If the event fired because an extension-supplied theme was removed, this will be an empty object. If it fired because an extension-supplied theme was applied, then it will be a {{WebExtAPIRef("theme.Theme")}} object representing the theme that was applied.</dd>
-   <dt><code>windowId</code>{{optional_inline}}</dt>
-   <dd><code>integer</code>. The ID of the window for which theme has been updated. If this property is not present, it means that the theme was updated globally.</dd>
-  </dl>
-  </dd>
- </dl>
- </dd>
-</dl>
+    - `updateInfo`
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+      - : `object`. An object containing two properties:
 
-<p>{{Compat}}</p>
+        - `theme`
+          - : `object`. If the event fired because an extension-supplied theme was removed, this will be an empty object. If it fired because an extension-supplied theme was applied, then it will be a {{WebExtAPIRef("theme.Theme")}} object representing the theme that was applied.
+        - `windowId`{{optional_inline}}
+          - : `integer`. The ID of the window for which theme has been updated. If this property is not present, it means that the theme was updated globally.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<pre class="brush: js">function handleUpdated(updateInfo) {
+{{Compat}}
+
+## Examples
+
+```js
+function handleUpdated(updateInfo) {
   if (updateInfo.theme.colors) {
     console.log(`Theme was applied: ${updateInfo.theme}`);
   } else {
@@ -78,6 +68,7 @@ browser.theme.onUpdated.hasListener(listener)
   }
 }
 
-browser.theme.onUpdated.addListener(handleUpdated);</pre>
+browser.theme.onUpdated.addListener(handleUpdated);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

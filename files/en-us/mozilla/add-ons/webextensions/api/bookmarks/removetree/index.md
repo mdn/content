@@ -13,41 +13,39 @@ tags:
   - removeTree
 browser-compat: webextensions.api.bookmarks.removeTree
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <strong><code>bookmarks.removeTree()</code></strong> method recursively removes a bookmark folder and all of its contents.</p>
+The **`bookmarks.removeTree()`** method recursively removes a bookmark folder and all of its contents.
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> If your extension attempts to remove a bookmark tree from the bookmarks tree root node, the call will raise an error with the message: "The bookmark root cannot be modified" and the bookmark won't be removed.</p>
-</div>
+> **Warning:** If your extension attempts to remove a bookmark tree from the bookmarks tree root node, the call will raise an error with the message: "The bookmark root cannot be modified" and the bookmark won't be removed.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var removingTree = browser.bookmarks.removeTree(
+```js
+var removingTree = browser.bookmarks.removeTree(
   id                // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>id</code></dt>
- <dd>A {{jsxref("string")}} specifying the ID of the folder node to be deleted along with its descendants.</dd>
-</dl>
+- `id`
+  - : A {{jsxref("string")}} specifying the ID of the folder node to be deleted along with its descendants.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when the tree has been removed.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the tree has been removed.
 
-<p>If the node corresponding to the <code>id</code> parameter can't be found, the promise is rejected with an error message.</p>
+If the node corresponding to the `id` parameter can't be found, the promise is rejected with an error message.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example locates a bookmark folder named "MDN" and deletes it along with all of its contents.</p>
+This example locates a bookmark folder named "MDN" and deletes it along with all of its contents.
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log("bookmark item removed!");
 }
 
@@ -63,22 +61,20 @@ function removeMDN(searchResults) {
 }
 
 var searchingBookmarks = browser.bookmarks.search({ title: "MDN" });
-searchingBookmarks.then(removeMDN, onRejected);</pre>
+searchingBookmarks.then(removeMDN, onRejected);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-removeTree) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#method-removeTree"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json"><code>bookmarks.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -105,5 +101,4 @@ searchingBookmarks.then(removeMDN, onRejected);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

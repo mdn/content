@@ -5,30 +5,35 @@ tags:
   - User Interface
   - WebExtensions
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Using the {{WebExtAPIRef("omnibox")}} API, extensions can customize the suggestions offered in the browser address bar's drop-down when the user enters a keyword.</p>
+Using the {{WebExtAPIRef("omnibox")}} API, extensions can customize the suggestions offered in the browser address bar's drop-down when the user enters a keyword.
 
-<p><img alt="Example showing the result of the firefox_code_search WebExtension's customization of the address bar suggestions." src="omnibox_example_small.png"></p>
+![Example showing the result of the firefox_code_search WebExtension's customization of the address bar suggestions.](omnibox_example_small.png)
 
-<p>This enables your extension to, for example, search a library of free ebooks or, as in the example above, a repository of code examples.</p>
+This enables your extension to, for example, search a library of free ebooks or, as in the example above, a repository of code examples.
 
-<h2 id="Specifying_the_omnibox_customization">Specifying the omnibox customization</h2>
+## Specifying the omnibox customization
 
-<p>You tell your extension that it is going to customize the address bar suggestions by including the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox">omnibox</a> key and definition of the trigger keyword in its <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file:</p>
+You tell your extension that it is going to customize the address bar suggestions by including the [omnibox](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox) key and definition of the trigger keyword in its [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file:
 
-<pre class="brush: json">  "omnibox": { "keyword" : "cs" }</pre>
+```json
+  "omnibox": { "keyword" : "cs" }
+```
 
-<p>In the extension's background JavaScript file, using {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, you can optionally define the first suggestion to be displayed in the address bar drop-down. Use this to provide a hint on how to use the feature:</p>
+In the extension's background JavaScript file, using {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, you can optionally define the first suggestion to be displayed in the address bar drop-down. Use this to provide a hint on how to use the feature:
 
-<pre class="brush: js">browser.omnibox.setDefaultSuggestion({
+```js
+browser.omnibox.setDefaultSuggestion({
   description: `Search the firefox codebase
     (e.g. "hello world" | "path:omnibox.js onInputChanged")`
-});</pre>
+});
+```
 
-<p>You can then add the code to provide the customized content by listening for {{WebExtAPIRef("omnibox.onInputStarted")}}, which is dispatched when the user has typed the keyword and a space, and {{WebExtAPIRef("omnibox.onInputChanged")}}, which is dispatched whenever the user updates the address bar entry. You can then populate the suggestions, in this case building a search of https://searchfox.org/mozilla-central using the term entered by the user:</p>
+You can then add the code to provide the customized content by listening for {{WebExtAPIRef("omnibox.onInputStarted")}}, which is dispatched when the user has typed the keyword and a space, and {{WebExtAPIRef("omnibox.onInputChanged")}}, which is dispatched whenever the user updates the address bar entry. You can then populate the suggestions, in this case building a search of https\://searchfox.org/mozilla-central using the term entered by the user:
 
-<pre class="brush: js">browser.omnibox.onInputChanged.addListener((text, addSuggestions) =&gt; {
+```js
+browser.omnibox.onInputChanged.addListener((text, addSuggestions) => {
   let headers = new Headers({"Accept": "application/json"});
   let init = {method: 'GET', headers};
   let url = buildSearchURL(text);
@@ -37,13 +42,15 @@ tags:
   fetch(request)
     .then(createSuggestionsFromResponse)
     .then(addSuggestions);
-});</pre>
+});
+```
 
-<p>If the extension set a default suggestion using {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, then this will appear first in the drop-down.</p>
+If the extension set a default suggestion using {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, then this will appear first in the drop-down.
 
-<p>The extension can then listen for the user clicking one of the suggestions, using {{WebExtAPIRef("omnibox.onInputEntered")}}. If the default suggestion is clicked the user's custom term is returned, otherwise the suggestion's string is returned. This also passes information on the user's browser preferences for handling new links. In the code below the user's custom term is used to create a search, otherwise the suggested URL is opened:</p>
+The extension can then listen for the user clicking one of the suggestions, using {{WebExtAPIRef("omnibox.onInputEntered")}}. If the default suggestion is clicked the user's custom term is returned, otherwise the suggestion's string is returned. This also passes information on the user's browser preferences for handling new links. In the code below the user's custom term is used to create a search, otherwise the suggested URL is opened:
 
-<pre class="brush: js">browser.omnibox.onInputEntered.addListener((text, disposition) =&gt; {
+```js
+browser.omnibox.onInputEntered.addListener((text, disposition) => {
   let url = text;
   if (!text.startsWith(SOURCE_URL)) {
     // Update the url if the user clicks on the default suggestion.
@@ -60,9 +67,9 @@ tags:
       browser.tabs.create({url, active: false});
       break;
   }
-});</pre>
+});
+```
 
+## Examples
 
-<h2 id="Examples">Examples</h2>
-
-<p>The <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repository on GitHub includes the <a class="external external-icon" href="https://github.com/mdn/webextensions-examples/tree/master/firefox-code-search">firefox-code-search</a> example which customizes the search bar.</p>
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [firefox-code-search](https://github.com/mdn/webextensions-examples/tree/master/firefox-code-search) example which customizes the search bar.

@@ -12,90 +12,79 @@ tags:
   - browserAction
 browser-compat: webextensions.api.browserAction
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Adds a button to the browser's toolbar.</p>
+Adds a button to the browser's toolbar.
 
-<p>A <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">browser action</a> is a button in the browser's toolbar.</p>
+A [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) is a button in the browser's toolbar.
 
-<p>You can associate a popup with the button. The popup is specified using HTML, CSS and JavaScript, just like a normal web page. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts, but its global context is the popup, not the current page displayed in the browser. To affect web pages you need to communicate with them via <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging">messages</a>.</p>
+You can associate a popup with the button. The popup is specified using HTML, CSS and JavaScript, just like a normal web page. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts, but its global context is the popup, not the current page displayed in the browser. To affect web pages you need to communicate with them via [messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging).
 
-<p>If you specify a popup, it will be shown — and the content will be loaded — when the user clicks the icon. If you do not specify a popup, then when the user clicks the icon an event is dispatched to your extension.</p>
+If you specify a popup, it will be shown — and the content will be loaded — when the user clicks the icon. If you do not specify a popup, then when the user clicks the icon an event is dispatched to your extension.
 
-<p>You can define most of a browser action's properties declaratively using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> key in the manifest.json.</p>
+You can define most of a browser action's properties declaratively using the [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) key in the manifest.json.
 
-<p>With the <code>browserAction</code> API, you can:</p>
+With the `browserAction` API, you can:
 
-<ul>
- <li>use {{WebExtAPIRef("browserAction.onClicked")}} to listen for clicks on the icon.</li>
- <li>get and set the icon's properties — icon, title, popup, and so on. You can get and set these globally across all tabs, or for a specific tab by passing the tab ID as an additional argument.</li>
-</ul>
+- use {{WebExtAPIRef("browserAction.onClicked")}} to listen for clicks on the icon.
+- get and set the icon's properties — icon, title, popup, and so on. You can get and set these globally across all tabs, or for a specific tab by passing the tab ID as an additional argument.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("browserAction.ColorArray")}}</dt>
- <dd>An array of four integers in the range 0-255 defining an RGBA color.</dd>
- <dt>{{WebExtAPIRef("browserAction.ImageDataType")}}</dt>
- <dd>Pixel data for an image. Must be an <code><a href="/en-US/docs/Web/API/ImageData">ImageData</a></code> object (for example, from a {{htmlelement("canvas")}} element).</dd>
-</dl>
+- {{WebExtAPIRef("browserAction.ColorArray")}}
+  - : An array of four integers in the range 0-255 defining an RGBA color.
+- {{WebExtAPIRef("browserAction.ImageDataType")}}
+  - : Pixel data for an image. Must be an [`ImageData`](/en-US/docs/Web/API/ImageData) object (for example, from a {{htmlelement("canvas")}} element).
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("browserAction.setTitle()")}}</dt>
- <dd>Sets the browser action's title. This will be displayed in a tooltip.</dd>
- <dt>{{WebExtAPIRef("browserAction.getTitle()")}}</dt>
- <dd>Gets the browser action's title.</dd>
- <dt>{{WebExtAPIRef("browserAction.setIcon()")}}</dt>
- <dd>Sets the browser action's icon.</dd>
- <dt>{{WebExtAPIRef("browserAction.setPopup()")}}</dt>
- <dd>Sets the HTML document to be opened as a popup when the user clicks on the browser action's icon.</dd>
- <dt>{{WebExtAPIRef("browserAction.getPopup()")}}</dt>
- <dd>Gets the HTML document set as the browser action's popup.</dd>
- <dt>{{WebExtAPIRef("browserAction.openPopup()")}}</dt>
- <dd>Open the browser action's popup.</dd>
- <dt>{{WebExtAPIRef("browserAction.setBadgeText()")}}</dt>
- <dd>Sets the browser action's badge text. The badge is displayed on top of the icon.</dd>
- <dt>{{WebExtAPIRef("browserAction.getBadgeText()")}}</dt>
- <dd>Gets the browser action's badge text.</dd>
- <dt>{{WebExtAPIRef("browserAction.setBadgeBackgroundColor()")}}</dt>
- <dd>Sets the badge's background color.</dd>
- <dt>{{WebExtAPIRef("browserAction.getBadgeBackgroundColor()")}}</dt>
- <dd>Gets the badge's background color.</dd>
- <dt>{{WebExtAPIRef("browserAction.setBadgeTextColor()")}}</dt>
- <dd>Sets the badge's text color.</dd>
- <dt>{{WebExtAPIRef("browserAction.getBadgeTextColor()")}}</dt>
- <dd>Gets the badge's text color.</dd>
- <dt>{{WebExtAPIRef("browserAction.enable()")}}</dt>
- <dd>Enables the browser action for a tab. By default, browser actions are enabled for all tabs.</dd>
- <dt>{{WebExtAPIRef("browserAction.disable()")}}</dt>
- <dd>Disables the browser action for a tab, meaning that it cannot be clicked when that tab is active.</dd>
- <dt>{{WebExtAPIRef("browserAction.isEnabled()")}}</dt>
- <dd>Checks whether the browser action is enabled or not.</dd>
-</dl>
+- {{WebExtAPIRef("browserAction.setTitle()")}}
+  - : Sets the browser action's title. This will be displayed in a tooltip.
+- {{WebExtAPIRef("browserAction.getTitle()")}}
+  - : Gets the browser action's title.
+- {{WebExtAPIRef("browserAction.setIcon()")}}
+  - : Sets the browser action's icon.
+- {{WebExtAPIRef("browserAction.setPopup()")}}
+  - : Sets the HTML document to be opened as a popup when the user clicks on the browser action's icon.
+- {{WebExtAPIRef("browserAction.getPopup()")}}
+  - : Gets the HTML document set as the browser action's popup.
+- {{WebExtAPIRef("browserAction.openPopup()")}}
+  - : Open the browser action's popup.
+- {{WebExtAPIRef("browserAction.setBadgeText()")}}
+  - : Sets the browser action's badge text. The badge is displayed on top of the icon.
+- {{WebExtAPIRef("browserAction.getBadgeText()")}}
+  - : Gets the browser action's badge text.
+- {{WebExtAPIRef("browserAction.setBadgeBackgroundColor()")}}
+  - : Sets the badge's background color.
+- {{WebExtAPIRef("browserAction.getBadgeBackgroundColor()")}}
+  - : Gets the badge's background color.
+- {{WebExtAPIRef("browserAction.setBadgeTextColor()")}}
+  - : Sets the badge's text color.
+- {{WebExtAPIRef("browserAction.getBadgeTextColor()")}}
+  - : Gets the badge's text color.
+- {{WebExtAPIRef("browserAction.enable()")}}
+  - : Enables the browser action for a tab. By default, browser actions are enabled for all tabs.
+- {{WebExtAPIRef("browserAction.disable()")}}
+  - : Disables the browser action for a tab, meaning that it cannot be clicked when that tab is active.
+- {{WebExtAPIRef("browserAction.isEnabled()")}}
+  - : Checks whether the browser action is enabled or not.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("browserAction.onClicked")}}</dt>
- <dd>Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup.</dd>
-</dl>
+- {{WebExtAPIRef("browserAction.onClicked")}}
+  - : Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
+> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -122,5 +111,4 @@ browser-compat: webextensions.api.browserAction
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

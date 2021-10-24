@@ -13,65 +13,60 @@ tags:
   - contextMenus
 browser-compat: webextensions.api.menus.OnClickData
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Information passed to the {{WebExtAPIRef("menus.onClicked")}} event listener when a menu item is clicked.</p>
+Information passed to the {{WebExtAPIRef("menus.onClicked")}} event listener when a menu item is clicked.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>bookmarkId</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The ID of the bookmark where the context menu was clicked.</dd>
- <dt><code>button</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. Which mouse button was pressed. The values are the same as for <a href="/en-US/docs/Web/API/MouseEvent/button"><code>MouseEvent.button</code></a>.</dd>
- <dt><code>checked</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. A flag indicating whether a checkbox or radio item was checked after it was clicked.</dd>
- <dt><code>editable</code></dt>
- <dd><code>boolean</code>. A flag indicating whether the element is editable: for example, if it is a <a href="/en-US/docs/Web/HTML/Element/textarea">textarea</a>.</dd>
- <dt><code>frameId</code> {{optional_inline}}</dt>
- <dd><code>integer</code>. The ID of the frame in which the item was clicked. The frame ID can be used in other APIs that accept frame IDs, such as {{WebExtAPIRef("tabs.sendMessage()")}}. If the item was clicked in the top level document, <code>frameId</code> is zero. If the item was clicked outside the page entirely (for example, in the <code>tools_menu</code> or <code>tab</code> context), then <code>frameId</code> is <code>undefined</code>.</dd>
- <dt><code>frameUrl</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The URL of the frame of the element where the context menu was clicked, if it was in a frame.</dd>
- <dt><code>linkText</code> {{optional_inline}}</dt>
- <dd><code>string</code>. If the element is a link, the text for the link. If the link contains no text, the URL itself is given here.</dd>
- <dt><code>linkUrl</code> {{optional_inline}}</dt>
- <dd><code>string</code>. If the element is a link, the URL it points to.</dd>
- <dt><code>mediaType</code> {{optional_inline}}</dt>
- <dd><code>string</code>. One of "image", "video", or "audio" if the context menu was activated on one of these types of elements.</dd>
- <dt><code>menuItemId</code></dt>
- <dd><code>integer</code> or <code>string</code>. The ID of the menu item that was clicked.</dd>
- <dt><code>modifiers</code></dt>
- <dd><code>array</code> of <code>string</code>. An array containing any modifier keys that were pressed when the item was clicked. Possible values are: "Alt", "Command", "Ctrl", "MacCtrl", and "Shift". On a Mac, if the user has the Control key pressed, then both "Ctrl" and "MacCtrl" are included.</dd>
- <dt><code>pageUrl</code> {{optional_inline}}</dt>
- <dd><code>string</code>. The URL of the page in which the menu item was clicked. This property is not present if the click occurred in a context where there is no current page, such as on a browser action.</dd>
- <dt><code>parentMenuItemId</code> {{optional_inline}}</dt>
- <dd><code>integer</code> or <code>string</code>. The parent ID, if any, for the item clicked.</dd>
- <dt><code>selectionText</code> {{optional_inline}}</dt>
- <dd><code>string</code>. If some text was selected in the page, this contains the selected text.</dd>
- <dt><code>srcUrl</code> {{optional_inline}}</dt>
- <dd><code>string</code>. Will be present for elements with a "src" URL.</dd>
- <dt><code>targetElementId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. An identifier of the element, if any, over which the context menu was created. Use {{WebExtAPIRef("menus.getTargetElement()")}} in the content script to locate the element. Note that this is not the <a href="/en-US/docs/Web/HTML/Global_attributes/id">id</a> attribute of the page element.</dd>
- <dt><code>viewType</code> {{optional_inline}}</dt>
- <dd>{{WebExtAPIRef("extension.ViewType", "ViewType")}}. The type of extension view.</dd>
- <dt><code>wasChecked</code> {{optional_inline}}</dt>
- <dd><code>boolean</code>. A flag indicating whether a checkbox or radio item was checked before it was clicked.</dd>
-</dl>
+- `bookmarkId` {{optional_inline}}
+  - : `string`. The ID of the bookmark where the context menu was clicked.
+- `button` {{optional_inline}}
+  - : `integer`. Which mouse button was pressed. The values are the same as for [`MouseEvent.button`](/en-US/docs/Web/API/MouseEvent/button).
+- `checked` {{optional_inline}}
+  - : `boolean`. A flag indicating whether a checkbox or radio item was checked after it was clicked.
+- `editable`
+  - : `boolean`. A flag indicating whether the element is editable: for example, if it is a [textarea](/en-US/docs/Web/HTML/Element/textarea).
+- `frameId` {{optional_inline}}
+  - : `integer`. The ID of the frame in which the item was clicked. The frame ID can be used in other APIs that accept frame IDs, such as {{WebExtAPIRef("tabs.sendMessage()")}}. If the item was clicked in the top level document, `frameId` is zero. If the item was clicked outside the page entirely (for example, in the `tools_menu` or `tab` context), then `frameId` is `undefined`.
+- `frameUrl` {{optional_inline}}
+  - : `string`. The URL of the frame of the element where the context menu was clicked, if it was in a frame.
+- `linkText` {{optional_inline}}
+  - : `string`. If the element is a link, the text for the link. If the link contains no text, the URL itself is given here.
+- `linkUrl` {{optional_inline}}
+  - : `string`. If the element is a link, the URL it points to.
+- `mediaType` {{optional_inline}}
+  - : `string`. One of "image", "video", or "audio" if the context menu was activated on one of these types of elements.
+- `menuItemId`
+  - : `integer` or `string`. The ID of the menu item that was clicked.
+- `modifiers`
+  - : `array` of `string`. An array containing any modifier keys that were pressed when the item was clicked. Possible values are: "Alt", "Command", "Ctrl", "MacCtrl", and "Shift". On a Mac, if the user has the Control key pressed, then both "Ctrl" and "MacCtrl" are included.
+- `pageUrl` {{optional_inline}}
+  - : `string`. The URL of the page in which the menu item was clicked. This property is not present if the click occurred in a context where there is no current page, such as on a browser action.
+- `parentMenuItemId` {{optional_inline}}
+  - : `integer` or `string`. The parent ID, if any, for the item clicked.
+- `selectionText` {{optional_inline}}
+  - : `string`. If some text was selected in the page, this contains the selected text.
+- `srcUrl` {{optional_inline}}
+  - : `string`. Will be present for elements with a "src" URL.
+- `targetElementId`{{optional_inline}}
+  - : `integer`. An identifier of the element, if any, over which the context menu was created. Use {{WebExtAPIRef("menus.getTargetElement()")}} in the content script to locate the element. Note that this is not the [id](/en-US/docs/Web/HTML/Global_attributes/id) attribute of the page element.
+- `viewType` {{optional_inline}}
+  - : {{WebExtAPIRef("extension.ViewType", "ViewType")}}. The type of extension view.
+- `wasChecked` {{optional_inline}}
+  - : `boolean`. A flag indicating whether a checkbox or radio item was checked before it was clicked.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#type-OnClickData) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/contextMenus#type-OnClickData"><code>chrome.contextMenus</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a> in the Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -98,5 +93,4 @@ browser-compat: webextensions.api.menus.OnClickData
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

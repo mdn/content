@@ -7,36 +7,35 @@ tags:
   - WebExtensions
 browser-compat: webextensions.manifest.author
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>String</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json">
-"author": "Walt Whitman"</pre>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td><pre class="brush: json">"author": "Walt Whitman"</pre></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>The extension's author, intended for display in the browser's user interface. If the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer">developer</a> key is supplied and it contains the "name" property, it will override the author key. There's no way to specify multiple authors.</p>
+The extension's author, intended for display in the browser's user interface. If the [developer](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) key is supplied and it contains the "name" property, it will override the author key. There's no way to specify multiple authors.
 
-<p>This is a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json">localizable property</a>.</p>
+This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: json ">"author": "Walt Whitman"</pre>
+```json
+"author": "Walt Whitman"
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

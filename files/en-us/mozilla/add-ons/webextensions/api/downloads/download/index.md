@@ -13,87 +13,81 @@ tags:
   - downloads
 browser-compat: webextensions.api.downloads.download
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <strong><code>download()</code></strong> function of the {{WebExtAPIRef("downloads")}} API downloads a file, given its URL and other optional preferences.</p>
+The **`download()`** function of the {{WebExtAPIRef("downloads")}} API downloads a file, given its URL and other optional preferences.
 
-<p>If the URL uses the HTTP or HTTPS protocol, the request includes all the relevant cookies, that is, those cookies set for the URL's hostname, secure flag, path, and so on. The default cookies, the cookies from the normal browsing session, are used unless:</p>
-<ul>
-    <li>the <code>incognito</code> option is used, then the private browsing cookies are used.</li>
-    <li>the <code>cookieStoreId</code> option is used, then the cookies from the specified store are used.</li>
-</ul>
+If the URL uses the HTTP or HTTPS protocol, the request includes all the relevant cookies, that is, those cookies set for the URL's hostname, secure flag, path, and so on. The default cookies, the cookies from the normal browsing session, are used unless:
 
-<p>If both <code>filename</code> and <code>saveAs</code> are specified, the Save As dialog is displayed, populated with the <code>filename</code>.</p>
+- the `incognito` option is used, then the private browsing cookies are used.
+- the `cookieStoreId` option is used, then the cookies from the specified store are used.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+If both `filename` and `saveAs` are specified, the Save As dialog is displayed, populated with the `filename`.
 
-<h2 id="Syntax">Syntax</h2>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<pre class="brush:js">var downloading = browser.downloads.download(
+## Syntax
+
+```js
+var downloading = browser.downloads.download(
   options                   // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>options</code></dt>
- <dd>
-   <p>An <code>object</code> specifying what file you wish to download, and any other preferences you wish to set concerning the download. It can contain the following properties:</p>
-   <dl>
-    <dt><code>allowHttpErrors</code>{{optional_inline}}</dt>
-    <dd>A <code>boolean</code> flag that enables downloads to continue even if they encounter HTTP errors. Using this flag, for example, enables the download of server error pages. Default value <code>false</code>. When set to:
-    <ul>
-     <li><code>false</code>, the download is canceled when it encounters an HTTP error.</li>
-     <li><code>true</code>, the download continues when an HTTP error is encountered and the HTTP server error is not reported. However, if the download fails due to file-related, network-related, user-related, or other error, that error is reported.</li>
-    </ul>
-    </dd>
-    <dt><code>body</code>{{optional_inline}}</dt>
-    <dd>A <code>string</code> representing the post body of the request.</dd>
-    <dt><code>conflictAction</code>{{optional_inline}}</dt>
-    <dd>A string representing the action you want taken if there is a filename conflict, as defined in the {{WebExtAPIRef('downloads.FilenameConflictAction')}} type (defaults to "uniquify" when it is not specified).</dd>
-    <dt><code>cookieStoreId</code>{{optional_inline}}</dt>
-    <dd>The cookie store ID of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">contextual identity</a> the download is associated with. If omitted, the default cookie store is used. Use requires the "cookies" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">API permission</a>.
-    </dd>
-    <dt><code>filename</code>{{optional_inline}}</dt>
-    <dd>A <code>string</code> representing a file path relative to the default downloads directory — this provides the location where you want the file to be saved, and what filename you want to use. Absolute paths, empty paths, path components that start and/or end with a dot (.), and paths containing back-references (<code>../</code>) will cause an error. If omitted, this value will default to the filename already given to the download file, and a location immediately inside the downloads directory.</dd>
-    <dt><code>headers</code>{{optional_inline}}</dt>
-    <dd>If the URL uses the HTTP or HTTPS protocols, an <code>array</code> of <code>objects</code> representing additional HTTP headers to send with the request. Each header is represented as a dictionary object containing the keys <code>name</code> and either <code>value</code> or <code>binaryValue</code>. The headers that are forbidden by <code>XMLHttpRequest</code> and <code>fetch</code> cannot be specified, however, Firefox 70 and later enables the use of the <code>Referer</code> header. Attempting to use a forbidden header throws an error.</dd>
-    <dt><code>incognito</code>{{optional_inline}}</dt>
-    <dd>A <code>boolean</code>: if present and set to true, then associate this download with a private browsing session. This means that it will only appear in the download manager for any private windows that are currently open.</dd>
-    <dt><code>method</code>{{optional_inline}}</dt>
-    <dd>A <code>string</code> representing the HTTP method to use if the <code>url</code> uses the HTTP[S] protocol. This may be either "GET" or "POST".</dd>
-    <dt><code>saveAs</code>{{optional_inline}}</dt>
-    <dd>
-    <p>A <code>boolean</code> that specifies whether to provide a file chooser dialog to allow the user to select a filename (<code>true</code>), or not (<code>false</code>).</p>
+- `options`
 
-    <p>If this option is omitted, the browser will show the file chooser or not based on the general user preference for this behavior (in Firefox this preference is labeled "Always ask you where to save files" in about:preferences, or <code>browser.download.useDownloadDir</code> in about:config).</p>
+  - : An `object` specifying what file you wish to download, and any other preferences you wish to set concerning the download. It can contain the following properties:
 
-    <div class="note">
-    <p><strong>Note:</strong> Firefox for Android raises an error if <code>saveAs</code> is set to <code>true</code>. The parameter is ignored when <code>saveAs</code> is <code>false</code> or not included.</p>
-    </div>
-    </dd>
-    <dt><code>url</code></dt>
-    <dd>A <code>string</code> representing the URL to download.</dd>
-   </dl>
- </dd>
-</dl>
+    - `allowHttpErrors`{{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+      - : A `boolean` flag that enables downloads to continue even if they encounter HTTP errors. Using this flag, for example, enables the download of server error pages. Default value `false`. When set to:
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>. If the download started successfully, the promise will be fulfilled with the <code>id</code> of the new {{WebExtAPIRef("downloads.DownloadItem")}}. Otherwise, the promise will be rejected with an error message taken from {{WebExtAPIRef("downloads.InterruptReason")}}.</p>
+        - `false`, the download is canceled when it encounters an HTTP error.
+        - `true`, the download continues when an HTTP error is encountered and the HTTP server error is not reported. However, if the download fails due to file-related, network-related, user-related, or other error, that error is reported.
 
-<p>If you use <a href="/en-US/docs/Web/API/URL/createObjectURL">URL.createObjectURL()</a> to download data created in JavaScript and you want to revoke the object URL (with <a href="/en-US/docs/Web/API/URL/revokeObjectURL">revokeObjectURL</a>) later (as it is strongly recommended), you need to do that after the download has been completed. To do so, listen to the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged">downloads.onChanged</a> event.</p>
+    - `body`{{optional_inline}}
+      - : A `string` representing the post body of the request.
+    - `conflictAction`{{optional_inline}}
+      - : A string representing the action you want taken if there is a filename conflict, as defined in the {{WebExtAPIRef('downloads.FilenameConflictAction')}} type (defaults to "uniquify" when it is not specified).
+    - `cookieStoreId`{{optional_inline}}
+      - : The cookie store ID of the [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) the download is associated with. If omitted, the default cookie store is used. Use requires the "cookies" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
+    - `filename`{{optional_inline}}
+      - : A `string` representing a file path relative to the default downloads directory — this provides the location where you want the file to be saved, and what filename you want to use. Absolute paths, empty paths, path components that start and/or end with a dot (.), and paths containing back-references (`../`) will cause an error. If omitted, this value will default to the filename already given to the download file, and a location immediately inside the downloads directory.
+    - `headers`{{optional_inline}}
+      - : If the URL uses the HTTP or HTTPS protocols, an `array` of `objects` representing additional HTTP headers to send with the request. Each header is represented as a dictionary object containing the keys `name` and either `value` or `binaryValue`. The headers that are forbidden by `XMLHttpRequest` and `fetch` cannot be specified, however, Firefox 70 and later enables the use of the `Referer` header. Attempting to use a forbidden header throws an error.
+    - `incognito`{{optional_inline}}
+      - : A `boolean`: if present and set to true, then associate this download with a private browsing session. This means that it will only appear in the download manager for any private windows that are currently open.
+    - `method`{{optional_inline}}
+      - : A `string` representing the HTTP method to use if the `url` uses the HTTP\[S] protocol. This may be either "GET" or "POST".
+    - `saveAs`{{optional_inline}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+      - : A `boolean` that specifies whether to provide a file chooser dialog to allow the user to select a filename (`true`), or not (`false`).
 
-<p>{{Compat}}</p>
+        If this option is omitted, the browser will show the file chooser or not based on the general user preference for this behavior (in Firefox this preference is labeled "Always ask you where to save files" in about:preferences, or `browser.download.useDownloadDir` in about:config).
 
-<h2 id="Examples">Examples</h2>
+        > **Note:** Firefox for Android raises an error if `saveAs` is set to `true`. The parameter is ignored when `saveAs` is `false` or not included.
 
-<p>The following snippet attempts to download an example file, also specifying a filename and location to save it in, and the <code>uniquify</code> <code>conflictAction</code> option.</p>
+    - `url`
+      - : A `string` representing the URL to download.
 
-<pre class="brush: js">function onStartedDownload(id) {
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the download started successfully, the promise will be fulfilled with the `id` of the new {{WebExtAPIRef("downloads.DownloadItem")}}. Otherwise, the promise will be rejected with an error message taken from {{WebExtAPIRef("downloads.InterruptReason")}}.
+
+If you use [URL.createObjectURL()](/en-US/docs/Web/API/URL/createObjectURL) to download data created in JavaScript and you want to revoke the object URL (with [revokeObjectURL](/en-US/docs/Web/API/URL/revokeObjectURL)) later (as it is strongly recommended), you need to do that after the download has been completed. To do so, listen to the [downloads.onChanged](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged) event.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+The following snippet attempts to download an example file, also specifying a filename and location to save it in, and the `uniquify` `conflictAction` option.
+
+```js
+function onStartedDownload(id) {
   console.log(`Started downloading: ${id}`);
 }
 
@@ -109,16 +103,14 @@ var downloading = browser.downloads.download({
   conflictAction : 'uniquify'
 });
 
-downloading.then(onStartedDownload, onFailed);</pre>
+downloading.then(onStartedDownload, onFailed);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-download) API.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/downloads#method-download"><code>chrome.downloads</code></a> API.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -145,5 +137,4 @@ downloading.then(onStartedDownload, onFailed);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

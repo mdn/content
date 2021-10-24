@@ -13,32 +13,37 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.lastError
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>This value is used to report an error message from an asynchronous API, when the asynchronous API is given a callback. This is useful for extensions that are using the callback-based version of the WebExtension APIs.</p>
+This value is used to report an error message from an asynchronous API, when the asynchronous API is given a callback. This is useful for extensions that are using the callback-based version of the WebExtension APIs.
 
-<p>You don't need to check this property if you are using the promise-based version of the APIs: instead, pass an error handler to the promise:</p>
+You don't need to check this property if you are using the promise-based version of the APIs: instead, pass an error handler to the promise:
 
-<pre class="brush: js">const <var>gettingCookies</var> = browser.cookies.getAll();
-gettingCookies.then(<var>onGot</var>, <var>onError</var>);</pre>
+```js
+const gettingCookies = browser.cookies.getAll();
+gettingCookies.then(onGot, onError);
+```
 
-<p>The <code>runtime.lastError</code> property is set when an asynchronous function has an error condition that it needs to report to its caller.</p>
+The `runtime.lastError` property is set when an asynchronous function has an error condition that it needs to report to its caller.
 
-<p>If you call an asynchronous function that may set <code>lastError</code>, you are expected to check for the error when you handle the result of the function. If <code>lastError</code> has been set and you don't check it within the callback function, then an error will be raised.</p>
+If you call an asynchronous function that may set `lastError`, you are expected to check for the error when you handle the result of the function. If `lastError` has been set and you don't check it within the callback function, then an error will be raised.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">let <var>myError</var> = browser.runtime.lastError;  // null or Error object</pre>
+```js
+let myError = browser.runtime.lastError;  // null or Error object
+```
 
-<h3 id="Value">Value</h3>
+### Value
 
-<p>An {{jsxref("Error")}} object representing the error. The {{jsxref("Error.message", "message")}} property is a <code>string</code> with a human-readable description of the error . If <code>lastError</code> has not been set, the value is <code>null</code>.</p>
+An {{jsxref("Error")}} object representing the error. The {{jsxref("Error.message", "message")}} property is a `string` with a human-readable description of the error . If `lastError` has not been set, the value is `null`.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Set a cookie, using a callback to log the new cookie or report an error:</p>
+Set a cookie, using a callback to log the new cookie or report an error:
 
-<pre class="brush: js">function logCookie(c) {
+```js
+function logCookie(c) {
   if (browser.runtime.lastError) {
     console.error(browser.runtime.lastError);
   } else {
@@ -49,11 +54,13 @@ gettingCookies.then(<var>onGot</var>, <var>onError</var>);</pre>
 browser.cookies.set(
   {url: "https://developer.mozilla.org/"},
   logCookie
-);</pre>
+);
+```
 
-<p>The same, but using a promise to handle the result of <code>setCookie()</code>:</p>
+The same, but using a promise to handle the result of `setCookie()`:
 
-<pre class="brush: js">function logCookie(c) {
+```js
+function logCookie(c) {
   console.log(c);
 }
 
@@ -65,26 +72,22 @@ const setCookie = browser.cookies.set(
   {url: "https://developer.mozilla.org/"}
 );
 
-setCookie.then(logCookie, logError);</pre>
+setCookie.then(logCookie, logError);
+```
 
-<div class="note">
-<p><strong>Note:</strong> <code>runtime.lastError</code> is an alias for {{WebExtAPIRef("extension.lastError")}}. They are set together, and checking either one will work.</p>
-</div>
+> **Note:** `runtime.lastError` is an alias for {{WebExtAPIRef("extension.lastError")}}. They are set together, and checking either one will work.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#property-lastError) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#property-lastError"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,5 +114,4 @@ setCookie.then(logCookie, logError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

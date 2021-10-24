@@ -13,39 +13,39 @@ tags:
   - clear
 browser-compat: webextensions.api.notifications.clear
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Clears a notification, given its ID.</p>
+Clears a notification, given its ID.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var clearing = browser.notifications.clear(
+```js
+var clearing = browser.notifications.clear(
   id                            // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>id</code></dt>
- <dd><code>string</code>. The ID of the notification to clear. This is the same as the ID passed into {{WebExtAPIRef('notifications.create()')}}'s callback.</dd>
-</dl>
+- `id`
+  - : `string`. The ID of the notification to clear. This is the same as the ID passed into {{WebExtAPIRef('notifications.create()')}}'s callback.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a boolean: <code>true</code> if the notification was cleared, or <code>false</code> if it was not (for example, because the notification referenced by <code>id</code> did not exist).</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a boolean: `true` if the notification was cleared, or `false` if it was not (for example, because the notification referenced by `id` did not exist).
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example shows a notification when the user clicks a browser action, unless the notification was already being shown, in which case it clears the notification:</p>
+This example shows a notification when the user clicks a browser action, unless the notification was already being shown, in which case it clears the notification:
 
-<pre class="brush: js">var myNotification = "my-notification";
+```js
+var myNotification = "my-notification";
 
 function toggleAlarm(all) {
   if (myNotification in all) {
@@ -66,12 +66,10 @@ function handleClick() {
 }
 
 browser.browserAction.onClicked.addListener(handleClick);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/notifications"><code>chrome.notifications</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

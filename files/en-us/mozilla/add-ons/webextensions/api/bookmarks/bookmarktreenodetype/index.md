@@ -12,22 +12,20 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.bookmarks.BookmarkTreeNodeType
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>The <strong><code>bookmarks.BookmarkTreeNodeType</code></strong> type is used to describe whether a node in the bookmark tree is a bookmark, a folder, or a separator.</p>
+The **`bookmarks.BookmarkTreeNodeType`** type is used to describe whether a node in the bookmark tree is a bookmark, a folder, or a separator.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p><code>bookmarks.BookmarkTreeNodeType</code> is a {{jsxref("string")}} which can have one of the following three values:</p>
+`bookmarks.BookmarkTreeNodeType` is a {{jsxref("string")}} which can have one of the following three values:
 
-<ul>
- <li><code>"bookmark"</code>: the node is a bookmark.</li>
- <li><code>"folder"</code>: the node is a folder.</li>
- <li><code>"separator"</code>: the node is a separator.</li>
-</ul>
+- `"bookmark"`: the node is a bookmark.
+- `"folder"`: the node is a folder.
+- `"separator"`: the node is a separator.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

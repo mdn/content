@@ -9,30 +9,27 @@ tags:
   - Reference
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>The WebExtension <code>clipboard</code> API (which is different from the <a href="/en-US/docs/Web/API/Clipboard_API">standard Clipboard API</a>) enables an extension to copy items to the system clipboard. Currently the WebExtension <code>clipboard</code> API only supports copying images, but it's intended to support copying text and HTML in the future.</p>
+The WebExtension `clipboard` API (which is different from the [standard Clipboard API](/en-US/docs/Web/API/Clipboard_API)) enables an extension to copy items to the system clipboard. Currently the WebExtension `clipboard` API only supports copying images, but it's intended to support copying text and HTML in the future.
 
-<p>The WebExtension <code>clipboard</code> API exists primarily because the standard Clipboard API <a href="https://w3c.github.io/clipboard-apis/#writing-to-clipboard">doesn't support writing images to the clipboard</a>. The WebExtension <code>clipboard</code> API may be deprecated once the standard Clipboard API's support for non-text clipboard contents has entered general use.</p>
+The WebExtension `clipboard` API exists primarily because the standard Clipboard API [doesn't support writing images to the clipboard](https://w3c.github.io/clipboard-apis/#writing-to-clipboard). The WebExtension `clipboard` API may be deprecated once the standard Clipboard API's support for non-text clipboard contents has entered general use.
 
-<p>Reading from the clipboard is not supported by this API, because the clipboard can already be read using the standard web platform APIs. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard#reading_from_the_clipboard">Interacting with the clipboard</a>.</p>
+Reading from the clipboard is not supported by this API, because the clipboard can already be read using the standard web platform APIs. See [Interacting with the clipboard](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard#reading_from_the_clipboard).
 
-<p>This API is based on Chrome's <code><a class="external external-icon" href="https://developer.chrome.com/apps/clipboard">clipboard</a></code> API, but that API is only available for Chrome apps, not extensions.</p>
+This API is based on Chrome's [`clipboard`](https://developer.chrome.com/apps/clipboard) API, but that API is only available for Chrome apps, not extensions.
 
-<p>To use this API you need the <code>"clipboardWrite"</code> extension <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
+To use this API you need the `"clipboardWrite"` extension [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("clipboard.setImageData()")}}</dt>
- <dd>Copy an image to the clipboard.</dd>
-</dl>
+- {{WebExtAPIRef("clipboard.setImageData()")}}
+  - : Copy an image to the clipboard.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("webextensions.api.clipboard")}} {{WebExtExamples("h2")}}</p>
+{{Compat("webextensions.api.clipboard")}} {{WebExtExamples("h2")}}
 
-<div class="note"><p><strong>Note:</strong></p>
-
-<p>This API is based on Chromium's <a href="https://developer.chrome.com/apps/clipboard"><code>chrome.clipboard</code></a> API.</p>
-</div>
+> **Note:**
+>
+> This API is based on Chromium's [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API.

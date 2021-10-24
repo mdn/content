@@ -13,60 +13,55 @@ tags:
   - Windows
 browser-compat: webextensions.api.windows.Window
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Information about a browser window.</p>
+Information about a browser window.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are <code>objects</code>. They contain the following properties:</p>
+Values of this type are `objects`. They contain the following properties:
 
-<dl>
- <dt><code>alwaysOnTop</code></dt>
- <dd><code>boolean</code>. Whether the window is set to be always on top.</dd>
- <dt><code>focused</code></dt>
- <dd><code>boolean</code>. Whether the window is currently the focused window.</dd>
- <dt><code>height</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. The height of the window, including the frame, in pixels.</dd>
-</dl>
+- `alwaysOnTop`
+  - : `boolean`. Whether the window is set to be always on top.
+- `focused`
+  - : `boolean`. Whether the window is currently the focused window.
+- `height`{{optional_inline}}
+  - : `integer`. The height of the window, including the frame, in pixels.
 
-<dl>
- <dt><code>id</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. The ID of the window. Window IDs are unique within a browser session.</dd>
- <dt><code>incognito</code></dt>
- <dd><code>boolean</code>. Whether the window is incognito (private).</dd>
- <dt><code>left</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. The offset of the window from the left edge of the screen in pixels.</dd>
- <dt><code>sessionId</code>{{optional_inline}}</dt>
- <dd><code>string</code>. The session ID used to uniquely identify a Window obtained from the {{WebExtAPIRef('sessions')}} API.</dd>
- <dt><code>state</code>{{optional_inline}}</dt>
- <dd>A {{WebExtAPIRef('windows.WindowState')}} value representing the state of this browser window — maximized, minimized, etc.</dd>
- <dt><code>tabs</code>{{optional_inline}}</dt>
- <dd>Array of {{WebExtAPIRef('tabs.Tab')}} objects representing the current tabs in the window.</dd>
- <dt><code>title</code>{{optional_inline}}</dt>
- <dd>The title of the browser window. Requires "tabs" permission or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a> for the active tab's URL. Read only.</dd>
- <dt><code>top</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. The offset of the window from the top edge of the screen in pixels.</dd>
- <dt><code>type</code>{{optional_inline}}</dt>
- <dd>A {{WebExtAPIRef('windows.WindowType')}} value representing the type of browser window this is — normal browser window, popup, etc.</dd>
- <dt><code>width</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. The width of the window, including the frame, in pixels.</dd>
-</dl>
+<!---->
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- `id`{{optional_inline}}
+  - : `integer`. The ID of the window. Window IDs are unique within a browser session.
+- `incognito`
+  - : `boolean`. Whether the window is incognito (private).
+- `left`{{optional_inline}}
+  - : `integer`. The offset of the window from the left edge of the screen in pixels.
+- `sessionId`{{optional_inline}}
+  - : `string`. The session ID used to uniquely identify a Window obtained from the {{WebExtAPIRef('sessions')}} API.
+- `state`{{optional_inline}}
+  - : A {{WebExtAPIRef('windows.WindowState')}} value representing the state of this browser window — maximized, minimized, etc.
+- `tabs`{{optional_inline}}
+  - : Array of {{WebExtAPIRef('tabs.Tab')}} objects representing the current tabs in the window.
+- `title`{{optional_inline}}
+  - : The title of the browser window. Requires "tabs" permission or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the active tab's URL. Read only.
+- `top`{{optional_inline}}
+  - : `integer`. The offset of the window from the top edge of the screen in pixels.
+- `type`{{optional_inline}}
+  - : A {{WebExtAPIRef('windows.WindowType')}} value representing the type of browser window this is — normal browser window, popup, etc.
+- `width`{{optional_inline}}
+  - : `integer`. The width of the window, including the frame, in pixels.
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<p>{{WebExtExamples}}</p>
+{{Compat}}
 
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/windows#type-Window"><code>chrome.windows</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> in the Chromium code.</p>
+> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-Window) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -93,5 +88,4 @@ browser-compat: webextensions.api.windows.Window
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

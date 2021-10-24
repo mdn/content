@@ -12,71 +12,62 @@ tags:
   - pageAction
 browser-compat: webextensions.api.pageAction
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>A <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">page action</a> is a clickable icon inside the browser's address bar.</p>
+A [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) is a clickable icon inside the browser's address bar.
 
-<p><img alt="" src="page-action.png"></p>
+![](page-action.png)
 
-<p>You can listen for clicks on the icon, or specify a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">popup</a> that will open when the icon is clicked.</p>
+You can listen for clicks on the icon, or specify a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) that will open when the icon is clicked.
 
-<p>If you specify a popup, you can define its contents and behavior using HTML, CSS, and JavaScript—just like a normal web page. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts.</p>
+If you specify a popup, you can define its contents and behavior using HTML, CSS, and JavaScript—just like a normal web page. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts.
 
-<p>You can define most of a page action's properties declaratively using the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action"><code>page_action</code> key</a> in your <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code>, but can also redefine them programmatically using this API.</p>
+You can define most of a page action's properties declaratively using the [`page_action` key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) in your [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), but can also redefine them programmatically using this API.
 
-<p>Page actions are for actions that are only relevant to particular pages (such as "bookmark the current tab"). If they are relevant to the browser as a whole (such as "show all bookmarks"), use a browser action instead.</p>
+Page actions are for actions that are only relevant to particular pages (such as "bookmark the current tab"). If they are relevant to the browser as a whole (such as "show all bookmarks"), use a browser action instead.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("pageAction.ImageDataType")}}</dt>
- <dd>Pixel data for an image.</dd>
-</dl>
+- {{WebExtAPIRef("pageAction.ImageDataType")}}
+  - : Pixel data for an image.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<dl>
- <dt>{{WebExtAPIRef("pageAction.show()")}}</dt>
- <dd>Shows the page action for a given tab.</dd>
- <dt>{{WebExtAPIRef("pageAction.hide()")}}</dt>
- <dd>Hides the page action for a given tab.</dd>
- <dt>{{WebExtAPIRef("pageAction.isShown()")}}</dt>
- <dd>Checks whether the page action is shown or not.</dd>
- <dt>{{WebExtAPIRef("pageAction.setTitle()")}}</dt>
- <dd>Sets the page action's title. This is displayed in a tooltip over the page action.</dd>
- <dt>{{WebExtAPIRef("pageAction.getTitle()")}}</dt>
- <dd>Gets the page action's title.</dd>
- <dt>{{WebExtAPIRef("pageAction.setIcon()")}}</dt>
- <dd>Sets the page action's icon.</dd>
- <dt>{{WebExtAPIRef("pageAction.setPopup()")}}</dt>
- <dd>Sets the URL for the page action's popup.</dd>
- <dt>{{WebExtAPIRef("pageAction.getPopup()")}}</dt>
- <dd>Gets the URL for the page action's popup.</dd>
- <dt>{{WebExtAPIRef("pageAction.openPopup()")}}</dt>
- <dd>Opens the page action's popup.</dd>
-</dl>
+- {{WebExtAPIRef("pageAction.show()")}}
+  - : Shows the page action for a given tab.
+- {{WebExtAPIRef("pageAction.hide()")}}
+  - : Hides the page action for a given tab.
+- {{WebExtAPIRef("pageAction.isShown()")}}
+  - : Checks whether the page action is shown or not.
+- {{WebExtAPIRef("pageAction.setTitle()")}}
+  - : Sets the page action's title. This is displayed in a tooltip over the page action.
+- {{WebExtAPIRef("pageAction.getTitle()")}}
+  - : Gets the page action's title.
+- {{WebExtAPIRef("pageAction.setIcon()")}}
+  - : Sets the page action's icon.
+- {{WebExtAPIRef("pageAction.setPopup()")}}
+  - : Sets the URL for the page action's popup.
+- {{WebExtAPIRef("pageAction.getPopup()")}}
+  - : Gets the URL for the page action's popup.
+- {{WebExtAPIRef("pageAction.openPopup()")}}
+  - : Opens the page action's popup.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("pageAction.onClicked")}}</dt>
- <dd>Fired when a page action icon is clicked. This event will not fire if the page action has a popup.</dd>
-</dl>
+- {{WebExtAPIRef("pageAction.onClicked")}}
+  - : Fired when a page action icon is clicked. This event will not fire if the page action has a popup.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
+> **Note:** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/pageAction"><code>chrome.pageAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json"><code>page_action.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -103,5 +94,4 @@ browser-compat: webextensions.api.pageAction
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

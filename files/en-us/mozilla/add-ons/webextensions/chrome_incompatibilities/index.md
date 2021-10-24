@@ -6,299 +6,248 @@ tags:
   - WebExtensions
   - google chrome
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>Extensions built with WebExtension APIs are designed to be compatible with Chrome and Opera extensions. As far as possible, extensions written for those browsers should run on Firefox with minimal changes.</p>
+Extensions built with WebExtension APIs are designed to be compatible with Chrome and Opera extensions. As far as possible, extensions written for those browsers should run on Firefox with minimal changes.
 
-<p>However, there are significant differences between Chrome, Firefox, and Edge. In particular:</p>
+However, there are significant differences between Chrome, Firefox, and Edge. In particular:
 
-<ul>
- <li>
-  <p>Support for JavaScript APIs differs across browsers. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a> for more details.</p>
- </li>
- <li>
-  <p>Support for <code>manifest.json</code> keys differs across browsers. See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#browser_compatibility">"Browser compatibility" section</a> in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"><code>manifest.json</code></a> page for more details.</p>
- </li>
- <li>
-  <p>Javascript APIs:</p>
-  <ul>
-   <li><strong>In Firefox and Edge:</strong> JavaScript APIs are accessed under the <code>browser</code> namespace.</li>
-   <li><strong>In Chrome:</strong> JavaScript APIs are accessed under the <code>chrome</code> namespace. (cf. <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=798169">Chrome bug 798169</a>)</li>
-  </ul>
- </li>
- <li>
-  <p>Asynchronous APIs:</p>
-  <ul>
-    <li><strong>In Firefox:</strong> Asynchronous APIs are implemented using promises.</li>
-    <li><strong>In Chrome and Edge:</strong> Asynchronous APIs are implemented using callbacks. (cf. <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=328932">Chrome bug 328932</a>)</li>
-  </ul>
- </li>
-</ul>
+- Support for JavaScript APIs differs across browsers. See [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) for more details.
+- Support for `manifest.json` keys differs across browsers. See the ["Browser compatibility" section](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#browser_compatibility) in the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) page for more details.
+- Javascript APIs:
 
-<p>The rest of this page summarizes these and other incompatibilities.</p>
+  - **In Firefox and Edge:** JavaScript APIs are accessed under the `browser` namespace.
+  - **In Chrome:** JavaScript APIs are accessed under the `chrome` namespace. (cf. [Chrome bug 798169](https://bugs.chromium.org/p/chromium/issues/detail?id=798169))
 
-<h2 id="JavaScript_APIs">JavaScript APIs</h2>
+- Asynchronous APIs:
 
-<h3><em>chrome.*</em> and <em>browser.*</em> namespace</h3>
+  - **In Firefox:** Asynchronous APIs are implemented using promises.
+  - **In Chrome and Edge:** Asynchronous APIs are implemented using callbacks. (cf. [Chrome bug 328932](https://bugs.chromium.org/p/chromium/issues/detail?id=328932))
 
-<ul>
-  <li><strong>In Firefox:</strong> The equivalent APIs are accessed using the <code>browser</code> namespace.
-  <pre class="brush: js">browser.browserAction.setIcon({path: "path/to/icon.png"});</pre>
-  </li>
-  <li><strong>In Chrome:</strong> Extensions access privileged JavaScript APIs using the <code>chrome</code> namespace.
-    <pre class="brush: js">chrome.browserAction.setIcon({path: "path/to/icon.png"});</pre>
-  </li>
-</ul>
+The rest of this page summarizes these and other incompatibilities.
 
-<h3>Callbacks and promises</h3>
+## JavaScript APIs
 
-<ul>
-  <li><strong>In Firefox:</strong> Asynchronous APIs use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a> to return values instead.
-<pre class="brush: js">function logCookie(c) {
-  console.log(c);
-}
+### \*chrome.\** and *browser.\*\* namespace
 
-function logError(e) {
-  console.error(e);
-}
+- **In Firefox:** The equivalent APIs are accessed using the `browser` namespace.
 
-let setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
-setCookie.then(logCookie, logError);</pre>
-  </li>
-  <li><strong>In Chrome:</strong> Asynchronous APIs use callbacks to return values, and {{WebExtAPIRef("runtime.lastError")}} to communicate errors.
-<pre class="brush: js">function logCookie(c) {
-  if (chrome.runtime.lastError) {
-    console.error(chrome.runtime.lastError);
-  } else {
+  ```js
+  browser.browserAction.setIcon({path: "path/to/icon.png"});
+  ```
+
+- **In Chrome:** Extensions access privileged JavaScript APIs using the `chrome` namespace.
+
+  ```js
+  chrome.browserAction.setIcon({path: "path/to/icon.png"});
+  ```
+
+### Callbacks and promises
+
+- **In Firefox:** Asynchronous APIs use [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) to return values instead.
+
+  ```js
+  function logCookie(c) {
     console.log(c);
   }
-}
-
-chrome.cookies.set(
-  {url: "https://developer.mozilla.org/"},
-  logCookie
-);</pre>
-  </li>
-</ul>
-
-<h3 id="Firefox_supports_both_the_chrome_and_browser_namespaces">Firefox supports both the <em>chrome</em> and <em>browser</em> namespaces</h3>
-
-<p>As a porting aid, the Firefox implementation of WebExtensions supports <code>chrome</code>, using callbacks, as well as <code>browser</code>, using promises. This means that many Chrome extensions will just work in Firefox without any changes.</p>
-
-<div class="notecard note">
-<p><strong>Note:</strong> However, this is <em>not</em> part of the WebExtensions standard. and may not be supported by all compliant browsers.</p>
-</div>
 
-<p>If you choose to write your extension to use <code>browser</code> and promises, then Firefox also provides a polyfill that will enable it to run in Chrome: <a href="https://github.com/mozilla/webextension-polyfill">https://github.com/mozilla/webextension-polyfill</a>.</p>
+  function logError(e) {
+    console.error(e);
+  }
 
-<h3 id="Partially_supported_APIs">Partially supported APIs</h3>
+  let setCookie = browser.cookies.set(
+    {url: "https://developer.mozilla.org/"}
+  );
+  setCookie.then(logCookie, logError);
+  ```
 
-<p>The page <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a> includes compatibility tables for all APIs that have any support in Firefox. Where there are caveats around support for a given API item, this is indicated in these tables with an asterisk "*" and in the reference page for the API item, the caveats are explained.</p>
-
-<p>These tables are generated from compatibility data stored as <a href="https://github.com/mdn/browser-compat-data">JSON files in GitHub</a>.</p>
+- **In Chrome:** Asynchronous APIs use callbacks to return values, and {{WebExtAPIRef("runtime.lastError")}} to communicate errors.
 
-<p>The rest of this section describes compatibility issues that are not already captured in the tables.</p>
+  ```js
+  function logCookie(c) {
+    if (chrome.runtime.lastError) {
+      console.error(chrome.runtime.lastError);
+    } else {
+      console.log(c);
+    }
+  }
 
-<h4>Notifications API</h4>
+  chrome.cookies.set(
+    {url: "https://developer.mozilla.org/"},
+    logCookie
+  );
+  ```
 
-<p>For <code>notifications.create()</code>, with <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType">type</a> "basic"</code>:</p>
+### Firefox supports both the *chrome* and *browser* namespaces
 
-<ul>
-  <li><strong>In Firefox</strong>: <code>iconUrl</code> is optional.</li>
-  <li><strong>In Chrome</strong>: <code>iconUrl</code> is required.</li>
-</ul>
+As a porting aid, the Firefox implementation of WebExtensions supports `chrome`, using callbacks, as well as `browser`, using promises. This means that many Chrome extensions will just work in Firefox without any changes.
 
-<p>When the user clicks on a notification:</p>
-<ul>
-  <li><strong>In Firefox</strong>: The notification is cleared immediately.</li>
-  <li><strong>In Chrome</strong>: This is not the case.</li>
-</ul>
+> **Note:** However, this is _not_ part of the WebExtensions standard. and may not be supported by all compliant browsers.
 
-<p>If you call <code>notifications.create()</code> more than once in rapid succession:</p>
-<ul>
-  <li><strong>In Firefox</strong>: In Firefox, the notifications may not display at all. Waiting to make subsequent calls until within the <code>chrome.notifications.create()</code> callback function is not a sufficient delay to prevent this.</li>
-</ul>
+If you choose to write your extension to use `browser` and promises, then Firefox also provides a polyfill that will enable it to run in Chrome: <https://github.com/mozilla/webextension-polyfill>.
 
-<h4>Proxy API</h4>
+### Partially supported APIs
 
-<p>Firefox's {{WebExtAPIRef("proxy")}} API followed a completely different design from Chrome's Proxy API.</p>
-<ul>
-  <li><strong>In Firefox</strong>: An extension can register a PAC file.</li>
-  <li><strong>In Chrome</strong>: An extension can register a PAC file, but can also define explicit proxying rules.</li>
-</ul>
+The page [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) includes compatibility tables for all APIs that have any support in Firefox. Where there are caveats around support for a given API item, this is indicated in these tables with an asterisk "\*" and in the reference page for the API item, the caveats are explained.
 
-<p>Because this API is incompatible with Chrome's <code>proxy</code> API, the Firefox proxy API is only available through the <code>browser</code> namespace.</p>
+These tables are generated from compatibility data stored as [JSON files in GitHub](https://github.com/mdn/browser-compat-data).
 
-<h4>Tabs API</h4>
+The rest of this section describes compatibility issues that are not already captured in the tables.
 
-<p>When using <code>tabs.executeScript()</code> or <code>tabs.insertCSS()</code>:</p>
-<ul>
-  <li><strong>In Firefox</strong>: Relative URLs passed are resolved relative to the current page URL.</li>
-  <li><strong>In Chrome</strong>: These URLs are resolved relative to the extension's base URL.</li>
-</ul>
+#### Notifications API
 
-<p>To work cross-browser, you can specify the path as an absolute URL, starting at the extension's root, like this:</p>
+For `notifications.create()`, with `type "basic"`:
 
-<pre class="brush: plain">/path/to/script.js</pre>
+- **In Firefox**: `iconUrl` is optional.
+- **In Chrome**: `iconUrl` is required.
 
-<p>When querying tabs by URL <code>tabs.query()</code>:</p>
-<ul>
-  <li><strong>In Firefox</strong>: Extensions must have the <code>"tabs"</code> permission.</li>
-  <li><strong>In Chrome</strong>: Extensions do not need the <code>"tabs"</code> permission, but only tabs whose URLs match the extension's host permissions will be included in the results.</li>
-</ul>
+When the user clicks on a notification:
 
-<p>When calling <code>tabs.remove()</code>:</p>
-<ul>
-  <li><strong>In Firefox</strong>: The <code>tabs.remove()</code> promise is fulfilled after the <code>beforeunload</code> event.</li>
-  <li><strong>In Chrome</strong>: The callback does not wait for <code>beforeunload</code>.</li>
-</ul>
+- **In Firefox**: The notification is cleared immediately.
+- **In Chrome**: This is not the case.
 
-<h4>WebRequest API</h4>
+If you call `notifications.create()` more than once in rapid succession:
 
-<ul>
-  <li><strong>In Firefox:</strong>
-    <ul>
-     <li>Requests can be redirected only if their original URL uses the <code>http:</code> or <code>https:</code> scheme.</li>
-     <li>The <code>activeTab</code> permission does not allow intercepting network requests in the current tab. (See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1617479">bug 1617479</a>)</li>
-     <li>Events are not fired for system requests (for example, extension upgrades or searchbar suggestions).
-      <ul>
-       <li><strong>From Firefox 57 onwards:</strong> Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.</li>
-      </ul>
-     </li>
-     <li>If an extension wants to redirect a public (e.g., HTTPS) URL to an <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">extension page</a>, the extension's <code>manifest.json</code> file must contain a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources"><code>web_accessible_resources</code></a> key with the URL of the extension page.
-      <ul>
-       <li>
-        <div class="notecard note">
-        <p><strong>Note:</strong> <em>Any</em> website may then link or redirect to that URL, and extensions should treat any input (POST data, for example) as if it came from an untrusted source, just as a normal web page should.</p>
-        </div>
-       </li>
-      </ul>
-     </li>
-     <li>Some of the <code>browser.webRequest.*</code> APIs allow returning Promises that resolves <code>webRequest.BlockingResponse</code> asynchronously.</li>
-    </ul>
-  <li><strong>In Chrome:</strong> Only <code>webRequest.onAuthRequired</code> supports asynchronous <code>webRequest.BlockingResponse</code> via supplying <code>'asyncBlocking'</code>.</li>
-</ul>
+- **In Firefox**: In Firefox, the notifications may not display at all. Waiting to make subsequent calls until within the `chrome.notifications.create()` callback function is not a sufficient delay to prevent this.
 
-<h4>Windows API</h4>
+#### Proxy API
 
-<ul>
-  <li><strong>In Firefox:</strong> <code>onFocusChanged</code> of the {{WebExtAPIRef("windows")}} API, will trigger multiple times for a given focus change.</li>
-</ul>
+Firefox's {{WebExtAPIRef("proxy")}} API followed a completely different design from Chrome's Proxy API.
 
-<h3 id="Unsupported_APIs">Unsupported APIs</h3>
+- **In Firefox**: An extension can register a PAC file.
+- **In Chrome**: An extension can register a PAC file, but can also define explicit proxying rules.
 
-<h4>DeclarativeContent API</h4>
+Because this API is incompatible with Chrome's `proxy` API, the Firefox proxy API is only available through the `browser` namespace.
 
-<ul>
-  <li>
-    <p><strong>In Firefox:</strong> Chrome's <a href="https://developer.chrome.com/extensions/declarativeContent">declarativeContent</a> API <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1435864">has not yet been implemented</a>. In addition, Firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1323433#c16">will not be supporting</a> the <code>declarativeContent.RequestContentScript</code> API (which is rarely used, and is unavailable in stable releases of Chrome).</p>
-  </li>
-</ul>
+#### Tabs API
 
-<h3 id="Miscellaneous_incompatibilities">Miscellaneous incompatibilities</h3>
+When using `tabs.executeScript()` or `tabs.insertCSS()`:
 
-<h4>URLs in CSS</h4>
+- **In Firefox**: Relative URLs passed are resolved relative to the current page URL.
+- **In Chrome**: These URLs are resolved relative to the extension's base URL.
 
-<ul>
-  <li><strong>In Firefox:</strong> URLs in injected CSS files are resolved relative to <em>the CSS file itself</em>.</li>
-  <li><strong>In Chrome:</strong> URLs in injected CSS files are resolved relative to <em>the page they are injected into</em>.</li>
-</ul>
+To work cross-browser, you can specify the path as an absolute URL, starting at the extension's root, like this:
 
-<h4>Support for dialogs in background pages</h4>
+```plain
+/path/to/script.js
+```
 
-<ul>
-  <li><strong>In Firefox:</strong> <a href="/en-US/docs/Web/API/Window/alert"><code>alert()</code></a>, <a href="/en-US/docs/Web/API/Window/confirm"><code>confirm()</code></a>, and <a href="/en-US/docs/Web/API/Window/prompt"><code>prompt()</code></a> are not supported in background pages:</li>
-</ul>
+When querying tabs by URL `tabs.query()`:
 
-<h4>web_accessible_resources</h4>
+- **In Firefox**: Extensions must have the `"tabs"` permission.
+- **In Chrome**: Extensions do not need the `"tabs"` permission, but only tabs whose URLs match the extension's host permissions will be included in the results.
 
-<ul>
-  <li><strong>In Firefox:</strong> Resources are assigned a random UUID that changes for every instance of Firefox: <code>moz-extension://«<var>random-UUID</var>»/«path»</code>. This randomness can prevent you from doing a few things, such as add your specific extension's URL to another domain's CSP policy.</li>
-  <li><strong>In Chrome:</strong> When a resource is listed in <code>web_accessible_resources</code>, it is accessible as <code>chrome-extension://«your-extension-id»/«path»</code>. The extension ID is fixed for a given extension.</li>
-</ul>
+When calling `tabs.remove()`:
 
-<h4>Manifest "key" property</h4>
+- **In Firefox**: The `tabs.remove()` promise is fulfilled after the `beforeunload` event.
+- **In Chrome**: The callback does not wait for `beforeunload`.
 
-<ul>
-  <li><strong>In Firefox:</strong> Since Firefox uses random UUIDs for <code>web_accessible_resources</code>, this property is unsupported.</li>
-  <li><strong>In Chrome:</strong> When working with an unpacked extension, the manifest may include a <a href="https://developer.chrome.com/extensions/manifest/key"><code>"key"</code> property</a> to pin the extension ID across different machines. This is mainly useful when working with <code>web_accessible_resources</code>.</li>
-</ul>
+#### WebRequest API
 
-<h4>Content script HTTP(S) requests</h4>
+- **In Firefox:**
 
-<ul>
-  <li><strong>In Firefox:</strong> When a content script makes an HTTP(S) request, you <em>must</em> provide absolute URLs.</li>
-  <li><strong>In Chrome:</strong> When a content script makes a request (for example, using <a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch"><code>fetch()</code></a>) to a relative URL (like <code>/api</code>), it will be sent to <code>https://example.com/api</code>.</li>
-</ul>
+  - Requests can be redirected only if their original URL uses the `http:` or `https:` scheme.
+  - The `activeTab` permission does not allow intercepting network requests in the current tab. (See [bug 1617479](https://bugzilla.mozilla.org/show_bug.cgi?id=1617479))
+  - Events are not fired for system requests (for example, extension upgrades or searchbar suggestions).
 
-<h4>Sharing variables between content scripts</h4>
+    - **From Firefox 57 onwards:** Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.
 
-<ul>
-  <li><strong>In Firefox:</strong> You cannot share variables between content scripts by assigning them to <code>this.{variableName}</code> in one script and then attempting to access them using <code>window.{variableName}</code> in another. This is a limitation created by the sandbox environment in Firefox. This limitation may be removed, see {{bug(1208775)}}.</li>
-</ul>
+  - If an extension wants to redirect a public (e.g., HTTPS) URL to an [extension page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's `manifest.json` file must contain a [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key with the URL of the extension page.
 
-<h4>Content script lifecycle during navigation</h4>
+    - > **Note:** _Any_ website may then link or redirect to that URL, and extensions should treat any input (POST data, for example) as if it came from an untrusted source, just as a normal web page should.
 
-<ul>
-  <li>
-    <p><strong>In Firefox:</strong> Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets <code>window.prop1 = "prop"</code>  and the user then navigates away and returns to the page <code>window.prop1</code> is undefined. This issue is tracked in {{bug(1525400)}}.</p>
+  - Some of the `browser.webRequest.*` APIs allow returning Promises that resolves `webRequest.BlockingResponse` asynchronously.
 
-    <p>To mimic the behavior of Chrome, listen for the <a href="/en-US/docs/Web/API/Window/pageshow_event">pageshow</a> and <a href="/en-US/docs/Web/API/Window/pagehide_event">pagehide</a> events. Then simulate the injection or destruction of the content script.</p>
-  </li>
-  <li><strong>In Chrome:</strong> Content scripts are destroyed when the user navigates away from a web page. If the user then returns to the page through history, by clicking the back button, the content script is injected into the web page again.</li>
-</ul>
+- **In Chrome:** Only `webRequest.onAuthRequired` supports asynchronous `webRequest.BlockingResponse` via supplying `'asyncBlocking'`.
 
-<h4>"per-tab" zoom behavior</h4>
+#### Windows API
 
-<ul>
-  <li><strong>In Firefox:</strong> The zoom level persists across page loads and navigation within the tab.</li>
-  <li><strong>In Chrome:</strong> Zoom changes are reset on navigation; navigating a tab will always load pages with their per-origin zoom factors.</li>
-</ul>
+- **In Firefox:** `onFocusChanged` of the {{WebExtAPIRef("windows")}} API, will trigger multiple times for a given focus change.
 
-<p>See {{WebExtAPIRef("tabs.ZoomSettingsScope")}}.</p>
+### Unsupported APIs
 
-<h2 id="manifest.json_keys">manifest.json keys</h2>
+#### DeclarativeContent API
 
-<p>The main <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"><code>manifest.json</code></a> page includes a table describing browser support for <code>manifest.json</code> keys. Where there are caveats around support for a given key, this is indicated in the table with an asterisk "*" and in the reference page for the key, the caveats are explained.</p>
+- **In Firefox:** Chrome's [declarativeContent](https://developer.chrome.com/extensions/declarativeContent) API [has not yet been implemented](https://bugzilla.mozilla.org/show_bug.cgi?id=1435864). In addition, Firefox [will not be supporting](https://bugzilla.mozilla.org/show_bug.cgi?id=1323433#c16) the `declarativeContent.RequestContentScript` API (which is rarely used, and is unavailable in stable releases of Chrome).
 
-<p>These tables are generated from compatibility data stored as <a href="https://github.com/mdn/browser-compat-data">JSON files in GitHub</a>.</p>
+### Miscellaneous incompatibilities
 
-<h2 id="Native_messaging">Native messaging</h2>
+#### URLs in CSS
 
-<h3 id="Connection-based_messaging_arguments">Connection-based messaging arguments</h3>
+- **In Firefox:** URLs in injected CSS files are resolved relative to _the CSS file itself_.
+- **In Chrome:** URLs in injected CSS files are resolved relative to _the page they are injected into_.
 
-<p><strong>On Linux and Mac:</strong> Chrome passes one argument to the native app, which is the origin of the extension that started it, in the form: <code>chrome-extension://«<var>extensionID/</var>»</code> (trailing slash required). This enables the app to identify the extension.</p>
+#### Support for dialogs in background pages
 
-<p><strong>On Windows:</strong> Chrome passes two arguments:</p>
-<ol>
- <li>The origin of the extension</li>
- <li>A handle to the Chrome native window that started the app</li>
-</ol>
+- **In Firefox:** [`alert()`](/en-US/docs/Web/API/Window/alert), [`confirm()`](/en-US/docs/Web/API/Window/confirm), and [`prompt()`](/en-US/docs/Web/API/Window/prompt) are not supported in background pages:
 
-<h3 id="allowed_extensions">allowed_extensions</h3>
+#### web_accessible_resources
 
-<ul>
-  <li><strong>In Firefox:</strong> The manifest key is called <code>allowed_extensions</code>.</li>
-  <li><strong>In Chrome:</strong> The manifest key is called <code>allowed_origins</code> instead.</li>
-</ul>
+- **In Firefox:** Resources are assigned a random UUID that changes for every instance of Firefox: `moz-extension://«random-UUID»/«path»`. This randomness can prevent you from doing a few things, such as add your specific extension's URL to another domain's CSP policy.
+- **In Chrome:** When a resource is listed in `web_accessible_resources`, it is accessible as `chrome-extension://«your-extension-id»/«path»`. The extension ID is fixed for a given extension.
 
-<h3 id="App_manifest_location">App manifest location</h3>
+#### Manifest "key" property
 
-<ul>
-  <li><strong>In Chrome:</strong> The app manifest is expected in a different place. See <a href="https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location">Native messaging host location</a> in the Chrome docs.</li>
-</ul>
+- **In Firefox:** Since Firefox uses random UUIDs for `web_accessible_resources`, this property is unsupported.
+- **In Chrome:** When working with an unpacked extension, the manifest may include a [`"key"` property](https://developer.chrome.com/extensions/manifest/key) to pin the extension ID across different machines. This is mainly useful when working with `web_accessible_resources`.
 
-<h2 id="Data_cloning_algorithm">Data cloning algorithm</h2>
+#### Content script HTTP(S) requests
 
-<p>Some extension APIs allow an extension to send data from one part of the extension to another, such as {{WebExtAPIRef("runtime.sendMessage()")}}, {{WebExtAPIRef("tabs.sendMessage()")}}, {{WebExtAPIRef("runtime.onMessage")}}, the <code>postMessage()</code> method of {{WebExtAPIRef("runtime.port")}}, and {{WebExtAPIRef("tabs.executeScript()")}}.</p>
+- **In Firefox:** When a content script makes an HTTP(S) request, you _must_ provide absolute URLs.
+- **In Chrome:** When a content script makes a request (for example, using [`fetch()`](/en-US/docs/Web/API/Fetch_API/Using_Fetch)) to a relative URL (like `/api`), it will be sent to `https://example.com/api`.
 
-<ul>
-  <li><strong>In Firefox:</strong> The <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">Structured clone algorithm</a> is used.</li>
-  <li><strong>In Chrome:</strong> The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#description">JSON serialization algorithm</a> is used. It may switch to structured cloning in the future (<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=248548">issue 248548</a>).</li>
-</ul>
+#### Sharing variables between content scripts
 
-<p>The Structured clone algorithm supports more types than the JSON serialization algorithm. A notable exception are (DOM) objects with a <code>toJSON</code> method. DOM objects are not cloneable nor JSON-serializable by default, but with a <code>toJSON()</code> method, these can be JSON-serialized (but still not cloned with the structured cloning algorithm). Examples of JSON-serializable objects that are not structured cloneable include instances of {{domxref("URL")}} and {{domxref("PerformanceEntry")}}.</p>
+- **In Firefox:** You cannot share variables between content scripts by assigning them to `this.{variableName}` in one script and then attempting to access them using `window.{variableName}` in another. This is a limitation created by the sandbox environment in Firefox. This limitation may be removed, see {{bug(1208775)}}.
 
-<p>Extension that rely on the <code>toJSON()</code> method of the JSON serialization algorithm can use {{jsxref("JSON.stringify()")}} followed by {{jsxref("JSON.parse()")}} to ensure that a message can be exchanged, because a parsed JSON value is always structurally cloneable.</p>
+#### Content script lifecycle during navigation
+
+- **In Firefox:** Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets `window.prop1 = "prop"`  and the user then navigates away and returns to the page `window.prop1` is undefined. This issue is tracked in {{bug(1525400)}}.
+
+  To mimic the behavior of Chrome, listen for the [pageshow](/en-US/docs/Web/API/Window/pageshow_event) and [pagehide](/en-US/docs/Web/API/Window/pagehide_event) events. Then simulate the injection or destruction of the content script.
+
+- **In Chrome:** Content scripts are destroyed when the user navigates away from a web page. If the user then returns to the page through history, by clicking the back button, the content script is injected into the web page again.
+
+#### "per-tab" zoom behavior
+
+- **In Firefox:** The zoom level persists across page loads and navigation within the tab.
+- **In Chrome:** Zoom changes are reset on navigation; navigating a tab will always load pages with their per-origin zoom factors.
+
+See {{WebExtAPIRef("tabs.ZoomSettingsScope")}}.
+
+## manifest.json keys
+
+The main [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) page includes a table describing browser support for `manifest.json` keys. Where there are caveats around support for a given key, this is indicated in the table with an asterisk "\*" and in the reference page for the key, the caveats are explained.
+
+These tables are generated from compatibility data stored as [JSON files in GitHub](https://github.com/mdn/browser-compat-data).
+
+## Native messaging
+
+### Connection-based messaging arguments
+
+**On Linux and Mac:** Chrome passes one argument to the native app, which is the origin of the extension that started it, in the form: `chrome-extension://«extensionID/»` (trailing slash required). This enables the app to identify the extension.
+
+**On Windows:** Chrome passes two arguments:
+
+1.  The origin of the extension
+2.  A handle to the Chrome native window that started the app
+
+### allowed_extensions
+
+- **In Firefox:** The manifest key is called `allowed_extensions`.
+- **In Chrome:** The manifest key is called `allowed_origins` instead.
+
+### App manifest location
+
+- **In Chrome:** The app manifest is expected in a different place. See [Native messaging host location](https://developer.chrome.com/extensions/nativeMessaging#native-messaging-host-location) in the Chrome docs.
+
+## Data cloning algorithm
+
+Some extension APIs allow an extension to send data from one part of the extension to another, such as {{WebExtAPIRef("runtime.sendMessage()")}}, {{WebExtAPIRef("tabs.sendMessage()")}}, {{WebExtAPIRef("runtime.onMessage")}}, the `postMessage()` method of {{WebExtAPIRef("runtime.port")}}, and {{WebExtAPIRef("tabs.executeScript()")}}.
+
+- **In Firefox:** The [Structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) is used.
+- **In Chrome:** The [JSON serialization algorithm](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#description) is used. It may switch to structured cloning in the future ([issue 248548](https://bugs.chromium.org/p/chromium/issues/detail?id=248548)).
+
+The Structured clone algorithm supports more types than the JSON serialization algorithm. A notable exception are (DOM) objects with a `toJSON` method. DOM objects are not cloneable nor JSON-serializable by default, but with a `toJSON()` method, these can be JSON-serialized (but still not cloned with the structured cloning algorithm). Examples of JSON-serializable objects that are not structured cloneable include instances of {{domxref("URL")}} and {{domxref("PerformanceEntry")}}.
+
+Extension that rely on the `toJSON()` method of the JSON serialization algorithm can use {{jsxref("JSON.stringify()")}} followed by {{jsxref("JSON.parse()")}} to ensure that a message can be exchanged, because a parsed JSON value is always structurally cloneable.

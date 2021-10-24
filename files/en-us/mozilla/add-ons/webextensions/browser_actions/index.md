@@ -4,42 +4,44 @@ slug: Mozilla/Add-ons/WebExtensions/Browser_actions
 tags:
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>A browser action is a button you can add to the browser toolbar. Users can click the button to interact with your extension.</p>
+A browser action is a button you can add to the browser toolbar. Users can click the button to interact with your extension.
 
-<p><img alt="" src="browser-action.png"></p>
+![](browser-action.png)
 
-<p>There are two ways to specify a browser action: with a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">popup</a>, or without a popup.</p>
+There are two ways to specify a browser action: with a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), or without a popup.
 
-<p>If you don't specify a popup, then when the user clicks the button an event is dispatched to the extension, which you can listen for using <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked" title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."><code>browserAction.onClicked</code></a>:</p>
+If you don't specify a popup, then when the user clicks the button an event is dispatched to the extension, which you can listen for using [`browserAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked "Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."):
 
-<pre class="brush: js">browser.browserAction.onClicked.addListener(handleClick);</pre>
+```js
+browser.browserAction.onClicked.addListener(handleClick);
+```
 
-<p>If you do specify a popup, the click event is not dispatched: instead, the popup will be shown when the user clicks the button. The user will be able to interact with the popup and it will close automatically when the user clicks outside it.</p>
+If you do specify a popup, the click event is not dispatched: instead, the popup will be shown when the user clicks the button. The user will be able to interact with the popup and it will close automatically when the user clicks outside it.
 
-<p>Note that your extension can have only one browser action.</p>
+Note that your extension can have only one browser action.
 
-<h2 id="Specifying_the_browser_action">Specifying the browser action</h2>
+## Specifying the browser action
 
-<p>You define the browser action's properties - icon, title, popup - using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> key in manifest.json:</p>
+You define the browser action's properties - icon, title, popup - using the [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) key in manifest.json:
 
-<pre class="brush: json">&quot;browser_action&quot;: {
-  &quot;default_icon&quot;: {
-    &quot;19&quot;: &quot;button/geo-19.png&quot;,
-    &quot;38&quot;: &quot;button/geo-38.png&quot;
+```json
+"browser_action": {
+  "default_icon": {
+    "19": "button/geo-19.png",
+    "38": "button/geo-38.png"
   },
-  &quot;default_title&quot;: &quot;Whereami?&quot;,
-  &quot;default_popup&quot;: &quot;popup/geo.html&quot;
-}</pre>
+  "default_title": "Whereami?",
+  "default_popup": "popup/geo.html"
+}
+```
 
-<p>The only mandatory key is <code>default_icon</code>. You can change any of these properties programmatically using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code> API.</p>
+The only mandatory key is `default_icon`. You can change any of these properties programmatically using the [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>The <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repo on GitHub contains several examples of extensions that use browser actions:</p>
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repo on GitHub contains several examples of extensions that use browser actions:
 
-<ul>
- <li><a href="https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/">bookmark-it</a> uses a browser action without a popup</li>
- <li><a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">beastify</a> uses a browser action with a popup</li>
-</ul>
+- [bookmark-it](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/) uses a browser action without a popup
+- [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) uses a browser action with a popup

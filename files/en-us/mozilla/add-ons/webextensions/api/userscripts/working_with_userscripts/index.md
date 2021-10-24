@@ -8,49 +8,50 @@ tags:
   - Tutorial
   - userScripts
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>By implementing userScripts, extension developers can modify how sites look and/or work to better meet user needs.</p>
+By implementing userScripts, extension developers can modify how sites look and/or work to better meet user needs.
 
-<p>Implement userScripts in your extension using the following steps:</p>
+Implement userScripts in your extension using the following steps:
 
-<ol>
- <li>Define the script in the extension's manifest using the <code>"user_scripts"</code> key.</li>
- <li>Register the userScript</li>
- <li>Implement the userScript functions</li>
-</ol>
+1.  Define the script in the extension's manifest using the `"user_scripts"` key.
+2.  Register the userScript
+3.  Implement the userScript functions
 
-<p>Let's step through the processes using a small sample web extension that illustrates the process. The example is available in the <a href="https://github.com/mdn/webextensions-examples">webextensions-examples</a> repository on GitHub.</p>
+Let's step through the processes using a small sample web extension that illustrates the process. The example is available in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub.
 
-<h2 id="userScripts_Manifest">userScripts Manifest</h2>
+## userScripts Manifest
 
-<p>A user script is identified by the contents of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_scripts</a> key of the extension's manifest. The minimum information for the <code>user_scripts</code> key would be:</p>
+A user script is identified by the contents of the [user_scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) key of the extension's manifest. The minimum information for the `user_scripts` key would be:
 
-<pre class="brush: json">  "user_scripts": {
+```json
+  "user_scripts": {
     "api_script": "customUserScriptAPIs.js"
-  }</pre>
+  }
+```
 
-<p>The "api_script" property indicates the path to the JavaScript file that contains the code for the <code>userScript</code>.</p>
+The "api_script" property indicates the path to the JavaScript file that contains the code for the `userScript`.
 
-<h2 id="Load_the_example_extension">Load the example extension</h2>
+## Load the example extension
 
-<p>Once you have downloaded the example:</p>
+Once you have downloaded the example:
 
-<p>Navigate to about:debugging, click on <strong>Load Temporary Add-on...</strong> and double-click on the extension's manifest.</p>
+Navigate to about:debugging, click on **Load Temporary Add-on...** and double-click on the extension's manifest.
 
-<p>The default code included with the example allows you to load a <code>userScript</code> which will "eat" the content of pages matching the Hosts entry. Make any changes you want to make before clicking the <strong>Register script</strong> button at the bottom of the panel.</p>
+The default code included with the example allows you to load a `userScript` which will "eat" the content of pages matching the Hosts entry. Make any changes you want to make before clicking the **Register script** button at the bottom of the panel.
 
-<p>In the following image, the extension will "eat" the content of pages whose domain name ends in .org. This is the default behavior for this extension.</p>
+In the following image, the extension will "eat" the content of pages whose domain name ends in .org. This is the default behavior for this extension.
 
-<p><img alt="" src="userscriptexample.png"></p>
+![](userscriptexample.png)
 
-<p>Nothing will happen until you click the <strong>Register script</strong> button. The button implements the user script according to the settings on this dialog. That means that you can experiment with the behavior of the script without having to implement an extensions yourself.</p>
+Nothing will happen until you click the **Register script** button. The button implements the user script according to the settings on this dialog. That means that you can experiment with the behavior of the script without having to implement an extensions yourself.
 
-<h2 id="Register_the_userScript">Register the userScript</h2>
+## Register the userScript
 
-<p>Before a userScript can be executed, it must be registered using the <code>userScripts.register()</code> method. Here is the code to register the example extension:</p>
+Before a userScript can be executed, it must be registered using the `userScripts.register()` method. Here is the code to register the example extension:
 
-<pre class="brush: js">async function registerScript() {
+```js
+async function registerScript() {
   const params = {
     hosts: stringToArray(hostsInput.value),
     code: codeInput.value,
@@ -93,20 +94,19 @@ tags:
     // Store the last error.
     await browser.storage.local.set({lastError});
   }
-}</pre>
+}
+```
 
-<p>This code first initializes the params object to pass values to the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/register">userScripts.register</a> method.</p>
+This code first initializes the params object to pass values to the [userScripts.register](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/register) method.
 
-<h2 id="Implement_the_userScript_functions">Implement the userScript functions</h2>
+## Implement the userScript functions
 
-<p>Once the script has been registered, navigate to a page whose domain name ends in .org, and you will see something like this:</p>
+Once the script has been registered, navigate to a page whose domain name ends in .org, and you will see something like this:
 
-<p><img alt="" src="user_script_in_action.png"></p>
+![](user_script_in_action.png)
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{WebExtAPIRef("userScripts")}}</li>
- <li>{{WebExtAPIRef("userScripts.register()", "userScripts.register()")}}</li>
- <li>{{WebExtAPIRef("userScripts.onBeforeScript")}}</li>
-</ul>
+- {{WebExtAPIRef("userScripts")}}
+- {{WebExtAPIRef("userScripts.register()", "userScripts.register()")}}
+- {{WebExtAPIRef("userScripts.onBeforeScript")}}

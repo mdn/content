@@ -12,56 +12,54 @@ tags:
   - highlightResults
 browser-compat: webextensions.api.find.highlightResults
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Highlights the results of a previous call to {{WebExtAPIRef("find.find()")}}.</p>
+Highlights the results of a previous call to {{WebExtAPIRef("find.find()")}}.
 
-<p>When an extension calls <code>find()</code>, the matches are not highlighted automatically, but they are stored by the browser. Call <code>highlightResults()</code> to highlight them.</p>
+When an extension calls `find()`, the matches are not highlighted automatically, but they are stored by the browser. Call `highlightResults()` to highlight them.
 
-<p>Note that the stored results are global across all extensions, so for example, if extension A calls <code>find("apple")</code>, then extension B calls <code>find("banana")</code>, then if extension A calls <code>highlightResults()</code>, the results for "banana" will be highlighted.</p>
+Note that the stored results are global across all extensions, so for example, if extension A calls `find("apple")`, then extension B calls `find("banana")`, then if extension A calls `highlightResults()`, the results for "banana" will be highlighted.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.find.highlightResults(
+```js
+browser.find.highlightResults(
   options // optional object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>options</code>{{optional_inline}}</dt>
- <dd>
- <p><code>object</code>. An object specifying additional options. It may take any of the following properties, all optional:</p>
+- `options`{{optional_inline}}
 
- <dl>
-  <dt><code>tabId</code></dt>
-  <dd><code>integer</code>. ID of the tab to highlight. Defaults to the active tab.</dd>
-  <dt><code>rangeIndex</code></dt>
-  <dd><code>integer</code>. Index of the range to highlight. Defaults to highlighting all ranges.</dd>
-  <dt><code>noScroll</code></dt>
-  <dd><code>boolean</code>. Don't scroll to highlighted item. Defaults to <code>true</code>.</dd>
- </dl>
- </dd>
-</dl>
+  - : `object`. An object specifying additional options. It may take any of the following properties, all optional:
 
-<h3 id="Return_value">Return value</h3>
+    - `tabId`
+      - : `integer`. ID of the tab to highlight. Defaults to the active tab.
+    - `rangeIndex`
+      - : `integer`. Index of the range to highlight. Defaults to highlighting all ranges.
+    - `noScroll`
+      - : `boolean`. Don't scroll to highlighted item. Defaults to `true`.
 
-<p>None.</p>
+### Return value
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+None.
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="Examples">Examples</h2>
+{{Compat}}
 
-<p>Search the active tab for "banana", log the number of matches, and highlight them:</p>
+## Examples
 
-<pre class="brush: js">function found(results) {
+Search the active tab for "banana", log the number of matches, and highlight them:
+
+```js
+function found(results) {
   console.log(`There were: ${results.count} matches.`);
-  if (results.count &gt; 0) {
+  if (results.count > 0) {
     browser.find.highlightResults();
   }
 }
 
-browser.find.find("banana").then(found);</pre>
+browser.find.find("banana").then(found);
+```

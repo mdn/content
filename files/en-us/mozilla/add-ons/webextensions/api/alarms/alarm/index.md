@@ -13,31 +13,27 @@ tags:
   - alarms
 browser-compat: webextensions.api.alarms.Alarm
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Information about a single alarm. This object is returned from {{WebExtAPIRef('alarms.get()')}} and {{WebExtAPIRef('alarms.getAll()')}}, and is passed into the {{WebExtAPIRef('alarms.onAlarm')}} listener.</p>
+Information about a single alarm. This object is returned from {{WebExtAPIRef('alarms.get()')}} and {{WebExtAPIRef('alarms.getAll()')}}, and is passed into the {{WebExtAPIRef('alarms.onAlarm')}} listener.
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>name</code></dt>
- <dd><code>string</code>. Name of this alarm. This is the name that was passed into the {{WebExtAPIRef('alarms.create()')}} call that created this alarm.</dd>
- <dt><code>scheduledTime</code></dt>
- <dd><code>double</code>. Time at which the alarm is scheduled to fire next, in <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
- <dt><code>periodInMinutes</code>{{optional_inline}}</dt>
- <dd><code>double</code>. If this is not <code>null</code>, then the alarm is periodic, and this represents its period in minutes.</dd>
-</dl>
+- `name`
+  - : `string`. Name of this alarm. This is the name that was passed into the {{WebExtAPIRef('alarms.create()')}} call that created this alarm.
+- `scheduledTime`
+  - : `double`. Time at which the alarm is scheduled to fire next, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+- `periodInMinutes`{{optional_inline}}
+  - : `double`. If this is not `null`, then the alarm is periodic, and this represents its period in minutes.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

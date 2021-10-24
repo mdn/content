@@ -8,107 +8,108 @@ tags:
   - optional_permissions
 browser-compat: webextensions.manifest.optional_permissions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
- <tbody>
-  <tr>
-   <th scope="row">Type</th>
-   <td><code>Array</code></td>
-  </tr>
-  <tr>
-   <th scope="row">Mandatory</th>
-   <td>No</td>
-  </tr>
-  <tr>
-   <th scope="row">Example</th>
-   <td>
-    <pre class="brush: json">
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>Array</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Mandatory</th>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Example</th>
+      <td>
+        <pre class="brush: json">
 "optional_permissions": [
   "*://developer.mozilla.org/*",
   "webRequest"
-]</pre>
-   </td>
-  </tr>
- </tbody>
+]</pre
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Use the <code>optional_permissions</code> key to list permissions that you want to ask for at runtime, after your extension has been installed.</p>
+Use the `optional_permissions` key to list permissions that you want to ask for at runtime, after your extension has been installed.
 
-<p>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> key lists permissions that your extension needs before it can be installed. In contrast, <code>optional_permissions</code> lists permissions that your extension doesn't need at install time but it may ask for after it has been installed. To ask for a permission, use the {{webextapiref("permissions")}} API. Asking for a permission may present the user with a dialog requesting them to grant the permission to your extension.</p>
+The [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) key lists permissions that your extension needs before it can be installed. In contrast, `optional_permissions` lists permissions that your extension doesn't need at install time but it may ask for after it has been installed. To ask for a permission, use the {{webextapiref("permissions")}} API. Asking for a permission may present the user with a dialog requesting them to grant the permission to your extension.
 
-<p>For advice on designing your request for runtime permissions, to maximize the likelihood that users grant them, see <a href="https://extensionworkshop.com/documentation/develop/request-the-right-permissions/#request_permissions_at_runtime">Request permissions at runtime</a>.</p>
+For advice on designing your request for runtime permissions, to maximize the likelihood that users grant them, see [Request permissions at runtime](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/#request_permissions_at_runtime).
 
-<p>Starting with Firefox 84, users will be able to manage optional permissions from the Firefox Add-ons Manager. Extensions that use optional permissions should listen for <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onAdded">browser.permissions.onAdded</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved">browser.permissions.onRemoved</a> API events to know when a user grants or revokes these permissions.</p>
+Starting with Firefox 84, users will be able to manage optional permissions from the Firefox Add-ons Manager. Extensions that use optional permissions should listen for [browser.permissions.onAdded](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onAdded) and [browser.permissions.onRemoved](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved) API events to know when a user grants or revokes these permissions.
 
-<p>The key can contain two kinds of permissions: host permissions and API permissions.</p>
+The key can contain two kinds of permissions: host permissions and API permissions.
 
-<h2 id="Host_permissions">Host permissions</h2>
+## Host permissions
 
-<p>These are the same as the host permissions you can specify in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">permissions</a></code> key.</p>
+These are the same as the host permissions you can specify in the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) key.
 
-<h2 id="API_permissions">API permissions</h2>
+## API permissions
 
-<p>You can include any of the following here, but not in all browsers: check the compatibility table for browser-specific details.</p>
+You can include any of the following here, but not in all browsers: check the compatibility table for browser-specific details.
 
-<div class="threecolumns">
-<ul>
- <li><code>activeTab</code></li>
- <li><code>background</code></li>
- <li><code>bookmarks</code></li>
- <li><code>browserSettings</code></li>
- <li><code>clipboardRead</code></li>
- <li><code>clipboardWrite</code></li>
- <li><code>contentSettings</code></li>
- <li><code>contextMenus</code></li>
- <li><code>cookies</code></li>
- <li><code>debugger</code></li>
- <li><code>downloads</code></li>
- <li><code>downloads.open</code></li>
- <li><code>find</code></li>
- <li><code>geolocation</code></li>
- <li><code>history</code></li>
- <li><code>idle</code></li>
- <li><code>management</code></li>
- <li><code>nativeMessaging</code></li>
- <li><code>notifications</code></li>
- <li><code>pageCapture</code></li>
- <li><code>privacy</code></li>
- <li><code>tabHide</code></li>
- <li><code>tabs</code></li>
- <li><code>topSites</code></li>
- <li><code>webNavigation</code></li>
- <li><code>webRequest</code></li>
- <li><code>webRequestBlocking</code></li>
-</ul>
-</div>
+- `activeTab`
+- `background`
+- `bookmarks`
+- `browserSettings`
+- `clipboardRead`
+- `clipboardWrite`
+- `contentSettings`
+- `contextMenus`
+- `cookies`
+- `debugger`
+- `downloads`
+- `downloads.open`
+- `find`
+- `geolocation`
+- `history`
+- `idle`
+- `management`
+- `nativeMessaging`
+- `notifications`
+- `pageCapture`
+- `privacy`
+- `tabHide`
+- `tabs`
+- `topSites`
+- `webNavigation`
+- `webRequest`
+- `webRequestBlocking`
 
-<p>Note that this is a subset of the API permissions allowed in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">permissions</a></code>.</p>
+Note that this is a subset of the API permissions allowed in [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
 
-<p>Of this set, the following permissions are granted silently, without a user prompt:
+Of this set, the following permissions are granted silently, without a user prompt:
 
-<ul>
-  <li><code>activeTab</code></li>
-  <li><code>cookies</code></li>
-  <li><code>idle</code></li>
-  <li><code>webRequest</code></li>
-  <li><code>webRequestBlocking</code></li>
-</ul>
+- `activeTab`
+- `cookies`
+- `idle`
+- `webRequest`
+- `webRequestBlocking`
 
-<h2 id="Example">Example</h2>
+## Example
 
-<pre class="brush: json"> "optional_permissions": ["*://developer.mozilla.org/*"]</pre>
+```json
+ "optional_permissions": ["*://developer.mozilla.org/*"]
+```
 
-<p>Enable the extension to ask for privileged access to pages under developer.mozilla.org.</p>
+Enable the extension to ask for privileged access to pages under developer.mozilla.org.
 
-<pre class="brush: json">  "optional_permissions": ["tabs"]</pre>
+```json
+  "optional_permissions": ["tabs"]
+```
 
-<p>Enable the extension to ask for access to the privileged pieces of the <code>tabs</code> API.</p>
+Enable the extension to ask for access to the privileged pieces of the `tabs` API.
 
-<pre class="brush: json">  "optional_permissions": ["*://developer.mozilla.org/*", "tabs"]</pre>
+```json
+  "optional_permissions": ["*://developer.mozilla.org/*", "tabs"]
+```
 
-<p>Enable the extension to ask for both of the above permissions.</p>
+Enable the extension to ask for both of the above permissions.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

@@ -13,57 +13,53 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.sendMessage
 ---
-<p>{{AddonSidebar()}}</p>
+{{AddonSidebar()}}
 
-<p>Sends a single message from the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) to any <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> or extension pages/iframes that belong to the extension and are running in the specified tab.</p>
+Sends a single message from the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) to any [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) or extension pages/iframes that belong to the extension and are running in the specified tab.
 
-<p>The message will be received in the extension context by any listeners to the {{WebExtAPIRef("runtime.onMessage")}} event. Listeners may then optionally return something as a response back to the sender.</p>
+The message will be received in the extension context by any listeners to the {{WebExtAPIRef("runtime.onMessage")}} event. Listeners may then optionally return something as a response back to the sender.
 
-<p>This is an asynchronous function that returns a {{jsxref("Promise")}}.</p>
+This is an asynchronous function that returns a {{jsxref("Promise")}}.
 
-<div class="note">
-<p><strong>Note:</strong> You can also use a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging">connection-based approach to exchange messages</a>.</p>
-</div>
+> **Note:** You can also use a [connection-based approach to exchange messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">const sending = browser.tabs.sendMessage(
-  <var>tabId</var>,     // integer
-  <var>message</var>,   // any
-  <var>options</var>    // optional object
+```js
+const sending = browser.tabs.sendMessage(
+  tabId,     // integer
+  message,   // any
+  options    // optional object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code><var>tabId</var></code></dt>
- <dd><code>integer</code>. ID of the tab whose content scripts we want to send a message to.</dd>
- <dt><code><var>message</var></code></dt>
- <dd><code>any</code>. An object that can be serialized (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm">Data cloning algorithm</a>).</dd>
- <dt><code><var>options</var></code> {{optional_inline}}</dt>
- <dd>
-   <p><code>object</code>.</p>
-   <dl>
-    <dt><code><var>frameId</var></code> {{optional_inline}}</dt>
-    <dd><code>integer</code>. Sends the message to a specific frame identified by <code><var>frameId</var></code> instead of all frames in the tab. Whether the content script is executed in all frames depends on the <code>all_frames</code> setting in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts"><code>content_scripts</code></a> section of <code>manifest.json</code>.</dd>
-   </dl>
- </dd>
-</dl>
+- `tabId`
+  - : `integer`. ID of the tab whose content scripts we want to send a message to.
+- `message`
+  - : `any`. An object that can be serialized (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
+- `options` {{optional_inline}}
 
-<h3 id="Return_value">Return value</h3>
+  - : `object`.
 
-<p>A {{jsxref("Promise")}} that will be fulfilled with the response object sent by the handler of the message in the content script, or with no arguments if the content script did not send a response.</p>
+    - `frameId` {{optional_inline}}
+      - : `integer`. Sends the message to a specific frame identified by `frameId` instead of all frames in the tab. Whether the content script is executed in all frames depends on the `all_frames` setting in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) section of `manifest.json`.
 
-<p>If an error occurs while connecting to the specified tab or any other error occurs, the promise will be rejected with an error message.</p>
+### Return value
 
-<p>If several frames respond to the message, the promise is resolved to one of answers.</p>
+A {{jsxref("Promise")}} that will be fulfilled with the response object sent by the handler of the message in the content script, or with no arguments if the content script did not send a response.
 
-<h2 id="Examples">Examples</h2>
+If an error occurs while connecting to the specified tab or any other error occurs, the promise will be rejected with an error message.
 
-<p>Here's an example of a background script that sends a message to the content scripts running in the active tab when the user clicks the browser action. The background script also expects the content script to send a response:</p>
+If several frames respond to the message, the promise is resolved to one of answers.
 
-<pre class="brush: js">// background-script.js
+## Examples
+
+Here's an example of a background script that sends a message to the content scripts running in the active tab when the user clicks the browser action. The background script also expects the content script to send a response:
+
+```js
+// background-script.js
 "use strict";
 
 function onError(error) {
@@ -75,45 +71,45 @@ function sendMessageToTabs(tabs) {
     browser.tabs.sendMessage(
       tab.id,
       {greeting: "Hi from background script"}
-    ).then(response =&gt; {
+    ).then(response => {
       console.log("Message from the content script:");
       console.log(response.response);
     }).catch(onError);
   }
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   browser.tabs.query({
     currentWindow: true,
     active: true
   }).then(sendMessageToTabs).catch(onError);
-});</pre>
+});
+```
 
-<p>Here's the corresponding content script:</p>
+Here's the corresponding content script:
 
-<pre class="brush: js">// content-script.js
+```js
+// content-script.js
 "use strict";
 
-browser.runtime.onMessage.addListener(request =&gt; {
+browser.runtime.onMessage.addListener(request => {
   console.log("Message from the background script:");
   console.log(request.greeting);
   return Promise.resolve({response: "Hi from content script"});
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-sendMessage) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-sendMessage"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -140,5 +136,4 @@ browser.runtime.onMessage.addListener(request =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

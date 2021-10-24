@@ -12,41 +12,39 @@ tags:
   - get
 browser-compat: webextensions.api.contextualIdentities.get
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Gets information about a contextual identity, given its cookie store ID.</p>
+Gets information about a contextual identity, given its cookie store ID.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var getContext = browser.contextualIdentities.get(
+```js
+var getContext = browser.contextualIdentities.get(
   cookieStoreId                  // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>cookieStoreId</code></dt>
- <dd>
- <p><code>string</code>. The ID of this contextual identity's cookie store. Because contextual identities each have their own cookie store, this serves as an identifier for the contextual identity itself.</p>
- </dd>
-</dl>
+- `cookieStoreId`
+  - : `string`. The ID of this contextual identity's cookie store. Because contextual identities each have their own cookie store, this serves as an identifier for the contextual identity itself.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} that describes the identity. If the identity could not be found or the contextual identities feature is not enabled, the promise is rejected.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} that describes the identity. If the identity could not be found or the contextual identities feature is not enabled, the promise is rejected.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This example tries to retrieve the contextual identity whose ID is "firefox-container-1":</p>
+This example tries to retrieve the contextual identity whose ID is "firefox-container-1":
 
-<pre class="brush: js">function onGot(context) {
+```js
+function onGot(context) {
   if (!context) {
     console.error("Context not found");
   } else {
@@ -58,6 +56,7 @@ function onError(e) {
   console.error(e);
 }
 
-browser.contextualIdentities.get("firefox-container-1").then(onGot, onError);</pre>
+browser.contextualIdentities.get("firefox-container-1").then(onGot, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

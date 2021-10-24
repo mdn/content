@@ -7,29 +7,26 @@ tags:
   - How-to
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>To intercept HTTP requests, use the {{WebExtAPIRef("webRequest")}} API. This API enables you to add listeners for various stages of making an HTTP request. In the listeners, you can:</p>
+To intercept HTTP requests, use the {{WebExtAPIRef("webRequest")}} API. This API enables you to add listeners for various stages of making an HTTP request. In the listeners, you can:
 
-<ul>
- <li>get access to request headers and bodies, and response headers</li>
- <li>cancel and redirect requests</li>
- <li>modify request and response headers</li>
-</ul>
+- get access to request headers and bodies, and response headers
+- cancel and redirect requests
+- modify request and response headers
 
-<p>In this article we'll look at three different uses for the <code>webRequest</code> module:</p>
+In this article we'll look at three different uses for the `webRequest` module:
 
-<ul>
- <li>Logging request URLs as they are made.</li>
- <li>Redirecting requests.</li>
- <li>Modifying request headers.</li>
-</ul>
+- Logging request URLs as they are made.
+- Redirecting requests.
+- Modifying request headers.
 
-<h2 id="Logging_request_URLs">Logging request URLs</h2>
+## Logging request URLs
 
-<p>Create a new directory called "requests". In that directory, create a file called "manifest.json" which has the following contents:</p>
+Create a new directory called "requests". In that directory, create a file called "manifest.json" which has the following contents:
 
-<pre class="brush: json">{
+```json
+{
   "description": "Demonstrating webRequests",
   "manifest_version": 2,
   "name": "webRequest-demo",
@@ -37,38 +34,40 @@ tags:
 
   "permissions": [
     "webRequest",
-    "&lt;all_urls&gt;"
+    "<all_urls>"
   ],
 
   "background": {
     "scripts": ["background.js"]
   }
-}</pre>
+}
+```
 
-<p>Next, create a file called "background.js" with the following contents:</p>
+Next, create a file called "background.js" with the following contents:
 
-<pre class="brush: js">function logURL(requestDetails) {
+```js
+function logURL(requestDetails) {
   console.log("Loading: " + requestDetails.url);
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   logURL,
-  {urls: ["&lt;all_urls&gt;"]}
+  {urls: ["<all_urls>"]}
 );
+```
 
-</pre>
+Here we use {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} to call the `logURL()` function just before starting the request. The `logURL()` function grabs the URL of the request from the event object and logs it to the browser console. The `{urls: ["<all_urls>"]}` [pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) means we will intercept HTTP requests to all URLs.
 
-<p>Here we use {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} to call the <code>logURL()</code> function just before starting the request. The <code>logURL()</code> function grabs the URL of the request from the event object and logs it to the browser console. The <code>{urls: ["&lt;all_urls&gt;"]}</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">pattern</a> means we will intercept HTTP requests to all URLs.</p>
+To test it out, [install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), [open the Browser Console](/en-US/docs/Tools/Browser_Console), and open some Web pages. In the Browser Console, you should see the URLs for any resources that the browser requests:
 
-<p>To test it out, <a href="https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/">install the extension</a>, <a href="/en-US/docs/Tools/Browser_Console">open the Browser Console</a>, and open some Web pages. In the Browser Console, you should see the URLs for any resources that the browser requests:</p>
+{{EmbedYouTube("X3rMgkRkB1Q")}}
 
-<p>{{EmbedYouTube("X3rMgkRkB1Q")}}</p>
+## Redirecting requests
 
-<h2 id="Redirecting_requests">Redirecting requests</h2>
+Now let's use `webRequest` to redirect HTTP requests. First, replace manifest.json with this:
 
-<p>Now let's use <code>webRequest</code> to redirect HTTP requests. First, replace manifest.json with this:</p>
-
-<pre class="brush: json">{
+```json
+{
 
   "description": "Demonstrating webRequests",
   "manifest_version": 2,
@@ -86,17 +85,18 @@ browser.webRequest.onBeforeRequest.addListener(
     "scripts": ["background.js"]
   }
 
-}</pre>
+}
+```
 
-<p>The changes here are to:</p>
-<ul> 
-  <li>add the <code>"webRequestBlocking"</code> <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a></code>. This extra permission is needed whenever an extension wants to modify a request.</li>
-  <li>replace the <code>&lt;all_urls&gt;</code> permission with individual <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permissions</a>, as this is good practice to minimize the number of requested permissions.</li>
-</ul>
+The changes here are to:
 
-<p>Next, replace "background.js" with this:</p>
+- add the `"webRequestBlocking"` [`permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). This extra permission is needed whenever an extension wants to modify a request.
+- replace the `<all_urls>` permission with individual [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), as this is good practice to minimize the number of requested permissions.
 
-<pre class="brush: js">var pattern = "https://mdn.mozillademos.org/*";
+Next, replace "background.js" with this:
+
+```js
+var pattern = "https://mdn.mozillademos.org/*";
 
 function redirect(requestDetails) {
   console.log("Redirecting: " + requestDetails.url);
@@ -109,25 +109,27 @@ browser.webRequest.onBeforeRequest.addListener(
   redirect,
   {urls:[pattern], types:["image"]},
   ["blocking"]
-);</pre>
+);
+```
 
-<p>Again, we use the {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} event listener to run a function just before each request is made. This function will replace the target URL with the <code>redirectUrl</code> specified in the function.</p>
+Again, we use the {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} event listener to run a function just before each request is made. This function will replace the target URL with the `redirectUrl` specified in the function.
 
-<p>This time we are not intercepting every request: the <code>{urls:[pattern], types:["image"]}</code> option specifies that we should only intercept requests (1) to URLs residing under "https://mdn.mozillademos.org/" (2) for image resources. See {{WebExtAPIRef("webRequest.RequestFilter")}} for more on this.</p>
+This time we are not intercepting every request: the `{urls:[pattern], types:["image"]}` option specifies that we should only intercept requests (1) to URLs residing under "https\://mdn.mozillademos.org/" (2) for image resources. See {{WebExtAPIRef("webRequest.RequestFilter")}} for more on this.
 
-<p>Also note that we're passing an option called <code>"blocking"</code>: we need to pass this whenever we want to modify the request. It makes the listener function block the network request, so the browser waits for the listener to return before continuing. See the {{WebExtAPIRef("webRequest.onBeforeRequest")}} documentation for more on <code>"blocking"</code>.</p>
+Also note that we're passing an option called `"blocking"`: we need to pass this whenever we want to modify the request. It makes the listener function block the network request, so the browser waits for the listener to return before continuing. See the {{WebExtAPIRef("webRequest.onBeforeRequest")}} documentation for more on `"blocking"`.
 
-<p>To test it out, open a page on MDN that contains a lot of images (for example <a href="/en-US/docs/Tools/Network_Monitor">https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor</a>), <a href="https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on">reload the extension</a>, and then reload the MDN page:</p>
+To test it out, open a page on MDN that contains a lot of images (for example [https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor](/en-US/docs/Tools/Network_Monitor)), [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on), and then reload the MDN page:
 
-<p>{{EmbedYouTube("ix5RrXGr0wA")}}</p>
+{{EmbedYouTube("ix5RrXGr0wA")}}
 
-<h2 id="Modifying_request_headers">Modifying request headers</h2>
+## Modifying request headers
 
-<p>Finally we'll use <code>webRequest</code> to modify request headers. In this example we'll modify the "User-Agent" header so the browser identifies itself as Opera 12.16, but only when visiting pages under http://useragentstring.com/".</p>
+Finally we'll use `webRequest` to modify request headers. In this example we'll modify the "User-Agent" header so the browser identifies itself as Opera 12.16, but only when visiting pages under http\://useragentstring.com/".
 
-<p>Update your "manifest.json" to include <code>http://useragentstring.com/</code></p>
+Update your "manifest.json" to include `http://useragentstring.com/`
 
-<pre class="brush: json">{
+```json
+{
   "description": "Demonstrating webRequests",
   "manifest_version": 2,
   "name": "webRequest-demo",
@@ -142,12 +144,13 @@ browser.webRequest.onBeforeRequest.addListener(
   "background": {
     "scripts": ["background.js"]
   }
-}</pre>
+}
+```
 
+Replace "background.js" with code like this:
 
-<p>Replace "background.js" with code like this:</p>
-
-<pre class="brush: js">var targetPage = "http://useragentstring.com/*";
+```js
+var targetPage = "http://useragentstring.com/*";
 
 var ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
@@ -164,18 +167,19 @@ browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeader,
   {urls: [targetPage]},
   ["blocking", "requestHeaders"]
-);</pre>
+);
+```
 
-<p>Here we use the {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} event listener to run a function just before the request headers are sent.</p>
+Here we use the {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} event listener to run a function just before the request headers are sent.
 
-<p>The listener function will be called only for requests to URLs matching the <code>targetPage</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">pattern</a>. Also note that we've again passed <code>"blocking"</code> as an option. We've also passed <code>"requestHeaders"</code>, which means that the listener will be passed an array containing the request headers that we expect to send. See {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} for more information on these options.</p>
+The listener function will be called only for requests to URLs matching the `targetPage` [pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Also note that we've again passed `"blocking"` as an option. We've also passed `"requestHeaders"`, which means that the listener will be passed an array containing the request headers that we expect to send. See {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}} for more information on these options.
 
-<p>The listener function looks for the "User-Agent" header in the array of request headers, replaces its value with the value of the <code>ua</code> variable, and returns the modified array. This modified array will now be sent to the server.</p>
+The listener function looks for the "User-Agent" header in the array of request headers, replaces its value with the value of the `ua` variable, and returns the modified array. This modified array will now be sent to the server.
 
-<p>To test it out, open <a href="http://useragentstring.com/">useragentstring.com</a> and check that it identifies the browser as Firefox. Then reload the extension, reload <a href="http://useragentstring.com/">useragentstring.com</a>, and check that Firefox is now identified as Opera:</p>
+To test it out, open [useragentstring.com](http://useragentstring.com/) and check that it identifies the browser as Firefox. Then reload the extension, reload [useragentstring.com](http://useragentstring.com/), and check that Firefox is now identified as Opera:
 
-<p>{{EmbedYouTube("SrSNS1-FIx0")}}</p>
+{{EmbedYouTube("SrSNS1-FIx0")}}
 
-<h2 id="Learn_more">Learn more</h2>
+## Learn more
 
-<p>To learn about all the things you can do with the <code>webRequest</code> API, see its <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">reference documentation</a>.</p>
+To learn about all the things you can do with the `webRequest` API, see its [reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).

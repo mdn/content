@@ -13,55 +13,55 @@ tags:
   - i18n
 browser-compat: webextensions.api.i18n.getMessage
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Gets the localized string for the specified message.</p>
+Gets the localized string for the specified message.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.i18n.getMessage(
+```js
+browser.i18n.getMessage(
   messageName,  // string
   substitutions // optional any
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>messageName</code></dt>
- <dd>
-   <p><code>string</code>. The name of the message, as specified in the messages.json file. If the message can't be found in messages.json:</p>
-   <ul>
-    <li>Firefox returns "" and logs an error.</li>
-    <li>Chrome returns "" and does not log an error.</li>
-   </ul>
- </dd>
- <dt><code>substitutions</code>{{optional_inline}}</dt>
- <dd>
-   <p><code>string</code> or <code>array</code> of <code>string</code>. A single substitution string, or an array of substitution strings.</p>
-   <p>In Chrome, if you supply more than 9 substitution strings, <code>getMessage()</code> will return <code>undefined</code>.</p>
- </dd>
-</dl>
+- `messageName`
 
-<h3 id="Return_value">Return value</h3>
+  - : `string`. The name of the message, as specified in the messages.json file. If the message can't be found in messages.json:
 
-<p><code>string</code>. Message localized for current locale.</p>
+    - Firefox returns "" and logs an error.
+    - Chrome returns "" and does not log an error.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- `substitutions`{{optional_inline}}
 
-<p>{{Compat}}</p>
+  - : `string` or `array` of `string`. A single substitution string, or an array of substitution strings.
 
-<h2 id="Examples">Examples</h2>
+    In Chrome, if you supply more than 9 substitution strings, `getMessage()` will return `undefined`.
 
-<p>Get the localized string for <code>"messageContent"</code>, with <code>target.url</code> substituted:</p>
+### Return value
 
-<pre class="brush: js">var message = browser.i18n.getMessage("messageContent", target.url);
+`string`. Message localized for current locale.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+Get the localized string for `"messageContent"`, with `target.url` substituted:
+
+```js
+var message = browser.i18n.getMessage("messageContent", target.url);
 console.log(message);
-</pre>
+```
 
-<p>This would work with a _locales/en/messages.json file containing:</p>
+This would work with a \_locales/en/messages.json file containing:
 
-<pre class="brush: json">{
+```json
+{
   "messageContent": {
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
@@ -72,22 +72,20 @@ console.log(message);
       }
     }
   }
-}</pre>
+}
+```
 
-<p>If <code>target.url</code> is "https://developer.mozilla.org", then the value of message, in the "en" locale, would be:</p>
+If `target.url` is "https\://developer.mozilla.org", then the value of message, in the "en" locale, would be:
 
-<pre>"You clicked https://developer.mozilla.org."</pre>
+    "You clicked https://developer.mozilla.org."
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/extensions/i18n#method-getMessage) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/i18n#method-getMessage"><code>chrome.i18n</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json"><code>i18n.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -114,5 +112,4 @@ console.log(message);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

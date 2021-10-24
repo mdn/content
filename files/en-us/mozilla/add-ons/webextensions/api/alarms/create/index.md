@@ -13,87 +13,89 @@ tags:
   - alarms
 browser-compat: webextensions.api.alarms.create
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Creates a new alarm for the current browser session. An alarm may fire once or multiple times. An alarm is cleared after it fires for the last time.</p>
+Creates a new alarm for the current browser session. An alarm may fire once or multiple times. An alarm is cleared after it fires for the last time.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">browser.alarms.create(
+```js
+browser.alarms.create(
   name,              // optional string
   alarmInfo          // optional object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>name</code>{{optional_inline}}</dt>
- <dd>
-   <p><code>string</code>. A name for the alarm. Defaults to the empty string.</p>
-   <p>This can be used to refer to a particular alarm in {{WebExtAPIRef('alarms.get()')}} and {{WebExtAPIRef('alarms.clear()')}}. It will also be available in {{WebExtAPIRef('alarms.onAlarm')}} as the <code>name</code> property of the {{WebExtAPIRef('alarms.Alarm')}} object passed into the listener function.</p>
-   <p>Alarm names are unique within the scope of a single extension. If an alarm with an identical name exists, the existing alarm will be cleared and the alarm being created will replace it.</p>
- </dd>
- <dt><code>alarmInfo</code>{{optional_inline}}</dt>
- <dd>
- <p><code>object</code>. You can use this to specify when the alarm will initially fire, either as an absolute value (<code>when</code>), or as a delay from the time the alarm is set (<code>delayInMinutes</code>). To make the alarm recur, specify <code>periodInMinutes</code>.</p>
+- `name`{{optional_inline}}
 
- <p>On Chrome, unless the extension is loaded unpackaged, alarms it creates are not allowed to fire more than once per minute. If an extension tries to set <code>delayInMinutes</code> to a value &lt; 1, or <code>when</code> to a value &lt; 1 minute in the future, then the alarm will fire after 1 minute. If an extension tries to set <code>periodInMinutes</code> to a value &lt; 1, then the alarm will fire every minute.</p>
+  - : `string`. A name for the alarm. Defaults to the empty string.
 
- <p>The <code>alarmInfo</code> object may contain the following properties:</p>
- <dl>
-  <dt><code>when</code>{{optional_inline}}</dt>
-  <dd><code>double</code>. The time the alarm will fire first, given as <a href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>. To get the number of milliseconds between the epoch and the current time, use <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now">Date.now()</a></code>. If you specify <code>when</code>, don't specify <code>delayInMinutes</code>.</dd>
-  <dt><code>delayInMinutes</code>{{optional_inline}}</dt>
-  <dd><code>double</code>. The time the alarm will fire first, given as minutes from the time the alarm is set. If you specify <code>delayInMinutes</code>, don't specify <code>when</code>.</dd>
-  <dt><code>periodInMinutes</code>{{optional_inline}}</dt>
-  <dd><code>double</code>. If this is specified, the alarm will fire again every <code>periodInMinutes</code> after its initial firing. If you specify this value you may omit both <code>when</code> and <code>delayInMinutes</code>, and the alarm will then fire initially after <code>periodInMinutes</code>. If <code>periodInMinutes</code> is not specified, the alarm will only fire once.</dd>
- </dl>
- </dd>
-</dl>
+    This can be used to refer to a particular alarm in {{WebExtAPIRef('alarms.get()')}} and {{WebExtAPIRef('alarms.clear()')}}. It will also be available in {{WebExtAPIRef('alarms.onAlarm')}} as the `name` property of the {{WebExtAPIRef('alarms.Alarm')}} object passed into the listener function.
 
-<h2 id="Examples">Examples</h2>
+    Alarm names are unique within the scope of a single extension. If an alarm with an identical name exists, the existing alarm will be cleared and the alarm being created will replace it.
 
-<p>Create a one-time delay-based alarm with "" for the name:</p>
+- `alarmInfo`{{optional_inline}}
 
-<pre class="brush: js">const delayInMinutes = 5;
+  - : `object`. You can use this to specify when the alarm will initially fire, either as an absolute value (`when`), or as a delay from the time the alarm is set (`delayInMinutes`). To make the alarm recur, specify `periodInMinutes`.
 
-<span class="pl-smi">browser</span>.<span class="pl-smi">alarms</span>.<span class="pl-en">create</span>({
+    On Chrome, unless the extension is loaded unpackaged, alarms it creates are not allowed to fire more than once per minute. If an extension tries to set `delayInMinutes` to a value < 1, or `when` to a value < 1 minute in the future, then the alarm will fire after 1 minute. If an extension tries to set `periodInMinutes` to a value < 1, then the alarm will fire every minute.
+
+    The `alarmInfo` object may contain the following properties:
+
+    - `when`{{optional_inline}}
+      - : `double`. The time the alarm will fire first, given as [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time). To get the number of milliseconds between the epoch and the current time, use [`Date.now()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now). If you specify `when`, don't specify `delayInMinutes`.
+    - `delayInMinutes`{{optional_inline}}
+      - : `double`. The time the alarm will fire first, given as minutes from the time the alarm is set. If you specify `delayInMinutes`, don't specify `when`.
+    - `periodInMinutes`{{optional_inline}}
+      - : `double`. If this is specified, the alarm will fire again every `periodInMinutes` after its initial firing. If you specify this value you may omit both `when` and `delayInMinutes`, and the alarm will then fire initially after `periodInMinutes`. If `periodInMinutes` is not specified, the alarm will only fire once.
+
+## Examples
+
+Create a one-time delay-based alarm with "" for the name:
+
+```js
+const delayInMinutes = 5;
+
+browser.alarms.create({
   delayInMinutes
-});</pre>
+});
+```
 
-<p>Create a periodic delay-based alarm named "my-periodic-alarm":</p>
+Create a periodic delay-based alarm named "my-periodic-alarm":
 
-<pre class="brush: js">const delayInMinutes = 5;
+```js
+const delayInMinutes = 5;
 const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   delayInMinutes,
   periodInMinutes
-});</pre>
+});
+```
 
-<p>Create a periodic absolute alarm named "my-periodic-alarm":</p>
+Create a periodic absolute alarm named "my-periodic-alarm":
 
-<pre class="brush: js">const when = 1545696000;
+```js
+const when = 1545696000;
 const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   when,
   periodInMinutes
-});</pre>
+});
+```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -120,5 +122,4 @@ browser.alarms.create("my-periodic-alarm", {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

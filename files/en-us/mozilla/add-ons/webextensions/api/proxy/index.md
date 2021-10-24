@@ -8,60 +8,48 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.proxy
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Use the proxy API to proxy web requests. You can use the {{WebExtAPIRef("proxy.onRequest")}} event listener to intercept web requests, and return an object that describes whether and how to proxy them.</p>
+Use the proxy API to proxy web requests. You can use the {{WebExtAPIRef("proxy.onRequest")}} event listener to intercept web requests, and return an object that describes whether and how to proxy them.
 
-<p>The advantage of the {{WebExtAPIRef("proxy.onRequest")}} approach is that the code that implements your proxy policy runs in your extension's background script, so it gets full access to the WebExtension APIs available to your extension (including, for example, access to your extension's <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage">storage</a></code> and networking APIs like <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/dns">dns</a></code>).</p>
+The advantage of the {{WebExtAPIRef("proxy.onRequest")}} approach is that the code that implements your proxy policy runs in your extension's background script, so it gets full access to the WebExtension APIs available to your extension (including, for example, access to your extension's [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) and networking APIs like [`dns`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/dns)).
 
-<p>Apart from this API, extensions can also use the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/settings">browserSettings.proxyConfig</a></code> property to configure global proxy settings.</p>
+Apart from this API, extensions can also use the [`browserSettings.proxyConfig`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/settings) property to configure global proxy settings.
 
-<p>Google Chrome provides <a href="https://developer.chrome.com/extensions/proxy">an extension API also called "proxy"</a> which is functionally similar to this API, in that extensions can use it to implement a proxying policy. However, the design of the Chrome API is completely different to this API. Because this API is incompatible with the Chrome <code>proxy</code> API, this API is only available through the <code>browser</code> namespace.</p>
+Google Chrome provides [an extension API also called "proxy"](https://developer.chrome.com/extensions/proxy) which is functionally similar to this API, in that extensions can use it to implement a proxying policy. However, the design of the Chrome API is completely different to this API. Because this API is incompatible with the Chrome `proxy` API, this API is only available through the `browser` namespace.
 
-<p>To use this API you need to have the "proxy" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>. Also, where you want to intercept requests, you also need <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">host permission</a> for the URLs of intercepted requests.</p>
+To use this API you need to have the "proxy" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). Also, where you want to intercept requests, you also need [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the URLs of intercepted requests.
 
-<h2 id="Types">Types</h2>
+## Types
 
-<dl>
- <dt>{{WebExtAPIRef("proxy.ProxyInfo")}}</dt>
- <dd>Describes a proxy.</dd>
- <dt>{{WebExtAPIRef("proxy.RequestDetails")}}</dt>
- <dd>
- <p>Contains information about a web request that the browser is about to make.</p>
- </dd>
-</dl>
+- {{WebExtAPIRef("proxy.ProxyInfo")}}
+  - : Describes a proxy.
+- {{WebExtAPIRef("proxy.RequestDetails")}}
+  - : Contains information about a web request that the browser is about to make.
 
-<h2 id="Properties">Properties</h2>
+## Properties
 
-<dl>
- <dt>{{WebExtAPIRef("proxy.settings")}}</dt>
- <dd>Get and set proxy settings.</dd>
-</dl>
+- {{WebExtAPIRef("proxy.settings")}}
+  - : Get and set proxy settings.
 
-<h2 id="Functions">Functions</h2>
+## Functions
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> You should not use these methods ({{WebExtAPIRef("proxy.register()")}} or {{WebExtAPIRef("proxy.unregister()")}}) to register and remove an extended <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register#pac_file_specification">Proxy Auto-Configuration (PAC) file</a>. They were deprecated in Firefox 68 and removed in Firefox 71.</p>
-</div>
+> **Warning:** You should not use these methods ({{WebExtAPIRef("proxy.register()")}} or {{WebExtAPIRef("proxy.unregister()")}}) to register and remove an extended [Proxy Auto-Configuration (PAC) file](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register#pac_file_specification). They were deprecated in Firefox 68 and removed in Firefox 71.
 
-<dl>
- <dt>{{WebExtAPIRef("proxy.register()")}} {{Deprecated_Inline}}</dt>
- <dd>Registers the given proxy script.</dd>
- <dt>{{WebExtAPIRef("proxy.unregister()")}} {{Deprecated_Inline}}</dt>
- <dd>Unregisters the proxy script.</dd>
-</dl>
+- {{WebExtAPIRef("proxy.register()")}} {{Deprecated_Inline}}
+  - : Registers the given proxy script.
+- {{WebExtAPIRef("proxy.unregister()")}} {{Deprecated_Inline}}
+  - : Unregisters the proxy script.
 
-<h2 id="Events">Events</h2>
+## Events
 
-<dl>
- <dt>{{WebExtAPIRef("proxy.onError")}}</dt>
- <dd>Fired when the system encounters an error running the PAC script or the <code>onRequest</code> listener.</dd>
- <dt>{{WebExtAPIRef("proxy.onRequest")}}</dt>
- <dd>Fired when a web request is about to be made, giving the extension an opportunity to proxy it.</dd>
-</dl>
+- {{WebExtAPIRef("proxy.onError")}}
+  - : Fired when the system encounters an error running the PAC script or the `onRequest` listener.
+- {{WebExtAPIRef("proxy.onRequest")}}
+  - : Fired when a web request is about to be made, giving the extension an opportunity to proxy it.
 
-<p>{{WebExtExamples("h2")}}</p>
+{{WebExtExamples("h2")}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

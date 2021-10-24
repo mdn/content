@@ -13,49 +13,49 @@ tags:
   - setExpression
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setExpression
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Evaluates an expression in the context of the inspected page, and displays the result in the extension sidebar pane.</p>
+Evaluates an expression in the context of the inspected page, and displays the result in the extension sidebar pane.
 
-<p>The expression's execution context is the same as that for <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval">inspectedWindow.eval()</a></code>.</p>
+The expression's execution context is the same as that for [`inspectedWindow.eval()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval).
 
-<p> JSON objects and DOM nodes are displayed as an expandable tree, as in the <a href="/en-US/docs/Tools/JSON_viewer">JSON viewer</a> in Firefox. You can optionally specify a <code>rootTitle</code> string: this will be displayed as the title of the tree's root.</p>
+JSON objects and DOM nodes are displayed as an expandable tree, as in the [JSON viewer](/en-US/docs/Tools/JSON_viewer) in Firefox. You can optionally specify a `rootTitle` string: this will be displayed as the title of the tree's root.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var evaluating = browser.devtools.panels.setExpression(
+```js
+var evaluating = browser.devtools.panels.setExpression(
   expression,       // string
   rootTitle         // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>expression</code></dt>
- <dd><code>string</code>. The expression to evaluate.</dd>
- <dt><code>rootTitle</code> {{optional_inline}}</dt>
- <dd>string. The title of the root of the tree in which results are displayed.</dd>
-</dl>
+- `expression`
+  - : `string`. The expression to evaluate.
+- `rootTitle` {{optional_inline}}
+  - : string. The title of the root of the tree in which results are displayed.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments, once the expression has been evaluated.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments, once the expression has been evaluated.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>This code creates a sidebar pane that displays the <code><a href="/en-US/docs/Web/API/Element/tagName">tagName</a></code> of the currently selected element:</p>
+This code creates a sidebar pane that displays the [`tagName`](/en-US/docs/Web/API/Element/tagName) of the currently selected element:
 
-<pre class="brush: js">function onCreated(sidebarPane) {
+```js
+function onCreated(sidebarPane) {
 
-  browser.devtools.panels.elements.onSelectionChanged.addListener(() =&gt; {
-    const exp = "$0 &amp;&amp; $0.tagName";
+  browser.devtools.panels.elements.onSelectionChanged.addListener(() => {
+    const exp = "$0 && $0.tagName";
     const title = "Selected Element tagName";
     sidebarPane.setExpression(exp, title);
   });
@@ -63,16 +63,13 @@ browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setExpres
 }
 
 browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a> API.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -99,5 +96,4 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

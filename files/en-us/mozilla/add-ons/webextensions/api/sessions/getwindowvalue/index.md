@@ -12,44 +12,44 @@ tags:
   - sessions
 browser-compat: webextensions.api.sessions.getWindowValue
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Retrieves a value previously stored by a call to {{WebExtAPIRef("sessions.setWindowValue")}}.</p>
+Retrieves a value previously stored by a call to {{WebExtAPIRef("sessions.setWindowValue")}}.
 
-<p>You can retrieve a value from a window even over a close/restore cycle: meaning that if you set a value, then the user closes the window, then restores the window using the browser's "restore window" feature (for example, by pressing Control+Shift+N), then you will be able to retrieve the value from the restored window. Note, though, that a restored window does not get the same ID as the original, so the ID you pass into <code>getWindowValue()</code> will be different from the ID you passed into <code>setWindowValue()</code>, even though they both refer to the same window.</p>
+You can retrieve a value from a window even over a close/restore cycle: meaning that if you set a value, then the user closes the window, then restores the window using the browser's "restore window" feature (for example, by pressing Control+Shift+N), then you will be able to retrieve the value from the restored window. Note, though, that a restored window does not get the same ID as the original, so the ID you pass into `getWindowValue()` will be different from the ID you passed into `setWindowValue()`, even though they both refer to the same window.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var retrieving = browser.sessions.getWindowValue(
+```js
+var retrieving = browser.sessions.getWindowValue(
   windowId,    // integer
   key          // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>windowId</code></dt>
- <dd><code>integer</code>. ID of the window whose data you are trying to retrieve. Error is thrown if ID is invalid.</dd>
- <dt><code>key</code></dt>
- <dd><code>string</code>. Key identifying the particular value to retrieve. This needs to match the key previously given in {{WebExtAPIRef("sessions.setWindowValue")}}.</dd>
-</dl>
+- `windowId`
+  - : `integer`. ID of the window whose data you are trying to retrieve. Error is thrown if ID is invalid.
+- `key`
+  - : `string`. Key identifying the particular value to retrieve. This needs to match the key previously given in {{WebExtAPIRef("sessions.setWindowValue")}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be resolved with the value if it exists, or <code>undefined</code> if it does not exist. If the call failed (for example, because the window ID could not be found) then the promise will be rejected with an error message.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be resolved with the value if it exists, or `undefined` if it does not exist. If the call failed (for example, because the window ID could not be found) then the promise will be rejected with an error message.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Log the value of "my-key" for all newly created windows (this will include any windows that have been restored):</p>
+Log the value of "my-key" for all newly created windows (this will include any windows that have been restored):
 
-<pre class="brush: js">function onGetResolved(r) {
+```js
+function onGetResolved(r) {
   console.log(`success: ${r}`);
 }
 
@@ -57,8 +57,9 @@ function onGetRejected(e) {
   console.log(`error: ${e}`);
 }
 
-browser.windows.onCreated.addListener((window) =&gt; {
+browser.windows.onCreated.addListener((window) => {
   browser.sessions.getWindowValue(window.id, "my-key").then(onGetResolved, onGetRejected);
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

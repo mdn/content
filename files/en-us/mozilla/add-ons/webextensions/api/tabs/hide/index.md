@@ -12,54 +12,53 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.hide
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Hides one or more tabs.</p>
+Hides one or more tabs.
 
-<p>Hidden tabs are no longer visible in the browser's tabstrip. Hidden tabs are not automatically <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard">discarded</a>: the code running in them continues to run. You can explicitly discard tabs whenever you hide them: although this is not appropriate in all situations, it will help to reduce the resources used by the browser.</p>
+Hidden tabs are no longer visible in the browser's tabstrip. Hidden tabs are not automatically [discarded](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard): the code running in them continues to run. You can explicitly discard tabs whenever you hide them: although this is not appropriate in all situations, it will help to reduce the resources used by the browser.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<p>Not all tabs are eligible for being hidden:</p>
+Not all tabs are eligible for being hidden:
 
-<ul>
- <li>Tabs that are pinned cannot be hidden.</li>
- <li>Tabs that are sharing the screen, microphone or camera cannot be hidden.</li>
- <li>The current active tab cannot be hidden.</li>
- <li>Tabs that are in the process of being closed cannot be hidden.</li>
-</ul>
+- Tabs that are pinned cannot be hidden.
+- Tabs that are sharing the screen, microphone or camera cannot be hidden.
+- The current active tab cannot be hidden.
+- Tabs that are in the process of being closed cannot be hidden.
 
-<p>The first time an extension hides a tab, the browser will tell the user that the tab is being hidden, show them how they can access the hidden tab, and give them the option of disabling the extension instead.</p>
+The first time an extension hides a tab, the browser will tell the user that the tab is being hidden, show them how they can access the hidden tab, and give them the option of disabling the extension instead.
 
-<p>To use this API you must have the "tabHide" <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
+To use this API you must have the "tabHide" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var hiding = browser.tabs.hide(
+```js
+var hiding = browser.tabs.hide(
   tabIds          // integer or integer array
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>tabIds</code></dt>
- <dd>
-   <p><code>integer</code> or <code>array</code> of <code>integer</code>. The IDs of the tab or tabs to hide.</p>
-   <p>If any of these tabs are not eligible for being hidden, they will not be hidden, but the call will still succeed and eligible tabs will still be hidden. For example, if you pass <code>[1, 3]</code>, and <code>1</code> identifies the active tab, then only <code>3</code> will be hidden.</p>
-   <p>However, if any of the tab IDs are invalid, the call will fail and no tabs will be hidden.</p>
-  </dd>
-</dl>
+- `tabIds`
 
-<h3 id="Return_value">Return value</h3>
+  - : `integer` or `array` of `integer`. The IDs of the tab or tabs to hide.
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with an array containing the IDs of the tabs that were hidden. If any error occurs, the promise will be rejected with an error message.</p>
+    If any of these tabs are not eligible for being hidden, they will not be hidden, but the call will still succeed and eligible tabs will still be hidden. For example, if you pass `[1, 3]`, and `1` identifies the active tab, then only `3` will be hidden.
 
-<h2 id="Examples">Examples</h2>
+    However, if any of the tab IDs are invalid, the call will fail and no tabs will be hidden.
 
-<p>Hide a single tab:</p>
+### Return value
 
-<pre class="brush: js">function onHidden() {
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array containing the IDs of the tabs that were hidden. If any error occurs, the promise will be rejected with an error message.
+
+## Examples
+
+Hide a single tab:
+
+```js
+function onHidden() {
   console.log(`Hidden`);
 }
 
@@ -67,11 +66,13 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.tabs.hide(2).then(onHidden, onError);</pre>
+browser.tabs.hide(2).then(onHidden, onError);
+```
 
-<p>Hide multiple tabs:</p>
+Hide multiple tabs:
 
-<pre class="brush: js">function onHidden() {
+```js
+function onHidden() {
   console.log(`Hidden`);
 }
 
@@ -79,10 +80,11 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.tabs.hide([15, 14, 1]).then(onHidden, onError);</pre>
+browser.tabs.hide([15, 14, 1]).then(onHidden, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}

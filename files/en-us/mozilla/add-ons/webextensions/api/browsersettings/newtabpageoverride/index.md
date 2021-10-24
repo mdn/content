@@ -12,23 +12,24 @@ tags:
   - newTabPageOverride
 browser-compat: webextensions.api.browserSettings.newTabPageOverride
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to get a string representing the URL for the "new tab" page: that is, the page that's loaded when the user opens a new empty tab.</p>
+A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to get a string representing the URL for the "new tab" page: that is, the page that's loaded when the user opens a new empty tab.
 
-<p>Note that this is a read-only setting.</p>
+Note that this is a read-only setting.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Get the current value of the new tab URL:</p>
+Get the current value of the new tab URL:
 
-<pre class="brush: js">browser.browserSettings.newTabPageOverride.get({}).then(result =&gt; {
+```js
+browser.browserSettings.newTabPageOverride.get({}).then(result => {
   console.log(result.value);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

@@ -13,122 +13,117 @@ tags:
   - contextMenus
 browser-compat: webextensions.api.menus.create
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Creates a new menu item, given an options object defining properties for the item.</p>
+Creates a new menu item, given an options object defining properties for the item.
 
-<p>Unlike other asynchronous functions, this one does not return a promise, but uses an optional callback to communicate success or failure. This is because its return value is the ID of the new item.</p>
+Unlike other asynchronous functions, this one does not return a promise, but uses an optional callback to communicate success or failure. This is because its return value is the ID of the new item.
 
-<p>For compatibility with other browsers, Firefox makes this method available via the <code>contextMenus</code> namespace as well as the <code>menus</code> namespace. Note though that it's not possible to create tools menu items (<code>contexts: ["tools_menu"]</code>) using the <code>contextMenus</code> namespace.</p>
+For compatibility with other browsers, Firefox makes this method available via the `contextMenus` namespace as well as the `menus` namespace. Note though that it's not possible to create tools menu items (`contexts: ["tools_menu"]`) using the `contextMenus` namespace.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.menus.create(
+```js
+browser.menus.create(
   createProperties, // object
   function() {...}  // optional function
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>createProperties</code></dt>
- <dd>
-   <p><code>object</code>. Properties for the new menu item.</p>
-   <dl>
-    <dt><code>checked</code> {{optional_inline}}</dt>
-    <dd><code>boolean</code>. The initial state of a checkbox or radio item: <code>true</code> for selected and <code>false</code> for unselected. Only one radio item can be selected at a time in a given group of radio items.</dd>
-    <dt><code>command</code> {{optional_inline}}</dt>
-    <dd>
-    <p><code>string</code>. String describing an action that should be taken when the user clicks the item. Possible values are:</p>
+- `createProperties`
 
-    <ul>
-     <li><code>"_execute_browser_action"</code>: simulate a click on the extension's browser action, opening its popup if it has one</li>
-     <li><code>"_execute_page_action"</code>: simulate a click on the extension's page action, opening its popup if it has one</li>
-     <li><code>"_execute_sidebar_action"</code>: open the extension's sidebar</li>
-    </ul>
+  - : `object`. Properties for the new menu item.
 
-    <p>Clicking the item will still trigger the {{WebExtAPIRef("menus.onClicked")}} event, but there's no guarantee of the ordering here: the command may be executed before <code>onClicked</code> fires.</p>
-    </dd>
-    <dt><code>contexts</code> {{optional_inline}}</dt>
-    <dd>
-    <p><code>array</code> of <code>{{WebExtAPIRef('menus.ContextType')}}</code>. Array of contexts in which this menu item will appear. If this option is omitted:</p>
+    - `checked` {{optional_inline}}
+      - : `boolean`. The initial state of a checkbox or radio item: `true` for selected and `false` for unselected. Only one radio item can be selected at a time in a given group of radio items.
+    - `command` {{optional_inline}}
 
-    <ul>
-     <li>if the item's parent has contexts set, then this item will inherit its parent's contexts</li>
-     <li>otherwise, the item is given a context array of ["page"].</li>
-    </ul>
-    </dd>
-    <dt><code>documentUrlPatterns</code> {{optional_inline}}</dt>
-    <dd><code>array</code> of <code>string</code>. Lets you restrict the item to apply only to documents whose URL matches one of the given <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">match patterns</a>. This applies to frames as well.</dd>
-    <dt><code>enabled</code> {{optional_inline}}</dt>
-    <dd><code>boolean</code>. Whether this menu item is enabled or disabled. Defaults to <code>true</code>.</dd>
-    <dt><code>icons</code> {{optional_inline}}</dt>
-    <dd>
-    <p><code>object</code>. One or more custom icons to display next to the item. Custom icons can only be set for items appearing in submenus. This property is an object with one property for each supplied icon: the property's name should include the icon's size in pixels, and path is relative to the icon from the extension's root directory. The browser tries to choose a 16x16 pixel icon for a normal display or a 32x32 pixel icon for a high-density display. To avoid any scaling, you can specify icons like this:</p>
+      - : `string`. String describing an action that should be taken when the user clicks the item. Possible values are:
 
-    <pre class="brush: json">&quot;icons&quot;: {
-        &quot;16&quot;: &quot;path/to/geo-16.png&quot;,
-        &quot;32&quot;: &quot;path/to/geo-32.png&quot;
-      }</pre>
+        - `"_execute_browser_action"`: simulate a click on the extension's browser action, opening its popup if it has one
+        - `"_execute_page_action"`: simulate a click on the extension's page action, opening its popup if it has one
+        - `"_execute_sidebar_action"`: open the extension's sidebar
 
-    <p>Alternatively, you can specify a single SVG icon, and it will be scaled appropriately:</p>
+        Clicking the item will still trigger the {{WebExtAPIRef("menus.onClicked")}} event, but there's no guarantee of the ordering here: the command may be executed before `onClicked` fires.
 
-    <pre class="brush: json">&quot;icons&quot;: {
-        &quot;16&quot;: &quot;path/to/geo.svg&quot;
-      }</pre>
+    - `contexts` {{optional_inline}}
 
-    <div class="notecard note">
-    <p><strong>Note:</strong> The top-level menu item uses the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a> specified in the manifest rather than what is specified with this key.</p>
-    </div>
-    </dd>
-    <dt><code>id</code> {{optional_inline}}</dt>
-    <dd><code>string</code>. The unique ID to assign to this item. Mandatory for event pages. Cannot be the same as another ID for this extension.</dd>
-    <dt><code>onclick</code> {{optional_inline}}</dt>
-    <dd><code>function</code>. A function that will be called when the menu item is clicked. Event pages cannot use this: instead, they should register a listener for {{WebExtAPIRef('menus.onClicked')}}.</dd>
-    <dt><code>parentId</code> {{optional_inline}}</dt>
-    <dd><code>integer</code> or <code>string</code>. The ID of a parent menu item; this makes the item a child of a previously added item. Note: If you have created more than one menu item, then the items will be placed in a submenu. The submenu's parent will be labeled with the name of the extension.</dd>
-    <dt><code>targetUrlPatterns</code> {{optional_inline}}</dt>
-    <dd><code>array</code> of <code>string</code>. Similar to <code>documentUrlPatterns</code>, but lets you filter based on the <code>href</code> of anchor tags and the <code>src</code> attribute of img/audio/video tags. This parameter supports any URL scheme, even those that are usually not allowed in a match pattern.</dd>
-    <dt><code>title</code> {{optional_inline}}</dt>
-    <dd>
-    <p><code>string</code>. The text to be displayed in the item. Mandatory unless <code>type</code> is "separator".</p>
+      - : `array` of `{{WebExtAPIRef('menus.ContextType')}}`. Array of contexts in which this menu item will appear. If this option is omitted:
 
-    <p>You can use "<code>%s</code>" in the string. If you do this in a menu item, and some text is selected in the page when the menu is shown, then the selected text will be interpolated into the title. For example, if <code>title</code> is "Translate '%s' to Pig Latin" and the user selects the word "cool", then activates the menu, then the menu item's title will be: "Translate 'cool' to Pig Latin".</p>
+        - if the item's parent has contexts set, then this item will inherit its parent's contexts
+        - otherwise, the item is given a context array of \["page"].
 
-    <p>If the title contains an ampersand "&amp;" then the next character will be used as an access key for the item, and the ampersand will not be displayed. Exceptions to this are:</p>
+    - `documentUrlPatterns` {{optional_inline}}
+      - : `array` of `string`. Lets you restrict the item to apply only to documents whose URL matches one of the given [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). This applies to frames as well.
+    - `enabled` {{optional_inline}}
+      - : `boolean`. Whether this menu item is enabled or disabled. Defaults to `true`.
+    - `icons` {{optional_inline}}
 
-    <ul>
-     <li>If the next character is also an ampersand: then a single ampersand will be displayed and no access key will be set. In effect, "&amp;&amp;" is used to display a single ampersand.</li>
-     <li>If the next characters are the interpolation directive "%s": then the ampersand will not be displayed and no access key will be set.</li>
-     <li>If the ampersand is the last character in the title: then the ampersand will not be displayed and no access key will be set.</li>
-    </ul>
+      - : `object`. One or more custom icons to display next to the item. Custom icons can only be set for items appearing in submenus. This property is an object with one property for each supplied icon: the property's name should include the icon's size in pixels, and path is relative to the icon from the extension's root directory. The browser tries to choose a 16x16 pixel icon for a normal display or a 32x32 pixel icon for a high-density display. To avoid any scaling, you can specify icons like this:
 
-    <p>Only the first ampersand will be used to set an access key: subsequent ampersands will not be displayed but will not set keys. So "&amp;A and &amp;B" will be shown as "A and B" and set "A" as the access key.</p>
+        ```json
+        "icons": {
+                "16": "path/to/geo-16.png",
+                "32": "path/to/geo-32.png"
+              }
+        ```
 
-    <p>In some localized versions of Firefox (Japanese and Chinese), the access key is surrounded by parentheses and appended to the menu label, <em>unless</em> the menu title itself already ends with the access key (<code>"toolkit(&amp;K)"</code> for example). For more details, see {{bug(1647373)}}.</p>
-    </dd>
-    <dt><code>type</code> {{optional_inline}}</dt>
-    <dd><code>{{WebExtAPIRef('menus.ItemType')}}</code>. The type of menu item: "normal", "checkbox", "radio", "separator". Defaults to "normal".</dd>
-    <dt><code>viewTypes</code> {{optional_inline}}</dt>
-    <dd><code>{{WebExtAPIRef('extension.ViewType')}}</code>. List of view types where the menu item will be shown. Defaults to any view, including those without a <code>viewType</code>.</dd>
-    <dt><code>visible</code> {{optional_inline}}</dt>
-    <dd><code>boolean</code>. Whether the item is shown in the menu. Defaults to <code>true</code>.</dd>
-   </dl>
- </dd>
- <dt><code>callback</code> {{optional_inline}}</dt>
- <dd><code>function</code>. Called when the item has been created. If there were any problems creating the item, details will be available in {{WebExtAPIRef('runtime.lastError')}}.</dd>
-</dl>
+        Alternatively, you can specify a single SVG icon, and it will be scaled appropriately:
 
-<h3 id="Return_value">Return value</h3>
+        ```json
+        "icons": {
+                "16": "path/to/geo.svg"
+              }
+        ```
 
-<p><code>integer</code> or <code>string</code>. The <code>ID</code> of the newly created item.</p>
+        > **Note:** The top-level menu item uses the [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
 
-<h2 id="Examples">Examples</h2>
+    - `id` {{optional_inline}}
+      - : `string`. The unique ID to assign to this item. Mandatory for event pages. Cannot be the same as another ID for this extension.
+    - `onclick` {{optional_inline}}
+      - : `function`. A function that will be called when the menu item is clicked. Event pages cannot use this: instead, they should register a listener for {{WebExtAPIRef('menus.onClicked')}}.
+    - `parentId` {{optional_inline}}
+      - : `integer` or `string`. The ID of a parent menu item; this makes the item a child of a previously added item. Note: If you have created more than one menu item, then the items will be placed in a submenu. The submenu's parent will be labeled with the name of the extension.
+    - `targetUrlPatterns` {{optional_inline}}
+      - : `array` of `string`. Similar to `documentUrlPatterns`, but lets you filter based on the `href` of anchor tags and the `src` attribute of img/audio/video tags. This parameter supports any URL scheme, even those that are usually not allowed in a match pattern.
+    - `title` {{optional_inline}}
 
-<p>This example creates a context menu item that's shown when the user has selected some text in the page. It just logs the selected text to the console:</p>
+      - : `string`. The text to be displayed in the item. Mandatory unless `type` is "separator".
 
-<pre class="brush: js">browser.menus.create({
+        You can use "`%s`" in the string. If you do this in a menu item, and some text is selected in the page when the menu is shown, then the selected text will be interpolated into the title. For example, if `title` is "Translate '%s' to Pig Latin" and the user selects the word "cool", then activates the menu, then the menu item's title will be: "Translate 'cool' to Pig Latin".
+
+        If the title contains an ampersand "&" then the next character will be used as an access key for the item, and the ampersand will not be displayed. Exceptions to this are:
+
+        - If the next character is also an ampersand: then a single ampersand will be displayed and no access key will be set. In effect, "&&" is used to display a single ampersand.
+        - If the next characters are the interpolation directive "%s": then the ampersand will not be displayed and no access key will be set.
+        - If the ampersand is the last character in the title: then the ampersand will not be displayed and no access key will be set.
+
+        Only the first ampersand will be used to set an access key: subsequent ampersands will not be displayed but will not set keys. So "\&A and \&B" will be shown as "A and B" and set "A" as the access key.
+
+        In some localized versions of Firefox (Japanese and Chinese), the access key is surrounded by parentheses and appended to the menu label, _unless_ the menu title itself already ends with the access key (`"toolkit(&K)"` for example). For more details, see {{bug(1647373)}}.
+
+    - `type` {{optional_inline}}
+      - : `{{WebExtAPIRef('menus.ItemType')}}`. The type of menu item: "normal", "checkbox", "radio", "separator". Defaults to "normal".
+    - `viewTypes` {{optional_inline}}
+      - : `{{WebExtAPIRef('extension.ViewType')}}`. List of view types where the menu item will be shown. Defaults to any view, including those without a `viewType`.
+    - `visible` {{optional_inline}}
+      - : `boolean`. Whether the item is shown in the menu. Defaults to `true`.
+
+- `callback` {{optional_inline}}
+  - : `function`. Called when the item has been created. If there were any problems creating the item, details will be available in {{WebExtAPIRef('runtime.lastError')}}.
+
+### Return value
+
+`integer` or `string`. The `ID` of the newly created item.
+
+## Examples
+
+This example creates a context menu item that's shown when the user has selected some text in the page. It just logs the selected text to the console:
+
+```js
+browser.menus.create({
   id: "log-selection",
   title: "Log '%s' to the console",
   contexts: ["selection"]
@@ -138,11 +133,13 @@ browser.menus.onClicked.addListener(function(info, tab) {
   if (info.menuItemId == "log-selection") {
     console.log(info.selectionText);
   }
-});</pre>
+});
+```
 
-<p>This example adds two radio items, which you can use to choose whether to apply a green or a blue border to the page. Note that this example will need the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission">activeTab permission</a>.</p>
+This example adds two radio items, which you can use to choose whether to apply a green or a blue border to the page. Note that this example will need the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 
-<pre class="brush: js">function onCreated() {
+```js
+function onCreated() {
   if (browser.runtime.lastError) {
     console.log("error creating item:" + browser.runtime.lastError);
   } else {
@@ -179,20 +176,18 @@ browser.menus.onClicked.addListener(function(info, tab) {
       code: makeItGreen
     });
   }
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus#method-create) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/contextMenus#method-create"><code>chrome.contextMenus</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json"><code>context_menus.json</code></a> in the Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -219,5 +214,4 @@ browser.menus.onClicked.addListener(function(info, tab) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

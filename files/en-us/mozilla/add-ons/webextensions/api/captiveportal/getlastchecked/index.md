@@ -11,27 +11,27 @@ tags:
   - captivePortal
 browser-compat: webextensions.api.captivePortal.getLastChecked
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Returns the time since the last request was completed.</p>
+Returns the time since the last request was completed.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var state = browser.captivePortal.getLastChecked()
-</pre>
+```js
+var state = browser.captivePortal.getLastChecked()
+```
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> that is fulfilled with an integer representing time in milliseconds.</p>
+A [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an integer representing time in milliseconds.
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -58,5 +58,4 @@ browser-compat: webextensions.api.captivePortal.getLastChecked
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

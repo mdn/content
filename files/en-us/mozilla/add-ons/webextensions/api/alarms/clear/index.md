@@ -13,47 +13,46 @@ tags:
   - clear
 browser-compat: webextensions.api.alarms.clear
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Cancels an alarm, given its name.</p>
+Cancels an alarm, given its name.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">var clearAlarm = browser.alarms.clear(
+```js
+var clearAlarm = browser.alarms.clear(
   name                       // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>name</code>{{optional_inline}}</dt>
- <dd><code>string</code>. The name of the alarm to clear. If you don't supply this, the empty string "" will be used.</dd>
-</dl>
+- `name`{{optional_inline}}
+  - : `string`. The name of the alarm to clear. If you don't supply this, the empty string "" will be used.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a boolean. This will be <code>true</code> if the alarm was cleared, <code>false</code> otherwise.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a boolean. This will be `true` if the alarm was cleared, `false` otherwise.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">function onCleared(wasCleared) {
+```js
+function onCleared(wasCleared) {
   console.log(wasCleared);  // true/false
 }
 
 var clearAlarm = browser.alarms.clear("my-periodic-alarm");
-clearAlarm.then(onCleared);</pre>
+clearAlarm.then(onCleared);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/alarms"><code>chrome.alarms</code></a> API.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

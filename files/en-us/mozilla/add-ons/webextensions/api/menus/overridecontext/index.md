@@ -10,44 +10,43 @@ tags:
   - WebExtensions
   - contextMenus
 ---
-<p>{{AddonSidebar}}</p>
+{{AddonSidebar}}
 
-<p>Hide all default Firefox menu items in favor of providing a custom context menu UI.</p>
+Hide all default Firefox menu items in favor of providing a custom context menu UI.
 
-<p>The overrideContext method will cause the matching menu items from this extension to be shown instead of the default menu. This method should be called from a {{Event("contextmenu")}} DOM event handler, and only applies to the menu that opens after this event.</p>
+The overrideContext method will cause the matching menu items from this extension to be shown instead of the default menu. This method should be called from a {{Event("contextmenu")}} DOM event handler, and only applies to the menu that opens after this event.
 
-<p>This interface requires the <code>menus.overrideContext</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>.</p>
+This interface requires the `menus.overrideContext` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.menus.overrideContext(
+```js
+browser.menus.overrideContext(
   contextOptions // object
-)</pre>
+)
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>contextOptions</code></dt>
- <dd>
-   <p><code>object</code>. Options for how the context menus will be overridden.</p>
-   <dl>
-    <dt><code>showDefaults</code> {{optional_inline}}</dt>
-    <dd><code>boolean</code>. Whether to also include default menu items in the menu.</dd>
-    <dt><code>context</code>{{optional_inline}}</dt>
-    <dd><code>string</code>. ContextType to override, to allow menu items from other extensions in the menu. Currently only <code>'bookmark'</code> and <code>'tab'</code> are supported. <code>showDefaults</code> cannot be used with this option.</dd>
-    <dt><code>bookmarkId</code>{{optional_inline}}</dt>
-    <dd><code>string</code>. Required when context is <code>'bookmark'</code>. Requires 'bookmark' permission.</dd>
-    <dt><code>tabId</code>{{optional_inline}}</dt>
-    <dd><code>integer</code>. Required when context is <code>'tab'</code>. Requires 'tabs' permission.</dd>
-   </dl>
- </dd>
-</dl>
+- `contextOptions`
 
-<h2 id="Examples">Examples</h2>
+  - : `object`. Options for how the context menus will be overridden.
 
-<p>Open the tab context menu on your custom UI, in this case :</p>
+    - `showDefaults` {{optional_inline}}
+      - : `boolean`. Whether to also include default menu items in the menu.
+    - `context`{{optional_inline}}
+      - : `string`. ContextType to override, to allow menu items from other extensions in the menu. Currently only `'bookmark'` and `'tab'` are supported. `showDefaults` cannot be used with this option.
+    - `bookmarkId`{{optional_inline}}
+      - : `string`. Required when context is `'bookmark'`. Requires 'bookmark' permission.
+    - `tabId`{{optional_inline}}
+      - : `integer`. Required when context is `'tab'`. Requires 'tabs' permission.
 
-<pre class="brush:js">document.addEventListener('contextmenu', event =&gt; {
+## Examples
+
+Open the tab context menu on your custom UI, in this case :
+
+```js
+document.addEventListener('contextmenu', event => {
   const foo = event.target.closest('.foo');
   if (foo) {
     // When the context menu is opened on an element with the foo class
@@ -58,6 +57,6 @@ tags:
     });
   }
 }, { capture: true });
-</pre>
+```
 
-<p>See <a href="https://blog.mozilla.org/addons/2018/11/08/extensions-in-firefox-64/#cm">this blog post</a> for more details.</p>
+See [this blog post](https://blog.mozilla.org/addons/2018/11/08/extensions-in-firefox-64/#cm) for more details.

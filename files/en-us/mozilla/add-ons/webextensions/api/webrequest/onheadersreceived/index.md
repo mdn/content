@@ -13,185 +13,170 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.onHeadersReceived
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when the HTTP response headers for a request are received. Use this event to modify HTTP response headers.</p>
+Fired when the HTTP response headers for a request are received. Use this event to modify HTTP response headers.
 
-<p>To have the response headers passed into the listener, along with the rest of the request data, pass <code>"responseHeaders"</code> in the <code>extraInfoSpec</code> array.</p>
+To have the response headers passed into the listener, along with the rest of the request data, pass `"responseHeaders"` in the `extraInfoSpec` array.
 
-<p>If you use <code>"blocking"</code>, you must have the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions">"webRequestBlocking" API permission</a> in your manifest.json.</p>
+If you use `"blocking"`, you must have the ["webRequestBlocking" API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in your manifest.json.
 
-<p>It is possible for extensions to make conflicting requests. If two extensions listen to <code>onHeadersReceived</code> for the same request and return <code>responseHeaders</code> to set the same header (for example, <code>Set-Cookie</code>) not present in the original response, only one of the changes will succeed.</p>
+It is possible for extensions to make conflicting requests. If two extensions listen to `onHeadersReceived` for the same request and return `responseHeaders` to set the same header (for example, `Set-Cookie`) not present in the original response, only one of the changes will succeed.
 
-<p>However, the <code>Content-Security-Policy</code> header is treated differently; its values are combined to apply all the specified policies. But, if two extensions set a CSP value that conflicts, the CSP service makes the restriction more strict to resolve the conflict.  For example, if one extension sets <code>img-src: example.com</code>, and another extension sets <code>img-src: example.org</code>, the result is <code>img-src: 'none'</code>.  Merged modifications always lean towards being more restrictive, though an extension may remove the original CSP header.</p>
+However, the `Content-Security-Policy` header is treated differently; its values are combined to apply all the specified policies. But, if two extensions set a CSP value that conflicts, the CSP service makes the restriction more strict to resolve the conflict.  For example, if one extension sets `img-src: example.com`, and another extension sets `img-src: example.org`, the result is `img-src: 'none'`.  Merged modifications always lean towards being more restrictive, though an extension may remove the original CSP header.
 
-<p>If you want to see the headers that are processed by the system, without the risk that another extension will alter them, use {{WebExtAPIRef("webRequest.onResponseStarted")}}, although you can't modify headers on this event.</p>
+If you want to see the headers that are processed by the system, without the risk that another extension will alter them, use {{WebExtAPIRef("webRequest.onResponseStarted")}}, although you can't modify headers on this event.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.webRequest.onHeadersReceived.addListener(
+```js
+browser.webRequest.onHeadersReceived.addListener(
   listener,             // function
   filter,               //  object
   extraInfoSpec         //  optional array of strings
 )
 browser.webRequest.onHeadersReceived.removeListener(listener)
 browser.webRequest.onHeadersReceived.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback, filter, extraInfoSpec)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback, filter, extraInfoSpec)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>The function called when this event occurs. The function is passed the following arguments:</p>
+- `callback`
 
- <dl>
-  <dt><code>details</code></dt>
-  <dd><a href="#details"><code>object</code></a>. Details of the request. This will include response headers if you have included <code>"responseHeaders"</code> in <code>extraInfoSpec</code>.</dd>
- </dl>
+  - : The function called when this event occurs. The function is passed the following arguments:
 
- <p>Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If <code>"blocking"</code> is specified in the <code>extraInfoSpec</code> parameter, the event listener will return a <code>BlockingResponse</code> object, and can set its <code>responseHeaders</code> property. In Firefox, the return value can be a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that resolves to a  <code>BlockingResponse</code>.</p>
- </dd>
- <dt><code>filter</code></dt>
- <dd>{{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events that are sent to this listener.</dd>
- <dt><code>extraInfoSpec</code>{{optional_inline}}</dt>
- <dd>
-   <p><code>array</code> of <code>string</code>. Extra options for the event. You can pass any of the following values:</p>
-   <ul>
-    <li><code>"blocking"</code> to make the request synchronous, so you can modify request and response headers</li>
-    <li><code>"responseHeaders"</code> to include the response headers in the <code>details</code> object passed to the listener</li>
-   </ul>
- </dd>
-</dl>
+    - `details`
+      - : [`object`](#details). Details of the request. This will include response headers if you have included `"responseHeaders"` in `extraInfoSpec`.
 
-<h2 id="Additional_objects">Additional objects</h2>
+    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}}. If `"blocking"` is specified in the `extraInfoSpec` parameter, the event listener will return a `BlockingResponse` object, and can set its `responseHeaders` property. In Firefox, the return value can be a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a  `BlockingResponse`.
 
-<h3 id="details">details</h3>
+- `filter`
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A set of filters that restricts the events that are sent to this listener.
+- `extraInfoSpec`{{optional_inline}}
 
-<dl>
- <dt><code>cookieStoreId</code></dt>
- <dd><code>string</code>. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity.</dd>
- <dt><code>documentUrl</code></dt>
- <dd><code>string</code>. URL of the document in which the resource will be loaded. For example, if the web page at "https://example.com" contains an image or an iframe, then the <code>documentUrl</code> for the image or iframe will be "https://example.com". For a top-level document, <code>documentUrl</code> is undefined.</dd>
- <dt><code>frameAncestors</code></dt>
- <dd>
-   <p><code>array</code>. Information for each document in the frame hierarchy up to the top-level document. The first element in the array contains information about the immediate parent of the document being requested, and the last element contains information about the top-level document. If the load is for the top-level document, then this array is empty.</p>
-   <dl>
-    <dt><code>url</code></dt>
-    <dd><code>string</code>. The URL that the document was loaded from.</dd>
-    <dt><code>frameId</code></dt>
-    <dd><code>integer</code>. The <code>frameId</code> of the document. <code>details.frameAncestors[0].frameId</code> is the same as <code>details.parentFrameId</code>.</dd>
-   </dl>
- </dd>
- <dt><code>frameId</code></dt>
- <dd><code>integer</code>. Zero if the request happens in the main frame; a positive value is the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (<code>type</code> is <code>main_frame</code> or <code>sub_frame</code>), <code>frameId</code> indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.</dd>
- <dt><code>fromCache</code></dt>
- <dd><code>boolean</code>. Whether the response is fetched from disk cache.</dd>
- <dt><code>incognito</code></dt>
- <dd><code>boolean</code>. Whether the request is from a private browsing window.</dd>
- <dt><code>ip</code></dt>
- <dd><code>string</code>. The IP address of the server the request was sent to. It may be a literal IPv6 address.</dd>
- <dt><code>method</code></dt>
- <dd><code>string</code>. Standard HTTP method: for example, "GET" or "POST".</dd>
- <dt><code>originUrl</code></dt>
- <dd>
- <p><code>string</code>. URL of the resource that triggered the request. For example, if "https://example.com" contains a link, and the user clicks the link, then the <code>originUrl</code> for the resulting request is "https://example.com".</p>
+  - : `array` of `string`. Extra options for the event. You can pass any of the following values:
 
- <p>The <code>originUrl</code> is often but not always the same as the <code>documentUrl</code>. For example, if a page contains an iframe, and the iframe contains a link that loads a new document into the iframe, then the <code>documentUrl</code> for the resulting request is the iframe's parent document, but the <code>originUrl</code> is the URL of the document in the iframe that contained the link.</p>
- </dd>
- <dt><code>parentFrameId</code></dt>
- <dd><code>integer</code>. ID of the frame that contains the frame that sent the request. Set to -1 if no parent frame exists.</dd>
- <dt><code>proxyInfo</code></dt>
- <dd>
- <p><code>object</code>. This property is present only if the request is being proxied. It contains the following properties:</p>
+    - `"blocking"` to make the request synchronous, so you can modify request and response headers
+    - `"responseHeaders"` to include the response headers in the `details` object passed to the listener
 
- <dl>
-  <dt><code>host</code></dt>
-  <dd><code>string</code>. The hostname of the proxy server.</dd>
-  <dt><code>port</code></dt>
-  <dd><code>integer</code>. The port number of the proxy server.</dd>
-  <dt><code>type</code></dt>
-  <dd>
-  <p><code>string</code>. The type of proxy server. One of:</p>
+## Additional objects
 
-  <ul>
-   <li>"http": HTTP proxy (or SSL CONNECT for HTTPS)</li>
-   <li>"https": HTTP proxying over TLS connection to proxy</li>
-   <li>"socks": SOCKS v5 proxy</li>
-   <li>"socks4": SOCKS v4 proxy</li>
-   <li>"direct": no proxy</li>
-   <li>"unknown": unknown proxy</li>
-  </ul>
-  </dd>
-  <dt><code>username</code></dt>
-  <dd><code>string</code>. Username for the proxy service.</dd>
-  <dt><code>proxyDNS</code></dt>
-  <dd><code>boolean</code>. True if the proxy will perform domain name resolution based on the hostname supplied, meaning that the client should not do its own DNS lookup.</dd>
-  <dt><code>failoverTimeout</code></dt>
-  <dd><code>integer</code>. Failover timeout in seconds. If the proxy connection fails, the proxy will not be used again for this period.</dd>
- </dl>
- </dd>
- <dt><code>requestId</code></dt>
- <dd><code>string</code>. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.</dd>
- <dt><code>responseHeaders</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('webRequest.HttpHeaders')}}. The HTTP response headers that were received for this request.</dd>
- <dt><code>statusCode</code></dt>
- <dd><code>integer</code>. Standard HTTP status code returned by the server.</dd>
- <dt><code>statusLine</code></dt>
- <dd><code>string</code>. HTTP status line of the response or the 'HTTP/0.9 200 OK' string for HTTP/0.9 responses (that is, responses that lack a status line).</dd>
- <dt><code>tabId</code></dt>
- <dd><code>integer</code>. ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab.</dd>
- <dt><code>thirdParty</code></dt>
- <dd><code>boolean</code>. Indicates whether the request and its content window hierarchy are third party.</dd>
- <dt><code>timeStamp</code></dt>
- <dd><code>number</code>. The time when this event fired, in <a class="external external-icon" href="https://en.wikipedia.org/wiki/Unix_time">milliseconds since the epoch</a>.</dd>
- <dt><code>type</code></dt>
- <dd>{{WebExtAPIRef('webRequest.ResourceType')}}. The type of resource being requested: for example, "image", "script", "stylesheet".</dd>
- <dt><code>url</code></dt>
- <dd><code>string</code>. Target of the request.</dd>
- <dt><code>urlClassification</code></dt>
- <dd>
-   <p><code>object</code>. The type of tracking associated with the request, if with the request has been classified by <a class="external external-icon" href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" rel="noopener">Firefox Tracking Protection</a>. This is an object with the following properties:</p>
-   <dl>
-    <dt><code>firstParty</code></dt>
-    <dd><code>array</code> of <code>strings</code>. Classification flags for the request's first party.</dd>
-    <dt><code>thirdParty</code></dt>
-    <dd><code>array</code> of <code>strings</code>. Classification flags for the request or its window hierarchy's third parties.</dd>
-   </dl>
-   <p>The classification flags include:</p>
-   <ul>
-    <li><code>fingerprinting</code> and <code>fingerprinting_content</code>: indicates the request is involved in fingerprinting. <code>fingerprinting_content</code> indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.</li>
-    <li><code>cryptomining</code> and <code>cryptomining_content</code>: similar to the fingerprinting category but for cryptomining resources.</li>
-    <li><code>tracking</code>, <code>tracking_ad</code>, <code>tracking_analytics</code>, <code>tracking_social</code>,  and <code>tracking_content</code>: indicates the request is involved in tracking. <code>tracking</code> is any generic tracking request, the <code>ad</code>, <code>analytics</code>, <code>social</code>, and <code>content</code> suffixes identify the type of tracker.</li>
-    <li><code>any_basic_tracking</code>: a meta flag that combines any tracking and fingerprinting flags, excluding <code>tracking_content</code> and <code>fingerprinting_content</code>.</li>
-    <li><code>any_strict_tracking</code>: a meta flag that combines any tracking and fingerprinting flags, including <code>tracking_content</code> and <code>fingerprinting_content</code>.</li>
-    <li><code>any_social_tracking</code>: a meta flag that combines any social tracking flags.</li>
-   </ul>
- </dd>
-</dl>
+### details
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+- `cookieStoreId`
+  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity.
+- `documentUrl`
+  - : `string`. URL of the document in which the resource will be loaded. For example, if the web page at "https\://example.com" contains an image or an iframe, then the `documentUrl` for the image or iframe will be "https\://example.com". For a top-level document, `documentUrl` is undefined.
+- `frameAncestors`
 
-<p>{{Compat}}</p>
+  - : `array`. Information for each document in the frame hierarchy up to the top-level document. The first element in the array contains information about the immediate parent of the document being requested, and the last element contains information about the top-level document. If the load is for the top-level document, then this array is empty.
 
-<h2 id="Examples">Examples</h2>
+    - `url`
+      - : `string`. The URL that the document was loaded from.
+    - `frameId`
+      - : `integer`. The `frameId` of the document. `details.frameAncestors[0].frameId` is the same as `details.parentFrameId`.
 
-<p>This code sets an extra cookie when requesting a resource from the target URL:</p>
+- `frameId`
+  - : `integer`. Zero if the request happens in the main frame; a positive value is the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
+- `fromCache`
+  - : `boolean`. Whether the response is fetched from disk cache.
+- `incognito`
+  - : `boolean`. Whether the request is from a private browsing window.
+- `ip`
+  - : `string`. The IP address of the server the request was sent to. It may be a literal IPv6 address.
+- `method`
+  - : `string`. Standard HTTP method: for example, "GET" or "POST".
+- `originUrl`
 
-<pre class="brush: js">var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+  - : `string`. URL of the resource that triggered the request. For example, if "https\://example.com" contains a link, and the user clicks the link, then the `originUrl` for the resulting request is "https\://example.com".
+
+    The `originUrl` is often but not always the same as the `documentUrl`. For example, if a page contains an iframe, and the iframe contains a link that loads a new document into the iframe, then the `documentUrl` for the resulting request is the iframe's parent document, but the `originUrl` is the URL of the document in the iframe that contained the link.
+
+- `parentFrameId`
+  - : `integer`. ID of the frame that contains the frame that sent the request. Set to -1 if no parent frame exists.
+- `proxyInfo`
+
+  - : `object`. This property is present only if the request is being proxied. It contains the following properties:
+
+    - `host`
+      - : `string`. The hostname of the proxy server.
+    - `port`
+      - : `integer`. The port number of the proxy server.
+    - `type`
+
+      - : `string`. The type of proxy server. One of:
+
+        - "http": HTTP proxy (or SSL CONNECT for HTTPS)
+        - "https": HTTP proxying over TLS connection to proxy
+        - "socks": SOCKS v5 proxy
+        - "socks4": SOCKS v4 proxy
+        - "direct": no proxy
+        - "unknown": unknown proxy
+
+    - `username`
+      - : `string`. Username for the proxy service.
+    - `proxyDNS`
+      - : `boolean`. True if the proxy will perform domain name resolution based on the hostname supplied, meaning that the client should not do its own DNS lookup.
+    - `failoverTimeout`
+      - : `integer`. Failover timeout in seconds. If the proxy connection fails, the proxy will not be used again for this period.
+
+- `requestId`
+  - : `string`. The ID of the request. Request IDs are unique within a browser session, so you can use them to relate different events associated with the same request.
+- `responseHeaders`{{optional_inline}}
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. The HTTP response headers that were received for this request.
+- `statusCode`
+  - : `integer`. Standard HTTP status code returned by the server.
+- `statusLine`
+  - : `string`. HTTP status line of the response or the 'HTTP/0.9 200 OK' string for HTTP/0.9 responses (that is, responses that lack a status line).
+- `tabId`
+  - : `integer`. ID of the tab in which the request takes place. Set to -1 if the request isn't related to a tab.
+- `thirdParty`
+  - : `boolean`. Indicates whether the request and its content window hierarchy are third party.
+- `timeStamp`
+  - : `number`. The time when this event fired, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+- `type`
+  - : {{WebExtAPIRef('webRequest.ResourceType')}}. The type of resource being requested: for example, "image", "script", "stylesheet".
+- `url`
+  - : `string`. Target of the request.
+- `urlClassification`
+
+  - : `object`. The type of tracking associated with the request, if with the request has been classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with the following properties:
+
+    - `firstParty`
+      - : `array` of `strings`. Classification flags for the request's first party.
+    - `thirdParty`
+      - : `array` of `strings`. Classification flags for the request or its window hierarchy's third parties.
+
+    The classification flags include:
+
+    - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting. `fingerprinting_content` indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.
+    - `cryptomining` and `cryptomining_content`: similar to the fingerprinting category but for cryptomining resources.
+    - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`,  and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
+    - `any_basic_tracking`: a meta flag that combines any tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
+    - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
+    - `any_social_tracking`: a meta flag that combines any social tracking flags.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+This code sets an extra cookie when requesting a resource from the target URL:
+
+```js
+var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Add the new header to the original array,
 // and return it.
@@ -210,18 +195,20 @@ browser.webRequest.onHeadersReceived.addListener(
   setCookie,
   {urls: [targetPage]},
   ["blocking", "responseHeaders"]
-);</pre>
+);
+```
 
-<p>This code does the same thing the previous example, except that the listener is asynchronous, returning a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> which is resolved with the new headers:</p>
+This code does the same thing the previous example, except that the listener is asynchronous, returning a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with the new headers:
 
-<pre class="brush: js">var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+```js
+var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Return a Promise that sets a timer.
 // When the timer fires, resolve the promise with
 // modified set of response headers.
 function setCookieAsync(e) {
-  var asyncSetCookie = new Promise((resolve, reject) =&gt; {
-    window.setTimeout(() =&gt; {
+  var asyncSetCookie = new Promise((resolve, reject) => {
+    window.setTimeout(() => {
       var setMyCookie = {
         name: "Set-Cookie",
         value: "my-cookie1=my-cookie-value1"
@@ -241,17 +228,15 @@ browser.webRequest.onHeadersReceived.addListener(
   {urls: [targetPage]},
   ["blocking", "responseHeaders"]
 );
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest#event-onHeadersReceived"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#event-onHeadersReceived) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -278,5 +263,4 @@ browser.webRequest.onHeadersReceived.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

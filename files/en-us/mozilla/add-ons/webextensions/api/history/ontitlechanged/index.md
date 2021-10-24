@@ -11,77 +11,62 @@ tags:
   - onTitleChanged
 browser-compat: webextensions.api.history.onTitleChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}Fired when the title of a page visited by the user is recorded.To listen for visits to a page you can use {{WebExtAPIRef("history.onVisited")}}. However, the {{WebExtAPIRef("history.HistoryItem")}} that this event passes to its listener does not include the page title, because the page title is typically not known at the time `history.onVisited` is sent.Instead, the stored {{WebExtAPIRef("history.HistoryItem")}} is updated with the page title after the page has loaded, once the title is known. The history.onTitleChanged event is fired at that time. So if you need to know the titles of pages as they are visited, listen for `history.onTitleChanged`.
 
-<div>Fired when the title of a page visited by the user is recorded.</div>
+## Syntax
 
-
-<div>To listen for visits to a page you can use {{WebExtAPIRef("history.onVisited")}}. However, the {{WebExtAPIRef("history.HistoryItem")}} that this event passes to its listener does not include the page title, because the page title is typically not known at the time <code>history.onVisited</code> is sent.</div>
-
-
-<div>Instead, the stored {{WebExtAPIRef("history.HistoryItem")}} is updated with the page title after the page has loaded, once the title is known. The history.onTitleChanged event is fired at that time. So if you need to know the titles of pages as they are visited, listen for <code>history.onTitleChanged</code>.</div>
-
-<h2 id="Syntax">Syntax</h2>
-
-<pre class="brush:js">browser.history.onTitleChanged.addListener(listener)
+```js
+browser.history.onTitleChanged.addListener(listener)
 browser.history.onTitleChanged.removeListener(listener)
 browser.history.onTitleChanged.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(listener)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(listener)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed an object with the following properties:</p>
+- `callback`
 
- <dl>
-  <dt><code>url</code></dt>
-  <dd><code>String</code>. URL of the page visited.</dd>
-  <dt><code>title</code></dt>
-  <dd><code>String</code>. Title of the page visited.</dd>
- </dl>
- </dd>
-</dl>
+  - : Function that will be called when this event occurs. The function will be passed an object with the following properties:
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    - `url`
+      - : `String`. URL of the page visited.
+    - `title`
+      - : `String`. Title of the page visited.
 
-<p>{{Compat}}</p>
+## Browser compatibility
 
-<h2 id="Examples">Examples</h2>
+{{Compat}}
 
-<p>Listen for title change events, and log the URL and title of the visited pages.</p>
+## Examples
 
-<pre class="brush: js">function handleTitleChanged(item) {
+Listen for title change events, and log the URL and title of the visited pages.
+
+```js
+function handleTitleChanged(item) {
   console.log(item.title);
   console.log(item.url);
 }
 
-browser.history.onTitleChanged.addListener(handleTitleChanged);</pre>
+browser.history.onTitleChanged.addListener(handleTitleChanged);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/extensions/history#event-onVisited) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/history#event-onVisited"><code>chrome.history</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json"><code>history.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -108,5 +93,4 @@ browser.history.onTitleChanged.addListener(handleTitleChanged);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

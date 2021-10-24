@@ -13,82 +13,86 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.storage.sync
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Represents the <code>sync</code> storage area. Items in <code>sync</code> storage are synced by the browser, and are available across all instances of that browser that the user is logged into (e.g. via Firefox sync, or a Google account), across different devices.</p>
+Represents the `sync` storage area. Items in `sync` storage are synced by the browser, and are available across all instances of that browser that the user is logged into (e.g. via Firefox sync, or a Google account), across different devices.
 
-<p>For Firefox a user must have <code>Add-ons</code> checked under the "Sync Settings" options in <code>"about:preferences"</code>.</p>
+For Firefox a user must have `Add-ons` checked under the "Sync Settings" options in `"about:preferences"`.
 
-<p>Note that the implementation of <code>storage.sync</code> in Firefox relies on the Add-on ID. If you use <code>storage.sync</code>, you must set an ID for your extension using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings">browser_specific_settings</a></code> manifest.json key.</p>
+Note that the implementation of `storage.sync` in Firefox relies on the Add-on ID. If you use `storage.sync`, you must set an ID for your extension using the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest.json key.
 
-<p>The main use case of this API is to store preferences about your extension and allow the user to sync them to different profiles.</p>
+The main use case of this API is to store preferences about your extension and allow the user to sync them to different profiles.
 
-<h2 id="Storage_quotas_for_sync_data">Storage quotas for sync data</h2>
+## Storage quotas for sync data
 
-<p>The browser enforces limits on the amount of data each extension is allowed to store in the sync area:</p>
+The browser enforces limits on the amount of data each extension is allowed to store in the sync area:
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Name</th>
-   <th scope="col">Description</th>
-   <th scope="col">Value in bytes</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Maximum total size</td>
-   <td>The maximum total amount of data that each extension is allowed to store in the sync storage area, as measured by the JSON stringification of every value plus every key's length.</td>
-   <td>102400</td>
-  </tr>
-  <tr>
-   <td>Maximum item size</td>
-   <td>The maximum size of any one item that each extension is allowed to store in the sync storage area, as measured by the JSON stringification of the item's value plus the length of its key.</td>
-   <td>8192</td>
-  </tr>
-  <tr>
-   <td>Maximum number of items</td>
-   <td>The maximum number of items that each extension is allowed to store in the sync storage area.</td>
-   <td>
-    <p>512</p>
-   </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Value in bytes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Maximum total size</td>
+      <td>
+        The maximum total amount of data that each extension is allowed to store
+        in the sync storage area, as measured by the JSON stringification of
+        every value plus every key's length.
+      </td>
+      <td>102400</td>
+    </tr>
+    <tr>
+      <td>Maximum item size</td>
+      <td>
+        The maximum size of any one item that each extension is allowed to store
+        in the sync storage area, as measured by the JSON stringification of the
+        item's value plus the length of its key.
+      </td>
+      <td>8192</td>
+    </tr>
+    <tr>
+      <td>Maximum number of items</td>
+      <td>
+        The maximum number of items that each extension is allowed to store in
+        the sync storage area.
+      </td>
+      <td><p>512</p></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>If an extension attempts to store items that exceed these limits, the call to <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set">storage.sync.set()</a></code> will be rejected with an error. An extension can use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse">storage.sync.getBytesInUse()</a></code> to find out how much of its maximum total quota it is currently using.</p>
+If an extension attempts to store items that exceed these limits, the call to [`storage.sync.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set) will be rejected with an error. An extension can use [`storage.sync.getBytesInUse()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse) to find out how much of its maximum total quota it is currently using.
 
-<h2 id="Methods">Methods</h2>
+## Methods
 
-<p>The <code>sync</code> object implements the methods defined on the {{WebExtAPIRef("storage.StorageArea")}} type:</p>
+The `sync` object implements the methods defined on the {{WebExtAPIRef("storage.StorageArea")}} type:
 
-<dl>
- <dt>{{WebExtAPIRef("storage.StorageArea.get()", "storage.<var>StorageArea</var>.get()")}}</dt>
- <dd>Retrieves one or more items from the storage area.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.<var>StorageArea</var>.getBytesInUse()")}}</dt>
- <dd>Gets the amount of storage space (in bytes) used one or more items being stored in the storage area.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.set()", "storage.<var>StorageArea</var>.set()")}}</dt>
- <dd>Stores one or more items in the storage area. If the item already exists, its value will be updated.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.remove()", "storage.<var>StorageArea</var>.remove()")}}</dt>
- <dd>Removes one or more items from the storage area.</dd>
- <dt>{{WebExtAPIRef("storage.StorageArea.clear()", "storage.<var>StorageArea</var>.clear()")}}</dt>
- <dd>Removes all items from the storage area.</dd>
-</dl>
+- {{WebExtAPIRef("storage.StorageArea.get()", "storage.<var>StorageArea</var>.get()")}}
+  - : Retrieves one or more items from the storage area.
+- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.<var>StorageArea</var>.getBytesInUse()")}}
+  - : Gets the amount of storage space (in bytes) used one or more items being stored in the storage area.
+- {{WebExtAPIRef("storage.StorageArea.set()", "storage.<var>StorageArea</var>.set()")}}
+  - : Stores one or more items in the storage area. If the item already exists, its value will be updated.
+- {{WebExtAPIRef("storage.StorageArea.remove()", "storage.<var>StorageArea</var>.remove()")}}
+  - : Removes one or more items from the storage area.
+- {{WebExtAPIRef("storage.StorageArea.clear()", "storage.<var>StorageArea</var>.clear()")}}
+  - : Removes all items from the storage area.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage#property-sync) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/storage#property-sync"><code>chrome.storage</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json"><code>storage.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -115,5 +119,4 @@ browser-compat: webextensions.api.storage.sync
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

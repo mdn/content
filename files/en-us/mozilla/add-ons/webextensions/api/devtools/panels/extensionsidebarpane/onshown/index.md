@@ -13,64 +13,58 @@ tags:
   - onShown
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.onShown
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Fired when the sidebar pane becomes visible as a result of the user switching to it.</p>
+Fired when the sidebar pane becomes visible as a result of the user switching to it.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.devtools.panels.onShown.addListener(listener)
+```js
+browser.devtools.panels.onShown.addListener(listener)
 browser.devtools.panels.onShown.removeListener(listener)
 browser.devtools.panels.onShown.hasListener(listener)
-</pre>
+```
 
-<p>Events have three functions:</p>
+Events have three functions:
 
-<dl>
- <dt><code>addListener(callback)</code></dt>
- <dd>Adds a listener to this event.</dd>
- <dt><code>removeListener(listener)</code></dt>
- <dd>Stop listening to this event. The <code>listener</code> argument is the listener to remove.</dd>
- <dt><code>hasListener(listener)</code></dt>
- <dd>Check whether <code>listener</code> is registered for this event. Returns <code>true</code> if it is listening, <code>false</code> otherwise.</dd>
-</dl>
+- `addListener(callback)`
+  - : Adds a listener to this event.
+- `removeListener(listener)`
+  - : Stop listening to this event. The `listener` argument is the listener to remove.
+- `hasListener(listener)`
+  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
 
-<h2 id="addListener_syntax">addListener syntax</h2>
+## addListener syntax
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>
- <p>Function that will be called when this event occurs. The function will be passed no arguments.</p>
- </dd>
-</dl>
+- `callback`
+  - : Function that will be called when this event occurs. The function will be passed no arguments.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Create a sidebar pane, and log show and hide events.</p>
+Create a sidebar pane, and log show and hide events.
 
-<pre class="brush: js">function onCreated(sidebarPane) {
+```js
+function onCreated(sidebarPane) {
 
-  sidebarPane.onShown.addListener(() =&gt; {
+  sidebarPane.onShown.addListener(() => {
     console.log("Shown");
   });
 
-  sidebarPane.onHidden.addListener(() =&gt; {
+  sidebarPane.onHidden.addListener(() => {
     console.log("Hidden");
   });
 
 }
 
 browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/devtools_panels"><code>chrome.devtools.panels</code></a> API.</p>
-</div>
+> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels) API.

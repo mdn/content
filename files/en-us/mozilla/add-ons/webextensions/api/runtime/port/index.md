@@ -13,104 +13,106 @@ tags:
   - runtime
 browser-compat: webextensions.api.runtime.Port
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>A <code>Port</code> object represents one end of a connection between two specific contexts, which can be used to exchange messages.</p>
+A `Port` object represents one end of a connection between two specific contexts, which can be used to exchange messages.
 
-<p>One side initiates the connection, using a <code>connect()</code> API. This returns a <code>Port</code> object. The other side listens for connection attempts using an <code>onConnect</code> listener. This is passed a corresponding <code>Port</code> object.</p>
+One side initiates the connection, using a `connect()` API. This returns a `Port` object. The other side listens for connection attempts using an `onConnect` listener. This is passed a corresponding `Port` object.
 
-<p>Once both sides have <code>Port</code> objects, they can exchange messages using <code>Port.postMessage()</code> and <code>Port.onMessage</code>. When they are finished, either end can disconnect using <code>Port.disconnect()</code>, which will generate a <code>Port.onDisconnect</code> event at the other end, enabling the other end to do any cleanup required.</p>
+Once both sides have `Port` objects, they can exchange messages using `Port.postMessage()` and `Port.onMessage`. When they are finished, either end can disconnect using `Port.disconnect()`, which will generate a `Port.onDisconnect` event at the other end, enabling the other end to do any cleanup required.
 
-<p>You can use this pattern to communicate between:</p>
+You can use this pattern to communicate between:
 
-<ul>
- <li>different parts of your extension (for example, between <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background scripts</a>)</li>
- <li>between your extension and a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">native application running on the user's computer</a>.</li>
- <li>between your extension and a different extension</li>
-</ul>
+- different parts of your extension (for example, between [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) and [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts))
+- between your extension and a [native application running on the user's computer](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging).
+- between your extension and a different extension
 
-<p>You need to use different connection APIs for different sorts of connections, as detailed in the table below.</p>
+You need to use different connection APIs for different sorts of connections, as detailed in the table below.
 
 <table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">Connection type</th>
-   <th scope="col">Initiate connection attempt</th>
-   <th scope="col">Handle connection attempt</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Background script to content script</td>
-   <td>{{WebExtAPIRef("tabs.connect()")}}</td>
-   <td>{{WebExtAPIRef("runtime.onConnect")}}</td>
-  </tr>
-  <tr>
-   <td>Content script to background script</td>
-   <td>{{WebExtAPIRef("runtime.connect()")}}</td>
-   <td>{{WebExtAPIRef("runtime.onConnect")}}</td>
-  </tr>
-  <tr>
-   <td>Extension to native application</td>
-   <td>{{WebExtAPIRef("runtime.connectNative()")}}</td>
-   <td>Not applicable (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a>).</td>
-  </tr>
-  <tr>
-   <td>Extension to Extension</td>
-   <td>{{WebExtAPIRef("runtime.connect()")}}</td>
-   <td>{{WebExtAPIRef("runtime.onConnectExternal")}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Connection type</th>
+      <th scope="col">Initiate connection attempt</th>
+      <th scope="col">Handle connection attempt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Background script to content script</td>
+      <td>{{WebExtAPIRef("tabs.connect()")}}</td>
+      <td>{{WebExtAPIRef("runtime.onConnect")}}</td>
+    </tr>
+    <tr>
+      <td>Content script to background script</td>
+      <td>{{WebExtAPIRef("runtime.connect()")}}</td>
+      <td>{{WebExtAPIRef("runtime.onConnect")}}</td>
+    </tr>
+    <tr>
+      <td>Extension to native application</td>
+      <td>{{WebExtAPIRef("runtime.connectNative()")}}</td>
+      <td>
+        Not applicable (see
+        <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging"
+          >Native messaging</a
+        >).
+      </td>
+    </tr>
+    <tr>
+      <td>Extension to Extension</td>
+      <td>{{WebExtAPIRef("runtime.connect()")}}</td>
+      <td>{{WebExtAPIRef("runtime.onConnectExternal")}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Type">Type</h2>
+## Type
 
-<p>Values of this type are objects. They contain the following properties:</p>
+Values of this type are objects. They contain the following properties:
 
-<dl>
- <dt><code>name</code></dt>
- <dd><code>string</code>. The port's name, defined in the {{WebExtAPIRef("runtime.connect()")}} or {{WebExtAPIRef("tabs.connect()")}} call that created it. If this port is connected to a native application, its name is the name of the native application.</dd>
- <dt><code>disconnect</code></dt>
- <dd><code>function</code>. Disconnects a port. Either end can call this when they have finished with the port. It will cause <code>onDisconnect</code> to be fired at the other end. This is useful if the other end is maintaining some state relating to this port, which can be cleaned up on disconnect. If this port is connected to a native application, this function will close the native application.</dd>
- <dt><code>error</code></dt>
- <dd><code>object</code>. If the port was disconnected due to an error, this will be set to an object with a string property <code>message</code>, giving you more information about the error. See <code>onDisconnect</code>.</dd>
- <dt><code>onDisconnect</code></dt>
- <dd>
- <p><code>object</code>. This contains the <code>addListener()</code> and <code>removeListener()</code> functions common to all events for extensions built using WebExtension APIs. Listener functions will be called when the other end has called <code>Port.disconnect()</code>. This event will only be fired once for each port. The listener function will be passed the <code>Port</code> object. If the port was disconnected due to an error, then the <code>Port</code> argument will contain an <code>error</code> property giving more information about the error:</p>
+- `name`
+  - : `string`. The port's name, defined in the {{WebExtAPIRef("runtime.connect()")}} or {{WebExtAPIRef("tabs.connect()")}} call that created it. If this port is connected to a native application, its name is the name of the native application.
+- `disconnect`
+  - : `function`. Disconnects a port. Either end can call this when they have finished with the port. It will cause `onDisconnect` to be fired at the other end. This is useful if the other end is maintaining some state relating to this port, which can be cleaned up on disconnect. If this port is connected to a native application, this function will close the native application.
+- `error`
+  - : `object`. If the port was disconnected due to an error, this will be set to an object with a string property `message`, giving you more information about the error. See `onDisconnect`.
+- `onDisconnect`
 
- <pre class="brush: js">port.onDisconnect.addListener((p) =&gt; {
-  if (p.error) {
-    console.log(`Disconnected due to an error: ${p.error.message}`);
-  }
-});</pre>
+  - : `object`. This contains the `addListener()` and `removeListener()` functions common to all events for extensions built using WebExtension APIs. Listener functions will be called when the other end has called `Port.disconnect()`. This event will only be fired once for each port. The listener function will be passed the `Port` object. If the port was disconnected due to an error, then the `Port` argument will contain an `error` property giving more information about the error:
 
- <p>Note that in Google Chrome <code>port.error</code> is not supported: instead, use {{WebExtAPIRef("runtime.lastError")}} to get the error message.</p>
- </dd>
- <dt><code>onMessage</code></dt>
- <dd><code>object</code>. This contains the <code>addListener()</code> and <code>removeListener()</code> functions common to all events for extensions built using WebExtension APIs. Listener functions will be called when the other end has sent this port a message. The listener will be passed the value that the other end sent.</dd>
- <dt><code>postMessage</code></dt>
- <dd><code>function</code>. Send a message to the other end. This takes one argument, which is a serializable value (see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm">Data cloning algorithm</a>) representing the message to send. It will be delivered to any script listening to the port's <code>onMessage</code> event, or to the native application if this port is connected to a native application.</dd>
- <dt><code>sender</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('runtime.MessageSender')}}. Contains information about the sender of the message. This property will only be present on ports passed to <code>onConnect</code>/<code>onConnectExternal</code> listeners.</dd>
-</dl>
+    ```js
+    port.onDisconnect.addListener((p) => {
+      if (p.error) {
+        console.log(`Disconnected due to an error: ${p.error.message}`);
+      }
+    });
+    ```
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    Note that in Google Chrome `port.error` is not supported: instead, use {{WebExtAPIRef("runtime.lastError")}} to get the error message.
 
-<p>{{Compat}}</p>
+- `onMessage`
+  - : `object`. This contains the `addListener()` and `removeListener()` functions common to all events for extensions built using WebExtension APIs. Listener functions will be called when the other end has sent this port a message. The listener will be passed the value that the other end sent.
+- `postMessage`
+  - : `function`. Send a message to the other end. This takes one argument, which is a serializable value (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)) representing the message to send. It will be delivered to any script listening to the port's `onMessage` event, or to the native application if this port is connected to a native application.
+- `sender`{{optional_inline}}
+  - : {{WebExtAPIRef('runtime.MessageSender')}}. Contains information about the sender of the message. This property will only be present on ports passed to `onConnect`/`onConnectExternal` listeners.
 
-<h2 id="Examples">Examples</h2>
+## Browser compatibility
 
-<h3 id="Connecting_from_content_scripts">Connecting from content scripts</h3>
+{{Compat}}
 
-<p>This content script:</p>
+## Examples
 
-<ul>
- <li>connects to the background script and stores the <code>Port</code> in a variable called <code>myPort</code>.</li>
- <li>listens for messages on <code>myPort</code> and logs them.</li>
- <li>sends messages to the background script, using <code>myPort</code>, when the user clicks the document.</li>
-</ul>
+### Connecting from content scripts
 
-<pre class="brush: js">// content-script.js
+This content script:
+
+- connects to the background script and stores the `Port` in a variable called `myPort`.
+- listens for messages on `myPort` and logs them.
+- sends messages to the background script, using `myPort`, when the user clicks the document.
+
+```js
+// content-script.js
 
 var myPort = browser.runtime.connect({name:"port-from-cs"});
 myPort.postMessage({greeting: "hello from content script"});
@@ -122,23 +124,22 @@ myPort.onMessage.addListener(function(m) {
 
 document.body.addEventListener("click", function() {
   myPort.postMessage({greeting: "they clicked the page!"});
-});</pre>
+});
+```
 
-<p>The corresponding background script:</p>
+The corresponding background script:
 
-<ul>
- <li>listens for connection attempts from the content script.</li>
- <li>when it receives a connection attempt:
-  <ul>
-   <li>stores the port in a variable named <code>portFromCS</code>.</li>
-   <li>sends the content script a message using the port.</li>
-   <li>starts listening to messages received on the port, and logs them.</li>
-  </ul>
- </li>
- <li>sends messages to the content script, using <code>portFromCS</code>, when the user clicks the extension's browser action.</li>
-</ul>
+- listens for connection attempts from the content script.
+- when it receives a connection attempt:
 
-<pre class="brush: js">// background-script.js
+  - stores the port in a variable named `portFromCS`.
+  - sends the content script a message using the port.
+  - starts listening to messages received on the port, and logs them.
+
+- sends messages to the content script, using `portFromCS`, when the user clicks the extension's browser action.
+
+```js
+// background-script.js
 
 var portFromCS;
 
@@ -155,13 +156,15 @@ browser.runtime.onConnect.addListener(connected);
 
 browser.browserAction.onClicked.addListener(function() {
   portFromCS.postMessage({greeting: "they clicked the button!"});
-});</pre>
+});
+```
 
-<h4 id="Multiple_content_scripts">Multiple content scripts</h4>
+#### Multiple content scripts
 
-<p>If you have multiple content scripts communicating at the same time, you might want to store each connection in an array.</p>
+If you have multiple content scripts communicating at the same time, you might want to store each connection in an array.
 
-<pre class="brush: js">// background-script.js
+```js
+// background-script.js
 
 var ports = []
 
@@ -173,16 +176,18 @@ function connected(p) {
 browser.runtime.onConnect.addListener(connected)
 
 browser.browserAction.onClicked.addListener(function() {
-  ports.forEach(p =&gt; {
+  ports.forEach(p => {
         p.postMessage({greeting: "they clicked the button!"})
     })
-});</pre>
+});
+```
 
-<h3 id="Connecting_to_native_applications">Connecting to native applications</h3>
+### Connecting to native applications
 
-<p>This example connects to the native application "ping_pong" and starts listening for messages from it. It also sends the native application a message when the user clicks a browser action icon:</p>
+This example connects to the native application "ping_pong" and starts listening for messages from it. It also sends the native application a message when the user clicks a browser action icon:
 
-<pre class="brush: js">/*
+```js
+/*
 On startup, connect to the "ping_pong" app.
 */
 var port = browser.runtime.connectNative("ping_pong");
@@ -190,28 +195,26 @@ var port = browser.runtime.connectNative("ping_pong");
 /*
 Listen for messages from the app.
 */
-port.onMessage.addListener((response) =&gt; {
+port.onMessage.addListener((response) => {
   console.log("Received: " + response);
 });
 
 /*
 On a click on the browser action, send the app a message.
 */
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
   port.postMessage("ping");
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#type-Port) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/runtime#type-Port"><code>chrome.runtime</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json"><code>runtime.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -238,5 +241,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

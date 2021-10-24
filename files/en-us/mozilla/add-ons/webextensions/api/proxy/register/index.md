@@ -13,38 +13,34 @@ tags:
   - registerProxyScript
 browser-compat: webextensions.api.proxy.register
 ---
-<p>{{AddonSidebar()}} {{deprecated_header}}</p>
+{{AddonSidebar()}} {{deprecated_header}}
 
-<div class="notecard warning">
-  <p><strong>Warning:</strong> This method was deprecated in Firefox 68 and removed in Firefox 71. In Firefox 68–70, calling this method logs an error message to the console:</p>
+> **Warning:** This method was deprecated in Firefox 68 and removed in Firefox 71. In Firefox 68–70, calling this method logs an error message to the console:
+>
+> ![](proxy_register_warning.png)
 
-  <p><img alt="" src="proxy_register_warning.png"></p>
-</div>
+Registers a [Proxy Auto-Configuration (PAC) file](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file). The file is executed immediately, and its `FindProxyForURL()` function will be called for any HTTP or HTTPS requests.
 
+If PAC files are registered by more than one extension, then requests will be passed initially to the one that was registered first.
 
-<p>Registers a <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file">Proxy Auto-Configuration (PAC) file</a>. The file is executed immediately, and its <code>FindProxyForURL()</code> function will be called for any HTTP or HTTPS requests.</p>
+- If the `FindProxyForURL()` function in the first PAC returns "DIRECT" for a request, then the request will be passed unchanged to the `FindProxyForURL()` function in the next PAC.
+- If the `FindProxyForURL()` function in the first PAC proxies the request by returning "PROXY" or some other proxying value, then the proxy URL will be passed to the `FindProxyForURL()` function in the next PAC.
 
-<p>If PAC files are registered by more than one extension, then requests will be passed initially to the one that was registered first.</p>
+Each extension can only register a single PAC file: if you call `register()` twice, the second PAC file will replace the first.
 
-<ul>
- <li>If the <code>FindProxyForURL()</code> function in the first PAC returns "DIRECT" for a request, then the request will be passed unchanged to the <code>FindProxyForURL()</code> function in the next PAC.</li>
- <li>If the <code>FindProxyForURL()</code> function in the first PAC proxies the request by returning "PROXY" or some other proxying value, then the proxy URL will be passed to the <code>FindProxyForURL()</code> function in the next PAC.</li>
-</ul>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<p>Each extension can only register a single PAC file: if you call <code>register()</code> twice, the second PAC file will replace the first.</p>
+## Communicating with PAC files
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+You can exchange messages between the PAC file and your extension's background page (or any other privileged pages, like popup pages) using [`runtime.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) and [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage).
 
-<h2 id="Communicating_with_PAC_files">Communicating with PAC files</h2>
+To send a message to the PAC file, you must set the `toProxyScript` option:
 
-<p>You can exchange messages between the PAC file and your extension's background page (or any other privileged pages, like popup pages) using <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code>.</p>
-
-<p>To send a message to the PAC file, you must set the <code>toProxyScript</code> option:</p>
-
-<pre class="brush: js">// background.js
+```js
+// background.js
 
 // Log any messages from the proxy.
-browser.runtime.onMessage.addListener((message, sender) =&gt; {
+browser.runtime.onMessage.addListener((message, sender) => {
   if (sender.url === browser.extension.getURL(proxyScriptURL)) {
     console.log(message);
   }
@@ -56,31 +52,35 @@ let messageToProxy = {
   bar: 1234
 };
 
-browser.runtime.sendMessage(messageToProxy, {toProxyScript: true});</pre>
+browser.runtime.sendMessage(messageToProxy, {toProxyScript: true});
+```
 
-<pre class="brush: js">// pac.js
+```js
+// pac.js
 
-browser.runtime.onMessage.addListener((message) =&gt; {
+browser.runtime.onMessage.addListener((message) => {
   if (message.enabled) {
     browser.runtime.sendMessage("I'm enabled!");
   }
-});</pre>
+});
+```
 
-<h2 id="PAC_file_specification">PAC file specification</h2>
+## PAC file specification
 
-<p>The basic PAC file syntax is described in the <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file">PAC documentation</a>, but the implementation used by the proxy API differs from standard PAC design in several ways, which are described in this section.</p>
+The basic PAC file syntax is described in the [PAC documentation](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file), but the implementation used by the proxy API differs from standard PAC design in several ways, which are described in this section.
 
-<h3 id="FindProxyForURL_return_value">FindProxyForURL() return value</h3>
+### FindProxyForURL() return value
 
-<p>The standard <code>FindProxyForURL()</code> <a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#return_value_format">returns a string</a>. In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 <em>only</em>, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.</p>
+The standard `FindProxyForURL()` [returns a string](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#return_value_format). In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 _only_, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.
 
-<p>From Firefox 57 onwards, <code>FindProxyForURL()</code> may still return a string, but may alternatively (and preferably) return an array of {{WebExtAPIRef("proxy.ProxyInfo")}} objects.</p>
+From Firefox 57 onwards, `FindProxyForURL()` may still return a string, but may alternatively (and preferably) return an array of {{WebExtAPIRef("proxy.ProxyInfo")}} objects.
 
-<p>If the array contains more than one object, then all <code>ProxyInfo</code> objects after the first one represent failovers: if the proxy at position N in the array is not reachable when its <code>ProxyInfo.failoverTimeout</code> expires, then the browser will try the proxy at position N+1.</p>
+If the array contains more than one object, then all `ProxyInfo` objects after the first one represent failovers: if the proxy at position N in the array is not reachable when its `ProxyInfo.failoverTimeout` expires, then the browser will try the proxy at position N+1.
 
-<p>For example:</p>
+For example:
 
-<pre class="brush: js">const proxySpecification = [
+```js
+const proxySpecification = [
   {
     type: "socks",
     host: "foo.com",
@@ -93,28 +93,30 @@ browser.runtime.onMessage.addListener((message) =&gt; {
     host: "bar.com",
     port: 1060,
   }
-];</pre>
+];
+```
 
-<p>The first proxy in the array will be tried first. If it does not respond in <code>failoverTimeout</code> seconds, the next will be tried, until the end of the array is reached.</p>
+The first proxy in the array will be tried first. If it does not respond in `failoverTimeout` seconds, the next will be tried, until the end of the array is reached.
 
-<h3 id="PAC_file_environment">PAC file environment</h3>
+### PAC file environment
 
-<p>The global helper functions usually available for PAC files (<code><a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#isplainhostname()_2">isPlainHostName()</a></code>, <code><a href="/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#dnsdomainis()">dnsDomainIs()</a></code>, and so on) are not available.</p>
+The global helper functions usually available for PAC files ([`isPlainHostName()`](</en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#isplainhostname()_2>), [`dnsDomainIs()`](</en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#dnsdomainis()>), and so on) are not available.
 
-<p>Code running in the PAC file does not get access to:</p>
+Code running in the PAC file does not get access to:
 
-<ul>
- <li>any DOM functions (for example, <a href="/en-US/docs/Web/API/Window">window</a> or any of its properties)</li>
- <li>any WebExtension APIs except <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage">runtime.sendMessage()</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage">runtime.onMessage</a></code></li>
- <li>the <a href="/en-US/docs/Web/API/console">Console API</a> - to log messages from a PAC, send a message to the background script:</li>
-</ul>
+- any DOM functions (for example, [window](/en-US/docs/Web/API/Window) or any of its properties)
+- any WebExtension APIs except [`runtime.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) and [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
+- the [Console API](/en-US/docs/Web/API/console) - to log messages from a PAC, send a message to the background script:
 
-<pre class="brush: js">//  pac.js
+```js
+//  pac.js
 
 // send the log message to the background script
-browser.runtime.sendMessage(`Proxy-blocker: blocked ${url}`);</pre>
+browser.runtime.sendMessage(`Proxy-blocker: blocked ${url}`);
+```
 
-<pre class="brush: js">// background-script.js
+```js
+// background-script.js
 
 function handleMessage(message, sender) {
   // only handle messages from the proxy script
@@ -124,38 +126,38 @@ function handleMessage(message, sender) {
   console.log(message);
 }
 
-browser.runtime.onMessage.addListener(handleMessage);</pre>
+browser.runtime.onMessage.addListener(handleMessage);
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var registering = browser.proxy.register(
+```js
+var registering = browser.proxy.register(
   url   // string
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>url</code></dt>
- <dd><code>String</code>. URL pointing to the PAC file to load. PAC files must be bundled with the extension, and <code>url</code> must be relative to the extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file.</dd>
-</dl>
+- `url`
+  - : `String`. URL pointing to the PAC file to load. PAC files must be bundled with the extension, and `url` must be relative to the extension's [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when the PAC file has been registered, or rejected if there was an error.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the PAC file has been registered, or rejected if there was an error.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<pre class="brush: js">const proxyScriptURL = "proxy/proxy-script.js";
+```js
+const proxyScriptURL = "proxy/proxy-script.js";
 
-browser.proxy.register(proxyScriptURL);</pre>
+browser.proxy.register(proxyScriptURL);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<div class="notecard note">
-  <p><strong>Note:</strong> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
+> **Note:** Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

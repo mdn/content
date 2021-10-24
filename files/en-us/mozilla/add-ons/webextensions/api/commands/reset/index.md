@@ -12,46 +12,47 @@ tags:
   - reset
 browser-compat: webextensions.api.commands.reset
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Resets the given command's description and keyboard shortcut to the values given in the extension's <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands"><code>commands</code> manifest.json key</a>.</p>
+Resets the given command's description and keyboard shortcut to the values given in the extension's [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
-<p>This effectively undoes any changes made to the command using the {{WEbExtAPIRef("commands.update()")}} function.</p>
+This effectively undoes any changes made to the command using the {{WEbExtAPIRef("commands.update()")}} function.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.commands.reset(
+```js
+browser.commands.reset(
   name // string
 );
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>name</code></dt>
- <dd><code>string</code>. Name of the command to reset, as given by the <code>name</code> property of the {{WebExtAPIRef("commands.Command")}} object.</dd>
-</dl>
+- `name`
+  - : `string`. Name of the command to reset, as given by the `name` property of the {{WebExtAPIRef("commands.Command")}} object.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when the shortcut has been reset.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the shortcut has been reset.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Resets the command named "my-command" when the user clicks the "reset" button:</p>
+Resets the command named "my-command" when the user clicks the "reset" button:
 
-<pre class="brush: js">const commandName = 'my-command';
+```js
+const commandName = 'my-command';
 
 function resetShortcut() {
   browser.commands.reset(commandName);
 }
 
-document.querySelector('#reset').addEventListener('click', resetShortcut);</pre>
+document.querySelector('#reset').addEventListener('click', resetShortcut);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}

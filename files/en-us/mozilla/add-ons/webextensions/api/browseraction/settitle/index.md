@@ -12,63 +12,56 @@ tags:
   - setTitle
 browser-compat: webextensions.api.browserAction.setTitle
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>Sets the browser action's title. The title is displayed in a tooltip over the browser action's icon. You can pass a <code>tabId</code> in or a <code>windowId</code> as an optional parameter — if you do this then the title is changed only for the given tab or the given window. Tabs or windows without a specific title will inherit the global title text, which defaults to the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action"><code>default_title</code></a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name"><code>name</code></a> specified in the manifest.</p>
+Sets the browser action's title. The title is displayed in a tooltip over the browser action's icon. You can pass a `tabId` in or a `windowId` as an optional parameter — if you do this then the title is changed only for the given tab or the given window. Tabs or windows without a specific title will inherit the global title text, which defaults to the [`default_title`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) or [`name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) specified in the manifest.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">browser.browserAction.setTitle(
+```js
+browser.browserAction.setTitle(
   details // object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>details</code></dt>
- <dd><p><code>object</code>. The new title and optionally the ID of the tab or window to target.</p>
- <dl>
-  <dt><code>title</code></dt>
-  <dd>
-   <p><code>string</code> or <code>null</code>. The string the browser action should display when moused over.</p>
+- `details`
 
-   <p>If <code>title</code> is an empty string, the used title will be the extension name, but {{WebExtAPIRef("browserAction.getTitle")}} will still provide the empty string.</p>
+  - : `object`. The new title and optionally the ID of the tab or window to target.
 
-   <p>If <code>title</code> is <code>null</code>:</p>
+    - `title`
 
-   <ul>
-    <li>If <code>tabId</code> is specified, and the tab has a tab-specific title set, then the tab will inherit the title from the window to which it belongs.</li>
-    <li>if <code>windowId</code> is specified, and the window has a window-specific title set, then the window will inherit the global title.</li>
-    <li>Otherwise, the global title will be reset to the manifest title.</li>
-   </ul>
-  </dd>
-  <dt><code>tabId</code>{{Optional_Inline}}</dt>
-  <dd>
-   <p><code>integer</code>. Sets the title only for the given tab.</p>
-  </dd>
-  <dt><code>windowId</code>{{Optional_Inline}}</dt>
-  <dd>
-   <p><code>integer</code>. Sets the title for the given window.</p>
-  </dd>
- </dl>
- </dd>
-</dl>
+      - : `string` or `null`. The string the browser action should display when moused over.
 
-<ul>
- <li>If <code>windowId</code> and <code>tabId</code> are both supplied, the function fails and the title is not set.</li>
- <li>If <code>windowId</code> and <code>tabId</code> are both omitted, the global title is set.</li>
-</ul>
+        If `title` is an empty string, the used title will be the extension name, but {{WebExtAPIRef("browserAction.getTitle")}} will still provide the empty string.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+        If `title` is `null`:
 
-<p>{{Compat}}</p>
+        - If `tabId` is specified, and the tab has a tab-specific title set, then the tab will inherit the title from the window to which it belongs.
+        - if `windowId` is specified, and the window has a window-specific title set, then the window will inherit the global title.
+        - Otherwise, the global title will be reset to the manifest title.
 
-<h2 id="Examples">Examples</h2>
+    - `tabId`{{Optional_Inline}}
+      - : `integer`. Sets the title only for the given tab.
+    - `windowId`{{Optional_Inline}}
+      - : `integer`. Sets the title for the given window.
 
-<p>This code switches the title between "this" and "that" each time the user clicks the browser action:</p>
+<!---->
 
-<pre class="brush: js">function toggleTitle(title) {
+- If `windowId` and `tabId` are both supplied, the function fails and the title is not set.
+- If `windowId` and `tabId` are both omitted, the global title is set.
+
+## Browser compatibility
+
+{{Compat}}
+
+## Examples
+
+This code switches the title between "this" and "that" each time the user clicks the browser action:
+
+```js
+function toggleTitle(title) {
   if (title == "this") {
     browser.browserAction.setTitle({title: "that"});
   } else {
@@ -76,22 +69,19 @@ browser-compat: webextensions.api.browserAction.setTitle
   }
 }
 
-browser.browserAction.onClicked.addListener(() =&gt; {
+browser.browserAction.onClicked.addListener(() => {
   var gettingTitle = browser.browserAction.getTitle({});
   gettingTitle.then(toggleTitle);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction#method-setTitle) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction#method-setTitle"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json"><code>browser_action.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,5 +108,4 @@ browser.browserAction.onClicked.addListener(() =&gt; {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

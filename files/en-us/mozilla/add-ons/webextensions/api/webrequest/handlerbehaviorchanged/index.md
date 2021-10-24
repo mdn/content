@@ -13,54 +13,49 @@ tags:
   - webRequest
 browser-compat: webextensions.api.webRequest.handlerBehaviorChanged
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}This function can be used to ensure that event listeners are applied correctly when pages are in the browser's in-memory cache.If the browser has loaded a page, and the page is reloaded, the browser may reload the page from its in-memory cache, and in this case, events will not be triggered for the request.
 
-<div>This function can be used to ensure that event listeners are applied correctly when pages are in the browser's in-memory cache.</div>
+Suppose an extension's job is to block web requests against a pattern, and the following scenario happens:
 
+- The user loads a page that includes a particular request, and the pattern permits the request.
+- The resource is loaded and cached in memory.
+- The extension's patterns are updated, in such a way that the resource would no longer be permitted.
+- The user reloads the page.
 
-<div>If the browser has loaded a page, and the page is reloaded, the browser may reload the page from its in-memory cache, and in this case, events will not be triggered for the request.</div>
+Because the page will be reloaded from the memory cache, the listener may not be called again, and the request will be loaded despite the extension's new policy.
 
-<p>Suppose an extension's job is to block web requests against a pattern, and the following scenario happens:</p>
+The `handlerBehaviorChanged()` function is designed to address this problem. It flushes the in-memory cache, so that page reloads will trigger event listeners.
 
-<ul>
- <li>The user loads a page that includes a particular request, and the pattern permits the request.</li>
- <li>The resource is loaded and cached in memory.</li>
- <li>The extension's patterns are updated, in such a way that the resource would no longer be permitted.</li>
- <li>The user reloads the page.</li>
-</ul>
+Because `handlerBehaviorChanged()` flushes the cache, it can be expensive and bad for performance. The webRequest module defines a read-only property {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}: making more calls than this number in 10 minutes will have no effect.
 
-<p>Because the page will be reloaded from the memory cache, the listener may not be called again, and the request will be loaded despite the extension's new policy.</p>
+The implementation of caching, hence the need for this function, varies from one browser to another, so in some browsers this function does nothing.
 
-<p>The <code>handlerBehaviorChanged()</code> function is designed to address this problem. It flushes the in-memory cache, so that page reloads will trigger event listeners.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<p>Because <code>handlerBehaviorChanged()</code> flushes the cache, it can be expensive and bad for performance. The webRequest module defines a read-only property {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}: making more calls than this number in 10 minutes will have no effect.</p>
+## Syntax
 
-<p>The implementation of caching, hence the need for this function, varies from one browser to another, so in some browsers this function does nothing.</p>
+```js
+var flushingCache = browser.webRequest.handlerBehaviorChanged()
+```
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+### Parameters
 
-<h2 id="Syntax">Syntax</h2>
+None.
 
-<pre class="brush:js">var flushingCache = browser.webRequest.handlerBehaviorChanged()
-</pre>
+### Return value
 
-<h3 id="Parameters">Parameters</h3>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments, when the operation has completed.
 
-<p>None.</p>
+## Browser compatibility
 
-<h3 id="Return_value">Return value</h3>
+{{Compat}}
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments, when the operation has completed.</p>
+## Examples
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+In the following snippet, we flush the in-memory cache via a call to `handlerBehaviorChanged()`,  and report this action by logging an appropriate message to the console.
 
-<p>{{Compat}}</p>
-
-<h2 id="Examples">Examples</h2>
-
-<p>In the following snippet, we flush the in-memory cache via a call to <code>handlerBehaviorChanged()</code>,  and report this action by logging an appropriate message to the console.</p>
-
-<pre class="brush: js">function onFlushed() {
+```js
+function onFlushed() {
   console.log(`In-memory cache flushed`);
 }
 
@@ -69,18 +64,16 @@ function onError(error) {
 }
 
 var flushingCache = browser.webRequest.handlerBehaviorChanged();
-flushingCache.then(onFlushed, onError);</pre>
+flushingCache.then(onFlushed, onError);
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest#method-handlerBehaviorChanged) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/webRequest#method-handlerBehaviorChanged"><code>chrome.webRequest</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json"><code>web_request.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -107,5 +100,4 @@ flushingCache.then(onFlushed, onError);</pre>
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

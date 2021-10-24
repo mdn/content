@@ -12,38 +12,38 @@ tags:
   - tabs
 browser-compat: webextensions.api.tabs.captureTab
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Creates a data URI encoding the image of an area of the given tab. You must have the <code>&lt;all_urls&gt;</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> to use this method.</p>
+Creates a data URI encoding the image of an area of the given tab. You must have the `<all_urls>` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to use this method.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var capturing = browser.tabs.captureTab(
+```js
+var capturing = browser.tabs.captureTab(
   tabId,               // optional integer
   options              // optional extensionTypes.ImageDetails
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>tabId</code>{{optional_inline}}</dt>
- <dd><code>integer</code>. ID of the tab to capture. Defaults to the active tab in the current window.</dd>
- <dt><code>options</code>{{optional_inline}}</dt>
- <dd>{{WebExtAPIRef('extensionTypes.ImageDetails')}}.</dd>
-</dl>
+- `tabId`{{optional_inline}}
+  - : `integer`. ID of the tab to capture. Defaults to the active tab in the current window.
+- `options`{{optional_inline}}
+  - : {{WebExtAPIRef('extensionTypes.ImageDetails')}}.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a data URL which encodes the captured image. May be assigned to the 'src' property of an HTML Image element for display. If any error occurs the promise will be rejected with an error message.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a data URL which encodes the captured image. May be assigned to the 'src' property of an HTML Image element for display. If any error occurs the promise will be rejected with an error message.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Capture an image of the active tab in the current window, with default settings:</p>
+Capture an image of the active tab in the current window, with default settings:
 
-<pre class="brush: js">function onCaptured(imageUri) {
+```js
+function onCaptured(imageUri) {
   console.log(imageUri);
 }
 
@@ -55,20 +55,17 @@ browser.browserAction.onClicked.addListener(function() {
   var capturing = browser.tabs.captureTab();
   capturing.then(onCaptured, onError);
 });
-</pre>
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-captureVisibleTab) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-captureVisibleTab"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> in the Chromium code.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,5 +92,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>

@@ -4,150 +4,150 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 tags:
   - WebExtensions
 ---
-<div>{{AddonSidebar}}</div>
+{{AddonSidebar}}
 
-<p>An extension consists of a collection of files, packaged for distribution and installation. In this article, we will quickly go through the files that might be present in an extension.</p>
+An extension consists of a collection of files, packaged for distribution and installation. In this article, we will quickly go through the files that might be present in an extension.
 
-<h2 id="manifest.json">manifest.json</h2>
+## manifest.json
 
-<p>This is the only file that must be present in every extension. It contains basic metadata such as its name, version, and the permissions it requires. It also provides pointers to other files in the extension.</p>
+This is the only file that must be present in every extension. It contains basic metadata such as its name, version, and the permissions it requires. It also provides pointers to other files in the extension.
 
-<p>The manifest can also contain pointers to several other types of files:</p>
+The manifest can also contain pointers to several other types of files:
 
-<dl>
- <dt><a href="#background_scripts">Background scripts</a></dt>
- <dd>Implement long-running logic.</dd>
- <dt>Icons</dt>
- <dd>For the extension and any buttons it might define.</dd>
- <dt><a href="#sidebars_popups_and_options_pages">Sidebars, popups, and options pages</a></dt>
- <dd>HTML documents that provide content for various user interface components.</dd>
- <dt><a href="#content_scripts">Content scripts</a></dt>
- <dd>JavaScript included with your extension, that you will inject into web pages.</dd>
- <dt><a href="#web_accessible_resources">Web-accessible resources</a></dt>
- <dd>Make packaged content accessible to web pages and content scripts.</dd>
-</dl>
+- [Background scripts](#background_scripts)
+  - : Implement long-running logic.
+- Icons
+  - : For the extension and any buttons it might define.
+- [Sidebars, popups, and options pages](#sidebars_popups_and_options_pages)
+  - : HTML documents that provide content for various user interface components.
+- [Content scripts](#content_scripts)
+  - : JavaScript included with your extension, that you will inject into web pages.
+- [Web-accessible resources](#web_accessible_resources)
+  - : Make packaged content accessible to web pages and content scripts.
 
-<p><img alt="" src="webextension-anatomy.png"></p>
+![](webextension-anatomy.png)
 
-<p>See the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code> reference page for all the details.</p>
+See the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) reference page for all the details.
 
-<p>Along with those already listed in the manifest, an extension may also include additional <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">Extension pages</a> and supporting files.</p>
+Along with those already listed in the manifest, an extension may also include additional [Extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) and supporting files.
 
-<h2 id="Background_scripts">Background scripts</h2>
+## Background scripts
 
-<p>Extensions often need to maintain long-term state or perform long-term operations independently of the lifetime of any particular web page or browser window. That is what background scripts are for.</p>
+Extensions often need to maintain long-term state or perform long-term operations independently of the lifetime of any particular web page or browser window. That is what background scripts are for.
 
-<p>Background scripts are loaded as soon as the extension is loaded and stay loaded until the extension is disabled or uninstalled. You can use any of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension APIs</a> in the script, as long as you have requested the necessary <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a>.</p>
+Background scripts are loaded as soon as the extension is loaded and stay loaded until the extension is disabled or uninstalled. You can use any of the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) in the script, as long as you have requested the necessary [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<h3 id="Specifying_background_scripts">Specifying background scripts</h3>
+### Specifying background scripts
 
-<p>You can include a background script using the <code>"background"</code> key in <code>manifest.json</code>:</p>
+You can include a background script using the `"background"` key in `manifest.json`:
 
-<pre class="brush: json">// manifest.json
+```json
+// manifest.json
 
 "background": {
   "scripts": ["background-script.js"]
-}</pre>
+}
+```
 
-<p>You can specify multiple background scripts. If you do, they run in the same context, just like multiple scripts that are loaded into a single web page.</p>
+You can specify multiple background scripts. If you do, they run in the same context, just like multiple scripts that are loaded into a single web page.
 
-<p>Instead of specifying background scripts, you can specify a background page which has the added advantage of supporting ES6 modules:</p>
+Instead of specifying background scripts, you can specify a background page which has the added advantage of supporting ES6 modules:
 
-<strong>manifest.json</strong>
-<pre class="brush: json">// manifest.json
+**manifest.json**
+
+```json
+// manifest.json
 
 "background": {
   "page": "background-page.html"
-}</pre>
+}
+```
 
-<strong>background-page.html</strong>
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;script type="module" src="background-script.js"&gt;&lt;/script&gt;
-  &lt;/head&gt;
-&lt;/html&gt;</pre>
+**background-page.html**
 
-<h3 id="Background_script_environment">Background script environment</h3>
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script type="module" src="background-script.js"></script>
+  </head>
+</html>
+```
 
-<h4 id="DOM_APIs">DOM APIs</h4>
+### Background script environment
 
-<p>Background scripts run in the context of a special page called a background page. This gives them a <code><a href="/en-US/docs/Web/API/Window">window</a></code> global, along with all the standard DOM APIs provided by that object.</p>
+#### DOM APIs
 
-<div class="notecard warning">
-<p><strong>Warning:</strong> In Firefox, background pages do not support the use of <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code>, <code><a href="/en-US/docs/Web/API/Window/confirm">confirm()</a></code>, or <code><a href="/en-US/docs/Web/API/Window/prompt">prompt()</a></code>.</p>
-</div>
+Background scripts run in the context of a special page called a background page. This gives them a [`window`](/en-US/docs/Web/API/Window) global, along with all the standard DOM APIs provided by that object.
 
-<h4 id="WebExtension_APIs">WebExtension APIs</h4>
+> **Warning:** In Firefox, background pages do not support the use of [`alert()`](/en-US/docs/Web/API/Window/alert), [`confirm()`](/en-US/docs/Web/API/Window/confirm), or [`prompt()`](/en-US/docs/Web/API/Window/prompt).
 
-<p>Background scripts can use any of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension APIs</a> in the script, as long as their extension has the necessary <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a>.</p>
+#### WebExtension APIs
 
-<h4 id="Cross-origin_access">Cross-origin access</h4>
+Background scripts can use any of the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) in the script, as long as their extension has the necessary [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<p>Background scripts can make XHR requests to any hosts for which they have <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">host permissions</a>.</p>
+#### Cross-origin access
 
-<h4 id="Web_content">Web content</h4>
+Background scripts can make XHR requests to any hosts for which they have [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-<p>Background scripts do not get direct access to web pages. However, they can load <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> into web pages and can <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts">communicate with these content scripts using a message-passing API</a>.</p>
+#### Web content
 
-<h4 id="Content_security_policy">Content security policy</h4>
+Background scripts do not get direct access to web pages. However, they can load [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) into web pages and can [communicate with these content scripts using a message-passing API](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts).
 
-<p>Background scripts are restricted from certain potentially dangerous operations, like the use of <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>, through a Content Security Policy.</p>
+#### Content security policy
 
-<p>See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a> for more details on this.</p>
+Background scripts are restricted from certain potentially dangerous operations, like the use of [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), through a Content Security Policy.
 
-<h2 id="Sidebars_popups_and_options_pages">Sidebars, popups, and options pages</h2>
+See [Content Security Policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) for more details on this.
 
-<p>Your extension can include various user interface components whose content is defined using an HTML document:</p>
+## Sidebars, popups, and options pages
 
-<dl>
- <dt><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">Sidebar</a></dt>
- <dd>A pane that is displayed at the left-hand side of the browser window, next to the web page.</dd>
- <dt><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">Popup</a></dt>
- <dd>A dialog that you can display when the user clicks on a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">toolbar button</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">address bar button</a></dd>
- <dt><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">Options</a></dt>
- <dd>A page that's shown when the user accesses your add-on's preferences in the browser's native add-ons manager.</dd>
-</dl>
+Your extension can include various user interface components whose content is defined using an HTML document:
 
-<p>For each of these components, you create an HTML file and point to it using a specific property in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a></code>. The HTML file can include CSS and JavaScript files, just like a normal web page.</p>
+- [Sidebar](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)
+  - : A pane that is displayed at the left-hand side of the browser window, next to the web page.
+- [Popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
+  - : A dialog that you can display when the user clicks on a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) or [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
+- [Options](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
+  - : A page that's shown when the user accesses your add-on's preferences in the browser's native add-ons manager.
 
-<p>All of these are a type of <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">Extension pages</a>. Unlike a normal web page, your JavaScript can use all the same privileged WebExtension APIs as your background script.</p>
+For each of these components, you create an HTML file and point to it using a specific property in [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json). The HTML file can include CSS and JavaScript files, just like a normal web page.
 
-<h2 id="Extension_pages">Extension pages</h2>
+All of these are a type of [Extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages). Unlike a normal web page, your JavaScript can use all the same privileged WebExtension APIs as your background script.
 
-<p>You can also include HTML documents in your extension which are not attached to some predefined user interface component. Unlike the documents you might provide for sidebars, popups, or options pages, these don't have an entry in <code>manifest.json</code>. However, they do also get access to all the same privileged WebExtension APIs as your background script.</p>
+## Extension pages
 
-<p>You'd typically load a page like this using {{WebExtAPIRef("windows.create()")}} or {{WebExtAPIRef("tabs.create()")}}.</p>
+You can also include HTML documents in your extension which are not attached to some predefined user interface component. Unlike the documents you might provide for sidebars, popups, or options pages, these don't have an entry in `manifest.json`. However, they do also get access to all the same privileged WebExtension APIs as your background script.
 
-<p>See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">Extension pages</a> to learn more.</p>
+You'd typically load a page like this using {{WebExtAPIRef("windows.create()")}} or {{WebExtAPIRef("tabs.create()")}}.
 
-<h2 id="Content_scripts">Content scripts</h2>
+See [Extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) to learn more.
 
-<p>Use content scripts to access and manipulate web pages. Content scripts are loaded into web pages and run in the context of that particular page.</p>
+## Content scripts
 
-<p>Content scripts are extension-provided scripts which run in the context of a web page; this differs from scripts which are loaded by the page itself, including those which are provided in {{HTMLElement("script")}} elements within the page.</p>
+Use content scripts to access and manipulate web pages. Content scripts are loaded into web pages and run in the context of that particular page.
 
-<p>Content scripts can see and manipulate the page's DOM, just like normal scripts loaded by the page.</p>
+Content scripts are extension-provided scripts which run in the context of a web page; this differs from scripts which are loaded by the page itself, including those which are provided in {{HTMLElement("script")}} elements within the page.
 
-<p>Unlike normal page scripts, content scripts can:</p>
+Content scripts can see and manipulate the page's DOM, just like normal scripts loaded by the page.
 
-<ul>
- <li>Make cross-domain XHR requests.</li>
- <li>Use a small subset of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension APIs</a>.</li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts">Exchange messages with their background scripts</a> and can in this way indirectly access all the WebExtension APIs.</li>
-</ul>
+Unlike normal page scripts, content scripts can:
 
-<p>Content scripts cannot directly access normal page scripts but can exchange messages with them using the standard <code><a href="/en-US/docs/Web/API/Window/postMessage">window.postMessage()</a></code> API.</p>
+- Make cross-domain XHR requests.
+- Use a small subset of the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API).
+- [Exchange messages with their background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts) and can in this way indirectly access all the WebExtension APIs.
 
-<p>Usually, when we talk about content scripts, we are referring to JavaScript, but you can inject CSS into web pages using the same mechanism.</p>
+Content scripts cannot directly access normal page scripts but can exchange messages with them using the standard [`window.postMessage()`](/en-US/docs/Web/API/Window/postMessage) API.
 
-<p>See the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> article to learn more.</p>
+Usually, when we talk about content scripts, we are referring to JavaScript, but you can inject CSS into web pages using the same mechanism.
 
-<h2 id="Web_accessible_resources">Web accessible resources</h2>
+See the [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) article to learn more.
 
-<p>Web accessible resources are resources—such as images, HTML, CSS, and JavaScript—that you include in the extension and want to make accessible to content scripts and page scripts. Resources which are made web-accessible can be referenced by page scripts and content scripts using a special URI scheme.</p>
+## Web accessible resources
 
-<p>For example, if a content script wants to insert some images into web pages, you could include them in the extension and make them web accessible. Then the content script could create and append <code><a href="/en-US/docs/Web/HTML/Element/img">img</a></code> tags which reference the images via the <code>src</code> attribute.</p>
+Web accessible resources are resources—such as images, HTML, CSS, and JavaScript—that you include in the extension and want to make accessible to content scripts and page scripts. Resources which are made web-accessible can be referenced by page scripts and content scripts using a special URI scheme.
 
-<p>To learn more, see the documentation for the <code>"<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a>"</code> <code>manifest.json</code> key.</p>
+For example, if a content script wants to insert some images into web pages, you could include them in the extension and make them web accessible. Then the content script could create and append [`img`](/en-US/docs/Web/HTML/Element/img) tags which reference the images via the `src` attribute.
+
+To learn more, see the documentation for the `"web_accessible_resources"` `manifest.json` key.

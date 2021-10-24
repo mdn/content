@@ -13,82 +13,76 @@ tags:
   - Windows
 browser-compat: webextensions.api.windows.create
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Creates a new window.</p>
+Creates a new window.
 
-<p>When you create the window, you can:</p>
+When you create the window, you can:
 
-<ul>
- <li>Load one or more new tabs into the window.</li>
- <li>Move a tab from an existing window into the new window.</li>
- <li>Set the size and position of the window.</li>
- <li>Create a "panel" style window, which in this context means a window without any of the normal browser UI (address bar, toolbar, etc.).</li>
- <li>Set various properties of the window, such as whether it is focused or private.</li>
-</ul>
+- Load one or more new tabs into the window.
+- Move a tab from an existing window into the new window.
+- Set the size and position of the window.
+- Create a "panel" style window, which in this context means a window without any of the normal browser UI (address bar, toolbar, etc.).
+- Set various properties of the window, such as whether it is focused or private.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var creating = browser.windows.create(
+```js
+var creating = browser.windows.create(
   createData            // optional object
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>createData</code> {{optional_inline}}</dt>
- <dd>
-   <p><code>object</code>.</p>
-   <dl>
-    <dt><code>allowScriptsToClose</code> {{optional_inline}}</dt>
-    <dd>
-    <p><code>boolean</code>. When the window is opened, it will contain a single tab, or more than one tab if <code>url</code> is given and includes an array containing more than one URL. By default scripts running in these pages are not allowed to close their tab using <code><a href="/en-US/docs/Web/API/Window/close">window.close()</a></code>.  If you include <code>allowScriptsToClose</code> and set it to <code>true</code> , then this default behavior is changed, so scripts can close their tabs. Note that:</p>
+- `createData` {{optional_inline}}
 
-    <ul>
-     <li>this only applies to the tabs that were opened when the window was created. If the user opens more tabs in this window, then scripts will not be able to close those new tabs.</li>
-     <li>if the url(s) given in <code>url</code> point to <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">extension pages</a> (that is, they are pages included with this extension and loaded with the "moz-extension:" protocol) then scripts <em>are</em> by default allowed to close those tabs.</li>
-    </ul>
-    </dd>
-    <dt><code>cookieStoreId</code> {{optional_inline}}</dt>
-    <dd><code>integer</code>. If present, specifies the <code>CookieStoreId</code> for all tabs that will be created when the window is opened.</dd>
-    <dt><code>focused</code> {{optional_inline}}</dt>
-    <dd><code>boolean</code>. If <code>true</code>, the new window will be focused. If <code>false</code>, the new window will be opened in the background and the currently focused window will stay focused. Defaults to <code>true</code>.</dd>
-    <dt><code>height</code> {{optional_inline}}</dt>
-    <dd><code>integer</code>. The height in pixels of the new window, including the frame. If not specified defaults to a natural height.</dd>
-    <dt><code>incognito</code> {{optional_inline}}</dt>
-    <dd><code>boolean</code>. Whether the new window should be an incognito (private) window. Note that if you specify <code>incognito</code> and <code>tabId</code>, the ID must refer to a private tab — that is, you can't move a non-private tab to a private window.</dd>
-    <dt><code>left</code> {{optional_inline}}</dt>
-    <dd><code>integer</code>. The number of pixels to position the new window from the left edge of the screen. If not specified, the new window is offset naturally from the last focused window. This value is ignored for panels. (In Firefox, this value currently is ignored for popups (bug 1271047) but can be set using browser.windows.update().)</dd>
-    <dt><code>state</code> {{optional_inline}}</dt>
-    <dd>A {{WebExtAPIRef('windows.WindowState')}} value. The initial state of the window. The <code>minimized</code>, <code>maximized</code> and, <code>fullscreen</code> states cannot be combined with <code>left</code>, <code>top</code>, <code>width</code>, or <code>height</code>.</dd>
-    <dt><code>tabId</code> {{optional_inline}}</dt>
-    <dd><code>integer</code>. If included, moves a tab of the specified ID from an existing window into the new window.</dd>
-    <dt><code>titlePreface</code> {{optional_inline}}</dt>
-    <dd><code>string</code>. Use this to add a string to the beginning of the browser window's title. Depending on the underlying operating system, this might not work on browser windows that don't have a title (such as about:blank in Firefox).</dd>
-    <dt><code>top</code> {{optional_inline}}</dt>
-    <dd><code>integer</code>. The number of pixels to position the new window from the top edge of the screen. If not specified, the new window is offset naturally from the last focused window. This value is ignored for panels. (In Firefox, this value currently is ignored for popups (bug 1271047) but can be set using browser.windows.update().)</dd>
-    <dt><code>type</code> {{optional_inline}}</dt>
-    <dd>A {{WebExtAPIRef('windows.CreateType')}} value. Specifies what type of browser window to create. Specify <code>panel</code> or <code>popup</code> here to open a window without any of the normal browser UI (address bar, toolbar, etc).</dd>
-    <dt><code>url</code> {{optional_inline}}</dt>
-    <dd><code>string</code> or <code>array</code> of <code>string</code>s. A URL or array of URLs to open as tabs in the window. Fully-qualified URLs must include a scheme (i.e. <code>http://www.google.com</code>, not <code>www.google.com</code>). Relative URLs will be relative to the current page within the extension. Defaults to the New Tab Page.</dd>
-    <dt><code>width</code> {{optional_inline}}</dt>
-    <dd><code>integer</code>. The width in pixels of the new window, including the frame. If not specified defaults to a natural width.</dd>
-   </dl>
- </dd>
-</dl>
+  - : `object`.
 
-<h3 id="Return_value">Return value</h3>
+    - `allowScriptsToClose` {{optional_inline}}
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing the details of the new window. This <code>Window</code> object will always have its <code>tabs</code> property set, unlike the <code>Window</code> objects returned from {{WebExtAPIRef("windows.get()")}} and similar APIs, which only contain <code>tabs</code> if the <code>populate</code> option is passed. If any error occurs, the promise will be rejected with an error message.</p>
+      - : `boolean`. When the window is opened, it will contain a single tab, or more than one tab if `url` is given and includes an array containing more than one URL. By default scripts running in these pages are not allowed to close their tab using [`window.close()`](/en-US/docs/Web/API/Window/close).  If you include `allowScriptsToClose` and set it to `true` , then this default behavior is changed, so scripts can close their tabs. Note that:
 
-<h2 id="Examples">Examples</h2>
+        - this only applies to the tabs that were opened when the window was created. If the user opens more tabs in this window, then scripts will not be able to close those new tabs.
+        - if the url(s) given in `url` point to [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) (that is, they are pages included with this extension and loaded with the "moz-extension:" protocol) then scripts _are_ by default allowed to close those tabs.
 
-<p>Open a window containing two tabs:</p>
+    - `cookieStoreId` {{optional_inline}}
+      - : `integer`. If present, specifies the `CookieStoreId` for all tabs that will be created when the window is opened.
+    - `focused` {{optional_inline}}
+      - : `boolean`. If `true`, the new window will be focused. If `false`, the new window will be opened in the background and the currently focused window will stay focused. Defaults to `true`.
+    - `height` {{optional_inline}}
+      - : `integer`. The height in pixels of the new window, including the frame. If not specified defaults to a natural height.
+    - `incognito` {{optional_inline}}
+      - : `boolean`. Whether the new window should be an incognito (private) window. Note that if you specify `incognito` and `tabId`, the ID must refer to a private tab — that is, you can't move a non-private tab to a private window.
+    - `left` {{optional_inline}}
+      - : `integer`. The number of pixels to position the new window from the left edge of the screen. If not specified, the new window is offset naturally from the last focused window. This value is ignored for panels. (In Firefox, this value currently is ignored for popups (bug 1271047) but can be set using browser.windows.update().)
+    - `state` {{optional_inline}}
+      - : A {{WebExtAPIRef('windows.WindowState')}} value. The initial state of the window. The `minimized`, `maximized` and, `fullscreen` states cannot be combined with `left`, `top`, `width`, or `height`.
+    - `tabId` {{optional_inline}}
+      - : `integer`. If included, moves a tab of the specified ID from an existing window into the new window.
+    - `titlePreface` {{optional_inline}}
+      - : `string`. Use this to add a string to the beginning of the browser window's title. Depending on the underlying operating system, this might not work on browser windows that don't have a title (such as about:blank in Firefox).
+    - `top` {{optional_inline}}
+      - : `integer`. The number of pixels to position the new window from the top edge of the screen. If not specified, the new window is offset naturally from the last focused window. This value is ignored for panels. (In Firefox, this value currently is ignored for popups (bug 1271047) but can be set using browser.windows.update().)
+    - `type` {{optional_inline}}
+      - : A {{WebExtAPIRef('windows.CreateType')}} value. Specifies what type of browser window to create. Specify `panel` or `popup` here to open a window without any of the normal browser UI (address bar, toolbar, etc).
+    - `url` {{optional_inline}}
+      - : `string` or `array` of `string`s. A URL or array of URLs to open as tabs in the window. Fully-qualified URLs must include a scheme (i.e. `http://www.google.com`, not `www.google.com`). Relative URLs will be relative to the current page within the extension. Defaults to the New Tab Page.
+    - `width` {{optional_inline}}
+      - : `integer`. The width in pixels of the new window, including the frame. If not specified defaults to a natural width.
 
-<pre class="brush: js">function onCreated(windowInfo) {
+### Return value
+
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('windows.Window')}} object containing the details of the new window. This `Window` object will always have its `tabs` property set, unlike the `Window` objects returned from {{WebExtAPIRef("windows.get()")}} and similar APIs, which only contain `tabs` if the `populate` option is passed. If any error occurs, the promise will be rejected with an error message.
+
+## Examples
+
+Open a window containing two tabs:
+
+```js
+function onCreated(windowInfo) {
   console.log(`Created window: ${windowInfo.id}`);
 }
 
@@ -96,17 +90,19 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
   var creating = browser.windows.create({
     url: ["https://developer.mozilla.org",
           "https://addons.mozilla.org"]
   });
   creating.then(onCreated, onError);
-});</pre>
+});
+```
 
-<p>Open a window when the user clicks a browser action, and move the currently active tab into it:</p>
+Open a window when the user clicks a browser action, and move the currently active tab into it:
 
-<pre class="brush: js">function onCreated(windowInfo) {
+```js
+function onCreated(windowInfo) {
   console.log(`Created window: ${windowInfo.id}`);
 }
 
@@ -114,16 +110,18 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
   var creating = browser.windows.create({
     tabId: tab.id
   });
   creating.then(onCreated, onError);
-});</pre>
+});
+```
 
-<p>Open a small panel-style window, and load a locally-packaged file into it:</p>
+Open a small panel-style window, and load a locally-packaged file into it:
 
-<pre class="brush: js">function onCreated(windowInfo) {
+```js
+function onCreated(windowInfo) {
   console.log(`Created window: ${windowInfo.id}`);
 }
 
@@ -131,7 +129,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
 
   var popupURL = browser.extension.getURL("popup/popup.html");
 
@@ -143,22 +141,20 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
   });
   creating.then(onCreated, onError);
 
-});</pre>
+});
+```
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
+> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#method-create) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/windows#method-create"><code>chrome.windows</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -186,11 +182,8 @@ browser.browserAction.onClicked.addListener((tab) =&gt; {
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-</pre>
-</div>
+</pre></div>
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li>{{domxref("Window.open()","window.open")}}</li>
-</ul>
+- {{domxref("Window.open()","window.open")}}

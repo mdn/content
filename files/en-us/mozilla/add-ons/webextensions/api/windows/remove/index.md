@@ -14,39 +14,39 @@ tags:
   - remove
 browser-compat: webextensions.api.windows.remove
 ---
-<div>{{AddonSidebar()}}</div>
+{{AddonSidebar()}}
 
-<p>Closes a window and all the tabs inside it, given the window's ID.</p>
+Closes a window and all the tabs inside it, given the window's ID.
 
-<p>This is an asynchronous function that returns a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>.</p>
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush:js">var removing = browser.windows.remove(
+```js
+var removing = browser.windows.remove(
   windowId        // integer
 )
-</pre>
+```
 
-<h3 id="Parameters">Parameters</h3>
+### Parameters
 
-<dl>
- <dt><code>windowId</code></dt>
- <dd><code>integer</code>. ID of the window to close.</dd>
-</dl>
+- `windowId`
+  - : `integer`. ID of the window to close.
 
-<h3 id="Return_value">Return value</h3>
+### Return value
 
-<p>A <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> that will be fulfilled with no arguments when the window has been closed. If any error occurs, the promise will be rejected with an error message.</p>
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the window has been closed. If any error occurs, the promise will be rejected with an error message.
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>When the user clicks a browser action's icon, close the window in which the icon was clicked:</p>
+When the user clicks a browser action's icon, close the window in which the icon was clicked:
 
-<pre class="brush: js">function onRemoved() {
+```js
+function onRemoved() {
   console.log(`Removed window`);
 }
 
@@ -54,36 +54,35 @@ function onError(error) {
   console.error(`Error:`, error);
 }
 
-browser.browserAction.onClicked.addListener((tab) =&gt; {
+browser.browserAction.onClicked.addListener((tab) => {
 
   var removing = browser.windows.remove(tab.windowId);
   removing.then(onRemoved, onError);
 
-});</pre>
+});
+```
 
-<p><br>
- Close the current, e.g. popup, window when the user clicks a button on the page:</p>
+Close the current, e.g. popup, window when the user clicks a button on the page:
 
-<pre class="brush: js">// in a script loaded by the page in the window
-document.querySelector('#close').addEventListener(async ({ button, }) =&gt; { try {
+```js
+// in a script loaded by the page in the window
+document.querySelector('#close').addEventListener(async ({ button, }) => { try {
   if (button) return; // not a left click
   const windowId = (await browser.windows.getCurrent()).id;
   await browser.windows.remove(windowId);
   // this point will never be reached, since the window is gone
-} catch (error) { console.error('Closing failed:', error); } });</pre>
+} catch (error) { console.error('Closing failed:', error); } });
+```
 
-<p>In Firefox, the same could be achieved with the <code>.allowScriptsToClose</code> window creation property and <code>window.close()</code>.</p>
+In Firefox, the same could be achieved with the `.allowScriptsToClose` window creation property and `window.close()`.
 
-<p>{{WebExtExamples}}</p>
+{{WebExtExamples}}
 
+> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#method-remove) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+>
+> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="note"><p><strong>Note:</strong> This API is based on Chromium's <a href="https://developer.chrome.com/extensions/windows#method-remove"><code>chrome.windows</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json"><code>windows.json</code></a> in the Chromium code.</p>
-
-<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
-</div>
-
-<div class="hidden">
-<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -110,5 +109,4 @@ document.querySelector('#close').addEventListener(async ({ button, }) =&gt; { tr
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
-</div>
+</pre></div>
