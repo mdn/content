@@ -124,6 +124,10 @@ function handleMessage(request, sender, sendResponse) {
 
 browser.runtime.onMessage.addListener(handleMessage);</pre>
 
+<p><strong>Note:</strong>
+Instead of using <code>sendResponse()</code>, returning a <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> is the recommended approach for Firefox add-ons. Examples using a Promise are available in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples">examples section</a> of the {{WebExtAPIRef('runtime.onMessage')}} listener.
+</p> 
+
 <p>{{WebExtExamples}}</p>
 
 
