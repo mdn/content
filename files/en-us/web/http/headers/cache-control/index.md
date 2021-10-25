@@ -378,7 +378,7 @@ But if you don’t want a response stored in a shared cache **because it's perso
 Cache-Control: no-store, private
 ```
 
-In theory, if directives are conflicted, the most restrictive directive should be honored. So the above is basically meaningless, because `no-cache`, `max-age=0` and `must-revalidate` conflict with `no-store`.
+In theory, if directives are conflicted, the most restrictive directive should be honored. So the example below is basically meaningless, because `no-cache`, `max-age=0` and `must-revalidate` conflict with `no-store`.
 
 ```plain example-bad
 Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
