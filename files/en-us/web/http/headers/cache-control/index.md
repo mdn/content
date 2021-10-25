@@ -310,7 +310,7 @@ Note that the major browsers do not support requests with `no-store`.
 Cache-Control: max-age=3600
 ```
 
-In the case above, if the response with `Cache-Control: max-age=604800` was stored on cache storage 3 hours ago, cache couldn't reuse that response.
+In the case above, if the response with `Cache-Control: max-age=604800` was stored in cache storage 3 hours ago, the cache couldn't reuse that response.
 
 Many browsers use this directive for **Reloading** as below.
 
