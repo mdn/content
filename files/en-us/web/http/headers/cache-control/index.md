@@ -350,7 +350,7 @@ Note that the major browsers do not support requests with `min-fresh`.
 
 ### `no-transform`
 
-Same meaning with `no-transform` on response but on request.
+Same meaning that `no-transform` has for response, but for a request instead.
 
 ### `only-if-cached`
 
