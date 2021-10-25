@@ -54,9 +54,9 @@ data is not XML/HTML.
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : The {{domxref("XMLHttpRequest.responseType", "responseType")}} isn't either
-    "`document`" or an empty string.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("XMLHttpRequest.responseType", "responseType")}} isn't either
+    `document` or an empty string.
 
 ## Example
 

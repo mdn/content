@@ -53,8 +53,8 @@ the request or {{jsxref("undefined")}} if no match is found.
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : A {{domxref("DOMException")}} indicating that you called `match()` when there are no fetches in progress. This state will be reflected by {{domxref("BackgroundFetchRegistration.recordsAvailable")}} being set to `false`
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if you call `match()` when there are no fetches in progress. This state will be reflected by {{domxref("BackgroundFetchRegistration.recordsAvailable")}} being set to `false`.
 
 ## Examples
 

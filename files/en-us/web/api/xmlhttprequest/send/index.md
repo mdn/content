@@ -65,10 +65,10 @@ The best way to send binary content (e.g. in file uploads) is by using an
 
 ### Exceptions
 
-| Exception           | Description                                                                        |
-| ------------------- | ---------------------------------------------------------------------------------- |
-| `InvalidStateError` | `send()` has already been invoked for the request, and/or the request is complete. |
-| `NetworkError`      | The resource type to be fetched is a Blob, and the method is not `GET`.            |
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `send()` has already been invoked for the request, and/or the request is complete.
+- `NetworkError` {{domxref("DOMException")}}
+  - : Thrown if the resource type to be fetched is a Blob, and the method is not `GET`.
 
 ## Example: GET
 

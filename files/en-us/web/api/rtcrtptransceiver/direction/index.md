@@ -41,10 +41,10 @@ preferred direction. {{page("/en-US/docs/Web/API/RTCRtpTransceiverDirection",
 
 ### Exceptions
 
-When setting the value of `direction`, the following exceptions can occur:
+When setting the value of `direction`, the following exception can occur:
 
-- `InvalidStateError`
-  - : Either the receiver's {{domxref("RTCPeerConnection")}} is closed or the
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if either the receiver's {{domxref("RTCPeerConnection")}} is closed or the
     {{domxref("RTCRtpReceiver")}} is stopped.
 
 ## Usage notes

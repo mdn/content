@@ -31,9 +31,9 @@ A {{jsxref("Promise")}} that resolves with `undefined` once the connection is op
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the connection is already open.
-- {{domxref("DOMException")}} `NotAllowedError`
+- `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if the attempt to open the connection fails for any reason.
 
 ## Examples
