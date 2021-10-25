@@ -428,7 +428,7 @@ Note: If `index.html` is controlled under Basic / Digest Authentication, files u
 
 For content that’s generated dynamically, or that’s static but updated often, you want a user to always receive the most up-to-date version.
 
-In case you don't add no `Cache-Control` header because it's not intended to be cached, it could cause an unexpected result. Cache Storage is allowed to cache it heuristically, so if you have any thoughts on caching, you should always indicate it via the `Cache-Control` header explicitly.
+If you don't add a `Cache-Control` header because the response is not intended to be cached, that could cause an unexpected result. Cache storage is allowed to cache it heuristically, so if you have any requirements on caching, you should always indicate it explicitly, in the `Cache-Control` header.
 
 Adding `no-cache` to the response causes revalidation to the server, so you can serve a fresh response every time or if the client already has a new one, just response 503.
 
