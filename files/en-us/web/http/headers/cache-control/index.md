@@ -79,7 +79,7 @@ When talking about caching, there is sometimes confusion because the word _cache
 Therefore, several terms are used in the specification to clarify the explanation.
 
 - `Cache Storage`
-  - : The storage which holds requests and responses for reusing in the subsequent requests.
+  - : Storage which holds requests and responses for reusing in subsequent requests. May be either a shared or private cache.
 - `Shared Cache`
   - : Cache storage that exists between the origin server and clients (e.g. Proxy, CDN, Load Balancer, etc.) It stores a single response and reuses it with multiple users, so developers should avoid storing personalized contents to be cached in the shared cache.
 - `Private Cache`
