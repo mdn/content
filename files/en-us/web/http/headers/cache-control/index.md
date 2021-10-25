@@ -142,7 +142,7 @@ Note that a common mistake is to consider `no-cache` to mean "don't cache". Howe
 
 #### `must-revalidate`
 
-`must-revalidate` response directive indicates that the response can be stored in the cache storage and can be reused while it's been fresh. But once it becomes stale, validates it to the origin server before reusing.
+The `must-revalidate` response directive indicates that the response can be stored in cache storage and can be reused while it's been fresh. But once it becomes stale, it must be validated to the origin server before reuse.
 
 So you basically use it with `max-age`.
 
