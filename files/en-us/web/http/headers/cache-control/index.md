@@ -384,7 +384,7 @@ In theory, if directives are conflicted, the most restrictive directive should b
 Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
 ```
 
-### Caching static assets with Cache Busting
+### Caching static assets with “cache busting”
 
 When you build static assets with versioning / hashing mechanisms. Adding version/hash to the filename or query string is a good way to manage caching.
 
