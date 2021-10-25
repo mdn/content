@@ -422,7 +422,7 @@ Make sure that the HTML response itself should not be cached with a long `max-ag
 Cache-Control: no-cache
 ```
 
-Note: If index.html is controlled under Basic / Digest Authentication, files under `/assets` are not stored in the shared cache. If `/assets/` files are suitable for shared cache to be stored, you also need one of `public`, `s-maxage` or `must-revalidate`.
+Note: If `index.html` is controlled under Basic / Digest Authentication, files under `/assets` are not stored in the shared cache. If `/assets/` files are suitable for storing in a shared cache, you also need one of `public`, `s-maxage` or `must-revalidate`.
 
 ### Up-to-date contents always
 
