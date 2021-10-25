@@ -120,7 +120,7 @@ Age: 100
 
 #### `s-maxage`
 
-`s-maxage` response directive indicates the same meaning as `max-age` but only for Shared Cache.
+The `s-maxage` response directive has the same meaning as `max-age`, but only for the shared cache.
 
 ```
 Cache-Control: s-maxage=604800
