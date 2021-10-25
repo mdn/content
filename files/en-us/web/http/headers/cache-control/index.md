@@ -322,7 +322,7 @@ Cache-Control: max-age=0
 
 ### `max-stale`
 
-`max-stale=N` request directive indicates that the client allows a stored response that is stale within N seconds.
+The `max-stale=N` request directive indicates that the client allows a stored response that is stale within _N_ seconds.
 
 ```
 Cache-Control: max-stale=3600
