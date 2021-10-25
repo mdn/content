@@ -75,8 +75,7 @@ Extension `Cache-Control` directives are not part of the core HTTP caching stand
 
 ## Vocabulary
 
-When talking about caching, there is sometimes confusion because the word _cache_ is both a noun and a verb (e.g. "Caching cache in the cache).
-Therefore, several terms are used in the specification to clarify the explanation.
+The following terms are used in this document; many but not all are from the specification.
 
 - `Cache Storage`
   - : Storage which holds requests and responses for reusing in subsequent requests. May be either a shared or private cache.
