@@ -80,7 +80,7 @@ The following terms are used in this document; many but not all are from the spe
 - `Cache Storage`
   - : Storage which holds requests and responses for reusing in subsequent requests. May be either a shared or private cache.
 - `Shared Cache`
-  - : Cache storage that exists between the origin server and clients (e.g. Proxy, CDN, Load Balancer, etc.) It stores a single response and reuses it with multiple users, so developers should avoid storing personalized contents to be cached in the shared cache.
+  - : Cache storage that exists between the origin server and clients (e.g. Proxy, CDN) It stores a single response and reuses it with multiple users, so developers should avoid storing personalized contents to be cached in the shared cache.
 - `Private Cache`
   - : Cache storage that exists in the client. Also called _local cache_, or even just _browser cache_ etc. It can store and reuse personalized content for a single user.
 - `Store response`
