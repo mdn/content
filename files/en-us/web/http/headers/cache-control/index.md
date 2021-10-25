@@ -206,7 +206,7 @@ Cache-Control: public, max-age=604800
 
 Note that, `s-maxage` or `must-revalidate` also unlock that restriction.
 
-If you aren't aware of the `Authorization` header on your site, or you are already using `s-maxage` or `must-revalidate` on your response, you don't need to use `public`.
+If you a request doesn’t have an `Authorization` header, or you are already using `s-maxage` or `must-revalidate` in the response, then you don't need to use `public`.
 
 #### `must-understand`
 
