@@ -130,7 +130,7 @@ Cache-Control: s-maxage=604800
 
 #### `no-cache`
 
-The `no-cache` response directive indicates that the response can be stored in cache storage, but must be validated to the origin server before reusing (even when disconnected from the origin server).
+The `no-cache` response directive indicates that the response can be stored in cache storage, but must be validated to the origin server before reuse (even when disconnected from the origin server).
 
 ```
 Cache-Control: no-cache
