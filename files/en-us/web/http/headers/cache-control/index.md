@@ -413,7 +413,7 @@ You can add a long `max-age` value, and `immutable`, because the content will ne
 Cache-Control: max-age=31536000, immutable
 ```
 
-When you update the library or edit the picture, new contents should have a new URL and caches aren't reused. It called **Cache Busting pattern**.
+When you update the library or edit the picture, new content should have a new URL, and caches aren't reused. That is called the “cache busting” pattern.
 
 Make sure that the HTML response itself should not be cached with a long `max-age`. `no-cache` could cause revalidation and the client will receive a new version of HTML and static assets correctly.
 
