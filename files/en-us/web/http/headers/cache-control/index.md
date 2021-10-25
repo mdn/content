@@ -336,7 +336,7 @@ Note that the major browsers do not support requests with `max-stale`.
 
 ### `min-fresh`
 
-`min-fresh=N` request directive indicates that the client allows a stored response that is fresh for at least N seconds.
+The `min-fresh=N` request directive indicates that the client allows a stored response that is fresh for at least _N_ seconds.
 
 ```
 Cache-Control: min-fresh=600
