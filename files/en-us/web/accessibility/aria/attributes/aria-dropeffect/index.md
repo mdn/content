@@ -17,19 +17,21 @@ The global `aria-dropeffect` attribute indicates what functions may be performed
 
 ## Description
 
-Text selections, images, and links can be dragged by default. Setting HTML's global [`draggable="true"`](/en-US/docs/Web/HTML/Global_attributes/draggable), part of HTML5's [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API), with a [`dragstart` event handler](/en-US/docs/Web/API/Document/dragstart_event) means any DOM node can me made draggable as well. 
+Deprecated in ARIA 1.1, the `aria-dropeffect` property indicates what functions may be performed when a dragged object is released on the drop target. The global `aria-dropeffect` attribute provides assistive technology users the same information provided via the [`DataTransfer.dropEffect`](/en-US/docs/Web/API/DataTransfer/dropEffect) to sited users via the dropeffect icon. 
 
-When a drag occurs, a translucent image is generated of the drag target which follows the user's pointer during the drag. The [`dropEffect`](/en-US/docs/Web/API/DataTransfer/dropEffect) property controls the visual feedback the user is given during a drag-and-drop operation; generally which cursor the browser displays while dragging. For example, when the user hovers over a drop target, the browser's cursor may indicate the type of operation that will occur. During the drag operation, as the draggable element is dragged over different drop areas, the drag effects can be modified to indicate that certain effects are allowed at certain locations. Similarly, the global `aria-dropeffect` attribute provides assistive technology users the same information provided via the `DataTransfer.dropEffect` to sited users via the dropeffect icon: which functions may be performed when a dragged object is released on the drop target. 
+Text selections, images, and links can be dragged by default. Setting the global  [`draggable="true"`](/en-US/docs/Web/HTML/Global_attributes/draggable) attribute, part of HTML5's [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API), with a [`dragstart` event handler](/en-US/docs/Web/API/Document/dragstart_event), means any DOM node can me made draggable as well. 
 
-More than one drop effect may be supported for a given element. Therefore, the value of the `aria-dropeffect` attribute is a space-separated set of tokens indicating the possible effects, or none if there is no supported operation. 
+When a drag occurs, a translucent image is generated of the dragged element which follows the user's pointer during the drag. The default image can be changed to any image with [`setDragImage`](/en-US/docs/Web/API/DataTransfer/setDragImage). Along with the default image identifying the element being dragged, there is a  [`dataTransfer.dropEffect`](/en-US/docs/Web/API/DataTransfer/dropEffect) property that can be used to control the visual feedback the user is given during a drag-and-drop operation. The `aria-dropeffect` property should be used to provides assistive technology users the same feedback provided to sited users via `dataTransfer.dropEffect` property.
 
-Deprecated in ARIA 1.1, the `aria-dropeffect` property indicates what functions may be performed when a dragged object is released on the drop target. As more than one functionality may be supported, the attribute value is a space separated list of functions. Functions include `copy`, `execute`, `link`, and `move`. The default is `none`, meaning there is no supported functionality in the application. Setting `aria-dropeffect="popup"` informs assistive technology users that there is a popup menu or dialog of drag operations from which the user can choose. 
+Set on the element being dragged, the dropeffect defines which cursor the browser displays while dragging. During the drag operation, as the draggable element is dragged over different drop areas, the drag effects -- both the `dataTransfer.dropeffect` and the `aria-dropeffect` -- should be modified to indicate the type of operation that will occur if the dragged element is released.  
 
-Including the attribute provides assistive technologies to convey the possible drag options available to the user but doesn't add any actual functionality. 
+More than one drop effect may be supported for a given element. Therefore, the value of the `aria-dropeffect` attribute is a space separated list of functions. Functions include `copy`, `execute`, `link`, and `move`. The default is `none`, meaning there is no supported functionality in the application. Setting `aria-dropeffect="popup"` informs assistive technology users that there is a popup menu or dialog of drag operations from which the user can choose. 
+
+Including the attribute provides assistive technologies the ability to convey the possible drag options available to the assistive technology user but doesn't add any actual functionality. 
 
 The `aria-dropeffect` property is expected to be replaced by a new feature in a future version of WAI-ARIA and is considered deprecated.
 
-Typically, drop effect functions can only be provided once an object has been grabbed for a drag operation as the drop effect functions available are dependent on the object being dragged.
+Typically, drop effect functions can only be provided once an object has been grabbed for a drag operation as the drop effect functions available are dependent on the object being dragged. Therefore, you'll generally add `aria-dropeffect` to an element as {{event("dragstart")}} event.
 
 ## Values
 
@@ -65,3 +67,4 @@ Used in **ALL** roles.
 - HTML [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - {{domxref('dataTransfer')}}
 - {{domxref('DataTransfer.dropEffect')}}
+- {{event("dragstart")}}
