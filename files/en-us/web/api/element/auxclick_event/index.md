@@ -15,7 +15,7 @@ browser-compat: api.Element.auxclick_event
 
 The **`auxclick`** event is fired at an {{domxref("Element")}} when a non-primary pointing device button (any mouse button other than the primary—usually leftmost—button) has been pressed and released both within the same element.
 
-`auxclick` is fired after the {{event("mousedown")}} and {{event("mouseup")}} events have been fired, in that order.
+`auxclick` is fired after the {{domxref("Element/mousedown_event", "mousedown")}} and {{domxref("Element/mouseup_event", "mouseup")}} events have been fired, in that order.
 
 <table class="properties">
   <tbody>
@@ -44,9 +44,9 @@ The **`auxclick`** event is fired at an {{domxref("Element")}} when a non-primar
 
 For the vast majority of browsers that map middle click to opening a link in a new tab, including Firefox, it is possible to cancel this behavior by calling {{domxref("Event.preventDefault()", "preventDefault()")}} from within an `auxclick` event handler.
 
-When listening for `auxclick` events originating on elements that do not support input or navigation, you will often want to explicitly prevent other default actions mapped to the down action of the middle mouse button. On Windows this is usually autoscroll, and on macOS and Linux this is usually clipboard paste. This can be done by preventing the default behavior of the {{event("mousedown")}} or {{event("pointerdown")}} event.
+When listening for `auxclick` events originating on elements that do not support input or navigation, you will often want to explicitly prevent other default actions mapped to the down action of the middle mouse button. On Windows this is usually autoscroll, and on macOS and Linux this is usually clipboard paste. This can be done by preventing the default behavior of the {{domxref("Element/mousedown_event", "mousedown")}} or {{domxref("HTMLElement/pointerdown_event", "pointerdown")}} event.
 
-Additionally, you may need to avoid opening a system context menu after a right click. Due to timing differences between operating systems, this too is not a preventable default behavior of `auxclick`. Instead, this can be done by preventing the default behavior of the {{event("contextmenu")}} event.
+Additionally, you may need to avoid opening a system context menu after a right click. Due to timing differences between operating systems, this too is not a preventable default behavior of `auxclick`. Instead, this can be done by preventing the default behavior of the {{domxref("Element/contextmenu_event", "contextmenu")}} event.
 
 ## Examples
 
@@ -131,10 +131,10 @@ h1 {
 ## See also
 
 - [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-- {{event("click")}}
-- {{event("contextmenu")}}
-- {{event("dblclick")}}
-- {{event("mousedown")}}
-- {{event("mouseup")}}
-- {{event("pointerdown")}}
-- {{event("pointerup")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}
+- {{domxref("HTMLElement/pointerup_event", "pointerup")}}
