@@ -288,7 +288,7 @@ After a period of time, the stored response became stale normally. It means that
 Cache-Control: no-cache
 ```
 
-It means that clients could always receive up-to-date responses even if cache storage stores fresh responses.
+`no-cache` means that clients could always receive up-to-date responses even if cache storage stores fresh responses.
 
 Browser usually adding `no-cache` to the request when user **Force Reloading** the page.
 
