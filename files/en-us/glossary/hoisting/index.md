@@ -108,9 +108,10 @@ For information and examples see [`let` > temporal dead zone](/en-US/docs/Web/Ja
 
 ### Function expression hoisting
 
-A [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) evaluates to a function, which is typically assigned to a variable that can then be used to call the function.
+A [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) is not hoisted.
 
-The variable itself is hoisted (and may have a default initialization depending on the type) but the expression itself is not evaluated until the line in which it is declared is executed.
+The expression evaluates to a function, which is typically assigned to a variable that can then be used to call the function.
+In this case the variable declaration is hoisted and the function expression is its initialization, which is not evaluated until the relevant line is is executed.
 
 ### class hoisting
 
