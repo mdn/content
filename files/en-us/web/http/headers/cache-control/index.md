@@ -396,7 +396,7 @@ For example:
 <img src=/assets/hero.png width=900 height=400>
 ```
 
-The React version will change when you update the library, and hero.png also changes when you edit the picture. So it's hard to store in cache via `max-age`.
+The React library version will change when you update the library, and `hero.png` will also change when you edit the picture. So those are hard to store in a cache with `max-age`.
 
 In that case, including the library version of JS and the hash of the picture in the url could solve the problem.
 
