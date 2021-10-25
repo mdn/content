@@ -430,7 +430,7 @@ For content that’s generated dynamically, or that’s static but updated often
 
 If you don't add a `Cache-Control` header because the response is not intended to be cached, that could cause an unexpected result. Cache storage is allowed to cache it heuristically, so if you have any requirements on caching, you should always indicate it explicitly, in the `Cache-Control` header.
 
-Adding `no-cache` to the response causes revalidation to the server, so you can serve a fresh response every time or if the client already has a new one, just response 503.
+Adding `no-cache` to the response causes revalidation to the server, so you can serve a fresh response every time.
 
 ```
 Cache-Control: no-cache
