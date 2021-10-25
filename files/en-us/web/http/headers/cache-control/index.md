@@ -220,7 +220,7 @@ When a server sends a new status code in a response which has some requirements 
 Cache-Control: must-understand, no-store
 ```
 
-if the cache storage doesn't support `must-understand` will ignore it. only `no-store` remains and response isn't stored.
+If the cache storage doesn't support `must-understand`, it will be ignored. If `no-store` is also present, the response isn't stored.
 if the cache storage supports `must-understand`, it stores responses with understanding of cache requirements for its status code.
 
 You can use it when you respond with a newly defined status code.
