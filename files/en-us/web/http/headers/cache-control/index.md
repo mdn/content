@@ -59,18 +59,18 @@ Standard `Cache-Control` directives are defined as follows.
 | `no-store`       | `no-store`         |
 | `no-transform`   | `no-transform`     |
 | `only-if-cached` | -                  |
-|                  | `must-revalidate`  |
-|                  | `proxy-revalidate` |
-|                  | `must-understand`  |
-|                  | `private`          |
-|                  | `public`           |
+| -                | `must-revalidate`  |
+| -                | `proxy-revalidate` |
+| -                | `must-understand`  |
+| -                | `private`          |
+| -                | `public`           |
 
 Extension `Cache-Control` directives are not part of the core HTTP caching standards document. Check the [compatibility table](#browser_compatibility) for their support; user agents that don't recognize them should ignore them.
 
 | Request          | Response                 |
 | :--------------- | :----------------------- |
-|                  | `immutable`              |
-|                  | `stale-while-revalidate` |
+| -                | `immutable`              |
+| -                | `stale-while-revalidate` |
 | `stale-if-error` | `stale-if-error`         |
 
 ## Vocabulary
