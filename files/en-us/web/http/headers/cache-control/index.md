@@ -354,7 +354,7 @@ Same meaning with `no-transform` on response but on request.
 
 ### `only-if-cached`
 
-Client indicates for cache storage to obtain an already cached response. If cache storage has stored response it reuses, or respond 504 Gateway Timeout if not.
+The client indicates for cache storage to obtain an already-cached response. If cache storage has stored a response, it’s reused.
 
 ## Use Cases
 
