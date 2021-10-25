@@ -227,7 +227,7 @@ You can use `must-understand` when you respond with a newly defined status code.
 
 #### `no-transform`
 
-Some intermediaries transform contents for several reasons. For example, convert images to reduce transfer packets. But in some cases it can be unexpected behavior for the content provider.
+Some intermediaries transform contents for several reasons. For example, some convert images to reduce transfer packets. But in some cases it cause unexpected behavior for the content provider.
 
 `no-stransform` indicates that the intermediaries(regardless of whether it implements a cache) can't transform its contents.
 
