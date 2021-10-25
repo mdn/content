@@ -180,7 +180,7 @@ Cache-Control: private
 
 You should add the `private` directive for user-personalized content — in particular, responses received after login, and sessions managed via cookies.
 
-If you forget to add `private` to a response with personalized content, then that response can be stored in a shared cache and end up being used by multiple users, which can cause personal  information to leak.
+If you forget to add `private` to a response with personalized content, then that response can be stored in a shared cache and end up being used by multiple users, which can cause personal information to leak.
 
 `no-store` may seem to work fine for avoiding leaks, but is semantically different from `private`. To avoiding leaking personal information, it's better to use both `private` and `no-store`.
 
@@ -241,7 +241,7 @@ The `immutable` response directive indicates that the response will not be updat
 Cache-Control: public, max-age=604800, immutable
 ```
 
-A modern best practice for static resources is to include version/hashes in their URLs, while never modifying the resources, but instead, when necessary, _updating_ the resources with never versions that have new version-numbers/hashes, so that their URLs). That’s called the **cache-busting** pattern.
+A modern best practice for static resources is to include version/hashes in their URLs, while never modifying the resources, but instead, when necessary, _updating_ the resources with newer versions that have new version-numbers/hashes, so that their URLs). That’s called the **cache-busting** pattern.
 
 ```
 <script src=https://example.com/react.0.0.0.js></script>
