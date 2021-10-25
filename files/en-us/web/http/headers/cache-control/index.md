@@ -136,7 +136,7 @@ The `no-cache` response directive indicates that the response can be stored in c
 Cache-Control: no-cache
 ```
 
-If you want a client to always get the latest content, and/or if your server supports Conditional Requests, it's a directive to use.
+If you want a client to always get the latest content, and/or if your server supports conditional requests, `no-cache` is the directive to use.
 
 Note that, it's such a common mistake to consider `no-cache` as "don't cache". `no-cache` allows storing but validating before reusing. If your "dont' cache" means "don't store", `no-store` is the directive to use.
 
