@@ -235,7 +235,7 @@ Note: [Google’s Web Light](https://support.google.com/webmasters/answer/621142
 
 #### `immutable`
 
-The `immutable` response directive indicates that the response will not be updated while it's been fresh.
+The `immutable` response directive indicates that the response will not be updated while it's fresh.
 
 ```
 Cache-Control: public, max-age=604800, immutable
