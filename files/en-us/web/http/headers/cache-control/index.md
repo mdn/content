@@ -342,7 +342,7 @@ Note that the major browsers do not support requests with `max-stale`.
 Cache-Control: min-fresh=600
 ```
 
-In the case above, if the response with `Cache-Control: max-age=3600` was stored on cache storage 51 minutes ago, cache couldn't reuse that response.
+In the case above, if the response with `Cache-Control: max-age=3600` was stored on cache storage 51 minutes ago, that response couldn't be reused.
 
 Clients could use this header when the user requires not only it's fresh but also it wouldn't update for a period of time.
 
