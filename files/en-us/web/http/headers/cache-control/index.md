@@ -91,7 +91,7 @@ Therefore, several terms are used in the specification to clarify the explanatio
 - `Revalidate response`
   - : Ask the origin server whether the stored response is still fresh or not. Usually it's done through a conditional request.
 - `Fresh response`
-  - : Indicates that the response is fresh. It usually means its response can be reusable for subsequent requests, but it depends on request directives.
+  - : Indicates that the response is fresh. This usually means the response can be reused for subsequent requests, depending on request directives.
 - `Stale response`
   - : Indicates that the response is stale. It usually means the response can't be reusable as-is. Cache storage isn't required to remove stale responses immediately, because revalidation could change the response from being stale to being fresh again.
 - `Age`
