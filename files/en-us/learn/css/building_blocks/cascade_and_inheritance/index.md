@@ -59,7 +59,7 @@ Let's start by taking a quick look at the key things we are dealing with, then w
 
 ### The cascade
 
-Stylesheets **cascade** — at a very simple level, this means that the order of CSS rules matter; when two rules apply that have equal specificity the one that comes last in the CSS is the one that will be used.
+Stylesheets **cascade** — at a very simple level, this means that the order of CSS rules matters; when two rules apply that have equal specificity, the one that comes last in the CSS is the one that will be used.
 
 In the below example, we have two rules that could apply to the `h1`. The `h1` ends up being colored blue — these rules have an identical selector and therefore carry the same specificity, so the last one in the source order wins.
 
