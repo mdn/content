@@ -318,7 +318,7 @@ Many browsers use this directive for **reloading**, as explained below.
 Cache-Control: max-age=0
 ```
 
-`max-age=0` is a workaround for `no-cache`, because many old (HTTP/1.0) cache implementations don't support `no-cache`. Recently browsers are still using `max-age=0` in reloading — for backward compatibility — and alternatively using `no-cache` to cause a force reload.
+`max-age=0` is a workaround for `no-cache`, because many old (HTTP/1.0) cache implementations don't support `no-cache`. Recently browsers are still using `max-age=0` in "reloading" — for backward compatibility — and alternatively using `no-cache` to cause a "force reloading".
 
 ### `max-stale`
 
