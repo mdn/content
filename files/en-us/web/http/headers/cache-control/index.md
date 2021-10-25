@@ -150,7 +150,7 @@ So you primarily use it with `max-age`.
 Cache-Control: max-age=604800, must-revalidate
 ```
 
-Cache Storage is allowed to reuse stale responses when it is disconnected from the origin server. `must-revalidate` is a way to avoid it (reusing stale response) and make sure it is validated to the origin server or 504 (Gateway Timeout) if it's impossible.
+Cache storage is allowed to reuse stale responses when disconnected from the origin server. `must-revalidate` is a way to avoid such reuse of stale responses, and to ensure either validation to the origin server occurs, or a 504 (Gateway Timeout) if that’s not possible.
 
 #### `proxy-revalidate`
 
