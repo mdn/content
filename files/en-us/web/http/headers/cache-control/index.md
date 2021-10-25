@@ -158,7 +158,7 @@ The `proxy-revalidate` response directive is the equivalent of `must-revalidate`
 
 #### `no-store`
 
-`no-store` response directive indicates that every (private/shared) cache storage should not store this response.
+The `no-store` response directive indicates that any cache storage of any kind (private or shared) should not store this response.
 
 ```
 Cache-Control: no-store
