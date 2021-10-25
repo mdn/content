@@ -358,7 +358,7 @@ The client indicates for cache storage to obtain an already-cached response. If 
 
 ## Use Cases
 
-### Preventing cache storage
+### Preventing storing
 
 If you don’t want a response stored in cache storage, use the `no-store` directive.
 
