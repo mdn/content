@@ -41,7 +41,7 @@ The **`Cache-Control`** HTTP header fields hold _directives_ (instructions) for 
 
 Caching directives follow the validation rules below:
 
-- Case-insensitive, but lowercase is recommended.
+- Case-insensitive, but lowercase is recommended, since some implementations do not recognise uppercase directives.
 - Multiple directives are comma-separated.
 - Some directives have an optional argument.
 
