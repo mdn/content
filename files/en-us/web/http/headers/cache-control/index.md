@@ -388,7 +388,7 @@ Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
 
 When you build static assets with versioning / hashing mechanisms, adding a version/hash to the filename or query string is a good way to manage caching.
 
-For example,
+For example:
 
 ```html
 <!-- index.html —>
