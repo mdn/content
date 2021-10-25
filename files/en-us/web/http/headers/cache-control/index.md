@@ -103,7 +103,7 @@ Therefore, several terms are used in the specification to clarify the explanatio
 
 #### `max-age`
 
-`max-age=N` response directive indicates that the response is Fresh until N seconds since response has been generated.
+The `max-age=N` response directive indicates that the response remains fresh until _N_ seconds after the response is generated.
 
 ```
 Cache-Control: max-age=604800
