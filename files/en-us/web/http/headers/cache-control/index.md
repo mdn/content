@@ -304,7 +304,7 @@ Note that the major browsers do not support requests with `no-store`.
 
 ### `max-age`
 
-`max-age=N` request directive indicates that the client allows a stored response that is generated on the origin server within N seconds.
+The `max-age=N` request directive indicates that the client allows a stored response that is generated on the origin server within _N_ seconds.
 
 ```
 Cache-Control: max-age=3600
