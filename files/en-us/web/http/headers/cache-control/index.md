@@ -360,7 +360,7 @@ Client indicates for cache storage to obtain an already cached response. If cach
 
 ### Preventing cache storage
 
-If you intend not to store responses in cache storage, you can use the `no-store` directive.
+If you don’t want a response stored in cache storage, use the `no-store` directive.
 
 ```
 Cache-Control: no-store
