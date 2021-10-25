@@ -173,7 +173,10 @@ create-react-app gives us everything we need to develop a React application. Its
     ├── public
     │   ├── favicon.ico
     │   ├── index.html
-    │   └── manifest.json
+    │   ├── logo192.png
+    │   ├── logo512.png
+    │   ├── manifest.json
+    │   └── robots.txt
     └── src
         ├── App.css
         ├── App.js
@@ -181,7 +184,8 @@ create-react-app gives us everything we need to develop a React application. Its
         ├── index.css
         ├── index.js
         ├── logo.svg
-        └── serviceWorker.js
+        ├── reportWebVitals.js
+        └── setupTests.js
 
 The **`src`** directory is where we'll spend most of our time, as it's where the source code for our application lives.
 
