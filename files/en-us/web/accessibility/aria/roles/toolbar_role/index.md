@@ -33,7 +33,7 @@ If any of the otherwise interactive elements within the toolbar are temporarily 
   - : Elements with the role toolbar have an implicit `aria-orientation` value of horizontal.
 
 - `aria-labelledby` / `aria-label`
-  - : If the toolbar has a visible label, referenc it by ID with the `aria-labelledby` attribute. Otherwise, the provide an  `aria-label`. If there is more than one toolbar in a menu, naming is required.
+  - : If the toolbar has a visible label, reference it by ID with the `aria-labelledby` attribute. Otherwise, provide an `aria-label`. If there is more than one toolbar in a menu, naming is required.
 
 ### Keyboard interactions
 
@@ -82,7 +82,7 @@ While the toolbar element itself does not receive focus, focus on movement into,
 
 If the design calls for a specific element to be focused the next time the user moves focus into the toolbar with <kbd>Tab</kbd> or <kbd>Shift + Tab</kbd>, check if that target element has `tabindex="0"` when toolbar loses focus. 
 
-When the toolbar has focus within it, provide visual cues. When the an element within the toolbar has focus, a visual cue must be included on both the toolbar itself - to help the toolbar supports directional navigation with the arrow keys - and the control that has focus. The CSS pseudoclasses of `:focus` and `:focus-within` can be used to target both elements.
+When the toolbar has focus within it, provide visual cues. When an element within the toolbar has focus, a visual cue must be included on both the toolbar itself - to help the toolbar supports directional navigation with the arrow keys - and the control that has focus. The CSS pseudoclasses of `:focus` and `:focus-within` can be used to target both elements.
 
 ## Examples
 

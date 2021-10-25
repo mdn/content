@@ -477,7 +477,7 @@ The conformance criteria under this guideline relate to ways in which users can 
 
 ## Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard.
 
-The conformance criteria under this guideline ensures that users are able to interact with digital technology using different input methods beyond a keyboard or mouse (including touchscreen, voice, device motion, or alternative input  devices.
+The conformance criteria under this guideline ensures that users are able to interact with digital technology using different input methods beyond a keyboard or mouse (including touchscreen, voice, device motion, or alternative input devices).
 
 <table>
  <thead>

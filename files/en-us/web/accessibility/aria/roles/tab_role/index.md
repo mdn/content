@@ -193,7 +193,7 @@ It is recommended to use a `button` element with the role `tab` for their bu
 
 ## Precedence order
 
-What are the related properties, and in what order will this attribute or property be read (which property will take precedence over this one, and which property will be overwritten.
+What are the related properties, and in what order will this attribute or property be read, which property will take precedence over this one, and which property will be overwritten.
 
 
 
