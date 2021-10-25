@@ -444,7 +444,7 @@ Cache-Control: max-age=0, must-revalidate
 
 But for now, you can simply use `no-cache` instead.
 
-### Clearing already stored cache
+### Clearing an already-stored cache
 
 Unfortunately, there are no cache directives for clearing already stored responses from cache storage.
 
