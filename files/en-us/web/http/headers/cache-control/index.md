@@ -436,7 +436,7 @@ Adding `no-cache` to the response causes revalidation to the server, so you can 
 Cache-Control: no-cache
 ```
 
-Most HTTP/1.0 caches don't support `no-cache` directives, so historically `max-age=0` was used as a workaround. But only `max-age=0` could reuse a stale response when cache storage disconnected from the origin server. `must-revalidate` could cover it. This is why the below request is equivalent to `no-cache`.
+Most HTTP/1.0 caches don't support `no-cache` directives, so historically `max-age=0` was used as a workaround. But only `max-age=0` could cause a stale response to be reused when cache storage disconnected from the origin server. `must-revalidate` addresses that. That’s why the example below is equivalent to `no-cache`.
 
 ```
 Cache-Control: max-age=0, must-revalidate
