@@ -282,7 +282,7 @@ Browsers don't all support the same video formats; you can provide multiple sour
 ```html
 <video controls>
   <source src="myVideo.webm" type="video/webm">
-   <source src="myVideo.mp4" type="video/mp4">
+  <source src="myVideo.mp4" type="video/mp4">
   <p>Your browser doesn't support HTML5 video. Here is
      a <a href="myVideo.mp4">link to the video</a> instead.</p>
 </video>
