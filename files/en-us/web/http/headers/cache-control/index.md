@@ -196,7 +196,7 @@ Responses for requests with `Authorization` header fields should normally not be
 Cache-Control: public
 ```
 
-In general, when pages are under Basic Auth or Digest Auth, the browser sends requests with the `Authorization` header. It means that it is access controlled for restricted users (who have accounts), and it's fundamentally not shared cacheable even if it has `max-age`.
+In general, when pages are under Basic Auth or Digest Auth, the browser sends requests with the `Authorization` header. That means the response is access-controlled for restricted users (who have accounts), and it's fundamentally not shared-cacheable, even if it has `max-age`.
 
 You can use `public` directives to unlock its restriction.
 
