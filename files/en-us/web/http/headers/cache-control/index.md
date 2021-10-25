@@ -109,7 +109,7 @@ The `max-age=N` response directive indicates that the response remains fresh unt
 Cache-Control: max-age=604800
 ```
 
-Cache Storage can store this response and reuse it for the following request while it's fresh.
+Indicates that cache storage can store this response and reuse it for subsequent requests while it's fresh.
 
 Note that `max-age` is not the elapsed time since the response was received but response was generated on the origin server. So if the intermediate cache stores it for 100 seconds(for indicating that, intermediate cache adds an `Age` header to the response), browser local cache storage could reuse it `-100` seconds from `max-age`.
 
