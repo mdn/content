@@ -39,12 +39,12 @@ A {{jsxref("promise")}} that resolves with an object containing the following me
 
 ### Exceptions
 
-If an error occurs, the promise will resolve with one of the following exceptions:
+If an error occurs, the promise will resolve with following exception:
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if `close` is true, meaning {{domxref("ImageDecoder.close()","close()")}} has already been called.
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if the requested frame does not exist.
+  - : Returned if any of the following conditions apply:
+    - `close` is true, meaning {{domxref("ImageDecoder.close()","close()")}} has already been called.
+    - The requested frame does not exist.
 
 ## Examples
 

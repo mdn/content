@@ -120,7 +120,7 @@ by `setRemoteDescription()`:
 - `RTCError` {{domxref("DOMException")}}
   - : Returned with the {{domxref("RTCError.errorDetail",
 		"errorDetail")}} set to `sdp-syntax-error` if the
-    {{Glossary("SDP")}} specified by {{domxref("RTCSessionDescription.sdp")}}. The
+    {{Glossary("SDP")}} specified by {{domxref("RTCSessionDescription.sdp")}} is not valid. The
     error object's {{domxref("RTCError.sdpLineNumber", "sdpLineNumber")}} property
     indicates the line number within the SDP on which the syntax error was detected.
 - `TypeError` {{domxref("DOMException")}}
