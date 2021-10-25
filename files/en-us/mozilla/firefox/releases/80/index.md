@@ -7,82 +7,64 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 80 that will affect developers. Firefox 80 was released on August 25, 2020.</p>
+This article provides information about the changes in Firefox 80 that will affect developers. Firefox 80 was released on August 25, 2020.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+### Developer Tools
 
-<ul>
- <li>You can now block and unblock network requests using the <code>:block</code> and <code>:unblock</code> <a href="/en-US/docs/Tools/Web_Console/Helpers">helper commands</a> in the Web Console ({{bug("1546394")}}).</li>
- <li>When <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#viewing_and_changing_classes_on_an_element">adding a class</a> to an element in the Page Inspector's Rules pane, existing classes are suggested with autocomplete (Refer to {{bug("1492797")}}).</li>
- <li>When the Debugger <a href="/en-US/docs/Tools/Debugger/How_to/Breaking_on_exceptions">breaks on an exception</a>, the tooltip in the source pane now shows a disclosure triangle that reveals a stack trace ({{bug("1643633")}}).</li>
- <li>In the <a href="/en-US/docs/Tools/Network_Monitor/request_list#network_request_columns">Network Monitor request list</a>, a turtle icon is shown for "slow" requests that exceed a configurable threshold for the waiting time ({{bug("1648373")}}).</li>
-</ul>
+- You can now block and unblock network requests using the `:block` and `:unblock` [helper commands](/en-US/docs/Tools/Web_Console/Helpers) in the Web Console ({{bug("1546394")}}).
+- When [adding a class](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#viewing_and_changing_classes_on_an_element) to an element in the Page Inspector's Rules pane, existing classes are suggested with autocomplete (Refer to {{bug("1492797")}}).
+- When the Debugger [breaks on an exception](/en-US/docs/Tools/Debugger/How_to/Breaking_on_exceptions), the tooltip in the source pane now shows a disclosure triangle that reveals a stack trace ({{bug("1643633")}}).
+- In the [Network Monitor request list](/en-US/docs/Tools/Network_Monitor/request_list#network_request_columns), a turtle icon is shown for "slow" requests that exceed a configurable threshold for the waiting time ({{bug("1648373")}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p><em>No changes</em></p>
+_No changes_
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>The standard, unprefixed {{CSSxRef("appearance", "appearance")}} property is now supported; existing <code>-moz-appearance</code> and <code>-webkit-appearance</code> are now aliases of the unprefixed property ({{bug(1620467)}}).</li>
-</ul>
+- The standard, unprefixed {{CSSxRef("appearance", "appearance")}} property is now supported; existing `-moz-appearance` and `-webkit-appearance` are now aliases of the unprefixed property ({{bug(1620467)}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li>The ECMAScript 2021 <code>export * as namespace</code> syntax for the <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/export">export</a></code> statement is now supported ({{bug(1496852)}}).</li>
-</ul>
+- The ECMAScript 2021 `export * as namespace` syntax for the [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statement is now supported ({{bug(1496852)}}).
 
-<h3 id="HTTP">HTTP</h3>
+### HTTP
 
-<ul>
- <li>Previously, when the <a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/fullscreen">fullscreen</a> directive was applied to an <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> (i.e. via the <code>allow</code> attribute), it didn't work unless the <code>allowfullscreen</code> attribute was also present This has now been fixed ({{bug(1608358)}}).</li>
-</ul>
+- Previously, when the [fullscreen](/en-US/docs/Web/HTTP/Headers/Feature-Policy/fullscreen) directive was applied to an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) (i.e. via the `allow` attribute), it didn't work unless the `allowfullscreen` attribute was also present This has now been fixed ({{bug(1608358)}}).
 
-<h3 id="APIs">APIs</h3>
+### APIs
 
-<h4 id="DOM">DOM</h4>
+#### DOM
 
-<ul>
- <li>Web Animations API compositing operations are now enabled — see <code><a href="/en-US/docs/Web/API/KeyframeEffect/composite">KeyframeEffect.composite</a></code> and <code><a href="/en-US/docs/Web/API/KeyframeEffect/iterationComposite">KeyframeEffect.iterationComposite</a></code> ({{bug(1652676)}}).</li>
-</ul>
+- Web Animations API compositing operations are now enabled — see [`KeyframeEffect.composite`](/en-US/docs/Web/API/KeyframeEffect/composite) and [`KeyframeEffect.iterationComposite`](/en-US/docs/Web/API/KeyframeEffect/iterationComposite) ({{bug(1652676)}}).
 
-<h4 id="WebGL">WebGL</h4>
+#### WebGL
 
-<ul>
- <li>The {{domxref("KHR_parallel_shader_compile")}} <a href="/en-US/docs/Web/API/WebGL_API/Using_Extensions">WebGL extension</a> is now supported ({{bug(1536674)}}).</li>
-</ul>
+- The {{domxref("KHR_parallel_shader_compile")}} [WebGL extension](/en-US/docs/Web/API/WebGL_API/Using_Extensions) is now supported ({{bug(1536674)}}).
 
-<h4 id="Removals">Removals</h4>
+#### Removals
 
-<ul>
- <li>The <code>outerHeight</code> and <code>outerWidth</code> features of <code><a href="/en-US/docs/Web/API/Window/open">Window.open()</a></code> are no longer exposed to web content ({{bug(1623826)}}).</li>
-</ul>
+- The `outerHeight` and `outerWidth` features of [`Window.open()`](/en-US/docs/Web/API/Window/open) are no longer exposed to web content ({{bug(1623826)}}).
 
-<h3 id="WebAssembly">WebAssembly</h3>
+### WebAssembly
 
-<ul>
- <li>Atomic operations are now allowed on non-shared memories ({{bug(1619196)}}).</li>
-</ul>
+- Atomic operations are now allowed on non-shared memories ({{bug(1619196)}}).
 
-<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
+### WebDriver conformance (Marionette)
 
-<ul>
- <li>Using <code>WebDriver:NewWindow</code> to open a new tab no longer returns too early when running tests in headless mode ({{bug(1653281)}}).</li>
- <li>We removed the <code>name</code> argument for <code>WebDriver:SwitchToWindow</code> — it is not supported for W3C-compatible mode, and shouldn't be used anymore ({{bug(1588424)}}).</li>
- <li>We've started to add Fission support for the following commands: <code>WebDriver:FindElement</code>, <code>WebDriver:FindElements</code>, <code>WebDriver:GetElementAttribute</code>, <code>WebDriver:GetElementProperty</code>.</li>
- <li><strong>Known issue</strong>: Opening a new tab by using <code>WebDriver:NewWindow</code>, or via an arbitrary script that calls <code>window.open()</code>, now automatically switches to that new window ({{bug(1661495)}}).</li>
-</ul>
+- Using `WebDriver:NewWindow` to open a new tab no longer returns too early when running tests in headless mode ({{bug(1653281)}}).
+- We removed the `name` argument for `WebDriver:SwitchToWindow` — it is not supported for W3C-compatible mode, and shouldn't be used anymore ({{bug(1588424)}}).
+- We've started to add Fission support for the following commands: `WebDriver:FindElement`, `WebDriver:FindElements`, `WebDriver:GetElementAttribute`, `WebDriver:GetElementProperty`.
+- **Known issue**: Opening a new tab by using `WebDriver:NewWindow`, or via an arbitrary script that calls `window.open()`, now automatically switches to that new window ({{bug(1661495)}}).
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+## Changes for add-on developers
 
-<p><em>No changes</em></p>
+_No changes_
 
-<h2 id="Older_versions">Older versions</h2>
+## Older versions
 
-<p>{{Firefox_for_developers(79)}}</p>
+{{Firefox_for_developers(79)}}

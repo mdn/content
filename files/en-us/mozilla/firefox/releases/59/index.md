@@ -6,209 +6,175 @@ tags:
   - Firefox
   - Release Notes
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 59 that will affect developers. Firefox 59 was released on March 13, 2018.</p>
+This article provides information about the changes in Firefox 59 that will affect developers. Firefox 59 was released on March 13, 2018.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_tools">Developer tools</h3>
+### Developer tools
 
-<ul>
- <li>The <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> Response tab now shows a <a href="/en-US/docs/Tools/Network_Monitor#html_preview">preview of the rendered HTML</a> — if the response is HTML ({{bug(1353319)}}).</li>
- <li>Cookie information shown in the Storage Inspector (see <a href="/en-US/docs/Tools/Storage_Inspector#cookies">Cookies</a>) now includes a <em>sameSite</em> column showing what the same-site status of each cookie is ({{bug(1298370)}}).</li>
- <li>The <a href="/en-US/docs/Tools/Rulers">Rulers</a> tool now includes a readout showing the current dimensions of the viewport ({{bug(1402633)}}).</li>
- <li>In <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a>, you can now set the screen dimensions using the cursor keys ({{bug(1421663)}}). See the <a href="/en-US/docs/Tools/Responsive_Design_Mode#setting_screen_size">Setting screen size</a> section for more details.</li>
- <li>The <em>Raw headers</em> display in the <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> <em>Headers</em> tab now includes the response's status code ({{bug(1419401)}}).</li>
-</ul>
+- The [Network Monitor](/en-US/docs/Tools/Network_Monitor) Response tab now shows a [preview of the rendered HTML](/en-US/docs/Tools/Network_Monitor#html_preview) — if the response is HTML ({{bug(1353319)}}).
+- Cookie information shown in the Storage Inspector (see [Cookies](/en-US/docs/Tools/Storage_Inspector#cookies)) now includes a _sameSite_ column showing what the same-site status of each cookie is ({{bug(1298370)}}).
+- The [Rulers](/en-US/docs/Tools/Rulers) tool now includes a readout showing the current dimensions of the viewport ({{bug(1402633)}}).
+- In [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode), you can now set the screen dimensions using the cursor keys ({{bug(1421663)}}). See the [Setting screen size](/en-US/docs/Tools/Responsive_Design_Mode#setting_screen_size) section for more details.
+- The _Raw headers_ display in the [Network Monitor](/en-US/docs/Tools/Network_Monitor) _Headers_ tab now includes the response's status code ({{bug(1419401)}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>The {{HTMLElement("textarea")}} element's {{htmlattrxref("autocomplete", "textarea")}} attribute has been implemented. This lets you enable or disable form auto-fill for the element.</li>
-</ul>
+- The {{HTMLElement("textarea")}} element's {{htmlattrxref("autocomplete", "textarea")}} attribute has been implemented. This lets you enable or disable form auto-fill for the element.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>The {{cssxref("overscroll-behavior")}} property and its associated longhand properties — {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}} — have been implemented ({{bug(951793)}}), and it has been enabled by default on all releases ({{bug(1428879)}}).</li>
- <li>The behavior of "unusual elements" (elements that aren’t rendered purely by CSS box concepts such as replaced elements) when given a {{cssxref("display")}} value of <code>contents</code> has been updated as per spec ({{bug(1427292)}}). See <a href="https://drafts.csswg.org/css-display/#unbox">Appendix B: Effects of display: contents on Unusual Elements</a> for exactly what the specced behaviors are.</li>
- <li>{{cssxref("position")}} <code>sticky</code> is now supported on appropriate <a href="/en-US/docs/Learn/HTML/Tables">HTML table</a> parts (e.g. {{htmlelement("th")}} elements) ({{bug(975644)}}).</li>
- <li>{{cssxref("calc()")}} is now supported in {{cssxref("&lt;color&gt;")}} values — <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, and <code>hsla()</code> ({{bug(984021)}}).</li>
- <li>{{cssxref("calc()")}} in <a href="/en-US/docs/Web/CSS/Media_Queries">media query</a> values is now supported {{bug(1396057)}}.</li>
- <li>The {{cssxref("@document")}} at-rule has been limited to use only in user and UA sheets ({{bug(1035091)}}).</li>
- <li>Implement the {{cssxref("font-optical-sizing")}} property ({{bug(1435692)}}).</li>
-</ul>
+- The {{cssxref("overscroll-behavior")}} property and its associated longhand properties — {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}} — have been implemented ({{bug(951793)}}), and it has been enabled by default on all releases ({{bug(1428879)}}).
+- The behavior of "unusual elements" (elements that aren’t rendered purely by CSS box concepts such as replaced elements) when given a {{cssxref("display")}} value of `contents` has been updated as per spec ({{bug(1427292)}}). See [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) for exactly what the specced behaviors are.
+- {{cssxref("position")}} `sticky` is now supported on appropriate [HTML table](/en-US/docs/Learn/HTML/Tables) parts (e.g. {{htmlelement("th")}} elements) ({{bug(975644)}}).
+- {{cssxref("calc()")}} is now supported in {{cssxref("&lt;color&gt;")}} values — `rgb()`, `rgba()`, `hsl()`, and `hsla()` ({{bug(984021)}}).
+- {{cssxref("calc()")}} in [media query](/en-US/docs/Web/CSS/Media_Queries) values is now supported {{bug(1396057)}}.
+- The {{cssxref("@document")}} at-rule has been limited to use only in user and UA sheets ({{bug(1035091)}}).
+- Implement the {{cssxref("font-optical-sizing")}} property ({{bug(1435692)}}).
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="APIs">APIs</h3>
+### APIs
 
-<h4 id="New_APIs">New APIs</h4>
+#### New APIs
 
-<ul>
- <li>{{domxref("PointerEvent","PointerEvents")}} have been enabled in Firefox Desktop ({{bug(1411467)}}).</li>
-</ul>
+- {{domxref("PointerEvent","PointerEvents")}} have been enabled in Firefox Desktop ({{bug(1411467)}}).
 
-<h4 id="DOM">DOM</h4>
+#### DOM
 
-<ul>
- <li>The {{domxref("EventTarget.EventTarget()","EventTarget()")}} constructor has been implemented ({{bug(1379688)}}).</li>
- <li>The {{domxref("Response.Response()","Response()")}} constructor can now accept a <code>null</code> value for its <code>body</code> parameter, as per spec ({{bug(1303025)}}).</li>
-</ul>
+- The {{domxref("EventTarget.EventTarget()","EventTarget()")}} constructor has been implemented ({{bug(1379688)}}).
+- The {{domxref("Response.Response()","Response()")}} constructor can now accept a `null` value for its `body` parameter, as per spec ({{bug(1303025)}}).
 
-<h4 id="DOM_events">DOM events</h4>
+#### DOM events
 
-<ul>
- <li>The {{domxref("Event.composedPath()")}} method has been implemented ({{bug(1412775)}}).</li>
-</ul>
+- The {{domxref("Event.composedPath()")}} method has been implemented ({{bug(1412775)}}).
 
-<h4 id="Service_workers">Service workers</h4>
+#### Service workers
 
-<ul>
- <li>The service worker <a href="/en-US/docs/Web/API/Clients">Clients API</a> can now find and communicate with windows in a separate browser process ({{bug(1293277)}}) .</li>
- <li>Nested about:blank and about:srcdoc iframes will now inherit their parent's controlling service worker. Fixed in ({{bug(1293277)}}) and ({{bug(1426979)}}).</li>
- <li>When a service worker provides a {{domxref("Response")}} to {{domxref("FetchEvent.respondWith()")}}, the {{domxref("Response.url")}} value will now be propagated to the intercepted network request as the final resolved URL.  In the past the {{domxref("Request.url","FetchEvent.request.url")}} was used for this instead.  This means, for example, if a service worker intercepts a stylesheet or worker script, then the provided <code>Response.url</code> will be used to resolve any relative {{cssxref("@import")}} or {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads ({{bug(1222008)}}).</li>
- <li><code>FetchEvent.respondWith()</code> will now trigger a network error if the {{domxref("Request.mode","FetchEvent.request.mode")}} is <code>"same-origin"</code> and the provided {{domxref("Response.type")}} is <code>"cors"</code>. ({{bug(1222008)}})</li>
-</ul>
+- The service worker [Clients API](/en-US/docs/Web/API/Clients) can now find and communicate with windows in a separate browser process ({{bug(1293277)}}) .
+- Nested about:blank and about:srcdoc iframes will now inherit their parent's controlling service worker. Fixed in ({{bug(1293277)}}) and ({{bug(1426979)}}).
+- When a service worker provides a {{domxref("Response")}} to {{domxref("FetchEvent.respondWith()")}}, the {{domxref("Response.url")}} value will now be propagated to the intercepted network request as the final resolved URL.  In the past the {{domxref("Request.url","FetchEvent.request.url")}} was used for this instead.  This means, for example, if a service worker intercepts a stylesheet or worker script, then the provided `Response.url` will be used to resolve any relative {{cssxref("@import")}} or {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads ({{bug(1222008)}}).
+- `FetchEvent.respondWith()` will now trigger a network error if the {{domxref("Request.mode","FetchEvent.request.mode")}} is `"same-origin"` and the provided {{domxref("Response.type")}} is `"cors"`. ({{bug(1222008)}})
 
-<h4 id="Media_and_WebRTC">Media and WebRTC</h4>
+#### Media and WebRTC
 
-<ul>
- <li>The {{domxref("MediaStreamTrack")}} property {{domxref("MediaStreamTrack.muted")}}, along with the events {{event("mute")}} and {{event("unmute")}} and the corresponding event handlers, {{domxref("MediaStreamTrack.onmute", "onmute")}} and {{domxref("MediaStreamTrack.onmute", "onunmute")}}, have been implemented. A track's <code>muted</code> state indicates that the track is not currently able to provide media data.
+- The {{domxref("MediaStreamTrack")}} property {{domxref("MediaStreamTrack.muted")}}, along with the events {{event("mute")}} and {{event("unmute")}} and the corresponding event handlers, {{domxref("MediaStreamTrack.onmute", "onmute")}} and {{domxref("MediaStreamTrack.onmute", "onunmute")}}, have been implemented. A track's `muted` state indicates that the track is not currently able to provide media data.
 
-  <div class="note">
-    <p><strong>Note:</strong> The <code>muted</code> state of a track isn't useful for what's typically thought of as muting and unmuting a track. Instead, use the {{domxref("MediaStreamTrack.enabled", "enabled")}} property; setting <code>enabled</code> to <code>false</code> causes the track to output only empty frames.</p>
-  </div>
- </li>
- <li>Firefox 59 on Android now supports Apple's HTTPS Live Streaming (HLS) protocol for both audio and video. This non-standard protocol is being supported on mobile to improve compatibility with sites that require it for mobile streaming. There is not currently any plan to implement it on Firefox Desktop.</li>
- <li>The {{domxref("RTCRtpReceiver")}} methods {{domxref("RTCRtpReceiver.getContributingSources", "getContributingSources()")}} and {{domxref("RTCRtpReceiver.getSynchronizationSources", "getSynchronizationSources()")}} have been implemented to provide information about the sources of each RTP stream. However, a specification change occurred before release and we have disabled these by default behind the preference <code>media.peerconnection.rtpsourcesapi.enable</code> ({{bug(1363667)}}, {{bug(1430213)}}, and {{bug(1433236)}}.</li>
- <li>The {{domxref("RTCRtpTransceiver")}} interface has now been implemented, since the Firefox implementation of WebRTC now supports transceivers, with <code>RTCPeerConnection</code> and other interfaces updated to use them per the latest specification.</li>
- <li>The {{domxref("RTCPeerConnection.addTransceiver()")}} method has been added. In addition, the behavior of {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} has been updated to create a transceiver as required.</li>
- <li>Support for <a href="/en-US/docs/Web/API/WebVTT_API">WebVTT</a> regions was implemented in Firefox 58 but disabled by default. They're now available by default ({{bug(1415805)}}).</li>
- <li>Firefox now supports WebVTT <code>REGION</code> definition blocks whose settings list has one setting per line instead of all of the settings being on the same line of the WebVTT file ({{bug(1415821)}}.</li>
-</ul>
+  > **Note:** The `muted` state of a track isn't useful for what's typically thought of as muting and unmuting a track. Instead, use the {{domxref("MediaStreamTrack.enabled", "enabled")}} property; setting `enabled` to `false` causes the track to output only empty frames.
 
-<h4 id="Canvas_and_WebGL">Canvas and WebGL</h4>
+- Firefox 59 on Android now supports Apple's HTTPS Live Streaming (HLS) protocol for both audio and video. This non-standard protocol is being supported on mobile to improve compatibility with sites that require it for mobile streaming. There is not currently any plan to implement it on Firefox Desktop.
+- The {{domxref("RTCRtpReceiver")}} methods {{domxref("RTCRtpReceiver.getContributingSources", "getContributingSources()")}} and {{domxref("RTCRtpReceiver.getSynchronizationSources", "getSynchronizationSources()")}} have been implemented to provide information about the sources of each RTP stream. However, a specification change occurred before release and we have disabled these by default behind the preference `media.peerconnection.rtpsourcesapi.enable` ({{bug(1363667)}}, {{bug(1430213)}}, and {{bug(1433236)}}.
+- The {{domxref("RTCRtpTransceiver")}} interface has now been implemented, since the Firefox implementation of WebRTC now supports transceivers, with `RTCPeerConnection` and other interfaces updated to use them per the latest specification.
+- The {{domxref("RTCPeerConnection.addTransceiver()")}} method has been added. In addition, the behavior of {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} has been updated to create a transceiver as required.
+- Support for [WebVTT](/en-US/docs/Web/API/WebVTT_API) regions was implemented in Firefox 58 but disabled by default. They're now available by default ({{bug(1415805)}}).
+- Firefox now supports WebVTT `REGION` definition blocks whose settings list has one setting per line instead of all of the settings being on the same line of the WebVTT file ({{bug(1415821)}}.
 
-<p><em>No changes.</em></p>
+#### Canvas and WebGL
 
-<h3 id="CSSOM">CSSOM</h3>
+_No changes._
 
-<p>The {{domxref("CSSNamespaceRule")}} interface and its <code>namespaceURL</code> and <code>prefix</code> properties have been implemented ({{bug(1326514)}}).</p>
+### CSSOM
 
-<h3 id="HTTP">HTTP</h3>
+The {{domxref("CSSNamespaceRule")}} interface and its `namespaceURL` and `prefix` properties have been implemented ({{bug(1326514)}}).
 
-<p><em>No changes.</em></p>
+### HTTP
 
-<h3 id="Security">Security</h3>
+_No changes._
 
-<ul>
- <li>Top-level navigation to <code>data:</code> URIs has been blocked {{bug(1401895)}}. See <a href="https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/">Blocking Top-Level Navigations to data URLs for Firefox 59</a> for more details.</li>
- <li>The <code>SAMEORIGIN</code> directive of the {{httpheader("X-Frame-Options")}} header has been changed so that it checks not only the top-level IFrame is in the same origin, but all its ancestors as well ({{bug(725490)}}).</li>
- <li>Image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ({{bug(1423146)}}).</li>
- <li>HTTP authentication now uses <code>utf-8</code> encoding for usernames and passwords (rather than <code>ISO-8859-1</code>) for parity with other browsers, and to avoid potential problems as described in {{bug(1419658)}}.</li>
- <li>Everyday the <a href="https://searchfox.org/mozilla-central/source/security/manager/ssl/nsSTSPreloadList.inc">HSTS preload list</a> is updated from Google. Normally this doesn't warrant a note, but in this release new TLDs were included, notably <code>.app</code> and <code>.dev</code>. While they are new TLDs developers might have used them for local development and be surprised by this change. Note that <a href="https://datatracker.ietf.org/doc/html/rfc2606">reserved TLDs</a> should be used for local development instead.</li>
-</ul>
+### Security
 
-<h3 id="Plugins">Plugins</h3>
+- Top-level navigation to `data:` URIs has been blocked {{bug(1401895)}}. See [Blocking Top-Level Navigations to data URLs for Firefox 59](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/) for more details.
+- The `SAMEORIGIN` directive of the {{httpheader("X-Frame-Options")}} header has been changed so that it checks not only the top-level IFrame is in the same origin, but all its ancestors as well ({{bug(725490)}}).
+- Image resources loaded from different origins to the current document are no longer able to trigger HTTP authentication dialogs ({{bug(1423146)}}).
+- HTTP authentication now uses `utf-8` encoding for usernames and passwords (rather than `ISO-8859-1`) for parity with other browsers, and to avoid potential problems as described in {{bug(1419658)}}.
+- Everyday the [HSTS preload list](https://searchfox.org/mozilla-central/source/security/manager/ssl/nsSTSPreloadList.inc) is updated from Google. Normally this doesn't warrant a note, but in this release new TLDs were included, notably `.app` and `.dev`. While they are new TLDs developers might have used them for local development and be surprised by this change. Note that [reserved TLDs](https://datatracker.ietf.org/doc/html/rfc2606) should be used for local development instead.
 
-<p><em>No changes.</em></p>
+### Plugins
 
-<h3 id="Other">Other</h3>
+_No changes._
 
-<p><em>No changes.</em></p>
+### Other
 
-<h2 id="Removals_from_the_web_platform">Removals from the web platform</h2>
+_No changes._
 
-<h3 id="HTML_2">HTML</h3>
+## Removals from the web platform
 
-<p>The non-standard <code>version</code> parameter of the {{htmlelement("script")}} element's {{htmlattrxref("type","script")}} attribute (e.g.  <code>type="application/javascript;version=1.8"</code>) has been removed ({{bug(1428745)}}).</p>
+### HTML
 
-<h3 id="CSS_2">CSS</h3>
+The non-standard `version` parameter of the {{htmlelement("script")}} element's {{htmlattrxref("type","script")}} attribute (e.g.  `type="application/javascript;version=1.8"`) has been removed ({{bug(1428745)}}).
 
-<ul>
- <li>The proprietary <code>mozmm</code> {{cssxref("&lt;length&gt;")}} unit has been removed ({{bug(1416564)}}).</li>
- <li>The proprietary {{cssxref("-moz-border-top-colors")}}, {{cssxref("-moz-border-right-colors")}}, {{cssxref("-moz-border-bottom-colors")}}, and {{cssxref("-moz-border-left-colors")}} properties have been limited to usage in chrome code only ({{bug(1417200)}}).</li>
-</ul>
+### CSS
 
-<h3 id="JavaScript_2">JavaScript</h3>
+- The proprietary `mozmm` {{cssxref("&lt;length&gt;")}} unit has been removed ({{bug(1416564)}}).
+- The proprietary {{cssxref("-moz-border-top-colors")}}, {{cssxref("-moz-border-right-colors")}}, {{cssxref("-moz-border-bottom-colors")}}, and {{cssxref("-moz-border-left-colors")}} properties have been limited to usage in chrome code only ({{bug(1417200)}}).
 
-<ul>
- <li>Non-standard <a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#conditional_catch_clauses">conditional catch clauses</a> have been removed ({{bug(1228841)}}).</li>
-</ul>
+### JavaScript
 
-<h3 id="APIs_2">APIs</h3>
+- Non-standard [conditional catch clauses](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#conditional_catch_clauses) have been removed ({{bug(1228841)}}).
 
-<ul>
- <li>The non-standard method <code>Event.getPreventDefault()</code> has been removed. You should instead use the {{domxref("Event.defaultPrevented")}} property to determine whether or not {{domxref("Event.preventDefault", "preventDefault()")}} was called on the {{domxref("Event")}}.</li>
- <li>The proprietary <code><a href="/en-US/docs/Archive/API/Navigator/mozNotification">Navigator.mozNotification</a></code> property and <code>DesktopNotification</code> interface have been removed, in favor of the standard <a href="/en-US/docs/Web/API/Notifications_API">Notifications API</a> ({{bug(952453)}}).</li>
- <li>The proprietary <code>window.external.addSearchEngine()</code> method has been removed ({{bug("862147")}}). Also see {{domxref("Window.sidebar")}} for more details.</li>
- <li>The non-standard Firefox-only {{domxref("HTMLMediaElement")}} property <code>mozAutoplayEnabled</code> has been removed.</li>
-</ul>
+### APIs
 
-<h3 id="SVG_2">SVG</h3>
+- The non-standard method `Event.getPreventDefault()` has been removed. You should instead use the {{domxref("Event.defaultPrevented")}} property to determine whether or not {{domxref("Event.preventDefault", "preventDefault()")}} was called on the {{domxref("Event")}}.
+- The proprietary [`Navigator.mozNotification`](/en-US/docs/Archive/API/Navigator/mozNotification) property and `DesktopNotification` interface have been removed, in favor of the standard [Notifications API](/en-US/docs/Web/API/Notifications_API) ({{bug(952453)}}).
+- The proprietary `window.external.addSearchEngine()` method has been removed ({{bug("862147")}}). Also see {{domxref("Window.sidebar")}} for more details.
+- The non-standard Firefox-only {{domxref("HTMLMediaElement")}} property `mozAutoplayEnabled` has been removed.
 
-<p>Support for SMIL's <code>accessKey</code> feature has been removed ({{bug(1423098)}}).</p>
+### SVG
 
-<h3 id="Other_2">Other</h3>
+Support for SMIL's `accessKey` feature has been removed ({{bug(1423098)}}).
 
-<p>Support for the non-standard <code>pcast:</code> and <code>feed:</code> protocols has been removed from Firefox ({{bug(1420622)}}).</p>
+### Other
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
+Support for the non-standard `pcast:` and `feed:` protocols has been removed from Firefox ({{bug(1420622)}}).
 
-<h3 id="WebExtensions">WebExtensions</h3>
+## Changes for add-on and Mozilla developers
 
-<ul>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">Theme</a> updates:
+### WebExtensions
 
-  <ul>
-   <li>new properties: <code>colors.background_tab_text</code>, <code>colors.toolbar_field_border</code></li>
-   <li>all color properties now support both Chrome-style arrays and CSS color values.</li>
-  </ul>
- </li>
- <li>New <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings">browser settings</a>:
-  <ul>
-   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/contextMenuShowEvent"><code>contextMenuShowEvent</code></a></li>
-   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs"><code>openBookmarksInNewTabs</code></a></li>
-   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs"><code>openSearchResultsInNewTabs</code></a></li>
-   <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/settings"><code>proxyConfig</code></a></li>
-  </ul>
- </li>
- <li>New <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs">tabs</a></code> APIs:
-  <ul>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureTab">tabs.captureTab()</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/hide">tabs.hide()</a></code></li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/show">tabs.show()</a></code></li>
-  </ul>
- </li>
- <li>The <code><a href="/en-US/docs/Archive/Add-ons/Legacy_Firefox_for_Android/API/NativeWindow/contextmenus">contextMenus</a></code> API now supports a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType">"bookmark" context</a>.</li>
- <li>New <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts">contentScripts</a></code> API enables runtime registration of content scripts.</li>
- <li>New <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">pageAction</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction">browserAction</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction">SidebarAction</a></code> APIs:
-  <ul>
-   <li><code>browserAction/pageAction/sidebarAction.set*</code> functions now accept <code>null</code> to undo changes.</li>
-   <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled">browserAction.isEnabled()</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/isShown">pageAction.isShown()</a></code> , <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen">sidebarAction.isOpen()</a></code> functions.</li>
-  </ul>
- </li>
- <li>New option in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code> to show page actions by default.</li>
- <li>New values for <code>protocol_handlers</code>:
-  <ul>
-   <li>"ssb" for Secure Scuttlebutt communications</li>
-   <li>"dat" for DATproject</li>
-   <li>"ipfs", "ipns", "dweb" for IPFS</li>
-  </ul>
- </li>
- <li>New <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites">privacy.websites</a></code> setting "cookieConfig".</li>
- <li>Support in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies">cookies</a></code> API for <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation">first-party isolation</a>.</li>
- <li>New option <code>upgradeToSecure</code> in <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest">webRequest</a></code>.</li>
-</ul>
+- [Theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) updates:
 
-<h2 id="Older_versions">Older versions</h2>
+  - new properties: `colors.background_tab_text`, `colors.toolbar_field_border`
+  - all color properties now support both Chrome-style arrays and CSS color values.
 
-<p>{{Firefox_for_developers(58)}}</p>
+- New [browser settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings):
+
+  - [`contextMenuShowEvent`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/contextMenuShowEvent)
+  - [`openBookmarksInNewTabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs)
+  - [`openSearchResultsInNewTabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs)
+  - [`proxyConfig`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/settings)
+
+- New [`tabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs) APIs:
+
+  - [`tabs.captureTab()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureTab)
+  - [`tabs.hide()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/hide)
+  - [`tabs.show()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/show)
+
+- The [`contextMenus`](/en-US/docs/Archive/Add-ons/Legacy_Firefox_for_Android/API/NativeWindow/contextmenus) API now supports a ["bookmark" context](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType).
+- New [`contentScripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts) API enables runtime registration of content scripts.
+- New [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction), [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), [`SidebarAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction) APIs:
+
+  - `browserAction/pageAction/sidebarAction.set*` functions now accept `null` to undo changes.
+  - [`browserAction.isEnabled()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled), [`pageAction.isShown()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/isShown) , [`sidebarAction.isOpen()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen) functions.
+
+- New option in [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) to show page actions by default.
+- New values for `protocol_handlers`:
+
+  - "ssb" for Secure Scuttlebutt communications
+  - "dat" for DATproject
+  - "ipfs", "ipns", "dweb" for IPFS
+
+- New [`privacy.websites`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites) setting "cookieConfig".
+- Support in [`cookies`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies) API for [first-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
+- New option `upgradeToSecure` in [`webRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).
+
+## Older versions
+
+{{Firefox_for_developers(58)}}

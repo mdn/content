@@ -7,83 +7,65 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 85 that will affect developers. Firefox 85 was released on January 26, 2021.</p>
+This article provides information about the changes in Firefox 85 that will affect developers. Firefox 85 was released on January 26, 2021.
 
-<div class="note">
-  <p><strong>Note:</strong> See also <a href="https://hacks.mozilla.org/2021/01/january-brings-us-firefox-85/">January brings us Firefox 85</a> on Mozilla Hacks.</p>
-</div>
+> **Note:** See also [January brings us Firefox 85](https://hacks.mozilla.org/2021/01/january-brings-us-firefox-85/) on Mozilla Hacks.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+### Developer Tools
 
-<ul>
-  <li>Developers can now use the <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#viewing_common_pseudo-classes">Page Inspector</a> to toggle the {{cssxref(":focus-visible")}} pseudo-class for the currently selected element (in addition to the pseudo classes that were previously supported: {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, and {{cssxref(":visited")}}). ({{bug(1617608)}}).</li>
-</ul>
+- Developers can now use the [Page Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#viewing_common_pseudo-classes) to toggle the {{cssxref(":focus-visible")}} pseudo-class for the currently selected element (in addition to the pseudo classes that were previously supported: {{cssxref(":hover")}}, {{cssxref(":active")}} and {{cssxref(":focus")}}, {{cssxref(":focus-within")}}, and {{cssxref(":visited")}}). ({{bug(1617608)}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
-  <li><a href="/en-US/docs/Web/HTML/Link_types/preload"><code>&lt;link rel="preload"&gt;</code></a> is now enabled. ({{bug(1626997)}}).</li>
-</ul>
+- [`<link rel="preload">`](/en-US/docs/Web/HTML/Link_types/preload) is now enabled. ({{bug(1626997)}}).
 
-<h4 id="Removals_2">Removals</h4>
+#### Removals
 
-<ul>
-  <li>The {{HTMLElement("menuitem")}} HTML element is no longer available — it has been hidden behind the <code>dom.menuitem.enabled flag</code>. ({{bug(1680596)}}). </li>
-</ul>
+- The {{HTMLElement("menuitem")}} HTML element is no longer available — it has been hidden behind the `dom.menuitem.enabled flag`. ({{bug(1680596)}}).
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
-  <li>The {{cssxref(":focus-visible")}} pseudo-class is now enabled. ({{bug(1445482)}}). </li>
-  <li>The <code>pinch-zoom</code> value for the {{cssxref("touch-action")}} property is now enabled. ({{bug(1329241)}}). </li>
-</ul>
+- The {{cssxref(":focus-visible")}} pseudo-class is now enabled. ({{bug(1445482)}}).
+- The `pinch-zoom` value for the {{cssxref("touch-action")}} property is now enabled. ({{bug(1329241)}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
-  <li>
-    The <code>collation</code> property can now be specified in the options passed to the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator"><code>Intl.Collator()</code> constructor</a> ({{bug(1670062)}}). This allows developers to write code with greater clarity:
-    <pre class="brush: js">
-// Old method
-let pinyin = new Intl.Collator(["zh-u-co-pinyin"]);
-// New method
-let pinyin = new Intl.Collator("zh", {collation: "pinyin"});</pre>
-  </li>
- </ul>
+- The `collation` property can now be specified in the options passed to the [`Intl.Collator()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) ({{bug(1670062)}}). This allows developers to write code with greater clarity:
 
-<h3 id="Security">Plugins</h3>
+  ```js
+  // Old method
+  let pinyin = new Intl.Collator(["zh-u-co-pinyin"]);
+  // New method
+  let pinyin = new Intl.Collator("zh", {collation: "pinyin"});
+  ```
 
-<ul>
-  <li>Flash support has been completely removed from Firefox ({{bug(1675349)}}). Read our <a href="/en-US/docs/Plugins/Roadmap#schedule">plugin roadmap</a> for more information.</li>
-</ul>
+### Plugins
 
-<h3 id="APIs">APIs</h3>
+- Flash support has been completely removed from Firefox ({{bug(1675349)}}). Read our [plugin roadmap](/en-US/docs/Plugins/Roadmap#schedule) for more information.
 
-<p><em>No changes.</em></p>
+### APIs
 
-<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
-<ul>
-  <li>Fixed a potential page load timeout situation when <code>WebDriver:ElementClick</code>
-    is called for a link with a <code>target</code> other than <code>_blank</code> ({{bug(1678455)}}).</li>
-  <li>Using web element references on browsing contexts other than the originating one now correctly returns a <code>no such element</code> error instead of a <code>stale element reference</code> error ({{bug(1684827)}}).</li>
-</ul>
+_No changes._
 
-<h4 id="WebDriver_known_bugs">Known bugs</h4>
+### WebDriver conformance (Marionette)
 
-<ul>
-  <li>WebDriver commands following a call to <code>WebDriver:SwitchToFrame</code> can fail with a "no such window" error if the frame's content hasn't yet finished loading ({{bug(1691348)}}).</li>
+- Fixed a potential page load timeout situation when `WebDriver:ElementClick`
+  is called for a link with a `target` other than `_blank` ({{bug(1678455)}}).
+- Using web element references on browsing contexts other than the originating one now correctly returns a `no such element` error instead of a `stale element reference` error ({{bug(1684827)}}).
 
-  <li>After a <a href="https://firefox-source-docs.mozilla.org/dom/navigation/nav_replace.html#cross-group-navigations">cross-group page navigation</a>, accessing a previously-retrieved element might not always raise a "stale element" error, and can also lead to a "no such element" error. To prevent this, set the <code>marionette.actors.enabled</code> preference to <code>false</code> ({{bug(1690308)}}).</li>
-</ul>
+#### Known bugs
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+- WebDriver commands following a call to `WebDriver:SwitchToFrame` can fail with a "no such window" error if the frame's content hasn't yet finished loading ({{bug(1691348)}}).
+- After a [cross-group page navigation](https://firefox-source-docs.mozilla.org/dom/navigation/nav_replace.html#cross-group-navigations), accessing a previously-retrieved element might not always raise a "stale element" error, and can also lead to a "no such element" error. To prevent this, set the `marionette.actors.enabled` preference to `false` ({{bug(1690308)}}).
 
-<p><em>No changes.</em></p>
+## Changes for add-on developers
 
-<h2 id="Older_versions">Older versions</h2>
+_No changes._
 
-<p>{{Firefox_for_developers(84)}}</p>
+## Older versions
+
+{{Firefox_for_developers(84)}}

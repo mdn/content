@@ -5,340 +5,289 @@ tags:
   - Firefox
   - Release Notes
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p><a href="https://www.mozilla.org/firefox/developer/">To test the latest developer features of Firefox, install Firefox Developer Edition</a> Firefox 49 was released on September 20, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.</p>
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 49 was released on September 20, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-<h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+## Changes for Web developers
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+### Developer Tools
 
-<ul>
- <li>JavaScript errors logged into the console <a href="https://hacks.mozilla.org/2016/06/helping-web-developers-with-javascript-errors/">now provide a [Learn more] link</a> for additional debugging help ({{bug(1179876)}}).</li>
- <li>CSS autocomplete: show more suggestions in autocomplete popup ({{bug("1260419")}}).</li>
- <li>The Animation Inspector now <a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#further_information_about_animation_compositing">exposes animation performance information</a> in DevTools ({{bug("1254408")}}).</li>
- <li>The <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_context_menu">Inspector's context menu</a> has been reorganized to be cleaner and easier to use ({{bug("1211613")}}).</li>
- <li>The Inspector now supports <code>#RRGGBBAA</code> and <code>#RGBA</code> syntax for color values ({{bug("1271191")}}).</li>
- <li>The developer tools no longer display self-closing tags (such as {{HTMLElement("br")}} and {{HTMLElement("img")}} as if they have a closing tag on HTML pages; the behavior is unchanged for XHTML pages ({{bug("820926")}}).</li>
- <li>Accessibility improvements!
-  <ul>
-   <li>The toolbox does a better job of ensuring that keyboard focus is more visible ({{bug(1242851)}}).</li>
-   <li>Accessibility labels have been added to unlabeled controls ({{bug(1242715)}}).</li>
-   <li>Added proper tree view semantics and keyboard navigation to the Inspector's markup view ({{bug(1242694)}}).</li>
-  </ul>
- </li>
- <li>The <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a> now shows a Cause column, which provides an indication of what caused each particular network request ({{bug(1134073)}}).</li>
- <li>In the <em>about:debugging</em> Add-ons page, the Reload button is only enabled for temporary add-ons. It will be disabled for all other add-ons ({{bug(1273184)}}).</li>
- <li>In the <em>about:debugging</em> Workers page, a warning message will be displayed in the Service Workers section if <a href="/en-US/docs/Tools/about:debugging#service_workers_not_compatible">service workers are incompatible</a> with the current browser configuration ({{bug(1266415)}}).</li>
- <li><em>about:debugging</em> now has a <a href="/en-US/docs/Tools/about:debugging#tabs">new Tabs page</a> available, which provides a complete list of all the debuggable tabs open in the current Firefox instance ({{bug(1266128)}}).</li>
- <li>The <em>Disable Cache</em> option in the <a href="/en-US/docs/Tools/Settings#advanced_settings">Toolbox Advanced settings</a> has been renamed to Disable HTTP Cache, to make it clearer that this affects the HTTP cache, and not <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a>/the <a href="/en-US/docs/Web/API/Cache">Cache API</a> (bug(1253018)).</li>
- <li>The <a href="/en-US/docs/Tools/Storage_Inspector#indexeddb">Storage Inspector now allows IndexedDB databases to be deleted</a> via their own context menus ({{bug("1205123")}}), and will display warning messages if the IndexedDB cannot be deleted for some reason (if there are still active connections, for example) ({{bug(1268460)}}).</li>
-</ul>
+- JavaScript errors logged into the console [now provide a \[Learn more\] link](https://hacks.mozilla.org/2016/06/helping-web-developers-with-javascript-errors/) for additional debugging help ({{bug(1179876)}}).
+- CSS autocomplete: show more suggestions in autocomplete popup ({{bug("1260419")}}).
+- The Animation Inspector now [exposes animation performance information](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#further_information_about_animation_compositing) in DevTools ({{bug("1254408")}}).
+- The [Inspector's context menu](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_context_menu) has been reorganized to be cleaner and easier to use ({{bug("1211613")}}).
+- The Inspector now supports `#RRGGBBAA` and `#RGBA` syntax for color values ({{bug("1271191")}}).
+- The developer tools no longer display self-closing tags (such as {{HTMLElement("br")}} and {{HTMLElement("img")}} as if they have a closing tag on HTML pages; the behavior is unchanged for XHTML pages ({{bug("820926")}}).
+- Accessibility improvements!
 
-<h3 id="HTML">HTML</h3>
+  - The toolbox does a better job of ensuring that keyboard focus is more visible ({{bug(1242851)}}).
+  - Accessibility labels have been added to unlabeled controls ({{bug(1242715)}}).
+  - Added proper tree view semantics and keyboard navigation to the Inspector's markup view ({{bug(1242694)}}).
 
-<ul>
- <li>Added support for the {{HTMLElement("details")}} and {{HTMLElement("summary")}} elements ({{bug(1226455)}}).</li>
- <li>The {{htmlattrxref("pattern", "input")}} attribute of the {{HTMLElement("input")}} element now uses the <code>'u'</code> parameter in the underlying JavaScript {{jsxref("RegExp")}} ({{bug(1227906)}}).</li>
- <li>To match a spec change, an invalid value of the {{htmlattrxref("kind", "track")}} attribute of the {{HTMLElement('track')}} element is now treated like <code>"metadata"</code> instead of <code>"subtitles"</code> ({{bug(1269712)}}).</li>
- <li>The {{HTMLElement("iframe")}} element's {{htmlattrxref("sandbox", "iframe")}} attribute now supports the <code>'allow-popups-to-escape-sandbox'</code> and <code>'allow-modals'</code> values ({{bug(1190641)}}).</li>
- <li>Support for microdata attributes and the Microdata API have been removed ({{bug(909633)}}).</li>
- <li>The {{htmlattrxref("referrerpolicy", "a")}} attribute on the {{HTMLElement("a")}} element now supports the <code>'no-referrer-when-downgrade</code>' and <code>'origin-when-cross-origin'</code> ({{bug(1178337)}}).</li>
- <li>The {{htmlattrxref("form", "label")}} content attribute of the {{HTMLElement("label")}} element has been removed. The {{domxref("HTMLLabelElement.form")}} property still exists, but now returns the form with which the label's control is associated, if there is a control (and if that control is associated with a form) ({{bug(1268852)}}).</li>
-</ul>
+- The [Network Monitor](/en-US/docs/Tools/Network_Monitor) now shows a Cause column, which provides an indication of what caused each particular network request ({{bug(1134073)}}).
+- In the _about:debugging_ Add-ons page, the Reload button is only enabled for temporary add-ons. It will be disabled for all other add-ons ({{bug(1273184)}}).
+- In the _about:debugging_ Workers page, a warning message will be displayed in the Service Workers section if [service workers are incompatible](/en-US/docs/Tools/about:debugging#service_workers_not_compatible) with the current browser configuration ({{bug(1266415)}}).
+- _about:debugging_ now has a [new Tabs page](/en-US/docs/Tools/about:debugging#tabs) available, which provides a complete list of all the debuggable tabs open in the current Firefox instance ({{bug(1266128)}}).
+- The _Disable Cache_ option in the [Toolbox Advanced settings](/en-US/docs/Tools/Settings#advanced_settings) has been renamed to Disable HTTP Cache, to make it clearer that this affects the HTTP cache, and not [Service Workers](/en-US/docs/Web/API/Service_Worker_API)/the [Cache API](/en-US/docs/Web/API/Cache) (bug(1253018)).
+- The [Storage Inspector now allows IndexedDB databases to be deleted](/en-US/docs/Tools/Storage_Inspector#indexeddb) via their own context menus ({{bug("1205123")}}), and will display warning messages if the IndexedDB cannot be deleted for some reason (if there are still active connections, for example) ({{bug(1268460)}}).
 
-<h3 id="CSS">CSS</h3>
+### HTML
 
-<ul>
- <li>Added {{cssxref("background-position-x")}} and {{cssxref("background-position-y")}}, which allow separately specifying the horizontal and vertical offsets at which to draw a background image; these are components of {{cssxref("background-position")}} ({{bug("550426")}}).</li>
- <li>Added support for the <code>round</code> and <code>space</code> keywords to {{cssxref("background-repeat")}} ({{bug("548372")}}).</li>
- <li>On {{cssxref("background-clip")}}, the keyword <code>text</code> is now activated by default ({{bug(1264905)}}).</li>
- <li>Added support for specifying colors with an alpha channel using 4- and 8-digit CSS hex <a href="/en-US/docs/Web/CSS/color_value">color</a> values (#RRGGBBAA and #RGBA) ({{bug("567283")}}).</li>
- <li>The pseudo-class {{cssxref(":dir")}} has been unprefixed ({{bug(859301)}}).</li>
- <li>In our experimental implementation (not yet activated by default) of {{cssxref("clip-path")}}, we can now interpolate between {{cssxref("&lt;basic-shape&gt;")}} values ({{bug(1110460)}}).</li>
- <li>Added the <a href="/en-US/docs/Web/CSS/length#q"><code>q</code> length unit</a> ({{bug(1274526)}}).</li>
- <li>The property {{cssxref("text-align-last")}} has been unprefixed ({{bug(1039541)}}).</li>
- <li>Added support for {{cssxref("overflow-wrap")}}, replacing <code>word-wrap</code> that is still supported as an alternative name ({{bug(955857)}}).</li>
- <li>Our experimental <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grids</a> implementation has been improved:
-  <ul>
-   <li>Implemented {{cssxref("&lt;percentage&gt;")}} for the <code>grid-gap</code>, <code>grid-row-gap</code>, and <code>grid-column-gap</code> properties ({{bug(1266268)}}).</li>
-   <li>Implemented grid layout support for {{cssxref("align")}}, {{cssxref("justify-self")}}<code>:baseline</code> and <code>last-baseline</code> (aka "baseline self-alignment") ({{bug(1221525)}}).</li>
-   <li>Implemented grid item baseline content alignment ({{bug(1256429)}}).</li>
-  </ul>
- </li>
- <li>Our experimental <a href="/en-US/docs/Web/CSS/CSS_Masking">CSS Masks</a> implementation has been improved:
-  <ul>
-   <li>The {{cssxref("mask-origin")}} property now uses <code>border-box</code> instead of <code>padding-box</code> as initial value, to match the spec ({{bug(1258286)}}).</li>
-   <li>The {{cssxref("mask-repeat")}} property now supports the <code>space</code> and <code>round</code> values ({{bug(1258626)}}).</li>
-   <li>Fixed an issue preventing the {{cssxref("mask-position")}} attribute from being animated ({{bug(1273804)}}).</li>
-  </ul>
- </li>
- <li>The preference controlling {{cssxref("text-emphasis")}} has been removed, so support for this property can no longer be disabled ({{bug(1229609)}}).</li>
-</ul>
+- Added support for the {{HTMLElement("details")}} and {{HTMLElement("summary")}} elements ({{bug(1226455)}}).
+- The {{htmlattrxref("pattern", "input")}} attribute of the {{HTMLElement("input")}} element now uses the `'u'` parameter in the underlying JavaScript {{jsxref("RegExp")}} ({{bug(1227906)}}).
+- To match a spec change, an invalid value of the {{htmlattrxref("kind", "track")}} attribute of the {{HTMLElement('track')}} element is now treated like `"metadata"` instead of `"subtitles"` ({{bug(1269712)}}).
+- The {{HTMLElement("iframe")}} element's {{htmlattrxref("sandbox", "iframe")}} attribute now supports the `'allow-popups-to-escape-sandbox'` and `'allow-modals'` values ({{bug(1190641)}}).
+- Support for microdata attributes and the Microdata API have been removed ({{bug(909633)}}).
+- The {{htmlattrxref("referrerpolicy", "a")}} attribute on the {{HTMLElement("a")}} element now supports the `'no-referrer-when-downgrade`' and `'origin-when-cross-origin'` ({{bug(1178337)}}).
+- The {{htmlattrxref("form", "label")}} content attribute of the {{HTMLElement("label")}} element has been removed. The {{domxref("HTMLLabelElement.form")}} property still exists, but now returns the form with which the label's control is associated, if there is a control (and if that control is associated with a form) ({{bug(1268852)}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+### CSS
 
-<ul>
- <li>The ES2015 {{jsxref("Global_Objects/Proxy/Proxy/getPrototypeOf", "getPrototypeOf()")}} and {{jsxref("Global_Objects/Proxy/Proxy/setPrototypeOf", "setPrototypeOf()")}} {{jsxref("Proxy")}} traps have been implemented ({{bug(888969)}}).</li>
- <li>The ES2015 {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}, {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}, {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}, and {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}} methods, and {{jsxref("RegExp.@@species", "RegExp[@@species]")}} getter have been implemented ({{bug(887016)}}).</li>
- <li>The deprecated, non-standard <code>flags</code> argument of <code>String.prototype.</code>{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} has been removed ({{bug(1108382)}}).</li>
- <li>The behavior of the {{jsxref("Date.parse()")}} method when parsing 2-digit years has been changed to be more interoperable with the Google Chrome browser ({{bug(1265136)}}).</li>
-</ul>
+- Added {{cssxref("background-position-x")}} and {{cssxref("background-position-y")}}, which allow separately specifying the horizontal and vertical offsets at which to draw a background image; these are components of {{cssxref("background-position")}} ({{bug("550426")}}).
+- Added support for the `round` and `space` keywords to {{cssxref("background-repeat")}} ({{bug("548372")}}).
+- On {{cssxref("background-clip")}}, the keyword `text` is now activated by default ({{bug(1264905)}}).
+- Added support for specifying colors with an alpha channel using 4- and 8-digit CSS hex [color](/en-US/docs/Web/CSS/color_value) values (#RRGGBBAA and #RGBA) ({{bug("567283")}}).
+- The pseudo-class {{cssxref(":dir")}} has been unprefixed ({{bug(859301)}}).
+- In our experimental implementation (not yet activated by default) of {{cssxref("clip-path")}}, we can now interpolate between {{cssxref("&lt;basic-shape&gt;")}} values ({{bug(1110460)}}).
+- Added the [`q` length unit](/en-US/docs/Web/CSS/length#q) ({{bug(1274526)}}).
+- The property {{cssxref("text-align-last")}} has been unprefixed ({{bug(1039541)}}).
+- Added support for {{cssxref("overflow-wrap")}}, replacing `word-wrap` that is still supported as an alternative name ({{bug(955857)}}).
+- Our experimental [CSS Grids](/en-US/docs/Web/CSS/CSS_Grid_Layout) implementation has been improved:
 
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
+  - Implemented {{cssxref("&lt;percentage&gt;")}} for the `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties ({{bug(1266268)}}).
+  - Implemented grid layout support for {{cssxref("align")}}, {{cssxref("justify-self")}}`:baseline` and `last-baseline` (aka "baseline self-alignment") ({{bug(1221525)}}).
+  - Implemented grid item baseline content alignment ({{bug(1256429)}}).
 
-<h4 id="DOM_HTML_DOM">DOM &amp; HTML DOM</h4>
+- Our experimental [CSS Masks](/en-US/docs/Web/CSS/CSS_Masking) implementation has been improved:
 
-<ul>
- <li>The method {{domxref("DOMTokenList.supports()")}} has been added ({{bug(1257849)}}).</li>
- <li>The {{domxref("DOMTokenList.replace()")}} method has been added ({{bug(1224186)}}).</li>
- <li>Leading <code>'?'</code> characters are now ignored in the parameter of the {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor ({{bug(1268361)}}).</li>
- <li>The value returned by {{domxref("URL.origin")}}, {{domxref("HTMLAnchorElement/origin", "HTMLAnchorElement.orgin")}}, and {{domxref("HTMLAnchorElement/origin", "HTMLAreaElement.origin")}} for URL using the <code>blob:</code> scheme is no longer incorrectly <code>null</code> but is instead the origin of the URL formed by removing the leading <code>blob:</code> ({{bug(1270451)}}).</li>
- <li>In prerendering mode, the {{domxref('Document.visibilityState')}} property now returns <code>'prerender'</code> ({{bug(1069772)}}).</li>
- <li>The {{domxref("isSecureContext")}} property has been implemented ({{bug(1162772)}}).</li>
- <li>The DOM4 {{domxref("ChildNode.before()")}}, {{domxref("ChildNode.after()")}}, {{domxref("ChildNode.replaceWith()")}}, {{domxref("Element.append")}} and {{domxref("Element.prepend")}} methods have been implemented ({{bug(911477)}}).</li>
- <li>The <code>TouchList.identifiedTouch()</code> method has been removed ({{bug(1188539)}}).</li>
- <li>By default, the <code>scrollbars</code> {{domxref("Window")}} feature is enabled when calling {{domxref("Window.open()")}}. In the past, while it was strongly recommended to enable it, it wasn't the default ({{bug(1257887)}}).</li>
- <li>Added the <em>experimental</em> and <em>non-standard</em> {{domxref("HTMLMediaElement.seekToNextFrame()")}} method, which allows seeking frame-by-frame through video content ({{bug(1235301)}}). While you're encouraged to experiment with this method to help us understand how useful it is, <em>do not use it in production code!</em></li>
- <li>The {{domxref("HTMLLabelElement.form")}} property now returns the form with which the label's control is associated, if there is a control (and if that control is associated with a form). Previously, labels were directly associated with forms using this property ({{bug(1268852)}}).</li>
- <li>Support for the third parameter of {{domxref("EventTarget.addEventListener()")}}, either a {{jsxref("Boolean")}} or an {{interface("EventListenerOptions")}} has been added ({{bug(1266164)}} and {{bug(1266066)}}).</li>
- <li>The audio volume related values for {{domxref("KeyboardEvent.key")}} have been renamed. <code>"VolumeDown"</code> is now <code>"AudioVolumeDown"</code>, <code>"VolumeUp"</code> is now <code>"AudioVolumeUp"</code>, and <code>"VolumeMute"</code> is now <code>"AudioVolumeMute".</code> This brings Firefox into alignment with the latest draft of the UI Events specification ({{bug(1272578)}}). See {{SectionOnPage("/en-US/docs/Web/API/KeyboardEvent/code", "Code values")}} for a full list of available key codes.</li>
- <li>The keys previously referred to as <code>"MozHomeScreen"</code>, <code>"MozCameraFocusAdjust"</code>, and <code>"MozPhoneCall"</code> now have official names in the UI Events specification: <code>"GoHome"</code>, <code>"CameraFocus"</code>, and <code>"Call"</code>. Firefox 49 has been updated to use the new names ({{bug(1272599)}}). See {{SectionOnPage("/en-US/docs/Web/API/KeyboardEvent/code", "Code values")}} for a full list of available key codes.</li>
- <li>The key values <code>"Separator"</code> and <code>"MediaSkip"</code> have been removed, as they were deprecated and unused ({{bug(1232919)}}).</li>
- <li>Key values and the corresponding key codes <code>"Hyper"</code> and <code>"Super"</code> have been added to represent these legacy modifier keys ({{bug(1232919)}}).</li>
- <li>Two key values for multimedia numeric keypad keys have been added: <code>"Key11"</code> and <code>"Key12"</code> ({{bug(1232919)}}).</li>
- <li>The following new key values have been added for audio control keys: <code>"AudioBassBoostToggle"</code>, <code>"AudioTrebleDown"</code>, and <code>"AudioTrebleUp"</code> ({{bug(123919)}}).</li>
- <li>Key values have been added for these microphone control keys: <code>"</code><code>MicrophoneToggle"</code>, <code>"</code><code>MicrophoneVolumeDown"</code>, <code>"</code><code>MicrophoneVolumeUp"</code>, and <code>"</code><code>MicrophoneVolumeMute"</code> ({{bug(123919)}}).</li>
- <li>New key values have been added to support speech recognition devices: "<code>SpeechCorrectionList"</code> and <code>"</code><code>SpeechInputToggle"</code> ({{bug(1232919)}}).</li>
- <li>New key values have been added to support special buttons on phones: <code>"</code><code>AppSwitch"</code>, <code>"</code><code>Call"</code>, <code>"</code><code>CameraFocus"</code>, <code>"</code><code>EndCall"</code>, <code>"</code><code>GoBack"</code>, <code>"</code><code>GoHome"</code>, <code>"</code><code>HeadsetHook"</code>, <code>"</code><code>LastNumberRedial"</code>, <code>"</code><code>Notification"</code>, <code>"</code><code>MannerMode"</code>, and <code>"</code><code>VoiceDial"</code> ({{bug(1232919)}}).</li>
- <li>These new application key values have been added: <code>"</code><code>LaunchContacts"</code> and <code>"</code><code>LaunchPhone"</code> ({{bug(1232919)}}).</li>
- <li>New key values have been added to support television devices: <code>"</code><code>TV3DMode"</code>, <code>"</code><code>TVAntennaCable"</code>, <code>"</code><code>TVAudioDescription"</code>, <code>"</code><code>TVAudioDescriptionMixDown"</code>, <code>"</code><code>TVAudioDescriptionMixUp"</code>, <code>"</code><code>TVContentsMenu"</code>, <code>"</code><code>TVDataService"</code>, <code>"</code><code>TVInput"</code>, <code>"</code><code>TVInputComponent1"</code>, <code>"</code><code>TVInputComponent2"</code>, <code>"</code><code>TVInputComposite1"</code>, <code>"</code><code>TVInputComposite2"</code>, <code>"</code><code>TVInputHDMI1"</code>, <code>"</code><code>TVInputHDMI2"</code>, <code>"</code><code>TVInputHDMI3"</code>, <code>"</code><code>TVInputHDMI4"</code>, <code>"</code><code>TVInputVGA1"</code>, <code>"</code><code>TVMediaContext"</code>, <code>"</code><code>TVNetwork"</code>, <code>"</code><code>TVNumberEntry"</code>, <code>"</code><code>TVRadioService"</code>, <code>"</code><code>TVSatellite"</code>, <code>"</code><code>TVSatelliteBS"</code>, <code>"</code><code>TVSatelliteCS"</code>, <code>"</code><code>TVSatelliteToggle"</code>, <code>"</code><code>TVTerrestrialAnalog"</code>, <code>"</code><code>TVTerrestrialDigital"</code>, <code>"</code><code>TVTimer"</code>, and <code>"</code><code>DVR"</code> ({{bug(1232919)}}).</li>
- <li>The key value <code>"</code><code>MediaSelect"</code> has been replaced with the standard <code>"</code><code>LaunchMediaPlayer"</code> key value ({{bug(1272592)}}).</li>
- <li>Additional media player key values have been added as well. These are <code>"</code><code>MediaAudioTrack"</code>, <code>"</code><code>MediaSkipBackward"</code>, <code>"</code><code>MediaSkipForward"</code>, <code>"</code><code>MediaStepBackward"</code>, <code>"</code><code>MediaStepForward"</code>, <code>"</code><code>MediaTopMenu"</code>, <code>"</code><code>NavigateIn"</code>, <code>"</code><code>NavigateNext"</code>, <code>"</code><code>NavigateOut"</code>, and <code>"</code><code>NavigatePrevious"</code> ({{bug(1232919)}}).</li>
-</ul>
+  - The {{cssxref("mask-origin")}} property now uses `border-box` instead of `padding-box` as initial value, to match the spec ({{bug(1258286)}}).
+  - The {{cssxref("mask-repeat")}} property now supports the `space` and `round` values ({{bug(1258626)}}).
+  - Fixed an issue preventing the {{cssxref("mask-position")}} attribute from being animated ({{bug(1273804)}}).
 
-<h4 id="Canvas">Canvas</h4>
+- The preference controlling {{cssxref("text-emphasis")}} has been removed, so support for this property can no longer be disabled ({{bug(1229609)}}).
 
-<ul>
- <li>The {{domxref("CanvasRenderingContext2D.filter")}} property, which provides support for adding filters to a canvas, is now activated by default and no longer needs to be enabled using a preference ({{bug(1173545)}}).</li>
-</ul>
+### JavaScript
 
-<h4 id="WebGL">WebGL</h4>
+- The ES2015 {{jsxref("Global_Objects/Proxy/Proxy/getPrototypeOf", "getPrototypeOf()")}} and {{jsxref("Global_Objects/Proxy/Proxy/setPrototypeOf", "setPrototypeOf()")}} {{jsxref("Proxy")}} traps have been implemented ({{bug(888969)}}).
+- The ES2015 {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}, {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}, {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}, and {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}} methods, and {{jsxref("RegExp.@@species", "RegExp[@@species]")}} getter have been implemented ({{bug(887016)}}).
+- The deprecated, non-standard `flags` argument of `String.prototype.`{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} has been removed ({{bug(1108382)}}).
+- The behavior of the {{jsxref("Date.parse()")}} method when parsing 2-digit years has been changed to be more interoperable with the Google Chrome browser ({{bug(1265136)}}).
 
-<ul>
- <li>The {{domxref("EXT_color_buffer_float")}} {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} extension has been implemented ({{bug(1129332)}}).</li>
- <li>The {{Event("webglcontextcreationerror")}} event, which is sent when a WebGL context creation attempt fails, has been implemented ({{bug(1271478)}}). Use this to help understand what went wrong, both for debugging and for production error handling.</li>
-</ul>
+### Interfaces/APIs/DOM
 
-<h4 id="IndexedDB">IndexedDB</h4>
+#### DOM & HTML DOM
 
-<ul>
- <li>You can now rename IndexedDB indexes; the {{domxref("IDBIndex.name")}} property is no longer read-only ({{bug(1118028)}}).</li>
- <li>You can also now rename {{domxref("IDBObjectStore")}}s; the {{domxref("IDBObjectStore.name")}} property is no longer read-only ({{bug(1118028)}}).</li>
-</ul>
+- The method {{domxref("DOMTokenList.supports()")}} has been added ({{bug(1257849)}}).
+- The {{domxref("DOMTokenList.replace()")}} method has been added ({{bug(1224186)}}).
+- Leading `'?'` characters are now ignored in the parameter of the {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor ({{bug(1268361)}}).
+- The value returned by {{domxref("URL.origin")}}, {{domxref("HTMLAnchorElement/origin", "HTMLAnchorElement.orgin")}}, and {{domxref("HTMLAnchorElement/origin", "HTMLAreaElement.origin")}} for URL using the `blob:` scheme is no longer incorrectly `null` but is instead the origin of the URL formed by removing the leading `blob:` ({{bug(1270451)}}).
+- In prerendering mode, the {{domxref('Document.visibilityState')}} property now returns `'prerender'` ({{bug(1069772)}}).
+- The {{domxref("isSecureContext")}} property has been implemented ({{bug(1162772)}}).
+- The DOM4 {{domxref("ChildNode.before()")}}, {{domxref("ChildNode.after()")}}, {{domxref("ChildNode.replaceWith()")}}, {{domxref("Element.append")}} and {{domxref("Element.prepend")}} methods have been implemented ({{bug(911477)}}).
+- The `TouchList.identifiedTouch()` method has been removed ({{bug(1188539)}}).
+- By default, the `scrollbars` {{domxref("Window")}} feature is enabled when calling {{domxref("Window.open()")}}. In the past, while it was strongly recommended to enable it, it wasn't the default ({{bug(1257887)}}).
+- Added the _experimental_ and _non-standard_ {{domxref("HTMLMediaElement.seekToNextFrame()")}} method, which allows seeking frame-by-frame through video content ({{bug(1235301)}}). While you're encouraged to experiment with this method to help us understand how useful it is, _do not use it in production code!_
+- The {{domxref("HTMLLabelElement.form")}} property now returns the form with which the label's control is associated, if there is a control (and if that control is associated with a form). Previously, labels were directly associated with forms using this property ({{bug(1268852)}}).
+- Support for the third parameter of {{domxref("EventTarget.addEventListener()")}}, either a {{jsxref("Boolean")}} or an {{interface("EventListenerOptions")}} has been added ({{bug(1266164)}} and {{bug(1266066)}}).
+- The audio volume related values for {{domxref("KeyboardEvent.key")}} have been renamed. `"VolumeDown"` is now `"AudioVolumeDown"`, `"VolumeUp"` is now `"AudioVolumeUp"`, and `"VolumeMute"` is now `"AudioVolumeMute".` This brings Firefox into alignment with the latest draft of the UI Events specification ({{bug(1272578)}}). See {{SectionOnPage("/en-US/docs/Web/API/KeyboardEvent/code", "Code values")}} for a full list of available key codes.
+- The keys previously referred to as `"MozHomeScreen"`, `"MozCameraFocusAdjust"`, and `"MozPhoneCall"` now have official names in the UI Events specification: `"GoHome"`, `"CameraFocus"`, and `"Call"`. Firefox 49 has been updated to use the new names ({{bug(1272599)}}). See {{SectionOnPage("/en-US/docs/Web/API/KeyboardEvent/code", "Code values")}} for a full list of available key codes.
+- The key values `"Separator"` and `"MediaSkip"` have been removed, as they were deprecated and unused ({{bug(1232919)}}).
+- Key values and the corresponding key codes `"Hyper"` and `"Super"` have been added to represent these legacy modifier keys ({{bug(1232919)}}).
+- Two key values for multimedia numeric keypad keys have been added: `"Key11"` and `"Key12"` ({{bug(1232919)}}).
+- The following new key values have been added for audio control keys: `"AudioBassBoostToggle"`, `"AudioTrebleDown"`, and `"AudioTrebleUp"` ({{bug(123919)}}).
+- Key values have been added for these microphone control keys: ` "``MicrophoneToggle" `, ` "``MicrophoneVolumeDown" `, ` "``MicrophoneVolumeUp" `, and ` "``MicrophoneVolumeMute" ` ({{bug(123919)}}).
+- New key values have been added to support speech recognition devices: "`SpeechCorrectionList"` and ` "``SpeechInputToggle" ` ({{bug(1232919)}}).
+- New key values have been added to support special buttons on phones: ` "``AppSwitch" `, ` "``Call" `, ` "``CameraFocus" `, ` "``EndCall" `, ` "``GoBack" `, ` "``GoHome" `, ` "``HeadsetHook" `, ` "``LastNumberRedial" `, ` "``Notification" `, ` "``MannerMode" `, and ` "``VoiceDial" ` ({{bug(1232919)}}).
+- These new application key values have been added: ` "``LaunchContacts" ` and ` "``LaunchPhone" ` ({{bug(1232919)}}).
+- New key values have been added to support television devices: ` "``TV3DMode" `, ` "``TVAntennaCable" `, ` "``TVAudioDescription" `, ` "``TVAudioDescriptionMixDown" `, ` "``TVAudioDescriptionMixUp" `, ` "``TVContentsMenu" `, ` "``TVDataService" `, ` "``TVInput" `, ` "``TVInputComponent1" `, ` "``TVInputComponent2" `, ` "``TVInputComposite1" `, ` "``TVInputComposite2" `, ` "``TVInputHDMI1" `, ` "``TVInputHDMI2" `, ` "``TVInputHDMI3" `, ` "``TVInputHDMI4" `, ` "``TVInputVGA1" `, ` "``TVMediaContext" `, ` "``TVNetwork" `, ` "``TVNumberEntry" `, ` "``TVRadioService" `, ` "``TVSatellite" `, ` "``TVSatelliteBS" `, ` "``TVSatelliteCS" `, ` "``TVSatelliteToggle" `, ` "``TVTerrestrialAnalog" `, ` "``TVTerrestrialDigital" `, ` "``TVTimer" `, and ` "``DVR" ` ({{bug(1232919)}}).
+- The key value ` "``MediaSelect" ` has been replaced with the standard ` "``LaunchMediaPlayer" ` key value ({{bug(1272592)}}).
+- Additional media player key values have been added as well. These are ` "``MediaAudioTrack" `, ` "``MediaSkipBackward" `, ` "``MediaSkipForward" `, ` "``MediaStepBackward" `, ` "``MediaStepForward" `, ` "``MediaTopMenu" `, ` "``NavigateIn" `, ` "``NavigateNext" `, ` "``NavigateOut" `, and ` "``NavigatePrevious" ` ({{bug(1232919)}}).
 
-<h4 id="Service_Workers_and_related">Service Workers and related</h4>
+#### Canvas
 
-<ul>
- <li>The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>'s {{domxref("Response")}} object now implements the {{domxref("Response.redirected", "redirected")}} property, which indicates whether or not the response is for a request which was redirected. Please review the security related notes in the documentation before using this property ({{bug(1243792)}}).</li>
- <li>In the <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a>, Firefox no longer supports the 'push' <code>PermissionDescriptor</code> dictionary type (referred to in the spec as <code>PushPermissionDescriptor</code>); this is because Firefox relies on a quota system for controlling the <code>userVisibleOnly</code> status instead, and was throwing an error when it encountered a <code>PushPermissionDescriptor</code> instance ({{bug(1266821)}}). With this dictionary removed, Firefox now ignores it.</li>
-</ul>
+- The {{domxref("CanvasRenderingContext2D.filter")}} property, which provides support for adding filters to a canvas, is now activated by default and no longer needs to be enabled using a preference ({{bug(1173545)}}).
 
-<h4 id="Media_Streams">Media Streams</h4>
+#### WebGL
 
-<ul>
- <li>In the past, it was possible for a call to {{domxref("MediaDevices.getUserMedia()")}} which requests both audio and video to succeed in cases where the user has only one of the two types of hardware available. This has been fixed ({{bug(802326)}}).</li>
- <li>In prior versions of Firefox, it was possible for a call to {{domxref("MediaDevices.getUserMedia()")}} which requests both audio and video to succeed even though the user denied access to one but not both of the matching devices. This has been fixed ({{bug(802326)}}). This involves minor user interface changes as well, to remove the options to choose "No audio" or "No video" when the user is prompted for permissions.</li>
- <li>The {{domxref("MediaStream.getTrackById()")}} method has been implemented ({{bug(1208390)}}).</li>
-</ul>
+- The {{domxref("EXT_color_buffer_float")}} {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} extension has been implemented ({{bug(1129332)}}).
+- The {{Event("webglcontextcreationerror")}} event, which is sent when a WebGL context creation attempt fails, has been implemented ({{bug(1271478)}}). Use this to help understand what went wrong, both for debugging and for production error handling.
 
-<h4 id="WebRTC">WebRTC</h4>
+#### IndexedDB
 
-<ul>
- <li>The {{domxref("RTCPeerConnection.addTrack()")}} method has been updated to allow tracks which are not components of the specified streams to be added to the connection. Instead, the streams are used to group tracks on the receiving end of the connection ({{bug(1271669)}}).</li>
-</ul>
+- You can now rename IndexedDB indexes; the {{domxref("IDBIndex.name")}} property is no longer read-only ({{bug(1118028)}}).
+- You can also now rename {{domxref("IDBObjectStore")}}s; the {{domxref("IDBObjectStore.name")}} property is no longer read-only ({{bug(1118028)}}).
 
-<h4 id="New_APIs">New APIs</h4>
+#### Service Workers and related
 
-<ul>
- <li>The {{domxref("PerformanceObserver")}} API is now activated by default on Nightly. It is not available by default in other versions of Firefox 49 ({{bug(1271487)}}).</li>
-</ul>
+- The [Fetch API](/en-US/docs/Web/API/Fetch_API)'s {{domxref("Response")}} object now implements the {{domxref("Response.redirected", "redirected")}} property, which indicates whether or not the response is for a request which was redirected. Please review the security related notes in the documentation before using this property ({{bug(1243792)}}).
+- In the [Permissions API](/en-US/docs/Web/API/Permissions_API), Firefox no longer supports the 'push' `PermissionDescriptor` dictionary type (referred to in the spec as `PushPermissionDescriptor`); this is because Firefox relies on a quota system for controlling the `userVisibleOnly` status instead, and was throwing an error when it encountered a `PushPermissionDescriptor` instance ({{bug(1266821)}}). With this dictionary removed, Firefox now ignores it.
 
-<h4 id="Others">Others</h4>
+#### Media Streams
 
-<ul>
- <li>{{domxref("XMLHttpRequest.getResponseHeader()")}} and {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} return empty headers in case the preference <code>network.http.keep_empty_response_headers_as_empty_string</code> is set to <code>true</code> ({{bug(669259)}}).</li>
- <li>The Firefox OS-only <a href="/en-US/docs/Archive/Firefox_OS/API/Data_Store_API">Data Store API</a> has been removed ({{bug(1261009)}}).</li>
- <li>The <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a> event handlers {{domxref("Document.onfullscreenchange")}} and {{domxref("Document.onfullscreenerror")}} have been removed from {{domxref("Element")}} as they were never fired there; the prefixed versions of these event handlers have been kept there for compatibility purposes, however ({{bug(1270386)}}). Note that this is not yet activated by default, but is behind the <code>full-screen-api.unprefix.enabled</code> preference ({{bug(1268749)}}).</li>
- <li>The obsolete <code>Document.mozFullScreen</code> property has been unprefixed to {{domxref("Document.fullscreen")}} {{bug(1269157)}}. Note that this is not yet activated by default by behind the <code>full-screen-api.unprefix.enabled</code> preference ({{bug(1268749)}}).</li>
- <li>The read-only properties {{domxref("Document/fullscreenElement", "Document.fullscreenElement")}} and {{domxref("Document.fullscreenEnabled")}} no longer throw an exception if an attempt is made to change their values; instead, the new value is silently ignored and the setter function is a no-op ({{bug(1269798)}}).</li>
- <li>Any kind of data can now be retrieved from the clipboard using {{domxref("DataTransfer.getData()")}}: previously, only data of certain MIME types were supported {{bug(860857)}}.</li>
- <li>Our implementation of the Frame Timing API, consisting of the two interfaces <code>PerformanceCompositeTiming</code> and <code>PerformanceRenderTiming</code>, has been removed as the spec has been completely rewritten ({{bug(1271846)}}).</li>
- <li>To match the spec, the {{domxref("VTTCue.positionAlign")}} property now returns a <code>PositionAlign</code> enum instead of an <code>Align</code> enum ({{bug(1276129)}}).</li>
- <li>The speech synthesis part of <a href="/en-US/docs/Web/API/Web_Speech_API#speech_synthesis">Web Speech API</a> is now activated by default ({{bug(1268633)}}).</li>
- <li>The <a href="/en-US/docs/Web/API/Performance_Timeline">Performance Timeline API</a> is now available by default in Nightly (though not in Aurora, Beta or Release).</li>
- <li>The {{event("install")}} event, and the {{domxref("Window/onappinstalled", "Window.oninstall")}} event handler, are now supported for <a href="/en-US/docs/Web/Manifest">Web Manifests</a> ({{bug(1265279)}}).</li>
- <li>When using the {{domxref("BaseAudioContext/createPeriodicWave", "AudioContext.createPeriodicWave()")}} method of the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>, you can now specify whether the resulting periodic wave should be normalized by including a dictionary object as the third parameter, which includes a single parameter — <code>{disableNormalization: true}</code> ({{bug(1265405)}}).</li>
- <li>In the WebVTT API, {{domxref("VTTCue.positionAlign")}} now correctly returns a <code>PositionAlignSetting</code> enum as per spec; previously it returned an <code>AlignSetting</code> enum ({{bug(1276129)}}).</li>
- <li>The Speech Synthesis part of the Web Speech API is now enabled by default across all desktop browsers ({{bug(1268633)}}).</li>
- <li>The {{domxref("Animation.Animation()", "Animation()")}} constructor of the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> now accepts a null timeline ({{bug(1096776)}}).</li>
- <li>The {{domxref("KeyframeEffect")}} property {{domxref("KeyframeEffect.target", "target")}} is now supported in Firefox, if you have enabled <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations</a> ({{bug(1067769)}}).</li>
-</ul>
+- In the past, it was possible for a call to {{domxref("MediaDevices.getUserMedia()")}} which requests both audio and video to succeed in cases where the user has only one of the two types of hardware available. This has been fixed ({{bug(802326)}}).
+- In prior versions of Firefox, it was possible for a call to {{domxref("MediaDevices.getUserMedia()")}} which requests both audio and video to succeed even though the user denied access to one but not both of the matching devices. This has been fixed ({{bug(802326)}}). This involves minor user interface changes as well, to remove the options to choose "No audio" or "No video" when the user is prompted for permissions.
+- The {{domxref("MediaStream.getTrackById()")}} method has been implemented ({{bug(1208390)}}).
 
-<h3 id="MathML">MathML</h3>
+#### WebRTC
 
-<p><em>No change.</em></p>
+- The {{domxref("RTCPeerConnection.addTrack()")}} method has been updated to allow tracks which are not components of the specified streams to be added to the connection. Instead, the streams are used to group tracks on the receiving end of the connection ({{bug(1271669)}}).
 
-<h3 id="SVG">SVG</h3>
+#### New APIs
 
-<ul>
- <li>Removed support for the deprecated {{SVGElement('altGlyph')}}, {{SVGElement('altGlyphDef')}} and {{SVGElement('altGlyphItem')}} elements ({{bug(1260032)}}).</li>
-</ul>
+- The {{domxref("PerformanceObserver")}} API is now activated by default on Nightly. It is not available by default in other versions of Firefox 49 ({{bug(1271487)}}).
 
-<h3 id="AudioVideo">Audio/Video</h3>
+#### Others
 
-<p><em>No change.</em></p>
+- {{domxref("XMLHttpRequest.getResponseHeader()")}} and {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} return empty headers in case the preference `network.http.keep_empty_response_headers_as_empty_string` is set to `true` ({{bug(669259)}}).
+- The Firefox OS-only [Data Store API](/en-US/docs/Archive/Firefox_OS/API/Data_Store_API) has been removed ({{bug(1261009)}}).
+- The [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) event handlers {{domxref("Document.onfullscreenchange")}} and {{domxref("Document.onfullscreenerror")}} have been removed from {{domxref("Element")}} as they were never fired there; the prefixed versions of these event handlers have been kept there for compatibility purposes, however ({{bug(1270386)}}). Note that this is not yet activated by default, but is behind the `full-screen-api.unprefix.enabled` preference ({{bug(1268749)}}).
+- The obsolete `Document.mozFullScreen` property has been unprefixed to {{domxref("Document.fullscreen")}} {{bug(1269157)}}. Note that this is not yet activated by default by behind the `full-screen-api.unprefix.enabled` preference ({{bug(1268749)}}).
+- The read-only properties {{domxref("Document/fullscreenElement", "Document.fullscreenElement")}} and {{domxref("Document.fullscreenEnabled")}} no longer throw an exception if an attempt is made to change their values; instead, the new value is silently ignored and the setter function is a no-op ({{bug(1269798)}}).
+- Any kind of data can now be retrieved from the clipboard using {{domxref("DataTransfer.getData()")}}: previously, only data of certain MIME types were supported {{bug(860857)}}.
+- Our implementation of the Frame Timing API, consisting of the two interfaces `PerformanceCompositeTiming` and `PerformanceRenderTiming`, has been removed as the spec has been completely rewritten ({{bug(1271846)}}).
+- To match the spec, the {{domxref("VTTCue.positionAlign")}} property now returns a `PositionAlign` enum instead of an `Align` enum ({{bug(1276129)}}).
+- The speech synthesis part of [Web Speech API](/en-US/docs/Web/API/Web_Speech_API#speech_synthesis) is now activated by default ({{bug(1268633)}}).
+- The [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline) is now available by default in Nightly (though not in Aurora, Beta or Release).
+- The {{event("install")}} event, and the {{domxref("Window/onappinstalled", "Window.oninstall")}} event handler, are now supported for [Web Manifests](/en-US/docs/Web/Manifest) ({{bug(1265279)}}).
+- When using the {{domxref("BaseAudioContext/createPeriodicWave", "AudioContext.createPeriodicWave()")}} method of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), you can now specify whether the resulting periodic wave should be normalized by including a dictionary object as the third parameter, which includes a single parameter — `{disableNormalization: true}` ({{bug(1265405)}}).
+- In the WebVTT API, {{domxref("VTTCue.positionAlign")}} now correctly returns a `PositionAlignSetting` enum as per spec; previously it returned an `AlignSetting` enum ({{bug(1276129)}}).
+- The Speech Synthesis part of the Web Speech API is now enabled by default across all desktop browsers ({{bug(1268633)}}).
+- The {{domxref("Animation.Animation()", "Animation()")}} constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) now accepts a null timeline ({{bug(1096776)}}).
+- The {{domxref("KeyframeEffect")}} property {{domxref("KeyframeEffect.target", "target")}} is now supported in Firefox, if you have enabled [Web Animations](/en-US/docs/Web/API/Web_Animations_API) ({{bug(1067769)}}).
 
-<h3 id="Plugins_and_Flash">Plugins and Flash</h3>
+### MathML
 
-<p>Beginning in Firefox 49, Firefox, by default, blocks certain kinds of Flash content that aren't necessary for sites to function well. This behavior, controlled by the preference <code>browser.safebrowsing.blockedURIs.enabled</code>, helps to improve the performance of sites and Firefox in general without having significant impact on site usability. It also helps improve stability of the browsing experience by eliminating a major cause of crashes. The blocked Flash modules include several used just for fingerprinting purposes, as well as a number of "supercookie" modules, and in the future may be expanded to include more types of blocked modules. See {{bug(1275591)}} for details.</p>
+_No change._
 
-<p>This marks the next step in the journey toward a plugin-free future. HTML is very close to the point where plugins will no longer be needed to get the job done.</p>
+### SVG
 
-<h2 id="HTTP">HTTP</h2>
+- Removed support for the deprecated {{SVGElement('altGlyph')}}, {{SVGElement('altGlyphDef')}} and {{SVGElement('altGlyphItem')}} elements ({{bug(1260032)}}).
 
-<ul>
- <li>The <code><a href="/en-US/docs/Web/HTTP/Headers/Cache-Control">Cache-Control: immutable</a></code> directive has been implemented ({{bug(1267474)}}). See also this <a href="https://bitsup.blogspot.de/2016/05/cache-control-immutable.html">blog post</a> for more information.</li>
- <li>The {{CSP("require-sri-for")}} {{HTTPHeader("Content-Security-Policy")}} has been implemented ({{bug(1265318)}}).</li>
-</ul>
+### Audio/Video
 
-<h2 id="Networking">Networking</h2>
+_No change._
 
-<ul>
- <li>The <a href="/en-US/docs/Mozilla/Projects/Necko/Proxy_Auto-Configuration_(PAC)_file">Proxy Auto-Configuration (PAC)</a> implementation has been updated. Now <code>weekdayRange</code>, <code>dateRange</code>, and <code>timeRange</code> support "reversed ranges", for example, <code>weekdayRange("SAT", "MON")</code> will evaluate <code>true</code> if the current day is Saturday, Sunday, or Monday ({{bug(1251332)}}).</li>
-</ul>
+### Plugins and Flash
 
-<h2 id="Security">Security</h2>
+Beginning in Firefox 49, Firefox, by default, blocks certain kinds of Flash content that aren't necessary for sites to function well. This behavior, controlled by the preference `browser.safebrowsing.blockedURIs.enabled`, helps to improve the performance of sites and Firefox in general without having significant impact on site usability. It also helps improve stability of the browsing experience by eliminating a major cause of crashes. The blocked Flash modules include several used just for fingerprinting purposes, as well as a number of "supercookie" modules, and in the future may be expanded to include more types of blocked modules. See {{bug(1275591)}} for details.
 
-<ul>
- <li>The {{domxref("isSecureContext")}} property, indicating whether a context is capable of using features that require <a href="/en-US/docs/Web/Security/Secure_Contexts">secure contexts</a>, has been implemented ({{bug(1162772)}}).</li>
-</ul>
+This marks the next step in the journey toward a plugin-free future. HTML is very close to the point where plugins will no longer be needed to get the job done.
 
-<h2 id="Compatibility">Compatibility</h2>
+## HTTP
 
-<p>In order to improve compatibility with existing content, Firefox now accepts some webkit prefixed properties and attributes.</p>
+- The [`Cache-Control: immutable`](/en-US/docs/Web/HTTP/Headers/Cache-Control) directive has been implemented ({{bug(1267474)}}). See also this [blog post](https://bitsup.blogspot.de/2016/05/cache-control-immutable.html) for more information.
+- The {{CSP("require-sri-for")}} {{HTTPHeader("Content-Security-Policy")}} has been implemented ({{bug(1265318)}}).
 
-<ul>
- <li>    The following properties now also work prefixed with <code>-webkit</code>:
+## Networking
 
-  <ul>
-   <li><code>-webkit-align-items</code></li>
-   <li><code>-webkit-align-content</code></li>
-   <li><code>-webkit-align-self</code></li>
-   <li><code>-webkit-animation</code></li>
-   <li><code>-webkit-animation-delay</code></li>
-   <li><code>-webkit-animation-direction</code></li>
-   <li><code>-webkit-animation-duration</code></li>
-   <li><code>-webkit-animation-fill-mode</code></li>
-   <li><code>-webkit-animation-iteration-count</code></li>
-   <li><code>-webkit-animation-name</code></li>
-   <li><code>-webkit-animation-play-state</code></li>
-   <li><code>-webkit-animation-timing-function</code></li>
-   <li><code>-webkit-backface-visibility</code></li>
-   <li><code>-webkit-background-clip</code></li>
-   <li><code>-webkit-background-origin</code></li>
-   <li><code>-webkit-background-size</code></li>
-   <li><code>-webkit-border-bottom-left-radius</code></li>
-   <li><code>-webkit-border-bottom-right-radius</code></li>
-   <li><code>-webkit-border-image</code></li>
-   <li><code>-webkit-border-top-left-radius</code></li>
-   <li><code>-webkit-border-top-right-radius</code></li>
-   <li><code>-webkit-border-radius</code></li>
-   <li><code>-webkit-box-shadow</code></li>
-   <li><code>-webkit-filter</code></li>
-   <li><code>-webkit-flex</code></li>
-   <li><code>-webkit-flex-basis</code></li>
-   <li><code>-webkit-flex-direction</code></li>
-   <li><code>-webkit-flex-flow</code></li>
-   <li><code>-webkit-flex-grow</code></li>
-   <li><code>-webkit-flex-shrink</code></li>
-   <li><code>-webkit-flex-wrap</code></li>
-   <li><code>-webkit-justify-content</code></li>
-   <li><code>-webkit-order</code></li>
-   <li><code>-webkit-perspective</code></li>
-   <li><code>-webkit-perspective-origin</code></li>
-   <li><code>-webkit-text-size-adjust</code></li>
-   <li><code>-webkit-transform</code></li>
-   <li><code>-webkit-transform-origin</code></li>
-   <li><code>-webkit-transform-style</code></li>
-   <li><code>-webkit-transition</code></li>
-   <li><code>-webkit-transition-delay</code></li>
-   <li><code>-webkit-transition-duration</code></li>
-   <li><code>-webkit-transition-property</code></li>
-   <li><code>-webkit-transition-timing-function</code></li>
-   <li><code>-webkit-user-select</code></li>
-  </ul>
- </li>
- <li>The following properties map to the equivalent prefixed property:
-  <ul>
-   <li><code>-webkit-box-flex</code></li>
-   <li><code>-webkit-box-ordinal-group</code></li>
-   <li><code>-webkit-box-orient</code></li>
-   <li><code>-webkit-box-align</code></li>
-   <li><code>-webkit-box-pack</code></li>
-  </ul>
- </li>
- <li>For {{cssxref("&lt;image&gt;")}} values:
-  <ul>
-   <li>The following functions map to their unprefixed equivalents: <code>-webkit-linear-gradient()</code>, <code>-webkit-radial-gradient()</code>, <code>-webkit-repeating-linear-gradient()</code>, and <code>-webkit-repeating-radial-gradient()</code>.</li>
-   <li>The outdated <code>-webkit-gradient</code> is supported (and translated to a regular gradient)</li>
-  </ul>
- </li>
- <li>The following {{cssxref("display")}} values are translated:
-  <ul>
-   <li><code>-webkit-box</code> to <code>-moz-box</code></li>
-   <li><code>-webkit-flex</code> to <code>flex</code></li>
-   <li><code>-webkit-inline-box</code> to <code>inline-flex</code></li>
-   <li><code>-webkit-inline-flex</code> to <code>-moz-inline-flex</code></li>
-  </ul>
- </li>
- <li> The following properties are supported (and don't map to any unprefixed equivalent):
-  <ul>
-   <li>{{cssxref("-webkit-text-fill-color")}}</li>
-   <li>{{cssxref("-webkit-text-stroke-color")}}</li>
-   <li>{{cssxref("-webkit-text-stroke-width")}}</li>
-   <li>{{cssxref("-webkit-text-stroke")}}</li>
-  </ul>
- </li>
- <li>The <code>WebKitCSSMatrix</code> interface is an alias of {{domxref("DOMMatrix")}}</li>
- <li>The following media query features have been implemented:
-  <ul>
-   <li><code>-webkit-min-device-pixel-ratio</code> as an alias of <code><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#resolution">min-resolution</a></code> with the same value (in <code>dppx)</code>, though this feature is <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1237720">disabled by default</a> (behind about:config pref <code>layout.css.prefixes.device-pixel-ratio-webkit</code>)</li>
-   <li><code>-webkit-max-device-pixel-ratio</code> as an alias of <code><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#resolution">max-resolution</a></code> of the same value (in <code>dppx</code>); this feature is also disabled by default, behind the same about:config pref.</li>
-   <li><code><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#-webkit-transform-3d">-webkit-transform-3d</a></code> always matching, indicating 3d transform support.</li>
-  </ul>
- </li>
-</ul>
+- The [Proxy Auto-Configuration (PAC)](</en-US/docs/Mozilla/Projects/Necko/Proxy_Auto-Configuration_(PAC)_file>) implementation has been updated. Now `weekdayRange`, `dateRange`, and `timeRange` support "reversed ranges", for example, `weekdayRange("SAT", "MON")` will evaluate `true` if the current day is Saturday, Sunday, or Monday ({{bug(1251332)}}).
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
+## Security
 
-<h3 id="WebExtensions">WebExtensions</h3>
+- The {{domxref("isSecureContext")}} property, indicating whether a context is capable of using features that require [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), has been implemented ({{bug(1162772)}}).
 
-<ul>
- <li>Support for the {{WebExtAPIRef("history")}} has been added. This provides access to the browser history, with methods available for searching the history, getting information about previously-visited pages, and adding and removing history entries.</li>
- <li>Added the {{WebExtAPIRef("tabs.removeCSS()")}} method to the tabs API. This method lets you remove CSS which was previously injected by calling {{WebExtAPIRef("tabs.insertCSS()")}}.</li>
-</ul>
+## Compatibility
 
-<h3 id="Interfaces">Interfaces</h3>
+In order to improve compatibility with existing content, Firefox now accepts some webkit prefixed properties and attributes.
 
-<ul>
- <li>In {{domxref("EventTarget.addEventListener()")}}, the value <code>mozSystemGroup</code>,  active only in code running in XBL or in Firefox's chrome, is a {{jsxref("Boolean")}} which indicates if the listener is added to the system group. ({{bug(1274520)}})</li>
-</ul>
+- The following properties now also work prefixed with `-webkit`:
 
-<h3 id="Other">Other</h3>
+  - `-webkit-align-items`
+  - `-webkit-align-content`
+  - `-webkit-align-self`
+  - `-webkit-animation`
+  - `-webkit-animation-delay`
+  - `-webkit-animation-direction`
+  - `-webkit-animation-duration`
+  - `-webkit-animation-fill-mode`
+  - `-webkit-animation-iteration-count`
+  - `-webkit-animation-name`
+  - `-webkit-animation-play-state`
+  - `-webkit-animation-timing-function`
+  - `-webkit-backface-visibility`
+  - `-webkit-background-clip`
+  - `-webkit-background-origin`
+  - `-webkit-background-size`
+  - `-webkit-border-bottom-left-radius`
+  - `-webkit-border-bottom-right-radius`
+  - `-webkit-border-image`
+  - `-webkit-border-top-left-radius`
+  - `-webkit-border-top-right-radius`
+  - `-webkit-border-radius`
+  - `-webkit-box-shadow`
+  - `-webkit-filter`
+  - `-webkit-flex`
+  - `-webkit-flex-basis`
+  - `-webkit-flex-direction`
+  - `-webkit-flex-flow`
+  - `-webkit-flex-grow`
+  - `-webkit-flex-shrink`
+  - `-webkit-flex-wrap`
+  - `-webkit-justify-content`
+  - `-webkit-order`
+  - `-webkit-perspective`
+  - `-webkit-perspective-origin`
+  - `-webkit-text-size-adjust`
+  - `-webkit-transform`
+  - `-webkit-transform-origin`
+  - `-webkit-transform-style`
+  - `-webkit-transition`
+  - `-webkit-transition-delay`
+  - `-webkit-transition-duration`
+  - `-webkit-transition-property`
+  - `-webkit-transition-timing-function`
+  - `-webkit-user-select`
 
-<p><em>No change.</em></p>
+- The following properties map to the equivalent prefixed property:
 
-<h2 id="Older_versions">Older versions</h2>
+  - `-webkit-box-flex`
+  - `-webkit-box-ordinal-group`
+  - `-webkit-box-orient`
+  - `-webkit-box-align`
+  - `-webkit-box-pack`
 
-<p>{{Firefox_for_developers(48)}}</p>
+- For {{cssxref("&lt;image&gt;")}} values:
+
+  - The following functions map to their unprefixed equivalents: `-webkit-linear-gradient()`, `-webkit-radial-gradient()`, `-webkit-repeating-linear-gradient()`, and `-webkit-repeating-radial-gradient()`.
+  - The outdated `-webkit-gradient` is supported (and translated to a regular gradient)
+
+- The following {{cssxref("display")}} values are translated:
+
+  - `-webkit-box` to `-moz-box`
+  - `-webkit-flex` to `flex`
+  - `-webkit-inline-box` to `inline-flex`
+  - `-webkit-inline-flex` to `-moz-inline-flex`
+
+- The following properties are supported (and don't map to any unprefixed equivalent):
+
+  - {{cssxref("-webkit-text-fill-color")}}
+  - {{cssxref("-webkit-text-stroke-color")}}
+  - {{cssxref("-webkit-text-stroke-width")}}
+  - {{cssxref("-webkit-text-stroke")}}
+
+- The `WebKitCSSMatrix` interface is an alias of {{domxref("DOMMatrix")}}
+- The following media query features have been implemented:
+
+  - `-webkit-min-device-pixel-ratio` as an alias of [`min-resolution`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#resolution) with the same value (in `dppx)`, though this feature is [disabled by default](https://bugzilla.mozilla.org/show_bug.cgi?id=1237720) (behind about:config pref `layout.css.prefixes.device-pixel-ratio-webkit`)
+  - `-webkit-max-device-pixel-ratio` as an alias of [`max-resolution`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#resolution) of the same value (in `dppx`); this feature is also disabled by default, behind the same about:config pref.
+  - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#-webkit-transform-3d) always matching, indicating 3d transform support.
+
+## Changes for add-on and Mozilla developers
+
+### WebExtensions
+
+- Support for the {{WebExtAPIRef("history")}} has been added. This provides access to the browser history, with methods available for searching the history, getting information about previously-visited pages, and adding and removing history entries.
+- Added the {{WebExtAPIRef("tabs.removeCSS()")}} method to the tabs API. This method lets you remove CSS which was previously injected by calling {{WebExtAPIRef("tabs.insertCSS()")}}.
+
+### Interfaces
+
+- In {{domxref("EventTarget.addEventListener()")}}, the value `mozSystemGroup`,  active only in code running in XBL or in Firefox's chrome, is a {{jsxref("Boolean")}} which indicates if the listener is added to the system group. ({{bug(1274520)}})
+
+### Other
+
+_No change._
+
+## Older versions
+
+{{Firefox_for_developers(48)}}

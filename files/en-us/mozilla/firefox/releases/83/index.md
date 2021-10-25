@@ -7,62 +7,50 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 83 that will affect developers. Firefox 83 was released on November 17, 2020.</p>
+This article provides information about the changes in Firefox 83 that will affect developers. Firefox 83 was released on November 17, 2020.
 
-<div class="note">
-  <p><strong>Note:</strong> See also <a href="https://hacks.mozilla.org/2020/11/firefox-83-is-upon-us/">Firefox 83 is upon us</a> on Mozilla hacks</p>
-</div>
+> **Note:** See also [Firefox 83 is upon us](https://hacks.mozilla.org/2020/11/firefox-83-is-upon-us/) on Mozilla hacks
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+### Developer Tools
 
-<ul>
- <li>When using the <code>:screenshot</code> <a href="/en-US/docs/Tools/Web_Console/Helpers">helper command</a> in the <a href="/en-US/docs/Tools/Web_Console">Web Console</a>, the <code>--dpr</code> parameter is no longer ignored when taking a fullscreen screenshot using <code>--fullpage</code> ({{bug(1645284)}}).</li>
- <li>Developers can use the <code>scroll</code> badge in the <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a> to <a href="/en-US/docs/Tools/Page_Inspector/How_to/Debug_Scrollable_Overflow">Debug scrollable overflow</a>. Selecting the badge highlights elements that are <em>causing</em> overflow and marks them with the <code>overflow</code> badge ({{bug(1669129)}}).</li>
-</ul>
+- When using the `:screenshot` [helper command](/en-US/docs/Tools/Web_Console/Helpers) in the [Web Console](/en-US/docs/Tools/Web_Console), the `--dpr` parameter is no longer ignored when taking a fullscreen screenshot using `--fullpage` ({{bug(1645284)}}).
+- Developers can use the `scroll` badge in the [Page Inspector](/en-US/docs/Tools/Page_Inspector) to [Debug scrollable overflow](/en-US/docs/Tools/Page_Inspector/How_to/Debug_Scrollable_Overflow). Selecting the badge highlights elements that are _causing_ overflow and marks them with the `overflow` badge ({{bug(1669129)}}).
 
-<h3 id="HTMLXML">HTML/XML</h3>
+### HTML/XML
 
-<ul>
- <li>The <code>crossorigin</code> attribute is now supported for <code>&lt;link rel=icon&gt;</code> ({{bug(1661075)}}).</li>
- <li>The <code>displaystyle</code> <a href="/en-US/docs/Web/MathML/Attribute">attribute</a> is now implemented for all MathML elements ({{bug(1666075)}}).</li>
-</ul>
+- The `crossorigin` attribute is now supported for `<link rel=icon>` ({{bug(1661075)}}).
+- The `displaystyle` [attribute](/en-US/docs/Web/MathML/Attribute) is now implemented for all MathML elements ({{bug(1666075)}}).
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>The vendor prefixed <code>:-moz-any()</code> is now aliased to the standard {{CSSxRef(":is", ":is()")}} CSS pseudo-class function ({{bug(1666086)}}).</li>
- <li>We've added support for <a href="/en-US/docs/Web/CSS/conic-gradient()">CSS Conic Gradients</a> ({{bug(1632351)}}) and ({{bug(1175958)}}).</li>
-</ul>
+- The vendor prefixed `:-moz-any()` is now aliased to the standard {{CSSxRef(":is", ":is()")}} CSS pseudo-class function ({{bug(1666086)}}).
+- We've added support for [CSS Conic Gradients](</en-US/docs/Web/CSS/conic-gradient()>) ({{bug(1632351)}}) and ({{bug(1175958)}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag">Intl[@@toStringTag]</a></code> has been added, returning a default value of <code>Intl</code> (recent addition to the ECMA spec). ({{bug(1670053)}})</li>
-</ul>
+- [`Intl[@@toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag) has been added, returning a default value of `Intl` (recent addition to the ECMA spec). ({{bug(1670053)}})
 
-<h3 id="HTTP">HTTP</h3>
+### HTTP
 
-<p><em>No changes</em></p>
+_No changes_
 
-<h3 id="APIs">APIs</h3>
+### APIs
 
-<p><em>No changes</em></p>
+_No changes_
 
-<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
+### WebDriver conformance (Marionette)
 
-<ul>
- <li>We've removed preliminary support for <code>WebDriver:SwitchToShadowRoot</code>, which hasn't been added to the WebDriver specification yet ({{bug(1662468)}}).</li>
- <li>We fixed a bug in <code>WebDriver:Back</code> and <code>WebDriver:Forward</code> that caused Marionette to hang when the navigation was triggered from within an <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> that gets removed ({{bug(1672758)}}).</li>
-</ul>
+- We've removed preliminary support for `WebDriver:SwitchToShadowRoot`, which hasn't been added to the WebDriver specification yet ({{bug(1662468)}}).
+- We fixed a bug in `WebDriver:Back` and `WebDriver:Forward` that caused Marionette to hang when the navigation was triggered from within an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) that gets removed ({{bug(1672758)}}).
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+## Changes for add-on developers
 
-<p><em>No changes</em></p>
+_No changes_
 
-<h2 id="Older_versions">Older versions</h2>
+## Older versions
 
-<p>{{Firefox_for_developers(82)}}</p>
+{{Firefox_for_developers(82)}}

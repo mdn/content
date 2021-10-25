@@ -7,143 +7,114 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 75 that will affect developers. Firefox 75 was released on April 7, 2020.</p>
+This article provides information about the changes in Firefox 75 that will affect developers. Firefox 75 was released on April 7, 2020.
 
-<p><strong>See also the accompanying hacks post — <a href="https://hacks.mozilla.org/2020/04/firefox-75-ambitions-for-april/">Firefox 75: Ambitions for April</a>.</strong></p>
+**See also the accompanying hacks post — [Firefox 75: Ambitions for April](https://hacks.mozilla.org/2020/04/firefox-75-ambitions-for-april/).**
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_tools">Developer tools</h3>
+### Developer tools
 
-<ul>
- <li>It is now possible to resize the rectangle of the <a href="/en-US/docs/Tools/Measure_a_portion_of_the_page">Measuring Tool</a> ({{bug(1152321)}}).</li>
- <li>In the <a href="/en-US/docs/Tools/Page_Inspector">inspector</a>, you can now use <a href="/en-US/docs/Web/XPath">XPath</a> expressions to locate elements, in addition to locating elements using CSS selectors as before ({{bug(963933)}}).</li>
- <li>You can now filter <a href="/en-US/docs/Web/API/WebSockets_API">WebSocket</a> messages using <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">regular expressions</a>, in addition to plain text search, by writing the regular expression in slashes ({{bug(1593837)}}).</li>
-</ul>
+- It is now possible to resize the rectangle of the [Measuring Tool](/en-US/docs/Tools/Measure_a_portion_of_the_page) ({{bug(1152321)}}).
+- In the [inspector](/en-US/docs/Tools/Page_Inspector), you can now use [XPath](/en-US/docs/Web/XPath) expressions to locate elements, in addition to locating elements using CSS selectors as before ({{bug(963933)}}).
+- You can now filter [WebSocket](/en-US/docs/Web/API/WebSockets_API) messages using [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions), in addition to plain text search, by writing the regular expression in slashes ({{bug(1593837)}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>The {{htmlattrxref("loading", "img")}} attribute of the {{HTMLElement("img")}} element has now been implemented. This string value can be used to specify that the image should be <a href="/en-US/docs/Web/Performance/Lazy_loading">lazily loaded</a>, by setting its value to <code>lazy</code> ({{bug(1542784)}}).</li>
- <li>The value of the <code><a href="/en-US/docs/Web/HTML/Element/style">&lt;style&gt;</a></code> element's <code>type</code> attribute is now restricted to <code>text/css</code> only, as per the spec ({{bug(1614329)}}).</li>
-</ul>
+- The {{htmlattrxref("loading", "img")}} attribute of the {{HTMLElement("img")}} element has now been implemented. This string value can be used to specify that the image should be [lazily loaded](/en-US/docs/Web/Performance/Lazy_loading), by setting its value to `lazy` ({{bug(1542784)}}).
+- The value of the [`<style>`](/en-US/docs/Web/HTML/Element/style) element's `type` attribute is now restricted to `text/css` only, as per the spec ({{bug(1614329)}}).
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>Support for the {{cssxref("min()")}}, {{cssxref("max()")}}, and {{cssxref("clamp()")}} functions has been implemented ({{bug(1519519)}}).</li>
- <li>The <code>all</code> value of the {{cssxref("text-decoration-skip-ink")}} property has been added ({{bug(1611965)}})</li>
-</ul>
+- Support for the {{cssxref("min()")}}, {{cssxref("max()")}}, and {{cssxref("clamp()")}} functions has been implemented ({{bug(1519519)}}).
+- The `all` value of the {{cssxref("text-decoration-skip-ink")}} property has been added ({{bug(1611965)}})
 
-<h3 id="Accessibility">Accessibility</h3>
+### Accessibility
 
-<p>The new roles and objects related to <a href="/en-US/docs/Web/Accessibility/ARIA/Annotations">ARIA annotations</a> are now exposed in Firefox, on Windows and Linux (bear in mind that these still won't be usable until screenreaders start to support them):</p>
+The new roles and objects related to [ARIA annotations](/en-US/docs/Web/Accessibility/ARIA/Annotations) are now exposed in Firefox, on Windows and Linux (bear in mind that these still won't be usable until screenreaders start to support them):
 
-<ul>
- <li><code>aria-description</code> ({{bug(1608961)}}).</li>
- <li><code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Mark_role">role="mark"</a></code> and <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Suggestion_role">role="suggestion"</a></code> ({{bug(1608965)}}).</li>
- <li><code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Comment_role">role="comment"</a></code> ({{bug(1608969)}}).</li>
- <li>Multiple IDs on <code>aria-details</code> ({{bug(1608883)}}).</li>
-</ul>
+- `aria-description` ({{bug(1608961)}}).
+- [`role="mark"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Mark_role) and [`role="suggestion"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Suggestion_role) ({{bug(1608965)}}).
+- [`role="comment"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Comment_role) ({{bug(1608969)}}).
+- Multiple IDs on `aria-details` ({{bug(1608883)}}).
 
-<div class="note">
-  <p><strong>Note:</strong> On macOS, we are first waiting for Apple to define what Safari will expose as Apple-dialect attributes to VoiceOver, and will then follow suit.</p>
-</div>
+> **Note:** On macOS, we are first waiting for Apple to define what Safari will expose as Apple-dialect attributes to VoiceOver, and will then follow suit.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields#public_static_fields">Public static class fields</a> are now supported ({{bug(1535804)}}).</li>
- <li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale">Intl.Locale</a></code> class is now supported ({{bug(1613713)}}).</li>
- <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/caller"><code>Function.caller</code></a> property has been updated to be aligned with the latest <a href="https://github.com/claudepache/es-legacy-function-reflection">ECMAScript spec proposal</a>. Previously throwing a <code>TypeError</code>, it now returns <code>null</code> if the caller is a strict, async, or generator function ({{bug(1610206)}}).</li>
-</ul>
+- [Public static class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields#public_static_fields) are now supported ({{bug(1535804)}}).
+- The [`Intl.Locale`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) class is now supported ({{bug(1613713)}}).
+- The [`Function.caller`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/caller) property has been updated to be aligned with the latest [ECMAScript spec proposal](https://github.com/claudepache/es-legacy-function-reflection). Previously throwing a `TypeError`, it now returns `null` if the caller is a strict, async, or generator function ({{bug(1610206)}}).
 
-<h3 id="APIs">APIs</h3>
+### APIs
 
-<h4 id="DOM">DOM</h4>
+#### DOM
 
-<ul>
- <li>The {{domxref("HTMLFormElement")}} interface has a new method, {{domxref("HTMLFormElement.requestSubmit", "requestSubmit()")}}. Unlike the old (and still available) {{domxref("HTMLFormElement.submit", "submit()")}} method, <code>requestSubmit()</code> acts as if a specified submit button has been clicked, rather than just sending the form data to the recipient. Thus the {{domxref("HTMLFormElement.submit_event", "submit")}} event is delivered and the form is checked for validity prior to the data being submitted ({{bug(1613360)}}).</li>
- <li>The {{domxref("HTMLFormElement.submit_event", "submit")}} event is now represented by an object of type {{domxref("SubmitEvent")}} rather than a simple {{domxref("Event")}}. <code>SubmitEvent</code> includes a new {{domxref("SubmitEvent.submitter", "submitter")}} property, which is the {{domxref("Element")}} that was invoked to trigger the form submission. With this event, you can have a single handler for submit events that can discern which of multiple submit buttons or links was used to submit the form ({{bug(1588715)}}).</li>
- <li>Calling the {{domxref("HTMLElement.click", "click()")}} method on a detached element (one not part of a DOM tree) now functions normally, leading to a <code>click</code> event being sent to it ({{bug(1610821)}}).</li>
-</ul>
+- The {{domxref("HTMLFormElement")}} interface has a new method, {{domxref("HTMLFormElement.requestSubmit", "requestSubmit()")}}. Unlike the old (and still available) {{domxref("HTMLFormElement.submit", "submit()")}} method, `requestSubmit()` acts as if a specified submit button has been clicked, rather than just sending the form data to the recipient. Thus the {{domxref("HTMLFormElement.submit_event", "submit")}} event is delivered and the form is checked for validity prior to the data being submitted ({{bug(1613360)}}).
+- The {{domxref("HTMLFormElement.submit_event", "submit")}} event is now represented by an object of type {{domxref("SubmitEvent")}} rather than a simple {{domxref("Event")}}. `SubmitEvent` includes a new {{domxref("SubmitEvent.submitter", "submitter")}} property, which is the {{domxref("Element")}} that was invoked to trigger the form submission. With this event, you can have a single handler for submit events that can discern which of multiple submit buttons or links was used to submit the form ({{bug(1588715)}}).
+- Calling the {{domxref("HTMLElement.click", "click()")}} method on a detached element (one not part of a DOM tree) now functions normally, leading to a `click` event being sent to it ({{bug(1610821)}}).
 
-<h4 id="Web_animations_API">Web animations API</h4>
+#### Web animations API
 
-<p>Firefox 75 sees numerous additions to the <a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a>:</p>
+Firefox 75 sees numerous additions to the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API):
 
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats#implicit_tofrom_keyframes">Implicit to/from keyframes</a> are now supported, as is automatically removing filling animations that have been replaced by other indefinitely filling animations ({{bug(1618773)}}). This includes enabling of support for:
+- [Implicit to/from keyframes](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats#implicit_tofrom_keyframes) are now supported, as is automatically removing filling animations that have been replaced by other indefinitely filling animations ({{bug(1618773)}}). This includes enabling of support for:
 
-  <ul>
-   <li><code><a href="/en-US/docs/Web/API/Animation/commitStyles">Animation.commitStyles()</a></code></li>
-   <li><code><a href="/en-US/docs/Web/API/Animation/onremove">Animation.onremove</a></code></li>
-   <li><code><a href="/en-US/docs/Web/API/Animation/persist">Animation.persist()</a></code></li>
-   <li><code><a href="/en-US/docs/Web/API/Animation/replaceState">Animation.replaceState</a></code></li>
-  </ul>
- </li>
- <li>The <code><a href="/en-US/docs/Web/API/Animation/timeline">Animation.timeline</a></code> getter, <code><a href="/en-US/docs/Web/API/Document/timeline">Document.timeline</a></code>, <code><a href="/en-US/docs/Web/API/DocumentTimeline">DocumentTimeline</a></code>, and <code><a href="/en-US/docs/Web/API/AnimationTimeline">AnimationTimeline</a></code> features are now enabled by default ({{bug(1619178)}}).</li>
- <li>The <code><a href="/en-US/docs/Web/API/Document/getAnimations">Document.getAnimations()</a></code> and <code><a href="/en-US/docs/Web/API/Element/getAnimations">Element.getAnimations()</a></code> methods are now enabled by default ({{bug(1619821)}}).</li>
-</ul>
+  - [`Animation.commitStyles()`](/en-US/docs/Web/API/Animation/commitStyles)
+  - [`Animation.onremove`](/en-US/docs/Web/API/Animation/onremove)
+  - [`Animation.persist()`](/en-US/docs/Web/API/Animation/persist)
+  - [`Animation.replaceState`](/en-US/docs/Web/API/Animation/replaceState)
 
-<h4 id="Media_Web_Audio_and_WebRTC">Media, Web Audio, and WebRTC</h4>
+- The [`Animation.timeline`](/en-US/docs/Web/API/Animation/timeline) getter, [`Document.timeline`](/en-US/docs/Web/API/Document/timeline), [`DocumentTimeline`](/en-US/docs/Web/API/DocumentTimeline), and [`AnimationTimeline`](/en-US/docs/Web/API/AnimationTimeline) features are now enabled by default ({{bug(1619178)}}).
+- The [`Document.getAnimations()`](/en-US/docs/Web/API/Document/getAnimations) and [`Element.getAnimations()`](/en-US/docs/Web/API/Element/getAnimations) methods are now enabled by default ({{bug(1619821)}}).
 
-<ul>
- <li>The <code><a href="/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription">RTCPeerConnection.setLocalDescription()</a></code> method can now be called without arguments, in which case the WebRTC runtime will try to create the new local session description itself ({{bug(1568292)}}).</li>
-</ul>
+#### Media, Web Audio, and WebRTC
 
-<h3 id="HTTP">HTTP</h3>
+- The [`RTCPeerConnection.setLocalDescription()`](/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription) method can now be called without arguments, in which case the WebRTC runtime will try to create the new local session description itself ({{bug(1568292)}}).
 
-<p><em>No changes.</em></p>
+### HTTP
 
-<h3 id="Security">Security</h3>
+_No changes._
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/CSP">CSP</a> nonces from non-script sources, such as CSS selectors, and  <code>.getAttribute("nonce")</code> calls, are now hidden. Instead, check the <code><a href="/en-US/docs/Web/API/HTMLElement/nonce">.nonce</a></code> property to access nonces from scripts ({{bug(1374612)}}).</li>
-</ul>
+### Security
 
-<h3 id="Plugins">Plugins</h3>
+- [CSP](/en-US/docs/Web/HTTP/CSP) nonces from non-script sources, such as CSS selectors, and  `.getAttribute("nonce")` calls, are now hidden. Instead, check the [`.nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property to access nonces from scripts ({{bug(1374612)}}).
 
-<p><em>No changes.</em></p>
+### Plugins
 
-<h3 id="Security_2">Security</h3>
+_No changes._
 
-<p><em>No changes.</em></p>
+### Security
 
-<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
+_No changes._
 
-<ul>
- <li>Fixed a bug that always caused Marionette to initialize when Firefox starts-up. It has been limited to the command line argument and environment variable now ({{bug(1622012)}}).</li>
- <li>Fixed <code>WebDriver:Print</code> to no longer add extra margins to the document ({{bug(1616932)}}).</li>
- <li>Changed the preference value for <code>network.http.speculative-parallel-limit</code> to <code>0</code>, to no longer force-disable speculative connections ({{bug(1617869)}}).</li>
-</ul>
+### WebDriver conformance (Marionette)
 
-<h3 id="Other">Other</h3>
+- Fixed a bug that always caused Marionette to initialize when Firefox starts-up. It has been limited to the command line argument and environment variable now ({{bug(1622012)}}).
+- Fixed `WebDriver:Print` to no longer add extra margins to the document ({{bug(1616932)}}).
+- Changed the preference value for `network.http.speculative-parallel-limit` to `0`, to no longer force-disable speculative connections ({{bug(1617869)}}).
 
-<p><em>No changes.</em></p>
+### Other
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+_No changes._
 
-<h3 id="API_changes">API changes</h3>
+## Changes for add-on developers
 
-<ul>
- <li>We've added some new settings in {{WebExtAPIRef("browserSettings")}} ({{bug(1286953)}}):
-  <ul>
-   <li>{{WebExtAPIRef("browserSettings.zoomSiteSpecific")}} to control whether zooming is on a per-site or per-tab basis</li>
-   <li>{{WebExtAPIRef("browserSettings.zoomFullPage")}} to control whether zoom is applied to the entire page or to text only.</li>
-  </ul>
- </li>
- <li>The name of the file used when saving a PDF with {{WebExtAPIRef("tabs.saveAsPDF")}} can be specified using <code>toFileName</code> in the type <code>tabs.PageSettings</code>.({{bug(1483590)}})</li>
-</ul>
+### API changes
 
-<h3 id="Manifest_changes">Manifest changes</h3>
+- We've added some new settings in {{WebExtAPIRef("browserSettings")}} ({{bug(1286953)}}):
 
-<ul>
- <li> The "privacy" permission is now optional. ({{bug(1618399)}})</li>
-</ul>
+  - {{WebExtAPIRef("browserSettings.zoomSiteSpecific")}} to control whether zooming is on a per-site or per-tab basis
+  - {{WebExtAPIRef("browserSettings.zoomFullPage")}} to control whether zoom is applied to the entire page or to text only.
 
-<h2 id="Older_versions">Older versions</h2>
+- The name of the file used when saving a PDF with {{WebExtAPIRef("tabs.saveAsPDF")}} can be specified using `toFileName` in the type `tabs.PageSettings`.({{bug(1483590)}})
 
-<p>{{Firefox_for_developers(74)}}</p>
+### Manifest changes
+
+- The "privacy" permission is now optional. ({{bug(1618399)}})
+
+## Older versions
+
+{{Firefox_for_developers(74)}}

@@ -7,99 +7,77 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 86 that will affect developers. Firefox 86 was released on February 23, 2021.</p>
+This article provides information about the changes in Firefox 86 that will affect developers. Firefox 86 was released on February 23, 2021.
 
-<div class="notecard note">
-  <p><strong>Note:</strong> See also <a href="https://hacks.mozilla.org/2021/02/a-fabulous-february-firefox-86/">A Fabulous February Firefox — 86!</a> on Mozilla Hacks.</p>
-</div>
+> **Note:** See also [A Fabulous February Firefox — 86!](https://hacks.mozilla.org/2021/02/a-fabulous-february-firefox-86/) on Mozilla Hacks.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+### Developer Tools
 
-<ul>
-  <li>The <code>cd()</code> <a href="/en-US/docs/Tools/Web_Console/Helpers">web console helper function</a>, which was deprecated in Firefox 74, has now been removed. The <code>&lt;iframe&gt;</code> context picker tool described in <a href="/en-US/docs/Tools/Working_with_iframes">Working with iframes</a> serves the same purpose, but is much better! For more information see {{bug(1607741)}}.</li>
-  <li>The different {{cssxref("margin")}} and {{cssxref("padding")}} shorthand and longhand properties are now marked as inactive on internal table elements because they have no effect on them. ({{bug(1551569)}}).</li>
-  <li>The {{cssxref("order")}} property was previously incorrectly marked as inactive for grid items. This got fixed in {{bug(1579017)}}.</li>
-</ul>
+- The `cd()` [web console helper function](/en-US/docs/Tools/Web_Console/Helpers), which was deprecated in Firefox 74, has now been removed. The `<iframe>` context picker tool described in [Working with iframes](/en-US/docs/Tools/Working_with_iframes) serves the same purpose, but is much better! For more information see {{bug(1607741)}}.
+- The different {{cssxref("margin")}} and {{cssxref("padding")}} shorthand and longhand properties are now marked as inactive on internal table elements because they have no effect on them. ({{bug(1551569)}}).
+- The {{cssxref("order")}} property was previously incorrectly marked as inactive for grid items. This got fixed in {{bug(1579017)}}.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<ul>
- <li>SVG filters can now use the {{SVGElement("feComposite")}} element with the <a href="/en-US/docs/Web/SVG/Attribute/operator#fecomposite"><code>lighter</code> operator</a> ({{bug(1518099)}}). This operator sums the pixels of two source graphics.</li>
-</ul>
+- SVG filters can now use the {{SVGElement("feComposite")}} element with the [`lighter` operator](/en-US/docs/Web/SVG/Attribute/operator#fecomposite) ({{bug(1518099)}}). This operator sums the pixels of two source graphics.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
-  <li>The {{cssxref(":autofill")}} pseudo-class is now enabled, with <code>-webkit-autofill</code> as an alias ({{bug(1685675)}}) and ({{bug(1475316)}}). </li>
-  <li>The {{cssxref("list-style-image")}} property now accepts any valid {{cssxref("image")}} ({{bug(1685078)}}). </li>
-</ul>
+- The {{cssxref(":autofill")}} pseudo-class is now enabled, with `-webkit-autofill` as an alias ({{bug(1685675)}}) and ({{bug(1475316)}}).
+- The {{cssxref("list-style-image")}} property now accepts any valid {{cssxref("image")}} ({{bug(1685078)}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
-  <li>
-    The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames"><code>Intl.DisplayNames</code></a> built-in object has been enabled by default. This enables the consistent translation of language, region, and script display names:
-    <pre class="brush: js">
-// Get English currency code display names
-let currencyNames = new Intl.DisplayNames(['en'], {type: 'currency'});
-// Get currency names
-currencyNames.of('USD'); // "US Dollar"
-currencyNames.of('EUR'); // "Euro"</pre>
-    For more information see {{bug(1654116)}}.
-  </li>
- </ul>
+- The [`Intl.DisplayNames`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames) built-in object has been enabled by default. This enables the consistent translation of language, region, and script display names:
 
-<h3 id="APIs">APIs</h3>
+  ```js
+  // Get English currency code display names
+  let currencyNames = new Intl.DisplayNames(['en'], {type: 'currency'});
+  // Get currency names
+  currencyNames.of('USD'); // "US Dollar"
+  currencyNames.of('EUR'); // "Euro"
+  ```
 
-<h4 id="DOM">DOM</h4>
+  For more information see {{bug(1654116)}}.
 
-<ul>
-  <li><a href="/en-US/docs/Web/API/Window/name"><code>Window.name</code></a> is now reset to an empty string if a tab loads a page from a different domain, and restored if the original page is reloaded (e.g. by selecting the "back" button). This prevents an untrusted page from accessing any information that the previous page might have stored in the property (potentially the new page might also modify such data, which might then be read by the original page if it was reloaded). For more information see {{bug(1685089)}}.</li>
-  <li><a href="/en-US/docs/Web/API/EventTarget/addEventListener"><code>EventTarget.addEventListener()</code></a> now supports the <code>signal</code> option. This option allows an <a href="/en-US/docs/Web/API/AbortSignal"><code>AbortSignal</code></a> to be passed to the method. The <code>AbortSignal</code> can later be used to remove the listener by calling <code>abort()</code>. For more information see {{bug(1679204)}}.</li>
-</ul>
+### APIs
 
-<h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
-<ul>
-  <li>Updated <code>WebDriver:ElementClick</code> to synthesize a <code>mousemove</code> event before the actual <code>click</code> event ({{bug(1684002)}}).</li>
-</ul>
+#### DOM
 
-<h4 id="webdriver_known_bugs">Known bugs</h4>
+- [`Window.name`](/en-US/docs/Web/API/Window/name) is now reset to an empty string if a tab loads a page from a different domain, and restored if the original page is reloaded (e.g. by selecting the "back" button). This prevents an untrusted page from accessing any information that the previous page might have stored in the property (potentially the new page might also modify such data, which might then be read by the original page if it was reloaded). For more information see {{bug(1685089)}}.
+- [`EventTarget.addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) now supports the `signal` option. This option allows an [`AbortSignal`](/en-US/docs/Web/API/AbortSignal) to be passed to the method. The `AbortSignal` can later be used to remove the listener by calling `abort()`. For more information see {{bug(1679204)}}.
 
-<ul>
-  <li>WebDriver commands following a call to <code>WebDriver:SwitchToFrame</code> can fail with a "no such window" error
-    if the frame's content hasn't yet finished loading ({{bug(1691348)}}).</li>
+### WebDriver conformance (Marionette)
 
-  <li>After a <a
-      href="https://firefox-source-docs.mozilla.org/dom/navigation/nav_replace.html#cross-group-navigations">cross-group
-      page navigation</a>, accessing a previously-retrieved element might not always raise a "stale element" error, and
-    can also lead to a "no such element" error. To prevent this, set the <code>marionette.actors.enabled</code>
-    preference to <code>false</code> ({{bug(1690308)}}).</li>
-</ul>
+- Updated `WebDriver:ElementClick` to synthesize a `mousemove` event before the actual `click` event ({{bug(1684002)}}).
 
-<h4 id="webdriver_removals">Removals</h4>
+#### Known bugs
 
-<ul>
-  <li>Removed support for the deprecated <code>Marionette:ActionChain</code> and <code>Marionette:MultiAction</code> commands ({{bug(1683755)}}).</li>
-</ul>
+- WebDriver commands following a call to `WebDriver:SwitchToFrame` can fail with a "no such window" error
+  if the frame's content hasn't yet finished loading ({{bug(1691348)}}).
+- After a [cross-group
+  page navigation](https://firefox-source-docs.mozilla.org/dom/navigation/nav_replace.html#cross-group-navigations), accessing a previously-retrieved element might not always raise a "stale element" error, and
+  can also lead to a "no such element" error. To prevent this, set the `marionette.actors.enabled`
+  preference to `false` ({{bug(1690308)}}).
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+#### Removals
 
-<ul>
-  <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">Host permissions</a> now grant access to privileged parts of the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs">tabs API</a> ({{bug(1679688)}}).</li>
-  <li><code>focused: false</code> is now ignored when set as an option in a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create"><code>windows.create()</code></a> call ({{bug(1253129)}}).</li>
-  <li>{{WebExtAPIRef("identity.getRedirectURL")}} now supports a loopback address, see <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url">Getting the redirect URL</a> for details ({{bug(1614919)}}).
- </li>
+- Removed support for the deprecated `Marionette:ActionChain` and `Marionette:MultiAction` commands ({{bug(1683755)}}).
 
-</ul>
+## Changes for add-on developers
 
-<h2 id="Older_versions">Older versions</h2>
+- [Host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) now grant access to privileged parts of the [tabs API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs) ({{bug(1679688)}}).
+- `focused: false` is now ignored when set as an option in a [`windows.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/create) call ({{bug(1253129)}}).
+- {{WebExtAPIRef("identity.getRedirectURL")}} now supports a loopback address, see [Getting the redirect URL](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url) for details ({{bug(1614919)}}).
 
-<p>{{Firefox_for_developers(85)}}</p>
+## Older versions
+
+{{Firefox_for_developers(85)}}

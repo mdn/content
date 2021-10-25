@@ -5,74 +5,60 @@ tags:
   - Firefox
   - Firefox 24
 ---
-<div>{{FirefoxSidebar}}</div><h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+{{FirefoxSidebar}}
 
-<h3 id="CSS">CSS</h3>
+## Changes for Web developers
 
-<ul>
- <li>The two values <code>-moz-zoom-in</code> and <code>-moz-zoom-out</code> of the {{cssxref("cursor")}} property have been unprefixed to <code>zoom-in</code> and <code>zoom-out</code> ({{bug("772153")}}).</li>
- <li>To match the specification, the keywords <code>not</code>, <code>only</code>, <code>and</code>, and <code>or</code> cannot be used as media types anymore ({{bug("757554")}}).</li>
-</ul>
+### CSS
 
-<h3 id="HTML">HTML</h3>
+- The two values `-moz-zoom-in` and `-moz-zoom-out` of the {{cssxref("cursor")}} property have been unprefixed to `zoom-in` and `zoom-out` ({{bug("772153")}}).
+- To match the specification, the keywords `not`, `only`, `and`, and `or` cannot be used as media types anymore ({{bug("757554")}}).
 
-<ul>
- <li>The {{HTMLElement("track")}} element has been implemented behind the <code>media.webvtt.enabled</code> preference, and is disabled by default. ({{bug(833385)}}).</li>
-</ul>
+### HTML
 
-<h3 id="JavaScript">JavaScript</h3>
+- The {{HTMLElement("track")}} element has been implemented behind the `media.webvtt.enabled` preference, and is disabled by default. ({{bug(833385)}}).
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a> are no longer automatically in strict mode unless explicitly requested with <code>"use strict"</code> ({{bug(852762)}}).</li>
- <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat"><code>String.prototype.repeat</code></a> JS method has been implemented ({{bug(815431)}}).</li>
- <li>The {{jsxref("Set.prototype.values()")}}, {{jsxref("Set/values", "Set.prototype.keys()")}} and {{jsxref("Set.prototype.entries()")}} methods on {{jsxref("Set")}} objects have been implemented ({{bug("869996")}}).</li>
-</ul>
+### JavaScript
 
-<h3 id="DOM">DOM</h3>
+- [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) are no longer automatically in strict mode unless explicitly requested with `"use strict"` ({{bug(852762)}}).
+- The [`String.prototype.repeat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat) JS method has been implemented ({{bug(815431)}}).
+- The {{jsxref("Set.prototype.values()")}}, {{jsxref("Set/values", "Set.prototype.keys()")}} and {{jsxref("Set.prototype.entries()")}} methods on {{jsxref("Set")}} objects have been implemented ({{bug("869996")}}).
 
-<ul>
- <li>Support for the {{domxref("Range.Range", "Range()")}} constructor has been added ({{bug(868999)}}).</li>
- <li>Support for the {{domxref("Text.Text", "Text()")}} constructor has been added ({{bug(869000)}}).</li>
- <li>Support for the {{domxref("Comment.Comment", "Comment()")}} constructor has been added ({{bug(869006)}}).</li>
- <li>Support for the {{domxref("DocumentFragment.DocumentFragment", "DocumentFragment()")}} constructor has been added ({{bug(869002)}}).</li>
- <li>The {{domxref("FocusEvent")}} interface has been implemented ({{bug(855741)}}).</li>
- <li>Support for the {{domxref("ChildNode.remove()")}} method has been added ({{bug(856629)}}).</li>
- <li>The WebVTT interfaces related to the {{HTMLElement("track")}} element, {{domxref("HTMLTrackElement")}}, {{domxref("TextTrack")}}, {{domxref("TextTrackCue")}}, {{domxref("TextTrackList")}}, and {{domxref("TextTrackCueList")}} have been implemented behind the <code>media.webvtt.enabled</code> property, defaulting to <code>false</code> ({{bug(833385)}}).</li>
- <li>The {{domxref("Gamepad")}} interface, and {{domxref("Navigator.getGamepads")}} have been implemented behind the <code>dom.gamepad.enabled</code> property, defaulting to <code>false</code> ({{bug(690935)}}).</li>
- <li>On desktop Firefox only, <code>HTMLCanvasElement.getContext()</code> can now take the <code>webgl</code> value, in addition to <code>experimental-webgl</code> ({{bug(870232)}}).</li>
- <li>The non-standard method <code>mozLoadFrom()</code> of {{domxref("HTMLMediaElement")}} has been removed ({{bug(877135)}}).</li>
-</ul>
+### DOM
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+- Support for the {{domxref("Range.Range", "Range()")}} constructor has been added ({{bug(868999)}}).
+- Support for the {{domxref("Text.Text", "Text()")}} constructor has been added ({{bug(869000)}}).
+- Support for the {{domxref("Comment.Comment", "Comment()")}} constructor has been added ({{bug(869006)}}).
+- Support for the {{domxref("DocumentFragment.DocumentFragment", "DocumentFragment()")}} constructor has been added ({{bug(869002)}}).
+- The {{domxref("FocusEvent")}} interface has been implemented ({{bug(855741)}}).
+- Support for the {{domxref("ChildNode.remove()")}} method has been added ({{bug(856629)}}).
+- The WebVTT interfaces related to the {{HTMLElement("track")}} element, {{domxref("HTMLTrackElement")}}, {{domxref("TextTrack")}}, {{domxref("TextTrackCue")}}, {{domxref("TextTrackList")}}, and {{domxref("TextTrackCueList")}} have been implemented behind the `media.webvtt.enabled` property, defaulting to `false` ({{bug(833385)}}).
+- The {{domxref("Gamepad")}} interface, and {{domxref("Navigator.getGamepads")}} have been implemented behind the `dom.gamepad.enabled` property, defaulting to `false` ({{bug(690935)}}).
+- On desktop Firefox only, `HTMLCanvasElement.getContext()` can now take the `webgl` value, in addition to `experimental-webgl` ({{bug(870232)}}).
+- The non-standard method `mozLoadFrom()` of {{domxref("HTMLMediaElement")}} has been removed ({{bug(877135)}}).
 
-<ul>
- <li>The Network inspector now lets you filter by content type (CSS/image/font etc.) and see the relevant size and load times.</li>
- <li>The Devtools options panel to the left lets you disable/enable Javascript temporarily.</li>
- <li>Extension developers may use the new <a href="https://www.robodesign.ro/mihai/blog/the-browser-console-is-replacing-the-error-console">Browser Console</a> for Chrome-level scripts (Replaces Error Console).</li>
- <li>The source map syntax has been changed to use <code>//#</code> instead of <code>//@</code> ({{bug(870361)}}).</li>
-</ul>
+### Developer Tools
 
-<h3 id="MathML">MathML</h3>
+- The Network inspector now lets you filter by content type (CSS/image/font etc.) and see the relevant size and load times.
+- The Devtools options panel to the left lets you disable/enable Javascript temporarily.
+- Extension developers may use the new [Browser Console](https://www.robodesign.ro/mihai/blog/the-browser-console-is-replacing-the-error-console) for Chrome-level scripts (Replaces Error Console).
+- The source map syntax has been changed to use `//#` instead of `//@` ({{bug(870361)}}).
 
-<ul>
- <li>The <code>dir</code> attribute for controlling directionality of formulas on e.g. {{MathMLElement("math")}} or {{MathMLElement("mrow")}} elements is now equivalent to using the {{cssxref("direction")}} CSS property.</li>
- <li>The equal sign ("=") is now <a href="/en-US/docs/Web/MathML/Element/mo#attr-stretchy">stretchable</a>.</li>
- <li>The "<code>updiagonalarrow</code>" value for the <code>notation</code> attribute on {{MathMLElement("menclose")}} elements has been added.</li>
-</ul>
+### MathML
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
+- The `dir` attribute for controlling directionality of formulas on e.g. {{MathMLElement("math")}} or {{MathMLElement("mrow")}} elements is now equivalent to using the {{cssxref("direction")}} CSS property.
+- The equal sign ("=") is now [stretchable](/en-US/docs/Web/MathML/Element/mo#attr-stretchy).
+- The "`updiagonalarrow`" value for the `notation` attribute on {{MathMLElement("menclose")}} elements has been added.
 
-<ul>
- <li>Doc Shells have now the <code>allowMedia</code> attribute to disable media playing ({{bug(759964)}}).</li>
- <li>Sherlock search plugins in the application directory or profile  won't be loaded anymore ({{bug(862143)}}).</li>
-</ul>
+## Changes for add-on and Mozilla developers
 
-<h2 id="See_also">See also</h2>
+- Doc Shells have now the `allowMedia` attribute to disable media playing ({{bug(759964)}}).
+- Sherlock search plugins in the application directory or profile  won't be loaded anymore ({{bug(862143)}}).
 
-<ul>
- <li><a href="https://www.mozilla.org/en-US/firefox/24.0a2/auroranotes/">Firefox 24 Aurora Notes</a></li>
-</ul>
+## See also
 
-<h2 id="Older_versions">Older versions</h2>
+- [Firefox 24 Aurora Notes](https://www.mozilla.org/en-US/firefox/24.0a2/auroranotes/)
 
-<p>{{Firefox_for_developers('23')}}</p>
+## Older versions
+
+{{Firefox_for_developers('23')}}

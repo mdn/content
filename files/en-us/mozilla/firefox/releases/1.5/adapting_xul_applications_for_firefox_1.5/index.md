@@ -6,26 +6,22 @@ tags:
   - Extensions
   - XUL
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>This page contains a list of changes in <a href="/en-US/docs/Mozilla/Firefox/Releases/1.5">Firefox 1.5</a>, affecting XUL developers.</p>
+This page contains a list of changes in [Firefox 1.5](/en-US/docs/Mozilla/Firefox/Releases/1.5), affecting XUL developers.
 
-<h3 id="Specific_Changes">Specific Changes</h3>
+### Specific Changes
 
-<ul>
- <li><a href="/en-US/docs/Tree_Widget_Changes">Tree Widget Changes</a></li>
- <li><a href="/en-US/docs/International_characters_in_XUL_JavaScript">International characters in XUL JavaScript</a> (only affects extensions with JavaScript files containing non-ASCII characters)</li>
- <li><a href="/en-US/docs/XMLHttpRequest_changes_for_Gecko1.8">XMLHttpRequest changes</a></li>
- <li><a href="/en-US/docs/XUL_Changes_for_Firefox_1.5">XUL Changes for Firefox 1.5</a></li>
- <li><a href="/en-US/docs/XPCNativeWrapper">XPCNativeWrappers</a> are on by default, and the behavior changed somewhat compared to 1.0.x</li>
- <li>A simpler method of <a href="/en-US/docs/Chrome_Registration">Chrome Registration</a> deprecates contents.rdf.</li>
- <li>For overlayed context menus: the function <code>gContextMenu.linkURL()</code> has been renamed to <code>gContextMenu.getLinkURL()</code>, and <code>linkURL</code> is now a property. To use it in a backwards-compatible way:<br>
-  <code>url = 'getLinkURL' in gContextMenu ? gContextMenu.getLinkURL() : gContextMenu.linkURL();</code></li>
-</ul>
+- [Tree Widget Changes](/en-US/docs/Tree_Widget_Changes)
+- [International characters in XUL JavaScript](/en-US/docs/International_characters_in_XUL_JavaScript) (only affects extensions with JavaScript files containing non-ASCII characters)
+- [XMLHttpRequest changes](/en-US/docs/XMLHttpRequest_changes_for_Gecko1.8)
+- [XUL Changes for Firefox 1.5](/en-US/docs/XUL_Changes_for_Firefox_1.5)
+- [XPCNativeWrappers](/en-US/docs/XPCNativeWrapper) are on by default, and the behavior changed somewhat compared to 1.0.x
+- A simpler method of [Chrome Registration](/en-US/docs/Chrome_Registration) deprecates contents.rdf.
+- For overlayed context menus: the function `gContextMenu.linkURL()` has been renamed to `gContextMenu.getLinkURL()`, and `linkURL` is now a property. To use it in a backwards-compatible way:
+  `url = 'getLinkURL' in gContextMenu ? gContextMenu.getLinkURL() : gContextMenu.linkURL();`
 
-<h3 id="Other_Information">Other Information</h3>
+### Other Information
 
-<ul>
- <li><a href="/en-US/docs/Using_nsIXULAppInfo">How to check application's version using nsIXULAppInfo</a></li>
- <li><a href="http://kb.mozillazine.org/Dev_:_Extensions_:_Cross-Version_Compatibility_Techniques">MozillaZine</a></li>
-</ul>
+- [How to check application's version using nsIXULAppInfo](/en-US/docs/Using_nsIXULAppInfo)
+- [MozillaZine](http://kb.mozillazine.org/Dev_:_Extensions_:_Cross-Version_Compatibility_Techniques)

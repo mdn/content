@@ -7,76 +7,66 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}{{draft}}</p>
+{{FirefoxSidebar}}{{draft}}
 
+This article provides information about the changes in Firefox 94 that will affect developers. Firefox 94 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta), and will ship on [November 1, 2021](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
 
-<p>This article provides information about the changes in Firefox 94 that will affect developers. Firefox 94 is the current <a href="https://www.mozilla.org/en-US/firefox/channel/desktop/#beta">Beta version of Firefox</a>, and will ship on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates">November 1, 2021</a>.</p>
+## Changes for web developers
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+### Developer Tools
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+#### Removals
 
-<h4 id="removals_html">Removals</h4>
+### CSS
 
-<h3 id="CSS">CSS</h3>
+#### Removals
 
-<h4 id="removals_css">Removals</h4>
+### JavaScript
 
-<h3 id="JavaScript">JavaScript</h3>
+#### Removals
 
-<h4 id="removals_js">Removals</h4>
+### HTTP
 
-<h3 id="HTTP">HTTP</h3>
+#### Removals
 
-<h4 id="removals_http">Removals</h4>
+### Security
 
-<h3 id="Security">Security</h3>
+#### Removals
 
-<h4 id="removals_sec">Removals</h4>
+### APIs
 
-<h3 id="APIs">APIs</h3>
+- The {{domxref("structuredClone()")}} global function is now supported for copying complex JavaScript objects ({{bug(1722576)}}).
 
-<ul>
-  <li>The {{domxref("structuredClone()")}} global function is now supported for copying complex JavaScript objects ({{bug(1722576)}}).</li>
-</ul>
+#### DOM
 
-<h4 id="DOM">DOM</h4>
+- Developers can now provide a hint for the enter key label/icon used on virtual keyboards, using either [`HTMLElement.enterkeyhint`](/en-US/docs/Web/API/HTMLElement/enterkeyhint) or the global attribute [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes/enterkeyhint) ({{bug(1648332)}}).
+- The {{domxref("HTMLScriptElement.supports()")}} static method is now supported. This provides a simple and unified method for feature checking whether a browser supports particular types of scripts, such as JavaScript modules or classic scripts ({{bug(1729239)}}).
+- The {{domxref("ShadowRoot.delegatesFocus")}} property is now supported, allowing code to check whether the `delegatesFocus` property was set when the [shadow DOM was attached](/en-US/docs/Web/API/Element/attachShadow) ({{bug(1413836)}}).
 
-<ul>
-  <li>Developers can now provide a hint for the enter key label/icon used on virtual keyboards, using either <a href="/en-US/docs/Web/API/HTMLElement/enterkeyhint"><code>HTMLElement.enterkeyhint</code></a> or the global attribute <a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> ({{bug(1648332)}}).</li>
-  <li>The {{domxref("HTMLScriptElement.supports()")}} static method is now supported. This provides a simple and unified method for feature checking whether a browser supports particular types of scripts, such as JavaScript modules or classic scripts ({{bug(1729239)}}).</li>
-  <li>The {{domxref("ShadowRoot.delegatesFocus")}} property is now supported, allowing code to check whether the <code>delegatesFocus</code> property was set when the <a href="/en-US/docs/Web/API/Element/attachShadow">shadow DOM was attached</a> ({{bug(1413836)}}).</li>
-</ul>
+#### Media, WebRTC, and Web Audio
 
-<h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
+#### Removals
 
-<h4 id="removals_media">Removals</h4>
+### WebAssembly
 
-<h3 id="WebAssembly">WebAssembly</h3>
+#### Removals
 
-<h4 id="removals_wasm">Removals</h4>
+### WebDriver conformance (Marionette)
 
-<h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
+- `WebDriver:GetWindowHandle` and `WebDriver:GetWindowHandles` now return handles for browser windows instead of tabs, when chrome scope is enabled ({{bug(1729291)}})
 
-<ul>
-  <li><code>WebDriver:GetWindowHandle</code> and <code>WebDriver:GetWindowHandles</code> now return handles for browser windows instead of tabs, when chrome scope is enabled ({{bug(1729291)}})</li>
-</ul>
+#### Removals
 
-<h4 id="removals_webdriver">Removals</h4>
+## Changes for add-on developers
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+- Support for `partitionKey`, the first-party URL of a cookie when it's in storage that is partitioned by top-level site, is added to {{WebExtAPIRef('cookies.get')}}, {{WebExtAPIRef('cookies.getAll')}}, {{WebExtAPIRef('cookies.set')}}, {{WebExtAPIRef('cookies.remove')}}, and {{WebExtAPIRef('cookies.cookie')}}. ({{bug(1669716)}})
 
-<ul>
-  <li>Support for <code>partitionKey</code>, the first-party URL of a cookie when it's in storage that is partitioned by top-level site, is added to {{WebExtAPIRef('cookies.get')}}, {{WebExtAPIRef('cookies.getAll')}}, {{WebExtAPIRef('cookies.set')}}, {{WebExtAPIRef('cookies.remove')}}, and {{WebExtAPIRef('cookies.cookie')}}. ({{bug(1669716)}})</li>
-</ul>
+#### Removals
 
-<h4 id="removals_webext">Removals</h4>
+### Other
 
-<h3 id="Other">Other</h3>
+## Older versions
 
-
-<h2 id="Older_versions">Older versions</h2>
-
-<p>{{Firefox_for_developers(93)}}</p>
+{{Firefox_for_developers(93)}}

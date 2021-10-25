@@ -5,26 +5,22 @@ tags:
   - DOM
   - Firefox 3
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Firefox 3 offers a number of improvements to the <a href="/en-US/docs/Web/API/Document_Object_Model">Document Object Model</a> (DOM), especially in regard to support for extensions to the DOM added by other browsers. This article provides a list of those improvements as well as links to more detailed documentation.</p>
+Firefox 3 offers a number of improvements to the [Document Object Model](/en-US/docs/Web/API/Document_Object_Model) (DOM), especially in regard to support for extensions to the DOM added by other browsers. This article provides a list of those improvements as well as links to more detailed documentation.
 
-<ul>
- <li>The Internet Explorer <code><a href="/en-US/docs/Web/API/Element/clientTop">clientTop</a></code> and <code><a href="/en-US/docs/Web/API/Element/clientLeft">clientLeft</a></code> DOM extensions are now supported.</li>
- <li>The <code><a href="/en-US/docs/Web/API/Window/fullScreen">window.fullScreen</a></code> property is now always accurate no matter where it is read, even in content. Previously it would return <code>false</code> inaccurately ({{ Bug(127013) }}).</li>
- <li>The <code><a href="/en-US/docs/Web/API/Element/getClientRects">getClientRects</a></code> and <code><a href="/en-US/docs/Web/API/Element/getBoundingClientRect">getBoundingClientRect</a></code> DOM extensions are now supported (see {{ Bug(174397) }}).</li>
- <li>The Internet Explorer <code><a href="/en-US/docs/Web/API/Document/elementFromPoint">elementFromPoint</a></code> DOM extension is now supported ({{ Bug(199692) }}).</li>
- <li>The Internet Explorer <code><a href="/en-US/docs/Web/API/HTMLElement/oncut">oncut</a></code>, <code><a href="/en-US/docs/Web/API/HTMLElement/oncopy">oncopy</a></code>, and <code><a href="/en-US/docs/Web/API/HTMLElement/onpaste">onpaste</a></code> DOM extensions are now supported ({{ Bug(280959) }}).</li>
- <li>Added privileged-code-only getters for <code>Node.nodePrincipal</code>, <code>Node.baseURIObject</code>, and <code>document.documentURIObject</code>. Chrome code must not touch (get or set) these properties on an unwrapped content object (e.g. on a <code>wrappedJSObject</code> of an <code><a href="/en-US/XPCNativeWrapper">XPCNativeWrapper</a></code>), see {{ Bug(324464) }} for details.</li>
- <li>The Web Applications 1.0 (HTML5) <code><a href="/en-US/docs/Web/API/Document/getElementsByClassName">getElementsByClassName()</a></code> DOM method is now supported.</li>
- <li>The Web Applications 1.0 (HTML5) <code><a href="/en-US/docs/Web/API/Window/postMessage">window.postMessage</a></code> DOM method is now supported. This method allows a limited, opt-in form of client-side communication between windows not necessarily on the same domain.</li>
- <li>The <code>charCode</code> value of the <code>keypress</code> event is changed to an ASCII character if the accelerator key is pressed. Otherwise the <code>charCode</code> is the unmodified character (excepting <code>Shift</code> state). See <a href="/en-US/Gecko_Keypress_Event">Gecko Keypress Event</a>.</li>
-</ul>
+- The Internet Explorer [`clientTop`](/en-US/docs/Web/API/Element/clientTop) and [`clientLeft`](/en-US/docs/Web/API/Element/clientLeft) DOM extensions are now supported.
+- The [`window.fullScreen`](/en-US/docs/Web/API/Window/fullScreen) property is now always accurate no matter where it is read, even in content. Previously it would return `false` inaccurately ({{ Bug(127013) }}).
+- The [`getClientRects`](/en-US/docs/Web/API/Element/getClientRects) and [`getBoundingClientRect`](/en-US/docs/Web/API/Element/getBoundingClientRect) DOM extensions are now supported (see {{ Bug(174397) }}).
+- The Internet Explorer [`elementFromPoint`](/en-US/docs/Web/API/Document/elementFromPoint) DOM extension is now supported ({{ Bug(199692) }}).
+- The Internet Explorer [`oncut`](/en-US/docs/Web/API/HTMLElement/oncut), [`oncopy`](/en-US/docs/Web/API/HTMLElement/oncopy), and [`onpaste`](/en-US/docs/Web/API/HTMLElement/onpaste) DOM extensions are now supported ({{ Bug(280959) }}).
+- Added privileged-code-only getters for `Node.nodePrincipal`, `Node.baseURIObject`, and `document.documentURIObject`. Chrome code must not touch (get or set) these properties on an unwrapped content object (e.g. on a `wrappedJSObject` of an [`XPCNativeWrapper`](/en-US/XPCNativeWrapper)), see {{ Bug(324464) }} for details.
+- The Web Applications 1.0 (HTML5) [`getElementsByClassName()`](/en-US/docs/Web/API/Document/getElementsByClassName) DOM method is now supported.
+- The Web Applications 1.0 (HTML5) [`window.postMessage`](/en-US/docs/Web/API/Window/postMessage) DOM method is now supported. This method allows a limited, opt-in form of client-side communication between windows not necessarily on the same domain.
+- The `charCode` value of the `keypress` event is changed to an ASCII character if the accelerator key is pressed. Otherwise the `charCode` is the unmodified character (excepting `Shift` state). See [Gecko Keypress Event](/en-US/Gecko_Keypress_Event).
 
-<h3 id="See_also">See also</h3>
+### See also
 
-<ul>
- <li><a href="/en-US/Firefox_3_for_developers">Firefox 3 for developers</a></li>
- <li><a href="/en-US/docs/CSS_improvements_in_Firefox_3">CSS improvements in Firefox 3</a></li>
- <li><a href="/en-US/docs/Web/API/Document_Object_Model">DOM</a></li>
-</ul>
+- [Firefox 3 for developers](/en-US/Firefox_3_for_developers)
+- [CSS improvements in Firefox 3](/en-US/docs/CSS_improvements_in_Firefox_3)
+- [DOM](/en-US/docs/Web/API/Document_Object_Model)

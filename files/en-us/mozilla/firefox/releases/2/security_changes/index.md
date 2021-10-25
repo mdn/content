@@ -5,28 +5,28 @@ tags:
   - Firefox
   - Security
 ---
-<div>{{FirefoxSidebar}}</div><p>This article discusses changes that affect security in Firefox 2.</p>
+{{FirefoxSidebar}}
 
-<h2 id="Weak_ciphers_disabled_by_default">Weak ciphers disabled by default</h2>
+This article discusses changes that affect security in Firefox 2.
 
-<p><a href="/en-US/docs/Mozilla/Firefox/Releases/2">Firefox 2</a> disables SSLv2 and the weak "export" cipher suites (those with key lengths less than 64 bits) by default, in favor of SSLv3. This provides improved security.</p>
+## Weak ciphers disabled by default
 
-<p>The preferred encryption methods are <code>TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA</code> and <code>TLS_RSA_WITH_3DES_EDE_CBC_SHA</code>. Some servers refer to these as <code>SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA</code> and <code>SSL_RSA_WITH_3DES_EDE_CBC_SHA</code>.</p>
+[Firefox 2](/en-US/docs/Mozilla/Firefox/Releases/2) disables SSLv2 and the weak "export" cipher suites (those with key lengths less than 64 bits) by default, in favor of SSLv3. This provides improved security.
 
-<p>If SSLv2 support must be enabled, it can be by setting the appropriate <code>security.ssl2.*</code> user preferences to <code>true</code>.</p>
+The preferred encryption methods are `TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA` and `TLS_RSA_WITH_3DES_EDE_CBC_SHA`. Some servers refer to these as `SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA` and `SSL_RSA_WITH_3DES_EDE_CBC_SHA`.
 
-<h2 id="New_features">New features</h2>
+If SSLv2 support must be enabled, it can be by setting the appropriate `security.ssl2.*` user preferences to `true`.
 
-<ul>
- <li>Firefox 2 supports <a href="https://en.wikipedia.org/wiki/Elliptic_curve_cryptography">Elliptic Curve Cryptography</a> in TLS. Support is presently limited to curves of 256, 384, and 521 (yes, 521) bits.</li>
- <li>Firefox 2 supports the TLS server name indication extension to facilitate secure connections to servers hosting multiple virtual servers on a single underlying network address, as per <a href="https://datatracker.ietf.org/doc/html/rfc3546">RFC 3546</a>.</li>
- <li>When Firefox 2 makes an <a href="https://en.wikipedia.org/wiki/Ocsp">OCSP</a> request to validate a web server's certificate, it now uses the proxy that has been configured for normal HTTP traffic.</li>
-</ul>
+## New features
 
-<h2 id="Determining_what_ciphers_are_available">Determining what ciphers are available</h2>
+- Firefox 2 supports [Elliptic Curve Cryptography](https://en.wikipedia.org/wiki/Elliptic_curve_cryptography) in TLS. Support is presently limited to curves of 256, 384, and 521 (yes, 521) bits.
+- Firefox 2 supports the TLS server name indication extension to facilitate secure connections to servers hosting multiple virtual servers on a single underlying network address, as per [RFC 3546](https://datatracker.ietf.org/doc/html/rfc3546).
+- When Firefox 2 makes an [OCSP](https://en.wikipedia.org/wiki/Ocsp) request to validate a web server's certificate, it now uses the proxy that has been configured for normal HTTP traffic.
 
-<p>As always, you can find out what ciphers are supported -- and which are enabled or disabled -- by going to about:config and searching on "ssl" or "tls".</p>
+## Determining what ciphers are available
 
-<h2 id="Security_improved_for_the_jar_protocol">Security improved for the jar: protocol</h2>
+As always, you can find out what ciphers are supported -- and which are enabled or disabled -- by going to about:config and searching on "ssl" or "tls".
 
-<p>In order to correct a potential security problem when using the <code>jar:</code> protocol, it's now necessary to serve JAR files with the MIME type <code>application/java-archive</code>. See <a href="/en-US/docs/Security_and_the_jar_protocol">Security and the jar protocol</a> for further details.</p>
+## Security improved for the jar: protocol
+
+In order to correct a potential security problem when using the `jar:` protocol, it's now necessary to serve JAR files with the MIME type `application/java-archive`. See [Security and the jar protocol](/en-US/docs/Security_and_the_jar_protocol) for further details.

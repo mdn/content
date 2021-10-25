@@ -6,209 +6,159 @@ tags:
   - Firefox 10
   - Gecko 10
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Firefox 10 shipped on January 31, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.</p>
+Firefox 10 shipped on January 31, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
 
-<div class="note">
-  <p><strong>Note:</strong> Firefox 10 is the first release of this browser with two digits. This may lead to problem with some UA-sniffing scripts. Be sure to check them, and those contained in 3rd-party software you embed in your pages, like libraries. For more information about this, look at the <a href="https://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/">Firefox goes 2-digit article on hack.mozilla.org</a>.
-</p></div>
+> **Note:** Firefox 10 is the first release of this browser with two digits. This may lead to problem with some UA-sniffing scripts. Be sure to check them, and those contained in 3rd-party software you embed in your pages, like libraries. For more information about this, look at the [Firefox goes 2-digit article on hack.mozilla.org](https://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/).
 
-<h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+## Changes for Web developers
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>The new HTML5 {{ HTMLElement("bdi") }} element, bi-directional isolation, allowing isolation of parts of text with a different directionality has been implemented. This is especially useful when displaying text with an unknown directionality, coming from a database for example, in the middle of text with a known, and potentially, different one.</li>
- <li>You may now specify a fragment of "top" for the {{ htmlattrxref("href", "a") }} attribute to create a link to the top of the page. This used to work, then went away for a while, and now it's back, for compatibility with the HTML5 specification. For example: <code>&lt;a href="#top"&gt;Return to top of page&lt;/a&gt;</code>.</li>
-</ul>
+- The new HTML5 {{ HTMLElement("bdi") }} element, bi-directional isolation, allowing isolation of parts of text with a different directionality has been implemented. This is especially useful when displaying text with an unknown directionality, coming from a database for example, in the middle of text with a known, and potentially, different one.
+- You may now specify a fragment of "top" for the {{ htmlattrxref("href", "a") }} attribute to create a link to the top of the page. This used to work, then went away for a while, and now it's back, for compatibility with the HTML5 specification. For example: `<a href="#top">Return to top of page</a>`.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li>The method <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap">WeakMap</a>.set()</code> now returns <em><code>undefined</code></em>, instead of itself.</li>
- <li>A bug was introduced in regular expression handling in Firefox 7; this has been fixed. See {{ bug(683838) }} if you want the gory details.</li>
- <li>You can no longer use <a href="/en-US/docs/E4X">E4X</a> syntax while in <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">ECMAScript 5 strict mode</a> (that is, after <code>"use strict;"</code>).</li>
-</ul>
+- The method `WeakMap.set()` now returns _`undefined`_, instead of itself.
+- A bug was introduced in regular expression handling in Firefox 7; this has been fixed. See {{ bug(683838) }} if you want the gory details.
+- You can no longer use [E4X](/en-US/docs/E4X) syntax while in [ECMAScript 5 strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) (that is, after `"use strict;"`).
 
-<h3 id="DOM">DOM</h3>
+### DOM
 
-<h4 id="DOM3_Events">DOM3 Events</h4>
+#### DOM3 Events
 
-<ul>
- <li>The DOM Event method <a href="/en-US/docs/Web/API/Event/stopImmediatePropagation"><code>event.stopImmediatePropagation</code></a> has been implemented.</li>
- <li>The mouse events <code>mouseenter</code> and <code>mouseleave</code> have been implemented.</li>
-</ul>
+- The DOM Event method [`event.stopImmediatePropagation`](/en-US/docs/Web/API/Event/stopImmediatePropagation) has been implemented.
+- The mouse events `mouseenter` and `mouseleave` have been implemented.
 
-<h4 id="DOM4">DOM4</h4>
+#### DOM4
 
-<ul>
- <li>The attribute {{ domxref("document.xmlVersion") }} (which was only gettable and not settable) has been removed as it has been deprecated in the DOM4 specification. The article for {{ domxref("document.xmlVersion") }} now suggests a way to detect whether the document is HTML or XML without using that property.</li>
- <li>The attribute {{ domxref("document.xmlStandalone") }} has been removed as it has been deprecated in the DOM4 specification.</li>
- <li>The attribute {{ domxref("document.xmlEncoding") }} has been removed as it has been deprecated in the DOM4 specification.</li>
- <li>The attribute {{ domxref("text.isElementContentWhiteSpace") }} has been removed as it has been deprecated in the DOM4 specification.</li>
- <li>The method {{ domxref("text.replaceWholeText") }} has been removed as it has been deprecated in the DOM4 specification.</li>
- <li>The method {{ domxref("node.isSameNode") }} has been removed as it has been deprecated in the DOM4 specification. Instead of <code><em>node1</em>.isSameNode(<em>node2</em>)</code>, you can use the <code>===</code> operator, like this: <code><em>node1 </em>===</code><code><em> node2</em></code>.</li>
-</ul>
+- The attribute {{ domxref("document.xmlVersion") }} (which was only gettable and not settable) has been removed as it has been deprecated in the DOM4 specification. The article for {{ domxref("document.xmlVersion") }} now suggests a way to detect whether the document is HTML or XML without using that property.
+- The attribute {{ domxref("document.xmlStandalone") }} has been removed as it has been deprecated in the DOM4 specification.
+- The attribute {{ domxref("document.xmlEncoding") }} has been removed as it has been deprecated in the DOM4 specification.
+- The attribute {{ domxref("text.isElementContentWhiteSpace") }} has been removed as it has been deprecated in the DOM4 specification.
+- The method {{ domxref("text.replaceWholeText") }} has been removed as it has been deprecated in the DOM4 specification.
+- The method {{ domxref("node.isSameNode") }} has been removed as it has been deprecated in the DOM4 specification. Instead of `node1.isSameNode(node2)`, you can use the `===` operator, like this: ` node1 ===`` node2  `.
 
-<h4 id="Page_Visibility_API">Page Visibility API</h4>
+#### Page Visibility API
 
-<ul>
- <li>The <a href="/en-US/docs/Web/API/Page_Visibility_API">Page Visibility API</a> has been implemented (prefixed): <code>document.mozHidden</code>, <code>document.mozVisibilityState</code> are available and the event <code>mozvisibilitychanged</code> is sent when the state is modified.</li>
-</ul>
+- The [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API) has been implemented (prefixed): `document.mozHidden`, `document.mozVisibilityState` are available and the event `mozvisibilitychanged` is sent when the state is modified.
 
-<h4 id="Full_Screen_API">Full Screen API</h4>
+#### Full Screen API
 
-<ul>
- <li>Support for {{ domxref("Document/fullscreenEnabled") }} has been added.</li>
- <li>The new {{ cssxref(":-moz-full-screen-ancestor") }} property has been added. This lets you match against elements that are ancestors of an element in full screen mode.</li>
-</ul>
+- Support for {{ domxref("Document/fullscreenEnabled") }} has been added.
+- The new {{ cssxref(":-moz-full-screen-ancestor") }} property has been added. This lets you match against elements that are ancestors of an element in full screen mode.
 
-<h4 id="Battery_API">Battery API</h4>
+#### Battery API
 
-<ul>
- <li>Experimental support for {{ domxref("window.navigator.mozBattery") }} has been added (can be enabled setting the preference <code>dom.battery.enabled</code> to <code>true</code> and will be enabled by default starting with Firefox 11).</li>
-</ul>
+- Experimental support for {{ domxref("window.navigator.mozBattery") }} has been added (can be enabled setting the preference `dom.battery.enabled` to `true` and will be enabled by default starting with Firefox 11).
 
-<h4 id="Canvas">Canvas</h4>
+#### Canvas
 
-<ul>
- <li>The <a href="/en-US/docs/Web/API/CanvasRenderingContext2D#createpattern%28%29"><code>createPattern()</code></a> method now throws an exception if a zero-sized source canvas is specified.</li>
- <li>If you use a non-finite value for any of the numeric parameters to <a href="/en-US/docs/Web/API/CanvasRenderingContext2D#putimagedata%28%29"><code>putImageData()</code></a>, the call is now silently ignored instead of throwing an exception, in keeping with the specification.</li>
-</ul>
+- The [`createPattern()`](/en-US/docs/Web/API/CanvasRenderingContext2D#createpattern%28%29) method now throws an exception if a zero-sized source canvas is specified.
+- If you use a non-finite value for any of the numeric parameters to [`putImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D#putimagedata%28%29), the call is now silently ignored instead of throwing an exception, in keeping with the specification.
 
-<h4 id="WebGL">WebGL</h4>
+#### WebGL
 
-<ul>
- <li>Firefox 10 now supports the <a href="https://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/"><code>OES_standard_derivatives</code></a> extension.</li>
- <li><a href="/en-US/docs/Web/API/WebGL_API#webgl_debugging_and_testing">New preferences have been added</a> to help test WebGL code for compatibility with minimally-capable devices on your full development platform.</li>
-</ul>
+- Firefox 10 now supports the [`OES_standard_derivatives`](https://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/) extension.
+- [New preferences have been added](/en-US/docs/Web/API/WebGL_API#webgl_debugging_and_testing) to help test WebGL code for compatibility with minimally-capable devices on your full development platform.
 
-<h4 id="Web_Workers">Web Workers</h4>
+#### Web Workers
 
-<ul>
- <li>The attribute <code>XMLHttpRequest.responseType</code> and <code>XMLHttpRequest.response</code> are now available from inside <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#section_2">Workers</a>.</li>
- <li>The <a href="/en-US/docs/Web/API/Worker#worker()"><code>Worker()</code></a> constructor now accepts <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">data URIs</a>.</li>
-</ul>
+- The attribute `XMLHttpRequest.responseType` and `XMLHttpRequest.response` are now available from inside [Workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#section_2).
+- The [`Worker()`](</en-US/docs/Web/API/Worker#worker()>) constructor now accepts [data URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
 
-<h4 id="IndexedDB">IndexedDB</h4>
+#### IndexedDB
 
-<p>Great progress has been made to update IndexedDB to the latest draft specification. This effort will continue in Firefox 11.</p>
+Great progress has been made to update IndexedDB to the latest draft specification. This effort will continue in Firefox 11.
 
-<ul>
- <li>The <a href="/en-US/docs/Web/API/IDBIndex#count"><code>IDBIndex.count()</code></a> and <a href="/en-US/docs/Web/API/IDBObjectStore#count"><code>IDBObjectStore.count()</code></a> methods have been added.</li>
- <li>The <a href="/en-US/docs/Web/API/IDBCursor#advance"><code>IDBCursor.advance()</code></a> method has been added.</li>
- <li>When encountering an unknown optional parameter in <a href="/en-US/docs/Web/API/IDBObjectStore#createindex"><code>IDBObjectStore.createIndex()</code></a> or <a href="/en-US/docs/Web/API/IDBDatabase#createobjectstore"><code>IDBDatabase.createObjectStore()</code></a>, Gecko will not fire an exception anymore, but ignore it.</li>
- <li>When <a href="/en-US/docs/Web/API/IDBTransaction#abort%28%29"><code>IDBTransaction.abort()</code></a> is called, all pending <a href="/en-US/docs/Web/API/IDBRequest"><code>IDBRequest</code></a> have their <code>errorCode</code> set to <code>ABORT_ERROR</code>.</li>
- <li>The methods <a href="/en-US/docs/Web/API/IDBObjectStore#delete()"><code>IDBObjectStore.delete()</code></a> and <a href="/en-US/docs/Web/API/IDBCursor#delete()"><code>IDBCursor.delete()</code></a> now set the <code>result</code> attribute of the returned <a href="/en-US/docs/Web/API/IDBRequest"><code>IDBRequest</code></a> to <code>undefined</code>.</li>
- <li>The method <a href="/en-US/docs/Web/API/IDBDatabase#setversion()"><code>IDBDatabase.setVersion()</code></a> has been removed as it was removed from the latest spec. The version of the database is given through the <a href="/en-US/docs/Web/API/IDBFactory#open"><code>IDBFactory.open()</code></a> method which has been updated and the <code>onupgradeneeded</code> callback allows the schema of the database to be upgraded. The version itself has been changed from a <code>DOMString</code> to an <code>unsigned long long</code>. The <a href="/en-US/docs/IndexedDB/IDBVersionChangeRequest"><code>IDBVersionChangeRequest</code></a> interface has been removed and replaced by the new <a href="/en-US/docs/Web/API/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> interface.</li>
- <li>When opening a database with {{domxref("IDBFactory.open()")}}, if the <code>version</code> parameter is not provided and the database does not exist, then it will be created with a version of <code>1</code>.</li>
- <li>The method <a href="/en-US/docs/Web/API/IDBFactory#deletedatabase%28%29"><code>IDBFactory.deleteDatabase()</code></a> method has been added.</li>
- <li>Methods that search via an {{domxref("IDBKeyRange")}} (such as {{domxref("IDBObjectStore.openCursor")}} and {{domxref("IDBIndex.getKey")}}) can accept either a single key or key range.</li>
-</ul>
+- The [`IDBIndex.count()`](/en-US/docs/Web/API/IDBIndex#count) and [`IDBObjectStore.count()`](/en-US/docs/Web/API/IDBObjectStore#count) methods have been added.
+- The [`IDBCursor.advance()`](/en-US/docs/Web/API/IDBCursor#advance) method has been added.
+- When encountering an unknown optional parameter in [`IDBObjectStore.createIndex()`](/en-US/docs/Web/API/IDBObjectStore#createindex) or [`IDBDatabase.createObjectStore()`](/en-US/docs/Web/API/IDBDatabase#createobjectstore), Gecko will not fire an exception anymore, but ignore it.
+- When [`IDBTransaction.abort()`](/en-US/docs/Web/API/IDBTransaction#abort%28%29) is called, all pending [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) have their `errorCode` set to `ABORT_ERROR`.
+- The methods [`IDBObjectStore.delete()`](</en-US/docs/Web/API/IDBObjectStore#delete()>) and [`IDBCursor.delete()`](</en-US/docs/Web/API/IDBCursor#delete()>) now set the `result` attribute of the returned [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) to `undefined`.
+- The method [`IDBDatabase.setVersion()`](</en-US/docs/Web/API/IDBDatabase#setversion()>) has been removed as it was removed from the latest spec. The version of the database is given through the [`IDBFactory.open()`](/en-US/docs/Web/API/IDBFactory#open) method which has been updated and the `onupgradeneeded` callback allows the schema of the database to be upgraded. The version itself has been changed from a `DOMString` to an `unsigned long long`. The [`IDBVersionChangeRequest`](/en-US/docs/IndexedDB/IDBVersionChangeRequest) interface has been removed and replaced by the new [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest) interface.
+- When opening a database with {{domxref("IDBFactory.open()")}}, if the `version` parameter is not provided and the database does not exist, then it will be created with a version of `1`.
+- The method [`IDBFactory.deleteDatabase()`](/en-US/docs/Web/API/IDBFactory#deletedatabase%28%29) method has been added.
+- Methods that search via an {{domxref("IDBKeyRange")}} (such as {{domxref("IDBObjectStore.openCursor")}} and {{domxref("IDBIndex.getKey")}}) can accept either a single key or key range.
 
-<h4 id="Other">Other</h4>
+#### Other
 
-<ul>
- <li>When the proper MIME type is passed, <code>image/svg+xml</code>, <a href="/en-US/docs/Web/API/DOMParser#parsing_a_svg_document">the <code>DOMParser</code> now creates a <code>SVGDocument</code></a> when given a string with SVG.</li>
- <li>In the past, when {{ domxref("element.setAttribute()") }} parsed integers, it would report an error if the integer included any non-numeric characters (for example "42foo"). Now it correctly truncates this as the number 42, in accordance with the specification.</li>
- <li>The ESC key no longer incorrectly results in the {{ domxref("GlobalEventHandlers/onkeydown") }} handler incorrectly getting called.</li>
-  <li>The <code>NameList</code> interface is no longer implemented; it previously had an implementation with no way to actually get access to one.</li>
- <li>The {{ domxref("document.createProcessingInstruction()") }} method now works on HTML documents as well as XML documents. {{ domxref("ProcessingInstruction") }} nodes are still only supported on XML documents, but since nodes can be moved among documents, it's helpful to be able to create them on HTML documents as well.</li>
- <li>The {{ domxref("XMLHttpRequest") }} <code>responseType</code> "<code>moz-json</code>" <a href="/en-US/docs/Mozilla/Firefox/Releases/9#dom">introduced in Firefox 9</a> has been updated to the latest draft of the specification and has been unprefixed. See {{ bug("707142#c13") }}</li>
-</ul>
+- When the proper MIME type is passed, `image/svg+xml`, [the `DOMParser` now creates a `SVGDocument`](/en-US/docs/Web/API/DOMParser#parsing_a_svg_document) when given a string with SVG.
+- In the past, when {{ domxref("element.setAttribute()") }} parsed integers, it would report an error if the integer included any non-numeric characters (for example "42foo"). Now it correctly truncates this as the number 42, in accordance with the specification.
+- The ESC key no longer incorrectly results in the {{ domxref("GlobalEventHandlers/onkeydown") }} handler incorrectly getting called.
+- The `NameList` interface is no longer implemented; it previously had an implementation with no way to actually get access to one.
+- The {{ domxref("document.createProcessingInstruction()") }} method now works on HTML documents as well as XML documents. {{ domxref("ProcessingInstruction") }} nodes are still only supported on XML documents, but since nodes can be moved among documents, it's helpful to be able to create them on HTML documents as well.
+- The {{ domxref("XMLHttpRequest") }} `responseType` "`moz-json`" [introduced in Firefox 9](/en-US/docs/Mozilla/Firefox/Releases/9#dom) has been updated to the latest draft of the specification and has been unprefixed. See {{ bug("707142#c13") }}
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>CSS 3D Transforms are now supported. This includes support for the {{ cssxref("transform-style") }}, {{ cssxref("perspective") }}, {{ cssxref("perspective-origin") }} and {{ cssxref("backface-visibility") }} properties, as well as for 3D transform functions in the {{ cssxref("transform") }} and {{ cssxref("transform-function") }} properties. See <a href="/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms#3d_specific_css_properties">Using CSS transforms</a> for details.</li>
- <li>Two new values for the CSS property {{ cssxref("unicode-bidi") }} have been added: <code>-moz-isolation</code> and <code>-moz-plaintext</code>. The <code>-moz-isolation</code> value isolates, from a directionality point of view, the element from its environment, letting it have a different directionality. An element with <code>unicode-bidi:-moz-isolation</code> behaves like a {{ HTMLElement("bdi") }} element. The <code>-moz-plaintext</code> indicates the browser to use the Unicode browser heuristic to determine directionality and not the CSS {{ cssxref("direction") }} property.</li>
- <li>The CSS {{ cssxref("linear-gradient()") }} and {{ cssxref("repeating-linear-gradient()") }} properties have been updated to support the new <code>to</code> syntax and the <em>magic corner</em> algorithm. This allows to give a precise color on the corner of a gradient-filled box.</li>
- <li>The {{ cssxref("text-overflow") }} property's handling of cases in which the box overflows on both sides while the <code>text-overflow</code> property is set to overflow on only one <a href="/en-US/docs/Web/CSS/text-overflow#gecko_notes">has been corrected</a>.</li>
- <li>Handling of the {{ cssxref("position") }} property on elements inside positioned {{ HTMLElement("table") }} elements <a href="/en-US/docs/Web/CSS/position#gecko_notes">has been fixed</a>. <strong>This change will affect layout of pages; however, we now comply with the CSS specification and with other browsers, so this should be easy to fix.</strong></li>
- <li>Margin collapsing around {{ HTMLElement("table") }} elements has been fixed to match the CSS specification. Previously, table elements' margins would not be collapsed along with other adjacent elements, leading to incorrect layout. <strong>This change will affect layout of pages; however, we now comply with the CSS specification and with other browsers, so this should be easy to fix.</strong></li>
-</ul>
+- CSS 3D Transforms are now supported. This includes support for the {{ cssxref("transform-style") }}, {{ cssxref("perspective") }}, {{ cssxref("perspective-origin") }} and {{ cssxref("backface-visibility") }} properties, as well as for 3D transform functions in the {{ cssxref("transform") }} and {{ cssxref("transform-function") }} properties. See [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms#3d_specific_css_properties) for details.
+- Two new values for the CSS property {{ cssxref("unicode-bidi") }} have been added: `-moz-isolation` and `-moz-plaintext`. The `-moz-isolation` value isolates, from a directionality point of view, the element from its environment, letting it have a different directionality. An element with `unicode-bidi:-moz-isolation` behaves like a {{ HTMLElement("bdi") }} element. The `-moz-plaintext` indicates the browser to use the Unicode browser heuristic to determine directionality and not the CSS {{ cssxref("direction") }} property.
+- The CSS {{ cssxref("linear-gradient()") }} and {{ cssxref("repeating-linear-gradient()") }} properties have been updated to support the new `to` syntax and the _magic corner_ algorithm. This allows to give a precise color on the corner of a gradient-filled box.
+- The {{ cssxref("text-overflow") }} property's handling of cases in which the box overflows on both sides while the `text-overflow` property is set to overflow on only one [has been corrected](/en-US/docs/Web/CSS/text-overflow#gecko_notes).
+- Handling of the {{ cssxref("position") }} property on elements inside positioned {{ HTMLElement("table") }} elements [has been fixed](/en-US/docs/Web/CSS/position#gecko_notes). **This change will affect layout of pages; however, we now comply with the CSS specification and with other browsers, so this should be easy to fix.**
+- Margin collapsing around {{ HTMLElement("table") }} elements has been fixed to match the CSS specification. Previously, table elements' margins would not be collapsed along with other adjacent elements, leading to incorrect layout. **This change will affect layout of pages; however, we now comply with the CSS specification and with other browsers, so this should be easy to fix.**
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<ul>
- <li>The {{ SVGElement("mask") }} element has been updated to support both sRGB and linearRGB, and now defaults to sRGB, in compliance with the latest revision of the SVG 1.1 specification.</li>
-</ul>
+- The {{ SVGElement("mask") }} element has been updated to support both sRGB and linearRGB, and now defaults to sRGB, in compliance with the latest revision of the SVG 1.1 specification.
 
-<h3 id="Networking">Networking</h3>
+### Networking
 
-<ul>
- <li>The HTTP <code>Accept-Charset</code> header is no longer sent in HTTP requests. In its absence, servers should respond by sending UTF-8.</li>
-</ul>
+- The HTTP `Accept-Charset` header is no longer sent in HTTP requests. In its absence, servers should respond by sending UTF-8.
 
-<h3 id="Developer_tools">Developer tools</h3>
+### Developer tools
 
-<ul>
- <li>The {{ domxref("console") }} object has two new methods,  {{ domxref("console.time()") }} and {{ domxref("console.timeEnd()") }}, which can be used to set timers on a page.</li>
- <li>The new <a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a> has been added, providing an excellent way to examine and manipulate the HTML and CSS behind your content.</li>
-</ul>
+- The {{ domxref("console") }} object has two new methods,  {{ domxref("console.time()") }} and {{ domxref("console.timeEnd()") }}, which can be used to set timers on a page.
+- The new [Page Inspector](/en-US/docs/Tools/Page_Inspector) has been added, providing an excellent way to examine and manipulate the HTML and CSS behind your content.
 
-<h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
+## Changes for Mozilla and add-on developers
 
-<p>For an overview of likely issues that may arise when updating your add-ons to support Firefox 10, see <a href="/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_10">Updating add-ons for Firefox 10</a>.</p>
+For an overview of likely issues that may arise when updating your add-ons to support Firefox 10, see [Updating add-ons for Firefox 10](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_10).
 
-<div class="note">
-  <p><strong>Note:</strong> The old <a href="/en-US/docs/PRBool"><code>PRBool</code></a> data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ <code>bool</code> type instead. Documentation will be updated in the future, but for now, just keep this in mind.</p>
-</div>
+> **Note:** The old [`PRBool`](/en-US/docs/PRBool) data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ `bool` type instead. Documentation will be updated in the future, but for now, just keep this in mind.
 
-<h3 id="Manifests">Manifests</h3>
+### Manifests
 
-<ul>
- <li>Support for <a href="/en-US/docs/Install_Manifests#strictCompatibility"><code>&lt;em:strictCompatibility&gt;</code></a> has been added to the install manifest. It allows add-ons authors to opt in to checking the maximum version of their extension. If set to <code>true</code> the add-on will be disabled if the application version is greater than <code>&lt;em:maxVersion&gt;</code>. Firefox 10 defaults to add-ons being compatible, regardless of their specified maximum version. This flag overrides that preference. You should set this if your add-on does things that are likely to be broken by Firefox updates, <strong>but not</strong> if your add-on has a binary component, since such add-ons always get strictly checked (remember that binary components must always be recompiled for each major Firefox release).</li>
- <li>If you wish to revert to the old behavior -- that is, to strict compatibility checking for all add-ons, regardless of the value of the <code>strictCompatibility</code> flag in their manifests, you can set the <code>extensions.strictCompatibility</code> preference to <code>true</code>.</li>
-</ul>
+- Support for [`<em:strictCompatibility>`](/en-US/docs/Install_Manifests#strictCompatibility) has been added to the install manifest. It allows add-ons authors to opt in to checking the maximum version of their extension. If set to `true` the add-on will be disabled if the application version is greater than `<em:maxVersion>`. Firefox 10 defaults to add-ons being compatible, regardless of their specified maximum version. This flag overrides that preference. You should set this if your add-on does things that are likely to be broken by Firefox updates, **but not** if your add-on has a binary component, since such add-ons always get strictly checked (remember that binary components must always be recompiled for each major Firefox release).
+- If you wish to revert to the old behavior -- that is, to strict compatibility checking for all add-ons, regardless of the value of the `strictCompatibility` flag in their manifests, you can set the `extensions.strictCompatibility` preference to `true`.
 
-<h3 id="XUL">XUL</h3>
+### XUL
 
-<ul>
- <li>Bootstrapped add-ons using a <a href="/en-US/docs/Chrome_Registration">chrome.manifest</a> file now have the manifest file registered automatically. See the section <a href="/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest">Adding user interface with a chrome.manifest</a> for details.</li>
-</ul>
+- Bootstrapped add-ons using a [chrome.manifest](/en-US/docs/Chrome_Registration) file now have the manifest file registered automatically. See the section [Adding user interface with a chrome.manifest](/en-US/docs/Extensions/Bootstrapped_extensions#Adding_user_interface_with_a_chrome.manifest) for details.
 
-<h3 id="XPConnect">XPConnect</h3>
+### XPConnect
 
-<ul>
- <li>Several new properties and methods have been added to <a href="/en-US/docs/Components.utils"><code>Components.utils</code></a>, granting access to assorted debugging-related information.</li>
-</ul>
+- Several new properties and methods have been added to [`Components.utils`](/en-US/docs/Components.utils), granting access to assorted debugging-related information.
 
-<h3 id="Interface_changes">Interface changes</h3>
+### Interface changes
 
-<ul>
- <li>The {{ interface("mozISpellCheckingEngine") }} and {{ interface("nsIEditorSpellCheck") }} interfaces have been updated to allow restartless add-ons to add dictionaries to the spell checker. <strong>XXX need to <a href="/en-US/Using_an_External_Spell-checker">update docs</a> on how to actually do this.</strong></li>
- <li>The {{ ifattribute("nsIBrowserHistory", "lastPageVisited") }} attribute has been removed.</li>
- <li>The <code>nsIDocumentViewer</code> interface has been merged into {{ interface("nsIContentViewer") }}.</li>
- <li>The {{ interface("nsIURIFixup") }} interface has a new flag, <code>FIXUP_FLAG_USE_UTF8</code>, which lets you tell it to use UTF-8 instead of the platform character set, when doing conversions.</li>
-</ul>
+- The {{ interface("mozISpellCheckingEngine") }} and {{ interface("nsIEditorSpellCheck") }} interfaces have been updated to allow restartless add-ons to add dictionaries to the spell checker. **XXX need to [update docs](/en-US/Using_an_External_Spell-checker) on how to actually do this.**
+- The {{ ifattribute("nsIBrowserHistory", "lastPageVisited") }} attribute has been removed.
+- The `nsIDocumentViewer` interface has been merged into {{ interface("nsIContentViewer") }}.
+- The {{ interface("nsIURIFixup") }} interface has a new flag, `FIXUP_FLAG_USE_UTF8`, which lets you tell it to use UTF-8 instead of the platform character set, when doing conversions.
 
-<h3 id="Plug-in_changes">Plug-in changes</h3>
+### Plug-in changes
 
-<ul>
- <li>The <a href="/en-US/docs/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#Working_with_URLs">new variable <code>NPNVdocumentOrigin</code></a> has been added; this returns the document origin, and is more secure than {{ domxref("window.location") }}.</li>
-</ul>
+- The [new variable `NPNVdocumentOrigin`](/en-US/docs/Gecko_Plugin_API_Reference/Plug-in_Development_Overview#Working_with_URLs) has been added; this returns the document origin, and is more secure than {{ domxref("window.location") }}.
 
-<h3 id="Build_system_changes">Build system changes</h3>
+### Build system changes
 
-<ul>
- <li>The <code>--disable-rdf</code> build option, which actually made it impossible to successfully build, has been removed. Work is ongoing on being able to actually remove RDF support entirely, but at present XUL still requires it to function. See {{ bug(559505) }} for progress on removing the last vestiges of RDF being required.</li>
- <li>The <code>--disable-smil</code> build option has been removed.</li>
-</ul>
+- The `--disable-rdf` build option, which actually made it impossible to successfully build, has been removed. Work is ongoing on being able to actually remove RDF support entirely, but at present XUL still requires it to function. See {{ bug(559505) }} for progress on removing the last vestiges of RDF being required.
+- The `--disable-smil` build option has been removed.
 
-<h3 id="See_also">See also</h3>
+### See also
 
-<ul>
- <li><a href="/en-US/docs/Mozilla/Firefox/Releases/9">Firefox 9 for developers</a></li>
- <li><a href="/en-US/docs/Mozilla/Firefox/Releases/8">Firefox 8 for developers</a></li>
- <li><a href="/en-US/docs/Mozilla/Firefox/Releases/7">Firefox 7 for developers</a></li>
- <li><a href="/en-US/docs/Mozilla/Firefox/Releases/6">Firefox 6 for developers</a></li>
- <li><a href="/en-US/docs/Mozilla/Firefox/Releases/5">Firefox 5 for developers </a></li>
- <li><a href="/en-US/docs/Mozilla/Firefox/Releases/4">Firefox 4 for developers </a></li>
- <li><a href="/en-US/docs/Mozilla/Firefox/Releases/3.6">Firefox 3.6 for developers </a></li>
- <li><a href="/en-US/docs/Mozilla/Firefox/Releases/3.5">Firefox 3.5 for developers</a></li>
- <li><a href="/en-US/docs/Mozilla/Firefox/Releases/3">Firefox 3 for developers</a></li>
- <li><a href="/en-US/docs/Mozilla/Firefox/Releases/2">Firefox 2 for developers</a></li>
- <li><a href="/en-US/docs/Mozilla/Firefox/Releases/1.5">Firefox 1.5 for developers</a></li>
-</ul>
+- [Firefox 9 for developers](/en-US/docs/Mozilla/Firefox/Releases/9)
+- [Firefox 8 for developers](/en-US/docs/Mozilla/Firefox/Releases/8)
+- [Firefox 7 for developers](/en-US/docs/Mozilla/Firefox/Releases/7)
+- [Firefox 6 for developers](/en-US/docs/Mozilla/Firefox/Releases/6)
+- [Firefox 5 for developers](/en-US/docs/Mozilla/Firefox/Releases/5)
+- [Firefox 4 for developers](/en-US/docs/Mozilla/Firefox/Releases/4)
+- [Firefox 3.6 for developers](/en-US/docs/Mozilla/Firefox/Releases/3.6)
+- [Firefox 3.5 for developers](/en-US/docs/Mozilla/Firefox/Releases/3.5)
+- [Firefox 3 for developers](/en-US/docs/Mozilla/Firefox/Releases/3)
+- [Firefox 2 for developers](/en-US/docs/Mozilla/Firefox/Releases/2)
+- [Firefox 1.5 for developers](/en-US/docs/Mozilla/Firefox/Releases/1.5)

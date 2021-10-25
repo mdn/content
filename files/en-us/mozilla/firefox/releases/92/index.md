@@ -7,78 +7,57 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 92 that will affect developers. Firefox 92 was released on September 7, 2021.</p>
+This article provides information about the changes in Firefox 92 that will affect developers. Firefox 92 was released on September 7, 2021.
 
-<div class="note">
-  <p><strong>Note:</strong> See also <a href="https://hacks.mozilla.org/2021/09/time-for-a-review-of-firefox-92/">Time for a review of Firefox 92</a> on Mozilla Hacks.</p>
-</div>
+> **Note:** See also [Time for a review of Firefox 92](https://hacks.mozilla.org/2021/09/time-for-a-review-of-firefox-92/) on Mozilla Hacks.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>No changes</p>
+No changes
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
-  <li>The keywords <code>avoid-page</code> and <code>avoid-column</code> are now supported for the {{cssxref("break-inside")}} property ({{bug(1722945)}}).</li>
-  <li>The two-value syntax for the {{cssxref("font-size-adjust")}} property is now supported ({{bug(1720131)}}).</li>
-  <li>The {{cssxref("@font-face/size-adjust")}} descriptor is now supported ({{bug(1720131)}}).</li>
-  <li>The CSS {{cssxref("accent-color")}} property has been implemented ({{bug(1722031)}}).</li>
-  <li>The <code>system-ui</code> value is now supported for the {{cssxref("font-family")}} property ({{bug(1226042)}}).</li>
-</ul>
+- The keywords `avoid-page` and `avoid-column` are now supported for the {{cssxref("break-inside")}} property ({{bug(1722945)}}).
+- The two-value syntax for the {{cssxref("font-size-adjust")}} property is now supported ({{bug(1720131)}}).
+- The {{cssxref("@font-face/size-adjust")}} descriptor is now supported ({{bug(1720131)}}).
+- The CSS {{cssxref("accent-color")}} property has been implemented ({{bug(1722031)}}).
+- The `system-ui` value is now supported for the {{cssxref("font-family")}} property ({{bug(1226042)}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
-  <li>{{jsxref("Object.hasOwn()")}} can be used to test whether a property was defined on an object or inherited ({{bug(1721149)}}).</li>
-</ul>
+- {{jsxref("Object.hasOwn()")}} can be used to test whether a property was defined on an object or inherited ({{bug(1721149)}}).
 
-<h3 id="HTTP">HTTP</h3>
+### HTTP
 
-<ul>
-  <li>Firefox will automatically upgrade an HTTP request to HTTPS when a usable {{Glossary("HTTPS RR")}} is available.
-    It will also use information provided in an <em>HTTPS RR</em> to optimize the process of establishing HTTPS connections⁠—this is conceptually similar to using the {{HTTPHeader("Alt-Svc")}} header. 
-    ({{bug(1721132)}}).</li>
-</ul>
+- Firefox will automatically upgrade an HTTP request to HTTPS when a usable {{Glossary("HTTPS RR")}} is available.
+  It will also use information provided in an _HTTPS RR_ to optimize the process of establishing HTTPS connections⁠—this is conceptually similar to using the {{HTTPHeader("Alt-Svc")}} header.
+  ({{bug(1721132)}}).
 
-<h3 id="APIs">APIs</h3>
+### APIs
 
-<ul>
-  <li>The <code>disabledFeatures</code> static property has been implemented for Custom Elements ({{bug(1723396)}}).</li>
-</ul>
+- The `disabledFeatures` static property has been implemented for Custom Elements ({{bug(1723396)}}).
 
-<h4 id="DOM">DOM</h4>
+#### DOM
 
-<ul>
-  <li>The <a href="/en-US/docs/Web/API/HTMLSlotElement">Imperative Slotting API</a> (part of the <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow Dom API</a>) Has been implemented. ({{bug(1705141)}})</li>
-  <li>You can now monitor for changes to text selections in {{HTMLElement("input")}} or {{HTMLElement("textarea")}} by listening for <code>selectionchange</code> events in {{domxref("HTMLInputElement.selectionchange_event", "HTMLInputElement")}} and {{domxref("HTMLTextAreaElement/selectionchange_event", "HTMLTextAreaElement")}}, respectively ({{bug(1648944)}}).</li>
-</ul>
+- The [Imperative Slotting API](/en-US/docs/Web/API/HTMLSlotElement) (part of the [Shadow Dom API](/en-US/docs/Web/Web_Components/Using_shadow_DOM)) Has been implemented. ({{bug(1705141)}})
+- You can now monitor for changes to text selections in {{HTMLElement("input")}} or {{HTMLElement("textarea")}} by listening for `selectionchange` events in {{domxref("HTMLInputElement.selectionchange_event", "HTMLInputElement")}} and {{domxref("HTMLTextAreaElement/selectionchange_event", "HTMLTextAreaElement")}}, respectively ({{bug(1648944)}}).
 
-<h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
+#### Media, WebRTC, and Web Audio
 
-<ul>
-  <li>Access to audio output devices, like speakers and headphones, is now protected by the <a href="speaker-selection">speaker-selection</a> feature policy ({{bug(1577199)}}).</li>
-</ul>
+- Access to audio output devices, like speakers and headphones, is now protected by the [speaker-selection](speaker-selection) feature policy ({{bug(1577199)}}).
 
+### WebDriver conformance (Marionette)
 
-<h3 id="webdriver_conformance_marionette">WebDriver conformance (Marionette)</h3>
+- Improved support for the `webSocketUrl` capability, which now returns the WebDriver BiDi websocket URL if `true` was passed and if BiDi is supported. ({{bug(1692984)}}).
 
-<ul>
-  <li>Improved support for the <code>webSocketUrl</code> capability, which now returns the WebDriver BiDi websocket URL if <code>true</code> was passed and if BiDi is supported. ({{bug(1692984)}}).</li>
-</ul>
+## Changes for add-on developers
 
+- Support for `cookieStoreId` is added to {{WebExtAPIRef('downloads.download')}}, {{WebExtAPIRef('downloads.DownloadQuery')}}, and {{WebExtAPIRef('downloads.DownloadItem')}}. The addition to the types {{WebExtAPIRef('downloads.DownloadQuery')}} and {{WebExtAPIRef('downloads.DownloadItem')}} provides support in {{WebExtAPIRef('downloads.search')}} and {{WebExtAPIRef('downloads.erase')}}. Web extensions can now associate downloads with specific cookie stores, such as container tabs ([contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)). ({{bug(1669566)}})
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+## Older versions
 
-<ul>
-  <li>Support for <code>cookieStoreId</code> is added to {{WebExtAPIRef('downloads.download')}}, {{WebExtAPIRef('downloads.DownloadQuery')}}, and {{WebExtAPIRef('downloads.DownloadItem')}}. The addition to the types {{WebExtAPIRef('downloads.DownloadQuery')}} and {{WebExtAPIRef('downloads.DownloadItem')}} provides support in {{WebExtAPIRef('downloads.search')}} and {{WebExtAPIRef('downloads.erase')}}. Web extensions can now associate downloads with specific cookie stores, such as container tabs (<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">contextual identities</a>). ({{bug(1669566)}})</li>
-</ul>
-
-
-<h2 id="Older_versions">Older versions</h2>
-
-<p>{{Firefox_for_developers(91)}}</p>
+{{Firefox_for_developers(91)}}

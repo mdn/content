@@ -7,16 +7,14 @@ tags:
   - Mozilla
   - Release
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Below you'll find links to the developer release notes for every Firefox release. These lovingly-crafted notes provide details on what features and APIs were added and improved and what bugs were eliminated in each version of Firefox. All written to give developers like you the information they need most. You're welcome.</p>
+Below you'll find links to the developer release notes for every Firefox release. These lovingly-crafted notes provide details on what features and APIs were added and improved and what bugs were eliminated in each version of Firefox. All written to give developers like you the information they need most. You're welcome.
 
-<div>{{ListSubpages("",1,1,1)}}</div>
+{{ListSubpages("",1,1,1)}}
 
-<p>Whew! That's a lot of Firefoxen!</p>
+Whew! That's a lot of Firefoxen!
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Mozilla/Thunderbird/Releases">Thunderbird developer release notes</a></li>
-</ul>
+- [Thunderbird developer release notes](/en-US/docs/Mozilla/Thunderbird/Releases)

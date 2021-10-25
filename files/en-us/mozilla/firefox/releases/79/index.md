@@ -7,125 +7,97 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 79 that will affect developers. Firefox 79 was released on July 28, 2020.</p>
+This article provides information about the changes in Firefox 79 that will affect developers. Firefox 79 was released on July 28, 2020.
 
-<p>See also <a href="https://hacks.mozilla.org/2020/07/firefox-79/">Firefox 79: The safe return of shared memory, new tooling, and platform updates</a> on Mozilla hacks.</p>
+See also [Firefox 79: The safe return of shared memory, new tooling, and platform updates](https://hacks.mozilla.org/2020/07/firefox-79/) on Mozilla hacks.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+### Developer Tools
 
-<h4 id="Console">Console</h4>
+#### Console
 
-<ul>
- <li>Network messages with response codes in the 400-499 and 500-599 ranges are now considered errors, and are displayed <a href="/en-US/docs/Tools/Web_Console/Console_messages#filtering_by_category">even if Response or XHR filters are disabled</a>. ({{bug(1635460)}})</li>
- <li>Network messages for requests that are blocked (by the browser or an extension) are now styled with a "prohibited" icon in the <a href="/en-US/docs/Tools/Web_Console/Console_messages">Console</a>. ({{bug(1629875)}})</li>
-</ul>
+- Network messages with response codes in the 400-499 and 500-599 ranges are now considered errors, and are displayed [even if Response or XHR filters are disabled](/en-US/docs/Tools/Web_Console/Console_messages#filtering_by_category). ({{bug(1635460)}})
+- Network messages for requests that are blocked (by the browser or an extension) are now styled with a "prohibited" icon in the [Console](/en-US/docs/Tools/Web_Console/Console_messages). ({{bug(1629875)}})
 
-<h4 id="Debugger">Debugger</h4>
+#### Debugger
 
-<ul>
- <li><a href="/en-US/docs/Tools/Debugger/How_to/Ignore_a_source">"Blackbox" a source file</a> is now called "ignore" a source file.  ({{bug(1642811)}})</li>
- <li>Inline preview is now available on <a href="/en-US/docs/Tools/Debugger/How_to/Breaking_on_exceptions">exceptions</a>. ({{bug(1581708)}})</li>
- <li>Items in the Watch Expressions and Scopes sections now have tooltips on hover, showing their values ({{bug(1631545)}})</li>
- <li>In the <a href="/en-US/docs/Tools/Debugger/UI_Tour#call_stack">Call Stack section</a>, there is now a context menu option to <strong>Restart Frame</strong>, to execute the current stack frame from its beginning. ({{bug(1594467)}})</li>
-</ul>
+- ["Blackbox" a source file](/en-US/docs/Tools/Debugger/How_to/Ignore_a_source) is now called "ignore" a source file.  ({{bug(1642811)}})
+- Inline preview is now available on [exceptions](/en-US/docs/Tools/Debugger/How_to/Breaking_on_exceptions). ({{bug(1581708)}})
+- Items in the Watch Expressions and Scopes sections now have tooltips on hover, showing their values ({{bug(1631545)}})
+- In the [Call Stack section](/en-US/docs/Tools/Debugger/UI_Tour#call_stack), there is now a context menu option to **Restart Frame**, to execute the current stack frame from its beginning. ({{bug(1594467)}})
 
-<h4 id="Other_tools">Other tools</h4>
+#### Other tools
 
-<ul>
- <li>The new <a href="/en-US/docs/Tools/Application">Application panel</a> is now available, which initially provides inspection and debugging support for <a href="/en-US/docs/Web/API/Service_Worker_API">service workers</a> and <a href="/en-US/docs/Web/Manifest">web app manifests</a>.</li>
- <li>The Messages tab of the Network Monitor has been merged with the <a href="/en-US/docs/Tools/Network_Monitor/request_details#response_tab">Responses tab</a>. ({{bug(1636421)}})</li>
- <li>The Accessibility Inspector is automatically turned on when you access its tab; you no longer need to explicitly enable it. ({{bug(1602075)}})</li>
- <li>In <a href="/en-US/docs/Tools/Responsive_Design_Mode#controlling_responsive_design_mode">Responsive Design Mode</a>, when touch simulation is enabled, mouse-drag events are now interpreted as touch-drag or swipe events. ({{bug(1621781)}})</li>
- <li>When <a href="/en-US/docs/Tools/about:debugging#connecting_to_a_remote_device">remote debugging</a>, the URL bar now has <strong>Back</strong> and <strong>Forward</strong> buttons to help with navigation on the remote browser. ({{bug(1639425)}})</li>
-</ul>
+- The new [Application panel](/en-US/docs/Tools/Application) is now available, which initially provides inspection and debugging support for [service workers](/en-US/docs/Web/API/Service_Worker_API) and [web app manifests](/en-US/docs/Web/Manifest).
+- The Messages tab of the Network Monitor has been merged with the [Responses tab](/en-US/docs/Tools/Network_Monitor/request_details#response_tab). ({{bug(1636421)}})
+- The Accessibility Inspector is automatically turned on when you access its tab; you no longer need to explicitly enable it. ({{bug(1602075)}})
+- In [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode#controlling_responsive_design_mode), when touch simulation is enabled, mouse-drag events are now interpreted as touch-drag or swipe events. ({{bug(1621781)}})
+- When [remote debugging](/en-US/docs/Tools/about:debugging#connecting_to_a_remote_device), the URL bar now has **Back** and **Forward** buttons to help with navigation on the remote browser. ({{bug(1639425)}})
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>The <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> element's <code>sandbox</code> attribute now supports the <code>allow-top-navigation-by-user-activation</code> token ({{bug(1359867)}}).</li>
- <li>Setting <code>target="_blank"</code> on <code><a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> and <code><a href="/en-US/docs/Web/HTML/Element/area">&lt;area&gt;</a></code> elements implicitly provides the same behavior as also setting <code>rel="noopener"</code> ({{bug(1522083)}}).</li>
-</ul>
+- The [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element's `sandbox` attribute now supports the `allow-top-navigation-by-user-activation` token ({{bug(1359867)}}).
+- Setting `target="_blank"` on [`<a>`](/en-US/docs/Web/HTML/Element/a) and [`<area>`](/en-US/docs/Web/HTML/Element/area) elements implicitly provides the same behavior as also setting `rel="noopener"` ({{bug(1522083)}}).
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>External style sheets are now cached per document group ({{bug(1599160)}}). Firefox will minimize retrieval and revalidation of cached style sheets when navigating pages on the same origin. A simple reload (for example, <code>F5</code>) will not revalidate the cached CSS files. To load current versions of the style sheets, reload the page bypassing the cache (<code>Cmd</code>/<code>Ctrl</code> + <code>F5</code>).</li>
-</ul>
+- External style sheets are now cached per document group ({{bug(1599160)}}). Firefox will minimize retrieval and revalidation of cached style sheets when navigating pages on the same origin. A simple reload (for example, `F5`) will not revalidate the cached CSS files. To load current versions of the style sheets, reload the page bypassing the cache (`Cmd`/`Ctrl` + `F5`).
 
-<h4 id="Removals">Removals</h4>
+#### Removals
 
-<ul>
- <li>The <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> media feature's <code>no-preference</code> value has been removed from the <a href="https://drafts.csswg.org/mediaqueries-5/#descdef-media-prefers-color-scheme">media queries spec</a>, and from Firefox ({{bug(1643656)}}).</li>
-</ul>
+- The [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media feature's `no-preference` value has been removed from the [media queries spec](https://drafts.csswg.org/mediaqueries-5/#descdef-media-prefers-color-scheme), and from Firefox ({{bug(1643656)}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li>{{jsxref("SharedArrayBuffer")}} has been re-enabled in a post-Spectre-safe manner. It is available to cross-origin isolated sites ({{bug(1619649)}}).
-  <ul>
-   <li>To cross-origin isolate your site, you need to set the new {{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP) and {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP) headers.</li>
-  </ul>
- </li>
- <li>{{jsxref("Promise.any()")}} is now available ({{bug(1599769)}}).</li>
- <li>{{jsxref("WeakRef")}} objects have been implemented ({{bug(1639246)}}).</li>
- <li><a href="https://github.com/tc39/proposal-logical-assignment">Logical assignment operators</a> are now supported ({{bug(1639591)}})
-  <ul>
-   <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment">Logical nullish assignment (<code>??=</code>)</a></li>
-   <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment">Logical AND assignment (<code>&amp;&amp;=</code>)</a></li>
-   <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment">Logical OR assignment (<code>||=</code>)</a></li>
-  </ul>
- </li>
- <li>{{jsxref("Atomics")}} objects now also work with non-shared memory ({{bug(1630706)}}).</li>
- <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat"><code>Intl.DateTimeFormat()</code> constructor </a>now supports the <code>dateStyle</code> and <code>timeStyle</code> options ({{bug(1557718)}}).</li>
- <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat"><code>Intl.NumberFormat()</code> constructor </a>now supports more numbering systems ({{bug(1413504)}}).</li>
-</ul>
+- {{jsxref("SharedArrayBuffer")}} has been re-enabled in a post-Spectre-safe manner. It is available to cross-origin isolated sites ({{bug(1619649)}}).
 
-<h3 id="HTTP">HTTP</h3>
+  - To cross-origin isolate your site, you need to set the new {{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP) and {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP) headers.
 
-<ul>
- <li>Cross-origin isolation has been implemented using the new {{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP) and {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP) headers. This allows you to access certain features such as {{jsxref("SharedArrayBuffer")}} objects and unthrottled timers in {{domxref("Performance.now()")}}.</li>
-</ul>
+- {{jsxref("Promise.any()")}} is now available ({{bug(1599769)}}).
+- {{jsxref("WeakRef")}} objects have been implemented ({{bug(1639246)}}).
+- [Logical assignment operators](https://github.com/tc39/proposal-logical-assignment) are now supported ({{bug(1639591)}})
 
-<h3 id="APIs">APIs</h3>
+  - [Logical nullish assignment (`??=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)
+  - [Logical AND assignment (`&&=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
+  - [Logical OR assignment (`||=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
 
-<h4 id="DOM">DOM</h4>
+- {{jsxref("Atomics")}} objects now also work with non-shared memory ({{bug(1630706)}}).
+- The [`Intl.DateTimeFormat()` constructor ](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)now supports the `dateStyle` and `timeStyle` options ({{bug(1557718)}}).
+- The [`Intl.NumberFormat()` constructor ](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat)now supports more numbering systems ({{bug(1413504)}}).
 
-<ul>
- <li>The <code><a href="/en-US/docs/Web/API/FileReader">FileReader</a></code> interface's <a href="/en-US/docs/Web/API/FileReader/loadstart_event"><code>loadstart</code> event</a> is now dispatched asynchronously, as per the spec ({{bug(1502403)}}).</li>
- <li>{{domxref("CanvasPattern.setTransform()")}} now supports a {{domxref("DOMMatrix")}} object as an input parameter, as well as an {{domxref("SVGMatrix")}} object ({{bug(1565997)}}).</li>
-</ul>
+### HTTP
 
-<h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
+- Cross-origin isolation has been implemented using the new {{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP) and {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP) headers. This allows you to access certain features such as {{jsxref("SharedArrayBuffer")}} objects and unthrottled timers in {{domxref("Performance.now()")}}.
 
-<ul>
- <li>Firefox now supports remote timestamps on statistics records whose {{domxref("RTCStatsType")}} is <code>remote-outbound-rtp</code>. The {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary which is used to provide these statistics now includes the {{domxref("RTCRemoteOutboundRtpStreamStats.remoteTimestamp", "remoteTimestamp")}} property, which states the timestamp on the remote peer at which the statistics were collected or generated ({{bug(1615191)}}).</li>
-</ul>
+### APIs
 
-<h4 id="Removals_2">Removals</h4>
+#### DOM
 
-<ul>
- <li>A number of internal Gecko events — including <code>DOMWindowClose</code> — which were accidentally exposed to the web, are now internal-only as intended ({{bug(1557407)}}).</li>
-</ul>
+- The [`FileReader`](/en-US/docs/Web/API/FileReader) interface's [`loadstart` event](/en-US/docs/Web/API/FileReader/loadstart_event) is now dispatched asynchronously, as per the spec ({{bug(1502403)}}).
+- {{domxref("CanvasPattern.setTransform()")}} now supports a {{domxref("DOMMatrix")}} object as an input parameter, as well as an {{domxref("SVGMatrix")}} object ({{bug(1565997)}}).
 
-<h3 id="WebAssembly">WebAssembly</h3>
+#### Media, WebRTC, and Web Audio
 
-<ul>
- <li><a href="/en-US/docs/WebAssembly/Understanding_the_text_format#bulk_memory_operations">WebAssembly Bulk memory operations</a> are now shipped ({{bug(1528294)}}).</li>
- <li><a href="/en-US/docs/WebAssembly/Understanding_the_text_format#reference_types">WebAssembly Reference types</a> are now shipped ({{bug(1637884)}}).</li>
- <li><a href="/en-US/docs/WebAssembly/Understanding_the_text_format#webassembly_threads">WebAssembly Threads</a> (Shared memory &amp; Atomics) are now shipped ({{bug(1389458)}}, {{bug(1648685)}}).</li>
-</ul>
+- Firefox now supports remote timestamps on statistics records whose {{domxref("RTCStatsType")}} is `remote-outbound-rtp`. The {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary which is used to provide these statistics now includes the {{domxref("RTCRemoteOutboundRtpStreamStats.remoteTimestamp", "remoteTimestamp")}} property, which states the timestamp on the remote peer at which the statistics were collected or generated ({{bug(1615191)}}).
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+#### Removals
 
-<ul>
- <li>New API: <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/warmup">tabs.warmup()</a></code> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1402256">bug 1402256</a>)</li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync#storage_quotas_for_sync_data">Storage quotas are now enforced for the <code>sync</code> storage area</a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1634615">bug 1634615</a>) (<a href="https://blog.mozilla.org/addons/2020/07/09/changes-to-storage-sync-in-firefox-79/">addons.mozilla.org blog post</a>)</li>
-</ul>
+- A number of internal Gecko events — including `DOMWindowClose` — which were accidentally exposed to the web, are now internal-only as intended ({{bug(1557407)}}).
 
-<h2 id="Older_versions">Older versions</h2>
+### WebAssembly
 
-<p>{{Firefox_for_developers(78)}}</p>
+- [WebAssembly Bulk memory operations](/en-US/docs/WebAssembly/Understanding_the_text_format#bulk_memory_operations) are now shipped ({{bug(1528294)}}).
+- [WebAssembly Reference types](/en-US/docs/WebAssembly/Understanding_the_text_format#reference_types) are now shipped ({{bug(1637884)}}).
+- [WebAssembly Threads](/en-US/docs/WebAssembly/Understanding_the_text_format#webassembly_threads) (Shared memory & Atomics) are now shipped ({{bug(1389458)}}, {{bug(1648685)}}).
+
+## Changes for add-on developers
+
+- New API: [`tabs.warmup()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/warmup) ([bug 1402256](https://bugzilla.mozilla.org/show_bug.cgi?id=1402256))
+- [Storage quotas are now enforced for the `sync` storage area](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync#storage_quotas_for_sync_data) ([bug 1634615](https://bugzilla.mozilla.org/show_bug.cgi?id=1634615)) ([addons.mozilla.org blog post](https://blog.mozilla.org/addons/2020/07/09/changes-to-storage-sync-in-firefox-79/))
+
+## Older versions
+
+{{Firefox_for_developers(78)}}

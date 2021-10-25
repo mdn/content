@@ -11,241 +11,203 @@ tags:
   - Namoroka
   - XUL
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p><a href="https://www.firefox.com/">Firefox 3.6</a> offers support for new and developing web standards, increased performance, and an overall better experience for web users and developers. This page provides links to articles covering the new capabilities of Firefox 3.6.</p>
+[Firefox 3.6](https://www.firefox.com/) offers support for new and developing web standards, increased performance, and an overall better experience for web users and developers. This page provides links to articles covering the new capabilities of Firefox 3.6.
 
-<h2 id="For_web_site_and_application_developers">For web site and application developers</h2>
+## For web site and application developers
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<dl>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Using gradients</a></dt>
- <dd>Firefox 3.6 adds support for the proposed <code>-moz-linear-gradient</code> and <code>-moz-radial-gradient</code> properties for {{Cssxref("background")}}.</dd>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds">Multiple backgrounds</a></dt>
- <dd>The {{cssxref("background")}} property (as well as {{Cssxref("background-color")}}, {{Cssxref("background-image")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, and {{Cssxref("background-attachment")}}) now supports multiple backgrounds. This lets you specify multiple backgrounds that are rendered atop one another in layers.</dd>
- <dt><a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#mozilla-specific_media_features">Mozilla-specific media features</a></dt>
- <dd>Media features have been added for Mozilla-specific system metrics, so that <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a> can be used to more safely check on the availability of features such as touch support.</dd>
- <dt><a href="/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images">Scaling background images</a></dt>
- <dd>The <code>background-size</code> property from the <a href="https://dev.w3.org/csswg/css3-background/">CSS 3 Backgrounds and Borders draft</a> is now supported under the name <code>-moz-background-size</code>.</dd>
- <dt><a href="/en-US/docs/Web/Guide/WOFF">WOFF font support</a></dt>
- <dd>{{cssxref("@font-face")}} now supports the WOFF downloadable font file format.</dd>
- <dt><a href="/en-US/docs/Web/CSS/pointer-events">Pointer events</a></dt>
- <dd>The {{cssxref("pointer-events")}} property lets content specify whether or not an element may be the target of mouse pointer events.</dd>
-</dl>
+- [Using gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+  - : Firefox 3.6 adds support for the proposed `-moz-linear-gradient` and `-moz-radial-gradient` properties for {{Cssxref("background")}}.
+- [Multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+  - : The {{cssxref("background")}} property (as well as {{Cssxref("background-color")}}, {{Cssxref("background-image")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, and {{Cssxref("background-attachment")}}) now supports multiple backgrounds. This lets you specify multiple backgrounds that are rendered atop one another in layers.
+- [Mozilla-specific media features](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#mozilla-specific_media_features)
+  - : Media features have been added for Mozilla-specific system metrics, so that [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) can be used to more safely check on the availability of features such as touch support.
+- [Scaling background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
+  - : The `background-size` property from the [CSS 3 Backgrounds and Borders draft](https://dev.w3.org/csswg/css3-background/) is now supported under the name `-moz-background-size`.
+- [WOFF font support](/en-US/docs/Web/Guide/WOFF)
+  - : {{cssxref("@font-face")}} now supports the WOFF downloadable font file format.
+- [Pointer events](/en-US/docs/Web/CSS/pointer-events)
+  - : The {{cssxref("pointer-events")}} property lets content specify whether or not an element may be the target of mouse pointer events.
 
-<h4 id="Miscellaneous_CSS_changes">Miscellaneous CSS changes</h4>
+#### Miscellaneous CSS changes
 
-<ul>
- <li>The <a href="/en-US/docs/Web/CSS/length#relative_length_units"><code>rem</code></a> length unit from <a href="https://www.w3.org/TR/css3-values/#lengths">CSS3 Values and Units</a> is now supported. {{bug(472195)}}</li>
- <li>{{Cssxref("image-rendering")}} is supported for images, background images, videos and canvases. {{bug(423756)}}</li>
- <li>{{Cssxref("text-align")}}:end is now supported. {{bug(299837)}}</li>
- <li>DOM changes to elements using the table {{Cssxref("display")}} types now work much better.</li>
- <li>Added {{cssxref(":-moz-locale-dir(ltr)")}} and {{cssxref(":-moz-locale-dir(rtl)")}} to make it easier to customize layouts based on whether the user interface is being displayed using a left-to-right or a right-to-left locale. {{bug(478416)}}</li>
- <li>Added support for the {{cssxref(":indeterminate")}} pseudo-class, which matches <code>checkbox</code> <a href="/en-US/docs/Web/HTML/Element/input"><code>input</code></a> elements whose <code>indeterminate</code> attribute is <code>true</code>.</li>
- <li>Windowed plugins are no longer displayed in CSS transforms, because they can't be transformed properly by the compositor.</li>
-</ul>
+- The [`rem`](/en-US/docs/Web/CSS/length#relative_length_units) length unit from [CSS3 Values and Units](https://www.w3.org/TR/css3-values/#lengths) is now supported. {{bug(472195)}}
+- {{Cssxref("image-rendering")}} is supported for images, background images, videos and canvases. {{bug(423756)}}
+- {{Cssxref("text-align")}}:end is now supported. {{bug(299837)}}
+- DOM changes to elements using the table {{Cssxref("display")}} types now work much better.
+- Added {{cssxref(":-moz-locale-dir(ltr)")}} and {{cssxref(":-moz-locale-dir(rtl)")}} to make it easier to customize layouts based on whether the user interface is being displayed using a left-to-right or a right-to-left locale. {{bug(478416)}}
+- Added support for the {{cssxref(":indeterminate")}} pseudo-class, which matches `checkbox` [`input`](/en-US/docs/Web/HTML/Element/input) elements whose `indeterminate` attribute is `true`.
+- Windowed plugins are no longer displayed in CSS transforms, because they can't be transformed properly by the compositor.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/File/Using_files_from_web_applications">Using files from web applications</a></dt>
- <dd>Support for the new HTML5 File API has been added to Gecko, making it possible for web applications to access local files selected by the user. This includes support for selecting multiple files using the <code>input type="file"</code> HTML element's new <code>multiple</code> attribute.</dd>
- <dt>HTML5 video supports poster frames</dt>
- <dd>The <code>poster</code> attribute is now supported for the <a href="/en-US/docs/Web/HTML/Element/video"><code>video</code></a> element, allowing content to specify a poster frame to be displayed until the video begins to play.</dd>
- <dt>Checkboxes and radio buttons support the <code>indeterminate</code> property</dt>
- <dd>HTML <a href="/en-US/docs/Web/HTML/Element/input"><code>input</code></a> elements of types <code>checkbox</code> and <code>radio</code> now support the indeterminate property, which allows a third, "indeterminate" state.</dd>
- <dt>Canvas image smoothing can be controlled</dt>
- <dd>The new <a href="/en-US/docs/Canvas_tutorial/Using_images#Controlling_image_scaling_behavior"><code>mozImageSmoothingEnabled</code></a> property can be used to turn on and off image smoothing when scaling in <a href="/en-US/docs/Web/HTML/Element/canvas"><code>canvas</code></a> elements.</dd>
- <dt>Asynchronous script execution</dt>
- <dd>By setting the <code>async</code> attribute on a <a href="/en-US/docs/Web/HTML/Element/script"><code>script</code></a> element, the <code>script</code> will not block loading or display of the rest of the page. Instead the <code>script</code> executes as soon as it is downloaded.</dd>
-</dl>
+- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
+  - : Support for the new HTML5 File API has been added to Gecko, making it possible for web applications to access local files selected by the user. This includes support for selecting multiple files using the `input type="file"` HTML element's new `multiple` attribute.
+- HTML5 video supports poster frames
+  - : The `poster` attribute is now supported for the [`video`](/en-US/docs/Web/HTML/Element/video) element, allowing content to specify a poster frame to be displayed until the video begins to play.
+- Checkboxes and radio buttons support the `indeterminate` property
+  - : HTML [`input`](/en-US/docs/Web/HTML/Element/input) elements of types `checkbox` and `radio` now support the indeterminate property, which allows a third, "indeterminate" state.
+- Canvas image smoothing can be controlled
+  - : The new [`mozImageSmoothingEnabled`](/en-US/docs/Canvas_tutorial/Using_images#Controlling_image_scaling_behavior) property can be used to turn on and off image smoothing when scaling in [`canvas`](/en-US/docs/Web/HTML/Element/canvas) elements.
+- Asynchronous script execution
+  - : By setting the `async` attribute on a [`script`](/en-US/docs/Web/HTML/Element/script) element, the `script` will not block loading or display of the rest of the page. Instead the `script` executes as soon as it is downloaded.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p>Gecko 1.9.2 introduces JavaScript 1.8.2, which adds a number of language features from the <a href="/en-US/docs/JavaScript/ECMAScript_5_support_in_Mozilla">ECMAScript 5 standard</a>:</p>
+Gecko 1.9.2 introduces JavaScript 1.8.2, which adds a number of language features from the [ECMAScript 5 standard](/en-US/docs/JavaScript/ECMAScript_5_support_in_Mozilla):
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse"><code>Date.parse()</code></a> can now parse ISO 8601 dates like YYYY-MM-DD.</li>
- <li>
-  <p>The <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>prototype</code></a> property of function instances is no longer enumerable.</p>
- </li>
-</ul>
+- [`Date.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) can now parse ISO 8601 dates like YYYY-MM-DD.
+- The [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) property of function instances is no longer enumerable.
 
-<h3 id="DOM">DOM</h3>
+### DOM
 
-<dl>
- <dt>Web workers can now self-terminate</dt>
- <dd><a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Workers</a> now support the {{ifmethod("nsIWorkerScope", "close")}} method, which allows them to terminate themselves.</dd>
- <dt>Drag and drop now supports files</dt>
- <dd>The <a href="/en-US/docs/Web/API/DataTransfer"><code>DataTransfer</code></a> object provided to drag listeners now includes a list of files that were dragged.</dd>
- <dt>Checking to see if an element matches a specified CSS selector</dt>
- <dd>The new {{domxref("Node.mozMatchesSelector", "element.mozMatchesSelector")}} method lets you determine whether or not an element matches a specified CSS selector. See {{bug(518003)}}.</dd>
- <dt><a href="/en-US/docs/Web/API/Detecting_device_orientation">Detecting device orientation</a></dt>
- <dd>Content can now detect the orientation of the device if it has a supported accelerometer, using the <a href="/en-US/docs/DOM/MozOrientation"><code>MozOrientation</code></a> event. Firefox 3.6 supports the accelerometer in Mac laptops.</dd>
- <dt><a href="/en-US/docs/DOM/Detecting_document_width_and_height_changes">Detecting document width and height changes</a></dt>
- <dd>The new <code>MozScrollAreaChanged</code> event is dispatched whenever the document's <code>scrollWidth</code> and/or <code>scrollHeight</code> properties change.</dd>
-</dl>
+- Web workers can now self-terminate
+  - : [Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) now support the {{ifmethod("nsIWorkerScope", "close")}} method, which allows them to terminate themselves.
+- Drag and drop now supports files
+  - : The [`DataTransfer`](/en-US/docs/Web/API/DataTransfer) object provided to drag listeners now includes a list of files that were dragged.
+- Checking to see if an element matches a specified CSS selector
+  - : The new {{domxref("Node.mozMatchesSelector", "element.mozMatchesSelector")}} method lets you determine whether or not an element matches a specified CSS selector. See {{bug(518003)}}.
+- [Detecting device orientation](/en-US/docs/Web/API/Detecting_device_orientation)
+  - : Content can now detect the orientation of the device if it has a supported accelerometer, using the [`MozOrientation`](/en-US/docs/DOM/MozOrientation) event. Firefox 3.6 supports the accelerometer in Mac laptops.
+- [Detecting document width and height changes](/en-US/docs/DOM/Detecting_document_width_and_height_changes)
+  - : The new `MozScrollAreaChanged` event is dispatched whenever the document's `scrollWidth` and/or `scrollHeight` properties change.
 
-<h4 id="Miscellaneous_DOM_changes">Miscellaneous DOM changes</h4>
+#### Miscellaneous DOM changes
 
-<ul>
- <li>The <code>getBoxObjectFor()</code> method has been <strong>removed</strong>, as it was non-standard and exposed even more non-standard stuff to the web. See {{bug(340571)}}. Also affects <a href="https://mootools.net/">MooTools</a> which uses this call for Gecko detection; this has been fixed in the latest version of MooTools, so be sure to update.</li>
- <li>The new <a href="/en-US/docs/Web/API/Window/mozInnerScreenX"><code>mozInnerScreenX</code></a> and <a href="/en-US/docs/Web/API/Window/mozInnerScreenY"><code>mozInnerScreenY</code></a> properties on DOM windows have been added; these return the screen coordinates of the top-left corner of the window's viewport.</li>
- <li>The new <code>mozScreenPixelsPerCSSPixel</code> attribute on the {{interface("nsIDOMWindowUtils")}} interface, accessible only to chrome, provides a conversion factor between CSS pixels and screen pixels; this value can vary based on the zoom level of the content.</li>
- <li>When the page's URI's document fragment identifier (the part after the "#" (hash) character) changes, a new <code>hashchange</code> event is sent to the page. See <a href="/en-US/docs/Web/API/WindowEventHandlers/onhashchange">window.onhashchange</a> for more information. {{bug(385434)}}</li>
- <li>The attribute <a href="/en-US/docs/Web/API/Document/readyState"><code>document.readyState</code></a> is now supported. {{bug(347174)}}</li>
- <li>Support for HTML5's <code><a href="/en-US/docs/Web/API/Element/classList">element.classList</a></code> to allow easier handling of the class attribute. {{bug(501257)}}</li>
- <li><code>localName</code> and <code>namespaceURI</code> in HTML documents now behave like they do in XHTML documents: <code>localName</code> returns in lower case and <code>namespaceURI</code> for HTML elements is <code>"<a href="https://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>"</code>.</li>
- <li><a href="/en-US/docs/Web/API/Element/getElementsByTagNameNS"><code>element.getElementsByTagNameNS</code></a> no longer lowercases its argument, so upper-case ASCII letters in the argument make matches against HTML elements fail. The same is true for <a href="/en-US/docs/Web/API/Document/getElementsByTagNameNS"><code>document.getElementsByTagNameNS</code></a>.</li>
- <li>Support has been added for addresses in geolocation via the {{interface("nsIDOMGeoPositionAddress")}} interface and a new field added to {{interface("nsIDOMGeoPosition")}}.</li>
- <li>The {{domxref("window.getComputedStyle")}} function now returns quotes within <code>url()</code> values.</li>
-</ul>
+- The `getBoxObjectFor()` method has been **removed**, as it was non-standard and exposed even more non-standard stuff to the web. See {{bug(340571)}}. Also affects [MooTools](https://mootools.net/) which uses this call for Gecko detection; this has been fixed in the latest version of MooTools, so be sure to update.
+- The new [`mozInnerScreenX`](/en-US/docs/Web/API/Window/mozInnerScreenX) and [`mozInnerScreenY`](/en-US/docs/Web/API/Window/mozInnerScreenY) properties on DOM windows have been added; these return the screen coordinates of the top-left corner of the window's viewport.
+- The new `mozScreenPixelsPerCSSPixel` attribute on the {{interface("nsIDOMWindowUtils")}} interface, accessible only to chrome, provides a conversion factor between CSS pixels and screen pixels; this value can vary based on the zoom level of the content.
+- When the page's URI's document fragment identifier (the part after the "#" (hash) character) changes, a new `hashchange` event is sent to the page. See [window.onhashchange](/en-US/docs/Web/API/WindowEventHandlers/onhashchange) for more information. {{bug(385434)}}
+- The attribute [`document.readyState`](/en-US/docs/Web/API/Document/readyState) is now supported. {{bug(347174)}}
+- Support for HTML5's [`element.classList`](/en-US/docs/Web/API/Element/classList) to allow easier handling of the class attribute. {{bug(501257)}}
+- `localName` and `namespaceURI` in HTML documents now behave like they do in XHTML documents: `localName` returns in lower case and `namespaceURI` for HTML elements is `"http://www.w3.org/1999/xhtml"`.
+- [`element.getElementsByTagNameNS`](/en-US/docs/Web/API/Element/getElementsByTagNameNS) no longer lowercases its argument, so upper-case ASCII letters in the argument make matches against HTML elements fail. The same is true for [`document.getElementsByTagNameNS`](/en-US/docs/Web/API/Document/getElementsByTagNameNS).
+- Support has been added for addresses in geolocation via the {{interface("nsIDOMGeoPositionAddress")}} interface and a new field added to {{interface("nsIDOMGeoPosition")}}.
+- The {{domxref("window.getComputedStyle")}} function now returns quotes within `url()` values.
 
-<h3 id="XPath">XPath</h3>
+### XPath
 
-<dl>
- <dt>The choose() XPath method is now supported</dt>
- <dd>The <a href="/en-US/docs/Web/XPath/Functions/choose"><code>choose()</code></a> method is now supported by our implementation of <a href="/en-US/docs/Web/XPath">XPath</a>.</dd>
-</dl>
+- The choose() XPath method is now supported
+  - : The [`choose()`](/en-US/docs/Web/XPath/Functions/choose) method is now supported by our implementation of [XPath](/en-US/docs/Web/XPath).
 
-<h2 id="For_XUL_and_add-on_developers">For XUL and add-on developers</h2>
+## For XUL and add-on developers
 
-<p>If you're an extension developer, you should start by reading <a href="/en-US/docs/Mozilla/Firefox/Releases/3.6/Updating_extensions">Updating extensions for Firefox 3.6</a>, which offers a helpful overview of what changes may affect your extension. Plug-in developers should read <a href="/en-US/docs/Mozilla/Firefox/Releases/3.6/Updating_plug-ins">Updating plug-ins for Firefox 3.6</a>.</p>
+If you're an extension developer, you should start by reading [Updating extensions for Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6/Updating_extensions), which offers a helpful overview of what changes may affect your extension. Plug-in developers should read [Updating plug-ins for Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6/Updating_plug-ins).
 
-<h3 id="New_features">New features</h3>
+### New features
 
-<dl>
- <dt><a href="/en-US/docs/Web/API/Detecting_device_orientation">Detecting device orientation</a></dt>
- <dd>Content can now detect the orientation of the device if it has a supported accelerometer, using the <a href="/en-US/docs/DOM/MozOrientation"><code>MozOrientation</code></a> event. Firefox 3.6 supports the accelerometer in Mac laptops.</dd>
- <dt><a href="/en-US/docs/Monitoring_HTTP_activity">Monitoring HTTP activity</a></dt>
- <dd>You can now monitor HTTP transactions to observe requests and responses in real time.</dd>
- <dt><a href="/en-US/docs/Working_with_the_Windows_taskbar">Working with the Windows taskbar</a></dt>
- <dd>It's now possible to customize the appearance of windows in the taskbar in Windows 7 or later. <em>This has been disabled by default in Firefox 3.6.</em></dd>
-</dl>
+- [Detecting device orientation](/en-US/docs/Web/API/Detecting_device_orientation)
+  - : Content can now detect the orientation of the device if it has a supported accelerometer, using the [`MozOrientation`](/en-US/docs/DOM/MozOrientation) event. Firefox 3.6 supports the accelerometer in Mac laptops.
+- [Monitoring HTTP activity](/en-US/docs/Monitoring_HTTP_activity)
+  - : You can now monitor HTTP transactions to observe requests and responses in real time.
+- [Working with the Windows taskbar](/en-US/docs/Working_with_the_Windows_taskbar)
+  - : It's now possible to customize the appearance of windows in the taskbar in Windows 7 or later. _This has been disabled by default in Firefox 3.6._
 
-<h3 id="Places">Places</h3>
+### Places
 
-<ul>
- <li>Places queries can now use the <code>redirectsMode</code> attribute on the {{interface("nsINavHistoryQueryOptions")}} interface to specify whether or not to include redirected pages in results.</li>
- <li>Added the new {{ifmethod("nsIFaviconService", "expireAllFavicons")}} method to the {{interface("nsIFaviconService")}} interface.</li>
-</ul>
+- Places queries can now use the `redirectsMode` attribute on the {{interface("nsINavHistoryQueryOptions")}} interface to specify whether or not to include redirected pages in results.
+- Added the new {{ifmethod("nsIFaviconService", "expireAllFavicons")}} method to the {{interface("nsIFaviconService")}} interface.
 
-<h3 id="Storage">Storage</h3>
+### Storage
 
-<dl>
- <dt><a href="/en-US/docs/Storage#Collation_(sorting)">Locale-aware collation of data is now supported by the Storage API</a></dt>
- <dd>Gecko 1.9.2 added several new collation methods to provide optimized collation (sorting) of results using locale-aware techniques.</dd>
- <dt><a href="/en-US/docs/mozIStorageStatementParams#Enumeration_of_properties">Properties on a statement can now be enumerated</a></dt>
- <dd>You can now use a <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for..in</a></code> enumeration to enumerate all the properties on a statement.</dd>
- <dt>mozIStorageStatement's getParameterIndex changed behavior between 3.5 and 3.6.</dt>
- <dd>See {{bug(528166)}} for details.</dd>
- <dt>Asynchronously bind multiple sets of parameters and execute a statement.</dt>
- <dd>See {{bug(490085)}} for details. Documentation coming soon.</dd>
-</dl>
+- [Locale-aware collation of data is now supported by the Storage API](</en-US/docs/Storage#Collation_(sorting)>)
+  - : Gecko 1.9.2 added several new collation methods to provide optimized collation (sorting) of results using locale-aware techniques.
+- [Properties on a statement can now be enumerated](/en-US/docs/mozIStorageStatementParams#Enumeration_of_properties)
+  - : You can now use a [`for..in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) enumeration to enumerate all the properties on a statement.
+- mozIStorageStatement's getParameterIndex changed behavior between 3.5 and 3.6.
+  - : See {{bug(528166)}} for details.
+- Asynchronously bind multiple sets of parameters and execute a statement.
+  - : See {{bug(490085)}} for details. Documentation coming soon.
 
-<h3 id="Preferences">Preferences</h3>
+### Preferences
 
-<ul>
- <li>The {{interface("nsIContentPrefService")}} interface has two new methods: {{ifmethod("nsIContentPrefService", "getPrefsByName")}} and {{ifmethod("nsIContentPrefService", "removePrefsByName")}}.</li>
-</ul>
+- The {{interface("nsIContentPrefService")}} interface has two new methods: {{ifmethod("nsIContentPrefService", "getPrefsByName")}} and {{ifmethod("nsIContentPrefService", "removePrefsByName")}}.
 
-<h3 id="Themes">Themes</h3>
+### Themes
 
-<p>See <a href="/en-US/docs/Mozilla/Firefox/Releases/3.6/Updating_themes">Updating themes for Firefox 3.6</a> for a list of changes related to themes.</p>
+See [Updating themes for Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6/Updating_themes) for a list of changes related to themes.
 
-<dl>
- <dt><a href="/en-US/docs/Themes/Lightweight_themes">Lightweight themes</a></dt>
- <dd>Firefox 3.6 supports lightweight themes; these are easy-to-create themes that apply a background to the top (URL bar and button bar) and bottom (status bar) of browser windows. This is an integration of the existing <a href="https://www.getpersonas.com/">Personas</a> theme architecture into Firefox.</dd>
-</dl>
+- [Lightweight themes](/en-US/docs/Themes/Lightweight_themes)
+  - : Firefox 3.6 supports lightweight themes; these are easy-to-create themes that apply a background to the top (URL bar and button bar) and bottom (status bar) of browser windows. This is an integration of the existing [Personas](https://www.getpersonas.com/) theme architecture into Firefox.
 
-<h3 id="Miscellaneous">Miscellaneous</h3>
+### Miscellaneous
 
-<ul>
- <li>Firefox will no longer load third-party components installed in its internal components directory. This helps to ensure stability by preventing buggy third-party components from being executed. Developers that install components this way must <a href="/en-US/docs/Migrating_raw_components_to_add-ons">repackage their components as XPI packages</a> so they can be installed as standard add-ons.</li>
- <li><code>contents.rdf</code> is no longer supported for registering chrome in extensions. You must now use the <a href="/en-US/docs/Install_Manifests"><code>chrome.manifest</code></a> file instead. See {{bug(492008)}}.</li>
- <li>Added support for hiding the menu bar automatically. See {{bug(477256)}}.</li>
- <li>Added support for the <code>container-live-role</code> attribute to objects. See {{bug(391829)}}.</li>
- <li>The <code>tabs-closebutton</code> binding has been removed. See {{bug(500971)}}.</li>
- <li>Added support to {{interface("nsISound")}} for playing sounds based on events that have occurred. See {{bug(502799)}}.</li>
- <li>The syntax for the {{interface("nsITreeView")}} methods {{ifmethod("nsITreeView", "canDrop")}} and {{ifmethod("nsITreeView", "drop")}} has changed to support the new drag &amp; drop API introduced in Gecko 1.9. See {{bug(455590)}}.</li>
- <li>Added support to snap the mouse cursor to the default button of dialog or wizard on Windows, see {{bug(76053)}}. This is processed automatically by dialog and wizard element. But if a XUL application creates a window using the <code>window</code> element and it has a default button, it needs to call {{ifmethod("nsIDOMChromeWindow", "notifyDefaultButtonLoaded")}} during the window's <code>onload</code> event handler.</li>
- <li>The {{interface("nsILocalFileMac")}} interface has had two methods removed: <code>setFileTypeAndCreatorFromMIMEType()</code> and <code>setFileTypeAndCreatorFromExtension()</code>.</li>
- <li>The new <a href="/en-US/docs/JavaScript_code_modules/NetUtil.jsm"><code>NetUtils.jsm</code></a> code module provides an easy-to-use method for asynchronously copying data from an input stream to an output stream.</li>
- <li>The new <a href="/en-US/docs/JavaScript_code_modules/openLocationLastURL.jsm"><code>openLocationLastURL.jsm</code></a> code module makes it easy to read and change the value of the "Open Location" dialog box's remembered URL while properly taking private browsing mode into account.</li>
- <li>On Windows, the {{interface("nsIScreen")}} interface now reports 24 bit per pixel color depths when the graphics driver claims 32 bits, since 24 more accurately represents the actual number of color pixels in use.</li>
- <li>Menu bars can now be hidden on Windows, using the new <code><a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/autohide">autohide</a></code> attribute on the <code><a href="/en-US/docs/Mozilla/Tech/XUL/toolbar">&lt;xul:toolbar&gt;</a></code> XUL element.</li>
- <li>The <code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/loadOneTab">loadOneTab</a></code> and <code><a href="/en-US/docs/Mozilla/Tech/XUL/Method/addTab">addTab</a></code> methods now accept a new <code>relatedToCurrent</code> parameter and, in addition, allow the parameters to be specified by name, since nearly all of the parameters are optional.</li>
- <li>The "<a href="/en-US/docs/Install_Manifests#hidden">hidden</a>" property is no longer supported in install manifests; it's no longer possible to prevent the user from seeing add-ons in the add-on manager window.</li>
- <li>The <code>@mozilla.org/webshell;1</code> component no longer exists; you need to use <code>@mozilla.org/docshell;1</code> instead.</li>
- <li>You can now register with the update-timer category to schedule timer events without having to instantiate the object that the timer will eventually call into; it will instead be instantiated when it's needed. See {{ifmethod("nsIUpdateTimerManager", "registerTimer")}} for details.</li>
- <li>The <a href="/en-US/docs/NPN_GetValue"><code>NPN_GetValue()</code></a> function no longer provides access to XPCOM through the variable values <code>NPNVserviceManager</code>, <code>NPNVDOMelement</code>, and <code>NPNVDOMWindow</code>. This is part of the work toward making plugins run in separate processes in a future version of Gecko.</li>
- <li>Plugins are no longer scriptable through XPCOM (IDL) interfaces, <a href="/en-US/docs/Gecko_Plugin_API_Reference/Scripting_plugins">NPRuntime</a> is the API to use for making plugins scriptable, and <a href="/en-US/docs/NPP_GetValue"><code>NPP_GetValue()</code></a> is no longer called to with the value <code>NPPVpluginScriptableInstance</code> or <code>NPPVpluginScriptableIID</code>. This is part of the work toward making plugins run in separate processes in a future version of Gecko.</li>
-</ul>
+- Firefox will no longer load third-party components installed in its internal components directory. This helps to ensure stability by preventing buggy third-party components from being executed. Developers that install components this way must [repackage their components as XPI packages](/en-US/docs/Migrating_raw_components_to_add-ons) so they can be installed as standard add-ons.
+- `contents.rdf` is no longer supported for registering chrome in extensions. You must now use the [`chrome.manifest`](/en-US/docs/Install_Manifests) file instead. See {{bug(492008)}}.
+- Added support for hiding the menu bar automatically. See {{bug(477256)}}.
+- Added support for the `container-live-role` attribute to objects. See {{bug(391829)}}.
+- The `tabs-closebutton` binding has been removed. See {{bug(500971)}}.
+- Added support to {{interface("nsISound")}} for playing sounds based on events that have occurred. See {{bug(502799)}}.
+- The syntax for the {{interface("nsITreeView")}} methods {{ifmethod("nsITreeView", "canDrop")}} and {{ifmethod("nsITreeView", "drop")}} has changed to support the new drag & drop API introduced in Gecko 1.9. See {{bug(455590)}}.
+- Added support to snap the mouse cursor to the default button of dialog or wizard on Windows, see {{bug(76053)}}. This is processed automatically by dialog and wizard element. But if a XUL application creates a window using the `window` element and it has a default button, it needs to call {{ifmethod("nsIDOMChromeWindow", "notifyDefaultButtonLoaded")}} during the window's `onload` event handler.
+- The {{interface("nsILocalFileMac")}} interface has had two methods removed: `setFileTypeAndCreatorFromMIMEType()` and `setFileTypeAndCreatorFromExtension()`.
+- The new [`NetUtils.jsm`](/en-US/docs/JavaScript_code_modules/NetUtil.jsm) code module provides an easy-to-use method for asynchronously copying data from an input stream to an output stream.
+- The new [`openLocationLastURL.jsm`](/en-US/docs/JavaScript_code_modules/openLocationLastURL.jsm) code module makes it easy to read and change the value of the "Open Location" dialog box's remembered URL while properly taking private browsing mode into account.
+- On Windows, the {{interface("nsIScreen")}} interface now reports 24 bit per pixel color depths when the graphics driver claims 32 bits, since 24 more accurately represents the actual number of color pixels in use.
+- Menu bars can now be hidden on Windows, using the new [`autohide`](/en-US/docs/Mozilla/Tech/XUL/Attribute/autohide) attribute on the [`<xul:toolbar>`](/en-US/docs/Mozilla/Tech/XUL/toolbar) XUL element.
+- The [`loadOneTab`](/en-US/docs/Mozilla/Tech/XUL/Method/loadOneTab) and [`addTab`](/en-US/docs/Mozilla/Tech/XUL/Method/addTab) methods now accept a new `relatedToCurrent` parameter and, in addition, allow the parameters to be specified by name, since nearly all of the parameters are optional.
+- The "[hidden](/en-US/docs/Install_Manifests#hidden)" property is no longer supported in install manifests; it's no longer possible to prevent the user from seeing add-ons in the add-on manager window.
+- The `@mozilla.org/webshell;1` component no longer exists; you need to use `@mozilla.org/docshell;1` instead.
+- You can now register with the update-timer category to schedule timer events without having to instantiate the object that the timer will eventually call into; it will instead be instantiated when it's needed. See {{ifmethod("nsIUpdateTimerManager", "registerTimer")}} for details.
+- The [`NPN_GetValue()`](/en-US/docs/NPN_GetValue) function no longer provides access to XPCOM through the variable values `NPNVserviceManager`, `NPNVDOMelement`, and `NPNVDOMWindow`. This is part of the work toward making plugins run in separate processes in a future version of Gecko.
+- Plugins are no longer scriptable through XPCOM (IDL) interfaces, [NPRuntime](/en-US/docs/Gecko_Plugin_API_Reference/Scripting_plugins) is the API to use for making plugins scriptable, and [`NPP_GetValue()`](/en-US/docs/NPP_GetValue) is no longer called to with the value `NPPVpluginScriptableInstance` or `NPPVpluginScriptableIID`. This is part of the work toward making plugins run in separate processes in a future version of Gecko.
 
-<h2 id="For_FirefoxGecko_developers">For Firefox/Gecko developers</h2>
+## For Firefox/Gecko developers
 
-<p>Certain changes are only really interesting if you work on the internals of Firefox itself.</p>
+Certain changes are only really interesting if you work on the internals of Firefox itself.
 
-<h3 id="Interfaces_merged">Interfaces merged</h3>
+### Interfaces merged
 
-<p>The following interfaces have been combined together:</p>
+The following interfaces have been combined together:
 
-<ul>
- <li><code>nsIPluginTagInfo2</code> has been merged into <code>nsIPluginTagInfo</code>.</li>
- <li><code>nsIPluginInstanceInternal</code>, <code>nsIPPluginInstancePeer</code>, <code>nsIPluginInstancePeer1</code>, <code>nsIPluginInstancePeer2</code>, and <code>nsIPluginInstancePeer3</code> have all been merged into <code>nsIPluginInstance</code>.</li>
- <li><code>nsIWindowlessPlugInstPeer</code> has been merged into <code>nsIPluginInstance</code>.</li>
- <li><code>nsIPluginManager</code> and <code>nsIPluginManager2</code> have been merged into <code>nsIPluginHost</code>.</li>
-</ul>
+- `nsIPluginTagInfo2` has been merged into `nsIPluginTagInfo`.
+- `nsIPluginInstanceInternal`, `nsIPPluginInstancePeer`, `nsIPluginInstancePeer1`, `nsIPluginInstancePeer2`, and `nsIPluginInstancePeer3` have all been merged into `nsIPluginInstance`.
+- `nsIWindowlessPlugInstPeer` has been merged into `nsIPluginInstance`.
+- `nsIPluginManager` and `nsIPluginManager2` have been merged into `nsIPluginHost`.
 
-<h3 id="Interfaces_removed">Interfaces removed</h3>
+### Interfaces removed
 
-<p>The following interfaces have been removed entirely because they were unused, unimplemented, or obsolete:</p>
+The following interfaces have been removed entirely because they were unused, unimplemented, or obsolete:
 
-<ul>
- <li><code>nsIFullScreen</code></li>
- <li><code>nsIDOMSVGListener</code></li>
- <li><code>nsIDOMSVGZoomListener</code></li>
- <li><code>nsIInternetConfigService</code></li>
- <li><code>nsIDKey</code></li>
- <li><code>nsIEventHandler</code></li>
- <li><code>nsIJRILiveConnectPIPeer</code></li>
- <li><code>nsIJRILiveConnectPlugin</code></li>
- <li><code>nsIScriptablePlugin</code></li>
- <li><code>nsIClassicPluginFactory</code></li>
- <li><code>nsIFileUtilities</code></li>
-</ul>
+- `nsIFullScreen`
+- `nsIDOMSVGListener`
+- `nsIDOMSVGZoomListener`
+- `nsIInternetConfigService`
+- `nsIDKey`
+- `nsIEventHandler`
+- `nsIJRILiveConnectPIPeer`
+- `nsIJRILiveConnectPlugin`
+- `nsIScriptablePlugin`
+- `nsIClassicPluginFactory`
+- `nsIFileUtilities`
 
-<h3 id="Interfaces_moved">Interfaces moved</h3>
+### Interfaces moved
 
-<p>The following interfaces have been relocated from their previous IDL files into new ones:</p>
+The following interfaces have been relocated from their previous IDL files into new ones:
 
-<ul>
- <li><code>nsIDOMNSCSS2Properties</code> is now located in its own IDL file (<code>dom/interfaces/css/nsIDOMCSS2Properties.idl</code>).</li>
- <li>{{interface("nsIUpdateTimerManager")}} is now located in its own IDL file.</li>
-</ul>
+- `nsIDOMNSCSS2Properties` is now located in its own IDL file (`dom/interfaces/css/nsIDOMCSS2Properties.idl`).
+- {{interface("nsIUpdateTimerManager")}} is now located in its own IDL file.
 
-<p>A large number of interfaces have been moved. See <a href="/en-US/docs/Mozilla/Firefox/Releases/3.6/Interfaces_moved">Interfaces moved in Firefox 3.6</a> for a complete list.</p>
+A large number of interfaces have been moved. See [Interfaces moved in Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6/Interfaces_moved) for a complete list.
 
-<h3 id="Other_interface_changes">Other interface changes</h3>
+### Other interface changes
 
-<p>The following assorted changes have been made:</p>
+The following assorted changes have been made:
 
-<ul>
- <li>The <code>nsIPlugin</code> interface now inherits from {{interface("nsISupports")}} instead of {{interface("nsIFactory")}}.</li>
- <li>The <code>nsIPluginHost</code> interface now inherits from {{interface("nsISupports")}} instead of {{interface("nsIFactory")}}.</li>
- <li>The <code>nsIFrame</code> interface now inherits from <code>nsQueryFrame</code> instead of {{interface("nsISupports")}}.</li>
- <li>The {{interface("nsIDeviceContext")}} method <code>getPaletteInfo()</code> has been removed, as it was never implemented.</li>
- <li>The {{interface("nsIScriptContext")}} method <code>reportPendingException()</code> has been removed, since it was no longer being used.</li>
-</ul>
+- The `nsIPlugin` interface now inherits from {{interface("nsISupports")}} instead of {{interface("nsIFactory")}}.
+- The `nsIPluginHost` interface now inherits from {{interface("nsISupports")}} instead of {{interface("nsIFactory")}}.
+- The `nsIFrame` interface now inherits from `nsQueryFrame` instead of {{interface("nsISupports")}}.
+- The {{interface("nsIDeviceContext")}} method `getPaletteInfo()` has been removed, as it was never implemented.
+- The {{interface("nsIScriptContext")}} method `reportPendingException()` has been removed, since it was no longer being used.
 
-<h3 id="Changes_in_accessibility_code">Changes in accessibility code</h3>
+### Changes in accessibility code
 
-<ul>
- <li>The <code>EVENT_REORDER</code><a href="/en-US/docs/XPCOM_Interface_Reference/nsIAccessibleEvent">accessibility event</a> is now sent when the children of frames and iframes change, as well as when the main document's children change. See {{bug(420845)}}.</li>
- <li>The {{ifmethod("nsIAccessibleTable", "selectRow")}} now correctly removes any current selection before selecting the specified row.</li>
-</ul>
+- The `EVENT_REORDER`[accessibility event](/en-US/docs/XPCOM_Interface_Reference/nsIAccessibleEvent) is now sent when the children of frames and iframes change, as well as when the main document's children change. See {{bug(420845)}}.
+- The {{ifmethod("nsIAccessibleTable", "selectRow")}} now correctly removes any current selection before selecting the specified row.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<div>{{Firefox_for_developers('3.5')}}</div>
+{{Firefox_for_developers('3.5')}}
