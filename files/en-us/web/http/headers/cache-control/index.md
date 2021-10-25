@@ -372,7 +372,7 @@ Note that `no-cache` means "it can be stored but don't reuse before validating",
 Cache-Control: no-cache
 ```
 
-But if you intend it can't be stored in a shared cache **because it's personalized for the user** (e.g. using Cookie, Authorization, etc), you should consider using the `private` directive too.
+But if you don’t want a response stored in a shared cache **because it's personalized for the user** (e.g. using cookies, the `Authorization` header, etc), you should consider using the `private` directive too.
 
 ```
 Cache-Control: no-store, private
