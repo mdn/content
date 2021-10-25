@@ -1,5 +1,5 @@
 ---
-title: <col>
+title: '<col>: The Table Column element'
 slug: Web/HTML/Element/col
 tags:
   - Element
