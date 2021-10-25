@@ -95,7 +95,7 @@ Therefore, several terms are used in the specification to clarify the explanatio
 - `Stale response`
   - : Indicates that the response is stale. It usually means the response can't be reusable as-is. Cache storage isn't required to remove stale responses immediately, because revalidation could change the response from being stale to being fresh again.
 - `Age`
-  - : The time since response has been generated. It is a criterion for whether a response is fresh or stale.
+  - : The time since a response was generated. It is a criterion for whether a response is fresh or stale.
 
 ## Directives
 
