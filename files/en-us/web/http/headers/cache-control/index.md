@@ -178,7 +178,7 @@ The `private` response directive indicates that the response can be stored only 
 Cache-Control: private
 ```
 
-You should add this directive for user-personalized contents. Usually, pages after login and session managed via Cookie are the candidate to add.
+You should add the `private` directive for user-personalized content — in particular, responses received after login, and sessions managed via cookies.
 
 If you forgot to add this to personalized contents, it can be stored in a shared cache and used by multiple users, resulting in personal information leak incidents.
 
