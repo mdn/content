@@ -14,6 +14,8 @@ browser-compat: http.headers.csp.Content-Security-Policy.block-all-mixed-content
 ---
 {{HTTPSidebar}}{{deprecated_header}}
 
+> **Warning:** This directive is marked as obsolete in the specification: all mixed content is now blocked if it can't be autoupgraded.
+
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`block-all-mixed-content`** directive prevents loading any assets over HTTP when the page uses HTTPS.
 
 All [mixed content](/en-US/docs/Web/Security/Mixed_content) resource requests are blocked, including both active and passive mixed content. This also applies to {{HTMLElement("iframe")}} documents, ensuring the entire page is mixed content-free.
