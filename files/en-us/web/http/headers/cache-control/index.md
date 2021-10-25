@@ -328,7 +328,7 @@ The `max-stale=N` request directive indicates that the client allows a stored re
 Cache-Control: max-stale=3600
 ```
 
-In the case above, if the response with `Cache-Control: max-age=604800` was stored on cache storage 3 hours ago, cache couldn't reuse that response.
+In the case above, if the response with `Cache-Control: max-age=604800` was stored on cache storage 3 hours ago, the cache couldn't reuse that response.
 
 Clients could use this header when the origin server is down or too slow and could accept cached responses from cache storage even if it's a bit old.
 
