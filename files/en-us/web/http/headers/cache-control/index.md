@@ -268,7 +268,7 @@ If no request happened during that period, the cache became stale and the next r
 
 #### `stale-if-error`
 
-`stale-if-error` response directive indicates that the cache could reuse a stale response while origin server responses error (500, 502, 503, or 504).
+The `stale-if-error` response directive indicates that the cache could reuse a stale response when an origin server responds with an error (500, 502, 503, or 504).
 
 ```
 Cache-Control: max-age=604800, stale-if-error=86400
