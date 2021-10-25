@@ -180,7 +180,7 @@ Cache-Control: private
 
 You should add the `private` directive for user-personalized content — in particular, responses received after login, and sessions managed via cookies.
 
-If you forgot to add this to personalized contents, it can be stored in a shared cache and used by multiple users, resulting in personal information leak incidents.
+If you forget to add `private` to a response with personalized content, then that response can be stored in a shared cache and end up being used by multiple users, which can cause personal  information to leak.
 
 `no-store` seems to work fine for avoiding it, but these are semantically different. It's better to use `private` for private contents and `no-store` for avoiding storing private cache too.
 
