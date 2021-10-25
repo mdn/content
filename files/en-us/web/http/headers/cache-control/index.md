@@ -172,7 +172,7 @@ Cache-Control: no-store, private
 
 #### `private`
 
-`private` response directive indicates that the response can be stored only in a private cache. (e.g. Browser local cache storage)
+the `private` response directive indicates that the response can be stored only in a private cache (e.g. local cache storage in browsers).
 
 ```
 Cache-Control: private
