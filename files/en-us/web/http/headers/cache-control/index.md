@@ -13,7 +13,7 @@ browser-compat: http.headers.Cache-Control
 
 {{HTTPSidebar}}
 
-The **`Cache-Control`** HTTP header fields holds _directives_ (instructions) for [caching](/en-US/docs/Web/HTTP/Caching) in both requests and responses. This header can be used to control caching not only in the browser, but also in shared caches (e.g. Proxy, CDN, Load-Balancer etc).
+The **`Cache-Control`** HTTP header fields hold _directives_ (instructions) for [caching](/en-US/docs/Web/HTTP/Caching) in both requests and responses. This header can be used to control caching not only in the browser, but also in shared caches (e.g. Proxy, CDN, Load-Balancer etc).
 
 <table class="properties">
   <tbody>
@@ -182,7 +182,7 @@ You should add the `private` directive for user-personalized content — in part
 
 If you forget to add `private` to a response with personalized content, then that response can be stored in a shared cache and end up being used by multiple users, which can cause personal information to leak.
 
-`no-store` may seem to work fine for avoiding leaks, but is semantically different from `private`. To avoiding leaking personal information, it's better to use both `private` and `no-store`.
+`no-store` may seem to work fine for avoiding leaks, but is semantically different from `private`. To avoid leaking personal information, it's better to use both `private` and `no-store`.
 
 ```
 Cache-Control: private, no-store
@@ -227,7 +227,7 @@ You can use `must-understand` when you respond with a newly defined status code.
 
 #### `no-transform`
 
-Some intermediaries transform contents for various reasons. For example, some convert images to reduce transfer packets. But in some cases it cause unexpected behavior for the content provider.
+Some intermediaries transform contents for various reasons. For example, some convert images to reduce transfer packets. But in some cases it causes unexpected behavior for the content provider.
 
 `no-transform` indicates that any intermediary (regardless of whether it implements a cache) can't transform the response contents.
 
@@ -247,7 +247,7 @@ A modern best practice for static resources is to include version/hashes in thei
 <script src=https://example.com/react.0.0.0.js></script>
 ```
 
-When user reloads the browser, browsers will send conditional requests for validating to the origin server. But it's not necessary to revalidate these kinds of static resources even when user realods the browser, because they're never modified.
+When a user reloads the browser, browsers will send conditional requests for validating to the origin server. But it's not necessary to revalidate these kinds of static resources even when a user reloads the browser, because they're never modified.
 `immutable` tells cache storage that its response is immutable while it's fresh, and avoids these kinds of unnecessary conditional requests to the server.
 
 When you use a cache-busting pattern for resources and apply them to a long `max-age`, you can also add `immutable` to avoid revalidation.
@@ -398,7 +398,7 @@ For example:
 
 The React library version will change when you update the library, and `hero.png` will also change when you edit the picture. So those are hard to store in a cache with `max-age`.
 
-In such a case, you could address the caching needs by using a specific, numbered version of the library, and including hash of the picture in its URL.
+In such a case, you could address the caching needs by using a specific, numbered version of the library, and including the hash of the picture in its URL.
 
 ```html
 <!-- index.html —>
