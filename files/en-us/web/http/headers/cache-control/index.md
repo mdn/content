@@ -274,7 +274,7 @@ The `stale-if-error` response directive indicates that the cache could reuse a s
 Cache-Control: max-age=604800, stale-if-error=86400
 ```
 
-In the example above, cache storage stores response and it's been fresh for 7 days (604800s). After 7 days, it became stale but the cache could reuse it for an extra 1 day (86400s) when server responses error status.
+In the example above, cache storage stores a response and it's been fresh for 7 days (604800s). After 7 days, it became stale but the cache could reuse it for an extra 1 day (86400s), whenever a server responds with an error.
 
 After a period of time, the stored response became stale normally. It means that the client will receive an error response as-is if the origin server sends it.
 
