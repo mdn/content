@@ -190,7 +190,7 @@ Cache-Control: private, no-store
 
 #### `public`
 
-Responses for requests with `Authorization` header fields should normally not be stored in a shared cache. But the `public` directive will cause such responses to be stored in a shared cache.
+Responses for requests with `Authorization` header fields must not be stored in a shared cache. But the `public` directive will cause such responses to be stored in a shared cache.
 
 ```
 Cache-Control: public
