@@ -87,7 +87,7 @@ Therefore, several terms are used in the specification to clarify the explanatio
 - `Store response`
   - : Storing a response in cache storage when it's cacheable. But it's not always reused as-is. (Usually "cache" means storing a response.)
 - `Reuse response`
-  - : Reusing cached responses for following requests.
+  - : Reusing cached responses for subsequent requests.
 - `Revalidate response`
   - : Ask the origin server whether the stored response is still fresh or not. Usually it's done through a conditional request.
 - `Fresh response`
