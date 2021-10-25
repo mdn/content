@@ -342,7 +342,7 @@ The `min-fresh=N` request directive indicates that the client allows a stored re
 Cache-Control: min-fresh=600
 ```
 
-In the case above, if the response with `Cache-Control: max-age=3600` was stored on cache storage 51 minutes ago, that response couldn't be reused.
+In the case above, if the response with `Cache-Control: max-age=3600` was stored in cache storage 51 minutes ago, the cache couldn't reuse that response.
 
 Clients could use this header when the user requires not only it's fresh but also it wouldn't update for a period of time.
 
