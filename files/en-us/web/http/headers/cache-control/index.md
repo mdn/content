@@ -254,7 +254,7 @@ When you use a cache-busting pattern for resources and apply them to a long `max
 
 #### `stale-while-revalidate`
 
-`stale-while-revalidate` response directive indicates that the cache could reuse a stale response while it revalidates it to cache.
+The `stale-while-revalidate` response directive indicates that the cache could reuse a stale response while it revalidates it to a cache.
 
 ```
 Cache-Control: max-age=604800, stale-while-revalidate=86400
