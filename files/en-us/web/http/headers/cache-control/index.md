@@ -398,7 +398,7 @@ For example:
 
 The React library version will change when you update the library, and `hero.png` will also change when you edit the picture. So those are hard to store in a cache with `max-age`.
 
-In that case, including the library version of JS and the hash of the picture in the url could solve the problem.
+In such a case, you could address the caching needs by using a specific, numbered version of the library, and including hash of the picture in its URL.
 
 ```html
 <!-- index.html —>
