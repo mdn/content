@@ -36,7 +36,7 @@ Although trivial, you can already start to see how this could be useful.
 
 ## Using templates with web components
 
-Templates are useful on their own, but they work even better with web components. Let's define a web component that uses our template as the content of its shadow DOM. We'll call it `<my-paragraph>`:
+Templates are useful on their own, but they work even better with web components. Let's define a web component that uses our template as the content of its shadow DOM. Let's call it `<my-paragraph>` as well:
 
 ```js
 customElements.define('my-paragraph',
