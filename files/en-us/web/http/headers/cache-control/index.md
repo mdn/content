@@ -312,7 +312,7 @@ Cache-Control: max-age=3600
 
 In the case above, if the response with `Cache-Control: max-age=604800` was stored in cache storage 3 hours ago, the cache couldn't reuse that response.
 
-Many browsers use this directive for **Reloading** as below.
+Many browsers use this directive for **reloading**, as explained below.
 
 ```
 Cache-Control: max-age=0
