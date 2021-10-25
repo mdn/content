@@ -406,7 +406,7 @@ In that case, including the library version of JS and the hash of the picture in
 <img src=/assets/hero.png?hash=deadbeef width=900 height=400>
 ```
 
-You can add long `max-age` and `immutable` because contents will never change.
+You can add a long `max-age` value, and `immutable`, because the content will never change.
 
 ```
 # /assets/*
