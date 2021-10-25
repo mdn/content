@@ -75,7 +75,7 @@ Extension `Cache-Control` directives are not part of the core HTTP caching stand
 
 ## Vocabulary
 
-When talking about Caching, there is sometimes confusion because the word _Cache_ is both a noun and a verb (e.g. "Caching cache in the cache).
+When talking about caching, there is sometimes confusion because the word _cache_ is both a noun and a verb (e.g. "Caching cache in the cache).
 Therefore, several terms are used in the specification to clarify the explanation.
 
 - `Cache Storage`
