@@ -111,7 +111,7 @@ Cache-Control: max-age=604800
 
 Indicates that cache storage can store this response and reuse it for subsequent requests while it's fresh.
 
-Note that `max-age` is not the elapsed time since the response was received but response was generated on the origin server. So if the intermediate cache stores it for 100 seconds(for indicating that, intermediate cache adds an `Age` header to the response), browser local cache storage could reuse it `-100` seconds from `max-age`.
+Note that `max-age` is not the elapsed time since the response was received, but instead th elapsed time since he response was generated on the origin server. So if the intermediate cache stores it for 100 seconds (for indicating that, the intermediate cache adds an `Age` header to the response), the browser local cache storage could reuse it `-100` seconds from `max-age`.
 
 ```
 Cache-Control: max-age=604800
