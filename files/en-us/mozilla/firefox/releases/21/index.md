@@ -5,142 +5,113 @@ tags:
   - Firefox
   - Mozilla
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Firefox 21 was released on May 14, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.</p>
+Firefox 21 was released on May 14, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-<h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+## Changes for Web developers
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>The {{htmlattrxref("scoped", "style")}} attribute has been added to the {{HTMLElement("style")}} element. It allows to include styles that are isolated from the rest of the document. Such styles can be selected using the {{cssxref(":scope")}} CSS pseudo-element introduced in Firefox 20. ({{bug("508725")}}).</li>
- <li>The new HTML {{HTMLElement("main")}} element has been implemented ({{bug("820508")}}).</li>
-</ul>
+- The {{htmlattrxref("scoped", "style")}} attribute has been added to the {{HTMLElement("style")}} element. It allows to include styles that are isolated from the rest of the document. Such styles can be selected using the {{cssxref(":scope")}} CSS pseudo-element introduced in Firefox 20. ({{bug("508725")}}).
+- The new HTML {{HTMLElement("main")}} element has been implemented ({{bug("820508")}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li><a href="/en-US/docs/E4X">E4X</a>, an ancient JavaScript extension, has been removed. Implemented only in Gecko, it never got significant traction ({{bug("788293")}}).</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt">parseInt</a> no longer treats strings with leading "0" as octal ({{bug("786135")}}).</li>
-</ul>
+- [E4X](/en-US/docs/E4X), an ancient JavaScript extension, has been removed. Implemented only in Gecko, it never got significant traction ({{bug("788293")}}).
+- [parseInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) no longer treats strings with leading "0" as octal ({{bug("786135")}}).
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>The <code>none</code> value of {{cssxref("user-select", "-moz-user-select")}} has now the same behavior than the <code>-moz-none</code> value, aligning Gecko on WebKit (Chrome, Safari), Presto (Opera) and Trident (Internet Explorer) ({{bug("816298")}}).</li>
- <li>On XHTML content, the <code>auto</code> value of {{cssxref("hyphens", "-moz-hyphens")}} incorrectly applied hyphenation rules when the language was not explicitly declared. This is fixed by ({{bug("702121")}}).</li>
- <li>An <code>auto</code> value has been added to the CSS {{cssxref("-moz-orient")}} property. The <code>auto</code> value is equivalent to <code>horizontal</code> when applied to {{HTMLElement("meter")}} and {{HTMLElement("progress")}} ({{bug("835883")}}).</li>
- <li>The media query <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#-moz-windows-glass"><code>-moz-windows-glass</code></a> has been added on Windows 7 and earlier Windows system ({{bug("816803")}}).</li>
-</ul>
+- The `none` value of {{cssxref("user-select", "-moz-user-select")}} has now the same behavior than the `-moz-none` value, aligning Gecko on WebKit (Chrome, Safari), Presto (Opera) and Trident (Internet Explorer) ({{bug("816298")}}).
+- On XHTML content, the `auto` value of {{cssxref("hyphens", "-moz-hyphens")}} incorrectly applied hyphenation rules when the language was not explicitly declared. This is fixed by ({{bug("702121")}}).
+- An `auto` value has been added to the CSS {{cssxref("-moz-orient")}} property. The `auto` value is equivalent to `horizontal` when applied to {{HTMLElement("meter")}} and {{HTMLElement("progress")}} ({{bug("835883")}}).
+- The media query [`-moz-windows-glass`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#-moz-windows-glass) has been added on Windows 7 and earlier Windows system ({{bug("816803")}}).
 
-<h3 id="DOM">DOM</h3>
+### DOM
 
-<ul>
- <li>Support for {{domxref("RTCPeerConnection")}} (as <code>MozRTCPeerConnection</code>) is now enabled by default ({{bug(796463)}}). It can be disabled again if necessary by setting {{pref("media.peerconnection.enabled")}} to false.</li>
- <li>The <code>origin</code> property has been added to the {{domxref("window.location")}} ({{bug("828261")}}).</li>
- <li>The <code>valueAsDate</code> and <code>valueAsNumber</code> methods have been added for <code>&lt;input type="time"&gt;</code> ({{bug("781570")}}).</li>
- <li>The <code>min</code> and <code>max</code> attributes now apply to <code>&lt;input type="time"&gt;</code> too ({{bug("781572")}}).</li>
- <li>Some new keyCodes for volume control are supported ({{bug("674739")}}).</li>
- <li>Some new keyCodes for ancient keyboard layout such as AS/400 are now supported on Windows and Linux ({{bug("833719")}}).</li>
- <li>Various keyCode values for OEM specific keys on Windows are now supported again ({{bug("833719")}}).</li>
- <li>The function <a href="/en-US/docs/Web/API/Crypto/getRandomValues"><code>window.crypto.getRandomValues</code></a> has been implemented ({{bug("440046")}}).</li>
- <li>The methods {{domxref("NodeIterator.expandEntityReferences()")}} and {{domxref("TreeWalker.expandEntityReferences()")}}, no more in the latest DOM spec, has been removed ({{bug("672190")}}).</li>
- <li>CSSOM: the method {{domxref("CSSKeyframesRule")}}<code>.insertRule</code> has been removed to {{domxref("CSSKeyframesRule")}}<code>.appendRule</code> to match a spec change ({{bug("841896")}}).</li>
- <li>CSSOM If the given parameter given to {{domxref("CSSStyleSheet.insertRule")}} contains more than one rule, a {{domxref("DOMException")}} with a <code>SYNTAX_ERR</code> is now thrown ({{bug("765599")}}).</li>
- <li>Until now, when the same headers were repeatedly set with <a href="/en-US/docs/Web/API/XMLHttpRequest#setrequestheader"><code>XMLHttpRequest.setRequestHeader</code></a>, the last-specified value was used. This behavior has been changed to comply with the spec, so those values will be properly combined ({{bug("819051")}}).</li>
-</ul>
+- Support for {{domxref("RTCPeerConnection")}} (as `MozRTCPeerConnection`) is now enabled by default ({{bug(796463)}}). It can be disabled again if necessary by setting {{pref("media.peerconnection.enabled")}} to false.
+- The `origin` property has been added to the {{domxref("window.location")}} ({{bug("828261")}}).
+- The `valueAsDate` and `valueAsNumber` methods have been added for `<input type="time">` ({{bug("781570")}}).
+- The `min` and `max` attributes now apply to `<input type="time">` too ({{bug("781572")}}).
+- Some new keyCodes for volume control are supported ({{bug("674739")}}).
+- Some new keyCodes for ancient keyboard layout such as AS/400 are now supported on Windows and Linux ({{bug("833719")}}).
+- Various keyCode values for OEM specific keys on Windows are now supported again ({{bug("833719")}}).
+- The function [`window.crypto.getRandomValues`](/en-US/docs/Web/API/Crypto/getRandomValues) has been implemented ({{bug("440046")}}).
+- The methods {{domxref("NodeIterator.expandEntityReferences()")}} and {{domxref("TreeWalker.expandEntityReferences()")}}, no more in the latest DOM spec, has been removed ({{bug("672190")}}).
+- CSSOM: the method {{domxref("CSSKeyframesRule")}}`.insertRule` has been removed to {{domxref("CSSKeyframesRule")}}`.appendRule` to match a spec change ({{bug("841896")}}).
+- CSSOM If the given parameter given to {{domxref("CSSStyleSheet.insertRule")}} contains more than one rule, a {{domxref("DOMException")}} with a `SYNTAX_ERR` is now thrown ({{bug("765599")}}).
+- Until now, when the same headers were repeatedly set with [`XMLHttpRequest.setRequestHeader`](/en-US/docs/Web/API/XMLHttpRequest#setrequestheader), the last-specified value was used. This behavior has been changed to comply with the spec, so those values will be properly combined ({{bug("819051")}}).
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<ul>
- <li>The <a href="/en-US/docs/Web/SVG/Attribute/paint-order">paint-order</a> attribute has been implemented ({{bug("828805")}}).</li>
- <li>The <code>svg.smil.enabled</code> preference has been removed. SMIL is always on. ({{bug(835030)}})</li>
-</ul>
+- The [paint-order](/en-US/docs/Web/SVG/Attribute/paint-order) attribute has been implemented ({{bug("828805")}}).
+- The `svg.smil.enabled` preference has been removed. SMIL is always on. ({{bug(835030)}})
 
-<h3 id="Networking">Networking</h3>
+### Networking
 
-<ul>
- <li>We continue to update our CSP implementation to match the CSP 1.0 spec, which reached Candidate Recommendation:
-  <ul>
-   <li>Support for the spec-compliant <code>Content-Security-Policy</code> HTTP header (in addition to the experimental <code>X-Content-Security-Policy</code>) has been added ({{bug("783049")}}). <strong>Note</strong>: the patch for this new header landed in Firefox 21, it is disabled on builds ({{bug("842657")}}).</li>
-  </ul>
- </li>
-</ul>
+- We continue to update our CSP implementation to match the CSP 1.0 spec, which reached Candidate Recommendation:
 
-<h3 id="Worker">Worker</h3>
+  - Support for the spec-compliant `Content-Security-Policy` HTTP header (in addition to the experimental `X-Content-Security-Policy`) has been added ({{bug("783049")}}). **Note**: the patch for this new header landed in Firefox 21, it is disabled on builds ({{bug("842657")}}).
 
-<ul>
- <li>The functions {{domxref("URL/createObjectURL", "URL.createObjectURL")}} and {{domxref("URL/revokeObjectURL", "URL.revokeObjectURL")}} are now included in the set of <a href="/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">functions available to workers</a>.</li>
-</ul>
+### Worker
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
+- The functions {{domxref("URL/createObjectURL", "URL.createObjectURL")}} and {{domxref("URL/revokeObjectURL", "URL.revokeObjectURL")}} are now included in the set of [functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
-<ul>
- <li>FUEL applications cannot use the Livemarks service anymore ({{bug("834492")}}). The Livemarks service is deprecated and phased out in favor of the new async interface.</li>
- <li><code>resource:///modules/</code> and <code>resource://gre/modules/</code> are no longer identical ({{bug("755724")}}). This change was made because of work on the metro version of Firefox. If you load modules using <code>resource:///modules/</code>, you should check if you now want to use <code>resource://gre/modules/</code> instead. Note that some modules also moved from Firefox to Toolkit ({{bug("840287")}} and {{bug("811548")}} moved <code>NewTabUtils.jsm</code> and the thumbnail modules, respectively).</li>
- <li>The Add-on SDK is now included in Firefox ({{bug("731779")}})</li>
- <li>History API saw numerous deprecated API being removed:
-  <ul>
-   <li>Replaced by <code>mozIAsyncFavicons</code>:
-    <ul>
-     <li><code>nsIFaviconService::setFaviconUrlForPage</code></li>
-     <li><code>nsIFaviconService::setFaviconData</code></li>
-     <li><code>nsIFaviconService::getFaviconData</code></li>
-     <li><code>nsIFaviconService::getFaviconForPage</code></li>
-     <li><code>nsIFaviconService::setAndLoadFaviconForPage</code></li>
-     <li><code>nsIFaviconService::getFaviconImageForPage</code></li>
-     <li><code>nsIFaviconService::getFaviconDataAsDataURL</code></li>
-    </ul>
-   </li>
-   <li>Replaced by <code>mozIAsyncLivemarks</code>:
-    <ul>
-     <li><code>nsILivemarkService::*</code></li>
-     <li><code>PlacesUtils.itemIsLivemark</code></li>
-     <li><code>PlacesUtils.nodeIsLivemarkContainer</code></li>
-     <li><code>PlacesUtils.nodeIsLivemarkItem</code></li>
-    </ul>
-   </li>
-   <li>Removed only third argument:
-    <ul>
-     <li><code>PlacesUIUtils.showBookmarkDialog</code></li>
-    </ul>
-   </li>
-   <li>No more implemented by Places, use <code>mozIAsyncHistory</code> instead:
-    <ul>
-     <li><code>nsIGlobalHistory2::addURI</code></li>
-     <li><code>nsIGlobalHistory2::isVisited</code></li>
-     <li><code>nsIGlobalHistory2::setPageTitle</code></li>
-    </ul>
-   </li>
-   <li>No more needed, use <code>onDeleteURI</code> or <code>onItemRemoved</code>:
-    <ul>
-     <li><code>nsINavHistoryObserver::OnBeforeDeleteURI</code></li>
-     <li><code>nsINavBookmarkObserver::OnBeforeItemRemoved</code></li>
-    </ul>
-   </li>
-   <li>Never implemented properly:
-    <ul>
-     <li><code>nsINavHistoryFullVisitResultNode</code></li>
-    </ul>
-   </li>
-   <li>Deprecated, use<code> mozIAsyncHistory::updatePlaces</code> instead:
-    <ul>
-     <li><code>nsINavHistoryService::AddVisit</code></li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li>Added <code>nsIHttpChannel.redirectTo</code> to enable redirecting HTTP channels without fragile hacks.</li>
-</ul>
+## Changes for add-on and Mozilla developers
 
-<h2 id="See_also">See also</h2>
+- FUEL applications cannot use the Livemarks service anymore ({{bug("834492")}}). The Livemarks service is deprecated and phased out in favor of the new async interface.
+- `resource:///modules/` and `resource://gre/modules/` are no longer identical ({{bug("755724")}}). This change was made because of work on the metro version of Firefox. If you load modules using `resource:///modules/`, you should check if you now want to use `resource://gre/modules/` instead. Note that some modules also moved from Firefox to Toolkit ({{bug("840287")}} and {{bug("811548")}} moved `NewTabUtils.jsm` and the thumbnail modules, respectively).
+- The Add-on SDK is now included in Firefox ({{bug("731779")}})
+- History API saw numerous deprecated API being removed:
 
-<ul>
- <li><a href="https://www.mozilla.org/en-US/firefox/21.0/releasenotes/">Firefox 21 Release Notes</a></li>
- <li><a href="https://blog.mozilla.org/addons/2013/04/26/compatibility-for-firefox-21/">Add-on Compatibility for Firefox 21</a></li>
-</ul>
+  - Replaced by `mozIAsyncFavicons`:
 
-<h3 id="Older_versions">Older versions</h3>
+    - `nsIFaviconService::setFaviconUrlForPage`
+    - `nsIFaviconService::setFaviconData`
+    - `nsIFaviconService::getFaviconData`
+    - `nsIFaviconService::getFaviconForPage`
+    - `nsIFaviconService::setAndLoadFaviconForPage`
+    - `nsIFaviconService::getFaviconImageForPage`
+    - `nsIFaviconService::getFaviconDataAsDataURL`
 
-<div>{{Firefox_for_developers('20')}}</div>
+  - Replaced by `mozIAsyncLivemarks`:
+
+    - `nsILivemarkService::*`
+    - `PlacesUtils.itemIsLivemark`
+    - `PlacesUtils.nodeIsLivemarkContainer`
+    - `PlacesUtils.nodeIsLivemarkItem`
+
+  - Removed only third argument:
+
+    - `PlacesUIUtils.showBookmarkDialog`
+
+  - No more implemented by Places, use `mozIAsyncHistory` instead:
+
+    - `nsIGlobalHistory2::addURI`
+    - `nsIGlobalHistory2::isVisited`
+    - `nsIGlobalHistory2::setPageTitle`
+
+  - No more needed, use `onDeleteURI` or `onItemRemoved`:
+
+    - `nsINavHistoryObserver::OnBeforeDeleteURI`
+    - `nsINavBookmarkObserver::OnBeforeItemRemoved`
+
+  - Never implemented properly:
+
+    - `nsINavHistoryFullVisitResultNode`
+
+  - Deprecated, use` mozIAsyncHistory::updatePlaces` instead:
+
+    - `nsINavHistoryService::AddVisit`
+
+- Added `nsIHttpChannel.redirectTo` to enable redirecting HTTP channels without fragile hacks.
+
+## See also
+
+- [Firefox 21 Release Notes](https://www.mozilla.org/en-US/firefox/21.0/releasenotes/)
+- [Add-on Compatibility for Firefox 21](https://blog.mozilla.org/addons/2013/04/26/compatibility-for-firefox-21/)
+
+### Older versions
+
+{{Firefox_for_developers('20')}}

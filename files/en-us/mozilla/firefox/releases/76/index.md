@@ -7,107 +7,85 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 76 that will affect developers. Firefox 76 was released on <a href="https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates/docs/">May 5, 2020</a>.</p>
+This article provides information about the changes in Firefox 76 that will affect developers. Firefox 76 was released on [May 5, 2020](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates/docs/).
 
-<p><strong>See also the accompanying hacks post — <a href="https://hacks.mozilla.org/2020/05/firefox-76-audio-worklets-and-other-tricks/">Firefox 76: Audio worklets and other tricks</a>.</strong></p>
+**See also the accompanying hacks post — [Firefox 76: Audio worklets and other tricks](https://hacks.mozilla.org/2020/05/firefox-76-audio-worklets-and-other-tricks/).**
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_tools">Developer tools</h3>
+### Developer tools
 
-<h4 id="Debugger">Debugger</h4>
+#### Debugger
 
-<ul>
- <li>You can now enable/disable blackboxing of source groups and folders listed in the <a href="/en-US/docs/Tools/Debugger/UI_Tour#source_list_pane">Source list pane</a> via context menu options ({{bug(1118152)}}).</li>
- <li>The <a href="/en-US/docs/Tools/Debugger/UI_Tour#call_stack">Call stack pane</a>'s <em>Copy stack trace</em> context menu option now copies full URLs, not just filenames ({{bug(1619039)}}).</li>
-</ul>
+- You can now enable/disable blackboxing of source groups and folders listed in the [Source list pane](/en-US/docs/Tools/Debugger/UI_Tour#source_list_pane) via context menu options ({{bug(1118152)}}).
+- The [Call stack pane](/en-US/docs/Tools/Debugger/UI_Tour#call_stack)'s _Copy stack trace_ context menu option now copies full URLs, not just filenames ({{bug(1619039)}}).
 
-<h4 id="Network_monitor">Network monitor</h4>
+#### Network monitor
 
-<ul>
- <li>In the network request list, you can now double-click a column divider to resize the column to the left of it to fit its contents ({{bug(1615102)}}).</li>
- <li>The network request <em>Copy &gt; <a href="/en-US/docs/Tools/Network_Monitor/request_list#copy_as_curl">Copy as cURL</a></em> context menu option has a new option available, <code>--globoff</code>, which suppresses cURL's globbing (wildcard matching) feature if the copied URL includes square bracket characters ({{bug(1549773)}}).</li>
- <li>The <em>Messages</em> tab of the details pane for <a href="/en-US/docs/Tools/Network_Monitor/Inspecting_web_sockets">web socket requests</a> has a new filter — <em>Control</em> — for showing control frames, and the filters are now grouped together into a selection lst ({{bug(1566780)}}).</li>
-</ul>
+- In the network request list, you can now double-click a column divider to resize the column to the left of it to fit its contents ({{bug(1615102)}}).
+- The network request _Copy > [Copy as cURL](/en-US/docs/Tools/Network_Monitor/request_list#copy_as_curl)_ context menu option has a new option available, `--globoff`, which suppresses cURL's globbing (wildcard matching) feature if the copied URL includes square bracket characters ({{bug(1549773)}}).
+- The _Messages_ tab of the details pane for [web socket requests](/en-US/docs/Tools/Network_Monitor/Inspecting_web_sockets) has a new filter — _Control_ — for showing control frames, and the filters are now grouped together into a selection lst ({{bug(1566780)}}).
 
-<h4 id="Web_console">Web console</h4>
+#### Web console
 
-<ul>
- <li>In <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter#multi-line_mode">multi-line mode</a>, code snippets longer than five lines are abbreviated to five lines, preceded by a disclosure triangle (or "twistie"), and followed by an ellipsis (…). You can click anywhere in this area to show the code, and click again in that area to collapse it ({{bug(1578212)}}).</li>
- <li>DOM element references outputted into the console now have a "Reveal in inspector" context menu option, which shows the element in the HTML pane of the <a href="/en-US/docs/Tools/Page_Inspector">Page inspector</a> ({{bug(1612276)}}).</li>
-</ul>
+- In [multi-line mode](/en-US/docs/Tools/Web_Console/The_command_line_interpreter#multi-line_mode), code snippets longer than five lines are abbreviated to five lines, preceded by a disclosure triangle (or "twistie"), and followed by an ellipsis (…). You can click anywhere in this area to show the code, and click again in that area to collapse it ({{bug(1578212)}}).
+- DOM element references outputted into the console now have a "Reveal in inspector" context menu option, which shows the element in the HTML pane of the [Page inspector](/en-US/docs/Tools/Page_Inspector) ({{bug(1612276)}}).
 
-<h4 id="Remote_debugging">Remote debugging</h4>
+#### Remote debugging
 
-<ul>
- <li>Because of differences in DevTools versions, it is not possible to debug releases of Firefox for Android that are based on version 68, from desktop Firefox versions 69 or later. When attempting to do this, the Firefox desktop browser will now show a message informing the user of this problem, and offering possible next steps ({{bug(1625906)}}). See <a href="/en-US/docs/Tools/about:debugging#connection_to_firefox_for_android_68">Connection to Firefox for Android 68</a> for more information.</li>
-</ul>
+- Because of differences in DevTools versions, it is not possible to debug releases of Firefox for Android that are based on version 68, from desktop Firefox versions 69 or later. When attempting to do this, the Firefox desktop browser will now show a message informing the user of this problem, and offering possible next steps ({{bug(1625906)}}). See [Connection to Firefox for Android 68](/en-US/docs/Tools/about:debugging#connection_to_firefox_for_android_68) for more information.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>The {{HTMLElement("input")}} element's {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes now work correctly when the value of <code>min</code> is greater than the value of <code>max</code> for control types whose values are periodic (that is, values that wrap around at some point). This is particularly helpful, for example, with date and time inputs, where you might want to specify a time range of 11 PM to 2 AM ({{bug(1608010)}}).</li>
-</ul>
+- The {{HTMLElement("input")}} element's {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes now work correctly when the value of `min` is greater than the value of `max` for control types whose values are periodic (that is, values that wrap around at some point). This is particularly helpful, for example, with date and time inputs, where you might want to specify a time range of 11 PM to 2 AM ({{bug(1608010)}}).
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>Firefox now supports <a href="/en-US/docs/Web/CSS/color_value#system_colors">CSS4 system colors</a> ({{bug(1590894)}}).</li>
-</ul>
+- Firefox now supports [CSS4 system colors](/en-US/docs/Web/CSS/color_value#system_colors) ({{bug(1590894)}}).
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li>The <code>numberingSystem</code> and <code>calendar</code> options of the {{jsxref("Intl.NumberFormat")}}, {{jsxref("Intl.DateTimeFormat")}}, and {{jsxref("Intl.RelativeTimeFormat")}} constructors are now enabled by default ({{bug(1625975)}}).</li>
-</ul>
+- The `numberingSystem` and `calendar` options of the {{jsxref("Intl.NumberFormat")}}, {{jsxref("Intl.DateTimeFormat")}}, and {{jsxref("Intl.RelativeTimeFormat")}} constructors are now enabled by default ({{bug(1625975)}}).
 
-<h3 id="APIs">APIs</h3>
+### APIs
 
-<h4 id="New_APIs">New APIs</h4>
+#### New APIs
 
-<ul>
- <li>Firefox now supports audio worklets by default, with support for {{domxref("BaseAudioContext.audioWorklet", "AudioContext.audioWorklet")}}, which lets you use the {{domxref("AudioWorkletProcessor")}} and {{domxref("AudioWorkletNode")}} interfaces to process audio in real time off the main thread ({{bug(1616725)}}).</li>
-</ul>
+- Firefox now supports audio worklets by default, with support for {{domxref("BaseAudioContext.audioWorklet", "AudioContext.audioWorklet")}}, which lets you use the {{domxref("AudioWorkletProcessor")}} and {{domxref("AudioWorkletNode")}} interfaces to process audio in real time off the main thread ({{bug(1616725)}}).
 
-<h4 id="DOM">DOM</h4>
+#### DOM
 
-<ul>
- <li>UI-parts related items in the <code>windowFeatures</code> parameter of {{domxref("window.open()")}} can no longer control the visibility of each UI part separately, but become a condition for whether to open a popup or not ({{bug(1507375)}}).</li>
- <li>Attempts to navigate to an unknown protocol using methods such as <code><a href="/en-US/docs/Web/API/Location/href">location.href</a></code> or <code><a href="/en-US/docs/Web/HTML/Element/meta">&lt;meta http-equiv="refresh"&gt;</a></code> are now blocked (see {{bug(1528305)}}.</li>
- <li>The {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} constructor now accepts a {{domxref("Document")}} object as its <code>root</code>, as well as an {{domxref("Element")}} object ({{bug(1623623)}}). This lets you explicitly use a window's entire content area as the intersection bounds.</li>
- <li>The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> now supports the <code>audioworklet</code> {{domxref("Request.destination", "destination")}} for requests. This causes received data to be dispatched to an {{domxref("AudioWorklet")}} ({{bug(1402784)}}).</li>
-</ul>
+- UI-parts related items in the `windowFeatures` parameter of {{domxref("window.open()")}} can no longer control the visibility of each UI part separately, but become a condition for whether to open a popup or not ({{bug(1507375)}}).
+- Attempts to navigate to an unknown protocol using methods such as [`location.href`](/en-US/docs/Web/API/Location/href) or [`<meta http-equiv="refresh">`](/en-US/docs/Web/HTML/Element/meta) are now blocked (see {{bug(1528305)}}.
+- The {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} constructor now accepts a {{domxref("Document")}} object as its `root`, as well as an {{domxref("Element")}} object ({{bug(1623623)}}). This lets you explicitly use a window's entire content area as the intersection bounds.
+- The [Fetch API](/en-US/docs/Web/API/Fetch_API) now supports the `audioworklet` {{domxref("Request.destination", "destination")}} for requests. This causes received data to be dispatched to an {{domxref("AudioWorklet")}} ({{bug(1402784)}}).
 
-<h4 id="Removals">Removals</h4>
+#### Removals
 
-<ul>
- <li>We've completely removed the <a href="/en-US/docs/Web/API/Window/appinstalled_event">Window <code>appinstalled</code> event</a> (and the associated <code><a href="/en-US/docs/Web/API/Window/onappinstalled">Window.onappinstalled</a></code> handler property) — these were never shipped, and have now been removed from the <a href="https://w3c.github.io/manifest/">Web Manifest spec</a> ({{bug(1625384)}}).</li>
-</ul>
+- We've completely removed the [Window `appinstalled` event](/en-US/docs/Web/API/Window/appinstalled_event) (and the associated [`Window.onappinstalled`](/en-US/docs/Web/API/Window/onappinstalled) handler property) — these were never shipped, and have now been removed from the [Web Manifest spec](https://w3c.github.io/manifest/) ({{bug(1625384)}}).
 
-<h3 id="HTTP">HTTP</h3>
+### HTTP
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="Security">Security</h3>
+### Security
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
+### WebDriver conformance (Marionette)
 
-<ul>
- <li>Firefox no longer reports <code>false</code> for <code>navigator.webdriver</code> when used for automation / testing via geckodriver ({{bug(1632556)}}).</li>
-</ul>
+- Firefox no longer reports `false` for `navigator.webdriver` when used for automation / testing via geckodriver ({{bug(1632556)}}).
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+## Changes for add-on developers
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h2 id="Older_versions">Older versions</h2>
+## Older versions
 
-<p>{{Firefox_for_developers(75)}}</p>
+{{Firefox_for_developers(75)}}

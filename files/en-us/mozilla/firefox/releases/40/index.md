@@ -5,205 +5,166 @@ tags:
   - Firefox
   - Releases
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p><a href="https://www.mozilla.org/firefox/developer/">To test the latest developer features of Firefox, install Firefox Developer Edition</a> Firefox 40 was released on August 11, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.</p>
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 40 was released on August 11, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-<h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+## Changes for Web developers
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+### Developer Tools
 
-<p>Highlights:</p>
+Highlights:
 
-<ul>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#firefox_40">Improvements to the Animations view</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#get_help_for_css_properties">Get help from MDN for CSS property syntax</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters">Edit filters in the Page Inspector</a></li>
- <li><a href="/en-US/docs/Tools/Web_Console#console_api_messages">Web Console now shows messages from workers</a></li>
- <li><a href="/en-US/docs/Tools/Network_Monitor#filtering_by_url">Filter requests by URL in the Network Monitor</a></li>
- <li><a href="/en-US/docs/Tools/Network_Monitor#context_menu">Many new context menu options in the Network Monitor</a></li>
- <li><a href="/en-US/docs/Tools/Network_Monitor#network_request_fields">Show when network resources are fetched from the browser cache</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#filtering_rules">Filter rules in the Page Inspector</a></li>
-</ul>
+- [Improvements to the Animations view](/en-US/docs/Tools/Page_Inspector/How_to/Work_with_animations#firefox_40)
+- [Get help from MDN for CSS property syntax](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#get_help_for_css_properties)
+- [Edit filters in the Page Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters)
+- [Web Console now shows messages from workers](/en-US/docs/Tools/Web_Console#console_api_messages)
+- [Filter requests by URL in the Network Monitor](/en-US/docs/Tools/Network_Monitor#filtering_by_url)
+- [Many new context menu options in the Network Monitor](/en-US/docs/Tools/Network_Monitor#context_menu)
+- [Show when network resources are fetched from the browser cache](/en-US/docs/Tools/Network_Monitor#network_request_fields)
+- [Filter rules in the Page Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#filtering_rules)
 
-<p>More:</p>
+More:
 
-<ul>
- <li><a href="/en-US/docs/Tools/Debugger/How_to/Debug_eval_sources">Break at debugger; statements in unnamed eval sources</a></li>
- <li><a href="/en-US/docs/Tools/Debugger/UI_Tour#source_list_pane">Copy URL/Open in New Tab context menu items for Debugger source list pane</a></li>
- <li><a href="/en-US/docs/Tools/Web_Console#log_messages">console.dirxml support in the Web Console</a></li>
- <li><a href="/en-US/docs/Tools/Style_Editor#the_style_sheet_pane">Style Editor: "Open Link In New Tab" item added to stylesheet list</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#searching">Inspector selector search now includes class/id results even without css prefix</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model#the_box_model_view">Tooltips in box-model view saying which CSS rule caused the value</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Inspect_and_select_colors">Switch between color unit format in the Inspector using Shift+click</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu">Implement "Scroll Into View" menu item for the Inspector</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu">Linkify url/id/resource attributes in the Inspector</a></li>
- <li><a href="/en-US/docs/Tools/Network_Monitor#network_request_fields">IP address tooltip in the Network Monitor</a></li>
-</ul>
+- [Break at debugger; statements in unnamed eval sources](/en-US/docs/Tools/Debugger/How_to/Debug_eval_sources)
+- [Copy URL/Open in New Tab context menu items for Debugger source list pane](/en-US/docs/Tools/Debugger/UI_Tour#source_list_pane)
+- [console.dirxml support in the Web Console](/en-US/docs/Tools/Web_Console#log_messages)
+- [Style Editor: "Open Link In New Tab" item added to stylesheet list](/en-US/docs/Tools/Style_Editor#the_style_sheet_pane)
+- [Inspector selector search now includes class/id results even without css prefix](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#searching)
+- [Tooltips in box-model view saying which CSS rule caused the value](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model#the_box_model_view)
+- [Switch between color unit format in the Inspector using Shift+click](/en-US/docs/Tools/Page_Inspector/How_to/Inspect_and_select_colors)
+- [Implement "Scroll Into View" menu item for the Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu)
+- [Linkify url/id/resource attributes in the Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#element_popup_menu)
+- [IP address tooltip in the Network Monitor](/en-US/docs/Tools/Network_Monitor#network_request_fields)
 
-<p>Everything: <a class="external external-icon" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Client%20Software&amp;chfieldto=2015-05-11&amp;query_format=advanced&amp;chfield=resolution&amp;chfieldfrom=2015-03-31&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Storage%20Inspector&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;component=Developer%20Tools%3A%20WebIDE&amp;product=Firefox&amp;list_id=12283503">all devtools bugs fixed between Firefox 39 and Firefox 40</a>.</p>
+Everything: [all devtools bugs fixed between Firefox 39 and Firefox 40](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2015-05-11&query_format=advanced&chfield=resolution&chfieldfrom=2015-03-31&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&list_id=12283503).
 
+### CSS
 
-<h3 id="CSS">CSS</h3>
+- Prefixed rules (`-moz-`) for {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, and {{cssxref("text-decoration-style")}} have been removed ({{bug(1097922)}}).
+- The property {{cssxref("text-align")}} now supports the `match-parent` value ({{bug(645642)}}).
+- In Quirks Mode, {{cssxref("empty-cells")}} now defaults to `show`, like in standard mode ({{bug(1020400)}}).
+- The {{cssxref("-moz-orient")}} non-standard property, used to style {{HTMLElement('meter')}} and {{HTMLElement('progress')}} element has been adapted for vertical writing-modes: the value `auto` has been dropped and the values `inline` and  `block` added, with `inline` being the new default value ({{bug(1028716)}}).
+- The property {{cssxref("font-size-adjust")}} has been fixed so that `0` is treated as a multiplier (leading to a `0` height for the font, hence hiding it) instead of the `none` value (leading to no adjustment, or a `1.0` value) ({{bug(1144885)}}).
+- Fix text-overflow doesn't work in vertical writing mode ({{bug(1117227)}}).
 
-<ul>
- <li>Prefixed rules (<code>-moz-</code>) for {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, and {{cssxref("text-decoration-style")}} have been removed ({{bug(1097922)}}).</li>
- <li>The property {{cssxref("text-align")}} now supports the <code>match-parent</code> value ({{bug(645642)}}).</li>
- <li>In Quirks Mode, {{cssxref("empty-cells")}} now defaults to <code>show</code>, like in standard mode ({{bug(1020400)}}).</li>
- <li>The {{cssxref("-moz-orient")}} non-standard property, used to style {{HTMLElement('meter')}} and {{HTMLElement('progress')}} element has been adapted for vertical writing-modes: the value <code>auto</code> has been dropped and the values <code>inline</code> and  <code>block</code> added, with <code>inline</code> being the new default value ({{bug(1028716)}}).</li>
- <li>The property {{cssxref("font-size-adjust")}} has been fixed so that <code>0</code> is treated as a multiplier (leading to a <code>0</code> height for the font, hence hiding it) instead of the <code>none</code> value (leading to no adjustment, or a <code>1.0</code> value) ({{bug(1144885)}}).</li>
- <li>Fix text-overflow doesn't work in vertical writing mode ({{bug(1117227)}}).</li>
-</ul>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+_No change._
 
-<p><em>No change.</em></p>
+### JavaScript
 
-<h3 id="JavaScript">JavaScript</h3>
+- Unreachable code after {{jsxref("Statements/return", "return")}} statement (including unreachable expression after {{jsxref("Statements/return", "semicolon-less return statements", "#Automatic_semicolon_insertion", 1)}}) will now show a warning in the console ({{bug(1005110)}}, {{bug(1151931)}}).
+- {{jsxref("Symbol.match")}} has been added ({{bug(1054755)}}).
+- Passing an object which has a property named {{jsxref("Symbol.match")}} with a {{Glossary("truthy")}} value to {{jsxref("String.prototype.startsWith")}}, {{jsxref("String.prototype.endsWith")}}, and `String.prototype.contains` now throws a {{jsxref("TypeError")}} ({{bug(1054755)}}).
+- {{jsxref("RegExp")}} function returns pattern itself if called without {{jsxref("Operators/new", "new")}} and pattern object has a property named {{jsxref("Symbol.match")}} with a {{Glossary("truthy")}} value, and the pattern object's `constructor` property equals to  {{jsxref("RegExp")}} function. ({{bug(1147817)}}).
+- Support for the non-standard JS1.7 destructuring for-in has been dropped ({{bug(1083498)}}).
+- [Non-standard initializer expressions](/en-US/docs/Web/JavaScript/Reference/Statements/for...in#firefox-specific_notes) in [for...in](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops are now ignored and will present a warning in the console. ({{bug(748550)}} and {{bug(1164741)}}).
+- [`\u{xxxxxx}`](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_code_point_escapes) Unicode code point escapes have been added ({{bug(320500)}}).
+- {{jsxref("String.prototype.includes", "String.prototype.contains", "#String.prototype.contains")}} has been replaced with {{jsxref("String.prototype.includes")}}, `String.prototype.contains` is kept as an alias ({{bug(1102219)}}).
+- If the {{jsxref("DataView")}} constructor is called as a function without the {{ jsxref("Operators/new", "new") }} operator, a {{jsxref("TypeError")}} is now thrown as per the ES2015 specification.
+- An issue regressed in Firefox 21, where proxyfied arrays without the `get` trap were not working properly, has been fixed. If the `get` trap in a {{jsxref("Proxy")}} was not defined, {{jsxref("Array.length")}} returned `0` and the `set` trap didn't get called. A workaround was to add the `get` trap even if was not necessary in your code. This issue has been fixed now ({{bug(895223)}}).
+- `WeakMap.prototype` and `WeakSet.prototype` have been updated to be just ordinary objects, per ES2015 specification ({{bug(1055473)}}).
 
-<ul>
- <li>Unreachable code after {{jsxref("Statements/return", "return")}} statement (including unreachable expression after {{jsxref("Statements/return", "semicolon-less return statements", "#Automatic_semicolon_insertion", 1)}}) will now show a warning in the console ({{bug(1005110)}}, {{bug(1151931)}}).</li>
- <li>{{jsxref("Symbol.match")}} has been added ({{bug(1054755)}}).</li>
- <li>Passing an object which has a property named {{jsxref("Symbol.match")}} with a {{Glossary("truthy")}} value to {{jsxref("String.prototype.startsWith")}}, {{jsxref("String.prototype.endsWith")}}, and <code>String.prototype.contains</code> now throws a {{jsxref("TypeError")}} ({{bug(1054755)}}).</li>
- <li>{{jsxref("RegExp")}} function returns pattern itself if called without {{jsxref("Operators/new", "new")}} and pattern object has a property named {{jsxref("Symbol.match")}} with a {{Glossary("truthy")}} value, and the pattern object's <code>constructor</code> property equals to  {{jsxref("RegExp")}} function. ({{bug(1147817)}}).</li>
- <li>Support for the non-standard JS1.7 destructuring for-in has been dropped ({{bug(1083498)}}).</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in#firefox-specific_notes">Non-standard initializer expressions</a> in <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> loops are now ignored and will present a warning in the console. ({{bug(748550)}} and {{bug(1164741)}}).</li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_code_point_escapes">\u{xxxxxx}</a></code> Unicode code point escapes have been added ({{bug(320500)}}).</li>
- <li>{{jsxref("String.prototype.includes", "String.prototype.contains", "#String.prototype.contains")}} has been replaced with {{jsxref("String.prototype.includes")}}, <code>String.prototype.contains</code> is kept as an alias ({{bug(1102219)}}).</li>
- <li>If the {{jsxref("DataView")}} constructor is called as a function without the {{ jsxref("Operators/new", "new") }} operator, a {{jsxref("TypeError")}} is now thrown as per the ES2015 specification.</li>
- <li>An issue regressed in Firefox 21, where proxyfied arrays without the <code>get</code> trap were not working properly, has been fixed. If the <code>get</code> trap in a {{jsxref("Proxy")}} was not defined, {{jsxref("Array.length")}} returned <code>0</code> and the <code>set</code> trap didn't get called. A workaround was to add the <code>get</code> trap even if was not necessary in your code. This issue has been fixed now ({{bug(895223)}}).</li>
- <li><code>WeakMap.prototype</code> and <code>WeakSet.prototype</code> have been updated to be just ordinary objects, per ES2015 specification ({{bug(1055473)}}).</li>
-</ul>
+### Interfaces/APIs/DOM
 
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
+#### New APIs
 
-<h4 id="New_APIs">New APIs</h4>
+- The [Push API](/en-US/docs/Web/API/Push_API) has been experimentally implemented ({{bug(1038811)}}). Controlled by the `services.push.enabled` pref, it is disabled by default.
 
-<ul>
- <li>The <a href="/en-US/docs/Web/API/Push_API">Push API</a> has been experimentally implemented ({{bug(1038811)}}). Controlled by the <code>services.push.enabled</code> pref, it is disabled by default.</li>
-</ul>
+#### Web Animations API
 
-<h4 id="Web_Animations_API">Web Animations API</h4>
+Improvement in our experimental Web Animations implementation, mostly to match latest spec changes:
 
-<p>Improvement in our experimental Web Animations implementation, mostly to match latest spec changes:</p>
+- {{domxref("Animation/currentTime", "AnimationPlayer.currentTime")}} now can also be set ({{bug(1072037)}}).
+- `Animatable.getAnimationPlayers()`, available on {{domxref("Element")}} has been renamed to {{domxref("Element.getAnimations()")}} ({{bug(1145246)}}).
+- `Animation` and `AnimationEffect` have been merged into the newly created `KeyframeEffectReadOnly` ({{bug(1153734)}}).
+- `AnimationPlayer` has been renamed to {{domxref("Animation")}} ({{bug(1154615)}}).
+- {{domxref("AnimationTimeline")}} is now an abstract class, with {{domxref("DocumentTimeline")}} its only implementation ({{bug(1152171)}}).
 
-<ul>
- <li>{{domxref("Animation/currentTime", "AnimationPlayer.currentTime")}} now can also be set ({{bug(1072037)}}).</li>
- <li><code>Animatable.getAnimationPlayers()</code>, available on {{domxref("Element")}} has been renamed to {{domxref("Element.getAnimations()")}} ({{bug(1145246)}}).</li>
- <li><code>Animation</code> and <code>AnimationEffect</code> have been merged into the newly created <code>KeyframeEffectReadOnly</code> ({{bug(1153734)}}).</li>
- <li><code>AnimationPlayer</code> has been renamed to {{domxref("Animation")}} ({{bug(1154615)}}).</li>
- <li>{{domxref("AnimationTimeline")}} is now an abstract class, with {{domxref("DocumentTimeline")}} its only implementation ({{bug(1152171)}}).</li>
-</ul>
+#### CSSOM
 
-<h4 id="CSSOM">CSSOM</h4>
+- The CSS Font Loading API is now enabled by default in Nightly and Developer Edition releases ({{bug(1088437)}}). It is still deactivated by default in Beta and Release browsers.
+- The `CSSCharsetRule` interface has been removed and such objects are no longer available in CSSOM ({{bug(1148694)}}). This matches the spec (recently adapted) and Chrome behavior.
 
-<ul>
- <li>The CSS Font Loading API is now enabled by default in Nightly and Developer Edition releases ({{bug(1088437)}}). It is still deactivated by default in Beta and Release browsers.</li>
- <li>The <code>CSSCharsetRule</code> interface has been removed and such objects are no longer available in CSSOM ({{bug(1148694)}}). This matches the spec (recently adapted) and Chrome behavior.</li>
-</ul>
+#### WebRTC
 
-<h4 id="WebRTC">WebRTC</h4>
+- WebRTC: the {{event("negotiationneeded")}} event is now also sent for initial negotiations, not only for re-negotiations ({{bug(1149838)}}).
 
-<ul>
- <li>WebRTC: the {{event("negotiationneeded")}} event is now also sent for initial negotiations, not only for re-negotiations ({{bug(1149838)}}).</li>
-</ul>
+#### DOM & HTML DOM
 
-<h4 id="DOM_HTML_DOM">DOM &amp; HTML DOM</h4>
+- When unable to parse the {{htmlattrxref("srcset", "image")}},  the {{domxref("HTMLImageElement.currentSrc")}} method doesn't return `null` anymore but `""`, as requested by the latest specification ({{bug(1139560)}}).
+- Like for images, Firefox now throttles {{domxref("Window.requestAnimationFrame()")}} for non-visible {{HTMLElement("iframe")}} ({{bug(1145439)}}).
+- {{domxref("NavigatorID/taintEnabled", "Navigator.taintEnabled")}} is no longer available for Web workers ({{bug(1154878)}}).
 
-<ul>
- <li>When unable to parse the {{htmlattrxref("srcset", "image")}},  the {{domxref("HTMLImageElement.currentSrc")}} method doesn't return <code>null</code> anymore but <code>""</code>, as requested by the latest specification ({{bug(1139560)}}).</li>
- <li>Like for images, Firefox now throttles {{domxref("Window.requestAnimationFrame()")}} for non-visible {{HTMLElement("iframe")}} ({{bug(1145439)}}).</li>
- <li>{{domxref("NavigatorID/taintEnabled", "Navigator.taintEnabled")}} is no longer available for Web workers ({{bug(1154878)}}).</li>
-</ul>
+#### Web Audio API
 
-<h4 id="Web_Audio_API">Web Audio API</h4>
+New extensions to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API):
 
-<p>New extensions to the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>:</p>
+- The {{domxref("BaseAudioContext/state", "AudioContext.state")}} and {{domxref("BaseAudioContext/onstatechange", "AudioContext.onstatechange")}} properties as well as the methods {{domxref("AudioContext.suspend()")}}, {{domxref("AudioContext.resume()")}}, and {{domxref("AudioContext.close()")}} have been added ({{bug(1094764)}}).
+- {{domxref("AudioBufferSourceNode")}} now implements the {{domxref("AudioBufferSourceNode.detune")}} [k-rate](/en-US/docs/Web/API/AudioParam#k-rate) attribute ({{bug(1153783)}}).
 
-<ul>
- <li>The {{domxref("BaseAudioContext/state", "AudioContext.state")}} and {{domxref("BaseAudioContext/onstatechange", "AudioContext.onstatechange")}} properties as well as the methods {{domxref("AudioContext.suspend()")}}, {{domxref("AudioContext.resume()")}}, and {{domxref("AudioContext.close()")}} have been added ({{bug(1094764)}}).</li>
- <li>{{domxref("AudioBufferSourceNode")}} now implements the {{domxref("AudioBufferSourceNode.detune")}} <a href="/en-US/docs/Web/API/AudioParam#k-rate">k-rate</a> attribute ({{bug(1153783)}}).</li>
-</ul>
+#### Web Workers
 
-<h4 id="Web_Workers">Web Workers</h4>
+- Slight improvement in our [Service Worker API](/en-US/docs/Web/API/Service_Worker_API): the {{domxref("ServiceWorkerRegistration.update()", "update()")}} method has been moved from {{domxref("ServiceWorkerGlobalScope")}} to {{domxref("ServiceWorkerRegistration")}} ({{bug(1131350)}}).
+- {{domxref("ServiceWorkerRegistration")}} is now available in Web workers ({{bug("1131327")}}).
+- {{domxref("DataStore")}} is now available in Web workers ({{bug(916196)}}).
 
-<ul>
- <li>Slight improvement in our <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a>: the {{domxref("ServiceWorkerRegistration.update()", "update()")}} method has been moved from {{domxref("ServiceWorkerGlobalScope")}} to {{domxref("ServiceWorkerRegistration")}} ({{bug(1131350)}}).</li>
- <li>{{domxref("ServiceWorkerRegistration")}} is now available in Web workers ({{bug("1131327")}}).</li>
- <li>{{domxref("DataStore")}} is now available in Web workers ({{bug(916196)}}).</li>
-</ul>
+#### IndexedDB
 
-<h4 id="IndexedDB">IndexedDB</h4>
+- {{domxref("IDBTransaction")}} are now non-durable by default ({{bug(1112702)}}). This favors performance over reliability and matches what other browsers are doing. For more information, read our [durability definition](/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#durable).
 
-<ul>
- <li>{{domxref("IDBTransaction")}} are now non-durable by default ({{bug(1112702)}}). This favors performance over reliability and matches what other browsers are doing. For more information, read our <a href="/en-US/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#durable">durability definition</a>.</li>
-</ul>
+#### Dev Tools
 
-<h4 id="Dev_Tools">Dev Tools</h4>
+- The property {{domxref("console.timeStamp")}} has been added ({{bug(922221)}}).
 
-<ul>
- <li>The property {{domxref("console.timeStamp")}} has been added ({{bug(922221)}}).</li>
-</ul>
+### MathML
 
-<h3 id="MathML">MathML</h3>
+_No change._
 
-<p><em>No change.</em></p>
+### SVG
 
-<h3 id="SVG">SVG</h3>
+_No change._
 
-<p><em>No change.</em></p>
+### Audio/Video
 
-<h3 id="AudioVideo">Audio/Video</h3>
+_No change._
 
-<p><em>No change.</em></p>
+## Networking
 
-<h2 id="Networking">Networking</h2>
+_No change._
 
-<p><em>No change.</em></p>
+## Security
 
-<h2 id="Security">Security</h2>
+- Using an asterisk (`*`) in a {{Glossary("CSP")}} does not include the schemes `data:`, `blob:` or `:filesystem` anymore when matching source expressions. So those schemes now need to be explicitly defined within the related header to match the CSP ({{bug(1086999)}}).
 
-<ul>
- <li>Using an asterisk (<code>*</code>) in a {{Glossary("CSP")}} does not include the schemes <code>data:</code>, <code>blob:</code> or <code>:filesystem</code> anymore when matching source expressions. So those schemes now need to be explicitly defined within the related header to match the CSP ({{bug(1086999)}}).</li>
-</ul>
+## Changes for add-on and Mozilla developers
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
+### XUL
 
-<h3 id="XUL">XUL</h3>
+- It is no longer possible to create transparent top-level windows {{bug(1162649)}}.
 
-<ul>
- <li>It is no longer possible to create transparent top-level windows {{bug(1162649)}}.</li>
-</ul>
+### JavaScript code modules
 
-<h3 id="JavaScript_code_modules">JavaScript code modules</h3>
+- Dict.jsm has been removed {{bug(1123309)}}. Use {{jsxref("Map")}} instead.
 
-<ul>
- <li>Dict.jsm has been removed {{bug(1123309)}}. Use {{jsxref("Map")}} instead.</li>
-</ul>
+### XPCOM
 
-<h3 id="XPCOM">XPCOM</h3>
+- The `nsIClassInfo.implementationLanguage` attribute has been removed, along with the `nsClassInfo::GetImplementationLanguage()` function.
+- The following XPCOM interfaces have been removed; you should use the standard HTML interfaces instead:
 
-<ul>
- <li>The <code>nsIClassInfo.implementationLanguage</code> attribute has been removed, along with the <code>nsClassInfo::GetImplementationLanguage()</code> function.</li>
- <li>The following XPCOM interfaces have been removed; you should use the standard HTML interfaces instead:
-  <ul>
-   <li><code>nsIDOMHTMLBRElement</code></li>
-   <li><code>nsIDOMDivElement</code></li>
-   <li><code>nsIDOMHTMLHeadingElement</code></li>
-   <li><code>nsIDOMHTMLTableCaptionElement</code></li>
-   <li><code>nsIDOMHTMLTableElement</code></li>
-   <li><code>nsIDOMHTMLTitleElement</code></li>
-  </ul>
- </li>
-</ul>
+  - `nsIDOMHTMLBRElement`
+  - `nsIDOMDivElement`
+  - `nsIDOMHTMLHeadingElement`
+  - `nsIDOMHTMLTableCaptionElement`
+  - `nsIDOMHTMLTableElement`
+  - `nsIDOMHTMLTitleElement`
 
-<h3 id="Other">Other</h3>
+### Other
 
-<ul>
- <li>Places Keywords API has been deprecated and will be removed soon ({{bug(1140395)}}).</li>
- <li>The automated testing system now supports skipping individual test functions. See {{SectionOnPage("/en-US/docs/Mozilla/QA/Writing_xpcshell-based_unit_tests", "Conditional test functions")}}.</li>
-</ul>
+- Places Keywords API has been deprecated and will be removed soon ({{bug(1140395)}}).
+- The automated testing system now supports skipping individual test functions. See {{SectionOnPage("/en-US/docs/Mozilla/QA/Writing_xpcshell-based_unit_tests", "Conditional test functions")}}.
 
-<h2 id="Older_versions">Older versions</h2>
+## Older versions
 
-<p>{{Firefox_for_developers('39')}}</p>
+{{Firefox_for_developers('39')}}

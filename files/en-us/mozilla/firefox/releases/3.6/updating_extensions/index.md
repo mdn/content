@@ -6,58 +6,49 @@ tags:
   - Firefox
   - Firefox 3.6
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>This article provides helpful information to extension developers trying to update their extensions to work properly in Firefox 3.6.</p>
+This article provides helpful information to extension developers trying to update their extensions to work properly in Firefox 3.6.
 
-<h2 id="User_interface_changes">User interface changes</h2>
+## User interface changes
 
-<p><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=513147">Right-clicking on elements (including links and images) no longer offers a "Properties" menu item.</a> The properties dialog box was not useful for most users and has been removed. If your extension interacts with that menu item in any way, you'll need to revise your code to add it yourself, or contribute your own context menu entry directly.</p>
+[Right-clicking on elements (including links and images) no longer offers a "Properties" menu item.](https://bugzilla.mozilla.org/show_bug.cgi?id=513147) The properties dialog box was not useful for most users and has been removed. If your extension interacts with that menu item in any way, you'll need to revise your code to add it yourself, or contribute your own context menu entry directly.
 
-<h2 id="Add-on_package_changes">Add-on package changes</h2>
+## Add-on package changes
 
-<p>In order to allow add-ons' icons to be displayed even when they're disabled, Gecko 1.9.2 added support for automatically detecting and using an icon named <code>icon.png</code>, located in the add-on's root directory. This is used if the add-on is disabled, or if the manifest is missing an <code>iconURL</code> entry.</p>
+In order to allow add-ons' icons to be displayed even when they're disabled, Gecko 1.9.2 added support for automatically detecting and using an icon named `icon.png`, located in the add-on's root directory. This is used if the add-on is disabled, or if the manifest is missing an `iconURL` entry.
 
-<h2 id="HTML_5_compliance_improvements">HTML 5 compliance improvements</h2>
+## HTML 5 compliance improvements
 
-<p>The DOM Level 2 views to HTML and XHTML documents are now unified per HTML 5.</p>
+The DOM Level 2 views to HTML and XHTML documents are now unified per HTML 5.
 
-<ul>
-  <li>The <a href="/en-US/docs/Web/API/Element/localName"><code>localName</code></a> DOM property now returns the name of HTML element nodes in lower case. Previously, in HTML documents, it returned it in upper case. (DOM Level 1 <a href="/en-US/docs/DOM/node.tagName"><code>tagName</code></a> continues to return in upper case in HTML documents.)</li>
-  <li>The <a href="/en-US/docs/Web/API/Element/namespaceURI"><code>namespaceURI</code></a> DOM property now returns <code>"http://www.w3.org/1999/xhtml"</code> on HTML element nodes. Previously, in HTML documents, it returned <code>null</code>.
-  </li>
-  <li>
-    <code>document.<a href="/en-US/docs/DOM/document.createElementNS">createElementNS</a>(null, "FOO")</code> no longer creates an HTML element node in HTML documents. <code>document.<a href="/en-US/docs/Web/API/Document/createElement">createElement</a>("FOO")</code>
-    or <code>document.createElementNS("http://www.w3.org/1999/xhtml", "foo")</code> continue
-    to work in HTML documents.
-  </li>
-  <li>The <a href="/en-US/docs/Web/XPath/Functions/name"><code>name</code></a> and the <a href="/en-US/docs/Web/XPath/Functions/local-name"><code>local-name</code></a> functions in XPath returns the name of HTML elements in lower case. Previously, in HTML documents, they returned it in upper case.</li>
-</ul>
+- The [`localName`](/en-US/docs/Web/API/Element/localName) DOM property now returns the name of HTML element nodes in lower case. Previously, in HTML documents, it returned it in upper case. (DOM Level 1 [`tagName`](/en-US/docs/DOM/node.tagName) continues to return in upper case in HTML documents.)
+- The [`namespaceURI`](/en-US/docs/Web/API/Element/namespaceURI) DOM property now returns `"http://www.w3.org/1999/xhtml"` on HTML element nodes. Previously, in HTML documents, it returned `null`.
+- `document.createElementNS(null, "FOO")` no longer creates an HTML element node in HTML documents. `document.createElement("FOO")`
+  or `document.createElementNS("http://www.w3.org/1999/xhtml", "foo")` continue
+  to work in HTML documents.
+- The [`name`](/en-US/docs/Web/XPath/Functions/name) and the [`local-name`](/en-US/docs/Web/XPath/Functions/local-name) functions in XPath returns the name of HTML elements in lower case. Previously, in HTML documents, they returned it in upper case.
 
-<p>The most probable upgrade problem is the pattern <code>if (elt.localName == "FOO")</code>.</p>
+The most probable upgrade problem is the pattern `if (elt.localName == "FOO")`.
 
-<h3 id="Example_Testing_if_an_element_is_an_HTML_img_element">Example: Testing if an element is an HTML img element</h3>
+### Example: Testing if an element is an HTML img element
 
-<h4 id="Firefox_3.6_both_texthtml_and_applicationxhtmlxml">Firefox 3.6, both text/html and application/xhtml+xml</h4>
+#### Firefox 3.6, both text/html and application/xhtml+xml
 
-<p>
-  <code>if (elt.localName == "img" &amp;&amp; elt.namespaceURI == "<a class=" external" href="https://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>")</code>
-</p>
+`if (elt.localName == "img" && elt.namespaceURI == "http://www.w3.org/1999/xhtml")`
 
-<h4 id="Firefox_3.5_and_3.6_only_extension-supplied_texthtml_without_foreign_(e.g._SVG)_script-inserted_elements">Firefox 3.5 and 3.6, only extension-supplied text/html without foreign (e.g. SVG) script-inserted elements</h4>
+#### Firefox 3.5 and 3.6, only extension-supplied text/html without foreign (e.g. SVG) script-inserted elements
 
-<p><code>if (elt.tagName == "IMG")</code></p>
+`if (elt.tagName == "IMG")`
 
-<h4 id="Firefox_3.5_and_3.6_both_texthtml_and_applicationxhtmlxml">Firefox 3.5 and 3.6, both text/html and application/xhtml+xml</h4>
+#### Firefox 3.5 and 3.6, both text/html and application/xhtml+xml
 
-<p><code>if (elt instanceof HTMLImageElement)</code></p>
+`if (elt instanceof HTMLImageElement)`
 
-<h2 id="contents.rdf_no_longer_supported">contents.rdf no longer supported</h2>
+## contents.rdf no longer supported
 
-<p>Support for the obsolete <code>contents.rdf</code> method for registering chrome has been removed in Gecko 1.9.2, and is no longer supported by Firefox 3.6. This means that add-ons that use contents.rdf can no longer be installed.</p>
+Support for the obsolete `contents.rdf` method for registering chrome has been removed in Gecko 1.9.2, and is no longer supported by Firefox 3.6. This means that add-ons that use contents.rdf can no longer be installed.
 
-<p>Make sure you include a <a href="/en-US/docs/Chrome_Registration">chrome.manifest</a> in your XPI.</p>
+Make sure you include a [chrome.manifest](/en-US/docs/Chrome_Registration) in your XPI.
 
-<div class="note">
-  <p><strong>Note:</strong> Add-ons that are already installed using the old contents.rdf method for registering chrome will continue to function if already installed. Make sure that you test your add-on by actually removing and reinstalling it to ensure that the install works after updating it to use an install manifest.</p>
-</div>
+> **Note:** Add-ons that are already installed using the old contents.rdf method for registering chrome will continue to function if already installed. Make sure that you test your add-on by actually removing and reinstalling it to ensure that the install works after updating it to use an install manifest.

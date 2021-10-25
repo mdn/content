@@ -6,211 +6,178 @@ tags:
   - Firefox
   - Release
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 61 that will affect developers. Firefox 61 was released on June 26, 2018.</p>
+This article provides information about the changes in Firefox 61 that will affect developers. Firefox 61 was released on June 26, 2018.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_tools">Developer tools</h3>
+### Developer tools
 
-<ul>
- <li>The new-look Console UI has been enabled by default for the <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a> &amp; <a href="/en-US/docs/Tools/Browser_Toolbox">Browser Toolbox</a> ({{bug(1362023)}}/{{bug(1347127)}}). The old UI has been removed.</li>
- <li>In the <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a>, clicking <em>Open in New Tab</em> in a <code>POST</code> request's context menu correctly resends the request with the expected <code>POST</code> parameters ({{bug(1407515)}}).</li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#css_variable_autocompletion">CSS variables now autocomplete</a> with color swatches, allowing you to see exactly what color value is stored in each variable ({{bug(1451211)}}).
-  <ul>
-   <li>In addition, hovering over a CSS variable name brings up a tooltip showing what color value is stored in that variable ({{bug(1431949)}}).</li>
-  </ul>
- </li>
- <li>The main toolbox's toolbar has been redesigned. Highlights are better responsiveness for narrow and wide viewports with a new overflow dropdown, cleaned up meatball menu, and sortable tabs to let you move up your most used panels ({{bug(1226272)}}).</li>
- <li>The <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a>'s toolbar now includes a dropdown menu providing easier access to the 'Copy All As HAR' and 'Save All As HAR' commands, as well as an 'Import...' option ({{bug(1403530)}}).</li>
- <li>The Network Monitor's details pane now includes a <a href="/en-US/docs/Tools/Network_Monitor#cache">Cache tab</a>, which displays information about previously cached resources ({{bug(859051)}}).</li>
- <li>The Network Monitor's main toolbar got redesigned to be more responsive on smaller viewports and visually aligned with the Console.</li>
- <li>The Network Monitor's main toolbar now includes a <a href="/en-US/docs/Tools/Network_Monitor#throttling">Throttling</a> dropdown which was only available in the <a href="/en-US/docs/Tools/Responsive_Design_Mode#network_throttling">Responsive Design Mode</a> before. It allows you to throttle your network speed to emulate various different network speed conditions ({{bug(1349559)}}).</li>
- <li>The Browser Console now hides CSS errors by default for readability and performance reasons ({{bug(1452143)}}).</li>
- <li>The Browser Console now includes a command to restart the browser. Use <code>Ctrl</code> + <code>Alt</code> + <code>R</code> (Windows, Linux) or <code>Cmd</code> + <code>Alt</code> + <code>R</code> (Mac) to restart the browser with the same tabs open as before the restart.</li>
- <li>DevTools' web extension APIs <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished">devtools.network.onRequestFinished</a></code> ({{bug(1311171)}}) and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR">devtools.network.getHAR</a></code> ({{bug(1311177)}}) got implemented (enabling extensions like <a href="/en-US/docs/Web">har-export-trigger</a>).</li>
- <li>The Firebug theme got removed since the transition of Firebug users into DevTools is complete ({{bug(1378108)}}).</li>
-</ul>
+- The new-look Console UI has been enabled by default for the [Browser Console](/en-US/docs/Tools/Browser_Console) & [Browser Toolbox](/en-US/docs/Tools/Browser_Toolbox) ({{bug(1362023)}}/{{bug(1347127)}}). The old UI has been removed.
+- In the [Network Monitor](/en-US/docs/Tools/Network_Monitor), clicking _Open in New Tab_ in a `POST` request's context menu correctly resends the request with the expected `POST` parameters ({{bug(1407515)}}).
+- [CSS variables now autocomplete](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#css_variable_autocompletion) with color swatches, allowing you to see exactly what color value is stored in each variable ({{bug(1451211)}}).
 
-<h3 id="HTML">HTML</h3>
+  - In addition, hovering over a CSS variable name brings up a tooltip showing what color value is stored in that variable ({{bug(1431949)}}).
 
-<p><em>No changes.</em></p>
+- The main toolbox's toolbar has been redesigned. Highlights are better responsiveness for narrow and wide viewports with a new overflow dropdown, cleaned up meatball menu, and sortable tabs to let you move up your most used panels ({{bug(1226272)}}).
+- The [Network Monitor](/en-US/docs/Tools/Network_Monitor)'s toolbar now includes a dropdown menu providing easier access to the 'Copy All As HAR' and 'Save All As HAR' commands, as well as an 'Import...' option ({{bug(1403530)}}).
+- The Network Monitor's details pane now includes a [Cache tab](/en-US/docs/Tools/Network_Monitor#cache), which displays information about previously cached resources ({{bug(859051)}}).
+- The Network Monitor's main toolbar got redesigned to be more responsive on smaller viewports and visually aligned with the Console.
+- The Network Monitor's main toolbar now includes a [Throttling](/en-US/docs/Tools/Network_Monitor#throttling) dropdown which was only available in the [Responsive Design Mode](/en-US/docs/Tools/Responsive_Design_Mode#network_throttling) before. It allows you to throttle your network speed to emulate various different network speed conditions ({{bug(1349559)}}).
+- The Browser Console now hides CSS errors by default for readability and performance reasons ({{bug(1452143)}}).
+- The Browser Console now includes a command to restart the browser. Use `Ctrl` + `Alt` + `R` (Windows, Linux) or `Cmd` + `Alt` + `R` (Mac) to restart the browser with the same tabs open as before the restart.
+- DevTools' web extension APIs [`devtools.network.onRequestFinished`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished) ({{bug(1311171)}}) and [`devtools.network.getHAR`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR) ({{bug(1311177)}}) got implemented (enabling extensions like [har-export-trigger](/en-US/docs/Web)).
+- The Firebug theme got removed since the transition of Firebug users into DevTools is complete ({{bug(1378108)}}).
 
-<h3 id="CSS">CSS</h3>
+### HTML
 
-<ul>
- <li>CSS parsing has been parallelized ({{bug(1346988)}}).</li>
- <li>Support for {{cssxref("font-variation-settings")}} and {{cssxref("font-optical-sizing")}} has been enabled by default ({{bug(1447163)}}).</li>
- <li>The <code>grid-gap</code>, <code>grid-row-gap</code>, and <code>grid-column-gap</code> properties have been renamed to {{cssxref("gap")}}, {{cssxref("row-gap")}}, and {{cssxref("column-gap")}}, as they are no longer grid-specific ({{bug(1398482)}}). See <a href="/en-US/docs/Web/CSS/CSS_Box_Alignment#gaps_between_boxes">Box alignment; Gaps between boxes</a> for additional details. The old names have been kept as aliases for web compatibility purposes.</li>
- <li>The {{cssxref("flex-basis")}} <code>content</code> value is now supported ({{bug(1105111)}}).</li>
- <li>Percentage values of {{cssxref("column-gap")}} are now supported in <a href="/en-US/docs/Web/CSS/CSS_Columns">CSS multi-column layout</a> ({{bug(1398537)}}).</li>
- <li>The CSS {{cssxref(":host")}} pseudo-class is now supported; this selects a custom element from inside its shadow DOM ({{bug(992245)}}).</li>
- <li>{{cssxref("overflow")}} now accepts two-value syntax ({{bug(1453148)}}).</li>
- <li>Flex items that are sized according to their content are now sized using <code>max-content</code>, not <code>fit-content</code> ({{bug(1282821)}}). See the <a href="/en-US/docs/Web/CSS/width#values"><code>width</code> value definitions</a> for more details of these values.</li>
- <li>{{cssxref("font-weight")}}, {{cssxref("font-stretch")}} and {{cssxref("font-style")}} now support additional values as defined by <a href="https://drafts.csswg.org/css-fonts-4/">CSS Fonts level 4</a> ({{bug(1436048)}}):
-  <ul>
-   <li>{{cssxref("font-weight")}} now accepts a floating-point value between 1 and 1000 inclusive.</li>
-   <li>{{cssxref("font-stretch")}} now accepts percentage values.</li>
-   <li>{{cssxref("font-style")}} now accepts an angle after the <code>oblique</code> keyword.</li>
-  </ul>
- </li>
- <li>The {{cssxref("@font-face")}} descriptor equivalents of the three properties mentioned in the above entry also support the new syntax listed above, and additionally now support a two-value syntax allowing us to specify a range of descriptor values supported by a font-face ({{bug(1436061)}}, {{bug(1436048)}}).</li>
-</ul>
+_No changes._
 
-<h3 id="SVG">SVG</h3>
+### CSS
 
-<ul>
- <li>The <code>ping</code>, <code>rel</code>, <code>referrerPolicy</code>, <code>relList</code>, <code>hreflang</code>, <code>type</code> and <code>text</code> properties have been added to the {{SVGElement("a")}} element ({{domxref("SVGAElement")}}) to be consistent with the HTML {{HTMLElement("a")}} element ({{bug("1451823")}}).</li>
- <li>The {{SVGElement("textPath")}} element ({{domxref("SVGTextPathElement")}}) now supports the SVG2 <code>path</code> and <code>side</code> attributes ({{bug("1446617")}} and {{bug("1446650")}}).</li>
- <li>The {{domxref("SVGGeometryElement")}} interface is now supported for more elements and not just for the {{SVGElement("path")}} element ({{bug("1325320")}}).</li>
-</ul>
+- CSS parsing has been parallelized ({{bug(1346988)}}).
+- Support for {{cssxref("font-variation-settings")}} and {{cssxref("font-optical-sizing")}} has been enabled by default ({{bug(1447163)}}).
+- The `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties have been renamed to {{cssxref("gap")}}, {{cssxref("row-gap")}}, and {{cssxref("column-gap")}}, as they are no longer grid-specific ({{bug(1398482)}}). See [Box alignment; Gaps between boxes](/en-US/docs/Web/CSS/CSS_Box_Alignment#gaps_between_boxes) for additional details. The old names have been kept as aliases for web compatibility purposes.
+- The {{cssxref("flex-basis")}} `content` value is now supported ({{bug(1105111)}}).
+- Percentage values of {{cssxref("column-gap")}} are now supported in [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_Columns) ({{bug(1398537)}}).
+- The CSS {{cssxref(":host")}} pseudo-class is now supported; this selects a custom element from inside its shadow DOM ({{bug(992245)}}).
+- {{cssxref("overflow")}} now accepts two-value syntax ({{bug(1453148)}}).
+- Flex items that are sized according to their content are now sized using `max-content`, not `fit-content` ({{bug(1282821)}}). See the [`width` value definitions](/en-US/docs/Web/CSS/width#values) for more details of these values.
+- {{cssxref("font-weight")}}, {{cssxref("font-stretch")}} and {{cssxref("font-style")}} now support additional values as defined by [CSS Fonts level 4](https://drafts.csswg.org/css-fonts-4/) ({{bug(1436048)}}):
 
-<h3 id="JavaScript">JavaScript</h3>
+  - {{cssxref("font-weight")}} now accepts a floating-point value between 1 and 1000 inclusive.
+  - {{cssxref("font-stretch")}} now accepts percentage values.
+  - {{cssxref("font-style")}} now accepts an angle after the `oblique` keyword.
 
-<ul>
- <li>The {{jsxref("String.prototype.trimStart()")}} and {{jsxref("String.prototype.trimEnd()")}} methods have been implemented (see {{bug(1434007)}}). <code>trimLeft</code> and <code>trimRight</code> remain as aliases for web compatibility reasons.</li>
-</ul>
+- The {{cssxref("@font-face")}} descriptor equivalents of the three properties mentioned in the above entry also support the new syntax listed above, and additionally now support a two-value syntax allowing us to specify a range of descriptor values supported by a font-face ({{bug(1436061)}}, {{bug(1436048)}}).
 
-<h3 id="APIs">APIs</h3>
+### SVG
 
-<h4 id="New_APIs">New APIs</h4>
+- The `ping`, `rel`, `referrerPolicy`, `relList`, `hreflang`, `type` and `text` properties have been added to the {{SVGElement("a")}} element ({{domxref("SVGAElement")}}) to be consistent with the HTML {{HTMLElement("a")}} element ({{bug("1451823")}}).
+- The {{SVGElement("textPath")}} element ({{domxref("SVGTextPathElement")}}) now supports the SVG2 `path` and `side` attributes ({{bug("1446617")}} and {{bug("1446650")}}).
+- The {{domxref("SVGGeometryElement")}} interface is now supported for more elements and not just for the {{SVGElement("path")}} element ({{bug("1325320")}}).
 
-<ul>
- <li>The {{domxref("PerformanceServerTiming")}} API has been implemented. It surfaces server-side metrics sent via the {{HTTPHeader("Server-Timing")}} header ({{bug(1423495)}}).</li>
-</ul>
+### JavaScript
 
-<h4 id="DOM">DOM</h4>
+- The {{jsxref("String.prototype.trimStart()")}} and {{jsxref("String.prototype.trimEnd()")}} methods have been implemented (see {{bug(1434007)}}). `trimLeft` and `trimRight` remain as aliases for web compatibility reasons.
 
-<ul>
- <li>The {{domxref("Document.anchors", "anchors")}}, {{domxref("Document.applets", "applets")}}, {{domxref("Document.embeds", "embeds")}}, {{domxref("Document.forms", "forms")}}, {{domxref("Document.head", "head")}}, {{domxref("Document.images", "images")}}, {{domxref("Document.links", "links")}}, {{domxref("Document.plugins", "plugins")}}, and {{domxref("Document.scripts", "scripts")}} properties have been moved from the {{domxref("HTMLDocument")}} interface onto {{domxref("Document")}} ({{bug(1415588)}}).</li>
- <li>{{domxref("DOMTokenList.replace()")}} now returns a boolean value to indicate whether the replacement occurred successfully, rather than void ({{bug(1444909)}}).</li>
- <li>The <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>'s {{domxref("Request.credentials")}} property now defaults to <code>"same-origin"</code> per the latest revision of the specification ({{bug(1394399)}}).</li>
- <li>The {{domxref("Request.destination")}} property has been implemented ({{bug(1402892)}}).</li>
- <li>The {{domxref("MutationObserver")}} option dictionary, `MutationObserverInit`, no longer has <code>false</code> as the default value of all of its Boolean properties. Now, only <code>childList</code> and <code>subtree</code> have default values (of <code>false</code> still). The other properties have no default values ({{bug(973638)}}).</li>
- <li>The <a href="/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> method {{domxref("PaymentRequest.show()")}} now supports using a {{jsxref("Promise")}} to let the client side code provide updated payment details prior to activating the payment interface ({{bug(1441709)}}).</li>
-</ul>
+### APIs
 
-<h4 id="DOM_events">DOM events</h4>
+#### New APIs
 
-<p><em>No changes.</em></p>
+- The {{domxref("PerformanceServerTiming")}} API has been implemented. It surfaces server-side metrics sent via the {{HTTPHeader("Server-Timing")}} header ({{bug(1423495)}}).
 
-<h4 id="Service_workers">Service workers</h4>
+#### DOM
 
-<p>The "Forget" button, available in Firefox's customization options, now clears service workers and their caches ({{bug(1252998)}}).</p>
+- The {{domxref("Document.anchors", "anchors")}}, {{domxref("Document.applets", "applets")}}, {{domxref("Document.embeds", "embeds")}}, {{domxref("Document.forms", "forms")}}, {{domxref("Document.head", "head")}}, {{domxref("Document.images", "images")}}, {{domxref("Document.links", "links")}}, {{domxref("Document.plugins", "plugins")}}, and {{domxref("Document.scripts", "scripts")}} properties have been moved from the {{domxref("HTMLDocument")}} interface onto {{domxref("Document")}} ({{bug(1415588)}}).
+- {{domxref("DOMTokenList.replace()")}} now returns a boolean value to indicate whether the replacement occurred successfully, rather than void ({{bug(1444909)}}).
+- The [Fetch API](/en-US/docs/Web/API/Fetch_API)'s {{domxref("Request.credentials")}} property now defaults to `"same-origin"` per the latest revision of the specification ({{bug(1394399)}}).
+- The {{domxref("Request.destination")}} property has been implemented ({{bug(1402892)}}).
+- The {{domxref("MutationObserver")}} option dictionary, \`MutationObserverInit\`, no longer has `false` as the default value of all of its Boolean properties. Now, only `childList` and `subtree` have default values (of `false` still). The other properties have no default values ({{bug(973638)}}).
+- The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) method {{domxref("PaymentRequest.show()")}} now supports using a {{jsxref("Promise")}} to let the client side code provide updated payment details prior to activating the payment interface ({{bug(1441709)}}).
 
-<h4 id="Web_Audio_Media_and_WebRTC">Web Audio, Media and WebRTC</h4>
+#### DOM events
 
-<ul>
- <li>The {{domxref("AudioContext.AudioContext", "AudioContext()")}} constructor now accepts an optional <code>options</code> parameter. This lets you configure the preferred latency and/or sample rate for the new context.</li>
- <li>Firefox now throws the correct exceptions when instantiation of an {{domxref("AudioBuffer")}} fails.</li>
-</ul>
+_No changes._
 
-<h4 id="WebVR">WebVR</h4>
+#### Service workers
 
-<ul>
- <li>The <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> has been enabled by default on macOS ({{bug(1244242)}}).</li>
-</ul>
+The "Forget" button, available in Firefox's customization options, now clears service workers and their caches ({{bug(1252998)}}).
 
-<h4 id="Canvas_and_WebGL">Canvas and WebGL</h4>
+#### Web Audio, Media and WebRTC
 
-<p><em>No changes.</em></p>
+- The {{domxref("AudioContext.AudioContext", "AudioContext()")}} constructor now accepts an optional `options` parameter. This lets you configure the preferred latency and/or sample rate for the new context.
+- Firefox now throws the correct exceptions when instantiation of an {{domxref("AudioBuffer")}} fails.
 
-<h4 id="CSSOM">CSSOM</h4>
+#### WebVR
 
-<ul>
- <li>The {{domxref("CSSStyleRule.selectorText")}} property is now fully implemented and no longer read-only ({{bug(37468)}}).</li>
- <li>The {{domxref("MediaList")}} interface implementation is now a little closer to the specification. It is not all the way there yet; for example, stringifier attributes haven't been implemented yet ({{bug(1455807)}}).</li>
-</ul>
+- The [WebVR API](/en-US/docs/Web/API/WebVR_API) has been enabled by default on macOS ({{bug(1244242)}}).
 
-<h3 id="HTTP">HTTP</h3>
+#### Canvas and WebGL
 
-<ul>
- <li>The cookie directive <code>SameSite</code> has been implemented. See <a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie">Set-Cookie</a> and <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> ({{bug(795346)}}).</li>
-</ul>
+_No changes._
 
-<h3 id="Networking">Networking</h3>
+#### CSSOM
 
-<ul>
- <li>Firefox 61 and later no longer support using the FTP protocol (that is, URLs with the <code>"ftp://"</code> scheme) to load subresources from within HTML content. FTP is still supported as a top-level URL entered directly into the URL bar or loaded as a standalone document ({{bug(1404744)}}).</li>
-</ul>
+- The {{domxref("CSSStyleRule.selectorText")}} property is now fully implemented and no longer read-only ({{bug(37468)}}).
+- The {{domxref("MediaList")}} interface implementation is now a little closer to the specification. It is not all the way there yet; for example, stringifier attributes haven't been implemented yet ({{bug(1455807)}}).
 
-<h3 id="Security">Security</h3>
+### HTTP
 
-<p><em>No changes.</em></p>
+- The cookie directive `SameSite` has been implemented. See [Set-Cookie](/en-US/docs/Web/HTTP/Headers/Set-Cookie) and [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) ({{bug(795346)}}).
 
-<h3 id="Plugins">Plugins</h3>
+### Networking
 
-<p><em>No changes.</em></p>
+- Firefox 61 and later no longer support using the FTP protocol (that is, URLs with the `"ftp://"` scheme) to load subresources from within HTML content. FTP is still supported as a top-level URL entered directly into the URL bar or loaded as a standalone document ({{bug(1404744)}}).
 
-<h3 id="Other">Other</h3>
+### Security
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h2 id="Removals_from_the_web_platform">Removals from the web platform</h2>
+### Plugins
 
-<h3 id="Developer_tools_2">Developer tools</h3>
+_No changes._
 
-<p><code>Cmd</code>/<code>Ctrl</code> + <code>Shift</code> + <code>O</code> no longer shows/hides the DevTools options panel — use <code>F1</code> instead ({{bug(1409456)}}).</p>
+### Other
 
-<h3 id="HTML_2">HTML</h3>
+_No changes._
 
-<p><em>No changes.</em></p>
+## Removals from the web platform
 
-<h3 id="CSS_2">CSS</h3>
+### Developer tools
 
-<p><code>@-moz-document</code> has been disabled in content pages ({{bug(1422245)}}).</p>
+`Cmd`/`Ctrl` + `Shift` + `O` no longer shows/hides the DevTools options panel — use `F1` instead ({{bug(1409456)}}).
 
-<h3 id="APIs_2">APIs</h3>
+### HTML
 
-<ul>
- <li>The {{domxref("File")}} interface's property {{domxref("File.lastModifiedDate", "lastModifiedDate")}} has been removed ({{bug(1458883)}}).</li>
- <li>The <code>Node.setUserData</code> and <code>Node.getUserData</code> methods have been removed from the platform completely ({{bug(749981)}}).</li>
- <li>The {{domxref("Element.createShadowRoot()")}} method has been removed. Use {{domxref("Element.attachShadow()")}} instead ({{bug(1453789)}}).</li>
- <li>The {{domxref("MediaStream")}} overload of the {{domxref("URL.createObjectURL()")}} method has been removed ({{bug(1454889)}}).</li>
-</ul>
+_No changes._
 
-<h3 id="SVG_2">SVG</h3>
+### CSS
 
-<ul>
- <li>The deprecated (and never properly implemented) {{domxref("SVGViewElement")}}<code>.viewTarget</code> property has been removed ({{bug(1455763)}}).</li>
- <li>The following deprecated properties have been removed from {{domxref("SVGSVGElement")}} ({{bug(1133172)}}):
-  <ul>
-   <li><code>pixelUnitToMillimeterX</code></li>
-   <li><code>pixelUnitToMillimeterY</code></li>
-   <li><code>screenPixelToMillimeterX</code></li>
-   <li><code>screenPixelToMillimeterY</code></li>
-  </ul>
- </li>
- <li>The non-standard <code>SVGNumber()</code> constructor has been removed ({{bug("1455940")}}).</li>
-</ul>
+`@-moz-document` has been disabled in content pages ({{bug(1422245)}}).
 
-<h3 id="Other_2">Other</h3>
+### APIs
 
-<p><em>No changes.</em></p>
+- The {{domxref("File")}} interface's property {{domxref("File.lastModifiedDate", "lastModifiedDate")}} has been removed ({{bug(1458883)}}).
+- The `Node.setUserData` and `Node.getUserData` methods have been removed from the platform completely ({{bug(749981)}}).
+- The {{domxref("Element.createShadowRoot()")}} method has been removed. Use {{domxref("Element.attachShadow()")}} instead ({{bug(1453789)}}).
+- The {{domxref("MediaStream")}} overload of the {{domxref("URL.createObjectURL()")}} method has been removed ({{bug(1454889)}}).
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
+### SVG
 
-<h3 id="WebExtensions">WebExtensions</h3>
+- The deprecated (and never properly implemented) {{domxref("SVGViewElement")}}`.viewTarget` property has been removed ({{bug(1455763)}}).
+- The following deprecated properties have been removed from {{domxref("SVGSVGElement")}} ({{bug(1133172)}}):
 
-<ul>
- <li>Autocomplete popups are now themeable ({{bug(1417883)}}).</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated">tabs.onUpdated</a></code> now has a filter template ({{bug(1329507)}}).</li>
- <li>The default document colors can now be overridden, using <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/overrideDocumentColors">browserSettings.overrideDocumentColors</a></code> ({{bug(1417810)}}).</li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query">tabs.query</a> has been optimized with the implementation of some useful search/filter option parameters ({{bug(1445316)}}).</li>
- <li>You can now use <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request">permissions.request</a></code> from an <code>about:addons</code> preferences page ({{bug(1382953)}}).</li>
- <li>You can now force web pages to use system fonts instead of the fonts they specify using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/useDocumentFonts">browserSettings.useDocumentFonts</a></code> property ({{bug("1400805")}}).</li>
- <li>You can now cause browser search autocomplete suggestions to automatically open in a new tab rather than the current tab using the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openUrlbarResultsInNewTabs">browserSettings.openUrlbarResultsInNewTabs</a></code> property ({{bug("1432645")}}).</li>
- <li>You can control whether the user can close a tab using double-click with the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/closeTabsByDoubleClick" rel="nofollow"><code>browserSettings.closeTabsByDoubleClick</code></a> property ({{bug("1435142")}}).</li>
- <li>The <code>toolbar</code>, <code>toolbar_text</code>, <code>toolbar_field</code>, <code>toolbar_field_text</code>, and <code>toolbar_field_border</code> <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">theme</a> manifest properties now also apply to the findbar ({{bug(1418605)}}).</li>
- <li>In <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel">sidebarAction.getPanel()</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle">sidebarAction.getTitle()</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel">sidebarAction.setPanel()</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle">sidebarAction.setTitle()</a></code>, and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon">sidebarAction.setIcon()</a></code>, you can now specify a <code>windowId</code> so that the features will be set/got only for a specific window ({{bug(1390464)}}).</li>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/hide">tabs.hide()</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/show">tabs.show()</a></code> are now enabled by default ({{bug(1455040)}}).
-  <ul>
-   <li>The first time an extension hides a tab, the browser will tell the user that the tab is being hidden, show them how they can access the hidden tab, and give them the option of disabling the extension instead ({{bug(1438363)}}).</li>
-  </ul>
- </li>
-</ul>
+  - `pixelUnitToMillimeterX`
+  - `pixelUnitToMillimeterY`
+  - `screenPixelToMillimeterX`
+  - `screenPixelToMillimeterY`
 
-<h2 id="Older_versions">Older versions</h2>
+- The non-standard `SVGNumber()` constructor has been removed ({{bug("1455940")}}).
 
-<p>{{Firefox_for_developers(60)}}</p>
+### Other
+
+_No changes._
+
+## Changes for add-on and Mozilla developers
+
+### WebExtensions
+
+- Autocomplete popups are now themeable ({{bug(1417883)}}).
+- [`tabs.onUpdated`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated) now has a filter template ({{bug(1329507)}}).
+- The default document colors can now be overridden, using [`browserSettings.overrideDocumentColors`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/overrideDocumentColors) ({{bug(1417810)}}).
+- [tabs.query](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) has been optimized with the implementation of some useful search/filter option parameters ({{bug(1445316)}}).
+- You can now use [`permissions.request`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request) from an `about:addons` preferences page ({{bug(1382953)}}).
+- You can now force web pages to use system fonts instead of the fonts they specify using the [`browserSettings.useDocumentFonts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/useDocumentFonts) property ({{bug("1400805")}}).
+- You can now cause browser search autocomplete suggestions to automatically open in a new tab rather than the current tab using the [`browserSettings.openUrlbarResultsInNewTabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openUrlbarResultsInNewTabs) property ({{bug("1432645")}}).
+- You can control whether the user can close a tab using double-click with the [`browserSettings.closeTabsByDoubleClick`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/closeTabsByDoubleClick) property ({{bug("1435142")}}).
+- The `toolbar`, `toolbar_text`, `toolbar_field`, `toolbar_field_text`, and `toolbar_field_border` [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) manifest properties now also apply to the findbar ({{bug(1418605)}}).
+- In [`sidebarAction.getPanel()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel), [`sidebarAction.getTitle()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle), [`sidebarAction.setPanel()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel), [`sidebarAction.setTitle()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle), and [`sidebarAction.setIcon()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon), you can now specify a `windowId` so that the features will be set/got only for a specific window ({{bug(1390464)}}).
+- [`tabs.hide()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/hide) and [`tabs.show()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/show) are now enabled by default ({{bug(1455040)}}).
+
+  - The first time an extension hides a tab, the browser will tell the user that the tab is being hidden, show them how they can access the hidden tab, and give them the option of disabling the extension instead ({{bug(1438363)}}).
+
+## Older versions
+
+{{Firefox_for_developers(60)}}

@@ -7,93 +7,71 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 81 that will affect developers. Firefox 81 was released on September 22, 2020.</p>
+This article provides information about the changes in Firefox 81 that will affect developers. Firefox 81 was released on September 22, 2020.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+### Developer Tools
 
-<ul>
- <li>The <a href="/en-US/docs/Tools/Debugger">Debugger</a> now uses the TypeScript icon for <code>.ts</code> and <code>.tsx</code> files ({{bug(1642769)}}). Previously a generic file icon was used.</li>
- <li>We've added support for line wrapping in the <a href="/en-US/docs/Tools/Debugger/UI_Tour#source_pane">Debugger source pane</a> ({{bug(1590885)}}).</li>
- <li>We've removed unnecessary <a href="/en-US/docs/Tools/Accessibility_inspector/Simulation">color vision simulations</a> (protanomaly, deuteranomaly, and tritanomaly) from the <a href="/en-US/docs/Tools/Accessibility_inspector">Accessibility Inspector</a>, and added a simulation for achromatopsia (no color) ({{bug(1655053)}}).</li>
- <li>Autocompletion is now supported when adding a <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#viewing_and_changing_classes_on_an_element">class to an element</a>. Offered classes are based on existing classes in the document ({{bug(1492797)}}).</li>
-</ul>
+- The [Debugger](/en-US/docs/Tools/Debugger) now uses the TypeScript icon for `.ts` and `.tsx` files ({{bug(1642769)}}). Previously a generic file icon was used.
+- We've added support for line wrapping in the [Debugger source pane](/en-US/docs/Tools/Debugger/UI_Tour#source_pane) ({{bug(1590885)}}).
+- We've removed unnecessary [color vision simulations](/en-US/docs/Tools/Accessibility_inspector/Simulation) (protanomaly, deuteranomaly, and tritanomaly) from the [Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector), and added a simulation for achromatopsia (no color) ({{bug(1655053)}}).
+- Autocompletion is now supported when adding a [class to an element](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#viewing_and_changing_classes_on_an_element). Offered classes are based on existing classes in the document ({{bug(1492797)}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<ul>
- <li>Automatic downloads are now blocked in a sandboxed <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> element ({{bug(1558394)}}).</li>
-</ul>
+- Automatic downloads are now blocked in a sandboxed [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) element ({{bug(1558394)}}).
 
-<h4 id="Removals">Removals</h4>
+#### Removals
 
-<ul>
- <li>Support for the non-standard <code>mozallowfullscreen</code> attribute has been removed from <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>. Consider using <code>allow="fullscreen"</code> instead ({{bug(1657599)}}).</li>
-</ul>
+- Support for the non-standard `mozallowfullscreen` attribute has been removed from [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe). Consider using `allow="fullscreen"` instead ({{bug(1657599)}}).
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>We now support the value of <code>clip</code> for the {{CSSxRef("overflow")}} property, via renaming <code>overflow: -moz-hidden-unscrollable</code> ({{bug(1531609)}}).</li>
- <li>The {{CSSxRef("text-combine-upright")}} property has been made non-animatable to comply with the spec ({{bug(1654195)}}).</li>
-</ul>
+- We now support the value of `clip` for the {{CSSxRef("overflow")}} property, via renaming `overflow: -moz-hidden-unscrollable` ({{bug(1531609)}}).
+- The {{CSSxRef("text-combine-upright")}} property has been made non-animatable to comply with the spec ({{bug(1654195)}}).
 
-<h4 id="Removals_2">Removals</h4>
+#### Removals
 
-<ul>
- <li>The non-standard {{CSSxRef("::-moz-focus-outer")}} <a href="/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a> has been removed ({{bug(1655859)}}).</li>
-</ul>
+- The non-standard {{CSSxRef("::-moz-focus-outer")}} [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) has been removed ({{bug(1655859)}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="HTTP">HTTP</h3>
+### HTTP
 
-<ul>
- <li>Firefox now accepts non-standard <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Disposition">Content-Disposition</a></code> headers with a unquoted filename containing spaces ({{bug(1440677)}}).</li>
- <li>Firefox now supports the HTTP <code><a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy">Feature-Policy</a></code> header's <code><a href="/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share">web-share</a></code> directive, which can be used to restrict access to the <a href="/en-US/docs/Web/API/Navigator/share">Web Share API</a> to trusted origins. Note that Firefox does not support the Web Share API itself, at time of writing ({{bug(1653199)}}).</li>
-</ul>
+- Firefox now accepts non-standard [`Content-Disposition`](/en-US/docs/Web/HTTP/Headers/Content-Disposition) headers with a unquoted filename containing spaces ({{bug(1440677)}}).
+- Firefox now supports the HTTP [`Feature-Policy`](/en-US/docs/Web/HTTP/Headers/Feature-Policy) header's [`web-share`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) directive, which can be used to restrict access to the [Web Share API](/en-US/docs/Web/API/Navigator/share) to trusted origins. Note that Firefox does not support the Web Share API itself, at time of writing ({{bug(1653199)}}).
 
-<h3 id="APIs">APIs</h3>
+### APIs
 
-<h4 id="Gamepad">Gamepad</h4>
+#### Gamepad
 
-<ul>
- <li>The threshold for gamepad joystick activation has been increased. This reduces the chance of inadvertent gamepad activation, both from controllers that send small axis values when they are idle, and very small bumps. ({{bug(1539178)}})</li>
-</ul>
+- The threshold for gamepad joystick activation has been increased. This reduces the chance of inadvertent gamepad activation, both from controllers that send small axis values when they are idle, and very small bumps. ({{bug(1539178)}})
 
-<h4 id="WorkersService_workers">Workers/Service workers</h4>
+#### Workers/Service workers
 
-<ul>
- <li>Strict MIME type checks are now enforced on worker and shared worker scripts, i.e. scripts targeted by the {{domxref("Worker.Worker()", "Worker()")}} and {{domxref("SharedWorker.SharedWorker()", "SharedWorker()")}} constructors must now be served with <code>text/javascript</code> ({{bug(1569123)}}).</li>
-</ul>
+- Strict MIME type checks are now enforced on worker and shared worker scripts, i.e. scripts targeted by the {{domxref("Worker.Worker()", "Worker()")}} and {{domxref("SharedWorker.SharedWorker()", "SharedWorker()")}} constructors must now be served with `text/javascript` ({{bug(1569123)}}).
 
-<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
+### WebDriver conformance (Marionette)
 
-<ul>
- <li>The <code>setWindowRect</code> capability is now <code>true</code> by default for all desktop applications (including Thunderbird), and <code>false</code> on Android for GeckoView ({{bug(1650872)}}).</li>
- <li>We've added Fission support for the following commands: <code>WebDriver:SwitchToFrame</code>, <code>WebDriver:SwitchToParentFrame</code>, <code>WebDriver:GetCurrentURL</code>. All Fission-compatible commands are only available when <code>marionette.actors.enabled</code> is set to <code>true</code>.</li>
- <li>Fixed the broken tracking of browsing contexts after opening a new window ({{bug(1661495)}}).</li>
- <li>In case of failures <code>WebDriver:SwitchToWindow</code> now always returns a unified <code>NoSuchWindowError</code> ({{bug(1663429)}}).</li>
-</ul>
+- The `setWindowRect` capability is now `true` by default for all desktop applications (including Thunderbird), and `false` on Android for GeckoView ({{bug(1650872)}}).
+- We've added Fission support for the following commands: `WebDriver:SwitchToFrame`, `WebDriver:SwitchToParentFrame`, `WebDriver:GetCurrentURL`. All Fission-compatible commands are only available when `marionette.actors.enabled` is set to `true`.
+- Fixed the broken tracking of browsing contexts after opening a new window ({{bug(1661495)}}).
+- In case of failures `WebDriver:SwitchToWindow` now always returns a unified `NoSuchWindowError` ({{bug(1663429)}}).
 
-<h4 id="Removals_3">Removals</h4>
+#### Removals
 
-<ul>
- <li><code>WebDriver:GetActiveFrame</code> has been removed, because it's not part of the WebDriver specification and is no longer used ({{bug(1659502)}}).</li>
-</ul>
+- `WebDriver:GetActiveFrame` has been removed, because it's not part of the WebDriver specification and is no longer used ({{bug(1659502)}}).
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+## Changes for add-on developers
 
-<ul>
- <li><code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF">tabs.saveAsPDF()</a></code> is now supported on macOS ({{bug(1653354)}}).</li>
- <li>The behavior of <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame">webNavigation.getFrame()</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames">webNavigation.getAllFrames()</a></code> has changed. Moving forward, when a tab is discarded the promise will fulfill with a <code>null</code> value ({{bug(1654842)}}).</li>
-</ul>
+- [`tabs.saveAsPDF()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF) is now supported on macOS ({{bug(1653354)}}).
+- The behavior of [`webNavigation.getFrame()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame) and [`webNavigation.getAllFrames()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames) has changed. Moving forward, when a tab is discarded the promise will fulfill with a `null` value ({{bug(1654842)}}).
 
-<h2 id="Older_versions">Older versions</h2>
+## Older versions
 
-<p>{{Firefox_for_developers(80)}}</p>
+{{Firefox_for_developers(80)}}

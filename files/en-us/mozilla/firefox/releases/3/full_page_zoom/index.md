@@ -6,37 +6,33 @@ tags:
   - Firefox 3
   - XUL
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Full page zoom (or just fullZoom) is a new feature in <a href="/en-US/docs/Mozilla/Firefox/Releases/3">Firefox 3</a>.</p>
+Full page zoom (or just fullZoom) is a new feature in [Firefox 3](/en-US/docs/Mozilla/Firefox/Releases/3).
 
-<h3 id="Example_.28XUL:browser.29">Example (XUL:browser)</h3>
+### Example (XUL:browser)
 
-<p>The following example demonstrates the use for the current focused browser window. This is the typical usage for a Firefox extension.</p>
+The following example demonstrates the use for the current focused browser window. This is the typical usage for a Firefox extension.
 
-<pre>var zoom = ZoomManager.getZoomForBrowser(gBrowser.selectedBrowser);
-ZoomManager.enlarge();
-ZoomManager.setZoomForBrowser(gBrowser.selectedBrowser, ZoomManager.MIN);
-</pre>
+    var zoom = ZoomManager.getZoomForBrowser(gBrowser.selectedBrowser);
+    ZoomManager.enlarge();
+    ZoomManager.setZoomForBrowser(gBrowser.selectedBrowser, ZoomManager.MIN);
 
-<h3 id="Example_.28XUL:iframe.29">Example (XUL:iframe)</h3>
+### Example (XUL:iframe)
 
-<p>Note: This is probably out of date.</p>
+Note: This is probably out of date.
 
-<p>You may use the fullZoom feature for a <a href="/en-US/docs/XUL/iframe">XUL:iframe</a> as well. However, because an iframe doesn't have a markupDocumentViewer property, we need to get that first:</p>
+You may use the fullZoom feature for a [XUL:iframe](/en-US/docs/XUL/iframe) as well. However, because an iframe doesn't have a markupDocumentViewer property, we need to get that first:
 
-<pre>var zoom = 1.5;
-var iframe = document.getElementById("authorFrame");
-var contViewer = iframe.docShell.contentViewer;
-var docViewer = contViewer.QueryInterface(Components.interfaces.nsIMarkupDocumentViewer);
-docViewer.fullZoom = zoom;
-</pre>
+    var zoom = 1.5;
+    var iframe = document.getElementById("authorFrame");
+    var contViewer = iframe.docShell.contentViewer;
+    var docViewer = contViewer.QueryInterface(Components.interfaces.nsIMarkupDocumentViewer);
+    docViewer.fullZoom = zoom;
 
-<h3 id="References">References</h3>
+### References
 
-<ul>
- <li>Page zoom extension by Ted Mielczarek <a href="https://ted.mielczarek.org/code/mozilla/fullpagezoom.xpi">fullpagezoom.xpi</a> for latest Firefox 3.0 nightlies</li>
- <li><a href="https://addons.mozilla.org/en-US/firefox/addon/6489">Glazoom extension</a> by Daniel Glazman for Firefox 3.0</li>
- <li>The <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=4821">bugzilla bug</a> about fullZoom.</li>
- <li>{{ Interface("nsIMarkupDocumentViewer") }} Interface documentation.</li>
-</ul>
+- Page zoom extension by Ted Mielczarek [fullpagezoom.xpi](https://ted.mielczarek.org/code/mozilla/fullpagezoom.xpi) for latest Firefox 3.0 nightlies
+- [Glazoom extension](https://addons.mozilla.org/en-US/firefox/addon/6489) by Daniel Glazman for Firefox 3.0
+- The [bugzilla bug](https://bugzilla.mozilla.org/show_bug.cgi?id=4821) about fullZoom.
+- {{ Interface("nsIMarkupDocumentViewer") }} Interface documentation.

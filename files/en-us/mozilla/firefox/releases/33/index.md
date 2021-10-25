@@ -4,139 +4,118 @@ slug: Mozilla/Firefox/Releases/33
 tags:
   - Firefox
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>Firefox 33 was released on October 14, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.</p>
+Firefox 33 was released on October 14, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-<h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+## Changes for Web developers
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+### Developer Tools
 
-<p>Highlights</p>
+Highlights
 
-<ul>
- <li>Event listeners popup</li>
- <li>@media sidebar</li>
- <li>Add new rule</li>
- <li>Edit keyframes</li>
- <li>Cubic bezier editor</li>
- <li>Transform highlighter</li>
- <li>Persistent disable cache</li>
- <li>New Commands</li>
- <li>Editor preferences</li>
- <li>WebIDE</li>
-</ul>
+- Event listeners popup
+- @media sidebar
+- Add new rule
+- Edit keyframes
+- Cubic bezier editor
+- Transform highlighter
+- Persistent disable cache
+- New Commands
+- Editor preferences
+- WebIDE
 
-<p>For details please <a href="https://hacks.mozilla.org/2014/07/event-listeners-popup-media-sidebar-cubic-bezier-editor-more-firefox-developer-tools-episode-33/">see the hacks post</a>. Special thanks to the 33 contributors that added <a href="https://mzl.la/1pGLFDs">all the features and fixes</a> in this release.</p>
+For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-listeners-popup-media-sidebar-cubic-bezier-editor-more-firefox-developer-tools-episode-33/). Special thanks to the 33 contributors that added [all the features and fixes](https://mzl.la/1pGLFDs) in this release.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>Implemented {{cssxref("@counter-style")}} rule ({{bug(966166)}}).</li>
- <li>Unprefixed <code>ethiopic-numeric</code>, <code>persian</code>, <code>arabic-indic</code>, <code>devanagari</code>, <code>bengali</code>, <code>gurmukhi</code>, <code>gujarati</code>, <code>oriya</code>, <code>tamil</code>, <code>telugu</code>, <code>kannada</code>, <code>malayalam</code>, <code>thai</code>, <code>lao</code>, <code>myanmar</code>, <code>khmer</code>, <code>cjk-heavenly-stem</code>, <code>cjk-earthly-branch</code> in {{cssxref("list-style-type")}} ({{bug(985825)}} and {{bug(1063856)}}).</li>
- <li>Added support for <code>mongolian</code>, <code>disclosure-open</code> and <code>disclosure-closed</code> counter styles in {{cssxref("list-style-type")}} ({{bug(982355)}} and {{bug(1063856)}}).</li>
- <li>Fixed CSS animations with empty keyframes rule so they also dispatch events ({{bug(1004377)}}).</li>
- <li>Added support for <code>rebeccapurple</code>, a new {{cssxref("&lt;color&gt;")}} name defined in CSS Colors level 4 ({{bug(1024642)}}).</li>
- <li>Our experimental implementation of CSS Fonts Level 3 progresses. Its activation is governed by the <code>layout.css.font-features.enabled</code> preference, enabled by default in Nightly. Newly implemented features are:
-  <ul>
-   <li>The fallback algorithm of {{cssxref("font-variant-caps")}}, creating synthetic alternates for missing glyphs ({{bug(961558)}}).</li>
-   <li>The {{cssxref("font-synthesis")}} CSS property has been implemented ({{bug(871453)}}).</li>
-  </ul>
- </li>
-</ul>
+- Implemented {{cssxref("@counter-style")}} rule ({{bug(966166)}}).
+- Unprefixed `ethiopic-numeric`, `persian`, `arabic-indic`, `devanagari`, `bengali`, `gurmukhi`, `gujarati`, `oriya`, `tamil`, `telugu`, `kannada`, `malayalam`, `thai`, `lao`, `myanmar`, `khmer`, `cjk-heavenly-stem`, `cjk-earthly-branch` in {{cssxref("list-style-type")}} ({{bug(985825)}} and {{bug(1063856)}}).
+- Added support for `mongolian`, `disclosure-open` and `disclosure-closed` counter styles in {{cssxref("list-style-type")}} ({{bug(982355)}} and {{bug(1063856)}}).
+- Fixed CSS animations with empty keyframes rule so they also dispatch events ({{bug(1004377)}}).
+- Added support for `rebeccapurple`, a new {{cssxref("&lt;color&gt;")}} name defined in CSS Colors level 4 ({{bug(1024642)}}).
+- Our experimental implementation of CSS Fonts Level 3 progresses. Its activation is governed by the `layout.css.font-features.enabled` preference, enabled by default in Nightly. Newly implemented features are:
 
-<h3 id="HTML">HTML</h3>
+  - The fallback algorithm of {{cssxref("font-variant-caps")}}, creating synthetic alternates for missing glyphs ({{bug(961558)}}).
+  - The {{cssxref("font-synthesis")}} CSS property has been implemented ({{bug(871453)}}).
 
-<ul>
- <li>Added the experimental support for {{htmlelement("picture")}} element ({{bug(870022)}}), behind the <code>dom.image.picture.enabled</code> preference (off by default).</li>
- <li>The {{HTMLElement("label")}}, especially without a {{htmlattrxref("for", "label")}} attribute, doesn't apply anymore to a <code>&lt;input type=hidden&gt;</code> field ({{bug(597650)}}). The previous behavior wasn't spec compliant.</li>
- <li>The link annotation <code>noreferrer</code> has been implemented on {{HTMLElement("a")}} elements. <code>&lt;a rel="noreferrer"&gt;</code> will not include the URL of the referrer in the HTTP request sent to fetch it ({{bug(530396)}}). Note that this work only for in-page links, not for linked clicked via the UI, like via contextual menus.</li>
- <li>On Android, support for two new values for the {{htmlattrxref("name", "meta")}} attribute of {{HTMLElement("meta")}} has been added: <code>msapplication-TileImage</code> and <code>msapplication-TileColor</code> ({{bug(1014712)}}). Example:
-  <pre class="brush: html">&lt;meta name="msapplication-TileImage" content="images/benthepcguy-144.png"/&gt;
-  &lt;meta name="msapplication-TileColor" content="#d83434"/&gt;</pre></li>
-</ul>
+### HTML
 
-<h3 id="JavaScript">JavaScript</h3>
+- Added the experimental support for {{htmlelement("picture")}} element ({{bug(870022)}}), behind the `dom.image.picture.enabled` preference (off by default).
+- The {{HTMLElement("label")}}, especially without a {{htmlattrxref("for", "label")}} attribute, doesn't apply anymore to a `<input type=hidden>` field ({{bug(597650)}}). The previous behavior wasn't spec compliant.
+- The link annotation `noreferrer` has been implemented on {{HTMLElement("a")}} elements. `<a rel="noreferrer">` will not include the URL of the referrer in the HTTP request sent to fetch it ({{bug(530396)}}). Note that this work only for in-page links, not for linked clicked via the UI, like via contextual menus.
+- On Android, support for two new values for the {{htmlattrxref("name", "meta")}} attribute of {{HTMLElement("meta")}} has been added: `msapplication-TileImage` and `msapplication-TileColor` ({{bug(1014712)}}). Example:
 
-<ul>
- <li>The non-standard method {{jsxref("Number.toInteger()")}} has been removed ({{bug(1022396)}}).</li>
- <li>The {{jsxref("Map.prototype.set()")}}, {{jsxref("WeakMap.prototype.set()")}} and {{jsxref("Set.prototype.add()")}} methods are now chainable, return their equivalent objects and no longer <code>undefined</code> ({{bug(1031632)}}).</li>
- <li>A <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">default parameter</a> is evaluated before function declarations inside the function body, so those functions cannot be referred from default parameter ({{bug(1022962)}}).</li>
- <li>Shorthand properties are now allowed in object literals: if not explicitly defined, property keys are initialized by variables of the same name. E.g. <code>function f(x, y) { return {x, y}; }</code> is equivalent to <code>function f(x, y) { return {x: x, y: y}; }</code> ({{bug(875002)}}).</li>
- <li>The parsing of <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code> and <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield*">yield*</a></code> has been updated to conform with the latest ES2015 specification ({{bug(981599)}}).</li>
- <li>The non-standard <code>hasOwn</code> trap has been removed ({{bug(980565)}}).</li>
-</ul>
+  ```html
+  <meta name="msapplication-TileImage" content="images/benthepcguy-144.png"/>
+    <meta name="msapplication-TileColor" content="#d83434"/>
+  ```
 
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
+### JavaScript
 
-<ul>
- <li>The {{domxref("RadioNodeList")}} API has been implemented and the selected radio button is accessible via {{domxref("RadioNodeList.value")}} ({{bug(779723)}}).</li>
- <li>The {{domxref("DOMMatrix")}} has been added ({{bug(1018497)}}).</li>
- <li>A non-standard (but implemented in other browsers) <code>DOMException.stack</code> property has been added. It returns a string with a human-friendly formatted stack ({{bug(857648)}}), in the same format as the existing non-standard {{jsxref("Error.stack")}} property.</li>
- <li>For {{HTMLElement("canvas")}}, the method {{domxref("CanvasPattern.setTransform()")}}, allowing to modify a pattern using the {{domxref("SVGMatrix")}} representation of a linear transform ({{bug(1019257)}}).</li>
- <li>Our experimental implementation of Media Source Extensions, behind the <code>media.mediasource.enabled</code> preference, enabled by default in Nightly and Aurora only, now supports MP4 ({{bug(1000686)}}).</li>
- <li>The properties {{domxref("HTMLMediaElement.audioTracks")}} and {{domxref("HTMLMediaElement.videoTracks")}} have been experimentally implemented. They are controlled by the <code>media.track.enabled</code>, off by default ({{bug(744896)}}).</li>
- <li>The non-standard <code>XMLHttpRequest.mozBackgroundRequest()</code> is no more accessible from Web sites. Only Firefox-internal code (Chrome code) can use it ({{bug(1035242)}}).</li>
- <li>The {{event("touchenter")}} and {{event("touchleave")}} events, removed from the specification, have been removed ({{bug(1036444)}}).</li>
- <li>The formely called <code>loaded</code> event, sent on a {{domxref("HTMLTrackElement")}} has been renamed {{event("load")}} to match the specification ({{bug(1035505)}}).</li>
- <li>The IndexedDB interface <code>FileHandle</code> has been renamed in {{domxref("IDBMutableFile")}} ({{bug(1006485)}}).</li>
- <li>The IndexedDB interface {{domxref("LockedFile")}} has been renamed in {{domxref("IDBFileHandle")}} ({{bug(1006485)}}).</li>
- <li>The {{domxref("ServiceWorker")}} interface has been implemented, behind the <code>dom.serviceWorkers.enabled</code> flag ({{bug(903441)}}).</li>
- <li>The {{domxref("NetworkInformation.type")}} now also support the <code>"unknown"</code> value ({{bug(1023029)}}).</li>
-</ul>
+- The non-standard method {{jsxref("Number.toInteger()")}} has been removed ({{bug(1022396)}}).
+- The {{jsxref("Map.prototype.set()")}}, {{jsxref("WeakMap.prototype.set()")}} and {{jsxref("Set.prototype.add()")}} methods are now chainable, return their equivalent objects and no longer `undefined` ({{bug(1031632)}}).
+- A [default parameter](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) is evaluated before function declarations inside the function body, so those functions cannot be referred from default parameter ({{bug(1022962)}}).
+- Shorthand properties are now allowed in object literals: if not explicitly defined, property keys are initialized by variables of the same name. E.g. `function f(x, y) { return {x, y}; }` is equivalent to `function f(x, y) { return {x: x, y: y}; }` ({{bug(875002)}}).
+- The parsing of [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield) and [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*) has been updated to conform with the latest ES2015 specification ({{bug(981599)}}).
+- The non-standard `hasOwn` trap has been removed ({{bug(980565)}}).
 
-<h3 id="MathML">MathML</h3>
+### Interfaces/APIs/DOM
 
-<ul>
- <li>The attributes <code>columnspacing</code>, <code>framespacing</code>, and <code>rowspacing</code> of the {{MathMLElement("mtable")}} element are now supported ({{bug(330964)}}).</li>
- <li>Use <a href="https://wiki.mozilla.org/MathML:Open_Type_MATH_Table#Implementation_Status">Open Type MATH</a> constants for fractions, stacks, radicals, and scripts ({{bug(961365)}}).</li>
-</ul>
+- The {{domxref("RadioNodeList")}} API has been implemented and the selected radio button is accessible via {{domxref("RadioNodeList.value")}} ({{bug(779723)}}).
+- The {{domxref("DOMMatrix")}} has been added ({{bug(1018497)}}).
+- A non-standard (but implemented in other browsers) `DOMException.stack` property has been added. It returns a string with a human-friendly formatted stack ({{bug(857648)}}), in the same format as the existing non-standard {{jsxref("Error.stack")}} property.
+- For {{HTMLElement("canvas")}}, the method {{domxref("CanvasPattern.setTransform()")}}, allowing to modify a pattern using the {{domxref("SVGMatrix")}} representation of a linear transform ({{bug(1019257)}}).
+- Our experimental implementation of Media Source Extensions, behind the `media.mediasource.enabled` preference, enabled by default in Nightly and Aurora only, now supports MP4 ({{bug(1000686)}}).
+- The properties {{domxref("HTMLMediaElement.audioTracks")}} and {{domxref("HTMLMediaElement.videoTracks")}} have been experimentally implemented. They are controlled by the `media.track.enabled`, off by default ({{bug(744896)}}).
+- The non-standard `XMLHttpRequest.mozBackgroundRequest()` is no more accessible from Web sites. Only Firefox-internal code (Chrome code) can use it ({{bug(1035242)}}).
+- The {{event("touchenter")}} and {{event("touchleave")}} events, removed from the specification, have been removed ({{bug(1036444)}}).
+- The formely called `loaded` event, sent on a {{domxref("HTMLTrackElement")}} has been renamed {{event("load")}} to match the specification ({{bug(1035505)}}).
+- The IndexedDB interface `FileHandle` has been renamed in {{domxref("IDBMutableFile")}} ({{bug(1006485)}}).
+- The IndexedDB interface {{domxref("LockedFile")}} has been renamed in {{domxref("IDBFileHandle")}} ({{bug(1006485)}}).
+- The {{domxref("ServiceWorker")}} interface has been implemented, behind the `dom.serviceWorkers.enabled` flag ({{bug(903441)}}).
+- The {{domxref("NetworkInformation.type")}} now also support the `"unknown"` value ({{bug(1023029)}}).
 
-<h3 id="SVG">SVG</h3>
+### MathML
 
-<p><em>No change.</em></p>
+- The attributes `columnspacing`, `framespacing`, and `rowspacing` of the {{MathMLElement("mtable")}} element are now supported ({{bug(330964)}}).
+- Use [Open Type MATH](https://wiki.mozilla.org/MathML:Open_Type_MATH_Table#Implementation_Status) constants for fractions, stacks, radicals, and scripts ({{bug(961365)}}).
 
-<h3 id="AudioVideoWebRTC">Audio/Video/WebRTC</h3>
+### SVG
 
-<ul>
- <li>The <code>RTCOfferOptions</code> dictionary, used to provide options when calling {{domxref("RTCPeerConnection.createOffer()")}}, has been implemented.</li>
-</ul>
+_No change._
 
-<h3 id="WebGL">WebGL</h3>
+### Audio/Video/WebRTC
 
-<ul>
- <li>{{domxref("EXT_blend_minmax")}} is now exposed. It extends blending capabilities by adding two new blend equations: producing the minimum or maximum color components of the source and destination colors ({{bug(973815)}}).</li>
-</ul>
+- The `RTCOfferOptions` dictionary, used to provide options when calling {{domxref("RTCPeerConnection.createOffer()")}}, has been implemented.
 
-<h2 id="Security">Security</h2>
+### WebGL
 
-<ul>
- <li>The <a href="/en-US/docs/Web/HTTP/CSP">CSP</a> 1.1 <code>frame-ancestors</code> <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy">directive</a> is now supported ({{bug(846978)}}).</li>
-</ul>
+- {{domxref("EXT_blend_minmax")}} is now exposed. It extends blending capabilities by adding two new blend equations: producing the minimum or maximum color components of the source and destination colors ({{bug(973815)}}).
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
+## Security
 
-<ul>
- <li>The <a href="/en-US/docs/Mozilla/Add-ons/Code_snippets/JavaScript_Debugger_Service">JavaScript Debugger Service (JSD)</a> has been removed in favor of the new <a href="/en-US/docs/Tools/Debugger-API">Debugger API</a> ({{bug(800200)}}).</li>
- <li>The interface nsIX509CertDB2 has been removed and the methods from that interface have been moved to the nsIX509CertDB interface.</li>
-</ul>
+- The [CSP](/en-US/docs/Web/HTTP/CSP) 1.1 `frame-ancestors` [directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) is now supported ({{bug(846978)}}).
 
-<h3 id="Add-on_SDK">Add-on SDK</h3>
+## Changes for add-on and Mozilla developers
 
-<h4 id="Highlights">Highlights</h4>
+- The [JavaScript Debugger Service (JSD)](/en-US/docs/Mozilla/Add-ons/Code_snippets/JavaScript_Debugger_Service) has been removed in favor of the new [Debugger API](/en-US/docs/Tools/Debugger-API) ({{bug(800200)}}).
+- The interface nsIX509CertDB2 has been removed and the methods from that interface have been moved to the nsIX509CertDB interface.
 
-<ul>
- <li>Added support for context menus in panels via a new option in the <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel#panel(options)"><code>Panel</code> constructor</a>.</li>
- <li>Added <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#readystate"><code>tab.readyState</code></a>.</li>
- <li>Added a <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#browserwindow"><code>BrowserWindow</code></a> parameter to <a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar#show(window)"><code>sidebar.show()</code></a> and <a href="/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar#hide(window)"><code>sidebar.hide()</code></a>, to control the window for which the sidebar will be shown or hidden.</li>
-</ul>
+### Add-on SDK
 
-<h4 id="Details">Details</h4>
+#### Highlights
 
-<p><a href="https://github.com/mozilla/addon-sdk/compare/firefox32...firefox33">GitHub commits made between Firefox 32 and Firefox 33</a>. This will not include any uplifts made after this release entered Aurora.</p>
+- Added support for context menus in panels via a new option in the [`Panel` constructor](</en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel#panel(options)>).
+- Added [`tab.readyState`](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#readystate).
+- Added a [`BrowserWindow`](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#browserwindow) parameter to [`sidebar.show()`](</en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar#show(window)>) and [`sidebar.hide()`](</en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar#hide(window)>), to control the window for which the sidebar will be shown or hidden.
 
-<p><a href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;chfieldto=2014-07-21&amp;chfield=resolution&amp;query_format=advanced&amp;chfieldfrom=2014-06-09&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;product=Add-on%20SDK&amp;list_id=10493962">Bugs fixed between Firefox 32 and Firefox 33</a>. This will not include any uplifts made after this release entered Aurora.</p>
+#### Details
 
-<h3 id="Older_versions">Older versions</h3>
+[GitHub commits made between Firefox 32 and Firefox 33](https://github.com/mozilla/addon-sdk/compare/firefox32...firefox33). This will not include any uplifts made after this release entered Aurora.
 
-<p>{{Firefox_for_developers('32')}}</p>
+[Bugs fixed between Firefox 32 and Firefox 33](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-07-21&chfield=resolution&query_format=advanced&chfieldfrom=2014-06-09&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962). This will not include any uplifts made after this release entered Aurora.
+
+### Older versions
+
+{{Firefox_for_developers('32')}}

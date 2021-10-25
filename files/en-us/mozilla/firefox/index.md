@@ -6,66 +6,62 @@ tags:
   - Landing
   - Mozilla
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p><a href="https://www.mozilla.org/firefox/">Firefox</a> is Mozilla's popular Web browser, available for multiple platforms including Windows, macOS, and Linux on the desktop and all Android and iOS mobile devices. With broad compatibility, the latest in Web technologies, and powerful development tools, Firefox is a great choice for both Web developers and end users.</p>
+[Firefox](https://www.mozilla.org/firefox/) is Mozilla's popular Web browser, available for multiple platforms including Windows, macOS, and Linux on the desktop and all Android and iOS mobile devices. With broad compatibility, the latest in Web technologies, and powerful development tools, Firefox is a great choice for both Web developers and end users.
 
-<p>Firefox is an open source project; much of the code is contributed by our huge community of volunteers. Here you can learn about how to contribute to the Firefox project and you will also find links to information about the construction of Firefox add-ons, using the developer tools in Firefox, and other topics.</p>
+Firefox is an open source project; much of the code is contributed by our huge community of volunteers. Here you can learn about how to contribute to the Firefox project and you will also find links to information about the construction of Firefox add-ons, using the developer tools in Firefox, and other topics.
 
-<p>Learn how to create add-ons for <a class="external external-icon" href="https://www.mozilla.org/firefox/">Firefox</a>, how to develop and build Firefox itself, and how the internals of Firefox and its subprojects work.</p>
+Learn how to create add-ons for [Firefox](https://www.mozilla.org/firefox/), how to develop and build Firefox itself, and how the internals of Firefox and its subprojects work.
 
-<h2 id="Key_resources">Key resources</h2>
+## Key resources
 
-<dl>
- <dt>Developer release notes</dt>
- <dd><a href="/en-US/docs/Mozilla/Firefox/Releases">Developer-focused release notes</a>; learn what new capabilities for both Web sites and add-ons arrive in each version of Firefox.</dd>
- <dt>Project documentation</dt>
- <dd>Get detailed information about <a href="/en-US/docs/Mozilla">the internals of Firefox</a> and its build system, so you can find your way around in the code.</dd>
- <dt>Developer guide</dt>
- <dd>Our <a href="https://firefox-source-docs.mozilla.org/contributing/index.html">developer guide</a> provides details on how to get and compile the Firefox source code, how to find your way around, and how to contribute to the project.</dd>
-</dl>
+- Developer release notes
+  - : [Developer-focused release notes](/en-US/docs/Mozilla/Firefox/Releases); learn what new capabilities for both Web sites and add-ons arrive in each version of Firefox.
+- Project documentation
+  - : Get detailed information about [the internals of Firefox](/en-US/docs/Mozilla) and its build system, so you can find your way around in the code.
+- Developer guide
+  - : Our [developer guide](https://firefox-source-docs.mozilla.org/contributing/index.html) provides details on how to get and compile the Firefox source code, how to find your way around, and how to contribute to the project.
 
-<h2 id="Firefox_channels">Firefox channels</h2>
+## Firefox channels
 
-<p>Firefox is available in five <strong>channels</strong>.</p>
+Firefox is available in five **channels**.
 
-<h3 id="Firefox_Nightly">Firefox Nightly</h3>
+### Firefox Nightly
 
-<p>Each night we build Firefox from the latest code in <a href="https://hg.mozilla.org/mozilla-central/">mozilla-central</a>. These builds are for Firefox developers or those who want to try out the very latest cutting edge features while they're still under active development.</p>
+Each night we build Firefox from the latest code in [mozilla-central](https://hg.mozilla.org/mozilla-central/). These builds are for Firefox developers or those who want to try out the very latest cutting edge features while they're still under active development.
 
-<p><a href="https://nightly.mozilla.org/">Download Firefox Nightly</a></p>
+[Download Firefox Nightly](https://nightly.mozilla.org/)
 
-<h3 id="Firefox_Developer_Edition">Firefox Developer Edition</h3>
+### Firefox Developer Edition
 
-<p>This is a version of Firefox tailored for developers. Firefox Developer Edition has all the latest developer tools that have reached beta. We also add some extra features for developers that are only available in this channel. It uses its own path and profile, so that you can run it alongside Release or Beta Firefox.</p>
+This is a version of Firefox tailored for developers. Firefox Developer Edition has all the latest developer tools that have reached beta. We also add some extra features for developers that are only available in this channel. It uses its own path and profile, so that you can run it alongside Release or Beta Firefox.
 
-<p><a href="https://www.mozilla.org/firefox/developer/">Download Firefox Developer Edition</a></p>
+[Download Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)
 
-<h3 id="Firefox_Beta">Firefox Beta</h3>
+### Firefox Beta
 
-<p>Every four weeks, we take the features that are stable enough, and create a new version of Firefox Beta. Firefox Beta builds are for Firefox enthusiasts to test what's destined to become the next released Firefox version.</p>
+Every four weeks, we take the features that are stable enough, and create a new version of Firefox Beta. Firefox Beta builds are for Firefox enthusiasts to test what's destined to become the next released Firefox version.
 
-<p><a href="https://www.mozilla.org/firefox/channel/#beta">Download Firefox Beta</a></p>
+[Download Firefox Beta](https://www.mozilla.org/firefox/channel/#beta)
 
-<h3 id="Firefox">Firefox</h3>
+### Firefox
 
-<p>After stabilizing for another four weeks in Beta, we're ready to ship the new features to hundreds of millions of users in a new release version of Firefox.</p>
+After stabilizing for another four weeks in Beta, we're ready to ship the new features to hundreds of millions of users in a new release version of Firefox.
 
-<p><a href="https://www.mozilla.org/firefox/channel/#firefox">Download Firefox</a></p>
+[Download Firefox](https://www.mozilla.org/firefox/channel/#firefox)
 
-<h3 id="Firefox_Extended_Support_Release_ESR">Firefox Extended Support Release (ESR)</h3>
+### Firefox Extended Support Release (ESR)
 
-<p>Firefox ESR is the long-term support edition of Firefox for desktop for use by organizations including schools, universities, businesses and others who need extended support for mass deployments.</p>
+Firefox ESR is the long-term support edition of Firefox for desktop for use by organizations including schools, universities, businesses and others who need extended support for mass deployments.
 
-<p><a href="https://www.mozilla.org/firefox/organizations/all/">Download Firefox ESR</a></p>
+[Download Firefox ESR](https://www.mozilla.org/firefox/organizations/all/)
 
-<h2 id="Contents">Contents</h2>
+## Contents
 
-<p>{{LandingPageListSubpages}}</p>
+{{LandingPageListSubpages}}
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="https://mail.mozilla.org/listinfo/firefox-dev">Mailing list</a></li>
- <li><a href="https://wiki.mozilla.org/Release_Management/Calendar">Release schedule</a></li>
-</ul>
+- [Mailing list](https://mail.mozilla.org/listinfo/firefox-dev)
+- [Release schedule](https://wiki.mozilla.org/Release_Management/Calendar)

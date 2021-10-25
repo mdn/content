@@ -6,211 +6,167 @@ tags:
   - Firefox
   - Release
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 62 that will affect developers. Firefox 62 was released on September 5, 2018.</p>
+This article provides information about the changes in Firefox 62 that will affect developers. Firefox 62 was released on September 5, 2018.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_tools">Developer tools</h3>
+### Developer tools
 
-<ul>
- <li>The Shape Path Editor is now available by default — see <a href="/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Edit Shape Paths in CSS</a> for more information.</li>
- <li>You can now split the Rules view out into its own pane, separate from the other tabs on the CSS pane. See <a href="/en-US/docs/Tools/Page_Inspector/3-pane_mode">Page inspector 3-pane mode</a> for more details.</li>
- <li>The Grid inspector has updated features, and all new documentation — see <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">CSS Grid Inspector: Examine grid layouts</a>.</li>
- <li>You now have four options for the location of the Developer Tools. In addition to the default location on the bottom of the window, you can choose to locate the tools on either the left or right sides of the main window or in a separate window ({{bug(1192642)}}).</li>
- <li>A close button has been added to the <a href="/en-US/docs/Tools/Web_Console/Split_console">split console</a> toolbar.</li>
- <li>If the option to "Select an iframe as the currently targeted document" is checked, the icon will appear in the toolbar while the Settings tab is displayed, even if the current page doesn't include any iframes ({{bug(1456069)}}).</li>
- <li>The <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a>'s <a href="/en-US/docs/Tools/Network_Monitor#cookies">Cookies tab</a> now shows the cookie <code>samesite</code> attribute ({{bug(1452715)}}).</li>
- <li><a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive design mode</a> now works inside container tabs ({{bug(1306975)}}).</li>
- <li>When {{Glossary("CORS")}} errors occur and are reported on the console, Firefox now provides a link to the corresponding page in our <a href="/en-US/docs/Web/HTTP/CORS/Errors">CORS error documentation</a> ({{bug(1475391)}}).</li>
- <li>Create a screenshot of the current page (with an optional filename) from the Console tab ({{bug(1464461)}}) using the following command:
-  <pre class="brush: bash">:screenshot &lt;filename.png&gt; --fullpage</pre>
-  where <code>&lt;filename.png&gt;</code> is the desired filename. The file will be saved to your downloads folder. The <code>--fullpage</code> parameter is optional, but if included, it will save the full web page. This option also adds <code>-fullpage</code> to the name of the file. For a list of all options available for this command, enter: <code>:screenshot --help</code></li>
-</ul>
+- The Shape Path Editor is now available by default — see [Edit Shape Paths in CSS](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes) for more information.
+- You can now split the Rules view out into its own pane, separate from the other tabs on the CSS pane. See [Page inspector 3-pane mode](/en-US/docs/Tools/Page_Inspector/3-pane_mode) for more details.
+- The Grid inspector has updated features, and all new documentation — see [CSS Grid Inspector: Examine grid layouts](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts).
+- You now have four options for the location of the Developer Tools. In addition to the default location on the bottom of the window, you can choose to locate the tools on either the left or right sides of the main window or in a separate window ({{bug(1192642)}}).
+- A close button has been added to the [split console](/en-US/docs/Tools/Web_Console/Split_console) toolbar.
+- If the option to "Select an iframe as the currently targeted document" is checked, the icon will appear in the toolbar while the Settings tab is displayed, even if the current page doesn't include any iframes ({{bug(1456069)}}).
+- The [Network Monitor](/en-US/docs/Tools/Network_Monitor)'s [Cookies tab](/en-US/docs/Tools/Network_Monitor#cookies) now shows the cookie `samesite` attribute ({{bug(1452715)}}).
+- [Responsive design mode](/en-US/docs/Tools/Responsive_Design_Mode) now works inside container tabs ({{bug(1306975)}}).
+- When {{Glossary("CORS")}} errors occur and are reported on the console, Firefox now provides a link to the corresponding page in our [CORS error documentation](/en-US/docs/Web/HTTP/CORS/Errors) ({{bug(1475391)}}).
+- Create a screenshot of the current page (with an optional filename) from the Console tab ({{bug(1464461)}}) using the following command:
 
-<h4 id="Removals">Removals</h4>
+  ```bash
+  :screenshot <filename.png> --fullpage
+  ```
 
-<ul>
- <li>The <a href="/en-US/docs/Tools/GCLI">Developer Toolbar/GCLI</a> (accessed with <code>Shift</code> + <code>F2</code>), <strong>has been removed</strong> from Firefox ({{bug(1461970)}}). Both the Developer Toolbar UI and the GCLI upstream library have become unmaintained, some of its features are broken (some ever since e10s), it is blocking the <code>unsafeSetInnerHTML</code> work, usage numbers are very low, alternatives exist for the most used commands.</li>
-</ul>
+  where `<filename.png>` is the desired filename. The file will be saved to your downloads folder. The `--fullpage` parameter is optional, but if included, it will save the full web page. This option also adds `-fullpage` to the name of the file. For a list of all options available for this command, enter: `:screenshot --help`
 
-<h3 id="HTML">HTML</h3>
+#### Removals
 
-<p><em>No changes.</em></p>
+- The [Developer Toolbar/GCLI](/en-US/docs/Tools/GCLI) (accessed with `Shift` + `F2`), **has been removed** from Firefox ({{bug(1461970)}}). Both the Developer Toolbar UI and the GCLI upstream library have become unmaintained, some of its features are broken (some ever since e10s), it is blocking the `unsafeSetInnerHTML` work, usage numbers are very low, alternatives exist for the most used commands.
 
-<h3 id="CSS">CSS</h3>
+### HTML
 
-<ul>
- <li><code>:-moz-selection</code> has been unprefixed to {{cssxref("::selection")}} ({{bug(509958)}}).</li>
- <li><code>x</code> is now supported as a unit for the {{cssxref("&lt;resolution&gt;")}} type ({{bug(1460655)}}).</li>
- <li>{{cssxref("shape-margin")}}, {{cssxref("shape-outside")}}, and {{cssxref("shape-image-threshold")}} are now enabled by default ({{bug(1457297)}}).</li>
-</ul>
+_No changes._
 
-<h4 id="Removals_2">Removals</h4>
+### CSS
 
-<ul>
- <li>All <a href="/en-US/docs/Web/CSS/display#xul_values">XUL <code>display</code> values</a> with the exception of <code>-moz-box</code> and <code>-moz-inline-box</code> have been removed from non-XUL documents in {{bug(1288572)}}.</li>
-</ul>
+- `:-moz-selection` has been unprefixed to {{cssxref("::selection")}} ({{bug(509958)}}).
+- `x` is now supported as a unit for the {{cssxref("&lt;resolution&gt;")}} type ({{bug(1460655)}}).
+- {{cssxref("shape-margin")}}, {{cssxref("shape-outside")}}, and {{cssxref("shape-image-threshold")}} are now enabled by default ({{bug(1457297)}}).
 
-<h3 id="SVG">SVG</h3>
+#### Removals
 
-<p><em>No changes.</em></p>
+- All [XUL `display` values](/en-US/docs/Web/CSS/display#xul_values) with the exception of `-moz-box` and `-moz-inline-box` have been removed from non-XUL documents in {{bug(1288572)}}.
 
-<h3 id="JavaScript">JavaScript</h3>
+### SVG
 
-<ul>
- <li>The {{jsxref("WebAssembly.Global()")}} constructor is now supported, along with global variables in WebAssembly ({{bug(1464656)}}).</li>
- <li>The {{jsxref("Array.prototype.flat()")}} and {{jsxref("Array.prototype.flatMap()")}} methods are now enabled by default ({{bug(1435813)}}).</li>
- <li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/import.meta">import.meta</a></code> property has been implemented to expose context-specific metadata to a JavaScript module ({{bug(1427610)}}).</li>
- <li>JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals">string literals</a> may now directly contain the U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR characters. As a consequence, {{jsxref("JSON")}} syntax is now a subset of JavaScript literal syntax (see {{bug(1435828)}} and the TC39 proposal <a href="https://github.com/tc39/proposal-json-superset">json-superset</a>).</li>
- <li>For out-of-bounds <a href="/en-US/docs/Web/JavaScript/Typed_arrays">typed array</a> indexes, {{jsxref("Reflect.defineProperty()")}} and {{jsxref("Reflect.set()")}} will now return <code>false</code> instead of <code>true</code> ({{bug(1308735)}}).</li>
-</ul>
+_No changes._
 
-<h4 id="Removals_3">Removals</h4>
+### JavaScript
 
-<ul>
- <li>The <code>DOMPoint</code> and <code>DOMPointReadOnly</code> constructors no longer support an input parameter of type <code>DOMPointInit</code>; the values of the properties must be specified using the <code>x</code>, <code>y</code>, <code>z</code>, and <code>w</code> parameters ({{bug(1186265)}}).</li>
- <li>The {{domxref("URL.createObjectURL()")}} method no longer supports creating object URLs to represent a {{domxref("MediaStream")}}. This capability has been obsolete for some time, since you can now set {{domxref("HTMLMediaElement.srcObject")}} to the <code>MediaStream</code> directly ({{bug(1454889)}}).</li>
-</ul>
+- The {{jsxref("WebAssembly.Global()")}} constructor is now supported, along with global variables in WebAssembly ({{bug(1464656)}}).
+- The {{jsxref("Array.prototype.flat()")}} and {{jsxref("Array.prototype.flatMap()")}} methods are now enabled by default ({{bug(1435813)}}).
+- The [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Statements/import.meta) property has been implemented to expose context-specific metadata to a JavaScript module ({{bug(1427610)}}).
+- JavaScript [string literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) may now directly contain the U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR characters. As a consequence, {{jsxref("JSON")}} syntax is now a subset of JavaScript literal syntax (see {{bug(1435828)}} and the TC39 proposal [json-superset](https://github.com/tc39/proposal-json-superset)).
+- For out-of-bounds [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) indexes, {{jsxref("Reflect.defineProperty()")}} and {{jsxref("Reflect.set()")}} will now return `false` instead of `true` ({{bug(1308735)}}).
 
-<h3 id="APIs">APIs</h3>
+#### Removals
 
-<h4 id="New_APIs">New APIs</h4>
+- The `DOMPoint` and `DOMPointReadOnly` constructors no longer support an input parameter of type `DOMPointInit`; the values of the properties must be specified using the `x`, `y`, `z`, and `w` parameters ({{bug(1186265)}}).
+- The {{domxref("URL.createObjectURL()")}} method no longer supports creating object URLs to represent a {{domxref("MediaStream")}}. This capability has been obsolete for some time, since you can now set {{domxref("HTMLMediaElement.srcObject")}} to the `MediaStream` directly ({{bug(1454889)}}).
 
-<ul>
- <li>The {{domxref("Web_Speech_API", "Speech Synthesis API (Text-to-Speech)", "", "1")}} is now enabled by default on Firefox for Android ({{bug(1463496)}}).</li>
-</ul>
+### APIs
 
-<h4 id="DOM">DOM</h4>
+#### New APIs
 
-<ul>
- <li>The {{domxref("DOMPointReadOnly")}} interface now supports the static function {{domxref("DOMPointReadOnly.fromPoint()")}}, which creates a new point object from a dictionary that's compatible with {{domxref("DOMPointInit")}}, which includes any {{domxref("DOMPoint")}} object. This function is also available on {{domxref("DOMPoint")}} ({{bug(1186265)}}).</li>
- <li>For compatibility purposes, the {{domxref("Event.srcElement")}} property is now supported. It is an alias for {{domxref("Event.target")}} ({{bug(453968)}}).</li>
- <li>{{domxref("Navigator.registerProtocolHandler()")}} now must only be called from a secure context ({{bug(1460506)}}).</li>
- <li>The {{domxref("Navigator.registerContentHandler()")}} method has been disabled by default in preparation for being removed entirely, as it's been obsolete for some time ({{bug(1460481)}}).</li>
- <li>The {{domxref("DataTransfer.DataTransfer", "DataTransfer()")}} constructor has been implemented ({{bug(1351193)}}).</li>
- <li>{{domxref("Document.domain")}} can no longer return <code>null</code> ({{bug(819475)}}). If the domain cannot be identified, then <code>domain</code> returns an empty string instead of <code>null</code>.</li>
- <li>Added the {{domxref("console.timeLog()")}} method to display the current value of a console timer while continuing to track the time ({{bug(1458466)}}).</li>
- <li>Added {{domxref("console.countReset()")}} to reset a console counter value ({{bug(1459279)}}).</li>
-</ul>
+- The {{domxref("Web_Speech_API", "Speech Synthesis API (Text-to-Speech)", "", "1")}} is now enabled by default on Firefox for Android ({{bug(1463496)}}).
 
-<h4 id="DOM_events">DOM events</h4>
+#### DOM
 
-<p><em>No changes.</em></p>
+- The {{domxref("DOMPointReadOnly")}} interface now supports the static function {{domxref("DOMPointReadOnly.fromPoint()")}}, which creates a new point object from a dictionary that's compatible with {{domxref("DOMPointInit")}}, which includes any {{domxref("DOMPoint")}} object. This function is also available on {{domxref("DOMPoint")}} ({{bug(1186265)}}).
+- For compatibility purposes, the {{domxref("Event.srcElement")}} property is now supported. It is an alias for {{domxref("Event.target")}} ({{bug(453968)}}).
+- {{domxref("Navigator.registerProtocolHandler()")}} now must only be called from a secure context ({{bug(1460506)}}).
+- The {{domxref("Navigator.registerContentHandler()")}} method has been disabled by default in preparation for being removed entirely, as it's been obsolete for some time ({{bug(1460481)}}).
+- The {{domxref("DataTransfer.DataTransfer", "DataTransfer()")}} constructor has been implemented ({{bug(1351193)}}).
+- {{domxref("Document.domain")}} can no longer return `null` ({{bug(819475)}}). If the domain cannot be identified, then `domain` returns an empty string instead of `null`.
+- Added the {{domxref("console.timeLog()")}} method to display the current value of a console timer while continuing to track the time ({{bug(1458466)}}).
+- Added {{domxref("console.countReset()")}} to reset a console counter value ({{bug(1459279)}}).
 
-<h4 id="Service_workers">Service workers</h4>
+#### DOM events
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h4 id="Media_Web_Audio_and_WebRTC">Media, Web Audio, and WebRTC</h4>
+#### Service workers
 
-<ul>
- <li>The <code>"media.autoplay.enabled"</code> preference now controls automatic playback of both audio and video media, instead of just video media ({{bug(1413098)}}).</li>
- <li>The {{domxref("ChannelSplitterNode")}} has been fixed to correctly default to having 6 channels with the <code>channelInterpretation</code> set to <code>"discrete"</code> and the <code>channelCountMode</code> set to <code>"explicit"</code>, as per the specification ({{bug(1456265)}}).</li>
-</ul>
+_No changes._
 
-<h4 id="Removals_4">Removals</h4>
+#### Media, Web Audio, and WebRTC
 
-<ul>
- <li>The {{event("userproximity")}} and {{event("deviceproximity")}} events (see also {{domxref("UserProximityEvent")}} and {{domxref("DeviceProximityEvent")}}) have been disabled by default behind the <code>device.sensors.proximity.enabled</code> preference ({{bug(1462308)}}).</li>
- <li>The <code>devicelight</code> event of type <code>DeviceLightEvent</code> has been disabled by default behind the <code>device.sensors.ambientLight.enabled</code> preference ({{bug(1462308)}}).</li>
- <li>The {{event("DOMSubtreeModified")}} and {{event("DOMAttrModified")}} <a href="/en-US/docs/Web/API/MutationEvent">mutation events</a> are no longer thrown when the {{htmlattrxref("style")}} attribute is changed via the CSSOM ({{bug(1460295)}}.</li>
- <li>Support for {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} has been removed ({{bug(1408301)}}).</li>
- <li>Support for {{domxref("CSSValue")}}, {{domxref("CSSPrimitiveValue")}}, and {{domxref("CSSValueList")}} has been removed ({{bug(1459871)}}).</li>
- <li>{{domxref("window.getComputedStyle()")}} no longer returns <code>null</code> when called on a <code>Window</code> which has no presentation ({{bug(1467722)}}).</li>
-</ul>
+- The `"media.autoplay.enabled"` preference now controls automatic playback of both audio and video media, instead of just video media ({{bug(1413098)}}).
+- The {{domxref("ChannelSplitterNode")}} has been fixed to correctly default to having 6 channels with the `channelInterpretation` set to `"discrete"` and the `channelCountMode` set to `"explicit"`, as per the specification ({{bug(1456265)}}).
 
-<h3 id="HTTP">HTTP</h3>
+#### Removals
 
-<h4 id="Removals_5">Removals</h4>
+- The {{event("userproximity")}} and {{event("deviceproximity")}} events (see also {{domxref("UserProximityEvent")}} and {{domxref("DeviceProximityEvent")}}) have been disabled by default behind the `device.sensors.proximity.enabled` preference ({{bug(1462308)}}).
+- The `devicelight` event of type `DeviceLightEvent` has been disabled by default behind the `device.sensors.ambientLight.enabled` preference ({{bug(1462308)}}).
+- The {{event("DOMSubtreeModified")}} and {{event("DOMAttrModified")}} [mutation events](/en-US/docs/Web/API/MutationEvent) are no longer thrown when the {{htmlattrxref("style")}} attribute is changed via the CSSOM ({{bug(1460295)}}.
+- Support for {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} has been removed ({{bug(1408301)}}).
+- Support for {{domxref("CSSValue")}}, {{domxref("CSSPrimitiveValue")}}, and {{domxref("CSSValueList")}} has been removed ({{bug(1459871)}}).
+- {{domxref("window.getComputedStyle()")}} no longer returns `null` when called on a `Window` which has no presentation ({{bug(1467722)}}).
 
-<ul>
- <li>The deprecated CSP {{CSP("referrer")}} directive has been removed. Please use the {{HTTPHeader("Referrer-Policy")}} header instead ({{bug(1302449)}}).</li>
-</ul>
+### HTTP
 
-<h3 id="Security">Security</h3>
+#### Removals
 
-<p><em>No changes.</em></p>
+- The deprecated CSP {{CSP("referrer")}} directive has been removed. Please use the {{HTTPHeader("Referrer-Policy")}} header instead ({{bug(1302449)}}).
 
-<h3 id="Plugins">Plugins</h3>
+### Security
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
+### Plugins
 
-<h4 id="New_features">New features</h4>
+_No changes._
 
-<ul>
- <li>
-  <p>Command <code>WebDriver:ElementSendKeys</code> has been made WebDriver conforming for file uploads ({{bug(1448792)}}).</p>
- </li>
- <li>
-  <p>User prompts as raised by <code>beforeunload</code> events are automatically dismissed for <code>WebDriver:Get</code>, <code>WebDriver:Back</code>, <code>WebDriver:Forward</code>, <code>WebDriver:Refresh</code>, and <code>WebDriver:Close</code> commands ({{bug(1434872)}}).</p>
- </li>
- <li>
-  <p><code>WebDriver:PerformActions</code> for <code>Ctrl</code> + <code>Click</code> synthesizes a {{event("contextmenu")}} event ({{bug(1421323)}}).</p>
- </li>
-</ul>
+### WebDriver conformance (Marionette)
 
-<h4 id="API_changes">API changes</h4>
+#### New features
 
-<ul>
- <li>Removed obsolete endpoints including <code>getWindowPosition</code>, <code>setWindowPosition</code>, <code>getWindowSize</code>, and <code>setWindowSize</code> ({{bug(1348145)}}).</li>
- <li>WebDriver commands which return success with data <code>null</code> now return an empty dictionary ({{bug(1461463)}}).</li>
-</ul>
+- Command `WebDriver:ElementSendKeys` has been made WebDriver conforming for file uploads ({{bug(1448792)}}).
+- User prompts as raised by `beforeunload` events are automatically dismissed for `WebDriver:Get`, `WebDriver:Back`, `WebDriver:Forward`, `WebDriver:Refresh`, and `WebDriver:Close` commands ({{bug(1434872)}}).
+- `WebDriver:PerformActions` for `Ctrl` + `Click` synthesizes a {{event("contextmenu")}} event ({{bug(1421323)}}).
 
-<h4 id="Bug_fixes">Bug fixes</h4>
+#### API changes
 
-<ul>
- <li>
-  <p><code>WebDriver:ExecuteScript</code> caused cyclic reference error for <a href="/en-US/docs/Web/WebDriver/WebElement">WebElement</a> collections ({{bug(1447977)}}).</p>
- </li>
- <li>
-  <p>Dispatching a <code>pointerMove</code> or <code>pause</code> action primitive could cause a hang, and the command to never send a reply ({{bug(1467743)}}, {{bug(1447449)}}).</p>
- </li>
-</ul>
+- Removed obsolete endpoints including `getWindowPosition`, `setWindowPosition`, `getWindowSize`, and `setWindowSize` ({{bug(1348145)}}).
+- WebDriver commands which return success with data `null` now return an empty dictionary ({{bug(1461463)}}).
 
-<h3 id="Other">Other</h3>
+#### Bug fixes
 
-<p><em>No changes.</em></p>
+- `WebDriver:ExecuteScript` caused cyclic reference error for [WebElement](/en-US/docs/Web/WebDriver/WebElement) collections ({{bug(1447977)}}).
+- Dispatching a `pointerMove` or `pause` action primitive could cause a hang, and the command to never send a reply ({{bug(1467743)}}, {{bug(1447449)}}).
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+### Other
 
-<h3 id="API_changes_2">API changes</h3>
+_No changes._
 
-<ul>
- <li>Added the {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API to examine details of TLS connections ({{bug(1322748)}}).</li>
- <li>Added the {{WebExtAPIRef("browserSettings.newTabPosition")}} to customize where new tabs open ({{bug(1344749)}}).</li>
- <li><code>windowTypes</code> has been deprecated in {{WebExtAPIRef("windows.get()")}}, {{WebExtAPIRef("windows.getCurrent()")}}, and {{WebExtAPIRef("windows.getLastFocused()")}} ({{bug(1419132)}}).</li>
- <li>It's now possible to modify a browser action on a per-window basis ({{bug(1419893)}}).</li>
-</ul>
+## Changes for add-on developers
 
-<h3 id="Manifest_changes">Manifest changes</h3>
+### API changes
 
-<ul>
- <li>New <code>open_at_install</code> property of the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code> manifest key enables extensions to control whether their sidebars should open automatically on install or not ({{bug(1460910)}}).</li>
- <li>Changes to the <code>browser_style</code> property of various manifest keys:
-  <ul>
-   <li>In <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> it defaults to <code>false</code>.</li>
-   <li>In <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action">sidebar_action</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></code> it defaults to <code>true</code>.</li>
-  </ul>
- </li>
-</ul>
+- Added the {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API to examine details of TLS connections ({{bug(1322748)}}).
+- Added the {{WebExtAPIRef("browserSettings.newTabPosition")}} to customize where new tabs open ({{bug(1344749)}}).
+- `windowTypes` has been deprecated in {{WebExtAPIRef("windows.get()")}}, {{WebExtAPIRef("windows.getCurrent()")}}, and {{WebExtAPIRef("windows.getLastFocused()")}} ({{bug(1419132)}}).
+- It's now possible to modify a browser action on a per-window basis ({{bug(1419893)}}).
 
-<h3 id="Theme_changes">Theme changes</h3>
+### Manifest changes
 
-<ul>
- <li>New <code>tab_background_separator</code> property of the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">theme</a></code> manifest key enables extensions to change the color of the tab separator ({{bug(1459455)}}).</li>
-</ul>
+- New `open_at_install` property of the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest key enables extensions to control whether their sidebars should open automatically on install or not ({{bug(1460910)}}).
+- Changes to the `browser_style` property of various manifest keys:
 
-<h3 id="Removals_6">Removals</h3>
+  - In [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) and [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) it defaults to `false`.
+  - In [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) and [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) it defaults to `true`.
 
-<ul>
- <li>Support for unpacked sideloaded extensions has been removed ({{bug(1385057)}}).</li>
- <li>The warning about <code>browser_style</code> displayed when temporarily loading an extension for testing is no longer displayed ({{bug(1404724)}}).</li>
-</ul>
+### Theme changes
 
-<h2 id="Older_versions">Older versions</h2>
+- New `tab_background_separator` property of the [`theme`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) manifest key enables extensions to change the color of the tab separator ({{bug(1459455)}}).
 
-<p>{{Firefox_for_developers(61)}}</p>
+### Removals
+
+- Support for unpacked sideloaded extensions has been removed ({{bug(1385057)}}).
+- The warning about `browser_style` displayed when temporarily loading an extension for testing is no longer displayed ({{bug(1404724)}}).
+
+## Older versions
+
+{{Firefox_for_developers(61)}}

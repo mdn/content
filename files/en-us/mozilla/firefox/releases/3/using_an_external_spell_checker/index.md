@@ -6,18 +6,25 @@ tags:
   - Guide
   - NeedsExample
 ---
-<div>{{FirefoxSidebar}}</div>
-<p>Starting with Firefox 3 (as well as Thunderbird 3 and SeaMonkey 2), you can now install an external spell checker using an extension.</p>
-<p>This is <em>not</em> for extensions who wants to add a dictionary to the built in Hunspell spell checker.</p>
-<p>An <a href="https://voikko.svn.sourceforge.net/viewvc/voikko/trunk/mozvoikko/">example</a> of a spell checker extension can be found as part of the <a href="http://voikko.sourceforge.net/">Voikko</a> project.</p>
-<h2 id="Implementing_spell_checker_support">Implementing spell checker support</h2>
-<p>Implementing a spell checker requires the following steps be taken:</p>
-<ol>
- <li>Implement a class derived from {{ interface("mozISpellCheckingEngine") }} that implements the required functionality or accesses an external spell checker.</li>
- <li>The {{ interface("mozISpellCheckingEngine") }} method {{ ifmethod("mozISpellCheckingEngine", "getDictionaryList") }} should be implemented to return a list of dictionaries supported by the spell checker.</li>
- <li>The extension needs to provide a registration callback.  The registration callback must use {{ interface("nsICategoryManager") }} to install into the category "spell-check-engine" an entry with a name equal to the contract ID of the class implementing the spell check functionality.</li>
- <li>The extension also needs to provide an unregistration callback, which must remove the category entry.</li>
-</ol>
-<p>The value of the category entry may be chosen as desired.  You may, for example, choose to use it to record the path to the shared library used by the extension to handle spell checking, to make it easy to locate by other components of the extension.</p>
-<h2 id="Spell_check_dictionary_prioritization">Spell check dictionary prioritization</h2>
-<p>Dictionaries provided by spell check extensions override built-in dictionaries.  If multiple extensions supply dictionaries for the same language, the first one found is used.</p>
+{{FirefoxSidebar}}
+
+Starting with Firefox 3 (as well as Thunderbird 3 and SeaMonkey 2), you can now install an external spell checker using an extension.
+
+This is _not_ for extensions who wants to add a dictionary to the built in Hunspell spell checker.
+
+An [example](https://voikko.svn.sourceforge.net/viewvc/voikko/trunk/mozvoikko/) of a spell checker extension can be found as part of the [Voikko](http://voikko.sourceforge.net/) project.
+
+## Implementing spell checker support
+
+Implementing a spell checker requires the following steps be taken:
+
+1.  Implement a class derived from {{ interface("mozISpellCheckingEngine") }} that implements the required functionality or accesses an external spell checker.
+2.  The {{ interface("mozISpellCheckingEngine") }} method {{ ifmethod("mozISpellCheckingEngine", "getDictionaryList") }} should be implemented to return a list of dictionaries supported by the spell checker.
+3.  The extension needs to provide a registration callback.  The registration callback must use {{ interface("nsICategoryManager") }} to install into the category "spell-check-engine" an entry with a name equal to the contract ID of the class implementing the spell check functionality.
+4.  The extension also needs to provide an unregistration callback, which must remove the category entry.
+
+The value of the category entry may be chosen as desired.  You may, for example, choose to use it to record the path to the shared library used by the extension to handle spell checking, to make it easy to locate by other components of the extension.
+
+## Spell check dictionary prioritization
+
+Dictionaries provided by spell check extensions override built-in dictionaries.  If multiple extensions supply dictionaries for the same language, the first one found is used.

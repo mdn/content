@@ -6,44 +6,53 @@ tags:
   - Firefox
   - Firefox 7
 ---
-<div>{{FirefoxSidebar}}</div><p>This article offers advice for add-on developers that want to update their extensions to work in Firefox 7. Fortunately, most of the changes are relatively minor in this release, and few add-ons should need significant changes to work in Firefox 7.</p>
-<div class="note">
-  <p><strong>Note:</strong> For a complete list of developer-related changes in Firefox 7, see <a href="/en-US/docs/Mozilla/Firefox/Releases/7">Firefox 7 for developers</a>.</p>
-</div>
-<p>As always, you will need to <a href="/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces">recompile any binary components</a> to make them compatible with Firefox 7.</p>
-<h2 id="XPCOM_changes_affecting_compatibility">XPCOM changes affecting compatibility</h2>
-<p>Most of the changes in this release are XPCOM interface removals, or removals of specific, obsolete APIs from interfaces.</p>
-<h3 id="Removed_interfaces">Removed interfaces</h3>
-<p>The following interfaces are the ones that were removed that will most likely impact extension developers:</p>
-<ul>
-  <li><code>nsIDOM3Node</code></li>
-  <li><code>nsIDOM3TypeInfo</code></li>
-  <li><code>schemaTypeInfo</code></li>
-  <li><code>nsIDOMNSDocument</code></li>
-  <li><code>nsIDOMDocumentStyle</code></li>
-</ul>
-<p>You can get a complete list of the removed interfaces in the <a href="/en-US/docs/Mozilla/Firefox/Releases/7#removed_interfaces">Removed interfaces</a> section of <a href="/en-US/docs/Mozilla/Firefox/Releases/7">Firefox 7 for developers</a>.</p>
-<h3 id="Changed_methods">Changed methods</h3>
-<p>A few interfaces have methods that have been changed:</p>
-<dl>
-  <dt>
-    {{ interface("nsINavHistoryObserver") }} and {{ interface("nsINavBookmarkObserver") }}</dt>
-  <dd>
-    These have been changed to support Firefox Sync better by adding a new GUID parameter to several of their methods. JavaScript-based code shouldn't require any changes, since this is just the addition of a new, optional, parameter. However, binary components will need to be updated to take the new parameter into account.</dd>
-  <dt>
-    {{ interface("nsIDOMFile") }}</dt>
-  <dd>
-    A number of non-standard methods have been removed from this interface. This affects the {{ domxref("File") }} object's {{ domxref("File.getDataAsUrl()") }} and {{ domxref("File.getAsBinary()") }} methods. However, this functionality can now be found in the standard {{ domxref("FileReader") }} object.</dd>
-</dl>
-<h2 id="Other_changes_of_note">Other changes of note</h2>
-<p>These changes won't affect compatibility (we weren't kidding when we said there weren't many changes that do in this release), but do add capabilities that are easy to take advantage of that might be of special use to you.</p>
-<h3 id="Unloading_JavaScript_code_modules">Unloading JavaScript code modules</h3>
-<p>The new <a href="/en-US/docs/Components.utils.unload"><code>Components.utils.unload()</code></a> method lets you unload JavaScript code modules previously loaded by calling <a href="/en-US/docs/Components.utils.load()"><code>Components.utils.load()</code></a>. This can be particularly handy with <a href="/en-US/docs/Extensions/Bootstrapped_extensions">restartless (bootstrapped) extensions</a>, so that you can unload an old version of a code module when a new version of your add-on is installed.</p>
-<h3 id="Inline_preferences">Inline preferences</h3>
-<p>You can now have <a href="/en-US/docs/Extensions/Inline_Options">preference options inline</a> in the Add-on Manager window, which lets users configure your add-on without having to open a separate preference dialog box. There are limits to what types of configuration controls can be provided, but this is still very helpful -- plus it works for <a href="/en-US/docs/Extensions/Bootstrapped_extensions">restartless (bootstrapped) extensions</a>.</p>
-<h2 id="See_also">See also</h2>
-<ul>
-  <li><a href="/en-US/docs/Mozilla/Firefox/Releases/7">Firefox 7 for developers</a></li>
-  <li><a href="http://blog.mozilla.com/addons/2011/07/19/firefox-7-compat-looking-to-8/">Add-ons Blog: Firefox 7 add-on compatibility</a></li>
-  <li><a href="/en-US/docs/XPCOM/XPCOM_changes_in_Gecko_2.0">XPCOM changes in Gecko 2.0</a></li>
-</ul>
+{{FirefoxSidebar}}
+
+This article offers advice for add-on developers that want to update their extensions to work in Firefox 7. Fortunately, most of the changes are relatively minor in this release, and few add-ons should need significant changes to work in Firefox 7.
+
+> **Note:** For a complete list of developer-related changes in Firefox 7, see [Firefox 7 for developers](/en-US/docs/Mozilla/Firefox/Releases/7).
+
+As always, you will need to [recompile any binary components](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) to make them compatible with Firefox 7.
+
+## XPCOM changes affecting compatibility
+
+Most of the changes in this release are XPCOM interface removals, or removals of specific, obsolete APIs from interfaces.
+
+### Removed interfaces
+
+The following interfaces are the ones that were removed that will most likely impact extension developers:
+
+- `nsIDOM3Node`
+- `nsIDOM3TypeInfo`
+- `schemaTypeInfo`
+- `nsIDOMNSDocument`
+- `nsIDOMDocumentStyle`
+
+You can get a complete list of the removed interfaces in the [Removed interfaces](/en-US/docs/Mozilla/Firefox/Releases/7#removed_interfaces) section of [Firefox 7 for developers](/en-US/docs/Mozilla/Firefox/Releases/7).
+
+### Changed methods
+
+A few interfaces have methods that have been changed:
+
+- {{ interface("nsINavHistoryObserver") }} and {{ interface("nsINavBookmarkObserver") }}
+  - : These have been changed to support Firefox Sync better by adding a new GUID parameter to several of their methods. JavaScript-based code shouldn't require any changes, since this is just the addition of a new, optional, parameter. However, binary components will need to be updated to take the new parameter into account.
+- {{ interface("nsIDOMFile") }}
+  - : A number of non-standard methods have been removed from this interface. This affects the {{ domxref("File") }} object's {{ domxref("File.getDataAsUrl()") }} and {{ domxref("File.getAsBinary()") }} methods. However, this functionality can now be found in the standard {{ domxref("FileReader") }} object.
+
+## Other changes of note
+
+These changes won't affect compatibility (we weren't kidding when we said there weren't many changes that do in this release), but do add capabilities that are easy to take advantage of that might be of special use to you.
+
+### Unloading JavaScript code modules
+
+The new [`Components.utils.unload()`](/en-US/docs/Components.utils.unload) method lets you unload JavaScript code modules previously loaded by calling [`Components.utils.load()`](</en-US/docs/Components.utils.load()>). This can be particularly handy with [restartless (bootstrapped) extensions](/en-US/docs/Extensions/Bootstrapped_extensions), so that you can unload an old version of a code module when a new version of your add-on is installed.
+
+### Inline preferences
+
+You can now have [preference options inline](/en-US/docs/Extensions/Inline_Options) in the Add-on Manager window, which lets users configure your add-on without having to open a separate preference dialog box. There are limits to what types of configuration controls can be provided, but this is still very helpful -- plus it works for [restartless (bootstrapped) extensions](/en-US/docs/Extensions/Bootstrapped_extensions).
+
+## See also
+
+- [Firefox 7 for developers](/en-US/docs/Mozilla/Firefox/Releases/7)
+- [Add-ons Blog: Firefox 7 add-on compatibility](http://blog.mozilla.com/addons/2011/07/19/firefox-7-compat-looking-to-8/)
+- [XPCOM changes in Gecko 2.0](/en-US/docs/XPCOM/XPCOM_changes_in_Gecko_2.0)

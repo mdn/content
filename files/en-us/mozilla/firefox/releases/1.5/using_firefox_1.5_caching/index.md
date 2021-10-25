@@ -9,110 +9,98 @@ tags:
   - JavaScript
   - Web Development
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
-<h2 id="Introduction">Introduction</h2>
+## Introduction
 
-<p><a href="/en-US/docs/Mozilla/Firefox/Releases/1.5">Firefox 1.5</a> uses in-memory caching for entire Web pages, including their JavaScript states, for a single browser session. Going backward and forward between visited pages requires no page loading and the JavaScript states are preserved. This feature, referred to by some as <strong>bfcache</strong> (for "Back-Forward Cache"), makes page navigation very fast. This caching state is preserved until the user closes the browser.</p>
+[Firefox 1.5](/en-US/docs/Mozilla/Firefox/Releases/1.5) uses in-memory caching for entire Web pages, including their JavaScript states, for a single browser session. Going backward and forward between visited pages requires no page loading and the JavaScript states are preserved. This feature, referred to by some as **bfcache** (for "Back-Forward Cache"), makes page navigation very fast. This caching state is preserved until the user closes the browser.
 
-<p>There are instances in which Firefox doesn’t cache pages. Below are some common programmatic reasons that a page is not cached:</p>
+There are instances in which Firefox doesn’t cache pages. Below are some common programmatic reasons that a page is not cached:
 
-<ul>
- <li>the page uses an <code>unload</code> or <code>beforeunload</code> handler;</li>
- <li>the page sets "cache-control: no-store".</li>
- <li>the site is HTTPS and page sets at least one of:
-  <ul>
-   <li>"Cache-Control: no-cache"</li>
-   <li>"Pragma: no-cache"</li>
-   <li>with "Expires: 0" or "Expires" with a date value in the past relative to the value of the "Date" header (unless "Cache-Control: max-age=" is also specified);</li>
-  </ul>
- </li>
- <li>the page is not completely loaded when the user navigates away from it or has pending network requests for other reasons (e.g. <code>XMLHttpRequest</code>));</li>
- <li>the page has running IndexedDB transactions;</li>
- <li>the top-level page contains frames (e.g. {{HTMLElement("iframe")}}) that are not cacheable for any of the reasons listed here;</li>
- <li>the page is in a frame and the user loads a new page within that frame (in this case, when the user navigates away from the page, the content that was last loaded into the frames is what is cached).</li>
-</ul>
+- the page uses an `unload` or `beforeunload` handler;
+- the page sets "cache-control: no-store".
+- the site is HTTPS and page sets at least one of:
 
-<p>This new caching feature changes page loading behavior, and Web authors may want to:</p>
+  - "Cache-Control: no-cache"
+  - "Pragma: no-cache"
+  - with "Expires: 0" or "Expires" with a date value in the past relative to the value of the "Date" header (unless "Cache-Control: max-age=" is also specified);
 
-<ul>
- <li>know that a page has been navigated to (when it is being loaded from a user’s cache)</li>
- <li>define page behavior when a user leaves the page (while still enabling the page to be cached)</li>
-</ul>
+- the page is not completely loaded when the user navigates away from it or has pending network requests for other reasons (e.g. `XMLHttpRequest`));
+- the page has running IndexedDB transactions;
+- the top-level page contains frames (e.g. {{HTMLElement("iframe")}}) that are not cacheable for any of the reasons listed here;
+- the page is in a frame and the user loads a new page within that frame (in this case, when the user navigates away from the page, the content that was last loaded into the frames is what is cached).
 
-<p>Two new browser events enable Web authors to do both.</p>
+This new caching feature changes page loading behavior, and Web authors may want to:
 
-<h2 id="New_browser_events">New browser events</h2>
+- know that a page has been navigated to (when it is being loaded from a user’s cache)
+- define page behavior when a user leaves the page (while still enabling the page to be cached)
 
-<p>If you use these new events, your pages will continue to display properly in other browsers (we’ve tested earlier versions of Firefox, Internet Explorer, Opera, and Safari), and will use this new caching functionality when loaded in Firefox 1.5.</p>
+Two new browser events enable Web authors to do both.
 
-<p>Note: as of 10-2009 development versions of Safari added support for these new events (see <a href="https://bugs.webkit.org/show_bug.cgi?id=28758">the webkit bug</a>).</p>
+## New browser events
 
-<p>Standard behavior for Web pages is:</p>
+If you use these new events, your pages will continue to display properly in other browsers (we’ve tested earlier versions of Firefox, Internet Explorer, Opera, and Safari), and will use this new caching functionality when loaded in Firefox 1.5.
 
-<ol>
- <li>User navigates to a page.</li>
- <li>As the page loads, inline scripts run.</li>
- <li>Once the page is loaded, the <code>onload</code> handler fires.</li>
-</ol>
+Note: as of 10-2009 development versions of Safari added support for these new events (see [the webkit bug](https://bugs.webkit.org/show_bug.cgi?id=28758)).
 
-<p>Some pages include a fourth step. If a page uses an <code>unload</code> or <code>beforeunload</code> handler, it fires when the user navigates away from the page. If an <code>unload</code> handler is present, the page will not be cached.</p>
+Standard behavior for Web pages is:
 
-<p>When a user navigates to a cached page, inline scripts and the <code>onload</code> handler do not run (steps 2 and 3), since in most cases, the effects of these scripts have been preserved.</p>
+1.  User navigates to a page.
+2.  As the page loads, inline scripts run.
+3.  Once the page is loaded, the `onload` handler fires.
 
-<p>If the page contains scripts or other behaviors that fire during loading that you want to continue to execute every time the user navigates to the page, or if you want to know when a user has navigated to a cached page, use the new <code>pageshow</code> event.</p>
+Some pages include a fourth step. If a page uses an `unload` or `beforeunload` handler, it fires when the user navigates away from the page. If an `unload` handler is present, the page will not be cached.
 
-<p>If you have behaviors that fire when a user navigates away from the page, but you want to take advantage of this new caching feature, and therefore don’t want to use the unload handler, use the new <code>pagehide</code> event.</p>
+When a user navigates to a cached page, inline scripts and the `onload` handler do not run (steps 2 and 3), since in most cases, the effects of these scripts have been preserved.
 
-<h3 id="pageshow_event">pageshow event</h3>
+If the page contains scripts or other behaviors that fire during loading that you want to continue to execute every time the user navigates to the page, or if you want to know when a user has navigated to a cached page, use the new `pageshow` event.
 
-<p>This event works the same as the <code>load</code> event, except that it fires every time the page is loaded (whereas the <code>load</code> event doesn’t fire in Firefox 1.5 when the page is loaded from cache). The first time the page loads, the <code>pageshow</code> event fires just after the firing of the <code>load</code> event. The <code>pageshow</code> event uses a boolean property called <code>persisted</code> that is set to <code>false</code> on the initial load. It is set to <code>true</code> if it is not the initial load (in other words, it is set to true when the page is cached).</p>
+If you have behaviors that fire when a user navigates away from the page, but you want to take advantage of this new caching feature, and therefore don’t want to use the unload handler, use the new `pagehide` event.
 
-<p>Set any JavaScript that you want to run every time a page loads to run when the <code>pageshow</code> event fires.</p>
+### pageshow event
 
-<p>If you call JavaScript functions as part of the <code>pageshow</code> event, you can ensure these functions are called when the page is loaded in browsers other than Firefox 1.5 by calling the <code>pageshow</code> event as part of the <code>load</code> event, as shown in the sample later in this article.</p>
+This event works the same as the `load` event, except that it fires every time the page is loaded (whereas the `load` event doesn’t fire in Firefox 1.5 when the page is loaded from cache). The first time the page loads, the `pageshow` event fires just after the firing of the `load` event. The `pageshow` event uses a boolean property called `persisted` that is set to `false` on the initial load. It is set to `true` if it is not the initial load (in other words, it is set to true when the page is cached).
 
-<h3 id="pagehide_event">pagehide event</h3>
+Set any JavaScript that you want to run every time a page loads to run when the `pageshow` event fires.
 
-<p>If you want to define behavior that occurs when the user navigates away from the page, but you don’t want to use the <code>unload</code> event (which would cause the page to not be cached), you can use the new <code>pagehide</code> event. Like <code>pageshow</code>, the <code>pagehide</code> event uses a boolean property called <code>persisted</code>. This property is set to <code>false</code> if the page is not cached by the browser and set to <code>true</code> if the page is cached by the browser. When this property is set to <code>false</code>, the <code>unload</code> handler, if present, fires immediately after the <code>pagehide</code> event.</p>
+If you call JavaScript functions as part of the `pageshow` event, you can ensure these functions are called when the page is loaded in browsers other than Firefox 1.5 by calling the `pageshow` event as part of the `load` event, as shown in the sample later in this article.
 
-<p>Firefox 1.5 tries to simulate load events in the same order they would occur when the page is initially loaded. Frames are treated the same way as the top-level document. If the page contains frames, then when the cached page is loaded:</p>
+### pagehide event
 
-<ul>
- <li><code>pageshow</code> events from each frame fire before the <code>pageshow</code> event in the main document fires.</li>
- <li>When the user navigates away from the cached page, the <code>pagehide</code> event from each frame fires before the <code>pagehide</code> event in the main document.</li>
- <li>For navigation that occurs inside a single frame, events fire only in the affected frame.</li>
-</ul>
+If you want to define behavior that occurs when the user navigates away from the page, but you don’t want to use the `unload` event (which would cause the page to not be cached), you can use the new `pagehide` event. Like `pageshow`, the `pagehide` event uses a boolean property called `persisted`. This property is set to `false` if the page is not cached by the browser and set to `true` if the page is cached by the browser. When this property is set to `false`, the `unload` handler, if present, fires immediately after the `pagehide` event.
 
-<h2 id="Sample_code">Sample code</h2>
+Firefox 1.5 tries to simulate load events in the same order they would occur when the page is initially loaded. Frames are treated the same way as the top-level document. If the page contains frames, then when the cached page is loaded:
 
-<p>The sample below illustrates a page that uses both the <code>load</code> and <code>pageshow</code> events. This sample page behaves as follows:</p>
+- `pageshow` events from each frame fire before the `pageshow` event in the main document fires.
+- When the user navigates away from the cached page, the `pagehide` event from each frame fires before the `pagehide` event in the main document.
+- For navigation that occurs inside a single frame, events fire only in the affected frame.
 
-<ul>
- <li>In browsers other than Firefox 1.5, the following occurs each time the page loads: the <code>load</code> event triggers the <code>onLoad</code> function, which calls the <code>onPageShow</code> function (as well as an additional function).</li>
- <li>In Firefox 1.5, the first time the page is loaded, the <code>load</code> event operates the same way as in other browsers. In addition, the <code>pageshow</code> event fires, and as <code>persisted</code> is set to <code>false</code>, no additional action occurs.</li>
- <li>In Firefox 1.5, when the page is loaded from cache, only the <code>pageshow</code> event fires. As <code>persisted</code> is set to <code>true</code>, only the JavaScript actions in the <code>onPageShow</code> function are triggered.</li>
-</ul>
+## Sample code
 
-<p>In this example:</p>
+The sample below illustrates a page that uses both the `load` and `pageshow` events. This sample page behaves as follows:
 
-<ul>
- <li>The page calculates and displays the current date and time each time the page is loaded. This calculation includes the seconds and milliseconds so you can easily test the functionality.</li>
- <li>The cursor is placed in the Name field of the form the first time the page is loaded. In Firefox 1.5, when the user navigates back to the page, the cursor remains in the field it was when the user navigated away from the page. In other browsers, the cursor moves back to the Name field.</li>
-</ul>
+- In browsers other than Firefox 1.5, the following occurs each time the page loads: the `load` event triggers the `onLoad` function, which calls the `onPageShow` function (as well as an additional function).
+- In Firefox 1.5, the first time the page is loaded, the `load` event operates the same way as in other browsers. In addition, the `pageshow` event fires, and as `persisted` is set to `false`, no additional action occurs.
+- In Firefox 1.5, when the page is loaded from cache, only the `pageshow` event fires. As `persisted` is set to `true`, only the JavaScript actions in the `onPageShow` function are triggered.
 
-<pre class="brush:html">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd"&gt;
-&lt;HTML&gt;
-&lt;head&gt;
-&lt;title&gt;Order query Firefox 1.5 Example&lt;/title&gt;
-&lt;style type="text/css"&gt;
+In this example:
+
+- The page calculates and displays the current date and time each time the page is loaded. This calculation includes the seconds and milliseconds so you can easily test the functionality.
+- The cursor is placed in the Name field of the form the first time the page is loaded. In Firefox 1.5, when the user navigates back to the page, the cursor remains in the field it was when the user navigated away from the page. In other browsers, the cursor moves back to the Name field.
+
+```html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<head>
+<title>Order query Firefox 1.5 Example</title>
+<style type="text/css">
 body, p {
 	font-family: Verdana, sans-serif;
 	font-size: 12px;
    	}
-&lt;/style&gt;
-&lt;script type="text/javascript"&gt;
+</style>
+<script type="text/javascript">
 function onLoad() {
 	loadOnlyFirst();
 	onPageShow();
@@ -136,29 +124,30 @@ function onPageShow() {
 function loadOnlyFirst() {
 	document.zipForm.name.focus();
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();"&gt;
-&lt;h2&gt;Order query&lt;/h2&gt;
+</script>
+</head>
+<body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();">
+<h2>Order query</h2>
 
-&lt;form name="zipForm" action="http://www.example.com/formresult.html" method="get"&gt;
-&lt;label for="timefield"&gt;Date and time:&lt;/label&gt;
-&lt;input type="text" id="timefield"&gt;&lt;br&gt;
-&lt;label for="name"&gt;Name:&lt;/label&gt;
-&lt;input type="text" id="name"&gt;&lt;br&gt;
-&lt;label for="address"&gt;Email address:&lt;/label&gt;
-&lt;input type="text" id="address"&gt;&lt;br&gt;
-&lt;label for="order"&gt;Order number:&lt;/label&gt;
-&lt;input type="text" id="order"&gt;&lt;br&gt;
-&lt;input type="submit" name="submit" value="Submit Query"&gt;
-&lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+<form name="zipForm" action="http://www.example.com/formresult.html" method="get">
+<label for="timefield">Date and time:</label>
+<input type="text" id="timefield"><br>
+<label for="name">Name:</label>
+<input type="text" id="name"><br>
+<label for="address">Email address:</label>
+<input type="text" id="address"><br>
+<label for="order">Order number:</label>
+<input type="text" id="order"><br>
+<input type="submit" name="submit" value="Submit Query">
+</form>
+</body>
+</html>
+```
 
-<p>In contrast, if the above page did not listen for the <code>pageshow</code> event and handled all calculations as part of the <code>load</code> event (and instead was coded as shown in the sample code fragment below), both the cursor position and date/time would be cached in Firefox 1.5 when the user navigated away from the page. When the user returned to the page, the cached date/time would display.</p>
+In contrast, if the above page did not listen for the `pageshow` event and handled all calculations as part of the `load` event (and instead was coded as shown in the sample code fragment below), both the cursor position and date/time would be cached in Firefox 1.5 when the user navigated away from the page. When the user returned to the page, the cached date/time would display.
 
-<pre class="brush:html">&lt;script&gt;
+```html
+<script>
 function onLoad() {
 	loadOnlyFirst();
 
@@ -179,14 +168,14 @@ function onLoad() {
 function loadOnlyFirst() {
 	document.zipForm.name.focus();
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onload="onLoad();"&gt;
-</pre>
+<body onload="onLoad();">
+```
 
-<h2 id="Developing_Firefox_extensions">Developing Firefox extensions</h2>
+## Developing Firefox extensions
 
-<p>Firefox 1.5 <a href="/en-US/docs/Mozilla/Add-ons">extensions</a> need to allow for this caching functionality. If you are developing a Firefox extension that you want to be compatible with both 1.5 and earlier versions, make sure that it listens for the <code>load</code> event for triggers that can be cached and listens for the <code>pageshow</code> event for triggers that shouldn’t be cached.</p>
+Firefox 1.5 [extensions](/en-US/docs/Mozilla/Add-ons) need to allow for this caching functionality. If you are developing a Firefox extension that you want to be compatible with both 1.5 and earlier versions, make sure that it listens for the `load` event for triggers that can be cached and listens for the `pageshow` event for triggers that shouldn’t be cached.
 
-<p>For instance, the Google Toolbar for Firefox should listen for the <code>load</code> event for the autolink function and to the <code>pageshow</code> event for the PageRank function in order to be compatible with both 1.5 and earlier versions.</p>
+For instance, the Google Toolbar for Firefox should listen for the `load` event for the autolink function and to the `pageshow` event for the PageRank function in order to be compatible with both 1.5 and earlier versions.

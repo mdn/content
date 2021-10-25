@@ -7,175 +7,136 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 72 that will affect developers. Firefox 72 was released on January 7, 2020.</p>
+This article provides information about the changes in Firefox 72 that will affect developers. Firefox 72 was released on January 7, 2020.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_tools">Developer tools</h3>
+### Developer tools
 
-<p><a href="/en-US/docs/Tools/Web_Console">Console</a>:</p>
+[Console](/en-US/docs/Tools/Web_Console):
 
-<ul>
- <li>In the <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter#multi-line_mode">multi-line mode of the interactive JS interpreter</a>, you can open and save files using the keyboard shortcuts <code>Ctrl</code> + <code>O</code> and <code>Ctrl</code> + <code>S</code>, respectively ({{bug(1592308)}}).</li>
- <li>You can set a <a href="/en-US/docs/Tools/Web_Console/Console_messages#async_stack_frames">preference so that asynchronous messages are visually separated</a> ({{bug(1592969)}}).</li>
-</ul>
+- In the [multi-line mode of the interactive JS interpreter](/en-US/docs/Tools/Web_Console/The_command_line_interpreter#multi-line_mode), you can open and save files using the keyboard shortcuts `Ctrl` + `O` and `Ctrl` + `S`, respectively ({{bug(1592308)}}).
+- You can set a [preference so that asynchronous messages are visually separated](/en-US/docs/Tools/Web_Console/Console_messages#async_stack_frames) ({{bug(1592969)}}).
 
-<p><a href="/en-US/docs/Tools/Debugger">JavaScript debugger</a>:</p>
+[JavaScript debugger](/en-US/docs/Tools/Debugger):
 
-<ul>
- <li>You can now right/<code>Ctrl</code> click on objects in the Scopes panel, and choose <em>Property set</em> or <em>Property get</em> to <a href="/en-US/docs/Tools/Debugger/How_to/Use_watchpoints#set_a_watchpoint">set watchpoints</a> ({{bug(1574192)}}).</li>
-</ul>
+- You can now right/`Ctrl` click on objects in the Scopes panel, and choose _Property set_ or _Property get_ to [set watchpoints](/en-US/docs/Tools/Debugger/How_to/Use_watchpoints#set_a_watchpoint) ({{bug(1574192)}}).
 
-<p><a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a>:</p>
+[Network Monitor](/en-US/docs/Tools/Network_Monitor):
 
-<ul>
- <li>The Timings tab now shows <a href="/en-US/docs/Tools/Network_Monitor/request_details#queued_started_downloaded">queued, started, and downloaded</a> times for each resource ({{bug(1580431)}}).</li>
-</ul>
+- The Timings tab now shows [queued, started, and downloaded](/en-US/docs/Tools/Network_Monitor/request_details#queued_started_downloaded) times for each resource ({{bug(1580431)}}).
 
-<p><a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a>:</p>
+[Page Inspector](/en-US/docs/Tools/Page_Inspector):
 
-<ul>
- <li>You can set a <a href="/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#view_media_rules_for_color-scheme-preference">preference to enable a simulator</a> for different values of the <code><a href="/en-US/docs/Web/CSS/@media/prefers-color-scheme">prefers-color-scheme</a></code> media feature ({{bug(1550804)}}).</li>
-</ul>
+- You can set a [preference to enable a simulator](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#view_media_rules_for_color-scheme-preference) for different values of the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media feature ({{bug(1550804)}}).
 
-<h4 id="Removals">Removals</h4>
+#### Removals
 
-<ul>
- <li>The <a href="/en-US/docs/Tools/Scratchpad">Scratchpad</a> feature has been removed ({{bug(1519103)}}).</li>
-</ul>
+- The [Scratchpad](/en-US/docs/Tools/Scratchpad) feature has been removed ({{bug(1519103)}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>CSS Shadow Parts are now enabled. This includes the <a href="/en-US/docs/Web/HTML/Global_attributes/part"><code>part</code> attribute</a> and <a href="/en-US/docs/Web/CSS/::part"><code>::part</code> pseudo-element</a>, which allow shadow hosts to selectively expose chosen elements from their shadow tree to the outside page for styling purposes ({{bug(1559074)}}).</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Motion_Path">CSS Motion Path</a> has been shipped ({{bug(1582554)}}, also see the <a href="https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc">Intent to Ship</a>). This includes:
-  <ul>
-   <li>{{cssxref("offset")}}</li>
-   <li>{{cssxref("offset-path")}}</li>
-   <li>{{cssxref("offset-anchor")}}</li>
-   <li>{{cssxref("offset-distance")}}</li>
-   <li>{{cssxref("offset-rotate")}}</li>
-  </ul>
- </li>
- <li>The individual transform properties — {{cssxref("scale")}}, {{cssxref("rotate")}}, and {{cssxref("translate")}} — are now enabled by default ({{bug(1424900)}}). </li>
-</ul>
+- CSS Shadow Parts are now enabled. This includes the [`part` attribute](/en-US/docs/Web/HTML/Global_attributes/part) and [`::part` pseudo-element](/en-US/docs/Web/CSS/::part), which allow shadow hosts to selectively expose chosen elements from their shadow tree to the outside page for styling purposes ({{bug(1559074)}}).
+- [CSS Motion Path](/en-US/docs/Web/CSS/CSS_Motion_Path) has been shipped ({{bug(1582554)}}, also see the [Intent to Ship](https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc)). This includes:
 
-<h4 id="Removals_2">Removals</h4>
+  - {{cssxref("offset")}}
+  - {{cssxref("offset-path")}}
+  - {{cssxref("offset-anchor")}}
+  - {{cssxref("offset-distance")}}
+  - {{cssxref("offset-rotate")}}
 
-<h3 id="SVG">SVG</h3>
+- The individual transform properties — {{cssxref("scale")}}, {{cssxref("rotate")}}, and {{cssxref("translate")}} — are now enabled by default ({{bug(1424900)}}).
 
-<p><em>No changes</em></p>
+#### Removals
 
-<h3 id="JavaScript">JavaScript</h3>
+### SVG
 
-<ul>
- <li>The <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">nullish coalescing operator</a> has been implemented ({{bug(1566141)}}).</li>
-</ul>
+_No changes_
 
-<h3 id="APIs">APIs</h3>
+### JavaScript
 
-<h4 id="New_APIs">New APIs</h4>
+- The [nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) has been implemented ({{bug(1566141)}}).
 
-<ul>
- <li>{{domxref("FormDataEvent")}} and <a href="/en-US/docs/Web/API/FormData/Using_FormData_Objects#using_a_formdata_event">event-based form participation</a> is now enabled by default ({{bug(1594708)}}).</li>
-</ul>
+### APIs
 
-<h4 id="DOM">DOM</h4>
+#### New APIs
 
-<ul>
- <li>The <a href="/en-US/docs/Web/API/Geolocation_API">Geolocation API</a> has had some interface name updates, as per recent spec changes ({{bug(1575144)}}):
+- {{domxref("FormDataEvent")}} and [event-based form participation](/en-US/docs/Web/API/FormData/Using_FormData_Objects#using_a_formdata_event) is now enabled by default ({{bug(1594708)}}).
 
-  <ul>
-   <li><code>Coordinates</code> has been changed to {{domxref("GeolocationCoordinates")}}.</li>
-   <li><code>Position</code> has been changed to {{domxref("GeolocationPosition")}}.</li>
-   <li><code>PositionError</code> has been changed to {{domxref("GeolocationPositionError")}}.</li>
-  </ul>
- </li>
- <li>A number of properties have been updated to use standard stringifiers ({{bug(824857)}}):
-  <ul>
-   <li>{{domxref("DOMTokenList.value")}}</li>
-   <li>{{domxref("HTMLAnchorElement.href")}}</li>
-   <li>{{domxref("Location.href")}}</li>
-   <li>{{domxref("MediaList.mediaText")}}</li>
-   <li>{{domxref("URL.href")}}</li>
-   <li>{{domxref("URLUtilsReadOnly/href", "WorkerLocation.href")}}</li>
-  </ul>
- </li>
-</ul>
+#### DOM
 
-<h4 id="DOM_events">DOM events</h4>
+- The [Geolocation API](/en-US/docs/Web/API/Geolocation_API) has had some interface name updates, as per recent spec changes ({{bug(1575144)}}):
 
-<ul>
- <li>{{domxref("Notification.requestPermission()")}} and {{domxref("PushManager.subscribe()")}} can now only be called in response to a user gesture such as a <code><a href="/en-US/docs/Web/API/Element/click_event">click</a></code> event ({{bug(1593644)}}).</li>
-</ul>
+  - `Coordinates` has been changed to {{domxref("GeolocationCoordinates")}}.
+  - `Position` has been changed to {{domxref("GeolocationPosition")}}.
+  - `PositionError` has been changed to {{domxref("GeolocationPositionError")}}.
 
-<h4 id="Service_workers">Service workers</h4>
+- A number of properties have been updated to use standard stringifiers ({{bug(824857)}}):
 
-<ul>
- <li>The {{domxref("crossOriginIsolated")}} property is now supported ({{bug(1591892)}}).</li>
-</ul>
+  - {{domxref("DOMTokenList.value")}}
+  - {{domxref("HTMLAnchorElement.href")}}
+  - {{domxref("Location.href")}}
+  - {{domxref("MediaList.mediaText")}}
+  - {{domxref("URL.href")}}
+  - {{domxref("URLUtilsReadOnly/href", "WorkerLocation.href")}}
 
-<h4 id="Media_Web_Audio_and_WebRTC">Media, Web Audio, and WebRTC</h4>
+#### DOM events
 
-<ul>
- <li>The {{domxref("MediaDevices.getDisplayMedia()")}} method can now only be called in response to a user gesture such as a <code><a href="/en-US/docs/Web/API/Element/click_event">click</a></code> event ({{bug(1580944)}}).</li>
- <li>The {{domxref("RTCRtpContributingSource")}} dictionary can now include the {{domxref("RTCRtpContributingSource.rtpTimestamp", "rtpTimestamp")}} property, which is a source-generated time at which the packet's media was generated or sampled ({{bug(1583867)}}).</li>
-</ul>
+- {{domxref("Notification.requestPermission()")}} and {{domxref("PushManager.subscribe()")}} can now only be called in response to a user gesture such as a [`click`](/en-US/docs/Web/API/Element/click_event) event ({{bug(1593644)}}).
 
-<h4 id="Removals_3">Removals</h4>
+#### Service workers
 
-<ul>
- <li>Removed the non-standard {{DOMxRef("window.mozPaintCount")}} property. ({{bug(1591968)}})</li>
- <li>The {{domxref("BatteryManager")}} interface is no longer exposed to web content ({{bug(1441976)}}).</li>
- <li>{{domxref("Navigator.vibrate()")}} is no longer supported in cross-origin {{htmlelement("iframe")}}s ({{bug(1591113)}}).</li>
- <li>WebRTC no longer supports the <code>rid=</code> and <code>pt=</code> parameters on the <code>simulcast</code> attribute. The new syntax for a line such as "<code>a=simulcast: send rid=7 recv rid=8</code>" is now "<code>a=simulcast: send 7 recv 8</code>". The new syntax has been supported since Firefox 68, so now it's time tor retire support for the old syntax ({{bug(1470568)}}).</li>
-</ul>
+- The {{domxref("crossOriginIsolated")}} property is now supported ({{bug(1591892)}}).
 
-<h3 id="Security">Security</h3>
+#### Media, Web Audio, and WebRTC
 
-<ul>
- <li>Opting-out of MIME sniffing using {{HTTPHeader("X-Content-Type-Options")}} is now also applied to top-level documents if a {{HTTPHeader("Content-type")}} is provided. This can cause HTML web pages to be downloaded instead of being rendered when they are served with a MIME type other than <code>text/html</code>. Make sure to set both headers correctly. ({{bug(1591932)}}).</li>
- <li>Dropped the support for <a href="/en-US/docs/Web/HTTP/Public_Key_Pinning">HTTP Public Key Pinning (HPKP)</a> because of the low adoption rate and interoperability risk. The {{HTTPHeader("Public-Key-Pins")}} and {{HTTPHeader("Public-Key-Pins-Report-Only")}} headers are now silently ignored {{bug(1412438)}}.</li>
-</ul>
+- The {{domxref("MediaDevices.getDisplayMedia()")}} method can now only be called in response to a user gesture such as a [`click`](/en-US/docs/Web/API/Element/click_event) event ({{bug(1580944)}}).
+- The {{domxref("RTCRtpContributingSource")}} dictionary can now include the {{domxref("RTCRtpContributingSource.rtpTimestamp", "rtpTimestamp")}} property, which is a source-generated time at which the packet's media was generated or sampled ({{bug(1583867)}}).
 
-<h3 id="Plugins">Plugins</h3>
+#### Removals
 
-<p><em>No changes.</em></p>
+- Removed the non-standard {{DOMxRef("window.mozPaintCount")}} property. ({{bug(1591968)}})
+- The {{domxref("BatteryManager")}} interface is no longer exposed to web content ({{bug(1441976)}}).
+- {{domxref("Navigator.vibrate()")}} is no longer supported in cross-origin {{htmlelement("iframe")}}s ({{bug(1591113)}}).
+- WebRTC no longer supports the `rid=` and `pt=` parameters on the `simulcast` attribute. The new syntax for a line such as "`a=simulcast: send rid=7 recv rid=8`" is now "`a=simulcast: send 7 recv 8`". The new syntax has been supported since Firefox 68, so now it's time tor retire support for the old syntax ({{bug(1470568)}}).
 
-<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
+### Security
 
-<ul>
- <li>Removed <code>Anon</code> and <code>AnonAttribute</code> strategies from <code>WebDriver:FindElement</code> and <code>WebDriver:FindElements</code> commands ({{bug(1587627)}}).</li>
- <li><code>Webdriver:TakeScreenshot</code> no longer fails if captured area exceeds upper maximum bound for the canvas width, height, or size ({{bug(1590064)}}).</li>
-</ul>
+- Opting-out of MIME sniffing using {{HTTPHeader("X-Content-Type-Options")}} is now also applied to top-level documents if a {{HTTPHeader("Content-type")}} is provided. This can cause HTML web pages to be downloaded instead of being rendered when they are served with a MIME type other than `text/html`. Make sure to set both headers correctly. ({{bug(1591932)}}).
+- Dropped the support for [HTTP Public Key Pinning (HPKP)](/en-US/docs/Web/HTTP/Public_Key_Pinning) because of the low adoption rate and interoperability risk. The {{HTTPHeader("Public-Key-Pins")}} and {{HTTPHeader("Public-Key-Pins-Report-Only")}} headers are now silently ignored {{bug(1412438)}}.
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+### Plugins
 
-<h3 id="API_changes">API changes</h3>
+_No changes._
 
-<ul>
- <li>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/ftpProtocolEnabled">browserSettings.ftpProtocolEnabled</a></code> property has been implemented ({{bug(1592687)}}).</li>
- <li>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange">BrowserSetting.onChange</a></code> event has been implemented ({{bug(1410412)}}).</li>
- <li>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/captivePortal/canonicalURL">captivePortal.canonicalURL</a></code> property has been implemented ({{bug(1592932)}}).</li>
- <li>The callback functions for the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked">browserAction.onClicked</a></code> and <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked">pageAction.onClicked</a></code> events now include a <code>OnClickData</code> property containing an object whose properties describe the mouse button pressed along with any keyboard modifiers ({{bug(1405031)}}). This allows support for additional types of mouse click.</li>
-</ul>
+### WebDriver conformance (Marionette)
 
-<h3 id="Manifest_changes">Manifest changes</h3>
+- Removed `Anon` and `AnonAttribute` strategies from `WebDriver:FindElement` and `WebDriver:FindElements` commands ({{bug(1587627)}}).
+- `Webdriver:TakeScreenshot` no longer fails if captured area exceeds upper maximum bound for the canvas width, height, or size ({{bug(1590064)}}).
 
-<p><em>No changes.</em></p>
+## Changes for add-on developers
 
-<h2 id="See_also">See also</h2>
+### API changes
 
-<ul>
- <li>Hacks release post: <a href="https://hacks.mozilla.org/2020/01/firefox-72-our-first-song-of-2020/">Firefox 72 — our first song of 2020</a></li>
-</ul>
+- The [`browserSettings.ftpProtocolEnabled`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/ftpProtocolEnabled) property has been implemented ({{bug(1592687)}}).
+- The [`BrowserSetting.onChange`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange) event has been implemented ({{bug(1410412)}}).
+- The [`captivePortal.canonicalURL`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/captivePortal/canonicalURL) property has been implemented ({{bug(1592932)}}).
+- The callback functions for the [`browserAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked) and [`pageAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked) events now include a `OnClickData` property containing an object whose properties describe the mouse button pressed along with any keyboard modifiers ({{bug(1405031)}}). This allows support for additional types of mouse click.
 
-<h2 id="Older_versions">Older versions</h2>
+### Manifest changes
 
-<p>{{Firefox_for_developers(71)}}</p>
+_No changes._
+
+## See also
+
+- Hacks release post: [Firefox 72 — our first song of 2020](https://hacks.mozilla.org/2020/01/firefox-72-our-first-song-of-2020/)
+
+## Older versions
+
+{{Firefox_for_developers(71)}}

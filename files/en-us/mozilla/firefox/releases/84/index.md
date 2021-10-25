@@ -7,99 +7,75 @@ tags:
   - Mozilla
   - Release
 ---
-<p>{{FirefoxSidebar}}</p>
+{{FirefoxSidebar}}
 
-<p>This article provides information about the changes in Firefox 84 that will affect developers. Firefox 84 was released on December 15, 2020.</p>
+This article provides information about the changes in Firefox 84 that will affect developers. Firefox 84 was released on December 15, 2020.
 
-<div class="note">
-  <p><strong>Note:</strong> See also <a href="https://hacks.mozilla.org/2020/12/and-now-for-firefox-84/">And now for … Firefox 84</a> on Mozilla Hacks.</p>
-</div>
+> **Note:** See also [And now for … Firefox 84](https://hacks.mozilla.org/2020/12/and-now-for-firefox-84/) on Mozilla Hacks.
 
-<h2 id="Changes_for_web_developers">Changes for web developers</h2>
+## Changes for web developers
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+### Developer Tools
 
-<ul>
- <li>The Firefox <a href="/en-US/docs/Tools/Accessibility_inspector">Accessibility Inspector</a> now supports displaying the <a href="/en-US/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order">keyboard tab order</a> on a web page. This provides a better high-level overview of how the page will be navigated using the keyboard than tabbing through the links ({{bug(1654956)}}).</li>
-</ul>
+- The Firefox [Accessibility Inspector](/en-US/docs/Tools/Accessibility_inspector) now supports displaying the [keyboard tab order](/en-US/docs/Tools/Accessibility_inspector#show_web_page_tabbing_order) on a web page. This provides a better high-level overview of how the page will be navigated using the keyboard than tabbing through the links ({{bug(1654956)}}).
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<ul>
- <li>We've added support for complex selectors to the {{cssxref(":not")}} pseudo-class ({{bug(933562)}}). </li>
-</ul>
+- We've added support for complex selectors to the {{cssxref(":not")}} pseudo-class ({{bug(933562)}}).
 
-<h4 id="Removals">Removals</h4>
+#### Removals
 
-<ul>
- <li>We've removed the proprietary <code>-moz-default-appearance</code> property values <code>scrollbar-small</code> (<code>scrollbar-width: thin</code> is used instead) and <code>scrollbar</code> (macOS only; <code>scrollbar-horizontal</code> and <code>scrollbar-vertical</code> are used instead) ({{bug(1673132)}}).</li>
-</ul>
+- We've removed the proprietary `-moz-default-appearance` property values `scrollbar-small` (`scrollbar-width: thin` is used instead) and `scrollbar` (macOS only; `scrollbar-horizontal` and `scrollbar-vertical` are used instead) ({{bug(1673132)}}).
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<ul>
- <li>Custom date/time formats specified as options to the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat"><code>Intl.DateTimeFormat()</code> constructor</a> can now include <code>fractionalSecondDigits</code> — the number of digits used to represent fractions of a second ({{bug(1645107)}}).</li>
-</ul>
+- Custom date/time formats specified as options to the [`Intl.DateTimeFormat()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) can now include `fractionalSecondDigits` — the number of digits used to represent fractions of a second ({{bug(1645107)}}).
 
-<h3 id="HTTP">HTTP</h3>
+### HTTP
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="Security">Security</h3>
+### Security
 
-<ul>
- <li>Firefox now ensures that <code>localhost</code> URLs — such as <em>http://localhost/</em> and <em>http://dev.localhost/</em> — refer to the local host's loopback interface (e.g. <em>http://127.0.0.1</em>). As a result, resources loaded from <code>localhost</code> are now assumed to have been delivered securely (see <a href="/en-US/docs/Web/Security/Secure_Contexts">Secure contexts</a>), and also will not be treated as <a href="/en-US/docs/Web/Security/Mixed_content">mixed content</a> ({{bug(1220810)}}, {{bug(1488740)}}).</li>
-</ul>
+- Firefox now ensures that `localhost` URLs — such as *http\://localhost/* and *http\://dev.localhost/* — refer to the local host's loopback interface (e.g. _http\://127.0.0.1_). As a result, resources loaded from `localhost` are now assumed to have been delivered securely (see [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)), and also will not be treated as [mixed content](/en-US/docs/Web/Security/Mixed_content) ({{bug(1220810)}}, {{bug(1488740)}}).
 
-<h3 id="APIs">APIs</h3>
+### APIs
 
-<ul>
- <li>We've added support for the {{domxref('PerformancePaintTiming')}} interface of the Paint Timing API ({{bug(1518999)}}).</li>
- <li>The {{domxref('Navigator.registerProtocolHandler()')}} method now only accepts two parameters: <code>scheme</code> and <code>url</code>. <code>title</code> has been removed ({{bug(1631464)}}).</li>
-</ul>
+- We've added support for the {{domxref('PerformancePaintTiming')}} interface of the Paint Timing API ({{bug(1518999)}}).
+- The {{domxref('Navigator.registerProtocolHandler()')}} method now only accepts two parameters: `scheme` and `url`. `title` has been removed ({{bug(1631464)}}).
 
-<h4 id="Media_WebRTC_and_Web_Audio">Media, WebRTC, and Web Audio</h4>
+#### Media, WebRTC, and Web Audio
 
-<ul>
- <li>The {{domxref('MediaRecorder.start()')}} method now throws an <code>InvalidModificationError</code> if the number of tracks on the stream being recorded has changed ({{bug(1581139)}}).</li>
-</ul>
+- The {{domxref('MediaRecorder.start()')}} method now throws an `InvalidModificationError` if the number of tracks on the stream being recorded has changed ({{bug(1581139)}}).
 
-<h4 id="Removals_2">Removals</h4>
+#### Removals
 
-<ul>
- <li>The <a href="/en-US/docs/Web/HTML/Using_the_application_cache">application cache</a> has been removed — developers should use the <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> instead ({{bug(1619673)}}).</li>
-</ul>
+- The [application cache](/en-US/docs/Web/HTML/Using_the_application_cache) has been removed — developers should use the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) instead ({{bug(1619673)}}).
 
-<h3 id="WebAssembly">WebAssembly</h3>
+### WebAssembly
 
-<p><em>No changes.</em></p>
+_No changes._
 
-<h3 id="WebDriver_conformance_Marionette">WebDriver conformance (Marionette)</h3>
+### WebDriver conformance (Marionette)
 
-<ul>
- <li>Added chrome scope support for <code>WebDriver:PerformActions</code> and <code>WebDriver:ReleaseActions</code> ({{bug(1365886)}}).</li>
- <li>The new Fission-compatible API has been enabled by default now. To revert to the former API the <code>marionette.actors.enabled</code> preference has to be set to <code>false</code> ({{bug(1669169)}}).</li>
- <li>Fixed <code>WebDriver:SwitchToWindow</code> to always switch back to the top-level browsing context ({{bug(1305822)}}).</li>
- <li>Improved browsing context checks for <code>WebDriver:SwitchToParentFrame</code> ({{bug(1671622)}}).</li>
- <li>Fixed a hang for <code>WebDriver:Back</code> encountered when the currently-selected <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code> gets unloaded ({{bug(1672758)}}).</li>
-</ul>
+- Added chrome scope support for `WebDriver:PerformActions` and `WebDriver:ReleaseActions` ({{bug(1365886)}}).
+- The new Fission-compatible API has been enabled by default now. To revert to the former API the `marionette.actors.enabled` preference has to be set to `false` ({{bug(1669169)}}).
+- Fixed `WebDriver:SwitchToWindow` to always switch back to the top-level browsing context ({{bug(1305822)}}).
+- Improved browsing context checks for `WebDriver:SwitchToParentFrame` ({{bug(1671622)}}).
+- Fixed a hang for `WebDriver:Back` encountered when the currently-selected [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) gets unloaded ({{bug(1672758)}}).
 
-<h4 id="WebDriver_known_bugs">Known bugs</h4>
+#### Known bugs
 
-<ul>
-  <li>After page navigation, accessing a previously-retrieved element might not always raise a "stale element" error, and can also lead to a "no such element" error. To prevent this, set the <code>marionette.actors.enabled</code> preference to <code>false</code> ({{bug(1684827)}}).</li>
-</ul>
+- After page navigation, accessing a previously-retrieved element might not always raise a "stale element" error, and can also lead to a "no such element" error. To prevent this, set the `marionette.actors.enabled` preference to `false` ({{bug(1684827)}}).
 
-<h2 id="Changes_for_add-on_developers">Changes for add-on developers</h2>
+## Changes for add-on developers
 
-<ul>
- <li>The <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/remove">browsingData.remove()</a></code> API now supports removing a subset of data types by <code>cookieStoreId</code>.</li>
-</ul>
+- The [`browsingData.remove()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/remove) API now supports removing a subset of data types by `cookieStoreId`.
 
-<h2 id="Older_versions">Older versions</h2>
+## Older versions
 
-<p>{{Firefox_for_developers(83)}}</p>
+{{Firefox_for_developers(83)}}

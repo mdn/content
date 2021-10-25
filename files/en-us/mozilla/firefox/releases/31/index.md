@@ -6,119 +6,107 @@ tags:
   - Firefox 31
   - Firefox for Developers
 ---
-<div>{{FirefoxSidebar}}</div><h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+{{FirefoxSidebar}}
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+## Changes for Web developers
 
-<p>Highlights:</p>
+### Developer Tools
 
-<ul>
- <li><a href="/en-US/docs/Tools/Eyedropper">Eyedropper tool to select colors in web pages</a></li>
- <li><a href="/en-US/docs/Tools/Web_Console#error_messages">full stack traces for console error messages</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector#box_model_view">editable Box Model View</a></li>
- <li><a href="/en-US/docs/Tools/Web_Console#styling_messages">%c formatting to style console messages</a></li>
- <li><a href="/en-US/docs/Tools/Network_Monitor#copy_as_curl">"copy as cURL" command in Network Monitor</a></li>
- <li><a href="/en-US/docs/Tools/Keyboard_shortcuts#source_editor">Sublime Text keybindings in the source editor</a></li>
- <li><a href="/en-US/docs/Tools/Network_Monitor#network_request_list">Option to make Network Monitor logs persistent</a></li>
- <li><a href="/en-US/docs/Tools/Web_Console#javascript_errors_and_warnings">JavaScript warnings on by default in the Web Console</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector#html_pane_2">Alt+click to expand all descendants of a node</a></li>
-</ul>
+Highlights:
 
-<p><a class="external external-icon" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;classification=Client%20Software&amp;chfieldto=2014-04-28&amp;chfield=resolution&amp;query_format=advanced&amp;chfieldfrom=2014-03-17&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;component=Developer%20Tools&amp;component=Developer%20Tools%3A%203D%20View&amp;component=Developer%20Tools%3A%20App%20Manager&amp;component=Developer%20Tools%3A%20Canvas%20Debugger&amp;component=Developer%20Tools%3A%20Console&amp;component=Developer%20Tools%3A%20Debugger&amp;component=Developer%20Tools%3A%20Framework&amp;component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&amp;component=Developer%20Tools%3A%20Inspector&amp;component=Developer%20Tools%3A%20Memory&amp;component=Developer%20Tools%3A%20Netmonitor&amp;component=Developer%20Tools%3A%20Object%20Inspector&amp;component=Developer%20Tools%3A%20Profiler&amp;component=Developer%20Tools%3A%20Responsive%20Mode&amp;component=Developer%20Tools%3A%20Scratchpad&amp;component=Developer%20Tools%3A%20Source%20Editor&amp;component=Developer%20Tools%3A%20Style%20Editor&amp;component=Developer%20Tools%3A%20User%20Stories&amp;component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&amp;product=Firefox&amp;list_id=10022921">All devtools bugs fixed between Firefox 30 and Firefox 31</a>.</p>
+- [Eyedropper tool to select colors in web pages](/en-US/docs/Tools/Eyedropper)
+- [full stack traces for console error messages](/en-US/docs/Tools/Web_Console#error_messages)
+- [editable Box Model View](/en-US/docs/Tools/Page_Inspector#box_model_view)
+- [%c formatting to style console messages](/en-US/docs/Tools/Web_Console#styling_messages)
+- ["copy as cURL" command in Network Monitor](/en-US/docs/Tools/Network_Monitor#copy_as_curl)
+- [Sublime Text keybindings in the source editor](/en-US/docs/Tools/Keyboard_shortcuts#source_editor)
+- [Option to make Network Monitor logs persistent](/en-US/docs/Tools/Network_Monitor#network_request_list)
+- [JavaScript warnings on by default in the Web Console](/en-US/docs/Tools/Web_Console#javascript_errors_and_warnings)
+- [Alt+click to expand all descendants of a node](/en-US/docs/Tools/Page_Inspector#html_pane_2)
 
-<h3 id="CSS">CSS</h3>
+[All devtools bugs fixed between Firefox 30 and Firefox 31](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&chfieldto=2014-04-28&chfield=resolution&query_format=advanced&chfieldfrom=2014-03-17&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20App%20Manager&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&product=Firefox&list_id=10022921).
 
-<ul>
- <li>Changed <code>var-</code> prefix of CSS Variables to <code>--</code> to reflect the final spec change ({{Bug(985838)}}).</li>
- <li>The {{cssxref("hyphens")}} property now support Polish hyphenation rules ({{Bug(987668)}}).</li>
- <li>Removed an unwanted white space for multiple of 10,000 in Korean counter styles ({{Bug(985186)}}).</li>
- <li>CSS opacity transition broken with parent pseudo :before and overflow auto ({{Bug(990340)}}).</li>
- <li>The <code>::-moz-math-stretchy</code> pseudo-element has been removed ({{Bug(1000879)}}).</li>
-</ul>
+### CSS
 
-<h3 id="HTML">HTML</h3>
+- Changed `var-` prefix of CSS Variables to `--` to reflect the final spec change ({{Bug(985838)}}).
+- The {{cssxref("hyphens")}} property now support Polish hyphenation rules ({{Bug(987668)}}).
+- Removed an unwanted white space for multiple of 10,000 in Korean counter styles ({{Bug(985186)}}).
+- CSS opacity transition broken with parent pseudo :before and overflow auto ({{Bug(990340)}}).
+- The `::-moz-math-stretchy` pseudo-element has been removed ({{Bug(1000879)}}).
 
-<ul>
- <li>{{HTMLElement("track")}} has been implemented ({{Bug(629350)}}).</li>
-</ul>
+### HTML
 
-<h3 id="JavaScript">JavaScript</h3>
+- {{HTMLElement("track")}} has been implemented ({{Bug(629350)}}).
 
-<p>New ECMAScript 2015 features implemented:</p>
+### JavaScript
 
-<ul>
- <li>New <code>Array</code> built-in: {{jsxref("Array.prototype.fill()")}} ({{Bug(911147)}})</li>
- <li>New <code>Math</code> function: {{jsxref("Math.clz32()")}} ({{Bug(925123)}})</li>
- <li>New <code>String</code> built-in: {{jsxref("String.prototype.normalize()")}} is available in Firefox Desktop ({{Bug(918987)}}).</li>
- <li>New <code>Object</code> method {{jsxref("Object.setPrototypeOf()")}}.</li>
- <li>New <code>Number</code> constants: {{jsxref("Number.MAX_SAFE_INTEGER")}} and {{jsxref("Number.MIN_SAFE_INTEGER")}}.</li>
- <li>The ES2015 Proxy {{jsxref("Global_Objects/Proxy/Proxy/isExtensible", "isExtensible")}} trap have been implemented ({{bug(978235)}}).</li>
-</ul>
+New ECMAScript 2015 features implemented:
 
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
+- New `Array` built-in: {{jsxref("Array.prototype.fill()")}} ({{Bug(911147)}})
+- New `Math` function: {{jsxref("Math.clz32()")}} ({{Bug(925123)}})
+- New `String` built-in: {{jsxref("String.prototype.normalize()")}} is available in Firefox Desktop ({{Bug(918987)}}).
+- New `Object` method {{jsxref("Object.setPrototypeOf()")}}.
+- New `Number` constants: {{jsxref("Number.MAX_SAFE_INTEGER")}} and {{jsxref("Number.MIN_SAFE_INTEGER")}}.
+- The ES2015 Proxy {{jsxref("Global_Objects/Proxy/Proxy/isExtensible", "isExtensible")}} trap have been implemented ({{bug(978235)}}).
 
-<ul>
- <li>Constructor of <code>KeyboardEvent</code> has been implemented ({{Bug(930893)}}).</li>
- <li>The Resource Timing API has been implemented (see {{ Bug("822480") }}).</li>
- <li><code>KeyboardEvent.isComposing</code> attribute has been implemented ({{Bug(993234)}}).</li>
- <li><code>InputEvent</code> interface has been implemented ({{Bug(993253)}}).</li>
- <li><code>InputEvent.isComposing</code> attribute has been implemented ({{Bug(993253)}}).</li>
- <li>{{domxref("CSS.escape", "CSS.escape()")}} has been implemented ({{Bug(955860)}}).</li>
- <li>{{event("mousemove") }} is now cancelable like in other browsers ({{Bug(704423)}}). Calling <code>preventDefault()</code> only sets <code>defaultPrevented</code> attribute to <code>true;</code> any other behaviors are not changed. E.g., it cannot prevent to set <code>:hover</code> state.</li>
- <li>The {{domxref("Path2D")}} interface has been implemented.</li>
- <li>The {{domxref("CanvasRenderingContext2D.isPointInPath()")}}, {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}, {{domxref("CanvasRenderingContext2D.clip()")}}, {{domxref("CanvasRenderingContext2D.fill()")}} and {{domxref("CanvasRenderingContext2D.stroke()")}} methods have been updated to optionally accept a {{domxref("Path2D")}} object.</li>
- <li>Implemented {{domxref("HTMLMediaElement.fastSeek()")}}.</li>
- <li>The <code>Connection</code> interface has been renamed to {{domxref("NetworkInformation")}} and has been modified to match the new specification ({{bug(960426)}}).</li>
- <li>The {{domxref("Navigator.sendBeacon()")}} has been implemented; this allows asynchronous transmission of analytics or other data in a manner that doesn't rely on the transmitting page remaining loaded, so that it can be used in an {{event("unload")}} or {{event("beforeunload")}} handler.</li>
-</ul>
+### Interfaces/APIs/DOM
 
-<h3 id="MathML">MathML</h3>
+- Constructor of `KeyboardEvent` has been implemented ({{Bug(930893)}}).
+- The Resource Timing API has been implemented (see {{ Bug("822480") }}).
+- `KeyboardEvent.isComposing` attribute has been implemented ({{Bug(993234)}}).
+- `InputEvent` interface has been implemented ({{Bug(993253)}}).
+- `InputEvent.isComposing` attribute has been implemented ({{Bug(993253)}}).
+- {{domxref("CSS.escape", "CSS.escape()")}} has been implemented ({{Bug(955860)}}).
+- {{event("mousemove") }} is now cancelable like in other browsers ({{Bug(704423)}}). Calling `preventDefault()` only sets `defaultPrevented` attribute to `true;` any other behaviors are not changed. E.g., it cannot prevent to set `:hover` state.
+- The {{domxref("Path2D")}} interface has been implemented.
+- The {{domxref("CanvasRenderingContext2D.isPointInPath()")}}, {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}, {{domxref("CanvasRenderingContext2D.clip()")}}, {{domxref("CanvasRenderingContext2D.fill()")}} and {{domxref("CanvasRenderingContext2D.stroke()")}} methods have been updated to optionally accept a {{domxref("Path2D")}} object.
+- Implemented {{domxref("HTMLMediaElement.fastSeek()")}}.
+- The `Connection` interface has been renamed to {{domxref("NetworkInformation")}} and has been modified to match the new specification ({{bug(960426)}}).
+- The {{domxref("Navigator.sendBeacon()")}} has been implemented; this allows asynchronous transmission of analytics or other data in a manner that doesn't rely on the transmitting page remaining loaded, so that it can be used in an {{event("unload")}} or {{event("beforeunload")}} handler.
 
-<ul>
- <li>Partial implementation of the <a href="https://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition">OpenType MATH table</a>, section 6.3.6 ({{Bug(407059)}}). For details, see the <a href="/en-US/docs/Mozilla/MathML_Project/Fonts">fonts for Mozilla's MathML engine</a> and try the <a href="/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test">MathML torture test</a> .</li>
- <li>The <code>::-moz-math-stretchy</code> pseudo-element has been removed ({{Bug(1000879)}}).</li>
- <li>When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic mathvariants ({{Bug(930504)}}).</li>
-</ul>
+### MathML
 
-<h3 id="SVG">SVG</h3>
+- Partial implementation of the [OpenType MATH table](https://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), section 6.3.6 ({{Bug(407059)}}). For details, see the [fonts for Mozilla's MathML engine](/en-US/docs/Mozilla/MathML_Project/Fonts) and try the [MathML torture test](/en-US/docs/Mozilla/MathML_Project/MathML_Torture_Test) .
+- The `::-moz-math-stretchy` pseudo-element has been removed ({{Bug(1000879)}}).
+- When available, the Unicode Mathematical alphanumeric characters are used for bold, italic and bold-italic mathvariants ({{Bug(930504)}}).
 
-<p><em>No change.</em></p>
+### SVG
 
-<h3 id="AudioVideo">Audio/Video</h3>
+_No change._
 
-<p><em>No change.</em></p>
+### Audio/Video
 
-<h2 id="Security">Security</h2>
+_No change._
 
-<ul>
- <li><a href="/en-US/docs/Xray_vision#Xrays_for_JavaScript_objects">Privileged code now gets Xray vision for <code>Date</code> instances</a>.</li>
-</ul>
+## Security
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
+- [Privileged code now gets Xray vision for `Date` instances](/en-US/docs/Xray_vision#Xrays_for_JavaScript_objects).
 
-<ul>
- <li>The "<code>align</code>" attribute on the <code>urlbar-wrapper</code> (formerly on the <code>urlbar-container</code>) which was set to "<code>center</code>" since <a href="http://bonsai.mozilla.org/cvsview2.cgi?diff_mode=context&amp;whitespace_mode=show&amp;root=/cvsroot&amp;subdir=mozilla/browser/base/content&amp;command=DIFF_FRAMESET&amp;file=browser.xul&amp;rev2=1.10&amp;rev1=1.9">time immemorial</a>, has been removed. This is known to affect third-party themes. You should look carefully at what the right fix is for your theme, but for maintaining the equivalent effect, you can add the following CSS rule to your theme:
-  <pre class="brush: css">#urlbar-wrapper {
-  -moz-box-align: center;
-}</pre></li>
- <li><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendQueryContentEvent()"><code>nsIDOMWindowUtils.sendQueryContentEvent()</code></a> and <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendSelectionSetEvent%28%29"><code>nsIDOMWindowUtils.sendSelectionSetEvent()</code></a> have <code>aAdditionalFlags</code> as optional argument. If you called <code>nsIDOMWindowUtils.sendSelectionSetEvent()</code> with <code>true</code> for <code>aReverse</code>, the behavior would be broken by this change. See <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#Constants">explanation of each flag</a> (<code>QUERY_CONTENT_FLAG_*</code> and <code>SELECTION_SET_FLAG_*</code>) for the detail of <code>aAdditionalFlags</code>.</li>
-</ul>
+## Changes for add-on and Mozilla developers
 
-<h3 id="Add-on_SDK">Add-on SDK</h3>
+- The "`align`" attribute on the `urlbar-wrapper` (formerly on the `urlbar-container`) which was set to "`center`" since [time immemorial](http://bonsai.mozilla.org/cvsview2.cgi?diff_mode=context&whitespace_mode=show&root=/cvsroot&subdir=mozilla/browser/base/content&command=DIFF_FRAMESET&file=browser.xul&rev2=1.10&rev1=1.9), has been removed. This is known to affect third-party themes. You should look carefully at what the right fix is for your theme, but for maintaining the equivalent effect, you can add the following CSS rule to your theme:
 
-<p>Highlights:</p>
+  ```css
+  #urlbar-wrapper {
+    -moz-box-align: center;
+  }
+  ```
 
-<ul>
- <li><a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a></li>
- <li>Added the ability to convert <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#converting_to_dom_windows">between high-level BrowserWindow objects and DOM windows</a>, and <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#converting_to_xul_tabs">between high-level Tab objects and XUL tabs</a>.</li>
- <li>Updated the default theme used for panels on Mac OS X.</li>
- <li>Added <a href="/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel#styling_panel_content">contentStyle and contentStyleFile</a> options to panel.</li>
-</ul>
+- [`nsIDOMWindowUtils.sendQueryContentEvent()`](</en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendQueryContentEvent()>) and [`nsIDOMWindowUtils.sendSelectionSetEvent()`](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#sendSelectionSetEvent%28%29) have `aAdditionalFlags` as optional argument. If you called `nsIDOMWindowUtils.sendSelectionSetEvent()` with `true` for `aReverse`, the behavior would be broken by this change. See [explanation of each flag](/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils#Constants) (`QUERY_CONTENT_FLAG_*` and `SELECTION_SET_FLAG_*`) for the detail of `aAdditionalFlags`.
 
-<p><a class="external external-icon" href="https://github.com/mozilla/addon-sdk/compare/firefox30...firefox31">GitHub commits made between Firefox 30 and Firefox 31</a>. This will not include any uplifts made after this release entered Aurora.</p>
+### Add-on SDK
 
-<p><a class="external external-icon" href="https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&amp;chfieldto=2014-04-29&amp;chfield=resolution&amp;query_format=advanced&amp;chfieldfrom=2014-03-18&amp;chfieldvalue=FIXED&amp;bug_status=RESOLVED&amp;bug_status=VERIFIED&amp;bug_status=CLOSED&amp;product=Add-on%20SDK&amp;list_id=10493962">Bugs fixed between Firefox 30 and Firefox 31</a>. This will not include any uplifts made after this release entered Aurora.</p>
+Highlights:
 
-<h3 id="Older_versions">Older versions</h3>
+- [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger)
+- Added the ability to convert [between high-level BrowserWindow objects and DOM windows](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#converting_to_dom_windows), and [between high-level Tab objects and XUL tabs](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/tabs#converting_to_xul_tabs).
+- Updated the default theme used for panels on Mac OS X.
+- Added [contentStyle and contentStyleFile](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel#styling_panel_content) options to panel.
 
-<p>{{Firefox_for_developers('30')}}</p>
+[GitHub commits made between Firefox 30 and Firefox 31](https://github.com/mozilla/addon-sdk/compare/firefox30...firefox31). This will not include any uplifts made after this release entered Aurora.
+
+[Bugs fixed between Firefox 30 and Firefox 31](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-04-29&chfield=resolution&query_format=advanced&chfieldfrom=2014-03-18&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962). This will not include any uplifts made after this release entered Aurora.
+
+### Older versions
+
+{{Firefox_for_developers('30')}}

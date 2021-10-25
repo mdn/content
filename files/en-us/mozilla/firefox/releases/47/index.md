@@ -5,168 +5,139 @@ tags:
   - Firefox
   - Release Notes
 ---
-<div>{{FirefoxSidebar}}</div>
+{{FirefoxSidebar}}
 
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 47 was released on June 6, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-<p><a href="https://www.mozilla.org/firefox/developer/">To test the latest developer features of Firefox, install Firefox Developer Edition</a> Firefox 47 was released on June 6, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.</p>
+## Changes for Web developers
 
-<h2 id="Changes_for_Web_developers">Changes for Web developers</h2>
+### Developer Tools
 
-<h3 id="Developer_Tools">Developer Tools</h3>
+- [User-agent spoofing](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) from the [Responsive mode](/en-US/docs/Tools/Responsive_Design_Mode)
+- [Retaining paths panel](/en-US/docs/Tools/Memory/Dominators_view#retaining_paths_panel) in memory tool
+- [Service workers](/en-US/docs/Web/API/ServiceWorker) and [Push API](/en-US/docs/Web/API/Push_API) debugging
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent">User-agent spoofing</a> from the <a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive mode</a></li>
- <li><a href="/en-US/docs/Tools/Memory/Dominators_view#retaining_paths_panel">Retaining paths panel</a> in memory tool</li>
- <li><a href="/en-US/docs/Web/API/ServiceWorker">Service workers</a> and <a href="/en-US/docs/Web/API/Push_API">Push API</a> debugging
-  <ul>
-   <li><a href="/en-US/docs/Tools/about:debugging">about:debugging</a> dashboard for workers</li>
-   <li>Cached requests are now shown in <a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a></li>
-   <li>Support for <a href="/en-US/docs/Web/API/Cache">cache storage</a> in <a href="/en-US/docs/Tools/Storage_Inspector">Storage Inspector</a></li>
-  </ul>
- </li>
- <li>Ability to filter <a href="/en-US/docs/Tools/Storage_Inspector">Storage Inspector</a> entries</li>
- <li><a href="/en-US/docs/Tools/Web_Console">Console</a> now detects incomplete input and switches multi-line mode</li>
- <li>Updated breakpoint style in <a href="/en-US/docs/Tools/Debugger">Debugger</a></li>
- <li>Prevent panels from hiding automatically using the <a href="/en-US/docs/Tools/Browser_Toolbox">Browser Toolbox</a>, to aid browser and add-on debugging</li>
- <li><a href="/en-US/docs/Tools/Page_Inspector/UI_Tour#fonts_view">Font inspector</a> has been disabled by default</li>
- <li><a href="/en-US/docs/Tools/3D_View">3D view</a> has been removed</li>
- <li>Developer tools theme refresh</li>
- <li>Disable the Font Panel ({{bug(1247723)}}).</li>
-</ul>
+  - [about:debugging](/en-US/docs/Tools/about:debugging) dashboard for workers
+  - Cached requests are now shown in [Network Monitor](/en-US/docs/Tools/Network_Monitor)
+  - Support for [cache storage](/en-US/docs/Web/API/Cache) in [Storage Inspector](/en-US/docs/Tools/Storage_Inspector)
 
-<h3 id="HTML">HTML</h3>
+- Ability to filter [Storage Inspector](/en-US/docs/Tools/Storage_Inspector) entries
+- [Console](/en-US/docs/Tools/Web_Console) now detects incomplete input and switches multi-line mode
+- Updated breakpoint style in [Debugger](/en-US/docs/Tools/Debugger)
+- Prevent panels from hiding automatically using the [Browser Toolbox](/en-US/docs/Tools/Browser_Toolbox), to aid browser and add-on debugging
+- [Font inspector](/en-US/docs/Tools/Page_Inspector/UI_Tour#fonts_view) has been disabled by default
+- [3D view](/en-US/docs/Tools/3D_View) has been removed
+- Developer tools theme refresh
+- Disable the Font Panel ({{bug(1247723)}}).
 
-<p><em>No change.</em></p>
+### HTML
 
-<h3 id="CSS">CSS</h3>
+_No change._
 
-<ul>
- <li>Support for the {{cssxref("::backdrop")}} pseudo-element has been added ({{bug(1064843)}}).</li>
- <li>The case-insensitive modifier <code>i</code> (like in <code>[foo=bar i]</code>) for <a href="/en-US/docs/Web/CSS/Attribute_selectors">attribute selectors</a> has been implemented ({{bug(888190)}}).</li>
- <li>An experimental implementation of CSS Mask Image properties landed. For the moment, this will only be available on Nightly versions of Firefox.y: shorthand version of {{cssxref("mask")}}, as well as {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-size")}} are now available ({{bug(686281)}}).</li>
- <li>The {{cssxref("clip-path")}} property now experimentally supports <code>polygon()</code>, <code>ellipse()</code>, and <code>circle()</code> on HTML elements (does not support <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1246762">inset()</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1246764">path()</a>), behind the pref <code>layout.css.clip-path-shapes.enabled</code> that defaults to <code>false</code> ({{bug(1075457)}}). Interpolation (and therefore animation) of these values is not yet supported.</li>
- <li>Our still experimental grid implementation has been updated:
-  <ul>
-   <li>{{cssxref("align-content")}}: <code>normal</code> behaves now as <code>stretch</code> for grid containers ({{bug(1237754)}}).</li>
-   <li>The order of column/row values for {{cssxref('grid')}}, {{cssxref('grid-template')}}, and <code>grid-gap</code> properties has been swapped ({{bug(1251999)}}).</li>
-  </ul>
- </li>
- <li>The {{cssxref("@media/display-mode", "display-mode")}} media feature is now supported ({{bug("1104916")}}).</li>
- <li>The value <code>true</code> of {{cssxref("text-align")}} and {{cssxref("text-align-last")}} has been renamed to <code>unsafe</code> ({{bug("1250342")}}).</li>
-</ul>
+### CSS
 
-<h3 id="JavaScript">JavaScript</h3>
+- Support for the {{cssxref("::backdrop")}} pseudo-element has been added ({{bug(1064843)}}).
+- The case-insensitive modifier `i` (like in `[foo=bar i]`) for [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) has been implemented ({{bug(888190)}}).
+- An experimental implementation of CSS Mask Image properties landed. For the moment, this will only be available on Nightly versions of Firefox.y: shorthand version of {{cssxref("mask")}}, as well as {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-size")}} are now available ({{bug(686281)}}).
+- The {{cssxref("clip-path")}} property now experimentally supports `polygon()`, `ellipse()`, and `circle()` on HTML elements (does not support [inset()](https://bugzilla.mozilla.org/show_bug.cgi?id=1246762) and [path()](https://bugzilla.mozilla.org/show_bug.cgi?id=1246764)), behind the pref `layout.css.clip-path-shapes.enabled` that defaults to `false` ({{bug(1075457)}}). Interpolation (and therefore animation) of these values is not yet supported.
+- Our still experimental grid implementation has been updated:
 
-<ul>
- <li>The new ES2017 {{jsxref("Object.values()")}} and {{jsxref("Object.entries()")}} methods have been implemented ({{bug(1232639)}}).</li>
- <li>The deprecated <a href="/en-US/docs/Archive/Web/Old_Proxy_API">old Proxy API</a> (<code>Proxy.create</code> and <code>Proxy.createFunction</code>) now presents a deprecation warning in the console and will be removed in a future version. Use the standard {{jsxref("Proxy")}} object instead ({{bug(892903)}}).</li>
- <li>Support for the deprecated non-standard <code>flags</code> argument of <code>String.prototype.</code>{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} has been dropped in non-release builds ({{bug(1245801)}}).</li>
- <li>As per the new ES2016 specification, the {{jsxref("Proxy")}} <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/enumerate">enumerate</a> trap for <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a></code> statements has been removed ({{bug(1246318)}}).</li>
- <li>The {{jsxref("Array.prototype.indexOf()")}} and {{jsxref("Array.prototype.lastIndexOf()")}} methods (and their {{jsxref("TypedArray")}} equivalents) have been updated to never return <code>-0</code> as per the ECMAScript specification ({{bug(1242043)}}).</li>
-</ul>
+  - {{cssxref("align-content")}}: `normal` behaves now as `stretch` for grid containers ({{bug(1237754)}}).
+  - The order of column/row values for {{cssxref('grid')}}, {{cssxref('grid-template')}}, and `grid-gap` properties has been swapped ({{bug(1251999)}}).
 
-<h3 id="InterfacesAPIsDOM">Interfaces/APIs/DOM</h3>
+- The {{cssxref("@media/display-mode", "display-mode")}} media feature is now supported ({{bug("1104916")}}).
+- The value `true` of {{cssxref("text-align")}} and {{cssxref("text-align-last")}} has been renamed to `unsafe` ({{bug("1250342")}}).
 
-<h4 id="DOM_HTML_DOM">DOM &amp; HTML DOM</h4>
+### JavaScript
 
-<ul>
- <li>The property {{domxref("Document.scrollingElement")}} has been implemented behind the pref <code>dom.document.scrollingElement.enabled</code> that defaults to <code>false</code> ({{bug(1153322)}}).</li>
-</ul>
+- The new ES2017 {{jsxref("Object.values()")}} and {{jsxref("Object.entries()")}} methods have been implemented ({{bug(1232639)}}).
+- The deprecated [old Proxy API](/en-US/docs/Archive/Web/Old_Proxy_API) (`Proxy.create` and `Proxy.createFunction`) now presents a deprecation warning in the console and will be removed in a future version. Use the standard {{jsxref("Proxy")}} object instead ({{bug(892903)}}).
+- Support for the deprecated non-standard `flags` argument of `String.prototype.`{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} has been dropped in non-release builds ({{bug(1245801)}}).
+- As per the new ES2016 specification, the {{jsxref("Proxy")}} [enumerate](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/enumerate) trap for [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) statements has been removed ({{bug(1246318)}}).
+- The {{jsxref("Array.prototype.indexOf()")}} and {{jsxref("Array.prototype.lastIndexOf()")}} methods (and their {{jsxref("TypedArray")}} equivalents) have been updated to never return `-0` as per the ECMAScript specification ({{bug(1242043)}}).
 
-<h4 id="WebGL">WebGL</h4>
+### Interfaces/APIs/DOM
 
-<p><em>No change.</em></p>
+#### DOM & HTML DOM
 
-<h4 id="IndexedDB">IndexedDB</h4>
+- The property {{domxref("Document.scrollingElement")}} has been implemented behind the pref `dom.document.scrollingElement.enabled` that defaults to `false` ({{bug(1153322)}}).
 
-<ul>
- <li>The {{domxref("IDBKeyRange.includes()")}} method has been implemented ({{bug("1251498")}}).</li>
-</ul>
+#### WebGL
 
-<h4 id="Service_Worker_and_related_APIs">Service Worker and related APIs</h4>
+_No change._
 
-<ul>
- <li>The {{domxref("Request.Request()")}} constructor can now accept a referrer option in its init object ({{bug(1251448)}}).</li>
- <li>The {{domxref("Request.referrerPolicy")}} property is now supported ({{bug(1251872)}}).</li>
- <li>
-  <p><a href="/en-US/docs/Web/API/Service_Worker_API">Service workers</a> and <a href="/en-US/docs/Web/API/Push_API">Push</a> have been disabled in the <a class="external external-icon" href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 Extended Support Release</a> (ESR) ({{bug(1232029)}}).</p>
- </li>
-</ul>
+#### IndexedDB
 
-<h4 id="WebRTC">WebRTC</h4>
+- The {{domxref("IDBKeyRange.includes()")}} method has been implemented ({{bug("1251498")}}).
 
-<ul>
- <li>Support for the {{domxref("RTCIceServer")}} dictionary has been updated in keeping with revisions to the WebGL 1.0 specification by adding support for the {{domxref("RTCIceServer.credentialType", "credentialType")}} property. This property is a string which specifies whether the credential is a password or a token. Currently, Firefox only supports <code>"password"</code>.</li>
-</ul>
+#### Service Worker and related APIs
 
-<h4 id="New_APIs">New APIs</h4>
+- The {{domxref("Request.Request()")}} constructor can now accept a referrer option in its init object ({{bug(1251448)}}).
+- The {{domxref("Request.referrerPolicy")}} property is now supported ({{bug(1251872)}}).
+- [Service workers](/en-US/docs/Web/API/Service_Worker_API) and [Push](/en-US/docs/Web/API/Push_API) have been disabled in the [Firefox 45 Extended Support Release](https://www.mozilla.org/en-US/firefox/organizations/) (ESR) ({{bug(1232029)}}).
 
-<p><em>No change.</em></p>
+#### WebRTC
 
-<h4 id="Others">Others</h4>
+- Support for the {{domxref("RTCIceServer")}} dictionary has been updated in keeping with revisions to the WebGL 1.0 specification by adding support for the {{domxref("RTCIceServer.credentialType", "credentialType")}} property. This property is a string which specifies whether the credential is a password or a token. Currently, Firefox only supports `"password"`.
 
-<ul>
- <li>{{domxref("Cache.add()")}} and {{domxref("Cache.addAll()")}} now raises a <code>TypeError</code> exception if the response status is not in the <code>200</code> range ({{bug(1244764)}}).</li>
- <li>The <a href="/en-US/docs/Mozilla/Firefox_OS/API/App_installation_and_management_APIs">App installation and management APIs</a> (<code>navigator.mozApps.*</code>) are no longer exposed to non-Firefox OS platforms ({{bug("1238576")}}).</li>
- <li><a href="/en-US/docs/Web/API/Web_Crypto_API">Web Crypto API</a> methods can now use the RSA-PSS cryptographic algorithm ({{bug (1191936)}}).</li>
- <li>The <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a> has had the {{domxref("Permissions.revoke()")}} method added ({{bug("1197461")}}).</li>
- <li>The <a href="/en-US/docs/Web/API/Browser_API">Browser API</a>, which extends the functionality of {{htmlelement("iframe")}}s to allow the creation of frames for displaying web content using HTML — and was previously only available in Firefox OS — is now available to desktop chrome code too ({{bug(1238160)}}).</li>
- <li>The <a href="/en-US/docs/Web/API/Notification">Notification API</a>'s {{domxref("Notification.requestPermission()","requestPermission()")}} method has been updated from a callback to a promised-based syntax ({{bug(1241278)}}).</li>
- <li>The <a href="/en-US/docs/Web/API/Fullscreen_API">Fullscreen API</a> has been updated to the latest spec and unprefixed. Some methods have been renamed or have seen their capitalization changed ({{bug(743198)}}). Note that this is behind the <code>full-screen-api.unprefix.enabled</code> preference, defaulting to false ({{bug(1268749)}}).</li>
-</ul>
+#### New APIs
 
-<h3 id="AudioVideo">Audio/Video</h3>
+_No change._
 
-<ul>
- <li>Now WAV file with u-law compression encoding can be played({{bug(851530)}}).</li>
- <li><a href="https://www.widevine.com/">Widevine</a> Content Decryption Module provided by Google Inc. is available via the <a href="/en-US/docs/Web/API/Encrypted_Media_Extensions_API">Encrypted Media Extensions API</a> for use with MP4 (only; see {{bug(1257716)}} for EME-with-WebM support) on Windows Vista and later and on Mac OS X enabling migration off Silverlight ({{bug(1265270)}}).</li>
-</ul>
+#### Others
 
-<h2 id="HTTP">HTTP</h2>
+- {{domxref("Cache.add()")}} and {{domxref("Cache.addAll()")}} now raises a `TypeError` exception if the response status is not in the `200` range ({{bug(1244764)}}).
+- The [App installation and management APIs](/en-US/docs/Mozilla/Firefox_OS/API/App_installation_and_management_APIs) (`navigator.mozApps.*`) are no longer exposed to non-Firefox OS platforms ({{bug("1238576")}}).
+- [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) methods can now use the RSA-PSS cryptographic algorithm ({{bug (1191936)}}).
+- The [Permissions API](/en-US/docs/Web/API/Permissions_API) has had the {{domxref("Permissions.revoke()")}} method added ({{bug("1197461")}}).
+- The [Browser API](/en-US/docs/Web/API/Browser_API), which extends the functionality of {{htmlelement("iframe")}}s to allow the creation of frames for displaying web content using HTML — and was previously only available in Firefox OS — is now available to desktop chrome code too ({{bug(1238160)}}).
+- The [Notification API](/en-US/docs/Web/API/Notification)'s {{domxref("Notification.requestPermission()","requestPermission()")}} method has been updated from a callback to a promised-based syntax ({{bug(1241278)}}).
+- The [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) has been updated to the latest spec and unprefixed. Some methods have been renamed or have seen their capitalization changed ({{bug(743198)}}). Note that this is behind the `full-screen-api.unprefix.enabled` preference, defaulting to false ({{bug(1268749)}}).
 
-<ul>
- <li>The default value of the {{HTTPHeader("Accept")}} header for images is now <code>*/*</code> instead of <code>image/png,image/*;q=0.8,*/*;q=0.5</code> ({{bug(1249474)}}).</li>
-</ul>
+### Audio/Video
 
-<h2 id="Networking">Networking</h2>
+- Now WAV file with u-law compression encoding can be played({{bug(851530)}}).
+- [Widevine](https://www.widevine.com/) Content Decryption Module provided by Google Inc. is available via the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) for use with MP4 (only; see {{bug(1257716)}} for EME-with-WebM support) on Windows Vista and later and on Mac OS X enabling migration off Silverlight ({{bug(1265270)}}).
 
-<p><em>No change.</em></p>
+## HTTP
 
-<h2 id="Security">Security</h2>
+- The default value of the {{HTTPHeader("Accept")}} header for images is now `*/*` instead of `image/png,image/*;q=0.8,*/*;q=0.5` ({{bug(1249474)}}).
 
-<ul>
- <li>URL with the <code>view-source:</code> protocol don't open the <a href="/en-US/docs/Tools/View_source">View Source</a> tool anymore when used from a Web page ({{bug(1172165)}}).</li>
- <li>The Firefox <a href="https://blog.mozilla.org/futurereleases/2013/09/24/plugin-activation-in-firefox/">click-to-activate plugin whitelist</a> has been removed: only Flash doesn't need to be clicked to be activated ({{bug(1263630)}}).</li>
-</ul>
+## Networking
 
-<h2 id="Changes_for_add-on_and_Mozilla_developers">Changes for add-on and Mozilla developers</h2>
+_No change._
 
-<h3 id="Interfaces">Interfaces</h3>
+## Security
 
-<ul>
- <li>The CSS tokenizer is now available in JavaScript for add-ons ({{bug(1152033)}}).</li>
-</ul>
+- URL with the `view-source:` protocol don't open the [View Source](/en-US/docs/Tools/View_source) tool anymore when used from a Web page ({{bug(1172165)}}).
+- The Firefox [click-to-activate plugin whitelist](https://blog.mozilla.org/futurereleases/2013/09/24/plugin-activation-in-firefox/) has been removed: only Flash doesn't need to be clicked to be activated ({{bug(1263630)}}).
 
-<h3 id="FUEL">FUEL</h3>
+## Changes for add-on and Mozilla developers
 
-<p>The <a href="/en-US/docs/Mozilla/Tech/Toolkit_API/FUEL">FUEL</a> JavaScript library, introduced back in Firefox 3, <strong>has been removed</strong>. This library was designed to aid in add-on development and with the introduction of the <a href="/en-US/docs/Mozilla/Add-ons/SDK">Add-on SDK</a> and, now, by <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a> support, is no longer useful. ({{bug(1090880)}})</p>
+### Interfaces
 
-<h3 id="XUL">XUL</h3>
+- The CSS tokenizer is now available in JavaScript for add-ons ({{bug(1152033)}}).
 
-<p><em>No change.</em></p>
+### FUEL
 
-<h3 id="JavaScript_code_modules">JavaScript code modules</h3>
+The [FUEL](/en-US/docs/Mozilla/Tech/Toolkit_API/FUEL) JavaScript library, introduced back in Firefox 3, **has been removed**. This library was designed to aid in add-on development and with the introduction of the [Add-on SDK](/en-US/docs/Mozilla/Add-ons/SDK) and, now, by [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) support, is no longer useful. ({{bug(1090880)}})
 
-<p><em>No change.</em></p>
+### XUL
 
-<h3 id="XPCOM">XPCOM</h3>
+_No change._
 
-<p><em>No change.</em></p>
+### JavaScript code modules
 
-<h3 id="Other">Other</h3>
+_No change._
 
-<p><em>No change.</em></p>
+### XPCOM
 
-<h2 id="Older_versions">Older versions</h2>
+_No change._
 
-<p>{{Firefox_for_developers(46)}}</p>
+### Other
+
+_No change._
+
+## Older versions
+
+{{Firefox_for_developers(46)}}
