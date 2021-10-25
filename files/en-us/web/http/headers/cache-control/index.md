@@ -264,7 +264,7 @@ In the example above, cache storage stores a response and it's been fresh for 7 
 
 Revalidation will make the cache be fresh again, so it appears to the client that it was always fresh during that period.
 
-If no request happened during that period, cache became stale and the next request will revalidate normally.
+If no request happened during that period, the cache became stale and the next request will revalidate normally.
 
 #### `stale-if-error`
 
