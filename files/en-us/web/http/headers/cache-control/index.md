@@ -154,7 +154,7 @@ Cache storage is allowed to reuse stale responses when disconnected from the ori
 
 #### `proxy-revalidate`
 
-`proxy-revalidate` response directive is the `must-revalidate` only for shared caches.
+The `proxy-revalidate` response directive is the equivalent of `must-revalidate` only for shared caches.
 
 #### `no-store`
 
