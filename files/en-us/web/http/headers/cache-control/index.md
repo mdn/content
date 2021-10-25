@@ -85,7 +85,7 @@ Therefore, several terms are used in the specification to clarify the explanatio
 - `Private Cache`
   - : Cache storage that exists in the client. On the other words Local Cache, Browser Cache etc. It can store and reuse personalized content for a single user.
 - `Store response`
-  - : Storing response in Cache Storage when it's cacheable. But it's not always reused as-is. (Usually "Cache" means it)
+  - : Storing a response in cache storage when it's cacheable. But it's not always reused as-is. (Usually "cache" means storing a response.)
 - `Reuse response`
   - : Reusing cached responses for following requests.
 - `Revalidate response`
