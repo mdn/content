@@ -426,7 +426,7 @@ Note: If `index.html` is controlled under Basic / Digest Authentication, files u
 
 ### Up-to-date contents always
 
-If contents are generated dynamically, or it's static but updated often, you want a user to receive up-to-date contents every moment.
+For content that’s generated dynamically, or that’s static but updated often, you want a user to always receive the most up-to-date version.
 
 In case you don't add no `Cache-Control` header because it's not intended to be cached, it could cause an unexpected result. Cache Storage is allowed to cache it heuristically, so if you have any thoughts on caching, you should always indicate it via the `Cache-Control` header explicitly.
 
