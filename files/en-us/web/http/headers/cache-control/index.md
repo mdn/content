@@ -214,7 +214,7 @@ The `must-understand` response directive indicates that cache storage should sto
 
 When a server sends a new status code in a response which has some requirements based on status code, it can cause some trouble when cache storage stores it without understanding those requirements.
 
-`must-understand` should be coupled with `no-store` for falling back behavior.
+`must-understand` should be coupled with `no-store, for fallback behavior.
 
 ```
 Cache-Control: must-understand, no-store
