@@ -2,7 +2,6 @@
 title: 'aria-controls'
 slug: Web/Accessibility/ARIA/Attributes/aria-controls
 tags: 
-
   - Accessibility
   - ARIA
   - ARIA attribute
