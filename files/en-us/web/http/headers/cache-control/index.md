@@ -223,7 +223,7 @@ Cache-Control: must-understand, no-store
 If the cache storage doesn't support `must-understand`, it will be ignored. If `no-store` is also present, the response isn't stored.
 If the cache storage supports `must-understand`, it stores the response with an understanding of cache requirements based on its status code.
 
-You can use it when you respond with a newly defined status code.
+You can use `must-understand` when you respond with a newly defined status code.
 
 #### `no-transform`
 
