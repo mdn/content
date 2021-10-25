@@ -204,7 +204,7 @@ You can use the `public` directive to unlock that restriction.
 Cache-Control: public, max-age=604800
 ```
 
-Note that, `s-maxage` or `must-revalidate` also unlock its restriction. In other cases, you don't need to add `public` for storing on shared cache storage.
+Note that, `s-maxage` or `must-revalidate` also unlock that restriction.
 
 If you aren't aware of the `Authorization` header on your site, or you are already using `s-maxage` or `must-revalidate` on your response, you don't need to use `public`.
 
