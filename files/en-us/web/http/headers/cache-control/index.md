@@ -93,7 +93,7 @@ Therefore, several terms are used in the specification to clarify the explanatio
 - `Fresh response`
   - : Indicates that the response is fresh. This usually means the response can be reused for subsequent requests, depending on request directives.
 - `Stale response`
-  - : Indicates that the response is stale. It usually means the response can't be reusable as-is. Cache storage isn't required to remove stale responses immediately, because revalidation could change the response from being stale to being fresh again.
+  - : Indicates that the response is stale. It usually means the response can't be reused as-is. Cache storage isn't required to remove stale responses immediately, because revalidation could change the response from being stale to being fresh again.
 - `Age`
   - : The time since a response was generated. It is a criterion for whether a response is fresh or stale.
 
