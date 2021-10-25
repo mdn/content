@@ -11,12 +11,11 @@ browser-compat: api.Sanitizer.sanitizeFor
 
 The **`sanitizeFor()`** method of the {{domxref("Sanitizer")}} interface is used to parse and sanitize a string of HTML for insertion into the DOM at some later point.
 
-The method accepts the tag name of the eventual destination HTML element as a parameter.
-This is needed because the result of parsing an HTML string depends on where it is used.
+The method accepts the tag name of the eventual destination HTML element as a parameter, and returns an HTML element object (of that type) that contains the sanitized subtree as its child.
+This context is needed because the result of parsing an HTML string depends on where it is used.
 For example, {{HTMLElement("td")}} elements are valid nodes when inserted into a {{HTMLElement("table")}} but will be skipped/ignored when parsed into a {{HTMLElement("div")}}.
 
-The method returns an HTML element object that contains the sanitized subtree as its child.
-The returned object corresponds to the specified  `element` parameter, and its subtree **must** be inserted into an element of the same type.
+The subtree **must** be inserted into an element of the same type as the returned object (and the original `element` parameter).
 If the caller extracts the sanitized subtree from the object, for example by using `innerHTML`, it is their responsibility to ensure the correct context is used when it is inserted in the DOM.
 
 The default `Sanitizer()` configuration strips out XSS-relevant input by default, including {{HTMLElement("script")}} tags, custom elements, and comments.
