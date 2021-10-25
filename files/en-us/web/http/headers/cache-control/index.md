@@ -366,7 +366,7 @@ If you don’t want a response stored in cache storage, use the `no-store` direc
 Cache-Control: no-store
 ```
 
-Note that `no-cache` means "it can be stored but don't reuse before validating" so it's not for preventing storing cache.
+Note that `no-cache` means "it can be stored but don't reuse before validating", so it's not for preventing cache storage.
 
 ```plain example-bad
 Cache-Control: no-cache
