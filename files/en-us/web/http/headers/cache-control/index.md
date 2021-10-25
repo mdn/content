@@ -65,7 +65,7 @@ Standard `Cache-Control` directives are defined as follows.
 |                  | `private`          |
 |                  | `public`           |
 
-Extension `Cache-Control` directives are not part of the core HTTP caching standards document. Check the [compatibility table](#browser_compatibility) for their support; user-agents that don't recognize them should ignore them.
+Extension `Cache-Control` directives are not part of the core HTTP caching standards document. Check the [compatibility table](#browser_compatibility) for their support; user agents that don't recognize them should ignore them.
 
 | Request          | Response                 |
 | :--------------- | :----------------------- |
