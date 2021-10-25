@@ -15,7 +15,7 @@ The method accepts the tag name of the eventual destination HTML element as a pa
 This is needed because the result of parsing an HTML string depends on where it is used.
 For example, {{HTMLElement("td")}} elements are valid nodes when inserted into a {{HTMLElement("table")}} but will be skipped/ignored when parsed into a {{HTMLElement("div")}}.
 
-The method returns an HTML element object of the same as the eventual destination element, containing the sanitized subtree as its child.
+The method returns an HTML element object that contains the sanitized subtree as its child.
 The returned object corresponds to the specified  `element` parameter, and its subtree **must** be inserted into an element of the same type.
 If the caller extracts the sanitized subtree from the object, for example by using `innerHTML`, it is their responsibility to ensure the correct context is used when it is inserted in the DOM.
 
