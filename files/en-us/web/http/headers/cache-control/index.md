@@ -126,7 +126,7 @@ The `s-maxage` response directive has the same meaning as `max-age`, but only fo
 Cache-Control: s-maxage=604800
 ```
 
-It can be used to separate a control for Private/Shared cache.
+`s-maxage` can be used to control the private cache and shared cache separately.
 
 #### `no-cache`
 
