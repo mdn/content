@@ -49,29 +49,26 @@ Caching directives follow the validation rules below:
 
 Standard `Cache-Control` directives are defined as follows.
 
-| Request          | Response           |
-| :--------------- | :----------------- |
-| `max-age`        | `max-age`          |
-| `max-stale`      | -                  |
-| `min-fresh`      | -                  |
-| -                | `s-maxage`         |
-| `no-cache`       | `no-cache`         |
-| `no-store`       | `no-store`         |
-| `no-transform`   | `no-transform`     |
-| `only-if-cached` | -                  |
-| -                | `must-revalidate`  |
-| -                | `proxy-revalidate` |
-| -                | `must-understand`  |
-| -                | `private`          |
-| -                | `public`           |
-
-Extension `Cache-Control` directives are not part of the core HTTP caching standards document. Check the [compatibility table](#browser_compatibility) for their support; user agents that don't recognize them should ignore them.
-
 | Request          | Response                 |
 | :--------------- | :----------------------- |
+| `max-age`        | `max-age`                |
+| `max-stale`      | -                        |
+| `min-fresh`      | -                        |
+| -                | `s-maxage`               |
+| `no-cache`       | `no-cache`               |
+| `no-store`       | `no-store`               |
+| `no-transform`   | `no-transform`           |
+| `only-if-cached` | -                        |
+| -                | `must-revalidate`        |
+| -                | `proxy-revalidate`       |
+| -                | `must-understand`        |
+| -                | `private`                |
+| -                | `public`                 |
 | -                | `immutable`              |
 | -                | `stale-while-revalidate` |
 | `stale-if-error` | `stale-if-error`         |
+
+Note: Check the [compatibility table](#browser_compatibility) for their support; user agents that don't recognize them should ignore them.
 
 ## Vocabulary
 
