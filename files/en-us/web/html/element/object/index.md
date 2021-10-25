@@ -1,5 +1,5 @@
 ---
-title: <object>
+title: '<object>: The External Object element'
 slug: Web/HTML/Element/object
 tags:
   - Element

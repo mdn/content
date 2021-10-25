@@ -1,5 +1,5 @@
 ---
-title: <slot>
+title: '<slot>: The Web Component Slot element'
 slug: Web/HTML/Element/slot
 tags:
   - Element

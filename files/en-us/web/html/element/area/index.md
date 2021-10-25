@@ -1,5 +1,5 @@
 ---
-title: <area>
+title: '<area>: The Image Map Area element'
 slug: Web/HTML/Element/area
 tags:
   - Content
