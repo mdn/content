@@ -132,21 +132,7 @@ Therefore the expressions are not evaluated until the relevant line is is execut
 
 ## See also
 
-- [var statement](/en-US/docs/Web/JavaScript/Reference/Statements/var) — MDN
-- [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) — MDN
-
-
-
-
-// Bits to chuck
-
-/////
-
-
-
-
-In particular `var`-declared variables are problematic because `undefined` is valid Javascript but likely to be the wrong value
-(reading an uninitialized variable created using  `let`, `const` or  `class` will throw a `ReferenceError`).
-
-////
-
+- [`var` statement](/en-US/docs/Web/JavaScript/Reference/Statements/var) — MDN
+- [`let` statement](/en-US/docs/Web/JavaScript/Reference/Statements/let) — MDN
+- [`const` statement](/en-US/docs/Web/JavaScript/Reference/Statements/const) — MDN
+- [`function` statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) — MDN
