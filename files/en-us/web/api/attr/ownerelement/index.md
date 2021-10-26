@@ -13,7 +13,7 @@ The read-only **`ownerElement`** property of the {{domxref("Attr")}} interface r
 
 ### Value
 
-The {{domxref("Element")}} the attribute belons to, or `null` if the attribute is not linked to an element.
+The {{domxref("Element")}} the attribute belongs to, or `null` if the attribute is not linked to an element.
 
 ## Example
 
