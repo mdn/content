@@ -57,7 +57,7 @@ Events have three functions:
 
   - : `array` of `string`. Extra options for the event. You can pass just one value:
 
-    - ` "``responseHeaders``" `: include `responseHeaders` in the `details` object passed to the listener
+    - `"responseHeaders"`: include `responseHeaders` in the `details` object passed to the listener
 
 ## Additional objects
 

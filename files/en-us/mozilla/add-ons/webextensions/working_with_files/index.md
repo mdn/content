@@ -44,7 +44,7 @@ Example: [Imagify](https://github.com/mdn/webextensions-examples/tree/master/ima
 Guide: [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
 API references: [HTML input element](/en-US/docs/Web/HTML/Element/input/file) | [DOM File API](/en-US/docs/Web/API/File)
 
-> **Note:** If you want to access or process all the files in a selected folder, you can do so using ` <input type="file" ``webkitdirectory="true"/>` to select the folder and return all the files it contains.
+> **Note:** If you want to access or process all the files in a selected folder, you can do so using `<input type="file" webkitdirectory="true"/>` to select the folder and return all the files it contains.
 
 ## Open files in an extension using drag and drop
 
