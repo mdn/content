@@ -144,7 +144,6 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
     <tr>
       <th scope="col">Reason</th>
       <th scope="col">Failing examples</th>
-      <th scope="col">Passing examples</th>
     </tr>
   </thead>
   <tbody>
@@ -160,11 +159,10 @@ const headers = {
 fetch('https://example.com/', { headers });
         </pre>
       </td>
-      <td></td>
     </tr>
     <tr>
       <td>
-        Invalid header value- the header object must contain exactly two elements.
+        Invalid header value- the header object must contain exactly two elements
       </td>
       <td>
         <pre>
@@ -175,15 +173,97 @@ const headers = [
 fetch('https://example.com/', { headers });
         </pre>
       </td>
+    </tr>
+    <tr>
+      <td>
+        Invalid url/scheme or
+        using un-supported schemes by fetch or
+        using un-supported schemes for particular request mode
+      </td>
       <td>
         <pre>
-const headers = [
-    ["Content-Type", "application/json"],
-    ["Accept", "*"],
-];
-fetch('https://example.com/', { headers });
+fetch('blob://example.com/', { mode: 'cors' })
         </pre>
       </td>
+    </tr>
+      <td>Url includes credentials</td>
+      <td>
+        <pre>
+fetch('https://user:password@example.com/')
+        </pre>
+      </td>
+    <tr>
+      <td>Invalid referrer url-</td>
+      <td>
+        <pre>
+fetch('https://example.com/', {
+  referrer: './abc\u0000df'
+})
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>In valid modes- navigate and websocket</td>
+      <td>
+        <pre>
+fetch('https://example.com/', { mode: 'navigate' })
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        If the request cache mode is "only-if-cached" and the request mode is other than "same-origin"
+      </td>
+      <td>
+        <pre>
+fetch('https://example.com/', {
+  cache: 'only-if-cached',
+  mode: 'no-cors'
+})
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        If request method is an invalid name token or one of forbidden headers-
+        CONNECT, TRACE or TRACK
+      </td>
+      <td>
+        <pre>
+fetch('https://example.com/', { method: 'CONNECT' })
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        If request mode is "no-cors" and the request method is other than
+        CORS-safe-listed method (GET, HEAD, or POST)
+      </td>
+      <td>
+        <pre>
+fetch('https://example.com/', {
+  method: 'CONNECT',
+  mode: 'no-cors'
+})
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        If request method is GET or HEAD and body is non-null or not undefined
+      </td>
+      <td>
+        <pre>
+fetch('https://example.com/', {
+  method: 'GET',
+  body: new FormData()
+})
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>if fetch throws a network error</td>
+      <td></td>
     </tr>
   </tbody>
 </table>
