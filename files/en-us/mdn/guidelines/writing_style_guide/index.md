@@ -533,7 +533,7 @@ Do not use variant spellings.
 Use "elements" to refer to HTML and XML elements, rather than "tags".
 In addition, they should almost always be wrapped in "<>", and should be in the {{HTMLElement("code")}} style.
 
-When you reference a given element for the first time in a section, you should use the {{TemplateLink("HTMLElement")}} macro to create a link to the documentation for the element (unless you're writing within that element's reference document page).
+When you reference a given element for the first time in a section, you should use the [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) macro to create a link to the documentation for the element (unless you're writing within that element's reference document page).
 
 - **Correct**: the {{HTMLElement("span")}} element
 - **Incorrect**: the span tag
