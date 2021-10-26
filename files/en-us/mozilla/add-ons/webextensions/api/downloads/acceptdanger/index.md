@@ -15,7 +15,7 @@ browser-compat: webextensions.api.downloads.acceptDanger
 ---
 {{AddonSidebar()}}
 
-The **`acceptDanger`\*\***`()`\*\* function of the {{WebExtAPIRef("downloads")}} API prompts the user to either accept or cancel a potentially dangerous download.
+The **`acceptDanger()`** function of the {{WebExtAPIRef("downloads")}} API prompts the user to either accept or cancel a potentially dangerous download.
 
 This function can't be called from background scripts, only in scripts that are running in a visible window (such as a browser or page action's popup).
 

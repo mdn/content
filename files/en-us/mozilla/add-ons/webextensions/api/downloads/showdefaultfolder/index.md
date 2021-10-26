@@ -15,7 +15,7 @@ browser-compat: webextensions.api.downloads.showDefaultFolder
 ---
 {{AddonSidebar()}}
 
-The **`showDefaultFolder`\*\***`()`\*\* function of the {{WebExtAPIRef("downloads")}} API opens the default downloads folder in the platform's file manager.
+The **`showDefaultFolder()`** function of the {{WebExtAPIRef("downloads")}} API opens the default downloads folder in the platform's file manager.
 
 ## Syntax
 

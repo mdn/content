@@ -15,7 +15,7 @@ browser-compat: webextensions.api.downloads.drag
 ---
 {{AddonSidebar()}}
 
-The **`drag`\*\***`()`\*\* function of the {{WebExtAPIRef("downloads")}} API initiates dragging the downloaded file to another application.
+The **`drag()`** function of the {{WebExtAPIRef("downloads")}} API initiates dragging the downloaded file to another application.
 
 ## Syntax
 

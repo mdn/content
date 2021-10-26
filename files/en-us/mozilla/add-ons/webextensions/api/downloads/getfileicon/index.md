@@ -15,7 +15,7 @@ browser-compat: webextensions.api.downloads.getFileIcon
 ---
 {{AddonSidebar()}}
 
-The **`getFileIcon`\*\***`()`\*\* function of the {{WebExtAPIRef("downloads")}} API retrieves an icon for the specified download.
+The **`getFileIcon()`** function of the {{WebExtAPIRef("downloads")}} API retrieves an icon for the specified download.
 
 For new downloads, file icons are available after the {{WebExtAPIRef("downloads.onCreated")}} event has been received. The image returned by this function while a download is in progress may be different from the image returned after the download is complete.
 

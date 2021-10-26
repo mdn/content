@@ -15,7 +15,7 @@ browser-compat: webextensions.api.downloads.onErased
 ---
 {{AddonSidebar()}}
 
-The **`onErased`\*\***`()`\*\* event of the {{WebExtAPIRef("downloads")}} API fires when a download is erased from the browser history.
+The **`onErased()`** event of the {{WebExtAPIRef("downloads")}} API fires when a download is erased from the browser history.
 
 The listener is passed the `downloadId` of the {{WebExtAPIRef('downloads.DownloadItem')}} object in question as a parameter.
 

@@ -15,7 +15,7 @@ browser-compat: webextensions.api.downloads.show
 ---
 {{AddonSidebar()}}
 
-The **`show`\*\***`()`\*\* function of the {{WebExtAPIRef("downloads")}} API shows the downloaded file in its containing folder in the underlying platform's file manager.
+The **`show()`** function of the {{WebExtAPIRef("downloads")}} API shows the downloaded file in its containing folder in the underlying platform's file manager.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
