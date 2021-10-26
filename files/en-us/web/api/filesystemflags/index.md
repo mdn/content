@@ -13,7 +13,8 @@ browser-compat: api.FileSystemFlags
 ---
 {{APIRef("File and Directory Entries API")}}
 
-The **`FileSystemFlags`** dictionary defines a set of values which are used when specifying option flags when calling certain methods in the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API). Methods which accept an options parameter of this type may specify zero or more of these flags as fields in an object, like this:
+The **`FileSystemFlags`** dictionary defines a set of values which are used when specifying option flags when calling certain methods in the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API).
+Methods which accept an options parameter of this type may specify zero or more of these flags as fields in an object, like this:
 
 ```js
 dataDirectoryEntry.getDirectory("Workspace", { create: true }, function(entry) {
@@ -27,9 +28,13 @@ Here, we see that the `create` property is provided, with a value of `true`, ind
 ## Properties
 
 - {{domxref("FileSystemFlags.create", "create")}} {{optional_inline}}
-  - : If this property is `true`, and the requested file or directory doesn't exist, the user agent should create it. The default is `false`. The parent directory must already exist.
+  - : If this property is `true`, and the requested file or directory doesn't exist, the user agent should create it.
+    The default is `false`.
+    The parent directory must already exist.
 - {{domxref("FileSystemFlags.exclusive", "exclusive")}} {{optional_inline}}
-  - : If `true`, and the `create` option is also `true`, the file must not exist prior to issuing the call. Instead, it must be possible for it to be created newly at call time. The default is `false`.
+  - : If `true`, and the `create` option is also `true`, the file must not exist prior to issuing the call.
+    Instead, it must be possible for it to be created newly at call time.
+    The default is `false`.
 
 ### Values and results
 
@@ -58,15 +63,12 @@ Note that, when `create` is `false`, the value of `exclusive` is irrelevant and 
       <td><code>false</code></td>
       <td>n/a</td>
       <td>
-        Path exists and matches the desired type (depending on whether the
-        function called is <code>getFile()</code> or <code>getDirectory()</code>
+        Path exists and matches the desired type (depending on whether the function called is <code>getFile()</code> or <code>getDirectory()</code>
       </td>
       <td>
         The <code>successCallback</code> is called with a
-        {{domxref("FileSystemFileEntry")}} if
-        <code>getFile()</code> was called or a
-        {{domxref("FileSystemDirectoryEntry")}} if
-        <code>getDirectory()</code> was called.
+        {{domxref("FileSystemFileEntry")}} if <code>getFile()</code> was called or a
+        {{domxref("FileSystemDirectoryEntry")}} if <code>getDirectory()</code> was called.
       </td>
     </tr>
     <tr>
@@ -74,8 +76,7 @@ Note that, when `create` is `false`, the value of `exclusive` is irrelevant and 
       <td>n/a</td>
       <td>Path exists but doesn't match the desired type</td>
       <td>
-        The <code>errorCallback</code> is called with an appropriate error code
-        (if the callback was provided).
+        The <code>errorCallback</code> is called with an appropriate error code (if the callback was provided).
       </td>
     </tr>
     <tr>
@@ -85,8 +86,7 @@ Note that, when `create` is `false`, the value of `exclusive` is irrelevant and 
       <td>
         The existing file or directory is removed and replaced with a new one,
         then the <code>successCallback</code> is called with a
-        {{domxref("FileSystemFileEntry")}} or a
-        {{domxref("FileSystemDirectoryEntry")}}, as appropriate.
+        {{domxref("FileSystemFileEntry")}} or a {{domxref("FileSystemDirectoryEntry")}}, as appropriate.
       </td>
     </tr>
     <tr>
@@ -94,8 +94,7 @@ Note that, when `create` is `false`, the value of `exclusive` is irrelevant and 
       <td><code>false</code></td>
       <td>Path doesn't exist</td>
       <td>
-        The file or directory is created, then a
-        {{domxref("FileSystemFileEntry")}} or a
+        The file or directory is created, then a {{domxref("FileSystemFileEntry")}} or a
         {{domxref("FileSystemDirectoryEntry")}} is passed to the
         <code>successCallback</code>, as appropriate.
       </td>
@@ -114,10 +113,8 @@ Note that, when `create` is `false`, the value of `exclusive` is irrelevant and 
       <td><code>true</code></td>
       <td>Path doesn't exist</td>
       <td>
-        The file or directory is created, then a
-        {{domxref("FileSystemFileEntry")}} or a
-        {{domxref("FileSystemDirectoryEntry")}} is passed to the
-        <code>successCallback</code>, as appropriate.
+        The file or directory is created, then a {{domxref("FileSystemFileEntry")}} or a
+        {{domxref("FileSystemDirectoryEntry")}} is passed to the <code>successCallback</code>, as appropriate.
       </td>
     </tr>
   </tbody>
@@ -125,9 +122,11 @@ Note that, when `create` is `false`, the value of `exclusive` is irrelevant and 
 
 ## Specifications
 
-| Specification                        | Status                           | Comment         |
-| ------------------------------------ | -------------------------------- | --------------- |
-| {{SpecName('File System API', '#dictdef-filesystemflags')}} | {{Spec2('File System API')}} | |
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
