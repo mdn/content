@@ -133,7 +133,7 @@ Cache-Control: no-cache
 
 If you want caches to always check for content updates while reusing stored content when it hasn't changed, `no-cache` is the directive to use. It does this by requiring caches to revalidate each request with the origin server.
 
-Note that a common mistake is to consider `no-cache` to mean "don't cache". However, `no-cache` actually allows storing but validating before reusing. If the sense of "don't cache" that you want is actually "don't store", then `no-store` is the directive to use.
+Note that `no-cache` does not mean "don't cache". `no-cache` allows caches to store a response, but requires them to revalidate it before reuse. If the sense of "don't cache" that you want is actually "don't store", then `no-store` is the directive to use.
 
 #### `must-revalidate`
 
