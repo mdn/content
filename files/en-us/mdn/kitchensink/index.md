@@ -7,15 +7,14 @@ tags:
 ---
 {{MDNSidebar}}
 
-> **Warning:** Don't delete this page. It's used by
-> [mdn/yari](https://github.com/mdn/yari) for its automation.
+> **Warning:** Don't delete this page. It's used by [mdn/yari](https://github.com/mdn/yari) for its automation.
 
 ## About this page
 
 The **kitchensink** is a page that _attempts_ to incorporate every possible content element and Yari macro.
 
-This page attempts to be the complete intersection of every other page. No in terms of the text but in terms of the
-styles and macros. Let's start with some notes...
+This page attempts to be the complete intersection of every other page. No in terms of the text but in terms of the styles and macros.
+Let's start with some notes...
 
 Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 
@@ -120,25 +119,17 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, palpable content.
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>, palpable content.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Phrasing content</a
-        >.
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">Phrasing content</a>.
       </td>
     </tr>
     <tr>
@@ -148,18 +139,13 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
+        Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content">phrasing content</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
       </td>
     </tr>
     <tr>
@@ -175,8 +161,7 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
 
 <table class="fullwidth-table">
   <caption>
-    Values for the content of
-    <code>&#x3C;meta name="viewport"></code>
+    Values for the content of <code>&#x3C;meta name="viewport"></code>
   </caption>
   <thead>
     <tr>
@@ -208,17 +193,15 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
       <td><code>auto</code>, <code>contain</code> or <code>cover</code></td>
       <td>
         <p>
-          The <code>auto</code> value doesn’t affect the initial layout
-          viewport, and the whole web page is viewable.
+          The <code>auto</code> value doesn’t affect the initial layout viewport, and the whole web page is viewable.
         </p>
         <p>
           The <code>contain</code> value means that the viewport is scaled to
           fit the largest rectangle inscribed within the display.
         </p>
         <p>
-          The <code>cover</code> value means that the viewport is scaled to fill
-          the device display. It is highly recommended to make use of the
-          <a href="/en-US/docs/Web/CSS/env()">safe area inset</a> variables to
+          The <code>cover</code> value means that the viewport is scaled to fill the device display.
+          It is highly recommended to make use of the <a href="/en-US/docs/Web/CSS/env()">safe area inset</a> variables to
           ensure that important content doesn't end up outside the display.
         </p>
       </td>
@@ -239,12 +222,13 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
 
 An {{Glossary("HTTP")}} error code meaning "Bad Gateway".
 
-A {{Glossary("Server", "server")}} can act as a gateway or proxy (go-between) between a client (like your Web browser) and another, upstream server. When you request to access a {{Glossary("URL")}}, the gateway server can relay your request to the upstream server. "502" means that the upstream server has returned an invalid response.
+A {{Glossary("Server", "server")}} can act as a gateway or proxy (go-between) between a client (like your Web browser) and another, upstream server.
+When you request to access a {{Glossary("URL")}}, the gateway server can relay your request to the upstream server.
+"502" means that the upstream server has returned an invalid response.
 
 - JavaScript {{jsxref("Array")}} on MDN
 
-Listening for mouse movement is even easier than listening for key
-presses: all we need is the listener for the {{event("mousemove")}} event.
+Listening for mouse movement is even easier than listening for key presses: all we need is the listener for the {{event("mousemove")}} event.
 ...just below the `keyup event`:
 
 ## Browser compatibility
@@ -253,7 +237,9 @@ presses: all we need is the listener for the {{event("mousemove")}} event.
 
 ## Axis-Aligned Bounding Box
 
-One of the simpler forms of collision detection is between two rectangles that are axis aligned — meaning no rotation. The algorithm works by ensuring there is no gap between any of the 4 sides of the rectangles. Any gap means a collision does not exist.
+One of the simpler forms of collision detection is between two rectangles that are axis aligned — meaning no rotation.
+The algorithm works by ensuring there is no gap between any of the 4 sides of the rectangles.
+Any gap means a collision does not exist.
 
 ```js
 var rect1 = {x: 5, y: 5, width: 50, height: 50}
@@ -318,7 +304,7 @@ this.color("blue");
 - [Accessibility resources at MDN](/en-US/docs/Web/Accessibility)
 - {{Interwiki("wikipedia", "Web accessibility")}} on Wikipedia
 
-The {{TemplateLink("AvailableInWorkers")}} macro inserts a localised note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
+The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localised note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
 
 {{AvailableInWorkers}}
 
@@ -336,8 +322,10 @@ The {{TemplateLink("AvailableInWorkers")}} macro inserts a localised note box in
 <!---->
 
 - Create a {{htmlelement("canvas")}} element and set its `width` and `height` attributes to the original, smaller resolution.
-- Set its CSS {{cssxref("width")}} and {{cssxref("height")}} properties to be 2x or 4x the value of the HTML `width` and `height`. If the canvas was created with a 128 pixel width, for example, we would set the CSS `width` to `512px` if we wanted a 4x scale.
-- Set the {{htmlelement("canvas")}} element's `image-rendering` CSS property to some value that does not make the image blurry. Either `crisp-edges` or `pixelated` will work. Check out the {{cssxref("image-rendering")}} article for more information on the differences between these values, and which prefixes to use depending on the browser.
+- Set its CSS {{cssxref("width")}} and {{cssxref("height")}} properties to be 2x or 4x the value of the HTML `width` and `height`.
+  If the canvas was created with a 128 pixel width, for example, we would set the CSS `width` to `512px` if we wanted a 4x scale.
+- Set the {{htmlelement("canvas")}} element's `image-rendering` CSS property to some value that does not make the image blurry.
+  Either `crisp-edges` or `pixelated` will work. Check out the {{cssxref("image-rendering")}} article for more information on the differences between these values, and which prefixes to use depending on the browser.
 
 <!---->
 
