@@ -69,7 +69,7 @@ There are 4 categories of ARIA states and properties:
     - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 	 	 	
     - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) 	 	 	
     - [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) 	 	 	
-    - [`aria-rowcount`](/en-US/docs/Web/  [Accessibility/ARIA/Attributes/aria-rowcount) 	 		
+    - [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) 	 		
     - [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) 	 		
     - [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) 	 		
     - [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
