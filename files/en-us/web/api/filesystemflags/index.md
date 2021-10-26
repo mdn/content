@@ -50,12 +50,8 @@ Note that, when `create` is `false`, the value of `exclusive` is irrelevant and 
       <th rowspan="2" scope="col">Result</th>
     </tr>
     <tr>
-      <th scope="col">
-        {{domxref("FileSystemFlags.create", "create")}}
-      </th>
-      <th scope="col">
-        {{domxref("FileSystemFlags.exclusive", "exclusive")}}
-      </th>
+      <th scope="col"><code>create</code></th>
+      <th scope="col"><code>exclusive</code></th>
     </tr>
   </thead>
   <tbody>
