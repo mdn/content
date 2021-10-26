@@ -367,12 +367,6 @@ Note that `no-cache` means "it can be stored but don't reuse before validating",
 Cache-Control: no-cache
 ```
 
-But if you don’t want a response stored in a shared cache **because it's personalized for the user** (e.g. using cookies, the `Authorization` header, etc), you should consider using the `private` directive too.
-
-```
-Cache-Control: no-store, private
-```
-
 In theory, if directives are conflicted, the most restrictive directive should be honored. So the example below is basically meaningless, because `no-cache`, `max-age=0` and `must-revalidate` conflict with `no-store`.
 
 ```plain example-bad
