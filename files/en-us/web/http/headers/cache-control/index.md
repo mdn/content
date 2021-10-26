@@ -171,12 +171,6 @@ You should add the `private` directive for user-personalized content — in part
 
 If you forget to add `private` to a response with personalized content, then that response can be stored in a shared cache and end up being used by multiple users, which can cause personal information to leak.
 
-`no-store` may seem to work fine for avoiding leaks, but is semantically different from `private`. To avoid leaking personal information, it's better to use both `private` and `no-store`.
-
-```
-Cache-Control: private, no-store
-```
-
 #### `public`
 
 Responses for requests with `Authorization` header fields must not be stored in a shared cache. But the `public` directive will cause such responses to be stored in a shared cache.
