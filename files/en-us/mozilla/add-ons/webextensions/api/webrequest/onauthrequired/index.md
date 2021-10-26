@@ -98,7 +98,7 @@ Events have three functions:
   - : `array` of `string`. Extra options for the event. You can pass any of the following values:
 
     - `"blocking"`: make the request block, so you can cancel the request or supply authentication credentials
-    - ` "``responseHeaders``" `: include `responseHeaders` in the `details` object passed to the listener
+    - `"responseHeaders" `: include `responseHeaders` in the `details` object passed to the listener
 
 ## Additional objects
 
