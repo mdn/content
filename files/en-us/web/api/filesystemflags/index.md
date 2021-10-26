@@ -27,11 +27,11 @@ Here, we see that the `create` property is provided, with a value of `true`, ind
 
 ## Properties
 
-- {{domxref("FileSystemFlags.create", "create")}} {{optional_inline}}
+- `create` {{optional_inline}}
   - : If this property is `true`, and the requested file or directory doesn't exist, the user agent should create it.
     The default is `false`.
     The parent directory must already exist.
-- {{domxref("FileSystemFlags.exclusive", "exclusive")}} {{optional_inline}}
+- `exclusive` {{optional_inline}}
   - : If `true`, and the `create` option is also `true`, the file must not exist prior to issuing the call.
     Instead, it must be possible for it to be created newly at call time.
     The default is `false`.

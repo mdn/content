@@ -46053,22 +46053,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/FileSystemFlags/create": {
-    "modified": "2020-10-15T21:49:31.156Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/FileSystemFlags/exclusive": {
-    "modified": "2020-10-15T21:49:29.974Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
   "Web/API/FileSystemHandle": {
     "modified": "2020-12-12T11:21:27.430Z",
     "contributors": [
