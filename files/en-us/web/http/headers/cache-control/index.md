@@ -289,7 +289,7 @@ Browser usually add `no-cache` to requests when users are **force reloading** a 
 
 ### `no-store`
 
-The `no-store` request directive indicates that the client requires that no caches can store its request and corresponding response — even if the origin server's response could be cacheable.
+The `no-store` request directive allows a client to request that caches refrain from storing the request and corresponding response — even if the origin server's response could be stored.
 
 ```
 Cache-Control: no-store
