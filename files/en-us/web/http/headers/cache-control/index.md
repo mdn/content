@@ -367,10 +367,14 @@ Note that `no-cache` means "it can be stored but don't reuse before validating",
 Cache-Control: no-cache
 ```
 
-In theory, if directives are conflicted, the most restrictive directive should be honored. So the example below is basically meaningless, because `no-cache`, `max-age=0` and `must-revalidate` conflict with `no-store`.
+In theory, if directives are conflicted, the most restrictive directive should be honored. So the example below is basically meaningless, because `private`, `no-cache`, `max-age=0` and `must-revalidate` conflict with `no-store`.
 
 ```plain example-bad
+# conflicted
 Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+
+# equivalant to
+Cache-Control: no-store
 ```
 
 ### Caching static assets with “cache busting”
