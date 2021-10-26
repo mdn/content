@@ -122,7 +122,6 @@ The `s-maxage` response directive also indicate how long the response is fresh f
 Cache-Control: s-maxage=604800
 ```
 
-`s-maxage` can be used to control the shared cache separate from the private cache.
 
 #### `no-cache`
 
