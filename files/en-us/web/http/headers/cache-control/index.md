@@ -74,14 +74,14 @@ Note: Check the [compatibility table](#browser_compatibility) for their support;
 
 The following terms are used in this document; many but not all are from the specification.
 
-- `Cache Storage`
-  - : Storage which holds requests and responses for reusing in subsequent requests. May be either a shared or private cache.
+- `(HTTP) Caches`
+  - : Implementation which holds requests and responses for reusing in subsequent requests. May be either a shared or private cache.
 - `Shared Cache`
-  - : Cache storage that exists between the origin server and clients (e.g. Proxy, CDN) It stores a single response and reuses it with multiple users, so developers should avoid storing personalized contents to be cached in the shared cache.
+  - : Caches that exists between the origin server and clients (e.g. Proxy, CDN) It stores a single response and reuses it with multiple users, so developers should avoid storing personalized contents to be cached in the shared cache.
 - `Private Cache`
-  - : Cache storage that exists in the client. Also called _local cache_, or even just _browser cache_ etc. It can store and reuse personalized content for a single user.
+  - : Caches that exists in the client. Also called _local cache_, or even just _browser cache_ etc. It can store and reuse personalized content for a single user.
 - `Store response`
-  - : Store a response in cache storage when it's cacheable. But it's not always reused as-is. (Usually "cache" means storing a response.)
+  - : Store a response in caches when it's cacheable. But it's not always reused as-is. (Usually "cache" means storing a response.)
 - `Reuse response`
   - : Reuse cached responses for subsequent requests.
 - `Revalidate response`
@@ -105,7 +105,7 @@ The `max-age=N` response directive indicates that the response remains fresh unt
 Cache-Control: max-age=604800
 ```
 
-Indicates that cache storage can store this response and reuse it for subsequent requests while it's fresh.
+Indicates that caches can store this response and reuse it for subsequent requests while it's fresh.
 
 Note that `max-age` is not the elapsed time since the response was received, but instead the elapsed time since the response was generated on the origin server. So if the other cache(s) on the path the response takes store it for 100 seconds (indicated using the `Age` response header field), the browser cache would deduct 100 seconds from its freshness lifetime.
 
@@ -125,7 +125,7 @@ Cache-Control: s-maxage=604800
 
 #### `no-cache`
 
-The `no-cache` response directive indicates that the response can be stored in cache storage, but must be validated with the origin server before each reuse -- even when the cache is disconnected from the origin server.
+The `no-cache` response directive indicates that the response can be stored in caches, but must be validated with the origin server before each reuse -- even when the cache is disconnected from the origin server.
 
 ```
 Cache-Control: no-cache
@@ -137,7 +137,7 @@ Note that `no-cache` does not mean "don't cache". `no-cache` allows caches to st
 
 #### `must-revalidate`
 
-The `must-revalidate` response directive indicates that the response can be stored in cache storage and can be reused while fresh. Once it becomes stale, it must be validated with the origin server before reuse.
+The `must-revalidate` response directive indicates that the response can be stored in caches and can be reused while fresh. Once it becomes stale, it must be validated with the origin server before reuse.
 
 Typically, `must-revalidate` is used with `max-age`.
 
@@ -153,7 +153,7 @@ The `proxy-revalidate` response directive is the equivalent of `must-revalidate`
 
 #### `no-store`
 
-The `no-store` response directive indicates that any cache storage of any kind (private or shared) should not store this response.
+The `no-store` response directive indicates that any caches of any kind (private or shared) should not store this response.
 
 ```
 Cache-Control: no-store
@@ -161,7 +161,7 @@ Cache-Control: no-store
 
 #### `private`
 
-The `private` response directive indicates that the response can be stored only in a private cache (e.g. local cache storage in browsers).
+The `private` response directive indicates that the response can be stored only in a private cache (e.g. local caches in browsers).
 
 ```
 Cache-Control: private
@@ -193,9 +193,9 @@ If a request doesn’t have an `Authorization` header, or you are already using 
 
 #### `must-understand`
 
-The `must-understand` response directive indicates that cache storage should store the response only if it understands the requirements for caching based on status code.
+The `must-understand` response directive indicates that caches should store the response only if it understands the requirements for caching based on status code.
 
-When a server sends a new status code in a response which has some requirements based on status code, it can cause some trouble when cache storage stores it without understanding those requirements.
+When a server sends a new status code in a response which has some requirements based on status code, it can cause some trouble when caches stores it without understanding those requirements.
 
 `must-understand` should be coupled with `no-store`, for fallback behavior.
 
@@ -203,8 +203,8 @@ When a server sends a new status code in a response which has some requirements 
 Cache-Control: must-understand, no-store
 ```
 
-If the cache storage doesn't support `must-understand`, it will be ignored. If `no-store` is also present, the response isn't stored.
-If the cache storage supports `must-understand`, it stores the response with an understanding of cache requirements based on its status code.
+If the caches doesn't support `must-understand`, it will be ignored. If `no-store` is also present, the response isn't stored.
+If the caches supports `must-understand`, it stores the response with an understanding of cache requirements based on its status code.
 
 You can use `must-understand` when you respond with a newly defined status code.
 
@@ -231,7 +231,7 @@ A modern best practice for static resources is to include version/hashes in thei
 ```
 
 When a user reloads the browser, browsers will send conditional requests for validating to the origin server. But it's not necessary to revalidate these kinds of static resources even when a user reloads the browser, because they're never modified.
-`immutable` tells cache storage that its response is immutable while it's fresh, and avoids these kinds of unnecessary conditional requests to the server.
+`immutable` tells caches that its response is immutable while it's fresh, and avoids these kinds of unnecessary conditional requests to the server.
 
 When you use a cache-busting pattern for resources and apply them to a long `max-age`, you can also add `immutable` to avoid revalidation.
 
@@ -293,7 +293,7 @@ The `max-age=N` request directive indicates that the client allows a stored resp
 Cache-Control: max-age=3600
 ```
 
-In the case above, if the response with `Cache-Control: max-age=604800` was stored in cache storage 3 hours ago, the cache couldn't reuse that response.
+In the case above, if the response with `Cache-Control: max-age=604800` was stored in caches 3 hours ago, the cache couldn't reuse that response.
 
 Many browsers use this directive for **reloading**, as explained below.
 
@@ -311,9 +311,9 @@ The `max-stale=N` request directive indicates that the client allows a stored re
 Cache-Control: max-stale=3600
 ```
 
-In the case above, if the response with `Cache-Control: max-age=604800` was stored on cache storage 3 hours ago, the cache couldn't reuse that response.
+In the case above, if the response with `Cache-Control: max-age=604800` was stored on caches 3 hours ago, the cache couldn't reuse that response.
 
-Clients could use this header when the origin server is down or too slow and could accept cached responses from cache storage even if it's a bit old.
+Clients could use this header when the origin server is down or too slow and could accept cached responses from caches even if it's a bit old.
 
 Note that the major browsers do not support requests with `max-stale`.
 
@@ -325,7 +325,7 @@ The `min-fresh=N` request directive indicates that the client allows a stored re
 Cache-Control: min-fresh=600
 ```
 
-In the case above, if the response with `Cache-Control: max-age=3600` was stored in cache storage 51 minutes ago, the cache couldn't reuse that response.
+In the case above, if the response with `Cache-Control: max-age=3600` was stored in caches 51 minutes ago, the cache couldn't reuse that response.
 
 Clients could use this header when the user requires not only it's fresh but also it wouldn't update for a period of time.
 
@@ -337,13 +337,13 @@ Same meaning that `no-transform` has for a response, but for a request instead.
 
 ### `only-if-cached`
 
-The client indicates for cache storage to obtain an already-cached response. If cache storage has stored a response, it’s reused.
+The client indicates for caches to obtain an already-cached response. If caches has stored a response, it’s reused.
 
 ## Use Cases
 
 ### Preventing storing
 
-If you don’t want a response stored in cache storage, use the `no-store` directive.
+If you don’t want a response stored in caches, use the `no-store` directive.
 
 ```
 Cache-Control: no-store
@@ -417,7 +417,7 @@ Adding `no-cache` to the response causes revalidation to the server, so you can 
 Cache-Control: no-cache
 ```
 
-Most HTTP/1.0 caches don't support `no-cache` directives, so historically `max-age=0` was used as a workaround. But only `max-age=0` could cause a stale response to be reused when cache storage disconnected from the origin server. `must-revalidate` addresses that. That’s why the example below is equivalent to `no-cache`.
+Most HTTP/1.0 caches don't support `no-cache` directives, so historically `max-age=0` was used as a workaround. But only `max-age=0` could cause a stale response to be reused when caches disconnected from the origin server. `must-revalidate` addresses that. That’s why the example below is equivalent to `no-cache`.
 
 ```
 Cache-Control: max-age=0, must-revalidate
@@ -427,9 +427,9 @@ But for now, you can simply use `no-cache` instead.
 
 ### Clearing an already-stored cache
 
-Unfortunately, there are no cache directives for clearing already-stored responses from cache storage.
+Unfortunately, there are no cache directives for clearing already-stored responses from caches.
 
-Imagine that client / cache storage stores a fresh response for a path, with no request flight to the server. There is nothing a server could do to that path.
+Imagine that client / caches stores a fresh response for a path, with no request flight to the server. There is nothing a server could do to that path.
 
 Alternatively, `Clear-Site-Data` can clear all cache from the browser. But be careful: that clears every stored response for a site — and only in browsers, not for a shared cache.
 
