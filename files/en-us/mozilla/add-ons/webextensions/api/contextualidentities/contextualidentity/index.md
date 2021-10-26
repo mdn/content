@@ -14,7 +14,7 @@ browser-compat: webextensions.api.contextualIdentities.ContextualIdentity
 ---
 {{AddonSidebar()}}
 
-The **`contextualIdentities`\*\***`.ContextualIdentity`\*\* type describes a single contextual identity.
+The **`contextualIdentities.ContextualIdentity`** type describes a single contextual identity.
 
 ## Type
 

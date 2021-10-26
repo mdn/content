@@ -15,7 +15,7 @@ browser-compat: webextensions.api.downloads.removeFile
 ---
 {{AddonSidebar()}}
 
-The **`removeFile`\*\***`()`\*\* function of the {{WebExtAPIRef("downloads")}} API removes a downloaded file from disk.
+The **`removeFile()`** function of the {{WebExtAPIRef("downloads")}} API removes a downloaded file from disk.
 
 This API removes the file from disk, but does not remove it from the browser's downloads history, therefore a call to {{WebExtAPIRef("downloads.search()")}} will still return the item as a {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}, but its `exists` attribute will be `false`.
 

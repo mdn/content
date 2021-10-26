@@ -15,7 +15,7 @@ browser-compat: webextensions.api.downloads.pause
 ---
 {{AddonSidebar()}}
 
-The **`pause`\*\***`()`\*\* function of the {{WebExtAPIRef("downloads")}} API pauses a download.
+The **`pause()`** function of the {{WebExtAPIRef("downloads")}} API pauses a download.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
