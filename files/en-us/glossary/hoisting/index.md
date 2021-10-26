@@ -6,28 +6,22 @@ tags:
   - Glossary
   - JavaScript
 ---
-JavaScript **Hoisting** refers to the process whereby the interpreter allocates memory for function, variable and class _declarations_ in their scope, prior to execution of the code.
-This allows them to be referenced before they are defined.
+JavaScript **Hoisting** refers to the process whereby the interpreter appears to move the _declaration_ of functions, variables or classes to the top of their scope, prior to execution of the code.
 
-For example, Javascript source code can use a function before defining what the function does, because the function is effectively made available from the top of their scope.
+Hoisting allows functions to be safely used in code before they are declared.
 
-Note however, that any initialization of a new _variable_ or _class_ will **not** happen until the original line of code in which it was initialized is executed:
-- Declarations made using `let`, `const` and `class` are not initialized as part of hoisting.
-- Declarations that are made using `var` are initialized with a default value of `undefined`.
-
-Conceptually hoisting is often presented as the interpreter "splitting variable declaration and initialization, and moving (just) the declarations to the top of the code".
-
-Hoisting can lead to unexpected errors if variables are read before their intended initialization.
-In particular `var`-declared variables are problematic because `undefined` is valid Javascript but likely to be the wrong value
-(reading an uninitialized variable created using  `let`, `const` or  `class` will throw a `ReferenceError`).
-For this reason variables should be declared and initialised before they are used, when possible.
+Variable and class _declarations_ are also hoisted, so they too can be referenced before they are declared.
+Note however that this can lead to unexpected errors, and is not generally recommended.
 
 > **Note:** The term hoisting is not used in any normative specification prose prior to [ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/index.html).
 > Hoisting was thought up as a general way of thinking about how execution contexts (specifically the creation and execution phases) work in JavaScript.
 
-## Technical example
 
-One of the advantages of JavaScript putting function declarations into memory before it executes any code segment is that it allows you to use a function before you declare it in your code. For example:
+## Function hoisting
+
+One of the advantages of hoisting is that it lets you use a function before you declare it in your code.
+
+The code snippet below shows how you would have to write your code if hoisting did not exist:
 
 ```js
 function catName(name) {
@@ -41,7 +35,7 @@ The result of the code above is: "My cat's name is Tiger"
 */
 ```
 
-The above code snippet is how you would expect to write the code for it to work. Now, let's see what happens when we call the function before we write it:
+Hoisting allows us to call the function before we write it.
 
 ```js
 catName("Chloe");
@@ -54,45 +48,51 @@ The result of the code above is: "My cat's name is Chloe"
 */
 ```
 
-Even though we call the function in our code first, before the function is written, the code still works, because this is how context execution works in JavaScript.
+## Variable hoisting
 
-Hoisting works well with other data types and variables.
-The variables can be initialized and used before they are declared.
+Hoisting works with variables too, so you can use a variable in code before it is declared and/or initialized.
 
-### Only declarations are hoisted
+However JavaScript only hoists declarations, not initializations!
+This means that initialization doesn't happen until the associated line of code is executed, even if the variable was originally initialized then declared, or declared and initialized in the same line.
 
-JavaScript only hoists declarations, not initializations.
-If a variable is used in code and then declared and initialized, the value when it is used will be its default initialization (`undefined` for a variable declared using `var`, otherwise uninitialized).
-For example:
+Until that point in the execution is reached the variable has its _default_ initialization (`undefined` for a variable declared using `var`, otherwise uninitialized).
+
+> **Note:** Conceptually variable hoisting is often presented as the interpreter "splitting variable declaration and initialization, and moving (just) the declarations to the top of the code".
+
+Below are some examples of using a variable before it is declared.
+
+### var hoisting
+
+Here we declare then initialize the value of a `var` after using it.
+The default initialization of the `var` is `undefined`.
 
 ```js
 console.log(num); // Returns 'undefined' from hoisted var declaration (not 6)
 var num; // Declaration
 num = 6; // Initialization
+console.log(num); // Returns 6 after the line with initialization is executed.
 ```
 
-The example below only has initialization.
-No hoisting happens so trying to read the variable results in `ReferenceError` exception.
+The same thing happens if we declare and initialize the variable in the same line.
 
 ```js
-console.log(num); // Throws ReferenceError exception
+console.log(num); // Returns 'undefined' from hoisted var declaration (not 6)
+var num = 6; // Initialization and declaration.
+console.log(num); // Returns 6 after the line with initialization is executed.
+```
+
+If we forget the declaration altogether (and only initialize the value) it isn't hoisted.
+Trying to read the variable before it is initialized results in `ReferenceError` exception.
+
+```js
+console.log(num); // Throws ReferenceError exception - interpreter doesn't know about `num`.
 num = 6; // Initialization
 ```
-
-Below are more examples demonstrating hoisting.
+ 
+Note however that initialization also causes declaration (if not already declared).
+The code snippet below will work, because even though it isn't hoisted, the variable is initialized and effectively declared before it is used.
 
 ```js
-// Example 1
-// Only y is hoisted
-
-x = 1; // Initialize x, and if not already declared, declare it - but no hoisting as there is no var in the statement.
-console.log(x + " " + y); // '1 undefined'
-// This prints value of y as undefined as JavaScript only hoists declarations
-var y = 2; // Declare and Initialize y
-
-// Example 2
-// No hoisting, but since initialization also causes declaration (if not already declared), variables are available.
-
 a = 'Cran'; // Initialize a
 b = 'berry'; // Initialize b
 
@@ -101,27 +101,52 @@ console.log(a + "" + b); // 'Cranberry'
 
 ### let and const hoisting
 
-Variables declared with `let` and `const` are also hoisted, but unlike for `var` the variables are not initialized with a default value of `undefined`.
-Until the line in which they are initialized is executed, any code that accesses these variables will throw an exception.
+Variables declared with `let` and `const` are also hoisted, but are not initialized with a default value.
+An exception will be thrown if a variable declared with `let` or `const` is read before it is initialized.
+
+```js
+console.log(num); // Throws ReferenceError exception as the variable value is uninitialized
+let num = 6; // Initialization
+```
+
+Note that it is the order in which code is _executed_ that matters, not the order in which it is written in the source file.
+The code will succceed provided the line that initializes the variable is executed before any line that reads it.
 
 For information and examples see [`let` > temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz).
 
-### Function expression hoisting
 
-A [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) is not hoisted.
-
-The expression evaluates to a function, which is typically assigned to a variable that can then be used to call the function.
-In this case the variable declaration is hoisted and the function expression is its initialization, which is not evaluated until the relevant line is is executed.
-
-### class hoisting
+## class hoisting
 
 Classes defined using a [class declaration](/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) are hoisted, which means that JavaScript has a reference the class.
 However the class is not intialized by default, so any code that uses it before the line in which it is initialized is executed will throw a `ReferenceError`.
 
-[Class expressions](/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions) are like function expressions: if assigned to a variable the variable may be hoisted, but the class expression itself is not.
+
+## Function and class expression hoisting
+
+[Function expressions](/en-US/docs/Web/JavaScript/Reference/Operators/function) and [class expressions](/en-US/docs/Web/JavaScript/Reference/Classes#class_expressions) are not hoisted.
+
+The expressions evaluate to a function or class (respectively), which are typically assigned to a variable.
+In this case the variable declaration is hoisted and the expression is its initialization.
+Therefore the expressions are not evaluated until the relevant line is is executed.
 
 
 ## See also
 
 - [var statement](/en-US/docs/Web/JavaScript/Reference/Statements/var) — MDN
 - [function statement](/en-US/docs/Web/JavaScript/Reference/Statements/function) — MDN
+
+
+
+
+// Bits to chuck
+
+/////
+
+
+
+
+In particular `var`-declared variables are problematic because `undefined` is valid Javascript but likely to be the wrong value
+(reading an uninitialized variable created using  `let`, `const` or  `class` will throw a `ReferenceError`).
+
+////
+
