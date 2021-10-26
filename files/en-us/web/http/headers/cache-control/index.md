@@ -159,12 +159,6 @@ The `no-store` response directive indicates that any cache storage of any kind (
 Cache-Control: no-store
 ```
 
-But `no-store` is not on its own a reliable or sufficient mechanism for ensuring privacy. For example, if you want user-personalized responses to not be stored in any cache storage — for avoiding reuse by other users (and therefore, information leaks) — you should add the `private` directive too.
-
-```
-Cache-Control: no-store, private
-```
-
 #### `private`
 
 The `private` response directive indicates that the response can be stored only in a private cache (e.g. local cache storage in browsers).
