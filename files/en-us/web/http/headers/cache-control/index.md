@@ -283,7 +283,7 @@ The `no-cache` request directive asks caches to validate the response with the o
 Cache-Control: no-cache
 ```
 
-`no-cache` means that clients could always receive up-to-date responses even if cache storage stores fresh responses.
+`no-cache` allows clients to request the most up-to-date response even if the cache has a fresh response.
 
 Browser usually add `no-cache` to requests when users are **force reloading** a page.
 
