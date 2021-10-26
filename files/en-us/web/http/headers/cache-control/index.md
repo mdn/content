@@ -137,7 +137,7 @@ Note that `no-cache` does not mean "don't cache". `no-cache` allows caches to st
 
 #### `must-revalidate`
 
-The `must-revalidate` response directive indicates that the response can be stored in cache storage and can be reused while it's been fresh. But once it becomes stale, it must be validated to the origin server before reuse.
+The `must-revalidate` response directive indicates that the response can be stored in cache storage and can be reused while fresh. Once it becomes stale, it must be validated with the origin server before reuse.
 
 So you primarily use it with `max-age`.
 
