@@ -277,7 +277,7 @@ After a period of time, the stored response became stale normally. That means th
 
 ### `no-cache`
 
-The `no-cache` request directive requests that the response should be validated by the origin server before reuse.
+The `no-cache` request directive asks caches to validate the response with the origin server before reuse.
 
 ```
 Cache-Control: no-cache
