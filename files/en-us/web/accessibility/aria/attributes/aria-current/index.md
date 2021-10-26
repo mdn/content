@@ -14,7 +14,7 @@ A non-null `aria-current` state on an element indicates that this element repres
 
 ## Description
 
-When you have a group of related elements, such as several links in a breadcrump or steps in a multi-step flow, with one element in the group styled differently from the others to indicate to the sighted user that this is the current element within its group, the `aria-current` should be used to infom the assistive technology user what has been indicated via styling. 
+When you have a group of related elements, such as several links in a breadcrumb or steps in a multi-step flow, with one element in the group styled differently from the others to indicate to the sighted user that this is the current element within its group, the `aria-current` should be used to inform the assistive technology user what has been indicated via styling. 
 
 In a breadcrumb list, when a link within a set of pagination links is styled to indicate the user is currently on that page, `aria-current="page"` should be set on that link. In a multi step based process with a step indicator such as a multi-page survey or a multi step checkout or registration process, when the current step icon is visually different to represent that it is the current step, that icon's container should have `aria-current="step"` for assistive technology users who may not be able to "see" the visual difference.
 
