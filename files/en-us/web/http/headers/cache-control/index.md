@@ -13,7 +13,7 @@ browser-compat: http.headers.Cache-Control
 
 {{HTTPSidebar}}
 
-The **`Cache-Control`** HTTP header fields hold _directives_ (instructions) for [caching](/en-US/docs/Web/HTTP/Caching) in both requests and responses. This header can be used to control caching not only in browsers, but also in shared caches (e.g. Proxies, CDNs).
+The **`Cache-Control`** HTTP header field holds _directives_ (instructions) in both requests and responses that control [caching](/en-US/docs/Web/HTTP/Caching) in browsers and shared caches (e.g. Proxies, CDNs).
 
 <table class="properties">
   <tbody>
