@@ -16,16 +16,15 @@ The global `aria-describedby` attribute identifies the element (or elements) tha
 ## Description
 
 The `aria-describedby` attribute is used to list the IDs of the elements that describe the object, establishing a relationship between widgets or groups and the text that describes them. 
+The `aria-describedby` attribute can be used to associate static text with form elements, widgets, groups of elements, panes, regions that have a heading, definitions, and more. It can be used with semantic HTML elements and with elements that have an ARIA role.
 
 The `aria-describedby` attribute is very similar to [`aria-labelledby`](../aria-labelledby/) attribute; while the `aria-labelledby` lists the ids of the labels or elements that describe the essence of an object, the `aria-describedby` lists the ids of the descriptions, or elements providing more information that the user might need. Both `aria-labelledby` and `aria-describedby` reference other elements to calculate a text alternative, but a label should be concise, where a description is intended to provide more verbose information.
-
-The `aria-describedby` attribute can be used to associate static text with form elements, widgets, groups of elements, panes, regions that have a heading, definitions, and more. It can be used with semantic HTML elements and with elements that have an ARIA role.
 
 The elements linked via `aria-describedby` don't need to be visible. It is possible to reference an element even if that element is hidden. For example, a form control can have a description that is hidden by default this is revealed on request using a disclosure widget like a "more information" icon. The sited user clicks on the icon; for assistive technology users the description is referenced from that form field directly with `aria-describedby`.
 
 ## Examples
 
-Example 1: Application Landmark Descriptions
+### Example 1: Application Landmark Descriptions
 
 In the example below, an introductory paragraph describes a calendar application. `aria-describedby` is used to associate the paragraph with the application container.
 
@@ -41,7 +40,7 @@ In the example below, an introductory paragraph describes a calendar application
 </div>
 ```
 
-Example 2: A Close Button
+### Example 2: A Close Button
 
 In the example below, a button that functions as a 'close' button on a dialog is described elsewhere in the document. The `aria-describedby` attribute is used to associate the description with the button.
 
