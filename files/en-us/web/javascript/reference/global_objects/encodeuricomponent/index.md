@@ -30,7 +30,7 @@ encodeURIComponent(uriComponent);
   - : It can be `string`, `number`, `boolean`, `null`, `undefined` or any other object. Before encoding, the `uriComponent` gets converted to `string` using `toString` method. 
 ### Return value
 
-A new string representing the provided string encoded as a URI component.
+A new string representing the provided `uriComponent` encoded as a URI component.
 
 ## Description
 
