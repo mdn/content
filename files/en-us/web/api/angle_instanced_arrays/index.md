@@ -38,10 +38,35 @@ This extension exposes three new methods.
 
 ## Examples
 
-Enabling the extension:
-
+The following example shows how to draw a given geometry multiple times with a single draw call.
+> **Warning:** The following is educational, not production level code. It should generally be avoided to construct data / buffers within the rendering loop or right before use. 
 ```js
-var ext = gl.getExtension('ANGLE_instanced_arrays');
+// enable the extension
+const ext = gl.getExtension('ANGLE_instanced_arrays');
+
+// binding the geometry buffer as usual
+gl.bindBuffer(gl.ARRAY_BUFFER, geometryVertexBuffer);
+gl.enableVertexAttribArray(vertexPositionAttributeLocation);
+gl.vertexAttribPointer(vertexPositionAttributeLocation, 3, gl.FLOAT, false, 0, 0);
+
+// build position buffer
+const instancePositions = [
+  instance1.x, instance1.y, instance1.z, // position of instance 1
+  instance2.x, instance2.y, instance2.z, // position of instance 2
+  instance3.x, instance3.y, instance3.z  // position of instance 3
+];
+const instancePositionBuffer = createWebGLBufferFromData(instancePositions);
+
+// binding the instance positions buffer as you would with any attribute
+gl.bindBuffer(gl.ARRAY_BUFFER, instancePositionBuffer);
+gl.enableVertexAttribArray(instancePositionAttributeLocation);
+gl.vertexAttribPointer(instancePositionAttributeLocation, 3, gl.FLOAT, false, 0, 0);
+
+// mark the attribe as instanced and advance it every single(1) instance rather than every vertex
+ext.vertexAttribDivisorANGLE(instancePositionAttributeLocation, 1);
+
+// draw an instance for each position in the position buffer
+ext.drawArraysInstancedANGLE(gl.TRIANGLES, 0, numGeometryVertices, instancePositions.length / 3);
 ```
 
 ## Specifications
