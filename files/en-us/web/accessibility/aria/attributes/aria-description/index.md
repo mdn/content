@@ -15,13 +15,22 @@ The global `aria-description` attribute defines a string value that describes or
 
 ## Description
 
-The global `aria-description` attribute provides a mechanism for th developer to describe or annotate the current element for assistive technology users. The string value defines the accessible description property. 
+The global `aria-description` attribute provides a mechanism for the developer to describe or annotate the current element providing greater context for assistive technology users. 
 
-The `aria-description` attribute is similar to [`aria-label`](../aria-label) in that both provide a text string to associate with the element, but a label should be concise, whereas a description is intended to provide more verbose information. 
+```html
+<div role="application" aria-label="calendar" aria-description="Game schedule for the Boston Red Sox 2021 Season">
+    <h1>Red Sox 2021</h1>
+    <div role="grid">
+        ...
+    </div>
+</div>
+```
 
-The `aria-description` property should really only be used when providing a visible description is not the desired user experience. If the description text is available in the DOM, use use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) instead. The `aria-description` has the same purpose as the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby); both provide the user with additional descriptive text for the object on which it is set. The `aria-describedby` attribute takes as it's value a list of id's of the elements that contain descriptive text about the object. The `aria-description` is used when there is no appropriated descriptive text that can be associated with the object via the `aria-describedby`. If both attributes are present, the `aria-describedby` takes precendence in defining the accessible description property.
+The `aria-description` attribute is similar to [`aria-label`](../aria-label) in that both provide a text string to associate with the element, but a label should be short and concise, while the description can be longer as it is intended to provide more context and information. 
 
-The content of the description, whether set by `aria-description` or `aria-describedby` should be flat content. If the content is very long, has semantic meaning requirements, or has a navigational structure, use [`aria-details`]((/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details) instead. 
+If descriptive text is available in the DOM, use use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) instead. The `aria-description` property should only be used when providing a visible description is not the desired user experience. The `aria-description` and `aria-describedby` properties have the same purpose; both provide the user with additional descriptive text for the object on which it is set. The `aria-describedby` attribute takes as it's value a list of id's of the elements that contain descriptive text about the object. The `aria-description` is used when there is no appropriate descriptive text that can be associated with the object by ID reference. If both attributes are present, the `aria-describedby` takes precendence in defining the accessible description property.
+
+The content of the description, whether set by `aria-description` or `aria-describedby` should be flat text. If the content is very long, has semantic meaning requirements, or has a navigational structure, use [`aria-details`]((/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details) instead. 
 
 ## Values
 
@@ -31,7 +40,7 @@ The content of the description, whether set by `aria-description` or `aria-descr
 ## ARIAMixin API 
 
 - {{domxref("Element.ariaDescription")}}
-  - : The  [`ariaDescription`](/en-US/docs/Web/API/Element/ariadescription) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-description` attribute, which defines a string value that describes or annotates the current element.
+  - : The  [`ariaDescription`](/en-US/docs/Web/API/Element/ariaDescription) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-description` attribute, which defines a string value that describes or annotates the current element.
 
 ## Associated roles
 
