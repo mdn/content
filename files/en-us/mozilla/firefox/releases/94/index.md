@@ -19,7 +19,7 @@ No notable changes
 
 ### CSS
 
-- The [`@import`](/en-US/docs/Web/CSS/@import) rule now supports the `layout()` function, which specifies a cascade layer defined using the [`@layer`](en-US/docs/Web/CSS/@layer) rule ({{bug(1699217)}}).
+- The [`@import`](/en-US/docs/Web/CSS/@import) rule now supports the `layout()` function, which specifies a cascade layer defined using the [`@layer`](/en-US/docs/Web/CSS/@layer) rule ({{bug(1699217)}}).
 
 ### JavaScript
 
