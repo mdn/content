@@ -77,4 +77,4 @@ This feature is not part of any current specification. It is no longer on track 
 
 ## See also
 
-- [aria-details](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+- [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
