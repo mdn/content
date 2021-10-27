@@ -60,7 +60,7 @@ for (const instance of instances) {
 }
 const instancePositionBuffer = createWebGLBufferFromData(instancePositions);
 
-// binding the instance positions buffer as you would with any attribute
+// binding the instance position buffer as you would with any attribute
 gl.bindBuffer(gl.ARRAY_BUFFER, instancePositionBuffer);
 gl.enableVertexAttribArray(instancePositionAttributeLocation);
 gl.vertexAttribPointer(instancePositionAttributeLocation, 3, gl.FLOAT, false, 0, 0);
@@ -68,7 +68,7 @@ gl.vertexAttribPointer(instancePositionAttributeLocation, 3, gl.FLOAT, false, 0,
 // mark the attribe as instanced and advance it every single(1) instance rather than every vertex
 ext.vertexAttribDivisorANGLE(instancePositionAttributeLocation, 1);
 
-// draw an geometry for each instance
+// draw geometry for each instance
 ext.drawArraysInstancedANGLE(gl.TRIANGLES, 0, numGeometryVertices, instances.length);
 ```
 
