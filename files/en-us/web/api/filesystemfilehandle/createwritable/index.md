@@ -41,7 +41,7 @@ const fileStreamPromise = FileSystemFileHandle.createWritable();
 
 ### Return value
 
-A {{jsxref('Promise')}} which resolves with a {{domxref('FileSystemWritableFileStream')}}.
+A {{jsxref('Promise')}} which resolves to a {{domxref('FileSystemWritableFileStream')}} object.
 
 ### Exceptions
 
