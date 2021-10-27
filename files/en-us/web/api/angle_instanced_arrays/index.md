@@ -50,11 +50,14 @@ gl.enableVertexAttribArray(vertexPositionAttributeLocation);
 gl.vertexAttribPointer(vertexPositionAttributeLocation, 3, gl.FLOAT, false, 0, 0);
 
 // build position buffer
-const instancePositions = [
-  instance1.x, instance1.y, instance1.z, // position of instance 1
-  instance2.x, instance2.y, instance2.z, // position of instance 2
-  instance3.x, instance3.y, instance3.z  // position of instance 3
-];
+const instancePositions = [];
+for (const instance of instances) {
+  instancePositions.push(
+    instance.position.x,
+    instance.position.y,
+    instance.position.z
+  );
+}
 const instancePositionBuffer = createWebGLBufferFromData(instancePositions);
 
 // binding the instance positions buffer as you would with any attribute
@@ -65,8 +68,8 @@ gl.vertexAttribPointer(instancePositionAttributeLocation, 3, gl.FLOAT, false, 0,
 // mark the attribe as instanced and advance it every single(1) instance rather than every vertex
 ext.vertexAttribDivisorANGLE(instancePositionAttributeLocation, 1);
 
-// draw an instance for each position in the position buffer
-ext.drawArraysInstancedANGLE(gl.TRIANGLES, 0, numGeometryVertices, instancePositions.length / 3);
+// draw an geometry for each instance
+ext.drawArraysInstancedANGLE(gl.TRIANGLES, 0, numGeometryVertices, instances.length);
 ```
 
 ## Specifications
