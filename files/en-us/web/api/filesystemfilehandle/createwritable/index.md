@@ -26,11 +26,7 @@ the temporary file when the writable filestream is closed.
 ## Syntax
 
 ```js
-var promise = FileSystemFileHandle.createWritable();
-
-promise.then((fileSystemWritableFileStream) => {
-  // ...
-})
+const fileStreamPromise = FileSystemFileHandle.createWritable();
 ```
 
 ### Parameters
