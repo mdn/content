@@ -8,6 +8,10 @@ tags:
 ---
 A programming language is said to have **First-class functions** when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
 
+**JavaScript First-order-function**
+
+First order function is a function that doesn't accept another function as an argument and doesn't return a function as its return value.
+
 ## Example | Assign a function to a variable
 
 ### JavaScript
