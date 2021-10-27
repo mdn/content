@@ -47,7 +47,7 @@ const errorNode = doc.querySelector("parsererror");
 if (errorNode) {
   console.log("error while parsing");
 } else {
-  console.log(dom.documentElement.nodeName);
+  console.log(doc.documentElement.nodeName);
 }
 ```
 
