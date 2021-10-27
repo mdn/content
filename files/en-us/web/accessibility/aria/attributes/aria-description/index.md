@@ -2,7 +2,6 @@
 title: 'ARIA: aria-description attribute'
 slug: Web/Accessibility/ARIA/Attributes/aria-description
 tags: 
-
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -18,7 +17,8 @@ The global `aria-description` attribute defines a string value that describes or
 The global `aria-description` attribute provides a mechanism for the developer to describe or annotate the current element providing greater context for assistive technology users. 
 
 ```html
-<div role="application" aria-label="calendar" aria-description="Game schedule for the Boston Red Sox 2021 Season">
+<div role="application" aria-label="calendar" 
+     aria-description="Game schedule for the Boston Red Sox 2021 Season">
     <h1>Red Sox 2021</h1>
     <div role="grid">
         ...
