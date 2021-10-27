@@ -112,7 +112,7 @@ These are all technically optional, but it is strongly encouraged that instead o
 
 7. `"dictionaries"` — an array of strings listing all of the dictionaries which are part of the API.
    Generally, only dictionaries used by more than one property or method should be listed here, unless they are of special significance or are likely to require being referenced from multiple pages.
-   "RTCPeerConnection" results in a link to [https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection](/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection).
+   "CryptoKeyPair" results in a link to [https://developer.mozilla.org/en-US/docs/Web/API/CryptoKeyPair](/en-US/docs/Web/API/CryptoKeyPair).
    > **Note:** MDN is moving away from separately documenting dictionaries.
    > Where possible, these are now described as objects in the places where they are used.
 8. `"types"` — an array of typedefs and enumerated types defined by the API.
