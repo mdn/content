@@ -56,4 +56,4 @@ The **`:root`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 - {{domxref("Document.rootElement")}}
 - {{domxref("Node.getRootNode()")}}
 - {{domxref("Element.shadowRoot")}}
-- {{domxref("ShadowRoot")}}
+- {{domxref("ShadowRoot")}} 
