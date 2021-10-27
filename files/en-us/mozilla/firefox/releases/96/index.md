@@ -1,15 +1,15 @@
 ---
-title: Firefox 95 for developers
-slug: Mozilla/Firefox/Releases/95
+title: Firefox 96 for developers
+slug: Mozilla/Firefox/Releases/96
 tags:
-  - '95'
+  - '96'
   - Firefox
   - Mozilla
   - Release
 ---
 {{FirefoxSidebar}}{{draft}}
 
-This article provides information about the changes in Firefox 95 that will affect developers. Firefox 95 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta), and will ship on [December 7, 2021](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 96 that will affect developers. Firefox 96 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), and will ship on [January 11, 2022](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
 
 ## Changes for web developers
 
@@ -59,4 +59,4 @@ This article provides information about the changes in Firefox 95 that will affe
 
 ## Older versions
 
-{{Firefox_for_developers(94)}}
+{{Firefox_for_developers(95)}}
