@@ -23,11 +23,7 @@ If the file on disk changes or is removed after this method is called, the retur
 ## Syntax
 
 ```js
-var promise = FileSystemFileHandle.getFile();
-
-promise.then((file) => {
-  // ...
-})
+const filePromise = FileSystemFileHandle.getFile();
 ```
 
 ### Parameters
