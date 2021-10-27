@@ -56,4 +56,4 @@ Used in **ALL** roles.
 
 - [HTML `title` attribute](/en-US/docs/Web/HTML/Global_attributes/title)
 - [`aria-describedby`](../aria-describedby)
-- [`aria-details`]((/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+- [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
