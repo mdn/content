@@ -23,7 +23,7 @@ CustomEvent(typeArg, options);
   - : A string representing the name of the event.
 - `options` {{optional_inline}}
 
-  - : A dictionary, having the following fields:
+  - : An object, with the following fields:
 
     - `"detail"`, optional and defaulting to `null`, of any type,
       containing an event-dependent value associated with the event.
