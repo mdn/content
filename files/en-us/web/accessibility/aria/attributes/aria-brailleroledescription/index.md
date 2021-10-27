@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: aria-brailleroledescription attribute'
+title: 'aria-brailleroledescription'
 slug: web/Accessibility/ARIA/Attributes/aria-brailleroledescription
 tags: 
 
