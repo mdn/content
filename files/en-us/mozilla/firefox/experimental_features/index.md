@@ -344,7 +344,7 @@ The {{cssxref("backdrop-filter")}} property applies filter effects to the area b
   </tbody>
 </table>
 
-### The `fit-content()` function for `width` and other sizing properties
+### The fit-content() function for width and other sizing properties
 
 The {{cssxref("fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See {{bug(1312588)}} for more details.)
 
@@ -552,6 +552,8 @@ The SVG {{SVGAttr('d')}} attribute, used to define a path to be drawn, is now a 
 
 ## JavaScript
 
+No experimental features
+
 ## APIs
 
 ### Graphics: Canvas, WebGL, and WebGPU
@@ -722,6 +724,177 @@ This new API provides low-level support for performing computation and graphics 
   </tbody>
 </table>
 
+### WebRTC and media
+
+The following experimental features include those found in the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API).
+
+#### Asynchronous SourceBuffer add and remove
+
+This adds the promise-based methods {{domxref("SourceBuffer.appendBufferAsync", "appendBufferAsync()")}} and {{domxref("SourceBuffer.removeAsync", "removeAsync()")}} for adding and removing media source buffers to the {{domxref("SourceBuffer")}} interface. See {{bug(1280613)}} and {{bug(778617)}} for more information.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>62</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>62</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>62</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>62</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>media.mediasource.experimental.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+#### AVIF compliance strictness
+
+The `image.avif.compliance_strictness` preference can be used to control the _strictness_ applied when processing [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) images.
+This allows Firefox users to display images that render on some other browsers, even if they are not strictly compliant.
+
+Permitted values are:
+
+- `0`: Accept images with specification violations in both recommendations ("should" language) and requirements ("shall" language), provided they can be safely or unambigiously intepretted.
+- `1` (default): Reject violations of requirements, but allow violations of recommendations.
+- `2`: Strict. Reject any violations in requirements or recommendations.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Default value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>92</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>92</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>92</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>92</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>image.avif.compliance_strictness</code></td>
+    </tr>
+  </tbody>
+</table>
+
+#### AV1 support for Firefox on Android
+
+This feature allows Firefox on Android to use [AV1 format media](/en-US/docs/Web/Media/Formats/Video_codecs#av1). This feature is available in nightly builds effective in Firefox for Android 81 or later. It is enabled by default.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>81</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">—</td>
+    </tr>
+  </tbody>
+</table>
+
+#### JPEG XL support
+
+With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images, see {{bug(1539075)}} for more details. This feature is available in nightly builds effective in Firefox 90 or later.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>90</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>90</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>90</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">image.jxl.enabled</td>
+    </tr>
+  </tbody>
+</table>
+
 ### HTML DOM API
 
 #### HTMLMediaElement method: setSinkId()
@@ -803,8 +976,6 @@ Enabling this feature adds the {{domxref("HTMLMediaElement.audioTracks")}} and {
     </tr>
   </tbody>
 </table>
-
-### DOM
 
 #### ClipboardItem
 
@@ -968,7 +1139,7 @@ The {{domxref("document")}} property {{domxref("Document.autoplayPolicy", "autop
 
 #### GeometryUtils methods: convertPointFromNode(), convertRectFromNode(), and convertQuadFromNode()
 
-The `GeometryUtils` methods `convertPointFromNode()`, `convertRectFromNode()`, and ``convertQuadFromNode() map the given point, rectangle, or quadruple from the {{domxref("Node")}} on which they're called to another node. (See {{bug(918189)}} for more details.)
+The `GeometryUtils` methods `convertPointFromNode()`, `convertRectFromNode()`, and `convertQuadFromNode()` map the given point, rectangle, or quadruple from the {{domxref("Node")}} on which they're called to another node. (See {{bug(918189)}} for more details.)
 
 <table>
   <thead>
@@ -1175,180 +1346,9 @@ Note that Firefox implements {{domxref("Navigator.share()")}} but not {{domxref(
   </tbody>
 </table>
 
-### WebRTC and media
-
-The following experimental features include those found in the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API).
-
-#### Asynchronous SourceBuffer add and remove
-
-This adds the promise-based methods {{domxref("SourceBuffer.appendBufferAsync", "appendBufferAsync()")}} and {{domxref("SourceBuffer.removeAsync", "removeAsync()")}} for adding and removing media source buffers to the {{domxref("SourceBuffer")}} interface. See {{bug(1280613)}} and {{bug(778617)}} for more information.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>62</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>62</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>62</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>62</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>media.mediasource.experimental.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-#### AVIF compliance strictness
-
-The `image.avif.compliance_strictness` preference can be used to control the _strictness_ applied when processing [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) images.
-This allows Firefox users to display images that render on some other browsers, even if they are not strictly compliant.
-
-Permitted values are:
-
-- `0`: Accept images with specification violations in both recommendations ("should" language) and requirements ("shall" language), provided they can be safely or unambigiously intepretted.
-- `1` (default): Reject violations of requirements, but allow violations of recommendations.
-- `2`: Strict. Reject any violations in requirements or recommendations.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Default value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>92</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>92</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>92</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>92</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>image.avif.compliance_strictness</code></td>
-    </tr>
-  </tbody>
-</table>
-
-#### AV1 support for Firefox on Android
-
-This feature allows Firefox on Android to use [AV1 format media](/en-US/docs/Web/Media/Formats/Video_codecs#av1). This feature is available in nightly builds effective in Firefox for Android 81 or later. It is enabled by default.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>81</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">—</td>
-    </tr>
-  </tbody>
-</table>
-
-#### JPEG XL support
-
-With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images, see {{bug(1539075)}} for more details. This feature is available in nightly builds effective in Firefox 90 or later.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>90</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>90</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>90</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">image.jxl.enabled</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Security and privacy
 
-#### Block plain text requests from Flash on encrypted pages
+### Block plain text requests from Flash on encrypted pages
 
 In order to help mitigate man-in-the-middle (MitM) attacks caused by Flash content on encrypted pages, a preference has been added to treat `OBJECT_SUBREQUEST`s as active content. See {{bug(1190623)}} for more details.
 
@@ -1390,7 +1390,7 @@ In order to help mitigate man-in-the-middle (MitM) attacks caused by Flash conte
   </tbody>
 </table>
 
-#### Insecure page labeling
+### Insecure page labeling
 
 These two preferences add a "Not secure" text label in the address bar next to the traditional lock icon when a page is loaded insecurely (that is, using {{Glossary("HTTP")}} rather than {{Glossary("HTTPS")}}). See {{bug(1335970)}} for more details.
 
@@ -1435,7 +1435,7 @@ These two preferences add a "Not secure" text label in the address bar next to t
   </tbody>
 </table>
 
-#### Upgrading mixed display content
+### Upgrading mixed display content
 
 When enabled, this preference causes Firefox to automatically upgrade requests for media content from HTTP to HTTPS on secure pages. The intent is to prevent mixed-content conditions in which some content is loaded securely while other content is insecure. If the upgrade fails (because the media's host doesn't support HTTPS), the media is not loaded. (See {{bug(1435733)}} for more details.)
 
@@ -1479,7 +1479,7 @@ This also changes the console warning; if the upgrade succeeds, the message indi
   </tbody>
 </table>
 
-#### Feature policy
+### Feature policy
 
 [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
 
@@ -1527,7 +1527,7 @@ This also changes the console warning; if the upgrade succeeds, the message indi
 
 Mozilla's developer tools are constantly evolving. We experiment with new ideas, add new features, and test them on the Nightly and Developer Edition channels before letting them go through to beta and release. The features below are the current crop of experimental developer tool features.
 
-#### Execution context selector
+### Execution context selector
 
 This feature displays a button on the console's command line that lets you change the context in which the expression you enter will be executed. (See {{bug(1605154)}} and {{bug(1605153)}} for more details.)
 
@@ -1567,7 +1567,7 @@ This feature displays a button on the console's command line that lets you chang
   </tbody>
 </table>
 
-#### Mobile gesture support in Responsive Design Mode
+### Mobile gesture support in Responsive Design Mode
 
 Mouse gestures are used to simulate mobile gestures like swiping/scrolling, double-tap and pinch-zooming and long-press to select/open the context menu. (See {{bug(1621781)}}, {{bug(1245183)}}, and {{bug(1401304)}} for more details.)
 
@@ -1609,7 +1609,7 @@ Mouse gestures are used to simulate mobile gestures like swiping/scrolling, doub
 
 \[1] Support for zooming using the double-tap gesture was added in Firefox 76. The other gestures were added for Firefox 79.
 
-#### Server-sent events in Network Monitor
+### Server-sent events in Network Monitor
 
 The Network Monitor displays information for [server-sent](/en-US/docs/Web/API/Server-sent_events) events. (See {{bug(1405706)}} for more details.)
 
@@ -1651,7 +1651,7 @@ The Network Monitor displays information for [server-sent](/en-US/docs/Web/API/S
   </tbody>
 </table>
 
-#### CSS browser compatibility tooltips
+### CSS browser compatibility tooltips
 
 The CSS Rules View can display browser compatibility tooltips next to any CSS properties that have known issues. For more information see: [Examine and edit HTML > Browser Compat Warnings](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#browser_compat_warnings).
 
@@ -1697,7 +1697,7 @@ The CSS Rules View can display browser compatibility tooltips next to any CSS p
 
 ## UI
 
-#### Desktop zooming
+### Desktop zooming
 
 This feature lets you enable smooth pinch zooming on desktop computers without requiring layout reflows, just like mobile devices do. (See {{bug(1245183)}} and {{bug(1620055)}} for more details.)
 
