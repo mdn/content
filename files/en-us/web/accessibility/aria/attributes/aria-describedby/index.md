@@ -22,6 +22,8 @@ The `aria-describedby` attribute is very similar to [`aria-labelledby`](../aria-
 
 The elements linked via `aria-describedby` don't need to be visible. It is possible to reference an element even if that element is hidden. For example, a form control can have a description that is hidden by default this is revealed on request using a disclosure widget like a "more information" icon. The sited user clicks on the icon; for assistive technology users the description is referenced from that form field directly with `aria-describedby`.
 
+The `aria-describedby` property is appropriate when the associated content contains descriptions experienced as plain text. If the content contains a large amount of content, useful semantics, or has a complex structure requiring user navigation, use [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details). `Aria-details` allows assistive technology users to visit the associated structured content and provides additional navigation commands, making it easier to understand the structure, or to experience the information in smaller pieces.
+
 ## Examples
 
 ### Example 1: Application Landmark Descriptions
@@ -75,3 +77,4 @@ Used in **ALL** roles.
 - {{HTMLElement('label')}}
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description)
+- [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
