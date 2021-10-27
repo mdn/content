@@ -14,16 +14,20 @@ browser-compat: api.FileSystemFileHandle.getFile
 {{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`getFile()`** method of the
-{{domxref("FileSystemFileHandle")}} interface returns a {{domxref('File','file
-  object')}} representing the state on disk of the entry represented by the handle.
+{{domxref("FileSystemFileHandle")}} interface returns a {{jsxref('Promise')}} which resolves to
+  {{domxref('File')}} object representing the state on disk of the entry represented by the handle.
 
 If the file on disk changes or is removed after this method is called, the returned
-{{domxref('File','file object')}} will likely be no longer readable.
+{{domxref('File')}} object will likely be no longer readable.
 
 ## Syntax
 
 ```js
-var File = FileSystemFileHandle.getFile();
+var promise = FileSystemFileHandle.getFile();
+
+promise.then((file) => {
+  // ...
+})
 ```
 
 ### Parameters
@@ -32,7 +36,7 @@ None.
 
 ### Return value
 
-A {{domxref('File','File object')}}.
+A {{jsxref('Promise')}} which resolves to a {{domxref('File')}} object.
 
 ### Exceptions
 
