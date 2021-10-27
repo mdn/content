@@ -8,11 +8,16 @@ tags:
 ---
 {{MDNSidebar}}
 
-MDN supports adding quicklinks to pages; these are boxes containing a potentially hierarchical list of links to other pages on MDN or to pages off-site. This article describes how to create quicklinks boxes.
+MDN supports adding quicklinks to pages; these are boxes containing a potentially hierarchical list of links to other pages on MDN or to pages off-site.
+This article describes how to create quicklinks boxes.
 
 ## Quicklinks syntax
 
-The quicklinks for a page are provided by creating a {{HTMLElement("section")}} block with the ID "Quick_links". Then you place the contents that go into the quicklinks box within the section. These should be formatted as an {{HTMLElement("ol")}} ordered list (optionally nested). You can do this by using the numbered list button in the editor toolbar. For example, your quicklinks HTML might look like this:
+The quicklinks for a page are provided by creating a {{HTMLElement("section")}} block with the ID "Quick_links".
+Then you place the contents that go into the quicklinks box within the section.
+These should be formatted as an {{HTMLElement("ol")}} ordered list (optionally nested).
+You can do this by using the numbered list button in the editor toolbar.
+For example, your quicklinks HTML might look like this:
 
 ```html
 <section id="Quick_links">
@@ -40,7 +45,8 @@ The important things to note:
 
 ## Using macros to create quicklinks
 
-It's worth noting that you can (and often **should**) use macros to generate quicklinks. Any time you need to use the same set of quicklinks on more than one page, you should turn them into a macro.
+It's worth noting that you can (and often **should**) use macros to generate quicklinks.
+Any time you need to use the same set of quicklinks on more than one page, you should turn them into a macro.
 
 Your macro can be as simple or as complex as necessary; it needs to output HTML similar to what's shown in {{anch("Quicklinks syntax")}} above.
 
@@ -48,11 +54,11 @@ Your macro can be as simple or as complex as necessary; it needs to output HTML 
 
 Here's a list of our standard macros for generating quicklinks.
 
-- {{TemplateLink("CSSRef")}}
+- [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs)
   - : Builds the standard quicklinks for CSS Reference pages.
-- {{TemplateLink("HTMLRef")}}
+- [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs)
   - : Builds the standard quicklinks for HTML Reference pages.
-- {{TemplateLink("MakeSimpleQuicklinks")}}
-  - : Given a list of pages on MDN, this macro constructs a quicklinks box using the pages' titles as the link text and their summaries as tooltips. This doesn't create hierarchical lists.
-- {{TemplateLink("QuickLinksWithSubpages")}}
-  - : Creates a set of quicklinks using the current page's (or the specified page's) children as the destinations. This creates hierarchical lists up to two levels deep. The pages' titles are used as the link text and their summaries as tooltips.
+- [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs)
+  - : Creates a set of quicklinks using the current page's (or the specified page's) children as the destinations.
+    This creates hierarchical lists up to two levels deep.
+    The pages' titles are used as the link text and their summaries as tooltips.

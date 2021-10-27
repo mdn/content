@@ -42,75 +42,14 @@ myPeerConnection.createOffer(successCallback, failureCallback, [options]) {{depr
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : An [`RTCOfferOptions`](#rtcofferoptions_dictionary) dictionary
-    providing options requested for the offer.
+  - : An object providing the following options requested for the offer:
 
-#### RTCOfferOptions dictionary
-
-The `RTCOfferOptions` dictionary is used to customize the offer created by
-this method.
-
-- [`iceRestart`](/en-US/docs/Web/API/RTCOfferOptions/iceRestart)
-  {{optional_inline}}
-  - : To restart ICE on an active connection, set this to `true`. This will
-    cause the returned offer to have different credentials than those already in place. If
-    you then apply the returned offer, ICE will restart. Specify `false` to
-    keep the same credentials and therefore not restart ICE. **The default is
-    `false`**.
-- `offerToReceiveAudio` {{optional_inline}} (Legacy)
-
-  - : A legacy Boolean option which used to control whether or not to offer to the remote
-    peer the opportunity to try to send audio. If this value is `false`, the
-    remote peer will not be offered to send audio data, even if the local side will be
-    sending audio data. If this value is `true`, the remote peer will be
-    offered to send audio data, even if the local side will _not_ be sending audio
-    data. The default behavior is to offer to receive audio only if the local side is
-    sending audio, not otherwise.
-
-    To emulate this behavior in modern implementations, the presence of this member with
-    a value `false`, will set the direction of all existing audio transceivers
-    to exclude reception (i.e. set to either `"sendonly"` or
-    `"inactive"`).
-
-    In modern implementations, the presence of this member with a value
-    `true`, will ensure there is at least one transceiver set to receive audio
-    that has not been stopped, and if there isn't one, one will be created.
-
-    > **Note:** You shouldn't use this legacy property.
-    > Instead, use {{domxref("RTCRtpTransceiver")}} to control whether or not to accept
-    > incoming audio.
-
-- `offerToReceiveVideo` {{optional_inline}} (Legacy)
-
-  - : A legacy Boolean option which used to control whether or not to offer to the remote
-    peer the opportunity to try to send video. If this value is `false`, the
-    remote peer will not be offered to send video data, even if the local side will be
-    sending video data. If this value is `true`, the remote peer will be
-    offered to send video data, even if the local side will _not_ be sending video
-    data. The default behavior is to offer to receive video only if the local side is
-    sending video, not otherwise.
-
-    To emulate this behavior in modern implementations, the presence of this member with
-    a value `false`, will set the direction of all existing video transceivers
-    to exclude reception (i.e. set to either `"sendonly"` or
-    `"inactive"`).
-
-    In modern implementations, the presence of this member with a value
-    `true`, will ensure there is at least one transceiver set to receive video
-    that has not been stopped, and if there isn't one, one will be created.
-
-    > **Note:** You shouldn't use this legacy property.
-    > Instead, use {{domxref("RTCRtpTransceiver")}} to control whether or not to accept
-    > incoming video.
-
-- `voiceActivityDetection` {{optional_inline}}
-  - : Some codecs and hardware are able to detect when audio begins and ends by watching
-    for "silence" (or relatively low sound levels) to occur. This reduces network
-    bandwidth used for audio by only sending audio data when there's actually something to
-    broadcast. However, in some cases, this is unwanted. For example, in the case of music
-    or other non-voice transmission, this can cause loss of important low-volume sounds.
-    Also, emergency calls should never cut audio when quiet. **This option defaults
-    to `true`** (voice activity detection _enabled_).
+    - `iceRestart` {{optional_inline}}
+      - : To restart ICE on an active connection, set this to `true`. This will
+        cause the returned offer to have different credentials than those already in place. If
+        you then apply the returned offer, ICE will restart. Specify `false` to
+        keep the same credentials and therefore not restart ICE. **The default is
+        `false`**.
 
 ### Deprecated parameters
 
@@ -128,8 +67,7 @@ should update any existing code to use the {{jsxref("Promise")}}-based version o
     {{domxref("DOMException")}} object explaining why the request to create an offer
     failed.
 - `options` {{optional_inline}}
-  - : An optional [`RTCOfferOptions`](#rtcofferoptions_dictionary)
-    dictionary providing options requested for the offer.
+  - : An optional object providing options requested for the offer.
 
 ### Return value
 
@@ -143,14 +81,14 @@ signaling server to a remote peer.
 These exceptions are returned by rejecting the returned promise. Your rejection handler
 should examine the received exception to determine which occurred.
 
-- `InvalidStateError`
-  - : The `RTCPeerConnection` is closed.
-- `NotReadableError`
-  - : No certificate or set of certificates was provided for securing the connection, and
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the `RTCPeerConnection` is closed.
+- `NotReadableError` {{domxref("DOMException")}}
+  - : Returned if no certificate or set of certificates was provided for securing the connection, and
     `createOffer()` was unable to create a new one. Since all WebRTC
     connections are required to be secured, that results in an error.
-- `OperationError`
-  - : Examining the state of the system to determine resource availability in order to
+- `OperationError` {{domxref("DOMException")}}
+  - : Returned if examining the state of the system to determine resource availability in order to
     generate the offer failed for some reason.
 
 ## Example

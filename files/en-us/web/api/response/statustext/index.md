@@ -33,7 +33,7 @@ support](https://fetch.spec.whatwg.org/#concept-response-status-message) status 
 ## Example
 
 In our [Fetch
-Response example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response) (see [Fetch Response
+Response example](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (see [Fetch Response
 live](https://mdn.github.io/fetch-examples/fetch-response/)) we create a new {{domxref("Request")}} object using the
 {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then
 fetch this request using {{domxref("fetch()")}}, extract a blob

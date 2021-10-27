@@ -15,7 +15,8 @@ browser-compat: api.WorkerNavigator.languages
 
 The **`WorkerNavigator.languages`** read-only property
 returns an array of {{domxref("DOMString")}}s representing the user's preferred
-languages. The language is described using [BCP 47](https://datatracker.ietf.org/doc/html/bcp47) language tags. In the returned
+languages. The language is described using language tags according to
+{{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. In the returned
 array they are ordered by preference with the most preferred language first.
 
 The value of {{domxref("WorkerNavigator.language","navigator.language")}} is the

@@ -2,63 +2,50 @@
 title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
 tags:
-  - API
-  - DOM
-  - DOM Element Methods
-  - Gecko
   - Method
+  - Reference
 browser-compat: api.EventTarget.dispatchEvent
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
-Dispatches an {{domxref("Event")}} at the specified
-{{domxref("EventTarget")}}, (synchronously) invoking the affected
+The **`dispatchEvent()`** method of the {{domxref("EventTarget")}} sends an {{domxref("Event")}} to the object, (synchronously) invoking the affected
 {{domxref("EventListener")}}s in the appropriate order. The normal event processing
 rules (including the capturing and optional bubbling phase) also apply to events
 dispatched manually with `dispatchEvent()`.
 
+Calling `dispatchEvent()` is the last step to _firing an event_. The event
+should have already been created and initialized using an [Event constructor](/en-US/docs/Web/API/Event/Event).
+
+> **Note:** When calling this method, the {{domxref("Event.target")}} property is initialized to the current `EventTarget`.
+
+Unlike "native" events, which are fired by the browser and invoke event handlers
+asynchronously via the [event loop](/en-US/docs/Web/JavaScript/EventLoop),
+`dispatchEvent()` invokes event handlers _synchronously_. All applicable event
+handlers are called and return before `dispatchEvent()` returns.
+
 ## Syntax
 
 ```js
-cancelled = !target.dispatchEvent(event)
+target.dispatchEvent(event)
 ```
 
 ### Parameter
 
-- `event` is the {{domxref("Event")}} object to be dispatched.
-- `target` is used to initialize the {{domxref("Event.target")}}
-  and determine which event listeners to invoke.
+- `event` is the {{domxref("Event")}} object to be dispatched. Its {{domxref("Event.target")}} property will be set to the current object.
 
-### Return Value
+### Return value
 
-- The return value is `false` if `event` is
-  cancelable and at least one of the event handlers which received
-  `event` called {{domxref("Event.preventDefault()")}}. Otherwise
-  it returns `true`.
-
-The `dispatchEvent()` method throws `UNSPECIFIED_EVENT_TYPE_ERR`
-if the event's type was not specified by initializing the event before the method was
-called, or if the event's type is `null` or an empty string.
+- The return value is `false` if `event` is cancelable and at least one of the event handlers which received `event` called {{domxref("Event.preventDefault()")}}.
+  Otherwise it returns `true`.
 
 ### Exceptions
 
-Exceptions thrown by event handlers are reported as uncaught exceptions. The event
-handlers run on a nested callstack; they block the caller until they complete, but
-exceptions do not propagate to the caller.
+- `InvalidStateError` {{domxref("DomException")}}
+  - : Thrown if the event's type was not specified during event initialization.
 
-## Notes
-
-Unlike "native" events, which are fired by the DOM and invoke event handlers
-asynchronously via the [event loop](/en-US/docs/Web/JavaScript/EventLoop),
-`dispatchEvent()` invokes event handlers synchronously. All applicable event
-handlers will execute and return before the code continues on after the call to
-`dispatchEvent()`.
-
-`dispatchEvent()` is the last step of the create-init-dispatch process,
-which is used for dispatching events into the implementation's event model. The event
-can be created using [Event constructor](/en-US/docs/Web/API/Event/Event).
-
-See also the [Event object reference](/en-US/docs/Web/API/Event).
+> **Warning:** Exceptions thrown by event handlers are reported as uncaught exceptions. The event
+> handlers run on a nested callstack; they block the caller until they complete, but
+> exceptions do not propagate to the caller.
 
 ## Example
 
@@ -71,3 +58,7 @@ See [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_trigger
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- The [Event object reference](/en-US/docs/Web/API/Event)

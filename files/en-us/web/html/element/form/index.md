@@ -1,5 +1,5 @@
 ---
-title: <form>
+title: '<form>: The Form element'
 slug: Web/HTML/Element/form
 tags:
   - Element

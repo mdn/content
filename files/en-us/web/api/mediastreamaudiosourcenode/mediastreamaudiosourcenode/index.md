@@ -47,8 +47,8 @@ whose media is obtained from the specified source stream.
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : The specified {{domxref("MediaStream")}} doesn't have any audio tracks.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the specified {{domxref("MediaStream")}} does not contain any audio tracks.
 
 ## Examples
 

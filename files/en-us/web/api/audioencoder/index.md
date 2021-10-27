@@ -20,7 +20,7 @@ The **`AudioEncoder`** interface of the {{domxref('WebCodecs API','','','true')}
 - {{domxref("AudioEncoder.encodeQueueSize")}}{{ReadOnlyInline}}
   - : An integer representing the number of encode queue requests.
 - {{domxref("AudioEncoder.state")}}{{ReadOnlyInline}}
-  - : Represents the state of the underlying codec and whether it is configured for decoding.
+  - : Represents the state of the underlying codec and whether it is configured for encoding.
 
 ## Methods
 

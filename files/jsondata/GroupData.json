@@ -1895,9 +1895,6 @@
       "dictionaries": [
         "RTCOAuthCredential",
         "RTCIceServer",
-        "RTCOfferAnswerOptions",
-        "RTCOfferOptions",
-        "RTCAnswerOptions",
         "RTCSessionDescriptionInit",
         "RTCIceCandidateInit",
         "RTCPeerConnectionIceEventInit",

@@ -16,7 +16,8 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-Now we'll look at common cross-browser JavaScript problems and how to fix them. This includes information on using browser dev tools to track down and fix problems, using Polyfills and libraries to work around problems, getting modern JavaScript features working in older browsers, and more.
+Now we'll look at common cross-browser JavaScript problems and how to fix them.
+This includes information on using browser dev tools to track down and fix problems, using Polyfills and libraries to work around problems, getting modern JavaScript features working in older browsers, and more.
 
 <table>
   <tbody>
@@ -54,7 +55,7 @@ Things have improved significantly since then; modern browsers do a good job of 
 These days, most cross-browser JavaScript problems are seen:
 
 - When poor-quality browser-sniffing code, feature-detection code, and vendor prefix usage block browsers from running code they could otherwise use just fine.
-- When developers make use of new/nascent JavaScript features (for example [ECMAScript 6](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) / [ECMAScript Next](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla) features, modern Web APIs...) in their code, and find that such features don't work in older browsers.
+- When developers make use of new/nascent JavaScript features, modern Web APIs, etc.) in their code, and find that such features don't work in older browsers.
 
 We'll explore all these problems and more below.
 
@@ -182,7 +183,7 @@ To summarize, anytime something is not working and a value does not appear to be
 
 Unfortunately, we still have the same error — the problem has not gone away. Let's investigate this now, using a more sophisticated feature of browser developer tools: the [JavaScript debugger](/en-US/docs/Tools/Debugger) as it is called in Firefox.
 
-> **Note:** Similar tools are available in other browsers; the [Sources tab](https://developers.google.com/web/tools/chrome-devtools/#sources) in Chrome, Debugger in Safari (see [Safari Web Development Tools](https://developer.apple.com/safari/tools/)), etc.
+> **Note:** Similar tools are available in other browsers; the [Sources tab](https://developer.chrome.com/docs/devtools/#sources) in Chrome, Debugger in Safari (see [Safari Web Development Tools](https://developer.apple.com/safari/tools/)), etc.
 
 In Firefox, the Debugger tab looks as follows:
 
@@ -237,14 +238,21 @@ In this section, we'll look at some of the more common cross-browser JavaScript 
 
 In the [previous article](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#older_browsers_not_supporting_modern_features) we described some of the ways in which HTML and CSS errors and unrecognized features can be handled due to the nature of the languages. JavaScript is not as permissive as HTML and CSS however — if the JavaScript engine encounters mistakes or unrecognized syntax, more often than not it will throw errors.
 
-There are a number of modern JavaScript language features defined in recent versions of the specs ([ECMAScript 6](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) / [ECMAScript Next](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla)) that won't work in older browsers. Some of these are syntactic sugar (basically an easier, nicer way of writing what you can already do using existing features), and some offer interesting new possibilities.
+There are a number of modern JavaScript language features defined in recent versions of the specs that won't work in older browsers.
+Some of these are syntactic sugar (basically an easier, nicer way of writing what you can already do using existing features), and some offer interesting new possibilities.
 
 For example:
 
-- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) are a great new feature for performing asynchronous operations and making sure those operations are complete before code that relies on their results is used for something else. As an example, the [Fetch API](/en-US/docs/Web/API/fetch) (a modern equivalent to [XMLHTTPRequest](/en-US/docs/Web/API/XMLHttpRequest)) uses promises to fetch resources across the network and make sure that the response has been returned before they are used (for example, displaying an image inside an {{htmlelement("img")}} element). They are not supported in IE at all but are supported across all modern browsers.
-- Arrow functions provide a shorter, more convenient syntax for writing [anonymous functions](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_functions), which also has other advantages (see [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)). For a quick example, see [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html) also). Arrow functions are supported across all modern browsers, except for IE and Safari.
-- Declaring [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) at the top of your JavaScript code causes it to be parsed with a stricter set of rules, meaning that more warnings and errors will be thrown, and some things will be disallowed that would otherwise be acceptable. It is arguably a good idea to use strict mode, as it makes for better, more efficient code, however it has limited/patchy support across browsers (see [Strict mode in browsers](/en-US/docs/Web/JavaScript/Reference/Strict_mode#strict_mode_in_browsers)).
-- [Typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) allow JavaScript code to access and manipulate raw binary data, which is necessary as browser APIs for example start to manipulate streams of raw video and audio data. These are available in IE10 and above, and all modern browsers.
+- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) are a great new feature for performing asynchronous operations and making sure those operations are complete before code that relies on their results is used for something else.
+  As an example, the [Fetch API](/en-US/docs/Web/API/fetch) (a modern equivalent to [XMLHTTPRequest](/en-US/docs/Web/API/XMLHttpRequest)) uses promises to fetch resources across the network and make sure that the response has been returned before they are used (for example, displaying an image inside an {{htmlelement("img")}} element).
+  They are not supported in IE at all but are supported across all modern browsers.
+- Arrow functions provide a shorter, more convenient syntax for writing [anonymous functions](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_functions), which also has other advantages (see [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)).
+  For a quick example, see [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/arrow-function.html) also).
+  Arrow functions are supported across all modern browsers, except for IE and Safari.
+- Declaring [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) at the top of your JavaScript code causes it to be parsed with a stricter set of rules, meaning that more warnings and errors will be thrown, and some things will be disallowed that would otherwise be acceptable.
+  It is arguably a good idea to use strict mode, as it makes for better, more efficient code, however it has limited/patchy support across browsers (see [Strict mode in browsers](/en-US/docs/Web/JavaScript/Reference/Strict_mode#strict_mode_in_browsers)).
+- [Typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) allow JavaScript code to access and manipulate raw binary data, which is necessary as browser APIs for example start to manipulate streams of raw video and audio data.
+  These are available in IE10 and above, and all modern browsers.
 
 There are also many new APIs appearing in recent browsers, which don't work in older browsers, for example:
 
@@ -289,13 +297,11 @@ JavaScript libraries tend to come in a few main varieties (some libraries will s
 
 - Utility libraries: Provide a bunch of functions to make mundane tasks easier and less boring to manage. [jQuery](https://jquery.com/) for example provides its own fully-featured selectors and DOM manipulation libraries, to allow CSS-selector type selecting of elements in JavaScript and easier DOM building. It is not so important now we have modern features like {{domxref("Document.querySelector()")}}/{{domxref("Document.querySelectorAll()")}}/{{domxref("Node")}} methods available across browsers, but it can still be useful when older browsers need supporting.
 - Convenience libraries: Make difficult things easier to do. For example, the [WebGL API](/en-US/docs/Web/API/WebGL_API) is really complex and challenging to use when you write it directly, so the [Three.js](https://threejs.org/) library (and others) is built on top of WebGL and provides a much easier API for creating common 3D objects, lighting, textures, etc. The [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) is also very complex to use, so code libraries have started appearing to make common Service Worker uses-cases much easier to implement (see the [Service Worker Cookbook](https://serviceworke.rs/) for several useful code samples).
-- Effects libraries: These libraries are designed to allow you to easily add special effects to your websites. This was more useful back when {{glossary("DHTML")}} was a popular buzzword, and implementing an effect involved a lot of complex JavaScript, but these days browsers have a lot of built in CSS3 features and APIs to implementing effects more easily. See [JavaScripting.com/animation](https://www.javascripting.com/animation/) for a list of libraries.
+- Effects libraries: These libraries are designed to allow you to easily add special effects to your websites. This was more useful back when {{glossary("DHTML")}} was a popular buzzword, and implementing an effect involved a lot of complex JavaScript, but these days browsers have a lot of built in CSS3 features and APIs to implementing effects more easily.
 - UI libraries: Provide methods for implementing complex UI features that would otherwise be challenging to implement and get working cross browser, for example [Foundation](https://foundation.zurb.com/), [Bootstrap](https://getbootstrap.com/), and [Material-UI](https://material-ui.com/) (the latter is a set of components for use with the React framework). These tend to be used as the basis of an entire site layout; it is often difficult to drop them in just for one UI feature.
 - Normalization libraries: Give you a simple syntax that allows you to easily complete a task without having to worry about cross browser differences. The library will manipulate appropriate APIs in the background so the functionality will work whatever the browser (in theory). For example, [LocalForage](https://github.com/localForage/localForage) is a library for client-side data storage, which provides a simple syntax for storing and retrieving data. In the background, it uses the best API the browser has available for storing the data, whether that is [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), [Web Storage](/en-US/docs/Web/API/Web_Storage_API), or even WebSQL (which is now deprecated, but is still supported in some older versions of Safari/IE). As another example, jQuery
 
 When choosing a library to use, make sure that it works across the set of browsers you want to support, and test your implementation thoroughly. Also make sure that the library is popular and well-supported, and isn't likely to just become obsolete next week. Talk to other developers to find out what they recommend, see how much activity and how many contributors the library has on Github (or wherever else it is stored), etc.
-
-> **Note:** [JavaScripting.com](https://www.javascripting.com/) gives you a good idea of just how many JavaScript libraries there are available, and can be useful for finding libraries for specific purposes.
 
 Library usage at a basic level tends to consist of downloading the library's files (JavaScript, possibly some CSS or other dependencies too) and attaching them to your page (e.g. via a {{htmlelement("script")}} element), although there are normally many other usage options for such libraries, like installing them as [Bower](https://bower.io/) components, or including them as dependencies via the [Webpack](https://webpack.github.io/) module bundler. You will have to read the libraries' individual install pages for more information.
 

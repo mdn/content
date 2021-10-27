@@ -35,8 +35,8 @@ Void.
 
 ### Exceptions
 
-If the dialog is already open (i.e. if the `open` attribute is already set
-on the {{htmlelement("dialog")}} element), an `InvalidStateError` is thrown.
+- `InvalidStateError`  {{domxref("DOMException")}}
+  - : Thrown if the dialog is already open (i.e. if the `open` attribute is already set on the {{htmlelement("dialog")}} element).
 
 ## Examples
 

@@ -196,8 +196,8 @@ new Intl.DateTimeFormat(locales, options)
 
       - : The representation of the month. Possible values are:
 
-        - "`numeric`" (e.g., `2`)
-        - "`2-digit`" (e.g., `02`)
+        - "`numeric`" (e.g., `3`)
+        - "`2-digit`" (e.g., `03`)
         - "`long`" (e.g., `March`)
         - "`short`" (e.g., `Mar`)
         - "`narrow`" (e.g., `M`). Two months may have

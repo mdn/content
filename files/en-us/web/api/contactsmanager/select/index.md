@@ -10,7 +10,7 @@ tags:
   - contact picker
 browser-compat: api.ContactsManager.select
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
 
 The **`select()`** method of the
 {{domxref("ContactsManager")}} interface returns a {{jsxref('Promise')}} which, when
@@ -46,27 +46,39 @@ var ContactInfo = ContactsManager.select(properties, options);
 
 ### Return value
 
-Returns a {{jsxref('Promise')}} which resolves on successful contact selection.
+Returns a {{jsxref('Promise')}} that resolves with an array of objects containing contact information. Each object represents a single contact may contain the following properties:
+
+- `address`
+  - : An {{jsxref("Array")}} of {{domxref("ContactAddress")}} objects, each containing specifics of a unique physical address.
+- `email`
+  - : An array of strings containing email addresses.
+- `icon`
+  - : An array of {{domxref("Blob")}} objects containing images of an individual.
+- `name`
+  - : An array strings, each a unique name of an individual.
+- `tel`
+  - : An array strings, each a unique phone number of an individual.
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : The browsing context is not top-level or the contact picker is showing a flag. A
-    flag denotes an already existing contact picker, only one picker can exist at any
-    time.
-- `SecurityError`
-  - : If the method is not triggered by user interaction.
-- `TypeError`
-  - : If `properties` is empty, or if any of the specified properties are not
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the browsing context is not top-level or the contact picker is showing a flag. A flag denotes an already existing contact picker; only one picker can exist at any time.
+- `SecurityError` {{domxref("DOMException")}}
+  - : Returned if the method is not triggered by user interaction.
+- `TypeError` {{domxref("DOMException")}}
+  - : Returned if `properties` is empty, or if any of the specified properties are not
     supported.
 
 ## Examples
+
+### Basic Example
 
 The following example sets an array of properties to be retrieved for each contact, as
 well as setting an options object to allow for multiple contacts to be selected.
 
 An asynchronous function is then defined which uses the `select()` method to
 present the user with a contact picker interface and handle the chosen results.
+`handleResults()` is a developer defined function.
 
 ```js
 const props = ['name', 'email', 'tel', 'address', 'icon'];
@@ -82,7 +94,22 @@ async function getContacts() {
 }
 ```
 
-`handleResults()` is a developer defined function.
+### Select Using Only Supported Properties
+
+The following example uses {{jsxref("ContactsManager.getProperties", "getProperties()")}} to ensure that only supported properties are passed. Otherwise, `select()` might throw a {{jsxref("TypeError")}}. `handleResults()` is a developer defined function.
+
+```js
+const supportedProperties = await navigator.contacts.getProperties();
+
+async function getContacts() {
+  try {
+      const contacts = await navigator.contacts.select(supportedProperties);
+      handleResults(contacts);
+  } catch (ex) {
+      // Handle any errors here.
+  }
+}
+```
 
 ## Specifications
 

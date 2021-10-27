@@ -14,7 +14,9 @@ This article explains how you can use the {{htmlelement("template")}} and {{html
 
 ## The truth about templates
 
-When you have to reuse the same markup structures repeatedly on a web page, it makes sense to use some kind of a template rather than repeating the same structure over and over again. This was possible before, but it is made a lot easier by the HTML {{htmlelement("template")}} element (which is well-supported in modern browsers). This element and its contents are not rendered in the DOM, but it can still be referenced using JavaScript.
+When you have to reuse the same markup structures repeatedly on a web page, it makes sense to use some kind of a template rather than repeating the same structure over and over again.
+This was possible before, but it is made a lot easier by the HTML {{htmlelement("template")}} element (which is well-supported in modern browsers).
+This element and its contents are not rendered in the DOM, but it can still be referenced using JavaScript.
 
 Let's look at a trivial quick example:
 
@@ -36,7 +38,9 @@ Although trivial, you can already start to see how this could be useful.
 
 ## Using templates with web components
 
-Templates are useful on their own, but they work even better with web components. Let's define a web component that uses our template as the content of its shadow DOM. We'll call it `<my-paragraph>`:
+Templates are useful on their own, but they work even better with web components.
+Let's define a web component that uses our template as the content of its shadow DOM.
+We'll call it `<my-paragraph>` as well:
 
 ```js
 customElements.define('my-paragraph',
@@ -55,7 +59,8 @@ customElements.define('my-paragraph',
 
 The key point to note here is that we append a clone of the template content to the shadow root, created using the {{domxref("Node.cloneNode()")}} method.
 
-And because we are appending its contents to a shadow DOM, we can include some styling information inside the template in a {{htmlelement("style")}} element, which is then encapsulated inside the custom element. This wouldn't work if we just appended it to the standard DOM.
+And because we are appending its contents to a shadow DOM, we can include some styling information inside the template in a {{htmlelement("style")}} element, which is then encapsulated inside the custom element.
+This wouldn't work if we just appended it to the standard DOM.
 
 So for example:
 
@@ -82,7 +87,9 @@ Now we can use it by just adding it to our HTML document:
 
 ## Adding flexibility with slots
 
-So far so good, but the element isn't very flexible. We can only display one bit of text inside it, meaning that at the moment it is even less useful than a regular paragraph! We can make it possible to display different text in each element instance in a nice declarative way using the {{htmlelement("slot")}} element. This has more limited support than {{htmlelement("template")}}, available since Chrome 53, Opera 40, Safari 10, Firefox 59, and Edge 79.
+So far so good, but the element isn't very flexible.
+We can only display one bit of text inside it, meaning that at the moment it is even less useful than a regular paragraph! We can make it possible to display different text in each element instance in a nice declarative way using the {{htmlelement("slot")}} element.
+This has more limited support than {{htmlelement("template")}}, available since Chrome 53, Opera 40, Safari 10, Firefox 59, and Edge 79.
 
 Slots are identified by their `name` attribute, and allow you to define placeholders in your template that can be filled with any markup fragment you want when the element is used in the markup.
 
@@ -117,7 +124,8 @@ or
 
 > **Note:** An unnamed {{HTMLElement("slot")}} will be filled with all of the custom element's top-level child nodes that do not have the {{htmlattrxref("slot")}} attribute. This includes text nodes.
 
-And that's it for our trivial example. If you want to play with it some more, you can [find it on GitHub](https://github.com/mdn/web-components-examples/tree/master/simple-template) (see it [running live](https://mdn.github.io/web-components-examples/simple-template/) also).
+And that's it for our trivial example.
+If you want to play with it some more, you can [find it on GitHub](https://github.com/mdn/web-components-examples/tree/master/simple-template) (see it [running live](https://mdn.github.io/web-components-examples/simple-template/) also).
 
 ## A more involved example
 
@@ -128,7 +136,8 @@ The following set of code snippets show how to use {{HTMLElement("slot")}} toget
 - create a **`<element-details>`** element with [named slots](/en-US/docs/Web/HTML/Element/slot#named-slot) in its [shadow root](/en-US/docs/Web/API/ShadowRoot)
 - design the **`<element-details>`** element in such a way that, when used in documents, it is rendered from composing the element’s content together with content from its [shadow root](/en-US/docs/Web/API/ShadowRoot)—that is, pieces of the element’s content are used to fill in [named slots](/en-US/docs/Web/HTML/Element/slot#named-slot) in its [shadow root](/en-US/docs/Web/API/ShadowRoot)
 
-Note that it is technically possible to use {{HTMLElement("slot")}} element without a {{HTMLElement("template")}} element, e.g., within say a regular {{HTMLElement("div")}} element, and still take advantage of the place-holder features of {{HTMLElement("slot")}} for Shadow DOM content, and doing so may indeed avoid the small trouble of needing to first access the template element's `content` property (and clone it). However, it is generally more practical to add slots within a {{HTMLElement("template")}} element, since you are unlikely to need to define a pattern based on an already-rendered element.
+Note that it is technically possible to use {{HTMLElement("slot")}} element without a {{HTMLElement("template")}} element, e.g., within say a regular {{HTMLElement("div")}} element, and still take advantage of the place-holder features of {{HTMLElement("slot")}} for Shadow DOM content, and doing so may indeed avoid the small trouble of needing to first access the template element's `content` property (and clone it).
+However, it is generally more practical to add slots within a {{HTMLElement("template")}} element, since you are unlikely to need to define a pattern based on an already-rendered element.
 
 In addition, even if it is not already rendered, the purpose of the container as a template should be more semantically clear when using the {{HTMLElement("template")}}. In addition, {{HTMLElement("template")}} can have items directly added to it, like {{HTMLElement("td")}}, which would disappear when added to a {{HTMLElement("div")}}.
 
@@ -179,7 +188,8 @@ That {{HTMLElement("template")}} element has several features:
 
 ### Creating a new \<element-details> element from the \<template>
 
-Next, let’s create a new custom element named **`<element-details>`** and use {{DOMXref("Element.attachShadow")}} to attach to it, as its [shadow root](/en-US/docs/Web/API/ShadowRoot), that document fragment we created with our {{HTMLElement("template")}} element above. This uses exactly the same pattern as we saw in our earlier trivial example.
+Next, let’s create a new custom element named **`<element-details>`** and use {{DOMXref("Element.attachShadow")}} to attach to it, as its [shadow root](/en-US/docs/Web/API/ShadowRoot), that document fragment we created with our {{HTMLElement("template")}} element above.
+This uses exactly the same pattern as we saw in our earlier trivial example.
 
 ```js
 customElements.define('element-details',

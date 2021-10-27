@@ -146,6 +146,5 @@ You can use DOM trees to model data which isn't well-suited for RDF (or perhaps 
 - [XML](/en-US/docs/Web/XML)
 - [JXON](/en-US/docs/JXON)
 - [XPath](/en-US/docs/Web/XPath)
-- [E4X (ECMAScript for XML)](/en-US/docs/E4X)
 - [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
 - [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)

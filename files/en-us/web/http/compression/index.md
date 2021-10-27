@@ -45,7 +45,7 @@ To select the algorithm to use, browsers and servers use [proactive content nego
 
 As compression brings significant performance improvements, it is recommended to activate it for all files, but already compressed ones like images, audio files and videos.
 
-Apache supports compression and uses [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html); for nginx there is [ngx_http_gzip_module](https://nginx.org/en/docs/http/ngx_http_gzip_module.html); for IIS, the [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression) element.
+Apache supports compression and uses [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html); for Nginx there is [ngx_http_gzip_module](https://nginx.org/en/docs/http/ngx_http_gzip_module.html); for IIS, the [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression) element.
 
 ## Hop-by-hop compression
 
@@ -59,4 +59,4 @@ To do this, HTTP uses a mechanism similar to the content negotiation for end-to-
 
 In practice, hop-by-hop compression is transparent for the server and the client, and is rarely used. {{HTTPHeader("TE")}} and {{HTTPHeader("Transfer-Encoding")}} are mostly used to send a response by chunks, allowing to start transmitting a resource without knowing its length.
 
-Note that using {{HTTPHeader("Transfer-Encoding")}} and compression at the hop level is so rare that most servers, like Apache, nginx, or IIS, have no easy way to configure it. Such configuration usually happens at the proxy level.
+Note that using {{HTTPHeader("Transfer-Encoding")}} and compression at the hop level is so rare that most servers, like Apache, Nginx, or IIS, have no easy way to configure it. Such configuration usually happens at the proxy level.
