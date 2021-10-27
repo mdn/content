@@ -29,7 +29,7 @@ _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
       representing the state on disk of the entry represented by the handle.
 - {{domxref('FileSystemFileHandle.createWritable', 'createWritable()')}}
   - : Returns a {{jsxref('Promise')}} which resolves to a newly created {{domxref('FileSystemWritableFileStream')}}
-      that can be used to write to a file.
+      object that can be used to write to a file.
 
 ## Examples
 
