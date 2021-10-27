@@ -39,7 +39,7 @@ A braille display may display "btn \**\*" in Braille rather than the more verbos
 ## Values
 
 - `<string>`
-  - : The value is a string, an unconstrained value type,that is intended to be converted into Braille
+  - : The value is a string, an unconstrained value type, that is intended to be converted into Braille.
 
 ## Associated roles
 
