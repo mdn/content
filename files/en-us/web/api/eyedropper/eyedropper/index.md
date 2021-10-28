@@ -7,7 +7,7 @@ tags:
   - Reference
   - EyeDropper
 ---
-{{APIRef("EyeDropper API")}}
+{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
 
 The **`EyeDropper()`** constructor returns a new {{DOMxRef("EyeDropper")}} object.
 
