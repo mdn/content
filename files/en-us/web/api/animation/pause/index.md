@@ -31,10 +31,8 @@ None.
 
 ### Exceptions
 
-- InvalidStateError
-  - : The animation's {{domxref("Animation.currentTime", "currentTime")}} is `unresolved` (for example, if it's never been played or isn't currently playing) and the end time of the animation is positive infinity.
-
-Throws an `InvalidStateError` if the animation's {{domxref("Animation.currentTime", "currentTime")}} is `unresolved` (perhaps it hasn't started playing yet) and the end time of the animation is positive infinity.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the animation's {{domxref("Animation.currentTime", "currentTime")}} is `unresolved` (perhaps it hasn't started playing yet), and the end time of the animation is positive infinity.
 
 ## Example
 

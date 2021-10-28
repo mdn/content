@@ -1,5 +1,5 @@
 ---
-title: <area>
+title: '<area>: The Image Map Area element'
 slug: Web/HTML/Element/area
 tags:
   - Content
@@ -102,7 +102,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 - {{htmlattrdef("href")}}
   - : The hyperlink target for the area. Its value is a valid URL. This attribute may be omitted; if so, the `<area>` element does not represent a hyperlink.
 - {{htmlattrdef("hreflang")}}
-  - : Indicates the language of the linked resource. Allowed values are determined by [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt "Tags for Identifying Languages"). Use this attribute only if the {{htmlattrxref("href", "area")}} attribute is present.
+  - : Indicates the language of the linked resource. Allowed values are defined by {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. Use this attribute only if the {{htmlattrxref("href", "area")}} attribute is present.
 - {{htmlattrdef("ping")}}
   - : Contains a space-separated list of URLs to which, when the hyperlink is followed, {{HTTPMethod("POST")}} requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking.
 - {{htmlattrdef("referrerpolicy")}}

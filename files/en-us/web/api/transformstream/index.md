@@ -57,6 +57,7 @@ const transformContent = {
       default:
         controller.enqueue(this.textencoder.encode(String(chunk)))
         break
+    }
   },
   flush() { /* do any destructor work here */ }
 }

@@ -66,26 +66,26 @@ console.log(match.username); // { input: "", groups: {} }
 console.log(match.password); // { input: "", groups: {} }
 console.log(match.hostname); // { input: "store.example.com", groups: { "0": "store" } }
 console.log(match.port); // { input: "", groups: {} }
-console.log(match.pathname); // { input: "/books/123", groups: { "1": "123" } }
+console.log(match.pathname); // { input: "/books/123", groups: { "id": "123" } }
 console.log(match.search); // { input: "", groups: {} }
 console.log(match.hash); // { input: "", groups: {} }
 
 // Relative URL strings
-pattern.test('/books/123', 'http://store.example.com'); // returns object
-pattern.test('/books/123', 'data:text/plain,hello world!'); // returns object
-pattern.test('/books/123'); // returns null
+pattern.exec('/books/123', 'http://store.example.com'); // returns object
+pattern.exec('/books/123', 'data:text/plain,hello world!'); // returns object
+pattern.exec('/books/123'); // returns null
 
 // Structured objects
-pattern.test({
+pattern.exec({
   pathname: '/books/123',
   baseURL: 'http://store.example.com',
 }); // returns object
-pattern.test({
+pattern.exec({
   protocol: 'https',
   hostname: 'store.example.com',
   pathname: '/books/123',
 }); // returns object
-pattern.test({
+pattern.exec({
   protocol: 'file',
   hostname: 'store.example.com',
   pathname: '/books/123',

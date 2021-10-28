@@ -7422,6 +7422,8 @@
 /en-US/docs/Web/API/FileRequest.onprogress	/en-US/docs/Web/API/FileRequest/onprogress
 /en-US/docs/Web/API/FileSystemFileEntry/FileSystemFileEntry.createWriter	/en-US/docs/Web/API/FileSystemFileEntry/createWriter
 /en-US/docs/Web/API/FileSystemFileEntry/FileSystemFileEntry.createWriter()	/en-US/docs/Web/API/FileSystemFileEntry/createWriter
+/en-US/docs/Web/API/FileSystemFlags/create	/en-US/docs/Web/API/FileSystemFlags
+/en-US/docs/Web/API/FileSystemFlags/exclusive	/en-US/docs/Web/API/FileSystemFlags
 /en-US/docs/Web/API/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/Web/API/File_System_API/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/Web/API/Float32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array

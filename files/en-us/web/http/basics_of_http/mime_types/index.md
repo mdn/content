@@ -16,9 +16,8 @@ tags:
 {{HTTPSidebar}}
 
 A **media type** (also known as a
-**Multipurpose Internet Mail Extensions or MIME type**) is a standard
-that indicates the nature and format of a document, file, or assortment of
-bytes. It is defined and standardized in IETF's {{RFC(6838)}}.
+**Multipurpose Internet Mail Extensions or MIME type**) indicates the nature and format of a document, file, or assortment of
+bytes. MIME types are defined and standardized in IETF's {{RFC(6838)}}.
 
 The [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/) is
 responsible for all official MIME types, and you can find the most up-to-date and
@@ -37,24 +36,22 @@ page.
 
 ## Structure of a MIME type
 
-The simplest MIME type consists of a _type_ and a _subtype_; these
-are each strings which, when concatenated with a slash (`/`) between them,
-comprise a MIME type. No whitespace is allowed in a MIME type:
+A simplest MIME type consists of a _type_ and a _subtype_. A MIME type comprises these strings concatenated with a slash (`/`). No whitespace is allowed in a MIME type:
 
 ```
 type/subtype
 ```
 
 The **_type_** represents the general category into which the
-data type falls, such as `video` or `text`. The
-**_subtype_** identifies the exact kind of data of the specified
+data type falls, such as `video` or `text`. 
+
+The **_subtype_** identifies the exact kind of data of the specified
 type the MIME type represents. For example, for the MIME type `text`, the
 subtype might be `plain` (plain text), `html`
 ({{Glossary("HTML")}} source code), or `calendar` (for
 iCalendar/`.ics`) files.
 
-Each type has its own set of possible subtypes, and a MIME type always has both a type
-and a subtype, never just one or the other.
+Each type has its own set of possible subtypes. A MIME type always has both a type and a subtype, never just one or the other.
 
 An optional **parameter** can be added to provide additional details:
 
@@ -62,15 +59,13 @@ An optional **parameter** can be added to provide additional details:
 type/subtype;parameter=value
 ```
 
-For example, for any MIME type whose main type is `text`, the optional
-`charset` parameter can be used to specify the character set used for the
+For example, for any MIME type whose main type is `text`, you can add the optional `charset` parameter to specify the character set used for the
 characters in the data. If no `charset` is specified, the default is
 {{Glossary("ASCII")}} (`US-ASCII`) unless overridden by the {{Glossary("user
   agent", "user agent's")}} settings. To specify a UTF-8 text file, the MIME type
 `text/plain;charset=UTF-8` is used.
 
-MIME types are case-insensitive but are traditionally written in lowercase, with the
-exception of parameter values, whose case may or may not have specific meaning.
+MIME types are case-insensitive but are traditionally written in lowercase. The parameter values can be case-sensitive.
 
 ### Types
 

@@ -18,8 +18,8 @@ The `math` role indicates that the content represents a mathematical expression.
 
 Content with the role `math` is intended to be marked up in an accessible format such as [MathML](https://developer.mozilla.org/en-US/docs/Web/MathML), or with another type of textual representation, which can be converted to an accessible format by the browser or a polyfill library.
 
-Unfortunatly, browser support for MathML is not universal. While using an image of a mathematical expression is not optimal, if you do use image, use the `math` role. 
-Make sure any images of math are labeled by an `alt` attribure that describes the mathematical expression as it would be spoken.
+Unfortunately, browser support for MathML is not universal. While using an image of a mathematical expression is not optimal, if you do use image, use the `math` role. 
+Make sure any images of math are labeled by an `alt` attribute that describes the mathematical expression as it would be spoken.
 
 If the math element has only presentational children and the accessible name is intended to convey the mathematical expression, use `aria-label` to provide a string that represents the expression. If the math element contains navigable content that conveys the mathematical expression and a visible label for the expression is present, use `aria-labelledby`. Otherwise, use `aria-label` to name the expression, e.g., `aria-label="Pythagorean Theorem"`.
 

@@ -489,7 +489,7 @@ This can be useful if the ambient light API is not available. Support is emergin
 
 ```css
 @media (prefers-color-scheme: dark) {
-    /* adust styles for dark mode */
+    /* adjust styles for dark mode */
 }
 ```
 

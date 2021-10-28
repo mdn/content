@@ -43,7 +43,7 @@ None.
 </p>
 ```
 
-Incuding better semantics, the above could also be written:
+Including better semantics, the above could also be written:
 
 ```html
 <p>

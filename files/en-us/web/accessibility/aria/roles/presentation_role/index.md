@@ -21,7 +21,7 @@ While ARIA is primarily used to express semantics, there are some situations whe
 
 Writing `<h2 role="presentation">Democracy Dies in Darkness</h2>` removes the heading semantics of the {{HTMLElement('h2')}} element, making it the equivalent of `<div>Democracy Dies in Darkness</div>`. The heading role semantics are removed, but the content itself is still available.
 
-When an element has required descendents, such as the the various {{HTMLElement('table')}}, elements and {{HTMLElement('li')}}s children of a {{HTMLElement('ul')}} or {{HTMLElement('ol')}}, the `presentation` or `none`  role on the table or list removes the default semantics of the element on which it was applied and their required descendant elements. 
+When an element has required descendents, such as the various {{HTMLElement('table')}}, elements and {{HTMLElement('li')}}s children of a {{HTMLElement('ul')}} or {{HTMLElement('ol')}}, the `presentation` or `none`  role on the table or list removes the default semantics of the element on which it was applied and their required descendant elements. 
 
 If `presentation` or `none` is applied to a {{HTMLElement('table')}}  element, the descendant {{HTMLElement('caption')}}, {{HTMLElement('thead')}}, {{HTMLElement('tbody')}}, {{HTMLElement('tfoot')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, and {{HTMLElement('td')}} elements inherit the role and are thus not exposed to assistive technologies. But, elements inside of the {{HTMLElement('th')}} and {{HTMLElement('td')}} elements, including nested tables, are exposed to assistive technologies.
 

@@ -61,12 +61,12 @@ Returns a {{jsxref('Promise')}} that resolves with an array of objects containin
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : The browsing context is not top-level or the contact picker is showing a flag. A flag denotes an already existing contact picker, only one picker can exist at any time.
-- `SecurityError`
-  - : If the method is not triggered by user interaction.
-- `TypeError`
-  - : If `properties` is empty, or if any of the specified properties are not
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the browsing context is not top-level or the contact picker is showing a flag. A flag denotes an already existing contact picker; only one picker can exist at any time.
+- `SecurityError` {{domxref("DOMException")}}
+  - : Returned if the method is not triggered by user interaction.
+- `TypeError` {{domxref("DOMException")}}
+  - : Returned if `properties` is empty, or if any of the specified properties are not
     supported.
 
 ## Examples
