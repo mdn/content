@@ -53,9 +53,9 @@ async function returnPathDirectories(directoryHandle) {
   }
 
   // Check if handle exists inside our directory handle
-  const relativePaths = await directoryHandle.resolve(handle);
+  const relativePaths = await directoryHandle.resolve(handle[0]);
 
-  if (relativePath === null) {
+  if (relativePaths === null) {
     // Not inside directory handle
   } else {
     // relativePath is an array of names, giving the relative path
