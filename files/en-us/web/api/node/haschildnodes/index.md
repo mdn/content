@@ -36,18 +36,6 @@ if (foo.hasChildNodes()) {
 }
 ```
 
-## Polyfill
-
-Here is one possible polyfill:
-
-```js
-;(function(prototype) {
-  prototype.hasChildNodes = prototype.hasChildNodes || function() {
-    return !!this.firstChild;
-  }
-})(Node.prototype);
-```
-
 There are various ways to determine whether the node has a child node:
 
 - `node.hasChildNodes()`
