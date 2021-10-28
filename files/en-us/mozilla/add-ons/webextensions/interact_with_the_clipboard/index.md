@@ -15,31 +15,57 @@ tags:
 ---
 {{AddonSidebar}}
 
-There are two ways browser extensions can interact with the system clipboard: the {{domxref("Document.execCommand()")}} method and the modern asynchronous [Clipboard API](/en-US/docs/Web/API/Clipboard_API).
+Working with the clipboard in extensions is transitioning from the Web API {{domxref("Document.execCommand()","document.execCommand")}} method (which is deprecated) to the {{domxref("Clipboard", "navigator.clipboard")}} method.
 
-The {{domxref("Document.execCommand()")}} method can be used, specifying the desired command:
+> **Note:** The {{domxref("Clipboard", "navigator.clipboard")}} API is a recent addition to the specification and may not be fully implemented in all browsers. This article describes some limitations, but be sure to review the compatibility tables for each method before using them to ensure that the API supports your needs.
 
-- `document.execCommand("copy")`
-- `document.execCommand("cut")`
-- `document.execCommand("paste")`
+The difference between the two APIs is that {{domxref("Document.execCommand()","document.execCommand")}} this is analogous to the keyboard copy, cut, and paste actions – exchanging data between a webpage and clipboard – whereas {{domxref("Clipboard", "navigator.clipboard")}} writes and reads arbitrary data to and from the clipboard.
 
-The Clipboard API provides asynchronous access to read and write the clipboard contents directly. For example, to read text from the clipboard:
+{{domxref("Clipboard", "navigator.clipboard")}} provide separate methods to read or write:
 
-```js
-navigator.clipboard.readText().then(text => outputElem.innerText = text);
-```
+- text content, using {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} and {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}}.
+- images, rich text, HTML, and other rich content, using {{domxref("Clipboard.read", "navigator.clipboard.read()")}} and {{domxref("Clipboard.write", "navigator.clipboard.write()")}}.
 
-This requests the contents of the clipboard and, when the response is received stores the clipboard text into an element's {{domxref("HTMLElement/innerText", "innerText")}}.
+However, while {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} and {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}} work on all browsers, {{domxref("Clipboard.read", "navigator.clipboard.read()")}} and {{domxref("Clipboard.write", "navigator.clipboard.write()")}} do not. For example, on Firefox at the time of writing, {{domxref("Clipboard.read", "navigator.clipboard.read()")}} and {{domxref("Clipboard.write", "navigator.clipboard.write()")}} are not fully implemented, such that to:
 
-> **Note:** The asynchronous Clipboard API methods are a recent addition to the specification, and may not be fully implemented to the specification in all browsers. Be sure to review the compatibility tables for each method before using them, to ensure that support is broad enough for your needs.
+- work with images use {{WebExtAPIRef("clipboard.setImageData","browser.clipboard.setImageData()")}} to write images to the clipboard and {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)")}} to paste images to a webpage.
+- write rich content (such as, HTML, rich text including images, etc.) to the clipboard, use {{domxref("Document.execCommand()","document.execCommand(&#34;copy&#34;)")}} or {{domxref("Document.execCommand()","document.execCommand(&#34;cut&#34;)")}}. Then, either {{domxref("Clipboard.read","navigator.clipboard.read()")}} (recommended) or {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)")}} to read the content from the clipboard.
 
 ## Writing to the clipboard
 
-There are two ways to write to the clipboard. You can use the {{domxref("Document.execCommand", "document.execCommand()")}} to trigger the "cut" and "copy" actions, which replaces the clipboard's current contents with the currently selected data. The other option is to use the Clipboard API's {{domxref("Clipboard.writeText()")}} or {{domxref("Clipboard.write()")}} method to replace the clipboard's contents with specific data.
+This section describes the options for writing data to the clipboard.
+
+### Using the Clipboard API
+
+The Clipboard API writes arbitrary data to the clipboard from your extension. Using the API requires the permission `"clipboardRead"` or `"clipboardWrite"` in your `manifest.json` file. As the API is only available to [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts), it cannot be used from a content script running on `http:`-pages, only `https:`-pages.
+
+For page scripts, the `"clipboard-write"` permission needs to be requested using the Web API {{domxref("Permissions", "navigator.permissions")}}. You can check for that permission using {{domxref("Permissions.query", "navigator.permissions.query()")}}:
+
+```js
+navigator.permissions.query({name: "clipboard-write"}).then(result => {
+  if (result.state == "granted" || result.state == "prompt") {
+    /* write to the clipboard now */
+  }
+});
+```
+
+> **Note:** The `clipboard-write` permission name is not supported in Firefox, only Chromium browsers.
+
+This function takes a string and writes it to the clipboard:
+
+```js
+function updateClipboard(newClip) {
+  navigator.clipboard.writeText(newClip).then(function() {
+    /* clipboard successfully set */
+  }, function() {
+    /* clipboard write failed */
+  });
+}
+```
 
 ### Using execCommand()
 
-The {{domxref("Document.execCommand", "document.execCommand()")}} method's `"cut"` and `"copy"` commands can be used to replace the clipboard's current contents with the selected material. These commands can be used without any special permission if you are using them in a short-lived event handler for a user action (for example, a click handler).
+The `"cut"` and `"copy"` commands of the {{domxref("Document.execCommand", "document.execCommand()")}} method are used to replace the clipboard's content with the selected material. These commands can be used without any special permission in short-lived event handlers for a user action (for example, a click handler).
 
 For example, suppose you've got a popup that includes the following HTML:
 
@@ -60,7 +86,7 @@ function copy() {
 document.querySelector("#copy").addEventListener("click", copy);
 ```
 
-Because the `execCommand()` call is inside a click event handler, you don't need any special permissions here.
+Because the `execCommand()` call is inside a click event handler, you don't need any special permissions.
 
 However, let's say that instead you trigger the copy from an alarm:
 
@@ -76,43 +102,15 @@ browser.alarms.create({
 });
 
 browser.alarms.onAlarm.addListener(copy);
-```
+````
 
 Depending on the browser, this may not work. On Firefox, it will not work, and you'll see a message like this in your console:
 
-    document.execCommand(‘cut’/‘copy’) was denied because it was not called from inside a short running user-generated event handler.
+`document.execCommand(‘cut’/‘copy’) was denied because it was not called from inside a short running user-generated event handler.`
 
 To enable this use case, you need to ask for the `"clipboardWrite"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). So: `"clipboardWrite"` enables you to write to the clipboard outside a short-lived event handler for a user action.
 
-### Using the Clipboard API
-
-The Clipboard API adds greater flexibility, in that you aren't limited to copying the current selection into the clipboard, but can directly specify what information to place into the clipboard.
-
-Using the API requires that you have the permission "clipboardRead" or "clipboardWrite" in your manifest.json file.
-
-For page scripts, the Permissions API's `"clipboard-write"` permission is needed. You can check for that permission using {{domxref("Permissions.query", "navigator.permissions.query()")}}:
-
-```js
-navigator.permissions.query({name: "clipboard-write"}).then(result => {
-  if (result.state == "granted" || result.state == "prompt") {
-    /* write to the clipboard now */
-  }
-});
-```
-
-This function takes a string as input and updates the clipboard to contain that string:
-
-```js
-function updateClipboard(newClip) {
-  navigator.clipboard.writeText(newClip).then(function() {
-    /* clipboard successfully set */
-  }, function() {
-    /* clipboard write failed */
-  });
-}
-```
-
-> **Note:** The`clipboard-write` permission name is not currently supported in Firefox — only Chromium browsers.
+> **Note:**{{domxref("Document.execCommand", "document.execCommand()")}} does not work on input fields of `type="hidden"`, with the HTML5 attribute `"hidden"`, or any matching CSS rule using `"display: none;"`. So, to add a "copy to clipboard" button to a `span`, `div`, or `p` tag, you need to use a workaround, such as setting the input's position to absolute and moving it out of the viewport.
 
 ### Browser-specific considerations
 
@@ -120,23 +118,32 @@ The clipboard and other APIs involved here are evolving rapidly, so there are va
 
 In Chrome:
 
-- You can write to the clipboard like this in all execution contexts - background pages, content scripts, options pages, and popups.
-- You don't actually need `"clipboardWrite"`, even to write to the clipboard outside a user-generated event handler.
+- You don't need `"clipboardWrite"`, even to write to the clipboard outside a user-generated event handler.
 
 In Firefox:
 
-- You can write to the clipboard with execCommand in all execution contexts _except background pages_. In Firefox you can't select text or focus an input field in background pages, so you can't write to the clipboard with execCommand from a background page. The Clipboard Web API doesn't have this limitation.
-- From version 57 onward, you can copy images to the clipboard using the [`clipboard.setImageData()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData) API.
-- Support for the Clipboard API's {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}} method was added in Firefox 63.
-- When using content scripts, the Clipboard API is available only for HTTPS pages. As a workaround, use messaging between your content scripts and the background script.
+- {{domxref("Clipboard.write", "navigator.clipboard.write()")}} is not supported.
+
+See the [browser compatibility tables](#browser_compatibility) for more information.
 
 ## Reading from the clipboard
 
-The `execCommand()` method provides the `"paste"` command, which lets you paste the current clipboard contents at the insertion point in an editable control. You can gain greater flexibility using the Clipboard API's {{domxref("Clipboard.read()")}} and {{domxref("Clipboard.readText()")}} methods.
+This section describes the options for reading or pasting data from the clipboard.
+
+### Using the Clipboard API
+
+The Clipboard API's {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} and {{domxref("Clipboard.read", "navigator.clipboard.read()")}} methods let you read arbitrary text or binary data from the clipboard in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts). This lets you access the data in the clipboard without pasting it into an editable element.
+
+Once you have the `"clipboard-read"` permission from the [Permissions API](/en-US/docs/Web/API/Permissions_API), you can read from the clipboard easily. For example, this snippet of code fetches the text from the clipboard and replaces the contents of the element with the ID `"outbox"` with that text.
+
+```js
+navigator.clipboard.readText().then(clipText =>
+  document.getElementById("outbox").innerText = clipText);
+```
 
 ### Using execCommand()
 
-First, you will need to have the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) established for your extension. This is the case even if you're using the `"paste"` command from within a user-generated event handler such as {{event("click")}} or {{event("keypress")}}.
+To use {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)")}} your extension needs the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). This is the case even if you're using the `"paste"` command from within a user-generated event handler, such as {{event("click")}} or {{event("keypress")}}.
 
 Consider HTML that includes something like this:
 
@@ -158,22 +165,19 @@ function paste() {
 document.querySelector("#paste").addEventListener("click", paste);
 ```
 
-### Using the Clipboard API
-
-The Clipboard API's {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} and {{domxref("Clipboard.read", "navigator.clipboard.read()")}} methods let you read arbitrary text or binary data from the clipboard. This lets you access the data in the clipboard without pasting it into an editable element.
-
-Once you have the `"clipboard-read"` permission from the [Permissions API](/en-US/docs/Web/API/Permissions_API), you can read from the clipboard easily:
-
-```js
-navigator.clipboard.readText().then(clipText =>
-  document.getElementById("outbox").innerText = clipText);
-```
-
-This snippet of code fetches the text from the clipboard and replaces the current contents of the element with the ID `"outbox"` with that text.
-
 ### Browser-specific considerations
 
-Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) from version 54, but only supports pasting into elements in [content editable mode](/en-US/docs/Web/Guide/HTML/Editable_content), which for content scripts only works with a {{HTMLElement("textarea")}}. For background scripts, any element can be set to content editable mode.
+Firefox supports the `"clipboardRead"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) from version 54 but only supports pasting into elements in [content editable mode](/en-US/docs/Web/Guide/HTML/Editable_content), which for content scripts only works with a {{HTMLElement("textarea")}}. For background scripts, any element can be set to content editable mode.
+
+## Browser compatibility
+
+### navigator.clipboard
+
+{{Compat("api.Clipboard")}}
+
+### clipboard.setImageData
+
+{{Compat("webextensions.api.clipboard")}}
 
 ## See also
 
