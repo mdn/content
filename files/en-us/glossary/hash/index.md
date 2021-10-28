@@ -11,4 +11,4 @@ The hash function takes a variable-length message input and produces a fixed-len
 
 ## See also
 
-- {{Interwiki("wikipedia", "hash function")}} on Wikipedia
+- {{Interwiki("wikipedia", "Hash function")}} on Wikipedia
