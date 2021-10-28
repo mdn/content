@@ -56,7 +56,7 @@ inputForm.onsubmit = function(event) {
   synth.speak(utterThis);
 
   utterThis.onresume = function(event) {
-    console.log('Speech resumed after ' + event.elapsedTime + ' seconds.');
+    console.log('Speech resumed after ' + event.elapsedTime + ' milliseconds.');
   }
 
   inputTxt.blur();
