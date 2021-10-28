@@ -18,7 +18,7 @@ Some tables are very large, and it's not possible to show all the columns to the
 
 If all columns in a table are present in the DOM, the `aria-colcount` attribute isn't needed, as browsers automatically calculate the total number of columns. However, if only a portion of the columns is present in the DOM at a given moment, that is when this attribute is helpful and needed. 
 
-When using `aria-colcount` when you have a known number of columns, make sure to also use [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) to label each column, or, if the columns are contiguous (sequential with no breaks), label each row.
+When using `aria-colcount` when you have a known number of columns, make sure to also use [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) to label each column, or, if the columns are contiguous－if it's a group of columns in the original order with no breaks－label each row.
 
 The following example shows a grid with 6 columns, of which columns 1, 2, 5, and 6 are displayed to the user. The total number of columns that make up the table is set as `aria-colcount="6"` on the table itself. As the columns aren't contiguous, every [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_role) - in this case [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role) and [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role) elements - have the `aria-colindex` attribute set.
 
