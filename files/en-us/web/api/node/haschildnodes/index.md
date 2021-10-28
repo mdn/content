@@ -13,7 +13,7 @@ browser-compat: api.Node.hasChildNodes
 {{APIRef("DOM")}}
 
 The **`Node.hasChildNodes()`** method returns a
-boolean value indicating whether the given {{domxref("Node")}} has [child nodes](/en-US/docs/Web/API/Node.childNodes) or not.
+boolean value indicating whether the given {{domxref("Node")}} has [child nodes](/en-US/docs/Web/API/Node/childNodes) or not.
 
 ## Syntax
 
