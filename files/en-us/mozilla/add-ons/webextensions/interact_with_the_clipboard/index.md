@@ -122,10 +122,9 @@ In Chrome:
 
 In Firefox:
 
-- When using content scripts, the Clipboard API is available only for HTTPS pages. As a workaround, use messaging between your content scripts and the background script.
 - {{domxref("Clipboard.write", "navigator.clipboard.write()")}} is not supported.
 
-See the [browser compatibility tables](#Browser_compatibility) for more information.
+See the [browser compatibility tables](#browser_compatibility) for more information.
 
 ## Reading from the clipboard
 
