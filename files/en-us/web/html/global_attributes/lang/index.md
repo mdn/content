@@ -10,7 +10,7 @@ browser-compat: html.global_attributes.lang
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **`lang`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user. The attribute contains a single “language tag” in the format defined in [_Tags for Identifying Languages (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt).
+The **`lang`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user. The attribute contains a single “language tag” in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
 
 > **Note:** The default value of `lang` is `unknown`, therefore it is recommended to always specify this attribute with the appropriate value.
 

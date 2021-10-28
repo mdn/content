@@ -38,8 +38,8 @@ DataTransferItemList.remove(index);
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : The drag data store is not in read/write mode, so the item can't be removed.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the drag data store is not in read/write mode and so the item cannot be removed.
 
 ## Example
 

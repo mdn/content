@@ -50,21 +50,21 @@ RTCPeerConnection.setConfiguration(configuration);
 
 ### Exceptions
 
-- `InvalidAccessError`
-  - : One or more of the URLs specified in `configuration.iceServers` is a
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if one or more of the URLs specified in `configuration.iceServers` is a
     {{Glossary("TURN")}} server, but complete login information is not provided (that is,
     either the {{domxref("RTCIceServer.username")}} or
     {{domxref("RTCIceServer.credentials")}} is missing). This prevents successful login to
     the server.
-- `InvalidModificationError`
-  - : The `configuration` includes changed identity information, but the
+- `InvalidModificationError` {{domxref("DOMException")}}
+  - : Thrown if the `configuration` includes changed identity information, but the
     connection already has identity information specified. This happens if
     `configuration.peerIdentity` or `configuration.certificates` is
     set and their values differ from the current configuration.
-- `InvalidStateError`
-  - : The {{domxref("RTCPeerConnection")}} is closed.
-- `SyntaxError`
-  - : One or more of the URLs provided in the `configuration.iceServers` list
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("RTCPeerConnection")}} is closed.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if one or more of the URLs provided in the `configuration.iceServers` list
     is invalid.
 
 ## Example

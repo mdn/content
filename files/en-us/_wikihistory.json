@@ -74999,12 +74999,6 @@
       "Rumyra"
     ]
   },
-  "Web/API/Sanitizer/sanitizeToString": {
-    "modified": "2020-12-13T12:23:59.821Z",
-    "contributors": [
-      "Rumyra"
-    ]
-  },
   "Web/API/Screen": {
     "modified": "2020-10-15T21:29:41.001Z",
     "contributors": [

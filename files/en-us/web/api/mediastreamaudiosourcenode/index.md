@@ -72,8 +72,8 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 ## Exceptions
 
-- `InvalidStateError`
-  - : The stream specified by the `mediaStream` parameter does not contain any audio tracks.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the stream specified by the `mediaStream` parameter does not contain any audio tracks.
 
 ## Usage notes
 

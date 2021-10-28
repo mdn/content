@@ -41,32 +41,12 @@ operation are fired. The result attribute is set to undefined.
 
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>This IDBCursor's transaction is inactive.</td>
-    </tr>
-    <tr>
-      <td><code>ReadOnlyError</code></td>
-      <td>The transaction mode is read-only.</td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>
-        The cursor was created using
-        {{domxref("IDBindex.openKeyCursor")}}, is currently being
-        iterated, or has iterated past its end.
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if this IDBCursor's transaction is inactive.
+- `ReadOnlyError` {{domxref("DOMException")}}
+  - : Thrown if the transaction mode is read-only.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the cursor was created using {{domxref("IDBindex.openKeyCursor")}}, is currently being iterated, or has iterated past its end.
 
 ## Example
 

@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: aria-busy attribute'
+title: 'aria-busy'
 slug: Web/Accessibility/ARIA/Attributes/aria-busy
 tags: 
   - Accessibility

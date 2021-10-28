@@ -8,7 +8,7 @@ tags:
   - VideoEncoder
 browser-compat: api.VideoEncoder
 ---
-The **`VideoEncoder`** interface of the {{domxref('WebCodecs API','','','true')}} decodes {{domxref("VideoFrame")}} objects.
+The **`VideoEncoder`** interface of the {{domxref('WebCodecs API','','','true')}} encodes {{domxref("VideoFrame")}} objects.
 
 ## Constructor
 
@@ -20,12 +20,12 @@ The **`VideoEncoder`** interface of the {{domxref('WebCodecs API','','','true')}
 - {{domxref("VideoEncoder.encodeQueueSize")}}{{ReadOnlyInline}}
   - : An integer representing the number of encode queue requests.
 - {{domxref("VideoEncoder.state")}}{{ReadOnlyInline}}
-  - : Represents the state of the underlying codec and whether it is configured for decoding.
+  - : Represents the state of the underlying codec and whether it is configured for encoding.
 
 ## Methods
 
 - {{domxref("VideoEncoder.configure()")}}
-  - : Enqueues a control message to configure the video decoder for decoding chunks.
+  - : Enqueues a control message to configure the video encoder for encoding chunks.
 - {{domxref("VideoEncoder.encode()")}}
   - : Enqueues a control message to encode a given {{domxref("VideoFrame")}}.
 - {{domxref("VideoEncoder.flush()")}}

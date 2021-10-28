@@ -11,12 +11,12 @@ browser-compat: api.VideoDecoder.configure
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`configure()`** method of the {{domxref("VideoDecoder")}} interface enqueues a control message to configure the audio decoder for decoding chunks.
+The **`configure()`** method of the {{domxref("VideoDecoder")}} interface enqueues a control message to configure the video decoder for decoding chunks.
 
 ## Syntax
 
 ```js
-AudioDecoder.configure(config)
+VideoDecoder.configure(config)
 ```
 
 ### Parameters
