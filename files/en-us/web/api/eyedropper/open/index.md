@@ -9,16 +9,9 @@ tags:
   - open
 browser-compat: api.EyeDropper.open
 ---
-{{APIRef("EyeDropper API")}}
+{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
 
 The **`EyeDropper.prototype.open()`** method starts the eyedropper mode, returning a promise which is fulfilled once the user has either selected a color or dismissed the eyedropper mode.
-
-The promise resolves to a {{domxref("ColorSelectionResult")}} object that provides the selected color hex value.
-
-The promise rejects in two cases:
-
-* When the user dismisses the eyedropper mode by pressing the `ESC` key.
-* When the eyedropper mode is aborted by the {{domxref("AbortController")}} passed as an argument to `open()`.
 
 ## Syntax
 
@@ -38,7 +31,19 @@ eyeDropper.open({ signal: abortController.signal });
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to a {{domxref("ColorSelectionResult")}} object.
+A {{jsxref("Promise")}} that eventually resolves when the user selects a pixel color from the screen.
+
+The promise resolves to an object with the following property:
+- `sRGBHex`
+  - : A string representing the selected color, in hexadecimal sRGB format (`#aabbcc`).
+
+### Exceptions
+
+Exceptions are not thrown but returned when the {{jsxref("Promise")}} is rejected.
+The promise is rejected in two cases:
+
+* When the user dismisses the eyedropper mode by pressing the <kbd>Escape</kbd> key.
+* When the eyedropper mode is aborted by the {{domxref("AbortController")}} passed as an argument to `open()`.
 
 ## See also
 

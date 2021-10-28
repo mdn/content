@@ -7,16 +7,29 @@ tags:
   - EyeDropper
   - Interface
   - Reference
+browser-compat: api.EyeDropper
 ---
-{{APIRef("EyeDropper API")}}
+{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
 
 The **`EyeDropper`** interface represents an instance of an eyedropper tool that can be opened and used by the user to select colors from the screen.
+
+## Constructor
+
+- {{DOMxRef("EyeDropper.EyeDropper", "EyeDropper()")}}
+  - : Returns a new `EyeDropper` instance.
+
+## Methods
+
+_The `EyeDropper` interface doesn't inherit any methods_.
+
+- {{DOMxRef("EyeDropper.prototype.open()")}}
+  - : Returns a promise that resolves to an object that gives access to the selected color.
 
 ## Examples
 
 ### Opening the eyedropper tool and sampling a color
 
-This example shows how to open an eyedropper tool and wait for the user to either select a pixel from the screen, or press `ESC` to cancel the eyedropper mode.
+This example shows how to open an eyedropper tool and wait for the user to either select a pixel from the screen, or press <kbd>Escape</kbd> to cancel the eyedropper mode.
 
 #### HTML
 
@@ -53,7 +66,7 @@ document.getElementById('start-button').addEventListener('click', () => {
 
 ### Aborting the eyedropper mode
 
-This example shows that the eyedropper mode can also be aborted before the user has selected a color or pressed `ESC`.
+This example shows that the eyedropper mode can also be aborted before the user has selected a color or pressed <kbd>Escape</kbd>.
 
 #### HTML
 
@@ -93,14 +106,10 @@ document.getElementById('start-button').addEventListener('click', () => {
 
 {{EmbedLiveSample("Aborting the eyedropper mode")}}
 
-## Constructor
+## Specifications
 
-- {{DOMxRef("EyeDropper.EyeDropper", "EyeDropper()")}}
-  - : Returns a newly constructed `EyeDropper`.
+{{Specifications}}
 
-## Methods
+## Browser compatibility
 
-_The `EyeDropper` interface doesn't inherit any method_.
-
-- {{DOMxRef("EyeDropper.prototype.open()")}}
-  - : Returns a promise that resolves to a result object with one {{DOMxRef("DOMString")}} property containing the selected color.
+{{Compat}}

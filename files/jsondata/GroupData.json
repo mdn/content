@@ -421,10 +421,9 @@
     "EyeDropper API": {
       "overview": ["EyeDropper API"],
       "interfaces": [
-        "EyeDropper",
-        "ColorSelectionResult"
+        "EyeDropper"
       ],
-      "methods": ["EyeDropper.open()"],
+      "methods": [],
       "properties": [],
       "events": []
     },

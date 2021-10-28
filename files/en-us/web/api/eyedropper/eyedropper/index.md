@@ -9,7 +9,7 @@ tags:
 ---
 {{APIRef("EyeDropper API")}}
 
-The **`EyeDropper()`** constructor returns a newly created {{DOMxRef("EyeDropper")}} object.
+The **`EyeDropper()`** constructor returns a new {{DOMxRef("EyeDropper")}} object.
 
 ## Syntax
 
