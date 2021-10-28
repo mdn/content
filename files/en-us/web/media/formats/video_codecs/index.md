@@ -1797,7 +1797,7 @@ It supports several HDR implementations, and offers substantial freedom in selec
 
 VP9 is widely supported by browsers, and hardware implementations of the codec are fairly common.
 VP9 is one of the two video codecs mandated by [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) (the other being [VP8](#vp8)).
-Note however that Safari supports for WebM and VP9 has little historical depth, so if you choose to use VP9, consider offering a fallback format such as AVC or HEVC for iPhone, iPad, and Mac users.
+Note however that Safari support for WebM and VP9 was only introduced in version 14.1, so if you choose to use VP9, consider offering a fallback format such as AVC or HEVC for iPhone, iPad, and Mac users.
 
 VP9 is a good choice if you are able to use a WebM container (and can provide fallback video when needed).
 This is especially true if you wish to use an open codec rather than a proprietary one.
