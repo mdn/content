@@ -31,7 +31,7 @@ Values of this type are objects. They contain the following properties:
 - `host`
   - : `string`. The hostname of the proxy server. Mandatory unless `type` is `"direct"`.
 - `port`
-  - : `string`. The port number of the proxy server. Mandatory unless `type` is `"direct"`.
+  - : `number`. The port number of the proxy server. Mandatory unless `type` is `"direct"`.
 - `username`
   - : `string`. Username for the proxy service. This is usable with "socks". For HTTP proxy authorizations, use [`webRequest.onAuthRequired`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired "Fired when the server sends a 401 or 407 status code: that is, when the server is asking the client to provide authentication credentials such as a username and password.").
 - `password`
