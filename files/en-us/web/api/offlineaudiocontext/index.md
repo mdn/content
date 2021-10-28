@@ -18,7 +18,7 @@ The `OfflineAudioContext` interface is an {{domxref("AudioContext")}} interface 
 
 ## Constructor
 
-- {{domxref("OfflineAudioContext.OfflineAudioContext()")}}
+- {{domxref("OfflineAudioContext.OfflineAudioContext()", "OfflineAudioContext()")}}
   - : Creates a new `OfflineAudioContext` instance.
 
 ## Properties
