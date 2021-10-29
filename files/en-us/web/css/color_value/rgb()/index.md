@@ -23,7 +23,8 @@ The **`rgb()`** functional notation expresses a color according to its red, gree
 ```css
 rgb(255,255,255) /* white */
 rgb(255,255,255,.5) /* white with 50% opacity */
-rgb(255 255 255); /* CSS Colors 4 space-separated values */
+rgb(255 255 255) /* CSS Colors 4 space-separated values */
+rgb(255 255 255 / .5); /* white with 50% opacity, using CSS Colors 4 space-separated values */
 ```
 
 ### Values
