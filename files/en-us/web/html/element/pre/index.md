@@ -103,7 +103,7 @@ body {
 
 {{EmbedLiveSample("Basic_Example")}}
 
-### Escaping Reserved Characters
+### Escaping reserved characters
 
 #### HTML
 
@@ -118,7 +118,7 @@ if( i &lt; 10 &amp;&amp; i &gt; 0 )
 
 #### Result
 
-{{EmbedLiveSample("Escaping_Reserved_Characters")}}
+{{EmbedLiveSample("Escaping_reserved_characters")}}
 
 ## Accessibility concerns
 
