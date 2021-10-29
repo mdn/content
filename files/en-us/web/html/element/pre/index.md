@@ -84,42 +84,6 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 - {{htmlattrdef("wrap")}} {{non-standard_inline}}
   - : Is a _hint_ indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS {{Cssxref("white-space")}} instead.
 
-## Examples
-
-### Basic Example
-
-#### HTML
-
-```html
-<p>Using CSS to change the font color is easy.</p>
-<pre>
-body {
-  color: red;
-}
-</pre>
-```
-
-#### Result
-
-{{EmbedLiveSample("Basic_Example")}}
-
-### Escaping reserved characters
-
-#### HTML
-
-```html
-<pre>
-let i = 5;
-
-if( i &lt; 10 &amp;&amp; i &gt; 0 )
-  return &quot; Single Digit Number &quot;
-</pre>
-```
-
-#### Result
-
-{{EmbedLiveSample("Escaping_reserved_characters")}}
-
 ## Accessibility concerns
 
 It is important to provide an alternate description for any images or diagrams created using preformatted text. The alternate description should clearly and concisely describe the image or diagram's content.
@@ -149,6 +113,43 @@ A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}}
 
 - [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [H86: Providing text alternatives for ASCII art, emoticons, and leetspeak | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H86.html)
+
+## Examples
+
+### Basic example
+
+#### HTML
+
+```html
+<p>Using CSS to change the font color is easy.</p>
+<pre>
+body {
+  color: red;
+}
+</pre>
+```
+
+#### Result
+
+{{EmbedLiveSample("Basic_example")}}
+
+### Escaping reserved characters
+
+#### HTML
+
+```html
+<pre>
+let i = 5;
+
+if( i &lt; 10 &amp;&amp; i &gt; 0 )
+  return &quot; Single Digit Number &quot;
+</pre>
+```
+
+#### Result
+
+{{EmbedLiveSample("Escaping_reserved_characters")}}
+
 
 ## Specifications
 
