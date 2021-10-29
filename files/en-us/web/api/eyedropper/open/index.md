@@ -45,6 +45,14 @@ The promise is rejected in two cases:
 * When the user dismisses the eyedropper mode by pressing the <kbd>Escape</kbd> key.
 * When the eyedropper mode is aborted by the {{domxref("AbortController")}} passed as an argument to `open()`.
 
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - The {{DOMxRef("EyeDropper")}} interface it belongs to.

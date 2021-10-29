@@ -6,8 +6,9 @@ tags:
   - EyeDropper
   - Overview
   - Reference
+browser-compat: api.EyeDropper
 ---
-{{DefaultAPISidebar("EyeDropper API")}}
+{{DefaultAPISidebar("EyeDropper API")}}{{SeeCompatTable}}
 
 The **EyeDropper API** provides a mechanism for creating an eyedropper tool. Using this tool, users can sample colors from their screens, including outside of the browser window.
 
@@ -35,6 +36,10 @@ To prevent malicious websites from getting pixel data from a user's screen witho
 | Specification                    | Status                       | Comment             |
 | -------------------------------- | ---------------------------- | ------------------- |
 | {{SpecName("EyeDropper")}}       | {{Spec2("EyeDropper")}}      | Initial definition. |
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

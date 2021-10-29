@@ -6,6 +6,7 @@ tags:
   - Constructor
   - Reference
   - EyeDropper
+browser-compat: api.EyeDropper.EyeDropper
 ---
 {{APIRef("EyeDropper API")}}{{SeeCompatTable}}
 
@@ -16,6 +17,14 @@ The **`EyeDropper()`** constructor returns a new {{DOMxRef("EyeDropper")}} objec
 ```js
 let eyeDropper = new EyeDropper();
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
