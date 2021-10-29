@@ -30,7 +30,7 @@ if (-Infinity)
 
 ### The logical AND operator, &&
 
-If the first object is truthy, it returns the last one
+If the first object is truthy, the logical AND operator returns the second operand:
 
 ```js
 true && "dog"
