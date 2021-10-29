@@ -418,6 +418,15 @@
       ],
       "events": []
     },
+    "EyeDropper API": {
+      "overview": ["EyeDropper API"],
+      "interfaces": [
+        "EyeDropper"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Fetch API": {
       "overview": ["Fetch API"],
       "guides": [
