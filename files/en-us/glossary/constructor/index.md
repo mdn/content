@@ -16,7 +16,7 @@ function Default() {
 
 // This is an overloaded constructor class Overloaded
 // with parameter arguments
-function Overloaded(arg1, arg2, ...,argN){
+function Overloaded(arg1, arg2, ..., argN){
 }
 ```
 
