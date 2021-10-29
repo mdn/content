@@ -66263,13 +66263,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/PaymentItem": {
-    "modified": "2020-10-15T22:12:04.568Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Sheppy"
-    ]
-  },
   "Web/API/PaymentMethodChangeEvent": {
     "modified": "2020-10-15T22:08:01.098Z",
     "contributors": [
