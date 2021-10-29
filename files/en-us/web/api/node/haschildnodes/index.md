@@ -36,13 +36,6 @@ if (foo.hasChildNodes()) {
 }
 ```
 
-There are various ways to determine whether the node has a child node:
-
-- `node.hasChildNodes()`
-- `node.firstChild != null` (or just `node.firstChild`)
-- `node.childNodes && node.childNodes.length` (or
-  `node.childNodes.length > 0`)
-
 ## Specifications
 
 {{Specifications}}
