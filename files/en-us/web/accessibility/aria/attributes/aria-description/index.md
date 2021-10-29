@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: aria-description attribute'
+title: 'aria-description'
 slug: Web/Accessibility/ARIA/Attributes/aria-description
 tags: 
   - Accessibility
