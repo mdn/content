@@ -22,7 +22,7 @@ There are several elements you may want to disable, but still want the user to k
 
 ARIA attributes only provide semantics. To semantically disable an element without removing it from focus order or from the accessibility tree, set `aria-disabled="true"` on the element. You should include JavaScript to disable the functionality of the element while also changing the appearance of the element so sighted users know it is disabled.
 
-Note that the state of being disabled applies to the element with `aria-disabled` and all of it's focusable descendants. 
+Note that the state of being disabled applies to the element with `aria-disabled` and all of its focusable descendants. 
 
 The `aria-disabled` attribute is similar to the HTML `disabled` attribute, but better. The first rule of ARIA is "If you can use a native HTML element or attribute with the semantics and behavior you require already built in, instead of repurposing an element and adding an ARIA role, state or property to make it accessible, then do so." `aria-disabled` is an exception to that rule. It is one of the only cases where an ARIA attribute may be better than the native `disabled` attribute HTML equivalent.  
 
@@ -57,7 +57,7 @@ function toggleDisabled(element, status, update) {
 }
 ```
 
-When toggling from `aria-disabled="true"` to `"false"`, use JavaScript to 1) toggle the value to `false`, 2) enable the element, and 3) let the user know the control is now enabled. If you used CSS to style the disabled state using an attribute selector, the selector will no longer match and the disabled styling will no longer be in effect.
+When toggling from `aria-disabled="true"` to `"false"`, use JavaScript to 1) toggle the value to `false`, 2) enable the element, and 3) let the user know the control is now enabled. If you used CSS to style   the disabled state using an attribute selector, the selector will no longer match and the disabled styling will no longer be in effect.
 
 ## Values
 
