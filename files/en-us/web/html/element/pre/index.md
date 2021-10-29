@@ -17,6 +17,8 @@ The **`<pre>`** [HTML](/en-US/docs/Web/HTML) element represents preformatted tex
 
 {{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
 
+If you have to display reserved characters such as `<`, `>`, `&`, `"` within the `<pre>` tag, the characters must be escaped using their respective [HTML entity](/en-US/docs/Glossary/Entity).
+
 <table class="properties">
   <tbody>
     <tr>
@@ -82,9 +84,11 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 - {{htmlattrdef("wrap")}} {{non-standard_inline}}
   - : Is a _hint_ indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS {{Cssxref("white-space")}} instead.
 
-## Example
+## Examples
 
-### HTML
+### Basic Example
+
+#### HTML
 
 ```html
 <p>Using CSS to change the font color is easy.</p>
@@ -95,11 +99,26 @@ body {
 </pre>
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Basic_Example")}}
 
-> **Note:** If you have to display reserved characters such as `<`, `>`, `&`, `"` within the `<pre>` tag, the characters must be escaped using their respective [HTML entity](/en-US/docs/Glossary/Entity).
+### Escaping Reserved Characters
+
+#### HTML
+
+```html
+<pre>
+let i = 5;
+
+if( i &lt; 10 &amp;&amp; i &gt; 0 )
+  return &quot; Single Digit Number &quot;
+</pre>
+```
+
+#### Result
+
+{{EmbedLiveSample("Escaping_Reserved_Characters")}}
 
 ## Accessibility concerns
 
