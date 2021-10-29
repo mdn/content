@@ -8434,6 +8434,11 @@
 /en-US/docs/Web/API/RTCSessionDescription.toJSON	/en-US/docs/Web/API/RTCSessionDescription/toJSON
 /en-US/docs/Web/API/RTCSessionDescription.type	/en-US/docs/Web/API/RTCSessionDescription/type
 /en-US/docs/Web/API/RTCSignalingState	/en-US/docs/Web/API/RTCPeerConnection/signalingState
+/en-US/docs/Web/API/RTCTrackEventInit	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
+/en-US/docs/Web/API/RTCTrackEventInit/receiver	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
+/en-US/docs/Web/API/RTCTrackEventInit/streams	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
+/en-US/docs/Web/API/RTCTrackEventInit/track	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
+/en-US/docs/Web/API/RTCTrackEventInit/transceiver	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
 /en-US/docs/Web/API/RadioNodeList.value	/en-US/docs/Web/API/RadioNodeList/value
 /en-US/docs/Web/API/RandomSource	/en-US/docs/Web/API/Crypto/getRandomValues
 /en-US/docs/Web/API/RandomSource.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues

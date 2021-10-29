@@ -32,10 +32,18 @@ trackEvent = new RTCTrackEvent(eventInfo);
 ### Parameters
 
 - `eventInfo`
-  - : An object based on the {{domxref("RTCTrackEventInit")}} dictionary, providing
+  - : An object providing
     information about the track which has been added to the
     {{domxref("RTCPeerConnection")}}. This object has the following properties:
-    {{page("/en-US/docs/Web/API/RTCTrackEventInit", "property-list")}}
+
+    - `receiver`
+      - : The {{domxref("RTCRtpReceiver")}} which is being used to receive the track's media.
+    - `streams` {{optional_inline}}
+      - : An array of {{domxref("MediaStream")}} objects representing each of the streams that comprise the event's corresponding track.
+    - `track`
+      - : The {{domxref("MediaStreamTrack")}} the event is associated with.
+    - `transceiver`
+      - : The {{domxref("RTCRtpTransceiver")}} associated with the event.
 
 ### Return value
 
