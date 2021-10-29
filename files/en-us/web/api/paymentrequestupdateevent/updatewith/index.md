@@ -56,7 +56,7 @@ paymentRequestUpdateEvent.updateWith(details);
     - `shippingOptions` {{optional_inline}}
       - : An array of {{domxref("PaymentShippingOption")}} objects, each describing one available shipping option from which the user may choose.
     - `total` {{optional_inline}}
-      - : An object with the same properties as objects returned from `displayItems` providing an updated total for the payment. Make sure this equals the sum of all of the items in `displayItems`. _This is not calculated automatically_. You must update this value yourself anytime the total amount due changes. This lets you have flexibility for how to handle things like tax, discounts, and other adjustments to the total price charged.
+      - : An object with the same properties as the objects in `displayItems` providing an updated total for the payment. Make sure this equals the sum of all of the items in `displayItems`. _This is not calculated automatically_. You must update this value yourself anytime the total amount due changes. This lets you have flexibility for how to handle things like tax, discounts, and other adjustments to the total price charged.
 
 ### Return value
 
