@@ -16,7 +16,7 @@ tags:
 In 1989, while working at CERN, Tim Berners-Lee wrote a proposal to build a hypertext system over the internet. Initially called the _Mesh_, it was later renamed the _World Wide Web_ during its implementation in 1990. Built over the existing TCP and IP protocols, it consisted of 4 building blocks:
 
 - A textual format to represent hypertext documents, the _[HyperText Markup Language](/en-US/docs/Web/HTML)_ (HTML).
-- A simple protocol to exchange these documents, the _HypertText Transfer Protocol_ (HTTP).
+- A simple protocol to exchange these documents, the _HyperText Transfer Protocol_ (HTTP).
 - A client to display (and edit) these documents, the first web browser called the _WorldWideWeb_.
 - A server to give access to the document, an early version of _httpd_.
 
