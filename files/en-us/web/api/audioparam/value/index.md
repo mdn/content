@@ -21,7 +21,7 @@ or sets the value of this {{domxref("AudioParam")}} at the current time. Initial
 Setting `value` has the same effect as
 calling {{domxref("AudioParam.setValueAtTime")}} with the time returned by the
 `AudioContext`'s {{domxref("BaseAudioContext/currentTime", "currentTime")}}
-property..
+property.
 
 ## Syntax
 

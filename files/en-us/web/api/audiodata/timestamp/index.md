@@ -5,7 +5,7 @@ tags:
   - API
   - Property
   - Reference
-  - timstamp
+  - timestamp
   - AudioData
 browser-compat: api.AudioData.timestamp
 ---
