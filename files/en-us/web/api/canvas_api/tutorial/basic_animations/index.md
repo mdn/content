@@ -416,10 +416,10 @@ function setSize() {
   canvas.width = innerWidth;
 }
 
-function Particle(x, y, radius, strokeColor, rotateSpeed) {
+function Particle(x, y, particleTrailWidth, strokeColor, rotateSpeed) {
   this.x = x;
   this.y = y;
-  this.radius = radius;
+  this.particleTrailWidth = particleTrailWidth;
   this.strokeColor = strokeColor;
   this.theta = Math.random() * Math.PI * 2;
   this.rotateSpeed = rotateSpeed;
@@ -434,7 +434,7 @@ function Particle(x, y, radius, strokeColor, rotateSpeed) {
     this.x = mouse.x + Math.cos(this.theta) * this.t;
     this.y = mouse.y + Math.sin(this.theta) * this.t;
     context.beginPath();
-    context.lineWidth = this.radius;
+    context.lineWidth = this.particleTrailWidth;
     context.strokeStyle = this.strokeColor;
     context.moveTo(ls.x, ls.y);
     context.lineTo(this.x, this.y);
