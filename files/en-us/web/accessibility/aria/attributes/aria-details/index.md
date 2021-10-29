@@ -17,6 +17,8 @@ The global `aria-details` attribute identifies the element (or elements) that pr
 
 The `aria-details` attribute can be used to provide additional information or complex descriptions to an object. It is used to inform assistive technology users about the content by providing more in-depth information, whether that content is within the current document or a link to additional assets.
 
+There are other HTML and WAI-ARIA properties that have similar purposes. The HTML {{HTMLElement('label')}} element and the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) properties are used to provide short labels for an object. The HTML `title` attribute and the [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description) and [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) properties provide for longer plain text descriptions of an object. However, when additional information, complex descriptions, or navigable content related to the object is necessary and available, the `aria-details` attribute should be used. 
+
 The `aria-details` attribute serves a similar purpose as HTML's never fully-supported `longdesc` attribute － a URL of a long description to a replaced element's content － which was deprecated due to lack of support and misuse. 
 
 The `aria-details` attribute takes the {{htmlattrxref('id')}}, or space separated list of `id`s of the elements to get more detailed information as its values. When `aria-details` is included on an element, assistive technologies inform users of the availability of extended information, enabling the user to navigate to the referenced content. 
@@ -27,7 +29,7 @@ The elements referenced by `aria-details` should be visible to all users. `aria-
 
 > **Note:** `aria-details` has no impact on the accessible description. 
 
-Unlike `aria-describedby`, elements referenced by `aria-details` are not used in accessible descriptions and are not stringified when presented to assistive technology users. If the associated content is not too long and flattening the contents of the referenced element to a simple string of text wouldn't cause loss of information, consider using `aria-describedby` instead. That said, it is valid for an element to have both `aria-details` and a description specified with either `aria-describedby` or `aria-description`.
+Unlike `aria-describedby`, elements referenced by `aria-details` are not used in accessible descriptions and are not turned into a plain string when presented to assistive technology users. If the associated content is not too long and flattening the contents of the referenced element to a simple string of text wouldn't cause loss of information, consider using `aria-describedby` instead. That said, it is valid for an element to have both `aria-details` and a description specified with either `aria-describedby` or `aria-description`.
 
 ## Example
 
