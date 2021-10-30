@@ -210,7 +210,7 @@ fetch('https://example.com/', { mode: 'navigate' })
     </tr>
     <tr>
       <td>
-        If the request cache mode is "only-if-cached" and the request mode is other than "same-origin"
+        If the request cache mode is "only-if-cached" and the request mode is other than "same-origin".
       </td>
       <td>
         <pre>
