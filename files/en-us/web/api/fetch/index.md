@@ -137,7 +137,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
   - : The request was aborted due to a call to the {{domxref("AbortController")}}
     {{domxref("AbortController.abort", "abort()")}} method.
 - `TypeError`
-  - : The error can occur because of one of the following reasons-
+  - : Can occur for the following reasons:
 
 <table>
   <thead>
