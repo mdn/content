@@ -184,7 +184,7 @@ fetch('blob://example.com/', { mode: 'cors' })
         </pre>
       </td>
     </tr>
-      <td>Url includes credentials</td>
+      <td>URL includes credentials</td>
       <td>
         <pre>
 fetch('https://user:password@example.com/')
