@@ -312,7 +312,7 @@ for (const i in iterable) {
 ```
 
 This loop logs only [enumerable
-properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of the `iterable` object, in arbitrary order. It doesn't log
+properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of the `iterable` object. It doesn't log
 array **elements** `3`, `5`, `7` or
 `hello` because those are **not** enumerable properties, in fact
 they are not properties at all, they are **values**. It logs array
