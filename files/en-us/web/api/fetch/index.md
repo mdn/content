@@ -162,7 +162,7 @@ fetch('https://example.com/', { headers });
     </tr>
     <tr>
       <td>
-        Invalid header value- the header object must contain exactly two elements
+        Invalid header value. The header object must contain exactly two elements.
       </td>
       <td>
         <pre>
