@@ -234,7 +234,7 @@ fetch('https://example.com/', { method: 'CONNECT' })
     </tr>
     <tr>
       <td>
-        If request mode is "no-cors" and the request method is not a CORS-safe-listed method (GET, HEAD, or POST)
+        If the request mode is "no-cors" and the request method is not a CORS-safe-listed method (GET, HEAD, or POST)
       </td>
       <td>
         <pre>
