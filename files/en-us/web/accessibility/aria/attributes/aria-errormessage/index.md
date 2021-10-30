@@ -20,7 +20,7 @@ The `aria-errormessage` should only be used when the value of an object is not v
 
 When `aria-errormessage` is relevant, the element it references must be visible so users can see or hear the error message.
 
-Often times, you will want the element with the error message to be a live region, such as when an error message is displayed to users after they have provided an invalid value. The error message should describe what is wrong and inform the user what is required to make the object valid.
+Often times, you will want the element with the error message to be an [ARIA live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), such as when an error message is displayed to users after they have provided an invalid value. The error message should describe what is wrong and inform the user what is required to make the object valid.
 
 While not all invalid states require an error message; include a visible error message and link the invalid object with the `aria-errormessage` attribute if the failure is visually apparent and an explicit description of the error is necessary. 
 
