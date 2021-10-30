@@ -247,7 +247,7 @@ fetch('https://example.com/', {
     </tr>
     <tr>
       <td>
-        If request method is GET or HEAD and the body is non-null or not undefined.
+        If the request method is GET or HEAD and the body is non-null or not undefined.
       </td>
       <td>
         <pre>
