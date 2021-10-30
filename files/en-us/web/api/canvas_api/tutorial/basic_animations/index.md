@@ -327,6 +327,7 @@ Below is the {{HTMLElement("canvas")}} in which the image is scrolled. Note that
 
 {{EmbedLiveSample("A_looping_panorama", "830", "230")}}
 
+
 ## Mouse following animation
 
 ### HTML
@@ -339,16 +340,10 @@ Below is the {{HTMLElement("canvas")}} in which the image is scrolled. Note that
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <style>
-      /* css here */
-    </style>
   </head>
   <body>
     <canvas id="cw"></canvas>
   </body>
-  <script>
-    //...javascript here
-  </script>
 </html>
 ```
 
@@ -367,7 +362,7 @@ body {
 }
 ```
 
-### Javascript
+### JavaScript
 
 ```js
 const canvas = document.getElementById("cw");
@@ -383,6 +378,10 @@ window.onmousemove = (e) => {
   mouse.x = e.clientX;
   mouse.y = e.clientY;
 };
+
+window.onresize = () => {
+  setSize();
+}
 
 let particlesArray = [];
 
