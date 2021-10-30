@@ -223,7 +223,7 @@ fetch('https://example.com/', {
     </tr>
     <tr>
       <td>
-        If request method is an invalid name token or one of forbidden headers-
+        If the request method is an invalid name token or one of forbidden headers.
         CONNECT, TRACE or TRACK
       </td>
       <td>
