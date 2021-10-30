@@ -374,6 +374,12 @@ const mouse = {
   y: innerHeight / 2,
 };
 
+let particlesArray = [];
+
+generateParticles(101);
+setSize();
+anim();
+
 window.onmousemove = (e) => {
   mouse.x = e.clientX;
   mouse.y = e.clientY;
@@ -382,12 +388,6 @@ window.onmousemove = (e) => {
 window.onresize = () => {
   setSize();
 }
-
-let particlesArray = [];
-
-generateParticles(101);
-setSize();
-anim();
 
 function generateParticles(amount) {
   for (let i = 0; i < amount; i++) {
