@@ -9,7 +9,6 @@ tags:
   - Intermediate
   - Tutorial
 ---
-
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
 
 Since we're using JavaScript to control {{HTMLElement("canvas")}} elements, it's also very easy to make (interactive) animations. In this chapter we will take a look at how to do some basic animations.
@@ -59,39 +58,33 @@ var sun = new Image();
 var moon = new Image();
 var earth = new Image();
 function init() {
-  sun.src = "canvas_sun.png";
-  moon.src = "canvas_moon.png";
-  earth.src = "canvas_earth.png";
+  sun.src = 'canvas_sun.png';
+  moon.src = 'canvas_moon.png';
+  earth.src = 'canvas_earth.png';
   window.requestAnimationFrame(draw);
 }
 
 function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
+  var ctx = document.getElementById('canvas').getContext('2d');
 
-  ctx.globalCompositeOperation = "destination-over";
+  ctx.globalCompositeOperation = 'destination-over';
   ctx.clearRect(0, 0, 300, 300); // clear canvas
 
-  ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
-  ctx.strokeStyle = "rgba(0, 153, 255, 0.4)";
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
+  ctx.strokeStyle = 'rgba(0, 153, 255, 0.4)';
   ctx.save();
   ctx.translate(150, 150);
 
   // Earth
   var time = new Date();
-  ctx.rotate(
-    ((2 * Math.PI) / 60) * time.getSeconds() +
-      ((2 * Math.PI) / 60000) * time.getMilliseconds()
-  );
+  ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
   ctx.translate(105, 0);
   ctx.fillRect(0, -12, 40, 24); // Shadow
   ctx.drawImage(earth, -12, -12);
 
   // Moon
   ctx.save();
-  ctx.rotate(
-    ((2 * Math.PI) / 6) * time.getSeconds() +
-      ((2 * Math.PI) / 6000) * time.getMilliseconds()
-  );
+  ctx.rotate(((2 * Math.PI) / 6) * time.getSeconds() + ((2 * Math.PI) / 6000) * time.getMilliseconds());
   ctx.translate(0, 28.5);
   ctx.drawImage(moon, -3.5, -3.5);
   ctx.restore();
@@ -123,16 +116,16 @@ This example draws an animated clock, showing your current time.
 ```js
 function clock() {
   var now = new Date();
-  var ctx = document.getElementById("canvas").getContext("2d");
+  var ctx = document.getElementById('canvas').getContext('2d');
   ctx.save();
   ctx.clearRect(0, 0, 150, 150);
   ctx.translate(75, 75);
   ctx.scale(0.4, 0.4);
   ctx.rotate(-Math.PI / 2);
-  ctx.strokeStyle = "black";
-  ctx.fillStyle = "white";
+  ctx.strokeStyle = 'black';
+  ctx.fillStyle = 'white';
   ctx.lineWidth = 8;
-  ctx.lineCap = "round";
+  ctx.lineCap = 'round';
 
   // Hour marks
   ctx.save();
@@ -149,7 +142,7 @@ function clock() {
   ctx.save();
   ctx.lineWidth = 5;
   for (i = 0; i < 60; i++) {
-    if (i % 5 != 0) {
+    if (i % 5!= 0) {
       ctx.beginPath();
       ctx.moveTo(117, 0);
       ctx.lineTo(120, 0);
@@ -161,16 +154,14 @@ function clock() {
 
   var sec = now.getSeconds();
   var min = now.getMinutes();
-  var hr = now.getHours();
+  var hr  = now.getHours();
   hr = hr >= 12 ? hr - 12 : hr;
 
-  ctx.fillStyle = "black";
+  ctx.fillStyle = 'black';
 
   // write Hours
   ctx.save();
-  ctx.rotate(
-    hr * (Math.PI / 6) + (Math.PI / 360) * min + (Math.PI / 21600) * sec
-  );
+  ctx.rotate(hr * (Math.PI / 6) + (Math.PI / 360) * min + (Math.PI / 21600) *sec);
   ctx.lineWidth = 14;
   ctx.beginPath();
   ctx.moveTo(-20, 0);
@@ -190,9 +181,9 @@ function clock() {
 
   // Write seconds
   ctx.save();
-  ctx.rotate((sec * Math.PI) / 30);
-  ctx.strokeStyle = "#D40000";
-  ctx.fillStyle = "#D40000";
+  ctx.rotate(sec * Math.PI / 30);
+  ctx.strokeStyle = '#D40000';
+  ctx.fillStyle = '#D40000';
   ctx.lineWidth = 6;
   ctx.beginPath();
   ctx.moveTo(-30, 0);
@@ -204,14 +195,14 @@ function clock() {
   ctx.beginPath();
   ctx.arc(95, 0, 10, 0, Math.PI * 2, true);
   ctx.stroke();
-  ctx.fillStyle = "rgba(0, 0, 0, 0)";
+  ctx.fillStyle = 'rgba(0, 0, 0, 0)';
   ctx.arc(0, 0, 3, 0, Math.PI * 2, true);
   ctx.fill();
   ctx.restore();
 
   ctx.beginPath();
   ctx.lineWidth = 14;
-  ctx.strokeStyle = "#325FA2";
+  ctx.strokeStyle = '#325FA2';
   ctx.arc(0, 0, 142, 0, Math.PI * 2, true);
   ctx.stroke();
 
@@ -239,7 +230,7 @@ var img = new Image();
 // User Variables - customize these to change the image being scrolled, its
 // direction, and the speed.
 
-img.src = "capitan_meadows_yosemite_national_park.jpg";
+img.src = 'capitan_meadows_yosemite_national_park.jpg';
 var CanvasXSize = 800;
 var CanvasYSize = 200;
 var speed = 30; // lower is faster
@@ -256,66 +247,68 @@ var clearX;
 var clearY;
 var ctx;
 
-img.onload = function () {
-  imgW = img.width * scale;
-  imgH = img.height * scale;
+img.onload = function() {
+    imgW = img.width * scale;
+    imgH = img.height * scale;
 
-  if (imgW > CanvasXSize) {
-    // image larger than canvas
-    x = CanvasXSize - imgW;
-  }
-  if (imgW > CanvasXSize) {
-    // image width larger than canvas
-    clearX = imgW;
-  } else {
-    clearX = CanvasXSize;
-  }
-  if (imgH > CanvasYSize) {
-    // image height larger than canvas
-    clearY = imgH;
-  } else {
-    clearY = CanvasYSize;
-  }
+    if (imgW > CanvasXSize) {
+        // image larger than canvas
+        x = CanvasXSize - imgW;
+    }
+    if (imgW > CanvasXSize) {
+        // image width larger than canvas
+        clearX = imgW;
+    } else {
+        clearX = CanvasXSize;
+    }
+    if (imgH > CanvasYSize) {
+        // image height larger than canvas
+        clearY = imgH;
+    } else {
+        clearY = CanvasYSize;
+    }
 
-  // get canvas context
-  ctx = document.getElementById("canvas").getContext("2d"); // set refresh rate
+    // get canvas context
+    ctx = document.getElementById('canvas').getContext('2d');
 
-  return setInterval(draw, speed);
-};
+    // set refresh rate
+    return setInterval(draw, speed);
+}
 
 function draw() {
-  ctx.clearRect(0, 0, clearX, clearY); // clear the canvas // if image is <= Canvas Size
+    ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
 
-  if (imgW <= CanvasXSize) {
-    // reset, start from beginning
-    if (x > CanvasXSize) {
-      x = -imgW + x;
+    // if image is <= Canvas Size
+    if (imgW <= CanvasXSize) {
+        // reset, start from beginning
+        if (x > CanvasXSize) {
+            x = -imgW + x;
+        }
+        // draw additional image1
+        if (x > 0) {
+            ctx.drawImage(img, -imgW + x, y, imgW, imgH);
+        }
+        // draw additional image2
+        if (x - imgW > 0) {
+            ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
+        }
     }
-    // draw additional image1
-    if (x > 0) {
-      ctx.drawImage(img, -imgW + x, y, imgW, imgH);
-    }
-    // draw additional image2
-    if (x - imgW > 0) {
-      ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
-    }
-  }
 
-  // image is > Canvas Size
-  else {
-    // reset, start from beginning
-    if (x > CanvasXSize) {
-      x = CanvasXSize - imgW;
+    // image is > Canvas Size
+    else {
+        // reset, start from beginning
+        if (x > (CanvasXSize)) {
+            x = CanvasXSize - imgW;
+        }
+        // draw additional image
+        if (x > (CanvasXSize-imgW)) {
+            ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
+        }
     }
-    // draw additional image
-    if (x > CanvasXSize - imgW) {
-      ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
-    }
-  }
-  // draw image
-  ctx.drawImage(img, x, y, imgW, imgH);
-  // amount to move
-  x += dx;
+    // draw image
+    ctx.drawImage(img, x, y,imgW, imgH);
+    // amount to move
+    x += dx;
 }
 ```
 
@@ -326,7 +319,6 @@ Below is the {{HTMLElement("canvas")}} in which the image is scrolled. Note that
 ```
 
 {{EmbedLiveSample("A_looping_panorama", "830", "230")}}
-
 
 ## Mouse following animation
 
@@ -374,12 +366,6 @@ const mouse = {
   y: innerHeight / 2,
 };
 
-let particlesArray = [];
-
-generateParticles(101);
-setSize();
-anim();
-
 window.onmousemove = (e) => {
   mouse.x = e.clientX;
   mouse.y = e.clientY;
@@ -388,6 +374,12 @@ window.onmousemove = (e) => {
 window.onresize = () => {
   setSize();
 }
+
+let particlesArray = [];
+
+generateParticles(101);
+setSize();
+anim();
 
 function generateParticles(amount) {
   for (let i = 0; i < amount; i++) {
@@ -460,131 +452,120 @@ function anim() {
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-       
-    <meta charset="UTF-8" />
-       
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-       
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-       
-    <title>Nokia 1100:snake..Member berries</title>
-  </head>
 
-  <body>
-       
-    <div class="keypress hide">
-             
-      <div class="up" onclick="emit(38)">&#8593;</div>
-             
-      <div class="right" onclick="emit(39)">&#8594;</div>
-             
-      <div class="left" onclick="emit(37)">&#8592;</div>
-             
-      <div class="down" onclick="emit(40)">&#8595;</div>
-         
-    </div>
-       
-    <div class="banner" id="selector">
-             
-      <div>            Time :<span id="time">0</span>        </div>
-             
-      <div>LousyGames ©</div>
-             
-      <div>            Score :<span id="score">0</span>        </div>
-             
-      <div class="touch off" onclick="touch(this)">touch</div>
-         
-    </div>
-        <canvas id="main"></canvas>
-  </body>
-  <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            background: #000
-        }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nokia 1100:snake..Member berries</title>
+</head>
 
-        .banner {
-            text-align: center;
-            color: #fff;
-            background: #3f51b5;
-            line-height: 29px;
-            position: fixed;
-            left: 0;
-            top: 0;
-            right: 0;
-            font-family: monospace;
-            height: 30px;
-            opacity: .4;
-            display: flex;
-            transition: .5s
-        }
+<body>
+    <div class="keypress hide">
+        <div class="up" onclick="emit(38)">&#8593;</div>
+        <div class="right" onclick="emit(39)">&#8594;</div>
+        <div class="left" onclick="emit(37)">&#8592;</div>
+        <div class="down" onclick="emit(40)">&#8595;</div>
+    </div>
+    <div class="banner" id="selector">
+        <div>
+            Time :<span id="time">0</span>
+        </div>
+        <div>LousyGames ©</div>
+        <div>
+            Score :<span id="score">0</span>
+        </div>
+        <div class="touch off" onclick="touch(this)">touch</div>
+    </div>
+    <canvas id="main"></canvas>
+</body>
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        background: #000
+    }
 
-        .banner:hover {
-            opacity: 1
-        }
+    .banner {
+        text-align: center;
+        color: #fff;
+        background: #3f51b5;
+        line-height: 29px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        font-family: monospace;
+        height: 30px;
+        opacity: .4;
+        display: flex;
+        transition: .5s
+    }
 
-        div#selector>div {
-            flex-basis: 30%
-        }
+    .banner:hover {
+        opacity: 1
+    }
 
-        @keyframes diss {
-            from {
-                opacity: 1
-            }
+    div#selector>div {
+        flex-basis: 30%
+    }
 
-            to {
-                opacity: 0
-            }
-        }
+    @keyframes diss {
+        from {
+            opacity: 1
+        }
 
-        .keypress>div {
-            border: dashed 3px #fff;
-            height: 48%;
-            width: 48%;
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            align-self: center;
-            align-items: center;
-            font-size: -webkit-xxx-large;
-            font-weight: 900;
-            color: #fff;
-            transition: .5s;
-            opacity: .1;
-            border-radius: 7px
-        }
+        to {
+            opacity: 0
+        }
+    }
 
-        .keypress {
-            position: fixed;
-            width: 100vw;
-            height: 100vh;
-            top: 0;
-            left: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            opacity: 1;
-            user-select: none
-        }
+    .keypress>div {
+        border: dashed 3px #fff;
+        height: 48%;
+        width: 48%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
+        font-size: -webkit-xxx-large;
+        font-weight: 900;
+        color: #fff;
+        transition: .5s;
+        opacity: .1;
+        border-radius: 7px
+    }
 
-        .keypress>div:hover {
-            opacity: 1
-        }
+    .keypress {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        opacity: 1;
+        user-select: none
+    }
 
-        .touch {
-            background: #8bc34a
-        }
+    .keypress>div:hover {
+        opacity: 1
+    }
 
-        .off {
-            background: #f44336
-        }
+    .touch {
+        background: #8bc34a
+    }
 
-        .hide {
-            opacity: 0
-        }
-  </style>
+    .off {
+        background: #f44336
+    }
+
+    .hide {
+        opacity: 0
+    }
+</style>
 </html>
 ```
 
@@ -592,226 +573,107 @@ Javascript
 
 ```js
 function tmz() {
-  var e = new Date(t),
-    i = new Date(),
-    n = Math.abs(i.getMinutes() - e.getMinutes()),
-    o = Math.abs(i.getSeconds() - e.getSeconds());
-  return n + " : " + o;
-}
+        var e = new Date(t),
+            i = new Date,
+            n = Math.abs(i.getMinutes() - e.getMinutes()),
+            o = Math.abs(i.getSeconds() - e.getSeconds());
+        return n + " : " + o
+    }
 
-function coll(t, e) {
-  return (
-    t.x < e.x + e.w && t.x + t.w > e.x && t.y < e.y + e.h && t.h + t.y > e.y
-  );
-}
+    function coll(t, e) {
+        return t.x < e.x + e.w && t.x + t.w > e.x && t.y < e.y + e.h && t.h + t.y > e.y
+    }
 
-function snake() {
-  (this.w = 15),
-    (this.h = 15),
-    (this.dx = 1),
-    (this.dy = 1),
-    (this.xf = 1),
-    (this.yf = 1),
-    (this.sn = []);
-  for (
-    var t = {
-        x: w / 2,
-        y: h / 2,
-      },
-      e = 0;
-    e < 5;
-    e++
-  )
-    this.sn.push(Object.assign({}, t)), (t.x += this.w);
-  this.draw = function () {
-    var t = d && d.search("Arrow") > -1,
-      e = -1;
-    if (t) {
-      var i = {
-        ...this.sn[0],
-      };
-      if (
-        ("ArrowUp" == d && (i.y -= this.h),
-        "ArrowDown" == d && (i.y += this.h),
-        "ArrowLeft" == d && (i.x -= this.w),
-        "ArrowRight" == d && (i.x += this.w),
-        i.x >= w ? (i.x = 0) : i.x < 0 && (i.x = w - this.w),
-        i.y > h ? (i.y = 0) : i.y < 0 && (i.y = h),
-        (e = fa.findIndex((t) =>
-          coll(
-            {
-              ...this.sn[0],
-              h: this.h,
-              w: this.w,
-            },
-            t
-          )
-        )),
-        this.sn.unshift(i),
-        -1 != e)
-      )
-        return (
-          console.log(e),
-          fa[e].renew(),
-          void (document.getElementById("score").innerText =
-            Number(document.getElementById("score").innerText) + 1)
-        );
-      this.sn.pop(), console.log(6);
-    }
-    this.sn.forEach((t, e, i) => {
-      if (0 == e || i.length - 1 == e) {
-        var n = c.createLinearGradient(t.x, t.y, t.x + this.w, t.y + this.h);
-        i.length - 1 == e
-          ? (n.addColorStop(0, "black"), n.addColorStop(1, "#8BC34A"))
-          : (n.addColorStop(0, "#8BC34A"), n.addColorStop(1, "white")),
-          (c.fillStyle = n);
-      } else c.fillStyle = "#8BC34A";
-      c.fillRect(t.x, t.y, this.w, this.h),
-        (c.strokeStyle = "#E91E63"),
-        (c.font = "30px serif"),
-        (c.strokeStyle = "#9E9E9E"),
-        i.length - 1 != e && 0 != e && c.strokeRect(t.x, t.y, this.w, this.h),
-        0 == e &&
-          (c.beginPath(),
-          (c.fillStyle = "#F44336"),
-          c.arc(t.x + 10, t.y + 2, 5, 360, 0),
-          c.fill()),
-        c.arc(t.x + 10, t.y + 2, 5, 360, 0),
-        c.fill(),
-        c.beginPath();
-    });
-  };
-}
+    function snake() {
+        this.w = 15, this.h = 15, this.dx = 1, this.dy = 1, this.xf = 1, this.yf = 1, this.sn = [];
+        for (var t = {
+            x: w / 2,
+            y: h / 2
+        }, e = 0; e < 5; e++) this.sn.push(Object.assign({}, t)), t.x += this.w;
+        this.draw = function () {
+            var t = d && d.search("Arrow") > -1,
+                e = -1;
+            if (t) {
+                var i = {
+                    ...this.sn[0]
+                };
+                if ("ArrowUp" == d && (i.y -= this.h), "ArrowDown" == d && (i.y += this.h), "ArrowLeft" == d && (i.x -= this.w), "ArrowRight" == d && (i.x += this.w), i.x >= w ? i.x = 0 : i.x < 0 && (i.x = w - this.w), i.y > h ? i.y = 0 : i.y < 0 && (i.y = h), e = fa.findIndex(t => coll({
+                    ...this.sn[0],
+                    h: this.h,
+                    w: this.w
+                }, t)), this.sn.unshift(i), -1 != e) return console.log(e), fa[e].renew(), void (document.getElementById("score").innerText = Number(document.getElementById("score").innerText) + 1);
+                this.sn.pop(), console.log(6)
+            }
+            this.sn.forEach((t, e, i) => {
+                if (0 == e || i.length - 1 == e) {
+                    var n = c.createLinearGradient(t.x, t.y, t.x + this.w, t.y + this.h);
+                    i.length - 1 == e ? (n.addColorStop(0, "black"), n.addColorStop(1, "#8BC34A")) : (n.addColorStop(0, "#8BC34A"), n.addColorStop(1, "white")), c.fillStyle = n
+                } else c.fillStyle = "#8BC34A";
+                c.fillRect(t.x, t.y, this.w, this.h), c.strokeStyle = "#E91E63", c.font = "30px serif", c.strokeStyle = "#9E9E9E", i.length - 1 != e && 0 != e && c.strokeRect(t.x, t.y, this.w, this.h), 0 == e && (c.beginPath(), c.fillStyle = "#F44336", c.arc(t.x + 10, t.y + 2, 5, 360, 0), c.fill()), c.arc(t.x + 10, t.y + 2, 5, 360, 0), c.fill(), c.beginPath()
+            })
+        }
+    }
 
-function gc() {
-  for (var t = "0123456789ABCDEF", e = "#", i = 0; i < 6; i++)
-    e += t[Math.ceil(15 * Math.random())];
-  return e;
-}
+    function gc() {
+        for (var t = "0123456789ABCDEF", e = "#", i = 0; i < 6; i++) e += t[Math.ceil(15 * Math.random())];
+        return e
+    }
 
-function food() {
-  (this.x = 0),
-    (this.y = 0),
-    (this.b = 10),
-    (this.w = this.b),
-    (this.h = this.b),
-    (this.color = gc()),
-    (this.renew = function () {
-      (this.x = Math.floor(Math.random() * (w - 200) + 10)),
-        (this.y = Math.floor(Math.random() * (h - 200) + 30)),
-        (this.color = gc());
-    }),
-    this.renew(),
-    (this.put = () => {
-      (c.fillStyle = this.color),
-        c.arc(this.x, this.y, this.b - 5, 0, 2 * Math.PI),
-        c.fill(),
-        c.beginPath(),
-        c.arc(this.x, this.y, this.b - 5, 0, Math.PI),
-        (c.strokeStyle = "green"),
-        (c.lineWidth = 10),
-        c.stroke(),
-        c.beginPath(),
-        (c.lineWidth = 1);
-    });
-}
+    function food() {
+        this.x = 0, this.y = 0, this.b = 10, this.w = this.b, this.h = this.b, this.color = gc(), this.renew = function () {
+            this.x = Math.floor(Math.random() * (w - 200) + 10), this.y = Math.floor(Math.random() * (h - 200) + 30), this.color = gc()
+        }, this.renew(), this.put = (() => {
+            c.fillStyle = this.color, c.arc(this.x, this.y, this.b - 5, 0, 2 * Math.PI), c.fill(), c.beginPath(), c.arc(this.x, this.y, this.b - 5, 0, Math.PI), c.strokeStyle = "green", c.lineWidth = 10, c.stroke(), c.beginPath(), c.lineWidth = 1
+        })
+    }
 
-function init() {
-  (cc.height = h), (cc.width = w), c.fillRect(0, 0, w, innerHeight);
-  for (var t = 0; t < 10; t++) fa.push(new food());
-  (s = new snake(w / 2, h / 2, 400, 4, 4)), anima();
-}
+    function init() {
+        cc.height = h, cc.width = w, c.fillRect(0, 0, w, innerHeight);
+        for (var t = 0; t < 10; t++) fa.push(new food);
+        s = new snake(w / 2, h / 2, 400, 4, 4), anima()
+    }
 
-function anima() {
-  (c.fillStyle = "rgba(0,0,0,0.11)"),
-    c.fillRect(0, 0, cc.width, cc.height),
-    fa.forEach((t) => t.put()),
-    s.draw(),
-    (document.getElementById("time").innerText = tmz()),
-    setTimeout(() => {
-      requestAnimationFrame(anima);
-    }, fw);
-}
+    function anima() {
+        c.fillStyle = "rgba(0,0,0,0.11)", c.fillRect(0, 0, cc.width, cc.height), fa.forEach(t => t.put()), s.draw(), document.getElementById("time").innerText = tmz(), setTimeout(() => {
+            requestAnimationFrame(anima)
+        }, fw)
+    }
 
-function emit(t) {
-  key.keydown(t);
-}
+    function emit(t) {
+        key.keydown(t)
+    }
 
-function touch(t) {
-  t.classList.toggle("off"),
-    document.getElementsByClassName("keypress")[0].classList.toggle("hide");
-}
-var t = new Date() + "",
-  d = void 0,
-  cc = document.getElementsByTagName("canvas")[0],
-  c = cc.getContext("2d");
-(key = {}),
-  (key.keydown = function (t) {
-    var e = document.createEvent("KeyboardEvent");
-    Object.defineProperty(e, "keyCode", {
-      get: function () {
-        return this.keyCodeVal;
-      },
-    }),
-      Object.defineProperty(e, "key", {
-        get: function () {
-          return 37 == this.keyCodeVal
-            ? "ArrowLeft"
-            : 38 == this.keyCodeVal
-            ? "ArrowUp"
-            : 39 == this.keyCodeVal
-            ? "ArrowRight"
-            : "ArrowDown";
-        },
-      }),
-      Object.defineProperty(e, "which", {
-        get: function () {
-          return this.keyCodeVal;
-        },
-      }),
-      e.initKeyboardEvent
-        ? e.initKeyboardEvent(
-            "keydown",
-            !0,
-            !0,
-            document.defaultView,
-            !1,
-            !1,
-            !1,
-            !1,
-            t,
-            t
-          )
-        : e.initKeyEvent(
-            "keydown",
-            !0,
-            !0,
-            document.defaultView,
-            !1,
-            !1,
-            !1,
-            !1,
-            t,
-            0
-          ),
-      (e.keyCodeVal = t),
-      e.keyCode !== t &&
-        alert("keyCode mismatch " + e.keyCode + "(" + e.which + ")"),
-      document.dispatchEvent(e);
-  });
-var o,
-  s,
-  h = innerHeight,
-  w = innerWidth,
-  fw = 60,
-  fa = [];
-(window.onkeydown = function (t) {
-  var e = t.key;
-  (e.search("Arrow") > -1 || "1" == e) && (d = t.key),
-    ("i" != e && "I" != e) || (console.log("inc"), (fw -= 10)),
-    ("d" != e && "D" != e) || (console.log("dec"), (fw += 10));
-}),
-  init();
+    function touch(t) {
+        t.classList.toggle("off"), document.getElementsByClassName("keypress")[0].classList.toggle("hide")
+    }
+    var t = new Date + "",
+        d = void 0,
+        cc = document.getElementsByTagName("canvas")[0],
+        c = cc.getContext("2d");
+    key = {}, key.keydown = function (t) {
+        var e = document.createEvent("KeyboardEvent");
+        Object.defineProperty(e, "keyCode", {
+            get: function () {
+                return this.keyCodeVal
+            }
+        }), Object.defineProperty(e, "key", {
+            get: function () {
+                return 37 == this.keyCodeVal ? "ArrowLeft" : 38 == this.keyCodeVal ? "ArrowUp" : 39 == this.keyCodeVal ? "ArrowRight" : "ArrowDown"
+            }
+        }), Object.defineProperty(e, "which", {
+            get: function () {
+                return this.keyCodeVal
+            }
+        }), e.initKeyboardEvent ? e.initKeyboardEvent("keydown", !0, !0, document.defaultView, !1, !1, !1, !1, t, t) : e.initKeyEvent("keydown", !0, !0, document.defaultView, !1, !1, !1, !1, t, 0), e.keyCodeVal = t, e.keyCode !== t && alert("keyCode mismatch " + e.keyCode + "(" + e.which + ")"), document.dispatchEvent(e)
+    };
+    var o, s, h = innerHeight,
+        w = innerWidth,
+        fw = 60,
+        fa = [];
+    window.onkeydown = function (t) {
+        var e = t.key;
+        (e.search("Arrow") > -1 || "1" == e) && (d = t.key), "i" != e && "I" != e || (console.log("inc"), fw -= 10), "d" != e && "D" != e || (console.log("dec"), fw += 10)
+    }, init();
 ```
 
 ##### Output
