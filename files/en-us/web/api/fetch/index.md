@@ -148,7 +148,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
   </thead>
   <tbody>
     <tr>
-      <td>Invalid header names</td>
+      <td>Invalid header name</td>
       <td>
         <pre>
 // space in "C ontent-Type"
