@@ -201,7 +201,7 @@ fetch('https://example.com/', {
       </td>
     </tr>
     <tr>
-      <td>In valid modes- navigate and websocket</td>
+      <td>Invalid modes (<code>navigate</code> and <code>websocket</code></td>
       <td>
         <pre>
 fetch('https://example.com/', { mode: 'navigate' })
