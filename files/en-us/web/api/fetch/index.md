@@ -259,7 +259,7 @@ fetch('https://example.com/', {
       </td>
     </tr>
     <tr>
-      <td>if fetch throws a network error</td>
+      <td>If fetch throws a network error.</td>
       <td></td>
     </tr>
   </tbody>
