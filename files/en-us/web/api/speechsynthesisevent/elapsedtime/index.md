@@ -20,6 +20,10 @@ The **`elapsedTime`** read-only property of the
 after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken that the
 event was triggered at.
 
+Chrome returns the value in milliseconds, while Safari may returns the value in
+seconds, so this may behave differently on different browsers.  Chrome is still using
+the original specification, while Safari is using the updated specification.
+
 ## Syntax
 
 ```js
