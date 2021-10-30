@@ -176,9 +176,7 @@ fetch('https://example.com/', { headers });
     </tr>
     <tr>
       <td>
-        Invalid url/scheme or
-        using un-supported schemes by fetch or
-        using un-supported schemes for particular request mode
+        Invalid url/scheme, or using a scheme that fetch does not supported, or using a scheme that is not supported for a particular request mode.
       </td>
       <td>
         <pre>
