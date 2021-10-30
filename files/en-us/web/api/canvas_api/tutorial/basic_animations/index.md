@@ -53,6 +53,14 @@ If you don't want any user interaction you can use the `setInterval()` function 
 
 This example animates a small model of our solar system.
 
+### HTML
+
+```html
+<canvas id="canvas" width="300" height="300"></canvas>
+```
+
+### JavaScript
+
 ```js
 var sun = new Image();
 var moon = new Image();
@@ -103,15 +111,21 @@ function draw() {
 init();
 ```
 
-```html hidden
-<canvas id="canvas" width="300" height="300"></canvas>
-```
+### Result
 
-{{EmbedLiveSample("An_animated_solar_system", "310", "310", "canvas_animation1.png")}}
+{{EmbedLiveSample("An_animated_solar_system", "310", "340")}}
 
 ## An animated clock
 
 This example draws an animated clock, showing your current time.
+
+### HTML
+
+```html
+<canvas id="canvas" width="150" height="150"></canvas>
+```
+
+### JavaScript
 
 ```js
 function clock() {
@@ -214,15 +228,23 @@ function clock() {
 window.requestAnimationFrame(clock);
 ```
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
-```
+### Result
 
-{{EmbedLiveSample("An_animated_clock", "180", "180", "canvas_animation2.png")}}
+{{EmbedLiveSample("An_animated_clock", "180", "200")}}
 
 ## A looping panorama
 
 In this example, a panorama is scrolled left-to-right. We're using [an image of Yosemite National Park](https://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg) we took from Wikipedia, but you could use any image that's larger than the canvas.
+
+### HTML
+
+The HTML includes the {{HTMLElement("canvas")}} in which the image is scrolled. Note that the width and height specified here must match the values of the `CanvasXZSize` and `CanvasYSize` variables in the JavaScript code.
+
+```html
+<canvas id="canvas" width="800" height="200"></canvas>
+```
+
+### JavaScript
 
 ```js
 var img = new Image();
@@ -312,13 +334,9 @@ function draw() {
 }
 ```
 
-Below is the {{HTMLElement("canvas")}} in which the image is scrolled. Note that the width and height specified here must match the values of the `CanvasXZSize` and `CanvasYSize` variables in the JavaScript code.
+### Result
 
-```html
-<canvas id="canvas" width="800" height="200"></canvas>
-```
-
-{{EmbedLiveSample("A_looping_panorama", "830", "230")}}
+{{EmbedLiveSample("A_looping_panorama", "830", "250")}}
 
 ## Mouse following animation
 
@@ -432,242 +450,9 @@ function anim() {
 }
 ```
 
-#### Result
+### Result
 
 {{EmbedLiveSample("Mouse_following_animation", "500", "500")}}
-
-## Snake Game
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nokia 1100:snake..Member berries</title>
-</head>
-
-<body>
-    <div class="keypress hide">
-        <div class="up" onclick="emit(38)">&#8593;</div>
-        <div class="right" onclick="emit(39)">&#8594;</div>
-        <div class="left" onclick="emit(37)">&#8592;</div>
-        <div class="down" onclick="emit(40)">&#8595;</div>
-    </div>
-    <div class="banner" id="selector">
-        <div>
-            Time :<span id="time">0</span>
-        </div>
-        <div>LousyGames ©</div>
-        <div>
-            Score :<span id="score">0</span>
-        </div>
-        <div class="touch off" onclick="touch(this)">touch</div>
-    </div>
-    <canvas id="main"></canvas>
-</body>
-<style>
-    body {
-        margin: 0;
-        overflow: hidden;
-        background: #000
-    }
-
-    .banner {
-        text-align: center;
-        color: #fff;
-        background: #3f51b5;
-        line-height: 29px;
-        position: fixed;
-        left: 0;
-        top: 0;
-        right: 0;
-        font-family: monospace;
-        height: 30px;
-        opacity: .4;
-        display: flex;
-        transition: .5s
-    }
-
-    .banner:hover {
-        opacity: 1
-    }
-
-    div#selector>div {
-        flex-basis: 30%
-    }
-
-    @keyframes diss {
-        from {
-            opacity: 1
-        }
-
-        to {
-            opacity: 0
-        }
-    }
-
-    .keypress>div {
-        border: dashed 3px #fff;
-        height: 48%;
-        width: 48%;
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        align-self: center;
-        align-items: center;
-        font-size: -webkit-xxx-large;
-        font-weight: 900;
-        color: #fff;
-        transition: .5s;
-        opacity: .1;
-        border-radius: 7px
-    }
-
-    .keypress {
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        opacity: 1;
-        user-select: none
-    }
-
-    .keypress>div:hover {
-        opacity: 1
-    }
-
-    .touch {
-        background: #8bc34a
-    }
-
-    .off {
-        background: #f44336
-    }
-
-    .hide {
-        opacity: 0
-    }
-</style>
-</html>
-```
-
-Javascript
-
-```js
-function tmz() {
-        var e = new Date(t),
-            i = new Date,
-            n = Math.abs(i.getMinutes() - e.getMinutes()),
-            o = Math.abs(i.getSeconds() - e.getSeconds());
-        return n + " : " + o
-    }
-
-    function coll(t, e) {
-        return t.x < e.x + e.w && t.x + t.w > e.x && t.y < e.y + e.h && t.h + t.y > e.y
-    }
-
-    function snake() {
-        this.w = 15, this.h = 15, this.dx = 1, this.dy = 1, this.xf = 1, this.yf = 1, this.sn = [];
-        for (var t = {
-            x: w / 2,
-            y: h / 2
-        }, e = 0; e < 5; e++) this.sn.push(Object.assign({}, t)), t.x += this.w;
-        this.draw = function () {
-            var t = d && d.search("Arrow") > -1,
-                e = -1;
-            if (t) {
-                var i = {
-                    ...this.sn[0]
-                };
-                if ("ArrowUp" == d && (i.y -= this.h), "ArrowDown" == d && (i.y += this.h), "ArrowLeft" == d && (i.x -= this.w), "ArrowRight" == d && (i.x += this.w), i.x >= w ? i.x = 0 : i.x < 0 && (i.x = w - this.w), i.y > h ? i.y = 0 : i.y < 0 && (i.y = h), e = fa.findIndex(t => coll({
-                    ...this.sn[0],
-                    h: this.h,
-                    w: this.w
-                }, t)), this.sn.unshift(i), -1 != e) return console.log(e), fa[e].renew(), void (document.getElementById("score").innerText = Number(document.getElementById("score").innerText) + 1);
-                this.sn.pop(), console.log(6)
-            }
-            this.sn.forEach((t, e, i) => {
-                if (0 == e || i.length - 1 == e) {
-                    var n = c.createLinearGradient(t.x, t.y, t.x + this.w, t.y + this.h);
-                    i.length - 1 == e ? (n.addColorStop(0, "black"), n.addColorStop(1, "#8BC34A")) : (n.addColorStop(0, "#8BC34A"), n.addColorStop(1, "white")), c.fillStyle = n
-                } else c.fillStyle = "#8BC34A";
-                c.fillRect(t.x, t.y, this.w, this.h), c.strokeStyle = "#E91E63", c.font = "30px serif", c.strokeStyle = "#9E9E9E", i.length - 1 != e && 0 != e && c.strokeRect(t.x, t.y, this.w, this.h), 0 == e && (c.beginPath(), c.fillStyle = "#F44336", c.arc(t.x + 10, t.y + 2, 5, 360, 0), c.fill()), c.arc(t.x + 10, t.y + 2, 5, 360, 0), c.fill(), c.beginPath()
-            })
-        }
-    }
-
-    function gc() {
-        for (var t = "0123456789ABCDEF", e = "#", i = 0; i < 6; i++) e += t[Math.ceil(15 * Math.random())];
-        return e
-    }
-
-    function food() {
-        this.x = 0, this.y = 0, this.b = 10, this.w = this.b, this.h = this.b, this.color = gc(), this.renew = function () {
-            this.x = Math.floor(Math.random() * (w - 200) + 10), this.y = Math.floor(Math.random() * (h - 200) + 30), this.color = gc()
-        }, this.renew(), this.put = (() => {
-            c.fillStyle = this.color, c.arc(this.x, this.y, this.b - 5, 0, 2 * Math.PI), c.fill(), c.beginPath(), c.arc(this.x, this.y, this.b - 5, 0, Math.PI), c.strokeStyle = "green", c.lineWidth = 10, c.stroke(), c.beginPath(), c.lineWidth = 1
-        })
-    }
-
-    function init() {
-        cc.height = h, cc.width = w, c.fillRect(0, 0, w, innerHeight);
-        for (var t = 0; t < 10; t++) fa.push(new food);
-        s = new snake(w / 2, h / 2, 400, 4, 4), anima()
-    }
-
-    function anima() {
-        c.fillStyle = "rgba(0,0,0,0.11)", c.fillRect(0, 0, cc.width, cc.height), fa.forEach(t => t.put()), s.draw(), document.getElementById("time").innerText = tmz(), setTimeout(() => {
-            requestAnimationFrame(anima)
-        }, fw)
-    }
-
-    function emit(t) {
-        key.keydown(t)
-    }
-
-    function touch(t) {
-        t.classList.toggle("off"), document.getElementsByClassName("keypress")[0].classList.toggle("hide")
-    }
-    var t = new Date + "",
-        d = void 0,
-        cc = document.getElementsByTagName("canvas")[0],
-        c = cc.getContext("2d");
-    key = {}, key.keydown = function (t) {
-        var e = document.createEvent("KeyboardEvent");
-        Object.defineProperty(e, "keyCode", {
-            get: function () {
-                return this.keyCodeVal
-            }
-        }), Object.defineProperty(e, "key", {
-            get: function () {
-                return 37 == this.keyCodeVal ? "ArrowLeft" : 38 == this.keyCodeVal ? "ArrowUp" : 39 == this.keyCodeVal ? "ArrowRight" : "ArrowDown"
-            }
-        }), Object.defineProperty(e, "which", {
-            get: function () {
-                return this.keyCodeVal
-            }
-        }), e.initKeyboardEvent ? e.initKeyboardEvent("keydown", !0, !0, document.defaultView, !1, !1, !1, !1, t, t) : e.initKeyEvent("keydown", !0, !0, document.defaultView, !1, !1, !1, !1, t, 0), e.keyCodeVal = t, e.keyCode !== t && alert("keyCode mismatch " + e.keyCode + "(" + e.which + ")"), document.dispatchEvent(e)
-    };
-    var o, s, h = innerHeight,
-        w = innerWidth,
-        fw = 60,
-        fa = [];
-    window.onkeydown = function (t) {
-        var e = t.key;
-        (e.search("Arrow") > -1 || "1" == e) && (d = t.key), "i" != e && "I" != e || (console.log("inc"), fw -= 10), "d" != e && "D" != e || (console.log("dec"), fw += 10)
-    }, init();
-```
-
-##### Output
-
-[![Snake game](snake.jpg)](https://kunalverma94.github.io/pokemon/snake.html)
 
 ## Other examples
 
