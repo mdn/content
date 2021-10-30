@@ -191,7 +191,7 @@ fetch('https://user:password@example.com/')
         </pre>
       </td>
     <tr>
-      <td>Invalid referrer url-</td>
+      <td>Invalid referrer URL</td>
       <td>
         <pre>
 fetch('https://example.com/', {
