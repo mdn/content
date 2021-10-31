@@ -56,9 +56,9 @@ To create an interactive widget that has a tabular structure, use the grid patte
 - [role="rowgroup"](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)
   - : An optional contextual row parent, it establishes a relationship between descendant rows. It is a structural equivalent to the thead, tfoot, and tbody elements in an HTML table element.
 - [role="table"](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
-  - : One of the three possible contexts (along with grid and treegrid) in which you'll find a row, it identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native {HTMLElement('table')}} HTML element.
+  - : One of the three possible contexts (along with grid and treegrid) in which you'll find a row, it identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native {{HTMLElement('table')}} HTML element.
 - [role="grid"](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role)
-  - : One of the three possible contexts (along with table and treegrid) in which you'll find a row, it identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native {HTMLElement('table')}} HTML element.
+  - : One of the three possible contexts (along with table and treegrid) in which you'll find a row, it identifies the row as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native {{HTMLElement('table')}} HTML element.
 - [role="treegrid"](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
   - : Similar to a grid, but with rows that can be expanded and collapsed in the same manner as for a tree.
 

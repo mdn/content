@@ -30,9 +30,9 @@ VideoDecoder.decode(chunk)
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `InvalidStateError`
-  - : Thrown if the {{domxref("VideoDecoder.state","state")}} is not `"configured"`.
-- {{domxref("DOMException")}} `DataError`
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("VideoDecoder.state","state")}} is not `configured`.
+- `DataError` {{domxref("DOMException")}}
   - : Thrown if the `chunk` is unable to be decoded due to relying on other frames for decoding.
 
 ## Examples

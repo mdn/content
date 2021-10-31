@@ -30,9 +30,9 @@ AudioEncoder.encode(data);
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("AudioEncoder.state","state")}} is not `"configured"`.
-- {{domxref("DOMException")}} `TypeError`
+- `TypeError` {{domxref("DOMException")}}
   - : Thrown if the `AudioData` object has been {{Glossary("Transferable Objects","transferred")}}.
 
 ## Examples

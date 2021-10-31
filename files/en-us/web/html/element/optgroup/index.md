@@ -1,5 +1,5 @@
 ---
-title: <optgroup>
+title: '<optgroup>: The Option Group element'
 slug: Web/HTML/Element/optgroup
 tags:
   - Element

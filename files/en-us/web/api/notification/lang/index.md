@@ -17,8 +17,8 @@ The **`lang`** read-only property of the
 as specified in the `lang` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
 
-The language itself is specified using a {{domxref("DOMString")}} representing a [BCP 47 language tag](http://www.rfc-editor.org/rfc/bcp/bcp47.txt). See the
-Sitepoint [ISO 2
+The language itself is specified using a {{domxref("DOMString")}} representing a language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+See the Sitepoint [ISO 2
 letter language codes](http://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/) page for a simple reference.
 
 ## Syntax

@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: aria-autocomplete attribute'
+title: 'aria-autocomplete'
 slug: web/Accessibility/ARIA/Attributes/aria-autocomplete
 tags: 
   - Accessibility

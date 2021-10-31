@@ -36,7 +36,7 @@ A radio element is a checkable input in a group of role elements, of which only 
 </div>
 ```
 
-The `role` attribute only adds sementics; all of the functionality that comes natively with the [HTML radio](/en-US/docs/Web/HTML/Element/input/radio) needs to be added with JavaScript and the HTML [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute. 
+The `role` attribute only adds semantics; all of the functionality that comes natively with the [HTML radio](/en-US/docs/Web/HTML/Element/input/radio) needs to be added with JavaScript and the HTML [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute. 
 
 > **Note:** The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML radio](/en-US/docs/Web/HTML/Element/input/radio) of [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) (with an associated {{HTMLElement('label')}}, which natively provides all the functionality required:
 
@@ -60,7 +60,7 @@ The `role` attribute only adds sementics; all of the functionality that comes na
 </fieldset>
 ```
 
-The native HTML radio ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio))  form control had two states ("checked" or "not checked"). Similarly, an element with `role="radio"`  can expose two states through the `aria-checked` attribute: `true` or `false`. The value of `mixed` correlates to the  `indeterminate` value of HTML `checked` attribute, meaning neither checked nor unchecked. While `mixed` is valie on both radios and checkboxes, it is rarely useful for a radio button.
+The native HTML radio ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio))  form control had two states ("checked" or "not checked"). Similarly, an element with `role="radio"`  can expose two states through the `aria-checked` attribute: `true` or `false`. The value of `mixed` correlates to the  `indeterminate` value of HTML `checked` attribute, meaning neither checked nor unchecked. While `mixed` is valid on both radios and checkboxes, it is rarely useful for a radio button.
 
 The radio role should alwasy be nested with other radios in a `radiogroup`. If it is not possible to nest the radio button within a radio group, use the `id` of the nongrouped radio in a space separated list of values as the value of the `aria-owns` attribute on the `radiogroup` element to indicate the relationship of the `radiogroup` to its radio members.
 

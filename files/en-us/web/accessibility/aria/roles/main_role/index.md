@@ -37,7 +37,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should us
 
 - `aria-owns`
 
-  - : The `aria-owns` attribute establishes relationships in the accessibility layer that aren't present in the DOM. Documents and applications can be nested in the DOM, which may lead to having more than one main element as DOM descendants. If this is the case, include `aria-owns` to identify the relationship of the main to it's document or application ancestor.
+  - : The `aria-owns` attribute establishes relationships in the accessibility layer that aren't present in the DOM. Documents and applications can be nested in the DOM, which may lead to having more than one main element as DOM descendants. If this is the case, include `aria-owns` to identify the relationship of the main to its document or application ancestor.
 
 - `aria-label` or `aria-labeledby`
     

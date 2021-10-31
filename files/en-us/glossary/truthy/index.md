@@ -28,6 +28,18 @@ if (Infinity)
 if (-Infinity)
 ```
 
+### The logical AND operator, &&
+
+If the first object is truthy, the logical AND operator returns the second operand:
+
+```js
+true && "dog"
+// ↪ "dog"
+
+[] && "dog"
+// ↪ "dog"
+```
+
 ## See also
 
 - {{Glossary("Falsy")}}

@@ -79,7 +79,7 @@ It is possible to trigger a large number of animations on the same element. If t
 
 You can see this in action in our simple [replace indefinite animations demo](https://mdn.github.io/dom-examples/web-animations-api/replace-indefinite-animations.html). The related JavaScript features are:
 
-- {{domxref("animation.commitStyles()")}} for commiting the end styling state of an animation to the element being animated, even after that animation has been removed.
+- {{domxref("animation.commitStyles()")}} for committing the end styling state of an animation to the element being animated, even after that animation has been removed.
 - {{domxref("animation.onremove")}} for setting and running an event handler that fires when the animation is removed (i.e., put into an `active` replace state).
 - {{domxref("animation.persist()")}} for when you explicitly want an animations to be retained.
 - {{domxref("animation.replaceState")}} to return the replace state of the animation. This will be `active` if the animation has been removed, or `persisted` if {{domxref("persist()")}} has been invoked.

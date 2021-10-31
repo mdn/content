@@ -33,17 +33,17 @@ store's name.
 
 ### Exceptions
 
-There are a several exceptions which can occur when you attempt to change an object
+There are a several exceptions that can occur when you attempt to change an object
 store's name.
 
-- `InvalidStateError`
-  - : Either the object store has been deleted or the current transaction is not an
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if either the object store has been deleted or the current transaction is not an
     upgrade transaction; you can only rename indexes during upgrade transactions; that is,
-    when the mode is `"versionchange"`.
-- `TransactionInactiveError`
-  - : The current transaction is not active.
-- `ConstraintError`
-  - : An object store is already using the specified `name`.
+    when the mode is `versionchange`.
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if the current transaction is not active.
+- `ConstraintError` {{domxref("DOMException")}}
+  - : Thrown if an object store is already using the specified `name`.
 
 ## Example
 

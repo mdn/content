@@ -36,10 +36,10 @@ Returns a {{jsxref("Promise")}} that resolves with an object containing the foll
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `"InvalidStateError"`
-  - : Indicates that the port is not open. Call {{domxref("SerialPort.open()")}} to avoid this error.
-- {{domxref("DOMException")}} `NetworkError`
-  - : Indicates that one of the signals on the device could not be set.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the port is not open. Call {{domxref("SerialPort.open()")}} to avoid this error.
+- `NetworkError` {{domxref("DOMException")}}
+  - : Returned if the signals on the device could not be set.
 
 ## Specifications
 

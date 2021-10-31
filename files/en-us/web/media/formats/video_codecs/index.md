@@ -1676,7 +1676,9 @@ The **Video Processor 8** (**VP8**) codec was initially created by On2 Technolog
 
 If supported by the browser, VP8 allows video with an alpha channel, allowing the video to play with the background able to be seen through the video to a degree specified by each pixel's alpha component.
 
-There is good browser support for VP8 in HTML content, especially within [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) files. This makes VP8 a good candidate for your content, although VP9 is an even better choice if available to you. Web browsers are _required_ to support VP8 for WebRTC, but not all browsers that do so also support it in HTML audio and video elements.
+There is good browser support for VP8 in HTML content, especially within [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) files.
+This makes VP8 a good candidate for your content, although VP9 is an even better choice if available to you.
+Web browsers are _required_ to support VP8 for WebRTC, but not all browsers that do so also support it in HTML audio and video elements.
 
 <table class="standard-table">
   <tbody>
@@ -1747,19 +1749,10 @@ There is good browser support for VP8 in HTML content, especially within [WebM](
             </tr>
           </tbody>
         </table>
-        <p>
-          Edge support for VP8 requires the use of
-          <a href="/en-US/docs/Web/API/Media_Source_Extensions_API"
-            >Media Source Extensions</a
-          >.
-        </p>
-        <p>Safari only supports VP8 in WebRTC connections.</p>
-        <p>
-          Firefox only supports VP8 in MSE when no H.264 hardware decoder is
-          available. Use
-          {{domxref("MediaSource.isTypeSupported()")}} to check
-          for availability.
-        </p>
+        <p>Edge support for VP8 requires the use of <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions</a>.</p>
+        <p>macOS: Safari 14.1 supports VP8 in WebRTC, MSE and video elements. Safari 12.2 only supports VP8 in WebRTC connections.</p>
+        <p>iOS: Safari 12.1 and later support VP8 in WebRTC connections only.</p>
+        <p>Firefox only supports VP8 in MSE when no H.264 hardware decoder is available. Use {{domxref("MediaSource.isTypeSupported()")}} to check for availability.</p>
       </td>
     </tr>
     <tr>
@@ -1794,13 +1787,20 @@ There is good browser support for VP8 in HTML content, especially within [WebM](
 
 ### VP9
 
-**Video Processor 9** (**VP9**) is the successor to the older VP8 standard developed by Google. Like VP8, VP9 is entirely open and royalty-free. Its encoding and decoding performance is comparable to or slightly faster than that of AVC, but with better quality. VP9's encoded video quality is comparable to that of HEVC at similar bit rates.
+**Video Processor 9** (**VP9**) is the successor to the older VP8 standard developed by Google.
+Like VP8, VP9 is entirely open and royalty-free.
+Its encoding and decoding performance is comparable to or slightly faster than that of AVC, but with better quality.
+VP9's encoded video quality is comparable to that of HEVC at similar bit rates.
 
-VP9's main profile supports only 8-bit color depth at 4:2:0 chroma subsampling levels, but its profiles include support for deeper color and the full range of chroma subsampling modes. It supports several HDR imiplementations, and offers substantial freedom in selecting frame rates, aspect ratios, and frame sizes.
+VP9's main profile supports only 8-bit color depth at 4:2:0 chroma subsampling levels, but its profiles include support for deeper color and the full range of chroma subsampling modes.
+It supports several HDR implementations, and offers substantial freedom in selecting frame rates, aspect ratios, and frame sizes.
 
-VP9 is widely supported by browsers, and hardware implementations of the codec are fairly common. VP9 is one of the two video codecs mandated by [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) (the other being [VP8](#vp8)). Of note, however, is that Safari supports neither WebM nor VP9, so if you choose to use VP9, be sure to offer a fallback format such as AVC or HEVC for iPhone, iPad, and Mac users.
+VP9 is widely supported by browsers, and hardware implementations of the codec are fairly common.
+VP9 is one of the two video codecs mandated by [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) (the other being [VP8](#vp8)).
+Note however that Safari support for WebM and VP9 was only introduced in version 14.1, so if you choose to use VP9, consider offering a fallback format such as AVC or HEVC for iPhone, iPad, and Mac users.
 
-Aside from the lack of Safari support, VP9 is a good choice if you are able to use a WebM container and are able to provide a fallback video in a format such as AVC or HEVC for Safari users. This is especially true if you wish to use an open codec rather than a proprietary one. If you can't provide a fallback and are willing to sacrifice Safari compatibility, VP9 in WebM is a good option. Otherwise, you should probably consider a different codec.
+VP9 is a good choice if you are able to use a WebM container (and can provide fallback video when needed).
+This is especially true if you wish to use an open codec rather than a proprietary one.
 
 <table class="standard-table">
   <tbody>
@@ -1873,8 +1873,7 @@ Aside from the lack of Safari support, VP9 is a good choice if you are able to u
     <tr>
       <th scope="row">HDR support</th>
       <td>
-        Yes; HDR10+,
-        <a href="https://en.wikipedia.org/wiki/Hybrid_Log-Gamma">HLG</a>, and
+        Yes; HDR10+, <a href="https://en.wikipedia.org/wiki/Hybrid_Log-Gamma">HLG</a>, and
         <a href="https://en.wikipedia.org/wiki/Perceptual_Quantizer">PQ</a>
       </td>
     </tr>
@@ -1903,7 +1902,7 @@ Aside from the lack of Safari support, VP9 is a good choice if you are able to u
               <td>28</td>
               <td>No</td>
               <td>10.6</td>
-              <td>No</td>
+              <td>14 (macOS), 15 (iOS)</td>
             </tr>
             <tr>
               <th scope="row">MSE compatibility</th>
@@ -1912,16 +1911,20 @@ Aside from the lack of Safari support, VP9 is a good choice if you are able to u
               <td>Yes</td>
               <td></td>
               <td></td>
-              <td></td>
+              <td>14 (macOS 11.3+), 15 (iOS)</td>
             </tr>
           </tbody>
         </table>
         <p>
-          Firefox only supports VP8 in MSE when no H.264 hardware decoder is
-          available. Use
-          {{domxref("MediaSource.isTypeSupported()")}} to check
-          for availability.
+          Firefox only supports VP8 in MSE when no H.264 hardware decoder is available. Use
+          {{domxref("MediaSource.isTypeSupported()")}} to check for availability.
         </p>
+        <ul>
+          <li>Safari 14: (macOS, iOS) supports VP9 in WebM for WebRTC.</li>
+          <li>Safari 14: (macOS) Supports VP9 in <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">MSE</a> from MacOS 11.3.</li>
+          <li>Safari 14.1: (macOS) supports WebM files containing VP9 video tracks "everywhere".</li>
+          <li>Safari 15: (macOS) supports VP9 in WebM in <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">MSE</a>.</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -1934,8 +1937,7 @@ Aside from the lack of Safari support, VP9 is a good choice if you are able to u
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible
+        {{Glossary("RTP")}} / <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible
       </th>
       <td>Yes</td>
     </tr>
@@ -1946,9 +1948,7 @@ Aside from the lack of Safari support, VP9 is a good choice if you are able to u
     <tr>
       <th scope="row">Specification</th>
       <td>
-        <a href="https://www.webmproject.org/vp9/"
-          >https://www.webmproject.org/vp9/</a
-        >
+        <a href="https://www.webmproject.org/vp9/">https://www.webmproject.org/vp9/</a>
       </td>
     </tr>
     <tr>

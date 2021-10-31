@@ -10,7 +10,8 @@ tags:
 ---
 {{MDNSidebar}}
 
-There are a number of types of pages that are used repeatedly on MDN. This article describes these page types, their purpose, and gives examples of each and templates to use when creating a new page.
+There are a number of types of pages that are used repeatedly on MDN.
+This article describes these page types, their purpose, and gives examples of each and templates to use when creating a new page.
 
 There are three broad categories of page types on MDN, though some page types fall into more than one category.
 
@@ -24,15 +25,21 @@ To create new pages on MDN, you need to use GitHub — have a look at our [conte
 
 ## How to use the templates
 
-When creating a new page you can ensure that you've used the right page structure/contents by referring to one of our page templates — see the sections below. You can find the exact source code of each template (if you want to copy it) by following the "Source on **GitHub**" link at the bottom of each one. These page templates don't make much sense as published pages, but if you view their source code you'll see that they contain a lot of helpful comments, placeholders, and hints detailing how to fill in the missing information and create your page.
+When creating a new page you can ensure that you've used the right page structure/contents by referring to one of our page templates — see the sections below.
+You can find the exact source code of each template (if you want to copy it) by following the "Source on **GitHub**" link at the bottom of each one.
+These page templates don't make much sense as published pages, but if you view their source code you'll see that they contain a lot of helpful comments, placeholders, and hints detailing how to fill in the missing information and create your page.
 
-At the top of each template you'll find a section entitled _Remove before publishing_ — this contains information on how to fill in the page title, slug, sidebar menu, and tags (e.g. information that doesn't actually appear in the body of the article). You need to delete this section after you've followed the instructions in it, before the page can be considered finished.
+At the top of each template you'll find a section entitled _Remove before publishing_ — this contains information on how to fill in the page title, slug, sidebar menu, and tags (e.g. information that doesn't actually appear in the body of the article).
+You need to delete this section after you've followed the instructions in it, before the page can be considered finished.
 
 ## Old-style page layouts
 
-Sometimes you will come across old-style reference pages that look markedly different from the templates presented here. For example, old-style interface pages had all the interfaces' member details on a single page, and individual method/property/constructor/event listener pages didn't exist.
+Sometimes you will come across old-style reference pages that look markedly different from the templates presented here.
+For example, old-style interface pages had all the interfaces' member details on a single page, and individual method/property/constructor/event listener pages didn't exist.
 
-If you come across an old-style set of pages, we'd love for you to update them to the new style! However, we do appreciate that this could be a large amount of work. If the information to update is not too large, and you have some free time, by all means try updating it to the new style.
+If you come across an old-style set of pages, we'd love for you to update them to the new style!
+However, we do appreciate that this could be a large amount of work.
+If the information to update is not too large, and you have some free time, by all means try updating it to the new style.
 
 If the work is more significant, then you should consider a few factors when prioritising the work:
 
@@ -44,9 +51,14 @@ If you want to get a team together to work on an update, or you just want to rep
 
 ## API landing page
 
-An **{{Glossary("API")}} landing page** provides an overview of what a particular API does, as well as links to the documentation for each of the interfaces, globals, functions, etc. offered by the API. It does not link directly to specific methods or properties within the API's classes, except in the context of the overview text. It is primarily a _navigation_ page, but also functions as an at-a-glance _reference_ page for the API.
+An **{{Glossary("API")}} landing page** provides an overview of what a particular API does, as well as links to the documentation for each of the interfaces, globals, functions, etc. offered by the API.
+It does not link directly to specific methods or properties within the API's classes, except in the context of the overview text.
+It is primarily a _navigation_ page, but also functions as an at-a-glance _reference_ page for the API.
 
-There are some instances where multiple APIs exist that are distinct, and are defined in their own specifications, but they closely related and therefore would make sense to cover with a single API landing page. For example, the [Generic Sensor API](https://www.w3.org/TR/generic-sensor/) cover general sensor concerns, but more specific concerns are covered in other APIs such as [Ambient Light Sensor](https://www.w3.org/TR/ambient-light/), [Motion Sensor](https://www.w3.org/TR/motion-sensors/), etc. In such cases, many of the high level concepts are the same, so it makes no sense to repeat those over multiple landing pages. In such a case, it would make more sense in terms of repetition and findability to cover them all under a single "Web sensors" landing page.
+There are some instances where multiple APIs exist that are distinct, and are defined in their own specifications, but they closely related and therefore would make sense to cover with a single API landing page.
+For example, the [Generic Sensor API](https://www.w3.org/TR/generic-sensor/) cover general sensor concerns, but more specific concerns are covered in other APIs such as [Ambient Light Sensor](https://www.w3.org/TR/ambient-light/), [Motion Sensor](https://www.w3.org/TR/motion-sensors/), etc.
+In such cases, many of the high level concepts are the same, so it makes no sense to repeat those over multiple landing pages.
+In such a case, it would make more sense in terms of repetition and findability to cover them all under a single "Web sensors" landing page.
 
 ### Example
 
@@ -60,7 +72,9 @@ There are some instances where multiple APIs exist that are distinct, and are de
 
 > **Note:** Also known as an _Interface landing page_.
 
-An **API reference page** lists all the methods, properties, events, and so forth that are members of a particular interface or class. It provides an overview of what the class or interface does or is used for, and gives links to the documentation for each of these members. It is more granular than an API landing page, which typically links to multiple API reference pages.
+An **API reference page** lists all the methods, properties, events, and so forth that are members of a particular interface or class.
+It provides an overview of what the class or interface does or is used for, and gives links to the documentation for each of these members.
+It is more granular than an API landing page, which typically links to multiple API reference pages.
 
 ### Example
 
@@ -72,7 +86,8 @@ An **API reference page** lists all the methods, properties, events, and so fort
 
 ## API reference subpage
 
-An **API reference subpage** is a child of an API reference page. It documents a single interface member in detail.
+An **API reference subpage** is a child of an API reference page.
+It documents a single interface member in detail.
 
 ### Examples
 
@@ -131,7 +146,8 @@ A **CSS reference page** lists all the available syntax for a CSS feature such a
 
 ## HTTP header reference page
 
-An **HTTP header reference page** lists all the available directives that an HTTP header can contain, and explains the header's purpose and usage. It also provides examples, browser compatibility information, and other important expl.
+An **HTTP header reference page** lists all the available directives that an HTTP header can contain, and explains the header's purpose and usage.
+It also provides examples, browser compatibility information, and other important expl.
 
 ### Example
 
@@ -143,7 +159,9 @@ An **HTTP header reference page** lists all the available directives that an HTT
 
 ## Conceptual page
 
-A **conceptual page** is a _guide_ page that explains or teaches something. Generally, if a page contains primarily prose, and doesn't fall into another page type, it's probably a conceptual page. An extended discussion of a topic might be spread across multiple conceptual pages, and linked using [Next](https://github.com/mdn/kumascript/blob/master/macros/Next.ejs) and [Previous](https://github.com/mdn/kumascript/blob/master/macros/Previous.ejs) macros.
+A **conceptual page** is a _guide_ page that explains or teaches something.
+Generally, if a page contains primarily prose, and doesn't fall into another page type, it's probably a conceptual page.
+An extended discussion of a topic might be spread across multiple conceptual pages, and linked using [Next](https://github.com/mdn/kumascript/blob/master/macros/Next.ejs) and [Previous](https://github.com/mdn/kumascript/blob/master/macros/Previous.ejs) macros.
 
 ### Examples
 
@@ -153,7 +171,10 @@ A **conceptual page** is a _guide_ page that explains or teaches something. Gene
 
 ## Glossary page
 
-A **glossary page** contains a brief explanation of a term, topic, or concept. The first paragraph should be a simple, self-contained description of the term, no more than a couple sentences. This can be followed by links to further information in the **Learn more** section. If the page grows to more than a screenful or so, it's too long and should be converted to a conceptual page. See [How to write and reference an entry in the glossary](/en-US/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary) for more details.
+A **glossary page** contains a brief explanation of a term, topic, or concept.
+The first paragraph should be a simple, self-contained description of the term, no more than a couple sentences.
+This can be followed by links to further information in the **Learn more** section.
+If the page grows to more than a screenful or so, it's too long and should be converted to a conceptual page. See [How to write and reference an entry in the glossary](/en-US/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary) for more details.
 
 ### Examples
 
@@ -167,9 +188,11 @@ A **glossary page** contains a brief explanation of a term, topic, or concept. T
 
 ## Landing page
 
-A **landing page** serves as a menu, of sorts, for its subpages, and is therefore primarily a _navigation_ page. A landing page layout is typically used for the root page of a tree of pages about a particular topic. It opens with a brief summary of the topic, then presents a structured list of links to its subpages, and optionally, additional material that be useful to the reader.
+A **landing page** serves as a menu, of sorts, for its subpages, and is therefore primarily a _navigation_ page.
+A landing page layout is typically used for the root page of a tree of pages about a particular topic.
+It opens with a brief summary of the topic, then presents a structured list of links to its subpages, and optionally, additional material that be useful to the reader.
 
-The list of subpages can be generated automatically using the templates {{TemplateLink("SubpagesWithSummaries")}}, {{TemplateLink("SubpageMenuByCategories")}}, and {{TemplateLink("LandingPageListSubpages")}}. However, in more complex cases, the list may need to be created (and maintained!) by hand.
+The list of subpages can be generated automatically using the templates [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs), [`SubpageMenuByCategories`](https://github.com/mdn/yari/tree/main/kumascript/macros/SubpageMenuByCategories.ejs), and [`LandingPageListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs). However, in more complex cases, the list may need to be created (and maintained!) by hand.
 
 ### Examples
 

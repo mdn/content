@@ -7365,6 +7365,7 @@
 /en-US/docs/Web/API/Event/createEvent	/en-US/docs/Web/API/Document/createEvent
 /en-US/docs/Web/API/Event/deepPath	/en-US/docs/Web/API/Event/composedPath
 /en-US/docs/Web/API/Event/detail	/en-US/docs/Web/API/UIEvent/detail
+/en-US/docs/Web/API/Event/msConvertURL	/en-US/docs/Web/API/Event
 /en-US/docs/Web/API/Event/scoped	/en-US/docs/Web/API/Event/composed
 /en-US/docs/Web/API/EventHandler	/en-US/docs/Web/Events/Event_handlers
 /en-US/docs/Web/API/EventTarget.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
@@ -7421,6 +7422,8 @@
 /en-US/docs/Web/API/FileRequest.onprogress	/en-US/docs/Web/API/FileRequest/onprogress
 /en-US/docs/Web/API/FileSystemFileEntry/FileSystemFileEntry.createWriter	/en-US/docs/Web/API/FileSystemFileEntry/createWriter
 /en-US/docs/Web/API/FileSystemFileEntry/FileSystemFileEntry.createWriter()	/en-US/docs/Web/API/FileSystemFileEntry/createWriter
+/en-US/docs/Web/API/FileSystemFlags/create	/en-US/docs/Web/API/FileSystemFlags
+/en-US/docs/Web/API/FileSystemFlags/exclusive	/en-US/docs/Web/API/FileSystemFlags
 /en-US/docs/Web/API/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/Web/API/File_System_API/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/Web/API/Float32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array
@@ -8225,13 +8228,14 @@
 /en-US/docs/Web/API/Path2D.addPath	/en-US/docs/Web/API/Path2D/addPath
 /en-US/docs/Web/API/PaymentAddress/PaymentAddress.country	/en-US/docs/Web/API/PaymentAddress/country
 /en-US/docs/Web/API/PaymentAddress/regionCode	/en-US/docs/Web/API/PaymentAddress
-/en-US/docs/Web/API/PaymentCurrencyAmount	/en-US/docs/Web/API/PaymentItem
-/en-US/docs/Web/API/PaymentCurrencyAmount/currency	/en-US/docs/Web/API/PaymentItem
-/en-US/docs/Web/API/PaymentCurrencyAmount/currencySystem	/en-US/docs/Web/API/PaymentItem
-/en-US/docs/Web/API/PaymentCurrencyAmount/value	/en-US/docs/Web/API/PaymentItem
+/en-US/docs/Web/API/PaymentCurrencyAmount	/en-US/docs/Web/API/PaymentRequest/show
+/en-US/docs/Web/API/PaymentCurrencyAmount/currency	/en-US/docs/Web/API/PaymentRequest/show
+/en-US/docs/Web/API/PaymentCurrencyAmount/currencySystem	/en-US/docs/Web/API/PaymentRequest/show
+/en-US/docs/Web/API/PaymentCurrencyAmount/value	/en-US/docs/Web/API/PaymentRequest/show
 /en-US/docs/Web/API/PaymentDetailsUpdate	/en-US/docs/Web/API/PaymentRequestUpdateEvent/updateWith
 /en-US/docs/Web/API/PaymentDetailsUpdate/error	/en-US/docs/Web/API/PaymentRequestUpdateEvent/updateWith
 /en-US/docs/Web/API/PaymentDetailsUpdate/shippingAddressErrors	/en-US/docs/Web/API/PaymentRequestUpdateEvent/updateWith
+/en-US/docs/Web/API/PaymentItem	/en-US/docs/Web/API/PaymentRequest/show
 /en-US/docs/Web/API/PaymentRequest/PaymentRequest.onmerchantvalidation	/en-US/docs/Web/API/PaymentRequest/onmerchantvalidation
 /en-US/docs/Web/API/PaymentRequest/shippingaddresschange	/en-US/docs/Web/API/PaymentRequest/shippingaddresschange_event
 /en-US/docs/Web/API/PaymentRequestEvent/topLevelOrigin	/en-US/docs/Web/API/PaymentRequestEvent/topOrigin
@@ -8341,6 +8345,7 @@
 /en-US/docs/Web/API/PushManager.registrations	/en-US/docs/Web/API/PushManager/registrations
 /en-US/docs/Web/API/PushManager.unregister	/en-US/docs/Web/API/PushManager/unregister
 /en-US/docs/Web/API/Push_API/Using_the_Push_API	/en-US/docs/Web/API/Push_API
+/en-US/docs/Web/API/RTCAnswerOptions	/en-US/docs/Web/API/RTCPeerConnection/createAnswer
 /en-US/docs/Web/API/RTCConfiguration	/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection
 /en-US/docs/Web/API/RTCConfiguration/bundlePolicy	/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection
 /en-US/docs/Web/API/RTCConfiguration/certificates	/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection
@@ -8380,6 +8385,10 @@
 /en-US/docs/Web/API/RTCIceProtocol	/en-US/docs/Web/API/RTCIceCandidate/protocol
 /en-US/docs/Web/API/RTCIceTcpCandidateType	/en-US/docs/Web/API/RTCIceCandidate/tcpType
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimesta	/en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp
+/en-US/docs/Web/API/RTCOfferAnswerOptions	/en-US/docs/Web/API/RTCPeerConnection/createAnswer
+/en-US/docs/Web/API/RTCOfferAnswerOptions/voiceActivityDetection	/en-US/docs/Web/API/RTCPeerConnection/createAnswer
+/en-US/docs/Web/API/RTCOfferOptions	/en-US/docs/Web/API/RTCPeerConnection/createOffer
+/en-US/docs/Web/API/RTCOfferOptions/iceRestart	/en-US/docs/Web/API/RTCPeerConnection/createOffer
 /en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsReceived	/en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent
 /en-US/docs/Web/API/RTCPeerConnection.addStream	/en-US/docs/Web/API/RTCPeerConnection/addStream
 /en-US/docs/Web/API/RTCPeerConnection.close	/en-US/docs/Web/API/RTCPeerConnection/close
@@ -8415,6 +8424,8 @@
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
 /en-US/docs/Web/API/RTCPeerConnectionIceEvent.candidate	/en-US/docs/Web/API/RTCPeerConnectionIceEvent/candidate
 /en-US/docs/Web/API/RTCRtpSender/getCapabilities()	/en-US/docs/Web/API/RTCRtpSender/getCapabilities
+/en-US/docs/Web/API/RTCRtpSynchronizationSource	/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources
+/en-US/docs/Web/API/RTCRtpSynchronizationSource/voiceActivityFlag	/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources
 /en-US/docs/Web/API/RTCRtpTransceiverInit	/en-US/docs/Web/API/RTCPeerConnection/addTransceiver
 /en-US/docs/Web/API/RTCSctpTransportState	/en-US/docs/Web/API/RTCSctpTransport/state
 /en-US/docs/Web/API/RTCSdpType	/en-US/docs/Web/API/RTCSessionDescription/type
@@ -8423,6 +8434,11 @@
 /en-US/docs/Web/API/RTCSessionDescription.toJSON	/en-US/docs/Web/API/RTCSessionDescription/toJSON
 /en-US/docs/Web/API/RTCSessionDescription.type	/en-US/docs/Web/API/RTCSessionDescription/type
 /en-US/docs/Web/API/RTCSignalingState	/en-US/docs/Web/API/RTCPeerConnection/signalingState
+/en-US/docs/Web/API/RTCTrackEventInit	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
+/en-US/docs/Web/API/RTCTrackEventInit/receiver	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
+/en-US/docs/Web/API/RTCTrackEventInit/streams	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
+/en-US/docs/Web/API/RTCTrackEventInit/track	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
+/en-US/docs/Web/API/RTCTrackEventInit/transceiver	/en-US/docs/Web/API/RTCTrackEvent/RTCTrackEvent
 /en-US/docs/Web/API/RadioNodeList.value	/en-US/docs/Web/API/RadioNodeList/value
 /en-US/docs/Web/API/RandomSource	/en-US/docs/Web/API/Crypto/getRandomValues
 /en-US/docs/Web/API/RandomSource.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
@@ -9304,7 +9320,7 @@
 /en-US/docs/Web/API/mozRTCSessionDescription.type	/en-US/docs/Web/API/RTCSessionDescription/type
 /en-US/docs/Web/API/mozRTCSessionDescription/mozRTCSessionDescription	/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription
 /en-US/docs/Web/API/mozRTCSessionDescription/toJSON	/en-US/docs/Web/API/RTCSessionDescription/toJSON
-/en-US/docs/Web/API/msConvertURL	/en-US/docs/Web/API/Event/msConvertURL
+/en-US/docs/Web/API/msConvertURL	/en-US/docs/Web/API/Event
 /en-US/docs/Web/API/msFrameStep	/en-US/docs/Web/API/HTMLVideoElement/msFrameStep
 /en-US/docs/Web/API/msMatchesSelector	/en-US/docs/Web/API/Element/matches
 /en-US/docs/Web/API/mute	/en-US/docs/Web/API/MediaStreamTrack/mute_event

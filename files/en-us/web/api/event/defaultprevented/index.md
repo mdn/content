@@ -2,9 +2,6 @@
 title: Event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
 tags:
-  - API
-  - DOM
-  - Event
   - Property
   - Read-only
 browser-compat: api.Event.defaultPrevented
@@ -13,13 +10,7 @@ browser-compat: api.Event.defaultPrevented
 
 The **`defaultPrevented`** read-only property of the {{domxref("Event")}} interface returns a boolean value indicating whether or not the call to {{ domxref("Event.preventDefault()") }} canceled the event.
 
-## Syntax
-
-```js
-var defaultWasPrevented = event.defaultPrevented;
-```
-
-### Value
+## Value
 
 A boolean value, where `true` indicates that the default {{glossary("user agent")}} action was prevented, and `false` indicates that it was not.
 

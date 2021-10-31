@@ -47,8 +47,8 @@ A new {{domxref("ChannelMergerNode")}} object instance.
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : An option such as `channelCount` or `channelCountMode` has been given an invalid value.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if an option such as `channelCount` or `channelCountMode` has been given an invalid value.
 
 ## Example
 

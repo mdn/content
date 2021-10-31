@@ -155,25 +155,6 @@ tags:
       </td>
     </tr>
     <tr>
-      <td>ECMA-357</td>
-      <td>
-        <a
-          href="https://www.ecma-international.org/publications/files/ECMA-ST-WITHDRAWN/ECMA-357,%201st%20edition,%20June%202004.pdf"
-          >PDF</a
-        >
-      </td>
-      <td>June 2004</td>
-      <td>
-        <a href="/en-US/docs/E4X">ECMAScript for XML (E4X)</a>.<br />See also
-        the
-        <a
-          class="link-https"
-          href="https://bugzilla.mozilla.org/attachment.cgi?id=169406"
-          >E4X errata</a
-        >.
-      </td>
-    </tr>
-    <tr>
       <td>ECMA-262 5.1 Edition</td>
       <td>
         <a href="http://www.ecma-international.org/ecma-262/5.1/ECMA-262.pdf"

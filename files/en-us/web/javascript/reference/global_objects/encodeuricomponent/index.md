@@ -21,17 +21,16 @@ characters).
 ## Syntax
 
 ```js
-encodeURIComponent(str);
+encodeURIComponent(uriComponent);
 ```
 
 ### Parameters
 
-- `str`
-  - : String. A component of a URI.
-
+- `uriComponent`
+  - : A string, number, boolean, null, undefined, or any object. Before encoding, the `uriComponent` gets converted to string. 
 ### Return value
 
-A new string representing the provided string encoded as a URI component.
+A new string representing the provided _uriComponent_ encoded as a URI component.
 
 ## Description
 

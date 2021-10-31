@@ -138,9 +138,9 @@ aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
 user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 ```
 
-### Restricting access with nginx and basic authentication
+### Restricting access with Nginx and basic authentication
 
-For nginx, you will need to specify a location that you are going to protect and the `auth_basic` directive that provides the name to the password-protected area.
+For Nginx, you will need to specify a location that you are going to protect and the `auth_basic` directive that provides the name to the password-protected area.
 The `auth_basic_user_file` directive then points to a `.htpasswd` file containing the encrypted user credentials, just like in the Apache example above.
 
 ```

@@ -387,7 +387,7 @@ pc.oniceconnectionstatechange = () => {
 };
 ```
 
-This has a number of reliability issues and outright bugs (such as failing if the {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} event fires when the signaling state isn't `stable`), but there was no way you could actually request an ICE restart other than by creating and sending an offer with the {{domxref("RTCOfferOptions.iceRestart", "iceRestart")}} option set to `true`. Sending the restart request thus required directly invoking the `negotiationneeded` event's handler. Getting it right was tricky at best, and was so easy to get wrong that bugs are common.
+This has a number of reliability issues and outright bugs (such as failing if the {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} event fires when the signaling state isn't `stable`), but there was no way you could actually request an ICE restart other than by creating and sending an offer with the `iceRestart` option set to `true`. Sending the restart request thus required directly invoking the `negotiationneeded` event's handler. Getting it right was tricky at best, and was so easy to get wrong that bugs are common.
 
 #### Using restartIce()
 

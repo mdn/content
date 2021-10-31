@@ -85,8 +85,10 @@ efforts as the Work Item is standardized.
 ### Status of partitioning in Firefox
 
 - [**Network Partitioning**](#network_partitioning): Enabled by default for all users since Firefox 85.
-- [**Dynamic State Partitioning**](#dynamic_state_partitioning): Since Firefox 86: Enabled for users that have
-  ["Strict" privacy protections ](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection)enabled.
+- [**Dynamic State Partitioning**](#dynamic_state_partitioning): 
+  - Since Firefox 86: Enabled for users that have 
+    ["Strict" privacy protections ](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection)enabled.
+  - Since Firefox 90: Enabled in private browsing.
 
 ### Network Partitioning
 
@@ -123,16 +125,19 @@ for cross-site tracking. As such, the following network APIs and caches are
 
 ### Dynamic Partitioning
 
-To prevent cross-site tracking via JavaScript accessible storage APIs,
-Firefox partitions them for third-parties by top-level site. As opposed to
-Network Partitioning this boundary is dynamic and storage access to the
-embedders context maybe be granted in certain circumstances.
+To prevent JavaScript accessible storage APIs being used for cross-site 
+tracking, Firefox partitions accessible storage by top-level site. This 
+mechanism ieans that, generally, a third-party embedded in one top-level site
+cannot access data stored under another top-level site.
 
-Firefox implements the
-[StorageAccessAPI](#storage_access_api) to allow frames to request
-access to the parent storage. Access to top-level storage may also be granted
-automatically in specific scenarios. [You
-can read more about these heuristics here.](#partitioning_heuristics)
+However, unlike Network Partitioning, this boundary is dynamic and access 
+to a third-party's unpartitioned storage can be granted:
+
+- using the [Storage Access API](#storage_access_api).
+- automatically, such as for third-parties providing federated login.
+
+Details about automatic grants are provided in the 
+[Storage Access Heuristics](#storage_access_heuristics) section.
 
 #### Partitioned APIs
 
@@ -193,7 +198,7 @@ third-party integrations that are common on the web to continue to function.
 Third-party frames may use
 [`document.requestStorageAccess`
 ](/en-US/docs/Web/API/Document/requestStorageAccess)to request unpartitioned storage access through the
-[StorageAccessAPI](/en-US/docs/Web/API/Storage_Access_API). Once
+[Storage Access API](/en-US/docs/Web/API/Storage_Access_API). Once
 granted, the requesting third-party will gain access to its first-party
 storage bucket (i.e., the storage it would have access to if visited as a
 first-party). Any calls to [dynamically partitioned APIs](#dynamically_partitioned_apis), for

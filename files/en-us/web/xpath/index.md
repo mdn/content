@@ -38,7 +38,7 @@ XPath uses a path notation (as in URLs) for navigating through the hierarchical 
 
 ## Tools
 
-- [ChroPath](https://addons.mozilla.org/en-US/firefox/addon/chropath-for-firefox/)
+- [SelectorsHub](https://addons.mozilla.org/en-US/firefox/addon/selectorshub/)
   - : XPath panel that integrates tightly into FireBug, providing an editor and inspector (FireFox Add-On).
 - [XMLQuire (formerly known as SketchPath)](http://qutoric.com/xmlquire/)
   - : A Graphical XPath Builder/Debugger(.NET).

@@ -31,7 +31,7 @@ Later version of the spec allow credentials to be retrieved from a different sub
 - {{domxref("Credential")}}
   - : Provides information about an entity as a prerequisite to a trust decision.
 - {{domxref("CredentialsContainer")}}
-  - : Exposes methods to request credentials and notify the user agent when interesting events occur such as successful sign in or sign out. This interfaces is accessible from `navigator.credentials`.
+  - : Exposes methods to request credentials and notify the user agent when interesting events occur such as successful sign in or sign out. This interface is accessible from `navigator.credentials`.
 - {{domxref("FederatedCredential")}}
   - : Provides information about credentials from a federated identity provider, which is an entity that a website trusts to correctly authenticate a user, and which provides an API for that purpose. [OpenID Connect](https://openid.net/developers/specs/) is an example of such a framework.
 - {{domxref("PasswordCredential")}}

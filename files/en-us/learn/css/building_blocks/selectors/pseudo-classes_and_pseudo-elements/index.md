@@ -72,7 +72,7 @@ All pseudo-classes behave in this same kind of way. They target some bit of your
 Some pseudo-classes only apply when the user interacts with the document in some way. These **user-action** pseudo-classes, sometimes referred to as **dynamic pseudo-classes**, act as if a class had been added to the element when the user interacts with it. Examples include:
 
 - [`:hover`](/en-US/docs/Web/CSS/:hover) — mentioned above; this only applies if the user moves their pointer over an element, typically a link.
-- [`:focus`](/en-US/docs/Web/CSS/:focus) — only applies if the user focuses the element using keyboard controls.
+- [`:focus`](/en-US/docs/Web/CSS/:focus) — only applies if the user focuses the element by clicking or using keyboard controls.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/hover.html", '100%', 500)}}
 

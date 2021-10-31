@@ -43,9 +43,7 @@ This code creates a new worker and sends it a message using [`Worker.postMessage
 ```js
 const worker = new Worker("static/scripts/worker.js");
 
-worker.addEventListener('message', (event) => {
-    console.log(`Received message from worker: ${event.data}`)
-});
+worker.postMessage('hello');
 ```
 
 The worker can listen for this message using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener):

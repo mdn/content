@@ -50,7 +50,7 @@ encapsulate the image within a link using the {{HTMLElement("a")}} element.
 Consider the following older HTML:
 
 ```html
-<img src="taco-tuesday.jpg" longDesc="image-descriptions/taco-tuesday.html">
+<img src="taco-tuesday.jpg" alt="Taco Tuesday" longDesc="image-descriptions/taco-tuesday.html">
 ```
 
 Here, the `longDesc` is used to indicate that the user should be able to
@@ -61,7 +61,7 @@ This can be easily converted into modern HTML:
 
 ```html
 <a href="image-descriptions/taco-tuesday.html">
-  <img src="taco-tuesday.jpg">
+  <img src="taco-tuesday.jpg" alt="Taco Tuesday" >
 </a>
 ```
 
@@ -74,3 +74,7 @@ This feature is not part of any current specification. It is no longer on track 
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)

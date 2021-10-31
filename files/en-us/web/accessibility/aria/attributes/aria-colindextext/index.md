@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: aria-colindextext attribute'
+title: 'aria-colindextext'
 slug: Web/Accessibility/ARIA/Attributes/aria-colindextext
 tags: 
   - Accessibility
@@ -53,7 +53,7 @@ Only use `aria-colindextext` when the provided or calculated value of `aria-coli
 
 > **Note:** While `aria-colindex` can be added to a row when all the columns present are contiguous as sequential values can be deduced, `aria-colindextext` is NOT a supported property of [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_role). 
 
-See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext)."
+See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext).
 
 ## Values
 
@@ -63,7 +63,7 @@ See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/
 ## ARIAMixin API 
 
 - {{domxref("Element.ariaColIndexText")}}
-  - : The  [`ariaColIndexText`](/en-US/docs/Web/API/Element/ariaColIndexText) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-colindextext` attribute, which defines a human readable text alternative of aria-colindex..
+  - : The  [`ariaColIndexText`](/en-US/docs/Web/API/Element/ariaColIndexText) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-colindextext` attribute, which defines a human readable text alternative of aria-colindex.
 
 ## Associated roles
 

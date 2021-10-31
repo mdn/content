@@ -285,7 +285,7 @@ Gives you this output:
 
 ### value
 
-The {{htmlattrxref("value","ol")}} attribute allows you to set your list items to specific numerical values. The following example:
+The {{htmlattrxref("value","li")}} attribute allows you to set your list items to specific numerical values. The following example:
 
 ```html
 <ol>
