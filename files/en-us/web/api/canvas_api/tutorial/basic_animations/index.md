@@ -352,7 +352,6 @@ function draw() {
 #cw {
   position: fixed;
   z-index: -1;
-  touch-action: none;
 }
 
 body {
