@@ -352,6 +352,7 @@ function draw() {
 #cw {
   position: fixed;
   z-index: -1;
+  touch-action: none;
 }
 
 body {
@@ -368,7 +369,7 @@ const canvas = document.getElementById("cw");
 const context = canvas.getContext("2d");
 context.globalAlpha = 0.5;
 
-const mouse = {
+const cursor = {
   x: innerWidth / 2,
   y: innerHeight / 2,
 };
@@ -379,12 +380,16 @@ generateParticles(101);
 setSize();
 anim();
 
-window.onmousemove = (e) => {
-  mouse.x = e.clientX;
-  mouse.y = e.clientY;
+onmousemove = (e) => {
+  cursor.x = e.clientX;
+  cursor.y = e.clientY;
 };
-
-window.onresize = () => {
+ontouchmove = (e) => {
+  e.preventDefault();
+  cursor.x = e.touches[0].clientX;
+  cursor.y = e.touches[0].clientY;
+};
+onresize = () => {
   setSize();
 }
 
@@ -429,8 +434,8 @@ function Particle(x, y, particleTrailWidth, strokeColor, rotateSpeed) {
       y: this.y,
     };
     this.theta += this.rotateSpeed;
-    this.x = mouse.x + Math.cos(this.theta) * this.t;
-    this.y = mouse.y + Math.sin(this.theta) * this.t;
+    this.x = cursor.x + Math.cos(this.theta) * this.t;
+    this.y = cursor.y + Math.sin(this.theta) * this.t;
     context.beginPath();
     context.lineWidth = this.particleTrailWidth;
     context.strokeStyle = this.strokeColor;
