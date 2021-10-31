@@ -380,18 +380,20 @@ generateParticles(101);
 setSize();
 anim();
 
-window.onmousemove = (e) => {
+addEventListener("mousemove", (e) => {
   cursor.x = e.clientX;
   cursor.y = e.clientY;
-};
-window.ontouchmove = (e) => {
-  e.preventDefault();
-  cursor.x = e.touches[0].clientX;
-  cursor.y = e.touches[0].clientY;
-};
-window.onresize = () => {
-  setSize();
-}
+});
+addEventListener(
+  "touchmove",
+  (e) => {
+    e.preventDefault();
+    cursor.x = e.touches[0].clientX;
+    cursor.y = e.touches[0].clientY;
+  },
+  { passive: false }
+);
+addEventListener("resize", () => setSize());
 
 function generateParticles(amount) {
   for (let i = 0; i < amount; i++) {
