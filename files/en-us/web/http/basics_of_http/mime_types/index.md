@@ -185,9 +185,19 @@ This is not valid, and in most cases will result in a script not being loaded.
 ### Image types
 
 Files whose MIME type is `image` contain image data.
-The subtype specifies which specific image file format the data represents. Only a few image types are used commonly enough to be considered safe for use on web pages:
+The subtype specifies which specific image file format the data represents.
 
-{{page("en-US/docs/Web/Media/Formats/Image_types", "table-of-image-file-types")}}
+The following image types are used commonly enough to be considered _safe_ for use on web pages:
+
+- [`image/apng`](/en-US/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics): Animated Portable Network Graphics (APNG)
+- [`image/avif`](/en-US/docs/Web/Media/Formats/Image_types#avif_image) : AV1 Image File Format (AVIF)
+- [`image/gif`](/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format): Graphics Interchange Format (GIF)
+- [`image/jpeg`](/en-US/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image): Joint Photographic Expert Group image (JPEG)
+- [`image/png`](/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics): Portable Network Graphics (PNG)
+- [`image/svg+xml`](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics): Scalable Vector Graphics (SVG)
+- [`image/webp`](/en-US/docs/Web/Media/Formats/Image_types#webp_image): Web Picture format (WEBP)
+
+The [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types##common_image_file_types) provides information and recommendations about when to use the different image formats.
 
 ### Audio and video types
 
