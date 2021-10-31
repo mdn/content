@@ -7,7 +7,7 @@ tags:
   - Reference
   - Global
   - Errors
-browser-compat: api.reporterror
+browser-compat: api.reportError
 ---
 {{APIRef}} {{AvailableInWorkers}}
 
