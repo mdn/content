@@ -380,16 +380,16 @@ generateParticles(101);
 setSize();
 anim();
 
-onmousemove = (e) => {
+window.onmousemove = (e) => {
   cursor.x = e.clientX;
   cursor.y = e.clientY;
 };
-ontouchmove = (e) => {
+window.ontouchmove = (e) => {
   e.preventDefault();
   cursor.x = e.touches[0].clientX;
   cursor.y = e.touches[0].clientY;
 };
-onresize = () => {
+window.onresize = () => {
   setSize();
 }
 
