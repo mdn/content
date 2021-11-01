@@ -26,36 +26,34 @@ The `aria-describedby` property is appropriate when the associated content conta
 
 > **Note:** The `aria-describedby` content should only be a text string. If there are important underlying semantics in the content, consider using [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details).
 
-## Examples
+<!--## Examples
 
 ### Example 1: Application Landmark Descriptions
 
-In the example below, an introductory paragraph describes a calendar application. `aria-describedby` is used to associate the paragraph with the application container.
+In the example below, the introductory paragraph describing the calendar application only appears after all the content. `aria-describedby` is used to associate the paragraph with the application container making it "visible" to those who might otherwise not be able to quickly scan the document to see the description.
 
 ```html
 <div role="application" aria-labelledby="calendarDescription" aria-describedby="info">
-    <h1 id="calendar">Calendar</h1>
-    <p id="calendarDescription">
-        This calendar shows the game schedule for the Boston Red Sox.
-    </p>
+    <h1 id="calendar">2022 Calendar</h1>
     <div role="grid">
         ...
     </div>
+    <p id="calendarDescription">
+        Game schedule for the Boston Red Sox 2022 Season.
+    </p>
 </div>
 ```
 
 ### Example 2: A Close Button
 
-In the example below, a button that functions as a 'close' button on a dialog is described elsewhere in the document. The `aria-describedby` attribute is used to associate the description with the button.
+In the example below, a button that functions as a 'close' button on a dialog is described elsewhere in the document. While a close button is a common occurence and doesn't normally need a description, the possibility of losing data may be something you do want to warn about. The `aria-describedby` attribute is used to associate the description with the button.
 
 ```html
-<button aria-label="Close" aria-describedby="closeDescription"
-    onclick="myDialog.close()">X</button>
+<button aria-label="Close" aria-describedby="warning">X</button>
 ...
-<p id="closeDescription">Closing this window will discard any information entered and
-return you back to the main page</p>
+<p id="warning">Closing this window will discard any information entered.</p>
 ```
-
+-->
 > **Note:** The aria-describedby attributed is not designed to reference descriptions on an external resource—since it is an `id`, it must reference an element in the same DOM document.
 
 ## Values
