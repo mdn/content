@@ -31,11 +31,11 @@ forEach(callbackFn)
 forEach(callbackFn, thisArg)
 
 // Inline callback function
-forEach(function callbackFn() { ... })
-forEach(function callbackFn(value) { ... })
-forEach(function callbackFn(value, key) { ... })
-forEach(function callbackFn(value, key, map) { ... })
-forEach(function callbackFn(value, key, map) { ... }, thisArg)
+forEach(function() { ... })
+forEach(function(value) { ... })
+forEach(function(value, key) { ... })
+forEach(function(value, key, map) { ... })
+forEach(function(value, key, map) { ... }, thisArg)
 ```
 
 ### Parameters

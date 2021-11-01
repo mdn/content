@@ -32,10 +32,10 @@ some(callbackFn)
 some(callbackFn, thisArg)
 
 // Inline callback function
-some(function callbackFn(element) { ... })
-some(function callbackFn(element, index) { ... })
-some(function callbackFn(element, index, array){ ... })
-some(function callbackFn(element, index, array) { ... }, thisArg)
+some(function(element) { ... })
+some(function(element, index) { ... })
+some(function(element, index, array){ ... })
+some(function(element, index, array) { ... }, thisArg)
 ```
 
 ### Parameters

@@ -44,10 +44,10 @@ find(callbackFn)
 find(callbackFn, thisArg)
 
 // Inline callback function
-find(function callbackFn(element) { ... })
-find(function callbackFn(element, index) { ... })
-find(function callbackFn(element, index, array){ ... })
-find(function callbackFn(element, index, array) { ... }, thisArg)
+find(function(element) { ... })
+find(function(element, index) { ... })
+find(function(element, index, array){ ... })
+find(function(element, index, array) { ... }, thisArg)
 ```
 
 ### Parameters
@@ -95,7 +95,7 @@ by `find` are set _before_ the first invocation of
 
 - `callbackFn` will not visit any elements added to the array
   after the call to `find` begins.
-- Elements which are assigned to indexes already visited, or to indexes 
+- Elements which are assigned to indexes already visited, or to indexes
   outside the range, will not be visited by `callbackFn`.
 - If an existing, yet-unvisited element of the array is changed by
   `callbackFn`, its value passed to the
