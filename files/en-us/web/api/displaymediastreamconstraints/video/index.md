@@ -28,7 +28,7 @@ This value may be a boolean value, where `true` specifies that a default selecti
 area of the device in use, spanning every screen in a multiple screen configuration).
 Since a video track must always be included, a value of `false` results in a `TypeError` exception being thrown.
 
-More precise control over the format of the returned video track may be exercised by providing a constrain object, which is used to
+More precise control over the format of the returned video track may be exercised by providing a constraint object, which is used to
 process the video data after obtaining it from the device but prior to adding it to the stream.
 
 ## Syntax
@@ -59,7 +59,7 @@ The allowed properties of the constraint object are:
   - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) that specifies whether or not to include the mouse cursor in the generated track, and if so, whether or not to hide it while not moving. The value may be a single one of the following strings, or an array of them to allow the browser flexibility in deciding what to do about the cursor.
 
     - `always`
-      - : The mouse is always visible in the video content of the {domxref("MediaStream"), unless the mouse has moved outside the area of the content.
+      - : The mouse is always visible in the video content of the {{domxref("MediaStream")}}, unless the mouse has moved outside the area of the content.
     - `motion`
       - : The mouse cursor is always included in the video if it's moving, and for a short time after it stops moving.
     - `never`
