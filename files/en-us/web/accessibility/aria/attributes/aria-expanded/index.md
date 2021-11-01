@@ -17,7 +17,7 @@ There are several widgets that can be expanded and collapsed, including menus, d
 
 For example, `aria-expanded` is applied to the parent item in a DOM tree to indicate whether its child branch of the tree is shown. The parent controls the visibility of the associated child branch, as well.
 
-There are two declarations that can be applied to objects that control the visibility of another object: `aria-controls` or `aria-owns` combined with `aria-expanded`. The `aria-controls` and `aria-owns` indicate the relationship between the controlling element and the controlled element, while the `aria-expanded` indicates to assistive technology whether the controlled element is expanded or collapsed.
+There are two declarations that can be applied to objects that control the visibility of another object: `aria-controls` or `aria-owns` combined with `aria-expanded`. The `aria-controls` and `aria-owns` indicate the relationship between the controlling element and the controlled element while the `aria-expanded` indicates to assistive technology whether the controlled element is expanded or collapsed. 
 
 When a grouping container that can be expanded or collapsed is not owned by the element that has the `aria-expanded` attribute, identify the controlling relationship by referencing the container from the element that has `aria-expanded` with the `aria-controls` property. If it is owned, use the `aria-owns` property.
 
@@ -39,7 +39,9 @@ By default, some roles are hidden or collapsed and other roles are open or expan
 ```html
 <label for="username">Username</label>
 <input id="username" name="username" aria-describedby="username-desc">
-<button aria-expanded="false" aria-controls="username-desc" aria-label="Help about username"><span aria-hidden="true">?</span></button>
+<button aria-expanded="false" aria-controls="username-desc" aria-label="Help about username">
+  <span aria-hidden="true">?</span>
+</button>
 <p id="username-desc" hidden>
   Your username is the name that you use to log in to this service.
 </p>
@@ -94,4 +96,4 @@ Inherits into roles:
 
 ## See Also
 
-- [`aria-control`]((/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
+- [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
