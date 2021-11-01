@@ -14,11 +14,19 @@ The `aria-disabled` state indicates that the element is perceivable but disabled
 
 ## Description
 
-You generally want users to fill out all the required fields before submitting a form. One way to ensure all required fields are complete is to disable the submit button; but you still want that submit button to be perceivable to ALL users. That is where the `aria-disabled` attribute comes in.
+You generally want users to fill out all the required fields before submitting a form. One way to ensure all required fields are complete is to disable the submit button. However, you still want that submit button to be perceivable to **all** users. That is where the `aria-disabled` attribute comes in.
 
-The `aria-disabled` attribute, when set to `true`, indicates to assistive technologies that the element upon which it is set is disabled. It tells your user the element is not editable or otherwise operable without making the element imperceivable.
+The `aria-disabled` attribute, when set to `true`, indicates to assistive technologies that the element upon which it is set is disabled. This declaration tells your user the element is not editable or otherwise operable without making the element imperceivable.
 
-There are several elements you may want to disable, but still want the user to know they exist. Some examples include irrelevant options in a radio group, the header button element associated with non-collapsible accordion panel, a button when the action associated with the button is unavailable, the icon for the currently visible slide in a slideshow slide picker, and items in a menu that are not currently selectable. In each of these cases, you want the user to know the element is there even though the functionality of that control is removed or "disabled".
+There are several elements you may want to disable, but still want the user to know they exist. Some examples include:
+
+- Irrelevant options in a radio group, 
+- The header button element associated with non-collapsible accordion panel, 
+- A button when the action associated with the button is unavailable, 
+- The icon for the currently visible slide in a slideshow slide picker, and 
+- Items in a menu that are not currently selectable. 
+
+In each of these cases, you want the user to know the element is there even though the functionality of that control is removed or "disabled".
 
 ARIA attributes only provide semantics. To semantically disable an element without removing it from focus order or from the accessibility tree, set `aria-disabled="true"` on the element. You should include JavaScript to disable the functionality of the element while also changing the appearance of the element so sighted users know it is disabled.
 
@@ -35,7 +43,7 @@ While adding `disabled` to an HTML form control causes `:disabled` user-agent st
   opacity: 0.5;
 }
 ```
-> **Note:** Do not use CSS's [`pointer-events: none;`](/en-US/docs/Web/CSS/pointer-events) to make an element non clickable. While it prevents mouse clicks, the element will still be 'clickable' via the keyboard.
+> **Note:** If you are using CSS's [`pointer-events: none;`](/en-US/docs/Web/CSS/pointer-events) to make an element non-clickable, make sure you disable interactivity with JavaScript as well. `pointer-events: none;` prevents mouse clicks, but does not prevent the element from being activated via the keyboard.
 
 ```js
 function toggleDisabled(element, status, update) {
@@ -57,7 +65,13 @@ function toggleDisabled(element, status, update) {
 }
 ```
 
-When toggling from `aria-disabled="true"` to `"false"`, use JavaScript to 1) toggle the value to `false`, 2) enable the element, and 3) let the user know the control is now enabled. If you used CSS to style   the disabled state using an attribute selector, the selector will no longer match and the disabled styling will no longer be in effect.
+When toggling from `aria-disabled="true"` to `"false"`, use JavaScript to: 
+
+1. Toggle the value to `false`, 
+2. Enable the element, and 
+3. Let the user know the control is now enabled. 
+
+If you used just CSS to style the disabled state using an attribute selector, the selector will no longer match and the disabled styling will no longer be in effect.
 
 ## Values
 
