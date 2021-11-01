@@ -11,13 +11,16 @@ browser-compat: css.properties.transform
 ---
 {{CSSRef}}
 
-The **`transform`** [CSS](/en-US/docs/Web/CSS) property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS [visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model).
+The **`transform`** [CSS](/en-US/docs/Web/CSS) property lets you rotate, scale, skew, or translate an element.
+It modifies the coordinate space of the CSS [visual formatting model](/en-US/docs/Web/CSS/Visual_formatting_model).
 
 {{EmbedInteractiveExample("pages/css/transform.html")}}
 
-If the property has a value different than `none`, a [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) will be created. In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/Containing_block) for any `position: fixed;` or `position: absolute;` elements that it contains.
+If the property has a value different than `none`, a [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) will be created.
+In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/Containing_block) for any `position: fixed;` or `position: absolute;` elements that it contains.
 
-> **Warning:** Only transformable elements can be `transform`ed. That is, all elements whose layout is governed by the CSS box model except for: [non-replaced inline boxes](/en-US/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [table-column boxes](/en-US/docs/Web/HTML/Element/col), and [table-column-group boxes](/en-US/docs/Web/HTML/Element/colgroup).
+> **Warning:** Only transformable elements can be `transform`ed.
+> That is, all elements whose layout is governed by the CSS box model except for: [non-replaced inline boxes](/en-US/docs/Web/CSS/Visual_formatting_model#inline-level_elements_and_inline_boxes), [table-column boxes](/en-US/docs/Web/HTML/Element/col), and [table-column-group boxes](/en-US/docs/Web/HTML/Element/colgroup).
 
 ## Syntax
 
@@ -61,24 +64,26 @@ transform: unset;
 
 The `transform` property may be specified as either the keyword value `none` or as one or more `<transform-function>` values.
 
-If {{cssxref("transform-function/perspective", "perspective()")}} is one of multiple function values, it must be listed first.
+If {{cssxref("transform-function/perspective()", "perspective()")}} is one of multiple function values, it must be listed first.
 
 ### Values
 
 - {{cssxref("&lt;transform-function&gt;")}}
-  - : One or more of the [CSS transform functions](/en-US/docs/Web/CSS/transform-function) to be applied. The transform functions are multiplied in order from left to right, meaning that composite transforms are effectively applied in order from right to left.
+  - : One or more of the [CSS transform functions](/en-US/docs/Web/CSS/transform-function) to be applied.
+    The transform functions are multiplied in order from left to right, meaning that composite transforms are effectively applied in order from right to left.
 - `none`
   - : Specifies that no transform should be applied.
 
 ## Accessibility concerns
 
-Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of migraine. If you need to include such animations on your website, you should provide a control to allow users to turn off animations, preferably site-wide.
+Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of migraine.
+If you need to include such animations on your website, you should provide a control to allow users to turn off animations, preferably site-wide.
 
 Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature — use it to write a [media query](/en-US/docs/Web/CSS/Media_Queries) that will turn off animations if the user has reduced animation specified in their system preferences.
 
 Find out more:
 
-- [MDN Understanding WCAG, Guideline 2.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_%E2%80%94_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [MDN Understanding WCAG, Guideline 2.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_—_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
 - [Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
 ## Formal definition
@@ -116,7 +121,7 @@ div {
 
 ### More examples
 
-Please see [Using CSS transforms](/en-US/docs/Web/Guide/CSS/Using_CSS_transforms) and {{cssxref("&lt;transform-function&gt;")}} for more examples.
+Please see [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms) and {{cssxref("&lt;transform-function&gt;")}} for more examples.
 
 ## Specifications
 
@@ -128,6 +133,6 @@ Please see [Using CSS transforms](/en-US/docs/Web/Guide/CSS/Using_CSS_transforms
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/CSS/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
 - {{cssxref("&lt;transform-function&gt;")}} data type with all the transform functions explained.
 - Online tool to visualize CSS Transform functions: [CSS Transform Playground](https://css-transform.moro.es/)

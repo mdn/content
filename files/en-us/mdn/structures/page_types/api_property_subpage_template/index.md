@@ -85,7 +85,7 @@ The summary paragraph — start by naming the property, saying what interface it
 This should ideally be 1 or 2 short sentences.
 You could copy most of this from the property's summary on the corresponding API reference page. Include whether it is read-only or not.
 
-### Value
+## Value
 
 Include a description of the property's value, including data type and what it represents.
 

@@ -24,14 +24,12 @@ translation of language, region and script display names.
 ## Syntax
 
 ```js
-new Intl.DisplayNames()
-new Intl.DisplayNames(locales)
 new Intl.DisplayNames(locales, options)
 ```
 
 ### Parameters
 
-- `locales` {{optional_inline}}
+- `locales`
 
   - : A string with a BCP 47 language tag, or an array of such strings. For the
     general form and interpretation of the `locales`
@@ -50,7 +48,7 @@ new Intl.DisplayNames(locales, options)
         "`tamldec`", "`telu`", "`thai`",
         "`tibt`".
 
-- `options` {{optional_inline}}
+- `options`
 
   - : An object with some or all of the following properties:
 
@@ -106,4 +104,5 @@ console.log((new Intl.DisplayNames([], {type: 'language'})).of('US'));
 ## See also
 
 - {{jsxref("Intl.DisplayNames")}}
+- {{jsxref("Intl.supportedValuesOf()")}}
 - {{jsxref("Global_Objects/Intl", "Intl")}}

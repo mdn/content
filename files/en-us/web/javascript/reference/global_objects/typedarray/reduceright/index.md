@@ -33,10 +33,10 @@ reduceRight(callbackFn)
 reduceRight(callbackFn, initialValue)
 
 // Inline callback function
-reduceRight(function callbackFn(accumulator, currentValue) { ... })
-reduceRight(function callbackFn(accumulator, currentValue, index) { ... })
-reduceRight(function callbackFn(accumulator, currentValue, index, array){ ... })
-reduceRight(function callbackFn(accumulator, currentValue, index, array) { ... }, initialValue)
+reduceRight(function(accumulator, currentValue) { ... })
+reduceRight(function(accumulator, currentValue, index) { ... })
+reduceRight(function(accumulator, currentValue, index, array){ ... })
+reduceRight(function(accumulator, currentValue, index, array) { ... }, initialValue)
 ```
 
 ### Parameters

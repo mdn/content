@@ -74,13 +74,13 @@ tags:
  </tbody>
 </table>
 
-<p>Following button activation, focus is set depending on the type of action the button performs. For example, if clicking the button opens a dialog, the focus should move to the dialog. If the button closes a dialog, focus should returns to the button that opened the dialog unless the function performed in the dialog context logically leads to a different element. If the button alters the current context, then focus typically remains on the button, such as muting and unmuting an audio file.</p>
+<p>Following button activation, focus is set depending on the type of action the button performs. For example, if clicking the button opens a dialog, the focus should move to the dialog. If the button closes a dialog, focus should return to the button that opened the dialog unless the function performed in the dialog context logically leads to a different element. If the button alters the current context, then focus typically remains on the button, such as muting and unmuting an audio file.</p>
 
 <h3 id="Required_JavaScript_Features">Required JavaScript Features</h3>
 
 <h4 id="Required_event_handlers">Required event handlers</h4>
 
-<p>Buttons can be operated by mouse, touch, and keyboard users. For native HTML <code>&lt;button&gt;</code> elements, the button's <code>onclick</code> event fires for mouse clicks and when the user presses <kbd>Space</kbd> or <kbd>Enter</kbd> while the button has focus. But if another tag is used to create a button, the <code>onclick </code>event only fires when clicked by the mouse cursor, even if <code>role="button"</code> is used. Because of this, separate key event handlers must be added to the element so that the button is be triggered when the <kbd>Space</kbd> or <kbd>Enter</kbd> key is pressed.</p>
+<p>Buttons can be operated by mouse, touch, and keyboard users. For native HTML <code>&lt;button&gt;</code> elements, the button's <code>onclick</code> event fires for mouse clicks and when the user presses <kbd>Space</kbd> or <kbd>Enter</kbd> while the button has focus. But if another tag is used to create a button, the <code>onclick </code>event only fires when clicked by the mouse cursor, even if <code>role="button"</code> is used. Because of this, separate key event handlers must be added to the element so that the button is triggered when the <kbd>Space</kbd> or <kbd>Enter</kbd> key is pressed.</p>
 
 <dl>
  <dt><code>onclick</code></dt>
@@ -109,11 +109,12 @@ tags:
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html">    &lt;h1&gt;ARIA Button Example&lt;/h1&gt;
-    &lt;ul id="nameList"&gt;&lt;/ul&gt;
-    &lt;label for="newName"&gt;Enter your Name: &lt;/label&gt;
-    &lt;input type="text" id="newName"&gt;
-    &lt;span role="button" tabindex="0" onclick="handleCommand(event)" onKeyDown="handleCommand(event)"&gt;Add Name&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;h1&gt;ARIA Button Example&lt;/h1&gt;
+&lt;ul id="nameList"&gt;&lt;/ul&gt;
+&lt;label for="newName"&gt;Enter your Name: &lt;/label&gt;
+&lt;input type="text" id="newName"&gt;
+&lt;span role="button" tabindex="0" onclick="handleCommand(event)" onKeyDown="handleCommand(event)"&gt;Add Name&lt;/span&gt;
+</pre>
 
 <h4 id="CSS">CSS</h4>
 
@@ -126,39 +127,39 @@ tags:
 [role="button"]:hover,
 [role="button"]:focus,
 [role="button"]:active {
-   background-color: white;
-   color: navy;
+  background-color: white;
+  color: navy;
 }
 ul {
-    list-style: none;
+  list-style: none;
 }</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
 <pre class="brush: js">function handleCommand(event) {
-    // Handles both mouse clicks and keyboard
-    // activate with Enter or Space
+  // Handles both mouse clicks and keyboard
+  // activate with Enter or Space
     
-    // Keypresses other then Enter and Space should not trigger a command
-    if (event instanceof KeyboardEvent &amp;&amp; event.key !== 'Enter' &amp;&amp; event.key !== ' ') {
-        return;
-    }
+  // Keypresses other then Enter and Space should not trigger a command
+  if (event instanceof KeyboardEvent &amp;&amp; event.key !== 'Enter' &amp;&amp; event.key !== ' ') {
+    return;
+  }
 
-    // Get the new name value from the input element
-    let newNameInput = document.getElementById('newName');
-    let name = newNameInput.value;
-    newNameInput.value = ''; // clear the text field
-    newNameInput.focus();  // give the text field focus to enable entering and additional name.
+  // Get the new name value from the input element
+  let newNameInput = document.getElementById('newName');
+  let name = newNameInput.value;
+  newNameInput.value = ''; // clear the text field
+  newNameInput.focus();  // give the text field focus to enable entering and additional name.
 
-    // Don't add blank entries to the list.
-    if(name.length &gt; 0) {
-        listItem = document.createElement('li');
-        listItem.appendChild(document.createTextNode(name));
+  // Don't add blank entries to the list.
+  if (name.length &gt; 0) {
+    listItem = document.createElement('li');
+    listItem.appendChild(document.createTextNode(name));
 
-        // Add the new name to the list.
-        let list = document.getElementById('nameList');
-        list.appendChild(listItem);
-    }
+    // Add the new name to the list.
+    let list = document.getElementById('nameList');
+    list.appendChild(listItem);
+  }
 }</pre>
 
 <p>{{EmbedLiveSample("Basic_button_example")}}</p>
@@ -189,14 +190,14 @@ ul {
 
 <pre class="brush: css">button,
 [role="button"] {
-    padding: 3px;
-    border: 2px solid transparent;
+  padding: 3px;
+  border: 2px solid transparent;
 }
 
 button:active,
 button:focus,
 [role="button"][aria-pressed="true"] {
-    border: 2px solid #000;
+  border: 2px solid #000;
 }
 </pre>
 
@@ -222,10 +223,10 @@ function toggleButton(element) {
   // Change aria-pressed to the opposite state
   element.setAttribute("aria-pressed", !pressed);
   // toggle the play state of the audio file
-  if(pressed) {
-     audio.pause();
+  if (pressed) {
+    audio.pause();
   } else {
-     audio.play();
+    audio.play();
   }
 }</pre>
 

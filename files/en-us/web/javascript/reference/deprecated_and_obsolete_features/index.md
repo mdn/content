@@ -211,10 +211,6 @@ These obsolete features have been entirely removed from JavaScript and can no lo
 - Destructuring {{jsxref("Statements/for...in", "for...in")}} is deprecated. Use {{jsxref("Statements/for...of", "for...of")}} instead.
 - let blocks and let expressions are obsolete.
 
-### E4X
-
-See [E4X](/en-US/docs/Archive/Web/E4X) for more information.
-
 ### Sharp variables
 
 See [Sharp variables in JavaScript](/en-US/docs/Archive/Web/Sharp_variables_in_JavaScript) for more information.

@@ -10,10 +10,10 @@ browser-compat: http.headers.ETag
 ---
 {{HTTPSidebar}}
 
-The **`ETag`** HTTP response header is an identifier for a
+The **`ETag`** (or **entity tag**) HTTP response header is an identifier for a
 specific version of a resource. It lets caches be more efficient and save bandwidth, as
-a web server does not need to resend a full response if the content has not changed.
-Additionally, etags help prevent simultaneous updates of a resource from overwriting
+a web server does not need to resend a full response if the content was not changed.
+Additionally, etags help to prevent simultaneous updates of a resource from overwriting
 each other (["mid-air collisions"](#avoiding_mid-air_collisions)).
 
 If the resource at a given URL changes, a new `Etag` value _must_ be
@@ -53,11 +53,11 @@ ETag: "<etag_value>"
     means weak etags prevent caching when [byte range requests](/en-US/docs/Web/HTTP/Headers/Accept-Ranges) are used,
     but strong etags mean range requests can still be cached.
 - "\<etag_value>"
-  - : Entity tag uniquely representing the requested resource. They are a string of ASCII
+  - : Entity tag that uniquely represents the requested resource. It is a string of ASCII
     characters placed between double quotes, like `"675af34563dc-tr34"`. The
-    method by which `ETag` values are generated is not specified. Often, a hash
-    of the content, a hash of the last modification timestamp, or just a revision number
-    is used. For example, MDN uses a hexadecimal hash of the wiki article content.
+    method by which `ETag` values are generated is not specified. Typically, the ETag value
+    is a hash of the content, a hash of the last modification timestamp, or just a revision number.
+    For example, a wiki engine can use a hexadecimal hash of the documentation article content.
 
 ## Examples
 

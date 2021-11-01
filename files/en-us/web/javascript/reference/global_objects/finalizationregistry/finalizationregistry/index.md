@@ -23,7 +23,7 @@ new FinalizationRegistry(heldValue => { ... } )
 new FinalizationRegistry(callbackFn)
 
 // Inline callback function
-new FinalizationRegistry(function callbackFn(heldValue) { ... })
+new FinalizationRegistry(function(heldValue) { ... })
 ```
 
 ### Parameters

@@ -30,10 +30,10 @@ filter(callbackFn)
 filter(callbackFn, thisArg)
 
 // Inline callback function
-filter(function callbackFn(element) { ... })
-filter(function callbackFn(element, index) { ... })
-filter(function callbackFn(element, index, array){ ... })
-filter(function callbackFn(element, index, array) { ... }, thisArg)
+filter(function(element) { ... })
+filter(function(element, index) { ... })
+filter(function(element, index, array){ ... })
+filter(function(element, index, array) { ... }, thisArg)
 ```
 
 ### Parameters
@@ -49,7 +49,7 @@ filter(function callbackFn(element, index, array) { ... }, thisArg)
     - `index`{{optional_inline}}
       - : The index of the current element being processed in the array.
     - `array`{{optional_inline}}
-      - : The array `filter` was called upon.
+      - : The array on which `filter()` was called.
 
 - `thisArg`{{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
@@ -68,7 +68,7 @@ A new array with the elements that pass the test. If no elements pass the test, 
 2.  the index of the element
 3.  the Array object being traversed
 
-If a `thisArg` parameter is provided to `filter`, it will be used as the callback's `this` value. Otherwise, the value `undefined` will be used as its `this` value. The `this` value ultimately observable by `callback` is determined according to [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+If a `thisArg` parameter is provided to `filter`, it will be used as the callback's `this` value. Otherwise, the value `undefined` will be used as its `this` value. The `this` value ultimately observable by `callbackFn` is determined according to [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
 `filter()` does not mutate the array on which it is called.
 

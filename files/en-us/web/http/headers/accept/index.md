@@ -10,7 +10,7 @@ browser-compat: http.headers.Accept
 ---
 {{HTTPSidebar}}
 
-The **`Accept`** request HTTP header advertises which content types, expressed as [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), the client is able to understand. Using [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation), the server then selects one of the proposals, uses it and informs the client of its choice with the {{HTTPHeader("Content-Type")}} response header. Browsers set adequate values for this header depending on the context where the request is done: when fetching a CSS stylesheet a different value is set for the request than when fetching an image, video or a script.
+The **`Accept`** request HTTP header indicates which content types, expressed as [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), the client is able to understand. The server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of the choice with the {{HTTPHeader("Content-Type")}} response header. Browsers set required values for this header based on the context of the request. For example, a browser uses different values in a request when fetches a CSS stylesheet, image, video, or a script.
 
 <table class="properties">
   <tbody>
@@ -51,11 +51,11 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*
 - `<MIME_type>/<MIME_subtype>`
   - : A single, precise [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), like `text/html`.
 - `<MIME_type>/*`
-  - : A MIME type, but without any subtype. `image/*` will match `image/png`, `image/svg`, `image/gif` and any other image types.
+  - : A MIME type, but without a subtype. `image/*` corresponds to `image/png`, `image/svg`, `image/gif`, and other image types.
 - `*/*`
   - : Any MIME type
 - `;q=` (q-factor weighting)
-  - : Any value used is placed in an order of preference expressed using relative [quality value](/en-US/docs/Glossary/Quality_values) called the _weight_.
+  - : A value used is placed in an order of preference expressed using a relative [quality value](/en-US/docs/Glossary/Quality_values) called the _weight_.
 
 ## Examples
 
@@ -83,5 +83,5 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 
 - HTTP [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
 - [List of default Accept values](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values)
-- Header with the result of the content negotiation: {{HTTPHeader("Content-Type")}}
+- A header with the result of the content negotiation: {{HTTPHeader("Content-Type")}}
 - Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}

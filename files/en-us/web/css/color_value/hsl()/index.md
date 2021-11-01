@@ -23,7 +23,8 @@ The **`hsl()`** functional notation expresses a given color according to its hue
 ```css
 hsl(100, 100%, 50%) /* #5f0 */
 hsl(235, 100%, 50%, .5) /* #0015ff with 50% opacity */
-hsl(235 100% 50%); /* CSS Colors 4 space-separated values */
+hsl(235 100% 50%) /* CSS Colors 4 space-separated values */
+hsl(235 100% 50% / .5); /* #0015ff with 50% opacity, using CSS Colors 4 space-separated values */
 ```
 
 ### Values

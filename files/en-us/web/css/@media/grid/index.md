@@ -11,7 +11,7 @@ browser-compat: css.at-rules.media.grid
 ---
 {{CSSRef}}
 
-The **`grid`** [CSS](/en-US/docs/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) can be used to test whether the output device uses a grid-based screen.
+The **`grid`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) can be used to test whether the output device uses a grid-based screen.
 
 Most modern computers and smartphones have bitmap-based screens. Examples of grid-based devices include text-only terminals and basic phones with only one fixed font.
 

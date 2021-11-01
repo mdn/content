@@ -42,7 +42,7 @@ An array of {{domxref("XRTransientInputHitTestResult")}} objects.
 
  let transientHitTestSource = null;
  xrSession.requestHitTestSourceForTransientInput({
-   space : "generic-touchscreen",
+   profile : "generic-touchscreen",
    offsetRay : new XRRay()
  }).then((touchScreenHitTestSource) => {
    transientHitTestSource = touchScreenHitTestSource;

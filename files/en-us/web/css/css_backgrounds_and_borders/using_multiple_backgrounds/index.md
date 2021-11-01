@@ -60,4 +60,4 @@ As you can see here, the Firefox logo (listed first within {{ cssxref("backgroun
 
 ## See also
 
-- [Using CSS gradients](/en-US/docs/CSS/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/Using_CSS_gradients)

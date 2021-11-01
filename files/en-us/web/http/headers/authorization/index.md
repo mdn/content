@@ -6,14 +6,22 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-  - header
+  - Header
+  - Authorization
+  - Authentication
+browser-compat: http.headers.Authorization
 ---
 {{HTTPSidebar}}
 
-The HTTP **`Authorization`** request header contains the
-credentials to authenticate a user agent with a server, usually, but not
-necessarily, after the server has responded with a {{HTTPStatus("401")}}
-`Unauthorized` status and the {{HTTPHeader("WWW-Authenticate")}} header.
+The HTTP **`Authorization`** request header can be used to provide credentials that authenticate a user agent with a server, allowing access to a protected resource.
+
+The **`Authorization`** header is usually, but not always, sent after the user agent first attempts to request a protected resource without credentials.
+The server responds with a {{HTTPStatus("401")}} `Unauthorized` message that includes at least one {{HTTPHeader("WWW-Authenticate")}} header.
+This header indicates what authentication schemes can be used to access the resource (and any additional information needed by the client to use them). 
+The user-agent should select the most secure authentication scheme that it supports from those offered, prompt the user for their credentials, and then re-request the resource (including the encoded credentials in the **`Authorization`** header). 
+
+> **Note:** This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework).
+> It can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
 
 <table class="properties">
   <tbody>
@@ -30,43 +38,104 @@ necessarily, after the server has responded with a {{HTTPStatus("401")}}
 
 ## Syntax
 
+```http
+Authorization: <auth-scheme> <authorisation-parameters>
 ```
-Authorization: <type> <credentials>
+
+Basic authentication
+
+```http
+Authorization: Basic <credentials>
 ```
+
+Digest authentication
+
+```http
+Authorization: Digest username=<username>,
+    realm="<realm>",
+    uri="<url>",
+    algorithm=<algorithm>,
+    nonce="<nonce>",
+    nc=<nc>,
+    cnonce="<cnonce>",
+    qop=<qop>,
+    response="<response>",
+    opaque="<opaque>"
+```
+
 
 ## Directives
 
-- \<type>
+- `<auth-scheme>`
+  - : The [Authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes) that defines how the credentials are encoded.
+    Some of the more common types are (case-insensitive): [`Basic`](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
 
-  - : The [Authentication type](/en-US/docs/Web/HTTP/Authentication#authentication_schemes), that is which algorithm will be used for authentication. A common type is [`"Basic"`](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme).
+    > **Note:** For more information/options see [HTTP Authentication > Authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes)
 
-    Other types common types can be found at the [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
 
-    > **Note:** AWS S3 servers use a specific authentication,
-    > [`AWS4-HMAC-SHA256`](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html).
+Other than `<auth-scheme>` the remaining directives are specific to each [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
+Generally you will need to check the relevant specifications for these (keys for a small subset of schemes are listed below).
+
+### Basic
 
 - \<credentials>
 
-  - : If the `"Basic"` authentication scheme is used,
-    the credentials are constructed
-    by first combining the username and the password with a colon (`aladdin:opensesame`),
-    then by encoding the resulting string in [`base64`](/en-US/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
+  - : The credentials, encoded according to the specified scheme.
 
-    > **Note:** {{Glossary("Base64")}}-encoding does not mean encryption or hashing!
-    > As base64 is a reversible encoding,
-    > this method is equally (in)secure
-    > as sending the credentials in clear text.
-    > So you should alwaysuse {{Glossary("HTTPS")}} in conjunction with `Basic` authentication.
+    > **Note:** For information about the encoding algorithm, see the examples: below, in {{HTTPHeader("WWW-Authenticate")}}, in [HTTP Authentication](/en-US/docs/Web/HTTP/Authentication), and in the relevant specifications.
+
+### Digest
+
+
+- \<response>
+  - : A string of the hex digits that proves that the user knows a password.
+      The algorithm encodes the username and password, realm, cnonce, qop, nc, and so on.
+      It is described in detail in the specification. 
+- **`username`**
+  - : A quoted string containing user's name for the specified `realm` in either plain text or the hash code in hexadecimal notation.
+      If the name contains characters that aren't allowed in the field, then `username*` can be used instead (not "as well").
+- **`username*`**
+  - : The user's name formatted using an extended notation defined in RFC5987.
+      This should be used only if the name can't be encoded in `username` and if `userhash` is set `"false"`.
+- **`uri`**
+  - : The _Effective Request URI_. See the specification for more information.
+- **`realm`**
+  - : Realm of the requested username/password (again, should match the value in the corresponding {{HTTPHeader("WWW-Authenticate")}} response for the resource being requested).
+- **`opaque`**
+  - : The value in the corresponding {{HTTPHeader("WWW-Authenticate")}} response for the resource being requested.
+- **`algorithm`**
+  - : The algorithm used to calculate the digest. Must be a supported algorithm from the {{HTTPHeader("WWW-Authenticate")}} response for the resource being requested.
+- **`qop`**
+  - : A token indicating the _quality of protection_ applied to the message.
+      Must match the one value in the set specified in the {{HTTPHeader("WWW-Authenticate")}} response for the resource being requested.
+      - `"auth"`: Authentication
+      - `"auth-int"`: Authentication with integrity protection
+- **`cnonce`**
+  - : An quoted ASCII-only string value provided by the client.
+      This is used by both the client and server to provide mutual authentication, provide some message integrity protection, and avoid "chosen plaintext 
+      attacks".
+      See the specification for additional information. 
+- **`nc`**
+  - : Nonce count. The hexadecimal count of requests in which the client has sent the current `cnonce` value (including the current request).
+      The server can use duplicate `nc` values to recognise replay requests.
+- **`userhash`** {{optional_inline}}
+  - : `"true` if the username has been hashed. `"false"` by default.
+
 
 ## Examples
 
-```
+### Basic authentication
+
+For `"Basic"` authentication the credentials are constructed by first combining the username and the password with a colon (`aladdin:opensesame`), and then by encoding the resulting string in [`base64`](/en-US/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
+
+```https
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for
-examples on how to configure Apache or nginx servers to password protect your site with
-HTTP basic authentication.
+> **Warning:** {{Glossary("Base64")}}-encoding can easily be reversed to obtain the original name and password, so Basic authentication is completely insecure.
+> {{Glossary("HTTPS")}} is always recommended when using authentication, but is even more so when using `Basic` authentication.
+
+See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or Nginx servers to password protect your site with HTTP basic authentication.
 
 ## Specifications
 
@@ -74,6 +143,14 @@ HTTP basic authentication.
 | ---------------------------------------------------- | -------------------------------------- |
 | {{RFC("7235", "Authorization", "4.2")}} | HTTP/1.1: Authentication               |
 | {{RFC("7617")}}                                 | The 'Basic' HTTP Authentication Scheme |
+| {{RFC("7616")}}                                 | HTTP Digest Access Authentication |
+
+<!-- {{Specifications}} -->
+
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

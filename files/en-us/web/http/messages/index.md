@@ -39,7 +39,10 @@ HTTP requests are messages sent by the client to initiate an action on the serve
 2. The _request target_, usually a {{glossary("URL")}}, or the absolute path of the protocol, port, and domain are usually characterized by the request context. The format of this request target varies between different HTTP methods. It can be
 
     - An absolute path, ultimately followed by a `'?'` and query string. This is the most common form, known as the _origin form_, and is used with `GET`, `POST`, `HEAD`, and `OPTIONS` methods.
-      `POST / HTTP/1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
+      - `POST / HTTP/1.1`
+      - `GET /background.png HTTP/1.0` 
+      - `HEAD /test.html?query=alibaba HTTP/1.1` 
+      - `OPTIONS /anypage.html HTTP/1.0`      
     - A complete URL, known as the _absolute form_, is mostly used with `GET` when connected to a proxy.
       `GET https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
     - The authority component of a URL, consisting of the domain name and optionally the port (prefixed by a `':'`), is called the _authority form_. It is only used with `CONNECT` when setting up an HTTP tunnel.
@@ -112,7 +115,7 @@ HTTP/1.x messages have a few drawbacks for performance:
 - Headers are often very similar from one message to the next one, yet still repeated across connections.
 - No multiplexing can be done. Several connections need opening on the same server: and warm TCP connections are more efficient than cold ones.
 
-HTTP/2 introduces an extra step: it divides HTTP/1.x messages into frames which are embedded in a stream. Data and header frames are separated, this allows header compression. Several streams can be combined together, a process called _multiplexing_, allowing more efficient use of underlying TCP connections.
+HTTP/2 introduces an extra step: it divides HTTP/1.x messages into frames which are embedded in a stream. Data and header frames are separated, which allows header compression. Several streams can be combined together, a process called _multiplexing_, allowing more efficient use of underlying TCP connections.
 
 ![HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](binary_framing2.png)
 

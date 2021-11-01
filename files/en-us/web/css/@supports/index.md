@@ -174,7 +174,7 @@ The CSS Conditional Rules Level 4 specification adds the ability to test for sup
 @supports selector(:nth-child(1n of a, b)) {
   /* This rule needs to be inside the @supports block, otherwise
      it will be partially applied in browsers which don't support
-     the `of` argument of :nth-child(…) is supported */
+     the `of` argument of :nth-child(…) */
   :is(
       :nth-child(1n of ul, ol) a,
       details > summary

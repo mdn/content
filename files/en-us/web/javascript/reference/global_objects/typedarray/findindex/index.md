@@ -36,10 +36,10 @@ findIndex(callbackFn)
 findIndex(callbackFn, thisArg)
 
 // Inline callback function
-findIndex(function callbackFn(element) { ... })
-findIndex(function callbackFn(element, index) { ... })
-findIndex(function callbackFn(element, index, array){ ... })
-findIndex(function callbackFn(element, index, array) { ... }, thisArg)
+findIndex(function(element) { ... })
+findIndex(function(element, index) { ... })
+findIndex(function(element, index, array){ ... })
+findIndex(function(element, index, array) { ... }, thisArg)
 ```
 
 ### Parameters

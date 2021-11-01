@@ -86,6 +86,7 @@ console.log(atWay); // Logs: 't'
 
 ## See also
 
+- A polyfill of `String.prototype.at` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - [A polyfill for the at() method](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
 - {{jsxref("String.prototype.indexOf()")}}
 - {{jsxref("String.prototype.lastIndexOf()")}}

@@ -79,11 +79,6 @@
     "url": "https://wicg.github.io/shape-detection-api/",
     "status": "Draft"
   },
-  "Basic Card Payment": {
-    "name": "Basic Card Payment",
-    "url": "https://w3c.github.io/payment-method-basic-card/",
-    "status": "WD"
-  },
   "Battery API": {
     "name": "Battery Status API",
     "url": "https://w3c.github.io/battery/",
@@ -136,7 +131,7 @@
   },
   "Cookie Prefixes": {
     "name": "Cookie Prefixes",
-    "url": "https://tools.ietf.org/html/draft-west-cookie-prefixes-05",
+    "url": "https://datatracker.ietf.org/doc/html/draft-west-cookie-prefixes-05",
     "status": "Draft"
   },
   "Cookie Store API": {
@@ -839,6 +834,11 @@
     "url": "https://wicg.github.io/event-timing/",
     "status": "ED"
   },
+  "EyeDropper": {
+    "name": "EyeDropper",
+    "url": "https://wicg.github.io/eyedropper-api/",
+    "status": "Draft"
+  },
   "Feature Policy": {
     "name": "Permissions Policy",
     "url": "https://w3c.github.io/webappsec-permissions-policy/",
@@ -941,7 +941,7 @@
   },
   "HSTS": {
     "name": "HTTP Strict Transport Security (HSTS)",
-    "url": "https://tools.ietf.org/html/rfc6797",
+    "url": "https://datatracker.ietf.org/doc/html/rfc6797",
     "status": "RFC"
   },
   "HTML Editing": {
@@ -1581,7 +1581,7 @@
   },
   "vCard": {
     "name": "vCard Format Specification",
-    "url": "https://tools.ietf.org/html/rfc6350",
+    "url": "https://datatracker.ietf.org/doc/html/rfc6350",
     "status": "RFC"
   },
   "Vibration API": {

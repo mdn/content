@@ -1,0 +1,100 @@
+---
+title: IDBObjectStore.openCursor()
+slug: Web/API/IDBObjectStore/openCursor
+tags:
+  - API
+  - Database
+  - IDBObjectStore
+  - IndexedDB
+  - Method
+  - Reference
+  - Storage
+  - openCursor
+browser-compat: api.IDBObjectStore.openCursor
+---
+{{ APIRef("IndexedDB") }}
+
+The **`openCursor()`** method of the
+{{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object,
+and, in a separate thread, returns a new {{domxref("IDBCursorWithValue")}} object.
+Used for iterating through an object store with a cursor.
+
+To determine if the add operation has completed successfully, listen for the results’s
+`success` event.
+
+{{AvailableInWorkers}}
+
+## Syntax
+
+```js
+var request = ObjectStore.openCursor();
+var request = ObjectStore.openCursor(query);
+var request = ObjectStore.openCursor(query, direction);
+```
+
+### Parameters
+
+- query {{optional_inline}}
+  - : A key or {{domxref("IDBKeyRange")}} to be queried. If a single valid key is passed,
+    this will default to a range containing only that key. If nothing is passed, this will
+    default to a key range that selects all the records in this object store.
+- direction {{optional_inline}}
+  - : An [`IDBCursorDirection`](https://w3c.github.io/IndexedDB/#enumdef-idbcursordirection) telling the cursor what direction to travel.
+    Valid values are `"next"`, `"nextunique"`, `"prev"`,
+    and `"prevunique"`. The default is `"next"`.
+
+### Return value
+
+An {{domxref("IDBRequest")}} object on which subsequent events related to this
+operation are fired.
+
+### Exceptions
+
+This method may raise a {{domxref("DOMException")}} of one of the following types:
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if this {{domxref("IDBObjectStore")}} or {{domxref("IDBIndex")}} has been deleted.
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if this {{domxref("IDBObjectStore")}}'s transaction is inactive.
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if the specified key or key range is invalid.
+
+## Example
+
+In this simple fragment we create a transaction, retrieve an object store, then use a
+cursor to iterate through all the records in the object store:
+
+```js
+var transaction = db.transaction("name", "readonly");
+var objectStore = transaction.objectStore("name");
+var request = objectStore.openCursor();
+request.onsuccess = function(event) {
+  var cursor = event.target.result;
+  if(cursor) {
+    // cursor.value contains the current record being iterated through
+    // this is where you'd do something with the result
+    cursor.continue();
+  } else {
+    // no more results
+  }
+};
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- Starting transactions: {{domxref("IDBDatabase")}}
+- Using transactions: {{domxref("IDBTransaction")}}
+- Setting a range of keys: {{domxref("IDBKeyRange")}}
+- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
+- Using cursors: {{domxref("IDBCursor")}}
+- Reference example: [To-do
+  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)

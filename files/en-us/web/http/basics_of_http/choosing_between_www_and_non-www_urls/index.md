@@ -47,7 +47,7 @@ When adding such a tag, you serve the same content for both domains, telling sea
 
 ```html
 <link href="http://example.org/whaddup" rel="canonical">
-``
+```
 
 Unlike the previous case, browser history will consider non-www and www URLs as independent entries.
 

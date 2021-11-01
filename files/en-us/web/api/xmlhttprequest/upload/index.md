@@ -1,0 +1,112 @@
+---
+title: XMLHttpRequest.upload
+slug: Web/API/XMLHttpRequest/upload
+tags:
+  - AJAX
+  - API
+  - Monitoring XMLHttpRequest
+  - Property
+  - Read-only
+  - Reference
+  - Sending Files
+  - Uploading
+  - XHR
+  - XHR Uploads
+  - XMLHttpRequest
+  - XMLHttpRequest Uploads
+  - XMLHttpRequestUpload
+  - upload
+browser-compat: api.XMLHttpRequest.upload
+---
+{{APIRef('XMLHttpRequest')}}
+
+The {{domxref("XMLHttpRequest")}} `upload` property returns an {{domxref("XMLHttpRequestUpload")}} object that can be observed to monitor an upload's progress.
+
+It is an opaque object, but because it's also an {{domxref("XMLHttpRequestEventTarget")}}, event listeners can be attached to track its process.
+
+> **Note:** Attaching event listeners to this object prevents the request from being a "simple request" and will cause a preflight request to be issued if cross-origin; see [CORS](/en-US/docs/Web/HTTP/CORS). Because of this, event listeners need to be registered before calling {{domxref("XMLHttpRequest.send", "send()")}} or upload events won't be dispatched.
+
+> **Note:** The spec also seems to indicate that event listeners should be attached after {{domxref("XMLHttpRequest.open", "open()")}}. However, browsers are buggy on this matter, and often need the listeners to be registered _before_ {{domxref("XMLHttpRequest.open", "open()")}} to work.
+
+The following events can be triggered on an upload object and used to monitor the upload:
+
+<table class="no-markdown">
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Event listener</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{event("loadstart")}}</td>
+      <td>
+        {{domxref("XMLHttpRequest.onloadstart", "onloadstart")}}
+      </td>
+      <td>The upload has begun.</td>
+    </tr>
+    <tr>
+      <td>{{event("progress")}}</td>
+      <td>
+        {{domxref("XMLHttpRequest.onprogress", "onprogress")}}
+      </td>
+      <td>
+        Periodically delivered to indicate the amount of progress made so far.
+      </td>
+    </tr>
+    <tr>
+      <td>{{event("abort")}}</td>
+      <td>{{domxref("XMLHttpRequest.onabort", "onabort")}}</td>
+      <td>The upload operation was aborted.</td>
+    </tr>
+    <tr>
+      <td>{{event("error")}}</td>
+      <td>{{domxref("XMLHttpRequest.onerror", "onerror")}}</td>
+      <td>The upload failed due to an error.</td>
+    </tr>
+    <tr>
+      <td>{{event("load")}}</td>
+      <td>{{domxref("XMLHttpRequest.onload", "onload")}}</td>
+      <td>The upload completed successfully.</td>
+    </tr>
+    <tr>
+      <td>{{event("timeout")}}</td>
+      <td>
+        {{domxref("XMLHttpRequest.ontimeout", "ontimeout")}}
+      </td>
+      <td>
+        The upload timed out because a reply did not arrive within the time
+        interval specified by the
+        {{domxref("XMLHttpRequest.timeout")}}.
+      </td>
+    </tr>
+    <tr>
+      <td>{{event("loadend")}}</td>
+      <td>
+        {{domxref("XMLHttpRequest.onloadend", "onloadend")}}
+      </td>
+      <td>
+        The upload finished. This event does not differentiate between success
+        or failure, and is sent at the end of the upload regardless of the
+        outcome. Prior to this event, one of <code>load</code>,
+        <code>error</code>, <code>abort</code>, or <code>timeout</code> will
+        already have been delivered to indicate why the upload ended.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [FileHandle API](/en-US/docs/Web/API/File_Handle_API)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)

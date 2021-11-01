@@ -353,7 +353,6 @@
         "KeyboardEvent",
         "MouseEvent",
         "MouseScrollEvent",
-        "MouseWheelEvent",
         "MutationEvent",
         "ProgressEvent",
         "UIEvent",
@@ -407,8 +406,7 @@
         "MediaKeys",
         "MediaKeySession",
         "MediaKeyStatusMap",
-        "MediaKeySystemAccess",
-        "MediaKeySystemConfiguration"
+        "MediaKeySystemAccess"
       ],
       "methods": [
         "Navigator.requestMediaKeySystemAccess()",
@@ -418,6 +416,15 @@
         "HTMLMediaElement.mediaKeys",
         "HTMLMediaElement.onencrypted"
       ],
+      "events": []
+    },
+    "EyeDropper API": {
+      "overview": ["EyeDropper API"],
+      "interfaces": [
+        "EyeDropper"
+      ],
+      "methods": [],
+      "properties": [],
       "events": []
     },
     "Fetch API": {
@@ -525,19 +532,6 @@
         "Element: fullscreenerror"
       ]
     },
-    "Frame Timing API": {
-      "overview": ["Frame Timing API"],
-      "guides": ["/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API"],
-      "interfaces": [
-        "Performance",
-        "PerformanceEntry",
-        "PerformanceFrameTiming",
-        "PerformanceObserver"
-      ],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
     "Gamepad API": {
       "overview": ["Gamepad API"],
       "guides": [
@@ -555,7 +549,6 @@
     "Geolocation API": {
       "overview": ["Geolocation API"],
       "guides": ["/docs/Web/API/Geolocation_API/Using_the_Geolocation_API"],
-      "dictionaries": ["PositionOptions"],
       "interfaces": [
         "Geolocation",
         "GeolocationCoordinates",
@@ -839,6 +832,16 @@
       "properties": [],
       "events": []
     },
+    "Layout Instability API": {
+      "overview": ["Layout Instability API"],
+      "interfaces: ": [
+        "LayoutShift",
+        "LayoutShiftAttribution"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Long Tasks API": {
       "overview": ["Long Tasks API"],
       "interfaces": ["PerformanceLongTaskTiming", "TaskAttributionTiming"],
@@ -854,8 +857,7 @@
       "interfaces": [
         "MediaCapabilities",
         "ScreenLuminance",
-        "Screen",
-        "MediaCapabilitiesInfo"
+        "Screen"
       ],
       "methods": [
         "mediaCapabilities.decodingInfo()",
@@ -920,9 +922,7 @@
         "MediaSource",
         "SourceBuffer",
         "SourceBufferList",
-        "VideoPlaybackQuality",
-        "TrackDefault",
-        "TrackDefaultList"
+        "VideoPlaybackQuality"
       ],
       "methods": [
         "HTMLVideoElement.getVideoPlaybackQuality()",
@@ -985,8 +985,6 @@
       ],
       "dictionaries": [
         "AddressErrors",
-        "BasicCardRequest",
-        "BasicCardResponse",
         "PaymentMethodData",
         "PaymentCurrencyAmount",
         "PaymentDetailsModifier",
@@ -1016,7 +1014,6 @@
       "interfaces": [
         "Performance",
         "PerformanceEntry",
-        "PerformanceFrameTiming",
         "PerformanceLongTaskTiming",
         "PerformanceMark",
         "PerformanceMeasure",
@@ -1222,6 +1219,7 @@
       "events": []
     },
     "Screen Orientation API": {
+      "overview": ["Screen Orientation API"],
       "guides": ["/docs/Web/API/CSS_Object_Model/Managing_screen_orientation"],
       "interfaces": ["ScreenOrientation"],
       "methods": [],
@@ -1301,7 +1299,7 @@
     },
     "Storage": {
       "overview": ["Storage API"],
-      "interfaces": ["StorageManager", "StorageEstimate"],
+      "interfaces": ["StorageManager"],
       "methods": [],
       "properties": ["Navigator.storage", "WorkerNavigator.storage"],
       "events": []
@@ -1525,6 +1523,13 @@
       "properties": [],
       "events": []
     },
+    "URL Pattern API": {
+      "overview": ["URL Pattern API"],
+      "interfaces": ["URLPattern"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "User Timing API": {
       "interfaces": [
         "Performance",
@@ -1564,7 +1569,6 @@
         "AnimationTimeline",
         "AnimationPlaybackEvent",
         "DocumentTimeline",
-        "EffectTiming",
         "KeyframeEffect"
       ],
       "methods": ["Document.getAnimations()", "Element.animate()"],
@@ -1659,7 +1663,6 @@
         "HTMLSlotElement",
         "HTMLTemplateElement",
         "ShadowRoot",
-        "DocumentOrShadowRoot",
         "Slotable"
       ],
       "methods": [
@@ -1676,6 +1679,55 @@
         "Window.customElements"
       ],
       "events": []
+    },
+    "WebCodecs API": {
+      "overview": ["WebCodecs API"],
+      "interfaces": [
+        "AudioData",
+        "AudioDecoder",
+        "AudioEncoder",
+        "EncodedAudioChunk",
+        "EncodedVideoChunk",
+        "ImageDecoder",
+        "ImageTrack",
+        "ImageTrackList",
+        "VideoDecoder",
+        "VideoEncoder",
+        "VideoColorSpace",
+        "VideoFrame"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": [],
+      "dictionaries": [
+        "AudioDataInit",
+        "AudioDataCopyToOptions",
+        "AudioDecoderConfig",
+        "AudioDecoderInit",
+        "AudioDecoderSupport",
+        "AudioEncoderConfig",
+        "AudioEncoderInit",
+        "AudioEncoderSupport",
+        "PlaneLayout",
+        "EncodedAudioChunkInit",
+        "EncodedAudioChunkMetadata",
+        "EncodedVideoChunkInit",
+        "EncodedVideoChunkMetadata",
+        "ImageDecodeOptions",
+        "ImageDecodeResult",
+        "ImageDecoderInit",
+        "SvcOutputMetadata",
+        "VideoColorSpaceInit",
+        "VideoDecoderConfig",
+        "VideoDecoderInit",
+        "VideoDecoderSupport",
+        "VideoEncoderConfig",
+        "VideoEncoderInit",
+        "VideoEncoderSupport",
+        "VideoFrameBufferInit",
+        "VideoFrameCopyToOptions",
+        "VideoFrameInit"
+      ]
     },
     "Web Crypto API": {
       "overview": ["Web Crypto API"],
@@ -1849,12 +1901,8 @@
         "RTCErrorEvent"
       ],
       "dictionaries": [
-        "RTCConfiguration",
         "RTCOAuthCredential",
         "RTCIceServer",
-        "RTCOfferAnswerOptions",
-        "RTCOfferOptions",
-        "RTCAnswerOptions",
         "RTCSessionDescriptionInit",
         "RTCIceCandidateInit",
         "RTCPeerConnectionIceEventInit",

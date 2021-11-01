@@ -28,7 +28,7 @@ image-orientation: from-image; /* Use EXIF data from the image */
 /* Global values */
 image-orientation: inherit;
 image-orientation: initial;
-image-resolution: revert;
+image-orientation: revert;
 image-orientation: unset;
 
 /* Optional values, deprecated in CSS */

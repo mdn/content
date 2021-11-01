@@ -34,12 +34,12 @@ expression](/en-US/docs/Web/JavaScript/Reference/Operators/function), but is lim
 
 ### Comparing traditional functions to arrow functions
 
-Let's decompose a "traditional function" down to the simplest "arrow function" step-by-step:
+Let's decompose a "traditional anonymous function" down to the simplest "arrow function" step-by-step:
 
 > **Note:** Each step along the way is a valid "arrow function".
 
 ```js
-// Traditional Function
+// Traditional Anonymous Function
 function (a){
   return a + 100;
 }
@@ -58,13 +58,13 @@ function (a){
 a => a + 100;
 ```
 
-> **Note:** As shown above, the { braces } and ( parentheses ) and "return" are required in some cases.
+The { braces } and ( parentheses ) and "return" are required in some cases.
 
 For example, if you have **multiple arguments** or **no
 arguments**, you'll need to re-introduce parentheses around the arguments:
 
 ```js
-// Traditional Function
+// Traditional Anonymous Function
 function (a, b){
   return a + b + 100;
 }
@@ -72,7 +72,7 @@ function (a, b){
 // Arrow Function
 (a, b) => a + b + 100;
 
-// Traditional Function (no arguments)
+// Traditional Anonymous Function (no arguments)
 let a = 4;
 let b = 2;
 function (){
@@ -90,7 +90,7 @@ need to re-introduce braces **PLUS the "return"** (arrow functions do not
 magically guess what or when you want to "return"):
 
 ```js
-// Traditional Function
+// Traditional Anonymous Function
 function (a, b){
   let chuck = 42;
   return a + b + chuck;
@@ -549,6 +549,6 @@ setTimeout( () => {
 {{Compat}}
 
 ## See also
-
+ 
 - ["ES6 In
   Depth: Arrow functions" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)

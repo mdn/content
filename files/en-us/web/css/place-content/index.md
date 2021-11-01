@@ -77,8 +77,7 @@ The first value is the {{CSSxRef("align-content")}} property value, the second t
   - : The items are packed flush to each other toward the right edge of the alignment container in the appropriate axis. If the property’s axis is not parallel with the inline axis, this value behaves like `start`.
 - `space-between`
   - : The items are evenly distributed within the alignment container. The spacing between each pair of adjacent items is the same. The first item is flush with the main-start edge, and the last item is flush with the main-end edge.
-- `baseline first baseline`
-  `last baseline`
+- `baseline`, `first baseline`, `last baseline`
   - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
     The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
 - `space-around`

@@ -41,12 +41,12 @@ requestSession(mode, options)
   - : A {{jsxref("String")}} defining the XR session mode. The supported modes are:
 
     - {{experimental_inline}} `immersive-ar`: The session's output will be given exclusive access to the immersive device,
-      but the rendered content will be blended with the real-world environment.
-      The session's {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} indicates the method
+      but the rendered content will be blended with the real-world environment.
+      The session's {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} indicates the method
       to be used to blend the content together.
     - `immersive-vr`: Indicates that the rendered session will be displayed using an immersive XR device
       in VR mode; it is not intended to be overlaid or integrated into the surrounding environment.
-      The {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} is expected to be
+      The {{DOMxRef("XRSession.environmentBlendMode", "environmentBlendMode")}} is expected to be
       `opaque` if possible, but might be `additive` if the hardware requires it.
     - `inline`: The output is presented inline within the context of an element in a standard HTML document,
       rather than occupying the full visual space. Inline sessions can be presented in either mono or stereo mode,
@@ -55,13 +55,11 @@ requestSession(mode, options)
 
 - `options` {{optional_inline}}
 
-  - : An object to configure the {{domxref("XRSession")}}. If none are included, the device will use a default feature
-    configuration for all options. For more information, see [Session features](#session_features) below.
-
-    - `requiredFeatures` {{optional_inline}}: An array of values which the returned {{domxref("XRSession")}}
-      _must_ support.
+  - : An object to configure the {{domxref("XRSession")}}. If none are included, the device will use a default feature configuration for all options.
+    - `requiredFeatures` {{optional_inline}}: An array of values which the returned {{domxref("XRSession")}}
+      _must_ support. See [Session features](#session_features) below.
     - `optionalFeatures` {{optional_inline}}: An array of values identifying features which the returned
-      {{domxref("XRSession")}} may optionally support.
+      {{domxref("XRSession")}} may optionally support. See [Session features](#session_features) below.
     - `domOverlay` {{optional_inline}}: An object with a required `root` property that specifies the overlay element that will be displayed to the user as the content of the DOM overlay. See the [example below](#requesting_a_session_with_a_dom_overlay).
     - `depthSensing` {{optional_inline}}: An object with two required properties {{domxref("XRSession.depthUsage", "usagePreference")}} and {{domxref("XRSession.depthDataFormat", "dataFormatPreference")}} to configure how to perform depth sensing. See the [example below](#requesting_a_depth-sensing_session).
 
@@ -76,21 +74,21 @@ This method doesn't throw true exceptions; instead, it rejects the returned prom
 passing into it a {{domxref("DOMException")}} whose `name` is one of the
 following:
 
-- `InvalidStateError`
-  - : The requested session mode is `immersive-vr` but there is already an
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the requested session mode is `immersive-vr` but there is already an
     immersive VR session either currently active or in the process of being set up. There
     can only be one immersive VR session at a time.
-- `NotSupportedError`
-  - : There is no WebXR-compatible device available, or the device does not support the
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Returned if there is no WebXR-compatible device available, or the device does not support the
     specified `sessionMode`; this can also be thrown if any of the
     _required_ options are unsupported.
-- `SecurityError`
-  - : Permission to enter the specified XR mode is denied. This can happen for a number
-    of reasons, which are covered in more detail in
-    {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API", "Permissions and
-      security")}}.
+- `SecurityError` {{domxref("DOMException")}}
+  - : Returned if permission to enter the specified XR mode is denied. This can happen for a number
+    of reasons, which are covered in more detail in [Permissions and security](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security).
 
 ## Session features
+
+The following session features and reference spaces can be requested, either as `optionalFeatures` or `requiredFeatures`.
 
 - `anchor`
   - : Enable use of {{domxref("XRAnchor")}} objects.
@@ -100,8 +98,12 @@ following:
   - : Enable the ability to obtain depth information using {{domxref("XRDepthInformation")}} objects.
 - `dom-overlay`
   - : Enable allowing to specify a DOM overlay element that will be displayed to the user.
+- `hand-tracking`
+  - : Enable articulated hand pose information from hand-based input controllers (see {{domxref("XRHand")}} and {{domxref("XRInputSource.hand")}}).
 - `hit-test`
   - : Enable hit testing features for performing hit tests against real world geometry.
+- `layers`
+  - : Enable the ability to create various layer types (other than {{domxref("XRProjectionLayer")}}).
 - `light-estimation`
   - : Enable the ability to estimate environmental lighting conditions using {{domxref("XRLightEstimate")}} objects.
 - `local`
@@ -117,12 +119,13 @@ following:
 
 ### Security requirements
 
-Each reference space or feature type has minimum safety requirements. By session type, those are:
+Several session features and the various reference spaces have minimum security and privacy requirements, like asking for user consent and/or requiring the {{HTTPHeader("Feature-Policy")}}: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking) directive to be set. See also [Permissions and security](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security) for more details.
 
 | Session feature | User consent requirement            | Feature policy requirement |
 | --------------- | ----------------------------------- | -------------------------- |
 | `bounded-floor` | Always required                     | `xr-spatial-tracking`      |
 | `depth-sensing` | —                                   | `xr-spatial-tracking`      |
+| `hand-tracking` | Always required                     | —                          |
 | `hit-test`      | —                                   | `xr-spatial-tracking`      |
 | `local`         | Always required for inline sessions | `xr-spatial-tracking`      |
 | `local-floor`   | Always required                     | `xr-spatial-tracking`      |
