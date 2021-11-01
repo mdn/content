@@ -34,10 +34,10 @@ every(callbackFn)
 every(callbackFn, thisArg)
 
 // Inline callback function
-every(function callbackFn(element) { ... })
-every(function callbackFn(element, index) { ... })
-every(function callbackFn(element, index, array){ ... })
-every(function callbackFn(element, index, array) { ... }, thisArg)
+every(function(element) { ... })
+every(function(element, index) { ... })
+every(function(element, index, array){ ... })
+every(function(element, index, array) { ... }, thisArg)
 ```
 
 ### Parameters

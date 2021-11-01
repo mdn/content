@@ -34,10 +34,10 @@ map(callbackFn)
 map(callbackFn, thisArg)
 
 // Inline callback function
-map(function callbackFn(currentValue) { ... })
-map(function callbackFn(currentValue, index) { ... })
-map(function callbackFn(currentValue, index, array){ ... })
-map(function callbackFn(currentValue, index, array) { ... }, thisArg)
+map(function(currentValue) { ... })
+map(function(currentValue, index) { ... })
+map(function(currentValue, index, array){ ... })
+map(function(currentValue, index, array) { ... }, thisArg)
 ```
 
 ### Parameters
