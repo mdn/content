@@ -105,3 +105,9 @@ Inherits into roles:
 ## See Also
 
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
+
+<section id="Quick_links">
+1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+
+    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
+</section>
