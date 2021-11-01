@@ -53,6 +53,8 @@ This article provides information about the changes in Firefox 95 that will affe
 
 ## Changes for add-on developers
 
+- Added `overrideContentColorScheme` in {{WebExtAPIRef("browserSettings")}} to provide the ability to control the preference `layout.css.prefers-color-scheme.content-override` and set pages' preferred color scheme (light or dark) independently of the browser theme ({{bug(1733461)}}).
+
 #### Removals
 
 ### Other
