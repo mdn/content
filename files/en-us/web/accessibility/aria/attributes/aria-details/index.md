@@ -44,7 +44,7 @@ When it comes to definiton and term roles, the `aria-details` would be included 
 
 <p role="definition" id="bezier">A <strong>Bézier curve</strong>,
  (Prounounced \ ˈbe-zē-ˌā \)
- <i title="English pronunciation respelling">BEH-zee-ay</i>) is a mathematically 
+ <i title="English pronunciation respelling" aria-description="English pronunciation">BEH-zee-ay</i>) is a mathematically 
  described curve used in computer graphics and animation. The curve is defined 
  by a set of control points with a minimum of two. Web related graphics 
  and animations use Cubic Béziers, which are curves with four control 
@@ -53,7 +53,7 @@ When it comes to definiton and term roles, the `aria-details` would be included 
 
 <a href="bezierExplanation.html" id="bezImg" 
   aria-label="Explanation of Bézier curve in CSS timing functions">
-  <img alt="Animated Bézier curve" src="bezier.gif">
+  <img alt="Animated Bézier curve showing 4 control points" src="bezier.gif">
 </a>
 ```
 
@@ -74,8 +74,12 @@ Used in **ALL** roles.
 
 ## See Also
 
+- HTML {{htmlattrdef('id')}} attribute
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+- [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+- [The image `alt` attribute](/en-US/docs/Web/API/HTMLImageElement/alt)
+- HTML {{htmlattrdef('title')}} attribute
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
