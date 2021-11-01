@@ -16,7 +16,7 @@ The `aria-disabled` state indicates that the element is perceivable but disabled
 
 You generally want users to fill out all the required fields before submitting a form. One way to ensure all required fields are complete is to disable the submit button. However, you still want that submit button to be perceivable to **all** users. That is where the `aria-disabled` attribute comes in.
 
-The `aria-disabled` attribute, when set to `true`, indicates to assistive technologies that the element upon which it is set is disabled. This declaration tells your user the element is not editable or otherwise operable without making the element imperceivable.
+The `aria-disabled` attribute, when set to `true`, indicates to assistive technologies that the element upon which it is set and all focusable descendants are disabled. This declaration tells your user the elements are not editable or otherwise operable without making the element imperceivable.
 
 There are several elements you may want to disable, but still want the user to know they exist. Some examples include:
 
@@ -30,7 +30,7 @@ In each of these cases, you want the user to know the element is there even thou
 
 ARIA attributes only provide semantics. To semantically disable an element without removing it from focus order or from the accessibility tree, set `aria-disabled="true"` on the element. You should include JavaScript to disable the functionality of the element while also changing the appearance of the element so sighted users know it is disabled.
 
-Note that the state of being disabled applies to the element with `aria-disabled` and all of its focusable descendants. 
+> **Note:**  The state of being disabled applies to the element with `aria-disabled` and all of its focusable descendants. 
 
 The `aria-disabled` attribute is similar to the HTML `disabled` attribute, but better. The first rule of ARIA is "If you can use a native HTML element or attribute with the semantics and behavior you require already built in, instead of repurposing an element and adding an ARIA role, state or property to make it accessible, then do so." `aria-disabled` is an exception to that rule. It is one of the only cases where an ARIA attribute may be better than the native `disabled` attribute HTML equivalent.  
 
@@ -144,3 +144,8 @@ Inherits into roles:
 - {{domxref("ElementInternals.ariaDisabled")}}
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) 
 - [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
+
+<section id="Quick_links">
+<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
+{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
+</section>
