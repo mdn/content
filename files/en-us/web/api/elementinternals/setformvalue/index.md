@@ -16,8 +16,8 @@ The **`setFormValue()`** method of the {{domxref("ElementInternals")}} interface
 ## Syntax
 
 ```js
-ElementInternals.setFormValue(value);
-ElementInternals.setFormValue(value, state);
+setFormValue(value)
+setFormValue(value, state)
 ```
 
 ### Parameters
@@ -25,9 +25,13 @@ ElementInternals.setFormValue(value, state);
 - `value`
   - : A {{domxref("File")}}, or a {{domxref("USVString","string")}}, or {{domxref("FormData")}} as the value to be submitted to the server.
 - `state`{{Optional_Inline}}
-  - : A {{domxref("File")}}, or a {{domxref("USVString","string")}}, or {{domxref("FormData")}} representing the input made by the user. This allows the application to re-display the information that the user submitted, in the form that they submitted it, if required.
+  - : A {{domxref("File")}}, or a {{domxref("USVString","string")}}, or {{domxref("FormData")}} representing the input made by the user.
+    This allows the application to re-display the information that the user submitted, in the form that they submitted it, if required.
 
-> **Note:** In general, `state` is used to pass information specified by a user, the `value` is suitable for submission to a server, post sanitization. For example, if a custom element asked a user to submit a date, the user might enter "3/15/2019". This would be the `state`. The server expects a date format of `2019-03-15`, the date in this format would be passed as the `value`.
+> **Note:** In general, `state` is used to pass information specified by a user, the `value` is suitable for submission to a server, post sanitization.
+> For example, if a custom element asked a user to submit a date, the user might enter "3/15/2019".
+> This would be the `state`.
+> The server expects a date format of `2019-03-15`, the date in this format would be passed as the `value`.
 
 ### Return value
 
