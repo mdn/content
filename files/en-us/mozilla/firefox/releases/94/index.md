@@ -42,6 +42,7 @@ No notable changes
 ## Changes for add-on developers
 
 - Support for `partitionKey`, the first-party URL of a cookie when it's in storage that is partitioned by top-level site, is added to {{WebExtAPIRef('cookies.get')}}, {{WebExtAPIRef('cookies.getAll')}}, {{WebExtAPIRef('cookies.set')}}, {{WebExtAPIRef('cookies.remove')}}, and {{WebExtAPIRef('cookies.cookie')}}. ({{bug(1669716)}})
+- The value returned by {{WebExtAPIRef('menus.OnClickData','menus.OnClickData.srcUrl')}} is the `<img src>` value for the clicked element's image or, where the element has no image, the background image.
 
 ## Older versions
 
