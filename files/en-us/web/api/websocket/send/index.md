@@ -16,6 +16,7 @@ to be transmitted to the server over the WebSocket connection, increasing the va
 `bufferedAmount` by the number of bytes needed to contain the data. If the
 data can't be sent (for example, because it needs to be buffered but the buffer is
 full), the socket is closed automatically.
+The browser will throw an exception if you call `send()` when the connection is in the `CONNECTING` state. If you call `send()` when the connection is in the `CLOSING` or `CLOSED` states, the browser will silently discard the data.
 
 ## Syntax
 
@@ -50,7 +51,7 @@ WebSocket.send("Hello server!");
 ### Exceptions thrown
 
 - `INVALID_STATE_ERR`
-  - : The connection is not currently `OPEN`.
+  - : Will only be thrown when the `readyState` is `CONNECTING`.
 - `SYNTAX_ERR`
   - : The data is a string that has unpaired surrogates.
 
