@@ -383,6 +383,7 @@ addEventListener("mousemove", (e) => {
   cursor.x = e.clientX;
   cursor.y = e.clientY;
 });
+
 addEventListener(
   "touchmove",
   (e) => {
@@ -392,6 +393,7 @@ addEventListener(
   },
   { passive: false }
 );
+
 addEventListener("resize", () => setSize());
 
 function generateParticles(amount) {
