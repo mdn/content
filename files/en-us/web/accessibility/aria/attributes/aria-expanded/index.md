@@ -57,9 +57,9 @@ By default, some roles are hidden or collapsed and other roles are open or expan
 ## ARIAMixin API 
 
 - {{domxref("Element.ariaExpanded")}}
-  - : The  [`ariaExpanded`](/en-US/docs/Web/API/Element/aria-expanded) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-expanded` attribute.
+  - : The  [`ariaExpanded`](/en-US/docs/Web/API/Element/ariaExpanded) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-expanded` attribute.
 - {{domxref("ElementInternals.ariaExpanded")}}
-  - : The  [`ariaExpanded`](/en-US/docs/Web/API/Element/aria-expanded) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-expanded` attribute.
+  - : The  [`ariaExpanded`](/en-US/docs/Web/API/Element/ariaExpanded) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-expanded` attribute.
 
 ## Associated roles
 
