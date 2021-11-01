@@ -3,18 +3,14 @@ title: XSLT Basic Example
 slug: Web/API/XSLTProcessor/Basic_Example
 tags:
   - XSLT
+  - Example
 ---
-## Basic Example
 
-This first example demonstrates the basics of setting up an XSLT transformation in a browser. The example will take an XML document that contains information (title, list of authors and body text) about an article and present it in an human readable form.
+This first example demonstrates the basics of setting up an XSLT transformation in a browser.
+The example takes an XML document that contains information about an article (title, list of authors and body text) and presents it in a human readable form.
 
-Figure 1 shows the source of the basic XSLT example. The XML document (example.xml) contains the information about the article. Using the `?xml-stylesheet?` processing instruction, it links to the XSLT stylesheet (example.xsl) via its href attribute.
+The XML document (**example.xml**) is shown below.
 
-An XSLT stylesheet starts with the `xsl:stylesheet` element, which contains all the templates used to create the final output. The example in Figure 1 has two templates - one that matches the root node and one that matches Author nodes. The template that matches the root node outputs the article's title and then says to process all templates (via `apply-templates`) that match Author nodes which are children of the Authors node.
-
-Figure 1 : Simple XSLT Example
-
-XML Document (example.xml) :
 
 ```xml
 <?xml version="1.0"?>
@@ -29,7 +25,9 @@ XML Document (example.xml) :
 </Article>
 ```
 
-XSL Stylesheet (example.xsl) :
+The `?xml-stylesheet` processing instruction in the XML file specifies the XSLT stylesheet to apply in its `href` attribute.
+
+This XSL stylesheet file (**example.xsl**) is shown below:
 
 ```xml
 <?xml version="1.0"?>
@@ -49,9 +47,25 @@ XSL Stylesheet (example.xsl) :
 </xsl:stylesheet>
 ```
 
-Browser Output :
+An XSLT stylesheet starts with the `xsl:stylesheet` element, which contains all the _templates_ used to create the final output.
+The example above has two templates - one that matches the root node and one that matches `Author` nodes.
+The template that matches the root node outputs the article's title and then says to process all templates (via `apply-templates`) that match `Author` nodes which are children of the `Authors` node.
 
-    Article - My Article
-    Authors:
-    - Mr. Foo
-    - Mr. Bar
+To try out the example:
+1. Create a directory in your file system and inside it create the files **example.xml** and **example.xsl** listed above
+1. [Start a local server](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server#running_a_simple_local_http_server) in the directory containing the files.
+   This allows you to browse the files in the directory as though they were hosted on the internet.
+
+   > **Warning:** Opening the XML file directly from the file system will not work, because loading the stylesheet from the file system is a [cross-origin request](/en-US/docs/Web/HTTP/CORS), and will be disallowed by default.
+   > Hosting the xml and stylesheet on the same local server ensures that they have the same origin. 
+1. Open **example.xml** from the browser.
+1. The browser output is then as shown below:
+
+   ```
+   Browser Output :
+
+       Article - My Article
+       Authors:
+       - Mr. Foo
+       - Mr. Bar
+   ```
