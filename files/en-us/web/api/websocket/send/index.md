@@ -51,18 +51,9 @@ WebSocket.send("Hello server!");
 ### Exceptions thrown
 
 - `INVALID_STATE_ERR`
-  - : Will only be thrown when the `readyState` is `CONNECTING`.
+  - : Thrown if {{domxref("WebSocket/readyState", "WebSocket.readyState")}} is `CONNECTING`.
 - `SYNTAX_ERR`
   - : The data is a string that has unpaired surrogates.
-
-> **Note:** Gecko's implementation of the `send()` method
-> differs somewhat from the specification in {{Gecko("6.0")}}; Gecko returns a
-> `boolean` indicating whether or not the connection is still open (and, by
-> extension, that the data was successfully queued or transmitted); this is corrected in
-> {{Gecko("8.0")}}.
->
-> As of {{Gecko("11.0")}}, support for {{jsxref("ArrayBuffer")}} is implemented but not
-> {{domxref("Blob")}} data types.
 
 ## Specifications
 
