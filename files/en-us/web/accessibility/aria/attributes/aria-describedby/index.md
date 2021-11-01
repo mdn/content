@@ -78,3 +78,8 @@ Used in **ALL** roles.
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description)
 - [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+
+<section id="Quick_links">
+<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
+{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
+</section>
