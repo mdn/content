@@ -16,7 +16,8 @@ browser-compat: api.Crypto
 ---
 {{APIRef("Web Crypto API")}}
 
-The **`Crypto`** interface represents basic cryptography features available in the current context. It allows access to a cryptographically strong random number generator and to cryptographic primitives.
+The **`Crypto`** interface represents basic cryptography features available in the current context.
+It allows access to a cryptographically strong random number generator and to cryptographic primitives.
 
 {{AvailableInWorkers}}
 
@@ -35,10 +36,13 @@ _This interface implements methods defined on {{domxref("Crypto/getRandomValues"
 
 - {{domxref("Crypto.getRandomValues()")}}
   - : Fills the passed {{ jsxref("TypedArray") }} with cryptographically sound random values.
+- {{domxref("Crypto.randomUUID()")}}
+  - : Returns a randomly generated, 36 character long v4 UUID.
 
 ## Usage notes
 
-You should avoid using the Web Crypto API on insecure contexts, even though the `Crypto` interface is present on insecure contexts, as is the {{domxref("crypto_property", "crypto")}} property. In addition, the `Crypto` method {{domxref("Crypto.getRandomValues", "getRandomValues()")}} is available on insecure contexts, but the {{domxref("Crypto.subtle", "subtle")}} property is not.
+You should avoid using the Web Crypto API on insecure contexts, even though the `Crypto` interface is present on insecure contexts, as is the {{domxref("crypto_property", "crypto")}} property.
+In addition, the `Crypto` method {{domxref("Crypto.getRandomValues", "getRandomValues()")}} is available on insecure contexts, but the {{domxref("Crypto.subtle", "subtle")}} property is not.
 
 In general, you probably should just treat `Crypto` as available only on secure contexts.
 
