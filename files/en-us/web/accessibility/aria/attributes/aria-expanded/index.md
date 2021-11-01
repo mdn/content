@@ -47,6 +47,14 @@ By default, some roles are hidden or collapsed and other roles are open or expan
 </p>
 ```
 
+`aria-expanded` is also relevant with menus, treeitems, and rows. When a menu is displayed, the button object that toggles the visibility of that menu has `aria-expanded` set to true. When the menu is hidden, aria-expanded can be omitted. If specified when the menu is hidden, it should be set as `aria-expanded="false"`.
+
+Each element with role `treeitem` that serves as a parent node has `aria-expanded="false"` when the node is in a closed state and `aria-expanded="true"`when the node is in an open state. End nodes should not have the `aria-expanded` attribute because, if they were to have it, they would be incorrectly described to assistive technologies as parent nodes.
+
+In a table or grid, a row that can be expanded or collapsed to show or hide a set of child rows is a parent row. Each parent row has the `aria-expanded` state set on either the row element or on a cell contained in the row. When the child rows are hidden The `aria-expanded="false"` is set. `aria-expanded="true"` is set when the child rows are displayed. Rows that do not control the display of child rows should not include the `aria-expanded` attribute at all because including the attribute defines the rows as parent rows.
+
+> **Note:** Do not include the `aria-expanded` attribute on elements that don't control the expanded state of other elements because the presence of the attribute indicates control.
+
 ## Values
 
 - `false`	
