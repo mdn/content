@@ -15,7 +15,7 @@ browser-compat: api.DOMMatrix.DOMMatrix
 
 The **`DOMMatrix`** constructor creates a new
 {{domxref("DOMMatrix")}} object which represents 4x4 matrices, suitable for 2D and 3D
-operations..
+operations.
 
 ## Syntax
 
