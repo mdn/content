@@ -26,7 +26,7 @@ A button that opens a widget will have `aria-controls` set to the `id` of the wi
 ```html
 <button aria-expanded="false" aria-controls="widget1" aria-label="Open widget 1">Show widget</button>
 ```
-When the widget is visible, the controlling object relays that information via having `aria-expanded="true"` set. The accessible name of the controlling object should reflect the change.
+When the widget is visible, the controlling object relays that information via having `aria-expanded="true"` set on it. The accessible name of the controlling object should reflect this change.
 
 ```html
 <button aria-expanded="true" aria-controls="widget1">Hide widget</button>
