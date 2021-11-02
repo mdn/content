@@ -20,7 +20,7 @@ The read-only {{domxref("Window")}} property
 pixels. This includes the width of the vertical scroll bar, if one is present.
 
 More precisely, `innerWidth` returns the width of the window's
-{{Glossary("visual viewport")}}. The interior height of the window—the height of the
+{{Glossary("layout viewport")}}. The interior height of the window—the height of the
 layout viewport—can be obtained from the {{domxref("Window.innerHeight",
   "innerHeight")}} property.
 
