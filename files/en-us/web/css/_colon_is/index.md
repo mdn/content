@@ -246,6 +246,8 @@ h1 {
 
 {{CSSSyntax}}
 
+> **Note:** ` `:is()` does not match for pseudo elements
+
 ## Specifications
 
 {{Specifications}}
