@@ -13,8 +13,9 @@ browser-compat: api.MouseEvent.relatedTarget
 ---
 {{APIRef("DOM Events")}}
 
-The **`MouseEvent.relatedTarget`** read-only property is the
-secondary target for the mouse event, if there is one. That is:
+The **`MouseEvent.relatedTarget`** read-only property is the secondary target for the mouse event, if there is one.
+
+That is:
 
 <table class="no-markdown">
   <thead>
@@ -87,13 +88,7 @@ For events with no secondary target, `relatedTarget` returns
 
 {{domxref("FocusEvent.relatedTarget")}} is a similar property for focus events.
 
-## Syntax
-
-```js
-var target = instanceOfMouseEvent.relatedTarget
-```
-
-### Return value
+## Value
 
 An {{domxref("EventTarget")}} object or `null`.
 
@@ -178,5 +173,4 @@ function overListener(event) {
 ## See also
 
 - {{ domxref("MouseEvent") }}
-- [Comparison of Event
-  Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)
