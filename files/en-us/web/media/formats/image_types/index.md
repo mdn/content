@@ -439,7 +439,7 @@ As support is not yet comprehensive (and has little historical depth) you should
 
 The **BMP** (**Bitmap image**) file type is most prevalent on Windows computers, and is generally used only for special cases in web apps and content.
 
-> **Warning:** You should typically avoid using BMP files for web site content. The most common form of BMP file represents the data as an uncompressed raster image, resulting in large file sizes compared to png or jpg image tpes.  More efficient BMP formats exist but are not widely used, and rarely supported in web browsers.
+> **Warning:** You should typically avoid using BMP files for web site content. The most common form of BMP file represents the data as an uncompressed raster image, resulting in large file sizes compared to png or jpg image types. More efficient BMP formats exist but are not widely used, and rarely supported in web browsers.
 
 BMP theoretically supports a variety of internal data representations. The simplest, and most commonly used, form of BMP file is an uncompressed raster image, with each pixel occupying 3 bytes representing its red, green, and blue components, and each row padded with `0x00` bytes to a multiple of 4 bytes wide.
 
