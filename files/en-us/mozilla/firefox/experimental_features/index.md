@@ -510,7 +510,7 @@ The {{cssxref("math-style")}} property indicates whether MathML equations should
 
 ### @layer rule and layer() function
 
-The [`@layer`](en-US/docs/Web/CSS/@layer) rule declares a cascade layer, which allows declaration of styles and can be imported via the [`@import`](/en-US/docs/Web/CSS/@import) rule using the `layout()` function. (See {{bug(1699217)}} for more details.)
+The [`@layer`](en-US/docs/Web/CSS/@layer) rule declares a cascade layer, which allows declaration of styles and can be imported via the [`@import`](/en-US/docs/Web/CSS/@import) rule using the `layer()` function. (See {{bug(1699217)}} for more details.)
 
 <table>
   <thead>
