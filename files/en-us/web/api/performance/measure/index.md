@@ -61,7 +61,7 @@ performance.measure(name, undefined, endMark);
 
 ### Return value
 
-- entry
+- undefined
   - : The {{domxref("PerformanceMeasure")}} entry that was created.
 
 ## Example
