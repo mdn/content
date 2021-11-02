@@ -31,7 +31,7 @@ Storage access is granted based on a series of checks described here:
 7.  If the sub frame's parent frame is not the top frame, reject.
 8.  If the browser is not processing a user gesture, reject.
 9.  Check any additional rules that the browser has. Examples: allow lists, block lists,
-    on-device classification, user settings, anti-clickjacking heuristics, or prompting
+    on-device classification, user settings, anti-[clickjacking](/en-us/Glossary/Clickjacking) heuristics, or prompting
     the user for explicit permission. Reject if some rule is not fulfilled.
 10. Grant the document access to cookies and other site storage and store that fact for
     the purposes of future calls to {{domxref("Document.hasStorageAccess()")}} and

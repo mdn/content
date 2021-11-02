@@ -6,7 +6,7 @@ tags:
   - HTTP
   - Infrastructure
 ---
-A CSP ([Content Security Policy](/en-US/docs/Web/HTTP/CSP)) is used to detect and mitigate certain types of website related attacks like {{Glossary("Cross-site_scripting")}} and data injections.
+A CSP ([Content Security Policy](/en-US/docs/Web/HTTP/CSP)) is used to detect and mitigate certain types of website related attacks like {{Glossary("Cross-site_scripting")}},[Clickjacking](/en-us/Glossary/Clickjacking) and data injections.
 
 The implementation is based on an {{Glossary("HTTP")}} header called {{HTTPHeader("Content-Security-Policy")}}.
 
