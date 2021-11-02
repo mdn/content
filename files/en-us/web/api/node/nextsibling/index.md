@@ -20,13 +20,13 @@ if the specified node is the last child in the parent element.
 > may refer to a whitespace text node rather than the actual element the author
 > intended to get.
 >
-> The article [Whitespace in the DOM](/en-US/docs/Web/Guide/DOM/Whitespace)
+> The article [Whitespace in the DOM](/en-US/docs/Web/API/Document_Object_Model/Whitespace)
 > contains more information about this behavior.
 >
 > You can use {{domxref("Element.nextElementSibling")}} to obtain the next element
 > skipping any whitespace nodes, other between-element text, or comments.
 >
-> To navigate the opposite way through the child nodes list use [Node.previousSibling](/en-US/docs/Web/API/Node.previousSibling).
+> To navigate the opposite way through the child nodes list use [Node.previousSibling](/en-US/docs/Web/API/Node/previousSibling).
 
 ## Value
 
