@@ -44,6 +44,13 @@ void dataTransfer.setDragImage(img | element, xOffset, yOffset);
     to an image generated from the given element (the exact mechanism for doing so is not
     currently specified).
 
+    It is important to note that if the {{domxref("Element")}} is an existing {{domxref("HTMLElement")}}
+    it needs to be visible in the viewport in order to be shown as the drag feedback image.
+    Therefore, it is better to use {{domxref("Document_Object_Model")}} to create an additional
+    element specifically for this purpose. That way it can be off-screen and still be used
+    as a drag feedback image.
+    
+
 - _xOffset_
   - : A `long` indicating the horizontal offset within the image.
 - _yOffset_
