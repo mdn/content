@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: directory role'
-slug: Web/Accessibility/ARIA/roles/directory_role
+slug: Web/Accessibility/ARIA/Roles/Directory_role
 tags: 
 
   - Accessibility

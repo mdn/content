@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: combobox role'
-slug: Web/Accessibility/ARIA/roles/combobox_role
+slug: Web/Accessibility/ARIA/Roles/Combobox_role
 tags: 
 
   - Accessibility

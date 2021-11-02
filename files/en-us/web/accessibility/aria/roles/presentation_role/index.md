@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: presentation role'
-slug: web/Accessibility/ARIA/roles/presentation_role
+slug: Web/Accessibility/ARIA/Roles/Presentation_role
 tags: 
 
   - Accessibility

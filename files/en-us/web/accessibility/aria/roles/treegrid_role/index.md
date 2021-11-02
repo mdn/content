@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: treegrid role'
-slug: Web/Accessibility/ARIA/roles/treegrid_role
+slug: Web/Accessibility/ARIA/Roles/Treegrid_role
 tags: 
 
   - Accessibility

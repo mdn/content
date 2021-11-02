@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: toolbar role'
-slug: Web/Accessibility/ARIA/roles/toolbar_role
+slug: Web/Accessibility/ARIA/Roles/Toolbar_role
 tags: 
 
   - Accessibility

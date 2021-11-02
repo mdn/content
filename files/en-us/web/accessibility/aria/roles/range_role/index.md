@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: range role'
-slug: Web/Accessibility/ARIA/roles/range_role
+slug: Web/Accessibility/ARIA/Roles/Range_role
 tags: 
 
   - Accessibility

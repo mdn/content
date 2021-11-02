@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: timer role'
-slug: Web/Accessibility/ARIA/Roles/timer_role
+slug: Web/Accessibility/ARIA/Roles/Timer_role
 tags:
   - ARIA
   - ARIA Role

@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: landmark role'
-slug: Web/Accessibility/ARIA/roles/landmark_role
+slug: Web/Accessibility/ARIA/Roles/Landmark_role
 tags: 
 
   - Accessibility

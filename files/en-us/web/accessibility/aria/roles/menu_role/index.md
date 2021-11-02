@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: menu role'
-slug: Web/Accessibility/ARIA/roles/menu_role
+slug: Web/Accessibility/ARIA/Roles/Menu_role
 tags: 
 
   - Accessibility

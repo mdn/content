@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: rowheader role'
-slug: Web/Accessibility/ARIA/roles/rowheader_role
+slug: Web/Accessibility/ARIA/Roles/Rowheader_role
 tags: 
 
   - Accessibility

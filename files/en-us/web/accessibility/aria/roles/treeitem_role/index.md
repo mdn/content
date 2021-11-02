@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: treeitem role'
-slug: Web/Accessibility/ARIA/roles/treeitem_role
+slug: Web/Accessibility/ARIA/Roles/Treeitem_role
 tags: 
 
   - Accessibility

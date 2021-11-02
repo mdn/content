@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: button role'
-slug: Web/Accessibility/ARIA/Roles/button_role
+slug: Web/Accessibility/ARIA/Roles/Button_role
 tags:
   - ARIA
   - ARIA Role

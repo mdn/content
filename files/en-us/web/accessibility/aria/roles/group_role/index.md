@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: group role'
-slug: Web/Accessibility/ARIA/roles/group_role
+slug: Web/Accessibility/ARIA/Roles/Group_role
 tags: 
 
   - Accessibility

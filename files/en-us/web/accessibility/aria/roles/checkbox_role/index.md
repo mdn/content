@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: checkbox role'
-slug: Web/Accessibility/ARIA/Roles/checkbox_role
+slug: Web/Accessibility/ARIA/Roles/Checkbox_role
 tags:
   - ARIA
   - Accessibility

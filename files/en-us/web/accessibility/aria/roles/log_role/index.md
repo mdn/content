@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: log role'
-slug: Web/Accessibility/ARIA/roles/log_role
+slug: Web/Accessibility/ARIA/Roles/Log_role
 tags: 
 
   - Accessibility

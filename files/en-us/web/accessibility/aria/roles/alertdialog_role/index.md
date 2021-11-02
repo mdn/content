@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: alertdialog role'
-slug: web/Accessibility/ARIA/roles/alertdialog_role
+slug: Web/Accessibility/ARIA/Roles/Alertdialog_role
 tags: 
   - Alert
   - Accessibility

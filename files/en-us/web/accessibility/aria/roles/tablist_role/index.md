@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: tablist role'
-slug: Web/Accessibility/ARIA/roles/tablist_role
+slug: Web/Accessibility/ARIA/Roles/Tablist_role
 tags: 
 
   - Accessibility

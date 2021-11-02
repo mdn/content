@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: radio role'
-slug: Web/Accessibility/ARIA/Roles/radio_role
+slug: Web/Accessibility/ARIA/Roles/Radio_role
 tags:
   - ARIA
   - Accessibility

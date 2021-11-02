@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: status role'
-slug: Web/Accessibility/ARIA/roles/status_role
+slug: Web/Accessibility/ARIA/Roles/Status_role
 tags: 
 
   - Accessibility

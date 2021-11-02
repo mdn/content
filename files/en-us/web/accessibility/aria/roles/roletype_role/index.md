@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: roletype role'
-slug: Web/Accessibility/ARIA/roles/roletype_role
+slug: Web/Accessibility/ARIA/Roles/Roletype_role
 tags: 
 
   - roletype
