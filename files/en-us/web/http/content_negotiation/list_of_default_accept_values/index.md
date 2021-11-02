@@ -17,7 +17,7 @@ These are the values sent when the context doesn't give better information. Note
 
 | User Agent                 | Value                                                                                                                                                                   |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Firefox 91 and later [1]   | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8`                                                                                 |
+| Firefox 92 and later [1]   | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8`                                                                                 |
 | Firefox 72 to 91 [1]       | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                                                            |
 | Firefox 66 to 71 [1]       | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                                                       |
 | Firefox 65 [1]             | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                                                            |
