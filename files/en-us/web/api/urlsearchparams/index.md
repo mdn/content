@@ -96,6 +96,7 @@ let searchParams = new URLSearchParams(paramStr);
 
 searchParams.toString();                 // "foo=bar&foo=baz"
 searchParams.has('foo');                 // true
+searchParams.get('foo');                 // bar
 ```
 
 ### Gotchas
