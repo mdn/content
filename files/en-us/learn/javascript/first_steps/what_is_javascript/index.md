@@ -289,7 +289,7 @@ This demo has exactly the same functionality as in the previous two sections, ex
 
 ### Using addEventListener instead
 
-Instead of an including JavaScript in your HTML, use a pure JavaScript construct. In this case the `addEventListener()` function allows you to select all the buttons using one instruction. The code we used above to serve this purpose looks like this:
+Instead of including JavaScript in your HTML, use a pure JavaScript construct. In this case the `addEventListener()` function allows you to select all the buttons using one instruction. The code we used above to serve this purpose looks like this:
 
 ```js
 const buttons = document.querySelectorAll('button');
