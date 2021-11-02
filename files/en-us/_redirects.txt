@@ -11451,15 +11451,15 @@
 /en-US/docs/XInclude	/en-US/docs/Glossary/XInclude
 /en-US/docs/XLink	/en-US/docs/Glossary/XLink
 /en-US/docs/XML	/en-US/docs/Web/XML
-/en-US/docs/XML/base	/en-US/docs/Web/API/Node/baseuri/index.md
-/en-US/docs/XML/xml:base	/en-US/docs/Web/API/Node/baseuri/index.md
+/en-US/docs/XML/base	/en-US/docs/Web/API/Node/baseURI/index.md
+/en-US/docs/XML/xml:base	/en-US/docs/Web/API/Node/baseURI/index.md
 /en-US/docs/XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest
 /en-US/docs/XMLHttpRequest/FormData	/en-US/docs/Web/API/FormData
 /en-US/docs/XMLHttpRequest/Using_XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /en-US/docs/XMLSerializer	/en-US/docs/Web/API/XMLSerializer
 /en-US/docs/XML_Introduction	/en-US/docs/Web/XML/XML_introduction
 /en-US/docs/XML_introduction/Index	/en-US/docs/Web/XML/Index
-/en-US/docs/XML_introduction/xml:base	/en-US/docs/Web/API/Node/baseuri/index.md
+/en-US/docs/XML_introduction/xml:base	/en-US/docs/Web/API/Node/baseURI/index.md
 /en-US/docs/XPCOM_Interface_Reference/nsIDOMStorageEvent	/en-US/docs/Web/API/StorageEvent
 /en-US/docs/XPath	/en-US/docs/Web/XPath
 /en-US/docs/XPath/Axes	/en-US/docs/Web/XPath/Axes
@@ -11973,6 +11973,6 @@
 /en-US/docs/window.unescape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /en-US/docs/window.window	/en-US/docs/Web/API/Window/window
 /en-US/docs/www_vs_non-www_URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
-/en-US/docs/xml:base	/en-US/docs/Web/API/Node/baseuri/index.md
+/en-US/docs/xml:base	/en-US/docs/Web/API/Node/baseURI/index.md
 /en-US/docs/zh-n/JavaScript/Reference/Global_Objects/String/quote	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/quote
 /en-US/docs/zh_cn	/zh-CN/docs/Web
