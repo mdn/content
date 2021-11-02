@@ -1041,9 +1041,9 @@ The following keywords were defined in earlier versions of the CSS Color Module.
 - \-moz-OddTreeRow
   - : Background color for odd-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-EvenTreeRow`.
 - \-moz-win-communicationstext
-  - : Should be used for text in objects with `{{cssxref("appearance")}}: -moz-win-communications-toolbox;`.
+  - : Should be used for text in objects with `{{cssxref("appearance", "-moz-appearance")}}: -moz-win-communications-toolbox;`.
 - \-moz-win-mediatext
-  - : Should be used for text in objects with `{{cssxref("appearance")}}: -moz-win-media-toolbox`.
+  - : Should be used for text in objects with `{{cssxref("appearance", "-moz-appearance")}}: -moz-win-media-toolbox`.
 - \-moz-win-accentcolor
   - : Used to access the Windows 10 custom accent color that you can set on the start menu, taskbar, title bars, etc.
 - \-moz-win-accentcolortext
