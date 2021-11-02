@@ -35,7 +35,7 @@ might interfere with using this property.
 </p>
 
 <script>
-  var p01 = document.getElementById('para-01');
+  const p01 = document.getElementById('para-01');
   console.log(p01.firstChild.nodeName);
 </script>
 ```
@@ -57,7 +57,7 @@ span element becomes the paragraph's first child.
 <p id="para-01"><span>First span</span></p>
 
 <script>
-  var p01 = document.getElementById('para-01');
+  const p01 = document.getElementById('para-01');
   console.log(p01.firstChild.nodeName);
 </script>
 ```

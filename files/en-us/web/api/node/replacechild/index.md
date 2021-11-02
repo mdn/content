@@ -58,20 +58,20 @@ The replaced {{domxref("Node")}}. This is the same node as `oldChild`.
 
 // Create an empty element node
 // without an ID, any attributes, or any content
-var sp1 = document.createElement("span");
+const sp1 = document.createElement("span");
 
 // Give it an id attribute called 'newSpan'
 sp1.id = "newSpan";
 
 // Create some content for the new element.
-var sp1_content = document.createTextNode("new replacement span element.");
+const sp1_content = document.createTextNode("new replacement span element.");
 
 // Apply that content to the new element
 sp1.appendChild(sp1_content);
 
 // Build a reference to the existing node to be replaced
-var sp2 = document.getElementById("childSpan");
-var parentDiv = sp2.parentNode;
+const sp2 = document.getElementById("childSpan");
+const parentDiv = sp2.parentNode;
 
 // Replace existing node sp2 with the new span element sp1
 parentDiv.replaceChild(sp1, sp2);

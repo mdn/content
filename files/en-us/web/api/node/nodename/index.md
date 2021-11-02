@@ -54,7 +54,7 @@ Text<br/>
 and the following script:
 
 ```js
-var node = document.getElementsByTagName("body")[0].firstChild;
+const node = document.getElementsByTagName("body")[0].firstChild;
 let result = "Node names are:<br/>";
 while (node) {
   result += node.nodeName + "<br/>";

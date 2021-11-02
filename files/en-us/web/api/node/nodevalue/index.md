@@ -44,7 +44,7 @@ The following table shows the return values for different elements:
 and the following script:
 
 ```js
-var node = document.getElementsByTagName("body")[0].firstChild;
+let node = document.getElementsByTagName("body")[0].firstChild;
 let result = "<br/>Node names are:<br/>";
 while (node) {
   result += "Value of " + node.nodeName + ": " + node.nodeValue + "<br/>";

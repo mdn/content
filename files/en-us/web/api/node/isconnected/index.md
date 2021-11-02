@@ -39,10 +39,10 @@ A shadow DOM example:
 
 ```js
 // Create a shadow root
-var shadow = this.attachShadow({mode: 'open'});
+const shadow = this.attachShadow({mode: 'open'});
 
 // Create some CSS to apply to the shadow dom
-var style = document.createElement('style');
+const style = document.createElement('style');
 console.log(style.isConnected); // returns false
 
 style.textContent = `

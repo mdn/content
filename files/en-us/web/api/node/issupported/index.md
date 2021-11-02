@@ -37,8 +37,8 @@ isSupported(feature, version);
 
 <script>
  // Get an element and check to see if its supports the DOM2 HTML Module.
- var main = document.getElementById('doc');
- var output = main.isSupported('HTML', '2.0');
+ const main = document.getElementById('doc');
+ const output = main.isSupported('HTML', '2.0');
 </script>
 ```
 

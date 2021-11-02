@@ -38,7 +38,7 @@ let wrapper = document.createElement("div");
 wrapper.appendChild( document.createTextNode("Part 1 ") );
 wrapper.appendChild( document.createTextNode("Part 2 ") );
 
-var node = wrapper.firstChild;
+let node = wrapper.firstChild;
 let result = "Before normalization:<br/>";
 while (node) {
   result += " " + node.nodeName + ": " + node.nodeValue + "<br/>";

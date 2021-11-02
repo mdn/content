@@ -49,7 +49,7 @@ document.doctype.nodeType === Node.DOCUMENT_TYPE_NODE; // true
 
 document.createDocumentFragment().nodeType === Node.DOCUMENT_FRAGMENT_NODE; // true
 
-var p = document.createElement("p");
+const p = document.createElement("p");
 p.textContent = "Once upon a time…";
 
 p.nodeType === Node.ELEMENT_NODE; // true
@@ -62,7 +62,7 @@ This example checks if the first node inside the document element is a comment, 
 displays a message if not.
 
 ```js
-var node = document.documentElement.firstChild;
+console node = document.documentElement.firstChild;
 if (node.nodeType !== Node.COMMENT_NODE) {
   console.warn("You should comment your code!");
 }

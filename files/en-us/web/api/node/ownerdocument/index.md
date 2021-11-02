@@ -25,8 +25,8 @@ If this property is used on a node that is itself a document, the value is `null
 // Given a node "p", get the top-level HTML
 // child of the document object
 
-var d = p.ownerDocument;
-var html = d.documentElement;
+const d = p.ownerDocument;
+const html = d.documentElement;
 ```
 
 ## Specifications
