@@ -156212,17 +156212,6 @@
       "Dria"
     ]
   },
-  "Web/XML/xml:base": {
-    "modified": "2020-10-15T22:00:31.732Z",
-    "contributors": [
-      "bershanskiy",
-      "ExE-Boss",
-      "chrisdavidmills",
-      "SphinxKnight",
-      "PushpitaPikuDey",
-      "dotnetCarpenter"
-    ]
-  },
   "Web/XPath": {
     "modified": "2020-07-26T05:08:40.636Z",
     "contributors": [

@@ -2,29 +2,22 @@
 title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
 tags:
-  - API
-  - DOM
-  - Node
   - Property
   - Reference
+  - Read-only
 browser-compat: api.Node.ownerDocument
 ---
 {{APIRef("DOM")}}
 
-The **`ownerDocument`** read-only property of the
-{{domxref("Node")}} interface returns the top-level document object of the node.
+The read-only **`ownerDocument`** property of the {{domxref("Node")}} interface
+returns the top-level document object of the node.
 
-## Syntax
+## Value
 
-```js
-var document = element.ownerDocument;
-```
+A {{domxref("Document")}} that isthe top-level object in which all the
+child nodes are created.
 
-### Value
-
-`document` is the top-level {{domxref("Document")}} object in which all the
-child nodes are created. If this property is used on a node that is itself a document,
-the value is `null`.
+If this property is used on a node that is itself a document, the value is `null`.
 
 ## Example
 

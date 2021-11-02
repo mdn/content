@@ -2,30 +2,23 @@
 title: Node.isConnected
 slug: Web/API/Node/isConnected
 tags:
-  - API
-  - DOM
-  - Node
   - Property
   - Reference
+  - Read-only
 browser-compat: api.Node.isConnected
 ---
 {{APIRef("DOM")}}
 
-The **`isConnected`** read-only property of the
-{{domxref("Node")}} interface returns a boolean indicating whether the node is connected
-(directly or indirectly) to the context object, for example the {{domxref("Document")}}
-object in the case of the normal DOM, or the {{domxref("ShadowRoot")}} in the case of a
-shadow DOM.
+The read-only **`isConnected`** property of the {{domxref("Node")}} interface
+ returns a boolean indicating whether the node is connected
+(directly or indirectly) to the context object,
+for example the {{domxref("Document")}} object in the case of the normal DOM,
+or the {{domxref("ShadowRoot")}} in the case of a shadow DOM.
 
-## Syntax
+## Value
 
-```js
-var isItConnected = nodeObjectInstance.isConnected
-```
-
-### Return value
-
-`true` if the node is connected to its relevant context object, and `false` if not.
+A boolean value that is `true` if the node is connected to its relevant context object,
+and `false` if not.
 
 ## Examples
 
@@ -59,17 +52,17 @@ style.textContent = `
 
 .info {
   font-size: 0.8rem;
-  width: 200px;
+  width: 200px;
   display: inline-block;
-  border: 1px solid black;
-  padding: 10px;
+  border: 1px solid black;
+  padding: 10px;
   background: white;
-  border-radius: 10px;
-  opacity: 0;
-  transition: 0.6s all;
+  border-radius: 10px;
+  opacity: 0;
+  transition: 0.6s all;
   positions: absolute;
-  bottom: 20px;
-  left: 10px;
+  bottom: 20px;
+  left: 10px;
   z-index: 3
 }
 `;

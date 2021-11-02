@@ -2,24 +2,26 @@
 title: Node.hasChildNodes()
 slug: Web/API/Node/hasChildNodes
 tags:
-  - API
-  - DOM
   - Method
-  - NeedsSpecTable
-  - Node
+
   - Reference
 browser-compat: api.Node.hasChildNodes
 ---
 {{APIRef("DOM")}}
 
-The **`Node.hasChildNodes()`** method returns a
-boolean value indicating whether the given {{domxref("Node")}} has [child nodes](/en-US/docs/Web/API/Node/childNodes) or not.
+The **`hasChildNodes()`** method of the {{domxref("Node")}} interface
+returns a boolean value indicating
+whether the given {{domxref("Node")}} has [child nodes](/en-US/docs/Web/API/Node/childNodes) or not.
 
 ## Syntax
 
 ```js
-bool = node.hasChildNodes();
+hasChildNodes();
 ```
+
+### Paramenters
+
+None.
 
 ### Return value
 
@@ -47,4 +49,3 @@ if (foo.hasChildNodes()) {
 ## See also
 
 - {{domxref("Node.childNodes")}}
-- {{domxref("Node.hasAttributes")}}
