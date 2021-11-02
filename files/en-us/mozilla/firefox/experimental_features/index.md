@@ -508,6 +508,46 @@ The {{cssxref("math-style")}} property indicates whether MathML equations should
   </tbody>
 </table>
 
+### @layer rule and layer() function
+
+The [`@layer`](en-US/docs/Web/CSS/@layer) rule declares a cascade layer, which allows declaration of styles and can be imported via the [`@import`](/en-US/docs/Web/CSS/@import) rule using the `layout()` function. (See {{bug(1699217)}} for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>94</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>94</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>94</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>94</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.cascade-layers.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### Presentation attribute: d
