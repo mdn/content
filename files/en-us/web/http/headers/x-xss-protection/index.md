@@ -11,7 +11,9 @@ browser-compat: http.headers.X-XSS-Protection
 ---
 {{HTTPSidebar}}
 
-The HTTP **`X-XSS-Protection`** response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks. Although these protections are largely unnecessary in modern browsers when sites implement a strong {{HTTPHeader("Content-Security-Policy")}} that disables the use of inline JavaScript (`'unsafe-inline'`), they can still provide protections for users of older web browsers that don't yet support {{Glossary("CSP")}}.
+The HTTP **`X-XSS-Protection`** response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks. These protections are largely unnecessary in modern browsers when sites implement a strong {{HTTPHeader("Content-Security-Policy")}} that disables the use of inline JavaScript (`'unsafe-inline'`).
+
+> **Warning:** Even though this feature can protect users of older web browsers that don't yet support {{Glossary("CSP")}}, in some cases, **XSS protection can create XSS vulnerabilities** in otherwise safe websites. For that reason, some developers choose to set the `X-XSS-Protection` header to `0` in most responses.
 
 > **Note:**
 >
@@ -94,3 +96,4 @@ Not part of any specifications or drafts.
 - [Controlling the XSS Filter – Microsoft](https://blogs.msdn.microsoft.com/ieinternals/2011/01/31/controlling-the-xss-filter/)
 - [Understanding XSS Auditor – Virtue Security](https://www.virtuesecurity.com/blog/understanding-xss-auditor/)
 - [The misunderstood X-XSS-Protection – blog.innerht.ml](https://blog.innerht.ml/the-misunderstood-x-xss-protection/)
+- [XSS Contexts and some Chrome XSS Auditor tricks (video)](https://www.youtube.com/watch?v=8GwVBpTgR2c)
