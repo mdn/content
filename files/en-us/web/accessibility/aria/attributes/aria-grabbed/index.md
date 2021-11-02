@@ -19,7 +19,7 @@ Text selections, images, and links can be dragged by default. Setting the global
 
 Setting `aria-grabbed="true"` indicates the element has been selected for dragging. Setting `aria-grabbed="false"` indicates that the element can be grabbed for a drag-and-drop operation, but is not currently grabbed. If the attribute is not specified or `aria-grabbed="undefined"` is set, assistive technologies will not announce that the element can be grabbed.
 
-When `aria-grabbed` is set to `true`, the [`aria-dropeffect`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-dropeffect) attribute of all potential drop targets should be updated with the what type of function, or effect, on the dropped element will occur. When an element is not grabbed, revert the `aria-dropeffect` attributes of all your drop targets to none.
+When `aria-grabbed` is set to `true`, the [`aria-dropeffect`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-dropeffect) attribute of all potential drop targets should be updated with the type of function, or effect, will occur to the grabbed element when it is dropped. When no element is in a grabbed state, revert the `aria-dropeffect` attributes of all your drop targets.
 
 The `aria-grabbed` property is expected to be replaced by a new feature in a future version of WAI-ARIA and is considered deprecated.
 
