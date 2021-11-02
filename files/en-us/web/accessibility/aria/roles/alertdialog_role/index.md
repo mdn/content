@@ -3,6 +3,7 @@ title: 'ARIA: alertdialog role'
 slug: Web/Accessibility/ARIA/Roles/Alertdialog_role
 tags: 
   - Alert
+  - Alertdialog
   - Accessibility
   - ARIA
   - roles

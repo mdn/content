@@ -3,6 +3,7 @@ title: 'ARIA: alert role'
 slug: Web/Accessibility/ARIA/Roles/Alert_Role
 tags:
   - ARIA
+  - Alert
   - Accessibility
   - ARIA Role
   - ARIA alert
