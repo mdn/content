@@ -31,8 +31,8 @@ If any of the otherwise interactive elements within the toolbar are temporarily 
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
   - : Elements with the role toolbar have an implicit `aria-orientation` value of horizontal.
 
-- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) / `aria-label`
-  - : If the toolbar has a visible label, reference it by ID with the `aria-labelledby` attribute. Otherwise, provide an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label). If there is more than one toolbar in a menu, naming is required.
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) / [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+  - : If the toolbar has a visible label, reference it by ID with the `aria-labelledby` attribute. Otherwise, provide an `aria-label`. If there is more than one toolbar in a menu, naming is required.
 
 ### Keyboard interactions
 
