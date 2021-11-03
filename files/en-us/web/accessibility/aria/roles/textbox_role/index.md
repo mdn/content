@@ -15,7 +15,7 @@ The `textbox` role is used to identify an element that allows the input of free-
 
 When an element has the `textbox` role, the browser sends an accessible textbox event to assistive technologies, which can then notify the user about it.
 
-The default is a single line input, in which <kbd>Return</kbd> or <kbd>Enter</kbd> submits the form; in this case, it is preferable to use an HTML {{HTMLElement("input")}} with `type="text"`. To create a multi-line text box which supports line breaks, as in an HTML {{HTMLElement("textarea")}}, set `aria-multiline="true"`. Including the HTML `contenteditable` attribute ensures the text node is editable.
+The default is a single line input, in which <kbd>Return</kbd> or <kbd>Enter</kbd> submits the form; in this case, it is preferable to use an HTML {{HTMLElement("input")}} with `type="text"`. To create a multi-line text box which supports line breaks, as in an HTML {{HTMLElement("textarea")}}, set `aria-multiline="true"`. Including the HTML {{HTMLattrxref('contenteditable')}} attribute ensures the text node is editable.
 
 ```html
 <!-- Simple text input field -->
@@ -80,9 +80,9 @@ Where a text field is read-only, indicated this by setting `aria-readonly="true"
 - [`aria-placeholder`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder) attribute
   - : Represents a hint (word or phrase) to the user about what to enter into the text field. The hint should be a sample value or a brief description of the expected format. This information should not be used as a substitute for a label: a label is focusable, permanent, indicates what kind of information is expected, and increases the hit area for setting focus on the control, whereas placeholder text is only temporary hint about the expected value, which if implemented incorrectly can decrease accessibility. The placeholder should be visible when the control's value is the empty string such as when the control first receives focus and when users remove a previously-entered value. Instead of using `aria-placeholder`, use the semantic [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) or {{HTMLElement('textarea')}} with a {{htmlattrxref("placeholder")}} attribute.
 - [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute
-  - : Indicates that the user cannot modify the value of the text field. Instead of using [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly), use the semantic `<input type="text">` or `<textarea>` with a {{HTMLElement('readonly')}} attribute.
+  - : Indicates that the user cannot modify the value of the text field. Instead of using [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly), use the semantic `<input type="text">` or `<textarea>` with a {{htmlattrxref('readonly')}} attribute.
 - [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute
-  - : Indicates that a value must be provided for the field before it is submitted. Instead of using [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required), use the semantic `<input type="text">` or `<textarea>` with a `required` attribute.
+  - : Indicates that a value must be provided for the field before it is submitted. Instead of using `aria-required`, use the semantic `<input type="text">` or `<textarea>` with a {{htmlattrxref('required')}} attribute.
 
 ### Keyboard interactions
 
