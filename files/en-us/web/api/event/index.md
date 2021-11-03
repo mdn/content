@@ -41,6 +41,7 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("ErrorEvent")}}
 - {{domxref("FetchEvent")}}
 - {{domxref("FocusEvent")}}
+- {{domxref("FormDataEvent")}}
 - {{domxref("GamepadEvent")}}
 - {{domxref("HashChangeEvent")}}
 - {{domxref("HIDInputReportEvent")}}
@@ -60,6 +61,7 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("RTCDataChannelEvent")}}
 - {{domxref("RTCPeerConnectionIceEvent")}}
 - {{domxref("StorageEvent")}}
+- {{domxref("SubmitEvent")}}
 - {{domxref("SVGEvent")}}
 - {{domxref("TimeEvent")}}
 - {{domxref("TouchEvent")}}
