@@ -2,7 +2,6 @@
 title: 'ARIA: columnheader role'
 slug: Web/Accessibility/ARIA/roles/columnheader_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

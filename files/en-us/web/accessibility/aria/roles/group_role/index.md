@@ -2,7 +2,6 @@
 title: 'ARIA: group role'
 slug: Web/Accessibility/ARIA/roles/group_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

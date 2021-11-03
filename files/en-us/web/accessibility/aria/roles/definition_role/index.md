@@ -2,7 +2,6 @@
 title: 'ARIA: definition role'
 slug: Web/Accessibility/ARIA/roles/definition_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

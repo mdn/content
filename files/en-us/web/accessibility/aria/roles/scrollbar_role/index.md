@@ -2,7 +2,6 @@
 title: 'ARIA: scrollbar role'
 slug: Web/Accessibility/ARIA/roles/scrollbar_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

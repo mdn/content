@@ -2,7 +2,6 @@
 title: 'ARIA: structure role'
 slug: Web/Accessibility/ARIA/roles/structure_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

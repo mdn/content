@@ -2,7 +2,6 @@
 title: 'ARIA: menu role'
 slug: Web/Accessibility/ARIA/roles/menu_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

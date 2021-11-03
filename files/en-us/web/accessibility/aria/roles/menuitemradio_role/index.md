@@ -2,7 +2,6 @@
 title: 'ARIA: menuitemradio role'
 slug: Web/Accessibility/ARIA/roles/menuitemradio_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

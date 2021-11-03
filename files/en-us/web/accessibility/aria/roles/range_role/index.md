@@ -2,7 +2,6 @@
 title: 'ARIA: range role'
 slug: Web/Accessibility/ARIA/roles/range_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

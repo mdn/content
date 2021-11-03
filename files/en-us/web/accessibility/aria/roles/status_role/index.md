@@ -2,7 +2,6 @@
 title: 'ARIA: status role'
 slug: Web/Accessibility/ARIA/roles/status_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

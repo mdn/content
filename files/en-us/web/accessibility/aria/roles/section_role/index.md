@@ -2,7 +2,6 @@
 title: 'ARIA: section role'
 slug: Web/Accessibility/ARIA/roles/section_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

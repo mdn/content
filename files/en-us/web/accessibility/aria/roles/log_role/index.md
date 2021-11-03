@@ -2,7 +2,6 @@
 title: 'ARIA: log role'
 slug: Web/Accessibility/ARIA/roles/log_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

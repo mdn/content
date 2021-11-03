@@ -2,7 +2,6 @@
 title: 'ARIA: landmark role'
 slug: Web/Accessibility/ARIA/roles/landmark_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

@@ -2,7 +2,6 @@
 title: 'ARIA: tablist role'
 slug: Web/Accessibility/ARIA/roles/tablist_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

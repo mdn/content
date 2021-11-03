@@ -2,7 +2,6 @@
 title: 'ARIA: note role'
 slug: Web/Accessibility/ARIA/roles/note_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles
