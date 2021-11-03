@@ -24,7 +24,7 @@ This example creates a widget and assigns the ARIA `switch` role to it.
 
 ## Description
 
-The ARIA **`switch`** role is identical to the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, except instead of being "checked" or "unchecked", it is either "on" or "off."  Like the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, the `aria-checked` attribute is required. The two possible values are `true` and `false`. Unlike a `<checkbox>` or `role="checkbox"`, there is no `indeterminate` or `mixed` state. The `switch` role does not support the value `mixed` for the `aria-checked` attribute; assigning a value of `mixed` to a `switch` instead sets the value to `false`.
+The ARIA **`switch`** role is identical to the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, except instead of being "checked" or "unchecked", it is either "on" or "off."  Like the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute is required. The two possible values are `true` and `false`. Unlike a `<checkbox>` or `role="checkbox"`, there is no `indeterminate` or `mixed` state. The `switch` role does not support the value `mixed` for the `aria-checked` attribute; assigning a value of `mixed` to a `switch` instead sets the value to `false`.
 
 Assistive technologies may choose to represent `switch` widgets with a specialized presentation to reflect the notion of an on/off switch.
 
@@ -32,10 +32,10 @@ Since a switch is an interactive control, it must be focusable and keyboard acce
 
 ### Associated ARIA roles, states, and properties
 
-- `aria-checked` attribute
+- [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute
   - : The `aria-checked` attribute is **required** when using the `switch` role, as it represents the current state of the widget that the `switch` role is applied to. A value of `true` represents the "on" state; `false` represents the "off" state; a value of `mixed` is not supported by the switch role, and is treated as `false`. The default value is `false`.
-- `aria-readonly` attribute
-  - : The `aria-readonly` attribute is supported by the `switch` role. It indicates whether the widget's state is editable by the user. A value of `false` means that the user _can_ change the widget's state; a value of `true` means that the user _cannot_ change the widget's state. The default value is `false`.
+- [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute
+  - : The  [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute is supported by the `switch` role. It indicates whether the widget's state is editable by the user. A value of `false` means that the user _can_ change the widget's state; a value of `true` means that the user _cannot_ change the widget's state. The default value is `false`.
 
 ### Required JavaScript features
 

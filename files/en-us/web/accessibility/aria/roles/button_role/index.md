@@ -28,14 +28,14 @@ The above example creates a focusable button, but requires JavaScript and CSS to
 
 > **Note:** If using `role="button"` instead of the semantic `<button>` or `<input type="button">` elements, you will need to make the element focusable and have to define event handlers for {{event("click")}} and {{event("keydown")}} events. This includes handling the <kbd>Enter</kbd> and <kbd>Space</kbd> keypresses in order to process all forms of user input. See [the official WAI-ARIA example code](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
 
-In addition to the ordinary button widget, `role="button"` should be included when creating a toggle button or menu button using a non-button element. A toggle button is a two-state button that can be either off (not pressed) or on (pressed). The `aria-pressed` attribute values of `true` or `false` identify a button as a toggle button. A menu button is a button that controls a menu and has an `aria-haspopup` property attribute set to either `menu` or `true`.
+In addition to the ordinary button widget, `role="button"` should be included when creating a toggle button or menu button using a non-button element. A toggle button is a two-state button that can be either off (not pressed) or on (pressed). The [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute values of `true` or `false` identify a button as a toggle button. A menu button is a button that controls a menu and has an [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) property attribute set to either `menu` or `true`.
 
 ### Associated ARIA roles, states, and properties
 
-- `aria-pressed`
+- [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
   - : The `aria-pressed`  attribute defines the button as a toggle button. The value describes the state of the button. The values include `aria-pressed="false"` when a button is not currently pressed, `aria-pressed="true"` to indicate a button is currently pressed, and `aria-pressed="mixed"` if the button is considered to be partially pressed. If the attribute is omitted or set to its default value of `aria-pressed="undefined"`, the element does not support being pressed.  
-- `aria-expanded`
-  - : If the button controls a grouping of other elements, the `aria-expanded` state indicates whether the controlled grouping is currently expanded or collapsed.  If the button has `aria-expanded="false"` set, the grouping is not currently expanded; If the button has `aria-expanded="true"` set, it is currently expanded; if the button has `aria-expanded="undefined"` set or the attribute is omitted, it is not expandable.
+- [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
+  - : If the button controls a grouping of other elements, the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) state indicates whether the controlled grouping is currently expanded or collapsed.  If the button has `aria-expanded="false"` set, the grouping is not currently expanded; If the button has `aria-expanded="true"` set, it is currently expanded; if the button has `aria-expanded="undefined"` set or the attribute is omitted, it is not expandable.
 
 ### Basic buttons
 
@@ -50,7 +50,7 @@ A toggle button typically has two states: pressed and not pressed. A third mixed
 - If `aria-pressed="true"` is used the button is a toggle button that is currently pressed.
 - if `aria-pressed="mixed"` is used, the button is considered to be partially pressed.
 
-As an example, the mute button on an audio player labeled "mute" could indicate that sound is muted by setting the `aria-pressed` state true. The label of a toggle button should not change when its state changes. In our example the label remains "Mute" with a screen reader reading "Mute toggle button pressed" or "Mute toggle button not pressed" depending on the value of `aria-pressed`. If the design were to call for the button label to change from "Mute" to "Unmute," a toggle button would not be appropriate, so the `aria-pressed` attribute would be omitted.
+As an example, the mute button on an audio player labeled "mute" could indicate that sound is muted by setting the `aria-pressed` state true. The label of a toggle button should not change when its state changes. In our example the label remains "Mute" with a screen reader reading "Mute toggle button pressed" or "Mute toggle button not pressed" depending on the value of [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed).If the design were to call for the button label to change from "Mute" to "Unmute," a toggle button would not be appropriate, so the `aria-pressed` attribute would be omitted.
 
 ### Keyboard interactions
 
@@ -224,7 +224,7 @@ Buttons are interactive controls and thus focusable. If the `button` role is ad
 
 > **Warning:** Be careful when marking up links with the button role. Buttons are expected to be triggered using the <kbd>Space</kbd> or <kbd>Enter</kbd> key, while links are expected to be triggered using the <kbd>Enter</kbd> key. In other words, when links are used to behave like buttons, adding `role="button"` alone is not sufficient. It will also be necessary to add a key event handler that listens for the <kbd>Space</kbd> key in order to be consistent with native buttons.
 
-When the `button` role is used, screen readers announce the element as a button, generally saying "click" followed by the button's accessible name. The accessible name is either the content of the element or the value of an `aria-label` or element referenced by an  `aria-labelledby` attribute, or description, if included.
+When the `button` role is used, screen readers announce the element as a button, generally saying "click" followed by the button's accessible name. The accessible name is either the content of the element or the value of an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or element referenced by an  [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute, or description, if included.
 
 ## Best practices
 

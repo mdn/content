@@ -47,7 +47,7 @@ Articles are not considered a navigational landmark, but many assistive technolo
 
 Articles can be nested, indicating that a nested article directly relates to the one it is nested in, but not necessarily to the ones outside the nesting hierarchy. Reference the examples for specific use cases.
 
-If an article is part of a feed, it can have the `aria-posinset` and `aria-setsize `attributes set to indicate which position within the feed this particular article represents.
+If an article is part of a feed, it can have the [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) and `aria-setsize `attributes set to indicate which position within the feed this particular article represents.
 
 Inside an `application` or other widget that causes screen readers and other assistive technologies to be in pass-through mode, an article can be used to indicate that these should switch back to treating the enclosed content as regular web content.
 
@@ -55,9 +55,9 @@ Instead of including the `article` role on a non-semantic element, the {{HTMLEle
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- `aria-posinset`
+- [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
   - : In the context of a feed, indicates the position of this particular article within that feed, based on a count starting at 1.
-- `aria-setsize`
+- [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
   - : In the context of a feed, indicates how many article items there are within that feed.
 
 ### Keyboard interactions
@@ -69,7 +69,7 @@ This role does not support any specific keyboard interaction.
 - Event handlers
   - : This role does not require any event handlers to be present.
 - Changing attribute values
-  - : When constructing a feed, set the `aria-posinset` and `aria-setsize` attributes on each article role to the appropriate values, bearing in mind that `aria-posinset` is 1-based.
+  - : When constructing a feed, set the `aria-posinset` and [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) attributes on each article role to the appropriate values, bearing in mind that `aria-posinset` is 1-based.
 
 > **Note:** **Always use native element if available.** Instead of a `<div>` with the `article` role, the `<article>` element should be used.
 

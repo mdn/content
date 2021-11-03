@@ -61,9 +61,9 @@ A dialog has particular requirements for how keyboard focus should be managed:
 
 ### Associated ARIA roles, states, and properties
 
-- `aria-labelledby`
-  - : Use this attribute to label the dialog. Often, the value of the `aria-labelledby` attribute will be the id of the element used to title the dialog.
-- `aria-describedby`
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+  - : Use this attribute to label the dialog. Often, the value of the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute will be the id of the element used to title the dialog.
+- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
   - : Use this attribute to describe the contents of the dialog.
 
 ### Possible effects on user agents and assistive technology 
