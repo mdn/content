@@ -10,7 +10,7 @@ tags:
 ---
 {{learnsidebar}}
 
-This aim of this skill test is to assess whether you've understood our [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form) article.
+The aim of this skill test is to assess whether you've understood our [How to structure a web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form) article.
 
 > **Note:** You can try out the solution in the interactive editor below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
 >
