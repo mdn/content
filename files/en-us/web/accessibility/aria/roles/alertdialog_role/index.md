@@ -53,7 +53,7 @@ Marking up an alert dialog containing element with the `alertdialog` role helps 
   - : Use this attribute to label the alertdialog. The `aria-labelledby` attribute is generally the id of the element used to title the alertdialog.
 
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-  - :  Use this attribute to encompass the description of the contents of the alert dialog. The value of the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute is generally the ID of the element containing the alert dialog's messaging, usually coming right after the title.
+  - :  Use this attribute to encompass the description of the contents of the alert dialog. The value of the `aria-describedby` attribute is generally the ID of the element containing the alert dialog's messaging, usually coming right after the title.
 
 ### Required JavaScript features
 
