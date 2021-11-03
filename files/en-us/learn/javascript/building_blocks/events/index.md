@@ -444,10 +444,6 @@ When the {{htmlelement("button")}} is clicked, the video is displayed, by changi
       videoBox.setAttribute('class','showing');
     }
   }
-
-  videoBox.addEventListener('click',function() {
-    videoBox.setAttribute('class','hidden');
-  });
 ```
 
 ```css hidden
