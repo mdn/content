@@ -9,7 +9,7 @@ tags:
   - aria-expanded
 ---
 
-The `aria-expanded` attribute indicates whether a grouping element owned or controlled by the element on which it is set is expanded or collapsed.
+The `aria-expanded` attribute is set on an element to indicate if a control is expanded or collapsed, and whether or not its child elements are displayed or hidden.
 
 ## Description
 
@@ -17,11 +17,13 @@ There are several widgets that can be expanded and collapsed, including menus, d
 
 For example, `aria-expanded` is applied to the parent item in a DOM tree to indicate whether its child branch is shown. The parent controls the visibility of the associated child branch, as well.
 
-There are two declarations that can be applied to objects that control the visibility of another object: `aria-controls`, or `aria-owns` combined with `aria-expanded`. The `aria-controls` and `aria-owns` indicate the relationship between the controlling element and the controlled element. The `aria-expanded` indicates to assistive technology whether the controlled element is expanded or collapsed. 
+There are two declarations that can be applied to objects that control the visibility of another object: [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls), or [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) combined with `aria-expanded`. The `aria-controls` and `aria-owns` indicate the relationship between the controlling element and the controlled element. The `aria-expanded` indicates to assistive technology whether the controlled element is expanded or collapsed. 
 
-When a grouping container that can be expanded or collapsed is not owned by the element that has the `aria-expanded` attribute, identify the controlling relationship by referencing the container from the element that has `aria-expanded` with the `aria-controls` property. If it is owned, use the `aria-owns` property.
+Use the `aria-owns` property on the elements that own expandable grouping containers. If the expandable and collapsible grouping container is not owned by the element that has the `aria-expanded` attribute, use the `aria-controls` property to reference the grouping container instead. 
 
-A button that opens a widget will have `aria-controls` set to the `id` of the widget and `aria-expanded` set to the current state of the widget.
+### Buttons
+
+A button that opens a widget should have `aria-controls` set to the {{htmlattrxref("id")}} of the expandable widget and `aria-expanded` set to the current state of the widget.
 
 ```html
 <button aria-expanded="false" aria-controls="widget1">Show widget</button>
@@ -33,7 +35,11 @@ When the widget is visible, the controlling object relays that information via h
 <button aria-expanded="true" aria-controls="widget1">Hide widget</button>
 ```
 
-A parent [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/roles/menuitem_role) has `aria-expanded` set to false when its child menu is not visible, and set to `true` when the child menu is visible. When a menu is displayed, the button object that toggles the visibility of that menu has `aria-expanded="true"` set. When the menu is hidden, aria-expanded can be omitted. If specified when the menu is hidden, it should be set as `aria-expanded="false"`.
+### Menu
+
+When a menu is displayed, the button object that toggles the visibility of that menu has `aria-expanded="true"` set. When the menu is hidden, aria-expanded can be omitted. If specified when the menu is hidden, it should be set as `aria-expanded="false"`. When a child menu is not visible, its parent [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/roles/menuitem_role) has `aria-expanded`. It should be set to `true` when the child menu is visible. 
+
+### Combobox
 
 By default, some roles are hidden or collapsed and other roles are open or expanded by default. Elements with role [`combobox`](/en-US/docs/Web/Accessibility/ARIA/roles/combobox_role) have a default value for `aria-expanded` of `false`. When a combobox popup is not visible, the element with role `combobox` has `aria-expanded` set to `false`. This is the default state. When the popup element is visible, `aria-expanded` should be set to `true`.
 
@@ -50,7 +56,11 @@ By default, some roles are hidden or collapsed and other roles are open or expan
 
 > **Note:** The presence of the `aria-expanded` attribute indicates control. Avoid including it on elements that do not control the expanded state of other elements.
 
-Each element with role `treeitem` that serves as a parent node has `aria-expanded="false"` when the node is in a closed state and `aria-expanded="true"`when the node is in an open state. End nodes should not have the `aria-expanded` attribute because, if they were to have it, they would be incorrectly described to assistive technologies as parent nodes.
+### Treeitems
+
+Each element with role `treeitem` that serves as a parent node has `aria-expanded="false"` when the node is in a closed state and `aria-expanded="true"`when the node is in an open state. End nodes, nodes with no descendant nodes, should not have the `aria-expanded` attribute because, if they were to have it, they would be incorrectly described to assistive technologies as parent nodes.
+
+### Rows
 
 A parent row is a row that can be expanded or collapsed to show or hide a set of child rows in a table or grid. Each parent row has the `aria-expanded` state set on either the row element or on a cell contained in the row. When the child rows are hidden, `aria-expanded="false"` is set. `aria-expanded="true"` is set when the child rows are displayed. Rows that do not control the display of child rows should not include the `aria-expanded` attribute at all because including the attribute defines the rows as parent rows.
 
@@ -107,6 +117,7 @@ Inherits into roles:
 ## See Also
 
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
+- [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 - HTML {{htmlattrxref("hidden")}} attribute
 
