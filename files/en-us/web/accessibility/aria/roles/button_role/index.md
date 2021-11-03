@@ -50,7 +50,7 @@ A toggle button typically has two states: pressed and not pressed. A third mixed
 - If `aria-pressed="true"` is used the button is a toggle button that is currently pressed.
 - if `aria-pressed="mixed"` is used, the button is considered to be partially pressed.
 
-As an example, the mute button on an audio player labeled "mute" could indicate that sound is muted by setting the `aria-pressed` state true. The label of a toggle button should not change when its state changes. In our example the label remains "Mute" with a screen reader reading "Mute toggle button pressed" or "Mute toggle button not pressed" depending on the value of [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed).If the design were to call for the button label to change from "Mute" to "Unmute," a toggle button would not be appropriate, so the `aria-pressed` attribute would be omitted.
+As an example, the mute button on an audio player labeled "mute" could indicate that sound is muted by setting the `aria-pressed` state true. The label of a toggle button should not change when its state changes. In our example the label remains "Mute" with a screen reader reading "Mute toggle button pressed" or "Mute toggle button not pressed" depending on the value of [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed). If the design were to call for the button label to change from "Mute" to "Unmute," a toggle button would not be appropriate, so the `aria-pressed` attribute would be omitted.
 
 ### Keyboard interactions
 
