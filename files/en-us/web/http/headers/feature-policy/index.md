@@ -120,8 +120,6 @@ Feature-Policy: <directive> <allowlist>
   - : Controls whether the current document is allowed to change the size of media elements after the initial layout is complete.
 - {{httpheader('Feature-Policy/usb', 'usb')}}
   - : Controls whether the current document is allowed to use the [WebUSB API](https://wicg.github.io/webusb/).
-- {{httpheader('Feature-Policy/vibrate', 'vibrate')}} {{deprecated_inline}}{{experimental_inline}}{{Non-standard_Inline}}
-  - : Controls whether the current document is allowed to trigger device vibrations via {{DOMxRef("Navigator.vibrate","Navigator.vibrate()")}} method of [Vibration API](/en-US/docs/Web/API/Vibration_API).
 - {{httpheader('Feature-Policy/screen-wake-lock', 'screen-wake-lock')}}
   - : Controls whether the current document is allowed to use [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) to indicate that device should not turn off or dim the screen.
 - {{httpheader("Feature-Policy/web-share", "web-share")}}

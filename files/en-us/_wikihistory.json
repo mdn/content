@@ -125652,13 +125652,6 @@
       "bershanskiy"
     ]
   },
-  "Web/HTTP/Headers/Feature-Policy/vibrate": {
-    "modified": "2020-10-15T22:20:16.873Z",
-    "contributors": [
-      "bershanskiy",
-      "Malvoz"
-    ]
-  },
   "Web/HTTP/Headers/Feature-Policy/web-share": {
     "modified": "2020-12-10T15:06:45.009Z",
     "contributors": [
