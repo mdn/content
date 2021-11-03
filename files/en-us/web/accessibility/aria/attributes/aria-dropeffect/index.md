@@ -10,7 +10,7 @@ tags:
   - drag and drop
   - deprecated
 ---
-{{deprecated}}
+{{deprecated_header}}
 
 The global `aria-dropeffect` attribute indicates what functions may be performed when a dragged object is released on the drop target.
 
