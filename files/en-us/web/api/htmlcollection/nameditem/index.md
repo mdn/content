@@ -55,7 +55,7 @@ const lastnameSpan = container.children.lastname;
 
 ## Specification
 
-{{Specification}}
+{{Specifications}}
 
 ## Browser compatibility
 
