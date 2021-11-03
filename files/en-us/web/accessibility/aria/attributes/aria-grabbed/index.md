@@ -15,7 +15,9 @@ The `aria-grabbed` state indicates an element's "grabbed" state in a drag-and-dr
 
 ## Description
 
-Text selections, images, and links can be dragged by default. Setting the global [`draggable="true"`](/en-US/docs/Web/HTML/Global_attributes/draggable) attribute, part of HTML5's [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API), with a [`dragstart` event handler](/en-US/docs/Web/API/Document/dragstart_event), means any DOM node can be made draggable as well. The `aria-grabbed` attribute is used to indicate if an element is in a "grabbed" state in a drag-and-drop operation with `aria-grabbed="true"` or if that the element is grabbable, but not currently grabbed with`aria-grabbed="false"`.
+Text selections, images, and links can be dragged by default. Setting the global [`draggable="true"`](/en-US/docs/Web/HTML/Global_attributes/draggable) attribute, part of HTML5's [Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API), with a [`dragstart` event handler](/en-US/docs/Web/API/Document/dragstart_event), means any DOM node can be made draggable as well. 
+
+The `aria-grabbed` attribute was used to indicate if an element is in a "grabbed" state in a drag-and-drop operation with `aria-grabbed="true"` or if that the element is grabbable, but not currently grabbed with`aria-grabbed="false"`.
 
 Setting `aria-grabbed="true"` indicates the element has been selected for dragging. Setting `aria-grabbed="false"` indicates that the element can be grabbed for a drag-and-drop operation, but is not currently grabbed. If the attribute is not specified or `aria-grabbed="undefined"` is set, assistive technologies will not announce that the element can be grabbed.
 
