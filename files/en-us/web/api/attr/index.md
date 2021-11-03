@@ -12,7 +12,13 @@ The **`Attr`** interface represents one of an element's attributes as an object.
 
 The core idea of an object of type `Attr` is the association between a _name_ and a _value_. An attribute may also be part of a _namespace_ and, in this case, it also has a URI identifying the namespace, and a prefix that is an abbreviation for the namespace.
 
-The name is deemed _local_ when it ignores the eventual namespace and deemed _qualified_ when it includes the prefix of the namespace, separated from the local name by a colon (`:`). For example, if we have two attributes called `myAttr`, one without a namespace, one inside the `example` namespace, we have: `myAttr` for the qualified name of the attribute without a namespace and `example:myAttr` for the qualified name of the attribute within the `example` namespace. Both have the same local name, `myAttr`.
+The name is deemed _local_ when it ignores the eventual namespace prefix and deemed _qualified_ when it includes the prefix of the namespace, if any, separated from the local name by a colon (`:`). We have three cases: an attribute outside of a namespace, an attribute inside a namespace without a prefix defined, an attribute inside a namespace with a prefix:
+
+| Attribute | Namespace name | Namespace prefix | Attribute local name | Attribute qualified name |
+|-----------|----------------|------------------|----------------------|--------------------------|
+| `myAttr`  | _none_         | _none_           | `myAttr`             | `myAttr`                 |
+| `myAttr`  | `mynamespace`  | _none_           | `myAttr`             | `myAttr`                 |
+| `myAttr`  | `mynamespace`  | `myns`           | `myAttr`             | `myns:myAttr`            |
 
 {{InheritanceDiagram}}
 
@@ -31,7 +37,7 @@ _This interface also inherits the properties of its parent interfaces, {{domxref
 - {{domxref("Attr.ownerElement", "ownerElement")}} {{readOnlyInline}}
   - : The {{domxref("Element")}} the attribute belongs to.
 - {{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}
-  - : A {{jsxref("String")}} representing the namespace prefix of the attribute, or `null` if no namespace is specified.
+  - : A {{jsxref("String")}} representing the namespace prefix of the attribute, or `null` if a namespace without prefix or no namespace are specified.
 - {{domxref("Attr.specified", "specified")}} {{readOnlyInline}}{{deprecated_inline}}
   - : This property always returns `true`.
 - {{domxref("Attr.value", "value")}}
