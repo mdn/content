@@ -8,7 +8,7 @@ tags:
   - document structure role
   - Reference
 ---
-The `heading` role defines this element as a heading to a page or section, with the `aria-level` attribute providing for more structure.
+The `heading` role defines this element as a heading to a page or section, with the [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level) attribute providing for more structure.
 
 ## Description
 
@@ -26,7 +26,7 @@ This defines the text in the `<div>` to be the main heading of the page, indicat
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- `aria-level`
+- [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level)
   - : The `aria-level` attribute specifies the heading level in the document structure. If no level is present, a value of 2 is the default.
 
 ### Keyboard interactions
@@ -40,7 +40,7 @@ This role does not require any special keyboard navigation. As with any heading,
 - Changing attribute values
   - : Usually not required, unless dynamically inserting content. In that case, the newly-added headings need `aria-level` attributes whose values are consistent with the rest of the document structure.
 
-> **Note:** Instead of using a `<div>` or `<span>` with a `heading` role and `aria-level`, consider using a native {{HTMLElement('h1')}}  through {{HTMLElement('h6')}}  elements instead to indicate that this text is a heading, and what part of the structure it represents.
+> **Note:** Instead of using a `<div>` or `<span>` with a `heading` role and [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level), consider using a native {{HTMLElement('h1')}}  through {{HTMLElement('h6')}}  elements instead to indicate that this text is a heading, and what part of the structure it represents.
 
 ## Examples
 
@@ -76,7 +76,7 @@ However, instead, you should do:
 
 ## Accessibility concerns
 
-> **Warning:** Using `aria-label` or `aria-labelledby` will hide the content of your heading from assistive technologies, reading the label instead of the heading.
+> **Warning:** Using `aria-label` or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) will hide the content of your heading from assistive technologies, reading the label instead of the heading.
 
 If you must use the `heading` role and `aria-level` attribute, do not go over level 6 so that you are consistent with HTML. Although theoretically you can go higher, and some screen readers may support it, the results can be unpredictable with other browser and screen reader combinations.
 

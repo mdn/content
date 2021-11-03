@@ -60,14 +60,14 @@ The `role` attribute only adds semantics; all of the functionality that comes na
 </fieldset>
 ```
 
-The native HTML radio ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio))  form control had two states ("checked" or "not checked"). Similarly, an element with `role="radio"`  can expose two states through the `aria-checked` attribute: `true` or `false`. The value of `mixed` correlates to the  `indeterminate` value of HTML `checked` attribute, meaning neither checked nor unchecked. While `mixed` is valid on both radios and checkboxes, it is rarely useful for a radio button.
+The native HTML radio ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio))  form control had two states ("checked" or "not checked"). Similarly, an element with `role="radio"`  can expose two states through the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute: `true` or `false`. The value of `mixed` correlates to the  `indeterminate` value of HTML `checked` attribute, meaning neither checked nor unchecked. While `mixed` is valid on both radios and checkboxes, it is rarely useful for a radio button.
 
-The radio role should alwasy be nested with other radios in a `radiogroup`. If it is not possible to nest the radio button within a radio group, use the `id` of the nongrouped radio in a space separated list of values as the value of the `aria-owns` attribute on the `radiogroup` element to indicate the relationship of the `radiogroup` to its radio members.
+The radio role should alwasy be nested with other radios in a `radiogroup`. If it is not possible to nest the radio button within a radio group, use the `id` of the nongrouped radio in a space separated list of values as the value of the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute on the `radiogroup` element to indicate the relationship of the `radiogroup` to its radio members.
 
 
 As `radio` is an interactive control; it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a radio is the <kbd>Space</kbd> key. Use JavaScript to toggle the `aria-checked` attribute to `true` when a radio becomes checked while ensuing that all the other radio roles in the group are set to  `aria-checked="false"`. 
 
-If any of the radio roles in a group has `aria-required="true"` set, it is as if all of the radios in the group had the attribute making the selection of one of the radios in the radiogroup being required to be valid;  though not necessarily the one that has the `aria-required` attribute set.
+If any of the radio roles in a group has `aria-required="true"` set, it is as if all of the radios in the group had the attribute making the selection of one of the radios in the radiogroup being required to be valid;  though not necessarily the one that has the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute set.
 
 The radio buttons are contained in or owned by an element with role radiogroup.
 Each radio button element has role radio.
@@ -81,7 +81,7 @@ If elements providing additional information about either the radio group or eac
 - `radiogroup` role
   - : The radio buttons are contained in or owned by an element with role `radiogroup`. If unable to be nested within a radiogroup within the markup, the `aria-owns` attribute of the `radiogroup` contains the `id` values of the non-nested radio buttons in the group.
 
-- `aria-checked`
+- [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
 
   - : The value of `aria-checked` defines the state of a radio. This attribute has one of three possible values:
 

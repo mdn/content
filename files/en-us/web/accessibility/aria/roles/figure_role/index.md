@@ -27,8 +27,8 @@ A `figure` is a perceivable section of content that typically contains a graphic
 
 In the above example, we have a figure that consists of two separate content items — an image and a caption. This is wrapped by a {{htmlelement("div")}} element that identifies the content as a figure using `role="figure"`. 
 
-For HTML, use the {{HTMLElement('figure')}} and {{HTMLElement('figcaption')}} elements. The figcaption will serve as the accessible name for the figure.  When not using HTML, or when retrofitting legacy HTML, use the `aria-labelledby` on the figure, pointing to the figure's caption.
-If there is no visible caption, `aria-label` can be used.
+For HTML, use the {{HTMLElement('figure')}} and {{HTMLElement('figcaption')}} elements. The figcaption will serve as the accessible name for the figure.  When not using HTML, or when retrofitting legacy HTML, use the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) on the figure, pointing to the figure's caption.
+If there is no visible caption, [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) can be used.
 
 ```html
 <div role="figure" aria-labelledby="figure-1">
@@ -37,8 +37,8 @@ If there is no visible caption, `aria-label` can be used.
 </div>
 ```
 
-- Use `aria-labelledby` when the text is a concise label.
-- Use `aria-describedby` when the text is a longer description.
+- Use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) when the text is a concise label.
+- Use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) when the text is a longer description.
 - Use `aria-label` when there is no visible figure caption.
 
 This can be done semantically, without ARIA, with HTML's {{HTMLElement('figure')}} element along with {{HTMLElement('figcaption')}}. 
@@ -55,11 +55,11 @@ This can be done semantically, without ARIA, with HTML's {{HTMLElement('figure')
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- `aria-describedby`
+- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
   - : The id of an element containing reference text serving as a caption.
-- `aria-labelledby`
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
   - : The id of an element containing text serving as a label.
-- `aria-label`
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
   - : If there is no element containing text that could serve as a label, you can add the label directly as a value on the `aria-label` on the element with the `figure` role or on the `<figure>` element.
 
 ### Keyboard interactions

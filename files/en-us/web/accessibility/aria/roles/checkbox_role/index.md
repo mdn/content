@@ -9,7 +9,7 @@ tags:
   - ARIA widget
   - Reference
 ---
-The `checkbox` role is for checkable interactive controls. Elements containing `role="checkbox"` must also include the `aria-checked` attribute to expose the checkbox's state to assistive technology.
+The `checkbox` role is for checkable interactive controls. Elements containing `role="checkbox"` must also include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the checkbox's state to assistive technology.
 
 ```html
 <span role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="chk1-label"></span> 
@@ -33,7 +33,7 @@ The developer is required to change the value of the `aria-checked` attribute d
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
-- `aria-checked`
+- [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
 
   - : The value of `aria-checked` defines the state of a checkbox. This attribute has one of three possible values:
 

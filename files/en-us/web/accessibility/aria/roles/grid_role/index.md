@@ -610,9 +610,9 @@ Even if the keyboard use is properly implemented, some users might not be aware 
 - [ARIA: `rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
 - [ARIA: columnheader role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 - {{HTMLElement('table','HTML <code>&lg;table></code> element')}}
-- `aria-level`
-- `aria-multiselectable`
-- `aria-readonly`
+- [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level)
+- [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
+- [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
 
 <section id="Quick_links">
 

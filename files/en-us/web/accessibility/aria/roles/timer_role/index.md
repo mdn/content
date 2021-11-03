@@ -27,7 +27,7 @@ Along with alert, log, and marquee, the `timer` role is a live region and can be
 ### Associated WAI-ARIA roles, states, and properties
 
 - aria-label
-  - : Used to provide the name of the timer. Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`.	
+  - : Used to provide the name of the timer. Use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present, otherwise use `aria-label`.	
 
 - aria-live
 

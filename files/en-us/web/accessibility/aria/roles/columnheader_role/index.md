@@ -23,8 +23,8 @@ An element with *role="columnheader"* nested as a descendant for an element with
 
 All columnheaders should be nested within a [row](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role). Every row, in turn, should be nested within a [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role), [table](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role), or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role), alternatively within a [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role) nested within one of the above.
 
-- `aria-sort`
-  - : Only applied to one column header at a time, if any, the `aria-sort` attribute indicates if a column is sorted in the three values of `ascending` or `descending` order, or `none` for not sorted.
+- [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort)
+  - : Only applied to one column header at a time, if any, the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute indicates if a column is sorted in the three values of `ascending` or `descending` order, or `none` for not sorted.
 
 ### Keyboard interactions
 
