@@ -51,7 +51,7 @@ When working with dialogs, use the [`aria-modal`](/en-US/docs/Web/Accessibility/
 
 ## Example
 
-We have a button with a Font Awesome icon. We hide the icon from assistive technologies with `aria-hidden="true"` as exposing the icon to assistive technologies could lead to redundancy or, if the icon doesn't have the same content as the visible text, confusion. 
+Adding `aria-hidden="true"` to the icon hides the icon character from being included in the accessible name.
 
 ```html
 <button type="button" aria-pressed="false">
@@ -61,6 +61,8 @@ We have a button with a Font Awesome icon. We hide the icon from assistive techn
   </span>
 </button>
 ```
+
+We have a button with a Font Awesome icon. We hide the icon from assistive technologies with `aria-hidden="true"` as exposing the icon to assistive technologies could lead to redundancy or, if the icon doesn't have the same content as the visible text, confusion. 
 
 ## Values
 
