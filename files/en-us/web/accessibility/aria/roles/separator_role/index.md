@@ -73,7 +73,7 @@ An accessible name, with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attri
   - : If the separator is focusable and has a known value, the `aria-valuenow` defines the current value. If not focusable or the value is unknown, do not include this attribute.
 
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) (default is 0)
-  - : If the separator is focusable, and the minimum value is not 0, include the minimum value with [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin).If the 
+  - : If the separator is focusable, and the minimum value is not 0, include the minimum value with [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin). If the 
 
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) (default is 100)
   - : If the separator is focusable, and the maximum value is not 100, include `aria-valuemax` with a value equal to or larger than `aria-valuemin`.

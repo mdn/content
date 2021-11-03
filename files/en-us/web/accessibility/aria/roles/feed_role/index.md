@@ -52,7 +52,7 @@ Supporting the following, or a similar, interface is recommended when focus is i
   ### <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles, states, and properties
   
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-  - : If the feed has no visible title, the `feed` element has a label specified with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).If it does, see `aria-labelledby`.
+  - : If the feed has no visible title, the `feed` element has a label specified with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label). If it does, see `aria-labelledby`.
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
   - : If the feed has a visible title, the `feed` element has [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) referring to the element containing the title. If not, add an `aria-label`.
