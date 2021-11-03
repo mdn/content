@@ -2,7 +2,6 @@
 title: 'ARIA: math role'
 slug: Web/Accessibility/ARIA/Roles/math_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

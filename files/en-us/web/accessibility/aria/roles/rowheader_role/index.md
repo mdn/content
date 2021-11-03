@@ -2,7 +2,6 @@
 title: 'ARIA: rowheader role'
 slug: Web/Accessibility/ARIA/Roles/rowheader_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

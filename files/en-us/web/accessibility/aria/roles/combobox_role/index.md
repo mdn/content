@@ -2,7 +2,6 @@
 title: 'ARIA: combobox role'
 slug: Web/Accessibility/ARIA/Roles/combobox_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

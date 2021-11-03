@@ -2,7 +2,6 @@
 title: 'ARIA: tree role'
 slug: Web/Accessibility/ARIA/Roles/tree_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

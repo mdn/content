@@ -2,7 +2,6 @@
 title: 'ARIA: select role'
 slug: Web/Accessibility/ARIA/Roles/select_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

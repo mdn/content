@@ -2,7 +2,6 @@
 title: 'ARIA: term role'
 slug: Web/Accessibility/ARIA/Roles/term_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

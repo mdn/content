@@ -2,7 +2,6 @@
 title: 'ARIA: separator role'
 slug: Web/Accessibility/ARIA/Roles/separator_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

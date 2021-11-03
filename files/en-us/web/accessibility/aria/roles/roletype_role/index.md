@@ -2,7 +2,6 @@
 title: 'ARIA: roletype role'
 slug: Web/Accessibility/ARIA/Roles/roletype_role
 tags: 
-
   - roletype
   - Accessibility
   - ARIA

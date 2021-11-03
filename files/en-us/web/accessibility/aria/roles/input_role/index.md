@@ -2,7 +2,6 @@
 title: 'ARIA: input role'
 slug: Web/Accessibility/ARIA/Roles/input_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

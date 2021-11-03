@@ -2,7 +2,6 @@
 title: 'ARIA: tooltip role'
 slug: Web/Accessibility/ARIA/Roles/tooltip_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

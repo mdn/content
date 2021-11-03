@@ -2,7 +2,6 @@
 title: 'ARIA: toolbar role'
 slug: Web/Accessibility/ARIA/Roles/toolbar_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles
@@ -18,7 +17,7 @@ The `toolbar` role defines the containing element as a collection of commonly us
 
 A toolbar is a collection of commonly used controls, such as buttons or checkboxes, grouped together in a compact visual form. The `toolbar` role can be used to communicate the presence and purpose of such a grouping to screen reader users and can help reduce the number of tab stops for keyboard users. Only use the `toolbar` role to group 3 or more controls.
 
-The toolbar is commonly a subset of functions found in a `menubar` as a way to reduce user effort. If you have more than one toolbar in a menubar, each toolbar requires a label; which you can include with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or `aria-label`.
+The toolbar is commonly a subset of functions found in a `menubar` as a way to reduce user effort. If you have more than one toolbar in a menubar, each toolbar requires a label; which you can include with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
 
 When creating a toolbar, you need to implement focus management and keyboard interactions within the toolbar, handling when the same keyboard interactions is used both in the toolbar and in included native control. The <kbd>Left Arrow</kbd> and <kbd>Right Arrow</kbd> should be used to navigate between the controls withing a horizontal tool bar. The <kbd>Up Arrow</kbd> and <kbd>Down Arrow</kbd> should be used if the toolbar is vertical -- in which case you also want to include the `aria-orientation="vertical"` -- or, in a horizontal toolbar, can be reserved for operating controls, such as spin buttons that require vertical arrow keys to operate.
 
@@ -30,7 +29,7 @@ If any of the otherwise interactive elements within the toolbar are temporarily 
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
-  - : Elements with the role toolbar have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of horizontal.
+  - : Elements with the role toolbar have an implicit `aria-orientation` value of horizontal.
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) / `aria-label`
   - : If the toolbar has a visible label, reference it by ID with the `aria-labelledby` attribute. Otherwise, provide an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label). If there is more than one toolbar in a menu, naming is required.
@@ -50,7 +49,6 @@ Implement focus management so the keyboard tab sequence includes one stop for th
 
 - <kbd>End</kbd> (Optional)
   - : Moves focus to last element.
-
 
 #### Horizontal toolbar 
 
@@ -93,8 +91,6 @@ When the toolbar has focus within it, provide visual cues. When an element withi
 Avoid including controls whose operation requires arrow keys used for toolbar navigation (right and left arrows, or top and bottom for vertical toolbars). If you must include such a control, make it the last control in the toolbar. For example, in a horizontal toolbar, a textbox could be included as the last element.
 
 If any of the otherwise interactive elements within the toolbar are disabled, consider letting them remain focusable so screen reader users can be made aware of their presence.
-
-
 
 ## Specifications
 

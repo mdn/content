@@ -39,7 +39,7 @@ If there is no visible caption, [`aria-label`](/en-US/docs/Web/Accessibility/ARI
 
 - Use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) when the text is a concise label.
 - Use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) when the text is a longer description.
-- Use `aria-label` when there is no visible figure caption.
+- Use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) when there is no visible figure caption.
 
 This can be done semantically, without ARIA, with HTML's {{HTMLElement('figure')}} element along with {{HTMLElement('figcaption')}}. 
 
@@ -110,10 +110,6 @@ If at all possible, you should use the appropriate semantic HTML elements to mar
 | ---------------------------------------------------- | ------------------------ |
 | {{SpecName("ARIA","#figure","figure")}} | {{Spec2('ARIA')}} |
 | {{SpecName("ARIA Authoring Practices 1.2","#describing_with_captions","Describing with captions")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
-
-
-
 
 ## See also
 
