@@ -60,6 +60,8 @@ Firefox 95 is the current [Beta version of Firefox](https://www.mozilla.org/en-U
 
 ## Changes for add-on developers
 
+- Added `overrideContentColorScheme` in {{WebExtAPIRef("browserSettings")}} to provide the ability to control the preference `layout.css.prefers-color-scheme.content-override` and set pages' preferred color scheme (light or dark) independently of the browser theme ({{bug(1733461)}}).
+
 #### Removals
 
 ### Other
