@@ -144,18 +144,18 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
         <a
           href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
           >Transparent</a
-        >, containing either
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >flow content</a
-        >
-        (excluding
+        >, except that no descendant may be
         <a
           href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
           >interactive content</a
-        >) or
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
+        > or an
+        <a href="/en-US/docs/Web/HTML/Element/a"
+          >a</a
+        > element, and no descendant may have a specified
+        <a
+          href="/en-US/docs/Web/HTML/Global_attributes/tabindex"
+          >tabindex</a
+        > attribute.
       </td>
     </tr>
     <tr>
