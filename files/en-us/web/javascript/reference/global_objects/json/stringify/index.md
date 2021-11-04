@@ -40,8 +40,8 @@ JSON.stringify(value, replacer, space)
     object are included in the resulting JSON string.
 - `space` {{optional_inline}}
 
-  - : A {{JSxRef("String")}} or {{JSxRef("Number")}} object that's used to insert white
-    space into the output JSON string for readability purposes.
+  - : A {{JSxRef("String")}} or {{JSxRef("Number")}} object that's used to insert indentation, white space,
+    and line break characters into the output JSON string for readability purposes.
 
     If this is a `Number`, it indicates the number of space characters to
     use as white space for indenting purposes; this number is capped at 10 (if it is greater, the value is just
