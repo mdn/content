@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: figure role'
-slug: Web/Accessibility/ARIA/Roles/Figure_Role
+slug: Web/Accessibility/ARIA/Roles/figure_Role
 tags:
   - ARIA
   - ARIA Role

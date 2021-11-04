@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: gridcell role'
-slug: Web/Accessibility/ARIA/Roles/Gridcell_role
+slug: Web/Accessibility/ARIA/Roles/gridcell_role
 tags:
   - ARIA
   - HTML

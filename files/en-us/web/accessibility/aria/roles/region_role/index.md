@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: region role'
-slug: Web/Accessibility/ARIA/Roles/Region_role
+slug: Web/Accessibility/ARIA/Roles/region_role
 tags:
   - ARIA
   - ARIA Role

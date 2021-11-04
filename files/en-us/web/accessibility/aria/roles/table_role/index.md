@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: table role'
-slug: Web/Accessibility/ARIA/Roles/Table_Role
+slug: Web/Accessibility/ARIA/Roles/table_Role
 tags:
   - ARIA
   - ARIA Role

@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: form role'
-slug: Web/Accessibility/ARIA/Roles/Form_Role
+slug: Web/Accessibility/ARIA/Roles/form_Role
 tags:
   - ARIA
   - ARIA Role

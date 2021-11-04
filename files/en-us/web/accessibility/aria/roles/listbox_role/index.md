@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: listbox role'
-slug: Web/Accessibility/ARIA/Roles/Listbox_role
+slug: Web/Accessibility/ARIA/Roles/listbox_role
 tags:
   - ARIA
   - ARIA role

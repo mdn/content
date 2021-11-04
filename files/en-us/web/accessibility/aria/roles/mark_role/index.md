@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: mark role'
-slug: Web/Accessibility/ARIA/Roles/Mark_role
+slug: Web/Accessibility/ARIA/Roles/mark_role
 tags:
   - ARIA
   - ARIA Role

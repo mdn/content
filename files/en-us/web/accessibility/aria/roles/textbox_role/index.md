@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: textbox role'
-slug: Web/Accessibility/ARIA/Roles/Textbox_role
+slug: Web/Accessibility/ARIA/Roles/textbox_role
 tags:
   - ARIA
   - ARIA role

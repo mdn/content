@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: none role'
-slug: Web/Accessibility/ARIA/Roles/None_role
+slug: Web/Accessibility/ARIA/Roles/none_role
 tags: 
 
   - Accessibility

@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: tab role'
-slug: Web/Accessibility/ARIA/Roles/Tab_Role
+slug: Web/Accessibility/ARIA/Roles/tab_Role
 tags:
   - ARIA
   - ARIA Role

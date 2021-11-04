@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: sectionhead role'
-slug: Web/Accessibility/ARIA/Roles/Sectionhead_role
+slug: Web/Accessibility/ARIA/Roles/sectionhead_role
 tags: 
 
   - Accessibility

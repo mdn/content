@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: menuitemcheckbox role'
-slug: Web/Accessibility/ARIA/Roles/Menuitemcheckbox_role
+slug: Web/Accessibility/ARIA/Roles/menuitemcheckbox_role
 tags: 
 
   - Accessibility

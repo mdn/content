@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: banner role'
-slug: Web/Accessibility/ARIA/Roles/Banner_role
+slug: Web/Accessibility/ARIA/Roles/banner_role
 tags:
   - ARIA
   - ARIA role

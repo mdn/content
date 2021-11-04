@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: heading role'
-slug: Web/Accessibility/ARIA/Roles/Heading_role
+slug: Web/Accessibility/ARIA/Roles/heading_role
 tags:
   - ARIA
   - ARIA Role

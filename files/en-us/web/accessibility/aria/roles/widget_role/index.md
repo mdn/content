@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: widget role'
-slug: Web/Accessibility/ARIA/Roles/Widget_role
+slug: Web/Accessibility/ARIA/Roles/widget_role
 tags: 
 
   - widget

@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: select role'
-slug: Web/Accessibility/ARIA/Roles/Select_role
+slug: Web/Accessibility/ARIA/Roles/select_role
 tags: 
 
   - Accessibility

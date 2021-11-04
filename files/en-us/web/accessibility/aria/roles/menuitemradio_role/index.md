@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: menuitemradio role'
-slug: Web/Accessibility/ARIA/Roles/Menuitemradio_role
+slug: Web/Accessibility/ARIA/Roles/menuitemradio_role
 tags: 
 
   - Accessibility

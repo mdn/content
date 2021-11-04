@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: term role'
-slug: Web/Accessibility/ARIA/Roles/Term_role
+slug: Web/Accessibility/ARIA/Roles/term_role
 tags: 
 
   - Accessibility

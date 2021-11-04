@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: dialog role'
-slug: Web/Accessibility/ARIA/Roles/Dialog_role
+slug: Web/Accessibility/ARIA/Roles/dialog_role
 tags:
   - ARIA
   - Accessibility

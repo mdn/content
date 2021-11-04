@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: suggestion role'
-slug: Web/Accessibility/ARIA/Roles/Suggestion_role
+slug: Web/Accessibility/ARIA/Roles/suggestion_role
 tags:
   - ARIA
   - ARIA Role

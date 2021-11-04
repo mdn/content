@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: tabpanel role'
-slug: Web/Accessibility/ARIA/Roles/Tabpanel_Role
+slug: Web/Accessibility/ARIA/Roles/tabpanel_Role
 tags:
   - ARIA
   - ARIA Role

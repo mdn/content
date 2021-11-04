@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: contentinfo role'
-slug: Web/Accessibility/ARIA/Roles/Contentinfo_role
+slug: Web/Accessibility/ARIA/Roles/contentinfo_role
 tags:
   - ARIA
   - ARIA Role

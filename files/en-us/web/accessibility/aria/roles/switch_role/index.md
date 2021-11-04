@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: switch role'
-slug: Web/Accessibility/ARIA/Roles/Switch_role
+slug: Web/Accessibility/ARIA/Roles/switch_role
 tags:
   - ARIA
   - ARIA Role

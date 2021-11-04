@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: search role'
-slug: Web/Accessibility/ARIA/Roles/Search_role
+slug: Web/Accessibility/ARIA/Roles/search_role
 tags:
   - ARIA
   - ARIA Role
