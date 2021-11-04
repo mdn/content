@@ -23,7 +23,7 @@ The `application` [document structure role](/en-US/docs/Web/Accessibility/ARIA/R
 
 In this mode, the web author is completely responsible for handling any and all keyboard input, focus management, and other interactions and cannot assume assistive technologies would do any processing on their end.
 
-If the web application encompassed by the application role contains parts that _should_ be treated like normal web content, a role of [`document`](/en-US/docs/Web/Accessibility/ARIA/Roles/document_Role) or [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_Role) should be used.
+If the web application encompassed by the application role contains parts that _should_ be treated like normal web content, a role of [`document`](/en-US/docs/Web/Accessibility/ARIA/Roles/document_role) or [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) should be used.
 
 ### Background
 
@@ -37,7 +37,7 @@ The `application` role is designed to provide a means for widgets that are not p
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [`document`](/en-US/docs/Web/Accessibility/ARIA/Roles/document_Role), [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_Role)
+- [`document`](/en-US/docs/Web/Accessibility/ARIA/Roles/document_role), [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role)
   - : Used to indicate parts of the application that should be treated as normal web content
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
   - : Used to manage focus inside the application.

@@ -15,12 +15,12 @@ The `columnheader` value of the ARIA role attribute identifies an element as bei
 
 ## Description
 
-An element with *role="columnheader"* nested as a descendant for an element with *role="row"*, is a static tabular structure of a column header cell in a tabular container, either a table or grid, or other chart that needs to show data relationships. To be supported, the columnheader must be nested in an element with the [role of `row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_Role). 
+An element with *role="columnheader"* nested as a descendant for an element with *role="row"*, is a static tabular structure of a column header cell in a tabular container, either a table or grid, or other chart that needs to show data relationships. To be supported, the columnheader must be nested in an element with the [role of `row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role). 
 
 
 ### Associated WAI-ARIA roles, states, and properties
 
-All columnheaders should be nested within a [row](/en-US/docs/Web/Accessibility/ARIA/Roles/row_Role). Every row, in turn, should be nested within a [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_Role), [table](/en-US/docs/Web/Accessibility/ARIA/Roles/table_Role), or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/row_Role), alternatively within a [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_Role) nested within one of the above.
+All columnheaders should be nested within a [row](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role). Every row, in turn, should be nested within a [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [table](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role), alternatively within a [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) nested within one of the above.
 
 - [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort)
   - : Only applied to one column header at a time, if any, the `aria-sort` attribute indicates if a column is sorted in the three values of `ascending` or `descending` order, or `none` for not sorted.
@@ -89,11 +89,11 @@ Columnheader has the same semantics `<th scope="col">`.
 
 ## See Also
 
-- [`table` role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_Role)
-- [`grid` role](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_Role)
-- [`treegrid` role](/en-US/docs/Web/Accessibility/ARIA/Roles/row_Role)
-- [`row` role](/en-US/docs/Web/Accessibility/ARIA/Roles/row_Role)
-- [`rowgroup` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_Role)
+- [`table` role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
+- [`grid` role](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
+- [`treegrid` role](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [`row` role](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [`rowgroup` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
 - [The `<th>` element](/en-US/docs/Web/HTML/Element/th) 
 - [The `<table>` element](/en-US/docs/Web/HTML/Element/table) 
 - [The `<tr>` element](/en-US/docs/Web/HTML/Element/tr)

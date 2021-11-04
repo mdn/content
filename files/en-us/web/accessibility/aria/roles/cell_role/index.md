@@ -32,9 +32,9 @@ A better, more semantic way of writing the cells above would be to use the sema
 
 ## Description
 
-The element with `role="cell"` is a cell within a row, optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_Role), within a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_Role). If the cell is in a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_Role) or` [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), opt for  [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_Role). Using native HTML {{HTMLElement('td')}} elements, whenever possible, is strongly encouraged.
+The element with `role="cell"` is a cell within a row, optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role), within a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role). If the cell is in a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or` [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), opt for  [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role). Using native HTML {{HTMLElement('td')}} elements, whenever possible, is strongly encouraged.
 
-Each element with `role="cell"` MUST be nested in a container element with [`role="row"`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_Role). That row, in turn, can be nested within an element with [`role="rowgroup"`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_Role), and should be nested within a `grid`, `table` or `treegrid`. If a cell contains column or row header information, use the `columnheader` or `rowheader` roles, respectively. If the cell does not contain header information and is nested in a `grid` or `treegrid`, the role of `gridcell` may be more appropriate.
+Each element with `role="cell"` MUST be nested in a container element with [`role="row"`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role). That row, in turn, can be nested within an element with [`role="rowgroup"`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role), and should be nested within a `grid`, `table` or `treegrid`. If a cell contains column or row header information, use the `columnheader` or `rowheader` roles, respectively. If the cell does not contain header information and is nested in a `grid` or `treegrid`, the role of `gridcell` may be more appropriate.
 
 A cell can contain a number of property attributes clarifying the cell's position within the tabular data structure, including [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex), [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan), [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex), and [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan).
 
@@ -44,13 +44,13 @@ A cell can contain a number of property attributes clarifying the cell's positio
 
 #### Context roles
 
-- [role="row"](/en-US/docs/Web/Accessibility/ARIA/Roles/row_Role)
-  - : An element with `role="row"` is a row of cells within a tabular structure. A row contains one or more cells,  grid cells, column headers, or row headers within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_Role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_Role) or `treegrid`, and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_Role).
-- [role="rowgroup"](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_Role)
+- [role="row"](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
+  - : An element with `role="row"` is a row of cells within a tabular structure. A row contains one or more cells,  grid cells, column headers, or row headers within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or `treegrid`, and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role).
+- [role="rowgroup"](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
   - : `Row` is a required cell parent. `Rowgroup` is an optional contextual row parent. It establishes a relationship between descendant rows. It is a structural equivalent to the [`thead`](/en-US/docs/Web/HTML/Element/thead), [`tfoot`](/en-US/docs/Web/HTML/Element/tfoot), and [`tbody`](/en-US/docs/Web/HTML/Element/tbody) elements in an [HTML `table`](/en-US/docs/Learn/HTML/Tables/Basics) element.
-- [role="table"](/en-US/docs/Web/Accessibility/ARIA/Roles/table_Role)
+- [role="table"](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
   - : One of the three possible contexts (along with `grid` and `treegrid`) in which you'll find a row containing cells. Table identifies the cell as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native HTML [`<table>`](/en-US/docs/Web/HTML/Element/table) element.
-- [role="grid"](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_Role)
+- [role="grid"](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
   - : One of the three possible contexts (along with `table` and `treegrid`) in which you'll find a row containing `cells` and `gridcells`. `Grid` identifies a cell as being part of a possibly interactive table structure containing data arranged in rows and columns, similar to the native [`<table>`](/en-US/docs/Web/HTML/Element/table) HTML element.
 - [role="treegrid"](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
   - : Similar to a grid, but with rows that can be expanded and collapsed in the same manner as for a tree.
@@ -166,8 +166,8 @@ When applied to a {{HTMLElement('td')}}, it returns cell semantics to the elemen
 
 ## See also
 
-- [`role="row"`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_Role)
-- [`role="gridcell"`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_Role)
+- [`role="row"`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [`role="gridcell"`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [HTML `<td>` element](/en-US/docs/Web/HTML/Element/td)
 - [HTML `<th>` element ](/en-US/docs/Web/HTML/Element/th)
 - [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
