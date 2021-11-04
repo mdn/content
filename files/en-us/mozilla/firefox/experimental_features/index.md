@@ -9,9 +9,12 @@ tags:
 ---
 {{FirefoxSidebar}}
 
-This page lists Firefox's experimental and partially implemented features, including those for proposed or cutting-edge web platform standards, along with information on the builds in which they are present, whether or not they are activated "by default", and which _preference_ can be used to activate or deactivate them. This allows you to test the features before they are released.
+This page lists Firefox's experimental and partially implemented features, including those for proposed or cutting-edge web platform standards, along with information on the builds in which they are present, whether or not they are activated "by default", and which _preference_ can be used to activate or deactivate them.
+This allows you to test the features before they are released.
 
-New features appear first in the [Firefox Nightly](https://nightly.mozilla.org/) build, where they are often enabled by default. They later propagate though to [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) and eventually to the release build. Once a feature is enabled by default in a release build it is no longer experimental, and should be removed from the topic.
+New features appear first in the [Firefox Nightly](https://nightly.mozilla.org/) build, where they are often enabled by default.
+They later propagate though to [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) and eventually to the release build.
+Once a feature is enabled by default in a release build it is no longer experimental, and should be removed from the topic.
 
 Experimental features can be enabled or disabled using the [Firefox Configuration Editor](https://support.mozilla.org/en-US/kb/about-config-editor-firefox) (enter `about:config` in the Firefox address bar) by modifying the associated _preference_ listed below.
 
@@ -21,7 +24,8 @@ Experimental features can be enabled or disabled using the [Firefox Configuratio
 
 ### Element: \<dialog>
 
-The HTML {{HTMLElement("dialog")}} element and its associated DOM APIs provide support for HTML-based modal dialog boxes. The current implementation is a little inelegant but is basically functional. (See {{bug(840640)}} for more details.)
+The HTML {{HTMLElement("dialog")}} element and its associated DOM APIs provide support for HTML-based modal dialog boxes.
+The current implementation is a little inelegant but is basically functional. (See {{bug(840640)}} for more details.)
 
 <table>
   <thead>
@@ -1216,6 +1220,52 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
     </tr>
   </tbody>
 </table>
+
+#### ElementInternals: Form associated custom element methods and properties
+
+New {{domxref("ElementInternals")}} properties and methods that allow a custom elements to interact with a form:
+- property: {{domxref("ElementInternals.form","form")}} gets the form associated with the element
+- property: {{domxref("ElementInternals.labels","labels")}} gets the list of labels associated with the element
+- method: {{domxref("ElementInternals.setFormValue()","setFormValue()")}} set the sanitized value and user-entered data, if needed.
+
+See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556449)}}.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>95</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>95</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>95</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>95</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.webcomponents.formAssociatedCustomElement.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 
 ### Payment Request API
 
