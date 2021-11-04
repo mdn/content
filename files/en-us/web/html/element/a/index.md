@@ -155,7 +155,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
         <a
           href="/en-US/docs/Web/HTML/Global_attributes/tabindex"
           >tabindex</a
-        > attribute
+        > attribute.
       </td>
     </tr>
     <tr>
