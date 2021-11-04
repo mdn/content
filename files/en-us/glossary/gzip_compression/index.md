@@ -10,5 +10,5 @@ gzip is a file format used for file compression and decompression. It is based o
 
 ## See also
 
-- [How to enable compression and gzip for page speed.](http://www.gzip.org/)
+- [The gzip home page](http://www.gzip.org/)
 - [gzip on Wikipedia](https://en.wikipedia.org/wiki/Gzip)
