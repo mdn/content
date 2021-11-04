@@ -77,7 +77,7 @@ If the grid is used as an interactive widget, [keyboard](#keyboard-use) interac
 - [aria-multiselectable](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-multiselectable_attribute)
   - : If ` aria-``multiselectable ` is set to `true`, multiple items in the grid can be selected. The default value is `false`.
 - [aria-readonly](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute)
-  - : If the user can navigate the grid but not change the value or values of the grid, the `aria-readonly` should be set to `true`. The default value is `false`.
+  - : If the user can navigate the grid but not change the value or values of the grid, the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) should be set to `true`. The default value is `false`.
 
 > **Note:** For many use cases, an HTML {{HTMLElement('table')}} element is sufficient as it and the various table elements already include many ARIA roles.
 
@@ -610,9 +610,9 @@ Even if the keyboard use is properly implemented, some users might not be aware 
 - [ARIA: `rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
 - [ARIA: columnheader role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 - {{HTMLElement('table','HTML <code>&lg;table></code> element')}}
-- `aria-level`
-- `aria-multiselectable`
-- `aria-readonly`
+- [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level)
+- [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
+- [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
 
 <section id="Quick_links">
 

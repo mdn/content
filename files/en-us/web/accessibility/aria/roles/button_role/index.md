@@ -14,7 +14,7 @@ The `button` role is for clickable elements that trigger a response when activat
 
 ## Description
 
-The button role identifies an element as a button to assistive technology such as screen readers. A button is a widget used to perform actions such as submitting a form, opening a dialog, cancelling an action, or performing a command such as inserting a new record or displaying information. Adding `role="button"` tells assistive technology that the element is a button, but provides no button functionality. Use {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` instead. This role can be used in combination with the `aria-pressed` attribute to create toggle buttons.
+The button role identifies an element as a button to assistive technology such as screen readers. A button is a widget used to perform actions such as submitting a form, opening a dialog, cancelling an action, or performing a command such as inserting a new record or displaying information. Adding `role="button"` tells assistive technology that the element is a button, but provides no button functionality. Use {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` instead. This role can be used in combination with the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute to create toggle buttons.
 
 ```html
 <div id="saveChanges" tabindex="0" role="button" aria-pressed="false">Save</div>
@@ -28,13 +28,13 @@ The above example creates a focusable button, but requires JavaScript and CSS to
 
 > **Note:** If using `role="button"` instead of the semantic `<button>` or `<input type="button">` elements, you will need to make the element focusable and have to define event handlers for {{event("click")}} and {{event("keydown")}} events. This includes handling the <kbd>Enter</kbd> and <kbd>Space</kbd> keypresses in order to process all forms of user input. See [the official WAI-ARIA example code](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
 
-In addition to the ordinary button widget, `role="button"` should be included when creating a toggle button or menu button using a non-button element. A toggle button is a two-state button that can be either off (not pressed) or on (pressed). The `aria-pressed` attribute values of `true` or `false` identify a button as a toggle button. A menu button is a button that controls a menu and has an `aria-haspopup` property attribute set to either `menu` or `true`.
+In addition to the ordinary button widget, `role="button"` should be included when creating a toggle button or menu button using a non-button element. A toggle button is a two-state button that can be either off (not pressed) or on (pressed). The `aria-pressed` attribute values of `true` or `false` identify a button as a toggle button. A menu button is a button that controls a menu and has an [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) property attribute set to either `menu` or `true`.
 
 ### Associated ARIA roles, states, and properties
 
-- `aria-pressed`
+- [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
   - : The `aria-pressed`  attribute defines the button as a toggle button. The value describes the state of the button. The values include `aria-pressed="false"` when a button is not currently pressed, `aria-pressed="true"` to indicate a button is currently pressed, and `aria-pressed="mixed"` if the button is considered to be partially pressed. If the attribute is omitted or set to its default value of `aria-pressed="undefined"`, the element does not support being pressed.  
-- `aria-expanded`
+- [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : If the button controls a grouping of other elements, the `aria-expanded` state indicates whether the controlled grouping is currently expanded or collapsed.  If the button has `aria-expanded="false"` set, the grouping is not currently expanded; If the button has `aria-expanded="true"` set, it is currently expanded; if the button has `aria-expanded="undefined"` set or the attribute is omitted, it is not expandable.
 
 ### Basic buttons
@@ -43,7 +43,7 @@ Buttons should always have an accessible name. For most buttons, this name will
 
 ### Toggle buttons
 
-A toggle button typically has two states: pressed and not pressed. A third mixed state is available for toggle buttons that control other elements, such as other toggle buttons or checkboxes, which do not all share the same value.  Whether an element is a toggle button or not can be indicated with the `aria-pressed` attribute in addition to the `button` role (if the element is not already a native button element):
+A toggle button typically has two states: pressed and not pressed. A third mixed state is available for toggle buttons that control other elements, such as other toggle buttons or checkboxes, which do not all share the same value.  Whether an element is a toggle button or not can be indicated with the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute in addition to the `button` role (if the element is not already a native button element):
 
 - If `aria-pressed` is not used, or is set to the "undefined" state, the button is not a toggle button.
 - If `aria-pressed="false"` is used the button is a toggle button that is currently not pressed.

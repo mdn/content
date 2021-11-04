@@ -23,7 +23,7 @@ A combobox is an input that controls another element, such as a listbox or grid,
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- `aria-expanded`
+- [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
 
   - : Include with a value of `true` or `false` depending on whether the combobox is open (true) or closed (false).
 
