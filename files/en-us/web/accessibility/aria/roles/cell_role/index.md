@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: cell role'
-slug: Web/Accessibility/ARIA/Roles/Cell_Role
+slug: Web/Accessibility/ARIA/Roles/cell_role
 tags:
   - ARIA
   - HTML

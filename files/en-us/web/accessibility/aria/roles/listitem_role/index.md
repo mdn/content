@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: listitem role'
-slug: Web/Accessibility/ARIA/Roles/Listitem_role
+slug: Web/Accessibility/ARIA/Roles/listitem_role
 tags:
   - ARIA
   - ARIA Role

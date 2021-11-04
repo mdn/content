@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: grid role'
-slug: Web/Accessibility/ARIA/Roles/Grid_Role
+slug: Web/Accessibility/ARIA/Roles/grid_role
 tags:
   - ARIA
   - HTML

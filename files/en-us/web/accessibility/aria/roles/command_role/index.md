@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: command role'
-slug: Web/Accessibility/ARIA/roles/command_role
+slug: Web/Accessibility/ARIA/Roles/command_role
 tags: 
 
   - Accessibility

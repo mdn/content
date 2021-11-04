@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: note role'
-slug: Web/Accessibility/ARIA/roles/note_role
+slug: Web/Accessibility/ARIA/Roles/note_role
 tags: 
 
   - Accessibility

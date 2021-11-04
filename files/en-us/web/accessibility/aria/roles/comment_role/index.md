@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: comment role'
-slug: Web/Accessibility/ARIA/Roles/Comment_role
+slug: Web/Accessibility/ARIA/Roles/comment_role
 tags:
   - ARIA
   - ARIA Role

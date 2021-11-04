@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: document role'
-slug: Web/Accessibility/ARIA/Roles/Document_Role
+slug: Web/Accessibility/ARIA/Roles/document_role
 tags:
   - ARIA
   - ARIA Role

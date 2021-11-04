@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: complementary role'
-slug: Web/Accessibility/ARIA/Roles/Complementary_role
+slug: Web/Accessibility/ARIA/Roles/complementary_role
 tags:
   - ARIA
   - ARIA Role

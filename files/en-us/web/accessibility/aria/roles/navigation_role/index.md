@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: navigation Role'
-slug: Web/Accessibility/ARIA/Roles/Navigation_Role
+slug: Web/Accessibility/ARIA/Roles/navigation_role
 tags:
   - ARIA
   - ARIA Role

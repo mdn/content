@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: input role'
-slug: Web/Accessibility/ARIA/roles/input_role
+slug: Web/Accessibility/ARIA/Roles/input_role
 tags: 
 
   - Accessibility

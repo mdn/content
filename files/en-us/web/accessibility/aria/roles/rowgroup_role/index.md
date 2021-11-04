@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: rowgroup role'
-slug: Web/Accessibility/ARIA/Roles/Rowgroup_Role
+slug: Web/Accessibility/ARIA/Roles/rowgroup_role
 tags:
   - ARIA
   - HTML

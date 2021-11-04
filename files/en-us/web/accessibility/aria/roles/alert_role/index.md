@@ -1,8 +1,9 @@
 ---
 title: 'ARIA: alert role'
-slug: Web/Accessibility/ARIA/Roles/Alert_Role
+slug: Web/Accessibility/ARIA/Roles/alert_role
 tags:
   - ARIA
+  - Alert
   - Accessibility
   - ARIA Role
   - ARIA alert

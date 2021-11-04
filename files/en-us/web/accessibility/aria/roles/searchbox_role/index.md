@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: searchbox role'
-slug: Web/Accessibility/ARIA/roles/searchbox_role
+slug: Web/Accessibility/ARIA/Roles/searchbox_role
 tags: 
 
   - Accessibility

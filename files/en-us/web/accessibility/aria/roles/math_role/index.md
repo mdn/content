@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: math role'
-slug: Web/Accessibility/ARIA/roles/math_role
+slug: Web/Accessibility/ARIA/Roles/math_role
 tags: 
 
   - Accessibility

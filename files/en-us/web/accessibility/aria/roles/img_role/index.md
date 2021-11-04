@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: img role'
-slug: Web/Accessibility/ARIA/Roles/Img_role
+slug: Web/Accessibility/ARIA/Roles/img_role
 tags:
   - ARIA
   - ARIA Img

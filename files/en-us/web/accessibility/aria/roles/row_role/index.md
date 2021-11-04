@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: row role'
-slug: Web/Accessibility/ARIA/Roles/Row_Role
+slug: Web/Accessibility/ARIA/Roles/row_role
 tags:
   - ARIA
   - ARIA Role

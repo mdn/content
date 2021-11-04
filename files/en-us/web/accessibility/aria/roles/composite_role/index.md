@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: composite role'
-slug: Web/Accessibility/ARIA/roles/composite_role
+slug: Web/Accessibility/ARIA/Roles/composite_role
 tags: 
 
   - Accessibility

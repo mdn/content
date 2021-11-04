@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: structure role'
-slug: Web/Accessibility/ARIA/roles/structure_role
+slug: Web/Accessibility/ARIA/Roles/structure_role
 tags: 
 
   - Accessibility
