@@ -50,7 +50,7 @@ Values of this type are objects. They contain the following properties:
 - `selectionText` {{optional_inline}}
   - : `string`. If some text was selected in the page, this contains the selected text.
 - `srcUrl` {{optional_inline}}
-  - : `string`. Will be present for elements with a "src" URL.
+  - : `string`. If present, the `src` value for the media in the clicked element.
 - `targetElementId`{{optional_inline}}
   - : `integer`. An identifier of the element, if any, over which the context menu was created. Use {{WebExtAPIRef("menus.getTargetElement()")}} in the content script to locate the element. Note that this is not the [id](/en-US/docs/Web/HTML/Global_attributes/id) attribute of the page element.
 - `viewType` {{optional_inline}}
