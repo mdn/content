@@ -96,8 +96,8 @@ Used in **ALL** roles
 - [`aria-modal`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
 - HTML {{htmlattrdef('hidden')}} attribute
-- CSS {{CSSXref('display'}} property
-- CSS {{CSSXref('visibility'}} property
+- CSS {{CSSXref('display')}} property
+- CSS {{CSSXref('visibility')}} property
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
