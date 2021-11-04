@@ -24,7 +24,7 @@ This is a form that collects and saves a user's contact information.
 
 ## Description
 
-A `form` [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles) identifies a region of content that contains a collection of items and objects that, as a whole, combine to create a form when no other named landmark is appropriate (e.g. [`main`](/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role) or [`search`](/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role)).
+A `form` [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles) identifies a region of content that contains a collection of items and objects that, as a whole, combine to create a form when no other named landmark is appropriate (e.g. [`main`](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role) or [`search`](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)).
 
 > **Note:** Using the {{HTMLElement('form')}} element will automatically communicate a section of content as a `form` landmark, if it is provided an accessible name. Developers should always prefer using the correct semantic HTML element over using ARIA.
 
@@ -82,7 +82,7 @@ You do not need to declare `role="form"` on every [form element](/en-US/docs/Web
 
 ### Search
 
-If a form is used to search, you should use the more specialized [`role="search"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role) value.
+If a form is used to search, you should use the more specialized [`role="search"`](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role) value.
 
 ### Labeling landmarks
 

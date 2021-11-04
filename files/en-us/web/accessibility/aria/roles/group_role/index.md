@@ -14,7 +14,7 @@ The `group` role can be used for sets of UI feature not intended to be included 
 
 ## Description
 
-The `group` role can be used to form a logical collection of items in a widget, such as children in a tree widget forming a collection of siblings in a hierarchy. When used in the context of a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/Listbox_role), the only children allowed are {{HTMLElement('option')}} elements. But, why not use a {{HTMLElement('select')}} or {{HTMLElement('option')}}?
+The `group` role can be used to form a logical collection of items in a widget, such as children in a tree widget forming a collection of siblings in a hierarchy. When used in the context of a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), the only children allowed are {{HTMLElement('option')}} elements. But, why not use a {{HTMLElement('select')}} or {{HTMLElement('option')}}?
 
 Authors MAY nest group elements. If a section is significant enough to warrant inclusion in the web page's table of contents, the author SHOULD assign it a role of region or a standard landmark role.
 

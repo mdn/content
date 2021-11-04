@@ -37,7 +37,7 @@ tags:
 
 ## See Also
 
-- [ARIA: `search` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role)
+- [ARIA: `search` role](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)
 
 <section id="Quick_links">
 

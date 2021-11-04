@@ -31,7 +31,7 @@ When the listbox role is added to an element, or such an element becomes visible
 - [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role) role
   - : One or more nested options are required. All selected options have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) set to `true`. All options that are not selected have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) set to `false`. If an option is not selectable, omit the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected).
   
-- [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role) role
+- [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) role
   - : A section containing `listitem` elements
 
 #### States and Properties
@@ -59,7 +59,7 @@ When the listbox role is added to an element, or such an element becomes visible
 - [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
     - : A human-readable string value which more clearly identifies the role of the listbox. Screen readers will often read this value to the user after reading the label (if there is one), in place of saying "listbox".
 
-For further details and a full list of ARIA states and properties see the  `listbox`(/en-US/docs/Web/Accessibility/ARIA/Roles/Listbox_role)  role.
+For further details and a full list of ARIA states and properties see the  `listbox`(/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)  role.
 
 ### Keyboard interactions
 
@@ -221,8 +221,8 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 - HTML {{HTMLElement('option')}} element
 - [ARIA: `combobox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
 - [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
-- [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role)
-- [ARIA: `listitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role)
+- [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
+- [ARIA: `listitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
 - [ARIA Best Practices – Listbox](https://www.w3.org/TR/wai-aria-practices/#Listbox)
 - [ARIA Role Model – Listbox](https://www.w3.org/TR/wai-aria-1.1/#listbox)
 

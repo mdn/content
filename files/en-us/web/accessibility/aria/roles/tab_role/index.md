@@ -8,7 +8,7 @@ tags:
   - ARIA widget
   - Reference
 ---
-The ARIA `tab` role indicates an interactive element inside a `tablist` that, when activated, displays its associated [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role).
+The ARIA `tab` role indicates an interactive element inside a `tablist` that, when activated, displays its associated [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_Role).
 
 ```html
 <button role="tab" aria-selected="true" aria-controls="tabpanel-id" id="tab-id">Tab label</button>

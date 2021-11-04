@@ -86,13 +86,13 @@ This role does not support any specific keyboard interaction.
 
 ## Precedence order
 
-This role corresponds to the {{HTMLElement('article')}} element in HTML, and that element should be used instead, if possible. This role does not require any specific roles to be present among its children. It is the only role allowed as a direct child of an element with the [`feed`](/en-US/docs/Web/Accessibility/ARIA/Roles/Feed_Role) role.
+This role corresponds to the {{HTMLElement('article')}} element in HTML, and that element should be used instead, if possible. This role does not require any specific roles to be present among its children. It is the only role allowed as a direct child of an element with the [`feed`](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_Role) role.
 
 ## See also
 
 - [ARIA: using the `article` role](/en-US/docs/Web/Accessibility/ARIA/aria_techniques/using_the_article_role)
-- [`feed` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Feed_Role)
-- [`section` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Section_Role)
+- [`feed` role](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_Role)
+- [`section` role](/en-US/docs/Web/Accessibility/ARIA/Roles/section_Role)
 - The {{HTMLElement('article')}} element
 - {{Glossary("RSS")}} glossary definition
 

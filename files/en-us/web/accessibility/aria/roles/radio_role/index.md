@@ -14,7 +14,7 @@ The `radio` role is one of a group of checkable buttons, in a `radiogroup`, wher
 
 ## Description
 
-A radio element is a checkable input in a group of role elements, of which only one of which can be checked at a time. The radio elements must be grouped together in a ['radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/Radiogroup_Role) to indicate which ones affect the same value.  
+A radio element is a checkable input in a group of role elements, of which only one of which can be checked at a time. The radio elements must be grouped together in a ['radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_Role) to indicate which ones affect the same value.  
 
 ```html
 <div  role="radiogroup" aria-labeledby="legend25" id="radiogroup25">
@@ -111,7 +111,7 @@ If elements providing additional information about either the radio group or eac
 
 ### Radios in a toolbar
 
-Because arrow keys are used to navigate among elements of a toolbar and the Tab key moves focus in and out of a toolbar, when a radio group is nested inside a toolbar, the keyboard interaction of the radio group is slightly different from that of a radio group that is not inside of a toolbar. See [`radiogroup` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Roles/Radiogroup_Role#Keyboard_interactions) for more information
+Because arrow keys are used to navigate among elements of a toolbar and the Tab key moves focus in and out of a toolbar, when a radio group is nested inside a toolbar, the keyboard interaction of the radio group is slightly different from that of a radio group that is not inside of a toolbar. See [`radiogroup` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_Role#Keyboard_interactions) for more information
 
 ## Required JavaScript
 
@@ -265,12 +265,12 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 - [HTML `<input type="radio">` radio button](/en-US/docs/Web/HTML/Element/input/radio)
 - [HTML `tabindex` attribute](/en-US/docs/Web/HTML/Global_attributes/tabindex)
-- [ARIA: `radiogroup` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Radiogroup_Role)
-- [ARIA: `checkbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Checkbox_Role)
-- [ARIA: `menuitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitem_Role)
-- [ARIA: `menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitemradio_Role)
-- [ARIA: `menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitemradio_Role)
-- [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Option_role)
+- [ARIA: `radiogroup` role](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_Role)
+- [ARIA: `checkbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_Role)
+- [ARIA: `menuitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_Role)
+- [ARIA: `menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_Role)
+- [ARIA: `menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_Role)
+- [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
 
 <section id="Quick_links">
 

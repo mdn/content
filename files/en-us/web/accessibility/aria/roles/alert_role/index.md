@@ -15,7 +15,7 @@ The `alert` role is for important, and usually time-sensitive, information. The 
 
 ## Description
 
-The **[`alert`](href="https://www.w3.org/TR/wai-aria-1.1/#alert)** role can be used to tell the user an element has been dynamically updated. Screen readers will instantly start reading out the updated content when the role is added. If the user is expected to close the alert, then the [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/Alertdialog_Role) role should be used instead.
+The **[`alert`](href="https://www.w3.org/TR/wai-aria-1.1/#alert)** role can be used to tell the user an element has been dynamically updated. Screen readers will instantly start reading out the updated content when the role is added. If the user is expected to close the alert, then the [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_Role) role should be used instead.
 
 One of the five live region roles, the [`alert`](https://www.w3.org/TR/wai-aria-1.1/#alert) role is used to provide the user with important, and usually time-sensitive, information, and often to tell the user an element has been dynamically updated.
 

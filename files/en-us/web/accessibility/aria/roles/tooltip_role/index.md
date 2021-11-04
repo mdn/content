@@ -118,7 +118,7 @@ Instead of using tooltips and hiding important inforation, consider writing clea
 
 ## See Also
 
-- [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Dialog_role)
+- [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 - [CSS: `:focus` pseudoclass](/en-US/docs/Web/CSS/:focus)
 - [Tooltips & Toggletips](https://inclusive-components.design/tooltips-toggletips/) by Heydon Pickering
 

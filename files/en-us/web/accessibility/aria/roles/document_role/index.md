@@ -9,11 +9,11 @@ tags:
   - Reference
 ---
 
-The `document` role is for focusable content within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_Role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/Application_Role) for which assistive technologies can switch reading context back to a reading modelement.
+The `document` role is for focusable content within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_Role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/application_Role) for which assistive technologies can switch reading context back to a reading modelement.
 
 ## Description
 
-The `document` role is for the top container containing content that assistive technology users may want to browse in a reading mode. Only useful on focusable sections within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_Role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/Application_Role), the `document` role inform assistive technologies to the reading context back to a reading mode: The `document` role tells assistive technologies with reading or browse modes to use the document mode to read the content contained within this element.
+The `document` role is for the top container containing content that assistive technology users may want to browse in a reading mode. Only useful on focusable sections within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_Role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/application_Role), the `document` role inform assistive technologies to the reading context back to a reading mode: The `document` role tells assistive technologies with reading or browse modes to use the document mode to read the content contained within this element.
 
 ```html
 <div role="dialog">
@@ -36,7 +36,7 @@ Because ATs with reading mode default to that mode for all elements except for t
 
 Assistive technologies should switch context back to document mode, possibly intercepting from controls rewired for the parent's dynamic context, re-enabling the standard input events, such as Up or Down arrow keyboard events, to control the reading cursor.
 
-In contrast to the [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role) role, the `document` role does not have any relation to other elements with a document role, it merely has a relationship to the containing composite widget. An article can have associated articles.
+In contrast to the [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_Role) role, the `document` role does not have any relation to other elements with a document role, it merely has a relationship to the containing composite widget. An article can have associated articles.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -79,7 +79,7 @@ The document role is an easy way to indirectly control assistive technology beha
 ## See also
 
 - [ARIA: `widget` role](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_Role)
-- [ARIA: `application` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Application_Role)
+- [ARIA: `application` role](/en-US/docs/Web/Accessibility/ARIA/Roles/application_Role)
 
 <section id="Quick_links">
 

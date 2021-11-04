@@ -47,7 +47,7 @@ For example:
 </div>
 ```
 
-If an image is purely presentational, consider using the [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/Presentation_role) role.
+If an image is purely presentational, consider using the [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) role.
 
 ### SVG and role="img"
 
@@ -121,7 +121,7 @@ If `aria-labelledby` were used, the screen reader would read it. In this case, o
 - The {{HTMLElement('picture')}} element
 - The {{HTMLElement('audio')}} element
 - The {{HTMLElement('video')}} element
-- [ARIA: `presentation` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Presentation_role)
+- [ARIA: `presentation` role](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role)
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
 

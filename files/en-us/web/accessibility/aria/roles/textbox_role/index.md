@@ -135,7 +135,7 @@ The snippet below shows how the textbox role is added directly into the HTML sou
 
 ## See also
 
-- [ARIA: search role](/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role)
+- [ARIA: search role](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)
 
 <section id="Quick_links">
 

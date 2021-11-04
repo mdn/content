@@ -130,12 +130,12 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 ## See also
 
 - [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
-- [ARIA: `radio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Radio_Role)
-- [ARIA: `menuitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitem_Role)
-- [ARIA: `menuitemcheckbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitemcheckbox_Role)
-- [ARIA: `menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitemradio_Role)
-- [ARIA: `switch` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role)
-- [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Option_role)
+- [ARIA: `radio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_Role)
+- [ARIA: `menuitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_Role)
+- [ARIA: `menuitemcheckbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_Role)
+- [ARIA: `menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_Role)
+- [ARIA: `switch` role](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role)
+- [ARIA: `option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
 
 <section id="Quick_links">
 
