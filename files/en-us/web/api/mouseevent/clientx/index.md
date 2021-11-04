@@ -22,8 +22,6 @@ For example, clicking on the left edge of the viewport will always result in a m
 
 A `double` floating point value.
 
-This property was originally defined as a `long` integer, but it was redefined by the CSSOM View Module.
-
 ## Example
 
 This example displays your mouse's coordinates whenever you trigger the {{Event("mousemove")}} event.

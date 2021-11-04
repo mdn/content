@@ -16,9 +16,8 @@ This property takes into account any vertical scrolling of the page.
 
 ## Value
 
-A `double` float.
+A `double` floating point value.
 
-This property was originally defined as a `long` integer, but it was redefined by the CSSOM View Module.
 
 ## Examples
 
