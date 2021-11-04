@@ -144,7 +144,7 @@ const inner = select.querySelectorAll('.outer .inner');
 inner.length; // 1, not 0!
 ```
 
-In this example, when selecting `.outer .inner` in the context the
+In this example, when selecting `.outer .inner` in the context of the
 `<div>` with the class `select`, the element with the class
 `.inner` is still found, even though `.outer` is not a descendant
 of the base element on which the search is performed (`.select`). By default,
