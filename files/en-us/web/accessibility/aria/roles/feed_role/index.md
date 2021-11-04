@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: feed role'
-slug: Web/Accessibility/ARIA/Roles/feed_Role
+slug: Web/Accessibility/ARIA/Roles/feed_role
 tags:
   - ARIA
   - ARIA Role
