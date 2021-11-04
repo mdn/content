@@ -10,7 +10,7 @@ tags:
   - Web
 browser-compat: html.manifest
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 **Web app manifests** are part of a collection of web technologies called [progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs), which are websites that can be installed to a device’s homescreen without an app store. Unlike regular web apps with simple homescreen links or bookmarks, PWAs can be downloaded in advance and can work offline, as well as use regular [Web APIs](/en-US/docs/Web/API).
 
@@ -90,7 +90,9 @@ In some browsers (Chrome 47 and later, for example), a splash screen is displaye
 
 ## Specifications
 
-{{Specifications}}
+| Specification                                      |
+| -------------------------------------------------- |
+| [Web App Manifest](https://w3c.github.io/manifest) |
 
 ## Browser compatibility
 
