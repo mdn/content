@@ -1,70 +1,70 @@
 ---
 title: 'ARIA: option role'
 slug: Web/Accessibility/ARIA/Roles/option_role
-tags:
-  - ARIA
+tags: 
   - Accessibility
+  - ARIA
+  - roles
+  - Reference
+  - ARIA roles
+  - option role
 ---
+The `option` role is used for selectable items in a `listbox`.
 
-<p>The <code>option</code> role is used for selectable items in a <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a>.</p>
+##  Description
 
-<h2 id="Description">Description</h2>
+The `option` role is used to identify selections a user can make in a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role). These options are similar to the {{HTMLElement('option')}} elements in a {{HTMLElement('select')}} element, but they can contain images.
 
-<p>The <code>option</code> role is used to identify selections a user can make in a <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a>. These options are similar to the {{HTMLElement('option')}} elements in a {{HTMLElement('select')}} element, but they can contain images.</p>
+All selectable options should have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) match their state, `true` when selected and `false` when not. If an option is not selectable, `aria-selected` can be omitted. A disabled option can either omit the `aria-selected` option and be removed from the focus order, or mark [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) as `true` and `aria-selected` as `false` to show the user that the option is present, albeit disabled.
+
+The `option` role is for identifying selectable choices of a `listbox`. Options must be provided an accessible name. Generally, the accessible name for an option should come from the element's descendant content. Authors can also explicitly provide an accessible name by specifying [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) to the element with the `option` role. If using `aria-label` or `aria-labelledby`, and the option also displays a visible text label, authors must ensure they adhere to <a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html">WCAG Success Criterion 2.5.3 Label in Name</a>.
+
+It is highly recommended to use a {{HTMLElement('select')}} element or an  {{HTMLElement('input')}} element with the `checkbox` or `radio` type instead, when possible. These native HTML elements provide keyboard interactivity to manage focus for all the descendants for you automatically.
+
+###  Associated ARIA roles, states, and properties
+
+####  Associated Roles
 
 
-<p>All selectable options should have <code>aria-selected</code> match their state, <code>true</code> when selected and <code>false</code> when not. If an option is not selectable, <code>aria-selected</code> can be omitted. A disabled option can either omit the <code>aria-selected</code> option and be removed from the focus order, or mark <code>aria-disabled</code> as <code>true</code> andzzzzzzzzzzzzzzzzz <code>aria-selected</code> as <code>false</code> to show the user that the option is present, albeit disabled.<p>
+-	[`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
+	-	: An `option` _must_ be contained in or owned by a `listbox`
 
-	<p>The <code>option</code> role is for identifying selectable choices of a <code>listbox</code>. Options must be provided an accessible name. Generally, the accessible name for an option should come from the element's descendant content. Authors can also explicitly provide an accessible name by specifying <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute">aria-label</a> or <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a> to the element with the <code>option</code> role. If using <code>aria-label</code> or <code>aria-labelledby</code>, and the option also displays a visible text label, authors must ensure they adhere to <a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html">WCAG Success Criterion 2.5.3 Label in Name</a>.</p>
 
-<p>It is highly recommended to use a {{HTMLElement('select')}} element or an  {{HTMLElement('input')}} element with the <code>checkbox</code> or <code>radio</code> type instead, when possible. These native HTML elements provide keyboard interactivity to manage focus for all the descendants for you automatically.</p>
+####  States and Properties
 
-<h3 id="Associated_ARIA_roles_states_and_properties">Associated ARIA roles, states, and properties</h3>
+-	[`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
+	-	: Used to describe the selection state of the option. Required.
 
-<h4 id="Associated_Roles">Associated Roles</h4>
+-	[`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
+	-	: Used to describe the checked state when options are used in a multiple selection fashion. Supports `true`, `false` and `mixed`. Optional.
 
-<dl>
-	<dt><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></dt>
-	<dd>An <code>option</code> <i>must</i> be contained in or owned by a <code>listbox</code></dd>
-</dl>
-
-<h4 id="States_and_Properties">States and Properties</h4>
-
-<dl>
-	<dt>aria-selected</dt>
-	<dd>Used to describe the selection state of the option. Required.</dd>
-
-	<dt>aria-checked</dt>
-	<dd>Used to describe the checked state when options are used in a multiple selection fashion. Supports <code>true</code>, <code>false</code> and <code>mixed</code>. Optional.</dd>
-
-	<dt>aria-posinset</dt>
-	<dd>Used to describe the position in the set of options when it does not match the DOM, such as virtual scrolling where only some options are present at a time. Optional.</dd>
+-	[`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
+	-	: Used to describe the position in the set of options when it does not match the DOM, such as virtual scrolling where only some options are present at a time. Optional.
 	
-	<dt>aria-setsize</dt>
-	<dd>Used in conjunction with <code>aria-posinset</code> to declare the total number of options. Optional.</dd>
+-	[`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
+	-	: Used in conjunction with `aria-posinset` to declare the total number of options. Optional.
 
-	<dt>aria-disabled</dt>
-	<dd>Used to indicate that the option is present but not editable. Optional.</dd>
+-	[`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
+	-	: Used to indicate that the option is present but not editable. Optional.
 	
-	<dt>aria-hidden</dt>
-	<dd>Used to hide the option from accessibility tools. It should only be used to hide non-visible content or visible content if it improves the experience of assistive technology, such as redundant content. Optional.</dd>
+-	[`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
+	-	: Used to hide the option from accessibility tools. It should only be used to hide non-visible content or visible content if it improves the experience of assistive technology, such as redundant content. Optional.
 	
-	<dt>aria-invalid</dt>
-	<dd>Used to indicate that the value of the option is considered invalid by the application. Optional.</dd>
+-	[`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
+	-	: Used to indicate that the value of the option is considered invalid by the application. Optional.
 
-	<dt>aria-busy</dt>
-	<dd>Used to indicate that an element is being modified, such as while it is loadingOptional.</dd>
+-	[`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
+	-	: Used to indicate that an element is being modified, such as while it is loadingOptional.
 	
-	<dt>aria-labelledby</dt>
-	<dd>Used to indicate which element labels the option. The content of the option should be used instead where appropriate. Optional.</dd>
+-	[`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+	-	: Used to indicate which element labels the option. The content of the option should be used instead where appropriate. Optional.
 	
-	<dt>aria-label</dt>
-	<dd>Used to label the option. If the label is present in the DOM, <code>aria-labelledby</code> should be used instead. Optional.</dd>
-</dl>
+-	[`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+	-	: Used to label the option. If the label is present in the DOM, `aria-labelledby` should be used instead. Optional.
 	
-<p>(For further details and a full list of ARIA states and properties see the <a href="https://www.w3.org/TR/wai-aria-1.1/#option">ARIA <code>option</code> (role)</a> documentation.)</p>
+(For further details and a full list of ARIA states and properties see the <a href="https://www.w3.org/TR/wai-aria-1.1/#option">ARIA `option` (role)</a> documentation.)
 
-<h2 id="Specifications">Specifications</h2>
+##  Specifications
 
 <table>
 	<tbody>
@@ -77,27 +77,23 @@ tags:
 			<td>{{Spec2('ARIA')}}</td>
 		</tr>
 		<tr>
-			<td>{{SpecName("ARIA Authoring Practices","#Option","Option Role")}}</td>
-			<td>{{Spec2('ARIA Authoring Practices')}}</td>
+			<td>{{SpecName("ARIA Authoring Practices 1.2","#Listbox","option in a Listbox example")}}</td>
+			<td>{{Spec2('ARIA Authoring Practices 1.2')}}</td>
 		</tr>
 	</tbody>
 </table>
 
-<h2 id="See_also">See also</h2>
+##  See also
 
-<ul>
-	<li>HTML {{HTMLElement('select')}} element</li>
-	<li>HTML {{HTMLElement('label')}} element</li>
-	<li>HTML {{HTMLElement('option')}} element</li>
-	<li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role">ARIA: <code>combobox</code> role</a></li>
-	<li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/option_role">ARIA: <code>option</code> role</a></li>
-	<li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role">ARIA: <code>list</code> role</a></li>
-	<li><a href="https://www.w3.org/TR/wai-aria-practices/#Listbox">ARIA Best Practices – Listbox</a></li>
-	<li><a href="https://www.w3.org/TR/wai-aria-1.1/#listbox">ARIA Role Model – Listbox</a></li>
-</ul>
+- HTML {{HTMLElement('select')}} element
+- HTML {{HTMLElement('label')}} element
+- HTML {{HTMLElement('option')}} element
+- [ARIA: `combobox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
+- [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
+- [ARIA: `listbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
 
 <section id="Quick_links">
 	<ol>
-	  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
+	  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 	</ol>
 </section>
