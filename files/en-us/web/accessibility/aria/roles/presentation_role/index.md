@@ -2,7 +2,6 @@
 title: 'ARIA: presentation role'
 slug: Web/Accessibility/ARIA/Roles/presentation_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles

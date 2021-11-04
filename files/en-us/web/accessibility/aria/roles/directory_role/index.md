@@ -2,7 +2,6 @@
 title: 'ARIA: directory role'
 slug: Web/Accessibility/ARIA/Roles/directory_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles
