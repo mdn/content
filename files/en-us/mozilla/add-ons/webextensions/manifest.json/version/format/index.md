@@ -1,5 +1,5 @@
 ---
-title: Version Format
+title: Manifest Version Format
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/version/format
 tags:
   - Add-ons
@@ -7,8 +7,6 @@ tags:
   - WebExtensions
 ---
 {{AddonSidebar}}
-
-# Manifest Version Format
 
 A **version string** consists of one or more _version parts_, separated with dots.
 
