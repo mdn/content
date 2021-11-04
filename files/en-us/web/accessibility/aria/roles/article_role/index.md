@@ -47,7 +47,7 @@ Articles are not considered a navigational landmark, but many assistive technolo
 
 Articles can be nested, indicating that a nested article directly relates to the one it is nested in, but not necessarily to the ones outside the nesting hierarchy. Reference the examples for specific use cases.
 
-If an article is part of a feed, it can have the [[`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) and `aria-setsize `attributes set to indicate which position within the feed this particular article represents.
+If an article is part of a feed, it can have the [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) and `aria-setsize `attributes set to indicate which position within the feed this particular article represents.
 
 Inside an `application` or other widget that causes screen readers and other assistive technologies to be in pass-through mode, an article can be used to indicate that these should switch back to treating the enclosed content as regular web content.
 

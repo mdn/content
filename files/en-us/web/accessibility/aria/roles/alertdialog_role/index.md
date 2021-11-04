@@ -16,7 +16,7 @@ The **alertdialog** role is to be used on modal alert dialogs that interrupt a u
 ## Description
 Not to be confused with the live region [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/Alert_Role) role, the `alertdialog` role defines a modal dialog that interrupts the user's workflow. It is used to communicate an important message and get a response. Examples include error messages that require a confirmation and other action confirmation prompts. The `alertdialog` role is not to be used as a replacement for other dialogs, including no confirmation required alert dialogs [`Window.alert()`](/en-US/docs/Web/API/Window/alert) and prompts [`Window.prompt()`](/en-US/docs/Web/API/Window/prompt).  
 
-The `alertdialog` must have an accessible name, defined with [[[`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or `aria-label`. The alert dialog text must have an accessible description using `aria-describedby`.
+The `alertdialog` must have an accessible name, defined with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or `aria-label`. The alert dialog text must have an accessible description using `aria-describedby`.
 
 The alert dialog must have at least one focusable control -- such as Confirm, Close, and/or Cancel -- and focus must be moved to that control when the alert dialog appears. Alertdialogs can have additional interactive controls such as text fields and checkboxes. 
 
@@ -49,7 +49,7 @@ Marking up an alert dialog containing element with the `alertdialog` role helps 
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [[`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
   - : Use this attribute to label the alertdialog. The `aria-labelledby` attribute is generally the id of the element used to title the alertdialog.
 
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)

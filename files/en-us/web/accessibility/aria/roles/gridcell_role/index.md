@@ -66,7 +66,7 @@ This sample code demonstrates a table-style grouping of information where the th
 
 ### Describing the position of gridcells when the overall structure is unknown
 
-In situations where the table-style grouping of content does not provide information about the columns and rows, gridcells must have their positions programmatically described by using [[`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute). The [`id`](/en-US/docs/Web/HTML/Global_attributes/id)s provided for `aria-describedby` should correspond to parent elements intended to be the rows and columns.
+In situations where the table-style grouping of content does not provide information about the columns and rows, gridcells must have their positions programmatically described by using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby). The [`id`](/en-US/docs/Web/HTML/Global_attributes/id)s provided for `aria-describedby` should correspond to parent elements intended to be the rows and columns.
 
 By referencing the parent elements with roles of [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowheader_role) or [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role) applied to them via `aria-describedby`, it allows assistive technology to understand the position and relationship of the `gridcell` element to the rest of the table-style grouping of content.
 
@@ -82,7 +82,7 @@ Both `<td>` elements and elements with a role of `gridcell` applied to them can 
 <div role="gridcell" contenteditable="true">Item cost</div>
 ```
 
-`contenteditable` will make the element it is applied to focusable via the <kbd>Tab</kbd> key. If a gridcell is conditionally toggled into a state where editing is prohibited, toggle [[`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute) on the gridcell element.
+`contenteditable` will make the element it is applied to focusable via the <kbd>Tab</kbd> key. If a gridcell is conditionally toggled into a state where editing is prohibited, toggle [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) on the gridcell element.
 
 #### Expandable cells
 
