@@ -22,7 +22,7 @@ It may represent one of the following:
 
 - A time on a 24-hour clock.
 - A precise date in the {{interwiki("wikipedia", "Gregorian calendar")}} (with optional time and timezone information).
-- [A valid time duration](https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string).
+- [A valid time duration](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-duration-string).
 
 {{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}
 
