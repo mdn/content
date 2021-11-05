@@ -429,7 +429,7 @@ Unfortunately, there are no cache directives for clearing already-stored respons
 
 Imagine that clients/caches store a fresh response for a path, with no request flight to the server. There is nothing a server could do to that path.
 
-Alternatively, `Clear-Site-Data` can clear all cache from the browser. But be careful: that clears every stored response for a site — and only in browsers, not for a shared cache.
+Alternatively, `Clear-Site-Data` can clear a browser cache for a site. But be careful: that clears every stored response for a site — and only in browsers, not for a shared cache.
 
 ## Specifications
 
