@@ -365,7 +365,7 @@ Cache-Control: no-store
 
 ### Caching static assets with “cache busting”
 
-When you build static assets with versioning / hashing mechanisms, adding a version/hash to the filename or query string is a good way to manage caching.
+When you build static assets with versioning/hashing mechanisms, adding a version/hash to the filename or query string is a good way to manage caching.
 
 For example:
 
