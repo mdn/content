@@ -94,6 +94,7 @@ The following terms are used in this document; many but not all are from the spe
   - : The time since a response was generated. It is a criterion for whether a response is fresh or stale.
 
 ## Directives
+This section lists directives that affect caching — both response directives and request directives.
 
 ### Response Directives
 
