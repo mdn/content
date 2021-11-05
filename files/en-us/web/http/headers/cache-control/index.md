@@ -325,7 +325,7 @@ Cache-Control: min-fresh=600
 
 In the case above, if the response with `Cache-Control: max-age=3600` was stored in caches 51 minutes ago, the cache couldn't reuse that response.
 
-Clients could use this header when the user requires not only it's fresh but also it wouldn't update for a period of time.
+Clients can use this header when the user requires the response to not only be fresh, but also requires that it  won't be updated for a period of time.
 
 Note that the major browsers do not support requests with `min-fresh`.
 
