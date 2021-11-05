@@ -48,6 +48,8 @@ Firefox 95 is the current [Beta version of Firefox](https://www.mozilla.org/en-U
 
 #### Media, WebRTC, and Web Audio
 
+- {{domxref("SpeechSynthesisEvent.elapsedTime")}} now returns the elapsed time in seconds rather than milliseconds, matching an update to the specification (see {{bug(1732498)}}).
+
 #### Removals
 
 ### WebAssembly
