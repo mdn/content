@@ -15,24 +15,15 @@ browser-compat: api.SpeechSynthesisEvent.elapsedTime
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-The **`elapsedTime`** read-only property of the
-{{domxref("SpeechSynthesisUtterance")}} interface returns the elapsed time in seconds
-after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken that the
-event was triggered at.
+The **`elapsedTime`** read-only property of the {{domxref("SpeechSynthesisEvent")}} returns the elapsed time in seconds after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken that the [event](/en-US/docs/Web/API/SpeechSynthesisUtterance#events) was triggered.
 
-Chrome returns the value in milliseconds, while Safari may returns the value in
-seconds, so this may behave differently on different browsers.  Chrome is still using
-the original specification, while Safari is using the updated specification.
 
-## Syntax
+## Value
 
-```js
-event.elapsedTime;
-```
+A float containing the elapsed time, in seconds.
 
-### Value
-
-A float.
+> **Note:** Early versions of the specification required the elapsed time in milliseconds.
+> Check the [compatibility table](#browser_compatibility) below for your browser.
 
 ## Examples
 
