@@ -14,7 +14,7 @@ returns the top-level document object of the node.
 
 ## Value
 
-A {{domxref("Document")}} that isthe top-level object in which all the
+A {{domxref("Document")}} that is the top-level object in which all the
 child nodes are created.
 
 If this property is used on a node that is itself a document, the value is `null`.
