@@ -766,9 +766,14 @@ Note that JavaScript functions are themselves objects — like everything else i
 
 ## Custom objects
 
-> **Note:** For a more detailed discussion of object-oriented programming in JavaScript, see [Introduction to Object-Oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects).
+> **Note:** The content in this section does not cover modern JavaScript features, including support for [Classes](/en-US/docs/Web/JavaScript/Reference/Classes).
+> For a more detailed discussion of object-oriented programming in JavaScript, see [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) and [Details of the object model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
 
-In classic Object Oriented Programming, objects are collections of data and methods that operate on that data. JavaScript is a prototype-based language that contains no class statement (actually [it does](/en-US/docs/Web/JavaScript/Reference/Classes), but that's beyond the scope of this article), as you'd find in C++ or Java (this is sometimes confusing for programmers accustomed to languages with a class statement). Instead, JavaScript uses functions as classes. Let's consider a person object with first and last name fields. There are two ways in which the name might be displayed: as "first last" or as "last, first". Using the functions and objects that we've discussed previously, we could display the data like this:
+In classic object-oriented programming, objects are collections of data and methods that operate on that data.
+JavaScript uses functions as classes. 
+
+Let's consider a person object with first and last name fields.
+There are two ways in which the name might be displayed: as "first last" or as "last, first". Using the functions and objects that we've discussed previously, we could display the data like this:
 
 ```js
 function makePerson(first, last) {
