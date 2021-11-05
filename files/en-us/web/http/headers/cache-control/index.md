@@ -347,7 +347,7 @@ If you don’t want a response stored in caches, use the `no-store` directive.
 Cache-Control: no-store
 ```
 
-Note that `no-cache` means "it can be stored but don't reuse before validating", so it's not for preventing to store a response.
+Note that `no-cache` means "it can be stored but don't reuse before validating" — so it's not for preventing a response from being stored.
 
 ```plain example-bad
 Cache-Control: no-cache
