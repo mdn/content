@@ -62,7 +62,7 @@ This example checks if the first node inside the document element is a comment, 
 displays a message if not.
 
 ```js
-console node = document.documentElement.firstChild;
+const node = document.documentElement.firstChild;
 if (node.nodeType !== Node.COMMENT_NODE) {
   console.warn("You should comment your code!");
 }
