@@ -311,7 +311,7 @@ Cache-Control: max-stale=3600
 
 In the case above, if the response with `Cache-Control: max-age=604800` was stored on caches 3 hours ago, the cache couldn't reuse that response.
 
-Clients could use this header when the origin server is down or too slow and could accept cached responses from caches even if it's a bit old.
+Clients can use this header when the origin server is down or too slow and can accept cached responses from caches even if they are a bit old.
 
 Note that the major browsers do not support requests with `max-stale`.
 
