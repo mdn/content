@@ -137,5 +137,5 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
 
 - {{domxref("HTMLElement.blur")}} to remove the focus from an element.
 - {{domxref("document.activeElement")}} to know which is the currently focused element.
-- {{domxref("Element.focusin")}} Fired when an element is about to gain focus.
-- {{domxref("Element.focusout")}} Fired when an element is about to lose focus.
+- {{domxref("Element/focusin_event", "focusin")}} Fired when an element is about to gain focus.
+- {{domxref("Element/focusout_event", "focusout")}} Fired when an element is about to lose focus.
