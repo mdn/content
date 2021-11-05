@@ -42,10 +42,6 @@ _No changes_
 
 - Web Animations API compositing operations are now enabled — see [`KeyframeEffect.composite`](/en-US/docs/Web/API/KeyframeEffect/composite) and [`KeyframeEffect.iterationComposite`](/en-US/docs/Web/API/KeyframeEffect/iterationComposite) ({{bug(1652676)}}).
 
-#### WebGL
-
-- The {{domxref("KHR_parallel_shader_compile")}} [WebGL extension](/en-US/docs/Web/API/WebGL_API/Using_Extensions) is now supported ({{bug(1536674)}}).
-
 #### Removals
 
 - The `outerHeight` and `outerWidth` features of [`Window.open()`](/en-US/docs/Web/API/Window/open) are no longer exposed to web content ({{bug(1623826)}}).
