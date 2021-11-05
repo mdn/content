@@ -202,9 +202,9 @@ The `must-understand` response directive indicates that a cache should store the
 Cache-Control: must-understand, no-store
 ```
 
-If the caches doesn't support `must-understand`, it will be ignored. If `no-store` is also present, the response isn't stored.
+If a cache doesn't support `must-understand`, it will be ignored. If `no-store` is also present, the response isn't stored.
 
-If the caches supports `must-understand`, it stores the response with an understanding of cache requirements based on its status code.
+If a cache supports `must-understand`, it stores the response with an understanding of cache requirements based on its status code.
 
 #### `no-transform`
 
