@@ -162,7 +162,7 @@ parent, {{DOMxRef("EventTarget")}}._
 
 ### Remove all children nested within a node
 
-This function remove each first child of an element, until there are non left.
+This function remove each first child of an element, until there are none left.
 
 ```js
 function removeAllChildren(element) {
