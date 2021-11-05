@@ -183,7 +183,7 @@ When calling `tabs.remove()`:
 
 #### web_accessible_resources
 
-- **In Firefox:** Resources are assigned a random UUID that changes for every instance of Firefox: `moz-extension://«random-UUID»/«path»`. This randomness can prevent you from doing a few things, such as add your specific extension's URL to another domain's CSP policy.
+- **In Firefox:** Resources are assigned a random {{Glossary("UUID")}} that changes for every instance of Firefox: `moz-extension://«random-UUID»/«path»`. This randomness can prevent you from doing a few things, such as add your specific extension's URL to another domain's CSP policy.
 - **In Chrome:** When a resource is listed in `web_accessible_resources`, it is accessible as `chrome-extension://«your-extension-id»/«path»`. The extension ID is fixed for a given extension.
 
 #### Manifest "key" property

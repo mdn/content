@@ -19,7 +19,7 @@ This article provides information about the changes in Firefox 69 that will af
 
 - [Event Listener Breakpoints](/en-US/docs/Tools/Debugger/Set_event_listener_breakpoints) let you diagnose which code a page executes in response to browser events. You can pick specific types, such as `click` or `keydown`, or whole categories of events, like all mouse input events. ({{bug(1526082)}}).
 - Scripts shown in the debugger's  [source list pane](/en-US/docs/Tools/Debugger/UI_Tour#source_list_pane) can now be saved via the _Download file_ context menu option ({{bug(888161)}}).
-- In the debugger's source list pane, loaded extensions are listed with their name, rather than just their UUID ({{bug(1486416)}}), making it much easier to find the extension code you want to debug.
+- In the debugger's source list pane, loaded extensions are listed with their name, rather than just their {{Glossary("UUID")}} ({{bug(1486416)}}), making it much easier to find the extension code you want to debug.
 - The debugger now loads significantly faster via lazy-loading scripts ({{bug(1527488)}}).
 
 #### Console
