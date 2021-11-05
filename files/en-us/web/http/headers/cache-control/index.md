@@ -194,7 +194,7 @@ If a request doesn’t have an `Authorization` header, or you are already using 
 
 #### `must-understand`
 
-The `must-understand` response directive indicates that caches should store the response only if it understands the requirements for caching based on status code.
+The `must-understand` response directive indicates that a cache should store the response only if it understands the requirements for caching based on status code.
 
 `must-understand` should be coupled with `no-store`, for fallback behavior.
 
