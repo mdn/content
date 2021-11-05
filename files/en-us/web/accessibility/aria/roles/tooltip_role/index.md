@@ -33,7 +33,7 @@ The tooltip is not considered a popup in terms of the the `aria-haspopup` proper
 
 Though a tooltip may appear and disapper, as it this appearance is automatic and not intentionally controlled by the user, the `aria-expanded` role is not supported. 
 
-The accessible name of a tooltip can come from the contents, or from an `aria-lable` or `aria-labelledby`.
+The accessible name of a tooltip can come from the contents, or from an `aria-label` or `aria-labelledby`.
 
 ### Associated WAI-ARIA roles, states, and properties
 
