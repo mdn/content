@@ -158,30 +158,24 @@ Then we build the CSS to implement the look and feel of our menu:
 ```css
 nav {
   display: flex;
-  padding: 12px;
-  background-color: #333;
+  gap: 0.5rem;
 }
 
 a {
-  width: 100px;
-  border: 1px solid #fff;
-  border-radius: 18px;
-  margin-right: 12px;
-  padding: 8px 12px;
+  flex: 1;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid;
+  padding: 0.5rem;
   text-align: center;
   text-decoration: none;
-  font: bold 12px Verdana;
-  color: #fff;
-  background-color: #333;
-  transition-property: color, background-color;
-  transition-duration: 1s;
-  transition-timing-function: ease-out;
+  transition: all 0.5s ease-out;
 }
 
 a:hover,
 a:focus {
-  color: #333;
   background-color: #fff;
+  color: #333;
 }
 ```
 
