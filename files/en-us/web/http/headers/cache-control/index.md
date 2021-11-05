@@ -243,7 +243,7 @@ Cache-Control: max-age=604800, stale-while-revalidate=86400
 
 In the example above, the response is fresh for 7 days (604800s). After 7 days, it becomes stale but the cache is allowed to reuse it for any requests that are made in the following day (86400s) — provided that they revalidate the response in the background.
 
-Revalidation will make the cache be fresh again, so it appears to clients that it was always fresh during that period -- effectively hiding the latency penalty of revalidation from them.
+Revalidation will make the cache be fresh again, so it appears to clients that it was always fresh during that period — effectively hiding the latency penalty of revalidation from them.
 
 If no request happened during that period, the cache became stale and the next request will revalidate normally.
 
