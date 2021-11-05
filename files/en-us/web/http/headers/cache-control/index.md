@@ -401,7 +401,7 @@ Use a long `max-age` to make sure that the HTML response itself is not cached. `
 Cache-Control: no-cache
 ```
 
-Note: If `index.html` is controlled under Basic / Digest Authentication, files under `/assets` are not stored in the shared cache. If `/assets/` files are suitable for storing in a shared cache, you also need one of `public`, `s-maxage` or `must-revalidate`.
+Note: If `index.html` is controlled under Basic Authentication or Digest Authentication, files under `/assets` are not stored in the shared cache. If `/assets/` files are suitable for storing in a shared cache, you also need one of `public`, `s-maxage` or `must-revalidate`.
 
 ### Up-to-date contents always
 
