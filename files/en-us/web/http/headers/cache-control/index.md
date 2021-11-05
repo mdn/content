@@ -335,7 +335,7 @@ Same meaning that `no-transform` has for a response, but for a request instead.
 
 ### `only-if-cached`
 
-The client indicates for caches to obtain an already-cached response. If caches has stored a response, it’s reused.
+The client indicates that cache should obtain an already-cached response. If a cache has stored a response, it’s reused.
 
 ## Use Cases
 
