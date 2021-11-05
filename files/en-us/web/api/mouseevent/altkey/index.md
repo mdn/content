@@ -13,32 +13,20 @@ browser-compat: api.MouseEvent.altKey
 ---
 {{APIRef("DOM Events")}}
 
-The **`MouseEvent.altKey`** read-only property is a
-boolean value that indicates whether the <kbd>alt</kbd> key was pressed or not
-when a given mouse event occurs.
+The **`MouseEvent.altKey`** read-only property is a boolean value that indicates whether the <kbd>alt</kbd> key was pressed or not when a given mouse event occurs.
 
-Be aware that the browser can't always detect the <kbd>alt</kbd> key on some operating
-systems. On some Linux variants, for example, a left mouse click combined with
-the <kbd>alt</kbd> key is used to move or resize windows.
+Be aware that the browser can't always detect the <kbd>alt</kbd> key on some operating systems.
+On some Linux variants, for example, a left mouse click combined with the <kbd>alt</kbd> key is used to move or resize windows.
 
-> **Note:** On Macintosh keyboards, this key is also known as
-> the <kbd>option</kbd> key.
+> **Note:** On Macintosh keyboards, this key is also known as the <kbd>option</kbd> key.
 
-## Syntax
+## Value
 
-```js
-var altKeyPressed = instanceOfMouseEvent.altKey
-```
-
-### Return value
-
-A boolean value, where `true` indicates that the key is pressed, and
-`false` indicates that the key is _not_ pressed.
+A boolean value, where `true` indicates that the key is pressed, and `false` indicates that the key is _not_ pressed.
 
 ## Example
 
-This example logs the `altKey` property when you trigger a
-{{Event("click")}} event.
+This example logs the `altKey` property when you trigger a {{Event("click")}} event.
 
 ### HTML
 

@@ -16,26 +16,16 @@ browser-compat: api.MouseEvent.movementX
 ---
 {{APIRef("DOM Events")}}
 
-The **`movementX`** read-only property of the
-{{domxref("MouseEvent")}} interface provides the difference in the X coordinate of the
-mouse pointer between the given event and the previous {{event("mousemove")}} event. In
-other words, the value of the property is computed like this:
-`currentEvent.movementX = currentEvent.screenX - previousEvent.screenX`.
+The **`movementX`** read-only property of the {{domxref("MouseEvent")}} interface provides the difference in the X coordinate of the mouse pointer between the given event and the previous {{event("mousemove")}} event.
+In other words, the value of the property is computed like this: `currentEvent.movementX = currentEvent.screenX - previousEvent.screenX`.
 
-## Syntax
+## Value
 
-```js
-var xShift = instanceOfMouseEvent.movementX;
-```
-
-### Return value
-
-A number
+A number.
 
 ## Example
 
-This example logs the amount of mouse movement using `movementX` and
-{{domxref("MouseEvent.movementY", "movementY")}}.
+This example logs the amount of mouse movement using `movementX` and {{domxref("MouseEvent.movementY", "movementY")}}.
 
 ### HTML
 
