@@ -228,8 +228,8 @@ A modern best practice for static resources is to include version/hashes in thei
 <script src=https://example.com/react.0.0.0.js></script>
 ```
 
-When a user reloads the browser, browsers will send conditional requests for validating to the origin server. But it's not necessary to revalidate these kinds of static resources even when a user reloads the browser, because they're never modified.
-`immutable` tells caches that its response is immutable while it's fresh, and avoids these kinds of unnecessary conditional requests to the server.
+When a user reloads the browser, the browser will send conditional requests for validating to the origin server. But it's not necessary to revalidate those kinds of static resources even when a user reloads the browser, because they're never modified.
+`immutable` tells a cache that the response is immutable while it's fresh, and avoids those kinds of unnecessary conditional requests to the server.
 
 When you use a cache-busting pattern for resources and apply them to a long `max-age`, you can also add `immutable` to avoid revalidation.
 
