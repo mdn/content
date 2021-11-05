@@ -11,7 +11,7 @@ browser-compat: css.selectors.first-line
 ---
 {{CSSRef}}
 
-The **`::first-line`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the first line of a [block-level element](/en-US/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes). Note that the length of the first line depends on many factors, including the width of the element, the width of the document, and the font size of the text.
+The **`::first-line`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the first line of a [block-level element](/en-US/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes), but only when not preceded by other content (such as images or inline tables). Note that the length of the first line depends on many factors, including the width of the element, the width of the document, and the font size of the text.
 
 ```css
 /* Selects the first line of a <p> */
