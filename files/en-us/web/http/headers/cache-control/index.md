@@ -271,7 +271,7 @@ Cache-Control: no-cache
 
 `no-cache` allows clients to request the most up-to-date response even if the cache has a fresh response.
 
-Browser usually add `no-cache` to requests when users are **force reloading** a page.
+Browsers usually add `no-cache` to requests when users are **force reloading** a page.
 
 ### `no-store`
 
