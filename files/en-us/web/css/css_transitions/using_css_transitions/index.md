@@ -142,8 +142,6 @@ div {
 
 A common use of CSS is to highlight items in a menu as the user hovers the mouse cursor over them. It's easy to use transitions to make the effect even more attractive.
 
-Before we look at code snippets, you might want to take a look at the [live demo](https://codepen.io/anon/pen/WOEpva) (assuming your browser supports transitions).
-
 First, we set up the menu using HTML:
 
 ```html
@@ -155,13 +153,29 @@ First, we set up the menu using HTML:
 </nav>
 ```
 
-Then we build the CSS to implement the look and feel of our menu. The relevant portions are shown here:
+Then we build the CSS to implement the look and feel of our menu:
 
 ```css
+nav {
+  display: flex;
+  padding: 12px;
+  background-color: #333;
+}
+
 a {
+  width: 100px;
+  border: 1px solid #fff;
+  border-radius: 18px;
+  margin-right: 12px;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  font: bold 12px Verdana;
   color: #fff;
   background-color: #333;
-  transition: all 1s ease-out;
+  transition-property: color, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
 }
 
 a:hover,
@@ -171,7 +185,9 @@ a:focus {
 }
 ```
 
-This CSS establishes the look of the menu, with the background and text colors both changing when the element is in its {{cssxref(":hover")}} and {{cssxref(":focus")}} states.
+This CSS establishes the look of the menu, with the background and text colors both changing when the element is in its {{cssxref(":hover")}} and {{cssxref(":focus")}} states:
+
+{{EmbedLiveSample("Using transitions when highlighting menus")}}
 
 ## JavaScript examples
 
