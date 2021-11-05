@@ -14,7 +14,7 @@ browser-compat: api.IDBDatabase.createObjectStore
 {{ APIRef("IndexedDB") }}
 
 The **`createObjectStore()`** method of the
-{{domxref("IDBDatabase")}} interface creates and returns a new object store or index.
+{{domxref("IDBDatabase")}} interface creates and returns a new {{domxref("IDBObjectStore")}}.
 
 The method takes the name of the store as well as a parameter object that lets you
 define important optional properties. You can use the property to uniquely identify
