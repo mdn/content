@@ -16,7 +16,7 @@ The `aria-invalid` state indicates the entered value does not conform to the for
 
 The `aria-invalid` attribute is used to indicate that the value entered into an input field is not in a format or a value the application will accept. This may include formats such as email addresses or telephone numbers. `aria-invalid` can also be used to indicate that a required field is empty.
 
-The `aria-invalid` attribute is not limited to elements that have an ARIA role assigned and can be used with any typical HTML form element.
+The `aria-invalid` attribute can be used with any typical HTML form element, and is not limited to elements that have an ARIA role assigned.
 
 The attribute should be set with JavaScript as a result of a validation process. If a value is determined to be invalid or out-of-range, set `aria-invalid="true"` **and** tell the user there is an error. For better user experience, provide suggestions for how the error can be corrected. Do not set `aria-invalid="true"` on empty required elements until after the user attempts to submit the form. They may still be working on filling it out.
 
