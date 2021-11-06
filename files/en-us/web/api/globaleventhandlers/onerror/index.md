@@ -37,7 +37,7 @@ Function parameters:
 - `source`: URL of the script where the error was raised (string)
 - `lineno`: Line number where error was raised (number)
 - `colno`: Column number for the line where the error occurred (number)
-- `error`: [Error Object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) (object)
+- `error`: [Error Object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) (object). May be `null` if no corresponding Error Object is available.
 
 When the function returns `true`, this prevents the firing of the default event handler.
 
