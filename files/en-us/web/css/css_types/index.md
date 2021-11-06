@@ -44,7 +44,7 @@ These types include keywords and identifiers as well as strings, and urls.
 - `<string>`
   - : A quoted string, such as used for a value of the {{cssxref("content")}} property. See more information on the {{cssxref("&lt;string&gt;")}} type.
 - `<url>`
-  - : A pointer to a resource, for example as the value of {{cssxref("background-image")}}. See more information on the {{cssxref("&lt;url&gt;")}} page.
+  - : A pointer to a resource, for example as the value of {{cssxref("background-image")}}. See more information on the {{cssxref("url")}} page.
 
 ## Numeric data types
 
