@@ -135,7 +135,7 @@ To do this, you must have the `"webRequestBlocking"` API permission as well as t
 
 {{Compat}}
 
-[Extra notes on Chrome incompatibilities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webrequest_incompatibilities).
+[Additional notes on Chrome incompatibilities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webrequest_api).
 
 {{WebExtExamples("h2")}}
 
