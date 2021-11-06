@@ -302,8 +302,9 @@ btn.addEventListener('click', function() {
     if (splitContact[0].toLowerCase() === searchName) {
       para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
       break;
-    } else if (i === contacts.length-1)
+    } else if (i === contacts.length-1) {
       para.textContent = 'Contact not found.';
+    }
   }
 });
 ```
