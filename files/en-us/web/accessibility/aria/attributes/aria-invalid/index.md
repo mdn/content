@@ -34,7 +34,7 @@ If there is a {{htmlattrxref("required")}} attribute on a form control that isn'
 <input type="number" step="2" min="0" max="100" required>
 ```
 
-If that form had a [number input type](/en-US/docs/Web/HTML/Element/input/number) and the user had entered a value above the maximum, below the minimum, or that doesn't match the step value, an error message would appear. For the input above, if the user had entered "3", the native error message would be similar to "Please enter a valid value. The two nearest valid values are 2 and 4."  
+If the user had entered a value in the preceding input example above the maximum, below the minimum, or that doesn't match the step value, an error message would appear. If the user had entered "3", the native error message would be similar to "Please enter a valid value."  
 
 The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so." If you use native form controls, the `aria-invalid` attribute isn't needed. In addition to native form validation, we get access to the {{CSSXRef(':invalid')}} pseudoclass and other [UI-Pseudoclasses](/en-US/docs/Learn/Forms/UI_pseudo-classes) for free. 
 
