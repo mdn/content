@@ -21,21 +21,13 @@ browser-compat: webextensions.manifest.chrome_settings_overrides
       <th scope="row">Mandatory</th>
       <td>No</td>
     </tr>
-  </tbody>
-</table>
-
-Use the `chrome_settings_overrides` key to override certain browser settings. Two settings are available:
-
-- `"homepage"`, which enables you to override the browser's home page.
-- `"search_provider"`, which enables you to add a new search engine.
-
-```json
+  <tr>
+      <th scope="row">Example</th>
+      <td><pre class="brush:json">
 "chrome_settings_overrides" : {
-  "homepage": "https://developer.mozilla.org/"
-}
-```
-
-```json
+"homepage": "https://developer.mozilla.org/"
+ },
+ {
 "chrome_settings_overrides": {
   "search_provider": {
     "name": "Discogs",
@@ -44,7 +36,16 @@ Use the `chrome_settings_overrides` key to override certain browser settings. Tw
     "favicon_url": "https://www.discogs.com/favicon.ico"
   }
 }
-```
+}
+</pre></td>
+    </tr>
+  </tbody>
+</table>
+
+Use the `chrome_settings_overrides` key to override certain browser settings. Two settings are available:
+
+- `"homepage"`, which enables you to override the browser's home page.
+- `"search_provider"`, which enables you to add a new search engine.
 
 ## Syntax
 
