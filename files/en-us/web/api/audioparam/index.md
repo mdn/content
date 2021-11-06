@@ -35,7 +35,7 @@ A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whol
 ## Properties
 
 - {{domxref("AudioParam.defaultValue")}} {{readonlyInline}}
-  - : Represents the initial volume of the attribute as defined by the specific {{domxref("AudioNode")}} creating the `AudioParam`.
+  - : Represents the initial value of the attribute as defined by the specific {{domxref("AudioNode")}} creating the `AudioParam`.
 - {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
   - : Represents the maximum possible value for the parameter's nominal (effective) range.
 - {{domxref("AudioParam.minValue")}} {{readonlyinline}}
