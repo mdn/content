@@ -8,6 +8,19 @@ tags:
 ---
 A parameter is a named variable passed into a {{Glossary("function")}}. Parameter variables are used to import {{Glossary("argument","arguments")}} into functions.
 
+For example:
+
+```js
+function example(parameter) {
+  console.log(parameter); // Output = foo
+}
+
+const argument = 'foo';
+
+example(argument);
+```
+
+
 Note the difference between _parameters_ and _arguments_:
 
 - Function parameters are the names listed in the function's definition.
