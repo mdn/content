@@ -10,7 +10,7 @@ A parameter is a named variable passed into a {{Glossary("function")}}. Paramete
 
 Example:
 
-```JavaScript
+```js
 function example(parameter) {
   console.log(parameter); // Output = foo
 }
