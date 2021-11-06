@@ -26,7 +26,7 @@ The `aria-haspopup` state informs assistive technology users that there is a pop
 
 > **Note:** ARIA does not enable accessible functionality. ARIA only conveys the intended behavior of your functionality.
 
-When creating a [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menubar_role), a parent [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitem_role) should have `aria-haspopup="menu"` (or `true`) set. Any button that open a menu should have a role of [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/Button_role) or, preferably, be a {{HTMLElement('button')}}, and also have `aria-haspopup="menu"` (or `true`) set. [`Tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role) elements with popup menus should also have `aria-haspopup="menu"` set.
+When creating a [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menubar_role), a parent [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitem_role) should have `aria-haspopup="menu"` (or `true`) set. Any button that open a menu should have a role of [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/Button_role) or, preferably, be a {{HTMLElement('button')}}, and also have `aria-haspopup="menu"` (or `true`) set. [`Tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role) elements with popup menus should also have `aria-haspopup="menu"` set. Note that `menubar`s should not be used to create website navigation.
 
 > **Note:** Elements with role [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/Combobox_role) have an implicit `aria-haspopup` value of `listbox`.
 
