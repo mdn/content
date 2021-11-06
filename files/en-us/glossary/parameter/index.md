@@ -8,7 +8,7 @@ tags:
 ---
 A parameter is a named variable passed into a {{Glossary("function")}}. Parameter variables are used to import {{Glossary("argument","arguments")}} into functions.
 
-Example:
+For example:
 
 ```js
 function example(parameter) {
