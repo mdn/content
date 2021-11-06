@@ -304,7 +304,7 @@ btn.addEventListener('click', function() {
       break;
     } else if (i === contacts.length-1) {
       para.textContent = 'Contact not found.';
-      }
+    }
   }
 });
 ```
