@@ -122,24 +122,25 @@ main window.
 
 ### Popup feature
 
-`windowFeatures` can be used to explicitly request the browser to use a popup window,
-that has minimal UI parts, for the new secondary window.
+`windowFeatures` can be used to explicitly request that the browser use a popup window
+with minimal UI parts for the new secondary window.
 
-Whether or not to use a popup window affects {{domxref("BarProp.visible")}} value.
+Whether or not to use a popup window affects the {{domxref("BarProp.visible")}} value.
 
-> **Note:** In some browsers, users can configure not to use a popup window.  Also, some
+> **Note:** In some browsers, users can configure the browser to not to use a popup window.  Also, some
 > browsers, such as mobile browsers, don't have the concept of windows.
 
-The feature can be set to `yes` or `1`, or just be present to be on. Set them to
-`no` or `0`, or in most cases just omit them, to be off.
+To enable the feature, specify `popup` either with no value at all, or else set it to `yes` or `1`.
 
 Example: `popup=yes`, `popup=1`, and `popup` have identical results.
 
+To disable the feature, ether don’t specify it all all (omit it), or else set it to `no` or `0`.
+
 - `popup`
 
-  - : If this feature is present and on, it requests the browser to use a minimal pop-up
+  - : If this feature is present and enabled, it requests that the browser use a minimal pop-up
       window for the new secondary window.
-      If this feature is present and off, it requests the browser not to use minimal
+      If this feature is not present, or is present and disabled, it requests that the browser not use a minimal
       pop-up window for the secondary window.
 
 ### Position and size features
