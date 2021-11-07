@@ -134,7 +134,7 @@ Whether or not to use a popup window affects the {{domxref("BarProp.visible")}} 
 
   - : If this feature is present and enabled, it requests that the browser use a minimal pop-up
       window for the new secondary window.
-      If this feature is not present, or is present and disabled, it requests that the browser not use a minimal
+      If this feature is present and disabled, it requests that the browser not use a minimal
       pop-up window for the secondary window.
 
 To enable the feature, specify `popup` either with no value at all, or else set it to `yes` or `1`.
