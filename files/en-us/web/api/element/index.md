@@ -213,7 +213,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
 - {{DOMxRef("Element.getAnimations()")}} {{Experimental_Inline}}
   - : Returns an array of Animation objects currently active on the element.
 - {{DOMxRef("Element.getAttribute()")}}
-  - : Retrieves the value of the named attribute from the current node and returns it as an {{jsxref("Object")}}.
+  - : Retrieves the value of the named attribute from the current node and returns it as a string.
 - {{DOMxRef("Element.getAttributeNames()")}}
   - : Returns an array of attribute names from the current element.
 - {{DOMxRef("Element.getAttributeNode()")}}
@@ -221,7 +221,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
 - {{DOMxRef("Element.getAttributeNodeNS()")}}
   - : Retrieves the node representation of the attribute with the specified name and namespace, from the current node and returns it as an {{DOMxRef("Attr")}}.
 - {{DOMxRef("Element.getAttributeNS()")}}
-  - : Retrieves the value of the attribute with the specified name and namespace, from the current node and returns it as an {{jsxref("Object")}}.
+  - : Retrieves the value of the attribute with the specified namespace and name from the current node and returns it as a string.
 - {{DOMxRef("Element.getBoundingClientRect()")}}
   - : Returns the size of an element and its position relative to the viewport.
 - {{domxref("Element.getBoxQuads()")}} {{experimental_inline}}
