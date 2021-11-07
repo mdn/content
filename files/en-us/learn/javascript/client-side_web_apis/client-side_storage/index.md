@@ -304,7 +304,7 @@ Now let's look at what we have to do in the first place, to actually set up a da
 
     To handle this in IndexedDB, you create a request object (which can be called anything you like — we called it `request` so it is obvious what it is for). You then use event handlers to run code when the request completes, fails, etc., which you'll see in use below.
 
-    > **Note:** The version number is important. If you want to upgrade your database (for example, by changing the table structure), you have to run your code again with an increased version number, different schema specified inside the `onupgradeneeded` handler (see below), etc. We won't cover upgrading databases in this simple tutorial.
+    > **Note:** The version number is important. If you want to upgrade your database (for example, by changing the table structure), you have to run your code again with an increased version number, different schema specified inside the `onupgradeneeded` handler (see below), etc. We won't cover upgrading databases in this simple tutorial. However, try using higher version numbers if your browser throws the following error: `Uncaught DOMException: IDBDatabase.transaction: ‘notes_os’ is not a known object store name`.
 
 4.  Now add the following event handlers just below your previous addition — again inside the `window.onload` handler:
 
