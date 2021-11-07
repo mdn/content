@@ -46,7 +46,7 @@ By default, some roles are hidden or collapsed and other roles are open or expan
 ```html
 <label for="username">Username</label>
 <input id="username" name="username" aria-describedby="username-desc">
-<button aria-expanded="false" aria-controls="username-desc" aria-label="Help about username">
+<button aria-expanded="false" aria-controls="username-desc" aria-label="Help about username" type="button">
   <span aria-hidden="true">?</span>
 </button>
 <p id="username-desc" hidden>
