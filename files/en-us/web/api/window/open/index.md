@@ -122,7 +122,7 @@ main window.
 
 ### Popup feature
 
-The _windowFeatures_ features parameter can be used to explicitly request that the browser use a popup window
+The _windowFeatures_ parameter can be used to explicitly request that the browser use a popup window
 with minimal UI parts for the new secondary window.
 
 Whether or not to use a popup window affects the {{domxref("BarProp.visible")}} value.
