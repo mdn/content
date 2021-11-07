@@ -60,7 +60,7 @@ An `unsigned short` representing the type of the value. Possible values are:
       <td><code>CSS_COUNTER</code></td>
       <td>
         The value is a
-        <a href="/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters"
+        <a href="/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters"
           >counter or counters</a
         >
         function. The value can be obtained by using the

@@ -40,7 +40,7 @@ _Inherits properties from its parent, `{{DOMxRef("CSSValue")}}`_.
     | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
     | `CSS_ATTR`       | The value is an {{CSSxRef("attr()")}} function. The value can be obtained by using the `getStringValue()` method.                                                         |
     | `CSS_CM`         | The value is a {{CSSxRef("&lt;length&gt;")}} in centimeters. The value can be obtained by using the `getFloatValue()` method.                                         |
-    | `CSS_COUNTER`    | The value is a [counter or counters](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) function. The value can be obtained by using the `getCounterValue()` method. |
+    | `CSS_COUNTER`    | The value is a [counter or counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) function. The value can be obtained by using the `getCounterValue()` method. |
     | `CSS_DEG`        | The value is an {{CSSxRef("&lt;angle&gt;")}} in degrees. The value can be obtained by using the `getFloatValue()` method.                                                |
     | `CSS_DIMENSION`  | The value is a {{CSSxRef("&lt;number&gt;")}} with an unknown dimension. The value can be obtained by using the `getFloatValue()` method.                              |
     | `CSS_EMS`        | The value is a {{CSSxRef("&lt;length&gt;")}} in em units. The value can be obtained by using the `getFloatValue()` method.                                            |
@@ -68,7 +68,7 @@ _Inherits properties from its parent, `{{DOMxRef("CSSValue")}}`_.
 ## Methods
 
 - {{DOMxRef("CSSPrimitiveValue.getCounterValue()")}}
-  - : This method is used to get the [counter](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) value. If this CSS value doesn't contain a counter value, a {{DOMxRef("DOMException")}} is raised. Modification to the corresponding style property can be achieved using the {{DOMxRef("Counter")}} interface.
+  - : This method is used to get the [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) value. If this CSS value doesn't contain a counter value, a {{DOMxRef("DOMException")}} is raised. Modification to the corresponding style property can be achieved using the {{DOMxRef("Counter")}} interface.
 - {{DOMxRef("CSSPrimitiveValue.getFloatValue()")}}
   - : This method is used to get a float value in a specified unit. If this CSS value doesn't contain a float value or can't be converted into the specified unit, a {{DOMxRef("DOMException")}} is raised.
 - {{DOMxRef("CSSPrimitiveValue.getRGBColorValue()")}}

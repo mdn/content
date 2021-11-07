@@ -498,7 +498,7 @@
 /en-US/docs/CSS/Class_selectors	/en-US/docs/Web/CSS/Class_selectors
 /en-US/docs/CSS/Comments	/en-US/docs/Web/CSS/Comments
 /en-US/docs/CSS/Common_CSS_Questions	/en-US/docs/Learn/CSS/Howto/CSS_FAQ
-/en-US/docs/CSS/Counters	/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/en-US/docs/CSS/Counters	/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /en-US/docs/CSS/Currentcolor	/en-US/docs/Web/CSS/color_value#currentcolor_keyword
 /en-US/docs/CSS/Descendant_selectors	/en-US/docs/Web/CSS/Descendant_combinator
 /en-US/docs/CSS/Draft_Implementations_of_CSS_Features	/en-US/docs/Web/CSS/Mozilla_Extensions
@@ -1121,7 +1121,7 @@
 /en-US/docs/CSS:z-index	/en-US/docs/Web/CSS/z-index
 /en-US/docs/CSSOM	/en-US/docs/Web/API/CSS_Object_Model
 /en-US/docs/CSSUnitValue	/en-US/docs/Web/API/CSSUnitValue/CSSUnitValue
-/en-US/docs/CSS_Counters	/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/en-US/docs/CSS_Counters	/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /en-US/docs/CSS_Reference	/en-US/docs/Web/CSS/Reference
 /en-US/docs/CSS_Reference/Draft_Implementations_of_CSS_Features	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/CSS_Reference/Draft_Implementations_of_CSS_Features_in_Mozilla	/en-US/docs/Web/CSS/Mozilla_Extensions
@@ -10020,6 +10020,7 @@
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry	/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Realising_common_layouts_using_CSS_Grid_	/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout_	/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
+/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_Concepts_of_Logical_Properties_and_Values	/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts
 /en-US/docs/Web/CSS/CSS_Logical_Properties/Logical_Properties_for_Sizing	/en-US/docs/Web/CSS/CSS_Logical_Properties/Sizing
 /en-US/docs/Web/CSS/CSS_Logical_Properties/Logical_properties_for_floating_and_positioning	/en-US/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning
@@ -10527,7 +10528,7 @@
 /en-US/docs/Web/Guide/CSS	/en-US/docs/Learn/CSS
 /en-US/docs/Web/Guide/CSS/CSS_Image_Sprites	/en-US/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
 /en-US/docs/Web/Guide/CSS/Consistent_list_indentation	/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
-/en-US/docs/Web/Guide/CSS/Counters	/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/en-US/docs/Web/Guide/CSS/Counters	/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /en-US/docs/Web/Guide/CSS/Flexible_boxes	/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /en-US/docs/Web/Guide/CSS/Getting_started	/en-US/docs/Learn/CSS/First_steps
 /en-US/docs/Web/Guide/CSS/Getting_started/Boxes	/en-US/docs/Learn/CSS/Building_blocks
@@ -11713,8 +11714,8 @@
 /en-US/docs/concat	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat
 /en-US/docs/const	/en-US/docs/Web/JavaScript/Reference/Statements/const
 /en-US/docs/counter	/en-US/docs/Web/CSS/counter()
-/en-US/docs/counters	/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
-/en-US/docs/counters-redirect-1	/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+/en-US/docs/counters	/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
+/en-US/docs/counters-redirect-1	/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /en-US/docs/createAttribute	/en-US/docs/Web/API/Document/createAttribute
 /en-US/docs/createCaption	/en-US/docs/Web/API/HTMLTableElement/createCaption
 /en-US/docs/createTFoot	/en-US/docs/Web/API/HTMLTableElement/createTFoot
