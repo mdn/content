@@ -50,11 +50,10 @@ var window = window.open(url, windowName, [windowFeatures]);
 
 - `windowFeatures` {{optional_inline}}
   - : A {{domxref("DOMString")}} containing a comma-separated list of window features
-    given with their corresponding values in the form "name=value". These features include
-    options such as the window's default size and position, whether or not to include
-    toolbar, and so forth. There must be no whitespace in the string. See
-    {{anch("Window features")}} below for documentation of each of the features that can
-    be specified.
+    given with their corresponding values in the form "name=value", or "name" for boolean feature. These
+    features include options such as the window's default size and position, whether or
+    not to open a minimal-popup window, and so forth. See {{anch("Window features")}}
+    below for documentation of each of the features that can be specified.
 
 ### Return value
 
@@ -82,7 +81,7 @@ creation and the loading of the referenced resource are done asynchronously.
 
 ```js
 var windowObjectReference;
-var windowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
+var windowFeatures = "popup";
 
 function openRequestedPopup() {
   windowObjectReference = window.open("http://www.cnn.com/", "CNN_WindowName", windowFeatures);
@@ -96,7 +95,7 @@ function openRequestedPopup() {
   windowObjectReference = window.open(
     "http://www.domainname.ext/path/ImageFile.png",
     "DescriptiveWindowName",
-    "resizable,scrollbars,status"
+    "left=100,top=100,width=320,heigth=320"
   );
 }
 ```
@@ -121,15 +120,36 @@ parameter is not provided (or if the `windowFeatures` parameter is
 an empty string), then the new secondary window will render the default toolbars of the
 main window.
 
-> **Note:** In some browsers, users can override the
-> `windowFeatures` settings and enable (or prevent the disabling
-> of) features. Further, control of some window features is available only on some browsers
-> and platforms (See [popup condition](#popup_condition) section)
+### Popup feature
+
+`windowFeatures` can be used to explicitly request the browser to use a popup window,
+that has minimal UI parts, for the new secondary window.
+
+Whether or not to use a popup window affects {{domxref("BarProp.visible")}} value.
+
+> **Note:** In some browsers, users can configure not to use a popup window.  Also, some
+> browsers, such as mobile browsers, don't have the concept of windows.
+
+The feature can be set to `yes` or `1`, or just be present to be on. Set them to
+`no` or `0`, or in most cases just omit them, to be off.
+
+Example: `popup=yes`, `popup=1`, and `popup` have identical results.
+
+- `popup`
+
+  - : If this feature is present and on, it requests the browser to use a minimal pop-up
+      window for the new secondary window.
+      If this feature is present and off, it requests the browser not to use minimal
+      pop-up window for the secondary window.
 
 ### Position and size features
 
-`windowFeatures` parameter can specify the position and size of
-the new window.
+`windowFeatures` parameter can specify the position and size of the new secondary window.
+If any of them are given, and the `popup` feature is not given, it requests the browser
+to use a minimal pop-up window for the secondary window.
+
+> **Note:** In some browsers, users can override the behavior. Also this has no effect on
+> the mobile browsers without the concept of windows.
 
 [Note on position and
 dimension error correction](#note_on_position_and_dimension_error_correction)
@@ -178,31 +198,15 @@ If the `windowFeatures` parameter is non-empty and no size
 features are defined, then the new window dimensions will be the same as the dimensions
 of the most recently rendered window.
 
-### Browser-dependent size features
-
-> **Warning:** Do not use them.
-
-- `outerWidth` {{deprecated_inline}} (only on Firefox, obsolete from Firefox 80)
-  - : Specifies the width of the whole browser window in pixels. This
-    `outerWidth` value includes the window vertical scrollbar (if present) and
-    left and right window resizing borders.
-- `outerHeight` {{deprecated_inline}} (only on Firefox, obsolete from Firefox 80)
-  - : Specifies the height of the whole browser window in pixels. This
-    `outerHeight` value includes any/all present toolbar, window horizontal
-    scrollbar (if present) and top and bottom window resizing borders. Minimal required
-    value is 100.
-
 ### Toolbar and UI parts features
 
-> **Warning:** In modern browsers (Firefox 76 or newer, Google Chrome, Safari, Chromium Edge), the
+> **Warning:** These features are kept only for backward compatibility.
+> In modern browsers (Firefox 76 or newer, Google Chrome, Safari, Chromium Edge), the
 > following features are just a condition for whether to open popup or not. See [popup condition](#popup_condition) section.
 
-The following features control the visibility of each UI parts, All features can be set
-to `yes` or `1`, or just be present to be on. Set them to
-`no` or `0`, or in most cases just omit them, to be off.
-
-Example: `status=yes`, `status=1`, and `status` have
-identical results.
+The following features control the visibility of each UI parts, these features can also
+be set to `yes` or `1`, or just be present to be on. Set them to `no` or `0`, or in most
+cases just omit them, to be off.
 
 - `menubar`
 
@@ -305,7 +309,7 @@ function openFFPromotionPopup() {
 
   {
     windowObjectReference = window.open("http://www.spreadfirefox.com/",
-   "PromoteFirefoxWindowName", "resizable,scrollbars,status");
+   "PromoteFirefoxWindowName", "popup");
     /* then create it. The new window will be created and
        will be brought on top of any other window. */
   }
@@ -357,8 +361,7 @@ var windowObjectReference = null; // global variable
 
 function openRequestedPopup(url, windowName) {
   if(windowObjectReference == null || windowObjectReference.closed) {
-    windowObjectReference = window.open(url, windowName,
-           "resizable,scrollbars,status");
+    windowObjectReference = window.open(url, windowName, "popup");
   } else {
     windowObjectReference.focus();
   };
@@ -387,10 +390,10 @@ var PreviousUrl; /* global variable that will store the
 function openRequestedSinglePopup(url) {
   if(windowObjectReference == null || windowObjectReference.closed) {
     windowObjectReference = window.open(url, "SingleSecondaryWindowName",
-         "resizable,scrollbars,status");
+         "popup");
   } else if(PreviousUrl != url) {
     windowObjectReference = window.open(url, "SingleSecondaryWindowName",
-      "resizable=yes,scrollbars=yes,status=yes");
+      "popup");
     /* if the resource to load is different,
        then we load it in the already opened secondary window and then
        we bring such window back on top/in front of its parent window. */
@@ -671,7 +674,7 @@ UI-related items of `windowFeatures` are used as a condition to
 whether opening a popup or a new tab, or a new window, and UI parts visibility of each
 of them is fixed.
 
-The condition is implementation-dependent and not guaranteed to be stable.
+The detailed condition is described in ["To check if a popup window is requested"](https://html.spec.whatwg.org/#popup-window-is-requested) section in the spec.
 
 ### Note on scrollbars
 
