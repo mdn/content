@@ -225,7 +225,7 @@ This `path()` function defines a pattern, associated generic class-based detail 
 urlpatterns = [
     path('', views.index, name='index'),
     path('books/', views.BookListView.as_view(), name='books'),
-    path('book/<int:pk>', views.BookDetailView.as_view(), name='book-detail'),
+    path('book/<int:pk>', views.BookDetailView.as_view(), name='book_detail'),
 ]
 ```
 
@@ -248,7 +248,7 @@ The pattern matching provided by `path()` is simple and useful for the (very com
 This method is used just like `path()` except that it allows you to specify a pattern using a [Regular expression](https://docs.python.org/3/library/re.html). For example, the previous path could have been written as shown below:
 
 ```python
-re_path(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book-detail'),
+re_path(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book_detail'),
 ```
 
 _Regular expressions_ are an incredibly powerful pattern mapping tool. They are, frankly, quite unintuitive and can be intimidating for beginners. Below is a very short primer!
