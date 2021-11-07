@@ -145,12 +145,13 @@ To disable the feature, ether don’t specify it all all (omit it), or else set 
 
 ### Position and size features
 
-`windowFeatures` parameter can specify the position and size of the new secondary window.
-If any of them are given, and the `popup` feature is not given, it requests the browser
-to use a minimal pop-up window for the secondary window.
+The _windowFeatures_ parameter can specify the position and size of the new secondary window,
+by specifying feature names either using _name=value_ pairs, or for boolean features, using just a _name_.
+If any feature names are given, and the `popup` feature name is not given, it requests that the browser
+use a minimal pop-up window for the secondary window.
 
-> **Note:** In some browsers, users can override the behavior. Also this has no effect on
-> the mobile browsers without the concept of windows.
+> **Note:** In some browsers, users can override this behavior. Also this also has no effect in
+> mobile browsers, which lack the concept of windows.
 
 [Note on position and
 dimension error correction](#note_on_position_and_dimension_error_correction)
