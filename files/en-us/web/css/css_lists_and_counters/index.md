@@ -25,7 +25,7 @@ tags:
 
 - [Consistent list indentation](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation)
   - : Explains how to achieve consistent list indentation across different browsers.
-- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
   - : Explains how to use the CSS counter properties to control list counters.
 
 ## Specifications

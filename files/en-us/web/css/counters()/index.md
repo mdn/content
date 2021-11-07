@@ -21,7 +21,7 @@ counters(countername, '-');
 counters(countername, '.', upper-roman)
 ```
 
-A [counter](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) has no visible effect by itself. The `counters()` function (and {{cssxref("counter", "counter()")}} function) is what makes it useful by returning developer defined content.
+A [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) has no visible effect by itself. The `counters()` function (and {{cssxref("counter", "counter()")}} function) is what makes it useful by returning developer defined content.
 
 > **Note:** The `counters()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.
 >
@@ -156,7 +156,7 @@ li::before {
 
 ## See also
 
-- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
 - {{cssxref("counter-set")}}
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-increment")}}
