@@ -10,7 +10,7 @@ tags:
   - Reference
 ---
 
-The global `aria-flowto` attribute identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion, allows assistive technology to override the general default of reading in document source order.
+The global `aria-flowto` attribute identifies the next element (or elements) in an alternate reading order of content. This allows assistive technology to override the general default of reading in document source order at the user's discretion.
 
 ## Description
 
