@@ -134,7 +134,12 @@ To enable the feature, specify `popup` either with no value at all, or else set 
 
 Example: `popup=yes`, `popup=1`, and `popup` have identical results.
 
-To disable the feature, ether don’t specify it all all (omit it), or else set it to `no` or `0`.
+Otherwise:
+
+* To not request a popup, omit the _windowFeatures_ parameter.
+* Otherwise:
+   * Specifying any features other than `noopener` or `noreferer` has the effect of also requesting a popup.
+   * Otherwise, no popup is requested.
 
 - `popup`
 
