@@ -370,7 +370,7 @@ When you build static assets with versioning/hashing mechanisms, adding a versio
 For example:
 
 ```html
-<!-- index.html —>
+<!-- index.html -->
 <script src=/assets/react.min.js></script>
 <img src=/assets/hero.png width=900 height=400>
 ```
@@ -380,7 +380,7 @@ The React library version will change when you update the library, and `hero.png
 In such a case, you could address the caching needs by using a specific, numbered version of the library, and including the hash of the picture in its URL.
 
 ```html
-<!-- index.html —>
+<!-- index.html -->
 <script src=/assets/react.0.0.0min.js></script>
 <img src=/assets/hero.png?hash=deadbeef width=900 height=400>
 ```
