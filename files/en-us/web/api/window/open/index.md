@@ -151,7 +151,7 @@ Otherwise:
 ### Position and size features
 
 You can use the _windowFeatures_ parameter to control the position and size of the new secondary window,
-by specifying feature names either using _name=value_ pairs, or for boolean features, using just a _name_.
+by specifying feature names using _name=value_ pairs.
 If any feature names are given, and the `popup` feature name is not given, it requests that the browser
 use a minimal pop-up window for the secondary window.
 
