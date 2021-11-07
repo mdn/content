@@ -150,7 +150,7 @@ by specifying feature names either using _name=value_ pairs, or for boolean feat
 If any feature names are given, and the `popup` feature name is not given, it requests that the browser
 use a minimal pop-up window for the secondary window.
 
-> **Note:** In some browsers, users can override this behavior. Also this also has no effect in
+> **Note:** In some browsers, users can override this behavior. Also, it has no effect in
 > mobile browsers, which lack the concept of windows.
 
 [Note on position and
