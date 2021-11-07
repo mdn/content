@@ -27,7 +27,7 @@ Along with alert, log, and marquee, the `timer` role is a live region and can be
 ### Associated WAI-ARIA roles, states, and properties
 
 - aria-label
-  - : Used to provide the name of the timer. Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`.	
+  - : Used to provide the name of the timer. Use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present, otherwise use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).	
 
 - aria-live
 
@@ -44,7 +44,7 @@ Along with alert, log, and marquee, the `timer` role is a live region and can be
 
 Some prominent web timers include clocks, stop watches and countdowns, such as ticketing websites, e-commerce sites, and event countdowns (see <https://countingdownto.com/>).
 
-As an illustration of `aria-atomic`, consider a site with a simple clock, showing hours and minutes. The clock is updated each minute, with the new remaining time overwriting the current content.
+As an illustration of [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic), consider a site with a simple clock, showing hours and minutes. The clock is updated each minute, with the new remaining time overwriting the current content.
 
 ```html
 <div id="clock" role="timer" aria-live="off">20</div>

@@ -5,7 +5,7 @@ tags:
   - ARIA
   - HTML
 ---
-The [gridcell role](https://www.w3.org/TR/wai-aria-1.1/#gridcell) is used to make a cell in a [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role) or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_role). It is intended to mimic the functionality of the HTML {{HTMLElement('td')}} element for table-style grouping of information.
+The [gridcell role](https://www.w3.org/TR/wai-aria-1.1/#gridcell) is used to make a cell in a [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role). It is intended to mimic the functionality of the HTML {{HTMLElement('td')}} element for table-style grouping of information.
 
 ```html
 <div role="gridcell">Potato</div>
@@ -13,7 +13,7 @@ The [gridcell role](https://www.w3.org/TR/wai-aria-1.1/#gridcell) is used to mak
 <div role="gridcell">Onion</div>
 ```
 
-Elements that have `role="gridcell"` applied to them must be the child of an element with a role of [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role).
+Elements that have `role="gridcell"` applied to them must be the child of an element with a role of [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role).
 
 ```html
 <div role="row">
@@ -38,9 +38,9 @@ The first rule of ARIA is if a native HTML element or attribute has the semantic
 
 Any element with a `role="gridcell"` applied to it should use ARIA to describe its order in the table-style grouping, provided the table, grid, or treegrid has the ability to have rows and/or columns dynamically added, hidden, or removed.
 
-Use `aria-colindex` to describe a `gridcell`'s order in the list of columns, and `aria-rowindex` to describe a gridcell's order in the list of rows. Use `aria-colcount` and `aria-rowcount` on the parent element with [`role="grid"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role) applied to it to set the total number of columns or rows.
+Use [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) to describe a `gridcell`'s order in the list of columns, and [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) to describe a gridcell's order in the list of rows. Use [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) and [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) on the parent element with [`role="grid"`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) applied to it to set the total number of columns or rows.
 
-This sample code demonstrates a table-style grouping of information where the third and fourth columns have been removed. `aria-colindex` is being used to describe the rows' position and allows a person using assistive technology to infer that certain rows have been removed:
+This sample code demonstrates a table-style grouping of information where the third and fourth columns have been removed. [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) is being used to describe the rows' position and allows a person using assistive technology to infer that certain rows have been removed:
 
 ```html
 <div role="grid" aria-colcount="6">
@@ -66,9 +66,9 @@ This sample code demonstrates a table-style grouping of information where the th
 
 ### Describing the position of gridcells when the overall structure is unknown
 
-In situations where the table-style grouping of content does not provide information about the columns and rows, gridcells must have their positions programmatically described by using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute). The [`id`](/en-US/docs/Web/HTML/Global_attributes/id)s provided for `aria-describedby` should correspond to parent elements intended to be the rows and columns.
+In situations where the table-style grouping of content does not provide information about the columns and rows, gridcells must have their positions programmatically described by using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby). The [`id`](/en-US/docs/Web/HTML/Global_attributes/id)s provided for `aria-describedby` should correspond to parent elements intended to be the rows and columns.
 
-By referencing the parent elements with roles of [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowheader_role) or [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role) applied to them via `aria-describedby`, it allows assistive technology to understand the position and relationship of the `gridcell` element to the rest of the table-style grouping of content.
+By referencing the parent elements with roles of [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) or [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) applied to them via `aria-describedby`, it allows assistive technology to understand the position and relationship of the `gridcell` element to the rest of the table-style grouping of content.
 
 ### Interactive grids and treegrids
 
@@ -82,11 +82,11 @@ Both `<td>` elements and elements with a role of `gridcell` applied to them can 
 <div role="gridcell" contenteditable="true">Item cost</div>
 ```
 
-`contenteditable` will make the element it is applied to focusable via the <kbd>Tab</kbd> key. If a gridcell is conditionally toggled into a state where editing is prohibited, toggle [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute) on the gridcell element.
+`contenteditable` will make the element it is applied to focusable via the <kbd>Tab</kbd> key. If a gridcell is conditionally toggled into a state where editing is prohibited, toggle [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) on the gridcell element.
 
 #### Expandable cells
 
-In a [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_role), gridcells may be made expandable by toggling the `aria-expanded` attribute. Note that if this attribute is provided, it applies only to the individual gridcell.
+In a [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), gridcells may be made expandable by toggling the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute. Note that if this attribute is provided, it applies only to the individual gridcell.
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
@@ -96,11 +96,11 @@ In a [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_role), gridcel
   - : Required to communicate the `gridcell` is part of a row of a table-style grouping of information.
 - `columnheader`
   - : Specifies which element is the associated column header.
-- `aria-colindex`
+- [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
   - : Identifies the position of an element in relation to the rest of the table-style grouping of information's columns.
 - `rowheader`
   - : Specifies which element is the associated row header.
-- `aria-rowindex`
+- [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
   - : Identifies the position of an element in relation to the rest of the table-style grouping of information's rows.
 
 ### Examples
@@ -151,13 +151,13 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 ## See also
 
 - [The Table element](/en-US/docs/Web/HTML/Element/table)
-- [ARIA: Grid role](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role)
+- [ARIA: Grid role](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
 - [Grid Role - Maxability](https://www.maxability.co.in/wai-aria-overview/grid-role/)
 - [The Table row element](/en-US/docs/Web/HTML/Element/tr)
-- [ARIA: row role](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role)
+- [ARIA: row role](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
 - [Row Role - Maxability](https://www.maxability.co.in/wai-aria-overview/row-role/)
 - [aria-rowcount - Maxability](https://www.maxability.co.in/2018/09/aria-rowcount-property/)
-- [ARIA: rowgroup role](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)
+- [ARIA: rowgroup role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
 - [Rowgroup Role - Maxability](https://www.maxability.co.in/wai-aria-overview/rowgroup-role/)
 - [The Table header element](/en-US/docs/Web/HTML/Element/th)
 - [Columnheader - Maxability](https://www.maxability.co.in/wai-aria-overview/columnheader-role/)

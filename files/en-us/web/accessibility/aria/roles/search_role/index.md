@@ -23,7 +23,7 @@ The `search` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#Landm
 
 ## Examples
 
-When a {{HTMLElement('form')}} is a search form, use the `search` role instead of [`form`](/en-US/docs/Web/Accessibility/ARIA/Roles/Form_Role) role. 
+When a {{HTMLElement('form')}} is a search form, use the `search` role instead of [`form`](/en-US/docs/Web/Accessibility/ARIA/Roles/form_role) role. 
 
 ```HTML
 <form id="search" role="search">

@@ -2,7 +2,6 @@
 title: 'ARIA: searchbox role'
 slug: Web/Accessibility/ARIA/Roles/searchbox_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles
@@ -38,7 +37,7 @@ tags:
 
 ## See Also
 
-- [ARIA: `search` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role)
+- [ARIA: `search` role](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)
 
 <section id="Quick_links">
 

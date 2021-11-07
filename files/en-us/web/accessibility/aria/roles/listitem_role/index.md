@@ -11,7 +11,7 @@ tags:
   - listitem
   - document structure role
 ---
-The ARIA `listitem` role can be used to identify an item inside a list of items. It is normally used in conjunction with the [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role) role, which is used to identify a list container.
+The ARIA `listitem` role can be used to identify an item inside a list of items. It is normally used in conjunction with the [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) role, which is used to identify a list container.
 
 ```html
 <section role="list">
@@ -31,7 +31,7 @@ There are no hard and fast rules about which elements you should use to mark up 
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
-- [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role)
+- [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
   - : A list of items. Elements with role `list` must have one or more elements with the role `listitem` as children, a one or more elements with the role of `group` that have one or more elements with the `listitem` role as children.
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
   - : A collection of related objects, limited to list items when nested in a list, not important enough to have their own place in a pages table of contents.
@@ -64,7 +64,7 @@ or use an ordered list if the order of the list items matters:
 
 > **Note:** Styling a list with `list-style: none;` in CSS removes the list semantics. Adding `role="listitem"` returns the semantics.
 
-> **Note:**  If you are marking up a list of items that will function as a tabbed interface, you should instead use the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role), [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role), and [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) roles.
+> **Note:**  If you are marking up a list of items that will function as a tabbed interface, you should instead use the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role), [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role), and [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) roles.
 
 ## Specifications
 
@@ -79,7 +79,7 @@ or use an ordered list if the order of the list items matters:
 - [HTML `<li>` element](/en-US/docs/Web/HTML/Element/li)
 - [HTML `<ul>` element](/en-US/docs/Web/HTML/Element/ul)
 - [HTML `<ol>` element](/en-US/docs/Web/HTML/Element/ol)
-- [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/List_role)
+- [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
 - [ARIA: `group` role](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)

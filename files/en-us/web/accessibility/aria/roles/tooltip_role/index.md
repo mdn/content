@@ -2,7 +2,6 @@
 title: 'ARIA: tooltip role'
 slug: Web/Accessibility/ARIA/Roles/tooltip_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles
@@ -27,18 +26,18 @@ The tooltip is not the appropriate role for the more information "i" icon, ⓘ. 
 
 The use of the ARIA  `tooltip` role is a supplement to the normal browser tooltip behavior. An example of a native browser tooltip is the way some browsers display an element's [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on focus or long mouse hover. This feature doesn't exist on touch devices and is therefor not accessible. If the information is important enough to include as a tool tip or title, consider including it in visible text.
 
-Elements with the `tooltip` role should be referenced through the use of `aria-describedby` before or when the tooltip is displayed. The `aria-describedy` attribute is on the owning element, not on the tooltip.
+Elements with the `tooltip` role should be referenced through the use of [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) before or when the tooltip is displayed. The `aria-describedy` attribute is on the owning element, not on the tooltip.
 
-The tooltip is not considered a popup in terms of the the `aria-haspopup` property on the owning element, which is why we used "text bubble" in the introductory definition. 
+The tooltip is not considered a popup in terms of the the [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) property on the owning element, which is why we used "text bubble" in the introductory definition. 
 
-Though a tooltip may appear and disapper, as it this appearance is automatic and not intentionally controlled by the user, the `aria-expanded` role is not supported. 
+Though a tooltip may appear and disapper, as it this appearance is automatic and not intentionally controlled by the user, the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) role is not supported. 
 
-The accessible name of a tooltip can come from the contents, or from an `aria-lable` or `aria-labelledby`.
+The accessible name of a tooltip can come from the contents, or from an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby).
 
 ### Associated WAI-ARIA roles, states, and properties
 
 * The element that serves as the tooltip container has `role="tooltip"` set.
-* The element that triggers the tooltip references the tooltip element with `aria-describedby`.
+* The element that triggers the tooltip references the tooltip element with [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby).
   
 ### Keyboard interactions
 
@@ -119,7 +118,7 @@ Instead of using tooltips and hiding important inforation, consider writing clea
 
 ## See Also
 
-- [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Dialog_role)
+- [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 - [CSS: `:focus` pseudoclass](/en-US/docs/Web/CSS/:focus)
 - [Tooltips & Toggletips](https://inclusive-components.design/tooltips-toggletips/) by Heydon Pickering
 

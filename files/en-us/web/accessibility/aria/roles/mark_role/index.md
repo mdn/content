@@ -33,7 +33,7 @@ In the following example we have a document section that has been commented. The
 
 The related comment is marked up using an HTML structure wrapped with a `<div>` containing `role="comment"`.
 
-To associate the comment with the text being commented, we need to wrap the commented text with an element containing the `aria-details` attribute, the value of which should be the ID of the comment.
+To associate the comment with the text being commented, we need to wrap the commented text with an element containing the [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details) attribute, the value of which should be the ID of the comment.
 
 
 ## Best practices

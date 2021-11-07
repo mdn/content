@@ -55,7 +55,7 @@ The `grid` role is a composite widget containing a collection of one or more row
 
 A grid widget contains one or more rows with one or more cells of thematically related interactive content. While it does not imply a specific visual presentation, it implies a relationship among elements. Uses fall into two categories: presenting tabular information (data grids) and grouping other widgets (layout grids). Even though both data grids and layout grids employ the same ARIA roles, states, and properties, differences in their content and purpose surface factors that are important to consider in keyboard interaction design. See [ARIA Authoring practices](https://www.w3.org/TR/wai-aria-practices-1.2/#grid) for more details
 
-Cell elements have the role [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role), unless they are a row or column header. Then the elements are [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) and [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_Role), respectively. Cell elements need to be owned by elements with a [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role) role. Rows can be grouped using `rowgroups`.
+Cell elements have the role [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), unless they are a row or column header. Then the elements are [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) and [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), respectively. Cell elements need to be owned by elements with a [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) role. Rows can be grouped using `rowgroups`.
 
 If the grid is used as an interactive widget, [keyboard](#keyboard-use) interactions need to be implemented.
 
@@ -65,10 +65,10 @@ If the grid is used as an interactive widget, [keyboard](#keyboard-use) interac
 
 - [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role) (subclass)
   - : If a grid has columns that can expanded or collapsed, a treegrid can be used.
-- [row](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role)
+- [row](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
   - : A row inside the grid.
-- [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)
-  - : A group containing one or multiple [row](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role)s.
+- [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
+  - : A group containing one or multiple [row](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)s.
 
 #### States and properties
 
@@ -77,7 +77,7 @@ If the grid is used as an interactive widget, [keyboard](#keyboard-use) interac
 - [aria-multiselectable](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-multiselectable_attribute)
   - : If ` aria-``multiselectable ` is set to `true`, multiple items in the grid can be selected. The default value is `false`.
 - [aria-readonly](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute)
-  - : If the user can navigate the grid but not change the value or values of the grid, the `aria-readonly` should be set to `true`. The default value is `false`.
+  - : If the user can navigate the grid but not change the value or values of the grid, the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) should be set to `true`. The default value is `false`.
 
 > **Note:** For many use cases, an HTML {{HTMLElement('table')}} element is sufficient as it and the various table elements already include many ARIA roles.
 
@@ -602,17 +602,17 @@ Even if the keyboard use is properly implemented, some users might not be aware 
 ## See also
 
 - [ARIA `composite` role](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role)
-- [ARIA `table` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA `table` role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
 - [ARIA `treegrid` role](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
-- [ARIA `row` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role)
-- [ARIA `rowgroup` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)
-- [ARIA: `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role)
+- [ARIA `row` role](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [ARIA `rowgroup` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
+- [ARIA: `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [ARIA: `rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
 - [ARIA: columnheader role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 - {{HTMLElement('table','HTML <code>&lg;table></code> element')}}
-- `aria-level`
-- `aria-multiselectable`
-- `aria-readonly`
+- [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level)
+- [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
+- [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
 
 <section id="Quick_links">
 

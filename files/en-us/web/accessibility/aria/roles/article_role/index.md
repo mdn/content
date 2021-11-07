@@ -47,7 +47,7 @@ Articles are not considered a navigational landmark, but many assistive technolo
 
 Articles can be nested, indicating that a nested article directly relates to the one it is nested in, but not necessarily to the ones outside the nesting hierarchy. Reference the examples for specific use cases.
 
-If an article is part of a feed, it can have the `aria-posinset` and `aria-setsize `attributes set to indicate which position within the feed this particular article represents.
+If an article is part of a feed, it can have the [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) and [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) attributes set to indicate which position within the feed this particular article represents.
 
 Inside an `application` or other widget that causes screen readers and other assistive technologies to be in pass-through mode, an article can be used to indicate that these should switch back to treating the enclosed content as regular web content.
 
@@ -55,9 +55,9 @@ Instead of including the `article` role on a non-semantic element, the {{HTMLEle
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- `aria-posinset`
+- [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
   - : In the context of a feed, indicates the position of this particular article within that feed, based on a count starting at 1.
-- `aria-setsize`
+- [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
   - : In the context of a feed, indicates how many article items there are within that feed.
 
 ### Keyboard interactions
@@ -86,13 +86,13 @@ This role does not support any specific keyboard interaction.
 
 ## Precedence order
 
-This role corresponds to the {{HTMLElement('article')}} element in HTML, and that element should be used instead, if possible. This role does not require any specific roles to be present among its children. It is the only role allowed as a direct child of an element with the [`feed`](/en-US/docs/Web/Accessibility/ARIA/Roles/Feed_Role) role.
+This role corresponds to the {{HTMLElement('article')}} element in HTML, and that element should be used instead, if possible. This role does not require any specific roles to be present among its children. It is the only role allowed as a direct child of an element with the [`feed`](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role) role.
 
 ## See also
 
 - [ARIA: using the `article` role](/en-US/docs/Web/Accessibility/ARIA/aria_techniques/using_the_article_role)
-- [`feed` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Feed_Role)
-- [`section` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Section_Role)
+- [`feed` role](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role)
+- [`section` role](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role)
 - The {{HTMLElement('article')}} element
 - {{Glossary("RSS")}} glossary definition
 

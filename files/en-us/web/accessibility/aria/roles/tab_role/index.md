@@ -8,7 +8,7 @@ tags:
   - ARIA widget
   - Reference
 ---
-The ARIA `tab` role indicates an interactive element inside a `tablist` that, when activated, displays its associated [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role).
+The ARIA `tab` role indicates an interactive element inside a `tablist` that, when activated, displays its associated [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role).
 
 ```html
 <button role="tab" aria-selected="true" aria-controls="tabpanel-id" id="tab-id">Tab label</button>
@@ -18,15 +18,15 @@ The ARIA `tab` role indicates an interactive element inside a `tablist` that, wh
 
 An element with the `tab` role controls the visibility of an associated element with the `tabpanel` role. The common user experience pattern is a group of visual tabs above, or to the side of, a content area, and selecting a different tab changes the content and makes the selected tab more prominent than the other tabs.
 
-Elements with the role `tab` *must* either be a child of an element with the `tablist` role, or have their `id` as part of the `aria-owns` property of a `tablist`. This combination identifies to assistive technology that the element is part of a group of related elements. Some assistive technology will provide a count of the number of `tab` role elements inside a `tablist`, and inform users of which `tab` they currently have targeted. Further, an element with the `tab` role *should* contain the `aria-controls` property identifying a corresponding `tabpanel` (that has a `tabpanel` role) by that element's `id`. When an element with the `tabpanel` role has focus, or a child of it has focus, that indicates that the connected element with the `tab` role is the active tab in a `tablist`.
+Elements with the role `tab` *must* either be a child of an element with the `tablist` role, or have their `id` as part of the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) property of a `tablist`. This combination identifies to assistive technology that the element is part of a group of related elements. Some assistive technology will provide a count of the number of `tab` role elements inside a `tablist`, and inform users of which `tab` they currently have targeted. Further, an element with the `tab` role *should* contain the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) property identifying a corresponding `tabpanel` (that has a `tabpanel` role) by that element's `id`. When an element with the `tabpanel` role has focus, or a child of it has focus, that indicates that the connected element with the `tab` role is the active tab in a `tablist`.
 
-When elements with the `tab` role are selected or active they should have their `aria-selected` attribute set to `true`. Otherwise, their `aria-selected` attribute should be set to `false`. When a `tab` is selected or active, its corresponding controlled `tabpanel` should have its `aria-expanded` attribute set to true and its `hidden` attribute set to `false`, otherwise the reverse.
+When elements with the `tab` role are selected or active they should have their [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute set to `true`. Otherwise, their `aria-selected` attribute should be set to `false`. When a `tab` is selected or active, its corresponding controlled `tabpanel` should have its [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute set to true and its `hidden` attribute set to `false`, otherwise the reverse.
 
 ### Associated Roles and Attributes
 
-- `aria-selected`
+- [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
   - : boolean
-- `aria-controls`
+- [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
   - : `id` of element with `tabpanel` role
 - `id`
   - : content

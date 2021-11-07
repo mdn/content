@@ -21,9 +21,9 @@ The **`region`** role is used to identify document areas the author deems signif
 ## Description
 
 The `region` role is an [ARIA landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) role. 
-The `region` role should be reserved for sections of content sufficiently important that users will likely want to navigate to the section easily and to have it listed in a summary of the page. A region role is a more generic term, and should only be used if the section needing to be identified is not accurately described by one of the other landmark roles, such as [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role), [`main`](/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role), [`contentinfo`](/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role), [`complementary`](/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role), or [`navigation`](/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role).
+The `region` role should be reserved for sections of content sufficiently important that users will likely want to navigate to the section easily and to have it listed in a summary of the page. A region role is a more generic term, and should only be used if the section needing to be identified is not accurately described by one of the other landmark roles, such as [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role), [`main`](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role), [`contentinfo`](/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role), [`complementary`](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role), or [`navigation`](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role).
 
-Every element with a `region` role should include a label that describes the purpose of the content in the region, preferably with an `aria-labelledby` referencing a visible header. If no visible appropriate header is present, `aria-label` should be used.
+Every element with a `region` role should include a label that describes the purpose of the content in the region, preferably with an [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) referencing a visible header. If no visible appropriate header is present, [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) should be used.
 
 The `region` landmark role's content should make sense if separated from the main content of the document.
 
@@ -31,7 +31,7 @@ Using the {{HTMLElement('section')}} element will automatically communicate a se
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
-- `aria-labelledby` or  `aria-label`
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or  [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
   - : Use this attribute to label the region. Often, the value of the `aria-labelledby` attribute will be the id of the element used to title the section. If no visible appropriate header is present, `aria-label` should be used.
 
 
@@ -97,11 +97,11 @@ If there is a content area with `tabindex="0"`, add `role="region"` to convey to
 
 - The {{HTMLElement('section')}} element
 - [region (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#region)
-- [ARIA: `banner` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role)
-- [ARIA: `main` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Main_role)
-- [ARIA: `contentinfo` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)
-- [ARIA: `complementary` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role)
-- [ARIA: `navigation` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)
+- [ARIA: `banner` role](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role)
+- [ARIA: `main` role](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role)
+- [ARIA: `contentinfo` role](/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role)
+- [ARIA: `complementary` role](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role)
+- [ARIA: `navigation` role](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role)
 - [Landmark roles: Using ARIA: Roles, States, and Properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)

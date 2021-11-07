@@ -23,7 +23,7 @@ The `application` [document structure role](/en-US/docs/Web/Accessibility/ARIA/R
 
 In this mode, the web author is completely responsible for handling any and all keyboard input, focus management, and other interactions and cannot assume assistive technologies would do any processing on their end.
 
-If the web application encompassed by the application role contains parts that _should_ be treated like normal web content, a role of [`document`](/en-US/docs/Web/Accessibility/ARIA/Roles/Document_Role) or [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role) should be used.
+If the web application encompassed by the application role contains parts that _should_ be treated like normal web content, a role of [`document`](/en-US/docs/Web/Accessibility/ARIA/Roles/document_role) or [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) should be used.
 
 ### Background
 
@@ -37,23 +37,23 @@ The `application` role is designed to provide a means for widgets that are not p
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [`document`](/en-US/docs/Web/Accessibility/ARIA/Roles/Document_Role), [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/Article_Role)
+- [`document`](/en-US/docs/Web/Accessibility/ARIA/Roles/document_role), [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role)
   - : Used to indicate parts of the application that should be treated as normal web content
-- `aria-activedescendant`
+- [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
   - : Used to manage focus inside the application.
-- `aria-label`
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
   - : Used to provide the name of the application or purpose of the widget that is being exposed.
-- `aria-describedby`
+- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
   - : Used to indicate the idref of an element that contains additional instructions for navigating or operating this element.
-- `aria-roledescription`
+- [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
   - : Used to give the application a more descriptive role text for screen readers to speak. This should be localized.
-- `aria-disabled`
+- [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
   - : Indicates that an element is visible but disabled
-- `aria-errormessage`
+- [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
   - : A reference to the element that provides the error message for an the element on which it is set
-- `aria-expanded`
+- [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : If set to `true`, the grouping element owned or controlled by this element is expanded, or `false` if collapsed.
-- `aria-haspopup`
+- [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
   - : Indicates there is a popup, such as menu or dialog, that can be triggered by the element.
 
 ### Keyboard interactions
@@ -69,7 +69,7 @@ The <kbd>tab</kbd> , <kbd>Space</kbd> and <kbd>Enter</kbd> keys, as well as <kbd
 - Click, Touch
   - : Handle as appropriate for your widget as well
 - Changing attribute values
-  - : `aria-activedescendant` is used to manage the focus inside the application container. Set in response to keyboard or other application events that change focus or point of interaction.
+  - : [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) is used to manage the focus inside the application container. Set in response to keyboard or other application events that change focus or point of interaction.
 
 >**Note** The `application` role does not have a related HTML widget and thus is completely free form. The author of the application must take full responsibility for not letting users get stuck in a focus trap inside something the user cannot exit from. All aspects of interaction, including returning to the regular web content on other parts of the page, must be handled. Use wisely, and cautiously, and remember to test!
 ## Examples

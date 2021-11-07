@@ -44,9 +44,9 @@ Where a text field is read-only, indicated this by setting `aria-readonly="true"
 
 ### Associated ARIA properties
 
-- `aria-activedescendant` attribute
-  - : Taking as it's value the ID of is either a descendant of the element with DOM focus or is a logical descendant as indicated by the `aria-owns` attribute, it indicates when that element has focus, when it is part of a composite widget such as a [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role). For example, in a combobox, focus may remain on the textbox while the value of `aria-activedescendant` on the textbox element refers to a descendant of a popup listbox that is controlled by the textbox.This attribute must be updated programmatically as the focus changes.
-- `aria-autocomplete` attribute
+- [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) attribute
+  - : Taking as it's value the ID of is either a descendant of the element with DOM focus or is a logical descendant as indicated by the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute, it indicates when that element has focus, when it is part of a composite widget such as a [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role). For example, in a combobox, focus may remain on the textbox while the value of `aria-activedescendant` on the textbox element refers to a descendant of a popup listbox that is controlled by the textbox.This attribute must be updated programmatically as the focus changes.
+- [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) attribute
 
   - : Indicates whether and how the user's input into the field could trigger display of a prediction of the intended value. It supports the following values:
 
@@ -55,9 +55,9 @@ Where a text field is read-only, indicated this by setting `aria-readonly="true"
     - `both`: Predicted text is presented as a collection of values, with the text needed to complete one value inserted after the caret.
     - `none` (default): Predicted text is not offered.
 
-    If list or both is set, the `aria-controls` and `aria-haspopup` attributes should also be included. The value of `aria-controls` is the ID of the element that contains the list of suggested values. Additionally, either the textbox or a containing element with role `combobox` has a value for `aria-haspopup` that matches the role of the element that contains the list of suggested values.
+    If list or both is set, the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) and [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) attributes should also be included. The value of `aria-controls` is the ID of the element that contains the list of suggested values. Additionally, either the textbox or a containing element with role `combobox` has a value for `aria-haspopup` that matches the role of the element that contains the list of suggested values.
 
-- `aria-multiline` attribute
+- [`aria-multiline`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) attribute
 
   - : If `aria-multiline="true`" is set, the AT informs the user that the textbox supports multi-line input, with the expectation that
 
@@ -77,11 +77,11 @@ Where a text field is read-only, indicated this by setting `aria-readonly="true"
 
     submits the form.
 
-- `aria-placeholder` attribute
+- [`aria-placeholder`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder) attribute
   - : Represents a hint (word or phrase) to the user about what to enter into the text field. The hint should be a sample value or a brief description of the expected format.This information should not be used as a substitute for a label: a label is focusable, permanent, indicates what kind of information is expected, and increases the hit area for setting focus on the control, whereas placeholder text is only temporary hint about the expected value, which if implemented incorrectly can decrease accessibility. The placeholder should be visible when the control's value is the empty string such as when the control first receives focus and when users remove a previously-entered value. Instead of using `aria-placeholder`, use the semantic `<input type="text">` or `<textarea>` with a `placeholder` attribute.
-- `aria-readonly` attribute
+- [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute
   - : Indicates that the user cannot modify the value of the text field. Instead of using `aria-readonly`, use the semantic `<input type="text">` or `<textarea>` with a `readonly` attribute.
-- `aria-required` attribute
+- [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute
   - : Indicates that a value must be provided for the field before it is submitted. Instead of using `aria-required`, use the semantic `<input type="text">` or `<textarea>` with a `required` attribute.
 
 ### Keyboard interactions
@@ -135,7 +135,7 @@ The snippet below shows how the textbox role is added directly into the HTML sou
 
 ## See also
 
-- [ARIA: search role](/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role)
+- [ARIA: search role](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)
 
 <section id="Quick_links">
 

@@ -2,7 +2,6 @@
 title: 'ARIA: section role'
 slug: Web/Accessibility/ARIA/Roles/section_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles
@@ -32,7 +31,7 @@ Do not use.
 
 ## See Also
 
-- [ARIA: `structure` role](/en-US/docs/Web/Accessibility/ARIA/roles/structure_role)
+- [ARIA: `structure` role](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role)
 - [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [ARIA: `associationlist` role](/en-US/docs/Web/Accessibility/ARIA/Roles/associationlist_role)
 - [ARIA: `associationlistitemkey` role](/en-US/docs/Web/Accessibility/ARIA/Roles/associationlistitemkey_role)

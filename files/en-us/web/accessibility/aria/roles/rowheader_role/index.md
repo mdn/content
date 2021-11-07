@@ -2,7 +2,6 @@
 title: 'ARIA: rowheader role'
 slug: Web/Accessibility/ARIA/Roles/rowheader_role
 tags: 
-
   - Accessibility
   - ARIA
   - roles
@@ -14,11 +13,11 @@ tags:
   - ARIA role
   - reference
 ---
-An element with `role="rowheader"` is a [cell](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role) containing header information for a [row](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role) within a tabular structure of a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Grid_Role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role).
+An element with `role="rowheader"` is a [cell](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) containing header information for a [row](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) within a tabular structure of a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
 
 ## Description
 
-`Rowheader` is the header [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role) for a row, establishing a relationship between it and the other cells in the same [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role). 
+`Rowheader` is the header [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) for a row, establishing a relationship between it and the other cells in the same [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role). 
 
 ```html
 <div role="table" aria-label="Populations" aria-describedby="country_population_desc">
@@ -52,7 +51,7 @@ To create an ARIA row header, add `role="rowheader"` to the element. That row h
 
 #### Context roles
 
-- [role="row"](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role)
+- [role="row"](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
   - : The only context in which you will find a row.  It encompasses a cell or group of cells row, of which only one should be of rowheader type. Ssimilar to the native {{HTMLElement('tr')}} HTML element.
 
 ### Keyboard interactions
@@ -97,7 +96,7 @@ None.
 </div>
 ```
 
-The above is a non-semantic ARIA table with a table header and table body, with five of 81 rows present in the DOM: one within a table header and four rows within the table body. The header row, alone in a header rowgroup, has two column headers. The columns are sortable, but not currently sorted, as indicated by the `aria-sort` property. The table body is a separate rowgroup, with four rows currently in the DOM. Each data table row has a row header. Because not all the rows are in the DOM, we've included the `aria-rowindex` property on every row.
+The above is a non-semantic ARIA table with a table header and table body, with five of 81 rows present in the DOM: one within a table header and four rows within the table body. The header row, alone in a header rowgroup, has two column headers. The columns are sortable, but not currently sorted, as indicated by the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) property. The table body is a separate rowgroup, with four rows currently in the DOM. Each data table row has a row header. Because not all the rows are in the DOM, we've included the [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) property on every row.
 
 ## Best practices
 
@@ -143,9 +142,9 @@ none
 - [The HTML `<table>` element](/en-US/docs/Web/HTML/Element/table)
 - [The HTML `<th>` element](/en-US/docs/Web/HTML/Element/th)
 - [HTML table tutorial](/en-US/docs/Learn/HTML/Tables/Basics)
-- [ARIA `cell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_Role) 
-- [ARIA `row` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_Role)
-- [ARIA `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/gridell_Role) 
+- [ARIA `cell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) 
+- [ARIA `row` role](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [ARIA `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/gridell_role) 
 
 <section id="Quick_links">
 
