@@ -209,7 +209,7 @@ of the most recently rendered window.
 
 > **Warning:** These features are kept only for backward compatibility.
 > In modern browsers (Firefox 76 or newer, Google Chrome, Safari, Chromium Edge), the
-> following features are just a condition for whether to open popup or not. See [popup condition](#popup_condition) section.
+> following features are just a condition for whether to open popup or not. See the [popup condition](#popup_condition) section.
 
 The following features control the visibility of each UI parts, these features can also
 be set to `yes` or `1`, or just be present to be on. Set them to `no` or `0`, or in most
