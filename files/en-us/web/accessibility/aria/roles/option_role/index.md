@@ -15,7 +15,7 @@ The `option` role is used for selectable items in a `listbox`.
 
 The `option` role is used to identify selections a user can make in a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role). These options are similar to the {{HTMLElement('option')}} elements in a {{HTMLElement('select')}} element, but they can contain images.
 
-All selectable options should have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) match their state, `true` when selected and `false` when not. If an option is not selectable, `aria-selected` can be omitted. A disabled option can either omit the `aria-selected` option and be removed from the focus order, or mark [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) as `true` and `aria-selected` as `false` to show the user that the option is present, albeit disabled.
+All selectable options should have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) match their state, `true` when selected and `false` when not. If an option is not selectable, `aria-selected` can be omitted. A disabled option can have [`aria-disabled="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) and `aria-selected="false"` to communicate to the user that the option is present, albeit disabled.
 
 The `option` role is for identifying selectable choices of a `listbox`. Options must be provided an accessible name. Generally, the accessible name for an option should come from the element's descendant content. 
 
