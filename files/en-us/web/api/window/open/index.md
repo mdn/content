@@ -127,7 +127,7 @@ with minimal UI parts for the new secondary window.
 
 Whether or not to use a popup window affects the {{domxref("BarProp.visible")}} value.
 
-> **Note:** In some browsers, users can configure the browser to not to use a popup window.  Also, some
+> **Note:** In some browsers, users can configure the browser to not to use a popup window. Also, some
 > browsers, such as mobile browsers, don't have the concept of windows.
 
 To enable the feature, specify `popup` either with no value at all, or else set it to `yes` or `1`.
