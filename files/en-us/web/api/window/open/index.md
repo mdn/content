@@ -681,7 +681,7 @@ UI-related items of `windowFeatures` are used as a condition to
 whether opening a popup or a new tab, or a new window, and UI parts visibility of each
 of them is fixed.
 
-The detailed condition is described in ["To check if a popup window is requested"](https://html.spec.whatwg.org/#popup-window-is-requested) section in the spec.
+The condition is described in detail in the ["To check if a popup window is requested"](https://html.spec.whatwg.org/multipage/window-object.html#popup-window-is-requested) section in the spec.
 
 ### Note on scrollbars
 
