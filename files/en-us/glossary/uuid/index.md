@@ -5,16 +5,16 @@ tags:
   - Glossary
   - Infrastructure
 ---
-A **Universally Unique Identifier** (**UUID**) or **Globally Unique Identifier** (**GUID**) is a label used to uniquely identify a resource among all other resources of that type.
+A **Universally Unique Identifier** (**UUID**) is a label used to uniquely identify a resource among all other resources of that type.
 
-Computer systems typically generate UUIDs locally using very large random numbers, often seeded with date and/or timestamps.
-In theory these IDs may not be globally unique, but with large enough identifiers the probability of duplicates is vanishingly small.
-If systems really need absolutely unique IDs then these may be allocated by a central authority.
+Computer systems generate UUIDs locally using very large random numbers seeded with timestamp information.
+In theory the IDs may not be globally unique, but the probability of duplicates is vanishingly small.
+If systems really need absolutely unique IDs then these might be allocated by a central authority.
 
-Many different UUID schemes have been defined, using different key lengths and mechanisms to reduce duplicate identifiers.
-For example, the [`Crypto.randomUUID()`](/en-US/docs/Web/API/Crypto/randomUUID) interface returns a 36 byte "version 4 UUID" as defined in [RFC4122: A Universally Unique IDentifier (UUID) URN Namespace](https://www.rfc-editor.org/rfc/rfc4122#section-4.4).
-
+The "version 4" UUID is a 128-bit value that is canonically represented as a 36-character string in the format `123e4567-e89b-12d3-a456-426614174000` (5 hex strings separated by hyphens).
+Its formal definition can be found in: [RFC4122: A Universally Unique IDentifier (UUID) URN Namespace](https://www.rfc-editor.org/rfc/rfc4122#section-4.4).
 
 ## See also
 
 - {{Interwiki("wikipedia", "UUID")}} on Wikipedia
+- [`Crypto.randomUUID()`](/en-US/docs/Web/API/Crypto/randomUUID)
