@@ -2,20 +2,11 @@
 title: DOMMatrixReadOnly.scale()
 slug: Web/API/DOMMatrixReadOnly/scale
 tags:
-  - API
-  - DOMMatrix
-  - DOMMatrixReadOnly
-  - Experimental
-  - Geometry
-  - Geometry Interfaces
-  - Interface
   - Method
   - Reference
-  - Scale
-  - matrix
 browser-compat: api.DOMMatrixReadOnly.scale
 ---
-{{APIRef("Geometry Interfaces")}}{{SeeCompatTable}}
+{{APIRef("Geometry Interfaces")}}
 
 The **`scale()`** method of the
 {{domxref("DOMMatrixReadOnly")}} interface creates a new matrix being the result of the
@@ -26,27 +17,32 @@ original matrix with a scale transform applied.
 The `scale()` method is specified with either one or six values.
 
 ```js
-DOMMatrix.scale(scaleX[, scaleY][, scaleZ][, originX][, originY][, originZ])
+DOMMatrixReadOnly.scale(scaleX);
+DOMMatrixReadOnly.scale(scaleX, scaleY);
+DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ);
+DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ, originX);
+DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ, originX, originY);
+DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ, originX, originY, originZ);
 ```
 
 ### Parameters
 
-- scaleX
+- `scaleX`
   - : A multiplier for the scale value on the x-axis.
-- scaleY {{optional_inline}}
-  - : A multiplier for the scale value on the y-axis.  If not supplied, this defaults to
+- `scaleY` {{optional_inline}}
+  - : A multiplier for the scale value on the y-axis. If not supplied, this defaults to
     the value of `scaleX`.
-- scaleZ {{optional_inline}}
-  - : A multiplier for the scale value on the z-axis.  If this value is anything other
+- `scaleZ` {{optional_inline}}
+  - : A multiplier for the scale value on the z-axis. If this value is anything other
     than 1, the resulting matrix will be 3D.
-- originX {{optional_inline}}
-  - : An x-coordinate for the origin of the transformation.  If no origin is supplied,
+- `originX` {{optional_inline}}
+  - : An x-coordinate for the origin of the transformation. If no origin is supplied,
     this defaults to 0.
-- originY {{optional_inline}}
-  - : A y-coordinate for the origin of the transformation.  If no origin is supplied, this
+- `originY` {{optional_inline}}
+  - : A y-coordinate for the origin of the transformation. If no origin is supplied, this
     defaults to 0.
-- originZ {{optional_inline}}
-  - : A z-coordinate for the origin of the transformation.  If no origin is supplied, this
+- `originZ` {{optional_inline}}
+  - : A z-coordinate for the origin of the transformation. If no origin is supplied, this
     defaults to 0. If this value is anything other than 0, the resulting matrix will be
     3D.
 
@@ -57,14 +53,6 @@ containing a new matrix being the result of the matrix x and y dimensions being 
 by the given factor, centered on the origin given. The original matrix is not modified.
 
 If a scale is applied about the z-axis, the resulting matrix will be a 4x4 3D matrix.
-
-> **Note:** At time of writing, Firefox still supports an older version of
-> the specification that accepts either one or three values.
->
->     DOMMatrix.scale(scale[, originX][, originY])
->
-> We'll show an example of how you can deal with the cross-browser support implications
-> of this in the Examples section, below.
 
 ## Examples
 
