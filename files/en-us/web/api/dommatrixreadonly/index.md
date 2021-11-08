@@ -14,7 +14,7 @@ This interface should be available inside [web workers](/en-US/docs/Web/API/Web_
 
 ## Constructor
 
-- {{domxref("DOMMatrixReadOnly.DOMMatrixReadOnly", "DOMMatrixReadOnly())"}}
+- {{domxref("DOMMatrixReadOnly.DOMMatrixReadOnly", "DOMMatrixReadOnly()")}}
   - : Creates a new `DOMMMatrixReadOnly` object.
 
 ## Properties
