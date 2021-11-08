@@ -21,7 +21,7 @@ promise that resolves to a promise that resolves to something) into a single lay
 <div class="blockIndicator warning">
   <p>Warning: Do not call `Promise.resolve()` on a thenable that resolves to itself. This leads to infinite recursion because it attempts to flatten the infinite nested promise. An example is to use it with asynchronous pipes in angular. Look at this example <a href="https://angular.io/guide/template-syntax#avoid-side-effects">here</a></p>
 </div>
-<div>Example</div>
+### Example
 <pre class="brush: js">
 let thenable = {
   then: (resolve, reject) => {
