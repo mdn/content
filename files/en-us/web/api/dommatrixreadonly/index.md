@@ -12,6 +12,11 @@ The **`DOMMatrixReadOnly`** interface represents a read-only 4×4 matrix, suitab
 
 This interface should be available inside [web workers](/en-US/docs/Web/API/Web_Workers_API), though some implementations doesn't allow it yet.
 
+## Constructor
+
+- {{domxref("DOMMatrixReadOnly.DOMMatrixReadOnly", "DOMMatrixReadOnly())"}}
+  - : Creates a new `DOMMMatrixReadOnly` object.
+
 ## Properties
 
 _This interface doesn't inherit any properties._
