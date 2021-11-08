@@ -19,7 +19,7 @@ thenable, adopting its eventual state; otherwise the returned promise will be fu
 with the value. This function flattens nested layers of promise-like objects (e.g. a
 promise that resolves to a promise that resolves to something) into a single layer.
 <div class="blockIndicator warning">
-  <p>Warning: do not call `promise.resolve()` on a thenable that resolves to itself. This leads to infinite recursion because it attempts to flatten the infinite nested promise. An example is to use it with asynchronous pipes in angular. <a href="https://angular.io/guide/template-syntax#avoid-side-effects">Click me</a>to konw more about it</p>
+  <p>Warning: Do not call `promise.resolve()` on a thenable that resolves to itself. This leads to infinite recursion because it attempts to flatten the infinite nested promise. An example is to use it with asynchronous pipes in angular. <a href="https://angular.io/guide/template-syntax#avoid-side-effects">Click me</a>to konw more about it</p>
 </div>
 <div>Example</div>
 <pre class="brush: js">
@@ -90,7 +90,7 @@ console.log('original === cast ? ' + (original === cast));
 ```
 
 The inverted order of the logs is due to the fact that the `then` handlers
-are called asynchronously. See how `then` works [here](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value).
+are called asynchronously. See how `then` works [Here](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value).
 
 ### Resolving thenables and throwing Errors
 
