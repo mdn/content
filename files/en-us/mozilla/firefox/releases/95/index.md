@@ -18,6 +18,9 @@ Firefox 95 is the current [Beta version of Firefox](https://www.mozilla.org/en-U
 
 ### HTML
 
+- The [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) global attribute is now supported on all platforms, instead of just Android.
+  This provides a hint to browsers about the type of virtual keyboard that would be best suited to editing a particular element ({{bug(1205133)}}).
+
 #### Removals
 
 ### CSS

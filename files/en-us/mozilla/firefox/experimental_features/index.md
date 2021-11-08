@@ -63,45 +63,6 @@ The current implementation is a little inelegant but is basically functional. (S
   </tbody>
 </table>
 
-### Global attribute: inputmode
-
-Our implementation of the [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) global attribute has been updated as per the WHATWG spec ({{bug(1509527)}}), but we still need to make other changes too, like making it available on contenteditable content. (See {{bug(1205133)}} for details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>75</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>75</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>75</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>75</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.forms.inputmode</code></td>
-    </tr>
-  </tbody>
-</table>
 
 ### inert attribute
 
