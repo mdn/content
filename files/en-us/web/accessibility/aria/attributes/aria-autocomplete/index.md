@@ -32,7 +32,7 @@ When implementing a list of values, DOM focus should remain on the text input wh
  - include [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) with the value of the id of the suggested list of values. 
  - include [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) matching the role of the element that contains the collection of suggested values.
  - manage focus, if required, including using [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) if the collection container supports. 
- - use the `aria-expanded`[(/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)] state _on the list_ to communicate that the list is displayed.
+ - use the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) state _on the list_ to communicate that the list is displayed.
  
 If an autocomplete list value is automatically accepted when the field loses focus, the list must be contained in a role that supports `aria-activedescendant`, with the value of `aria-activedescendant` on the input field dynamically adjusted to refer to the element containing the selected suggestion.
 
