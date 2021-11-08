@@ -57,7 +57,7 @@ The following example calls the `getSupportFormat()` static method and logs the 
 ```js
 // check supported types
 BarcodeDetector.getSupportedFormats()
-  .then(formats => {
+  .then(supportedFormats => {
     supportedFormats.forEach(format => console.log(format));
   });
 ```
