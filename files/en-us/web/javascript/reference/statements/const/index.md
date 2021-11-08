@@ -14,8 +14,7 @@ browser-compat: javascript.statements.const
 
 Constants are block-scoped, much like variables declared using the
 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
-keyword. The value of a constant can't be changed through reassignment, and it can't be
-redeclared.
+keyword. The value of a constant can't be changed through reassignment (i.e. by using the [assignment operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)), and it can't be redeclared (i.e. through a [variable declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)). However, if a constant is an [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) or [array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) its properties or items can be updated or removed. 
 
 {{EmbedInteractiveExample("pages/js/statement-const.html")}}
 
