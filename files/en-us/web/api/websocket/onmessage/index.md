@@ -18,7 +18,7 @@ It is called with a {{domxref("MessageEvent")}}.
 ## Syntax
 
 ```js
-aWebSocket.onmessage = function(event) {
+WebSocket.onmessage = function(event) {
   console.debug("WebSocket message received:", event);
 };
 ```
