@@ -2,59 +2,67 @@
 title: Text.wholeText
 slug: Web/API/Text/wholeText
 tags:
-  - API
-  - DOM
   - Property
-  - Text
+  - Reference
+  - Read-only
 browser-compat: api.Text.wholeText
 ---
 {{ apiref("DOM") }}
 
-The **`Text.wholeText`** read-only property returns the full text of all {{domxref("Text")}} nodes logically adjacent to the node. The text is concatenated in document order. This allows specifying any text node and obtaining all adjacent text as a single string.
+The read-only **`wholeText`** property of the {{domxref("Text")}} interface
+returns the full text of all {{domxref("Text")}} nodes logically adjacent to the node.
+The text is concatenated in document order.
+This allows specifying any text node and obtaining all adjacent text as a single string.
 
-## Syntax
+> **Note:** This is similar to call {{domxref("Node.normalize()")}} followed by reading the text value,
+> but without modifying the tree.
 
-```js
-str = textnode.wholeText;
-```
+## Value
 
-## Notes and example
+A {{jsxref("String")}} with the concanated text.
 
-Suppose you have the following simple paragraph within your webpage (with some whitespace added to aid formatting throughout the code samples here), whose DOM node is stored in the variable `para`:
+## Example
 
-```html
-<p>Thru-hiking is great!  <strong>No insipid election coverage!</strong>
-  However, <a href="https://en.wikipedia.org/wiki/Absentee_ballot">casting a
-  ballot</a> is tricky.</p>
-```
-
-You decide you don’t like the middle sentence, so you remove it:
-
-```js
-para.removeChild(para.childNodes[1]);
-```
-
-Later, you decide to rephrase things to, “Thru-hiking is great, but casting a ballot is tricky.” _while preserving the hyperlink_. So you try this:
-
-```js
-para.firstChild.data = "Thru-hiking is great, but ";
-```
-
-All set, right? _Wrong!_ What happened was you removed the `strong` element, but the removed sentence’s element separated two text nodes. One for the first sentence, and one for the first word of the last. Instead, you now effectively have this:
+Suppose you have the following simple paragraph within your webpage:
 
 ```html
-<p>Thru-hiking is great, but However, <a
-  href="https://en.wikipedia.org/wiki/Absentee_ballot">casting a
-  ballot</a> is tricky.</p>
+<p>Through-hiking is great!  <strong>No insipid election coverage!</strong> However, <a href="https://en.wikipedia.org/wiki/Absentee_ballot">casting a ballot</a> is tricky.</p>
 ```
 
-You’d really prefer to treat all those adjacent text nodes as a single one. That’s where `wholeText` comes in: if you have multiple adjacent text nodes, you can access the contents of all of them using `wholeText`. Let’s pretend you never made that last mistake. In that case, we have:
+You decide you don't like the middle sentence, so you remove it:
 
 ```js
-assert(para.firstChild.wholeText == "Thru-hiking is great!    However, ");
+const para = document.getElementsByTagname("p")[0]; // Reads the paragraph
+para.removeChild(para.childNodes[1]); // Delete the strong element
 ```
 
-`wholeText` is just a property of text nodes that returns the string of data making up all the adjacent (i.e. not separated by an element boundary) text nodes combined.
+Later, you want to rephrase things to, "Through-hiking is great, but casting a ballot is tricky." _while preserving the hyperlink_.
+
+But, when you removed the `<strong>` element, the two text nodes on each part of the removed element, weren't merged into a single one: you have two consecutive `Text` nodes, one with `'Through-hiking is great!  '`, immediately followed by `' However, '`.
+
+So, if you do this:
+
+```js example-bad
+para.firstChild.data = "Through-hiking is great, but ";
+```
+
+you'll end replacing  the first `Text` node only and you'll get:
+
+```html
+<p>Through-hiking is great, but However, <a href="https://en.wikipedia.org/wiki/Absentee_ballot">casting a  ballot</a> is tricky.</p>
+```
+
+To treat all those adjacent text nodes as a single one, you use `wholeText`.
+
+```js example-good
+para.firstChild.wholeText == "Through-hiking is great, but ";
+```
+
+and you end with:
+
+```html
+<p>Through-hiking is great, but <a href="https://en.wikipedia.org/wiki/Absentee_ballot">casting a  ballot</a> is tricky.</p>
+```
 
 ## Specifications
 

@@ -2,26 +2,40 @@
 title: ProcessingInstruction
 slug: Web/API/ProcessingInstruction
 tags:
-  - API
-  - DOM
+  - Interface
+  - Reference
 browser-compat: api.ProcessingInstruction
 ---
 {{APIRef("DOM")}}
 
 The **`ProcessingInstruction`** interface represents a [processing instruction](https://www.w3.org/TR/xml/#sec-pi); that is, a {{domxref("Node")}} which embeds an instruction targeting a specific application but that can be ignored by any other applications which don't recognize the instruction.
 
-A processing instruction is different from the [XML declaration](/en-US/docs/Web/XML/XML_introduction#xml_declaration).
+> **Warning:** `ProcessingInstruction` nodes are only supported in XML documents, not in HTML documents. In these, a process instruction will be considered as a comment and be represented as a {{domxref("Comment")}} object in the tree.
 
-> **Note:** User-defined processing instructions cannot begin with "`xml`", as `xml`-prefixed processing-instruction target names are reserved by the XML specification for particular, standard uses (see, for example, [`<?xml-stylesheet ?>`](/en-US/docs/XML/xml-stylesheet)).
+A processing instruction may be different than the [XML declaration](/en-US/docs/Web/XML/XML_introduction#xml_declaration).
 
-The `ProcessingInstruction` interface inherits methods and properties from {{domxref("Node")}}.
+> **Note:** User-defined processing instructions cannot begin with "`xml`", as `xml`-prefixed processing-instruction target names are reserved by the XML specification for particular, standard uses (see, for example, `<?xml-stylesheet ?>`.
+
+For example:
+
+```html
+<?xml version="1.0"?>
+```
+
+is a processing instruction whose `target`is `xml`.
 
 {{InheritanceDiagram(700,70)}}
 
 ## Properties
 
-- `target` ({{domxref("DOMString")}}) {{readonlyInline}}
+_This interface also inherits properties from its parent interfaces, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
+
+- {{domxref("ProcessingInstruction.target")}} {{readonlyInline}}
   - : A name identifying the application to which the instruction is targeted.
+
+## Methods
+
+_This interface doesn't have any specific property, but inherits properties from its parent interfaces, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
 ## Specifications
 
@@ -33,4 +47,5 @@ The `ProcessingInstruction` interface inherits methods and properties from {{dom
 
 ## See also
 
-- [document.createProcessingInstruction](/en-US/docs/Web/API/Document/createProcessingInstruction)
+- [document.createProcessingInstruction()](/en-US/docs/Web/API/Document/createProcessingInstruction)
+- The [DOM API](/en-US/docs/Web/API/Document_Object_Model)
