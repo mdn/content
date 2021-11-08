@@ -22,7 +22,7 @@ In HTML, apart from the default behavior for images, links, and selections, no o
 
 To make other HTML elements draggable, three things must be done:
 
-1.  Set the ` {{htmlattrxref("draggable")}}="``true" ` on the element that you wish to make draggable.
+1.  Set the {{htmlattrxref("draggable")}} attribute to `"true"` on the element that you wish to make draggable.
 2.  Add a listener for the `{{event("dragstart")}}` event.
 3.  [Set the drag data](/en-US/docs/Web/API/DataTransfer/setData) in the above listener.
 
