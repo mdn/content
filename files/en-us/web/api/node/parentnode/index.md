@@ -2,26 +2,25 @@
 title: Node.parentNode
 slug: Web/API/Node/parentNode
 tags:
-  - API
-  - DOM
-  - Gecko
   - Property
+  - Reference
+  - Read-only
 browser-compat: api.Node.parentNode
 ---
 {{APIRef("DOM")}}
 
-The **`Node.parentNode`** read-only property returns the parent
-of the specified node in the DOM tree.
+The read-only **`parentNode`** property of the {{domxref("Node")}} interface
+returns the parent of the specified node in the DOM tree.
 
-## Syntax
+`Document` and `DocumentFragment` [nodes](/en-US/docs/DOM/Node/nodeType) can never have a parent, so
+`parentNode` will always return `null`.
+It also returns `null` if the node has just been created
+and is not yet attached to the tree.
 
-```js
-parentNode = node.parentNode
-```
+## Value
 
-`parentNode` is the parent of the current node. The parent of an element is
-an `Element` node, a `Document` node, or a
-`DocumentFragment` node.
+A {{domxref("Node")}} that is the parent of the current node. The parent of an element is
+an `Element` node, a `Document` node, or a `DocumentFragment` node.
 
 ## Example
 
@@ -32,14 +31,6 @@ if (node.parentNode) {
   node.parentNode.removeChild(node);
 }
 ```
-
-## Notes
-
-`Document` and `DocumentFragment` [nodes](/en-US/docs/DOM/Node.nodeType) can never have a parent, so
-`parentNode` will always return `null`.
-
-It also returns `null` if the node has just been created and is not yet
-attached to the tree.
 
 ## Specifications
 

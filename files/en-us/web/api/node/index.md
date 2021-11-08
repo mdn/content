@@ -2,15 +2,8 @@
 title: Node
 slug: Web/API/Node
 tags:
-  - API
-  - DOM
-  - Document
-  - Element
   - Interface
-  - Node
   - Reference
-  - Structure
-  - hierarchy
 browser-compat: api.Node
 ---
 {{APIRef("DOM")}}
@@ -41,7 +34,7 @@ _In addition to the properties below, `Node` inherits properties from its
 parent, {{DOMxRef("EventTarget")}}_.
 
 - {{DOMxRef("Node.baseURI")}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMString")}} representing the base URL of the document
+  - : Returns a {{jsxref("String")}} representing the base URL of the document
     containing the `Node`.
 - {{DOMxRef("Node.childNodes")}}{{ReadOnlyInline}}
   - : Returns a live {{DOMxRef("NodeList")}} containing all the children of this node
@@ -49,44 +42,40 @@ parent, {{DOMxRef("EventTarget")}}_.
     if the children of the `Node` change, the {{DOMxRef("NodeList")}} object is
     automatically updated.
 - {{DOMxRef("Node.firstChild")}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("Node")}} representing the first direct child node of the node,
+  - : Returns a `Node` representing the first direct child node of the node,
     or `null` if the node has no child.
 - {{DOMxRef("Node.isConnected")}}{{ReadOnlyInline}}
   - : A boolean indicating whether or not the Node is connected (directly or indirectly)
     to the context object, e.g. the {{DOMxRef("Document")}} object in the case of the
     normal DOM, or the {{DOMxRef("ShadowRoot")}} in the case of a shadow DOM.
 - {{DOMxRef("Node.lastChild")}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("Node")}} representing the last direct child node of the node,
+  - : Returns a `Node` representing the last direct child node of the node,
     or `null` if the node has no child.
 - {{DOMxRef("Node.nextSibling")}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("Node")}} representing the next node in the tree, or
+  - : Returns a `Node` representing the next node in the tree, or
     `null` if there isn't such node.
 - {{DOMxRef("Node.nodeName")}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMString")}} containing the name of the `Node`. The
+  - : Returns a {{jsxref("String")}} containing the name of the `Node`. The
     structure of the name will differ with the node type. E.g. An
     {{DOMxRef("HTMLElement")}} will contain the name of the corresponding tag, like
     `'audio'` for an {{DOMxRef("HTMLAudioElement")}}, a {{DOMxRef("Text")}}
     node will have the `'#text'` string, or a {{DOMxRef("Document")}} node will
     have the `'#document'` string.
 - {{DOMxRef("Node.nodeType")}}{{ReadOnlyInline}}
-
   - : Returns an `unsigned short` representing the type of the node. Possible
     values are:
 
     | Name                                                 | Value |
     | ---------------------------------------------------- | ----- |
     | `ELEMENT_NODE`                                       | `1`   |
-    | `ATTRIBUTE_NODE` {{Deprecated_Inline}}        | `2`   |
+    | `ATTRIBUTE_NODE`                                     | `2`   |
     | `TEXT_NODE`                                          | `3`   |
     | `CDATA_SECTION_NODE`                                 | `4`   |
-    | `ENTITY_REFERENCE_NODE` {{Deprecated_Inline}} | `5`   |
-    | `ENTITY_NODE` {{Deprecated_Inline}}           | `6`   |
     | `PROCESSING_INSTRUCTION_NODE`                        | `7`   |
     | `COMMENT_NODE`                                       | `8`   |
     | `DOCUMENT_NODE`                                      | `9`   |
     | `DOCUMENT_TYPE_NODE`                                 | `10`  |
     | `DOCUMENT_FRAGMENT_NODE`                             | `11`  |
-    | `NOTATION_NODE` {{Deprecated_Inline}}         | `12`  |
 
 - {{DOMxRef("Node.nodeValue")}}
   - : Returns / Sets the value of the current node.
@@ -94,7 +83,7 @@ parent, {{DOMxRef("EventTarget")}}_.
   - : Returns the {{DOMxRef("Document")}} that this node belongs to. If the node is itself
     a document, returns `null`.
 - {{DOMxRef("Node.parentNode")}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("Node")}} that is the parent of this node. If there is no such
+  - : Returns a `Node` that is the parent of this node. If there is no such
     node, like if this node is the top of the tree or if doesn't participate in a tree,
     this property returns `null`.
 - {{DOMxRef("Node.parentElement")}}{{ReadOnlyInline}}
@@ -102,7 +91,7 @@ parent, {{DOMxRef("EventTarget")}}_.
     no parent, or if that parent is not an {{DOMxRef("Element")}}, this property returns
     `null`.
 - {{DOMxRef("Node.previousSibling")}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("Node")}} representing the previous node in the tree, or
+  - : Returns a `Node` representing the previous node in the tree, or
     `null` if there isn't such node.
 - {{DOMxRef("Node.textContent")}}
   - : Returns / Sets the textual content of an element and all its descendants.
@@ -112,13 +101,13 @@ parent, {{DOMxRef("EventTarget")}}_.
 _In addition to the properties below, `Node` inherits methods from its
 parent, {{DOMxRef("EventTarget")}}._
 
-- {{DOMxRef("Node.appendChild()", "Node.appendChild(<var>childNode</var>)")}}
+- {{DOMxRef("Node.appendChild()")}}
   - : Adds the specified `childNode` argument as the last child to
     the current node.
     If the argument referenced an existing node on the DOM tree, the node will be detached
     from its current position and attached at the new position.
 - {{DOMxRef("Node.cloneNode()")}}
-  - : Clone a {{DOMxRef("Node")}}, and optionally, all of its contents. By default, it
+  - : Clone a `Node`, and optionally, all of its contents. By default, it
     clones the content of the node.
 - {{DOMxRef("Node.compareDocumentPosition()")}}
   - : Compares the position of the current node against another node in any other
@@ -126,8 +115,6 @@ parent, {{DOMxRef("EventTarget")}}._
 - {{DOMxRef("Node.contains()")}}
   - : Returns `true` or `false` value indicating whether or not a node is a
     descendant of the calling node.
-- {{domxref("Node.getBoxQuads()")}} {{experimental_inline}}
-  - : Returns a list of the node's CSS boxes relative to another node.
 - {{DOMxRef("Node.getRootNode()")}}
   - : Returns the context object's root which optionally includes the shadow root if it is
     available.
@@ -135,7 +122,7 @@ parent, {{DOMxRef("EventTarget")}}._
   - : Returns a boolean value indicating whether or not the element has any child
     nodes.
 - {{DOMxRef("Node.insertBefore()")}}
-  - : Inserts a {{DOMxRef("Node")}} before the reference node as a child of a specified
+  - : Inserts a `Node` before the reference node as a child of a specified
     parent node.
 - {{DOMxRef("Node.isDefaultNamespace()")}}
   - : Accepts a namespace URI as an argument and returns a boolean value with a
@@ -161,14 +148,11 @@ parent, {{DOMxRef("EventTarget")}}._
   - : Removes a child node from the current element, which must be a child of the current
     node.
 - {{DOMxRef("Node.replaceChild()")}}
-  - : Replaces one child {{DOMxRef("Node")}} of the current one with the second one given
+  - : Replaces one child `Node` of the current one with the second one given
     in parameter.
 
 ### Obsolete methods
 
-- {{DOMxRef("Node.hasAttributes()")}} {{deprecated_inline}}
-  - : Returns `true` or `false` indicating if the element has any attributes, or
-    not.
 - {{DOMxRef("Node.isSupported()")}} {{deprecated_inline}}
   - : Returns `true` or `false` containing the result of a test whether the DOM
     implementation implements a specific feature and this feature is supported by the
@@ -178,6 +162,8 @@ parent, {{DOMxRef("EventTarget")}}._
 
 ### Remove all children nested within a node
 
+This function remove each first child of an element, until there are none left.
+
 ```js
 function removeAllChildren(element) {
   while (element.firstChild) {
@@ -186,12 +172,13 @@ function removeAllChildren(element) {
 }
 ```
 
-#### Sample usage
+Using this function is a single call. Here we empty the body of the document:
 
 ```js
-/* Note: or use document.body.textContent = "" */
 removeAllChildren(document.body)
 ```
+
+An alternative could be to  set the textContent to the empty string: `document.body.textContent = ""`.
 
 ### Recurse through child nodes
 
@@ -200,38 +187,30 @@ a root node (including the root itself):
 
 ```js
 function eachNode(rootNode, callback) {
-	if (!callback) {
-		const nodes = []
-		eachNode(rootNode, function(node) {
-			nodes.push(node)
-		})
-		return nodes
-	}
-
-	if (false === callback(rootNode)) {
-		return false
+  if (!callback) {
+    const nodes = []
+    eachNode(rootNode, function(node) {
+      nodes.push(node)
+    })
+    return nodes
   }
 
-	if (rootNode.hasChildNodes()) {
-		const nodes = rootNode.childNodes
-		for (let i = 0, l = nodes.length; i < l; ++i) {
-			if (false === eachNode(nodes[i], callback)) {
-				return
+  if (false === callback(rootNode)) {
+    return false
+  }
+
+  if (rootNode.hasChildNodes()) {
+    const nodes = rootNode.childNodes
+    for (let i = 0, l = nodes.length; i < l; ++i) {
+      if (false === eachNode(nodes[i], callback)) {
+        return
             }
         }
-	}
+  }
 }
 ```
 
-#### Syntax
-
-```js
-eachNode(rootNode, callback)
-```
-
-#### Description
-
-Recursively calls a function for each descendant node of
+The function recursively calls a function for each descendant node of
 `rootNode` (including the root itself).
 
 If `callback` is omitted, the function returns an
@@ -243,7 +222,7 @@ If `callback` is provided, and it returns
 resumes execution at the last parent's level. This can be used to abort loops once a
 node has been found (such as searching for a text node which contains a certain string).
 
-#### Parameters
+The function has two parameters:
 
 - `rootNode`
   - : The `Node` object whose descendants will be recursed through.
@@ -253,41 +232,6 @@ node has been found (such as searching for a text node which contains a certain 
     returns an {{jsxref("Array")}} of every node contained within
     `rootNode` (including the root itself).
 
-#### Sample usage
-
-The following example prints the [`textContent`](/en-US/docs/Web/API/Node/textContent) properties of
-each `<span>` element in a `<div>` element named
-`"box"`:
-
-```html
-<div id="box">
-  <span>Foo</span>
-  <span>Bar</span>
-  <span>Baz</span>
-</div>
-```
-
-```js
-const box = document.getElementById("box")
-eachNode(box, function(node) {
-  if (null != node.textContent) {
-    console.log(node.textContent)
-  }
-})
-```
-
-The above will result in the following strings printing to the user's console:
-
-```js
-"\n\t", "Foo", "\n\t", "Bar", "\n\t", "Baz"
-```
-
-> **Note:** Whitespace forms part of a {{DOMxRef("Text")}} node, meaning
-> indentation and newlines form separate `Text` between the
-> `Element` nodes.
-
-#### Realistic usage
-
 The following demonstrates a real-world use of the `eachNode()` function:
 searching for text on a web-page.
 
@@ -295,46 +239,37 @@ We use a wrapper function named `grep` to do the searching:
 
 ```js
 function grep(parentNode, pattern) {
-	const matches = []
-	let endScan = false
+  const matches = []
+  let endScan = false
 
-	eachNode(parentNode, function(node){
-		if (endScan) {
-			return false
+  eachNode(parentNode, function(node){
+    if (endScan) {
+      return false
     }
 
-		// Ignore anything which isn't a text node
-		if (node.nodeType !== Node.TEXT_NODE) {
-			return
+    // Ignore anything which isn't a text node
+    if (node.nodeType !== Node.TEXT_NODE) {
+      return
     }
 
-		if (typeof pattern === "string") {
-			if (-1 !== node.textContent.indexOf(pattern)) {
-				matches.push(node)
-      }
-		}
-		else if (pattern.test(node.textContent)) {
-			if (!pattern.global) {
-				endScan = true
-				matches = node
-			}
-			else {
+    if (typeof pattern === "string") {
+      if (-1 !== node.textContent.indexOf(pattern)) {
         matches.push(node)
       }
-		}
-	})
+    }
+    else if (pattern.test(node.textContent)) {
+      if (!pattern.global) {
+        endScan = true
+        matches = node
+      }
+      else {
+        matches.push(node)
+      }
+    }
+  })
 
-	return matches
+  return matches
 }
-```
-
-For example, to find {{DOMxRef("Text")}} nodes that contain typos:
-
-```js
-const typos = ["teh", "adn", "btu", "adress", "youre", "msitakes"]
-const pattern = new RegExp("\\b(" + typos.join("|") + ")\\b", "gi")
-const mistakes = grep(document.body, pattern)
-console.log(mistakes)
 ```
 
 ## Specifications

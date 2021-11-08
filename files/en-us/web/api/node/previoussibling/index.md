@@ -2,24 +2,34 @@
 title: Node.previousSibling
 slug: Web/API/Node/previousSibling
 tags:
-  - API
-  - DOM
-  - Gecko
   - Property
+  - Reference
+  - Read-only
 browser-compat: api.Node.previousSibling
 ---
 {{APIRef("DOM")}}
 
-The **`Node.previousSibling`** read-only property returns the
-node immediately preceding the specified one in its parent's
-{{domxref("Node.childNodes", "childNodes")}} list, or `null` if the specified
-node is the first in that list.
+The read-only **`previousSibling`** property of the {{domxref("Node")}} interface
+returns the node immediately preceding the specified one in its parent's
+{{domxref("Node.childNodes", "childNodes")}} list,
+or `null` if the specified node is the first in that list.
 
-## Syntax
+> **Note:** Browsers insert text nodes into a document to represent whitespace in the source markup.
+> Therefore a node obtained, for example, using [`Node.firstChild`](/en-US/docs/Web/API/Node/firstChild)
+> or `Node.previousSibling`
+> may refer to a whitespace text node rather than the actual element the author intended to get.
+>
+> See [Whitespace in the DOM](/en-US/docs/Web/API/Document_Object_Model/Whitespace) for more information.
+>
+> You can use [`previousElementSibling`](/en-US/docs/Web/API/Element/previousElementSibling)
+> to get the previous element node (skipping text nodes and any other non-element nodes).
+>
+> To navigate the opposite way through the child nodes list use [Node.nextSibling](/en-US/docs/Web/API/Node/nextSibling).
 
-```js
-previousNode = node.previousSibling;
-```
+## Value
+
+A {{domxref("Node")}} representing the previous sibling of the current node,
+or `null` if there are none.
 
 ## Examples
 
@@ -56,20 +66,6 @@ document.getElementById("b2").previousSibling;                 // #text
 document.getElementById("b2").previousSibling.id;              // undefined
 ```
 
-## Notes
-
-Gecko-based browsers insert text nodes into a document to represent whitespace in the
-source markup. Therefore a node obtained, for example, using [`Node.firstChild`](/en-US/docs/Web/API/Node/firstChild "The Node.firstChild read-only property returns the node's first child in the tree, or null if the node has no children.")
-or [`Node.previousSibling`](/en-US/docs/Web/API/Node/previousSibling "The Node.previousSibling read-only property returns the node immediately preceding the specified one in its parent's childNodes list, or null if the specified node is the first in that list.")
-may refer to a whitespace text node rather than the actual element the author intended
-to get. You can use [`previousElementSibling`](/en-US/docs/Web/API/Element/previousElementSibling) to get the previous element node (skipping text nodes and any other non-element nodes).
-
-See [Whitespace in the
-DOM](/en-US/docs/Web/Guide/DOM/Whitespace_in_the_DOM) and [W3C DOM 3 FAQ: Why are some Text nodes empty?](https://www.w3.org/DOM/faq.html#emptytext) for more
-information.
-
-To navigate the opposite way through the child nodes list use [Node.nextSibling](/en-US/docs/Web/API/Node.nextSibling).
-
 ## Specifications
 
 {{Specifications}}
@@ -81,3 +77,4 @@ To navigate the opposite way through the child nodes list use [Node.nextSibling]
 ## See also
 
 - {{domxref("Node.nextSibling")}}
+- {{domxref("Element.previousElementSibling")}}

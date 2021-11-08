@@ -2,30 +2,34 @@
 title: Node.isSameNode()
 slug: Web/API/Node/isSameNode
 tags:
-  - API
-  - DOM
   - Method
-  - Node
   - Reference
 browser-compat: api.Node.isSameNode
 ---
 {{APIRef("DOM")}}
 
-The **`isSameNode()`** method for
-`Node` objects is a legacy alias the [for the `===` strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality). That is, it tests whether two nodes are the same (in other words, whether they
-reference the same object).
+The **`isSameNode()`** method of the {{domxref("Node")}} interface
+is a legacy alias the [for the `===` strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality).
+That is, it tests whether two nodes are the same
+(in other words, whether they reference the same object).
 
-There’s no need to use `isSameNode()`; instead use the `===` strict equality operator.
+> **Note:** There is no need to use `isSameNode()`; instead use the `===` strict equality operator.
 
 ## Syntax
 
 ```js
-const isSameNode = node.isSameNode(otherNode)
+isSameNode(otherNode);
 ```
 
 ### Parameters
 
-- `otherNode` The {{domxref("Node")}} to test against.
+- `otherNode`
+  - : The {{domxref("Node")}} to test against.
+    > **Note:** This parameter is not optional, but can be set to `null`.
+
+### Return value
+
+A boolean value that is `true` if both nodes are stricly equal, `false` if not.
 
 ## Example
 
@@ -45,12 +49,12 @@ JavaScript to compare the nodes using `isSameNode()` and output the results.
 
 ```css hidden
 #output {
-  width: 440px;
-  border: 2px solid black;
-  border-radius: 5px;
-  padding: 10px;
-  margin-top: 20px;
-  display: block;
+  width: 440px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  display: block;
 }
 ```
 
@@ -67,7 +71,7 @@ output.innerHTML += "div 0 same as div 2: " + divList[0].isSameNode(divList[2]) 
 
 ### Results
 
-{{ EmbedLiveSample('Example', 480) }}
+{{ EmbedLiveSample('Example', "100%", "205") }}
 
 ## Specifications
 
