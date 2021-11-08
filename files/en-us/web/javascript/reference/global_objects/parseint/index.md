@@ -169,7 +169,7 @@ parseInt('0xF', 16)
 parseInt('F', 16)
 parseInt('17', 8)
 parseInt(021, 8)
-parseInt('015', 10)    // but `parseInt(015, 8)` will return 13
+parseInt('015', 10)    // but `parseInt('015', 8)` will return 13
 parseInt(15.99, 10)
 parseInt('15,123', 10)
 parseInt('FXX123', 16)
