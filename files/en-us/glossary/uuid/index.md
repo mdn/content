@@ -5,7 +5,7 @@ tags:
   - Glossary
   - Infrastructure
 ---
-A **Universally Unique Identifier** (**UUID**) or **Globally Unique Identifier** (**GUID**) is a label that can be used to uniquely identify a particular resource among all other resources of that type.
+A **Universally Unique Identifier** (**UUID**) or **Globally Unique Identifier** (**GUID**) is a label used to uniquely identify a resource among all other resources of that type.
 
 Computer systems typically generate UUIDs locally using very large random numbers, often seeded with date and/or timestamps.
 In theory these IDs may not be globally unique, but with large enough identifiers the probability of duplicates is vanishingly small.
