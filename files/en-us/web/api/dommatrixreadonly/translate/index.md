@@ -6,7 +6,7 @@ tags:
   - Reference
 browser-compat: api.DOMMatrixReadOnly.translate
 ---
-{{APIRef("Geometry Interfaces")}}{{SeeCompatTable}}
+{{APIRef("Geometry Interfaces")}}
 
 The `translate()` method of the {{domxref("DOMMatrixReadOnly")}} interface
 creates a new matrix being the result of the original matrix with a translation applied.

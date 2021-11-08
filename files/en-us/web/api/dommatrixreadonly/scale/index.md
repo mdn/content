@@ -6,7 +6,7 @@ tags:
   - Reference
 browser-compat: api.DOMMatrixReadOnly.scale
 ---
-{{APIRef("Geometry Interfaces")}}{{SeeCompatTable}}
+{{APIRef("Geometry Interfaces")}}
 
 The **`scale()`** method of the
 {{domxref("DOMMatrixReadOnly")}} interface creates a new matrix being the result of the
