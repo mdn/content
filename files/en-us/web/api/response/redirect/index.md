@@ -37,7 +37,7 @@ A {{domxref("Response")}} object.
 
 ### Exceptions
 
-- {{jsxref("RangeError"}}
+- {{jsxref("RangeError")}}
   - : The specified status is not a redirect status.
 - {{jsxref("TypeError")}}
   - : The specified URL is invalid.
