@@ -16,7 +16,10 @@ browser-compat: css.properties.cursor
 ---
 {{CSSRef}}
 
-The **`cursor`** [CSS](/en-US/docs/Web/CSS) property sets the type of mouse cursor, if any, to show when the mouse pointer is over an element.
+The **`cursor`** [CSS](/en-US/docs/Web/CSS) property sets the mouse cursor, if any, to show when the mouse pointer is over an element.
+
+The curser setting should inform users of the mouse operations that can be performed at the current location, including: text selection, activating help or context menus, copying content, resizing tables, and so on.
+You can specify either the _type_ of cursor using a keyword, or load a specific icon to use (with optional fallback images and mandatory keyword as a final fallback).
 
 {{EmbedInteractiveExample("pages/css/cursor.html")}}
 
@@ -24,15 +27,20 @@ The **`cursor`** [CSS](/en-US/docs/Web/CSS) property sets the type of mouse curs
 
 ```css
 /* Keyword value */
-cursor: pointer;
 cursor: auto;
+cursor: pointer;
+...
+cursor: zoom-out;
 
-/* URL, with a keyword fallback */
+/* URL with mandatory keyword fallback */
 cursor: url(hand.cur), pointer;
 
-/* URL and coordinates, with a keyword fallback */
-cursor: url(cursor1.png) 4 12, auto;
-cursor: url(cursor2.png) 2 2, pointer;
+/* URL and coordinates, with mandatory keyword fallback */
+cursor: url(cursor_1.png) 4 12, auto;
+cursor: url(cursor_2.png) 2 2, pointer;
+
+/* URLs and fallback URLs (some with coordinates), with mandatory keyword fallback */
+cursor: url(cursor_1.svg) 4 5, url(cursor_2.svg), ... , url(cursor_n.cur) 5 5, progress;
 
 /* Global values */
 cursor: inherit;
@@ -41,31 +49,38 @@ cursor: revert;
 cursor: unset;
 ```
 
-The `cursor` property is specified as zero or more `<url>` values, separated by commas, followed by a single mandatory keyword value. Each `<url>` should point to an image file. The browser will try to load the first image specified, falling back to the next if it can't, and falling back to the keyword value if no images could be loaded (or if none were specified).
+The `cursor` property is specified as zero or more `<url>` values, separated by commas, followed by a single mandatory keyword value.
+Each `<url>` should point to an image file.
+The browser will try to load the first image specified, falling back to the next if it can't, and falling back to the keyword value if no images could be loaded (or if none were specified).
 
-Each `<url>` may be optionally followed by a pair of space-separated numbers, which represent `<x><y>` coordinates. These will set the cursor's hotspot, relative to the top-left corner of the image.
+Each `<url>` may be optionally followed by a pair of space-separated numbers, which set the `<x>` `<y>` coordinates of the cursor's hotspot relative to the top-left corner of the image.
 
-For example, this specifies two images using `<url>` values, providing `<x><y>` coordinates for the second one, and falling back to the `progress` keyword value if neither image can be loaded:
-
-```css
-cursor: url(one.svg), url(two.svg) 5 5, progress;
-```
 
 ### Values
 
-- `<url>`
-  - : A `url(…)` or a comma separated list `url(…), url(…), …`, pointing to an image file. More than one {{cssxref("url()")}} may be provided as fallbacks, in case some cursor image types are not supported. A non-URL fallback (one or more of the keyword values) _must_ be at the end of the fallback list. See [Using URL values for the cursor property](/en-US/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property) for more details.
-- `<x>` `<y>` {{experimental_inline}}
-  - : Optional x- and y-coordinates. Two unitless nonnegative numbers less than 32.
-- Keyword values
+- `<url>` {{optional_inline}}
+  - : A `url(…)` or a comma separated list `url(…), url(…), …`, pointing to an image file.
+    More than one {{cssxref("url()")}} may be provided as fallbacks, in case some cursor image types are not supported.
+    A non-URL fallback (one or more of the keyword values) _must_ be at the end of the fallback list.
+- `<x>` `<y>` {{optional_inline}}
+  - : Optional x- and y-coordinates indicating the cursor hotspot; the precise position within the cursor that is being pointed to.
 
-  - : _Move your mouse over values to see their live appearance in your browser:_
+    The numbers are in units of image pixels.
+    They are relative to the top left corner of the image, which corresponds to "`0` `0`", and are clamped within the boundaries of the cursor image.
+    If these values are not specified, they may be read from the file itself, and will otherwise default to the top-left corner of the image.
+
+- `keyword`
+
+  - : A keyword value _must_ be specified, indicating either the type of cursor to use, or the fallback cursor to use if all specified icons fail to load.
+  
+    The available keywords are listed in the table below.
+    You can hover your mouse over the table rows to see the effect of the different cursor keyword values on your browser.
 
     <table class="standard-table">
       <thead>
         <tr>
           <th scope="col">Category</th>
-          <th scope="col">CSS value</th>
+          <th scope="col">Keyword</th>
           <th scope="col">Example</th>
           <th scope="col">Description</th>
         </tr>
@@ -76,8 +91,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>auto</code></td>
           <td></td>
           <td>
-            The UA will determine the cursor to display based on the current
-            context. E.g., equivalent to <code>text</code> when hovering text.
+            The UA will determine the cursor to display based on the current context. E.g., equivalent to <code>text</code> when hovering text.
           </td>
         </tr>
         <tr style="cursor: default">
@@ -105,8 +119,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>pointer</code></td>
           <td><img src="pointer.gif" /></td>
           <td>
-            The cursor is a pointer that indicates a link. Typically an image of a
-            pointing hand.
+            The cursor is a pointer that indicates a link. Typically an image of a pointing hand.
           </td>
         </tr>
         <tr style="cursor: progress">
@@ -121,9 +134,8 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>wait</code></td>
           <td><img src="wait.gif" /></td>
           <td>
-            The program is busy, and the user can't interact with the interface (in
-            contrast to <code>progress</code>). Sometimes an image of an hourglass
-            or a watch.
+            The program is busy, and the user can't interact with the interface (in contrast to <code>progress</code>).
+            Sometimes an image of an hourglass or a watch.
           </td>
         </tr>
         <tr style="cursor: cell">
@@ -146,8 +158,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>vertical-text</code></td>
           <td><img alt="vertical-text.gif" src="vertical-text.gif" /></td>
           <td>
-            The vertical text can be selected. Typically the shape of a sideways
-            I-beam.
+            The vertical text can be selected. Typically the shape of a sideways I-beam.
           </td>
         </tr>
         <tr style="cursor: alias">
@@ -178,8 +189,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           </td>
           <td>
             An item may not be dropped at the current location.<br />{{bug("275173")}}:
-            On Windows and Mac OS X, <code>no-drop</code> is the same as
-            <code>not-allowed</code>.
+            On Windows and Mac OS X, <code>no-drop</code> is the same as <code>not-allowed</code>.
           </td>
         </tr>
         <tr style="cursor: not-allowed">
@@ -212,16 +222,16 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>col-resize</code></td>
           <td><img alt="col-resize.gif" src="col-resize.gif" /></td>
           <td>
-            The item/column can be resized horizontally. Often rendered as arrows
-            pointing left and right with a vertical bar separating them.
+            The item/column can be resized horizontally.
+            Often rendered as arrows pointing left and right with a vertical bar separating them.
           </td>
         </tr>
         <tr style="cursor: row-resize">
           <td><code>row-resize</code></td>
           <td><img alt="row-resize.gif" src="row-resize.gif" /></td>
           <td>
-            The item/row can be resized vertically. Often rendered as arrows
-            pointing up and down with a horizontal bar separating them.
+            The item/row can be resized vertically.
+            Often rendered as arrows pointing up and down with a horizontal bar separating them.
           </td>
         </tr>
         <tr style="cursor: n-resize">
@@ -234,11 +244,9 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
             />
           </td>
           <td rowspan="8" style="cursor: auto">
-            Some edge is to be moved. For example, the <code>se-resize</code> cursor
-            is used when the movement starts from the <em>south-east</em> corner of
-            the box.<br />In some environments, an equivalent bidirectional resize
-            cursor is shown. For example, <code>n-resize</code> and
-            <code>s-resize</code> are the same as <code>ns-resize</code>.
+            Some edge is to be moved. For example, the <code>se-resize</code> cursor is used when the movement starts from the <em>south-east</em> corner of the box.<br />
+            In some environments, an equivalent bidirectional resize cursor is shown.
+            For example, <code>n-resize</code> and <code>s-resize</code> are the same as <code>ns-resize</code>.
           </td>
         </tr>
         <tr style="cursor: e-resize">
@@ -336,19 +344,34 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
       </tbody>
     </table>
 
-## Usage notes
+## Formal syntax
 
-Although the specification does not define any size limitations for `cursor`, individual {{Glossary("user agent", "user agents")}} may choose to do so. Cursor changes using images which are outside the size range supported by the browser will generally just be ignored.
-
-Check the {{anch("Browser compatibility")}} table for any notes on cursor size limits.
+{{csssyntax}}
 
 ## Formal definition
 
 {{cssinfo}}
 
-## Formal syntax
+## Usage notes
 
-{{csssyntax}}
+### Icon size limits
+
+While the specification does not limit the `cursor` image size, {{Glossary("user agent", "user agents")}} commonly restrict them to avoid potential misuse.
+For example, on Firefox and Chromimum cursor images are restricted to 32x32 pixels by default, and cursor changes using larger images will generally just be ignored.
+
+Check the {{anch("Browser compatibility")}} table for any notes on cursor size limits.
+
+### Supported image file formats
+
+User agents are required by the specification to support PNG files, SVG v1.1 files in secure static mode that contain a natural size, and any other non-animated image file formats that they support for images in other properties.
+Desktop browsers also broadly support the `.cur` file format.
+
+The specification further indicates that user agents  _should_ also support SVG v1.1 files in secure animated mode that contain a natural size, along with any other animated images file formats they support for images in other properties.
+User agents _may_ support both static and animated SVG images that do not contain a natural size.
+
+### Other notes
+
+Cursor changes that intersect toolbar areas are commonly blocked to avoid spoofing.
 
 ## Examples
 
@@ -379,6 +402,5 @@ Check the {{anch("Browser compatibility")}} table for any notes on cursor size l
 
 ## See also
 
-- [Using URL values for the cursor property](/en-US/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property)
 - {{cssxref("pointer-events")}}
 - {{cssxref("url()", "url()")}} function
