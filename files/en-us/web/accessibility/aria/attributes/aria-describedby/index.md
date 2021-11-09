@@ -26,6 +26,14 @@ The `aria-describedby` property is appropriate when the associated content conta
 
 > **Note:** The `aria-describedby` content should only be a text string. If there are important underlying semantics in the content, consider using [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details).
 
+## Example
+
+```html
+<button aria-describedby="trash-desc">Move to trash</button>
+...
+<p id="trash-desc">Items in the trash will be permanently removed after 30 days.</p>
+```
+
 <!--## Examples
 
 ### Example 1: Application Landmark Descriptions
