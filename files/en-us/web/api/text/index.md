@@ -2,8 +2,6 @@
 title: Text
 slug: Web/API/Text
 tags:
-  - API
-  - DOM
   - Interface
   - Reference
 browser-compat: api.Text
@@ -32,12 +30,12 @@ Each of those text nodes is an object that has the properties and methods docume
 
 ## Constructor
 
-- {{domxref("Text.Text", "Text()")}} {{experimental_inline}}
-  - : Returns a `Text` node with the parameter as its textual content.
+- {{domxref("Text.Text", "Text()")}}
+  - : Returns a new `Text` node with the parameter as its textual content.
 
 ## Properties
 
-_Inherits properties from its parent, {{domxref("CharacterData")}}._
+_Inherits properties from its parents, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
 - {{domxref("Text.assignedSlot")}} {{readonlyInline}}
   - : Returns a {{domxref("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.
@@ -46,10 +44,8 @@ _Inherits properties from its parent, {{domxref("CharacterData")}}._
 
 ## Methods
 
-_Inherits methods from its parent, {{domxref("CharacterData")}}._
+_Inherits methods from its parent, {{domxref("CharacterData")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
-- {{domxref("Text.getBoxQuads()")}} {{experimental_inline}}
-  - : Returns a list of {{domxref("DOMQuad")}} objects representing the CSS fragments of the node.
 - {{domxref("Text.replaceWholeText")}} {{deprecated_inline}}
   - : Replaces the text of the current node and all logically adjacent nodes with the specified text.
 - {{domxref("Text.splitText")}}
@@ -65,4 +61,4 @@ _Inherits methods from its parent, {{domxref("CharacterData")}}._
 
 ## See also
 
-- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model).
+- [The DOM API](/en-US/docs/Web/API/Document_Object_Model).

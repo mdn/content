@@ -2,26 +2,29 @@
 title: Text()
 slug: Web/API/Text/Text
 tags:
-  - API
   - Constructor
-  - DOM
-  - Experimental
   - Reference
-  - Text
 browser-compat: api.Text.Text
 ---
-{{ Apiref("DOM")}}{{SeeCompatTable}}
+{{ APIRef("DOM")}}
 
-The **`Text()`** constructor returns a newly created
-{{domxref("Text")}} object with the optional {{domxref("DOMString")}} given in parameter
-as its textual content.
+The **`Text()`** constructor returns a new {{domxref("Text")}} object
+with the optional string given in parameter as its textual content.
 
 ## Syntax
 
 ```js
-text1 = new Text(); // Create an empty text node
-text2 = new Text("This is a text node");
+new Text();
+new Text(aString);
 ```
+
+### Parameters
+
+- `aString` {{optional_inline}}
+
+### Return value
+
+A new {{domxref("Text")}} object containing `aString`, or the empty string if no parameter was given.
 
 ## Example
 
@@ -39,4 +42,4 @@ let text = new Text("Test");
 
 ## See also
 
-- [The DOM interfaces index.](/en-US/docs/Web/API/Document_Object_Model)
+- The [DOM API](/en-US/docs/Web/API/Document_Object_Model)

@@ -2,18 +2,37 @@
 title: CharacterData.length
 slug: Web/API/CharacterData/length
 tags:
-  - API
-  - DOM
-  - Method
-  - Node
+  - Property
   - Reference
-  - CharacterData
+  - Read-only
 browser-compat: api.CharacterData.length
 ---
 {{APIRef("DOM")}}
 
-The **`CharacterData.length`** property returns the
-number of characters in the contained data, as a positive integer.
+The read-only **`CharacterData.length`** property
+returns the number of characters in the contained data, as a positive integer.
+
+## Value
+
+A positive integer with the length of the {{domxref("CharacterData.data")}} string.
+
+## Example
+
+> **Note:** {{domxref("CharacterData")}} is an abstract interface.
+> The examples below use {{domxref("Text")}}, a concrete interface implementing it.
+
+```html
+Length of the string in the <code>Text</code> node: <output></output>
+```
+
+```js
+let output = document.getElementsByTagName("output")[0];
+let textnode = new Text("This text has been set using textnode.data.");
+
+output.value = textnode.length;
+```
+
+{{EmbedLiveSample("Example", "100%", 50)}}
 
 ## Specifications
 
