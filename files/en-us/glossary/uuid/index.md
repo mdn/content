@@ -7,7 +7,7 @@ tags:
 ---
 A **Universally Unique Identifier** (**UUID**) is a label used to uniquely identify a resource among all other resources of that type.
 
-Computer systems generate UUIDs locally using very large random numbers, possibly seeded with timestamp or other information.
+Computer systems generate UUIDs locally using very large random numbers.
 In theory the IDs may not be globally unique, but the probability of duplicates is vanishingly small.
 If systems really need absolutely unique IDs then these might be allocated by a central authority.
 
