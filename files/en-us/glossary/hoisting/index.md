@@ -32,7 +32,7 @@ The result of the code above is: "My cat's name is Tiger"
 */
 ```
 
-Without hoisting you would have to write the same code like this:
+Without hoisting you would _have_ to write the same code like this:
 
 ```js
 function catName(name) {
@@ -40,6 +40,9 @@ function catName(name) {
 }
 
 catName("Tiger");
+/*
+The result of the code above is the same: "My cat's name is Tiger"
+*/
 ```
 
 
@@ -54,7 +57,7 @@ Until that point in the execution is reached the variable has its _default_ init
 
 > **Note:** Conceptually variable hoisting is often presented as the interpreter "splitting variable declaration and initialization, and moving (just) the declarations to the top of the code".
 
-Below are some examples of using a variable before it is declared.
+Below are some examples showing what can happen if you use a variable before it is declared.
 
 ### `var` hoisting
 
@@ -76,11 +79,11 @@ var num = 6; // Initialization and declaration.
 console.log(num); // Returns 6 after the line with initialization is executed.
 ```
 
-If we forget the declaration altogether (and only initialize the value) it isn't hoisted.
+If we forget the declaration altogether (and only initialize the value) the variable isn't hoisted.
 Trying to read the variable before it is initialized results in `ReferenceError` exception.
 
 ```js
-console.log(num); // Throws ReferenceError exception - interpreter doesn't know about `num`.
+console.log(num); // Throws ReferenceError exception - the interpreter doesn't know about `num`.
 num = 6; // Initialization
 ```
  
