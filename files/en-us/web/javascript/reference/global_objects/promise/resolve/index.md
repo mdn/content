@@ -18,9 +18,7 @@ promise, that promise is returned; if the value is a thenable (i.e. has a
 thenable, adopting its eventual state; otherwise the returned promise will be fulfilled
 with the value. This function flattens nested layers of promise-like objects (e.g. a
 promise that resolves to a promise that resolves to something) into a single layer.
-<div class="blockIndicator warning">
-  <p>Warning: Do not call `Promise.resolve()` on a thenable that resolves to itself. This leads to infinite recursion because it attempts to flatten the infinite nested promise. An example is to use it with asynchronous pipes in `Angular`. Click <a href="https://angular.io/guide/template-syntax#avoid-side-effects">here</a> to know more about it</p>
-</div>
+> **Warning:** Do not call `Promise.resolve()` on a thenable that resolves to itself. That leads to infinite recursion, because it attempts to flatten an infinitely-nested promise.
 ## Example
 <pre class="brush: js">
 let thenable = {
