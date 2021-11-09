@@ -242,7 +242,7 @@ h1 {
 }
 ```
 
-### `:is()` does not select pseudo-elements
+### :is() does not select pseudo-elements
 
 ```css example-bad
 some-element:is(::before, ::after) {
