@@ -10,20 +10,24 @@ tags:
 
 This document provides a record of MDN content processes, constructs, and best practices that have changed, and when they changed. It is useful to allow regular contributors to check in and see what has changed about the process of creating content for MDN.
 
+## November 2021
+
+Conversion to Markdown is done, so remove the old CSS style guide and redirect to the Markdown in MDN page.
+
 ## July 2021
 
 ### Updates to CSS style guide for Markdown
 
-Multiple updates to the [CSS style guide](/en-US/docs/MDN/Guidelines/CSS_style_guide) to reflect the move towards Markdown, and encourage authors to write HTML in a Markdown-compatible way.
+Multiple updates to the CSS style guide to reflect the move towards Markdown, and encourage authors to write HTML in a Markdown-compatible way.
 
-- [Note](/en-US/docs/MDN/Guidelines/CSS_style_guide#.note.notecard) and [warning](/en-US/docs/MDN/Guidelines/CSS_style_guide#.notecard.warning) boxes no longer have a separate `<h4>` heading for the title (e.g. `<h4>Warning</h4>` ). Instead, the first paragraph begins with title text, as shown: `<strong>Note:</strong> `and `<strong>Warning:</strong> `. Note that a space character is required after the closing `</strong>` tag/before the content).
+- Note and warning boxes no longer have a separate `<h4>` heading for the title (e.g. `<h4>Warning</h4>` ).
 
-  See our [Guide to classes and styles used in MDN content](/en-US/docs/MDN/Guidelines/CSS_style_guide#.note.notecard) guide for further information and syntax guides.
+  See our [Markdown in MDN](/en-US/docs/MDN/Contribute/Markdown_in_MDN#notes_warnings_and_callouts) guide for the correct syntax.
 
 - The `seoSummary` class should no longer be used.
 - The `standard-table` class should no longer be used. The styling provided by this class is now applied to tables by default (see <https://github.com/mdn/mdn-minimalist/issues/680>).
 - The {{HTMLElement("details")}} element should no longer be used.
-- The [`hidden`](/en-US/docs/MDN/Guidelines/CSS_style_guide#.hidden), [`example-good`](/en-US/docs/MDN/Guidelines/CSS_style_guide#.example-good), and [`example-bad`](/en-US/docs/MDN/Guidelines/CSS_style_guide#.example-bad) classes used to be primarily for code blocks but could be used on other elements. Now they can only be used on code blocks.
+- The `hidden`, `example-good`, and `example-bad` classes used to be primarily for code blocks but could be used on other elements. Now they can only be used on code blocks.
 
 ## February 2021
 
@@ -56,4 +60,4 @@ Previously on MDN, note and warning boxes would be wrapped by `<div>` elements w
 
 In January this changed — the `class` attribute should now include an additional `notecard` class, and the strong text is instead included in a heading at the top of the block.
 
-See our [Guide to classes and styles used in MDN content](/en-US/docs/MDN/Guidelines/CSS_style_guide#.note.notecard) guide for further information and syntax guides.
+See our [Markdown in MDN](/en-US/docs/MDN/Contribute/Markdown_in_MDN#notes_warnings_and_callouts) guide for further information and syntax guides.

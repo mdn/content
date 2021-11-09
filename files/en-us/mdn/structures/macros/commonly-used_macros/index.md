@@ -13,7 +13,6 @@ This page lists many of the general-purpose macros created for use on MDN.
 For additional how-to information on using these macros, see [Using macros](/en-US/docs/MDN/Structures/Macros).
 
 See [Other macros](/en-US/docs/MDN/Structures/Macros/Other) for information on macros that are infrequently used, are used only in special contexts, or are deprecated.
-See the [CSS style guide](/en-US/docs/MDN/Guidelines/CSS_style_guide) for styles available for your use.
 
 ## Linking
 

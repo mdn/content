@@ -5417,7 +5417,7 @@
 /en-US/docs/MDN/At_ten/Contributing_to_MDN	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/Contribute/Code_sample_guidelines	/en-US/docs/MDN/Guidelines/Code_guidelines
 /en-US/docs/MDN/Contribute/Content	/en-US/docs/MDN/Guidelines
-/en-US/docs/MDN/Contribute/Content/Content_blocks	/en-US/docs/MDN/Guidelines/CSS_style_guide
+/en-US/docs/MDN/Contribute/Content/Content_blocks	/en-US/docs/MDN/Contribute/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Content/Custom_macros	/en-US/docs/MDN/Structures/Macros/Commonly-used_macros
 /en-US/docs/MDN/Contribute/Content/Layout/API_landing_page	/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Content/Layout/Reference_page	/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference
@@ -5432,7 +5432,7 @@
 /en-US/docs/MDN/Contribute/FAQ	/en-US/docs/MDN/Contribute
 /en-US/docs/MDN/Contribute/Guidelines	/en-US/docs/MDN/Guidelines
 /en-US/docs/MDN/Contribute/Guidelines/Best_practices	/en-US/docs/MDN/Guidelines/Conventions_definitions
-/en-US/docs/MDN/Contribute/Guidelines/CSS_style_guide	/en-US/docs/MDN/Guidelines/CSS_style_guide
+/en-US/docs/MDN/Contribute/Guidelines/CSS_style_guide	/en-US/docs/MDN/Contribute/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Guidelines/Code_guidelines	/en-US/docs/MDN/Guidelines/Code_guidelines
 /en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS	/en-US/docs/MDN/Guidelines/Code_guidelines/CSS
 /en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/General	/en-US/docs/MDN/Guidelines/Code_guidelines/General
@@ -5441,7 +5441,7 @@
 /en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/Shell	/en-US/docs/MDN/Guidelines/Code_guidelines/Shell
 /en-US/docs/MDN/Contribute/Guidelines/Code_samples	/en-US/docs/MDN/Guidelines/Code_guidelines
 /en-US/docs/MDN/Contribute/Guidelines/Content	/en-US/docs/MDN/Guidelines/Does_this_belong_on_MDN
-/en-US/docs/MDN/Contribute/Guidelines/Content_blocks	/en-US/docs/MDN/Guidelines/CSS_style_guide
+/en-US/docs/MDN/Contribute/Guidelines/Content_blocks	/en-US/docs/MDN/Contribute/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions	/en-US/docs/MDN/Guidelines/Conventions_definitions
 /en-US/docs/MDN/Contribute/Guidelines/Custom_macros	/en-US/docs/MDN/Structures/Macros/Commonly-used_macros
 /en-US/docs/MDN/Contribute/Guidelines/Does_this_belong_on_MDN	/en-US/docs/MDN/Guidelines/Does_this_belong_on_MDN
@@ -5469,7 +5469,7 @@
 /en-US/docs/MDN/Contribute/Structures/Banners_and_notices	/en-US/docs/MDN/Structures/Banners_and_notices
 /en-US/docs/MDN/Contribute/Structures/Code_examples	/en-US/docs/MDN/Structures/Code_examples
 /en-US/docs/MDN/Contribute/Structures/Compatibility_tables	/en-US/docs/MDN/Structures/Compatibility_tables
-/en-US/docs/MDN/Contribute/Structures/Content_blocks	/en-US/docs/MDN/Guidelines/CSS_style_guide
+/en-US/docs/MDN/Contribute/Structures/Content_blocks	/en-US/docs/MDN/Contribute/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Structures/Live_samples	/en-US/docs/MDN/Structures/Live_samples
 /en-US/docs/MDN/Contribute/Structures/Macros	/en-US/docs/MDN/Structures/Macros
 /en-US/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros	/en-US/docs/MDN/Structures/Macros/Commonly-used_macros
@@ -5495,7 +5495,7 @@
 /en-US/docs/MDN/Contribute/Structures/Syntax_sections	/en-US/docs/MDN/Structures/Syntax_sections
 /en-US/docs/MDN/Contribute/Style_guide	/en-US/docs/MDN/Guidelines
 /en-US/docs/MDN/Contribute/Style_guide/Compatibility_tables	/en-US/docs/MDN/Structures/Compatibility_tables
-/en-US/docs/MDN/Contribute/Style_guide/Content_blocks	/en-US/docs/MDN/Guidelines/CSS_style_guide
+/en-US/docs/MDN/Contribute/Style_guide/Content_blocks	/en-US/docs/MDN/Contribute/Markdown_in_MDN
 /en-US/docs/MDN/Contribute/Style_guide/Custom_macros	/en-US/docs/MDN/Structures/Macros/Commonly-used_macros
 /en-US/docs/MDN/Contribute/Style_guide/Live_samples	/en-US/docs/MDN/Structures/Live_samples
 /en-US/docs/MDN/Contribute/Style_guide/Macros	/en-US/docs/MDN/Structures/Macros
@@ -5510,6 +5510,7 @@
 /en-US/docs/MDN/Contribute/Tools/Sample_server	/en-US/docs/MDN/Tools/Sample_server
 /en-US/docs/MDN/Feedback	/en-US/docs/MDN/Contribute/Feedback
 /en-US/docs/MDN/Getting_started	/en-US/docs/MDN/Contribute/Getting_started
+/en-US/docs/MDN/Guidelines/CSS_style_guide	/en-US/docs/MDN/Contribute/Markdown_in_MDN
 /en-US/docs/MDN/Guidelines/Content	/en-US/docs/MDN/Guidelines/Does_this_belong_on_MDN
 /en-US/docs/MDN/JavaScript	/en-US/docs/Web/JavaScript
 /en-US/docs/MDN/Kuma	/en-US/docs/MDN/Yari
@@ -5527,7 +5528,7 @@
 /en-US/docs/MDN/Quick_start	/en-US/docs/MDN/Contribute/Getting_started
 /en-US/docs/MDN/Structures/:-ms-input-placeholder_pseudo-class	/en-US/docs/Web/CSS/:placeholder-shown
 /en-US/docs/MDN/Structures/API_references/API_reference_sidebars	/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars
-/en-US/docs/MDN/Structures/Content_blocks	/en-US/docs/MDN/Guidelines/CSS_style_guide
+/en-US/docs/MDN/Structures/Content_blocks	/en-US/docs/MDN/Contribute/Markdown_in_MDN
 /en-US/docs/MDN/Tools/Document_parameters	/en-US/docs/MDN/Tools/Unsupported_GET_API
 /en-US/docs/MDN/User_guide	/en-US/docs/MDN/Tools
 /en-US/docs/MDN/User_guide/Troubleshooting_KumaScript_errors	/en-US/docs/MDN/Tools/KumaScript/Troubleshooting

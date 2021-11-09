@@ -6,10 +6,6 @@ tags:
 ---
 {{MDNSidebar}}
 
-> **Warning:** We're currently in the process of converting all MDN content from HTML into Markdown. Currently you can write pages in HTML or in Markdown, but we don't want to mix formats within a section.
->
-> At the moment the JavaScript, CSS, and Web API documentation are in Markdown, so this page applies to those parts of the site. For other parts of the site, write documentation in HTML.
-
 This page describes how we use Markdown to write documentation on MDN. We have chosen GitHub-Flavored Markdown (GFM) as a baseline, and added some extensions to support some of the things we need to do on MDN that aren't readily supported in GFM.
 
 ## Baseline: GitHub-Flavored Markdown

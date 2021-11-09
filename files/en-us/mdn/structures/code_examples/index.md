@@ -49,7 +49,7 @@ Aside from the specific system for presenting the live samples, as summarized ab
 
 ## Static examples
 
-By static examples, we are talking about static code blocks that show how a feature might be used in code. These are put on a page using `<pre>` elements, as described in [Code syntax highlighting](/en-US/docs/MDN/Guidelines/CSS_style_guide#code_syntax_highlighting). An example result might look like this:
+By static examples, we are talking about static code blocks that show how a feature might be used in code. These are put on a page using Markdown "code fences", as described in [Example code blocks](/en-US/docs/MDN/Contribute/Markdown_in_MDN#example_code_blocks). An example result might look like this:
 
 ```js
 // This is a JS example
