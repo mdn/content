@@ -12,27 +12,17 @@ browser-compat: api.Response.body
 ---
 {{APIRef("Fetch")}}
 
-The **`body`** read-only property of the {{domxref("Response")}}
-interface is a {{domxref("ReadableStream")}} of the body contents.
+The **`body`** read-only property of the {{domxref("Response")}} interface is a {{domxref("ReadableStream")}} of the body contents.
 
-## Syntax
-
-```js
-response.body;
-```
-
-### Value
+## Value
 
 A {{domxref("ReadableStream")}}.
 
 ## Example
 
-In our [simple stream
-pump](https://mdn.github.io/dom-examples/streams/simple-pump/) example we fetch an image, expose the response's stream using
-`response.body`, create a reader using
-{{domxref("ReadableStream.getReader()", "ReadableStream.getReader()")}}, then enqueue
-that stream's chunks into a second, custom readable stream — effectively creating an
-identical copy of the image.
+In our [simple stream pump](https://mdn.github.io/dom-examples/streams/simple-pump/) example we fetch an image,
+expose the response's stream using `response.body`, create a reader using {{domxref("ReadableStream.getReader()", "ReadableStream.getReader()")}},
+then enqueue that stream's chunks into a second, custom readable stream — effectively creating an identical copy of the image.
 
 ```js
 const image = document.getElementById('target');

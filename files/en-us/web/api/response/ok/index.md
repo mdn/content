@@ -3,7 +3,6 @@ title: Response.ok
 slug: Web/API/Response/ok
 tags:
   - API
-  - Experimental
   - Fetch
   - Property
   - Reference
@@ -13,32 +12,19 @@ browser-compat: api.Response.ok
 ---
 {{APIRef("Fetch")}}
 
-The **`ok`** read-only property of the {{domxref("Response")}}
-interface contains a Boolean stating whether the response was successful (status in the
-range 200-299) or not.
+The **`ok`** read-only property of the {{domxref("Response")}} interface contains a Boolean stating whether the response was successful (status in the range 200-299) or not.
 
-## Syntax
-
-```js
-var myOK = response.ok;
-```
-
-### Value
+## Value
 
 A boolean value.
 
 ## Example
 
-In our [Fetch
-Response example](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (see [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/))
-we create a new {{domxref("Request")}} object using the
-{{domxref("Request.Request","Request()")}} constructor, passing it a JPG path. We then
-fetch this request using {{domxref("fetch()")}}, extract a blob from
-the response using {{domxref("Response.blob")}}, create an object URL out of it using
-{{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.
+In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (see [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/))
+we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path.
+We then fetch this request using {{domxref("fetch()")}}, extract a blob from the response using {{domxref("Response.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.
 
-> **Note:** at the top of the `fetch()` block we log the
-> response `ok` value to the console.
+> **Note:** at the top of the `fetch()` block we log the response `ok` value to the console.
 
 ```js
 var myImage = document.querySelector('img');

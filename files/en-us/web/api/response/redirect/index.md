@@ -3,7 +3,6 @@ title: Response.redirect()
 slug: Web/API/Response/redirect
 tags:
   - API
-  - Experimental
   - Fetch
   - Method
   - Redirect
@@ -13,12 +12,11 @@ browser-compat: api.Response.redirect
 ---
 {{APIRef("Fetch")}}
 
-The **`redirect()`** method of the {{domxref("Response")}}
-interface returns a `Response` resulting in a redirect to the specified URL.
+The **`redirect()`** method of the {{domxref("Response")}} interface returns a `Response` resulting in a redirect to the specified URL.
 
-> **Note:** This is mainly relevant to the [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API). A controlling
-> service worker could intercept a page's request and redirect it as desired. This will
-> actually lead to a real redirect if a service worker sends it upstream.
+> **Note:** This is mainly relevant to the [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API).
+> A controlling service worker could intercept a page's request and redirect it as desired.
+> This will actually lead to a real redirect if a service worker sends it upstream.
 
 ## Syntax
 
@@ -39,10 +37,10 @@ A {{domxref("Response")}} object.
 
 ### Exceptions
 
-| Exception    | Explanation                                    |
-| ------------ | ---------------------------------------------- |
-| `RangeError` | The specified status is not a redirect status. |
-| `TypeError`  | The specified URL is invalid.                  |
+- {{jsxref("RangeError")}}
+  - : The specified status is not a redirect status.
+- {{jsxref("TypeError")}}
+  - : The specified URL is invalid.
 
 ## Example
 
