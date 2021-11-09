@@ -5,6 +5,8 @@ tags:
   - ARIA
   - Accessibility
   - HTML
+  - Reference
+  - WAI-ARIA
 ---
 Accessible Rich Internet Applications **(ARIA)** is a set of attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.
 
@@ -81,6 +83,8 @@ It is also important to test your authored ARIA with actual assistive technology
 
 - [ARIA Roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
   - : Reference pages covering all the WAI-ARIA roles discussed on MDN.
+- [ARIA States and Properties](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+  - : Reference pages covering all the WAI-ARIA states and properties discussed on MDN.
 
 ## Standardization Efforts
 
