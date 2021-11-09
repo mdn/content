@@ -22,6 +22,8 @@ Adding `aria-hidden="true"` to an element removes that element and all of its ch
 -  Duplicated content, such as repeated text
 -  Offscreen or collapsed content, such as menus
 
+The presence of the `aria-hidden` attribute hides content from assistive technology but doesn't have any actual visual impact on the content.  
+
 `aria-hidden="true"` should not be used on elements that can recieve focus. Additionally, since this attribute is inherited by an element's children, it should not be added onto the parent or ancestor of a focusable element. 
 
 > **Warning:** Do not use `aria-hidden="true"` on focusable elements.
@@ -35,7 +37,7 @@ Use caution when using `aria-hidden` to hide visibly rendered content from assis
 On the surface, the `aria-hidden="true"` and the `role="presentation"` and its synonoym `role="none"` seem similar, but the intent behind each is different. 
 
 - `aria-hidden="true"` will remove the entire element from the accessibility API. 
-- `role="presentation"` and `role="none"` will remove the semantic meaning of an element while still exposing it and its content to assistive technology. 
+- `role="presentation"` and `role="none"` will remove the semantic meaning of an element while still exposing it and its content to assistive technology.  
 
 `aria-hidden="true"` should not be added when:
 
@@ -47,7 +49,7 @@ In all three scenarios, the attribute is unnecessary to add because the element 
 
 Using `aria-hidden="false"` will not re-expose the element to assistive technology if any of its parents specify `aria-hidden="true"`.
 
-When working with dialogs, use the [`aria-modal`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal) attribute rather than `aria-hidden` to inform assistive technologies that content outside a dialog is inert.
+When working with modal dialog popups, use the [`aria-modal`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal) attribute rather than `aria-hidden` to inform assistive technologies that content outside a dialog is inert.
 
 ## Example
 
