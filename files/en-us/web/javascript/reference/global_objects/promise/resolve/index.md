@@ -20,7 +20,7 @@ with the value. This function flattens nested layers of promise-like objects (e.
 promise that resolves to a promise that resolves to something) into a single layer.
 > **Warning:** Do not call `Promise.resolve()` on a thenable that resolves to itself. That leads to infinite recursion, because it attempts to flatten an infinitely-nested promise.
 ## Example
-<pre class="brush: js">
+```js
 let thenable = {
   then: (resolve, reject) => {
     resolve(thenable)
