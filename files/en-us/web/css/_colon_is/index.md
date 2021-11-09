@@ -243,6 +243,7 @@ h1 {
 ```
 
 ### :is() does not select pseudo-elements
+The `:is()` pseudo-class does not match pseudo-elements. So rather than this:
 
 ```css example-bad
 some-element:is(::before, ::after) {
