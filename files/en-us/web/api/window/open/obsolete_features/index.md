@@ -13,3 +13,13 @@ This page lists the obsolete `windowFeatures` parameter of [window.open](/en-US/
 - `personalbar` {{deprecated_inline}}
   - : If this feature is on, then the new secondary window renders the Personal Toolbar in Netscape 6.x, Netscape 7.x and Mozilla browser. It renders the Bookmarks Toolbar in Firefox. In addition to the Personal Toolbar, Mozilla browser will render the Site Navigation Bar if such toolbar is visible, present in the parent window.
     Mozilla and Firefox users can force new windows to always render the Personal Toolbar/Bookmarks toolbar by setting `dom.disable_window_open_feature.personalbar` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js).
+- `outerWidth` {{deprecated_inline}} (only in Firefox; obsolete from Firefox 80)
+  - : Specifies the width of the whole browser window, in pixels. This
+    `outerWidth` value includes the window vertical scrollbar (if present) and
+    left and right window resizing borders.
+- `outerHeight` {{deprecated_inline}} (only in Firefox; obsolete from Firefox 80)
+  - : Specifies the height of the whole browser window, in pixels. This
+    `outerHeight` value includes any and all present toolbars, the window horizontal
+    scrollbar (if present), and top and bottom window-resizing borders. The minimal required
+    value is 100.
+
