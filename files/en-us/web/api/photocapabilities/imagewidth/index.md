@@ -15,16 +15,9 @@ browser-compat: api.PhotoCapabilities.imageWidth
 ---
 {{SeeCompatTable}}{{APIRef("MediaStream Image")}}
 
-The **`imageWidth`** read-only property of the
-{{domxref("PhotoCapabilities")}} interface returns an object indicating the image width range supported by the user agent.
+The **`imageWidth`** read-only property of the {{domxref("PhotoCapabilities")}} interface returns an object indicating the image width range supported by the user agent.
 
-## Syntax
-
-```js
-var mediaSettingsRange = photoCapabilities.imageWidth
-```
-
-### Value
+## Value
 
 An object containing the following properties:
 
