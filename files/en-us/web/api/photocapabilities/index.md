@@ -22,9 +22,9 @@ The **`PhotoCapabilities`** interface of the [MediaStream Image Capture API](/en
 - {{domxref("PhotoCapabilities.redEyeReduction")}} {{readonlyinline}}
   - : Returns one of `"never"`, `"always"`, or `"controllable"`. The `"controllable"` value means the device's red-eye reduction is controllable by the user.
 - {{domxref("PhotoCapabilities.imageHeight")}} {{readonlyinline}}
-  - : Returns a {{domxref("MediaSettingsRange")}} object indicating the image height range supported by the user agent.
+  - : Returns an object indicating the image height range supported by the user agent.
 - {{domxref("PhotoCapabilities.imageWidth")}} {{readonlyinline}}
-  - : Returns a {{domxref("MediaSettingsRange")}} object indicating the image width range supported by the user agent.
+  - : Returns an object indicating the image width range supported by the user agent.
 - {{domxref("PhotoCapabilities.fillLightMode")}} {{readonlyinline}}
   - : Returns an array of available fill light options. Options may include `auto`, `off`, or `flash`.
 

@@ -15,19 +15,18 @@ browser-compat: api.PhotoCapabilities.imageHeight
 ---
 {{SeeCompatTable}}{{APIRef("MediaStream Image")}}
 
-The **`imageHeight`** read-only property of the
-{{domxref("PhotoCapabilities")}} interface returns a {{domxref("MediaSettingsRange")}}
-object indicating the image height range supported by the user agent.
+The **`imageHeight`** read-only property of the {{domxref("PhotoCapabilities")}} interface returns an object indicating the image height range supported by the user agent.
 
-## Syntax
+## Value
 
-```js
-var mediaSettingsRange = photoCapabilities.imageHeight
-```
+An object containing the following properties:
 
-### Value
-
-A {{domxref("MediaSettingsRange")}} object.
+- `max`
+  - : The maximum value of this setting.
+- `min`
+  - : The minimum value of this setting.
+- `step`
+  - : The minimum difference between consecutive values of this setting.
 
 ## Specifications
 

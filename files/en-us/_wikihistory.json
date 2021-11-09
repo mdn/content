@@ -59757,34 +59757,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/MediaSettingsRange": {
-    "modified": "2020-10-15T21:57:15.586Z",
-    "contributors": [
-      "connorshea",
-      "jpmedley"
-    ]
-  },
-  "Web/API/MediaSettingsRange/max": {
-    "modified": "2020-10-15T21:57:14.362Z",
-    "contributors": [
-      "connorshea",
-      "jpmedley"
-    ]
-  },
-  "Web/API/MediaSettingsRange/min": {
-    "modified": "2020-10-15T21:57:16.402Z",
-    "contributors": [
-      "connorshea",
-      "jpmedley"
-    ]
-  },
-  "Web/API/MediaSettingsRange/step": {
-    "modified": "2020-10-15T21:57:14.380Z",
-    "contributors": [
-      "connorshea",
-      "jpmedley"
-    ]
-  },
   "Web/API/MediaSource": {
     "modified": "2020-10-15T21:24:31.806Z",
     "contributors": [

@@ -7939,6 +7939,10 @@
 /en-US/docs/Web/API/MediaRecorder/canRecordMimeType	/en-US/docs/Web/API/MediaRecorder/isTypeSupported
 /en-US/docs/Web/API/MediaRecorder_API	/en-US/docs/Web/API/MediaStream_Recording_API
 /en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API	/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
+/en-US/docs/Web/API/MediaSettingsRange	/en-US/docs/Web/API/PhotoCapabilities/imageHeight
+/en-US/docs/Web/API/MediaSettingsRange/max	/en-US/docs/Web/API/PhotoCapabilities/imageHeight
+/en-US/docs/Web/API/MediaSettingsRange/min	/en-US/docs/Web/API/PhotoCapabilities/imageHeight
+/en-US/docs/Web/API/MediaSettingsRange/step	/en-US/docs/Web/API/PhotoCapabilities/imageHeight
 /en-US/docs/Web/API/MediaStream.addTrack	/en-US/docs/Web/API/MediaStream/addTrack
 /en-US/docs/Web/API/MediaStream/MediaStream.getTracks()	/en-US/docs/Web/API/MediaStream/getTracks
 /en-US/docs/Web/API/MediaStream/getTracks()	/en-US/docs/Web/API/MediaStream/getTracks
