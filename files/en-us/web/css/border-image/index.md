@@ -158,4 +158,4 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
 - {{cssxref("url()", "url()")}} function
-- Gradient functions: {{CSSxRef("conic-gradient()")}}, {{CSSxRef("linear-gradient()")}}, {{CSSxRef("repeating-linear-gradient()")}}, {{CSSxRef("radial-gradient()")}}, {{CSSxRef("repeating-radial-gradient()")}}
+- Gradient functions: {{CSSxRef("gradient/conic-gradient()", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient()", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient()", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}
