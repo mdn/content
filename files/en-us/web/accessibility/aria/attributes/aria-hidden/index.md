@@ -10,7 +10,7 @@ tags:
   - Reference
 ---
 
-The `aria-hidden` state indicates whether the element is exposed to an accessibility <abbr title="application programming interface">API</abbr>. 
+The `aria-hidden` state indicates whether the element is exposed to an accessibility API. 
 
 ## Description
 
@@ -18,15 +18,15 @@ The `aria-hidden` attribute can be used to hide non-interactive content from the
 
 Adding `aria-hidden="true"` to an element removes that element and all of its children from the accessibility tree. This can improve the experience for assistive technology users by hiding:
 
--  purely decorative content, such as icons or images
--  duplicated content, such as repeated text
--  offscreen or collapsed content, such as menus
+-  Purely decorative content, such as icons or images
+-  Duplicated content, such as repeated text
+-  Offscreen or collapsed content, such as menus
 
 `aria-hidden="true"` should not be used on elements that can recieve focus. Additionally, since this attribute is inherited by an element's children, it should not be added onto the parent or ancestor of a focusable element. 
 
 > **Warning:** Do not use `aria-hidden="true"` on focusable elements.
 
-An element's hidden status is based on whether it is rendered. Rendering is usually controlled by CSS. For example, an element whose `display` property is set to `none` is not rendered. An element is considered hidden if it, or any of its ancestors are not rendered or have their `aria-hidden` attribute value set to true.
+An element's hidden status is based on whether it is rendered. Rendering is usually controlled by CSS. For example, an element whose `display` property is set to `none` via CSS is not rendered. An element is considered hidden if it, or any of its ancestors are not rendered or have their `aria-hidden` attribute value set to true. Note that an element and its children that has `aria-hidden="true"` declared on it will still be visible, unless also hidden by CSS.
 
 Use caution when using `aria-hidden` to hide visibly rendered content from assistive technologies. You should not be hiding visible content unless doing so improves the experience for users of assistive technologies by removing redundant or extraneous content. Only when identical or equivalent meaning and functionality is exposed to assistive technologies can removing visible content from the accessibility API be considered.
 
@@ -39,8 +39,8 @@ On the surface, the `aria-hidden="true"` and the `role="presentation"` and its s
 
 `aria-hidden="true"` should not be added when:
 
-- the HTML {{htmlattrdef('hidden')}} attribute is present
-- the element or the element's ancestor is hidden with [`display: none`](/en-US/docs/Web/CSS/display)
+- The HTML {{htmlattrdef('hidden')}} attribute is present
+- The element or the element's ancestor is hidden with [`display: none`](/en-US/docs/Web/CSS/display)
 - The element or the element's ancestor is hidden with [`visibility: hidden`](/en-US/docs/Web/CSS/visibility)
 
 In all three scenarios, the attribute is unnecessary to add because the element has already been removed from the accessibility tree. 
@@ -62,7 +62,7 @@ Adding `aria-hidden="true"` to the icon hides the icon character from being incl
 </button>
 ```
 
-We have a button with a Font Awesome icon. We hide the icon from assistive technologies with `aria-hidden="true"` as exposing the icon to assistive technologies could lead to redundancy or, if the icon doesn't have the same content as the visible text, confusion. 
+We have a button with [a Font Awesome icon](https://fontawesome.com/). We hide the icon from assistive technologies with `aria-hidden="true"`, as exposing the icon to assistive technologies could lead to redundancy or, if the icon doesn't have the same content as the visible text, confusion. 
 
 ## Values
 
