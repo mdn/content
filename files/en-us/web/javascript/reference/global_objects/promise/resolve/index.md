@@ -19,16 +19,19 @@ thenable, adopting its eventual state; otherwise the returned promise will be fu
 with the value. This function flattens nested layers of promise-like objects (e.g. a
 promise that resolves to a promise that resolves to something) into a single layer.
 > **Warning:** Do not call `Promise.resolve()` on a thenable that resolves to itself. That leads to infinite recursion, because it attempts to flatten an infinitely-nested promise.
+
 ## Example
+
 ```js
 let thenable = {
   then: (resolve, reject) => {
     resolve(thenable)
   }
 }
+```
 
-Promise.resolve(thenable)  //This will lead to a infinite recursion
-</pre>
+Promise.resolve(thenable)  // Will lead to infinite recursion.
+
 ## Syntax
 
 ```js
