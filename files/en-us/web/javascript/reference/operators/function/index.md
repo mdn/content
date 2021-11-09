@@ -11,14 +11,11 @@ browser-compat: javascript.operators.function
 ---
 {{jsSidebar("Operators")}}
 
-The **`function`** keyword can be used to define a function
-inside an expression.
+The **`function`** keyword can be used to define a function inside an expression.
 
-You can also define functions using the {{jsxref("Function/Function", "Function")}}
-constructor and a {{jsxref("Statements/function", "function declaration", "", 1)}}.
+You can also define functions using the {{jsxref("Function/Function", "Function")}} constructor and a {{jsxref("Statements/function", "function declaration", "", 1)}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-functionexpression.html",
-  "shorter")}}
+{{EmbedInteractiveExample("pages/js/expressions-functionexpression.html", "shorter")}}
 
 ## Syntax
 
@@ -30,13 +27,13 @@ function [name]([param1[, param2[, ..., paramN]]]) {
 }
 ```
 
-As of ES2015, you can also use {{jsxref("Functions/Arrow_functions", "arrow functions",
-  "", 1)}}.
+As of ES2015, you can also use {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}}.
 
 ### Parameters
 
 - `name` {{optional_inline}}
-  - : The function name. Can be omitted, in which case the function is _anonymous_.
+  - : The function name.
+    Can be omitted, in which case the function is _anonymous_.
     The name is only local to the function body.
 - `paramN` {{optional_inline}}
   - : The name of an argument to be passed to the function.
@@ -45,20 +42,16 @@ As of ES2015, you can also use {{jsxref("Functions/Arrow_functions", "arrow func
 
 ## Description
 
-A function expression is very similar to and has almost the same syntax as a function
-declaration (see {{jsxref("Statements/function", "function")}} statement for details).
-The main difference between a function expression and a function declaration is the
-_function name_, which can be omitted in function expressions to create
-_anonymous_ functions. A function expression can be used as an [IIFE (Immediately Invoked Function Expression)](/en-US/docs/Glossary/IIFE)
-which runs as soon as it is defined. See also the chapter about {{jsxref("Functions",
-  "functions", "", 1)}} for more information.
+A function expression is very similar to and has almost the same syntax as a function declaration (see {{jsxref("Statements/function", "function")}} statement for details).
+The main difference between a function expression and a function declaration is the _function name_, which can be omitted in function expressions to create _anonymous_ functions.
+
+A function expression can be used as an [IIFE (Immediately Invoked Function Expression)](/en-US/docs/Glossary/IIFE) which runs as soon as it is defined.
+See also the chapter about {{jsxref("Functions", "functions", "", 1)}} for more information.
 
 ### Function expression hoisting
 
-Function expressions in JavaScript are not hoisted, unlike
-{{jsxref("Statements/function", "function declarations",
-  "#Function_declaration_hoisting", 1)}}. You can't use function expressions before you
-create them:
+Function expressions in JavaScript are not hoisted, unlike {{jsxref("Statements/function", "function declarations", "#Function_declaration_hoisting", 1)}}.
+You can't use function expressions before you create them:
 
 ```js
 console.log(notHoisted) // undefined
@@ -72,10 +65,9 @@ var notHoisted = function() {
 
 ### Named function expression
 
-If you want to refer to the current function inside the function body, you need to
-create a named function expression. **This name is then local only to the
-function body (scope)**. This also avoids using the non-standard
-{{jsxref("Functions/arguments/callee", "arguments.callee")}} property.
+If you want to refer to the current function inside the function body, you need to create a named function expression.
+**This name is then local only to the function body (scope)**.
+This also avoids using the non-standard {{jsxref("Functions/arguments/callee", "arguments.callee")}} property.
 
 ```js
 let math = {
@@ -91,12 +83,11 @@ let math = {
 math.factit(3) //3;2;1;
 ```
 
-The variable the function expression is assigned to will have a `name`
-property. The name doesn't change if it's assigned to a different variable. If function
-name is omitted, it will be the variable name (implicit name). If function name is
-present, it will be the function name (explicit name). This also applies to
-{{jsxref("Functions/Arrow_functions", "arrow functions")}} (arrows don't have a name so
-you can only give the variable an implicit name).
+The variable the function expression is assigned to will have a `name` property.
+The name doesn't change if it's assigned to a different variable.
+If function name is omitted, it will be the variable name (implicit name).
+If function name is present, it will be the function name (explicit name).
+This also applies to {{jsxref("Functions/Arrow_functions", "arrow functions")}} (arrows don't have a name so you can only give the variable an implicit name).
 
 ```js
 var foo = function() {}
@@ -117,8 +108,8 @@ console.log(bar === baz); // false (errors because baz == undefined)
 
 ### Creating an unnamed function
 
-The following example defines an unnamed function and assigns it to `x`. The
-function returns the square of its argument:
+The following example defines an unnamed function and assigns it to `x`.
+The function returns the square of its argument:
 
 ```js
 var x = function(y) {
