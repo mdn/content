@@ -29,13 +29,15 @@ The WebXR **`reflectionchange`** event is passed to an {{domxref("XRLightProbe")
     </tr>
     <tr>
       <th>Event handler property</th>
-      <td>{{domxref("XRLightProbe.onreflectionchange", "onreflectionchange")}}</td>
+      <td><code>onreflectionchange</code></td>
     </tr>
   </tbody>
 </table>
 
 
 ## Examples
+
+### Using the `reflectionchange` event
 
 Whenever the `reflectionchange` event fires on a light probe, you can retrieve an updated cube map by calling {{domxref("XRWebGLBinding.getReflectionCubeMap()")}}. This is less expensive than retrieving lighting information with every {{domxref("XRFrame")}}.
 
@@ -45,6 +47,18 @@ const lightProbe = await xrSession.requestLightProbe();
 let glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
 
 lightProbe.addEventListener('reflectionchange', () => {
+  glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
+});
+```
+
+### The `onreflectionchange` event handler property
+
+The `reflectionchange` event is also available using the `onreflectionchange` event handler property.
+
+```js
+const glBinding = new XRWebGLBinding(xrSession, gl);
+
+lightProbe.onreflectionchange = event => {
   glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
 });
 ```
@@ -60,4 +74,3 @@ lightProbe.addEventListener('reflectionchange', () => {
 ## See also
 
 - {{domxref("EventTarget.addEventListener", "addEventListener()")}}
-- {{domxref("XRLightProbe.onreflectionchange")}}
