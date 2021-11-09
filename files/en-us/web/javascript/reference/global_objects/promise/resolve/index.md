@@ -18,19 +18,6 @@ promise, that promise is returned; if the value is a thenable (i.e. has a
 thenable, adopting its eventual state; otherwise the returned promise will be fulfilled
 with the value. This function flattens nested layers of promise-like objects (e.g. a
 promise that resolves to a promise that resolves to something) into a single layer.
-> **Warning:** Do not call `Promise.resolve()` on a thenable that resolves to itself. That leads to infinite recursion, because it attempts to flatten an infinitely-nested promise.
-
-## Example
-
-```js
-let thenable = {
-  then: (resolve, reject) => {
-    resolve(thenable)
-  }
-}
-```
-
-Promise.resolve(thenable)  // Will lead to infinite recursion.
 
 ## Syntax
 
@@ -91,7 +78,7 @@ console.log('original === cast ? ' + (original === cast));
 ```
 
 The inverted order of the logs is due to the fact that the `then` handlers
-are called asynchronously. See how `then` works [here](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value).
+are called asynchronously. See how `then` works [here](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#return_value).
 
 ### Resolving thenables and throwing Errors
 
@@ -135,6 +122,18 @@ p3.then(function(v) {
 }, function(e) {
   // not called
 });
+```
+
+> **Warning:** Do not call `Promise.resolve()` on a thenable that resolves to itself. That leads to infinite recursion, because it attempts to flatten an infinitely-nested promise.
+
+```js example-bad
+let thenable = {
+  then: (resolve, reject) => {
+    resolve(thenable)
+  }
+}
+
+Promise.resolve(thenable)  // Will lead to infinite recursion.
 ```
 
 ## Specifications
