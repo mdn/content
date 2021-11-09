@@ -55,7 +55,10 @@ This page is based largely on [http://www.squarefree.com/burningedg...eases/1.1.
 <!---->
 
 - URI values on CSS `cursor` properties
-  - : On Windows, OS/2 and Linux (Gtk+ 2.x) one can now use an arbitrary image as the mouse cursor while a given DOM node is being hovered. Any image format supported by Gecko can be used for the image. (SVG, animated GIF, and ANI cursors are not supported.) See [Using URL values for the cursor property](/en-US/Using_URL_values_for_the_cursor_property) for a description of the feature.
+  - : On Windows, OS/2 and Linux (Gtk+ 2.x) one can now use an arbitrary image as the mouse cursor while a given DOM node is being hovered.
+    Any image format supported by Gecko can be used for the image.
+    (SVG, animated GIF, and ANI cursors are not supported.)
+    See {{CSSxRef("cursor")}} for a description of the feature.
 
 <!---->
 
