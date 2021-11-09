@@ -46,7 +46,6 @@ browser-compat: html.elements.input.input-file
       <td>
         {{htmlattrxref("accept", "input/file")}},
         {{htmlattrxref("capture", "input/file")}},
-        {{htmlattrxref("files", "input/file")}},
         {{htmlattrxref("multiple", "input/file")}}
       </td>
     </tr>
