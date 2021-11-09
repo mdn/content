@@ -22,7 +22,7 @@ DOMMatrixReadOnly(init);
 ### Parameters
 
 - `init` {{optional_inline}}
-  - : Either a string containing a sequence of numbers or an array of integers
+  - : Either a string containing a sequence of numbers or an array of numbers
     specifying the matrix you want to create.
 
 ## Specifications
