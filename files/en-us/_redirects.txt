@@ -8662,7 +8662,7 @@
 /en-US/docs/Web/API/Touch/touchcancel_event	/en-US/docs/Web/API/Element/touchcancel_event
 /en-US/docs/Web/API/Touch/touchend_event	/en-US/docs/Web/API/Document/touchend_event
 /en-US/docs/Web/API/Touch/touchmove_event	/en-US/docs/Web/API/Document/touchmove_event
-/en-US/docs/Web/API/Touch/touchstart_event	/en-US/docs/Web/API/Element/touchstart_event
+/en-US/docs/Web/API/Touch/touchstart_event	/en-US/docs/Web/API/Document/touchstart_event
 /en-US/docs/Web/API/TouchEvent.changedTouches	/en-US/docs/Web/API/TouchEvent/changedTouches
 /en-US/docs/Web/API/TouchEvent.targetTouches	/en-US/docs/Web/API/TouchEvent/targetTouches
 /en-US/docs/Web/API/TouchEvent.touches	/en-US/docs/Web/API/TouchEvent/touches
@@ -10344,6 +10344,7 @@
 /en-US/docs/Web/Events/focus	/en-US/docs/Web/API/Element/focus_event
 /en-US/docs/Web/Events/focusin	/en-US/docs/Web/API/Element/focusin_event
 /en-US/docs/Web/Events/focusout	/en-US/docs/Web/API/Element/focusout_event
+/en-US/docs/Web/Events/formdata	/en-US/docs/Web/API/HTMLFormElement/formdata_event
 /en-US/docs/Web/Events/fullscreenchange	/en-US/docs/Web/API/Document/fullscreenchange_event
 /en-US/docs/Web/Events/fullscreenerror	/en-US/docs/Web/API/Document/fullscreenerror_event
 /en-US/docs/Web/Events/gamepadconnected	/en-US/docs/Web/API/Window/gamepadconnected_event
@@ -10469,6 +10470,7 @@
 /en-US/docs/Web/Events/touchcancel	/en-US/docs/Web/API/Element/touchcancel_event
 /en-US/docs/Web/Events/touchend	/en-US/docs/Web/API/Document/touchend_event
 /en-US/docs/Web/Events/touchmove	/en-US/docs/Web/API/Document/touchmove_event
+/en-US/docs/Web/Events/touchstart	/en-US/docs/Web/API/Document/touchstart_event
 /en-US/docs/Web/Events/track	/en-US/docs/Web/API/RTCPeerConnection/track_event
 /en-US/docs/Web/Events/transitioncancel	/en-US/docs/Web/API/HTMLElement/transitioncancel_event
 /en-US/docs/Web/Events/transitionend	/en-US/docs/Web/API/HTMLElement/transitionend_event
