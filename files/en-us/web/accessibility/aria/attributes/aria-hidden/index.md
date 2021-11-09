@@ -22,7 +22,7 @@ Adding `aria-hidden="true"` to an element removes that element and all of its ch
 -  Duplicated content, such as repeated text
 -  Offscreen or collapsed content, such as menus
 
-The presence of the `aria-hidden` attribute hides content from assistive technology but doesn't have any actual visual impact on the content.  
+The presence of the `aria-hidden` attribute hides content from assistive technology but doesn't visually hide anything.  
 
 `aria-hidden="true"` should not be used on elements that can recieve focus. Additionally, since this attribute is inherited by an element's children, it should not be added onto the parent or ancestor of a focusable element. 
 
