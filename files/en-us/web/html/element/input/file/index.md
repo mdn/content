@@ -108,10 +108,6 @@ The [`capture`](/en-US/docs/Web/HTML/Attributes/capture) attribute value is a st
 
 > **Note:** `capture` was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.
 
-### files
-
-A {{domxref("FileList")}} object that lists every selected file. This list has no more than one member unless the {{htmlattrxref("multiple", "input/file")}} attribute is specified.
-
 ### multiple
 
 When the [`multiple`](/en-US/docs/Web/HTML/Attributes/multiple) Boolean attribute is specified, the file input allows the user to select more than one file.
