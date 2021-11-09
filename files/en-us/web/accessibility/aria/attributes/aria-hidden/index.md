@@ -45,7 +45,7 @@ On the surface, the `aria-hidden="true"` and the `role="presentation"` and its s
 - The element or the element's ancestor is hidden with [`display: none`](/en-US/docs/Web/CSS/display)
 - The element or the element's ancestor is hidden with [`visibility: hidden`](/en-US/docs/Web/CSS/visibility)
 
-In all three scenarios, the attribute is unnecessary to add because the element has already been removed from the accessibility tree. 
+In all three scenarios, the attribute is unnecessary to add because the element has already been removed from the accessibility tree. Visually hiding elements with `display` or `visibility` hides content from the screen and from assistive technologies.
 
 Using `aria-hidden="false"` will not re-expose the element to assistive technology if any of its parents specify `aria-hidden="true"`.
 
