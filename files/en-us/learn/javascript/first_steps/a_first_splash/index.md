@@ -124,7 +124,11 @@ let guessCount = 1;
 let resetButton;
 ```
 
-This section of the code sets up the variables and constants we need to store the data our program will use. Variables are basically containers for values (such as numbers, or strings of text). You create a variable with the keyword `let` (or `var`) followed by a name for your variable (you'll read more about the difference between the keywords in a [future article](/en-US/docs/Learn/JavaScript/First_steps/Variables#the_difference_between_var_and_let)). Constants are used to store values that are immutable or can't be changed and are created with the keyword `const`. In this case, we are using constants to store references to parts of our user interface; the text inside some of them might change, but the HTML elements referenced stay the same.
+This section of the code sets up the variables and constants we need to store the data our program will use.
+
+Variables are basically names for values (such as numbers, or strings of text). You create a variable with the keyword `let` followed by a name for your variable.
+
+Constants are also used to name values, too, but unlike variables, you can't change the value that they name. In this case we are using constants to store references to parts of our user interface. The text inside some of these elements might change, but each constant always references the same HTML element that it was initialized with. You create a variable with the keyword `const` followed by a name for the constant.
 
 You can assign a value to your variable or constant with an equals sign (`=`) followed by the value you want to give it.
 
@@ -150,7 +154,7 @@ In our example:
 
 - Our final two variables store a guess count of 1 (used to keep track of how many guesses the player has had), and a reference to a reset button that doesn't exist yet (but will later).
 
-> **Note:** You'll learn a lot more about variables/constants later on in the course, starting with the [next article](/en-US/docs/Learn/JavaScript/First_steps/Variables).
+> **Note:** You'll learn a lot more about variables and constants later on in the course, starting with the [next article](/en-US/docs/Learn/JavaScript/First_steps/Variables).
 
 ### Functions
 

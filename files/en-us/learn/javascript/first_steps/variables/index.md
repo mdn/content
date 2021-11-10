@@ -100,7 +100,7 @@ One special thing about variables is that they can contain just about anything �
 
 ## Declaring a variable
 
-To use a variable, you've first got to create it — more accurately, we call this declaring the variable. To do this, we type the keyword `var` or `let` followed by the name you want to call your variable:
+To use a variable, you've first got to create it — more accurately, we call this declaring the variable. To do this, we type the keyword `let` followed by the name you want to call your variable:
 
 ```js
 let myName;
@@ -150,11 +150,16 @@ let myDog = 'Rover';
 
 This is probably what you'll do most of the time, as it is quicker than doing the two actions on two separate lines.
 
-## The difference between var and let
+## A note about var
 
-At this point you may be thinking "why do we need two keywords for defining variables?? Why have `var` _and_ `let`?".
+You'll probably also see a different way to declare variables, using the `var` keyword:
 
-The reasons are somewhat historical. Back when JavaScript was first created, there was only `var`. This works basically fine in most cases, but it has some issues in the way it works — its design can sometimes be confusing or downright annoying. So, `let` was created in modern versions of JavaScript, a new keyword for creating variables that works somewhat differently to `var`, fixing its issues in the process.
+```js
+var myName;
+var myAge;
+```
+
+Back when JavaScript was first created, this was the only way to declare variables. The design of `var` has issues that make it easy for errors to creep into your code. So, `let` was created in modern versions of JavaScript, a new keyword for creating variables that works somewhat differently to `var`, fixing its issues in the process.
 
 A couple of simple differences are explained below. We won't go into all the differences now, but you'll start to discover them as you learn more about JavaScript (if you really want to read about them now, feel free to check out our [let reference page](/en-US/docs/Web/JavaScript/Reference/Statements/let)).
 
@@ -201,7 +206,7 @@ myName = 'Bob';
 
 Again, this is a sensible language decision. There is no reason to redeclare variables — it just makes things more confusing.
 
-For these reasons and more, we recommend that you use `let` as much as possible in your code, rather than `var`. There is no reason to use `var`, unless you need to support old versions of Internet Explorer with your code (it doesn't support `let` until version 11; the modern Microsoft Edge browser supports `let` just fine).
+For these reasons and more, we recommend that you use `let` in your code, rather than `var`. There is no reason to use `var`, unless you need to support old versions of Internet Explorer with your code (it doesn't support `let` until version 11; the modern Microsoft Edge browser supports `let` just fine).
 
 ## Updating a variable
 
@@ -353,21 +358,58 @@ Try entering the four lines above into your console one by one, and see what the
 
 ## Constants in JavaScript
 
-Many programming languages have the concept of a _constant_ — a value that once declared can't be changed. There are many reasons why you'd want to do this, from security (if a third party script changed such values it could cause problems) to debugging and code comprehension (it is harder to accidentally change values that shouldn't be changed and mess things up).
+As well as variables, you can declare constants. These are like variables, except that you must initialize them when you declare them, and you can't assign them to a new value after you've initialized them.
 
-In the early days of JavaScript, constants didn't exist. In modern JavaScript, we have the keyword `const`, which lets us store values that can never be changed:
-
-```js
-const daysInWeek = 7;
-const hoursInDay = 24;
-```
-
-`const` works in exactly the same way as `let`, except that you can't give a `const` a new value. In the following example, the second line would throw an error:
+For example, using `let` you can do this:
 
 ```js
-const daysInWeek = 7;
-daysInWeek = 8;
+let count;
+count = 1;
 ```
+
+If you try to do this using `const` you will see an error:
+
+```js example-bad
+const count;
+```
+
+Similarly, with `let` you can do this:
+
+```js
+let count = 1;
+count = 2;
+```
+
+If you try to do this using `const` you will see an error:
+
+```js example-bad
+const count = 1;
+count = 2;
+```
+
+Note that although a constant in JavaScript must always name the same value, you can change the content of the value that it names. This isn't a useful distinction for simple types like numbers or booleans, but consider an object:
+
+```js
+const bird = { species : 'Kestrel'};
+console.log(bird.species);  // "Kestrel"
+```
+
+You can update, add, or remove properties of an object declared using `const`, because even though the content of the object has changed, the constant is still pointing to the same object:
+
+```js
+bird.species = 'Striated Caracara';
+console.log(bird.species);  // "Striated Caracara"
+```
+
+## When to use const and when to use let
+
+If you can't do as much with `const` as you can with `let`, why would you prefer to use it rather than `let`? In fact `const` is very useful. If you use `const` to name a value, it tells anyone looking at your code that this name will never be assigned to a different value. Any time they see this name, they will know what it refers to.
+
+In this course, we adopt the following principle about when to use `let` and when to use `const`:
+
+*Use `const` when you can, and use `let` when you have to.*
+
+This means that if you can initialize a variable when you declare it, and don't need to reassign it later, make it a constant.
 
 ## Test your skills!
 
