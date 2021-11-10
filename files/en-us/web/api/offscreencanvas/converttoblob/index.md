@@ -24,7 +24,7 @@ The **`OffscreenCanvas.convertToBlob()`** method creates a {{domxref("Blob")}} 
 
   - : You can specify several options when converting your {{domxref("OffscreenCanvas")}} object into a {{domxref("Blob")}} object, for example:
 
-        const blob = offscreenCanvas.convertToBlob({
+        const blob = await offscreenCanvas.convertToBlob({
           type: "image/jpeg",
           quality: 0.95
         });
