@@ -2,7 +2,6 @@
 title: 'aria-checked'
 slug: web/Accessibility/ARIA/Attributes/aria-checked
 tags: 
-
   - Accessibility
   - ARIA
   - ARIA attribute

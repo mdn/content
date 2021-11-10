@@ -2,7 +2,6 @@
 title: 'aria-colcount'
 slug: Web/Accessibility/ARIA/Attributes/aria-colcount
 tags: 
-
   - Accessibility
   - ARIA
   - ARIA attribute
