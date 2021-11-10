@@ -358,13 +358,15 @@ Try entering the four lines above into your console one by one, and see what the
 
 ## Constants in JavaScript
 
-As well as variables, you can declare constants. These are like variables, except that you must initialize them when you declare them, and you can't assign them to a new value after you've initialized them.
+As well as variables, you can declare constants. These are like variables, except that:
 
-For example, using `let` you can do this:
+* you must initialize them when you declare them
+* you can't assign them a new value after you've initialized them.
+
+For example, using `let` you can declare a variable without initializing it:
 
 ```js
 let count;
-count = 1;
 ```
 
 If you try to do this using `const` you will see an error:
@@ -373,7 +375,7 @@ If you try to do this using `const` you will see an error:
 const count;
 ```
 
-Similarly, with `let` you can do this:
+Similarly, with `let` you can initialize a variable, and then assign it a new value:
 
 ```js
 let count = 1;
