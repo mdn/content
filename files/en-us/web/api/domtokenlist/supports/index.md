@@ -2,29 +2,26 @@
 title: DOMTokenList.supports()
 slug: Web/API/DOMTokenList/supports
 tags:
-  - API
-  - DOM
   - Method
   - Reference
 browser-compat: api.DOMTokenList.supports
 ---
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
-The **`supports()`** method of the
-{{domxref("DOMTokenList")}} interface returns `true` if a
-given `token` is in the associated attribute's supported tokens.
+The **`supports()`** method of the {{domxref("DOMTokenList")}} interface
+returns `true` if a given `token` is in the associated attribute's supported tokens.
 This method is intended to support feature detection.
 
 ## Syntax
 
 ```js
-let trueOrFalse = element.supports(token)
+supports(token);
 ```
 
 ### Parameters
 
 - `token`
-  - : A {{domxref("DOMString")}} containing the token to query for.
+  - : A string containing the token to query for.
 
 ### Returns
 
@@ -33,7 +30,7 @@ A boolean value indicating whether the token was found.
 ## Example
 
 ```js
-let iframe = document.getElementById('display');
+const iframe = document.getElementById('display');
 
 if (iframe.sandbox.supports('an-upcoming-feature')) {
   // support code for mystery future feature

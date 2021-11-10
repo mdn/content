@@ -29,7 +29,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLTableCellElement.colSpan")}}
   - : An unsigned long integer indicating the number of columns this cell must span; this lets the cell occupy space across multiple columns of the table. It reflects the {{htmlattrxref("colspan", "td")}} attribute.
 - {{domxref("HTMLTableCellElement.headers")}} {{readonlyInline}}
-  - : Is a {{domxref("DOMSettableTokenList")}} describing a list of `id` of {{HTMLElement("th")}} elements that represents headers associated with the cell. It reflects the {{htmlattrxref("headers", "td")}} attribute.
+  - : A {{domxref("DOMTokenList")}} describing a list of `id` of {{HTMLElement("th")}} elements that represents headers associated with the cell. It reflects the {{htmlattrxref("headers", "td")}} attribute.
 - {{domxref("HTMLTableCellElement.rowSpan")}}
   - : An unsigned long integer indicating the number of rows this cell must span; this lets a cell occupy space across multiple rows of the table. It reflects the {{htmlattrxref("rowspan", "td")}} attribute.
 - {{domxref("HTMLTableCellElement.scope")}}
