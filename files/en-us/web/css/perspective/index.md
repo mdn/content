@@ -33,7 +33,7 @@ perspective: 3.5em;
 /* Global values */
 perspective: inherit;
 perspective: initial;
-perspecive: revert;
+perspective: revert;
 perspective: unset;
 ```
 
