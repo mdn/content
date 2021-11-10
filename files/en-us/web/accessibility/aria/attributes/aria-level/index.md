@@ -42,10 +42,10 @@ If a complete set of available nodes is not present in the DOM due to dynamic lo
 
 ## ARIAMixin API 
 
-- {{domxref("Element.aria-level")}}
-  - : The  [`aria-level`](/en-US/docs/Web/API/Element/aria-level) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-level` attribute.
-- {{domxref("ElementInternals.aria-level")}}
-  - : The  [`aria-level`](/en-US/docs/Web/API/ElementInternals/aria-level) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-level` attribute.
+- {{domxref("Element.ariaLevel")}}
+  - : The  [`ariaLevel`](/en-US/docs/Web/API/Element/ariaLevel) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-level` attribute.
+- {{domxref("ElementInternals.ariaLevel")}}
+  - : The  [`ariaLevel`](/en-US/docs/Web/API/ElementInternals/ariaLevel) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-level` attribute.
 
 ## Associated roles
 
