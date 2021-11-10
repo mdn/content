@@ -64,8 +64,8 @@ Used in roles:
 
 ## See Also
 
-- [`<h1>` thru `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements)
-- {{htmlelement('h1')}}, {{htmlelement('h2')}}, {{htmlelement('h3')}}, {{htmlelement('h4')}}, {{htmlelement('h5')}}, and {{htmlelement('h6')}}
+- [`<h1>` thru `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements) (
+{{htmlelement('h1')}}, {{htmlelement('h2')}}, {{htmlelement('h3')}}, {{htmlelement('h4')}}, {{htmlelement('h5')}}, and {{htmlelement('h6')}})
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
