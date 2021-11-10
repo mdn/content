@@ -116,7 +116,7 @@ Used in **ALL** roles.
 ## See Also
 
 - [`aria-keyshortcuts` best practices](https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_shortcuts)
-- {{htmlattrxref('accesskey')}}
+- HTML {{htmlattrxref('accesskey')}} attribute
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
