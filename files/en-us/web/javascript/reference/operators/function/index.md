@@ -83,7 +83,7 @@ let math = {
 math.factit(3) //3;2;1;
 ```
 
-The variable that the function expression is assigned to will have a `name` property.
+The variable that the function expression is assigned to, will have a `name` property.
 The name doesn't change if it's assigned to a different variable.
 If function name is omitted, it will be the variable name (implicit name).
 If function name is present, it will be the function name (explicit name).
