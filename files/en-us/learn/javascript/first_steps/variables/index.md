@@ -159,7 +159,7 @@ var myName;
 var myAge;
 ```
 
-Back when JavaScript was first created, this was the only way to declare variables. The design of `var` has issues that make it easy for errors to creep into your code. So, `let` was created in modern versions of JavaScript, a new keyword for creating variables that works somewhat differently to `var`, fixing its issues in the process.
+Back when JavaScript was first created, this was the only way to declare variables. The design of `var` has issues that make it easy for errors to creep into your code. So `let` was created in modern versions of JavaScript, a new keyword for creating variables that works somewhat differently to `var`, fixing its issues in the process.
 
 A couple of simple differences are explained below. We won't go into all the differences now, but you'll start to discover them as you learn more about JavaScript (if you really want to read about them now, feel free to check out our [let reference page](/en-US/docs/Web/JavaScript/Reference/Statements/let)).
 

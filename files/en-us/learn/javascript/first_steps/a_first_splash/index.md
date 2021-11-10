@@ -128,7 +128,7 @@ This section of the code sets up the variables and constants we need to store th
 
 Variables are basically names for values (such as numbers, or strings of text). You create a variable with the keyword `let` followed by a name for your variable.
 
-Constants are also used to name values, too, but unlike variables, you can't change the value that they name. In this case we are using constants to store references to parts of our user interface. The text inside some of these elements might change, but each constant always references the same HTML element that it was initialized with. You create a variable with the keyword `const` followed by a name for the constant.
+Constants are also used to name values, but unlike variables, you can't change the value that they name. In this case we are using constants to store references to parts of our user interface. The text inside some of these elements might change, but each constant always references the same HTML element that it was initialized with. You create a variable with the keyword `const` followed by a name for the constant.
 
 You can assign a value to your variable or constant with an equals sign (`=`) followed by the value you want to give it.
 
