@@ -21,6 +21,9 @@ buffer object's data store.
 ## Syntax
 
 ```js
+void gl.bufferData(target, size, usage);
+void gl.bufferData(target, ArrayBuffer? srcData, usage);
+void gl.bufferData(target, ArrayBufferView srcData, usage);
 void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
 ```
 
