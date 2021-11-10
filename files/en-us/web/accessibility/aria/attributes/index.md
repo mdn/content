@@ -106,7 +106,7 @@ Many of the above attributes are global, meaning they can be included on any ele
 
 By "specifically disallowed", all the above attributes are global except for `aria-label` and `aria-labelledby` properties which are not allowed on elements with role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/Presentation_role) nor it's synonym [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/None_role) role.    
 
-## States and proerties defined on MDN
+## States and properties defined on MDN
 
 The following are the reference pages covering the WAI-ARIA states and properties discussed on <abbr title="Mozilla Developer Network">MDN</abbr>.
 
