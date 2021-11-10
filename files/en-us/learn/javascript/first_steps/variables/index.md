@@ -206,7 +206,7 @@ myName = 'Bob';
 
 Again, this is a sensible language decision. There is no reason to redeclare variables — it just makes things more confusing.
 
-For these reasons and more, we recommend that you use `let` in your code, rather than `var`. There is no reason to use `var`, unless you need to support old versions of Internet Explorer with your code (it doesn't support `let` until version 11; the modern Microsoft Edge browser supports `let` just fine).
+For these reasons and more, we recommend that you use `let` in your code, rather than `var`. There is no reason to use `var`, unless you need to support Internet Explorer 10 or older with your code.
 
 ## Updating a variable
 
