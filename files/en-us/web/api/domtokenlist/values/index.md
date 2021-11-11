@@ -11,7 +11,7 @@ browser-compat: api.DOMTokenList.values
 The **`values()`** method of the {{domxref("DOMTokenList")}} interface
 returns an {{jsxref("Iteration_protocols",'iterator')}}
 allowing the caller to go through all values contained in the `DOMTokenList`.
-The individual values are {{jsxref("String")}} objects.
+The individual values are strings.
 
 ## Syntax
 
