@@ -30,7 +30,7 @@ structuredClone(value, { transfer })
   - : The object to be cloned.
     This can be any [structured-clonable type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 - `transfer` {{optional_inline}}
-  - : A array of {{Glossary("transferable objects")}} in `value` that will be moved rather than cloned to the returned object.
+  - : An array of {{Glossary("transferable objects")}} in `value` that will be moved rather than cloned to the returned object.
 
 ### Return value
 
