@@ -178,7 +178,7 @@ This example shows how to set a search provider.
     "search_provider": {
       "name": "Discogs",
       "search_url": "https://www.discogs.com/search/?q={searchTerms}",
-    "keyword": "disc",
+      "keyword": "disc",
       "favicon_url": "https://www.discogs.com/favicon.ico"
   }
 }
