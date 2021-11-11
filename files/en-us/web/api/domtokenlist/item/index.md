@@ -23,7 +23,7 @@ tokenList.item(index)
 ### Parameters
 
 - `index`
-  - : A {{jsxref("Number")}} representing the index of the item you want to return. If it isn't an integer, only the integer part is considered.
+  - : A number representing the index of the item you want to return. If it isn't an integer, only the integer part is considered.
 
 ### Return value
 
