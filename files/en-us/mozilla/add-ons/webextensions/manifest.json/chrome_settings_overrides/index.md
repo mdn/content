@@ -170,14 +170,16 @@ The `chrome_settings_overrides` key is an object that may have the following pro
 </table>
 
 ## Example
+This example shows how to set a search provider.
+
 
 ```json
 "chrome_settings_overrides": {
-"search_provider": {
-"name": "Discogs",
-"search_url": "https://www.discogs.com/search/?q={searchTerms}",
-"keyword": "disc",
-"favicon_url": "https://www.discogs.com/favicon.ico"
+    "search_provider": {
+    "name": "Discogs",
+    "search_url": "https://www.discogs.com/search/?q={searchTerms}",
+    "keyword": "disc",
+    "favicon_url": "https://www.discogs.com/favicon.ico"
  }
 }
 
