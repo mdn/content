@@ -69,10 +69,12 @@ new Intl.DisplayNames(locales, options)
 
       - : The type to use.
 
+        - "`calendar`"
+        - "`currency`"
+        - "`dateTimeField`"
         - "`language`"
         - "`region`"
         - "`script`"
-        - "`currency`"
 
     - `fallback`
 
@@ -91,6 +93,36 @@ with default options is returned.
 ```js
 console.log((new Intl.DisplayNames([], {type: 'language'})).of('US'));
 // Expected output: 'us'
+```
+
+### Using type `dateTimeField`
+
+Example using `dateTimeField` as type, will return the localized date time names strings.
+
+```js
+const dn = new Intl.DisplayNames('pt', {type: 'dateTimeField'});
+console.log(dn.of('era')); // logs 'era'
+console.log(dn.of('year')); // logs 'ano'
+console.log(dn.of('month')); // logs 'mês'
+console.log(dn.of('quarter')); // logs 'trimestre'
+console.log(dn.of('weekOfYear')); // logs 'semana'
+console.log(dn.of('weekday')); // logs 'dia da semana'
+console.log(dn.of('dayPeriod')); // logs 'AM/PM'
+console.log(dn.of('day')); // logs 'dia'
+console.log(dn.of('hour')); // logs 'hora'
+console.log(dn.of('minute')); // logs 'minuto'
+console.log(dn.of('second')); // logs 'segundo'
+```
+
+### Using type `calendar`
+
+Example using `calendar` as type, will return the localized calendar names strings.
+
+```js
+const dn = new Intl.DisplayNames('en', {type: 'calendar'});
+console.log(dn.of('roc')); // logs 'Minguo Calendar'
+console.log(dn.of('gregory')); // logs 'Gregorian Calendar'
+console.log(dn.of('chinese')); // logs 'Chinese Calendar'
 ```
 
 ## Specifications
