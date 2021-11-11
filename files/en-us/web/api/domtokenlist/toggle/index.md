@@ -31,7 +31,7 @@ toggle(token, force);
 ### Return value
 
 A boolean value, `true` or `false`, indicating whether `token` is in the
-list after the call, or not.
+list after the call or not.
 
 ## Examples
 
