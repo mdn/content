@@ -337,5 +337,6 @@ if (!Array.from) {
 
 - A polyfill of `Array.from` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array")}}
+- {{jsxref("Array.of()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("TypedArray.from()")}}
