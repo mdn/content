@@ -66,4 +66,4 @@ The output looks like this:
 
 ## See also
 
-- {{domxref("DOMTokenList.entries()")}}, {{domxref("DOMTokenList.forEach()xs")}} and {{domxref("DOMTokenList.values")}}.
+- {{domxref("DOMTokenList.entries()")}}, {{domxref("DOMTokenList.forEach()")}} and {{domxref("DOMTokenList.values")}}.
