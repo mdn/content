@@ -92,7 +92,7 @@ the value of a parameter:
   {{domxref("AudioParam.setValueAtTime", "setValueAtTime()")}}, the `value`
   is changed to the value passed into `setValueAtTime()`.
 - If any graduated or ramped value changing methods have been called and the current
-  time is within the time range over which the gradiated change should occur, the value
+  time is within the time range over which the graduated change should occur, the value
   is updated based on the appropriate algorithm. These ramped or gradiated
   value-changing methods include {{domxref("AudioParam.linearRampToValueAtTime",
     "linearRampToValueAtTime()")}}, {{domxref("AudioParam.setTargetAtTime",
