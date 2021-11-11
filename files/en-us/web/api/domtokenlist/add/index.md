@@ -2,34 +2,31 @@
 title: DOMTokenList.add()
 slug: Web/API/DOMTokenList/add
 tags:
-  - API
-  - Add
-  - DOM
-  - DOMTokenList
   - Method
   - Reference
 browser-compat: api.DOMTokenList.add
 ---
 {{APIRef("DOM")}}
 
-The **`add()`** method of the {{domxref("DOMTokenList")}}
-interface adds the given _token_ to the list.
+The **`add()`** method of the {{domxref("DOMTokenList")}} interface adds the given _tokens_ to the list.
 
 ## Syntax
 
 ```js
-tokenList.add(token1[, token2[, ...tokenN]]);
+add(token);
+add(token, token);
+add(token, token, token);
+...
 ```
 
 ### Parameters
 
-- `tokenN`
-  - : A {{domxref("DOMString")}} representing the token (or tokens) to add to the
-    `tokenList`.
+- `token`
+  - : A string representing a token (or tokens) to add to the `DOMTokenList`.
 
 ### Return value
 
-`undefined`
+None.
 
 ## Examples
 
@@ -47,8 +44,8 @@ First, the HTML:
 Now the JavaScript:
 
 ```js
-let span = document.querySelector("span");
-let classes = span.classList;
+const span = document.querySelector("span");
+const classes = span.classList;
 classes.add("d");
 span.textContent = classes;
 ```
