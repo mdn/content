@@ -9,12 +9,12 @@ browser-compat: api.DOMTokenList.value
 {{APIRef("DOM")}}
 
 The **`value`** property of the {{domxref("DOMTokenList")}}
-interface is a stringifier that returns the value of the list serialized in  a
-{{jsxref("String")}}, or clears and sets the list to the given value.
+interface is a stringifier that returns the value of the list serialized as a
+string, or clears and sets the list to the given value.
 
-##  Value
+## Value
 
-A {{jsxref("String")}} representing the serialized content of the list.
+A string representing the serialized content of the list.
 Each item is separated by a space.
 
 ## Examples

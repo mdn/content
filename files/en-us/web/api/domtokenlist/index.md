@@ -17,7 +17,7 @@ A `DOMTokkenList` is indexed beginning with `0` as with JavaScript {{jsxref("Arr
 - {{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}
   - : Is an `integer` representing the number of objects stored in the object.
 - {{domxref("DOMTokenList.value")}}
-  - : A stringifier property that returns the value of the list as a {{jsxref("String")}}.
+  - : A stringifier property that returns the value of the list as a string.
 
 ## Methods
 

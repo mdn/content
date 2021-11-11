@@ -27,7 +27,7 @@ tokenList.item(index)
 
 ### Return value
 
-A {{jsxref("String")}} representing the returned item,
+A string representing the returned item,
 or `null` if the number is greater than or equal to the `length` of the list.
 
 ### Exceptions
