@@ -46,7 +46,7 @@ const classes = span.classList;
 const iterator = classes.entries();
 
 for (let value of iterator) {
-  span.textContent += '(' + value + ') ';
+  span.textContent += `(${value})`;
 }
 ```
 
