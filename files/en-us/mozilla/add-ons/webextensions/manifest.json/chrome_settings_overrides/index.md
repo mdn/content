@@ -180,7 +180,7 @@ This example shows how to set a search provider.
     "search_url": "https://www.discogs.com/search/?q={searchTerms}",
     "keyword": "disc",
     "favicon_url": "https://www.discogs.com/favicon.ico"
- }
+  }
 }
 
 ```
