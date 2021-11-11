@@ -27,7 +27,7 @@ speechSynthesisInstance.resume();
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ### Parameters
 

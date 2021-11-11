@@ -26,7 +26,7 @@ speechSynthesisInstance.pause();
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ### Parameters
 

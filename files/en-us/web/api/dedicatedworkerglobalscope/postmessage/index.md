@@ -43,7 +43,7 @@ postMessage(aMessage, transferList)
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ## Example
 

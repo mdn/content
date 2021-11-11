@@ -49,7 +49,7 @@ None.
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ## Example
 

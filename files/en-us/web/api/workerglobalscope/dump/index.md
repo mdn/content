@@ -26,7 +26,7 @@ A {{domxref("DOMString")}} containing the message you want to send.
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ## Example
 

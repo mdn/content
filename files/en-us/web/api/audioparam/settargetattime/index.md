@@ -38,7 +38,7 @@ var paramRef = param.setTargetAtTime(target, startTime, timeConstant);
 ### Returns
 
 A reference to this `AudioParam` object. Some older browser implementations
-of this interface return void.
+of this interface return {{jsxref('undefined')}}.
 
 ## Description
 

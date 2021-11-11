@@ -38,7 +38,7 @@ OfflineAudioContext.suspend(suspendTime).then(function() { ... });
 
 ### Returns
 
-A {{jsxref("Promise")}} resolving to void.
+A {{jsxref("Promise")}} resolving to {{jsxref('undefined')}}.
 
 ### Exceptions
 
