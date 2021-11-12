@@ -68100,48 +68100,6 @@
       "teoli"
     ]
   },
-  "Web/API/PhotoCapabilities": {
-    "modified": "2020-10-15T21:55:37.658Z",
-    "contributors": [
-      "caraitto",
-      "mfluehr",
-      "alattalatta",
-      "fscholz",
-      "jpmedley"
-    ]
-  },
-  "Web/API/PhotoCapabilities/fillLightMode": {
-    "modified": "2020-10-15T21:55:47.774Z",
-    "contributors": [
-      "alattalatta",
-      "fscholz",
-      "Dramloc",
-      "jpmedley"
-    ]
-  },
-  "Web/API/PhotoCapabilities/imageHeight": {
-    "modified": "2020-10-15T21:55:38.110Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley"
-    ]
-  },
-  "Web/API/PhotoCapabilities/imageWidth": {
-    "modified": "2020-10-15T21:55:40.085Z",
-    "contributors": [
-      "MyNameIsBond",
-      "fscholz",
-      "jpmedley"
-    ]
-  },
-  "Web/API/PhotoCapabilities/redEyeReduction": {
-    "modified": "2020-10-15T21:55:41.964Z",
-    "contributors": [
-      "alattalatta",
-      "fscholz",
-      "jpmedley"
-    ]
-  },
   "Web/API/Picture-in-Picture_API": {
     "modified": "2020-11-30T19:18:36.297Z",
     "contributors": [

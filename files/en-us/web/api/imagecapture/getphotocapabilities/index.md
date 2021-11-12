@@ -29,7 +29,15 @@ const capabilitiesPromise = imageCaptureObj.getPhotoCapabilities()
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with a {{domxref("PhotoCapabilities")}} object.
+A {{jsxref("Promise")}} that resolves with an object containing the following properties:
+- `redEyeReduction`
+  - : Returns one of `"never"`, `"always"`, or `"controllable"`. The `"controllable"` value means the device's red-eye reduction is controllable by the user.
+- `imageHeight`
+  - : Returns an object indicating the image height range supported by the user agent.
+- `imageWidth`
+  - : Returns an object indicating the image width range supported by the user agent.
+- `fillLightMode`
+  - : Returns an array of available fill light options. Options include `auto`, `off`, or `flash`.
 
 ## Example
 
