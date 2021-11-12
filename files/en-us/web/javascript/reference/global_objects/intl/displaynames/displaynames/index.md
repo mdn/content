@@ -76,6 +76,11 @@ new Intl.DisplayNames(locales, options)
         - "`region`"
         - "`script`"
 
+     - `languageDisplay`
+       - : The `languageDisplay` it's only usable along with type `language`, defaults to `dialect`.
+         - "`dialect`"
+         - "`standard`"
+
     - `fallback`
 
       - : The fallback to use, the default is "`code`".
@@ -97,7 +102,7 @@ console.log((new Intl.DisplayNames([], {type: 'language'})).of('US'));
 
 ### Using type `dateTimeField`
 
-Example using `dateTimeField` as type, will return the localized date time names strings.
+Example using `dateTimeField` as a type option, will return the localized date time names strings.
 
 ```js
 const dn = new Intl.DisplayNames('pt', {type: 'dateTimeField'});
@@ -116,13 +121,27 @@ console.log(dn.of('second')); // logs 'segundo'
 
 ### Using type `calendar`
 
-Example using `calendar` as type, will return the localized calendar names strings.
+Example using `calendar` as a type option, will return the localized calendar names strings.
 
 ```js
 const dn = new Intl.DisplayNames('en', {type: 'calendar'});
 console.log(dn.of('roc')); // logs 'Minguo Calendar'
 console.log(dn.of('gregory')); // logs 'Gregorian Calendar'
 console.log(dn.of('chinese')); // logs 'Chinese Calendar'
+```
+
+### Using type `language` with `languageDisplay`
+
+Example using  `language` as a type with `languageDisplay` options.
+
+```js
+// Using `dialect` option
+const dnDialect = new Intl.DisplayNames('en', {type: 'language', languageDisplay: 'dialect'});
+console.log(dnDialect.of('en-GB')); // logs 'British English'
+
+// Using `standard` option
+const dnStd = new Intl.DisplayNames('en', {type: 'language', languageDisplay: 'standard'});
+console.log(dnStd.of('en-GB')); // logs 'English (United Kingdom)'
 ```
 
 ## Specifications
