@@ -71,7 +71,7 @@ This can be done by adding a new `Forwarded` header to the end of the header blo
 
 ### Using the `Forwarded` header
 
-```
+```http
 Forwarded: for="_mdn"
 
 # case insensitive
@@ -89,7 +89,7 @@ Forwarded: for=192.0.2.43, for=198.51.100.17
 If your application, server, or proxy supports the standardized `Forwarded` header, the {{HTTPHeader("X-Forwarded-For")}} header can be replaced.
 Note that IPv6 address is quoted and enclosed in square brackets in `Forwarded`.
 
-```
+```http
 X-Forwarded-For: 123.34.567.89
 Forwarded: for=123.34.567.89
 
