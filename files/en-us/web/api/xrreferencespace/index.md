@@ -30,7 +30,7 @@ All reference spaces—with the sole exception being bounded reference spaces—
 
 ## Properties
 
-_`XRReferenceSpace`inherits the properties of {{domxref("EventTarget")}} but defines no additional properties on its own._
+_`XRReferenceSpace`inherits the properties of {{domxref("EventTarget")}} but defines no additional properties._
 
 ## Methods
 
@@ -43,7 +43,7 @@ _`XRReferenceSpace` also inherits methods from {{domxref("EventTarget")}} in ad
 
 - {{domxref("XRReferenceSpace.reset_event", "reset")}}
 
-  - : The `reset` event is sent to an `XRReferenceSpace` object when the browser detects a discontinuity has occurred wherein the tracked object's origin relative to the user's environment or location. This can happen, for example, after the user recalibrates their XR device, or if the device automatically adjusts its origin after losing and regaining tracking.
+  - : The `reset` event is sent to an `XRReferenceSpace` object when the browser detects a discontinuity between the tracked object's origin and the user's environment or location. This can happen, for example, after the user recalibrates their XR device, or if the device automatically adjusts its origin after losing and regaining tracking.
 
 ## Reference space types
 
