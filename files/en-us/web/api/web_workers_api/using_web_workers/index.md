@@ -655,7 +655,7 @@ self.onmessage = function(e) {
 
 
 function fibonacci(num){
-let a = 1, b = 0, temp;
+  let a = 1, b = 0, temp;
   while (num >= 0){
     temp = a;
     a = a + b;
