@@ -9068,6 +9068,7 @@
 /en-US/docs/Web/API/XRInputSourcesChangeEventInit/removed	/en-US/docs/Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent
 /en-US/docs/Web/API/XRInputSourcesChangeEventInit/session	/en-US/docs/Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent
 /en-US/docs/Web/API/XRLightProbe/onreflectionchange	/en-US/docs/Web/API/XRLightProbe/reflectionchange_event
+/en-US/docs/Web/API/XRReferenceSpace/onreset	/en-US/docs/Web/API/XRReferenceSpace/reset_event
 /en-US/docs/Web/API/XRReferenceSpaceEventInit	/en-US/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
 /en-US/docs/Web/API/XRReferenceSpaceEventInit/referenceSpace	/en-US/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
 /en-US/docs/Web/API/XRReferenceSpaceEventInit/transform	/en-US/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent

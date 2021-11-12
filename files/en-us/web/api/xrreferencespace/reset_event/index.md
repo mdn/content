@@ -27,28 +27,21 @@ In the case of {{domxref("XRBoundedReferenceSpace")}} objects, the `reset` event
 
 In either case, the event is sent before any WebXR animation frames which make use of the new origin are executed.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("XRReferenceSpaceEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>
-        {{domxref("XRReferenceSpace/onreset", "onreset")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("reset", (event) => { });
+
+onreset = (event) => { });
+```
+
+## Event type
+
+{{domxref("XRReferenceSpaceEvent")}}.
 
 ## Usage notes
 
@@ -66,7 +59,7 @@ There are a number of reasons why a reset might occur. Most common among them ar
 
 ### Manual resets
 
-If you've spent any time using a VR headset, you've had times when you've started it up and although you're facing straight ahead, the headset thinks you're looking at the sky or the floor; or times when you point the hand controller straight forward, but it thinks you're pointing it up and to the right somewhere. When that happens, you typically hold down a button somewhere and it causes the world to resynchronize to the device's current orientation. That works by sending a \`reset\` event to the reference space or reference spaces that are based on the headset's orientation.
+If you've spent any time using a VR headset, you've had times when you've started it up and although you're facing straight ahead, the headset thinks you're looking at the sky or the floor; or times when you point the hand controller straight forward, but it thinks you're pointing it up and to the right somewhere. When that happens, you typically hold down a button somewhere and it causes the world to resynchronize to the device's current orientation. That works by sending a `reset` event to the reference space or reference spaces that are based on the headset's orientation.
 
 ### Handling discontinuities
 
@@ -88,7 +81,7 @@ viewerRefSpace.addEventListener("reset", (event) => {
 });
 ```
 
-The second option is to set the `XRReferenceSpace` object's {{domxref("XRReferenceSpace.onreset", "onreset")}} event handler property:
+The second option is to set the `XRReferenceSpace` object's `onreset` event handler property:
 
 ```js
 viewerRefSpace.onreset = (event) => {

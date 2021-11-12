@@ -92086,12 +92086,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/XRReferenceSpace/onreset": {
-    "modified": "2020-10-15T22:24:25.742Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/XRReferenceSpace/reset_event": {
     "modified": "2020-12-10T09:09:42.219Z",
     "contributors": [
