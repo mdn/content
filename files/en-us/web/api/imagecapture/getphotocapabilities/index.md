@@ -37,7 +37,7 @@ A {{jsxref("Promise")}} that resolves with an object containing the following pr
 - `imageWidth`
   - : Returns an object indicating the image width range supported by the user agent.
 - `fillLightMode`
-  - : Returns an array of available fill light options. Options may include `auto`, `off`, or `flash`.
+  - : Returns an array of available fill light options. Options include `auto`, `off`, or `flash`.
 
 ## Example
 
