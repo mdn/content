@@ -40,7 +40,7 @@ input[type=range]::-moz-range-track {
 
 {{EmbedLiveSample("Examples", 300, 50)}}
 
-A progress bar using this style might look something like this:
+A range slider using this style might look something like this:
 
 ![A range with the track green.](screen_shot_2015-12-04_at_10.14.34.png)
 
