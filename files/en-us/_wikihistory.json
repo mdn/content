@@ -76325,16 +76325,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/ServiceWorkerGlobalScope/caches": {
-    "modified": "2020-10-15T21:37:54.285Z",
-    "contributors": [
-      "Wind1808",
-      "fscholz",
-      "chrisdavidmills",
-      "rolfedh",
-      "Speculative"
-    ]
-  },
   "Web/API/ServiceWorkerGlobalScope/clients": {
     "modified": "2020-10-15T21:33:53.292Z",
     "contributors": [

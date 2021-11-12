@@ -8557,6 +8557,7 @@
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/ServiceWorkerGlobalScope.onfetch	/en-US/docs/Web/API/ServiceWorkerGlobalScope/onfetch
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/ServiceWorkerGlobalScope.onmessage	/en-US/docs/Web/API/ServiceWorkerGlobalScope/onmessage
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/activate	/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event
+/en-US/docs/Web/API/ServiceWorkerGlobalScope/caches	/en-US/docs/Web/API/caches
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/claim	/en-US/docs/Web/API/Clients/claim
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch	/en-US/docs/Web/API/fetch
 /en-US/docs/Web/API/ServiceWorkerGlobalScope/install	/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event
