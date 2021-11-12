@@ -11,11 +11,15 @@ browser-compat: http.headers.Forwarded
 ---
 {{HTTPSidebar}}
 
-The **`Forwarded`** header contains information from the [reverse proxy servers](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling) that is altered or lost when a proxy is involved in the path of the request.
+The **`Forwarded`** request header contains information that may be added by [reverse proxy servers](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling) (load balancers, CDNs, and so on) that would otherwise be altered or lost when proxy servers are involved in the path of the request.
+
+For example, if a client is connecting to a web server through an HTTP proxy (or load balancer), server logs will only contain the IP address, host address, and protocol of the proxy; this header can be used to identify the IP address, host, and protocol, of the original request.
+The header is optional and may be added to or modified/removed by a chain of proxy servers on the path to the server.
+
+This header is used for debugging, statistics, and generating location-dependent content, and by design, it exposes privacy sensitive information, such as the IP address of the client.
+Therefore, the user's privacy must be kept in mind when deploying this header.
 
 The alternative and de-facto standard versions of this header are the {{HTTPHeader("X-Forwarded-For")}}, {{HTTPHeader("X-Forwarded-Host")}} and {{HTTPHeader("X-Forwarded-Proto")}} headers.
-
-This header is used for debugging, statistics, and generating location-dependent content, and by design, it exposes privacy sensitive information, such as the IP address of the client. Therefore, the user's privacy must be kept in mind when deploying this header.
 
 <table class="properties">
   <tbody>
@@ -32,28 +36,36 @@ This header is used for debugging, statistics, and generating location-dependent
 
 ## Syntax
 
-```
+The sytnax for the forwarding header from a single proxy is shown below.
+Directives are `key=value` pairs, separated by a semicolon.
+
+```http
 Forwarded: by=<identifier>;for=<identifier>;host=<host>;proto=<http|https>
 ```
 
+Each proxy server in a chain should add its own parameter set after the information from preceding servers.
+This can be done by adding a new `Forwarded` header to the end of the header block, or by appending the parameter information to the end of the last `Forwarded` header, creating a comma separated list of information from each proxy server.
+
+
 ## Directives
 
-- \<identifier>
-
-  - : An identifier disclosing the information that is altered or lost when using a proxy. This can be either:
-
-    - an IP address (v4 or v6, optionally with a port, and ipv6 quoted and enclosed in square brackets),
-    - an obfuscated identifier (such as "\_hidden" or "\_secret"),
-    - or "unknown" when the preceding entity is not known (and you still want to indicate that forwarding of the request was made).
-
-- by=\<identifier>
+- `by` {{optional_inline}}
   - : The interface where the request came in to the proxy server.
-- for=\<identifier>
+    The identifier can be:
+
+    - an obfuscated identifier (such as "hidden" or "secret").
+      This should be treated as the default.
+    - an IP address (v4 or v6, optionally with a port, and ipv6 quoted and enclosed in square brackets)
+    - "unknown" when the preceding entity is not known (and you still want to indicate that forwarding of the request was made)
+
+- `for` {{optional_inline}}
   - : The client that initiated the request and subsequent proxies in a chain of proxies.
-- host=\<host>
+    The identifier has the same possible values as the `by` directive.
+- `host` {{optional_inline}}
   - : The {{HTTPHeader("Host")}} request header field as received by the proxy.
-- proto=\<http|https>
+- `proto` {{optional_inline}}
   - : Indicates which protocol was used to make the request (typically "http" or "https").
+
 
 ## Examples
 
@@ -68,13 +80,14 @@ Forwarded: For="[2001:db8:cafe::17]:4711"
 # separated by semicolon
 Forwarded: for=192.0.2.60;proto=http;by=203.0.113.43
 
-# multiple values can be appended using a comma
+# Values from multiple proxy servers can be appended using a comma
 Forwarded: for=192.0.2.43, for=198.51.100.17
 ```
 
 ### Transitioning from `X-Forwarded-For` to `Forwarded`
 
-If your application, server, or proxy supports the standardized `Forwarded` header, the {{HTTPHeader("X-Forwarded-For")}} header can be replaced. Note that IPv6 address is quoted and enclosed in square brackets in `Forwarded`.
+If your application, server, or proxy supports the standardized `Forwarded` header, the {{HTTPHeader("X-Forwarded-For")}} header can be replaced.
+Note that IPv6 address is quoted and enclosed in square brackets in `Forwarded`.
 
 ```
 X-Forwarded-For: 123.34.567.89
