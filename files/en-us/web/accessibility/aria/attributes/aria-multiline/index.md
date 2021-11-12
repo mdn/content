@@ -10,17 +10,17 @@ tags:
   - Reference
 ---
 
-The `aria-multiline` attribute indicates whether a text box accepts multiple lines of input or only a single line.
+The `aria-multiline` attribute indicates whether a `textbox` accepts multiple lines of input or only a single line.
 
 ## Description
 
-The default behavior of the <kbd>ENTER</kbd> or <kbd>RETURN</kbd> key is different between single-line and multi-line text fields in HTML. When user focus is in a single-line `{{htmlelement("input/text", '<input type="text">')}}` element, the keystroke usually submits the form. When user focus in a multi-line {{HTMLElement('textarea')}} element, the keystroke inserts a line break. Only relevant for elements with the [`textbox`]() role set, the `aria-multiline` attribute indicates to assistive technologies whether that text box accepts multiple lines of input or only a single line. The value also sets expectations as to what keystroke will do.
+When focus is in a text box, the default behavior of the <kbd>ENTER</kbd> or <kbd>RETURN</kbd> key differs between single-line and multi-line text fields. When user focus is in a single-line `{{htmlelement("input/text", '&lt;input type="text">')}}`, the keystroke usually submits the form. When user focus is in a multi-line {{HTMLElement('textarea')}}, the keystroke inserts a line break. Only relevant for elements with the [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) role set, the `aria-multiline` attribute indicates to assistive technologies whether that text box accepts multiple lines of input or only a single line, setting expectations as to what type of data to enter and what those keystroke will do.
 
-> **Note:** Where possible use an HTML {{HTMLElement('input')}} element with `type="text"` or a {{HTMLElement('textarea')}} as these have built in semantics and behaviors and do not require ARIA attributes or scripting to control keypress events.
+> **Note:** Where possible, use the HTML {{HTMLElement('input')}} or the {{HTMLElement('textarea')}}, as these have built in semantics and behaviors, do not require ARIA attributes or scripting, and have keyboard support built in.
 
-The WAI-ARIA `textbox` role differentiates these types of boxes with the `aria-multiline` attribute.  If the `aria-multiline="true"` is set, the textbox widget accepts line breaks within the input, similar to the HTML {{HTMLElement('textarea')}}. Elements with a role of `textbox` that do not have the attribute, or with the value set to `false`, are simple text box. 
+If the `aria-multiline="true"` is set, it means the textbox widget will accept line breaks within the input, similar to the HTML {{HTMLElement('textarea')}}. Elements with a role of `textbox` that do not have the attribute, or with the value set to `false`, are simple text box. 
 
-Be aware of keystroke distinction when designing text boxes. ARIA only modifies the accessibility tree and therefore how assistive technology presents the textbox to your users. ARIA doesn't change anything about an elements default function or behavior. When not using semantic HTML elements for their intended purpose and default functionality, you must use JavaScript to manage behavior and functionality, including responding to keystroke events.
+Be aware of focus and keystrokes when designing text boxes. ARIA only modifies the accessibility tree and therefore how assistive technology presents the textbox to your users. ARIA doesn't change anything about an element's default function or behavior. When not using semantic HTML elements for their intended purpose and default functionality, you must use JavaScript to manage behavior and functionality, including responding to keystroke events.
 
 ## Values
 
@@ -41,7 +41,7 @@ Be aware of keystroke distinction when designing text boxes. ARIA only modifies 
 
 Used in roles: 
 
-- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/text_role)
+- [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
 
 Inherits into roles: 
 
