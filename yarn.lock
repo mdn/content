@@ -39,10 +39,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.0.10.tgz#935332a599f662ceff2db9e0890401477a345005"
   integrity sha512-vLJbqPv8bZxJax7dRaGP8O9Xe3X7vdbF1IYzRajP5wGoAkgIl8WBvouRhrOMz1n5nVFjrQ8KWRWtykmHk+iGtg==
 
-"@mdn/yari@0.4.822":
-  version "0.4.822"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.822.tgz#707ad2e10ec3a68c994d060fd7eb4c03ad4ec164"
-  integrity sha512-iHq/KoW2F6xDV63U7tPdS30j7igPXphBxpZxqsaqrB07hjZkhiaGBFMajmX0ThgLzCiW9clF0doGP9iiR1/vQA==
+"@mdn/yari@0.4.825":
+  version "0.4.825"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.825.tgz#3eef9c4abf2a15d53fc123f4392889fcdd6ffdbe"
+  integrity sha512-t1ivCtdLt1ZQ+JBtmMqdRVzPvcdAkxPvyKA3fU3b5NX7dDFrp2/575cLfMDBGYkcXQlzS/ChfnkYjWCKvRWoww==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
@@ -91,7 +91,7 @@
     open "^8.4.0"
     open-editor "3.0.0"
     prismjs "1.25.0"
-    react-modal "^3.14.3"
+    react-modal "^3.14.4"
     read-chunk "3.2.0"
     rehype-format "^3.1.0"
     rehype-parse "^7.0.1"
@@ -3750,10 +3750,10 @@ react-lifecycles-compat@^3.0.0:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-modal@^3.14.3:
-  version "3.14.3"
-  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.14.3.tgz#7eb7c5ec85523e5843e2d4737cc17fc3f6aeb1c0"
-  integrity sha512-+C2KODVKyu20zHXPJxfOOcf571L1u/EpFlH+oS/3YDn8rgVE51QZuxuuIwabJ8ZFnOEHaD+r6XNjqwtxZnXO0g==
+react-modal@^3.14.4:
+  version "3.14.4"
+  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.14.4.tgz#2ca7e8e9a180955e5c9508c228b73167c1e6f6a3"
+  integrity sha512-8surmulejafYCH9wfUmFyj4UfbSJwjcgbS9gf3oOItu4Hwd6ivJyVBETI0yHRhpJKCLZMUtnhzk76wXTsNL6Qg==
   dependencies:
     exenv "^1.2.0"
     prop-types "^15.7.2"
