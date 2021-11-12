@@ -54,7 +54,7 @@ Arrays consist of square brackets and items that are separated by commas.
 
     ```js
     let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
-    shopping;
+    console.log(shopping);
     ```
 
 2.  In the above example, each item is a string, but in an array we can store various data types — strings, numbers, objects, and even other arrays. We can also mix data types in a single array — we do not have to limit ourselves to storing only numbers in one array, and in another only strings. For example:
@@ -66,6 +66,15 @@ Arrays consist of square brackets and items that are separated by commas.
 
 3.  Before proceeding, create a few example arrays.
 
+## Finding the length of an array
+
+You can find out the length of an array (how many items are in it) in exactly the same way as you find out the length (in characters) of a string — by using the {{jsxref("Array.prototype.length","length")}} property. Try the following:
+
+```js
+let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+console.log(shopping.length);  // 5
+```
+
 ## Accessing and modifying array items
 
 Items in an array are numbered, starting from zero. This number is called the item's *index*. So the first item has index 0, the second has index 1, and so on. You can access individual items in the array using bracket notation and supplying the item's index, in the same way that you [accessed the letters in a string](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
@@ -73,15 +82,17 @@ Items in an array are numbered, starting from zero. This number is called the it
 1.  Enter the following into your console:
 
     ```js
-    shopping[0];
+    let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+    console.log(shopping[0]);
     // returns "bread"
     ```
 
 2.  You can also modify an item in an array by giving a single array item a new value. Try this:
 
     ```js
+    let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
     shopping[0] = 'tahini';
-    shopping;
+    console.log(shopping);
     // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]
     ```
 
@@ -90,6 +101,7 @@ Items in an array are numbered, starting from zero. This number is called the it
 3.  Note that an array inside an array is called a multidimensional array. You can access an item inside an array that is itself inside another array by chaining two sets of square brackets together. For example, to access one of the items inside the array that is the third item inside the `random` array (see previous section), we could do something like this:
 
     ```js
+    let random = ['tree', 795, [0, 1, 2]];
     random[2][2];
     ```
 
