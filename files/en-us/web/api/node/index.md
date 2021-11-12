@@ -204,8 +204,8 @@ function eachNode(rootNode, callback) {
     for (let i = 0, l = nodes.length; i < l; ++i) {
       if (false === eachNode(nodes[i], callback)) {
         return
-            }
-        }
+      }
+    }
   }
 }
 ```
