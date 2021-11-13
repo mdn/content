@@ -20,7 +20,7 @@ When it comes to the headings in a document structure, you can have first-level 
 
 The `aria-level` attribute exposes the hierarchy to assistive technologies so the hierarchy can be communicated to the users. Like all ARIA attributes, it has no impact on the user agent and therefore no impact on the user agent's determination of the document structure.
 
-If the DOM ancestry accurately represents the level, the user agent can calculate the level of an item from the document structure making `aria-level` not only redundant but a risk of creating misinformation. This attribute should really only be used to provide an explicit indication of the level when that is not possible to calculate from the document structure. Test to see if this attribute is needed. If the user agent can calculate the level, it is best to omit the `aria-level` attribute.
+If the DOM ancestry accurately represents the level, the user agent can calculate the level of an item from the document structure, making `aria-level` not only redundant but a risk of creating misinformation. `aria-level` should really only be used to provide an explicit indication of level when it is not possible to calculate from the document structure. Test to see if this attribute is needed. If the user agent can calculate the level, it is best to omit the `aria-level` attribute.
 
 ### With `heading` role
 
