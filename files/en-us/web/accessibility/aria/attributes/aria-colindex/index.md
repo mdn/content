@@ -14,7 +14,9 @@ The `aria-colindex` attribute defines an element's column index or position with
 
 ## Description
 
-Some tables are very large which can harm user experience on load and on scroll. When loading only a subsection of the columns improves user experience, you do need to let users know the content isn't all there and what portions of the content are being displayed. ARIA provides several attributes to provide information about `table`, `grid`, and `treegrid` structures. The `aria-colindex` attribute defines the substructure, an element's column index or position with respect to the total number of columns, within such structures. 
+Some tables are very large, and as a result have only a portion of its content is initially displayed. While loading only a subsection of the columns may improve user experience, you need to let all users know what portions of the content are being displayed, and that all the table's content is not present.
+
+ARIA provides several attributes to provide information about `table`, `grid`, and `treegrid` structures. The `aria-colindex` attribute defines the substructure, an element's column index or position with respect to the total number of columns, within such structures. 
 
 Used in conjunction with the [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) attribute, which informs assistive technologies how many columns the table would have if all columns were present, the `aria-colindex` is used an element's column index or position with respect to that total number of columns. 
 
