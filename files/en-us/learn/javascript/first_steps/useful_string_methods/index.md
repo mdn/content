@@ -171,7 +171,7 @@ console.log(updated);      // "vanilla"
 console.log(browserType);  // "mozilla"
 ```
 
-Note that `replace()`, like many string methods, doesn't change the string it was called out but returns a new string. If you want to update the original `browserType` variable, you would have to do something like this:
+Note that `replace()`, like many string methods, doesn't change the string it was called on, but returns a new string. If you want to update the original `browserType` variable, you would have to do something like this:
 
 ```js
 let browserType = 'mozilla';
