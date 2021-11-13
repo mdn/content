@@ -14,7 +14,9 @@ The `aria-level` attribute defines the hierarchical level of an element within a
 
 ## Description
 
-When it comes to the headings in a document structure, you can have primary headings, secondary headings, tertiary headings, and so on. In trees, you have the root element, its children, the children's children (or grandchildren), and so on. Levels of hierarchy appear in headings, trees, nested grid, nested tablists, and more. If the DOM ancestry does not accurately represent the level, the `aria-level` attribute should be used to define the hierarchical level elements within their hierarchical structures. Levels increase with depth. The value for aria-level is an integer greater than or equal to 1.
+Levels of hierarchy appear in headings, trees, nested grid, nested tablists, and more. If the DOM ancestry does not accurately represent the level, the `aria-level` attribute should be used to define the hierarchical level elements within their hierarchical structures. Levels increase with depth. The value for aria-level is an integer greater than or equal to `1`.
+
+When it comes to the headings in a document structure, you can have first-level headings, second-level headings, third-level headings, etc. In trees, you have the root element, its children, the children's children (or grandchildren), and so on. 
 
 The `aria-level` attribute exposes the hierarchy to assistive technologies so the hierarchy can be communicated to the users. Like all ARIA attributes, it has no impact on the user agent and therefore no impact on the user agent's determination of the document structure.
 
