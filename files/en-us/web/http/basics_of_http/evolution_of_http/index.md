@@ -197,7 +197,7 @@ This evolution of HTTP has lead to the creation of many applications and has dri
 
 ## HTTP/3 - HTTP over QUIC
 
-{{Draft}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The next major version of HTTP, HTTP/3, will use {{Glossary("QUIC")}} instead {{Glossary("TCP")}}/{{Glossary("TLS")}} for the transport layer portion.
 

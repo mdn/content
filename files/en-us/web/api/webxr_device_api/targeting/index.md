@@ -4,7 +4,7 @@ slug: Web/API/WebXR_Device_API/Targeting
 tags:
   - Draft
 ---
-{{DefaultAPISidebar("WebXR Device API")}}{{Draft}}
+{{DefaultAPISidebar("WebXR Device API")}}
 
 ## Virtual object hit testing
 

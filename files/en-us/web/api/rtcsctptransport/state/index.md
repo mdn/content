@@ -16,7 +16,7 @@ tags:
   - state
 browser-compat: api.RTCSctpTransport.state
 ---
-{{APIRef("WebRTC")}}{{Draft}}{{SeeCompatTable}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`state`** read-only property of the
 {{DOMxRef("RTCSctpTransport")}} interface provides information which describes a Stream
