@@ -20,7 +20,7 @@ ARIA provides several attributes to provide information about `table`, `grid`, a
 
 Used in conjunction with the [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) attribute, which informs assistive technologies how many columns the table would have if all columns were present, the `aria-colindex` is used an element's column index or position with respect to that total number of columns. 
 
-If all of the columns are present in the DOM, including `aria-colindex` is not necessary as user agents can calculate the column index of each cell or gridcell. However, if any of the columns are left out of the DOM at any time, include `aria-colindex` to indicate the column of each cell or gridcell with respect to the full table.
+If all of the columns are present in the DOM, including `aria-colindex` is not necessary as user agents can calculate the column index of each cell or gridcell. However, if any of the columns are left out of the DOM at any time, use `aria-colindex` to indicate the column of each cell or gridcell with respect to the full table.
 
 The value for `aria-colindex` is an integer greater than or equal to 1. Each value should be greater than the previous column's `aria-colindex` and less than or equal to the number of columns in the full table. 
 
