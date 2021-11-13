@@ -22,7 +22,7 @@ The adapter is provided under a [BSD-style license](https://github.com/webrtc/ad
 
 For each version of each browser that supports WebRTC, adapter.js implements the needed polyfills, establishes the non-prefixed names of APIs, and applies any other changes needed to make the browser run code written to the WebRTC specification.
 
-For example, on Firefox versions older than 38, the adapter adds the {{domxref("RTCPeerConnection.urls")}} property; Firefox doesn't natively support this property until Firefox 38, while on Chrome, the adapter adds support for the {{jsxref("Promise")}} based API is added if it's not present. These are just a couple of examples; there are of course other adjustments made for you by the shim.
+For example, on Firefox versions older than 38, the adapter adds the {{domxref("RTCPeerConnection.urls")}} property; Firefox doesn't natively support this property until Firefox 38, while on Chrome, the adapter adds support for the {{jsxref("Promise")}} based API if it's not present. These are just a couple of examples; there are of course other adjustments made for you by the shim.
 
 The WebRTC adapter currently supports Mozilla Firefox, Google Chrome, Apple Safari, and Microsoft Edge.
 
