@@ -77,7 +77,7 @@ Pretty clever stuff. Let's use the `HRTF` model!
 const pannerModel = 'HRTF';
 ```
 
-The [`coneInnerAngle`](/en-US/docs/Web/API/PannerNode/coneInnerAngle) and [`coneOuterAngle`](/en-US/docs/Web/API/PannerNode/coneOuterAngle) properties specify where the volume emanates from. By default, both are 360 degrees. Our boombox speakers will have smaller cones, which we can define. The inner cone is where gain (volume) is always emulated at a maximum and the outer cone is where the gain starts to drop away. The gain is reduced by the value of the [`coneOuterGain`](/en-US/docs/Web/API/PannerNode/coneOuterGain) value. Let's create constants that store the values we'll use for these parameters later on:
+The [`coneInnerAngle`](/en-US/docs/Web/API/PannerNode/coneInnerAngle) and [`coneOuterAngle`](/en-US/docs/Web/API/PannerNode/coneOuterAngle) properties specify where the volume emanates from. By default, both are 360 degrees. Our boombox speakers will have smaller cones, which we can define. The inner cone is where gain (volume) is always emulated at a maximum and the outer cone is where the gain starts to drop away. The gain is reduced by the value of the [`coneOuterGain`](/en-US/docs/Web/API/PannerNode/coneOuterGain). Let's create constants that store the values we'll use for these parameters later on:
 
 ```js
 const innerCone = 60;
