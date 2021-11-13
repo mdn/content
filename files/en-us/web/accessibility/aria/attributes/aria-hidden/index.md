@@ -49,8 +49,6 @@ In all three scenarios, the attribute is unnecessary to add because the element 
 
 Using `aria-hidden="false"` will not re-expose the element to assistive technology if any of its parents specify `aria-hidden="true"`.
 
-When working with modal dialog popups, use the [`aria-modal`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal) attribute rather than `aria-hidden` to inform assistive technologies that content outside a dialog is inert.
-
 ## Example
 
 Adding `aria-hidden="true"` to the icon hides the icon character from being included in the accessible name.
