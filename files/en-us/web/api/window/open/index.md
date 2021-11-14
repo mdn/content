@@ -95,7 +95,7 @@ function openRequestedPopup() {
   windowObjectReference = window.open(
     "http://www.domainname.ext/path/ImageFile.png",
     "DescriptiveWindowName",
-    "left=100,top=100,width=320,heigth=320"
+    "left=100,top=100,width=320,height=320"
   );
 }
 ```
