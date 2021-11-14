@@ -15,9 +15,9 @@ This page lists them all, with a short description. They are grouped by complexi
 
 - [Getting started](/en-US/docs/Web/CSS/Getting_Started)
   - : This guide is aimed at complete beginners: You haven't written one single line of CSS? — this is for you. It explains the fundamental concepts of the language and guides you in writing basic stylesheets.
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/Using_CSS_multiple_backgrounds)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
   - : Backgrounds are fundamental for nice styling: CSS allows you to set several of them on each box. This tutorial explains how they interact and how to achieve nice effects.
-- [Scaling background images](/en-US/docs/Web/CSS/Scaling_background_images)
+- [Scaling background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
   - : CSS allows you to resize images used as an element's background. This tutorial describes how to achieve this in a simple way.
 - [Media queries](/en-US/docs/Web/CSS/Media_queries)
   - : The size of the screens, or the kind of devices like touchscreens or printed sheets vary greatly nowadays. Media queries are the fundamental building blocks in achieving Web sites that render everywhere in their best quality.

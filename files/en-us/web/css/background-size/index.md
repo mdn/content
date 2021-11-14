@@ -105,7 +105,7 @@ Based on the intrinsic dimensions and proportions, the rendered size of the back
 
 ### Working with gradients
 
-If you use a `<gradient>` as the background and specify a `background-size` to go with it, it's best not to specify a size that uses a single `auto` component, or is specified using only a width value (for example, `background-size: 50%`). Rendering of `<gradient>`s in such cases changed in Firefox 8, and at present is generally inconsistent across browsers, which do not all implement rendering in full accordance with [the CSS3 `background-size` specification](https://www.w3.org/TR/css3-background/#the-background-size) and with [the CSS3 Image Values gradient specification](http://dev.w3.org/csswg/css3-images/#gradients).
+If you use a `<gradient>` as the background and specify a `background-size` to go with it, it's best not to specify a size that uses a single `auto` component, or is specified using only a width value (for example, `background-size: 50%`). Rendering of `<gradient>`s in such cases changed in Firefox 8, and at present is generally inconsistent across browsers, which do not all implement rendering in full accordance with [the CSS3 `background-size` specification](https://www.w3.org/TR/css3-background/#the-background-size) and with [the CSS3 Image Values gradient specification](https://dev.w3.org/csswg/css3-images/#gradients).
 
 ```css
 .gradient-example {
@@ -165,7 +165,7 @@ Let's consider a large image, a 2982x2808 Firefox logo image. We want to tile fo
 
 {{EmbedLiveSample("Tiling_a_large_image", 340, 340)}}
 
-See [Scaling background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images) for more examples.
+See [Scaling background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images) for more examples.
 
 ## Specifications
 
@@ -177,6 +177,6 @@ See [Scaling background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/
 
 ## See also
 
-- [Scaling background images](/en-US/docs/Web/CSS/Scaling_background_images)
+- [Scaling background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
 - [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds)
 - {{cssxref("object-fit")}}

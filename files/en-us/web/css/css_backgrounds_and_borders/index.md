@@ -65,7 +65,7 @@ Styles in the **CSS Backgrounds and Borders** module allow filling backgrounds w
 
 - [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
   - : Explains how to set one or more backgrounds on an element.
-- [Scaling background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images)
+- [Scaling background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
   - : Describes how to change the size and repeating behavior of background images.
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
   - : An overview of how CSS color can be used in HTML, including for borders.
