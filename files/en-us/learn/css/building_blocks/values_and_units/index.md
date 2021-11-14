@@ -148,7 +148,7 @@ The following are all **absolute** length units — they are not relative to any
 
 | Unit | Name                | Equivalent to        |
 | ---- | ------------------- | -------------------- |
-| `cm` | Centimeters         | 1cm = 38px = 25/64in |
+| `cm` | Centimeters         | 1cm = 37.8px = 25.2/64in |
 | `mm` | Millimeters         | 1mm = 1/10th of 1cm  |
 | `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm   |
 | `in` | Inches              | 1in = 2.54cm = 96px  |
