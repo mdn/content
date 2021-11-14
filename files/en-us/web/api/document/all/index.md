@@ -12,7 +12,7 @@ tags:
   - all
 browser-compat: api.Document.all
 ---
-{{APIRef("DOM")}}{{Draft}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
 The {{DOMxRef("Document")}} interface's read-only **`all`**
 property returns an {{DOMxRef("HTMLAllCollection")}} rooted at the document node. In

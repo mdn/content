@@ -2,7 +2,7 @@
 title: WebXR permissions and security
 slug: Web/API/WebXR_Device_API/Permissions_and_security
 ---
-{{DefaultAPISidebar("WebXR Device API")}}{{Draft}}
+{{DefaultAPISidebar("WebXR Device API")}}
 
 The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) has several areas of security to contend with, from establishing feature-policy to ensuring the user intends to use the mixed reality presentation before activating it. Among other things, you need to confirm access to device features such as the microphone and/or camera, get permission to use immersive VR mode (if applicable), and so forth. The variety of hardware and software involved in XR brings multiple APIs and technologies into play. In this guide, we'll cover how to ensure your app has the permissions it needs to provide a secure and private XR experience.
 

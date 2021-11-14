@@ -13,7 +13,7 @@ tags:
   - values
 browser-compat: api.CSSTransformValue.values
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSTransformValue.values()`**  returns a
 new *array iterator* object that contains the values for

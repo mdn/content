@@ -11,7 +11,7 @@ tags:
   - Property
 browser-compat: api.CSSNumericArray.length
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The read-only **`length`** property of the
 {{domxref("CSSNumericArray")}} interface returns the number of
