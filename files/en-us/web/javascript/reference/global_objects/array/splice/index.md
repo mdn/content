@@ -36,7 +36,7 @@ splice(start, deleteCount, item1, item2, itemN)
 
     If greater than the length of the array, `start` will be set
     to the length of the array. In this case, no element will be deleted but the method
-    will behave as an adding function, adding as many element as item\[n\*] provided.
+    will behave as an adding function, adding as many element(s) as item(s) \[n\*] provided.
 
     If negative, it will begin that many elements from the end of the array. (In this
     case, the origin `-1`, meaning `-n` is the index of
