@@ -11,7 +11,7 @@ browser-compat: api.Element.scroll_event
 ---
 {{APIRef}}
 
-The **`scroll`** event fires an element has been scrolled.
+The **`scroll`** event fires when an element has been scrolled.
 
 <table class="properties">
   <tbody>
