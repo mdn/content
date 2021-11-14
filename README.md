@@ -717,11 +717,11 @@ but they are here for now. They live in <https://github.com/mdn/content/blob/mai
 
 Sometimes you'll want to make a change to the content that relies on a
 macro change. Take [https://github.com/mdn/content/pull/9985](https://github.com/mdn/content/pull/9985).
-Patrick wanted to add documentation for a new Eyedropper API, so 
-new entries were needed for the spec in 
-<https://github.com/mdn/content/blob/main/files/jsondata/SpecData.json> 
-and the interface in 
-<https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json>. 
+Patrick wanted to add documentation for a new Eyedropper API, so
+new entries were needed for the spec in
+<https://github.com/mdn/content/blob/main/files/jsondata/SpecData.json>
+and the interface in
+<https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json>.
 Without those entries, macros on the new page would not render properly
 because the data they rely on would not be there.
 
