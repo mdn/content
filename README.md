@@ -713,7 +713,7 @@ KumaScript macros are still used on MDN pages, even in the new platform.
 These are the function names surrounded by handlebars-style double curly
 braces that you'll see in the source code on occasion, for example
 `{{domxref}}` Eventually we have to replace them with something else,
-but they are here for now. The strings you need to use in the macros
+but they are here for now. The values you need to use in the macros
 are defined in <https://github.com/mdn/content/blob/main/files/jsondata/>.
 
 Sometimes you'll want to make a change to the content that relies on a
