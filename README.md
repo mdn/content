@@ -713,21 +713,17 @@ KumaScript macros are still used on MDN pages, even in the new platform.
 These are the function names surrounded by handlebars-style double curly
 braces that you'll see in the source code on occasion, for example
 `{{domxref}}` Eventually we have to replace them with something else,
-but they are here for now. They live in <https://github.com/mdn/yari/tree/main/kumascript/macros>.
+but they are here for now. They live in <https://github.com/mdn/content/blob/main/files/jsondata/>.
 
 Sometimes you'll want to make a change to the content that relies on a
-macro change. Take [https://github.com/mdn/content/pull/187](https://github.com/mdn/content/pull/187).
-Florian wanted to add documentation for a new WebGL extension to MDN, but
-this change relied on the new feature's spec being added to
-<https://github.com/mdn/yari/blob/main/kumascript/macros/SpecData.json>.
-If not, the specification table on the new page would not render properly
-because the data it relies on would not be there.
-
-In such situations:
-
-1. Make the required PR to <https://github.com/mdn/yari/tree/main/kumascript/macros>
-   first, and get that merged.
-2. Add the content to this repo.
+macro change. Take [https://github.com/mdn/content/pull/9985](https://github.com/mdn/content/pull/9985).
+Patrick wanted to add documentation for a new Eyedropper API, so 
+new entries were needed for the spec in 
+<https://github.com/mdn/content/blob/main/files/jsondata/SpecData.json> 
+and the interface in 
+<https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json>. 
+Without those entries, macros on the new page would not render properly
+because the data they rely on would not be there.
 
 ## Frequently asked questions (FAQ)
 
