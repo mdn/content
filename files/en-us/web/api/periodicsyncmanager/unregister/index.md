@@ -11,7 +11,7 @@ tags:
   - Web Periodic Background Synchronization API
 browser-compat: api.PeriodicSyncManager.unregister
 ---
-{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
+{{DefaultAPISidebar("Periodic Background Sync")}}
 
 The **`unregister()`** method of the
 {{domxref("PeriodicSyncManager")}} interface unregisters the periodic sync request

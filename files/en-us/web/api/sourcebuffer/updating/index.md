@@ -14,7 +14,7 @@ tags:
   - Video
 browser-compat: api.SourceBuffer.updating
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`updating`** read-only property of the
 {{domxref("SourceBuffer")}} interface indicates whether the `SourceBuffer` is

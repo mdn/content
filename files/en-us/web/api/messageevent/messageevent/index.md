@@ -10,7 +10,7 @@ tags:
   - messaging
 browser-compat: api.MessageEvent.MessageEvent
 ---
-{{APIRef("HTML DOM")}}{{draft}}
+{{APIRef("HTML DOM")}}
 
 The **`MessageEvent()`** constructor creates a new
 {{domxref("MessageEvent")}} object instance.

@@ -12,7 +12,7 @@ tags:
   - Reference
 browser-compat: api.CSSMathValue.operator
 ---
-{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathValue.operator`** read-only
 property of the {{domxref("CSSMathValue")}} interface indicates the operator that the

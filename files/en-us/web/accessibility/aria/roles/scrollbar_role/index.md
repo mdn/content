@@ -10,7 +10,7 @@ tags:
   - NeedsContent
 ---
 
-{{draft}}
+
 <!--
 ## Description
 

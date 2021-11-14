@@ -11,7 +11,7 @@ tags:
   - screen wake lock
 browser-compat: api.WakeLockSentinel.onrelease
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
 The **`onrelease`** property of the
 {{domxref("WakeLockSentinel")}} is fired when the sentinel object's handle has been

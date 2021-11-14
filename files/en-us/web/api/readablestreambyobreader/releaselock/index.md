@@ -11,7 +11,7 @@ tags:
   - releaseLock
 browser-compat: api.ReadableStreamBYOBReader.releaseLock
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`releaseLock()`** method of the
 {{domxref("ReadableStreamBYOBReader")}} interface releases the reader's lock on the

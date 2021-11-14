@@ -10,7 +10,7 @@ tags:
   - event
 browser-compat: api.ServiceWorkerGlobalScope.contentdelete_event
 ---
-{{draft}}{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}
 
 The **`contentdelete`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when an item is removed from the indexed content via the user agent.
 

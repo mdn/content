@@ -12,7 +12,7 @@ tags:
   - Houdini
 browser-compat: api.CSSMatrixComponent.CSSMatrixComponent
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMatrixComponent()`** constructor
 creates a new {{domxref("CSSMatrixComponent")}} object representing the [matrix()](</en-US/docs/Web/CSS/transform-function/matrix()>) and [matrix3d()](</en-US/docs/Web/CSS/transform-function/matrix()>) values of the

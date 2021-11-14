@@ -10,7 +10,7 @@ tags:
   - working with files
 browser-compat: api.Window.showSaveFilePicker
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`showSaveFilePicker()`** method of the
 {{domxref("Window")}} interface shows a file picker that allows a user to save a file.

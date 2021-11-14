@@ -11,7 +11,7 @@ tags:
   - closed
 browser-compat: api.WritableStreamDefaultWriter.closed
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`closed`** read-only property of the
 {{domxref("WritableStreamDefaultWriter")}} interface returns a promise that fulfills if

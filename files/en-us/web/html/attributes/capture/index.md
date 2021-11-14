@@ -10,7 +10,7 @@ tags:
   - HTML
 ---
 
-{{HTMLSidebar}}{{draft}}
+{{HTMLSidebar}}
 
 The **`capture`** attribute specifies that, optionally, a new file should be captured, and which device should be used to capture that new media of a type defined by the [`accept`](accept) attribute.
 

@@ -11,7 +11,7 @@ tags:
   - close
 browser-compat: api.WritableStreamDefaultWriter.close
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`close()`** method of the
 {{domxref("WritableStreamDefaultWriter")}} interface closes the associated writable
