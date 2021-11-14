@@ -81,3 +81,4 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 ## Browser compatibility
 
 {{Compat}}
+g.co/sc in a new browser window
