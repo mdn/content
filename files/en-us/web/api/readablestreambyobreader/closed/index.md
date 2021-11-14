@@ -11,7 +11,7 @@ tags:
   - closed
 browser-compat: api.ReadableStreamBYOBReader.closed
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`closed`** read-only property
 of the {{domxref("ReadableStreamBYOBReader")}} interface returns a

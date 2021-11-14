@@ -10,7 +10,7 @@ tags:
   - content indexing
 browser-compat: api.ContentIndexEvent
 ---
-{{draft}}{{DefaultAPISidebar("Content Index API")}}
+{{DefaultAPISidebar("Content Index API")}}
 
 The **`ContentIndexEvent`** interface of the {{domxref('Content Index API')}} defines the object used to represent the {{Event('contentdelete')}} event.
 

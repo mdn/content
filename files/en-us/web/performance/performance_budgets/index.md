@@ -7,7 +7,7 @@ tags:
   - Performance Budget
   - Web Performance
 ---
-{{draft}}
+
 
 A performance budget is a limit to prevent regressions. It can apply to a file, a file type, all files loaded on a page, a specific metric (e.g. [Time to Interactive](/en-US/docs/Glossary/Time_to_interactive)), a custom metric (e.g. Time to Hero Element), or a threshold over a period of time.
 

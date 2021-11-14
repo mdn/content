@@ -15,7 +15,7 @@ browser-compat: api.Document.registerElement
 > **Warning:** `document.registerElement()` is deprecated in
 > favor of {{DOMxRef("CustomElementRegistry.define()","customElements.define()")}}.
 
-{{draft}}
+
 
 The **`document.registerElement()`** method registers a new [custom element](/en-US/docs/Web/Web_Components/Using_custom_elements) in the
 browser and returns a constructor for the new element.

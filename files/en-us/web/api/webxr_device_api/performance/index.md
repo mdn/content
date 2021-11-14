@@ -20,7 +20,7 @@ tags:
   - size
   - speed
 ---
-{{draft}}{{DefaultAPISidebar("WebXR Device API")}}
+{{DefaultAPISidebar("WebXR Device API")}}
 
 WebXR applications involve multiple technologies which can be highly sensitive to performance constraints. As such, you may find yourself needing to make adjustments or compromises to optimize the performance of your WebXR application to be as usable as possible on the broadest assortment of target devices. In this guide, we'll examine a variety of suggestions and recommendations that will help you make your WebXR app as performant as possible.
 

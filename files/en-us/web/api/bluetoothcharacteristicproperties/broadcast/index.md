@@ -13,7 +13,7 @@ tags:
   - broadcast
 browser-compat: api.BluetoothCharacteristicProperties.broadcast
 ---
-{{draft}}{{securecontext_header}}{{APIRef("Bluetooth API")}}
+{{securecontext_header}}{{APIRef("Bluetooth API")}}
 
 The **`broadcast`** read-only property of the
 {{domxref("BluetoothCharacteristicProperties")}} interface returns a

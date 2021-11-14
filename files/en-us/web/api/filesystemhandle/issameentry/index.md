@@ -9,7 +9,7 @@ tags:
   - Method
 browser-compat: api.FileSystemHandle.isSameEntry
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`isSameEntry()`** method of the
 {{domxref("FileSystemHandle")}} interface compares two {{domxref("FileSystemHandle",

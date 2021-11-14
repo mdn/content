@@ -10,7 +10,7 @@ tags:
   - Streams
 browser-compat: api.CountQueuingStrategy.CountQueuingStrategy
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`CountQueuingStrategy()`** constructor
 creates and returns a `CountQueuingStrategy` object instance.

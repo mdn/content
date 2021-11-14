@@ -12,7 +12,7 @@ tags:
   - div()
 browser-compat: api.CSSNumericValue.div
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`div()`** method of the
 {{domxref("CSSNumericValue")}} interface divides the `CSSNumericValue` by the

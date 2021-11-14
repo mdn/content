@@ -7,7 +7,7 @@ tags:
   - Mozilla
   - Release
 ---
-{{FirefoxSidebar}}{{draft}}
+{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 95 that will affect developers.
 Firefox 95 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta), and will ship on [December 7, 2021](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).

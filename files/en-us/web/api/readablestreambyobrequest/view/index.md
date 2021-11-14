@@ -11,7 +11,7 @@ tags:
   - View
 browser-compat: api.ReadableStreamBYOBRequest.view
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`view`** getter property of the
 {{domxref("ReadableStreamBYOBRequest")}} interface returns the current view.

@@ -13,7 +13,7 @@ tags:
   - Property
 browser-compat: api.CSSRotate.angle
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`angle`** property of the
 {{domxref("CSSRotate")}} interface gets and sets the angle of rotation. A positive angle

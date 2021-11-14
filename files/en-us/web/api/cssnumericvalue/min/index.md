@@ -12,7 +12,7 @@ tags:
   - min()
 browser-compat: api.CSSNumericValue.min
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`min()`** method of the
 {{domxref("CSSNumericValue")}} interface returns the lowest value from among those

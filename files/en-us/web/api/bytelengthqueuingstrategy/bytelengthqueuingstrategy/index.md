@@ -10,7 +10,7 @@ tags:
   - Streams
 browser-compat: api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`ByteLengthQueuingStrategy()`**
 constructor creates and returns a `ByteLengthQueuingStrategy` object

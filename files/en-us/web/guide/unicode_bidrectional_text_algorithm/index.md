@@ -16,7 +16,7 @@ tags:
   - ltr
   - rtl
 ---
-{{draft}}
+
 
 The **Unicode**® **Bidirectional Algorithm** (also known as the **BiDi Algorithm**) is part of the Unicode text standard that describes how the {{Glossary("user agent")}} should order characters while rendering Unicode text. Understanding this algorithm in at least basic terms is helpful when you're striving to produce localization-ready web content or apps.
 

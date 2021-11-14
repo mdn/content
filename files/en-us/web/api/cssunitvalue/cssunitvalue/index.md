@@ -11,7 +11,7 @@ tags:
   - Reference
 browser-compat: api.CSSUnitValue.CSSUnitValue
 ---
-{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSUnitValue()`** constructor creates a
 new {{domxref("CSSUnitValue")}} object which returns a new {{domxref('CSSUnitValue')}}

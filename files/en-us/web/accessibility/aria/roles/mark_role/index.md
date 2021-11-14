@@ -10,7 +10,7 @@ tags:
   - needscontent
 ---
 
-{{draft}}
+
 
 The `mark` role semantically denotes HTML elements containing text that is marked/highlighted for reference purposes. This is semantically equivalent to the HTML {{HTMLElement('mark')}} element. If possible, you should use this element instead.
 
