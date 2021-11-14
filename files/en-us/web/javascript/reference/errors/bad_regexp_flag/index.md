@@ -10,8 +10,7 @@ tags:
 
 The JavaScript exception "invalid regular expression flag" occurs when the flags,
 defined after the second slash in regular expression literal, are not one of
-`g`, `i`, `m`, `s`, `u`, or
-`y`.
+`g`, `i`, `m`, `s`, `u`, `y` or `d`.
 
 ## Message
 
@@ -31,7 +30,7 @@ There are invalid regular expression flags in the code. In a regular expression
 literal, which consists of a pattern enclosed between slashes, the flags are defined
 after the second slash. They can also be defined in the constructor function of the
 {{jsxref("RegExp")}} object (second parameter). Regular expression flags can be used
-separately or together in any order, but there are only six of them in ECMAScript.
+separately or together in any order, but there are only seven of them in ECMAScript.
 
 To include a flag with the regular expression, use this syntax:
 
@@ -48,15 +47,16 @@ var re = new RegExp('pattern', 'flags');
 | Flag | Description                                                                                                                                        |
 | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `g`  | Global search.                                                                                                                                     |
-| i    | Case-insensitive search.                                                                                                                           |
-| m    | Multi-line search.                                                                                                                                 |
-| s    | Allow `.` to match newlines (added in ECMAScript 2018)                                                                                             |
-| u    | Unicode; treat pattern as a sequence of Unicode code points                                                                                        |
-| y    | Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp.sticky", "sticky")}} |
+| `i`  | Case-insensitive search.                                                                                                                           |
+| `m`  | Multi-line search.                                                                                                                                 |
+| `s`  | Allow `.` to match newlines (added in ECMAScript 2018)                                                                                             |
+| `u`  | Unicode; treat pattern as a sequence of Unicode code points                                                                                        |
+| `y`  | Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp.sticky", "sticky")}}            |
+| `d`  | Generate indices for substring matches.                                                                                                            |
 
 ## Examples
 
-There are only six valid regular expression flags.
+There are only seven valid regular expression flags.
 
 ```js example-bad
 /foo/bar;
@@ -86,7 +86,7 @@ let obj = {
 
 ### Valid regular expression flags
 
-See the table above for the six valid regular expression flags that are allowed in
+See the table above for the seven valid regular expression flags that are allowed in
 JavaScript.
 
 ```js example-good
