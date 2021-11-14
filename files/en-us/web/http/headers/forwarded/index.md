@@ -14,9 +14,10 @@ browser-compat: http.headers.Forwarded
 The **`Forwarded`** request header contains information that may be added by [reverse proxy servers](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling) (load balancers, CDNs, and so on) that would otherwise be altered or lost when proxy servers are involved in the path of the request.
 
 For example, if a client is connecting to a web server through an HTTP proxy (or load balancer), server logs will only contain the IP address, host address, and protocol of the proxy; this header can be used to identify the IP address, host, and protocol, of the original request.
-The header is optional and may be added to or modified/removed by a chain of proxy servers on the path to the server.
+The header is optional and may be added to, modified, or removed, by any of the proxy servers on the path to the server.
 
-This header is used for debugging, statistics, and generating location-dependent content, and by design, it exposes privacy sensitive information, such as the IP address of the client.
+This header is used for debugging, statistics, and generating location-dependent content.
+By design, it exposes privacy sensitive information, such as the IP address of the client.
 Therefore, the user's privacy must be kept in mind when deploying this header.
 
 The alternative and de-facto standard versions of this header are the {{HTTPHeader("X-Forwarded-For")}}, {{HTTPHeader("X-Forwarded-Host")}} and {{HTTPHeader("X-Forwarded-Proto")}} headers.
@@ -36,15 +37,15 @@ The alternative and de-facto standard versions of this header are the {{HTTPHead
 
 ## Syntax
 
-The sytnax for the forwarding header from a single proxy is shown below.
+The syntax for the forwarding header from a single proxy is shown below.
 Directives are `key=value` pairs, separated by a semicolon.
 
 ```http
 Forwarded: by=<identifier>;for=<identifier>;host=<host>;proto=<http|https>
 ```
 
-Each proxy server in a chain should add its own parameter set after the information from preceding servers.
-This can be done by adding a new `Forwarded` header to the end of the header block, or by appending the parameter information to the end of the last `Forwarded` header, creating a comma separated list of information from each proxy server.
+If there are multiple proxy servers between the client and server, they may each specify their own forwarding information.
+This can be done by adding a new `Forwarded` header to the end of the header block, or by appending the information to the end of the last `Forwarded` header in a comma-separated list.
 
 
 ## Directives
