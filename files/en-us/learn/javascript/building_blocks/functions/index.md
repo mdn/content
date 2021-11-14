@@ -244,7 +244,7 @@ let myArray = ['I', 'love', 'chocolate', 'frogs'];
 let madeAString = myArray.join(' ');
 // returns 'I love chocolate frogs'
 let madeAString = myArray.join();
-// returns 'I,love,chocolate,frogs'
+// returns 'Ilovechocolatefrogs'
 ```
 
 If no parameter is included to specify a joining/delimiting character, a comma is used by default.
