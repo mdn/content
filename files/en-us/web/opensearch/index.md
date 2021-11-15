@@ -81,7 +81,7 @@ The XML file that describes a search engine follows the basic template below. Se
   - : The parameters that must be passed in along with the search query as key/value pairs. When specifying values, you can use `{searchTerms}` to insert the search terms entered by the user in the search bar.
 - moz:SearchForm
 
-  - : The URL for the site's search page for which the plugin. This lets Firefox users visit the web site directly.
+  - : The URL for the site's search initiation page for the plugin. This lets Firefox users visit the web site, and search from the site directly.
 
     > **Note:** Since this element is Firefox-specific, and not part of the OpenSearch specification, we use the `moz:` XML namespace prefix in the example above to ensure that other user agents that don't support this element can safely ignore it.
 
