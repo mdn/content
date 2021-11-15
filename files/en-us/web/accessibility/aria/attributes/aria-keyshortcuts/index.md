@@ -17,9 +17,9 @@ A keyboard shortcut is a series of one or several keys that tells software to pe
 
 The `aria-keyshortcuts` attribute exposes the existence of the shortcut to assistive technologies so the presence of the shortcut can be communicated to the users. Like all ARIA attributes, it has no effect on the functionality of the page; the keyboard behavior must be added via JavaScript event handlers.
 
-Keyboard shortcuts applied to disabled elements should also be disabled. 
+Keyboard shortcuts applied to disabled elements should also be disabled. For example, when disabling an element for mouse users, remember to disable it for keyboard shortcut users. 
 
-Ensure all keyboard shortcuts are both visible to sighted users and made available to assistive technology users via `aria-keyshortcuts`.
+Ensure all keyboard shortcuts are both visible to sighted users and made available to assistive technology. If your application is complex enough to need keyboard shortcuts, also known as "hot keys", include a guided tour of your application, an accessibility page documenting shortcuts and other accessibility features, a shortcut cheat sheet page or dialog pop up, or other method of making the availability of keyboard short cuts known.  In addition, show the shortcut in menus and tooltips.
 
 ### Property value rules
 
