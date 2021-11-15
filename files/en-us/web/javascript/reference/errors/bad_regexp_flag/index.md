@@ -8,10 +8,9 @@ tags:
 ---
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "invalid regular expression flag" occurs when the flags,
-defined after the second slash in regular expression literal, are not one of
-`g`, `i`, `m`, `s`, `u`, or
-`y`.
+The JavaScript exception "invalid regular expression flag" occurs when the flags in a regular expression contain any flag that is not one of: `g`, `i`, `m`, `s`, `u`, `y` or `d`.
+
+It may also be raised if the expression contains more than one instance of a valid flag.
 
 ## Message
 
@@ -27,36 +26,46 @@ SyntaxError: Invalid regular expression flags (Chrome)
 
 ## What went wrong?
 
-There are invalid regular expression flags in the code. In a regular expression
-literal, which consists of a pattern enclosed between slashes, the flags are defined
-after the second slash. They can also be defined in the constructor function of the
-{{jsxref("RegExp")}} object (second parameter). Regular expression flags can be used
-separately or together in any order, but there are only six of them in ECMAScript.
+The regular expression contains invalid flags, or valid flags have been used more than once in the expression.
 
-To include a flag with the regular expression, use this syntax:
+The valid (allowed) flags are listed in [Regular expressions > Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags), and reproduced below:
 
-```js
-var re = /pattern/flags;
-```
+| Flag | Description                                                                                                                             |
+| ---- | ----------------------------------------------------------------------------------------------------------------------------------------|
+| `g`  | Global search. See {{jsxref("RegExp.global", "global")}}                                                                                |
+| `i`  | Case-insensitive search. See {{jsxref("RegExp.sticky", "ignoreCase")}}.                                                                 |
+| `m`  | Multi-line search. See {{jsxref("RegExp.multiline", "multiline")}}.                                                                     |
+| `s`  | Allow `.` to match newlines (added in ECMAScript 2018). See {{jsxref("RegExp.dotAll", "dotAll")}}.                                      |
+| `u`  | Unicode; treat pattern as a sequence of Unicode code points. See {{jsxref("RegExp.unicode", "unicode")}}.                               |
+| `y`  | Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp.sticky", "sticky")}} |
+| `d`  | Indices. Generate indices for substring matches. See {{jsxref("RegExp.hasIndices", "hasIndices")}}                                      |
 
-or
-
-```js
-var re = new RegExp('pattern', 'flags');
-```
-
-| Flag | Description                                                                                                                                        |
-| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `g`  | Global search.                                                                                                                                     |
-| i    | Case-insensitive search.                                                                                                                           |
-| m    | Multi-line search.                                                                                                                                 |
-| s    | Allow `.` to match newlines (added in ECMAScript 2018)                                                                                             |
-| u    | Unicode; treat pattern as a sequence of Unicode code points                                                                                        |
-| y    | Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp.sticky", "sticky")}} |
 
 ## Examples
 
-There are only six valid regular expression flags.
+In a regular expression literal, which consists of a pattern enclosed between slashes, the flags are defined after the second slash.
+Regular expression flags can be used separately or together in any order.
+This syntax shows how to declare the flags using the regular expression literal:
+
+```js
+const re = /pattern/flags;
+```
+
+They can also be defined in the constructor function of the {{jsxref("RegExp")}} object (second parameter):
+
+```js
+const re = new RegExp('pattern', 'flags');
+```
+
+Here is an example showing use of only correct flags.
+
+```js example-good
+/foo/g;
+/foo/gims;
+/foo/uy;
+```
+
+Below is an example showing the use of some invalid flags `b`, `a` and `r`:
 
 ```js example-bad
 /foo/bar;
@@ -64,8 +73,8 @@ There are only six valid regular expression flags.
 // SyntaxError: invalid regular expression flag "b"
 ```
 
-Did you intend to create a regular expression? An expression containing two slashes is
-interpreted as a regular expression literal.
+
+The code below is incorrect, because `W`, `e` and `b` are not valid flags.
 
 ```js example-bad
 let obj = {
@@ -74,9 +83,8 @@ let obj = {
 
 // SyntaxError: invalid regular expression flag "W"
 ```
-
-Or did you mean to create a string instead? Add single or double quotes to create a
-string literal.
+An expression containing two slashes is interpreted as a regular expression literal.
+Most likely the intent was to create a string literal, using single or double quotes as shown below:
 
 ```js example-good
 let obj = {
@@ -84,21 +92,8 @@ let obj = {
 };
 ```
 
-### Valid regular expression flags
-
-See the table above for the six valid regular expression flags that are allowed in
-JavaScript.
-
-```js example-good
-/foo/g;
-/foo/gims;
-/foo/uy;
-```
 
 ## See also
 
-- [Regular
-  expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
-- [XRegEx flags](https://xregexp.com/flags/) – regular expression library
-  that provides four new flags (`n`, `s`, `x`,
-  `A`)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [XRegEx flags](https://xregexp.com/flags/) – regular expression library that provides four new flags (`n`, `s`, `x`, `A`)
