@@ -41,7 +41,7 @@ function UpdateDisplayTab(elem, tabIdx) {
   const slot = shadow.querySelector("slot");
   const panels = elem.querySelectorAll('tab-panel');
   if (panels.length && tabIdx && tabIdx <= panels.length ) {
-    slot.assign([panels[tabIdx-1]]);
+    slot.assign(panels[tabIdx-1]);
   } else {
     slot.assign();
   }
