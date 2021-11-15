@@ -7941,6 +7941,8 @@
 /en-US/docs/Web/API/MediaStream/MediaStream.getTracks()	/en-US/docs/Web/API/MediaStream/getTracks
 /en-US/docs/Web/API/MediaStream/getTracks()	/en-US/docs/Web/API/MediaStream/getTracks
 /en-US/docs/Web/API/MediaStreamAudioDestinationNode.stream	/en-US/docs/Web/API/MediaStreamAudioDestinationNode/stream
+/en-US/docs/Web/API/MediaStreamAudioSourceOptions	/en-US/docs/Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode
+/en-US/docs/Web/API/MediaStreamAudioSourceOptions/mediaStream	/en-US/docs/Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode
 /en-US/docs/Web/API/MediaStreamEvent.MediaStreamEvent	/en-US/docs/Web/API/MediaStreamEvent/MediaStreamEvent
 /en-US/docs/Web/API/MediaStreamEvent.stream	/en-US/docs/Web/API/MediaStreamEvent/stream
 /en-US/docs/Web/API/MediaStreamTrack.enabled	/en-US/docs/Web/API/MediaStreamTrack/enabled

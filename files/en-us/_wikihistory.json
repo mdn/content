@@ -60063,18 +60063,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/MediaStreamAudioSourceOptions": {
-    "modified": "2020-10-15T22:12:46.510Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaStreamAudioSourceOptions/mediaStream": {
-    "modified": "2020-10-15T22:12:47.071Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/MediaStreamConstraints": {
     "modified": "2020-10-15T21:49:57.805Z",
     "contributors": [
