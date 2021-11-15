@@ -25,10 +25,10 @@ To better understand the situation, this is the stacking context hierarchy:
 
 - root stacking context
 
-  - DIV #2 (z-index 2)
   - DIV #3 (z-index 1)
-
     - DIV #4 (z-index 10)
+  
+  - DIV #2 (z-index 2)
 
 > **Note:** It is worth remembering that in general the HTML hierarchy is different from the stacking context hierarchy. In the stacking context hierarchy, elements that do not create a stacking context are collapsed on their parent.
 
