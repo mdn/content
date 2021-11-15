@@ -86,7 +86,7 @@ visited are not visited. If elements that are already visited are removed (e.g. 
 will be skipped. ([See
 this example, below](#modifying_the_array_during_iteration).)
 
-**Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
+> **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
 `forEach()` executes the `callbackFn` function once for
 each array element; unlike {{jsxref("Array.prototype.map()", "map()")}} or

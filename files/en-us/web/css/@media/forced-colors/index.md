@@ -53,7 +53,8 @@ Additionally the following properties have special behavior in forced colors mod
 
 The system colors that are forced for the above properties depend on the context of the element. For example the {{cssxref("color")}} property on button element will be forced to `ButtonText`. On normal text it will be forced to `CanvasText`. See the [list of system colors](/en-US/docs/Web/CSS/color_value#system_colors) for additional details of when each might be appropriate in various UI contexts.
 
-**Note:** user agents choose system colors based on native element semantics, _not_ on added ARIA roles. As an example, adding `role="button"` to a div will **not** cause an element's color to be forced to `ButtonText`
+> **Note:** user agents choose system colors based on native element semantics, _not_ on added ARIA roles.
+> As an example, adding `role="button"` to a `div` will **not** cause an element's color to be forced to `ButtonText`
 
 In addition to these adjustments, browsers will help ensure text legibility by drawing “backplates” behind text. This is particularly important for preserving contrast when text is placed on top of images.
 

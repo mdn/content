@@ -135,10 +135,8 @@ The 3 most common types of audio node are:
     _tail-time_ equal to its {{domxref("DelayNode.delayTime", "delayTime")}}
     property.
 
-**Note**: An absence of the `return` statement
-means that the method returns `undefined`, and as this is a falsy value, it
-is like returning `false`. Omitting an explicit `return` statement
-may cause hard-to-detect problems for your nodes.
+> **Note:** An absence of the `return` statement means that the method returns `undefined`, and as this is a falsy value, it is like returning `false`.
+> Omitting an explicit `return` statement may cause hard-to-detect problems for your nodes.
 
 ### Exceptions
 

@@ -145,7 +145,7 @@ You can see the [source code on GitHub](https://github.com/mdn/sw-test/), and [v
 
 ## Enter service workers
 
-**NOTE** : We're using the [es6](http://es6-features.org/) **arrow functions** syntax in the Service Worker Implementation
+> **Note:** We're using the [es6](http://es6-features.org/) **arrow functions** syntax in the Service Worker Implementation.
 
 Now let’s get on to service workers!
 

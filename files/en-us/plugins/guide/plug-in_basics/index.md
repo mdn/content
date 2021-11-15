@@ -116,7 +116,8 @@ exec /usr/lib64/firefox/firefox
 - `/usr/lib/mozilla/plugins` (the 64-bit Firefox checks `/usr/lib64/mozilla/plugins` as well).
 - `/usr/lib64/firefox/plugins` (for 64-bit Firefox)
 
-**Note:** Firefox Nightly checks a subset of these locations. Also some Linux distributions provide a system browser configured differently.
+> **Note:** Firefox Nightly checks a subset of these locations.
+> Also some Linux distributions provide a system browser configured differently.
 
 > _Advanced:_ You can determine which directories a Gecko program checks with the Linux `strace` command, for example:
 >

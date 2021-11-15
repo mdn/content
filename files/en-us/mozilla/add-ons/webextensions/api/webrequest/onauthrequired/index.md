@@ -110,7 +110,7 @@ Events have three functions:
 
     - `host`
       - : `string`. The server's [hostname](https://en.wikipedia.org/wiki/Hostname#Internet_hostnames).
-        **Warning**: Unlike Chrome, Firefox will return the requested host instead of the proxy requesting the authentication, even if `isProxy` is `true`.
+        > **Warning:** Unlike Chrome, Firefox will return the requested host instead of the proxy requesting the authentication, even if `isProxy` is `true`.
     - `port`
       - : `integer`. The server's port number.
 
@@ -121,7 +121,8 @@ Events have three functions:
 - `incognito`
   - : `boolean`. Whether the request is from a private browsing window.
 - `isProxy`
-  - : `boolean`. `true` for Proxy-Authenticate, `false` for WWW-Authenticate. **Note**: `webRequest.onAuthRequired` is only called for HTTP and HTTPS/SSL proxy servers requiring authentication, and not for SOCKS proxy servers requiring authentication.
+  - : `boolean`. `true` for `Proxy-Authenticate`, `false` for `WWW-Authenticate`.
+    > **Note:** `webRequest.onAuthRequired` is only called for HTTP and HTTPS/SSL proxy servers requiring authentication, and not for SOCKS proxy servers requiring authentication.
 - `method`
   - : `string`. Standard HTTP method (For example, `"GET"` or `"POST"`).
 - `parentFrameId`

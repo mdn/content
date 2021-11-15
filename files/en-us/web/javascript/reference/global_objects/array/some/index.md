@@ -88,7 +88,7 @@ changed by `callbackFn`, its value passed to the visiting
 `callbackFn` will be the value at the time that `some()`
 visits that element's index. Elements that are deleted are not visited.
 
-**Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
+> **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
 > **Note:** Calling this method on an empty array returns
 > `false` for any condition!

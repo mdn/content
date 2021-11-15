@@ -113,7 +113,10 @@ In addition to the following attributes, the `<math>` element accepts any attrib
 </html>
 ```
 
-**Notes**: XHTML documents with MathML must be served as `application/xhtml+xml`. You can achieve that easily by adding the `.xhtml` extension to your local files. For Apache servers you can [configure your `.htaccess` file](https://httpd.apache.org/docs/2.4/mod/mod_mime.html#addtype) to map extensions to the correct Mime type. Since you notate your MathML in an XML document, also be sure you write a well-formed XML document.
+> **Note:** XHTML documents with MathML must be served as `application/xhtml+xml`.
+> You can achieve that easily by adding the `.xhtml` extension to your local files.
+> For Apache servers you can [configure your `.htaccess` file](https://httpd.apache.org/docs/2.4/mod/mod_mime.html#addtype) to map extensions to the correct Mime type.
+> Since you notate your MathML in an XML document, also be sure you write a well-formed XML document.
 
 ## Specifications
 

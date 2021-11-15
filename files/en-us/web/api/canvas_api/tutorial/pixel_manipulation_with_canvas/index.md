@@ -304,7 +304,8 @@ Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/mas
 
 The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is useful when saving images. It returns a [data URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) containing a representation of the image in the format specified by the `type` parameter (defaults to [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). The returned image is in a resolution of 96 dpi.
 
-**Note:** Be aware that if the canvas contains any pixels that were obtained from another {{Glossary("origin")}} without using CORS, the canvas is **tainted** and its contents can no longer be read and saved. See {{SectionOnPage("/en-US/docs/Web/HTML/CORS_enabled_image", "Security and tainted canvases")}}
+> **Note:** Be aware that if the canvas contains any pixels that were obtained from another {{Glossary("origin")}} without using CORS, the canvas is **tainted** and its contents can no longer be read and saved.
+> See {{SectionOnPage("/en-US/docs/Web/HTML/CORS_enabled_image", "Security and tainted canvases")}}
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
   - : Default setting. Creates a PNG image.

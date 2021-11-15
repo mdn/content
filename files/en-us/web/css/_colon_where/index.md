@@ -131,7 +131,7 @@ This won't work for the red links, because the selectors inside `:is()` count to
 
 However, selectors inside `:where()` have specificity 0, so the orange footer link will be overridden by our simple selector.
 
-**Note**: You can also find this example on GitHub; see [is-where](https://mdn.github.io/css-examples/is-where/).
+> **Note:** You can also find this example on GitHub; see [is-where](https://mdn.github.io/css-examples/is-where/).
 
 {{EmbedLiveSample('Examples', '100%', 600)}}
 
