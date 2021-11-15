@@ -39,7 +39,7 @@ A different pattern for navigation would be to distribute the available space wi
 
 If I wanted all of my navigation items to have equal width, then I might use `flex: auto`, which is the shorthand for `flex: 1 1 auto` — all items grow and shrink from a flex-basis of auto. This would mean that the longer item would have more space.
 
-In the live example below try changing `flex: auto` to `flex: 1`. This is the shorthand for `flex: 1 1 0` and causes all of the items become the same width, as they are working from a flex-basis of 0 allowing all of the space to be distributed evenly.
+In the live example below try changing `flex: auto` to `flex: 1`. This is the shorthand for `flex: 1 1 0` and causes all of the items to become the same width, as they are working from a flex-basis of 0 allowing all of the space to be distributed evenly.
 
 {{EmbedGHLiveSample("css-examples/flexbox/use-cases/navigation-flex.html", '100%', 550)}}
 
