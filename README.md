@@ -707,24 +707,19 @@ with the [content mozilla directory](https://github.com/mdn/content/tree/main/fi
 Both locations represent the same directory structure, but the
 `index.html` file appears in the latter, therefore the page is not archived.
 
-### Making a change that depends on a macro update
+### Making a change that depends on a JSON data update
 
-KumaScript macros are still used on MDN pages, even in the new platform.
-These are the function names surrounded by handlebars-style double curly
-braces that you'll see in the source code on occasion, for example
-`{{domxref}}` Eventually we have to replace them with something else,
-but they are here for now. The values you need to use in the macros
-are defined in <https://github.com/mdn/content/blob/main/files/jsondata/>.
+MDN uses macros (function names surrounded by handlebars-style double curly braces) 
+as convenience functions.
+Some of these macros rely on data that is defined in JSON files 
+in <https://github.com/mdn/content/blob/main/files/jsondata/>,
+and will not display correctly if the data in the file is not also updated.
 
-Sometimes you'll want to make a change to the content that relies on a
-macro change. Take [https://github.com/mdn/content/pull/9985](https://github.com/mdn/content/pull/9985).
-Patrick wanted to add documentation for a new Eyedropper API, so
-new entries were needed for the spec in
-<https://github.com/mdn/content/blob/main/files/jsondata/SpecData.json>
-and the interface in
-<https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json>.
-Without those entries, macros on the new page would not render properly
-because the data they rely on would not be there.
+The most important JSON data is the 
+[GroupData.json](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json),
+which is used by the `{{APIRef}}` macro to generate sidebars.
+For more information see 
+[Sidebars](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars)
 
 ## Frequently asked questions (FAQ)
 
