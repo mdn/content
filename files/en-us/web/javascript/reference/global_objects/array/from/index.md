@@ -55,7 +55,7 @@ A new {{jsxref("Array")}} instance.
 
 - array-like objects (objects with a `length` property and indexed
   elements); or
-- [iterable objects](/en-US/docs/Web/JavaScript/Guide/iterable) (objects
+- [iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) (objects
   such as {{jsxref("Map")}} and {{jsxref("Set")}}).
 
 `Array.from()` has an optional parameter `mapFn`,
@@ -337,5 +337,6 @@ if (!Array.from) {
 
 - A polyfill of `Array.from` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array")}}
+- {{jsxref("Array.of()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("TypedArray.from()")}}
