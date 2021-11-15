@@ -21,7 +21,7 @@ tags:
   - Writing Documentation
   - google
 ---
-{{Draft}}{{MDNSidebar}}
+{{MDNSidebar}}
 
 When contributing to the documentation on the MDN web docs site, you will often need to locate and identify version-specific details for a given browser, such as which versions of each major browser implement support for the feature you're documenting. This article provides tips and pointers to help you figure out which version of each major browser introduced a given feature, and when it was enabled by default.
 

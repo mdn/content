@@ -54,13 +54,13 @@ One or more `<bg-size>` values, separated by commas.
 
 A `<bg-size>` can be specified in one of three ways:
 
-- using the keyword [`contain`](#contain)
-- using the keyword [`cover`](#cover)
+- using the keyword `contain`
+- using the keyword `cover`
 - using width and height values
 
 To specify a size using width and height, you can supply one or two values:
 
-- If only one value is given it sets the width, with the height set to [`auto`](#auto).
+- If only one value is given it sets the width, with the height set to `auto`.
 - If two values are given, the first sets width and the second sets height.
 
 Each value can be a `<length>`, a `<percentage>`, or `auto`.

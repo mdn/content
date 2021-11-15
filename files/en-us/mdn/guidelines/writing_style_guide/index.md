@@ -281,7 +281,7 @@ The parentheses help differentiate methods from other code terms.
 
 #### Syntax highlighting
 
-A line or multiple lines of code should be formatted using [syntax highlighting](/en-US/docs/MDN/Guidelines/CSS_style_guide#code_syntax_highlighting) rather than the {{HTMLElement("code")}} element.
+A line or multiple lines of code should be formatted using [syntax highlighting](/en-US/docs/MDN/Contribute/Markdown_in_MDN#example_code_blocks) rather than the {{HTMLElement("code")}} element.
 
 #### Styling mentions of HTML elements
 
@@ -424,7 +424,7 @@ Here are some alternatives to common terms used in documentation:
 
 #### Gender-neutral language
 
-It is best to use gender-neutral language in any writing where gender is irrelevant to the subject matter. 
+It is best to use gender-neutral language in any writing where gender is irrelevant to the subject matter.
 or example, if you are talking about the actions of a specific man, using "he"/"his" is fine; but if the subject is a person of either gender, "he"/"his" isn't appropriate.
 
 Let's take the following example:

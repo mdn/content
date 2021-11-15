@@ -21,30 +21,19 @@ browser-compat: webextensions.manifest.chrome_settings_overrides
       <th scope="row">Mandatory</th>
       <td>No</td>
     </tr>
+  <tr>
+      <th scope="row">Example</th>
+      <td><pre class="brush:json">
+"chrome_settings_overrides" : {
+  "homepage": "https://developer.mozilla.org/"
+ },
+</pre></td>
+    </tr>
   </tbody>
 </table>
 
-Use the `chrome_settings_overrides` key to override certain browser settings. Two settings are available:
+Use the `chrome_settings_overrides` key to override the browser's home page and add a new search engine.
 
-- `"homepage"`, which enables you to override the browser's home page.
-- `"search_provider"`, which enables you to add a new search engine.
-
-```json
-"chrome_settings_overrides" : {
-  "homepage": "https://developer.mozilla.org/"
-}
-```
-
-```json
-"chrome_settings_overrides": {
-  "search_provider": {
-    "name": "Discogs",
-    "search_url": "https://www.discogs.com/search/?q={searchTerms}",
-    "keyword": "disc",
-    "favicon_url": "https://www.discogs.com/favicon.ico"
-  }
-}
-```
 
 ## Syntax
 
@@ -179,6 +168,22 @@ The `chrome_settings_overrides` key is an object that may have the following pro
     </tr>
   </tbody>
 </table>
+
+## Example
+This example shows how to set a search provider.
+
+
+```json
+"chrome_settings_overrides": {
+  "search_provider": {
+    "name": "Discogs",
+    "search_url": "https://www.discogs.com/search/?q={searchTerms}",
+    "keyword": "disc",
+    "favicon_url": "https://www.discogs.com/favicon.ico"
+  }
+}
+
+```
 
 ## Browser compatibility
 

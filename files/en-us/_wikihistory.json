@@ -14123,21 +14123,6 @@
       "Sheppy"
     ]
   },
-  "MDN/Guidelines/CSS_style_guide": {
-    "modified": "2020-11-18T15:19:14.493Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "jswisher",
-      "ExE-Boss",
-      "Sheppy",
-      "wbamberg",
-      "stephaniehobson",
-      "david_ross",
-      "jwhitlock",
-      "teoli"
-    ]
-  },
   "MDN/Guidelines/Code_guidelines": {
     "modified": "2020-09-30T15:27:12.089Z",
     "contributors": [
@@ -68115,48 +68100,6 @@
       "teoli"
     ]
   },
-  "Web/API/PhotoCapabilities": {
-    "modified": "2020-10-15T21:55:37.658Z",
-    "contributors": [
-      "caraitto",
-      "mfluehr",
-      "alattalatta",
-      "fscholz",
-      "jpmedley"
-    ]
-  },
-  "Web/API/PhotoCapabilities/fillLightMode": {
-    "modified": "2020-10-15T21:55:47.774Z",
-    "contributors": [
-      "alattalatta",
-      "fscholz",
-      "Dramloc",
-      "jpmedley"
-    ]
-  },
-  "Web/API/PhotoCapabilities/imageHeight": {
-    "modified": "2020-10-15T21:55:38.110Z",
-    "contributors": [
-      "fscholz",
-      "jpmedley"
-    ]
-  },
-  "Web/API/PhotoCapabilities/imageWidth": {
-    "modified": "2020-10-15T21:55:40.085Z",
-    "contributors": [
-      "MyNameIsBond",
-      "fscholz",
-      "jpmedley"
-    ]
-  },
-  "Web/API/PhotoCapabilities/redEyeReduction": {
-    "modified": "2020-10-15T21:55:41.964Z",
-    "contributors": [
-      "alattalatta",
-      "fscholz",
-      "jpmedley"
-    ]
-  },
   "Web/API/Picture-in-Picture_API": {
     "modified": "2020-11-30T19:18:36.297Z",
     "contributors": [
@@ -76380,16 +76323,6 @@
       "alattalatta",
       "Wind1808",
       "chrisdavidmills"
-    ]
-  },
-  "Web/API/ServiceWorkerGlobalScope/caches": {
-    "modified": "2020-10-15T21:37:54.285Z",
-    "contributors": [
-      "Wind1808",
-      "fscholz",
-      "chrisdavidmills",
-      "rolfedh",
-      "Speculative"
     ]
   },
   "Web/API/ServiceWorkerGlobalScope/clients": {
@@ -92150,12 +92083,6 @@
     "modified": "2020-11-05T18:29:55.579Z",
     "contributors": [
       "Wind1808",
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRReferenceSpace/onreset": {
-    "modified": "2020-10-15T22:24:25.742Z",
-    "contributors": [
       "Sheppy"
     ]
   },

@@ -96,7 +96,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 ## Usage notes
 
-The `<caption>` element should be the first child of its parent {{htmlelement("table")}} element.
+If used, the `<caption>` element must be the first child of its parent {{htmlelement("table")}} element.
 
 When the `<table>` element that contains the `<caption>` is the only descendant of a {{HTMLElement("figure")}} element, you should use the {{HTMLElement("figcaption")}} element instead of `<caption>`.
 

@@ -21,47 +21,47 @@ The **`HTMLElement`** interface represents any [HTML](/en-US/docs/Web/HTML) elem
 _Inherits properties from its parent, {{DOMxRef("Element")}}, and implements those from {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("GlobalEventHandlers")}}, and {{DOMxRef("TouchEventHandlers")}}._
 
 - {{DOMxRef("HTMLElement.accessKey")}}
-  - : Is a {{DOMxRef("DOMString")}} representing the access key assigned to the element.
+  - : A string representing the access key assigned to the element.
 - {{DOMxRef("HTMLElement.accessKeyLabel")}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMString")}} containing the element's assigned access key.
+  - : Returns a string containing the element's assigned access key.
 - {{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
-  - : Is a {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's {{htmlattrxref("style")}} attribute.
+  - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's {{htmlattrxref("style")}} attribute.
 - {{DOMxRef("HTMLElement.contentEditable")}}
-  - : Is a {{DOMxRef("DOMString")}}, where a value of `true` means the element is editable and a value of `false` means it isn't.
+  - : A string, where a value of `true` means the element is editable and a value of `false` means it isn't.
 - {{DOMxRef("HTMLElement.isContentEditable")}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether or not the content of the element can be edited.
 - {{DOMxRef("HTMLElement.contextMenu")}} {{Deprecated_Inline}}
-  - : Is a {{DOMxRef("HTMLMenuElement")}} representing the contextual menu associated with the element. It may be `null`.
+  - : A {{DOMxRef("HTMLMenuElement")}} representing the contextual menu associated with the element. It may be `null`.
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("DOMStringMap")}} with which script can read and write the element's [custom data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes) (`data-*`) .
 - {{DOMxRef("HTMLElement.dir")}}
-  - : Is a {{DOMxRef("DOMString")}}, reflecting the `dir` global attribute, representing the directionality of the element. Possible values are `"ltr"`, `"rtl"`, and `"auto"`.
+  - : A string, reflecting the `dir` global attribute, representing the directionality of the element. Possible values are `"ltr"`, `"rtl"`, and `"auto"`.
 - {{DOMxRef("HTMLElement.draggable")}}
-  - : Is a {{JSxRef("Boolean")}} indicating if the element can be dragged.
+  - : A boolean value indicating if the element can be dragged.
 - {{DOMxRef("HTMLElement.enterkeyhint")}}
-  - : Is a {{DOMxRef("DOMString")}} defining what action label (or icon) to present for the enter key on virtual keyboards.
+  - : A string defining what action label (or icon) to present for the enter key on virtual keyboards.
 - {{DOMxRef("HTMLElement.hidden")}}
-  - : Is a {{JSxRef("Boolean")}} indicating if the element is hidden or not.
+  - : A boolean value indicating if the element is hidden or not.
 - {{DOMxRef("HTMLElement.inert")}}
-  - : Is a {{JSxRef("Boolean")}} indicating whether the user agent must act as though the given node is absent for the purposes of user interaction events, in-page text searches ("find in page"), and text selection.
+  - : A boolean value indicating whether the user agent must act as though the given node is absent for the purposes of user interaction events, in-page text searches ("find in page"), and text selection.
 - {{DOMxRef("HTMLElement.innerText")}}
   - : Represents the "rendered" text content of a node and its descendants. As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.
 - {{DOMxRef("HTMLElement.itemScope")}} {{Experimental_Inline}}
-  - : Is a {{JSxRef("Boolean")}} representing the item scope.
+  - : A boolean value representing the item scope.
 - {{DOMxRef("HTMLElement.itemType")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMSettableTokenList")}}…
+  - : Returns a {{DOMxRef("DOMTokenList")}}…
 - {{DOMxRef("HTMLElement.itemId")}} {{Experimental_Inline}}
-  - : Is a {{DOMxRef("DOMString")}} representing the item ID.
+  - : A string representing the item ID.
 - {{DOMxRef("HTMLElement.itemRef")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMSettableTokenList")}}…
+  - : Returns a {{DOMxRef("DOMTokenList")}}…
 - {{DOMxRef("HTMLElement.itemProp")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMSettableTokenList")}}…
+  - : Returns a {{DOMxRef("DOMTokenList")}}…
 - {{DOMxRef("HTMLElement.itemValue")}} {{Experimental_Inline}}
   - : Returns a {{JSxRef("Object")}} representing the item value.
 - {{DOMxRef("HTMLElement.lang")}}
-  - : Is a {{DOMxRef("DOMString")}} representing the language of an element's attributes, text, and element contents.
+  - : A string representing the language of an element's attributes, text, and element contents.
 - {{DOMxRef("HTMLElement.noModule")}}
-  - : Is a {{JSxRef("Boolean")}} indicating whether an import script can be executed in user agents that support module scripts.
+  - : A boolean value indicating whether an import script can be executed in user agents that support module scripts.
 - {{DOMxRef("HTMLElement.nonce")}}
   - : Returns the cryptographic number used once that is used by Content Security Policy to determine whether a given fetch will be allowed to proceed.
 - {{DOMxRef("HTMLElement.offsetHeight")}} {{Experimental_Inline}}{{ReadOnlyInline}}
@@ -77,15 +77,15 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}, and implements tho
 - {{DOMxRef("HTMLElement.properties")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : Returns a {{DOMxRef("HTMLPropertiesCollection")}}…
 - {{DOMxRef("HTMLElement.spellcheck")}}
-  - : Is a {{JSxRef("Boolean")}} that controls [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck). It is present on all HTML elements, though it doesn't have an effect on all of them.
+  - : A boolean value that controls [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck). It is present on all HTML elements, though it doesn't have an effect on all of them.
 - {{DOMxRef("HTMLElement.style")}}
-  - : Is a {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's {{htmlattrxref("style")}} attribute.
+  - : A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's {{htmlattrxref("style")}} attribute.
 - {{DOMxRef("HTMLElement.tabIndex")}}
-  - : Is a `long` representing the position of the element in the tabbing order.
+  - : A `long` representing the position of the element in the tabbing order.
 - {{DOMxRef("HTMLElement.title")}}
-  - : Is a {{DOMxRef("DOMString")}} containing the text that appears in a popup box when mouse is over the element.
+  - : A string containing the text that appears in a popup box when mouse is over the element.
 - {{DOMxRef("HTMLElement.translate")}} {{Experimental_Inline}}
-  - : Is a {{JSxRef("Boolean")}} representing the translation.
+  - : A boolean value representing the translation.
 
 ### Event handlers
 

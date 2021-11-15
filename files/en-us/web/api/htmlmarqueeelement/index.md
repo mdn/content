@@ -9,7 +9,7 @@ tags:
   - Reference
 browser-compat: api.HTMLMarqueeElement
 ---
-{{APIRef("HTML DOM")}}{{Draft}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 The **`HTMLMarqueeElement`** interface provides methods to manipulate {{HTMLElement("marquee")}} elements.
 

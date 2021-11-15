@@ -24,7 +24,7 @@ You can do this with both the shorthand {{ cssxref("background") }} property and
 
 ## Example
 
-In this example, three backgrounds are stacked: the Firefox logo, an image of bubbles, and a [linear gradient](/en-US/docs/Web/CSS/linear-gradient):
+In this example, three backgrounds are stacked: the Firefox logo, an image of bubbles, and a [linear gradient](/en-US/docs/Web/CSS/gradient/linear-gradient()):
 
 ### HTML
 
@@ -60,4 +60,4 @@ As you can see here, the Firefox logo (listed first within {{ cssxref("backgroun
 
 ## See also
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)

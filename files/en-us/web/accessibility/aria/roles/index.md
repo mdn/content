@@ -16,7 +16,7 @@ ARIA roles are HTML attributes. They are added to elements using role="*role typ
 
 For example, `<ul role="tabpanel">` will be announced as a 'tab panel' by screen readers. However, if the tab panel doesn't have nested tabs, the element with the tabpanel role is not in fact a tab panel and accessibility has actually been negatively impacted. 
 
-The states and properties associated with each role are included in the role's pages, listed below.
+The [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes) associated with each role are included in the role's pages, with each attribute also having a dedicated page.
 
 
 ## ARIA role types
@@ -122,7 +122,7 @@ The following are the reference pages covering the WAI-ARIA roles discussed on <
 ## See also
 
 * [Using ARIA: Roles, States, and Properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
-
+* [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 
 <section id="Quick_links">
 

@@ -91,7 +91,7 @@ We can now begin to add actual content to our `ToDoItem`. Vue templates are curr
     ```html
     <template>
       <div>
-        <input type="checkbox" id="todo-item" checked="false" />
+        <input type="checkbox" id="todo-item" />
         <label for="todo-item">My Todo Item</label>
       </div>
     </template>
@@ -203,7 +203,7 @@ Your component’s template section should now look like this:
 ```html
 <template>
   <div>
-    <input type="checkbox" id="todo-item" checked="false" />
+    <input type="checkbox" id="todo-item" />
     <label for="todo-item">\{{label}}</label>
   </div>
 </template>
@@ -289,7 +289,7 @@ So in the case of the checkbox in our `ToDoItem` component, we can use `v-bind` 
 
 You're free to use whichever pattern you would like. It's best to keep it consistent though. Because the shorthand syntax is more commonly used, this tutorial will stick to that pattern.
 
-So let's do this. Update your `<input>` element now to replace `checked="false"` with `:checked="isDone"`.
+So let's do this. Update your `<input>` element now to include `:checked="isDone"`.
 
 Test out your component by passing `:done="true"` to the `ToDoItem` call in `App.vue`. Note that you need to use the `v-bind` syntax, because otherwise `true` is passed as a string. The displayed checkbox should be checked.
 

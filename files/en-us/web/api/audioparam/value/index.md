@@ -91,9 +91,9 @@ the value of a parameter:
 - If the current time equals or exceeds the time specified by a previous call to
   {{domxref("AudioParam.setValueAtTime", "setValueAtTime()")}}, the `value`
   is changed to the value passed into `setValueAtTime()`.
-- If any gradiated or ramped value changing methods have been called and the current
+- If any graduated or ramped value changing methods have been called and the current
   time is within the time range over which the graduated change should occur, the value
-  is updated based on the appropriate algorithm. These ramped or gradiated
+  is updated based on the appropriate algorithm. These ramped or graduated
   value-changing methods include {{domxref("AudioParam.linearRampToValueAtTime",
     "linearRampToValueAtTime()")}}, {{domxref("AudioParam.setTargetAtTime",
     "setTargetAtTime()")}}, and {{domxref("AudioParam.setValueCurveAtTime",
@@ -110,7 +110,7 @@ This example instantly changes the volume of a {{domxref("GainNode")}} to 40%.
 const audioCtx = new AudioContext();
 const gainNode = audioCtx.createGain();
 gainNode.gain.value = 0.4;
-//which is identical to:
+// which is identical to:
 gainNode.gain.setValueAtTime(0.4, audioCtx.currentTime);
 ```
 
