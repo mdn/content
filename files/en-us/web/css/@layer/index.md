@@ -145,7 +145,7 @@ In the following example, two layers are created with no rules applied, then CSS
 
 ```html
 <div class="item">I am displayed in <code>color: rebeccapurple</code>
-because the <code>type</code> layer comes after the <code>base</code> layer.
+because the <code>special</code> layer comes after the <code>base</code> layer.
 My green border, font-size, and padding come from the <code>base</code> layer.</div>
 ```
 
