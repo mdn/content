@@ -15,7 +15,7 @@ The global `aria-keyshortcuts` attribute indicates keyboard shortcuts that an au
 
 A keyboard shortcut is a series of one or several keys that tells software to perform a pre-programmed action. Keyboard shortcuts enable keyboard users to invoke commands using the keyboard that would otherwise require accessing a menu or using touch or a mouse.The `aria-keyshortcuts` property defines the keyboard keys that have been implemented to activate or give focus to the element on which the attribute is set.
 
-The `aria-keyshortcuts` attribute exposes the existence of the shortcut to assistive technologies so the presence of the shortcut can be communicated to the users. Like all ARIA attributes, it has no effect on the functionality of the page; the keyboard behavior must be added via JavaScript event handlers.
+The `aria-keyshortcuts` attribute exposes the existence of the shortcut to assistive technologies so the presence of the shortcut can be communicated to its users. Like all ARIA attributes, it has no effect on the functionality of the page; the keyboard behavior must be added via JavaScript event handlers.
 
 Keyboard shortcuts applied to disabled elements should also be disabled. 
 
@@ -38,9 +38,13 @@ aria-keyshortcuts="Meta+C Meta+Shift+C"
 
 Modifier keys are keys that don't have any impact when used on their own. They are written as "Alt", "Control", "Shift", "Meta" (Command key on Mac), or "AltGraph" (Option key on Mac).  
 
-Non-modifier keys are keys that have impact when used alone, be that printing a character, moving focus, or otherwise creating a keyboard event when used. Non-modifiers that print a single character include characters like "P", "z" and ".". Since the plus sign is used in writing key combinations, it is written as "plus" if used as the non-modifier. Other written-out non-modifiers include white space characters "Space", "Tab", and "Enter", and all characters that result in actions, like "ArrowUp", "PageUp", and "Escape". If you want to use a character that might cause problems, like a a double quote character within double quotes, escape the character: "Control+&#39;". 
+Non-modifier keys are keys that have impact when used alone, be that printing a character, moving focus, or otherwise creating a keyboard event when used. Non-modifiers that print a single character include characters like `P`, `z` and `.`. 
 
-Modifier keys must be listed first in each key combination. Possible key combinations include "Control+P" or "Shift+Space" and "Q". If the full shortcut requires all three of these combinations in order, it would be written as `aria-keyshortcuts"Control+P Shift+Space Q"`.  When a key combination includes more than one modifier key, the order of the modifiers doesn't matter, but they all must come first, before the non-modifier. 
+Since the plus sign is used in writing key combinations, it is written as `plus` if used as the non-modifier. Other written-out non-modifiers include white space characters `Space`, `Tab`, and `Enter`, and all characters that result in actions, like `ArrowUp`, `PageUp`, and `Escape`. 
+
+If you want to use a character that might cause problems, like a a double quote character within double quotes, escape the character: `Control+&#39;`. 
+
+Modifier keys must be listed first in each key combination. Possible key combinations include `Control+P` or `Shift+Space` and `Q`. If the full shortcut requires all three of these combinations in order, it would be written as `aria-keyshortcuts="Control+P Shift+Space Q"`.  When a key combination includes more than one modifier key, the order of the modifiers doesn't matter, but they all must come first, before the non-modifier. 
 
 These two attribute declarations are equivalent.
 
@@ -62,7 +66,7 @@ The key combination listed must be the keys the user needs to press, not the out
 
 ### Best practices
 
-#### Don't usurp browser, assistive technology, or operating system shortcuts
+#### Don't override browser, assistive technology, or operating system shortcuts
 
 When implementing keyboard shortcuts, make sure you don't create shortcuts that are already being used by the browser, assistive technology, or operating system, unless they are used for the same thing. For example, `"Control+P"` is used by most user-agents to initiate print functionality. Generally a web application should not create a "Control+P" shortcut as it will usurp browser functionality. There are exceptions. Web appliations where printing is common, like email applications or Google Docs, usurping the browser's `"Control+P"` printing functionality for an application specific print flow would be expected.
 
