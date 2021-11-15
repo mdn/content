@@ -26,7 +26,7 @@ use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}
 ```js
 const content = element.innerHTML;
 
-element.innerHTML = htmlString;
+element.innerHTML = content;
 ```
 
 ### Value
