@@ -191,7 +191,9 @@ Let's add another modification node to practice what we've just learnt.
 
 There's a {{domxref("StereoPannerNode")}} node, which changes the balance of the sound between the left and right speakers, if the user has stereo capabilities.
 
-**Note:** The `StereoPannerNode` is for simple cases in which you just want stereo panning from left to right. There is also a {{domxref("PannerNode")}}, which allows for a great deal of control over 3D space, or sound _spatialisation_, for creating more complex effects. This is used in games and 3D apps to create birds flying overhead, or sound coming from behind the user for instance.
+> **Note:** The `StereoPannerNode` is for simple cases in which you just want stereo panning from left to right.
+> There is also a {{domxref("PannerNode")}}, which allows for a great deal of control over 3D space, or sound _spatialisation_, for creating more complex effects.
+> This is used in games and 3D apps to create birds flying overhead, or sound coming from behind the user for instance.
 
 To visualise it, we will be making our audio graph look like this:
 

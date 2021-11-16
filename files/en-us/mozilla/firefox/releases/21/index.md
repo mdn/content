@@ -52,7 +52,8 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 - We continue to update our CSP implementation to match the CSP 1.0 spec, which reached Candidate Recommendation:
 
-  - Support for the spec-compliant `Content-Security-Policy` HTTP header (in addition to the experimental `X-Content-Security-Policy`) has been added ({{bug("783049")}}). **Note**: the patch for this new header landed in Firefox 21, it is disabled on builds ({{bug("842657")}}).
+  - Support for the spec-compliant `Content-Security-Policy` HTTP header (in addition to the experimental `X-Content-Security-Policy`) has been added ({{bug("783049")}}).
+    > **Note:** the patch for this new header landed in Firefox 21, it is disabled on builds ({{bug("842657")}}).
 
 ### Worker
 

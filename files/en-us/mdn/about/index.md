@@ -36,7 +36,7 @@ MDN's content is entirely available under various open source licenses. This sec
 
 #### Documentation and articles
 
-**Note:** MDN content has been prepared with the contributions of authors from both inside and outside Mozilla. Unless otherwise indicated, the content is available under the terms of the [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 or any later version.
+> **Note:** MDN content has been prepared with the contributions of authors from both inside and outside Mozilla. Unless otherwise indicated, the content is available under the terms of the [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 or any later version.
 
 When reusing MDN content, you need to ensure two things:
 

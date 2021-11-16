@@ -144,7 +144,7 @@ Do that
 Do this, no matter what happened before
 ```
 
-**Note:** The text "Do this" is not displayed because the "Something failed" error caused a rejection.
+> **Note:** The text "Do this" is not displayed because the "Something failed" error caused a rejection.
 
 ## Error propagation
 

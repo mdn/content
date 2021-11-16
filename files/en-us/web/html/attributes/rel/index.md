@@ -95,7 +95,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the `help` keyword indicates that the linked to content provides context-sensitive help, providing information for the parent of the element defining the hyperlink, and its children. When used within `<link>`, the help is for the whole document. When included with {{htmlelement('a')}} and {{htmlelement('area')}} and supported, the default {{cssxref('cursor')}} will be `help` instead of `pointer`.
 - {{htmlattrdef("icon")}}
 
-  - : **Note:** Valid with {{htmlelement('link')}}, the linked resource represents the icon, a resource for representing the page in the user interface, for the current document.
+  - : Valid with {{htmlelement('link')}}, the linked resource represents the icon, a resource for representing the page in the user interface, for the current document.
 
     The most common use for the `icon` value is the favicon:
 
@@ -107,19 +107,20 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
     > **Note:** Prior to Firefox 83 the [crossorigin](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute was not supported for `rel="icon"` there is also [an open issue for Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
 
-    **Note:** Apple's iOS does not use this link type, nor the [`sizes`](sizes) attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder. Instead it uses the non-standard [`apple-touch-icon`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) and [`apple-touch-startup-image`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) respectively.
+    > **Note:** Apple's iOS does not use this link type, nor the [`sizes`](sizes) attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder.
+    > Instead it uses the non-standard [`apple-touch-icon`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) and [`apple-touch-startup-image`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) respectively.
 
     > **Note:** The `shortcut` link type is often seen before `icon`, but this link type is non-conforming, ignored and **web authors must not use it anymore**.
 
 - {{htmlattrdef("license")}}
 
-  - : **Note:** Valid on the {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}, {{HTMLElement("link")}} elements, the `license` value indicates that the hyperlink leads to a document describing the licensing information; that the main content of the current document is covered by the copyright license described by the referenced document. If not inside the {{HTMLElement("head")}} element, the standard doesn't distinguish between a hyperlink applying to a specific part of the document or to the document as a whole. Only the data on the page can indicate this.
+  - : Valid on the {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}, {{HTMLElement("link")}} elements, the `license` value indicates that the hyperlink leads to a document describing the licensing information; that the main content of the current document is covered by the copyright license described by the referenced document. If not inside the {{HTMLElement("head")}} element, the standard doesn't distinguish between a hyperlink applying to a specific part of the document or to the document as a whole. Only the data on the page can indicate this.
 
     ```html
     <link rel="license" href="#license">
     ```
 
-    **Note:** Although recognized, the synonym `copyright` is incorrect and must be avoided.
+    > **Note:** Although recognized, the synonym `copyright` is incorrect and must be avoided.
 
 - {{htmlattrdef("manifest")}}
   - : [Web app manifest](/en-US/docs/Web/Manifest). Requires the use of the CORS protocol for cross-origin fetching.

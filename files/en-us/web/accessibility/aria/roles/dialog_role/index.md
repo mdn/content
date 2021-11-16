@@ -114,7 +114,8 @@ When the dialog is correctly labeled and focus is moved to an element (often an 
 
 ### Notes 
 
-**Note:** While it is possible to prevent keyboard users from moving focus to elements outside of the dialog, screen reader users may still be able to navigate to that content using their screen reader's virtual cursor. It is important for developers to ensure that content outside of the modal dialog is inaccessible to all users while the modal dialog is active.
+> **Note:** While it is possible to prevent keyboard users from moving focus to elements outside of the dialog, screen reader users may still be able to navigate to that content using their screen reader's virtual cursor.
+> It is important for developers to ensure that content outside of the modal dialog is inaccessible to all users while the modal dialog is active.
 
 ## Specifications
 
@@ -122,7 +123,6 @@ When the dialog is correctly labeled and focus is moved to an element (often an 
 | ------------------------------------------------ | ------------------------ |
 | {{SpecName("ARIA","#dialog","dialog")}} | {{Spec2('ARIA')}} |
 | {{SpecName("ARIA Authoring Practices 1.2","#dialog_modal","Dialog")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
 
 
 
