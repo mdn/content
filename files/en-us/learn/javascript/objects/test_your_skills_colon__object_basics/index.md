@@ -36,7 +36,7 @@ Try updating the live code below to recreate the finished example:
 
 ## Object basics 2
 
-In our next task, we want you to have a go at creating your own object literal to represent one of your favorite bands. The required members are:
+In our next task, we want you to have a go at creating your own object literal to represent one of your favorite bands. The required properties are:
 
 - `name`: A string representing the band name.
 - `nationality`: A string representing the country the band comes from.
