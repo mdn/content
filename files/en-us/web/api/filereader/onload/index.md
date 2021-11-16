@@ -11,7 +11,7 @@ browser-compat: api.FileReader.onload
 ---
 {{APIRef}}
 
-The **`FileReader.onload`** property contains an event handler executed when the {{event('load')}} event is fired, when content read with [readAsArrayBuffer](/en-US/docs/Web/API/FileReader/readAsArrayBuffer), [readAsBinaryString](/en-US/docs/Web/API/FileReader/readAsBinaryString), [readAsDataURL](/en-US/docs/Web/API/FileReader/readAsDataURL) or [readAsText](/en-US/docs/Web/API/FileReader/readAsText) is available.
+The **`FileReader.onload`** property contains an event handler executed when the {{domxref('FileReader.load_event')}} event is fired, when content read with [readAsArrayBuffer](/en-US/docs/Web/API/FileReader/readAsArrayBuffer), [readAsBinaryString](/en-US/docs/Web/API/FileReader/readAsBinaryString), [readAsDataURL](/en-US/docs/Web/API/FileReader/readAsDataURL) or [readAsText](/en-US/docs/Web/API/FileReader/readAsText) is available.
 
 ## Example
 
