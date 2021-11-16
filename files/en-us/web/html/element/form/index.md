@@ -1,5 +1,5 @@
 ---
-title: '<form>: The Form element'
+title: "<form>: The Form element"
 slug: Web/HTML/Element/form
 tags:
   - Element
@@ -148,7 +148,7 @@ The following attributes control behavior during form submission.
 
     - `post`: The [POST method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5); form data sent as the [request body](/en-US/docs/Web/API/Request/body).
     - `get`: The [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); form data appended to the `action` URL with a `?` separator. Use this method when the form [has no side-effects](/en-US/docs/Glossary/Idempotent).
-    - `dialog`: When the form is inside a {{HTMLElement("dialog")}}, closes the dialog on submission.
+    - `dialog`: When the form is inside a {{HTMLElement("dialog")}}, closes the dialog on submission. This is a means to close the `dialog` element without the need for JavaScript. Note that no form data is submitted so, specifying an `action` attribute will have no effect.
 
     This value is overridden by {{htmlattrxref("formmethod", "button")}} attributes on {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image"> `](/en-US/docs/Web/HTML/Element/input/image)elements.
 
@@ -174,16 +174,18 @@ The following attributes control behavior during form submission.
 ```html
 <!-- Form which will send a GET request to the current URL -->
 <form>
-  <label>Name:
-    <input name="submitted-name" autocomplete="name">
+  <label
+    >Name:
+    <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>
 </form>
 
 <!-- Form which will send a POST request to the current URL -->
 <form method="post">
-  <label>Name:
-    <input name="submitted-name" autocomplete="name">
+  <label
+    >Name:
+    <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>
 </form>
@@ -192,7 +194,7 @@ The following attributes control behavior during form submission.
 <form method="post">
   <fieldset>
     <legend>Title</legend>
-    <label><input type="radio" name="radio"> Select me</label>
+    <label><input type="radio" name="radio" /> Select me</label>
   </fieldset>
 </form>
 ```
