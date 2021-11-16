@@ -18,9 +18,6 @@ The **`toLocaleDateString()`** method returns a string with a language sensitive
 The `locales` and `options` arguments let applications specify the language whose formatting conventions should be used and allow to customize the behavior of the function.
 In older implementations, which ignore the `locales` and `options` arguments, the locale used and the form of the string returned are entirely implementation dependent.
 
-> **Note:** The output shown depends on your browser time!
-> If your timezone is more than 3 hours before UTC the local date will be 19th of December.
-
 {{EmbedInteractiveExample("pages/js/date-tolocaledatestring.html")}}
 
 ## Syntax
