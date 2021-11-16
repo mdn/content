@@ -224,7 +224,7 @@ This second example uses a grid to create the same layout. This time we are usin
 
 We have already seen how the `fr` unit works to assign a proportion of available space in the grid container to our grid tracks. The `fr` unit, when combined with the {{cssxref("minmax()", "minmax()")}} function can give us very similar behavior to the `flex` properties in flexbox while still enabling the creation of a layout in two dimensions.
 
-If we look back at the example where I demonstrated the difference between one and two-dimensional layouts, you can see there is a difference between the way of the two layouts work responsively. With the flex layout, if we drag our window wider and smaller, the flexbox does a nice job of adjusting the number of items in each row according to the available space. If we have a lot of space all five items can fit on one row. If we have a very narrow container we may only have space for one.
+If we look back at the example where I demonstrated the difference between one and two-dimensional layouts, you can see there is a difference between the way that the two layouts work responsively. With the flex layout, if we drag our window wider and smaller, the flexbox does a nice job of adjusting the number of items in each row according to the available space. If we have a lot of space all five items can fit on one row. If we have a very narrow container we may only have space for one.
 
 In comparison, the grid version always has three column tracks. The tracks themselves will grow and shrink, but there are always three since we asked for three when defining our grid.
 
