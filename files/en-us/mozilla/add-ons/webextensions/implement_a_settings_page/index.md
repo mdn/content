@@ -9,7 +9,7 @@ tags:
 ---
 {{AddonSidebar}}
 
-> **Note:** The following example may not work, since the storage API doesn't work with a temporary Addon ID, see also https\://bugzil.la/1323228.
+> **Note:** The following example may not work, since the storage API doesn't work with a temporary Addon ID, see [Bug 1323228](https\://bugzil.la/1323228).
 
 A settings page gives users a way to see and change settings (sometimes also called "preferences" or "options") for the extension.
 
@@ -54,9 +54,7 @@ document.body.style.border = "10px solid blue";
 
 This just adds a blue border to the page.
 
-Now [install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) and test it — open up any web page you like:
-
-{{EmbedYouTube("E-WUhihF8fw")}}
+Now [install](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) and test the extension.
 
 ## Adding settings
 
@@ -206,12 +204,9 @@ Now:
 
 - [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on)
 - load a web page
-- open the settings page and change the border color
+- open the settings page by visiting about:addons and clicking the <kbd><strong>Preferences</strong></kbd> button next to the extension's entry and change the border color
 - reload the web page to see the difference.
 
-In Firefox you can access the settings page by visiting about:addons and clicking the <kbd><strong>Preferences</strong></kbd> button next to the extension's entry.
-
-{{EmbedYouTube("ECt9cbWh1qs")}}
 
 ## Learn more
 

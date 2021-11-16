@@ -117,23 +117,19 @@ First, double check that you have the right files in the right places:
 
 In Firefox: Open the [about:debugging](/en-US/docs/Tools/about:debugging) page, click "This Firefox" (in newer versions of Firefox), click "Load Temporary Add-on", then select any file in your extension's directory.
 
-{{EmbedYouTube("cer9EUKegG4")}}
-
-The extension will now be installed, and will stay until you restart Firefox.
+The extension now installs, and remains installed until you restart Firefox.
 
 Alternatively, you can run the extension from the command line using the [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) tool.
 
 ### Testing
 
-Now try visiting a page under "mozilla.org", and you should see the red border round the page:
+Now visit a page under "mozilla.org", and you should see the red border round the page.
 
-{{EmbedYouTube("rxBQl2Z9IBQ")}}
+![Border displayed on mozilla.org](border_on_mozilla_org.png "Border displayed on mozilla.org")
 
 > **Note:** Don't try it on addons.mozilla.org, though! Content scripts are currently blocked on that domain.
 
-Try experimenting a bit. Edit the content script to change the color of the border, or do something else to the page content. Save the content script, then reload the extension's files by clicking the "Reload" button in about:debugging. You can see the changes right away:
-
-{{EmbedYouTube("NuajE60jfGY")}}
+Try experimenting a bit. Edit the content script to change the color of the border, or do something else to the page content. Save the content script, then reload the extension's files by clicking the "Reload" button in about:debugging. You can see the changes right away.
 
 - [Learn more about loading extensions](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
 
