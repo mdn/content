@@ -440,7 +440,7 @@ It turns out that running tests on remote servers isn't that much more difficult
 
 ### LambdaTest
 
-Getting Selenium tests to run remotely on LambdaTest is very simple. The code you need should follow the pattern seen below.
+Getting [Selenium tests](https://www.lambdatest.com/selenium-automation)  to run remotely on LambdaTest is very simple. The code you need should follow the pattern seen below.
 
 Let's write an example:
 
