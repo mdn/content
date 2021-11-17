@@ -14,12 +14,12 @@ The `aria-label` attribute defines a string value that labels the current elemen
 
 ## Description
 
-Sometimes, like with an SVG or icon font (which you shouldn't be using), the default accessible name of an object is missing or isn't really what the object is meant to represent, and there is no content visible in the DOM that can be associated with the object to give it meaning. In cases where an element has no accessible name or erroneous accessible name, and there is no content available and visible in the DOM to label the element, the `aria-label` attribute can be used to define a string that labels the element on which it is set, providing it with it's accessible name. 
+Sometimes, like with SVG or [icon fonts (which you shouldn't be using)](https://www.youtube.com/watch?v=9xXBYcWgCHA), the default [accessible name](/en-US/docs/Glossary/Accessible_Name) of an object is missing or isn't really what the object is meant to represent, and there is no content visible in the DOM that can be associated with the object to give it meaning. In cases where an element has no accessible name or an accessible name that isn't accurate, and there is no content available and visible in the DOM to label the element, the `aria-label` attribute can be used to define a string that labels the element on which it is set, providing it with it's accessible name. 
 
 ```html
 <button aria-label="Close" onclick="myDialog.close()">X</button>
 ```
-Most HTML content has accessible name by default from text content, attributes, or associated elements. By default, a button's accessible name is the content between the opening and closing {{HTMLElement('button')}} tags, an image's accessible name is the content of the `alt` attribute, a form control's accessible name is the content of the associated {{HTMLElement('label')}} element. If none of these options are available, or if the default accessible name is not appropriate, the `aria-label` attribute can be used to define the accessible name of an element.  
+Most content has a default accessible name garnered from text content, attributes, or associated elements. By default, a button's accessible name is the content between the opening and closing {{HTMLElement('button')}} tags, an image's accessible name is the content of the [`alt`](/en-US/docs/Web/HTML/Element/Img#attr-alt) attribute, a form control's accessible name is the content of the associated {{HTMLElement('label')}} element. If none of these options are available, or if the default accessible name is not appropriate, use the `aria-label` attribute to define the accessible name of an element.  
 
 Use it in cases where text that could label the element is _not_ visible on the screen. If there is visible text that labels the element, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) instead. 
 
@@ -36,7 +36,7 @@ For form control has a {{HTMLElement('label')}} and aria attributes, the order o
 ## Values
 
 - `<string>`
-  - : The text that will be the accessible name for the object
+  - : A string of text that will be the accessible name for the object.
 
 
 ## ARIAMixin API 
