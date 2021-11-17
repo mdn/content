@@ -26,7 +26,7 @@ port.postMessage(message, transferList);
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ### Parameters
 

@@ -41,7 +41,7 @@ worker.postMessage(message, [transfer]);
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ## Example
 

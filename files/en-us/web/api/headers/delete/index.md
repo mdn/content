@@ -38,7 +38,7 @@ myHeaders.delete(name);
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ## Example
 

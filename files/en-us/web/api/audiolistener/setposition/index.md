@@ -29,7 +29,7 @@ myListener.setPosition(1,1,1);
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ## Example
 

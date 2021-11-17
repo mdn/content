@@ -36,7 +36,7 @@ HMDVRDevice.setFieldOfView(leftFOV,rightFOV,zNear,zFar);
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ## Examples
 

@@ -26,7 +26,7 @@ audioCtx.suspend().then(function() { ... });
 
 ### Returns
 
-A {{jsxref("Promise")}} that resolves with void. The promise is rejected if the context has already been closed.
+A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}. The promise is rejected if the context has already been closed.
 
 ## Example
 

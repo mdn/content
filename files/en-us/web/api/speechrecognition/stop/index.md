@@ -27,7 +27,7 @@ mySpeechRecognition.stop();
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ### Parameters
 
