@@ -4013,6 +4013,8 @@
 /en-US/docs/HTTP/Response_codes	/en-US/docs/Web/HTTP/Status
 /en-US/docs/HTTP/X-Frame-Options	/en-US/docs/Web/HTTP/Headers/X-Frame-Options
 /en-US/docs/HTTP_Caching_FAQ	/en-US/docs/Web/HTTP/Caching
+/en-US/docs/HTTP_Debugging_(Capturing_a_HTTP_log)	https://firefox-source-docs.mozilla.org/networking/http/logging.html
+/en-US/docs/HTTP_Logging	https://firefox-source-docs.mozilla.org/networking/http/logging.html
 /en-US/docs/HTTP_Pipelining_FAQ	/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /en-US/docs/HTTP_Transaction_Model	/en-US/docs/Web/HTTP
 /en-US/docs/HTTP_access_control	/en-US/docs/Web/HTTP/CORS
@@ -5689,6 +5691,7 @@
 /en-US/docs/Mozilla/Add-ons/WebExtensions/omnibox/OnInputEnteredDisposition	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/omnibox/OnInputEnteredDisposition
 /en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages	/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 /en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext	https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/
+/en-US/docs/Mozilla/Debugging/HTTP_logging	https://firefox-source-docs.mozilla.org/networking/http/logging.html
 /en-US/docs/Mozilla/Developer_guide/ESLint	https://firefox-source-docs.mozilla.org/code-quality/lint/index.html
 /en-US/docs/Mozilla/Firefox/Privacy	/en-US/docs/Web/Privacy
 /en-US/docs/Mozilla/Firefox/Privacy/Redirect_tracking_protection	/en-US/docs/Web/Privacy/Redirect_tracking_protection
