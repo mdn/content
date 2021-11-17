@@ -18,7 +18,7 @@ The Web Audio API's `AudioParam` interface represents an audio-related parameter
 
 An `AudioParam` can be set to a specific value or a change in value, and can be scheduled to happen at a specific time and following a specific pattern.
 
-Each `AudioParam` has a list of events, initially empty, that define when and how values change. When this list is not empty, changes using the `AudioParam.value` attributes are ignored. This list of events allows us to schedule changes that have to happen at very precise times, using arbitrary timelime-based automation curves. The time used is the one defined in {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
+Each `AudioParam` has a list of events, initially empty, that define when and how values change. When this list is not empty, changes using the `AudioParam.value` attributes are ignored. This list of events allows us to schedule changes that have to happen at very precise times, using arbitrary timeline-based automation curves. The time used is the one defined in {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}.
 
 ## AudioParam types
 
