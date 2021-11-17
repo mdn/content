@@ -119,7 +119,7 @@ A Number value and a BigInt value may be compared as usual:
 2n > 1
 // ↪ true
 
-2 > 2
+2n > 2
 // ↪ false
 
 2n > 2
