@@ -242,8 +242,11 @@ It should also be noted that sometimes parameters are optional — you don't hav
 ```js
 let myArray = ['I', 'love', 'chocolate', 'frogs'];
 let madeAString = myArray.join(' ');
+console.log(madeAString);
 // returns 'I love chocolate frogs'
-let madeAString = myArray.join();
+
+let madeAnotherString = myArray.join();
+console.log(madeAnotherString);
 // returns 'I,love,chocolate,frogs'
 ```
 
