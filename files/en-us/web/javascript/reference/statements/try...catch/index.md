@@ -44,7 +44,7 @@ finally {
 
 The `try` statement consists of a `try`-block, which contains one
 or more statements. `{}` must always be used, even for single statements.
-A `catch`-block, `finally`-block or both must be present.
+A `catch`-block, a `finally`-block, or both must be present.
 This gives us three forms for the `try` statement:
 
 - `try...catch`
