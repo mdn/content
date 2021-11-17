@@ -71617,13 +71617,6 @@
       "fscholz"
     ]
   },
-  "Web/API/RTCRtpTransceiverDirection": {
-    "modified": "2020-10-15T22:01:44.116Z",
-    "contributors": [
-      "fscholz",
-      "Sheppy"
-    ]
-  },
   "Web/API/RTCSctpTransport": {
     "modified": "2020-10-15T21:46:42.744Z",
     "contributors": [

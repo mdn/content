@@ -20,8 +20,7 @@ The {{domxref("RTCRtpTransceiver")}} property
 **`direction`** is a string which indicates the transceiver's
 preferred directionality.
 
-Its value must be one of the strings defined by the
-{{domxref("RTCRtpTransceiverDirection")}} enumeration.
+Its value must be one of the strings defined in the table below.
 
 The transceiver's _current_ direction is indicated by the
 {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} property.
@@ -34,10 +33,50 @@ var direction = RTCRtpTransceiver.direction
 
 ### Value
 
-A {{domxref("DOMString")}} whose value is one of the strings which are a member of the
-`RTCRtpTransceiverDirection` enumerated type, indicating the transceiver's
-preferred direction. {{page("/en-US/docs/Web/API/RTCRtpTransceiverDirection",
-  "Values")}}
+A {{domxref("DOMString")}} whose value is one of the strings which are a member of the following values, indicating the transceiver's preferred direction.
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="row">Value</th>
+      <th scope="col"><code>RTCRtpSender</code> behavior</th>
+      <th scope="col"><code>RTCRtpReceiver</code> behavior</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><code>"sendrecv"</code></th>
+      <td>
+        Offers to send {{Glossary("RTP")}} data, and will do so if the
+        other peer accepts the connection and at least one of the sender's
+        encodings is active.
+      </td>
+      <td>
+        Offers to receive RTP data, and does so if the other peer accepts.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><code>"sendonly"</code></th>
+      <td>
+        Offers to send RTP data, and will do so if the other peer accepts the
+        connection and at least one of the sender's encodings is active.
+      </td>
+      <td>Does <em>not</em> offer to receive RTP data and will not do so.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>"recvonly"</code></th>
+      <td>Does <em>not</em> offer to send RTP data, and will not do so.</td>
+      <td>
+        Offers to receive RTP data, and will do so if the other peer offers.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><code>"inactive"</code></th>
+      <td>Does <em>not</em> offer to send RTP data, and will not do so.</td>
+      <td>Does <em>not</em> offer to receive RTP data and will not do so.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Exceptions
 
