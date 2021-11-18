@@ -22,6 +22,9 @@ In creating modals, ensure the modal can be controlled using only descendants of
 
 When a modal element is displayed, authors SHOULD mark all other contents as inert (such as "inert subtrees" in HTML) if the ability to do so exists in the host language.
 
+When supported, inluding `aria-modal="true"` on a [`dialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) or [`alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role), removes the requirement of putting [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) on background content as the `aria-modal` informs assistive technologies that content outside a dialog is inert. Setting `aria-hidden` on all content outside a dialog to make it inert for AT users is still an option, but no longer required. 
+
+
 ## Example
 
 ```html
@@ -42,9 +45,7 @@ When a modal element is displayed, authors SHOULD mark all other contents as ine
     <button type="button" onclick="closeDialog(this)">
       No. Close this popup.
     </button>
-    <button type="button"
-      aria-controls="file"
-      onclick="deleteFile(this)">
+    <button type="button" onclick="deleteFile(this)">
       Yes. Delete the file.
     </button>
   </div>
