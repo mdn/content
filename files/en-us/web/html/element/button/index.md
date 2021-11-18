@@ -238,7 +238,7 @@ Spacing may be created using CSS properties such as {{cssxref("margin")}}.
 
 ### ARIA state information
 
-To describe the state of a button the correct ARIA attribute to use is `aria-pressed` and not `aria-checked` or `aria-selected`. To find out more read the information about the [ARIA button role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role).
+To describe the state of a button the correct ARIA attribute to use is [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) and not [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) or [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected). To find out more read the information about the [ARIA button role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role).
 
 ### Firefox
 
