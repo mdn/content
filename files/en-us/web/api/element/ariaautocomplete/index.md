@@ -17,8 +17,10 @@ The **`ariaAutoComplete`** property of the {{domxref("Element")}} interface refl
 
 ## Syntax
 
-    var ariaAutoComplete = element.ariaAutoComplete;
-    element.ariaAutoComplete = ariaAutoComplete
+```js
+var ariaAutoComplete = element.ariaAutoComplete;
+element.ariaAutoComplete = ariaAutoComplete
+```
 
 ### Value
 

@@ -17,8 +17,10 @@ The **`ariaColIndex`** property of the {{domxref("Element")}} interface reflects
 
 ## Syntax
 
-    var ariaColIndex = element.ariaColIndex;
-    element.ariaColIndex = ariaColIndex
+```js
+var ariaColIndex = element.ariaColIndex;
+element.ariaColIndex = ariaColIndex
+```
 
 ### Value
 

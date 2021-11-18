@@ -22,8 +22,10 @@ The event fires when any of the following properties change:
 
 ## Syntax
 
-    BackgroundFetchRegistration.onprogress = function;
-    BackgroundRegistration.addEventListener('progress', function);
+```js
+BackgroundFetchRegistration.onprogress = function;
+BackgroundRegistration.addEventListener('progress', function);
+```
 
 Where `function` is the JavaScript function to execute.
 

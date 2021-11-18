@@ -20,7 +20,9 @@ Moves the window one document forward in history. This was a Firefox-specific me
 
 ## Syntax
 
-    window.forward();
+```js
+window.forward();
+```
 
 ### Parameters
 

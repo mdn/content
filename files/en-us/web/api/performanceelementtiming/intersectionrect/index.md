@@ -15,7 +15,9 @@ The **`intersectionRect`** read-only property of the {{domxref("PerformanceEleme
 
 ## Syntax
 
-    var rect = PerformanceElementTiming.intersectionRect;
+```js
+var rect = PerformanceElementTiming.intersectionRect;
+```
 
 ### Value
 

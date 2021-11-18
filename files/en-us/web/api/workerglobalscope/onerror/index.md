@@ -17,7 +17,9 @@ The **`onerror`** property of the {{domxref("WorkerGlobalScope")}} interface rep
 
 ## Syntax
 
-    self.onerror = function() { ... };
+```js
+self.onerror = function() { ... };
+```
 
 ## Example
 

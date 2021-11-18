@@ -15,7 +15,9 @@ The **`writable`** read-only property of the {{domxref("CompressionStream")}} in
 
 ## Syntax
 
-    let writableStream = CompressionStream.writable;
+```js
+let writableStream = CompressionStream.writable;
+```
 
 ### Value
 

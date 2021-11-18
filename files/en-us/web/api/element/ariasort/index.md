@@ -17,8 +17,10 @@ The **`ariaSort`** property of the {{domxref("Element")}} interface reflects the
 
 ## Syntax
 
-    var ariaSort = element.ariaSort;
-    element.ariaSort = ariaSort
+```js
+var ariaSort = element.ariaSort;
+element.ariaSort = ariaSort
+```
 
 ### Value
 

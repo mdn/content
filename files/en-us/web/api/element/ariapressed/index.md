@@ -19,8 +19,10 @@ The **`ariaPressed`** property of the {{domxref("Element")}} interface reflects 
 
 ## Syntax
 
-    var ariaPressed = element.ariaPressed;
-    element.ariaPressed = ariaPressed
+```js
+var ariaPressed = element.ariaPressed;
+element.ariaPressed = ariaPressed
+```
 
 ### Value
 

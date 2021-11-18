@@ -17,8 +17,10 @@ The **`ariaColCount`** property of the {{domxref("Element")}} interface reflects
 
 ## Syntax
 
-    var ariaColCount = element.ariaColCount;
-    element.ariaColCount = ariaColCount
+```js
+var ariaColCount = element.ariaColCount;
+element.ariaColCount = ariaColCount
+```
 
 ### Value
 

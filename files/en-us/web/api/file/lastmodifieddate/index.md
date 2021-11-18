@@ -19,7 +19,9 @@ The **`File.lastModifiedDate`** read-only property returns the last modified dat
 
 ## Syntax
 
-    var time = instanceOfFile.lastModifiedDate
+```js
+var time = instanceOfFile.lastModifiedDate
+```
 
 ### Value
 

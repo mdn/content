@@ -15,7 +15,9 @@ The **`terminate()`** method of the {{domxref("TransformStreamDefaultController"
 
 ## Syntax
 
-    TransformStreamDefaultController.terminate();
+```js
+TransformStreamDefaultController.terminate();
+```
 
 ### Parameters
 

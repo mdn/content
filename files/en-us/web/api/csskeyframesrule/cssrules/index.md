@@ -16,7 +16,9 @@ The read-only **`cssRules`** property of the {{domxref("CSSKeyframeRule")}} inte
 
 ## Syntax
 
-    var cssRules = CSSKeyframesRule.cssRules;
+```js
+var cssRules = CSSKeyframesRule.cssRules;
+```
 
 ### Value
 

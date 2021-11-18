@@ -17,8 +17,10 @@ The **`ariaLabel`** property of the {{domxref("Element")}} interface reflects th
 
 ## Syntax
 
-    var ariaLabel = element.ariaLabel;
-    element.ariaLabel = ariaLabel
+```js
+var ariaLabel = element.ariaLabel;
+element.ariaLabel = ariaLabel
+```
 
 ### Value
 

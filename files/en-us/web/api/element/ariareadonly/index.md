@@ -19,8 +19,10 @@ The **`ariaReadOnly`** property of the {{domxref("Element")}} interface reflects
 
 ## Syntax
 
-    var ariaReadOnly = element.ariaReadOnly;
-    element.ariaReadOnly = ariaReadOnly
+```js
+var ariaReadOnly = element.ariaReadOnly;
+element.ariaReadOnly = ariaReadOnly
+```
 
 ### Value
 

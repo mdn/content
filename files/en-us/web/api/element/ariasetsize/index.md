@@ -17,8 +17,10 @@ The **`ariaSetSize`** property of the {{domxref("Element")}} interface reflects 
 
 ## Syntax
 
-    var ariaSetSize = element.ariaSetSize;
-    element.ariaSetSize = ariaSetSize
+```js
+var ariaSetSize = element.ariaSetSize;
+element.ariaSetSize = ariaSetSize
+```
 
 ### Value
 

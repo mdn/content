@@ -15,7 +15,9 @@ The **`match()`** method of the {{domxref("BackgroundFetchRegistration")}} inter
 
 ## Syntax
 
-    let record = BackgroundFetchRegistration.match(request, options);
+```js
+let record = BackgroundFetchRegistration.match(request, options);
+```
 
 ### Parameters
 

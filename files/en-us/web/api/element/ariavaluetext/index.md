@@ -17,8 +17,10 @@ The **`ariaValueText`** property of the {{domxref("Element")}} interface reflect
 
 ## Syntax
 
-    var ariaValueText = element.ariaValueText;
-    element.ariaValueText = ariaValueText
+```js
+var ariaValueText = element.ariaValueText;
+element.ariaValueText = ariaValueText
+```
 
 ### Value
 

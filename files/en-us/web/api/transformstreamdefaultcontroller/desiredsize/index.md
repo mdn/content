@@ -19,7 +19,9 @@ If the `desiredSize` is `0` then the queue is full. Therefore you can use this i
 
 ## Syntax
 
-    let desiredSize = TransformStreamDefaultController.desiredSize;
+```js
+let desiredSize = TransformStreamDefaultController.desiredSize;
+```
 
 ### Value
 

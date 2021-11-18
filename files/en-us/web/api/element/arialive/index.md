@@ -16,8 +16,10 @@ The **`ariaLive`** property of the {{domxref("Element")}} interface reflects the
 
 ## Syntax
 
-    var ariaLive = element.ariaLive;
-    element.ariaLive = ariaLive
+```js
+var ariaLive = element.ariaLive;
+element.ariaLive = ariaLive
+```
 
 ### Value
 

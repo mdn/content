@@ -16,7 +16,9 @@ The **`OffscreenCanvas.convertToBlob()`** method creates a {{domxref("Blob")}} 
 
 ## Syntax
 
-    Promise<Blob> OffscreenCanvas.convertToBlob(options);
+```js
+Promise<Blob> OffscreenCanvas.convertToBlob(options);
+```
 
 ### Parameters
 

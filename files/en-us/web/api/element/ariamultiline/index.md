@@ -19,8 +19,10 @@ The **`ariaMultiline`** property of the {{domxref("Element")}} interface reflect
 
 ## Syntax
 
-    var ariaMultiline = element.ariaMultiline;
-    element.ariaMultiline = ariaMultiline
+```js
+var ariaMultiline = element.ariaMultiline;
+element.ariaMultiline = ariaMultiline
+```
 
 ### Value
 

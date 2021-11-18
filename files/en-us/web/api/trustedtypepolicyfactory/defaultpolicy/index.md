@@ -17,7 +17,9 @@ The **`defaultPolicy`** read-only property of the {{domxref("TrustedTypePolicyFa
 
 ## Syntax
 
-    var defaultPolicy = TrustedTypePolicyFactory.defaultPolicy;
+```js
+var defaultPolicy = TrustedTypePolicyFactory.defaultPolicy;
+```
 
 ### Value
 

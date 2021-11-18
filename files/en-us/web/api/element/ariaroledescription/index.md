@@ -17,8 +17,10 @@ The **`ariaRoleDescription`** property of the {{domxref("Element")}} interface r
 
 ## Syntax
 
-    var ariaRoleDescription = element.ariaRoleDescription;
-    element.ariaRoleDescription = ariaRoleDescription
+```js
+var ariaRoleDescription = element.ariaRoleDescription;
+element.ariaRoleDescription = ariaRoleDescription
+```
 
 ### Value
 

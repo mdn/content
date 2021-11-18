@@ -23,8 +23,10 @@ Gets/sets the status bar text for the given window.
 
 ## Syntax
 
-    var sMsg = window.defaultStatus;
-    window.defaultStatus = sMsg;
+```js
+var sMsg = window.defaultStatus;
+window.defaultStatus = sMsg;
+```
 
 ### Parameters
 

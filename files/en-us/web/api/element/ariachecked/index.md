@@ -19,8 +19,10 @@ The **`ariaChecked`** property of the {{domxref("Element")}} interface reflects 
 
 ## Syntax
 
-    var ariaChecked = element.ariaChecked;
-    element.ariaChecked = ariaChecked
+```js
+var ariaChecked = element.ariaChecked;
+element.ariaChecked = ariaChecked
+```
 
 ### Value
 

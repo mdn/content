@@ -19,7 +19,9 @@ The read-only **`initialValue`** nullable property of the {{domxref("CSSProperty
 
 ## Syntax
 
-    const initialValue = CSSPropertyRule.initialValue;
+```js
+const initialValue = CSSPropertyRule.initialValue;
+```
 
 ### Value
 

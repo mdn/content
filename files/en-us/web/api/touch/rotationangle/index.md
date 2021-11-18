@@ -20,7 +20,9 @@ Returns the rotation angle, in degrees, of the contact area ellipse defined by {
 
 ## Syntax
 
-    var angle = touchItem.rotationAngle;
+```js
+var angle = touchItem.rotationAngle;
+```
 
 ### Return value
 

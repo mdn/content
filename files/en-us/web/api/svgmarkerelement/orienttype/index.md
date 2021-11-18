@@ -17,7 +17,9 @@ This _something else_ is most likely to be the keyword `auto-start-reverse` howe
 
 ## Syntax
 
-    let orientType = SVGMarkerElement.orientType;
+```js
+let orientType = SVGMarkerElement.orientType;
+```
 
 ### Value
 

@@ -17,8 +17,10 @@ The **`ariaValueMax`** property of the {{domxref("Element")}} interface reflects
 
 ## Syntax
 
-    var ariaValueMax = element.ariaValueMax;
-    element.ariaValueMax = ariaValueMax
+```js
+var ariaValueMax = element.ariaValueMax;
+element.ariaValueMax = ariaValueMax
+```
 
 ### Value
 

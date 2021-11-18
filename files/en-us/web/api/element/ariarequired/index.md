@@ -19,8 +19,10 @@ The **`ariaRequired`** property of the {{domxref("Element")}} interface reflects
 
 ## Syntax
 
-    var ariaRequired = element.ariaRequired;
-    element.ariaRequired = ariaRequired
+```js
+var ariaRequired = element.ariaRequired;
+element.ariaRequired = ariaRequired
+```
 
 ### Value
 

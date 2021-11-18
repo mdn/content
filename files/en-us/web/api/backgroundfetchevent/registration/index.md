@@ -15,7 +15,9 @@ The **`registration`** read-only property of the {{domxref("BackgroundFetchEvent
 
 ## Syntax
 
-    let registration = BackgroundFetchEvent.registration;
+```js
+let registration = BackgroundFetchEvent.registration;
+```
 
 ### Value
 

@@ -17,7 +17,9 @@ When getting, the same instance of the {{domxref("Serial")}} object will always 
 
 ## Syntax
 
-    var serialObj = navigator.serial;
+```js
+var serialObj = navigator.serial;
+```
 
 ### Value
 

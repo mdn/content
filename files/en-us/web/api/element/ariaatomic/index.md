@@ -17,8 +17,10 @@ The **`ariaAtomic`** property of the {{domxref("Element")}} interface reflects t
 
 ## Syntax
 
-    var ariaAtomic = element.ariaAtomic;
-    element.ariaAtomic = ariaAtomic
+```js
+var ariaAtomic = element.ariaAtomic;
+element.ariaAtomic = ariaAtomic
+```
 
 ### Value
 

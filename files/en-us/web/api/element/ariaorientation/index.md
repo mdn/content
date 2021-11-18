@@ -17,8 +17,10 @@ The **`ariaOrientation`** property of the {{domxref("Element")}} interface refle
 
 ## Syntax
 
-    var ariaOrientation = element.ariaOrientation;
-    element.ariaOrientation = ariaOrientation
+```js
+var ariaOrientation = element.ariaOrientation;
+element.ariaOrientation = ariaOrientation
+```
 
 ### Value
 

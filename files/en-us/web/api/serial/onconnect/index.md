@@ -17,8 +17,10 @@ This event is only fired for ports associated with removable devices such as tho
 
 ## Syntax
 
-    Serial.onconnect = function(event);
-    Serial.addEventListener('connect', function(event));
+```js
+Serial.onconnect = function(event);
+Serial.addEventListener('connect', function(event));
+```
 
 ## Example
 
