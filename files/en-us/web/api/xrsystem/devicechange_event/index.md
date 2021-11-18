@@ -18,27 +18,19 @@ browser-compat: api.XRSystem.devicechange_event
 
 A **`devicechange`** event is fired on an {{DOMxRef("XRSystem")}} object whenever the availability of immersive XR devices has changed; for example, a VR headset or AR goggles have been connected or disconnected. It's a generic {{DOMxRef("Event")}} with no added properties.
 
-This event is not cancelable.
-
 > **Note:** Not to be confused with the {{domxref("MediaDevices")}} {{DOMxRef("MediaDevices.devicechange_event", "devicechange")}} event.
 
-## Syntax
+## Description
 
- Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+### Trigger
 
- ```js
- addEventListener("devicechange", (event) => { });
+Triggered whenever the availability of immersive XR devices has changed. For example, when a VR headset or AR goggles have been connected or disconnected.
 
- ondevicechange = (event) => { });
- ```
+### Event type
 
-## Event type
+A generic {{DOMxRef("Event")}} with no added properties.
 
-{{DOMxRef("Event")}}.
-
-## Usage notes
-
-`devicechange` events are not delivered if the document which owns the {{domxref("XRSystem")}} object has been granted permission to do so through the [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking) feature policy.
+### Use cases
 
 You can use this event to, for example, monitor for the availability of a WebXR-compatible device so that you can enable a UI element which the user can use to activate immersive mode. This is shown in the {{anch("Example", "example")}} below.
 
