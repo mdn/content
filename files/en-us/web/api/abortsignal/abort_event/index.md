@@ -50,7 +50,7 @@ var signal = controller.signal;
 
 signal.addEventListener('abort', function() {
  console.log('Request aborted');
-};
+});
 ```
 
 Or use the [`onabort`](/en-US/docs/Web/API/AbortSignal/onabort) event handler property:
