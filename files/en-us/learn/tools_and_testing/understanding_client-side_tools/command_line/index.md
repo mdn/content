@@ -39,11 +39,15 @@ In your development process you'll undoubtedly be required to run some command i
 
 The terminal is a text interface for executing text-based programs. If you're running any tooling for web development there's a near-guaranteed chance that you'll have to pop open the command line and run some commands to use your chosen tools (you'll often see such tools referred to as **CLI tools** — command line interface tools).
 
-A large number of tools can be used by typing commands into the command line; many come pre-installed on your system, and a huge number of others are installable from package registries. Package registries are like app stores, but (mostly) for command line based tools and software. We’ll see how to install some tools later on in this chapter, and we’ll learn more about package registries in the next chapter.
+A large number of tools can be used by typing commands into the command line; many come pre-installed on your system, and a huge number of others are installable from package registries.
+Package registries are like app stores, but (mostly) for command line based tools and software.
+We’ll see how to install some tools later on in this chapter, and we’ll learn more about package registries in the next chapter.
 
-One of the biggest criticisms of the command line is that it lacks hugely in user experience. Viewing the command line for the first time can be a daunting experience: a blank screen and a blinking cursor, with very little obvious help available on what to do.
+One of the biggest criticisms of the command line is that it lacks hugely in user experience.
+Viewing the command line for the first time can be a daunting experience: a blank screen and a blinking cursor, with very little obvious help available on what to do.
 
-On the surface they’re far from welcoming but there’s a lot you can do with them, and we promise that, with a bit of guidance and practice, using them will get easier! This is why we are providing this chapter — to help you get started in this seemingly unfriendly environment.
+On the surface they’re far from welcoming but there’s a lot you can do with them, and we promise that, with a bit of guidance and practice, using them will get easier!
+This is why we are providing this chapter — to help you get started in this seemingly unfriendly environment.
 
 ### Where did the terminal come from?
 
@@ -267,60 +271,56 @@ The pipe operator can _connect_ these inputs and outputs together, allowing us t
 
 ## A slightly more complex example
 
-Let’s go through something a bit more complicated. We will first try to fetch the contents of MDN's "fetch" page using the `curl` command (which can be used to request content from URLs), from [https://developer.mozilla.org/en-US/docs/Web/API/fetch](/en-US/docs/Web/API/fetch).
+Let’s go through something a bit more complicated.
 
-However, this URL is the old location of the page. If you enter it in a new browser tab, you’ll (eventually) get redirected to [https://developer.mozilla.org/en-US/docs/Web/API/fetch](/en-US/docs/Web/API/fetch).
-
-Therefore, if you use curl to request https\://developer.mozilla.org/docs/Web/API/fetch, you won’t get an output. Try it now:
+We will first try to fetch the contents of MDN's "fetch" page using the `curl` command (which can be used to request content from URLs), from `https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch`.
+Try it now:
 
 ```bash
-curl https://developer.mozilla.org/en-US/docs/Web/API/fetch
+curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 ```
 
+You won't get an output because the page has been redirected (to [/Web/API/fetch](/en-US/docs/Web/API/fetch)).
 We need to explicitly tell `curl` to follow redirects using the `-L` flag.
 
 Let's also look at the headers that `developer.mozilla.org` returns using `curl`'s `-I` flag, and print all the location redirects it sends to the terminal, by piping the output of `curl` into `grep` (we will ask `grep` to return all the lines that contain the word "location").
 
-Try running the following, and you’ll see that in fact there are three redirects happening before we reach the final page:
+Try running the following (you’ll see that there is just one redirect before we reach the final page):
 
 ```bash
-curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location
+curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location
 ```
 
 Your output should look something like this (`curl` will first output some download counters and suchlike):
 
 ```bash
 location: /en-US/docs/Web/API/fetch
-location: /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
-location: /en-US/docs/Web/API/GlobalFetch/fetch
-location: /en-US/docs/Web/API/fetch
 ```
 
-Although contrived, we could take this result a little further and transform the `location:` line contents, adding the base origin to the start of each one so that we get complete URLs printed out. For that, we'll add `awk` to the mix (which is a programming language akin to JavaScript or Ruby or Python, just a lot older!).
+Although contrived, we could take this result a little further and transform the `location:` line contents, adding the base origin to the start of each one so that we get complete URLs printed out.
+For that, we'll add `awk` to the mix (which is a programming language akin to JavaScript or Ruby or Python, just a lot older!).
 
 Try running this:
 
 ```bash
-curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
+curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
 ```
 
 Your final output should look something like this:
 
 ```bash
 https://developer.mozilla.org/en-US/docs/Web/API/fetch
-https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
-https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch
-https://developer.mozilla.org/en-US/docs/Web/API/fetch
 ```
 
-By combining these commands we've customised the output to show the full URLs that the Mozilla server is redirecting through when we request the `/docs/Web/API/fetch` URL.
+By combining these commands we've customised the output to show the full URLs that the Mozilla server is redirecting through when we request the `/docs/Web/API/WindowOrWorkerGlobalScope/fetch` URL.
 Getting to know your system will prove useful in years to come — learn how these single serving tools work and how they can become part of your arsenal to solve niche problems.
 
 ## Adding powerups
 
 Now we’ve had a look at some of the built-in commands your system comes equipped with, let’s look at how we can install a third-party CLI tool and make use of it.
 
-The vast ecosystem of installable tools for front end web development currently exists mostly inside [npm](https://www.npmjs.com), a privately owned, package hosting service that works closely together with Node.js. This is slowly expanding — you can expect to see more package providers as time goes on.
+The vast ecosystem of installable tools for front end web development currently exists mostly inside [npm](https://www.npmjs.com), a privately owned, package hosting service that works closely together with Node.js.
+This is slowly expanding — you can expect to see more package providers as time goes on.
 
 [Installing Node.js](https://nodejs.org/en/) also installs the npm command line tool (and a supplementary npm-centric tool called npx), which offers a gateway to installing additional command line tools. Node.js and npm work the same across all systems: macOS, Windows, and Linux.
 
@@ -328,7 +328,10 @@ Install npm on your system now, by going to the URL above and downloading and ru
 
 ![the node.js installer on windows, showing the option to include npm](npm-install-option.png)
 
-Although we'll look at a number of different tools in the next article onwards, we'll cut our teeth on [Prettier](https://prettier.io/). Prettier is an opinionated code formatter that has "few options". Fewer options tends to mean simpler. Given how tooling can sometimes get out of hand in terms of complexity, "few options" can be very appealing.
+Although we'll look at a number of different tools in the next article onwards, we'll cut our teeth on [Prettier](https://prettier.io/).
+Prettier is an opinionated code formatter that has "few options".
+Fewer options tends to mean simpler.
+Given how tooling can sometimes get out of hand in terms of complexity, "few options" can be very appealing.
 
 ### Where to install our CLI tools?
 
