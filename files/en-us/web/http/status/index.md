@@ -47,7 +47,7 @@ The below status codes are defined by [section 10 of RFC 2616](https://datatrack
     - `TRACE`: The message body contains the request message as received by the server.
 
 - {{HTTPStatus(201, "201 Created")}}
-  - : The request succeeded, and a new resource created as a result. This is typically the response sent after `POST` requests, or some `PUT` requests.
+  - : The request succeeded, and a new resource was created as a result. This is typically the response sent after `POST` requests, or some `PUT` requests.
 - {{HTTPStatus(202, "202 Accepted")}}
   - : The request has been received but not yet acted upon.
      It is noncommittal, since there is no way in HTTP to later send an asynchronous response indicating the outcome of the request.
