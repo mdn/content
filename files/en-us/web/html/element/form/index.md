@@ -148,7 +148,7 @@ The following attributes control behavior during form submission.
 
     - `post`: The [POST method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5); form data sent as the [request body](/en-US/docs/Web/API/Request/body).
     - `get`: The [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); form data appended to the `action` URL with a `?` separator. Use this method when the form [has no side-effects](/en-US/docs/Glossary/Idempotent).
-    - `dialog`: When the form is inside a {{HTMLElement("dialog")}}, closes the dialog on submission. This is a means to close the `dialog` element without the need for JavaScript. Note that no form data is submitted so, specifying an `action` attribute will have no effect.
+    - `dialog`: When the form is inside a {{HTMLElement("dialog")}}, closes the dialog and throws a submit event on submission without submitting data or clearing the form.
 
     This value is overridden by {{htmlattrxref("formmethod", "button")}} attributes on {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image"> `](/en-US/docs/Web/HTML/Element/input/image)elements.
 
