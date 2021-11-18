@@ -81,11 +81,6 @@ function draw() {
 draw();
 ```
 
-## Parameters
-
-- array
-  - : The {{jsxref("Float32Array")}} that the time domain data will be copied to.
-
 ## Specifications
 
 {{Specifications}}
