@@ -126,12 +126,13 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 ### U
 
-*   {{SVGElement("unknown")}}
 *   {{SVGElement("use")}}
 
 ### V
 
 *   {{SVGElement("view")}}
+
+> **Note:** The [SVG 2 spec requires](https://www.w3.org/TR/SVG2/struct.html#UnknownElement) that any unknown elements be treated as {{SVGElement("g")}} for the purpose of rendering.
 
 ## SVG elements by category
 
