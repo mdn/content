@@ -43,7 +43,7 @@ By now you should really be getting the hang of embedding things into your web p
       <td>
         To learn how to embed items into web pages using
         {{htmlelement("object")}}, {{htmlelement("embed")}}, and
-        {{htmlelement("iframe")}}, like Flash movies and other webpages.
+        {{htmlelement("iframe")}}, like PDF documents and other webpages.
       </td>
     </tr>
   </tbody>
