@@ -92,7 +92,7 @@ Here is a minimalistic template, which we'll be using as a starting point for la
   <head>
     <meta charset="utf-8"/>
     <title>Canvas tutorial</title>
-    <script type="text/javascript">
+    <script>
       function draw() {
         var canvas = document.getElementById('tutorial');
         if (canvas.getContext) {
@@ -100,7 +100,7 @@ Here is a minimalistic template, which we'll be using as a starting point for la
         }
       }
     </script>
-    <style type="text/css">
+    <style>
       canvas { border: 1px solid black; }
     </style>
   </head>
