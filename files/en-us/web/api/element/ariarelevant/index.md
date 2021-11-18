@@ -13,7 +13,7 @@ browser-compat: api.Element.ariaRelevant
 ---
 {{DefaultAPISidebar("DOM")}}{{SeeCompatTable}}
 
-The **`ariaRelevant`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute) attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an `aria-live` region are relevant and should be announced.
+The **`ariaRelevant`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute, which indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. This is used to describe what changes in an `aria-live` region are relevant and should be announced.
 
 ## Syntax
 
