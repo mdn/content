@@ -38,4 +38,4 @@ Similarly, a canvas element with the `hidden` attribute could be used by a scrip
 
 - {{DOMxRef("HTMLElement.hidden")}}
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-- [[`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute)
+- [`aria-hidden` attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
