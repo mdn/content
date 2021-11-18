@@ -131,7 +131,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 The following attributes control behavior during form submission.
 
 - {{htmlattrdef("action")}}
-  - : The URL that processes the form submission. This value can be overridden by a {{htmlattrxref("formaction", "button")}} attribute on a {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) element.
+  - : The URL that processes the form submission. This value can be overridden by a {{htmlattrxref("formaction", "button")}} attribute on a {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) element. This attribute is ignored when `method="dialog"` is set.
 - {{htmlattrdef("enctype")}}
 
   - : If the value of the `method` attribute is `post`, `enctype` is the [MIME type](https://en.wikipedia.org/wiki/Mime_type) of the form submission. Possible values:
