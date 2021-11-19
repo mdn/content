@@ -40,7 +40,7 @@ If you have Mobile Chrome available, the experience is slightly different; upon 
 
 ![](chrome-a2hs-banner.png)
 
-> **Note:** You can find out a lot more about Chrome install banners from the article [Web App Install Banners](https://developers.google.com/web/fundamentals/app-install-banners/).
+> **Note:** You can find out a lot more about Chrome install banners from the article [How to provide your own in-app install experience](https://web.dev/customize-install/).
 
 If you choose not to add it to your Home screen at this point, you can do so later using the _Add to Home screen_ icon in the main Chrome menu.
 
@@ -204,13 +204,12 @@ If the user selects _Install_, the app is installed (available as standalone des
 
 If the user selects _Cancel_, the state of the app goes back to how it was before the button was clicked.
 
-> **Note:** The code for this section was mostly taken from [App install banners/Add to Home Screen](https://developers.google.com/web/fundamentals/app-install-banners/) by Pete LePage.
+> **Note:** The code for this section was mostly taken from [How to provide your own in-app install experience](https://web.dev/customize-install/) by Pete LePage.
 
 ## See also
 
 - [Progressive web apps](/en-US/docs/Web/Progressive_web_apps)
 - [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
 - [Web manifest reference](/en-US/docs/Web/Manifest)
-- [App install banners](https://developers.google.com/web/fundamentals/app-install-banners/)
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
