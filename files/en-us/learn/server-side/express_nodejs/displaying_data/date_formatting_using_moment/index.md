@@ -44,6 +44,7 @@ BookInstanceSchema
 ```
 
 > **Note:** Luxon can import strings in many formats and export to both predefined and free-form formats. In this  case we use `fromJSDate()` to import a JavaScript date string and `toLocaleString()` to output the date in  `DATE_MED` format in English: Oct 6th, 2020.
+> **Note:** Because arrow functions do not have bindings to `this`, you cannot use an arrow function in place of `function ()` in the `get()` function above.
 > For information about other formats and date string internationalisation see the Luxon documentation on [formatting](https://github.com/moment/luxon/blob/master/docs/formatting.md#formatting).
 
 ## Update the view
