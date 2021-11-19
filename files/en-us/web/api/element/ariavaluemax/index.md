@@ -28,7 +28,7 @@ A {{domxref("DOMString")}} which contains a number.
 
 ## Examples
 
-In this example the `aria-valuemax` attribute on the element with an ID of `slider` is set to "7". Using `ariaValueMax` we update the value to "6".
+In this example the [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) attribute on the element with an ID of `slider` is set to "7". Using `ariaValueMax` we update the value to "6".
 
 ```html
 <div role="slider" aria-valuenow="1"

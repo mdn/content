@@ -35,7 +35,7 @@ A {{domxref("DOMString")}} with one of the following values:
 
 ## Examples
 
-In this example the `aria-hidden` attribute on the element with an ID of `hidden` is set to "true". Using `ariaHidden` we update the value to "false".
+In this example the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute on the element with an ID of `hidden` is set to "true". Using `ariaHidden` we update the value to "false".
 
 ```html
 <div id="hidden" aria-hidden="true">Some things are better left unsaid.</div>

@@ -37,7 +37,7 @@ A {{domxref("DOMString")}} containing one or more of the following values, space
 
 ## Examples
 
-In this example the `aria-relevant` attribute on the element with an ID of `text` is set to "all". Using `ariaRelevant` we update the value to "text".
+In this example the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute on the element with an ID of `text` is set to "all". Using `ariaRelevant` we update the value to "text".
 
 ```html
 <div id="clock" role="timer" aria-live="polite" aria-atomic="true" aria-relevant="all"></div>

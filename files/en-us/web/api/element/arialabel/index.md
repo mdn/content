@@ -28,7 +28,7 @@ A {{domxref("DOMString")}}.
 
 ## Examples
 
-In this example the `aria-label` attribute on the element with an ID of `close-button` is set to "Close". Using `ariaLabel` we update the value to "Close dialog".
+In this example the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute on the element with an ID of `close-button` is set to "Close". Using `ariaLabel` we update the value to "Close dialog".
 
 ```html
 <button aria-label="Close" id="close-button">X</button>
