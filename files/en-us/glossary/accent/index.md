@@ -21,3 +21,4 @@ You can set the color of the accent for a given element by setting the element's
 - [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
 - [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)
 - [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)
+- [`<progress>`](/en-US/docs/Web/HTML/Element/progress)
