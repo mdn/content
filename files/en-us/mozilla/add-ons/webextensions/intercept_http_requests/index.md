@@ -65,8 +65,6 @@ The `{urls: ["<all_urls>"]}` [pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions
 To test it out:
 - [Install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
 - Open the [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/) (use <kbd>Ctrl + Shift + J</kbd>)
-  > **Note:** The *Browser Console* must be used.
-  > This is not the same as the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/).
 - Enable *Show Content Messages* in the menu:
 
   ![Browser console menu : Show Content Messages](browser_console_show_content_messages.png)
