@@ -65,7 +65,7 @@ If you have Google Chrome for Android available, the experience is slightly dif
 
 ![Screenshot of a Chrome banner requesting permission to install the Foxes sample app](chrome-a2hs-banner.png)
 
-> **Note:** You can find out a lot more about Chrome install banners from the article[ Web App Install Banners](https://developers.google.com/web/fundamentals/app-install-banners/).
+> **Note:** You can find out a lot more about Chrome install banners from the article [How to provide your own in-app install experience](https://web.dev/customize-install/).
 
 If you choose not to add it to your Home screen at this point, you can do so later using the "Add to Home Screen" icon in the main Chrome menu.
 
