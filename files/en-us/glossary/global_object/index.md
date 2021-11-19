@@ -14,7 +14,7 @@ In JavaScript, there's always a global object defined. In a web browser, when sc
 - Code running in a {{domxref("Worker")}} has a {{domxref("WorkerGlobalScope")}} object as its global object.
 - Scripts running under {{Glossary("Node.js")}} have an object called [`global`](https://nodejs.org/api/globals.html#globals_global) as their global object.
 
-> **Note**: Unlike {{jsxref("Statements/var", "var")}}, the statements {{jsxref("Statements/let", "let")}} and {{jsxref("Statements/const", "const")}} do not create properties of the window object.
+> **Note**: Unlike {{jsxref("Statements/var", "var")}}, the statements {{jsxref("Statements/let", "let")}} and {{jsxref("Statements/const", "const")}} do not create properties of the global object.
 
 ## `window` object in the Browser
 
