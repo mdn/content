@@ -9,11 +9,12 @@ tags:
 ---
 {{AddonSidebar}}
 
-> **Note:** The following example may not work, since the storage API doesn't work with a temporary Addon ID, see [Bug 1323228](https\://bugzil.la/1323228).
+> **Note:** The following example may not work, since the storage API doesn't work with a temporary Addon ID, see {{bug(1323228)}}.
 
 A settings page gives users a way to see and change settings (sometimes also called "preferences" or "options") for the extension.
 
-With WebExtension APIs, settings are generally stored using the [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API. Implementing a settings page is a three-step process:
+With WebExtension APIs, settings are generally stored using the [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API.
+Implementing a settings page is a three-step process:
 
 - Write an HTML file that displays settings and lets the user change them.
 - Write a script, included from the HTML file, that populates the settings page from storage and updates stored settings when the user changes them.
