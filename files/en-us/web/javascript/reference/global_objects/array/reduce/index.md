@@ -22,13 +22,11 @@ The first time that the callback is run there is no "return value of the previou
 If supplied, an initial value may be used in its place.
 Otherwise array element 0 is used as the initial value and iteration starts from the next element (index 1 instead of index 0).
 
-Perhaps the easiest-to-understand case for `reduce()` is to return the sum of all the elements in an array.
-
-The reducer walks through the array element-by-element, at each step adding the current array value to the result from the previous step (this result is the running sum of all the previous steps) — until there are no more elements to add.
-
-This is shown in the following interactive example:
+Perhaps the easiest-to-understand case for `reduce()` is to return the sum of all the elements in an array:
 
 {{EmbedInteractiveExample("pages/js/array-reduce.html")}}
+
+The reducer walks through the array element-by-element, at each step adding the current array value to the result from the previous step (this result is the running sum of all the previous steps) — until there are no more elements to add.
 
 ## Syntax
 
