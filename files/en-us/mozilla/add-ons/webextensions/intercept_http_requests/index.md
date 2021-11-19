@@ -73,9 +73,9 @@ To test it out:
 - Open some Web pages. 
 
 In the Browser Console, you should see the URLs for any resources that the browser requests.
-For example, the screenshot below shows the URLS from loading a WikiPedia page:
+For example, this screenshot shows the URLs from loading a Wikipedia page:
 
-![Browser console menu : URLS from extension](browser_console_url_from_extension.png)
+![Browser console menu : URLs from extension](browser_console_url_from_extension.png)
 
 <!-- {{EmbedYouTube("X3rMgkRkB1Q")}} -->
 
