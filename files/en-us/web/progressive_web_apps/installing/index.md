@@ -37,7 +37,8 @@ Safari on iOS is a little different. Some parts of the PWA ecosystem are support
 
 ## The install user experience
 
-We've written a very simple example web site ([see our demo live](https://mdn.github.io/pwa-examples/a2hs/), and also[ see the source code](https://github.com/mdn/pwa-examples/tree/master/a2hs)) that doesn't do much, but was developed with the necessary code to allow it to be installed, as well as a service worker to enable it to be used offline. The example displays a series of fox pictures.If you have a web application compatible device available, use it to navigate to our demo at `https://mdn.github.io/pwa-examples/a2hs/`. You'll see fox pictures, but more importantly, some form of user interface will be available to let you install the site as a web app.
+We've written a very simple example web site ([see our demo live](https://mdn.github.io/pwa-examples/a2hs/), and also [see the source code](https://github.com/mdn/pwa-examples/tree/master/a2hs)) that doesn't do much, but was developed with the necessary code to allow it to be installed, as well as a service worker to enable it to be used offline.
+The example displays a series of fox pictures.If you have a web application compatible device available, use it to navigate to our demo at `https://mdn.github.io/pwa-examples/a2hs/`. You'll see fox pictures, but more importantly, some form of user interface will be available to let you install the site as a web app.
 
 The UI for this varies from browser to browser, but the general idea is the same.  Unfortunately, there isn't a standard for icons and symbols used for operations such as this.
 
