@@ -211,10 +211,10 @@ There are some serious {{anch("Security concerns")}} to consider with `<iframe>`
   <style> iframe { border: none } </style>
 </head>
 <body>
-  <iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
+  <iframe src="https://en.wikipedia.org/wiki/Mozilla"
           width="100%" height="500" allowfullscreen sandbox>
     <p>
-      <a href="/en-US/docs/Glossary">
+      <a href="/wiki/Mozilla">
          Fallback link for browsers that don't support iframes
       </a>
     </p>
