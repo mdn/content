@@ -431,7 +431,7 @@ First, double check that you have the right files in the right places:
 
         manifest.json
 
-Now install the extension temporarily. Open "about:debugging" in Firefox, click "Load Temporary Add-on", and select your manifest.json file. You should then see the extension's icon appear in the Firefox toolbar:
+Now load the extension as a temporary add-on. Open "about:debugging" in Firefox, click "Load Temporary Add-on", and select your **manifest.json** file. You should then see the extension's icon appear in the Firefox toolbar:
 
 ![The beastify icon in the Firefox toolbar](beastify_icon.png)
 
