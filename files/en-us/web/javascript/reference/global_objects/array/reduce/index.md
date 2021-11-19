@@ -124,10 +124,17 @@ const getMax = (a, b) => Math.max(a, b);
 ### How reduce() works without an initial value
 
 The code below shows what happens if we call `reduce()` with an array and no initial value.
-The example uses an {{jsxref("Functions/Arrow_functions", "Arrow Function","",1)}} but there is nothing to stop you using a full function.
 
 ```js
-[5, 6, 7, 8, 9].reduce( (previousValue, currentValue, currentIndex, array) => previousValue + currentValue )
+const array = [15, 16, 17, 18, 19];
+
+function reducer(previous, current, index, array) {
+  const returns = previous + current;
+  console.log(`previous: ${previous}, current: ${current}, index: ${index}, returns: ${returns}`);
+  return returns;
+}
+
+array.reduce(reducer);
 ```
 
 The callback would be invoked four times, with the arguments and return values in each call being as follows:
@@ -194,7 +201,7 @@ The value returned by `reduce()` would be that of the last callback invocation (
 
 ### How reduce() works with an initial value
 
-If you were to provide an *initialValue* of `10` as the second argument to `reduce()`, the code would look like this:
+Here we reduce the same array using the same algorithm, but with an *initialValue* of `10` passed the second argument to `reduce()`:
 
 ```js
 [5, 6, 7, 8, 9].reduce( (previousValue, currentValue, currentIndex, array) => previousValue + currentValue, 10 )
