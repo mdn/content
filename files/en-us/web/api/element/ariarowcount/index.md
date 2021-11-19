@@ -17,8 +17,10 @@ The **`ariaRowCount`** property of the {{domxref("Element")}} interface reflects
 
 ## Syntax
 
-    var ariaRowCount = element.ariaRowCount;
-    element.ariaRowCount = ariaRowCount
+```js
+var ariaRowCount = element.ariaRowCount;
+element.ariaRowCount = ariaRowCount
+```
 
 ### Value
 

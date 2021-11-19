@@ -17,7 +17,9 @@ The **`inlineSize`** read-only property of the {{domxref("ResizeObserverSize")}}
 
 ## Syntax
 
-    var inlineSize = ResizeObserverSize.inlineSize;
+```js
+var inlineSize = ResizeObserverSize.inlineSize;
+```
 
 ### Value
 

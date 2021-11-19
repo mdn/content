@@ -19,7 +19,9 @@ This property is used when there are multiple possible targets for the ending re
 
 ## Syntax
 
-    myLink.target = 'value';
+```js
+myLink.target = 'value';
+```
 
 ### Value
 

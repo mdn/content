@@ -15,7 +15,9 @@ The **`naturalWidth`** read-only property of the {{domxref("PerformanceElementTi
 
 ## Syntax
 
-    var width = PerformanceElementTiming.naturalWidth;
+```js
+var width = PerformanceElementTiming.naturalWidth;
+```
 
 ### Value
 

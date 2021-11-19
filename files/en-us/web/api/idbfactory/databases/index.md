@@ -21,7 +21,9 @@ The **`databases`** method of the {{domxref("IDBFactory")}} interface returns a
 
 ## Syntax
 
-    const promise = indexedDB.databases()
+```js
+const promise = indexedDB.databases()
+```
 
 ### Parameters
 

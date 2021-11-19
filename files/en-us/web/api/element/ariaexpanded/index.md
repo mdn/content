@@ -17,8 +17,10 @@ The **`ariaExpanded`** property of the {{domxref("Element")}} interface reflects
 
 ## Syntax
 
-    var ariaExpanded = element.ariaExpanded;
-    element.ariaExpanded = ariaExpanded
+```js
+var ariaExpanded = element.ariaExpanded;
+element.ariaExpanded = ariaExpanded
+```
 
 ### Value
 

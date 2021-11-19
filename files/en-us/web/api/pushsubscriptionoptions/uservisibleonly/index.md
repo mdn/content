@@ -15,7 +15,9 @@ The **`userVisibleOnly`** read-only property of the {{domxref("PushSubscriptionO
 
 ## Syntax
 
-    let userVisibleOnly = PushSubscriptionOptions.userVisibleOnly;
+```js
+let userVisibleOnly = PushSubscriptionOptions.userVisibleOnly;
+```
 
 ### Value
 

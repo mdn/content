@@ -17,8 +17,10 @@ The **`ariaValueMin`** property of the {{domxref("Element")}} interface reflects
 
 ## Syntax
 
-    var ariaValueMin = element.ariaValueMin;
-    element.ariaValueMin = ariaValueMin
+```js
+var ariaValueMin = element.ariaValueMin;
+element.ariaValueMin = ariaValueMin
+```
 
 ### Value
 

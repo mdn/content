@@ -19,8 +19,10 @@ The **`ariaDisabled`** property of the {{domxref("Element")}} interface reflects
 
 ## Syntax
 
-    var ariaDisabled = element.ariaDisabled;
-    element.ariaDisabled = ariaDisabled
+```js
+var ariaDisabled = element.ariaDisabled;
+element.ariaDisabled = ariaDisabled
+```
 
 ### Value
 

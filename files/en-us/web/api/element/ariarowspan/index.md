@@ -17,8 +17,10 @@ The **`ariaRowSpan`** property of the {{domxref("Element")}} interface reflects 
 
 ## Syntax
 
-    var ariaRowSpan = element.ariaRowSpan;
-    element.ariaRowSpan = ariaRowSpan
+```js
+var ariaRowSpan = element.ariaRowSpan;
+element.ariaRowSpan = ariaRowSpan
+```
 
 ### Value
 

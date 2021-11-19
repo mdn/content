@@ -15,7 +15,9 @@ The **`identifier`** read-only property of the {{domxref("PerformanceElementTimi
 
 ## Syntax
 
-    var identifier = PerformanceElementTiming.identifier;
+```js
+var identifier = PerformanceElementTiming.identifier;
+```
 
 ### Value
 

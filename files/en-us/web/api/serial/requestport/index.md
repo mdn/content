@@ -15,7 +15,9 @@ The **`Serial.requestPort()`** method of the {{domxref("Serial")}} interface ret
 
 ## Syntax
 
-    var promise = Serial.requestPort([options]);
+```js
+var promise = Serial.requestPort([options]);
+```
 
 ### Parameters
 

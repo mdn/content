@@ -17,8 +17,10 @@ The **`ariaHidden`** property of the {{domxref("Element")}} interface reflects t
 
 ## Syntax
 
-    var ariaHidden = element.ariaHidden;
-    element.ariaHidden = ariaHidden
+```js
+var ariaHidden = element.ariaHidden;
+element.ariaHidden = ariaHidden
+```
 
 ### Value
 

@@ -19,8 +19,10 @@ The **`ariaMultiSelectable`** property of the {{domxref("Element")}} interface r
 
 ## Syntax
 
-    var ariaMultiSelectable = element.ariaMultiSelectable;
-    element.ariaMultiSelectable = ariaMultiSelectable
+```js
+var ariaMultiSelectable = element.ariaMultiSelectable;
+element.ariaMultiSelectable = ariaMultiSelectable
+```
 
 ### Value
 

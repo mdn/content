@@ -17,8 +17,10 @@ The **`ariaRelevant`** property of the {{domxref("Element")}} interface reflects
 
 ## Syntax
 
-    var ariaRelevant = element.ariaRelevant;
-    element.ariaRelevant = ariaRelevant
+```js
+var ariaRelevant = element.ariaRelevant;
+element.ariaRelevant = ariaRelevant
+```
 
 ### Value
 

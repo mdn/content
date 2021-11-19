@@ -17,8 +17,10 @@ The **`ariaDescription`** property of the {{domxref("Element")}} interface refle
 
 ## Syntax
 
-    var ariaDescription = element.ariaDescription;
-    element.ariaDescription = ariaDescription
+```js
+var ariaDescription = element.ariaDescription;
+element.ariaDescription = ariaDescription
+```
 
 ### Value
 

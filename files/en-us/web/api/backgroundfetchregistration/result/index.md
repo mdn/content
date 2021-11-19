@@ -15,7 +15,9 @@ The **`result`** read-only property of the {{domxref("BackgroundFetchRegistratio
 
 ## Syntax
 
-    let theResult = BackgroundFetchRegistration.result;
+```js
+let theResult = BackgroundFetchRegistration.result;
+```
 
 ### Value
 

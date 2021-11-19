@@ -15,7 +15,9 @@ The **`downloaded`** read-only property of the {{domxref("BackgroundFetchRegistr
 
 ## Syntax
 
-    let downloaded = BackgroundFetchRegistration.downloaded;
+```js
+let downloaded = BackgroundFetchRegistration.downloaded;
+```
 
 ### Value
 

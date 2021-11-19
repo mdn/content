@@ -17,7 +17,9 @@ This method may only be run once, to notify the user on a failed or a successful
 
 ## Syntax
 
-    let updateUI = BackgroundFetchUpdateUIEvent.updateUI(options);
+```js
+let updateUI = BackgroundFetchUpdateUIEvent.updateUI(options);
+```
 
 ### Parameters
 

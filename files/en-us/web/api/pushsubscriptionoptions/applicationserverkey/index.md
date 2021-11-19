@@ -15,7 +15,9 @@ The **`applicationServerKey`** read-only property of the {{domxref("PushSubscrip
 
 ## Syntax
 
-    let key = PushSubscriptionOptions.applicationServerKey;
+```js
+let key = PushSubscriptionOptions.applicationServerKey;
+```
 
 ### Value
 

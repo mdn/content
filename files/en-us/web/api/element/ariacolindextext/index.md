@@ -17,8 +17,10 @@ The **`ariaColIndexText`** property of the {{domxref("Element")}} interface refl
 
 ## Syntax
 
-    var ariaColIndexText = element.ariaColIndexText;
-    element.ariaColIndexText = ariaColIndexText
+```js
+var ariaColIndexText = element.ariaColIndexText;
+element.ariaColIndexText = ariaColIndexText
+```
 
 ### Value
 

@@ -19,8 +19,10 @@ The **`ariaLevel`** property of the {{domxref("Element")}} interface reflects th
 
 ## Syntax
 
-    var ariaLevel = element.ariaLevel;
-    element.ariaLevel = ariaLevel
+```js
+var ariaLevel = element.ariaLevel;
+element.ariaLevel = ariaLevel
+```
 
 ### Value
 

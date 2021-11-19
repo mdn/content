@@ -17,8 +17,10 @@ The **`ariaColSpan`** property of the {{domxref("Element")}} interface reflects 
 
 ## Syntax
 
-    var ariaColSpan = element.ariaColSpan;
-    element.ariaColSpan = ariaColSpan
+```js
+var ariaColSpan = element.ariaColSpan;
+element.ariaColSpan = ariaColSpan
+```
 
 ### Value
 

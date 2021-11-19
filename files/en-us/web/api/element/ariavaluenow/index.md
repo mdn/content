@@ -17,8 +17,10 @@ The **`ariaValueNow`** property of the {{domxref("Element")}} interface reflects
 
 ## Syntax
 
-    var ariaValueNow = element.ariaValueNow;
-    element.ariaValueNow = ariaValueNow
+```js
+var ariaValueNow = element.ariaValueNow;
+element.ariaValueNow = ariaValueNow
+```
 
 ### Value
 

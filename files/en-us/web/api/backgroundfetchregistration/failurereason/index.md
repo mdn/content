@@ -15,7 +15,9 @@ The **`failureReason`** read-only property of the {{domxref("BackgroundFetchRegi
 
 ## Syntax
 
-    let failureReason = BackgroundFetchRegistration.failureReason;
+```js
+let failureReason = BackgroundFetchRegistration.failureReason;
+```
 
 ### Value
 

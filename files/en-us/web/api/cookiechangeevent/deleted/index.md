@@ -15,7 +15,9 @@ The **`deleted`** read-only property of the {{domxref("CookieChangeEvent")}} int
 
 ## Syntax
 
-    var array = CookieChangeEvent.deleted;
+```js
+var array = CookieChangeEvent.deleted;
+```
 
 ### Value
 

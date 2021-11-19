@@ -17,8 +17,10 @@ The **`ariaBusy`** property of the {{domxref("Element")}} interface reflects the
 
 ## Syntax
 
-    var ariaBusy = element.ariaBusy;
-    element.ariaBusy = ariaBusy
+```js
+var ariaBusy = element.ariaBusy;
+element.ariaBusy = ariaBusy
+```
 
 ### Value
 

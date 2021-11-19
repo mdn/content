@@ -15,7 +15,9 @@ The **`getPropertyType()`** method of the {{domxref("TrustedTypePolicyFactory")}
 
 ## Syntax
 
-    var null = TrustedTypePolicyFactory.getPropertyType(tagName,property[, elementNS]);
+```js
+var null = TrustedTypePolicyFactory.getPropertyType(tagName,property[, elementNS]);
+```
 
 ### Parameters
 

@@ -15,7 +15,9 @@ The **`createScript()`** method of the {{domxref("TrustedTypePolicy")}} interfac
 
 ## Syntax
 
-    var str = TrustedTypePolicy.createScript(input[,args]);
+```js
+var str = TrustedTypePolicy.createScript(input[,args]);
+```
 
 ### Parameters
 

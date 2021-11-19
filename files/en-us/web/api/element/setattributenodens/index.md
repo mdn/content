@@ -15,7 +15,9 @@ browser-compat: api.Element.setAttributeNodeNS
 
 ## Syntax
 
-    replacedAttr = element.setAttributeNodeNS(attributeNode)
+```js
+replacedAttr = element.setAttributeNodeNS(attributeNode)
+```
 
 - `replacedAttr` is the replaced attribute node, if any, returned by this function.
 - `attributeNode` is an `Attr` node.

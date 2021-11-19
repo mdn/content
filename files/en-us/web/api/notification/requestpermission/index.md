@@ -22,7 +22,9 @@ The **`requestPermission()`** method of the {{domxref("Notification")}} interfac
 
 The latest spec has updated this method to a promise-based syntax that works like this:
 
-    Notification.requestPermission().then(function(permission) { ... });
+```js
+Notification.requestPermission().then(function(permission) { ... });
+```
 
 Previously, the syntax was based on a simple callback; this version is now deprecated:
 

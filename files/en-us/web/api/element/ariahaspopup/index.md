@@ -17,8 +17,10 @@ The **`ariaHasPopup`** property of the {{domxref("Element")}} interface reflects
 
 ## Syntax
 
-    var ariaHasPopup = element.ariaHasPopup;
-    element.ariaHasPopup = ariaHasPopup
+```js
+var ariaHasPopup = element.ariaHasPopup;
+element.ariaHasPopup = ariaHasPopup
+```
 
 ### Value
 

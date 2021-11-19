@@ -20,7 +20,9 @@ Updates the state of commands of the current chrome window (UI).
 
 ## Syntax
 
-    window.updateCommands("sCommandName")
+```js
+window.updateCommands("sCommandName")
+```
 
 ## Parameters
 

@@ -17,7 +17,9 @@ The **`blockSize`** read-only property of the {{domxref("ResizeObserverSize")}} 
 
 ## Syntax
 
-    var blockSize = ResizeObserverSize.blockSize;
+```js
+var blockSize = ResizeObserverSize.blockSize;
+```
 
 ### Value
 

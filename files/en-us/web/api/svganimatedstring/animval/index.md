@@ -11,7 +11,9 @@ AnimVal attribute or animVal property contains the same value as the [**baseVal*
 
 ## Syntax
 
-    var = object.animVal
+```js
+var = object.animVal
+```
 
 ## Specifications
 

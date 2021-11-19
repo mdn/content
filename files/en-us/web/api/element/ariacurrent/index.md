@@ -17,8 +17,10 @@ The **`ariaCurrent`** property of the {{domxref("Element")}} interface reflects 
 
 ## Syntax
 
-    var ariaCurrent = element.ariaCurrent;
-    element.ariaCurrent = ariaCurrent
+```js
+var ariaCurrent = element.ariaCurrent;
+element.ariaCurrent = ariaCurrent
+```
 
 ### Value
 

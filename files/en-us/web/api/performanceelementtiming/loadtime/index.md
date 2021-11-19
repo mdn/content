@@ -15,7 +15,9 @@ The **`loadTime`** read-only property of the {{domxref("PerformanceElementTiming
 
 ## Syntax
 
-    var loadTime = PerformanceElementTiming.loadTime;
+```js
+var loadTime = PerformanceElementTiming.loadTime;
+```
 
 ### Value
 

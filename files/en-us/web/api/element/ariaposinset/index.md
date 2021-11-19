@@ -17,8 +17,10 @@ The **`ariaPosInSet`** property of the {{domxref("Element")}} interface reflects
 
 ## Syntax
 
-    var ariaPosInSet = element.ariaPosInSet;
-    element.ariaPosInSet = ariaPosInSet
+```js
+var ariaPosInSet = element.ariaPosInSet;
+element.ariaPosInSet = ariaPosInSet
+```
 
 ### Value
 

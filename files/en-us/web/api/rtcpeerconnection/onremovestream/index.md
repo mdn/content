@@ -18,7 +18,9 @@ The **`RTCPeerConnection.onremovestream`** event handler is a property containin
 
 ## Syntax
 
-    peerconnection.onremovestream = function;
+```js
+peerconnection.onremovestream = function;
+```
 
 ### Values
 

@@ -18,7 +18,9 @@ This property specifies a callback function to be run repeatedly while the opera
 
 ## Syntax
 
-    instanceOfFileRequest.onprogress = function;
+```js
+instanceOfFileRequest.onprogress = function;
+```
 
 Where `instanceOfFileRequest` is a {{ domxref("FileRequest") }} object and `function` is the JavaScript function to execute.
 
