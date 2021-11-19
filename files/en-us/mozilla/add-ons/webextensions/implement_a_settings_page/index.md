@@ -205,7 +205,7 @@ Now:
 
 - [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on)
 - load a web page
-- open the settings page by visiting about:addons and clicking the <kbd><strong>Preferences</strong></kbd> button next to the extension's entry and change the border color
+- open the settings page by visiting "about:addons" and clicking the <kbd><strong>Preferences</strong></kbd> button next to the extension's entry and change the border color.
 - reload the web page to see the difference.
 
 
