@@ -174,9 +174,91 @@ ctx.fill();
 
 This would get very boring and difficult to maintain very quickly. Loops really are the best.
 
+## Looping through a collection
+
+Most of the time when you use a loop, you will have a collection of items and want to do something with every item.
+
+One type of collection is the {{jsxref("Array")}}, which we met in the [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays) chapter of this course. But there are other collections in JavaScript as well, including {{jsxref("Set")}} and {{jsxref("Map")}}.
+
+### The for...of loop
+
+The basic tool for looping through a collection is the {{jsxref("statements/for...of","for...of")}} loop:
+
+```js
+const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+for (let cat of cats) {
+  console.log(cat);
+}
+```
+
+In this example, `for (let cat of cats)` says:
+
+1. Given the collection `cats`, get the first item in the collection.
+2. Assign it to the variable `cat` and then run the code between the curly brackets `{}`.
+3. Get the next item, and repeat (2) until you've reached the end of the collection.
+
+Note that we have to use `let` for the `cat` variable, because we're assigning it to a new item each time we go round the loop.
+
+### map() and filter()
+
+JavaScript also has more specialized loops for collections, and we'll mention two of them here.
+
+You can use `map()` to do something to each item in a collection and create a new collection containing the changed items:
+
+```js
+function toUpper(string) {
+  return string.toUpperCase();
+}
+
+const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+const upperCats = cats.map(toUpper);
+
+console.log(upperCats);
+// [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
+```
+
+Here we pass a function into {{jsxref("Array.prototype.map()","cats.map()")}}, and `map()` calls the function once for each item in the array, passing in the item. It then adds the return value from each function call to a new array, and finally returns the new array. In this case the function we provide converts the item to uppercase, so the resulting array contains all our cats in uppercase:
+
+```
+[ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
+```
+
+You can use {{jsxref("Array.prototype.filter()","filter()")}} to test each item in a collection, and create a new collection containing only items that match:
+
+```js
+function lCat(cat) {
+  return cat.startsWith('L');
+}
+
+const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+const filtered = cats.filter(lCat);
+
+console.log(filtered);
+// [ "Leopard", "Lion" ]
+```
+
+This looks a lot like `map()`, except the function we pass in returns a [boolean](/en-US/docs/Learn/JavaScript/First_steps/Variables#booleans): if it returns `true`, then the item is included in the new array. Our function tests that the item starts with the letter "L", so the result is an array containing only cats whose names start with "L":
+
+```
+[ "Leopard", "Lion" ]
+```
+
+Note that `map()` and `filter()` are both often used with _function expressions_, which we will learn about in the [Functions](/en-US/docs/Learn/JavaScript/Building_blocks/Functions) module. Using function expressions we could rewrite the example above as the much more compact:
+
+```js
+const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+const filtered = cats.filter((cat) => cat.startsWith('L'));
+console.log(filtered);
+// [ "Leopard", "Lion" ]
+```
+
 ## The standard for loop
 
-Let's start exploring some specific loop constructs. The first, which you'll use most of the time, is the [for](/en-US/docs/Web/JavaScript/Reference/Statements/for) loop. This has the following syntax:
+In the "drawing circles" example above, you don't have a collection of items to loop through: you really just want to run the same code 100 times. In  a case like that you should use the {{jsxref("statements/for","for")}} loop. This has the following syntax:
 
     for (initializer; condition; final-expression) {
       // code to run
@@ -193,81 +275,130 @@ Here we have:
 
 3.  Some curly braces that contain a block of code — this code will be run each time the loop iterates.
 
-### Listing my cats
+### Calculating squares
 
 Let's look at a real example so we can visualize what these do more clearly.
 
 ```html hidden
-  <p></p>
+<button id="calculate">Calculate</button>
+<button id="clear">Clear</button>
+<pre id="results"></pre>
 ```
 
 ```js
-const cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
-let info = 'My cats are called ';
-const para = document.querySelector('p');
+const results = document.querySelector('#results');
 
-for (let i = 0; i < cats.length; i++) {
-  info += cats[i] + ', ';
+function calculate() {
+  for (let i = 1; i < 10; i++) {
+    const newResult = `${i} x ${i} = ${i * i}`;
+    results.textContent += `${newResult}\n`;
+  }
+  results.textContent += '\n...finished!';
 }
 
-para.textContent = info;
+const calculateBtn = document.querySelector('#calculate');
+const clearBtn = document.querySelector('#clear');
+
+calculateBtn.addEventListener('click', calculate);
+clearBtn.addEventListener('click', () => results.textContent = '');
+
 ```
 
 This gives us the following output:
 
-{{ EmbedLiveSample('Listing_my_cats', '100%', 80) }}
+{{ EmbedLiveSample('Calculating squares', '100%', 250) }}
 
-> **Note:** You can find this [example code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
+This code calculates squares for the numbers from 1 to 9, and writes out the result. The core of the code is the `for` loop that performs the calculation.
 
-This shows a loop is used to iterate over the items in an array and do something with each of them — a very common pattern in JavaScript. Here:
+Let's break down the `for (let i = 1; i < 10; i++)` line into its three pieces:
 
-1.  The counter variable (sometimes known as an initializer or an iteration variable), `i`, starts at `0` (`let i = 0`).
-2.  The loop has been told to run until `i` is no longer smaller than the length of the `cats` array. This is important — the condition is the condition under which the loop will still run. So in this case, while `i < cats.length` is still true, the loop will still run.
-3.  Inside the loop, we concatenate the current loop item (`cats[i]` , which is `cats[whatever i is at the time]`) along with a comma and space, onto the end of the `info` variable. So:
+1. `let i = 1`: the counter variable, `i`, starts at `1`.
+2. `i < 10`: keep going round the loop for as long as `i` is smaller than `10`.
+3. `i++`: add one to `i` each time round the loop.
 
-    1.  During the first run, `i = 0`, therefore `cats[0] + ', '` (which is equal to `Bill, `) will be concatenated onto `info`.
-    2.  During the second run, `i = 1`, so `cats[1] + ', '` (which is equal to `Jeff, `) will be concatenated onto `info`.
-    3.  And so on. After each time the loop has run, 1 will be added to `i` (`i++`), then the process will start again.
+Inside the loop, we calculate the square of the current value of `i`, that is: `i * i`. We create a string expressing the calculation we made and the result, and add this string to the output text. We also add `\n`, so the next string we add will begin on a new line. So:
 
-4.  When `i` becomes equal to `cats.length` (in this case, 5), the loop will stop, and the browser will move on to the next bit of code below the loop.
+1. During the first run, `i = 1`, so we will add `1 x 1 = 1`.
+2. During the second run, `i = 2`, so we will add `2 x 2 = 4`.
+3. ...and so on.
+4. When `i` becomes equal to `10` we will stop running the loop and move straight to the next bit of code below the loop, printing out the `...finished!` message.
 
-> **Note:** We have made the condition `i < cats.length`, not `i <= cats.length`, because computers count from 0, not 1 — we are starting `i` at `0`, and going up to `i = 4` (the index of the last array item). `cats.length` returns 5, as there are 5 items in the array, but we don't want to get up to `i = 5`, as that would return `undefined` for the last item (there is no array item with an index of 5). So, therefore, we want to go up to 1 less than `cats.length` (`i <`), not the same as `cats.length` (`i <=`).
+### Looping through collections with a for loop
 
-> **Note:** A common mistake with conditions is making them use "equal to" (`===`) rather than say "less than or equal to" (`<=`). If we wanted to run our loop up to `i = 5`, the exit condition would need to be `i <= cats.length`. If we set it to `i === cats.length`, the loop would not run at all because `i` is not equal to `5` on the first loop iteration, so it would stop immediately.
+You can use a `for` loop to iterate through a collection, instead of a `for...of` loop.
 
-### Handling the last cat
-
-One small problem we are left with is that the final output sentence isn't very well-formed:
-
-> My cats are called Bill, Jeff, Pete, Biggles, Jasmin,
-
-Ideally, we want to change the concatenation on the final loop iteration so that we haven't got a comma on the end of the sentence. Well, no problem — we can quite happily insert a conditional inside our for loop to handle this special case:
-
-```html hidden
-  <p></p>
-```
+Let's look again at our `for...of` example above:
 
 ```js
-const cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
-let info = 'My cats are called ';
-const para = document.querySelector('p');
+const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+for (let cat of cats) {
+  console.log(cat);
+}
+```
+
+We could rewrite that code like this:
+
+```js
+const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
 
 for (let i = 0; i < cats.length; i++) {
-  if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+  console.log(cats[i]);
+}
+```
+
+In this loop we're starting `i` at `0`, and stopping when `i` reaches the length of the array. Then inside the loop we're using `i` to access each item in the array in turn.
+
+This works just fine, and in early versions of JavaScript, `for...of` didn't exist, so this was the standard way to iterate through an array. However, if offers more chances to introduce bugs into your code. For example:
+
+* you might start `i` at `1`, forgetting that the first array index is zero, not 1.
+* you might stop at `i <= cats.length`, forgetting that the last array index is at `length - 1`.
+
+For reasons like this, it's usually best to use `for...of` if you can.
+
+Sometimes you still need to use a `for` loop to iterate through an array. For example, in the code below we want to log a message listing our cats:
+
+```js
+const cats = ['Pete', 'Biggles', 'Jasmin'];
+
+let myFavoriteCats = 'My cats are called ';
+
+for (let cat of cats) {
+  myFavoriteCats = `${myFavoriteCats}${cat}, `
+}
+
+console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmin, "
+```
+
+The final output sentence isn't very well-formed:
+
+```
+My cats are called Pete, Biggles, Jasmin,
+```
+
+We'd prefer it to handle the last cat differently, like this:
+
+```
+My cats are called Pete, Biggles, and Jasmin.
+```
+
+But to do this we need to know when we are on the final loop iteration, and to do that we can use a `for` loop and examine the value of `i`:
+
+```js
+const cats = ['Pete', 'Biggles', 'Jasmin'];
+
+let myFavoriteCats = 'My cats are called ';
+
+for (let i = 0; i < cats.length; i++) {
+  if (i === cats.length - 1) {   // We are at the end of the array
+    myFavoriteCats = `${myFavoriteCats}and ${cats[i]}.`
   } else {
-    info += cats[i] + ', ';
+    myFavoriteCats = `${myFavoriteCats}${cats[i]}, `
   }
 }
 
-para.textContent = info;
+console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmin."
 ```
-
-{{ EmbedLiveSample('Handling_the_last_cat', '100%', 80) }}
-
-> **Note:** You can find this [example code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
-
-> **Warning:** With for — as with all loops — you must make sure that the initializer is incremented or, depending on the case, decremented, so that it eventually reaches the point where the condition is not true. If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an **infinite loop**.
 
 ## Exiting loops with break
 
@@ -297,15 +428,17 @@ btn.addEventListener('click', function() {
   let searchName = input.value.toLowerCase();
   input.value = '';
   input.focus();
-  for (let i = 0; i < contacts.length; i++) {
-    let splitContact = contacts[i].split(':');
+  para.textContent = '';
+  for (let contact of contacts) {
+    let splitContact = contact.split(':');
     if (splitContact[0].toLowerCase() === searchName) {
       para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
       break;
-    } else if (i === contacts.length-1) {
-      para.textContent = 'Contact not found.';
     }
   }
+  if (para.textContent === '') {
+   para.textContent = 'Contact not found.';
+ }
 });
 ```
 
@@ -314,13 +447,12 @@ btn.addEventListener('click', function() {
 1.  First of all, we have some variable definitions — we have an array of contact information, with each item being a string containing a name and phone number separated by a colon.
 2.  Next, we attach an event listener to the button (`btn`) so that when it is pressed some code is run to perform the search and return the results.
 3.  We store the value entered into the text input in a variable called `searchName`, before then emptying the text input and focusing it again, ready for the next search. Note that we also run the [`toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) method on the string, so that searches will be case-insensitive.
-4.  Now on to the interesting part, the for loop:
+4.  Now on to the interesting part, the `for...of` loop:
 
-    1.  We start the counter at `0`, run the loop until the counter is no longer less than `contacts.length`, and increment `i` by 1 after each iteration of the loop.
-    2.  Inside the loop, we first split the current contact (`contacts[i]`) at the colon character, and store the resulting two values in an array called `splitContact`.
-    3.  We then use a conditional statement to test whether `splitContact[0]` (the contact's name, again lower-cased with [`toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)) is equal to the inputted `searchName`. If it is, we enter a string into the paragraph to report what the contact's number is, and use `break` to end the loop.
+    1.  Inside the loop, we first split the current contact at the colon character, and store the resulting two values in an array called `splitContact`.
+    2.  We then use a conditional statement to test whether `splitContact[0]` (the contact's name, again lower-cased with [`toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)) is equal to the inputted `searchName`. If it is, we enter a string into the paragraph to report what the contact's number is, and use `break` to end the loop.
 
-5.  After `(contacts.length-1)` iterations, if the contact name does not match the entered search the paragraph text is set to "Contact not found.", and the loop continues looping until the condition is no longer true.
+4.  After the loop, we check whether we set a contact, and if not we set the paragraph text to "Contact not found.".
 
 > **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
 
@@ -596,7 +728,7 @@ In this exercise, we want you to take a list of names stored in an array and put
 
 Specifically, we want you to:
 
-- Write a loop that will iterate from 0 to the length of the `people` array. You'll need to start with an initializer of  `let i = 0;`, but what condition do you need?
+- Write a loop that will iterate through the `people` array.
 - During each loop iteration, check if the current array item is equal to "Phil" or "Lola" using a conditional statement:
 
   - If it is, concatenate the array item to the end of the `refused` paragraph's `textContent`, followed by a comma and a space.
@@ -604,7 +736,6 @@ Specifically, we want you to:
 
 We've already provided you with:
 
-- `let i = 0;` — Your initializer.
 - `refused.textContent +=` — the beginnings of a line that will concatenate something on to the end of `refused.textContent`.
 - `admitted.textContent +=` — the beginnings of a line that will concatenate something on to the end of `admitted.textContent`.
 
@@ -629,7 +760,7 @@ const refused = document.querySelector('.refused');
 admitted.textContent = 'Admit: ';
 refused.textContent = 'Refuse: '
 
-// let i = 0;
+// loop starts here
 
 // refused.textContent += ;
 // admitted.textContent += ;
@@ -694,7 +825,26 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-const jsSolution = 'const people = [\'Chris\', \'Anne\', \'Colin\', \'Terri\', \'Phil\', \'Lola\', \'Sam\', \'Kay\', \'Bruce\'];\n\nconst admitted = document.querySelector(\'.admitted\');\nconst refused = document.querySelector(\'.refused\');\n\nadmitted.textContent = \'Admit: \';\nrefused.textContent = \'Refuse: \'\nlet i = 0;\n\ndo {\n if(people[i] === \'Phil\' || people[i] === \'Lola\') {\n refused.textContent += people[i] + \', \';\n } else {\n admitted.textContent += people[i] + \', \';\n }\n i++;\n} while(i < people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + \'.\';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + \'.\';';
+const jsSolution = `
+const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+
+const admitted = document.querySelector('.admitted');
+const refused = document.querySelector('.refused');
+
+admitted.textContent = 'Admit: ';
+refused.textContent = 'Refuse: ';
+
+for (let person of people) {
+  if (person === 'Phil' || person === 'Lola') {
+    refused.textContent += \`\${person}, \`;
+  } else {
+    admitted.textContent += \`\${person}, \`;
+  }
+}
+
+refused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + '.';
+admitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + '.';`;
+
 let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -747,33 +897,50 @@ textarea.onkeyup = function(){
 
 ## Which loop type should you use?
 
-For basic uses, `for`, `while`, and `do...while` loops are largely interchangeable. They can all be used to solve the same problems, and which one you use will largely depend on your personal preference — which one you find easiest to remember or most intuitive. Let's have a look at them again.
+If you're iterating through an array or some other object that supports it, and don't need access to the index position of each item, then `for...of` is the best choice. It's easier to read and there's less to go wrong.
 
-First `for`:
+For other uses, `for`, `while`, and `do...while` loops are largely interchangeable. They can all be used to solve the same problems, and which one you use will largely depend on your personal preference — which one you find easiest to remember or most intuitive. We would recommend `for`, at least to begin with, as it is probably the easiest for remembering everything — the initializer, condition, and final-expression all have to go neatly into the parentheses, so it is easy to see where they are and check that you aren't missing them.
 
-    for (initializer; condition; final-expression) {
-      // code to run
-    }
+Let's have a look at them all again.
+
+First `for...of`:
+
+```
+for (let item of array) {
+  // code to run
+}
+```
+
+
+`for`:
+
+```
+for (initializer; condition; final-expression) {
+  // code to run
+}
+```
 
 `while`:
 
-    initializer
-    while (condition) {
-      // code to run
+```
+initializer
+while (condition) {
+  // code to run
 
-      final-expression
-    }
+  final-expression
+}
+```
 
 and finally `do...while`:
 
-    initializer
-    do {
-      // code to run
+```
+initializer
+do {
+  // code to run
 
-      final-expression
-    } while (condition)
-
-We would recommend `for`, at least to begin with, as it is probably the easiest for remembering everything — the initializer, condition, and final-expression all have to go neatly into the parentheses, so it is easy to see where they are and check that you aren't missing them.
+  final-expression
+} while (condition)
+```
 
 > **Note:** There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced [Loops and iteration guide](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration).
 
@@ -790,10 +957,10 @@ If there is anything you didn't understand, feel free to read through the articl
 ## See also
 
 - [Loops and iteration in detail](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+- [for...of reference](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 - [for statement reference](/en-US/docs/Web/JavaScript/Reference/Statements/for)
 - [while](/en-US/docs/Web/JavaScript/Reference/Statements/while) and [do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) references
 - [break](/en-US/docs/Web/JavaScript/Reference/Statements/break) and [continue](/en-US/docs/Web/JavaScript/Reference/Statements/continue) references
-- [What’s the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
