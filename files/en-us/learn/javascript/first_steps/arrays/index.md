@@ -46,18 +46,18 @@ If we didn't have arrays, we'd have to store every item in a separate variable, 
 
 As in previous articles, let's learn about the real basics of arrays by entering some examples into [browser developer console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
 
-### Creating arrays
+## Creating arrays
 
-Arrays consist of square brackets and elements that are separated by commas.
+Arrays consist of square brackets and items that are separated by commas.
 
 1.  Suppose we want to store a shopping list in an array. Paste the following code into the console:
 
     ```js
     let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
-    shopping;
+    console.log(shopping);
     ```
 
-2.  In the above example, each element is a string, but in an array we can store various data types — strings, numbers, objects, and even other arrays. We can also mix data types in a single array — we do not have to limit ourselves to storing only numbers in one array, and in another only strings. For example:
+2.  In the above example, each item is a string, but in an array we can store various data types — strings, numbers, objects, and even other arrays. We can also mix data types in a single array — we do not have to limit ourselves to storing only numbers in one array, and in another only strings. For example:
 
     ```js
     let sequence = [1, 1, 2, 3, 5, 8, 13];
@@ -66,22 +66,33 @@ Arrays consist of square brackets and elements that are separated by commas.
 
 3.  Before proceeding, create a few example arrays.
 
-### Accessing and modifying array items
+## Finding the length of an array
 
-You can then access individual items in the array using bracket notation, in the same way that you [accessed the letters in a string](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
+You can find out the length of an array (how many items are in it) in exactly the same way as you find out the length (in characters) of a string — by using the {{jsxref("Array.prototype.length","length")}} property. Try the following:
+
+```js
+let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+console.log(shopping.length);  // 5
+```
+
+## Accessing and modifying array items
+
+Items in an array are numbered, starting from zero. This number is called the item's *index*. So the first item has index 0, the second has index 1, and so on. You can access individual items in the array using bracket notation and supplying the item's index, in the same way that you [accessed the letters in a string](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
 
 1.  Enter the following into your console:
 
     ```js
-    shopping[0];
+    let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+    console.log(shopping[0]);
     // returns "bread"
     ```
 
 2.  You can also modify an item in an array by giving a single array item a new value. Try this:
 
     ```js
+    let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
     shopping[0] = 'tahini';
-    shopping;
+    console.log(shopping);
     // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]
     ```
 
@@ -90,40 +101,142 @@ You can then access individual items in the array using bracket notation, in the
 3.  Note that an array inside an array is called a multidimensional array. You can access an item inside an array that is itself inside another array by chaining two sets of square brackets together. For example, to access one of the items inside the array that is the third item inside the `random` array (see previous section), we could do something like this:
 
     ```js
+    let random = ['tree', 795, [0, 1, 2]];
     random[2][2];
     ```
 
 4.  Try making some more modifications to your array examples before moving on. Play around a bit, and see what works and what doesn't.
 
-### Finding the length of an array
+## Finding items in an array
 
-You can find out the length of an array (how many items are in it) in exactly the same way as you find out the length (in characters) of a string — by using the {{jsxref("Array.prototype.length","length")}} property. Try the following:
+This is fine if you know the index of an item, but what if you don't? You can find the index of a particular item using the {{jsxref("Array.prototype.indexOf()","indexOf()")}} method. This takes an item as an argument and returns the index, or `-1` if the item was not found in the array:
 
 ```js
-shopping.length;
-// should return 5
+const birds = ['Parrot', 'Falcon', 'Owl'];
+console.log(birds.indexOf('Owl'));   //  2
+console.log(birds.indexOf('Rabbit')) // -1
 ```
 
-This has other uses, but it is most commonly used to tell a loop to keep going until it has looped through all the items in an array. So for example:
+## Adding items
+
+To add one or more items to the end of an array we can use {{jsxref("Array.prototype.push()","push()")}}. Note that you need to include one or more items that you want to add to the end of your array.
 
 ```js
-let sequence = [1, 1, 2, 3, 5, 8, 13];
-for (let i = 0; i < sequence.length; i++) {
-  console.log(sequence[i]);
+let myArray = ['Manchester', 'Liverpool'];
+myArray.push('Cardiff');
+console.log(myArray);      // [ "Manchester", "Liverpool", "Cardiff" ]
+myArray.push('Bradford', 'Brighton');
+console.log(myArray);      // [ "Manchester", "Liverpool", "Cardiff", "Bradford", "Brighton" ]
+```
+
+The new length of the array is returned when the method call completes. If you wanted to store the new array length in a variable, you could do something like this:
+
+```js
+let myArray = ['Manchester', 'Liverpool'];
+let newLength = myArray.push('Bristol');
+console.log(myArray);     // [ "Manchester", "Liverpool", "Bristol" ]
+console.log(newLength);   // 3
+```
+
+To add an item to the start of the array, use {{jsxref("Array.prototype.unshift()","unshift()")}}:
+
+```js
+let myArray = ['Manchester', 'Liverpool'];
+myArray.unshift('Edinburgh');
+console.log(myArray);     // [ "Edinburgh", "Manchester", "Liverpool" ]
+```
+
+## Removing items
+
+To remove the last item from the array, use {{jsxref("Array.prototype.pop()","pop()")}}.
+
+```js
+let myArray = ['Manchester', 'Liverpool'];
+myArray.pop();
+console.log(myArray);     // [ "Manchester" ]
+```
+
+The `pop()` method returns the item that was removed. To save that item in a new variable, you could do this:
+
+```js
+let myArray = ['Manchester', 'Liverpool'];
+let removedItem = myArray.pop();
+console.log(removedItem);     // "Liverpool"
+```
+
+To remove the first item from an array, use {{jsxref("Array.prototype.shift()","shift()")}}:
+
+```js
+let myArray = ['Manchester', 'Liverpool'];
+myArray.shift();
+console.log(myArray);     // [ "Liverpool" ]
+```
+
+If you know the index of an item, you can remove it from the array using {{jsxref("Array.prototype.splice()","splice()")}}:
+
+```js
+let myArray = ['Manchester', 'Liverpool', 'Edinburgh', 'Carlisle'];
+let index = myArray.indexOf('Liverpool');
+if (index !== -1) {
+  myArray.splice(index, 1);
+}
+console.log(myArray);     // [ "Manchester", "Edinburgh", "Carlisle" ]
+```
+
+In this call to `splice()`, the first argument says where to start removing items, and the second argument says  how many items should be removed. So you can remove more than one item:
+
+```js
+let myArray = ['Manchester', 'Liverpool', 'Edinburgh', 'Carlisle'];
+let index = myArray.indexOf('Liverpool');
+if (index !== -1) {
+  myArray.splice(index, 2);
+}
+console.log(myArray);     // [ "Manchester", "Carlisle" ]
+```
+
+## Accessing every item
+
+Very often you will want to access every item in the array. You can do this using the {{jsxref("statements/for...of","for...of")}} statement:
+
+```js
+const birds = ['Parrot', 'Falcon', 'Owl'];
+
+for (let bird of birds) {
+  console.log(bird);
 }
 ```
 
-You'll learn about loops properly later on (in our [Looping code](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code) article), but briefly, this code is saying:
+Sometimes you will want to do the same thing to each item in an array, leaving you with an array containing the changed items. You can do this using {{jsxref("Array.prototype.map()","map()")}}. The code below takes an array of numbers and doubles each number:
 
-1.  Start looping at item number 0 in the array.
-2.  Stop looping at the item number equal to the length of the array. This works for an array of any length, but in this case it stops looping at item number 7 (this is good, as the last item — which we want the loop to include — is item 6).
-3.  For each item, print it out to the browser console with [`console.log()`](/en-US/docs/Web/API/console/log).
+```js
+function double(number) {
+  return number * 2;
+}
 
-## Some useful array methods
+const numbers = [5, 2, 7, 6];
+const doubled = numbers.map(double);
 
-In this section we'll look at some rather useful array-related methods that allow us to split strings into array items and vice versa, and add new items into arrays.
+console.log(doubled);  // [ 10, 4, 14, 12 ]
+```
 
-### Converting between strings and arrays
+We give a function to the `map()`, and `map()` calls the function once for each item in the array, passing in the item. It then adds the return value from each function call to a new array, and finally returns the new array.
+
+Sometimes you'll want to create a new array containing only the items in the original array that match some test. You can do this using {{jsxref("Array.prototype.filter()","filter()")}}. The code below takes an array of strings and filters out all strings that are less than 8 characters long:
+
+```js
+function isLong(city) {
+  return city.length > 8;
+}
+
+const cities = ['London', 'Liverpool', 'Totnes', 'Edinburgh'];
+const longer = cities.filter(isLong);
+
+console.log(longer);  // [ "Liverpool", "Edinburgh" ]
+```
+
+Like `map()`, we give a function to the `filter()` method, and `filter()` calls this function for every item in the array, passing in the item. If the function returns `true`, then the item is added to a new array. Finally it returns the new array.
+
+## Converting between strings and arrays
 
 Often you'll be presented with some raw data contained in a big long string, and you might want to separate the useful items out into a more useful form and then do things to them, like display them in a data table. To do this, we can use the {{jsxref("String.prototype.split()","split()")}} method. In its simplest form, this takes a single parameter, the character you want to separate the string at, and returns the substrings between the separator as items in an array.
 
@@ -165,74 +278,17 @@ Often you'll be presented with some raw data contained in a big long string, and
     dogNames.toString(); // Rocket,Flash,Bella,Slugger
     ```
 
-### Adding and removing array items
-
-We've not yet covered adding and removing array items — let us look at this now. We'll use the `myArray` array we ended up with in the last section. If you've not already followed that section, create the array first in your console:
-
-```js
-let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carlisle'];
-```
-
-First of all, to add or remove an item at the end of an array we can use {{jsxref("Array.prototype.push()","push()")}} and {{jsxref("Array.prototype.pop()","pop()")}} respectively.
-
-1.  Let's use `push()` first — note that you need to include one or more items that you want to add to the end of your array. Try this:
-
-    ```js
-    myArray.push('Cardiff');
-    myArray;
-    myArray.push('Bradford', 'Brighton');
-    myArray;
-    ```
-
-2.  The new length of the array is returned when the method call completes. If you wanted to store the new array length in a variable, you could do something like this:
-
-    ```js
-    let newLength = myArray.push('Bristol');
-    myArray;
-    newLength;
-    ```
-
-3.  Removing the last item from the array is as simple as running `pop()` on it. Try this:
-
-    ```js
-    myArray.pop();
-    ```
-
-4.  The item that was removed is returned when the method call completes. To save that item in a new variable, you could do this:
-
-    ```js
-    let removedItem = myArray.pop();
-    myArray;
-    removedItem;
-    ```
-
-{{jsxref("Array.prototype.unshift()","unshift()")}} and {{jsxref("Array.prototype.shift()","shift()")}} work in exactly the same way as `push()` and `pop()`, respectively, except that they work on the beginning of the array, not the end.
-
-1.  First `unshift()` — try the following commands:
-
-    ```js
-    myArray.unshift('Edinburgh');
-    myArray;
-    ```
-
-2.  Now `shift()`; try these!
-
-    ```js
-    let removedItem = myArray.shift();
-    myArray;
-    removedItem;
-    ```
-
 ## Active learning: Printing those products
 
 Let's return to the example we described earlier — printing out product names and prices on an invoice, then totaling the prices and printing them at the bottom. In the editable example below there are comments containing numbers — each of these marks a place where you have to add something to the code. They are as follows:
 
 1.  Below the `// number 1` comment are a number of strings, each one containing a product name and price separated by a colon. We'd like you to turn this into an array and store it in an array called `products`.
-2.  On the same line as the `// number 2` comment is the beginning of a for loop. In this line we currently have `i <= 0`, which is a conditional test that causes the [for loop](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash#loops) to only run once, because it is saying "stop when `i` is no longer less than or equal to 0", and `i` starts at 0. We'd like you to replace this with a conditional test that stops the loop when `i` is no longer less than the `products` array's length.
-3.  Just below the `// number 3` comment we want you to write a line of code that splits the current array item (`name:price`) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods) article for some help, or even better, look at the {{anch("Converting between strings and arrays")}} section of this article.
+2.  Below the `// number 2` comment, start a `for...of()` loop to go through every item in the `products` array.
+3.  Below the `// number 3` comment we want you to write a line of code that splits the current array item (`name:price`) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods) article for some help, or even better, look at the {{anch("Converting between strings and arrays")}} section of this article.
 4.  As part of the above line of code, you'll also want to convert the price from a string to a number. If you can't remember how to do this, check out the [first strings article](/en-US/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings).
 5.  There is a variable called `total` that is created and given a value of 0 at the top of the code. Inside the loop (below `// number 4`) we want you to add a line that adds the current item price to that total in each iteration of the loop, so that at the end of the code the correct total is printed onto the invoice. You might need an [assignment operator](/en-US/docs/Learn/JavaScript/First_steps/Math#assignment_operators) to do this.
 6.  We want you to change the line just below `// number 5` so that the `itemText` variable is made equal to "current item name — $current item price", for example "Shoes — $23.99" in each case, so the correct information for each item is printed on the invoice. This is just simple string concatenation, which should be familiar to you.
+7. Finally, below the `// number 6` comment, you'll need to add a `}` to mark the end of the `for...of()` loop.
 
 ```html hidden
 <h2>Live output</h2>
@@ -264,7 +320,8 @@ totalBox.textContent = '';
                 'Trousers:31.99'
                 'Shoes:23.99';
 
-for (let i = 0; i <= 0; i++) { // number 2
+// number 2
+
   // number 3
 
   // number 4
@@ -275,7 +332,8 @@ for (let i = 0; i <= 0; i++) { // number 2
   const listItem = document.createElement('li');
   listItem.textContent = itemText;
   list.appendChild(listItem);
-}
+
+// number 6
 
 totalBox.textContent = 'Total: $' + total.toFixed(2);
 </textarea>
@@ -316,7 +374,31 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-const jsSolution = 'const list = document.querySelector(\'.output ul\');\nconst totalBox = document.querySelector(\'.output p\');\nlet total = 0;\nlist.innerHTML = \'\';\ntotalBox.textContent = \'\';\n\nlet products = [\'Underpants:6.99\',\n  \'Socks:5.99\',\n  \'T-shirt:14.99\',\n  \'Trousers:31.99\',\n  \'Shoes:23.99\'];\n\nfor(let i = 0; i < products.length; i++) {\n  let subArray = products[i].split(\':\');\n  let name = subArray[0];\n  let price = Number(subArray[1]);\n  total += price;\n  let itemText = name + \' — $\' + price;\n\n  let listItem = document.createElement(\'li\');\n  listItem.textContent = itemText;\n  list.appendChild(listItem);\n}\n\ntotalBox.textContent = \'Total: $\' + total.toFixed(2);';
+const jsSolution = `const list = document.querySelector('.output ul');
+const totalBox = document.querySelector('.output p');
+let total = 0;
+list.innerHTML = '';
+totalBox.textContent = '';
+
+let products = ['Underpants:6.99',
+  'Socks:5.99',
+  'T-shirt:14.99',
+  'Trousers:31.99',
+  'Shoes:23.99'];
+
+for (let product of products) {
+  let subArray = product.split(':');
+  let name = subArray[0];
+  let price = Number(subArray[1]);
+  total += price;
+  let itemText = name + ' — $' + price;
+
+  let listItem = document.createElement('li');
+  listItem.textContent = itemText;
+  list.appendChild(listItem);
+}
+
+totalBox.textContent = 'Total: $' + total.toFixed(2);`;
 let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -437,8 +519,7 @@ searchBtn.onclick = function() {
     list.innerHTML = '';
 
     // loop through the array, and display all the search terms in the list
-    for (let i = 0; i < myHistory.length; i++) {
-      itemText = myHistory[i];
+    for (let itemText of myHistory) {
       const listItem = document.createElement('li');
       listItem.textContent = itemText;
       list.appendChild(listItem);
@@ -515,7 +596,40 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-const jsSolution = 'const list = document.querySelector(\'.output ul\');\nconst searchInput = document.querySelector(\'.output input\');\nconst searchBtn = document.querySelector(\'.output button\');\n\nlist.innerHTML = \'\';\n\nlet myHistory= [];\n\nsearchBtn.onclick = function() {\n if(searchInput.value !== \'\') {\n myHistory.unshift(searchInput.value);\n\n list.innerHTML = \'\';\n\n for(let i = 0; i < myHistory.length; i++) {\n itemText = myHistory[i];\n const listItem = document.createElement(\'li\');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n }\n\n if(myHistory.length >= 5) {\n myHistory.pop();\n }\n\n searchInput.value = \'\';\n searchInput.focus();\n }\n}';
+const jsSolution = `const list = document.querySelector('.output ul');
+const searchInput = document.querySelector('.output input');
+const searchBtn = document.querySelector('.output button');
+
+list.innerHTML = '';
+
+let myHistory = [];
+
+searchBtn.onclick = function() {
+  // we will only allow a term to be entered if the search input isn't empty
+  if (searchInput.value !== '') {
+    myHistory.unshift(searchInput.value);
+
+    // empty the list so that we don't display duplicate entries
+    // the display is regenerated every time a search term is entered.
+    list.innerHTML = '';
+
+    // loop through the array, and display all the search terms in the list
+    for (let itemText of myHistory) {
+      const listItem = document.createElement('li');
+      listItem.textContent = itemText;
+      list.appendChild(listItem);
+    }
+
+    // If the array length is 5 or more, remove the oldest search term
+    if (myHistory.length >= 5) {
+      myHistory.pop();
+    }
+
+    // empty the search input and focus it, ready for the next term to be entered
+    searchInput.value = '';
+    searchInput.focus();
+  }
+}`;
 let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
