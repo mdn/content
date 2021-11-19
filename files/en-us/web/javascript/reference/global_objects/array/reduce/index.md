@@ -20,7 +20,7 @@ The final result of running the reducer across all elements of the array is a si
 
 The first time that the callback is run there is no "return value of the previous calculation".
 If supplied, an initial value may be used in its place.
-Otherwise array element 0 is used as the intitial value and iteration starts from the next element (index 1 instead of index 0).
+Otherwise array element 0 is used as the initial value and iteration starts from the next element (index 1 instead of index 0).
 
 Perhaps the easiest-to-understand case for `reduce()` is to return the sum of all the elements in an array.
 
@@ -54,7 +54,7 @@ reduce(function(previousValue, currentValue, currentIndex, array) { ... }, initi
 
 - `callbackFn`
   - : A “reducer” function that takes four arguments:
-    - `previousValue`: the value resulting from the previous call to `callbackfn`.
+    - `previousValue`: the value resulting from the previous call to `callbackFn`.
       On first call, `initialValue` if specified, otherwise the value of `array[0]`. 
     - `currentValue`: the value of the current element.
       On first call, the value of `array[0]` if an `initialValue` was specified, otherwise the value of `array[1]`. 
@@ -184,7 +184,7 @@ The callback would be invoked four times, with the arguments and return values i
       <td><code>9</code></td>
       <td><code>4</code></td>
       <td><code>[5, 6, 7, 8, 9]</code></td>
-      <td><code>25</code></td>
+      <td><code>35</code></td>
     </tr>
   </tbody>
 </table>
