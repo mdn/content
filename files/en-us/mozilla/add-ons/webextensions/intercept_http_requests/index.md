@@ -65,17 +65,15 @@ The `{urls: ["<all_urls>"]}` [pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions
 To test it out:
 - [Install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
 - Open the [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/) (use <kbd>Ctrl + Shift + J</kbd>)
-  > **Note:** The *Browser Console* must be used.
-  > This is not the same as the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/).
 - Enable *Show Content Messages* in the menu:
 
   ![Browser console menu : Show Content Messages](browser_console_show_content_messages.png)
 - Open some Web pages. 
 
 In the Browser Console, you should see the URLs for any resources that the browser requests.
-For example, the screenshot below shows the URLS from loading a WikiPedia page:
+For example, this screenshot shows the URLs from loading a Wikipedia page:
 
-![Browser console menu : URLS from extension](browser_console_url_from_extension.png)
+![Browser console menu : URLs from extension](browser_console_url_from_extension.png)
 
 <!-- {{EmbedYouTube("X3rMgkRkB1Q")}} -->
 
