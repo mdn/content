@@ -91994,12 +91994,6 @@
       "sideshowbarker"
     ]
   },
-  "Web/API/XRSystem/ondevicechange": {
-    "modified": "2020-10-15T22:27:07.001Z",
-    "contributors": [
-      "sideshowbarker"
-    ]
-  },
   "Web/API/XRSystem/requestSession": {
     "modified": "2020-12-12T14:47:40.520Z",
     "contributors": [

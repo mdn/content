@@ -9086,7 +9086,7 @@
 /en-US/docs/Web/API/XR	/en-US/docs/Web/API/XRSystem
 /en-US/docs/Web/API/XR/devicechange_event	/en-US/docs/Web/API/XRSystem/devicechange_event
 /en-US/docs/Web/API/XR/isSessionSupported	/en-US/docs/Web/API/XRSystem/isSessionSupported
-/en-US/docs/Web/API/XR/ondevicechange	/en-US/docs/Web/API/XRSystem/ondevicechange
+/en-US/docs/Web/API/XR/ondevicechange	/en-US/docs/Web/API/XRSystem/devicechange_event
 /en-US/docs/Web/API/XR/requestSession	/en-US/docs/Web/API/XRSystem/requestSession
 /en-US/docs/Web/API/XR/supportsSession	/en-US/docs/Web/API/XRSystem/isSessionSupported
 /en-US/docs/Web/API/XREnvironmentBlendMode	/en-US/docs/Web/API/XRSession/environmentBlendMode
@@ -9112,6 +9112,7 @@
 /en-US/docs/Web/API/XRSessionEventInit/session	/en-US/docs/Web/API/XRSessionEvent/XRSessionEvent
 /en-US/docs/Web/API/XRSessionInit	/en-US/docs/Web/API/XRSystem/requestSession
 /en-US/docs/Web/API/XRSessionMode	/en-US/docs/Web/API/XRSystem/requestSession
+/en-US/docs/Web/API/XRSystem/ondevicechange	/en-US/docs/Web/API/XRSystem/devicechange_event
 /en-US/docs/Web/API/XRTargetRayMode	/en-US/docs/Web/API/XRInputSource/targetRayMode
 /en-US/docs/Web/API/XRTargetRayModoe	/en-US/docs/Web/API/XRInputSource/targetRayMode
 /en-US/docs/Web/API/XRVisibilityState	/en-US/docs/Web/API/XRSession/visibilityState
