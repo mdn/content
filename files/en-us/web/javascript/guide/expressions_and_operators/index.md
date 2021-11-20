@@ -156,7 +156,7 @@ it can then be used by another expression.
 
 Chaining assignments or nesting assignments in other expressions can
 result in surprising behavior. For this reason, some JavaScript style guides
-[discourage chaining or nesting assignments][discourage assign chain]).
+[discourage chaining or nesting assignments][discourage assignment chaining]).
 Nevertheless, assignment chaining and nesting may occur in sometimes,
 so it is important to be able to understand how it works.
 
