@@ -162,7 +162,7 @@ so it is important to be able to understand how they work.
 
 [discourage assign chain]: https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment
 
-By chaining or nesting the assignment expression,
+By chaining or nesting an assignment expression,
 its result can itself be assigned to another variable. It can be logged, it can
 be put inside an array literal or function call, and so on.
 
