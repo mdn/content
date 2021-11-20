@@ -31,7 +31,7 @@ lastIndexOf(searchValue, fromIndex)
 - `searchValue`
   - : A string representing the value to search for. If
     `searchValue` is an empty string, then
-    `fromIndex` is returned.
+    `fromIndex` is returned, or the string length if `fromIndex` is not defined.
 - `fromIndex` {{optional_inline}}
   - : The index of the last character in the string to be considered as the beginning of a
     match. The default value is `+Infinity`. If
