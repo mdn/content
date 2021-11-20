@@ -107,8 +107,7 @@ console.log(obj[key]); // Prints 5.
 console.log(obj); // Prints { x: 3, y: 5 }.
 ```
 
-For more information about objects, read
-the tutorial chapter about [Working with Objects][object].
+For more information about objects, read [Working with Objects][object].
 
 [object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
 
