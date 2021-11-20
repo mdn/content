@@ -280,8 +280,7 @@ However, it evaluates from left to right:
 
 `x[f()] = g()` also evaluates from left to right.
 (This example assumes that `x` is already assigned to some [object][].
-For more information about objects, read
-the tutorial chapter about [Working with Objects][object].)
+For more information about objects, read [Working with Objects][object].)
 
 1. The assignment expression `x[f()] = g()` starts to evaluate.
     1. The `x[f()]` property access on this assignment’s left-hand
