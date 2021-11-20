@@ -88,21 +88,24 @@ listed in the following table:
 | [Logical nullish assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)           | `x ??= f()`        | `x ?? (x = y)`   |
 
 #### Assigning to properties
+
 If a variable refers to an [object][], then
 the left-hand side of an assignment expression
-may refer to the property of that variable.
+may make assignments to properties of that variable.
 For example:
 
-    let obj = {};
+```js
+let obj = {};
 
-    obj.x = 3;
-    console.log(obj.x); // Prints 3.
-    console.log(obj); // Prints { x: 3 }.
-    
-    const key = "y";
-    obj[key] = 5;
-    console.log(obj[key]); // Prints 5.
-    console.log(obj); // Prints { x: 3, y: 5 }.
+obj.x = 3;
+console.log(obj.x); // Prints 3.
+console.log(obj); // Prints { x: 3 }.
+
+const key = "y";
+obj[key] = 5;
+console.log(obj[key]); // Prints 5.
+console.log(obj); // Prints { x: 3, y: 5 }.
+```
 
 For more information about objects, read
 the tutorial chapter about [Working with Objects][object].
@@ -110,6 +113,7 @@ the tutorial chapter about [Working with Objects][object].
 [object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
 
 #### Destructuring
+
 For more complex assignments, the [destructuring
 assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax is a JavaScript expression that makes it possible to extract
 data from arrays or objects using a syntax that mirrors the construction of array and
@@ -128,16 +132,19 @@ var [one, two, three] = foo;
 ```
 
 #### Evaluation and nesting
+
 In general, assignments are used within a variable declaration
 (i.e., with [`const`][], [`let`][], or [`var`][]) or as standalone statements.
 
-    // Declares a variable x and initializes it to the result of f().
-    // The result of the x = f() assignment expression is discarded.
-    let x = f();
+```js
+// Declares a variable x and initializes it to the result of f().
+// The result of the x = f() assignment expression is discarded.
+let x = f();
 
-    // Declares a variable x and initializes it to the result of f().
-    // The result of the x = g() assignment expression is discarded.
-    x = g(); Reassigns the variable x to the result of g().
+// Declares a variable x and initializes it to the result of f().
+// The result of the x = g() assignment expression is discarded.
+x = g(); Reassigns the variable x to the result of g().
+```
 
 [`const`]: /en-US/docs/Web/JavaScript/Reference/Statements/const
 [`let`]: /en-US/docs/Web/JavaScript/Reference/Statements/let
@@ -151,7 +158,7 @@ Chaining assignments or nesting assignments in other expressions can
 result in surprising behavior. For this reason, some JavaScript style guides
 [discourage chaining or nesting assignments][discourage assign chain]).
 Nevertheless, assignment chaining and nesting may occur in sometimes,
-so it is important to be able to understand how it works. 
+so it is important to be able to understand how it works.
 
 [discourage assign chain]: https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment
 
@@ -159,17 +166,19 @@ By chaining or nesting the assignment expression,
 its result can itself be assigned to another variable. It can be logged, it can
 be put inside an array literal or function call, and so on.
 
-    let x;
-    const y = (x = f()); // Or equivalently: const y = x = f();
-    console.log(y); // Logs the return value of the assignment x = f().
+```js
+let x;
+const y = (x = f()); // Or equivalently: const y = x = f();
+console.log(y); // Logs the return value of the assignment x = f().
 
-    console.log(x = f()); // Logs the return value directly.
+console.log(x = f()); // Logs the return value directly.
 
-    // An assignment expression can be nested in any place
-    // where expressions are generally allowed,
-    // such as as array literals’ elements or as function calls’ arguments.
-    console.log([ 0, x = f(), 0 ]);
-    console.log(f(0, x = f(), 0));
+// An assignment expression can be nested in any place
+// where expressions are generally allowed,
+// such as as array literals’ elements or as function calls’ arguments.
+console.log([ 0, x = f(), 0 ]);
+console.log(f(0, x = f(), 0));
+```
 
 The evaluation result matches the expression to the right of the `=` sign in the
 “Meaning” column of the table above. That means that `x = f()` evaluates into
@@ -194,23 +203,28 @@ the operation.
 For example, assume that the following functions `f` and `g`
 and the variables `x` and `y` have been declared:
 
-    function f () {
-      console.log('F!');
-      return 2;
-    }
-    function g () {
-      console.log('G!');
-      return 3;
-    }
-    let x, y;
+```js
+function f () {
+  console.log('F!');
+  return 2;
+}
+function g () {
+  console.log('G!');
+  return 3;
+}
+let x, y;
+```
 
 Consider these three examples:
 
-    y = x = g()
-    y = [ f(), x = g() ]
-    x[f()] = g()
+```js
+y = x = g()
+y = [ f(), x = g() ]
+x[f()] = g()
+```
 
-##### Evaluation example 1
+##### Evaluation example 1
+
 `y = x = f()` is equivalent to `y = (x = f())`,
 because the assignment operator `=` is [right-associative][].
 However, it evaluates from left to right:
@@ -232,7 +246,8 @@ However, it evaluates from left to right:
    `x` and `y` are assigned to `2`,
    and the console has printed "F!".
 
-##### Evaluation example 2
+##### Evaluation example 2
+
 `y = [ f(), x = g() ]` also evaluates from left to right:
 
 1. The assignment expression `y = [ f(), x = g() ]` starts to evaluate.
@@ -262,7 +277,8 @@ However, it evaluates from left to right:
    `y` is now assigned to `[ 2, 3 ]`,
    and the console has printed "F!" then "G!".
 
-##### Evaluation example 2
+##### Evaluation example 2
+
 `x[f()] = g()` also evaluates from left to right.
 (This example assumes that `x` is already assigned to some [object][].
 For more information about objects, read
@@ -289,6 +305,7 @@ the tutorial chapter about [Working with Objects][object].)
    and the console has printed "F!" then "G!".
 
 #### Avoid assignment chains
+
 Chaining assignments or nesting assignments in other expressions can
 result in surprising behavior. For this reason, [chaining assignments
 in the same statement is discouraged][discourage assign chain]).
@@ -300,7 +317,9 @@ Only the outermost/leftmost variable would get declared;
 any other variables within the assignment chain are *not* declared
 by the `const`/`let`/`var` statement. For example:
 
-    let z = y = x = f();
+```js
+let z = y = x = f();
+```
 
 This statement seemingly declares the variables `x`, `y`, and `z`.
 However, it only actually declares the variable `z`.
