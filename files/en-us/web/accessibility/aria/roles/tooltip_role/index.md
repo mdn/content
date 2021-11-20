@@ -41,8 +41,7 @@ The accessible name of a tooltip can come from the contents, or from an [`aria-l
   
 ### Keyboard interactions
 
-- <kbd>Escape</kbd> 
-  - : Closes the tooltip
+- <kbd>Escape</kbd> : Closes the tooltip
 
 
 The tooltip should appear on focus or when the element is hovered, without keyboard action. It should disappear automatically when focus on the owning element is lost or the mouse is moved. While the tooltip does not receive focus, the <kbd>Escape</kbd> should close it if it is open.
