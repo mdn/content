@@ -36,7 +36,7 @@ Where a `<time-percentage>` is specified as an allowable type, this means that t
 ### Invalid percentages
 
 ```plain example-bad
-50 %        Space not allowed between the space and the percentage sign
+50 %        Space not allowed between the number and the percentage sign
 ```
 
 ### Valid times
