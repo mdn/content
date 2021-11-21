@@ -28,7 +28,7 @@ The `<frequency>` data type consists of a {{cssxref("&lt;number&gt;")}} followed
 
 ## Examples
 
-### Valid frequency values
+Valid frequency values:
 
 ```plain example-good
 12Hz     Positive integer
@@ -38,7 +38,7 @@ The `<frequency>` data type consists of a {{cssxref("&lt;number&gt;")}} followed
 -0kHz    Zero, with a leading - and a unit
 ```
 
-### Invalid frequency values
+Invalid frequency values:
 
 ```plain example-bad
 12.0     This is a <number>, not an <frequency>, because it is missing a unit.
