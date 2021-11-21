@@ -24,7 +24,7 @@ In the first above example, the width will be at most 200px, but will be smaller
 
 The `min()` function takes one or more comma-separated expressions as its parameter, with the smallest (most negative) expression value result used as the value.
 
-The expressions can be math expressions (using arithmetic operators), literal values, or other expressions, such as {{CSSxRef("attr", "attr()")}}, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}).
+The expressions can be math expressions (using arithmetic operators), literal values, or other expressions, such as {{CSSxRef("attr()")}}, that evaluate to a valid argument type (like {{CSSxRef("&lt;length&gt;")}}).
 
 You can use different units for each value in your expression, if you wish. You may also use parentheses to establish computation order when needed.
 
@@ -44,7 +44,7 @@ You can use different units for each value in your expression, if you wish. You 
 
 When using `min()` to set a maximum font size, ensure that the font can still be scaled at least 200% for readability (without assistive technology like a zoom function).
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Examples
@@ -92,7 +92,7 @@ Here, the form itself, along with the margin, border, and padding, will be 100% 
 
 ## See also
 
-- {{CSSxRef("calc", "calc()")}}
-- {{CSSxRef("clamp", "clamp()")}}
-- {{CSSxRef("max", "max()")}}
-- [CSS Values](/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- {{CSSxRef("calc()")}}
+- {{CSSxRef("clamp()")}}
+- {{CSSxRef("max()")}}
+- [CSS Values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
