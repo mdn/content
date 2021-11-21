@@ -88,7 +88,7 @@ You can set a default value for the input control by including a month and year 
 
 ```html
 <label for="bday-month">What month were you born in?</label>
-<input id="bday-month" type="month" name="bday-month" value="2017-06">
+<input id="bday-month" type="month" name="bday-month" value="2001-06">
 ```
 
 {{EmbedLiveSample('Setting_a_default_value', 600, 60)}}
@@ -103,12 +103,12 @@ You can also get and set the date value in JavaScript using the {{domxref("HTMLI
 
 ```html
 <label for="bday-month">What month were you born in?</label>
-<input id="bday-month" type="month" name="bday-month" value="2017-06">
+<input id="bday-month" type="month" name="bday-month">
 ```
 
 ```js
 var monthControl = document.querySelector('input[type="month"]');
-monthControl.value = '1978-06';
+monthControl.value = '2001-06';
 ```
 
 {{EmbedLiveSample("Setting_the_value_using_JavaScript", 600, 60)}}
@@ -182,13 +182,13 @@ The simplest use of `<input type="month">` involves a basic {{HTMLElement("input
 ### Setting maximum and minimum dates
 
 You can use the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes to restrict the range of dates that the user can choose.
-In the following example we specify a minimum month of `1900-01` and a maximum month of `1999-12`:
+In the following example we specify a minimum month of `1900-01` and a maximum month of `2013-12`:
 
 ```html
 <form>
   <label for="bday-month">What month were you born in?</label>
   <input id="bday-month" type="month" name="bday-month"
-         min="1900-01" max="1999-12">
+         min="1900-01" max="2013-12">
 </form>
 ```
 
@@ -196,7 +196,7 @@ In the following example we specify a minimum month of `1900-01` and a maximum m
 
 The result here is that:
 
-- Only months between in January 1900 and December 1999 can be selected; months outside that range can't be scrolled to in the control.
+- Only months between in January 1900 and December 2013 can be selected; months outside that range can't be scrolled to in the control.
 - Depending on what browser you are using, you might find that months outside the specified range might not be selectable in the month picker (e.g. Edge), or invalid (see {{anch("Validation")}}) but still available (e.g. Chrome).
 
 ### Controlling input size
@@ -217,9 +217,9 @@ Let's look at an example; here we've set minimum and maximum dates, and also mad
 ```html
 <form>
   <div>
-    <label for="month">What month would you like to visit us (Summer months only, please)?</label>
+    <label for="month">What month would you like to visit (June to Sept.)?</label>
     <input id="month" type="month" name="month"
-           min="2017-06" max="2017-09" required>
+           min="2022-06" max="2022-09" required>
     <span class="validity"></span>
   </div>
   <div>
@@ -235,7 +235,7 @@ Try playing with the example now:
 
 Here's a screenshot for those of you who aren't using a supporting browser:
 
-![](month-required.png)
+![Month required prompt on Chrome browser](month-required.png)
 
 Here's the CSS used in the above example.
 Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid.
@@ -301,9 +301,9 @@ For example, try viewing the following demo in a browser that doesn't support `m
 ```html
 <form>
   <div>
-    <label for="month">What month would you like to visit us? (Summer months only, yyyy-mm)</label>
+    <label for="month">What month would you like to visit (June to Sept.)?</label>
     <input id="month" type="month" name="month"
-           min="2017-06" max="2017-09" required
+           min="2022-06" max="2022-09" required
            pattern="[0-9]{4}-[0-9]{2}">
     <span class="validity"></span>
   </div>
