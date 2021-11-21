@@ -30,11 +30,13 @@ The `<frequency>` data type consists of a {{cssxref("&lt;number&gt;")}} followed
 
 ### Valid frequency values
 
-    12Hz     Positive integer
-    4.3Hz    Non-integer
-    14KhZ    The unit is case-insensitive, though non-SI capitalization is not recommended.
-    +0Hz     Zero, with a leading + and a unit
-    -0kHz    Zero, with a leading - and a unit
+```css example-good
+12Hz     Positive integer
+4.3Hz    Non-integer
+14KhZ    The unit is case-insensitive, though non-SI capitalization is not recommended.
++0Hz     Zero, with a leading + and a unit
+-0kHz    Zero, with a leading - and a unit
+```
 
 ### Invalid frequency values
 
