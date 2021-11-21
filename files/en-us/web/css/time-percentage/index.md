@@ -27,9 +27,11 @@ Where a `<time-percentage>` is specified as an allowable type, this means that t
 
 ### Valid percentages
 
-    50%
-    +50%        Optional plus sign
-    -50%        Negative percentages are not valid for all properties that accept percentages
+```plain example-good
+50%
++50%        Optional plus sign
+-50%        Negative percentages are not valid for all properties that accept percentages
+```
 
 ### Invalid percentages
 
@@ -39,12 +41,14 @@ Where a `<time-percentage>` is specified as an allowable type, this means that t
 
 ### Valid times
 
-    12s         Positive integer
-    -456ms      Negative integer
-    4.3ms       Non-integer
-    14mS        The unit is case-insensitive, although capital letters are not recommended.
-    +0s         Zero with a leading + and a unit
-    -0ms        Zero with a leading - and a unit
+```plain example-good
+12s         Positive integer
+-456ms      Negative integer
+4.3ms       Non-integer
+14mS        The unit is case-insensitive, although capital letters are not recommended.
++0s         Zero with a leading + and a unit
+-0ms        Zero with a leading - and a unit
+```
 
 ### Invalid times
 

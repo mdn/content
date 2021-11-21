@@ -27,12 +27,14 @@ When animated, values of the `<integer>` data type are interpolated using discre
 
 ### Valid integers
 
-    12          Positive integer (without a leading + sign)
-    +123        Positive integer (with a leading + sign)
-    -456        Negative integer
-    0           Zero
-    +0          Zero, with a leading +
-    -0          Zero, with a leading -
+```css example-good
+12          Positive integer (without a leading + sign)
++123        Positive integer (with a leading + sign)
+-456        Negative integer
+0           Zero
++0          Zero, with a leading +
+-0          Zero, with a leading -
+```
 
 ### Invalid integers
 
