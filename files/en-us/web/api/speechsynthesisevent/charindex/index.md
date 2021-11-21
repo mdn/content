@@ -14,7 +14,7 @@ browser-compat: api.SpeechSynthesisEvent.charIndex
 ---
 {{APIRef("Web Speech API")}}
 
-The **`charIndex`** read-only property of the {{domxref("SpeechSynthesisUtterance")}} interface returns the index position of the character in the {{domxref("SpeechSynthesisUtterance.text")}} that was being spoken when the event was triggered.
+The **`charIndex`** read-only property of the {{domxref("SpeechSynthesisUtterance")}} interface returns the index position of the character in {{domxref("SpeechSynthesisUtterance.text")}} that was being spoken when the event was triggered.
 
 ## Value
 
