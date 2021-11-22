@@ -44,7 +44,7 @@ Now that we've looked at the very basics of strings, let's move up a gear and st
 Most things are objects in JavaScript. When you create a string, for example by using
 
 ```js
-let string = 'This is my string';
+const string = 'This is my string';
 ```
 
 your variable becomes a string object instance, and as a result has a large number of properties and methods available to it. You can see this if you go to the {{jsxref("String")}} object page and look down the list on the side of the page!
@@ -53,18 +53,18 @@ your variable becomes a string object instance, and as a result has a large numb
 
 Let's enter some examples into the [browser developer console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
 
-### Finding the length of a string
+## Finding the length of a string
 
 This is easy — you use the {{jsxref("String.prototype.length", "length")}} property. Try entering the following lines:
 
 ```js
-let browserType = 'mozilla';
+const browserType = 'mozilla';
 browserType.length;
 ```
 
 This should return the number 7, because "mozilla" is 7 characters long. This is useful for many reasons; for example, you might want to find the lengths of a series of names so you can display them in order of length, or let a user know that a username they have entered into a form field is too long if it is over a certain length.
 
-### Retrieving a specific string character
+## Retrieving a specific string character
 
 On a related note, you can return any character inside a string by using **square bracket notation** — this means you include square brackets (`[]`) on the end of your variable name. Inside the square brackets you include the number of the character you want to return, so for example to retrieve the first letter you'd do this:
 
@@ -72,7 +72,7 @@ On a related note, you can return any character inside a string by using **squar
 browserType[0];
 ```
 
-Remember: computers count from 0, not 1! You could use this to, for example, find the first letter of a series of strings and order them alphabetically.
+Remember: computers count from 0, not 1!
 
 To retrieve the last character of _any_ string, we could use the following line, combining this technique with the `length` property we looked at above:
 
@@ -82,83 +82,105 @@ browserType[browserType.length-1];
 
 The length of the string "mozilla" is 7, but because the count starts at 0, the last character's position is 6; using  `length-1` gets us the last character.
 
-### Finding a substring inside a string and extracting it
+## Testing if a string contains a substring
 
-Sometimes you'll want to find if a smaller string is present inside a larger one (we generally say _if a substring is present inside a string_). This can be done using the {{jsxref("String.prototype.indexOf()", "indexOf()")}} method, which takes a single {{glossary("parameter")}} — the substring you want to search for.
+Sometimes you'll want to find if a smaller string is present inside a larger one (we generally say _if a substring is present inside a string_). This can be done using the {{jsxref("String.prototype.includes()", "includes()")}} method, which takes a single {{glossary("parameter")}} — the substring you want to search for.
 
-If the substring _is_ found inside the main string, it returns a number representing the index position of the substring — which character number of the main string the substring starts at. If the substring is _not found_ inside the main string, it returns a value of `-1`.
+It returns `true` if the string contains the substring, and `false` otherwise.
 
-1.  Try this:
+```js
+const browserType = 'mozilla';
 
-    ```js
-    browserType.indexOf('zilla');
-    ```
+if (browserType.includes('zilla')) {
+  console.log('Found zilla!');
+} else {
+  console.log('No zilla here!');
+}
+```
 
-    This gives us a result of 2, because the substring "zilla" starts at position 2 (0, 1, 2  — so 3 characters in) inside "mozilla". Such code could be used to filter strings. For example, we may have a list of web addresses and only want to print out the ones that contain "mozilla".
+Often you'll want to know if a string starts or ends with a particular substring. This is a common enough need that there are two special methods for this: {{jsxref("String.prototype.startsWith()", "startsWith()")}} and {{jsxref("String.prototype.endsWith()", "endsWith()")}}:
 
-2.  This can be done in another way, which is possibly even more effective. Try the following:
+```js
+const browserType = 'mozilla';
 
-    ```js
-    browserType.indexOf('vanilla');
-    ```
+if (browserType.startsWith('zilla')) {
+  console.log('Found zilla!');
+} else {
+  console.log('No zilla here!');
+}
+```
 
-    This should give you a result of `-1` — this is returned when the substring, in this case 'vanilla', is not found in the main string.
+```js
+const browserType = 'mozilla';
 
-    You could use this to find all instances of strings that **don't** contain the substring 'mozilla' (or **do,** if you use the negation operator, `!==`):
+if (browserType.endsWith('zilla')) {
+  console.log('Found zilla!');
+} else {
+  console.log('No zilla here!');
+}
+```
 
-    ```js
-    if(browserType.indexOf('mozilla') === -1) {
-      // do stuff with the string if the 'mozilla'
-      // substring is NOT contained within it
-    }
+## Extracting a substring from a string
 
-    if(browserType.indexOf('mozilla') !== -1) {
-      // do stuff with the string if the 'mozilla'
-      // substring IS contained within it
-    }
-    ```
+You can extract a substring from a string using the {{jsxref("String.prototype.slice()", "slice()")}} method. You pass it:
+* the index at which to start extracting
+* the index at which to stop extracting. This is exclusive, meaning that the character at this index is not included in the extracted substring.
 
-3.  When you know where a substring starts inside a string, and you know at which character you want it to end, {{jsxref("String.prototype.slice()", "slice()")}} can be used to extract it. Try the following:
+For example:
 
-    ```js
-    browserType.slice(0,3);
-    ```
+```js
+const browserType = 'mozilla';
+console.log(browserType.slice(1, 4)); // "ozi"
+```
 
-    This returns "moz" — the first parameter is the character position to start extracting at, and the second parameter is the character position after the last one to be extracted. So the slice happens from the first position, up to, but not including, the last position. In this example, since the starting index is 0, the second parameter is equal to the length of the string being returned.
+The character at index `1` is `"o"`, and the character at index 4 is `"l"`. So we extract all characters starting at `"o"` and ending just before `"l"`, giving us `"ozi"`.
 
-4.  Also, if you know that you want to extract all of the remaining characters in a string after a certain character, you don't have to include the second parameter! Instead, you only need to include the character position from where you want to extract the remaining characters in a string. Try the following:
+If you know that you want to extract all of the remaining characters in a string after a certain character, you don't have to include the second parameter. Instead, you only need to include the character position from where you want to extract the remaining characters in a string. Try the following:
 
-    ```js
-    browserType.slice(2);
-    ```
+```js
+browserType.slice(2); // "zilla"
+```
 
-    This returns "zilla" — this is because the character position of 2 is the letter z, and because you didn't include a second parameter, the substring that was returned was all of the remaining characters in the string.
+This returns `"zilla"` — this is because the character position of 2 is the letter `"z"`, and because you didn't include a second parameter, the substring that was returned was all of the remaining characters in the string.
 
-> **Note:** The second parameter of `slice()` is optional: if you don't include it, the slice ends at the end of the original string. There are other options too; study the {{jsxref("String.prototype.slice()", "slice()")}} page to see what else you can find out.
+> **Note:** `slice()` has other options too; study the {{jsxref("String.prototype.slice()", "slice()")}} page to see what else you can find out.
 
-### Changing case
+## Changing case
 
 The string methods {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} and {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}} take a string and convert all the characters to lower- or uppercase, respectively. This can be useful for example if you want to normalize all user-entered data before storing it in a database.
 
 Let's try entering the following lines to see what happens:
 
 ```js
-let radData = 'My NaMe Is MuD';
-radData.toLowerCase();
-radData.toUpperCase();
+const radData = 'My NaMe Is MuD';
+console.log(radData.toLowerCase());
+console.log(radData.toUpperCase());
 ```
 
-### Updating parts of a string
+## Updating parts of a string
 
-You can replace one substring inside a string with another substring using the {{jsxref("String.prototype.replace()", "replace()")}} method. This works at a very basic level, although there are some advanced things you can do with it that we won't go into yet.
+You can replace one substring inside a string with another substring using the {{jsxref("String.prototype.replace()", "replace()")}} method.
 
-It takes two parameters — the string you want to replace, and the string you want to replace it with. Try this example:
+In this example, we're providing two parameters — the string we want to replace, and the string we want to replace it with:
 
 ```js
-browserType.replace('moz','van');
+const browserType = 'mozilla';
+const updated = browserType.replace('moz','van');
+
+console.log(updated);      // "vanilla"
+console.log(browserType);  // "mozilla"
 ```
 
-This returns "vanilla" in the console. But if you check the value of `browserType`, it is still "mozilla". To actually update the value of the `browserType` variable in a real program, you'd have to set the variable value to be the result of the operation; it doesn't just update the substring value automatically. So you'd have to actually write this: `browserType = browserType.replace('moz','van');`
+Note that `replace()`, like many string methods, doesn't change the string it was called on, but returns a new string. If you want to update the original `browserType` variable, you would have to do something like this:
+
+```js
+let browserType = 'mozilla';
+browserType = browserType.replace('moz','van');
+
+console.log(browserType);  // "vanilla"
+```
+
+Also note that we now have to declare `browserType` using `let`, not `const`, because we are reassigning it.
 
 ## Active learning examples
 
@@ -170,9 +192,7 @@ Each example comes with a "Reset" button, which you can use to reset the code if
 
 In the first exercise we'll start you off simple — we have an array of greeting card messages, but we want to sort them to list just the Christmas messages. We want you to fill in a conditional test inside the `if( ... )` structure, to test each string and only print it in the list if it is a Christmas message.
 
-1.  First think about how you could test whether the message in each case is a Christmas message. What string is present in all of those messages, and what method could you use to test whether it is present?
-2.  You'll then need to write a conditional test of the form _operand1 operator operand2_. Is the thing on the left equal to the thing on the right? Or in this case, does the method call on the left return the result on the right?
-3.  Hint: In this case it is probably more useful to test whether the method call _isn't_ equal to a certain result.
+Think about how you could test whether the message in each case is a Christmas message. What string is present in all of those messages, and what method could you use to test whether it is present?
 
 ```html hidden
 <h2>Live output</h2>
@@ -191,19 +211,18 @@ In the first exercise we'll start you off simple — we have an array of greetin
 <textarea id="code" class="playable-code" style="height: 290px; width: 95%">
 const list = document.querySelector('.output ul');
 list.innerHTML = '';
-let greetings = ['Happy Birthday!',
+const greetings = ['Happy Birthday!',
                  'Merry Christmas my love',
                  'A happy Christmas to all the family',
                  'You\'re all I want for Christmas',
                  'Get well soon'];
 
-for (let i = 0; i < greetings.length; i++) {
-  let input = greetings[i];
+for (let greeting of greetings) {
   // Your conditional test needs to go inside the parentheses
   // in the line below, replacing what's currently there
-  if (greetings[i]) {
-    let listItem = document.createElement('li');
-    listItem.textContent = input;
+  if (greeting) {
+    const listItem = document.createElement('li');
+    listItem.textContent = greeting;
     list.appendChild(listItem);
   }
 }
@@ -267,23 +286,23 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-const jsSolution = 'const list = document.querySelector(\'.output ul\');' +
-'\nlist.innerHTML = \'\';' +
-'\nlet greetings = [\'Happy Birthday!\',' +
-'\n                 \'Merry Christmas my love\',' +
-'\n                 \'A happy Christmas to all the family\',' +
-'\n                 \'You\\\'re all I want for Christmas\',' +
-'\n                 \'Get well soon\'];' +
-'\n' +
-'\nfor (let i = 0; i < greetings.length; i++) {' +
-'\n  let input = greetings[i];' +
-'\n  if (greetings[i].indexOf(\'Christmas\') !== -1) {' +
-'\n    let result = input;' +
-'\n    let listItem = document.createElement(\'li\');' +
-'\n    listItem.textContent = result;' +
-'\n    list.appendChild(listItem);' +
-'\n  }' +
-'\n}';
+const jsSolution = `const list = document.querySelector('.output ul');
+list.innerHTML = '';
+const greetings = ['Happy Birthday!',
+                 'Merry Christmas my love',
+                 'A happy Christmas to all the family',
+                 'You\\\'re all I want for Christmas',
+                 'Get well soon'];
+
+for (let greeting of greetings) {
+  // Your conditional test needs to go inside the parentheses
+  // in the line below, replacing what's currently there
+  if (greeting.includes('Christmas')) {
+    const listItem = document.createElement('li');
+    listItem.textContent = greeting;
+    list.appendChild(listItem);
+  }
+}`;
 
 let solutionEntry = jsSolution;
 
@@ -339,10 +358,10 @@ textarea.onkeyup = function(){
 
 In this exercise we have the names of cities in the United Kingdom, but the capitalization is all messed up. We want you to change them so that they are all lower case, except for a capital first letter. A good way to do this is to:
 
-1.  Convert the whole of the string contained in the `input` variable to lower case and store it in a new variable.
+1.  Convert the whole of the string contained in the `city` variable to lower case and store it in a new variable.
 2.  Grab the first letter of the string in this new variable and store it in another variable.
 3.  Using this latest variable as a substring, replace the first letter of the lowercase string with the first letter of the lowercase string changed to upper case. Store the result of this replace procedure in another new variable.
-4.  Change the value of the `result` variable to equal to the final result, not the `input`.
+4.  Change the value of the `result` variable to equal to the final result, not the `city`.
 
 > **Note:** A hint — the parameters of the string methods don't have to be string literals; they can also be variables, or even variables with a method being invoked on them.
 
@@ -363,14 +382,13 @@ In this exercise we have the names of cities in the United Kingdom, but the cap
 <textarea id="code" class="playable-code" style="height: 250px; width: 95%">
 const list = document.querySelector('.output ul');
 list.innerHTML = '';
-let cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
 
-for (let i = 0; i < cities.length; i++) {
-  let input = cities[i];
+for (let city of cities) {
   // write your code just below here
 
-  let result = input;
-  let listItem = document.createElement('li');
+  const result = city;
+  const listItem = document.createElement('li');
   listItem.textContent = result;
   list.appendChild(listItem);
 }
@@ -434,21 +452,20 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-const jsSolution = 'const list = document.querySelector(\'.output ul\');' +
-'\nlist.innerHTML = \'\';' +
-'\nlet cities = [\'lonDon\', \'ManCHESTer\', \'BiRmiNGHAM\', \'liVERpoOL\'];' +
-'\n' +
-'\nfor (let i = 0; i < cities.length; i++) {' +
-'\n  let input = cities[i];' +
-'\n  let lower = input.toLowerCase();' +
-'\n  let firstLetter = lower.slice(0,1);' +
-'\n  let capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());' +
-'\n  let result = capitalized;' +
-'\n  let listItem = document.createElement(\'li\');' +
-'\n  listItem.textContent = result;' +
-'\n  list.appendChild(listItem);' +
-'\n' +
-'\n}';
+const jsSolution = `const list = document.querySelector('.output ul');
+list.innerHTML = '';
+const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+
+for (let city of cities) {
+  // write your code just below here
+  const lower = city.toLowerCase();
+  const firstLetter = lower.slice(0,1);
+  const capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());
+  const result = capitalized;
+  const listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
+}`;
 
 let solutionEntry = jsSolution;
 
@@ -516,7 +533,7 @@ We'd recommend doing it like this:
 2.  Find the character index number of the semicolon.
 3.  Extract the human-readable station name using the semicolon character index number as a reference point, and store it in a new variable.
 4.  Concatenate the two new variables and a string literal to make the final string.
-5.  Change the value of the `result` variable to equal to the final string, not the `input`.
+5.  Change the value of the `result` variable to equal to the final string, not the `station`.
 
 ```html hidden
 <h2>Live output</h2>
@@ -535,18 +552,17 @@ We'd recommend doing it like this:
 <textarea id="code" class="playable-code" style="height: 285px; width: 95%">
 const list = document.querySelector('.output ul');
 list.innerHTML = '';
-let stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
-                'GNF576746573fhdg4737dh4;Greenfield',
-                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
-                'SYB4f65hf75f736463;Stalybridge',
-                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+                  'GNF576746573fhdg4737dh4;Greenfield',
+                  'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+                  'SYB4f65hf75f736463;Stalybridge',
+                  'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
 
-for (let i = 0; i < stations.length; i++) {
-  let input = stations[i];
+for (let station of stations) {
   // write your code just below here
 
-  let result = input;
-  let listItem = document.createElement('li');
+  const result = station;
+  const listItem = document.createElement('li');
   listItem.textContent = result;
   list.appendChild(listItem);
 }
@@ -610,24 +626,24 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-const jsSolution = 'const list = document.querySelector(\'.output ul\');' +
-'\nlist.innerHTML = \'\';' +
-'\nlet stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',' +
-'\n                \'GNF576746573fhdg4737dh4;Greenfield\',' +
-'\n                \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',' +
-'\n                \'SYB4f65hf75f736463;Stalybridge\',' +
-'\n                \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];' +
-'\n' +
-'\nfor (let i = 0; i < stations.length; i++) {' +
-'\n  let input = stations[i];' +
-'\n  let code = input.slice(0,3);' +
-'\n  let semiC = input.indexOf(\';\');' +
-'\n  let name = input.slice(semiC + 1);' +
-'\n  let result = code + \': \' + name;' +
-'\n  let listItem = document.createElement(\'li\');' +
-'\n  listItem.textContent = result;' +
-'\n  list.appendChild(listItem);' +
-'\n}';
+const jsSolution = `const list = document.querySelector('.output ul');
+list.innerHTML = '';
+const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+                  'GNF576746573fhdg4737dh4;Greenfield',
+                  'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+                  'SYB4f65hf75f736463;Stalybridge',
+                  'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+
+for (let station of stations) {
+  // write your code just below here
+  const code = station.slice(0,3);
+  const semiColon = station.indexOf(';');
+  const name = station.slice(semiColon + 1);
+  const result = \`\${code}: \${name}\`;
+  const listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
+}`;
 
 let solutionEntry = jsSolution;
 
