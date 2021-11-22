@@ -5,7 +5,8 @@ tags:
   - CodingScripting
   - Glossary
 ---
-A **dynamic programming language** is a programming language in which operations otherwise done at compile-time can be done at run-time. For example, in JavaScript it is possible to change the type of a variable or add new properties or methods to an object while the program is running.
+A **dynamic programming language** is a programming language in which operations otherwise done at compile-time can be done at run-time.
+For example, in JavaScript it is possible to change the type of a variable or add new properties or methods to an object while the program is running.
 
 This is opposed to so-called static programming languages, in which such changes are normally not possible.
 
