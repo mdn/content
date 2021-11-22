@@ -311,7 +311,11 @@ Here you can see we are including an event object, **e**, in the function, and i
 
 #### Using event targets
 
-`e.target` is incredibly useful when you want to set the same event handler on multiple elements and do something to all of them when an event occurs on them. You might, for example, have a set of 16 tiles that disappear when selected. It is useful to always be able to just set the thing to disappear as `e.target`, rather than having to select it in some more difficult way. In the following example (see [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html) for the full source code; also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) here), we create 16 {{htmlelement("div")}} elements using JavaScript. We then select all of them using {{domxref("document.querySelectorAll()")}}, then loop through each one, adding an `onclick` handler to each that makes it so that a random color is applied to each one when selected:
+`e.target` is incredibly useful when you want to set the same event handler on multiple elements and do something to all of them when an event occurs on them.
+You might, for example, have a set of 16 tiles that disappear when selected.
+It is useful to always be able to just set the thing to disappear as `e.target`, rather than having to select it in some more difficult way. 
+In the following example we create 16 {{htmlelement("div")}} elements using JavaScript.
+We then select all of them using {{domxref("document.querySelectorAll()")}}, then loop through each one, adding an `onclick` handler to each that makes it so that a random color is applied to each one when selected:
 
 ```js
 for (let i = 1; i <= 16; i++) {
@@ -325,7 +329,7 @@ function random(number) {
 }
 
 function bgChange() {
-  var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  var rndCol = 'rgb(' + random(256) + ',' + random(256) + ',' + random(256) + ')';
   return rndCol;
 }
 
@@ -349,6 +353,8 @@ div {
 ```
 
 {{ EmbedLiveSample('Using_event_targets', '100%', 430, "", "") }}
+
+> **Note:** See [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html) for the full source code; also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) here.
 
 Most event handlers you'll encounter have a standard set of properties and functions (methods) available on the event object; see the {{domxref("Event")}} object reference for a full list. Some more advanced handlers, however, add specialist properties containing extra data that they need to function. The [Media Recorder API](/en-US/docs/Web/API/MediaStream_Recording_API), for example, has a `dataavailable` event, which fires when some audio or video has been recorded and is available for doing something with (for example saving it, or playing it back). The corresponding [ondataavailable](/en-US/docs/Web/API/MediaRecorder/ondataavailable) handler's event object has a `data` property available containing the recorded audio or video data to allow you to access it and do something with it.
 
