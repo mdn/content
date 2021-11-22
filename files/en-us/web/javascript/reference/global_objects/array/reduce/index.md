@@ -272,7 +272,7 @@ The callback would be invoked five times, with the arguments and return values i
   </tbody>
 </table>
 
-The value returned by `reduce()` in this case would be `45`.
+The value returned by `reduce()` in this case would be `95`.
 
 ## Examples
 
