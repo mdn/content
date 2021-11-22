@@ -19,7 +19,7 @@ The **`name`** read-only property of the {{domxref("PermissionStatus")}} interfa
 
 ## Value
 
-This is identical to the `name` argument passed to {{domxref("Permissions.query", "navigator.permissions.query()")}}.
+A read-only value that is identical to the `name` argument passed to {{domxref("Permissions.query", "navigator.permissions.query()")}}.
 
 ## Example
 
