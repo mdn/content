@@ -62,7 +62,20 @@ For example:
 ```js example-good
 const greeting = "I'm a good example";
 ```
+
+```js example-bad
+const greeting = "I'm a bad example";
+```
 ````
+These will be rendered as:
+
+```js example-good
+const greeting = "I'm a good example";
+```
+
+```js example-bad
+const greeting = "I'm a bad example";
+```
 
 ### Discussion reference
 
