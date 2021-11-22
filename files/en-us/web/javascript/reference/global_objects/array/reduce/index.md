@@ -161,35 +161,35 @@ The callback would be invoked four times, with the arguments and return values i
   <tbody>
     <tr>
       <th scope="row">first call</th>
-      <td><code>5</code></td>
-      <td><code>6</code></td>
+      <td><code>15</code></td>
+      <td><code>16</code></td>
       <td><code>1</code></td>
-      <td><code>[5, 6, 7, 8, 9]</code></td>
-      <td><code>11</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>31</code></td>
     </tr>
     <tr>
       <th scope="row">second call</th>
-      <td><code>11</code></td>
-      <td><code>7</code></td>
+      <td><code>31</code></td>
+      <td><code>17</code></td>
       <td><code>2</code></td>
-      <td><code>[5, 6, 7, 8, 9]</code></td>
-      <td><code>18</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>48</code></td>
     </tr>
     <tr>
       <th scope="row">third call</th>
+      <td><code>48</code></td>
       <td><code>18</code></td>
-      <td><code>8</code></td>
       <td><code>3</code></td>
-      <td><code>[5, 6, 7, 8, 9]</code></td>
-      <td><code>26</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>66</code></td>
     </tr>
     <tr>
       <th scope="row">fourth call</th>
-      <td><code>26</code></td>
-      <td><code>9</code></td>
+      <td><code>66</code></td>
+      <td><code>19</code></td>
       <td><code>4</code></td>
-      <td><code>[5, 6, 7, 8, 9]</code></td>
-      <td><code>35</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>85</code></td>
     </tr>
   </tbody>
 </table>
@@ -202,7 +202,7 @@ The value returned by `reduce()` would be that of the last callback invocation (
 Here we reduce the same array using the same algorithm, but with an *initialValue* of `10` passed the second argument to `reduce()`:
 
 ```js
-[5, 6, 7, 8, 9].reduce( (previousValue, currentValue, currentIndex, array) => previousValue + currentValue, 10 )
+[15, 16, 17, 18, 19].reduce( (previousValue, currentValue, currentIndex, array) => previousValue + currentValue, 10 )
 ```
 
 The callback would be invoked five times, with the arguments and return values in each call being as follows:
@@ -232,42 +232,42 @@ The callback would be invoked five times, with the arguments and return values i
     <tr>
       <th scope="row">first call</th>
       <td><code>10</code></td>
-      <td><code>5</code></td>
-      <td><code>0</code></td>
-      <td><code>[5, 6, 7, 8, 9]</code></td>
       <td><code>15</code></td>
+      <td><code>0</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>25</code></td>
     </tr>
     <tr>
       <th scope="row">second call</th>
-      <td><code>15</code></td>
-      <td><code>6</code></td>
+      <td><code>25</code></td>
+      <td><code>16</code></td>
       <td><code>1</code></td>
-      <td><code>[5, 6, 7, 8, 9]</code></td>
-      <td><code>21</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>41</code></td>
     </tr>
     <tr>
       <th scope="row">third call</th>
-      <td><code>21</code></td>
-      <td><code>7</code></td>
+      <td><code>41</code></td>
+      <td><code>17</code></td>
       <td><code>2</code></td>
-      <td><code>[5, 6, 7, 8, 9]</code></td>
-      <td><code>28</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>58</code></td>
     </tr>
     <tr>
       <th scope="row">fourth call</th>
-      <td><code>28</code></td>
-      <td><code>8</code></td>
+      <td><code>58</code></td>
+      <td><code>18</code></td>
       <td><code>3</code></td>
-      <td><code>[5, 6, 7, 8, 9]</code></td>
-      <td><code>36</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>76</code></td>
     </tr>
     <tr>
       <th scope="row">fifth call</th>
-      <td><code>36</code></td>
-      <td><code>9</code></td>
+      <td><code>76</code></td>
+      <td><code>19</code></td>
       <td><code>4</code></td>
-      <td><code>[5, 6, 7, 8, 9]</code></td>
-      <td><code>45</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>95</code></td>
     </tr>
   </tbody>
 </table>
