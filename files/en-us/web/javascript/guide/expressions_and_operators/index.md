@@ -276,7 +276,7 @@ However, it evaluates from left to right:
    `y` is now assigned to `[ 2, 3 ]`,
    and the console has printed "F!" then "G!".
 
-##### Evaluation example 2
+##### Evaluation example 3
 
 `x[f()] = g()` also evaluates from left to right.
 (This example assumes that `x` is already assigned to some [object][].
