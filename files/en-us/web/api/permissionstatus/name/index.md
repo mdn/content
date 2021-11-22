@@ -15,15 +15,11 @@ browser-compat: api.PermissionStatus.name
 ---
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 
-The **`name`** read-only property of the
-{{domxref("PermissionStatus")}} interface returns the name of a requested permission.
-It is identical to the `name` argument passed to {{domxref("Permissions.query", "navigator.permissions.query()")}}.
+The **`name`** read-only property of the {{domxref("PermissionStatus")}} interface returns the name of a requested permission.
 
-## Syntax
+## Value
 
-```js
-var name = PermissionStatus.name;
-```
+This is identical to the `name` argument passed to {{domxref("Permissions.query", "navigator.permissions.query()")}}.
 
 ## Example
 
