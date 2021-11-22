@@ -264,49 +264,53 @@ Let's put these ideas into practice and build a slightly more involved form — 
     </section>
     ```
 
-6.  The second `<section>` of our form is the payment information. We have three distinct controls along with their labels, each contained inside a `<p>`. The first is a drop-down menu ({{htmlelement("select")}}) for selecting credit card type. The second is an `<input>` element of type `tel`, for entering a credit card number; while we could have used the `number` type, we don't want the number's spinner UI. The last one is an `<input>` element of type `date`, for entering the expiration date of the card; this one will come up with a date picker widget in supporting browsers, and fall back to a normal text input in non-supporting browsers. These newer input types are reintroduced in [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
+6. The second `<section>` of our form is the payment information.
+   We have three distinct controls along with their labels, each contained inside a `<p>`.
+   The first is a drop-down menu ({{htmlelement("select")}}) for selecting credit card type.
+   The second is an `<input>` element of type `tel`, for entering a credit card number; while we could have used the `number` type, we don't want the number's spinner UI.
+   The last one is an `<input>` element of type `text`, for entering the expiration date of the card; this includes a  _placholder_ attribute indicating the correct format, and a _pattern_ that tests that the entered date has the correct format.
+   These newer input types are reintroduced in [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
 
-    Enter the following below the previous section:
+   Enter the following below the previous section:
 
-    ```html
-    <section>
-        <h2>Payment information</h2>
-        <p>
-          <label for="card">
-            <span>Card type:</span>
-          </label>
-          <select id="card" name="usercard">
-            <option value="visa">Visa</option>
-            <option value="mc">Mastercard</option>
-            <option value="amex">American Express</option>
-          </select>
-        </p>
-        <p>
-          <label for="number">
-            <span>Card number:</span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="tel" id="number" name="cardnumber">
-        </p>
-        <p>
-          <label for="date">
-            <span>Expiration date:</span>
-            <strong><abbr title="required">*</abbr></strong>
-            <em>formatted as mm/dd/yyyy</em>
-          </label>
-          <input type="date" id="date" name="expiration">
-        </p>
-    </section>
-    ```
+   ```html
+   <section>
+       <h2>Payment information</h2>
+       <p>
+         <label for="card">
+           <span>Card type:</span>
+         </label>
+         <select id="card" name="usercard">
+           <option value="visa">Visa</option>
+           <option value="mc">Mastercard</option>
+           <option value="amex">American Express</option>
+         </select>
+       </p>
+       <p>
+         <label for="number">
+           <span>Card number:</span>
+           <strong><abbr title="required">*</abbr></strong>
+         </label>
+         <input type="tel" id="number" name="cardnumber">
+       </p>
+       <p>
+         <label for="expiration">
+           <span>Expiration date:</span>
+           <strong><abbr title="required">*</abbr></strong>
+         </label>
+         <input type="text" id="expiration" required="true" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
+       </p>
+   </section>
+   ```
 
-7.  The last section we'll add is a lot simpler, containing only a {{htmlelement("button")}} of type `submit`, for submitting the form data. Add this to the bottom of your form now:
+7. The last section we'll add is a lot simpler, containing only a {{htmlelement("button")}} of type `submit`, for submitting the form data. Add this to the bottom of your form now:
 
-    ```html
-    <section>
-        <p>
-          <button type="submit">Validate the payment</button>
-        </p>
-    </section>
+   ```html
+   <section>
+       <p>
+         <button type="submit">Validate the payment</button>
+       </p>
+   </section>
     ```
 
 You can see the finished form in action below (also find it on GitHub — see our payment-form.html [source](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html) and [running live](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
