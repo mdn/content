@@ -2263,7 +2263,6 @@
 /en-US/docs/DOM/window.scrollY	/en-US/docs/Web/API/Window/scrollY
 /en-US/docs/DOM/window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
 /en-US/docs/DOM/window.self	/en-US/docs/Web/API/Window/self
-/en-US/docs/DOM/window.setCursor	/en-US/docs/Web/API/Window/setCursor
 /en-US/docs/DOM/window.setImmediate	/en-US/docs/Web/API/Window/setImmediate
 /en-US/docs/DOM/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/DOM/window.setTimeout	/en-US/docs/Web/API/setTimeout
@@ -2690,7 +2689,6 @@
 /en-US/docs/DOM:window.scrollY	/en-US/docs/Web/API/Window/scrollY
 /en-US/docs/DOM:window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
 /en-US/docs/DOM:window.self	/en-US/docs/Web/API/Window/self
-/en-US/docs/DOM:window.setCursor	/en-US/docs/Web/API/Window/setCursor
 /en-US/docs/DOM:window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/DOM:window.setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/DOM:window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
@@ -3418,7 +3416,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.scrollX	/en-US/docs/Web/API/Window/scrollX
 /en-US/docs/Document_Object_Model_(DOM)/window.scrollY	/en-US/docs/Web/API/Window/scrollY
 /en-US/docs/Document_Object_Model_(DOM)/window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
-/en-US/docs/Document_Object_Model_(DOM)/window.setCursor	/en-US/docs/Web/API/Window/setCursor
 /en-US/docs/Document_Object_Model_(DOM)/window.setImmediate	/en-US/docs/Web/API/Window/setImmediate
 /en-US/docs/Document_Object_Model_(DOM)/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Document_Object_Model_(DOM)/window.setTimeout	/en-US/docs/Web/API/setTimeout
@@ -9625,7 +9622,6 @@
 /en-US/docs/Web/API/window.scrollY	/en-US/docs/Web/API/Window/scrollY
 /en-US/docs/Web/API/window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
 /en-US/docs/Web/API/window.self	/en-US/docs/Web/API/Window/self
-/en-US/docs/Web/API/window.setCursor	/en-US/docs/Web/API/Window/setCursor
 /en-US/docs/Web/API/window.setImmediate	/en-US/docs/Web/API/Window/setImmediate
 /en-US/docs/Web/API/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/window.setTimeout	/en-US/docs/Web/API/setTimeout
@@ -12002,7 +11998,6 @@
 /en-US/docs/window.scrollX	/en-US/docs/Web/API/Window/scrollX
 /en-US/docs/window.scrollY	/en-US/docs/Web/API/Window/scrollY
 /en-US/docs/window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
-/en-US/docs/window.setCursor	/en-US/docs/Web/API/Window/setCursor
 /en-US/docs/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/window.setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/window.sidebar	/en-US/docs/Web/API/Window/sidebar
