@@ -29,7 +29,7 @@ CustomEvent(typeArg, options);
       containing an event-dependent value associated with the event.
       This is available to the handler using the {{domxref("CustomEvent.detail")}} property.
 
-    - Any field that can be used in the init object of the {{domxref("Event.Event", "Event()")}} constructor._
+    - Any field that can be used in the init object of the {{domxref("Event.Event", "Event()")}} constructor.
 
 ### Return value
 
