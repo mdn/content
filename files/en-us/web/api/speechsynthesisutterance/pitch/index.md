@@ -14,9 +14,7 @@ browser-compat: api.SpeechSynthesisUtterance.pitch
 ---
 {{APIRef("Web Speech API")}}
 
-The **`pitch`** property of the
-{{domxref("SpeechSynthesisUtterance")}} interface gets and sets the pitch at which the
-utterance will be spoken at.
+The **`pitch`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the pitch at which the utterance will be spoken at.
 
 If unset, a default value of 1 will be used.
 
@@ -29,11 +27,9 @@ speechSynthesisUtteranceInstance.pitch = 1.5;
 
 ### Value
 
-A float representing the pitch value. It can range between 0 (lowest) and 2 (highest),
-with 1 being the default pitch for the current platform or voice. Some speech synthesis
-engines or voices may constrain the minimum and maximum rates further. If [SSML](https://www.w3.org/TR/speech-synthesis/) is used, this value will be
-overridden by [prosody tags](https://www.w3.org/TR/speech-synthesis/#S3.2.4)
-in the markup.
+A float representing the pitch value.
+It can range between 0 (lowest) and 2 (highest), with 1 being the default pitch for the current platform or voice. Some speech synthesis engines or voices may constrain the minimum and maximum rates further.
+If [SSML](https://www.w3.org/TR/speech-synthesis/) is used, this value will be overridden by [prosody tags](https://www.w3.org/TR/speech-synthesis/#S3.2.4) in the markup.
 
 ## Examples
 

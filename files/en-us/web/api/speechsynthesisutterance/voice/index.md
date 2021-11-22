@@ -14,14 +14,10 @@ browser-compat: api.SpeechSynthesisUtterance.voice
 ---
 {{APIRef("Web Speech API")}}
 
-The **`voice`** property of the
-{{domxref("SpeechSynthesisUtterance")}} interface gets and sets the voice that will be
-used to speak the utterance.
+The **`voice`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the voice that will be used to speak the utterance.
 
-This should be set to one of the {{domxref("SpeechSynthesisVoice")}} objects returned
-by {{domxref("SpeechSynthesis.getVoices()")}}. If not set by the time the utterance is
-spoken, the voice used will be the most suitable default voice available for the
-utterance's {{domxref("SpeechSynthesisUtterance.lang","lang")}} setting.
+This should be set to one of the {{domxref("SpeechSynthesisVoice")}} objects returned by {{domxref("SpeechSynthesis.getVoices()")}}.
+If not set by the time the utterance is spoken, the voice used will be the most suitable default voice available for the utterance's {{domxref("SpeechSynthesisUtterance.lang","lang")}} setting.
 
 ## Syntax
 

@@ -14,9 +14,7 @@ browser-compat: api.SpeechSynthesisUtterance.volume
 ---
 {{APIRef("Web Speech API")}}
 
-The **`volume`** property of the
-{{domxref("SpeechSynthesisUtterance")}} interface gets and sets the volume that the
-utterance will be spoken at.
+The **`volume`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the volume that the utterance will be spoken at.
 
 If not set, the default value 1 will be used.
 
@@ -31,9 +29,7 @@ speechSynthesisUtteranceInstance.volume = 0.5;
 
 A float that represents the volume value, between 0 (lowest) and 1 (highest.)
 
-If [SSML](https://www.w3.org/TR/speech-synthesis/) is used, this value will
-be overridden by [prosody
-tags](https://www.w3.org/TR/speech-synthesis/#S3.2.4) in the markup.
+If [SSML](https://www.w3.org/TR/speech-synthesis/) is used, this value will be overridden by [prosody tags](https://www.w3.org/TR/speech-synthesis/#S3.2.4) in the markup.
 
 ## Examples
 
