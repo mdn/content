@@ -88911,24 +88911,6 @@
       "jsx"
     ]
   },
-  "Web/API/Window/setCursor": {
-    "modified": "2020-10-15T21:12:53.507Z",
-    "contributors": [
-      "mfluehr",
-      "lucian95",
-      "Ac1521",
-      "fscholz",
-      "MHasan",
-      "teoli",
-      "iamanupmenon",
-      "kscarfone",
-      "ethertank",
-      "Sheppy",
-      "Nickolay",
-      "Dria",
-      "JesseW"
-    ]
-  },
   "Web/API/Window/setImmediate": {
     "modified": "2020-10-15T21:07:30.419Z",
     "contributors": [
