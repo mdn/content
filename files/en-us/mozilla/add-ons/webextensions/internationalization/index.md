@@ -410,5 +410,3 @@ Load the extension temporarily from disk again, then test your new locale:
 
 - Visit "about:addons" again — you should now see the extension listed, with its icon, plus name and description in the chosen language.
 - Test your extension again. In our example, you'd go to another website and click a link, to see if the notification now appears in the chosen language.
-
-{{EmbedYouTube("R7--fp5pPGg")}}

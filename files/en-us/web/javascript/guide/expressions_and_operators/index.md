@@ -62,61 +62,54 @@ For example, `x++` or `++x`.
 
 An assignment operator assigns a value to its left operand based on the value of its
 right operand. The simple assignment operator is equal (`=`), which assigns
-the value of its right operand to its left operand. That is, `x = y` assigns
-the value of `y` to `x`.
+the value of its right operand to its left operand. That is, `x = f()`
+is an assignment expression that assigns the value of `f()` to `x`.
 
 There are also compound assignment operators that are shorthand for the operations
 listed in the following table:
 
 | Name                                                                                                              | Shorthand operator | Meaning          |
 | ----------------------------------------------------------------------------------------------------------------- | ------------------ | ---------------- |
-| [Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)                                           | `x = y`            | `x = y`          |
-| [Addition assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment)                         | `x += y`           | `x = x + y`      |
-| [Subtraction assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)                   | `x -= y`           | `x = x - y`      |
-| [Multiplication assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment)             | `x *= y`           | `x = x * y`      |
-| [Division assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Division_assignment)                         | `x /= y`           | `x = x / y`      |
-| [Remainder assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)                       | `x %= y`           | `x = x % y`      |
-| [Exponentiation assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment)             | `x **= y`          | `x = x ** y`     |
-| [Left shift assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)                     | `x <<= y`          | `x = x << y`     |
-| [Right shift assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)                   | `x >>= y`          | `x = x >> y`     |
-| [Unsigned right shift assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment) | `x >>>= y`         | `x = x >>> y`    |
-| [Bitwise AND assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)                   | `x &= y`           | `x = x & y`      |
-| [Bitwise XOR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)                   | `x ^= y`           | `x = x ^ y`      |
-| [Bitwise OR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)                     | `x \|= y`          | `x = x \| y`     |
-| [Logical AND assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)                   | `x &&= y`          | `x && (x = y)`   |
-| [Logical OR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                     | `x \|\|= y`        | `x \|\| (x = y)` |
-| [Logical nullish assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)           | `x ??= y`          | `x ?? (x = y)`   |
+| [Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)                                           | `x = f()`          | `x = f()`        |
+| [Addition assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment)                         | `x += f()`         | `x = x + y`      |
+| [Subtraction assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)                   | `x -= f()`         | `x = x - y`      |
+| [Multiplication assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment)             | `x *= f()`         | `x = x * y`      |
+| [Division assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Division_assignment)                         | `x /= f()`         | `x = x / y`      |
+| [Remainder assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)                       | `x %= f()`         | `x = x % y`      |
+| [Exponentiation assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment)             | `x **= f()`        | `x = x ** y`     |
+| [Left shift assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)                     | `x <<= f()`        | `x = x << y`     |
+| [Right shift assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)                   | `x >>= f()`        | `x = x >> y`     |
+| [Unsigned right shift assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment) | `x >>>= f()`       | `x = x >>> y`    |
+| [Bitwise AND assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)                   | `x &= f()`         | `x = x & y`      |
+| [Bitwise XOR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)                   | `x ^= f()`         | `x = x ^ y`      |
+| [Bitwise OR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)                     | `x \|= f()`        | `x = x \| y`     |
+| [Logical AND assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)                   | `x &&= f()`        | `x && (x = y)`   |
+| [Logical OR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                     | `x \|\|= f()`      | `x \|\| (x = y)` |
+| [Logical nullish assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)           | `x ??= f()`        | `x ?? (x = y)`   |
 
-#### Return value and chaining
+#### Assigning to properties
 
-Like most expressions, assignments like `x = y` have a return value. It can
-be retrieved by e.g. assigning the expression or logging it:
+If a variable refers to an [object][], then
+the left-hand side of an assignment expression
+may make assignments to properties of that variable.
+For example:
 
-    const z = (x = y); // Or equivalently: const z = x = y;
+```js
+let obj = {};
 
-    console.log(z); // Log the return value of the assignment x = y.
-    console.log(x = y); // Or log the return value directly.
+obj.x = 3;
+console.log(obj.x); // Prints 3.
+console.log(obj); // Prints { x: 3 }.
 
-The return value matches the expression to the right of the `=` sign in the
-“Meaning” column of the table above. That means that `(x = y)` returns
-`y`, `(x += y)` returns the resulting sum `x + y`,
-`(x **= y)` returns the resulting power `x ** y`, and so on.
+const key = "y";
+obj[key] = 5;
+console.log(obj[key]); // Prints 5.
+console.log(obj); // Prints { x: 3, y: 5 }.
+```
 
-In the case of logical assignments, `(x &&= y)`,
-`(x ||= y)`, and `(x ??= y)`, the return value is that of the
-logical operation without the assignment, so `x && y`,
-`x || y`, and `x ?? y`, respectively.
+For more information about objects, read [Working with Objects][object].
 
-Note that the return values are always based on the operands’ values _before_
-the operation.
-
-When chaining these expressions, each assignment is evaluated
-**right-to-left**. Consider these examples:
-
-- `w = z = x = y` is equivalent to `w = (z = (x = y))` or
-  `x = y; z = y; w = y`
-- `z += x *= y` is equivalent to `z += (x *= y)` or
-  `tmp = x * y; x *= y; z += tmp` (except without the `tmp`).
+[object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
 
 #### Destructuring
 
@@ -137,11 +130,210 @@ var three = foo[2];
 var [one, two, three] = foo;
 ```
 
+#### Evaluation and nesting
+
+In general, assignments are used within a variable declaration
+(i.e., with [`const`][], [`let`][], or [`var`][]) or as standalone statements.
+
+```js
+// Declares a variable x and initializes it to the result of f().
+// The result of the x = f() assignment expression is discarded.
+let x = f();
+
+// Declares a variable x and initializes it to the result of f().
+// The result of the x = g() assignment expression is discarded.
+x = g(); Reassigns the variable x to the result of g().
+```
+
+[`const`]: /en-US/docs/Web/JavaScript/Reference/Statements/const
+[`let`]: /en-US/docs/Web/JavaScript/Reference/Statements/let
+[`var`]: /en-US/docs/Web/JavaScript/Reference/Statements/var
+
+However, like other expressions, assignment expressions like `x = f()` evaluate
+into a result value. Although this result value is usually not used,
+it can then be used by another expression.
+
+Chaining assignments or nesting assignments in other expressions can
+result in surprising behavior. For this reason, some JavaScript style guides
+[discourage chaining or nesting assignments][discourage assign chain]).
+Nevertheless, assignment chaining and nesting may occur sometimes,
+so it is important to be able to understand how they work.
+
+[discourage assign chain]: https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment
+
+By chaining or nesting an assignment expression,
+its result can itself be assigned to another variable. It can be logged, it can
+be put inside an array literal or function call, and so on.
+
+```js
+let x;
+const y = (x = f()); // Or equivalently: const y = x = f();
+console.log(y); // Logs the return value of the assignment x = f().
+
+console.log(x = f()); // Logs the return value directly.
+
+// An assignment expression can be nested in any place
+// where expressions are generally allowed,
+// such as as array literals’ elements or as function calls’ arguments.
+console.log([ 0, x = f(), 0 ]);
+console.log(f(0, x = f(), 0));
+```
+
+The evaluation result matches the expression to the right of the `=` sign in the
+“Meaning” column of the table above. That means that `x = f()` evaluates into
+whatever `f()`’s result is, `x += f()` evaluates into the resulting sum `x + f()`,
+`x **= f()` evaluates into the resulting power `x ** y`, and so on.
+
+In the case of logical assignments, `x &&= f()`,
+`x ||= f()`, and `x ??= f()`, the return value is that of the
+logical operation without the assignment, so `x && f()`,
+`x || f()`, and `x ?? f()`, respectively.
+
+When chaining these expressions without parentheses or other grouping operators
+like array literals, the assignment expressions are **grouped right to left**
+(they are [right-associative][]), but they are **evaluated left to right**.
+
+[right-associative]: https://en.wikipedia.org/wiki/Operator_associativity
+
+Note that, for all assignment operators other than `=` itself,
+the resulting values are always based on the operands’ values _before_
+the operation.
+
+For example, assume that the following functions `f` and `g`
+and the variables `x` and `y` have been declared:
+
+```js
+function f () {
+  console.log('F!');
+  return 2;
+}
+function g () {
+  console.log('G!');
+  return 3;
+}
+let x, y;
+```
+
+Consider these three examples:
+
+```js
+y = x = g()
+y = [ f(), x = g() ]
+x[f()] = g()
+```
+
+##### Evaluation example 1
+
+`y = x = f()` is equivalent to `y = (x = f())`,
+because the assignment operator `=` is [right-associative][].
+However, it evaluates from left to right:
+
+1. The assignment expression `y = x = f()` starts to evaluate.
+    1. The `y` on this assignment’s left-hand side evaluates
+       into a reference to the variable named `y`.
+    2. The assignment expression `x = f()` starts to evaluate.
+        1. The `x` on this assignment’s left-hand side evaluates
+           into a reference to the variable named `y`.
+        2. The function call `f()` prints "F!" to the console and
+           then evaluates to the number `2`.
+        3. That `2` result from `f()` is assigned to `x`.
+    3. The assignment expression `x = f()` has now finished evaluating;
+       its result is the new value of `x`, which is `2`.
+    4. That `2` result in turn is also assigned to `y`.
+2. The assignment expression `y = x = f()` has now finished evaluating;
+   its result is the new value of `y` – which happens to be `2`.
+   `x` and `y` are assigned to `2`,
+   and the console has printed "F!".
+
+##### Evaluation example 2
+
+`y = [ f(), x = g() ]` also evaluates from left to right:
+
+1. The assignment expression `y = [ f(), x = g() ]` starts to evaluate.
+    1. The `y` on this assignment’s left-hand evaluates
+       into a reference to the variable named `y`.
+    2. The inner array literal `[ f(), x = g() ]` starts to evaluate.
+      1. The function call `f()` prints "F!" to the console and
+         then evaluates to the number `2`.
+      2. The assignment expression `x = g()` starts to evaluate.
+          1. The `x` on this assignment’s left-hand side evaluates
+             into a reference to the variable named `x`.
+          2. The function call `g()` prints "3!" to the console and
+             then evaluates to the number `3`.
+          3. That `3` result from `f()` is assigned to `x`.
+      3. The assignment expression `x = g()` has now finished evaluating;
+         its result is the new value of `x`, which is `3`.
+         That `3` result becomes the next element
+         in the inner array literal (after the `2` from the `f()`).
+    2. The inner array literal `[ f(), x = g() ]`
+       has now finished evaluating;
+       its result is an array with two values: `[ 2, 3 ]`.
+    3. That `[ 2, 3 ]` array is now assigned to `y`.
+2. The assignment expression `y = [ f(), x = g() ]` has
+   now finished evaluating;
+   its result is the new value of `y` – which happens to be `[ 2, 3 ]`.
+   `x` is now assigned to `3`,
+   `y` is now assigned to `[ 2, 3 ]`,
+   and the console has printed "F!" then "G!".
+
+##### Evaluation example 3
+
+`x[f()] = g()` also evaluates from left to right.
+(This example assumes that `x` is already assigned to some [object][].
+For more information about objects, read [Working with Objects][object].)
+
+1. The assignment expression `x[f()] = g()` starts to evaluate.
+    1. The `x[f()]` property access on this assignment’s left-hand
+       starts to evaluate.
+        1. The `x` in this property access evaluates
+           into a reference to the variable named `x`.
+        2. Then the function call `f()` prints "F!" to the console and
+           then evaluates to the number `2`.
+    2. The `x[f()]` property access on this assignment
+       has now finished evaluating;
+       its result is a variable property reference: `x[2]`.
+    2. Then the function call `g()` prints "G!" to the console and
+       then evaluates to the number `3`.
+    3. That `3` is now assigned to `x[2]`.
+       (This step will succeed only if `x` is assigned to an [object][].)
+2. The assignment expression `x[f()] = g()` has
+   now finished evaluating;
+   its result is the new value of `x[2]` – which happens to be `3`.
+   `x[2]` is now assigned to `3`,
+   and the console has printed "F!" then "G!".
+
+#### Avoid assignment chains
+
+Chaining assignments or nesting assignments in other expressions can
+result in surprising behavior. For this reason, [chaining assignments
+in the same statement is discouraged][discourage assign chain]).
+
+In particular, putting a variable chain
+in a [`const`][], [`let`][], or [`var`][] statement
+often does *not* work.
+Only the outermost/leftmost variable would get declared;
+any other variables within the assignment chain are *not* declared
+by the `const`/`let`/`var` statement. For example:
+
+```js
+let z = y = x = f();
+```
+
+This statement seemingly declares the variables `x`, `y`, and `z`.
+However, it only actually declares the variable `z`.
+`y` and `x` are either invalid references to nonexistent variables
+(in [strict mode][]) or, worse, would implicitly create [global variables][]
+for `x` and `y` in [sloppy mode][].
+
+[strict mode]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+[sloppy mode]: https://developer.mozilla.org/en-US/docs/Glossary/Sloppy_mode
+[global variables]: https://developer.mozilla.org/en-US/docs/Glossary/Global_variable
+
 ### Comparison operators
 
 A comparison operator compares its operands and returns a logical value based on
 whether the comparison is true. The operands can be numerical, string, logical, or
-object values. Strings are compared based on standard lexicographical ordering, using
+[object][] values. Strings are compared based on standard lexicographical ordering, using
 Unicode values. In most cases, if the two operands are not of the same type, JavaScript
 attempts to convert them to an appropriate type for the comparison. This behavior
 generally results in comparing the operands numerically. The sole exceptions to type
@@ -291,7 +483,7 @@ var var2 = 4;
   </tbody>
 </table>
 
-> **Note:** `=>` is not an operator, but the notation
+> **Note:** `=>` is not a comparison operator but rather is the notation
 > for [Arrow
 > functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
