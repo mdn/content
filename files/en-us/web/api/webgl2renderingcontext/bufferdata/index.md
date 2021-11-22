@@ -13,7 +13,7 @@ browser-compat: api.WebGL2RenderingContext.bufferData
 ---
 {{APIRef("WebGL2")}}
 
-> **Note:** This page describes the WebGL 2 version of this method.  Click [here](/en-US/docs/Web/API/WebGLRenderingContext/bufferData) to read about the WebGL 1 version.
+> **Note:** This page describes the WebGL 2 version of this method. [`WebGLRenderingContext.bufferData()`](/en-US/docs/Web/API/WebGLRenderingContext/bufferData) is the WebGL 1 version of this method.
 
 The **`WebGL2RenderingContext.bufferData()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) initializes and creates the
 buffer object's data store.
