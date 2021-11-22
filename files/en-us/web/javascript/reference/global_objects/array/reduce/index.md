@@ -194,7 +194,7 @@ The callback would be invoked four times, with the arguments and return values i
   </tbody>
 </table>
 
-The value returned by `reduce()` would be that of the last callback invocation (`35`).
+The value returned by `reduce()` would be that of the last callback invocation (`85`).
 
 
 ### How reduce() works with an initial value
