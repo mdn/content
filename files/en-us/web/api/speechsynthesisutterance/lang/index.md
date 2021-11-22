@@ -3,7 +3,6 @@ title: SpeechSynthesisUtterance.lang
 slug: Web/API/SpeechSynthesisUtterance/lang
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesisUtterance
@@ -13,7 +12,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.lang
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`lang`** property of the
 {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the language of the

@@ -3,7 +3,6 @@ title: SpeechSynthesisUtterance.volume
 slug: Web/API/SpeechSynthesisUtterance/volume
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesisUtterance
@@ -13,7 +12,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.volume
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`volume`** property of the
 {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the volume that the

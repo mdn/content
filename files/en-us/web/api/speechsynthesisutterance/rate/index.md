@@ -3,7 +3,6 @@ title: SpeechSynthesisUtterance.rate
 slug: Web/API/SpeechSynthesisUtterance/rate
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesisUtterance
@@ -13,7 +12,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.rate
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`rate`** property of the
 {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the speed at which the

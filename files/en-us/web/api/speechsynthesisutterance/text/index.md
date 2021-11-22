@@ -3,7 +3,6 @@ title: SpeechSynthesisUtterance.text
 slug: Web/API/SpeechSynthesisUtterance/text
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesisUtterance
@@ -13,7 +12,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.text
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`text`** property of the
 {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the text that will be

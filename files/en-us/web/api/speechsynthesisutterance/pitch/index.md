@@ -3,7 +3,6 @@ title: SpeechSynthesisUtterance.pitch
 slug: Web/API/SpeechSynthesisUtterance/pitch
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesisUtterance
@@ -13,7 +12,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisUtterance.pitch
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`pitch`** property of the
 {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the pitch at which the

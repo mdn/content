@@ -3,7 +3,6 @@ title: Web Speech API
 slug: Web/API/Web_Speech_API
 tags:
   - API
-  - Experimental
   - Landing
   - Reference
   - Web Speech API
@@ -11,7 +10,7 @@ tags:
   - speech
   - synthesis
 ---
-{{DefaultAPISidebar("Web Speech API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Web Speech API")}}
 
 The **Web Speech API** enables you to incorporate voice data into web apps. The Web Speech API has two parts: `SpeechSynthesis` (Text-to-Speech), and `SpeechRecognition` (Asynchronous Speech Recognition.)
 
