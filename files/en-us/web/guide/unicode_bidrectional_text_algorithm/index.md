@@ -69,7 +69,7 @@ Unicode provides a number of special control characters that make it possible to
       </td>
     </tr>
     <tr>
-      <th scope="row">Right-to-Left Isolate (LRI)</th>
+      <th scope="row">Right-to-Left Isolate (RLI)</th>
       <td>U+2067</td>
       <td><code>&#x26;#x2067;</code></td>
       <td><code>dir="rtl"</code></td>
