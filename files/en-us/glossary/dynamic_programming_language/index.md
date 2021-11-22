@@ -5,15 +5,12 @@ tags:
   - CodingScripting
   - Glossary
 ---
-A **dynamic programming language** is a programming language in which some operations are performed during execution that would be performed during compilation in a static  programming language.
+A **dynamic programming language** is a programming language in which operations otherwise done at compile-time can be done at run-time. For example, in JavaScript it is possible to change the type of a variable or add new properties or methods to an object while the program is running.
 
-For example, a static programming language would only allow plugins to be added during compilation, while a dynamic programming language _might_ allow plugins to be loaded at runtime.
-
-Generally you can tell them apart because a static language is fully defined at compile time: all variables are known and its behavior can be fully understood using static analysis.
-By contrast the variables and behaviour of a dynamic language depends on the environment at runtime.
+This is opposed to so-called static programming languages, in which such changes are normally not possible.
 
 > **Note:** [Dynamic typing](/en-US/docs/Glossary/Dynamic_typing)/[static-typing](/en-US/docs/Glossary/Static_typing) are not synonymous with dynamic/static programming languages.
-> C++ and JavaScript, for example, dynamic programming language that uses static and dynamic typing, respectively.
+> For example, C++ and JavaScript are both dynamic programming languages, but C++ is statically typed, while Javascript is dynamically typed.
 
 ## See also
 
