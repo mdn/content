@@ -518,11 +518,12 @@ push your branch to your fork:
 
 1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-> **Note:** If the slug of the page you wish to delete contain special characters, include it in quotes:
+> **Note:** If the slug of the page you wish to delete contain special 
+  characters, include it in quotes:
 
-    ```sh
-    yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
-    ```
+```sh
+yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
+```
 
 ### Redirecting a document
 
