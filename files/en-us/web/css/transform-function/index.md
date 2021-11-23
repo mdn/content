@@ -71,7 +71,7 @@ The `<transform-function>` data type is specified using one of the transformatio
   - : Translates an element on the 2D plane.
 - [`translate3d()`](</en-US/docs/Web/CSS/transform-function/translate3d()>)
   - : Translates an element in 3D space.
-- [`translateX()`](/en-US/docs/Web/CSS/transform-function/translateX)
+- [`translateX()`](</en-US/docs/Web/CSS/transform-function/translateX()>)
   - : Translates an element horizontally.
 - [`translateY()`](</en-US/docs/Web/CSS/transform-function/translateY()>)
   - : Translates an element vertically.
