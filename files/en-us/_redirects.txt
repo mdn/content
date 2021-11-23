@@ -11104,7 +11104,6 @@
 /en-US/docs/Web/JavaScript/Typed_arrays/Uint16Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array
 /en-US/docs/Web/JavaScript/Typed_arrays/Uint32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array
 /en-US/docs/Web/JavaScript/Typed_arrays/Uint8Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
-/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm	/en-US/docs/Web/Guide/Unicode_Bidrectional_Text_Algorithm
 /en-US/docs/Web/MathML/Element/menclosed	/en-US/docs/Web/MathML/Element/menclose
 /en-US/docs/Web/Media/Formats/Guide_to_codecs_for_audio_on_the_web	/en-US/docs/Web/Media/Formats/Audio_codecs
 /en-US/docs/Web/Media_Queries	/en-US/docs/Web/CSS/Media_Queries
