@@ -44,7 +44,6 @@ You may prefer to omit specifying {{HTTPHeader("Vary")}} or use some other strat
 This applies in particular to network client hints like {{HTTPHeader("Downlink")}} and {{HTTPHeader("RTT")}}.
 For more information see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses).
 
-
 ## Hint life-time
 
 A server specifies the client hint headers that it is interested in getting in the `Accept-CH` response header.
@@ -53,8 +52,8 @@ A user agent should append the requested client hints, that it wants to share wi
 The same set of hints should be included with requests to the same site until the end of the session.
 In other words, the request for a specific set of hints does not expire until the browser is shut down.
 
-A server can replace the set of client hints it is interested in recieving by resending the `Accept-CH` response header with a new set of hints.
-If the server sent `Accept-CH` this would effectively indicate that it did not wish to recieve any hints (other than some of the low entropy [user agent client hints](#user-agent_client_hints) it gets by default).
+A server can replace the set of client hints it is interested in recieving by resending the `Accept-CH` response header with a new list.
+If the server sent `Accept-CH` this would effectively indicate that it did not wish to recieve any hints (other than the [low entropy hits](#low_entroy_hints) it gets by default).
 
 ## Low entropy hints
 
