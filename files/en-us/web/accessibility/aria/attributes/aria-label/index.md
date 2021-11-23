@@ -10,28 +10,36 @@ tags:
   - Reference
 ---
 
-The `aria-label` attribute defines a string value that labels the current element.
+The `aria-label` attribute defines a string value that labels an interactive element.
 
 ## Description
 
-Sometimes, like with SVG or [icon fonts (which you shouldn't be using)](https://www.youtube.com/watch?v=9xXBYcWgCHA), the default [accessible name](/en-US/docs/Glossary/Accessible_Name) of an object is missing or isn't really what the object is meant to represent, and there is no content visible in the DOM that can be associated with the object to give it meaning. In cases where an element has no accessible name or an accessible name that isn't accurate, and there is no content available and visible in the DOM to label the element, the `aria-label` attribute can be used to define a string that labels the element on which it is set, providing it with it's accessible name. 
+Sometimesthe default [accessible name](/en-US/docs/Glossary/Accessible_Name) of an element is missing, or does not accurately describe its contents, and there is no content visible in the DOM that can be associated with the object to give it meaning. Examples of this are SVG or [icon fonts (which you shouldn't be using)](https://www.youtube.com/watch?v=9xXBYcWgCHA).
+
+In cases where an element has no accessible name, or an accessible name that isn't accurate, the `aria-label` attribute can be used to define a string that labels an interactive element on which it is set. This provides the element with its accessible name. 
 
 ```html
-<button aria-label="Close" onclick="myDialog.close()">X</button>
+<button aria-label="Close" onclick="myDialog.close()">
+  <svg aria-iddent="true" focusable="false" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m.967 14.217 5.8-5.906-5.765-5.89L3.094.26l5.783 5.888L14.66.26l2.092 2.162-5.766 5.889 5.801 5.906-2.092 2.162-5.818-5.924-5.818 5.924-2.092-2.162Z" fill="#000"/></svg>
+</button>
 ```
-Most content has a default accessible name garnered from text content, attributes, or associated elements. By default, a button's accessible name is the content between the opening and closing {{HTMLElement('button')}} tags, an image's accessible name is the content of the [`alt`](/en-US/docs/Web/HTML/Element/Img#attr-alt) attribute, a form control's accessible name is the content of the associated {{HTMLElement('label')}} element. If none of these options are available, or if the default accessible name is not appropriate, use the `aria-label` attribute to define the accessible name of an element.  
+Most content has an accessible name generated from its immediate wrapping element's text content. Accessible names can also be created by certain attributes or associated elements. 
 
-Use it in cases where text that could label the element is _not_ visible on the screen. If there is visible text that labels the element, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) instead. 
+By default, a button's accessible name is the content between the opening and closing {{HTMLElement('button')}} tags, an image's accessible name is the content of its [`alt`](/en-US/docs/Web/HTML/Element/Img#attr-alt) attribute, and a form input's accessible name is the content of the associated {{HTMLElement('label')}} element. 
 
-The purpose of `aria-label` is the same as that of `aria-labelledby`. Both provide an accessible name for an object. If there is no visible name for the object on the page you can reference, use `aria-label` to provide the user with a recognizable name of the object. If the label text is available in the DOM, and referencing the DOM content and acceptable user experience, prefer to use `aria-labelledby`. If both are present on the same element, `aria-labelledby` will take precedence over `aria-label`.
+If none of these options are available, or if the default accessible name is not appropriate, use the `aria-label` attribute to define the accessible name of an element.  
+
+`aria-label` can be used in cases where text that could label the element is _not_ visible. If there is visible text that labels an element, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) instead. 
+
+The purpose of `aria-label` is the same as `aria-labelledby`. Both provide an accessible name for an element. If there is no visible name for the element you can reference, use `aria-label` to provide the user with a recognizable accessible name. If the label text is available in the DOM, and referencing the DOM content and acceptable user experience, prefer to use `aria-labelledby`. If both are present on the same element, `aria-labelledby` will take precedence over `aria-label`.
 
 The `aria-label` attribute can be used with regular, semantic HTML elements; it is not limited to elements that have an [ARIA `role`](/en-US/docs/Web/Accessibility/ARIA/Roles) assigned.
 
 Not all elements can be given an accessible name. Neither `aria-label` nor `aria-labelledby` should be used with inline structural role such as with `code`, `term`, or `emphasis` nor roles whose semantics will not be mapped to the accessibility API, including `presentation`, `none`, and `hidden`. Rather, use `aria-label` to ensure an accessible name is provided when none is visible in the DOM for all interactive elements, like links, video, and form controls, [landmark roles](g/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles), and [widget roles](). 
 
-If you give your {{HTMLElement('iframe')}}s a `title`, your images an `alt` attributes, and your inputs associated {{HTMLElement('label')}}s, `aria-label` is not necessary. But, if present, the `aria-label` will take precendence as your iframe, image, or input's accessible name.
+If you give your {{HTMLElement('iframe')}}s a `title`, your images an `alt` attributes, and your input's associated {{HTMLElement('label')}}s, `aria-label` is not necessary. But, if present, the `aria-label` will take precedence as your `iframe`, image, or input's accessible name.
 
-For form control has a {{HTMLElement('label')}} and aria attributes, the order of precedence is `aria-labeledby`, then `aria-label`, then {{HTMLElement('label')}}.
+For form control that have both a {{HTMLElement('label')}} and ARIA attributes, the order of precedence is `aria-labeledby`, then `aria-label`, then {{HTMLElement('label')}}.
 
 ## Values
 
