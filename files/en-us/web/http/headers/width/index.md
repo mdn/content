@@ -76,7 +76,7 @@ Width: 1920
 
 ## See also
 
-- [Adapting to Users with Client Hints](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints) (developer.google.com)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
 - Device client hints
 
   - {{HTTPHeader("Content-DPR")}}
