@@ -97,6 +97,41 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 On Windows 7, the resulting progress looks like this:
 
 ![progress-firefox.JPG](progress-firefox.jpg)
+  
+## Accessibility Concerns
+  
+### Labelling
+  
+In most cases you should provide an accessible label when using `<progress>`. While you can use the standard ARIA labelling attributes [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) or [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) as you would for any element with `role="progressbar"`, when using `<progress>` you can alternatively use the {{htmlelement("label")}} element.
+  
+> **Note:** Text placed between the element's tags is not an accessible label, it is only recommended as a fallback for old browsers that do not support this element.
+
+#### Example
+  
+```html
+  <label>Uploading Document: <progress value="70" max="100">70 %</progress></label>
+  
+  <!-- OR -->
+  
+  <label for="progress-bar">Uploading Document</label>
+  <progress id="progress-bar" value="70" max="100">
+```
+    
+### Describing a particular region
+
+If the `<progress>` element is describing the loading progress of a particular region of a page, you **SHOULD** use [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) to point to the status, and set the [`aria-busy`](https://www.w3.org/TR/wai-aria-1.1/#aria-busy) attribute to true on the region until it is finished loading.
+
+#### Example
+
+```html
+  <div aria-busy="true" aria-describedby="progress-bar">
+    <!-- content is for this region is loading -->
+  </div>
+  
+  <!-- ... -->
+
+  <progress id="progress-bar" aria-label="Content loading..."></progress>
+```
 
 ## Specifications
 
