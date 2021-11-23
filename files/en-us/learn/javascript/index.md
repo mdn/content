@@ -64,7 +64,5 @@ This topic contains the following modules, in a suggested order for working thro
   - : The main entry point for core JavaScript documentation on MDN — this is where you'll find extensive reference docs on all aspects of the JavaScript language, and some advanced tutorials aimed at experienced JavaScripters.
 - [Learn JavaScript](https://learnjavascript.online/)
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
-- [JavaScript Fundamentals on EXLskills](https://exlskills.com/learn-en/courses/javascript-fundamentals-basics_javascript)
-  - : Learn JavaScript for free with the EXLskills open-source course that introduces all you need to get started building applications in JS.
 - [Coding math](https://www.youtube.com/user/codingmath)
   - : An excellent series of video tutorials to teach the math you need to understand to be an effective programmer, by [Keith Peters](https://twitter.com/bit101).
