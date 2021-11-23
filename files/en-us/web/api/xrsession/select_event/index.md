@@ -25,30 +25,40 @@ browser-compat: api.XRSession.select_event
 ---
 {{APIRef("WebXR Device API")}}
 
-The WebXR event **`select`** is sent to an {{domxref("XRSession")}} when one of the session's input sources has completed a [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#Primary_actions). Examples of common kinds of primary action are users pressing triggers or buttons, tapping a touchpad, speaking a command, or performing a recognizable gesture when using a video tracking system or handheld controller with an accelerometer.
+The WebXR event **`select`** is sent to an {{domxref("XRSession")}} when one of the session's input sources has completed a [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_action).
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("XRInputSourceEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>{{domxref("XRSession.onselect", "onselect")}}</td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
 
-For details on how the {{domxref("XRSession.selectstart_event", "selectstart")}}, {{domxref("XRSession.select_event", "select")}}, and {{domxref("XRSession.selectend_event", "selectend")}} events work, and how you should react to them, see {{SectionOnPage("/en-US/docs/Web/API/WebXR_Device_API/Inputs", "Primary actions")}}.
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('select', () => { });
+
+onselect = event => { });
+```
+
+## Description
+
+### Trigger
+
+Triggered when users pressing triggers or buttons, tapping a touchpad, speaking a command, or performing a recognizable gesture when using a video tracking system or handheld controller with an accelerometer.
+
+### Event type
+
+An {{domxref("XRInputSourceEvent")}} which, in addition to the generic {{domxref("Event")}} class, includes the following properties:
+
+- {{domxref("XRInputSourceEvent.frame", "frame")}} {{ReadOnlyInline}}
+  - : An {{domxref("XRFrame")}} object providing the needed information about the event frame during which the event occurred. This frame may have been rendered in the past rather than being a current frame. Because this is an _event_ frame, not an _animation_ frame, you cannot call the {{domxref("XRFrame")}} method {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} on it; instead, use {{domxref("XRFrame.getPose", "getPose()")}}.
+- {{domxref("XRInputSourceEvent.inputSource", "inputSource")}} {{ReadOnlyInline}}
+  - : An {{domxref("XRInputSource")}} object indicating which input source generated the input event.
+
+### Use cases
+
+The {{domxref("XRSession.selectstart_event", "selectstart")}} and {{domxref("XRSession.selectend_event", "selectend")}} events tell you when you might want to display something to the user indicating that the primary action is going on. This might be drawing a controller with the activated button in a new color, or showing the targeted object being grabbed and moved around, starting when `selectstart` arrives and stopping when `selectend` is received.
+
+The `select` event is the event that tells your code that the user has completed the action they want to complete. This might be as simple as throwing an object or pulling the trigger of a gun in a game, or as involved as placing an object that they were dragging around the world back down again in a new location.
+
+If your primary action is a simple trigger action and you don't need to animate anything while the trigger is engaged, you can ignore the `selectstart` and `selectend` events and act on the start event.
 
 ## Examples
 
@@ -66,7 +76,7 @@ xrSession.addEventListener("select", event => {
 });
 ```
 
-You can of course also set up a handler for `select` events by setting the {{domxref("XRSession")}} object's {{domxref("XRSession.onselect", "onselect")}} event handler property to a function that handles the event:
+You can of course also set up a handler for `select` events by setting the {{domxref("XRSession")}} object's `onselect` event handler property to a function that handles the event:
 
 ```js
 xrSession.onselect = event => {
@@ -87,3 +97,7 @@ xrSession.onselect = event => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("XRSession.selectstart_event", "selectstart")}} and {{domxref("XRSession.selectend_event", "selectend")}}
