@@ -31,7 +31,7 @@ jobs:
           node-version: "12"
 
       - name: Cache node_modules
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v2.1.7
         id: cached-node_modules
         with:
           path: |
