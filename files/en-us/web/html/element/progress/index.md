@@ -119,7 +119,7 @@ In most cases you should provide an accessible label when using `<progress>`. Wh
     
 ### Describing a particular region
 
-If the `<progress>` element is describing the loading progress of a particular region of a page, you **SHOULD** use [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) to point to the status, and set the [`aria-busy`](https://www.w3.org/TR/wai-aria-1.1/#aria-busy) attribute to true on the region until it is finished loading.
+If the `<progress>` element is describing the loading progress of a section of a page, use [`aria-describedby`](en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) to point to the status, and set [`aria-busy="true"`](en-US/docs/Web/Accessibility/ARIA/Attributes/aria_busy ) on the section that is being updated, removing the `aria-busy` attribute when it has finished loading.
 
 #### Example
 
