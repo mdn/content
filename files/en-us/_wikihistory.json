@@ -91786,13 +91786,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/XRSession/onend": {
-    "modified": "2020-10-15T22:21:53.724Z",
-    "contributors": [
-      "jpmedley",
-      "bershanskiy"
-    ]
-  },
   "Web/API/XRSession/oninputsourceschange": {
     "modified": "2020-10-15T22:21:54.497Z",
     "contributors": [
