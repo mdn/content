@@ -63,7 +63,7 @@ function validate(inputID) {
 ```
 
 It's vital to set the message to an empty string if there are no errors. As long as the
-error message is not null, the form will not pass validation and will not be
+error message is not empty, the form will not pass validation and will not be
 submitted.
 
 ## Specifications
