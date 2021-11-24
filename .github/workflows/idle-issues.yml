@@ -1,0 +1,21 @@
+name: 'Mark issues and pull requests as idle'
+on:
+  schedule:
+    - cron: '55 * * * *'
+
+jobs:
+  idle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v4
+        with:
+          days-before-stale: 37
+          days-before-close: -1
+          stale-issue-message: ''
+          stale-pr-message: ''
+          stale-issue-label: 'idle'
+          stale-pr-label: 'idle'
+          enable-statistics: true
+          # debugging/dry-run stuff
+          debug-only: true
+          operations-per-run: 1000
