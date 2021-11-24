@@ -10,7 +10,8 @@ tags:
   - Reference
 ---
 
-The `aria-modal` attribute indicates whether an element is modal when displayed.
+The `aria-modal` attribute indicates whether an element is modal when displayed. When an element is modal, navigation is limited to the modal itself and the background (the ancestors and siblings of the modal) is hidden.
+
 
 ## Description
 
