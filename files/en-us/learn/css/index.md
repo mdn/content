@@ -39,7 +39,7 @@ It is also recommended that you work through [Getting started with the web](/en-
 
 This topic contains the following modules, in a suggested order for working through them. You should definitely start with the first one.
 
-- [CSS first steps](/en-US/docs/Learn/CSS/First_steps)
+- [CSS first steps](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps)
   - : CSS (Cascading Style Sheets) is used to style and lay out web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides a gentle beginning to your path towards CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.
 - [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks)
 
