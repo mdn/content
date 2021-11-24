@@ -9108,6 +9108,7 @@
 /en-US/docs/Web/API/XRSession/onend	/en-US/docs/Web/API/XRSession/end_event
 /en-US/docs/Web/API/XRSession/oninputsourceschange	/en-US/docs/Web/API/XRSession/inputsourceschange_event
 /en-US/docs/Web/API/XRSession/onselect	/en-US/docs/Web/API/XRSession/select_event
+/en-US/docs/Web/API/XRSession/onselectend	/en-US/docs/Web/API/XRSession/selectend_event
 /en-US/docs/Web/API/XRSession/onselectstart	/en-US/docs/Web/API/XRSession/selectstart_event
 /en-US/docs/Web/API/XRSessionEventInit	/en-US/docs/Web/API/XRSessionEvent/XRSessionEvent
 /en-US/docs/Web/API/XRSessionEventInit/session	/en-US/docs/Web/API/XRSessionEvent/XRSessionEvent
