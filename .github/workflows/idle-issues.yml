@@ -1,7 +1,7 @@
 name: 'Mark issues and pull requests as idle'
 on:
   schedule:
-    - cron: '05 11 * * *'
+    - cron: '55 * * * *'
 
 jobs:
   idle:
