@@ -102,7 +102,7 @@ On Windows 7, the resulting progress looks like this:
   
 ### Labelling
   
-In most cases you should provide an accessible label when using `<progress>`. While you can use the standard ARIA labelling attributes [`aria-labelledby`](https://www.w3.org/TR/wai-aria/#aria-labelledby) or [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) as you would for any element with `role="progressbar"`, when using `<progress>` you can alternatively use the {{htmlelement("label")}} element.
+In most cases you should provide an accessible label when using `<progress>`. While you can use the standard ARIA labelling attributes [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) as you would for any element with `role="progressbar"`, when using `<progress>` you can alternatively use the {{htmlelement("label")}} element.
   
 > **Note:** Text placed between the element's tags is not an accessible label, it is only recommended as a fallback for old browsers that do not support this element.
 
@@ -119,7 +119,7 @@ In most cases you should provide an accessible label when using `<progress>`. Wh
     
 ### Describing a particular region
 
-If the `<progress>` element is describing the loading progress of a section of a page, use [`aria-describedby`](en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) to point to the status, and set [`aria-busy="true"`](en-US/docs/Web/Accessibility/ARIA/Attributes/aria_busy ) on the section that is being updated, removing the `aria-busy` attribute when it has finished loading.
+If the `<progress>` element is describing the loading progress of a section of a page, use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) to point to the status, and set [`aria-busy="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria_busy ) on the section that is being updated, removing the `aria-busy` attribute when it has finished loading.
 
 #### Example
 
