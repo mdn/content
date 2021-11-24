@@ -85,6 +85,9 @@ See this code in a [JSFiddle demo](https://jsfiddle.net/zfnj5rv4/) or interact w
 ```js
 var dragged;
 
+//Prevent the text from getting selectable for Firefox users
+  document.body.style.MozUserSelect="none"
+  
 /* events fired on the draggable target */
 document.addEventListener("drag", function(event) {
 
