@@ -31,7 +31,7 @@ objectName.propertyName
 Like all JavaScript variables, both the object name (which could be a normal variable) and property name are case sensitive. You can define a property by assigning it a value. For example, let's create an object named `myCar` and give it properties named `make`, `model`, and `year` as follows:
 
 ```js
-let myCar = new Object();
+const myCar = new Object();
 myCar.make = 'Ford';
 myCar.model = 'Mustang';
 myCar.year = 1969;
@@ -40,7 +40,7 @@ myCar.year = 1969;
 The above example could also be written using an **[object initializer](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#object_initializers)**, which is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`):
 
 ```js
-let myCar = {
+const myCar = {
   make: 'Ford',
   model: 'Mustang',
   year: 1969
@@ -66,10 +66,10 @@ An object property name can be any valid JavaScript string, or anything that can
 ```js
 // four variables are created and assigned in a single go,
 // separated by commas
-let myObj = new Object(),
-    str = 'myString',
-    rand = Math.random(),
-    obj = new Object();
+const myObj = new Object(),
+      str = 'myString',
+      rand = Math.random(),
+      obj = new Object();
 
 myObj.type              = 'Dot syntax';
 myObj['date created']   = 'String with space';
@@ -151,7 +151,7 @@ Using object initializers is sometimes referred to as creating objects with lite
 The syntax for an object using an object initializer is:
 
 ```js
-let obj = {
+const obj = {
   property_1:   value_1,   // property value may be an identifier...
   2:            value_2,   // or a number...
   // ...,
@@ -166,13 +166,16 @@ Object initializers are expressions, and each object initializer results in a ne
 The following statement creates an object and assigns it to the variable `x` if and only if the expression `cond` is true:
 
 ```js
-if (cond) let x = {greeting: 'hi there'};
+let x;
+if (cond) {
+  x = {greeting: 'hi there'};
+}
 ```
 
 The following example creates `myHonda` with three properties. Note that the `engine` property is also an object with its own properties.
 
 ```js
-let myHonda = {color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}};
+const myHonda = {color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}};
 ```
 
 You can also use object initializers to create arrays. See [array literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals).
@@ -199,7 +202,7 @@ Notice the use of `this` to assign values to the object's properties based on th
 Now you can create an object called `mycar` as follows:
 
 ```js
-let mycar = new Car('Eagle', 'Talon TSi', 1993);
+const mycar = new Car('Eagle', 'Talon TSi', 1993);
 ```
 
 This statement creates `mycar` and assigns it the specified values for its properties. Then the value of `mycar.make` is the string "Eagle", `mycar.year` is the integer 1993, and so on.
@@ -207,8 +210,8 @@ This statement creates `mycar` and assigns it the specified values for its prope
 You can create any number of `Car` objects by calls to `new`. For example,
 
 ```js
-let kenscar = new Car('Nissan', '300ZX', 1992);
-let vpgscar = new Car('Mazda', 'Miata', 1990);
+const kenscar = new Car('Nissan', '300ZX', 1992);
+const vpgscar = new Car('Mazda', 'Miata', 1990);
 ```
 
 An object can have a property that is itself another object. For example, suppose you define an object called `Person` as follows:
@@ -224,8 +227,8 @@ function Person(name, age, sex) {
 and then instantiate two new `Person` objects as follows:
 
 ```js
-let rand = new Person('Rand McKinnon', 33, 'M');
-let ken = new Person('Ken Jones', 39, 'M');
+const rand = new Person('Rand McKinnon', 33, 'M');
+const ken = new Person('Ken Jones', 39, 'M');
 ```
 
 Then, you can rewrite the definition of `Car` to include an `owner` property that takes a `Person` object, as follows:
@@ -242,8 +245,8 @@ function Car(make, model, year, owner) {
 To instantiate the new objects, you then use the following:
 
 ```js
-let car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
-let car2 = new Car('Nissan', '300ZX', 1992, ken);
+const car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
+const car2 = new Car('Nissan', '300ZX', 1992, ken);
 ```
 
 Notice that instead of passing a literal string or integer value when creating the new objects, the above statements pass the objects `rand` and `ken` as the arguments for the owners. Then if you want to find out the name of the owner of `car2`, you can access the following property:
@@ -266,7 +269,7 @@ Objects can also be created using the {{jsxref("Object.create()")}} method. This
 
 ```js
 // Animal properties and method encapsulation
-let Animal = {
+const Animal = {
   type: 'Invertebrates', // Default value of properties
   displayType: function() {  // Method which will display type of Animal
     console.log(this.type);
@@ -274,11 +277,11 @@ let Animal = {
 };
 
 // Create new animal type called animal1
-let animal1 = Object.create(Animal);
+const animal1 = Object.create(Animal);
 animal1.displayType(); // Output: Invertebrates
 
 // Create new animal type called fish
-let fish = Object.create(Animal);
+const fish = Object.create(Animal);
 fish.type = 'Fishes';
 fish.displayType(); // Output: Fishes
 ```
@@ -313,7 +316,7 @@ A _method_ is a function associated with an object, or, put differently, a metho
 ```js
 objectName.methodName = functionName;
 
-let myObj = {
+const myObj = {
   myMethod: function(params) {
     // ...do something
   }
@@ -337,7 +340,7 @@ You can define methods for an object type by including a method definition in th
 
 ```js
 function displayCar() {
-  let result = `A Beautiful ${this.year} ${this.make} ${this.model}`;
+  const result = `A Beautiful ${this.year} ${this.make} ${this.model}`;
   prettyPrint(result);
 }
 ```
@@ -419,7 +422,7 @@ Getters and setters can be either
 When defining getters and setters using [object initializers](#object_initializers) all you need to do is to prefix a getter method with `get` and a setter method with `set`. Of course, the getter method must not expect a parameter, while the setter method expects exactly one parameter (the new value to set). For instance:
 
 ```js
-let o = {
+const o = {
   a: 7,
   get b() {
     return this.a + 1;
@@ -446,7 +449,7 @@ Please note that function names of getters and setters defined in an object lite
 Getters and setters can also be added to an object at any time after creation using the {{jsxref("Object.defineProperties()")}} method. This method's first parameter is the object on which you want to define the getter or setter. The second parameter is an object whose property names are the getter or setter names, and whose property values are objects for defining the getter or setter functions. Here's an example that defines the same getter and setter used in the previous example:
 
 ```js
-let o = { a: 0 };
+const o = { a: 0 };
 
 Object.defineProperties(o, {
     'b': { get: function() { return this.a + 1; } },
@@ -465,7 +468,7 @@ You can remove a non-inherited property by using the [`delete`](/en-US/docs/Web/
 
 ```js
 // Creates a new object, myobj, with two properties, a and b.
-let myobj = new Object();
+const myobj = new Object();
 myobj.a = 5;
 myobj.b = 12;
 
@@ -480,8 +483,8 @@ In JavaScript, objects are a reference type. Two distinct objects are never equa
 
 ```js
 // Two variables, two distinct objects with the same properties
-let fruit = {name: 'apple'};
-let fruitbear = {name: 'apple'};
+const fruit = {name: 'apple'};
+const fruitbear = {name: 'apple'};
 
 fruit == fruitbear; // return false
 fruit === fruitbear; // return false
@@ -489,8 +492,8 @@ fruit === fruitbear; // return false
 
 ```js
 // Two variables, a single object
-let fruit = {name: 'apple'};
-let fruitbear = fruit;  // Assign fruit object reference to fruitbear
+const fruit = {name: 'apple'};
+const fruitbear = fruit;  // Assign fruit object reference to fruitbear
 
 // Here fruit and fruitbear are pointing to same object
 fruit == fruitbear; // return true
