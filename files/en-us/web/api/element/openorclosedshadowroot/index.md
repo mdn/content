@@ -16,7 +16,7 @@ tags:
   - shadow dom
 browser-compat: api.Element.openOrClosedShadowRoot
 ---
-{{APIRef("Shadow DOM")}}{{Draft}}{{non-standard_header}}
+{{APIRef("Shadow DOM")}}{{non-standard_header}}
 
 > **Note:** This API is available only to [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
 

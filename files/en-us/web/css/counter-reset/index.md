@@ -11,7 +11,7 @@ browser-compat: css.properties.counter-reset
 ---
 {{CSSRef}}
 
-The **`counter-reset`** [CSS](/en-US/docs/Web/CSS) property resets a [CSS counter](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) to a given value. This property will create a new counter of the given name. To change the value of an existing counter use {{cssxref("counter-set")}}, or {{cssxref("counter-increment")}}.
+The **`counter-reset`** [CSS](/en-US/docs/Web/CSS) property resets a [CSS counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) to a given value. This property will create a new counter of the given name. To change the value of an existing counter use {{cssxref("counter-set")}}, or {{cssxref("counter-increment")}}.
 
 {{EmbedInteractiveExample("pages/css/counter-reset.html")}}
 
@@ -83,7 +83,7 @@ h1 {
 
 ## See also
 
-- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-set")}}
 - {{cssxref("@counter-style")}}

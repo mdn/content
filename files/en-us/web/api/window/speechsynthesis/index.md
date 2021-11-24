@@ -3,30 +3,24 @@ title: Window.speechSynthesis
 slug: Web/API/Window/speechSynthesis
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesis
   - Window
 browser-compat: api.Window.speechSynthesis
 ---
-{{APIRef()}}{{SeeCompatTable}}
+{{APIRef()}}
 
 The `speechSynthesis` read-only property of the Window object returns a {{domxref("SpeechSynthesis")}} object, which is the entry point into using [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) speech synthesis functionality.
 
-## Syntax
-
-```js
-var synth = window.speechSynthesis;
-```
-
-### Value
+## Value
 
 A {{domxref("SpeechSynthesis")}} object.
 
 ## Examples
 
-In our basic [Speech synthesiser demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis), we first grab a reference to the SpeechSynthesis controller using `window.speechSynthesis`. After defining some necessary variables, we retrieve a list of the voices available using {{domxref("SpeechSynthesis.getVoices()")}} and populate a select menu with them so the user can choose what voice they want.
+In our basic [Speech synthesiser demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis), we first grab a reference to the SpeechSynthesis controller using `window.speechSynthesis`.
+After defining some necessary variables, we retrieve a list of the voices available using {{domxref("SpeechSynthesis.getVoices()")}} and populate a select menu with them so the user can choose what voice they want.
 
 Inside the `inputForm.onsubmit` handler, we stop the form submitting with [preventDefault()](/en-US/docs/Web/API/Event/preventDefault),  create a new {{domxref("SpeechSynthesisUtterance")}} instance containing the text from the text {{htmlelement("input")}}, set the utterance's voice to the voice selected in the {{htmlelement("select")}} element, and start the utterance speaking via the {{domxref("SpeechSynthesis.speak()")}} method.
 

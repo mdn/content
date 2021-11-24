@@ -57,11 +57,11 @@ The {{domxref("RTCRtpSender")}} object which will be used to transmit the media 
 
 ### Exceptions
 
-- `InvalidAccessError`
-  - : The specified track (or all of its underlying streams) is already part of the
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if the specified track (or all of its underlying streams) is already part of the
     {{domxref("RTCPeerConnection")}}.
-- `InvalidStateError`
-  - : The {{domxref("RTCPeerConnection")}} is closed.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("RTCPeerConnection")}} is closed.
 
 ## Usage notes
 

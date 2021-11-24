@@ -7,26 +7,33 @@ tags:
   - sanitize
 browser-compat: api.Sanitizer.sanitize
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
+{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
-The **`sanitize()`** method of the
-{{domxref("sanitizer")}} interface returns a sanitized {{domxref('DocumentFragment')}}
-from an input, removing any offending elements or attributes.
+The **`sanitize()`** method of the {{domxref("Sanitizer")}} interface is used to sanitize a tree of DOM nodes, removing any unwanted elements or attributes.
+
+It should be used when the data to be sanitized is already available as DOM nodes.
+For example when sanitizing a `Document` instance in a frame.
+
+The default `Sanitizer()` configuration strips out XSS-relevant input by default, including {{HTMLElement("script")}} tags, custom elements, and comments.
+The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitizer","Sanitizer()")}} constructor options.
+
+> **Note:** To sanitize strings, instead use {{domxref("Element.setHTML()")}} or {{domxref("Sanitizer.sanitizeFor()")}}.
+> See {{domxref('HTML Sanitizer API')}} for more information.
 
 ## Syntax
 
 ```js
-var DocumentFragment = sanitizer.sanitize(input);
+sanitize(input)
 ```
 
 ### Parameters
 
 - `input`
-  - : A {{jsxref('String')}} to be sanitized.
+  - : A  {{domxref('DocumentFragment')}} or {{domxref('Document')}} to be sanitized.
 
 ### Return value
 
-A {{domxref('DocumentFragment')}}.
+A sanitized {{domxref('DocumentFragment')}}.
 
 ### Exceptions
 
@@ -34,15 +41,18 @@ None.
 
 ## Examples
 
-This example uses the `sanitize` method to remove a disallowed
-`script` and `blink` elements from a string input.
+To sanitize data from an iframe with id `userFrame`:
 
 ```js
-// our input string to clean
-const stringToClean = 'Some text <b><i>with</i></b> <blink>tags</blink>, including a rogue script <script>alert(1)</script> def.';
+const sanitizer = new Sanitizer();  // Default sanitizer;
 
-const result = new Sanitizer().sanitize(stringToClean);
-// Result: A DocumentFragment containing text nodes and a <b> element, with a <i> child element
+// Get the frame and its Document object
+const frame_element = document.getElementById("userFrame")
+const unsanitized_frame_tree = frame_element.contentWindow.document;
+
+// Sanitize the document tree and update the frame.
+const sanitized_frame_tree = sanitizer.sanitize(unsanitized_frame_tree);
+frame_element.replaceChildren(sanitized_frame_tree);
 ```
 
 ## Specifications
@@ -52,3 +62,9 @@ const result = new Sanitizer().sanitize(stringToClean);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref('HTML Sanitizer API')}}
+- {{domxref("Element.setHTML()")}}
+

@@ -38,13 +38,13 @@ Undefined.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the `AudioData` object has been {{Glossary("Transferable Objects","transferred")}}.
-- {{domxref("DOMException")}} `RangeError`
+- `RangeError` {{domxref("DOMException")}}
   - : Thrown if the length of the sample is longer than the destination length.
-- {{domxref("DOMException")}} `RangeError`
+- `RangeError` {{domxref("DOMException")}}
   - : Thrown if the format of the `AudioData` object describes a planar format, but `options.planeIndex` is outside of the number of planes available.
-- {{domxref("DOMException")}} `RangeError`
+- `RangeError` {{domxref("DOMException")}}
   - : Thrown if the format of the `AudioData` object describes an interleaved format, but `options.planeIndex` is greater than `0`.
 
 ## Examples

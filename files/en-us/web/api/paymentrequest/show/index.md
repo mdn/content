@@ -17,12 +17,12 @@ browser-compat: api.PaymentRequest.show
 ---
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
-The **{{domxref('PaymentRequest')}}** interface's
-**`show()`** method instructs the user agent to begin the
+The **{{domxref('PaymentRequest')}}** interface's
+**`show()`** method instructs the user agent to begin the
 process of showing and handling the user interface for the payment request to the
 user.
 
-For security reasons, the `PaymentRequest.show()` method can't just be
+For security reasons, the `PaymentRequest.show()` method can't just be
 initiated at any time. It may only be called while handling events that represent user
 interactions, such as {{event("click")}}, {{event("keyup")}}, or the like.
 
@@ -67,7 +67,17 @@ paymentPromise = paymentRequest.show(detailsPromise);
     resolve with an object containing the updated information:
 
     - `displayItems` {{optional_inline}}
-      - : An array of {{domxref("PaymentItem")}} objects, each describing one line item for the payment request. These represent the line items on a receipt or invoice.
+      - : An array of objects, each describing one line item for the payment request. These represent the line items on a receipt or invoice, each with the following properties:
+
+        - `amount`
+          - : An object describing the monetary value of the item. This object includes the following fields:
+            - `currency`: A string containing a valid 3-letter [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) currency identifier ({{interwiki("wikipedia", "ISO 4217")}}) indicating the currency used for the payment `value`.
+            - `value`: A string containing a valid decimal value representing the mount of currency constituting the payment amount. This string must only contain an optional leading "-" to indicate a negative value, then one or more digits from 0 to 9, and an optional decimal point (".", regardless of locale) followed by at least one more digit. No whitespace is permitted.
+        - `label`
+          - : A string specifying a human-readable name or description of the item or service being charged for. This may be displayed to the user by the {{Glossary("user agent")}}, depending on the design of the interface.
+        - `pending`
+          - : A Boolean value which is `true` if the specified `amount` has not yet been finalized. This can be used to show items such as shipping or tax amounts that depend upon the selection of shipping address, shipping option, or so forth. The user agent may show this information but is not required to do so.
+
     - `error` {{optional_inline}}{{deprecated_inline}}
       - : A {{domxref("DOMString")}} specifying an error message to present to the user*.* When calling {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}}, including `error` in the updated data causes the {{Glossary("user agent")}} to display the text as a general error message. For address field specific errors, use `shippingAddressErrors`.
     - `modifiers` {{optional_inline}}
@@ -77,36 +87,36 @@ paymentPromise = paymentRequest.show(detailsPromise);
     - `shippingOptions` {{optional_inline}}
       - : An array of {{domxref("PaymentShippingOption")}} objects, each describing one available shipping option from which the user may choose.
     - `total` {{optional_inline}}
-      - : A {{domxref("PaymentItem")}} providing an updated total for the payment. Make sure this equals the sum of all of the items in `displayItems`. _This is not calculated automatically_. You must update this value yourself anytime the total amount due changes. This lets you have flexibility for how to handle things like tax, discounts, and other adjustments to the total price charged.
+      - : An object with the same properties as the objects in `displayItems` providing an updated total for the payment. Make sure this equals the sum of all of the items in `displayItems`. _This is not calculated automatically_. You must update this value yourself anytime the total amount due changes. This lets you have flexibility for how to handle things like tax, discounts, and other adjustments to the total price charged.
 
 ### Return value
 
-A {{jsxref("Promise")}} that eventually resolves with a {{domxref("PaymentResponse")}}.
+A {{jsxref("Promise")}} that eventually resolves with a {{domxref("PaymentResponse")}}.
 The promise is resolved when the user accepts the payment request (such as by clicking a
 "Pay" button in the browser's payment sheet).
 
 ### Exceptions
 
-- `AbortError`
+Exceptions are not thrown but returned when the {{jsxref("Promise")}} rejects.
 
-  - : The returned promise rejects with an `AbortError` if the
+- `AbortError` {{domxref("DOMException")}}
+  - : Returned if the
     {{Glossary("user agent")}} is already showing a payment panel. Only one payment
     panel may be visible at a time _across all documents loaded by the user
     agent_.
 
     The promise is also rejected with `AbortError` if the user cancels the
     payment request.
-
-- `InvalidStateError`
-  - : The promise rejects with an `InvalidStateError` if the same payment has
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the same payment has
     already been shown for this request (its state is `interactive` because it
     is being shown already).
-- `NotSupportedError`
-  - : The promise rejects with a `NotSupportedError` if the user agent does not
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Returned if the user agent does not
     support the payment methods specified when the
     {{domxref("PaymentRequest.PaymentRequest","PaymentRequest")}} constructor was called.
-- `SecurityError`
-  - : The promise rejects with a `SecurityError` if the call to
+- `SecurityError` {{domxref("DOMException")}}
+  - : Returned if the call to
     `show()` was not in response to a user action, such as a {{event("click")}}
     or {{event("keyup")}} event. Other reasons a `SecurityError` may be thrown
     are at the discretion of the user agent, and may include situations such as too many
@@ -227,18 +237,17 @@ function validateResponse(response) {
 }
 ```
 
-See the article [Using
-promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) for more information if you need more information about working with
+See the article [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) for more information if you need more information about working with
 promises.
 
 ## Examples
 
-In the following example, a `PaymentRequest` object is instantiated before
-the `show()` method is called. This method triggers the user agent's built-in
-process for retrieving payment information from the user. The `show()` method
+In the following example, a `PaymentRequest` object is instantiated before
+the `show()` method is called. This method triggers the user agent's built-in
+process for retrieving payment information from the user. The `show()` method
 returns a {{jsxref('Promise')}} that resolves to a {{domxref("PaymentResponse")}} object
 when the user interaction is complete. The developer then uses the information in
-the `PaymentResponse` object to format and send payment data to the server.
+the `PaymentResponse` object to format and send payment data to the server.
 You should send the payment information to the server asynchronously so that the final
 call to {{domxref("paymentResponse.complete()")}} can indicate the success or failure of
 the payment.
@@ -303,8 +312,7 @@ document.getElementById("buyButton").onclick = requestPayment;
 ## See also
 
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
-- [Using
-  the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - {{domxref('PaymentRequest.abort()')}}
 - {{domxref("PaymentRequest.retry()")}}
 - {{domxref("PaymentRequest.complete()")}}

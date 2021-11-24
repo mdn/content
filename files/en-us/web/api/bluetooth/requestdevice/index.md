@@ -45,7 +45,7 @@ A {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object.
 ## Exceptions
 
 - `TypeError` {{domxref("DOMException")}}
-  - : Thrown if the provided `options` do not makes sense. For example,
+  - : Thrown if the provided `options` do not make sense. For example,
     `options.filters` is present and `options.acceptAllDevices` is
     `true`, or if `options.filters` is not present and
     `options.acceptAllDevices` is `false`. Or

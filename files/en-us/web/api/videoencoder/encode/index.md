@@ -35,9 +35,9 @@ VideoEncoder.encode(frame, options);
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("VideoEncoder.state","state")}} is not `"configured"`.
-- {{domxref("DOMException")}} `DataError`
+- `DataError` {{domxref("DOMException")}}
   - : Thrown if the `chunk` cannot be decoded due to relying on other frames for decoding.
 
 ## Examples

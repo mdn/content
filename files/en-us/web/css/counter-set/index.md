@@ -81,7 +81,7 @@ h1 {
 
 ## See also
 
-- [Using CSS Counters](/en-US/docs/CSS/Counters)
+- [Using CSS Counters](/en-US/docs/Web/CSS/Counters)
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
 - {{cssxref("@counter-style")}}

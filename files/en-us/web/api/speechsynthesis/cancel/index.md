@@ -28,7 +28,7 @@ speechSynthesisInstance.cancel();
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ### Parameters
 

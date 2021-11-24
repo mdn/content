@@ -19,8 +19,10 @@ The **`ariaPlaceholder`** property of the {{domxref("Element")}} interface refle
 
 ## Syntax
 
-    var ariaPlaceholder = element.ariaPlaceholder;
-    element.ariaPlaceholder = ariaPlaceholder
+```js
+var ariaPlaceholder = element.ariaPlaceholder;
+element.ariaPlaceholder = ariaPlaceholder
+```
 
 ### Value
 

@@ -7,6 +7,7 @@ tags:
   - Reference
   - RegExp
   - Regular Expressions
+  - Polyfill
 browser-compat: javascript.builtins.RegExp
 ---
 {{JSRef}}
@@ -243,7 +244,7 @@ Note that due to web compatibility, `RegExp.$N` will still return an empty strin
 
 ## See also
 
-- A polyfill of many modern `RegExp` features is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- A polyfill of many modern `RegExp` features (`dotAll`, `sticky` flags, named capture groups, etc.) is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}

@@ -52,11 +52,11 @@ The object describes the user-selected audio output device.
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the current page has not been granted the {{HTTPHeader("Feature-Policy/speaker-selection","speaker-selection")}} permission or the user closed the selection prompt without choosing a device.
+  - : Returned if the current page has not been granted the {{HTTPHeader("Feature-Policy/speaker-selection","speaker-selection")}} permission or the user closed the selection prompt without choosing a device.
 - `NotFoundError`  {{domxref("DOMException")}}
-  - : Thrown if there are no available audio output devices.
+  - : Returned if there are no available audio output devices.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if there hasn't been a {{Glossary("transient activation")}} (you must trigger it from some kind of UI event).
+  - : Returned if there hasn't been a {{Glossary("transient activation")}} (you must trigger it from some kind of UI event).
 
 ## Example
 

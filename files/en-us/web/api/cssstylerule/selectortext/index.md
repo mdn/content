@@ -15,8 +15,10 @@ The **`selectorText`** property of the {{domxref("CSSStyleRule")}} interface get
 
 ## Syntax
 
-    var text = CSSStyleRule.selectorText;
-    CSSStyleRule.selectorText = text;
+```js
+var text = CSSStyleRule.selectorText;
+CSSStyleRule.selectorText = text;
+```
 
 ### Value
 

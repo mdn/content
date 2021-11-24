@@ -21,7 +21,7 @@ The **`DOMContentLoaded`** event fires when the initial HTML document has been c
     </tr>
     <tr>
       <th scope="row">Cancelable</th>
-      <td>Yes (although specified as a simple event that isn't cancelable)</td>
+      <td>No</td>
     </tr>
     <tr>
       <th scope="row">Interface</th>

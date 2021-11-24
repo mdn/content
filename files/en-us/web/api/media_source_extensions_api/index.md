@@ -50,10 +50,6 @@ There are numerous available free and open source tools for transcoding content 
   - : A simple container list for multiple `SourceBuffer` objects.
 - {{domxref("VideoPlaybackQuality")}}
   - : Contains information about the quality of video being played by a {{htmlelement("video")}} element, such as number of dropped or corrupted frames. Returned by the {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method.
-- {{domxref("TrackDefault")}}
-  - : Provides a {{domxref("SourceBuffer")}} with kind, label, and language information for tracks that do not contain this information in the [initialization segments](https://w3c.github.io/media-source/#init-segment) of a media chunk.
-- {{domxref("TrackDefaultList")}}
-  - : A simple container list for multiple `TrackDefault` objects.
 
 ## Extensions to other interfaces
 

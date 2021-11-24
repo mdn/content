@@ -1,5 +1,5 @@
 ---
-title: <textarea>
+title: '<textarea>: The Textarea element'
 slug: Web/HTML/Element/textarea
 tags:
   - Element

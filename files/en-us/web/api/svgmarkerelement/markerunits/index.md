@@ -15,7 +15,9 @@ The **`markerUnits`** read-only property of the {{domxref("SVGMarkerElement")}} 
 
 ## Syntax
 
-    let markerUnits = SVGMarkerElement.markerUnits;
+```js
+let markerUnits = SVGMarkerElement.markerUnits;
+```
 
 ### Value
 

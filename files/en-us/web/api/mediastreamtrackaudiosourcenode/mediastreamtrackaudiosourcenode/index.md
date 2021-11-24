@@ -28,7 +28,7 @@ given options object.
 
 Another way to create a `MediaStreamTrackAudioSourceNode` is to call
 the{{domxref("AudioContext.createMediaStreamTrackSource()")}} method, specifying the
-{{domxref("MediaStreamTrack")}}  from which you want to obtain audio.
+{{domxref("MediaStreamTrack")}} from which you want to obtain audio.
 
 ## Syntax
 
@@ -55,10 +55,10 @@ whose media is obtained from the specified media track.
 
 ### Exceptions
 
-- `NotSupportedError`
-  - : The specified `context` is not an {{domxref("AudioContext")}}.
-- `InvalidStateError`
-  - : The specified {{domxref("MediaStreamTrack")}} isn't an audio track (that is, its
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the specified `context` is not an {{domxref("AudioContext")}}.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the specified {{domxref("MediaStreamTrack")}} isn't an audio track (that is, its
     {{domxref("MediaStreamTrack.kind", "kind")}} property isn't `audio`.
 
 ## Example

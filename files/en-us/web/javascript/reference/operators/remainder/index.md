@@ -33,7 +33,7 @@ x % y
 ### Remainder with positive dividend
 
 ```js
- 12 % 5  //  2
+ 13 % 5  //  3
  1 % -2 //  1
  1 % 2  //  1
  2 % 3  //  2
@@ -43,7 +43,7 @@ x % y
 ### Remainder with negative dividend
 
 ```js
--12 % 5 // -2
+-13 % 5 // -3
 -1 % 2  // -1
 -4 % 2  // -0
 ```

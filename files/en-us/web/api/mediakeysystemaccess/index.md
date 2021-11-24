@@ -27,7 +27,7 @@ The **`MediaKeySystemAccess`** interface of the [EncryptedMediaExtensions API](/
 - {{domxref("MediaKeySystemAccess.createMediaKeys()")}}
   - : Returns a {{jsxref('Promise')}} that resolves to a new {{domxref("MediaKeys")}} object.
 - {{domxref("MediaKeySystemAccess.getConfiguration()")}}
-  - : Returns a {{domxref("MediaKeySystemConfiguration")}} object with the supported combination of configuration options.
+  - : Returns an object with the supported combination of configuration options.
 
 ## Specifications
 

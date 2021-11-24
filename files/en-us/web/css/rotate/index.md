@@ -75,7 +75,7 @@ rotate: unset;
 
 #### CSS
 
-```css hidden
+```css
 * {
   box-sizing: border-box;
 }
@@ -97,9 +97,7 @@ p {
   font-size: 1.2rem;
   text-align: center;
 }
-```
 
-```css
 .rotate {
   transition: rotate 1s;
 }

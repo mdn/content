@@ -38,35 +38,16 @@ A double, indicating the end time of the append window, in seconds.
 
 ### Exceptions
 
-The following exceptions may be thrown when setting a new value for this property.
+The following exceptions may be thrown when setting a new value for this property:
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>InvalidAccessError</code></td>
-      <td>
-        An attempt was made to set the value to less than or equal to
-        {{domxref("SourceBuffer.appendWindowStart")}}, or
-        <code>NaN</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>
-        This {{domxref("SourceBuffer")}} object is being updated (i.e.
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if an attempt was made to set the value to less than or equal to
+        {{domxref("SourceBuffer.appendWindowStart")}} or `Nan`.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if this {{domxref("SourceBuffer")}} object is being updated (i.e.
         its {{domxref("SourceBuffer.updating")}} property is
         currently <code>true</code>), or this <code>SourceBuffer</code> has been
         removed from the {{domxref("MediaSource")}}.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Example
 

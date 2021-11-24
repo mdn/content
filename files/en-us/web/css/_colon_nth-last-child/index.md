@@ -147,7 +147,7 @@ A _quantity query_ styles elements depending on how many of them there are. In t
 /* If there are at least three list items,
    style them all */
 li:nth-last-child(n+3),
-li:nth-last-child(n+3) ~ li {
+li:nth-last-child(3) ~ li {
   color: red;
 }
 ```

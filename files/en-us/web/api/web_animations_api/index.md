@@ -21,15 +21,13 @@ The Web Animations API provides a common language for browsers and developers to
 - {{domxref("Animation")}}
   - : Provides playback controls and a timeline for an animation node or source. Can take an object created with the {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}} constructor.
 - {{domxref("KeyframeEffect")}}
-  - : Describes sets of animatable properties and values, called **keyframes** and their [timing options](/en-US/docs/Web/API/EffectTiming). These can then be played using the {{domxref("Animation.Animation", "Animation()")}} constructor.
+  - : Describes sets of animatable properties and values, called **keyframes** and their timing options. These can then be played using the {{domxref("Animation.Animation", "Animation()")}} constructor.
 - {{domxref("AnimationTimeline")}}
   - : Represents the timeline of animation. This interface exists to define timeline features (inherited by {{domxref("DocumentTimeline")}} and future timeline objects) and is not itself accessed by developers.
 - {{domxref("AnimationEvent")}}
   - : Actually part of CSS Animations.
 - {{domxref("DocumentTimeline")}}
   - : Represents animation timelines, including the default document timeline (accessed using the {{domxref("Document.timeline")}} property).
-- {{domxref("EffectTiming")}}
-  - : {{domxref("Element.animate()")}} and {{domxref("KeyframeEffect.KeyframeEffect()")}} both accept an optional dictionary object of timing properties.
 
 ## Extensions to other interfaces
 

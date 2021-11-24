@@ -20,7 +20,7 @@ The syntax of `<number>` extends the syntax of {{CSSxRef("&lt;integer&gt;")}}. A
 
 ## Interpolation
 
-When animated, values of the `<number>` CSS data type are interpolated as real, floating-point numbers. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/single-transition-timing-function) associated with the animation.
+When animated, values of the `<number>` CSS data type are interpolated as real, floating-point numbers. The speed of the interpolation is determined by the [timing function](/en-US/docs/Web/CSS/easing-function) associated with the animation.
 
 ## Examples
 

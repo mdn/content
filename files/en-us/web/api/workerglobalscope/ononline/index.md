@@ -16,7 +16,9 @@ The **`ononline`** property of the {{domxref("WorkerGlobalScope")}} interface re
 
 ## Syntax
 
-    self.ononline = function() { ... };
+```js
+self.ononline = function() { ... };
+```
 
 ## Example
 

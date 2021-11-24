@@ -21,17 +21,16 @@ characters).
 ## Syntax
 
 ```js
-encodeURIComponent(str);
+encodeURIComponent(uriComponent);
 ```
 
 ### Parameters
 
-- `str`
-  - : String. A component of a URI.
-
+- `uriComponent`
+  - : A string, number, boolean, null, undefined, or any object. Before encoding, the `uriComponent` gets converted to string. 
 ### Return value
 
-A new string representing the provided string encoded as a URI component.
+A new string representing the provided _uriComponent_ encoded as a URI component.
 
 ## Description
 
@@ -67,7 +66,7 @@ Note that a {{jsxref("URIError")}} will be thrown if one attempts to encode a su
 which is not part of a high-low pair, e.g.,
 
 ```js
-// high-low pair ok
+// high-low pair OK
 console.log(encodeURIComponent('\uD800\uDFFF'));
 
 // lone high surrogate throws "URIError: malformed URI sequence"

@@ -2,12 +2,9 @@
 title: Event.timeStamp
 slug: Web/API/Event/timeStamp
 tags:
-  - API
-  - DOM
-  - Event
   - Property
   - Reference
-  - timeStamp
+  - Read-only
 browser-compat: api.Event.timeStamp
 ---
 {{APIRef("DOM")}}
@@ -16,23 +13,12 @@ The **`timeStamp`** read-only property of the
 {{domxref("Event")}} interface returns the time (in milliseconds) at which the event was
 created.
 
-> **Note:** This property only works if the event system supports it for
-> the particular event.
+## Value
 
-## Syntax
+This value is the number of milliseconds elapsed from the beginning of the time origin until the event was created. If the global object is {{domxref("Window")}}, the time origin is the moment the user clicked on the link, or the script that initiated the loading of the document. In a worker, the time origin is the moment of creation of the worker.
 
-```js
-time = event.timeStamp;
-```
-
-### Value
-
-This value is the number of milliseconds elapsed from the beginning of the current [document's lifetime](/en-US/docs/Web/API/Performance/timeOrigin) till the
-event was created.
-
-In newer implementations, the value is a {{domxref("DOMHighResTimeStamp")}} accurate to
-5 microseconds (0.005 ms). In older implementations, the value is a
-{{domxref("DOMTimeStamp")}}, accurate to a millisecond.
+The value is a {{domxref("DOMHighResTimeStamp")}} accurate to
+5 microseconds (0.005 ms), but the [precision is reduced](#Reduced_time_precision) to prevent fingerprinting.
 
 ## Example
 
@@ -66,7 +52,7 @@ To offer protection against timing attacks and fingerprinting, the precision of
 `Event.timeStamp` might get rounded depending on browser settings.
 
 In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
-default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
+default and defaults to 2ms.
 
 ```js
 // reduced time precision (2ms) in Firefox 60

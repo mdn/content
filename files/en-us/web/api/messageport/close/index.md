@@ -26,7 +26,7 @@ port.close()
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ### Parameters
 

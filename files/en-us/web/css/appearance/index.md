@@ -283,8 +283,6 @@ The following values are implemented only for one or both of the prefixed proper
 
 ```css
 input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   display: inline-block;
   vertical-align: middle;

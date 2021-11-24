@@ -24,30 +24,26 @@ browser-compat: api.XRReferenceSpace
 ---
 {{APIRef("WebXR Device API")}}{{secureContext_header}}
 
-The WebXR Device API's **`XRReferenceSpace`** interface describes the coordinate system for a specific tracked entity or object within the virtual world using a specified tracking behavior. The tracking behavior is defined by the selected [reference space type](/en-US/docs/Web/API/XRReferenceSpace#Reference_space_types). It expands upon the base class, {{domxref("XRSpace")}}, by adding support for several different tracking behaviors as well as to request a new reference space which describes the offset transform between the tracked object and another location in the world.
+The WebXR Device API's **`XRReferenceSpace`** interface describes the coordinate system for a specific tracked entity or object within the virtual world using a specified tracking behavior. The tracking behavior is defined by the selected [reference space type](#reference_space_types). It expands upon the base class, {{domxref("XRSpace")}}, by adding support for several different tracking behaviors as well as to request a new reference space which describes the offset transform between the tracked object and another location in the world.
 
 All reference spaces—with the sole exception being bounded reference spaces—are described using the `XRReferenceSpace` type. Bounded spaces are implemented as {{domxref("XRBoundedReferenceSpace")}} objects. These are special spaces which let you establish a perimeter within which it's "safe" for the viewer to move. For XR systems that allow the user to physically move around, such as those that track movement with a real-world camera, this boundary establishes the edges of the area the user is able to move around in, whether due to physical obstacles or due to limitations of the XR hardware. See the article [Using bounded reference spaces to protect the viewer](/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces) for more on using boundaries to keep the user from colliding with obstacles both physical and virtual.
 
 ## Properties
 
-_In addition to the properties inherited from {{domxref("XRSpace")}} (of which there are none at this time), `XRReferenceSpace` also inherits the properties of {{domxref("EventTarget")}}. `XRReferenceSpace` defines no additional properties._
+_`XRReferenceSpace`inherits the properties of {{domxref("EventTarget")}} but defines no additional properties._
 
 ## Methods
 
-_In addition to the methods inherited from its parent interface, {{domxref("XRSpace")}} (there are none at this time), `XRReferenceSpace` inherits methods from  {{domxref("EventTarget")}}. `XRReferenceSpace` also provides the following methods._
+_`XRReferenceSpace` also inherits methods from {{domxref("EventTarget")}} in addition to the following methods._
 
 - {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}
   - : Creates and returns a new reference space object as the same type as the one on which you call the method (so, either `XRReferenceSpace` or {{domxref("XRBoundedReferenceSpace")}}). The new reference space can be used to transform a coordinate from the reference space of the object on which the method is called into a different coordinate space. This is useful for positioning objects while rendering, and to perform the needed transforms when changing the viewer's position and/or orientation in 3D space.
 
 ## Events
 
-_In addition to other events that may be sent to {{domxref("XRSpace")}} or {{domxref("EventTarget")}} objects, the following also apply to `XRReferenceSpace` objects._
-
 - {{domxref("XRReferenceSpace.reset_event", "reset")}}
 
-  - : The `reset` event is sent to an {{domxref("XRReferenceSpace")}} object when the browser detects a discontinuity has occurred wherein the tracked object's origin  relative to the user's environment or location. This can happen, for example, after the user recalibrates their XR device, or if the device automatically adjusts its origin after losing and regaining tracking.
-
-    In addition to using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, you can establish a `reset` event handler by setting the {{domxref("XRReferenceSpace.onreset", "onreset")}} event handler property.
+  - : The `reset` event is sent to an `XRReferenceSpace` object when the browser detects a discontinuity between the tracked object's origin and the user's environment or location. This can happen, for example, after the user recalibrates their XR device, or if the device automatically adjusts its origin after losing and regaining tracking.
 
 ## Reference space types
 

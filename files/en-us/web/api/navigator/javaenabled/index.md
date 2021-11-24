@@ -14,7 +14,9 @@ This method always returns false.
 
 ## Syntax
 
-    result = window.navigator.javaEnabled()
+```js
+result = window.navigator.javaEnabled()
+```
 
 ## Example
 

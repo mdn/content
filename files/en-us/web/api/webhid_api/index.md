@@ -41,7 +41,7 @@ const device = await navigator.hid.requestDevice({filters: []})
 // Select one and click on `Connect` button. Then the device will be an array with the selected device in it.
 ```
 
-We can retrieve all the connected devices and log the device names to the console.
+We can retrieve all the devices the website has been granted access to previously and log the device names to the console.
 
 ```js
 let devices = await navigator.hid.getDevices();

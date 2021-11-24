@@ -16,7 +16,7 @@ The **`AudioData`** interface of the {{domxref('WebCodecs API')}} represents an 
 
 An audio track consists of a stream of audio samples, each sample representing a captured moment of sound. An `AudioData` object is a representation of such a sample. Working alongside the interfaces of the [Insertable Streams API](/en-US/docs/Web/API/Insertable_Streams_for_MediaStreamTrack_API), you can break a stream into individual `AudioData` objects with {{domxref("MediaStreamTrackProcessor")}}, or construct an audio track from a stream of frames with {{domxref("MediaStreamTrackGenerator")}}.
 
-> **Note**: Find out more about audio on the web in [Digital audio concepts](/en-US/docs/Web/Media/Formats/Audio_concepts).
+> **Note:** Find out more about audio on the web in [Digital audio concepts](/en-US/docs/Web/Media/Formats/Audio_concepts).
 
 ### The media resource
 

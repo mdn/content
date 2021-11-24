@@ -11,12 +11,12 @@ browser-compat: api.VideoEncoder.configure
 ---
 {{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`configure()`** method of the {{domxref("VideoEncoder")}} interface enqueues a control message to configure the audio decoder for decoding chunks.
+The **`configure()`** method of the {{domxref("VideoEncoder")}} interface enqueues a control message to configure the video encoder for encoding chunks.
 
 ## Syntax
 
 ```js
-AudioDecoder.configure(config)
+VideoEncoder.configure(config)
 ```
 
 ### Parameters
@@ -60,15 +60,15 @@ AudioDecoder.configure(config)
 
 ### Return Value
 
-{{jsxref("Undefined")}}.
+None.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `TypeError`
+- `TypeError` {{domxref("DOMException")}}
   - : Thrown if the provided `config` is invalid.
-- {{domxref("DOMException")}} `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("VideoEncoder.state","state")}} is `"closed"`.
-- {{domxref("DOMException")}} `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the provided `config` is valid but the user agent cannot provide a codec that can decode this profile.
 
 ## Examples

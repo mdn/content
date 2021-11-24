@@ -41,9 +41,9 @@ browser-compat: html.elements.input.input-checkbox
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>
-        <code>{{anch("checked")}}</code>,
-        <code>{{anch("indeterminate")}}</code> and
-        <code>{{anch("value")}}</code>
+        <code>{{anch("attr-checked", "checked")}}</code>,
+        <code>{{anch("attr-indeterminate", "indeterminate")}}</code> and
+        <code>{{anch("attr-value", "value")}}</code>
       </td>
     </tr>
     <tr>

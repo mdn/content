@@ -29,7 +29,7 @@ await audioCtx.close();
 
 ### Returns
 
-A {{jsxref("Promise")}} that resolves with void.
+A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 
 ## Example
 

@@ -19,7 +19,7 @@ browser-compat: html.elements.input.input-range
 
 {{HTMLElement("input")}} elements of type **`range`** let the user specify a numeric value which must be no less than a given value, and no more than another given value. The precise value, however, is not considered important. This is typically represented using a slider or dial control rather than a text entry box like the {{HTMLElement('input/number', 'number')}} input type.
 
-Because this kind of widget is imprecise, it shouldn't typically be used unless the control's exact value isn't important.
+Because this kind of widget is imprecise, it should only be used if the control's exact value isn't important.
 
 {{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}
 

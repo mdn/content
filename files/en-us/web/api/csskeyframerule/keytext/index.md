@@ -16,8 +16,10 @@ The **`keyText`** property of the {{domxref("CSSKeyframeRule")}} interface repre
 
 ## Syntax
 
-    var text = CSSKeyframeRule.keyText;
-    CSSKeyframeRule.keyText = text;
+```js
+var text = CSSKeyframeRule.keyText;
+CSSKeyframeRule.keyText = text;
+```
 
 ### Value
 

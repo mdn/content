@@ -22,7 +22,9 @@ If it is called on a transaction that is not active, it throws an {{exception("I
 
 ## Syntax
 
-    transaction.commit();
+```js
+transaction.commit();
+```
 
 ### Parameters
 
@@ -34,9 +36,8 @@ Void.
 
 ### Exceptions
 
-| **Exception**                                | **Description**                      |
-| -------------------------------------------- | ------------------------------------ |
-| {{exception("InvalidStateError")}} | The transaction state is not active. |
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the transaction state is not active.
 
 ## Examples
 

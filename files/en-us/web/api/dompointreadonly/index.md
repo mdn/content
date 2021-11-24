@@ -42,7 +42,7 @@ const point = DOMPointReadOnly.fromPoint({x: 100, y: 100, z: 50; w: 1.0});
 ## Constructor
 
 - {{domxref("DOMPointReadOnly.DOMPointReadOnly","DOMPointReadOnly()")}}
-  - : Creates a new `DOMPointReadOnly` object given the values of its coordinates and perspective. To create a point using an object object, you can instead use {{domxref("DOMPointReadOnly.fromPoint()")}}.
+  - : Creates a new `DOMPointReadOnly` object given the values of its coordinates and perspective. To create a point using an object, you can instead use {{domxref("DOMPointReadOnly.fromPoint()")}}.
 
 ## Properties
 

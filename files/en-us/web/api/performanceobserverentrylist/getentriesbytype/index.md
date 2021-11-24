@@ -17,7 +17,9 @@ This method is exposed to {{domxref("Window")}} and {{domxref("Worker")}} interf
 
 ## Syntax
 
-    entries = list.getEntriesByType(type);
+```js
+entries = list.getEntriesByType(type);
+```
 
 ### Parameters
 

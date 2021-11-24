@@ -49,9 +49,8 @@ table below.
       <td>Reports load time of elements.</td>
     </tr>
     <tr>
-      <td><code>frame</code>, <code>navigation</code></td>
+      <td><code>navigation</code></td>
       <td>
-        {{domxref('PerformanceFrameTiming')}},
         {{domxref('PerformanceNavigationTiming')}}
       </td>
       <td>{{domxref("URL")}}</td>

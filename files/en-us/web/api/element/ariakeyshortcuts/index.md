@@ -17,8 +17,10 @@ The **`ariaKeyShortcuts`** property of the {{domxref("Element")}} interface refl
 
 ## Syntax
 
-    var ariaKeyShortcuts = element.ariaKeyShortcuts;
-    element.ariaKeyShortcuts = ariaKeyShortcuts
+```js
+var ariaKeyShortcuts = element.ariaKeyShortcuts;
+element.ariaKeyShortcuts = ariaKeyShortcuts
+```
 
 ### Value
 

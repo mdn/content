@@ -12,7 +12,7 @@ tags:
   - Overview
   - working with files
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The File System Access API allows read, write and file management capabilities.
 
@@ -106,7 +106,7 @@ The following asynchronous function uses `resolve()` to find the path to a chose
 async function returnPathDirectories(directoryHandle) {
 
   // Get a file handle by showing a file picker:
-  const handle = await self.showOpenFilePicker();
+  const [handle] = await self.showOpenFilePicker();
   if (!handle) {
     // User cancelled, or otherwise failed to open a file.
     return;
@@ -115,10 +115,10 @@ async function returnPathDirectories(directoryHandle) {
   // Check if handle exists inside directory our directory handle
   const relativePaths = await directoryHandle.resolve(handle);
 
-  if (relativePath === null) {
+  if (relativePaths === null) {
     // Not inside directory handle
   } else {
-    // relativePath is an array of names, giving the relative path
+    // relativePaths is an array of names, giving the relative path
 
     for (const name of relativePaths) {
       // log each entry
@@ -173,9 +173,6 @@ writableStream.write({ type: "truncate", size: size })
 | ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
 | {{SpecName('File System Access API')}} | {{Spec2('File System Access API')}} | Initial definition. |
 
-## Browser compatibility
-
-{{Compat("api.FileSystemAccess")}}
 
 ## See also
 

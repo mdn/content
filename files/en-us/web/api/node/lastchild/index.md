@@ -2,30 +2,27 @@
 title: Node.lastChild
 slug: Web/API/Node/lastChild
 tags:
-  - API
-  - DOM
   - Property
   - Reference
+  - Read-only
 browser-compat: api.Node.lastChild
 ---
 {{APIRef("DOM")}}
 
-The **`Node.lastChild`** read-only property returns the last
-child of the node. If its parent is an element, then the child is generally an element
-node, a text node, or a comment node. It returns `null` if there are no child
-elements.
+The read-only **`lastChild`** property of the {{domxref("Node")}} interface
+returns the last child of the node.
+If its parent is an element, then the child is generally an element node, a text node, or a comment node.
+It returns `null` if there are no child elements.
 
-## Syntax
+## Value
 
-```js
-var childNode = node.lastChild;
-```
+A {{domxref("Node")}} that is the last child of the node, or `null` is there are no child elements.
 
 ## Example
 
 ```js
-var tr = document.getElementById("row1");
-var corner_td = tr.lastChild;
+const tr = document.getElementById("row1");
+const corner_td = tr.lastChild;
 ```
 
 ## Specifications
@@ -35,3 +32,8 @@ var corner_td = tr.lastChild;
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Node.firstChild")}}
+- {{domxref("Element.lastElementChild")}}

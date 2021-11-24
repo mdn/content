@@ -13,13 +13,10 @@ browser-compat: javascript.builtins.Date.toLocaleDateString
 ---
 {{JSRef}}
 
-The **`toLocaleDateString()`** method returns a string with a
-language sensitive representation of the date portion of this date. The new
-`locales` and `options` arguments let applications specify the
-language whose formatting conventions should be used and allow to customize the behavior
-of the function. In older implementations, which ignore the `locales` and
-`options` arguments, the locale used and the form of the string returned are
-entirely implementation dependent.
+The **`toLocaleDateString()`** method returns a string with a language sensitive representation of the date portion of the specified date in the user agent's timezone.
+
+The `locales` and `options` arguments let applications specify the language whose formatting conventions should be used and allow to customize the behavior of the function.
+In older implementations, which ignore the `locales` and `options` arguments, the locale used and the form of the string returned are entirely implementation dependent.
 
 {{EmbedInteractiveExample("pages/js/date-tolocaledatestring.html")}}
 
@@ -33,38 +30,26 @@ toLocaleDateString(locales, options)
 
 ### Parameters
 
-The `locales` and `options` arguments customize the behavior of
-the function and let applications specify the language whose formatting conventions
-should be used. In implementations, which ignore the `locales` and
-`options` arguments, the locale used and the form of the string returned are
-entirely implementation dependent.
+The `locales` and `options` arguments customize the behavior of the function and let applications specify the language whose formatting conventions should be used.
+In implementations, which ignore the `locales` and `options` arguments, the locale used and the form of the string returned are entirely implementation dependent.
 
-See the {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
-constructor for details on these parameters and how to use them.
+See the {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}} constructor for details on these parameters and how to use them.
 
-The default value for each date-time component property is {{jsxref("undefined")}}, but
-if the `weekday`, `year`, `month`, `day`
-properties are all {{jsxref("undefined")}}, then `year`, `month`,
-and `day` are assumed to be `"numeric"`.
+The default value for each date-time component property is {{jsxref("undefined")}}, but if the `weekday`, `year`, `month`, `day` properties are all {{jsxref("undefined")}}, then `year`, `month`, and `day` are assumed to be `"numeric"`.
 
 ### Return value
 
-A string representing the date portion of the given {{jsxref("Global_Objects/Date",
-  "Date")}} instance according to language-specific conventions.
+A string representing the date portion of the given {{jsxref("Global_Objects/Date", "Date")}} instance according to language-specific conventions.
 
 ## Performance
 
-When formatting large numbers of dates, it is better to create an
-{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the
-function provided by its {{jsxref("DateTimeFormat.prototype.format", "format")}}
-property.
+When formatting large numbers of dates, it is better to create an {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the function provided by its {{jsxref("DateTimeFormat.prototype.format", "format")}} property.
 
 ## Examples
 
 ### Using toLocaleDateString()
 
-In basic use without specifying a locale, a formatted string in the default locale and
-with default options is returned.
+In basic use without specifying a locale, a formatted string in the default locale and with default options is returned.
 
 ```js
 var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
@@ -77,10 +62,8 @@ console.log(date.toLocaleDateString());
 
 ### Checking for support for locales and options arguments
 
-The `locales` and `options` arguments are not supported in all
-browsers yet. To check whether an implementation supports them already, you can use the
-requirement that illegal language tags are rejected with a {{jsxref("RangeError")}}
-exception:
+The `locales` and `options` arguments are not supported in all browsers yet.
+To check whether an implementation supports them already, you can use the requirement that illegal language tags are rejected with a {{jsxref("RangeError")}} exception:
 
 ```js
 function toLocaleDateStringSupportsLocales() {
@@ -95,10 +78,8 @@ function toLocaleDateStringSupportsLocales() {
 
 ### Using locales
 
-This example shows some of the variations in localized date formats. In order to get
-the format of the language used in the user interface of your application, make sure to
-specify that language (and possibly some fallback languages) using the
-`locales` argument:
+This example shows some of the variations in localized date formats.
+In order to get the format of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the `locales` argument:
 
 ```js
 var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
@@ -139,8 +120,7 @@ console.log(date.toLocaleDateString(['ban', 'id']));
 
 ### Using options
 
-The results provided by `toLocaleDateString()` can be customized using the
-`options` argument:
+The results provided by `toLocaleDateString()` can be customized using the `options` argument:
 
 ```js
 var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));

@@ -2,76 +2,72 @@
 title: Sanitizer()
 slug: Web/API/Sanitizer/Sanitizer
 tags:
+  - Sanitizer
   - Constructor
   - HTML Sanitizer API
   - sanitize
 browser-compat: api.Sanitizer.Sanitizer
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
+{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
-The **`Sanitizer()`** constructor creates a new
-{{domxref("sanitizer")}} object which allows developers to take untrusted strings of
-HTML, and sanitize them for safe insertion into a document’s DOM.
+The **`Sanitizer()`** constructor creates a new {{domxref("Sanitizer")}} object, which can be used to sanitize untrusted strings of HTML, or untrusted {{domxref("Document")}} or {{domxref("DocumentFragment")}} objects, making them safe for insertion into a document’s DOM.
+
+The default `Sanitizer()` configuration causes sanitizer operations to strip out XSS-relevant input by default, including {{HTMLElement("script")}} tags, custom elements, and comments.
+The constructor options shown below can be used to customize the sanitizer behavior.
 
 ## Syntax
 
 ```js
-var sanitizer = new Sanitizer();
+new Sanitizer()
+new Sanitizer(config)
 ```
 
 ### Parameters
 
+> **Note:** The custom configuration options described here are not yet supported (because at time of writing the sanitizer configuration object is still being defined).
+
 - `config` {{optional_inline}}
 
-  - : An object in the format of SanitizerConfig. Options are as follows:
+  - : A sanitizer configuration object with the following options (referred to as `SanitizerConfig` in the specification):
 
-    - `allowElements`: An {{jsxref('Array')}} of
-      {{jsxref('String','strings')}} representing elements the sanitizer should retain
-      in the input.
-    - `blockElements`: An {{jsxref('Array')}} of
-      {{jsxref('String','strings')}} representing elements the sanitizer should remove
-      in the input, but retain any of their children elements.
-    - `dropElements`: An {{jsxref('Array')}} of
-      {{jsxref('String','strings')}} representing elements the sanitizer should remove
-      in the input along with their children.
-    - `allowAttributes`: An {{jsxref('Array')}} of
-      {{jsxref('String','strings')}} representing attributes the sanitizer should retain
-      in the input.
-    - `dropAttributes`: An {{jsxref('Array')}} of
-      {{jsxref('String','strings')}} representing attributes the sanitizer should remove
-      in the input.
+    - `allowElements` {{optional_inline}}
+      - : An {{jsxref('Array')}} of {{jsxref('String','strings')}} indicating elements the sanitizer should not remove.
+    - `blockElements` {{optional_inline}}
+      - : An {{jsxref('Array')}} of {{jsxref('String','strings')}} indicating elements the sanitizer should remove, keeping their child elements.
+        Child elements are retained.
+    - `dropElements` {{optional_inline}}
+      - : An {{jsxref('Array')}} of {{jsxref('String','strings')}} indicating elements the sanitizer should remove, along with their child elements.
+    - `allowAttributes` {{optional_inline}}
+      - : An {{jsxref('Array')}} of {{jsxref('String','strings')}} indicating attributes the sanitizer should not remove.
+    - `dropAttributes` {{optional_inline}}
+      - : An {{jsxref('Array')}} of {{jsxref('String','strings')}} indicating attributes the sanitizer should remove.
+    - `allowCustomElements` {{optional_inline}}
+      - : A {{jsxref('Boolean')}} value set to `false` (default) to remove custom elements and their children.
+        Set to `true` to ensure sanitize custom elements using build-in and custom configuration checks.
+    - `allowComments` {{optional_inline}}
+      - : A {{jsxref('Boolean')}} value set to `false` (default) to remove HTML comments.
+        Set to `true` ensures that comments are retained.
 
-> **Note:** At the time of writing the default elements within each configuration property above
-> are still under consideration. Due to this the above config parameter has not been
-> implemented.
 
 ## Examples
 
-This example shows the result of sanitizing a string with disallowed
-`script` elements.
+The example below shows a sanitization operation using the {{domxref("Sanitizer.sanitizeFor()")}} method.
+This method takes as inputs a string of HTML to sanitize and the context (tag) in which it is sanitized, and returns a sanitized node object for the specified tag.
+To simplify the presentation the result that is shown is actually the _innerHTML_ of the returned object.
+
+> **Note:** The API _only_ sanitizes HTML in strings in the context of a particular element/tag.
+> For more information see {{domxref('HTML Sanitizer API')}} (and {{domxref("Sanitizer.sanitizeFor()")}}).
+
+This example shows the result of sanitizing a string with disallowed `script` element using the default sanitizer (in a `div` context). 
 
 ```js
-new Sanitizer().sanitizeToString("abc <script>alert(1)</script> def");
-// Result: script will be removed: "abc alert(1) def"
+let unsanitized = "abc <script>alert(1)</script> def"
+const sanitized =  new Sanitizer().sanitizeFor("div", unsanitized);
+// Result (innerHTML of 'sanitized'): script will be removed: "abc alert(1) def"
 ```
 
-This example shows how the different configuration options would return the same
-string.
+<!-- Add other examples showing use of parameter when it is implemented somewhere -->
 
-```js
-const sample = "Some text <b><i>with</i></b> <blink>tags</blink>.";
-
-const allow = new Sanitizer({allowElements: [ "b" ]).sanitizeToString(sample);
-console.log(allow)
-// Logs: "Some text <b>with</b> text tags."
-
-const block = new Sanitizer({blockElements: [ "b" ]).sanitizeToString(sample);
-console.log(block);
-// Logs: "Some text <i>with</i> <blink>tags</blink>."
-
-const drop = new Sanitizer({dropElements: [ "b" ]).sanitizeToString(sample);
-// Logs: "Some text tags."
-```
 
 ## Specifications
 

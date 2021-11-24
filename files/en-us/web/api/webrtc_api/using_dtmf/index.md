@@ -106,7 +106,7 @@ These are, in order:
 - `mediaConstraints`
   - : An object conforming to the {{domxref("MediaConstraints")}} dictionary specifying the constraints to use when starting the connection. We want an audio-only connection, so `video` is `false`, while `audio` is `true`.
 - `offerOptions`
-  - : An `RTCOfferOptions` object providing options to specify when calling {{domxref("RTCPeerConnection.createOffer()")}}. In this case, we state that we want to receive audio but not video.
+  - : An object object providing options to specify when calling {{domxref("RTCPeerConnection.createOffer()")}}. In this case, we state that we want to receive audio but not video.
 - `dialButton` and `logElement`
   - : These variables will be used to store references to the dial button and the {{HTMLElement("div")}} into which logging information will be written. They'll get set up when the page is first loaded. See {{anch("Initialization")}} below.
 

@@ -281,8 +281,8 @@ Browsers don't all support the same video formats; you can provide multiple sour
 
 ```html
 <video controls>
-  <source src="myVideo.mp4" type="video/mp4">
   <source src="myVideo.webm" type="video/webm">
+  <source src="myVideo.mp4" type="video/mp4">
   <p>Your browser doesn't support HTML5 video. Here is
      a <a href="myVideo.mp4">link to the video</a> instead.</p>
 </video>
@@ -373,14 +373,15 @@ This example builds on the last one, offering three different sources for the me
 <video width="620" controls
   poster="https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg" >
   <source
-    src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
-    type="video/mp4">
-  <source
     src="https://archive.org/download/ElephantsDream/ed_hd.ogv"
     type="video/ogg">
   <source
     src="https://archive.org/download/ElephantsDream/ed_hd.avi"
     type="video/avi">
+  <source
+    src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
+    type="video/mp4">
+
   Your browser doesn't support HTML5 video tag.
 </video>
 ```

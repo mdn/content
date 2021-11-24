@@ -58,7 +58,7 @@ Content-Encoding: deflate, gzip
     because of a patent issue (it expired in 2003).
 - `deflate`
   - : Using the [zlib](https://en.wikipedia.org/wiki/Zlib)
-    structure (defined in [RFC 1950](https://tools.ietf.org/html/rfc1950)) with the [_deflate_](https://en.wikipedia.org/wiki/DEFLATE) compression
+    structure (defined in [RFC 1950](https://datatracker.ietf.org/doc/html/rfc1950)) with the [_deflate_](https://en.wikipedia.org/wiki/DEFLATE) compression
     algorithm (defined in [RFC 1951](https://datatracker.ietf.org/doc/html/rfc1951)).
 - `br`
   - : A format using the [Brotli](https://en.wikipedia.org/wiki/Brotli)

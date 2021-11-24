@@ -16,7 +16,7 @@ tags:
 
 A WebSocket server is nothing more than an application listening on any port of a TCP server that follows a specific protocol. The task of creating a custom server tends to scare people; however, it can be straightforward to implement a simple WebSocket server on your platform of choice.
 
-A WebSocket server can be written in any server-side programming language that is capable of [Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets), such as C(++), Python, {{Glossary("PHP")}}, or [server-side JavaScript](/en-US/docs/Web/JavaScript/Server-Side_JavaScript). This is not a tutorial in any specific language, but serves as a guide to facilitate writing your own server.
+A WebSocket server can be written in any server-side programming language that is capable of [Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets), such as C(++), Python, {{Glossary("PHP")}}, or [server-side JavaScript](/en-US/docs/Learn/Server-side/Node_server_without_framework). This is not a tutorial in any specific language, but serves as a guide to facilitate writing your own server.
 
 This article assumes you're already familiar with how {{Glossary("HTTP")}} works, and that you have a moderate level of programming experience. Depending on language support, knowledge of TCP sockets may be required. The scope of this guide is to present the minimum knowledge you need to write a WebSocket server.
 

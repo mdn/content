@@ -18,8 +18,6 @@ The read-only **`singleNodeValue`** property of the
 {{domxref("XPathResult.resultType")}} being `ANY_UNORDERED_NODE_TYPE` or
 `FIRST_ORDERED_NODE_TYPE`.
 
-{{AvailableInWorkers}}
-
 ## Syntax
 
 ```js

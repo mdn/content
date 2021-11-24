@@ -15,7 +15,9 @@ The **`markerWidth`** read-only property of the {{domxref("SVGMarkerElement")}} 
 
 ## Syntax
 
-    let width = SVGMarkerElement.markerWidth;
+```js
+let width = SVGMarkerElement.markerWidth;
+```
 
 ### Value
 

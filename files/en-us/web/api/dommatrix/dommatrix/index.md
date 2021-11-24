@@ -15,7 +15,7 @@ browser-compat: api.DOMMatrix.DOMMatrix
 
 The **`DOMMatrix`** constructor creates a new
 {{domxref("DOMMatrix")}} object which represents 4x4 matrices, suitable for 2D and 3D
-operations..
+operations.
 
 ## Syntax
 
@@ -26,8 +26,11 @@ var domMatrix = new DOMMatrix([init])
 ### Parameters
 
 - init {{optional_inline}}
-  - : A string containing a sequence of numbers or an array of numbers specifying the
-    matrix you want to create, or a CSS transform string.
+  - : An array of numbers specifying the matrix you want to create, or a CSS transform string.
+
+    In case an array of numbers is passed, the behavior depends on the length of the array:
+    * for a 6-element array of components in the form `[a, b, c, d, e, f]`, a 2D matrix is created, initialized with the provided components.
+    * for a 16-element array of components (in the column-major order) in the form `[m11, m12, m13, …, m42, m43, m44]`, a 3D matrix is created, initialized with the provided components.
 
 ## Example
 

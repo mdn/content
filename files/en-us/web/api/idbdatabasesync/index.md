@@ -167,7 +167,7 @@ Destroys an object store with the given name, as well as all indexes that refere
 
 ##### Returns
 
-`void`
+{{jsxref('undefined')}}.
 
 ##### Exceptions
 
@@ -188,7 +188,7 @@ Sets the version of the connected database.
 
 ##### Returns
 
-`void`
+{{jsxref('undefined')}}.
 
 - version
   - : The version to store in the database.

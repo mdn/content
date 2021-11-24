@@ -58,7 +58,7 @@ navigator.geolocation.clearWatch(watchID);
 
 ### Fine tuning the response
 
-Both {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} and {{domxref("Geolocation.watchPosition","watchPosition()")}} accept a success callback, an optional error callback, and an optional {{domxref("PositionOptions")}} object.
+Both {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} and {{domxref("Geolocation.watchPosition","watchPosition()")}} accept a success callback, an optional error callback, and an optional options object.
 
 This object allows you to specify whether to enable high accuracy, a maximum age for the returned position value (up until this age it will be cached and reused if the same position is requested again; after this the browser will request fresh position data), and a timeout value that dictates how long the browser should attempt to get the position data for, before it times out.
 

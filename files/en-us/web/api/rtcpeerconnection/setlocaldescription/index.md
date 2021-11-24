@@ -121,12 +121,12 @@ called; in case of failure, the `errorCallback` will be called.
 When using the deprecated callback-based version of `setLocalDescription()`,
 the following exceptions may occur:
 
-- `InvalidStateError` {{deprecated_inline}}
-  - : The connection's {{domxref("RTCPeerConnection.signalingState", "signalingState")}}
+- `InvalidStateError` {{domxref("DOMException")}} {{deprecated_inline}}
+  - : Thrown if the connection's {{domxref("RTCPeerConnection.signalingState", "signalingState")}}
     is `"closed"`, indicating that the connection is not currently open, so
     negotiation cannot take place.
-- `InvalidSessionDescriptionError` {{deprecated_inline}}
-  - : The {{domxref("RTCSessionDescription")}} specified by the
+- `InvalidSessionDescriptionError` {{domxref("DOMException")}} {{deprecated_inline}}
+  - : Thrown if the {{domxref("RTCSessionDescription")}} specified by the
     `sessionDescription` parameter is invalid.
 
 ## Examples

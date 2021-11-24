@@ -31,10 +31,10 @@ every(callbackFn)
 every(callbackFn, thisArg)
 
 // Inline callback function
-every(function callbackFn(element) { ... })
-every(function callbackFn(element, index) { ... })
-every(function callbackFn(element, index, array){ ... })
-every(function callbackFn(element, index, array) { ... }, thisArg)
+every(function(element) { ... })
+every(function(element, index) { ... })
+every(function(element, index, array){ ... })
+every(function(element, index, array) { ... }, thisArg)
 ```
 
 ### Parameters
@@ -200,7 +200,7 @@ The following example tests if all the elements of an array are present in anoth
 ```js
 function isSubset(array1, array2) {
   // returns true if array2 is a subset of array1
-  
+
   return array2.every(function (element) {
     return array1.includes(element);
   });

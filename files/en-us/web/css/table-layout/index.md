@@ -30,7 +30,7 @@ table-layout: unset;
 
 ### Values
 
-- {{Cssxref("auto")}}
+- `auto`
   - : By default, most browsers use an automatic table layout algorithm. The widths of the table and its cells are adjusted to fit the content.
 - `fixed`
 

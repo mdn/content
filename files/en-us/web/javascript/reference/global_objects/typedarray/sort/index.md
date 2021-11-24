@@ -78,5 +78,5 @@ numbers.sort((a, b) => a - b); // compare numbers
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.sort` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- A polyfill of `TypedArray.prototype.sort` with modern behavior like stable sort is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("Array.prototype.sort()")}}

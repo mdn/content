@@ -58,26 +58,6 @@ if (condition);       // Caution, this "if" does nothing!
    killTheUniverse()  // So this always gets executed!!!
 ```
 
-In the next example, an {{jsxref("Statements/if...else", "if...else")}} statement
-without curly braces (`{}`) is used.
-
-If `three` is `true`, nothing will happen, `four` does
-not matter, and also the `launchRocket()` function in the `else`
-case will not be executed.
-
-```js example-bad
-if (one)
-  doOne();
-else if (two)
-  doTwo();
-else if (three)
-  ; // nothing here
-else if (four)
-  doFour();
-else
-  launchRocket();
-```
-
 ## Specifications
 
 {{Specifications}}

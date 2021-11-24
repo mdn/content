@@ -777,7 +777,7 @@ In the above example it can be observed that we can use the identifier and pseud
 
 The type of pseudo class is determined by the selector it is using and working is similar in nature as it works in HTML. Following CSS pseudo classes can be used:
 
-- Lang (Lanugage): e.g., p:lang(it).
+- Lang (Language): e.g., p:lang(it).
 - Link: e.g., a:link.
 - Nth-last-child: e.g., p:nth-last-child(2).
 - Nth-child(n): e.g., p:nth-child(2).

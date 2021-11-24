@@ -12,34 +12,21 @@ browser-compat: api.Response.bodyUsed
 ---
 {{APIRef("Fetch")}}
 
-The **`bodyUsed`** read-only property of the
-{{domxref("Response")}} interface is a boolean value that indicates whether the
-body has been read yet.
+The **`bodyUsed`** read-only property of the {{domxref("Response")}} interface is a boolean value that indicates whether the body has been read yet.
 
-## Syntax
-
-```js
-response.bodyUsed;
-```
-
-### Value
+## Value
 
 A boolean value.
 
 ## Example
 
-In our [fetch
-request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (run [fetch request live](https://mdn.github.io/fetch-examples/fetch-request/)), we
-create a new request using the {{domxref("Request.Request","Request()")}} constructor,
-then use it to fetch a JPG. When the fetch is successful, we read a {{domxref("Blob")}}
-out of the response using `blob()`, put it into an object URL using
-{{domxref("URL.createObjectURL")}}, and then set that URL as the source of an
-{{htmlelement("img")}} element to display the image.
+In our [fetch request example](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (run [fetch request live](https://mdn.github.io/fetch-examples/fetch-request/)),
+we create a new request using the {{domxref("Request.Request","Request()")}} constructor,
+then use it to fetch a JPG. When the fetch is successful, we read a {{domxref("Blob")}} out of the response using `blob()`,
+put it into an object URL using {{domxref("URL.createObjectURL")}}, and then set that URL as the source of an {{htmlelement("img")}} element to display the image.
 
-Notice that we log `response.bodyUsed` to the console once
-before the `response.blob()` call and once after. This returns
-`false` before and `true` afterwards, as at that point the body
-has been read.
+Notice that we log `response.bodyUsed` to the console once before the `response.blob()` call and once after.
+This returns `false` before and `true` afterwards, as at that point the body has been read.
 
 ### HTML Content
 

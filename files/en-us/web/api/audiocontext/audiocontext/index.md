@@ -57,8 +57,8 @@ The newly constructed {{domxref("AudioContext")}} instance.
 
 ### Exceptions
 
-- `NotSupportedError`
-  - : The specified `sampleRate` isn't supported by the context.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the specified `sampleRate` isn't supported by the context.
 
 ## Usage notes
 
@@ -75,7 +75,7 @@ browser implementations to decide.
 
 #### Per-tab audio context limitation in Chrome
 
-Prior to version 66 Google Chrome only supported up to six audio contexts _per
+Prior to version 66 Google Chrome only supported up to six audio contexts _per
 tab_ at a time.
 
 #### Non-standard exceptions in Chrome

@@ -30,8 +30,8 @@ A double. The default is `0`, and its value can be in the range 0–1.
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : The property has been given a value outside the accepted range (0–1).
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the property has been given a value outside the accepted range (0–1).
 
 ## Example
 

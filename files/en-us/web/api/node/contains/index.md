@@ -2,24 +2,39 @@
 title: Node.contains()
 slug: Web/API/Node/contains
 tags:
-  - API
-  - DOM
   - Method
-  - Node
+  - Reference
 browser-compat: api.Node.contains
 ---
 {{APIRef("DOM")}}
 
-The **`Node.contains()`** method returns a
-boolean value indicating whether a node is a descendant of a given node,
-i.e. the node itself, one of its direct children ({{domxref("Node.childNodes",
-  "childNodes")}}), one of the children's direct children, and so on.
+The **`contains()`** method of the {{domxref("Node")}} interface
+returns a boolean value indicating
+whether a node is a descendant of a given node, that is the node itself,
+one of its direct children ({{domxref("Node.childNodes", "childNodes")}}),
+one of the children's direct children, and so on.
+
+> **Note:** A node is _contained_ inside itself.
 
 ## Syntax
 
 ```js
-node.contains( otherNode )
+contains(otherNode);
 ```
+
+### Parameters
+
+- `otherNode`
+  - : The {{domxref("Node")}} to test with.
+    > **Note:** `otherNode` is not optional, but can be set to `null`.
+
+### Return value
+
+A boolean value that is `true` if `otherNode` is contained in the node,
+`false` if not.
+
+If the `otherNode` parameter is `null`,
+`contains()` always returns `false`.
 
 ## Example
 

@@ -16,7 +16,9 @@ The **`style`** read-only property of the {{domxref("CSSPageRule")}} interface r
 
 ## Syntax
 
-    var style = CSSPageRule.style;
+```js
+var style = CSSPageRule.style;
+```
 
 ### Value
 

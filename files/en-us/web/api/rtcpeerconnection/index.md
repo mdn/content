@@ -235,7 +235,7 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
     for the purpose of being sent over the signaling channel to a potential peer
     to request a connection or to update the configuration of an existing connection.
 - {{DOMxRef("RTCPeerConnection.getConfiguration", "getConfiguration()")}}
-  - : Returns an {{DOMxRef("RTCConfiguration")}} object
+  - : Returns an object
     which indicates the current configuration of the connection.
 - {{DOMxRef("RTCPeerConnection.getIdentityAssertion", "getIdentityAssertion()")}}
   - : Initiates the gathering of an identity assertion
@@ -276,7 +276,7 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
     to be used by either the caller or the receiver to trigger an {{Glossary("ICE")}} restart.
 - {{DOMxRef("RTCPeerConnection.setConfiguration", "setConfiguration()")}}
   - : Sets the current configuration of the connection
-    based on the values included in the specified {{DOMxRef("RTCConfiguration")}} object.
+    based on the values included in the specified object.
     This lets you change the {{Glossary("ICE")}} servers
     used by the connection
     and which transport policies to use.

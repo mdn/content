@@ -4,7 +4,6 @@ slug: Web/API/RTCPeerConnection/getConfiguration
 tags:
   - API
   - Method
-  - RTCConfiguration
   - Reference
   - WebRTC
   - getConfiguration
@@ -13,7 +12,7 @@ browser-compat: api.RTCPeerConnection.getConfiguration
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.getConfiguration()`** method returns
-an {{domxref("RTCConfiguration")}} object which indicates the current configuration of
+an object which indicates the current configuration of
 the {{domxref("RTCPeerConnection")}} on which the method is called.
 
 The returned configuration is the last configuration applied via
@@ -35,8 +34,7 @@ This method takes no input parameters.
 
 ### Return value
 
-An {{domxref("RTCConfiguration")}} object describing the
-{{domxref("RTCPeerConnection")}}'s current configuration.
+An object describing the {{domxref("RTCPeerConnection")}}'s current configuration. See [`RTCPeerConnection()`](/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#parameters) for more information on what options are allowed.
 
 ## Example
 
@@ -82,5 +80,6 @@ certificate to the connection.
 ## See also
 
 - {{domxref("RTCPeerConnection.setConfiguration()")}}
-- {{domxref("RTCConfiguration")}}
+- {{domxref("RTCPeerConnection.RTCPeerConnection")}}
 - {{domxref("RTCPeerConnection")}}
+

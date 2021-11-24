@@ -27,7 +27,7 @@ port.start()
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ### Parameters
 

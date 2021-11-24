@@ -29,8 +29,8 @@ A {{jsxref("Promise")}} that resolves with undefined.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `InvalidStateError`
-  - : The Promise rejected because the {{domxref("VideoDecoder.state","state")}} is not `"configured"`.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the Promise is rejected because the {{domxref("VideoDecoder.state","state")}} is not `configured`.
 
 ## Examples
 

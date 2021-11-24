@@ -203,6 +203,5 @@ node --expose-gc --inspect index.js
 
 #### See also
 
-- [IBM article on "Memory leak patterns in JavaScript" (2007)](http://www.ibm.com/developerworks/web/library/wa-memleak/)
+- [IBM article on "Memory leak patterns in JavaScript" (2007)](https://www.ibm.com/developerworks/web/library/wa-memleak/wa-memleak-pdf.pdf)
 - [Kangax article on how to register event handler and avoid memory leaks (2010)](https://msdn.microsoft.com/en-us/magazine/ff728624.aspx)
-- [Performance](/en-US/docs/Mozilla/Performance)

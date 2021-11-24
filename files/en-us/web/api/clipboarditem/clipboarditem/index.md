@@ -28,7 +28,7 @@ var ClipboardItem = new ClipboardItem(ClipboardItemData);
 ### Parameters
 
 - `ClipboardItemData`
-  - : An {{jsxref("Object")}} with the {{Glossary("MIME type")}} as the key and data as the value. The data can represented as a {{domxref("Blob")}}, a {{jsxref("String")}} or a {{jsxref("Promise")}} which resolves to either a blob or string.
+  - : An {{jsxref("Object")}} with the {{Glossary("MIME type")}} as the key and data as the value. The data can be represented as a {{domxref("Blob")}}, a {{jsxref("String")}} or a {{jsxref("Promise")}} which resolves to either a blob or string.
 - `ClipboardItemOptions` {{optional_inline}}
 
   - : An {{jsxref("Object")}} with the following properties:

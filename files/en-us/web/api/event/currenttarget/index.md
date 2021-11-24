@@ -2,12 +2,9 @@
 title: Event.currentTarget
 slug: Web/API/Event/currentTarget
 tags:
-  - API
-  - DOM
-  - Event
-  - NeedsBrowserCompatibility
   - Property
   - Read-only
+  - Reference
 browser-compat: api.Event.currentTarget
 ---
 {{APIRef("DOM")}}
@@ -18,15 +15,9 @@ traverses the DOM. It always refers to the element to which the event handler ha
 attached, as opposed to {{domxref("Event.target")}}, which identifies the element on
 which the event occurred and which may be its descendant.
 
-## Syntax
+## Value
 
-```js
-var currentEventTarget = event.currentTarget;
-```
-
-### Value
-
-{{domxref("EventTarget")}}
+An {{domxref("EventTarget")}} representing the object to which the current event handler is attached.
 
 ## Examples
 
@@ -52,16 +43,12 @@ document.body.addEventListener('click', hide, false);
 // Click around and make paragraphs disappear
 ```
 
-> **Note:** The value of `event.currentTarget`
-> is **only** available while the event is being handled. If you
-> {{DOMxRef("console.log()")}} the
-> `event` object, storing it in a variable, and _then_ look for the
-> `currentTarget` key in the console, its value will be `null`.
-> Instead, you can either directly `console.log(event.currentTarget)` to be
-> able to view it in the console or use
-> the [`debugger`](/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statement,
-> which will pause the execution of your code thus showing you the value of
-> `event.currentTarget`.
+> **Note:** The value of `event.currentTarget` is **only** available while the event is being handled.
+> If you {{DOMxRef("console.log()")}} the `event` object, storing it in a variable,
+> and _then_ look for the `currentTarget` key in the console, its value will be `null`.<br/>
+> Instead, you should either use `console.log(event.currentTarget)` to be
+> able to view it in the console or use the [`debugger`](/en-US/docs/Web/JavaScript/Reference/Statements/debugger) statement,
+> which will pause the execution of your code thus showing you the value of `event.currentTarget`.
 
 ## Specifications
 
@@ -73,5 +60,4 @@ document.body.addEventListener('click', hide, false);
 
 ## See also
 
-- [Comparison of Event
-  Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)

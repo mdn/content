@@ -58,7 +58,7 @@ function (a){
 a => a + 100;
 ```
 
-> **Note:** As shown above, the { braces } and ( parentheses ) and "return" are required in some cases.
+The { braces } and ( parentheses ) and "return" are required in some cases.
 
 For example, if you have **multiple arguments** or **no
 arguments**, you'll need to re-introduce parentheses around the arguments:

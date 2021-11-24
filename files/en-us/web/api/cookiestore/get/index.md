@@ -15,8 +15,10 @@ The **`get()`** method of the {{domxref("CookieStore")}} interface returns a sin
 
 ## Syntax
 
-    var cookie = CookieStore.get(name);
-    var cookie = CookieStore.get(options);
+```js
+var cookie = CookieStore.get(name);
+var cookie = CookieStore.get(options);
+```
 
 ### Parameters
 

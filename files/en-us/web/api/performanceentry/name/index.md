@@ -41,7 +41,6 @@ the value of {{domxref("PerformanceEntry.entryType")}}, as shown by the table b
     <tr>
       <td>{{domxref("URL")}}</td>
       <td>
-        {{domxref('PerformanceFrameTiming')}},
         {{domxref('PerformanceNavigationTiming')}}
       </td>
       <td><code>frame</code>, <code>navigation</code></td>

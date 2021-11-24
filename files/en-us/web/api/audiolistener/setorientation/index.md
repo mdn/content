@@ -31,7 +31,7 @@ myListener.setOrientation(0,0,-1,0,1,0);
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ## Example
 

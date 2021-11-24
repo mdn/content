@@ -1,5 +1,5 @@
 ---
-title: <label>
+title: '<label>: The Input Label element'
 slug: Web/HTML/Element/label
 tags:
   - Element

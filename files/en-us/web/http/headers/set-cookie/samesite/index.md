@@ -8,7 +8,7 @@ tags:
   - samesite
 browser-compat: http.headers.Set-Cookie.SameSite
 ---
-{{HTTPSidebar}}
+{{securecontext_header}}{{HTTPSidebar}}
 
 The **`SameSite`** attribute of the {{HTTPHeader("Set-Cookie")}} HTTP response header allows you to declare if your cookie should be restricted to a [first-party](/en-US/docs/Web/HTTP/Cookies#third-party_cookies) or same-site context.
 

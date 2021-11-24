@@ -139,7 +139,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute indicates the type of script represented. The value of this attribute will be in one of the following categories:
 
     - **Omitted or a JavaScript MIME type:** This indicates the script is JavaScript. The HTML5 specification urges authors to omit the attribute rather than provide a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the `src` attribute) code. JavaScript MIME types are [listed in the specification](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types).
-    - **`module`:** Causes the code to be treated as a JavaScript module. The processing of the script contents is not affected by the `charset` and `defer` attributes. For information on using `module`, see our [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide. Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.
+    - **`module`:** Causes the code to be treated as a JavaScript module. The processing of the script contents is not affected by the `charset` and `defer` attributes.
+      For information on using `module`, see our [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide.
+      Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.
     - **Any other value:** The embedded content is treated as a data block which won't be processed by the browser. Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks. The `src` attribute will be ignored.
 
 ### Deprecated attributes

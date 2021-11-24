@@ -2,25 +2,35 @@
 title: Node.normalize()
 slug: Web/API/Node/normalize
 tags:
-  - API
-  - DOM
   - Method
-  - NeedsSpecTable
-  - Node
   - Reference
 browser-compat: api.Node.normalize
 ---
 {{APIRef("DOM")}}
 
-The **`Node.normalize()`** method puts the specified node and all of its sub-tree into a "normalized" form. In a normalized sub-tree, no text nodes in the sub-tree are empty and there are no adjacent text nodes.
+The **`normalize()`** method of the {{domxref("Node")}} puts the specified node
+and all of its sub-tree into a _normalized_ form.
+In a normalized sub-tree, no text nodes in the sub-tree are empty and there are no adjacent text nodes.
 
 ## Syntax
 
 ```js
-element.normalize();
+normalize();
 ```
 
+### Parameters
+
+None.
+
+### Return value
+
+None.
+
 ## Example
+
+```html
+<output id="result"></output>
+```
 
 ```js
 let wrapper = document.createElement("div");
@@ -28,15 +38,27 @@ let wrapper = document.createElement("div");
 wrapper.appendChild( document.createTextNode("Part 1 ") );
 wrapper.appendChild( document.createTextNode("Part 2 ") );
 
-// At this point, wrapper.childNodes.length === 2
-// wrapper.childNodes[0].textContent === "Part 1 "
-// wrapper.childNodes[1].textContent === "Part 2 "
+let node = wrapper.firstChild;
+let result = "Before normalization:<br/>";
+while (node) {
+  result += " " + node.nodeName + ": " + node.nodeValue + "<br/>";
+  node = node.nextSibling;
+}
 
 wrapper.normalize();
 
-// Now, wrapper.childNodes.length === 1
-// wrapper.childNodes[0].textContent === "Part 1 Part 2 "
+node = wrapper.firstChild;
+result += "<br/><br/>After normalization:<br/>";
+while (node) {
+  result += " " + node.nodeName + ": " + node.nodeValue + "<br/>";
+  node = node.nextSibling;
+}
+
+const output = document.getElementById("result");
+output.innerHTML = result;
 ```
+
+{{ EmbedLiveSample("Example", "100%", "170")}}
 
 ## Specifications
 
@@ -48,4 +70,4 @@ wrapper.normalize();
 
 ## See also
 
-- {{domxref("Text.splitText()")}}
+- {{domxref("Text.splitText()")}}, its opposite.

@@ -60,26 +60,26 @@ audio track.
 ### Exceptions
 
 - `AbortError` {{domxref("DOMException")}}
-  - : Thrown if an error or failure that doesn't match any of the other exceptions below occurred.
+  - : Returned if an error or failure does not match any of the other exceptions listed here.
 - `InvalidStateError`  {{domxref("DOMException")}}
-  - : Thrown if the call to `getDisplayMedia()` was not made from code running due to a
+  - : Returned if the call to `getDisplayMedia()` was not made from code running due to a
     user action, such as an event handler. Another potential cause for this event: the
     {{domxref("document")}} in whose context `getDisplayMedia()` was called is
     not fully active; for example, perhaps it is not the frontmost tab.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the permission to access a screen area was denied by the user, or the current browsing
+  - : Returned if the permission to access a screen area was denied by the user, or the current browsing
     instance is not permitted access to screen sharing.
 - `NotFoundError` {{domxref("DOMException")}}
-  - : Thrown if no sources of screen video are available for capture.
+  - : Returned if no sources of screen video are available for capture.
 - `NotReadableError`  {{domxref("DOMException")}}
-  - : Thrown if the user selected a screen, window, tab, or other source of screen data, but a
+  - : Returned if the user selected a screen, window, tab, or other source of screen data, but a
     hardware or operating system level error or lockout occurred, preventing the sharing
     of the selected source.
 - `OverconstrainedError` {{domxref("DOMException")}}
-  - : Thrown if, after creating the stream, applying the specified `constraints` fails
+  - : Returned if, after creating the stream, applying the specified `constraints` fails
     because no compatible stream could be generated.
 - `TypeError` {{domxref("DOMException")}}
-  - : Thrown if the specified `constraints` include constraints which are not permitted
+  - : Returned if the specified `constraints` include constraints which are not permitted
     when calling `getDisplayMedia()`. These unsupported constraints are
     `advanced` and any constraints which in turn have a member named
     `min` or `exact`.

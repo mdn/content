@@ -227,7 +227,7 @@ console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScri
 
 ```js
 const user = {
-    id: 42,
+    id: 42,
     isVerified: true
 };
 
@@ -237,7 +237,7 @@ console.log(id); // 42
 console.log(isVerified); // true
 ```
 
-#### Assignment without declaration
+#### Assignment separate from declaration
 
 A variable can be assigned its value with destructuring separate from its declaration.
 
@@ -422,7 +422,7 @@ rest; // { c: 30, d: 40 }
 
 #### Invalid JavaScript identifier as a property name
 
-Destructuring can be used with property names that are not valid JavaScript {{glossary("Identifier", "identifiers")}} by providing an alternative identifier that is valid.
+Destructuring can be used with property names that are not valid JavaScript {{glossary("Identifier", "identifiers")}} by providing an alternative identifier that is valid.
 
 ```js
 const foo = { 'fizz-buzz': true };
@@ -447,7 +447,7 @@ const [,, { name }] = props;
 console.log(name); // "FizzBuzz"
 ```
 
-#### The prototype chain is looked up when the object is deconstructed 
+#### The prototype chain is looked up when the object is deconstructed 
 
 When deconstructing an object, if a property is not accessed in itself, it will continue to look up along the prototype chain.
 

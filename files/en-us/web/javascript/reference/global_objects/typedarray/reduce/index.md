@@ -35,10 +35,10 @@ reduce(callbackFn)
 reduce(callbackFn, initialValue)
 
 // Inline callback function
-reduce(function callbackFn(accumulator, currentValue) { ... })
-reduce(function callbackFn(accumulator, currentValue, index) { ... })
-reduce(function callbackFn(accumulator, currentValue, index, array){ ... })
-reduce(function callbackFn(accumulator, currentValue, index, array) { ... }, initialValue)
+reduce(function(accumulator, currentValue) { ... })
+reduce(function(accumulator, currentValue, index) { ... })
+reduce(function(accumulator, currentValue, index, array){ ... })
+reduce(function(accumulator, currentValue, index, array) { ... }, initialValue)
 ```
 
 ### Parameters

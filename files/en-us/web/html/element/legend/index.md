@@ -1,5 +1,5 @@
 ---
-title: <legend>
+title: '<legend>: The Field Set Legend element'
 slug: Web/HTML/Element/legend
 tags:
   - Element

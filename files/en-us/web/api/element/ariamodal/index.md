@@ -17,8 +17,10 @@ The **`ariaModal`** property of the {{domxref("Element")}} interface reflects th
 
 ## Syntax
 
-    var ariaModal = element.ariaModal;
-    element.ariaModal = ariaModal
+```js
+var ariaModal = element.ariaModal;
+element.ariaModal = ariaModal
+```
 
 ### Value
 

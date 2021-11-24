@@ -23,7 +23,7 @@ The SVG core attributes are all the common attributes that can be specified on a
     *   : Defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).
         *Value*: Any valid ID string; *Animatable*: **No**
 *   {{SVGAttr('lang')}}
-    *   : Participates in defining the language of the element, the language that non-editable elements are written in or the language that editable elements should be written in. The tag contains one single entry value in the format defined in the [Tags for Identifying Languages (BCP47) IETF document](https://www.ietf.org/rfc/bcp/bcp47.txt).
+    *   : Participates in defining the language of the element, the language that non-editable elements are written in or the language that editable elements should be written in. The tag contains one single entry value in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
 
         > **Note:** SVG 2 introduced the new `lang` attributes. If both `lang` and `xml:lang` attribute are used, `xml:lang` has priority over `lang`.
 

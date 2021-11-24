@@ -49,8 +49,9 @@ None.
 ## Usage notes
 
 If the element being observed is removed from the DOM, and then subsequently released
-by the browser's garbage collection mechanism, the `MutationObserver` is
-likewise deleted.
+by the browser's garbage collection mechanism, the `MutationObserver` will stop observing 
+the removed element. However, the `MutationObserver` itself can continue to exist to observe 
+other existing elements.
 
 ## Example
 

@@ -16,7 +16,9 @@ The read-only **`style`** property of the {{domxref("CSSFontFaceRule")}} interfa
 
 ## Syntax
 
-    var style = CSSFontFaceRule.style;
+```js
+var style = CSSFontFaceRule.style;
+```
 
 ### Value
 

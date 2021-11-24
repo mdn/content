@@ -33,10 +33,10 @@ flatMap(callbackFn)
 flatMap(callbackFn, thisArg)
 
 // Inline callback function
-flatMap(function callbackFn(currentValue) { ... })
-flatMap(function callbackFn(currentValue, index) { ... })
-flatMap(function callbackFn(currentValue, index, array){ ... })
-flatMap(function callbackFn(currentValue, index, array) { ... }, thisArg)
+flatMap(function(currentValue) { ... })
+flatMap(function(currentValue, index) { ... })
+flatMap(function(currentValue, index, array){ ... })
+flatMap(function(currentValue, index, array) { ... }, thisArg)
 ```
 
 ### Parameters

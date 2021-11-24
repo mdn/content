@@ -11,7 +11,7 @@ browser-compat: css.properties.border-style
 ---
 {{CSSRef}}
 
-The **`border-style`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/CSS) property sets the line style for all four sides of an element's border.
+The **`border-style`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the line style for all four sides of an element's border.
 
 {{EmbedInteractiveExample("pages/css/border-style.html")}}
 

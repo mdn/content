@@ -918,6 +918,8 @@ The keywords in the following list are defined by the CSS Color Module Level 4 s
 
 - ActiveText
   - : Text of active links
+- ButtonBorder
+  - : Base border color of controls
 - ButtonFace
   - : Background color of controls
 - ButtonText

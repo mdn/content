@@ -14,7 +14,7 @@ browser-compat: api.Window.orientationchange_event
 
 The `orientationchange` event is fired when the orientation of the device has changed.
 
-This event is deprecated. Listen for the {{domxref("ScreenOrientation/change_event", "change")}} event instead.
+This event is deprecated. Listen for the {{domxref("ScreenOrientation/onchange", "ScreenOrientation.onchange")}} event instead.
 
 <table class="properties">
   <tbody>

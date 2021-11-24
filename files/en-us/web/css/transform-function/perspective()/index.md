@@ -24,9 +24,21 @@ properties which are attached to the parent of a child transformed in 3-dimensio
 ## Syntax
 
 The perspective distance used by `perspective()` is specified by a {{cssxref("&lt;length&gt;")}} value,
-which represents the distance between the user and the z=0 plane. The z=0 plane is the plane where everything appears
-in a 2-dimensional view, or the screen. A positive value makes the element appear closer to the user than the rest of
-the interface, a negative value farther. The greater the value, the further away the perspective of the user is.
+which represents the distance between the user and the z=0 plane,
+or by `none`.
+The z=0 plane is the plane where everything appears
+in a 2-dimensional view, or the screen.
+Negative values are syntax errors.
+Values smaller than `1px` (including zero) are clamped to `1px`.
+Values other than `none` cause
+elements with positive z positions to appear larger,
+and elements with negative z positions to appear smaller.
+Elements with z positions equal to or larger than the perspective value
+disappear as though they are behind the user.
+Large values of perspective represent a small transformation;
+small values of `perspective()` represent a large transformation;
+`perspective(none)` represents perspective from infinite distance
+and no transformation.
 
 ```css
 perspective(d)

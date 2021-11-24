@@ -45,8 +45,8 @@ None.
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : The sender's connection is closed.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the sender's connection is closed.
 
 ## Description
 

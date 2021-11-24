@@ -10,8 +10,7 @@ browser-compat: api.HTMLSelectElement.disabled
 ---
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLSelectElement.disabled`** is a [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "The Boolean object is an object wrapper for a boolean value.")
-that reflects the
+The **`HTMLSelectElement.disabled`** is a boolean value that reflects the
 [`disabled`](/en-US/docs/Web/HTML/Element/select#attr-disabled)
 HTML attribute, which indicates whether the control is disabled. If it is disabled, it
 does not accept clicks. A disabled element is unusable and un-clickable.

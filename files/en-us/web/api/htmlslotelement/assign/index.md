@@ -19,12 +19,12 @@ The **`assign()`** method of the
 ## Syntax
 
 ```js
-HTMLSlotElement.assign(nodes)
+HTMLSlotElement.assign(...nodes)
 ```
 
 ### Parameters
 
-- `nodes`
+- ...`nodes`
   - : A set of {{domxref("Element")}} or {{domxref("Text")}} nodes.
 
 ### Return value
@@ -41,9 +41,9 @@ function UpdateDisplayTab(elem, tabIdx) {
   const slot = shadow.querySelector("slot");
   const panels = elem.querySelectorAll('tab-panel');
   if (panels.length && tabIdx && tabIdx <= panels.length ) {
-    slot.assign([panels[tabIdx-1]]);
+    slot.assign(panels[tabIdx-1]);
   } else {
-    slot.assign([]);
+    slot.assign();
   }
 }
 ```

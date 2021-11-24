@@ -62,10 +62,10 @@ A new {{domxref("PannerNode")}} object instance.
 
 ### Exceptions
 
-- `RangeError`
-  - : The `refDistance`, `maxDistance`, or `rolloffFactor` properties have been given a value that is outside the accepted range.
-- `InvalidStateError`
-  - : The `coneOuterGain` property has been given a value outside the accepted range (0–1).
+- `RangeError` {{domxref("DOMException")}}
+  - : Thrown if the `refDistance`, `maxDistance`, or `rolloffFactor` properties have been given a value that is outside the accepted range.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the `coneOuterGain` property has been given a value outside the accepted range (0–1).
 
 ## Example
 

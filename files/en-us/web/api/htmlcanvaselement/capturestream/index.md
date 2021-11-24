@@ -17,11 +17,8 @@ browser-compat: api.HTMLCanvasElement.captureStream
 ---
 {{APIRef("Media Capture and Streams")}}
 
-The {{domxref("HTMLCanvasElement")}}
-**`captureStream()`** method returns a
-{{domxref("MediaStream")}} which includes a
-{{domxref("CanvasCaptureMediaStreamTrack")}} containing a real-time video capture of
-the canvas's contents.
+The {{domxref("HTMLCanvasElement")}} **`captureStream()`** method returns a {{domxref("MediaStream")}}
+which includes a {{domxref("CanvasCaptureMediaStreamTrack")}} containing a real-time video capture of the canvas's contents.
 
 ## Syntax
 
@@ -46,8 +43,8 @@ A reference to a {{domxref("MediaStream")}} object, which has a single
 
 ### Exceptions
 
-- `NotSupportedError`
-  - : The value of `frameRate` is negative.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the value of `frameRate` is negative.
 
 ## Example
 

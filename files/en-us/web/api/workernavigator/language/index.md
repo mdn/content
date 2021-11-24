@@ -25,7 +25,7 @@ const lang = navigator.language
 ### Value
 
 A {{domxref("DOMString")}}. _`lang`_ stores a string representing the
-language version as defined in [BCP 47](https://tools.ietf.org/rfc/bcp/bcp47.txt). Examples of valid language
+language version as defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. Examples of valid language
 codes include "en", "en-US", "fr", "fr-FR", "es-ES", etc.
 
 Note that in Safari on iOS prior to 10.2, the country code returned is lowercase:

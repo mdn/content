@@ -15,7 +15,9 @@ The **`createScriptURL()`** method of the {{domxref("TrustedTypePolicy")}} inter
 
 ## Syntax
 
-    var str = TrustedTypePolicy.createScriptURL(input[,args]);
+```js
+var str = TrustedTypePolicy.createScriptURL(input[,args]);
+```
 
 ### Parameters
 

@@ -149,5 +149,5 @@ The above will put a semi-transparent black mask over the Firefox logo backgroun
 - {{CSSxRef("clip-path")}}
 - {{CSSxRef("-moz-image-rect")}}
 - {{CSSxRef("&lt;gradient&gt;")}}
-- {{CSSxRef("image/image-set()")}}
+- {{CSSxRef("image/image-set()", "image-set()")}}
 - {{CSSxRef("cross-fade()")}}

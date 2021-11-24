@@ -60,7 +60,7 @@ The `shape-outside` property is specified using the values from the list below, 
   - : The float area is unaffected. Inline content wraps around the element's margin box, like usual.
 - `<shape-box>`
 
-  - : The float area is computed according to the shape of a float element's edges (as defined by the [CSS box model](/en-US/docs/Web/CSS/box_model)). This can be `margin-box`, `border-box`, `padding-box`, or `content-box`. The shape includes any curvature created by the {{cssxref("border-radius")}} property (behavior which is similar to {{cssxref("background-clip")}}).
+  - : The float area is computed according to the shape of a float element's edges (as defined by the [CSS box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)). This can be `margin-box`, `border-box`, `padding-box`, or `content-box`. The shape includes any curvature created by the {{cssxref("border-radius")}} property (behavior which is similar to {{cssxref("background-clip")}}).
 
     - `margin-box`
       - : Defines the shape enclosed by the outside margin edge. The corner radii of this shape are determined by the corresponding {{cssxref("border-radius")}} and {{cssxref("margin")}} values. If the `border-radius / margin` ratio is `1` or more, then the margin box corner radius is `border-radius + margin`. If the ratio is less than `1`, then the margin box corner radius is `border-radius + (margin * (1 + (ratio-1)^3))`.
@@ -80,7 +80,7 @@ The `shape-outside` property is specified using the values from the list below, 
 
 ## Interpolation
 
-When animating between one `<basic-shape>` and a second, the rules below are applied. The values in the shape functions interpolate as a simple list. The list values interpolate as {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or {{cssxref("calc")}} where possible. If list values are not one of those types but are identical (such as finding `nonzero` in the same list position in both lists), those values do interpolate.
+When animating between one `<basic-shape>` and a second, the rules below are applied. The values in the shape functions interpolate as a simple list. The list values interpolate as {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or {{cssxref("calc()")}} where possible. If list values are not one of those types but are identical (such as finding `nonzero` in the same list position in both lists), those values do interpolate.
 
 - Both shapes must use the same reference box.
 - If both shapes are the same type, that type is `ellipse()` or `circle()`, and none of the radii use the `closest-side` or `farthest-side` keywords, interpolate between each value in the shape functions.
@@ -166,7 +166,7 @@ p {
 
 - [CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes)
 - [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
-- [Shapes from Box Values](/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values)
+- [Shapes from Box Values](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values)
 - [Basic Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
 - [Shapes from Images](/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
 - {{cssxref("&lt;basic-shape&gt;")}}

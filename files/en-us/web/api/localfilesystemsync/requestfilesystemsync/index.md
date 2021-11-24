@@ -3,7 +3,7 @@ title: LocalFileSystemSync.requestFileSystemSync()
 slug: Web/API/LocalFileSystemSync/requestFileSystemSync
 browser-compat: api.LocalFileSystemSync.requestFileSystemSync
 ---
-{{APIRef("File System API")}}{{SeeCompatTable}}{{deprecated_header}}{{Draft}}
+{{APIRef("File System API")}}{{SeeCompatTable}}{{deprecated_header}}
 
 The **`requestFileSystemSync`** method of the `LocalFileSystemSync` interface of the [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) creates a new a sandboxed file system. It is intended to be used with [WebWorkers](/en-US/docs/Web/API/Worker). The methods are implemented by [worker](/en-US/docs/Web/API/Worker) objects.
 
@@ -13,10 +13,12 @@ The **`requestFileSystemSync`** method of the `LocalFileSystemSync` interface o
 
 ## Syntax
 
-    LocalFileSystemSync.requestFileSystemSync(
-      unsigned short type,
-      unsigned long long size
-    );
+```js
+LocalFileSystemSync.requestFileSystemSync(
+  unsigned short type,
+  unsigned long long size
+);
+```
 
 ### Parameters
 

@@ -1,5 +1,5 @@
 ---
-title: CSSStyleSheet.CSSStyleSheet()
+title: CSSStyleSheet()
 slug: Web/API/CSSStyleSheet/CSSStyleSheet
 tags:
   - API

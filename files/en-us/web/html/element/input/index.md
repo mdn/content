@@ -1112,7 +1112,7 @@ Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} 
 
 The {{cssxref("appearance")}} property enables the displaying of (almost) any element as a platform-native style based on the operating system's theme as well as the removal of any platform-native styling with the `none` value.
 
-You could make a `<div>` look like a radio button with `div {appearance: radio;} `or a radio look like a checkbox with `[type="checkbox] {appearance: checkbox;}`, but don't.
+You could make a `<div>` look like a radio button with `div {appearance: radio;}` or a radio look like a checkbox with `[type="radio"] {appearance: checkbox;}`, but don't.
 
 Setting `appearance: none` removes platform native borders, but not functionality.
 

@@ -46,7 +46,6 @@ browser-compat: html.elements.input.input-file
       <td>
         {{htmlattrxref("accept", "input/file")}},
         {{htmlattrxref("capture", "input/file")}},
-        {{htmlattrxref("files", "input/file")}},
         {{htmlattrxref("multiple", "input/file")}}
       </td>
     </tr>
@@ -107,10 +106,6 @@ For instance, there are a number of ways Microsoft Word files can be identified,
 The [`capture`](/en-US/docs/Web/HTML/Attributes/capture) attribute value is a string that specifies which camera to use for capture of image or video data, if the [`accept`](/en-US/docs/Web/HTML/Attributes/accept) attribute indicates that the input should be of one of those types. A value of `user` indicates that the user-facing camera and/or microphone should be used. A value of `environment` specifies that the outward-facing camera and/or microphone should be used. If this attribute is missing, the {{Glossary("user agent")}} is free to decide on its own what to do. If the requested facing mode isn't available, the user agent may fall back to its preferred default mode.
 
 > **Note:** `capture` was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.
-
-### files
-
-A {{domxref("FileList")}} object that lists every selected file. This list has no more than one member unless the {{htmlattrxref("multiple", "input/file")}} attribute is specified.
 
 ### multiple
 

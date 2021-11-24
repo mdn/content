@@ -19,7 +19,9 @@ The read-only **`syntax`** property of the {{domxref("CSSPropertyRule")}} interf
 
 ## Syntax
 
-    const syntax = CSSPropertyRule.syntax;
+```js
+const syntax = CSSPropertyRule.syntax;
+```
 
 ### Value
 

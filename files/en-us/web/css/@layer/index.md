@@ -58,7 +58,7 @@ This is useful because the initial order in which layers are declared indicates 
 
 The rule in `utilities` would be applied _even if it has lower specificity_ than the rule in `theme`. This is because once layer order has been established, specificity and order of appearance are ignored. This enables the creation of simpler CSS selectors, as you do not have to ensure that a selector will have high enough specificity to override competing rules, all you need to ensure is that it appears in a later layer.
 
-> **Note**: Having declared your layer names, thus setting their order, you can add CSS rules to the layer by redeclaring the name. The styles are then appended to the layer and the layer order will not be changed.
+> **Note:** Having declared your layer names, thus setting their order, you can add CSS rules to the layer by redeclaring the name. The styles are then appended to the layer and the layer order will not be changed.
 
 Any styles not in a layer are gathered together and placed into an anonymous layer that comes first in the order of layers, this means that anything in a layer will override things not in a layer.
 
@@ -145,7 +145,7 @@ In the following example, two layers are created with no rules applied, then CSS
 
 ```html
 <div class="item">I am displayed in <code>color: rebeccapurple</code>
-because the <code>type</code> layer comes after the <code>base</code> layer.
+because the <code>special</code> layer comes after the <code>base</code> layer.
 My green border, font-size, and padding come from the <code>base</code> layer.</div>
 ```
 

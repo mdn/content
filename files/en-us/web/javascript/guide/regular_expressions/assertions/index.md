@@ -42,7 +42,7 @@ Assertions include boundaries, which indicate the beginnings and endings of line
             it appears at the start of a
             <a
               href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges"
-              >group</a
+              >range</a
             >.
           </p>
         </div>

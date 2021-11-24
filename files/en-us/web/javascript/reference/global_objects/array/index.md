@@ -213,7 +213,7 @@ This is explained further on the {{jsxref("Array.length")}} page.
 
 ### Creating an array using the result of a match
 
-The result of a match between a {{jsxref("RegExp")}} and a string can create a JavaScript array. This array has properties and elements which provide information about the match. Such an array is returned by {{jsxref("RegExp.exec()")}}, {{jsxref("String.match()")}}, and {{jsxref("String.replace()")}}.
+The result of a match between a {{jsxref("RegExp")}} and a string can create a JavaScript array. This array has properties and elements which provide information about the match. Such an array is returned by {{jsxref("RegExp.exec()")}} and {{jsxref("String.match()")}}.
 
 To help explain these properties and elements, see this example and then refer to the table below:
 

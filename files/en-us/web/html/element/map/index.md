@@ -1,5 +1,5 @@
 ---
-title: <map>
+title: '<map>: The Image Map element'
 slug: Web/HTML/Element/map
 tags:
   - Element

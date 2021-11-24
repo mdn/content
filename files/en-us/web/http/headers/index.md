@@ -114,7 +114,7 @@ Network client hints allow a server to choose what information is sent based on 
 - {{HTTPHeader("If-Match")}}
   - : Makes the request conditional, and applies the method only if the stored resource matches one of the given ETags.
 - {{HTTPHeader("If-None-Match")}}
-  - : Makes the request conditional, and applies the method only if the stored resource _doesn't_ match any of the given ETags. This is used to update caches (for safe requests), or to prevent to upload a new resource when one already exists.
+  - : Makes the request conditional, and applies the method only if the stored resource _doesn't_ match any of the given ETags. This is used to update caches (for safe requests), or to prevent uploading a new resource when one already exists.
 - {{HTTPHeader("If-Modified-Since")}}
   - : Makes the request conditional, and expects the resource to be transmitted only if it has been modified after the given date. This is used to transmit data only when the cache is out of date.
 - {{HTTPHeader("If-Unmodified-Since")}}

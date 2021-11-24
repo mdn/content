@@ -11,7 +11,7 @@ browser-compat: http.headers.Access-Control-Allow-Methods
 {{HTTPSidebar}}
 
 The **`Access-Control-Allow-Methods`** response header
-specifies the method or methods allowed when accessing the resource in response to a
+specifies one or more methods allowed when accessing a resource in response to a
 {{glossary("preflight request")}}.
 
 <table class="properties">
@@ -37,7 +37,7 @@ Access-Control-Allow-Methods: *
 ## Directives
 
 - \<method>
-  - : Comma-delimited list of the allowed [HTTP
+  - : A comma-delimited list of the allowed [HTTP
     request methods](/en-US/docs/Web/HTTP/Methods).
 - `*` (wildcard)
   - : The value "`*`" only counts as a special wildcard value for requests

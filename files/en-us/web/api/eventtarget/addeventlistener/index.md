@@ -2,37 +2,44 @@
 title: EventTarget.addEventListener()
 slug: Web/API/EventTarget/addEventListener
 tags:
-  - API
-  - AccessOuterData
-  - DOM
-  - Detecting Events
-  - Event Handlers
-  - Event Listener
-  - EventTarget
-  - JavaScript
   - Method
-  - PassingData
-  - Receiving Events
   - Reference
-  - addEventListener
-  - attachEvent
-  - events
-  - mselementresize
 browser-compat: api.EventTarget.addEventListener
 ---
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
-The {{domxref("EventTarget")}} method
-**`addEventListener()`** sets up a function that will be
-called whenever the specified event is delivered to the target.
+The **`addEventListener()`** method of the {{domxref("EventTarget")}} interface
+sets up a function that will be called whenever the specified event is delivered to the target.
 
-Common targets
-are {{domxref("Element")}}, {{domxref("Document")}}, and {{domxref("Window")}}, but the
-target may be any object that supports events (such as {{domxref("XMLHttpRequest")}}).
+Common targets are {{domxref("Element")}}, or its children, {{domxref("Document")}}, and {{domxref("Window")}},
+but the target may be any object that supports events (such as {{domxref("XMLHttpRequest")}}).
 
-`addEventListener()` works by adding a function or an object that implements
-{{domxref("EventListener")}} to the list of event listeners for the specified event type
-on the {{domxref("EventTarget")}} on which it's called.
+> **Warning:** The `addEventListener()` method is the _recommended_ way to register an event listener. The benefits are as follows:
+> - It allows adding more than one handler for an event. This is particularly
+>   useful for libraries, JavaScript modules, or any other kind of
+>   code that needs to work well with other libraries or extensions.
+> - In contrast to using an `onXYZ` property, it gives you finer-grained control of the phase when the listener is activated (capturing vs. bubbling).
+> - It works on any event target, not just HTML or SVG elements.
+
+The method `addEventListener()` works by adding a function, or an object that implements
+{{domxref("EventListener")}}, to the list of event listeners for the specified event type
+on the {{domxref("EventTarget")}} on which it's called. If the function or object, is already in the list of event listeners for this target, they are not added a second time.
+
+They do not need to be removed manually with {{domxref("EventTarget.removeEventListener", "removeEventListener()")}}.
+
+> **Note:** Two identical anonymous functions are considered as different for `addEventListener` and the second one will _also_ be added to the list of event listener for that target.
+>
+> Indeed, anonymous functions are not identical even if defined using
+> the _same_ unchanging source-code called repeatedly, **even if in a loop**.
+>
+> Repeatedly defining the same unnamed function in such cases can be
+> problematic. (See [Memory issues](#memory_issues), below.)
+
+If an event listener is added to an {{domxref("EventTarget")}} from inside another listener,
+that is during the processing of the event,
+that event will not trigger the new listener.
+However, the new listener may be triggered during a later stage of event flow,
+such as during the bubbling phase.
 
 ## Syntax
 
@@ -40,14 +47,12 @@ on the {{domxref("EventTarget")}} on which it's called.
 target.addEventListener(type, listener);
 target.addEventListener(type, listener, options);
 target.addEventListener(type, listener, useCapture);
-target.addEventListener(type, listener, useCapture, wantsUntrusted); // wantsUntrusted is Firefox only
 ```
 
 ### Parameters
 
 - `type`
-  - : A case-sensitive string representing the [event
-    type](/en-US/docs/Web/Events) to listen for.
+  - : A case-sensitive string representing the [event type](/en-US/docs/Web/Events) to listen for.
 - `listener`
   - : The object that receives a notification (an object that implements the
     {{domxref("Event")}} interface) when an event of the specified type occurs. This must
@@ -56,7 +61,7 @@ target.addEventListener(type, listener, useCapture, wantsUntrusted); // wantsUnt
     {{anch("The event listener callback")}} for details on the callback itself.
 - `options` {{optional_inline}}
 
-  - : An options object specifies characteristics about the event listener. The available
+  - : An object that specifies characteristics about the event listener. The available
     options are:
 
     - `capture`
@@ -68,18 +73,14 @@ target.addEventListener(type, listener, useCapture, wantsUntrusted); // wantsUnt
         should be invoked at most once after being added. If `true`, the
         `listener` would be automatically removed when invoked.
     - `passive`
-      - : A boolean value that, if `true`, indicates that the function
+      - : A boolean value that, if `true`, indicates that the function
         specified by `listener` will never call
         {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener
         does call `preventDefault()`, the user agent will do nothing other than
-        generate a console warning. See [Improving scrolling performance with
-        passive listeners](#improving_scrolling_performance_with_passive_listeners) to learn more.
+        generate a console warning.
+        See [Improving scrolling performance with passive listeners](#improving_scrolling_performance_with_passive_listeners) to learn more.
     - `signal`
-      - : An {{domxref("AbortSignal")}}. The listener will be removed when the given `AbortSignal`’s {{domxref("AbortController/abort()", "abort()")}} method is called.
-    - `mozSystemGroup` {{non-standard_inline}}
-      - : A boolean value indicating that the listener should be added to the
-        system group. Available only in code running in XBL or in the
-        {{glossary("chrome")}} of the Firefox browser.
+      - : An {{domxref("AbortSignal")}}. The listener will be removed when the given `AbortSignal` object's {{domxref("AbortController/abort()", "abort()")}} method is called.
 
 - `useCapture` {{optional_inline}}
 
@@ -90,14 +91,11 @@ target.addEventListener(type, listener, useCapture, wantsUntrusted); // wantsUnt
     bubbling and capturing are two ways of propagating events that occur in an element
     that is nested within another element, when both elements have registered a handle for
     that event. The event propagation mode determines the order in which elements receive
-    the event. See [DOM
-    Level 3 Events](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) and [JavaScript Event
-    order](https://www.quirksmode.org/js/events_order.html#link4) for a detailed explanation. If not specified,
-    `useCapture` defaults to `false`.
+    the event. See [DOM Level 3 Events](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) and [JavaScript Event order](https://www.quirksmode.org/js/events_order.html#link4) for a detailed explanation.
+    If not specified, `useCapture` defaults to `false`.
 
-    > **Note:** For event listeners attached to the event target, the event is in the target phase,
-    > rather than the capturing and bubbling phases.
-    > Event listeners in the “capturing” phase are called before event listeners in any non-capturing phases.
+    > **Note:** For event listeners attached to the event target, the event is in the target phase, rather than the capturing and bubbling phases.
+    > Event listeners in the _capturing_ phase are called before event listeners in any non-capturing phases.
 
 - `wantsUntrusted` {{optional_inline}} {{Non-standard_inline}}
   - : A Firefox (Gecko)-specific parameter. If `true`, the listener receives
@@ -107,15 +105,15 @@ target.addEventListener(type, listener, useCapture, wantsUntrusted); // wantsUnt
 
 ### Return value
 
-`undefined`
+None.
 
 ## Usage notes
 
 ### The event listener callback
 
-The event listener can be specified as either a callback function or an object that
-implements {{domxref("EventListener")}}, whose {{domxref("EventListener.handleEvent()",
-  "handleEvent()")}} method serves as the callback function.
+The event listener can be specified as either a callback function or
+an object that implements {{domxref("EventListener")}},
+whose {{domxref("EventListener.handleEvent()", "handleEvent()")}} method serves as the callback function.
 
 The callback function itself has the same parameters and return value as the
 `handleEvent()` method; that is, the callback accepts a single parameter: an
@@ -206,8 +204,7 @@ If you'd prefer, you can use a third-party library like [Modernizr](https://mode
 
 You can learn more from the article about
 [`EventListenerOptions`](https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection)
-from the [Web Incubator Community
-Group](https://wicg.github.io/admin/charter.html).
+from the [Web Incubator Community Group](https://wicg.github.io/admin/charter.html).
 
 ## Examples
 
@@ -284,7 +281,7 @@ function modifyText() {
 }
 ```
 
-In the above example just above, we modify the code in the previous example such that after the second row’s content changes to "three", we call `abort()` from the {{domxref("AbortController")}} we passed to the `addEventListener()` call. That results in the value remaining as "three" forever — because we no longer have any code listening for a click event.
+In the example above, we modify the code in the previous example such that after the second row's content changes to "three", we call `abort()` from the {{domxref("AbortController")}} we passed to the `addEventListener()` call. That results in the value remaining as "three" forever because we no longer have any code listening for a click event.
 
 #### Result
 
@@ -484,43 +481,6 @@ that not all browsers have supported historically. See {{anch("Safely detecting 
 
 ## Other notes
 
-### Why use addEventListener()?
-
-`addEventListener()` is the way to register an event listener as specified
-in W3C DOM. The benefits are as follows:
-
-- It allows adding more than a single handler for an event. This is particularly
-  useful for {{Glossary("AJAX")}} libraries, JavaScript modules, or any other kind of
-  code that needs to work well with other libraries/extensions.
-- It gives you finer-grained control of the phase when the listener is activated
-  (capturing vs. bubbling).
-- It works on any DOM element, not just HTML elements.
-
-The alternative, [older way to register
-event listeners](#older_way_to_register_event_listeners), is described below.
-
-### Adding a listener during event dispatch
-
-If an {{domxref("EventListener")}} is added to an {{domxref("EventTarget")}} while it
-is processing an event, that event does not trigger the listener. However, that same
-listener may be triggered during a later stage of event flow, such as the bubbling
-phase.
-
-### Multiple identical event listeners
-
-If multiple identical `EventListener`s are registered on the same
-`EventTarget` with the same parameters, the duplicate instances are
-discarded. They do not cause the `EventListener` to be called twice, and they
-do not need to be removed manually with the
-{{domxref("EventTarget.removeEventListener()", "removeEventListener()")}} method.
-
-Note, however that when using an anonymous function as the handler, such listeners will
-NOT be identical, because anonymous functions are not identical even if defined using
-the SAME unchanging source-code called repeatedly, even if in a loop.
-
-However, repeatedly defining the same named function in such cases can be more
-problematic. (See [Memory issues](#memory_issues), below.)
-
 ### The value of "this" within the handler
 
 It is often desirable to reference the element on which the event handler was fired,
@@ -674,9 +634,10 @@ myObject.register();
 
 It may seem that event listeners are like islands, and that it is extremely difficult
 to pass them any data, much less to get any data back from them after they execute.
-Event listeners only take one argument, the [Event
-Object](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_objects), which is automatically passed to the listener, and the return value is
-ignored. So how can we get data in and back out of them again? There are a number of
+Event listeners only take one argument,
+the [Event Object](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_objects),
+which is automatically passed to the listener, and the return value is ignored.
+So how can we get data in and back out of them? There are a number of
 good methods for doing this.
 
 #### Getting data into an event listener using "this"
@@ -690,7 +651,7 @@ const myButton = document.getElementById('my-button-id');
 const someString = 'Data';
 
 myButton.addEventListener('click', function () {
-  console.log(this);  // Expected Value: 'Data'
+  console.log(this); // Expected Value: 'Data'
 }.bind(someString));
 ```
 
@@ -730,7 +691,7 @@ console.log(someString);  // Expected Value: 'Data' (will never output 'Data Aga
 
 #### Getting data into and out of an event listener using objects
 
-Unlike most functions in JavaScript, objects are retained in memory as long as a
+Unlike most functions in JavaScript, objects are retained in memory as long as a
 variable referencing them exists in memory. This, and the fact that objects can have
 properties, and that they can be passed around by reference, makes them likely
 candidates for sharing data among scopes. Let's explore this.
@@ -779,143 +740,6 @@ can respond to the change).
 > **Note:** Because objects are stored in variables by reference, you can
 > return an object from a function to keep it alive (preserve it in memory so you don't
 > lose the data) after that function stops executing.
-
-### Legacy Internet Explorer and attachEvent
-
-In Internet Explorer versions before IE 9, you have to use
-`attachEvent()`, rather than the standard
-`addEventListener()`. For IE, we modify the preceding example to:
-
-```js
-if (el.addEventListener) {
-  el.addEventListener('click', modifyText, false);
-} else if (el.attachEvent)  {
-  el.attachEvent('onclick', modifyText);
-}
-```
-
-There is a drawback to `attachEvent()`: The value of `this` will
-be a reference to the `window` object, instead of the element on which it was
-fired.
-
-The `attachEvent()` method could be paired with the `onresize`
-event to detect when certain elements in a web page were resized. The proprietary
-`mselementresize` event, when paired with the `addEventListener`
-method of registering event handlers, provides similar functionality as
-`onresize`, firing when certain HTML elements are resized.
-
-### Polyfill
-
-You can work around `addEventListener()`,
-`removeEventListener()`, {{domxref("Event.preventDefault()")}}, and
-{{domxref("Event.stopPropagation()")}} not being supported by Internet Explorer 8 by
-using the following code at the beginning of your script. The code supports the use of
-`handleEvent()` and also the {{event("DOMContentLoaded")}} event.
-
-> **Note:** `useCapture` is not supported, as IE 8 does not
-> have any alternative method. The following code only adds IE 8 support. This IE 8
-> polyfill only works in standards mode: a doctype declaration is required.
-
-```js
-(function() {
-  if (!Event.prototype.preventDefault) {
-    Event.prototype.preventDefault=function() {
-      this.returnValue=false;
-    };
-  }
-  if (!Event.prototype.stopPropagation) {
-    Event.prototype.stopPropagation=function() {
-      this.cancelBubble=true;
-    };
-  }
-  if (!Element.prototype.addEventListener) {
-    var eventListeners=[];
-
-    var addEventListener=function(type,listener /*, useCapture (will be ignored) */) {
-      var self=this;
-      var wrapper=function(e) {
-        e.target=e.srcElement;
-        e.currentTarget=self;
-        if (typeof listener.handleEvent != 'undefined') {
-          listener.handleEvent(e);
-        } else {
-          listener.call(self,e);
-        }
-      };
-      if (type=="DOMContentLoaded") {
-        var wrapper2=function(e) {
-          if (document.readyState=="complete") {
-            wrapper(e);
-          }
-        };
-        document.attachEvent("onreadystatechange",wrapper2);
-        eventListeners.push({object:this,type:type,listener:listener,wrapper:wrapper2});
-
-        if (document.readyState=="complete") {
-          var e=new Event();
-          e.srcElement=window;
-          wrapper2(e);
-        }
-      } else {
-        this.attachEvent("on"+type,wrapper);
-        eventListeners.push({object:this,type:type,listener:listener,wrapper:wrapper});
-      }
-    };
-    var removeEventListener=function(type,listener /*, useCapture (will be ignored) */) {
-      var counter=0;
-      while (counter<eventListeners.length) {
-        var eventListener=eventListeners[counter];
-        if (eventListener.object==this && eventListener.type==type && eventListener.listener==listener) {
-          if (type=="DOMContentLoaded") {
-            this.detachEvent("onreadystatechange",eventListener.wrapper);
-          } else {
-            this.detachEvent("on"+type,eventListener.wrapper);
-          }
-          eventListeners.splice(counter, 1);
-          break;
-        }
-        ++counter;
-      }
-    };
-    Element.prototype.addEventListener=addEventListener;
-    Element.prototype.removeEventListener=removeEventListener;
-    if (HTMLDocument) {
-      HTMLDocument.prototype.addEventListener=addEventListener;
-      HTMLDocument.prototype.removeEventListener=removeEventListener;
-    }
-    if (Window) {
-      Window.prototype.addEventListener=addEventListener;
-      Window.prototype.removeEventListener=removeEventListener;
-    }
-  }
-})();
-```
-
-### Older way to register event listeners
-
-`addEventListener()` was introduced with the DOM 2 [Events](https://www.w3.org/TR/DOM-Level-2-Events) specification. Before then,
-event listeners were registered as follows:
-
-```js
-// Passing a function reference — do not add '()' after it, which would call the function!
-el.onclick = modifyText;
-
-// Using a function expression
-element.onclick = function() {
-  // ... function logic ...
-};
-```
-
-This method replaces the existing `click` event listener(s) on the element
-if there are any. Other events and associated event handlers such as `blur`
-(`onblur`) and `keypress` (`onkeypress`) behave
-similarly.
-
-Because it was essentially part of {{glossary("DOM", "DOM 0")}}, this technique for
-adding event listeners is very widely supported and requires no special cross-browser
-code. It is used to register event listeners dynamically when very old browsers (like IE
-<=8) must be supported; see the table below for details on browser support for
-`addEventListener`.
 
 ### Memory issues
 

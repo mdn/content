@@ -37,10 +37,10 @@ find(callbackFn)
 find(callbackFn, thisArg)
 
 // Inline callback function
-find(function callbackFn(element) { ... })
-find(function callbackFn(element, index) { ... })
-find(function callbackFn(element, index, array){ ... })
-find(function callbackFn(element, index, array) { ... }, thisArg)
+find(function(element) { ... })
+find(function(element, index) { ... })
+find(function(element, index, array){ ... })
+find(function(element, index, array) { ... }, thisArg)
 ```
 
 ### Parameters

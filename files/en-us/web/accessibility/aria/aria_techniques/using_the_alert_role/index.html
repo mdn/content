@@ -49,7 +49,9 @@ tags:
  <li>Screen magnifiers may visually indicate that an alert occurred and what the alert text was. </li>
 </ul>
 
-<div class="note"><strong>Note:</strong> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.</div>
+<div class="note">
+  <p><strong>Note:</strong> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and therefore not normative.</p>
+</div>
 
 <h3 id="Examples">Examples</h3>
 
@@ -89,7 +91,7 @@ document.getElementById("formInstruction").setAttribute("role", "alert");</pre>
 
 <p>If an element already has <code>role="alert" </code>and is initially hidden using CSS, making it visible will cause the alert to fire as if it was just added to the page. This means that an existing alert can be "reused" multiple times. </p>
 
-<p><strong>Note: </strong>In most cases this approach is not recommended, because it's not ideal to hide error or alert text that is currently not applicable. Users of older assistive technology may still be able to perceive the alert text even when the alert does not currently applies, causing users to incorrectly believe that there is a problem.</p>
+<p><strong>Note: </strong>In most cases this approach is not recommended, because it's not ideal to hide error or alert text that is currently not applicable. Users of older assistive technology may still be able to perceive the alert text even when the alert does not currently apply, causing users to incorrectly believe that there is a problem.</p>
 
 <pre class="brush: css">.hidden {
   display:none;
@@ -134,7 +136,7 @@ document.getElementById("expirationWarning").className = ""; </pre>
 
 <h3 id="Compatibility">Compatibility</h3>
 
-<p class="comment">TBD: Add support information for common UA and AT product combinations</p>
+<p>TBD: Add support information for common UA and AT product combinations</p>
 
 <h3 id="Additional_resources">Additional resources</h3>
 

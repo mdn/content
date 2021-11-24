@@ -13,21 +13,23 @@ browser-compat: api.Element.ariaBusy
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaBusy`** property of the {{domxref("Element")}} interface reflects the value of the `aria-busy` attribute, which indicates whether an element is being modified, as assistive technologies may want to wait until the modifications are complete before exposing them to the user.
+The **`ariaBusy`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) attribute, which indicates whether an element is being modified, as assistive technologies may want to wait until the modifications are complete before exposing them to the user.
 
 ## Syntax
 
-    var ariaBusy = element.ariaBusy;
-    element.ariaBusy = ariaBusy
+```js
+var ariaBusy = element.ariaBusy;
+element.ariaBusy = ariaBusy
+```
 
 ### Value
 
 A {{domxref("DOMString")}} with one of the following values:
 
 - `"true"`
-  - : There are no expected updates for the element.
-- `"false"`
   - : The element is being updated.
+- `"false"`
+  - : There are no expected updates for the element.
 
 ## Examples
 

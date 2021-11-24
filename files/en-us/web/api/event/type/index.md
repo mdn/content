@@ -2,9 +2,6 @@
 title: Event.type
 slug: Web/API/Event/type
 tags:
-  - API
-  - DOM
-  - Event
   - Property
   - Read-only
   - Reference
@@ -17,18 +14,10 @@ interface returns a string containing the event's type. It is set when the event
 constructed and is the name commonly used to refer to the specific event, such as
 `click`, `load`, or `error`.
 
-For a list of available event types, see the [event
-reference](/en-US/docs/Web/Events).
 
-## Syntax
+## Value
 
-```js
-let eventType = event.type;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the type of {{domxref("Event")}}.
+A {{jsxref("String")}} containing the type of {{domxref("Event")}}.
 
 ## Example
 

@@ -20,42 +20,42 @@ The **`HTMLLinkElement`** interface represents reference information for externa
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLLinkElement.as")}}
-  - : Is a {{domxref("DOMString")}} representing the type of content being loaded by the HTML link.
+  - : A string representing the type of content being loaded by the HTML link.
 - {{domxref("HTMLLinkElement.crossOrigin")}} {{experimental_inline}}
-  - : Is a {{domxref("DOMString")}} that corresponds to the CORS setting for this link element. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for details.
+  - : A string that corresponds to the CORS setting for this link element. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for details.
 - {{domxref("HTMLLinkElement.disabled")}}
-  - : Is a `Boolean` which represents whether the link is disabled; currently only used with style sheet links.
+  - : A boolean value which represents whether the link is disabled; currently only used with style sheet links.
 - {{domxref("HTMLLinkElement.href")}}
-  - : Is a {{domxref("DOMString")}} representing the URI for the target resource.
+  - : A string representing the URI for the target resource.
 - {{domxref("HTMLLinkElement.hreflang")}}
-  - : Is a {{domxref("DOMString")}} representing the language code for the linked resource.
+  - : A string representing the language code for the linked resource.
 - {{domxref("HTMLLinkElement.media")}}
-  - : Is a {{domxref("DOMString")}} representing a list of one or more media formats to which the resource applies.
+  - : A string representing a list of one or more media formats to which the resource applies.
 - {{domxref("HTMLLinkElement.referrerPolicy")}} {{experimental_inline}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerpolicy", "link")}} HTML attribute indicating which referrer to use.
+  - : A string that reflects the {{htmlattrxref("referrerpolicy", "link")}} HTML attribute indicating which referrer to use.
 - {{domxref("HTMLLinkElement.rel")}}
-  - : Is a {{domxref("DOMString")}} representing the forward relationship of the linked resource from the document to the resource.
+  - : A string representing the forward relationship of the linked resource from the document to the resource.
 - {{domxref("HTMLLinkElement.relList")}} {{readonlyInline}}
-  - : Is a {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("rel", "link")}} HTML attribute, as a list of tokens.
+  - : A {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("rel", "link")}} HTML attribute, as a list of tokens.
 - {{domxref("HTMLLinkElement.sizes")}} {{readonlyInline}}
-  - : Is a {{domxref("DOMSettableTokenList")}} that reflects the {{htmlattrxref("sizes", "link")}} HTML attribute, as a list of tokens.
+  - : A {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("sizes", "link")}} HTML attribute, as a list of tokens.
 - {{domxref("HTMLLinkElement.sheet")}} {{readonlyInline}}
   - : Returns the {{domxref("StyleSheet")}} object associated with the given element, or `null` if there is none.
 - {{domxref("HTMLLinkElement.type")}}
-  - : Is a {{domxref("DOMString")}} representing the MIME type of the linked resource.
+  - : A string representing the MIME type of the linked resource.
 
 ### Obsolete properties
 
 - {{domxref("HTMLLinkElement.charset")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing the character encoding for the target resource.
+  - : Is a string representing the character encoding for the target resource.
 - {{domxref("HTMLLinkElement.rev")}} {{deprecated_inline}}
 
-  - : Is a {{domxref("DOMString")}} representing the reverse relationship of the linked resource from the resource to the document.
+  - : Is a string representing the reverse relationship of the linked resource from the resource to the document.
 
     > **Note:** Currently the W3C HTML 5.2 spec states that `rev` is no longer obsolete, whereas the WHATWG living standard still has it labeled obsolete. Until this discrepancy is resolved, you should still assume it is obsolete.
 
 - {{domxref("HTMLLinkElement.target")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing the name of the target frame to which the resource applies.
+  - : Is a string representing the name of the target frame to which the resource applies.
 
 ## Methods
 

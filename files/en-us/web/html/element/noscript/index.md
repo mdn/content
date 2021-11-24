@@ -1,5 +1,5 @@
 ---
-title: <noscript>
+title: '<noscript>: The Noscript element'
 slug: Web/HTML/Element/noscript
 tags:
   - Element

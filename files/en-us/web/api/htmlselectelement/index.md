@@ -81,6 +81,8 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}, and of {{dom
 
 Listen to these events using {{domxref("EventTarget/addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface:
 
+- {{domxref("HTMLElement/change_event", "change")}} event
+  - : Fires when the user selects an option.
 - {{domxref("HTMLElement/input_event", "input")}} event
   - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
 

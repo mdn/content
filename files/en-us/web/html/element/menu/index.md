@@ -1,5 +1,5 @@
 ---
-title: <menu>
+title: '<menu>: The Menu element'
 slug: Web/HTML/Element/menu
 tags:
   - Element

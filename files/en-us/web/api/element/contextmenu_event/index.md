@@ -85,10 +85,10 @@ noContext.addEventListener('contextmenu', e => {
 ## See also
 
 - [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-- {{event("auxclick")}}
-- {{event("click")}}
-- {{event("dblclick")}}
-- {{event("mousedown")}}
-- {{event("mouseup")}}
-- {{event("pointerdown")}}
-- {{event("pointerup")}}
+- {{domxref("Element/auxclick_event", "auxclick")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("HTMLElement/pointerdown_event", "pointerdown")}}
+- {{domxref("HTMLElement/pointerup_event", "pointerup")}}
