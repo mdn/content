@@ -60,7 +60,7 @@ The `flex` property may be specified using one, two, or three values.
 
 - **One-value syntax:** the value must be one of:
 
-  - a `<number>`: In this case it is interpreted as `flex: <number> 1 0`; the [`<flex-shrink>`](#flex-shrink) value is assumed to be 1 and the [`<flex-basis>`](#flex-basis) value is assumed to be `0`.
+  - a `<number>`: In this case it is interpreted as `flex: <number> 1 0`; the {{cssxref("flex-shrink")}} value is assumed to be 1 and the {{cssxref("flex-basis")}} value is assumed to be `0`.
   - one of the keywords: `none`, `auto`, or `initial`.
 
 - **Two-value syntax:**
