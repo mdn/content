@@ -425,7 +425,7 @@ const input = document.querySelector('input');
 const btn = document.querySelector('button');
 
 btn.addEventListener('click', function() {
-  let searchName = input.value.toLowerCase();
+  const searchName = input.value.toLowerCase();
   input.value = '';
   input.focus();
   para.textContent = '';
