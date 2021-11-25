@@ -652,10 +652,11 @@ function phase(evt) {
     log(evtPhasestr[evt.eventPhase] + this.firstChild.nodeValue.trim());
 }
 function gphase(evt) {
-    log(evtPhasestr[evt.eventPhase] + evt.currentTarget)
+    log(evtPhasestr[evt.eventPhase] + evt.currentTarget.toString().slice(8,-1));
 }
 
-function clearOutput() {
+function clearOutput(evt) {
+    evt.stopPropagation();
     logElement.innerHTML = "";
 }
 
