@@ -115,7 +115,7 @@ Now an extension injects a content script into the page:
 let pageScriptPara = document.getElementById("page-script-para");
 pageScriptPara.style.backgroundColor = "blue";
 
-// can't see page-script-added properties
+// can't see properties added by page-script.js
 console.log(window.foo);  // undefined
 
 // sees the original form of redefined properties
