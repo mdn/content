@@ -91792,12 +91792,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/XRSession/onsqueezestart": {
-    "modified": "2020-10-15T22:28:02.233Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/XRSession/onvisibilitychange": {
     "modified": "2020-10-15T22:21:56.341Z",
     "contributors": [
