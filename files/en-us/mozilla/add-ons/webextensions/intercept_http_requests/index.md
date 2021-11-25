@@ -92,8 +92,7 @@ Now let's use `webRequest` to redirect HTTP requests. First, replace manifest.js
   "permissions": [
     "webRequest",
     "webRequestBlocking",
-    "https://developer.mozilla.org/",
-    "https://mdn.mozillademos.org/"
+    "https://developer.mozilla.org/"
   ],
 
   "background": {
@@ -106,18 +105,22 @@ Now let's use `webRequest` to redirect HTTP requests. First, replace manifest.js
 The changes here are to:
 
 - add the `webRequestBlocking` [`permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
-  This extra permission is needed whenever an extension wants to modify a request.
+  This extra permission is needed when an extension wants to modify a request.
 - replace the `<all_urls>` permission with individual [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), as this is good practice to minimize the number of requested permissions.
 
 Next, replace **background.js** with this:
 
 ```js
-var pattern = "https://mdn.mozillademos.org/*";
+var pattern = "https://developer.mozilla.org/*";
+var targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
 
 function redirect(requestDetails) {
   console.log("Redirecting: " + requestDetails.url);
+  if (requestDetails.url === targetUrl) {
+    return;
+  }
   return {
-    redirectUrl: "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif"
+    redirectUrl: targetUrl
   };
 }
 
@@ -129,18 +132,18 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 Again, we use the {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} event listener to run a function just before each request is made.
-This function will replace the target URL with the `redirectUrl` specified in the function.
+This function replaces the `redirectUrl` with the target URL specified in the function. In this case, the frog image from the [your second extension tutorial](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension).
 
-This time we are not intercepting every request: the `{urls:[pattern], types:["image"]}` option specifies that we should only intercept requests (1) to URLs residing under "https\://mdn.mozillademos.org/" (2) for image resources.
+This time we are not intercepting every request: the `{urls:[pattern], types:["image"]}` option specifies that we should only intercept requests (1) to URLs residing under "https\://developer.mozilla.org/" (2) for image resources.
 See {{WebExtAPIRef("webRequest.RequestFilter")}} for more on this.
 
 Also note that we're passing an option called `"blocking"`: we need to pass this whenever we want to modify the request.
 It makes the listener function block the network request, so the browser waits for the listener to return before continuing.
 See the {{WebExtAPIRef("webRequest.onBeforeRequest")}} documentation for more on `"blocking"`.
 
-To test it out, open a page on MDN that contains a lot of images (for example [/en-US/docs/Tools/Network_Monitor](/en-US/docs/Tools/Network_Monitor)), [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on), and then reload the MDN page:
+To test it out, open a page on MDN that contains a lot of images (for example [the page listing extension user interface components](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface)), [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on), and then reload the MDN page. You will see something like this:
 
-{{EmbedYouTube("ix5RrXGr0wA")}}
+![Images on a page replaced with a frog image](beastify_by_redirect.png)
 
 ## Modifying request headers
 
@@ -201,9 +204,9 @@ The listener function looks for the "User-Agent" header in the array of request
 This modified array will now be sent to the server.
 
 To test it out, open [useragentstring.com](http://useragentstring.com/) and check that it identifies the browser as Firefox.
-Then reload the extension, reload [useragentstring.com](http://useragentstring.com/), and check that Firefox is now identified as Opera.
+Then reload the extension, reload [useragentstring.com](http://useragentstring.com/), and see that Firefox is now identified as Opera.
 
-{{EmbedYouTube("SrSNS1-FIx0")}}
+![useragentstring.com showing details of the modified user agent string](modified_request_header.png)
 
 ## Learn more
 
