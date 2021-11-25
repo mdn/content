@@ -65,7 +65,8 @@ See this code in a [JSFiddle demo](https://jsfiddle.net/zfnj5rv4/) or interact w
 
 ```css
 body {
-  user-select: none; /*Prevent the text from getting selectable for Firefox users*/
+  /* Prevent the user selecting text in the example */
+  user-select: none;
 }
 
 #draggable {
