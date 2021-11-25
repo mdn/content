@@ -11,11 +11,11 @@ tags:
 ---
 {{CanvasSidebar}}
 
-This sample program demonstrates a number of [compositing operations](/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation). The output looks like this:
-
-{{EmbedLiveSample("Compositing_example", "100%", 7250)}}
+This sample program demonstrates a number of [compositing operations](/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation).
 
 ## Compositing example
+
+{{EmbedLiveSample("Compositing_example", "100%", 7250)}}
 
 This code sets up the global values used by the rest of the program.
 

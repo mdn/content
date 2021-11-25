@@ -32,11 +32,11 @@ The `z-index` property can be specified with an integer value (positive, zero, o
 > - When no `z-index` property is specified, elements are rendered on the default rendering layer 0 (zero).
 > - If several elements share the same `z-index` value (i.e., they are placed on the same layer), stacking rules explained in the section [Stacking without the z-index property](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index) apply.
 
+## Example
+
 In the following example, the layers' stacking order is rearranged using `z-index`. The `z-index` of element #5 has no effect since it is not a positioned element.
 
-{{EmbedLiveSample("Source_code_for_the_example", 600, 400)}}
-
-## Source code for the example
+{{EmbedLiveSample("Example", 600, 400)}}
 
 ### HTML
 

@@ -56,6 +56,6 @@ document.addEventListener('click', function (e) {
 });
 ```
 
-## Live result
+### Result
 
-{{EmbedLiveSample('The_example', 120, 120)}}
+{{EmbedLiveSample('', 120, 120)}}

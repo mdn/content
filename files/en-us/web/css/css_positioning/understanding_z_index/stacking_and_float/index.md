@@ -20,7 +20,9 @@ For floated blocks, the stacking order is a bit different. Floating blocks are p
 
 See [types of positioning](/en-US/docs/Web/CSS/position#types_of_positioning) for an explanation of positioned and non-positioned elements.
 
-Actually, as you can see in the example below, the background and border of the non-positioned block (DIV #4) is completely unaffected by floating blocks, but the content is affected. This happens according to standard float behavior. This behavior can be shown with an added rule to the above list:
+## Example
+
+As you can see in the example below, the background and border of the non-positioned block (DIV #4) is completely unaffected by floating blocks, but the content is affected. This happens according to standard float behavior. This behavior can be shown with an added rule to the above list:
 
 1.  The background and borders of the root element
 2.  Descendant non-positioned blocks, in order of appearance in the HTML
@@ -28,11 +30,9 @@ Actually, as you can see in the example below, the background and border of the 
 4.  _Descendant non-positioned inline elements_
 5.  Descendant positioned elements, in order of appearance in the HTML
 
-{{EmbedLiveSample("Source_code_for_the_example", 600, 250)}}
-
 > **Note:** If an `opacity` value is applied to the non-positioned block (DIV #4), then something strange happens: the background and border of that block pops up above the floating blocks and the positioned blocks. This is due to a peculiar part of the specification: applying a `opacity` value creates a new stacking context (see [What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/)).
 
-## Source code for the example
+{{EmbedLiveSample("Example", 600, 250)}}
 
 ### HTML
 
