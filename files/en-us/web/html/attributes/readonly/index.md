@@ -72,37 +72,6 @@ If the element is read-only, then the element's value can not be updated by the 
 
 {{EmbedLiveSample('Example')}}
 
-## Examples
-
-```html hidden
-<fieldset>
-  <legend>Checkboxes buttons</legend>
-  <p><label>
-    <input type="checkbox" name="chbox" value="regular"> Regular
-  </label></p>
-  <p><label>
-    <input type="checkbox" name="chbox" value="readonly" readonly> readonly
-  </label></p>
-  <p><label>
-    <input type="checkbox" name="chbox" value="disabled" disabled> disabled
-  </label></p>
-</fieldset>
-<fieldset>
-  <legend>Radio buttons</legend>
-  <p><label>
-    <input type="radio" name="radio" value="regular"> Regular
-  </label></p>
-  <p><label>
-    <input type="radio" name="radio" value="readonly" readonly> readonly
-  </label></p>
-  <p><label>
-    <input type="radio" name="radio" value="disabled" disabled> disabled
-  </label></p>
-</fieldset>
-```
-
-{{EmbedLiveSample('Examples', 500, 200)}}
-
 ## Specifications
 
 <table class="no-markdown">
