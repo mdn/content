@@ -10,7 +10,7 @@ browser-compat: http.status.404
 ---
 {{HTTPSidebar}}
 
-The HTTP **`404 Not Found`** client error response code indicates that the server can't find the requested resource.
+The HTTP **`404 Not Found`** response status code indicates that the server cannot find the requested resource.
 Links that lead to a 404 page are often called broken or dead links and can be subject to [link rot](https://en.wikipedia.org/wiki/Link_rot).
 
 A 404 status code only indicates that the resource is missing: not whether the absence is temporary or permanent.
