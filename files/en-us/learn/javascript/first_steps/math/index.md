@@ -106,7 +106,7 @@ For example, try typing these lines into your console:
 
 ```js
 let myNumber = '74';
-myNumber + 3;
+myNumber += 3;
 ```
 
 You end up with the result 743, not 77, because `myNumber` is actually defined as a string. You can test this by typing in the following:
