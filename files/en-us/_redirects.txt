@@ -9113,6 +9113,7 @@
 /en-US/docs/Web/API/XRSession/onsqueeze	/en-US/docs/Web/API/XRSession/squeeze_event
 /en-US/docs/Web/API/XRSession/onsqueezeend	/en-US/docs/Web/API/XRSession/squeezeend_event
 /en-US/docs/Web/API/XRSession/onsqueezestart	/en-US/docs/Web/API/XRSession/squeezestart_event
+/en-US/docs/Web/API/XRSession/onvisibilitychange	/en-US/docs/Web/API/XRSession/visibilitychange_event
 /en-US/docs/Web/API/XRSessionEventInit	/en-US/docs/Web/API/XRSessionEvent/XRSessionEvent
 /en-US/docs/Web/API/XRSessionEventInit/session	/en-US/docs/Web/API/XRSessionEvent/XRSessionEvent
 /en-US/docs/Web/API/XRSessionInit	/en-US/docs/Web/API/XRSystem/requestSession

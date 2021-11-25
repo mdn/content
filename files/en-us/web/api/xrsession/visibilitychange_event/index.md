@@ -29,30 +29,31 @@ browser-compat: api.XRSession.visibilitychange_event
 
 The **`visibilitychange`** event is sent to an {{domxref("XRSession")}} to inform it when it becomes visible or hidden, or when it becomes visible but not currently focused. Upon receiving the event, you can check the value of the session's {{domxref("XRSession.visibilityState", "visibilityState")}} property to determine the new visibility state.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("XRSessionEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>
-        {{domxref("XRSession.onvisibilitychange", "onvisibilitychange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('visibilitychange', () => { });
+
+onvisibilitychange = event => { });
+```
+
+## Description
+
+### Trigger
+
+Triggered when an {{domxref("XRSession")}} becomes visible or hidden, or when it becomes visible but not currently focused.
 
 When the `XRSession` receives this event, the visibility state has already been changed.
+
+### Event type
+
+An {{domxref("XRSessionEvent")}} which, in addition to the generic {{domxref("Event")}} class, includes the following properties:
+
+### Use cases
+
+Upon receiving the event, you can check the value of the session's {{domxref("XRSession.visibilityState", "visibilityState")}} property to determine the new visibility state.
 
 ## Examples
 
@@ -76,7 +77,7 @@ navigator.xr.requestSession("inline").then((xrSession) => {
 
 When a visibility state change occurs, the event is received and dispatched to a function `mySessionVisible()`, with a Boolean parameter indicating whether or not the session is presently being displayed to the user.
 
-You can also create the event handler by assigning it to the {{domxref("XRSession")}}'s {{domxref("XRSession.onvisibilitychange", "onvisibilitychange")}} event handler property, like this:
+You can also create the event handler by assigning it to the {{domxref("XRSession")}}'s `onvisibilitychange` event handler property, like this:
 
 ```js
 xrSession.onvisibilitychange = (e) => {

@@ -91786,13 +91786,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/XRSession/onvisibilitychange": {
-    "modified": "2020-10-15T22:21:56.341Z",
-    "contributors": [
-      "jpmedley",
-      "bershanskiy"
-    ]
-  },
   "Web/API/XRSession/renderState": {
     "modified": "2020-10-15T22:21:53.049Z",
     "contributors": [
