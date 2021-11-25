@@ -9,11 +9,8 @@ on:
 jobs:
   label-new-issues:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
     steps:
       - name: initial labelling
         uses: andymckay/labeler@master
         with:
           add-labels: "needs-triage"
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
