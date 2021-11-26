@@ -25,7 +25,7 @@ Warning
 ## What went wrong?
 
 JavaScript 1.6's {{jsxref("Statements/for_each...in", "for each (variable in obj)")}}
-statement is deprecated, and will be removed in the near future.
+statement is deprecated, and has been removed.
 
 ## Examples
 
