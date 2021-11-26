@@ -79,10 +79,34 @@ Servers proactively requests the client hint headers they are interested in from
 
 The different categories of client hints are listed below.
 
+### User agent client hints
+
+The UA client hints are request headers that provide information about the user agent and the platform/architecture on which it is running:
+
+- {{HTTPHeader("Sec-CH-UA")}} {{experimental_inline}}
+  - : User agent's branding and version.
+- {{HTTPHeader("Sec-CH-UA-Arch")}} {{experimental_inline}}
+  - : User agent's underlying platform architecture.
+- {{HTTPHeader("Sec-CH-UA-Bitness")}} {{experimental_inline}}
+  - : User agent's underlying CPU architecture bitness (for example "64" bit).
+- {{HTTPHeader("Sec-CH-UA-Full-Version")}} {{deprecated_inline}}
+  - : User agent's full semantic version string.
+- {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} {{experimental_inline}}<!-- chrome intent to ship Nov 2021 -->
+  - : Full version for each brand in the user agent's brand list.
+- {{HTTPHeader("Sec-CH-UA-Mobile")}} {{experimental_inline}}
+  - : User agent is running on a mobile device or, more generally, prefers a "mobile" user experience.
+- {{HTTPHeader("Sec-CH-UA-Model")}} {{experimental_inline}}
+  - : User agent's device model.
+- {{HTTPHeader("Sec-CH-UA-Platform")}} {{experimental_inline}}
+  - : User agent's underlying operation system/platform.
+- {{HTTPHeader("Sec-CH-UA-Platform-Version")}} {{experimental_inline}}
+  - : User agent's underlying operation system version.
+ 
+
 ### Device client hints
 
 - {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}{{experimental_inline}}
-  - : Response header used to confirm the image device to pixel ratio in requests where the {{HTTPHeader("DPR")}} client hint was used to select an image resource.
+  - : _Response header_ used to confirm the image device to pixel ratio in requests where the {{HTTPHeader("DPR")}} client hint was used to select an image resource.
 - {{HTTPHeader("Device-Memory")}} {{deprecated_inline}}{{experimental_inline}}
   - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
 - {{HTTPHeader("DPR")}} {{deprecated_inline}}{{experimental_inline}}
@@ -90,7 +114,7 @@ The different categories of client hints are listed below.
 - {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}}{{experimental_inline}}
   - : A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).
 - {{HTTPHeader("Width")}} {{deprecated_inline}}{{experimental_inline}}
-  - : The `Width` request header field is a number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image).
+  - : A number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image).
 
 ### Network client hints
 
