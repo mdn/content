@@ -450,7 +450,7 @@ This issue was resolved in <https://github.com/mdn/content/issues/4325>, <https:
 
 ## Superscript and subscript
 
-Writers will be able to use the HTML {{HTMLElement("sup")}}> and {{HTMLElement("sub")}} elements if necessary, but should use alternatives if possible. In particular:
+Writers will be able to use the HTML {{HTMLElement("sup")}} and {{HTMLElement("sub")}} elements if necessary, but should use alternatives if possible. In particular:
 
 - For exponentiation, use the caret: `2^53`.
 - For ordinal expressions like 1
