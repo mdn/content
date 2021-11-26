@@ -34,7 +34,7 @@ The **`Sec-CH-UA`** [user agent client hint](/en-US/docs/Web/HTTP/Headers#user_a
 The **`Sec-CH-UA`** header provides the brand and significant version for each brand associated with the browser, in a comma-separated list.
 
 A brand is a commercial name for the user agent like: Chromium, Opera, Google Chrome, Microsoft Edge, Firefox, and Safari.
-A user agent might have several associated _brands_.
+A user agent might have several associated brands.
 For example, Opera, Chrome and Edge are all based on Chromium, and will provide both brands in the **`Sec-CH-UA`** header.
 
 The _significant version_ is the "marketing" version identifier that is used to distinguish between major releases of the brand.
@@ -64,11 +64,9 @@ Sec-CH-UA: "<brand>";v="<significant version>", ...
 ## Directives
 
 - `<brand>`
-  - : A brand associated with the user agent, like "Chromium", "Google Chrome".
-    This should also include "intentionally incorrect" brands like `"Not A;Brand"` to prevent servers blocking unknown browsers.
+  - : A brand associated with the user agent, like "Chromium", "Google Chrome", or an intentionally incorrect brand like `"Not A;Brand"`.
 - `<significant version>`
   - : The "marketing" version number associated with distinguishable web-exposed features.
-    For example a Chromium build with full version number "96.0.4664.45" might have significant version number of "96".
 
 
 ## Examples
@@ -78,7 +76,7 @@ Unless explicitly blocked by a user agent policy, if support it will be sent in 
 
 Strings from Chromium, Chrome, Edge, and Opera desktop browsers are shown below. 
 Note that they all share the "Chromium" brand, but have an additional brand indicating their origin.
-They also have an intentionally incorrect brand string `" Not A;Brand"`, which may appear in any position and have different text.
+They also have an intentionally incorrect brand string, which may appear in any position and have different text.
 
 ```http
 Sec-CH-UA: "(Not(A:Brand";v="8", "Chromium";v="98"
