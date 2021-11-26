@@ -100598,17 +100598,6 @@
       "EvanGenest"
     ]
   },
-  "Web/CSS/CSS_Scroll_Snap/Browser_compat": {
-    "modified": "2020-04-27T22:30:58.422Z",
-    "contributors": [
-      "Sheppy",
-      "mfuji09",
-      "chrisdavidmills",
-      "rachelandrew",
-      "matt.titchener",
-      "jensenmeh"
-    ]
-  },
   "Web/CSS/CSS_Scroll_Snap_Points": {
     "modified": "2020-07-07T12:26:12.735Z",
     "contributors": [
