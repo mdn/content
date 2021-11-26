@@ -27,9 +27,12 @@ Accept-CH: Width, Downlink, Sec-CH-UA
 This approach is efficient in that the server only requests the information that it is able to usefully handle.
 It is also relatively "privacy-preserving", in that it is up to the client to decide what information it can safely share.
 
+There is a small set of [low entropy client hint headers](#low_entropy_hints) that may be sent by a client event if not requested.
+
 > **Note:** Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv) attribute.
->
->     <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA">
+> ```html
+> <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA">
+> ```
 
 ## Caching and Client Hints
 
@@ -47,21 +50,23 @@ For more information see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP
 ## Hint life-time
 
 A server specifies the client hint headers that it is interested in getting in the `Accept-CH` response header.
-A user agent should append the requested client hints, that it wants to share with that server, to all subsequent requests.
+The user agent should append the requested client hint headers, or at least the subset that it wants to share with that server, to all subsequent requests in the current browsing session.
 
-The same set of hints should be included with requests to the same site until the end of the session.
 In other words, the request for a specific set of hints does not expire until the browser is shut down.
 
 A server can replace the set of client hints it is interested in recieving by resending the `Accept-CH` response header with a new list.
-If the server sent `Accept-CH` this would effectively indicate that it did not wish to recieve any hints (other than the [low entropy hits](#low_entroy_hints) it gets by default).
+For example, to stop requesting any hints it would send `Accept-CH` with an empty list.
 
 ## Low entropy hints
 
 Client hints are broadly divided into high and low entropy hints.
-The low entropy hints are those that don't give away much information that might be used, for example, to identify a particular end user.
-These mayb be sent by default on every request, irrespective of the `Accept-CH` response header, depending on the permission policy.
 
-High entropy hints have the potential to give away more information and therefore are gated in such a way that the user agent can make a decision as to whether to provide them.
+The low entropy hints are: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Sec-CH-UA")}}, {{HTTPHeader("Sec-CH-UA-Mobile")}}, {{HTTPHeader("Sec-CH-UA-Platform")}}  .
+These are the hints that don't give away much information that might be used to "fingerprint" (identify) a particular end user.
+They may be sent by default on every client request, irrespective of the server `Accept-CH` response header, depending on the permission policy.
+
+All the other client hints are high entropy hints.
+These have the potential to give away more information that can be used for user fingerprinting, and therefore are gated in such a way that the user agent can make a decision as to whether to provide them.
 The decision might be based on user preferences, a permission request, or the permission policy.
 
 
