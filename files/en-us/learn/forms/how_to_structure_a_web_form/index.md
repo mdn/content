@@ -140,20 +140,20 @@ Let's consider this example:
 <p>Required fields are followed by <abbr title="required">*</abbr>.</p>
 
 <!-- So this: -->
-<div>
+<!--div>
   <label for="username">Name:</label>
   <input id="username" type="text" name="username">
   <label for="username"><abbr title="required" aria-label="required">*</abbr></label>
-</div>
+</div-->
 
 <!-- would be better done like this: -->
-<div>
+<!--div>
   <label for="username">
     <span>Name:</span>
     <input id="username" type="text" name="username">
     <abbr title="required" aria-label="required">*</abbr>
   </label>
-</div>
+</div-->
 
 <!-- But this is probably best: -->
 <div>
