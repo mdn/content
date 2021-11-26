@@ -60,7 +60,7 @@ let alarm = {
     clearTimeout(this.timeoutID);
   }
 };
-window.addEventListener('click', () => { alarm.setup(); });
+window.addEventListener('click', () => alarm.setup() );
 ```
 
 ## Notes
