@@ -48,7 +48,6 @@ tags:
 ## Guides
 
 - [Basic concepts of CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap/Basic_concepts)
-- [Browser Compatibility and Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat)
 
 ## Specifications
 
@@ -59,5 +58,3 @@ tags:
 ## Browser compatibility
 
 The individual property pages detail browser compatibility information for each property.
-
-> **Note:** The previous version of this module was called Scroll Snap Points and has been deprecated. CSS Scroll Snap is the current implementation. [Read the guide to browser compatibility](/en-US/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat) for an overview of how to support both the old and new specification.
