@@ -10,7 +10,7 @@ This page describes how we use Markdown to write documentation on MDN. We have c
 
 ## Baseline: GitHub-Flavored Markdown
 
-The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. This means that for anything not otherwise specified in this page, you can refer to the GFM specification. GFM in turn is a superset of CommonMark ([http://spec.commonmark.org/](https://spec.commonmark.org/)).
+The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. This means that for anything not otherwise specified in this page, you can refer to the GFM specification. GFM in turn is a superset of CommonMark ([https://spec.commonmark.org/](https://spec.commonmark.org/)).
 
 ## Example code blocks
 
