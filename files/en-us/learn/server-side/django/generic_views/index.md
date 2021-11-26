@@ -139,17 +139,17 @@ As with our _index_ template, we extend our base template in the first line and 
 
 {% block content %}
   <h1>Book List</h1>
-  {% if book_list %}
+  
   <ul>
     {% for book in book_list %}
       <li>
         <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
       </li>
+    {% empty %}
+      <p>There are no books in the library.</p>
     {% endfor %}
   </ul>
-  {% else %}
-    <p>There are no books in the library.</p>
-  {% endif %}
+ 
 {% endblock %}
 ```
 
