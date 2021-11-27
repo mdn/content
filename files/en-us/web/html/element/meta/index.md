@@ -140,7 +140,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
       If specified, the `content` attribute must have the value "`IE=edge`". User agents are required to ignore this pragma.
 
-    - `refresh`This instruction specifies:
+    - `refresh` This instruction specifies:
 
       - The number of seconds until the page should be reloaded - only if the {{htmlattrxref("content", "meta")}} attribute contains a non-negative integer.
       - The number of seconds until the page should redirect to another - only if the {{htmlattrxref("content", "meta")}} attribute contains a non-negative integer followed by the string '`;url=`', and a valid URL.
