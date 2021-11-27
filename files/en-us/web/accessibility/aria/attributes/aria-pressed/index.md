@@ -10,7 +10,7 @@ tags:
   - Reference
 ---
 
-The `aria-pressed` attribute indicates the current "pressed" state of toggle buttons. 
+The `aria-pressed` attribute indicates the current "pressed" state of a toggle button. 
 
 ## Description
 
