@@ -504,17 +504,23 @@ The final-expression is then run after the code inside the loop has run (an iter
 Let's have a look again at our cats list example, but rewritten to use a while loop:
 
 ```js
+const cats = ['Pete', 'Biggles', 'Jasmin'];
+
+let myFavoriteCats = 'My cats are called ';
+
 let i = 0;
 
 while (i < cats.length) {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    myFavoriteCats += `and ${cats[i]}.`;
   } else {
-    info += cats[i] + ', ';
+    myFavoriteCats += `${cats[i]}, `;
   }
 
   i++;
 }
+
+console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmin."
 ```
 
 > **Note:** This still works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
@@ -530,23 +536,28 @@ The [do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) loo
 
 In this case, the initializer again comes first, before the loop starts. The keyword directly precedes the curly braces containing the code to run and the final expression.
 
-The differentiator here is that the condition comes after everything else, wrapped in parentheses and preceded by a `while` keyword.
-In a `do...while` loop, the code inside the curly braces is always run once before the check is made to see if it should be executed again (in `while` and `for`, the check comes first, so the code might never be executed).
+The main difference between a `do...while` loop and a `while` loop is that _the code inside a `do...while` loop is always executed at least once_. That's because the condition comes after the code inside the loop. So we always run that code, then check to see if we need to run it again. In `while` and `for` loops, the check comes first, so the code might never be executed.
 
 Let's rewrite our cat listing example again to use a `do...while` loop:
 
 ```js
+const cats = ['Pete', 'Biggles', 'Jasmin'];
+
+let myFavoriteCats = 'My cats are called ';
+
 let i = 0;
 
 do {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    myFavoriteCats += `and ${cats[i]}.`;
   } else {
-    info += cats[i] + ', ';
+    myFavoriteCats += `${cats[i]}, `;
   }
 
   i++;
 } while (i < cats.length);
+
+console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmin."
 ```
 
 > **Note:** Again, this works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)).
