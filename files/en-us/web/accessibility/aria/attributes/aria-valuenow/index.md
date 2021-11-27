@@ -30,7 +30,10 @@ When creating a range type role, including [`meter`](/en-US/docs/Web/Accessibili
   <span class="value">
     1984
   </span>
-  <span role="button">+</span>
+  <span role="button">
+    <span aria-hidden="true">+</span> 
+    Increment year by 1
+  </span>
   <span role="button">-</span>
 </div>
 ```
