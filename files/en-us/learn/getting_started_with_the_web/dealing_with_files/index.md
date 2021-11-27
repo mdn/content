@@ -77,7 +77,7 @@ Some general rules for file paths:
 
 For now, this is about all you need to know.
 
-> **Note:** The Windows file system tends to use backslashes, not forward slashes, e.g. `C:\windows`. This doesn't matter in HTML — even if you are developing your website on Windows, you should still use forward slashes in your code.
+> **Note:** The Windows file system tends to use backslashes, not forward slashes, e.g. `C:\Windows`. This doesn't matter in HTML — even if you are developing your website on Windows, you should still use forward slashes in your code.
 
 ## What else should be done?
 
