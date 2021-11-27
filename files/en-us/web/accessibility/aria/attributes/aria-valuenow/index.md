@@ -39,8 +39,12 @@ Use semantic HTML elements when you can:
 
 ```html
 <label for="birthyear">What year were you born?</label>
-<input type="number" id="birthyear"
-  value="1984" min="1900" max="2021">
+<input 
+  type="number" 
+  id="birthyear"
+  value="1984" 
+  min="1900" 
+  max="2021">
 ```
 
 If there is no known value, like when a progress bar is in an indeterminate state, don't set an `aria-valuenow` attribute. 
