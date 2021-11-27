@@ -38,125 +38,75 @@ Programming languages are very useful for rapidly completing repetitive tasks, f
   </tbody>
 </table>
 
-## Keep me in the loop
+## Why are loops useful?
 
-Loops, loops, loops.
-As well as being associated with [popular breakfast cereals](https://en.wikipedia.org/wiki/Froot_Loops), [roller coasters](https://en.wikipedia.org/wiki/Vertical_loop), and [musical production](<https://en.wikipedia.org/wiki/Loop_(music)>), they are also a critical concept in programming.
-Programming loops are all to do with doing the same thing over and over again, which is called **iteration** in "programming speak".
+Loops are all about doing the same thing over and over again. Often, the code will be slightly different each time round the loop, or the same code will run but with different variables.
 
-Let's consider the case of a farmer who is making sure he has enough food to feed his family for the week. He might use the following loop to achieve this:
+### Looping code example
 
-![](loop_js-02-farm.png)
-
-A loop usually has one or more of the following features:
-
-- A **counter**, which is initialized with a certain value — this is the starting point of the loop ("Start: I have no food", above).
-- A **condition**, which is a true/false test to determine whether the loop continues to run, or stops — usually when the counter reaches a certain value.
-  This is illustrated by "Have I got enough food?" above.
-  Let's say he needs 10 portions of food to feed his family.
-- An **iterator**, which generally increments the counter by a small amount on each successive loop until the condition is no longer `true`.
-  We haven't explicitly illustrated this above, but we could think about the farmer being able to collect say 2 portions of food per hour.
-  After each hour, the amount of food he has collected is incremented by two, and he checks whether he has enough food.
-  If he has reached 10 portions (the point where the condition is no longer true, so the loop exits), he can stop collecting and go home.
-
-In {{glossary("pseudocode")}}, this would look something like the following:
-
-    loop(food = 0; foodNeeded = 10) {
-      if (food >= foodNeeded) {
-        exit loop;
-        // We have enough food; let's go home
-      } else {
-        food += 2; // Spend an hour collecting 2 more food
-        // loop will then run again
-      }
-    }
-
-So the amount of food needed is set at 10, and the amount the farmer currently has is set at 0.
-In each iteration of the loop, we check whether the amount of food the farmer has is larger or equal to the amount he needs.
-If so, we can exit the loop. If not, the farmer spends an hour collecting two portions of food and the loop runs again.
-
-### Why bother?
-
-At this point, you probably understand the high-level concepts behind loops, but you are probably thinking "OK, great, but how does this help me write better JavaScript code?" As we said earlier, **loops are all to do with doing the same thing over and over again**, which is great for **rapidly completing repetitive tasks**.
-
-Often, the code will be slightly different on each successive iteration of the loop, which means that you can complete a whole load of tasks that are similar but slightly different;
-if you've got a lot of different calculations to do, you want to do each different one, not the same one over and over again!
-
-#### Looping code example
-
-Let's look at an example to illustrate why loops are such a good thing.
-Let's say we wanted to draw 100 random circles on a {{htmlelement("canvas")}} element (press the _Update_ button to run the example again and again to see different random sets):
+Suppose we wanted to draw 100 random circles on a {{htmlelement("canvas")}} element (press the _Update_ button to run the example again and again to see different random sets):
 
 ```html hidden
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Random canvas circles</title>
-    <style>
-      html {
-        width: 100%;
-        height: inherit;
-        background: #ddd;
-      }
+<button>Update</button>
+<canvas></canvas>
+```
 
-      canvas {
-        display: block;
-      }
+```css hidden
+html {
+  width: 100%;
+  height: inherit;
+  background: #ddd;
+}
 
-      body {
-        margin: 0;
-      }
+canvas {
+  display: block;
+}
 
-      button {
-        position: absolute;
-        top: 5px;
-        left: 5px;
-      }
-    </style>
-  </head>
-  <body>
+body {
+  margin: 0;
+}
 
-  <button>Update</button>
-
-  <canvas></canvas>
-
-    <script>
-    const btn = document.querySelector('button');
-    const canvas = document.querySelector('canvas');
-    const ctx = canvas.getContext('2d');
-
-    let WIDTH = document.documentElement.clientWidth;
-    let HEIGHT = document.documentElement.clientHeight;
-
-    canvas.width = WIDTH;
-    canvas.height = HEIGHT;
-
-    function random(number) {
-      return Math.floor(Math.random()*number);
-    }
-
-    function draw() {
-      ctx.clearRect(0,0,WIDTH,HEIGHT);
-      for (let i = 0; i < 100; i++) {
-        ctx.beginPath();
-        ctx.fillStyle = 'rgba(255,0,0,0.5)';
-        ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-        ctx.fill();
-      }
-    }
-
-    btn.addEventListener('click',draw);
-
-    </script>
-
-  </body>
-</html>
+button {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
 ```
 
 {{ EmbedLiveSample('Looping_code_example', '100%', 400) }}
 
-#### With and without a loop
+Here's the JavaScript code that implements this example:
+
+
+```js
+const btn = document.querySelector('button');
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+
+const WIDTH = document.documentElement.clientWidth;
+const HEIGHT = document.documentElement.clientHeight;
+
+canvas.width = WIDTH;
+canvas.height = HEIGHT;
+
+function random(number) {
+  return Math.floor(Math.random()*number);
+}
+
+function draw() {
+  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  for (let i = 0; i < 100; i++) {
+    ctx.beginPath();
+    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+    ctx.fill();
+  }
+}
+
+btn.addEventListener('click',draw);
+```
+
+### With and without a loop
 
 You don't have to understand all the code for now, but let's look at the part of the code that actually draws the 100 circles:
 
@@ -185,7 +135,7 @@ ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
 ctx.fill();
 ```
 
-This would get very boring and difficult to maintain very quickly.
+This would get very boring and difficult to maintain.
 
 ## Looping through a collection
 
@@ -273,7 +223,7 @@ console.log(filtered);
 ## The standard for loop
 
 In the "drawing circles" example above, you don't have a collection of items to loop through: you really just want to run the same code 100 times.
-In  a case like that you should use the {{jsxref("statements/for","for")}} loop.
+In a case like that you should use the {{jsxref("statements/for","for")}} loop.
 This has the following syntax:
 
 ```js
@@ -288,7 +238,7 @@ Here we have:
 
    1. An **initializer** — this is usually a variable set to a number, which is incremented to count the number of times the loop has run.
       It is also sometimes referred to as a **counter variable**.
-   3. A **condition** — as mentioned before, this defines when the loop should stop looping.
+   3. A **condition** — this defines when the loop should stop looping.
       This is generally an expression featuring a comparison operator, a test to see if the exit condition has been met.
    5. A **final-expression** — this is always evaluated (or run) each time the loop has gone through a full iteration.
       It usually serves to increment (or in some cases decrement) the counter variable, to bring it closer to the point where the condition is no longer `true`.
