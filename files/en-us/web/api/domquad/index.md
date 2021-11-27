@@ -1,4 +1,8 @@
----
+---chrome.runtime.onInstalled.addListener(() => {
+  chrome.contextMenus.create({
+    "id": "sampleContextMenu",
+    "title": "Sample Context Menu",
+    "contexts": ["selection"]
 title: DOMQuad
 slug: Web/API/DOMQuad
 tags:
@@ -42,3 +46,15 @@ A `DOMQuad` is a collection of four `DOMPoint`s defining the corners of an arbit
 ## Browser compatibility
 
 {{Compat}}
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.contextMenus.create({
+    "id": "sampleContextMenu",
+    "title": "Sample Context Menu",
+    "contexts": ["selection"],
+  });
+});
+
+// This will run when a bookmark is created.
+chrome.bookmarks.onCreated.addListener(() => {
+  // do something
+});
