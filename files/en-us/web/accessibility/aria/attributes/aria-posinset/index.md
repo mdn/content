@@ -23,10 +23,10 @@ The following example shows a listbox with four element options out of the 118 i
 ```html
 <h2 id="periodictable">Periodic table of chemical elements</h2>
 <ul role="listbox" aria-labelledby="periodictable">
-  <li role="option" aria-setsize="118" aria-posinset="1"> Hydrogen </li>
-  <li role="option" aria-setsize="118" aria-posinset="3"> Lithium </li>
-  <li role="option" aria-setsize="118" aria-posinset="11"> Sodium </li>
-  <li role="option" aria-setsize="118" aria-posinset="19"> Potassium </li>
+  <li role="option" aria-setsize="118" aria-posinset="1">Hydrogen</li>
+  <li role="option" aria-setsize="118" aria-posinset="3">Lithium</li>
+  <li role="option" aria-setsize="118" aria-posinset="11">Sodium</li>
+  <li role="option" aria-setsize="118" aria-posinset="19">Potassium</li>
 </ul>
 ```
 The value of each `aria-posinset` is an integer greater than or equal to 1, and less than or equal to the size of the set when that size is known. 
