@@ -170,3 +170,4 @@ For detailed browser support of specific features, you'll have to consult the re
 - [Snuggsi](https://github.com/devpunks/snuggsi#readme) — Easy Web Components in \~1kB _Including polyfill_ — All you need is a browser and basic understanding of HTML, CSS, and JavaScript classes to be productive.
 - [Slim.js](https://github.com/slimjs/slim.js) — Open source web components library — a high-performant library for rapid and easy component authoring; extensible and pluggable and cross-framework compatible.
 - [Stencil](https://stenciljs.com/) — Toolchain for building reusable, scalable design systems in web components.
+- [Symbiote](https://symbiotejs.org/) - Common purpose library based on Web Components, focused on widgets and micro-frontends implementation.
