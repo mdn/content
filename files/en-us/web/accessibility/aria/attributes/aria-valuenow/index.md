@@ -34,7 +34,10 @@ When creating a range type role, including [`meter`](/en-US/docs/Web/Accessibili
     <span aria-hidden="true">+</span> 
     Increment year by 1
   </span>
-  <span role="button">-</span>
+  <span role="button">
+    <span aria-hidden="true">-</span> 
+    Decrement year by 1
+  </span>
 </div>
 ```
 
