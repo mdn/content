@@ -321,7 +321,7 @@ In this loop we're starting `i` at `0`, and stopping when `i` reaches the length
 Then inside the loop we're using `i` to access each item in the array in turn.
 
 This works just fine, and in early versions of JavaScript, `for...of` didn't exist, so this was the standard way to iterate through an array.
-However, if offers more chances to introduce bugs into your code. For example:
+However, it offers more chances to introduce bugs into your code. For example:
 
 * you might start `i` at `1`, forgetting that the first array index is zero, not 1.
 * you might stop at `i <= cats.length`, forgetting that the last array index is at `length - 1`.
