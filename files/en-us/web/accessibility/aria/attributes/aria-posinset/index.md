@@ -16,7 +16,7 @@ The `aria-posinset` attribute defines an element's number or position in the cur
 
 Short for "position in set", the `aria-posinset` attribute defines the position of the element within the whole set of listitems or treeitems when only a subset of the items are present in the <abbr title="Document Object Model">DOM</abbr>. 
 
-If all the items in a list are present in the DOM, browser can calculate the total and the position of each, making `aria-posinset` unnecessary. When only a portion of a set is in the DOM, `aria-posinset` is needed to provide information about the element's position within the set.
+If all the items in a list are present in the DOM, the browser can calculate the total and the position of each, making `aria-posinset` unnecessary. When only a portion of a set is in the DOM, include `aria-posinset` to provide information about the element's position within the set along with [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) to inform the user how many items are in the full set.
 
 The following example shows a listbox with four element options out of the 118 in the periodic table of chemical elements.
 
@@ -29,7 +29,9 @@ The following example shows a listbox with four element options out of the 118 i
   <li role="option" aria-setsize="118" aria-posinset="19"> Potassium </li>
 </ul>
 ```
-The value of each `aria-posinset` is an integer greater than or equal to 1, and less than or equal to the size of the set when that size is known. When using `aria-posinset` you must also include  value for [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), which is the size of the entire set. If the size of the entire set is unknown, set `aria-setsize="-1"`.
+The value of each `aria-posinset` is an integer greater than or equal to 1, and less than or equal to the size of the set when that size is known. 
+
+> **Note:** When using `aria-posinset` you must also include  value for [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), which is the size of the entire set. If the size of the entire set is unknown, set `aria-setsize="-1"`.
 
 For [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), or [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role), set the value of `aria-posinset` with respect to the total number of items in the menu, excluding any separators.
 
