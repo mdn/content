@@ -19,6 +19,7 @@ When you want to indicate that an interactive element works but is not editable,
 When `aria-readonly` is set to `true`, it means the user can read but not set the value of the widget. Read-only elements are still relevant to the user, so you should not prevent the user from navigating to the element or its focusable descendants or copying the value. 
 
 Examples include:
+
 - Form elements which should not be changed.
 - Row and column headers in a spreadsheet.
 - The total value in a shopping cart.
