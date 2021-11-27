@@ -201,18 +201,16 @@ The basic tool for looping through a collection is the {{jsxref("statements/for.
 ```js
 const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
 
-for (let cat of cats) {
+for (const cat of cats) {
   console.log(cat);
 }
 ```
 
-In this example, `for (let cat of cats)` says:
+In this example, `for (const cat of cats)` says:
 
 1. Given the collection `cats`, get the first item in the collection.
 2. Assign it to the variable `cat` and then run the code between the curly brackets `{}`.
 3. Get the next item, and repeat (2) until you've reached the end of the collection.
-
-Note that we have to use `let` for the `cat` variable, because we're assigning it to a new item each time we go round the loop.
 
 ### map() and filter()
 
@@ -334,7 +332,7 @@ This code calculates squares for the numbers from 1 to 9, and writes out the res
 
 Let's break down the `for (let i = 1; i < 10; i++)` line into its three pieces:
 
-1. `let i = 1`: the counter variable, `i`, starts at `1`.
+1. `let i = 1`: the counter variable, `i`, starts at `1`. Note that we have to use `let` for the counter, because we're reassigning it each time we go round the loop.
 2. `i < 10`: keep going round the loop for as long as `i` is smaller than `10`.
 3. `i++`: add one to `i` each time round the loop.
 
@@ -354,7 +352,7 @@ Let's look again at our `for...of` example above:
 ```js
 const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
 
-for (let cat of cats) {
+for (const cat of cats) {
   console.log(cat);
 }
 ```
@@ -388,7 +386,7 @@ const cats = ['Pete', 'Biggles', 'Jasmin'];
 
 let myFavoriteCats = 'My cats are called ';
 
-for (let cat of cats) {
+for (const cat of cats) {
   myFavoriteCats = `${myFavoriteCats}${cat}, `
 }
 
@@ -456,7 +454,7 @@ btn.addEventListener('click', function() {
   input.value = '';
   input.focus();
   para.textContent = '';
-  for (let contact of contacts) {
+  for (const contact of contacts) {
     let splitContact = contact.split(':');
     if (splitContact[0].toLowerCase() === searchName) {
       para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
@@ -875,7 +873,7 @@ const refused = document.querySelector('.refused');
 admitted.textContent = 'Admit: ';
 refused.textContent = 'Refuse: ';
 
-for (let person of people) {
+for (const person of people) {
   if (person === 'Phil' || person === 'Lola') {
     refused.textContent += \`\${person}, \`;
   } else {
@@ -949,7 +947,7 @@ Let's have a look at them all again.
 First `for...of`:
 
 ```
-for (let item of array) {
+for (const item of array) {
   // code to run
 }
 ```
