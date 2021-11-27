@@ -18,7 +18,7 @@ Adding `aria-pressed` to an element with a role of [`button`](/en-US/docs/Web/Ac
 
 The value is "tri-state", meaning the value can be set to `true`, `false`, `mixed`, or `undefined` values. In the case of `aria-pressed`, like most tri-state value types, the default value is `undefined`.
 
-Toggle buttons require a full press-and-release cycle to change their value. Pressing and releasing it once changes the value to `true`. If it's pressed and released again, the value changes back to `false`. And so on. 
+Toggle buttons require a full press-and-release cycle to change their value. Pressing and releasing it once changes the value to `true`. If it's pressed and released again, the value changes back to `false`.
 
 A value of `mixed` means that the values of more than one item controlled by the button do not all share the same value. 
 
