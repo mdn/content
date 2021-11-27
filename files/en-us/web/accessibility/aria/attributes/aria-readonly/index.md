@@ -14,7 +14,7 @@ The `aria-readonly` attribute indicates that the element is not editable, but is
 
 ## Description
 
-When you want to indicate that an interactive element works but is not editable, set `aria-readonly="true"`. This indicates to the user that an element that would normally be focusable and copyable still is, but it is read only. Not disabled.
+When you want to indicate that an interactive element works but is not editable, set `aria-readonly="true"`. This indicates to the user that an interactive element that would normally be focusable and copyable has been placed in a read-only (not disabled) state.
 
 When `aria-readonly` is set to true, it means the user can read but not set the value of the widget. Readonly elements, as opposed to disabled elements, are relevant to the user, so you should not prevent the user from navigating to the element or its focusable descendants or copying the value. 
 
