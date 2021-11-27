@@ -14,7 +14,7 @@ The `aria-orientation` attribute indicates whether the element's orientation is 
 
 ## Description
 
-For some widgets, it is important for the user to know the orientation to know how to navigate the widget as orientation impacts the expected behaviors of the left, right, up and down arrows. The `aria-orientation` attribute is used to indicate to assistive technology users whether an element's orientation is `horizontal` or `vertical`, or `undefined`. 
+It may be important for the user to know the orientation to know how to navigate certain widgets, as orientation impacts the expected behaviors of the left, right, up and down arrows. The `aria-orientation` attribute is used to indicate to assistive technology users whether an element's orientation is `horizontal` or `vertical`, or `undefined`. 
 
 Several widgets have default orientations:
 
