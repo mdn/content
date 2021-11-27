@@ -14,7 +14,7 @@ The `aria-posinset` attribute defines an element's number or position in the cur
 
 ## Description
 
-Short for "position in set", the `aria-posinset` attribute defines the position of the element within the whole set of listitems or treeitems when only a subset of the items are present in the <abbr title="Document Object Model">DOM</abbr>. 
+Short for "position in set", the `aria-posinset` attribute defines the position of the element within the whole set of listitems or treeitems when only a subset of the items are present in the DOM. 
 
 If all the items in a list are present in the DOM, the browser can calculate the total and the position of each, making `aria-posinset` unnecessary. When only a portion of a set is in the DOM, include `aria-posinset` to provide information about the element's position within the set along with [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) to inform the user how many items are in the full set.
 
