@@ -14,7 +14,7 @@ The `aria-orientation` attribute indicates whether the element's orientation is 
 
 ## Description
 
-For some widgets, it is important for the user to know the orientation to know how to navigate the widget. Orientation impacts the expected behaviors of the left, right, up and down arrows. The `aria-orientation` attribute is used to indicates whether an element's orientation is `horizontal` or `vertical`, or `undefined`. 
+For some widgets, it is important for the user to know the orientation to know how to navigate the widget as orientation impacts the expected behaviors of the left, right, up and down arrows. The `aria-orientation` attribute is used to indicate to assistive technology users whether an element's orientation is `horizontal` or `vertical`, or `undefined`. 
 
 Several widgets have default orientations:
 
@@ -36,7 +36,9 @@ Each [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) shou
 
 When nodes in a tree are arranged horizontally instead of its default vertical orientation, or when a tab list is vertical instead of its default horizontal, the down arrow performs as a right arrow normally would, and the up arrow performs as a left arrow normally would. In these instances, assistive technology users need to know the widget's orientation so as to navigate correctly. 
 
-Up and down arrows are generally available for normal browser scrolling, even when focus is inside a tree or tab list. Include `aria-orientation` to enable alerting users when a widget doesn't have the default, expected orientation and associated navigation.  Always remember that ARIA only modifies how assistive technology present content to your users. JavaScript still has to be used to make the up and down arrows navigate thru a tree or tab list. 
+Up and down arrows are generally available for normal browser scrolling, even when focus is inside a tree or tab list. Include `aria-orientation` to enable alerting users when a widget doesn't have the default, expected orientation and associated navigation.  
+
+Always remember that ARIA only modifies how assistive technology presents content to your users; altering the behavior of arrow keys requires JavaScript. 
 
 ## Values
 
@@ -88,4 +90,3 @@ Inherited into roles:
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
 {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
 </section>
-
