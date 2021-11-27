@@ -14,7 +14,7 @@ The `aria-valuenow` attribute defines the current value for a `range` widget.
 
 ## Description
 
-Similar to the `value` attribute of {{HTMLElement('progress')}}, {{HTMLElement('meter')}}, and {{HTMLElement('input')}} of type [`range`](en-US/docs/Web/HTML/Element/input/range), [`number`](en-US/docs/Web/HTML/Element/input/number) and all the date-time types, the `aria-valuenow` attribute defines the current value for range widgets.
+The `aria-valuenow` attribute defines the current value for range widgets. It is similar to the `value` attribute of {{HTMLElement('progress')}}, {{HTMLElement('meter')}}, and {{HTMLElement('input')}} of type [`range`](en-US/docs/Web/HTML/Element/input/range), [`number`](en-US/docs/Web/HTML/Element/input/number) and all the date-time types.
 
 When creating a range type role, including [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role), [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role), [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role), and [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role) on a non-semantic element, the `aria-valuenow` enables defining a current numeric value between the minimum and maximum values. The minimum and maximum values are defined with [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) and [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax).
 
