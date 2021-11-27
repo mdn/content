@@ -14,7 +14,7 @@ The `aria-valuemax` attribute defines the maximum allowed value for a range widg
 
 ## Description
 
-Similar to the `max` attribute of {{HTMLElement('progress')}}, {{HTMLElement('meter')}}, and {{HTMLElement('input')}} of type [`range`](en-US/docs/Web/HTML/Element/input/range), [`number`](en-US/docs/Web/HTML/Element/input/number) and all the date-time types, the `aria-valuemax` attribute defines the maximum value allowed for range widgets.
+The `aria-valuemax` attribute defines the maximum value allowed for range widgets. It is similar to the `max` attribute of {{HTMLElement('progress')}}, {{HTMLElement('meter')}}, and {{HTMLElement('input')}} of type [`range`](en-US/docs/Web/HTML/Element/input/range), [`number`](en-US/docs/Web/HTML/Element/input/number) and all the date-time types.
 
 When creating a range type role, including [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role), [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role), [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role), and [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role) on a non-semantic element, the `aria-valuemax` enables defining a maximum that is more than the minimum value. The minimum value is defined with [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin).
 
