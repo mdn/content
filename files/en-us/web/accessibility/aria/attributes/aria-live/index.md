@@ -51,7 +51,7 @@ Fully populated pages may have updates too. Examples are content like real-time 
 
 Some live updates are important and time sensitive. For example, if you are selling concert tickets and the user has a limited time to make the purchase, you don't want to wait until a lull in activity to tell them their time is almost up (or already over). When being informed as soon as possible is necessary, set `aria-live="assertive"`. If the updated information is an [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role), the `aria-live` attribute is not needed.
 
-In this time-limit scenario, to be accessible, you need to also provide a way for users to extend the time available or turn the timer off completely.
+In this time-limit scenario, to be accessible, you need to also [provide a way for users to extend the time available or turn the timer off completely](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html).
 
 ### Using `aria-live`
 
