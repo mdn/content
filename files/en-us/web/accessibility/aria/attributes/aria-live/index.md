@@ -25,7 +25,9 @@ If a section of the screen updates, if it's styled in a way to be noticeable, mo
 The `aria-live` attribute is set on an **empty** element. When an update to the page occures, the empty element with that `aria-live` attribute should be updated with a brief announcement informing the user an update has been made. 
 
 ```html
-<div id="announce" aria-live="polite">This message is announced</div>
+<div id="announce" aria-live="polite">
+  <p>This message is announced.</p>
+</div>
 ```
 
 When the accessibility API recognizes a change to the live region above, it will announce the contents of that live region based on the value of the attribute.  The element is **not** given focus. 
