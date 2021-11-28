@@ -37,6 +37,7 @@ If you want all the contents of the live region to be read, used the [`aria-atom
 ### Choosing the `aria-live` value
 
 As some assitive technology users can't "see" live updates, the `aria-live` attribute is used to define what updated information the user should be:
+
 - Made aware of immediately, 
 - Informed about if the opportunity avails itself, and 
 - Proactively informed about but can learn when they choose to focus on the updated area.
