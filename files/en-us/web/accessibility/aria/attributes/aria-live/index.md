@@ -32,7 +32,7 @@ The `aria-live` attribute is set on an **empty** element. When an update to the 
 
 When the accessibility API recognizes a change to the live region above, it will announce the contents of that live region based on the value of the attribute. The element is **not** given focus. 
 
-If you want the contents that were updated to be read, used the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic).  Use [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) to define which sections of the update need to be reread to the user. Use [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) to prevent announcemets while updates are still being made. 
+If you want all the contents of the live region to be read, used the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic). Use [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) to define only the sections of an update need to be reread to the user. Use [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) to prevent announcements while updates are still being made. 
 
 ### Choosing the `aria-live` value
 
