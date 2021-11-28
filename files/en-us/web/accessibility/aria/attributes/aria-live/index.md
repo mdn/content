@@ -41,7 +41,9 @@ As some assitive technology users can't "see" live updates, the `aria-live` attr
 - Informed about if the opportunity avails itself, and 
 - Proactively informed about but can learn when they choose to focus on the updated area.
 
-The value, expressed in degrees of importance, describes the types of updates the user agents, assistive technologies, and user can expect from the live region. When set to `polite`, assistive technologies will notify users of updates but generally do not interrupt the current task, with the updates having a low priority. When set to `assertive`, assistive technologies immediately notify the user, potentially clearing the speech queue of previous updates. 
+`aria-live`'s value describes the types of updates the user agents, assistive technologies, and user can expect from the live region, and is used to express degrees of importance. 
+
+When `aria-live`'s attribute is set to `polite`, assistive technologies will notify users of updates but generally do not interrupt the current task, with the updates having a low priority. When set to `assertive`, assistive technologies immediately notify the user, potentially clearing the speech queue of previous updates. 
 
 Screen readers buffer content when the page is loaded so content added after the initial accessibility tree is built may not be noticed as AT users may start consuming content before dynamic widgets are populated; they may not see the tell tale sign of content moving around as widgets finish loading. You likely want users to know about the page has been updated when the opportunity arises by setting `aria-live="polite"`. 
 
