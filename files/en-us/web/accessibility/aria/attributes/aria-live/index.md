@@ -49,7 +49,7 @@ Screen readers buffer content when the page is loaded. Because of this, content 
 
 Fully populated pages may have updates too. Examples are content like real-time sports scores, news crawlers, and stock market tickers. Unless these kinds of updates are the main function of the page, you likely do want inform the user every time it updates, but do want to inform them the widget does get updated. Here, you would set `aria-live="off"`. In these scenarios there is no reason to inform the user of updates unless they are focused on the live region.
 
-Some live updates are important and time sensitive. If you are selling concert tickets and the user has a limited time to make the purchase, you don't want to wait until a lull in activity to tell them their time is almost up (or already over). When being informed as soon as possible is necessary, set `aria-live="assertive"`. If the updated information is an [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role), the `aria-live` attribute is not needed. 
+Some live updates are important and time sensitive. For example, if you are selling concert tickets and the user has a limited time to make the purchase, you don't want to wait until a lull in activity to tell them their time is almost up (or already over). When being informed as soon as possible is necessary, set `aria-live="assertive"`. If the updated information is an [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role), the `aria-live` attribute is not needed.
 
 In this time-limit scenario, to be accessible, you need to also provide a way for users to extend the time available or turn the timer off completely.
 
