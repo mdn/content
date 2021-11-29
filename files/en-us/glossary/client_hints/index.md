@@ -8,8 +8,8 @@ tags:
   - Reference
   - Web Performance
 ---
-**Client Hints** are a set of [HTTP request header](/en-US/docs/Web/HTTP/Headers) fields that a server can proactively request from a client in order to get information about the device, network, user and user-agent specific preferences.
-The server can then determine which resources to send, based on the information that the client chooses to provide.
+**Client Hints** are a set of [HTTP request header](/en-US/docs/Web/HTTP/Headers) fields that a server can proactively request from a client to get information about the device, network, user and user-agent specific preferences.
+The server can determine which resources to send, based on the information that the client chooses to provide.
 
 The set of "hint" headers are listed in the topic [HTTP Headers](/en-US/docs/Web/HTTP/Headers#client_hints) and [summarized below](#hint_types).
 
@@ -36,14 +36,14 @@ There is a small set of [low entropy client hint headers](#low_entropy_hints) th
 
 ## Caching and Client Hints
 
-Client hints that determine which resources are sent in responses should "generally" also be included in the affected response's {{HTTPHeader("Vary")}} header.
+Client hints that determine which resources are sent in responses should generally also be included in the affected response's {{HTTPHeader("Vary")}} header.
 This ensures that a different resource is cached for every different value of the hint header.
 
 ```http
 Vary: Accept, Width, ECT
 ```
 
-You may prefer to omit specifying {{HTTPHeader("Vary")}} or use some other strategy for client hint headers where the value changes a lot, as this effectively makes the resource uncachable (a new cache entry is created for every different value).
+You may prefer to omit specifying {{HTTPHeader("Vary")}} or use some other strategy for client hint headers where the value changes a lot, as this effectively makes the resource uncachable. (A new cache entry is created for every unique value.)
 This applies in particular to network client hints like {{HTTPHeader("Downlink")}} and {{HTTPHeader("RTT")}}.
 For more information see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses).
 
@@ -61,8 +61,8 @@ For example, to stop requesting any hints it would send `Accept-CH` with an empt
 
 Client hints are broadly divided into high and low entropy hints.
 
-The low entropy hints are: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Sec-CH-UA")}}, {{HTTPHeader("Sec-CH-UA-Mobile")}}, {{HTTPHeader("Sec-CH-UA-Platform")}}  .
-These are the hints that don't give away much information that might be used to "fingerprint" (identify) a particular end user.
+The low entropy hints are: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Sec-CH-UA")}}, {{HTTPHeader("Sec-CH-UA-Mobile")}}, {{HTTPHeader("Sec-CH-UA-Platform")}}.
+These are the hints that don't give away much information that might be used to "fingerprint" (identify) a particular user.
 They may be sent by default on every client request, irrespective of the server `Accept-CH` response header, depending on the permission policy.
 
 All the other client hints are high entropy hints.

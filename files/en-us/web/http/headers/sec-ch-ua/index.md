@@ -31,7 +31,7 @@ The **`Sec-CH-UA`** [user agent client hint](/en-US/docs/Web/HTTP/Headers#user_a
   </tbody>
 </table>
 
-The **`Sec-CH-UA`** header provides the brand and significant version for each brand associated with the browser, in a comma-separated list.
+The **`Sec-CH-UA`** header provides the brand and significant version for each brand associated with the browser in a comma-separated list.
 
 A brand is a commercial name for the user agent like: Chromium, Opera, Google Chrome, Microsoft Edge, Firefox, and Safari.
 A user agent might have several associated brands.
@@ -48,14 +48,12 @@ Unless blocked by a user agent permission policy, it is sent by default, without
 The header may include "fake" brands in any position and with any name in the header.
 This is a feature designed to prevent servers from rejecting unknown user agents outright, forcing user agents to lie about their brand identity.
 
-
 > **Note:** {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} is the same as **`Sec-CH-UA`**, but includes the full version number rather than the signficant version number for each brand.
-
 
 ## Syntax
 
 A comma separated list of brands in the user agent brand list, and their associated significant version number.
-The syntax for single entry has the following format:
+The syntax for a single entry has the following format:
 
 ```http
 Sec-CH-UA: "<brand>";v="<significant version>", ...
@@ -72,7 +70,7 @@ Sec-CH-UA: "<brand>";v="<significant version>", ...
 ## Examples
 
 `Sec-CH-UA` is a [low entropy hint](/en-US/docs/Glossary/Client_hints#low_entropy_hints).
-Unless explicitly blocked by a user agent policy, if support it will be sent in all requests, without the server having to opt in by sending {{HTTPHeader("Accept-CH")}}.
+Unless explicitly blocked by a user agent policy, and if supported it will be sent in all requests, without the server having to opt in by sending {{HTTPHeader("Accept-CH")}}.
 
 Strings from Chromium, Chrome, Edge, and Opera desktop browsers are shown below. 
 Note that they all share the "Chromium" brand, but have an additional brand indicating their origin.
