@@ -707,19 +707,17 @@ with the [content mozilla directory](https://github.com/mdn/content/tree/main/fi
 Both locations represent the same directory structure, but the
 `index.html` file appears in the latter, therefore the page is not archived.
 
-### Making a change that depends on a JSON data update
+### Making a change that depends on external content
 
-MDN uses macros (function names surrounded by handlebars-style double curly braces) 
-as convenience functions.
-Some of these macros rely on data that is defined in JSON files 
-in <https://github.com/mdn/content/blob/main/files/jsondata/>,
-and will not display correctly if the data in the file is not also updated.
+Some MDN content is created from external data files or repositories using KS macros.
+Generally you should create a PR to first update the external content before updating the associated MDN pages.
 
-The most important JSON data is the 
-[GroupData.json](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json),
-which is used by the `{{APIRef}}` macro to generate sidebars.
-For more information see 
-[Sidebars](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars)
+Relevant external content includes (non-exhaustively):
+- [GroupData.json](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json): Data definition of [Sidebars](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars) used by `{{APIRef}}` macro.
+- https://github.com/mdn/interactive-examples: Source code repo for interactive examples inserted using the `{{EmbedInteractiveExample}}` macro.
+- https://github.com/mdn/learning-area: Source code repo for examples referenced in the [Learning Area](https://developer.mozilla.org/en-US/docs/Learn)
+- [JSON structured data](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/JSON_Structured_Data) provides more information about JSON data used to define inheritance diagrams (`{{InheritanceDiagram}}` macro), specification tables, etc. 
+
 
 ## Frequently asked questions (FAQ)
 
