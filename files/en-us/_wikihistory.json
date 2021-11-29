@@ -129659,16 +129659,6 @@
       "arai"
     ]
   },
-  "Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated": {
-    "modified": "2020-04-16T12:46:07.889Z",
-    "contributors": [
-      "fscholz",
-      "wbamberg",
-      "abhishekdev",
-      "Kwan",
-      "arai"
-    ]
-  },
   "Web/JavaScript/Reference/Errors/Getter_only": {
     "modified": "2020-05-06T10:16:12.614Z",
     "contributors": [
