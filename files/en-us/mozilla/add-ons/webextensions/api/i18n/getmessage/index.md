@@ -17,6 +17,8 @@ browser-compat: webextensions.api.i18n.getMessage
 
 Gets the localized string for the specified message.
 
+See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) page for a guide on using this function.
+
 ## Syntax
 
 ```js
