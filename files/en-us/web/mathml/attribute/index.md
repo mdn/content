@@ -170,7 +170,7 @@ Notes:
           <em
             >In MathML 3 this attribute was only valid
             on {{ MathMLElement("mstyle") }},
-            {{ MathMLElement("mtable") }}, and 
+            {{ MathMLElement("mtable") }}, and
             {{ MathMLElement("math") }}.</em
           >
         </p>

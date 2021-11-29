@@ -86,7 +86,7 @@ Trying to read the variable before it is initialized results in `ReferenceError`
 console.log(num); // Throws ReferenceError exception - the interpreter doesn't know about `num`.
 num = 6; // Initialization
 ```
- 
+
 Note however that initialization also causes declaration (if not already declared).
 The code snippet below will work, because even though it isn't hoisted, the variable is initialized and effectively declared before it is used.
 

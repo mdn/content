@@ -68,7 +68,7 @@ To test it out:
 - Enable *Show Content Messages* in the menu:
 
   ![Browser console menu : Show Content Messages](browser_console_show_content_messages.png)
-- Open some Web pages. 
+- Open some Web pages.
 
 In the Browser Console, you should see the URLs for any resources that the browser requests.
 For example, this screenshot shows the URLs from loading a Wikipedia page:

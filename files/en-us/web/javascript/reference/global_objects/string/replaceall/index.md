@@ -54,7 +54,7 @@ replaceAll(substr, replacerFunction)
     section below.
 - `replacerFunction` (replacement)
   - : A function to be invoked to create the new substring to be used to replace the matches to the given `regexp` or `substr`.
-    The arguments supplied to this function are described in the 
+    The arguments supplied to this function are described in the
     "[Specifying a function as a parameter](#specifying_a_function_as_a_parameter)" section below.
 
 ### Return value

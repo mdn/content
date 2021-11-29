@@ -1220,7 +1220,7 @@ Some keys are common across multiple languages, while others exist only on keybo
           If you wish to identify which specific dead key was pressed (in cases
           where more than one exists), you can do so by examining the
           {{domxref("KeyboardEvent")}}'s associated
-          {{event("compositionupdate")}} event's 
+          {{event("compositionupdate")}} event's
           {{domxref("CompositionEvent.data", "data")}} property.
         </p>
       </td>
@@ -1331,7 +1331,7 @@ Some keys are common across multiple languages, while others exist only on keybo
         <code>GDK_KEY_Muhenkan</code> (0xFF22)<br /><code
           >Qt::Key_Muhenkan</code
         >
-        (0x01001122)<br /> 
+        (0x01001122)<br />
       </td>
       <td><code>KEYCODE_MUHENKAN</code> (213)</td>
     </tr>

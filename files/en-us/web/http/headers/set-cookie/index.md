@@ -87,7 +87,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     See {{HTTPHeader("Date")}} for the required formatting.
 
     If unspecified, the cookie becomes a **session cookie**.
-    A session finishes when the client shuts down, after which 
+    A session finishes when the client shuts down, after which
     the session cookie is removed.
 
     > **Warning:** Many web browsers have a _session restore_ feature that will save all tabs and restore them the next time the browser is used. Session cookies will also be restored, as if the browser was never closed.
@@ -143,7 +143,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     `None` means that the browser sends the cookie with both cross-site and same-site requests.
     The `Secure` attribute must also be set when setting this value, like so `SameSite=None; Secure`
-    
+
     > **Note:** Standards related to the [SameSite Cookies](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) recently changed, such that:
     >
     > 1. The cookie-sending behavior if `SameSite` is not specified is `SameSite=Lax`. Previously, cookies were sent for all requests by default.

@@ -47,13 +47,13 @@ The `calendar` property returns an array of all supported calendars for the `Loc
   - : Islamic calendar, Umm al-Qura
 - `islamic-tbla`
   - : Islamic calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - astronomical epoch)
-- `islamic-civil`	
+- `islamic-civil`
   - : Islamic calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - civil epoch)
 - `islamic-rgsa`
   - : Islamic calendar, Saudi Arabia sighting
 - `iso8601`
   - : ISO calendar (Gregorian calendar using the ISO 8601 calendar week rules)
-- `japanese`	
+- `japanese`
   - : Japanese Imperial calendar
 - `persian`
   - : Persian calendar

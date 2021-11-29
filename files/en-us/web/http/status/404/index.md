@@ -24,7 +24,7 @@ If a resource is permanently removed, use the {{HTTPStatus("410")}} (Gone) statu
 
 ## Custom error pages
 
-You can display a custom 404 page to be more helpful to a user and provide guidance on what to do next. For example, for the Apache server, you can specify a path to a custom 404 page in an `.htaccess` file: 
+You can display a custom 404 page to be more helpful to a user and provide guidance on what to do next. For example, for the Apache server, you can specify a path to a custom 404 page in an `.htaccess` file:
 
 ```
 ErrorDocument 404 /notfound.html

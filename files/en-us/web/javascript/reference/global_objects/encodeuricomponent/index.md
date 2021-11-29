@@ -27,7 +27,7 @@ encodeURIComponent(uriComponent);
 ### Parameters
 
 - `uriComponent`
-  - : A string, number, boolean, null, undefined, or any object. Before encoding, the `uriComponent` gets converted to string. 
+  - : A string, number, boolean, null, undefined, or any object. Before encoding, the `uriComponent` gets converted to string.
 ### Return value
 
 A new string representing the provided _uriComponent_ encoded as a URI component.

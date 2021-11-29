@@ -15,7 +15,7 @@ The global `aria-describedby` attribute identifies the element (or elements) tha
 ## Description
 
 The `aria-describedby` attribute is used to list the `id`s of the elements that describe the object, establishing a relationship between widgets or groups and the text that describes them.
- 
+
 The `aria-describedby` attribute can be used to associate static text with form elements, widgets, groups of elements, panes, regions that have a heading, definitions, and more. It can be used with semantic HTML elements and with elements that have an ARIA role.
 
 The `aria-describedby` attribute is very similar to [`aria-labelledby`](../aria-labelledby/) attribute; while the `aria-labelledby` lists the `id`s of the labels or elements that describe the essence of an object, the `aria-describedby` lists the `id`s of the descriptions, or elements providing more information that the user might need. Both `aria-labelledby` and `aria-describedby` reference other elements to calculate a text alternative, but a label should be concise, where a description is intended to provide more verbose information.
@@ -71,11 +71,11 @@ In the example below, a button that functions as a 'close' button on a dialog is
 
 ## Associated roles
 
-Used in **ALL** roles. 
+Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-describedby","ARIA: aria-describedby Attribute")}}  | {{Spec2('ARIA')}} |
 | {{SpecName("ARIA Authoring Practices 1.2","#describing_with_aria-describedby","describing with aria-describedby")}} | {{Spec2('ARIA Authoring Practices')}} |

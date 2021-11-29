@@ -22,9 +22,9 @@ This is the main section of a document that discusses avocados. Subsections of t
 
 ## Description
 
-The `main` role is a navigational [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles) role identifying the main content of a document. Landmarks can be used by assistive technology such as screen readers to quickly identify and navigate to large sections of the document. 
+The `main` role is a navigational [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#Landmark_roles) role identifying the main content of a document. Landmarks can be used by assistive technology such as screen readers to quickly identify and navigate to large sections of the document.
 
-By classifying and labeling sections of a page, structural information conveyed visually through layout can be represented programmatically. Screen readers use landmark roles to provide keyboard navigation to important sections of a page. For those navigating via landmark roles, the main role is an alternative for "skip to main content" links. 
+By classifying and labeling sections of a page, structural information conveyed visually through layout can be represented programmatically. Screen readers use landmark roles to provide keyboard navigation to important sections of a page. For those navigating via landmark roles, the main role is an alternative for "skip to main content" links.
 
 There should only be one `main` landmark role per document.
 
@@ -40,7 +40,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should us
   - : The `aria-owns` attribute establishes relationships in the accessibility layer that aren't present in the DOM. Documents and applications can be nested in the DOM, which may lead to having more than one main element as DOM descendants. If this is the case, include `aria-owns` to identify the relationship of the main to its document or application ancestor.
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or `aria-labeledby`
-    
+
   - : Providing an accessible name can with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible header is present, otherwise with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute), can be helpful for orienting assistive technology users, especially in single-page applications where main content changes happen without generating a page load event.
 
 
@@ -105,7 +105,7 @@ Adding an [`id` attribute](/en-US/docs/Web/HTML/Global_attributes/id) to the ele
 </body>
 ```
 
-Which is the equivalent of: 
+Which is the equivalent of:
 
 ```html
 <body>

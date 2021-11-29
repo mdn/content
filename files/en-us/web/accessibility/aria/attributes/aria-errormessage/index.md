@@ -10,11 +10,11 @@ tags:
   - Reference
 ---
 
-The `aria-errormessage` attribute on an object identifies the element that provides an error message for that object. 
+The `aria-errormessage` attribute on an object identifies the element that provides an error message for that object.
 
 ## Description
 
-When there is a user-created error, you want to let them know it exists and tell them how to fix it. There are two attributes you need to use: set [`aria-invalid="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid) to define the object as being in an error state, then add the `aria-errormessage` attribute with the value being the `id` of the element containing the error message text for that object. 
+When there is a user-created error, you want to let them know it exists and tell them how to fix it. There are two attributes you need to use: set [`aria-invalid="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid) to define the object as being in an error state, then add the `aria-errormessage` attribute with the value being the `id` of the element containing the error message text for that object.
 
 The `aria-errormessage` should only be used when the value of an object is not valid; when[`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid) is set to `true`. If the object is not invalid and you include the `aria-errormessage` attribute, make sure the element referenced is hidden, as the message it contains is not relevant.
 
@@ -22,15 +22,15 @@ When `aria-errormessage` is relevant, the element it references must be visible 
 
 Often times, you will want the element with the error message to be an [ARIA live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), such as when an error message is displayed to users after they have provided an invalid value. The error message should describe what is wrong and inform the user what is required to make the object valid. Adding the error message as an ARIA live region informs assistive technologies that the user may benefit from the error message content even if the error message wouldn't otherwise be conveyed to the user.
 
-Include a visible error message and link the invalid object with the `aria-errormessage` attribute if the failure is visually apparent and an explicit description of the error is necessary. 
+Include a visible error message and link the invalid object with the `aria-errormessage` attribute if the failure is visually apparent and an explicit description of the error is necessary.
 
-## Example 
+## Example
 
-We create some styles to: 
+We create some styles to:
 
-1. Hide all error messages, 
-2. Make invalid objects appear invalid, and 
-3. Show error messages that are siblings coming after an invalid object. 
+1. Hide all error messages,
+2. Make invalid objects appear invalid, and
+3. Show error messages that are siblings coming after an invalid object.
 
 We use `aria-invalid="true"` to identify invalid objects:
 
@@ -67,7 +67,7 @@ When we went from valid to invalid, the only JavaScript change for this example 
 
 ## Associated roles
 
-Used in roles: 
+Used in roles:
 
 - [`application`](/en-US/docs/Web/Accessibility/ARIA/roles/application_role)
 - [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/roles/checkbox_role)
@@ -80,7 +80,7 @@ Used in roles:
 - [`textbox`](/en-US/docs/Web/Accessibility/ARIA/roles/textbox_role)
 - [`tree`](/en-US/docs/Web/Accessibility/ARIA/roles/tree_role)
 
-Inherits from roles: 
+Inherits from roles:
 
 - [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/roles/columnheader_role)
 - [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/roles/rowheader_role)
@@ -90,7 +90,7 @@ Inherits from roles:
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-errormessage","ARIA: aria-errormessage Attribute")}}  | {{Spec2('ARIA')}} |
 
@@ -98,7 +98,7 @@ Inherits from roles:
 
 - HTML {{htmlattrxref('invalid')}} attribute
 - CSS {{CSSxref(':invalid')}} pseudoclass
-- [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid) 
+- [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
 - [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)
 

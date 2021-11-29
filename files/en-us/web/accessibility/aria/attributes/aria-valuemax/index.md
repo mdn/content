@@ -27,7 +27,7 @@ Declaring the maximum and minimum values allows assistive technologies to convey
 - `<number>`
   - : A decimal number that is greater than the minimum value.
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaValueMax")}}
   - : The  [`ariaValueMax`](/en-US/docs/Web/API/Element/ariaValueMax) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-valuemax` attribute.
@@ -36,14 +36,14 @@ Declaring the maximum and minimum values allows assistive technologies to convey
 
 ## Associated roles
 
-Used in roles: 
+Used in roles:
 - [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
 - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
 - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
 - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 
-Inherited into roles: 
+Inherited into roles:
 - [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)
 - [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
@@ -52,7 +52,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-valuemax","ARIA: aria-valuemax Attribute")}}  | {{Spec2('ARIA')}} |
 

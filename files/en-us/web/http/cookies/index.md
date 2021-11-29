@@ -135,7 +135,7 @@ But these request paths don't:
 
 #### SameSite attribute
 
-The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) attribute lets servers specify whether/when cookies are sent with cross-site requests (where {{Glossary("Site")}} is defined by the registrable domain). This provides some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}). It takes three possible values: `Strict`, `Lax`, and `None`. 
+The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) attribute lets servers specify whether/when cookies are sent with cross-site requests (where {{Glossary("Site")}} is defined by the registrable domain). This provides some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}). It takes three possible values: `Strict`, `Lax`, and `None`.
 
 With `Strict`, the cookie is only sent to the site where it originated. `Lax` is similar, except that cookies are sent when the user _navigates_ to the cookie's origin site. For example, by following a link from an external site. `None` specifies that cookies are sent on both originating and cross-site requests, but *only in secure contexts* (i.e., if `SameSite=None` then the `Secure` attribute must also be set). If no `SameSite` attribute is set, the cookie is treated as `Lax`.
 
@@ -211,7 +211,7 @@ Legislation or regulations that cover the use of cookies include:
 - The ePrivacy Directive in the EU
 - The California Consumer Privacy Act
 
-These regulations have global reach. They apply to any site on the _World Wide_ Web that users from these jurisdictions access (the EU and California, with the caveat that California's law applies only to entities with gross revenue over 25 million USD, among 
+These regulations have global reach. They apply to any site on the _World Wide_ Web that users from these jurisdictions access (the EU and California, with the caveat that California's law applies only to entities with gross revenue over 25 million USD, among
 things).
 
 These regulations include requirements such as:

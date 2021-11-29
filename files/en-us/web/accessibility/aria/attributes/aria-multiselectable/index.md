@@ -100,7 +100,7 @@ If a tree, grid, tab list, or list box supports selection of more than one node,
 
 This listbox supports multiple selection so we set the element with role `listbox` with `aria-multiselectable="true"`. All selected options have `aria-selected` set to `true`. All options that are not selected but are selectable have `aria-selected` set to false. Had we included options that were disabled or otherwise not selectable, we would have omitted the `aria-selected` attribute altogether. Including the attribute, even with no value or explcitly set to `false` indicates to assistive technology users that the item is selectable.
 
-The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so."  Instead of creating an unordered list requiring {{htmlattrxref("tabindex")}}, ARIA and JavaScript to turn text into selectable options, we could have used a native multiselect: the {{htmlelement('select')}} element has a Boolean {{htmlattrxref('multiple', 'select')}} attribute. If included, the user can select multiple options. If not, only a single option can be selected. 
+The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so."  Instead of creating an unordered list requiring {{htmlattrxref("tabindex")}}, ARIA and JavaScript to turn text into selectable options, we could have used a native multiselect: the {{htmlelement('select')}} element has a Boolean {{htmlattrxref('multiple', 'select')}} attribute. If included, the user can select multiple options. If not, only a single option can be selected.
 
 ```html
 <label for="flagcolors">
@@ -176,11 +176,11 @@ Instead of `aria-selected="true"`, include the [`checked`](en-US/docs/Web/HTML/E
 
 - `true`
   - : More than one item in the widget may be selected at a time
-  - 
+  -
 - `false`
   - : Only one item can be selected
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaMultiSelectable")}}
   - : The  [`ariaMultiSelectable`](/en-US/docs/Web/API/Element/ariaMultiSelectable) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-multiselectable` attribute.
@@ -189,7 +189,7 @@ Instead of `aria-selected="true"`, include the [`checked`](en-US/docs/Web/HTML/E
 
 ## Associated roles
 
-Used in roles: 
+Used in roles:
 
 - [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
 - [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
@@ -202,7 +202,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-multiselectable","ARIA: aria-multiselectable Attribute")}}  | {{Spec2('ARIA')}} |
 

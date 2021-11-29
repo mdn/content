@@ -251,7 +251,7 @@ cc. Eight
 
 The first symbol provided in the `symbols` descriptor is interpreted as `0` here.
 
-#### CSS<br> 
+#### CSS<br>
 
 ```html hidden
 <ul>

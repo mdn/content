@@ -48,7 +48,7 @@ If a dialog already has a visible title bar, the text inside that bar can be use
 
 ### Required JavaScript features
 
-#### Focus management 
+#### Focus management
 
 A dialog has particular requirements for how keyboard focus should be managed:
 
@@ -66,7 +66,7 @@ A dialog has particular requirements for how keyboard focus should be managed:
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
   - : Use this attribute to describe the contents of the dialog.
 
-### Possible effects on user agents and assistive technology 
+### Possible effects on user agents and assistive technology
 
 When the `dialog` role is used, the user agent should do the following:
 
@@ -112,7 +112,7 @@ When the dialog is correctly labeled and focus is moved to an element (often an 
 
 - [jQuery-UI Dialog](https://jqueryui.com/demos/dialog/)
 
-### Notes 
+### Notes
 
 > **Note:** While it is possible to prevent keyboard users from moving focus to elements outside of the dialog, screen reader users may still be able to navigate to that content using their screen reader's virtual cursor.
 > It is important for developers to ensure that content outside of the modal dialog is inaccessible to all users while the modal dialog is active.

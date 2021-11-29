@@ -96,7 +96,7 @@ Doing so causes the user agent to follow these steps:
 2. If the element whose contents are being replaced is a {{HTMLElement("template")}} element,
    then the `<template>` element's {{domxref("HTMLTemplateElement.content", "content")}} attribute is replaced with the new `DocumentFragment` created in step 1.
 3. For all other elements, the element's contents are replaced with the nodes in the new `DocumentFragment`.
-    
+
 ### Appending HTML to an element  
 
 Setting the value of `innerHTML` lets you append new contents to the existing one of an element.
@@ -142,7 +142,7 @@ Although this may look like a {{interwiki("wikipedia", "cross-site scripting")}}
 attack, the result is harmless. HTML5 specifies that a {{HTMLElement("script")}} tag
 inserted with `innerHTML` [should not execute](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
 
-However, there are ways to execute JavaScript without using {{HTMLElement("script")}} elements, 
+However, there are ways to execute JavaScript without using {{HTMLElement("script")}} elements,
 so there is still a security risk whenever you use `innerHTML` to set strings over which you have no control.
 For example:
 
@@ -179,7 +179,7 @@ function log(msg) {
 log("Logging mouse events inside this container...");
 ```
 
-The `log()` function creates the log output by getting the current time from a {{jsxref("Date")}} object using 
+The `log()` function creates the log output by getting the current time from a {{jsxref("Date")}} object using
 {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, and building a string with the timestamp and the message text.
 Then the message is appended to the box with the class `"log"`.
 

@@ -18,9 +18,9 @@ A landmark is an important subsection of a page. The `landmark` role is an abstr
 
 ## Description
 
-A `landmark` is an abstract role for a section of content that is important enough that users will likely want to be able to navigate to the section easily and have it included in a dynamically generated summary of the page.  Landmarks allow assistive techonologies to navigate and to find content quickly. 
+A `landmark` is an abstract role for a section of content that is important enough that users will likely want to be able to navigate to the section easily and have it included in a dynamically generated summary of the page.  Landmarks allow assistive techonologies to navigate and to find content quickly.
 
-To create a landmark role, define the purpose of the content by using a semantic element such as `<section>`, `<nav>`, or `<main>`, or adding an ARIA role that is a subclass of the `landmark` role such as [`role="banner"`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role), [`role="complementary"`](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role), or [`role="region"`](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role).  Do not use `role="landmark"`. 
+To create a landmark role, define the purpose of the content by using a semantic element such as `<section>`, `<nav>`, or `<main>`, or adding an ARIA role that is a subclass of the `landmark` role such as [`role="banner"`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role), [`role="complementary"`](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role), or [`role="region"`](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role).  Do not use `role="landmark"`.
 
 A visible label should be provided, referenced with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby). If necessary, brief, descriptive, label can be provided with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
 
@@ -30,7 +30,7 @@ For screen reader users, adding landmark roles effectively create 'skip links' f
 
 Do not use `role="landmark"`. Do use HTML and subclass landmark roles.
 
-Landmarks ensure content is in navigable regions. Use {{HTMLElement('main')}} for [`role="main"`](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role), {{HTMLElement('header')}} for [`role="banner"`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role), {{HTMLElement('nav')}} for [`role="navigation"`](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role),  and {{HTMLElement('footer')}} for [`role="contentinfo"`](/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role). It is also good practice to include the role redundantly with the associated semantic element. It is not as good practice to use non-semantic elements, such as {{HTMLElement('div')}}, adding semantics with landmark roles. But do include one or the other or both. Otherwise, your content is no longer as navigable for screen reader users. 
+Landmarks ensure content is in navigable regions. Use {{HTMLElement('main')}} for [`role="main"`](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role), {{HTMLElement('header')}} for [`role="banner"`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role), {{HTMLElement('nav')}} for [`role="navigation"`](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role),  and {{HTMLElement('footer')}} for [`role="contentinfo"`](/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role). It is also good practice to include the role redundantly with the associated semantic element. It is not as good practice to use non-semantic elements, such as {{HTMLElement('div')}}, adding semantics with landmark roles. But do include one or the other or both. Otherwise, your content is no longer as navigable for screen reader users.
 
 ## Specifications
 

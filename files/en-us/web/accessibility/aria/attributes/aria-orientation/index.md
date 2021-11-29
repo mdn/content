@@ -14,7 +14,7 @@ The `aria-orientation` attribute indicates whether the element's orientation is 
 
 ## Description
 
-It may be important for the user to know the orientation to know how to navigate certain widgets, as orientation impacts the expected behaviors of the left, right, up and down arrows. The `aria-orientation` attribute is used to indicate to assistive technology users whether an element's orientation is `horizontal` or `vertical`, or `undefined`. 
+It may be important for the user to know the orientation to know how to navigate certain widgets, as orientation impacts the expected behaviors of the left, right, up and down arrows. The `aria-orientation` attribute is used to indicate to assistive technology users whether an element's orientation is `horizontal` or `vertical`, or `undefined`.
 
 Several widgets have default orientations:
 
@@ -34,22 +34,22 @@ Vertical by default:
 
 Each [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) should have `aria-orientation` consistent with the separator's orientation.
 
-When nodes in a tree are arranged horizontally instead of its default vertical orientation, or when a tab list is vertical instead of its default horizontal, the down arrow performs as a right arrow normally would, and the up arrow performs as a left arrow normally would. In these instances, assistive technology users need to know the widget's orientation so as to navigate correctly. 
+When nodes in a tree are arranged horizontally instead of its default vertical orientation, or when a tab list is vertical instead of its default horizontal, the down arrow performs as a right arrow normally would, and the up arrow performs as a left arrow normally would. In these instances, assistive technology users need to know the widget's orientation so as to navigate correctly.
 
 Up and down arrows are generally available for normal browser scrolling, even when focus is inside a tree or tab list. Include `aria-orientation` to enable alerting users when a widget doesn't have the default, expected orientation and associated navigation.  
 
-Always remember that ARIA only modifies how assistive technology presents content to your users; altering the behavior of arrow keys requires JavaScript. 
+Always remember that ARIA only modifies how assistive technology presents content to your users; altering the behavior of arrow keys requires JavaScript.
 
 ## Values
 
 - `horizontal`
   - : The element is oriented horizontally.
-- `undefined` (default)	
+- `undefined` (default)
   - : The element's orientation is unknown/ambiguous.
-- `vertical`	
+- `vertical`
   - : The element is oriented vertically.
   
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaOrientation")}}
   - : The  [`ariaOrientation`](/en-US/docs/Web/API/Element/ariaOrientation) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-orientation` attribute.
@@ -58,7 +58,7 @@ Always remember that ARIA only modifies how assistive technology presents conten
 
 ## Associated roles
 
-Used in roles: 
+Used in roles:
 
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
 - [`select`](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role)
@@ -78,7 +78,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-orientation","ARIA: aria-orientation Attribute")}}  | {{Spec2('ARIA')}} |
 

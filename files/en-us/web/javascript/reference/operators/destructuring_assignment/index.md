@@ -447,7 +447,7 @@ const [,, { name }] = props;
 console.log(name); // "FizzBuzz"
 ```
 
-#### The prototype chain is looked up when the object is deconstructed 
+#### The prototype chain is looked up when the object is deconstructed
 
 When deconstructing an object, if a property is not accessed in itself, it will continue to look up along the prototype chain.
 

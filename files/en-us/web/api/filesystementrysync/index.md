@@ -210,7 +210,7 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
       <td>
         The name supplied is invalid, because at least one of the characters is
         reserved or illegal. Examples include a backslash (\), dot (.), and two
-        dots (..). 
+        dots (..).
       </td>
     </tr>
     <tr>
@@ -276,7 +276,7 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
       <td>
         The name supplied is invalid, because at least one of the characters is
         reserved or illegal. Examples include a backslash (\), dot (.), and two
-        dots (..). 
+        dots (..).
       </td>
     </tr>
     <tr>
@@ -311,7 +311,7 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
         <a
           href="/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction"
           >basic concepts</a
-        >. 
+        >.
       </td>
     </tr>
   </tbody>

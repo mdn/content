@@ -18,7 +18,7 @@ browser-compat: css.selectors.NameOfTheSelector
 >
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular selector.
-> 
+>
 > ```
 > ---
 > title: :NameOfTheSelector
@@ -35,10 +35,10 @@ browser-compat: css.selectors.NameOfTheSelector
 > ```
 > - **title**
 >   - : Title heading displayed at top of page. Format as _:NameOfTheSelector_.
->       For example, the [`:hover`](/en-US/docs/Web/CSS/:hover) selector has a title of _:hover_. 
+>       For example, the [`:hover`](/en-US/docs/Web/CSS/:hover) selector has a title of _:hover_.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/CSS/:NameOfTheSelector`.
->       For example, the the [`:hover`](/en-US/docs/Web/CSS/:hover) selector slug is `Web/CSS/:hover`. 
+>       For example, the the [`:hover`](/en-US/docs/Web/CSS/:hover) selector slug is `Web/CSS/:hover`.
 > - **tags**
 >   - : Always include the following tags: **CSS**, **Reference**, _NameOfTheSelector_ (e.g. **:hover**).
 >
@@ -74,7 +74,7 @@ browser-compat: css.selectors.NameOfTheSelector
 > The content of the Syntax section is generated using the `\{{CSSSyntax}}` macro.
 > For these to populate you must ensure an appropriate entry has been filled in for the selector in our [selectors.json](https://github.com/mdn/data/blob/master/css/selectors.json) data file.
 > See [selectors.md](https://github.com/mdn/data/blob/master/css/selectors.md) for more information.
-> 
+>
 > _Remember to remove this whole explanatory note before publishing_
 
 

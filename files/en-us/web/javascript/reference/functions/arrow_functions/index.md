@@ -549,6 +549,6 @@ setTimeout( () => {
 {{Compat}}
 
 ## See also
- 
+
 - ["ES6 In
   Depth: Arrow functions" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)

@@ -27,15 +27,15 @@ slice(beginIndex, endIndex)
 
 - `beginIndex`
 
-  - : The zero-based index at which to begin extraction. 
+  - : The zero-based index at which to begin extraction.
   
-    If `beginIndex` is negative, `slice()` begins extraction from 
-    `str.length + beginIndex`. (E.g. `"test".slice(-2)` returns `"st"`)     
-    
+    If `beginIndex` is negative, `slice()` begins extraction from
+    `str.length + beginIndex`. (E.g. `"test".slice(-2)` returns `"st"`)
+
     If `beginIndex` is omitted, undefined, or cannot be converted to a number (using
-    {{jsxref('Number', 'Number(beginIndex)')}}), `slice()` begins extraction from 
-    the beginning of the string. (E.g. `"test".slice()` returns `"test"`)    
-    
+    {{jsxref('Number', 'Number(beginIndex)')}}), `slice()` begins extraction from
+    the beginning of the string. (E.g. `"test".slice()` returns `"test"`)
+
     If `beginIndex` is greater than or equal to `str.length`, an empty string is
     returned. (E.g. `"test".slice(4)` returns `""`)
 
@@ -45,7 +45,7 @@ slice(beginIndex, endIndex)
     index will not be included.
 
     If `endIndex` is omitted, undefined, or cannot be converted to a number (using
-    {{jsxref('Number', 'Number(endIndex)')}}) `slice()` extracts to the end of the 
+    {{jsxref('Number', 'Number(endIndex)')}}) `slice()` extracts to the end of the
     string. (E.g. `"test".slice(2)` returns `"st"`)
 
     If `endIndex` is greater than `str.length`,

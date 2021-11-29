@@ -269,7 +269,7 @@ For example, `/\d+(?!\.)/` matches a number only if it is not followed by a deci
 console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 ```
 
-### Different meaning of '?!' combination usage in Assertions and  Ranges 
+### Different meaning of '?!' combination usage in Assertions and  Ranges
 
 Different meaning of `?!` combination usage in [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/ `and [Ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`.
 
