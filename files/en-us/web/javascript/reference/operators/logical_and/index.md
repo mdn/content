@@ -37,6 +37,7 @@ so-called {{Glossary("falsy")}}.
 
 Examples of expressions that can be converted to false are:
 
+- `false`;
 - `null`;
 - `NaN`;
 - `0`;
@@ -50,9 +51,9 @@ result = 2 && 0;   // result is assigned 0
 result = 1 && 4;   // result is assigned 4
 ```
 
-Even though the `&&` operator can be used with operands that are not
-Boolean values, it can still be considered a boolean operator since its return value can
-always be converted to a [boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#Boolean_type).
+Even though the `&&` operator can be used with non-Boolean operands, it is 
+still considered a boolean operator since its return value can always be 
+converted to a [boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#Boolean_type).
 To explicitly convert its return value (or any expression in general) to the
 corresponding boolean value, use a double [`NOT operator`](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT) or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} constructor.
 
@@ -91,7 +92,7 @@ operator is executed before the `||` operator (see [operator precedence](/en-US/
 ```js
 false || true && true             // evaluates `true && true` first, then the || finds and returns true
 true && (false || false)          // evaluates `(false || false)` first, then the && finds and returns false
-(2 == 3) || (4 < 0) && (1 == 1))  // evaluates `(4 < 0) && (1 == 1))` first, becomes (2 == 3) || false, then returns false
+(2 == 3) || ((4 < 0) && (1 == 1))  // evaluates `((4 < 0) && (1 == 1))` first, becomes (2 == 3) || false, then returns false
 ```
 
 ## Examples
