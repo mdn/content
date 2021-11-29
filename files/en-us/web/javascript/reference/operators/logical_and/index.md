@@ -43,11 +43,11 @@ Examples of expressions that can be converted to false are:
 - empty string (`""` or `''` or ` `` `);
 - `undefined`.
 
-Some examples of the AND operator used with non-Boolean values:
+The AND operator preserves non-Boolean values and returns them as is:
 ```js
-false || true && true             // evaluates `true && true` first, then the || finds and returns true
-true && (false || false)          // evaluates `(false || false)` first, then the && finds and returns false
-(2 == 3) || (4 < 0) && (1 == 1))  // evaluates `(4 < 0) && (1 == 1))` first, becomes (2 == 3) || false, then returns false
+result = 0 && 1;   // result is assigned 0
+result = 2 && 0;   // result is assigned 0
+result = 1 && 4;   // result is assigned 4
 ```
 
 Even though the `&&` operator can be used with operands that are not
