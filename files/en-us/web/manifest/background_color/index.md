@@ -17,7 +17,7 @@ browser-compat: html.manifest.background_color
     </tr>
     <tr>
       <th scope="row">Mandatory</th>
-      <td>No</td>
+      <td>yes</td>
     </tr>
   </tbody>
 </table>
