@@ -151,12 +151,14 @@ The following code is run within a handler for the {{domxref("Window", "window")
 the URL selected by the browser from the `srcset`.
 
 ```js
-let box = document.querySelector(".box");
-let image = box.querySelector("img");
+window.addEventListener("load", () => {
+  let box = document.querySelector(".box");
+  let image = box.querySelector("img");
 
-let newElem = document.createElement("p");
-newElem.innerHTML = `Image: <code>${image.currentSrc}</code>`;
-box.appendChild(newElem);
+  let newElem = document.createElement("p");
+  newElem.innerHTML = `Image: <code>${image.currentSrc}</code>`;
+  box.appendChild(newElem);
+});
 ```
 
 ### Result
