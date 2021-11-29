@@ -143,7 +143,7 @@ As with our _index_ template, we extend our base template in the first line and 
   <ul>
     {% for book in book_list %}
       <li>
-        <a href="{{ book.get_absolute_url }}">{{ book.title }}</a> ({{book.author}})
+        <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
       </li>
     {% endfor %}
   </ul>
