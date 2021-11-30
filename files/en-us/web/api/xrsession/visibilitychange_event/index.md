@@ -3,26 +3,11 @@ title: 'XRSession: visibilitychange event'
 slug: Web/API/XRSession/visibilitychange_event
 tags:
   - API
-  - AR
-  - Blurred
-  - Mixed
-  - Reality
+  - Event
   - Reference
-  - VR
-  - Virtual
-  - Visibility
-  - Visible
   - WebXR
-  - WebXR API
-  - WebXR Device API
   - XR
   - XRSession
-  - active
-  - augmented
-  - events
-  - focused
-  - hidden
-  - visibilitychange
 browser-compat: api.XRSession.visibilitychange_event
 ---
 {{APIRef("WebXR Device API")}}
@@ -34,10 +19,21 @@ The **`visibilitychange`** event is sent to an {{domxref("XRSession")}} to infor
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('visibilitychange', () => { });
+addEventListener('visibilitychange', (event) => { });
 
 onvisibilitychange = event => { });
 ```
+
+## Event type
+
+An {{domxref("XRSessionEvent")}}. Inherits from {{domxref("Event")}}.
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
+  - : The {{domxref("XRSession")}} to which the event refers.
 
 ## Description
 
@@ -46,10 +42,6 @@ onvisibilitychange = event => { });
 Triggered when an {{domxref("XRSession")}} becomes visible or hidden, or when it becomes visible but not currently focused.
 
 When the `XRSession` receives this event, the visibility state has already been changed.
-
-### Event type
-
-An {{domxref("XRSessionEvent")}} which, in addition to the generic {{domxref("Event")}} class, includes the following properties:
 
 ### Use cases
 

@@ -3,23 +3,12 @@ title: 'XRSession: inputsourceschange event'
 slug: Web/API/XRSession/inputsourceschange_event
 tags:
   - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Reality
+  - Event
   - Reference
-  - VR
-  - Virtual
   - WebXR
-  - WebXR API
-  - WebXR Device API
   - XR
   - XRInputSources
   - XRSession
-  - augmented
-  - events
-  - inputsourceschange
 browser-compat: api.XRSession.inputsourceschange_event
 ---
 {{APIRef("WebXR Device API")}}
@@ -31,20 +20,18 @@ The **`inputsourceschange`** event is sent to an {{domxref("XRSession")}} when t
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('inputsourceschange', () => { });
+addEventListener('inputsourceschange', (event) => { });
 
 oninputsourceschange = event => { });
 ```
 
-## Description
+## Event type
 
-### Trigger
+An {{domxref("XRInputSourcesChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
-Triggered when the set of available WebXR input devices changes.
+## Event properties
 
-### Event type
-
-An {{domxref("XRInputSourcesChangeEvent")}} which, in addition to the generic {{domxref("Event")}} class, includes the following properties:
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
 - {{domxref("XRInputSourcesChangeEvent.added", "added")}} {{ReadOnlyInline}}
   - : An array of zero or more {{domxref("XRInputSource")}} objects, each representing an input device which has been recently connected or enabled.
@@ -52,6 +39,12 @@ An {{domxref("XRInputSourcesChangeEvent")}} which, in addition to the generic {{
   - : An array of zero or more {{domxref("XRInputSource")}} objects representing the input devices recently disconnected or disabled.
 - {{domxref("XRInputSourcesChangeEvent.session", "session")}} {{ReadOnlyInline}}
   - : The {{domxref("XRSession")}} to which this input source change event is being directed.
+
+## Description
+
+### Trigger
+
+Triggered when the set of available WebXR input devices changes.
 
 ### Use cases
 

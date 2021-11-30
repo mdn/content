@@ -34,25 +34,29 @@ Primary squeeze actions include things like users pressing triggers or buttons, 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('squeezeend', () => { });
+addEventListener('squeezeend', (event) => { });
 
 onsqueezeend = event => { });
 ```
+
+## Event type
+
+An {{domxref("XRInputSourceEvent")}}. Inherits from {{domxref("Event")}}.
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("XRInputSourceEvent.frame", "frame")}} {{ReadOnlyInline}}
+  - : An {{domxref("XRFrame")}} object providing the needed information about the event frame during which the event occurred. This frame may have been rendered in the past rather than being a current frame. Because this is an _event_ frame, not an _animation_ frame, you cannot call {{domxref("XRFrame.getViewerPose", "XRFrame.getViewerPose()")}} on it; instead, use {{domxref("XRFrame.getPose", "getPose()")}}.
+- {{domxref("XRInputSourceEvent.inputSource", "inputSource")}} {{ReadOnlyInline}}
+  - : An {{domxref("XRInputSource")}} object indicating which input source generated the input event.
 
 ## Description
 
 ### Trigger
 
 Triggered when users stop squeezing the controller, making a hand gesture that mimes grabbing something, or using (squeezing) a trigger.
-
-### Event type
-
-An {{domxref("XRInputSourceEvent")}} which, in addition to the generic {{domxref("Event")}} class, includes the following properties:
-
-- {{domxref("XRInputSourceEvent.frame", "frame")}} {{ReadOnlyInline}}
-  - : An {{domxref("XRFrame")}} object providing the needed information about the event frame during which the event occurred. This frame may have been rendered in the past rather than being a current frame. Because this is an _event_ frame, not an _animation_ frame, you cannot call {{domxref("XRFrame.getViewerPose", "XRFrame.getViewerPose()")}} on it; instead, use {{domxref("XRFrame.getPose", "getPose()")}}.
-- {{domxref("XRInputSourceEvent.inputSource", "inputSource")}} {{ReadOnlyInline}}
-  - : An {{domxref("XRInputSource")}} object indicating which input source generated the input event.
 
 ### Use cases
 

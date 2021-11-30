@@ -3,23 +3,11 @@ title: 'XRSession: end event'
 slug: Web/API/XRSession/end_event
 tags:
   - API
-  - AR
-  - End
-  - Event end
-  - Finish
-  - Mixed
-  - Reality
+  - Event
   - Reference
-  - VR
-  - Virtual
   - WebXR
-  - WebXR Device API
   - XR
   - XRSession
-  - augmented
-  - events
-  - stop
-  - terminate
 browser-compat: api.XRSession.end_event
 ---
 {{APIRef("WebXR Device API")}}
@@ -31,10 +19,21 @@ An `end` event is fired at an {{DOMxRef("XRSession")}} object when the WebXR se
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('end', () => { });
+addEventListener('end', (event) => { });
 
 onend = event => { });
 ```
+
+## Event type
+
+An {{domxref("XRSessionEvent")}}. Inherits from {{domxref("Event")}}.
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
+  - : The {{domxref("XRSession")}} to which the event refers.
 
 ## Description
 
@@ -43,13 +42,6 @@ onend = event => { });
 Triggered when the WebXR session has ended, either because the web application has chosen to stop the session, or because the {{Glossary("user agent")}} terminated the session.
 
 This event is not cancelable and does not bubble.
-
-### Event type
-
-An {{domxref("XRSessionEvent")}} which, in addition to the generic {{domxref("Event")}} class, includes the following properties:
-
-- {{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
-  - : The {{domxref("XRSession")}} to which the event refers.
 
 ### Use cases
 
