@@ -49,5 +49,5 @@ tbd
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/API/WebRTC_API_API)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCRtpSender")}}
