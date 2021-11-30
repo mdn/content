@@ -238,7 +238,7 @@ function insertText(newText, textarea)
     textarea.focus();
     
     // attempting to paste to preserver undo functionality
-    var pasted = true;
+    let pasted = true;
     try {
         if (!document.execCommand("insertText", false, newText)) {
             pasted = false;
