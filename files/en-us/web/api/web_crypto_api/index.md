@@ -13,13 +13,14 @@ The **Web Crypto API** is an interface allowing a script to use cryptographic pr
 
 {{AvailableInWorkers}}
 
-> **Warning:** The Web Crypto API provides a number of low-level cryptographic primitives. It's very easy to misuse them, and the pitfalls involved can be very subtle. See, for example, [Crypto 101](https://www.crypto101.io/) for an introduction to cryptography, common cryptographic flaws, and how they can be exploited.
+> **Warning:** The Web Crypto API provides a number of low-level cryptographic primitives. It's very easy to misuse them, and the pitfalls involved can be very subtle.  
 >
 > Even assuming you use the basic cryptographic functions correctly, secure key management and overall security system design are extremely hard to get right, and are generally the domain of specialist security experts.
 >
 > Errors in security system design and implementation can make the security of the system completely ineffective.
 >
-> **If you're not sure you know what you are doing, you probably shouldn't be using this API.**
+> Please learn and experiment, but don't guarantee or imply the security of your work before an individual knowledgeable in this subject matter thoroughly reviews it. The [Crypto 101 Course](https://www.crypto101.io/) can be a great place to start learning about the design and implementation of secure systems.
+> 
 
 ## Interfaces
 
