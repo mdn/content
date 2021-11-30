@@ -37,9 +37,9 @@ If you haven't read about objects yet, don't worry! For now, all you need to kno
 
 You are given three variables to begin with:
 
-- `i` — starts off with a value of 0; intended to be used as an iterator.
 - `name` — contains a name to search for
-- `para` — contains a reference to a paragraph, which will be used to report the results.
+- `para` — contains a reference to a paragraph, which will be used to report the results
+- `phonebook` - contains the phonebook entries to search.
 
 You should use a type of loop that you've not used in the previous task.
 

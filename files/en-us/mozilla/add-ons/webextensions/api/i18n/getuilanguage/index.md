@@ -17,6 +17,8 @@ browser-compat: webextensions.api.i18n.getUILanguage
 
 Gets the UI language of the browser. This is different from {{WebExtAPIRef('i18n.getAcceptLanguages')}} which returns the preferred user languages.
 
+See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) page for a guide on using this function.
+
 ## Syntax
 
 ```js

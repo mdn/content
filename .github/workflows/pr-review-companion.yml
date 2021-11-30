@@ -63,7 +63,7 @@ jobs:
           path: yari
 
       - name: Install Python
-        uses: actions/setup-python@v2.3.0
+        uses: actions/setup-python@v2.3.1
         with:
           python-version: "3.8"
 
@@ -75,7 +75,7 @@ jobs:
           key: dotlocal-${{ runner.os }}-${{ hashFiles('.github/workflows/pr-review-companion.yml') }}
 
       - name: Install Python poetry
-        uses: snok/install-poetry@v1.2
+        uses: snok/install-poetry@v1.3
         with:
           virtualenvs-create: true
           virtualenvs-in-project: true

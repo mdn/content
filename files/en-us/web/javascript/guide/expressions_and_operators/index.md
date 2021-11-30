@@ -9,19 +9,16 @@ tags:
   - Operators
   - l10n:priority
 ---
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions",
-  "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
 
-This chapter describes JavaScript's expressions and operators,
-including assignment, comparison, arithmetic, bitwise, logical, string, ternary and
-more.
+This chapter describes JavaScript's expressions and operators, including assignment, comparison, arithmetic, bitwise, logical, string, ternary and more.
 
 A complete and detailed list of operators and expressions is also available in the [reference](/en-US/docs/Web/JavaScript/Reference/Operators).
 
 ## Operators
 
-JavaScript has the following types of operators. This section describes the operators
-and contains information about operator precedence.
+JavaScript has the following types of operators.
+This section describes the operators and contains information about operator precedence.
 
 - [Assignment operators](#assignment_operators)
 - [Comparison operators](#comparison_operators)
@@ -34,9 +31,8 @@ and contains information about operator precedence.
 - [Unary operators](#unary_operators)
 - [Relational operators](#relational_operators)
 
-JavaScript has both _binary_ and _unary_ operators, and one special
-ternary operator, the conditional operator. A binary operator requires two operands, one
-before the operator and one after the operator:
+JavaScript has both _binary_ and _unary_ operators, and one special ternary operator, the conditional operator.
+A binary operator requires two operands, one before the operator and one after the operator:
 
 ```js
 operand1 operator operand2
@@ -60,38 +56,34 @@ For example, `x++` or `++x`.
 
 ### Assignment operators
 
-An assignment operator assigns a value to its left operand based on the value of its
-right operand. The simple assignment operator is equal (`=`), which assigns
-the value of its right operand to its left operand. That is, `x = f()`
-is an assignment expression that assigns the value of `f()` to `x`.
+An assignment operator assigns a value to its left operand based on the value of its right operand.
+The simple assignment operator is equal (`=`), which assigns the value of its right operand to its left operand.
+That is, `x = f()` is an assignment expression that assigns the value of `f()` to `x`.
 
-There are also compound assignment operators that are shorthand for the operations
-listed in the following table:
+There are also compound assignment operators that are shorthand for the operations listed in the following table:
 
 | Name                                                                                                              | Shorthand operator | Meaning          |
 | ----------------------------------------------------------------------------------------------------------------- | ------------------ | ---------------- |
 | [Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)                                           | `x = f()`          | `x = f()`        |
-| [Addition assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment)                         | `x += f()`         | `x = x + y`      |
-| [Subtraction assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)                   | `x -= f()`         | `x = x - y`      |
-| [Multiplication assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment)             | `x *= f()`         | `x = x * y`      |
-| [Division assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Division_assignment)                         | `x /= f()`         | `x = x / y`      |
-| [Remainder assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)                       | `x %= f()`         | `x = x % y`      |
-| [Exponentiation assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment)             | `x **= f()`        | `x = x ** y`     |
-| [Left shift assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)                     | `x <<= f()`        | `x = x << y`     |
-| [Right shift assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)                   | `x >>= f()`        | `x = x >> y`     |
-| [Unsigned right shift assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment) | `x >>>= f()`       | `x = x >>> y`    |
-| [Bitwise AND assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)                   | `x &= f()`         | `x = x & y`      |
-| [Bitwise XOR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)                   | `x ^= f()`         | `x = x ^ y`      |
-| [Bitwise OR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)                     | `x \|= f()`        | `x = x \| y`     |
-| [Logical AND assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)                   | `x &&= f()`        | `x && (x = y)`   |
-| [Logical OR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                     | `x \|\|= f()`      | `x \|\| (x = y)` |
-| [Logical nullish assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)           | `x ??= f()`        | `x ?? (x = y)`   |
+| [Addition assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment)                         | `x += f()`         | `x = x + f()`      |
+| [Subtraction assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)                   | `x -= f()`         | `x = x - f()`      |
+| [Multiplication assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment)             | `x *= f()`         | `x = x * f()`      |
+| [Division assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Division_assignment)                         | `x /= f()`         | `x = x / f()`      |
+| [Remainder assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)                       | `x %= f()`         | `x = x % f()`      |
+| [Exponentiation assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment)             | `x **= f()`        | `x = x ** f()`     |
+| [Left shift assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)                     | `x <<= f()`        | `x = x << f()`     |
+| [Right shift assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)                   | `x >>= f()`        | `x = x >> f()`     |
+| [Unsigned right shift assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment) | `x >>>= f()`       | `x = x >>> f()`    |
+| [Bitwise AND assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)                   | `x &= f()`         | `x = x & f()`      |
+| [Bitwise XOR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)                   | `x ^= f()`         | `x = x ^ f()`      |
+| [Bitwise OR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)                     | `x \|= f()`        | `x = x \| f()`     |
+| [Logical AND assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)                   | `x &&= f()`        | `x && (x = f())`   |
+| [Logical OR assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                     | `x \|\|= f()`      | `x \|\| (x = f())` |
+| [Logical nullish assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)           | `x ??= f()`        | `x ?? (x = f())`   |
 
 #### Assigning to properties
 
-If a variable refers to an [object][], then
-the left-hand side of an assignment expression
-may make assignments to properties of that variable.
+If a variable refers to an [object][], then the left-hand side of an assignment expression may make assignments to properties of that variable.
 For example:
 
 ```js
@@ -113,9 +105,7 @@ For more information about objects, read [Working with Objects][object].
 
 #### Destructuring
 
-For more complex assignments, the [destructuring
-assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax is a JavaScript expression that makes it possible to extract
-data from arrays or objects using a syntax that mirrors the construction of array and
+For more complex assignments, the [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax is a JavaScript expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and
 object literals.
 
 ```js
@@ -132,15 +122,14 @@ var [one, two, three] = foo;
 
 #### Evaluation and nesting
 
-In general, assignments are used within a variable declaration
-(i.e., with [`const`][], [`let`][], or [`var`][]) or as standalone statements.
+In general, assignments are used within a variable declaration (i.e., with [`const`][], [`let`][], or [`var`][]) or as standalone statements).
 
 ```js
 // Declares a variable x and initializes it to the result of f().
 // The result of the x = f() assignment expression is discarded.
 let x = f();
 
-// Declares a variable x and initializes it to the result of f().
+// Declares a variable x and initializes it to the result of g().
 // The result of the x = g() assignment expression is discarded.
 x = g(); Reassigns the variable x to the result of g().
 ```
@@ -149,21 +138,17 @@ x = g(); Reassigns the variable x to the result of g().
 [`let`]: /en-US/docs/Web/JavaScript/Reference/Statements/let
 [`var`]: /en-US/docs/Web/JavaScript/Reference/Statements/var
 
-However, like other expressions, assignment expressions like `x = f()` evaluate
-into a result value. Although this result value is usually not used,
-it can then be used by another expression.
+However, like other expressions, assignment expressions like `x = f()` evaluate into a result value.
+Although this result value is usually not used, it can then be used by another expression.
 
-Chaining assignments or nesting assignments in other expressions can
-result in surprising behavior. For this reason, some JavaScript style guides
-[discourage chaining or nesting assignments][discourage assign chain]).
-Nevertheless, assignment chaining and nesting may occur sometimes,
-so it is important to be able to understand how they work.
+Chaining assignments or nesting assignments in other expressions can result in surprising behavior.
+For this reason, some JavaScript style guides [discourage chaining or nesting assignments][discourage assign chain]).
+Nevertheless, assignment chaining and nesting may occur sometimes, so it is important to be able to understand how they work.
 
 [discourage assign chain]: https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment
 
-By chaining or nesting an assignment expression,
-its result can itself be assigned to another variable. It can be logged, it can
-be put inside an array literal or function call, and so on.
+By chaining or nesting an assignment expression, its result can itself be assigned to another variable.
+It can be logged, it can be put inside an array literal or function call, and so on.
 
 ```js
 let x;
@@ -308,12 +293,10 @@ Chaining assignments or nesting assignments in other expressions can
 result in surprising behavior. For this reason, [chaining assignments
 in the same statement is discouraged][discourage assign chain]).
 
-In particular, putting a variable chain
-in a [`const`][], [`let`][], or [`var`][] statement
-often does *not* work.
+In particular, putting a variable chain in a [`const`][], [`let`][], or [`var`][] statement often does *not* work.
 Only the outermost/leftmost variable would get declared;
-any other variables within the assignment chain are *not* declared
-by the `const`/`let`/`var` statement. For example:
+any other variables within the assignment chain are *not* declared by the `const`/`let`/`var` statement.
+For example:
 
 ```js
 let z = y = x = f();
@@ -321,9 +304,7 @@ let z = y = x = f();
 
 This statement seemingly declares the variables `x`, `y`, and `z`.
 However, it only actually declares the variable `z`.
-`y` and `x` are either invalid references to nonexistent variables
-(in [strict mode][]) or, worse, would implicitly create [global variables][]
-for `x` and `y` in [sloppy mode][].
+`y` and `x` are either invalid references to nonexistent variables (in [strict mode][]) or, worse, would implicitly create [global variables][] for `x` and `y` in [sloppy mode][].
 
 [strict mode]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
 [sloppy mode]: https://developer.mozilla.org/en-US/docs/Glossary/Sloppy_mode
@@ -331,16 +312,14 @@ for `x` and `y` in [sloppy mode][].
 
 ### Comparison operators
 
-A comparison operator compares its operands and returns a logical value based on
-whether the comparison is true. The operands can be numerical, string, logical, or
-[object][] values. Strings are compared based on standard lexicographical ordering, using
-Unicode values. In most cases, if the two operands are not of the same type, JavaScript
-attempts to convert them to an appropriate type for the comparison. This behavior
-generally results in comparing the operands numerically. The sole exceptions to type
-conversion within comparisons involve the `===` and `!==`
-operators, which perform strict equality and inequality comparisons. These operators do
-not attempt to convert the operands to compatible types before checking equality. The
-following table describes the comparison operators in terms of this sample code:
+A comparison operator compares its operands and returns a logical value based on whether the comparison is true.
+The operands can be numerical, string, logical, or [object][] values.
+Strings are compared based on standard lexicographical ordering, using Unicode values.
+In most cases, if the two operands are not of the same type, JavaScript attempts to convert them to an appropriate type for the comparison.
+This behavior generally results in comparing the operands numerically.
+The sole exceptions to type conversion within comparisons involve the `===` and `!==` operators, which perform strict equality and inequality comparisons.
+These operators do not attempt to convert the operands to compatible types before checking equality.
+The following table describes the comparison operators in terms of this sample code:
 
 ```js
 var var1 = 3;
@@ -489,21 +468,16 @@ var var2 = 4;
 
 ### Arithmetic operators
 
-An arithmetic operator takes numerical values (either literals or variables) as their
-operands and returns a single numerical value. The standard arithmetic operators are
-addition (`+`), subtraction (`-`), multiplication
-(`*`), and division (`/`). These operators work as they do in most
-other programming languages when used with floating point numbers (in particular, note
-that division by zero produces {{jsxref("Infinity")}}). For example:
+An arithmetic operator takes numerical values (either literals or variables) as their operands and returns a single numerical value.
+The standard arithmetic operators are addition (`+`), subtraction (`-`), multiplication (`*`), and division (`/`).
+These operators work as they do in most other programming languages when used with floating point numbers (in particular, note that division by zero produces {{jsxref("Infinity")}}). For example:
 
 ```js
 1 / 2; // 0.5
 1 / 2 == 1.0 / 2.0; // this is true
 ```
 
-In addition to the standard arithmetic operations (`+`, `-`,
-`*`, `/`), JavaScript provides the arithmetic operators listed in
-the following table:
+In addition to the standard arithmetic operations (`+`, `-`, `*`, `/`), JavaScript provides the arithmetic operators listed in the following table:
 
 <table class="fullwidth-table">
   <caption>
@@ -634,21 +608,18 @@ The following table summarizes JavaScript's bitwise operators.
 
 Conceptually, the bitwise logical operators work as follows:
 
-- The operands are converted to thirty-two-bit integers and expressed by a series of
-  bits (zeros and ones). Numbers with more than 32 bits get their most significant bits
-  discarded. For example, the following integer with more than 32 bits will be converted
-  to a 32 bit integer:
+- The operands are converted to thirty-two-bit integers and expressed by a series of bits (zeros and ones).
+  Numbers with more than 32 bits get their most significant bits discarded.
+  For example, the following integer with more than 32 bits will be converted to a 32 bit integer:
 
       Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
       After:               1010 0000 0000 0000 0110 0000 0000 0001
 
-- Each bit in the first operand is paired with the corresponding bit in the second
-  operand: first bit to first bit, second bit to second bit, and so on.
+- Each bit in the first operand is paired with the corresponding bit in the second operand: first bit to first bit, second bit to second bit, and so on.
 - The operator is applied to each pair of bits, and the result is constructed bitwise.
 
-For example, the binary representation of nine is 1001, and the binary representation
-of fifteen is 1111. So, when the bitwise operators are applied to these values, the
-results are as follows:
+For example, the binary representation of nine is 1001, and the binary representation of fifteen is 1111.
+So, when the bitwise operators are applied to these values, the results are as follows:
 
 | Expression | Result | Binary Description                                    |
 | ---------- | ------ | ----------------------------------------------------- |
@@ -665,12 +636,11 @@ the most significant (left-most) bit set to 1 represent negative numbers
 
 #### Bitwise shift operators
 
-The bitwise shift operators take two operands: the first is a quantity to be shifted,
-and the second specifies the number of bit positions by which the first operand is to be
-shifted. The direction of the shift operation is controlled by the operator used.
+The bitwise shift operators take two operands: the first is a quantity to be shifted, and the second specifies the number of bit positions by which the first operand is to be
+shifted.
+The direction of the shift operation is controlled by the operator used.
 
-Shift operators convert their operands to thirty-two-bit integers and return a result
-of either type {{jsxref("Number")}} or {{jsxref("BigInt")}}: specifically, if the type
+Shift operators convert their operands to thirty-two-bit integers and return a result of either type {{jsxref("Number")}} or {{jsxref("BigInt")}}: specifically, if the type
 of the left operand is {{jsxref("BigInt")}}, they return {{jsxref("BigInt")}};
 otherwise, they return {{jsxref("Number")}}.
 
@@ -718,16 +688,12 @@ The shift operators are listed in the following table.
       </td>
       <td>
         <code>9>>2</code> yields 2, because 1001 shifted 2 bits to the right
-        becomes 10, which is 2. Likewise, <code>-9>>2</code> yields -3, because
-        the sign is preserved.
+        becomes 10, which is 2. Likewise, <code>-9>>2</code> yields -3, because the sign is preserved.
       </td>
     </tr>
     <tr>
       <td>
-        <a
-          href="/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift"
-          >Zero-fill right shift</a
-        >
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift">Zero-fill right shift</a>
         (<code>>>></code>)
       </td>
       <td>
@@ -746,11 +712,10 @@ The shift operators are listed in the following table.
 
 ### Logical operators
 
-Logical operators are typically used with Boolean (logical) values; when they are, they
-return a Boolean value. However, the `&&` and `||`
-operators actually return the value of one of the specified operands, so if these
-operators are used with non-Boolean values, they may return a non-Boolean value. The
-logical operators are described in the following table.
+Logical operators are typically used with Boolean (logical) values; when they are, they return a Boolean value.
+However, the `&&` and `||` operators actually return the value of one of the specified operands, so if these
+operators are used with non-Boolean values, they may return a non-Boolean value.
+The logical operators are described in the following table.
 
 <table class="fullwidth-table">
   <caption>
@@ -795,9 +760,7 @@ logical operators are described in the following table.
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT"
-          >Logical NOT </a
-        >(<code>!</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT">Logical NOT </a>(<code>!</code>)
       </td>
       <td><code>!expr</code></td>
       <td>
@@ -856,18 +819,14 @@ The rules of logic guarantee that these evaluations are always correct. Note tha
 _anything_ part of the above expressions is not evaluated, so any side effects of
 doing so do not take effect.
 
-Note that for the second case, in modern code you can use the new [Nullish
-coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only
-returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null "The value null represents the intentional absence of any object value. It is one of JavaScript's primitive values and is treated as falsy for boolean operations.")
-or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "The global undefined property represents the primitive value undefined. It is one of JavaScript's primitive types.").
-It is thus the better alternative to provide defaults, when values like `''`
-or `0` are valid values for the first expression, too.
+Note that for the second case, in modern code you can use the new [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null "The value null represents the intentional absence of any object value. It is one of JavaScript's primitive values and is treated as falsy for boolean operations.")
+or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "The global undefined property represents the primitive value undefined.
+It is one of JavaScript's primitive types.").
+It is thus the better alternative to provide defaults, when values like `''` or `0` are valid values for the first expression, too.
 
 ### String operators
 
-In addition to the comparison operators, which can be used on string values, the
-concatenation operator (+) concatenates two string values together, returning another
-string that is the union of the two operand strings.
+In addition to the comparison operators, which can be used on string values, the concatenation operator (+) concatenates two string values together, returning another string that is the union of the two operand strings.
 
 For example,
 
@@ -887,16 +846,16 @@ mystring += 'bet'; // evaluates to "alphabet" and assigns this value to mystring
 ### Conditional (ternary) operator
 
 The [conditional
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) is the only JavaScript operator that takes three operands. The operator
-can have one of two values based on a condition. The syntax is:
+operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) is the only JavaScript operator that takes three operands.
+The operator can have one of two values based on a condition.
+The syntax is:
 
 ```js
 condition ? val1 : val2
 ```
 
 If `condition` is true, the operator has the value of `val1`.
-Otherwise it has the value of `val2`. You can use the conditional operator
-anywhere you would use a standard operator.
+Otherwise it has the value of `val2`. You can use the conditional operator anywhere you would use a standard operator.
 
 For example,
 
@@ -911,15 +870,13 @@ This statement assigns the value "adult" to the variable `status` if
 ### Comma operator
 
 The [comma
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) (`,`) evaluates both of its operands and returns the value of
-the last operand. This operator is primarily used inside a `for` loop, to
-allow multiple variables to be updated each time through the loop. It is regarded bad
-style to use it elsewhere, when it is not necessary. Often two separate statements can
-and should be used instead.
+operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator) (`,`) evaluates both of its operands and returns the value of the last operand.
+This operator is primarily used inside a `for` loop, to allow multiple variables to be updated each time through the loop.
+It is regarded bad style to use it elsewhere, when it is not necessary.
+Often two separate statements can and should be used instead.
 
-For example, if `a` is a 2-dimensional array with 10 elements on a side, the
-following code uses the comma operator to update two variables at once. The code prints
-the values of the diagonal elements in the array:
+For example, if `a` is a 2-dimensional array with 10 elements on a side, the following code uses the comma operator to update two variables at once.
+The code prints the values of the diagonal elements in the array:
 
 ```js
 var x = [0,1,2,3,4,5,6,7,8,9]
@@ -936,9 +893,8 @@ A unary operation is an operation with only one operand.
 
 #### `delete`
 
-The
-[`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
-operator deletes an object's property. The syntax is:
+The [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator deletes an object's property.
+The syntax is:
 
 ```js
 delete object.property;
@@ -946,14 +902,11 @@ delete object[propertyKey];
 delete objectName[index];
 ```
 
-where `object` is the name of an object, `property` is an
-existing property, and `propertyKey` is a string or symbol referring to an
-existing property.
+where `object` is the name of an object, `property` is an existing property, and `propertyKey` is a string or symbol referring to an existing property.
 
 If the `delete` operator succeeds, it removes the property from the object.
-Trying to access it afterwards will yield `undefined`. The
-`delete` operator returns `true` if the operation is possible; it
-returns `false` if the operation is not possible.
+Trying to access it afterwards will yield `undefined`.
+The `delete` operator returns `true` if the operation is possible; it returns `false` if the operation is not possible.
 
 ```js
 delete Math.PI; // returns false (cannot delete non-configurable properties)
@@ -964,27 +917,24 @@ delete myobj.h; // returns true (can delete user-defined properties)
 
 ##### Deleting array elements
 
-Since arrays are just objects, it's technically possible to `delete`
-elements from them. This is however regarded as a bad practice, try to avoid it. When
-you delete an array property, the array length is not affected and other elements are
-not re-indexed. To achieve that behavior, it is much better to just overwrite the
-element with the value `undefined`. To actually manipulate the array, use the
-various array methods such as
-[`splice`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).
+Since arrays are just objects, it's technically possible to `delete` elements from them.
+This is however regarded as a bad practice, try to avoid it.
+When you delete an array property, the array length is not affected and other elements are not re-indexed.
+To achieve that behavior, it is much better to just overwrite the element with the value `undefined`.
+To actually manipulate the array, use the various array methods such as [`splice`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).
 
 #### `typeof`
 
-The [`typeof`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) is used in either of the following ways:
+The [`typeof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) is used in either of the following ways:
 
 ```js
 typeof operand
 typeof (operand)
 ```
 
-The `typeof` operator returns a string indicating the type of the
-unevaluated operand. `operand` is the string, variable, keyword, or object
-for which the type is to be returned. The parentheses are optional.
+The `typeof` operator returns a string indicating the type of the unevaluated operand.
+`operand` is the string, variable, keyword, or object for which the type is to be returned.
+The parentheses are optional.
 
 Suppose you define the following variables:
 
@@ -1060,28 +1010,23 @@ void (expression)
 void expression
 ```
 
-The `void` operator specifies an expression to be evaluated without
-returning a value. `expression` is a JavaScript expression to evaluate. The
-parentheses surrounding the expression are optional, but it is good style to use them.
+The `void` operator specifies an expression to be evaluated without returning a value. `expression` is a JavaScript expression to evaluate.
+The parentheses surrounding the expression are optional, but it is good style to use them.
 
 ### Relational operators
 
-A relational operator compares its operands and returns a Boolean value
-based on whether the comparison is true.
+A relational operator compares its operands and returns a Boolean value based on whether the comparison is true.
 
 #### `in`
 
-The [`in`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) returns `true` if the specified property is in the specified
-object. The syntax is:
+The [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) returns `true` if the specified property is in the specified object.
+The syntax is:
 
 ```js
 propNameOrNumber in objectName
 ```
 
-where `propNameOrNumber` is a string, numeric, or symbol expression
-representing a property name or array index, and `objectName` is the name of
-an object.
+where `propNameOrNumber` is a string, numeric, or symbol expression representing a property name or array index, and `objectName` is the name of an object.
 
 The following examples show some uses of the `in` operator.
 
@@ -1116,17 +1061,12 @@ object type. The syntax is:
 objectName instanceof objectType
 ```
 
-where `objectName` is the name of the object to compare to
-`objectType`, and `objectType` is an object type, such as
-{{jsxref("Date")}} or {{jsxref("Array")}}.
+where `objectName` is the name of the object to compare to `objectType`, and `objectType` is an object type, such as {{jsxref("Date")}} or {{jsxref("Array")}}.
 
 Use `instanceof` when you need to confirm the type of an object at runtime.
-For example, when catching exceptions, you can branch to different exception-handling
-code depending on the type of exception thrown.
+For example, when catching exceptions, you can branch to different exception-handling code depending on the type of exception thrown.
 
-For example, the following code uses `instanceof` to determine whether
-`theDay` is a `Date` object. Because `theDay` is a
-`Date` object, the statements in the `if` statement execute.
+For example, the following code uses `instanceof` to determine whether `theDay` is a `Date` object. Because `theDay` is a `Date` object, the statements in the `if` statement execute.
 
 ```js
 var theDay = new Date(1995, 12, 17);
@@ -1137,8 +1077,8 @@ if (theDay instanceof Date) {
 
 ### Operator precedence
 
-The _precedence_ of operators determines the order they are applied when
-evaluating an expression. You can override operator precedence by using parentheses.
+The _precedence_ of operators determines the order they are applied when evaluating an expression.
+You can override operator precedence by using parentheses.
 
 The following table describes the precedence of operators, from highest to lowest.
 
@@ -1169,25 +1109,22 @@ Reference](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#ta
 
 An _expression_ is any valid unit of code that resolves to a value.
 
-Every syntactically valid expression resolves to some value but conceptually, there are
-two types of expressions: with side effects (for example: those that assign value to a
+Every syntactically valid expression resolves to some value but conceptually, there are two types of expressions: with side effects (for example: those that assign value to a
 variable) and those that in some sense evaluate and therefore resolve to a value.
 
-The expression `x = 7` is an example of the first type. This expression uses
-the = _operator_ to assign the value seven to the variable `x`. The
-expression itself evaluates to seven.
+The expression `x = 7` is an example of the first type.
+This expression uses the = _operator_ to assign the value seven to the variable `x`.
+The expression itself evaluates to seven.
 
-The code `3 + 4` is an example of the second expression type. This
-expression uses the + operator to add three and four together without assigning the
-result, seven, to a variable.
+The code `3 + 4` is an example of the second expression type.
+This expression uses the + operator to add three and four together without assigning the result, seven, to a variable.
 
 JavaScript has the following expression categories:
 
 - Arithmetic: evaluates to a number, for example 3.14159. (Generally uses [arithmetic operators](#arithmetic_operators).)
-- String: evaluates to a character string, for example, "Fred" or "234". (Generally
-  uses [string operators](#string_operators).)
-- Logical: evaluates to true or false. (Often involves [logical
-  operators](#logical_operators).)
+- String: evaluates to a character string, for example, "Fred" or "234".
+  (Generally uses [string operators](#string_operators).)
+- Logical: evaluates to true or false. (Often involves [logical operators](#logical_operators).)
 - Primary expressions: Basic keywords and general expressions in JavaScript.
 - Left-hand-side expressions: Left values are the destination of an assignment.
 
@@ -1197,18 +1134,16 @@ Basic keywords and general expressions in JavaScript.
 
 #### `this`
 
-Use the [`this`
-keyword](/en-US/docs/Web/JavaScript/Reference/Operators/this) to refer to the current object. In general, `this` refers to
-the calling object in a method. Use `this` either with the dot or the bracket
-notation:
+Use the [`this` keyword](/en-US/docs/Web/JavaScript/Reference/Operators/this) to refer to the current object.
+In general, `this` refers to the calling object in a method.
+Use `this` either with the dot or the bracket notation:
 
 ```js
 this['propertyName']
 this.propertyName
 ```
 
-Suppose a function called `validate` validates an object's
-`value` property, given the object and the high and low values:
+Suppose a function called `validate` validates an object's `value` property, given the object and the high and low values:
 
 ```js
 function validate(obj, lowval, hival) {
@@ -1217,9 +1152,7 @@ function validate(obj, lowval, hival) {
 }
 ```
 
-You could call `validate` in each form element's `onChange` event
-handler, using `this` to pass it to the form element, as in the following
-example:
+You could call `validate` in each form element's `onChange` event handler, using `this` to pass it to the form element, as in the following example:
 
 ```html
 <p>Enter a number between 18 and 99:</p>
@@ -1256,8 +1189,7 @@ Left values are the destination of an assignment.
 
 #### `new`
 
-You can use the [`new`
-operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) to create an instance of a user-defined object type or of one of the
+You can use the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) to create an instance of a user-defined object type or of one of the
 built-in object types. Use `new` as follows:
 
 ```js
@@ -1266,9 +1198,8 @@ var objectName = new objectType([param1, param2, ..., paramN]);
 
 #### super
 
-The [super keyword](/en-US/docs/Web/JavaScript/Reference/Operators/super) is
-used to call functions on an object's parent. It is useful with [classes](/en-US/docs/Web/JavaScript/Reference/Classes) to call the parent
-constructor, for example.
+The [super keyword](/en-US/docs/Web/JavaScript/Reference/Operators/super) is used to call functions on an object's parent.
+It is useful with [classes](/en-US/docs/Web/JavaScript/Reference/Classes) to call the parent constructor, for example.
 
 ```js
 super([arguments]); // calls the parent constructor.

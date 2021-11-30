@@ -40,7 +40,7 @@ search parameters have been set.)
 
 ```js
 let url = new URL('https://example.com?foo=1&bar=2');
-let params = new URLSearchParams(url.search.slice(1));
+let params = new URLSearchParams(url.search);
 
 //Add a second foo parameter.
 params.append('foo', 4);
