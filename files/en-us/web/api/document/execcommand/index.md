@@ -28,7 +28,7 @@ editable element.
 > **Note:** While this method is deprecated, it is still useful in some cases.
 > 
 > For example, the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) doesn't replace the `insertText` command.
-> You can and should use it for programmatically replacing text at cursor in order to preserve the undo buffer (edit history) in plain `textarea` and `input` elements.
+> You can use it for programmatically replacing text at the cursor while preserving the undo buffer (edit history) in plain `textarea` and `input` elements.
 
 ## Syntax
 
