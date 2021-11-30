@@ -128,7 +128,7 @@ setTimeout(myArray.myMethod, 1.5*1000, '1'); // prints "undefined" after 1.5 sec
 ```
 
 The `myArray.myMethod` function is passed to `setTimeout`, then
-when it's called, its `this` is not set so it defaults to the
+when it's called, its `this` is not set, so it defaults to the
 `window` object.
 
 There's also no option to pass a `thisArg` to
