@@ -228,7 +228,6 @@ execCommand with contentEditable elements](https://codepen.io/chrisdavidmills/fu
 
 An example on how to insert text with both plain `textarea` and `contentEditable` elements:
 ```js
-//
 // Inserts text at cursor
 // (or replaces selected text).
 function insertText(newText, textarea)
