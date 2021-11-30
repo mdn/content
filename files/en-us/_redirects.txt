@@ -7216,6 +7216,9 @@
 /en-US/docs/Web/API/DeviceRotationRate/gamma	/en-US/docs/Web/API/DeviceMotionEventRotationRate/gamma
 /en-US/docs/Web/API/DirectoryEntry	/en-US/docs/Web/API/FileSystemDirectoryEntry
 /en-US/docs/Web/API/DirectoryReader	/en-US/docs/Web/API/FileSystemDirectoryReader
+/en-US/docs/Web/API/DisplayMediaStreamConstraints	/en-US/docs/Web/API/MediaDevices/getDisplayMedia
+/en-US/docs/Web/API/DisplayMediaStreamConstraints/audio	/en-US/docs/Web/API/MediaDevices/getDisplayMedia
+/en-US/docs/Web/API/DisplayMediaStreamConstraints/video	/en-US/docs/Web/API/MediaDevices/getDisplayMedia
 /en-US/docs/Web/API/Document.createNodeIterator	/en-US/docs/Web/API/Document/createNodeIterator
 /en-US/docs/Web/API/Document.dir	/en-US/docs/Web/API/Document/dir
 /en-US/docs/Web/API/Document.domConfig	/en-US/docs/Web/API/Document
@@ -7970,6 +7973,9 @@
 /en-US/docs/Web/API/MediaStreamAudioDestinationNode.stream	/en-US/docs/Web/API/MediaStreamAudioDestinationNode/stream
 /en-US/docs/Web/API/MediaStreamAudioSourceOptions	/en-US/docs/Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode
 /en-US/docs/Web/API/MediaStreamAudioSourceOptions/mediaStream	/en-US/docs/Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode
+/en-US/docs/Web/API/MediaStreamConstraints	/en-US/docs/Web/API/MediaDevices/getUserMedia
+/en-US/docs/Web/API/MediaStreamConstraints/audio	/en-US/docs/Web/API/MediaDevices/getUserMedia
+/en-US/docs/Web/API/MediaStreamConstraints/video	/en-US/docs/Web/API/MediaDevices/getUserMedia
 /en-US/docs/Web/API/MediaStreamEvent.MediaStreamEvent	/en-US/docs/Web/API/MediaStreamEvent/MediaStreamEvent
 /en-US/docs/Web/API/MediaStreamEvent.stream	/en-US/docs/Web/API/MediaStreamEvent/stream
 /en-US/docs/Web/API/MediaStreamTrack.enabled	/en-US/docs/Web/API/MediaStreamTrack/enabled

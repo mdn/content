@@ -35838,27 +35838,6 @@
       "grendel"
     ]
   },
-  "Web/API/DisplayMediaStreamConstraints": {
-    "modified": "2020-11-15T19:17:45.131Z",
-    "contributors": [
-      "realityforge",
-      "Sheppy"
-    ]
-  },
-  "Web/API/DisplayMediaStreamConstraints/audio": {
-    "modified": "2020-11-15T19:23:16.212Z",
-    "contributors": [
-      "realityforge",
-      "Sheppy"
-    ]
-  },
-  "Web/API/DisplayMediaStreamConstraints/video": {
-    "modified": "2020-11-15T19:23:32.745Z",
-    "contributors": [
-      "realityforge",
-      "Sheppy"
-    ]
-  },
   "Web/API/Document": {
     "modified": "2020-11-04T11:08:10.889Z",
     "contributors": [
@@ -59626,29 +59605,6 @@
     "contributors": [
       "chrisdavidmills",
       "Sheppy"
-    ]
-  },
-  "Web/API/MediaStreamConstraints": {
-    "modified": "2020-10-15T21:49:57.805Z",
-    "contributors": [
-      "Sheppy",
-      "fscholz"
-    ]
-  },
-  "Web/API/MediaStreamConstraints/audio": {
-    "modified": "2020-10-15T21:49:59.629Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy",
-      "fscholz"
-    ]
-  },
-  "Web/API/MediaStreamConstraints/video": {
-    "modified": "2020-10-15T21:49:57.736Z",
-    "contributors": [
-      "sideshowbarker",
-      "Sheppy",
-      "fscholz"
     ]
   },
   "Web/API/MediaStreamEvent": {
