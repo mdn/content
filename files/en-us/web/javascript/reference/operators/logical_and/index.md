@@ -11,11 +11,9 @@ browser-compat: javascript.operators.logical_and
 ---
 {{jsSidebar("Operators")}}
 
-The logical AND (`&&`) operator (logical conjunction) for a set of
-operands is true if, and only if, all of its operands are true. It is typically used with
-{{jsxref("Boolean")}} (logical) values, in which case it returns a Boolean value. However,
-when the `&&` operator is used with non-Boolean values, it preserves the value of one of the 
-specified operands and returns it as the original non-Boolean value.
+The logical AND (`&&`) operator (logical conjunction) for a set of operands is true if, and only if, all of its operands are true.
+It is typically used with {{jsxref("Boolean")}} (logical) values, in which case it returns a Boolean value.
+However, when the `&&` operator is used with non-Boolean values, it preserves the value of one of the specified operands and returns it as the original non-Boolean value.
 
 {{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
 
@@ -27,13 +25,9 @@ expr1 && expr2
 
 ## Description
 
-Logical AND (`&&`) evaluates operands from left to right, converts each to a 
-Boolean, then returns the first falsy value found; if all values are truthy, 
-the last value is returned.
+Logical AND (`&&`) evaluates operands from left to right, converts each to a Boolean, then returns the first falsy value found; if all values are truthy, the last value is returned.
 
-If a value can be converted to `true`, the value is so-called
-{{Glossary("truthy")}}. If a value can be converted to `false`, the value is
-so-called {{Glossary("falsy")}}.
+If a value can be converted to `true`, the value is so-called {{Glossary("truthy")}}. If a value can be converted to `false`, the value is so-called {{Glossary("falsy")}}.
 
 Examples of expressions that can be converted to false are:
 
@@ -45,34 +39,30 @@ Examples of expressions that can be converted to false are:
 - `undefined`.
 
 The AND operator preserves non-Boolean values and returns them as is:
+
 ```js
 result = 0 && 1;   // result is assigned 0
 result = 2 && 0;   // result is assigned 0
 result = 1 && 4;   // result is assigned 4
 ```
 
-Even though the `&&` operator can be used with non-Boolean operands, it is 
-still considered a boolean operator since its return value can always be 
+Even though the `&&` operator can be used with non-Boolean operands, it is still considered a boolean operator since its return value can always be 
 converted to a [boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#Boolean_type).
-To explicitly convert its return value (or any expression in general) to the
-corresponding boolean value, use a double [`NOT operator`](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT) or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} constructor.
+To explicitly convert its return value (or any expression in general) to the corresponding boolean value, use a double [`NOT operator`](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT) or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} constructor.
 
 ### Short-circuit evaluation
 
-The logical AND expression is a short-circuit operator. As each operand is 
-converted to a boolean, if the result of one conversion is found to be `false`, 
-the AND operator stops and returns the original value of that falsy operand; it 
-does **not** evaluate any of the remaining operands:
+The logical AND expression is a short-circuit operator.
+As each operand is converted to a boolean, if the result of one conversion is found to be `false`, the AND operator stops and returns the original value of that falsy operand; it does **not** evaluate any of the remaining operands:
 
-`(some falsy expression) && expr` is short-circuit
-evaluated to the falsy expression;
+```
+(some falsy expression) && expr
+```
 
-Due to short-circuiting, the `expr` part above is **never evaluated**, 
-meaning any side effects of doing so won't occur (e.g., if `expr` is a 
-function call, the calling never takes place). This happens because the
-first operand evaluated is converted to `false`, which turns the final value 
-of the AND operator into `(some falsy expression)` if it's non-Boolean, or 
-`false` if it's a Boolean. See the example below:
+Due to short-circuiting, the `expr` part above is **never evaluated**, meaning any side effects of doing so won't occur (e.g., if `expr` is a function call, the calling never takes place). 
+This happens because the first operand evaluated is converted to `false`, which turns the final value of the AND operator into `(some falsy expression)` if it's non-Boolean, or 
+`false` if it's a Boolean.
+See the example below:
 
 ```js
 function A() { console.log('called A'); return false; }
@@ -86,8 +76,7 @@ console.log( A() && B() );
 
 ### Operator precedence
 
-The AND operator has a higher precedence than the OR operator, meaning the `&&` 
-operator is executed before the `||` operator (see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
+The AND operator has a higher precedence than the OR operator, meaning the `&&` operator is executed before the `||` operator (see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
 
 ```js
 false || true && true             // evaluates `true && true` first, then the || finds and returns true
@@ -146,8 +135,7 @@ is always equal to:
 
 ### Removing nested parentheses
 
-As logical expressions are evaluated left to right, it is always possible to remove
-parentheses from a complex expression provided that certain rules are followed.
+As logical expressions are evaluated left to right, it is always possible to remove parentheses from a complex expression provided that certain rules are followed.
 
 The following composite operation involving **booleans**:
 
