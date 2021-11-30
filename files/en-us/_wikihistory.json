@@ -91733,67 +91733,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/XRSession/onend": {
-    "modified": "2020-10-15T22:21:53.724Z",
-    "contributors": [
-      "jpmedley",
-      "bershanskiy"
-    ]
-  },
-  "Web/API/XRSession/oninputsourceschange": {
-    "modified": "2020-10-15T22:21:54.497Z",
-    "contributors": [
-      "jpmedley",
-      "bershanskiy"
-    ]
-  },
-  "Web/API/XRSession/onselect": {
-    "modified": "2020-10-15T22:21:55.058Z",
-    "contributors": [
-      "Sheppy",
-      "jpmedley",
-      "bershanskiy"
-    ]
-  },
-  "Web/API/XRSession/onselectend": {
-    "modified": "2020-10-15T22:21:56.029Z",
-    "contributors": [
-      "jpmedley",
-      "bershanskiy"
-    ]
-  },
-  "Web/API/XRSession/onselectstart": {
-    "modified": "2020-10-15T22:21:56.353Z",
-    "contributors": [
-      "jpmedley",
-      "bershanskiy"
-    ]
-  },
-  "Web/API/XRSession/onsqueeze": {
-    "modified": "2020-10-15T22:28:02.081Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRSession/onsqueezeend": {
-    "modified": "2020-10-15T22:28:03.421Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRSession/onsqueezestart": {
-    "modified": "2020-10-15T22:28:02.233Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/XRSession/onvisibilitychange": {
-    "modified": "2020-10-15T22:21:56.341Z",
-    "contributors": [
-      "jpmedley",
-      "bershanskiy"
-    ]
-  },
   "Web/API/XRSession/renderState": {
     "modified": "2020-10-15T22:21:53.049Z",
     "contributors": [
