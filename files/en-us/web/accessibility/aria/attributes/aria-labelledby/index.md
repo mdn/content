@@ -85,7 +85,7 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
 ## Values
 
 - ID reference list
-  - : Takes as its value the `id` or space separated list of ids of elements that label the current element.
+  - : Space separated list of one or more ID values referencing the elements that label the current element.
 
 ## Associated roles
 
