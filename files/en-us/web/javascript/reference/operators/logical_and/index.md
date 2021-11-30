@@ -25,7 +25,7 @@ expr1 && expr2
 
 ## Description
 
-Logical AND (`&&`) evaluates operands from left to right, converts each to a Boolean, then returns the first falsy value found; if all values are truthy, the last value is returned.
+Logical AND (`&&`) evaluates operands from left to right, returning immediately with the value of the first {{Glossary("falsy")}} operand it encounters; if all values are {{Glossary("truthy")}}, the value of the last operand is returned.
 
 If a value can be converted to `true`, the value is so-called {{Glossary("truthy")}}. If a value can be converted to `false`, the value is so-called {{Glossary("falsy")}}.
 
