@@ -1359,7 +1359,6 @@ The addition of a constructor to the {{domxref("CSSStyleSheet")}} interface as w
 ### WebShare API
 
 The [Web Share API](/en-US/docs/Web/API/Web_Share_API) allows sharing of files, URLs and other data from a site.
-Note that Firefox implements {{domxref("Navigator.share()")}} but not {{domxref("Navigator.canShare()")}} ({{bug(1666203)}}).
 
 <table>
   <thead>
