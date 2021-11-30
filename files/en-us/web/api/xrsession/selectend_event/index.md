@@ -55,7 +55,7 @@ An {{domxref("XRInputSourceEvent")}} which, in addition to the generic {{domxref
 
 The `selectend` and {{domxref("XRSession.selectstart_event", "selectstart")}} events tell you when you might want to display something to the user indicating that the primary action is going on. This might be drawing a controller with the activated button in a new color, or showing the targeted object being grabbed and moved around, starting when `selectstart` arrives and stopping when `selectend` is received.
 
-The {{domxref("XRSession.select_event", "select")}} event is the event that tells your code that the user has completed the action they want to complete. This might be as simple as throwing an object or pulling the trigger of a gun in a game, or as involved as placing an object that they were dragging around the world back down again in a new location.
+The {{domxref("XRSession.select_event", "select")}} event is the event that tells your code that the user has completed the action they want to complete. This might be as simple as throwing an object or pulling the trigger of a gun in a game, or as involved as placing a dragged object in a new location.
 
 If your primary action is a simple trigger action and you don't need to animate anything while the trigger is engaged, you can ignore the `selectstart` and `selectend` events and act on the start event.
 

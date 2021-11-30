@@ -25,7 +25,7 @@ browser-compat: api.XRSession.select_event
 ---
 {{APIRef("WebXR Device API")}}
 
-The WebXR event **`select`** is sent to an {{domxref("XRSession")}} when one of the session's input sources has completed a [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_action).
+The WebXR **`select`** event is sent to an {{domxref("XRSession")}} when one of the session's input sources has completed a [primary action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_action).
 
 ## Syntax
 
@@ -41,14 +41,14 @@ onselect = event => { });
 
 ### Trigger
 
-Triggered when users pressing triggers or buttons, tapping a touchpad, speaking a command, or performing a recognizable gesture when using a video tracking system or handheld controller with an accelerometer.
+Triggered when a user presses triggers or buttons, taps a touchpad, speaks a command or performs a recognizable gesture when using a video tracking system or handheld controller with an accelerometer.
 
 ### Event type
 
 An {{domxref("XRInputSourceEvent")}} which, in addition to the generic {{domxref("Event")}} class, includes the following properties:
 
 - {{domxref("XRInputSourceEvent.frame", "frame")}} {{ReadOnlyInline}}
-  - : An {{domxref("XRFrame")}} object providing the needed information about the event frame during which the event occurred. This frame may have been rendered in the past rather than being a current frame. Because this is an _event_ frame, not an _animation_ frame, you cannot call the {{domxref("XRFrame")}} method {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} on it; instead, use {{domxref("XRFrame.getPose", "getPose()")}}.
+  - : An {{domxref("XRFrame")}} object providing the needed information about the event frame during which the event occurred. This frame may have been rendered in the past rather than being a current frame. Because this is an _event_ frame, not an _animation_ frame, you cannot call {{domxref("XRFrame.getViewerPose", "XRFrame.getViewerPose()")}} on it; instead, use {{domxref("XRFrame.getPose", "getPose()")}}.
 - {{domxref("XRInputSourceEvent.inputSource", "inputSource")}} {{ReadOnlyInline}}
   - : An {{domxref("XRInputSource")}} object indicating which input source generated the input event.
 
@@ -56,7 +56,7 @@ An {{domxref("XRInputSourceEvent")}} which, in addition to the generic {{domxref
 
 The {{domxref("XRSession.selectstart_event", "selectstart")}} and {{domxref("XRSession.selectend_event", "selectend")}} events tell you when you might want to display something to the user indicating that the primary action is going on. This might be drawing a controller with the activated button in a new color, or showing the targeted object being grabbed and moved around, starting when `selectstart` arrives and stopping when `selectend` is received.
 
-The `select` event is the event that tells your code that the user has completed the action they want to complete. This might be as simple as throwing an object or pulling the trigger of a gun in a game, or as involved as placing an object that they were dragging around the world back down again in a new location.
+The `select` event tells your code that the user has completed an action. This might be as simple as throwing an object or pulling the trigger of a gun in a game, or as involved as placing a dragged object at a new location.
 
 If your primary action is a simple trigger action and you don't need to animate anything while the trigger is engaged, you can ignore the `selectstart` and `selectend` events and act on the start event.
 
@@ -76,7 +76,7 @@ xrSession.addEventListener("select", event => {
 });
 ```
 
-You can of course also set up a handler for `select` events by setting the {{domxref("XRSession")}} object's `onselect` event handler property to a function that handles the event:
+You can also set up a handler for `select` events by setting the {{domxref("XRSession")}} object's `onselect` event handler property to a function that handles the event:
 
 ```js
 xrSession.onselect = event => {

@@ -47,9 +47,9 @@ Triggered when the set of available WebXR input devices changes.
 An {{domxref("XRInputSourcesChangeEvent")}} which, in addition to the generic {{domxref("Event")}} class, includes the following properties:
 
 - {{domxref("XRInputSourcesChangeEvent.added", "added")}} {{ReadOnlyInline}}
-  - : An array of zero or more {{domxref("XRInputSource")}} objects, each representing an input device which has been newly connected or enabled for use.
+  - : An array of zero or more {{domxref("XRInputSource")}} objects, each representing an input device which has been recently connected or enabled.
 - {{domxref("XRInputSourcesChangeEvent.removed", "removed")}} {{ReadOnlyInline}}
-  - : An array of zero or more {{domxref("XRInputSource")}} objects representing the input devices newly connected or enabled for use.
+  - : An array of zero or more {{domxref("XRInputSource")}} objects representing the input devices recently disconnected or disabled.
 - {{domxref("XRInputSourcesChangeEvent.session", "session")}} {{ReadOnlyInline}}
   - : The {{domxref("XRSession")}} to which this input source change event is being directed.
 
@@ -59,7 +59,7 @@ You can use this event to detect newly-available devices or when devices have be
 
 ## Examples
 
-The following example shows how to set up an event handler which uses `inputsourceschange` events to detect newly-available pointing devices and to load their models in preparation to display them in the next animation frame.
+The following example shows how to set up an event handler which uses `inputsourceschange` events to detect newly-available pointing devices and to load their models in preparation for displaying them in the next animation frame.
 
 ```js
 xrSession.addEventListener("inputsourceschange", onInputSourcesChange);
