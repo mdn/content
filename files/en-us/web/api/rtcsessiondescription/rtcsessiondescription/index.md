@@ -82,5 +82,5 @@ This feature is not part of any current specification. It is no longer on track 
 
 ## See also
 
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API_API)
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCSessionDescription")}}
