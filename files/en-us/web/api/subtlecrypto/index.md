@@ -22,7 +22,7 @@ The **`SubtleCrypto`** interface of the [Web Crypto API](/en-US/docs/Web/API/Web
 >
 > Errors in security system design and implementation can make the security of the system completely ineffective.
 >
-> **If you're not sure you know what you are doing, you probably shouldn't be using this API.**
+> Please learn and experiment, but don't guarantee or imply the security of your work before an individual knowledgeable in this subject matter thoroughly reviews it. The [Crypto 101 Course](https://www.crypto101.io/) can be a great place to start learning about the design and implementation of secure systems.
 
 ## Properties
 
