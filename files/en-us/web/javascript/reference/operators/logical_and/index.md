@@ -11,7 +11,9 @@ browser-compat: javascript.operators.logical_and
 ---
 {{jsSidebar("Operators")}}
 
-The logical AND (`&&`) operator (logical conjunction) for a set of operands is true if, and only if, all of its operands are true.
+The logical AND (`&&`) operator (logical conjunction) for a set of {{jsxref("Boolean")}} operands will be `true` if and only if all the operands are `true`. Otherwise it will be `false`.
+
+More generally, the operator returns the value of the first {{Glossary("falsy")}} operand encountered when evaluating from left to right, or the value of the last operand if they are all {{Glossary("truthy")}}.
 It is typically used with {{jsxref("Boolean")}} (logical) values, in which case it returns a Boolean value.
 However, when the `&&` operator is used with non-Boolean values, it preserves the value of one of the specified operands and returns it as the original non-Boolean value.
 
