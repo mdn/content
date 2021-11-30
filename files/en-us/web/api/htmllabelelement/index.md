@@ -26,6 +26,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLLabelElement.htmlFor")}}
   - : Is a string containing the ID of the labeled control. This reflects the {{htmlattrxref("for", "label")}} attribute.
 
+> **Note:** To programmatically set the `for` attribute, use [`htmlFor`](/en-US/docs/Web/API/HTMLLabelElement/htmlFor).
+
 ## Methods
 
 _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}._
