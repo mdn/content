@@ -12,6 +12,7 @@ tags:
   - pendingRemoteDescription
 browser-compat: api.RTCPeerConnection.pendingRemoteDescription
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property
@@ -76,4 +77,4 @@ else {
   {{domxref("RTCPeerConnection.localDescription")}},
   {{domxref("RTCPeerConnection.pendingLocalDescription")}},
   {{domxref("RTCPeerConnection.currentLocalDescription")}}
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
