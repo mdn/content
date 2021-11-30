@@ -41,9 +41,9 @@ Examples of expressions that can be converted to false are:
 The AND operator preserves non-Boolean values and returns them as they are:
 
 ```js
-result = '' && 'foo';  // result is assigned '' (empty string)
+result = '' && 'foo';  // result is assigned "" (empty string)
 result = 2 && 0;       // result is assigned 0
-result = 'foo' && 4;       // result is assigned 4
+result = 'foo' && 4;   // result is assigned 4
 ```
 
 Even though the `&&` operator can be used with non-Boolean operands, it is still considered a boolean operator since its return value can always be 
@@ -79,8 +79,8 @@ console.log( A() && B() );
 The AND operator has a higher precedence than the OR operator, meaning the `&&` operator is executed before the `||` operator (see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
 
 ```js
-false || true && true              // returns true
-true && (false || false)           // returns false
+false || true && true            // returns true
+true && (false || false)         // returns false
 (2 == 3) || (4 < 0) && (1 == 1)  // returns false
 ```
 
