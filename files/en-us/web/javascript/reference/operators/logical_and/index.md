@@ -14,8 +14,6 @@ browser-compat: javascript.operators.logical_and
 The logical AND (`&&`) operator (logical conjunction) for a set of {{jsxref("Boolean")}} operands will be `true` if and only if all the operands are `true`. Otherwise it will be `false`.
 
 More generally, the operator returns the value of the first {{Glossary("falsy")}} operand encountered when evaluating from left to right, or the value of the last operand if they are all {{Glossary("truthy")}}.
-It is typically used with {{jsxref("Boolean")}} (logical) values, in which case it returns a Boolean value.
-However, when the `&&` operator is used with non-Boolean values, it preserves the value of one of the specified operands and returns it as the original non-Boolean value.
 
 {{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
 
@@ -40,12 +38,12 @@ Examples of expressions that can be converted to false are:
 - empty string (`""` or `''` or ` `` `);
 - `undefined`.
 
-The AND operator preserves non-Boolean values and returns them as is:
+The AND operator preserves non-Boolean values and returns them as they are:
 
 ```js
-result = 0 && 1;   // result is assigned 0
-result = 2 && 0;   // result is assigned 0
-result = 1 && 4;   // result is assigned 4
+result = '' && 'foo';  // result is assigned '' (empty string)
+result = 2 && 0;       // result is assigned 0
+result = 'foo' && 4;       // result is assigned 4
 ```
 
 Even though the `&&` operator can be used with non-Boolean operands, it is still considered a boolean operator since its return value can always be 
@@ -81,9 +79,9 @@ console.log( A() && B() );
 The AND operator has a higher precedence than the OR operator, meaning the `&&` operator is executed before the `||` operator (see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
 
 ```js
-false || true && true             // evaluates `true && true` first, then the || finds and returns true
-true && (false || false)          // evaluates `(false || false)` first, then the && finds and returns false
-(2 == 3) || ((4 < 0) && (1 == 1))  // evaluates `((4 < 0) && (1 == 1))` first, becomes (2 == 3) || false, then returns false
+false || true && true              // returns true
+true && (false || false)           // returns false
+(2 == 3) || (4 < 0) && (1 == 1)  // returns false
 ```
 
 ## Examples
