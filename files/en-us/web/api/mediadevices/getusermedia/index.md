@@ -81,11 +81,10 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
 
 - `constraints`
 
-  - : A {{domxref("MediaStreamConstraints")}} object specifying the types of media to
+  - : An object specifying the types of media to
     request, along with any requirements for each type.
 
-    The `constraints` parameter is a
-    `MediaStreamConstraints` object with two members: `video` and
+    The `constraints` parameter is an object with two members: `video` and
     `audio`, describing the media types requested. Either or both must be
     specified. If the browser cannot find all media tracks with the specified types that
     meet the constraints given, then the returned promise is rejected with
