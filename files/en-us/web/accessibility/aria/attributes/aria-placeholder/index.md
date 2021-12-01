@@ -36,7 +36,7 @@ The `aria-placeholder` is used in addition to, not instead of, a label. They hav
 ## Values
 
 - `<string>`
-  - : The word or short phrase intended to help the user with data entry when a form control has no value. The hint can be a sample value or a brief description of the expected format.
+  - : The word or short phrase to display in a control when the control has no value. 
 
 ## ARIAMixin API 
 
