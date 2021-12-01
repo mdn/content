@@ -93495,21 +93495,6 @@
       "hhillen"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute": {
-    "modified": "2019-10-29T13:47:47.437Z",
-    "contributors": [
-      "mtrea",
-      "JonathanPool",
-      "GothikX",
-      "dkocho4",
-      "rolfedh",
-      "joshbeam",
-      "sidgan",
-      "akhabibullina",
-      "Sheppy",
-      "hhillen"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute": {
     "modified": "2020-10-29T06:34:03.913Z",
     "contributors": [
