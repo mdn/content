@@ -53,11 +53,11 @@ reduce(function(previousValue, currentValue, currentIndex, array) { ... }, initi
 - `callbackFn`
   - : A “reducer” function that takes four arguments:
     - `previousValue`: the value resulting from the previous call to `callbackFn`.
-      On first call, `initialValue` if specified, otherwise the value of `array[0]`. 
+      On first call, `initialValue` if specified, otherwise the value of `array[0]`.
     - `currentValue`: the value of the current element.
-      On first call, the value of `array[0]` if an `initialValue` was specified, otherwise the value of `array[1]`. 
+      On first call, the value of `array[0]` if an `initialValue` was specified, otherwise the value of `array[1]`.
     - `currentIndex`: the index position of `currentValue` in the array.
-      On first call, `0` if `initialValue` was specified, otherwise `1`. 
+      On first call, `0` if `initialValue` was specified, otherwise `1`.
     - `array`: the array to traverse.
 
 - `initialValue` {{optional_inline}}

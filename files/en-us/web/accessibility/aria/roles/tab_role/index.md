@@ -40,7 +40,7 @@ When elements with the `tab` role are selected or active they should have thei
 | <kbd>←</kbd>      | Focuses and optionally activates the previous tab in the tab list. If the current tab is the first tab in the tab list it activates the last tab.                                                                |
 | <kbd>Delete</kbd> | When allowed removes the currently selected tab from the tab list.                                                                                                                                               |
 
-### Required JavaScript features 
+### Required JavaScript features
 
 > **Note:** <p>While there are ways to build tab-like functionality without JavaScript, there are no substitute combination of HTML and CSS only that will provide the same set of functionality that's required above for accessible tabs with content.</p></div>
 

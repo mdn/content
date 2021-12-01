@@ -17,8 +17,8 @@ The HTTP **`Authorization`** request header can be used to provide credentials t
 
 The **`Authorization`** header is usually, but not always, sent after the user agent first attempts to request a protected resource without credentials.
 The server responds with a {{HTTPStatus("401")}} `Unauthorized` message that includes at least one {{HTTPHeader("WWW-Authenticate")}} header.
-This header indicates what authentication schemes can be used to access the resource (and any additional information needed by the client to use them). 
-The user-agent should select the most secure authentication scheme that it supports from those offered, prompt the user for their credentials, and then re-request the resource (including the encoded credentials in the **`Authorization`** header). 
+This header indicates what authentication schemes can be used to access the resource (and any additional information needed by the client to use them).
+The user-agent should select the most secure authentication scheme that it supports from those offered, prompt the user for their credentials, and then re-request the resource (including the encoded credentials in the **`Authorization`** header).
 
 > **Note:** This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework).
 > It can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
@@ -90,7 +90,7 @@ Generally you will need to check the relevant specifications for these (keys for
 - \<response>
   - : A string of the hex digits that proves that the user knows a password.
       The algorithm encodes the username and password, realm, cnonce, qop, nc, and so on.
-      It is described in detail in the specification. 
+      It is described in detail in the specification.
 - **`username`**
   - : A quoted string containing user's name for the specified `realm` in either plain text or the hash code in hexadecimal notation.
       If the name contains characters that aren't allowed in the field, then `username*` can be used instead (not "as well").
@@ -112,9 +112,9 @@ Generally you will need to check the relevant specifications for these (keys for
       - `"auth-int"`: Authentication with integrity protection
 - **`cnonce`**
   - : An quoted ASCII-only string value provided by the client.
-      This is used by both the client and server to provide mutual authentication, provide some message integrity protection, and avoid "chosen plaintext 
+      This is used by both the client and server to provide mutual authentication, provide some message integrity protection, and avoid "chosen plaintext
       attacks".
-      See the specification for additional information. 
+      See the specification for additional information.
 - **`nc`**
   - : Nonce count. The hexadecimal count of requests in which the client has sent the current `cnonce` value (including the current request).
       The server can use duplicate `nc` values to recognise replay requests.

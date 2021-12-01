@@ -30,7 +30,7 @@ If an element has  `role="alert"` and `display: none;` , when the [display](/en-
 ```html
 <p role="alert" style="display: none;">The alert will trigger when the element becomes visible.</p>
 ```
-While triggering an alert via CSS alone is possible, it is better to rely on JavaScript because it has more browser/screen reader support and is often more appropriate as part of a larger user interaction such as inside an event handler or form validation. 
+While triggering an alert via CSS alone is possible, it is better to rely on JavaScript because it has more browser/screen reader support and is often more appropriate as part of a larger user interaction such as inside an event handler or form validation.
 
 With JavaScript, developers control the adding and removing of alerts as appropriate.
 

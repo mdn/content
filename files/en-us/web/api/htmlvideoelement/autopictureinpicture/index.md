@@ -17,7 +17,7 @@ browser-compat: api.HTMLVideoElement.autoPictureInPicture
 ---
 {{APIRef("HTML DOM")}}
 
-The {{domxref("HTMLVideoElement")}} 
+The {{domxref("HTMLVideoElement")}}
 **`autoPictureInPicture`** property reflects the HTML
 attribute indicating whether the video should enter or leave picture-in-picture mode
 automatically.

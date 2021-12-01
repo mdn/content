@@ -35,7 +35,7 @@ A floating-point number of pixels from the left edge of the _document_ at which 
 
 This property was originally specified in the Touch Events specification as a long integer, but was redefined in the CSSOM View Module to be a double-precision
 floating-point number to allow for subpixel precision.
-Even though numeric types both are represented by `Number` in JavaScript, they may be handled differently internally in the browser's code, resulting in potential behavior differences. 
+Even though numeric types both are represented by `Number` in JavaScript, they may be handled differently internally in the browser's code, resulting in potential behavior differences.
 
 See {{anch("Browser compatibility")}} to learn which browsers have been updated to use the revised data type.
 

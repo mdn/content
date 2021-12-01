@@ -85,8 +85,8 @@ efforts as the Work Item is standardized.
 ### Status of partitioning in Firefox
 
 - [**Network Partitioning**](#network_partitioning): Enabled by default for all users since Firefox 85.
-- [**Dynamic State Partitioning**](#dynamic_state_partitioning): 
-  - Since Firefox 86: Enabled for users that have 
+- [**Dynamic State Partitioning**](#dynamic_state_partitioning):
+  - Since Firefox 86: Enabled for users that have
     ["Strict" privacy protections ](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection)enabled.
   - Since Firefox 90: Enabled in private browsing.
 
@@ -125,18 +125,18 @@ for cross-site tracking. As such, the following network APIs and caches are
 
 ### Dynamic Partitioning
 
-To prevent JavaScript accessible storage APIs being used for cross-site 
-tracking, Firefox partitions accessible storage by top-level site. This 
+To prevent JavaScript accessible storage APIs being used for cross-site
+tracking, Firefox partitions accessible storage by top-level site. This
 mechanism ieans that, generally, a third-party embedded in one top-level site
 cannot access data stored under another top-level site.
 
-However, unlike Network Partitioning, this boundary is dynamic and access 
+However, unlike Network Partitioning, this boundary is dynamic and access
 to a third-party's unpartitioned storage can be granted:
 
 - using the [Storage Access API](#storage_access_api).
 - automatically, such as for third-parties providing federated login.
 
-Details about automatic grants are provided in the 
+Details about automatic grants are provided in the
 [Storage Access Heuristics](#storage_access_heuristics) section.
 
 #### Partitioned APIs

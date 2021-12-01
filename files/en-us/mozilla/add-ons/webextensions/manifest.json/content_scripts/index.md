@@ -214,7 +214,7 @@ Details of all the keys you can include are given in the table below.
         <div class="notecard note">
           <p>
             <strong>Note:</strong> <code>match_about_blank</code> is supported
-            in Firefox from version 52. 
+            in Firefox from version 52.
           </p>
           <p>
             Note that in Firefox, content scripts won't be injected into empty

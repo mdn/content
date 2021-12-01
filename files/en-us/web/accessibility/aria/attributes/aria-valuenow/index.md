@@ -10,7 +10,7 @@ tags:
   - Reference
 ---
 
-The `aria-valuenow` attribute defines the current value for a `range` widget. 
+The `aria-valuenow` attribute defines the current value for a `range` widget.
 
 ## Description
 
@@ -53,13 +53,13 @@ Use semantic HTML elements when you can:
   max="2021">
 ```
 
-If there is no known value, like when a progress bar is in an indeterminate state, don't set an `aria-valuenow` attribute. 
+If there is no known value, like when a progress bar is in an indeterminate state, don't set an `aria-valuenow` attribute.
 
 When there is no `aria-valuenow` set, no information is implied about a current value.
 
-When used with sliders and spinbuttons, assistive technologies announce the actual value to users. 
+When used with sliders and spinbuttons, assistive technologies announce the actual value to users.
 
-When used with progressbar and scrollbar, assistive technologies announce the value to users as a percent. When `aria-valuemin` and `aria-valuemax` are both defined, the percent value is calculated as a position on the range. Otherwise, the actual value is announced as a percent. 
+When used with progressbar and scrollbar, assistive technologies announce the value to users as a percent. When `aria-valuemin` and `aria-valuemax` are both defined, the percent value is calculated as a position on the range. Otherwise, the actual value is announced as a percent.
 
 When the value to be announced, either the actual value or the value as a percent, may not be clear to users, the [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute should be used to provide a user-friendly representation of the value. When set, the valuetext string is announced instead of the valuenow numeric value. For example, if a slider represents the days of the week, so the day of the week's `aria-valuenow` is a number, the `aria-valuetext` property should be set to a string that makes the slider value understandable, such as "Monday".
 
@@ -78,7 +78,7 @@ When the value to be announced, either the actual value or the value as a percen
 </div>
 ```
 
-The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so." 
+The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so."
 
 ```html
 <label for="temperature">
@@ -96,7 +96,7 @@ If we employ native HTML semantics with {{HTMLElement('input')}} we get styles a
 - `<number>`
   - : A decimal number, between the minimum and maximum values.
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaValueNow")}}
   - : The  [`ariaValueNow`](/en-US/docs/Web/API/Element/ariaValueNow) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-valuenow` attribute.
@@ -105,14 +105,14 @@ If we employ native HTML semantics with {{HTMLElement('input')}} we get styles a
 
 ## Associated roles
 
-Used in roles: 
+Used in roles:
 - [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
 - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
 - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
 - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 
-Inherited into roles: 
+Inherited into roles:
 - [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)
 - [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
@@ -121,7 +121,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-valuenow","ARIA: aria-valuenow Attribute")}}  | {{Spec2('ARIA')}} |
 

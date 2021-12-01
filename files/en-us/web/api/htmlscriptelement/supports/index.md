@@ -34,7 +34,7 @@ HTMLScriptElement.supports(type)
     - `"module"`: Test if [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules) are supported.
 
     Any other value will cause the method to return `false`.
-    
+
 
 ### Return value
 

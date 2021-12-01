@@ -82,7 +82,7 @@ Some prominent web applications that use the application role properly are:
 
 ## Accessibility concerns
 
-Improperly using the `application` role can unintentionally take away access from information on a web page, so be very mindful of using it. Think hard on if you actually need it and cannot just use a set of other, known, widgets to accomplish the same task. 
+Improperly using the `application` role can unintentionally take away access from information on a web page, so be very mindful of using it. Think hard on if you actually need it and cannot just use a set of other, known, widgets to accomplish the same task.
 
 If used, the application role should be added to the lowest common container possible, not on the `<body>` element, for example. Also be sure to test what you have written with assistive technology, to verify it works as intended.
 

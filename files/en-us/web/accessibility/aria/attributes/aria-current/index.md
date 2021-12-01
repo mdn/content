@@ -13,7 +13,7 @@ A non-null `aria-current` state on an element indicates that this element repres
 
 ## Description
 
-When you have a group of related elements, such as several links in a breadcrumb or steps in a multi-step flow, with one element in the group styled differently from the others to indicate to the sighted user that this is the current element within its group, the `aria-current` should be used to inform the assistive technology user what has been indicated via styling. 
+When you have a group of related elements, such as several links in a breadcrumb or steps in a multi-step flow, with one element in the group styled differently from the others to indicate to the sighted user that this is the current element within its group, the `aria-current` should be used to inform the assistive technology user what has been indicated via styling.
 
 In a breadcrumb list, when a link within a set of pagination links is styled to indicate the user is currently on that page, `aria-current="page"` should be set on that link. In a multi step based process with a step indicator such as a multi-page survey or a multi step checkout or registration process, when the current step icon is visually different to represent that it is the current step, that icon's container should have `aria-current="step"` for assistive technology users who may not be able to "see" the visual difference.
 
@@ -23,11 +23,11 @@ The `aria-current` attribute accepts a limited list of [values](#Values) includi
 
 When something is selected rather than current, such as a [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role) in a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tablist_role), use [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) to indicate the currently-displayed tabpanel.
 
-> **Note:** Don't use `aria-current` as a substitute for [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) in [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/Option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_role) or [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role). 
+> **Note:** Don't use `aria-current` as a substitute for [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) in [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/Option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_role) or [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role).
 
 ## Example
 
-The breadcrumb for the "current page" should have `aria-current="page"` set on it. 
+The breadcrumb for the "current page" should have `aria-current="page"` set on it.
 
 ```html
 <nav aria-label="Breadcrumb" class="breadcrumb">
@@ -64,22 +64,22 @@ If the element representing the current page in the breadcrumb was not a link, t
 
 ## Values
 
-- `page`	
+- `page`
   - : Represents the current page within a set of pages such as the link to the current document in a breadcrumb.
-- `step`	
+- `step`
   - : Represents the current step within a process such as the current step in an enumerated multi step checkout flow .
-- `location`	
+- `location`
   - : Represents the current location within an environment or context such as the image that is visually highlighted as the current component of a flow chart.
-- `date`	
+- `date`
   - : Represents the current date within a collection of dates such as the current date within a calendar.
-- `time`	
+- `time`
   - : Represents the current time within a set of times such as the current time within a timetable.
-- `true`	
+- `true`
   - : Represents the current item within a set.
-- `false` (default)	
+- `false` (default)
   - : Does not represent the current item within a set.
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaCurrent")}}
   - : The [`ariaCurrent`](/en-US/docs/Web/API/Element/ariaCurrent) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-current` attribute.
@@ -92,7 +92,7 @@ Usable in all roles; except in for elements with the role of [`gridcell`](/en-US
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-current","ARIA: aria-current Attribute")}}  | {{Spec2('ARIA')}} |
 

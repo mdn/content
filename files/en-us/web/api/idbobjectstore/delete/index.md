@@ -15,7 +15,7 @@ The **`delete()`** method of the
 and, in a separate thread, deletes the specified record or records.
 
 Either a key or an {{domxref("IDBKeyRange")}} can be passed, allowing one or multiple
-records to be deleted from a store. To delete all records in a store, use 
+records to be deleted from a store. To delete all records in a store, use
 {{domxref("IDBObjectStore.clear")}}.
 
 Bear in mind that if you are using a {{domxref("IDBCursor", "IDBCursor")}}, you can use

@@ -7,7 +7,7 @@ tags:
 ---
 {{SVGRef}}
 
-The **`viewBox`** attribute defines the position and dimension, in user space, of an SVG viewport. 
+The **`viewBox`** attribute defines the position and dimension, in user space, of an SVG viewport.
 
 The value of the `viewBox` attribute is a list of four numbers: `min-x`, `min-y`, `width` and `height`. The numbers separated by whitespace and/or a comma, which specify a rectangle in user space which is mapped to the bounds of the viewport established for the associated SVG element (not the [browser viewport](/en-US/docs/Glossary/Viewport)).
 

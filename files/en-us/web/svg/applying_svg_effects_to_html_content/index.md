@@ -226,7 +226,7 @@ Blurring is computation heavy, so ensure to use it sparingly, especially in elem
 
 ### Example: Text Effects
 
-SVG effects can also be used to add a more dynamic and flexible approach to adding text compared to plain HTML text. 
+SVG effects can also be used to add a more dynamic and flexible approach to adding text compared to plain HTML text.
 
 By creating the text using SVG elements combined with HTML you can make a variety of different text effects. You can rotate the text:
 

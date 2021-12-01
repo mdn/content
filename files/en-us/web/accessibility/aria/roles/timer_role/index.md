@@ -10,7 +10,7 @@ tags:
   - timer
 ---
 
-The **`timer`** role indicates to assistive technologies that an element is a numerical counter listing the amount of elapsed time from a starting point or the remaining time until an end point. 
+The **`timer`** role indicates to assistive technologies that an element is a numerical counter listing the amount of elapsed time from a starting point or the remaining time until an end point.
 
 ```html
 <div role="timer" id="eggtimer">0</div>
@@ -22,12 +22,12 @@ This defines this `div` element as a timer with no remaining time.
 
 The `timer` role indicates to assistive technologies that this part of the web content is a live region containing a timer listing the time remaining or elapsed time. A timer's inner text should be an updating current time measurement. While the value does not necessarily need to be machine parsable, it should continuously update at regular intervals unless the timer is paused or reaches its end-point.
 
-Along with alert, log, and marquee, the `timer` role is a live region and can be modified by live region attributes. 
+Along with alert, log, and marquee, the `timer` role is a live region and can be modified by live region attributes.
 
 ### Associated WAI-ARIA roles, states, and properties
 
 - aria-label
-  - : Used to provide the name of the timer. Use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present, otherwise use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).	
+  - : Used to provide the name of the timer. Use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present, otherwise use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
 
 - aria-live
 

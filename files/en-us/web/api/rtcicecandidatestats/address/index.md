@@ -43,7 +43,7 @@ the candidate.
 
 - If the value of `address` is comprised entirely of digits from 0-9 with
   periods as separators, the value is interpreted as an IPv4 address.
-- If the value is entirely comprised of hexadecimal digits and colon (":") 
+- If the value is entirely comprised of hexadecimal digits and colon (":")
   characters, it is interpreted as an IPv6 address.
 - Otherwise, the `address` is presumed to be a fully-qualified domain name,
   which is resolved first using an AAAA record (assuming IPv6 is available), then using

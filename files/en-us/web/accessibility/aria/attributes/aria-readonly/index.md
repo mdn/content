@@ -10,13 +10,13 @@ tags:
   - Reference
 ---
 
-The `aria-readonly` attribute indicates that the element is not editable, but is otherwise operable. 
+The `aria-readonly` attribute indicates that the element is not editable, but is otherwise operable.
 
 ## Description
 
 When you want to indicate that an interactive element works but is not editable, set `aria-readonly="true"`. This indicates to the user that an interactive element that would normally be focusable and copyable has been placed in a read-only (not disabled) state.
 
-When `aria-readonly` is set to `true`, it means the user can read but not set the value of the widget. Read-only elements are still relevant to the user, so you should not prevent the user from navigating to the element or its focusable descendants or copying the value. 
+When `aria-readonly` is set to `true`, it means the user can read but not set the value of the widget. Read-only elements are still relevant to the user, so you should not prevent the user from navigating to the element or its focusable descendants or copying the value.
 
 Examples include:
 
@@ -24,7 +24,7 @@ Examples include:
 - Row and column headers in a spreadsheet.
 - The total value in a shopping cart.
 
-If the non-changeable value shouldn't be able to receive focus, use [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) instead. 
+If the non-changeable value shouldn't be able to receive focus, use [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) instead.
 
 > **Note:** When using semantic HTML form controls, if you set the `readonly` attribute, you don't need to include `aria-readonly="true"`.
 
@@ -37,7 +37,7 @@ If the non-changeable value shouldn't be able to receive focus, use [`aria-disab
 - `false` (default)
   - : The element is not readonly.
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaReadOnly")}}
   - : The  [`ariaReadOnly`](/en-US/docs/Web/API/Element/ariaReadOnly) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-readonly` attribute.
@@ -46,7 +46,7 @@ If the non-changeable value shouldn't be able to receive focus, use [`aria-disab
 
 ## Associated roles
 
-Used in roles: 
+Used in roles:
 - [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
 - [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
@@ -66,7 +66,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-readonly","ARIA: aria-readonly Attribute")}}  | {{Spec2('ARIA')}} |
 

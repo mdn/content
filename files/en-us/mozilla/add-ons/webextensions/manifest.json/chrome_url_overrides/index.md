@@ -59,7 +59,7 @@ The `chrome_url_overrides` key is an object that may have the following properti
       <td><code>String</code></td>
       <td>
         <p>
-          Provide a replacement for the page that shows the browsing history. 
+          Provide a replacement for the page that shows the browsing history.
         </p>
       </td>
     </tr>

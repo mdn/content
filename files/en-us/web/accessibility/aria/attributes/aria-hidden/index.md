@@ -10,11 +10,11 @@ tags:
   - Reference
 ---
 
-The `aria-hidden` state indicates whether the element is exposed to an accessibility API. 
+The `aria-hidden` state indicates whether the element is exposed to an accessibility API.
 
 ## Description
 
-The `aria-hidden` attribute can be used to hide non-interactive content from the accessibility API. 
+The `aria-hidden` attribute can be used to hide non-interactive content from the accessibility API.
 
 Adding `aria-hidden="true"` to an element removes that element and all of its children from the accessibility tree. This can improve the experience for assistive technology users by hiding:
 
@@ -24,7 +24,7 @@ Adding `aria-hidden="true"` to an element removes that element and all of its ch
 
 The presence of the `aria-hidden` attribute hides content from assistive technology but doesn't visually hide anything.  
 
-`aria-hidden="true"` should not be used on elements that can recieve focus. Additionally, since this attribute is inherited by an element's children, it should not be added onto the parent or ancestor of a focusable element. 
+`aria-hidden="true"` should not be used on elements that can recieve focus. Additionally, since this attribute is inherited by an element's children, it should not be added onto the parent or ancestor of a focusable element.
 
 > **Warning:** Do not use `aria-hidden="true"` on focusable elements.
 
@@ -32,11 +32,11 @@ An element's hidden status is based on whether it is rendered. Rendering is usua
 
 Use caution when using `aria-hidden` to hide visibly rendered content from assistive technologies. You should not be hiding visible content unless doing so improves the experience for users of assistive technologies by removing redundant or extraneous content. Only when identical or equivalent meaning and functionality is exposed to assistive technologies can removing visible content from the accessibility API be considered.
 
-> **Note:** Consider all disabilities when hiding visibly rendered content from assistive technologies. Not all users of assistive technology are visually impaired. If visible content doesn't match text content in the accessibility API, the user experience will be negatively impacted for sighted users. 
+> **Note:** Consider all disabilities when hiding visibly rendered content from assistive technologies. Not all users of assistive technology are visually impaired. If visible content doesn't match text content in the accessibility API, the user experience will be negatively impacted for sighted users.
 
-On the surface, the `aria-hidden="true"` and the `role="presentation"` and its synonoym `role="none"` seem similar, but the intent behind each is different. 
+On the surface, the `aria-hidden="true"` and the `role="presentation"` and its synonoym `role="none"` seem similar, but the intent behind each is different.
 
-- `aria-hidden="true"` will remove the entire element from the accessibility API. 
+- `aria-hidden="true"` will remove the entire element from the accessibility API.
 - `role="presentation"` and `role="none"` will remove the semantic meaning of an element while still exposing it and its content to assistive technology.  
 
 `aria-hidden="true"` should not be added when:
@@ -62,23 +62,23 @@ Adding `aria-hidden="true"` to the icon hides the icon character from being incl
 </button>
 ```
 
-We have a button with [a Font Awesome icon](https://fontawesome.com/). We hide the icon from assistive technologies with `aria-hidden="true"`, as exposing the icon to assistive technologies could lead to redundancy or, if the icon doesn't have the same content as the visible text, confusion. 
+We have a button with [a Font Awesome icon](https://fontawesome.com/). We hide the icon from assistive technologies with `aria-hidden="true"`, as exposing the icon to assistive technologies could lead to redundancy or, if the icon doesn't have the same content as the visible text, confusion.
 
 ## Values
 
-- `false`	
+- `false`
   - : The element is exposed to the accessibility API as if it was rendered.
-- `true`	
+- `true`
   - : The element is hidden from the accessibility API.
-- `undefined` (default)	
+- `undefined` (default)
   - : The element's hidden state is determined by the user agent based on whether it is rendered.
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaHidden")}}
   - : The  [`ariaHidden`](/en-US/docs/Web/API/Element/ariaHidden) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-hidden` attribute, which Indicates whether the element is exposed to an accessibility API.
 - {{domxref("ElementInternals.ariaHidden")}}
-  - : The  [`ariaHidden`](/en-US/docs/Web/API/ElementInternals/ariaHidden) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-hidden` attribute 
+  - : The  [`ariaHidden`](/en-US/docs/Web/API/ElementInternals/ariaHidden) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-hidden` attribute
 
 ## Associated roles
 
@@ -86,7 +86,7 @@ Used in **ALL** roles
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-hidden","ARIA: aria-hidden Attribute")}}  | {{Spec2('ARIA')}} |
 

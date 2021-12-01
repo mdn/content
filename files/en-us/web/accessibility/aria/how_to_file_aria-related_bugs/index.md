@@ -9,7 +9,7 @@ The state of ARIA technology has always depended on the community. If you notice
 
 > **Note:** When finding a bug, please also update the relevant compatibility tables in the [examples page](/en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases).
 
-### Screen Readers 
+### Screen Readers
 
 <table style="width: 100%;">
  <thead>
@@ -39,7 +39,7 @@ The state of ARIA technology has always depended on the community. If you notice
   </table>
 
 
-### Browsers 
+### Browsers
 
 
 <table style="width: 100%;">

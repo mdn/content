@@ -9,16 +9,16 @@ tags:
   - aria-checked
 ---
 
-The  `aria-checked` attribute indicates the current "checked" state of checkboxes, radio buttons, and other widgets. 
+The  `aria-checked` attribute indicates the current "checked" state of checkboxes, radio buttons, and other widgets.
 > **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="checkbox"` and `type="radio"` as these have built in semantics and do not require ARIA attributes.
 
 ## Description
 
 The `aria-checked` attribute indicates whether the element is checked (`true`), unchecked (`false)`, or if the checked status is indeterminate (`mixed`), meaning it is neither checked nor unchecked. The `mixed` value is supported by the tri-state input roles of [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) and [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitemcheckbox_role).
 
-The `mixed` value is not supported on [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/Radio_role), [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitemradio_role), or [`switch`](/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role) and elements that inherits from these. The value will be false if `mixed` is set when not supported. 
+The `mixed` value is not supported on [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/Radio_role), [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitemradio_role), or [`switch`](/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role) and elements that inherits from these. The value will be false if `mixed` is set when not supported.
 
-```html 
+```html
 <span role="checkbox" id="checkBoxInput" aria-checked="false" tabindex="0" aria-labelledby="chk15-label"></span> 
 <label id="chk15-label">Subscribe to the newsletter</label>
 ```
@@ -38,17 +38,17 @@ By using the {{htmlelement("input")}} element with `type="checkbox"` instead of 
 ## Values
 
 - false
-  - : The element supports being checked but is not currently checked. 
-- true	
+  - : The element supports being checked but is not currently checked.
+- true
   - : The element is checked.
-- mixed	
+- mixed
   - : for [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) and  [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitemcheckbox_role) only, equivalent to `indeterminate`, indicating a mixed mode value of neither checked nor unchecked.
-- undefined (default)	
+- undefined (default)
   - : The element does not support being checked.
   
 ## Associated roles
 
-Used in roles: 
+Used in roles:
 
 - [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
 - [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitemcheckbox_role)

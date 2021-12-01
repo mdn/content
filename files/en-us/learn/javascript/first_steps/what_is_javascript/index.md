@@ -259,7 +259,7 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 
 > **Note:** If your example doesn't seem to work, go through the steps again and check that you did everything right.
 > Did you save your local copy of the starting code as a `.html` file?
-> Did you add your {{htmlelement("script")}} element just before the `</head>` tag? 
+> Did you add your {{htmlelement("script")}} element just before the `</head>` tag?
 > Did you enter the JavaScript exactly as shown? **JavaScript is case sensitive, and very fussy, so you need to enter the syntax exactly as shown, otherwise it may not work.**
 
 > **Note:** You can see this version on GitHub as [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)).
