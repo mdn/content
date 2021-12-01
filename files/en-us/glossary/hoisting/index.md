@@ -115,7 +115,7 @@ For information and examples see [`let` > temporal dead zone](/en-US/docs/Web/Ja
 
 ## `class` hoisting
 
-Classes defined using a [class declaration](/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) are hoisted, which means that JavaScript has a reference the class.
+Classes defined using a [class declaration](/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) are hoisted, which means that JavaScript has a reference to the class.
 However the class is not intialized by default, so any code that uses it before the line in which it is initialized is executed will throw a `ReferenceError`.
 
 
@@ -125,7 +125,7 @@ However the class is not intialized by default, so any code that uses it before 
 
 The expressions evaluate to a function or class (respectively), which are typically assigned to a variable.
 In this case the variable declaration is hoisted and the expression is its initialization.
-Therefore the expressions are not evaluated until the relevant line is is executed.
+Therefore the expressions are not evaluated until the relevant line is executed.
 
 
 ## See also
