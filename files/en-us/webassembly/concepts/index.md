@@ -118,7 +118,7 @@ You can find full documentation on Emscripten at [emscripten.org](https://emscri
 
 Do you want to build your own compiler, or your own tools, or make a JavaScript library that generates WebAssembly at runtime?
 
-In the same fashion as physical assembly languages, the WebAssembly binary format has a text representation — the two have a 1:1 correspondence. You can write or generate this format by hand and then convert it into the binary format with any of several [WebAssemby text-to-binary tools](https://webassembly.org/getting-started/advanced-tools/).
+In the same fashion as physical assembly languages, the WebAssembly binary format has a text representation — the two have a 1:1 correspondence. You can write or generate this format by hand and then convert it into the binary format with any of several [WebAssembly text-to-binary tools](https://webassembly.org/getting-started/advanced-tools/).
 
 For a simple guide on how to do this, see our [Converting WebAssembly text format to wasm](/en-US/docs/WebAssembly/Text_format_to_wasm) article.
 
