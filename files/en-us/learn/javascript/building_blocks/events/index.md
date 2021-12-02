@@ -14,9 +14,9 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
-Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them.
+Events are actions or occurrences that happen in the system you are programming, which the system tells you about so your code can react to them.
 
-For example, if the user selects a button on a webpage, you might want to respond to that action by displaying an information box.
+For example, if the user selects a button on a webpage, you might want to react to that action by displaying an information box.
 In this article, we discuss some important concepts surrounding events, and look at how they work in browsers.
 This won't be an exhaustive study; just what you need to know at this stage.
 
@@ -63,7 +63,7 @@ For example:
 - A video is played, paused, or finishes.
 - An error occurs.
 
-You can gather from this (and from glancing at the MDN [event reference](/en-US/docs/Web/Events)) that there are **a lot** of events that can be responded to.
+You can gather from this (and from glancing at the MDN [event reference](/en-US/docs/Web/Events)) that there are **a lot** of events that can be fired.
 
 To react to an event, you attach an **event handler** to it. This is a block of code (usually a JavaScript function that you as a programmer create) that runs when the event fires.
 When such a block of code is defined to run in response to an event, we say we are **registering an event handler**.
@@ -104,7 +104,7 @@ In this code, we store a reference to the [`<button>`](/en-US/docs/Web/HTML/Elem
 
 We also define a function that returns a random number.
 
-The third part of the code is where we define and register the event handler. The `<button>` element has an event called `'click'` that fires when the user clicks the button. Objects that can receive events have an {{domxref("EventTarget/addEventListener", "addEventListener()")}} method, that takes at least two arguments: the name of the event and a function to handle the event. So we call the button's `addEventListener()` method, passing in:
+The third part of the code is where we define and register the event handler. The `<button>` element has an event called `'click'` that fires when the user clicks the button. Objects that can fire events have an {{domxref("EventTarget/addEventListener", "addEventListener()")}} method, that takes at least two arguments: the name of the event and a function to handle the event. So we call the button's `addEventListener()` method, passing in:
 
 * the string `'click'`, to indicate that we want to listen to the click event
 * a function to call when the event happens. In our case the function generates a random RGB color and sets the page [`<body>`](/en-US/docs/Web/HTML/Element/body) [`background-color`](/en-US/docs/Web/CSS/background-color) equal to that color.
@@ -306,7 +306,7 @@ for (const button of buttons) {
 }
 ```
 
-> **Note:** Separating your programming logic from your content also makes your site more friendly to search engines.
+Finally, many common server configurations will disallow inline JavaScript, as a security measure.
 
 ## Which mechanism should I use?
 
@@ -343,6 +343,12 @@ This is called the **event object**, and it is automatically passed to event han
 For example, let's rewrite our random color example again slightly:
 
 ```js
+const btn = document.querySelector('button');
+
+function random(number) {
+  return Math.floor(Math.random() * (number+1));
+}
+
 function bgChange(e) {
   const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
   e.target.style.backgroundColor = rndCol;
@@ -411,7 +417,7 @@ div {
 
 Most event objects have a standard set of properties and methods available on the event object; see the {{domxref("Event")}} object reference for a full list.
 
-Some event objects add extra properties that are relevant to that particular type of event. For example, the {{domxref("Document/keydown_event", "keydown")}} event fires when the user presses a key, and its event object has a `key` property that tells you which key was pressed:
+Some event objects add extra properties that are relevant to that particular type of event. For example, the {{domxref("Document/keydown_event", "keydown")}} event fires when the user presses a key. Its event object is a {{domxref("KeyboardEvent")}}, which is a specialized `Event` object with a `key` property that tells you which key was pressed:
 
 ```html
 <input id="textBox" type="text"></input>
