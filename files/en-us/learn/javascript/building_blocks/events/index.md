@@ -364,54 +364,11 @@ Here you can see we are including an event object, **e**, in the function, and i
 The `target` property of the event object is always a reference to the element the event occurred upon.
 So, in this example, we are setting a random background color on the button, not the page.
 
+> **Note:** See the [Event delegation](#event_delegation) section below for an example where we use `event.target`.
+
 > **Note:** You can use any name you like for the event object — you just need to choose a name that you can then use to reference it inside the event handler function.
 `e`/`evt`/`event` are most commonly used by developers because they are short and easy to remember.
 It's always good to be consistent — with yourself, and with others if possible.
-
-### Using event targets
-
-`e.target` is incredibly useful when you want to set the same event handler on multiple elements and do something to all of them when an event occurs on them.
-You might, for example, have a set of 16 tiles that disappear when selected.
-It is useful to always be able to just set the thing to disappear as `e.target`, rather than having to select it in some more difficult way.
-
-In the following example we create 16 {{htmlelement("div")}} elements using JavaScript.
-We then select all of them using {{domxref("document.querySelectorAll()")}}, then loop through each one, adding an `click` handler to each that makes it so that a random color is applied to each one when selected:
-
-```js
-for (let i = 1; i <= 16; i++) {
-  const myDiv = document.createElement('div');
-  myDiv.style.backgroundColor = 'red';
-  document.body.appendChild(myDiv);
-}
-
-function random(number) {
-  return Math.floor(Math.random()*number);
-}
-
-function bgChange() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-  return rndCol;
-}
-
-const divs = document.querySelectorAll('div');
-for (const div of divs) {
-  div.addEventListener('click', e => e.target.style.backgroundColor = bgChange());
-}
-```
-
-The output is as follows (try clicking around on it — have fun):
-
-```css hidden
-div {
-  height: 100px;
-  width: 25%;
-  float: left;
-}
-```
-
-{{ EmbedLiveSample('Using_event_targets', '100%', 430, "", "") }}
-
-> **Note:** See [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html) for the full source code; also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) here.
 
 ### Extra properties of event objects
 
@@ -499,14 +456,96 @@ The output is as follows:
 
 > **Note:** for the full source code, see [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) here.)
 
+
 ## Event bubbling and capture
 
-The final subject to cover here is something that you won't come across often, but it can be a real pain if you don't understand it.
-Event bubbling and capture are two mechanisms that describe what happens when two handlers of the same event type are activated on one element.
+Event bubbling and capture are two mechanisms that describe how the browser handles events when elements are nested inside each other.
+
+### Setting a listener on a parent element
+
+Consider a web page like this:
+
+```html
+<div id="container">
+  <button>Click me!</button>
+</div>
+<pre id="output"></pre>
+```
+
+Here the button is inside another element, a {{HTMLElement("div")}} element. We say that the `<div>` element here is the **parent** of the element it contains. What happens if we add a click event handler to the parent, then click the button?
+
+```js
+const output = document.querySelector('#output');
+function handleClick(e) {
+  output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
+}
+
+const container = document.querySelector('#container');
+container.addEventListener('click', handleClick);
+```
+
+{{ EmbedLiveSample('Setting a listener on a parent element', '100%', 200, "", "") }}
+
+You'll see that the parent fires a click event when the user clicks the button:
+
+```
+You clicked on a DIV element
+```
+
+This makes sense: the button is inside the `<div>`, so when you click the button you're also implicitly clicking the element it is inside.
+
+### Bubbling example
+
+What happens if we add event listeners to the button _and_ the parent?
+
+```html
+<body>
+  <div id="container">
+    <button>Click me!</button>
+  </div>
+  <pre id="output"></pre>
+</body>
+```
+
+Let's try adding click event handlers to the button, its parent (the `<div>`), and the {{HTMLElement("body")}} element that contains both of them:
+
+```js
+const output = document.querySelector('#output');
+function handleClick(e) {
+  output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
+}
+
+const container = document.querySelector('#container');
+const button = document.querySelector('button');
+
+document.body.addEventListener('click', handleClick);
+container.addEventListener('click', handleClick);
+button.addEventListener('click', handleClick);
+```
+
+{{ EmbedLiveSample('Bubbling example', '100%', 200, "", "") }}
+
+You'll see that all three elements fire a click event when the user clicks the button:
+
+```
+You clicked on a BUTTON element
+You clicked on a DIV element
+You clicked on a BODY element
+```
+
+In this case:
+
+* the click on the button fires first
+* followed by the click on its parent (the `<div>` element)
+* followed by the `<div>` element's parent (the `<body>` element).
+
+We describe this by saying that the event **bubbles up** from the innermost element that was clicked.
+
+This behavior can be useful and can also cause unexpected problems. In the next section we'll see a problem that it causes, and find the solution.
 
 ### Video player example
 
-Let's look at an example to make this easier — open up the [show-video-box.html](https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box.html) example in a new tab (and the [source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html) in another tab.) It is also available live below:
+Open up the [show-video-box.html](https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box.html) example in a new tab (and the [source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html) in another tab.) It is also available live below:
 
 {{ EmbedLiveSample('Video_player_example', '100%', 500, "", "") }}
 
@@ -696,10 +735,10 @@ clearButton.addEventListener('click', clearOutput);
 
 ### Fixing the problem with stopPropagation()
 
-This is a very annoying behavior, but there is a way to fix it!
+As we saw in the video example, this can be a very annoying behavior, but there is a way to prevent it!
 The standard [`Event`](/en-US/docs/Web/API/Event) object has a function available on it called [`stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) which, when invoked on a handler's event object, makes it so that first handler is run but the event doesn't bubble any further up the chain, so no more handlers will be run.
 
-We can, therefore, fix our current problem by changing the second handler function in the previous code block to this:
+So we can fix our current problem by changing the second handler function in the previous code block to this:
 
 ```js
 video.addEventListener('click', e => {
@@ -718,12 +757,67 @@ You can try making a local copy of the [show-video-box.html source code](https:/
 
 ### Event delegation
 
-Bubbling also allows us to take advantage of **event delegation** — this concept relies on the fact that if you want some code to run when you select any one of a large number of child elements, you can set the event listener on their parent and have events that happen on them bubble up to their parent rather than having to set the event listener on every child individually.
-Remember, bubbling involves checking the element the event is fired on for an event handler first, then moving up to the element's parent, etc.
+Event bubbling isn't just annoying though: it can be very useful. In particular it enables a practice called **event delegation**. In this practice, when we want some code to run when the user interacts with any one of a large number of child elements, we set the event listener on their parent and have events that happen on them bubble up to their parent rather than having to set the event listener on every child individually.
 
-A good example is a series of list items — if you want each one to pop up a message when selected, you can set the `click` event listener on the parent `<ul>`, and events will bubble from the list items to the `<ul>`.
+Let's go back to our first example, where we set the background color of the whole page when the user clicked a button. Suppose that instead, the page is divided into 16 tiles, and we want to set each tile to a random color when the user clicks that tile.
 
-This concept is explained further on David Walsh's blog, with multiple examples — see [How JavaScript Event Delegation Works](https://davidwalsh.name/event-delegate).
+Here's the HTML:
+
+```html
+<div id="container">
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+</div>
+```
+
+We have a little CSS, to set the size and position of the tiles:
+
+```css
+.tile {
+  height: 100px;
+  width: 25%;
+  float: left;
+}
+```
+
+Now in the JavaScript, we could add a click event handler for every tile. But a much simpler and more efficient option is to set the click event handler on the parent, and rely on event bubbling to ensure that the handler is executed when the user clicks on a tile:
+
+```js
+function random(number) {
+  return Math.floor(Math.random()*number);
+}
+
+function bgChange() {
+  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  return rndCol;
+}
+
+const container = document.querySelector('#container');
+
+container.addEventListener('click', event => event.target.style.backgroundColor = bgChange());
+```
+
+The output is as follows (try clicking around on it — have fun):
+
+{{ EmbedLiveSample('Event delegation', '100%', 430, "", "") }}
+
+> **Note:** In this example we're using `event.target` to get the element that was the target of the event (that is, the innermost element). If we wanted to access the element that fired this event (in this case the container) we could use `event.currentTarget`.
+
+> **Note:** See [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html) for the full source code; also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) here.
 
 ## Test your skills!
 
