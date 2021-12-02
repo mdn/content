@@ -53,15 +53,16 @@ To explicitly convert its return value (or any expression in general) to the cor
 ### Short-circuit evaluation
 
 The logical AND expression is a short-circuit operator.
-As each operand is converted to a boolean, if the result of one conversion is found to be `false`, the AND operator stops and returns the original value of that falsy operand; it does **not** evaluate any of the remaining operands:
+As each operand is converted to a boolean, if the result of one conversion is found to be `false`, the AND operator stops and returns the original value of that falsy operand; it does **not** evaluate any of the remaining operands.
+
+Consider the pseudo code below.
 
 ```
 (some falsy expression) && expr
 ```
 
-Due to short-circuiting, the `expr` part above is **never evaluated**, meaning any side effects of doing so won't occur (e.g., if `expr` is a function call, the calling never takes place). 
-This happens because the first operand evaluated is converted to `false`, which turns the final value of the AND operator into `(some falsy expression)` if it's non-Boolean, or 
-`false` if it's a Boolean.
+The `expr` part is **never evaluated** because the first operand `(some falsy expression)` is evaluated is `falsy`.
+If `expr` is a function, the function is never called.
 See the example below:
 
 ```js
