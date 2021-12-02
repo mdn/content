@@ -13,7 +13,7 @@ The `aria-expanded` attribute is set on an element to indicate if a control is e
 
 ## Description
 
-There are several widgets that can be expanded and collapsed, including menus, dialogs, and accordian panels. Each of these objects, in turn, has an interactive element that controls their opening and closing. The `aria-expanded` attribute is applied to this focusable, interactive control that toggles the visibility of the object.
+There are several widgets that can be expanded and collapsed, including menus, dialogs, and accordion panels. Each of these objects, in turn, has an interactive element that controls their opening and closing. The `aria-expanded` attribute is applied to this focusable, interactive control that toggles the visibility of the object.
 
 For example, `aria-expanded` is applied to the parent item in a DOM tree to indicate whether its child branch is shown. The parent controls the visibility of the associated child branch, as well.
 
