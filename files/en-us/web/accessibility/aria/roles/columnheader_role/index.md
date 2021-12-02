@@ -73,7 +73,7 @@ Columnheaders should contain a title or header information for the column.
 
 The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. It is recommended to use the native HTML `<th>` element with the `scope` attribute set `<th scope="col">` instead of a `<div>` or other element. If you use semantic HTML's `<th scope="col">` the role attribute is not required, but can be included as a back up to ensure the table retains its semantics should the default semantics be removed with a CSS display property value.
 
-The `aria-sort` attribute can be added to a `<th scope="col>`  even when the ARIA role attribute is not specified.
+The `aria-sort` attribute can be added to a `<th scope="col">`  even when the ARIA role attribute is not specified.
 
 ### Prefer HTML
 
