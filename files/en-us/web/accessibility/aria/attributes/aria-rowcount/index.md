@@ -9,6 +9,7 @@ tags:
   - aria-rowcount
   - Reference
 ---
+
 The `aria-rowcount` attribute defines the total number of rows in a table, grid, or treegrid. 
 
 ## Description
