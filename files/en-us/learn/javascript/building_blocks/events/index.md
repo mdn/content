@@ -233,7 +233,7 @@ Apart from `addEventListener()`, there are two other ways of registering event h
 ### Event handler properties
 
 Objects (such as buttons) that can fire events also usually have properties whose name is `on` followed by the name of the event. For example, elements have a property `onclick`.
-This is called an _event handler property_.. To listen for the event, you can assign the handler function to the property.
+This is called an _event handler property_. To listen for the event, you can assign the handler function to the property.
 
 For example, we could rewrite the random-color example like this:
 
