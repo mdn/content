@@ -14,7 +14,8 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
-Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them in some way if desired.
+Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them.
+
 For example, if the user selects a button on a webpage, you might want to respond to that action by displaying an information box.
 In this article, we discuss some important concepts surrounding events, and look at how they work in browsers.
 This won't be an exhaustive study; just what you need to know at this stage.
@@ -62,9 +63,9 @@ For example:
 - A video is played, paused, or finishes.
 - An error occurs.
 
-You can gather from this (and from glancing at the MDN [Event reference](/en-US/docs/Web/Events)) that there are **a lot** of events that can be responded to.
+You can gather from this (and from glancing at the MDN [event reference](/en-US/docs/Web/Events)) that there are **a lot** of events that can be responded to.
 
-Each available event has an **event handler**, which is a block of code (usually a JavaScript function that you as a programmer create) that runs when the event fires.
+To respond to an event, you attach an **event handler** to it. This is a block of code (usually a JavaScript function that you as a programmer create) that runs when the event fires.
 When such a block of code is defined to run in response to an event, we say we are **registering an event handler**.
 Note: Event handlers are sometimes called **event listeners** — they are pretty much interchangeable for our purposes, although strictly speaking, they work together.
 The listener listens out for the event happening, and the handler is the code that is run in response to it happening.
@@ -74,7 +75,6 @@ The listener listens out for the event happening, and the handler is the code th
 ### A simple example
 
 Let's look at a simple example of what we mean here.
-You've already seen events and event handlers used in many of the examples, but let's recap just to cement our knowledge.
 In the following example, we have a single {{htmlelement("button")}}, which when pressed, makes the background change to a random color:
 
 ```html
@@ -104,18 +104,18 @@ In this code, we store a reference to the [`<button>`](/en-US/docs/Web/HTML/Elem
 
 We also define a function that returns a random number.
 
-The third part of the code is the event handler. The `<button>` element has an event called `'click'` that fires when the user clicks the button. Objects that can receive events have an {{domxref("EventTarget/addEventListener", "addEventListener()")}} method, that takes at least two arguments: the name of the particular event and a function to handle the event. So we call the button's `addEventListener()` method, passing in:
+The third part of the code is where we define and register the event handler. The `<button>` element has an event called `'click'` that fires when the user clicks the button. Objects that can receive events have an {{domxref("EventTarget/addEventListener", "addEventListener()")}} method, that takes at least two arguments: the name of the event and a function to handle the event. So we call the button's `addEventListener()` method, passing in:
 
 * the string `'click'`, to indicate that we want to listen to the click event
-* a function to call when the event happens. The function generates a random RGB color and sets the [`<body>`](/en-US/docs/Web/HTML/Element/body) [`background-color`](/en-US/docs/Web/CSS/background-color) equal to that color.
+* a function to call when the event happens. In our case the function generates a random RGB color and sets the page [`<body>`](/en-US/docs/Web/HTML/Element/body) [`background-color`](/en-US/docs/Web/CSS/background-color) equal to that color.
 
-The example output is as follows:
+The example output is as follows. Try clicking the button:
 
 {{ EmbedLiveSample('A_simple_example', '100%', 200, "", "") }}
 
 ### It's not just web pages
 
-Another thing worth mentioning at this point is that events are not unique to JavaScript — most programming languages have some kind of event model, and the way the model works often differs from JavaScript's way.
+Events are not unique to JavaScript — most programming languages have some kind of event model, and the way the model works often differs from JavaScript's way.
 In fact, the event model in JavaScript for web pages differs from the event model for JavaScript as it is used in other environments.
 
 For example, [Node.js](/en-US/docs/Learn/Server-side/Express_Nodejs) is a very popular JavaScript runtime that enables developers to use JavaScript to build network and server-side applications.
@@ -130,7 +130,7 @@ You don't need to understand anything about other such environments at this stag
 
 ## Using addEventListener()
 
-The recommended mechanism for adding event handlers is the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method described above:
+The recommended mechanism for adding event handlers in web pages is the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
 const btn = document.querySelector('button');
@@ -149,7 +149,7 @@ btn.addEventListener('click', () => {
 
 Inside the `addEventListener()` function, we specify two parameters: the name of the event we want to register this handler for, and the code that comprises the handler function we want to run in response to it.
 
-It is perfectly appropriate to make the handler function a separate named function, like this:
+It is fine to make the handler function a separate named function, like this:
 
 ```js
 const btn = document.querySelector('button');
@@ -168,7 +168,7 @@ btn.addEventListener('click', changeBackground);
 
 ### Listening for other events
 
-There are many different events fired by a button element. Let's experiment.
+There are many different events that can be fired by a button element. Let's experiment.
 
 First, make a local copy of [random-color-eventhandlerproperty.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerproperty.html), and open it in your browser.
 It's just a copy of the simple random color example we've played with already. Now try changing `click` to the following different values in turn, and observing the results in the example:
@@ -178,19 +178,17 @@ It's just a copy of the simple random color example we've played with already. N
 - [`dblclick`](/en-US/docs/Web/API/Element/dblclick_event) — The color changes only when the button is double-clicked.
 - [`mouseover`](/en-US/docs/Web/API/Element/mouseover_event) and [`mouseout`](/en-US/docs/Web/API/Element/mouseout_event) — The color changes when the mouse pointer hovers over the button, or when the pointer moves off the button, respectively.
 
-Some events, such as `click`, are available on nearly any element. Others are more specific and only useful in certain situations: for example, the [`play`](/en-US/docs/Web/API/HTMLMediaElement/play_event) event is only available on specific elements, such as {{htmlelement("video")}}.
+Some events, such as `click`, are available on nearly any element. Others are more specific and only useful in certain situations: for example, the [`play`](/en-US/docs/Web/API/HTMLMediaElement/play_event) event is only available on some elements, such as {{htmlelement("video")}}.
 
 ### Removing listeners
 
-The `addEventListener()` mechanism has some advantages over other the ways to listen for events described in this section.
-
-If you've added an event handler using `addEventListener()`, you can remove it again using the counterpart function, [`removeEventListener()`](/en-US/docs/Web/API/EventTarget/removeEventListener). For example, this would remove the `changeBackground()` event handler:
+If you've added an event handler using `addEventListener()`, you can remove it again using the [`removeEventListener()`](/en-US/docs/Web/API/EventTarget/removeEventListener) method. For example, this would remove the `changeBackground()` event handler:
 
 ```js
 btn.removeEventListener('click', changeBackground);
 ```
 
-Event handlers can also be removed by passing an {{domxref("AbortSignal")}} to {{domxref("EventTarget/addEventListener()", "addEventListener()")}} and then, later, calling {{domxref("AbortController/abort()", "abort()")}} on the controller owning the `AbortSignal`.
+Event handlers can also be removed by passing an {{domxref("AbortSignal")}} to {{domxref("EventTarget/addEventListener()", "addEventListener()")}} and then later calling {{domxref("AbortController/abort()", "abort()")}} on the controller owning the `AbortSignal`.
 For example, to add an event handler that we can remove with an `AbortSignal`:
 
 ```js
@@ -230,11 +228,12 @@ These are a little out of scope for this article, but if you want to read them, 
 
 ## Other event listener mechanisms
 
-Apart from `addEventListener()`, there are two other ways of registering event handlers.
+Apart from `addEventListener()`, there are two other ways of registering event handlers: _event handler properties_ and _inline event handlers_.
 
 ### Event handler properties
 
-Objects (such as buttons) that can fire events also usually have properties whose name is `on` followed by the name of the event, like `onclick`. To listen for that event, you assign the handler function to the property.
+Objects (such as buttons) that can fire events also usually have properties whose name is `on` followed by the name of the event. For example, elements have a property `onclick`.
+This is called an _event handler property_.. To listen for the event, you can assign the handler function to the property.
 
 For example, we could rewrite the random-color example like this:
 
@@ -251,10 +250,7 @@ btn.onclick = () => {
 }
 ```
 
-This is called an _event handler property_.
-
-You could also set the handler property to be equal to a named function name (like we saw in [Build your own function](/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)).
-The following works just the same:
+You can also set the handler property to a named function:
 
 ```js
 const btn = document.querySelector('button');
@@ -321,8 +317,8 @@ There are only two methods you should consider for handling events:
 
 We recommend you use `addEventListener()` where you can. The main advantages of `addEventListener()` are that:
 
-- You can remove event-handler code if needed, using `removeEventListener()`.
-- You can add multiple listeners of the same type to elements, if required.
+- You can remove event handlers if needed, using `removeEventListener()`.
+- You can add multiple listeners to a single event.
 
 For example, you can call `addEventListener('click', handler)` on an element multiple times, with different functions specified in the second argument:
 
@@ -342,7 +338,7 @@ element.onclick = function2;
 
 ## Event objects
 
-Sometimes inside an event handler function, you'll see a parameter specified with a name such as `event`, `evt`, or `e`.
+Sometimes, inside an event handler function, you'll see a parameter specified with a name such as `event`, `evt`, or `e`.
 This is called the **event object**, and it is automatically passed to event handlers to provide extra features and information.
 For example, let's rewrite our random color example again slightly:
 
@@ -473,7 +469,7 @@ div {
 }
 ```
 
-Now some JavaScript — here we implement a very simple check inside an [`onsubmit`](/en-US/docs/Web/API/GlobalEventHandlers/onsubmit) event handler (the submit event is fired on a form when it is submitted) that tests whether the text fields are empty.
+Now some JavaScript — here we implement a very simple check inside a handler for the [`submit`](/en-US/docs/Web/API/HTMLFormElement/submit_event) event (the submit event is fired on a form when it is submitted) that tests whether the text fields are empty.
 If they are, we call the [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) function on the event object — which stops the form submission — and then display an error message in the paragraph below our form to tell the user what's wrong:
 
 ```js
