@@ -8812,6 +8812,7 @@
 /en-US/docs/Web/API/VideoTrackList/TextTrackList:_change_event	/en-US/docs/Web/API/TextTrackList/change_event
 /en-US/docs/Web/API/VideoTrackList/getTrackById()	/en-US/docs/Web/API/TextTrackList/getTrackById
 /en-US/docs/Web/API/WEBGL_compressed_texture_es3	/en-US/docs/Web/API/WEBGL_compressed_texture_etc
+/en-US/docs/Web/API/WakeLockSentinel/onrelease	/en-US/docs/Web/API/WakeLockSentinel/release_event
 /en-US/docs/Web/API/WaveShaperNode.curve	/en-US/docs/Web/API/WaveShaperNode/curve
 /en-US/docs/Web/API/WaveShaperNode.oversample	/en-US/docs/Web/API/WaveShaperNode/oversample
 /en-US/docs/Web/API/WebGL2RenderingContext/clearBufferfi	/en-US/docs/Web/API/WebGL2RenderingContext/clearBuffer
