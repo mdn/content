@@ -50,7 +50,7 @@ _In addition to the properties listed below, properties from the parent interfac
 - {{domxref("XRReferenceSpaceEvent.referenceSpace", "referenceSpace")}} {{ReadOnlyInline}}
   - : An {{domxref("XRReferenceSpace")}} indicating the reference space that generated the event.
 - {{domxref("XRReferenceSpaceEvent.transform", "transform")}} {{ReadOnlyInline}}
-  - : An {{domxref("XRRigidTransform")}} object indicating the position and orientation of the specified `referenceSpace`'s native origin after the event, defined relative to the coordinate system before the event.
+  - : An {{domxref("XRRigidTransform")}} object indicating the position and orientation of the specified `referenceSpace` object's native origin after the event, defined relative to the coordinate system before the event.
 
 ## Description
 
