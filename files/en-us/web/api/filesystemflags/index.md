@@ -42,79 +42,15 @@ The table below describes the result of each possible combination of these flags
 
 Note that, when `create` is `false`, the value of `exclusive` is irrelevant and ignored.
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th colspan="2" scope="col">Option values</th>
-      <th rowspan="2" scope="col">File/directory condition</th>
-      <th rowspan="2" scope="col">Result</th>
-    </tr>
-    <tr>
-      <th scope="col"><code>create</code></th>
-      <th scope="col"><code>exclusive</code></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>false</code></td>
-      <td>n/a</td>
-      <td>
-        Path exists and matches the desired type (depending on whether the function called is <code>getFile()</code> or <code>getDirectory()</code>
-      </td>
-      <td>
-        The <code>successCallback</code> is called with a
-        {{domxref("FileSystemFileEntry")}} if <code>getFile()</code> was called or a
-        {{domxref("FileSystemDirectoryEntry")}} if <code>getDirectory()</code> was called.
-      </td>
-    </tr>
-    <tr>
-      <td><code>false</code></td>
-      <td>n/a</td>
-      <td>Path exists but doesn't match the desired type</td>
-      <td>
-        The <code>errorCallback</code> is called with an appropriate error code (if the callback was provided).
-      </td>
-    </tr>
-    <tr>
-      <td><code>true</code></td>
-      <td><code>false</code></td>
-      <td>Path exists</td>
-      <td>
-        The existing file or directory is removed and replaced with a new one,
-        then the <code>successCallback</code> is called with a
-        {{domxref("FileSystemFileEntry")}} or a {{domxref("FileSystemDirectoryEntry")}}, as appropriate.
-      </td>
-    </tr>
-    <tr>
-      <td><code>true</code></td>
-      <td><code>false</code></td>
-      <td>Path doesn't exist</td>
-      <td>
-        The file or directory is created, then a {{domxref("FileSystemFileEntry")}} or a
-        {{domxref("FileSystemDirectoryEntry")}} is passed to the
-        <code>successCallback</code>, as appropriate.
-      </td>
-    </tr>
-    <tr>
-      <td><code>true</code></td>
-      <td><code>true</code></td>
-      <td>Path exists</td>
-      <td>
-        The <code>errorCallback</code> is called with an appropriate error, such
-        as <code>FileError.PATH_EXISTS_ERR</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>true</code></td>
-      <td><code>true</code></td>
-      <td>Path doesn't exist</td>
-      <td>
-        The file or directory is created, then a {{domxref("FileSystemFileEntry")}} or a
-        {{domxref("FileSystemDirectoryEntry")}} is passed to the <code>successCallback</code>, as appropriate.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| `create` option | `exclusive` option | File/directory condition | Result |
+| --- | --- | --- | --- |
+| `false` | _Ignored_ | Path exists and matches the desired type (depending on whether the function called is `getFile()` or `getDirectory()` | The `successCallback` is called with a {{domxref("FileSystemFileEntry")}} if `getFile()` was called or a {{domxref("FileSystemDirectoryEntry")}} if `getDirectory()` was called.
+| `false` | _Ignored_ | Path exists but doesn't match the desired type | The `errorCallback` is called with an appropriate error code (if the callback was provided).
+| `true` | `false` | Path exists | The existing file or directory is removed and replaced with a new one, then the `successCallback` is called with a {{domxref("FileSystemFileEntry")}} or a {{domxref("FileSystemDirectoryEntry")}}, as appropriate.
+| `true` | `false` | Path doesn't exist | The file or directory is created, then a {{domxref("FileSystemFileEntry")}} or a {{domxref("FileSystemDirectoryEntry")}} is passed to the `successCallback`, as appropriate.
+| `true` | `true` | Path exists | The `errorCallback` is called with an appropriate error, such as `FileError.PATH_EXISTS_ERR`.
+| `true` | `true` | Path doesn't exist | The file or directory is created, then a {{domxref("FileSystemFileEntry")}} or a {{domxref("FileSystemDirectoryEntry")}} is passed to the `successCallback`, as appropriate.
+
 
 ## Specifications
 
