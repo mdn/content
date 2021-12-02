@@ -40,7 +40,7 @@
 /en-US/docs/ARIA/ARIA_Techniques/ARIA_Technique_Template	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/ARIA_Technique_Template
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_alert_role	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
-/en-US/docs/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute
+/en-US/docs/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/en-US/docs/web/Accessibility/ARIA/Attributes/aria-activedescendant
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_banner_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_button_role	/en-US/docs/Web/Accessibility/ARIA/Roles/button_role
@@ -80,7 +80,7 @@
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/ARIA_Technique_Template	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/ARIA_Technique_Template
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
-/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute
+/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/en-US/docs/web/Accessibility/ARIA/Attributes/aria-activedescendant
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute
@@ -9660,6 +9660,7 @@
 /en-US/docs/Web/APIr	/en-US/docs/Web/API/Document/dir
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Examples	/en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Complementary_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/en-US/docs/web/Accessibility/ARIA/Attributes/aria-activedescendant
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_property	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_banner_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role
