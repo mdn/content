@@ -29,6 +29,9 @@ This article provides information about the changes in Firefox 96 that will affe
 
 ### HTTP
 
+- Cookies sent from the same domain but using different schemes (for example http or https) are now considered to be from different sites with respect to the cookie [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) directive.
+  In addition, cookies are assumed to implicitly set `SameSite=Lax` if the `SameSite` attribute is not specified (previously the default was `SameSite=None`), and cookies with `SameSite=None` require a secure context. ({{bug(1617609)}}).
+
 #### Removals
 
 ### Security
