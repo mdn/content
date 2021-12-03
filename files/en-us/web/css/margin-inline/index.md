@@ -41,13 +41,13 @@ This property is a shorthand for the following CSS properties:
 - [`margin-inline-start`](/en-US/docs/Web/CSS/margin-inline-start)
 - [`margin-inline-end`](/en-US/docs/Web/CSS/margin-inline-end)
 
-If 2 values are specified, the first value sets the start, the second value sets the end. If 1 value is specified, it sets both properties with the same value.
-
 ## Syntax
 
 ### Values
 
 The `margin-inline` property takes the same values as the {{CSSxRef("margin-left")}} property.
+
+If 2 values are specified, the first value sets the start, the second value sets the end. If 1 value is specified, it sets both properties with the same value.
 
 ## Formal definition
 
