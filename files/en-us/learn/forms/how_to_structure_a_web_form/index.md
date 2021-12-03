@@ -47,7 +47,7 @@ We already met this in the previous article.
 
 > **Warning:** It's strictly forbidden to nest a form inside another form. Nesting can cause forms to behave in an unpredictable manner, so it is a bad idea.
 
-It's always possible to use a form control outside of a {{HTMLElement("form")}} element. If you do so, by default that control has nothing to do with any form unless you associate it with a form using the [`form`](/en-US/docs/Web/HTML/Attributes/form) attribute. This was introduced to let you explicitly bind a control with a form even if it is not nested inside it.
+It's always possible to use a form control outside of a {{HTMLElement("form")}} element. If you do so, by default that control has nothing to do with any form unless you associate it with a form using its [`form`](/en-US/docs/Web/HTML/Element/input#attr-form) attribute. This was introduced to let you explicitly bind a control with a form even if it is not nested inside it.
 
 Let's move forward and cover the structural elements you'll find nested in a form.
 
@@ -140,20 +140,20 @@ Let's consider this example:
 <p>Required fields are followed by <abbr title="required">*</abbr>.</p>
 
 <!-- So this: -->
-<div>
+<!--div>
   <label for="username">Name:</label>
   <input id="username" type="text" name="username">
   <label for="username"><abbr title="required" aria-label="required">*</abbr></label>
-</div>
+</div-->
 
 <!-- would be better done like this: -->
-<div>
+<!--div>
   <label for="username">
     <span>Name:</span>
     <input id="username" type="text" name="username">
     <abbr title="required" aria-label="required">*</abbr>
   </label>
-</div>
+</div-->
 
 <!-- But this is probably best: -->
 <div>
