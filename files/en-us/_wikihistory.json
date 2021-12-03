@@ -82166,19 +82166,19 @@
       "bershanskiy"
     ]
   },
-  "Web/API/WakeLockSentinel/onrelease": {
-    "modified": "2020-10-15T22:33:31.915Z",
-    "contributors": [
-      "rakuco",
-      "Rumyra"
-    ]
-  },
   "Web/API/WakeLockSentinel/release": {
     "modified": "2020-10-15T22:31:46.806Z",
     "contributors": [
       "rakuco",
       "Rumyra",
       "bershanskiy"
+    ]
+  },
+  "Web/API/WakeLockSentinel/release_event": {
+    "modified": "2020-10-15T22:33:31.915Z",
+    "contributors": [
+      "rakuco",
+      "Rumyra"
     ]
   },
   "Web/API/WakeLockSentinel/released": {
