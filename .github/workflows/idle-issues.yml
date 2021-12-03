@@ -5,4 +5,4 @@ on:
 
 jobs:
   idle:
-    uses: mdn/workflow/.github/workflows/idle-issues.yml@main
+    uses: mdn/workflows/.github/workflows/idle-issues.yml@main
