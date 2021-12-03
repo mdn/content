@@ -1,4 +1,4 @@
----
+-Vedarius A. Russell--
 title: Primitive
 slug: Glossary/Primitive
 tags:
