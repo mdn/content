@@ -87,8 +87,8 @@ const para = document.querySelector('p');
 para.addEventListener('click', updateName);
 
 function updateName() {
-  let name = prompt('Enter a new name');
-  para.textContent = 'Player 1: ' + name;
+  const name = prompt('Enter a new name');
+  para.textContent = `Player 1: ${name}`;
 }
 ```
 
@@ -170,8 +170,8 @@ const para = document.querySelector('p');
 para.addEventListener('click', updateName);
 
 function updateName() {
-  let name = prompt('Enter a new name');
-  para.textContent = 'Player 1: ' + name;
+  const name = prompt('Enter a new name');
+  para.textContent = `Player 1: ${name}`;
 }
 ```
 
@@ -240,17 +240,17 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 4. Now we'll add some JavaScript inside our {{htmlelement("script")}} element to make the page do something more interesting — add the following code just below the "// JavaScript goes here" line:
 
    ```js
-   document.addEventListener("DOMContentLoaded", function() {
+   document.addEventListener('DOMContentLoaded', () => {
      function createParagraph() {
-       let para = document.createElement('p');
+       const para = document.createElement('p');
        para.textContent = 'You clicked the button!';
        document.body.appendChild(para);
      }
 
      const buttons = document.querySelectorAll('button');
 
-     for(let i = 0; i < buttons.length ; i++) {
-       buttons[i].addEventListener('click', createParagraph);
+     for (const button of buttons) {
+       button.addEventListener('click', createParagraph);
      }
    });
    ```
@@ -279,15 +279,15 @@ This works great, but what if we wanted to put our JavaScript in an external fil
 
    ```js
    function createParagraph() {
-     let para = document.createElement('p');
+     const para = document.createElement('p');
      para.textContent = 'You clicked the button!';
      document.body.appendChild(para);
    }
 
    const buttons = document.querySelectorAll('button');
 
-   for(let i = 0; i < buttons.length ; i++) {
-     buttons[i].addEventListener('click', createParagraph);
+   for (const button of buttons) {
+     button.addEventListener('click', createParagraph);
    }
    ```
 
@@ -305,7 +305,7 @@ It might look something like this:
 
 ```js example-bad
 function createParagraph() {
-  let para = document.createElement('p');
+  const para = document.createElement('p');
   para.textContent = 'You clicked the button!';
   document.body.appendChild(para);
 }
@@ -332,8 +332,8 @@ The code we used above to serve this purpose looks like this:
 ```js
 const buttons = document.querySelectorAll('button');
 
-for(let i = 0; i < buttons.length ; i++) {
-  buttons[i].addEventListener('click', createParagraph);
+for (const button of buttons) {
+  button.addEventListener('click', createParagraph);
 }
 ```
 
@@ -356,7 +356,7 @@ This could cause an error, so we've used some constructs to get around it.
 In the internal example, you can see this structure around the code:
 
 ```js
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', () => {
   ...
 });
 ```
@@ -462,7 +462,7 @@ So for example, we could annotate our last demo's JavaScript with comments like 
 // Function: creates a new paragraph and appends it to the bottom of the HTML body.
 
 function createParagraph() {
-  let para = document.createElement('p');
+  const para = document.createElement('p');
   para.textContent = 'You clicked the button!';
   document.body.appendChild(para);
 }
@@ -476,8 +476,8 @@ function createParagraph() {
 
 const buttons = document.querySelectorAll('button');
 
-for (let i = 0; i < buttons.length ; i++) {
-  buttons[i].addEventListener('click', createParagraph);
+for (const button of buttons) {
+  button.addEventListener('click', createParagraph);
 }
 ```
 
