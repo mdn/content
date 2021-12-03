@@ -228,7 +228,7 @@ These are a little out of scope for this article, but if you want to read them, 
 
 ## Other event listener mechanisms
 
-Apart from `addEventListener()`, there are two other ways of registering event handlers: _event handler properties_ and _inline event handlers_.
+We recommend that you use `addEventListener()` to register event handlers. It's the most powerful method and scales best with more complex programs. However, there are two other ways of registering event handlers that you might see: _event handler properties_ and _inline event handlers_.
 
 ### Event handler properties
 
@@ -265,6 +265,20 @@ function bgChange() {
 }
 
 btn.onclick = bgChange;
+```
+
+With event handler properties, you can't add more than one handler for a single event. For example, you can call `addEventListener('click', handler)` on an element multiple times, with different functions specified in the second argument:
+
+```js
+element.addEventListener('click', function1);
+element.addEventListener('click', function2);
+```
+
+This is impossible with event handler properties because any subsequent attempts to set the property will overwrite earlier ones:
+
+```js
+element.onclick = function1;
+element.onclick = function2;
 ```
 
 ### Inline event handlers — don't use these
@@ -307,32 +321,6 @@ for (const button of buttons) {
 ```
 
 Finally, many common server configurations will disallow inline JavaScript, as a security measure.
-
-## Which mechanism should I use?
-
-There are only two methods you should consider for handling events:
-
-- `addEventListener()`
-- Event handler properties
-
-We recommend you use `addEventListener()` where you can. The main advantages of `addEventListener()` are that:
-
-- You can remove event handlers if needed, using `removeEventListener()`.
-- You can add multiple listeners to a single event.
-
-For example, you can call `addEventListener('click', handler)` on an element multiple times, with different functions specified in the second argument:
-
-```js
-element.addEventListener('click', function1);
-element.addEventListener('click', function2);
-```
-
-This is impossible with event handler properties because any subsequent attempts to set a property will overwrite earlier ones, e.g.:
-
-```js
-element.onclick = function1;
-element.onclick = function2;
-```
 
 **You should never use the HTML event handler attributes** — those are outdated, and using them is bad practice.
 
@@ -811,7 +799,7 @@ const container = document.querySelector('#container');
 container.addEventListener('click', event => event.target.style.backgroundColor = bgChange());
 ```
 
-The output is as follows (try clicking around on it — have fun):
+The output is as follows (try clicking around on it):
 
 {{ EmbedLiveSample('Event delegation', '100%', 430, "", "") }}
 
