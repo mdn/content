@@ -242,6 +242,27 @@ Information Panel](https://support.mozilla.org/en-US/kb/site-information-panel) 
 > **Warning:** Make sure to set these prefs in a separate
 > Firefox profile or reset them after testing.
 
+##### Disable Web Compatibility Features
+
+Setting `privacy.antitracking.enableWebcompat` to `false` will **disable** all
+ETP and State Partitioning web-compatibility features. Disabling these features
+can be useful when testing, to ensure your website is fully compatible with the
+State Partitioning mechanism in Firefox and it does not rely on temporary
+heuristics.
+
+Features disabled by the pref include:
+- [Storage access heuristics](#storage_access_heuristics): Unpartitioned storage
+  access can only be aquired via the Storage Access API.
+- Automatic storage access grants:
+  [document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess)
+  will always prompt the user.
+- [SmartBlock’s "unblock on opt-in"
+  feature](https://blog.mozilla.org/security/2021/07/13/smartblock-v2/), which
+  will allow certain trackers when users interact with them.
+- Any temporary [anti-tracking
+  exceptions](https://wiki.mozilla.org/Security/Anti_tracking_policy#Temporary_Web_Compatibility_Interventions)
+  granted to websites via the skip-listing mechanism.
+
 ##### Disable Heuristics
 
 The following prefs can be used to disable individual storage access
