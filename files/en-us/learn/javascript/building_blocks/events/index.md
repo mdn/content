@@ -447,7 +447,7 @@ The output is as follows:
 
 ## Event bubbling and capture
 
-Event bubbling and capture are two mechanisms that describe how the browser handles events when elements are nested inside each other.
+Event bubbling and capture are terms that describe how the browser handles events when elements are nested inside each other.
 
 ### Setting a listener on a parent element
 
