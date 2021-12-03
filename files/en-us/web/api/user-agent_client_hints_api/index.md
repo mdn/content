@@ -16,7 +16,7 @@ The User-Agent Client Hints API extends [Client Hints](/en-US/docs/Glossary/Clie
 
 Parsing the User-Agent string has historically been the way to get information about the user's browser or device. A typical user agent string looks like the following example, identifying Chrome 92 on Windows:
 
-```html
+```
 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36
 ```
 
@@ -26,12 +26,14 @@ In order to decide what to return, the information accessed via this API is spli
 
 ### Use cases for User-Agent Client Hints
 
-The [User-Agent Client Hints Explainer]() explains some potential use cases for the API. These include:
+Potential use cases include:
 
 - Providing custom-tailored polyfills to users on identifying that their browser lacked some web platform feature.
 - Working around browser bugs.
 - Recording browser analytics.
-- Adapting content based on user-agent information. This includes serving different content to mobile devices, in particular devices identified as low-powered. It might also include adapting the design to tailor the interfaces to the user's OS, or providing links to OS-specific ones.
+- Adapting content based on user-agent information.
+  This includes serving different content to mobile devices, in particular devices identified as low-powered.
+  It might also include adapting the design to tailor the interfaces to the user's OS, or providing links to OS-specific ones.
 - Providing a notification when a user logs in from a different browser or device, as a security feature.
 - Providing the correct binary executable, on a site offering a download.
 - Collecting information about the browser and device to identify application errors.
