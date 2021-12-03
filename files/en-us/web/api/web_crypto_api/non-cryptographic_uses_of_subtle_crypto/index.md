@@ -2,7 +2,7 @@
 title: Non-cryptographic uses of SubtleCrypto
 slug: Web/API/Web_Crypto_API/Non-cryptographic_uses_of_SubtleCrypto
 ---
-
+{{APIRef("Web Crypto API")}}
 This article will almost entirely focus on uses of the Digest method of the Subtle Crypto API since a lot of the other methods have very specific cryptographic use cases whereas creating hashes of content has lots of very useful purposes.
 
 I'm not going into the Cryptographic uses of the Subtle Crypto API because, and this is the most important thing from this article is **don't use this API** for production cryptographic purposes because it is powerful and low level to use it correctly you will need to take many context specific steps to accomplish Cryptographic tasks correctly if any of those steps is taken incorrectly at best your code won't run at the worse it will run and you will unknowingly be putting your users at risk with an insecure product.
