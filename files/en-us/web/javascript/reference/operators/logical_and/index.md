@@ -61,7 +61,7 @@ Consider the pseudo code below.
 (some falsy expression) && expr
 ```
 
-The `expr` part is **never evaluated** because the first operand `(some falsy expression)` is evaluated is `falsy`.
+The `expr` part is **never evaluated** because the first operand `(some falsy expression)` is evaluated as `falsy`.
 If `expr` is a function, the function is never called.
 See the example below:
 
