@@ -60,6 +60,11 @@ Firefox 95 is the current [Beta version of Firefox](https://www.mozilla.org/en-U
 
 ### WebDriver conformance (Marionette)
 
+<ul>
+  <li>The <code>port</code> used by Marionette is now written to the <code>MarionetteActivePort</code> file in the profile directory. This can be used to easily retrieve the <code>port</code>, which before was only possible by parsing the <code>prefs.js</code> file of the profile. ({{bug(1735162)}}).</li>
+  <li><code>WebDriver:NewSession</code> now waits for the initial tab to have completed loading to prevent unexpected unloads of the window proxy. ({{bug(1736323)}}).</li>
+</ul>
+
 #### Removals
 
 ## Changes for add-on developers
