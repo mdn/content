@@ -245,7 +245,7 @@ Information Panel](https://support.mozilla.org/en-US/kb/site-information-panel) 
 ##### Disable Web Compatibility Features
 
 Setting `privacy.antitracking.enableWebcompat` to `false` will **disable** all
-ETP and State Partitioning web compatiblity features. Disabling these features
+ETP and State Partitioning web-compatibility features. Disabling these features
 can be useful when testing, to ensure your website is fully compatible with the
 State Partitioning mechanism in Firefox and it does not rely on temporary
 heuristics.
