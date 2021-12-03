@@ -37,6 +37,10 @@ This article provides information about the changes in Firefox 96 that will affe
 
 ### APIs
 
+- {{domxref("navigator.canShare()")}} is now supported on Android, allowing code to check whether {{domxref("navigator.share()")}} will succeed for particular targets.
+  The feature is behind a preference on desktop operating systems.
+  ({{bug(1666203)}}).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
