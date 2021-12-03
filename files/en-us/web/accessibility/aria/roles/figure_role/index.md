@@ -47,7 +47,7 @@ This can be done semantically, without ARIA, with HTML's {{HTMLElement('figure')
 <figure>
   <img src="image.png"
       alt="put image description here">
-  <caption>Figure 1: The caption</caption>
+  <figcaption>Figure 1: The caption</figcaption>
 </figure>
 ```
 
