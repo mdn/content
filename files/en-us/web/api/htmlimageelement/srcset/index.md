@@ -118,7 +118,7 @@ displays while the 400-pixel version should be used for 2x displays.
 <div class="box">
   <img src="/en-us/web/html/element/img/clock-demo-200px.png"
        alt="Clock"
-       srcset="/en-us/web/html/element/img/clock-demo-200px.png 1x, /en-us/web/html/element/img/clock-demo-400px.png">
+       srcset="/en-us/web/html/element/img/clock-demo-200px.png 1x, /en-us/web/html/element/img/clock-demo-400px.png 2x">
 </div>
 ```
 
