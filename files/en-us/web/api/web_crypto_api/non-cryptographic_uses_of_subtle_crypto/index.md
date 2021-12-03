@@ -1,4 +1,7 @@
-# Non-cryptographic uses of Subtle Crypto
+---
+title: Non-cryptographic uses of SubtleCrypto
+slug: Web/API/Web_Crypto_API/Non-cryptographic_uses_of_SubtleCrypto
+---
 
 This article will almost entirely focus on uses of the Digest method of the Subtle Crypto API since a lot of the other methods have very specific cryptographic use cases whereas creating hashes of content has lots of very useful purposes.
 
