@@ -45564,15 +45564,6 @@
       "Rumyra"
     ]
   },
-  "Web/API/FileSystemFlags": {
-    "modified": "2020-10-15T21:49:28.350Z",
-    "contributors": [
-      "sideshowbarker",
-      "fscholz",
-      "tocretpa",
-      "Sheppy"
-    ]
-  },
   "Web/API/FileSystemHandle": {
     "modified": "2020-12-12T11:21:27.430Z",
     "contributors": [
