@@ -5,16 +5,4 @@ on:
 
 jobs:
   idle:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/stale@v4
-        with:
-          days-before-stale: 37
-          days-before-close: -1
-          stale-issue-message: ''
-          stale-pr-message: ''
-          stale-issue-label: 'idle'
-          stale-pr-label: 'idle'
-          enable-statistics: true
-          ascending: true  # oldest first, for now
-          operations-per-run: 100
+    uses: mdn/workflow/.github/workflows/idle-issues.yml@main
