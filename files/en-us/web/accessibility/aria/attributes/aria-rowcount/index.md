@@ -24,6 +24,7 @@ If all of the rows are loaded and in the DOM, you don't need to include `aria-ro
 
 The following example shows a grid with 24 rows, of which the first row and rows 7 through 9 are displayed to the user.
 
+```html
 <div role="grid" aria-rowcount="24">
   <div role="rowgroup">
     <div role="row" aria-rowindex="1">
@@ -50,6 +51,7 @@ The following example shows a grid with 24 rows, of which the first row and rows
     </div>
   </div>
 </div>
+```
     
 ## Values
 
