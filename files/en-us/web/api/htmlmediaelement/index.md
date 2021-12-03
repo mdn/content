@@ -75,7 +75,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
   - : Returns a {{domxref('TimeRanges')}} object that contains the ranges of the media source that the browser has played, if any.
 - {{domxref("HTMLMediaElement.preload")}}
   - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("preload", "video")}} HTML attribute, indicating what data should be preloaded, if any. Possible values are: `none`, `metadata`, `auto`.
-- {{domxref("HTMLMediaElement.preservesPitch")}} {{non-standard_inline}}
+- {{domxref("HTMLMediaElement.preservesPitch")}}
   - : Is a {{jsxref('Boolean')}} that determines if the pitch of the sound will be preserved. If set to `false`, the pitch will adjust to the speed of the audio. This is implemented with prefixes in Firefox (`mozPreservesPitch`) and WebKit (`webkitPreservesPitch`).
 - {{domxref("HTMLMediaElement.readyState")}} {{readonlyinline}}
   - : Returns a `unsigned short` (enumeration) indicating the readiness state of the media.
