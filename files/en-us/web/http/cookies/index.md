@@ -21,7 +21,8 @@ tags:
 ---
 {{HTTPSidebar}}
 
-An **HTTP cookie** (web cookie, browser cookie) is a small piece of data that a server sends to a user's web browser. The browser may store the cookie and send it back to the same server with later requests.
+An **HTTP cookie** (web cookie, browser cookie) is a small piece of data that a server sends to a user's web browser.
+The browser may store the cookie and send it back to the same server with later requests.
 Typically, an HTTP cookie is used to tell if two requests come from the same browser—keeping a user logged in, for example. It remembers stateful information for the [stateless](/en-US/docs/Web/HTTP/Overview#http_is_stateless_but_not_sessionless) HTTP protocol.
 
 Cookies are mainly used for three purposes:
@@ -51,7 +52,7 @@ Set-Cookie: <cookie-name>=<cookie-value>
 
 This instructs the server sending headers to tell the client to store a pair of cookies:
 
-```
+```http
 HTTP/2.0 200 OK
 Content-Type: text/html
 Set-Cookie: yummy_cookie=choco
@@ -62,7 +63,7 @@ Set-Cookie: tasty_cookie=strawberry
 
 Then, with every subsequent request to the server, the browser sends all previously stored cookies back to the server using the {{HTTPHeader("Cookie")}} header.
 
-```
+```http
 GET /sample_page.html HTTP/2.0
 Host: www.example.org
 Cookie: yummy_cookie=choco; tasty_cookie=strawberry
@@ -118,7 +119,8 @@ For example, if you set `Domain=mozilla.org`, cookies are available on subdomain
 
 #### Path attribute
 
-The `Path` attribute indicates a URL path that must exist in the requested URL in order to send the `Cookie` header. The `%x2F` ("/") character is considered a directory separator, and subdirectories match as well.
+The `Path` attribute indicates a URL path that must exist in the requested URL in order to send the `Cookie` header.
+The `%x2F` ("/") character is considered a directory separator, and subdirectories match as well.
 
 For example, if you set `Path=/docs`, these request paths match:
 
@@ -135,9 +137,14 @@ But these request paths don't:
 
 #### SameSite attribute
 
-The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) attribute lets servers specify whether/when cookies are sent with cross-site requests (where {{Glossary("Site")}} is defined by the registrable domain). This provides some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}). It takes three possible values: `Strict`, `Lax`, and `None`.
+The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) attribute lets servers specify whether/when cookies are sent with cross-site requests (where {{Glossary("Site")}} is defined by the registrable domain and the _scheme_: http or https).
+This provides some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).
+It takes three possible values: `Strict`, `Lax`, and `None`.
 
-With `Strict`, the cookie is only sent to the site where it originated. `Lax` is similar, except that cookies are sent when the user _navigates_ to the cookie's origin site. For example, by following a link from an external site. `None` specifies that cookies are sent on both originating and cross-site requests, but *only in secure contexts* (i.e., if `SameSite=None` then the `Secure` attribute must also be set). If no `SameSite` attribute is set, the cookie is treated as `Lax`.
+With `Strict`, the cookie is only sent to the site where it originated.
+`Lax` is similar, except that cookies are sent when the user _navigates_ to the cookie's origin site.
+For example, by following a link from an external site. `None` specifies that cookies are sent on both originating and cross-site requests, but *only in secure contexts* (i.e., if `SameSite=None` then the `Secure` attribute must also be set).
+If no `SameSite` attribute is set, the cookie is treated as `Lax`.
 
 Here's an example:
 
@@ -145,10 +152,13 @@ Here's an example:
 Set-Cookie: mykey=myvalue; SameSite=Strict
 ```
 
-> **Note:** The standard related to `SameSite` recently changed (MDN documents the new behavior above). See the cookies [Browser compatibility](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility) table for information about how the attribute is handled in specific browser versions:
+> **Note:** The standard related to `SameSite` recently changed (MDN documents the new behavior above).
+> See the cookies [Browser compatibility](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility) table for information about how the attribute is handled in specific browser versions:
 >
-> - `SameSite=Lax` is the new default if `SameSite` isn't specified. Previously, cookies were sent for all requests by default.
+> - `SameSite=Lax` is the new default if `SameSite` isn't specified.
+>   Previously, cookies were sent for all requests by default.
 > - Cookies with `SameSite=None` must now also specify the `Secure` attribute (they require a secure context).
+> - Cookies from the same domain are no longer considered to be from the same site if sent using a different scheme (`http:` or `https:`).
 
 #### Cookie prefixes
 
@@ -197,9 +207,16 @@ Ways to mitigate attacks involving cookies:
 
 ### Third-party cookies
 
-A cookie is associated with a domain. If this domain is the same as the domain of the page you're on, the cookie is called a _first-party cookie_. If the domain is different, it's a _third-party cookie_. While the server hosting a web page sets first-party cookies, the page may contain images or other components stored on servers in other domains (for example, ad banners) that may set third-party cookies. These are mainly used for advertising and tracking across the web. For example, the [types of cookies used by Google](https://policies.google.com/technologies/types).
+A cookie is associated with a domain. If this domain is the same as the domain of the page you're on, the cookie is called a _first-party cookie_.
+If the domain is different, it's a _third-party cookie_.
+While the server hosting a web page sets first-party cookies, the page may contain images or other components stored on servers in other domains (for example, ad banners) that may set third-party cookies.
+These are mainly used for advertising and tracking across the web.
+For example, the [types of cookies used by Google](https://policies.google.com/technologies/types).
 
-A third-party server can create a profile of a user's browsing history and habits based on cookies sent to it by the same browser when accessing multiple sites. Firefox, by default, blocks third-party cookies that are known to contain trackers. Third-party cookies (or just tracking cookies) may also be blocked by other browser settings or extensions. Cookie blocking can cause some third-party components (such as social media widgets) not to function as intended.
+A third-party server can create a profile of a user's browsing history and habits based on cookies sent to it by the same browser when accessing multiple sites.
+Firefox, by default, blocks third-party cookies that are known to contain trackers.
+Third-party cookies (or just tracking cookies) may also be blocked by other browser settings or extensions.
+Cookie blocking can cause some third-party components (such as social media widgets) not to function as intended.
 
 > **Note:** Servers can (and should) set the cookie [SameSite attribute](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) to specify whether or not cookies may be sent to third party sites.
 
@@ -211,8 +228,7 @@ Legislation or regulations that cover the use of cookies include:
 - The ePrivacy Directive in the EU
 - The California Consumer Privacy Act
 
-These regulations have global reach. They apply to any site on the _World Wide_ Web that users from these jurisdictions access (the EU and California, with the caveat that California's law applies only to entities with gross revenue over 25 million USD, among
-things).
+These regulations have global reach. They apply to any site on the _World Wide_ Web that users from these jurisdictions access (the EU and California, with the caveat that California's law applies only to entities with gross revenue over 25 million USD, among things).
 
 These regulations include requirements such as:
 
