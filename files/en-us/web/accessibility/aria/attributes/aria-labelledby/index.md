@@ -56,7 +56,8 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
    <button aria-label="Blue" aria-labelledby="color">Red</button>
    <span id="color">Yellow</span>
    ```
-   In this example, that accessible name is "Yellow". 
+
+In this example, that accessible name is "Yellow". 
    
 1. The `aria-labelledby` property takes as value an id reference list, which means you can combine more than one element into a single accessible name. You can include the {{htmlattrxref('id')}} of the element itself to reference its own content.
 
