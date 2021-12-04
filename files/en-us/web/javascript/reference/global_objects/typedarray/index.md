@@ -84,15 +84,15 @@ Where _TypedArray_ is a constructor for one of the concrete types.
     `BYTES_PER_ELEMENT`_ bytes, containing zeros.
 - `typedArray`
   - : When called with a `typedArray` argument the `typedArray` gets copied
-    into a new typed array. For (**non {{glossary("bigint")}}**) `TypedArray`,
-    the `typedArray` parameter can be an object of only the (**non**
-    {{glossary("bigint")}}) typed array types (such as {{JSxRef("Int32Array")}}).
-    Similarly, for **{{glossary("bigint")}}** `TypedArray`, the `typedArray`
-    parameter can be an object of only the {{glossary("bigint")}} typed array types
-    (such as {{JSxRef("BigInt64Array")}}). Each value in `typedArray` is converted
-    to the corresponding type of the constructor before being copied into the new
-    array.  The length of the new typed array will be same as the length of the
-    `typedArray` argument.
+    into a new typed array. For **non-{{glossary("bigint")}}** `TypedArray`,
+    the `typedArray` parameter can be an object of only the
+    **non**-{{glossary("bigint")}} typed array types (such as
+    {{JSxRef("Int32Array")}}).  Similarly, for **{{glossary("bigint")}}**
+    `TypedArray`, the `typedArray` parameter can be an object of only the
+    {{glossary("bigint")}} typed array types (such as {{JSxRef("BigInt64Array")}}).
+    Each value in `typedArray` is converted to the corresponding type of the
+    constructor before being copied into the new array.  The length of the new
+    typed array will be same as the length of the `typedArray` argument.
 - `object`
   - : When called with an `object` argument, a new typed array is
     created as if by the `TypedArray.from()` method.
