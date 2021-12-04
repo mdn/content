@@ -20,7 +20,7 @@ All interactive elements must have an accessible name. `aria-labelledby` can be 
 
 If there is no content that can be referenced to create an accessible name, the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute should be used instead.
 
-The purpose of `aria-labelledby` is the same as that of `aria-label`. It provides the user with a recognizable name for the object. If an element has both attributes set, the `aria-labelledby` gets precedence. In fact, `aria-labelledby` takes precedence over all other methods of providing an accessible name, including `aria-label`, {{HTMLElement('label')}}, and the elements inner text.
+The purpose of `aria-labelledby` is the same as that of `aria-label`. It provides the user with a recognizable, accessible name for an interactive element. If an element has both attributes set, `aria-labelledby` will be used. `aria-labelledby` takes precedence over all other methods of providing an accessible name, including `aria-label`, {{HTMLElement('label')}}, and the element's inner text.
 
 The `aria-labelledby` and [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attributes both reference other elements to calculate text alternatives. The `aria-labelledby` should reference brief text that provides the element with an accessible name. The `aria-describedby` attribute is used to reference longer content that provide a description. If there is no element in the DOM that provides a brief label appropriate for an accessible name for an interactive element, include the `aria-label` attribute to define the accessible name.
 
