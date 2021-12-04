@@ -140,7 +140,7 @@ Here is a list of common features controllable with HTTP:
   The SOCKS protocol, for example, operates at a lower level.
   Other protocols, like ftp, can be handled by these proxies.
 - _Sessions_
-  Using HTTP cookies allows you to link requests with the state of the server
+  Using HTTP cookies allows you to link requests with the state of the server.
   This creates sessions, despite basic HTTP being a state-less protocol.
   This is useful not only for e-commerce shopping baskets, but also for any site allowing user configuration of the output.
 
