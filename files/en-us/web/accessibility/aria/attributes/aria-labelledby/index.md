@@ -34,7 +34,7 @@ The following example uses `aria-labelledby` to provide an accessible name for a
 <span id="tac">I agree to the Terms and Conditions.</span>
 ```
 
-Note that while using `aria-labelledby` is similar in this situation to using an HTML {{HTMLElement('label')}} element with the `for` attribute, there are some very important differences. The `aria-labelledby` attribute only defines the accessible name. It doesn't give the `<span>` any of the `<label>` functionality, such as making clicking on the labeling element activate the labeled element. That has to be added back in with JavaScript. However, HTML `<label>` cannot be used to label a `<span>` and they should not contain interactive elements such as links. 
+Note that while using `aria-labelledby` is similar in this situation to using an HTML {{HTMLElement('label')}} element with the `for` attribute, there are some very important differences. The `aria-labelledby` attribute only defines the accessible name. It doesn't provide any of `<label>`'s other functionality, such as making clicking on the labeling element activate the input it is associated with. That has to be added back in with JavaScript.
 
 Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with native `<label>`. When feasible, use the following:
 
