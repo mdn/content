@@ -24,7 +24,7 @@ An "owning element" is any DOM ancestor of an element. If an element visually, f
 
 Referencing the ID of one or more elements allows any element to "own" any other element with an `aria-owns` delcaration. The value of the `aria-owns` attribute is a space-separated ID reference list that references the IDs of one or more elements in the document.
 
-An 'owned element' is any DOM descendant of the element, any element specified as a child via `aria-owns`, or any DOM descendant of the owned child. The `aria-owns` owned element should be an element that is separate in the DOM but should be treated as a child of the current element.
+> **Note:** An "owned" element is any DOM descendant of the element, any element specified as a child via `aria-owns`, or any DOM descendant of the owned child. The `aria-owns`-owned element should be an element that belongs to a separate parent tree in the DOM but should be treated as a child of the current element.
 
 Do not use `aria-owns` as a replacement for the DOM hierarchy. If the relationship is represented in the DOM, do not use `aria-owns`.
 
