@@ -36,7 +36,12 @@ As an example of when to use `aria-owns` includes pop-up sub-menus that visually
 
 > **Note:** The `aria-owns` attribute should only be used when the relationship cannot be determined from the DOM. 
 
-If an element has both `aria-owns` and DOM children then the order of the child elements is the actual DOM children first, then the elements referenced in `aria-owns`. This order can be changed by including the ID references to the actual DOM children in the `aria-owns` value. 
+If an element has both `aria-owns` and DOM children, the order of the child elements:
+
+ 1. The actual DOM children first, 
+ 2. Then the elements referenced in `aria-owns`. 
+ 
+ This order can be changed by including the ID references to the actual DOM children in the `aria-owns` value. 
 
 Make sure your owned elements have only one owner. Do not specify the `id` of an element in more than one other element's `aria-owns` attribute. An element can have only one owner. 
 
