@@ -77,7 +77,7 @@ There are 4 categories of ARIA states and properties:
 
 ## Global ARIA attributes
 
-Some states and properties are applicable to all HTML elements regardless of whether an ARIA role is applied. These are defined as "Global" attributes. Global states and properties are supported by all roles and by all base markup elements.
+Some states and properties apply to all HTML elements regardless of whether an ARIA role is applied. These are defined as "Global" attributes. Global states and properties are supported by all roles and base markup elements.
 
 Many of the above attributes are global, meaning they can be included on any element unless specifically disallowed:
 
