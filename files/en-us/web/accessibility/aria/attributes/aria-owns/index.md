@@ -22,7 +22,7 @@ When elements visually seem to be related but are not associated in the DOM, the
 
 An "owning element" is any DOM ancestor of an element. If an element visually, functionally, or contextually appears to "own" (be an ancestor of) an element, but doesn't actually "own" the element in the DOM, include the `aria-owns` to create that relationship. Add the attribute to the owning element with reference to the non-child owned element (or elements) to tell assistive technology that an element should be treated as a child. 
 
-We create this owning relationship and enable any element to 'own' any element with the `aria-owns` attribute, by referencing the ID of one or more elements to be owned. The value of the `aria-owns` attribute is a space-separated ID reference list that references one or more elements in the document by ID.
+Referencing the ID of one or more elements allows any element to "own" any other element with an `aria-owns` delcaration. The value of the `aria-owns` attribute is a space-separated ID reference list that references the IDs of one or more elements in the document.
 
 An 'owned element' is any DOM descendant of the element, any element specified as a child via `aria-owns`, or any DOM descendant of the owned child. The `aria-owns` owned element should be an element that is separate in the DOM but should be treated as a child of the current element.
 
