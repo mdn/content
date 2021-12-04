@@ -20,7 +20,7 @@ There are circumstances where the layout that appears on screen may differ from 
 
 When elements visually seem to be related but are not associated in the DOM, the `aria-owns` attribute enables creating the relationship that appears on screen in the accessibility layer for use by assistive technology. The **only** reason to include `aria-owns` is to expose a parent/child contextual relationship to assistive technology when the DOM's construction can't provide that relationship. 
 
-An 'owning element' is any DOM ancestor of an element. If an element visually, functionally, or contextually appears to 'own', (be an ancestor of) an element, but doesn't actually 'own' the element in the DOM, include the `aria-owns` to create that relationship. Add the attribute to the owning element with reference to the non-child owned element (or elements) to tell assistive technology that an element should be treated as a child. 
+An "owning element" is any DOM ancestor of an element. If an element visually, functionally, or contextually appears to "own" (be an ancestor of) an element, but doesn't actually "own" the element in the DOM, include the `aria-owns` to create that relationship. Add the attribute to the owning element with reference to the non-child owned element (or elements) to tell assistive technology that an element should be treated as a child. 
 
 We create this owning relationship and enable any element to 'own' any element with the `aria-owns` attribute, by referencing the ID of one or more elements to be owned. The value of the `aria-owns` attribute is a space-separated ID reference list that references one or more elements in the document by ID.
 
