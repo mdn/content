@@ -44,7 +44,7 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
   I agree to the Terms and Conditions.
 </label>
 <p>
-  <a href="tac.html">Read our Terms and Conditions</a>
+  <a href="tac.html">Read our Terms and Conditions</a>.
 </p>
 ```
 
