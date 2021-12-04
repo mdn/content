@@ -28,7 +28,7 @@ Referencing the ID of one or more elements allows any element to "own" any other
 
 Do not use `aria-owns` as a replacement for the DOM hierarchy. If the relationship is represented in the DOM, do not use `aria-owns`.
 
-A child element is owned by it's DOM parent by default: in this case, `aria-owns` should not be used.  While the `aria-owns` attribute can be used to rearrange existing child elements into a different order, this should be avoided. While it may be tempting to order the accessibility layer to match order changes created with the CSS {{CSSXref('order')}} property, avoiding both the `order` property and the `aria-owns` attribute is the best option. 
+A child element is owned by it's DOM parent by default: in this case, `aria-owns` should not be used. Avoid using the `aria-owns` attribute to rearrange existing child elements into a different order. While it may be tempting to order the accessibility layer to match order changes created with the CSS {{CSSXref('order')}} property, avoiding both the `order` property and the `aria-owns` attribute is the best option. 
 
 When using `aria-owns`, make sure you manage focus order. Ensure the visual focus order matches this assistive technology reading order. 
 
