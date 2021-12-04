@@ -59,6 +59,7 @@ a:hover {
 ### Image gallery
 
 You can use the `:hover` pseudo-class to build an image gallery with full-size images that show only when the mouse moves over a thumbnail. See [this demo](/@api/deki/files/6247/=css-gallery.zip "css-gallery.zip") for a possible cue.
+<!-- sugges making this file available on a code pen.  That possible? -->
 
 > **Note:** For an analogous effect, but based on the [`:checked`](/en-US/docs/Web/CSS/:checked) pseudo-class (applied to hidden radioboxes), see [this demo](/@api/deki/files/6268/=css-checked-gallery.zip "css-checked-gallery.zip"), taken from the [:checked](/en-US/docs/Web/CSS/:checked) reference page.
 
