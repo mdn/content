@@ -26,8 +26,6 @@ The `aria-labelledby` and [`aria-describedby`](/en-US/docs/Web/Accessibility/ARI
 
 > **Note:** While in U.S. English the attribute would be assumed to be spelled "labeledby", the "labelledby" spelling has been established and is the spelling used in accessibility APIs.
 
-The `aria-labelledby` property enables authors to reference other elements on the page to define an accessible name. This is useful when using elements that don't have native support for associating elements to provide an accessible name. 
-
 For example, the following checkbox is named by the text content of a next sibling element.
 
 ```html
