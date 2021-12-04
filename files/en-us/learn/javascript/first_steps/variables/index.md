@@ -56,10 +56,10 @@ Let's look at a simple example:
 const buttonA = document.querySelector('#button_A');
 const headingA = document.querySelector('#heading_A');
 
-buttonA.onclick = function() {
-  let name = prompt('What is your name?');
-  alert('Hello ' + name + ', nice to see you!');
-  headingA.textContent = 'Welcome ' + name;
+buttonA.onclick = () => {
+  const name = prompt('What is your name?');
+  alert(`Hello ${name}, nice to see you!`);
+  headingA.textContent = `Welcome ${name}`;
 }
 ```
 
@@ -80,9 +80,9 @@ To understand why this is so useful, let's think about how we'd write this examp
 const buttonB = document.querySelector('#button_B');
 const headingB = document.querySelector('#heading_B');
 
-buttonB.onclick = function() {
-    alert('Hello ' + prompt('What is your name?') + ', nice to see you!');
-    headingB.textContent = 'Welcome ' + prompt('What is your name?');
+buttonB.onclick = () => {
+    alert(`Hello ${prompt('What is your name?')}, nice to see you!`);
+    headingB.textContent = `Welcome ${prompt('What is your name?')}`;
 }
 ```
 
@@ -254,7 +254,7 @@ MYAGE
 var
 Document
 skjfndskjfnbdskjfb
-thisisareallylongstupidvariablenameman
+thisisareallylongvariablenameman
 ```
 
 Try creating a few more variables now, with the above guidance in mind.

@@ -69,8 +69,8 @@ Let's quickly play with some numbers to reacquaint ourselves with the basic synt
 1.  First of all, let's declare a couple of variables and initialize them with an integer and a float, respectively, then type the variable names back in to check that everything is in order:
 
     ```js
-    let myInt = 5;
-    let myFloat = 6.667;
+    const myInt = 5;
+    const myFloat = 6.667;
     myInt;
     myFloat;
     ```
@@ -92,9 +92,9 @@ The [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) objec
 For example, to round your number to a fixed number of decimal places, use the [`toFixed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) method. Type the following lines into your browser's [console](/en-US/docs/Tools/Web_Console):
 
 ```js
-let lotsOfDecimal = 1.766584958675746364;
+const lotsOfDecimal = 1.766584958675746364;
 lotsOfDecimal;
-let twoDecimalPlaces = lotsOfDecimal.toFixed(2);
+const twoDecimalPlaces = lotsOfDecimal.toFixed(2);
 twoDecimalPlaces;
 ```
 
@@ -105,7 +105,7 @@ Sometimes you might end up with a number that is stored as a string type, which 
 For example, try typing these lines into your console:
 
 ```js
-let myNumber = '74';
+const myNumber = '74';
 myNumber += 3;
 ```
 
@@ -208,8 +208,8 @@ We probably don't need to teach you how to do basic math, but we would like to t
 2.  You can also try declaring and initializing some numbers inside variables, and try using those in the sums — the variables will behave exactly like the values they hold for the purposes of the sum. For example:
 
     ```js
-    let num1 = 10;
-    let num2 = 50;
+    const num1 = 10;
+    const num2 = 50;
     9 * num1;
     num1 ** 3;
     num2 / num1;
@@ -256,8 +256,6 @@ Sometimes you'll want to repeatedly add or subtract one to or from a numeric var
 ```js
 guessCount++;
 ```
-
-> **Note:** These operators are most commonly used in [loops](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration), which you'll learn about later on in the course. For example, say you wanted to loop through a list of prices, and add sales tax to each one. You'd use a loop to go through each value in turn and do the necessary calculation for adding the sales tax in each case. The incrementor is used to move to the next value when needed. We've actually provided a simple example showing how this is done — [check it out live](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html), and [look at the source code](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/maths/loop.html) to see if you can spot the incrementors! We'll look at loops in detail later on in the course.
 
 Let's try playing with these in your console. For a start, note that you can't apply these directly to a number, which might seem strange, but we are assigning a variable a new updated value, not operating on the value itself. The following will return an error:
 
