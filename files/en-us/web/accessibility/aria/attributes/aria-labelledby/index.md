@@ -16,7 +16,7 @@ The `aria-labelledby` attribute identifies the element (or elements) that labels
 
 Some elements get their [accessible name](/en-US/docs/Glossary/Accessible_Name) from their inner content. For example, the accessible name for a {{HTMLElement('button')}}, {{HTMLElement('a')}}, or {{HTMLElement('td')}} comes from the text between the opening and closing tags. Other elements, such as form {{HTMLElement('textarea')}}, {{HTMLElement('fieldset')}}, and {{HTMLElement('table')}} get their accessible name from the content of associated elements; for these elements, the accessible name comes from the {{HTMLElement('label')}} with a `for` attribute, {{HTMLElement('legend')}}, and {{HTMLElement('caption')}} respectively. 
 
-While all interactive elements must have an accessible name, some elements don't have one by default. When an element's accessible name includes content from elsewhere in the DOM, the `aria-labelledby` property can be used to reference those other elements to define the accessible name. 
+All interactive elements must have an accessible name. `aria-labelledby` can be used to reference another element to define its accessible name, when an element's accessible name needs to use content from elsewhere in the DOM.
 
 If there is no visible content that can be referenced to create an accessible name, the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute should be used instead.
 
