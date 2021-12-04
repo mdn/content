@@ -10,7 +10,7 @@ tags:
   - Reference
 ---
 
-The `aria-labelledby` attribute identifies the element (or elements) that labels the current element. 
+The `aria-labelledby` attribute identifies the element (or elements) that labels the element it is applied to. 
 
 ## Description
 
