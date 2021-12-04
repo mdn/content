@@ -16,7 +16,7 @@ The `aria-owns` attribute identifies an element (or elements) in order to define
 
 Every element is the parent, sibling or child of another element. The document object, made up of HTML elements and text nodes, is the basis of the DOM tree. The Accessibility Object Model (<abbr>AOM</abbr>) relies on a well-built DOM to enable assistive technologies (AT) to relay meaningful information about a documents contents to users. 
 
-With the ability to alter content with JavaScript and alter layouts with CSS, the layout that appears on screen may differ from the underlying DOM structure. When this is the case, the `aria-owns` attribute can be used to create the relationship in the accessibility layer.
+There are circumstances where the layout that appears on screen may differ from the underlying DOM structure, due to the ability of JavaScript to alter content and CSS to alter layout. When this is the case, the `aria-owns` attribute can be used to recreate a meaningful relationship for assistive technology that consumes the DOM.
 
 When elements visually seem to be related but are not associated in the DOM, the `aria-owns` attribute enables creating the relationship that appears on screen in the accessibility layer for use by ATs. The **only** reason to include `aria-owns` is to expose a parent/child contextual relationship to AT when that relationship doesn't exist in the DOM. 
 
