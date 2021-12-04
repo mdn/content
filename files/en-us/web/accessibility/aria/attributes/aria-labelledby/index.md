@@ -79,7 +79,7 @@ In this example, the accessible name is "read more 13 ARIA attributes you need t
    
 4. The `aria-labelledby` property incorporates the value of input elements. If the value references an `<input>`, the current value of the form control is included in the calculated name string, changing if the value is updated.
    
-5. The `aria-labelledby` property cannot be chained. If an element with `aria-labelledby` references another element that also has `aria-labelledby`, the `aria-labelledby` attribute on the referenced element is ignored.
+7. The `aria-labelledby` property cannot be chained. If an element with `aria-labelledby` references another element that also has `aria-labelledby`, the `aria-labelledby` attribute on the referenced element is ignored.
    
 > **Warning:** Because calculating the name of an element with `aria-labelledby` can be complex and reference hidden content, testing with assistive technologies to ensure the expected name is presented to users is very important.
 
