@@ -70,7 +70,7 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
    
 1. The `aria-labelledby` property value order matters. When more than one element is referenced by `aria-labelledby`, the content from each referenced element is combined in the order that they are referenced in the `aria-labelledby` value. Had we written `aria-labelledby="attr rm13">`, the accessible name would have been "13 ARIA attributes you need to know read more".
        
-1. The `aria-labelledby` property ignores repeated `id`s in its value. If an element is referenced more than one time, only the first reference is processed. `aria-labelledby="attr attr rm13 rm13">` is treated as `aria-labelledby="attr rm13">`
+4. The `aria-labelledby` property ignores repeated `id`s in its value. If an element is referenced more than one time, only the first reference is processed. `aria-labelledby="attr attr rm13 rm13">` is treated as `aria-labelledby="attr rm13">`
 
    
 3. The `aria-labelledby` property value can include content from elements that aren't even visible. While you should provide assistive technology users with the same content and all other users, you can include content from elements with the HTML {{htmlattrxref('hidden')}} attribute, CSS [`display: none`](/en-US/docs/Web/CSS/display), and CSS [`visibility: hidden`](/en-US/docs/Web/CSS/visibility) in the calculated name string.
