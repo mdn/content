@@ -20,7 +20,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 - {{domxref("SharedWorkerGlobalScope.name")}} {{readOnlyinline}}
   - : The name that the {{domxref("SharedWorker")}} was (optionally) given when it was created using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. This is mainly useful for debugging purposes.
 - {{domxref("SharedWorkerGlobalScope.applicationCache")}} {{readOnlyinline}} {{deprecated_inline}}
-  - : This property returns the {{domxref("ApplicationCache")}} object for the worker (see [Using the application cache](/en-US/docs/Web/HTML/Using_the_application_cache)).
+  - : This property returns the {{domxref("ApplicationCache")}} object for the worker.
 
 ### Properties inherited from WorkerGlobalScope
 
