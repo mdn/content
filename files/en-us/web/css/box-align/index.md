@@ -14,7 +14,7 @@ browser-compat: css.properties.box-align
 
 The **`box-align`** [CSS ](/en-US/docs/Web/CSS)property specifies how an element aligns its contents across its layout in a perpendicular direction. The effect of the property is only visible if there is extra space in the box.
 
-See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) for information about the current standard.
+See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
 
 ```css
 /* Keyword values */
