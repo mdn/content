@@ -11,7 +11,7 @@ browser-compat: javascript.classes.static
 ---
 {{jsSidebar("Classes")}}
 
-The **`static`** keyword defines a [static method or property](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#static_methods_and_properties) for a class, or a [class static initialization block](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks) (see the link for more information about this usage).
+The **`static`** keyword defines a [static method or property](/en-US/docs/Web/JavaScript/Reference/Classes#static_methods_and_properties) for a class, or a [class static initialization block](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks) (see the link for more information about this usage).
 Neither static methods nor static properties can be called on instances of the class.
 Instead, they're called on the class itself.
 
