@@ -19,7 +19,7 @@ The `Referer` header can contain an _origin_, _path_, and _querystring_, and may
 
 > **Note:** The header name "referer" is actually a misspelling of the word "referrer". See {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}} for more details.
 
-> **Warning:** This header may has undesirable consequences for user security and privacy. See [Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for more information and mitigations.
+> **Warning:** This header may have undesirable consequences for user security and privacy. See [Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for more information and mitigations.
 
 <table class="properties">
   <tbody>
