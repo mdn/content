@@ -13,11 +13,7 @@ tags:
   - Window
 browser-compat: api.SharedWorkerGlobalScope.applicationCache
 ---
-{{Deprecated_Header}}{{Non-standard_Header}}
-
-> **Warning:** Application Cache is deprecated as of Firefox 44, and is no longer available in
-> insecure contexts from Firefox 60 onwards ({{bug(1354175)}}, currently Nightly/Beta
-> only). Don't use it to offline websites — consider using [service workers](/en-US/docs/Web/API/Service_Worker_API) instead.
+{{Deprecated_Header}}{{Non-standard_Header}}{{securecontext_header}}
 
 Returns a reference to the application cache object for the window.
 
@@ -34,8 +30,3 @@ cache = window.applicationCache
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Using Application
-  Cache](/en-US/docs/Web/HTML/Using_the_application_cache)
