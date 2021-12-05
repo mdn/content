@@ -60,7 +60,7 @@ There is only one way to create an {{domxref("XRPose")}}, and that's using the�
 For example, if you wish to draw a hand controller's representation using the controller's {{domxref("XRInputSource.gripSpace", "gripSpace")}}, you can get the pose needed like this:
 
 ```js
-let controlPose = frame.getPose(worldRefSpace, inputSource.gripSpace);
+let controlPose = frame.getPose(inputSource.gripSpace, worldRefSpace);
 ```
 
 This converts the position and orientation of the input's grip space to use the world's coordinate system, then generates the corresponding `XRPose`, storing it in `controlPose`. You can then apply `controlPose`'s {{domxref("XRPose.transform", "transform")}} to the vertices in the object model representing the controller to calculate the WebGL coordinates to use when rendering the controller's representation to the framebuffer.
