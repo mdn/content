@@ -186,8 +186,7 @@ WorkerBee.prototype.constructor = WorkerBee;
 
 ```java
 public class Manager extends Employee {
-   public Employee[] reports =
-       new Employee[0];
+   public String[] reports = new String[0];
 }
 
 public class WorkerBee extends Employee {
