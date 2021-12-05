@@ -14,7 +14,7 @@ This page lists reference pages covering all the WAI-ARIA attributes discussed o
 
 ARIA attributes enable modifying an element's states and properties as defined in the accessibility tree.
 
-> **Note:** ARIA is only modify the accessibility tree for any element and therefore how assistive technology presents the content to your users. ARIA doesn't change anything about an elements function or behavior. When not using semantic HTML elements for their intended purpose and default functionality, you must use JavaScript to manage behavior, focus, and ARIA states.
+> **Note:** ARIA only modifies the accessibility tree, modifying how assistive technology presents the content to your users. ARIA doesn't change anything about an element's function or behavior. When not using semantic HTML elements for their intended purpose and default functionality, you must use JavaScript to manage behavior, focus, and ARIA states.
 
 ## ARIA attribute types
 
@@ -77,7 +77,7 @@ There are 4 categories of ARIA states and properties:
 
 ## Global ARIA attributes
 
-Some states and properties are applicable to all host language elements regardless of whether a role is applied. These are defined as "Global" attributes. Global states and properties are supported by all roles and by all base markup elements.
+Some states and properties apply to all HTML elements regardless of whether an ARIA role is applied. These are defined as "Global" attributes. Global states and properties are supported by all roles and base markup elements.
 
 Many of the above attributes are global, meaning they can be included on any element unless specifically disallowed:
 
@@ -104,7 +104,7 @@ Many of the above attributes are global, meaning they can be included on any ele
 - [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
 - [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) 	
 
-By "specifically disallowed", all the above attributes are global except for `aria-label` and `aria-labelledby` properties which are not allowed on elements with role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/Presentation_role) nor it's synonym [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/None_role) role.
+By "specifically disallowed," all the above attributes are global except for the `aria-label` and `aria-labelledby` properties, which are not allowed on elements with role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/Presentation_role) nor its synonym [`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/None_role) role.
 
 ## States and properties defined on MDN
 
