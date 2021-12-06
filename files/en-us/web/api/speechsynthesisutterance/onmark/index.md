@@ -24,7 +24,7 @@ event fires.)
 ## Syntax
 
 ```js
-speechSynthesisUtteranceInstance.onmark = function() { ... };
+speechSynthesisUtteranceInstance.onmark = function() { /* ... */ };
 ```
 
 ## Examples

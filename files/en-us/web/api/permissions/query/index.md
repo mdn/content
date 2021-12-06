@@ -16,7 +16,7 @@ The **`Permissions.query()`** method of the {{domxref("Permissions")}} interface
 ## Syntax
 
 ```js
-navigator.permissions.query(PermissionDescriptor).then(function(permissionStatus) { ... })
+navigator.permissions.query(PermissionDescriptor).then(function(permissionStatus) { /* ... */ })
 ```
 
 ### Parameters

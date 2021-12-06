@@ -17,7 +17,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 ## Syntax
 
 ```js
-HTMLMediaElement.onwaitingforkey = function(waitingforkey) { ... }
+HTMLMediaElement.onwaitingforkey = function(waitingforkey) { /* ... */ }
 ```
 
 ## Specifications

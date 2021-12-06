@@ -19,7 +19,7 @@ The **`onerror`** property of the {{domxref("SharedWorker")}} interface represen
 ## Syntax
 
 ```js
-mySharedWorker.onerror = function(event) { ... };
+mySharedWorker.onerror = function(event) { /* ... */ };
 ```
 
 ## Example

@@ -16,8 +16,8 @@ The **`onchange`** EventHandler of the {{domxref("CookieStore")}} interface fire
 ## Syntax
 
 ```js
-CookieStore.onchange = function() { ... }
-CookieStore.addEventListener('change', function() { ... })
+CookieStore.onchange = function() { /* ... */ }
+CookieStore.addEventListener('change', function() { /* ... */ })
 ```
 
 ## Examples

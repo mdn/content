@@ -23,7 +23,7 @@ fires.)
 ## Syntax
 
 ```js
-mySpeechRecognition.onaudiostart = function() { ... };
+mySpeechRecognition.onaudiostart = function() { /* ... */ };
 ```
 
 ## Examples

@@ -24,7 +24,7 @@ recognize grammars associated with the current `SpeechRecognition` (when the
 ## Syntax
 
 ```js
-mySpeechRecognition.onstart = function() { ... };
+mySpeechRecognition.onstart = function() { /* ... */ };
 ```
 
 ## Examples

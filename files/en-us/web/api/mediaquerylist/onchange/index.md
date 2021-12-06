@@ -24,7 +24,7 @@ purposes.
 ## Syntax
 
 ```js
-MediaQueryList.onchange = function() { ... };
+MediaQueryList.onchange = function() { /* ... */ };
 ```
 
 ## Example

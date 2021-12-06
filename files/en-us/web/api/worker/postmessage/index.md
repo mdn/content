@@ -134,11 +134,11 @@ self.onmessage = function handleMessageFromMain(msg) {
 buf.byteLength in main BEFORE transfer to worker:        8                     main.js:19
 buf.byteLength in main AFTER transfer to worker:         0                     main.js:27
 
-message from main received in worker:                    MessageEvent { ... }  myWorker.js:3
+message from main received in worker:                    MessageEvent { /* ... */ }  myWorker.js:3
 buf.byteLength in worker BEFORE transfer back to main:   8                     myWorker.js:7
 buf.byteLength in worker AFTER transfer back to main:    0                     myWorker.js:15
 
-message from worker received in main:                    MessageEvent { ... }  main.js:6
+message from worker received in main:                    MessageEvent { /* ... */ }  main.js:6
 buf.byteLength in main AFTER transfer back from worker:  8                     main.js:10
 ```
 

@@ -24,7 +24,7 @@ the {{domxref("ServiceWorkerRegistration")}}.
 ## Syntax
 
 ```js
-navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) { ... });
+navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) { /* ... */ });
 ```
 
 ### Value

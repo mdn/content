@@ -23,7 +23,7 @@ This function does not automatically release all `AudioContext`-created objects,
 
 ```js
 var audioCtx = new AudioContext();
-audioCtx.close().then(function() { ... });
+audioCtx.close().then(function() { /* ... */ });
 await audioCtx.close();
 ```
 

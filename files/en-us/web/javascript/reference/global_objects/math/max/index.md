@@ -15,9 +15,7 @@ browser-compat: javascript.builtins.Math.max
 ---
 {{JSRef}}
 
-The **`Math.max()`** function returns
-the largest of the zero or more numbers given as input parameters, or {{jsxref("NaN")}} if any parameter
-isn't a number and can't be converted into one.
+The **`Math.max()`** function returns the largest of the zero or more numbers given as input parameters, or {{jsxref("NaN")}} if any parameter isn't a number and can't be converted into one.
 
 {{EmbedInteractiveExample("pages/js/math-max.html")}}
 
@@ -27,12 +25,12 @@ isn't a number and can't be converted into one.
 Math.max()
 Math.max(value0)
 Math.max(value0, value1)
-Math.max(value0, value1, ... , valueN)
+Math.max(value0, value1, /* ... ,*/ valueN)
 ```
 
 ### Parameters
 
-- `value1, value2, ...`
+- `value1`, `value2`, ... , `valueN`
   - : Zero or more numbers among which the largest value will be selected and returned.
 
 ### Return value

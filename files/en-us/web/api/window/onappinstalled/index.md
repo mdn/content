@@ -22,7 +22,7 @@ dispatched once the web application is successfully installed as a [progressive 
 ## Syntax
 
 ```js
-window.onappinstalled = function(event) { ... };
+window.onappinstalled = function(event) { /* ... */ };
 ```
 
 ## Example

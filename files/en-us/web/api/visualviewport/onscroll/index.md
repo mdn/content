@@ -24,7 +24,7 @@ is fired.
 ## Syntax
 
 ```js
-VisualViewport.onscroll = function(e) { ... }
+VisualViewport.onscroll = function(e) { /* ... */ }
 ```
 
 ## Examples

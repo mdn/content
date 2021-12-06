@@ -28,7 +28,7 @@ installed/uninstalled while a speech synthesis application is running.
 ## Syntax
 
 ```js
-speechSynthesisInstance.onvoiceschanged = function() { ... };
+speechSynthesisInstance.onvoiceschanged = function() { /* ... */ };
 ```
 
 ## Examples
