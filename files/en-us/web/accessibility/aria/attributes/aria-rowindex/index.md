@@ -20,7 +20,7 @@ When only a subset of rows are loaded, you do need to let all users know which s
 
 Included on the {{HTMLElement('tr')}} element or on an element with a role of [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role), or directly on the {{HTMLElement('td')}}, {{HTMLElement('th')}}, or element with role of [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) or [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), the value is the row's position with respect to the full table.
 
-The value for `aria-rowindex` is an integer greater than or equal to 1, greater than the `aria-rowindex` value of any previous rows, and less than or equal to the number of rows in the full table.
+The value for `aria-rowindex` is an integer greater than or equal to `1`, greater than the `aria-rowindex` value of any previous rows, and less than or equal to the number of rows in the full table.
 
 If all of the rows are loaded and in the DOM, you don't need to include `aria-rowindex` as browsers automatically calculate the index of each row. However, when only a subset of the rows are present in the DOM, `aria-rowindex` is needed to indicate each row's position with respect to the full table. If only a subset of rows are loaded, you also need to include [`aria-rowcount`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowcount) on the table ancestor, even if you don't know the total rowcount.
 
