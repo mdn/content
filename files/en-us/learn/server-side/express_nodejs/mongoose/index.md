@@ -619,7 +619,8 @@ Start by creating a folder for our models in the project root (**/models**) and 
 
 ### Author model
 
-Copy the `Author` schema code shown below and paste it into your **./models/author.js** file. The schema defines an author as having `String` SchemaTypes for the first and family names (required, with a maximum of 100 characters), and `Date` fields for the dates of birth and death.
+Copy the `Author` schema code shown below and paste it into your **./models/author.js** file.
+The schema defines an author as having `String` SchemaTypes for the first and family names (required, with a maximum of 100 characters), and `Date` fields for the dates of birth and death.
 
 ```js
 var mongoose = require('mongoose');
@@ -639,18 +640,27 @@ var AuthorSchema = new Schema(
 AuthorSchema
 .virtual('name')
 .get(function () {
-  return this.family_name + ', ' + this.first_name;
+// To avoid errors in cases where an author does not have either a family name or first name
+// We want to make sure we handle the exception by returning an empty string for that case
+  var fullname = '';
+  if (this.first_name && this.family_name) {
+    fullname = this.family_name + ', ' + this.first_name
+  }
+  if (!this.first_name || !this.family_name) {
+    fullname = '';
+  }
+  return fullname;
 });
 
 // Virtual for author's lifespan
 AuthorSchema.virtual('lifespan').get(function() {
   var lifetime_string = '';
   if (this.date_of_birth) {
-    lifetime_string = DateTime.fromJSDate(this.date_of_birth).toLocaleString(DateTime.DATE_MED);
+    lifetime_string = this.date_of_birth.getYear()).toString();
   }
   lifetime_string += ' - ';
   if (this.date_of_death) {
-    lifetime_string += DateTime.fromJSDate(this.date_of_death).toLocaleString(DateTime.DATE_MED)
+    lifetime_string += this.date_of_death.getYear()
   }
   return lifetime_string;
 });
@@ -669,7 +679,8 @@ module.exports = mongoose.model('Author', AuthorSchema);
 We've also declared a [virtual](#virtual_properties) for the AuthorSchema named "url" that returns the absolute URL required to get a particular instance of the model — we'll use the property in our templates whenever we need to get a link to a particular author.
 
 > **Note:** Declaring our URLs as a virtual in the schema is a good idea because then the URL for an item only ever needs to be changed in one place.
-> At this point, a link using this URL wouldn't work, because we haven't got any routes handling code for individual model instances. We'll set those up in a later article!
+> At this point, a link using this URL wouldn't work, because we haven't got any routes handling code for individual model instances.
+> We'll set those up in a later article!
 
 At the end of the module, we export the model.
 
