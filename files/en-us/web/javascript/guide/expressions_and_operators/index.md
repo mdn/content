@@ -131,7 +131,7 @@ let x = f();
 
 // Declares a variable x and initializes it to the result of g().
 // The result of the x = g() assignment expression is discarded.
-x = g(); Reassigns the variable x to the result of g().
+x = g(); // Reassigns the variable x to the result of g().
 ```
 
 [`const`]: /en-US/docs/Web/JavaScript/Reference/Statements/const
