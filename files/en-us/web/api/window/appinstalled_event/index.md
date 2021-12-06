@@ -11,7 +11,6 @@ tags:
   - web manifest
 browser-compat: api.Window.appinstalled_event
 ---
-{{deprecated_header}}
 
 The **`appinstalled`** event of the [Web Manifest API](/en-US/docs/Web/Manifest) is fired when the browser has successfully installed a page as an application.
 
