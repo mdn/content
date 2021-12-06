@@ -198,24 +198,26 @@ First let's look at arithmetic operators, for example:
 You can also use the `+` operator to join text strings together (in programming, this is called _concatenation_). Try entering the following lines, one at a time:
 
 ```js
-let name = 'Bingo';
+const name = 'Bingo';
 name;
-let hello = ' says hello!';
+const hello = ' says hello!';
 hello;
-let greeting = name + hello;
+const greeting = name + hello;
 greeting;
 ```
 
 There are also some shortcut operators available, called augmented [assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators). For example, if you want to add a new text string to an existing one and return the result, you could do this:
 
 ```js
-name += ' says hello!';
+let name1 = 'Bingo';
+name1 += ' says hello!';
 ```
 
 This is equivalent to
 
 ```js
-name = name + ' says hello!';
+let name2 = 'Bingo';
+name2 = name2 + ' says hello!';
 ```
 
 When we are running true/false tests (for example inside conditionals — see {{anch("Conditionals", "below")}}) we use [comparison operators](/en-US/docs/Web/JavaScript/Reference/Operators). For example:
@@ -284,7 +286,7 @@ At this point, replace your current `checkGuess()` function with this version in
 
 ```js
 function checkGuess() {
-  let userGuess = Number(guessField.value);
+  const userGuess = Number(guessField.value);
   if (guessCount === 1) {
     guesses.textContent = 'Previous guesses: ';
   }
@@ -317,7 +319,7 @@ function checkGuess() {
 
 This is a lot of code — phew! Let's go through each section and explain what it does.
 
-- The first line declares a variable called `userGuess` and sets its value to the current value entered inside the text field. We also run this value through the built-in `Number()` constructor, just to make sure the value is definitely a number.
+- The first line declares a variable called `userGuess` and sets its value to the current value entered inside the text field. We also run this value through the built-in `Number()` constructor, just to make sure the value is definitely a number. Since we're not changing this variable, we'll declare it using `const`.
 - Next, we encounter our first conditional code block. A conditional code block allows you to run code selectively, depending on whether a certain condition is true or not. It looks a bit like a function, but it isn't. The simplest form of conditional block starts with the keyword `if`, then some parentheses, then some curly braces. Inside the parentheses we include a test. If the test returns `true`, we run the code inside the curly braces. If not, we don't, and move on to the next bit of code. In this case the test is testing whether the `guessCount` variable is equal to `1` (i.e. whether this is the player's first go or not):
 
   ```js
@@ -375,8 +377,8 @@ function resetGame() {
   guessCount = 1;
 
   const resetParas = document.querySelectorAll('.resultParas p');
-  for (let i = 0 ; i < resetParas.length ; i++) {
-    resetParas[i].textContent = '';
+  for (const resetPara of resetParas) {
+    resetPara.textContent = '';
   }
 
   resetButton.parentNode.removeChild(resetButton);
@@ -407,30 +409,41 @@ All we have left to do now in this article is talk about a few other important c
 
 ### Loops
 
-One part of the above code that we need to take a more detailed look at is the [for](/en-US/docs/Web/JavaScript/Reference/Statements/for) loop. Loops are a very important concept in programming, which allow you to keep running a piece of code over and over again, until a certain condition is met.
+One part of the above code that we need to take a more detailed look at is the [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop. Loops are a very important concept in programming, which allow you to keep running a piece of code over and over again, until a certain condition is met.
 
 To start with, go to your [browser developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) again, and enter the following:
 
 ```js
-for (let i = 1 ; i < 21 ; i++) { console.log(i) }
+const fruits = ['apples', 'bananas', 'cherries'];
+for (const fruit of fruits) {
+  console.log(fruit);
+}
 ```
 
-What happened? The numbers `1` to `20` were printed out in your console. This is because of the loop. A `for` loop takes three input values (arguments):
+What happened? The strings `'apples', 'bananas', 'cherries'` were printed out in your console.
 
-1.  **A starting value**: In this case we are starting a count at 1, but this could be any number you like. You could replace the letter `i` with any name you like too, but `i` is used as a convention because it's short and easy to remember.
-2.  **A condition**: Here we have specified `i < 21` — the loop will keep going until `i` is no longer less than 21. When `i` reaches 21, the loop will no longer run.
-3.  **An incrementor**: We have specified `i++`, which means "add 1 to i". The loop will run once for every value of `i`, until `i` reaches a value of 21 (as discussed above). In this case, we are printing the value of `i` out to the console on every iteration using {{domxref("console.log", "console.log()")}}.
+This is because of the loop. The line `const fruits = ['apples', 'bananas', 'cherries'];` creates an array. We will work through [a complete Arrays guide](/en-US/docs/Learn/JavaScript/First_steps/Arrays) later in this module, but for now: an array is a collection of items (in this case strings).
+
+A `for...of` loop gives you a way to get each item in the array and run some JavaScript on it. The line `for (const fruit of fruits)` says:
+
+1. Get the first item in `fruits`.
+2. Set the `fruit` variable to that item, then run the code between the `{}` brackets.
+3. Get the next item in `fruits`, and repeat 2, until you reach the end of `fruits`.
+
+In this case the code inside the brackets is writing out `fruit` to the console.
 
 Now let's look at the loop in our number guessing game — the following can be found inside the `resetGame()` function:
 
 ```js
 const resetParas = document.querySelectorAll('.resultParas p');
-for (let i = 0 ; i < resetParas.length ; i++) {
-  resetParas[i].textContent = '';
+for (const resetPara of resetParas) {
+  resetPara.textContent = '';
 }
 ```
 
 This code creates a variable containing a list of all the paragraphs inside `<div class="resultParas">` using the {{domxref("Document.querySelectorAll", "querySelectorAll()")}} method, then it loops through each one, removing the text content of each.
+
+Note that even though `resetParas` is a constant, we can change its internal properties like `textContent`.
 
 ### A small discussion on objects
 
@@ -501,7 +514,7 @@ Let's play with some browser objects a bit.
 
     Every element on a page has a `style` property, which itself contains an object whose properties contain all the inline CSS styles applied to that element. This allows us to dynamically set new CSS styles on elements using JavaScript.
 
-## Finished for now\...
+## Finished for now...
 
 So that's it for building the example. You got to the end — well done! Try your final code out, or [play with our finished version here](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). If you can't get the example to work, check it against the [source code](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html).
 
