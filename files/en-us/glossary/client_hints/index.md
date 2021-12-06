@@ -61,9 +61,9 @@ For example, to stop requesting any hints it would send `Accept-CH` with an empt
 
 Client hints are broadly divided into high and low entropy hints.
 
-The low entropy hints are: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Sec-CH-UA")}}, {{HTTPHeader("Sec-CH-UA-Mobile")}}, {{HTTPHeader("Sec-CH-UA-Platform")}}.
-These are the hints that don't give away much information that might be used to "fingerprint" (identify) a particular user.
+The low entropy hints are those that don't give away much information that might be used to "fingerprint" (identify) a particular user.
 They may be sent by default on every client request, irrespective of the server `Accept-CH` response header, depending on the permission policy.
+These hints include: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Sec-CH-UA")}}, {{HTTPHeader("Sec-CH-UA-Mobile")}}, {{HTTPHeader("Sec-CH-UA-Platform")}}.
 
 All the other client hints are high entropy hints.
 These have the potential to give away more information that can be used for user fingerprinting, and therefore are gated in such a way that the user agent can make a decision as to whether to provide them.
