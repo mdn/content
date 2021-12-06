@@ -207,8 +207,10 @@ Ways to mitigate attacks involving cookies:
 
 ### Third-party cookies
 
-A cookie is associated with a domain. If this domain is the same as the domain of the page you're on, the cookie is called a _first-party cookie_.
-If the domain is different, it's a _third-party cookie_.
+A cookie is associated with a particular domain and scheme (such as `http` or `https`), and may also be associated with subdomains if the {{HTTPHeader("Set-Cookie")}} `Domain` attribute is set.
+If the cookie domain and scheme match the current page, the cookie is considered to be from the same site as the page, and is referred to as a _first-party cookie_.
+
+If the domain and scheme are different, the cookie is not considered to be from the same site, and is referred to as a _third-party cookie_.
 While the server hosting a web page sets first-party cookies, the page may contain images or other components stored on servers in other domains (for example, ad banners) that may set third-party cookies.
 These are mainly used for advertising and tracking across the web.
 For example, the [types of cookies used by Google](https://policies.google.com/technologies/types).
