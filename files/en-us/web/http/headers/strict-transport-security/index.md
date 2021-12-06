@@ -11,12 +11,10 @@ browser-compat: http.headers.Strict-Transport-Security
 ---
 {{HTTPSidebar}}
 
-The **HTTP `Strict-Transport-Security`** response header (often
-abbreviated as {{Glossary("HSTS")}}) lets a web site tell browsers that it should only
-be accessed using HTTPS, instead of using HTTP.
+The HTTP **`Strict-Transport-Security`** response header (often abbreviated as {{Glossary("HSTS")}}) informs browsers that the site should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be converted to HTTPS.
 
-> **Note:** This is not the same as configuring a HTTP to HTTPS (301) redirect on your server. The url redirection and strict transport security have different implications.
-> 
+> **Note:** This is not the same as configuring a HTTP to HTTPS (301) redirect on your server.
+> The url redirection and strict transport security have different implications.
 
 <table class="properties">
   <tbody>
