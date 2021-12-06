@@ -83,11 +83,11 @@ Where _TypedArray_ is a constructor for one of the concrete types.
     is created in memory, of size `length` _multiplied by
     `BYTES_PER_ELEMENT`_ bytes, containing zeros.
 - `typedArray`
-  - : When called with a `typedArray` argument the `typedArray` gets copied
-    into a new typed array. For **non-{{glossary("bigint")}}** `TypedArray`,
+  - : When called with a `typedArray` argument, the `typedArray` gets copied
+    into a new typed array. For a **non-{{glossary("bigint")}}** `TypedArray`,
     the `typedArray` parameter can be an object of only the
     **non**-{{glossary("bigint")}} typed array types (such as
-    {{JSxRef("Int32Array")}}).  Similarly, for **{{glossary("bigint")}}**
+    {{JSxRef("Int32Array")}}).  Similarly, for a **{{glossary("bigint")}}**
     `TypedArray`, the `typedArray` parameter can be an object of only the
     {{glossary("bigint")}} typed array types (such as {{JSxRef("BigInt64Array")}}).
     Each value in `typedArray` is converted to the corresponding type of the
