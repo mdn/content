@@ -326,7 +326,7 @@ These are properties of the window object that can be set to establish event han
 
 _This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowEventHandlers")}}._
 
-- {{domxref("Window.onappinstalled")}} {{deprecated_inline}}
+- {{domxref("Window.onappinstalled")}}
   - : Called when the page is installed as a webapp. See {{domxref("Window/appinstalled_event", "appinstalled")}} event.
 - {{domxref("Window.onbeforeinstallprompt")}} {{non-standard_inline}}
   - : An event handler property dispatched before a user is prompted to save a web site to a home screen on mobile.
