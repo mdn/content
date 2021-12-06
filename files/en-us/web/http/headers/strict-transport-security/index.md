@@ -15,6 +15,9 @@ The **HTTP `Strict-Transport-Security`** response header (often
 abbreviated as {{Glossary("HSTS")}}) lets a web site tell browsers that it should only
 be accessed using HTTPS, instead of using HTTP.
 
+> **Note:** This is not the same as configuring a HTTP to HTTPS (301) redirect on your server. The url redirection and strict transport security have different implications.
+> 
+
 <table class="properties">
   <tbody>
     <tr>
