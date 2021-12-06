@@ -34,21 +34,21 @@
     lodash.isundefined "^3.0.1"
     lodash.uniq "^4.5.0"
 
-"@mdn/browser-compat-data@4.0.12":
-  version "4.0.12"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.0.12.tgz#ea5472755d8460b711c61b6ed8f47f92f782c6c0"
-  integrity sha512-vUxvn5V8KLQAm9EmxOv9STqsZrEuJbY5rKoxOwM31cKN34qzBbGpy+yOl4OQh3eqXh7S5uIOyIleZS3rKsuf4g==
+"@mdn/browser-compat-data@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.0.tgz#78867eef0f12845d62957f89e2262f4ea43bee58"
+  integrity sha512-58eB5/ovJ5CfArzZwmZdenF/WlAGGS+1PG8RUb3oJ4st9exETBjClmFC0E1uVrZG1BwPaT205RKS8RhnUh5x3Q==
 
-"@mdn/yari@0.4.841":
-  version "0.4.841"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.841.tgz#15c690cbd5fef6bfc0d6125c0f5339c74f1c39ee"
-  integrity sha512-ef/eBnhdsKBcGF774e6jY5M3oTy+eI29/BtHEYTGJHb/r/yh8TEDOAa6NAGcFJW/CDxQ5f/AsrBQo/xwmLMAxQ==
+"@mdn/yari@0.4.846":
+  version "0.4.846"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.846.tgz#ac56b050947da7556dc2c9c5f1deb2a66ce2743b"
+  integrity sha512-XjYZDSgeoj/cRtZoODxeNpFeC2LMOOPhsypiwQ8CUHS8qk9b2AiEwLXYrIj05csvLv6VwgwWRC3qzyjGBBV/yQ==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
-    "@mdn/browser-compat-data" "4.0.12"
+    "@mdn/browser-compat-data" "4.1.0"
     accept-language-parser "1.5.0"
-    browser-specs "^2.16.1"
+    browser-specs "^2.18.0"
     chalk "4.1.2"
     cheerio "1.0.0-rc.10"
     cli-progress "^3.9.1"
@@ -548,10 +548,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^2.16.1:
-  version "2.16.1"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.16.1.tgz#5e55183fc49f4d4e21eb54fc5255aceae235b479"
-  integrity sha512-koPCf26h42EF8euxHFFL9ZHSoYRUVk0y+O3a0AQiIX71FV5lBbbPjZMo5WahSDuDwqnpaA00FfZgNrZmzxLesQ==
+browser-specs@^2.18.0:
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.18.0.tgz#17b4092a985d32a6f14b6c2847a64feb8f5707d7"
+  integrity sha512-LRLxlVfwFNRuSeoc9uQ49ZDp6b9ugmEUojnq8nKvx+RBCW7WIkZbUPH3LNCUN5OotP4n9mMll/rEHnVR0I6amQ==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
