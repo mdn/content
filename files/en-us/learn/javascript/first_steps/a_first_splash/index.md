@@ -209,15 +209,15 @@ greeting;
 There are also some shortcut operators available, called augmented [assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators). For example, if you want to add a new text string to an existing one and return the result, you could do this:
 
 ```js
-let name = 'Bingo';
-name += ' says hello!';
+let name1 = 'Bingo';
+name1 += ' says hello!';
 ```
 
 This is equivalent to
 
 ```js
-let name = 'Bingo';
-name = name + ' says hello!';
+let name2 = 'Bingo';
+name2 = name2 + ' says hello!';
 ```
 
 When we are running true/false tests (for example inside conditionals — see {{anch("Conditionals", "below")}}) we use [comparison operators](/en-US/docs/Web/JavaScript/Reference/Operators). For example:
@@ -442,6 +442,8 @@ for (const resetPara of resetParas) {
 ```
 
 This code creates a variable containing a list of all the paragraphs inside `<div class="resultParas">` using the {{domxref("Document.querySelectorAll", "querySelectorAll()")}} method, then it loops through each one, removing the text content of each.
+
+Note that even though `resetParas` is a constant, we can change its internal properties like `textContent`.
 
 ### A small discussion on objects
 
