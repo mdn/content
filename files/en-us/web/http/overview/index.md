@@ -176,7 +176,7 @@ When a client wants to communicate with a server, either the final server or an 
    <!DOCTYPE html... (here come the 29769 bytes of the requested web page)
    ```
 
-4. Close or reuse the connection for further requests.
+4. Close or reuse the connection for further requests.xxxxxxx
 
 If HTTP pipelining is activated, several requests can be sent without waiting for the first response to be fully received.
 HTTP pipelining has proven difficult to implement in existing networks, where old pieces of software coexist with modern versions.
