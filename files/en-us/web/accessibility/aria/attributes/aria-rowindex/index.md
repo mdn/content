@@ -10,7 +10,7 @@ tags:
   - Reference
 ---
 
-The `aria-rowindex` attribute defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.
+The `aria-rowindex` attribute defines an element's position with respect to the total number of rows within a table, grid, or treegrid.
 
 ## Description
 
