@@ -71,6 +71,8 @@ let d = new URL('/en-US/docs', b);                     // =
         new URL('http://www.example.com', );           // => 'http://www.example.com/'
         new URL('http://www.example.com', b);          // => 'http://www.example.com/'
 
+        new URL("", "https://example.com/?query=1")    // => 'https://example.com/?query=1' (Edge before 79 removes query arguments)
+        new URL("/a", "https://example.com/?query=1")  // => 'https://example.com/a' (see relative URLs)
         new URL("//foo.com", "https://example.com")    // => 'https://foo.com' (see relative URLs)
 ```
 
