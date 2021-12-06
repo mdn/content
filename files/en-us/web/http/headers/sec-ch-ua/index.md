@@ -35,17 +35,17 @@ The **`Sec-CH-UA`** header provides the brand and significant version for each b
 
 A brand is a commercial name for the user agent like: Chromium, Opera, Google Chrome, Microsoft Edge, Firefox, and Safari.
 A user agent might have several associated brands.
-For example, Opera, Chrome and Edge are all based on Chromium, and will provide both brands in the **`Sec-CH-UA`** header.
+For example, Opera, Chrome, and Edge are all based on Chromium, and will provide both brands in the **`Sec-CH-UA`** header.
 
 The _significant version_ is the "marketing" version identifier that is used to distinguish between major releases of the brand.
-For example a Chromium build with _full version number_ "96.0.4664.45" might have significant version number of "96".
+For example a Chromium build with _full version number_ "96.0.4664.45" has a significant version number of "96".
 
 The header therefore allows the server to customise its response based on both shared brands and on particular customisations in their respective versions.
 
 `Sec-CH-UA` is a [low entropy hint](/en-US/docs/Glossary/Client_hints#low_entropy_hints).
-Unless blocked by a user agent permission policy, it is sent by default, without the server having to opt in by sending {{HTTPHeader("Accept-CH")}}.
+Unless blocked by a user agent permission policy, it is sent by default, without the server opting in by sending {{HTTPHeader("Accept-CH")}}.
 
-The header may include "fake" brands in any position and with any name in the header.
+The header may include "fake" brands in any position and with any name.
 This is a feature designed to prevent servers from rejecting unknown user agents outright, forcing user agents to lie about their brand identity.
 
 > **Note:** {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} is the same as **`Sec-CH-UA`**, but includes the full version number rather than the signficant version number for each brand.

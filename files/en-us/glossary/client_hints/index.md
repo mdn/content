@@ -50,7 +50,7 @@ For more information see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP
 ## Hint life-time
 
 A server specifies the client hint headers that it is interested in getting in the `Accept-CH` response header.
-The user agent should append the requested client hint headers, or at least the subset that it wants to share with that server, to all subsequent requests in the current browsing session.
+The user agent appends the requested client hint headers, or at least the subset that it wants to share with that server, to all subsequent requests in the current browsing session.
 
 In other words, the request for a specific set of hints does not expire until the browser is shut down.
 
@@ -86,12 +86,12 @@ Client hints are available to web page Javascript via the [User Agent Client Hin
 
 ### Device client hints
 
-Device client hints allow a server to vary responses based on the device characteristics including available memory and screen properties.
+Device client hints allow a server to vary responses based on device characteristics including available memory and screen properties.
 Headers include: {{HTTPHeader("Device-Memory")}}, {{HTTPHeader("DPR")}}, {{HTTPHeader("Width")}}, {{HTTPHeader("Viewport-Width")}}.
 
 ### Network client hints
 
-Network client hints allow a server to vary responses based on the users' choice, network bandwidth, and latency.
+Network client hints allow a server to vary responses based on the user's choice, network bandwidth, and latency.
 Headers include: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Downlink")}}, {{HTTPHeader("ECT")}}, {{HTTPHeader("RTT")}}.
 
 ## See also
