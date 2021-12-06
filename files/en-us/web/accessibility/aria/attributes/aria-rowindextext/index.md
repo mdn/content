@@ -10,7 +10,7 @@ tags:
   - Reference
 ---
 
-The `aria-rowindextext` attribute  defines a human readable text alternative of `aria-rowindex`. 
+The `aria-rowindextext` attribute defines a human-readable text alternative of `aria-rowindex`. 
 
 ## Description
 
