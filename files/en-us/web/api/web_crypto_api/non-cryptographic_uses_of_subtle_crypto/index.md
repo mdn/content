@@ -1,6 +1,8 @@
 ---
 title: Non-cryptographic uses of SubtleCrypto
-slug: Web/API/Web_Crypto_API/Non-cryptographic_uses_of_SubtleCrypto
+slug: Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto
+tags:
+  - Web Crypto API
 ---
 {{APIRef("Web Crypto API")}}
 This article will almost entirely focus on uses of the Digest method of the Subtle Crypto API since a lot of the other methods have very specific cryptographic use cases whereas creating hashes of content has lots of very useful purposes.
@@ -39,8 +41,9 @@ The [digest()](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/dig
 First we add some HTML elements for loading some files and displaying the SHA-256 Output:
 
 ```html
+<h3>Demonstration of hashing a file with SHA256</h3>
 <label>Choose file(s) to hash <input type="file" id="file" name="file" multiple></label>
-<output></output>
+<output style="display:block;font-family:monospace;"></output>
 ```
 
 Next we use the SubtleCrypto API to process them this works by:
@@ -49,7 +52,8 @@ Next we use the SubtleCrypto API to process them this works by:
 - Use `crypto.subtle.digest('SHA-256', arrayBuffer)` to digest the ArrayBuffer
 - Convert the resulting hash (another ArrayBuffer) into a string to it can be displayed
 
-```javascript
+```html
+<script>
 const output = document.querySelector('output');
 const file = document.getElementById('file');
 file.addEventListener('change', hashTheseFiles);
@@ -58,7 +62,7 @@ async function fileHash(file) {
   const arrayBuffer = await file.arrayBuffer();
 	const hashAsArrayBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
   const uint8ViewOfHash = new Uint8Array(hashAsArrayBuffer);
-  const hashAsString = Array.from(uint8View).map(b => b.toString(16).padStart(2, '0')).join('');
+  const hashAsString = Array.from(uint8ViewOfHash).map(b => b.toString(16).padStart(2, '0')).join('');
 	return hashAsString;
 }
 
@@ -69,9 +73,10 @@ async function hashTheseFiles(e) {
   }
   output.innerHTML = outHTML;
 }
+</script>
 ```
 
- {{EmbedLiveSample(hashing-a-file)}}
+ {{EmbedLiveSample("hashing-a-file")}}
 
 ### Where would you use this?
 
@@ -116,13 +121,19 @@ It doesn't just use the file contents for the hash though it also prepends it wi
 The code below like our SHA256 example above can be used to generate these hashes from files. The HTML to upload files remains the same but the we do some additional work to prepend the size information in the same way git does.
 
 ```html
+<h3>Demonstration of how git uses SHA1 for files</h3>
 <label>Choose file(s) to hash <input type="file" id="file" name="file" multiple></label>
-<output></output>
+<output style="display:block;font-family:monospace;"></output>
 ```
 
 Notice how it uses the Text Encoder API to produce the header which is concatenated with the original ArrayBuffer to produce the string to be hashed:
 
-```javascript
+```html
+<script>
+const output = document.querySelector('output');
+const file = document.getElementById('file');
+file.addEventListener('change', hashTheseFiles);
+
 async function fileHash(file) {
   const arrayBuffer = await file.arrayBuffer();
   const uint8View = new Uint8Array(arrayBuffer);
@@ -147,9 +158,10 @@ async function hashTheseFiles(e) {
   }
   output.innerHTML = outHTML;
 }
+</script>
 ```
 
-{{EmbedLiveSample(How git stores files)}}
+{{EmbedLiveSample("how-git-stores-files")}}
 
 ## How git generates commit hashes
 
