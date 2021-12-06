@@ -62,6 +62,9 @@ LockManager.request(name, {options}, callback)
       - : If `true`, then any held locks with the same name will be released, and the request will be granted, preempting any queued requests for it.
         The default value is `false`.
 
+        > **Warning:** Use with care!
+        > Code that was previously running inside the lock continues to run, and may clash with the code that now holds the lock.
+
     - `signal` {{optional_inline}}
       - : An `AbortSignal` (the `signal` property of an `AbortController`);
         if specified and the `AbortController` is aborted, the lock request is dropped if it was not already granted.
