@@ -18,7 +18,7 @@ The aim of the Element Timing API is to give web developers or analytics tools t
 
 The API supports timing information on {{htmlelement("img")}} elements, {{SVGElement("image")}} elements inside an {{htmlelement("svg")}}, poster images of {{htmlelement("video")}} elements, elements which have a {{cssxref("background-image")}}, and groups of text nodes, such as a {{htmlelement("p")}}.
 
-The author flags an element for observation by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/for) attribute on the element.
+The author flags an element for observation by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute on the element.
 
 ## Interfaces
 
