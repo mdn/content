@@ -36,7 +36,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 ```js
 addEventListener('squeezeend', (event) => { });
 
-onsqueezeend = event => { });
+onsqueezeend = (event) => { });
 ```
 
 ## Event type
