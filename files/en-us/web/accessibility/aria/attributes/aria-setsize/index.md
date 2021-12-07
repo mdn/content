@@ -14,17 +14,17 @@ The `aria-setsize` attribute defines the number of items in the current set of i
 
 ## Description
 
-Some states are managed by the browser, such as the number of listitems in a list. When the DOM is not complete, the browser calculation of the number items can be incorrect. For example, when only a subset of listitems are loaded into the DOM, the browser will calculate the number of items based on only those present. The `aria-setsize` attribute should be used to override the browser's incorrect count. It defines the number of items in the current set of listitems or treeitems had the entire set been loaded. 
+Some states are managed by the browser, such as the number of listitems in a list. When the DOM is not complete, the browser calculation of the number of items can be incorrect. For example, when only a subset of listitems are loaded into the DOM, the browser will calculate the number of items based on only those present. The `aria-setsize` attribute should be used to override the browser's incorrect count. It defines the number of items in the current set of listitems or treeitems had the entire set been loaded. 
 
-The attribute is set on the each item rather than on any containing element. The value is the integer number of items in the full set or `-1` is the set size is not known. Every member of the set has the same value set.
+The attribute is set on each item rather than on any containing element. The value is the integer number of items in the complete set or `-1` is the set size is unknown. Every member of the set has the same value set.
 
 When `aria-setsize` is added to an element, the [`aria-posinset`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-posinset) is also generally included to indicate the position of that item within the set.
 
 When all the items are present in the DOM, the browser can calculate the number of items and the position of each item, making `aria-setsize` and `aria-posinset` unnecessary.
 
-These attributes can be used with a tree of comments. When comments are not all in the DOM, such as when comments are paginated, the level, total number of comments, and position of each comment should be set with ARIA. The hierarchical level of comments can be indicated with [`aria-level`](en-US/docs/Web/Accessibility/aria/Attributes/aria-level) and group positional information can be indicated with `aria-posinset` and `aria-setsize`.
+These attributes can be used with a tree of comments. When comments are not all in the DOM, such as when comments are paginated, the level, total number of comments, and position of each comment should be set with ARIA. The hierarchical level of comments can be indicated with [`aria-level`](en-US/docs/Web/Accessibility/aria/Attributes/aria-level), and group positional information can be indicated with `aria-posinset` and `aria-setsize`.
 
-When a feed has a static number of articles, `aria-setsize` can be added to the article elements. Every article element in a feed has `aria-setsize` set to either the total number of articles that have been loaded or the total number in the feed. The value chosen depends on which value is most helpful to users. If the number of articles is extremely large, indefinite, or changes often, `aria-setsize="-1"` can be set to communicate the size of the set is not known. 
+When a feed has a static number of articles, `aria-setsize` can be added to the article elements. Every article element in a feed has `aria-setsize` set to either the total number of articles that have been loaded or the total number in the feed. The value chosen depends on which value is most helpful to users. If the number of articles is extremely large, indefinite, or changes often, `aria-setsize="-1"` can be set to communicate the size of the set is unknown. 
 
 In a listbox, when the complete set of available options is not present in the DOM due to dynamic loading as a user scrolls, both `aria-setsize` and `aria-posinset` can be set on each [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role).
 
@@ -39,14 +39,14 @@ The following example shows items 5 through 8 in a set of 16.
 ```html
 <h2 id="label_fruit"> Available Fruit </h2>
 <ul role="listbox" aria-labelledby="label_fruit">
-  <li role="option" aria-setsize="16" aria-posinset="5"> apples </li>
-  <li role="option" aria-setsize="16" aria-posinset="6"> bananas </li>
-  <li role="option" aria-setsize="16" aria-posinset="7"> cantaloupes </li>
-  <li role="option" aria-setsize="16" aria-posinset="8"> dates </li>
+  <li role="option" aria-setsize="16" aria-posinset="5">apples</li>
+  <li role="option" aria-setsize="16" aria-posinset="6">bananas</li>
+  <li role="option" aria-setsize="16" aria-posinset="7">cantaloupes</li>
+  <li role="option" aria-setsize="16" aria-posinset="8">dates</li>
 </ul>
 ```
 
-To orient the user, assistive technologies would list the dates above as "item 8 out of 16."
+To orient the user assistive technologies would list the bananas above as "item 6 out of 16."
 
 ## Values
 
