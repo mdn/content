@@ -9,11 +9,13 @@ tags:
 ---
 {{AddonSidebar()}}
 
-The introduction of the browser extensions API created a uniform landscape for the development of browser extensions. However, among the browsers that use the extensions API (the major ones being Chrome, Firefox, Opera, and Edge), there are differences in both the implementation of the API and the scope of coverage. And then, Safari uses its own proprietary Safari Extensions JS.
+> **Note:** This article discusses building cross-browser extensions for manifest v2. At the time of writing (December 2021), manifest v3 is being introduced by the major browser vendors. Manifest v3 is likely to change the way cross-browser extension development is undertaken. However, work on Manifest v3 is not complete. The major browser vendors are collaborating (with community members) to ease the development of a cross-browser extension in the [W3C WebExtensions Community Group](https://github.com/w3c/webextensions). 
+
+The introduction of the browser extensions API created a uniform landscape for the development of browser extensions. However, among the browsers that use the extensions API (the major ones being Chrome, Firefox, Opera, and Edge), there are differences in the API's implementation and the scope of coverage. And then, Safari uses its own proprietary Safari Extensions JS.
 
 Maximizing the reach of your browser extension means developing it for at least two browsers, possibly more. This article looks at six of the main challenges faced when creating a cross-browser extension, and in each case suggests how to address the challenge.
 
-This article doesn’t discuss creating browser extensions for Safari. It may be possible to share some resources with a Safari extension, such as images and HTML content. However, the JavaScript coding needs to be undertaken as a separate development project, unless you wish to create a polyfill.
+This article doesn’t discuss creating browser extensions for Safari. Sharing some resources with a Safari extension may be possible, such as images and HTML content. However, the JavaScript coding needs to be undertaken as a separate development project unless you wish to create a polyfill.
 
 ## Cross-platform extension coding hurdles
 
@@ -30,31 +32,31 @@ There are six areas you need to address when tackling a cross-platform extension
 
 There are two API namespaces in use among the four main browsers:
 
-- `browser.*`, the proposed standard for the extensions API, used by Firefox.
+- `browser.*`, the proposed standard for the extensions API used by Firefox.
 - `chrome.*` used by Chrome, Opera, and Edge.
 
 Firefox also supports the `chrome.*` namespace for APIs that are compatible with Chrome, primarily to assist with [porting](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). However, using the `browser.*` namespace is preferred. In addition to being the proposed standard, `browser.*` uses promises—a modern and convenient mechanism for handling asynchronous events.
 
-Only in the most trivial extensions is namespace likely to be the only cross-platform issue that has to be addressed. It’s therefore rarely, if ever, helpful to attempt to address this issue alone. The best approach is to address this with asynchronous event handling.
+Only in the most trivial extensions is namespace likely to be the only cross-platform issue that has to be addressed. Therefore, it’s rarely, if ever, helpful to address this issue alone. The best approach is to address this with asynchronous event handling.
 
 ### API asynchronous event handling
 
 There are two approaches to handling asynchronous events in use among the four main browsers:
 
-- _Promises_, the proposed standard for the extensions API, used by Firefox.
+- _Promises_, the proposed standard for the extensions API used by Firefox.
 - _Callbacks_, used by Chrome, Edge, and Opera.
 
-Firefox also supports callbacks for the APIs that support the `chrome.*` namespace. However, using promises (and the `browser.*` namespace) is recommended. Promises has been adopted as part of the proposed standard. It greatly simplifies asynchronous event handling, particularly where you need to chain events together.
+Firefox also supports callbacks for the APIs that support the `chrome.*` namespace. However, using promises (and the `browser.*` namespace) is recommended. Promises have been adopted as part of the proposed standard. It greatly simplifies asynchronous event handling, particularly where you need to chain events together.
 
 > **Note:** If you’re unfamiliar with the differences between these two methods, take a look at [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) or the MDN [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) page.
 
 #### The WebExtension browser API Polyfill
 
-So, how do you take advantage of promises easily, when Firefox is the only browser supporting it? The solution is to code for Firefox using promises and use the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/).
+So, how do you take advantage of promises easily when Firefox is the only browser supporting it? The solution is to code for Firefox using promises and use the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/).
 
 This polyfill addresses the API namespace and asynchronous event handling across Firefox, Chrome, Opera, and Edge. However, at the time of writing (December 2021), support for Opera and Edge was unofficial.
 
-To use the polyfill, install into your development environment using npm or download it directly from [GitHub releases](https://github.com/mozilla/webextension-polyfill/releases).
+To use the polyfill, install it into your development environment using npm or download it directly from [GitHub releases](https://github.com/mozilla/webextension-polyfill/releases).
 
 Then, reference `browser-polyfill.js` in:
 
@@ -76,18 +78,18 @@ So, for example, this `manifest.json` code makes the polyfill available to backg
 }
 ```
 
-Your goal is to ensure that the polyfill executes in your extension before any other script expecting the `browser.*` API namespace executes.
+Your goal is to ensure that the polyfill executes in your extension before any other scripts that expect the `browser.*` API namespace execute.
 
-> **Note:** For more details and information on how to use the polyfill with a module bundler, see the [project’s readme on GitHub.](https://github.com/mozilla/webextension-polyfill/blob/master/README.md)
+> **Note:** For more details and information on using the polyfill with a module bundler, see the [project’s readme on GitHub.](https://github.com/mozilla/webextension-polyfill/blob/master/README.md)
 
-There are other polyfill options but, at the time of writing, none provide the coverage of the WebExtension browser API Polyfill. So, where you haven’t targeted Firefox as your first choice, your options are to accept the limitations of alternative polyfills, port to Firefox and add cross-browser support, or develop your own polyfill.
+There are other polyfill options. However, at the time of writing, none of the other options provide the coverage of the WebExtension browser API Polyfill. So, where you haven’t targeted Firefox as your first choice, your options are to accept the limitations of alternative polyfills, port to Firefox and add cross-browser support, or develop your own polyfill.
 
 ### API function coverage
 
 The differences in the API functions offered in each of the four main browsers fall into three broad categories:
 
 1.  **Lack of support for an entire function.**
-    For example, at the time of writing, Edge didn’t provide support for the {{WebExtAPIRef("browserSettings")}}.
+    For example, at the time of writing, Edge didn’t support the {{WebExtAPIRef("browserSettings")}}.
 2.  **Variations in the support for features within a function.**
     For example, at the time of writing, Firefox doesn’t support the notification function method {{WebExtAPIRef("notifications.onButtonClicked")}} while Firefox is the only browser that supports {{WebExtAPIRef("notifications.onShown")}}.
 3.  **Proprietary functions, supporting browser-specific features.**
@@ -97,11 +99,11 @@ Details about the support for the extension APIs among the five main browsers an
 
 #### Handling API differences
 
-A simple approach to addressing these differences is to limit the functions used in your extension to functions that offer the same functionality across your range of targeted browsers. In practice, for most extensions, this approach is likely to be too restrictive.
+A simple approach to addressing these differences is to limit the functions used in your extension to functions that offer the same functionality across your range of targeted browsers. In practice, this approach is likely to be too restrictive for most extensions.
 
 Instead, where there are differences among the APIs, you should either offer alternative implementations or fallback functionality. (Remember: you may also need to do this to allow for differences in API support between versions of the _same_ browser.)
 
-The use of runtime checks on the availability of a function’s features is the recommended approach to implementing alternative or fallback functionality. The benefit of performing a runtime check is that if the function becomes available you don’t need to update and redistribute the extension to take advantage of it.
+The use of runtime checks on the availability of a function’s features is the recommended approach to implementing alternative or fallback functionality. The benefit of performing a runtime check is that you don’t need to update and redistribute the extension to take advantage of a function when it becomes available.
 
 The following code enables you to perform a runtime check:
 
@@ -120,11 +122,11 @@ The differences in the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensio
 2.  **Extension features.**
     For example, at the time of writing, Chrome did not support the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#browser_compatibility) key.
 3.  **Key optionality.**
-    At the time of writing, there are no differences in the optionality for keys. In all of the `manifest.json` formats `"manifest_version"`, `"version"`, and `"name"` are the only mandatory keys.
+    At the time of writing, there are no differences in the optionality for keys. In all of the `manifest.json` formats, `"manifest_version"`, `"version"`, and `"name"` are the only mandatory keys.
 
 Browser compatibility information is included with each key in the Mozilla Developer Network [`manifest.json` key reference pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
-As `manifest.json` files tend to change little—except for release numbers, which may be different between the various browsers—creating and editing a static version for each browser is usually the simplest approach.
+As `manifest.json` files tend to change little—except for release numbers, which may differ between the various browsers—creating and editing a static version for each browser is usually the simplest approach.
 
 ### Extension packaging
 
@@ -134,7 +136,7 @@ For details on packaging, refer to the guidance on the respective extension’s 
 
 ### Extension publishing
 
-Each of the four major browsers maintains browser extension stores. Each store also performs a review of your extension to check for security vulnerabilities.
+Each of the four major browsers maintains browser extension stores. Each store also reviews your extension to check for security vulnerabilities.
 
 As a consequence, you need to approach adding and updating your extension for each store separately. In some cases, you can upload your extension using a utility.
 
@@ -147,7 +149,7 @@ This table summarizes the approach and features of each store:
       <th>Registration fee</th>
       <th>Upload utility</th>
       <th>Pre-publication review process</th>
-      <th>Account two factor authentication</th>
+      <th>Account two-factor authentication</th>
     </tr>
   </thead>
   <tbody>
@@ -200,11 +202,11 @@ This table summarizes the approach and features of each store:
 
 #### Version numbering
 
-The Firefox, Chrome, and Edge stores require that each uploaded version has a separate version number. This means you cannot revert to an earlier version number if you come across issues in a release.
+The Firefox, Chrome, and Edge stores require that each uploaded version has a different version number. This means you cannot revert to an earlier version number if you come across issues in a release.
 
 #### Share content
 
-When you also develop extensions for Safari, there are a number of assets you can potentially share across all of your implementations. These include:
+When you also develop extensions for Safari, there are several assets you can potentially share across all of your implementations. These include:
 
 - Images
 - HTML
@@ -214,7 +216,7 @@ When you also develop extensions for Safari, there are a number of assets you ca
 
 When approaching a cross-platform extension development, the differences between extension API implementations can be addressed by targeting Firefox and using the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/). Following this approach, you benefit from using API features that are closely aligned with the proposed extensions API standard and gain the simplicity of promises for asynchronous event handling.
 
-The bulk of your cross-platform work is likely to focus on handling variations among the API features supported by the main browsers. Creating your `manifest.json` files should be relatively straightforward and something you can do manually. You will then need to account for the variations in the processes for submitting to each of the extension stores.
+The bulk of your cross-platform work is likely to focus on handling variations among the API features supported by the main browsers. Creating your `manifest.json` files should be relatively straightforward and something you can do manually. You will then need to account for the variations in the processes for submitting to each extension store.
 
 You can use [browser-extension-template](https://github.com/notlmn/browser-extension-template) to quickly set up a working project for building and publishing a browser extension.
 
