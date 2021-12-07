@@ -399,7 +399,7 @@ const para = document.querySelector('p');
 const input = document.querySelector('input');
 const btn = document.querySelector('button');
 
-btn.addEventListener('click', function() {
+btn.addEventListener('click', () => {
   const searchName = input.value.toLowerCase();
   input.value = '';
   input.focus();
@@ -455,9 +455,9 @@ const para = document.querySelector('p');
 const input = document.querySelector('input');
 const btn = document.querySelector('button');
 
-btn.addEventListener('click', function() {
+btn.addEventListener('click', () => {
   para.textContent = 'Output: ';
-  let num = input.value;
+  const num = input.value;
   input.value = '';
   input.focus();
   for (let i = 1; i <= num; i++) {
@@ -465,7 +465,7 @@ btn.addEventListener('click', function() {
     if (Math.floor(sqRoot) !== sqRoot) {
       continue;
     }
-    para.textContent += i + ' ';
+    para.textContent += `${i} `;
   }
 });
 ```
@@ -668,7 +668,26 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-let jsSolution = 'const output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nlet i = 10;\n\nwhile(i >= 0) {\n let para = document.createElement(\'p\');\n if(i === 10) {\n para.textContent = \'Countdown \' + i;\n } else if(i === 0) {\n  para.textContent = \'Blast off!\';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}';
+let jsSolution = `const output = document.querySelector('.output');
+output.innerHTML = '';
+
+let i = 10;
+
+while (i >= 0) {
+ const para = document.createElement('p');
+ if (i === 10) {
+ para.textContent = \`Countdown \$\{i}\`;
+ } else if (i === 0) {
+  para.textContent = 'Blast off!';
+ } else {
+ para.textContent = i;
+ }
+
+ output.appendChild(para);
+
+ i--;
+}`;
+
 let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);

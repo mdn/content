@@ -50,7 +50,7 @@ You'll want to clear the canvas before drawing, so that when the code is updated
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions2.html", '100%', 400)}}
+{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions2.html", '100%', 700)}}
 
 > **Callout:**
 >
