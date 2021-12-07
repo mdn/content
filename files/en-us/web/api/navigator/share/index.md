@@ -113,6 +113,7 @@ The following is a list of usually shareable file types. However, you should alw
   - `.ogm` - `video/ogg`
   - `.ogv` - `video/ogg`
   - `.webm` - `video/webm`
+
 ## Examples
 
 The example below shows a button click invoking the Web Share API to share MDN's URL.
