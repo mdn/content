@@ -66,54 +66,53 @@ The {{jsxref("Promise")}} may be rejected with one of the following `DOMExceptio
 
 ## Shareable file types
 
-| Category    | Extension - MIME type                            |
-| ----------- | ------------------------------------------------ |
-| Application |                                                  |
-|             | `.pdf` - `application/pdf` (from Chromium 93)    |
-| Audio       |                                                  |
-|             | `.flac` - `audio/flac`                           |
-|             | `.m4a` - `audio/x-m4a`                           |
-|             | `.mp3` - `audio/mpeg` (also accepts `audio/mp3`) |
-|             | `.oga` - `audio/ogg`                             |
-|             | `.ogg` - `audio/ogg`                             |
-|             | `.opus` - `audio/ogg`                            |
-|             | `.wav` - `audio/wav`                             |
-|             | `.weba` - `audio/webm`                           |
-| Image       |                                                  |
-|             | `.bmp` - `image/bmp`                             |
-|             | `.gif` - `image/gif`                             |
-|             | `.ico` - `image/x-icon`                          |
-|             | `.jfif` - `image/jpeg`                           |
-|             | `.jpeg` - `image/jpeg`                           |
-|             | `.jpg` - `image/jpeg`                            |
-|             | `.pjp` - `image/jpeg`                            |
-|             | `.pjpeg` - `image/jpeg`                          |
-|             | `.png` - `image/png`                             |
-|             | `.svg` - `image/svg+xml`                         |
-|             | `.svgz` - `image/svg+xml`                        |
-|             | `.tif` - `image/tiff`                            |
-|             | `.tiff` - `image/tiff`                           |
-|             | `.webp` - `image/webp`                           |
-|             | `.xbm` - `image/x-xbitmap`                       |
-| Text        |                                                  |
-|             | `.css` - `text/css`                              |
-|             | `.csv` - `text/csv`                              |
-|             | `.ehtml` - `text/html`                           |
-|             | `.htm` - `text/html`                             |
-|             | `.html` - `text/html`                            |
-|             | `.shtm` - `text/html`                            |
-|             | `.shtml` - `text/html`                           |
-|             | `.text` - `text/plain`                           |
-|             | `.txt` - `text/plain`                            |
-| Video       |                                                  |
-|             | `.m4v` - `video/mp4`                             |
-|             | `.mp4` - `video/mp4`                             |
-|             | `.mpeg` - `video/mpeg`                           |
-|             | `.mpg` - `video/mpeg`                            |
-|             | `.ogm` - `video/ogg`                             |
-|             | `.ogv` - `video/ogg`                             |
-|             | `.webm` - `video/webm`                           |
+The following is a list of usually shareable file types. However, you should always test with {{domxref("navigator.canShare()")}} if sharing would succeed.
 
+- Application
+  - `.pdf` - `application/pdf` (from Chromium 93)
+- Audio
+  - `.flac` - `audio/flac`
+  - `.m4a` - `audio/x-m4a`
+  - `.mp3` - `audio/mpeg` (also accepts `audio/mp3`)
+  - `.oga` - `audio/ogg`
+  - `.ogg` - `audio/ogg`
+  - `.opus` - `audio/ogg`
+  - `.wav` - `audio/wav`
+  - `.weba` - `audio/webm`
+- Image
+  - `.bmp` - `image/bmp`
+  - `.gif` - `image/gif`
+  - `.ico` - `image/x-icon`
+  - `.jfif` - `image/jpeg`
+  - `.jpeg` - `image/jpeg`
+  - `.jpg` - `image/jpeg`
+  - `.pjp` - `image/jpeg`
+  - `.pjpeg` - `image/jpeg`
+  - `.png` - `image/png`
+  - `.svg` - `image/svg+xml`
+  - `.svgz` - `image/svg+xml`
+  - `.tif` - `image/tiff`
+  - `.tiff` - `image/tiff`
+  - `.webp` - `image/webp`
+  - `.xbm` - `image/x-xbitmap`
+- Text
+  - `.css` - `text/css`
+  - `.csv` - `text/csv`
+  - `.ehtml` - `text/html`
+  - `.htm` - `text/html`
+  - `.html` - `text/html`
+  - `.shtm` - `text/html`
+  - `.shtml` - `text/html`
+  - `.text` - `text/plain`
+  - `.txt` - `text/plain`
+- Video
+  - `.m4v` - `video/mp4`
+  - `.mp4` - `video/mp4`
+  - `.mpeg` - `video/mpeg`
+  - `.mpg` - `video/mpeg`
+  - `.ogm` - `video/ogg`
+  - `.ogv` - `video/ogg`
+  - `.webm` - `video/webm`
 ## Examples
 
 The example below shows a button click invoking the Web Share API to share MDN's URL.
