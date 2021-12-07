@@ -66,7 +66,7 @@ The {{jsxref("Promise")}} may be rejected with one of the following `DOMExceptio
 
 ## Shareable file types
 
-| Category    | Extension - `MIME type                           |
+| Category    | Extension - MIME type                            |
 | ----------- | ------------------------------------------------ |
 | Application |                                                  |
 |             | `.pdf` - `application/pdf` (from Chromium 93)    |
