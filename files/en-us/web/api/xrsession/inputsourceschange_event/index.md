@@ -22,7 +22,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 ```js
 addEventListener('inputsourceschange', (event) => { });
 
-oninputsourceschange = event => { });
+oninputsourceschange = (event) => { });
 ```
 
 ## Event type

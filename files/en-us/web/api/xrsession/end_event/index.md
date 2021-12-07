@@ -21,7 +21,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 ```js
 addEventListener('end', (event) => { });
 
-onend = event => { });
+onend = (event) => { });
 ```
 
 ## Event type

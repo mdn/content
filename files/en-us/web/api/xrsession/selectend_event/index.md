@@ -33,7 +33,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 ```js
 addEventListener('selectend', (event) => { });
 
-onselectend = event => { });
+onselectend = (event) => { });
 ```
 ## Event type
 
