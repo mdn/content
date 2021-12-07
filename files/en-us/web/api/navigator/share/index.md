@@ -39,6 +39,8 @@ navigator.share(data)
     - `text`: A {{domxref("USVString")}} representing text to be shared.
     - `title`: A {{domxref("USVString")}} representing a title to be shared. May be ignored by the target.
     - `files`: An array of {{domxref("File")}} objects representing files to be shared.
+      > **Note:** Each vendor may accept different file types. Chromium's list can be seen in this
+      > [document](https://docs.google.com/document/d/1tKPkHA5nnJtmh2TgqWmGSREUzXgMUFDL6yMdVZHqUsg/edit).
 
 ### Return value
 
