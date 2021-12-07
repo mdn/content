@@ -429,18 +429,18 @@ const fname = document.getElementById('fname');
 const lname = document.getElementById('lname');
 const para = document.querySelector('p');
 
-form.onsubmit = function(e) {
+form.addEventListener('submit', e => {
   if (fname.value === '' || lname.value === '') {
     e.preventDefault();
     para.textContent = 'You need to fill in both names!';
   }
-}
+});
 ```
 
 Obviously, this is pretty weak form validation — it wouldn't stop the user validating the form with spaces or numbers entered into the fields, for example — but it is OK for example purposes.
 The output is as follows:
 
-{{ EmbedLiveSample('Preventing_default_behavior', '100%', 140, "", "") }}
+{{ EmbedLiveSample('Preventing_default_behavior', '100%', 180, "", "") }}
 
 > **Note:** for the full source code, see [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) here.)
 
@@ -558,7 +558,7 @@ const btn = document.querySelector('button');
 const videoBox = document.querySelector('div');
 
 function displayVideo() {
-  if(videoBox.getAttribute('class') === 'hidden') {
+  if (videoBox.getAttribute('class') === 'hidden') {
     videoBox.setAttribute('class','showing');
   }
 }

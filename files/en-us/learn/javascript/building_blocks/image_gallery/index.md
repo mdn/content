@@ -73,9 +73,10 @@ The most interesting parts of the example's CSS file:
 
 Your JavaScript needs to:
 
-- Loop through all the images, and for each one insert an `<img>` element inside the `thumb-bar <div>` that embeds that image in the page.
-- Attach an `onclick` handler to each `<img>` inside the `thumb-bar <div>` so that when they are clicked, the corresponding image is displayed in the `displayed-img <img>` element.
-- Attach an `onclick` handler to the `<button>` so that when it is clicked, a darken effect is applied to the full-size image. When it is clicked again, the darken effect is removed again.
+- Declare a `const` array listing the filenames of each image, such as `'pic1.jpg'`.
+- Loop through the array of filenames, and for each one insert an `<img>` element inside the `thumb-bar <div>` that embeds that image in the page.
+- Add a click event listener to each `<img>` inside the `thumb-bar <div>` so that when they are clicked, the corresponding image is displayed in the `displayed-img <img>` element.
+- Add a click event listener to the `<button>` so that when it is clicked, a darken effect is applied to the full-size image. When it is clicked again, the darken effect is removed again.
 
 To give you more of an idea, have a look at the [finished example](https://mdn.github.io/learning-area/javascript/building-blocks/gallery/) (no peeking at the source code!)
 
@@ -83,24 +84,28 @@ To give you more of an idea, have a look at the [finished example](https://mdn.g
 
 The following sections describe what you need to do.
 
+## Declare an array of image filenames
+
+You need to create an array listing the filenames of all the image to include in the gallery. The array should be declared as a constant.
+
 ### Looping through the images
 
 We've already provided you with lines that store a reference to the `thumb-bar <div>` inside a constant called `thumbBar`, create a new `<img>` element, set its `src` attribute to a placeholder value `xxx`, and append this new `<img>` element inside `thumbBar`.
 
 You need to:
 
-1.  Put the section of code below the "Looping through images" comment inside a loop that loops through all 5 images — you just need to loop through five numbers, one representing each image.
+1.  Put the section of code below the "Looping through images" comment inside a loop that loops through all the filenames in the array.
 2.  In each loop iteration, replace the `xxx` placeholder value with a string that will equal the path to the image in each case. We are setting the value of the `src` attribute to this value in each case. Bear in mind that in each case, the image is inside the images directory and its name is `pic1.jpg`, `pic2.jpg`, etc.
 
-### Adding an onclick handler to each thumbnail image
+### Adding a click event listener to each thumbnail image
 
-In each loop iteration, you need to add an `onclick` handler to the current `newImage` — this handler should find the value of the `src` attribute of the current image. Set the `src` attribute value of the `displayed-img <img>` to the `src` value passed in as a parameter.
+In each loop iteration, you need to add a click event listener to the current `newImage` — this listener should find the value of the `src` attribute of the current image. Set the `src` attribute value of the `displayed-img <img>` to the `src` value passed in as a parameter.
 
 Alternatively, you can add one event listener to the thumb bar.
 
 ### Writing a handler that runs the darken/lighten button
 
-That just leaves our darken/lighten `<button>` — we've already provided a line that stores a reference to the `<button>` in a constant called `btn`. You need to add an `onclick` handler that:
+That just leaves our darken/lighten `<button>` — we've already provided a line that stores a reference to the `<button>` in a constant called `btn`. You need to add a click event listener that:
 
 1.  Checks the current class name set on the `<button>` — you can again achieve this by using `getAttribute()`.
 2.  If the class name is `"dark"`, changes the `<button>` class to `"light"` (using [`setAttribute()`](/en-US/docs/Web/API/Element/setAttribute)), its text content to "Lighten", and the {{cssxref("background-color")}} of the overlay `<div>` to `"rgba(0,0,0,0.5)"`.
