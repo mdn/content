@@ -44,6 +44,14 @@ This article provides information about the changes in Firefox 96 that will affe
   The feature is behind a preference on desktop operating systems.
   ({{bug(1666203)}}).
 
+
+#### Canvas
+
+- Image encoder support has been added for the [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) image format.
+  This allows canvas elements to export their content as webp data when using the methods: {{domxref("HTMLCanvasElement.toDataURL()")}}, {{domxref("HTMLCanvasElement.toBlob()")}}, and {{domxref("OffscreenCanvas.convertToBlob", "OffscreenCanvas.toBlob")}}.
+  ({{bug(1511670)}}).
+
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
