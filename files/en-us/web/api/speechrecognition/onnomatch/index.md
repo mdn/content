@@ -32,7 +32,7 @@ This may involve some degree of recognition, which doesn't meet or exceed the
 ## Syntax
 
 ```js
-mySpeechRecognition.onnomatch = function() { ... };
+mySpeechRecognition.onnomatch = function() { /* ... */ };
 ```
 
 ## Examples

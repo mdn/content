@@ -26,7 +26,7 @@ returns an error and bubbles up to the transaction object.
 ## Syntax
 
 ```js
-transaction.onerror = function(event) { ... };
+transaction.onerror = function(event) { /* ... */ };
 ```
 
 ## Example

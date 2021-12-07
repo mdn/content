@@ -25,7 +25,7 @@ The event handler takes one parameter, an error [Event](/en-US/docs/Web/API/Elem
 ## Syntax
 
 ```js
-request.onerror = function(event) { ... };
+request.onerror = function(event) { /* ... */ };
 ```
 
 ## Example

@@ -21,7 +21,7 @@ This method will cause an `INVALID_STATE_ERR` exception to be thrown if called o
 
 ```js
 var audioCtx = new AudioContext();
-audioCtx.suspend().then(function() { ... });
+audioCtx.suspend().then(function() { /* ... */ });
 ```
 
 ### Returns

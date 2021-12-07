@@ -24,7 +24,7 @@ is fired.
 ## Syntax
 
 ```js
-VisualViewport.onresize = function(e) { ... }
+VisualViewport.onresize = function(e) { /* ... */ }
 ```
 
 ## Examples

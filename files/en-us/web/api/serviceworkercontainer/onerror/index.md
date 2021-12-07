@@ -21,7 +21,7 @@ The **`onerror`** property of the
 ## Syntax
 
 ```js
-serviceWorkerContainer.onerror = function(errorevent) { ... }
+serviceWorkerContainer.onerror = function(errorevent) { /* ... */ }
 ```
 
 ## Example

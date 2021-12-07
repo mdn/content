@@ -24,7 +24,7 @@ it is available and supported. Otherwise it throws an error.
 ## Syntax
 
 ```js
-BluetoothRemoteGATTDescriptor.readValue().then(function(value[]) { ... })
+BluetoothRemoteGATTDescriptor.readValue().then(function(value[]) { /* ... */ })
 ```
 
 ### Returns

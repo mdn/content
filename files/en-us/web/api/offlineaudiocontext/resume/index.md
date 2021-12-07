@@ -23,7 +23,7 @@ not currently suspended or the rendering has not started, the promise is rejecte
 ## Syntax
 
 ```js
-OfflineAudioContext.resume().then(function() { ... });
+OfflineAudioContext.resume().then(function() { /* ... */ });
 ```
 
 ### Parameters

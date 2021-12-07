@@ -27,8 +27,8 @@ happen if, for example, the push service sets an expiration time a subscription.
 ## Syntax
 
 ```js
-ServiceWorkerGlobalScope.onpushsubscriptionchange = function() { ... }
-self.addEventListener('pushsubscriptionchange', function() { ... })
+ServiceWorkerGlobalScope.onpushsubscriptionchange = function() { /* ... */ }
+self.addEventListener('pushsubscriptionchange', function() { /* ... */ })
 ```
 
 ## Example

@@ -24,7 +24,7 @@ processing {{event("rejectionhandled")}} events. These events are raised when
 ## Syntax
 
 ```js
-window.addEventListener("rejectionhandled", function(event) { ... });
+window.addEventListener("rejectionhandled", function(event) { /* ... */ });
 window.onrejectionhandled = function(event) { ...};
 ```
 

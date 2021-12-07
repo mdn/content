@@ -24,7 +24,7 @@ port—that is, when it receives a message that cannot be {{glossary("Deserializ
 ## Syntax
 
 ```js
-port.onmessageerror = function() { ... };
+port.onmessageerror = function() { /* ... */ };
 ```
 
 ## Specifications

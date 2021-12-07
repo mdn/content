@@ -17,7 +17,7 @@ The **`onlanguagechange`** property of the {{domxref("WorkerGlobalScope")}} inte
 ## Syntax
 
 ```js
-self.onlanguagechange = function() { ... };
+self.onlanguagechange = function() { /* ... */ };
 ```
 
 ## Example

@@ -25,7 +25,7 @@ This occurs when the {{domxref("SpeechSynthesis.speak()")}} method is invoked.
 ## Syntax
 
 ```js
-speechSynthesisUtteranceInstance.onstart = function() { ... };
+speechSynthesisUtteranceInstance.onstart = function() { /* ... */ };
 ```
 
 ## Examples

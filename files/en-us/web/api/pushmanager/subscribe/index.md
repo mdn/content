@@ -23,7 +23,7 @@ the current service worker does not have an existing subscription.
 ## Syntax
 
 ```js
-PushManager.subscribe(options).then(function(pushSubscription) { ... } );
+PushManager.subscribe(options).then(function(pushSubscription) { /* ... */ } );
 ```
 
 ### Parameters

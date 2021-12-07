@@ -25,8 +25,8 @@ The `resume` event is thrown as a result of the
 ## Syntax
 
 ```js
-MediaRecorder.onresume = function(event) { ... }
-MediaRecorder.addEventListener('resume', function(event) { ... })
+MediaRecorder.onresume = function(event) { /* ... */ }
+MediaRecorder.addEventListener('resume', function(event) { /* ... */ })
 ```
 
 ## Example

@@ -21,7 +21,7 @@ first {{domxref("BluetoothRemoteGATTDescriptor")}} for a given descriptor UUID.
 ## Syntax
 
 ```js
-BluetoothRemoteGATTCharacteristic.getDescriptor(bluetoothDescriptorUUID).then(function(bluetoothGATTDescriptor) { ... })
+BluetoothRemoteGATTCharacteristic.getDescriptor(bluetoothDescriptorUUID).then(function(bluetoothGATTDescriptor) { /* ... */ })
 ```
 
 ### Returns

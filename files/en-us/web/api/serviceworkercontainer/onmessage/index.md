@@ -28,7 +28,7 @@ The **`onmessage`** property of the
 ## Syntax
 
 ```js
-serviceWorkerContainer.onmessage = function(messageevent) { ... }
+serviceWorkerContainer.onmessage = function(messageevent) { /* ... */ }
 ```
 
 ## Example

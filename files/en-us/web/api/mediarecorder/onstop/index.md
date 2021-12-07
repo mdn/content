@@ -28,8 +28,8 @@ point available for you to use in your application.
 ## Syntax
 
 ```js
-MediaRecorder.onstop = function(event) { ... }
-MediaRecorder.addEventListener('stop', function(event) { ... })
+MediaRecorder.onstop = function(event) { /* ... */ }
+MediaRecorder.addEventListener('stop', function(event) { /* ... */ })
 ```
 
 ## Example

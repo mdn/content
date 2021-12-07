@@ -25,8 +25,8 @@ The `pause` event is thrown as a result of the
 ## Syntax
 
 ```js
-MediaRecorder.onpause = function(event) { ... }
-MediaRecorder.addEventListener('pause', function(event) { ... })
+MediaRecorder.onpause = function(event) { /* ... */ }
+MediaRecorder.addEventListener('pause', function(event) { /* ... */ })
 ```
 
 ## Example
