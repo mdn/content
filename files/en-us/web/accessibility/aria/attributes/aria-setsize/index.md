@@ -10,11 +10,11 @@ tags:
   - Reference
 ---
 
-The `aria-setsize` attribute defines the number of items in the current set of items used when not all items in the set are present in the DOM.
+The `aria-setsize` attribute defines the number of items in the current set of listitems or treeitems when not all items in the set are present in the DOM.
 
 ## Description
 
-Some states are managed by the browser, such as the number of listitems in a list. When the DOM is not complete, the browser calculation of the number of items can be incorrect. For example, when only a subset of listitems are loaded into the DOM, the browser will calculate the number of items based on only those present. The `aria-setsize` attribute should be used to override the browser's incorrect count. It defines the number of items in the current set of listitems or treeitems had the entire set been loaded. 
+Browsers can manage some states, like the number of listitems in a list. When the DOM is not complete, the browser calculation of the number of items can be incorrect. When only a subset of listitems are loaded into the DOM, the browser calculates the number of items based only on those present. The `aria-setsize` attribute should be used to override the browser's incorrect count. It defines the number of items in the current set of listitems or treeitems had the entire set been loaded. 
 
 The attribute is set on each item rather than on any containing element. The value is the integer number of items in the complete set or `-1` is the set size is unknown. Every member of the set has the same value set.
 
