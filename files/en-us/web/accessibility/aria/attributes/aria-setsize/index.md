@@ -22,9 +22,9 @@ Elements with the `aria-setsize` generally have the  [`aria-posinset`](/en-US/do
 
 If all the items are present in the DOM, the browser can calculate the set size and the position of each item, making `aria-setsize` and `aria-posinset` unnecessary.
 
-These attributes can be used with comments. When comments are not all in the DOM, such as when comments are paginated, the level, total number of comments, and position of each comment should be set with ARIA. The hierarchical level of comments can be indicated with [`aria-level`](en-US/docs/Web/Accessibility/aria/Attributes/aria-level), and group positional information can be indicated with `aria-posinset` and `aria-setsize`.
+These attributes can be used with comments. When comments are not all in the DOM, such as when comments are paginated, the level, total number of comments, and position of each comment should be set with ARIA. The hierarchical level of comments can be indicated with [`aria-level`](en-US/docs/Web/Accessibility/aria/Attributes/aria-level). Group positional information is indicated with `aria-posinset` and `aria-setsize`.
 
-When a feed has a static number of articles, `aria-setsize` can be added to the article elements. Every article element in a feed has `aria-setsize` set to either the total number of articles that have been loaded or the total number in the feed. The value chosen depends on which value is most helpful to users. If the number of articles is extremely large, indefinite, or changes often, `aria-setsize="-1"` can be set to communicate the size of the set is unknown. 
+When a feed has a static number of articles, `aria-setsize` can be added to each article element set to either the total number of articles loaded or the total number in the feed. The value chosen depends on which value is most helpful to users. If the number of articles is extremely large, indefinite, or changes often, `aria-setsize="-1"` can be set to communicate the size of the set is unknown. 
 
 In a listbox, when the complete set of available options is not present in the DOM due to dynamic loading as a user scrolls, both `aria-setsize` and `aria-posinset` can be set on each [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role).
 
@@ -46,12 +46,12 @@ The following example shows items 5 through 8 in a set of 16.
 </ul>
 ```
 
-To orient the user assistive technologies would list the bananas above as "item 6 out of 16."
+To orient the user, assistive technologies would list the bananas above as "item 6 out of 16."
 
 ## Values
 
 - `<integer>`
-  - : The number of items in the full set or `-1` is the set size is not known.
+  - : The number of items in the full set or `-1` is the set size is unknown.
 
 ## ARIAMixin API 
 
@@ -98,4 +98,3 @@ Inherits into roles:
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
 {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
 </section>
-
