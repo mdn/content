@@ -89,7 +89,7 @@ There are other polyfill options. However, at the time of writing, none of the o
 The differences in the API functions offered in each of the four main browsers fall into three broad categories:
 
 1.  **Lack of support for an entire function.**
-    For example, at the time of writing, Edge didn’t support the {{WebExtAPIRef("browserSettings")}}.
+    For example, at the time of writing, Edge didn’t support the {{WebExtAPIRef("browserSettings")}} function.
 2.  **Variations in the support for features within a function.**
     For example, at the time of writing, Firefox doesn’t support the notification function method {{WebExtAPIRef("notifications.onButtonClicked")}} while Firefox is the only browser that supports {{WebExtAPIRef("notifications.onShown")}}.
 3.  **Proprietary functions, supporting browser-specific features.**
