@@ -8762,6 +8762,8 @@
 /en-US/docs/Web/API/URLUtilsReadOnly/protocol	/en-US/docs/Web/API/WorkerLocation/protocol
 /en-US/docs/Web/API/URLUtilsReadOnly/search	/en-US/docs/Web/API/WorkerLocation/search
 /en-US/docs/Web/API/URLUtilsReadOnly/toString	/en-US/docs/Web/API/WorkerLocation/toString
+/en-US/docs/Web/API/USB/onconnect	/en-US/docs/Web/API/USB/connect_event
+/en-US/docs/Web/API/USB/ondisconnect	/en-US/docs/Web/API/USB/disconnect_event
 /en-US/docs/Web/API/USBDevice/USBDevice.deviceClass	/en-US/docs/Web/API/USBDevice/deviceClass
 /en-US/docs/Web/API/Uint16Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array
 /en-US/docs/Web/API/Uint32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array

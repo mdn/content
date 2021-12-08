@@ -18,19 +18,20 @@ The **`USB`** interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) prov
 
 None.
 
-### Event handlers
-
-- {{domxref("USB.onconnect")}}
-  - : An event handler called whenever a previously paired device is connected.
-- {{domxref("USB.ondisconnect")}}
-  - : An event handler called whenever a paired device is disconnected.
-
-## Methods
+# Methods
 
 - {{domxref("USB.getDevices()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("USBDevice")}} objects for paired attached devices.
 - {{domxref("USB.requestDevice()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("USBDevice")}} if the specified device is found. Calling this function triggers the user agent's pairing flow.
+
+### Events
+
+- {{domxref("USB.connect_event", "connect")}}
+  - : An event fired whenever a previously paired device is connected.
+- {{domxref("USB.disconnect_event", "disconnect")}}
+  - : An event fired whenever a paired device is disconnected.
+
 
 ## Specifications
 
