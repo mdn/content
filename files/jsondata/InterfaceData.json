@@ -64,6 +64,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "AppHistoryCurrentChangeEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "AppHistoryDestination": {
       "inh": "",
       "impl": []
@@ -82,6 +86,10 @@
     },
     "Attr": {
       "inh": "Node",
+      "impl": []
+    },
+    "AttributionReporting": {
+      "inh": "",
       "impl": []
     },
     "AudioBuffer": {
@@ -364,6 +372,10 @@
       "inh": "Event",
       "impl": []
     },
+    "CloseWatcher": {
+      "inh": "EventTarget",
+      "impl": []
+    },
     "Comment": {
       "inh": "CharacterData",
       "impl": []
@@ -373,6 +385,10 @@
       "impl": []
     },
     "CompressionStream": {
+      "inh": "",
+      "impl": []
+    },
+    "ComputePressureObserver": {
       "inh": "",
       "impl": []
     },
@@ -1044,12 +1060,32 @@
       "inh": "",
       "impl": []
     },
+    "FontFaceFeatures": {
+      "inh": "",
+      "impl": []
+    },
+    "FontFacePalette": {
+      "inh": "",
+      "impl": []
+    },
+    "FontFacePalettes": {
+      "inh": "",
+      "impl": []
+    },
     "FontFaceSet": {
       "inh": "EventTarget",
       "impl": []
     },
     "FontFaceSetLoadEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "FontFaceVariationAxis": {
+      "inh": "",
+      "impl": []
+    },
+    "FontFaceVariations": {
+      "inh": "",
       "impl": []
     },
     "FontManager": {
@@ -1152,15 +1188,7 @@
       "inh": "",
       "impl": []
     },
-    "GPUBufferUsage": {
-      "inh": "",
-      "impl": []
-    },
     "GPUCanvasContext": {
-      "inh": "",
-      "impl": []
-    },
-    "GPUColorWrite": {
       "inh": "",
       "impl": []
     },
@@ -1197,10 +1225,6 @@
       "impl": []
     },
     "GPUExternalTexture": {
-      "inh": "",
-      "impl": []
-    },
-    "GPUMapMode": {
       "inh": "",
       "impl": []
     },
@@ -1244,10 +1268,6 @@
       "inh": "",
       "impl": []
     },
-    "GPUShaderStage": {
-      "inh": "",
-      "impl": []
-    },
     "GPUSupportedFeatures": {
       "inh": "",
       "impl": []
@@ -1257,10 +1277,6 @@
       "impl": []
     },
     "GPUTexture": {
-      "inh": "",
-      "impl": []
-    },
-    "GPUTextureUsage": {
       "inh": "",
       "impl": []
     },
@@ -1753,7 +1769,7 @@
       "impl": []
     },
     "Keyboard": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "KeyboardEvent": {
@@ -2240,10 +2256,6 @@
       "inh": "PerformanceEntry",
       "impl": []
     },
-    "PerformanceFrameTiming": {
-      "inh": "PerformanceEntry",
-      "impl": []
-    },
     "PerformanceLongTaskTiming": {
       "inh": "PerformanceEntry",
       "impl": []
@@ -2630,6 +2642,10 @@
     },
     "ScreenOrientation": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "ScriptingPolicyReportBody": {
+      "inh": "ReportBody",
       "impl": []
     },
     "ScriptProcessorNode": {
@@ -3642,6 +3658,14 @@
     },
     "WindowClient": {
       "inh": "Client",
+      "impl": []
+    },
+    "WindowControlsOverlay": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "WindowControlsOverlayGeometryChangeEvent": {
+      "inh": "Event",
       "impl": []
     },
     "Worker": {
