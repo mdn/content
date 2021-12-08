@@ -16,17 +16,15 @@ The `aria-setsize` attribute defines the number of items in the current set of l
 
 Browsers can manage some states, like the number of listitems in a list. When the DOM is not complete, the browser calculation of the number of items can be incorrect. When only a subset of listitems are loaded into the DOM, the browser calculates the number of items based only on those present. The `aria-setsize` attribute should be used to override the browser's incorrect count. It defines the number of items in the current set of listitems or treeitems had the entire set been loaded. 
 
-The attribute is set on each item rather than on any containing element. The value is the integer number of items in the complete set or `-1` is the set size is unknown. Set the attribute on every member of the set with the same value.
+The attribute is set on each item rather than on any containing element. The value is the same for each item; an integer reflecting number of items in the complete set, or `-1` is the set size is unknown. If all the items are present in the DOM, the browser can calculate the set size and the position of each item, making both `aria-setsize` and `aria-posinset` unnecessary.
 
-Elements with the `aria-setsize` generally have the  [`aria-posinset`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-posinset) attribute included as well to indicate the position of that item within the set. The `aria-posinset` value is between 1 and the setsize value, inclusive.
+Elements with the `aria-setsize` generally have the  [`aria-posinset`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-posinset) attribute included as well to indicate the position of that item within the set. The `aria-posinset` value is between 1 and the positive value of `aria-setsize`, inclusive.
 
-If all the items are present in the DOM, the browser can calculate the set size and the position of each item, making `aria-setsize` and `aria-posinset` unnecessary.
+When comments are not all in the DOM, such as when comments are paginated, the level, total number of comments, and position of each comment should be set with ARIA. The hierarchical level of comments can be indicated with [`aria-level`](en-US/docs/Web/Accessibility/aria/Attributes/aria-level). Group positional information is indicated with `aria-posinset` and `aria-setsize`.
 
-These attributes can be used with comments. When comments are not all in the DOM, such as when comments are paginated, the level, total number of comments, and position of each comment should be set with ARIA. The hierarchical level of comments can be indicated with [`aria-level`](en-US/docs/Web/Accessibility/aria/Attributes/aria-level). Group positional information is indicated with `aria-posinset` and `aria-setsize`.
+When a feed has a static number of articles, `aria-setsize` can be added to each article element with the value being either the total number of articles loaded or the total number in the feed. The value chosen depends on which value is most helpful to users. If the number of articles is extremely large, indefinite, or changes often, `aria-setsize="-1"` can be set to communicate the size of the set is unknown. 
 
-When a feed has a static number of articles, `aria-setsize` can be added to each article element set to either the total number of articles loaded or the total number in the feed. The value chosen depends on which value is most helpful to users. If the number of articles is extremely large, indefinite, or changes often, `aria-setsize="-1"` can be set to communicate the size of the set is unknown. 
-
-In a listbox, when the complete set of available options is not present in the DOM due to dynamic loading as a user scrolls, both `aria-setsize` and `aria-posinset` can be set on each [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role).
+In a listbox, when the complete set of available options is not present in the DOM due to dynamic loading on scroll, both `aria-setsize` and `aria-posinset` can be set on each [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role).
 
 In a tree view, if the complete set of available nodes is not present in the DOM due to dynamic loading as the user moves focus in or scrolls the tree, each node has `aria-level`, `aria-setsize`, and `aria-posinset` set.
 
