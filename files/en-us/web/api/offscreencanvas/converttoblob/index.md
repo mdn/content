@@ -17,8 +17,8 @@ The **`OffscreenCanvas.convertToBlob()`** method creates a {{domxref("Blob")}} 
 ## Syntax
 
 ```js
-const blobPromise = OffscreenCanvas.convertToBlob()
-const blobPromise = OffscreenCanvas.convertToBlob(options)
+OffscreenCanvas.convertToBlob()
+OffscreenCanvas.convertToBlob(options)
 ```
 
 ### Parameters
@@ -29,7 +29,8 @@ const blobPromise = OffscreenCanvas.convertToBlob(options)
     - `type`
       - : A string indicating the image format. The default type is `image/png`.
     - `quality`
-      - : If the `type` option is `image/jpeg` or `image/webp`, this is a number between `0` and `1` indicating image quality. If the `type` option is anything else, the default value for image quality is used.
+      - : If the `type` option is `image/jpeg` or `image/webp`, this is a number between `0` and `1` indicating image quality.
+        If the `type` option is anything else, the default value for image quality is used.
 
 ### Return value
 

@@ -11,14 +11,11 @@ browser-compat: api.HTMLCanvasElement.toDataURL
 ---
 {{APIRef("Canvas API")}}
 
-The **`HTMLCanvasElement.toDataURL()`** method returns a [data URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) containing a representation of the
-image in the format specified by the `type` parameter (defaults to [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). The returned
-image is in a resolution of 96 dpi.
+The **`HTMLCanvasElement.toDataURL()`** method returns a [data URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) containing a representation of the image in the format specified by the `type` parameter (defaults to [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)).
+The returned image is in a resolution of 96 dpi.
 
-- If the height or width of the canvas is `0` or larger than the [maximum canvas
-  size](/en-US/docs/Web/HTML/Element/canvas#maximum_canvas_size), the string `"data:,"` is returned.
-- If the requested type is not `image/png`, but the returned value starts
-  with `data:image/png`, then the requested type is not supported.
+- If the height or width of the canvas is `0` or larger than the [maximum canvas size](/en-US/docs/Web/HTML/Element/canvas#maximum_canvas_size), the string `"data:,"` is returned.
+- If the requested type is not `image/png`, but the returned value starts with `data:image/png`, then the requested type is not supported.
 - Chrome also supports the `image/webp` type.
 
 ## Syntax
@@ -30,14 +27,11 @@ canvas.toDataURL(type, encoderOptions);
 ### Parameters
 
 - `type` {{optional_inline}}
-  - : A {{domxref("DOMString")}} indicating the image format. The default format type is
-    `image/png`.
+  - : A {{domxref("DOMString")}} indicating the image format. The default format type is `image/png`.
 - `encoderOptions` {{optional_inline}}
-  - : A {{jsxref("Number")}} between `0` and `1` indicating the
-    image quality to use for image formats that use lossy compression such as
-    `image/jpeg` and `image/webp`.
-    If this argument is anything else, the default value for image quality is used. The
-    default value is `0.92`. Other arguments are ignored.
+  - : A {{jsxref("Number")}} between `0` and `1` indicating the image quality to use for image formats that use lossy compression such as `image/jpeg` and `image/webp`.
+    If this argument is anything else, the default value for image quality is used.
+    The default value is `0.92`. Other arguments are ignored.
 
 ### Return value
 
@@ -46,9 +40,8 @@ A {{domxref("DOMString")}} containing the requested [data URI](/en-US/docs/Web/H
 ### Exceptions
 
 - `SecurityError`
-  - : The canvas's bitmap is not origin clean; at least some of its contents have or may
-    have been loaded from a site other than the one from which the document itself was
-    loaded.
+  - : The canvas's bitmap is not origin clean;
+    at least some of its contents have or may have been loaded from a site other than the one from which the document itself was loaded.
 
 ## Examples
 
@@ -79,8 +72,7 @@ var lowQuality = canvas.toDataURL('image/jpeg', 0.1);
 
 ### Example: Dynamically change images
 
-You can use this technique in coordination with mouse events in order to dynamically
-change images (gray-scale vs. color in this example):
+You can use this technique in coordination with mouse events in order to dynamically change images (gray-scale vs. color in this example):
 
 #### HTML
 
