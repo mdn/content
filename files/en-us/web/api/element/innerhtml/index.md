@@ -104,6 +104,7 @@ Setting the value of `innerHTML` lets you append new contents to the existing on
 For example, we can append a new list item (`<li>`) to the existing list (`<ul>`):
 
 #### HTML
+
 ```html
 <ul id="list">
   <li><a href="#">Item 1</a></li>
@@ -113,6 +114,7 @@ For example, we can append a new list item (`<li>`) to the existing list (`<ul>`
 ```
 
 #### JavaScript
+
 ```js
 const list = document.getElementById("list");
 
@@ -152,9 +154,9 @@ el.innerHTML = name; // shows the alert
 ```
 
 For that reason, it is recommended that instead of `innerHTML` you use:
+
 - {{domxref("Element.SetHTML()")}} to sanitize the text before it is inserted into the DOM.
 - {{domxref("Node.textContent")}} when inserting plain text, as this inserts it as raw text rather than parsing it as HTML.
-
 
 > **Warning:** If your project is one that will undergo any form of security review, using `innerHTML` most likely will result in your code being rejected.
 > For example, [if you use `innerHTML`](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) in a [browser extension](/en-US/docs/Mozilla/Add-ons/WebExtensions) and submit
@@ -261,5 +263,5 @@ You can see output into the log by moving the mouse in and out of the box, click
 - {{domxref("Element.insertAdjacentHTML()")}}
 - {{domxref("Element.outerHTML")}}
 - {{domxref("Element.setHTML")}}
-- Parsing HTML into a DOM tree: {{domxref("DOMParser")}}
-- Serializing XML or HTML into a DOM tree: {{domxref("XMLSerializer")}}
+- Parsing HTML or XML into a DOM tree: {{domxref("DOMParser")}}
+- Serializing a DOM tree into an XML string: {{domxref("XMLSerializer")}}
