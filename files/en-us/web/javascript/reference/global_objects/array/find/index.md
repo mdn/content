@@ -181,6 +181,13 @@ array.find(function(value, index) {
   console.log('Visited index ', index, ' with value ', value);
 });
 // expected output:
+// Visited index 0 with value 0
+// Visited index 1 with value 1
+// Visited index 2 with value undefined
+// Visited index 3 with value undefined
+// Visited index 4 with value undefined
+// Visited index 5 with value 5
+// Visited index 6 with value 6
 // Deleting array[5] with value 5
 // Visited index 0 with value 0
 // Visited index 1 with value 1
