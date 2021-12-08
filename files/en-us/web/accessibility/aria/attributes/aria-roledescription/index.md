@@ -16,17 +16,17 @@ The `aria-roledescription` attribute defines a human-readable, author-localized 
 
 Some assistive technologies (AT), such as screen readers, present the role of an element as part of the user experience. The `aria-roledescription` attribute provides a way to define a different human-readable name to be presented by AT as the role of an element.
 
-Users depend on the presentation of known role name to understand the the purpose of the element and, if it is a widget, how to interact with it. So, only use `aria-roledescription` to clarify the purpose of non-interactive container roles like `group` or `region` and to providing a more specific description of a widget.
-
-When there are no semantic or ARIA widget roles that correspond to the interaction model of your widget, use `role="application"`, provide an `aria-roledescription` with a human-readable, author-localized customized role name, and use `aria-describedby` to provide instructions.
+Users depend on the presentation of known role name to understand the the purpose of the element and, if it is a widget, how to interact with it. So, only use `aria-roledescription` to clarify the purpose of non-interactive container roles like `group` or `region` and to provide a more specific description to a widget.
 
 The `aria-roledescription` property overrides how ATs localize and express the name of a role.  When you override a role name the user understands, you can negatively impact a users' ability to understand and interact with an element.
 
+When there are no semantic or ARIA widget roles that correspond to the interaction model of your widget, use `role="application"`, provide an `aria-roledescription` with a human-readable, author-localized customized role name, and use `aria-describedby` to provide user instructions.
+
 ATs may customize and localize the names of ARIA roles. If you are using `aria-roledescription` to change how the role name is presented to the user, remember to handle localization. The value should be translated when a page is localized.
 
-Changing how the role is presented to the user has no impact on the functionality of the element. For example, if an element has a role of `region` or `button`  when AT provides functions for navigating to the next region or button, if you set the `aria-roledescription` to `foo` and `bar`, the AT will still allow those functions to navigate to regions and buttons.
+Changing how the role is presented to the user has no impact on the functionality of the element. For example, if an element has a role of [`region`](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role) or [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)  when AT provides functions for navigating to the next region or button, if you set the `aria-roledescription` to `continent` and `escape` respectively, the AT will still allow those functions to navigate to regions and buttons.
 
-When using `aria-roledescription`, also ensure that the element to which it is applied has a valid ARIA role or has an implicit role semantics and that the value itself is not empty and contains more than just whitespace characters.
+When using `aria-roledescription`, also ensure that the element to which it is applied has a valid ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles/) or has implicit role semantics and that the value itself is not empty and contains more than just whitespace characters.
   
 The `aria-roledescription` is required when using `aria-brailleroledescription`. Note that, in general, `aria-brailleroledescription` should only be used in rare cases when a `aria-roledescription` is excessively verbose when rendered in Braille.
 
@@ -45,8 +45,8 @@ In the previous examples, a screen reader user may hear "Quarterly Report, slide
 
 ## Values
 
-- 
-  - : 
+- `<string>`
+  - : A non-empty string, an unconstrained value type,containing more than just white space.
 
 ## ARIAMixin API 
 
