@@ -11,7 +11,7 @@ browser-compat: http.headers.Origin
 ---
 {{HTTPSidebar}}
 
-The **`Origin`** HyperText Transfer Protocol (HTTP) request header indicates the {{glossary("origin")}} (scheme, hostname, and port) that _caused_ the request.
+The **`Origin`** request header indicates the {{glossary("origin")}} (scheme, hostname, and port) that _caused_ the request.
 For example, if a user agent needs to request resources included in a page, or fetched by scripts that it executes, then the origin of the page may be included in the request.
 
 <table class="properties">
