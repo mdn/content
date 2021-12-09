@@ -23,18 +23,13 @@ CustomEvent(typeArg, options);
   - : A string representing the name of the event.
 - `options` {{optional_inline}}
 
-  - : An object, with the following fields:
+  - : An object, with the following properties:
 
     - `"detail"`, optional and defaulting to `null`, of any type,
       containing an event-dependent value associated with the event.
       This is available to the handler using the {{domxref("CustomEvent.detail")}} property.
 
-    - Any field that can be used in the init object of the {{domxref("Event.Event", "Event()")}} constructor.
-
-### Return value
-
-A new `CustomEvent` object of the specified type, with any other properties
-configured according to the dictionary if one was provided.
+    - Any properties that can be used in the init object of the {{domxref("Event.Event", "Event()")}} constructor.
 
 ## Example
 
