@@ -319,7 +319,7 @@ objectName.methodName = functionName;
 const myObj = {
   myMethod: function(params) {
     // ...do something
-  }
+  },
 
   // this works too!
   myOtherMethod(params) {
