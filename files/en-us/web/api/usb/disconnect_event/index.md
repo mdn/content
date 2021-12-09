@@ -25,7 +25,7 @@ ondisconnect = event => { };
 
 ## Event type
 
-An {{domxref("USBConnectionEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("USBConnectionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram(500, 70, 50, "USBConnectionEvent")}}
 
