@@ -6,10 +6,11 @@ tags:
   - HTTP Header
   - Request header
   - Response header
+  - Deprecated
   - Reference
 browser-compat: http.headers.Warning
 ---
-{{HTTPSidebar}}
+{{HTTPSidebar}} {{deprecated_header}}
 
 > **Note:** The `Warning` header has been deprecated; see
 > [Warning

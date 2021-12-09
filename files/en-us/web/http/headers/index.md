@@ -63,7 +63,7 @@ Headers can also be grouped according to how {{Glossary("Proxy_server", "proxies
   - : The date/time after which the response is considered stale.
 - {{HTTPHeader("Pragma")}}
   - : Implementation-specific header that may have various effects anywhere along the request-response chain. Used for backwards compatibility with HTTP/1.0 caches where the `Cache-Control` header is not yet present.
-- {{HTTPHeader("Warning")}}
+- {{HTTPHeader("Warning")}} {{deprecated_inline}}
   - : General warning information about possible problems.
 
 ## Client hints
