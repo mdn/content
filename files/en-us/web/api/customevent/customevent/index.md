@@ -39,16 +39,26 @@ configured according to the dictionary if one was provided.
 ## Example
 
 ```js
-// add an appropriate event listener
-obj.addEventListener("cat", function(e) { process(e.detail) });
-
-// create and dispatch the event
-var event = new CustomEvent("cat", {
+// create custom events
+const catFound = new CustomEvent('animalfound', {
   detail: {
-    hazcheeseburger: true
+    name: 'cat'
   }
 });
-obj.dispatchEvent(event);
+const dogFound = new CustomEvent('animalfound', {
+  detail: {
+    name: 'dog'
+  }
+});
+
+// add an appropriate event listener
+obj.addEventListener('animalfound', (e) => console.log(e.detail.name));
+
+// dispatch the events
+obj.dispatchEvent(catFound);
+obj.dispatchEvent(dogFound);
+
+// "cat" and "dog" logged in the console
 ```
 
 Additional examples can be found at [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events).
