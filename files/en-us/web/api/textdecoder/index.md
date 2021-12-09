@@ -59,11 +59,11 @@ console.log(win1251decoder.decode(bytes)); // Привет, мир!
 _The `TextDecoder` interface doesn't inherit any properties._
 
 - {{DOMxRef("TextDecoder.prototype.encoding")}}{{ReadOnlyInline}}
-  - : Is a {{DOMxRef("DOMString")}} containing the name of the decoder, that is a string describing the method the `TextDecoder` will use.
+  - : A {{DOMxRef("DOMString")}} containing the name of the decoder, that is a string describing the method the `TextDecoder` will use.
 - {{DOMxRef("TextDecoder.prototype.fatal")}}{{ReadOnlyInline}}
-  - : Is a {{jsxref('Boolean')}} indicating whether the error mode is fatal.
+  - : A {{jsxref('Boolean')}} indicating whether the error mode is fatal.
 - {{DOMxRef("TextDecoder.prototype.ignoreBOM")}}{{ReadOnlyInline}}
-  - : Is a {{jsxref('Boolean')}} indicating whether the byte order marker is ignored.
+  - : A {{jsxref('Boolean')}} indicating whether the byte order marker is ignored.
 
 ## Methods
 
