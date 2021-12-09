@@ -73,7 +73,7 @@ Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}
   - {{HTTPHeader("Content-Language")}}
   - {{HTTPHeader("Content-Type")}} (please note the additional requirements below)
 
-- The only allowed values for the {{HTTPHeader("Content-Type")}} header are:
+- The only type/subtype combinations allowed for the {{Glossary("MIME type","media type")}} specified in the {{HTTPHeader("Content-Type")}} header are:
 
   - `application/x-www-form-urlencoded`
   - `multipart/form-data`
