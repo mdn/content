@@ -446,7 +446,7 @@ function MyObject(name, message) {
 }
 ```
 
-Because the previous code does not take advantage of the benefits of using closures in this particular instance, we could instead rewrite it to avoid using closure as follows:
+Because the previous code does not take advantage of the benefits of using closures in this particular instance, we could instead rewrite it to avoid using closures as follows:
 
 ```js
 function MyObject(name, message) {
