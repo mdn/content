@@ -23,32 +23,37 @@ CustomEvent(typeArg, options);
   - : A string representing the name of the event.
 - `options` {{optional_inline}}
 
-  - : An object, with the following fields:
+  - : An object, with the following properties:
 
     - `"detail"`, optional and defaulting to `null`, of any type,
       containing an event-dependent value associated with the event.
       This is available to the handler using the {{domxref("CustomEvent.detail")}} property.
 
-    - Any field that can be used in the init object of the {{domxref("Event.Event", "Event()")}} constructor.
-
-### Return value
-
-A new `CustomEvent` object of the specified type, with any other properties
-configured according to the dictionary if one was provided.
+    - Any properties that can be used in the init object of the {{domxref("Event.Event", "Event()")}} constructor.
 
 ## Example
 
 ```js
-// add an appropriate event listener
-obj.addEventListener("cat", function(e) { process(e.detail) });
-
-// create and dispatch the event
-var event = new CustomEvent("cat", {
+// create custom events
+const catFound = new CustomEvent('animalfound', {
   detail: {
-    hazcheeseburger: true
+    name: 'cat'
   }
 });
-obj.dispatchEvent(event);
+const dogFound = new CustomEvent('animalfound', {
+  detail: {
+    name: 'dog'
+  }
+});
+
+// add an appropriate event listener
+obj.addEventListener('animalfound', (e) => console.log(e.detail.name));
+
+// dispatch the events
+obj.dispatchEvent(catFound);
+obj.dispatchEvent(dogFound);
+
+// "cat" and "dog" logged in the console
 ```
 
 Additional examples can be found at [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events).
