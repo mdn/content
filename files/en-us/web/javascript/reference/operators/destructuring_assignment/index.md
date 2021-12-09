@@ -434,7 +434,7 @@ Destructuring can be used with property names that are not valid JavaScript {{gl
 const foo = { 'fizz-buzz': true };
 const { 'fizz-buzz': fizzBuzz } = foo;
 
-console.log(fizzBuzz); // "true"
+console.log(fizzBuzz); // true
 ```
 
 #### Combined Array and Object Destructuring
