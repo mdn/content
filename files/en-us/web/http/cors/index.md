@@ -34,10 +34,10 @@ More specifically, this article is for **web administrators**, **server develope
 
 ## What requests use CORS?
 
-This [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-protocol) can enable cross-site HTTP requests for:
+This [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-protocol) can enable cross-origin HTTP requests for:
 
 - Invocations of the {{domxref("XMLHttpRequest")}} or [Fetch APIs](/en-US/docs/Web/API/Fetch_API), as discussed above.
-- Web Fonts (for cross-domain font usage in `@font-face` within CSS), [so that servers can deploy TrueType fonts that can only be loaded cross-site and used by web sites that are permitted to do so.](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
+- Web Fonts (for cross-domain font usage in `@font-face` within CSS), [so that servers can deploy TrueType fonts that can only be loaded cross-origin and used by web sites that are permitted to do so.](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
 - [WebGL textures](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 - Images/video frames drawn to a canvas using {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}.
 - [CSS Shapes from images.](/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
@@ -54,7 +54,7 @@ Subsequent sections discuss scenarios, as well as provide a breakdown of the HTT
 
 ## Examples of access control scenarios
 
-We present three scenarios that demonstrate how Cross-Origin Resource Sharing works. All these examples use {{domxref("XMLHttpRequest")}}, which can make cross-site requests in any supporting browser.
+We present three scenarios that demonstrate how Cross-Origin Resource Sharing works. All these examples use {{domxref("XMLHttpRequest")}}, which can make cross-origin requests in any supporting browser.
 
 ### Simple requests
 
@@ -139,7 +139,7 @@ In response, the server returns a {{HTTPHeader("Access-Control-Allow-Origin")}} 
 Access-Control-Allow-Origin: *
 ```
 
-This pattern of the {{HTTPHeader("Origin")}} and {{HTTPHeader("Access-Control-Allow-Origin")}} headers is the simplest use of the access control protocol. If the resource owners at `https://bar.other` wished to restrict access to the resource to requests _only_ from `https://foo.example`, (i.e no domain other than `https://foo.example` can access the resource in a cross-site manner) they would send:
+This pattern of the {{HTTPHeader("Origin")}} and {{HTTPHeader("Access-Control-Allow-Origin")}} headers is the simplest use of the access control protocol. If the resource owners at `https://bar.other` wished to restrict access to the resource to requests _only_ from `https://foo.example`, (i.e no domain other than `https://foo.example` can access the resource in a cross-origin manner) they would send:
 
     Access-Control-Allow-Origin: https://foo.example
 
@@ -147,7 +147,7 @@ This pattern of the {{HTTPHeader("Origin")}} and {{HTTPHeader("Access-Control-
 
 ### Preflighted requests
 
-Unlike [_simple requests_](#simple_requests), for "preflighted" requests the browser first sends an HTTP request using the {{HTTPMethod("OPTIONS")}} method to the resource on the other origin, in order to determine if the actual request is safe to send. Such cross-site requests are preflighted since they may have implications for user data.
+Unlike [_simple requests_](#simple_requests), for "preflighted" requests the browser first sends an HTTP request using the {{HTTPMethod("OPTIONS")}} method to the resource on the other origin, in order to determine if the actual request is safe to send. Such cross-origin requests are preflighted since they may have implications for user data.
 
 The following is an example of a request that will be preflighted:
 
@@ -275,7 +275,7 @@ However, if the request is one that triggers a preflight due to the presence of 
 
 > **Note:** When making credentialed requests to a different domain, third-party cookie policies will still apply. The policy is always enforced regardless of any setup on the server and the client as described in this chapter.
 
-The most interesting capability exposed by both {{domxref("XMLHttpRequest")}} or [Fetch](/en-US/docs/Web/API/Fetch_API) and CORS is the ability to make "credentialed" requests that are aware of [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) and HTTP Authentication information. By default, in cross-site `XMLHttpRequest` or [Fetch](/en-US/docs/Web/API/Fetch_API) invocations, browsers will **not** send credentials. A specific flag has to be set on the `XMLHttpRequest` object or the {{domxref("Request")}} constructor when it is invoked.
+The most interesting capability exposed by both {{domxref("XMLHttpRequest")}} or [Fetch](/en-US/docs/Web/API/Fetch_API) and CORS is the ability to make "credentialed" requests that are aware of [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) and HTTP Authentication information. By default, in cross-origin `XMLHttpRequest` or [Fetch](/en-US/docs/Web/API/Fetch_API) invocations, browsers will **not** send credentials. A specific flag has to be set on the `XMLHttpRequest` object or the {{domxref("Request")}} constructor when it is invoked.
 
 In this example, content originally loaded from `https://foo.example` makes a simple GET request to a resource on `https://bar.other` which sets Cookies. Content on foo.example might contain JavaScript like this:
 
@@ -441,11 +441,11 @@ Access-Control-Allow-Headers: <header-name>[, <header-name>]*
 
 ## The HTTP request headers
 
-This section lists headers that clients may use when issuing HTTP requests in order to make use of the cross-origin sharing feature. Note that these headers are set for you when making invocations to servers. Developers using cross-site {{domxref("XMLHttpRequest")}} capability do not have to set any cross-origin sharing request headers programmatically.
+This section lists headers that clients may use when issuing HTTP requests in order to make use of the cross-origin sharing feature. Note that these headers are set for you when making invocations to servers. Developers using cross-origin {{domxref("XMLHttpRequest")}} capability do not have to set any cross-origin sharing request headers programmatically.
 
 ### Origin
 
-The {{HTTPHeader("Origin")}} header indicates the origin of the cross-site access request or preflight request.
+The {{HTTPHeader("Origin")}} header indicates the origin of the cross-origin access request or preflight request.
 
 ```
 Origin: <origin>
