@@ -60,6 +60,8 @@ else
   //Returns true for the supported values
   log.textContent+="HTMLScriptElement.supports('module'): " + HTMLScriptElement.supports('module') +"\n";
   log.textContent+="HTMLScriptElement.supports('classic'): " + HTMLScriptElement.supports('classic') +"\n";
+  log.textContent+="HTMLScriptElement.supports('importmap'): " + HTMLScriptElement.supports('importmap') +"\n";
+  log.textContent+="HTMLScriptElement.supports('speculationrules'): " + HTMLScriptElement.supports('speculationrules') +"\n";
 
   //Returns false for any other values
   log.textContent+="HTMLScriptElement.supports('anything else'): " + HTMLScriptElement.supports('anything else') +"\n";
