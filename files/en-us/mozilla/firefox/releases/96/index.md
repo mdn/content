@@ -59,6 +59,9 @@ This article provides information about the changes in Firefox 96 that will affe
 
 #### Media, WebRTC, and Web Audio
 
+- A number of deprecated non-standard statistics fields have been removed from the [WebRTC Statistics API](/en-US/docs/Web/API/WebRTC_Statistics_API), including: `bitrateMean`, `bitrateStdDev`,`framerateMean`, `framerateStdDev`, and `droppedFrames`.
+  ({{bug(1367562)}}).
+
 #### Removals
 
 ### WebAssembly
