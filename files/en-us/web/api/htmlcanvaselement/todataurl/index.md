@@ -11,12 +11,16 @@ browser-compat: api.HTMLCanvasElement.toDataURL
 ---
 {{APIRef("Canvas API")}}
 
-The **`HTMLCanvasElement.toDataURL()`** method returns a [data URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) containing a representation of the image in the format specified by the `type` parameter (defaults to [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)).
-The returned image is in a resolution of 96 dpi.
+The **`HTMLCanvasElement.toDataURL()`** method returns a [data URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) containing a representation of the image in the format specified by the `type` parameter.
 
-- If the height or width of the canvas is `0` or larger than the [maximum canvas size](/en-US/docs/Web/HTML/Element/canvas#maximum_canvas_size), the string `"data:,"` is returned.
-- If the requested type is not `image/png`, but the returned value starts with `data:image/png`, then the requested type is not supported.
-- Chrome also supports the `image/webp` type.
+The desired file format and image quality may be specified.
+If the file format is not specified, or if the given format is not supported, then the data will be exported as `image/png`.
+In other words, if the returned value starts with `data:image/png` for any other requested `type`, then that format is not supported.
+
+Browsers are required to support `image/png`; many will support additional formats including `image/jpg` and `image/webp`.
+
+The created image data will have a resolution of 96dpi for file formats that support encoding resolution metadata.
+
 
 ## Syntax
 
@@ -27,15 +31,17 @@ canvas.toDataURL(type, encoderOptions);
 ### Parameters
 
 - `type` {{optional_inline}}
-  - : A {{domxref("DOMString")}} indicating the image format. The default format type is `image/png`.
+  - : A {{domxref("DOMString")}} indicating the image format.
+    The default type is `image/png`; this image format will be also used if the specified type is not supported.
 - `encoderOptions` {{optional_inline}}
-  - : A {{jsxref("Number")}} between `0` and `1` indicating the image quality to use for image formats that use lossy compression such as `image/jpeg` and `image/webp`.
-    If this argument is anything else, the default value for image quality is used.
-    The default value is `0.92`. Other arguments are ignored.
+  - : A {{jsxref("Number")}} between `0` and `1` indicating the image quality to be used when creating images using file formats that support lossy compression (such as `image/jpeg` or `image/webp`).
+    A user agent will use its default quality value if this option is not specified, or if the number is outside the allowed range.
 
 ### Return value
 
 A {{domxref("DOMString")}} containing the requested [data URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+
+If the height or width of the canvas is `0` or larger than the [maximum canvas size](/en-US/docs/Web/HTML/Element/canvas#maximum_canvas_size), the string `"data:,"` is returned.
 
 ### Exceptions
 
@@ -135,5 +141,4 @@ function removeColors() {
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLCanvasElement")}}.
 - [Data URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) in the [HTTP](/en-US/docs/Web/HTTP) reference.

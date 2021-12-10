@@ -1362,6 +1362,7 @@ Provide a fallback in either {{anch("JPEG")}} or {{anch("PNG")}} format, such as
             </tr>
           </tbody>
         </table>
+        <p>WebP can also be used for <em>exporting</em> images from a Canvas from Firefox 96 and Chrome 50 (see <a href="/en-US/docs/Web/API/HTMLCanvasElement/toBlob#browser_compatibility"><code>HTMLCanvasElement.toBlob()</code></a> for more detailed support version information).</p>
       </td>
     </tr>
     <tr>
