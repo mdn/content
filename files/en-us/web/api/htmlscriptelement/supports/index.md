@@ -32,6 +32,8 @@ HTMLScriptElement.supports(type)
     - `"classic"`: Test if _classic scripts_ are supported.
       "Classic" scripts are the normal/traditional JavaScript files that predate module scripts.
     - `"module"`: Test if [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules) are supported.
+    - `"importmap"`: Test if import maps are supported.
+    - `"speculationrules"`: Test if speculation rules are supported and enabled.
 
     Any other value will cause the method to return `false`.
 
