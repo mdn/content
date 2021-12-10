@@ -43,7 +43,7 @@ If an element has both `aria-owns` and DOM children, the order of the child elem
  
 This order can be changed by including the ID references to the actual DOM children in the `aria-owns` value. 
 
-The {{CSSXRef('order')} property, part of flex or grid layouts, can be used to change the order of flex and grid items making them appear in a different order from their order in the source document, creating a divergence of the logical order of elements. While it may be tempting to order the accessibility layer to match order changes created with the CSS {{CSSXref('order')}} property, avoiding both the `order` property and the `aria-owns` attribute is the best option. 
+The {{CSSXRef('order')}} property, part of flex or grid layouts, can be used to change the order of flex and grid items making them appear in a different order from their order in the source document, creating a divergence of the logical order of elements. While it may be tempting to order the accessibility layer to match order changes created with the CSS {{CSSXref('order')}} property, avoiding both the `order` property and the `aria-owns` attribute is the best option. 
 
 Make sure your owned elements have only one owner. Do not specify the `id` of an element in more than one other element's `aria-owns` attribute. An element can have only one owner. 
 
