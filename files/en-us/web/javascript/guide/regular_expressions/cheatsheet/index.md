@@ -453,17 +453,18 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` s
         </p>
         <p>
           For example, <code>[abcd]</code> is the same as <code>[a-d]</code>.
-          They match the "b" in "brisket", and the "c" in "chop".
+          They match the "b" in "brisket", and the "a" or the "c" in "arch",
+          but not the "-" (hyphen) in "non-profit".
         </p>
         <p>
           For example, <code>[abcd-]</code> and <code>[-abcd]</code> match the
-          "b" in "brisket", the "c" in "chop", and the "-" (hyphen) in
-          "non-profit".
+          "b" in "brisket", the "a" or the "c" in "arch", and the "-" (hyphen)
+          in "non-profit".
         </p>
         <p>
           For example, <code>[\w-]</code> is the same as
-          <code>[A-Za-z0-9_-]</code>. They both match the "b" in "brisket", the
-          "c" in "chop", and the "n" in "non-profit".
+          <code>[A-Za-z0-9_-]</code>. They both match any of the characters in
+          "no_reply@example-server.com" except for the "@" and the ".".
         </p>
       </td>
     </tr>
