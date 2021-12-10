@@ -29,13 +29,13 @@ implementation.
 sort()
 
 // Arrow function
-sort((firstEl, secondEl) => { ... } )
+sort((firstEl, secondEl) => { /* ... */ } )
 
 // Compare function
 sort(compareFn)
 
 // Inline compare function
-sort(function compareFn(firstEl, secondEl) { ... })
+sort(function compareFn(firstEl, secondEl) { /* ... */ })
 ```
 
 ### Parameters

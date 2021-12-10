@@ -25,20 +25,20 @@ array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Type
 
 ```js
 // Arrow function
-reduce((accumulator, currentValue) => { ... } )
-reduce((accumulator, currentValue, index) => { ... } )
-reduce((accumulator, currentValue, index, array) => { ... } )
-reduce((accumulator, currentValue, index, array) => { ... }, initialValue)
+reduce((accumulator, currentValue) => { /* ... */ } )
+reduce((accumulator, currentValue, index) => { /* ... */ } )
+reduce((accumulator, currentValue, index, array) => { /* ... */ } )
+reduce((accumulator, currentValue, index, array) => { /* ... */ }, initialValue)
 
 // Callback function
 reduce(callbackFn)
 reduce(callbackFn, initialValue)
 
 // Inline callback function
-reduce(function(accumulator, currentValue) { ... })
-reduce(function(accumulator, currentValue, index) { ... })
-reduce(function(accumulator, currentValue, index, array){ ... })
-reduce(function(accumulator, currentValue, index, array) { ... }, initialValue)
+reduce(function(accumulator, currentValue) { /* ... */ })
+reduce(function(accumulator, currentValue, index) { /* ... */ })
+reduce(function(accumulator, currentValue, index, array){ /* ... */ })
+reduce(function(accumulator, currentValue, index, array) { /* ... */ }, initialValue)
 ```
 
 ### Parameters

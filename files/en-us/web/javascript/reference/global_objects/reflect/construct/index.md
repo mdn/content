@@ -127,12 +127,12 @@ function OtherClass() {
 let obj1 = Reflect.construct(OneClass, args)
 // Output:
 //     OneClass
-//     function OneClass { ... }
+//     function OneClass { /* ... */ }
 
 let obj2 = Reflect.construct(OneClass, args, OtherClass)
 // Output:
 //     OneClass
-//     function OtherClass { ... }
+//     function OtherClass { /* ... */ }
 
 let obj3 = Object.create(OtherClass.prototype);
 OneClass.apply(obj3, args)
