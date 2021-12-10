@@ -35,7 +35,7 @@ if (condition) {
   - : Statement that is executed if _condition_ is {{Glossary("truthy")}}. Can be
     any statement, including further nested `if` statements. To execute
     multiple statements, use a [block](/en-US/docs/Web/JavaScript/Reference/Statements/block) statement
-    (`{ ... }`) to group those statements. To execute no statements, use an [empty](/en-US/docs/Web/JavaScript/Reference/Statements/Empty) statement.
+    (`{ /* ... */ }`) to group those statements. To execute no statements, use an [empty](/en-US/docs/Web/JavaScript/Reference/Statements/Empty) statement.
 - `statement2`
   - : Statement that is executed if `condition` is
     {{Glossary("falsy")}} and the `else` clause exists. Can be any statement,
@@ -73,7 +73,7 @@ else
 ```
 
 To execute multiple statements within a clause, use a block statement
-(`{ ... }`) to group those statements. In general, it is a good practice to
+(`{ /* ... */ }`) to group those statements. In general, it is a good practice to
 always use block statements, especially in code involving nested `if`
 statements:
 

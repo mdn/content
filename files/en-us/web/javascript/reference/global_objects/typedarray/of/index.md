@@ -23,7 +23,7 @@ array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray
 ```js
 TypedArray.of(element0)
 TypedArray.of(element0, element1)
-TypedArray.of(element0, element1, ... , elementN)
+TypedArray.of(element0, element1, /* ... ,*/ elementN)
 ```
 
 Where `TypedArray` is one of:
