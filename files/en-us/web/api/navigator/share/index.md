@@ -69,7 +69,7 @@ The {{jsxref("Promise")}} may be rejected with one of the following `DOMExceptio
 The following is a list of usually shareable file types. However, you should always test with {{domxref("navigator.canShare()")}} if sharing would succeed.
 
 - Application
-  - `.pdf` - `application/pdf` (from Chromium 93)
+  - `.pdf` - `application/pdf`
 - Audio
   - `.flac` - `audio/flac`
   - `.m4a` - `audio/x-m4a`
