@@ -97,7 +97,7 @@ const [isEditing, setEditing] = useState(false);
 
 Next, we're going to rethink the `<Todo />` component — from now on, we want it to display one of two possible “templates", rather than the single template it's used so far:
 
-- The "view" template, when we are just viewing a todo; this is what we’ve used in rest of the tutorial so far.
+- The "view" template, when we are just viewing a todo; this is what we’ve used in the tutorial thus far.
 - The "editing" template, when we are editing a todo. We're about to create this.
 
 Copy this block of code into the `Todo()` function, beneath your `useState()` hook but above the `return` statement:
