@@ -12,7 +12,7 @@ browser-compat: css.selectors.invalid
 ---
 {{CSSRef}}
 
-The **`:invalid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents fail to [validate](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation).
+The **`:invalid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("form")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents fail to [validate](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation).
 
 ```css
 /* Selects any invalid <input> */
@@ -90,6 +90,60 @@ input:required:invalid {
 #### Result
 
 {{EmbedLiveSample('Examples', 600, 120)}}
+
+### A form that shows sections in stages
+
+You can also use `:invalid` on a {{HTMLElement("form")}} or {{HTMLElement("fieldset")}}, to indicate whether any of their content is invalid.
+
+#### HTML
+
+```html
+<form>
+  <fieldset>
+    <label for="form-name">Name</label><br>
+    <input type="text" name="name" id="form-name" required>
+  </fieldset>
+  <fieldset>
+    <label for="form-email">Email Address</label><br>
+    <input type="email" name="email" id="form-email" required>
+  </fieldset>
+  <fieldset>
+    <label for="form-message">Message</label><br>
+    <textarea name="message" id="form-message" required></textarea>
+  </fieldset>
+  <button type="submit" name="send">Submit</button>
+</form>
+```
+
+#### CSS
+
+```css
+fieldset:invalid~fieldset {	/*	Hide fieldset after invalid one */
+  display: none;
+}
+form:invalid button {
+  opacity: 0.3;			/* Dim button */
+  pointer-events: none;	/* Disable button */
+}
+/*	Cosmetic Styles */
+input, textarea {
+  box-sizing: border-box;
+  width: 100%;
+  font-family:monospace;
+  padding: 0.25em 0.5em;
+}
+button {
+  width: 100%;
+  border: thin solid darkgrey;
+  font-size: 1.25em;
+  background-color: darkgrey;
+  color: white;
+}
+```
+
+#### Notes
+
+The General Sibling Selector (`~`) is used to select any sibling element _after_ the first matched element. See [General sibling combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator).
 
 ## Accessibility concerns
 
