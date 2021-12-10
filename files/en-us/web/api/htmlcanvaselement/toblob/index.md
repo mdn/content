@@ -35,7 +35,8 @@ toBlob(callback, type, quality)
   - : A {{domxref("DOMString")}} indicating the image format.
     The default type is `image/png`; that type is also used if the given type isn't supported.
 - `quality` {{optional_inline}}
-  - : A {{jsxref("Number")}} between `0` and `1` indicating the image quality to be used when creating images using lossy compression (such as `image/jpeg`).
+  - : A {{jsxref("Number")}} between `0` and `1` indicating the image quality to be used when creating images using file formats that support lossy compression (such as `image/jpeg` or `image/webp`).
+    A user agent will use its default quality value if this option is not specified, or if the number is outside the allowed range.
 
 ### Return value
 
