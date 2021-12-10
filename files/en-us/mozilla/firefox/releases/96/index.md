@@ -55,6 +55,8 @@ This article provides information about the changes in Firefox 96 that will affe
 
 #### DOM
 
+- The {{domxref("IntersectionObserver.IntersectionObserver()","IntersectionObserver()")}} constructor now sets the default `rootMargin` if an empty string is passed in the associated parameter option, instead of throwing an exception ({{bug(1738791)}}).
+
 #### Media, WebRTC, and Web Audio
 
 #### Removals
