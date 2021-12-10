@@ -757,7 +757,7 @@ p {
 </div>
 ```
 
-```js
+```js hidden
 const htmlInput = document.querySelector(".html-input");
 const cssInput = document.querySelector(".css-input");
 const reset = document.getElementById("reset");
