@@ -52,7 +52,7 @@ Firefox also supports callbacks for the APIs that support the `chrome.*` namespa
 
 So, how do you take advantage of promises easily? The solution is to code for Firefox using promises and use the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/) to address Chrome, Opera, and Edge.
 
-This polyfill addresses the API namespace and asynchronous event handling across Firefox, Chrome, Opera, and Edge. However, at the time of writing (December 2021), support for Opera and Edge was unofficial.
+This polyfill addresses the API namespace and asynchronous event handling across Firefox, Chrome, Opera, and Edge.
 
 To use the polyfill, install it into your development environment using npm or download it directly from [GitHub releases](https://github.com/mozilla/webextension-polyfill/releases).
 
@@ -120,7 +120,7 @@ The differences in the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensio
 2.  **Extension features.**
     For example, at the time of writing, Chrome did not support the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#browser_compatibility) key.
 3.  **Key optionality.**
-    At the time of writing, except for Safari, only `"manifest_version"`, `"version"`, and `"name"` are mandatory keys. Safari has a more comprehensive set of mandatory requirements, such as setting `"background"` to `false`.
+    At the time of writing, except for Safari, only `"manifest_version"`, `"version"`, and `"name"` are mandatory keys. Safari has a more comprehensive set of mandatory requirements, such as setting `"background"` to `false` for iOS.
 
 Browser compatibility information is included with each key in the Mozilla Developer Network [`manifest.json` key reference pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
