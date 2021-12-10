@@ -11,7 +11,7 @@ The **`onencrypted`** property of the
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{InheritanceDiagram}}
 
 ## Syntax
 

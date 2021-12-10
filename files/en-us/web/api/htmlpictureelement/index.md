@@ -13,7 +13,7 @@ browser-compat: api.HTMLPictureElement
 
 The **`HTMLPictureElement`** interface represents a {{HTMLElement("picture")}} HTML element. It doesn't implement specific properties or methods.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

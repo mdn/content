@@ -13,7 +13,7 @@ browser-compat: api.SVGFEDistantLightElement
 
 The **`SVGFEDistantLightElement`** interface corresponds to the {{SVGElement("feDistantLight")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

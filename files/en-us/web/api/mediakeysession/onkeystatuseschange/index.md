@@ -9,7 +9,7 @@ The **`onkeystatuseschange`** property of the {{domxref("MediaKeySession")}} is 
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{InheritanceDiagram}}
 
 ## Syntax
 

@@ -15,7 +15,7 @@ browser-compat: api.SVGUseElement
 
 The **`SVGUseElement`** interface corresponds to the {{SVGElement("use")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

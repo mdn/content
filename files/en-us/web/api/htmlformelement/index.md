@@ -16,7 +16,7 @@ browser-compat: api.HTMLFormElement
 
 The **`HTMLFormElement`** interface represents a {{HTMLElement("form")}} element in the DOM. It allows access to—and, in some cases, modification of—aspects of the form, as well as access to its component elements.
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
