@@ -16,7 +16,7 @@ The `aria-setsize` attribute defines the number of items in the current set of l
 
 Browsers can manage some states, like the number of listitems in a list. When the DOM is not complete, the browser calculation of the number of items can be incorrect. When only a subset of listitems are loaded into the DOM, the browser calculates the number of items based only on those present. The `aria-setsize` attribute should be used to override the browser's incorrect count. It defines the number of items in the current set of listitems or treeitems had the entire set been loaded. 
 
-The attribute is set on each item rather than on any containing element. The value is the same for each item; an integer reflecting number of items in the complete set, or `-1` is the set size is unknown. If all the items are present in the DOM, the browser can calculate the set size and the position of each item, making both `aria-setsize` and `aria-posinset` unnecessary.
+`aria-setsize` attribute is set on each item, rather than on any containing element. The value is the same for each item: an integer reflecting number of items in the complete set, or `-1` if the set size is unknown. If all the items are present in the DOM, the browser can calculate the set size and the position of each item, making both `aria-setsize` and `aria-posinset` unnecessary.
 
 Elements with the `aria-setsize` generally have the  [`aria-posinset`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-posinset) attribute included as well to indicate the position of that item within the set. The `aria-posinset` value is between 1 and the positive value of `aria-setsize`, inclusive.
 
