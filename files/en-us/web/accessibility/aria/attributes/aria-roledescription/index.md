@@ -18,7 +18,7 @@ Some assistive technologies (<abbr>AT</abbr>), such as screen readers, present t
 
 Users depend on the presentation of known role name to understand the the purpose of the element and, if it is a widget, how to interact with it. So, only use `aria-roledescription` to clarify the purpose of non-interactive container roles like `group` or `region` and to provide a more specific description to a widget.
 
-The `aria-roledescription` property overrides how ATs localize and express the name of a role.  When you override a role name the user understands, you can negatively impact a users' ability to understand and interact with an element.
+The `aria-roledescription` property overrides how ATs localize and express the name of a role. When you override a role name the user understands, you can potentially negatively impact a users' ability to understand and interact with an element.
 
 When there are no semantic or ARIA widget roles that correspond to the interaction model of your widget, use `role="application"`, provide an `aria-roledescription` with a human-readable, author-localized customized role name, and use `aria-describedby` to provide user instructions.
 
