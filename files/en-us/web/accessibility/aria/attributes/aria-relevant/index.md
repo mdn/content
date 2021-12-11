@@ -14,7 +14,7 @@ Used in ARIA live regions, the global `aria-relevant` attribute indicates what n
 
 ## Description
 
-[ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) are areas of a web page that are updated when user focus may be elsewhere. When an update is outside of the user's focus, assistive technologies such as screen readers won't "see" the update to report it to the user unless the area is a live region. 
+[ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) are areas of a web page that are updated when user's attention may be elsewhere. When an update is outside of the user's keyboard focus, assistive technologies such as screen readers use a live region area to report updates to the user.
 
 Examples of live regions include news marquees, stock tickers, chat windows, and score boards. These update without user interaction. Some updates are important for the user to know about. They're relevant. Others are not. The `aria-relevant` is used to describe what types of changes have occurred to an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) region, and which are relevant and should be announced. 
 
