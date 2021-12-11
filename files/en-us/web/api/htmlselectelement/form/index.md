@@ -16,12 +16,6 @@ The **`HTMLSelectElement.form`** read-only property returns a
 with. If the element is not associated with of a {{HTMLElement("form")}} element, then
 it returns `null`.
 
-## Syntax
-
-```js
-const formElement = selectElement.form;
-```
-
 ## Example
 
 ```html
