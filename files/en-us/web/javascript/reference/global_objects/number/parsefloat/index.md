@@ -32,14 +32,6 @@ A floating point number parsed from the given `string`.
 
 Or {{jsxref("NaN")}} when the first non-whitespace character cannot be converted to a number.
 
-## Polyfill
-
-```js
-if (Number.parseFloat === undefined) {
-  Number.parseFloat = parseFloat;
-}
-```
-
 ## Examples
 
 ### Number.parseFloat vs parseFloat
