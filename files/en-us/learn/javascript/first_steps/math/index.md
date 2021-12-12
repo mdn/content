@@ -105,7 +105,7 @@ Sometimes you might end up with a number that is stored as a string type, which 
 For example, try typing these lines into your console:
 
 ```js
-const myNumber = '74';
+let myNumber = '74';
 myNumber += 3;
 ```
 
