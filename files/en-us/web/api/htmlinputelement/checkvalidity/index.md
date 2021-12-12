@@ -24,7 +24,7 @@ element.checkValidity();
 
 ### Return value
 
-It returns `true` if the value of the element has no validity problems. Otherwise it returns `false`.
+Returns `true` if the value of the element has no validity problems; otherwise returns `false`.
 
 ## Specifications
 
