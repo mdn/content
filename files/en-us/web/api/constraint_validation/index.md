@@ -51,11 +51,11 @@ The constraint validation API extends the interfaces for the form-associated ele
 
 #### Methods
 
-- {{domxref('HTMLObjectElement.checkValidity', 'checkValidity()')}}
+- {{domxref('HTMLInputElement.checkValidity', 'checkValidity()')}}
   - : Checks the element's value against its constraints. If the value is invalid, it fires an [invalid](/en-US/docs/Web/API/HTMLInputElement/invalid_event) event at the element and returns `false`; otherwise it returns `true`.
 - {{domxref('HTMLFormElement.reportValidity','reportValidity()')}} HTMLFormElement method
   - : Checks the element's value against its constraints and also reports the validity status; if the value is invalid, it fires an [invalid](/en-US/docs/Web/API/HTMLInputElement/invalid_event) event at the element, returns `false`, and then reports the validity status to the user in whatever way the user agent has available. Otherwise, it returns `true`.
-- {{domxref('HTMLObjectElement.setCustomValidity','setCustomValidity(<em>message</em>)')}}
+- {{domxref('HTMLInputElement.setCustomValidity','setCustomValidity(<em>message</em>)')}}
   - : Sets a custom error message string to be shown to the user upon submitting the form, explaining why the value is not valid — when a message is set, the validity state is set to invalid. To clear this state, invoke the function with an empty string passed as its argument. In this case the custom error message is cleared, the element is considered valid, and no message is shown.
 
 ## Examples
