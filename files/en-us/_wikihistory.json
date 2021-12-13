@@ -81916,22 +81916,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/VisualViewport/onresize": {
-    "modified": "2020-10-15T21:57:56.691Z",
-    "contributors": [
-      "chrisdavidmills",
-      "connorshea",
-      "jpmedley"
-    ]
-  },
-  "Web/API/VisualViewport/onscroll": {
-    "modified": "2020-10-15T21:57:56.840Z",
-    "contributors": [
-      "chrisdavidmills",
-      "connorshea",
-      "jpmedley"
-    ]
-  },
   "Web/API/VisualViewport/pageLeft": {
     "modified": "2020-10-15T21:57:57.161Z",
     "contributors": [

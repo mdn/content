@@ -43,10 +43,10 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - [`resize`](/en-US/docs/Web/API/VisualViewport/resize_event)
   - : Fired when the visual viewport is resized.
-    Also available via the {{domxref("VisualViewport.onresize")}} property.
+    Also available via the `onresize` property.
 - [`scroll`](/en-US/docs/Web/API/VisualViewport/scroll_event)
   - : Fired when the visual viewport is scrolled.
-    Also available via the {{domxref("VisualViewport.onscroll")}} property.
+    Also available via the `onscroll` property.
 
 ## Examples
 
