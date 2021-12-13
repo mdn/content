@@ -10,8 +10,8 @@ The **`ServiceWorkerGlobalScope.onsync`** event of the {{domxref("ServiceWorkerG
 ## Syntax
 
 ```js
-ServiceWorkerGlobalScope.onsync = function(SyncEvent) { ... }
-self.addEventListener('sync', function(SyncEvent) { ... })
+ServiceWorkerGlobalScope.onsync = function(SyncEvent) { /* ... */ }
+self.addEventListener('sync', function(SyncEvent) { /* ... */ })
 ```
 
 ## Specifications

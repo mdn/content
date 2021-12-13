@@ -33,7 +33,7 @@ incoming messages are received.
 ## Syntax
 
 ```js
-serviceWorkerGlobalScope.onmessage = function(extendableMessageEvent) { ... };
+serviceWorkerGlobalScope.onmessage = function(extendableMessageEvent) { /* ... */ };
 ```
 
 ## Example

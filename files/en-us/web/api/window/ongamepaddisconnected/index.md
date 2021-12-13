@@ -23,7 +23,7 @@ The event object is of type {{domxref("GamepadEvent")}}.
 ## Syntax
 
 ```js
-window.ongamepaddisconnected = function() { ... };
+window.ongamepaddisconnected = function() { /* ... */ };
 ```
 
 ## Examples

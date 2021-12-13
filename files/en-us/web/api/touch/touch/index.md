@@ -15,7 +15,9 @@ The **`Touch()`** constructor creates a new {{domxref("Touch")}} object.
 
 ## Syntax
 
-    new Touch(touchInit)
+```js
+new Touch(touchInit)
+```
 
 ### Arguments
 

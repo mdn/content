@@ -38,7 +38,7 @@ _In addition to inheriting methods from its parent interface, {{domxref("EventTa
 
 - {{domxref("XRSystem.devicechange_event", "devicechange")}} {{experimental_inline}}
   - : Sent when the set of available XR devices has changed.
-    Also available using the {{domxref("XRSystem.ondevicechange", "ondevicechange")}} event handler.
+    Also available using the `ondevicechange` event handler.
 
 ## Usage notes
 

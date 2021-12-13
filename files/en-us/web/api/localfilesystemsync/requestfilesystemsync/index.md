@@ -13,10 +13,12 @@ The **`requestFileSystemSync`** method of the `LocalFileSystemSync` interface o
 
 ## Syntax
 
-    LocalFileSystemSync.requestFileSystemSync(
-      unsigned short type,
-      unsigned long long size
-    );
+```js
+LocalFileSystemSync.requestFileSystemSync(
+  unsigned short type,
+  unsigned long long size
+);
+```
 
 ### Parameters
 

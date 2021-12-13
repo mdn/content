@@ -15,7 +15,9 @@ The **`recordsAvailable`** read-only property of the {{domxref("BackgroundFetchR
 
 ## Syntax
 
-    let recordsAvailable = BackgroundFetchRegistration.recordsAvailable;
+```js
+let recordsAvailable = BackgroundFetchRegistration.recordsAvailable;
+```
 
 ### Value
 

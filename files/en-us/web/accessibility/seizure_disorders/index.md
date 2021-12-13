@@ -469,7 +469,7 @@ Support for prefers-reduced-motion in modern browsers is growing.
 @media screen and (prefers-reduced-motion) { }
 ```
 
-To see a great example of how to use the code `prefers-reduced-motion`, visit the MDN document, **[prefers-reduced-motion](/en-US/docs/Web/CSS/@media/prefers-reduced-motion)**, or see the example below from the section on **[New in Chrome 74](https://developers.google.com/web/updates/2019/04/nic74)**.
+To see a great example of how to use the code `prefers-reduced-motion`, visit the MDN document, [prefers-reduced-motion](/en-US/docs/Web/CSS/@media/prefers-reduced-motion), or see the example below from the section on [New in Chrome 74](https://developer.chrome.com/blog/new-in-chrome-74/).
 
 ```css
 button {

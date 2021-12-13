@@ -13,5 +13,5 @@ In {{Glossary("JavaScript")}}, **BigInt** is a numeric data type that can repre
 ## See also
 
 - {{Interwiki("wikipedia", "Data type#Numeric_types", "Numeric types")}} on Wikipedia
-- The JavaScript data structure: [`BigInt`](/en-US/docs/Web/JavaScript/Data_structures#bigint_type)
+- The JavaScript type: [`BigInt`](/en-US/docs/Web/JavaScript/Data_structures#bigint_type)
 - The JavaScript global object {{jsxref("BigInt")}}

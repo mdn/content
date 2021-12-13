@@ -28,8 +28,8 @@ CSS at-rule, but it may be necessary to use these events in some cases.
 ## Syntax
 
 ```js
-window.addEventListener("afterprint", function(event) { ... });
-window.onafterprint = function(event) { ... };
+window.addEventListener("afterprint", function(event) { /* ... */ });
+window.onafterprint = function(event) { /* ... */ };
 ```
 
 ## Specifications

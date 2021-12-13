@@ -518,6 +518,13 @@ push your branch to your fork:
 
 1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
+> **Note:** If the slug of the page you wish to delete contain special
+  characters, include it in quotes:
+
+```sh
+yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
+```
+
 ### Redirecting a document
 
 If you are [moving a document](#moving-one-or-more-documents) as shown
@@ -695,8 +702,9 @@ you can follow the below steps to unarchive it:
 directory into the appropriate place inside this repo, and update the
 page's meta data (like `slug`) if needed.
 
-> **Note:** To archive a currently-non-archived page, you need to follow the
+> **Note:** To archive a non-archived page, you need to follow the
 above procedure, but move the page in question the opposite way between repos.
+When removing the page from MDN, remember to use the [delete command](#deleting-a-document).
 
 **Note:** You can have an archived page with non-archived pages below it in the
 hierarchy, and vice-versa. To achieve this you need to have the same directory

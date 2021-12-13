@@ -19,7 +19,9 @@ The read-only **`inherits`** property of the {{domxref("CSSPropertyRule")}} inte
 
 ## Syntax
 
-    const inherits = CSSPropertyRule.inherits;
+```js
+const inherits = CSSPropertyRule.inherits;
+```
 
 ### Value
 

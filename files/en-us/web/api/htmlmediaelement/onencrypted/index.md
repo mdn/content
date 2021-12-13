@@ -16,7 +16,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 ## Syntax
 
 ```js
-HTMLMediaElement.onencrypted = function(encrypted) { ... }
+HTMLMediaElement.onencrypted = function(encrypted) { /* ... */ }
 ```
 
 ## Specifications

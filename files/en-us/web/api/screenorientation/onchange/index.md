@@ -20,8 +20,8 @@ The **`onchange`** property of the
 ## Syntax
 
 ```js
-screen.orientation.addEventListener('change', function(e) { ... })
-screen.orientation.onchange = function(e) { ... }
+screen.orientation.addEventListener('change', function(e) { /* ... */ })
+screen.orientation.onchange = function(e) { /* ... */ }
 ```
 
 ## Specifications

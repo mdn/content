@@ -21,7 +21,7 @@ there is an active notification on it.
 ## Syntax
 
 ```js
-BluetoothRemoteGATTCharacteristic.startNotifications().then(function(BluetoothRemoteGATTCharacteristic) { ... })
+BluetoothRemoteGATTCharacteristic.startNotifications().then(function(BluetoothRemoteGATTCharacteristic) { /* ... */ })
 ```
 
 ### Returns

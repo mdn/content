@@ -21,7 +21,7 @@ used to prompt the user at a more suitable time.
 ## Syntax
 
 ```js
-window.addEventListener("beforeinstallprompt", function(event) { ... });
+window.addEventListener("beforeinstallprompt", function(event) { /* ... */ });
 window.onbeforeinstallprompt = function(event) { ...};
 ```
 

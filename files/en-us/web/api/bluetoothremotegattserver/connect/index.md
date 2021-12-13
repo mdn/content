@@ -22,7 +22,7 @@ script execution environment to connect to `this.device`.
 
 ```js
 BluetoothRemoteGATTServer.connect()
-  .then(function(bluetoothRemoteGATTServer) { ... })
+  .then(function(bluetoothRemoteGATTServer) { /* ... */ })
 ```
 
 ### Returns

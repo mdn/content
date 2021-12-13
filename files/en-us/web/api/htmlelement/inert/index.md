@@ -9,9 +9,11 @@ The {{domxref("HTMLElement")}} property **`inert`** is a boolean value that, whe
 
 ## Syntax
 
-    isInert = HTMLElement.inert;
+```js
+isInert = HTMLElement.inert;
 
-    HTMLElement.inert = true | false;
+HTMLElement.inert = true | false;
+```
 
 ### Value
 

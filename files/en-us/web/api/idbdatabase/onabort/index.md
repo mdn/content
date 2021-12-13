@@ -23,7 +23,7 @@ connection object.
 ## Syntax
 
 ```js
-IDBDatabase.onabort = function(event) { ... };
+IDBDatabase.onabort = function(event) { /* ... */ };
 ```
 
 ## Example

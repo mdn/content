@@ -13,14 +13,16 @@ browser-compat: api.Element.ariaDisabled
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaDisabled`** property of the {{domxref("Element")}} interface reflects the value of the `aria-disabled` attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
+The **`ariaDisabled`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
 
 > **Note:** Where possible, use the {{htmlelement("input")}} element with `type="button"` or the {{htmlelement("button")}} element —  because those elements have built in semantics and do not require ARIA attributes.
 
 ## Syntax
 
-    var ariaDisabled = element.ariaDisabled;
-    element.ariaDisabled = ariaDisabled
+```js
+var ariaDisabled = element.ariaDisabled;
+element.ariaDisabled = ariaDisabled
+```
 
 ### Value
 

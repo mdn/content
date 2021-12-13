@@ -15,7 +15,9 @@ The **`naturalHeight`** read-only property of the {{domxref("PerformanceElementT
 
 ## Syntax
 
-    var height = PerformanceElementTiming.naturalHeight;
+```js
+var height = PerformanceElementTiming.naturalHeight;
+```
 
 ### Value
 

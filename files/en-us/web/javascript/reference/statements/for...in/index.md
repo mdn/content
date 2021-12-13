@@ -178,9 +178,6 @@ investigating whether to remove the nonstandard behavior as well.
 
 - {{jsxref("Statements/for...of", "for...of")}} – a similar statement that iterates
   over the property _values_
-- {{jsxref("Statements/for_each...in", "for each...in")}} – a similar but deprecated
-  statement that iterates over the values of an object's properties, rather than the
-  property names themselves
 - {{jsxref("Statements/for", "for")}}
 - [Iterators and
   Generator functions](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) (usable with `for...of` syntax)

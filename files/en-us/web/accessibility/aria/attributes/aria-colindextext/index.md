@@ -13,9 +13,9 @@ The `aria-colindextext` attribute defines a human readable text alternative of t
 
 ## Description
 
-When you have a very large table or when you purposefully want to display just a section of a table, not all columns may be present in the DOM. When this happens, we use the [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) with an integer value to define how many columns the table (or grid) would have if all the columns were present and add the [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) property on each column to provide information on the column index within that larger table. 
+When you have a very large table or when you purposefully want to display just a section of a table, not all columns may be present in the DOM. When this happens, we use the [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) with an integer value to define how many columns the table (or grid) would have if all the columns were present and add the [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) property on each column to provide information on the column index within that larger table.
 
-In the following HTML snippet, our table has 8 columns, but we are only displaying 4. The "city" column is the fifth column of our larger table, as defined by `aria-colindex="5"`. 
+In the following HTML snippet, our table has 8 columns, but we are only displaying 4. The "city" column is the fifth column of our larger table, as defined by `aria-colindex="5"`.
 
 ```html
 <table aria-colcount="8">
@@ -31,7 +31,7 @@ In the following HTML snippet, our table has 8 columns, but we are only displayi
 </table>
 ```
 
-This table is not very complex. Had this been a 100+ column spreadsheet or a grid without column headers, such as a chess board, the provided or calculated value of `aria-colindex` might not be meaningful or may not reflect the displayed index. When this is the case, `aria-colindextext` can be included. The value is a string that is a human readable text alternative to the numeric `aria-colindex`. 
+This table is not very complex. Had this been a 100+ column spreadsheet or a grid without column headers, such as a chess board, the provided or calculated value of `aria-colindex` might not be meaningful or may not reflect the displayed index. When this is the case, `aria-colindextext` can be included. The value is a string that is a human readable text alternative to the numeric `aria-colindex`.
 
 ```html
 <table aria-colcount="128">
@@ -51,7 +51,7 @@ In the above example, the table has 128 columns of which only 4 columns are show
 
 Only use `aria-colindextext` when the provided or calculated value of `aria-colindex` is not meaningful or does not reflect the displayed index. Whenever you include `aria-colindextext`, also keep the `aria-colindex` as some assistive technologies rely on the numeric column index for the purpose of keeping track of the user's position and in providing alternative table navigation.
 
-> **Note:** While `aria-colindex` can be added to a row when all the columns present are contiguous as sequential values can be deduced, `aria-colindextext` is NOT a supported property of [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_role). 
+> **Note:** While `aria-colindex` can be added to a row when all the columns present are contiguous as sequential values can be deduced, `aria-colindextext` is NOT a supported property of [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/Row_role).
 
 See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext).
 
@@ -60,23 +60,23 @@ See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/
 - `<string>`
   - The human readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaColIndexText")}}
   - : The  [`ariaColIndexText`](/en-US/docs/Web/API/Element/ariaColIndexText) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-colindextext` attribute, which defines a human readable text alternative of aria-colindex.
 
 ## Associated roles
 
-Used in roles: 
+Used in roles:
  - [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_role)
 
-Inherits into roles: 
+Inherits into roles:
  - [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role)
  - [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role)
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-colindextext","ARIA: aria-colindextext Attribute")}}  | {{Spec2('ARIA')}} |
 

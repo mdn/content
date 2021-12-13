@@ -28,14 +28,14 @@ The first article in our practical tutorial series explains what you'll learn, 
         <a
           href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment"
           >set up a Node development environment</a
-        >. 
+        >.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
         To introduce the example application used in this tutorial, and allow
-        readers to understand what topics will be covered. 
+        readers to understand what topics will be covered.
       </td>
     </tr>
   </tbody>

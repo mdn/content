@@ -23,7 +23,7 @@ cannot be {{glossary("Deserialization", "deserialized")}}.
 ## Syntax
 
 ```js
-bc.onmessageerror = function() { ... };
+bc.onmessageerror = function() { /* ... */ };
 ```
 
 ## Specifications

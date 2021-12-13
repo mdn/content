@@ -21,7 +21,7 @@ This only works when the application is authorized to use the specified device.
 ## Syntax
 
 ```js
-HTMLMediaElement.setSinkId(sinkId).then(function() { ... })
+HTMLMediaElement.setSinkId(sinkId).then(function() { /* ... */ })
 ```
 
 ### Returns

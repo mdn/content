@@ -655,7 +655,9 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       <td>Replaces a range of text in the input element with new text.</td>
     </tr>
     <tr>
-      <td><code>setCustomValidity()</code></td>
+      <td>
+        {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}}
+      </td>
       <td>
         Sets a custom validity message for the element. If this message is not
         the empty string, then the element is suffering from a custom validity
@@ -663,7 +665,9 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>checkValidity()</code></td>
+      <td>
+        {{domxref("HTMLInputElement.checkValidity()", "checkValidity()")}}
+      </td>
       <td>
         Returns a boolean value that is <code>false</code> if the element is a
         candidate for constraint validation, and it does not satisfy its

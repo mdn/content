@@ -94,8 +94,11 @@ function dragover_handler(ev) {
 function dragend_handler(ev) {
   console.log("dragEnd");
   var dataList = ev.dataTransfer.items;
-  for (var i = 0; i < dataList.length; i++) {
-    dataList.remove(i);
+  // Clear all the files.  Iterate in reverse order to safely remove.
+  for (var i = dataList.length - 1; i >= 0; i--) {
+    if (dataList[i].kind === "file") {
+      dataList.remove(i);
+    }
   }
   // Clear any remaining drag data
   dataList.clear();

@@ -15,7 +15,9 @@ The **`name`** read-only property of the {{domxref("TrustedTypePolicy")}} interf
 
 ## Syntax
 
-    var name = TrustedTypePolicy.name;
+```js
+var name = TrustedTypePolicy.name;
+```
 
 ### Value
 

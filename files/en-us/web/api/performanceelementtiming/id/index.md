@@ -15,7 +15,9 @@ The **`id`** read-only property of the {{domxref("PerformanceElementTiming")}} i
 
 ## Syntax
 
-    var id = PerformanceElementTiming.id;
+```js
+var id = PerformanceElementTiming.id;
+```
 
 ### Value
 

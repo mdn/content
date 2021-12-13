@@ -22,7 +22,7 @@ is, when the port receives a message.
 ## Syntax
 
 ```js
-channel.onmessage = function() { ... };
+channel.onmessage = function() { /* ... */ };
 ```
 
 ## Example

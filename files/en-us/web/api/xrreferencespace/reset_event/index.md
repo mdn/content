@@ -41,9 +41,18 @@ onreset = (event) => { });
 
 ## Event type
 
-{{domxref("XRReferenceSpaceEvent")}}.
+An {{domxref("XRReferenceSpaceEvent")}}. Inherits from {{domxref("Event")}}.
 
-## Usage notes
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("XRReferenceSpaceEvent.referenceSpace", "referenceSpace")}} {{ReadOnlyInline}}
+  - : An {{domxref("XRReferenceSpace")}} indicating the reference space that generated the event.
+- {{domxref("XRReferenceSpaceEvent.transform", "transform")}} {{ReadOnlyInline}}
+  - : An {{domxref("XRRigidTransform")}} object indicating the position and orientation of the specified `referenceSpace` object's native origin after the event, defined relative to the coordinate system before the event.
+
+## Description
 
 The `reset` event indicates that the coordinate system has been reset or reconfigured by changing the reference space's origin, moving and rotating it as indicated by the event's {{domxref("XRReferenceSpaceEvent.transform", "transform")}} property. The event is sent before any animation frame callbacks are executed to render the pending frame, to ensure that those callbacks have the updated coordinate system available.
 

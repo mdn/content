@@ -15,7 +15,9 @@ The **`readable`** read-only property of the {{domxref("DecompressionStream")}} 
 
 ## Syntax
 
-    let stream = DecompressionStream.readable;
+```js
+let stream = DecompressionStream.readable;
+```
 
 ### Value
 

@@ -14,7 +14,9 @@ Writes a string of text followed by a newline character to a document.
 
 ## Syntax
 
-    document.writeln(line);
+```js
+document.writeln(line);
+```
 
 ### Parameters
 

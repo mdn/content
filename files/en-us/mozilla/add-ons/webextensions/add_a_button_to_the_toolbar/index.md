@@ -87,7 +87,7 @@ button/
 
 Now [install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) and click the button:
 
-{{EmbedYouTube("kwwTowgT-Ys")}}
+![The toolbar button added by the extension](toolbar_button.png)
 
 ## Adding a popup
 
@@ -194,9 +194,9 @@ The extension's final structure should look like this:
             choose_page.js
         manifest.json
 
-Now reload the extension, click the button again, and try clicking on the choices in the popup:
+Now [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading-a-temporary-extension), click the button again, and try clicking on the choices in the popup:
 
-{{EmbedYouTube("QPEh1L1xq0Y")}}
+![The toolbar button added by the extension with a popup](toolbar_button_with_popup.png)
 
 ## Page actions
 

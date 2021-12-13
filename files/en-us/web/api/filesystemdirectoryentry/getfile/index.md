@@ -30,9 +30,10 @@ FileSystemDirectoryEntry.getFile([path][, options][, successCallback][, errorCal
   - : A {{domxref("USVString")}} specifying the path, relative to the directory on which
     the method is called, describing which file's entry to return.
 - `options` {{optional_inline}}
-  - : An object based on the {{domxref("FileSystemFlags")}} dictionary, which allows you
+  - : An object which allows you
     to specify whether or not to create the entry if it's missing and if it's an error if
     the file already exists. These options are currently not useful in Web contexts.
+    See the {{anch("options parameter")}} section for more details.
 - `successCallback` {{optional_inline}}
   - : A method to be called once the {{domxref("FileSystemFileEntry")}} has been created.
     The method receives a single parameter: the `FileSystemFileEntry` object
@@ -40,6 +41,30 @@ FileSystemDirectoryEntry.getFile([path][, options][, successCallback][, errorCal
 - `errorCallback` {{optional_inline}}
   - : A method to be called if an error occurs. Receives as its sole input parameter a
     {{domxref("DOMException")}} object describing the error which occurred.
+
+#### `options` parameter
+
+The `options` parameter object accepts the following parameters:
+
+- `create` {{optional_inline}}
+  - : If this property is `true`, and the requested file doesn't exist, the user agent should create it.
+    The default is `false`.
+    The parent directory must already exist.
+- `exclusive` {{optional_inline}}
+  - : If `true`, and the `create` option is also `true`, the file must not exist prior to issuing the call.
+    Instead, it must be possible for it to be created newly at call time.
+    The default is `false`. This parameter is ignored if `create` is `false`.
+
+The table below describes the result of each possible combination of these flags depending on whether or not the target file path already exists.
+
+| `create` option | `exclusive` option | Path condition | Result |
+| --- | --- | --- | --- |
+| `false` | _Ignored_ | Path exists and is a file | The `successCallback` is called with a {{domxref("FileSystemFileEntry")}}.
+| `false` | _Ignored_ | Path exists but is a directory | The `errorCallback` is called with an appropriate error code (if the callback was provided).
+| `true` | `false` | Path exists | The existing file is removed and replaced with a new one, then the `successCallback` is called with a {{domxref("FileSystemFileEntry")}}.
+| `true` | `false` | Path doesn't exist | The file is created, then a {{domxref("FileSystemFileEntry")}} is passed to the `successCallback`.
+| `true` | `true` | Path exists | The `errorCallback` is called with an appropriate error, such as `FileError.PATH_EXISTS_ERR`.
+| `true` | `true` | Path doesn't exist | The file is created, then a {{domxref("FileSystemFileEntry")}} is passed to the `successCallback`.
 
 ### Return value
 

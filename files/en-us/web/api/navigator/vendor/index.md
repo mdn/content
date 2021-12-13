@@ -14,7 +14,9 @@ The value of the {{DomXref("Navigator")}} **`vendor`** property is always either
 
 ## Syntax
 
-    venString = navigator.vendor
+```js
+venString = navigator.vendor
+```
 
 ### Value
 

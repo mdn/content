@@ -25,7 +25,7 @@ is, not closed) somewhere, even after the `versionchange` event was sent.
 ## Syntax
 
 ```js
-IDBOpenDBRequest.onblocked = function(event) { ... };
+IDBOpenDBRequest.onblocked = function(event) { /* ... */ };
 ```
 
 ## Example

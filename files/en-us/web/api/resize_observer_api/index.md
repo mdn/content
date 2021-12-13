@@ -65,9 +65,7 @@ resizeObserver.observe(document.querySelector('div'));
 
 ## Specifications
 
-| Specification                                                |
-| ------------------------------------------------------------ |
-| [Resize Observer](https://drafts.csswg.org/resize-observer/) |
+{{Specifications("api.ResizeObserver")}}
 
 ## Browser compatibility
 
@@ -75,4 +73,4 @@ resizeObserver.observe(document.querySelector('div'));
 
 ## See also
 
-- [ResizeObserver: It’s Like document.onresize for Elements](https://developers.google.com/web/updates/2016/10/resizeobserver)
+- [ResizeObserver: It’s Like document.onresize for Elements](https://web.dev/resize-observer/)

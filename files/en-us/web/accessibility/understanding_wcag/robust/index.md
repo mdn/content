@@ -93,7 +93,7 @@ This guideline focuses on making content as compatible as possible, not only wit
       <td>
         <p>
           Assistive technology users are made aware of new status messages added
-          to the page. 
+          to the page.
         </p>
       </td>
       <td>

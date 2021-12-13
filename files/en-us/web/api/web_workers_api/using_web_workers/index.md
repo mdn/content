@@ -357,7 +357,7 @@ this.sendQuery = function() {
     }
     worker.postMessage({
         'queryMethod': arguments[0],
-        'queryArguments': Array.prototype.slice.call(arguments, 1)
+        'queryMethodArguments': Array.prototype.slice.call(arguments, 1)
     });
 }
 ```

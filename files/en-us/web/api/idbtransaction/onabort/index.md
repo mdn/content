@@ -23,7 +23,7 @@ transaction is aborted via the {{domxref("IDBTransaction.abort")}} method.
 ## Syntax
 
 ```js
-transaction.onabort = function(event) { ... };
+transaction.onabort = function(event) { /* ... */ };
 ```
 
 ## Example

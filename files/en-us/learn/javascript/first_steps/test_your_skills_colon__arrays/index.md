@@ -50,7 +50,7 @@ Try updating the live code below to recreate the finished example:
 
 ## Arrays 3
 
-For this final array task, we provide you with a starting array, and you will work in somewhat the opposite direction. You need to:
+For this array task, we provide you with a starting array, and you will work in somewhat the opposite direction. You need to:
 
 1.  Remove the last item in the array.
 2.  Add two new names to the end of the array.
@@ -64,6 +64,21 @@ Try updating the live code below to recreate the finished example:
 > **Callout:**
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/arrays3-download.html) to work in your own editor or in an online editor.
+
+## Arrays 4
+
+For this array task, we provide you with a starting array listing the names of some birds.
+
+* Find the index of the `"Eagles"` item, and use that to remove the `"Eagles"` item.
+* Make a new array from this one, called `eBirds`, that contains only birds from the original array whose names begin with the letter "E". Note that {{jsxref("String.prototype.startsWith()", "startsWith()")}} is a great way to check whether a string starts with a given character.
+
+If it works, you should see `"Emus,Egrets"` appear in the page.
+
+{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays4.html", '100%', 400)}}
+
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/arrays4-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

@@ -63,4 +63,4 @@ However, to get new lines, you must also set the {{cssxref("white-space")}} prop
 
 - [CSS Units and Values](/en-US/docs/Web/CSS/CSS_Values_and_Units)
 - [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
-- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)

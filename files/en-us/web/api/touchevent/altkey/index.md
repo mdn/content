@@ -20,7 +20,9 @@ This property is {{readonlyInline}}.
 
 ## Syntax
 
-    var altEnabled = touchEvent.altKey;
+```js
+var altEnabled = touchEvent.altKey;
+```
 
 ### Return value
 

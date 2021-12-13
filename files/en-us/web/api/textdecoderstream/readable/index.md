@@ -15,7 +15,9 @@ The **`readable`** read-only property of the {{domxref("TextDecoderStream")}} in
 
 ## Syntax
 
-    var readable = TextDecoderStream.readable;
+```js
+var readable = TextDecoderStream.readable;
+```
 
 ### Value
 

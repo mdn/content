@@ -100,7 +100,7 @@ Groups and ranges indicate groups and ranges of expression characters.
         <p>
           <strong>Capturing group: </strong>Matches <code><em>x</em></code> and
           remembers the match. For example, <code>/(foo)/</code> matches and
-          remembers "foo" in "foo bar". 
+          remembers "foo" in "foo bar".
         </p>
         <p>
           A regular expression may have multiple capturing groups. In results,

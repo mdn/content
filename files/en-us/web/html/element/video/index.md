@@ -323,11 +323,11 @@ For example, to detect when audio tracks are added to or removed from a `<video>
 ```js
 var elem = document.querySelector("video");
 
-elem.audioTrackList.onaddtrack = function(event) {
+elem.audioTracks.onaddtrack = function(event) {
   trackEditor.addTrack(event.track);
 };
 
-elem.audioTrackList.onremovetrack = function(event) {
+elem.audioTracks.onremovetrack = function(event) {
   trackEditor.removeTrack(event.track);
 };
 ```

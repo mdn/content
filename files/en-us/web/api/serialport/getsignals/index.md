@@ -15,7 +15,9 @@ The **`SerialPort.getSignals()`** method of the {{domxref("SerialPort")}} interf
 
 ## Syntax
 
-    var promise = SerialPort.getSignals();
+```js
+var promise = SerialPort.getSignals();
+```
 
 ### Parameters
 

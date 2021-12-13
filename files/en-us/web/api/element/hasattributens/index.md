@@ -15,7 +15,9 @@ browser-compat: api.Element.hasAttributeNS
 
 ## Syntax
 
-    result = element.hasAttributeNS(namespace,localName)
+```js
+result = element.hasAttributeNS(namespace,localName)
+```
 
 - `result` is the boolean value `true` or `false`.
 - `namespace` is a string specifying the namespace of the attribute.

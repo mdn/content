@@ -14,7 +14,7 @@ ARIA roles provide semantic meaning to content, allowing screen readers and othe
 
 ARIA roles are HTML attributes. They are added to elements using role="*role type*", where *role type* is the name of a role in the ARIA specification.  Some roles require the inclusion of associated ARIA states or properties; others are only valid in association with other roles.
 
-For example, `<ul role="tabpanel">` will be announced as a 'tab panel' by screen readers. However, if the tab panel doesn't have nested tabs, the element with the tabpanel role is not in fact a tab panel and accessibility has actually been negatively impacted. 
+For example, `<ul role="tabpanel">` will be announced as a 'tab panel' by screen readers. However, if the tab panel doesn't have nested tabs, the element with the tabpanel role is not in fact a tab panel and accessibility has actually been negatively impacted.
 
 The [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes) associated with each role are included in the role's pages, with each attribute also having a dedicated page.
 
@@ -26,7 +26,7 @@ There are 6 categories of ARIA roles:
 
 ### 1. Document structure roles
 
-Document Structure roles are used to provide a structural description for a section of content. Most of these roles should no longer be used as browsers now support semantic HTML element with the same meaning. The roles without HTML equivalents, such as presentation, toolbar and tooltip roles, provide information on the document structure to assistive technologies such as screen readers as equivalent native HTML tags are not available. 
+Document Structure roles are used to provide a structural description for a section of content. Most of these roles should no longer be used as browsers now support semantic HTML element with the same meaning. The roles without HTML equivalents, such as presentation, toolbar and tooltip roles, provide information on the document structure to assistive technologies such as screen readers as equivalent native HTML tags are not available.
 
   - [toolbar](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
   - [tooltip](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role)
@@ -40,7 +40,7 @@ For most document structure roles, semantic HTML equivalent elements are availab
 
 ### 2. Widget roles
 
-The various widget role are used to define common interactive patterns. Similar to the document structure roles, some of these roles duplicate the semantics of native HTML elements that are well supported, and should not be used. The difference between the two lists is that, generally, the widget roles require JavaScript interaction and the document structure roles don't necessarily. 
+The various widget role are used to define common interactive patterns. Similar to the document structure roles, some of these roles duplicate the semantics of native HTML elements that are well supported, and should not be used. The difference between the two lists is that, generally, the widget roles require JavaScript interaction and the document structure roles don't necessarily.
 
   - [scrollbar](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
   - [searchbox](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
@@ -75,7 +75,7 @@ Landmark roles provide a way to identify the organization and structure of a web
   - [banner](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role) (document {{HTMLElement('header')}})
   - [complementary](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role) ({{HTMLElement('aside')}})
   - [contentinfo](/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role) (document {{HTMLElement('footer')}})
-  - [form](/en-US/docs/Web/Accessibility/ARIA/Roles/form_role) 
+  - [form](/en-US/docs/Web/Accessibility/ARIA/Roles/form_role)
   - [main](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role) ({{HTMLElement('main')}})
   - [navigation](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role) ({{HTMLElement('nav')}})
   - [region](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role) ({{HTMLElement('section')}})
@@ -95,7 +95,7 @@ Live Region roles are used to define elements with content that will be dynamica
 
 ### 5. Window roles
 
-Window roles define sub-windows to the main document window, within the same window, such as pop up modal dialogs: 
+Window roles define sub-windows to the main document window, within the same window, such as pop up modal dialogs:
 
   - [alertdialog](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
   - [dialog](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
@@ -107,7 +107,7 @@ Abstract roles are only intended for use by browsers to help organize and stream
 
 Avoid using [command](/en-US/docs/Web/Accessibility/ARIA/Roles/command_role), [composite](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role), [input](/en-US/docs/Web/Accessibility/ARIA/Roles/input_role), [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role), [range](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role), [roletype](/en-US/docs/Web/Accessibility/ARIA/Roles/roletype_role), [section](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role), [sectionhead](/en-US/docs/Web/Accessibility/ARIA/Roles/sectionhead_role), [select](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role), [structure](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role), [widget](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role),and [window](/en-US/docs/Web/Accessibility/ARIA/Roles/window_role).
 
-> **Note:** Don't use abstract roles in your sites and applications. They are for use by browsers. They are included for reference only. 
+> **Note:** Don't use abstract roles in your sites and applications. They are for use by browsers. They are included for reference only.
 
 > **Warning:** "Abstract roles are used for the ontology. Authors **MUST NOT** use abstract roles in content." - The WAI-ARIA specification
 

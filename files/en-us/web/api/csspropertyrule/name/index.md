@@ -19,7 +19,9 @@ The read-only **`name`** property of the {{domxref("CSSPropertyRule")}} interfac
 
 ## Syntax
 
-    const name = CSSPropertyRule.name;
+```js
+const name = CSSPropertyRule.name;
+```
 
 ### Value
 

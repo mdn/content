@@ -13,12 +13,14 @@ browser-compat: api.Element.ariaAtomic
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaAtomic`** property of the {{domxref("Element")}} interface reflects the value of the `aria-atomic` attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the {{domxref("aria-relevant")}} attribute.
+The **`ariaAtomic`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the {{domxref("aria-relevant")}} attribute.
 
 ## Syntax
 
-    var ariaAtomic = element.ariaAtomic;
-    element.ariaAtomic = ariaAtomic
+```js
+var ariaAtomic = element.ariaAtomic;
+element.ariaAtomic = ariaAtomic
+```
 
 ### Value
 

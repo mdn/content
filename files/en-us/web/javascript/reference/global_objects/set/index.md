@@ -144,7 +144,7 @@ const intersection = new Set([...mySet1].filter(x => mySet2.has(x)))
 const difference = new Set([...mySet1].filter(x => !mySet2.has(x)))
 
 // Iterate set entries with forEach()
-mySet1.forEach(function(value) {
+mySet2.forEach(function(value) {
   console.log(value)
 })
 

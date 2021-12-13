@@ -97,7 +97,7 @@ All features associated with any and all properties and states must be maintaine
 
 > **Note:**It is a better practice to use an {{HTMLElement("input")}} element with type="text", or a {{HTMLElement("textarea")}} element instead of the ARIA textbox role. When using either semantic element, the ARIA textbox role is not necessary. See [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/).
 
-## Possible effects on user agents and assistive technology 
+## Possible effects on user agents and assistive technology
 
 When the `textbox` role is added to an element, or such an element becomes visible, the user agent should do the following:
 

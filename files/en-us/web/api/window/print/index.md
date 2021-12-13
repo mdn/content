@@ -17,7 +17,9 @@ In most browsers, this method will block while the print dialog is open. However
 
 ## Syntax
 
-    window.print()
+```js
+window.print()
+```
 
 ## Specifications
 

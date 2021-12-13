@@ -28,7 +28,7 @@ The **`NavigationPreloadManager`** interface of the [Service Worker API](/en-US/
 
 ## Examples
 
-#### Feature Detecting and Enabling Navigation Preloading 
+#### Feature Detecting and Enabling Navigation Preloading
 
 ```js
 addEventListener('activate', event => {

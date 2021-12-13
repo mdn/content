@@ -20,7 +20,9 @@ This property is {{readonlyInline}}.
 
 ## Syntax
 
-    var ctrlEnabled = touchEvent.ctrlKey;
+```js
+var ctrlEnabled = touchEvent.ctrlKey;
+```
 
 ### Return value
 

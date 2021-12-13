@@ -250,7 +250,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the `document`.
 - {{domxref("Document.getBoxQuads()")}} {{experimental_inline}}
   - : Returns a list of {{domxref("DOMQuad")}} objects representing the CSS fragments of the node.
-- {{DOMxRef("Document.getElementById")}}
+- {{DOMxRef("Document.getElementById", "Document.getElementById()")}}
   - : Returns an object reference to the identified element.
 - {{DOMxRef("Document.getElementsByClassName()")}}
   - : Returns a list of elements with the given class name.

@@ -91,7 +91,7 @@ animator.requestAnimationFrame =
 };
 ```
 
-The game’s _redraw_ function does all drawing, and the animation callbacks just update state. When you request a redraw outside of animations, the animator’s `activeAnimations` property is queried first to avod mistakenly drawing multiple times in a single animation frame. This gives nice, synchronised animations at a very low cost. Puzzowl isn’t out yet, but here’s a little screencast of it running on a Nexus 5:
+The game’s _redraw_ function does all drawing, and the animation callbacks just update state. When you request a redraw outside of animations, the animator’s `activeAnimations` property is queried first to avoid mistakenly drawing multiple times in a single animation frame. This gives nice, synchronised animations at a very low cost. Puzzowl isn’t out yet, but here’s a little screencast of it running on a Nexus 5:
 
 {{EmbedYouTube("hap4iQTMh70")}}
 

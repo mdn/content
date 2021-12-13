@@ -53,7 +53,7 @@ The links in this section lead to detailed guides explaining how to do a particu
           </li>
           <li>
             A reasonable understanding of the English language (don't worry if
-            your English is not perfect; we can help you with it). 
+            your English is not perfect; we can help you with it).
           </li>
         </ul>
       </td>
@@ -82,7 +82,7 @@ The links in this section lead to detailed guides explaining how to do a particu
           </li>
           <li>
             A reasonable understanding of the English language (don't worry if
-            your English is not perfect; we can help you with it). 
+            your English is not perfect; we can help you with it).
           </li>
         </ul>
       </td>

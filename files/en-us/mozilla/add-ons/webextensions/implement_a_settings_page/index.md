@@ -9,11 +9,10 @@ tags:
 ---
 {{AddonSidebar}}
 
-> **Note:** The following example may not work, since the storage API doesn't work with a temporary Addon ID, see also https\://bugzil.la/1323228.
-
 A settings page gives users a way to see and change settings (sometimes also called "preferences" or "options") for the extension.
 
-With WebExtension APIs, settings are generally stored using the [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API. Implementing a settings page is a three-step process:
+With WebExtension APIs, settings are generally stored using the [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API.
+Implementing a settings page is a three-step process:
 
 - Write an HTML file that displays settings and lets the user change them.
 - Write a script, included from the HTML file, that populates the settings page from storage and updates stored settings when the user changes them.
@@ -54,9 +53,7 @@ document.body.style.border = "10px solid blue";
 
 This just adds a blue border to the page.
 
-Now [install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) and test it — open up any web page you like:
-
-{{EmbedYouTube("E-WUhihF8fw")}}
+Now [install](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) and test the extension.
 
 ## Adding settings
 
@@ -128,7 +125,7 @@ Next, because we've promised to provide `options.html`, let's create it. Create 
 
 This defines a {{htmlelement("form")}} with a labeled text {{htmlelement("input")}} and a submit {{htmlelement("button")}}. It also includes a script called `options.js`.
 
-Create `options.js`, again in the `settings` directory, and give it the following contents:
+Create `options.js`, again in the `settings` directory, and give it the following contents:
 
 ```js
 function saveOptions(e) {
@@ -159,23 +156,15 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 This does two things:
 
 - When the document has loaded, it fetches the value of `"color"` from storage using [`storage.sync.get()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get). If the value isn't set, it uses the default `"blue"`. This retrieves the values from the `sync` storage area.
-- When the user submits the form by clicking
-
-  <kbd><strong>Save</strong></kbd>
-
-  , it stores the value of the textbox using [`storage.sync.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set). This saves the value to the `sync` storage area.
+- When the user submits the form by clicking Save, it stores the value of the textbox using [`storage.sync.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set). This saves the value to the `sync` storage area.
 
 > **Note:** Specifying a separate `.js` file is required. You cannot use inline JavaScript.
 
 You could store the settings values in local storage instead if you feel that local storage is preferable for your extension.
 
-> **Note:** The implementation of `storage.sync` in Firefox relies on the Add-on ID. If you use `storage.sync`, you must set an ID for your extension using the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in `manifest.json`, as shown in the sample manifest above.
+> **Note:** The implementation of `storage.sync` in Firefox relies on the Add-on ID. If you use `storage.sync`, you must set an ID for your extension using the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in `manifest.json`, as shown in the example manifest above. See {{bug(1323228)}} for related information.
 
-Finally, update `borderify.js` to read the border color from storage:
-
-> **Warning:** Due to a bug in [`browser.storage.local.get()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) in Firefox versions prior to 52, the following code will not function.
->
-> To make it function in Firefox versions below 52, the two occurrences of `item.color` in `onGot()` must be changed to `item[0].color`.
+Finally, update `borderify.js` to read the border color from storage:
 
 ```js
  function onError(error) {
@@ -206,12 +195,9 @@ Now:
 
 - [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on)
 - load a web page
-- open the settings page and change the border color
+- visit "`about:addons`" to open the settings and click the Preferences button next to the extension's entry and change the border color.
 - reload the web page to see the difference.
 
-In Firefox you can access the settings page by visiting about:addons and clicking the <kbd><strong>Preferences</strong></kbd> button next to the extension's entry.
-
-{{EmbedYouTube("ECt9cbWh1qs")}}
 
 ## Learn more
 

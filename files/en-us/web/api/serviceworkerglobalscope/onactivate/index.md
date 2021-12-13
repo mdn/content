@@ -19,7 +19,7 @@ The **onactivate** property of the {{domxref("ServiceWorkerGlobalScope")}} inter
 ## Syntax
 
 ```js
-ServiceWorkerGlobalScope.onactivate = function(event) { ... };
+ServiceWorkerGlobalScope.onactivate = function(event) { /* ... */ };
 ```
 
 ## Examples

@@ -24,7 +24,9 @@ Although this property is read-only, it will not throw if it is modified (even i
 
 ## Syntax
 
-    var isFullScreen = document.fullscreen;
+```js
+var isFullScreen = document.fullscreen;
+```
 
 ### Value
 

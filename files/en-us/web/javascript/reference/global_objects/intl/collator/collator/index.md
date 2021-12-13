@@ -50,8 +50,8 @@ new Intl.Collator(locales, options)
           - `compat`
           - `dict`
           - `direct`
-          - `ducet` 
-          - `eor` 
+          - `ducet`
+          - `eor`
           - `gb2312`
           - `phonebk`(only supported in German)
           - `phonetic`
@@ -141,8 +141,8 @@ new Intl.Collator(locales, options)
           - `compat`
           - `dict`
           - `direct`
-          - `ducet` 
-          - `eor` 
+          - `ducet`
+          - `eor`
           - `gb2312`
           - `phonebk`(only supported in German)
           - `phonetic`
