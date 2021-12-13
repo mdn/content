@@ -66,11 +66,11 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 - {{domxref("SourceBuffer.error_event", "error")}}
   - : Fired whenever an error occurs during {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.appendStream()")}}. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`.
 - {{domxref("SourceBuffer.update_event", "update")}}
-  - : Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} method or the {{domxref("SourceBuffer.remove()")}} completes. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`. This event is fired before `onupdateend`.
+  - : Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} completes. {{domxref("SourceBuffer.updating")}} changes from `true` to `false`. This event is fired before `updateend`.
 - {{domxref("SourceBuffer.updateend_event", "updateend")}}
-  - : Fired whenever {{domxref("SourceBuffer.appendBuffer()")}} method or the {{domxref("SourceBuffer.remove()")}} has ended. This event is fired after `onupdate`.
+  - : Fired after {{domxref("SourceBuffer.appendBuffer()")}} or {{domxref("SourceBuffer.remove()")}} ends. This event is fired after `update`.
 - {{domxref("SourceBuffer.updatestart_event", "updatestart")}}
-  - : Fired whenever the value of {{domxref("SourceBuffer.updating")}} transitions from `false` to `true`.
+  - : Fired whenever the value of {{domxref("SourceBuffer.updating")}} changes from `false` to `true`.
 
 ## Examples
 
