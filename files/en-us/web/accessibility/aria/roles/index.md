@@ -75,7 +75,7 @@ Landmark roles provide a way to identify the organization and structure of a web
   - [banner](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role) (document {{HTMLElement('header')}})
   - [complementary](/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role) ({{HTMLElement('aside')}})
   - [contentinfo](/en-US/docs/Web/Accessibility/ARIA/Roles/contentinfo_role) (document {{HTMLElement('footer')}})
-  - [form](/en-US/docs/Web/Accessibility/ARIA/Roles/form_role)
+  - [form](/en-US/docs/Web/Accessibility/ARIA/Roles/form_role) ({{HTMLElement('form')}})
   - [main](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role) ({{HTMLElement('main')}})
   - [navigation](/en-US/docs/Web/Accessibility/ARIA/Roles/navigation_role) ({{HTMLElement('nav')}})
   - [region](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role) ({{HTMLElement('section')}})
