@@ -2,6 +2,9 @@
 title: TextDecoder.ignoreBOM
 slug: Web/API/TextDecoder/ignoreBOM
 tags:
+  - API
+  - TextDecoder
+  - ignoreBOM
   - Property
   - Reference
 browser-compat: api.TextDecoder.ignoreBOM
