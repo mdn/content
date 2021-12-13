@@ -80564,22 +80564,22 @@
       "jpmedley"
     ]
   },
-  "Web/API/USB/getDevices": {
-    "modified": "2020-10-15T22:05:24.187Z",
-    "contributors": [
-      "bershanskiy",
-      "jpmedley"
-    ]
-  },
-  "Web/API/USB/onconnect": {
+  "Web/API/USB/connect_event": {
     "modified": "2020-10-15T22:05:25.398Z",
     "contributors": [
       "bershanskiy",
       "jpmedley"
     ]
   },
-  "Web/API/USB/ondisconnect": {
+  "Web/API/USB/disconnect_event": {
     "modified": "2020-10-15T22:05:24.325Z",
+    "contributors": [
+      "bershanskiy",
+      "jpmedley"
+    ]
+  },
+  "Web/API/USB/getDevices": {
+    "modified": "2020-10-15T22:05:24.187Z",
     "contributors": [
       "bershanskiy",
       "jpmedley"
