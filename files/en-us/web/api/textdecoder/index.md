@@ -63,7 +63,7 @@ _The `TextDecoder` interface doesn't inherit any properties._
 - {{DOMxRef("TextDecoder.prototype.fatal")}}{{ReadOnlyInline}}
   - : A {{jsxref('Boolean')}} indicating whether the error mode is fatal.
 - {{DOMxRef("TextDecoder.prototype.ignoreBOM")}}{{ReadOnlyInline}}
-  - : A {{jsxref('Boolean')}} indicating whether the byte order marker is ignored.
+  - : A {{jsxref('Boolean')}} indicating whether the [byte order mark](https://www.w3.org/International/questions/qa-byte-order-mark) is ignored.
 
 ## Methods
 

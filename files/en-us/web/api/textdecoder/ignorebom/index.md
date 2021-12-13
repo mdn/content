@@ -8,7 +8,7 @@ browser-compat: api.TextDecoder.ignoreBOM
 ---
 {{DefaultAPISidebar("")}}
 
-The **`ignoreBOM`** property of the {{domxref("TextDecoder")}} interface is a {{jsxref('Boolean')}} indicating whether the byte order marker is ignored.
+The **`ignoreBOM`** property of the {{domxref("TextDecoder")}} interface is a {{jsxref('Boolean')}} indicating whether the [byte order mark](https://www.w3.org/International/questions/qa-byte-order-mark) is ignored.
 
 ## Specifications
 
