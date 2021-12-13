@@ -8,7 +8,7 @@ tags:
   - display_override
 browser-compat: html.manifest.display_override
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{Non-standard_Header}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
   <tbody>
