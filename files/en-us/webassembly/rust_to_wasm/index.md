@@ -222,7 +222,7 @@ Let’s start by creating a file named `index.html` in the root of the project, 
         .then(() => {
           greet("WebAssembly")
         });
-      </script>
+    </script>
   </body>
 </html>
 ```
