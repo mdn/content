@@ -222,7 +222,7 @@ Let’s start by creating a file named `index.html` in the root of the project, 
         .then(() => {
           greet("WebAssembly")
         });
-      </script>
+    </script>
   </body>
 </html>
 ```
@@ -343,4 +343,4 @@ This starts a web server. Load <http://localhost:8080> and an alert box appears 
 
 This is the end of our tutorial; we hope you've found it useful.
 
-There's lots of exciting work going on in this space; if you'd like to help make it even better, check out [the Rust WebAssembly Working Group](http://fitzgeraldnick.com/2018/02/27/wasm-domain-working-group.html).
+There's lots of exciting work going on in this space; if you'd like to help make it even better, check out [the Rust WebAssembly Working Group](https://fitzgeraldnick.com/2018/02/27/wasm-domain-working-group.html).
