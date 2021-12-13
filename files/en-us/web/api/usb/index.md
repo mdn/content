@@ -34,9 +34,9 @@ None.
 ## Events
 
 - {{domxref("USB.connect_event", "connect")}}
-  - : An event fired whenever a previously paired device is connected.
+  - : Fired whenever a previously paired device is connected.
 - {{domxref("USB.disconnect_event", "disconnect")}}
-  - : An event fired whenever a paired device is disconnected.
+  - : Fired whenever a paired device is disconnected.
 
 
 ## Specifications
