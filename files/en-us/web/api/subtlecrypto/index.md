@@ -275,6 +275,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
 ## See also
 
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
+- [Non-cryptographic uses of SubtleCrypto](/en-US/docs/Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto)
 - [Web security](/en-US/docs/Web/Security)
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)
 - {{domxref("Crypto")}} and {{domxref("Crypto.subtle")}}.
