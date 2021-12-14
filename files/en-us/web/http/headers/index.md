@@ -81,7 +81,7 @@ The different categories of client hints are listed below.
 
 ### User agent client hints
 
-The UA client hints are request headers that provide information about the user agent and the platform/architecture on which it is running:
+The [UA client hints](/en-US/docs/Glossary/Client_hints#user-agent_client_hints) are request headers that provide information about the user agent and the platform/architecture on which it is running:
 
 - {{HTTPHeader("Sec-CH-UA")}} {{experimental_inline}}
   - : User agent's branding and version.
