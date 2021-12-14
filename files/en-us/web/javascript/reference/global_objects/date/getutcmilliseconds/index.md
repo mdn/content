@@ -30,9 +30,6 @@ the milliseconds portion of the given `Date` object according to universal time
 Otherwise, [`NaN`](/en-us/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN)
 if the `Date` object doesn’t represent a valid date.
 
-This method is a companion to the other UTC based methods that give
-hour portion ([`getUTCHours`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCHours)),
-minute portion ([`getUTCMinutes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes)), etc.; this method gives milliseconds portion.
 
 Not to be confused with Unix epoch time. To get the total milliseconds since 1970/01/01,
 use the [`Date.getTime()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) method.
