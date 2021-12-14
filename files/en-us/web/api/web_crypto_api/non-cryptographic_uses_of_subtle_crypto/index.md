@@ -29,7 +29,7 @@ This technique is often used by sites that let you download executables, to ensu
 
 1. Note down the file's name and the SHA256 checksum provided by the website.
 2. Download the executable.
-3. Run `sha256sum /path/to/the/file` to generate your own code.
+3. Run `sha256sum /path/to/the/file` in the terminal to generate your own code. If you are using a Mac you may have to [install it seperately](https://unix.stackexchange.com/questions/426837/no-sha256sum-in-macos).
 4. Compare the two strings - they should match unless the file has been compromised.
 
 ![Examples of SHA256 from the download for the software "Blender". These look like 32 hexadecimal numbers followed by a file name like "blender.zip"](blender-sha256-example.png)
@@ -54,19 +54,34 @@ Next we use the SubtleCrypto interface to process them. This works by:
 ```js
 const output = document.querySelector('output');
 const file = document.getElementById('file');
+
+// Run the hashing function when the user selects one or more file
 file.addEventListener('change', hashTheseFiles);
 
+// The digest function is asynchronous, it returns a promise, we use the async/await syntax to
+// simplify the code.
 async function fileHash(file) {
   const arrayBuffer = await file.arrayBuffer();
+
+  // Use the subtle crypto API to perform a SHA256 Sum of the file's Array Buffer
+  // The resulting hash is stored in an array buffer
 	const hashAsArrayBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
+
+  // To display it as as a string we will get the hexadecimal value of each byte of the array buffer
+  // This gets us an array where each byte of the array buffer becomes one item in the array
   const uint8ViewOfHash = new Uint8Array(hashAsArrayBuffer);
+  // We then convert it to a regular array so we can convert each item to hexadecimal strings
+  // Where to characters of 0-9 or a-f represent a number between 0 and 16, containing 4 bits of information, so 2 of them is 8 bits (1 byte). 
   const hashAsString = Array.from(uint8ViewOfHash).map(b => b.toString(16).padStart(2, '0')).join('');
 	return hashAsString;
 }
 
 async function hashTheseFiles(e) {
   let outHTML = ''
+  // iterate ove reach file in file select input
   for (const file of this.files) {
+
+    // calculate it's hash and list it in the output element.
     outHTML += `${file.name}    ${await fileHash(file)}`
   }
   output.innerHTML = outHTML;
@@ -130,14 +145,29 @@ file.addEventListener('change', hashTheseFiles);
 
 async function fileHash(file) {
   const arrayBuffer = await file.arrayBuffer();
+
+  // Git prepends the null terminated text 'blob 1234' where 1234 represents the file size
+  // before hashing so we are going to reproduce that
+
+  // first we work out the Byte length of the file
   const uint8View = new Uint8Array(arrayBuffer);
   const length = uint8View.length;
+
+  // Git in the terminal uses UTF8 for it's strings; the Web uses UTF16. We need to use an encoder because
+  // different binary representations of the letters in our message will result in different hashes
   const encoder = new TextEncoder();
+  // Null-terminated means the string ends in the null character which in JavaScript is '\0'
   const view = encoder.encode('blob ' + length + '\0');
+
+  // We then combine the 2 Array Buffers together into a new Array Buffer.
   const newBlob = new Blob([view.buffer, arrayBuffer], {
       type: 'text/plain'
   });
-  return hashToString(await crypto.subtle.digest('SHA-1', await newBlob.arrayBuffer()));
+  const arrayBufferToHash = await newBlob.arrayBuffer();
+
+  // Finally we perform the hash this time as SHA1 which is what Git uses.
+  // Then we return it as a string. to be displayed.
+  return hashToString(await crypto.subtle.digest('SHA-1', arrayBufferToHash));
 }
 
 function hashToString(arrayBuffer) {
@@ -145,6 +175,7 @@ function hashToString(arrayBuffer) {
   return Array.from(uint8View).map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
+// like before we iterate over the files
 async function hashTheseFiles(e) {
   let outHTML = ''
   for (const file of this.files) {
