@@ -120,7 +120,7 @@ The differences in the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensio
 2.  **Extension features.**
     For example, at the time of writing, Chrome did not support the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#browser_compatibility) key.
 3.  **Key optionality.**
-    At the time of writing, except for Safari, only `"manifest_version"`, `"version"`, and `"name"` are mandatory keys. Safari has a more comprehensive set of mandatory requirements, such as setting `"background"` to `false` for iOS.
+    At the time of writing, generally, only `"manifest_version"`, `"version"`, and `"name"` are mandatory keys.
 
 Browser compatibility information is included with each key in the Mozilla Developer Network [`manifest.json` key reference pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
