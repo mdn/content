@@ -10,7 +10,7 @@ tags:
   - Reference
 ---
 
-Used in ARIA live regions, the global `aria-relevant` attribute indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified. 
+Used in ARIA live regions, the global `aria-relevant` attribute indicates what notifications the user agent will trigger when the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree) within a live region is modified. 
 
 ## Description
 
