@@ -1,11 +1,12 @@
 ---
-title: display
-slug: Web/Manifest/display
+title: display_override
+slug: Web/Manifest/display_override
 tags:
   - Manifest
   - Web
   - display
-browser-compat: html.manifest.display
+  - display_override
+browser-compat: html.manifest.display_override
 ---
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
@@ -13,7 +14,7 @@ browser-compat: html.manifest.display
   <tbody>
     <tr>
       <th scope="row">Type</th>
-      <td><code>String</code></td>
+      <td><code>Array</code></td>
     </tr>
     <tr>
       <th scope="row">Mandatory</th>
@@ -22,15 +23,13 @@ browser-compat: html.manifest.display
   </tbody>
 </table>
 
-The `display` member is a string that determines the developers’ preferred display mode for the website. The display mode changes how much of browser UI is shown to the user and can range from `browser` (when the full browser window is shown) to `fullscreen` (when the app is full-screened).
+The [`display`](/en-US/docs/Web/Manifest/display) member is used to determine the developer's preferred display mode for a website. It follows a process where the browser falls back to the next display mode if the requested one is not supported. In some advanced use cases, this fallback process might not be enough.
 
-> **Note:** The browser follows a pre-defined fallback chain if it does not support a given mode: `fullscreen` → `standalone` → `minimal-ui` → `browser`, with `browser` being the default value if the `display` member is not specified.
-
-> **Note:** You can selectively apply CSS to your app based on the display mode, using the {{cssxref("@media/display-mode", "display-mode")}} media feature. This can be used to provide a consistent user experience between launching a site from an URL and launching it from a desktop icon.
+The `display_override` member solves this by letting the developer provide a sequence of display modes that the browser will consider before using the `display` member. Its value is an array of display modes that are considered in-order, and the first supported display mode is applied.
 
 ## Values
 
-The possible values are:
+Display override objects are display-mode strings, the possible values are:
 
 <table class="fullwidth-table standard-table">
   <thead>
@@ -82,8 +81,13 @@ The possible values are:
 
 ## Example
 
+In the example below, the browser will consider the following display-mode fallback chain in this order: `fullscreen` → `minimal-ui` → `standalone`.
+
 ```json
-"display": "standalone"
+{
+  "display_override": ["fullscreen", "minimal-ui"],
+  "display": "standalone",
+}
 ```
 
 ## Specifications
@@ -93,3 +97,7 @@ The possible values are:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Preparing for the display modes of tomorrow](https://web.dev/display-override/)
