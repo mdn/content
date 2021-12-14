@@ -29,7 +29,7 @@ The `display_override` member solves this by letting the developer provide a seq
 
 ## Values
 
-Display override objects are display mode strings, the possible values are:
+Display override objects are display-mode strings, the possible values are:
 
 <table class="fullwidth-table standard-table">
   <thead>
