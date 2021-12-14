@@ -13,6 +13,8 @@ browser-compat: css.properties.tab-size
 
 The **`tab-size`** CSS property is used to customize the width of tab characters (U+0009).
 
+{{EmbedInteractiveExample("pages/css/tab-size.html")}}
+
 ## Syntax
 
 ```css
