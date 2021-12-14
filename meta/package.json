@@ -1,0 +1,15 @@
+{
+  "name": "@mdn/meta",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "hugo",
+    "start": "hugo server"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "hugo-extended": "^0.89.4",
+    "postcss": "^8.4.4",
+    "postcss-cli": "^9.0.2"
+  }
+}

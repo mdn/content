@@ -1,0 +1,93 @@
+baseURL = "/"
+title = "MDN Web Docs for Contributors"
+
+enableRobotsTXT = true
+
+# Hugo allows theme composition (and inheritance). The precedence is from left to right.
+theme = ["docsy"]
+
+# Will give values to .Lastmod etc.
+enableGitInfo = true
+
+# Language settings
+contentDir = "content/en"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+# Useful when translating.
+enableMissingTranslationPlaceholders = true
+
+# Highlighting config
+pygmentsCodeFences = true
+pygmentsUseClasses = false
+# Use the new Chroma Go highlighter in Hugo.
+pygmentsUseClassic = false
+#pygmentsOptions = "linenos=table"
+# See https://help.farbox.com/pygments.html
+pygmentsStyle = "tango"
+
+disableKinds = ["taxonomy", "taxonomyTerm", "tags", "tag"]
+[taxonomies]
+  # tag = 'tags'
+
+# Configure how URLs look like per section.
+[permalinks]
+blog = "/:section/:year/:month/:day/:slug/"
+
+## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
+[blackfriday]
+plainIDAnchors = true
+hrefTargetBlank = true
+angledQuotes = false
+latexDashes = true
+
+[imaging]
+resampleFilter = "CatmullRom"
+quality = 75
+anchor = "smart"
+
+[languages]
+[languages.en]
+title = "MDN Web Docs for Contributors"
+description = "Documentation for documenters"
+languageName ="English"
+weight = 1
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+      # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
+      style = "tango"
+      # Uncomment if you want your chosen highlight style used for code blocks without a specified language
+      # guessSyntax = "true"
+
+[params]
+copyright = "Mozilla and contributors"
+privacy_policy = "https://www.mozilla.org/en-US/privacy/websites/"
+github_repo = "https://github.com/mdn/content"
+github_branch = "main"
+prism_syntax_highlighting = false
+
+# [[params.links.user]]
+#         name = "Stack Overflow"
+#         url = "https://example.org/stack"
+#         icon = "fab fa-stack-overflow"
+#         desc = "Practical questions and curated answers"
+# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+# [[params.links.developer]]
+#         name = "GitHub"
+#         url = "https://github.com/google/docsy"
+#         icon = "fab fa-github"
+#         desc = "Development takes place here!"
+# [[params.links.developer]]
+#         name = "Slack"
+#         url = "https://example.org/slack"
+#         icon = "fab fa-slack"
+#         desc = "Chat with other project developers"
+# [[params.links.developer]]
+#         name = "Developer mailing list"
+#         url = "https://example.org/mail"
+#         icon = "fa fa-envelope"
+#         desc = "Discuss development issues around the project"
