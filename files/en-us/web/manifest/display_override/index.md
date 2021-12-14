@@ -81,7 +81,7 @@ Display override objects are display-mode strings, the possible values are:
 
 ## Example
 
-In the example below, the browser will consider the following display mode fallback chain in this order: `fullscreen` → `minimal-ui` → `standalone`.
+In the example below, the browser will consider the following display-mode fallback chain in this order: `fullscreen` → `minimal-ui` → `standalone`.
 
 ```json
 {
