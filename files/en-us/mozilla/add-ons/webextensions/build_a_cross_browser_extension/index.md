@@ -93,7 +93,7 @@ The differences in the API functions offered in each of the main browsers fall i
 3.  **Proprietary functions, supporting browser-specific features.**
     For example, at the time of writing, containers was a Firefox-specific feature supported by the {{WebExtAPIRef("contextualIdentities")}} function.
 
-Details about the support for the extension APIs among the main browsers, Firefox for Android, and Safari on iOS can be found on the Mozilla Developer Network [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) page. Browser compatibility information is also included with each function and its methods, types, and events in the Mozilla Developer Network [JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) reference pages.
+Details about the support for the extension APIs among the main browsers and Firefox for Android and Safari on iOS can be found on the Mozilla Developer Network [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) page. Browser compatibility information is also included with each function and its methods, types, and events in the Mozilla Developer Network [JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) reference pages.
 
 #### Handling API differences
 
@@ -152,13 +152,13 @@ This table summarizes the approach and features of each store:
   </thead>
   <tbody>
     <tr>
-    <tr>
       <th><p>Chrome</p></th>
       <td><p>Yes</p></td>
       <td><p>Yes</p></td>
       <td><p>Automatic, less than an hour</p></td>
       <td><p>Yes</p></td>
     </tr>
+    <tr>
       <th><p>Edge</p></th>
       <td><p>No</p></td>
       <td><p>No</p></td>
