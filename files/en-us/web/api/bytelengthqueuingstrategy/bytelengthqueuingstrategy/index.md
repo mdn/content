@@ -19,15 +19,17 @@ instance.
 ## Syntax
 
 ```js
-var byteLengthQueuingStrategy = new ByteLengthQueuingStrategy({highWaterMark});
+var byteLengthQueuingStrategy = new ByteLengthQueuingStrategy(QueuingStrategy);
 ```
 
 ### Parameters
 
-- {highWaterMark}
-  - : An object containing a `highWaterMark` property. This is a non-negative
-    integer defining the total number of chunks that can be contained in the internal
-    queue before backpressure is applied.
+- `QueuingStrategy`
+  - : An object with the following properties:
+    - highWaterMark
+      - : A non-negative integer defining the total number of chunks that can be contained in the internal queue before backpressure is applied.
+    - size
+      - : A reference to an script- or app-defined function that computes and returns the finite non-negative size of the given chunk value. Typically, this function just returns `chucnk.length`. For readable byte streams, this function is not used. This function must not cause any side effects.
 
 ### Return value
 

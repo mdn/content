@@ -5,7 +5,7 @@ tags:
   - API
   - ByteLengthQueuingStrategy
   - Experimental
-  - Method
+  - Property
   - Reference
   - Streams
   - size
@@ -13,9 +13,7 @@ browser-compat: api.ByteLengthQueuingStrategy.size
 ---
 {{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-The **`size()`** method of the
-{{domxref("ByteLengthQueuingStrategy")}} interface returns the given chunk’s
-`byteLength` property.
+The **`size`** property of the {{domxref("ByteLengthQueuingStrategy")}} interface a reference to the `size` function passed in the{{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} constructor.
 
 ## Syntax
 

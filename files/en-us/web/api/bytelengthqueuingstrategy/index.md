@@ -12,7 +12,7 @@ browser-compat: api.ByteLengthQueuingStrategy
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
-The **`ByteLengthQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a built-in byte length queuing strategy that can be used when constructing streams.
+The **`ByteLengthQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) provides a built-in byte length queuing strategy that can be used when constructing streams.
 
 ## Constructor
 
@@ -21,12 +21,15 @@ The **`ByteLengthQueuingStrategy`** interface of the [Streams API](/en-US/docs/W
 
 ## Properties
 
-None.
+- {{domxref("ByteLengthQueuingStrategy.size")}}
+  - : Returns a reference to the `size` function passed in the object's constructor.
+
+- {{comxref("ByteLengthQueuingStrategy.highWaterMark")}}
+  - : Returns the total number of chunks that can be in the streaming queue before backpressure will be applied. This is the value suplied by the `highWaterMark` property passed to the object's constructor.
 
 ## Methods
 
-- {{domxref("ByteLengthQueuingStrategy.size()")}}
-  - : Returns the given chunk’s `byteLength` property.
+None.
 
 ## Examples
 
