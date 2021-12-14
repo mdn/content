@@ -155,13 +155,13 @@ Examples:
 
 #### Event pages
 
-Each event handler property you create will have a corresponding event page, describing the event that causes the handler to fire, documented on a subpage of [https://developer.mozilla.org/en-US/docs/Web/Events](/en-US/docs/Web/Events). Each page describes the purpose of the event and shows what its syntax looks like, usage examples, browser compatibility information, etc. Its slug and title is the name of the event.
+Events are documented as sub pages of their target interfaces, using the slug _eventname_\_event with the title set to `Interface eventName event`. The event handler `onEventName` is represented on the `eventName_event` page. Don't create pages for `on` event handler properties. Mention both ways to access the event on the `eventName_event` page.
 
 Example:
 
-- Title: _statechange_
-- Slug: _statechange_
-- URL: [https://developer.mozilla.org/en-US/docs/Web/Events/statechange](/en-US/docs/Web/API/RTCIceTransport/statechange_event)
+- Title: XRSession: end event
+- Slug: end_event
+- URL: [https://developer.mozilla.org/en-US/docs/Web/XRSession/end_event](/en-US/docs/Web/API/XRSession/end_event)
 
 #### Concept/guide pages
 
