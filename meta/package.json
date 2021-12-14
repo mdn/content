@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "hugo",
-    "start": "hugo server"
+    "start": "hugo server --baseURL http://127.0.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
