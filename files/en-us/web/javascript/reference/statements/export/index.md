@@ -79,7 +79,7 @@ export { myFunction, myVariable };
 // export individual features (can export var, let,
 // const, function, class)
 export let myVariable = Math.sqrt(2);
-export function myFunction() { ... };
+export function myFunction() { /* ... */ };
 ```
 
 Default exports:
@@ -89,7 +89,7 @@ Default exports:
 export { myFunction as default };
 
 // export individual features as default
-export default function () { ... }
+export default function () { /* ... */ }
 export default class { .. }
 
 // each export overwrites the previous one

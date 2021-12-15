@@ -44,14 +44,6 @@ The `loadedmetadata` event is fired when the metadata has been loaded.
   </tbody>
 </table>
 
-## Additional Properties
-
-| Property                                        | Type | Description                                      |
-| ----------------------------------------------- | ---- | ------------------------------------------------ |
-| `mozChannels` {{readonlyInline}}          | int  | The number of channels.                          |
-| `mozSampleRate` {{readonlyInline}}        | int  | The sample rate per second.                      |
-| `mozFrameBufferLength` {{readonlyInline}} | int  | The number of samples collected in all channels. |
-
 ## Examples
 
 These examples add an event listener for the HTMLMediaElement's `loadedmetadata` event, then post a message when that event handler has reacted to the event firing.

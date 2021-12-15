@@ -10,7 +10,7 @@ tags:
 ---
 
 
-The `radio` role is one of a group of checkable buttons, in a `radiogroup`, where no more than one of the buttons can be checked at a time. 
+The `radio` role is one of a group of checkable buttons, in a `radiogroup`, where no more than one of the buttons can be checked at a time.
 
 ## Description
 
@@ -36,7 +36,7 @@ A radio element is a checkable input in a group of role elements, of which only 
 </div>
 ```
 
-The `role` attribute only adds semantics; all of the functionality that comes natively with the [HTML radio](/en-US/docs/Web/HTML/Element/input/radio) needs to be added with JavaScript and the HTML [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute. 
+The `role` attribute only adds semantics; all of the functionality that comes natively with the [HTML radio](/en-US/docs/Web/HTML/Element/input/radio) needs to be added with JavaScript and the HTML [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute.
 
 > **Note:** The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML radio](/en-US/docs/Web/HTML/Element/input/radio) of [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) (with an associated {{HTMLElement('label')}}, which natively provides all the functionality required:
 
@@ -65,7 +65,7 @@ The native HTML radio ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/inp
 The radio role should alwasy be nested with other radios in a `radiogroup`. If it is not possible to nest the radio button within a radio group, use the `id` of the nongrouped radio in a space separated list of values as the value of the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute on the `radiogroup` element to indicate the relationship of the `radiogroup` to its radio members.
 
 
-As `radio` is an interactive control; it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a radio is the <kbd>Space</kbd> key. Use JavaScript to toggle the `aria-checked` attribute to `true` when a radio becomes checked while ensuing that all the other radio roles in the group are set to  `aria-checked="false"`. 
+As `radio` is an interactive control; it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a radio is the <kbd>Space</kbd> key. Use JavaScript to toggle the `aria-checked` attribute to `true` when a radio becomes checked while ensuing that all the other radio roles in the group are set to  `aria-checked="false"`.
 
 If any of the radio roles in a group has `aria-required="true"` set, it is as if all of the radios in the group had the attribute making the selection of one of the radios in the radiogroup being required to be valid;  though not necessarily the one that has the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute set.
 
@@ -96,17 +96,17 @@ If elements providing additional information about either the radio group or eac
 
 ## Keyboard interactions
 
-  - <kbd>Tab</kbd> + <kbd>Shift</kbd> 
+  - <kbd>Tab</kbd> + <kbd>Shift</kbd>
     - : Move focus into and out of the radio group. When focus moves into a radio group. If a radio button is checked, focus is set on the checked button. If none of the radio buttons are checked, focus is set on the first radio button in the group.
 
 | - <kbd>Space</kbd>
     - : Checks the radio if not already checked. Unchecks all the others in the radiogroup. |
   
-  - <kbd>Right Arrow</kbd> and <kbd>Down Arrow</kbd> 
+  - <kbd>Right Arrow</kbd> and <kbd>Down Arrow</kbd>
     - : Move focus to the next radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the last button, focus moves to the first button.
 
 
-  - <kbd>Left Arrow/kbd> and <kbd>Up Arrow</kbd> 
+  - <kbd>Left Arrow/kbd> and <kbd>Up Arrow</kbd>
     - : Move focus to the previous radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the first button, focus moves to the last button.
 
 ### Radios in a toolbar

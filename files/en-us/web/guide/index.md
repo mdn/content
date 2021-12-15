@@ -50,11 +50,6 @@ There are a number of guides within MDN docs. These articles aim to add addition
 - [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
   - : The web platform provides different methods of parsing and serializing XML, each with its pros and cons.
 
-## Internationalization
-
-- [Unicode Bidirectional Text Algorithm (BiDi)](/en-US/docs/Web/Guide/Unicode_Bidrectional_Text_Algorithm)
-  - : The Unicode® BiDi algorithm is part of the Unicode text standard. It describes how the browser should order characters while rendering Unicode text. This guide covers the algorithm in general and how it applies to content you create—especially when you build properly localized and internationalized content.
-
 ## Performance
 
 - [Optimization and performance](/en-US/docs/Web/Guide/Performance)

@@ -15,7 +15,9 @@ The **`matchAll()`** method of the {{domxref("BackgroundFetchRegistration")}} in
 
 ## Syntax
 
-    let records = BackgroundFetchRegistration.matchAll(request,options);
+```js
+let records = BackgroundFetchRegistration.matchAll(request,options);
+```
 
 ### Parameters
 

@@ -12,7 +12,7 @@ tags:
   - ARIA log
 ---
 
-The `log` role is used to identify an element that creates a [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) where new information is added in a meaningful order and old information may disappear. 
+The `log` role is used to identify an element that creates a [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) where new information is added in a meaningful order and old information may disappear.
 
 ## Description
 

@@ -20,7 +20,7 @@ Elements in HTML have **attributes**; these are additional values that configure
 
 ## Global event handlers
 
-In addition to the attributes listed in the table below, the [`GlobalEventHandlers`](/en-US/docs/Web/API/GlobalEventHandlers) article lists global event handlers — such as [`onclick`](/en-US/docs/Web/API/GlobalEventHandlers/onclick) — than can also be specified as [content attributes](#content_versus_idl_attributes) on all elements.
+In addition to the attributes listed in the table below, the [`GlobalEventHandlers`](/en-US/docs/Web/API/GlobalEventHandlers) article lists global event handlers — such as [`onclick`](/en-US/docs/Web/API/GlobalEventHandlers/onclick) — that can also be specified as [content attributes](#content_versus_idl_attributes) on all elements.
 
 ## Attribute list
 

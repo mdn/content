@@ -25,13 +25,13 @@ The event handler takes one parameter, an error [Event](/en-US/docs/Web/API/Elem
 ## Syntax
 
 ```js
-request.onerror = function(event) { ... };
+request.onerror = function(event) { /* ... */ };
 ```
 
 ## Example
 
 The following example requests a given record title, `onsuccess` gets the
-associated record from the {{domxref("IDBObjectStore")}} (made available as 
+associated record from the {{domxref("IDBObjectStore")}} (made available as
 `objectStoreTitleRequest.result`), updates one property of the record, and then puts the
 updated record back into the object store. Also included at the bottom is
 an `onerror` function that reports what the error was if the request fails.

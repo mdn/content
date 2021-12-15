@@ -8,11 +8,11 @@ browser-compat: svg.attributes.presentation.transform-origin
 ---
 {{SVGRef()}}
 
-The **`transform-origin`** SVG attribute sets the origin for an item’s transformations. 
+The **`transform-origin`** SVG attribute sets the origin for an item’s transformations.
 
 You can use this attribute with any SVG element.
 
-> **Note:** As a presentation attribute in SVG, `transform-origin` corresponds in syntax and behavior to the `transform-origin` property in CSS, and can be used as CSS property to style SVG. See the [CSS transform-origin](/en-US/docs/Web/CSS/transform-origin) property for more information. 
+> **Note:** As a presentation attribute in SVG, `transform-origin` corresponds in syntax and behavior to the `transform-origin` property in CSS, and can be used as CSS property to style SVG. See the [CSS transform-origin](/en-US/docs/Web/CSS/transform-origin) property for more information.
 
 ## Usage notes
 

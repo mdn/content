@@ -90,9 +90,8 @@ In order to be oriented about what we're trying to accomplish, let's have a look
 
 ```html
 <p>
-  Demonstration of using <a href="/en-US/docs/Web/API/Background_Tasks_API">
-  cooperatively scheduled background tasks</a> using the <code>requestIdleCallback()</code>
-  method.
+  Demonstration of using cooperatively scheduled background tasks using the
+  <code>requestIdleCallback()</code> method.
 </p>
 
 <div id="container">
@@ -456,7 +455,7 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 
 `decodeTechnoStuff()` starts by zeroing the values of totalTaskCount (the number of tasks added to the queue so far) and currentTaskNumber (the task currently being run), and then calls `updateDisplay()` to reset the display to its "nothing's happened yet" state.
 
-This example will create a random number of tasks (between 100 and 200 of them). To do so, we use the [`getRandomIntInclusive()` function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive) that's provided as an example in the documentation for {{jsxref("Math.random()")}} to get the number of tasks to create.
+This example will create a random number of tasks (between 100 and 200 of them). To do so, we use the [`getRandomIntInclusive()` function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_integer_between_two_values_inclusive) that's provided as an example in the documentation for {{jsxref("Math.random()")}} to get the number of tasks to create.
 
 Then we start a loop to create the actual tasks. For each task, we create an object, `taskData`, which includes two properties:
 

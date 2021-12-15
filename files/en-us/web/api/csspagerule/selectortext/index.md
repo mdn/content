@@ -15,8 +15,10 @@ The **`selectorText`** property of the {{domxref("CSSPageRule")}} interface gets
 
 ## Syntax
 
-    var text = CSSPageRule.selectorText;
-    CSSPageRule.selectorText = text;
+```js
+var text = CSSPageRule.selectorText;
+CSSPageRule.selectorText = text;
+```
 
 ### Value
 

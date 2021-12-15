@@ -124,6 +124,7 @@ The `computeFrame()` method, shown below, is responsible for actually fetching 
     this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
     const frame = this.ctx1.getImageData(0, 0, this.width, this.height);
     const length = frame.data.length;
+    const data = frame.data;
 
     for (let i = 0; i < length; i += 4) {
       const red = data[i + 0];

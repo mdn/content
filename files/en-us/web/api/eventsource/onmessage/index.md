@@ -29,7 +29,7 @@ eventSource.onmessage = function
 ## Examples
 
 ```js
-evtSource.onmessage = function(e) {
+eventSource.onmessage = function(e) {
   var newElement = document.createElement("li");
 
   newElement.textContent = "message: " + e.data;

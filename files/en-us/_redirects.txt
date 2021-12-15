@@ -40,7 +40,7 @@
 /en-US/docs/ARIA/ARIA_Techniques/ARIA_Technique_Template	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/ARIA_Technique_Template
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_alert_role	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
-/en-US/docs/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute
+/en-US/docs/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/en-US/docs/web/Accessibility/ARIA/Attributes/aria-activedescendant
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_banner_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_button_role	/en-US/docs/Web/Accessibility/ARIA/Roles/button_role
@@ -80,7 +80,7 @@
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/ARIA_Technique_Template	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/ARIA_Technique_Template
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
-/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute
+/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/en-US/docs/web/Accessibility/ARIA/Attributes/aria-activedescendant
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute
@@ -2263,7 +2263,6 @@
 /en-US/docs/DOM/window.scrollY	/en-US/docs/Web/API/Window/scrollY
 /en-US/docs/DOM/window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
 /en-US/docs/DOM/window.self	/en-US/docs/Web/API/Window/self
-/en-US/docs/DOM/window.setCursor	/en-US/docs/Web/API/Window/setCursor
 /en-US/docs/DOM/window.setImmediate	/en-US/docs/Web/API/Window/setImmediate
 /en-US/docs/DOM/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/DOM/window.setTimeout	/en-US/docs/Web/API/setTimeout
@@ -2690,7 +2689,6 @@
 /en-US/docs/DOM:window.scrollY	/en-US/docs/Web/API/Window/scrollY
 /en-US/docs/DOM:window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
 /en-US/docs/DOM:window.self	/en-US/docs/Web/API/Window/self
-/en-US/docs/DOM:window.setCursor	/en-US/docs/Web/API/Window/setCursor
 /en-US/docs/DOM:window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/DOM:window.setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/DOM:window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
@@ -3418,7 +3416,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.scrollX	/en-US/docs/Web/API/Window/scrollX
 /en-US/docs/Document_Object_Model_(DOM)/window.scrollY	/en-US/docs/Web/API/Window/scrollY
 /en-US/docs/Document_Object_Model_(DOM)/window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
-/en-US/docs/Document_Object_Model_(DOM)/window.setCursor	/en-US/docs/Web/API/Window/setCursor
 /en-US/docs/Document_Object_Model_(DOM)/window.setImmediate	/en-US/docs/Web/API/Window/setImmediate
 /en-US/docs/Document_Object_Model_(DOM)/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Document_Object_Model_(DOM)/window.setTimeout	/en-US/docs/Web/API/setTimeout
@@ -5711,6 +5708,7 @@
 /en-US/docs/Mozilla/MathML_Project/Fonts	/en-US/docs/Web/MathML/Fonts
 /en-US/docs/Mozilla/Performance/Scroll-linked_effects	https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html
 /en-US/docs/Mozilla/QA/Bug_writing_guidelines	https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html
+/en-US/docs/Mozilla/QA/Writing_xpcshell-based_unit_tests	https://firefox-source-docs.mozilla.org/testing/xpcshell/index.html
 /en-US/docs/Mozilla/Tech/Xray_vision	https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html
 /en-US/docs/Mozilla/Virtualenv	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv
 /en-US/docs/Mozilla_CSS_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
@@ -6401,7 +6399,6 @@
 /en-US/docs/Tools/Profiler	/en-US/docs/Tools/Performance
 /en-US/docs/Tools/Release_notes	/en-US/docs/Mozilla/Firefox/Releases
 /en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi	/en-US/docs/Tools/about:debugging#Connecting_over_the_Network
-/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE_clone	/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE
 /en-US/docs/Tools/Remote_Debugging/Debugging_over_USB	/en-US/docs/Tools/about:debugging#Connecting_to_a_remote_device
 /en-US/docs/Tools/Remote_Debugging/Debugging_over_a_network	/en-US/docs/Tools/about:debugging#Connecting_over_the_Network
 /en-US/docs/Tools/Responsive_Design_Mode_(before_Firefox_52)	/en-US/docs/Tools/Responsive_Design_Mode
@@ -7219,6 +7216,9 @@
 /en-US/docs/Web/API/DeviceRotationRate/gamma	/en-US/docs/Web/API/DeviceMotionEventRotationRate/gamma
 /en-US/docs/Web/API/DirectoryEntry	/en-US/docs/Web/API/FileSystemDirectoryEntry
 /en-US/docs/Web/API/DirectoryReader	/en-US/docs/Web/API/FileSystemDirectoryReader
+/en-US/docs/Web/API/DisplayMediaStreamConstraints	/en-US/docs/Web/API/MediaDevices/getDisplayMedia
+/en-US/docs/Web/API/DisplayMediaStreamConstraints/audio	/en-US/docs/Web/API/MediaDevices/getDisplayMedia
+/en-US/docs/Web/API/DisplayMediaStreamConstraints/video	/en-US/docs/Web/API/MediaDevices/getDisplayMedia
 /en-US/docs/Web/API/Document.createNodeIterator	/en-US/docs/Web/API/Document/createNodeIterator
 /en-US/docs/Web/API/Document.dir	/en-US/docs/Web/API/Document/dir
 /en-US/docs/Web/API/Document.domConfig	/en-US/docs/Web/API/Document
@@ -7446,8 +7446,9 @@
 /en-US/docs/Web/API/FileRequest.onprogress	/en-US/docs/Web/API/FileRequest/onprogress
 /en-US/docs/Web/API/FileSystemFileEntry/FileSystemFileEntry.createWriter	/en-US/docs/Web/API/FileSystemFileEntry/createWriter
 /en-US/docs/Web/API/FileSystemFileEntry/FileSystemFileEntry.createWriter()	/en-US/docs/Web/API/FileSystemFileEntry/createWriter
-/en-US/docs/Web/API/FileSystemFlags/create	/en-US/docs/Web/API/FileSystemFlags
-/en-US/docs/Web/API/FileSystemFlags/exclusive	/en-US/docs/Web/API/FileSystemFlags
+/en-US/docs/Web/API/FileSystemFlags	/en-US/docs/Web/API/FileSystemDirectoryEntry/getFile
+/en-US/docs/Web/API/FileSystemFlags/create	/en-US/docs/Web/API/FileSystemDirectoryEntry/getFile
+/en-US/docs/Web/API/FileSystemFlags/exclusive	/en-US/docs/Web/API/FileSystemDirectoryEntry/getFile
 /en-US/docs/Web/API/File_System_API	/en-US/docs/Web/API/File_and_Directory_Entries_API
 /en-US/docs/Web/API/File_System_API/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/Web/API/Float32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array
@@ -7973,6 +7974,9 @@
 /en-US/docs/Web/API/MediaStreamAudioDestinationNode.stream	/en-US/docs/Web/API/MediaStreamAudioDestinationNode/stream
 /en-US/docs/Web/API/MediaStreamAudioSourceOptions	/en-US/docs/Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode
 /en-US/docs/Web/API/MediaStreamAudioSourceOptions/mediaStream	/en-US/docs/Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode
+/en-US/docs/Web/API/MediaStreamConstraints	/en-US/docs/Web/API/MediaDevices/getUserMedia
+/en-US/docs/Web/API/MediaStreamConstraints/audio	/en-US/docs/Web/API/MediaDevices/getUserMedia
+/en-US/docs/Web/API/MediaStreamConstraints/video	/en-US/docs/Web/API/MediaDevices/getUserMedia
 /en-US/docs/Web/API/MediaStreamEvent.MediaStreamEvent	/en-US/docs/Web/API/MediaStreamEvent/MediaStreamEvent
 /en-US/docs/Web/API/MediaStreamEvent.stream	/en-US/docs/Web/API/MediaStreamEvent/stream
 /en-US/docs/Web/API/MediaStreamTrack.enabled	/en-US/docs/Web/API/MediaStreamTrack/enabled
@@ -8695,7 +8699,7 @@
 /en-US/docs/Web/API/Touch/touchcancel_event	/en-US/docs/Web/API/Element/touchcancel_event
 /en-US/docs/Web/API/Touch/touchend_event	/en-US/docs/Web/API/Document/touchend_event
 /en-US/docs/Web/API/Touch/touchmove_event	/en-US/docs/Web/API/Document/touchmove_event
-/en-US/docs/Web/API/Touch/touchstart_event	/en-US/docs/Web/API/Element/touchstart_event
+/en-US/docs/Web/API/Touch/touchstart_event	/en-US/docs/Web/API/Document/touchstart_event
 /en-US/docs/Web/API/TouchEvent.changedTouches	/en-US/docs/Web/API/TouchEvent/changedTouches
 /en-US/docs/Web/API/TouchEvent.targetTouches	/en-US/docs/Web/API/TouchEvent/targetTouches
 /en-US/docs/Web/API/TouchEvent.touches	/en-US/docs/Web/API/TouchEvent/touches
@@ -8758,6 +8762,8 @@
 /en-US/docs/Web/API/URLUtilsReadOnly/protocol	/en-US/docs/Web/API/WorkerLocation/protocol
 /en-US/docs/Web/API/URLUtilsReadOnly/search	/en-US/docs/Web/API/WorkerLocation/search
 /en-US/docs/Web/API/URLUtilsReadOnly/toString	/en-US/docs/Web/API/WorkerLocation/toString
+/en-US/docs/Web/API/USB/onconnect	/en-US/docs/Web/API/USB/connect_event
+/en-US/docs/Web/API/USB/ondisconnect	/en-US/docs/Web/API/USB/disconnect_event
 /en-US/docs/Web/API/USBDevice/USBDevice.deviceClass	/en-US/docs/Web/API/USBDevice/deviceClass
 /en-US/docs/Web/API/Uint16Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array
 /en-US/docs/Web/API/Uint32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array
@@ -8808,7 +8814,10 @@
 /en-US/docs/Web/API/VideoTrackList/TextTrackList:_addtrack_event	/en-US/docs/Web/API/TextTrackList/addtrack_event
 /en-US/docs/Web/API/VideoTrackList/TextTrackList:_change_event	/en-US/docs/Web/API/TextTrackList/change_event
 /en-US/docs/Web/API/VideoTrackList/getTrackById()	/en-US/docs/Web/API/TextTrackList/getTrackById
+/en-US/docs/Web/API/VisualViewport/onresize	/en-US/docs/Web/API/VisualViewport/resize_event
+/en-US/docs/Web/API/VisualViewport/onscroll	/en-US/docs/Web/API/VisualViewport/scroll_event
 /en-US/docs/Web/API/WEBGL_compressed_texture_es3	/en-US/docs/Web/API/WEBGL_compressed_texture_etc
+/en-US/docs/Web/API/WakeLockSentinel/onrelease	/en-US/docs/Web/API/WakeLockSentinel/release_event
 /en-US/docs/Web/API/WaveShaperNode.curve	/en-US/docs/Web/API/WaveShaperNode/curve
 /en-US/docs/Web/API/WaveShaperNode.oversample	/en-US/docs/Web/API/WaveShaperNode/oversample
 /en-US/docs/Web/API/WebGL2RenderingContext/clearBufferfi	/en-US/docs/Web/API/WebGL2RenderingContext/clearBuffer
@@ -9086,7 +9095,7 @@
 /en-US/docs/Web/API/XR	/en-US/docs/Web/API/XRSystem
 /en-US/docs/Web/API/XR/devicechange_event	/en-US/docs/Web/API/XRSystem/devicechange_event
 /en-US/docs/Web/API/XR/isSessionSupported	/en-US/docs/Web/API/XRSystem/isSessionSupported
-/en-US/docs/Web/API/XR/ondevicechange	/en-US/docs/Web/API/XRSystem/ondevicechange
+/en-US/docs/Web/API/XR/ondevicechange	/en-US/docs/Web/API/XRSystem/devicechange_event
 /en-US/docs/Web/API/XR/requestSession	/en-US/docs/Web/API/XRSystem/requestSession
 /en-US/docs/Web/API/XR/supportsSession	/en-US/docs/Web/API/XRSystem/isSessionSupported
 /en-US/docs/Web/API/XREnvironmentBlendMode	/en-US/docs/Web/API/XRSession/environmentBlendMode
@@ -9108,10 +9117,20 @@
 /en-US/docs/Web/API/XRReferenceSpaceType	/en-US/docs/Web/API/XRSession/requestReferenceSpace
 /en-US/docs/Web/API/XRRenderState/XRRenderState.inlineVerticalFieldOfView	/en-US/docs/Web/API/XRRenderState/inlineVerticalFieldOfView
 /en-US/docs/Web/API/XRRenderStateInit	/en-US/docs/Web/API/XRSession/updateRenderState
+/en-US/docs/Web/API/XRSession/onend	/en-US/docs/Web/API/XRSession/end_event
+/en-US/docs/Web/API/XRSession/oninputsourceschange	/en-US/docs/Web/API/XRSession/inputsourceschange_event
+/en-US/docs/Web/API/XRSession/onselect	/en-US/docs/Web/API/XRSession/select_event
+/en-US/docs/Web/API/XRSession/onselectend	/en-US/docs/Web/API/XRSession/selectend_event
+/en-US/docs/Web/API/XRSession/onselectstart	/en-US/docs/Web/API/XRSession/selectstart_event
+/en-US/docs/Web/API/XRSession/onsqueeze	/en-US/docs/Web/API/XRSession/squeeze_event
+/en-US/docs/Web/API/XRSession/onsqueezeend	/en-US/docs/Web/API/XRSession/squeezeend_event
+/en-US/docs/Web/API/XRSession/onsqueezestart	/en-US/docs/Web/API/XRSession/squeezestart_event
+/en-US/docs/Web/API/XRSession/onvisibilitychange	/en-US/docs/Web/API/XRSession/visibilitychange_event
 /en-US/docs/Web/API/XRSessionEventInit	/en-US/docs/Web/API/XRSessionEvent/XRSessionEvent
 /en-US/docs/Web/API/XRSessionEventInit/session	/en-US/docs/Web/API/XRSessionEvent/XRSessionEvent
 /en-US/docs/Web/API/XRSessionInit	/en-US/docs/Web/API/XRSystem/requestSession
 /en-US/docs/Web/API/XRSessionMode	/en-US/docs/Web/API/XRSystem/requestSession
+/en-US/docs/Web/API/XRSystem/ondevicechange	/en-US/docs/Web/API/XRSystem/devicechange_event
 /en-US/docs/Web/API/XRTargetRayMode	/en-US/docs/Web/API/XRInputSource/targetRayMode
 /en-US/docs/Web/API/XRTargetRayModoe	/en-US/docs/Web/API/XRInputSource/targetRayMode
 /en-US/docs/Web/API/XRVisibilityState	/en-US/docs/Web/API/XRSession/visibilityState
@@ -9624,7 +9643,6 @@
 /en-US/docs/Web/API/window.scrollY	/en-US/docs/Web/API/Window/scrollY
 /en-US/docs/Web/API/window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
 /en-US/docs/Web/API/window.self	/en-US/docs/Web/API/Window/self
-/en-US/docs/Web/API/window.setCursor	/en-US/docs/Web/API/Window/setCursor
 /en-US/docs/Web/API/window.setImmediate	/en-US/docs/Web/API/Window/setImmediate
 /en-US/docs/Web/API/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/window.setTimeout	/en-US/docs/Web/API/setTimeout
@@ -9648,6 +9666,7 @@
 /en-US/docs/Web/APIr	/en-US/docs/Web/API/Document/dir
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Examples	/en-US/docs/Web/Accessibility/ARIA/ARIA_Test_Cases
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Complementary_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/en-US/docs/web/Accessibility/ARIA/Attributes/aria-activedescendant
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_property	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_banner_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role
@@ -10069,7 +10088,8 @@
 /en-US/docs/Web/CSS/CSS_Reference	/en-US/docs/Web/CSS/Reference
 /en-US/docs/Web/CSS/CSS_Reference/Mozilla_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/Web/CSS/CSS_Reference/Webkit_Extensions	/en-US/docs/Web/CSS/Webkit_Extensions
-/en-US/docs/Web/CSS/CSS_Scroll_Snap/compat	/en-US/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat
+/en-US/docs/Web/CSS/CSS_Scroll_Snap/Browser_compat	/en-US/docs/Web/CSS/CSS_Scroll_Snap
+/en-US/docs/Web/CSS/CSS_Scroll_Snap/compat	/en-US/docs/Web/CSS/CSS_Scroll_Snap
 /en-US/docs/Web/CSS/CSS_Selectors/Comparison_with_XPath	/en-US/docs/Web/XPath/Comparison_with_CSS_selectors
 /en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values	/en-US/docs/Web/CSS/CSS_Shapes/From_box_values
 /en-US/docs/Web/CSS/CSS_Types/display-inside	/en-US/docs/Web/CSS/display-inside
@@ -10377,6 +10397,7 @@
 /en-US/docs/Web/Events/focus	/en-US/docs/Web/API/Element/focus_event
 /en-US/docs/Web/Events/focusin	/en-US/docs/Web/API/Element/focusin_event
 /en-US/docs/Web/Events/focusout	/en-US/docs/Web/API/Element/focusout_event
+/en-US/docs/Web/Events/formdata	/en-US/docs/Web/API/HTMLFormElement/formdata_event
 /en-US/docs/Web/Events/fullscreenchange	/en-US/docs/Web/API/Document/fullscreenchange_event
 /en-US/docs/Web/Events/fullscreenerror	/en-US/docs/Web/API/Document/fullscreenerror_event
 /en-US/docs/Web/Events/gamepadconnected	/en-US/docs/Web/API/Window/gamepadconnected_event
@@ -10502,6 +10523,7 @@
 /en-US/docs/Web/Events/touchcancel	/en-US/docs/Web/API/Element/touchcancel_event
 /en-US/docs/Web/Events/touchend	/en-US/docs/Web/API/Document/touchend_event
 /en-US/docs/Web/Events/touchmove	/en-US/docs/Web/API/Document/touchmove_event
+/en-US/docs/Web/Events/touchstart	/en-US/docs/Web/API/Document/touchstart_event
 /en-US/docs/Web/Events/track	/en-US/docs/Web/API/RTCPeerConnection/track_event
 /en-US/docs/Web/Events/transitioncancel	/en-US/docs/Web/API/HTMLElement/transitioncancel_event
 /en-US/docs/Web/Events/transitionend	/en-US/docs/Web/API/HTMLElement/transitionend_event
@@ -11105,7 +11127,6 @@
 /en-US/docs/Web/JavaScript/Typed_arrays/Uint16Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array
 /en-US/docs/Web/JavaScript/Typed_arrays/Uint32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array
 /en-US/docs/Web/JavaScript/Typed_arrays/Uint8Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
-/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm	/en-US/docs/Web/Guide/Unicode_Bidrectional_Text_Algorithm
 /en-US/docs/Web/MathML/Element/menclosed	/en-US/docs/Web/MathML/Element/menclose
 /en-US/docs/Web/Media/Formats/Guide_to_codecs_for_audio_on_the_web	/en-US/docs/Web/Media/Formats/Audio_codecs
 /en-US/docs/Web/Media_Queries	/en-US/docs/Web/CSS/Media_Queries
@@ -11999,7 +12020,6 @@
 /en-US/docs/window.scrollX	/en-US/docs/Web/API/Window/scrollX
 /en-US/docs/window.scrollY	/en-US/docs/Web/API/Window/scrollY
 /en-US/docs/window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
-/en-US/docs/window.setCursor	/en-US/docs/Web/API/Window/setCursor
 /en-US/docs/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/window.setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/window.sidebar	/en-US/docs/Web/API/Window/sidebar

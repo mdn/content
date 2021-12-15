@@ -21,7 +21,7 @@ interface specifies an event listener to receive
 ## Syntax
 
 ```js
-Notification.onclose = function() { ... };
+Notification.onclose = function() { /* ... */ };
 ```
 
 ## Browser compatibility

@@ -253,7 +253,7 @@ some-element:is(::before, ::after) {
 
 instead do:
 
-```css
+```css example-good
 some-element::before,
 some-element::after {
   display: block;

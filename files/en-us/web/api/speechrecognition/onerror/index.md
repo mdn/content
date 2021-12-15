@@ -22,7 +22,7 @@ when a speech recognition error occurs (when the [error](/en-US/docs/Web/API/Spe
 ## Syntax
 
 ```js
-mySpeechRecognition.onerror = function() { ... };
+mySpeechRecognition.onerror = function() { /* ... */ };
 ```
 
 ## Examples

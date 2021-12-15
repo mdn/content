@@ -9,7 +9,7 @@ tags:
   - ARIA roles
   - document structure role
 ---
-The `term` role can be used for a word or phrase with an optional corresponding [`definition`](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role). 
+The `term` role can be used for a word or phrase with an optional corresponding [`definition`](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role).
 
 
 ## Description
@@ -59,7 +59,7 @@ or without any ARIA (but possibly not how you want it presented)
 
 ## Accessibility Concerns
 
-Don't use the  `role="term"` on interactive elements such as links as it can interfere with the assistive technology user's ability to interact with the element. 
+Don't use the  `role="term"` on interactive elements such as links as it can interfere with the assistive technology user's ability to interact with the element.
 
 ## Best Practices
 

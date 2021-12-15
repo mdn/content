@@ -22,7 +22,7 @@ current subscription is successfully unsubscribed.
 ## Syntax
 
 ```js
-PushSubscription.unsubscribe().then(function(Boolean) { ... });
+PushSubscription.unsubscribe().then(function(Boolean) { /* ... */ });
 ```
 
 ### Parameters

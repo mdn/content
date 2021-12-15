@@ -17,7 +17,9 @@ The two possible values of error mode are `fatal` or `replacement`, the default 
 
 ## Syntax
 
-    var fatal = TextDecoderStream.fatal;
+```js
+var fatal = TextDecoderStream.fatal;
+```
 
 ### Value
 

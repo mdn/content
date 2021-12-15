@@ -13,12 +13,14 @@ browser-compat: api.Element.ariaSelected
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaSelected`** property of the {{domxref("Element")}} interface reflects the value of the `aria-selected` attribute, which indicates the current "selected" state of elements that have a selected state.
+The **`ariaSelected`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute, which indicates the current "selected" state of elements that have a selected state.
 
 ## Syntax
 
-    var ariaSelected = element.ariaSelected;
-    element.ariaSelected = ariaSelected
+```js
+var ariaSelected = element.ariaSelected;
+element.ariaSelected = ariaSelected
+```
 
 ### Value
 

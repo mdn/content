@@ -18,7 +18,7 @@ Live regions are sections of a web page that are updated, whether by user intera
 
 When the content of a live region changes, the DOM is traversed from the changed element through its ancestors to find the first element with `aria-atomic` set. This determines the content that the user should be presented with.
 
-If no ancestor has explicitly set `aria-atomic`, only the node or nodes of live region content that have been updated are read. The difference between omitting `aria-atomic` altogether and explicitly setting an ARIA live region's ancestor node with `aria-atomic="false"` is that explicitly setting `aria-atomic="false"` will stop the screen reader from going up the ancestor chain. Both lead to only the updated node being read. When set to `aria-atomic="true"`, the entire changed region as a whole will be presented, including the updated node's `label`, if there is one. 
+If no ancestor has explicitly set `aria-atomic`, only the node or nodes of live region content that have been updated are read. The difference between omitting `aria-atomic` altogether and explicitly setting an ARIA live region's ancestor node with `aria-atomic="false"` is that explicitly setting `aria-atomic="false"` will stop the screen reader from going up the ancestor chain. Both lead to only the updated node being read. When set to `aria-atomic="true"`, the entire changed region as a whole will be presented, including the updated node's `label`, if there is one.
 
 ## Values
 
@@ -29,7 +29,7 @@ If no ancestor has explicitly set `aria-atomic`, only the node or nodes of live 
   
 ## Associated roles
 
-Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles). 
+Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles).
 
 ## Specifications
 

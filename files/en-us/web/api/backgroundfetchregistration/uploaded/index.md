@@ -15,7 +15,9 @@ The **`uploaded`** read-only property of the {{domxref("BackgroundFetchRegistrat
 
 ## Syntax
 
-    let uploaded = BackgroundFetchRegistration.uploaded;
+```js
+let uploaded = BackgroundFetchRegistration.uploaded;
+```
 
 ### Value
 

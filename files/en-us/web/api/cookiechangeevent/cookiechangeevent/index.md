@@ -16,7 +16,9 @@ The **`CookieChangeEvent()`** constructor creates a new {{domxref("CookieChangeE
 
 ## Syntax
 
-    var CookieChangeEvent = new CookieChangeEvent(type,eventInitDict);
+```js
+var CookieChangeEvent = new CookieChangeEvent(type,eventInitDict);
+```
 
 ### Parameters
 

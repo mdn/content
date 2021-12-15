@@ -16,6 +16,7 @@ The **`SameSite`** attribute of the {{HTTPHeader("Set-Cookie")}} HTTP response h
 >
 > - The cookie-sending behavior if `SameSite` is not specified is `SameSite=Lax`. Previously the default was that cookies were sent for all requests.
 > - Cookies with `SameSite=None` must now also specify the `Secure` attribute (they require a secure context/HTTPS).
+> - Cookies from the same domain are no longer considered to be from the same site if sent using a different scheme (`http:` or `https:`).
 >
 > This article documents the new standard. See [Browser Compatibility](#browser_compatibility) below for information about specific versions where the behavior changed.
 
@@ -110,7 +111,7 @@ RewriteRule "^admin/(.*)\.html$" "admin/index.php?nav=$1 [NC,L,QSA,CO=RewriteRul
 | Specification                                                                                              | Title                                                         |
 | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("6265", "Set-Cookie", "4.1")}}                                                           | HTTP State Management Mechanism                               |
-| [draft-ietf-httpbis-rfc6265bis-05](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis-05) | Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies |
+| [draft-ietf-httpbis-rfc6265bis-09](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis-09) | Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies |
 
 ## Browser compatibility
 

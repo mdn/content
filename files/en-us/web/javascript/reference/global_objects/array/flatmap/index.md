@@ -24,19 +24,19 @@ efficient than calling those two methods separately.
 
 ```js
 // Arrow function
-flatMap((currentValue) => { ... } )
-flatMap((currentValue, index) => { ... } )
-flatMap((currentValue, index, array) => { ... } )
+flatMap((currentValue) => { /* ... */ } )
+flatMap((currentValue, index) => { /* ... */ } )
+flatMap((currentValue, index, array) => { /* ... */ } )
 
 // Callback function
 flatMap(callbackFn)
 flatMap(callbackFn, thisArg)
 
 // Inline callback function
-flatMap(function(currentValue) { ... })
-flatMap(function(currentValue, index) { ... })
-flatMap(function(currentValue, index, array){ ... })
-flatMap(function(currentValue, index, array) { ... }, thisArg)
+flatMap(function(currentValue) { /* ... */ })
+flatMap(function(currentValue, index) { /* ... */ })
+flatMap(function(currentValue, index, array){ /* ... */ })
+flatMap(function(currentValue, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters

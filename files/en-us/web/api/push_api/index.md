@@ -57,7 +57,7 @@ The following additions to the [Service Worker API](/en-US/docs/Web/API/Service_
 
 ## Examples
 
-Mozilla's [ServiceWorker Cookbook](https://serviceworke.rs/) contains many useful Push examples.
+Mozilla's [ServiceWorker Cookbook](https://github.com/mozilla/serviceworker-cookbook) contains many useful Push examples.
 
 ## Specifications
 

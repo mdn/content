@@ -10,7 +10,7 @@ tags:
   - Reference
 ---
 
-The `aria-invalid` state indicates the entered value does not conform to the format expected by the application. 
+The `aria-invalid` state indicates the entered value does not conform to the format expected by the application.
 
 ## Description
 
@@ -40,20 +40,20 @@ If you are creating your own form validation scripts, make sure to include `aria
 
 ## Values
 
-- `grammar`	
+- `grammar`
   - : A grammatical error was detected.
-- `false` (default)	
+- `false` (default)
   - : There are no detected errors in the value.
-- `spelling`	
+- `spelling`
   - : A spelling error was detected.
-- `true`	
+- `true`
   - : The value entered by the user has failed validation.
 
 Any value not in this list will be treated as `true`.
 
 ## Associated roles
 
-Used in roles: 
+Used in roles:
 
 - [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
 - [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
@@ -76,7 +76,7 @@ Inherited into role:
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-invalid","ARIA: aria-invalid Attribute")}}  | {{Spec2('ARIA')}} |
 

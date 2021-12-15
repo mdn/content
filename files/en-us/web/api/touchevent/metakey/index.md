@@ -22,7 +22,9 @@ This property is {{readonlyInline}}.
 
 ## Syntax
 
-    var metaEnabled = touchEvent.metaKey;
+```js
+var metaEnabled = touchEvent.metaKey;
+```
 
 ### Return value
 

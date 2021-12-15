@@ -155,7 +155,7 @@ Above is the semantic way of writing a table. The ARIA roles are not necessary i
 
 ### Added benefits
 
-When applied to a {{HTMLElement('td')}}, it returns cell semantics to the element in case the semantics were removed, such as with `display: grid;`. 
+When applied to a {{HTMLElement('td')}}, it returns cell semantics to the element in case the semantics were removed, such as with `display: grid;`.
 
 ## Specifications
 

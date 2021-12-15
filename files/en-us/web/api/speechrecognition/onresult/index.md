@@ -24,7 +24,7 @@ event](/en-US/docs/Web/API/SpeechRecognition/result_event) fires.)
 ## Syntax
 
 ```js
-mySpeechRecognition.onresult = function() { ... };
+mySpeechRecognition.onresult = function() { /* ... */ };
 ```
 
 ## Examples

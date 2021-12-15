@@ -58,11 +58,9 @@ header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```
 
-Now [install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), and visit [https://developer.mozilla.org/](/):
+Now [install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), and visit [https://developer.mozilla.org/](/). The page should look like this:
 
-{{EmbedYouTube("lxf2Tkg6U1M")}}
-
-> **Note:** Although this video shows the content script working in [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/), content scripts are currently blocked for this site.
+![developer.mozilla.org page "eaten" by the script](eaten_page.png )
 
 ## Modifying pages programmatically
 
@@ -124,9 +122,7 @@ modify-page/
 
 Now [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on), open a page (any page, this time) activate the context menu, and select "Eat this page":
 
-{{EmbedYouTube("zX4Bcv8VctA")}}
-
-> **Note:** Although this video shows the content script working in [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/), content scripts are currently blocked for this site.
+![Option to eat a page on the context menu](eat_from_menu.png)
 
 ## Messaging
 

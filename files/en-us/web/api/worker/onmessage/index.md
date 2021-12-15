@@ -22,7 +22,7 @@ Note that deserializing the message sent by {{domxref("DedicatedWorkerGlobalScop
 ## Syntax
 
 ```js
-myWorker.onmessage = function(e) { ... }
+myWorker.onmessage = function(e) { /* ... */ }
 ```
 
 ## Example

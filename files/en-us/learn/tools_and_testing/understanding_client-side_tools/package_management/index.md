@@ -300,7 +300,7 @@ This makes a lot of sense as we want to reduce file size and thus make our app l
 
 Although the list grows by the month, there are three main offerings for tools that generate bundles from our source code: Webpack, [Rollup](https://rollupjs.org/guide/en/), and Parcel. There will be more available than this, but these are popular ones:
 
-- The RollUp tool offers tree shaking and code splitting as it’s core features.
+- The RollUp tool offers tree shaking and code splitting as its core features.
 - Webpack requires some configuration (though “some” might be understating the complexity of some developers’ Webpack configurations).
 - In the case of Parcel (prior to Parcel version 2), there's a special flag required — `--experimental-scope-hoisting` — which will tree shake while building.
 

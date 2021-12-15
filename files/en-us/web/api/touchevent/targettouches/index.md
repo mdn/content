@@ -19,7 +19,9 @@ The **`targetTouches`** read-only property is a {{ domxref("TouchList") }} listi
 
 ## Syntax
 
-    var touches = touchEvent.targetTouches;
+```js
+var touches = touchEvent.targetTouches;
+```
 
 ### Return value
 

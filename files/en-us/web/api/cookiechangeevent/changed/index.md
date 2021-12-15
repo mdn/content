@@ -15,7 +15,9 @@ The **`changed`** read-only property of the {{domxref("CookieChangeEvent")}} int
 
 ## Syntax
 
-    var array = CookieChangeEvent.changed;
+```js
+var array = CookieChangeEvent.changed;
+```
 
 ### Value
 

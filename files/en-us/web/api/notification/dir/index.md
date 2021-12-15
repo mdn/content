@@ -17,7 +17,9 @@ The `dir` read-only property of the {{domxref("Notification")}} interface indica
 
 ## Syntax
 
-    var direction = Notification.dir;
+```js
+var direction = Notification.dir;
+```
 
 ### Value
 

@@ -34,8 +34,6 @@ The File and Directory Entries API includes the following interfaces:
   - : Represents a single directory in a file system.
 - {{domxref("FileSystemDirectoryReader")}}
   - : Created by calling {{domxref("FileSystemDirectoryEntry.createReader()")}}, this interface provides the functionality which lets you read the contents of a directory.
-- {{domxref("FileSystemFlags")}}
-  - : Defines a set of values which are used when specifying option flags when calling certain methods in the File and Directory Entries API.
 
 ## Specifications
 

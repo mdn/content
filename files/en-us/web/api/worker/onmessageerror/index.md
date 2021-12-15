@@ -23,7 +23,7 @@ The **`onmessageerror`** event handler of the
 ## Syntax
 
 ```js
-Worker.onmessageerror = function() { ... };
+Worker.onmessageerror = function() { /* ... */ };
 ```
 
 ## Specifications

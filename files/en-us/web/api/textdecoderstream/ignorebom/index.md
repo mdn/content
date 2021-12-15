@@ -16,7 +16,9 @@ The **`ignoreBOM`** read-only property of the {{domxref("TextDecoderStream")}} i
 
 ## Syntax
 
-    var ignoreBOM = TextDecoderStream.ignoreBOM;
+```js
+var ignoreBOM = TextDecoderStream.ignoreBOM;
+```
 
 ### Value
 

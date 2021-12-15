@@ -110,6 +110,16 @@ After this, the registration steps are:
 
 ## Examples
 
+### Demo sites
+
+- [Mozilla Demo](https://webauthn.bin.coffee/) website and its [source code](https://github.com/jcjones/webauthn.bin.coffee).
+- [Google Demo](https://webauthndemo.appspot.com/) website and its [source code](https://github.com/google/webauthndemo).
+- [https://webauthn.io/ Demo](https://github.com/duo-labs/webauthn.io) website and its [source code](https://github.com/duo-labs/webauthn.io).
+- [github.com/webauthn-open-source](https://github.com/webauthn-open-source) and its [client source code](https://github.com/webauthn-open-source/webauthn-simple-app) and [server source code](https://github.com/webauthn-open-source/fido2-lib)
+- [OWASP Single Sign-On](https://owasp.org/www-project-sso/)
+
+### Usage example
+
 > **Warning:** For security reasons, web authentication calls ({{domxref('CredentialsContainer.create','create()')}} and {{domxref('CredentialsContainer.get','get()')}}) are cancelled if the browser window loses focus while the call is pending.
 
 ```js
@@ -178,10 +188,6 @@ navigator.credentials.create(createCredentialDefaultArgs)
         console.log("ERROR", err);
     });
 ```
-
-- [Mozilla Demo](https://webauthn.bin.coffee/) website and its [source code](https://github.com/jcjones/webauthn.bin.coffee).
-- [Google Demo](https://webauthndemo.appspot.com/) website and its [source code](https://github.com/google/webauthndemo).
-- [webauthn.org](https://webauthn.org) and its [client source code](https://github.com/apowers313/webauthn-simple-app) and [server source code](https://github.com/apowers313/fido2-lib)
 
 ## Specifications
 

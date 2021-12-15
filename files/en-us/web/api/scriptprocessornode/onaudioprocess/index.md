@@ -21,7 +21,7 @@ The `onaudioprocess` event handler of the {{domxref("ScriptProcessorNode")}} int
 ```js
 var audioCtx = new AudioContext();
 var scriptNode = audioCtx.createScriptProcessor(4096, 1, 1);
-scriptNode.onaudioprocess = function() { ... }
+scriptNode.onaudioprocess = function() { /* ... */ }
 ```
 
 ## Example

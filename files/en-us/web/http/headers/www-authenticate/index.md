@@ -16,7 +16,7 @@ browser-compat: http.headers.WWW-Authenticate
 The HTTP **`WWW-Authenticate`** response header defines the [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) methods ("challenges") that might be used to gain access to a specific resource.
 
 > **Note:** This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework), which can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
-> Each "challenge" lists a scheme supported by the server and additional parameters that are defined for that scheme type. 
+> Each "challenge" lists a scheme supported by the server and additional parameters that are defined for that scheme type.
 
 A server using [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) will respond with a {{HTTPStatus("401")}} `Unauthorized` response to a request for a protected resource.
 This response must include at least one `WWW-Authenticate` header and at least one {{Glossary("challenge")}}, to indicate what authentication schemes can be used to access the resource (and any additional data that each particular scheme needs).
@@ -120,7 +120,7 @@ Generally you will need to check the relevant specifications for these (keys for
     The specification contains advice on possible algorithms for generating this value.
     The nonce value is opaque to the client.
 - **`opaque`**
-  - : A server-specified quoted string that should be returned unchanged in the {{HTTPHeader("Authorization")}}. 
+  - : A server-specified quoted string that should be returned unchanged in the {{HTTPHeader("Authorization")}}.
     This is opaque to the client. The server is recommended to include Base64 or hexadecimal data.
 - **`stale`** {{optional_inline}}
   - : A case-insensitive flag indicating that the previous request from the client was rejected because the `nonce` used is too old (stale).

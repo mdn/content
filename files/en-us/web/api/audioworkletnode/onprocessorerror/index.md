@@ -28,7 +28,7 @@ throughout its lifetime.
 ## Syntax
 
 ```js
-audioWorkletNode.onprocessorerror = function() { ... };
+audioWorkletNode.onprocessorerror = function() { /* ... */ };
 ```
 
 ## Examples

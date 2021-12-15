@@ -16,7 +16,7 @@ operand is divided by a second operand. It always takes the sign of the dividend
 {{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}
 
 Note that while in most languages, ‘%’ is a remainder operator, in some (e.g. [Python,
-Perl](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages)) it is a modulo operator. 
+Perl](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages)) it is a modulo operator.
 For two values of the same sign, the two are equivalent, but
 when the dividend and divisor are of different signs, they give different results. To
 obtain a modulo in JavaScript, in place of `a % n`, use

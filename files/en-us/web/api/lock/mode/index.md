@@ -13,26 +13,17 @@ browser-compat: api.Lock.mode
 ---
 {{SeeCompatTable}}{{APIRef("Web Locks")}}
 
-The **`mode`** read-only property of
-the {{domxref("Lock")}} interface returns the access mode passed to
-{{domxref('LockManager.request()')}} when the lock was requested. The mode is either
-`"exclusive"` (the default) or `"shared"`.
+The **`mode`** read-only property of the {{domxref("Lock")}} interface returns the access mode passed to {{domxref('LockManager.request()')}} when the lock was requested.
+The mode is either `"exclusive"` (the default) or `"shared"`.
 
-## Syntax
-
-```js
-var mode = Lock.mode
-```
-
-### Value
+## Value
 
 One of `"exclusive"` or `"shared"`.
 
 ## Example
 
-The following examples show how the mode property is passed in the call
-to {{domxref('LockManager.request()')}}. `LockManager` is the object returned
-by {{domxref('navigator.locks')}}.
+The following examples show how the mode property is passed in the call to {{domxref('LockManager.request()')}}.
+`LockManager` is the object returned by {{domxref('navigator.locks')}}.
 
 ```js
 // Should show "exclusive" (the default)

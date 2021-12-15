@@ -17,7 +17,7 @@ The **`oncontentdelete`** property of the {{domxref("ServiceWorkerGlobalScope")}
 ## Syntax
 
 ```js
-ServiceWorkerGlobalScope.oncontentdelete = function(event) { ... };
+ServiceWorkerGlobalScope.oncontentdelete = function(event) { /* ... */ };
 ```
 
 ## Examples

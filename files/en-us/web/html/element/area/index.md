@@ -85,7 +85,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
       If the first and last coordinate pairs are not the same, the browser will add the last coordinate pair to close the polygon
 
     The values are numbers of CSS pixels.
-    
+
 
 - {{htmlattrdef("download")}}
   - : This attribute, if present, indicates that the author intends the hyperlink to be used for downloading a resource.

@@ -15,8 +15,10 @@ The **`onconnect`** event handler of the {{domxref("SerialPort")}} interface is 
 
 ## Syntax
 
-    SerialPort.onconnect = function(event);
-    SerialPort.addEventListener('connect', function(event));
+```js
+SerialPort.onconnect = function(event);
+SerialPort.addEventListener('connect', function(event));
+```
 
 ## Specifications
 

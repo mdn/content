@@ -20,7 +20,7 @@ is received by the {{domxref("NetworkInformation")}} object.
 ## Syntax
 
 ```js
-netInfo.onchange = function() { ... }
+netInfo.onchange = function() { /* ... */ }
 ```
 
 ## Examples

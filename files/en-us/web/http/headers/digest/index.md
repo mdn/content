@@ -43,7 +43,7 @@ Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>
 ## Directives
 
 - `<digest-algorithm>`
-  - : Digest algorithms are defined in [Digest Headers](https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers/). 
+  - : Digest algorithms are defined in [Digest Headers](https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers/).
     - Permitted digest algorithms values include: `unixsum`, `unixcksum`, `crc32c`, `sha-256` and `sha-512`, `id-sha-256`, `id-sha-512`
     - Deprecated algorithms values include: `md5`, `sha`, `adler32`.
 - `<digest-value>`

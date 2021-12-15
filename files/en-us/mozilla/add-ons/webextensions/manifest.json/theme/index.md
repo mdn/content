@@ -816,7 +816,7 @@ All these properties can be specified as either a string containing any valid [C
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Ensure the color used contrasts well with
-            those used in <code>tab_selected</code> or <code>frame</code> and 
+            those used in <code>tab_selected</code> or <code>frame</code> and
             <code>frame_inactive</code>.
           </p>
         </div>
@@ -910,7 +910,7 @@ All these properties can be specified as either a string containing any valid [C
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Ensure the color used contrasts well with
-            those used in <code>tab_selected</code> or <code>frame</code> and 
+            those used in <code>tab_selected</code> or <code>frame</code> and
             <code>frame_inactive</code>.
           </p>
         </div>

@@ -17,7 +17,7 @@ The **`oninstall`** property of the {{domxref("ServiceWorkerGlobalScope")}} inte
 ## Syntax
 
 ```js
-self.oninstall = function(event) { ... };
+self.oninstall = function(event) { /* ... */ };
 ```
 
 ## Examples

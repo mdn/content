@@ -357,7 +357,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
 ### Icon size limits
 
 While the specification does not limit the `cursor` image size, {{Glossary("user agent", "user agents")}} commonly restrict them to avoid potential misuse.
-For example, on Firefox and Chromimum cursor images are restricted to 32x32 pixels by default, and cursor changes using larger images will generally just be ignored.
+For example, on Firefox and Chromium cursor images are restricted to 32x32 pixels by default, and cursor changes using larger images will generally just be ignored.
 
 Check the {{anch("Browser compatibility")}} table for any notes on cursor size limits.
 

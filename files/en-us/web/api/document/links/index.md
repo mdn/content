@@ -15,7 +15,9 @@ The **`links`** read-only property of the {{domxref("Document")}} interface retu
 
 ## Syntax
 
-    nodeList = document.links
+```js
+nodeList = document.links
+```
 
 ### Value
 

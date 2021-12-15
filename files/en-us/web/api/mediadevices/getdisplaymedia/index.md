@@ -41,10 +41,13 @@ var promise = navigator.mediaDevices.getDisplayMedia(constraints);
 ### Parameters
 
 - `constraints` {{optional_inline}}
-  - : An optional {{domxref("MediaStreamConstraints")}} object specifying requirements for
+  - : An optional object specifying requirements for
     the returned {{domxref("MediaStream")}}. Since `getDisplayMedia()` requires
     a video track, the returned stream will have one even if no video track is expressly
-    requested by the `constraints` object.
+    requested by the `constraints` object. For more details, see the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters)
+    section under the {{domxref("MediaDevices.getUserMedia()")}} method, as well
+    as the article [Capabilities,
+    constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
 
 ### Return value
 
@@ -108,8 +111,7 @@ details measures browsers are required to take in order to fully support
 
 In the example below, a `startCapture()` method is created which initiates
 screen capture given a set of options specified by the `displayMediaOptions`
-parameter. The options are specified in the form of a
-{{domxref("MediaStreamConstraints")}} object which specifies the preferred stream
+parameter. The options are specified in an object which specifies the preferred stream
 configuration and the [display
 surface](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture#visible_vs_logical_display_surfaces) from which video is to be captured.
 

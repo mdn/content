@@ -44,7 +44,7 @@ All the configuration required to include the admin application in your website 
 
 After registering the models we'll show how to create a new "superuser", login to the site, and create some books, authors, book instances, and genres. These will be useful for testing the views and templates we'll start creating in the next tutorial.
 
-## Registering models 
+## Registering models
 
 First, open **admin.py** in the catalog application (**/locallibrary/catalog/admin.py**). It currently looks like this — note that it already imports `django.contrib.admin`:
 

@@ -15,7 +15,7 @@ The **`section` role**, an abstract role, is superclass role for renderable stru
 
 ## Description
 
-The structural `section` role is an abstract role for categorizing all the section subclass roles. The role must not be used. Some subclasses, like [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role), 
+The structural `section` role is an abstract role for categorizing all the section subclass roles. The role must not be used. Some subclasses, like [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role),
 [`note`](/en-US/docs/Web/Accessibility/ARIA/Roles/note_role), and [`tooltip`](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role), are useful, and can be used to add semantics when no semantic HTML elements quite fits the purpose of a component. Others, like [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/code_role), [`figure`](/en-US/docs/Web/Accessibility/ARIA/Roles/figure_role), and [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/subscript_role), aren't necessary, as there are HTML element equivalents. In this case, {{HTMLElement('code')}} {{HTMLElement('figure')}} and {{HTMLElement('subscript')}}, respectively.
 
 ## Best Practices

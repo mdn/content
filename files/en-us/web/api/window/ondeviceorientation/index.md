@@ -19,8 +19,8 @@ information about a relative device orientation change.
 ## Syntax
 
 ```js
-window.ondeviceorientation = function(event) { ... };
-window.addEventListener('deviceorientation', function(event) { ... });
+window.ondeviceorientation = function(event) { /* ... */ };
+window.addEventListener('deviceorientation', function(event) { /* ... */ });
 ```
 
 ## Specifications

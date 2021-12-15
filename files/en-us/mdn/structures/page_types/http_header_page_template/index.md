@@ -18,7 +18,7 @@ browser-compat: path.to.feature.NameOfTheHeader
 >
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular header.
-> 
+>
 > ```
 > ---
 > title: NameOfTheHeader
@@ -36,9 +36,9 @@ browser-compat: path.to.feature.NameOfTheHeader
 > ---
 > ```
 > - **title**
->   - : Title heading displayed at top of page. Format as _NameOfTheHeader_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header has a _title_ of `Cache-Control`. 
+>   - : Title heading displayed at top of page. Format as _NameOfTheHeader_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header has a _title_ of `Cache-Control`.
 > - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/HTTP/Headers/NameOfTheHeader`. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) slug is `Web/HTTP/Headers/Cache-Control`. 
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/HTTP/Headers/NameOfTheHeader`. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) slug is `Web/HTTP/Headers/Cache-Control`.
 > - **tags**
 >   - : Always include the following tags: **HTTP**, **Reference**, **HTTP Header**, _NameOfTheHeader_ (e.g. **Cache-Control**).
 >

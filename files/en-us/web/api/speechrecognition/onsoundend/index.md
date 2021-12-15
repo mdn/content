@@ -24,7 +24,7 @@ event fires.)
 ## Syntax
 
 ```js
-mySpeechRecognition.onsoundend = function() { ... };
+mySpeechRecognition.onsoundend = function() { /* ... */ };
 ```
 
 ## Examples

@@ -15,8 +15,10 @@ The **`ondisconnect`** event handler of the {{domxref("SerialPort")}} interface 
 
 ## Syntax
 
-    SerialPort.ondisconnect = function(event);
-    SerialPort.addEventListener('disconnect', function(event));
+```js
+SerialPort.ondisconnect = function(event);
+SerialPort.addEventListener('disconnect', function(event));
+```
 
 ## Specifications
 

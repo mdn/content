@@ -59,11 +59,11 @@ console.log(win1251decoder.decode(bytes)); // Привет, мир!
 _The `TextDecoder` interface doesn't inherit any properties._
 
 - {{DOMxRef("TextDecoder.prototype.encoding")}}{{ReadOnlyInline}}
-  - : Is a {{DOMxRef("DOMString")}} containing the name of the decoder, that is a string describing the method the `TextDecoder` will use.
+  - : A {{DOMxRef("DOMString")}} containing the name of the decoder, that is a string describing the method the `TextDecoder` will use.
 - {{DOMxRef("TextDecoder.prototype.fatal")}}{{ReadOnlyInline}}
-  - : Is a {{jsxref('Boolean')}} indicating whether the error mode is fatal.
+  - : A {{jsxref('Boolean')}} indicating whether the error mode is fatal.
 - {{DOMxRef("TextDecoder.prototype.ignoreBOM")}}{{ReadOnlyInline}}
-  - : Is a {{jsxref('Boolean')}} indicating whether the byte order marker is ignored.
+  - : A {{jsxref('Boolean')}} indicating whether the [byte order mark](https://www.w3.org/International/questions/qa-byte-order-mark) is ignored.
 
 ## Methods
 
@@ -83,7 +83,5 @@ _The `TextDecoder` interface doesn't inherit any method_.
 ## See also
 
 - The {{DOMxRef("TextEncoder")}} interface describing the inverse operation.
-- [`StringView`](/en-US/docs/Mozilla/Add-ons/Code_snippets/StringView) – a C-like representation of strings based on typed arrays
-- A [shim](http://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it.
-- [`Components.utils.importGlobalProperties`](/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.importGlobalProperties)
+- A [shim](https://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it.
 - [Node.js supports global export from v11.0.0](https://nodejs.org/api/util.html#util_class_util_textdecoder)

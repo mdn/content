@@ -22,7 +22,7 @@ the {{event("error_(SpeechSynthesis)", "error")}} event fires.)
 ## Syntax
 
 ```js
-speechSynthesisUtteranceInstance.onerror = function() { ... };
+speechSynthesisUtteranceInstance.onerror = function() { /* ... */ };
 ```
 
 ## Examples

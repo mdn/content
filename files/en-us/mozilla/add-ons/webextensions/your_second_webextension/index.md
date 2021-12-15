@@ -6,7 +6,7 @@ tags:
 ---
 {{AddonSidebar}}
 
-If you've been through the [Your first extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) article, you've already got an idea of how to write an extension. In this article, we'll write a slightly more complex extension that demonstrates a few more of the APIs.
+If you've been through the [Your first extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) article, you've already got an idea of how to write an extension. In this article, you'll write a slightly more complex extension that demonstrates a few more of the APIs.
 
 The extension adds a new button to the Firefox toolbar. When the user clicks the button, we display a popup enabling them to choose an animal. Once they choose an animal, we'll replace the current page's content with a picture of the chosen animal.
 
@@ -37,8 +37,6 @@ It's a simple extension, but shows many of the basic concepts of the WebExtensio
 - packaging resources with your extension that can be used by web pages
 
 You can find [complete source code for the extension on GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify).
-
-To write this extension, you'll need Firefox 45 or newer.
 
 ## Writing the extension
 
@@ -433,15 +431,13 @@ First, double check that you have the right files in the right places:
 
         manifest.json
 
-Starting in Firefox 45, you can install extensions temporarily from disk.
+Now load the extension as a temporary add-on. Open "about:debugging" in Firefox, click "Load Temporary Add-on", and select your **manifest.json** file. You should then see the extension's icon appear in the Firefox toolbar:
 
-Open "about:debugging" in Firefox, click "Load Temporary Add-on", and select your manifest.json file. You should then see the extension's icon appear in the Firefox toolbar:
+![The beastify icon in the Firefox toolbar](beastify_icon.png)
 
-{{EmbedYouTube("sAM78GU4P34")}}
+Open a web page, click the icon, select a beast, and see the web page change:
 
-Open a web page, then click the icon, select a beast, and see the web page change:
-
-{{EmbedYouTube("YMQXyAQSiE8")}}
+![A page replaced with the image of a turtle](beastify_page.png)
 
 ## Developing from the command line
 

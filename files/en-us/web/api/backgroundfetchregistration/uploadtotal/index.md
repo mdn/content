@@ -15,7 +15,9 @@ The **`uploadTotal`** read-only property of the {{domxref("BackgroundFetchRegist
 
 ## Syntax
 
-    let uploadTotal = BackgroundFetchRegistration.uploadTotal;
+```js
+let uploadTotal = BackgroundFetchRegistration.uploadTotal;
+```
 
 ### Value
 

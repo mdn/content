@@ -15,7 +15,9 @@ The **`markerHeight`** read-only property of the {{domxref("SVGMarkerElement")}}
 
 ## Syntax
 
-    let height = SVGMarkerElement.markerHeight;
+```js
+let height = SVGMarkerElement.markerHeight;
+```
 
 ### Value
 

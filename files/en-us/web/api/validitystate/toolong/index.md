@@ -24,5 +24,5 @@ The read-only **`tooLong`** property of a **[`ValidityState`](/en-US/docs/Web/AP
 
 ## See also
 
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
 - [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)

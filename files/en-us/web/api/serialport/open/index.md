@@ -15,7 +15,9 @@ The **`open()`** method of the {{domxref("SerialPort")}} interface returns a {{j
 
 ## Syntax
 
-    var promise = SerialPort.open(options);
+```js
+var promise = SerialPort.open(options);
+```
 
 ### Parameters
 

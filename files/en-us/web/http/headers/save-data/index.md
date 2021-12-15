@@ -120,7 +120,7 @@ Content-Type: image/jpeg
 - [Delivering Fast and Light Applications with Save-Data - Google Developers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/save-data/)
 - {{HTTPHeader("Vary")}} header which indicate that the content served varies by `Save-Data` (see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses))
 - CSS @media feature [`prefers-reduced-data`](/en-US/docs/Web/CSS/@media/prefers-reduced-data) {{experimental_inline}}
-- [Adapting to Users with Client Hints](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints) (developer.google.com)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
 - Network client hints
 
   - {{HTTPHeader("Downlink")}}

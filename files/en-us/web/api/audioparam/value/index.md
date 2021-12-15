@@ -78,7 +78,7 @@ addition to processing audio buffers, each render quantum updates the `value`
 of each `AudioParam` as needed given the current time and any established
 time-based parameter value changes.
 
-Upon first creating the parameter, its value is set to its default value, given by 
+Upon first creating the parameter, its value is set to its default value, given by
 {{domxref("AudioParam.defaultValue")}}. This is the parameter's value at a time of 0.0
 seconds, and will remain the parameter's value until the first render quantum in which
 the value is altered.

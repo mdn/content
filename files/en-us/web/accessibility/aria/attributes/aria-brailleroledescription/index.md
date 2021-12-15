@@ -9,7 +9,7 @@ tags:
   - aria-brailleroledescription
 ---
 
-The global `aria-brailleroledescription` attribute defines a human-readable, author-localized abbreviated description for the role of an element, which is intended to be converted into Braille. 
+The global `aria-brailleroledescription` attribute defines a human-readable, author-localized abbreviated description for the role of an element, which is intended to be converted into Braille.
 
 ## Description
 
@@ -22,13 +22,13 @@ Braille is not a one-to-one transliteration of letters and numbers, but rather i
 </article>
 ```
 
-Most assistive technologies, like screen readers, will read the above as "slide, welcome to by talk. Image, Me." Braille assistive technologies will present "sld welcome to my talk gra me" in Braille. The semantic {{HTMLElement('article')}} is given the role of "slide" by the `aria-roledescription` attribute; "slide" being a role not defined in the specification, but is a common role for slides in a presentation. In Braille, the role is presented as "sld". The "gra" is short for "graphic", which is how the "image" role is shortened in Braille. 
+Most assistive technologies, like screen readers, will read the above as "slide, welcome to by talk. Image, Me." Braille assistive technologies will present "sld welcome to my talk gra me" in Braille. The semantic {{HTMLElement('article')}} is given the role of "slide" by the `aria-roledescription` attribute; "slide" being a role not defined in the specification, but is a common role for slides in a presentation. In Braille, the role is presented as "sld". The "gra" is short for "graphic", which is how the "image" role is shortened in Braille.
 
-Only use of `aria-brailleroledescription` to clarify the purpose of non-interactive container roles like group or region, or to providing a more specific description of a widget in a braille context. As the `aria-brailleroledescription` property overrides how assistive technologies localize and express the name of a role in Braille, inappropriate values will prevent users from understanding and interacting with an element on braille interfaces. 
+Only use of `aria-brailleroledescription` to clarify the purpose of non-interactive container roles like group or region, or to providing a more specific description of a widget in a braille context. As the `aria-brailleroledescription` property overrides how assistive technologies localize and express the name of a role in Braille, inappropriate values will prevent users from understanding and interacting with an element on braille interfaces.
 
 Only use `aria-brailleroledescription` if the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) is present; but if the `aria-roledescription` value works in Braille, the Braille version of the attribute is not needed. In general, `aria-brailleroledescription` should only be used in the rare case when a `aria-roledescription` is too verbose for Braille.
 
-A few rules to remember: 
+A few rules to remember:
 
 - Only apply `aria-brailleroledescription` to elements with a valid ARIA role or has with implicit role semantics.
 - The `aria-brailleroledescription`, if present, must have a non-empty, none null value that is different from the `aria-roledescription` value, which, in turn, is different from the ARIA explicit or role or implicit semantic role.
@@ -51,7 +51,7 @@ The `aria-brailleroledescription` value will not be exposed to the braille user 
 
 ## Associated roles
 
-Used in **ALL** roles (except [`generic`](/en-US/docs/Web/Accessibility/ARIA/roles/generic_role)). 
+Used in **ALL** roles (except [`generic`](/en-US/docs/Web/Accessibility/ARIA/roles/generic_role)).
 
 ## Specifications
 

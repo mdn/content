@@ -278,7 +278,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     > **Note:** This attribute is considered obsolete by the WHATWG HTML living standard (which is the specification MDN treats as canonical).
     > However, it's worth noting that `rev` is _not_ considered obsolete in the W3C specification.
     > That said, given the uncertainty, relying on `rev` is unwise.
-    
+
     > **Note:** Instead, you should use the {{HTMLAttrxRef("rel", "link")}} attribute with the opposite [link type value](/en-US/docs/Web/HTML/Link_types).
     > For example, to establish the reverse link for `made`, specify `author`. Also this attribute doesn't stand for "revision" and must not be used with a version number, even though many sites misuse it in this way.
 

@@ -17,7 +17,9 @@ Returns the Y coordinate of the touch point relative to the screen, not includin
 
 ## Syntax
 
-    var y = touchItem.screenY;
+```js
+var y = touchItem.screenY;
+```
 
 ### Return value
 

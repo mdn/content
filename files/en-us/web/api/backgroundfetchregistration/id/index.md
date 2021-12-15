@@ -15,7 +15,9 @@ The **`id`** read-only property of the {{domxref("BackgroundFetchRegistration")}
 
 ## Syntax
 
-    let id = BackgroundFetchRegistration.id;
+```js
+let id = BackgroundFetchRegistration.id;
+```
 
 ### Value
 

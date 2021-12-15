@@ -59,7 +59,7 @@ mutationObserver.observe(target, options)
       - : An array of specific attribute names to be monitored.
         If this property isn't included, changes to all attributes cause mutation notifications.
     - `attributeOldValue` {{optional_inline}}
-      - : Set to `true` to record the previous value of any attribute that changes when monitoring the node or nodes for attribute changes; 
+      - : Set to `true` to record the previous value of any attribute that changes when monitoring the node or nodes for attribute changes;
         see {{SectionOnPage("/en-US/docs/Web/API/MutationObserver", "Monitoring attribute values")}} for details on watching for attribute changes and value recording.
         The default value is `false`.
     - `characterData` {{optional_inline}}
@@ -79,7 +79,7 @@ mutationObserver.observe(target, options)
 
   - : Thrown in any of the following circumstances:
 
-    - The `options` are configured such that nothing will actually be monitored. 
+    - The `options` are configured such that nothing will actually be monitored.
       (For example, if `childList`, `attributes`, and `characterData` are all `false`.)
     - The value of `options.attributes` is `false` (indicating that attribute changes are not to be monitored), but `attributeOldValue` is `true` and/or
       `attributeFilter` is present.

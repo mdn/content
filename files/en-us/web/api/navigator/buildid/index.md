@@ -15,7 +15,9 @@ Returns the build identifier of the browser. In modern browsers this property no
 
 ## Syntax
 
-    buildID = navigator.buildID;
+```js
+buildID = navigator.buildID;
+```
 
 ### Value
 

@@ -51,7 +51,7 @@ The resulting object has the following properties:
     present, or "`standard`" filled in as a default.
 - `compactDisplay`
   - : The value provided for this property in the `options` argument, or
-    "`short`" filled in as a default. 
+    "`short`" filled in as a default.
     This property is only present if the `notation` is set to "compact".
 - `signDisplay`
   - : The value provided for this property in the `options` argument, or

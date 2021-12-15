@@ -45,14 +45,6 @@ If the `radix` is smaller than `2` or bigger than
 `36`, or the first non-whitespace character cannot be converted to a number,
 {{jsxref("NaN")}} is returned.
 
-## Polyfill
-
-```js
-if (Number.parseInt === undefined) {
-    Number.parseInt = window.parseInt
-}
-```
-
 ## Examples
 
 ### Number.parseInt vs parseInt

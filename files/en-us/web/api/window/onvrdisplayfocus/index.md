@@ -29,7 +29,7 @@ The event object is of type {{domxref("VRDisplayEvent")}}.
 ## Syntax
 
 ```js
-window.onvrdisplayfocus = function() { ... };
+window.onvrdisplayfocus = function() { /* ... */ };
 ```
 
 ## Examples

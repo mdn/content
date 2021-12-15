@@ -26,7 +26,7 @@ returns an error and bubbles up to the connection object.
 ## Syntax
 
 ```js
-IDBDatabase.onerror = function(event) { ... }
+IDBDatabase.onerror = function(event) { /* ... */ }
 ```
 
 ## Example

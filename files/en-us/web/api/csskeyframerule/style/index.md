@@ -16,7 +16,9 @@ The read-only **`CSSKeyframeRule.style`** property is the {{ domxref("CSSStyleDe
 
 ## Syntax
 
-    styleObj = cssKeyframeRule.style
+```js
+styleObj = cssKeyframeRule.style
+```
 
 ### Value
 

@@ -16,7 +16,7 @@ The `aria-level` attribute defines the hierarchical level of an element within a
 
 Levels of hierarchy appear in headings, trees, nested grid, nested tablists, and more. If the DOM ancestry does not accurately represent the level, the `aria-level` attribute should be used to define the hierarchical level elements within their hierarchical structures. Levels increase with depth. The value for aria-level is an integer greater than or equal to `1`.
 
-When it comes to the headings in a document structure, you can have first-level headings, second-level headings, third-level headings, etc. In trees, you have the root element, its children, the children's children (or grandchildren), and so on. 
+When it comes to the headings in a document structure, you can have first-level headings, second-level headings, third-level headings, etc. In trees, you have the root element, its children, the children's children (or grandchildren), and so on.
 
 The `aria-level` attribute exposes hierarchy to assistive technologies so it can be communicated to the users. Like all ARIA attributes, it has no impact on the user agent and therefore no impact on the user agent's determination of the document structure.
 
@@ -42,7 +42,7 @@ If a complete set of available nodes is not present in the DOM due to dynamic lo
 - `<integer>`
   - : An integer greater than or equal to 1
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaLevel")}}
   - : The  [`ariaLevel`](/en-US/docs/Web/API/Element/ariaLevel) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-level` attribute.
@@ -51,7 +51,7 @@ If a complete set of available nodes is not present in the DOM due to dynamic lo
 
 ## Associated roles
 
-Used in roles: 
+Used in roles:
 
 - [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/associationlistitemkey_role)
 - [`comment`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role)
@@ -60,7 +60,7 @@ Used in roles:
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-level","ARIA: aria-level Attribute")}}  | {{Spec2('ARIA')}} |
 

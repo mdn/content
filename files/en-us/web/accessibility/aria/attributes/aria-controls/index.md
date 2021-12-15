@@ -13,14 +13,14 @@ The global `aria-controls` property identifies the element (or elements) whose c
 
 ## Description
 
-When an interactive or input control, be it a checkbox, radio button, tab panel, icon, toggles, or other, has an impact on another element in a document or application, the `aria-control` attributes should be included to indicate which element or elements the user interface widget controls. The `aria-controls` attribute identifies the element (or elements) whose contents or presence are controlled by the element on which the attribute is set, regardless of what type of interaction initiates the impacted behavior. 
+When an interactive or input control, be it a checkbox, radio button, tab panel, icon, toggles, or other, has an impact on another element in a document or application, the `aria-control` attributes should be included to indicate which element or elements the user interface widget controls. The `aria-controls` attribute identifies the element (or elements) whose contents or presence are controlled by the element on which the attribute is set, regardless of what type of interaction initiates the impacted behavior.
 
 A [combobox](/en-US/docs/Web/Accessibility/ARIA/Roles/Combobox_role) element has `aria-controls` set to a value that refers to the element that serves as the popup. The `aria-controls` only needs to be set when the popup is visible, but it is valid and easier to program to reference an element that is not visible.
 
 Other examples of controls include:
 
  - An accordion header button toggling the visibility of the accordion panel's content: the accordion header button would have `aria-controls` set to the ID of the element containing the accordion panel content.
- - A link with an icon that shows and hides a menu: the link would have `aria-controls` set to the ID of the element containing the menu. 
+ - A link with an icon that shows and hides a menu: the link would have `aria-controls` set to the ID of the element containing the menu.
  - A group of tabs that each display a different tabpanels: each element with [`role="tab"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role) has the property `aria-controls` referring to its associated [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_role).
 
 ## Example
@@ -62,18 +62,18 @@ In this tabs example, each tab controls one tabpanel:
  - `id` list
    - : Space seperated list of one or more ID values referencing the elements being controlled by the current element
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaBusy")}}
   - : The  [`ariaControls`](/en-US/docs/Web/API/Element/ariaBusy) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-controls` attribute, which indicates whether an element is being modified.
 
 ## Associated roles
 
-Used in **ALL** roles. 
+Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-controls","ARIA: aria-controls Attribute")}}  | {{Spec2('ARIA')}} |
 
