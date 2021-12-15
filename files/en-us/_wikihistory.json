@@ -84825,48 +84825,6 @@
       "louisremi"
     ]
   },
-  "Web/API/WebSocket/onclose": {
-    "modified": "2019-03-18T21:30:48.482Z",
-    "contributors": [
-      "vapier",
-      "sideshowbarker",
-      "Claas"
-    ]
-  },
-  "Web/API/WebSocket/onerror": {
-    "modified": "2020-10-15T22:06:58.115Z",
-    "contributors": [
-      "mfuji09",
-      "Sheppy",
-      "vapier",
-      "sideshowbarker",
-      "fscholz",
-      "Claas"
-    ]
-  },
-  "Web/API/WebSocket/onmessage": {
-    "modified": "2020-10-15T22:06:57.266Z",
-    "contributors": [
-      "mfuji09",
-      "nazaninreihani",
-      "slimeball",
-      "vapier",
-      "sideshowbarker",
-      "fscholz",
-      "Claas"
-    ]
-  },
-  "Web/API/WebSocket/onopen": {
-    "modified": "2020-10-15T22:06:57.373Z",
-    "contributors": [
-      "Mr.Chenzm",
-      "mfuji09",
-      "vapier",
-      "sideshowbarker",
-      "fscholz",
-      "Claas"
-    ]
-  },
   "Web/API/WebSocket/open_event": {
     "modified": "2020-10-15T21:20:35.753Z",
     "contributors": [
