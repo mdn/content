@@ -20,6 +20,5 @@ tags:
  <li><a href="/en-US/docs/Web/Security#clickjacking_protection">Clickjacking</a></li>
  <li><a href="https://en.wikipedia.org/wiki/Clickjacking">Clickjacking</a>on Wikipedia</li>
  <li><a href="https://owasp.org/www-community/attacks/Clickjacking">Clickjacking</a> on OWASP</li>
- <li><a href="https://www.getastra.com/blog/knowledge-base/clickjacking-all-you-need-to-know/#Example_of_Clickjacking_in_Action">Example of Clickjacking in action</a></li>
  <li><a href="https://portswigger.net/web-security/clickjacking">Clickjacking (UI redressing)</a> on PortSwigger Web Security Academy</li>
 </ul>
