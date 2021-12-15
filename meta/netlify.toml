@@ -1,10 +1,6 @@
 [build]
   publish = "public"
-<<<<<<< HEAD
   command = "yarn build"
 
 [build.environment]
   NETLIFY_USE_YARN = true
-=======
-  command = "hugo"
->>>>>>> e522c720f6 (Add initial meta site config)
