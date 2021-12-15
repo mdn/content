@@ -21,7 +21,7 @@ only JavaScript operator that takes three operands: a condition followed by a
 question mark (`?`), then an expression to execute if the condition is
 {{Glossary("truthy")}} followed by a colon (`:`), and finally the
 expression to execute if the condition is {{Glossary("falsy")}}. This
-operator is frequently used as a shortcut for the [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+operator is frequently used as alternative to an [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 statement.
 
 {{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}
