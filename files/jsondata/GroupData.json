@@ -682,7 +682,6 @@
         "PortCollection",
         "PromiseRejectionEvent",
         "RadioNodeList",
-        "Transferable",
         "ValidityState",
         "Window",
         "WindowBase64",
