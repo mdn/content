@@ -1730,6 +1730,9 @@
     },
     "Web Crypto API": {
       "overview": ["Web Crypto API"],
+      "guides": [
+        "/docs/Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto"
+      ],
       "interfaces": ["Crypto", "CryptoKey", "SubtleCrypto"],
       "methods": [],
       "properties": ["Window.crypto"],
