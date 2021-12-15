@@ -49,8 +49,6 @@ The techniques below describe each composite role as well as their required and 
    - [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
    - [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
 
-
-
 ### Document structure roles
 
    - [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/Application_Role)
@@ -80,8 +78,6 @@ The techniques below describe each composite role as well as their required and 
    - [`toolbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
    - [`tooltip`](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role)
 
-
-
 ### Landmark roles
 
    - [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role)
@@ -93,8 +89,6 @@ The techniques below describe each composite role as well as their required and 
    - [`region`](/en-US/docs/Web/Accessibility/ARIA/Roles/Region_role)
    - [`search`](/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role)
 
-
-
 ### Live Region Roles
 
    - [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/Alert_Role)
@@ -103,11 +97,9 @@ The techniques below describe each composite role as well as their required and 
    - [`status`](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
    - [`timer`](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
 
-
-
 ### Window Roles
 
-   - [`/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role">alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
+   - [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
    - [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 
 
@@ -153,11 +145,10 @@ The techniques below describe each composite role as well as their required and 
 
 ### Drag &amp; drop attributes
 
-- [`aria-dropeffect`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
-- [`aria-dragged`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-dragged)
-
+- [`aria-dropeffect`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect) {{deprecated_inline}}
+- [`aria-grabbed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed) {{deprecated_inline}}
+ 
 ### Relationship attributes
-
 
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
 - [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
