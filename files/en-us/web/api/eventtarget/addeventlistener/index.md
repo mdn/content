@@ -44,9 +44,9 @@ such as during the bubbling phase.
 ## Syntax
 
 ```js
-target.addEventListener(type, listener);
-target.addEventListener(type, listener, options);
-target.addEventListener(type, listener, useCapture);
+addEventListener(type, listener);
+addEventListener(type, listener, options);
+addEventListener(type, listener, useCapture);
 ```
 
 ### Parameters
