@@ -61,11 +61,15 @@ var notification = new Notification(title, options);
     - `requireInteraction`: Indicates that a notification should remain
       active until the user clicks or dismisses it, rather than closing automatically.
       The default value is `false`.
-    - `actions`: An array of {{domxref("NotificationAction")}}s
-      representing the actions available to the user when the notification is presented.
-      These are options the user can choose among in order to act on the action within
-      the context of the notification itself. The action's name is sent to the service
-      worker notification handler to let it know the action was selected by the user.
+    - `actions`: An array of actions to display in the notification. Each element in the array is an object with the following members:
+
+      - `action`: A {{domxref("DOMString")}} identifying a user action to be displayed on the notification.
+      - `title`: A {{domxref("DOMString")}} containing action text to be shown to the user.
+      - `icon`: A {{domxref("USVString")}} containing the URL of an icon to display with the action.
+
+      Appropriate responses are built using `event.action` within the
+      {{event("notificationclick")}} event.
+
     - `silent`: A boolean value specifying whether the
       notification is silent (no sounds or vibrations issued), regardless of the device
       settings. The default is `false`, which means it won't be silent.

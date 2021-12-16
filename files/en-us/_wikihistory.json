@@ -64568,12 +64568,6 @@
       "rolfedh"
     ]
   },
-  "Web/API/NotificationAction": {
-    "modified": "2020-10-15T22:21:29.272Z",
-    "contributors": [
-      "NotWoods"
-    ]
-  },
   "Web/API/NotificationEvent": {
     "modified": "2020-10-15T21:36:47.781Z",
     "contributors": [

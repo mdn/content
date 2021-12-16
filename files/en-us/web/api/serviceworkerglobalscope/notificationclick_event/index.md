@@ -85,6 +85,40 @@ self.onnotificationclick = function(event) {
 };
 ```
 
+You can handle event actions using `event.action` within a {{event("notificationclick")}} event handler:
+
+```js
+navigator.serviceWorker.register('sw.js');
+Notification.requestPermission(function(result) {
+  if (result === 'granted') {
+    navigator.serviceWorker.ready.then(function(registration) {
+      // Show a notification that includes an action titled Archive.
+      registration.showNotification('New mail from Alice',
+        {
+          actions: [
+            {
+              action: 'archive',
+              title: 'Archive'
+            }
+          ]
+        }
+      )
+    });
+  }
+});
+
+self.addEventListener('notificationclick', function(event) {
+  event.notification.close();
+  if (event.action === 'archive') {
+    // User selected the Archive action.
+    archiveEmail();
+  } else {
+    // User selected (e.g., clicked in) the main body of notification.
+    clients.openWindow('/inbox');
+  }
+}, false);
+```
+
 ## Specifications
 
 {{Specifications}}
