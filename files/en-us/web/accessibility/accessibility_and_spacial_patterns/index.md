@@ -35,7 +35,7 @@ In 2005, Arnold Wilkins, John Emmett, and Graham Harding evaluated the guideline
 >
 > * If so, does the brightness exceed the stated limit?
 >
-> * If so, categorize the motion of the pattern
+> * If so, categorize the motion of the pattern.
 >
 > * Are the guidelines contravened?
 >
