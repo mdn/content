@@ -71,21 +71,21 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 ### Interfaces/APIs/DOM
 
 - A new type of workers, {{domxref("SharedWorker")}}, is now available by default ({{bug(924089)}}).
-- The {{domxref("HTMLHyperlinkElementUtils", "URLUtils")}} interface now supports the {{domxref("URLUtils.searchParams", "searchParams")}} property returning a {{domxref("URLSearchParams")}} object, allowing to modify the search params of an URL ({{bug(887836)}}). The {{domxref("URLSearchParams")}} constructor allows easier parsing of query strings.
+- The {{domxref("URL")}} interface now supports the {{domxref("URL.searchParams", "searchParams")}} property returning a {{domxref("URLSearchParams")}} object, allowing to modify the search params of an URL ({{bug(887836)}}). The {{domxref("URLSearchParams")}} constructor allows easier parsing of query strings.
 - The {{domxref("NavigatorOnLine.onLine")}} property is now supported on {{domxref("WorkerNavigator")}} , allowing to know the online/offline status in workers ({{bug(925437)}}).
-- As part of the implementation of Web Components, the {{domxref("HTMLShadowElement")}} interface has been implemented behind the `dom.webcomponents.enabled`. Flip it to `true` if you want to use it. ({{bug(887538)}}).
-- The read-only property {{domxref("HTMLIFrameElement.sandbox")}} is no longer a {{domxref("string")}} but an {{domxref("HTMLSettableToken")}} ({{bug(845057)}}).
+- As part of the implementation of Web Components, the {{domxref("HTMLShadowElement")}} interface has been implemented behind the `dom.webcomponents.enabled`. Flip it to `true` if you want to use it. ({{bug(887538)}})
+- The read-only property {{domxref("HTMLIFrameElement.sandbox")}} is no longer a {{domxref("DOMString")}} but a {{domxref("DOMTokenList")}} ({{bug(845057)}}).
 - On {{domxref("HTMLCanvasElement.getContext()")}}, the value `moz-webgl` is no longer supported. Use the standard `webgl` value ({{bug(913597)}}).
 - The constructor for {{domxref("ImageData")}} has been added. This interface can be used in a {{domxref("Worker")}}. ({{bug(959958)}})
 - The property {{domxref("URLUtilsReadOnly.origin", "location.origin")}} is now available in workers (via {{domxref("WorkerLocation")}}) ({{bug(964148)}}).
 - The {{domxref("ValidityState.badInput")}} property has been implemented ({{bug(827161)}}).
 - The deprecated `Window.pkcs11` property has been removed; it was returning `null` since Firefox 3.0.14. ({{bug(964964)}})
 - The {{domxref("Node.cloneNode()")}} and {{domxref("Document.importNode()")}} methods take the Boolean `deep` argument. Until now, if omitted, these methods acted as if the value of `deep` was `true`. But this behavior has been changed as per the latest spec, and if omitted, the methods will act as if the value was `false`. ({{bug(937461)}})
-- {{domxref("Window._content")}} is no longer available to Web content ({{bug(946564)}}).
+- `Window._content` is no longer available to Web content ({{bug(946564)}}).
 - {{domxref("HTMLAnchorElement/port", "URLUtils.port")}} behavior has been slightly changed: set to `''` will set it to the default port associated with the protocol, and `0` to `0.` ({{bug(930450)}})
 - {{domxref("Document.referrer")}} is now based on the incumbent script ({{bug(887928)}}).
 - The [Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API) is enabled by default ({{bug(878828)}}).
-- The {{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} method got renamed to {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} ({{bug(959820)}}).
+- The `CanvasRenderingContext2D.drawSystemFocusRing()` method got renamed to {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} ({{bug(959820)}}).
 
 ### MathML
 
@@ -101,10 +101,8 @@ _No change._
 
 ## Changes for add-on and Mozilla developers
 
-- [Australis and add-on compatibility](/en-US/docs/Mozilla/Firefox/Australis_add-on_compat) - This is a major Firefox theme change that affects most extensions that involving the Firefox user interface.
-- `nsISecurityCheckedComponent` has been removed ({{bug(794943)}}). Most consumers can remove nsISecurityCheckedComponent from their interface definition and they will continue to work.
-
-Non-Australis changes TBD.
+- Major Firefox theme changes affect most extensions that interact with the Firefox user interface.
+- `nsISecurityCheckedComponent` has been removed ({{bug(794943)}}). Most consumers can remove `nsISecurityCheckedComponent` from their interface definition and they will continue to work.
 
 ### Older versions
 
