@@ -31,12 +31,16 @@ The `screenshots` member defines an array of screenshots intended to showcase th
   {
     "src": "screenshot1.webp",
     "sizes": "1280x720",
-    "type": "image/webp"
+    "type": "image/webp",
+    "platform": "wide",
+    "label": "Homescreen of Awesome App"
   },
   {
     "src": "screenshot2.webp",
     "sizes": "1280x720",
-    "type": "image/webp"
+    "type": "image/webp",
+    "platform": "wide",
+    "label": "List of Awesome Resources available in Awesome App"
   }
 ]
 ```
