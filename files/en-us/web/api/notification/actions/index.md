@@ -19,7 +19,7 @@ The actions are set using the `actions` option of the second argument for the [`
 
 > **Note:** Browsers typically limit the maximum number of actions they will display for a particular notification. Check the static {{DOMxRef("Notification.maxActions")}} property to determine the limit.
 
-### Value
+## Value
 
 A read-only array of actions. Each element in the array is an object with the following members:
 
