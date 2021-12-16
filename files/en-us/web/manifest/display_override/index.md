@@ -36,7 +36,6 @@ Display override objects are display-mode strings, the possible values are:
     <tr>
       <th scope="col">Display Mode</th>
       <th scope="col">Description</th>
-      <th scope="col">Fallback Display Mode</th>
     </tr>
   </thead>
   <tbody>
@@ -46,7 +45,6 @@ Display override objects are display-mode strings, the possible values are:
         All of the available display area is used and no user agent
         {{Glossary("chrome")}} is shown.
       </td>
-      <td><code>standalone</code></td>
     </tr>
     <tr>
       <td><code>standalone</code></td>
@@ -57,7 +55,6 @@ Display override objects are display-mode strings, the possible values are:
         UI elements for controlling navigation, but can include other UI
         elements such as a status bar.
       </td>
-      <td><code>minimal-ui</code></td>
     </tr>
     <tr>
       <td><code>minimal-ui</code></td>
@@ -66,7 +63,6 @@ Display override objects are display-mode strings, the possible values are:
         will have a minimal set of UI elements for controlling navigation. The
         elements will vary by browser.
       </td>
-      <td><code>browser</code></td>
     </tr>
     <tr>
       <td><code>browser</code></td>
@@ -74,7 +70,17 @@ Display override objects are display-mode strings, the possible values are:
         The application opens in a conventional browser tab or new window,
         depending on the browser and platform. This is the default.
       </td>
-      <td>(None)</td>
+    </tr>
+    <tr>
+      <td><code>window-controls-overlay</code></td>
+      <td>
+        This display mode only applies when the application is in a separate PWA
+        window and on a desktop operating system. The application will opt-in to
+        the Window Controls Overlay feature, where the full window surface area
+        will be available for the app's web content and the window control buttons
+        (maximize, minimize, close, and other PWA-specific buttons) will appear
+        as an overlay above the web content.
+      </td>
     </tr>
   </tbody>
 </table>
@@ -101,3 +107,4 @@ In the example below, the browser will consider the following display-mode fallb
 ## See also
 
 - [Preparing for the display modes of tomorrow](https://web.dev/display-override/)
+- [Customize the window controls overlay of your PWA's title bar](https://web.dev/window-controls-overlay/)
