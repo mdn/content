@@ -56,7 +56,7 @@ Objects are allocated in a heap which is just a name to denote a large (mostly u
 
 ### Queue
 
-A JavaScript runtime uses a message queue, which is a list of messages to be processed. Each message has an associated function which gets called in order to handle the message.
+A JavaScript runtime uses a message queue, which is a list of messages to be processed. Each message has an associated function that gets called to handle the message.
 
 At some point during the [event loop](#event_loop), the runtime starts handling the messages on the queue, starting with the oldest one. To do so, the message is removed from the queue and its corresponding function is called with the message as an input parameter. As always, calling a function creates a new stack frame for that function's use.
 
@@ -86,20 +86,20 @@ A downside of this model is that if a message takes too long to complete, the we
 
 In web browsers, messages are added anytime an event occurs and there is an event listener attached to it. If there is no listener, the event is lost. So a click on an element with a click event handler will add a message—likewise with any other event.
 
-The function [`setTimeout`](/en-US/docs/Web/API/setTimeout) is called with 2 arguments: a message to add to the queue, and a time value (optional; defaults to `0`). The _time value_ represents the (minimum) delay after which the message will actually be pushed into the queue. If there is no other message in the queue, and the stack is empty, the message is processed right after the delay. However, if there are messages, the `setTimeout` message will have to wait for other messages to be processed. For this reason, the second argument indicates a _minimum_ time—not a _guaranteed_ time.
+The function [`setTimeout`](/en-US/docs/Web/API/setTimeout) is called with 2 arguments: a message to add to the queue, and a time value (optional; defaults to `0`). The _time value_ represents the (minimum) delay after which the message will be pushed into the queue. If there is no other message in the queue, and the stack is empty, the message is processed right after the delay. However, if there are messages, the `setTimeout` message will have to wait for other messages to be processed. For this reason, the second argument indicates a _minimum_ time—not a _guaranteed_ time.
 
 Here is an example that demonstrates this concept (`setTimeout` does not run immediately after its timer expires):
 
 ```js
-const s = new Date().getSeconds();
+const seconds = new Date().getSeconds();
 
 setTimeout(function() {
   // prints out "2", meaning that the callback is not called immediately after 500 milliseconds.
-  console.log("Ran after " + (new Date().getSeconds() - s) + " seconds");
+  console.log(`Ran after ${new Date().getSeconds() - seconds} seconds`);
 }, 500)
 
 while (true) {
-  if (new Date().getSeconds() - s >= 2) {
+  if (new Date().getSeconds() - seconds >= 2) {
     console.log("Good, looped for 2 seconds")
     break;
   }
@@ -108,11 +108,11 @@ while (true) {
 
 ### Zero delays
 
-Zero delay doesn't actually mean the call back will fire-off after zero milliseconds. Calling [`setTimeout`](/en-US/docs/Web/API/setTimeout) with a delay of `0` (zero) milliseconds doesn't execute the callback function after the given interval.
+Zero delay doesn't mean the call back will fire-off after zero milliseconds. Calling [`setTimeout`](/en-US/docs/Web/API/setTimeout) with a delay of `0` (zero) milliseconds doesn't execute the callback function after the given interval.
 
-The execution depends on the number of waiting tasks in the queue. In the example below, the message `''this is just a message''` will be written to the console before the message in the callback gets processed, because the delay is the _minimum_ time required for the runtime to process the request (not a _guaranteed_ time).
+The execution depends on the number of waiting tasks in the queue. In the example below, the message `"this is just a message"` will be written to the console before the message in the callback gets processed, because the delay is the _minimum_ time required for the runtime to process the request (not a _guaranteed_ time).
 
-Basically, the `setTimeout` needs to wait for all the code for queued messages to complete even though you specified a particular time limit for your `setTimeout`.
+The `setTimeout` needs to wait for all the code for queued messages to complete even though you specified a particular time limit for your `setTimeout`.
 
 ```js
 (function() {
@@ -148,7 +148,7 @@ A web worker or a cross-origin `iframe` has its own stack, heap, and message que
 
 A very interesting property of the event loop model is that JavaScript, unlike a lot of other languages, never blocks. Handling I/O is typically performed via events and callbacks, so when the application is waiting for an [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) query to return or an [XHR](/en-US/docs/Web/API/XMLHttpRequest) request to return, it can still process other things like user input.
 
-Legacy exceptions exist like `alert` or synchronous XHR, but it is considered a good practice to avoid them. Beware: [exceptions to the exception do exist](http://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311) (but are usually implementation bugs, rather than anything else).
+Legacy exceptions exist like `alert` or synchronous XHR, but it is considered good practice to avoid them. Beware: [exceptions to the exception do exist](http://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311) (but are usually implementation bugs, rather than anything else).
 
 ## See also
 
