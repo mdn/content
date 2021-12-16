@@ -12,7 +12,7 @@ browser-compat: css.selectors.nth-child
 ---
 {{CSSRef}}
 
-The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position in a group of siblings.
+The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among a group of siblings.
 
 ```css
 /* Selects the second <li> element in a list */
