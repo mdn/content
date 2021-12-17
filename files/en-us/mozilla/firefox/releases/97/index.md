@@ -54,6 +54,7 @@ This article provides information about the changes in Firefox 97 that will affe
 ## Changes for add-on developers
 
 - `cookieStoreId` in {{WebExtAPIRef("tabs.query")}} supports an array of strings. This enables queries to match tabs against more than one cookie store ID ({{bug(1730931)}}).
+- `cookieStoreId` added to {{WebExtAPIRef("contentScripts.register")}}. This enables extensions to register container-specific content scripts ({{bug(1470651)}}).
 
 #### Removals
 
