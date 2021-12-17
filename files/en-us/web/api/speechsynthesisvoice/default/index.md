@@ -3,7 +3,6 @@ title: SpeechSynthesisVoice.default
 slug: Web/API/SpeechSynthesisVoice/default
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesisVoice
@@ -13,7 +12,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisVoice.default
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`default`** read-only property of the
 {{domxref("SpeechSynthesisVoice")}} interface returns a boolean value
@@ -24,13 +23,7 @@ indicating whether the voice is the default voice for the current app
 > voice's language. The spec is not very clear on which it should be, so some
 > implementations may differ.
 
-## Syntax
-
-```js
-var amIDefault = speechSynthesisVoiceInstance.default;
-```
-
-### Value
+## Value
 
 A boolean value.
 
