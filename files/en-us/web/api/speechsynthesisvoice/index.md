@@ -3,7 +3,6 @@ title: SpeechSynthesisVoice
 slug: Web/API/SpeechSynthesisVoice
 tags:
   - API
-  - Experimental
   - Interface
   - Reference
   - SpeechSynthesisVoice
@@ -12,9 +11,10 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisVoice
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
-The **`SpeechSynthesisVoice`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a voice that the system supports. Every `SpeechSynthesisVoice` has its own relative speech service including information about language, name and URI.
+The **`SpeechSynthesisVoice`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a voice that the system supports.
+Every `SpeechSynthesisVoice` has its own relative speech service including information about language, name and URI.
 
 ## Properties
 
