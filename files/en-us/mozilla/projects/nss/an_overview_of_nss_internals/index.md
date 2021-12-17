@@ -11,7 +11,7 @@ tags:
 
 {{AddonSidebarMain}}
 
-A High-Level Overview to the Internals of [Network Security Services (NSS)](/en-US/docs/NSS)
+A High-Level Overview to the Internals of [Network Security Services (NSS)](/en-US/docs/Mozilla/Projects/NSS)
 
 Software developed by the Mozilla.org projects traditionally used its own implementation of security protocols and cryptographic algorithms, originally called Netscape Security Services, nowadays called Network Security Services (NSS). NSS is a library written in the C programming language. It's free and open source software, and many other software projects have decided to use it. In order to support multiple operating systems (OS), it is based on a cross platform portability layer, called the Netscape Portable Runtime (NSPR), which provides cross platform application programming interfaces (APIs) for OS specific APIs like file system access, memory management, network communication, and multithreaded programming.
 
