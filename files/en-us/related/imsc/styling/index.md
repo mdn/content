@@ -8,157 +8,156 @@ tags:
   - captions
   - subtitles
 ---
-<p>IMSC offers many options for styling documents, and most of the IMSC styling properties have direct CSS equivalents, making them familiar to web developers.  In this guide you'll learn a bit more about IMSC styling including the difference between inline and referential styling, and efficient styling using inheritance and region styling.</p>
+IMSC offers many options for styling documents, and most of the IMSC styling properties have direct CSS equivalents, making them familiar to web developers.  In this guide you'll learn a bit more about IMSC styling including the difference between inline and referential styling, and efficient styling using inheritance and region styling.
 
-<h2 id="Inline_styling">Inline styling</h2>
+## Inline styling
 
-<p>The simplest way of styling content elements like <code>&lt;p&gt;</code> or <code>&lt;span&gt;</code> is by specifying one or more style attributes, such as <code>tts:color</code>, on them. For instance, the following</p>
+The simplest way of styling content elements like `<p>` or `<span>` is by specifying one or more style attributes, such as `tts:color`, on them. For instance, the following
 
-<pre class="brush: xml">&lt;p tts:textAlign="center"
+```xml
+<p tts:textAlign="center"
    tts:fontSize="64px"
    tts:color="red"
    tts:fontFamily="proportionalSansSerif"
-   tts:fontStyle="italic"&gt;
+   tts:fontStyle="italic">
  Hello, I am Mork from Ork
-&lt;/p&gt;</pre>
+</p>
+```
 
-<p>yields:</p>
+yields:
 
-<p>{{EmbedGHLiveSample("imsc/inline-styles/inline-styles.html", '100%')}}</p>
+{{EmbedGHLiveSample("imsc/inline-styles/inline-styles.html", '100%')}}
 
-<h2 id="Referential_styling">Referential styling</h2>
+## Referential styling
 
-<p>Inline styling is usually avoided since it generates duplication.</p>
+Inline styling is usually avoided since it generates duplication.
 
-<p>Take for example the following two <code>&lt;span&gt;</code> elements, which have exactly the same style attributes:</p>
+Take for example the following two `<span>` elements, which have exactly the same style attributes:
 
-<pre class="brush: xml">&lt;p&gt;
-  &lt;span tts:color="yellow" tts:backgroundColor="black"&gt;
+```xml
+<p>
+  <span tts:color="yellow" tts:backgroundColor="black">
    Hello, I am Mork from Ork.
-  &lt;/span&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;span tts:color="yellow" tts:backgroundColor="black"&gt;
+  </span>
+</p>
+<p>
+  <span tts:color="yellow" tts:backgroundColor="black">
     I come from another planet.
-  &lt;/span&gt;
-&lt;/p&gt;
-</pre>
+  </span>
+</p>
+```
 
-<p>In referential styling, styles are defined once and reused throughout the document — in a similar way to how CSS rules can be declared once and then applied to multiple HTML elements via for example, element or class selectors. In IMSC this is achieved by defining a <code>&lt;styling&gt;</code> element inside the document <code>&lt;head&gt;</code>, inside which is placed one or more <code>&lt;style&gt;</code> elements — each one of which defines a set of styles that you can reuse elsewhere. This is illustrated below:</p>
+In referential styling, styles are defined once and reused throughout the document — in a similar way to how CSS rules can be declared once and then applied to multiple HTML elements via for example, element or class selectors. In IMSC this is achieved by defining a `<styling>` element inside the document `<head>`, inside which is placed one or more `<style>` elements — each one of which defines a set of styles that you can reuse elsewhere. This is illustrated below:
 
-<pre class="brush: xml">&lt;tt xmlns="http://www.w3.org/ns/ttml"
+```xml
+<tt xmlns="http://www.w3.org/ns/ttml"
     xmlns:tts="http://www.w3.org/ns/ttml#styling"
-    xml:lang="en"&gt;
-  &lt;head&gt;
-   &lt;styling&gt;
-     &lt;style xml:id="s1" tts:color="yellow" tts:backgroundColor="black"/&gt;
-   &lt;/styling&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div&gt;
-      &lt;p&gt;
-        &lt;span style="s1"&gt;Hello, I am Mork from Ork.&lt;/span&gt;
-      &lt;/p&gt;
-      &lt;p&gt;
-        &lt;span style="s1"&gt;I come from another planet.&lt;/span&gt;
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/body&gt;
-  &lt;/tt&gt;
-</pre>
+    xml:lang="en">
+  <head>
+   <styling>
+     <style xml:id="s1" tts:color="yellow" tts:backgroundColor="black"/>
+   </styling>
+  </head>
+  <body>
+    <div>
+      <p>
+        <span style="s1">Hello, I am Mork from Ork.</span>
+      </p>
+      <p>
+        <span style="s1">I come from another planet.</span>
+      </p>
+    </div>
+  </body>
+  </tt>
+```
 
-<p>Each <code>&lt;style&gt;</code> element is given an <code>id</code> (<code>"s1"</code> in this example):</p>
+Each `<style>` element is given an `id` (`"s1"` in this example):
 
-<pre class="brush: xml">&lt;style xml:id="s1" tts:color="yellow" tts:backgroundColor="black"/&gt;</pre>
+```xml
+<style xml:id="s1" tts:color="yellow" tts:backgroundColor="black"/>
+```
 
-<p>which can then be referred to later in the document:</p>
+which can then be referred to later in the document:
 
-<pre class="brush: xml">&lt;span style="s1"&gt;Hello, I am Mork from Ork.&lt;/span&gt;
-</pre>
+```xml
+<span style="s1">Hello, I am Mork from Ork.</span>
+```
 
-<p>this is equivalent to:</p>
+this is equivalent to:
 
-<pre class="brush: xml">&lt;span tts:color="yellow" tts:backgroundColor="black"&gt;
+```xml
+<span tts:color="yellow" tts:backgroundColor="black">
   Hello, I am Mork from Ork
-&lt;/span&gt;
-</pre>
+</span>
+```
 
-<p>In other words, referencing a <code>&lt;style&gt;</code> element via its <code>id</code> and the <code>style</code> attribute is equivalent to copying the style properties of the <code>&lt;style&gt;</code> element onto the referencing element, as if the style properties had been specified using inline styling.</p>
+In other words, referencing a `<style>` element via its `id` and the `style` attribute is equivalent to copying the style properties of the `<style>` element onto the referencing element, as if the style properties had been specified using inline styling.
 
-<h2 id="Style_inheritance">Style inheritance</h2>
+## Style inheritance
 
-<p>If a style property is inheritable, like <code>tts:color</code>, then the style property will apply to all the descendants of an element it is specified on — again, this is similar to CSS and HTML. In the following example, the color <code>"yellow"</code> is applied to the text of both <code>&lt;p&gt;</code> elements because they are descendants of the <code>&lt;body&gt;</code> element.</p>
+If a style property is inheritable, like `tts:color`, then the style property will apply to all the descendants of an element it is specified on — again, this is similar to CSS and HTML. In the following example, the color `"yellow"` is applied to the text of both `<p>` elements because they are descendants of the `<body>` element.
 
-<pre class="brush: xml">&lt;body tts:color="yellow"&gt;
-  &lt;div&gt;
-    &lt;p&gt;Hello, I am Mork from Ork.&lt;/p&gt;
-    &lt;p&gt;I come from another planet.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/body&gt;
-</pre>
+```xml
+<body tts:color="yellow">
+  <div>
+    <p>Hello, I am Mork from Ork.</p>
+    <p>I come from another planet.</p>
+  </div>
+</body>
+```
 
-<p>Specifying a style on an element overrides any style specified on an ancestor, for example in the following snippet, the color of the second <code>&lt;p&gt;</code>'s text would be set to <code>"aqua"</code>:</p>
+Specifying a style on an element overrides any style specified on an ancestor, for example in the following snippet, the color of the second `<p>`'s text would be set to `"aqua"`:
 
-<pre class="brush: xml">&lt;body tts:color="yellow"&gt;
-  &lt;div&gt;
-     &lt;p&gt;Hello, I am Mork from Ork.&lt;/p&gt;
-     &lt;p tts:color="aqua"&gt;I come from another planet.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/body&gt;</pre>
+```xml
+<body tts:color="yellow">
+  <div>
+     <p>Hello, I am Mork from Ork.</p>
+     <p tts:color="aqua">I come from another planet.</p>
+  </div>
+</body>
+```
 
-<h2 id="Region_styling">Region styling</h2>
+## Region styling
 
-<p>Region styling plays a special role in IMSC since a style property specified on a region is inherited by all elements that are selected to the region, starting with the <code>&lt;body&gt;</code> element, as if the <code>&lt;region&gt;</code> element was the parent of the <code>&lt;body&gt; </code>element. For example, in the following example, the text "Hello, I am Mork from Ork" will appear in yellow.</p>
+Region styling plays a special role in IMSC since a style property specified on a region is inherited by all elements that are selected to the region, starting with the `<body>` element, as if the `<region>` element was the parent of the `<body> `element. For example, in the following example, the text "Hello, I am Mork from Ork" will appear in yellow.
 
-<pre class="brush: xml">&lt;tt
+```xml
+<tt
   xmlns="http://www.w3.org/ns/ttml"
   xmlns:tts="http://www.w3.org/ns/ttml#styling"
-  xml:lang="en"&gt;
-  &lt;head&gt;
-    &lt;layout&gt;
-      &lt;region xml:id="r1" tts:color="yellow" /&gt;
-    &lt;/layout&gt;
- &lt;/head&gt;
- &lt;body&gt;
-   &lt;div&gt;
-     &lt;p region="r1"&gt;Hello, I am Mork from Ork&lt;/p&gt;
-   &lt;/div&gt;
- &lt;/body&gt;
-&lt;/tt&gt;</pre>
+  xml:lang="en">
+  <head>
+    <layout>
+      <region xml:id="r1" tts:color="yellow" />
+    </layout>
+ </head>
+ <body>
+   <div>
+     <p region="r1">Hello, I am Mork from Ork</p>
+   </div>
+ </body>
+</tt>
+```
 
-<h2 id="Combining_styles">Combining styles</h2>
+## Combining styles
 
-<p>Referential styling can be applied to style elements themselves:</p>
+Referential styling can be applied to style elements themselves:
 
-<pre class="brush: xml">&lt;styling&gt;
-  &lt;style xml:id="s1"
+```xml
+<styling>
+  <style xml:id="s1"
          tts:color="yellow"
-         tts:backgroundColor="black"/&gt;
-  &lt;style xml:id="s2"
+         tts:backgroundColor="black"/>
+  <style xml:id="s2"
          style="s1"
-         tts:textAlign="left"/&gt;
-&lt;/styling&gt;</pre>
+         tts:textAlign="left"/>
+</styling>
+```
 
-<p>Multiple styles can be also applied simultaneously on an element. For example, in the snippet below the style properties of both styles <code>s1</code> and <code>s2</code> are applied to the same <code>&lt;p&gt;</code> element.</p>
+Multiple styles can be also applied simultaneously on an element. For example, in the snippet below the style properties of both styles `s1` and `s2` are applied to the same `<p>` element.
 
-<pre class="brush: xml">&lt;p style=”s1 s2”&gt;Hello, I am Mork from Ork&lt;/p&gt;</pre>
+```xml
+<p style=”s1 s2”>Hello, I am Mork from Ork</p>
+```
 
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li>
- <li class="toggle">
-  <details open><summary>IMSC guides</summary>
-  <ol>
-   <li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li>
-  </ol>
-  </details>
- </li>
-</ol>
-</section>
+<section id="Quick_links"><ol><li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li><li class="toggle"><details open><summary>IMSC guides</summary><ol><li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li><li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li><li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li><li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li></ol></details></li></ol></section>

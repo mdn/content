@@ -8,269 +8,232 @@ tags:
   - captions
   - subtitles
 ---
-<p>IMSC allows you to add subtitles or captions to your online video. In this article we'll take you through what you need to get started, including basic document structure, and the basics of how to style, time, and position subtitles.</p>
+IMSC allows you to add subtitles or captions to your online video. In this article we'll take you through what you need to get started, including basic document structure, and the basics of how to style, time, and position subtitles.
 
-<div class="note">
-<p><strong>Note:</strong> IMSC can be used for any kind of timed text you might want to include on a web document, not just for subtitles and captions. But because subtitles and captions represent the most common use cases for IMSC, we will focus on those. For readability we only use the term subtitles. In the technical context we describe, the term "subtitles" is interchangeable with "captions".</p>
-</div>
+> **Note:** IMSC can be used for any kind of timed text you might want to include on a web document, not just for subtitles and captions. But because subtitles and captions represent the most common use cases for IMSC, we will focus on those. For readability we only use the term subtitles. In the technical context we describe, the term "subtitles" is interchangeable with "captions".
 
-<h2 id="So_what_is_IMSC">So what is IMSC?</h2>
+## So what is IMSC?
 
-<p>IMSC is a markup language you can use to define timed text for adding subtitles to digital media. It defines the structure of your subtitle content in an XML document. It consists of a series of elements, which you can use to enclose, or wrap, different parts of your subtitle content to make it appear in a certain way or appear at a certain time. Many of these are similar or the same as HTML features.</p>
+IMSC is a markup language you can use to define timed text for adding subtitles to digital media. It defines the structure of your subtitle content in an XML document. It consists of a series of elements, which you can use to enclose, or wrap, different parts of your subtitle content to make it appear in a certain way or appear at a certain time. Many of these are similar or the same as HTML features.
 
-<p>If you are not already familiar with XML or HTML, read up on them first and then come back here:</p>
+If you are not already familiar with XML or HTML, read up on them first and then come back here:
 
-<ul>
- <li><a href="/en-US/docs/Web/XML/XML_introduction">XML Introduction</a></li>
- <li><a href="/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML Basics</a></li>
-</ul>
+- [XML Introduction](/en-US/docs/Web/XML/XML_introduction)
+- [HTML Basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
 
-<div class="note">
-<p><strong>Note:</strong> If you want to know what you can do with IMSC in real world scenarios have a look at the expanded example at the end of this tutorial.</p>
-</div>
+> **Note:** If you want to know what you can do with IMSC in real world scenarios have a look at the expanded example at the end of this tutorial.
 
-<h2 id="Minimal_IMSC_document">Minimal IMSC document</h2>
+## Minimal IMSC document
 
-<p>IMSC is always specified as a complete XML document. As a file it should have the extension "<em>ttml</em>".</p>
+IMSC is always specified as a complete XML document. As a file it should have the extension "_ttml_".
 
-<div class="note">
-<p><strong>Note:</strong> IMSC does not have native support in browsers at this current moment, but the <a href="https://github.com/sandflow/imscJS">imscJS</a> polyfill can be used to bridge this gap. All the examples below are rendered by using imscJS. It creates dynamically HTML and CSS from an IMSC  XML document.</p>
-</div>
+> **Note:** IMSC does not have native support in browsers at this current moment, but the [imscJS](https://github.com/sandflow/imscJS) polyfill can be used to bridge this gap. All the examples below are rendered by using imscJS. It creates dynamically HTML and CSS from an IMSC  XML document.
 
-<p>Let’s look at a minimal IMSC document and how it is rendered:</p>
+Let’s look at a minimal IMSC document and how it is rendered:
 
-<p>{{EmbedGHLiveSample("imsc/minimal_ttml/minimal.html", '100%', 560)}}</p>
+{{EmbedGHLiveSample("imsc/minimal_ttml/minimal.html", '100%', 560)}}
 
-<p>The most important features are as follows:</p>
+The most important features are as follows:
 
-<ul>
- <li><code>&lt;tt&gt;&lt;/tt&gt;</code> — You always start an IMSC document with the root element <code>&lt;tt&gt;</code>. You should also specify the default namespace of the document by using the <code>xmlns</code> attribute. Don’t worry for now about namespaces. We will come to that in a separate guide.</li>
- <li><code>xml:lang</code> — You must specify the language of your content with the <code>xml:lang</code> attribute. Note that the <code>lang</code> attribute must have the prefix <code>xml:</code>, unlike HTML. In IMSC <code>&lt;tt lang="en"&gt;</code> is not correct — you always have to write <code>&lt;tt xml:lang="en"&gt;</code>.</li>
- <li><code>&lt;body&gt;&lt;/body&gt;</code> — As in HTML, the <code>&lt;body&gt;</code> element contains all content that you want to show. For IMSC this is typically subtitle content that you want to show at certain time intervals during the playback of a video.</li>
- <li><code>&lt;div&gt;&lt;/div&gt;</code> — The <code>&lt;div&gt;</code> element is used as a container for subtitle content; you always need to have at least one of these. The <code>&lt;p&gt;</code> elements that contain the actual subtitle content always have a <code>&lt;div&gt;</code> element as their parent.</li>
- <li><code>&lt;p&gt;&lt;/p&gt;</code> — Text content for subtitles must always be wrapped in a <code>&lt;p&gt;</code> element. The element describes a paragraph of text, in a similar fashion to HTML. The main difference is that it can be timed.</li>
-</ul>
+- `<tt></tt>` — You always start an IMSC document with the root element `<tt>`. You should also specify the default namespace of the document by using the `xmlns` attribute. Don’t worry for now about namespaces. We will come to that in a separate guide.
+- `xml:lang` — You must specify the language of your content with the `xml:lang` attribute. Note that the `lang` attribute must have the prefix `xml:`, unlike HTML. In IMSC `<tt lang="en">` is not correct — you always have to write `<tt xml:lang="en">`.
+- `<body></body>` — As in HTML, the `<body>` element contains all content that you want to show. For IMSC this is typically subtitle content that you want to show at certain time intervals during the playback of a video.
+- `<div></div>` — The `<div>` element is used as a container for subtitle content; you always need to have at least one of these. The `<p>` elements that contain the actual subtitle content always have a `<div>` element as their parent.
+- `<p></p>` — Text content for subtitles must always be wrapped in a `<p>` element. The element describes a paragraph of text, in a similar fashion to HTML. The main difference is that it can be timed.
 
-<h2 id="Timing">Timing</h2>
+## Timing
 
-<p>The minimal IMSC document from the previous example had no timing. That means that the subtitle content will be shown during the complete duration of the video. Usually this is not what you want. Instead you want subtitles to show up at a certain time and then disappear. You can use a combination of the timing attributes <code>begin</code>, <code>end</code>, and <code>dur</code> to make this happen.</p>
+The minimal IMSC document from the previous example had no timing. That means that the subtitle content will be shown during the complete duration of the video. Usually this is not what you want. Instead you want subtitles to show up at a certain time and then disappear. You can use a combination of the timing attributes `begin`, `end`, and `dur` to make this happen.
 
-<p>Consider the following editable example:</p>
+Consider the following editable example:
 
-<p>{{EmbedGHLiveSample("imsc/minimal-timing/minimal-timing-player.html", '100%', 590)}}</p>
+{{EmbedGHLiveSample("imsc/minimal-timing/minimal-timing-player.html", '100%', 590)}}
 
-<p>This includes the following new attributes:</p>
+This includes the following new attributes:
 
-<ul>
- <li><code>begin</code> — specifies when the subtitle shall start to show (in this case 1s after the video started).</li>
- <li><code>end</code> — specifies when the subtitle shall disappear (in this case 2s after the video started).</li>
-</ul>
+- `begin` — specifies when the subtitle shall start to show (in this case 1s after the video started).
+- `end` — specifies when the subtitle shall disappear (in this case 2s after the video started).
 
-<p>Play around with the second values in the code sample and push the reload button when you are ready.</p>
+Play around with the second values in the code sample and push the reload button when you are ready.
 
-<div class="note">
-<p><strong>Note:</strong> The end times in IMSC are not "inclusive". The subtitle "Hello, I am Mork from Ork." is not shown anymore when it reaches the second value in time.</p>
-</div>
+> **Note:** The end times in IMSC are not "inclusive". The subtitle "Hello, I am Mork from Ork." is not shown anymore when it reaches the second value in time.
 
-<p>You can also use the <code>dur</code> attribute for timing:</p>
+You can also use the `dur` attribute for timing:
 
-<p>{{EmbedGHLiveSample("imsc/minimal-timing/minimal-timing-player-dur.html", '100%', 590)}}</p>
+{{EmbedGHLiveSample("imsc/minimal-timing/minimal-timing-player-dur.html", '100%', 590)}}
 
-<p>This attribute can be used as an alternative to the <code>end</code> attribute. It defines "how long" the subtitle is shown after the <code>begin</code> time has elapsed. In the example the second paragraph shall be displayed for 2s. As it starts at second 2 it shall disappear at second 4.</p>
+This attribute can be used as an alternative to the `end` attribute. It defines "how long" the subtitle is shown after the `begin` time has elapsed. In the example the second paragraph shall be displayed for 2s. As it starts at second 2 it shall disappear at second 4.
 
-<p>Note what has changed at second 2 compared to the previous example.</p>
+Note what has changed at second 2 compared to the previous example.
 
-<h2 id="Colors">Colors</h2>
+## Colors
 
-<p>Often subtitles are shown on an opaque or semi-opaque background to improve readability. You can use the <code>backgroundColor</code> and <code>color</code> attributes to change the colors, as demonstrated in this editable example:</p>
+Often subtitles are shown on an opaque or semi-opaque background to improve readability. You can use the `backgroundColor` and `color` attributes to change the colors, as demonstrated in this editable example:
 
-<p>{{EmbedGHLiveSample("imsc/minimal-colors/minimal-colors.html", '100%', 620)}}</p>
+{{EmbedGHLiveSample("imsc/minimal-colors/minimal-colors.html", '100%', 620)}}
 
-<p>Here we've introduced the following:</p>
+Here we've introduced the following:
 
-<ul>
- <li><code>tts:backgroundColor</code> — This attribute sets the background color on the element it is applied to. In this case it is applied to the <code>&lt;p&gt;</code> element, or more correctly to the area that is generated by the <code>&lt;p&gt;</code>
+- `tts:backgroundColor` — This attribute sets the background color on the element it is applied to. In this case it is applied to the `<p>` element, or more correctly to the area that is generated by the `<p>`
 
-  <p>element. The default background color is <code>transparent</code>.</p>
- </li>
- <li><code>tts:color</code> — This attribute sets the text color on the element it is applied to. The default text color is <code>white</code>.</li>
-</ul>
+  element. The default background color is `transparent`.
 
-<p>Try setting some other colors for the text and background colors:</p>
+- `tts:color` — This attribute sets the text color on the element it is applied to. The default text color is `white`.
 
-<ul>
- <li>Try other named colors like <code>lime</code> or <code>aqua</code>.</li>
- <li>Use hexadecimal values like <code>#00ff00</code> or <code>#00ffff</code>.</li>
- <li>You can use other color schemes like <code>rgb(0,255,255)</code>.</li>
- <li>Finally, try semi-transparent variations, like <code>rgba(0,0,0, 80)</code>.</li>
-</ul>
+Try setting some other colors for the text and background colors:
 
-<div class="note">
-<p><strong>Note:</strong> Don’t worry for now about namespaces. We will explain the meaning of <code>xmlns:tts</code> and <code>tts:backgroundColor</code> in a separate guide.</p>
-</div>
+- Try other named colors like `lime` or `aqua`.
+- Use hexadecimal values like `#00ff00` or `#00ffff`.
+- You can use other color schemes like `rgb(0,255,255)`.
+- Finally, try semi-transparent variations, like `rgba(0,0,0, 80)`.
 
-<p>As explained in the <a href="/en-US/docs/Related/IMSC/Styling">IMSC Styling</a> guide, it is possible to define a collection of styling properties that can be used any number of times. The style <code>s1</code> below is applied three times:</p>
+> **Note:** Don’t worry for now about namespaces. We will explain the meaning of `xmlns:tts` and `tts:backgroundColor` in a separate guide.
 
-<pre class="brush: xml"><code>&lt;tt xmlns="http://www.w3.org/ns/ttml"
+As explained in the [IMSC Styling](/en-US/docs/Related/IMSC/Styling) guide, it is possible to define a collection of styling properties that can be used any number of times. The style `s1` below is applied three times:
+
+```xml
+<tt xmlns="http://www.w3.org/ns/ttml"
     xmlns:tts="http://www.w3.org/ns/ttml#styling"
-    xml:lang="en"&gt;
-  &lt;head&gt;
-   &lt;styling&gt;
-     &lt;style xml:id="s1" tts:color="yellow" tts:fontStyle="italic"/&gt;
-   &lt;/styling&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div&gt;
-      &lt;p&gt;
-        Hello, I am &lt;span style="s1"&gt;Mork&lt;/span&gt; from &lt;span style="s1"&gt;Ork&lt;/span&gt;.&lt;br/&gt;
-        I come from another &lt;span style="s1"&gt;planet&lt;/span&gt;.
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/body&gt;
-  &lt;/tt&gt;</code>
-</pre>
+    xml:lang="en">
+  <head>
+   <styling>
+     <style xml:id="s1" tts:color="yellow" tts:fontStyle="italic"/>
+   </styling>
+  </head>
+  <body>
+    <div>
+      <p>
+        Hello, I am <span style="s1">Mork</span> from <span style="s1">Ork</span>.<br/>
+        I come from another <span style="s1">planet</span>.
+      </p>
+    </div>
+  </body>
+  </tt>
+```
 
-<h2 id="Position_width_and_length">Position, width, and length</h2>
+## Position, width, and length
 
-<p>If you do not specify a position explicitly, the subtitle shows up by default in the top-left-hand corner of the video. Commonly however you will want to position your subtitle somewhere else, like the bottom center of the video. You need to specify a region to position a subtitle.</p>
+If you do not specify a position explicitly, the subtitle shows up by default in the top-left-hand corner of the video. Commonly however you will want to position your subtitle somewhere else, like the bottom center of the video. You need to specify a region to position a subtitle.
 
-<p>See below for a minimal document that uses regions for positioning.</p>
+See below for a minimal document that uses regions for positioning.
 
-<div>
-<pre class="brush: xml">&lt;tt xmlns="http://www.w3.org/ns/ttml"
+```xml
+<tt xmlns="http://www.w3.org/ns/ttml"
  xmlns:tts="http://www.w3.org/ns/ttml#styling"
- xml:lang="en"&gt;
-  &lt;head&gt;
-    &lt;layout&gt;
-      &lt;region tts:origin="10% 80%"
+ xml:lang="en">
+  <head>
+    <layout>
+      <region tts:origin="10% 80%"
               tts:extent="80% 20%"
-              xml:id="bottom"/&gt;
-      &lt;region tts:origin="10% 10%"
+              xml:id="bottom"/>
+      <region tts:origin="10% 10%"
               tts:extent="80% 20%"
-              xml:id="top"/&gt;
-    &lt;/layout&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div&gt;
-      &lt;p region="bottom"
-          tts:backgroundColor="black"&gt;
+              xml:id="top"/>
+    </layout>
+</head>
+<body>
+    <div>
+      <p region="bottom"
+          tts:backgroundColor="black">
           Hello, I am Mork from Ork.
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/tt&gt;</pre>
-</div>
+      </p>
+    </div>
+  </body>
+</tt>
+```
 
-<p>This includes the following new features:</p>
+This includes the following new features:
 
-<ul>
- <li><code>&lt;head&gt;&lt;/head&gt;</code> — As in HTML, the <code>&lt;head&gt;</code> element acts as a container for all the stuff you want to include in an IMSC document that isn’t subtitle content, most commonly metadata about the content or document. You'll use it mostly to store positioning and styling information.</li>
- <li><code>&lt;layout&gt;&lt;/layout&gt;</code> — This element acts as a wrapper for positioning information. It has <code>&lt;region&gt;</code> elements as its children.</li>
- <li><code>&lt;region&gt;&lt;/region&gt;</code> — this element can be used to define <code>region</code>s, rectangular areas you can place on top of your video. They have a defined position, width, and height, plus an <code>id</code> to uniquely identify them. You can think of it as being similar to a <code>&lt;div&gt;</code> element in HTML that is given an absolute position, width, and height via CSS. If subtitle content is "linked" to a region (by specifying the region's <code>id</code> in its <code>region</code> attribute), it will be shown inside the area generated by that region.</li>
- <li><code>xml:id</code> - the <code>xml:id</code> attribute. The value of the <code>xml:id</code> attribute is a string that can be used to link subtitle content to a <code>region.</code></li>
- <li><code>tts:origin</code> — This attribute defines the position of the top-left corner of the region. It uses the % (percentage) metric. The first value defines how far the top left corner of the region is pushed to the right — in this case the value <code>10%</code> places the region 10% of the video's width to the right. The second value defines how far the top left corner of the region is placed towards the bottom of the video — in this case the value <code>80%</code> pushes the top left corner of the region 80% of the video's height towards the bottom of the video.</li>
- <li><code>tts:extent</code> — This attribute defines the width and height of the region. In this case <code>80%</code> sets the width to 80% of the video's width, and <code>20%</code> sets the height of the region to 20% of the video's height.</li>
- <li><code>region</code> — setting this on some subtitle content and then giving it a region's <code>xml:id</code> as its value causes it to <em>reference</em> that region, meaning that at the specified time, it will appear in the area defined by that region. So here, the value <code>bottom</code> places the subtitle content represented by this <code>&lt;p&gt;</code> element in the region with an <code>xml:id</code> of <code>bottom</code>.</li>
-</ul>
+- `<head></head>` — As in HTML, the `<head>` element acts as a container for all the stuff you want to include in an IMSC document that isn’t subtitle content, most commonly metadata about the content or document. You'll use it mostly to store positioning and styling information.
+- `<layout></layout>` — This element acts as a wrapper for positioning information. It has `<region>` elements as its children.
+- `<region></region>` — this element can be used to define `region`s, rectangular areas you can place on top of your video. They have a defined position, width, and height, plus an `id` to uniquely identify them. You can think of it as being similar to a `<div>` element in HTML that is given an absolute position, width, and height via CSS. If subtitle content is "linked" to a region (by specifying the region's `id` in its `region` attribute), it will be shown inside the area generated by that region.
+- `xml:id` - the `xml:id` attribute. The value of the `xml:id` attribute is a string that can be used to link subtitle content to a `region.`
+- `tts:origin` — This attribute defines the position of the top-left corner of the region. It uses the % (percentage) metric. The first value defines how far the top left corner of the region is pushed to the right — in this case the value `10%` places the region 10% of the video's width to the right. The second value defines how far the top left corner of the region is placed towards the bottom of the video — in this case the value `80%` pushes the top left corner of the region 80% of the video's height towards the bottom of the video.
+- `tts:extent` — This attribute defines the width and height of the region. In this case `80%` sets the width to 80% of the video's width, and `20%` sets the height of the region to 20% of the video's height.
+- `region` — setting this on some subtitle content and then giving it a region's `xml:id` as its value causes it to _reference_ that region, meaning that at the specified time, it will appear in the area defined by that region. So here, the value `bottom` places the subtitle content represented by this `<p>` element in the region with an `xml:id` of `bottom`.
 
-<p>This sample will be rendered as shown below. Give it a try and play around with the code in the two boxes. You could for example set the <code>tts:origin</code> attribute to "<em>0% 0%</em>". Or see what happens when you change the value of the <code>region</code> attribute of the <code>&lt;p&gt;</code> element to "<em>top</em>".</p>
+This sample will be rendered as shown below. Give it a try and play around with the code in the two boxes. You could for example set the `tts:origin` attribute to "_0% 0%_". Or see what happens when you change the value of the `region` attribute of the `<p>` element to "_top_".
 
-<p>{{EmbedGHLiveSample("imsc/minimal-region/minimal-region.html", '100%', 650)}}</p>
+{{EmbedGHLiveSample("imsc/minimal-region/minimal-region.html", '100%', 650)}}
 
-<h2 id="Expanded_example">Expanded example</h2>
+## Expanded example
 
-<p>The more expanded example below gives you an idea what you can do with IMSC after you worked through our tutorials.</p>
+The more expanded example below gives you an idea what you can do with IMSC after you worked through our tutorials.
 
-<p>{{EmbedGHLiveSample("imsc/basic-expanded/basics-expanded.html", '100%', 300)}}</p>
+{{EmbedGHLiveSample("imsc/basic-expanded/basics-expanded.html", '100%', 300)}}
 
-<pre class="brush: xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;tt
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<tt
   xmlns="http://www.w3.org/ns/ttml" xmlns:tts="http://www.w3.org/ns/ttml#styling"
-  xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xml:lang="en" ttp:timeBase="media"&gt;
-  &lt;head&gt;
-    &lt;styling&gt;
-      &lt;style xml:id="defaultStyle" tts:fontFamily="Verdana, Arial" tts:fontSize="100%"
-        tts:textAlign="center"/&gt;
-      &lt;style xml:id="alignStart" tts:textAlign="start"/&gt;
-      &lt;style xml:id="alignCenter" tts:textAlign="center"/&gt;
-      &lt;style xml:id="alignEnd" tts:textAlign="end"/&gt;
-      &lt;style xml:id="textWhite" tts:color="#FFFFFF"/&gt;
-      &lt;style xml:id="titleHeading" tts:fontSize="300%"/&gt;
-      &lt;style xml:id="spanDefaultStyle" tts:backgroundColor="#000000" tts:color="#FFFFFF"/&gt;
-      &lt;style xml:id="monoFont" tts:fontFamily="Lucida Console, Monaco, monospace"/&gt;
-      &lt;style xml:id="sansserifFont" tts:fontFamily="Impact, Charcoal, sans-serif"/&gt;
-      &lt;style xml:id="comicFont" tts:fontFamily="Comic Sans MS, cursive, sans-serif"/&gt;
-      &lt;style xml:id="blueText" tts:color="#00FFFF" tts:backgroundColor="#000000"/&gt;
-      &lt;style xml:id="limeText" tts:color="#00FF00" tts:backgroundColor="#000000"/&gt;
-      &lt;style xml:id="fuchsiaText" tts:color="#FF00FF" tts:backgroundColor="#000000"/&gt;
-      &lt;style xml:id="yellowText" tts:color="#FFFF00" tts:backgroundColor="#000000"/&gt;
-    &lt;/styling&gt;
-    &lt;layout&gt;
-      &lt;region xml:id="rTop" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before"/&gt;
-      &lt;region xml:id="rCenter" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="center"/&gt;
-      &lt;region xml:id="rBottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after"/&gt;
-    &lt;/layout&gt;
-  &lt;/head&gt;
-  &lt;body style="defaultStyle"&gt;
-    &lt;div&gt;
-      &lt;p xml:id="p1" begin="00:00:01" end="00:00:03" region="rCenter" style="alignCenter"&gt;
-        &lt;span style="titleHeading"&gt;IMSC Demo&lt;/span&gt;
-      &lt;/p&gt;
-      &lt;p xml:id="p2" begin="00:00:03" end="00:00:05" region="rBottom" style="alignCenter"&gt;
-        &lt;span style="spanDefaultStyle"&gt;You &lt;/span&gt;&lt;span style="blueText"&gt;can&lt;/span&gt;&lt;span
-          style="yellowText"&gt; apply&lt;/span&gt;&lt;span style="fuchsiaText"&gt; different&lt;/span&gt;&lt;span
-          style="limeText"&gt; colors, &lt;/span&gt;
-      &lt;/p&gt;
-      &lt;p xml:id="p3" begin="00:00:05" end="00:00:07" region="rBottom" style="alignCenter"&gt;
-        &lt;span style="monoFont"&gt;use&lt;/span&gt;&lt;span style="sansserifFont"&gt; different&lt;/span&gt;&lt;span
-          style="comicFont"&gt; fonts,&lt;/span&gt;
-      &lt;/p&gt;
-      &lt;p xml:id="p4" begin="00:00:07" end="00:00:09" region="rBottom" style="alignCenter"&gt;
-        &lt;span&gt;set &lt;/span&gt;&lt;span tts:fontSize="150%"&gt;the&lt;/span&gt;&lt;span tts:fontSize="200%"&gt; font
-          size.&lt;/span&gt;
-      &lt;/p&gt;
-      &lt;p xml:id="p5" begin="00:00:09" end="00:00:11" region="rBottom" style="alignStart"&gt;
-        &lt;span style="spanDefaultStyle"&gt;Align at the start, &lt;/span&gt;&lt;br/&gt;
-      &lt;/p&gt;
-      &lt;p xml:id="p6" begin="00:00:11" end="00:00:13" region="rBottom" style="alignCenter"&gt;
-        &lt;span style="spanDefaultStyle"&gt;center and&lt;/span&gt;
-      &lt;/p&gt;
-      &lt;p xml:id="p7" begin="00:00:13" end="00:00:15" region="rBottom" style="alignEnd"&gt;
-        &lt;span style="spanDefaultStyle"&gt;end&lt;/span&gt;&lt;br/&gt;
-      &lt;/p&gt;
-      &lt;p xml:id="p8" begin="00:00:15" end="00:00:17" region="rTop" style="alignCenter"&gt;
-        &lt;span style="spanDefaultStyle"&gt;or vertically at the top, &lt;/span&gt;&lt;br/&gt;
-      &lt;/p&gt;
-      &lt;p xml:id="p9" begin="00:00:17" end="00:00:19" region="rCenter" style="alignCenter"&gt;
-        &lt;span style="spanDefaultStyle"&gt;center and &lt;/span&gt;
-      &lt;/p&gt;
-      &lt;p xml:id="p10" begin="00:00:19" end="00:00:21" region="rBottom" style="alignCenter"&gt;
-        &lt;span style="spanDefaultStyle"&gt;bottom.&lt;/span&gt;
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/tt&gt;</pre>
+  xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xml:lang="en" ttp:timeBase="media">
+  <head>
+    <styling>
+      <style xml:id="defaultStyle" tts:fontFamily="Verdana, Arial" tts:fontSize="100%"
+        tts:textAlign="center"/>
+      <style xml:id="alignStart" tts:textAlign="start"/>
+      <style xml:id="alignCenter" tts:textAlign="center"/>
+      <style xml:id="alignEnd" tts:textAlign="end"/>
+      <style xml:id="textWhite" tts:color="#FFFFFF"/>
+      <style xml:id="titleHeading" tts:fontSize="300%"/>
+      <style xml:id="spanDefaultStyle" tts:backgroundColor="#000000" tts:color="#FFFFFF"/>
+      <style xml:id="monoFont" tts:fontFamily="Lucida Console, Monaco, monospace"/>
+      <style xml:id="sansserifFont" tts:fontFamily="Impact, Charcoal, sans-serif"/>
+      <style xml:id="comicFont" tts:fontFamily="Comic Sans MS, cursive, sans-serif"/>
+      <style xml:id="blueText" tts:color="#00FFFF" tts:backgroundColor="#000000"/>
+      <style xml:id="limeText" tts:color="#00FF00" tts:backgroundColor="#000000"/>
+      <style xml:id="fuchsiaText" tts:color="#FF00FF" tts:backgroundColor="#000000"/>
+      <style xml:id="yellowText" tts:color="#FFFF00" tts:backgroundColor="#000000"/>
+    </styling>
+    <layout>
+      <region xml:id="rTop" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="before"/>
+      <region xml:id="rCenter" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="center"/>
+      <region xml:id="rBottom" tts:origin="10% 10%" tts:extent="80% 80%" tts:displayAlign="after"/>
+    </layout>
+  </head>
+  <body style="defaultStyle">
+    <div>
+      <p xml:id="p1" begin="00:00:01" end="00:00:03" region="rCenter" style="alignCenter">
+        <span style="titleHeading">IMSC Demo</span>
+      </p>
+      <p xml:id="p2" begin="00:00:03" end="00:00:05" region="rBottom" style="alignCenter">
+        <span style="spanDefaultStyle">You </span><span style="blueText">can</span><span
+          style="yellowText"> apply</span><span style="fuchsiaText"> different</span><span
+          style="limeText"> colors, </span>
+      </p>
+      <p xml:id="p3" begin="00:00:05" end="00:00:07" region="rBottom" style="alignCenter">
+        <span style="monoFont">use</span><span style="sansserifFont"> different</span><span
+          style="comicFont"> fonts,</span>
+      </p>
+      <p xml:id="p4" begin="00:00:07" end="00:00:09" region="rBottom" style="alignCenter">
+        <span>set </span><span tts:fontSize="150%">the</span><span tts:fontSize="200%"> font
+          size.</span>
+      </p>
+      <p xml:id="p5" begin="00:00:09" end="00:00:11" region="rBottom" style="alignStart">
+        <span style="spanDefaultStyle">Align at the start, </span><br/>
+      </p>
+      <p xml:id="p6" begin="00:00:11" end="00:00:13" region="rBottom" style="alignCenter">
+        <span style="spanDefaultStyle">center and</span>
+      </p>
+      <p xml:id="p7" begin="00:00:13" end="00:00:15" region="rBottom" style="alignEnd">
+        <span style="spanDefaultStyle">end</span><br/>
+      </p>
+      <p xml:id="p8" begin="00:00:15" end="00:00:17" region="rTop" style="alignCenter">
+        <span style="spanDefaultStyle">or vertically at the top, </span><br/>
+      </p>
+      <p xml:id="p9" begin="00:00:17" end="00:00:19" region="rCenter" style="alignCenter">
+        <span style="spanDefaultStyle">center and </span>
+      </p>
+      <p xml:id="p10" begin="00:00:19" end="00:00:21" region="rBottom" style="alignCenter">
+        <span style="spanDefaultStyle">bottom.</span>
+      </p>
+    </div>
+  </body>
+</tt>
+```
 
-<h2 id="Summary">Summary</h2>
+## Summary
 
-<p>That's it for your crash course in IMSC code basics! We've only really scratched the surface here, and you'll go much deeper into the above topics in subsequent articles.</p>
+That's it for your crash course in IMSC code basics! We've only really scratched the surface here, and you'll go much deeper into the above topics in subsequent articles.
 
-<section id="Quick_links">
-<ol>
- <li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li>
- <li class="toggle">
-  <details open><summary>IMSC guides</summary>
-  <ol>
-   <li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a></li>
-   <li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li>
-  </ol>
-  </details>
- </li>
-</ol>
-</section>
+<section id="Quick_links"><ol><li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li><li class="toggle"><details open><summary>IMSC guides</summary><ol><li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li><li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li><li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li><li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a></li><li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li></ol></details></li></ol></section>
