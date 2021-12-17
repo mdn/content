@@ -3,7 +3,6 @@ title: SpeechSynthesis.onvoiceschanged
 slug: Web/API/SpeechSynthesis/onvoiceschanged
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesis
@@ -13,7 +12,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.onvoiceschanged
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`onvoiceschanged`** property of the
 {{domxref("SpeechSynthesis")}} interface represents an event handler that will run when
