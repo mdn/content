@@ -3,7 +3,6 @@ title: SpeechRecognition.onsoundstart
 slug: Web/API/SpeechRecognition/onsoundstart
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognition
@@ -13,12 +12,10 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.onsoundstart
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
-The **`onsoundstart`** property of the
-{{domxref("SpeechRecognition")}} interface represents an event handler that will run
-when any sound — recognisable speech or not — has been detected (when the [soundstart event](/en-US/docs/Web/API/SpeechRecognition/soundstart_event)
-fires.)
+The **`onsoundstart`** property of the {{domxref("SpeechRecognition")}} interface represents an event handler that will run
+when any sound — recognisable speech or not — has been detected (when the [soundstart event](/en-US/docs/Web/API/SpeechRecognition/soundstart_event) fires.)
 
 ## Syntax
 

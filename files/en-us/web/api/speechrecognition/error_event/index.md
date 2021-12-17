@@ -7,7 +7,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechRecognition.error_event
 ---
-{{SeeCompatTable}} {{APIRef("Web Speech API")}}
+{{APIRef("Web Speech API")}}
 
 The **`error`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) {{domxref("SpeechRecognition")}} object is fired when a speech recognition error occurs.
 
