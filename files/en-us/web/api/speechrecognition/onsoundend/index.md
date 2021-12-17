@@ -3,7 +3,6 @@ title: SpeechRecognition.onsoundend
 slug: Web/API/SpeechRecognition/onsoundend
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognition
@@ -13,7 +12,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.onsoundend
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`onsoundend`** property of the
 {{domxref("SpeechRecognition")}} interface represents an event handler that will run

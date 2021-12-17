@@ -3,7 +3,6 @@ title: SpeechSynthesis.pause()
 slug: Web/API/SpeechSynthesis/pause
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - SpeechSynthesis
@@ -13,7 +12,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.pause
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`pause()`** method of the {{domxref("SpeechSynthesis")}}
 interface puts the `SpeechSynthesis` object into a paused state.
@@ -21,7 +20,7 @@ interface puts the `SpeechSynthesis` object into a paused state.
 ## Syntax
 
 ```js
-speechSynthesisInstance.pause();
+pause()
 ```
 
 ### Returns

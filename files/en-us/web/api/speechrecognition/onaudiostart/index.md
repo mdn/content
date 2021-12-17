@@ -3,7 +3,6 @@ title: SpeechRecognition.onaudiostart
 slug: Web/API/SpeechRecognition/onaudiostart
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognition
@@ -13,7 +12,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.onaudiostart
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`onaudiostart`** property of the
 {{domxref("SpeechRecognition")}} interface represents an event handler that will run
