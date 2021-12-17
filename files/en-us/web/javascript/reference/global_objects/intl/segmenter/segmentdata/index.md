@@ -12,18 +12,18 @@ An object that represents a particular segment of a string and a few properties 
 
 ## Description
 
-`SegmentData` objects are plain objects, each of which contains a segment created by an {{jsxref('Intl.Segmenter/segment','Intl.Segmenter.segment')}} operation.
+`SegmentData` objects are plain objects, each of which contains a segment created by a call to {{jsxref('Intl.Segmenter/segment','Intl.Segmenter.segment()')}}.
 
 ## Instance Properties
 
 - `segment`
-  - : A String of the segment extacted from the original input string.
+  - : A string containing the segment extracted from the original input string.
 - `index`
   - : The code unit index in the original input string at which the segment begins.
 - `input`
   - : The complete input string that was segmented.
 - `isWordLike`
-  - : A Boolean value only if `granularity` is `"word"`; otherwise, `undefined`.  If `granularity` is `"word"`, then `isWordLike` is `true` when the segment is word-like (i.e., consisting of letters/numbers/ideographs/etc.); otherwise, `false`.
+  - : A boolean value only if `granularity` is `"word"`; otherwise, `undefined`.  If `granularity` is `"word"`, then `isWordLike` is `true` when the segment is word-like (i.e., consists of letters/numbers/ideographs/etc.); otherwise, `false`.
 
 ## Examples
 

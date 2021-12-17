@@ -8,12 +8,12 @@ browser-compat: javascript.builtins.Intl.Segmenter.resolvedOptions
 ---
 {{JSRef}}
 
-Returns a new object with properties reflecting the locale and granularity options computed during initialization of this [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object.
+The **`Intl.Segmenter.prototype.resolvedOptions()`** method returns a new object with properties reflecting the locale and granularity options computed during the initialization of this [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object.
 
 ## Syntax
 
 ```js
-segmenter.resolvedOptions();
+resolvedOptions()
 ```
 
 ### Parameters
@@ -35,8 +35,8 @@ The resulting object has the following properties:
     the key-value pairs that were requested and are supported for this locale are
     included in `locale`.
 - `granularity`
-  - : The values provided for this property in the `options` argument or filled
-    in as defaults.
+  - : The value provided for this property in the `options` argument or filled
+    in as the default.
 
 ## Examples
 

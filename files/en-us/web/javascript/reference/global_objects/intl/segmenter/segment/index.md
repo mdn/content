@@ -8,13 +8,13 @@ browser-compat: javascript.builtins.Intl.Segmenter.segment
 ---
 {{JSRef}}
 
-Getter function that segments a string according to the locale and granularity of this [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object.
+The **`Intl.Segmenter.prototype.segment()`** method segments a string according to the locale and granularity of this [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object.
 
 
 ## Syntax
 
 ```js
-segmenter.segment(input)
+segment(input)
 ```
 
 ### Parameters

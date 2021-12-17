@@ -7,7 +7,7 @@ tags:
 browser-compat: javascript.builtins.Intl.Segmenter
 ---
 
-A `Segments` instance is an Iterable collection of the segments of a text string, which are constructed according to the locale and options of its constructing {{jsxref('Intl.Segmenter')}} instance.
+A **`Segments`** instance is an Iterable collection of the segments of a text string, which are constructed according to the locale and options of its constructing {{jsxref('Intl.Segmenter')}} instance.
 Each segment in the collection is a {{jsxref('Intl.Segmenter/SegmentData','SegmentData object','','nomono')}}.
 
 

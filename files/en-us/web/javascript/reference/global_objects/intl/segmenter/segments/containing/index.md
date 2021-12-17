@@ -7,18 +7,18 @@ tags:
 browser-compat: javascript.builtins.Intl.Segmenter
 ---
 
-The `.containing()` method returns a {{jsxref('Intl.Segmenter/SegmentData','SegmentData object','','nomono')}} describing the segment in the string that includes the code unit at the specified index.
+The **`.containing()`** method returns a {{jsxref('Intl.Segmenter/SegmentData','SegmentData object','','nomono')}} describing the segment in the string that includes the code unit at the specified index.
 
 ## Syntax
 
 ```js
-segments.containing(codeUnitIndex)
+containing(codeUnitIndex)
 ```
 
 ### Parameters
 
 - `codeUnitIndex` {{ optional_inline }}
-  - : A Number specifying the index of the code unit in the original input string.  If the value is omitted, it defaults to `0`.
+  - : A number specifying the index of the code unit in the original input string.  If the value is omitted, it defaults to `0`.
 
 ### Return Value
 
@@ -36,7 +36,7 @@ let segmenter = new Intl.Segmenter("fr", {granularity: "word"});
 let segments = segmenter.segment(input);
 let current = undefined;
 
-current = segments.containing()
+current = segments.containing();
 // → { index: 0, segment: "Allons", isWordLike: true }
 
 current = segments.containing(4)

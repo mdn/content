@@ -1,6 +1,6 @@
 ---
 title: Intl.Segmenter() constructor
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segmenter
+slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
 tags:
   - Constructor
   - Segmenter
@@ -12,20 +12,20 @@ tags:
 browser-compat: javascript.builtins.Intl.Segmenter.constructor
 ---
 
-The Intl.Segmenter() constructor creates {{jsxref('Intl/Segmenter','Intl.Segmenter')}} objects that enable locale-sensitive text segmentation.
+The **`Intl.Segmenter()`** constructor creates {{jsxref('Intl/Segmenter','Intl.Segmenter')}} objects that enable locale-sensitive text segmentation.
 
 ## Syntax
 
 ```js
-new Intl.segmenter();
-new Intl.segmenter(locale);
-new Intl.segmenter(locale, options);
+new Intl.segmenter()
+new Intl.segmenter(locale)
+new Intl.segmenter(locale, options)
 ```
 
 ### Parameters
 
 - `locale` {{ optional_inline }}
-  - : A string value indicating the locale by which graphemes, words, and sentences should be determined.  Locales are described using [BCP 47](https://datatracker.ietf.org/doc/html/bcp47) language tags (see the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) for a full list).  If no <var>locale</var> value is supplied, the runtime's default locale is used instead.
+  - : A string value indicating the locale by which graphemes, words, and sentences should be determined.  Locales are described using [BCP 47](https://datatracker.ietf.org/doc/html/bcp47) language tags (see the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) for a full list).  If no `locale` value is supplied, the runtime's default locale is used instead.
 - `options` {{ optional_inline }}
   - : An object with some or all of the following properties:
     - `granularity` {{ optional_inline }}
@@ -46,7 +46,7 @@ new Intl.segmenter(locale, options);
 
 ### Return value
 
-A new `Intl.Segmenter` {{jsxref('Intl/Segmenter/segments','Segments instance','','nomono')}}.
+A new `Intl.Segmenter` {{jsxref('Intl/Segmenter/segments','Segments')}} instance.
 
 ## Examples
 

@@ -16,7 +16,7 @@ which returns a new iterator object that can iterate over the entries in an `Int
 segments[Symbol.iterator]
 ```
 
-The one iterator function available is `.next()`, as [described on the iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) page.
+The one iterator function available is `.next()`, as [described on the iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) page.
 
 ### Return value
 

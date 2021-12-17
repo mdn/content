@@ -8,13 +8,13 @@ browser-compat: javascript.builtins.Intl.Segmenter.supportedLocalesOf
 ---
 {{JSRef}}
 
-Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
+The **`Intl.Segmenter.supportedLocalesOf()`** method returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
 ## Syntax
 
 ```js
-Intl.Segmenter.supportedLocalesOf(locales);
-Intl.Segmenter.supportedLocalesOf(locales, options);
+Intl.Segmenter.supportedLocalesOf(locales)
+Intl.Segmenter.supportedLocalesOf(locales, options)
 ```
 
 ### Parameters
