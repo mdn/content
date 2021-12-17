@@ -39,6 +39,8 @@ var registering = browser.contentScripts.register(
 
     - `allFrames`{{optional_inline}}
       - : Same as `all_frames` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
+    - `cookieStoreId` {{optional_inline}}
+      - : Registers the content script in the tabs that belong to the cookie store ID. This enable scripts to be registered for a [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities).
     - `css`{{optional_inline}}
       - : An array of objects. Each object has either a property named `file`, which is a URL starting at the extension's manifest.json and pointing to a CSS file to register, or a property named `code`, which is some CSS code to register.
     - `excludeGlobs`{{optional_inline}}
