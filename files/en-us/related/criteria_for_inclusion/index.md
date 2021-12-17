@@ -5,52 +5,52 @@ tags:
   - Related
   - criteria
 ---
-<p>This document outlines the criteria for inclusion that a technology must pass before we will consider it for inclusion in the MDN Web Docs <a href="/en-US/docs/Related">Web-related technologies</a> section. The aim here is to provide a guide you can follow to quickly work out if a non-web standards technology is suitable for inclusion.</p>
+This document outlines the criteria for inclusion that a technology must pass before we will consider it for inclusion in the MDN Web Docs [Web-related technologies](/en-US/docs/Related) section. The aim here is to provide a guide you can follow to quickly work out if a non-web standards technology is suitable for inclusion.
 
-<h2 id="Web_standards_technologies">Web standards technologies</h2>
+## Web standards technologies
 
-<p>The MDN Web Docs remit is to document web standards technologies, or more specifically technologies that follow our standard guidelines of <a href="/en-US/docs/MDN/Guidelines/Conventions_definitions#when_to_document_new_technologies">when to document new technologies</a> — the short version of this is that we document technologies on MDN Web Docs when they are specified in a specification published by a reliable standards body, and are supported in at least one browser.</p>
+The MDN Web Docs remit is to document web standards technologies, or more specifically technologies that follow our standard guidelines of [when to document new technologies](/en-US/docs/MDN/Guidelines/Conventions_definitions#when_to_document_new_technologies) — the short version of this is that we document technologies on MDN Web Docs when they are specified in a specification published by a reliable standards body, and are supported in at least one browser.
 
-<p>These criteria signify enough interest, stability, and intent to implement by the web industry at large that we think they are a safe bet to document without wasting our time. Any earlier than that, and they may be cancelled due to lack of interest, or be so unstable that they will change significantly, meaning lots of rewriting (which we try to avoid where possible).</p>
+These criteria signify enough interest, stability, and intent to implement by the web industry at large that we think they are a safe bet to document without wasting our time. Any earlier than that, and they may be cancelled due to lack of interest, or be so unstable that they will change significantly, meaning lots of rewriting (which we try to avoid where possible).
 
-<h2 id="Non-web_standards_technologies">Non-web standards technologies</h2>
+## Non-web standards technologies
 
-<p>Non-web standards technologies are technologies that do not follow our criteria summarised above. We would not normally consider them for documentation on MDN. However, there are many technologies that are not web standards, but are useful and interesting to web developers — think about developer tools, libraries, and frameworks as some of the more obvious examples. </p>
+Non-web standards technologies are technologies that do not follow our criteria summarised above. We would not normally consider them for documentation on MDN. However, there are many technologies that are not web standards, but are useful and interesting to web developers — think about developer tools, libraries, and frameworks as some of the more obvious examples.
 
-<p>Our mission statement is <em>"to provide developers with the information they need to easily build projects on the open Web"</em>. This suggests that we should consider documenting technologies that are useful to web developers, even if they are not open web standards, on the standards track, etc. Hence the creation of the Web-related technologies section as a place to house such documentation.</p>
+Our mission statement is _"to provide developers with the information they need to easily build projects on the open Web"_. This suggests that we should consider documenting technologies that are useful to web developers, even if they are not open web standards, on the standards track, etc. Hence the creation of the Web-related technologies section as a place to house such documentation.
 
-<p>We want to maintain a certain level of quality on MDN, and not just open our doors to accept any documentation. To do so would make MDN Web Docs a messy place, and potentially harm the web industry by creation substandard, conflicting documentation.</p>
+We want to maintain a certain level of quality on MDN, and not just open our doors to accept any documentation. To do so would make MDN Web Docs a messy place, and potentially harm the web industry by creation substandard, conflicting documentation.
 
-<p>Therefore, if you want to consider a non-web standard technology for inclusion in this section of MDN Web Docs, you should make sure that it matches the below criteria.</p>
+Therefore, if you want to consider a non-web standard technology for inclusion in this section of MDN Web Docs, you should make sure that it matches the below criteria.
 
-<h2 id="The_criteria">The criteria</h2>
+## The criteria
 
-<p>To be applicable for consideration, technologies should...</p>
+To be applicable for consideration, technologies should...
 
-<h3 id="Be_open_and_not_proprietary">Be open and not proprietary</h3>
+### Be open and not proprietary
 
-<p>At Mozilla we are supporters of open technologies, and don't wish to support closed technology ecosystems that are controlled by a single entity, not open for contributions by any interested party, and not interoperable across multiple platforms and systems. We believe that technology works better for humans when created out in the open.</p>
+At Mozilla we are supporters of open technologies, and don't wish to support closed technology ecosystems that are controlled by a single entity, not open for contributions by any interested party, and not interoperable across multiple platforms and systems. We believe that technology works better for humans when created out in the open.
 
-<h3 id="Be_web-exposed_in_some_way_related_to_web_technologies">Be web-exposed in some way / related to web technologies</h3>
+### Be web-exposed in some way / related to web technologies
 
-<p>Our central remit is web standards technologies; there is no point starting to document technologies that do not relate to the web, or hold any interest to web developers.</p>
+Our central remit is web standards technologies; there is no point starting to document technologies that do not relate to the web, or hold any interest to web developers.
 
-<h3 id="Show_signs_of_interest_and_adoption">Show signs of interest and adoption</h3>
+### Show signs of interest and adoption
 
-<p>We don't want to waste our time and energy helping to document a technology that has no signals of interest and adoption from industry. It may just be that it is too early to start documenting the technology, and we could consider it in the future.</p>
+We don't want to waste our time and energy helping to document a technology that has no signals of interest and adoption from industry. It may just be that it is too early to start documenting the technology, and we could consider it in the future.
 
-<h3 id="Not_be_showing_signs_of_being_deprecated_or_superseded">Not be showing signs of being deprecated, or superseded</h3>
+### Not be showing signs of being deprecated, or superseded
 
-<p>Related to the above point, we also don't want to waste our time helping to document something that is late in its lifecycle, and already showing signs of decline in interest.</p>
+Related to the above point, we also don't want to waste our time helping to document something that is late in its lifecycle, and already showing signs of decline in interest.
 
-<h3 id="Not_have_an_established_documentation_resource_elsewhere">Not have an established documentation resource elsewhere</h3>
+### Not have an established documentation resource elsewhere
 
-<p>There are many libraries and frameworks in existence, which are not web standards, but are built on top of web technologies and very popular in the web industry. We do not document any of these because in general they all have established documentation resources already. It would be foolish to compete with the official resource of a popular framework — to do so would be a waste of time and probably end up confusing developers trying to learn the technology.</p>
+There are many libraries and frameworks in existence, which are not web standards, but are built on top of web technologies and very popular in the web industry. We do not document any of these because in general they all have established documentation resources already. It would be foolish to compete with the official resource of a popular framework — to do so would be a waste of time and probably end up confusing developers trying to learn the technology.
 
-<h3 id="Have_a_community_willing_to_write_and_maintain_the_docs">Have a community willing to write and maintain the docs</h3>
+### Have a community willing to write and maintain the docs
 
-<p>The MDN Web Docs team concentrates on documenting the open web platform, and does not have time to spend on other documentation resources outside this remit. Therefore if you want a technology to be considered for documentation in this area of MDN Web Docs, you'll need to have a community assembled that is willing to write the documentation and maintain it after completion. Our team is happy to provide guidance in such cases, including edits and feedback, but we don't have time for much more than that.</p>
+The MDN Web Docs team concentrates on documenting the open web platform, and does not have time to spend on other documentation resources outside this remit. Therefore if you want a technology to be considered for documentation in this area of MDN Web Docs, you'll need to have a community assembled that is willing to write the documentation and maintain it after completion. Our team is happy to provide guidance in such cases, including edits and feedback, but we don't have time for much more than that.
 
-<h2 id="Next_steps">Next steps</h2>
+## Next steps
 
-<p>If your chosen technology looks to meet the criteria, the next step is to propose it to the MDN team. See the <a href="/en-US/docs/Related/Process_for_selection">Process for selection</a>.</p>
+If your chosen technology looks to meet the criteria, the next step is to propose it to the MDN team. See the [Process for selection](/en-US/docs/Related/Process_for_selection).

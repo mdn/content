@@ -4,39 +4,33 @@ slug: Related
 tags:
   - Related
 ---
-<p>This section of the site is a home for documentation on web-related technologies that aren't central to the MDN's remit (i.e. they aren't web standards technologies), but are nonetheless related to the web and of interest to web developers.</p>
+This section of the site is a home for documentation on web-related technologies that aren't central to the MDN's remit (i.e. they aren't web standards technologies), but are nonetheless related to the web and of interest to web developers.
 
-<div class="note">
-<p><strong>Note:</strong> These documentation resources generally aren't maintained by the MDN writer's team — if you have suggestions or queries related to these resources, check out the landing pages for those technologies for contact details of the relevant maintenance team.</p>
-</div>
+> **Note:** These documentation resources generally aren't maintained by the MDN writer's team — if you have suggestions or queries related to these resources, check out the landing pages for those technologies for contact details of the relevant maintenance team.
 
-<h2 id="Technology_list">Technology list</h2>
+## Technology list
 
-<dl>
- <dt><a href="/en-US/docs/Related/IMSC">IMSC: subtitles and captioning for the Web</a></dt>
- <dd>IMSC (TTML Profiles for Internet Media Subtitles and Captions) is a file format for representing subtitles and captions. It uses XML to describe content, timing, layout, and styling. IMSC is very similar to HTML and CSS in concept — in fact, most IMSC styles have a direct equivalent in CSS.</dd>
-</dl>
+- [IMSC: subtitles and captioning for the Web](/en-US/docs/Related/IMSC)
+  - : IMSC (TTML Profiles for Internet Media Subtitles and Captions) is a file format for representing subtitles and captions. It uses XML to describe content, timing, layout, and styling. IMSC is very similar to HTML and CSS in concept — in fact, most IMSC styles have a direct equivalent in CSS.
 
-<h2 id="Submitting_a_new_technology">Submitting a new technology</h2>
+## Submitting a new technology
 
-<p>If you want to document a new technology on MDN and it isn't a web standards technology, it may fit in this section of MDN Web Docs.</p>
+If you want to document a new technology on MDN and it isn't a web standards technology, it may fit in this section of MDN Web Docs.
 
-<p>To determine if it does, Carefully read the <a href="/en-US/docs/Related/Criteria_for_inclusion">Criteria for inclusion</a>. This outlines the criteria a technology should match to be considered for inclusion on this area of the site.</p>
+To determine if it does, Carefully read the [Criteria for inclusion](/en-US/docs/Related/Criteria_for_inclusion). This outlines the criteria a technology should match to be considered for inclusion on this area of the site.
 
-<p>If the technology does fit the criteria for inclusion, you should next follow the <a href="/en-US/docs/Related/Process_for_selection">process for selection</a>. The short version is that you assemble some supporting resources and then send them to the MDN team so we can make a decision on whether to include the technology. We want to consider each technology on a case-by-case basis, so we can carefully control what is published here and maintain quality.</p>
+If the technology does fit the criteria for inclusion, you should next follow the [process for selection](/en-US/docs/Related/Process_for_selection). The short version is that you assemble some supporting resources and then send them to the MDN team so we can make a decision on whether to include the technology. We want to consider each technology on a case-by-case basis, so we can carefully control what is published here and maintain quality.
 
-<h2 id="Creating_a_documentation_project">Creating a documentation project</h2>
+## Creating a documentation project
 
-<p>If the MDN Web Docs team accepts your proposal, it's time to get started with writing your documentation. See our <a href="/en-US/docs/Related/Project_guidelines">project guidelines</a> for a guide on how.</p>
+If the MDN Web Docs team accepts your proposal, it's time to get started with writing your documentation. See our [project guidelines](/en-US/docs/Related/Project_guidelines) for a guide on how.
 
-<h2 id="Contact">Contact</h2>
+## Contact
 
-<p>You can contact the MDN team at <a href="mailto:mdn-admins@mozilla.org">mdn-admins@mozilla.org</a>.</p>
+You can contact the MDN team at <mdn-admins@mozilla.org>.
 
-<h2 id="See_also">See also</h2>
+## See also
 
-<ul>
- <li><a href="/en-US/docs/Related/Criteria_for_inclusion">Criteria for inclusion</a></li>
- <li><a href="/en-US/docs/Related/Process_for_selection">Process for selection</a></li>
- <li><a href="/en-US/docs/Related/Project_guidelines">Project guidelines</a></li>
-</ul>
+- [Criteria for inclusion](/en-US/docs/Related/Criteria_for_inclusion)
+- [Process for selection](/en-US/docs/Related/Process_for_selection)
+- [Project guidelines](/en-US/docs/Related/Project_guidelines)
