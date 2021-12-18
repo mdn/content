@@ -43,10 +43,11 @@ audioTrackNode = new MediaStreamTrackAudioSourceNode(context, options);
     be associated with.
 - `options`
 
-  - : A {{domxref("MediaStreamTrackAudioSourceOptions")}} object defining the properties
+  - : An object defining the properties
     you want the `MediaStreamTrackAudioSourceNode` to have:
 
-    {{page("/en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions", "Properties")}}
+    - `mediaStreamTrack`
+      - : The {{domxref("MediaStreamTrack")}} from which to take audio data for this node's output.
 
 ### Return value
 
