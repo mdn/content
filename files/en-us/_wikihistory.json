@@ -59222,44 +59222,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/MediaSessionAction": {
-    "modified": "2020-10-15T22:32:38.938Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaSessionActionDetails": {
-    "modified": "2020-10-15T22:29:13.391Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaSessionActionDetails/action": {
-    "modified": "2020-10-15T22:29:15.064Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaSessionActionDetails/fastSeek": {
-    "modified": "2020-10-15T22:29:15.752Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaSessionActionDetails/seekOffset": {
-    "modified": "2020-10-15T22:29:15.264Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaSessionActionDetails/seekTime": {
-    "modified": "2020-10-15T22:29:15.353Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/MediaSource": {
     "modified": "2020-10-15T21:24:31.806Z",
     "contributors": [
