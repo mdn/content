@@ -17,7 +17,7 @@ browser-compat: api.BaseAudioContext.createStereoPanner
 The `createStereoPanner()` method of the {{ domxref("BaseAudioContext") }}
 interface creates a {{ domxref("StereoPannerNode") }}, which can be used to apply
 stereo panning to an audio source. It positions an incoming audio stream in a stereo
-image using a low-cost [equal-power](https://webaudio.github.io/web-audio-api/#equal-power) panning
+image using a low-cost [equal-power](https://webaudio.github.io/web-audio-api/#stereopanner-algorithm) panning
 algorithm.
 
 > **Note:** The {{domxref("StereoPannerNode.StereoPannerNode", "StereoPannerNode()")}}
