@@ -11,7 +11,7 @@ The `substring` function returns a part of a given string.
 
 ### Syntax
 
-    substring(string ,start [,length] )
+    substring(string ,start, [length] )
 
 ### Arguments
 
