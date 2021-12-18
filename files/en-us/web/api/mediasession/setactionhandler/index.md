@@ -41,11 +41,11 @@ navigator.mediaSession.setActionHandler(type, callback)
     - `previoustrack`
       - : Moves back to the previous track.
     - `seekbackward`
-      - : Seeks backward through the media from the current position. The {{domxref("MediaSessionActionDetails")}} property {{domxref("MediaSessionActionDetails.seekOffset", "seekOffset")}} specifies the amount of time to seek backward.
+      - : Seeks backward through the media from the current position. The `seekOffset` property passed to the callback specifies the amount of time to seek backward.
     - `seekforward`
-      - : Seeks forward from the current position through the media. The {{domxref("MediaSessionActionDetails")}} property {{domxref("MediaSessionActionDetails.seekOffset", "seekOffset")}} specifies the amount of time to seek forward.
+      - : Seeks forward from the current position through the media. The `seekOffset` property passed to the callback specifies the amount of time to seek forward.
     - `seekto`
-      - : Moves the playback position to the specified time within the media. The time to which to seek is specified in the {{domxref("MediaSessionActionDetails")}} property {{domxref("MediaSessionActionDetails.seekTime", "seekTime")}}. If you intend to perform multiple `seekto` operations in rapid succession, you can also specify the {{domxref("MediaSessionActionDetails")}} property {{domxref("MediaSessionActionDetails.fastSeek", "fastSeek")}} property with a value of `true`. This lets the browser know it can take steps to optimize repeated operations, and is likely to result in improved performance.
+      - : Moves the playback position to the specified time within the media. The time to which to seek is specified in the `seekTime` property passed to the callback. If you intend to perform multiple `seekto` operations in rapid succession, you can also specify the `fastSeek` property passed to the callback with a value of `true`. This lets the browser know it can take steps to optimize repeated operations, and is likely to result in improved performance.
     - `skipad`
       - : Skips past the currently playing advertisement or commercial. This action may or may not be available, depending on the platform and {{Glossary("user agent")}}, or may be disabled due to subscription level or other circumstances.
     - `stop`
@@ -70,8 +70,7 @@ navigator.mediaSession.setActionHandler(type, callback)
 To remove a previously-established action handler, call `setActionHandler()`
 again, specifying `null` as the `callback`.
 
-The action handler receives as input a single parameter: an object conforming to
-the {{domxref("MediaSessionActionDetails")}} dictionary, which provides both the action
+The action handler receives as input a single parameter: an object which provides both the action
 type (so the same function can handle multiple action types), as well as data needed in
 order to perform the action.
 
@@ -174,8 +173,7 @@ navigator.mediaSession.setActionHandler('nexttrack', null);
 ### Supporting multiple actions in one handler function
 
 You can also, if you prefer, use a single function to handle multiple action types, by
-checking the value of the `MediaSessionActionDetails` object's
-{{domxref("MediaSessionActionDetails.action", "action")}} property:
+checking the value of the `action` property:
 
 ```js
 let skipTime = 7;
