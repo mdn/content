@@ -7988,6 +7988,8 @@
 /en-US/docs/Web/API/MediaStreamTrack.onunmute	/en-US/docs/Web/API/MediaStreamTrack/onunmute
 /en-US/docs/Web/API/MediaStreamTrack.readyState	/en-US/docs/Web/API/MediaStreamTrack/readyState
 /en-US/docs/Web/API/MediaStreamTrack.stop	/en-US/docs/Web/API/MediaStreamTrack/stop
+/en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions	/en-US/docs/Web/API/MediaStreamTrackAudioSourceNode
+/en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions/mediaStreamTrack	/en-US/docs/Web/API/MediaStreamTrackAudioSourceNode
 /en-US/docs/Web/API/MediaStream_API	/en-US/docs/Web/API/Media_Streams_API
 /en-US/docs/Web/API/Media_Capabilities_API/MediaCapabilities	/en-US/docs/Web/API/MediaCapabilities
 /en-US/docs/Web/API/Media_Capabilities_API/MediaCapabilitiesInfo	/en-US/docs/Web/API/MediaCapabilities/encodingInfo

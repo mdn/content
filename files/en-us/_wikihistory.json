@@ -59855,18 +59855,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/MediaStreamTrackAudioSourceOptions": {
-    "modified": "2020-10-15T22:20:28.948Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaStreamTrackAudioSourceOptions/mediaStreamTrack": {
-    "modified": "2020-10-15T22:20:28.881Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/MediaStreamTrackEvent": {
     "modified": "2020-10-15T21:49:03.693Z",
     "contributors": [
