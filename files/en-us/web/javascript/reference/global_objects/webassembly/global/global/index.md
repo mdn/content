@@ -29,7 +29,7 @@ new WebAssembly.Global(descriptor, value)
 
     - `value`: A [`USVString`](/en-US/docs/Web/API/USVString) representing the
       data type of the global. This can be one of `i32`, `i64`,
-      `f32`, `f64`, and `externref`. USVString corresponds to the set of all
+      `f32`, `f64`, `externref` and `anyfunc`. USVString corresponds to the set of all
       possible sequences of unicode scalar values. USVString maps to a String when
       returned in JavaScript; it's generally only used for APIs that perform text
       processing and need a string of unicode scalar values to operate on. USVString is
@@ -42,7 +42,7 @@ new WebAssembly.Global(descriptor, value)
 - _value_
   - : The value the variable contains. This can be any value, as long as its type matches
     the variable's data type. If no value is specified, a typed 0 value is used where the value of `descriptor.value` is one of `i32`, `i64`,
-      `f32`, or `f64`, and `null` is used if `descriptor.value` is `externref`, as
+      `f32`, or `f64`, and `null` is used if `descriptor.value` is `externref` or `anyfunc`, as
     specified by the [`DefaultValue`
     algorithm](https://webassembly.github.io/spec/js-api/#defaultvalue).
 
