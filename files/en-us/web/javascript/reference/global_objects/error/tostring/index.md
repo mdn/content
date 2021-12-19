@@ -5,6 +5,7 @@ tags:
   - JavaScript
   - Method
   - Prototype
+  - Polyfill
 browser-compat: javascript.builtins.Error.toString
 ---
 {{JSRef}}
@@ -91,4 +92,5 @@ console.log(e5.toString()); // 'hello'
 
 ## See also
 
+- [A polyfill of `Error.prototype.toString`](https://github.com/zloirock/core-js#ecmascript-error) with many bug fixes is available in [`core-js`](https://github.com/zloirock/core-js)
 - {{jsxref("Error.prototype.toSource()")}}
