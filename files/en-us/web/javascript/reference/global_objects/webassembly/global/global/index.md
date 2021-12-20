@@ -28,14 +28,14 @@ new WebAssembly.Global(descriptor, value)
   - : A `GlobalDescriptor` dictionary object, which contains two properties:
 
     - `value`: A [`USVString`](/en-US/docs/Web/API/USVString) representing the
-      data type of the global. This can be one of `i32`, `i64`,
-      `f32`, `f64`, `externref` and `anyfunc`. USVString corresponds to the set of all
-      possible sequences of unicode scalar values. USVString maps to a String when
-      returned in JavaScript; it's generally only used for APIs that perform text
-      processing and need a string of unicode scalar values to operate on. USVString is
-      equivalent to DOMString except for not allowing unpaired surrogate codepoints.
-      Unpaired surrogate codepoints present in USVString are converted by the browser to
-      Unicode 'replacement character' U+FFFD, (�).
+      data type of the global. This can be any one of:
+      - `i32`: A 32-bit integer.
+      - `i64`: A 64-bit integer.
+      - `f32`: A 32-bit floating point number.
+      - `f64`: A 64-bit floating point number.
+      - `v128`: A 128-bit vector - note that although this is in the specification, in chrome this produces a {{jsxref("TypeError")}}.
+      - `externref`: A host reference.
+      - `anyfunc`: A function reference.
     - `mutable`: A boolean value that determines whether the global is
       mutable or not. By default, this is `false`.
 
