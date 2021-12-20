@@ -228,7 +228,8 @@ body {
 
 ### Repeating track listings
 
-You can repeat all or merely a section of your track listing using the CSS `repeat` function. Change your track listing to the following:
+You can repeat all or merely a section of your track listing using the CSS `repeat()` function.
+Change your track listing to the following:
 
 ```css
 .container {
@@ -238,7 +239,7 @@ You can repeat all or merely a section of your track listing using the CSS `repe
 }
 ```
 
-You'll now get three `1fr` tracks just as before. The first value passed to the `repeat` function specifies the number of times you want the listing to repeat, while the second value is a track listing, which may be one or more tracks that you want to repeat.
+You'll now get three `1fr` tracks just as before. The first value passed to the `repeat()` function specifies the number of times you want the listing to repeat, while the second value is a track listing, which may be one or more tracks that you want to repeat.
 
 ### The implicit and explicit grid
 
