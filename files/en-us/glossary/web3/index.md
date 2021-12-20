@@ -6,7 +6,7 @@ tags:
   - Glossary
   - Infrastructue
 ---
-Web3 is a web controled by the people through a blockchain; making them nearly imossibe to be controlled by a governmet or comany. They also have a currency for the blockchain they use.
+Web3 is a web controlled by the people through a blockchain; making them nearly impossible to be controlled by a government or company. They also have a currency for the blockchain they use.
 
 For example: 
 - [Uniswap](https://uniswap.org) a web3 appthat allows you to swap one cryptocurrency for another and provide liquidity for cryptocurrency.
