@@ -25,10 +25,7 @@ insert new elements (adding a link), or affect an entire line (indenting). When 
 `contentEditable`, `execCommand()` affects the currently active
 editable element.
 
-> **Note:** While this method is deprecated, it is still useful in some cases.
-> 
-> For example, the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) doesn't replace the `insertText` command.
-> You can use it for programmatically replacing text at the cursor while preserving the undo buffer (edit history) in plain `textarea` and `input` elements.
+The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) can be used instead of `execCommand` in many cases, but `execCommand` is still sometimes useful. In particular, the Clipboard API doesn't replace the `insertText` command, which you can use to programmatically replace text at the cursor while preserving the undo buffer (edit history) in plain `textarea` and `input` elements.
 
 ## Syntax
 
@@ -80,7 +77,7 @@ disabled.
     compatibility table to determine if you can use it in your case.
 - `createLink`
   - : Creates an hyperlink from the selection, but only if there is a selection. Requires
-    a [URI](/en-US/docs/Archive/Mozilla/URIs_and_URLs) string as a value
+    a {{Glossary("URI")}} string as a value
     argument for the hyperlink's `href`. The URI must contain at least a single
     character, which may be whitespace. (Internet Explorer will create a link with a
     `null` value.)
@@ -226,36 +223,75 @@ disabled.
 An example of [how to use
 execCommand with contentEditable elements](https://codepen.io/chrisdavidmills/full/gzYjag/) on CodePen.
 
-An example on how to insert text with both plain `textarea` and `contentEditable` elements:
+### Using insertText
+
+This example shows two very basic HTML editors, one using a {{HTMLElement("textarea")}} element and one using a {{HTMLElement("pre")}} element with the {{htmlattrxref("contenteditable")}} attribute set.
+
+Clicking the "Bold" or "Italic" buttons inserts the appropriate tags in the element, using `insertText` to preserve the edit history, so the user can undo the action.
+
+#### HTML
+
+```html
+<h2>textarea</h2>
+
+<div class="actions" data-for="textarea">
+  <button data-el="b">Bold</button>
+  <button data-el="i">Italic</button>
+</div>
+
+<textarea class="editarea">Some text.</textarea>
+
+<h2>contenteditable</h2>
+
+<div class="actions" data-for="pre">
+  <button data-el="b">Bold</button>
+  <button data-el="i">Italic</button>
+</div>
+
+<pre contenteditable="true" class="editarea">Some text.</pre>
+```
+
+#### JavaScript
+
 ```js
-// Inserts text at cursor
-// (or replaces selected text).
-function insertText(newText, textarea)
-{
-    if (typeof textarea === 'string') {
-        textarea = document.querySelector(textarea);
-    }
-    textarea.focus();
-    
-    // attempting to paste to preserver undo functionality
-    let pasted = true;
-    try {
-        if (!document.execCommand("insertText", false, newText)) {
-            pasted = false;
-        }
-    } catch (e) {
-        console.error('error caught:', e);
-        pasted = false;
-    }
-    // fallback?
-    if (!pasted) {
-        console.error('paste unsuccessful, execCommand not supported');
-    }
+// Prepare action buttons
+const buttonContainers = document.querySelectorAll('.actions');
+
+for (const buttonContainer of buttonContainers) {
+  const buttons = buttonContainer.querySelectorAll('button');
+  const pasteTarget = buttonContainer.getAttribute('data-for');
+
+  for (const button of buttons) {
+    const elementName = button.getAttribute('data-el');
+    button.addEventListener('click',
+      () => insertText(`<${elementName}></${elementName}>`, pasteTarget) )
+  }  
 }
 
-// insert bold tag in some editing filed.
-insertText('<b></b>', '#someEditorTextarea');
+// Inserts text at cursor, or replaces selected text
+function insertText(newText, selector) {
+  const textarea = document.querySelector(selector);
+  textarea.focus();
+
+  let pasted = true;
+  try {
+    if (!document.execCommand("insertText", false, newText)) {
+      pasted = false;
+    }
+  } catch (e) {
+    console.error('error caught:', e);
+    pasted = false;
+  }
+
+  if (!pasted) {
+      console.error('paste unsuccessful, execCommand not supported');
+  }
+}
 ```
+
+#### Result
+
+{{EmbedLiveSample("Using insertText", 100, 300)}}
 
 ## Specifications
 
