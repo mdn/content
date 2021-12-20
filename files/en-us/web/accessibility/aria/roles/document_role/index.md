@@ -26,7 +26,7 @@ The `document` role is for the top container containing content that assistive t
 </div>
 ```
 
-This example shows a [dialog](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role, a complex composite widget role, with some controls and a section with some informational text that the assistive technology user can go into reading mode when tabbed to.
+This example shows a [dialog](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role), a complex composite widget role, with some controls and a section with some informational text that the assistive technology user can go into reading mode when tabbed to.
 
 By default, web pages are treated as documents; assistive technologies (AT) enter browse or read mode when entering a new web page. This mode can be altered through various roles, including the widget and application roles. The `document` role brings the AT back into browse or read mode.
 
