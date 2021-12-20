@@ -32,7 +32,7 @@ html,body,svg { height:100% }
   </defs>
 
   <!-- using my graphical objects -->
-  <use x="5" y="5" xlink:href="#myCircle" fill="url('#myGradient')" />
+  <use x="5" y="5" href="#myCircle" fill="url('#myGradient')" />
 </svg>
 ```
 
