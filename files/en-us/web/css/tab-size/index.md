@@ -88,7 +88,6 @@ p {
 
 .custom {
   tab-size: 3;
-  -moz-tab-size: 3;
 }
 ```
 
