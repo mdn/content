@@ -14,7 +14,12 @@ tags:
 The **alertdialog** role is to be used on modal alert dialogs that interrupt a user's workflow to communicate an important message and require a response.
 
 ## Description
-Not to be confused with the live region [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role) role, the `alertdialog` role defines a modal dialog that interrupts the user's workflow. It is used to communicate an important message and get a response. Examples include error messages that require a confirmation and other action confirmation prompts. The `alertdialog` role is not to be used as a replacement for other dialogs, including no confirmation required alert dialogs [`Window.alert()`](/en-US/docs/Web/API/Window/alert) and prompts [`Window.prompt()`](/en-US/docs/Web/API/Window/prompt).  
+
+The `alertdialog` role is used to notify users of urgent information that demands the user's immediate attention. As the name implies, `alertdialog` is a mashup of the[`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) and [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role) roles. The `alertdialog` is type of `dialog` with similar use cases as `alert`, but when a user response is required.
+
+The `alertdialog` role defines a [modal](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal) dialog that interrupts the user's workflow. It is used to communicate an important message and get a response. Examples include error messages that require a confirmation and other action confirmation prompts. 
+
+The `alertdialog` role is not to be used as a replacement for other dialogs, including no confirmation required alert dialogs [`Window.alert()`](/en-US/docs/Web/API/Window/alert) and prompts [`Window.prompt()`](/en-US/docs/Web/API/Window/prompt).  
 
 The `alertdialog` must have an accessible name, defined with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label). The alert dialog text must have an accessible description using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby).
 
@@ -69,7 +74,7 @@ See the [`dialog` role's required javaScript features](en-US/docs/Web/Accessibil
 ## See Also
 
   * [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
-  * [Using the `alertdialog` role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
+  * [The `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 
 <section id="Quick_links">
 
