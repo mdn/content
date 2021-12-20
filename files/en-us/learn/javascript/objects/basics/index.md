@@ -22,7 +22,7 @@ In this article, we'll look at fundamental JavaScript object syntax, and revisit
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand the basics opf working with objects in JavaScript: creating objects, accessing and modifying object properties, and using constructors.
+        To understand the basics of working with objects in JavaScript: creating objects, accessing and modifying object properties, and using constructors.
       </td>
     </tr>
   </tbody>
