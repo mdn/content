@@ -9,7 +9,7 @@ tags:
 Web3 is a web controlled by the people through a blockchain; making them nearly impossible to be controlled by a government or company. They also have a currency for the blockchain they use.
 
 For example: 
-- [Uniswap](https://uniswap.org) a web3 appthat allows you to swap one cryptocurrency for another and provide liquidity for cryptocurrency.
+- [Uniswap](https://uniswap.org) a web3 app that allows you to swap one cryptocurrency for another and provide liquidity for cryptocurrency.
 - [Curve](https://curve.fi) is a web3 smart contract that allows users to provide liquidity to different cryptocurrencies.
 
 See also:
