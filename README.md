@@ -760,7 +760,7 @@ to the <https://github.com/mdn/translated-content> repo.
 
 In general, we do not approve of copying content from other sources and putting
 it on MDN. MDN should be made up of original content wherever possible. If we
-receive a pull request and discover that it contains plagiarised content,
+receive a pull request and discover that it contains plagiarized content,
 we will close it and request that the submitter resubmit the change with
 the content rewritten into their own words.
 
