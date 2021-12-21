@@ -1,5 +1,5 @@
 ---
-title: "AudioTrackList: addtrack event"
+title: 'AudioTrackList: addtrack event'
 slug: Web/API/AudioTrackList/addtrack_event
 tags:
   - Event
