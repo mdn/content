@@ -2187,6 +2187,15 @@
         "XRSession: visibilitychange"
       ]
     },
+    "Window Controls Overlay API": {
+      "overview": ["Window Controls Overlay API"],
+      "interfaces": [
+        "WindowControlsOverlay"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "XDomain": {
       "interfaces": ["XDomainRequest"],
       "methods": [],
