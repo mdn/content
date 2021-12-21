@@ -111,7 +111,7 @@ In these examples, it would probably be simpler to use the {{SVGElement("polygon
 
 ## Curve commands
 
-There are three different commands that can be used to create smooth curves. Two of those curves are Bézier curves, and the third is an "arc" or part of a circle. You might have already gained practical experience with Bézier curves using path tools in Inkscape, Illustrator or Photoshop. For a complete description of the math behind Bézier curves, go to a reference like the one on [Wikipedia](https://en.wikipedia.org/wiki/B%C3%A9zier_curve). There are an infinite number of Bézier curves, but only two simple ones are available in `<path>` elements: a cubic one, called with `C`, and a quadratic one, called with `Q`.
+There are three different commands that can be used to create smooth curves. Two of those curves are [Bézier curves](/en-US/docs/Glossary/Bézier_curve), and the third is an "arc" or part of a circle. You might have already gained practical experience with Bézier curves using path tools in Inkscape, Illustrator or Photoshop. There are an infinite number of Bézier curves, but only two simple ones are available in `<path>` elements: a cubic one, called with `C`, and a quadratic one, called with `Q`.
 
 ### Bézier Curves
 

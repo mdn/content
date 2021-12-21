@@ -8,7 +8,7 @@ browser-compat: svg.elements.animate.keySplines
 ---
 {{SVGRef}}
 
-The **`keySplines`** attribute defines a set of {{Glossary("Bézier curve")}} control points associated with the {{SVGAttr("keyTimes")}} list, defining a cubic Bézier function that controls interval pacing.
+The **`keySplines`** attribute defines a set of [Bézier curve](/en-US/docs/Glossary/Bézier_curve) control points associated with the {{SVGAttr("keyTimes")}} list, defining a cubic Bézier function that controls interval pacing.
 
 This attribute is ignored unless the {{SVGAttr("calcMode")}} attribute is set to `spline`.
 
@@ -107,4 +107,4 @@ The attribute value is a semicolon-separated list of control point descriptions.
 
 ## See also
 
-*   [Wikipedia article on Bézier curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve)
+* [Bézier curve](/en-US/docs/Glossary/Bézier_curve)
