@@ -98,7 +98,7 @@ console.log(Object.getPrototypeOf(myObject)); // Object {...}
 
 This is an object called `Object.prototype`, and it is the most basic prototype, that all objects have by default. The prototype of `Object.prototype` is `null`, so it's at the end of the prototype chain:
 
-![Prototype chain for myObject](myObject-prototype-chain.svg)
+![Prototype chain for myObject](myobject-prototype-chain.svg)
 
 The prototype of an object is not always `Object.prototype`. Try this:
 
@@ -119,7 +119,7 @@ do {
 
 This code creates a `Date` object, then walks up the prototype chain, logging the prototypes. It shows us that the prototype of `myDate` is a `Date.prototype` object, and the prototype of _that_ is `Object.prototype`.
 
-![Prototype chain for myDate](myDate-prototype-chain.svg)
+![Prototype chain for myDate](mydate-prototype-chain.svg)
 
 In fact, when you call familiar methods, like `myDate2.getMonth()`,
 you are calling a method that's defined on `Date.prototype`.
