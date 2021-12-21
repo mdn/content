@@ -81,8 +81,8 @@ This constructor takes two parameters so we can initialize the `name` and `subje
 Now we have a constructor we can create some professors. Programming languages often use the keyword `new` to signal that a constructor is being called.
 
 ```
-walsh = new Professor('Walsh', Psychology')
-lillian = new Professor('Lillian', Poetry')
+walsh = new Professor('Walsh', 'Psychology')
+lillian = new Professor('Lillian', 'Poetry')
 
 walsh.subject  // 'Psychology'
 walsh.introduceSelf()  // 'My name is Professor Walsh, and I will be your Psychology professor'
