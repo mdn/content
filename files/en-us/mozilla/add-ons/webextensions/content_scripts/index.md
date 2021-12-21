@@ -12,7 +12,7 @@ A content script is a part of your extension that runs in the context of a parti
 
 Just like the scripts loaded by normal web pages, content scripts can read and modify the content of their pages using the standard DOM APIs.
 
-Content scripts can only access [a small subset of the WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis), but they can [communicate with background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts) using a messaging system, and thereby indirectly access the WebExtension APIs.
+Content scripts can only access [a small subset of the WebExtension APIs](#webextension_apis), but they can [communicate with background scripts](#communicating_with_background_scripts) using a messaging system, and thereby indirectly access the WebExtension APIs.
 
 > **Note:** Content scripts are blocked on the following domains:
 >
