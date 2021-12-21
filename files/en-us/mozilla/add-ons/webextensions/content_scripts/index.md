@@ -22,7 +22,6 @@ Content scripts can only access [a small subset of the WebExtension APIs](#webex
 > - addons.mozilla.org
 > - api.accounts.firefox.com
 > - content.cdn.mozilla.net
-> - content.cdn.mozilla.net
 > - discovery.addons.mozilla.org
 > - input.mozilla.org
 > - install.mozilla.org
