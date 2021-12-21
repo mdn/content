@@ -93321,24 +93321,6 @@
       "hhillen"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role": {
-    "modified": "2019-08-04T13:01:30.861Z",
-    "contributors": [
-      "vamsikrishnareddybevara",
-      "codelemur",
-      "duduindo",
-      "yuheiy",
-      "sounakpal",
-      "dkocho4",
-      "latpaw",
-      "jameshopkins",
-      "SueSmith",
-      "Sheppy",
-      "anastasia",
-      "Ken Saundders",
-      "hhillen"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role": {
     "modified": "2020-02-11T20:26:27.807Z",
     "contributors": [
