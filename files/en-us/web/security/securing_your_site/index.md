@@ -33,7 +33,7 @@ There are a number of things you can do to help secure your site. This article o
 - [Content Security Policy](/en/Security/CSP)
   - : An added layer of security that helps to detect and mitigate certain types of attacks, including {{Glossary("Cross-site_scripting", "Cross Site Scripting (XSS)")}} and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. Code is executed by the victims and lets the attackers bypass access controls and impersonate users. According to the Open Web Application Security Project, XSS was the [seventh most common Web app vulnerability](https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf) in 2017.
 - [The X-Frame-Options response header](/en-US/docs/Web/HTTP/X-Frame-Options)
-  - : The `X-Frame-Options:` [HTTP](/en/HTTP) response header can be used to indicate whether or not a browser should be allowed to render a page in a {{ HTMLElement("frame") }}. Sites can use this to avoid clickjacking attacks, by ensuring that their content is not embedded into other sites.
+  - : The `X-Frame-Options:` [HTTP](/en/HTTP) response header can be used to indicate whether or not a browser should be allowed to render a page in a {{ HTMLElement("frame") }}. Sites can use this to avoid [clickjacking](/en-us/Glossary/Clickjacking) attacks, by ensuring that their content is not embedded into other sites.
 - Access control by configuring a website
   - : It is the best way to secure your site. You can ignore specific IPs, restrict access to certain areas of website, protect different files, protect against image hotlinking, and a lot more. For example, .htaccess file is used for websites hosted on [Apache HTTP Server](https://httpd.apache.org/).
 
