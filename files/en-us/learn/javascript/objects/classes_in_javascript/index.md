@@ -69,7 +69,7 @@ You could also initialize the property to a default value when you declare it, w
 
 The constructor is identified using the {{jsxref("Classes/constructor", "constructor")}} keyword. Just like a standalone constructor, it will:
 * create a new object
-* bind `this` to the new object, so you can refer to  `this` in your constructor code
+* bind `this` to the new object, so you can refer to `this` in your constructor code
 * run the code in the constructor
 * return the new object.
 
