@@ -13,6 +13,7 @@ tags:
   - currentLocalConnection
 browser-compat: api.RTCPeerConnection.currentLocalDescription
 ---
+
 {{WebRTCSidebar}}
 
 The read-only property
@@ -89,4 +90,4 @@ else {
   {{domxref("RTCPeerConnection.remoteDescription")}},
   {{domxref("RTCPeerConnection.pendingRemoteDescription")}},
   {{domxref("RTCPeerConnection.currentRemoteDescription")}}
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

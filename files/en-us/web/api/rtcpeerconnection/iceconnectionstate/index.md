@@ -18,6 +18,7 @@ tags:
   - state
 browser-compat: api.RTCPeerConnection.iceConnectionState
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property **`RTCPeerConnection.iceConnectionState`** returns
@@ -35,7 +36,7 @@ You can detect when this value has changed by watching for the
 ## Syntax
 
 ```js
- var state = RTCPeerConnection.iceConnectionState;
+var state = RTCPeerConnection.iceConnectionState;
 ```
 
 ### Value
@@ -96,6 +97,6 @@ The current state of the ICE agent and its connection. The value is one of the f
 
 ## See also
 
-- [WebRTC API](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - {{DOMxRef("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
 - {{domxref("RTCPeerConnection")}}

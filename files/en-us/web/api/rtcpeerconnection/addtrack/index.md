@@ -14,6 +14,7 @@ tags:
   - addTrack
 browser-compat: api.RTCPeerConnection.addTrack
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnection")}} method
@@ -23,6 +24,7 @@ which will be transmitted to the other peer.>
 > **Note:** Adding a track to a connection triggers renegotiation by
 > firing a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event. See
 > {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
+
     "Starting negotiation")}} for details.
 
 ## Syntax
@@ -108,7 +110,7 @@ handler might look like this:
 ```js
 let inboundStream = null;
 
-pc.ontrack = ev => {
+pc.ontrack = (ev) => {
   if (ev.streams && ev.streams[0]) {
     videoElem.srcObject = ev.streams[0];
   } else {
@@ -118,7 +120,7 @@ pc.ontrack = ev => {
     }
     inboundStream.addTrack(ev.track);
   }
-}
+};
 ```
 
 Here, the `track` event handler adds the track to the first stream specified
@@ -129,14 +131,14 @@ is added to the new stream. From then on, new tracks are added to that stream.
 You could also just create a new stream for each track received:
 
 ```js
-pc.ontrack = ev => {
+pc.ontrack = (ev) => {
   if (ev.streams && ev.streams[0]) {
     videoElem.srcObject = ev.streams[0];
   } else {
     let inboundStream = new MediaStream(ev.track);
     videoElem.srcObject = inboundStream;
   }
-}
+};
 ```
 
 #### Associating tracks with specific streams
@@ -233,20 +235,21 @@ is received from the remote peer.
 
 ```js
 var mediaConstraints = {
-  audio: true,            // We want an audio track
-  video: true             // ...and we want a video track
+  audio: true, // We want an audio track
+  video: true, // ...and we want a video track
 };
 
 var desc = new RTCSessionDescription(sdp);
 
-pc.setRemoteDescription(desc).then(function () {
-  return navigator.mediaDevices.getUserMedia(mediaConstraints);
-})
-.then(function(stream) {
-  previewElement.srcObject = stream;
+pc.setRemoteDescription(desc)
+  .then(function () {
+    return navigator.mediaDevices.getUserMedia(mediaConstraints);
+  })
+  .then(function (stream) {
+    previewElement.srcObject = stream;
 
-  stream.getTracks().forEach(track => pc.addTrack(track, stream));
-})
+    stream.getTracks().forEach((track) => pc.addTrack(track, stream));
+  });
 ```
 
 This code takes SDP which has been received from the remote peer and constructs a new
@@ -274,7 +277,7 @@ returned by {{domxref("MediaStream.getTracks()")}} and passing them to
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - [Introduction to the Real-time
   Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
 - {{domxref("RTCPeerConnection.ontrack")}}
