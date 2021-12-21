@@ -62,6 +62,8 @@ As the `alert` role reads out content that has changed, bring the user's attenti
 
 ## Examples
 
+Below are four ways of creating alerts: 
+
 ### Example 1: Adding the role in the HTML code
 
 Here, the alert role is added directly into the HTML source code. When the element finishes loading the screen reader will be notified of the alert. 
