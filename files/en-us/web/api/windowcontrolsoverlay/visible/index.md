@@ -8,7 +8,7 @@ tags:
   - Reference
   - WindowControlsOverlay
   - Progressive Web Apps
-browser-compat: api.WindowControlsOverlay
+browser-compat: api.WindowControlsOverlay.visible
 ---
 {{ApiRef("Window Controls Overlay API")}}
 

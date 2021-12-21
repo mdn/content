@@ -8,7 +8,7 @@ tags:
   - Reference
   - ongeometrychange
   - Progressive Web Apps
-browser-compat: api.WindowControlsOverlay
+browser-compat: api.WindowControlsOverlay.geometrychange_event
 ---
 {{ApiRef("Window Controls Overlay API")}}
 

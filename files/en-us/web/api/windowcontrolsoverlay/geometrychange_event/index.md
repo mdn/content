@@ -7,7 +7,7 @@ tags:
   - Progressive Web Apps
   - Window Controls Overlay
   - events
-browser-compat: api.WindowControlsOverlay
+browser-compat: api.WindowControlsOverlay.geometrychange_event
 ---
 {{APIRef("EyeDropper API")}}
 

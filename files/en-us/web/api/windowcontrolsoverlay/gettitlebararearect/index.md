@@ -7,7 +7,7 @@ tags:
   - Reference
   - WindowControlsOverlay
   - Progressive Web Apps
-browser-compat: api.WindowControlsOverlay
+browser-compat: api.WindowControlsOverlay.getTitleBarAreaRect
 ---
 {{APIRef("Window Controls Overlay API")}}{{SeeCompatTable}}
 
