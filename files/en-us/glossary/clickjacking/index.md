@@ -15,6 +15,6 @@ Clickjacking can be prevented by implementing a [Content Security Policy (frame-
 
 ## Learn more<
 
-- [Web security: clickjacking](/en-US/docs/Web/Security#clickjacking_protection)
+- [Web security: clickjacking protection](/en-US/docs/Web/Security#clickjacking_protection)
 - [Clickjacking](https://en.wikipedia.org/wiki/Clickjacking) on Wikipedia
 - [Clickjacking](https://owasp.org/www-community/attacks/Clickjacking) on OWASP
