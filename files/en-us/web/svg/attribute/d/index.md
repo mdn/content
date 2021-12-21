@@ -406,7 +406,7 @@ html,body,svg { height:100% }
 
 ### Cubic Bézier Curve
 
-*Cubic [Bézier curves](https://en.wikipedia.org/wiki/Bézier_curve)* are smooth curve definitions using four points:
+*Cubic [Bézier curves](/en-US/docs/Glossary/Bézier_curve)* are smooth curve definitions using four points:
 
 *   starting point (current point)
     *   : (*P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*})
@@ -619,7 +619,7 @@ html,body,svg { height:100% }
 
 ### Quadratic Bézier Curve
 
-*Quadratic [Bézier curves](https://en.wikipedia.org/wiki/Bézier_curve)* are smooth curve definitions using three points:
+*Quadratic [Bézier curves](/en-US/docs/Glossary/Bézier_curve)* are smooth curve definitions using three points:
 
 *   starting point (current point)
     *   : *P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*}
