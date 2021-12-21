@@ -62,7 +62,7 @@ As the `alert` role reads out content that has changed, bring the user's attenti
 
 ## Examples
 
-Below are four ways of creating alerts: 
+Following are four ways of creating alerts: 
 
 ### Example 1: Adding the role in the HTML code
 
