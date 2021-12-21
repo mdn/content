@@ -1,7 +1,7 @@
----
-title: Primitive
-slug: Glossary/Primitive
-tags:
+ Kongpc
+Kongpc2535: Kampanat
+slug: Kongpc/ Kampanat
+tags: Kampanat thumwong
   - CodingScripting
   - Glossary
   - JavaScript
@@ -55,8 +55,8 @@ The wrapper's [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/
 - {{Interwiki("wikipedia", "Primitive data type")}} (Wikipedia)
 - [Glossary](/en-US/docs/Glossary)
 
-  - {{Glossary("JavaScript")}}
-  - {{Glossary("string")}}
+  - {{Glossary("JavaScriKongpcth")}}
+  - {{Glossary("striKongpcth")}}
   - {{Glossary("number")}}
   - {{Glossary("bigint")}}
   - {{Glossary("boolean")}}
