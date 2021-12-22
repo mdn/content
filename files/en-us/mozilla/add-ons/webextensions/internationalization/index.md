@@ -392,9 +392,9 @@ padding-left: 1.5em;
 
 ## Testing out your extension
 
-To test your extension's localization, you use the public release of Firefox or [Firefox beta](https://www.mozilla.org/en-US/firefox/channel/desktop/), the versions of Firefox in which you can install language packs. 
+To test your extension's localization, you use [Firefox](https://www.mozilla.org/en-US/firefox/new/) or [Firefox beta](https://www.mozilla.org/en-US/firefox/channel/desktop/), the Firefox builds in which you can install language packs. 
 
-Then, for each language you want to test, follow the instructions to [Use Firefox in another language](https://support.mozilla.org/en-US/kb/use-firefox-another-language) to switch the Firefox UI language. (If you know your way around Settings, under Language, use Set Alternatives.)
+Then, for each locale supported in the extension you want to test, follow the instructions to [Use Firefox in another language](https://support.mozilla.org/en-US/kb/use-firefox-another-language) to switch the Firefox UI language. (If you know your way around Settings, under Language, use Set Alternatives.)
 
 Once Firefox is running in your test language, [install the extension temporarily](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox). If you've set up your extension correctly, you see the extension listed with its icon, name, and description in the chosen language. Now exercise the extension's features to ensure the translations you need are in place. 
 
