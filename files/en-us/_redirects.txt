@@ -9687,6 +9687,7 @@
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role	/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_switch_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Switch_role
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role	/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role
+/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/using_the_aria-valuemin_attribute/	/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-acceleratorkey	/en-US/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-format-detection	/en-US/docs/Web/HTML/Global_attributes/x-ms-format-detection
 /en-US/docs/Web/Accessibility/ARIA/Basic_form_hints	/en-US/docs/Web/Accessibility/ARIA/forms/Basic_form_hints
