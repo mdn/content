@@ -37,7 +37,6 @@
 /en-US/docs/ARIA/ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
 /en-US/docs/ARIA/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 /en-US/docs/ARIA/ARIA_Techniques	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques
-/en-US/docs/ARIA/ARIA_Techniques/ARIA_Technique_Template	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/ARIA_Technique_Template
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_alert_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Alert_Role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/en-US/docs/web/Accessibility/ARIA/Attributes/aria-activedescendant
@@ -77,7 +76,6 @@
 /en-US/docs/Accessibility/ARIA/ARIA_Live_Regions	/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
 /en-US/docs/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide	/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques
-/en-US/docs/Accessibility/ARIA/ARIA_Techniques/ARIA_Technique_Template	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/ARIA_Technique_Template
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Alert_Role
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute	/en-US/docs/web/Accessibility/ARIA/Attributes/aria-activedescendant
