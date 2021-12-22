@@ -93472,14 +93472,6 @@
       "anastasia"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute": {
-    "modified": "2019-03-24T00:17:00.212Z",
-    "contributors": [
-      "smarvin",
-      "Sheppy",
-      "anastasia"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute": {
     "modified": "2020-03-19T11:35:41.339Z",
     "contributors": [
