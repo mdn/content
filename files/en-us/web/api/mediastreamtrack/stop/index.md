@@ -36,8 +36,7 @@ using the source, the source may actually be completely stopped.
 
 Immediately after calling `stop()`, the
 {{domxref("MediaStreamTrack.readyState", "readyState")}} property is set to
-`ended` but does not fire the 
-[`ended`](/en-US/docs/Web/API/MediaStreamTrack/ended_event) event.
+`ended`. Note that the [`ended`](/en-US/docs/Web/API/MediaStreamTrack/ended_event) event will not be fired in this situation.
 
 ## Examples
 
