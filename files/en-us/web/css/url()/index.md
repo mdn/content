@@ -98,15 +98,19 @@ url( <string> <url-modifier>* )
 
 ### A url used in the background property
 
-    .topbanner {
-      background: url("topbanner.png") #00D no-repeat fixed;
-    }
+```css
+.topbanner {
+  background: url("topbanner.png") #00D no-repeat fixed;
+}
+```
 
 ### A url loading an image as a list bullet
 
-    ul {
-      list-style: square url(http://www.example.com/redball.png);
-    }
+```css
+ul {
+  list-style: square url(http://www.example.com/redball.png);
+}
+```
 
 ### Usage in the content property
 
@@ -164,15 +168,15 @@ When a URL is used as a path for a filter, the URL must be one of the following:
 1.  The path to an SVG file with the ID of the filter appended.
 2.  the ID of the filter, if the SVG already exists on the page.
 
-<!---->
+```css
+.blur {
+  filter: url(my-file.svg#svg-blur); /* the URL of an SVG file used as a filter */
+}
 
-    .blur {
-      filter: url(my-file.svg#svg-blur); /* the URL of an SVG file used as a filter */
-    }
-
-    .inline-blur {
-      filter: url(#svg-blur); /* the ID of an SVG that is embedded in the HTML page */
-    }
+.inline-blur {
+  filter: url(#svg-blur); /* the ID of an SVG that is embedded in the HTML page */
+}
+```
 
 ## Specifications
 
@@ -186,6 +190,6 @@ When a URL is used as a path for a filter, the URL must be one of the following:
 
 - {{cssxref("&lt;gradient&gt;")}}
 - {{cssxref("element()")}}
-- {{cssxref("image()")}}
-- {{cssxref("image-set()")}}
+- {{cssxref("image/image()", "image()")}}
+- {{cssxref("image/image-set()", "image-set()")}}
 - {{cssxref("cross-fade()")}}

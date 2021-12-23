@@ -5,7 +5,6 @@ tags:
   - API
   - AR
   - Augmented Reality
-  - Experimental
   - Interface
   - Reference
   - VR
@@ -23,16 +22,16 @@ When you apply changes using the `XRSession` method {{domxref("XRSession.updat
 
 ## Properties
 
-The followiing properties are available on `XRRenderState` objects.
-
-- {{DOMxRef("XRRenderState.baseLayer", "baseLayer")}} {{readonlyInline}} {{experimental_inline}}
+- {{DOMxRef("XRRenderState.baseLayer")}} {{readonlyInline}}
   - : The {{DOMxRef("XRWebGLLayer")}} from which the browser's compositing system obtains the image for the XR session.
-- {{DOMxRef("XRRenderState.depthFar", "depthFar")}} {{readonlyInline}} {{experimental_inline}}
+- {{DOMxRef("XRRenderState.depthFar")}} {{readonlyInline}}
   - : The distance, in meters, of the **far clip plane** from the viewer. The far clip plane is the plane which is parallel to the display beyond which rendering of the scene no longer takes place. This, essentially, specifies the maximum distance the user can see.
-- {{DOMxRef("XRRenderState.depthNear", "depthNear")}} {{readonlyInline}} {{experimental_inline}}
+- {{DOMxRef("XRRenderState.depthNear")}} {{readonlyInline}}
   - : The distance, in meters, of the **near clip plane** from the viewer. The near clip plane is the plane, parallel to the display, at which rendering of the scene begins. Any closer to the viewer than this, and no portions of the scene are drawn.
-- {{DOMxRef("XRRenderState.inlineVerticalFieldOfView", "inlineVerticalFieldOfView")}} {{readonlyInline}} {{experimental_inline}}
+- {{DOMxRef("XRRenderState.inlineVerticalFieldOfView")}} {{readonlyInline}}
   - : The default vertical field of view, defined in radians, to use when the session is in `inline` mode. `null` for all immersive sessions.
+- {{DOMxRef("XRRenderState.layers")}} {{readonlyInline}}
+  - : An ordered array containing {{domxref("XRLayer")}} objects that are displayed by the XR compositor.
 
 ## Specifications
 

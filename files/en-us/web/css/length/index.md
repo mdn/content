@@ -106,7 +106,7 @@ When animated, values of the `<length>` data type are interpolated as real, floa
 
 ### Length unit comparison
 
-The following demo provides you with an input field in which you can enter a `<length>` value (e.g. `300px`, `50%`, `30vw`) to set the width of a result bar that will appear below it once you've pressed <kbd>Return</kbd>.
+The following demo provides you with an input field in which you can enter a `<length>` value (e.g. `300px`, `50%`, `30vw`) to set the width of a result bar that will appear below it once you've pressed the <kbd>Enter</kbd> or the <kbd>Return</kbd> key.
 
 This allows you to compare and contrast the effect of different length units.
 

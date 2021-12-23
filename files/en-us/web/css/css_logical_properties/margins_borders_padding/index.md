@@ -92,8 +92,6 @@ In a horizontal writing mode this CSS would apply a 5px margin to the top of the
 }
 ```
 
-> **Note:** The shorthand properties `margin-inline` and `margin-block` shipped in Firefox 66. As these are new properties check browser support before using.
-
 ## Padding examples
 
 The mapped padding properties of {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}}, {{cssxref("padding-block-start")}}, and {{cssxref("padding-inline-end")}} can be used instead of their physical counterparts.
@@ -118,8 +116,6 @@ In a horizontal `writing-mode` this CSS would apply `5px` of padding to the top 
 }
 ```
 
-> **Note:** The shorthand properties `padding-inline` and `padding-block` shipped in Firefox 66. As these are new properties check browser support before using.
-
 ## Border examples
 
 The border properties are the main reason that Logical Properties and Values seems to have so many properties, as we have the longhands for the color, width, and style of the border on each side of a box, along with the shorthand to set all three at once for each side. As with margin and padding we have a mapped version of each physical property.
@@ -140,8 +136,6 @@ There are two-value shorthands to set the width, style and, color of the block o
   border-inline-color: rebeccapurple;
 }
 ```
-
-> **Note:** These two value shorthands shipped in Firefox 66, check browser support before using as other browsers may not have implemented them yet.
 
 ### Flow relative border-radius properties
 

@@ -36,8 +36,6 @@ border-inline-end-width: unset;
 
 Related properties are {{cssxref("border-block-start-width")}}, {{cssxref("border-block-end-width")}}, and {{cssxref("border-inline-start-width")}}, which define the other border widths of the element.
 
-{{cssinfo}}
-
 ### Values
 
 - `<'border-width'>`

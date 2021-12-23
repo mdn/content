@@ -27,19 +27,19 @@ See also the {{jsxref("Array.find", "find()")}} method, which returns the
 
 ```js
 // Arrow function
-findIndex((element) => { ... } )
-findIndex((element, index) => { ... } )
-findIndex((element, index, array) => { ... } )
+findIndex((element) => { /* ... */ } )
+findIndex((element, index) => { /* ... */ } )
+findIndex((element, index, array) => { /* ... */ } )
 
 // Callback function
 findIndex(callbackFn)
 findIndex(callbackFn, thisArg)
 
 // Inline callback function
-findIndex(function callbackFn(element) { ... })
-findIndex(function callbackFn(element, index) { ... })
-findIndex(function callbackFn(element, index, array){ ... })
-findIndex(function callbackFn(element, index, array) { ... }, thisArg)
+findIndex(function(element) { /* ... */ })
+findIndex(function(element, index) { /* ... */ })
+findIndex(function(element, index, array){ /* ... */ })
+findIndex(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
@@ -96,7 +96,7 @@ it will be used as the `this` inside each invocation of the
 used.
 
 The range of elements processed by `findIndex()` is set before the first
-invocation of `callbackFn`. Elements which are assigned to indexes already visited, or to indexes 
+invocation of `callbackFn`. Elements which are assigned to indexes already visited, or to indexes
 outside the range, will not be visited by `callbackFn`. `callbackFn` will
 not process the elements appended to the array after the call to
 `findIndex()` begins. If an existing, unvisited element of the array is
@@ -104,7 +104,7 @@ changed by `callbackFn`, its value passed to the
 `callbackFn` will be the value at the time `findIndex()`
 visits the element's index.Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.
 
-**Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
+> **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
 ## Examples
 

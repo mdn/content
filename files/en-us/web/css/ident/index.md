@@ -11,7 +11,7 @@ tags:
   - Web
   - ident
 ---
-{{CSSRef}}{{Draft}}
+{{CSSRef}}
 
 The **`<ident>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes an arbitrary string used as an {{glossary("identifier")}}.
 

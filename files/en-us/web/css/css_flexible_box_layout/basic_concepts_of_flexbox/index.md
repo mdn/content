@@ -142,7 +142,7 @@ With the `flex-grow` property set to a positive integer, flex items can grow alo
 
 If we gave all of our items in the example above a `flex-grow` value of 1 then the available space in the flex container would be equally shared between our items and they would stretch to fill the container on the main axis.
 
-The flex-grow property can be used to distribute space in proportion. If we give our first item a `flex-grow` value of 2, and the other items a value of 1 each, 2 parts will be given to the first item (100px out of 200px in the case of the example above), 1 part each the other two (50px each out of the 200px total).
+The flex-grow property can be used to distribute space in proportion. If we give our first item a `flex-grow` value of 2, and the other items a value of 1 each, 2 parts will be given to the first item (250px out of 500px in the case of the example above), 1 part each the other two (125px each out of the 500px total).
 
 ### The flex-shrink property
 
@@ -189,7 +189,7 @@ The {{cssxref("align-items")}} property will align the items on the cross axis.
 
 The initial value for this property is `stretch` and this is why flex items stretch to the height of the flex container by default. This might be dictated by the height of the tallest item in the container, or by a size set on the flex container itself.
 
-You could instead set `align-items` to `flex-start` in order to make the items line up at the start of the flex container, `flex-end` to align them to the end, or `center` to align them in the centre. Try this in the live example — I have given the flex container a height in order that you can see how the items can be moved around inside the container. See what happens if you set the value of align-items to:
+You could instead set `align-items` to `flex-start` in order to make the items line up at the start of the flex container, `flex-end` to align them to the end, or `center` to align them in the center. Try this in the live example — I have given the flex container a height in order that you can see how the items can be moved around inside the container. See what happens if you set the value of align-items to:
 
 - `stretch`
 - `flex-start`

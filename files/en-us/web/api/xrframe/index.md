@@ -35,6 +35,10 @@ In addition to providing a reference to the {{domxref("XRSession")}} for which t
 
 - {{domxref("XRFrame.createAnchor()", "createAnchor()")}}
   - : Returns a {{jsxref("Promise")}} which resolves to a free-floating {{domxref("XRAnchor")}} object.
+- {{domxref("XRFrame.fillJointRadii()", "fillJointRadii()")}}
+  - : Populates a {{jsxref("Float32Array")}} with radii for a list of hand joint spaces. Returns `true` if successful for all spaces.
+- {{domxref("XRFrame.fillPoses()", "fillPoses()")}}
+  - : Populates a {{jsxref("Float32Array")}} with the matrices of the poses, relative to a given base space. Returns `true` if all spaces have a valid pose.
 - {{domxref("XRFrame.getDepthInformation()", "getDepthInformation()")}}
   - : Returns an {{domxref("XRCPUDepthInformation")}} object containing CPU depth information for the frame.
 - {{domxref("XRFrame.getHitTestResults()", "getHitTestResults()")}}

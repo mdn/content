@@ -61,7 +61,7 @@ Specify a single box-shadow using:
   - If a third value is given, it is interpreted as a `<blur-radius>`.
   - If a fourth value is given, it is interpreted as a `<spread-radius>`.
 
-- Optionally, the [`inset`](#inset) keyword.
+- Optionally, the `inset` keyword.
 - Optionally, a [`<color>`](#color) value.
 
 To specify multiple shadows, provide a comma-separated list of shadows.
@@ -84,7 +84,7 @@ To specify multiple shadows, provide a comma-separated list of shadows.
   - : This is a fourth {{cssxref("&lt;length&gt;")}} value. Positive values will cause the shadow to expand and grow bigger, negative values will cause the shadow to shrink. If not specified, it will be `0` (the shadow will be the same size as the element).
 - `<color>`
   - : See {{cssxref("&lt;color&gt;")}} values for possible keywords and notations.
-    If not specified, it defaults to {{cssxref("color_value#currentcolor_keyword")}}.
+    If not specified, it defaults to {{cssxref("&lt;color&gt;","currentColor","#currentcolor_keyword")}}.
 
 ### Interpolation
 

@@ -40,9 +40,9 @@ input[type=range]::-moz-range-track {
 
 {{EmbedLiveSample("Examples", 300, 50)}}
 
-A progress bar using this style might look something like this:
+A range slider using this style might look something like this:
 
-![A range with the track green.](screen_shot_2015-12-04_at_10.14.34.png)
+![A range with the track green](screen_shot_2015-12-04_at_10.14.34.png)
 
 ## Specifications
 
@@ -65,4 +65,4 @@ Not part of any standard.
   - {{cssxref("::-ms-track")}}, pseudo-element supported by Internet Explorer and Edge
 
 - [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Styling and scripting sliders](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [QuirksMode: Styling and scripting sliders](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

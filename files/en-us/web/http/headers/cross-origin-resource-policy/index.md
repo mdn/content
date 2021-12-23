@@ -14,11 +14,6 @@ browser-compat: http.headers.Cross-Origin-Resource-Policy
 > **Note:** Due to a [bug in Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1074261),
 > setting Cross-Origin-Resource-Policy can break PDF rendering,
 > preventing visitors from being able to read past the first page of some PDFs.
-> Due to a [bug in Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=1638323),
-> setting Cross-Origin-Resource-Policy can prevent some resources
-> (such as PDFs)
-> from being downloaded in some circumstances.
-> Exercise caution using this header in a production environment.
 
 The HTTP **`Cross-Origin-Resource-Policy`** response header
 conveys a desire that the browser blocks no-cors cross-origin/cross-site requests to the

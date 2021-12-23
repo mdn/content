@@ -64,6 +64,6 @@ foo += 'bar' // "foobar"
 ## See also
 
 - [Assignment
-  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
 - [Addition
   operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)

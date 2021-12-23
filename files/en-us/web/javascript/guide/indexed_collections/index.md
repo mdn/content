@@ -427,7 +427,7 @@ If `initialValue` is specified, then `callback` is called with `initialValue` a
 
 If `initialValue` is _not_ specified, then `callback`'s first two parameter values will be the first and second elements of the array.  On _every_ subsequent call, the first parameter's value will be whatever `callback` returned on the previous call, and the second parameter's value will be the next value in the array.
 
-If `callback` needs access to the index of the item being processed, on access to the entire array, they are available as optional parameters.
+If `callback` needs access to the index of the item being processed, or access to the entire array, they are available as optional parameters.
 
 ```js
 let a = [10, 20, 30]

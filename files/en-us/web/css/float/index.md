@@ -11,7 +11,7 @@ browser-compat: css.properties.float
 ---
 {{CSSRef}}
 
-The **`float`** CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to [absolute positioning](/en-US/docs/Web/CSS/position#Absolute_positioning)).
+The **`float`** CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to [absolute positioning](/en-US/docs/Web/CSS/position#absolute_positioning)).
 
 {{EmbedInteractiveExample("pages/css/float.html")}}
 
@@ -36,7 +36,7 @@ As `float` implies the use of the block layout, it modifies the computed value 
 | `inline-grid`        | `grid`         |
 | _other_              | _unchanged_    |
 
-> **Note:** If you're referring to this property from JavaScript as a member of the {{domxref("HTMLElement.style")}} object, modern browsers support `float`, but in older browsers you have to spell it as `cssFloat`, with Internet Explorer versions 8 and older using `styleFloat`. This was an exception to the rule, that the name of the DOM member is the camel-case name of the dash-separated CSS name (due to the fact that "float" is a reserved word in JavaScript, as seen in the need to escape "class" as "className" and escape \<label>'s "for" as "htmlFor").
+> **Note:** If you're referring to this property from JavaScript as a member of the {{domxref("HTMLElement.style")}} object, modern browsers support `float`, but in older browsers you have to spell it as `cssFloat`, with Internet Explorer versions 8 and older using `styleFloat`. This was an exception to the rule, that the name of the DOM member is the camel-case name of the dash-separated CSS name (because "float" is a reserved word in JavaScript, as seen in the need to escape "class" as "className" and escape \<label>'s "for" as "htmlFor").
 
 ## Syntax
 
@@ -107,6 +107,7 @@ A floated element is at least as tall as its tallest nested floated children. We
 
 ```css
 section {
+  box-sizing: border-box;
   border: 1px solid blue;
   width: 100%;
   float: left;
@@ -131,7 +132,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample('How_floated_elements_are_positioned','400','180')}}
+{{EmbedLiveSample('How_floated_elements_are_positioned','400','190')}}
 
 ### Clearing floats
 
@@ -147,5 +148,5 @@ Sometimes you may want to force an item to move below any floated elements. For 
 
 ## See also
 
-- [Block formatting context](/en-US/docs/Web/CSS/block_formatting_context)
+- [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context)
 - Use {{cssxref("clear")}} to force an item to move below a floated element.

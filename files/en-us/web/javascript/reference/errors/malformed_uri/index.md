@@ -48,7 +48,7 @@ encodeURI('\uDFFF');
 // "URIError: malformed URI sequence"
 ```
 
-A high-low pair is ok. For example:
+A high-low pair is OK. For example:
 
 ```js example-good
 encodeURI('\uD800\uDFFF');

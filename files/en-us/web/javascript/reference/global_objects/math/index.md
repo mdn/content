@@ -82,21 +82,9 @@ Unlike many other global objects, `Math` is not a constructor. All properties an
 - {{jsxref("Global_Objects/Math/imul", "Math.imul(<var>x</var>, <var>y</var>)")}}
   - : Returns the result of the 32-bit integer multiplication of `x` and `y`.
 - {{jsxref("Global_Objects/Math/log", "Math.log(<var>x</var>)")}}
-
-  - : Returns the natural logarithm (㏒
-
-    <sub>e</sub>
-
-    ; also, ㏑) of `x`.
-
+  - : Returns the natural logarithm (㏒<sub>e</sub>; also, ㏑) of `x`.
 - {{jsxref("Global_Objects/Math/log1p", "Math.log1p(<var>x</var>)")}}
-
-  - : Returns the natural logarithm (㏒
-
-    <sub>e</sub>
-
-    ; also ㏑) of `1 + x` for the number `x`.
-
+  - : Returns the natural logarithm (㏒<sub>e</sub>; also ㏑) of `1 + x` for the number `x`.
 - {{jsxref("Global_Objects/Math/log10", "Math.log10(<var>x</var>)")}}
   - : Returns the base-10 logarithm of `x`.
 - {{jsxref("Global_Objects/Math/log2", "Math.log2(<var>x</var>)")}}

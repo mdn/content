@@ -28,10 +28,10 @@ Once the connection is established, the user-agent can send the request (a user-
 
 1. The first line contains a request method followed by its parameters:
 
-    - the path of the document, i.e. an absolute URL without the protocol or domain name
+    - the path of the document, as an absolute URL without the protocol or domain name
     - the HTTP protocol version
 
-2. Subsequent lines represent an HTTP header, giving the server information about what type of data is appropriate (e.g., what language, what MIME types), or other data altering its behavior (e.g., not sending an answer if it is already cached). These HTTP headers form a block which ends with an empty line.
+2. Subsequent lines represent an HTTP header, giving the server information about what type of data is appropriate (for example, what language, what MIME types), or other data altering its behavior (for example, not sending an answer if it is already cached). These HTTP headers form a block which ends with an empty line.
 3. The final block is an optional data block, which may contain further data mainly used by the POST method.
 
 ### Example requests
@@ -69,7 +69,7 @@ HTTP defines a set of [request methods](/en-US/docs/Web/HTTP/Methods) indicating
 After the connected agent has sent its request, the web server processes it, and ultimately returns a response. Similar to a client request, a server response is formed of text directives, separated by CRLF, though divided into three blocks:
 
 1. The first line, the _status line_, consists of an acknowledgment of the HTTP version used, followed by a response status code (and its brief meaning in human-readable text).
-2. Subsequent lines represent specific HTTP headers, giving the client information about the data sent (e.g. type, data size, compression algorithm used, hints about caching). Similarly to the block of HTTP headers for a client request, these HTTP headers form a block ending with an empty line.
+2. Subsequent lines represent specific HTTP headers, giving the client information about the data sent (for example, type, data size, compression algorithm used, hints about caching). Similarly to the block of HTTP headers for a client request, these HTTP headers form a block ending with an empty line.
 3. The final block is a data block, which contains the optional data.
 
 ### Example responses

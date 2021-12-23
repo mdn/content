@@ -124,7 +124,7 @@ row-gap: unset;
 
 ## Specifications
 
-{{Specifications}}
+{{Specifications("css.properties.row-gap.grid_context")}}
 
 ## Browser compatibility
 
@@ -133,4 +133,4 @@ row-gap: unset;
 ## See also
 
 - Related CSS properties: {{CSSxRef("column-gap")}}, {{CSSxRef("gap")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Gutters)_
+- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)_

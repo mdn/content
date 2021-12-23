@@ -227,7 +227,7 @@ console.log(parseProtocol('https://developer.mozilla.org/en-US/docs/Web/JavaScri
 
 ```js
 const user = {
-    id: 42,
+    id: 42,
     isVerified: true
 };
 
@@ -237,7 +237,7 @@ console.log(id); // 42
 console.log(isVerified); // true
 ```
 
-#### Assignment without declaration
+#### Assignment separate from declaration
 
 A variable can be assigned its value with destructuring separate from its declaration.
 
@@ -334,7 +334,13 @@ drawChart({
 });
 ```
 
-> **Note:** In the function signature for **`drawChart`** above, the destructured left-hand side is assigned to an empty object literal on the right-hand side: `{size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}`. You could have also written the function without the right-hand side assignment. However, if you leave out the right-hand side assignment, the function will look for at least one argument to be supplied when invoked, whereas in its current form, you can call **`drawChart()`** without supplying any parameters. The current design is useful if you want to be able to call the function without supplying any parameters, the other can be useful when you want to ensure an object is passed to the function.
+> **Note:** In the function signature for **`drawChart`** above, the destructured left-hand side is assigned to an empty object literal on the right-hand side:
+> ```js
+> {size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}
+> ```
+> You could have also written the function without the right-hand side assignment.
+> However, if you leave out the right-hand side assignment, the function will look for at least one argument to be supplied when invoked, whereas in its current form, you can call **`drawChart()`** without supplying any parameters.
+> The current design is useful if you want to be able to call the function without supplying any parameters. The other can be useful when you want to ensure an object is passed to the function.
 
 #### Nested object and array destructuring
 
@@ -422,13 +428,13 @@ rest; // { c: 30, d: 40 }
 
 #### Invalid JavaScript identifier as a property name
 
-Destructuring can be used with property names that are not valid JavaScript {{glossary("Identifier", "identifiers")}} by providing an alternative identifier that is valid.
+Destructuring can be used with property names that are not valid JavaScript {{glossary("Identifier", "identifiers")}} by providing an alternative identifier that is valid.
 
 ```js
 const foo = { 'fizz-buzz': true };
 const { 'fizz-buzz': fizzBuzz } = foo;
 
-console.log(fizzBuzz); // "true"
+console.log(fizzBuzz); // true
 ```
 
 #### Combined Array and Object Destructuring
@@ -447,7 +453,7 @@ const [,, { name }] = props;
 console.log(name); // "FizzBuzz"
 ```
 
-#### The prototype chain is looked up when the object is deconstructed 
+#### The prototype chain is looked up when the object is deconstructed
 
 When deconstructing an object, if a property is not accessed in itself, it will continue to look up along the prototype chain.
 

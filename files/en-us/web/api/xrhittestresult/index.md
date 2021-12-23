@@ -30,7 +30,7 @@ None.
 
 ### Getting `XRHitTestResult` objects within the frame loop
 
-In addition to showing `XRHitTestResult` within a frame loop, this example demonstrates a few things you must do before requesting this object. While setting up the session, specify `"hit-test"` as one of the `requiredFeatures`. Next, call {{domxref("XRSession.requestHitTestSource()")}} with the desired references. (Obtain this by calling {{domxref("XRSession.requestReferenceSpace()")}}.) This returns a {{domxref("XRHitTestSource")}}. That you will use in the frame loop to get `XRHitTestResult` objects. 
+In addition to showing `XRHitTestResult` within a frame loop, this example demonstrates a few things you must do before requesting this object. While setting up the session, specify `"hit-test"` as one of the `requiredFeatures`. Next, call {{domxref("XRSession.requestHitTestSource()")}} with the desired references. (Obtain this by calling {{domxref("XRSession.requestReferenceSpace()")}}.) This returns a {{domxref("XRHitTestSource")}}. That you will use in the frame loop to get `XRHitTestResult` objects.
 
 ```js
 const xrSession = navigator.xr.requestSession("immersive-ar", {

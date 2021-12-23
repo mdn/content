@@ -88,7 +88,7 @@ While more common in script typefaces, in the below example they are used to cre
 
 ### Position ({{cssxref("font-variant-position")}})
 
-Position variants are used to enable typographic superscript and subscript glyphs. These are designed to work with the surrounding text without altering the baseline or line spacing. This is one of the key benefits over using the {{htmlelement("sub")}} or {{cssxref("sup")}} elements.
+Position variants are used to enable typographic superscript and subscript glyphs. These are designed to work with the surrounding text without altering the baseline or line spacing. This is one of the key benefits over using the {{htmlelement("sub")}} or {{htmlelement("sup")}} elements.
 
 {{EmbedGHLiveSample("css-examples/font-features/font-variant-position.html", '100%', 550)}}
 
@@ -138,7 +138,7 @@ This is the shorthand syntax for defining all of the above. Setting a value of `
 
 ## Font feature settings
 
-{{cssxref("font-feature-settings")}} is the 'low level syntax' that allows explicit access to every named available OpenType feature. This gives a lot of control but has some disadvantages in how it impacts inheritance and — as mentioned above — if you wish to change one setting, you have to redeclare the entire string (unless you're using [CSS custom properties](/en-US/docs/Web/CSS/Using_CSS_variables) to set the values). Because of this, it's best to use the standard properties shown above wherever possible.
+{{cssxref("font-feature-settings")}} is the 'low level syntax' that allows explicit access to every named available OpenType feature. This gives a lot of control but has some disadvantages in how it impacts inheritance and — as mentioned above — if you wish to change one setting, you have to redeclare the entire string (unless you're using [CSS custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties) to set the values). Because of this, it's best to use the standard properties shown above wherever possible.
 
 There are a huge number of possible features. You can see examples of a number of them above, and there are several resources available for finding more of them.
 

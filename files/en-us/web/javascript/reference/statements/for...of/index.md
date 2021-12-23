@@ -258,7 +258,7 @@ Both `for...in` and `for...of` statements iterate over something.
 The main difference between them is in what they iterate over.
 
 The {{jsxref("Statements/for...in", "for...in")}} statement iterates over the [enumerable
-properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object, in an arbitrary order.
+properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object.
 
 The `for...of` statement iterates over values that the [iterable
 object](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables) defines to be iterated over.
@@ -312,7 +312,7 @@ for (const i in iterable) {
 ```
 
 This loop logs only [enumerable
-properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of the `iterable` object, in arbitrary order. It doesn't log
+properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of the `iterable` object. It doesn't log
 array **elements** `3`, `5`, `7` or
 `hello` because those are **not** enumerable properties, in fact
 they are not properties at all, they are **values**. It logs array

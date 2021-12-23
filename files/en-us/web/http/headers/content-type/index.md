@@ -13,7 +13,7 @@ browser-compat: http.headers.Content-Type
 
 The **`Content-Type`** representation header is used to indicate the original {{Glossary("MIME type","media type")}} of the resource (prior to any content encoding applied for sending).
 
-In responses, a `Content-Type` header tells the client what the content type of the returned content actually is. Browsers will do MIME sniffing in some cases and will not necessarily follow the value of this header; to prevent this behavior, the header {{HTTPHeader("X-Content-Type-Options")}} can be set to `nosniff`.
+In responses, a `Content-Type` header provides the client with the actual content type of the returned content. This header's value may be ignored, for example when browsers perform MIME sniffing; set the {{HTTPHeader("X-Content-Type-Options")}} header value to `nosniff` to prevent this behavior.
 
 In requests, (such as {{HTTPMethod("POST")}} or {{HTTPMethod("PUT")}}), the client tells the server what type of data is actually sent.
 
@@ -63,7 +63,7 @@ Content-Type: multipart/form-data; boundary=something
 - charset
   - : The character encoding standard.
 - boundary
-  - : For multipart entities the `boundary` directive is required, which consists of 1 to 70 characters from a set of characters known to be very robust through email gateways, and not ending with white space. It is used to encapsulate the boundaries of the multiple parts of the message. Often, the header boundary is prepended with two dashes and the final boundary has two dashes appended at the end.
+  - : For multipart entities the `boundary` directive is required. The directive consists of 1 to 70 characters from a set of characters (and not ending with white space) known to be very robust through email gateways. It is used to encapsulate the boundaries of the multiple parts of the message. Often, the header boundary is prepended with two dashes and the final boundary has two dashes appended at the end.
 
 ## Examples
 

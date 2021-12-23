@@ -13,7 +13,7 @@ The [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) specification details
 
 As this page aims to detail things which are specific to CSS Grid Layout and Box Alignment, it should be read in conjunction with the main [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) page which details the common features of box alignment across layout methods.
 
-## Basic Example
+## Basic example
 
 In this example using grid layout, there is extra space in the grid container after laying out the fixed width tracks on the inline (main) axis. This space is distributed using `justify-content`. On the block (cross) axis the alignment of the items inside their grid areas is controlled with `align-items`. The first item overrides the `align-items` value set on the group by setting `align-self` to `center`.
 
@@ -62,7 +62,7 @@ These properties deal with aligning the tracks of the grid when there is extra s
 - {{cssxref("column-gap")}}
 - {{cssxref("gap")}}
 
-The Grid specification originally contained the definition for the properties {{cssxref("row-gap")}}, {{cssxref("column-gap")}} and {{cssxref("gap")}}. These have since been moved into the Box Alignment specification and renamed to {{cssxref("row-gap")}}, {{cssxref("column-gap")}}, and {{cssxref("gap")}}. This allows them to be used for other layout methods where a gap between items makes sense.
+The Grid specification originally contained the definition for the properties {{cssxref("row-gap", "grid-row-gap")}}, {{cssxref("column-gap", "grid-column-gap")}} and {{cssxref("gap", "grid-gap")}}. These have since been moved into the Box Alignment specification and renamed to {{cssxref("row-gap")}}, {{cssxref("column-gap")}}, and {{cssxref("gap")}}. This allows them to be used for other layout methods where a gap between items makes sense.
 
 The updated properties have not yet been implemented in all browsers. Therefore, to use the gap properties in grid layout, you should use the `grid-row-gap`, `grid-column-gap` and `grid-gap` versions to ensure full compatibility. You could double up the properties and use both as you would for vendor prefixes.
 

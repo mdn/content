@@ -10,7 +10,7 @@ browser-compat: css.properties.margin
 ---
 {{CSSRef}}
 
-The **`margin`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the [margin area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) on all four sides of an element.
+The **`margin`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the [margin area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin_area) on all four sides of an element.
 
 {{EmbedInteractiveExample("pages/css/margin.html")}}
 
@@ -46,7 +46,7 @@ margin: revert;
 margin: unset;
 ```
 
-The `margin` property may be specified using one, two, three, or four values. Each value is a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or the keyword [`auto`](#auto). Negative values draw the element closer to its neighbors than it would be by default.
+The `margin` property may be specified using one, two, three, or four values. Each value is a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or the keyword `auto`. Negative values draw the element closer to its neighbors than it would be by default.
 
 - When **one** value is specified, it applies the same margin to **all four sides**.
 - When **two** values are specified, the first margin applies to the **top and bottom**, the second to the **left and right**.
@@ -55,7 +55,7 @@ The `margin` property may be specified using one, two, three, or four values. Ea
 
 ### Values
 
-- **{{cssxref("length")}}**
+- {{cssxref("length")}}
   - : The size of the margin as a fixed value.
 - {{cssxref("percentage")}}
   - : The size of the margin as a percentage, relative to the _width_ of the [containing block](/en-US/docs/Web/CSS/Containing_block).

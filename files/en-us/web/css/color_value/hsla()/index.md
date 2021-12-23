@@ -21,7 +21,7 @@ The **`hsla()`** functional notation expresses a given color according to its hu
 ```css
 hsla(100, 100%, 50%, 1) /* #5f0 */
 hsla(235, 100%, 50%, .5) /* #0015ff with 50% opacity */
-hsla(235 100% 50% 1); /* CSS Colors 4 space-separated values */
+hsla(235 100% 50% / 1); /* CSS Colors 4 space-separated values */
 ```
 
 ### Values

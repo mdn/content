@@ -65,7 +65,7 @@ import './index.mjs?someURLInfo=5';
 </script>
 ```
 
-..the following JavaScript file will log the \``someURLInfo` parameter:
+..the following JavaScript file will log the `someURLInfo` parameter:
 
 ```js
 // index.mjs

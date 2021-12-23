@@ -69,9 +69,9 @@ To configure Apache to set the `X-Frame-Options` DENY, add this to your site's c
 Header set X-Frame-Options "DENY"
 ```
 
-### Configuring nginx
+### Configuring Nginx
 
-To configure nginx to send the `X-Frame-Options` header, add this either to your http, server or location configuration:
+To configure Nginx to send the `X-Frame-Options` header, add this either to your http, server or location configuration:
 
 ```
 add_header X-Frame-Options SAMEORIGIN always;

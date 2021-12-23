@@ -17,7 +17,7 @@ The following JavaScript shells are stand-alone environments, like Perl or Pytho
 
 - [Node.js](https://nodejs.org/) - Node.js is a platform for easily building fast, scalable network applications.
 - [GraalJS](https://www.graalvm.org/) - A high performance implementation of the JavaScript programming language. Built on the GraalVM by Oracle Labs.
-- [ShellJS](https://documentup.com/shelljs/shelljs) - Portable Unix shell commands for Node.js
+- [ShellJS](https://github.com/shelljs/shelljs) - Portable Unix shell commands for Node.js
 
 ## List of JavaScript shells
 

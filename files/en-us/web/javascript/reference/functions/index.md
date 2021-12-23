@@ -218,7 +218,7 @@ param => expression
 ```
 
 - `param`
-  - : The name of an argument. Zero arguments need to be indicated with `()`. 
+  - : The name of an argument. Zero arguments need to be indicated with `()`.
     For only one argument, the parentheses are not required.
     (like `foo => 1`)
 - `statements` or `expression`
@@ -398,9 +398,8 @@ defined by function expressions, functions defined by function declarations can 
 accessed by their name in the scope they were defined in:
 
 A function defined by '`new Function'` does not have a function name.
-However, in the [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey)
-JavaScript engine, the serialized form of the function shows as if it has the name
-"anonymous". For example, `alert(new Function())` outputs:
+However, the serialized form of the function shows as if it has the name "anonymous."
+For example, `alert(new Function())` outputs:
 
 ```js
 function anonymous() {

@@ -155,17 +155,11 @@ article {
 
 ## Specifications
 
-{{Specifications}}
+{{Specifications("css.properties.break-inside.multicol_context")}}
 
 ## Browser compatibility
 
 {{Compat}}
-
-### Notes on compatibility
-
-Prior to Firefox 65, the older property of {{cssxref("page-break-inside")}} will work in Firefox to prevent breaks in columns, as well as pages. Add both properties for backwards compatibility.
-
-For older WebKit-based browsers, the prefixed property `-webkit-column-break-inside` can be used to control column breaks.
 
 ## See also
 

@@ -153,7 +153,7 @@ The `column-gap` property is specified as one of the values listed below.
 
 ## Specifications
 
-{{Specifications}}
+{{Specifications("css.properties.column-gap.grid_context")}}
 
 ## Browser compatibility
 
@@ -162,5 +162,5 @@ The `column-gap` property is specified as one of the values listed below.
 ## See also
 
 - Related CSS properties: {{CSSxRef("row-gap")}}, {{CSSxRef("gap")}}
-- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Gutters)_
+- Grid Layout Guide: _[Basic concepts of grid layout - Gutters](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)_
 - Multi-column Layout Guide: _[Styling Columns](/en-US/docs/Web/CSS/CSS_Columns/Styling_Columns)_

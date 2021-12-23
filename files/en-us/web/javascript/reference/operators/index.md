@@ -115,7 +115,7 @@ Arithmetic operators take numerical values (either literals or variables) as the
 
 ### Relational operators
 
-A comparison operator compares its operands and returns a `Boolean` value based on whether the comparison is true.
+A comparison operator compares its operands and returns a boolean value based on whether the comparison is true.
 
 - {{JSxRef("Operators/in", "in")}}
   - : The `in` operator determines whether an object has a given property.
@@ -134,7 +134,7 @@ A comparison operator compares its operands and returns a `Boolean` value based 
 
 ### Equality operators
 
-The result of evaluating an equality operator is always of type `Boolean` based on whether the comparison is true.
+The result of evaluating an equality operator is always of type boolean based on whether the comparison is true.
 
 - {{JSxRef("Operators/Equality", "==")}}
   - : Equality operator.

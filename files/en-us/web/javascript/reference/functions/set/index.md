@@ -6,6 +6,7 @@ tags:
   - Functions
   - JavaScript
   - Language feature
+  - Reference
 browser-compat: javascript.functions.set
 ---
 {{jsSidebar("Functions")}}
@@ -135,7 +136,7 @@ console.log(obj.baz);
 
 ## See also
 
-- [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get)
+- [Getter](/en-US/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.defineGetter", "__defineGetter__")}}

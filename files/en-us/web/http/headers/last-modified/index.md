@@ -10,9 +10,9 @@ browser-compat: http.headers.Last-Modified
 ---
 {{HTTPSidebar}}
 
-The **`Last-Modified`** response HTTP header contains the date
-and time at which the origin server believes the resource was last modified. It is used
-as a validator to determine if a resource received or stored is the same. Less accurate
+The **`Last-Modified`** response HTTP header contains a date
+and time when the origin server believes the resource was last modified. It is used
+as a validator to determine if the resource is the same as the previously stored one. Less accurate
 than an {{HTTPHeader("ETag")}} header, it is a fallback mechanism. Conditional requests
 containing {{HTTPHeader("If-Modified-Since")}} or {{HTTPHeader("If-Unmodified-Since")}}
 headers make use of this field.

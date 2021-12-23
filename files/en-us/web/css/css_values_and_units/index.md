@@ -155,7 +155,7 @@ Absolute length units are fixed to a physical length: either an inch or a centim
 | `mm` | Millimeters         | 1mm = 1/10th of 1cm |
 | `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm  |
 | `in` | Inches              | 1in = 2.54cm = 96px |
-| `pc` | Picas               | 1pc = 1/16th of 1in |
+| `pc` | Picas               | 1pc = 1/6th of 1in |
 | `pt` | Points              | 1pt = 1/72th of 1in |
 | `px` | Pixels              | 1px = 1/96th of 1in |
 
@@ -192,7 +192,7 @@ Frequency values are represented by the type {{cssxref("&lt;frequency&gt;")}}. I
 
 `1Hz`, which can also be written as `1hz` or `1HZ`, is one cycle per second.
 
-#### Resolution unit
+#### Resolution units
 
 Resolution units are represented by the type {{cssxref("&lt;resolution&gt;")}}. They represent the size of a single dot in a graphical representation, such as a screen, by indicating how many of these dots fit in a CSS inch, centimeter, or pixel. It accepts the following values:
 

@@ -76,10 +76,10 @@ flatDeep(arr, Infinity);
 function flatten(input) {
   const stack = [...input];
   const res = [];
-  while(stack.length) {
+  while (stack.length) {
     // pop value from stack
     const next = stack.pop();
-    if(Array.isArray(next)) {
+    if (Array.isArray(next)) {
       // push back array items, won't modify the original input
       stack.push(...next);
     } else {
@@ -99,16 +99,17 @@ flatten(arr);
 
 ```js
 function* flatten(array, depth) {
-    if(depth === undefined) {
-      depth = 1;
+  if (depth === undefined) {
+    depth = 1;
+  }
+
+  for (const item of array) {
+    if (Array.isArray(item) && depth > 0) {
+      yield* flatten(item, depth - 1);
+    } else {
+      yield item;
     }
-    for(const item of array) {
-        if(Array.isArray(item) && depth > 0) {
-          yield* flatten(item, depth - 1);
-        } else {
-          yield item;
-        }
-    }
+  }
 }
 
 const arr = [1, 2, [3, 4, [5, 6]]];

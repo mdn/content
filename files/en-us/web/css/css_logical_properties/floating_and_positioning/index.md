@@ -65,8 +65,6 @@ As with other properties in the specification we have some new shorthand propert
 - {{cssxref("inset-inline")}} — sets both logical inline insets.
 - {{cssxref("inset-block")}} — sets both logical block insets.
 
-> **Note:** The browsers that have implemented the Logical Properties specification have so far implemented the direct mappings and not the new shorthands. Look to the browser compatibility data section on each property page reference for more details.
-
 ## Example: Logical values for text-align
 
 The {{cssxref("text-align")}} property has logical values that relate to text direction — rather than using `left` and `right` we can use `start` and `end`. In the below example I have set `text-align: right` in the first block and `text-align: end` in the second.

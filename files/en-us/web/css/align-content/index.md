@@ -249,7 +249,7 @@ display.addEventListener('change', function (evt) {
 
 ## Specifications
 
-{{Specifications}}
+{{Specifications("css.properties.align-content.grid_context")}}
 
 ## Browser compatibility
 

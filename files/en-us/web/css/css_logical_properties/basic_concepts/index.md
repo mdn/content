@@ -50,20 +50,6 @@ This diagram shows block and inline in a vertical writing mode:
 
 ![Diagram showing the block axis running horizontally the inline axis vertically.](mdn-vertical.png)
 
-## Browser support
-
-Logical Properties and Values can be thought of as a couple of groups in terms of current browser support. Some of the properties are essentially mappings from the physical versions, for example {{CSSxRef("inline-size")}} for {{CSSxRef("width")}} or {{CSSxRef("margin-inline-start")}} rather than {{CSSxRef("margin-left")}}. These mapped properties are starting to see good browser support, and if you look at the individual pages for the properties in the [reference here on MDN](/en-US/docs/Web/CSS/CSS_Logical_Properties#reference) you will see that Edge is the only modern browser currently missing these.
-
-There are then a group of properties which do not have a direct mapping in terms of existing physical properties. These are shorthands made possible by the fact that we can refer to both edges of the block or inline dimension at once. An example would be {{CSSxRef("margin-block")}}, which is a shorthand setting for {{CSSxRef("margin-block-start")}} and {{CSSxRef("margin-block-end")}}.
-
-> **Note:** The CSS Working Group are currently trying to decide what to do about the four-value shorthands for logical properties, for example the equivalents to setting four physical properties at once, like margins with the {{CSSxRef("margin")}} property. We would need some kind of modifier if we were to reuse `margin` for flow-relative properties. If you would like to read the suggestions or comment on them the relevant GitHub issue is [#1282](https://github.com/w3c/csswg-drafts/issues/1282).
-
-### Testing for browser support
-
-You can test for support of logical properties and values using feature queries. For example you could set a {{CSSxRef("width")}}, test for {{CSSxRef("inline-size")}} and, if it is supported, set the `width` to `auto` and the `inline-size` to the original `width` value.
-
-{{EmbedGHLiveSample("css-examples/logical/intro-feature-queries.html", "100%", 700)}}
-
 ## See also
 
 - [Box Alignment in Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)

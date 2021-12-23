@@ -14,7 +14,8 @@ browser-compat: javascript.builtins.String.trim
 {{JSRef}}
 
 The **`trim()`** method removes whitespace from both ends of a
-string. Whitespace in this context is all the whitespace characters (space, tab,
+string and returns a new string, without modifying the original string.
+Whitespace in this context is all the whitespace characters (space, tab,
 no-break space, etc.) and all the line terminator characters (LF, CR, etc.).
 
 {{EmbedInteractiveExample("pages/js/string-trim.html")}}

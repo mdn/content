@@ -46,7 +46,7 @@ User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <
 - \<product-version>
   - : Version number of the product.
 - \<comment>
-  - : Zero or more comments containing more details; sub-product information, for example.
+  - : Zero or more comments containing more details. For example, sub-product information.
 
 ## Firefox UA string
 
@@ -56,11 +56,11 @@ For more on Firefox- and Gecko-based user agent strings, see the [Firefox user a
 Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
 ```
 
-1. `Mozilla/5.0` is the general token that says the browser is Mozilla-compatible. For historical reasons, almost every browser today sends it.
-2. **_platform_** describes the native platform the browser is running on (Windows, Mac, Linux, Android, etc.), and if it's a mobile phone. {{Glossary("Firefox OS")}} phones say `Mobile` — the web is the platform. Note that **_platform_** can consist of multiple "`;`"-separated tokens. See below for further details and examples.
+1. `Mozilla/5.0` is the general token that says that the browser is Mozilla-compatible. For historical reasons, almost every browser today sends it.
+2. **_platform_** describes the native platform that the browser is running on (Windows, Mac, Linux, Android, etc.) and if it is a mobile phone. {{Glossary("Firefox OS")}} phones say `Mobile` — the web is the platform. Note that **_platform_** can consist of multiple "`;`"-separated tokens. See below for further details and examples.
 3. **rv:_geckoversion_** indicates the release version of Gecko (such as "_17.0_"). In recent browsers, **_geckoversion_** is the same as **_firefoxversion_**.
-4. **_Gecko/geckotrail_** indicates that the browser is based on Gecko. (On Desktop, **_geckotrail_** is always the fixed string `20100101`.)
-5. **_Firefox/firefoxversion_** indicates the browser is Firefox, and provides the version (such as "_17.0"_).
+4. **_Gecko/geckotrail_** indicates that the browser is based on Gecko. (On the desktop, **_geckotrail_** is always the fixed string `20100101`.)
+5. **_Firefox/firefoxversion_** indicates that the browser is Firefox and provides the version (such as "_17.0"_).
 
 ### Examples
 
@@ -81,7 +81,7 @@ Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51
 
 ## Opera UA string
 
-The Opera browser is also based on the Blink engine, which is why it almost looks the same, but adds `"OPR/<version>"`.
+The Opera browser is also based on the Blink engine, which is why it almost looks the same as the Chrome UA string, but adds `"OPR/<version>"`.
 
 ### Examples
 
@@ -98,7 +98,7 @@ Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1
 
 ## Microsoft Edge UA string
 
-The Edge browser is also based on the Blink engine.
+The Edge browser is also based on the Blink engine. It adds `"Edg/<version>"`.
 
 ### Examples
 

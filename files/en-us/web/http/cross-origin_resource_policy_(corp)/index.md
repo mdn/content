@@ -16,16 +16,6 @@ CORP is an additional layer of protection beyond the default {{Glossary("same-or
 
 As this policy is expressed via a _[response header](/en-US/docs/Glossary/Response_header)_, the actual request is not prevented—rather, the browser prevents the _result_ from being leaked by stripping the response body.
 
-## History
-
-The concept was originally proposed in 2012 (as `From-Origin`), but [resurrected](https://github.com/whatwg/fetch/issues/687) in Q2 of 2018 and implemented in Safari and Chromium.
-
-In early 2018, two side-channel hardware vulnerabilities known as _Meltdown_ and _Spectre_ were disclosed. These vulnerabilities allowed sensitive data disclosure due to a race condition which arose as part of speculative execution functionality, designed to improve performance.
-
-In response, Chromium shipped [Cross-Origin Read Blocking](https://fetch.spec.whatwg.org/#corb), which automatically protects certain resources (of `Content-Type` HTML, JSON and XML) against cross-origin reads. If the application does not serve a [`no-sniff` directive](/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options), Chromium will attempt to guess the `Content-Type` and apply the protection anyway.
-
-Cross-Origin Resource Policy is an opt-in response header which can protect _any_ resource; there is no need for browsers to sniff MIME types.
-
 ## Usage
 
 > **Note:** Due to a [bug in Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1074261), setting Cross-Origin-Resource-Policy can break PDF rendering, preventing visitors from being able to read past the first page of some PDFs. Exercise caution using this header in a production environment.
@@ -41,13 +31,27 @@ Web applications set a Cross-Origin Resource Policy via the {{HTTPHeader("Cross-
 - `same-origin`
   - : Only requests from the same _{{Glossary("origin")}}_ (i.e. scheme + host + port) can read the resource.
 - `cross-origin`
-  - : Requests from any _{{Glossary("origin")}}_ (both same-site and cross-site) can read the resource.
+  - : Requests from any _{{Glossary("origin")}}_ (both same-site and cross-site) can read the resource. This is useful when COEP is used (see below).
 
 ```
 Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
 ```
 
 During a cross-origin resource policy check, if the header is set, the browser will deny `no-cors` requests issued from a different origin/site.
+
+## Relationship to cross-origin embedder policy (COEP)
+
+The {{HTTPHeader("Cross-Origin-Embedder-Policy")}} HTTP response header, when used upon a document, can be used to require subresources to either be same-origin with the document, or come with a {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP response header to indicate they are okay with being embedded. This is why the `cross-origin` value exists.
+
+## History
+
+The concept was originally proposed in 2012 (as `From-Origin`), but [resurrected](https://github.com/whatwg/fetch/issues/687) in Q2 of 2018 and implemented in Safari and Chromium.
+
+In early 2018, two side-channel hardware vulnerabilities known as _Meltdown_ and _Spectre_ were disclosed. These vulnerabilities allowed sensitive data disclosure due to a race condition which arose as part of speculative execution functionality, designed to improve performance.
+
+In response, Chromium shipped [Cross-Origin Read Blocking](https://fetch.spec.whatwg.org/#corb), which automatically protects certain resources (of `Content-Type` HTML, JSON and XML) against cross-origin reads. If the application does not serve a [`no-sniff` directive](/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options), Chromium will attempt to guess the `Content-Type` and apply the protection anyway.
+
+`Cross-Origin-Resource-Policy` is an opt-in response header which can protect _any_ resource; there is no need for browsers to sniff MIME types.
 
 ## Browser compatibility
 

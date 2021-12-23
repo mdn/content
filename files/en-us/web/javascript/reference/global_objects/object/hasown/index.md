@@ -7,6 +7,7 @@ tags:
   - Object
   - hasOwn
   - Experimental
+  - Polyfill
 browser-compat: javascript.builtins.Object.hasOwn
 ---
 {{JSRef}}{{SeeCompatTable}}
@@ -54,10 +55,10 @@ external object, `Object.hasOwn()` is more intuitive.
 
 ## Examples
 
-### Using hasOwn to test for a property's existence 
+### Using hasOwn to test for a property's existence
 
-The following code hows how to determine whether the `example` object contains a property named `prop`.
- 
+The following code shows how to determine whether the `example` object contains a property named `prop`.
+
 ```js
 let example = {};
 Object.hasOwn(example, 'prop');   // false = 'prop' has not been defined
@@ -66,7 +67,7 @@ example.prop = 'exists';
 Object.hasOwn(example, 'prop');   // true - 'prop' has been defined
 
 example.prop = null;
-Object.hasOwn(example, 'prop');   // true - own property exists wtih value of null
+Object.hasOwn(example, 'prop');   // true - own property exists with value of null
 
 example.prop = undefined;
 Object.hasOwn(example, 'prop');   // true - own property exists with value of undefined
@@ -166,6 +167,7 @@ if (Object.hasOwn(foo, 'prop')) {
 
 ## See also
 
+- A polyfill of `Object.hasOwn` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.hasOwnProperty()")}}
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}

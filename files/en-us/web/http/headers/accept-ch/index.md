@@ -35,17 +35,20 @@ should include in subsequent requests.
 </table>
 
 > **Note:** Client hints are accessible only on secure origins (via TLS).
-> `Accept-CH` (and `Accept-CH-Lifetime`) headers should be persisted for all secure requests
-> to ensure client hints are sent reliably.
+> `Accept-CH` (and `Accept-CH-Lifetime`) headers should be persisted for all secure requests to ensure client hints are sent reliably.
 
 ## Syntax
 
-    Accept-CH: <list of client hints>
+```http
+Accept-CH: <comma separated list of client hint headers>
+```
 
 ## Examples
 
-    Accept-CH: Viewport-Width, Width
-    Vary: Viewport-Width, Width
+```http
+Accept-CH: Viewport-Width, Width
+Vary: Viewport-Width, Width
+```
 
 > **Note:** Remember to [vary the response](/en-US/docs/Glossary/Client_hints#varying_client_hints)
 > based on the accepted client hints.

@@ -66,7 +66,7 @@ Any options the user agent offers the user to allow them to control the use of c
 
 ### Preserving low contrast
 
-In this example, a box is shown which uses a {{cssxref("background-image")}} and a translucent {{cssxref("linear-gradient()")}} function atop a black background color to have a dark blue gradient behind medium red text. For whatever reason, this is the desired appearance in any rendering environment, including on paper, so we also use `color-adjust: exact` to tell the browser not to make color or style adjustments to the box when rendering it.
+In this example, a box is shown which uses a {{cssxref("background-image")}} and a translucent {{cssxref("gradient/linear-gradient()", "linear-gradient()")}} function atop a black background color to have a dark blue gradient behind medium red text. For whatever reason, this is the desired appearance in any rendering environment, including on paper, so we also use `color-adjust: exact` to tell the browser not to make color or style adjustments to the box when rendering it.
 
 #### CSS
 

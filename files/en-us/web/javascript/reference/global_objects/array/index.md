@@ -213,7 +213,7 @@ This is explained further on the {{jsxref("Array.length")}} page.
 
 ### Creating an array using the result of a match
 
-The result of a match between a {{jsxref("RegExp")}} and a string can create a JavaScript array. This array has properties and elements which provide information about the match. Such an array is returned by {{jsxref("RegExp.exec()")}}, {{jsxref("String.match()")}}, and {{jsxref("String.replace()")}}.
+The result of a match between a {{jsxref("RegExp")}} and a string can create a JavaScript array. This array has properties and elements which provide information about the match. Such an array is returned by {{jsxref("RegExp.exec()")}} and {{jsxref("String.match()")}}.
 
 To help explain these properties and elements, see this example and then refer to the table below:
 
@@ -315,7 +315,7 @@ The properties and elements returned from this match are as follows:
 - {{jsxref("Array.prototype.findIndex()")}}
   - : Returns the found index in the array, if an element in the array satisfies the testing function, or `-1` if not found.
 - {{jsxref("Array.prototype.flat()")}}
-  - : Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth. 
+  - : Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
 - {{jsxref("Array.prototype.flatMap()")}}
   - : Returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level.
 - {{jsxref("Array.prototype.forEach()")}}

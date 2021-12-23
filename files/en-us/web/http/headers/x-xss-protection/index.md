@@ -11,7 +11,9 @@ browser-compat: http.headers.X-XSS-Protection
 ---
 {{HTTPSidebar}}
 
-The HTTP **`X-XSS-Protection`** response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks. Although these protections are largely unnecessary in modern browsers when sites implement a strong {{HTTPHeader("Content-Security-Policy")}} that disables the use of inline JavaScript (`'unsafe-inline'`), they can still provide protections for users of older web browsers that don't yet support {{Glossary("CSP")}}.
+The HTTP **`X-XSS-Protection`** response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks. These protections are largely unnecessary in modern browsers when sites implement a strong {{HTTPHeader("Content-Security-Policy")}} that disables the use of inline JavaScript (`'unsafe-inline'`).
+
+> **Warning:** Even though this feature can protect users of older web browsers that don't yet support {{Glossary("CSP")}}, in some cases, **XSS protection can create XSS vulnerabilities** in otherwise safe websites. See the section below for more information.
 
 > **Note:**
 >
@@ -51,6 +53,24 @@ X-XSS-Protection: 1; report=<reporting-uri>
   - : Enables XSS filtering. Rather than sanitizing the page, the browser will prevent rendering of the page if an attack is detected.
 - 1; report=\<reporting-URI> (Chromium only)
   - : Enables XSS filtering. If a cross-site scripting attack is detected, the browser will sanitize the page and report the violation. This uses the functionality of the CSP {{CSP("report-uri")}} directive to send a report.
+
+## Vulnerabilities caused by XSS filtering
+
+Consider the following excerpt of HTML code for a webpage:
+
+```html
+<script>var productionMode = true;</script>
+<!-- [...] -->
+<script>
+  if (!window.productionMode) {
+    // Some vulnerable debug code
+  }
+</script>
+```
+
+This code is completely safe if the browser doesn't perform XSS filtering. However, if it does and the search query is `?something=%3Cscript%3Evar%20productionMode%20%3D%20true%3B%3C%2Fscript%3E`, the browser might execute the scripts in the page ignoring `<script>var productionMode = true;</script>` (thinking the server included it in the response because it was in the URI), causing `window.productionMode` to be evaluated to `undefined` and executing the unsafe debug code.
+
+Setting the `X-XSS-Protection` header to either `0` or `1; mode=block` prevents vulnerabilities like the one described above. The former would make the browser run all scripts and the latter would prevent the page from being processed at all (though this approach might be vulnerable to [side-channel attacks](https://portswigger.net/research/abusing-chromes-xss-auditor-to-steal-tokens) if the website is embeddable in an `<iframe>`).
 
 ## Example
 

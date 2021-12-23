@@ -101,9 +101,7 @@ A `Promise` that resolves to an {{jsxref("WebAssembly.Instance")}} object.
 
 ## Examples
 
-**Note**: You'll probably want to use
-{{jsxref("WebAssembly.instantiateStreaming()")}} in most cases, as it is more efficient
-than `instantiate()`.
+> **Note:** You'll probably want to use {{jsxref("WebAssembly.instantiateStreaming()")}} in most cases, as it is more efficient than `instantiate()`.
 
 ### First overload example
 

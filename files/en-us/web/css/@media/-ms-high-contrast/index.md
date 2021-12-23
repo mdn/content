@@ -65,11 +65,13 @@ The **`-ms-high-contrast`** media feature is specified as one of the following v
 High Contrast Mode's theme colors come from a limited subset of deprecated [CSS2 system colors](https://www.w3.org/TR/2018/REC-css-color-3-20180619/#css2-system). The available color keywords are:
 
 - `windowText`: controls the color of text content.
+- `linkText`: controls the color of the hyperlink text.
+- `grayText`: controls the color of the disabled text.
 - `highlightText`: controls the color of selected text.
 - `highlight`: controls the background color of selected text.
+- `buttonText`: controls the background color of a {{HTMLElement("button")}} element.
 - `buttonFace`: controls the color of a {{HTMLElement("button")}} element's text.
 - `window`: controls the color of the background.
-- The {{HTMLElement("a")}} element controls the color of links.
 
 Because High Contrast Mode themes are dynamic, use these color keywords in place of other [CSS color values](/en-US/docs/Web/CSS/color). This will ensure that content will always be able to be perceived.
 

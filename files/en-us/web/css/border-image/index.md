@@ -15,7 +15,7 @@ The **`border-image`** [CSS](/en-US/docs/Web/CSS) property draws an image around
 
 {{EmbedInteractiveExample("pages/css/border-image.html")}}
 
-> **Note:** You should specify a separate {{cssxref("border-style")}} in case the border image fails to load. Indeed, this is required according to the specification, although not all browsers implement this requirement.
+> **Note:** You should specify a separate {{cssxref("border-style")}} in case the border image fails to load. Although the specification doesn't strictly require it, some browsers don't render the border image if {{cssxref("border-style")}} is `none` or {{cssxref("border-width")}} is `0`.
 
 ## Constituent properties
 
@@ -158,4 +158,4 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
 - {{cssxref("url()", "url()")}} function
-- Gradient functions: {{CSSxRef("conic-gradient()")}}, {{CSSxRef("linear-gradient()")}}, {{CSSxRef("repeating-linear-gradient()")}}, {{CSSxRef("radial-gradient()")}}, {{CSSxRef("repeating-radial-gradient()")}}
+- Gradient functions: {{CSSxRef("gradient/conic-gradient()", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient()", "repeating-conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient()", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient()", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient()", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}}

@@ -10,15 +10,14 @@ browser-compat: http.status.401
 ---
 {{HTTPSidebar}}
 
-The HTTP **`401 Unauthorized`** client error status response
-code indicates that the request has not been applied because it lacks valid
-authentication credentials for the target resource.
+The HyperText Transfer Protocol (HTTP) **`401 Unauthorized`** response status code indicates that the client request has not been
+completed because it lacks valid authentication credentials for the requested resource.
 
-This status is sent with a {{HTTPHeader("WWW-Authenticate")}} header that contains
-information on how to authorize correctly.
+This status code is sent with an HTTP {{HTTPHeader("WWW-Authenticate")}} response header that contains
+information on how the client can request for the resource again after prompting the user for authentication credentials.
 
-This status is similar to {{HTTPStatus("403")}}, but in this case, authentication is
-possible.
+This status code is similar to the {{HTTPStatus("403", "403 Forbidden")}} status code, except that in situations resulting in this
+status code, user authentication can allow access to the resource.
 
 ## Status
 

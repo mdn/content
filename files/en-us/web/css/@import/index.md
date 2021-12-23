@@ -27,7 +27,7 @@ where:
 - _url_
   - : Is a {{CSSxRef("&lt;string&gt;")}} or a {{CSSxRef("&lt;url&gt;")}} representing the location of the resource to import. The URL may be absolute or relative.
 - _list-of-media-queries_
-  - : Is a comma-separated list of [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) conditioning the application of the CSS rules defined in the linked URL. If the browser does not support any these queries, it does not load the linked resource.
+  - : Is a comma-separated list of [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) conditioning the application of the CSS rules defined in the linked URL. If the browser does not support any of these queries, it does not load the linked resource.
 - _supports-query_
   - : Is either a {{CSSxRef("@supports", "&lt;supports-condition&gt;", "#Syntax")}} or a {{CSSxRef("Syntax", "&lt;declaration&gt;", "#CSS_declarations")}}.
 

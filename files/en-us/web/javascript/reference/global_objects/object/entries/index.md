@@ -16,7 +16,7 @@ object's own enumerable string-keyed property
 `[key, value]` pairs. This is the same as iterating
 with a {{jsxref("Statements/for...in", "for...in")}} loop, except that a
 `for...in` loop enumerates properties in the prototype
-chain as well).
+chain as well.
 
 The order of the array returned by **`Object.entries()`** is
 the same as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop. If
@@ -24,7 +24,7 @@ there is a need for different ordering, then
 the array should be sorted first, like
 `Object.entries(obj).sort((a, b) => b[0].localeCompare(a[0]));`.
 
-{{EmbedInteractiveExample("pages/js/object-entries.html", "taller")}}
+{{EmbedInteractiveExample("pages/js/object-entries.html")}}
 
 ## Syntax
 

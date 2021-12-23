@@ -6,7 +6,6 @@ tags:
   - CSS Fragmentation
   - CSS Multi-column Layout
   - CSS Property
-  - NeedsExample
   - Reference
   - recipe:css-property
 browser-compat: css.properties.break-after
@@ -190,7 +189,7 @@ article {
 
 ## Specifications
 
-{{Specifications}}
+{{Specifications("css.properties.break-after.multicol_context")}}
 
 ## Browser compatibility
 

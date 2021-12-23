@@ -18,7 +18,7 @@ slug: Tools/Tools_Toolbox
 
 <p><img alt="" src="toolbox.png" style="display: block; margin-left: auto; margin-right: auto;">The window itself is split into two parts: a toolbar along the top, and a main pane underneath:</p>
 
-<p><img alt="" src="toolbox-annotated-29.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="toolbox-labelled.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <div class="notecard note">
     <h4>Note</h4>
@@ -29,11 +29,13 @@ slug: Tools/Tools_Toolbox
 
 <p>By default, the Toolbox appears docked to the bottom of the browser window, but you can also dock it to the right-hand side of the window, or make it a standalone window, using <a href="#toolbox_controls">buttons in the toolbar</a>.</p>
 
+<p><img alt="toolbox toolbar docking modes" src="docking-mode.png" style="display: block; margin: 0 auto;"></p>
+
 <h2 id="Toolbar">Toolbar</h2>
 
 <p>The toolbar contains controls to activate a particular tool, to dock/float the window, and to close the window.</p>
 
-<p><img alt="" src="toolbox-toolbar-annotated.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="toolbox-toolbar-labelled.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h3 id="Node_picker">Node picker</h3>
 
@@ -44,31 +46,28 @@ slug: Tools/Tools_Toolbox
 <p>Then there is an array of labeled buttons which enables you to switch between the different tools hosted by the Toolbox. The array may include the following tools:</p>
 
 <ul>
+ <li><a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a></li>
  <li><a href="/en-US/docs/Tools/Web_Console">Web Console</a></li>
  <li><a href="/en-US/docs/Tools/Debugger">JavaScript Debugger</a></li>
- <li><a href="/en-US/docs/Tools/Page_Inspector">Page Inspector</a></li>
- <li><a href="/en-US/docs/Tools/Style_Editor">Style Editor</a></li>
- <li><a href="/en-US/docs/Tools/Performance">Profiler</a></li>
  <li><a href="/en-US/docs/Tools/Network_Monitor">Network Monitor</a></li>
+ <li><a href="/en-US/docs/Tools/Style_Editor">Style Editor</a></li>
+ <li><a href="/en-US/docs/Tools/Performance">Performance Tool</a></li>
+ <li><a href="/en-US/docs/Tools/Memory">Memory Tool</a></li>
+ <li><a href="/en-US/docs/Tools/Storage_Inspector">Storage Inspector</a></li>
+ <li><a href="/en-US/docs/Tools/Accessibility_inspector">Accessibility Inspector</a></li>
+ <li><a href="/en-US/docs/Tools/Application">Application Tool</a></li>
+ <li><a href="/en-US/docs/Tools/DOM_Property_Viewer">DOM Property Viewer</a></li>
 </ul>
 
 <p>Note that not all the hosted tools are always listed here: only the tools actually available in this context are shown (for example, not all tools support remote debugging yet, so if the debugging target is not the Firefox instance that launched the window, not all the hosted tools will be shown).</p>
 
 <h3 id="Extra_tools">Extra tools</h3>
 
-<p>Next there's an array of buttons that can be added or removed in the <a href="/en-US/docs/Tools/Settings">developer tool settings</a>. By default this array includes:</p>
+<p>Next there's an array of buttons that can be added or removed in the <a href="#settings">settings</a>. None of these tools are enabled by default, but you can add them in the <a href="/en-US/docs/Tools/Settings">developer tools settings</a>:</p>
 
 <ul>
- <li><a href="/en-US/docs/Tools/Web_Console#the_split_console">Toggle split console</a></li>
- <li><a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a></li>
  <li><a href="/en-US/docs/Tools/Working_with_iframes">Select a frame as the currently targeted document</a> (this is only included by default from Firefox 41 onwards).</li>
-</ul>
-
-<p>The following tools are not included in the toolbar by default, but you can add them in the <a href="/en-US/docs/Tools/Settings">settings</a>:</p>
-
-<ul>
  <li><a href="/en-US/docs/Tools/Paint_Flashing_Tool">Highlight painted area</a></li>
- <li><a href="/en-US/docs/Tools/Eyedropper">Grab a color from the page</a></li>
  <li><a href="/en-US/docs/Tools/Taking_screenshots#taking_a_screenshot_of_the_page">Take a screenshot of the entire page</a>: take a screenshot of the complete web page and saves it in your Downloads directory</li>
  <li><a href="/en-US/docs/Tools/Rulers">Toggle rulers for the page</a></li>
  <li><a href="/en-US/docs/Tools/Measure_a_portion_of_the_page">Measure a portion of the page</a>: measure a part of the website by selecting areas within the page</li>
@@ -80,9 +79,16 @@ slug: Tools/Tools_Toolbox
 
 <ul>
  <li>close the window</li>
- <li>toggle the window between attached to the bottom of the browser window, and attached to the side of the browser window</li>
- <li>toggle the window between standalone and attached to the browser window</li>
+ <li><a href="/en-US/docs/Tools/Responsive_Design_Mode">Responsive Design Mode</a></li>
+</ul>
+
+<p>There's also a meatball menu button that consists of following options:</p>
+
+<ul>
+ <li>A group of options to toggle the toolbox to be docked bottom, right, left or even be a separate window by itself.</li>
  <li>access <a href="/en-US/docs/Tools/Settings">developer tool settings</a></li>
+ <li><a href="/en-US/docs/Tools/Web_Console/Split_console">Toggle split console</a></li>
+ <li>two buttons leading to documentation and community</li>
 </ul>
 
 <h2 id="settings">Settings</h2>

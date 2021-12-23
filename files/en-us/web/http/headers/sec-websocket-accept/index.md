@@ -12,7 +12,7 @@ tags:
   - header
 browser-compat: http.headers.Sec-WebSocket-Accept
 ---
-{{HTTPSidebar}}{{Draft}}
+{{HTTPSidebar}}
 
 The **Sec-WebSocket-Accept** header is used in the websocket opening
 handshake. It would appear in the response headers. That is, this is header is sent from

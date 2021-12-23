@@ -170,4 +170,5 @@ div.lev3 {
 - [Stacking context example 1](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1): 2-level HTML hierarchy, `z-index` on the last level
 - [Stacking context example 2](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2): 2-level HTML hierarchy, `z-index` on all levels
 
-**Note**: the reason the sample image looks wrong - with the second level 2 overlapping the level 3 menus - is because level 2 has opacity, which creates a new stacking context. Basically, this whole sample page is incorrect and misleading.
+> **Note:** the reason the sample image looks wrong - with the second level 2 overlapping the level 3 menus - is because level 2 has opacity, which creates a new stacking context.
+> Basically, this whole sample page is incorrect and misleading.

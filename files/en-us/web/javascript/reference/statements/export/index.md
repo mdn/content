@@ -79,7 +79,7 @@ export { myFunction, myVariable };
 // export individual features (can export var, let,
 // const, function, class)
 export let myVariable = Math.sqrt(2);
-export function myFunction() { ... };
+export function myFunction() { /* ... */ };
 ```
 
 Default exports:
@@ -89,7 +89,7 @@ Default exports:
 export { myFunction as default };
 
 // export individual features as default
-export default function () { ... }
+export default function () { /* ... */ }
 export default class { .. }
 
 // each export overwrites the previous one
@@ -136,7 +136,7 @@ Which is comparable to a combination of import and export:
 ```js
 import { default as function1,
          function2 } from 'bar.js';
-export { function1 as default, function2 };
+export { function1, function2 };
 ```
 
 But where `function1` and `function2` do not become available

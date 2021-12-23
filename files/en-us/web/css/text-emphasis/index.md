@@ -98,6 +98,7 @@ This example draws a heading with triangles used to emphasize each character.
 
 ```css
 h2 {
+  -webkit-text-emphasis: triangle #D55;
   text-emphasis: triangle #D55;
 }
 ```
@@ -110,7 +111,7 @@ h2 {
 
 #### Result
 
-{{EmbedLiveSample("A_heading_with_emphasis_shape_and_color", 500, 70)}}
+{{EmbedLiveSample("A_heading_with_emphasis_shape_and_color", 500, 90)}}
 
 ## Specifications
 
