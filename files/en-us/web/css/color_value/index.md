@@ -1260,9 +1260,9 @@ This example shows the many ways in which a single color can be created with the
     hwb(90 10% 10%)
     hwb(90 10% 10%)
     hwb(90 50% 10%)
-    hwb(90deg, 10%, 10%)
-    hwb(1.5708rad, 60%, 0%)
-    hwb(.25turn, 0%, 40%)
+    hwb(90deg 10% 10%)
+    hwb(1.5708rad 60% 0%)
+    hwb(.25turn 0% 40%)
 
     /* Same lime green but with an alpha value */
     hwb(90 10% 10% / 0.5)
