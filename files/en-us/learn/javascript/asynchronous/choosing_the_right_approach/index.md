@@ -155,9 +155,10 @@ The following function creates a new [`Date()`](/en-US/docs/Web/JavaScript/Refer
 function displayTime() {
    let date = new Date();
    let time = date.toLocaleTimeString();
-   document.getElementById('demo').textContent = time;
+   document.querySelector('.clock').textContent = time;
 }
 
+displayTime();
 const createClock = setInterval(displayTime, 1000);
 ```
 
@@ -237,14 +238,33 @@ draw();
 The following code fetches an image from the server and displays it inside an {{htmlelement("img")}} element; [see it live also](https://mdn.github.io/learning-area/javascript/asynchronous/promises/simple-fetch-chained.html), and see also [the source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/simple-fetch-chained.html):
 
 ```js
+// Call the fetch() method to fetch the image, and store it in a variable
 fetch('coffee.jpg')
-.then(response => response.blob())
+// Use a then() block to respond to the promise's successful completion
+// by taking the returned response and running blob() on it to transform it into a blob
+// blob() also returns a promise; when it successfully completes it returns
+// the blob object in the callback
+.then(response => {
+  // The promise fetch() does NOT reject on HTTP errors,
+  // so we need to check the boolean Response.ok and throw manually a new Error()
+  // for the promise2 to be rejected (for example when a 404 occurs).
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  } else {
+    return response.blob();
+  }
+})
 .then(myBlob => {
+  // Create an object URL that points to the blob object
   let objectURL = URL.createObjectURL(myBlob);
+  // Create an <img> element to display the blob (it's an image)
   let image = document.createElement('img');
+  // Set the src of the <img> to the object URL so the image displays it
   image.src = objectURL;
+  // Append the <img> element to the DOM
   document.body.appendChild(image);
 })
+// If there is a problem, log a useful error message to the console
 .catch(e => {
   console.log('There has been a problem with your fetch operation: ' + e.message);
 });
@@ -300,7 +320,7 @@ remotedb.allDocs(...)
 .catch(err => console.log(err));
 ```
 
-That covers a lot of the basics. For a much more complete treatment, see the excellent [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html), by Nolan Lawson.
+That covers a lot of the basics. For a much more complete treatment, see the excellent [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) by Nolan Lawson.
 
 ### Browser compatibility
 
@@ -338,8 +358,8 @@ function fetchAndDecode(url, type) {
   .catch(e => {
     console.log(`There has been a problem with your fetch operation for resource "${url}": ` + e.message);
   });
-}
 
+}
 // Call the fetchAndDecode() method to fetch the images and the text, and store their promises in variables
 let coffee = fetchAndDecode('coffee.jpg', 'blob');
 let tea = fetchAndDecode('tea.jpg', 'blob');
@@ -396,21 +416,27 @@ The following example is a refactor of the simple promise example we saw earlier
 ```js
 async function myFetch() {
   let response = await fetch('coffee.jpg');
-  let myBlob = await response.blob();
-
-  let objectURL = URL.createObjectURL(myBlob);
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  } else {
+    let myBlob = await response.blob();
+    let objectURL = URL.createObjectURL(myBlob);
+    let image = document.createElement('img');
+    image.src = objectURL;
+    document.body.appendChild(image);
+  }
 }
 
-myFetch();
+myFetch()
+.catch(e => {
+  console.log('There has been a problem with your fetch operation: ' + e.message);
+});
 ```
 
 ### Pitfalls
 
-- You can't use the `await` operator inside a non-`async` function, or in the top level context of your code. This can sometimes result in an extra function wrapper needing to be created, which can be slightly frustrating in some circumstances. But it is worth it most of the time.
-- Browser support for async/await is not as good as that for promises. If you want to use async/await but are concerned about older browser support, you could consider using the [BabelJS](https://babeljs.io/) library — this allows you to write your applications using the latest JavaScript and let Babel figure out what changes if any are needed for your user’s browsers.
+- You can't use the `await` operator inside a non-`async` function, or in the top level context of your code. This can sometimes result in an extra function wrapper needing to be created, which can be slightly frustrating in some circumstances, but it is worth it most of the time.
+- Browser support for async/await is not as good as that for promises. If you want to use async/await but are concerned about older browser support, you could consider using the [BabelJS](https://babeljs.io/) library — this allows you to write your applications using the latest JavaScript and let Babel figure out what changes, if any, are needed for your user’s browsers.
 
 ### Browser compatibility
 
