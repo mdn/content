@@ -224,9 +224,9 @@ Here are some examples of using HWB notation:
 hwb(90 10% 10%)
 hwb(90 10% 10%)
 hwb(90 50% 10%)
-hwb(90deg, 10%, 10%)
-hwb(1.5708rad, 60%, 0%)
-hwb(.25turn, 0%, 40%)
+hwb(90deg 10% 10%)
+hwb(1.5708rad 60% 0%)
+hwb(.25turn 0% 40%)
 
 /* Same lime green but with an alpha value */
 hwb(90 10% 10% / 0.5)
