@@ -83,7 +83,7 @@ if ('serviceWorker' in navigator) {
 
 ## See also
 
-- [The Offline (Service Worker) Cookbook](https://web.dev/offline-cookbook/)
+- [The Offline Cookbook](https://web.dev/offline-cookbook/)(service workers)
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service worker basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
