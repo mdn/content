@@ -9,7 +9,7 @@ tags:
   - Property
 browser-compat: api.CanvasRenderingContext2D.filter
 ---
-{{APIRef}} {{SeeCompatTable}}
+{{APIRef}}
 
 The
 **`CanvasRenderingContext2D.filter`**
