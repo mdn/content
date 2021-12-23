@@ -20,10 +20,11 @@ The **`hwb()`** functional notation expresses a given color according to its hue
 ```css
 hwb(194 0% 0%) /* #00c3ff */
 hwb(194 0% 0% / .5) /* #00c3ff with 50% opacity */
-hwb(194, 0%, 0%, .5); /* with comma-separated values */
 ```
 
 ### Values
+
+> **Note:** The HWB function does **not** use commas to separate it's values as with previous color functions and the optional alpha value needs to be preceded with a forward slash (`/`) if specified.
 
 - Functional notation: `hwb[a](H W B[/ A])`
 
@@ -43,4 +44,3 @@ hwb(194, 0%, 0%, .5); /* with comma-separated values */
 
 {{Compat}}
 
-The `hwb()` value has yet to be implemented in any browser. [Mozilla bug: 1352755](https://bugzilla.mozilla.org/show_bug.cgi?id=1352755)
