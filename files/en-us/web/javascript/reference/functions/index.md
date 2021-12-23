@@ -42,12 +42,12 @@ called with the
 keyword, the default value is the value of its `this` parameter. For all
 other functions, the default return value is {{jsxref("undefined")}}.
 
-The parameters of a function call are the function's _arguments_. Arguments are
-passed to functions _by value_. If the function changes the value of an
-argument, this change is not reflected globally or in the calling function. However,
-object references are values, too, and they are special: if the function changes the
-referred object's properties, that change is visible outside the function, as shown in
-the following example:
+The parameters of a function call are the function's _arguments_. Arguments may be passed _by value_
+(in the case of [primitive values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#primitive_values))
+or _by reference_ (in the case of [objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#objects)). 
+This means that if a function reassigns a primitive type parameter, the value won't change outside the function. In the case of
+an object type parameter, if it's reassigned or mutated, the change will impact outside of the function.
+See the following example:
 
 ```js
 /* Declare the function 'myFunc' */
