@@ -28,7 +28,7 @@ form.acceptCharset = string;
 ## Example
 
 ```js
-inputs = document.forms['myform'].acceptCharset;
+var inputs = document.forms['myform'].acceptCharset;
 ```
 
 ## Specifications
