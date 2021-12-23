@@ -1258,7 +1258,6 @@ This example shows the many ways in which a single color can be created with the
 
     /* These examples all specify varying shades of a lime green. */
     hwb(90 10% 10%)
-    hwb(90 10% 10%)
     hwb(90 50% 10%)
     hwb(90deg 10% 10%)
     hwb(1.5708rad 60% 0%)
