@@ -13,7 +13,7 @@ Clickjacking is an interface-based attack that tricks website users into unwitti
 
 Clickjacking can be prevented by implementing a [Content Security Policy (frame-ancestors)](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) and implementing [Set-Cookie attributes](/en-US/docs/Web/HTTP/Headers/Set-Cookie#attributes).
 
-## Learn more<
+## Learn more
 
 - [Web security: clickjacking protection](/en-US/docs/Web/Security#clickjacking_protection)
 - [Clickjacking](https://en.wikipedia.org/wiki/Clickjacking) on Wikipedia
