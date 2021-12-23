@@ -14,7 +14,7 @@ tags:
 
 [SVG](/en-US/docs/Web/SVG) is an [XML](/en-US/docs/Web/XML) language, similar to [XHTML](/en-US/docs/Glossary/XHTML), which can be used to draw vector graphics, such as the one shown below. It can be used to create an image either by specifying all the lines and shapes necessary, by modifying already existing raster images, or by a combination of both. The image and its components can also be transformed, composited together, or filtered to change their appearance completely.
 
-![](dino.svg)
+![Moziall dino logo](dino.svg)
 
 SVG came about in 1999 after several competing formats had been submitted to the [W3C](https://www.w3.org) and failed to be fully ratified. SVG is supported by all major [browsers](https://caniuse.com/#search=svg). A downside is loading SVG can be slow. SVG does offer benefits, some of which include having a [DOM interface](/en-US/docs/Web/API) available for it, and not requiring third-party extensions. Whether or not to use it often depends on your specific use case.
 
