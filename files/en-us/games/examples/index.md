@@ -77,6 +77,9 @@ This page lists a number of impressive web technology demos for you to get inspi
 
 **[Bullet Force](https://www.crazygames.com/game/bullet-force-multiplayer)**
     3D multiplayer first-person shooter.
+    
+**[Shopping Mall Tycoon](https://litlegames.com/shopping-mall-tycoon/)**
+    Best tycoon game.   
 
 - [Elliot Quest](https://elliotquest.com/)
   - : 8-bit graphic retro adventure game.
