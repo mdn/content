@@ -21,17 +21,17 @@ The **`rgb()`** functional notation expresses a color according to its red, gree
 ## Syntax
 
 ```css
-rgb(255,255,255) /* white */
-rgb(255,255,255,.5) /* white with 50% opacity */
+rgb(255, 255, 255) /* white */
+rgb(255, 255, 255,.5) /* white with 50% opacity */
 rgb(255 255 255) /* CSS Colors 4 space-separated values */
 rgb(255 255 255 / .5); /* white with 50% opacity, using CSS Colors 4 space-separated values */
 ```
 
 ### Values
 
-- Functional notation: `rgb[a](R, G, B[, A])`
+- Functional notation: `rgb(R, G, B[, A])`
   - : `R` (red), `G` (green), and `B` (blue) can be either {{cssxref("&lt;number&gt;")}}s or {{cssxref("&lt;percentage&gt;")}}s, where the number `255` corresponds to `100%`. `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
-- Functional notation: `rgb[a](R G B[ / A])`
+- Functional notation: `rgb(R G B[ / A])`
   - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
 
 ## Browser compatibility
