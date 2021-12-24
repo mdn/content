@@ -50,15 +50,18 @@ So in pseudocode a `Professor` class could be written like this:
 
 ```
 class Professor
-    methods
-        grade(paper)
-        introduceSelf()
     properties
         name
         subject
+    methods
+        grade(paper)
+        introduceSelf()
 ```
 
-This defines a `Professor` class with two methods: `grade()` to grade a paper, and `introduceSelf()` to introduce themselves. It also has two data properties `name` and `subject`.
+This defines a `Professor` class with:
+
+* two data properties: `name` and `subject`
+* two methods: `grade()` to grade a paper, and `introduceSelf()` to introduce themselves.
 
 On its own, a class doesn't do anything. It's a kind of template for creating concrete objects of that type. Each concrete professor we create is called an **instance** of the `Professor` class. The process of creating an instance is performed by a special function called a **constructor**. We pass the constructor values for any internal state that we want to initialize in the new instance.
 
@@ -66,14 +69,14 @@ Generally, the constructor is written out as part of the class definition, and i
 
 ```
 class Professor
+    properties
+        name
+        subject
     constructor
         Professor(name, subject)
     methods
         grade(paper)
         introduceSelf()
-    properties
-        name
-        subject
 ```
 
 This constructor takes two parameters so we can initialize the `name` and `subject` properties when we create a new concrete professor.
@@ -101,13 +104,13 @@ However, students do have a name and might also want to introduce themselves. So
 
 ```
 class Student
+    properties
+        name
+        year
     constructor
         Student(name, year)
     methods
         introduceSelf()
-    properties
-        name
-        year
 ```
 
 It would be helpful if we could represent the fact that students and professors share some properties: or more accurately, the fact that at some level they are the _same kind of thing_. **Inheritance** lets us do this.
@@ -116,29 +119,29 @@ We start by observing that students and professors are both people, and people h
 
 ```
 class Person
+    properties
+        name
     constructor
         Person(name)
     methods
         introduceSelf()
-    properties
-        name
 
 class Professor : extends Person
+    properties
+        subject
     constructor
         Professor(name, subject)
     methods
         grade(paper)
         introduceSelf()
-    properties
-        subject
 
 class Student : extends Person
+    properties
+        year
     constructor
         Student(name, year)
     methods
         introduceSelf()
-    properties
-        year
 ```
 
 In this case we would say that `Person` is the **superclass** or **parent class** of both `Professor` and `Student`. Conversely `Professor` and `Student` are **subclasses** or **child classes** of `Person`.
@@ -180,13 +183,13 @@ The problem is, if we decide to change the criteria for allowing students to stu
 
 ```
 class Student : extends Person
+    properties
+       year
     constructor
         Student(name, year)
     methods
        introduceSelf()
        canStudyArchery() { return this.year < 1 }
-    properties
-       year
 ```
 
 ```
@@ -201,13 +204,13 @@ In many OOP languages, we can prevent other code from accessing an object's inte
 
 ```
 class Student : extends Person
+    properties
+       private year
     constructor
         Student(name, year)
     methods
        introduceSelf()
        canStudyArchery() { return this.year < 1 }
-    properties
-       private year
 
 student = new Student('Weber', 1)
 student.year // error: 'year' is a private property of Student
