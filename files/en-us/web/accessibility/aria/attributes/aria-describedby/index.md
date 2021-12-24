@@ -58,6 +58,7 @@ Used in **ALL** roles. Usable in all HTML elements as well.
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description)
 - [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+- [Browser and AT support for `aria-describedby`](https://a11ysupport.io/tech/aria/aria-describedby_attribute)
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
