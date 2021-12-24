@@ -56,7 +56,7 @@ HTTP/1.1 200 OK
 Accept-CH: Sec-CH-UA-Platform-Version
 ```
 
-The client may then opt-in to providing the hint, and add the `Sec-CH-UA-Platform-Version` header to subsequent requests.
+The client may choose to provide the hint, and add the `Sec-CH-UA-Platform-Version` header to subsequent requests.
 For example, the following request headers might be sent from a browser running on Windows 10.
 
 ```http

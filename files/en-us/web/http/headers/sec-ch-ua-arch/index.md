@@ -13,7 +13,7 @@ browser-compat: http.headers.Sec-CH-UA-Arch
 ---
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
-The **`Sec-CH-UA-Arch`** [user agent client hint](/en-US/docs/Glossary/Client_hints#user-agent_client_hints) request header provides the user-agent's underlying CPU architecture, such as arm or x86.
+The **`Sec-CH-UA-Arch`** [user agent client hint](/en-US/docs/Glossary/Client_hints#user-agent_client_hints) request header provides the user-agent's underlying CPU architecture, such as ARM or x86.
 
 This might be used by a server, for example, to select and offer the correct binary format of an executable for a user to download.
 
@@ -48,14 +48,14 @@ Sec-CH-UA-Arch: <arch>
 
 ## Examples
 
-A server requests the `Sec-CH-UA-Arch` header by including the {{HTTPHeader("Accept-CH")}} in a _response_ to some request from the client, using the name of the desired header as a token:
+A server requests the `Sec-CH-UA-Arch` header by including the {{HTTPHeader("Accept-CH")}} in a response to some request from the client, using the name of the desired header as a token:
 
 ```http
 HTTP/1.1 200 OK
 Accept-CH: Sec-CH-UA-Arch
 ```
 
-The client may then opt-in to providing the hint, and add the `Sec-CH-UA-Arch` header to subsequent requests.
+The client may choose to provide the hint, and add the `Sec-CH-UA-Arch` header to subsequent requests.
 For example, on a Windows X86 based computer, the client might add the header as shown:
 
 ```http

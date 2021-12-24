@@ -15,7 +15,7 @@ browser-compat: http.headers.Sec-CH-UA-Full-Version
 
 > **Note:** This is being replaced by the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}.
 
-The **`Sec-CH-UA-Full-Version`** [user agent client hint](/en-US/docs/Glossary/Client_hints#user-agent_client_hints) request header provides the user-agent's full semantic version string.
+The **`Sec-CH-UA-Full-Version`** [user agent client hint](/en-US/docs/Glossary/Client_hints#user-agent_client_hints) request header provides the user-agent's full version string.
 
 <table class="properties">
   <tbody>
@@ -43,7 +43,7 @@ Sec-CH-UA-Full-Version: <version>
 ### Directives
 
 - `<version>`
-  - : A string containing the full semantic version number, like "96.0.4664.93".
+  - : A string containing the full version number, like "96.0.4664.93".
 
 
 ## Examples
@@ -55,7 +55,7 @@ HTTP/1.1 200 OK
 Accept-CH: Sec-CH-UA-Full-Version
 ```
 
-The client may then opt-in to providing the hint, and add the `Sec-CH-UA-Full-Version` header to subsequent requests.
+The client may choose to provide the hint, and add the `Sec-CH-UA-Full-Version` header to subsequent requests.
 For example, the client might add the header as shown:
 
 ```http

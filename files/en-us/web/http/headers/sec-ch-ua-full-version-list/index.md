@@ -13,7 +13,7 @@ browser-compat: http.headers.Sec-CH-UA-Full-Version-List
 ---
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
-The **`Sec-CH-UA-Full-Version-List`** [user agent client hint](/en-US/docs/Glossary/Client_hints#user-agent_client_hints) request header provides the user-agent's branding and full semantic version information.
+The **`Sec-CH-UA-Full-Version-List`** [user agent client hint](/en-US/docs/Glossary/Client_hints#user-agent_client_hints) request header provides the user-agent's branding and full version information.
 
 <table class="properties">
   <tbody>
@@ -31,7 +31,7 @@ The **`Sec-CH-UA-Full-Version-List`** [user agent client hint](/en-US/docs/Gloss
   </tbody>
 </table>
 
-The **`Sec-CH-UA-Full-Version-List`** header provides the brand and full semantic version for each brand associated with the browser, in a comma-separated list.
+The **`Sec-CH-UA-Full-Version-List`** header provides the brand and full version information for each brand associated with the browser, in a comma-separated list.
 
 A brand is a commercial name for the user agent like: Chromium, Opera, Google Chrome, Microsoft Edge, Firefox, and Safari.
 A user agent might have several associated brands.
@@ -42,23 +42,23 @@ The header therefore allows the server to customise its response based on both s
 The header may include "fake" brands in any position and with any name.
 This is a feature designed to prevent servers from rejecting unknown user agents outright, forcing user agents to lie about their brand identity.
 
-> **Note:** This is similar to {{HTTPHeader("Sec-CH-UA")}}, but includes the full semantic version number instead of the signficant version number for each brand.
+> **Note:** This is similar to {{HTTPHeader("Sec-CH-UA")}}, but includes the full version number instead of the significant version number for each brand.
 
 ## Syntax
 
-A comma separated list of brands in the user agent brand list, and their associated full semantic version number.
+A comma separated list of brands in the user agent brand list, and their associated full version number.
 The syntax for a single entry has the following format:
 
 ```http
-Sec-CH-UA-Full-Version-List: "<brand>";v="<semantic version>", ...
+Sec-CH-UA-Full-Version-List: "<brand>";v="<full version>", ...
 ```
 
 ### Directives
 
 - `<brand>`
   - : A brand associated with the user agent, like "Chromium", "Google Chrome", or an intentionally incorrect brand like `"Not A;Brand"`.
-- `<semantic version>`
-  - : A full semantic build number, such as 98.0.4750.0.
+- `<full version>`
+  - : A full version number, such as 98.0.4750.0.
 
 
 ## Examples
@@ -70,7 +70,7 @@ HTTP/1.1 200 OK
 Accept-CH: Sec-CH-UA-Full-Version-List
 ```
 
-The client may then opt-in to providing the hint, and add the `Sec-CH-UA-Full-Version-List` header to subsequent requests, as shown below:
+The client may choose to provide the hint, and add the `Sec-CH-UA-Full-Version-List` header to subsequent requests, as shown below:
 
 ```http
 GET /my/page HTTP/1.1

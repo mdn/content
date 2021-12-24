@@ -56,7 +56,7 @@ HTTP/1.1 200 OK
 Accept-CH: Sec-CH-UA-Bitness
 ```
 
-The client may then opt-in to providing the hint, and add the `Sec-CH-UA-Bitness` header to subsequent requests.
+The client may choose to provide the hint, and add the `Sec-CH-UA-Bitness` header to subsequent requests.
 For example, on a Windows based 64-bit computer, the client might add the header as shown:
 
 ```http
