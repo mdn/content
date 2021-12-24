@@ -152,7 +152,7 @@ You might notice that `introduceSelf()` is defined in all three classes. The rea
 walsh = new Professor('Walsh', 'Psychology')
 walsh.introduceSelf()  // 'My name is Professor Walsh, and I will be your Psychology professor'
 
-summers = new Student('Summers', '1')
+summers = new Student('Summers', 1)
 summers.introduceSelf() // 'My name is Summers, and I'm in the first year'
 ```
 
