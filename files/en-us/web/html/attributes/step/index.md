@@ -59,7 +59,7 @@ The default stepping value for `number` inputs is 1, allowing only integers to b
       <td>1 (day)</td>
       <td>
         <code
-          >&#x3C;input type="datetime-local" min="019-12-25T19:30"
+          >&#x3C;input type="datetime-local" min="2019-12-25T19:30"
           step="7"></code
         >
       </td>
