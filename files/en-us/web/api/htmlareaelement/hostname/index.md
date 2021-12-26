@@ -27,7 +27,7 @@ area.hostname = string;
 ```js
 // An <area id="myArea" href="/en-US/docs/HTMLAreaElement"> element is in the document
 const area = document.getElementById("myArea");
-HTMLAreaElement.hostname; // returns 'developer.mozilla.org'
+area.hostname; // returns 'developer.mozilla.org'
 ```
 
 ## Specifications
