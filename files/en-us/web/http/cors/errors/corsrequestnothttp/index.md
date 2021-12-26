@@ -43,8 +43,7 @@ origin for purposes of the CORS same-origin rule.
 In response to [CVE-2019-11730](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730),
 Firefox 68 and later define the origin of a page opened using a `file:///`
 URI as unique. Therefore, other resources in the same directory or its subdirectories no
-longer satisfy the CORS same-origin rule. This new behavior is enabled by default using
-the `privacy.file_unique_origin` preference.
+longer satisfy the CORS same-origin rule.
 
 ## See also
 
