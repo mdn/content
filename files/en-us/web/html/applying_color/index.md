@@ -213,6 +213,26 @@ th {
 
 > **Note:** When you omit the hue's unit, it's assumed to be in degrees (`deg`).
 
+### HWB functional notation
+
+Much like the HSL functional notation above, the [hwb()](/en-US/docs/Web/CSS/color_value/hwb()) function uses the same hue value. But instead of lightness and saturation you specify whiteness and blackness values in percentages. Values are **not** separated with a comma and an optional alpha value can be included (it must be preceded by a forward slash `/`).
+
+Here are some examples of using HWB notation:
+
+```css
+/* These examples all specify varying shades of a lime green. */
+hwb(90 10% 10%)
+hwb(90 10% 10%)
+hwb(90 50% 10%)
+hwb(90deg 10% 10%)
+hwb(1.5708rad 60% 0%)
+hwb(.25turn 0% 40%)
+
+/* Same lime green but with an alpha value */
+hwb(90 10% 10% / 0.5)
+hwb(90 10% 10% / 50%)
+```
+
 ## Using color
 
 Now that you know what CSS properties exist that let you apply color to elements and the formats you can use to describe colors, you can put this together to begin to make use of color. As you may have seen from the list under {{anch("Things that can have color")}}, there are plenty of things you can color with CSS. Let's look at this from two sides: using color within a {{Glossary("stylesheet")}}, and adding and changing color using {{Glossary("JavaScript")}} code to alter the styles of elements.
