@@ -1,4 +1,4 @@
----
+  Kongpc Kong-pc  Kongpc-2535
 title: Character
 slug: Glossary/Character
 tags:
