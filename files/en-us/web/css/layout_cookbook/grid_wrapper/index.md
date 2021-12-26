@@ -71,7 +71,7 @@ Although Grid enables us to position items anywhere (within reason), it is impor
 
 The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-#### grid-template-columns
+### grid-template-columns
 
 {{Compat("css.properties.grid-template-columns")}}
 
