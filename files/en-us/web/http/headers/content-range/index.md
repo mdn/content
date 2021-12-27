@@ -51,9 +51,9 @@ Content-Range: <unit> */<size>
 - \<unit>
   - : The unit in which ranges are specified. This is usually `bytes`.
 - \<range-start>
-  - : An integer in the given unit indicating the start position (zero-indexed) of the request range.
+  - : An integer in the given unit indicating the start position (zero-indexed & inclusive) of the request range.
 - \<range-end>
-  - : An integer in the given unit indicating the end position (zero-indexed) of the requested range.
+  - : An integer in the given unit indicating the end position (zero-indexed & inclusive) of the requested range.
 - \<size>
   - : The total length of the document (or `'*'` if unknown).
 
