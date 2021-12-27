@@ -36,7 +36,7 @@ None.
 
 ## Examples
 
-In the following example we retrieve the list of classes set on a {{htmlelement("span")}} element as a `DOMTokenList` using {{domxref("Element.classList")}}.
+In the following example, we retrieve the list of classes set on a {{htmlelement("span")}} element as a `DOMTokenList`, using {{domxref("Element.classList")}}.
 We then add a new token to the list, and write the list into the `<span>`'s {{domxref("Node.textContent")}}.
 
 First, the HTML:
