@@ -1861,14 +1861,6 @@
       "sushant1221"
     ]
   },
-  "Glossary/Client_hints": {
-    "modified": "2019-07-01T18:32:07.538Z",
-    "contributors": [
-      "Malvoz",
-      "jswisher",
-      "estelle"
-    ]
-  },
   "Glossary/Closure": {
     "modified": "2019-03-23T23:10:57.372Z",
     "contributors": [
@@ -123409,6 +123401,14 @@
       "anthony-geoghegan",
       "teoli",
       "kohei.yoshino"
+    ]
+  },
+  "Web/HTTP/Client_hints": {
+    "modified": "2019-07-01T18:32:07.538Z",
+    "contributors": [
+      "Malvoz",
+      "jswisher",
+      "estelle"
     ]
   },
   "Web/HTTP/Compression": {
