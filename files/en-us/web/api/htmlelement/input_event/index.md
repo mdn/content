@@ -45,7 +45,7 @@ The event also applies to elements with {{domxref("HTMLElement.contentEditable",
 
 For `<input>` elements with `type=checkbox` or `type=radio`, the `input` event should fire whenever a user toggles the control, per [the HTML5 specification](https://html.spec.whatwg.org/multipage/input.html#the-input-element:event-input-2). However, historically this has not always been the case. Check compatibility, or use the {{domxref("HTMLElement/change_event", "change")}} event instead for elements of these types.
 
-For `<textarea>` and`<input>` elements that accept text input `type=text`, `type=tel`, etc the interface is {{DOMxRef("InputEvent")}}, for others the interface is {{DOMxRef("Event")}}.
+For {{htmlelement("textarea")}} and {{htmlelement("input")}} elements that accept text input (`type=text`, `type=tel`, etc.), the interface is {{DOMxRef("InputEvent")}}; for others, the interface is {{DOMxRef("Event")}}.
 
 > **Note:** The `input` event is fired every time the `value` of the element changes. This is unlike the {{domxref("HTMLElement/change_event", "change")}} event, which only fires when the value is committed, such as by pressing the enter key, selecting a value from a list of options, and the like.
 
