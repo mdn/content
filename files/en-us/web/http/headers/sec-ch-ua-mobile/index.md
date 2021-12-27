@@ -13,10 +13,10 @@ browser-compat: http.headers.Sec-CH-UA-Mobile
 ---
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
-The **`Sec-CH-UA-Mobile`** [user agent client hint](/en-US/docs/Glossary/Client_hints#user-agent_client_hints) request header indicates whether the browser is on a mobile device.
+The **`Sec-CH-UA-Mobile`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header indicates whether the browser is on a mobile device.
 It can also be used by a desktop browser to indicate a preference for a "mobile" user experience.
 
-`Sec-CH-UA-Mobile` is a [low entropy hint](/en-US/docs/Glossary/Client_hints#low_entropy_hints).
+`Sec-CH-UA-Mobile` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints).
 Unless blocked by a user agent permission policy, it is sent by default, without the server opting in by sending {{HTTPHeader("Accept-CH")}}.
 
 <table class="properties">
@@ -51,7 +51,7 @@ Sec-CH-UA-Mobile: <boolean>
 
 ## Examples
 
-As `Sec-CH-UA-Mobile` is a [low entropy hint](/en-US/docs/Glossary/Client_hints#low_entropy_hints) it is typically sent in all requests.
+As `Sec-CH-UA-Mobile` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints) it is typically sent in all requests.
 
 A desktop browser would usually send requests with the following header:
 

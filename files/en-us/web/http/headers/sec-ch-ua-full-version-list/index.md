@@ -13,7 +13,7 @@ browser-compat: http.headers.Sec-CH-UA-Full-Version-List
 ---
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
-The **`Sec-CH-UA-Full-Version-List`** [user agent client hint](/en-US/docs/Glossary/Client_hints#user-agent_client_hints) request header provides the user-agent's branding and full version information.
+The **`Sec-CH-UA-Full-Version-List`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user-agent's branding and full version information.
 
 <table class="properties">
   <tbody>

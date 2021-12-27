@@ -14,7 +14,7 @@ browser-compat: http.headers.DPR
 ---
 {{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
 
-The **`DPR`** [device client hint](/en-US/docs/Glossary/Client_hints) request header provides the client device pixel ratio. This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.
+The **`DPR`** [device client hint](/en-US/docs/Web/HTTP/Client_hints) request header provides the client device pixel ratio. This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.
 
 <table class="properties">
   <tbody>

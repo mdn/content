@@ -14,7 +14,7 @@ browser-compat: http.headers.Content-DPR
 ---
 {{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
 
-The **`Content-DPR`** response header is used to confirm the _image_ device to pixel ratio in requests where the screen {{HTTPHeader("DPR")}} [client hint](/en-US/docs/Glossary/Client_hints) was used to select an image resource.
+The **`Content-DPR`** response header is used to confirm the _image_ device to pixel ratio in requests where the screen {{HTTPHeader("DPR")}} [client hint](/en-US/docs/Web/HTTP/Client_hints) was used to select an image resource.
 
 <table class="properties">
   <tbody>
