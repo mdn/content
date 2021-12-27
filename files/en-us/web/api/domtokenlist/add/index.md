@@ -8,7 +8,7 @@ browser-compat: api.DOMTokenList.add
 ---
 {{APIRef("DOM")}}
 
-The **`add()`** method of the {{domxref("DOMTokenList")}} interface adds the given _tokens_ to the list.
+The **`add()`** method of the {{domxref("DOMTokenList")}} interface adds the given _tokens_, except those already present, to the list.
 
 ## Syntax
 
