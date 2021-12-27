@@ -146,7 +146,7 @@ The HTML file looks like this:
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_beast.css"/>
+    <link rel="stylesheet" href="choose_beast.css">
   </head>
 
 <body>
