@@ -276,7 +276,7 @@ The properties and elements returned from this match are as follows:
 
 Initializing a new variable with an array does not create a copy.
 Instead the new variable contains a _reference_ to the original array.
-If you change a value in the original array it will be reflected in the new array.
+If you change a value in the original array, it will be reflected in the new array.
 
 ```js
 let array1 = [1,2,3]
@@ -286,8 +286,8 @@ console.log(array1Reference);
 // Array [1,9,3]  - changes to array1 do affect array1Reference - it is not a copy
 ```
 
-In order to create a copy of an array you must effectively create a new variable for the array and new variables for each of the primitive array elements (initializing a variable with a primitive value creates a copy, not a reference).
-Javascript provides the following methods to do this for you.
+In order to create a copy of an array, you must effectively create a new variable for the array and new variables for each of the primitive array elements (initializing a variable with a primitive value creates a copy, not a reference).
+JavaScript provides the following methods to do this for you.
 
 Shallow copy using [spread sequence](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax):
 
@@ -308,9 +308,9 @@ let shallowCopyFrom = Array.from(fruits)
 // ["Strawberry", "Mango"]
 ```
 
-These all create a _shallow copy_; top level elements containing primitive values are copied, but if the array contains nested objects or arrays these will reference elements in the original array.
+These all create a _shallow copy_; top-level elements containing primitive values are copied, but if the array contains nested objects or arrays, those will reference elements in the original array.
 
-If you need a _deep copy_ of all elements, including nested arrays, one approach is to use {{jsxref("JSON.stringify()")}} to convert the array to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into an array.
+If you need a _deep copy_ of all elements — that is, in which even nested arrays don’t just reference elements in the original array but instead are also copied — one approach is to use {{jsxref("JSON.stringify()")}} to convert the array to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into an array.
 
 ```js
 let deepCopy = JSON.parse(JSON.stringify(fruits));
