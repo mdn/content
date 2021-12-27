@@ -13,10 +13,10 @@ browser-compat: http.headers.Sec-CH-UA-Platform
 ---
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
-The **`Sec-CH-UA-Platform`** [user agent client hint](/en-US/docs/Glossary/Client_hints#user-agent_client_hints) request header provides the platform or operating system on which the user agent is running. 
+The **`Sec-CH-UA-Platform`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the platform or operating system on which the user agent is running. 
 For example: "Windows" or "Android".
 
-`Sec-CH-UA-Platform` is a [low entropy hint](/en-US/docs/Glossary/Client_hints#low_entropy_hints).
+`Sec-CH-UA-Platform` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints).
 Unless blocked by a user agent permission policy, it is sent by default (without the server opting in by sending {{HTTPHeader("Accept-CH")}}).
 
 <table class="properties">
@@ -50,7 +50,7 @@ Sec-CH-UA-Platform: <platform>
 
 ## Examples
 
-As `Sec-CH-UA-Platform` is a [low entropy hint](/en-US/docs/Glossary/Client_hints#low_entropy_hints) it is typically sent in all requests.
+As `Sec-CH-UA-Platform` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints) it is typically sent in all requests.
 
 A browser running on a macOS computer might add the following header to all requests.
 

@@ -47,7 +47,7 @@ I have used the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/ari
 
 The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-#### Flexbox
+### Flexbox
 
 {{Compat("css.properties.flex")}}
 

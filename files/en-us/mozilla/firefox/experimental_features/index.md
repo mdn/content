@@ -1615,6 +1615,51 @@ This also changes the console warning; if the upgrade succeeds, the message indi
   </tbody>
 </table>
 
+
+### Clear-Site-Data "cache" directive
+
+The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP response header `cache` directive clears the browser cache for the requesting website.
+
+> **Note:** This was originally enabled by default, but put behind a preference in version 94 ({{bug(1729291)}}).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>63</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>63</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>63</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>63</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+        <code>privacy.clearsitedata.cache.enabled</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## Developer tools
 
 Mozilla's developer tools are constantly evolving. We experiment with new ideas, add new features, and test them on the Nightly and Developer Edition channels before letting them go through to beta and release. The features below are the current crop of experimental developer tool features.

@@ -13,7 +13,7 @@ browser-compat: http.headers.Sec-CH-UA
 ---
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
-The **`Sec-CH-UA`** [user agent client hint](/en-US/docs/Glossary/Client_hints#user-agent_client_hints) request header provides the user-agent's branding and significant version information.
+The **`Sec-CH-UA`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user-agent's branding and significant version information.
 
 <table class="properties">
   <tbody>
@@ -42,7 +42,7 @@ For example a Chromium build with _full version number_ "96.0.4664.45" has a sig
 
 The header therefore allows the server to customise its response based on both shared brands and on particular customisations in their respective versions.
 
-`Sec-CH-UA` is a [low entropy hint](/en-US/docs/Glossary/Client_hints#low_entropy_hints).
+`Sec-CH-UA` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints).
 Unless blocked by a user agent permission policy, it is sent by default, without the server opting in by sending {{HTTPHeader("Accept-CH")}}.
 
 The header may include "fake" brands in any position and with any name.
@@ -69,7 +69,7 @@ Sec-CH-UA: "<brand>";v="<significant version>", ...
 
 ## Examples
 
-`Sec-CH-UA` is a [low entropy hint](/en-US/docs/Glossary/Client_hints#low_entropy_hints).
+`Sec-CH-UA` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints).
 Unless explicitly blocked by a user agent policy, it will be sent in all requests (without the server having to opt in by sending {{HTTPHeader("Accept-CH")}}).
 
 Strings from Chromium, Chrome, Edge, and Opera desktop browsers are shown below. 

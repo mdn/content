@@ -13,7 +13,7 @@ browser-compat: http.headers.Sec-CH-UA-Arch
 ---
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
-The **`Sec-CH-UA-Arch`** [user agent client hint](/en-US/docs/Glossary/Client_hints#user-agent_client_hints) request header provides the user-agent's underlying CPU architecture, such as ARM or x86.
+The **`Sec-CH-UA-Arch`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user-agent's underlying CPU architecture, such as ARM or x86.
 
 This might be used by a server, for example, to select and offer the correct binary format of an executable for a user to download.
 
@@ -68,7 +68,7 @@ Sec-CH-UA-Platform: "Windows"
 Sec-CH-UA-Arch: "x86"
 ```
 
-Note above that the [low entropy headers](/en-US/docs/Glossary/Client_hints#low_entropy_hints) are added to the request even though not specified in the server response.
+Note above that the [low entropy headers](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints) are added to the request even though not specified in the server response.
 
 ## Specifications
 

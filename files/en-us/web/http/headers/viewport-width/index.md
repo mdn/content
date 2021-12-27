@@ -14,7 +14,7 @@ browser-compat: http.headers.Viewport-Width
 ---
 {{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
 
-The **`Viewport-Width`** [device client hint](/en-US/docs/Glossary/Client_hints) request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}. The value is rounded up to the smallest following integer (i.e. ceiling value).
+The **`Viewport-Width`** [device client hint](/en-US/docs/Web/HTTP/Client_hints) request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}. The value is rounded up to the smallest following integer (i.e. ceiling value).
 
 <table class="properties">
   <tbody>
