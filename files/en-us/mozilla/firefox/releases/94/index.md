@@ -41,7 +41,7 @@ No notable changes
 
 ### HTTP
 
-- [Clear-Site-Data](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) is has been disabled by default.
+- The `cache` directive of the [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) response header has been disabled by default.
   It can be enabled using the preference `privacy.clearsitedata.cache.enabled` ({{bug(1729291)}}).
 
 ## Changes for add-on developers

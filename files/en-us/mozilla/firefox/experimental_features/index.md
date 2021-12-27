@@ -1616,9 +1616,9 @@ This also changes the console warning; if the upgrade succeeds, the message indi
 </table>
 
 
-### Clear-Site-Data
+### Clear-Site-Data "cache" directive
 
-The [Clear-Site-Data](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP response header clears browsing data (cookies, storage, cache) associated with the requesting website. It allows web developers to have more control over the data stored by a client browser for their origins.
+The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP response header `cache` directive clears the browser cache for the requesting website.
 
 > **Note:** This was originally enabled by default, but put behind a preference in version 94 ({{bug(1729291)}}).
 
