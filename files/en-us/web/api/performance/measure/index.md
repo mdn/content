@@ -53,11 +53,15 @@ performance.measure(name, undefined, endMark);
 - startMark {{optional_inline}}
   - : A {{domxref("DOMString")}} representing the name of the measure's starting mark. May
     also be the name of a {{domxref("PerformanceTiming")}} property. If it is omitted,
-    then the start time will be the navigation start time.
+    then the start time will be the navigation start time. Specifying a name that does not
+    represent an existing {{domxref('PerformanceMark')}} or {{domxref("PerformanceTiming")}}
+    raises a {{domxref("DOMException")}}.
 - endMark {{optional_inline}}
   - : A {{domxref("DOMString")}} representing the name of the measure's ending mark. May
     also be the name of a {{domxref("PerformanceTiming")}} property. If it is omitted,
-    then the current time is used.
+    then the current time is used. Specifying a name that does not represent an existing 
+    {{domxref('PerformanceMark')}} or {{domxref("PerformanceTiming")}} raises a 
+    {{domxref("DOMException")}}.
 
 ### Return value
 
