@@ -79,8 +79,6 @@ If the duration of the animation is indefinite, any `keyTimes` specification wil
 
  * Safari issue: `keyTimes` values should be separated with semicolumn without space before, f.e: `keyTimes="0; 0.25; 0.5; 0.75; 1"`
 
-
-
 ## Specifications
 
 <table class="no-markdown">
