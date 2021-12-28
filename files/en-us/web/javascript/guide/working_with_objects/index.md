@@ -199,13 +199,13 @@ function Car(make, model, year) {
 
 Notice the use of `this` to assign values to the object's properties based on the values passed to the function.
 
-Now you can create an object called `mycar` as follows:
+Now you can create an object called `myCar` as follows:
 
 ```js
-const mycar = new Car('Eagle', 'Talon TSi', 1993);
+const myCar = new Car('Eagle', 'Talon TSi', 1993);
 ```
 
-This statement creates `mycar` and assigns it the specified values for its properties. Then the value of `mycar.make` is the string "Eagle", `mycar.year` is the integer 1993, and so on.
+This statement creates `myCar` and assigns it the specified values for its properties. Then the value of `myCar.make` is the string "Eagle", `myCar.year` is the integer 1993, and so on.
 
 You can create any number of `Car` objects by calls to `new`. For example,
 
