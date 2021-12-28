@@ -15,7 +15,7 @@ browser-compat: http.headers.Save-Data
 The **`Save-Data`** [network client hint](/en-US/docs/Web/HTTP/Client_hints#network_client_hints) request header field is a boolean which indicates the client's preference for reduced data usage.
 This could be for reasons such as high transfer costs, slow connection speeds, etc.
 
-**`Save-Data`** is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints), and hence may be sent by the client even if not requested by the server using an {{HTTPHeader("Accept-CH")}} response.
+**`Save-Data`** is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints), and hence may be sent by the client even if not requested by the server using an {{HTTPHeader("Accept-CH")}} response header.
 Further, it should be used to reduce data sent to the client irrespective of the values of other client hints that indicate network capability, like {{HTTPHeader("Downlink")}} and {{HTTPHeader("RTT")}}.
 
 <table class="properties">
