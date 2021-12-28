@@ -16,7 +16,7 @@ A {{domxref("GlobalEventHandlers","global event handler")}} for the
 ## Syntax
 
 ```js
-var dragendHandler = targetElement.ondragend;
+targetElement.ondragend = dragendHandler;
 ```
 
 ### Return value
