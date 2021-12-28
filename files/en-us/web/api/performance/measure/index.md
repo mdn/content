@@ -33,7 +33,7 @@ measure(measureName, startMark)
 measure(measureName, startMark, endMark)
 ```
 
-If only `measureName` is specified the start timestamp is set to zero, the end timestamp (which is used to calculate the duration) is the value that would be returned by {{domxref("Performance.now()")}}.
+If only `measureName` is specified, the start timestamp is set to zero, and the end timestamp (which is used to calculate the duration) is the value that would be returned by {{domxref("Performance.now()")}}.
 
 ### Arguments
 
