@@ -90,9 +90,9 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.srcObject")}}
   - : Is a {{domxref('MediaStream')}} representing the media to play or that has played in the current `HTMLMediaElement`, or `null` if not assigned.
 - {{domxref("HTMLMediaElement.textTracks")}} {{readonlyinline}}
-  - : Returns the list of {{domxref("TextTrack")}} objects contained in the element.
+  - : Returns a {{domxref('TextTrackList')}} object containing the list of {{domxref("TextTrack")}} objects contained in the element.
 - {{domxref("HTMLMediaElement.videoTracks")}} {{readonlyinline}}
-  - : Returns the list of {{domxref("VideoTrack")}} objects contained in the element.
+  - : Returns a {{domxref('VideoTrackList')}} object containing the list of {{domxref("VideoTrack")}} objects contained in the element.
 - {{domxref("HTMLMediaElement.volume")}}
   - : Is a `double` indicating the audio volume, from 0.0 (silent) to 1.0 (loudest).
 
@@ -119,7 +119,7 @@ These properties are obsolete and should not be used, even if a browser still su
 _This interface also inherits methods from its ancestors {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
 - {{domxref("HTMLMediaElement.addTextTrack()")}}
-  - : Adds a text track (such as a track for subtitles) to a media element.
+  - : Adds a new {{domxref("TextTrack")}} object (such as a track for subtitles) to a media element. This is a programmatic interface only and does not affect the DOM.
 - {{domxref("HTMLMediaElement.captureStream()")}} {{experimental_inline}}
   - : Returns {{domxref("MediaStream")}}, captures a stream of the media content.
 - {{domxref("HTMLMediaElement.canPlayType()")}}
