@@ -22,7 +22,7 @@ The **`Content-DPR`** response header is used to confirm the _image_ device to p
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Response header")}},
-        {{Glossary("Client hints","Client hint")}}
+        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
