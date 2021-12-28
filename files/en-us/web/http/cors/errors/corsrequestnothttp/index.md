@@ -36,12 +36,12 @@ This meant that a file and all its resources could be loaded from a local direct
 
 Unfortunately this had security implications, as noted in this advisory: [CVE-2019-11730](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730).
 Many browsers, including Firefox and Chrome, now treat all local files as having _opaque origins_ (by default).
-As a result, loading the a local file with included local resources will now result in CORS errors.
+As a result, loading a local file with included local resources will now result in CORS errors.
 
 Developers who need to perform local testing should now [set up a local server](/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server).
 As all files are served from the same scheme and domain (`localhost`) they all have the same origin, and do not trigger cross-origin errors.
 
-> **Note:** This change is in line with the [URL specification](https://url.spec.whatwg.org/#origin), which leaves the origin behaviour for files to the implementation, but recommends that file origins are treated as opaque if in doubt.
+> **Note:** This change is in line with the [URL specification](https://url.spec.whatwg.org/#origin), which leaves the origin behavior for files to the implementation, but recommends that file origins are treated as opaque if in doubt.
 
 ## See also
 

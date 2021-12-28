@@ -53,9 +53,9 @@ These exceptions are nonstandard and unsupported in any other browser.
 ### File origins
 
 Modern browsers usually treat the origin of files loaded using the `file:///` schema as _opaque origins_.
-What this means is that if a file includes other files from the same folder (say) they are not assumed to come from the same origin, and may trigger {{Glossary("CORS")}} errors.
+What this means is that if a file includes other files from the same folder (say), they are not assumed to come from the same origin, and may trigger {{Glossary("CORS")}} errors.
 
-Note that the [URL specification](https://url.spec.whatwg.org/#origin) states that the origin of files is implementation dependent, and some browsers may treat files in the same directory or subdirectory as same-origin even though this has [security implications](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730).
+Note that the [URL specification](https://url.spec.whatwg.org/#origin) states that the origin of files is implementation-dependent, and some browsers may treat files in the same directory or subdirectory as same-origin even though this has [security implications](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730).
 
 ## Changing origin
 
