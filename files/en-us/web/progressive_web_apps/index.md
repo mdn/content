@@ -37,7 +37,6 @@ These introductory materials and step-by-step guides walk you through key aspect
 - [Progressive Web Apps: Escaping Tabs Without Losing Our Soul](https://medium.com/@slightlylate/progressive-apps-escaping-tabs-without-losing-our-soul-3b93a8561955#.6czgj0myh)
 - [Instant Loading Web Apps with An Application Shell Architecture](https://developers.google.com/web/updates/2015/11/app-shell)
 - [Introduction to Progressive Web App Architectures](https://developers.google.com/web/ilt/pwa/introduction-to-progressive-web-app-architectures)
-- [Service worker cookbook](https://serviceworke.rs/)
 - [Workbox](https://developers.google.com/web/tools/workbox) — set of libraries to power a “production-ready” service worker for your PWA
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse) — web-app auditing tool that includes PWA-auditing features
 - [localForage](https://localforage.github.io/localForage/) — `localStorage`-like _async_ storage, to improve your PWA’s offline experience
