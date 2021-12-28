@@ -21,7 +21,7 @@ The **`Sec-CH-UA`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#u
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        {{Glossary("Client hints","Client hint")}}
+        [Client hint](/en-US/docs/Web/HTTP/Client_hints)
       </td>
     </tr>
     <tr>
@@ -99,7 +99,7 @@ Sec-CH-UA: "Opera";v="81", " Not;A Brand";v="99", "Chromium";v="95"
 
 ## See also
 
-- {{Glossary("Client hints")}}
+- [Client hints](/en-US/docs/Web/HTTP/Client_hints)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
 - {{HTTPHeader("Accept-CH")}}

@@ -22,7 +22,7 @@ The **`DPR`** [device client hint](/en-US/docs/Web/HTTP/Client_hints) request he
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        {{Glossary("Client hints","Client hint")}}
+        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
