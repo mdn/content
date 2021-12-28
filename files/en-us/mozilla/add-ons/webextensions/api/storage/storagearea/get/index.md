@@ -35,7 +35,7 @@ let results = browser.storage.<storageType>.get(
 ### Parameters
 
 - `keys`
-  - : A key (`string`) or keys (an array of strings, _or_ an object specifying default values) to identify the item(s) to be retrieved from storage. If you pass an empty string, object or array here, an empty object will be retrieved. If you pass `null`, or an undefined value, the entire storage contents will be retrieved.
+  - : A key (`string`) or keys (an array of strings, _or_ an object specifying default values) to identify the item(s) to be retrieved from storage. If you pass an empty object or array here, an empty object will be retrieved. If you pass `null`, or an undefined value, the entire storage contents will be retrieved.
 
 ### Return value
 
