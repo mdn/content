@@ -205,7 +205,7 @@ Now you can create an object called `mycar` as follows:
 const mycar = new Car('Eagle', 'Talon TSi', 1993);
 ```
 
-This statement creates `mycar` and assigns it the specified values for its properties. Then the value of `mycar.make` is the string "Eagle", `mycar.year` is the integer 1993, and so on.
+This statement creates `mycar` and assigns it the specified values for its properties. Then the value of `mycar.make` is the string "Eagle", mycar.model is the string 'Talon TSi', `mycar.year` is the integer 1993, and so on. The order of arguments and parameters should be the same.
 
 You can create any number of `Car` objects by calls to `new`. For example,
 
