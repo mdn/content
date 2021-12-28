@@ -429,7 +429,7 @@ A REPL ([read–eval–print loop](https://en.wikipedia.org/wiki/Read%E2%80%93ev
 
 Svelte's REPL is much more than that. It's an online tool that allows you to create complete apps, save them online, and share with others.
 
-It's the easiest way to start playing with Svelte from any machine, without having to install anything. It is also widely used by Svelte community. If you want to share an idea, ask for help, or report an issue, it's always extremely useful to create a REPL instance demomstrating the issue.
+It's the easiest way to start playing with Svelte from any machine, without having to install anything. It is also widely used by Svelte community. If you want to share an idea, ask for help, or report an issue, it's always extremely useful to create a REPL instance demonstrating the issue.
 
 Let's have a quick look at the Svelte REPL and how you'd use it. It looks like so:
 
