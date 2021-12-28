@@ -12,13 +12,20 @@ tags:
 ---
 {{CSSRef}}
 
-**CSS counters** let you adjust the appearance of content based on its location in a document. For example, you can use counters to automatically number the headings in a webpage. Counters are, in essence, variables maintained by CSS whose values may be incremented by CSS rules to track how many times they're used.
+**CSS counters** let you adjust the appearance of content based on its location in a document.
+For example, you can use counters to automatically number the headings in a webpage, or to change the numbering on ordered lists.
+
+Counters are, in essence, variables maintained by CSS whose values may be incremented or decremented by CSS rules that track how many times they're used.
+You can define your own named counters, and you can also manipulate the `list-item` counter that is created by default for all ordered lists.
 
 ## Using counters
 
 ### Manipulating a counter's value
 
-To use a CSS counter, it must first be initialized to a value with the {{cssxref("counter-reset")}} property (`0` by default). The same property can also be used to change its value to any specific number. Once initialized, a counter's value can be increased or decreased with {{cssxref("counter-increment")}}. The counter's name must not be "none", "inherit", or "initial"; otherwise the declaration is ignored.
+To use a CSS counter, it must first be initialized to a value with the {{cssxref("counter-reset")}} property (`0` by default, except for reversed `list-item` counters).
+The same property can also be used to change its value to any specific number.
+Once initialized, a counter's value can be increased or decreased with {{cssxref("counter-increment")}}.
+The counter's name must not be `none`, `inherit`, or `initial`; otherwise the declaration is ignored.
 
 ### Displaying a counter
 
@@ -27,6 +34,7 @@ The value of a counter can be displayed using either the {{cssxref("counter()", 
 The {{cssxref("counter()")}} function has two forms: 'counter(_name_)' or 'counter(_name_, _style_)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element.The counter is rendered in the specified style (`decimal` by default).
 
 The {{cssxref("counters()")}} function also has two forms: 'counters(_name_, _string_)' or 'counters(_name_, _string_, _style_)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the specified style (`decimal` by default).
+
 
 ### Basic example
 
@@ -59,9 +67,55 @@ h3::before {
 
 {{EmbedLiveSample("Basic_example", "100%", 150)}}
 
+
+### Reversing a counter
+
+A reversed counter is a simple a counter that has a flag set to indicate that it is intended to decrement rather than increment.
+This is set using the `reversed()` function notation when naming the counter in {{cssxref("counter-reset")}}.
+
+There is very little difference between forward or reversed  _author-defined_ counters.
+The default initial value is always zero, whether or not they are reversed (they increment up or down from zero by default).
+In addition, even though the counter is flagged as "reversed" you still need to specify how the counter decrements using {{cssxref("counter-increment")}}, passing a negative number.
+
+Reversed `list-item` counters are slightly different in that the default initial value is the number of items in the list instead of zero as for all other counters.
+Along with the fact that the counter automatically decrements with each list item means that it is easy to implement the most common reverse numbering: counting down from the number of elements to one.
+
+This example is the same as the one above but using a reversed counter.
+
+#### CSS
+
+```css
+body {
+  counter-reset: reversed(section);                       /* Set a counter named 'section', and its initial value is 0. */
+}
+
+h3::before {
+  counter-increment: section -1;                   /* Decrement the value of section counter by 1 */
+  content: "Section " counter(section) ": ";    /* Display the word 'Section ', the value of
+                                                   section counter, and a colon before the content
+                                                   of each h3 */
+}
+```
+
+#### HTML
+
+```html
+<p>The numbering below will be Section 3, 2, 1 on browsers that support reversed counters (and -1 for all values on those that don't).</p>
+
+<h3>Introduction</h3>
+<h3>Body</h3>
+<h3>Conclusion</h3>
+```
+
+#### Result
+
+{{EmbedLiveSample("Reversing a counter", "100%", 150)}}
+
+
 ### A more sophisticated example
 
-A counter must not necessarily be shown every time is incremented. This example counts all links, however the counter is shown only when a link has no text, as a convenient replacement.
+A counter must not necessarily be shown every time is incremented.
+This example counts all links, however the counter is shown only when a link has no text, as a convenient replacement.
 
 #### CSS
 
@@ -93,7 +147,8 @@ a[href]:empty::after {
 
 ## Nesting counters
 
-A CSS counter can be especially useful for making outlined lists, because a new instance of the counter is automatically created in child elements. Using the {{cssxref("counters()")}} function, separating text can be inserted between different levels of nested counters.
+A CSS counter can be especially useful for making outlined lists, because a new instance of the counter is automatically created in child elements.
+Using the {{cssxref("counters()")}} function, separating text can be inserted between different levels of nested counters.
 
 ### Example of a nested counter
 

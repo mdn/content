@@ -16,14 +16,20 @@ This property will create a new counter or reversed counter with the given name 
 
 In addition to author-created counters, the property can also be used to reset the `list-item` counter that is implicitly used for numbering ordered lists (as created using {{HTMLElement("ol")}} elements).
 
-The counter's value is increased or decreased using the {{cssxref("counter-increment")}} CSS property, and the value of an existing counter may be set using {{cssxref("counter-set")}}.
+A counter's value is increased or decreased using the {{cssxref("counter-increment")}} CSS property, and the value of an existing counter may be set using {{cssxref("counter-set")}}.
 
 {{EmbedInteractiveExample("pages/css/counter-reset.html")}}
 
 A reversed counter is a counter that is intended to decrement rather than increment.
-Reversing a counter is useful when working with ordered lists as a reversed `list-item` counter sets the counter to the number of elements in the list by default (instead of zero) and will automatically decrement.
 
-Reversed user-defined counters are not currently particularly useful: they default to zero if no initial value is specified (rather than the number of elements as for `list-item`), and you manually have to specify how the counter increments or decrements using {{cssxref("counter-increment")}}.
+There is very little difference between forward or reversed _author-defined_ counters.
+The default initial value is always zero, whether or not they are reversed (they increment up or down from zero by default).
+In addition, you always need to specify how the counter increments or decrements using {{cssxref("counter-increment")}}.
+
+Using `counter-reset` with the `list-item` counter that controls numbering on ordered lists is slightly different.
+Firstly, the default initial `list-item` counter value is zero for forward counters and the number of elements in the list for reversed counters.
+Secondly, by default the `list-item` counter automatically increments or decrements by one for each element.
+This makes it very easy to when working with ordered lists to count up from zero or (reversed) down from the number of elements to one.
 
 
 ## Syntax
@@ -96,6 +102,17 @@ The "implicit" counter named `list-item` can be used to control the numbering fo
 h1 {
   counter-reset: chapter section 1 page;
   /* Sets the chapter and page counters to 0,
+     and the section counter to 1 */
+}
+```
+
+### Reversing a counter
+
+```css
+h1 {
+  counter-reset: reversed(chapter) reversed(section) 1 page;
+  /* Sets the reversed flag on the chapter and section counters.
+     Sets the chapter and page counters to 0,
      and the section counter to 1 */
 }
 ```
