@@ -47,12 +47,12 @@ If only `measureName` is specified, the start timestamp is set to zero, and the 
         - : Arbitrary metadata to be included in the measure.
       - `start`
         - : Timestamp {{domxref("DOMHighResTimeStamp")}} to be used as the start time, or {{domxref("DOMString")}} to be used as start mark.
-          If this represents the name of a start mark then it is defined in the same way as `startMark` (in other words it must be the name of an existing mark or a {{domxref("PerformanceTiming")}} property).
+          If this represents the name of a start mark, then it is defined in the same way as `startMark` (in other words it must be the name of an existing mark or a {{domxref("PerformanceTiming")}} property).
       - `duration`
         - : Duration between the start and end mark times ({{domxref("DOMHighResTimeStamp")}}).
       - `end`
         - : Timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the end time, or {{domxref("DOMString")}} to be used as end mark.
-          If this represents the name of an end mark then it is defined in the same way as `endMark` (in other words it must be the name of an existing mark or a {{domxref("PerformanceTiming")}} property).
+          If this represents the name of an end mark, then it is defined in the same way as `endMark` (in other words it must be the name of an existing mark or a {{domxref("PerformanceTiming")}} property).
 
 - `startMark` {{optional_inline}}
   - : A {{domxref("DOMString")}} representing the name of the measure's starting mark.
@@ -74,18 +74,18 @@ The returned _measure_ will have the following property values:
 - {{domxref("PerformanceEntry.entryType","entryType")}} - set to "`measure`".
 - {{domxref("PerformanceEntry.name","name")}} - set to the "`name`" argument.
 - {{domxref("PerformanceEntry.startTime","startTime")}} - set to:
-  - a {{domxref("DOMHighResTimeStamp","timestamp")}} if specified in `MeasureOptions.start`.
-  - the {{domxref("DOMHighResTimeStamp","timestamp")}} of a start mark if specified in `MeasureOptions.start` or `startMark`
+  - a {{domxref("DOMHighResTimeStamp","timestamp")}}, if specified in `MeasureOptions.start`.
+  - the {{domxref("DOMHighResTimeStamp","timestamp")}} of a start mark, if specified in `MeasureOptions.start` or `startMark`
   - a timestamp calculated from the `MeasureOptions.end` and `MeasureOptions.duration` (if `MeasureOptions.start` was not specified)
-  - 0 if it isn't specified and can't be determined from other values.
+  - 0, if it isn't specified and can't be determined from other values.
   
 - {{domxref("PerformanceEntry.duration","duration")}} - set to a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure calculated by subtracting the `startTime` from the end timestamp.
 
   The end timestamp is one of:
-  - a {{domxref("DOMHighResTimeStamp","timestamp")}} if specified in `MeasureOptions.end`.
-  - the {{domxref("DOMHighResTimeStamp","timestamp")}} of an end mark if one is specified in `MeasureOptions.end` or `endMark`
+  - a {{domxref("DOMHighResTimeStamp","timestamp")}}, if specified in `MeasureOptions.end`.
+  - the {{domxref("DOMHighResTimeStamp","timestamp")}} of an end mark, if one is specified in `MeasureOptions.end` or `endMark`
   - a timestamp calculated from the `MeasureOptions.start` and `MeasureOptions.duration` (if `MeasureOptions.end` was not specified)
-  - the value returned by {{domxref("Performance.now()")}} if no end mark is specified or can be determined from other values.
+  - the value returned by {{domxref("Performance.now()")}}, if no end mark is specified or can be determined from other values.
 - {{domxref("PerformanceMeasure","detail")}} - set to the value passed in `MeasureOptions`.
 
 ## Exceptions
