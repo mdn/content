@@ -274,7 +274,7 @@ We'll define a `TodoType` type to see how TypeScript enforces that anything pass
 
 By now you should get an idea about the kind of assistance we can get from TypeScript when building Svelte projects.
 
-Now we will undo these changes in order to start porting our application to TypeScript, so we won't be bothered with all the validate warnings.
+Now we will undo these changes in order to start porting our application to TypeScript, so we won't be bothered with all the check warnings.
 
 1.  Remove the flawed todo and the `lang='ts'` attribute from the `Todos.svelte` file.
 2.  Also remove the import of `TodoType` and the `lang='ts'` from `Todo.svelte`.
