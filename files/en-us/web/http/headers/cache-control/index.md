@@ -108,7 +108,7 @@ Cache-Control: max-age=604800
 
 Indicates that caches can store this response and reuse it for subsequent requests while it's fresh.
 
-Note that `max-age` is not the elapsed time since the response was received, but instead the elapsed time since the response was generated on the origin server. So if the other cache(s) on the path the response takes store it for 100 seconds (indicated using the `Age` response header field), the browser cache would deduct 100 seconds from its freshness lifetime.
+Note that `max-age` is not the elapsed time since the response was received, but instead the elapsed time since the response was generated on the origin server. So if the other cache(s) — on the network route taken by the response — store it for 100 seconds (indicated using the `Age` response header field), the browser cache would deduct 100 seconds from its freshness lifetime.
 
 ```
 Cache-Control: max-age=604800

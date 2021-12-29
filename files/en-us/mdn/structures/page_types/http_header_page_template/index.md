@@ -83,7 +83,7 @@ This should ideally be 1 or 2 short sentences.
         Include header category (or categories), e.g.
         {{Glossary("Request header")}},
         {{Glossary("Response header")}},
-        {{Glossary("Client hints","Client hint")}}
+        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>

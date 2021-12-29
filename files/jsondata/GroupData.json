@@ -588,6 +588,7 @@
       "events": []
     },
     "HTML DOM": {
+      "overview": ["HTML DOM API"],
       "interfaces": [
         "BeforeUnloadEvent",
         "DOMStringMap",

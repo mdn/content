@@ -22,7 +22,7 @@ The **`Sec-CH-UA-Platform-Version`** [user agent client hint](/en-US/docs/Web/HT
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        {{Glossary("Client hints","Client hint")}}
+        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
@@ -79,7 +79,7 @@ Sec-CH-UA-Platform-Version: "10.0.0"
 
 ## See also
 
-- {{Glossary("Client hints")}}
+- [Client hints](/en-US/docs/Web/HTTP/Client_hints)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
 - {{HTTPHeader("Accept-CH")}}

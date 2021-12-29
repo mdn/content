@@ -157,7 +157,7 @@ function randomColor() {
   return 'rgb(' + random(0,255) + ', ' + random(0,255) + ', ' + random(0,255) +  ')';
 }
 
-const stylesheet = document.styleSheets[1];
+const stylesheet = document.styleSheets[0];
 let boxParaRule;
 
 for(let i = 0; i < stylesheet.cssRules.length; i++) {
