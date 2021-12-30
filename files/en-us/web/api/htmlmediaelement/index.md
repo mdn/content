@@ -184,6 +184,8 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_ , defined in the 
   - : Fired periodically as the browser loads a resource.
 - {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
   - : Fired when the playback rate has changed.
+- {{domxref("HTMLMediaElement.resize_event", 'resize ')}}
+  - : Fired when one or both of the `videoWidth` and `videoHeight` attributes have just been updated. 
 - {{domxref("HTMLMediaElement.seeked_event", 'seeked ')}}
   - : Fired when a seek operation completes
 - {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
