@@ -43,14 +43,16 @@ The generated text is the value of all counters with the given name in scope at 
 
 A reversed counter is one that is intended to count down (decrement) rather than up (increment).
 Reversed counters are created using the `reversed()` function notation when naming the counter in {{cssxref("counter-reset")}}.
+
+Reversed counters have a default initial value equal to the number of elements (unlike normal counters, which have a default value of 0).
+This makes it easy to implement a counter that counts from the number of elements down to one.
+
 For example, to create a reversed counter named `section` with a default initial value you would use the following syntax:
 
 ```css
 counter-reset: reversed(section); 
 ```
 
-Reversed counters have a default initial value equal to the number of elements (unlike normal counters, which have a default value of 0).
-This makes it easy to implement a counter that counts from the number of elements down to one.
 You can of course specify any initial value that you like.
 
 The counter value is decreased by specifying a negative value for {{cssxref("counter-increment")}}.
