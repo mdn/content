@@ -14,22 +14,17 @@ browser-compat: css.properties.counter-reset
 The **`counter-reset`** [CSS](/en-US/docs/Web/CSS) property resets a [CSS counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) to a given value.
 This property will create a new counter or reversed counter with the given name on the specified element.
 
-In addition to author-created counters, the property can also be used to reset the `list-item` counter that is implicitly used for numbering ordered lists (as created using {{HTMLElement("ol")}} elements).
+Normal counters have a default initial value of 0.
+Reversed counters are intended to count down, and have a default initial value set to the number of elements at the current level.
+The default initial values make it easy to implement the two most common numbering patterns: counting up from one to the number of elements, and counting down from the number of elements to one.
 
 A counter's value is increased or decreased using the {{cssxref("counter-increment")}} CSS property, and the value of an existing counter may be set using {{cssxref("counter-set")}}.
 
 {{EmbedInteractiveExample("pages/css/counter-reset.html")}}
 
-A reversed counter is a counter that is intended to decrement rather than increment.
-
-There is very little difference between forward or reversed _author-defined_ counters.
-The default initial value is always zero, whether or not they are reversed (they increment up or down from zero by default).
-In addition, you always need to specify how the counter increments or decrements using {{cssxref("counter-increment")}}.
-
-Using `counter-reset` with the `list-item` counter that controls numbering on ordered lists is slightly different.
-Firstly, the default initial `list-item` counter value is zero for forward counters and the number of elements in the list for reversed counters.
-Secondly, by default the `list-item` counter automatically increments or decrements by one for each element.
-This makes it very easy to when working with ordered lists to count up from zero or (reversed) down from the number of elements to one.
+In addition to author-created counters, the property can also reset the `list-item` counters used by ordered lists (as created using {{HTMLElement("ol")}} elements).
+These have the same behavior as author-created counters, except they are _automatically_ incremented/decremented by one with each list element.
+This behavior can be overridden using {{cssxref("counter-increment")}}.
 
 
 ## Syntax
@@ -38,20 +33,14 @@ This makes it very easy to when working with ordered lists to count up from zero
 /* Set "my-counter" to 0 */
 counter-reset: my-counter;
 
-/* Set the ordered-list counter 'list-item' to 0 (count up) */
-counter-reset: list-item;
-
-/* Set author-created reversed counter "my-counter" to 0 */
-counter-reset: reversed(my-counter);
-
-/* Set the ordered-list counter 'list-item' to the number of list elements (count down) */
-counter-reset: reversed(list-item);
-
 /* Set "my-counter" to -3 */
 counter-reset: my-counter -3;
 
-/* Set reversed "my-counter" to -3 */
-counter-reset: reversed(my-counter) -3;
+/* Set reversed "my-counter" to "the number of peer elements" */
+counter-reset: reversed(my-counter);
+
+/* Set reversed "my-counter" to -1 */
+counter-reset: reversed(my-counter) -1;
 
 /* Set counter2 to 9 and reversed "counter1" and "counter3" to 1 and 4, respectively*/
 counter-reset: reversed(counter1) 1 counter2 9 reversed(counter3) 4;
@@ -68,8 +57,8 @@ counter-reset: unset;
 
 The `counter-reset` property is specified as either one of the following:
 
-- A `<custom-ident>` or a `reversed(<custom-ident>)` naming the counter, followed optionally by an `<integer>.
-  Note the `reversed()` method is used to create a "reversed" counter.
+- A `<custom-ident>` or a `reversed(<custom-ident>)` naming the counter, followed optionally by an `<integer>`.
+  Note that the `reversed()` method is used to create a "reversed" counter.
   You may specify as many counters and reversed counters to reset as you want, with each counter or counter-number pair separated by a space.
 - The keyword value `none`.
 
@@ -95,6 +84,10 @@ The "implicit" counter named `list-item` can be used to control the numbering fo
 {{csssyntax}}
 
 ## Examples
+
+The following examples show how reset the counters, but not how they are incremented, decremented, and displayed.
+
+For more complete examples see [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters).
 
 ### Resetting named counters
 
