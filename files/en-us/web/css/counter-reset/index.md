@@ -62,7 +62,7 @@ counter-reset: unset;
 
 The `counter-reset` property is specified as either one of the following:
 
-- A `<custom-ident>` or a `reversed(<custom-ident>)` naming the counter, followed optionally by an `<integer>.
+- A `<custom-ident>` or a `reversed(<custom-ident>)` naming the counter, followed optionally by an `<integer>`.
   Note the `reversed()` method is used to create a "reversed" counter.
   You may specify as many counters and reversed counters to reset as you want, with each counter or counter-number pair separated by a space.
 - The keyword value `none`.
