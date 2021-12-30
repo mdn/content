@@ -142,8 +142,8 @@ h3::before {
 
 ### A more sophisticated example
 
-A counter need not necessarily be shown every time is incremented.
-This example counts all links, however the counter is shown only when a link has no text, as a convenient replacement.
+A counter need not necessarily be shown every time it is incremented.
+This example counts all links with the counter showing only when a link has no text, as a convenient replacement.
 
 #### CSS
 
