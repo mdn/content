@@ -29,7 +29,7 @@ The **`<figcaption>`** [HTML](/en-US/docs/Web/HTML) element represents a caption
       <th scope="row">Permitted content</th>
       <td>
         <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
+          >Flows content</a
         >.
       </td>
     </tr>
