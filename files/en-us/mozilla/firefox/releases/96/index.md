@@ -7,19 +7,21 @@ tags:
   - Mozilla
   - Release
 ---
-{{FirefoxSidebar}}{{draft}}
+{{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 96 that will affect developers. Firefox 96 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta), and will ship on [January 11, 2022](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 96 that will affect developers. Firefox 96 was released on January 11, 2022.
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+No notable changes
 
 ### CSS
+
+- The [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb()) function for use as a [CSS color value](/en-US/docs/Web/CSS/color_value) has been implemented. The `hwb()` functional notation expresses a given color according to its hue, whiteness, and blackness. An optional alpha component represents the color's transparency. ({{bug(1352755)}}).
+
+- Firefox now provides support for the {{CSSxRef("color-scheme")}} property. This allows an element to indicate which color schemes it can comfortably be rendered in. Common options include "light" and "dark", or "day mode" and "night mode". ({{bug(1576289)}}).
 
 - The {{CSSxRef("counter-reset")}} property now supports the `reversed()` function for creating _reversed_ [CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), which are intended for numbering elements in descending order.
   This can be used with the `list-item` counter to automatically number ordered lists in reverse order, starting from the number of elements in the list
@@ -27,22 +29,14 @@ This article provides information about the changes in Firefox 96 that will affe
   Firefox uses this feature internally to support the `<ol>` [`reversed` attribute](/en-US/docs/Web/HTML/Element/ol#attr-reversed).
   ({{bug(1706346)}}).
 
-#### Removals
-
 ### JavaScript
 
-#### Removals
+No notable changes.
 
 ### HTTP
 
 - Cookies sent from the same domain but using different schemes (for example http or https) are now considered to be from different sites with respect to the cookie [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) directive.
   In addition, cookies are assumed to implicitly set `SameSite=Lax` if the `SameSite` attribute is not specified (previously the default was `SameSite=None`), and cookies with `SameSite=None` require a secure context. ({{bug(1617609)}}).
-
-#### Removals
-
-### Security
-
-#### Removals
 
 ### APIs
 
@@ -68,21 +62,9 @@ This article provides information about the changes in Firefox 96 that will affe
 - A number of deprecated non-standard statistics fields have been removed from the [WebRTC Statistics API](/en-US/docs/Web/API/WebRTC_Statistics_API), including: `bitrateMean`, `bitrateStdDev`,`framerateMean`, `framerateStdDev`, and `droppedFrames`.
   ({{bug(1367562)}}).
 
-#### Removals
-
-### WebAssembly
-
-#### Removals
-
-### WebDriver conformance (Marionette)
-
-#### Removals
 
 ## Changes for add-on developers
 
-#### Removals
-
-### Other
 
 ## Older versions
 
