@@ -161,7 +161,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_ , defined in the 
 - {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
   - : Fired when the user agent can play the media, and estimates that enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
 - {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}
-  - : Fired when the duration attribute has been updated.
+  - : Fired when the duration property has been updated.
 - {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
   - : Fired when the media has become empty; for example, when the media has already been loaded (or partially loaded), and the {{domxref("HTMLMediaElement.load()")}} method is called to reload it.
 - {{domxref("HTMLMediaElement.ended_event", 'ended')}}
@@ -185,7 +185,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_ , defined in the 
 - {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
   - : Fired when the playback rate has changed.
 - {{domxref("HTMLMediaElement.resize_event", 'resize ')}}
-  - : Fired when one or both of the `videoWidth` and `videoHeight` attributes have just been updated. 
+  - : Fired when one or both of the `videoWidth` and `videoHeight` properties have just been updated.
 - {{domxref("HTMLMediaElement.seeked_event", 'seeked ')}}
   - : Fired when a seek operation completes
 - {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
@@ -195,7 +195,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_ , defined in the 
 - {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}
   - : Fired when the media data loading has been suspended.
 - {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}
-  - : Fired when the time indicated by the {{domxref("HTMLMediaElement.currentTime", "currentTime")}} attribute has been updated.
+  - : Fired when the time indicated by the {{domxref("HTMLMediaElement.currentTime", "currentTime")}} property has been updated.
 - {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}
   - : Fired when the volume has changed.
 - {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
