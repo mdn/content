@@ -89,7 +89,7 @@ var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // US English uses month-day-year order
 console.log(date.toLocaleDateString('en-US'));
-// → "12/19/2012"
+// → "12/20/2012"
 
 // British English uses day-month-year order
 console.log(date.toLocaleDateString('en-GB'));
