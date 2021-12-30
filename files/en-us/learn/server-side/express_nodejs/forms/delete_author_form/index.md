@@ -38,7 +38,7 @@ exports.author_delete_get = function(req, res, next) {
 };
 ```
 
-The controller gets the id of the `Author` instance to be deleted from the URL parameter (`req.params.id`). It uses the `async.parallel()` method to get the author record and all associated books in parallel. When both operations have completed it renders the **`author_delete`.pug** view, passing variables for the `title`, `author`, and `author_books`.
+The controller gets the id of the `Author` instance to be deleted from the URL parameter (`req.params.id`). It uses the `async.parallel()` method to get the author record and all associated books in parallel. When both operations have completed it renders the **author_delete.pug** view, passing variables for the `title`, `author`, and `author_books`.
 
 > **Note:** If `findById()` returns no results the author is not in the database. In this case there is nothing to delete, so we immediately render the list of all authors.
 >
@@ -46,7 +46,7 @@ The controller gets the id of the `Author` instance to be deleted from the URL p
 >   function(err, results) {
 >     if (err) { return next(err); }
 >     if (results.author==null) { // No results.
->       res.redirect('/catalog/authors');
+>         res.redirect('/catalog/authors');
 >     }
 > ```
 
