@@ -394,7 +394,7 @@ Cache-Control: max-age=31536000, immutable
 
 When you update the library or edit the picture, new content should have a new URL, and caches aren't reused. That is called the “cache busting” pattern.
 
-Use a long `max-age` to make sure that the HTML response itself is not cached. `no-cache` could cause revalidation, and the client will correctly receive a new version of the HTML response and static assets.
+Use a `no-cache` to make sure that the HTML response itself is not cached. `no-cache` could cause revalidation, and the client will correctly receive a new version of the HTML response and static assets.
 
 ```
 # /index.html
