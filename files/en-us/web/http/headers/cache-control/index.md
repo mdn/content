@@ -170,7 +170,7 @@ Cache-Control: private
 
 You should add the `private` directive for user-personalized content — in particular, responses received after login, and sessions managed via cookies.
 
-If you forget to add `private` to a response with personalized content, then that response can be stored in a shared cache and end up being used by multiple users, which can cause personal information to leak.
+If you forget to add `private` to a response with personalized content, then that response can be stored in a shared cache and end up being reused for multiple users, which can cause personal information to leak.
 
 #### `public`
 
