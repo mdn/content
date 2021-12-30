@@ -41,7 +41,7 @@ The **`Cache-Control`** HTTP header field holds _directives_ (instructions) — 
 
 Caching directives follow the validation rules below:
 
-- Case-insensitive — but lowercase is recommended, since some implementations do not recognize uppercase directives.
+- Case-insensitive — but lowercase is recommended, since some implementations do not recognize uppercase directives.
 - Multiple directives are comma-separated.
 - Some directives have an optional argument.
 
@@ -117,7 +117,7 @@ Age: 100
 
 #### `s-maxage`
 
-The `s-maxage` response directive also indicates how long the response is fresh for (similar to `max-age`) — but it is specific to shared caches, and they will ignore `max-age` when it is present.
+The `s-maxage` response directive also indicates how long the response is fresh for (similar to `max-age`) — but it is specific to shared caches, and they will ignore `max-age` when it is present.
 
 ```
 Cache-Control: s-maxage=604800
@@ -222,7 +222,7 @@ The `immutable` response directive indicates that the response will not be updat
 Cache-Control: public, max-age=604800, immutable
 ```
 
-A modern best practice for static resources is to include version/hashes in their URLs, while never modifying the resources — but instead, when necessary, _updating_ the resources with newer versions that have new version-numbers/hashes, so that their URLs are different. That’s called the **cache-busting** pattern.
+A modern best practice for static resources is to include version/hashes in their URLs, while never modifying the resources — but instead, when necessary, _updating_ the resources with newer versions that have new version-numbers/hashes, so that their URLs are different. That’s called the **cache-busting** pattern.
 
 ```
 <script src=https://example.com/react.0.0.0.js></script>
@@ -299,7 +299,7 @@ Many browsers use this directive for **reloading**, as explained below.
 Cache-Control: max-age=0
 ```
 
-`max-age=0` is a workaround for `no-cache`, because many old (HTTP/1.0) cache implementations don't support `no-cache`. Recently browsers are still using `max-age=0` in "reloading" — for backward compatibility — and alternatively using `no-cache` to cause a "force reloading".
+`max-age=0` is a workaround for `no-cache`, because many old (HTTP/1.0) cache implementations don't support `no-cache`. Recently browsers are still using `max-age=0` in "reloading" — for backward compatibility — and alternatively using `no-cache` to cause a "force reloading".
 
 ### `max-stale`
 
@@ -407,7 +407,7 @@ Note: If `index.html` is controlled under Basic Authentication or Digest Authent
 
 For content that’s generated dynamically, or that’s static but updated often, you want a user to always receive the most up-to-date version.
 
-If you don't add a `Cache-Control` header because the response is not intended to be cached, that could cause an unexpected result. Cache storage is allowed to cache it heuristically — so if you have any requirements on caching, you should always indicate them explicitly, in the `Cache-Control` header.
+If you don't add a `Cache-Control` header because the response is not intended to be cached, that could cause an unexpected result. Cache storage is allowed to cache it heuristically — so if you have any requirements on caching, you should always indicate them explicitly, in the `Cache-Control` header.
 
 Adding `no-cache` to the response causes revalidation to the server, so you can serve a fresh response every time — or if the client already has a new one, just respond `304 Not Modified`.
 
@@ -429,7 +429,7 @@ Unfortunately, there are no cache directives for clearing already-stored respons
 
 Imagine that clients/caches store a fresh response for a path, with no request flight to the server. There is nothing a server could do to that path.
 
-Alternatively, `Clear-Site-Data` can clear a browser cache for a site. But be careful: that clears every stored response for a site — and only in browsers, not for a shared cache.
+Alternatively, `Clear-Site-Data` can clear a browser cache for a site. But be careful: that clears every stored response for a site — and only in browsers, not for a shared cache.
 
 ## Specifications
 
