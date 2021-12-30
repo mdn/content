@@ -67,7 +67,7 @@ Ordered lists, as created using {{HTMLElement("ol")}} elements, implicitly have 
 Like other counters this has a default initial value of 0 for upward counters and "number of items" for reversed counters.
 Unlike author-created counters, `list-item` _automatically_ increments or decrements by one for each list element, depending on whether or not the counter is reversed.
 
-This counter can be used to manipulate the default behavior of ordered lists using CSS.
+The `list-item` counter can be used to manipulate the default behavior of ordered lists using CSS.
 For example, you can change the default initial value, or use {{cssxref("counter-increment")}} to change the way in which the list items increment or decrement.
 
 
