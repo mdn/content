@@ -30,7 +30,9 @@ In this article, we'll look at fundamental JavaScript object syntax, and revisit
 
 ## Object basics
 
-An object is a collection of related data and/or functionality (which usually consists of several variables and functions — which are called properties and methods when they are inside objects.) Let's work through an example to understand what they look like.
+An object is a collection of related data and/or functionality.
+These usually consist of several variables and functions (which are called properties and methods when they are inside objects).
+Let's work through an example to understand what they look like.
 
 To begin with, make a local copy of our [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html) file. This contains very little — a {{HTMLElement("script")}} element for us to write our source code into. We'll use this as a basis for exploring basic object syntax. While working with this example you should have your [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools#the_javascript_console) open and ready to type in some commands.
 
