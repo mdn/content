@@ -25,7 +25,7 @@ var serialNumber = USBDevice.vendorId
 
 ### Value
 
-The official usg.org-assigned vendor ID.
+The official usb.org-assigned vendor ID.
 
 ## Specifications
 
