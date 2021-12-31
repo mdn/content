@@ -53,6 +53,15 @@ var aFileParts = ['<a id="a"><b id="b">hey!</b></a>']; // an array consisting of
 var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob
 ```
 
+*Notice: IE10 will error out "InvalidStateError" when constructing with a given {{jsxref("TypedArray")}}, we can use {{domxref("BlobBuilder")}} as an alternative.*
+
+```js
+var typedArray = new Uint8Array();
+var blobBuilder = new MSBlobBuilder();
+blobBuilder.append(typedArray.buffer);
+var oMyBlob = blobBuilder.getBlob();
+```
+
 ## Specifications
 
 {{Specifications}}
