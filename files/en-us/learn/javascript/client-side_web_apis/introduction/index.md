@@ -287,7 +287,7 @@ At this point, you should have a good idea of what APIs are, how they work, and 
 
 ## In this module
 
-- [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
+- **Introduction to web APIs**
 - [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
 - [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - [Third-party APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
