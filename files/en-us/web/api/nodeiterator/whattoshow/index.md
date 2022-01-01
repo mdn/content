@@ -127,7 +127,7 @@ var nodeIterator = document.createNodeIterator(
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
-if( (nodeIterator.whatToShow == NodeFilter.SHOW_ALL) ||
+if( (nodeIterator.whatToShow & NodeFilter.SHOW_ALL) ||
     (nodeIterator.whatToShow & NodeFilter.SHOW_COMMENT ) > 0 ) {
     // nodeIterator will show comments
 }
