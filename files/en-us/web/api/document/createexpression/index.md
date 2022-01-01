@@ -21,6 +21,16 @@ This method compiles an {{DOMxRef("XPathExpression")}} which can then be used fo
 xpathExpr = document.createExpression(xpathText, namespaceURLMapper);
 ```
 
+## Example
+
+```js
+let xpathExpr = document.createExpression('//div');
+let xpathResult = xpathExpr.evaluate(document); // returns a XPathResult object
+let nodeContext = document.getElementsBytagName('nav')[0];
+// Re-using it
+let otherResult = xpathExpr.evaluate(nodeContext); // returns a XPathResult object
+```
+
 ### Parameters
 
 - _xpathText_ is a string which is the XPath expression to be compiled.
