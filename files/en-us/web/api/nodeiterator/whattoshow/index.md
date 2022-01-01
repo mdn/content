@@ -123,12 +123,12 @@ The values that can be combined to form the bitmask are:
 ```js
 var nodeIterator = document.createNodeIterator(
     document.body,
-    NodeFilter.SHOW_ELEMENT + NodeFilter.SHOW_COMMENT + NodeFilter.SHOW_TEXT,
+    ( NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_COMMENT | NodeFilter.SHOW_TEXT ),
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
-if( (nodeIterator.whatToShow == NodeFilter.SHOW_ALL) ||
-    (nodeIterator.whatToShow % (NodeFilter.SHOW_COMMENT*2)) >= NodeFilter.SHOW_COMMENT) {
+if ((nodeIterator.whatToShow & NodeFilter.SHOW_ALL) ||
+    (nodeIterator.whatToShow & NodeFilter.SHOW_COMMENT)) {
     // nodeIterator will show comments
 }
 ```
