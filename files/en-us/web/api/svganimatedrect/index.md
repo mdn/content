@@ -30,7 +30,7 @@ The `SVGAnimatedRect` interface is used for attributes of basic {{ domxref("SVGR
       <td>
         <ul>
           <li>
-            readonly {{ domxref("SVGRect") }} <code>baseVal</code>
+            {{ domxref("SVGRect") }} <code>baseVal</code>
           </li>
           <li>
             readonly {{ domxref("SVGRect") }} <code>animVal</code>
