@@ -1318,9 +1318,9 @@ function validate(input) {
   let validityState_object = input.validity;
   if(validityState_object.valueMissing) {
      input.setCustomValidity('A value is required');
-  } else if (input.rangeUnderflow) {
+  } else if (validityState_object.rangeUnderflow) {
     input.setCustomValidity('Your value is too low');
-  } else if (input.rangeOverflow) {
+  } else if (validityState_object.rangeOverflow) {
     input.setCustomValidity('Your value is too high');
   } else {
     input.setCustomValidity('');
