@@ -44,7 +44,7 @@ There's one last essential concept about functions for us to discuss — return
 
 ## What are return values?
 
-**Return values** are just what they sound like —  the values that a function returns when it has completed. You've already met return values a number of times, although you may not have thought about them explicitly.
+**Return values** are just what they sound like —  the values that a function returns when it has completed. You've already met return values several times, although you may not have thought about them explicitly.
 
 Let's return to a familiar example (from a [previous article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#built-in_browser_functions) in this series):
 
@@ -62,7 +62,7 @@ The [`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/rep
 1.  the substring to find ('cold').
 2.  the string to replace it with ('warm').
 
-When the function completes (finishes running), it returns a value, which is a new string with the replacement made. In the code above, the result of this return value is saved in the variable `newString`.
+When the function completes (run all the lines in it), it returns a value, which is a new string with the replacement made. In the code above, the result of this return value is saved in the variable `newString`.
 
 If you look at the [`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) function MDN reference page, you'll see a section called [return value](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#return_value). It is very useful to know and understand what values are returned by functions, so we try to include this information wherever possible.
 
@@ -70,7 +70,7 @@ Some functions don't return any value. (In these cases, our reference pages lis
 
 Generally, a return value is used where the function is an intermediate step in a calculation of some kind. You want to get to a final result, which involves some values that need to be calculated by a function. After the function calculates the value, it can return the result so it can be stored in a variable; and you can use this variable in the next stage of the calculation.
 
-### Using return values in your own functions
+### Using return values in your functions
 
 To return a value from a custom function, you need to use the [return](/en-US/docs/Web/JavaScript/Reference/Statements/return) keyword. We saw this in action recently in our [random-canvas-circles.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) example. Our `draw()` function draws 100 random circles somewhere on an HTML {{htmlelement("canvas")}}:
 
@@ -79,7 +79,7 @@ function draw() {
   ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -113,17 +113,17 @@ So when you execute the following:
 ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
 ```
 
-If the three `random()` calls returned the values `500`, `200`, and `35`, respectively, the line would actually be run as if it were this:
+If the three `random()` calls returned the values `500`, `200`, and `35`, respectively, the line would be run as if it were this:
 
 ```js
 ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 ```
 
-The function calls on the line are run first, and their return values substituted for the function calls, before the line itself is then executed.
+The function calls on the line are run first, and their return values are substituted for the function calls before the line itself is then executed.
 
 ## Active learning: our own return value function
 
-Let's have a go at writing our own functions featuring return values.
+Let's have a go at writing our functions featuring return values.
 
 1.  First of all, make a local copy of the [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) file from GitHub. This is a simple HTML page containing a text {{htmlelement("input")}} field and a paragraph. There's also a {{htmlelement("script")}} element, in which we have stored a reference to both HTML elements in two variables. This little page will allow you to enter a number into the text box, and display different numbers related to it in the paragraph below.
 2.  Let's add some useful functions to this `<script>` element. Below the two existing lines of [JavaScript](/en-US/docs/Web/JavaScript), add the following function definitions:
@@ -139,7 +139,7 @@ Let's have a go at writing our own functions featuring return values.
 
     function factorial(num) {
       if (num < 0) return undefined;
-      if (num == 0) return 1;
+      if (num === 0) return 1;
       let x = num - 1;
       while (x > 1) {
         num *= x;
@@ -182,8 +182,8 @@ At this point, we'd like you to have a go at writing out a couple of functions o
 
 Some extra function related tips:
 
-- Look at another example of writing _error handling_ into functions. It is generally a good idea to check that any necessary parameters are validated, and that any optional parameters have some kind of default value provided. This way, your program will be less likely to throw errors.
-- Think about the idea of creating a _function library_. As you go further into your programming career, you'll start doing the same kinds of things over and over again. It is a good idea to create your own library of utility functions to do these sorts of things. You can copy them over to new code, or even just apply it to HTML pages wherever you need it.
+- Look at another example of writing _error handling_ into functions. It is generally a good idea to check that any necessary parameters are validated and that any optional parameters have some kind of default value provided. This way, your program will be less likely to throw errors.
+- Think about the idea of creating a _function library_. As you go further into your programming career, you'll start doing the same kinds of things over and over again. It is a good idea to create your library of utility functions to do these sorts of things. You can copy them over to new code, or even just apply it to HTML pages wherever you need it.
 
 ## Test your skills!
 
@@ -193,7 +193,7 @@ You've reached the end of this article, but can you remember the most important 
 
 So there we have it — functions are fun, very useful, and although there's a lot to talk about in regards to their syntax and functionality, they are fairly understandable.
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](/en-US/docs/Learn#contact_us) to ask for help.
+If you didn't understand anything, feel free to read through the article again, or [contact us](/en-US/docs/Learn#contact_us) to ask for help.
 
 ## See also
 
