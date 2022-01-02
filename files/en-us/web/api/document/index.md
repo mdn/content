@@ -69,7 +69,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{domxref("Document.lastElementChild")}} {{readonlyInline}}
   - : Returns the last child element of the current document.
 - {{DOMxRef("Document.links")}}{{ReadOnlyInline}}
-  - : Returns an {{DOMxRef("HTMLCollection")}} of all the hyperlinks in the document.
+  - : Returns an {{DOMxRef("HTMLCollection")}} of the hyperlinks in the document.
 - {{DOMxRef("Document.mozSyntheticDocument")}} {{Non-standard_Inline}}
   - : Returns a {{JSxRef("Boolean")}} that is `true` only if this document is synthetic, such as a standalone image, video, audio file, or the like.
 - {{DOMxRef("Document.pictureInPictureElement")}} {{ReadOnlyInline}}
@@ -83,7 +83,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : Returns the {{DOMxRef("FeaturePolicy")}} interface which provides a simple API for introspecting the feature policies applied to a specific document.
 - {{DOMxRef("Document.scripts")}}{{ReadOnlyInline}}
-  - : Returns an {{DOMxRef("HTMLCollection")}} of all the {{HTMLElement("script")}} elements on the document.
+  - : Returns an {{DOMxRef("HTMLCollection")}} of the {{HTMLElement("script")}} elements in the document.
 - {{DOMxRef("Document.scrollingElement")}}{{ReadOnlyInline}}
   - : Returns a reference to the {{DOMxRef("Element")}} that scrolls the document.
 - {{DOMxRef("Document.styleSheets")}} {{ReadOnlyInline}}
