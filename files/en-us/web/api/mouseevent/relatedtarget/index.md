@@ -27,7 +27,7 @@ That is:
   </thead>
   <tbody>
     <tr>
-      <td>{{Event("mouseenter")}}</td>
+      <td>{{domxref("Element/mouseenter_event", "mouseenter")}}</td>
       <td>
         The {{domxref("EventTarget")}} the pointing device entered to
       </td>
@@ -36,7 +36,7 @@ That is:
       </td>
     </tr>
     <tr>
-      <td>{{Event("mouseleave")}}</td>
+      <td>{{domxref("Element/mouseleave_event", "mouseleave")}}</td>
       <td>
         The {{domxref("EventTarget")}} the pointing device exited from
       </td>
@@ -45,7 +45,7 @@ That is:
       </td>
     </tr>
     <tr>
-      <td>{{Event("mouseout")}}</td>
+      <td>{{domxref("Element/mouseout_event", "mouseout")}}</td>
       <td>
         The {{domxref("EventTarget")}} the pointing device exited from
       </td>
@@ -54,7 +54,7 @@ That is:
       </td>
     </tr>
     <tr>
-      <td>{{Event("mouseover")}}</td>
+      <td>{{domxref("Element/mouseover_event", "mouseover")}}</td>
       <td>
         The {{domxref("EventTarget")}} the pointing device entered to
       </td>
