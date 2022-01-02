@@ -69,8 +69,6 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
   - : The Y coordinate of the mouse pointer in global (screen) coordinates.
 - {{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}
   - : Returns `true` if the <kbd>shift</kbd> key was down when the mouse event was fired.
-- {{domxref("MouseEvent.which")}} {{non-standard_inline}} {{readonlyinline}}
-  - : The button being pressed when the mouse event was fired.
 - {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{deprecated_inline}} {{readonlyinline}}
   - : The amount of pressure applied to a touch or tablet device when generating the event; this value ranges between `0.0` (minimum pressure) and `1.0` (maximum pressure).
     Instead of using this deprecated (and non-standard) property, you should use {{domxref("PointerEvent")}} and look at its {{domxref("PointerEvent.pressure", "pressure")}} property.
