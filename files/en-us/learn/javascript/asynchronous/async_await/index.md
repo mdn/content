@@ -240,15 +240,13 @@ async function myFetch() {
 }
 
 myFetch()
-  .then((blob) => {
+  .then(blob => {
     let objectURL = URL.createObjectURL(blob);
     let image = document.createElement('img');
     image.src = objectURL;
     document.body.appendChild(image);
   })
-  .catch((e) =>
-    console.log(e)
-  );
+  .catch(e => console.log(e));
 ```
 
 This is because the `.catch()` block will catch errors occurring in both the async function call and the promise chain. If you used the `try`/`catch` block here, you might still get unhandled errors in the `myFetch()` function when it's called.
@@ -306,9 +304,7 @@ async function displayContent() {
 }
 
 displayContent()
-  .catch((e) =>
-    console.log(e)
-  );
+  .catch(e => console.log(e));
 ```
 
 You'll see that the `fetchAndDecode()` function has been converted easily into an async function with just a few changes. See the `Promise.all()` line:
@@ -330,8 +326,8 @@ Async/await makes your code look synchronous, and in a way it makes it behave mo
 ```js
 async function makeResult(items) {
   let newArr = [];
-  for(let i=0; i < items.length; i++) {
-    newArr.push('word_'+i);
+  for(let i = 0; i < items.length; i++) {
+    newArr.push('word_' + i);
   }
   return newArr;
 }
@@ -368,11 +364,12 @@ Each one ends by recording a start time, seeing how long the `timeTest()` promis
 
 ```js
 let startTime = Date.now();
-timeTest().then(() => {
-  let finishTime = Date.now();
-  let timeTaken = finishTime - startTime;
-  alert("Time taken in milliseconds: " + timeTaken);
-})
+timeTest()
+  .then(() => {
+    let finishTime = Date.now();
+    let timeTaken = finishTime - startTime;
+    alert("Time taken in milliseconds: " + timeTaken);
+  })
 ```
 
 It is the `timeTest()` function that differs in each case.
