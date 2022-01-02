@@ -14,11 +14,11 @@ The `aria-required` attribute indicates that user input is required on the eleme
 
 ## Description
 
-When a semantic HTML {{htmlelement("input")}}, {{htmlelement("select")}}, or {{htmlelement("textarea")}} must have a value, it should have the {{ htmlattrxref("required", "input") }} attribute applied to it. The HTML `required` attribute disables sumbitting the form unless the required form controls have valid values while ensuring those navigating with the aid of assistive technologies understand which semantic form controls need valid content. 
+When a semantic HTML {{htmlelement("input")}}, {{htmlelement("select")}}, or {{htmlelement("textarea")}} must have a value, it should have the {{ htmlattrxref("required", "input") }} attribute applied to it. The HTML `required` attribute disables submitting the form unless the required form controls have valid values, while ensuring those navigating with the aid of assistive technologies understand which semantic form controls need valid content. 
 
-When form controls are created using non-semantic elements, such as a {{HTMLElement('div')}} with a [role](/en-US/docs/Web/Accessibility/ARIA/Roles/) of [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role), the `aria-required` attribute should be included, with a value of `true`, to indicate to assistive technologies that user input is required on the element for the form to be submittable. The `aria-required` can be used with HTML form elements; it is not limited to elements that have an ARIA role assigned. 
+When form controls are created using non-semantic elements, such as a {{HTMLElement('div')}} with a [role](/en-US/docs/Web/Accessibility/ARIA/Roles/) of [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role), the `aria-required` attribute should be included, with a value of `true`, to indicate to assistive technologies that user input is required on the element for the form to be submittable. The `aria-required` attribute can be used with HTML form elements; it is not limited to elements that have an ARIA role assigned. 
 
-Similar to the HTML `required` attribute set on semantic HTML form controls, the `aria-required` attribute explicitly conveys to assistive technologies that the element is required before a form may be submitted. The `required` attribute on a semantic HTML form control will prevent the form control from being submitted if no value is present providing native error messaging in some browsers if a required value is invalid when the user attempts to submit the form. The `aria-required` attribute, like all ARIA states and properties, has no impact on element functionality. Functionality and behavior must be added in with JavaScript. 
+Similar to the HTML `required` attribute set on semantic HTML form controls, the `aria-required` attribute explicitly conveys to assistive technologies that the element is required before a form may be submitted. The `required` attribute on a semantic HTML form control will prevent the form control from being submitted if no value is present — providing native error messaging in some browsers if a required value is invalid when the user attempts to submit the form. The `aria-required` attribute, like all ARIA states and properties, has no impact on element functionality. Functionality and behavior must be added in with JavaScript. 
 
 > **Note:** ARIA only modifies the accessibility tree, modifying how assistive technology presents content to users. ARIA does not change anything about an element's function or behavior. When not using semantic HTML elements for their intended purpose and default functionality, you must use JavaScript to manage behavior, focus, and ARIA states.
 
@@ -30,7 +30,7 @@ If a form contains both required and optional form elements, the required elemen
 
 ## Examples
 
-The attribute should be added to the form control role. If the user needs to fill in an email address [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role), include `aria-required="true"` on the textbox.
+The attribute should be added to the form-control role. If the user needs to fill in an email address [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role), include `aria-required="true"` on the textbox.
 
 ```html
 <div id="tbLabel">Email Address (required)</>
