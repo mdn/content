@@ -63,8 +63,9 @@ The following example shows the use of the `evaluate()` method.
 ### JavaScript
 
 ```js
+var xpath = "//div";
 var evaluator = new XPathEvaluator();
-var expression = evaluator.createExpression("//div");
+var expression = evaluator.createExpression(xpath);
 var result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
 document.querySelector("output").textContent = result.snapshotLength;
 ```
