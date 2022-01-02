@@ -49,13 +49,13 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.documentURI")}}{{ReadOnlyInline}}
   - : Returns the document location as a string.
 - {{DOMxRef("Document.embeds")}}{{ReadOnlyInline}}
-  - : Returns an {{DOMxRef("HTMLCollection")}} of the embedded {{HTMLElement('embed')}} elements within the current document.
+  - : Returns an {{DOMxRef("HTMLCollection")}} of the embedded {{HTMLElement('embed')}} elements in the document.
 - {{domxref("Document.firstElementChild")}} {{readonlyInline}}
   - : Returns the first child element of the current document.
 - {{DOMxRef("Document.fonts")}}
   - : Returns the {{DOMxRef("FontFaceSet")}} interface of the current document.
 - {{DOMxRef("Document.forms")}}{{ReadOnlyInline}}
-  - : Returns an {{DOMxRef("HTMLCollection")}} of the {{HTMLElement("form")}} elements within the current document.
+  - : Returns an {{DOMxRef("HTMLCollection")}} of the {{HTMLElement("form")}} elements in the document.
 - {{DOMxRef("Document.fullscreenElement")}} {{ReadOnlyInline}}
   - : The element that's currently in full screen mode for this document.
 - {{DOMxRef("Document.head")}}{{ReadOnlyInline}}
@@ -63,7 +63,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.hidden")}}{{ReadOnlyInline}}
   - : Returns a Boolean value indicating if the page is considered hidden or not.
 - {{DOMxRef("Document.images")}}{{ReadOnlyInline}}
-  - : Returns an {{DOMxRef("HTMLCollection")}} of the images in the current document.
+  - : Returns an {{DOMxRef("HTMLCollection")}} of the images in the document.
 - {{DOMxRef("Document.implementation")}}{{ReadOnlyInline}}
   - : Returns the DOM implementation associated with the current document.
 - {{domxref("Document.lastElementChild")}} {{readonlyInline}}
