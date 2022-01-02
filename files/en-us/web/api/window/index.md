@@ -336,7 +336,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when the orientation is changed (For mobile devices)
 - {{domxref("Window.ondeviceorientationabsolute")}} {{non-standard_inline}}
   - : An event handler property for any device orientation changes.
-- `Window.ondeviceproximity` {{deprecated_inline}}
+- {{domxref("Window.ondeviceproximity")}} {{deprecated_inline}}
   - : An event handler property for device proximity event (see {{domxref("DeviceProximityEvent")}})
 - {{domxref("Window.ongamepadconnected")}}
   - : Represents an event handler that will run when a gamepad is connected (when the {{event('gamepadconnected')}} event fires).
@@ -344,7 +344,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).
 - {{domxref("WindowEventHandlers.onrejectionhandled")}}
   - : An event handler for handled {{jsxref("Promise")}} rejection events.
-- `Window.onuserproximity` {{deprecated_inline}}
+- {{domxref("Window.onuserproximity")}} {{deprecated_inline}}
   - : An event handler property for user proximity events (see {{domxref("UserProximityEvent")}}).
 - {{domxref("Window.onvrdisplayconnect")}} {{deprecated_inline}}
   - : Represents an event handler that will run when a compatible VR device has been connected to the computer (when the {{event("vrdisplayconnected")}} event fires).
