@@ -34,7 +34,7 @@ The values that can be combined to form the bitmask are:
     <tr>
       <td><code>NodeFilter.SHOW_ALL</code></td>
       <td>
-        <code>-1</code> (that is the max value of <code>unsigned long</code>)
+        <code>4294967295</code> (that is the max value of <code>unsigned long</code>)
       </td>
       <td>Shows all nodes.</td>
     </tr>
