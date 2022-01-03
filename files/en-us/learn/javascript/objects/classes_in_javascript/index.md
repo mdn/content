@@ -108,15 +108,15 @@ Given our `Person` class above, let's define the `Professor` subclass.
 ```js
 class Professor extends Person {
 
-  subject;
+  teaches;
 
-  constructor(name, subject) {
+  constructor(name, teaches) {
     super(name);
-    this.subject = subject;
+    this.teaches = teaches;
   }
 
   introduceSelf() {
-    console.log(`My name is ${this.name}, and I will be your ${this.subject} professor.`);
+    console.log(`My name is ${this.name}, and I will be your ${this.teaches} professor.`);
   }
 
   grade(paper) {
@@ -129,9 +129,9 @@ class Professor extends Person {
 
 We use the {{jsxref("Classes/extends", "extends")}} keyword to say that this class inherits from another class.
 
-The `Professor` class adds a new property `subject`, so we declare that.
+The `Professor` class adds a new property `teaches`, so we declare that.
 
-Since we want to set the subject when a new `Professor` is created, we define a constructor,  which takes the `name` and `subject` as arguments. The first thing this constructor does is call the superclass constructor using {{jsxref("Operators/super", "super()")}}, passing up the `name` parameter. The superclass constructor takes care of setting `name`. After that the `Professor` constructor sets the `subject` property.
+Since we want to set `teaches` when a new `Professor` is created, we define a constructor,  which takes the `name` and `teaches` as arguments. The first thing this constructor does is call the superclass constructor using {{jsxref("Operators/super", "super()")}}, passing up the `name` parameter. The superclass constructor takes care of setting `name`. After that the `Professor` constructor sets the `teaches` property.
 
 > **Note:** If a subclass has any of its own initialization to do, it **must** first call the superclass constructor using `super()`, passing up any parameters that the superclass constructor is expecting.
 

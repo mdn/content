@@ -52,7 +52,7 @@ So in pseudocode a `Professor` class could be written like this:
 class Professor
     properties
         name
-        subject
+        teaches
     methods
         grade(paper)
         introduceSelf()
@@ -60,7 +60,7 @@ class Professor
 
 This defines a `Professor` class with:
 
-* two data properties: `name` and `subject`
+* two data properties: `name` and `teaches`
 * two methods: `grade()` to grade a paper, and `introduceSelf()` to introduce themselves.
 
 On its own, a class doesn't do anything. It's a kind of template for creating concrete objects of that type. Each concrete professor we create is called an **instance** of the `Professor` class. The process of creating an instance is performed by a special function called a **constructor**. We pass the constructor values for any internal state that we want to initialize in the new instance.
@@ -71,15 +71,15 @@ Generally, the constructor is written out as part of the class definition, and i
 class Professor
     properties
         name
-        subject
+        teaches
     constructor
-        Professor(name, subject)
+        Professor(name, teaches)
     methods
         grade(paper)
         introduceSelf()
 ```
 
-This constructor takes two parameters so we can initialize the `name` and `subject` properties when we create a new concrete professor.
+This constructor takes two parameters so we can initialize the `name` and `teaches` properties when we create a new concrete professor.
 
 Now we have a constructor we can create some professors. Programming languages often use the keyword `new` to signal that a constructor is being called.
 
@@ -87,10 +87,10 @@ Now we have a constructor we can create some professors. Programming languages o
 walsh = new Professor('Walsh', 'Psychology')
 lillian = new Professor('Lillian', 'Poetry')
 
-walsh.subject  // 'Psychology'
+walsh.teaches  // 'Psychology'
 walsh.introduceSelf()  // 'My name is Professor Walsh, and I will be your Psychology professor'
 
-lillian.subject  // 'Poetry'
+lillian.teaches  // 'Poetry'
 lillian.introduceSelf()  // 'My name is Professor Lillian, and I will be your Poetry professor'
 ```
 
@@ -128,9 +128,9 @@ class Person
 
 class Professor : extends Person
     properties
-        subject
+        teaches
     constructor
-        Professor(name, subject)
+        Professor(name, teaches)
     methods
         grade(paper)
         introduceSelf()
