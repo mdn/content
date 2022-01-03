@@ -10,7 +10,7 @@ tags:
 ---
 {{CSSRef}}
 
-**Specificity** is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied. Specificity is based on the matching rules which are composed of different sorts of [CSS selectors](/en-US/docs/Web/CSS/Reference#Selectors).
+**Specificity** is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied. Specificity is based on the matching rules which are composed of different sorts of [CSS selectors](/en-US/docs/Web/CSS/Reference#selectors).
 
 ## How is specificity calculated?
 
