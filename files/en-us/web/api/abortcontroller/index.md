@@ -58,7 +58,8 @@ function fetchVideo() {
   }).catch(function(e) {
    reports.textContent = 'Download error: ' + e.message;
   })
-}```
+}
+```
 
 > **Note:** When `abort()` is called, the `fetch()` promise rejects with a `DOMException` named `AbortError`.
 
