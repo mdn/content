@@ -1,5 +1,5 @@
 ---
-title: SVG API 
+title: SVG API
 slug: Web/API/SVG_API
 tags:
   - API
@@ -25,12 +25,8 @@ The SVG API is a set of interfaces that have been categorized into the following
 ### SVG element interfaces
 
 - {{DOMxRef("SVGAElement")}}
-- {{DOMxRef("SVGAltGlyphElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGAltGlyphDefElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGAltGlyphItemElement")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGAnimationElement")}}
 - {{DOMxRef("SVGAnimateElement")}}
-- {{DOMxRef("SVGAnimateColorElement")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGAnimateMotionElement")}}
 - {{DOMxRef("SVGAnimateTransformElement")}}
 - {{DOMxRef("SVGCircleElement")}}
@@ -68,29 +64,19 @@ The SVG API is a set of interfaces that have been categorized into the following
 - {{DOMxRef("SVGFETurbulenceElement")}}
 - {{DOMxRef("SVGFilterElement")}}
 - {{DOMxRef("SVGFilterPrimitiveStandardAttributes")}}
-- {{DOMxRef("SVGFontElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGFontFaceElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGFontFaceFormatElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGFontFaceNameElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGFontFaceSrcElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGFontFaceUriElement")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGForeignObjectElement")}}
 - {{DOMxRef("SVGGElement")}}
 - {{DOMxRef("SVGGeometryElement")}}
-- {{DOMxRef("SVGGlyphElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGGlyphRefElement")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGGradientElement")}}
 - {{DOMxRef("SVGGraphicsElement")}}
 - {{DOMxRef("SVGHatchElement")}} {{Experimental_Inline}}
 - {{DOMxRef("SVGHatchpathElement")}} {{Experimental_Inline}}
-- {{DOMxRef("SVGHKernElement")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGImageElement")}}
 - {{DOMxRef("SVGLinearGradientElement")}}
 - {{DOMxRef("SVGLineElement")}}
 - {{DOMxRef("SVGMarkerElement")}} {{Experimental_Inline}}
 - {{DOMxRef("SVGMaskElement")}}
 - {{DOMxRef("SVGMetadataElement")}}
-- {{DOMxRef("SVGMissingGlyphElement")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGMPathElement")}}
 - {{DOMxRef("SVGPathElement")}}
 - {{DOMxRef("SVGPatternElement")}}
@@ -110,11 +96,9 @@ The SVG API is a set of interfaces that have been categorized into the following
 - {{DOMxRef("SVGTextPathElement")}}
 - {{DOMxRef("SVGTextPositioningElement")}}
 - {{DOMxRef("SVGTitleElement")}}
-- {{DOMxRef("SVGTRefElement")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGTSpanElement")}}
 - {{DOMxRef("SVGUseElement")}}
 - {{DOMxRef("SVGViewElement")}}
-- {{DOMxRef("SVGVKernElement")}} {{Deprecated_Inline}}
 
 ### SVG data type interfaces
 
@@ -123,42 +107,15 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 #### Static type
 
 - {{DOMxRef("SVGAngle")}}
-- {{DOMxRef("SVGColor")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGICCColor")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGElementInstance")}}
 - {{DOMxRef("SVGElementInstanceList")}}
 - {{DOMxRef("SVGLength")}}
 - {{DOMxRef("SVGLengthList")}}
-- {{DOMxRef("SVGMatrix")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGNameList")}}
 - {{DOMxRef("SVGNumber")}}
 - {{DOMxRef("SVGNumberList")}}
 - {{DOMxRef("SVGPaint")}}
-- {{DOMxRef("SVGPathSeg")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegClosePath")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegMovetoAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegMovetoRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegLinetoAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegLinetoRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegCurvetoCubicAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegCurvetoCubicRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegCurvetoQuadraticAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegCurvetoQuadraticRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegArcAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegArcRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegLinetoHorizontalAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegLinetoHorizontalRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegLinetoVerticalAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegLinetoVerticalRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegCurvetoCubicSmoothAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegCurvetoCubicSmoothRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegCurvetoQuadraticSmoothAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegCurvetoQuadraticSmoothRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegList")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPoint")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPointList")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGPreserveAspectRatio")}}
-- {{DOMxRef("SVGRect")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGStringList")}}
 - {{DOMxRef("SVGTransform")}}
 - {{DOMxRef("SVGTransformList")}}
@@ -173,7 +130,6 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 - {{DOMxRef("SVGAnimatedLengthList")}}
 - {{DOMxRef("SVGAnimatedNumber")}}
 - {{DOMxRef("SVGAnimatedNumberList")}}
-- {{DOMxRef("SVGAnimatedPathData")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGAnimatedPoints")}}
 - {{DOMxRef("SVGAnimatedPreserveAspectRatio")}}
 - {{DOMxRef("SVGAnimatedRect")}}
@@ -189,17 +145,10 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 
 - {{DOMxRef("GetSVGDocument")}}
 - {{DOMxRef("ShadowAnimation")}}
-- {{DOMxRef("SVGColorProfileRule")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGCSSRule")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGDocument")}}
-- {{DOMxRef("SVGException")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGFitToViewBox")}}
-- {{DOMxRef("SVGLocatable")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGRenderingIntent")}} {{Deprecated_Inline}}
 - {{DOMxRef("SVGUnitTypes")}}
 - {{DOMxRef("SVGUseElementShadowRoot")}}
-- {{DOMxRef("SVGViewSpec")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGZoomEvent")}} {{Deprecated_Inline}}
 
 ## Specifications
 
