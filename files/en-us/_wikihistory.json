@@ -1861,14 +1861,6 @@
       "sushant1221"
     ]
   },
-  "Glossary/Client_hints": {
-    "modified": "2019-07-01T18:32:07.538Z",
-    "contributors": [
-      "Malvoz",
-      "jswisher",
-      "estelle"
-    ]
-  },
   "Glossary/Closure": {
     "modified": "2019-03-23T23:10:57.372Z",
     "contributors": [
@@ -93312,33 +93304,6 @@
       "SteveLee"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques/ARIA_Technique_Template": {
-    "modified": "2019-03-24T00:16:39.839Z",
-    "contributors": [
-      "julianosilvaa",
-      "Sheppy",
-      "anastasia",
-      "hhillen"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role": {
-    "modified": "2019-08-04T13:01:30.861Z",
-    "contributors": [
-      "vamsikrishnareddybevara",
-      "codelemur",
-      "duduindo",
-      "yuheiy",
-      "sounakpal",
-      "dkocho4",
-      "latpaw",
-      "jameshopkins",
-      "SueSmith",
-      "Sheppy",
-      "anastasia",
-      "Ken Saundders",
-      "hhillen"
-    ]
-  },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role": {
     "modified": "2020-02-11T20:26:27.807Z",
     "contributors": [
@@ -123436,6 +123401,14 @@
       "anthony-geoghegan",
       "teoli",
       "kohei.yoshino"
+    ]
+  },
+  "Web/HTTP/Client_hints": {
+    "modified": "2019-07-01T18:32:07.538Z",
+    "contributors": [
+      "Malvoz",
+      "jswisher",
+      "estelle"
     ]
   },
   "Web/HTTP/Compression": {

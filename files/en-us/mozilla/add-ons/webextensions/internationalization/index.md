@@ -392,21 +392,11 @@ padding-left: 1.5em;
 
 ## Testing out your extension
 
-Starting in Firefox 45, you can [install extensions temporarily from disk](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox). Do this, and then try testing out our [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension. Go to one of your favorite websites and click a link to see if a notification appears reporting the URL of the clicked link.
+To test your extension's localization, you use [Firefox](https://www.mozilla.org/en-US/firefox/new/) or [Firefox Beta](https://www.mozilla.org/en-US/firefox/channel/desktop/), the Firefox builds in which you can install language packs. 
 
-Next, change Firefox's locale to one supported in the extension that you want to test.
+Then, for each locale supported in the extension you want to test, follow the instructions to [Use Firefox in another language](https://support.mozilla.org/en-US/kb/use-firefox-another-language) to switch the Firefox UI language. (If you know your way around Settings, under Language, use Set Alternatives.)
 
-1.  Open "about:config" in Firefox, and search for the `intl.locale.requested` preference (bear in mind that before Firefox 59, this pref is called `general.useragent.locale`).
-2.  If the preference exists, double-click it (or press Return/Enter) to select it, enter the language code for the locale you want to test, then click "OK" (or press Return/Enter). For example in our example extension, "en" (English), "de" (German), "nl" (Dutch), and "ja" (Japanese) are supported. You can also set the value to an empty string (`""`), which will cause the browser to use the OS default locale.
-3.  If the `intl.locale.requested` preference does not exist, right-click the list of preferences (or activate the context menu using the keyboard), and choose "New" followed by "String". Enter `intl.locale.requested` for the preference name and, "de", or "nl", etc. for the preference value, as described in step 2 above.
-4.  Search for `intl.locale.matchOS` and, if the preference exists and has the value `true`, double-click it  so that it is set to `false`.
-5.  Restart your browser to complete the change.
+Once Firefox is running in your test language, [install the extension temporarily](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox). After installing your extension, in `about:debugging`, if you've set up your extension correctly, you see the extension listed with its icon, name, and description in the chosen language. You can also see the localized extension details in `about:addons`. Now exercise the extension's features to ensure the translations you need are in place. 
 
-> **Note:** This works to change the browser's locale, even if you haven't got the [language pack](https://addons.mozilla.org/en-US/firefox/language-tools/) installed for that language. You'll just get the browser UI in your default language if this is the case.
+If you'd like to try this process out, you can use the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension. Set up Firefox to display one of the languages supported in this example (German, Dutch, or Japanese). Load the extension and go to a website. Click a link to see the translated version of the notification reporting the link's URL.
 
-> **Note:** To change the result of `getUILanguage` the language pack is required, since it reflects the browser UI language and not the language used for extension messages.
-
-Load the extension temporarily from disk again, then test your new locale:
-
-- Visit "about:addons" again — you should now see the extension listed, with its icon, plus name and description in the chosen language.
-- Test your extension again. In our example, you'd go to another website and click a link, to see if the notification now appears in the chosen language.

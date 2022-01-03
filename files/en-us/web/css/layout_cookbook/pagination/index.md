@@ -63,11 +63,11 @@ The various layout methods have different browser support. See the charts below 
 
 _Include the compat data for key properties you used, as in the example below which includes align-items._
 
-#### justify-content
+### justify-content
 
 {{Compat("css.properties.justify-content")}}
 
-#### column-gap in Flex layout
+### column-gap in Flex layout
 
 {{Compat("css.properties.column-gap.flex_context")}}
 

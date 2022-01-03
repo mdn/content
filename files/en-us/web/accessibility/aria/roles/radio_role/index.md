@@ -106,7 +106,7 @@ If elements providing additional information about either the radio group or eac
     - : Move focus to the next radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the last button, focus moves to the first button.
 
 
-  - <kbd>Left Arrow/kbd> and <kbd>Up Arrow</kbd>
+  - <kbd>Left Arrow</kbd> and <kbd>Up Arrow</kbd>
     - : Move focus to the previous radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the first button, focus moves to the last button.
 
 ### Radios in a toolbar

@@ -73,10 +73,10 @@ What you will need to do is remove any margins applied to the item, and any widt
 
 The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-#### grid-template-areas
+### grid-template-areas
 
 {{Compat("css.properties.grid-template-areas")}}
 
-#### float
+### float
 
 {{Compat("css.properties.float")}}

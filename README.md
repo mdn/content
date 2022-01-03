@@ -715,27 +715,27 @@ with the [content mozilla directory](https://github.com/mdn/content/tree/main/fi
 Both locations represent the same directory structure, but the
 `index.html` file appears in the latter, therefore the page is not archived.
 
-### Making a change that depends on a macro update
+### Making a change that depends on external content
 
-KumaScript macros are still used on MDN pages, even in the new platform.
-These are the function names surrounded by handlebars-style double curly
-braces that you'll see in the source code on occasion, for example
-`{{domxref}}` Eventually we have to replace them with something else,
-but they are here for now. They live in <https://github.com/mdn/yari/tree/main/kumascript/macros>.
+Some MDN content is created from external data files or repositories using KS macros.
+Generally you should create a PR to first update the external content before
+updating the associated MDN pages.
 
-Sometimes you'll want to make a change to the content that relies on a
-macro change. Take [https://github.com/mdn/content/pull/187](https://github.com/mdn/content/pull/187).
-Florian wanted to add documentation for a new WebGL extension to MDN, but
-this change relied on the new feature's spec being added to
-<https://github.com/mdn/yari/blob/main/kumascript/macros/SpecData.json>.
-If not, the specification table on the new page would not render properly
-because the data it relies on would not be there.
+Relevant external content includes (non-exhaustively):
 
-In such situations:
-
-1. Make the required PR to <https://github.com/mdn/yari/tree/main/kumascript/macros>
-   first, and get that merged.
-2. Add the content to this repo.
+- [GroupData.json](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json):
+Data definition of
+[Sidebars](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars)
+used by `{{APIRef}}` macro.
+- [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples):
+Source code repo for interactive examples inserted using the
+`{{EmbedInteractiveExample}}` macro.
+- [https://github.com/mdn/learning-area](https://github.com/mdn/learning-area):
+Source code repo for examples referenced in the
+[Learning Area](https://developer.mozilla.org/en-US/docs/Learn)
+- [JSON structured data](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/JSON_Structured_Data)
+provides more information about JSON data used to define inheritance diagrams
+(`{{InheritanceDiagram}}` macro), specification tables, etc.
 
 ## Frequently asked questions (FAQ)
 

@@ -102,3 +102,4 @@ const transferred = structuredClone(
 ## See also
 
 - [Structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
+- [Structured clone polyfill](https://github.com/ungap/structured-clone)

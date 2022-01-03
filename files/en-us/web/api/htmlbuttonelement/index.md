@@ -26,8 +26,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLButtonElement.disabled")}}
   - : Is a boolean value indicating whether or not the control is disabled, meaning that it does not accept any clicks.
 - {{domxref("HTMLButtonElement.form")}} {{readonlyInline}}
-  - : Is a {{domxref("HTMLFormElement")}} reflecting the form that this button is associated with. If the button is a descendant of a form element, then this attribute is the ID of that form element.
-    If the button is not a descendant of a form element, then the attribute can be the ID of any form element in the same document it is related to, or the `null` value if none matches.
+  - : Is an {{domxref("HTMLFormElement")}} reflecting the form that this button is associated with. If the button is a descendant of a form element, then this attribute is a reference to that form's associated `HTMLFormElement`.
+    If the button is not a descendant of a form element, then the attribute can be a reference to any `HTMLFormElement` element in the same document it is related to, or the `null` value if none matches.
 - {{domxref("HTMLButtonElement.formAction")}}
   - : Is a {{domxref("DOMString")}} reflecting the URI of a resource that processes information submitted by the button. If specified, this attribute overrides the {{htmlattrxref("action", "form")}} attribute of the {{HTMLElement("form")}} element that owns this element.
 - {{domxref("HTMLButtonElement.formEnctype")}}

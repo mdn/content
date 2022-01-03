@@ -33,21 +33,21 @@ var creating = browser.tabs.create(
 
   - : `object`. Properties to give the new tab. To learn more about these properties, see the {{WebExtAPIRef("tabs.Tab")}} documentation.
 
-    - `active`{{optional_inline}}
+    - `active` {{optional_inline}}
       - : `boolean`. Whether the tab should become the active tab in the window. If `false`, it has no effect. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). Defaults to `true`.
     - `cookieStoreId` {{optional_inline}}
       - : `string`. Use this to create a tab whose cookie store ID is `cookieStoreId`. This option is only available if the extension has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
     - `discarded` {{optional_inline}}
       - : `boolean`. Whether the tab is created and made visible in the tab bar without any content loaded into memory, a state known as discarded. The tab’s content is loaded when the tab is activated.
-    - `index`{{optional_inline}}
+    - `index` {{optional_inline}}
       - : `integer`. The position the tab should take in the window. The provided value will be clamped to between zero and the number of tabs in the window.
-    - `openerTabId`{{optional_inline}}
+    - `openerTabId` {{optional_inline}}
       - : `integer`. The ID of the tab that opened this tab. If specified, the opener tab must be in the same window as the newly created tab.
-    - `openInReaderMode`{{optional_inline}}
+    - `openInReaderMode` {{optional_inline}}
       - : `boolean`. If `true`, open this tab in [Reader Mode](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode). Defaults to `false`.
-    - `pinned`{{optional_inline}}
+    - `pinned` {{optional_inline}}
       - : `boolean`. Whether the tab should be pinned. Defaults to `false`.
-    - `selected`{{optional_inline}}
+    - `selected` {{optional_inline}}
 
       - : `boolean`. Whether the tab should become the selected tab in the window. Defaults to `true`.
 
@@ -55,7 +55,7 @@ var creating = browser.tabs.create(
 
     - `title` {{optional_inline}}
       - : `string`. The title of the tab. Allowed only if the tab is created with `discarded` set to `true`.
-    - `url`{{optional_inline}}
+    - `url` {{optional_inline}}
 
       - : `string`. The URL to navigate the tab to initially. Defaults to the New Tab Page.
 
@@ -72,7 +72,7 @@ var creating = browser.tabs.create(
 
         To load a page that's packaged with your extension, specify an absolute URL starting at the extension's manifest.json file. For example: '/path/to/my-page.html'. If you omit the leading '/', the URL is treated as a relative URL, and different browsers may construct different absolute URLs.
 
-    - `windowId`{{optional_inline}}
+    - `windowId` {{optional_inline}}
       - : `integer`. The window to create the new tab in. Defaults to the current window.
 
 ### Return value

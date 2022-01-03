@@ -297,7 +297,7 @@ Now let's look at what we have to do in the first place, to actually set up a da
     ```js
     // Open our database; it is created if it doesn't already exist
     // (see onupgradeneeded below)
-    let request = window.indexedDB.open('notes_db', 1);
+    let request = indexedDB.open('notes_db', 1);
     ```
 
     This line creates a `request` to open version `1` of a database called `notes_db`. If this doesn't already exist, it will be created for you by subsequent code. You will see this request pattern used very often throughout IndexedDB. Database operations take time. You don't want to hang the browser while you wait for the results, so database operations are {{Glossary("asynchronous")}}, meaning that instead of happening immediately, they will happen at some point in the future, and you get notified when they're done.

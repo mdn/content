@@ -264,7 +264,7 @@ Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(Componen
 
 ## Appendix
 
-#### Implementing a User Defined Namespace Resolver
+### Implementing a User Defined Namespace Resolver
 
 This is an example for illustration only. This function will need to take namespace prefixes from the `xpathExpression` and return the URI that corresponds to that prefix. For example, the expression:
 
@@ -290,7 +290,7 @@ Our call to `document.evaluate` would then looks like:
 document.evaluate( '//xhtml:td/mathml:math', document, nsResolver, XPathResult.ANY_TYPE, null );
 ```
 
-#### Implementing a default namespace for XML documents
+### Implementing a default namespace for XML documents
 
 As noted in the [Implementing a Default Namespace Resolver](#implementing_a_default_namespace_resolver) previously, the default resolver does not handle the default namespace for XML documents. For example with this document:
 
@@ -318,11 +318,11 @@ Note that a more complex resolver will be required if the document uses multiple
 
 An approach which might work better (and allow namespaces not to be known ahead of time) is described in the next section.
 
-#### Using XPath functions to reference elements with a default namespace
+### Using XPath functions to reference elements with a default namespace
 
 Another approach to match default elements in a non-null namespace (and one which works well for dynamic XPath expressions where the namespaces might not be known), involves referring to a particular element using a form such as `[namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_myid']`. This circumvents the problem of an XPath query not being able to detect the default namespace on a regularly labeled element.
 
-#### Getting specifically namespaced elements and attributes regardless of prefix
+### Getting specifically namespaced elements and attributes regardless of prefix
 
 If one wishes to provide flexibility in namespaces (as they are intended) by not necessarily requiring a particular prefix to be used when finding a namespaced element or attribute, one must use special techniques.
 

@@ -202,7 +202,7 @@ let x, y;
 Consider these three examples:
 
 ```js
-y = x = g()
+y = x = f()
 y = [ f(), x = g() ]
 x[f()] = g()
 ```
