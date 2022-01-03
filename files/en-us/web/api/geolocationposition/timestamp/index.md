@@ -16,7 +16,7 @@ The **`GeolocationPosition.timestamp`** read-only property returns a {{domxref("
 
 ## Value
 
-A {{domxref("EpochTimeStamp")}} object instance indicating the time that the position was acquired.
+An {{domxref("EpochTimeStamp")}} object instance indicating the time that the position was acquired.
 This is a value in in milliseconds (excluding leap seconds), relative to 01 January, 1970 00:00:00 UTC.
 
 ## Specifications
