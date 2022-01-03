@@ -14,7 +14,7 @@ The **`parseFromString()`** method of the {{domxref("DOMParser")}} interface par
 ## Syntax
 
 ```js
-const doc = domparser.parseFromString(string, mimeType)
+const doc = DOMParser.parseFromString(string, mimeType)
 ```
 
 ### Parameters
