@@ -7,9 +7,11 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
 
-In this article we'll give an overview of the basic concepts of Object-oriented programming (OOP). We'll describe three main concepts: **classes and instances**, **inheritance**, and **encapsulation**.
+Object-oriented programming (OOP) is a programming paradigm fundamental to many programming languages, including Java and C++. In this article we'll give an overview of the basic concepts of OOP. We'll describe three main concepts: **classes and instances**, **inheritance**, and **encapsulation**. For now we'll describe these concepts without reference to JavaScript in particular, so all the examples given are given in {{Glossary("Pseudocode", "pseudocode")}}.
 
-> **Note:** To be precise, the features described here are features of **class-based** or "classical" OOP, as implemented in languages like Java and C++.
+> **Note:** To be precise, the features described here are features of a particular style of OOP called **class-based** or "classical" OOP. When people talk about OOP, this is generally the type they mean.
+
+After that we'll look at how in JavaScript constructors and the prototype chain relate to these OOP concepts, and how they differ. Then in the next article we'll look at some additional features of JavaScript that make it easier to implement object-oriented programs.
 
 <table>
   <tbody>
@@ -37,8 +39,6 @@ In this article we'll give an overview of the basic concepts of Object-oriented 
 </table>
 
 Object-oriented programming is about modeling a system as a collection of objects, which each represent some particular aspect of the system. Objects contain both functions (or methods) and data. An object provides a public interface to other code that wants to use it, but it maintains its own private internal state: this means that other parts of the system don't have to care about what is going on inside the object.
-
-> **Note:** This article describes the concepts of OOP, independent of any particular programming language. To emphasise this all the examples given are given in {{Glossary("Pseudocode", "pseudocode")}}.
 
 ## Classes and instances
 
