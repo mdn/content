@@ -9,6 +9,7 @@ tags:
   - Primary Expressions
 browser-compat: javascript.operators.function
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`function`** keyword can be used to define a function inside an expression.
@@ -50,16 +51,18 @@ See also the chapter about {{jsxref("Functions", "functions", "", 1)}} for more 
 
 ### Function expression hoisting
 
-Function expressions in JavaScript are not hoisted, unlike {{jsxref("Statements/function", "function declarations", "#Function_declaration_hoisting", 1)}}.
-You can't use function expressions before you create them:
+When function expressions in javascript are hoisted , they are hoisted the same way just like a variable which means they are intially instialized as undefined ( intial initialization occur during memory creation phase of execution context) and when you try to call that function before it's initialization, you basically calling an undefined variable and you get a TypeError: (variable name) is not a function.
+
+<!-- Function expressions in JavaScript are not hoisted, unlike {{jsxref("Statements/function", "function declarations", "#Function_declaration_hoisting", 1)}}.
+You can't use function expressions before you create them: -->
 
 ```js
-console.log(notHoisted) // undefined
-//  even though the variable name is hoisted, the definition isn't. so it's undefined.
-notHoisted(); // TypeError: notHoisted is not a function
+console.log(fun); // undefined
+//  even though the variable name is hoisted, it is not initalized with the function definition. so it's undefined.
+fun(); // TypeError: notHoisted is not a function
 
-var notHoisted = function() {
-   console.log('bar');
+var fun = function () {
+  console.log("bar");
 };
 ```
 
@@ -71,16 +74,16 @@ This also avoids using the non-standard {{jsxref("Functions/arguments/callee", "
 
 ```js
 let math = {
-  'factit': function factorial(n) {
-    console.log(n)
+  factit: function factorial(n) {
+    console.log(n);
     if (n <= 1) {
       return 1;
     }
     return n * factorial(n - 1);
-  }
+  },
 };
 
-math.factit(3) //3;2;1;
+math.factit(3); //3;2;1;
 ```
 
 The variable to which the function expression is assigned will have a `name` property.
@@ -90,14 +93,14 @@ If function name is present, it will be the function name (explicit name).
 This also applies to {{jsxref("Functions/Arrow_functions", "arrow functions")}} (arrows don't have a name so you can only give the variable an implicit name).
 
 ```js
-var foo = function() {}
-foo.name // "foo"
+var foo = function () {};
+foo.name; // "foo"
 
-var foo2 = foo
-foo2.name // "foo"
+var foo2 = foo;
+foo2.name; // "foo"
 
-var bar = function baz() {}
-bar.name // "baz"
+var bar = function baz() {};
+bar.name; // "baz"
 
 console.log(foo === foo2); // true
 console.log(typeof baz); // undefined
@@ -112,8 +115,8 @@ The following example defines an unnamed function and assigns it to `x`.
 The function returns the square of its argument:
 
 ```js
-var x = function(y) {
-   return y * y;
+var x = function (y) {
+  return y * y;
 };
 ```
 
@@ -122,9 +125,9 @@ var x = function(y) {
 More commonly it is used as a {{Glossary("Callback_function", "callback")}}:
 
 ```js
-button.addEventListener('click', function(event) {
-    console.log('button is clicked!')
-})
+button.addEventListener("click", function (event) {
+  console.log("button is clicked!");
+});
 ```
 
 ### Using an Immediately Invoked Function Expression (IIFE)
@@ -132,15 +135,15 @@ button.addEventListener('click', function(event) {
 An anonymous function is created and called:
 
 ```js
-(function() {
-    console.log('Code runs!')
+(function () {
+  console.log("Code runs!");
 })();
 
 // or
 
-!function() {
-  console.log('Code runs!')
-}();
+!(function () {
+  console.log("Code runs!");
+})();
 ```
 
 ## Specifications
