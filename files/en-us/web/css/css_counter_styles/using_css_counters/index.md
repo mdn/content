@@ -25,13 +25,13 @@ You can define your own named counters, and you can also manipulate the `list-it
 To use a CSS counter, it must first be initialized to a value with the {{cssxref("counter-reset")}} property.
 The property can also be used to change the counter value to any specific number.
 
-Below we initialise a counter named `section` to the default value (0).
+Below we initialize a counter named `section` to the default value (0).
 
 ```css
 counter-reset: section;
 ```
 
-You can also initialise multiple counters, optionally specifying an initial value for each.
+You can also initialize multiple counters, optionally specifying an initial value for each.
 Below we initialize the `section` and `topic` counters to the default value, and the `page` counter to 3.
 
 ```css
@@ -78,7 +78,7 @@ For example, here each nested level restarts from one:
 ```
 
 The {{cssxref("counters()", "counters()")}} function is used when the count for nested levels must include the count from parent levels.
-For example, you might use this to layout sections as shown:
+For example, you might use this to lay out sections as shown:
 
 ```
 1 One
@@ -111,7 +111,7 @@ Reversed counters are created using the `reversed()` function notation when nami
 Reversed counters have a default initial value equal to the number of elements (unlike normal counters, which have a default value of 0).
 This makes it easy to implement a counter that counts from the number of elements down to one.
 
-For example, to create a reversed counter named `section` with a default initial value you would use the following syntax:
+For example, to create a reversed counter named `section` with a default initial value, you would use the following syntax:
 
 ```css
 counter-reset: reversed(section); 
@@ -128,7 +128,7 @@ The counter value is decreased by specifying a negative value for {{cssxref("cou
 
 Ordered lists, as created using {{HTMLElement("ol")}} elements, implicitly have a counter named `list-item`.
 
-Like other counters this has a default initial value of 0 for upward counters and "number of items" for reversed counters.
+Like other counters, this has a default initial value of 0 for upward counters and "number of items" for reversed counters.
 Unlike author-created counters, `list-item` _automatically_ increments or decrements by one for each list element, depending on whether or not the counter is reversed.
 
 The `list-item` counter can be used to manipulate the default behavior of ordered lists using CSS.

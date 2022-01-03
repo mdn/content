@@ -85,9 +85,9 @@ The "implicit" counter named `list-item` can be used to control the numbering fo
 
 ## Examples
 
-The following examples show how reset the counters, but not how they are incremented, decremented, and displayed.
+The following examples show how to reset the counters, but not how they are incremented, decremented, and displayed.
 
-For more complete examples see [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters).
+For more-complete examples see [Using CSS Counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters).
 
 ### Resetting named counters
 
