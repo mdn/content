@@ -7,9 +7,9 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "/en-US/docs/Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
-In [the last article](Learn/JavaScript/Objects/Object-oriented_programming) we introduced some basic concepts of object-oriented programming (OOP), and discussed an example where we used OOP principles to model professors and students in a school.
+In [the last article](/en-US/Learn/JavaScript/Objects/Object-oriented_programming) we introduced some basic concepts of object-oriented programming (OOP), and discussed an example where we used OOP principles to model professors and students in a school.
 
-We also talked about how it's possible to use [prototypes](Learn/JavaScript/Objects/Object_prototypes) to implement a model like this, and that JavaScript also provides features that map more closely to classical OOP concepts.
+We also talked about how it's possible to use [prototypes](/en-US/Learn/JavaScript/Objects/Object_prototypes) and [constructors](/en-US/docs/Learn/JavaScript/Objects/Basics#introducing_constructors) to implement a model like this, and that JavaScript also provides features that map more closely to classical OOP concepts.
 
 In this article we'll go through these features. It's worth keeping in mind that the features described here are not a new way of combining objects: under the hood, they still use prototypes. They're just a way to make it easier to set up a prototype chain.
 
@@ -67,7 +67,7 @@ The `name;` declaration is optional: you could omit it, and the line `this.name 
 
 You could also initialize the property to a default value when you declare it, with a line like `name = '';`.
 
-The constructor is identified using the {{jsxref("Classes/constructor", "constructor")}} keyword. Just like a standalone constructor, it will:
+The constructor is defined using the {{jsxref("Classes/constructor", "constructor")}} keyword. Just like a [constructor outside a class definition](/en-US/docs/Learn/JavaScript/Objects/Basics#introducing_constructors), it will:
 * create a new object
 * bind `this` to the new object, so you can refer to `this` in your constructor code
 * run the code in the constructor
@@ -81,7 +81,7 @@ const giles = new Person('Giles');
 giles.introduceSelf(); // Hi! I'm Giles
 ```
 
-Note that the name of the constructor is the name of the class.
+Note that we call the constructor using the name of the class, `Person` in this example.
 
 ### Omitting constructors
 
