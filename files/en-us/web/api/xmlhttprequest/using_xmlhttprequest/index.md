@@ -464,7 +464,7 @@ var AJAXSubmit = (function () {
       oField = oTarget.elements[nItem];
       if (!oField.hasAttribute("name")) { continue; }
       sFieldType = oField.nodeName.toUpperCase() === "INPUT" && oField.hasAttribute("type") ?
-oField.getAttribute("type").toUpperCase() : "TEXT";
+      oField.getAttribute("type").toUpperCase() : "TEXT";
       if (sFieldType === "FILE" && oField.files.length > 0) {
         if (this.technique === 3) {
           /* enctype is multipart/form-data */
@@ -706,7 +706,7 @@ function AJAXSubmit (oFormElement) {
       oField = oFormElement.elements[nItem];
       if (!oField.hasAttribute("name")) { continue; }
       sFieldType = oField.nodeName.toUpperCase() === "INPUT" && oField.hasAttribute("type") ?
-oField.getAttribute("type").toUpperCase() : "TEXT";
+      oField.getAttribute("type").toUpperCase() : "TEXT";
       if (sFieldType === "FILE") {
         for (nFile = 0; nFile < oField.files.length;
             sSearch += "&" + escape(oField.name) + "=" + escape(oField.files[nFile++].name));
