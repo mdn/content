@@ -11,12 +11,12 @@ tags:
 ---
 {{DefaultAPISidebar("SVG")}}
 
-SVG provides elements for circles, rectangles, and simple and complex curves. The elements' attribute values specify how these must be drawn. The **SVG API** is the subset of the **DOM** connecting these SVG elements and their attribute values to scripts or programming languages by representing them in memory. The SVG API thus provides methods that allow programmatic access to the SVG Elements and their attribute values.
+SVG provides elements for circles, rectangles, and simple and complex curves. The elements' attribute values specify how these must be drawn. The **SVG API** is the subset of the **DOM** connecting these SVG elements and their attribute values to scripts or programming languages by representing them in memory. The SVG API thus provides methods that allow programmatic access to the SVG elements and their attribute values.
 
-The SVG API is a set of interfaces that have been categorized into the following broad categories:-
-1. [The Element interfaces](#svg_element_interfaces) provide access to the properties of SVG elements and methods to manipulate them.
-2. [The Static data type](#svg_data_type_interfaces) Interfaces provide access to element attribute values and methods to manipulate them.
-3. For attributes that can be animated the [Animated data type interfaces](#svg_data_type_interfaces) provide read only access to the current animated value of an attribute.
+The SVG API is a set of interfaces that have been categorized into the following broad categories:
+1. [The element interfaces](#svg_element_interfaces) provide access to the properties of SVG elements and methods to manipulate them.
+2. [The static data type](#svg_data_type_interfaces) interfaces provide access to element attribute values and methods to manipulate them.
+3. For attributes that can be animated, the [animated data type interfaces](#svg_data_type_interfaces) provide read only access to the current animated value of an attribute.
 4. [The Synchronized Multimedia Integration Language (SMIL) interfaces](#smil-related_interfaces)
 5. [Others](#other_svg_interfaces)
 
