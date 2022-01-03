@@ -14,12 +14,15 @@ browser-compat: api.WindowControlsOverlay.visible
 
 The **`visible`** property of a {{domxref("WindowControlsOverlay")}} object returns a {{Glossary("Boolean")}} that indicates whether the window controls overlay is visible or not.
 
-The window controls overlay will not be visible if the Progressive Web App does not use the Window Controls Overlay feature at all, or if the user has opted-out of the feature.
+The window controls overlay is not be visible if:
+
+* The Web App Manifest's [`display_override`](/en-US/docs/Web/Manifest/display_override) member is not set to `window-controls-overlay`.
+* Or, if the user has opted-out of the feature.
 
 ## Syntax
 
 ```js
-var isOverlayVisible = navigator.windowControlsOverlay.visible;
+const isOverlayVisible = navigator.windowControlsOverlay.visible;
 ```
 
 ## Examples

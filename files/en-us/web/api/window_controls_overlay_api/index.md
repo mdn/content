@@ -11,21 +11,21 @@ browser-compat: api.WindowControlsOverlay
 ---
 {{DefaultAPISidebar("Window Controls Overlay API")}}{{SeeCompatTable}}
 
-The Window Controls Overlay API gives Progressive Web Apps installed on desktop Operating Systems the ability to hide the default window title bar and display their own content
+The Window Controls Overlay API gives Progressive Web Apps installed on desktop operating systems the ability to hide the default window title bar and display their own content
 over the full surface area of the app window, turning the control buttons (maximize, minimize, and close) into an overlay.
 
 ## Opting-in to the feature
 
-Before being able to use the feature, the following conditions need to be true:
+Before using this feature, the following conditions must be true:
 
-* The Progressive Web App needs to use the `window-controls-overlay` display-mode in the [`display_override`](/en-US/docs/Web/Manifest/display_override) web app manifest member.
-* The Progressive Web App must be installed on a desktop Operating System.
+* The Web App Manifest's [`display_override`](/en-US/docs/Web/Manifest/display_override) member must be set to `window-controls-overlay`.
+* The Progressive Web App must be installed on a desktop operating system.
 
 ## Main concepts
 
-Progressive Web Apps installed on desktop devices are displayed in standalone app windows, just like native apps. Here is what an application window looks like:
+Progressive Web Apps installed on desktop devices can be displayed in standalone app windows, just like native apps. Here is what an application window looks like:
 
-![Illustration of what a PWA installed on desktop normally looks like, with window control buttons, a title bar, and web content below that](desktop-pwa-window.png)
+![Illustration of a PWA installed on desktop, with window control buttons, a title bar, and web content below that](desktop-pwa-window.png)
 
 As seen above, the app window is made of two main areas:
 
@@ -36,7 +36,7 @@ The title bar area contains the system-critical maximize, minimize, and close bu
 
 With the Window Controls Overlay feature, Progressive Web Apps can display their web content over the whole app window surface area. Because the window control buttons and user-agent-specific PWA buttons must remain visible, they get turned into an overlay displayed on top of the web content.
 
-![Illustration of what a PWA installed on desktop looks like with the Window Controls Overlay feature, with window control buttons, no title bar, and web content spanning the whole window](desktop-pwa-window-wco.png)
+![Illustration of a PWA installed on desktop with the Window Controls Overlay feature, with window control buttons, no title bar, and web content spanning the whole window](desktop-pwa-window-wco.png)
 
 The part of the title bar that normally contains the application name is hidden, and the area that it normally occupies becomes available via the Window Controls Overlay API.
 
@@ -49,13 +49,11 @@ Progressive Web Apps can position their web content in the are that the title ba
 ## Interfaces
 
 - {{domxref("WindowControlsOverlay")}}
-  - : Provides information about the visibility and geometry of the title bar area and an event to know whenever it changes.
+  - : Provides information about the visibility and geometry of the title bar and an event to know whenever it changes.
 
 ## Specifications
 
-| Specification                         | Status                             | Comment             |
-| ------------------------------------- | ---------------------------------- | ------------------- |
-| {{SpecName("WindowControlsOverlay")}} | {{Spec2("WindowControlsOverlay")}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

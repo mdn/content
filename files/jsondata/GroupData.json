@@ -2194,7 +2194,7 @@
         "WindowControlsOverlay"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.windowControlsOverlay"],
       "events": []
     },
     "XDomain": {

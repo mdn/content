@@ -13,33 +13,26 @@ browser-compat: api.WindowControlsOverlay.geometrychange_event
 
 The `geometrychange` event is fired when the position, size, or visibility of a desktop Progressive Web App's title bar area changes.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/WindowControlsOverlay/ongeometrychange"
-            >ongeometrychange</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
 
-The `geometrychange` event has the following properties:
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('geometrychange', (event) => { });
+geometrychange = (event) => { });
+```
+
+## Event type
+
+A {{domxref("GeometryChangeEvent")}}. Inherits from {{domxref("Event")}}.
+{{InheritanceDiagram(500, 70, 50, "GeometryChangeEvent")}}
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
 - `titlebarAreaRect`
-  - : A {{domxref("DOMRect")}} representing the position and size of the title bar area.
+  - : A {{domxref("DOMRect")}} representing the position and size of the title bar.
 - `visible`
   - : A {{Glossary("Boolean")}} that indicates whether the window controls overlay is visible or not.
 

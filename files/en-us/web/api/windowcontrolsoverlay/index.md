@@ -20,15 +20,17 @@ of the title bar area in desktop Progressive Web Apps, and an event to know when
 - {{domxref("WindowControlsOverlay.visible")}} {{readonlyInline}}
   - : A {{Glossary("Boolean")}} that indicates whether the window controls overlay is visible or not.
 
-### Event handlers
-
-- {{domxref("WindowControlsOverlay.onGeometryChange")}}
-  - : A handler for the {{domxref("WindowControlsOverlay/geometrychange_event", "geometrychange")}} event. This event is sent when the geometry of the title bar area changes.
-
 ## Methods
 
 - {{domxref("WindowControlsOverlay.getTitlebarAreaRect()")}}
-  - : Returns the size and position of the title bar area.
+  - : Returns the size and position of the title bar.
+
+## Events
+
+Listen to these events using {{domxref('EventTarget.addEventListener()')}} or by assigning an event listener to the relevant `oneventname` property of this interface.
+
+- [`geometrychange`](/en-US/docs/Web/API/WindowControlsOverlay/geometrychange_event)
+  - : Fired when the geometry of the title bar area changes.
 
 ## Examples
 
