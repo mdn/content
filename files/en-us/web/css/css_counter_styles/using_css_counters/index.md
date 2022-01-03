@@ -22,22 +22,87 @@ You can define your own named counters, and you can also manipulate the `list-it
 
 ### Manipulating a counter's value
 
-To use a CSS counter, it must first be initialized to a value with the {{cssxref("counter-reset")}} property (By default `0` for counters, and "number of elements" for reversed counters).
+To use a CSS counter, it must first be initialized to a value with the {{cssxref("counter-reset")}} property.
 The property can also be used to change the counter value to any specific number.
 
-Once initialized, a counter's value can be increased or decreased with {{cssxref("counter-increment")}}.
+Below we initialise a counter named `section` to the default value (0).
+
+```css
+counter-reset: section;
+```
+
+You can also initialise multiple counters, optionally specifying an initial value for each.
+Below we initialize the `section` and `topic` counters to the default value, and the `page` counter to 3.
+
+```css
+counter-reset: section page 3 topic;
+```
+
+Once initialized, a counter's value can be increased or decreased using {{cssxref("counter-increment")}}.
+For example, the following declaration would increment the `section` counter by one on every `h3` tag.
+
+```css
+h3::before {
+  counter-increment: section; /* Increment the value of section counter by 1 */
+}
+```
+You can specify the value to increment or decrement the counter after the counter name, using a positive or negative number.
+
 The counter's name must not be `none`, `inherit`, or `initial`; otherwise the declaration is ignored.
 
 ### Displaying a counter
 
 The value of a counter can be displayed using either the {{cssxref("counter()", "counter()")}} or {{cssxref("counters()", "counters()")}} function in a {{cssxref("content")}} property.
 
-The {{cssxref("counter()")}} function has two forms: 'counter(_name_)' or 'counter(_name_, _style_)'.
-The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element.
-The counter is rendered in the specified style (`decimal` by default).
+The {{cssxref("counter()")}} function is used when the numbering of nesting levels does not include the context of parent levels.
+For example, here each nested level restarts from one:
 
-The {{cssxref("counters()")}} function also has two forms: 'counters(_name_, _string_)' or 'counters(_name_, _string_, _style_)'.
-The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the specified style (`decimal` by default).
+```
+1 One
+  1 Nested one
+  2 Nested two
+2 Two 
+  1 Nested one
+  2 Nested two
+  3 Nested three
+3 Three
+```
+
+The {{cssxref("counter()")}} function has two forms: `counter(<counter-name>)` and `counter(<counter-name>, <counter-style>)`.
+The generated text is the value of the innermost counter of the given name in scope at the pseudo-element.
+
+The counter is rendered in the specified style (`decimal` by default).
+You can use any of the {{cssxref("list-style-type")}} values or your own [custom styles](/en-US/docs/Web/CSS/CSS_Counter_Styles).
+For example, the following declaration would number each element in lower case roman numerals (i, ii, iii, iv, and so on).
+
+```css
+h3::before {
+  counter-increment: section;                  /* Increment the value of section counter by 1 */
+  content: counter(section, lower-roman) ": ";   /* Display counter value in lower caseroman numerals
+}
+```
+
+The {{cssxref("counters()", "counters()")}} function must be used used when the count for nested levels must include the count from parent levels.
+For example, you might use this to layout sections as shown:
+
+```
+1 One
+  1.1 Nested one
+  2.1 Nested two
+2 Two 
+  1.1 Nested one
+  2.1 Nested two
+  3.1 Nested three
+3 Three
+```
+
+The {{cssxref("counters()")}} function also has two forms: `counters(<counter-name>, <separator>)` and  `counters(<counter-name>, <separator>, <counter-style>)`.
+The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string (`<separator>`).
+The counters are rendered in the specified style (`decimal` by default).
+As for `counter()`, you can use any of the {{cssxref("list-style-type")}} values or your own [custom styles](/en-US/docs/Web/CSS/CSS_Counter_Styles).
+
+Examples showing the use of `counter()` and `counter()` are given below in the [basic example](#basic_example) and [Example of a nested counter](#example_of_a_nested_counter), respectively.
+
 
 ### Reversed counters
 
