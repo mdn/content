@@ -695,7 +695,8 @@ For instance: `avg(...numbers)`
 JavaScript lets you create anonymous functions — that is, functions without names. In practice, anonymous functions are typically used as arguments to other functions or are made callable by immediately assigning them to a variable that can be used to invoke the function:
 
 ```js
-var avg = function() {//Notice there's no function name before parentheses
+// Note that there's no function name before the parentheses
+var avg = function() {
   var sum = 0;
   for (var i = 0, j = arguments.length; i < j; i++) {
     sum += arguments[i];
