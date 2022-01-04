@@ -169,7 +169,7 @@ Here we create an object `personPrototype`, which has a `greet()` method. We the
 
 ### Using a constructor
 
-In JavaScript, all functions have a property named `prototype`. When you call a function as a constructor, the prototype of the object the constructor creates is set to the constructor's `prototype`.
+In JavaScript, all functions have a property named `prototype`. When you call a function as a constructor, this property is set as the prototype of the newly constructed object (by convention, in the property named `__proto__`).
 
 So if we set the `prototype` of a constructor, we can ensure that all objects created with that constructor are given that prototype:
 
