@@ -100,7 +100,7 @@ rotate_btn.addEventListener('click', () => {
   const oppositeOrientation = screen.orientation.type.startsWith("portrait") ? "landscape" : "portrait";
   screen.orientation.lock(oppositeOrientation)
     .then( () => {
-      log.textContent = `Lock to ${oppositeOrientation}\n`
+      log.textContent = `Locked to ${oppositeOrientation}\n`
       }
     )
     .catch ( error => {
