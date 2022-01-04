@@ -23,7 +23,7 @@ The aim of this skill test is to assess whether you've understood our [JavaScrip
 In this task you are provided with an object literal, and your tasks are to
 
 - Store the value of the `name` property inside the `catName` variable, using bracket notation.
-- Run the `greeting()` method using dot notation (it will log the greeting to the browser DevTools' console).
+- Run the `greeting()` method using dot notation (it will log the greeting to the browser's console).
 - Update the `color` property value to `black`.
 
 Try updating the live code below to recreate the finished example:
@@ -63,7 +63,7 @@ Try updating the live code below to recreate the finished example:
 
 ## Object basics 3
 
-In this task, we want you to return to the `cat` object literal from Task 1. We want you to rewrite the `greeting()` method so that it logs `"Hello, said Bertie the Cymric."` to the browser DevTools' console, but in a way that will work across _any_ cat object of the same structure, regardless of its name or breed.
+In this task, we want you to return to the `cat` object literal from Task 1. We want you to rewrite the `greeting()` method so that it logs `"Hello, said Bertie the Cymric."` to the browser's console, but in a way that will work across _any_ cat object of the same structure, regardless of its name or breed.
 
 When you are done, write your own object called `cat2`, which has the same structure, exactly the same `greeting()` method, but a different `name`, `breed`, and `color`.
 

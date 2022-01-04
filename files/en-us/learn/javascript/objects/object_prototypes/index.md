@@ -238,12 +238,6 @@ You can see how in JavaScript, if `Professor` and `Student` objects can have `Pe
 
 In the next article we'll discuss inheritance along with the other main features of object-oriented programming languages, and see how JavaScript supports them.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Object-oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript).
-
-Note that this set of tests relies on some of the knowledge taught in the next article, so you might want to read that first before you try them.
-
 ## Summary
 
 This article has covered JavaScript object prototypes, including how prototype object chains allow objects to inherit features from one another, the prototype property and how it can be used to add methods to constructors, and other related topics.
