@@ -28,7 +28,7 @@ The rest of this page summarizes these and other incompatibilities.
 
 ## JavaScript APIs
 
-### \*chrome.\** and *browser.\*\* namespace
+### _chrome.\*_ and _browser.\*_ namespace
 
 - **In Firefox:** The equivalent APIs are accessed using the `browser` namespace.
 
@@ -78,7 +78,7 @@ The rest of this page summarizes these and other incompatibilities.
   );
   ```
 
-### Firefox supports both the *chrome* and *browser* namespaces
+### Firefox supports both the *chrome* and *browser* namespaces
 
 As a porting aid, the Firefox implementation of WebExtensions supports `chrome`, using callbacks, as well as `browser`, using promises. This means that many Chrome extensions will just work in Firefox without any changes.
 
@@ -202,7 +202,7 @@ When calling `tabs.remove()`:
 
 #### Content script lifecycle during navigation
 
-- **In Firefox:** Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets `window.prop1 = "prop"`  and the user then navigates away and returns to the page `window.prop1` is undefined. This issue is tracked in {{bug(1525400)}}.
+- **In Firefox:** Content scripts remain injected in a web page after the user has navigated away, however, window object properties are destroyed. For example, if a content script sets `window.prop1 = "prop"` and the user then navigates away and returns to the page `window.prop1` is undefined. This issue is tracked in {{bug(1525400)}}.
 
   To mimic the behavior of Chrome, listen for the [pageshow](/en-US/docs/Web/API/Window/pageshow_event) and [pagehide](/en-US/docs/Web/API/Window/pagehide_event) events. Then simulate the injection or destruction of the content script.
 

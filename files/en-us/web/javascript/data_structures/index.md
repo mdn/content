@@ -219,7 +219,7 @@ Associates a key with a value, and has the following attributes:
 
 Associates a key with one of two accessor functions (`get` and `set`) to retrieve or store a value.
 
-> **Note:** It’s important to recognize it’s accessor _property_ — not accessor _method_. We can give a JavaScipt object class-like accessors by using a function as a value — but that doesn't make the object a class.
+> **Note:** It’s important to recognize it’s accessor _property_ — not accessor _method_. We can give a JavaScript object class-like accessors by using a function as a value — but that doesn't make the object a class.
 
 An accessor property has the following attributes:
 
@@ -292,6 +292,7 @@ Please read the [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/
 
 ## See also
 
+- [JavaScript Data Structures and Algorithms by Oleksii Trekhleb](https://github.com/trekhleb/javascript-algorithms)
 - [Nicholas Zakas collection of common data structure and common algorithms in JavaScript.](https://github.com/nzakas/computer-science-in-javascript/)
 - [Search Tre(i)es implemented in JavaScript](https://github.com/monmohan/DataStructures_In_Javascript)
 - [Data Types and Values in the ECMAScript specification](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)

@@ -137,11 +137,13 @@ This section will cover some of the essential HTML elements you'll use for marki
 Heading elements allow you to specify that certain parts of your content are headings — or subheadings. In the same way that a book has the main title, chapter titles, and subtitles, an HTML document can too. HTML contains 6 heading levels, {{htmlelement("h1")}}–{{htmlelement("h6")}}, although you'll commonly only use 3 to 4 at most:
 
 ```html
+<!-- 4 heading levels: -->
 <h1>My main title</h1>
 <h2>My top level heading</h2>
 <h3>My subheading</h3>
 <h4>My sub-subheading</h4>
 ```
+> **Note:** Anything in HTML between `<!--` and `-->` is a **HTML comment**. The browser ignores comments as it renders the code. In other words, they are not visible on the page - just in the code. HTML comments are a way for you to write helpful notes about your code or logic.
 
 Now try adding a suitable title to your HTML page just above your {{htmlelement("img")}} element.
 
