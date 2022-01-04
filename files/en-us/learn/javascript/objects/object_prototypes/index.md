@@ -194,7 +194,8 @@ Here we create:
 
 We then set the `Person` function's `prototype` property to point to `personPrototype`.
 
-The last line (`Person.prototype.constructor = Person;`) is needed because the prototype has a `constructor` property that points to the constructor function that was used to create the object. Since we have replaced the `prototype` property, we need to set `prototype.constructor` back to its original value.
+The last line (`Person.prototype.constructor = Person;`) sets the prototype's `constructor` property to the function used to create `Person` objects.
+This is required because after setting `Person.prototype = personPrototype;` the property points to the constructor for the `personPrototype`, which is `Object` rather than `Person` (because `personPrototype` was constructed as an object literal).
 
 After this code, objects created using `Person()` will get `personPrototype` as their prototype.
 
