@@ -5,7 +5,7 @@ tags:
   - JavaScript
   - Learn
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "/en-US/docs/Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
 In [the last article](/en-US/Learn/JavaScript/Objects/Object-oriented_programming) we introduced some basic concepts of object-oriented programming (OOP), and discussed an example where we used OOP principles to model professors and students in a school.
 
@@ -219,7 +219,7 @@ You've reached the end of this article, but can you remember the most important 
 
 In this article we've gone through the main tools available in JavaScript for writing object-oriented programs. We haven't covered everything here, but this should be enough to get you started. Our [article on Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) is a good place to learn more.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "/en-US/docs/Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
 ## In this module
 

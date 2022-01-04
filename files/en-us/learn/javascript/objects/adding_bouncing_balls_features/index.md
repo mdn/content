@@ -211,9 +211,9 @@ If you would like your work assessed, or are stuck and want to ask for help:
 ## In this module
 
 - [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)
 - [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/en-US/docs/Learn/JavaScript/Objects/Inheritance)
+- [Object-oriented programming concepts](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)
+- [Classes in JavaScript](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
 - [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)
 - [Object building practice](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
+- **Adding features to our bouncing balls demo**
