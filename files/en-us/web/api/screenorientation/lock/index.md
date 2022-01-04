@@ -71,9 +71,12 @@ The promise may be rejected with the following exceptions:
 ## Example
 
 ```html
+<div id="example_container">
+<button id="fullscreen_button">Fullscreen</button>
 <button id="lock_button">Lock</button>
 <button id="unlock_button">Unlock</button>
 <textarea id="log" rows="5" cols="100"></textarea>
+</div>
 ```
 
 ```js
@@ -89,21 +92,26 @@ rotate_btn.addEventListener('click', () => {
       }
     )
     .catch ( failureval => {
-      log.textContent = `This fiailed`;
+      log.textContent = 'This failed';
       log.textContent = failureval;
     }
 
     );
 } );
 
-
 const unlock_btn = document.querySelector('#unlock_button');
 
 unlock_btn.addEventListener('click', () => { 
-  log.textContent+=`Unlock pressed \n`;
+  log.textContent+='Unlock pressed \n';
   screen.orientation.unlock();
 } );
 
+const fullscreen_btn = document.querySelector('#fullscreen_button');
+
+fullscreen_btn.addEventListener('click', () => { 
+  log.textContent+='Fullscreen button pressed \n';
+  document.querySelector("#example_container").requestFullscreen();
+} );
 
 let orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
 
