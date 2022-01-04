@@ -15,6 +15,9 @@ browser-compat: api.ScreenOrientation.lock
 
 The **`lock()`** property of the {{domxref("ScreenOrientation")}} interface locks the orientation of the containing document to the specified orientation.
 
+Typically orientation locking is only enabled on mobile devices, and when the browser context is full screen.
+If locking is supported, then it must work for all the parameter values listed below.
+
 ## Syntax
 
 ```js
@@ -55,7 +58,7 @@ screen.orientation.lock(orientation)
 
 ### Return value
 
-A {{jsxref("Promise")}}.
+A {{jsxref("Promise")}} that resolves after locking succeeds.
 
 ### Exceptions
 
@@ -65,66 +68,65 @@ The promise may be rejected with the following exceptions:
   - : The user agent does not support locking the screen orientation.
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : The user agent does not meet the pre-lock conditions to perform an orientation change, or the document has sandboxed the orientation lock browsing context.
+  - : The user-agent's pre-lock conditions are not met.
+    For example, a browser may require that the top-level browsing context's `Document` is full screen.
+    The promise may also be rejected with this error if the document has the sandboxed orientation lock browsing context flag set.
 
+- `TypeError`
+  - : The `orientation` argument was not supplied.
 
 ## Example
+
+This example shows how to lock the screen to the opposite orientation of the current one.
+Note that this example will only work on mobile devices, and other devices that support orientation changes.
 
 ```html
 <div id="example_container">
 <button id="fullscreen_button">Fullscreen</button>
 <button id="lock_button">Lock</button>
 <button id="unlock_button">Unlock</button>
-<textarea id="log" rows="5" cols="100"></textarea>
+<textarea id="log" rows="7" cols="85"></textarea>
 </div>
 ```
 
 ```js
 const log = document.getElementById("log");
 
+// Lock button: Lock the screen to the other orientation (rotated by 90 degrees) 
 const rotate_btn = document.querySelector('#lock_button');
 rotate_btn.addEventListener('click', () => { 
   log.textContent+=`Lock pressed \n`;
-  
-  screen.orientation.lock('portrait-secondary')
+
+  const oppositeOrientation = screen.orientation.type.startsWith("portrait") ? "landscape" : "portrait";
+  screen.orientation.lock(oppositeOrientation)
     .then( () => {
-      log.textContent = `Lock to portrait-secondary`
+      log.textContent = `Lock to ${oppositeOrientation}\n`
       }
     )
-    .catch ( failureval => {
-      log.textContent = 'This failed';
-      log.textContent = failureval;
-    }
+    .catch ( error => {
+      log.textContent += `${error}\n`;
+    });
+});
 
-    );
-} );
-
+// Unlock button: Unlock the screen orientation (if locked)
 const unlock_btn = document.querySelector('#unlock_button');
-
 unlock_btn.addEventListener('click', () => { 
   log.textContent+='Unlock pressed \n';
   screen.orientation.unlock();
 } );
 
+// Full screen button: Set the example to full-screen.
 const fullscreen_btn = document.querySelector('#fullscreen_button');
-
 fullscreen_btn.addEventListener('click', () => { 
-  log.textContent+='Fullscreen button pressed \n';
+  log.textContent+='Fullscreen pressed \n';
   document.querySelector("#example_container").requestFullscreen();
 } );
-
-let orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
-
-if (orientation === undefined) {
-   log.textContent="Orientation API not supported";
-}
-else {
-    log.textContent+=`Orientation: ${ orientation } \n`
-}
 ```
 
-{{EmbedLiveSample('Example')}}:
+To test the example, first press the Fullscreen button.
+Once the example is full screen, press the Lock button to switch the orientation, and Unlock to return to the natural orientation.
 
+{{EmbedLiveSample('Example')}}:
 
 ## Specifications
 
