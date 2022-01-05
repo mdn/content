@@ -10,6 +10,7 @@ tags:
   - Typescript
   - client-side
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
@@ -207,15 +208,21 @@ And if you pass something that is not a number it will complain about it:
 
 ![type checking in vs code - App object has been given an unknown property target](06-vscode-type-checking-in-components.png)
 
-The application template has a `validate` script configured that runs `svelte-check` against your code. This package allows you to detect errors and warnings normally displayed by a code editor from the command line, which makes it pretty useful for running it in a continuous integration (CI) pipeline. Just run `npm run validate` to check for unused CSS, and return A11y hints and TypeScript compile errors.
+---
 
-In this case, if you run `npm run validate` (either in the VS Code console or terminal) you will get the following error:
+# Begin Change
 
-![validate command being run inside vs code showing type error, ms variable should be assigned a number](07-vscode-svelte-check.png)
+---
+
+The application template has a `check` script configured that runs `svelte-check` against your code. This package allows you to detect errors and warnings normally displayed by a code editor from the command line, which makes it pretty useful for running it in a continuous integration (CI) pipeline. Just run `npm run check` to check for unused CSS, and return A11y hints and TypeScript compile errors.
+
+In this case, if you run `npm run check` (either in the VS Code console or terminal) you will get the following error:
+
+![check command being run inside vs code showing type error, ms variable should be assigned a number](07-vscode-svelte-check.png)
 
 Even better, if you run it from the VS Code integrated terminal (you can open it with the <kbd>Ctrl</kbd> + <kbd>`</kbd> keyboard shortcut), <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> + clicking on the file name will take you to the line containing the error.
 
-You can also run the `validate` script in watch mode with `npm run validate -- --watch`. In this case, the script will execute whenever you change any file. If you are running this in your regular terminal, you are advised to keep it running in the background in a separate terminal window of its own so that it can keep reporting errors but won't interfere with other terminal usage.
+You can also run the `check` script in watch mode with `npm run check -- --watch`. In this case, the script will execute whenever you change any file. If you are running this in your regular terminal, you are advised to keep it running in the background in a separate terminal window of its own so that it can keep reporting errors but won't interfere with other terminal usage.
 
 ## Creating a custom type
 
@@ -241,9 +248,9 @@ We'll define a `TodoType` type to see how TypeScript enforces that anything pass
 5.  Let's `import` the type and use it to declare the `todo` property. Replace the `export let todo` line with the following:
 
     ```js
-    import type { TodoType } from '../types/todo.type'
+    import type { TodoType } from "../types/todo.type";
 
-    export let todo: TodoType
+    export let todo: TodoType;
     ```
 
     > **Note:** Another reminder — When importing a `.ts` file you have to omit the extension. Check the [`import` section](https://www.typescriptlang.org/docs/handbook/modules.html#import) of the TypeScript manual for more information.
@@ -267,7 +274,7 @@ We'll define a `TodoType` type to see how TypeScript enforces that anything pass
 
 By now you should get an idea about the kind of assistance we can get from TypeScript when building Svelte projects.
 
-Now we will undo these changes in order to start porting our application to TypeScript, so we won't be bothered with all the validate warnings.
+Now we will undo these changes in order to start porting our application to TypeScript, so we won't be bothered with all the check warnings.
 
 1.  Remove the flawed todo and the `lang='ts'` attribute from the `Todos.svelte` file.
 2.  Also remove the import of `TodoType` and the `lang='ts'` from `Todo.svelte`.
@@ -278,10 +285,10 @@ We'll take care of them properly, later on.
 
 Now we are ready to start porting our to-do list application to take advantage of all the features that TypeScript offers to us.
 
-Let's start by running the validate script in watch mode inside your project root:
+Let's start by running the check script in watch mode inside your project root:
 
 ```bash
-npm run validate -- --watch
+npm run check -- --watch
 ```
 
 this should output something like the following:
@@ -303,10 +310,10 @@ Note that if you are using a supporting code editor like VS Code, a simple way t
 
 Let's start with our `Alert.svelte` component.
 
-1.  Add `lang="ts"` into your `Alert.svelte` component's `<script>` tag. You'll see some warnings in the output of the `validate` script:
+1.  Add `lang="ts"` into your `Alert.svelte` component's `<script>` tag. You'll see some warnings in the output of the `check` script:
 
     ```bash
-    $ npm run validate -- --watch
+    $ npm run check -- --watch
     > svelte-check "--watch"
 
     ./svelte-todo-typescript
@@ -362,22 +369,22 @@ Now we'll do the same for the `MoreActions.svelte` component.
 2.  We will use the `TodoType` we already defined to tell TypeScript that `todos` is a `TodoType` array — replace your `export let todos` line with the following:
 
     ```js
-    import type { TodoType } from '../types/todo.type'
+    import type { TodoType } from "../types/todo.type";
 
-    export let todos: TodoType[]
+    export let todos: TodoType[];
     ```
 
 Notice that now TypeScript can infer that the `t` variable in `todos.filter(t => t.completed)` is of type `TodoType`. Nevertheless, if we think it makes our code easier to read, we could specify it like this:
 
 ```js
-$: completedTodos = todos.filter((t: TodoType) => t.completed).length
+$: completedTodos = todos.filter((t: TodoType) => t.completed).length;
 ```
 
 Most of the time TypeScript will be able to correctly infer the reactive variable type, but sometimes you might get an "implicitly has an 'any' type" error when working with reactive assignments. In those cases you can declare the typed variable in a different statement, like this:
 
 ```js
-let completeTodos: number
-$: completedTodos = todos.filter((t: TodoType) => t.completed).length
+let completeTodos: number;
+$: completedTodos = todos.filter((t: TodoType) => t.completed).length;
 ```
 
 You can't specify the type in the reactive assignment itself. The following statement `$: completedTodos: number = todos.filter[...]` is invalid. For more information read [How do I type reactive assignments? / I get an "implicitly has type 'any' error"](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#how-do-i-type-reactive-assignments--i-get-an-implicitly-has-type-any-error).
@@ -437,33 +444,35 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
 2.  Next, import the `Filter` enum — add the following `import` statement below your existing ones:
 
     ```js
-    import { Filter } from '../types/filter.enum'
+    import { Filter } from "../types/filter.enum";
     ```
 
 3.  Now we will use it whenever we reference the current filter. Replace your two filter-related blocks with the following:
 
     ```js
-    let filter: Filter = Filter.ALL
-      const filterTodos = (filter: Filter, todos) =>
-        filter === Filter.ACTIVE ? todos.filter(t => !t.completed) :
-        filter === Filter.COMPLETED ? todos.filter(t => t.completed) :
-        todos
+    let filter: Filter = Filter.ALL;
+    const filterTodos = (filter: Filter, todos) =>
+      filter === Filter.ACTIVE
+        ? todos.filter((t) => !t.completed)
+        : filter === Filter.COMPLETED
+        ? todos.filter((t) => t.completed)
+        : todos;
 
     $: {
-      if (filter === Filter.ALL)               $alert = 'Browsing all todos'
-      else if (filter === Filter.ACTIVE)       $alert = 'Browsing active todos'
-      else if (filter === Filter.COMPLETED)    $alert = 'Browsing completed todos'
+      if (filter === Filter.ALL) $alert = "Browsing all todos";
+      else if (filter === Filter.ACTIVE) $alert = "Browsing active todos";
+      else if (filter === Filter.COMPLETED) $alert = "Browsing completed todos";
     }
     ```
 
-4.  `validate` will still give us some warnings from `Todos.svelte`. Let's fix them.
+4.  `check` will still give us some warnings from `Todos.svelte`. Let's fix them.
 
     Start by importing the `TodoType` and telling TypeScript that our `todos` variable is an array of `TodoType`. Replace `export let todos = []` with the following two lines:
 
     ```js
-    import type { TodoType } from '../types/todo.type'
+    import type { TodoType } from "../types/todo.type";
 
-    export let todos: TodoType[] = []
+    export let todos: TodoType[] = [];
     ```
 
 5.  Next we'll specify all the missing types. The variable `todosStatus`, which we used to programmatically access the methods exposed by the `TodosStatus` component, is of type `TodosStatus`. And each `todo` will be of type `TodoType`.
@@ -552,15 +561,15 @@ Let's fix it.
 2.  Then import the `TodoType` and declare the `todos` prop as an array of `TodoType`. Replace the first line of the `<script>` section with the following:
 
     ```js
-    import type { TodoType } from '../types/todo.type'
+    import type { TodoType } from "../types/todo.type";
 
-    export let todos: TodoType[]
+    export let todos: TodoType[];
     ```
 
 3.  We will also specify the `headingEl`, which we used to bind to the heading tag, as an `HTMLElement`. Update the `let headingEl` line with the following:
 
     ```js
-    let headingEl: HTMLElement
+    let headingEl: HTMLElement;
     ```
 
 4.  Finally, you'll notice the following error reported, related to where we set the `tabindex` attribute. That's because TypeScript is type-checking the `<h2>` element and expects `tabindex` to be of type `number`.
@@ -570,7 +579,9 @@ Let's fix it.
     To fix it, replace `tabindex="-1"` with `tabindex={-1}`, like this:
 
     ```html
-    <h2 id="list-heading" bind:this={headingEl} tabindex={-1}>{completedTodos} out of {totalTodos} items completed</h2>
+    <h2 id="list-heading" bind:this="{headingEl}" tabindex="{-1}">
+      {completedTodos} out of {totalTodos} items completed
+    </h2>
     ```
 
     This way TypeScript can prevent us from incorrectly assigning it to a string variable.
@@ -583,26 +594,26 @@ Next we will take care of `NewTodo.svelte`.
 2.  The warning will indicate that we have to specify a type for the `nameEl` variable. Set its type to `HTMLElement` like this:
 
     ```js
-    let nameEl: HTMLElement     // reference to the name input DOM node
+    let nameEl: HTMLElement; // reference to the name input DOM node
     ```
 
 3.  Last for this file, we need to specify the correct type for our `autofocus` variable; update its definition like this:
 
     ```js
-    export let autofocus: boolean = false
+    export let autofocus: boolean = false;
     ```
 
 ### Todo.svelte
 
-Now the only warnings that `npm run validate` emits are triggered by calling the `Todo.svelte` component; let's fix them.
+Now the only warnings that `npm run check` emits are triggered by calling the `Todo.svelte` component; let's fix them.
 
 1.  Open the `Todo.svelte` file, and add the `lang='ts'` attribute.
 2.  Let's import the `TodoType`, and set the type of the `todo` prop. Replace the `export let todo` line with the following:
 
     ```js
-    import type { TodoType } from '../types/todo.type'
+    import type { TodoType } from "../types/todo.type";
 
-    export let todo: TodoType
+    export let todo: TodoType;
     ```
 
 3.  The first warning we get is TypeScript telling us to define the type of the `update()` function's `updatedTodo` variable. This can be a little tricky because `updatedTodo` contains only the attributes of the todo that have been updated. That means it's not a complete todo — it only has a subset of a todo's properties.
@@ -613,8 +624,8 @@ Now the only warnings that `npm run validate` emits are triggered by calling the
 
     ```js
     function update(updatedTodo: Partial<TodoType>) {
-      todo = { ...todo, ...updatedTodo }    // applies modifications to todo
-      dispatch('update', todo)              // emit update event
+      todo = { ...todo, ...updatedTodo }; // applies modifications to todo
+      dispatch("update", todo); // emit update event
     }
     ```
 
@@ -643,12 +654,13 @@ Next we'll take care of the `actions.js` file.
     ```js
     // actions.ts
     export function selectOnFocus(node: HTMLInputElement) {
-      if (node && typeof node.select === 'function' ) {               // make sure node is defined and has a select() method
-        const onFocus = () => node.select()                           // event handler
-        node.addEventListener('focus', onFocus)                       // when node gets focus call onFocus()
+      if (node && typeof node.select === "function") {
+        // make sure node is defined and has a select() method
+        const onFocus = () => node.select(); // event handler
+        node.addEventListener("focus", onFocus); // when node gets focus call onFocus()
         return {
-          destroy: () => node.removeEventListener('focus', onFocus)   // this will be executed when the node is removed from the DOM
-        }
+          destroy: () => node.removeEventListener("focus", onFocus), // this will be executed when the node is removed from the DOM
+        };
       }
     }
     ```
@@ -656,14 +668,14 @@ Next we'll take care of the `actions.js` file.
 2.  Now update `Todo.svelte` and `NewTodo.svelte` where we import the actions file. Remember that imports in TypeScript don't include the file extension. In each case it should end up like this:
 
     ```js
-    import { selectOnFocus } from '../actions'
+    import { selectOnFocus } from "../actions";
     ```
 
 ### Migrating the stores to TypeScript
 
 Now we have to migrate the `stores.js` and `localStore.js` files to TypeScript.
 
-Tip: the script `npm run validate`, which uses the [`svelte-check`](https://github.com/sveltejs/language-tools/tree/master/packages/svelte-check) tool, will only check our application's `.svelte` files. If you want to also check the `.ts` files you can run `npm run validate && npx tsc --noemit`, which tells the TypeScript compiler to check for errors without generating the `.js` output files. You could even add a script to your `package.json` file that runs that command.
+Tip: the script `npm run check`, which uses the [`svelte-check`](https://github.com/sveltejs/language-tools/tree/master/packages/svelte-check) tool, will only check our application's `.svelte` files. If you want to also check the `.ts` files you can run `npm run check && npx tsc --noemit`, which tells the TypeScript compiler to check for errors without generating the `.js` output files. You could even add a script to your `package.json` file that runs that command.
 
 We'll start with `stores.js`.
 
@@ -672,24 +684,24 @@ We'll start with `stores.js`.
 
     ```js
     // stores.ts
-    import { writable } from 'svelte/store'
-    import { localStore } from './localStore.js'
-    import type { TodoType } from './types/todo.type'
+    import { writable } from "svelte/store";
+    import { localStore } from "./localStore.js";
+    import type { TodoType } from "./types/todo.type";
 
-    export const alert = writable('Welcome to the To-Do list app!')
+    export const alert = writable("Welcome to the To-Do list app!");
 
     const initialTodos: TodoType[] = [
-      { id: 1, name: 'Visit MDN web docs', completed: true },
-      { id: 2, name: 'Complete the Svelte Tutorial', completed: false },
-    ]
+      { id: 1, name: "Visit MDN web docs", completed: true },
+      { id: 2, name: "Complete the Svelte Tutorial", completed: false },
+    ];
 
-    export const todos = localStore('mdn-svelte-todo', initialTodos)
+    export const todos = localStore("mdn-svelte-todo", initialTodos);
     ```
 
 3.  Remember to update the `import` statements in `App.svelte`, `Alert.svelte`, and `Todos.svelte`. Just remove the `.js` extension, like this:
 
     ```js
-    import { todos } from '../stores'
+    import { todos } from "../stores";
     ```
 
 Now onto `localStore.js`.
@@ -697,7 +709,7 @@ Now onto `localStore.js`.
 Update the `import` statement in `stores.ts`, like so:
 
 ```js
-import { localStore } from './localStore'
+import { localStore } from "./localStore";
 ```
 
 1.  Start by renaming the file to `localStore.ts`.
@@ -712,7 +724,13 @@ import { localStore } from './localStore'
 3.  Give it the following content:
 
     ```js
-    export type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue }
+    export type JsonValue =
+      | string
+      | number
+      | boolean
+      | null
+      | JsonValue[]
+      | { [key: string]: JsonValue };
     ```
 
     The `|` operator lets us declare variables that could store values of two or more types. A `JsonValue` could be a string, a number, a boolean, and so on. In this case we are also making use of recursive types, to specify that a `JsonValue` can have an array of `JsonValue`, and also an object with properties of type `JsonValue`.
@@ -721,32 +739,34 @@ import { localStore } from './localStore'
 
     ```js
     // localStore.ts
-    import { writable } from 'svelte/store'
+    import { writable } from "svelte/store";
 
-    import type { JsonValue } from './types/json.type'
+    import type { JsonValue } from "./types/json.type";
 
-    export const localStore = (key: string, initial: JsonValue) => {          // receives the key of the local storage and an initial value
+    export const localStore = (key: string, initial: JsonValue) => {
+      // receives the key of the local storage and an initial value
 
-      const toString = (value: JsonValue) => JSON.stringify(value, null, 2)   // helper function
-      const toObj = JSON.parse                                                // helper function
+      const toString = (value: JsonValue) => JSON.stringify(value, null, 2); // helper function
+      const toObj = JSON.parse; // helper function
 
-      if (localStorage.getItem(key) === null) {                               // item not present in local storage
-        localStorage.setItem(key, toString(initial))                          // initialize local storage with initial value
+      if (localStorage.getItem(key) === null) {
+        // item not present in local storage
+        localStorage.setItem(key, toString(initial)); // initialize local storage with initial value
       }
 
-      const saved = toObj(localStorage.getItem(key))                          // convert to object
+      const saved = toObj(localStorage.getItem(key)); // convert to object
 
-      const { subscribe, set, update } = writable(saved)                      // create the underlying writable store
+      const { subscribe, set, update } = writable(saved); // create the underlying writable store
 
       return {
         subscribe,
         set: (value: JsonValue) => {
-          localStorage.setItem(key, toString(value))                          // save also to local storage as a string
-          return set(value)
+          localStorage.setItem(key, toString(value)); // save also to local storage as a string
+          return set(value);
         },
-        update
-      }
-    }
+        update,
+      };
+    };
     ```
 
 Now if we try to create a `localStore` with something that cannot be converted to JSON via `JSON.stringify()`, for example an object with a function as a property, VS Code/`validate` will complain about it:
@@ -758,21 +778,20 @@ And best of all, it will even work with the [`$store` auto-subscription syntax](
 ```html
 <!-- App.svelte -->
 <script lang="ts">
-  import Todos from './components/Todos.svelte'
-  import Alert from './components/Alert.svelte'
+  import Todos from "./components/Todos.svelte";
+  import Alert from "./components/Alert.svelte";
 
-  import { todos } from './stores'
+  import { todos } from "./stores";
 
   // this is invalid, the content cannot be converted to JSON using JSON.stringify
-  $todos = { handler: () => {} }
-
+  $todos = { handler: () => {} };
 </script>
 ```
 
-The validate script will report the following error:
+The check script will report the following error:
 
 ```bash
-> npm run validate
+> npm run check
 
 Getting Svelte diagnostics...
 ====================================
@@ -816,10 +835,10 @@ export class Stack {
 In this case `elements` is an array of type `any`, and accordingly the `push()` and `pop()` methods both receive and return a variable of type `any`. So it's perfectly valid to do something like the following:
 
 ```js
-const anyStack = new Stack()
+const anyStack = new Stack();
 
-anyStack.push(1)
-anyStack.push('hello')
+anyStack.push(1);
+anyStack.push("hello");
 ```
 
 But what if we wanted to have a `Stack` that would only work with type `string`? We could do the following:
@@ -884,13 +903,13 @@ If you open the file `Todos.svelte` and assign a `number` type to our `$alert` s
 That's because when we defined our alert store in the `stores.ts` file with:
 
 ```js
-export const alert = writable('Welcome to the To-Do list app!')
+export const alert = writable("Welcome to the To-Do list app!");
 ```
 
 TypeScript inferred the generic type to be `string`. If we wanted to be explicit about it, we could do the following:
 
 ```js
-export const alert = writable<string>('Welcome to the To-Do list app!')
+export const alert = writable < string > "Welcome to the To-Do list app!";
 ```
 
 Now we'll make our `localStore` store support generics. Remember that we defined the `JsonValue` type to prevent the usage of our `localStore` store with values that cannot be persisted using `JSON.stringify()`. Now we want the consumers of `localStore` to be able to specify the type of data to persist, but instead of working with any type they should comply with the `JsonValue` type. We'll specify that with a Generic constraint, like this:
