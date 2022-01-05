@@ -1,0 +1,69 @@
+---
+title: Element.scrollTo()
+slug: Web/API/Element/scrollTo
+tags:
+  - API
+  - Element
+  - Method
+  - Reference
+  - scrollTo
+browser-compat: api.Element.scrollTo
+---
+{{APIRef}}
+
+The **`scrollTo()`** method of the {{domxref("Element")}}
+interface scrolls to a particular set of coordinates inside a given element.
+
+## Syntax
+
+```js
+element.scrollTo(x-coord, y-coord)
+element.scrollTo(options)
+```
+
+### Parameters
+
+- `x-coord` is the pixel along the horizontal axis of the
+  element that you want displayed in the upper left.
+- `y-coord` is the pixel along the vertical axis of the element
+  that you want displayed in the upper left.
+
+\- or -
+
+- `options`
+  - : A dictionary containing the following parameters:
+    - `top`
+      - : Specifies the number of pixels along the Y axis to scroll the window or element.
+    - `left`
+      - : Specifies the number of pixels along the X axis to scroll the window or element.
+    - `behavior`
+      - : Specifies whether the scrolling should animate smoothly (`smooth`), or happen instantly in a single jump (`auto`, the default value).
+
+## Examples
+
+```js
+element.scrollTo(0, 1000);
+```
+
+Using `options`:
+
+```js
+element.scrollTo({
+  top: 100,
+  left: 100,
+  behavior: 'smooth'
+});
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{domxref("Element.scrollTop")}}, {{domxref("Element.scrollLeft")}}
+- {{domxref("Window.scrollTo()")}}

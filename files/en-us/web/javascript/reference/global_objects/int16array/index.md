@@ -90,13 +90,13 @@ The **`Int16Array`** typed array represents an array of twos-complement 16-bit s
 - {{jsxref("TypedArray.subarray", "Int16Array.prototype.subarray()")}}
   - : Returns a new `Int16Array` from the given start and end element index.
 - {{jsxref("TypedArray.values", "Int16Array.prototype.values()")}}
-  - : Returns a new **array iterator object that contains the values for each index in the array. See also {{jsxref("Array.prototype.values()")}}.**
-- **{{jsxref("TypedArray.toLocaleString", "Int16Array.prototype.toLocaleString()")}}**
-  - : **Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.**
-- **{{jsxref("TypedArray.toString", "Int16Array.prototype.toString()")}}**
-  - : **Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.**
-- **{{jsxref("TypedArray.@@iterator", "Int16Array.prototype[@@iterator]()")}}**
-  - : **Returns a new _array iterator_ object that contains the values for each index in the array.**
+  - : Returns a new _array iterator_ object that contains the values for each index in the array. See also {{jsxref("Array.prototype.values()")}}.
+- {{jsxref("TypedArray.toLocaleString", "Int16Array.prototype.toLocaleString()")}}
+  - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
+- {{jsxref("TypedArray.toString", "Int16Array.prototype.toString()")}}
+  - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
+- {{jsxref("TypedArray.@@iterator", "Int16Array.prototype[@@iterator]()")}}
+  - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples
 
@@ -135,11 +135,11 @@ var int16 = new Int16Array(iterable);
 
 ## Browser compatibility
 
-**{{Compat}}**
+{{Compat}}
 
 ## See also
 
 - A polyfill of `Int16Array` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- **[JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)**
-- **{{jsxref("ArrayBuffer")}}**
-- **{{jsxref("DataView")}}**
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("DataView")}}

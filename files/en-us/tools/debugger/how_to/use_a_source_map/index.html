@@ -17,10 +17,20 @@ slug: Tools/Debugger/How_to/Use_a_source_map
 
 <ul>
  <li>generate the source map</li>
- <li>include a comment in the transformed file, that points to the source map. The comment's syntax is like this:</li>
+ <li>include a comment in the transformed file, that points to the source map.</li>
 </ul>
 
-<pre class="brush: js">//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map</pre>
+<p>The comment pointing to the source map may have a different syntax depending on the language itself.</p>
+<ul>
+  <li>
+    <p>For JavaScript files:</p>
+    <pre class="brush: js">//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map</pre>
+  </li>
+  <li>
+    <p>For CSS files, <code>/*...*/</code> is the only valid syntax for comments:</p>
+    <pre class="brush: css">/*# sourceMappingURL=http://example.com/path/to/your/sourcemap.map */</pre>
+  </li>
+</ul>
 
 <p>{{EmbedYouTube("Fqd15gHC4Pg")}}</p>
 
@@ -29,3 +39,9 @@ slug: Tools/Debugger/How_to/Use_a_source_map
 <pre class="brush: js">//# sourceMappingURL=main.js.map</pre>
 
 <p>In the Debugger's <a href="/en-US/docs/Tools/Debugger/UI_Tour#source_list_pane">source list pane</a>, the original CoffeeScript source now appears as "main.coffee", and we can debug it just like any other source.</p>
+
+<h2>See also</h2>
+
+<ul>
+  <li><a href="https://sourcemaps.info/spec.html">The specification for Source Map</a></li>
+</ul>

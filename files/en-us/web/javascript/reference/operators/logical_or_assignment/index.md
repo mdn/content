@@ -89,6 +89,5 @@ otherwise you want to use the `??=` operator (for {{jsxref("null")}} or
   nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
 - [Bitwise
   OR assignment (`|=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
-- {{jsxref("Boolean")}}
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}

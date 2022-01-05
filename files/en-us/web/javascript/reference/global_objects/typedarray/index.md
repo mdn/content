@@ -83,12 +83,16 @@ Where _TypedArray_ is a constructor for one of the concrete types.
     is created in memory, of size `length` _multiplied by
     `BYTES_PER_ELEMENT`_ bytes, containing zeros.
 - `typedArray`
-  - : When called with a `typedArray` argument, which can be an
-    object of any of the typed array types (such as `Int32Array`), the
-    `typedArray` gets copied into a new typed array. Each value in
-    `typedArray` is converted to the corresponding type of the
-    constructor before being copied into the new array. The length of the new typed array
-    will be same as the length of the `typedArray` argument.
+  - : When called with a `typedArray` argument, the `typedArray` gets copied
+    into a new typed array. For a **non-{{glossary("bigint")}}** `TypedArray`,
+    the `typedArray` parameter can be an object of only the
+    **non**-{{glossary("bigint")}} typed array types (such as
+    {{JSxRef("Int32Array")}}).  Similarly, for a **{{glossary("bigint")}}**
+    `TypedArray`, the `typedArray` parameter can be an object of only the
+    {{glossary("bigint")}} typed array types (such as {{JSxRef("BigInt64Array")}}).
+    Each value in `typedArray` is converted to the corresponding type of the
+    constructor before being copied into the new array.  The length of the new
+    typed array will be same as the length of the `typedArray` argument.
 - `object`
   - : When called with an `object` argument, a new typed array is
     created as if by the `TypedArray.from()` method.
@@ -148,7 +152,7 @@ Where _TypedArray_ is a constructor for one of the concrete types.
   - : Copies a sequence of array elements within the array. See also
     {{jsxref("Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.prototype.entries()")}}
-  - : Returns a new array iterator object that contains the key/value pairs for each index
+  - : Returns a new _array iterator_ object that contains the key/value pairs for each index
     in the array. See also {{jsxref("Array.prototype.entries()")}}.
 - {{jsxref("TypedArray.prototype.every()")}}
   - : Tests whether all elements in the array pass the test provided by a function. See
@@ -219,7 +223,7 @@ Where _TypedArray_ is a constructor for one of the concrete types.
   - : Returns a new `TypedArray` from the given start and end
     element index.
 - {{jsxref("TypedArray.prototype.values()")}}
-  - : Returns a new array iterator object that contains the values for each index in the
+  - : Returns a new _array iterator_ object that contains the values for each index in the
     array. See also {{jsxref("Array.prototype.values()")}}.
 - {{jsxref("TypedArray.prototype.toLocaleString()")}}
   - : Returns a localized string representing the array and its elements. See also
@@ -229,7 +233,7 @@ Where _TypedArray_ is a constructor for one of the concrete types.
     {{jsxref("Array.prototype.toString()")}}.
 - {{jsxref("TypedArray.prototype.@@iterator()",
     "TypedArray.prototype[@@iterator]()")}}
-  - : Returns a new array iterator object that contains the values for each index in the
+  - : Returns a new _array iterator_ object that contains the values for each index in the
     array.
 
 ## Examples
@@ -321,7 +325,7 @@ const i32 = new Int32Array(new ArrayBuffer(3));
 ```
 
 ```js example-good
-const i32 = new Int32Array(new ArrayBuffer(4);
+const i32 = new Int32Array(new ArrayBuffer(4));
 ```
 
 ## Specifications

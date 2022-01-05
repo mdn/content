@@ -15,15 +15,19 @@ browser-compat: javascript.grammar.template_literals
 ---
 {{JsSidebar("More")}}
 
-Template literals are string literals allowing embedded
-expressions. You can use multi-line strings and string interpolation features with
-them.
+Template literals are literals delimited with backticks (<code>`</code>), allowing embedded expressions called *substitutions*.
 
-They were called "template strings" in prior editions of the ES2015 specification.
+* *Untagged* template literals result in strings, which makes them useful for string interpolation (and multiline strings, since unescaped newlines are allowed).
+
+* *Tagged* template literals call a function (the *tag function*) with an array of any text segments from the literal followed by arguments with the values of any substitutions, which is useful for [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language).
+
+Template literals are sometimes informally called *template strings*, but they aren't string literals and can't be used everywhere a string literal can be used. Also, a tagged template literal may not result in a string; it's up to the tag function what it creates (if anything).
+
 
 ## Syntax
 
 ```js
+// Untagged, these create strings:
 `string text`
 
 `string text line 1
@@ -31,7 +35,9 @@ They were called "template strings" in prior editions of the ES2015 specificatio
 
 `string text ${expression} string text`
 
-tag`string text ${expression} string text`
+// Tagged, this calls the function "example" with the template as the
+// first argument and substitution values as subsequent arguments:
+example`string text ${expression} string text`
 ```
 
 ## Description

@@ -42,7 +42,7 @@ Assertions include boundaries, which indicate the beginnings and endings of line
             it appears at the start of a
             <a
               href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges"
-              >group</a
+              >range</a
             >.
           </p>
         </div>
@@ -269,7 +269,7 @@ For example, `/\d+(?!\.)/` matches a number only if it is not followed by a deci
 console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 ```
 
-### Different meaning of '?!' combination usage in Assertions and  Ranges 
+### Different meaning of '?!' combination usage in Assertions and  Ranges
 
 Different meaning of `?!` combination usage in [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/ `and [Ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`.
 
@@ -303,4 +303,4 @@ console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]
   - [Groups and ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
 
 - [The `RegExp()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
-- [Assertions in the ECMAScript specification](https://tc39.es/ecma262/#sec-assertion)
+- [Assertions in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-assertion)

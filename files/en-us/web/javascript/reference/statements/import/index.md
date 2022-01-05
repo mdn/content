@@ -38,7 +38,6 @@ import * as name from "module-name";
 import { export1 } from "module-name";
 import { export1 as alias1 } from "module-name";
 import { export1 , export2 } from "module-name";
-import { foo , bar } from "module-name/path/to/specific/un-exported/file";
 import { export1 , export2 as alias2 , [...] } from "module-name";
 import defaultExport, { export1 [ , [...] ] } from "module-name";
 import defaultExport, * as name from "module-name";
@@ -49,7 +48,7 @@ var promise = import("module-name");
 - `defaultExport`
   - : Name that will refer to the default export from the module.
 - `module-name`
-  - : The module to import from. This is often a relative or absolute path name to the
+  - : The module to import from. This is often a relative or absolute url to the
     `.js` file containing the module. Certain bundlers may permit or require
     the use of the extension; check your environment. Only single quoted and double
     quoted Strings are allowed.

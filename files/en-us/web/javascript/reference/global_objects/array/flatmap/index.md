@@ -24,24 +24,24 @@ efficient than calling those two methods separately.
 
 ```js
 // Arrow function
-flatMap((currentValue) => { ... } )
-flatMap((currentValue, index) => { ... } )
-flatMap((currentValue, index, array) => { ... } )
+flatMap((currentValue) => { /* ... */ } )
+flatMap((currentValue, index) => { /* ... */ } )
+flatMap((currentValue, index, array) => { /* ... */ } )
 
 // Callback function
 flatMap(callbackFn)
 flatMap(callbackFn, thisArg)
 
 // Inline callback function
-flatMap(function callbackFn(currentValue) { ... })
-flatMap(function callbackFn(currentValue, index) { ... })
-flatMap(function callbackFn(currentValue, index, array){ ... })
-flatMap(function callbackFn(currentValue, index, array) { ... }, thisArg)
+flatMap(function(currentValue) { /* ... */ })
+flatMap(function(currentValue, index) { /* ... */ })
+flatMap(function(currentValue, index, array){ /* ... */ })
+flatMap(function(currentValue, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
-- `callback`
+- `callbackFn`
 
   - : Function that produces an element of the new Array, taking three arguments:
 
@@ -53,7 +53,7 @@ flatMap(function callbackFn(currentValue, index, array) { ... }, thisArg)
       - : The array `map` was called upon.
 
 - `thisArg`{{optional_inline}}
-  - : Value to use as `this` when executing `callback`.
+  - : Value to use as `this` when executing `callbackFn`.
 
 ### Return value
 

@@ -38,7 +38,7 @@ The primary uses for the `WebAssembly` object are:
   - : An object whose {{jsxref("WebAssembly/Memory/buffer","buffer")}} property is a resizable [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) that holds the raw bytes of memory accessed by a WebAssembly `Instance`.
 - [`WebAssembly.Module()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/Module)
   - : Contains stateless WebAssembly code that has already been compiled by the browser and can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
-- [`WebAssembly.RuntimeError()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/RunTimeError)
+- [`WebAssembly.RuntimeError()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/RuntimeError)
   - : Error type that is thrown whenever WebAssembly specifies a [trap](https://webassembly.org/docs/semantics/#traps).
 - [`WebAssembly.Table()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table)
   - : An array-like structure representing a WebAssembly Table, which stores function references.
@@ -60,7 +60,7 @@ The primary uses for the `WebAssembly` object are:
 
 ### Stream a .wasm module then compile and instantiate it
 
-The following example (see our [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) also) directly streams a .wasm module from an underlying source then compiles and instantiates it, the promise fulfilling with a `ResultObject`. Because the `instantiateStreaming()`  function accepts a promise for a [`Response`](/en-US/docs/Web/API/Response "The Response interface of the Fetch API represents the response to a request.") object, you can directly pass it a [`WindowOrWorkerGlobalScope.fetch()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch "The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.") call, and it will pass the response into the function when it fulfills.
+The following example (see our [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) also) directly streams a .wasm module from an underlying source then compiles and instantiates it, the promise fulfilling with a `ResultObject`. Because the `instantiateStreaming()`  function accepts a promise for a [`Response`](/en-US/docs/Web/API/Response "The Response interface of the Fetch API represents the response to a request.") object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/fetch) call, and it will pass the response into the function when it fulfills.
 
 ```js
 var importObject = { imports: { imported_func: arg => console.log(arg) } };

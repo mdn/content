@@ -21,21 +21,21 @@ for each value in the `Set` object, in insertion order.
 
 ```js
 // Arrow function
-forEach(() => { ... } )
-forEach((value) => { ... } )
-forEach((value, key) => { ... } )
-forEach((value, key, set) => { ... } )
+forEach(() => { /* ... */ } )
+forEach((value) => { /* ... */ } )
+forEach((value, key) => { /* ... */ } )
+forEach((value, key, set) => { /* ... */ } )
 
 // Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 
 // Inline callback function
-forEach(function callbackFn() { ... })
-forEach(function callbackFn(value) { ... })
-forEach(function callbackFn(value, key) { ... })
-forEach(function callbackFn(value, key, set) { ... })
-forEach(function callbackFn(value, key, set) { ... }, thisArg)
+forEach(function() { /* ... */ })
+forEach(function(value) { /* ... */ })
+forEach(function(value, key) { /* ... */ })
+forEach(function(value, key, set) { /* ... */ })
+forEach(function(value, key, set) { /* ... */ }, thisArg)
 ```
 
 ### Parameters

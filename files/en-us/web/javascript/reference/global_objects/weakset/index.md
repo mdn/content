@@ -97,7 +97,7 @@ ws.has(foo);    // false, foo has been removed
 ws.has(bar);    // true, bar is retained
 ```
 
-Note that `foo !== bar`. While they are similar objects, \*they are not **the same object\***. And so they are both added to the set.
+Note that `foo !== bar`. While they are similar objects, _they are not **the same object**_. And so they are both added to the set.
 
 ## Specifications
 

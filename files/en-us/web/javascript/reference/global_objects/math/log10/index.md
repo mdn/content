@@ -39,7 +39,7 @@ of a number, that is
 </msup><mo>=</mo>
 <mi>x</mi>
 </mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log10}(x)} =
-\log_10(x) = \text{the unique} \; y \; \text{such that} \; 10^y = x</annotation></semantics></math>
+\log_{10}(x) = \text{the unique} \; y \; \text{such that} \; 10^y = x</annotation></semantics></math>
 
 {{EmbedInteractiveExample("pages/js/math-log10.html")}}
 

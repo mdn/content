@@ -65,7 +65,7 @@ objects created using `Object.create(null)` (as these don't inherit from
 
 ### Using hasOwnProperty to test for an own property's existence
 
-The following code hows how to determine whether the `example` object contains a property named `prop`.
+The following code shows how to determine whether the `example` object contains a property named `prop`.
 
 ```js
 let example = {};
@@ -75,7 +75,7 @@ example.prop = 'exists';
 example.hasOwnProperty('prop');   // true - 'prop' has been defined
 
 example.prop = null;
-example.hasOwnProperty('prop');   // true - own property exists wtih value of null
+example.hasOwnProperty('prop');   // true - own property exists with value of null
 
 example.prop = undefined;
 example.hasOwnProperty('prop');   // true - own property exists with value of undefined

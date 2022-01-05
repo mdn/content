@@ -180,11 +180,8 @@ A function proxy could easily extend a constructor with a new constructor. This 
 
 ```js
 function extend(sup, base) {
-  var descriptor = Object.getOwnPropertyDescriptor(
-    base.prototype, 'constructor'
-  );
   base.prototype = Object.create(sup.prototype);
-  var handler = {
+  base.prototype.constructor = new Proxy(base, {
     construct: function(target, args) {
       var obj = Object.create(base.prototype);
       this.apply(target, obj, args);
@@ -194,11 +191,8 @@ function extend(sup, base) {
       sup.apply(that, args);
       base.apply(that, args);
     }
-  };
-  var proxy = new Proxy(base, handler);
-  descriptor.value = proxy;
-  Object.defineProperty(base.prototype, 'constructor', descriptor);
-  return proxy;
+  });
+  return base.prototype.constructor;
 }
 
 var Person = function(name) {
@@ -380,12 +374,12 @@ console.log(products.number);      // 3
 
 ### A complete `traps` list example
 
-Now in order to create a complete sample `traps` list, for didactic purposes, we will try to proxify a _non-native_ object that is particularly suited to this type of operation: the `docCookies` global object created by [a simple cookie framework](https://reference.codeproject.com/Book/dom/document/cookie/simple_document.cookie_framework).
+Now in order to create a complete sample `traps` list, for didactic purposes, we will try to proxify a _non-native_ object that is particularly suited to this type of operation: the `docCookies` global object created by [a simple cookie framework](https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework).
 
 ```js
 /*
   var docCookies = ... get the "docCookies" object here:
-  https://reference.codeproject.com/Book/dom/document/cookie/simple_document.cookie_framework
+  https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework
 */
 
 var docCookies = new Proxy(docCookies, {

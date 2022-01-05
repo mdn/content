@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Reference
   - RegExp
+  - Polyfill
 browser-compat: javascript.builtins.RegExp.RegExp
 ---
 {{JSRef}}
@@ -75,6 +76,12 @@ RegExp(pattern[, flags])
         this regular expression in the target string. Does not attempt to match from any
         later indexes.
 
+### Exceptions
+
+- If `pattern` cannot be parsed as a valid regular expression, a {{jsxref("SyntaxError")}} is thrown.
+- If `flags` contains repeated characters or any character outside of those allowed, a
+  {{jsxref("SyntaxError")}} is thrown.
+
 ## Examples
 
 ### Literal notation and constructor
@@ -116,6 +123,7 @@ such as user input.
 
 ## See also
 
+- A polyfill of many modern `RegExp` features (`dotAll`, `sticky` flags, named capture groups, etc.) is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - [Regular
   Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript
   Guide](/en-US/docs/Web/JavaScript/Guide)

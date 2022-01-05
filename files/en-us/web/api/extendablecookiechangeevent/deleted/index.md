@@ -1,0 +1,67 @@
+---
+title: ExtendableCookieChangeEvent.deleted
+slug: Web/API/ExtendableCookieChangeEvent/deleted
+tags:
+  - API
+  - Property
+  - Reference
+  - deleted
+  - ExtendableCookieChangeEvent
+browser-compat: api.ExtendableCookieChangeEvent.deleted
+---
+{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
+
+The **`deleted`** read-only property of the {{domxref("ExtendableCookieChangeEvent")}} interface returns any cookies that have been deleted by the given `ExtendableCookieChangeEvent` instance.
+
+## Syntax
+
+```js
+var array = ExtendableCookieChangeEvent.deleted;
+```
+
+### Value
+
+An array of objects containing the deleted cookie(s). Each object contains the following properties:
+
+- `name`
+  - : A {{domxref("USVString")}} containing the name of the cookie.
+- `value`
+  - : A {{domxref("USVString")}} containing the value of the cookie.
+- `domain`
+  - : A {{domxref("USVString")}} containing the domain of the cookie.
+- `path`
+  - : A {{domxref("USVString")}} containing the path of the cookie.
+- `expires`
+  - : A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.
+- `secure`
+  - : A {{jsxref("boolean")}} indicating whether the cookie is from a site with a secure context (HTTPS rather than HTTP).
+- `sameSite`
+
+  - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values:
+
+    - `"strict"`
+      - : Cookies will only be sent in a first-party context and not be sent with requests initiated by third party websites.
+    - `"lax"`
+      - : Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating within the origin site (i.e. when following a link).
+    - `"none"`
+      - : Cookies will be sent in all contexts.
+
+    > **Note:** For more information on SameSite cookies see [SameSite cookies explained](https://web.dev/samesite-cookies-explained/).
+
+## Examples
+
+In this example when the cookie is deleted the event listener logs the first item in the `deleted` property to the console. It contains an object representing the cookie that has just been deleted.
+
+```js
+self.addEventListener('cookiechange', (event) => {
+  console.log(event.deleted[0]);
+});
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

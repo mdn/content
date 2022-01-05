@@ -282,10 +282,10 @@ can (and should) write:
 
 ```js
 // instead of setTimeout(" ... ", 1000) use:
-setTimeout(function() { ... }, 1000);
+setTimeout(function() { /* ... */ }, 1000);
 
 // instead of elt.setAttribute("onclick", "...") use:
-elt.addEventListener('click', function() { ... } , false); 
+elt.addEventListener('click', function() { /* ... */ } , false); 
 ```
 
 [Closures](/en-US/docs/Web/JavaScript/Closures) are also helpful as a way to

@@ -49,7 +49,7 @@ slug: Tools/Memory/Dominators
 
 <p><img alt="" src="memory-graph-immediate-dominator.svg" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
-<p><a id="multiple-paths">One slight subtlety here is that if an object A is referenced by two other objects B and C, then neither object is its dominator</a>, because you could remove either B or C from the graph, and A would still be retained by its other referrer. Instead, the immediate dominator of A would be its first common ancestor:<br>
+<p><a id="multiple-paths">One slight subtlety here is that if an object A is referenced by two other unrelated objects B and C, then neither object is its dominator</a>, because you could remove either B or C from the graph, and A would still be retained by its other referrer. Instead, the immediate dominator of A would be its first common ancestor:<br>
  <img alt="" src="memory-graph-dominator-multiple-references.svg" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="See_also">See also</h2>

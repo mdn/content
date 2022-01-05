@@ -36,7 +36,7 @@ Promise.allSettled(iterable);
 ### Parameters
 
 - `iterable`
-  - : An [iterable](/en-US/docs/Web/JavaScript/Guide/iterable) object, such as
+  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) object, such as
     an {{jsxref("Array")}}, in which each member is a `Promise`.
 
 ### Return value

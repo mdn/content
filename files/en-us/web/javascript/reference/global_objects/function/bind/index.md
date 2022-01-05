@@ -167,8 +167,7 @@ const result3 = addThirtySeven(5, 10);
 
 ### With `setTimeout()`
 
-By default within {{domxref("WindowOrWorkerGlobalScope.setTimeout()",
-  "window.setTimeout()")}}, the `this` keyword will be set to the
+By default within {{domxref("setTimeout()")}}, the `this` keyword will be set to the
 {{domxref("window")}} (or `global`) object. When working with class methods
 that require `this` to refer to class instances, you may explicitly bind
 `this` to the callback function, in order to maintain the instance.

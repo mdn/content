@@ -121,9 +121,13 @@ console.log(removedItems)
 **Copy an Array**
 
 ```js
-let shallowCopy = fruits.slice() // this is how to make a copy
+let shallowCopySpread = [...fruits]
 // ["Strawberry", "Mango"]
 ```
+
+This is a shallow copy made using the [spread sequence](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) operator:
+Other ways to copy an array are discussed below in [Copying an array](#copying_an_array).
+
 
 ### Accessing array elements
 
@@ -213,7 +217,7 @@ This is explained further on the {{jsxref("Array.length")}} page.
 
 ### Creating an array using the result of a match
 
-The result of a match between a {{jsxref("RegExp")}} and a string can create a JavaScript array. This array has properties and elements which provide information about the match. Such an array is returned by {{jsxref("RegExp.exec()")}}, {{jsxref("String.match()")}}, and {{jsxref("String.replace()")}}.
+The result of a match between a {{jsxref("RegExp")}} and a string can create a JavaScript array. This array has properties and elements which provide information about the match. Such an array is returned by {{jsxref("RegExp.exec()")}} and {{jsxref("String.match()")}}.
 
 To help explain these properties and elements, see this example and then refer to the table below:
 
@@ -268,6 +272,52 @@ The properties and elements returned from this match are as follows:
   </tbody>
 </table>
 
+### Copying an array
+
+Initializing a new variable with an array does not create a copy.
+Instead the new variable contains a _reference_ to the original array.
+If you change a value in the original array, it will be reflected in the new array.
+
+```js
+let array1 = [1,2,3]
+let array1Reference = array1;
+array1[1] = 9;
+console.log(array1Reference);
+// Array [1,9,3]  - changes to array1 do affect array1Reference - it is not a copy
+```
+
+In order to create a copy of an array, you must effectively create a new variable for the array and new variables for each of the primitive array elements (initializing a variable with a primitive value creates a copy, not a reference).
+JavaScript provides the following methods to do this for you.
+
+Shallow copy using [spread sequence](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax):
+
+```js
+let shallowCopySpread = [...fruits]
+// ["Strawberry", "Mango"]
+```
+Shallow copy using {{jsxref("Array.slice()")}}:
+
+```js
+let shallowCopySlice = fruits.slice()
+// ["Strawberry", "Mango"]
+```
+Shallow copy using {{jsxref("Array.from()")}}:
+
+```js
+let shallowCopyFrom = Array.from(fruits)
+// ["Strawberry", "Mango"]
+```
+
+These all create a _shallow copy_; top-level elements containing primitive values are copied, but if the array contains nested objects or arrays, those will reference elements in the original array.
+
+If you need a _deep copy_ of all elements — that is, in which even nested arrays don’t just reference elements in the original array but instead are also copied — one approach is to use {{jsxref("JSON.stringify()")}} to convert the array to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into an array.
+
+```js
+let deepCopy = JSON.parse(JSON.stringify(fruits));
+// ["Strawberry", "Mango"]
+```
+
+
 ## Constructor
 
 - {{jsxref("Array/Array", "Array()")}}
@@ -303,7 +353,7 @@ The properties and elements returned from this match are as follows:
 - {{jsxref("Array.prototype.copyWithin()")}}
   - : Copies a sequence of array elements within the array.
 - {{jsxref("Array.prototype.entries()")}}
-  - : Returns a new `Array Iterator` object that contains the key/value pairs for each index in the array.
+  - : Returns a new _array iterator_ object that contains the key/value pairs for each index in the array.
 - {{jsxref("Array.prototype.every()")}}
   - : Returns `true` if every element in this array satisfies the testing function.
 - {{jsxref("Array.prototype.fill()")}}
@@ -314,6 +364,10 @@ The properties and elements returned from this match are as follows:
   - : Returns the found `element` in the array, if some element in the array satisfies the testing function, or `undefined` if not found.
 - {{jsxref("Array.prototype.findIndex()")}}
   - : Returns the found index in the array, if an element in the array satisfies the testing function, or `-1` if not found.
+- {{jsxref("Array.prototype.flat()")}}
+  - : Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+- {{jsxref("Array.prototype.flatMap()")}}
+  - : Returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level.
 - {{jsxref("Array.prototype.forEach()")}}
   - : Calls a function for each element in the array.
 - {{jsxref("Array.prototype.includes()")}}
@@ -323,7 +377,7 @@ The properties and elements returned from this match are as follows:
 - {{jsxref("Array.prototype.join()")}}
   - : Joins all elements of an array into a string.
 - {{jsxref("Array.prototype.keys()")}}
-  - : Returns a new `Array Iterator` that contains the keys for each index in the array.
+  - : Returns a new _array iterator_ that contains the keys for each index in the array.
 - {{jsxref("Array.prototype.lastIndexOf()")}}
   - : Returns the last (greatest) index of an element within the array equal to an element, or `-1` if none is found.
 - {{jsxref("Array.prototype.map()")}}
@@ -355,9 +409,9 @@ The properties and elements returned from this match are as follows:
 - {{jsxref("Array.prototype.unshift()")}}
   - : Adds one or more elements to the front of an array, and returns the new `length` of the array.
 - {{jsxref("Array.prototype.values()")}}
-  - : Returns a new `Array Iterator` object that contains the values for each index in the array.
+  - : Returns a new _array iterator_ object that contains the values for each index in the array.
 - {{jsxref("Array.prototype.@@iterator()", "Array.prototype[@@iterator]()")}}
-  - : Returns a new `Array Iterator` object that contains the values for each index in the array.
+  - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples
 

@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.Intl.NumberFormat.resolvedOptions
 
 The **`Intl.NumberFormat.prototype.resolvedOptions()`** method
 returns a new object with properties reflecting the locale and number formatting
-options computed during initialization of this {{jsxref("Intl/NumberFormat")}} object.
+options computed during initialization of this {{jsxref("Intl.NumberFormat")}} object.
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-resolvedoptions.html")}}
 
@@ -31,7 +31,7 @@ resolvedOptions()
 ### Return value
 
 A new object with properties reflecting the locale and number formatting options
-computed during the initialization of the given {{jsxref("Intl/NumberFormat")}} object.
+computed during the initialization of the given {{jsxref("Intl.NumberFormat")}} object.
 
 ## Description
 
@@ -51,7 +51,7 @@ The resulting object has the following properties:
     present, or "`standard`" filled in as a default.
 - `compactDisplay`
   - : The value provided for this property in the `options` argument, or
-    "`short`" filled in as a default. 
+    "`short`" filled in as a default.
     This property is only present if the `notation` is set to "compact".
 - `signDisplay`
   - : The value provided for this property in the `options` argument, or

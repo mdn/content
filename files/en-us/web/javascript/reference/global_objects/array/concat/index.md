@@ -76,8 +76,9 @@ The following code concatenates two arrays:
 const letters = ['a', 'b', 'c'];
 const numbers = [1, 2, 3];
 
-letters.concat(numbers);
-// result in ['a', 'b', 'c', 1, 2, 3]
+const alphaNumeric = letters.concat(numbers);
+console.log(alphaNumeric);
+// results in ['a', 'b', 'c', 1, 2, 3]
 ```
 
 ### Concatenating three arrays

@@ -23,24 +23,24 @@ function. It returns true if, in the array, it finds an element for which the pr
 
 ```js
 // Arrow function
-some((element) => { ... } )
-some((element, index) => { ... } )
-some((element, index, array) => { ... } )
+some((element) => { /* ... */ } )
+some((element, index) => { /* ... */ } )
+some((element, index, array) => { /* ... */ } )
 
 // Callback function
 some(callbackFn)
 some(callbackFn, thisArg)
 
 // Inline callback function
-some(function callbackFn(element) { ... })
-some(function callbackFn(element, index) { ... })
-some(function callbackFn(element, index, array){ ... })
-some(function callbackFn(element, index, array) { ... }, thisArg)
+some(function(element) { /* ... */ })
+some(function(element, index) { /* ... */ })
+some(function(element, index, array){ /* ... */ })
+some(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
 
-- `callback`
+- `callbackFn`
 
   - : A function to test for each element, taking three arguments:
 
@@ -88,7 +88,7 @@ changed by `callbackFn`, its value passed to the visiting
 `callbackFn` will be the value at the time that `some()`
 visits that element's index. Elements that are deleted are not visited.
 
-**Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
+> **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
 > **Note:** Calling this method on an empty array returns
 > `false` for any condition!

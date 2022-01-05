@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.Intl.PluralRules.resolvedOptions
 
 The **`Intl.PluralRules.prototype.resolvedOptions()`** method
 returns a new object with properties reflecting the locale and plural formatting
-options computed during initialization of this {{jsxref("Intl/PluralRules")}} object.
+options computed during initialization of this {{jsxref("Intl.PluralRules")}} object.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ resolvedOptions()
 ### Return value
 
 A new object with properties reflecting the locale and plural formatting options
-computed during the initialization of the given {{jsxref("Intl/PluralRules")}} object.
+computed during the initialization of the given {{jsxref("Intl.PluralRules")}} object.
 
 ## Description
 

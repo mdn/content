@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - Object
   - Reference
+  - Polyfill
 browser-compat: javascript.builtins.Error
 ---
 {{JSRef}}
@@ -246,5 +247,6 @@ try {
 
 ## See also
 
+- [A polyfill of `Error`](https://github.com/zloirock/core-js#ecmascript-error) with modern behavior like support `cause` is available in [`core-js`](https://github.com/zloirock/core-js)
 - {{JSxRef("Statements/throw", "throw")}}
 - {{JSxRef("Statements/try...catch", "try...catch")}}

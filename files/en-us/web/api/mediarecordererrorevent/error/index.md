@@ -1,0 +1,108 @@
+---
+title: MediaRecorderErrorEvent.error
+slug: Web/API/MediaRecorderErrorEvent/error
+tags:
+  - API
+  - Error
+  - Error Handling
+  - MediaRecordingErrorEvent
+  - MediaStream Recording
+  - MediaStream Recording API
+  - Property
+  - Reference
+browser-compat: api.MediaRecorderErrorEvent.error
+---
+{{APIRef("MediaStream Recording")}}
+
+The read-only `error` property in the
+**{{domxref("MediaRecorderErrorEvent")}}** interface is a
+{{domxref("DOMException")}} object providing details about the exception that was thrown
+by a {{domxref("MediaRecorder")}} instance.
+
+When a `MediaRecorderErrorEvent` occurs, you can determine to some extent
+what went wrong by examining the `error` property within the
+`MediaRecorderErrorEvent` received by the `MediaRecorder`'s
+{{event("error")}} event handler, {{domxref("MediaRecorder.onerror", "onerror")}}.
+
+## Syntax
+
+```js
+error = MediaRecorderErrorEvent.error;
+```
+
+### Value
+
+A {{domxref("DOMException")}} describing the error represented by the event. The
+error's {{domxref("DOMException.name", "name")}} property's value may be any exception
+that makes sense during the handling of media recording, including these specifically
+identified by the specification. The descriptions here are generic ones; you'll find
+more specific ones to various scenarios in which they may occur in the corresponding
+method references.
+
+- `InvalidStateError`
+  - : An operation was attempted in a context in which it isn't allowed, or a request has
+    been made on an object that's deleted or removed.
+- `NotSupportedError`
+  - : A `MediaRecorder` couldn't be created because the specified options
+    weren't valid. The `message` atttribute should provide additional
+    information, if it exists.
+- `SecurityError`
+  - : The {{domxref("MediaStream")}} is configured to disallow recording. This may be the
+    case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
+    "getUserMedia()")}} when the user denies permission to use an input device.
+- `InvalidModificationError`
+  - : The number of tracks on the stream being recorded has changed. You can't add or
+    remove tracks while recording media.
+- `UnknownError`
+  - : A non-security related error occurred that cannot otherwise be categorized.
+    Recording stops, the `MediaRecorder`'s {{domxref("MediaRecorder.state",
+    "state")}} becomes `inactive`, one last {{event("dataavailable")}} event is
+    sent to the `MediaRecorder` with the remaining received data, and finally a
+    {{event("stop")}} event is sent.
+
+## Examples
+
+### Basic error-handling example
+
+This function creates and returns a `MediaRecorder` for a given
+{{domxref("MediaStream")}}, configured to buffer data into an array and to watch for
+errors.
+
+```js
+function recordStream(stream) {
+  let recorder = null;
+  let bufferList = [];
+
+  try {
+    recorder = new MediaRecorder(stream);
+  } catch(err) {
+    /* exception while trying to create the recorder; handle that */
+  }
+
+  recorder.ondataavailable = function(event) {
+    bufferList.push(event.data);
+  };
+
+  recorder.onerror = function(event) {
+    let error = event.error;
+  };
+
+  recorder.start(100);  /* 100ms time slices per buffer */
+  return recorder;
+}
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [MediaStream Recording
+  API](/en-US/docs/Web/API/MediaStream_Recording_API)
+- [Using
+  the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)

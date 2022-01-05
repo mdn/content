@@ -64,16 +64,6 @@ Number.isInteger(5.000000000000001); // false
 Number.isInteger(5.0000000000000001); // true
 ```
 
-## Polyfill
-
-```js
-Number.isInteger = Number.isInteger || function(value) {
-  return typeof value === 'number' &&
-    isFinite(value) &&
-    Math.floor(value) === value;
-};
-```
-
 ## Specifications
 
 {{Specifications}}

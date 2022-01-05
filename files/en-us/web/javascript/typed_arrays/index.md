@@ -119,7 +119,7 @@ In other words, the two arrays are indeed viewed on the same data buffer, treati
 
 ### Working with complex data structures
 
-By combining a single buffer with multiple views of different types, starting at different offsets into the buffer, you can interact with data objects containing multiple data types. This lets you, for example, interact with complex data structures from [WebGL](/en-US/docs/Web/API/WebGL_API), data files, or C structures you need to use while using [js-ctypes](/en-US/docs/Mozilla/js-ctypes "js-ctypes").
+By combining a single buffer with multiple views of different types, starting at different offsets into the buffer, you can interact with data objects containing multiple data types. This lets you, for example, interact with complex data structures from [WebGL](/en-US/docs/Web/API/WebGL_API) or data files.
 
 Consider this C structure:
 

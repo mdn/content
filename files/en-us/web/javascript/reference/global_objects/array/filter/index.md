@@ -21,19 +21,19 @@ The **`filter()`** method **creates a new array** with all elements that pass th
 
 ```js
 // Arrow function
-filter((element) => { ... } )
-filter((element, index) => { ... } )
-filter((element, index, array) => { ... } )
+filter((element) => { /* ... */ } )
+filter((element, index) => { /* ... */ } )
+filter((element, index, array) => { /* ... */ } )
 
 // Callback function
 filter(callbackFn)
 filter(callbackFn, thisArg)
 
 // Inline callback function
-filter(function callbackFn(element) { ... })
-filter(function callbackFn(element, index) { ... })
-filter(function callbackFn(element, index, array){ ... })
-filter(function callbackFn(element, index, array) { ... }, thisArg)
+filter(function(element) { /* ... */ })
+filter(function(element, index) { /* ... */ })
+filter(function(element, index, array){ /* ... */ })
+filter(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
@@ -49,7 +49,7 @@ filter(function callbackFn(element, index, array) { ... }, thisArg)
     - `index`{{optional_inline}}
       - : The index of the current element being processed in the array.
     - `array`{{optional_inline}}
-      - : The array `filter` was called upon.
+      - : The array on which `filter()` was called.
 
 - `thisArg`{{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
@@ -68,13 +68,13 @@ A new array with the elements that pass the test. If no elements pass the test, 
 2.  the index of the element
 3.  the Array object being traversed
 
-If a `thisArg` parameter is provided to `filter`, it will be used as the callback's `this` value. Otherwise, the value `undefined` will be used as its `this` value. The `this` value ultimately observable by `callback` is determined according to [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+If a `thisArg` parameter is provided to `filter`, it will be used as the callback's `this` value. Otherwise, the value `undefined` will be used as its `this` value. The `this` value ultimately observable by `callbackFn` is determined according to [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
 `filter()` does not mutate the array on which it is called.
 
 The range of elements processed by `filter()` is set before the first invocation of `callbackFn`. Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by `callbackFn`. If existing elements of the array are deleted in the same way they will not be visited.
 
-**Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
+> **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
 ## Examples
 
@@ -159,7 +159,7 @@ let fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
  */
 function filterItems(arr, query) {
   return arr.filter(function(el) {
-      return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
+    return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
   })
 }
 
@@ -189,7 +189,7 @@ The following examples tests the behavior of the `filter` method when the array 
 
 ```js
 // Modifying each words
-let words = ['spray', 'limit', 'exuberant', 'destruction','elite', 'present']
+let words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
 
 const modifiedWords = words.filter( (word, index, arr) => {
   arr[index+1] +=' extra'
@@ -201,7 +201,7 @@ console.log(modifiedWords)
 // ["spray"]
 
 // Appending new words
-words = ['spray', 'limit', 'exuberant', 'destruction','elite', 'present']
+words = ['spray', 'limit', 'exuberant', 'destruction', 'elite', 'present']
 const appendedWords = words.filter( (word, index, arr) => {
   arr.push('new')
   return word.length < 6

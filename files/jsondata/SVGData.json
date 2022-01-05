@@ -1,0 +1,1859 @@
+{
+  "elements": {
+    "a": {
+      "categories": ["containerElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "shapeElements",
+          "structuralElements",
+          "gradientElements",
+          "&lt;a&gt;",
+          "&lt;altGlyphDef&gt;",
+          "&lt;clipPath&gt;",
+          "&lt;color-profile&gt;",
+          "&lt;cursor&gt;",
+          "&lt;filter&gt;",
+          "&lt;font&gt;",
+          "&lt;font-face&gt;",
+          "&lt;foreignObject&gt;",
+          "&lt;image&gt;",
+          "&lt;marker&gt;",
+          "&lt;mask&gt;",
+          "&lt;pattern&gt;",
+          "&lt;script&gt;",
+          "&lt;style&gt;",
+          "&lt;switch&gt;",
+          "&lt;text&gt;",
+          "&lt;view&gt;"
+        ]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "xLinkAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'transform'",
+        "'xlink:show'",
+        "'xlink:actuate'",
+        "'xlink:href'",
+        "'target'"
+      ],
+      "interfaces": ["SVGAElement"]
+    },
+    "altGlyph": {
+      "categories": ["textContentElement", "textContentChildElement"],
+      "content": {
+        "description": "anyElementsOrCharacterData"
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "xLinkAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'x'",
+        "'y'",
+        "'dx'",
+        "'dy'",
+        "'rotate'",
+        "'glyphRef'",
+        "'format'",
+        "'xlink:href'"
+      ],
+      "interfaces": ["SVGAltGlyphElement"]
+    },
+    "altGlyphDef": {
+      "categories": ["textContentElement"],
+      "content": {
+        "description": {
+          "en-US": "Either:<br>\n    one or more <a href=\"/en-US/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a> elements, or<br>\n    one or more <a href=\"/en-US/docs/Web/SVG/Element/altGlyphItem\" title=\"The altGlyphItem element provides a set of candidates for glyph substitution by the &lt;altglyph> element.\"><code>&lt;altGlyphItem&gt;</code></a> elements",
+          "fr": "L'un ou l'autre:<br>\n    un \u00e9l\u00e9ments ou plus <a href=\"/fr/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a>, ou<br>\n    un \u00e9l\u00e9ments ou plus <a href=\"/fr/docs/Web/SVG/Element/altGlyphItem\" title=\"The altGlyphItem element provides a set of candidates for glyph substitution by the &lt;altglyph> element.\"><code>&lt;altGlyphItem&gt;</code></a>",
+          "pt-BR": "Ambos:<br>\n    um ou mais elementos <a href=\"/pt-BR/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a>, ou<br>\n    um ou mais elementos <a href=\"/pt-BR/docs/Web/SVG/Element/altGlyphItem\" title=\"The altGlyphItem element provides a set of candidates for glyph substitution by the &lt;altglyph> element.\"><code>&lt;altGlyphItem&gt;</code></a>",
+          "zh-CN": "\u4e24\u8005\u4e4b\u4e00\uff1a<br>\n    \u4e00\u4e2a\u6216\u591a\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element/glyphRef\" title=\"glyphRef\u5143\u7d20\u4e3a\u5f15\u7528\u7684&lt;altGlyph>\u00a0\u66ff\u4ee3\u7269\u63d0\u4f9b\u4e86\u4e00\u4e2a\u552f\u4e00\u53ef\u80fd\u7684\u5b57\u5f62\u3002\"><code>&lt;glyphRef&gt;</code></a>\u5143\u7d20\uff0c\u6216\u8005\u4e00\u4e2a\u6216\u591a\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element/altGlyphItem\" title=\"\u6b64\u9875\u9762\u4ecd\u672a\u88ab\u672c\u5730\u5316, \u671f\u5f85\u60a8\u7684\u7ffb\u8bd1!\"><code>&lt;altGlyphItem&gt;</code></a>\u5143\u7d20"
+        }
+      },
+      "attributes": ["coreAttributes"],
+      "interfaces": ["SVGAltGlyphDefElement"]
+    },
+    "altGlyphItem": {
+      "categories": ["textContentElement"],
+      "content": {
+        "description": {
+          "en-US": "One or more <a href=\"/en-US/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a> elements",
+          "fr": "un \u00e9l\u00e9ments ou plus <a href=\"/fr/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a>",
+          "pt-BR": "Um ou mais elementos <a href=\"/pt-BR/docs/Web/SVG/Element/glyphRef\" title=\"The glyphRef element provides a single possible glyph to the referencing &lt;altGlyph> substitution.\"><code>&lt;glyphRef&gt;</code></a>",
+          "zh-CN": "\u4e00\u4e2a\u6216\u591a\u4e2a<a href=\"/zh-CN/docs/Web/SVG/Element/glyphRef\" title=\"glyphRef\u5143\u7d20\u4e3a\u5f15\u7528\u7684&lt;altGlyph>\u00a0\u66ff\u4ee3\u7269\u63d0\u4f9b\u4e86\u4e00\u4e2a\u552f\u4e00\u53ef\u80fd\u7684\u5b57\u5f62\u3002\"><code>&lt;glyphRef&gt;</code></a>\u5143\u7d20"
+        }
+      },
+      "attributes": ["coreAttributes"],
+      "interfaces": ["SVGAltGlyphItemElement"]
+    },
+    "animate": {
+      "categories": ["animationElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["descriptiveElements"]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "animationEventAttributes",
+        "xLinkAttributes",
+        "animationAttributeTargetAttributes",
+        "animationTimingAttributes",
+        "animationValueAttributes",
+        "animationAdditionAttributes",
+        "'externalResourcesRequired'",
+        "'attributeName'",
+        "'attributeType'",
+        "'from'",
+        "'to'",
+        "'dur'",
+        "'repeatCount'"
+      ],
+      "interfaces": ["SVGAnimateElement"]
+    },
+    "animateColor": {
+      "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["descriptiveElements"]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "animationEventAttributes",
+        "xLinkAttributes",
+        "animationAttributeTargetAttributes",
+        "animationTimingAttributes",
+        "animationValueAttributes",
+        "animationAdditionAttributes",
+        "'externalResourcesRequired'",
+        "'by'",
+        "'from'",
+        "'to'"
+      ],
+      "interfaces": ["SVGAnimateColorElement"]
+    },
+    "animateMotion": {
+      "categories": ["animationElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["descriptiveElements", "&lt;mpath&gt;"]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "animationEventAttributes",
+        "xLinkAttributes",
+        "animationTimingAttributes",
+        "animationValueAttributes",
+        "animationAdditionAttributes",
+        "'externalResourcesRequired'",
+        "'calcMode'",
+        "'path'",
+        "'keyPoints'",
+        "'rotate'",
+        "'origin'"
+      ],
+      "interfaces": ["SVGAnimateMotionElement"]
+    },
+    "animateTransform": {
+      "categories": ["animationElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["descriptiveElements"]
+      },
+      "attributes": [
+        "conditionalProcessingAttributes",
+        "coreAttributes",
+        "animationEventAttributes",
+        "xlinkAttributes",
+        "animationAttributeTargetAttributes",
+        "animationTimingAttributes",
+        "animationValueAttributes",
+        "animationAdditionAttributes",
+        "'externalResourcesRequired'",
+        "'by'",
+        "'from'",
+        "'to'",
+        "'type'"
+      ],
+      "interfaces": ["SVGAnimateTransformElement"]
+    },
+    "circle": {
+      "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["animationElements", "descriptiveElements"]
+      },
+      "attributes": [
+        "conditionalProcessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'transform'",
+        "'cx'",
+        "'cy'",
+        "'r'"
+      ],
+      "interfaces": ["SVGCircleElement"]
+    },
+    "clipPath": {
+      "categories": ["noCategory"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "shapeElements",
+          "&lt;text&gt;",
+          "&lt;use&gt;"
+        ]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'transform'",
+        "'clipPathUnits'"
+      ],
+      "interfaces": ["SVGClipPathElement"]
+    },
+    "color-profile": {
+      "categories": ["noCategory"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["descriptiveElements"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "xLinkAttributes",
+        "'local'",
+        "'name'",
+        "'rendering-intent'",
+        "'xlink:href'"
+      ],
+      "interfaces": ["SVGColorProfileElement"]
+    },
+    "cursor": {
+      "categories": ["noCategory"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["descriptiveElements"]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "xLinkAttributes",
+        "'externalResourcesRequired'",
+        "'x'",
+        "'y'",
+        "'xlink:href'"
+      ],
+      "interfaces": ["SVGCursorElement"]
+    },
+    "defs": {
+      "categories": ["containerElement", "structuralElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "shapeElements",
+          "structuralElements",
+          "gradientElements",
+          "&lt;a&gt;",
+          "&lt;altGlyphDef&gt;",
+          "&lt;clipPath&gt;",
+          "&lt;color-profile&gt;",
+          "&lt;cursor&gt;",
+          "&lt;filter&gt;",
+          "&lt;font&gt;",
+          "&lt;font-face&gt;",
+          "&lt;foreignObject&gt;",
+          "&lt;image&gt;",
+          "&lt;marker&gt;",
+          "&lt;mask&gt;",
+          "&lt;pattern&gt;",
+          "&lt;script&gt;",
+          "&lt;style&gt;",
+          "&lt;switch&gt;",
+          "&lt;text&gt;",
+          "&lt;view&gt;"
+        ]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'transform'"
+      ],
+      "interfaces": ["SVGDefsElement"]
+    },
+    "desc": {
+      "categories": ["descriptiveElement"],
+      "content": {
+        "description": "anyElementsOrCharacterData"
+      },
+      "attributes": ["coreAttributes", "'class'", "'style'"],
+      "interfaces": ["SVGDescElement"]
+    },
+    "discard": {
+      "categories": ["animationElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["descriptiveElements", "&lt;script&gt;"]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "'begin'",
+        "'href'"
+      ]
+    },
+    "ellipse": {
+      "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["animationElements", "descriptiveElements"]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'transform'",
+        "'cx'",
+        "'cy'",
+        "'rx'",
+        "'ry'"
+      ],
+      "interfaces": ["SVGEllipseElement"]
+    },
+    "feBlend": {
+      "categories": ["filterPrimitiveElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "filterAttributes",
+        "'class'",
+        "'style'",
+        "'in'",
+        "'in2'",
+        "'mode'"
+      ],
+      "interfaces": ["SVGFEBlendElement"]
+    },
+    "feColorMatrix": {
+      "categories": ["filterPrimitiveElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "filterAttributes",
+        "'class'",
+        "'style'",
+        "'in'",
+        "'type'",
+        "'values'"
+      ],
+      "interfaces": ["SVGFEColorMatrixElement"]
+    },
+    "feComponentTransfer": {
+      "categories": ["filterPrimitiveElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "&lt;feFuncA&gt;",
+          "&lt;feFuncR&gt;",
+          "&lt;feFuncB&gt;",
+          "&lt;feFuncG&gt;"
+        ]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "filterAttributes",
+        "'class'",
+        "'style'",
+        "'in'"
+      ],
+      "interfaces": ["SVGFEComponentTransferElement"]
+    },
+    "feComposite": {
+      "categories": ["filterPrimitiveElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "filterAttributes",
+        "'class'",
+        "'style'",
+        "'in'",
+        "'in2'",
+        "'operator'",
+        "'k1'",
+        "'k2'",
+        "'k3'",
+        "'k4'"
+      ],
+      "interfaces": ["SVGFECompositeElement"]
+    },
+    "feConvolveMatrix": {
+      "categories": ["filterPrimitiveElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "filterAttributes",
+        "'class'",
+        "'style'",
+        "'in'",
+        "'order'",
+        "'kernelMatrix'",
+        "'divisor'",
+        "'bias'",
+        "'targetX'",
+        "'targetY'",
+        "'edgeMode'",
+        "'kernelUnitLength'",
+        "'preserveAlpha'"
+      ],
+      "interfaces": ["SVGFEConvolveMatrixElement"]
+    },
+    "feDiffuseLighting": {
+      "categories": ["filterPrimitiveElement"],
+      "content": {
+        "description": {
+          "en-US": "Any number of <a href=\"/en-US/SVG/Element#descriptive\">descriptive elements</a> and exactly one <a href=\"/en-US/SVG/Element#lightsource\">light source element</a>, in any order.",
+          "zh-CN": "\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/SVG/Element#descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u4ee5\u53ca\u4e0d\u591a\u4e0d\u5c11\u4e00\u4e2a<a href=\"/en-US/SVG/Element#lightsource\">\u5149\u6e90\u5143\u7d20</a>\uff0c\u987a\u5e8f\u4e0d\u9650\u3002"
+        }
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "filterAttributes",
+        "'class'",
+        "'style'",
+        "'in'",
+        "'surfaceScale'",
+        "'diffuseConstant'",
+        "'kernelUnitLength'"
+      ],
+      "interfaces": ["SVGFEDiffuseLightingElement"]
+    },
+    "feDisplacementMap": {
+      "categories": ["filterPrimitiveElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "filterAttributes",
+        "'class'",
+        "'style'",
+        "'in'",
+        "'in2'",
+        "'scale'",
+        "'xChannelSelector'",
+        "'yChannelSelector'"
+      ],
+      "interfaces": ["SVGFEDisplacementMapElement"]
+    },
+    "feDistantLight": {
+      "categories": ["lightSourceElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": ["coreAttributes", "'azimuth'", "'elevation'"],
+      "interfaces": ["SVGFEDistantLightElement"]
+    },
+    "feDropShadow": {
+      "categories": ["filterPrimitiveElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;script&gt;", "&lt;set&gt;"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "filterPrimitiveAttributes",
+        "'class'",
+        "'style'",
+        "'in'",
+        "'stdDeviation'",
+        "'dx'",
+        "'dy'"
+      ],
+      "interfaces": ["SVGFEDropShadowElement"]
+    },
+    "feFlood": {
+      "categories": ["filterPrimitiveElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;animateColor&gt;", "&lt;set&gt;"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "filterAttributes",
+        "'class'",
+        "'style'",
+        "'flood-color'",
+        "'flood-opacity'"
+      ],
+      "interfaces": ["SVGFEFloodElement"]
+    },
+    "feFuncA": {
+      "categories": ["noCategory"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": ["coreAttributes", "transferFunctionAttributes"],
+      "interfaces": ["SVGFEFuncAElement"]
+    },
+    "feFuncB": {
+      "categories": ["noCategory"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": ["coreAttributes", "transferFunctionAttributes"],
+      "interfaces": ["SVGFEFuncBElement"]
+    },
+    "feFuncG": {
+      "categories": ["noCategory"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": ["coreAttributes", "transferFunctionAttributes"],
+      "interfaces": ["SVGFEFuncGElement"]
+    },
+    "feFuncR": {
+      "categories": ["noCategory"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": ["coreAttributes", "transferFunctionAttributes"],
+      "interfaces": ["SVGFEFuncRElement"]
+    },
+    "feGaussianBlur": {
+      "categories": ["filterPrimitiveElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "filterAttributes",
+        "'class'",
+        "'style'",
+        "'in'",
+        "'stdDeviation'"
+      ],
+      "interfaces": ["SVGFEGaussianBlurElement"]
+    },
+    "feImage": {
+      "categories": ["filterPrimitiveElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;animateTransform&gt;",
+          "&lt;set&gt;"
+        ]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "filterAttributes",
+        "xLinkAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'preserveAspectRatio'",
+        "'xlink:href'"
+      ],
+      "interfaces": ["SVGFEImageElement"]
+    },
+    "feMerge": {
+      "categories": ["filterPrimitiveElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;feMergeNode&gt;"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "filterAttributes",
+        "'class'",
+        "'style'"
+      ],
+      "interfaces": ["SVGFEMergeElement"]
+    },
+    "feMergeNode": {
+      "categories": ["noCategory"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": ["coreAttributes", "'in'"],
+      "interfaces": ["SVGFEMergeNodeElement"]
+    },
+    "feMorphology": {
+      "categories": ["filterPrimitiveElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "filterAttributes",
+        "'class'",
+        "'style'",
+        "'in'",
+        "'operator'",
+        "'radius'"
+      ],
+      "interfaces": ["SVGFEMorphologyElement"]
+    },
+    "feOffset": {
+      "categories": ["filterPrimitiveElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "filterAttributes",
+        "'class'",
+        "'style'",
+        "'in'",
+        "'dx'",
+        "'dy'"
+      ],
+      "interfaces": ["SVGFEOffsetElement"]
+    },
+    "fePointLight": {
+      "categories": ["lightSourceElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": ["coreAttributes", "'x'", "'y'", "'z'"],
+      "interfaces": ["SVGFEPointLightElement"]
+    },
+    "feSpecularLighting": {
+      "categories": ["filterPrimitiveElement"],
+      "content": {
+        "description": {
+          "en-US": "Exactly one\u00a0<a href=\"/en-US/SVG/Element#lightsource\">light source element</a>\u00a0first and any number of <a href=\"/en-US/SVG/Element#descriptive\">descriptive elements</a>\u00a0in any order.",
+          "zh-CN": "\u6709\u4e14\u53ea\u6709\u4e00\u4e2a<a href=\"/zh-CN/SVG/Element#lightsource\">\u5149\u6e90\u5143\u7d20</a>\u5728\u5148\uff0c\u4efb\u610f\u6570\u91cf\u7684<a href=\"/zh-CN/SVG/Element#descriptive\">\u63cf\u8ff0\u6027\u5143\u7d20</a>\u987a\u5e8f\u4e0d\u9650\u3002"
+        }
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "filterAttributes",
+        "'class'",
+        "'style'",
+        "'in'",
+        "'surfaceScale'",
+        "'specularConstant'",
+        "'specularExponent'",
+        "'kernelUnitLength'"
+      ],
+      "interfaces": ["SVGFESpecularLightingElement"]
+    },
+    "feSpotLight": {
+      "categories": ["lightSourceElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "'x'",
+        "'y'",
+        "'z'",
+        "'pointsAtX'",
+        "'pointsAtY'",
+        "'pointsAtZ'",
+        "'specularExponent'",
+        "'limitingConeAngle'"
+      ],
+      "interfaces": ["SVGFESpotLightElement"]
+    },
+    "feTile": {
+      "categories": ["filterPrimitiveElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "filterAttributes",
+        "'class'",
+        "'style'",
+        "'in'"
+      ],
+      "interfaces": ["SVGFETileElement"]
+    },
+    "feTurbulence": {
+      "categories": ["filterPrimitiveElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "filterAttributes",
+        "'class'",
+        "'style'",
+        "'baseFrequency'",
+        "'numOctaves'",
+        "'seed'",
+        "'stitchTiles'",
+        "'type'"
+      ],
+      "interfaces": ["SVGFETurbulenceElement"]
+    },
+    "filter": {
+      "categories": ["noCategory"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "descriptiveElements",
+          "filterPrimitiveElements",
+          "&lt;animate&gt;",
+          "&lt;set&gt;"
+        ]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "xLinkAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'x'",
+        "'y'",
+        "'width'",
+        "'height'",
+        "'filterRes'",
+        "'filterUnits'",
+        "'primitiveUnits'",
+        "'xlink:href'"
+      ],
+      "interfaces": ["SVGFilterElement"]
+    },
+    "font": {
+      "categories": ["fontElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "descriptiveElements",
+          "&lt;font-face&gt;",
+          "&lt;glyph&gt;",
+          "&lt;hkern&gt;",
+          "&lt;missing-glyph&gt;",
+          "&lt;vkern&gt;"
+        ]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'horiz-origin-x'",
+        "'horiz-origin-y'",
+        "'horiz-adv-x'",
+        "'vert-origin-x'",
+        "'vert-origin-y'",
+        "'vert-adv-y'"
+      ],
+      "interfaces": ["SVGFontElement"]
+    },
+    "font-face": {
+      "categories": ["fontElement"],
+      "content": {
+        "description": {
+          "en-US": "Any number of <a href=\"/en-US/SVG/Element#descriptive\">descriptive elements</a>\u00a0\u00bb and at most one <a href=\"/en-US/docs/Web/SVG/Element/font-face\" title=\"The font-face element corresponds to the CSS @font-face declaration. It defines a font's outer properties.\"><code>&lt;font-face&gt;</code></a> element, in any order."
+        }
+      },
+      "attributes": [
+        "coreAttributes",
+        "'font-family'",
+        "'font-style'",
+        "'font-variant'",
+        "'font-weight'",
+        "'font-stretch'",
+        "'font-size'",
+        "'unicode-range'",
+        "'units-per-em'",
+        "'panose-1'",
+        "'stemv'",
+        "'stemh'",
+        "'slope'",
+        "'cap-height'",
+        "'x-height'",
+        "'accent-height'",
+        "'ascent'",
+        "'descent'",
+        "'widths'",
+        "'bbox'",
+        "'ideographic'",
+        "'alphabetic'",
+        "'mathematical'",
+        "'hanging'",
+        "'v-ideographic'",
+        "'v-alphabetic'",
+        "'v-mathematical'",
+        "'v-hanging'",
+        "'underline-position'",
+        "'underline-thickness'",
+        "'strikethrough-position'",
+        "'strikethrough-thickness'",
+        "'overline-position'",
+        "'overline-thickness'"
+      ],
+      "interfaces": ["SVGFontFaceElement"]
+    },
+    "font-face-format": {
+      "categories": ["fontElement"],
+      "content": {
+        "description": "empty"
+      },
+      "attributes": ["coreAttributes", "'string'"],
+      "interfaces": ["SVGFontFaceFormatElement"]
+    },
+    "font-face-name": {
+      "categories": ["noCategory"],
+      "content": {
+        "description": "empty"
+      },
+      "attributes": ["coreAttributes", "'name'"],
+      "interfaces": ["SVGFontFaceNameElement"]
+    },
+    "font-face-src": {
+      "categories": ["fontElement"],
+      "content": {
+        "description": {
+          "en-US": "One or more of the following elements, in any order:",
+          "zh-CN": "\u4e00\u4e2a\u6216\u591a\u4e2a\u4e0b\u5217\u5143\u7d20\uff0c\u987a\u5e8f\u4e0d\u9650\uff1a"
+        },
+        "elements": ["&lt;font-face-name&gt;", "&lt;font-face-uri&gt;"]
+      },
+      "attributes": ["coreAttributes"],
+      "interfaces": ["SVGFontFaceSrcElement"]
+    },
+    "font-face-uri": {
+      "categories": ["fontElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;font-face-format&gt;"]
+      },
+      "attributes": ["coreAttributes", "xLinkAttributes", "'xlink:href'"],
+      "interfaces": ["SVGFontFaceUriElement"]
+    },
+    "foreignObject": {
+      "categories": ["noCategory"],
+      "content": {
+        "description": "anyElementsOrCharacterData"
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'transform'",
+        "'x'",
+        "'y'",
+        "'width'",
+        "'height'"
+      ],
+      "interfaces": ["SVGForeignObjectElement"]
+    },
+    "g": {
+      "categories": ["containerElement", "structuralElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "shapeElements",
+          "structuralElements",
+          "gradientElements",
+          "&lt;a&gt;",
+          "&lt;altGlyphDef&gt;",
+          "&lt;clipPath&gt;",
+          "&lt;color-profile&gt;",
+          "&lt;cursor&gt;",
+          "&lt;filter&gt;",
+          "&lt;font&gt;",
+          "&lt;font-face&gt;",
+          "&lt;foreignObject&gt;",
+          "&lt;image&gt;",
+          "&lt;marker&gt;",
+          "&lt;mask&gt;",
+          "&lt;pattern&gt;",
+          "&lt;script&gt;",
+          "&lt;style&gt;",
+          "&lt;switch&gt;",
+          "&lt;text&gt;",
+          "&lt;view&gt;"
+        ]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'transform'"
+      ],
+      "interfaces": ["SVGGElement"]
+    },
+    "glyph": {
+      "categories": ["textContentElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "shapeElements",
+          "structuralElements",
+          "gradientElements",
+          "&lt;a&gt;",
+          "&lt;altGlyphDef&gt;",
+          "&lt;clipPath&gt;",
+          "&lt;color-profile&gt;",
+          "&lt;cursor&gt;",
+          "&lt;filter&gt;",
+          "&lt;font&gt;",
+          "&lt;font-face&gt;",
+          "&lt;foreignObject&gt;",
+          "&lt;image&gt;",
+          "&lt;marker&gt;",
+          "&lt;mask&gt;",
+          "&lt;pattern&gt;",
+          "&lt;script&gt;",
+          "&lt;style&gt;",
+          "&lt;switch&gt;",
+          "&lt;text&gt;",
+          "&lt;view&gt;"
+        ]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'d'",
+        "'horiz-adv-x'",
+        "'vert-origin-x'",
+        "'vert-origin-y'",
+        "'vert-adv-y'",
+        "'unicode'",
+        "'glyph-name'",
+        "'orientation'",
+        "'arabic-form'",
+        "'lang'"
+      ],
+      "interfaces": ["SVGGlyphElement"]
+    },
+    "glyphRef": {
+      "categories": ["textContentElement"],
+      "content": {
+        "description": "empty"
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "xLinkAttributes",
+        "'class'",
+        "'style'",
+        "'x'",
+        "'y'",
+        "'dx'",
+        "'dy'",
+        "'glyphRef'",
+        "'format'",
+        "'xlink:href'"
+      ],
+      "interfaces": ["SVGGlyphRefElement"]
+    },
+    "hatch": {
+      "categories": ["neverRenderedElement", "paintServerElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "&lt;hatchpath&gt;",
+          "&lt;script&gt;",
+          "&lt;style&gt;"
+        ]
+      },
+      "attributes": [
+        "coreAttributes",
+        "globalEventAttributes",
+        "presentationAttributes",
+        "styleAttributes",
+        "'x'",
+        "'y'",
+        "'pitch'",
+        "'rotate'",
+        "'hatchUnits'",
+        "'hatchContentUnits'",
+        "'transform'",
+        "'href'"
+      ],
+      "interfaces": ["SVGHatchElement"]
+    },
+    "hatchpath": {
+      "categories": ["noCategory"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "&lt;script&gt;",
+          "&lt;style&gt;"
+        ]
+      },
+      "attributes": [
+        "coreAttributes",
+        "globalEventAttributes",
+        "presentationAttributes",
+        "styleAttributes",
+        "'d'",
+        "'offset'"
+      ],
+      "interfaces": ["SVGHatchpathElement"]
+    },
+    "hkern": {
+      "categories": ["fontElement"],
+      "content": {
+        "description": "empty"
+      },
+      "attributes": ["coreAttributes", "'u1'", "'g1'", "'u2'", "'g2'", "'k'"],
+      "interfaces": ["SVGHKernElement"]
+    },
+    "image": {
+      "categories": ["graphicsElement", "graphicsReferencingElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["animationElements", "descriptiveElements"]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "xLinkAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'transform'",
+        "'x'",
+        "'y'",
+        "'width'",
+        "'height'",
+        "'xlink:href'",
+        "'preserveAspectRatio'"
+      ],
+      "interfaces": ["SVGImageElement"]
+    },
+    "line": {
+      "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["animationElements", "descriptiveElements"]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'transform'",
+        "'x1'",
+        "'x2'",
+        "'y1'",
+        "'y2'"
+      ],
+      "interfaces": ["SVGLineElement"]
+    },
+    "linearGradient": {
+      "categories": ["gradientElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "descriptiveElements",
+          "&lt;animate&gt;",
+          "&lt;animateTransform&gt;",
+          "&lt;set&gt;",
+          "&lt;stop&gt;"
+        ]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "xLinkAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'gradientUnits'",
+        "'gradientTransform'",
+        "'x1'",
+        "'y1'",
+        "'x2'",
+        "'y2'",
+        "'spreadMethod'",
+        "'xlink:href'"
+      ],
+      "interfaces": ["SVGLinearGradientElement"]
+    },
+    "marker": {
+      "categories": ["containerElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "shapeElements",
+          "structuralElements",
+          "gradientElements",
+          "&lt;a&gt;",
+          "&lt;altGlyphDef&gt;",
+          "&lt;clipPath&gt;",
+          "&lt;color-profile&gt;",
+          "&lt;cursor&gt;",
+          "&lt;filter&gt;",
+          "&lt;font&gt;",
+          "&lt;font-face&gt;",
+          "&lt;foreignObject&gt;",
+          "&lt;image&gt;",
+          "&lt;marker&gt;",
+          "&lt;mask&gt;",
+          "&lt;pattern&gt;",
+          "&lt;script&gt;",
+          "&lt;style&gt;",
+          "&lt;switch&gt;",
+          "&lt;text&gt;",
+          "&lt;view&gt;"
+        ]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'viewBox'",
+        "'preserveAspectRatio'",
+        "'transform'",
+        "'markerUnits'",
+        "'refX'",
+        "'refY'",
+        "'markerWidth'",
+        "'markerHeight'",
+        "'orient'"
+      ],
+      "interfaces": ["SVGMarkerElement"]
+    },
+    "mask": {
+      "categories": ["containerElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "shapeElements",
+          "structuralElements",
+          "gradientElements",
+          "&lt;a&gt;",
+          "&lt;altGlyphDef&gt;",
+          "&lt;clipPath&gt;",
+          "&lt;color-profile&gt;",
+          "&lt;cursor&gt;",
+          "&lt;filter&gt;",
+          "&lt;font&gt;",
+          "&lt;font-face&gt;",
+          "&lt;foreignObject&gt;",
+          "&lt;image&gt;",
+          "&lt;marker&gt;",
+          "&lt;mask&gt;",
+          "&lt;pattern&gt;",
+          "&lt;script&gt;",
+          "&lt;style&gt;",
+          "&lt;switch&gt;",
+          "&lt;text&gt;",
+          "&lt;view&gt;"
+        ]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'maskUnits'",
+        "'maskContentUnits'",
+        "'x'",
+        "'y'",
+        "'width'",
+        "'height'"
+      ],
+      "interfaces": ["SVGMaskElement"]
+    },
+    "metadata": {
+      "categories": ["descriptiveElement"],
+      "content": {
+        "description": "anyElementsOrCharacterData"
+      },
+      "attributes": ["coreAttributes"],
+      "interfaces": ["SVGMetadataElement"]
+    },
+    "missing-glyph": {
+      "categories": ["noCategory"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "shapeElements",
+          "structuralElements",
+          "gradientElements",
+          "&lt;a&gt;",
+          "&lt;altGlyphDef&gt;",
+          "&lt;clipPath&gt;",
+          "&lt;color-profile&gt;",
+          "&lt;cursor&gt;",
+          "&lt;filter&gt;",
+          "&lt;font&gt;",
+          "&lt;font-face&gt;",
+          "&lt;foreignObject&gt;",
+          "&lt;image&gt;",
+          "&lt;marker&gt;",
+          "&lt;mask&gt;",
+          "&lt;pattern&gt;",
+          "&lt;script&gt;",
+          "&lt;style&gt;",
+          "&lt;switch&gt;",
+          "&lt;text&gt;",
+          "&lt;view&gt;"
+        ]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'d'",
+        "'horiz-adv-x'",
+        "'vert-origin-x'",
+        "'vert-origin-y'",
+        "'vert-adv-y'"
+      ],
+      "interfaces": ["SVGMissingGlyphElement"]
+    },
+    "mpath": {
+      "categories": ["animationElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["descriptiveElements"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "xLinkAttributes",
+        "'externalResourcesRequired'",
+        "'xlink:href'"
+      ],
+      "interfaces": ["SVGMPathElement"]
+    },
+    "path": {
+      "categories": ["graphicsElement", "shapeElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["animationElements", "descriptiveElements"]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'transform'",
+        "'d'",
+        "'pathLength'"
+      ],
+      "interfaces": ["SVGPathElement"]
+    },
+    "pattern": {
+      "categories": ["containerElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "shapeElements",
+          "structuralElements",
+          "gradientElements",
+          "&lt;a&gt;",
+          "&lt;altGlyphDef&gt;",
+          "&lt;clipPath&gt;",
+          "&lt;color-profile&gt;",
+          "&lt;cursor&gt;",
+          "&lt;filter&gt;",
+          "&lt;font&gt;",
+          "&lt;font-face&gt;",
+          "&lt;foreignObject&gt;",
+          "&lt;image&gt;",
+          "&lt;marker&gt;",
+          "&lt;mask&gt;",
+          "&lt;pattern&gt;",
+          "&lt;script&gt;",
+          "&lt;style&gt;",
+          "&lt;switch&gt;",
+          "&lt;text&gt;",
+          "&lt;view&gt;"
+        ]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "presentationAttributes",
+        "xLinkAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'viewBox'",
+        "'patternUnits'",
+        "'patternContentUnits'",
+        "'patternTransform'",
+        "'x'",
+        "'y'",
+        "'width'",
+        "'height'",
+        "'xlink:href'",
+        "'preserveAspectRatio'"
+      ],
+      "interfaces": ["SVGPatternElement"]
+    },
+    "polygon": {
+      "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["animationElements", "descriptiveElements"]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'transform'",
+        "'points'"
+      ],
+      "interfaces": ["SVGPolygonElement"]
+    },
+    "polyline": {
+      "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["animationElements", "descriptiveElements"]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'transform'",
+        "'points'"
+      ],
+      "interfaces": ["SVGPolylineElement"]
+    },
+    "radialGradient": {
+      "categories": ["gradientElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "descriptiveElements",
+          "&lt;animate&gt;",
+          "&lt;animateTransform&gt;",
+          "&lt;set&gt;",
+          "&lt;stop&gt;"
+        ]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "xLinkAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'gradientUnits'",
+        "'gradientTransform'",
+        "'cx'",
+        "'cy'",
+        "'r'",
+        "'fx'",
+        "'fy'",
+        "'spreadMethod'",
+        "'xlink:href'"
+      ],
+      "interfaces": ["SVGRadialGradientElement"]
+    },
+    "rect": {
+      "categories": ["basicShapeElement", "graphicsElement", "shapeElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["animationElements", "descriptiveElements"]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'transform'",
+        "'x'",
+        "'y'",
+        "'width'",
+        "'height'",
+        "'rx'",
+        "'ry'"
+      ],
+      "interfaces": ["SVGRectElement"]
+    },
+    "script": {
+      "categories": ["noCategory"],
+      "content": {
+        "description": "anyElementsOrCharacterData"
+      },
+      "attributes": [
+        "coreAttributes",
+        "xLinkAttributes",
+        "'externalResourcesRequired'",
+        "'type'",
+        "'xlink:href'"
+      ],
+      "interfaces": ["SVGScriptElement"]
+    },
+    "set": {
+      "categories": ["animationElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["descriptiveElements"]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "animationEventAttributes",
+        "xLinkAttributes",
+        "animationAttributeTargetAttributes",
+        "animationTimingAttributes",
+        "'externalResourcesRequired'",
+        "'to'"
+      ],
+      "interfaces": ["SVGSetElement"]
+    },
+    "stop": {
+      "categories": ["gradientElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["&lt;animate&gt;", "&lt;animateColor&gt;", "&lt;set&gt;"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'offset'",
+        "'stop-color'",
+        "'stop-opacity'"
+      ],
+      "interfaces": ["SVGStopElement"]
+    },
+    "style": {
+      "categories": ["noCategory"],
+      "content": {
+        "description": "anyElementsOrCharacterData"
+      },
+      "attributes": ["coreAttributes", "'type'", "'media'", "'title'"],
+      "interfaces": ["SVGStyleElement"]
+    },
+    "svg": {
+      "categories": ["containerElement", "structuralElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "shapeElements",
+          "structuralElements",
+          "gradientElements",
+          "&lt;a&gt;",
+          "&lt;altGlyphDef&gt;",
+          "&lt;clipPath&gt;",
+          "&lt;color-profile&gt;",
+          "&lt;cursor&gt;",
+          "&lt;filter&gt;",
+          "&lt;font&gt;",
+          "&lt;font-face&gt;",
+          "&lt;foreignObject&gt;",
+          "&lt;image&gt;",
+          "&lt;marker&gt;",
+          "&lt;mask&gt;",
+          "&lt;pattern&gt;",
+          "&lt;script&gt;",
+          "&lt;style&gt;",
+          "&lt;switch&gt;",
+          "&lt;text&gt;",
+          "&lt;view&gt;"
+        ]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "documentEventAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'version'",
+        "'baseProfile'",
+        "'x'",
+        "'y'",
+        "'width'",
+        "'height'",
+        "'preserveAspectRatio'",
+        "'contentScriptType'",
+        "'contentStyleType'",
+        "'viewBox'"
+      ],
+      "interfaces": ["SVGSVGElement"]
+    },
+    "switch": {
+      "categories": ["containerElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "shapeElements",
+          "&lt;a&gt;",
+          "&lt;foreignObject&gt;",
+          "&lt;g&gt;",
+          "&lt;image&gt;",
+          "&lt;svg&gt;",
+          "&lt;switch&gt;",
+          "&lt;text&gt;",
+          "&lt;use&gt;"
+        ]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'transform'",
+        "'allowReorder'"
+      ],
+      "interfaces": ["SVGSwitchElement"]
+    },
+    "symbol": {
+      "categories": ["containerElement", "structuralElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "shapeElements",
+          "structuralElements",
+          "gradientElements",
+          "&lt;a&gt;",
+          "&lt;altGlyphDef&gt;",
+          "&lt;clipPath&gt;",
+          "&lt;color-profile&gt;",
+          "&lt;cursor&gt;",
+          "&lt;filter&gt;",
+          "&lt;font&gt;",
+          "&lt;font-face&gt;",
+          "&lt;foreignObject&gt;",
+          "&lt;image&gt;",
+          "&lt;marker&gt;",
+          "&lt;mask&gt;",
+          "&lt;pattern&gt;",
+          "&lt;script&gt;",
+          "&lt;style&gt;",
+          "&lt;switch&gt;",
+          "&lt;text&gt;",
+          "&lt;view&gt;"
+        ]
+      },
+      "attributes": [
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'preserveAspectRatio'",
+        "'viewBox'"
+      ],
+      "interfaces": ["SVGSymbolElement"]
+    },
+    "text": {
+      "categories": ["graphicsElement", "textContentElement"],
+      "content": {
+        "description": "characterDataElementsInAnyOrder",
+        "elements": [
+          "animationElements",
+          "descriptiveElements",
+          "textContentChildElements",
+          "&lt;a&gt;"
+        ]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'transform'",
+        "'x'",
+        "'y'",
+        "'dx'",
+        "'dy'",
+        "'text-anchor'",
+        "'rotate'",
+        "'textLength'",
+        "'lengthAdjust'"
+      ],
+      "interfaces": ["SVGTextElement"]
+    },
+    "textPath": {
+      "categories": ["textContentElement", "textContentChildElement"],
+      "content": {
+        "description": "characterDataElementsInAnyOrder",
+        "elements": [
+          "descriptiveElements",
+          "&lt;a&gt;",
+          "&lt;altGlyph&gt;",
+          "&lt;animate&gt;",
+          "&lt;animateColor&gt;",
+          "&lt;set&gt;",
+          "&lt;tref&gt;",
+          "&lt;tspan&gt;"
+        ]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "xLinkAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'startOffset'",
+        "'method'",
+        "'spacing'",
+        "'xlink:href'"
+      ],
+      "interfaces": ["SVGTextPathElement"]
+    },
+    "title": {
+      "categories": ["descriptiveElement"],
+      "content": {
+        "description": "anyElementsOrCharacterData"
+      },
+      "attributes": ["coreAttributes", "'class'", "'style'"],
+      "interfaces": ["SVGTitleElement"]
+    },
+    "tref": {
+      "categories": ["textContentElement", "textContentChildElement"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": [
+          "descriptiveElements",
+          "&lt;animate&gt;",
+          "&lt;animateColor&gt;",
+          "&lt;set&gt;"
+        ]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "xLinkAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'xlink:href'"
+      ],
+      "interfaces": ["SVGTRefElement"]
+    },
+    "tspan": {
+      "categories": ["textContentElement", "textContentChildElement"],
+      "content": {
+        "description": "characterDataElementsInAnyOrder",
+        "elements": [
+          "descriptiveElements",
+          "&lt;a&gt;",
+          "&lt;altGlyph&gt;",
+          "&lt;animate&gt;",
+          "&lt;animateColor&gt;",
+          "&lt;set&gt;",
+          "&lt;tref&gt;",
+          "&lt;tspan&gt;"
+        ]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'x'",
+        "'y'",
+        "'dx'",
+        "'dy'",
+        "'rotate'",
+        "'textLength'",
+        "'lengthAdjust'"
+      ],
+      "interfaces": ["SVGTSpanElement"]
+    },
+    "use": {
+      "categories": [
+        "graphicsElement",
+        "graphicsReferencingElement",
+        "structuralElement"
+      ],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["animationElements", "descriptiveElements"]
+      },
+      "attributes": [
+        "conditionalProccessingAttributes",
+        "coreAttributes",
+        "graphicalEventAttributes",
+        "presentationAttributes",
+        "xLinkAttributes",
+        "'class'",
+        "'style'",
+        "'externalResourcesRequired'",
+        "'transform'",
+        "'x'",
+        "'y'",
+        "'width'",
+        "'height'",
+        "'xlink:href'"
+      ],
+      "interfaces": ["SVGUseElement"]
+    },
+    "view": {
+      "categories": ["noCategory"],
+      "content": {
+        "description": "anyNumberOfElementsAnyOrder",
+        "elements": ["descriptiveElements"]
+      },
+      "attributes": [
+        "coreAttributes",
+        "'externalResourcesRequired'",
+        "'viewBox'",
+        "'preserveAspectRatio'",
+        "'zoomAndPan'",
+        "'viewTarget'"
+      ],
+      "interfaces": ["SVGViewElement"]
+    },
+    "vkern": {
+      "categories": ["fontElement"],
+      "content": {
+        "description": "empty"
+      },
+      "attributes": ["coreAttributes", "'u1'", "'g1'", "'u2'", "'g2'", "'k'"],
+      "interfaces": ["SVGVKernElement"]
+    }
+  }
+}

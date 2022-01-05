@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.Array.values
 {{JSRef}}
 
 The **`values()`** method returns a new
-**`Array Iterator`** object that contains the values for each
+_array iterator_ object that contains the values for each
 index in the array.
 
 {{EmbedInteractiveExample("pages/js/array-values.html")}}
@@ -80,7 +80,7 @@ console.log(letter);
 } // undefined
 ```
 
-**reason:** When `next().done=true`  or 
+**reason:** When `next().done=true`  or
 `currentIndex>length` the `for..of` loop ends. See [Iteration
 protocols.](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 

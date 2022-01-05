@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.Intl.Collator.resolvedOptions
 
 The **`Intl.Collator.prototype.resolvedOptions()`** method
 returns a new object with properties reflecting the locale and collation options
-computed during initialization of this {{jsxref("Intl/Collator")}} object.
+computed during initialization of this {{jsxref("Intl.Collator")}} object.
 
 {{EmbedInteractiveExample("pages/js/intl-collator-prototype-resolvedoptions.html")}}
 
@@ -31,7 +31,7 @@ resolvedOptions()
 ### Return value
 
 A new object with properties reflecting the locale and collation options computed
-during the initialization of the given {{jsxref("Intl/Collator")}} object.
+during the initialization of the given {{jsxref("Intl.Collator")}} object.
 
 ## Description
 

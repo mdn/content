@@ -26,8 +26,7 @@ new WebAssembly.Table(tableDescriptor)
   - : An object that can contain the following members:
 
     - _element_
-      - : A string representing the type of value to be stored in the table. At the moment
-        this can only have a value of `"anyfunc"` (functions).
+      - : A string representing the type of value to be stored in the table. This can have a value of `"anyfunc"` (functions) or `"externref"` (host references).
     - _initial_
       - : The initial number of elements of the WebAssembly Table.
     - _maximum {{optional_inline}}_

@@ -71,7 +71,7 @@ Looking for the [`Document`](/en-US/docs/Web/API/Document "The Document interfac
 
 ## Other notable APIs
 
-- The [`setTimeout`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) and [`setInterval`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval) functions were first specified on the [`Window`](/en-US/docs/Web/API/Window) interface in HTML Standard.
+- The [`setTimeout`](/en-US/docs/Web/API/setTimeout) and [`setInterval`](/en-US/docs/Web/API/setInterval) functions were first specified on the [`Window`](/en-US/docs/Web/API/Window) interface in HTML Standard.
 - [XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) makes it possible to send asynchronous HTTP requests.
 - The [CSS Object Model](http://dev.w3.org/csswg/cssom/) abstract CSS rules as objects.
 - [WebWorkers ](https://www.whatwg.org/specs/web-workers/current-work/)allows parallel computation.

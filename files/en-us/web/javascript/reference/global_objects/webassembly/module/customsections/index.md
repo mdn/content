@@ -33,8 +33,7 @@ WebAssembly.Module.customSections(module, sectionName)
 
 ### Return value
 
-A (possibly empty) array containing [`ArrayBuffer`](/en-US/docs/Web/API/ArrayBuffer "The documentation about this has not yet been written; please consider contributing!")
-copies of the contents of all custom sections matching `sectionName`.
+A (possibly empty) array containing {{jsxref("ArrayBuffer")}} copies of the contents of all custom sections matching `sectionName`.
 
 ### Exceptions
 

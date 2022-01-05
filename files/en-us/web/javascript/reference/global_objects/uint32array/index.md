@@ -23,7 +23,7 @@ The **`Uint32Array`** typed array represents an array of 32-bit unsigned integer
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint32Array.BYTES_PER_ELEMENT")}}
   - : Returns a number value of the element size. `4` in the case of an `Uint32Array`.
 - {{jsxref("TypedArray.name", "Uint32Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `Uint32Array` type: "Uint32Array".
+  - : Returns the string value of the constructor name. In the case of the `Uint32Array` type: "`Uint32Array`".
 
 ## Static methods
 

@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Atomics.load
 ---
 {{JSRef}}
 
-The static **`Atomics`\*\***`.load()`\*\*
+The static **`Atomics.load()`**
 method returns a value at a given position in the array.
 
 {{EmbedInteractiveExample("pages/js/atomics-load.html")}}
