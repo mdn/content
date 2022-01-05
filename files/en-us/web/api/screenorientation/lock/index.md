@@ -42,7 +42,7 @@ screen.orientation.lock(orientation)
     - `"portrait-primary"`
       - : The "primary" portrait mode.
         If the natural orientation is a portrait mode (screen height is greater than width), this will be the same as the natural orientation, and correspond to an angle of 0 degrees.
-        If the natural orientation is a landscape mode, then the user agent can choose either portrait orientation as the `portrait-primary` and `portrait-secondary`: one of these will will be assigned the angle of 90 degrees and the other will have an angle of 270 degrees.
+        If the natural orientation is a landscape mode, then the user agent can choose either portrait orientation as the `portrait-primary` and `portrait-secondary`; one of those will be assigned the angle of 90 degrees and the other will have an angle of 270 degrees.
     - `"portrait-secondary"`
       - : The secondary portrait orientation.
         If the natural orientation is a portrait mode, this will have an angle of 180 degrees (in other words, the device is upside down relative to its natural orientation).
@@ -78,7 +78,7 @@ The promise may be rejected with the following exceptions:
 ## Example
 
 This example shows how to lock the screen to the opposite orientation of the current one.
-Note that this example will only work on mobile devices, and other devices that support orientation changes.
+Note that this example will only work on mobile devices and other devices that support orientation changes.
 
 ```html
 <div id="example_container">
