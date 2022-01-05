@@ -8,6 +8,7 @@ tags:
   - NeedsCompatTable
   - Reference
   - structuredClone
+  - Polyfill
 browser-compat: api.structuredClone
 ---
 {{APIRef("HTML DOM")}}
@@ -101,5 +102,6 @@ const transferred = structuredClone(
 
 ## See also
 
+- [A polyfill of `structuredClone`](https://github.com/zloirock/core-js#structuredclone) is available in [`core-js`](https://github.com/zloirock/core-js)
 - [Structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
 - [Structured clone polyfill](https://github.com/ungap/structured-clone)
