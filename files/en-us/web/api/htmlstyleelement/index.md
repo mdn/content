@@ -28,7 +28,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLStyleElement.disabled")}}
   - : Is a boolean value reflecting the HTML attribute representing whether or not the stylesheet is disabled (true) or not (false).
 - {{domxref("HTMLStyleElement.sheet")}} {{readonlyInline}}
-  - : Returns the {{domxref("StyleSheet")}} object associated with the given element, or `null` if there is none
+  - : Returns the {{domxref("CSSStyleSheet")}} object associated with the given element, or `null` if there is none
 - {{domxref("HTMLStyleElement.scoped")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Is a boolean value indicating if the element applies to the whole document (`false`) or only to the parent's sub-tree (`true`).
 
