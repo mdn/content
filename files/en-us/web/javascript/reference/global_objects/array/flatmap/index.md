@@ -78,14 +78,21 @@ var arr = [1, 2, 3, 4];
 
 arr.flatMap(x => [x, x * 2]);
 // is equivalent to
-arr.reduce((acc, x) => acc.concat([x, x * 2]), []);
+var n = arr.length;
+var acc = new Array(n * 2);
+for (let i = 0; i < n; i++){
+	var x = arr[i];
+	acc[i * 2] = x;
+	acc[i * 2 + 1] = x * 2;
+}
 // [1, 2, 2, 4, 3, 6, 4, 8]
 ```
 
-Note, however, that this is inefficient and should be avoided for large arrays: in each
-iteration, it creates a new temporary array that must be garbage-collected, and it
-copies elements from the current accumulator array into a new array instead of just
-adding the new elements to the existing array.
+Note that in this particular case the `flatMap` approach is slower than the
+for-loop approach — due to the creation of temporary arrays that must be
+garbage collected, as well as the return array not needing to be frequently
+resized. However, `flatMap` may still be the correct solution in cases where
+its flexibility and readability are desired.
 
 ## Examples
 
