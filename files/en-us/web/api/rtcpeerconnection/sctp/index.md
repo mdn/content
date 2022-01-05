@@ -9,6 +9,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnection.sctp
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`sctp`** property on the
@@ -37,12 +38,12 @@ channels, or `null` if SCTP negotiation hasn't happened.
 var pc = new RTCPeerConnection();
 
 var channel = pc.createDataChannel("Mydata");
-channel.onopen = function(event) {
-  channel.send('sending a message');
-}
-channel.onmessage = function(event) {
+channel.onopen = function (event) {
+  channel.send("sending a message");
+};
+channel.onmessage = function (event) {
   console.log(event.data);
-}
+};
 
 // Determine the largest message size that can be sent
 
@@ -60,7 +61,7 @@ var maxMessageSize = sctp.maxMessageSize;
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection")}}
 - {{domxref("RTCDataChannel")}}
 - {{Glossary("SCTP")}}

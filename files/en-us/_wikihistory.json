@@ -1861,14 +1861,6 @@
       "sushant1221"
     ]
   },
-  "Glossary/Client_hints": {
-    "modified": "2019-07-01T18:32:07.538Z",
-    "contributors": [
-      "Malvoz",
-      "jswisher",
-      "estelle"
-    ]
-  },
   "Glossary/Closure": {
     "modified": "2019-03-23T23:10:57.372Z",
     "contributors": [
@@ -59142,44 +59134,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/MediaSessionAction": {
-    "modified": "2020-10-15T22:32:38.938Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaSessionActionDetails": {
-    "modified": "2020-10-15T22:29:13.391Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaSessionActionDetails/action": {
-    "modified": "2020-10-15T22:29:15.064Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaSessionActionDetails/fastSeek": {
-    "modified": "2020-10-15T22:29:15.752Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaSessionActionDetails/seekOffset": {
-    "modified": "2020-10-15T22:29:15.264Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaSessionActionDetails/seekTime": {
-    "modified": "2020-10-15T22:29:15.353Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/API/MediaSource": {
     "modified": "2020-10-15T21:24:31.806Z",
     "contributors": [
@@ -59771,18 +59725,6 @@
   },
   "Web/API/MediaStreamTrackAudioSourceNode/MediaStreamTrackAudioSourceNode": {
     "modified": "2020-10-15T22:20:28.581Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaStreamTrackAudioSourceOptions": {
-    "modified": "2020-10-15T22:20:28.948Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaStreamTrackAudioSourceOptions/mediaStreamTrack": {
-    "modified": "2020-10-15T22:20:28.881Z",
     "contributors": [
       "Sheppy"
     ]
@@ -64486,12 +64428,6 @@
       "fscholz",
       "jpmedley",
       "rolfedh"
-    ]
-  },
-  "Web/API/NotificationAction": {
-    "modified": "2020-10-15T22:21:29.272Z",
-    "contributors": [
-      "NotWoods"
     ]
   },
   "Web/API/NotificationEvent": {
@@ -93286,33 +93222,6 @@
       "anastasia",
       "hhillen",
       "SteveLee"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/ARIA_Technique_Template": {
-    "modified": "2019-03-24T00:16:39.839Z",
-    "contributors": [
-      "julianosilvaa",
-      "Sheppy",
-      "anastasia",
-      "hhillen"
-    ]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role": {
-    "modified": "2019-08-04T13:01:30.861Z",
-    "contributors": [
-      "vamsikrishnareddybevara",
-      "codelemur",
-      "duduindo",
-      "yuheiy",
-      "sounakpal",
-      "dkocho4",
-      "latpaw",
-      "jameshopkins",
-      "SueSmith",
-      "Sheppy",
-      "anastasia",
-      "Ken Saundders",
-      "hhillen"
     ]
   },
   "Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role": {
@@ -123412,6 +123321,14 @@
       "anthony-geoghegan",
       "teoli",
       "kohei.yoshino"
+    ]
+  },
+  "Web/HTTP/Client_hints": {
+    "modified": "2019-07-01T18:32:07.538Z",
+    "contributors": [
+      "Malvoz",
+      "jswisher",
+      "estelle"
     ]
   },
   "Web/HTTP/Compression": {

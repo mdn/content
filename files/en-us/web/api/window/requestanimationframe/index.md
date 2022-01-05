@@ -87,8 +87,9 @@ const element = document.getElementById('some-element-you-want-to-animate');
 let start, previousTimeStamp;
 
 function step(timestamp) {
-  if (start === undefined)
+  if (start === undefined) {
     start = timestamp;
+    }
   const elapsed = timestamp - start;
 
   if (previousTimeStamp !== timestamp) {

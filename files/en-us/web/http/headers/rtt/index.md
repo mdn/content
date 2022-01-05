@@ -13,7 +13,7 @@ browser-compat: http.headers.rtt
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The **`RTT`** {{Glossary("Client hints","network client hint")}} request header field provides the approximate round trip time on the application layer, in milliseconds. The RTT hint, unlike transport layer RTT, includes server processing time.
+The **`RTT`** [Client hint](/en-US/docs/Web/HTTP/Client_hints) request header field provides the approximate round trip time on the application layer, in milliseconds. The RTT hint, unlike transport layer RTT, includes server processing time.
 
 <table class="properties">
   <tbody>
@@ -21,7 +21,7 @@ The **`RTT`** {{Glossary("Client hints","network client hint")}} request header 
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        {{Glossary("Client hints","Client hint")}}
+        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>

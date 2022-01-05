@@ -44,7 +44,7 @@ The markup for the custom controls now looks as follows:
 
 ### Related CSS alteration
 
-The previous article set the `display` property of the video controls to `block` in order to display them. This has now been changed to use a [`data-state` attribute](http://toddmotto.com/stop-toggling-classes-with-js-use-behavior-driven-dom-manipulation-with-data-states/), which this code already uses to handle its [fullscreen implementation](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player#fullscreen).
+The previous article set the `display` property of the video controls to `block` in order to display them. This has now been changed to use a [`data-state` attribute](https://ultimatecourses.com/blog/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states), which this code already uses to handle its [fullscreen implementation](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player#fullscreen).
 
 This "data-state" idea is also used for setting the current state of buttons within the video control set, which allows specific state styling.
 

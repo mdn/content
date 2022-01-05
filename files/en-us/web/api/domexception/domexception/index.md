@@ -6,6 +6,7 @@ tags:
   - Constructor
   - DOMException
   - Reference
+  - Polyfill
 browser-compat: api.DOMException.DOMException
 ---
 {{ APIRef("DOM") }}
@@ -70,3 +71,7 @@ button.onclick = function() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [A polyfill of `DOMException` constructor](https://github.com/zloirock/core-js#domexception) is available in [`core-js`](https://github.com/zloirock/core-js)

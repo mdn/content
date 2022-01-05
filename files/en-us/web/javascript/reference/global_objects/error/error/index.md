@@ -5,6 +5,7 @@ tags:
   - Constructor
   - JavaScript
   - Reference
+  - Polyfill
 browser-compat: javascript.builtins.Error.Error
 ---
 {{JSRef}}
@@ -78,6 +79,7 @@ For a more detailed example see [Error > Differentiate between similar errors](/
 
 ## See also
 
+- [A polyfill of `Error`](https://github.com/zloirock/core-js#ecmascript-error) with modern behavior like support `cause` is available in [`core-js`](https://github.com/zloirock/core-js)
 - {{JSxRef("Statements/throw", "throw")}}
 - {{JSxRef("Statements/try...catch", "try...catch")}}
 - [Error causes](https://v8.dev/features/error-cause) (v8.dev/features)

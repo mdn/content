@@ -12,7 +12,7 @@ browser-compat: api.IDBIndex.getAllKeys
 {{ APIRef("IndexedDB") }}
 
 The **`getAllKeys()`** method of the {{domxref("IDBIndex")}}
-interface instantly retrieves the primary keys of all objects inside the index,
+interface asynchronously retrieves the primary keys of all objects inside the index,
 setting them as the `result` of the request object.
 
 ## Syntax

@@ -17,7 +17,7 @@ The **`TextMetrics`** interface represents the dimensions of a piece of text in 
 - {{domxref("TextMetrics.width")}} {{readonlyInline}}
   - : Is a `double` giving the calculated width of a segment of inline text in CSS pixels. It takes into account the current font of the context.
 - {{domxref("TextMetrics.actualBoundingBoxLeft")}} {{readonlyInline}}
-  - : Is a `double` giving the distance from the alignment point given by the {{domxref("CanvasRenderingContext2D.textAlign")}} property to the left side of the bounding rectangle of the given text, in CSS pixels. The distance is measured parallel to the baseline.
+  - : Is a `double` giving the distance parallel to the baseline from the alignment point given by the {{domxref("CanvasRenderingContext2D.textAlign")}} property to the left side of the bounding rectangle of the given text, in CSS pixels; positive numbers indicating a distance going left from the given alignment point.
 - {{domxref("TextMetrics.actualBoundingBoxRight")}} {{readonlyInline}}
   - : Is a `double` giving the distance from the alignment point given by the {{domxref("CanvasRenderingContext2D.textAlign")}} property to the right side of the bounding rectangle of the given text, in CSS pixels. The distance is measured parallel to the baseline.
 - {{domxref("TextMetrics.fontBoundingBoxAscent")}} {{readonlyInline}}

@@ -31,7 +31,7 @@ var file = document.getElementById('fileItem').files[0];
   <tbody>
     <tr>
       <td>
-        <code>File <a href="#item()">item</a>(index);</code>
+        <code>File <a href="#item">item</a>(index);</code>
       </td>
     </tr>
   </tbody>

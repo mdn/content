@@ -68,4 +68,4 @@ This will give you an output in your terminal in the following way:
 - [Compiling from C/C++ to WebAssembly](/en-US/docs/WebAssembly/C_to_wasm) — tools like Binaryen/Emscripten both compile your source code to wasm, and create the API code needed to run the module in a JavaScript context. Find out more about how to use them.
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API) — read this if you want to find out more about how the WebAssembly API code works.
 - [Text format](https://webassembly.github.io/spec/core/text/index.html) — more explanation of the text format, on the WebAssembly GitHub repo.
-- [wast-loader](https://github.com/xtuc/webassemblyjs/tree/master/packages/wast-loader) — a loader for WebPack that takes care of all of this for you.
+- [wast-loader](https://github.com/xtuc/webassemblyjs/tree/master/packages/wast-loader) — a loader for webpack that takes care of all of this for you.

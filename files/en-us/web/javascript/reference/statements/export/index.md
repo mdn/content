@@ -54,7 +54,7 @@ export { name1 as default, … };
 
 // Aggregating modules
 export * from …; // does not set the default export
-export * as name1 from …; // Draft ECMAScript® 2O21
+export * as name1 from …; // ECMAScript® 2O20
 export { name1, name2, …, nameN } from …;
 export { import1 as name1, import2 as name2, …, nameN } from …;
 export { default, … } from …;

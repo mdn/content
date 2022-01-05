@@ -13,7 +13,7 @@ browser-compat: http.headers.downlink
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The **`Downlink`** {{Glossary("Client hints","network client hint")}} request header field provides the approximate bandwidth of the client's connection to the server, in Mbps.
+The **`Downlink`** [Client hint](/en-US/docs/Web/HTTP/Client_hints) request header field provides the approximate bandwidth of the client's connection to the server, in Mbps.
 
 <table class="properties">
   <tbody>
@@ -21,7 +21,7 @@ The **`Downlink`** {{Glossary("Client hints","network client hint")}} request he
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        {{Glossary("Client hints","Client hint")}}
+        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>

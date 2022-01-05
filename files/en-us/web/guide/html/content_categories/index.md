@@ -9,7 +9,7 @@ tags:
   - NeedsUpdate
   - Web
 ---
-Every [HTML](/en-US/docs/Web/HTML) element is a member of one or more **content categories** — these categories group elements that share common characteristics. This is a loose grouping (it doesn't actually create a relationship among elements of these categories), but they help define and describe the categories' shared behavior and their associated rules, especially when you come upon their intricate details. It's also possible for elements to not be a member of _any_ of these categories.
+Most [HTML](/en-US/docs/Web/HTML) elements are a member of one or more **content categories** — these categories group elements that share common characteristics. This is a loose grouping (it doesn't actually create a relationship among elements of these categories), but they help define and describe the categories' shared behavior and their associated rules, especially when you come upon their intricate details. It's also possible for elements to not be a member of _any_ of these categories.
 
 There are three types of content categories:
 
@@ -38,8 +38,8 @@ The flow elements are: {{HTMLElement("a")}}, {{HTMLElement("abbr")}}, {{HTMLElem
 A few other elements belong to this category, but only if a specific condition is fulfilled:
 
 - {{HTMLElement("area")}}, if it is a descendant of a {{HTMLElement("map")}} element
-- {{HTMLElement("link")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes#attr-itemprop) attribute is present
-- {{HTMLElement("meta")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes#attr-itemprop) attribute is present
+- {{HTMLElement("link")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
+- {{HTMLElement("meta")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
 - {{HTMLElement("style")}}, if the {{deprecated_inline}}{{htmlattrxref("scoped","style")}} attribute is present
 
 ### Sectioning content
@@ -72,9 +72,9 @@ A few other elements belong to this category, but only if a specific condition i
 - {{HTMLElement("area")}}, if it is a descendant of a {{HTMLElement("map")}} element
 - {{HTMLElement("del")}}, if it contains only phrasing content
 - {{HTMLElement("ins")}}, if it contains only phrasing content
-- {{HTMLElement("link")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes#attr-itemprop) attribute is present
+- {{HTMLElement("link")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
 - {{HTMLElement("map")}}, if it contains only phrasing content
-- {{HTMLElement("meta")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes#attr-itemprop) attribute is present
+- {{HTMLElement("meta")}}, if the [itemprop](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute is present
 
 ### Embedded content
 

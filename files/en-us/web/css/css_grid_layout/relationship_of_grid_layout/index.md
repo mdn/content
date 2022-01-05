@@ -510,7 +510,7 @@ In the following markup, I have a grid and the first item on the grid is set to 
 
 {{ EmbedLiveSample('Grid_layout_with_nested_child_elements', '400', '440') }}
 
-### Using display_contents
+### Using `display: contents`
 
 If I now add `display:` `contents` to the rules for `box1`, the box for that item vanishes and the sub-items now become grid items and lay themselves out using the auto-placement rules.
 

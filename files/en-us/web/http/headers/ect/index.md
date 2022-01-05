@@ -13,7 +13,7 @@ browser-compat: http.headers.ect
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The **`ECT`** {{Glossary("Client hints","network client hint")}} request header field indicates the {{Glossary("effective connection type")}}: `slow-2g`, `2g`, `3g`, `4g`.
+The **`ECT`** [Client hint](/en-US/docs/Web/HTTP/Client_hints) request header field indicates the {{Glossary("effective connection type")}}: `slow-2g`, `2g`, `3g`, `4g`.
 
 <table class="properties">
   <tbody>
@@ -21,7 +21,7 @@ The **`ECT`** {{Glossary("Client hints","network client hint")}} request header 
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        {{Glossary("Client hints","Client hint")}}
+        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>

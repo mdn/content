@@ -26,10 +26,6 @@ WebSocket.close(code);
 ```
 
 ```js
-WebSocket.close(reason);
-```
-
-```js
 WebSocket.close(code, reason);
 ```
 

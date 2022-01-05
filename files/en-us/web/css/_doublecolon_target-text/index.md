@@ -32,7 +32,6 @@ The **`::target-text`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/
 ::target-text {
   background-color: rebeccapurple;
   color: white;
-  font-weight: bold;
 }
 ```
 

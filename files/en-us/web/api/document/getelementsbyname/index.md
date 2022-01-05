@@ -32,16 +32,19 @@ var elements = document.getElementsByName(name);
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<title>Example: using document.getElementsByName</title>
-
-<input type="hidden" name="up">
-<input type="hidden" name="down">
-
-<script>
-  var up_names = document.getElementsByName("up");
-  console.log(up_names[0].tagName); // displays "INPUT"
-</script>
+  <head>
+    <title>Example: using document.getElementsByName</title>
+  </head>
+  <body>
+    <input type="hidden" name="up" />
+    <input type="hidden" name="down" />
+  </body>
 </html>
+```
+
+```js
+var up_names = document.getElementsByName("up");
+console.log(up_names[0].tagName); // displays "INPUT"
 ```
 
 ## Notes

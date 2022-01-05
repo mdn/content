@@ -68,7 +68,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLAreaElement.toString()")}}
-  - : Returns a {{domxref("USVString")}} containing the whole URL of the script executed in the {{domxref("Worker")}}. It is a synonym for {{domxref("HTMLAreaElement.href")}}.
+  - : Returns a {{domxref("USVString")}} containing the whole URL. It is a synonym for {{domxref("HTMLAreaElement.href")}}.
 
 ## Specifications
 

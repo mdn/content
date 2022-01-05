@@ -16,8 +16,6 @@ The **`scrollbar-width`** property allows the author to set the maximum thicknes
 
 {{EmbedInteractiveExample("pages/css/scrollbar-width.html")}}
 
-{{cssinfo}}
-
 ## Syntax
 
 ```css

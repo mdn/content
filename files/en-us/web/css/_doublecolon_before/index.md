@@ -193,6 +193,10 @@ li[aria-current='step']::after {
 
 {{EmbedLiveSample('Special_characters', 400, 200)}}
 
+## Accessibility concerns
+
+Using a `::before` pseudo-element to add content is discouraged, as it is not reliably accessible to screen readers.
+
 ## Specifications
 
 {{Specifications}}
