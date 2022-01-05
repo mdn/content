@@ -20,45 +20,43 @@ The **`Intl.Segmenter()`** constructor creates [`Intl.Segmenter`](/en-US/docs/We
 
 ```js
 new Intl.segmenter()
-new Intl.segmenter(locale)
-new Intl.segmenter(locale, options)
+new Intl.segmenter(locales)
+new Intl.segmenter(locales, options)
 ```
 
 ### Parameters
 
-- `locale` {{ optional_inline }}
-  - : A string value indicating the locale by which graphemes, words, and sentences should be determined.  Locales are described using [BCP 47](https://datatracker.ietf.org/doc/html/bcp47) language tags (see the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) for a full list).  If no `locale` value is supplied, the runtime's default locale is used instead.
+- `locales` {{ optional_inline }}
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) page.
 - `options` {{ optional_inline }}
   - : An object with some or all of the following properties:
     - `granularity` {{ optional_inline }}
       - : A string.  Possible values are:
-        - `grapheme` (default)
+        - `"grapheme"` (default)
           - : Split the input into segments at grapheme cluster (user-perceived character) boundaries, as determined by the locale.
-        - `word`
+        - `"word"`
           - : Split the input into segments at word boundaries, as determined by the locale.
-        - `sentence`
+        - `"sentence"`
           - : Split the input into segments at sentence boundaries, as determined by the locale.
     - `localeMatcher` {{ optional_inline }}
-      - : A string which sets the method used to determine the value of the `locale` property.  Possible values are:
-        - `best fit` (default)
-          - : Locales are matched using an implementation-dependent algorithm.
-        - `lookup`
-          - : Locales are matched using the algorithm described in [section 3.4 of RFC 4647](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4).
+      - : The locale matching algorithm to use. Possible values are "`lookup`" and "`best fit`"; the default is "`best fit`". For information about this option, see the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation) page.
 
 
 ### Return value
 
-A new `Intl.Segmenter` [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) instance.
+A new [`Intl.Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) instance.
 
 ## Examples
 
 ### Basic usage
 
-The following example shows how to count words in a string using the Spanish language.
+The following example shows how to count words in a string using the Japanese language (where splitting the string using `String` methods would have given an incorrect result).
 
 ```js
-const spanishSegmenter = new Intl.Segmenter("es", {granularity: "word"});
-console.log([...spanishSegmenter.segment(text)].filter(segment => segment.isWordLike).length);
+const text = "吾輩は猫である。名前はたぬき。";
+const japaneseSegmenter = new Intl.Segmenter("ja-JP", {granularity: "word"});
+console.log([...japaneseSegmenter.segment(text)].filter(segment => segment.isWordLike).length);
+// logs 8 as the text is segmented as '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
 ```
 
 ## Specifications

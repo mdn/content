@@ -45,11 +45,33 @@ The resulting object has the following properties:
 
 ## Examples
 
+### Basic usage
+
 ```js
 const spanishSegmenter = new Intl.Segmenter("es", {granularity: "sentence"});
 const options = spanishSegmenter.resolvedOptions();
-console.log(options.locale) // "es"
-console.log(options.granularity) // "sentence"
+console.log(options.locale); // "es"
+console.log(options.granularity); // "sentence"
+```
+
+### Default granularity
+
+```js
+const spanishSegmenter = new Intl.Segmenter("es");
+const options = spanishSegmenter.resolvedOptions();
+console.log(options.locale); // "es"
+console.log(options.granularity); // "grapheme"
+```
+
+### Fallback locale
+
+```js
+const banSegmenter = new Intl.Segmenter("ban");
+const options = banSegmenter.resolvedOptions();
+console.log(options.locale); 
+// "fr" on a runtime where the Balinese locale
+// is not supported and French is the default locale
+console.log(options.granularity); // "grapheme"
 ```
 
 ## Specifications

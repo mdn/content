@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Segments.containing
 ---
+{{JSRef}}
 
 The **`.containing()`** method returns an object describing the segment in the string that includes the code unit at the specified index.
 
@@ -52,19 +53,19 @@ let current = undefined;
 current = segments.containing();
 // → { index: 0, segment: "Allons", isWordLike: true }
 
-current = segments.containing(4)
+current = segments.containing(4);
 // → { index: 0, segment: "Allons", isWordLike: true }
 
-current = segments.containing(6)
+current = segments.containing(6);
 // → { index: 6, segment: "-", isWordLike: false }
 
-current = segments.containing(current.index + current.segment.length)
+current = segments.containing(current.index + current.segment.length);
 // → { index: 7, segment: "y", isWordLike: true }
 
-current = segments.containing(current.index + current.segment.length)
+current = segments.containing(current.index + current.segment.length);
 // → { index: 8, segment: "!", isWordLike: false }
 
-current = segments.containing(current.index + current.segment.length)
+current = segments.containing(current.index + current.segment.length);
 // → undefined
 ```
 
