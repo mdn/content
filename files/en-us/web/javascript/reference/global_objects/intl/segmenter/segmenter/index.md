@@ -14,6 +14,8 @@ browser-compat: javascript.builtins.Intl.Segmenter.constructor
 
 The **`Intl.Segmenter()`** constructor creates {{jsxref('Intl/Segmenter','Intl.Segmenter')}} objects that enable locale-sensitive text segmentation.
 
+{{EmbedInteractiveExample("pages/js/intl-segmenter.html", "taller")}}
+
 ## Syntax
 
 ```js

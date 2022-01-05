@@ -10,6 +10,8 @@ browser-compat: javascript.builtins.Intl.Segmenter
 The **`@@iterator`** method is part of [the iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol),
 which returns a new iterator object that can iterate over the entries in an `Intl.Segementer` object.  Each entry is returned as an object.
 
+{{EmbedInteractiveExample("pages/js/intl-segments-prototype-@@iterator.html", "taller")}}
+
 ## Syntax
 
 ```js

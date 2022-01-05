@@ -10,6 +10,8 @@ browser-compat: javascript.builtins.Intl.Segmenter
 
 The **`Intl.Segmenter`** object enables language-sensitive text segmentation.
 
+{{EmbedInteractiveExample("pages/js/intl-segmenter.html", "taller")}}
+
 ## Constructor
 
 - {{jsxref("Intl.Segmenter/segmenter", "Intl.Segmenter()")}}
