@@ -67,7 +67,7 @@ function resolveXIncludes(docu) {
                             var contentType = request.getResponseHeader('Content-Type');
 
                             //text/xml; charset="utf-8" // Send to get headers first?
-                            // Fix: We test for file extensions as well in case file:// doesn't return content type (as seems to be the case); can some other tool be uesd in FF (or IE) to detect encoding of local file? Probably just need BOM test since other encodings must be specified
+                            // Fix: We test for file extensions as well in case file:// doesn't return content type (as seems to be the case); can some other tool be used in FF (or IE) to detect encoding of local file? Probably just need BOM test since other encodings must be specified
                             var patternXML = /\.(svg|xml|xul|rdf|xhtml)$/;
                             if ((contentType && contentType.match(/[text|application]\/(.*)\+?xml/)) || (href.indexOf('file://') === 0 && href.match(patternXML))) {
                                 /* Grab the response as text (see below for that routine) and then find encoding within*/

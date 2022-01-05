@@ -108,7 +108,7 @@ This is a good example of a classic layout supporting some design creativity. Si
 
 **The [Opera de Paris](https://www.operadeparis.fr/en/saison-2014-2015/opera/la-boheme-puccini).**
 
-![An example of a tricky layout.](screenshot-opera.jpg)        ![This is a 2 column layout but the header is overlaping the main content.](screenshot-opera-overlay.jpg)
+![An example of a tricky layout.](screenshot-opera.jpg)        ![This is a 2 column layout but the header is overlapping the main content.](screenshot-opera-overlay.jpg)
 
 Basically a two-column layout, but you'll notice many tweaks here and there that visually break up the layout. Especially, the header overlaps the image of the main content. The way the curve of the header's menu ties in with the curve at the bottom of the image, the header and main content look like one thing even though they're technically completely different. The Opera example looks more complex than the MICA example, but it's actually easier to implement (all right, "easy" _is_ a relative concept).
 
