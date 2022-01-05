@@ -268,7 +268,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
    We have three distinct controls along with their labels, each contained inside a `<p>`.
    The first is a drop-down menu ({{htmlelement("select")}}) for selecting credit card type.
    The second is an `<input>` element of type `tel`, for entering a credit card number; while we could have used the `number` type, we don't want the number's spinner UI.
-   The last one is an `<input>` element of type `text`, for entering the expiration date of the card; this includes a  _placholder_ attribute indicating the correct format, and a _pattern_ that tests that the entered date has the correct format.
+   The last one is an `<input>` element of type `text`, for entering the expiration date of the card; this includes a  _placeholder_ attribute indicating the correct format, and a _pattern_ that tests that the entered date has the correct format.
    These newer input types are reintroduced in [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
 
    Enter the following below the previous section:
