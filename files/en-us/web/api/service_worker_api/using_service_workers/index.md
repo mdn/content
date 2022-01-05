@@ -357,7 +357,7 @@ self.addEventListener('fetch', (event) => {
       }).catch(() => {
         return caches.match('./sw-test/gallery/myLittleVader.jpg');
       })
-    });
+    })
   );
 });
 ```
