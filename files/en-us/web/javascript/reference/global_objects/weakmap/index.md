@@ -12,7 +12,7 @@ browser-compat: javascript.builtins.WeakMap
 ---
 {{JSRef}}
 
-A **`WeakMap`** is an [ephemeron](https://en.wikipedia.org/wiki/Ephemeron) of key/value pairs. Its keys must be objects, with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures#javascript_types). Unlike true [weak references](https://en.wikipedia.org/wiki/Weak_reference), in an ephemeron, an object refers strongly to its contents as long as the ephemeron’s key is not garbage collected, but weakly from then on.
+A **`WeakMap`** is a collection of key/value pairs which does not create strong references to its keys. That is, presence as a key in a `WeakMap` does not prevent an object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere.
 
 `WeakMap` and [`WeakRef`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) provide orthogonal features. `WeakMap` allows associating data to objects in a way that doesn't prevent the key objects from being collected, even if the values reference the keys. However, a `WeakMap` doesn't allow observing the liveness of its keys, which is why it doesn't allow enumeration. [`WeakRef`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef), being a true weak reference, allows directly observing the liveness of its keys.
 
