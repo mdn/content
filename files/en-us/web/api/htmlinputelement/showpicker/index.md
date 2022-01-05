@@ -14,7 +14,7 @@ browser-compat: api.HTMLInputElement.showPicker
 
 The **`HTMLInputElement.showPicker()`** method returns a promise that resolves
 when a browser picker is shown to the user. It must be called in response to a
-user gesture such as touch or mouse click, otherwise it will reject. For
+user gesture such as a touch gesture or mouse click; otherwise it will reject. For
 security reasons, it also rejects when it's called in a cross-origin iframe.
 
 ## Syntax
