@@ -2,8 +2,11 @@
 title: Intl.Segmenter.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf
 tags:
-  - JavaScript
+  - Internationalization
   - Intl
+  - JavaScript
+  - Localization
+  - Reference
 browser-compat: javascript.builtins.Intl.Segmenter.supportedLocalesOf
 ---
 {{JSRef}}
@@ -23,15 +26,13 @@ Intl.Segmenter.supportedLocalesOf(locales, options)
 
 - `locales`
   - : A string with a BCP 47 language tag, or an array of such strings. For the general
-    form of the `locales` argument, see the {{jsxref("Intl",
-		"Intl", "#Locale_identification_and_negotiation", 1)}} page.
+    form of the `locales` argument, see the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) page.
 - `options` {{optional_inline}}
   - : An object that may have the following property:
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are
         "`lookup`" and "`best fit`"; the default is
-        "`best fit`". For information about this option, see the
-        {{jsxref("Intl", "Intl", "#Locale_negotiation", 1)}} page.
+        "`best fit`". For information about this option, see the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation) page.
 
 ### Return value
 

@@ -1,13 +1,16 @@
 ---
-title: Intl.Segmenter Segments.prototype.containing()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segments/containing
+title: Intl.Segments.prototype.containing()
+slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing
 tags:
-  - JavaScript
+  - Internationalization
   - Intl
-browser-compat: javascript.builtins.Intl.Segmenter
+  - JavaScript
+  - Localization
+  - Reference
+browser-compat: javascript.builtins.Intl.Segments.containing
 ---
 
-The **`.containing()`** method returns a {{jsxref('Intl.Segmenter/SegmentData','SegmentData object','','nomono')}} describing the segment in the string that includes the code unit at the specified index.
+The **`.containing()`** method returns an object describing the segment in the string that includes the code unit at the specified index.
 
 {{EmbedInteractiveExample("pages/js/intl-segments-prototype-containing.html", "taller")}}
 
@@ -24,8 +27,16 @@ containing(codeUnitIndex)
 
 ### Return Value
 
-A {{jsxref('Intl.Segmenter/SegmentData','SegmentData object','','nomono')}} describing the segment of the original string, or `undefined` if the supplied index value is out of bounds.
+An object describing the segment of the original string with the following properties, or `undefined` if the supplied index value is out of bounds.
 
+- `segment`
+  - : A string containing the segment extracted from the original input string.
+- `index`
+  - : The code unit index in the original input string at which the segment begins.
+- `input`
+  - : The complete input string that was segmented.
+- `isWordLike`
+  - : A boolean value only if `granularity` is `"word"`; otherwise, `undefined`.  If `granularity` is `"word"`, then `isWordLike` is `true` when the segment is word-like (i.e., consists of letters/numbers/ideographs/etc.); otherwise, `false`.
 
 ## Examples
 

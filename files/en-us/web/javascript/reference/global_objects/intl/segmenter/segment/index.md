@@ -2,15 +2,18 @@
 title: Intl.Segmenter.prototype.segment()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
 tags:
-  - JavaScript
+  - Internationalization
   - Intl
+  - JavaScript
+  - Localization
+  - Reference
 browser-compat: javascript.builtins.Intl.Segmenter.segment
 ---
 {{JSRef}}
 
 The **`Intl.Segmenter.prototype.segment()`** method segments a string according to the locale and granularity of this [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object.
 
-{{EmbedInteractiveExample("intl-segmenter-prototype-segment.html", "taller")}}
+{{EmbedInteractiveExample("pages/js/intl-segmenter-prototype-segment.html", "taller")}}
 
 ## Syntax
 
@@ -21,11 +24,11 @@ segment(input)
 ### Parameters
 
 - `input`
-  - : The text to be segmented as a {{jsxref("String")}}.
+  - : The text to be segmented as a [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).
 
 ### Return value
 
-A new Iterable {{jsxref('Intl.Segmenter/Segments','Segments instance','','nomono')}} containing the segments of the input string, using the Segmenter's locale and granularity.
+A new Iterable [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) containing the segments of the input string, using the Segmenter's locale and granularity.
 
 ## Examples
 

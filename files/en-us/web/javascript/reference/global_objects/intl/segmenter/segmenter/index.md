@@ -12,7 +12,7 @@ tags:
 browser-compat: javascript.builtins.Intl.Segmenter.constructor
 ---
 
-The **`Intl.Segmenter()`** constructor creates {{jsxref('Intl/Segmenter','Intl.Segmenter')}} objects that enable locale-sensitive text segmentation.
+The **`Intl.Segmenter()`** constructor creates [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) objects that enable locale-sensitive text segmentation.
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter.html", "taller")}}
 
@@ -48,7 +48,7 @@ new Intl.segmenter(locale, options)
 
 ### Return value
 
-A new `Intl.Segmenter` {{jsxref('Intl/Segmenter/segments','Segments')}} instance.
+A new `Intl.Segmenter` [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) instance.
 
 ## Examples
 

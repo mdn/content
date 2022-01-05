@@ -2,8 +2,11 @@
 title: Intl.Segmenter.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions
 tags:
-  - JavaScript
+  - Internationalization
   - Intl
+  - JavaScript
+  - Localization
+  - Reference
 browser-compat: javascript.builtins.Intl.Segmenter.resolvedOptions
 ---
 {{JSRef}}
@@ -25,7 +28,7 @@ None.
 ### Return value
 
 A new object with properties reflecting the locale and collation options computed
-during the initialization of the given {{jsxref("Intl.Segmenter")}} object.
+during the initialization of the given [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object.
 
 ## Description
 

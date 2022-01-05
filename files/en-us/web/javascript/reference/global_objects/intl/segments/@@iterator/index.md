@@ -1,10 +1,13 @@
 ---
-title: Intl.Segmenter Segments.prototype[@@iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segments/@@iterator
+title: Intl.Segments.prototype[@@iterator]()
+slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments/@@iterator
 tags:
-  - JavaScript
+  - Internationalization
   - Intl
-browser-compat: javascript.builtins.Intl.Segmenter
+  - JavaScript
+  - Localization
+  - Reference
+browser-compat: javascript.builtins.Intl.Segments.@@iterator
 ---
 
 The **`@@iterator`** method is part of [the iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol),
