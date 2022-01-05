@@ -88,10 +88,10 @@ for (let i = 0; i < n; i++){
 // [1, 2, 2, 4, 3, 6, 4, 8]
 ```
 
-Note that in this particular case the flatMap approach is slower than the for
-loop approach due to the creation of temporary arrays that must be
-garbage-collected, as well as the return array not needing to be frequently
-resized.  However, flatMap may still be the correct solution in cases where
+Note that in this particular case the `flatMap` approach is slower than the
+for-loop approach — due to the creation of temporary arrays that must be
+garbage collected, as well as the return array not needing to be frequently
+resized. However, `flatMap` may still be the correct solution in cases where
 its flexibility and readability are desired.
 
 ## Examples
