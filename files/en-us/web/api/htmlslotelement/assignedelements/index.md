@@ -17,7 +17,7 @@ The **`assignedElements()`** method of the {{domxref("HTMLSlotElement")}}
 interface returns a sequence of the elements assigned to this slot (and no
 other nodes).
 
-If the `flatten` option is set to true, it returns a sequence of both the elements assigned to this slot, as well as the elements assigned to any other slots that are descendants of this slot — and if no assigned elements are found, it returns the slot's fallback content.
+If the `flatten` option is set to `true`, it returns a sequence of both the elements assigned to this slot, as well as the elements assigned to any other slots that are descendants of this slot. If no assigned elements are found, it returns the slot's fallback content.
 
 ## Syntax
 

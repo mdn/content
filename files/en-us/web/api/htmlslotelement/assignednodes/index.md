@@ -14,7 +14,7 @@ browser-compat: api.HTMLSlotElement.assignedNodes
 
 The **`assignedNodes()`** method of the {{domxref("HTMLSlotElement")}} interface returns a sequence of the nodes assigned to this slot.
 
-If the `flatten` option is set to true, it returns a sequence of both the nodes assigned to this slot, as well as the nodes assigned to any other slots that are descendants of this slot — and if no assigned nodes are found, it returns the slot's fallback content.
+If the `flatten` option is set to `true`, it returns a sequence of both the nodes assigned to this slot, as well as the nodes assigned to any other slots that are descendants of this slot. If no assigned nodes are found, it returns the slot's fallback content.
 
 ## Syntax
 
