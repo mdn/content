@@ -816,7 +816,7 @@ To prevent this problem, some browsers (specifically, Chrome and Firefox) have c
 the default value of the `passive` option to `true` for the
 {{event("touchstart")}} and {{event("touchmove")}} events on the document-level nodes
 {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. This
-prevents the event listener from being called, so it can't block page rendering while
+prevents the event listener from [canceling the event](/en-US/docs/Web/API/Event/preventDefault), so it can't block page rendering while
 the user is scrolling.
 
 > **Note:** See the compatibility table below if you need to know which
