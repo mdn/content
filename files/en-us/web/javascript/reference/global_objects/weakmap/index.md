@@ -34,7 +34,7 @@ Such an implementation would have two main inconveniences:
 By contrast, in a `WeakMap`, a key object refers strongly to its contents as long as the key is not garbage collected, but weakly from then on. As such, a `WeakMap`:
 
 - does not prevent garbage collection, which eventually removes references to the key object
-- avoids preventing garbage collection of values in the map
+- avoids preventing garbage collection of any values in the map whose key objects are still referenced from somewhere other than a `WeakMap`
 
 A `WeakMap` can be a particularly useful construct when mapping keys to information about the key that is valuable _only if_ the key has not been garbage collected.
 
