@@ -12,9 +12,9 @@ browser-compat: javascript.builtins.WeakMap
 ---
 {{JSRef}}
 
-A **`WeakMap`** is a collection of key/value pairs which does not create strong references to its keys. That is, presence as a key in a `WeakMap` does not prevent an object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere.
+A **`WeakMap`** is a collection of key/value pairs whose keys must be objects, with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures#javascript_types), and which does not create strong references to its keys. That is, an object’s presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere.
 
-`WeakMap` and [`WeakRef`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) provide orthogonal features. `WeakMap` allows associating data to objects in a way that doesn't prevent the key objects from being collected, even if the values reference the keys. However, a `WeakMap` doesn't allow observing the liveness of its keys, which is why it doesn't allow enumeration. [`WeakRef`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef), being a true weak reference, allows directly observing the liveness of its keys.
+`WeakMap` allows associating data to objects in a way that doesn't prevent the key objects from being collected, even if the values reference the keys. However, a `WeakMap` doesn't allow observing the liveness of its keys, which is why it doesn't allow enumeration; if a `WeakMap` exposed any method to obtain a list of its keys, the list would depend on the state of garbage collection, introducing non-determinism. If you want to have a list of keys, you should use a {{jsxref("Map")}} rather than a `WeakMap`.
 
 You can learn more about `WeakMap` in the [WeakMap object](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object) section of th [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections) guide.
 
