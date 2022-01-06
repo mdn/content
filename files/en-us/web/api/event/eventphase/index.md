@@ -56,13 +56,13 @@ flow. Possible values are:
 </ul>
 <input type="checkbox" id="chCapture" />
 <label for="chCapture">Use Capturing</label>
-  <div id="d1">d1
-    <div id="d2">d2
-      <div id="d3">d3
-        <div id="d4">d4</div>
-      </div>
+<div id="d1">d1
+  <div id="d2">d2
+    <div id="d3">d3
+      <div id="d4">d4</div>
     </div>
   </div>
+</div>
 <div id="divInfo"></div>
 ```
 
