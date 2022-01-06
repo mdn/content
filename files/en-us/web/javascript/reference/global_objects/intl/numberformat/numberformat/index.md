@@ -171,6 +171,19 @@ new Intl.NumberFormat(locales, options)
         - "`min2`" display grouping separators when there are at least 2 digits in a group;
         - "`true`" alias for `always`
 
+    - `roundingMode`
+      - : Exposes custom options for rounding modes reflecting the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html). the default is `halfExpand`.
+
+        - "`ceil`" toward +∞
+        - "`floor`" toward -∞
+        - "`expand`" away from 0
+        - "`trunc`" toward 0
+        - "`halfCeil`" ties toward +∞
+        - "`halfFloor`" ties toward -∞
+        - "`halfExpand`" ties away from 0
+        - "`halfTrunc`" ties toward 0
+        - "`halfEven`" ties toward the value with even cardinality
+
     The following properties fall into two groups:
     `minimumIntegerDigits`, `minimumFractionDigits`, and
     `maximumFractionDigits` in one group,
