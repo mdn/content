@@ -13,7 +13,7 @@ browser-compat: api.Navigator.windowControlsOverlay
 
 The **`windowControlsOverlay`** property of the {{domxref("Navigator")}}
 interface returns the {{domxref("WindowControlsOverlay")}} interface, which exposes
-information about the title bar geometry in desktop Progressive Web Apps.
+information about the title bar geometry in desktop Progressive Web Apps that use the [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API).
 
 Progressive Web Apps installed on desktop Operating Systems can opt-in to the
 Window Controls Overlay feature by using the `window-controls-overlay` value in the

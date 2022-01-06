@@ -11,7 +11,9 @@ browser-compat: api.WindowControlsOverlay.geometrychange_event
 ---
 {{APIRef("EyeDropper API")}}
 
-The `geometrychange` event is fired when the position, size, or visibility of a desktop Progressive Web App's title bar area changes.
+The `geometrychange` event is fired when the position, size, or visibility of a Progressive Web App's title bar area changes.
+
+This only applies to Progressive Web Apps installed on desktop operating systems and use the [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API).
 
 ## Syntax
 
@@ -19,20 +21,20 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 
 ```js
 addEventListener('geometrychange', (event) => { });
-geometrychange = (event) => { });
+ongeometrychange = (event) => { });
 ```
 
 ## Event type
 
-A {{domxref("GeometryChangeEvent")}}. Inherits from {{domxref("Event")}}.
-{{InheritanceDiagram(500, 70, 50, "GeometryChangeEvent")}}
+A {{domxref("WindowControlsOverlayGeometryChangeEvent")}}. Inherits from {{domxref("Event")}}.
+{{InheritanceDiagram(600, 70, 50, "WindowControlsOverlayGeometryChangeEvent")}}
 
 ## Event properties
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
 - `titlebarAreaRect`
-  - : A {{domxref("DOMRect")}} representing the position and size of the title bar.
+  - : A {{domxref("DOMRect")}} representing the position and size of the title bar area within the app's content.
 - `visible`
   - : A {{Glossary("Boolean")}} that indicates whether the window controls overlay is visible or not.
 
