@@ -27,7 +27,7 @@ formatRange(startRange, endRange)
 
 A string representing the pluralization category of the `number`, can be one
 of `zero`, `one`, `two`, `few`,
-`many` or `other`.
+`many` or `other`, that are relevant for the locale whose localization is specified in [LDML Language Plural Rules](https://unicode-org.github.io/cldr-staging/charts/37/supplemental/language_plural_rules.html#rules).
 
 ## Description
 
@@ -39,10 +39,10 @@ options of a {{jsxref("Intl.PluralRules")}} object.
 ### Using selectRange()
 
 ```js
- new Intl.PluralRules('pt-BR').selectRange(102, 201);
+ new Intl.PluralRules('sl').selectRange(102, 201);
 // → 'few'
 
- new Intl.PluralRules('pt-BR').selectRange(102, 102);
+ new Intl.PluralRules('pt').selectRange(102, 102);
 // → 'other'
 ```
 
