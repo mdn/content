@@ -78,8 +78,8 @@ div {
 #divInfo {
   margin: 18px;
   padding: 8px;
-  background-color:white;
-  font-size:80%;
+  background-color: white;
+  font-size: 80%;
 }
 ```
 
@@ -105,24 +105,24 @@ window.onload = function () {
 
 function RemoveListeners() {
   for (let i = 0; i < divs.length; i++) {
-    let d = divs[i]
-    if (d.id != "divInfo") {
-      d.removeEventListener("click", OnDivClick, true)
-      d.removeEventListener("click", OnDivClick, false)
+    let div = divs[i]
+    if (div.id != 'divInfo') {
+      div.removeEventListener('click', OnDivClick, true)
+      div.removeEventListener('click', OnDivClick, false)
     }
   }
 }
 
 function AddListeners() {
   for (let i = 0; i < divs.length; i++) {
-    let d = divs[i]
-    if (d.id != "divInfo") {
+    let div = divs[i]
+    if (div.id != 'divInfo') {
         if (chCapture.checked) {
-            d.addEventListener("click", OnDivClick, true)
+            div.addEventListener('click', OnDivClick, true)
         }
         else {
-            d.addEventListener("click", OnDivClick, false)
-            d.onmousemove = function () { clear = true }
+            div.addEventListener('click', OnDivClick, false)
+            div.onmousemove = function () { clear = true }
         }
     }
   }
@@ -136,10 +136,10 @@ function OnDivClick(e) {
   if (e.eventPhase == 2)
     e.currentTarget.style.backgroundColor = 'red';
     const level =
-        e.eventPhase == 0 ? "none" :
-        e.eventPhase == 1 ? "capturing" :
-        e.eventPhase == 2 ? "target" :
-        e.eventPhase == 3 ? "bubbling" : "error";
+        e.eventPhase == 0 ? 'none' :
+        e.eventPhase == 1 ? 'capturing' :
+        e.eventPhase == 2 ? 'target' :
+        e.eventPhase == 3 ? 'bubbling' : 'error';
     const p = document.createElement('p')
     p.textContent = `${e.currentTarget.id}; eventPhase: ${level}`;
     divInfo.appendChild(p);
@@ -147,8 +147,8 @@ function OnDivClick(e) {
 
 function Clear() {
   for (let i = 0; i < divs.length; i++) {
-    if (divs[i].id != "divInfo") {
-      divs[i].style.backgroundColor = (i & 1) ? "#f6eedb" : "#cceeff"
+    if (divs[i].id != 'divInfo') {
+      divs[i].style.backgroundColor = (i & 1) ? '#f6eedb' : '#cceeff'
     }
   }
   divInfo.textContent = '';
