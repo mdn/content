@@ -747,7 +747,7 @@ can respond to the change).
 const els = document.getElementsByTagName('*');
 
 // Case 1
-for(let i=0 ; i < els.length; i++){
+for(let i = 0; i < els.length; i++){
   els[i].addEventListener("click", function(e){/*do something*/}, false);
 }
 
@@ -756,7 +756,7 @@ function processEvent(e){
   /* do something */
 }
 
-for(let i=0 ; i < els.length; i++){
+for(let i = 0 ; i < els.length; i++){
   els[i].addEventListener("click", processEvent, false);
 }
 ```
@@ -772,37 +772,38 @@ anonymous functions the loop might create.) In the second case, it's possible to
 because `processEvent` is the function reference.
 
 Actually, regarding memory consumption, the lack of keeping a function reference is not
-the real issue; rather it is the lack of keeping a STATIC function reference. In both
-problem-cases below, a function reference is kept, but since it is redefined on each
-iteration, it is not static. In the third case, the reference to the anonymous function
+the real issue; rather it is the lack of keeping a *static* function reference. In both
+problem-cases below, a function reference is kept, but it is redefined on each
+iteration. In the third case, the reference to the anonymous function
 is being reassigned with each iteration. In the fourth case, the entire function
-definition is unchanging, but it is still being repeatedly defined as if new (unless it
-was \[\[promoted]] by the compiler) and so is not static. Therefore, though appearing to
-be \[\[Multiple identical event listeners]], in both cases each iteration will instead
-create a new listener with its own unique reference to the handler function. However,
-since the function definition itself does not change, the SAME function may still be
-called for every duplicate listener (especially if the code gets optimized.)
-
-Also in both cases, because the function reference was kept but repeatedly redefined
-with each add, the remove-statement from above can still remove a listener, but now only
-the last one added.
+definition is unchanging, but it is still being repeatedly defined as if new. So neither is static. Therefore, though appearing to
+be multiple identical event listeners, in both cases each iteration will instead
+create a new listener with its own unique reference to the handler function.
 
 ```js
-// For illustration only: Note "MISTAKE" of [j] for [i] thus causing desired events to all attach to SAME element
+const els = document.getElementsByTagName('*');
+
+function processEvent(e){
+  /* do something */
+}
+
+// For illustration only: Note the mistake of [j] for [i]. We are registering all event listeners to the first element
 
 // Case 3
-for(let i=0, j=0 ; i<els.length ; i++){
-  /* do lots of stuff with j */
-  els[j].addEventListener("click", processEvent = function(e){/*do something*/}, false);
+for(let i = 0, j = 0 ; i < els.length ; i++){
+  els[j].addEventListener("click", processEvent = function(e){/* do something */}, false);
 }
 
 // Case 4
-for(let i=0, j=0 ; i<els.length ; i++){
-  /* do lots of stuff with j */
-  function processEvent(e){/*do something*/};
+for(let i = 0, j = 0 ; i < els.length ; i++){
+  function processEvent(e){/* do something */};
   els[j].addEventListener("click", processEvent, false);
 }
 ```
+
+Also in both case 3 and case 4, because the function reference was kept but repeatedly redefined
+with each `addEventListener()`, `removeEventListener("click", processEvent, false)` can still remove a listener, but now only
+the last one added.
 
 ### Improving scrolling performance with passive listeners
 
