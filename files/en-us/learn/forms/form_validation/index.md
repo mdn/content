@@ -358,7 +358,7 @@ This renders as follows:
 
 {{EmbedLiveSample("Full_example", "100%", 420)}}
 
-See [Validation-related attributes](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation#validation-related_attributes) for a complete list of attributes that can be used to constrain input values and the input types that support them.
+See [Validation-related attributes](/en-US/docs/Web/Guide/HTML/Constraint_validation#validation-related_attributes) for a complete list of attributes that can be used to constrain input values and the input types that support them.
 
 > **Note:** You can find this example live on GitHub as [full-example.html](https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html) (see also the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/full-example.html).)
 
@@ -601,7 +601,7 @@ Here is the live result:
 
 The constraint validation API gives you a powerful tool to handle form validation, letting you have enormous control over the user interface above and beyond what you can do with HTML and CSS alone.
 
-> **Note:** For further information, see our [Constraint validation guide](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation), and the [Constraint Validation API](/en-US/docs/Web/API/Constraint_validation) reference.
+> **Note:** For further information, see our [Constraint validation guide](/en-US/docs/Web/Guide/HTML/Constraint_validation), and the [Constraint Validation API](/en-US/docs/Web/API/Constraint_validation) reference.
 
 ### Validating forms without a built-in API
 

@@ -23,9 +23,10 @@ object.hostname = string;
 ## Examples
 
 ```js
-// Let's an <a id="myAnchor" href="/en-US/docs/Location.hostname"> element be in the document
-var anchor = document.getElementById("myAnchor");
-var result = anchor.hostname; // Returns:'developer.mozilla.org'
+var anchor = document.createElement("a");
+anchor.href = "https://developer.mozilla.org:4097/en-US/docs/Location.hostname";
+
+console.log(anchor.hostname);  // developer.mozilla.org
 ```
 
 ## Specifications

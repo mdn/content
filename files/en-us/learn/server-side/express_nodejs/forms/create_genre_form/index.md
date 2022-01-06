@@ -47,7 +47,7 @@ Find the exported `genre_create_post()` controller method and replace it with th
 // Handle Genre create on POST.
 exports.genre_create_post =  [
 
-  // Validate and santize the name field.
+  // Validate and sanitize the name field.
   body('name', 'Genre name required').trim().isLength({ min: 1 }).escape(),
 
   // Process request after validation and sanitization.

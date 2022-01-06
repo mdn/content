@@ -64,15 +64,15 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}, and implements tho
   - : A boolean value indicating whether an import script can be executed in user agents that support module scripts.
 - {{DOMxRef("HTMLElement.nonce")}}
   - : Returns the cryptographic number used once that is used by Content Security Policy to determine whether a given fetch will be allowed to proceed.
-- {{DOMxRef("HTMLElement.offsetHeight")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLElement.offsetHeight")}} {{ReadOnlyInline}}
   - : Returns a `double` containing the height of an element, relative to the layout.
-- {{DOMxRef("HTMLElement.offsetLeft")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLElement.offsetLeft")}} {{ReadOnlyInline}}
   - : Returns a `double`, the distance from this element's left border to its `offsetParent`'s left border.
-- {{DOMxRef("HTMLElement.offsetParent")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLElement.offsetParent")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("Element")}} that is the element from which all offset calculations are currently computed.
-- {{DOMxRef("HTMLElement.offsetTop")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLElement.offsetTop")}} {{ReadOnlyInline}}
   - : Returns a `double`, the distance from this element's top border to its `offsetParent`'s top border.
-- {{DOMxRef("HTMLElement.offsetWidth")}} {{Experimental_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("HTMLElement.offsetWidth")}} {{ReadOnlyInline}}
   - : Returns a `double` containing the width of an element, relative to the layout.
 - {{DOMxRef("HTMLElement.properties")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : Returns a {{DOMxRef("HTMLPropertiesCollection")}}…

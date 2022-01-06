@@ -64,7 +64,7 @@ Then insert a copy of this element into the document, along with a standard `<p>
 In the CSS we first include the following rules:
 
 ```css
-// Give the two elements distinctive backgrounds
+/* Give the two elements distinctive backgrounds */
 p {
   background: yellow;
 }
@@ -73,7 +73,7 @@ simple-custom {
   background: cyan;
 }
 
-// Both the custom and the built-in element are given italic text
+/* Both the custom and the built-in element are given italic text */
 :defined {
   font-style: italic;
 }
