@@ -35,7 +35,7 @@ The **`Intl.Segmenter`** object enables locale-sensitive text segmentation, enab
 
 ## Examples
 
-### Basic usage and difference with String.prototype.split()
+### Basic usage and difference from String.prototype.split()
 
 If we were to use [`String.prototype.split(" ")`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) in order to segment a text in words, we would not get the correct result if the locale of the text does not use whitespaces between words (which is the case for Japanese, Chinese, Thai, Lao, Khmer, Myanmar, etc.).
 
