@@ -25,12 +25,13 @@ _The `WindowControlsOverlayGeometryChangeEvent()` constructor also inherits argu
 {{domxref("Event.Event", "Event()")}}._
 
 - _type_
-  - : Is a {{domxref("DOMString")}} representing the name of the type of the
-    `WindowControlsOverlayGeometryChangeEvent`. It is case-sensitive.
-- `visible`
-  - : Is a boolean flag that's true when the titleBarAreaRect's values are not 0.
-- `titleBarAreaRect`
-  - : Is a {{domxref("DOMRect")}} representing the position and size of the title bar area.
+  - : A {{domxref("DOMString")}} indicating the event type.
+- `options`
+  - : An object with the following properties:
+  - `visible`
+    - : A boolean flag that's true when the `titleBarAreaRect` object's values are not 0.
+  - `titleBarAreaRect`
+    - : A {{domxref("DOMRect")}} representing the position and size of the title bar area.
 
 ## Specifications
 
