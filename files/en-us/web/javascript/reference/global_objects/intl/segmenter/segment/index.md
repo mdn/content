@@ -28,7 +28,7 @@ segment(input)
 
 ### Return value
 
-A new iterable [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) containing the segments of the input string, using the segmenter's locale and granularity.
+A new iterable [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) object containing the segments of the input string, using the segmenter's locale and granularity.
 
 ## Examples
 
