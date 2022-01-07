@@ -92,22 +92,22 @@ let clear = false,
     useCapture = false;
 
 window.onload = function () {
-  divInfo = document.getElementById('divInfo')
-  divs = document.getElementsByTagName('div')
-  chCapture = document.getElementById('chCapture')
+  divInfo = document.getElementById('divInfo');
+  divs = document.getElementsByTagName('div');
+  chCapture = document.getElementById('chCapture');
   chCapture.onclick = function () {
-    removeListeners()
-    addListeners()
-  }
-  clear()
-  addListeners()
+    removeListeners();
+    addListeners();
+  };
+  clear();
+  addListeners();
 }
 
 function removeListeners() {
   for (const div of divs) {
     if (div.id != 'divInfo') {
-      div.removeEventListener('click', OnDivClick, true)
-      div.removeEventListener('click', OnDivClick, false)
+      div.removeEventListener('click', OnDivClick, true);
+      div.removeEventListener('click', OnDivClick, false);
     }
   }
 }
@@ -116,11 +116,11 @@ function addListeners() {
   for (const div of divs) {
     if (div.id != 'divInfo') {
         if (chCapture.checked) {
-            div.addEventListener('click', onDivClick, true)
+            div.addEventListener('click', onDivClick, true);
         }
         else {
-            div.addEventListener('click', onDivClick, false)
-            div.onmousemove = function () { clear = true }
+            div.addEventListener('click', onDivClick, false);
+            div.onmousemove = function () { clear = true };
         }
     }
   }
@@ -128,28 +128,28 @@ function addListeners() {
 
 function onDivClick(e) {
   if (clear) {
-    clear()
-    clear = false
+    clear();
+    clear = false;
   }
   if (e.eventPhase == 2)
-    e.currentTarget.style.backgroundColor = 'red'
+    e.currentTarget.style.backgroundColor = 'red';
     const level =
         e.eventPhase == 0 ? 'none' :
         e.eventPhase == 1 ? 'capturing' :
         e.eventPhase == 2 ? 'target' :
-        e.eventPhase == 3 ? 'bubbling' : 'error'
-    const paragraph = document.createElement('p')
-    paragraph.textContent = `${e.currentTarget.id}; eventPhase: ${level}`
-    divInfo.appendChild(paragraph)
+        e.eventPhase == 3 ? 'bubbling' : 'error';
+    const para = document.createElement('p');
+    para.textContent = `${e.currentTarget.id}; eventPhase: ${level}`;
+    divInfo.appendChild(paragraph);
 }
 
 function clear() {
   for (const div of divs) {
     if (div.id != 'divInfo') {
-      div.style.backgroundColor = (i & 1) ? '#f6eedb' : '#cceeff'
+      div.style.backgroundColor = (i & 1) ? '#f6eedb' : '#cceeff';
     }
   }
-  divInfo.textContent = ''
+  divInfo.textContent = '';
 }
 ```
 
