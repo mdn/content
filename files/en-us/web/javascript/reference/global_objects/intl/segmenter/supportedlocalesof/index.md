@@ -18,8 +18,8 @@ The **`Intl.Segmenter.supportedLocalesOf()`** method returns an array containing
 ## Syntax
 
 ```js
-Intl.Segmenter.supportedLocalesOf(locales)
-Intl.Segmenter.supportedLocalesOf(locales, options)
+supportedLocalesOf(locales)
+supportedLocalesOf(locales, options)
 ```
 
 ### Parameters
