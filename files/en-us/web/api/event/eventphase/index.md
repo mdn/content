@@ -96,16 +96,15 @@ window.onload = function () {
   divs = document.getElementsByTagName('div')
   chCapture = document.getElementById('chCapture')
   chCapture.onclick = function () {
-    RemoveListeners()
-    AddListeners()
+    removeListeners()
+    addListeners()
   }
-  Clear()
-  AddListeners()
+  clear()
+  addListeners()
 }
 
-function RemoveListeners() {
-  for (let i = 0; i < divs.length; i++) {
-    let div = divs[i]
+function removeListeners() {
+  for (const div of divs) {
     if (div.id != 'divInfo') {
       div.removeEventListener('click', OnDivClick, true)
       div.removeEventListener('click', OnDivClick, false)
@@ -113,45 +112,44 @@ function RemoveListeners() {
   }
 }
 
-function AddListeners() {
-  for (let i = 0; i < divs.length; i++) {
-    let div = divs[i]
+function addListeners() {
+  for (const div of divs) {
     if (div.id != 'divInfo') {
         if (chCapture.checked) {
-            div.addEventListener('click', OnDivClick, true)
+            div.addEventListener('click', onDivClick, true)
         }
         else {
-            div.addEventListener('click', OnDivClick, false)
+            div.addEventListener('click', onDivClick, false)
             div.onmousemove = function () { clear = true }
         }
     }
   }
 }
 
-function OnDivClick(e) {
+function onDivClick(e) {
   if (clear) {
-    Clear()
+    clear()
     clear = false
   }
   if (e.eventPhase == 2)
-    e.currentTarget.style.backgroundColor = 'red';
+    e.currentTarget.style.backgroundColor = 'red'
     const level =
         e.eventPhase == 0 ? 'none' :
         e.eventPhase == 1 ? 'capturing' :
         e.eventPhase == 2 ? 'target' :
-        e.eventPhase == 3 ? 'bubbling' : 'error';
-    const p = document.createElement('p')
-    p.textContent = `${e.currentTarget.id}; eventPhase: ${level}`;
-    divInfo.appendChild(p);
+        e.eventPhase == 3 ? 'bubbling' : 'error'
+    const paragraph = document.createElement('p')
+    paragraph.textContent = `${e.currentTarget.id}; eventPhase: ${level}`
+    divInfo.appendChild(paragraph)
 }
 
-function Clear() {
-  for (let i = 0; i < divs.length; i++) {
-    if (divs[i].id != 'divInfo') {
-      divs[i].style.backgroundColor = (i & 1) ? '#f6eedb' : '#cceeff'
+function clear() {
+  for (const div of divs) {
+    if (div.id != 'divInfo') {
+      div.style.backgroundColor = (i & 1) ? '#f6eedb' : '#cceeff'
     }
   }
-  divInfo.textContent = '';
+  divInfo.textContent = ''
 }
 ```
 
