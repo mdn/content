@@ -34,11 +34,11 @@ void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
     {{domxref("HTMLCanvasElement")}}, an {{domxref("ImageBitmap")}}, or an
     {{domxref("OffscreenCanvas")}}.
 - `sx` {{optional_inline}}
-  - : The x-axis coordinate of the top left corner of the sub-rectangle of the source
+  - : The x-axis _int_ coordinate of the top left corner of the sub-rectangle of the source
     `image` to draw into the destination context. Use the 3- or 5-argument syntax
     to omit this argument.
 - `sy` {{optional_inline}}
-  - : The y-axis coordinate of the top left corner of the sub-rectangle of the source
+  - : The y-axis _int_ coordinate of the top left corner of the sub-rectangle of the source
     `image` to draw into the destination context. Use the 3- or 5-argument syntax
     to omit this argument.
 - `sWidth` {{optional_inline}}
