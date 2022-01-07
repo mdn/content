@@ -34,10 +34,11 @@ const input = "Moi ? N'est-ce pas ?";
 const segments = segmenter.segment(input);
 const iterator = segments[Symbol.iterator]();
 
-while (true) {
-  const result = iterator.next();
-  if (result.done) break;
+let result = iterator.next();
+
+while (!result.done) {
   console.log(result.value);
+  result = iterator.next();
 }
 
 /* Logs
