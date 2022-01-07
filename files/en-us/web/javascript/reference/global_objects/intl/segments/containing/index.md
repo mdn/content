@@ -46,7 +46,7 @@ const input = "Allons-y!";
 
 const segmenter = new Intl.Segmenter("fr", {granularity: "word"});
 const segments = segmenter.segment(input);
-const current = undefined;
+let current = undefined;
 
 current = segments.containing();
 // → { index: 0, segment: "Allons", isWordLike: true }
