@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Intl.Segmenter
 ---
 {{JSRef}}
 
-The **`Intl.Segmenter`** object enables locale-sensitive text segmentation, thus allowing to get meaningful items (graphemes, words or sentences) from a string.
+The **`Intl.Segmenter`** object enables locale-sensitive text segmentation, enabling you to get meaningful items (graphemes, words or sentences) from a string.
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter.html", "taller")}}
 
