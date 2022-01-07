@@ -36,7 +36,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLTableSectionElement.deleteRow()")}}
   - : Removes the row, corresponding to the `index` given in parameter, in the section. If the `index` value is `-1` the last row is removed; if it smaller than `-1` or greater than the amount of rows in the collection, a {{DOMxRef("DOMException")}} with the value `IndexSizeError` is raised.
 - {{domxref("HTMLTableSectionElement.insertRow()")}}
-  - : Returns an {{DOMxRef("HTMLTableRowElement")}} representing a new row of the section. It inserts it in the rows collection immediately before the {{HTMLElement("tr")}} element at the given `index` position. If necessary a {{HTMLElement("tbody")}} is created. If the `index` is `-1`, the new row is appended to the collection. If the `index` is smaller than `-1` or greater than the number of rows in the collection, a {{DOMxRef("DOMException")}} with the value `IndexSizeError` is raised.
+  - : Returns an {{DOMxRef("HTMLTableRowElement")}} representing a new row of the section. It inserts it in the rows collection immediately before the {{HTMLElement("tr")}} element at the given `index` position. If the `index` is `-1`, the new row is appended to the collection. If the `index` is smaller than `-1` or greater than the number of rows in the collection, a {{DOMxRef("DOMException")}} with the value `IndexSizeError` is raised.
 
 ## Specifications
 
