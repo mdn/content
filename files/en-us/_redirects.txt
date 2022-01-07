@@ -46,13 +46,10 @@
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_checkbox_role	/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_dialog_role	/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_group_role	/en-US/docs/Web/Accessibility/ARIA/Roles/group_role
-/en-US/docs/ARIA/ARIA_Techniques/Using_the_link_role	/en-US/docs/Web/Accessibility/ARIA/Roles/link_role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_listbox_role	/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_log_role	/en-US/docs/Web/Accessibility/ARIA/Roles/log_role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_presentation_role	/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role
-/en-US/docs/ARIA/ARIA_Techniques/Using_the_progressbar_role	/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_radio_role	/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role
-/en-US/docs/ARIA/ARIA_Techniques/Using_the_slider_role	/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_status_role	/en-US/docs/Web/Accessibility/ARIA/Roles/status_role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_textbox_role	/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role
 /en-US/docs/ARIA/ARIA_Techniques/Using_the_toolbar_role	/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role
@@ -97,13 +94,10 @@
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role	/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role	/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role	/en-US/docs/Web/Accessibility/ARIA/Roles/group_role
-/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_link_role	/en-US/docs/Web/Accessibility/ARIA/Roles/link_role
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role	/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role	/en-US/docs/Web/Accessibility/ARIA/Roles/log_role
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role	/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role
-/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role	/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_radio_role	/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role
-/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role	/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role	/en-US/docs/Web/Accessibility/ARIA/Roles/status_role
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role	/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role
 /en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role	/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role
