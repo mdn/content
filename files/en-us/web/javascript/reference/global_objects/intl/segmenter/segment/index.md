@@ -32,14 +32,14 @@ A new iterable [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/
 
 ```js
 // Create a locale-specific word segmenter
-let segmenter = new Intl.Segmenter("fr", {granularity: "word"});
+const segmenter = new Intl.Segmenter("fr", {granularity: "word"});
 
 // Use it to get an iterator over the segments of a string
-let input = "Moi ? N'est-ce pas ?";
-let segments = segmenter.segment(input);
+const input = "Moi ? N'est-ce pas ?";
+const segments = segmenter.segment(input);
 
 // Use that for segmentation
-for (let {segment, index, isWordLike} of segments) {
+for (const {segment, index, isWordLike} of segments) {
   console.log("segment at code units [%d, %d]: «%s»%s",
     index, index + segment.length,
     segment,

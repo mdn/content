@@ -29,13 +29,13 @@ A new Iterator object.
 ## Examples
 
 ```js
-let segmenter = new Intl.Segmenter("fr", {granularity: "word"});
-let input = "Moi ? N'est-ce pas ?";
-let segments = segmenter.segment(input);
-let iterator = segments[Symbol.iterator]();
+const segmenter = new Intl.Segmenter("fr", {granularity: "word"});
+const input = "Moi ? N'est-ce pas ?";
+const segments = segmenter.segment(input);
+const iterator = segments[Symbol.iterator]();
 
 while (true) {
-  let result = iterator.next();
+  const result = iterator.next();
   if (result.done) break;
   console.log(result.value);
 }

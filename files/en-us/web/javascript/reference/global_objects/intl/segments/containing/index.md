@@ -42,11 +42,11 @@ An object describing the segment of the original string with the following prope
 ```js
 // ┃0 1 2 3 4 5┃6┃7┃8┃9  ← code unit index
 // ┃A l l o n s┃-┃y┃!┃   ← code unit
-let input = "Allons-y!";
+const input = "Allons-y!";
 
-let segmenter = new Intl.Segmenter("fr", {granularity: "word"});
-let segments = segmenter.segment(input);
-let current = undefined;
+const segmenter = new Intl.Segmenter("fr", {granularity: "word"});
+const segments = segmenter.segment(input);
+const current = undefined;
 
 current = segments.containing();
 // → { index: 0, segment: "Allons", isWordLike: true }
