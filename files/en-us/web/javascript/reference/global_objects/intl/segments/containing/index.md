@@ -24,7 +24,7 @@ containing(codeUnitIndex)
 ### Parameters
 
 - `codeUnitIndex` {{ optional_inline }}
-  - : A number specifying the index of the code unit in the original input string.  If the value is omitted, it defaults to `0`.
+  - : A number specifying the index of the code unit in the original input string. If the value is omitted, it defaults to `0`.
 
 ### Return Value
 
