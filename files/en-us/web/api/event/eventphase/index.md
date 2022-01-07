@@ -89,7 +89,7 @@ div {
 let clear = false,
     divInfo = null,
     divs = null,
-    useCapture = false;
+    chCapture = null;
 
 window.onload = function () {
   divInfo = document.getElementById('divInfo');
