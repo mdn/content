@@ -98,6 +98,7 @@ window.onload = function () {
   chCapture.onclick = function () {
     removeListeners();
     addListeners();
+    clearDivs();
   };
   clearDivs();
   addListeners();
@@ -106,8 +107,8 @@ window.onload = function () {
 function removeListeners() {
   for (const div of divs) {
     if (div.id != 'divInfo') {
-      div.removeEventListener('click', OnDivClick, true);
-      div.removeEventListener('click', OnDivClick, false);
+      div.removeEventListener('click', onDivClick, true);
+      div.removeEventListener('click', onDivClick, false);
     }
   }
 }
