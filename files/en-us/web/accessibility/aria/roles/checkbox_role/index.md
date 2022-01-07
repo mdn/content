@@ -80,19 +80,19 @@ The following example creates an otherwise non-semantic checkbox element using C
 
 ```css
 [role="checkbox"] {
-    padding:5px;
+  padding:5px;
 }
 
 [role="checkbox"]:focus {
-    border: 2px solid #0198E1;
+  border: 2px solid #0198E1;
 }
 
 [aria-checked="true"]::before {
-    content: "[x]";
+  content: "[x]";
 }
 
 [aria-checked="false"]::before {
-    content: "[ ]";
+  content: "[ ]";
 }
 ```
 
@@ -100,19 +100,17 @@ The following example creates an otherwise non-semantic checkbox element using C
 
 ```js
 function changeCheckbox(keyCode) {
-    const spacebarKeyCode = 32;
-    if (keyCode && keyCode !== spacebarKeyCode) {
-      return;
-    }
-    let item = document.getElementById('chkPref');
-    switch(item.getAttribute('aria-checked')) {
-        case "true":
-            item.setAttribute('aria-checked', "false");
-            break;
-        case "false":
-            item.setAttribute('aria-checked', "true");
-            break;
-    }
+  const spacebarKeyCode = 32;
+  const item = document.getElementById('chkPref');
+  const checked = item.getAttribute('aria-checked');
+
+  if (keyCode && keyCode !== spacebarKeyCode) {
+    return;
+  } else if (checked === 'true') {
+    item.setAttribute('aria-checked', 'false')
+  } else {
+    item.setAttribute('aria-checked', 'true')
+  }
 }
 ```
 
