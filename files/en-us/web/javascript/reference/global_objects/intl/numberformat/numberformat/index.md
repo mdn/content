@@ -165,14 +165,14 @@ new Intl.NumberFormat(locales, options)
       - : Whether to use grouping separators, such as thousands separators or
         thousand/lakh/crore separators. the default is `auto`.
 
-        - "`always`" display grouping separators even if the locale prefers otherwise.
+        - "`always`" display grouping separators even if the locale prefers otherwise
         - "`auto`" display grouping separators based on the locale preference, which may also be dependent on the currency
         - "`false`" do not display grouping separators
-        - "`min2`" display grouping separators when there are at least 2 digits in a group;
+        - "`min2`" display grouping separators when there are at least 2 digits in a group
         - "`true`" alias for `always`
 
     - `roundingMode`
-      - : Exposes custom options for rounding modes reflecting the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html). the default is `halfExpand`.
+      - : Options for rounding modes reflecting the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html). the default is `halfExpand`.
 
         - "`ceil`" toward +∞
         - "`floor`" toward -∞
@@ -183,6 +183,25 @@ new Intl.NumberFormat(locales, options)
         - "`halfExpand`" ties away from 0
         - "`halfTrunc`" ties toward 0
         - "`halfEven`" ties toward the value with even cardinality
+
+    - `roundingPriority`
+      - : Options for control rounding behavior
+
+        - "`auto`" the significant digits always win a conflict
+        - "`morePrecision`" the result with more precision wins a conflict
+        - "`lessPrecision`" the result with less precision wins a conflict
+
+    - `roundingIncrement`
+      - : A Number in the following list:
+        "`1`", " `2`", "`5`", "`10`", "`20`", " `25`", "`50`", "`100`", "`200`", "`250`", "`500`", "`1000`", "`2000`", "`2500`", " `5000`".
+        > **Note:** `roundingIncrement` option cannot be mixed with significant digits rounding or any setting of `roundingPriority` other than "auto".
+
+    - `trailingZeroDisplay`
+      - : A string expressing the strategy for displaying trailing zeros on whole numbers, the defaults is "`auto`".
+
+        - "`auto`" keep trailing zeros according to minimumFractionDigits and minimumSignificantDigits
+        - "`stripIfInteger`" the result with more precision wins a conflict
+        - "`lessPrecision`" same as "auto", but remove the fraction digits if they are all zero
 
     The following properties fall into two groups:
     `minimumIntegerDigits`, `minimumFractionDigits`, and
