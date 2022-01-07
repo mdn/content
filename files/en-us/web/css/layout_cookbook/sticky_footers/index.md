@@ -49,19 +49,19 @@ The flexbox example starts out in the same way, but we use `display:flex` rather
 
 ## Browser compatibility
 
-#### grid-template-rows
+### grid-template-rows
 
 {{Compat("css.properties.grid-template-rows")}}
 
-#### flex-direction
+### flex-direction
 
 {{Compat("css.properties.flex-direction")}}
 
-#### flex-grow
+### flex-grow
 
 {{Compat("css.properties.flex-grow")}}
 
-#### flex-shrink
+### flex-shrink
 
 {{Compat("css.properties.flex-shrink")}}
 

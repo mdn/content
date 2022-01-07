@@ -22,8 +22,8 @@ whenever an object receives a {{event("message")}} event.
 ## Syntax
 
 ```js
-window.addEventListener('message', function(event) { ... })
-window.onmessage = function(event) { ... }
+window.addEventListener('message', function(event) { /* ... */ })
+window.onmessage = function(event) { /* ... */ }
 ```
 
 ## Specifications

@@ -55,7 +55,7 @@ None.
 ### Exceptions
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Thrown if the CSS value doesn't contain a string value 
+  - : Thrown if the CSS value doesn't contain a string value
     or if the string value can't be converted into the specified unit.
 - `NoModificationAllowedError' {{domxref("DOMException")}}
   - : Thrown if the property is read-only.

@@ -24,7 +24,7 @@ interfaces of the {{domxref("Sensor")}} interface.
 
 ```js
 sensorInstance.onreading = function
-  sensorInstance.addEventListener('reading', function() { ... })
+  sensorInstance.addEventListener('reading', function() { /* ... */ })
 ```
 
 Because {{domxref('Sensor')}} is a base class, `onreading` may only be used

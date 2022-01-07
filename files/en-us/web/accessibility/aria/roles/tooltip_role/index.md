@@ -17,7 +17,7 @@ A `tooltip` is a contextual text bubble that displays a description for an eleme
 
 Tooltips provide contextual information about an element when that owning element receives focus or is hovered over, but is otherwise not visible on the page. The tooltip is displayed automatically, after a brief delay; the user does not request it. While a tooltip can be placed on any content, they generally are tips for tools or controls, such as providing additional content for icons that have brief labels (or no labels at all, which is not accessible!).
 
-A tooltip typically becomes visible, after a short delay of generally one to five seconds, in response to a mouse hover, or after the owning element receives keyboard focus. Just as it is opened automatically, without user request, it is closed automatically when the focus is lost or on mouse out. It should also close when the user presses the <kbd>Escape</kbd> key. 
+A tooltip typically becomes visible, after a short delay of generally one to five seconds, in response to a mouse hover, or after the owning element receives keyboard focus. Just as it is opened automatically, without user request, it is closed automatically when the focus is lost or on mouse out. It should also close when the user presses the <kbd>Escape</kbd> key.
 
 Because the tooltip itself never receives focus and is not in the tabbing order, a tooltip can not contain interactive elements like links, inputs, or buttons.
 
@@ -28,9 +28,9 @@ The use of the ARIA  `tooltip` role is a supplement to the normal browser toolti
 
 Elements with the `tooltip` role should be referenced through the use of [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) before or when the tooltip is displayed. The `aria-describedy` attribute is on the owning element, not on the tooltip.
 
-The tooltip is not considered a popup in terms of the [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) property on the owning element, which is why we used "text bubble" in the introductory definition. 
+The tooltip is not considered a popup in terms of the [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) property on the owning element, which is why we used "text bubble" in the introductory definition.
 
-Though a tooltip may appear and disappear, as its appearance is automatic and not intentionally controlled by the user, the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) role is not supported. 
+Though a tooltip may appear and disappear, as its appearance is automatic and not intentionally controlled by the user, the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) role is not supported.
 
 The accessible name of a tooltip can come from the contents, or from an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby).
 
@@ -41,7 +41,7 @@ The accessible name of a tooltip can come from the contents, or from an [`aria-l
   
 ### Keyboard interactions
 
-- <kbd>Escape</kbd> 
+- <kbd>Escape</kbd>
   - : Closes the tooltip
 
 

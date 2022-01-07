@@ -44,8 +44,6 @@ navigator.mediaSession.playbackState = "playing";
 
 - {{domxref("MediaImage")}}
   - : A `MediaImage` object contains information describing an image associated with the media. This might be a CD or DVD cover, a movie poster, a poster frame, or the like.
-- {{domxref("MediaSessionActionDetails")}}
-  - : Provides information needed in order to perform the action that has been requested, including the type of action to perform and any other information needed, such as seek distances or times.
 
 ## Examples
 

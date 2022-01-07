@@ -144,6 +144,46 @@ Layout for `input type="search"` has been updated. This causes a search field t
   </tbody>
 </table>
 
+### Toggle password display
+
+HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password)) include an "eye" icon that can be toggled to display or obscure the password text ({{bug(502258)}}).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>96</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>96</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>96</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>96</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.forms.input-type-show-password-button.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## CSS
 
 ### Display stray control characters in CSS as hex boxes
@@ -1227,9 +1267,10 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
 New {{domxref("ElementInternals")}} properties and methods that allow a custom elements to interact with a form:
 - property: {{domxref("ElementInternals.form","form")}} gets the form associated with the element
 - property: {{domxref("ElementInternals.labels","labels")}} gets the list of labels associated with the element
+- property: {{domxref("ElementInternals.willValidate", "willValidate")}} checks if a custom form element will be validated.
 - method: {{domxref("ElementInternals.setFormValue()","setFormValue()")}} set the sanitized value and user-entered data, if needed.
 
-See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556449)}}.
+See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}, {{bug(1556449)}}.
 
 <table>
   <thead>
@@ -1359,7 +1400,7 @@ The addition of a constructor to the {{domxref("CSSStyleSheet")}} interface as w
 ### WebShare API
 
 The [Web Share API](/en-US/docs/Web/API/Web_Share_API) allows sharing of files, URLs and other data from a site.
-Note that Firefox implements {{domxref("Navigator.share()")}} but not {{domxref("Navigator.canShare()")}} ({{bug(1666203)}}).
+This feature is enabled on Android in all builds, but behind a preference on Desktop (unless specified below).
 
 <table>
   <thead>
@@ -1388,11 +1429,57 @@ Note that Firefox implements {{domxref("Navigator.share()")}} but not {{domxref(
     <tr>
       <th>Release</th>
       <td>71</td>
-      <td>No</td>
+      <td>No (Desktop). Yes (Android).</td>
     </tr>
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.webshare.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Screen Orientation API
+
+#### ScreenOrientation.lock()
+
+The {{domxref("ScreenOrientation.lock()")}} method allows a device to be locked to a particular orientation, if supported by the device and allowed by browser pre-lock requirements.
+Typically locking the orientation is only allowed on mobile devices when the document is being displayed full screen.
+See {{bug(1697647)}} for more details.
+
+Note that since locking the screen orientation isn't typically supported on desktop systems, you will need to use Firefox for Android Nightly build and enable the preference in `about:config`.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version changed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>97</td>
+      <td>No.</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.screenorientation.allow-lock</code></td>
     </tr>
   </tbody>
 </table>
@@ -1569,6 +1656,51 @@ This also changes the console warning; if the upgrade succeeds, the message indi
       <th>Preference name</th>
       <td colspan="2">
         <code>dom.security.featurePolicy.header.enabled</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+### Clear-Site-Data "cache" directive
+
+The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP response header `cache` directive clears the browser cache for the requesting website.
+
+> **Note:** This was originally enabled by default, but put behind a preference in version 94 ({{bug(1729291)}}).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>63</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>63</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>63</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>63</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+        <code>privacy.clearsitedata.cache.enabled</code>
       </td>
     </tr>
   </tbody>

@@ -53,15 +53,15 @@ Arrays consist of square brackets and items that are separated by commas.
 1.  Suppose we want to store a shopping list in an array. Paste the following code into the console:
 
     ```js
-    let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+    const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
     console.log(shopping);
     ```
 
 2.  In the above example, each item is a string, but in an array we can store various data types — strings, numbers, objects, and even other arrays. We can also mix data types in a single array — we do not have to limit ourselves to storing only numbers in one array, and in another only strings. For example:
 
     ```js
-    let sequence = [1, 1, 2, 3, 5, 8, 13];
-    let random = ['tree', 795, [0, 1, 2]];
+    const sequence = [1, 1, 2, 3, 5, 8, 13];
+    const random = ['tree', 795, [0, 1, 2]];
     ```
 
 3.  Before proceeding, create a few example arrays.
@@ -71,7 +71,7 @@ Arrays consist of square brackets and items that are separated by commas.
 You can find out the length of an array (how many items are in it) in exactly the same way as you find out the length (in characters) of a string — by using the {{jsxref("Array.prototype.length","length")}} property. Try the following:
 
 ```js
-let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
 console.log(shopping.length);  // 5
 ```
 
@@ -82,7 +82,7 @@ Items in an array are numbered, starting from zero. This number is called the it
 1.  Enter the following into your console:
 
     ```js
-    let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+    const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
     console.log(shopping[0]);
     // returns "bread"
     ```
@@ -90,7 +90,7 @@ Items in an array are numbered, starting from zero. This number is called the it
 2.  You can also modify an item in an array by giving a single array item a new value. Try this:
 
     ```js
-    let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+    const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
     shopping[0] = 'tahini';
     console.log(shopping);
     // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]
@@ -101,7 +101,7 @@ Items in an array are numbered, starting from zero. This number is called the it
 3.  Note that an array inside an array is called a multidimensional array. You can access an item inside an array that is itself inside another array by chaining two sets of square brackets together. For example, to access one of the items inside the array that is the third item inside the `random` array (see previous section), we could do something like this:
 
     ```js
-    let random = ['tree', 795, [0, 1, 2]];
+    const random = ['tree', 795, [0, 1, 2]];
     random[2][2];
     ```
 
@@ -122,7 +122,7 @@ console.log(birds.indexOf('Rabbit')) // -1
 To add one or more items to the end of an array we can use {{jsxref("Array.prototype.push()","push()")}}. Note that you need to include one or more items that you want to add to the end of your array.
 
 ```js
-let myArray = ['Manchester', 'Liverpool'];
+const myArray = ['Manchester', 'Liverpool'];
 myArray.push('Cardiff');
 console.log(myArray);      // [ "Manchester", "Liverpool", "Cardiff" ]
 myArray.push('Bradford', 'Brighton');
@@ -132,8 +132,8 @@ console.log(myArray);      // [ "Manchester", "Liverpool", "Cardiff", "Bradford"
 The new length of the array is returned when the method call completes. If you wanted to store the new array length in a variable, you could do something like this:
 
 ```js
-let myArray = ['Manchester', 'Liverpool'];
-let newLength = myArray.push('Bristol');
+const myArray = ['Manchester', 'Liverpool'];
+const newLength = myArray.push('Bristol');
 console.log(myArray);     // [ "Manchester", "Liverpool", "Bristol" ]
 console.log(newLength);   // 3
 ```
@@ -141,7 +141,7 @@ console.log(newLength);   // 3
 To add an item to the start of the array, use {{jsxref("Array.prototype.unshift()","unshift()")}}:
 
 ```js
-let myArray = ['Manchester', 'Liverpool'];
+const myArray = ['Manchester', 'Liverpool'];
 myArray.unshift('Edinburgh');
 console.log(myArray);     // [ "Edinburgh", "Manchester", "Liverpool" ]
 ```
@@ -151,7 +151,7 @@ console.log(myArray);     // [ "Edinburgh", "Manchester", "Liverpool" ]
 To remove the last item from the array, use {{jsxref("Array.prototype.pop()","pop()")}}.
 
 ```js
-let myArray = ['Manchester', 'Liverpool'];
+const myArray = ['Manchester', 'Liverpool'];
 myArray.pop();
 console.log(myArray);     // [ "Manchester" ]
 ```
@@ -159,15 +159,15 @@ console.log(myArray);     // [ "Manchester" ]
 The `pop()` method returns the item that was removed. To save that item in a new variable, you could do this:
 
 ```js
-let myArray = ['Manchester', 'Liverpool'];
-let removedItem = myArray.pop();
+const myArray = ['Manchester', 'Liverpool'];
+const removedItem = myArray.pop();
 console.log(removedItem);     // "Liverpool"
 ```
 
 To remove the first item from an array, use {{jsxref("Array.prototype.shift()","shift()")}}:
 
 ```js
-let myArray = ['Manchester', 'Liverpool'];
+const myArray = ['Manchester', 'Liverpool'];
 myArray.shift();
 console.log(myArray);     // [ "Liverpool" ]
 ```
@@ -175,8 +175,8 @@ console.log(myArray);     // [ "Liverpool" ]
 If you know the index of an item, you can remove it from the array using {{jsxref("Array.prototype.splice()","splice()")}}:
 
 ```js
-let myArray = ['Manchester', 'Liverpool', 'Edinburgh', 'Carlisle'];
-let index = myArray.indexOf('Liverpool');
+const myArray = ['Manchester', 'Liverpool', 'Edinburgh', 'Carlisle'];
+const index = myArray.indexOf('Liverpool');
 if (index !== -1) {
   myArray.splice(index, 1);
 }
@@ -186,8 +186,8 @@ console.log(myArray);     // [ "Manchester", "Edinburgh", "Carlisle" ]
 In this call to `splice()`, the first argument says where to start removing items, and the second argument says  how many items should be removed. So you can remove more than one item:
 
 ```js
-let myArray = ['Manchester', 'Liverpool', 'Edinburgh', 'Carlisle'];
-let index = myArray.indexOf('Liverpool');
+const myArray = ['Manchester', 'Liverpool', 'Edinburgh', 'Carlisle'];
+const index = myArray.indexOf('Liverpool');
 if (index !== -1) {
   myArray.splice(index, 2);
 }
@@ -201,7 +201,7 @@ Very often you will want to access every item in the array. You can do this usin
 ```js
 const birds = ['Parrot', 'Falcon', 'Owl'];
 
-for (let bird of birds) {
+for (const bird of birds) {
   console.log(bird);
 }
 ```
@@ -245,13 +245,13 @@ Often you'll be presented with some raw data contained in a big long string, and
 1.  Let's play with this, to see how it works. First, create a string in your console:
 
     ```js
-    let myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
+    const myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
     ```
 
 2.  Now let's split it at each comma:
 
     ```js
-    let myArray = myData.split(',');
+    const myArray = myData.split(',');
     myArray;
     ```
 
@@ -267,14 +267,14 @@ Often you'll be presented with some raw data contained in a big long string, and
 4.  You can also go the opposite way using the {{jsxref("Array.prototype.join()","join()")}} method. Try the following:
 
     ```js
-    let myNewString = myArray.join(',');
+    const myNewString = myArray.join(',');
     myNewString;
     ```
 
 5.  Another way of converting an array to a string is to use the {{jsxref("Array.prototype.toString()","toString()")}} method. `toString()` is arguably simpler than `join()` as it doesn't take a parameter, but more limiting. With `join()` you can specify different separators, whereas `toString()` always uses a comma. (Try running Step 4 with a different character than a comma.)
 
     ```js
-    let dogNames = ['Rocket','Flash','Bella','Slugger'];
+    const dogNames = ['Rocket','Flash','Bella','Slugger'];
     dogNames.toString(); // Rocket,Flash,Bella,Slugger
     ```
 
@@ -380,25 +380,25 @@ let total = 0;
 list.innerHTML = '';
 totalBox.textContent = '';
 
-let products = ['Underpants:6.99',
+const products = ['Underpants:6.99',
   'Socks:5.99',
   'T-shirt:14.99',
   'Trousers:31.99',
   'Shoes:23.99'];
 
-for (let product of products) {
-  let subArray = product.split(':');
-  let name = subArray[0];
-  let price = Number(subArray[1]);
+for (const product of products) {
+  const subArray = product.split(':');
+  const name = subArray[0];
+  const price = Number(subArray[1]);
   total += price;
-  let itemText = name + ' — $' + price;
+  const itemText = \`\$\{name} — $\$\{price}\`;
 
-  let listItem = document.createElement('li');
+  const listItem = document.createElement('li');
   listItem.textContent = itemText;
   list.appendChild(listItem);
 }
 
-totalBox.textContent = 'Total: $' + total.toFixed(2);`;
+totalBox.textContent = \`Total: $\${total.toFixed(2)}\`;`;
 let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -507,7 +507,7 @@ const searchBtn = document.querySelector('.output button');
 
 list.innerHTML = '';
 
-let myHistory = [];
+const myHistory = [];
 
 searchBtn.onclick = function() {
   // we will only allow a term to be entered if the search input isn't empty
@@ -519,7 +519,7 @@ searchBtn.onclick = function() {
     list.innerHTML = '';
 
     // loop through the array, and display all the search terms in the list
-    for (let itemText of myHistory) {
+    for (const itemText of myHistory) {
       const listItem = document.createElement('li');
       listItem.textContent = itemText;
       list.appendChild(listItem);
@@ -602,7 +602,7 @@ const searchBtn = document.querySelector('.output button');
 
 list.innerHTML = '';
 
-let myHistory = [];
+const myHistory = [];
 
 searchBtn.onclick = function() {
   // we will only allow a term to be entered if the search input isn't empty
@@ -614,7 +614,7 @@ searchBtn.onclick = function() {
     list.innerHTML = '';
 
     // loop through the array, and display all the search terms in the list
-    for (let itemText of myHistory) {
+    for (const itemText of myHistory) {
       const listItem = document.createElement('li');
       listItem.textContent = itemText;
       list.appendChild(listItem);

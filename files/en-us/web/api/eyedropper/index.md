@@ -9,7 +9,7 @@ tags:
   - Reference
 browser-compat: api.EyeDropper
 ---
-{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
 
 The **`EyeDropper`** interface represents an instance of an eyedropper tool that can be opened and used by the user to select colors from the screen.
 

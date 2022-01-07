@@ -93,6 +93,5 @@ If you want to know what mobile and tablet devices have which viewport widths, t
   </tbody>
 </table>
 
-There is clearly demand for the viewport meta tag, since it is supported by most popular mobile browsers and used by thousands of web sites. It would be good to have a true standard for web pages to control viewport properties. As the standardization process proceeds, we at Mozilla will work to keep up to date with any changes.
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/HTML")}}

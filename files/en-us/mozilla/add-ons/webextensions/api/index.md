@@ -47,7 +47,7 @@ Microsoft Edge uses the `browser` namespace, but doesn't yet support promise-bas
 
 Not all browsers support all the APIs: for the details, see [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) and [Chrome incompatibilities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities).
 
-## Examples 
+## Examples
 
 Throughout the JavaScript API listings, you will find short code examples that illustrate how the API is used. You can experiment using these examples—_without_ needing to create a web extension—using the console in the [Toolbox](https://extensionworkshop.com/documentation/develop/debugging/#developer-tools-toolbox).
 

@@ -26,7 +26,7 @@ paused speech synthesis instance.
 ## Syntax
 
 ```js
-speechSynthesisUtteranceInstance.onresume = function() { ... };
+speechSynthesisUtteranceInstance.onresume = function() { /* ... */ };
 ```
 
 ## Examples

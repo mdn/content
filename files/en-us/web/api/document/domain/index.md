@@ -72,7 +72,7 @@ origin policy](/en-US/docs/Web/Security/Same-origin_policy), and complicates the
 interoperability problems and security bugs.
 
 Attempting to set `document.domain` is dangerous. It opens up full access to
-a page's DOM from _all_ subdomains, which is likely not be what is intended. It
+a page's DOM from _all_ subdomains, which is likely not what is intended. It
 also removes the port component from the origin, so now your page can be accessed by
 other pages with the same IP address or same host component, even on a different port.
 

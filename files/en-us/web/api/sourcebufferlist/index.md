@@ -28,16 +28,16 @@ The individual source buffers can be accessed using the [array operator](/en-US/
 - {{domxref("SourceBufferList.length")}} {{readonlyInline}}
   - : Returns the number of {{domxref("SourceBuffer")}} objects in the list.
 
-### Event handlers
-
-- {{domxref("SourceBufferList.onaddsourcebuffer")}}
-  - : The event handler for the `addsourcebuffer` event.
-- {{domxref("SourceBufferList.onremovesourcebuffer")}}
-  - : The event handler for the `removesourcebuffer` event.
-
 ## Methods
 
 _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
+
+## Events
+
+- {{domxref("SourceBufferList.addsourcebuffer_event", "addsourcebuffer")}}
+  - : Fired when a {{domxref("SourceBuffer")}} is added to the list.
+- {{domxref("SourceBufferList.removesourcebuffer_event", "removesourcebuffer")}}
+  - : Fired when a {{domxref("SourceBuffer")}} is removed from the list.
 
 ## Examples
 

@@ -50,7 +50,7 @@ _Inherits properties from its ancestor interfaces, {{domxref("HTMLMediaElement")
 - {{domxref("HTMLVideoElement.mozFrameDelay")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
   - : Returns an `double` with the time which the last painted video frame was late by, in seconds.
 - {{domxref("HTMLVideoElement.mozHasAudio")}} {{Non-standard_Inline}}{{ReadOnlyInline}}{{deprecated_inline}}
-  - : Returns a {{JSxRef("Boolean","boolean")}} indicating if there is some audio associated with the video.
+  - : Returns a boolean indicating if there is some audio associated with the video.
 
 ### Microsoft Extensions
 

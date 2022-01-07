@@ -43,8 +43,9 @@ port.postMessage(message, transferList);
 In the following code block, you can see a new channel being created using the
 {{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor. When the
 IFrame has loaded, we pass {{domxref("MessageChannel.port2")}} to the IFrame using
-{{domxref("window.postMessage")}} along with a message. The `handleMessage`
-handler then responds to a message being sent back from the IFrame using
+{{domxref("window.postMessage")}} along with a message. The iframe receives the message,
+and sends a message back on the MessageChannel using {{domxref("MessageChannel.postMessage")}}.
+The `handleMessage` handler then responds to a message being sent back from the iframe using
 `onmessage`, putting it into a paragraph —
 {{domxref("MessageChannel.port1")}} is listened to, to check when the message arrives.
 
@@ -58,13 +59,20 @@ var otherWindow = ifr.contentWindow;
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+  otherWindow.postMessage('Transferring message port', '*', [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;
 function handleMessage(e) {
   para.innerHTML = e.data;
 }
+
+// in the iframe...
+
+window.addEventListener('message', function (event) {
+  const messagePort = event.ports?.[0];
+  messagePort.postMessage("Hello from the iframe!");
+});
 ```
 
 For a full working example, see our [channel

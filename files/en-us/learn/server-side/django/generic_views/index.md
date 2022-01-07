@@ -139,17 +139,17 @@ As with our _index_ template, we extend our base template in the first line and 
 
 {% block content %}
   <h1>Book List</h1>
-  {% if book_list %}
-  <ul>
-    {% for book in book_list %}
-      <li>
-        <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
-      </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-    <p>There are no books in the library.</p>
-  {% endif %}
+  {% if book_list %}
+  <ul>
+    {% for book in book_list %}
+      <li>
+        <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no books in the library.</p>
+  {% endif %}
 {% endblock %}
 ```
 
@@ -169,7 +169,8 @@ If `book_list` is not empty, then we iterate through the list of books.
 {% endif %}
 ```
 
-The condition above only checks for one case, but you can test on additional conditions using the `elif` template tag (e.g. `{% elif var2 %}`). For more information about conditional operators see: [if](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#if), [ifequal/ifnotequal](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#ifequal-and-ifnotequal), and [ifchanged](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#ifchanged) in [Built-in template tags and filters](https://docs.djangoproject.com/en/3.1/ref/templates/builtins) (Django Docs).
+The condition above only checks for one case, but you can test on additional conditions using the `elif` template tag (e.g. `{% elif var2 %}`).
+For more information about conditional operators see: [if](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#if), [ifequal/ifnotequal](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#ifequal-and-ifnotequal), and [ifchanged](https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#ifchanged) in [Built-in template tags and filters](https://docs.djangoproject.com/en/3.1/ref/templates/builtins) (Django Docs).
 
 #### For loops
 
@@ -182,7 +183,22 @@ Each iteration populates the `book` template variable with information for the c
 {% endfor %}
 ```
 
-While not used here, within the loop Django will also create other variables that you can use to track the iteration. For example, you can test the `forloop.last` variable to perform conditional processing the last time that the loop is run.
+You might also use the `{% empty %}` template tag to define what happens if the book list is empty (although our template chooses to use a conditional instead):
+```html
+<ul>
+  {% for book in book_list %}
+    <li> <!-- code here get information from each book item --> </li>
+  {% empty %}
+    <p>There are no books in the library.</p>
+  {% endfor %}
+</ul>
+```
+
+
+While not used here, within the loop Django will also create other variables that you can use to track the iteration.
+For example, you can test the `forloop.last` variable to perform conditional processing the last time that the loop is run.
+
+
 
 #### Accessing variables
 
@@ -512,7 +528,7 @@ The first interesting thing we haven't seen before is the function `book.bookins
 {% endfor %}
 ```
 
-This method is needed because you declare a `ForeignKey` (one-to many) field in only the "one" side of the relationship (the `BookInstance`). Since you don't do anything to declare the relationship in the other ("many") models, it (the `Book`) doesn't have any field to get the set of associated records. To overcome this problem, Django constructs an appropriately named "reverse lookup" function that you can use. The name of the function is constructed by lower-casing the model name where the `ForeignKey` was declared, followed by `_set` (i.e. so the function created in `Book` is `bookinstance_set()`).
+This method is needed because you declare a `ForeignKey` (one-to many) field only in the "many" side of the relationship (the `BookInstance`). Since you don't do anything to declare the relationship in the other ("one") model, it (the `Book`) doesn't have any field to get the set of associated records. To overcome this problem, Django constructs an appropriately named "reverse lookup" function that you can use. The name of the function is constructed by lower-casing the model name where the `ForeignKey` was declared, followed by `_set` (i.e. so the function created in `Book` is `bookinstance_set()`).
 
 > **Note:** Here we use `all()` to get all records (the default). While you can use the `filter()` method to get a subset of records in code, you can't do this directly in templates because you can't specify arguments to functions.
 >

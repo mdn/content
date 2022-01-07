@@ -19,7 +19,7 @@ The **`onabort`** read-only property of the {{domxref("AbortSignal")}} interface
 ## Syntax
 
 ```js
-abortSignal.onabort = function() { ... };
+abortSignal.onabort = function() { /* ... */ };
 ```
 
 ## Examples

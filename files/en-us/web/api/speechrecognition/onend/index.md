@@ -3,7 +3,6 @@ title: SpeechRecognition.onend
 slug: Web/API/SpeechRecognition/onend
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognition
@@ -13,7 +12,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.onend
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`onend`** property of the
 {{domxref("SpeechRecognition")}} interface represents an event handler that will run
@@ -24,7 +23,7 @@ fires.)
 ## Syntax
 
 ```js
-mySpeechRecognition.onend = function() { ... };
+mySpeechRecognition.onend = function() { /* ... */ };
 ```
 
 ## Examples

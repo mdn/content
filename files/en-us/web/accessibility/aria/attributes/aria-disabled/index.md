@@ -20,21 +20,21 @@ The `aria-disabled` attribute, when set to `true`, indicates to assistive techno
 
 There are several elements you may want to disable, but still want the user to know they exist. Some examples include:
 
-- Irrelevant options in a radio group, 
-- The header button element associated with non-collapsible accordion panel, 
-- A button when the action associated with the button is unavailable, 
-- The icon for the currently visible slide in a slideshow slide picker, and 
-- Items in a menu that are not currently selectable. 
+- Irrelevant options in a radio group,
+- The header button element associated with non-collapsible accordion panel,
+- A button when the action associated with the button is unavailable,
+- The icon for the currently visible slide in a slideshow slide picker, and
+- Items in a menu that are not currently selectable.
 
 In each of these cases, you want the user to know the element is there even though the functionality of that control is removed or "disabled".
 
 ARIA attributes only provide semantics. To semantically disable an element without removing it from focus order or from the accessibility tree, set `aria-disabled="true"` on the element. You should include JavaScript to disable the functionality of the element while also changing the appearance of the element so sighted users know it is disabled.
 
-> **Note:**  The state of being disabled applies to the element with `aria-disabled` and all of its focusable descendants. 
+> **Note:**  The state of being disabled applies to the element with `aria-disabled` and all of its focusable descendants.
 
 The `aria-disabled` attribute is similar to the HTML `disabled` attribute, but better. The first rule of ARIA is "If you can use a native HTML element or attribute with the semantics and behavior you require already built in, instead of repurposing an element and adding an ARIA role, state or property to make it accessible, then do so." `aria-disabled` is an exception to that rule. It is one of the only cases where an ARIA attribute may be better than the native `disabled` attribute HTML equivalent.  
 
-The `disabled` Boolean attribute provides CSS styles and semantics and removes the ability to click or focus while not disabling hover. By removing the ability to focus and removing it from the accessibility tree, it makes it invisible to assistive technology users. For good user experience, you want to make sure everyone can access all the visible content, no matter how they access the web. It is important to be aware that using the `disabled` attribute can harm usability. 
+The `disabled` Boolean attribute provides CSS styles and semantics and removes the ability to click or focus while not disabling hover. By removing the ability to focus and removing it from the accessibility tree, it makes it invisible to assistive technology users. For good user experience, you want to make sure everyone can access all the visible content, no matter how they access the web. It is important to be aware that using the `disabled` attribute can harm usability.
 
 While adding `disabled` to an HTML form control causes `:disabled` user-agent styles to be applied, adding `aria-disabled="true"` doesn't, by default, alter an element's appearance. The element can be styled with the [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) `[aria-disabled="true"]
 
@@ -65,11 +65,11 @@ function toggleDisabled(element, status, update) {
 }
 ```
 
-When toggling from `aria-disabled="true"` to `"false"`, use JavaScript to: 
+When toggling from `aria-disabled="true"` to `"false"`, use JavaScript to:
 
-1. Toggle the value to `false`, 
-2. Enable the element, and 
-3. Let the user know the control is now enabled. 
+1. Toggle the value to `false`,
+2. Enable the element, and
+3. Let the user know the control is now enabled.
 
 If you used just CSS to style the disabled state using an attribute selector, the selector will no longer match and the disabled styling will no longer be in effect.
 
@@ -81,7 +81,7 @@ If you used just CSS to style the disabled state using an attribute selector, th
 - `false`
   - : The element is not disabled
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaDisabled")}}
   - : The  [`ariaDisabled`](/en-US/docs/Web/API/Element/ariaDisabled) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-disabled` attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.
@@ -90,7 +90,7 @@ If you used just CSS to style the disabled state using an attribute selector, th
 
 ## Associated roles
 
-Used in roles: 
+Used in roles:
 - [`application`](/en-US/docs/Web/Accessibility/ARIA/roles/application_role)
 - [`button`](/en-US/docs/Web/Accessibility/ARIA/roles/button_role)
 - [`composite`](/en-US/docs/Web/Accessibility/ARIA/roles/composite_role)
@@ -132,7 +132,7 @@ Inherits into roles:
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-disabled","ARIA: aria-disabled Attribute")}}  | {{Spec2('ARIA')}} |
 
@@ -142,7 +142,7 @@ Inherits into roles:
 - {{htmlattrxref('disabled')}}
 - {{domxref("Element.ariaDisabled")}}
 - {{domxref("ElementInternals.ariaDisabled")}}
-- [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) 
+- [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 - [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
 
 <section id="Quick_links">

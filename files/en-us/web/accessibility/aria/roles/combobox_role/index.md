@@ -17,7 +17,7 @@ The `combobox` role is for input that controls another element, such as a listbo
 
 ## Description
 
-A combobox is an input that controls another element, such as a listbox or grid, that can dynamically pop up to help the user set the value of the input. The popup can be a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role), or [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role). 
+A combobox is an input that controls another element, such as a listbox or grid, that can dynamically pop up to help the user set the value of the input. The popup can be a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role), or [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role).
 
 
 
@@ -55,7 +55,7 @@ A combobox is an input that controls another element, such as a listbox or grid,
 
 ## Examples
 
-```html 
+```html
 <label for="jokes">Pick what type of jokes you like</label>
 <div class="combo-wrap">
   <input type="text" id="jokes" role="combobox" aria-owns="joketypes" aria-autocomplete="list" aria-expanded="false" data-active-option="item1" aria-activedescendant="item1">

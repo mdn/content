@@ -93,7 +93,7 @@ The value for the _path_ matches against the string which is the URL path plus t
 
 Neither the [URL fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier), nor the `#` which precedes it, are considered as part of the _path_.
 
-> **Note:** The path pattern string should not include a port number. Adding a port, as in: _"http\://localhost:1234/\*"_ causes the match pattern to be ignored. However, "_http\://localhost:1234_" will match with "\*http\://localhost/\*\*"
+> **Note:** The path pattern string should not include a port number. Adding a port, as in: `http://localhost:1234/*` causes the match pattern to be ignored. However, `http://localhost:1234` will match with `http://localhost/*`.
 
 ### \<all_urls>
 

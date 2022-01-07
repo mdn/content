@@ -18,7 +18,7 @@ browser-compat: css.types.global_keywords.inherit
 
 The **`inherit`** CSS keyword causes the element for which it is specified to take the [computed value](/en-US/docs/Web/CSS/computed_value) of the property from its parent element. It can be applied to any CSS property, including the CSS shorthand {{cssxref("all")}}.
 
-For [inherited properties](/en-US/docs/Web/CSS/inheritance#Inherited_properties), this reinforces the default behavior, and is only needed to override another rule. For [non-inherited properties](/en-US/docs/Web/CSS/inheritance#Non-inherited_properties), this specifies a behavior that typically makes relatively little sense and you may consider using {{cssxref("initial")}} instead, or {{cssxref("unset")}} on the {{cssxref("all")}} property.
+For [inherited properties](/en-US/docs/Web/CSS/inheritance#Inherited_properties), this reinforces the default behavior, and is only needed to override another rule. 
 
 Inheritance is always from the parent element in the document tree, even when the parent element is not the containing block.
 

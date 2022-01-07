@@ -198,9 +198,9 @@ It is perfectly OK to put one `if...else` statement inside another one — to ne
 ```js
 if (choice === 'sunny') {
   if (temperature < 86) {
-    para.textContent = 'It is ' + temperature + ' degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.';
+    para.textContent = `It is ${temperature} degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.`;
   } else if (temperature >= 86) {
-    para.textContent = 'It is ' + temperature + ' degrees outside — REALLY HOT! If you want to go outside, make sure to put some sunscreen on.';
+    para.textContent = `It is ${temperature} degrees outside — REALLY HOT! If you want to go outside, make sure to put some sunscreen on.`;
   }
 }
 ```
@@ -218,9 +218,9 @@ To give you an AND example, the previous example snippet can be rewritten to thi
 
 ```js
 if (choice === 'sunny' && temperature < 86) {
-  para.textContent = 'It is ' + temperature + ' degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.';
+  para.textContent = `It is ${temperature} degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.`;
 } else if (choice === 'sunny' && temperature >= 86) {
-  para.textContent = 'It is ' + temperature + ' degrees outside — REALLY HOT! If you want to go outside, make sure to put some sunscreen on.';
+  para.textContent = `It is ${temperature} degrees outside — REALLY HOT! If you want to go outside, make sure to put some sunscreen on.`;
 }
 ```
 
@@ -392,9 +392,7 @@ function update(bgColor, textColor) {
   html.style.color = textColor;
 }
 
-select.onchange = function() {
-  ( select.value === 'black' ) ? update('black','white') : update('white','black');
-}
+select.addEventListener('change', () => ( select.value === 'black' ) ? update('black','white') : update('white','black'));
 ```
 
 {{ EmbedLiveSample('Ternary_operator_example', '100%', 300, "", "") }}
@@ -457,13 +455,13 @@ const select = document.querySelector('select');
 const list = document.querySelector('ul');
 const h1 = document.querySelector('h1');
 
-select.onchange = function() {
+select.addEventListener('change', () => {
   const choice = select.value;
 
   // ADD CONDITIONAL HERE
 
   createCalendar(days, choice);
-}
+});
 
 function createCalendar(days, choice) {
   list.innerHTML = '';
@@ -555,7 +553,35 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-const jsSolution = 'const select = document.querySelector(\'select\');\nconst list = document.querySelector(\'ul\');\nconst h1 = document.querySelector(\'h1\');\n\nselect.onchange = function() {\n const choice = select.value;\n let days = 31;\n if(choice === \'February\') {\n days = 28;\n } else if(choice === \'April\' || choice === \'June\' || choice === \'September\'|| choice === \'November\') {\n days = 30;\n }\n\n createCalendar(days, choice);\n}\n\nfunction createCalendar(days, choice) {\n list.innerHTML = \'\';\n h1.textContent = choice;\n for(let i = 1; i <= days; i++) {\n const listItem = document.createElement(\'li\');\n listItem.textContent = i;\n list.appendChild(listItem);\n }\n }\n\ncreateCalendar(31,\'January\');';
+const jsSolution = `const select = document.querySelector('select');
+const list = document.querySelector('ul');
+const h1 = document.querySelector('h1');
+
+select.addEventListener('change', () => {
+  const choice = select.value;
+
+  let days = 31;
+  if (choice === 'February') {
+    days = 28;
+  } else if (choice === 'April' || choice === 'June' || choice === 'September'|| choice === 'November') {
+    days = 30;
+  }
+
+  createCalendar(days, choice);
+});
+
+function createCalendar(days, choice) {
+  list.innerHTML = '';
+  h1.textContent = choice;
+  for (let i = 1; i <= days; i++) {
+    const listItem = document.createElement('li');
+    listItem.textContent = i;
+    list.appendChild(listItem);
+  }
+}
+
+createCalendar(31,'January');`
+
 let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -638,11 +664,11 @@ If you make a mistake, you can always reset the example with the "Reset" button.
 const select = document.querySelector('select');
 const html = document.querySelector('.output');
 
-select.onchange = function() {
+select.addEventListener('change', () => {
   const choice = select.value;
 
-  // ADD SWITCH STATEMENT
-}
+  // ADD CONDITIONAL HERE
+});
 
 function update(bgColor, textColor) {
   html.style.backgroundColor = bgColor;
@@ -707,7 +733,36 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-const jsSolution = 'const select = document.querySelector(\'select\');\nconst html = document.querySelector(\'.output\');\n\nselect.onchange = function() {\n const choice = select.value;\n\n switch(choice) {\n case \'black\':\n update(\'black\',\'white\');\n break;\n case \'white\':\n update(\'white\',\'black\');\n break;\n case \'purple\':\n update(\'purple\',\'white\');\n break;\n case \'yellow\':\n update(\'yellow\',\'darkgray\');\n break;\n case \'psychedelic\':\n update(\'lime\',\'purple\');\n break;\n }\n}\n\nfunction update(bgColor, textColor) {\n html.style.backgroundColor = bgColor;\n html.style.color = textColor;\n}';
+const jsSolution = `const select = document.querySelector('select');
+const html = document.querySelector('.output');
+
+select.addEventListener('change', () => {
+  const choice = select.value;
+
+  switch(choice) {
+    case 'black':
+      update('black','white');
+      break;
+    case 'white':
+      update('white','black');
+      break;
+    case 'purple':
+      update('purple','white');
+      break;
+    case 'yellow':
+      update('yellow','darkgray');
+      break;
+    case 'psychedelic':
+      update('lime','purple');
+      break;
+  }
+});
+
+function update(bgColor, textColor) {
+  html.style.backgroundColor = bgColor;
+  html.style.color = textColor;
+}`;
+
 let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);

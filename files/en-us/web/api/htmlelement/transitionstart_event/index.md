@@ -48,10 +48,10 @@ element.addEventListener('transitionstart', () => {
 });
 ```
 
-The same, but using the [`ontransitionstart`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionrun) property instead of `addEventListener()`:
+The same, but using the [`ontransitionstart`](/en-US/docs/Web/API/GlobalEventHandlers/ontransitionstart) property instead of `addEventListener()`:
 
 ```js
-element.ontransitionrun = () => {
+element.ontransitionstart = () => {
   console.log('Started transitioning');
 };
 ```

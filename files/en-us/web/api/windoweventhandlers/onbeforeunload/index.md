@@ -31,8 +31,8 @@ event is still cancelable.
 ## Syntax
 
 ```js
-window.addEventListener("beforeunload", function(event) { ... });
-window.onbeforeunload = function(event) { ... };
+window.addEventListener("beforeunload", function(event) { /* ... */ });
+window.onbeforeunload = function(event) { /* ... */ };
 ```
 
 Typically, it is better to use {{domxref("EventTarget.addEventListener",

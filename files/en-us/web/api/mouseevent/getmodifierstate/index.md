@@ -23,7 +23,7 @@ See {{domxref("KeyboardEvent.getModifierState","KeyboardEvent.getModifierState()
 getModifierState(keyArg)
 ```
 
-### Returns 
+### Returns
 
 A boolean value
 

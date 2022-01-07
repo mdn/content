@@ -62,7 +62,7 @@ This may seem a bit scary at first, but don't worry — you'll soon get the hang
 2.  On this page, in the _Repository name_ box, enter a name for your code repository, for example _my-repository_.
 3.  Also fill in a description to say what your repository is going to contain. Your screen should look like this:
     ![](create-new-repo.png)
-4.  Click _Create repository_; this should bring you to the following page: 
+4.  Click _Create repository_; this should bring you to the following page:
     ![](github-repo.png)
 
 ### Uploading your files to GitHub

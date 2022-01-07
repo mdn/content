@@ -110,7 +110,7 @@ for (var i = 0, L = tracks.length; i < L; i++) { /* tracks.length == 10 */
 - {{HTMLElement("video")}} and {{HTMLElement("audio")}}
 - {{DOMxRef("VideoTrack")}} and {{DOMxRef("VideoTrackList")}}
 - {{DOMxRef("AudioTrack")}} and {{DOMxRef("AudioTrackList")}}
-- VideoTrackList 
+- VideoTrackList
   [`change`](/en-US/docs/Web/API/VideoTrackList/change_event),
   [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event)
   and

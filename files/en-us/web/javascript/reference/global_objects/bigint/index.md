@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.BigInt
 ---
 {{JSRef}}
 
-**`BigInt`** is a built-in object whose constructor returns a `bigint` {{Glossary("Primitive", "primitive")}} — also called a **BigInt value**, or sometimes just a **BigInt** — to represent whole numbers larger than 2^53 - 1 ([`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)), which is the largest number JavaScript can represent with a `number` {{Glossary("Primitive", "primitive")}} (or _Number value_). BigInt values can be used for arbitrarily large integers.
+**`BigInt`** is a [primitive wrapper object](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript) used to represent and manipulate {{Glossary("Primitive", "primitive")}} `bigint` values — which are [too large](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) to be represented by the `number` {{Glossary("Primitive", "primitive")}}.
 
 ## Description
 

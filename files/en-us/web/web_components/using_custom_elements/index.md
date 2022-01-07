@@ -14,8 +14,6 @@ tags:
 
 One of the key features of the Web Components standard is the ability to create custom elements that encapsulate your functionality on an HTML page, rather than having to make do with a long, nested batch of elements that together provide a custom page feature. This article introduces the use of the Custom Elements API.
 
-> **Note:** Custom elements are supported by default in Firefox, Chrome, and Edge (76). Opera and Safari so far support only autonomous custom elements.
-
 ## High-level view
 
 The controller of custom elements on a web document is the {{domxref("CustomElementRegistry")}} object — this object allows you to register a custom element on the page, return information on what custom elements are registered, etc.
@@ -97,7 +95,7 @@ icon.setAttribute('class','icon');
 icon.setAttribute('tabindex', 0);
 // Insert icon from defined attribute or default icon
 const img = icon.appendChild(document.createElement('img'));
-img.src = this.hasAttribute('img') ? this.getAttribute('img') : 'img/default.png';
+img.src = this.hasAttribute('src') ? this.getAttribute('src') : 'img/default.png';
 
 const info = wrapper.appendChild(document.createElement('span'));
 info.setAttribute('class','info');

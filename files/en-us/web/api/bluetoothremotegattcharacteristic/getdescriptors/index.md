@@ -21,7 +21,7 @@ returns a {{jsxref("Promise")}} that resolves to an {{jsxref("Array")}} of all
 ## Syntax
 
 ```js
-BluetoothRemoteGATTCharacteristic.getDescriptors(bluetoothDescriptorUUID).then(function(bluetoothGATTDescriptors[]) { ... })
+BluetoothRemoteGATTCharacteristic.getDescriptors(bluetoothDescriptorUUID).then(function(bluetoothGATTDescriptors[]) { /* ... */ })
 ```
 
 ### Returns

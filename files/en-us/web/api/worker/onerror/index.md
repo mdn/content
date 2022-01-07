@@ -19,7 +19,7 @@ The **`onerror`** property of the {{domxref("Worker")}} interface represents an 
 ## Syntax
 
 ```js
-myWorker.onerror = function(event) { ... };
+myWorker.onerror = function(event) { /* ... */ };
 ```
 
 ## Example

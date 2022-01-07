@@ -10,7 +10,7 @@ This page describes how we use Markdown to write documentation on MDN. We have c
 
 ## Baseline: GitHub-Flavored Markdown
 
-The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. This means that for anything not otherwise specified in this page, you can refer to the GFM specification. GFM in turn is a superset of CommonMark ([http://spec.commonmark.org/](https://spec.commonmark.org/)).
+The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. This means that for anything not otherwise specified in this page, you can refer to the GFM specification. GFM in turn is a superset of CommonMark ([https://spec.commonmark.org/](https://spec.commonmark.org/)).
 
 ## Example code blocks
 
@@ -450,7 +450,7 @@ This issue was resolved in <https://github.com/mdn/content/issues/4325>, <https:
 
 ## Superscript and subscript
 
-Writers will be able to use the HTML {{HTMLElement("sup")}}> and {{HTMLElement("sub")}} elements if necessary, but should use alternatives if possible. In particular:
+Writers will be able to use the HTML {{HTMLElement("sup")}} and {{HTMLElement("sub")}} elements if necessary, but should use alternatives if possible. In particular:
 
 - For exponentiation, use the caret: `2^53`.
 - For ordinal expressions like 1

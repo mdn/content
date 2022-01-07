@@ -53,7 +53,7 @@ the standard resolution of 96 or 76 DPI.
 
 ### Correcting resolution in a `<canvas>`
 
-A {{htmlelement("canvas")}} can appear too blurry on retina screens. 
+A {{htmlelement("canvas")}} can appear too blurry on retina screens.
 Use `window.devicePixelRatio` to determine how much extra pixel density
 should be added to allow for a sharper image.
 

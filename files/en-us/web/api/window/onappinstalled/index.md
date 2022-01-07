@@ -13,17 +13,16 @@ tags:
   - web manifest
 browser-compat: api.Window.onappinstalled
 ---
-{{deprecated_header}}
 
-The **`onappinstalled`** attribute of the {{domxref("Window")}}
-object serves as an event handler for the {{Event("appinstalled")}} event, which is
-dispatched once the web application is successfully installed as a [progressive web app](/en-US/Apps/Progressive). The event that is fired is a
+The **`onappinstalled`** attribute of the {{domxref("Window")}}
+object serves as an event handler for the {{Event("appinstalled")}} event, which is
+dispatched once the web application is successfully installed as a [progressive web app](/en-US/Apps/Progressive). The event that is fired is a
 "simple event" that implements the {{domxref("Event")}} interface.
 
 ## Syntax
 
 ```js
-window.onappinstalled = function(event) { ... };
+window.onappinstalled = function(event) { /* ... */ };
 ```
 
 ## Example

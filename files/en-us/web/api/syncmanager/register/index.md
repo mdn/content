@@ -20,7 +20,7 @@ The **`SyncManager.register`** method of the
 ## Syntax
 
 ```js
-SyncManager.register([options]).then(function(syncRegistration) { ... })
+SyncManager.register([options]).then(function(syncRegistration) { /* ... */ })
 ```
 
 ### Returns

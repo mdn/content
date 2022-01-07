@@ -17,6 +17,8 @@ The **`PermissionStatus`** interface of the [Permissions API](Permissions_API) p
 
 ## Properties
 
+- {{domxref("PermissionStatus.name")}} {{readonlyinline}}
+  - : Returns the name of a requested permission, identical to the `name` passed to {{domxref("Permissions.query")}}.
 - {{domxref("PermissionStatus.state")}} {{readonlyinline}}
   - : Returns the state of a requested permission; one of `'granted'`, `'denied'`, or `'prompt'`.
 - `PermissionStatus.status`{{readonlyinline}} {{deprecated_inline}}

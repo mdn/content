@@ -9,6 +9,7 @@ tags:
   - close
 browser-compat: api.RTCPeerConnection.close
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.close()`** method closes the current
@@ -66,6 +67,6 @@ dc.onclose = function () {
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection")}}
 - {{domxref("RTCPeerConnection.signalingState")}}

@@ -74,7 +74,7 @@ A user agent might allow the capture of the entire content of an obscured window
 
 ### Options and constraints
 
-The constraints object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is a {{domxref("DisplayMediaStreamConstraints")}} object which is used to configuring the resulting stream.
+The constraints object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} is an object which is used to configuring the resulting stream.
 
 > **Note:** Unlike most uses of constraints in media APIs, here it's solely used to define the stream configuration, and _not_ to filter the available choices.
 
@@ -160,7 +160,7 @@ There isn't all that much code needed in order to make this work, and if you're 
 
 First, some constants are set up to reference the elements on the page to which we'll need access: the {{HTMLElement("video")}} into which the captured screen contents will be streamed, a box into which logged output will be drawn, and the start and stop buttons that will turn on and off capture of screen imagery.
 
-The object `displayMediaOptions` contains the {{domxref("MediaStreamConstraints")}} to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.cursor", "cursor")}} property is set to `always`, indicating that the mouse cursor should always be included in the captured media.
+The object `displayMediaOptions` contains the constraints to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.cursor", "cursor")}} property is set to `always`, indicating that the mouse cursor should always be included in the captured media.
 
 > **Note:** Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/en-US/docs/Web/API/MediaTrackConstraints/cursor#browser_compatibility).
 

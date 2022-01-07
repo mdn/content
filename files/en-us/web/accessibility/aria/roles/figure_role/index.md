@@ -25,7 +25,7 @@ A `figure` is a perceivable section of content that typically contains a graphic
 </div>
 ```
 
-In the above example, we have a figure that consists of two separate content items — an image and a caption. This is wrapped by a {{htmlelement("div")}} element that identifies the content as a figure using `role="figure"`. 
+In the above example, we have a figure that consists of two separate content items — an image and a caption. This is wrapped by a {{htmlelement("div")}} element that identifies the content as a figure using `role="figure"`.
 
 For HTML, use the {{HTMLElement('figure')}} and {{HTMLElement('figcaption')}} elements. The figcaption will serve as the accessible name for the figure.  When not using HTML, or when retrofitting legacy HTML, use the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) on the figure, pointing to the figure's caption.
 If there is no visible caption, [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) can be used.
@@ -41,17 +41,17 @@ If there is no visible caption, [`aria-label`](/en-US/docs/Web/Accessibility/ARI
 - Use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) when the text is a longer description.
 - Use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) when there is no visible figure caption.
 
-This can be done semantically, without ARIA, with HTML's {{HTMLElement('figure')}} element along with {{HTMLElement('figcaption')}}. 
+This can be done semantically, without ARIA, with HTML's {{HTMLElement('figure')}} element along with {{HTMLElement('figcaption')}}.
 
 ```html
 <figure>
   <img src="image.png"
       alt="put image description here">
-  <caption>Figure 1: The caption</caption>
+  <figcaption>Figure 1: The caption</figcaption>
 </figure>
 ```
 
-> **Note:** If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a figure and its caption — {{htmlelement("figure")}} and {{htmlelement("figcaption")}}. 
+> **Note:** If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a figure and its caption — {{htmlelement("figure")}} and {{htmlelement("figcaption")}}.
 
 ### Associated WAI-ARIA roles, states, and properties
 

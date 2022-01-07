@@ -19,7 +19,7 @@ upload the resource in this case.
 
 The comparison with the stored {{HTTPHeader("ETag")}} uses the _strong comparison
 algorithm_, meaning two files are considered identical byte by byte only. If a
-listed `ETag` has the `W/` prefix indicating a weak entity tag, this comparison 
+listed `ETag` has the `W/` prefix indicating a weak entity tag, this comparison
 algorithm will never match it.
 
 There are two common use cases:

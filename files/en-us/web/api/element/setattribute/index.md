@@ -40,8 +40,7 @@ Element.setAttribute(name, value);
 
 Boolean attributes are considered to be `true` if they're present on the
 element at all. You should set `value` to the empty string (`""`)
-or the attribute's name, with no leading or trailing whitespace. See the {{anch("Example",
-  "example")}} below for a practical demonstration.
+or the attribute's name, with no leading or trailing whitespace. See the {{anch("Example", "example")}} below for a practical demonstration.
 
 Since the specified `value` gets converted into a string, specifying
 `null` doesn't necessarily do what you expect. Instead of removing the
@@ -81,19 +80,14 @@ b.setAttribute("disabled", "");
 
 This demonstrates two things:
 
-- The first call to `setAttribute()` above shows changing the
-  `name` attribute's value to "helloButton". You can see this using your
-  browser's page inspector ([Chrome](https://developers.google.com/web/tools/chrome-devtools/inspect-styles),
+- The first call to `setAttribute()` above shows changing the `name` attribute's value to "helloButton".
+  You can see this using your browser's page inspector ([Chrome](https://developer.chrome.com/docs/devtools/css/),
   [Edge](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/dom-explorer),
   [Firefox](/en-US/docs/Tools/Page_Inspector), [Safari](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html)).
-- To set the value of a Boolean attribute, such as `disabled`, you can
-  specify any value. An empty string or the name of the attribute are recommended
-  values. All that matters is that if the attribute is present at all, _regardless of
-  its actual value_, its value is considered to be `true`. The absence
-  of the attribute means its value is `false`. By setting the value of the
-  `disabled` attribute to the empty string (`""`), we are setting
-  `disabled` to `true`, which results in the button being
-  disabled.
+- To set the value of a Boolean attribute, such as `disabled`, you can specify any value.
+  An empty string or the name of the attribute are recommended values.
+  All that matters is that if the attribute is present at all, _regardless of its actual value_, its value is considered to be `true`.
+  The absence of the attribute means its value is `false`. By setting the value of the `disabled` attribute to the empty string (`""`), we are setting `disabled` to `true`, which results in the button being disabled.
 
 {{ EmbedLiveSample('Example', '300', '50') }}
 

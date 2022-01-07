@@ -32,7 +32,7 @@ while (condition)
 
   - : An optional statement that is executed as long as the condition evaluates to true.
     To execute multiple statements within the loop, use a [block](/en-US/docs/JavaScript/Reference/Statements/block) statement
-    (`{ ... }`) to group those statements.
+    (`{ /* ... */ }`) to group those statements.
 
     Note: Use the `break` statement to stop a loop before condition evaluates
     to true.

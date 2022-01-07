@@ -23,7 +23,7 @@ The **`getRegistrations()`** method of the
 ## Syntax
 
 ```js
-serviceWorkerContainer.getRegistrations().then(function(serviceWorkerRegistrations) { ... });
+serviceWorkerContainer.getRegistrations().then(function(serviceWorkerRegistrations) { /* ... */ });
 ```
 
 ### Parameters

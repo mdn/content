@@ -10,7 +10,7 @@ tags:
   - document structure role
 ---
 
-The `definition` ARIA role indicates the element is a definition of a term or concept. 
+The `definition` ARIA role indicates the element is a definition of a term or concept.
 
 ## Description
 

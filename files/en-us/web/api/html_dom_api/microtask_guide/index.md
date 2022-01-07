@@ -285,6 +285,7 @@ log("Main program started");
 setTimeout(callback, 0);
 log(`10! equals ${doWork()}`);
 log("Main program exiting");
+log("Regular timeout callback has run");
 ```
 
 #### Result

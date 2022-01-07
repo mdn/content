@@ -17,7 +17,7 @@ The `option` role is used to identify selections a user can make in a [`listbox`
 
 All selectable options should have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) match their state, `true` when selected and `false` when not. If an option is not selectable, `aria-selected` can be omitted. A disabled option can have [`aria-disabled="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) and `aria-selected="false"` to communicate to the user that the option is present, albeit disabled.
 
-The `option` role is for identifying selectable choices of a `listbox`. Options must be provided an accessible name. Generally, the accessible name for an option should come from the element's descendant content. 
+The `option` role is for identifying selectable choices of a `listbox`. Options must be provided an accessible name. Generally, the accessible name for an option should come from the element's descendant content.
 
 Authors can also explicitly provide an accessible name by specifying [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) to the element with the `option` role. If using `aria-label` or `aria-labelledby`, and the option also displays a visible text label, authors must ensure they adhere to <a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html">WCAG Success Criterion 2.5.3 Label in Name</a>.
 
@@ -42,28 +42,28 @@ It is highly recommended to use a {{HTMLElement('select')}} element or an  {{HTM
 
 -	[`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
 	-	: Used to describe the position in the set of options when it does not match the DOM, such as virtual scrolling where only some options are present at a time. Optional.
-	
+
 -	[`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
 	-	: Used in conjunction with `aria-posinset` to declare the total number of options. Optional.
 
 -	[`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
 	-	: Used to indicate that the option is present but not editable. Optional.
-	
+
 -	[`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 	-	: Used to hide the option from accessibility tools. It should only be used to hide non-visible content or visible content if it improves the experience of assistive technology, such as redundant content. Optional.
-	
+
 -	[`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
 	-	: Used to indicate that the value of the option is considered invalid by the application. Optional.
 
 -	[`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
 	-	: Used to indicate that an element is being modified, such as while it is loadingOptional.
-	
+
 -	[`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 	-	: Used to indicate which element labels the option. The content of the option should be used instead where appropriate. Optional.
-	
+
 -	[`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
 	-	: Used to label the option. If the label is present in the DOM, `aria-labelledby` should be used instead. Optional.
-	
+
 (For further details and a full list of ARIA states and properties see the <a href="https://www.w3.org/TR/wai-aria-1.1/#option">ARIA `option` (role)</a> documentation.)
 
 ##  Specifications

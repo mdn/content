@@ -17,7 +17,7 @@ A keyboard shortcut is a series of one or several keys that tells software to pe
 
 The `aria-keyshortcuts` attribute exposes the existence of the shortcut to assistive technologies so the presence of the shortcut can be communicated to its users. Like all ARIA attributes, it has no effect on the functionality of the page; the keyboard behavior must be added via JavaScript event handlers.
 
-Keyboard shortcuts applied to disabled elements should also be disabled. For example, when disabling an element for mouse users, remember to disable it for keyboard shortcut users. 
+Keyboard shortcuts applied to disabled elements should also be disabled. For example, when disabling an element for mouse users, remember to disable it for keyboard shortcut users.
 
 Ensure all keyboard shortcuts are both visible to sighted users and made available to assistive technology. If your application is complex enough to need keyboard shortcuts, also known as "hot keys", include a guided tour of your application, an accessibility page documenting shortcuts and other accessibility features, a shortcut cheat sheet page or dialog pop up, or other method of making the availability of keyboard short cuts known.  In addition, show the shortcut in menus and tooltips.
 
@@ -38,13 +38,13 @@ aria-keyshortcuts="Meta+C Meta+Shift+C"
 
 Modifier keys are keys that don't have any impact when used on their own. They are written as "Alt", "Control", "Shift", "Meta" (Command key on Mac), or "AltGraph" (Option key on Mac).  
 
-Non-modifier keys are keys that have impact when used alone, be that printing a character, moving focus, or otherwise creating a keyboard event when used. Non-modifiers that print a single character include characters like `P`, `z` and `.`. 
+Non-modifier keys are keys that have impact when used alone, be that printing a character, moving focus, or otherwise creating a keyboard event when used. Non-modifiers that print a single character include characters like `P`, `z` and `.`.
 
-Since the plus sign is used in writing key combinations, it is written as `plus` if used as the non-modifier. Other written-out non-modifiers include white space characters `Space`, `Tab`, and `Enter`, and all characters that result in actions, like `ArrowUp`, `PageUp`, and `Escape`. 
+Since the plus sign is used in writing key combinations, it is written as `plus` if used as the non-modifier. Other written-out non-modifiers include white space characters `Space`, `Tab`, and `Enter`, and all characters that result in actions, like `ArrowUp`, `PageUp`, and `Escape`.
 
-If you want to use a character that might cause problems, like a a double quote character within double quotes, escape the character: `Control+&#39;`. 
+If you want to use a character that might cause problems, like a a double quote character within double quotes, escape the character: `Control+&#39;`.
 
-Modifier keys must be listed first in each key combination. Possible key combinations include `Control+P` or `Shift+Space` and `Q`. If the full shortcut requires all three of these combinations in order, it would be written as `aria-keyshortcuts="Control+P Shift+Space Q"`.  When a key combination includes more than one modifier key, the order of the modifiers doesn't matter, but they all must come first, before the non-modifier. 
+Modifier keys must be listed first in each key combination. Possible key combinations include `Control+P` or `Shift+Space` and `Q`. If the full shortcut requires all three of these combinations in order, it would be written as `aria-keyshortcuts="Control+P Shift+Space Q"`.  When a key combination includes more than one modifier key, the order of the modifiers doesn't matter, but they all must come first, before the non-modifier.
 
 These two attribute declarations are equivalent.
 
@@ -53,7 +53,7 @@ aria-keyshortcuts="Shift+Control+V"
 aria-keyshortcuts="control+shift+v"
 ```
 
-Note that text case doesn't matter. But order of non-modifier does. 
+Note that text case doesn't matter. But order of non-modifier does.
 
 These two attribute declarations are invalid because the non-modifier must be last.
 
@@ -66,7 +66,7 @@ The key combination listed must be the keys the user needs to press, not the out
 
 ### Best practices
 
-In trying to improve the accessibility of your sites and applications, there are so best practices to follow to ensure your "enhancements" don't negatively impact user experience. Remember, no ARIA is better than bad ARIA. 
+In trying to improve the accessibility of your sites and applications, there are so best practices to follow to ensure your "enhancements" don't negatively impact user experience. Remember, no ARIA is better than bad ARIA.
 
 #### Don't override browser, assistive technology, or operating system shortcuts
 
@@ -76,7 +76,7 @@ Unless you're creating an HTML version of a productivity application, you should
 
 #### Consider language and keyboard differences
 
-Take into account the diversity of available keyboards and the various keyboard language preferences. Modifier keys are often used to create language specific common punctuation symbols and number characters. For example, numbers, when the keyboard language preference is set to French, use the Control key. 
+Take into account the diversity of available keyboards and the various keyboard language preferences. Modifier keys are often used to create language specific common punctuation symbols and number characters. For example, numbers, when the keyboard language preference is set to French, use the Control key.
 
 #### **Don't** use HTML instead
 
@@ -93,7 +93,7 @@ While the goal of the `accesskey` attribute matches the intention of `aria-keysh
 
 In addition to poor browser support, the same concerns arise for `accesskey` as exist for `aria-keyshortcuts`:  
 
-- An accesskey value can conflict with a system or browser keyboard shortcut, or assistive technology functionality. 
+- An accesskey value can conflict with a system or browser keyboard shortcut, or assistive technology functionality.
 - Certain key values may not be present on certain keyboards, especially when internationalization is a concern. So adapting to specific languages could cause further problems.
 - Values that rely on numbers may be confusing to individuals experiencing cognitive concerns, where the number doesn't have a logical association with the functionality it triggers.
 - Informing the user that shortcuts are present, so that they are aware of the functionality. If the system lacks a method of notifying the user about this feature, the user might accidentally activate a shortcut.
@@ -105,13 +105,13 @@ In addition to poor browser support, the same concerns arise for `accesskey` as 
 
 ## Example
 
-In this example, the `aria-keyshortcuts` attribute on the element is set to "Alt+Shift+A". 
+In this example, the `aria-keyshortcuts` attribute on the element is set to "Alt+Shift+A".
 
 ```html
 <a href="#content" aria-keyshortcuts="Alt+Shift+A">Skip to content</a>
 ```
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaKeyShortcuts")}}
   - : The  [`ariaKeyShortcuts`](/en-US/docs/Web/API/Element/ariaKeyShortcuts) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-keyshortcuts` attribute.
@@ -120,11 +120,11 @@ In this example, the `aria-keyshortcuts` attribute on the element is set to "Alt
 
 ## Associated roles
 
-Used in **ALL** roles. 
+Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-keyshortcuts","ARIA: aria-keyshortcuts Attribute")}}  | {{Spec2('ARIA')}} |
 | {{SpecName("ARIA Authoring Practices 1.2","#kbd_shortcuts","keyboard shortcuts")}} | {{Spec2('ARIA Authoring Practices')}} |

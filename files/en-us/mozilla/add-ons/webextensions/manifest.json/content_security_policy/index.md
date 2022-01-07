@@ -43,7 +43,7 @@ For example, you can use this key to:
 
 There are restrictions on the policy you can specify here:
 
-- The policy must include at least the {{CSP("script-src")}} and the {{CSP("object-src")}} directives, and the {{CSP("script-src")}} directive must contain the keyword `'self'`.
+- The policy may include just {{CSP("default-src")}}, but if not the policy must include at least the {{CSP("script-src")}} and the {{CSP("object-src")}} directives, and the {{CSP("script-src")}} directive must contain the keyword `'self'`.
 - Remote sources must use `https:` schemes.
 - Remote sources must not use wildcards for any domains in the [public suffix list](https://publicsuffix.org/list/) (so "\*.co.uk" and "\*.blogspot.com" are not allowed, although "\*.foo.blogspot.com" is allowed).
 - All sources must specify a host.
@@ -54,7 +54,14 @@ There are restrictions on the policy you can specify here:
 
 ### Valid examples
 
-> **Note:** Valid examples demonstrate the correct use of keys in CSP. However, extensions with 'unsafe-eval', remote script, blob, or remote sources in their CSP are not allowed for Firefox extensions as per the [add-on policies](https://extensionworkshop.com/documentation/publish/add-on-policies/) and due to major security issues.
+> **Note:** Valid examples demonstrate the correct use of keys in CSP.
+> However, extensions with 'unsafe-eval', remote script, blob, or remote sources in their CSP are not allowed for Firefox extensions as per the [add-on policies](https://extensionworkshop.com/documentation/publish/add-on-policies/) and due to major security issues.
+
+Require that all types of content should be packaged with the extension:
+
+```json
+"content_security_policy": "default-src 'self'"
+```
 
 Allow remote scripts from "https\://example.com":
 
@@ -86,11 +93,6 @@ Keep the rest of the policy, but also require that images should be packaged wit
 "content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'"
 ```
 
-Require that all types of content should be packaged with the extension:
-
-```json
-"content_security_policy": "default-src 'self'"
-```
 
 ### Invalid examples
 

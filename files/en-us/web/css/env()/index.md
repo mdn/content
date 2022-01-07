@@ -23,6 +23,8 @@ Originally provided by the iOS browser to allow developers to place their conten
 
 For example, a common issue solved by `env()` is that of device notifications covering up some of the app user interface. By positioning fixed elements using `env()` you can ensure that they display in a safe area of the viewport.
 
+Another use case for `env()` variables is for desktop [Progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) that use the Window Controls Overlay feature to take advantage of the full application window surface area. Using the `titlebar-area-*` values, they can position elements where the title bar would have been and ensure that content stays clear of the window control buttons.
+
 ## Syntax
 
 ```css
@@ -43,6 +45,8 @@ env(safe-area-inset-left, 1.4rem);
 
 - `safe-area-inset-top`, `safe-area-inset-right`, `safe-area-inset-bottom`, `safe-area-inset-left`
   - : The `safe-area-inset-*` variables are four environment variables that define a rectangle by its top, right, bottom, and left insets from the edge of the viewport, which is safe to put content into without risking it being cut off by the shape of a non‑rectangular display. For rectangular viewports, like your average laptop monitor, their value is equal to zero. For non-rectangular displays — like a round watch face — the four values set by the user agent form a rectangle such that all content inside the rectangle is visible.
+- `titlebar-area-x`, `titlebar-area-y`, `titlebar-area-width`, `titlebar-area-height`
+  - : The `titlebar-area-*` variables are useful for PWA installed on Desktop devices. When a desktop PWA uses the `window-controls-overlay` [display_override](/en-US/docs/Web/Manifest/display_override) value, then it can use the `titlebar-area-*` variables to make sure content doesn't overlap with the window control buttons (i.e. minimize, maximize, and close).
 
 > **Note:** Unlike other CSS properties, user agent-defined property names are case-sensitive.
 
@@ -166,6 +170,37 @@ The syntax of the fallback, like that of custom properties, allows commas. But, 
 
 > **Note:** User agent properties are not reset by the [all](/en-US/docs/Web/CSS/all) property.
 
+### Using env() to ensure content is not obscured by window control buttons in desktop PWAs
+
+In the following example `env()` is used to ensure that content displayed in a PWA that uses the Window Controls Overlay feature is not obscured by the operating system's window control buttons. The `titlebar-area-*` values define a rectangle where the title bar would normally have been displayed. On devices that do not support the Window Controls Overlay feature, such as mobile devices, the fallback values are used.
+
+Here is what a PWA installed on a desktop device normally looks like:
+
+![Illustration of what a PWA installed on desktop normally looks like, with window control buttons, a title bar, and web content below that](desktop-pwa-window.png)
+
+With the Window Controls Overlay feature, the web content covers the whole app window surface area, with the window controls and PWA buttons displayed as overlays:
+
+![Illustration of what a PWA installed on desktop looks like with the Window Controls Overlay feature, with window control buttons, no title bar, and web content spanning the whole window](desktop-pwa-window-wco.png)
+
+```html
+<header>Title of the app here</header>
+<main>Main content of app here</main>
+```
+
+```css
+header {
+  position: fixed;
+  left: env(titlebar-area-x);
+  top: env(titlebar-area-y);
+  width: env(titlebar-area-width);
+  height: env(titlebar-area-height);
+}
+
+main {
+  margin-top: env(titlebar-area-height);
+}
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -181,3 +216,6 @@ The syntax of the fallback, like that of custom properties, allows commas. But, 
 - [Custom Properties (--\*)](/en-US/docs/Web/CSS/--*)
 - [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 - {{CSSxRef("@viewport", "viewport-fit (@viewport)")}}
+- [Customize the window controls overlay of your PWA's title bar](https://web.dev/window-controls-overlay/)
+- [Display content in the title bar](https://docs.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
+- [Breaking Out of the Box](https://alistapart.com/article/breaking-out-of-the-box/)

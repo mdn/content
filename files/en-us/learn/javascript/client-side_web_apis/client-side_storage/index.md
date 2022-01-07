@@ -297,7 +297,7 @@ Now let's look at what we have to do in the first place, to actually set up a da
     ```js
     // Open our database; it is created if it doesn't already exist
     // (see onupgradeneeded below)
-    let request = window.indexedDB.open('notes_db', 1);
+    let request = indexedDB.open('notes_db', 1);
     ```
 
     This line creates a `request` to open version `1` of a database called `notes_db`. If this doesn't already exist, it will be created for you by subsequent code. You will see this request pattern used very often throughout IndexedDB. Database operations take time. You don't want to hang the browser while you wait for the results, so database operations are {{Glossary("asynchronous")}}, meaning that instead of happening immediately, they will happen at some point in the future, and you get notified when they're done.
@@ -742,7 +742,9 @@ self.addEventListener('fetch', function(e) {
 });
 ```
 
-And that is it for our simple service worker. There is a whole load more you can do with them — for a lot more detail, see the [service worker cookbook](https://serviceworke.rs/). And thanks to Paul Kinlan for his article [Adding a Service Worker and Offline into your Web App](https://developers.google.com/web/fundamentals/codelabs/offline/), which inspired this simple example.
+And that is it for our simple service worker.
+There is a whole load more you can do with them — for a lot more detail, see the [service worker cookbook](https://github.com/mozilla/serviceworker-cookbook).
+Many thanks to Paul Kinlan for his article [Adding a Service Worker and Offline into your Web App](https://developers.google.com/web/fundamentals/codelabs/offline/), which inspired this simple example.
 
 #### Testing the example offline
 

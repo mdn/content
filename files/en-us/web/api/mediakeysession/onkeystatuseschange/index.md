@@ -14,7 +14,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 ## Syntax
 
 ```js
-MediaKeySession.onkeystatuseschange = function(keystatuschange) { ... }
+MediaKeySession.onkeystatuseschange = function(keystatuschange) { /* ... */ }
 ```
 
 ## Specifications

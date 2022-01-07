@@ -10,10 +10,8 @@ browser-compat: javascript.builtins.WebAssembly.Global.Global
 ---
 {{JSRef}}
 
-A **`WebAssembly.Global()`** constructor creates a new
-`Global` object representing a global variable instance, accessible from both
-JavaScript and importable/exportable across one or more {{jsxref("WebAssembly.Module")}}
-instances. This allows dynamic linking of multiple modules.
+A **`WebAssembly.Global()`** constructor creates a new `Global` object representing a global variable instance, accessible from both JavaScript and importable/exportable across one or more {{jsxref("WebAssembly.Module")}} instances.
+This allows dynamic linking of multiple modules.
 
 ## Syntax
 
@@ -28,35 +26,29 @@ new WebAssembly.Global(descriptor, value)
   - : A `GlobalDescriptor` dictionary object, which contains two properties:
 
     - `value`: A [`USVString`](/en-US/docs/Web/API/USVString) representing the
-      data type of the global. This can be one of `i32`, `i64`,
-      `f32`, and `f64`. USVString corresponds to the set of all
-      possible sequences of unicode scalar values. USVString maps to a String when
-      returned in JavaScript; it's generally only used for APIs that perform text
-      processing and need a string of unicode scalar values to operate on. USVString is
-      equivalent to DOMString except for not allowing unpaired surrogate codepoints.
-      Unpaired surrogate codepoints present in USVString are converted by the browser to
-      Unicode 'replacement character' U+FFFD, (�).
+      data type of the global. This can be any one of:
+      - `i32`: A 32-bit integer.
+      - `i64`: A 64-bit integer.
+      - `f32`: A 32-bit floating point number.
+      - `f64`: A 64-bit floating point number.
+      - `v128`: A 128-bit vector - note that although this is in the specification, in chrome this produces a {{jsxref("TypeError")}}.
+      - `externref`: A host reference.
+      - `anyfunc`: A function reference.
     - `mutable`: A boolean value that determines whether the global is
       mutable or not. By default, this is `false`.
 
 - _value_
-  - : The value the variable contains. This can be any value, as long as its type matches
-    the variable's data type. If no value is specified, a typed 0 value is used, as
-    specified by the [`DefaultValue`
-    algorithm](https://webassembly.github.io/spec/js-api/#defaultvalue).
+  - : The value the variable contains. This can be any value, as long as its type matches the variable's data type.
+    If no value is specified, a typed 0 value is used where the value of `descriptor.value` is one of `i32`, `i64`, `f32`, or `f64`, and `null` is used if `descriptor.value` is `externref` or `anyfunc` (as specified by the [`DefaultValue` algorithm](https://webassembly.github.io/spec/js-api/#defaultvalue)).
 
 ## Examples
 
 ### Creating a new Global instance
 
-The following example shows a new global instance being created using the
-`WebAssembly.Global()` constructor. It is being defined as a mutable
-`i32` type, with a value of 0.
+The following example shows a new global instance being created using the `WebAssembly.Global()` constructor.
+It is being defined as a mutable `i32` type, with a value of 0.
 
-The value of the global is then changed, first to `42` using the
-`Global.value` property, and then to 43 using the `incGlobal()`
-function exported out of the `global.wasm` module (this adds 1 to whatever
-value is given to it and then returns the new value).
+The value of the global is then changed, first to `42` using the `Global.value` property, and then to 43 using the `incGlobal()` function exported out of the `global.wasm` module (this adds 1 to whatever value is given to it and then returns the new value).
 
 ```js
 const output = document.getElementById('output');
@@ -83,9 +75,8 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 });
 ```
 
-> **Note:** You can see the example [running
-> live on GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html); see also the [source
-> code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
+> **Note:** You can see the example [running live on GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html);
+> see also the [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
 
 ## Specifications
 
@@ -99,7 +90,5 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 
 - [WebAssembly](/en-US/docs/WebAssembly) overview page
 - [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly
-  JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
-- [Import/Export
-  mutable globals proposal](https://github.com/WebAssembly/mutable-global/blob/master/proposals/mutable-global/Overview.md)
+- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [Import/Export mutable globals proposal](https://github.com/WebAssembly/mutable-global/blob/master/proposals/mutable-global/Overview.md)

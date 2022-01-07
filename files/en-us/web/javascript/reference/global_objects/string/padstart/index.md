@@ -37,8 +37,8 @@ padStart(targetLength, padString)
 - `padString` {{optional_inline}}
   - : The string to pad the current `str` with. If
     `padString` is too long to stay within the
-    `targetLength`, it will be truncated from the end. The default
-    value is "` `" (`U+0020 'SPACE'`).
+    `targetLength`, it will be truncated from the end.
+    The default value is the unicode "space" character (U+0020).
 
 ### Return value
 

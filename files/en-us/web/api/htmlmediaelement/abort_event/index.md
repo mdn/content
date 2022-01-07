@@ -41,7 +41,7 @@ The **`abort`** event is fired when the resource was not fully loaded, but not a
 
 ```js
 const video = document.querySelector('video');
-const videoSrc = 'https://path/to/video.webm';
+const videoSrc = 'https://example.org/path/to/video.webm';
 
 video.addEventListener('abort', () => {
   console.log(`Abort loading: ${videoSrc}`);

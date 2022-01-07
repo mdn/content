@@ -19,7 +19,7 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 >
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular event.
-> 
+>
 > ```
 > ---
 > title: 'NameOfTheParentInterface: NameOfTheEvent event'

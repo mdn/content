@@ -9,6 +9,7 @@ tags:
   - Error code
   - Exception
   - Reference
+  - Polyfill
 browser-compat: api.DOMException
 ---
 {{ APIRef("DOM") }}
@@ -118,4 +119,5 @@ Note that the following deprecated historical errors don’t have an error name 
 
 ## See also
 
+- [A polyfill of `DOMException`](https://github.com/zloirock/core-js#domexception) is available in [`core-js`](https://github.com/zloirock/core-js)
 - {{ domxref("DOMError") }}

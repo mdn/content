@@ -35,7 +35,7 @@ A floating-point number of pixels from the left edge of the _document_ at which 
 
 This property was originally specified in the Touch Events specification as a long integer, but was redefined in the CSSOM View Module to be a double-precision
 floating-point number to allow for subpixel precision.
-Even though numeric types both are represented by `Number` in JavaScript, they may be handled differently internally in the browser's code, resulting in potential behavior differences. 
+Even though numeric types both are represented by `Number` in JavaScript, they may be handled differently internally in the browser's code, resulting in potential behavior differences.
 
 See {{anch("Browser compatibility")}} to learn which browsers have been updated to use the revised data type.
 
@@ -98,7 +98,7 @@ box.addEventListener("mouseenter", updateDisplay, false);
 box.addEventListener("mouseleave", updateDisplay, false);
 ```
 
-The JavaScript code uses {{domxref("EventTarget.addEventListener", "addEventListener()")}} to register the function `updateDisplay()` as the event handler for the {{event("mousemove")}}, {{event("mouseenter")}}, and {{event("mouseleave")}} events.
+The JavaScript code uses {{domxref("EventTarget.addEventListener", "addEventListener()")}} to register the function `updateDisplay()` as the event handler for the {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/mouseenter_event", "mouseenter")}}, and {{domxref("Element/mouseleave_event", "mouseleave")}} events.
 
 `updateDisplay()` replaces the contents of the {{HTMLElement("span")}} elements meant to contain the X and Y coordinates with the values of `pageX`
 and {{domxref("MouseEvent.pageY", "pageY")}}.

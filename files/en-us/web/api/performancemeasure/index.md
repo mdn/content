@@ -19,7 +19,14 @@ browser-compat: api.PerformanceMeasure
 
 ## Properties
 
-This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constrainting the properties as follows:
+This interface defines:
+
+- `PerformanceMeasure.detail`
+  - : Contains arbitrary metatdata about the measure.
+    This may be passed in as a property of the {{domxref("Performance.measure()","performance.measure()")}} argument `MeasureOptions`.
+
+
+In addition, it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
 
 - {{domxref("PerformanceEntry.entryType")}}
   - : Returns "`measure`".
@@ -29,6 +36,7 @@ This interface has no properties but it extends the following {{domxref("Perform
   - : Returns a {{domxref("DOMHighResTimeStamp","timestamp")}} given to the measure when {{domxref("Performance.measure()","performance.measure()")}} was called.
 - {{domxref("PerformanceEntry.duration")}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure (typically, the measure's end mark timestamp minus its start mark timestamp).
+
 
 ## Methods
 

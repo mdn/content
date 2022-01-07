@@ -24,7 +24,7 @@ event fires.)
 ## Syntax
 
 ```js
-speechSynthesisUtteranceInstance.onboundary = function() { ... };
+speechSynthesisUtteranceInstance.onboundary = function() { /* ... */ };
 ```
 
 ## Examples

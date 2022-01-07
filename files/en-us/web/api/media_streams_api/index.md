@@ -37,7 +37,6 @@ In these reference articles, you'll find the fundamental information you'll need
 - {{domxref("MediaDeviceInfo")}}
 - {{domxref("MediaDevices")}}
 - {{domxref("MediaStream")}}
-- {{domxref("MediaStreamConstraints")}}
 - {{domxref("MediaStreamEvent")}}
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStreamTrackEvent")}}

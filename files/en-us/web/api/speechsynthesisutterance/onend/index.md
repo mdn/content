@@ -22,7 +22,7 @@ run when the utterance has finished being spoken (when the [end](/en-US/docs/Web
 ## Syntax
 
 ```js
-speechSynthesisUtteranceInstance.onend = function() { ... };
+speechSynthesisUtteranceInstance.onend = function() { /* ... */ };
 ```
 
 ## Examples

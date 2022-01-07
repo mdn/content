@@ -595,7 +595,7 @@ At the time of writing (June 2020) this is at an early stage, and the only multi
     i32.const 1
     i32.const 2
   )
-  (func (export "add_to_numbers") (result i32)
+  (func (export "add_two_numbers") (result i32)
     call $get_two_numbers
     i32.add
   )

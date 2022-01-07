@@ -63,7 +63,7 @@ tags:
 5.  [Color contrast analyzer](https://juicystudio.com/services/colourcontrast.php#contrast)
 
     by Juicy Studio
-    How can a web author establish easily and quickly if the background color and foreground (text) color in use in his webpages have sufficient color contrast difference and sufficient color brightness difference? [Color contrast analyzer](https://juicystudio.com/services/colourcontrast.php#contrast) is an excellent tool for such task. Effective color contrast and effective color brightness difference have a **decisive importance for reading**, furthermore for people with partial color deficiency (see the excellent examples in [Effective Color Contrast](http://www.lighthouse.org/accessibility/effective-color-contrast/) by Lighthouse International). 
+    How can a web author establish easily and quickly if the background color and foreground (text) color in use in his webpages have sufficient color contrast difference and sufficient color brightness difference? [Color contrast analyzer](https://juicystudio.com/services/colourcontrast.php#contrast) is an excellent tool for such task. Effective color contrast and effective color brightness difference have a **decisive importance for reading**, furthermore for people with partial color deficiency (see the excellent examples in [Effective Color Contrast](http://www.lighthouse.org/accessibility/effective-color-contrast/) by Lighthouse International).
 
     The [Juicy Studio CSS analyzer](https://juicystudio.com/services/csstest.php) will also analyze and report the color contrast and color brightness differences involved in your stylesheets.
 

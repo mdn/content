@@ -23,8 +23,8 @@ halt recording).
 ## Syntax
 
 ```js
-mediaRecorder.onwarning = function(event) { ... }
-mediaRecorder.addEventListener('warning', function(event) { ... })
+mediaRecorder.onwarning = function(event) { /* ... */ }
+mediaRecorder.addEventListener('warning', function(event) { /* ... */ })
 ```
 
 ## Example

@@ -562,26 +562,6 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 }
 ```
 
-### Consider `requestPostAnimationFrame` not `requestAnimationFrame`
-
-While it's well-known that apps should use `requestAnimationFrame` ("RAF") instead of `setTimeout` (et al) to redraw on-demand, what's less well-known is that non-trivial WebGL apps should often _not_ render within a RAF callback.
-
-RAF callbacks (and their microtasks/promises) are the last JS run at the end of each Browser content frame.
-
-For robust non-trivial (particularly WebGL) content, `requestPostAnimationFrame` ("RPAF") is the _first_ JS run at the beginning of each Browser content frame. That is, it's the first JS run after RAF callbacks and the Browser content (transaction) presentation step. ([RPAF explainer](https://github.com/WICG/requestPostAnimationFrame/blob/master/explainer.md))
-
-This allows as much time as possible for rendering each frame.
-
-_Note_ that `requestPostAnimationFrame` is still under development as of this writing. Polyfills of this API are recommended in Firefox, but not in Chrome, due to [undesirable performance characteristics](https://crbug.com/1199005). Here is one possible polyfill:
-
-    if (!window.requestPostAnimationFrame) {
-       window.requestPostAnimationFrame = function(task) {
-          requestAnimationFrame(() => {
-             setTimeout(task, 0);
-          });
-       }
-    }
-
 ### `devicePixelRatio` and high-dpi rendering
 
 Handling `devicePixelRatio != 1.0` is tricky. While the common approach is to set `canvas.width = width * devicePixelRatio`, this will cause moire artifacts with non-integer values of `devicePixelRatio`, as is common with UI scaling on Windows, as well as zooming on all platforms.

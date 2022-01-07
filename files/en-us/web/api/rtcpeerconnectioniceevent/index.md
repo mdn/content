@@ -10,6 +10,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnectionIceEvent
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnectionIceEvent`** interface represents events that occurs in relation to {{Glossary("ICE")}} candidates with the target, usually an {{domxref("RTCPeerConnection")}}.
@@ -35,11 +36,13 @@ _A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this 
 ## Examples
 
 ```js
-pc.onicecandidate = function( ev ) {
-  alert("The ICE candidate (transport address: '" +
-    ev.candidate.candidate +
-    "') has been added to this connection.");
-}
+pc.onicecandidate = function (ev) {
+  alert(
+    "The ICE candidate (transport address: '" +
+      ev.candidate.candidate +
+      "') has been added to this connection."
+  );
+};
 ```
 
 ## Specifications
@@ -52,5 +55,5 @@ pc.onicecandidate = function( ev ) {
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - Its usual target: {{domxref("RTCPeerConnection")}}.

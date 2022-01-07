@@ -20,6 +20,8 @@ _The AbortSignal interface also inherits properties from its parent interface, {
 
 - {{domxref("AbortSignal.aborted")}} {{readonlyInline}}
   - : A {{Glossary("Boolean")}} that indicates whether the request(s) the signal is communicating with is/are aborted (`true`) or not (`false`).
+- {{domxref("AbortSignal.reason")}} {{readonlyInline}}
+  - : A JavaScript value providing the abort reason, once the signal has aborted.
 
 ## Events
 

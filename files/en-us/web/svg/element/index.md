@@ -88,10 +88,6 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 *   {{SVGElement("marker")}}
 *   {{SVGElement("mask")}}
-*   {{SVGElement("mesh")}}
-*   {{SVGElement("meshgradient")}}
-*   {{SVGElement("meshpatch")}}
-*   {{SVGElement("meshrow")}}
 *   {{SVGElement("metadata")}}
 *   {{SVGElement("mpath")}}
 
@@ -162,15 +158,15 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 ### Gradient elements
 
-{{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("radialGradient")}}, {{SVGElement("stop")}}
+{{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}}, {{SVGElement("stop")}}
 
 ### Graphics elements
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("use")}}
+{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("use")}}
 
 ### Graphics referencing elements
 
-{{SVGElement("mesh")}}, {{SVGElement("use")}}
+{{SVGElement("use")}}
 
 ### Light source elements
 
@@ -178,21 +174,21 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 ### Never-rendered elements
 
-{{SVGElement("clipPath")}}, {{SVGElement("defs")}}, {{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("meshgradient")}}, {{SVGElement("metadata")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("symbol")}}, {{SVGElement("title")}}
+{{SVGElement("clipPath")}}, {{SVGElement("defs")}}, {{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("metadata")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("symbol")}}, {{SVGElement("title")}}
 
 ### Paint server elements
 
-{{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("solidcolor")}}
+{{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("solidcolor")}}
 
 ### Renderable elements
 
-{{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("use")}}
+{{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("use")}}
 
 > **Note:** The [SVG 2 spec requires](https://www.w3.org/TR/SVG2/struct.html#UnknownElement) that any unknown elements be treated as {{SVGElement("g")}} for the purpose of rendering.
 
 ### Shape elements
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
+{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
 
 ### Structural elements
 
@@ -208,7 +204,7 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 ### Uncategorized elements
 
-{{SVGElement("clipPath")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("hatchpath")}}, {{SVGElement("meshpatch")}}, {{SVGElement("meshrow")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
+{{SVGElement("clipPath")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("hatchpath")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
 
 ## Obsolete and deprecated elements
 

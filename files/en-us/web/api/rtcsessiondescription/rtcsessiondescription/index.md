@@ -12,6 +12,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription.RTCSessionDescription
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}{{deprecated_header}}
 
 The **`RTCSessionDescription()`** constructor creates a new
@@ -27,7 +28,7 @@ specified object.
 ## Syntax
 
 ```js
- sessionDescription = new RTCSessionDescription(rtcSessionDescriptionInit);
+sessionDescription = new RTCSessionDescription(rtcSessionDescriptionInit);
 ```
 
 ### Values
@@ -81,5 +82,5 @@ This feature is not part of any current specification. It is no longer on track 
 
 ## See also
 
-- [WebRTC API](/en-US/docs/Web/Guide/API/WebRTC_API)
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCSessionDescription")}}

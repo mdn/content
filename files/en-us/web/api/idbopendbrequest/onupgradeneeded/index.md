@@ -29,7 +29,7 @@ structure, as shown in the example below.
 ## Syntax
 
 ```js
-IDBOpenDBRequest.onupgradeneeded = function(event) { ... };
+IDBOpenDBRequest.onupgradeneeded = function(event) { /* ... */ };
 ```
 
 ## Example

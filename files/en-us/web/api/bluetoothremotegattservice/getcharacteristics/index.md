@@ -21,7 +21,7 @@ instances for a given universally unique identifier (UUID).
 ## Syntax
 
 ```js
-bluetoothGATTServiceInstance.getCharacteristics(characteristics).then(function(BluetoothGATTCharacteristic[]) { ... } )
+bluetoothGATTServiceInstance.getCharacteristics(characteristics).then(function(BluetoothGATTCharacteristic[]) { /* ... */ } )
 ```
 
 ### Returns

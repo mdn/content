@@ -38,4 +38,4 @@ selectElt.setCustomValidity(string);
 ## See also
 
 - [Form
-  validation.](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+  validation.](/en-US/docs/Web/Guide/HTML/Constraint_validation)

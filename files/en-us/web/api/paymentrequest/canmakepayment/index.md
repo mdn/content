@@ -33,8 +33,8 @@ Request API (or even provide instructions for paying by mail or by phone).
 
 ```js
 paymentRequest.canMakePayment()
-    .then( canPay => { ... })
-    .catch( error => { ... })
+    .then( canPay => { /* ... */ })
+    .catch( error => { /* ... */ })
 
 canPay = await paymentRequest.canMakePayment();
 ```

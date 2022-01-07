@@ -26,6 +26,7 @@ Web manifests can contain the following keys. Click on each one to link through 
 
 ```json
 {
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
   "name": "HackerWeb",
   "short_name": "HackerWeb",
   "start_url": ".",

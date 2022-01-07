@@ -68,7 +68,7 @@ Possible values are:
       <td>
         This direction causes the cursor to be opened at the end of the source.
         For every key with duplicate values, only the first record is
-        yielded.<br /> 
+        yielded.<br />
       </td>
     </tr>
   </tbody>

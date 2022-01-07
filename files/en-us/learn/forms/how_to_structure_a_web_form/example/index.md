@@ -87,12 +87,11 @@ This the example for a basic payment form for the article [How to structure an H
       <input type="tel" id="number" name="cardnumber">
     </p>
     <p>
-      <label for="date">
+      <label for="expiration">
         <span>Expiration date:</span>
         <strong><abbr title="required">*</abbr></strong>
-        <em>formatted as mm/dd/yyyy</em>
       </label>
-      <input type="date" id="date" name="expiration">
+      <input type="text" id="expiration" required="true" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
     </p>
   </section>
   <section>

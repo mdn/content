@@ -21,7 +21,7 @@ These events occur when something goes wrong with a {{domxref("Notification")}}
 ## Syntax
 
 ```js
-Notification.onerror = function() { ... };
+Notification.onerror = function() { /* ... */ };
 ```
 
 ## Specifications

@@ -10,7 +10,7 @@ tags:
   - Web Locks API
   - lock
 ---
-{{SeeCompatTable}}{{APIRef("Web Locks")}}{{DefaultAPISidebar}}
+{{SeeCompatTable}}{{APIRef("Web Locks")}}{{DefaultAPISidebar}}{{securecontext_header}}
 
 The Web Locks API allows scripts running in one tab or worker to asynchronously acquire a lock, hold it while work is performed, then release it. While held, no other script executing in the same origin can acquire the same lock, which allows a web app running in multiple tabs or workers to coordinate work and the use of resources.
 
@@ -43,11 +43,13 @@ The API provides optional functionality that may be used as needed, including:
 - diagnostics to query the state of locks in an origin
 - an escape hatch to protect against deadlocks
 
-Locks are scoped to origins; the locks acquired by a tab from https\://example.com have no effect on the locks acquired by a tab from https\://example.org:8080 as they are separate origins.
+Locks are scoped to origins; the locks acquired by a tab from `https://example.com` have no effect on the locks acquired by a tab from `https://example.org:8080` as they are separate origins.
 
 The main entry point is `navigator.locks.request()` which requests a lock. It takes a lock name, an optional set of options, and a callback. The callback is invoked when the lock is granted. The lock is automatically released when the callback returns, so usually the callback is an _async function_, which causes the lock to be released only when the async function has completely finished.
 
-The `request()` method itself returns a promise which resolves once the lock has been released; within an async function, a script can `await` the call to make the asynchronous code flow linear. For example:
+The `request()` method itself returns a promise which resolves once the lock has been released;
+within an async function, a script can `await` the call to make the asynchronous code flow linearly.
+For example:
 
 ```js
 await do_something_without_lock();

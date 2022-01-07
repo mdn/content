@@ -332,7 +332,7 @@ When this operation completes, you should be able to go back to the page on GitH
 
 This section explains the changes you'll need to make to our _LocalLibrary_ application to get it to work on Heroku.
 
-#### Set node version 
+#### Set node version
 
 The **package.json** contains everything needed to work out your application dependencies and what file should be launched to start your site. Heroku detects the presence of this file, and will use it to provision your app environment.
 
