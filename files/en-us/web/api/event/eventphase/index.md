@@ -99,7 +99,7 @@ window.onload = function () {
     removeListeners();
     addListeners();
   };
-  clear();
+  clearDivs();
   addListeners();
 }
 
@@ -128,7 +128,7 @@ function addListeners() {
 
 function onDivClick(e) {
   if (clear) {
-    clear();
+    clearDivs();
     clear = false;
   }
   if (e.eventPhase == 2)
@@ -143,10 +143,10 @@ function onDivClick(e) {
     divInfo.appendChild(para);
 }
 
-function clear() {
-  for (const div of divs) {
-    if (div.id != 'divInfo') {
-      div.style.backgroundColor = (i & 1) ? '#f6eedb' : '#cceeff';
+function clearDivs() {
+  for (let i = 0; i < divs.length; i++) {
+    if (divs[i].id != 'divInfo') {
+      divs[i].style.backgroundColor = (i & 1) ? '#f6eedb' : '#cceeff';
     }
   }
   divInfo.textContent = '';
