@@ -28,7 +28,7 @@ The **`Intl.Segmenter`** object enables locale-sensitive text segmentation, enab
 ## Instance methods
 
 - [`Intl.Segmenter.prototype.segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)
-  - : Returns a new [iterable `Segments` instance](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments)
+  - : Returns a new iterable [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) instance
     representing the segments of a string according to the locale and granularity of this `Intl.Segmenter` instance.
 - [`Intl.Segmenter.prototype.resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions)
   - : Returns a new object with properties reflecting the locale and granularity options computed during initialization of this `Intl.Segmenter` object.
