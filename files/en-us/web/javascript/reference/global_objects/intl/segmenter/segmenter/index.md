@@ -19,9 +19,9 @@ The **`Intl.Segmenter()`** constructor creates [`Intl.Segmenter`](/en-US/docs/We
 ## Syntax
 
 ```js
-new Intl.segmenter()
-new Intl.segmenter(locales)
-new Intl.segmenter(locales, options)
+new Intl.Segmenter()
+new Intl.Segmenter(locales)
+new Intl.Segmenter(locales, options)
 ```
 
 ### Parameters
