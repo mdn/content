@@ -25,7 +25,7 @@ Be aware that all contributions to MDN fall under specific open source licenses;
 
 ## What topics belong on MDN Web Docs?
 
-In general, if it's an open web-facing technology, we document it on MDN. This means any feature that can used by Web developers creating sites and applications now and in the near future. If it is implemented by multiple browsers and either accepted as standard or is progressing towards standardization, then yes, definitely. If it is still very experimental and not implemented in multiple browsers and/or liable to change, then it is still suitable for inclusion, but may not be seen as a priority for the writer's team to work on.
+In general, if it's an open web-facing technology, we document it on MDN. This means any feature that can be used by Web developers creating sites and applications now and in the near future. If it is implemented by multiple browsers and either accepted as standard or is progressing towards standardization, then yes, definitely. If it is still very experimental and not implemented in multiple browsers and/or liable to change, then it is still suitable for inclusion, but may not be seen as a priority for the writer's team to work on.
 
 The primary focus is on front-end web technologies:
 

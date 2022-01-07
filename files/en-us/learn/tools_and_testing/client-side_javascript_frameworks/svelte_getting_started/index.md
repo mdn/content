@@ -56,7 +56,7 @@ The outcome of this approach is not only smaller application bundles and better 
 
 Svelte sticks closely to the classic web development model of HTML, CSS, and JS, just adding a few extensions to HTML and JavaScript. It arguably has fewer concepts and tools to learn than some of the other framework options.
 
-Its main current disadvantages are that it is a young framework — its ecosystem is therefore more limited in terms of tooling, support, plugins, clear usage patterns, etc. than more mature frameworks, and there are also less job opportunities. But its advantages should be enough to make you interested to explore it.
+Its main current disadvantages are that it is a young framework — its ecosystem is therefore more limited in terms of tooling, support, plugins, clear usage patterns, etc. than more mature frameworks, and there are also fewer job opportunities. But its advantages should be enough to make you interested to explore it.
 
 > **Note:** recently Svelte has added [official TypeScript support](https://svelte.dev/blog/svelte-and-typescript), one of its most requested features. We'll look at it later on in this tutorial series.
 
@@ -429,7 +429,7 @@ A REPL ([read–eval–print loop](https://en.wikipedia.org/wiki/Read%E2%80%93ev
 
 Svelte's REPL is much more than that. It's an online tool that allows you to create complete apps, save them online, and share with others.
 
-It's the easiest way to start playing with Svelte from any machine, without having to install anything. It is also widely used by Svelte community. If you want to share an idea, ask for help, or report an issue, it's always extremely useful to create a REPL instance demomstrating the issue.
+It's the easiest way to start playing with Svelte from any machine, without having to install anything. It is also widely used by Svelte community. If you want to share an idea, ask for help, or report an issue, it's always extremely useful to create a REPL instance demonstrating the issue.
 
 Let's have a quick look at the Svelte REPL and how you'd use it. It looks like so:
 

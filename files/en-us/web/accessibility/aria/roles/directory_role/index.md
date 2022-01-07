@@ -11,7 +11,7 @@ tags:
   - deprecated
 ---
 
-The `directory` role was for a list of references to members of a group, such as a static table of contents. 
+The `directory` role was for a list of references to members of a group, such as a static table of contents.
 
 > **Warning:** The `directory` role was deprecated in ARIA 1.2
 
@@ -33,7 +33,7 @@ Use the [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) role instea
 
 
 ## See Also
-- [The `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) 
+- [The `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
 - The {{HTMLElement('ul')}} element
 - The {{HTMLElement('ol')}} element
 

@@ -11,13 +11,16 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 
-JavaScript is a programming language that adds interactivity to your website. This happens in games, in the behavior of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc. This article helps you get started with JavaScript and furthers your understanding of what is possible.
+JavaScript is a programming language that adds interactivity to your website. This happens in games, in the behavior of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc.
+This article helps you get started with JavaScript and furthers your understanding of what is possible.
 
 ## What is JavaScript?
 
-{{Glossary("JavaScript")}} ("JS" for short) is a full-fledged {{Glossary("Dynamic programming language", "dynamic programming language")}} that can add interactivity to a website. It was invented by Brendan Eich (co-founder of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation).
+{{Glossary("JavaScript")}} is a powerful programming language that can add interactivity to a website.
+It was invented by Brendan Eich (co-founder of the Mozilla project, the Mozilla Foundation, and the Mozilla Corporation).
 
-JavaScript is versatile and beginner-friendly. With more experience, you'll be able to create games, animated 2D and 3D graphics, comprehensive database-driven apps, and much more!
+JavaScript is versatile and beginner-friendly.
+With more experience, you'll be able to create games, animated 2D and 3D graphics, comprehensive database-driven apps, and much more!
 
 JavaScript itself is relatively compact, yet very flexible. Developers have written a variety of tools on top of the core JavaScript language, unlocking a vast amount of functionality with minimum effort. These include:
 

@@ -3,7 +3,6 @@ title: SpeechRecognition.stop()
 slug: Web/API/SpeechRecognition/stop
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - SpeechRecognition
@@ -13,7 +12,7 @@ tags:
   - stop
 browser-compat: api.SpeechRecognition.stop
 ---
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+{{APIRef("Web Speech API")}}
 
 The **`stop()`** method of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) stops the speech
 recognition service from listening to incoming audio, and attempts to return a
@@ -22,7 +21,7 @@ recognition service from listening to incoming audio, and attempts to return a
 ## Syntax
 
 ```js
-mySpeechRecognition.stop();
+stop();
 ```
 
 ### Returns

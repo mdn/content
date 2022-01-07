@@ -16,6 +16,7 @@ tags:
   - setRemoteDescription
 browser-compat: api.RTCPeerConnection.setRemoteDescription
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnection")}}
@@ -58,19 +59,19 @@ The `sessionDescription` parameter is technically of type
 `RTCSessionDescription`. This lets you simplify code such as the following:
 
 ```js
-myPeerConnection.setRemoteDescription(new RTCSessionDescription(description))
-.then(function () {
-  return createMyStream();
-})
+myPeerConnection
+  .setRemoteDescription(new RTCSessionDescription(description))
+  .then(function () {
+    return createMyStream();
+  });
 ```
 
 to be:
 
 ```js
-myPeerConnection.setRemoteDescription(description)
-.then(function () {
+myPeerConnection.setRemoteDescription(description).then(function () {
   return createMyStream();
-})
+});
 ```
 
 Using
@@ -97,7 +98,8 @@ connection). The promise fulfillment handler receives no input parameters.
 > intermediary steps handled by the WebRTC layer to ensure that an active connection
 > can be changed without losing the connection if the change does not succeed. See
 > {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and
-		current descriptions")}} for more details on this process.
+
+    	current descriptions")}} for more details on this process.
 
 ### Exceptions
 
@@ -119,7 +121,7 @@ by `setRemoteDescription()`:
   - : Returned if an error does not match the ones specified here. This includes identity validation errors.
 - `RTCError` {{domxref("DOMException")}}
   - : Returned with the {{domxref("RTCError.errorDetail",
-		"errorDetail")}} set to `sdp-syntax-error` if the
+    "errorDetail")}} set to `sdp-syntax-error` if the
     {{Glossary("SDP")}} specified by {{domxref("RTCSessionDescription.sdp")}} is not valid. The
     error object's {{domxref("RTCError.sdpLineNumber", "sdpLineNumber")}} property
     indicates the line number within the SDP on which the syntax error was detected.
@@ -210,23 +212,25 @@ explanation of what's going on.
 function handleOffer(msg) {
   createMyPeerConnection();
 
-  myPeerConnection.setRemoteDescription(msg.description).then(function () {
-    return navigator.mediaDevices.getUserMedia(mediaConstraints);
-  })
-  .then(function(stream) {
-    document.getElementById("local_video").srcObject = stream;
-    return myPeerConnection.addStream(stream);
-  })
-  .then(function() {
-    return myPeerConnection.createAnswer();
-  })
-  .then(function(answer) {
-    return myPeerConnection.setLocalDescription(answer);
-  })
-  .then(function() {
-    // Send the answer to the remote peer using the signaling server
-  })
-  .catch(handleGetUserMediaError);
+  myPeerConnection
+    .setRemoteDescription(msg.description)
+    .then(function () {
+      return navigator.mediaDevices.getUserMedia(mediaConstraints);
+    })
+    .then(function (stream) {
+      document.getElementById("local_video").srcObject = stream;
+      return myPeerConnection.addStream(stream);
+    })
+    .then(function () {
+      return myPeerConnection.createAnswer();
+    })
+    .then(function (answer) {
+      return myPeerConnection.setLocalDescription(answer);
+    })
+    .then(function () {
+      // Send the answer to the remote peer using the signaling server
+    })
+    .catch(handleGetUserMediaError);
 }
 ```
 
@@ -250,7 +254,7 @@ caller.
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection.remoteDescription")}},
   {{domxref("RTCPeerConnection.pendingRemoteDescription")}},
   {{domxref("RTCPeerConnection.currentRemoteDescription")}}

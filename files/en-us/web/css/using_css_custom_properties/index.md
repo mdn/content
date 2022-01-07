@@ -195,7 +195,7 @@ Keep in mind that these are custom properties, not actual variables like you mig
 
 Using the [`var()`](</en-US/docs/Web/CSS/var()>) function, you can define multiple **fallback values** when the given variable is not yet defined; this can be useful when working with [Custom Elements](/en-US/docs/Web/Web_Components/Using_custom_elements) and [Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM).
 
-> **Note:** Fallback values aren't used to fix the browser compatibility. If the browser doesn't support CSS custom Properties, the fallback value won't help. It's just a backup for the browser which supports CSS Custom Properties to choose a different value if the given variable isn't defined or has an invalid value.
+> **Note:** Fallback values aren't used to fix the browser compatibility. If the browser doesn't support CSS custom properties, the fallback value won't help. It's just a backup for the browser which supports CSS custom properties to choose a different value if the given variable isn't defined or has an invalid value.
 
 The first argument to the function is the name of the [custom property](https://www.w3.org/TR/css-variables/#custom-property) to be substituted. The second argument to the function, if provided, is a fallback value, which is used as the substitution value when the referenced [custom property](https://www.w3.org/TR/css-variables/#custom-property) is invalid. The function only accepts two parameters, assigning everything following the first comma as the second parameter. If that second parameter is invalid, such as if a comma-separated list is provided, the fallback will fail. For example:
 

@@ -72,7 +72,7 @@ You can make a simple `GET` request by clicking on a link or searching on a site
 
 Each line of the request contains information about it. The first part is called the **header**, and contains useful information about the request, in the same way that an [HTML head](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) contains useful information about an HTML document (but not the actual content itself, which is in the body):
 
-```plain
+```http
 GET /en-US/search?q=client+server+overview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
@@ -98,11 +98,12 @@ The first and second lines contain most of the information we talked about above
 
 The final line contains information about the client-side cookies — you can see in this case the cookie includes an id for managing sessions (`Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; ...`).
 
-The remaining lines contain information about the browser used and the sort of responses it can handle. For example, you can see here that:
+The remaining lines contain information about the browser used and the sort of responses it can handle.
+For example, you can see here that:
 
 - My browser (`User-Agent`) is Mozilla Firefox (`Mozilla/5.0`).
 - It can accept gzip compressed information (`Accept-Encoding: gzip`).
-- It can accept the specified set of characters (`Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7`) and languages (`Accept-Language: de,en;q=0.7,en-us;q=0.3`).
+- It can accept the specified set of characters (`Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7`) and languages (`Accept-Language: en-US,en;q=0.8,es;q=0.6`).
 - The `Referer` line indicates the address of the web page that contained the link to this resource (i.e. the origin of the request, `https://developer.mozilla.org/en-US/`).
 
 HTTP requests can also have a body, but it is empty in this case.
@@ -118,7 +119,7 @@ The first part of the response for this request is shown below. The header conta
 
 At the end of the message we see the **body** content — which contains the actual HTML returned by the request.
 
-```plain
+```http
 HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
@@ -151,7 +152,7 @@ An HTTP `POST` is made when you submit a form containing information to be saved
 
 The text below shows the HTTP request made when a user submits new profile details on this site. The format of the request is almost the same as the `GET` request example shown previously, though the first line identifies this request as a `POST`.
 
-```plain
+```http
 POST /en-US/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
@@ -177,7 +178,7 @@ The main difference is that the URL doesn't have any parameters. As you can see,
 
 The response from the request is shown below. The status code of "`302 Found`" tells the browser that the post succeeded, and that it must issue a second HTTP request to load the page specified in the `Location` field. The information is otherwise similar to that for the response to a `GET` request.
 
-```plain
+```http
 HTTP/1.1 302 FOUND
 Server: Apache
 X-Backend-Server: developer3.webapp.scl3.mozilla.com
@@ -229,13 +230,13 @@ The diagram below shows the main elements of the "team coach" website, along wit
 
 After the coach submits the form with the team name and number of players, the sequence of operations is:
 
-1.  The web browser creates an HTTP `GET` request to the server using the base URL for the resource (`/best`) and encoding the team and player number either as URL parameters (e.g. `/best?team=my_team_name&show=11)` or as part of the URL pattern (e.g. `/best/my_team_name/11/`). A `GET` request is used because the request is only fetching data (not modifying data).
-2.  The *Web Server* detects that the request is "dynamic" and forwards it to the *Web Application* for processing (the web server determines how to handle different URLs based on pattern matching rules defined in its configuration).
-3.  The *Web Application* identifies that the _intention_ of the request is to get the "best team list" based on the URL (`/best/`) and finds out the required team name and number of players from the URL. The *Web Application* then gets the required information from the database (using additional "internal" parameters to define which players are "best", and possibly also getting the identity of the logged in coach from a client-side cookie).
-4.  The _Web Application_ dynamically creates an HTML page by putting the data (from the _Database_) into placeholders inside an HTML template.
-5.  The _Web Application_ returns the generated HTML to the web browser (via the _Web Server_), along with an HTTP status code of 200 ("success"). If anything prevents the HTML from being returned then the _Web Application_ will return another code — for example "404" to indicate that the team does not exist.
-6.  The Web Browser will then start to process the returned HTML, sending separate requests to get any other CSS or JavaScript files that it references (see step 7).
-7.  The Web Server loads static files from the file system and returns them to the browser directly (again, correct file handling is based on configuration rules and URL pattern matching).
+1. The web browser creates an HTTP `GET` request to the server using the base URL for the resource (`/best`) and encoding the team and player number either as URL parameters (e.g. `/best?team=my_team_name&show=11)` or as part of the URL pattern (e.g. `/best/my_team_name/11/`). A `GET` request is used because the request is only fetching data (not modifying data).
+2. The *Web Server* detects that the request is "dynamic" and forwards it to the *Web Application* for processing (the web server determines how to handle different URLs based on pattern matching rules defined in its configuration).
+3. The *Web Application* identifies that the _intention_ of the request is to get the "best team list" based on the URL (`/best/`) and finds out the required team name and number of players from the URL. The *Web Application* then gets the required information from the database (using additional "internal" parameters to define which players are "best", and possibly also getting the identity of the logged in coach from a client-side cookie).
+4. The _Web Application_ dynamically creates an HTML page by putting the data (from the _Database_) into placeholders inside an HTML template.
+5. The _Web Application_ returns the generated HTML to the web browser (via the _Web Server_), along with an HTTP status code of 200 ("success"). If anything prevents the HTML from being returned then the _Web Application_ will return another code — for example "404" to indicate that the team does not exist.
+6. The Web Browser will then start to process the returned HTML, sending separate requests to get any other CSS or JavaScript files that it references (see step 7).
+7. The Web Server loads static files from the file system and returns them to the browser directly (again, correct file handling is based on configuration rules and URL pattern matching).
 
 An operation to update a record in the database would be handled similarly, except that like any database update, the HTTP request from the browser should be encoded as a `POST` request.
 

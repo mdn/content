@@ -9,13 +9,11 @@ tags:
 ---
 {{AddonSidebar}}
 
-> **Note:** If you are already familiar with the basic concepts of browser extensions, skip this section to [see how extension files are put together](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Then, use the [reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions#reference) to start building your extension. Visit [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) to learn more about the workflow for testing, publishing, and extensions for Firefox.
+> **Note:** If you're familiar with the basic concepts of browser extensions, skip this section to [see how extension files are put together](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Then, use the [reference documentation](/en-US/docs/Mozilla/Add-ons/WebExtensions#reference) to start building your extension. Visit [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) to learn more about the workflow for testing, publishing, and extensions for Firefox.
 
-This article walks through creating an extension for Firefox, from start to finish. The extension adds a red border to any pages loaded from "mozilla.org" or any of its subdomains.
+This article walks through creating an extension for Firefox, from start to finish. The extension adds a red border to any pages loaded from "`mozilla.org`" or any of its subdomains.
 
 The source code for this example is on GitHub: <https://github.com/mdn/webextensions-examples/tree/master/borderify>.
-
-First, you'll need Firefox version 45 or later.
 
 ## Writing the extension
 
@@ -115,25 +113,23 @@ First, double check that you have the right files in the right places:
 
 ### Installing
 
-In Firefox: Open the [about:debugging](/en-US/docs/Tools/about:debugging) page, click "This Firefox" (in newer versions of Firefox), click "Load Temporary Add-on", then select any file in your extension's directory.
+In Firefox: Open the [about:debugging](/en-US/docs/Tools/about:debugging) page, click the This Firefox option, click the Load Temporary Add-on button, then select any file in your extension's directory.
 
-{{EmbedYouTube("cer9EUKegG4")}}
-
-The extension will now be installed, and will stay until you restart Firefox.
+The extension now installs, and remains installed until you restart Firefox.
 
 Alternatively, you can run the extension from the command line using the [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) tool.
 
 ### Testing
 
-Now try visiting a page under "mozilla.org", and you should see the red border round the page:
+> **Note:** By default [extensions don't work in private browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing). If you want to test this extension in private browsing open "`about:addons`", click on the extension, and select the Allow radio button for Run in Private Windows.
 
-{{EmbedYouTube("rxBQl2Z9IBQ")}}
+Now visit a page under "`mozilla.org`", and you should see the red border round the page.
 
-> **Note:** Don't try it on addons.mozilla.org, though! Content scripts are currently blocked on that domain.
+![Border displayed on mozilla.org](border_on_mozilla_org.png "Border displayed on mozilla.org")
 
-Try experimenting a bit. Edit the content script to change the color of the border, or do something else to the page content. Save the content script, then reload the extension's files by clicking the "Reload" button in about:debugging. You can see the changes right away:
+> **Note:** Don't try it on "`addons.mozilla.org`", though! Content scripts are currently blocked on that domain.
 
-{{EmbedYouTube("NuajE60jfGY")}}
+Try experimenting a bit. Edit the content script to change the color of the border, or do something else to the page content. Save the content script, then reload the extension's files by clicking the Reload button in "`about:debugging`". You can see the changes right away.
 
 - [Learn more about loading extensions](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
 

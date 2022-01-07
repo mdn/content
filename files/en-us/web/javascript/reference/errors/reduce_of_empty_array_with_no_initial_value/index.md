@@ -28,7 +28,7 @@ In JavaScript, there are several reduce functions:
 
 - {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}
   and
-- {{jsxref("TypedArray.prototype.reduce()")}}, 
+- {{jsxref("TypedArray.prototype.reduce()")}},
   {{jsxref("TypedArray.prototype.reduceRight()")}}).
 
 These functions optionally take an `initialValue` (which will be used as the

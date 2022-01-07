@@ -62,7 +62,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
       <td><code>TransactionInactiveError</code></td>
       <td>
         This {{domxref("IDBObjectStore")}}'s transaction is
-        inactive.<br /> 
+        inactive.<br />
       </td>
     </tr>
   </tbody>

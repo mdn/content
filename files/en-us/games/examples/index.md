@@ -63,6 +63,8 @@ This page lists a number of impressive web technology demos for you to get inspi
   - : A new take on Star Castle, Cinematronics' classic 1980 arcade game, built with canvas 2D.
 - [Classic Platformer ](https://maximumroulette.com/applications/visual-typescript-game-engine/single-player/app.html)
   - : Canvas 2D game based on \`Visual-ts game engine\` - physics based on Matter.js
+- [Solitaire](https://online-solitaire.com/mozilla-foundation)
+  - : A classic solitaire game in the style and colors of the Mozilla Foundation. Built with ReactJS, Firebase and Greensock for animations.
 
 ## Commercial games
 

@@ -19,7 +19,7 @@ This means that a node can't be in two points of the document simultaneously. So
 node already has a parent, the node is first removed, then appended at the new position.
 The {{domxref("Node.cloneNode()")}} method can be used to make a copy of the node before
 appending it under the new parent.
-Copies made with `cloneNode` are not be automatically kept in sync.
+Copies made with `cloneNode` are not automatically kept in sync.
 
 If the given child is a {{domxref("DocumentFragment")}}, the entire contents of the
 {{domxref("DocumentFragment")}} are moved into the child list of the specified parent

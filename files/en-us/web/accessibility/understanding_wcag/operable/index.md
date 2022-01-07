@@ -206,7 +206,7 @@ This guideline covers situations in which functionality may have a time limit. F
         <p>
           If there is a timeout (caused by user inactivity) warn users at the
           start of a process so they will not be surprised that a timeout exists
-          (or only allow the timeout to occur after 20 hours of inactivity. 
+          (or only allow the timeout to occur after 20 hours of inactivity.
         </p>
       </td>
       <td>
@@ -222,7 +222,7 @@ This guideline covers situations in which functionality may have a time limit. F
 
 ## Guideline 2.3 — Seizures and Physical Reactions: Do not design content in a way that is known to cause seizures or physical reactions
 
-This refers to content that, if not changed, could cause seizures in users with conditions such as epilepsy OR could cause physical reactions (like dizziness) for users with conditions such as vestibular disorders. 
+This refers to content that, if not changed, could cause seizures in users with conditions such as epilepsy OR could cause physical reactions (like dizziness) for users with conditions such as vestibular disorders.
 
 <table>
   <thead>
@@ -316,7 +316,7 @@ The conformance criteria under this guideline relate to ways in which users can 
         in an unusual layout, it is better to make sure the source order is
         sensible, then use CSS features like
         <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a>
-        to handle the layout. 
+        to handle the layout.
       </td>
     </tr>
     <tr>

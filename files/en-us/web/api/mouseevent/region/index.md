@@ -22,7 +22,7 @@ A {{domxref("DOMString")}} representing the id of the hit region.
 
 ## Example
 
-Example of using the `event.region` combined with `CanvasRenderingContext2D.addHitRegion()` method.
+Example of using the `event.region` combined with `CanvasRenderingContext2D.addHitRegion()` method.
 
 ```html
 <canvas id="canvas"></canvas>

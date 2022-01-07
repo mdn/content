@@ -33,14 +33,14 @@ Early versions of the spec defined this as an integer referring to the number of
 
 This example displays your mouse's coordinates whenever you trigger the {{Event("mousemove")}} event.
 
-#### HTML
+### HTML
 
 ```html
 <p>Move your mouse to see its position.</p>
 <p id="screen-log"></p>
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
 let screenLog = document.querySelector('#screen-log');
@@ -53,7 +53,7 @@ function logKey(e) {
 }
 ```
 
-#### Result
+### Result
 
 {{EmbedLiveSample("Example")}}
 

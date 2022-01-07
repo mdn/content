@@ -18,7 +18,7 @@ The `banner` role is for defining a global site header, which usually includes a
 </div>
 ```
 
-By default, the HTML5 {{htmlelement("header")}} element has an identical meaning to the `banner` landmark, unless it is a descendant of {{htmlelement("aside")}}, {{htmlelement("article")}}, {{htmlelement("main")}}, {{htmlelement("nav")}}, or {{htmlelement("section")}}, and which point {{htmlelement("header")}} is the heading for that section, and not the equivalent of the site-wide banner.
+By default, the HTML5 {{htmlelement("header")}} element has an identical meaning to the `banner` landmark, unless it is a descendant of {{htmlelement("aside")}}, {{htmlelement("article")}}, {{htmlelement("main")}}, {{htmlelement("nav")}}, or {{htmlelement("section")}}, at which point {{htmlelement("header")}} is the heading for that section, and not the equivalent of the site-wide banner.
 
 ## Description
 

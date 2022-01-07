@@ -216,12 +216,13 @@ The following steps show how you can use NPM to download a package, save it into
     }
     ```
 
-5.  To use the Express library you call the `require()` function in your index.js file to include it in your application. Create this file now, in the root of the "myapp" application directory, and give it the following contents:
+5.  To use the Express library you call the `require()` function in your index.js file to include it in your application.
+    Create this file now, in the root of the "myapp" application directory, and give it the following contents:
 
     ```js
     const express = require('express')
     const app = express();
-    const port = 8000;
+    const port = 3000;
 
     app.get('/', (req, res) => {
       res.send('Hello World!')
@@ -232,7 +233,9 @@ The following steps show how you can use NPM to download a package, save it into
     });
     ```
 
-    This code shows a minimal "HelloWorld" Express web application. This imports the "express" module using `require()` and uses it to create a server (`app`) that listens for HTTP requests on port 8000 and prints a message to the console explaining what browser URL you can use to test the server. The `app.get()` function only responds to HTTP `GET` requests with the specified URL path ('/'), in this case by calling a function to send our _Hello World!_ message.
+    This code shows a minimal "HelloWorld" Express web application.
+    This imports the "express" module using `require()` and uses it to create a server (`app`) that listens for HTTP requests on port 3000 and prints a message to the console explaining what browser URL you can use to test the server.
+    The `app.get()` function only responds to HTTP `GET` requests with the specified URL path ('/'), in this case by calling a function to send our _Hello World!_ message.
 
     > **Note:** The backticks in the `` `Example app listening on port ${port}!` `` let us interpolate the value of `$port` into the string.
 
@@ -240,10 +243,11 @@ The following steps show how you can use NPM to download a package, save it into
 
     ```bash
     >node index.js
-    Example app listening on port 8000
+    Example app listening on port 3000
     ```
 
-7.  Navigate to the URL (<http://127.0.0.1:8000/>). If everything is working, the browser should display the string "Hello World!".
+7.  Navigate to the URL (<http://127.0.0.1:3000/>).
+    If everything is working, the browser should display the string "Hello World!".
 
 ### Development dependencies
 

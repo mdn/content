@@ -278,7 +278,7 @@ It's possible to create some pretty complex layouts with flexbox. It's perfectly
 
 ![](flexbox-example7.png)
 
-The HTML for this is fairly simple. We've got a {{htmlelement("section")}} element containing three {{htmlelement("article")}}s. The third {{htmlelement("article")}} contains three {{htmlelement("div")}}s. :
+The HTML for this is fairly simple. We've got a {{htmlelement("section")}} element containing three {{htmlelement("article")}}s. The third {{htmlelement("article")}} contains three {{htmlelement("div")}}s, and the first {{htmlelement("div")}} contains five {{htmlelement("button")}}s :
 
     section - article
               article
@@ -298,7 +298,7 @@ section {
 }
 ```
 
-Next, we set some flex values on the {{htmlelement("article")}}s themselves. Take special note of the 2nd rule here: we're setting the third {{htmlelement("article")}} to have its children laid out like flex items too, but this time we're laying them out like a column.
+Next, we set some flex values on the {{htmlelement("article")}}s themselves. Take special note of the second rule here: we're setting the third {{htmlelement("article")}} to have its children laid out like flex items too, but this time we're laying them out like a column.
 
 ```css
 article {
@@ -312,11 +312,11 @@ article:nth-of-type(3) {
 }
 ```
 
-Next, we select the first {{htmlelement("div")}}. We first use `flex:1 100px;` to effectively give it a minimum height of 100px, then we set its children (the {{htmlelement("button")}} elements) to also be laid out like flex items. Here we lay them out in a wrapping row and align them in the center of the available space as we did with the individual button example we saw earlier.
+Next, we select the first {{htmlelement("div")}}. We first use `flex: 1 100px;` to effectively give it a minimum height of 100px, then we set its children (the {{htmlelement("button")}} elements) to also be laid out like flex items. Here we lay them out in a wrapping row and align them in the center of the available space as we did with the individual button example we saw earlier.
 
 ```css
 article:nth-of-type(3) div:first-child {
-  flex:1 100px;
+  flex: 1 100px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -351,7 +351,7 @@ We've covered a lot in this article, but can you remember the most important in
 
 ## Summary
 
-That concludes our tour of the basics of flexbox. We hope you had fun and will have a good play around with it as you proceed further with your learning. Next, we'll have a look at another important aspect of CSS layouts: CSS Grids.
+That concludes our tour of the basics of Flexbox. We hope you had fun and will have a good play around with it as you proceed further with your learning. Next, we'll have a look at another important aspect of CSS layouts: CSS Grids.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 

@@ -18,7 +18,8 @@ tags:
 
 ## Motivation
 
-The experimental Long Tasks API gives us visibility into tasks that take 50 milliseconds or more. The 50 ms threshold comes from the [RAIL Model](https://developers.google.com/web/fundamentals/performance/rail), in particular the ["Response: process events in under 50 ms"](https://developers.google.com/web/fundamentals/performance/rail#response) section.
+The experimental Long Tasks API gives us visibility into tasks that take 50 milliseconds or more.
+The 50 ms threshold comes from the [RAIL Model](https://web.dev/rail/), in particular the ["Response: process events in under 50 ms"](https://web.dev/rail/#response:-process-events-in-under-50ms) section.
 
 Tasks that block the main thread for 50 ms or more cause, among other issues:
 

@@ -47,61 +47,30 @@ If the element is read-only, then the element's value can not be updated by the 
 
 ```html
 <div class="group">
-  <input type="textbox" value="Some value" readonly="readonly"/>
-  <label>Textbox</label>
+  <input type="text" value="Some value" readonly="readonly" id="text"/>
+  <label for="text">Text box</label>
 </div>
 <div class="group">
-  <input type="date" value="2020-01-01" readonly="readonly"/>
-  <label>Date</label>
+  <input type="date" value="2020-01-01" readonly="readonly" id="date"/>
+  <label for="date">Date</label>
 </div>
 <div class="group">
-  <input type="email" value="Some value" readonly="readonly"/>
-  <label>Email</label>
+  <input type="email" value="Some value" readonly="readonly" id="email"/>
+  <label for="email">Email</label>
 </div>
 <div class="group">
-  <input type="password" value="Some value" readonly="readonly"/>
-  <label>Password</label>
+  <input type="password" value="Some value" readonly="readonly" id="pwd"/>
+  <label for="pwd">Password</label>
 </div>
 <div class="group">
-  <textarea readonly="readonly">Some value</textarea>
-  <label>Message</label>
+  <textarea readonly="readonly" id="ta">Some value</textarea>
+  <label for="ta">Message</label>
 </div>
 ```
 
 ### Result
 
 {{EmbedLiveSample('Example')}}
-
-## Examples
-
-```html hidden
-<fieldset>
-  <legend>Checkboxes buttons</legend>
-  <p><label>
-    <input type="checkbox" name="chbox" value="regular"> Regular
-  </label></p>
-  <p><label>
-    <input type="checkbox" name="chbox" value="readonly" readonly> readonly
-  </label></p>
-  <p><label>
-    <input type="checkbox" name="chbox" value="disabled" disabled> disabled
-  </label></p>
-</fieldset>
-<fieldset>
-  <legend>Radio buttons</legend>
-  <p><label>
-    <input type="radio" name="radio" value="regular"> Regular
-  </label></p>
-  <p><label>
-    <input type="radio" name="radio" value="readonly" readonly> readonly
-  </label></p>
-  <p><label>
-    <input type="radio" name="radio" value="disabled" disabled> disabled
-  </label></p>
-</fieldset>
-```
-
-{{EmbedLiveSample('Examples', 500, 200)}}
 
 ## Specifications
 

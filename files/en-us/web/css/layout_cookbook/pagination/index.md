@@ -51,9 +51,9 @@ Once the {{cssxref("column-gap")}} property has implementation in browsers this 
 
 ## Accessibility concerns
 
-We want to ensure that a person using a screenreader understands what this navigation does, and where they will go when clicking a link. To help with this we have added `aria-label="pagination"` on the `<nav>` element.
+We want to ensure that a person using a screenreader understands what this navigation does, and where they will go when clicking a link. To help with this we have added [`aria-label="pagination"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) on the `<nav>` element.
 
-We have also added some additional content that would be read by a screenreader but is hidden visually, and set the `aria-hidden` attribute on the paging arrows.
+We have also added some additional content that would be read by a screenreader but is hidden visually, and set the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute on the paging arrows.
 
 The "See Also" section at the end of this document has links to related accessibility topics.
 
@@ -63,11 +63,11 @@ The various layout methods have different browser support. See the charts below 
 
 _Include the compat data for key properties you used, as in the example below which includes align-items._
 
-#### justify-content
+### justify-content
 
 {{Compat("css.properties.justify-content")}}
 
-#### column-gap in Flex layout
+### column-gap in Flex layout
 
 {{Compat("css.properties.column-gap.flex_context")}}
 

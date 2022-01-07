@@ -19,8 +19,8 @@ containing information about an absolute device orientation change.
 ## Syntax
 
 ```js
-window.ondeviceorientationabsolute = function(event) { ... };
-window.addEventListener('deviceorientationabsolute', function(event) { ... });
+window.ondeviceorientationabsolute = function(event) { /* ... */ };
+window.addEventListener('deviceorientationabsolute', function(event) { /* ... */ });
 ```
 
 ## Specifications

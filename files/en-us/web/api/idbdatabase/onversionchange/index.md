@@ -28,7 +28,7 @@ related).
 ## Syntax
 
 ```js
-IDBDatabase.onversionchange = function(event) { ... }
+IDBDatabase.onversionchange = function(event) { /* ... */ }
 ```
 
 ## Example

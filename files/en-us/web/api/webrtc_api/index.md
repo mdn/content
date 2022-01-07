@@ -221,7 +221,6 @@ These interfaces and events are related to interactivity with Public-Switched Te
 
 - {{DOMxRef("MediaDevices")}}
 - {{DOMxRef("MediaStreamEvent")}}
-- {{DOMxRef("MediaStreamConstraints")}}
 - {{DOMxRef("MediaStreamTrack")}}
 - {{DOMxRef("MessageEvent")}}
 - {{DOMxRef("MediaStream")}}

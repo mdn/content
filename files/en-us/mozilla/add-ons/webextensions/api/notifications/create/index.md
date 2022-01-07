@@ -45,15 +45,9 @@ var creating = browser.notifications.create(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled when the notification is created and the display process has been started, which is before the notification is actually displayed to the user. It is fulfilled with a string representing the notification's ID.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
-Create and display a basic notification periodically, using an {{WebExtAPIRef("alarms", "alarm")}}. Clicking the browser action dismisses the notification.
-
-Note that you'll need the "alarms" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to create alarms (as well as the "notifications" permission to create notifications).
+This example displays a notification periodically, using {{WebExtAPIRef("alarms", "alarm")}}. Clicking the browser action dismisses the notification. You need the "alarms" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to create alarms (as well as the "notifications" permission to create notifications).
 
 ```js
 var cakeNotification = "cake-notification"
@@ -88,56 +82,11 @@ browser.browserAction.onClicked.addListener(()=> {
 });
 ```
 
-Display a similar notification, but add buttons naming cakes, and log the selected cake when a button is clicked:
-
-```js
-var cakeNotification = "cake-notification"
-
-/*
-
-CAKE_INTERVAL is set to 6 seconds in this example.
-Such a short period is chosen to make the extension's behavior
-more obvious, but this is not recommended in real life.
-Note that in Chrome, alarms cannot be set for less
-than a minute.
-
-*/
-var CAKE_INTERVAL = 0.1;
-
-var buttons = [
-  {
-    "title": "Chocolate"
-  }, {
-    "title": "Battenberg"
-  }
-];
-
-browser.alarms.create("", {periodInMinutes: CAKE_INTERVAL});
-
-browser.alarms.onAlarm.addListener(function(alarm) {
-  browser.notifications.create(cakeNotification, {
-    "type": "basic",
-    "iconUrl": browser.runtime.getURL("icons/cake-96.png"),
-    "title": "Time for cake!",
-    "message": "Something something cake",
-    "buttons": buttons
-  });
-});
-
-browser.browserAction.onClicked.addListener(()=> {
-  var clearing = browser.notifications.clear(cakeNotification);
-  clearing.then(() => {
-    console.log("cleared");
-  });
-});
-
-browser.notifications.onButtonClicked.addListener((id, index) => {
-  browser.notifications.clear(id);
-  console.log("You chose: " + buttons[index].title);
-});
-```
-
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications#method-create) API.
 >

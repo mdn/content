@@ -17,7 +17,7 @@ The **`onmessage`** property of the {{domxref("DedicatedWorkerGlobalScope")}} in
 ## Syntax
 
 ```js
-self.onmessage = function() { ... };
+self.onmessage = function() { /* ... */ };
 ```
 
 ## Example

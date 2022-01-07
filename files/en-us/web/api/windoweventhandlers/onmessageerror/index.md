@@ -24,7 +24,7 @@ that cannot be {{glossary("Deserialization", "deserialized")}}.
 ## Syntax
 
 ```js
-window.onmessageerror = function() { ... };
+window.onmessageerror = function() { /* ... */ };
 ```
 
 ## Specifications

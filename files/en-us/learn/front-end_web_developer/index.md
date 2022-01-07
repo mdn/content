@@ -74,7 +74,7 @@ Nothing except basic computer literacy, and a basic web development environment.
 
 #### How will I know I'm ready to move on?
 
-The assessments in each module are designed to test your knowledge of the subject matter.  Completing the assessments confirms that you are ready to move on to the next module.
+The assessments in each module are designed to test your knowledge of the subject matter. Completing the assessments confirms that you are ready to move on to the next module.
 
 #### Modules
 
@@ -115,7 +115,7 @@ It is recommended that you have basic HTML knowledge before starting to learn Ja
 
 #### How will I know I'm ready to move on?
 
-The assessments in each module are designed to test your knowledge of the subject matter.  Completing the assessments confirms that you are ready to move on to the next module.
+The assessments in each module are designed to test your knowledge of the subject matter. Completing the assessments confirms that you are ready to move on to the next module.
 
 #### Modules
 
@@ -135,7 +135,7 @@ Forms require HTML, CSS, and JavaScript knowledge. Given the complexity of worki
 
 #### How will I know I'm ready to move on?
 
-The assessments in each module are designed to test your knowledge of the subject matter.  Completing the assessments confirms that you are ready to move on to the next module.
+The assessments in each module are designed to test your knowledge of the subject matter. Completing the assessments confirms that you are ready to move on to the next module.
 
 #### Modules
 
@@ -147,11 +147,11 @@ Time to complete: 60–75 hours
 
 #### Prerequisites
 
-It is a good idea to know HTML, CSS, and JavaScript before working through this section. Many of the techniques and best practices touch on multiple technologies.
+It is good to know HTML, CSS, and JavaScript before working through this section. Many of the techniques and best practices touch on multiple technologies.
 
 #### How will I know I'm ready to move on?
 
-The assessments in each module are designed to test your knowledge of the subject matter.  Completing the assessments confirms that you are ready to move on to the next module.
+The assessments in each module are designed to test your knowledge of the subject matter. Completing the assessments confirms that you are ready to move on to the next module.
 
 #### Modules
 
@@ -164,7 +164,7 @@ Time to complete: 55–90 hours
 
 #### Prerequisites
 
-It is a good idea to know HTML, CSS, and JavaScript before working through this section, as the tools discussed work alongside many of these technologies.
+It is good to know HTML, CSS, and JavaScript before working through this section, as the tools discussed work alongside many of these technologies.
 
 #### How will I know I'm ready to move on?
 

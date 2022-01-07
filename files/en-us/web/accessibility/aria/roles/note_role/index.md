@@ -40,7 +40,7 @@ If the above Wikipedia style entry for Madam C.J. Walker, the hilite box `note` 
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#note","ARIA: note role")}}                                             | {{Spec2('ARIA')}}                     
+| {{SpecName("ARIA","#note","ARIA: note role")}}                                             | {{Spec2('ARIA')}}
 
 ## See Also
 

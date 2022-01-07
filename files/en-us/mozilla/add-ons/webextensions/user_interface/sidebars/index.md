@@ -8,7 +8,7 @@ tags:
 
 A sidebar is a pane that is displayed at the side of the browser window, next to the web page. This page describes sidebars, specifying them, designing them, and examples of use.
 
-The browser provides a UI that enables the user to see the currently available sidebars and to select a sidebar to display. For example, Firefox has a "View > Sidebar" menu. Only one sidebar can be shown at a time, and that sidebar will be displayed for all tabs and all browser windows.
+The browser provides a UI that enables the user to select a sidebar to display. For example, Firefox has the "View" > "Sidebar" menu. Each browser window can display its own sidebar, which is displayed on every tab in the window.
 
 The browser may include a number of built-in sidebars. For example, Firefox includes a sidebar for interacting with bookmarks:
 

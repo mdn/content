@@ -24,7 +24,7 @@ values are  `'prompt'`, `'denied'`, or `'granted'`.
 ## Syntax
 
 ```js
-PushManager.permissionState(options).then(function(PushMessagingState) { ... });
+PushManager.permissionState(options).then(function(PushMessagingState) { /* ... */ });
 ```
 
 ### Parameters

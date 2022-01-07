@@ -19,7 +19,7 @@ browser-compat: path.to.feature.NameOfTheMethod
 >
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular method.
-> 
+>
 > ```
 > ---
 > title: NameOfTheParentInterface.NameOfTheMethod()
@@ -98,7 +98,9 @@ Fill in a syntax box, according to the guidance in our [syntax sections](/en-US/
 
 ### Return value
 
-Include a description of the method's return value, including data type and what it represents. If the method doesn't return anything, just put "Void".
+Include a description of the method's return value, including data type and what it represents.
+
+If the method doesn't return anything, just put "{{jsxref('undefined')}}.".
 
 ### Exceptions
 

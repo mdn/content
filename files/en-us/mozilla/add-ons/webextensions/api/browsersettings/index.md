@@ -48,7 +48,7 @@ To use this API you need to have the "browserSettings" [permission](/en-US/docs/
 - {{WebExtAPIRef("browserSettings.openUrlbarResultsInNewTabs")}}
   - : Determines whether address bar autocomplete suggestions are opened in the current tab or a new tab.
 - {{WebExtAPIRef("browserSettings.overrideContentColorScheme")}}
-  - : Controls whether to override the browser theme (light or dark) when setting pages' preferred color scheme. 
+  - : Controls whether to override the browser theme (light or dark) when setting pages' preferred color scheme.
 - {{WebExtAPIRef("browserSettings.overrideDocumentColors")}}
   - : Controls whether the user-chosen colors override the page's colors.
 - {{WebExtAPIRef("browserSettings.useDocumentFonts")}}

@@ -954,7 +954,7 @@ The `audio/wave` MIME type is the standard type, and is preferred; however, th
 It's based entirely on free and open technologies and primarily uses codecs that are in turn free and open, although some products support other codecs in WebM containers as well.
 
 WebM was first introduced in 2010 and is now widely supported.
-Compliant implementations of WebM are required to support the VP8 and VP9 video codecs and the Theora and Opus audio codecs.
+Compliant implementations of WebM are required to support the VP8 and VP9 video codecs and the Vorbis and Opus audio codecs.
 The WebM container format and its required codecs are all available under open licenses.
 Any other codecs may require a license to use.
 

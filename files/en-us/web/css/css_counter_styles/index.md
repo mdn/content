@@ -20,6 +20,10 @@ tags:
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
 
+### Functions
+
+- {{cssxref("symbols()")}}
+
 ### At-rules
 
 - {{cssxref("@counter-style")}}

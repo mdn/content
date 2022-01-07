@@ -95,16 +95,7 @@ When range is specified as integers, the value `infinite` can be used to denote 
 
 The above list will display as follows:
 
-1. One
-  □. Two
-  ■. Three
-  □. Four
-   5. Five
-   6. Six
-  ■. Seven
-  □. Eight
-  ■. Nine
-  10. Ten
+{{EmbedLiveSample('Setting counter style over a range')}}:
 
 ## Specifications
 

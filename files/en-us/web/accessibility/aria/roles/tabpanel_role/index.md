@@ -34,7 +34,7 @@ An element with the `tabpanel` role
 | <kbd>←</kbd>      |        |
 | <kbd>Delete</kbd> |        |
 
-### Required JavaScript features 
+### Required JavaScript features
 
 > **Note:** Include note about semantic alternatives to using this role or attribute. The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Then post full details in best practices section below.
 

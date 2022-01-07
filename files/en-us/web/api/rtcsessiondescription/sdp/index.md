@@ -10,6 +10,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription.sdp
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The property **`RTCSessionDescription.sdp`** is a read-only
@@ -56,5 +57,5 @@ alert(pc.remoteDescription.sdp);
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - The standard for using SDP in an offer/answer protocol {{rfc("3264")}}.

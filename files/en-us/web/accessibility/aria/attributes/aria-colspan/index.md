@@ -9,11 +9,11 @@ tags:
   - aria-colspan
 ---
 
-The `aria-colspan` attribute defines the number of columns spanned by a cell or gridcell within a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role). 
+The `aria-colspan` attribute defines the number of columns spanned by a cell or gridcell within a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
 
 ## Description
 
-Intended for [`cell`s](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_role) and [`gridcell`s](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) which are not contained in a native HTML {{HTMLElement('table')}}, the `aria-colspan` property value defines the number of columns spanned by an individual cell an ARIA [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role). 
+Intended for [`cell`s](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_role) and [`gridcell`s](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role) which are not contained in a native HTML {{HTMLElement('table')}}, the `aria-colspan` property value defines the number of columns spanned by an individual cell an ARIA [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
 
 In HTML, {{HTMLElement('th')}} and {{HTMLElement('td')}} elements have the [`colspan`](/en-US/docs/Web/HTML/Element/td#attributes) attribute. When using the semantic {{HTMLElement('table')}}, use the native `colspan` attribute as designed.  This ARIA attribute is intended for cells and gridcells which are not contained in a native table, and will be ignored if used on a cell in a {{HTMLElement('table')}}.
 
@@ -132,30 +132,30 @@ The following is an example of part of a bowling tournament league scoring sprea
         <span role="cell">18</span>  
       ...
 ```
-If we had used a {{HTMLElement('table')}} and semantic table elements our markup would have been less verbose and accessible by default. 
+If we had used a {{HTMLElement('table')}} and semantic table elements our markup would have been less verbose and accessible by default.
 
 ## Values
 
 - `<integer>`
   - : An integer greater than or equal to the default value of 1 defining the number of columns spanned by the cell. The value must be less than what would cause a cell to overlap the next cell in the same row.
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaColSpan")}}
   - : The  [`ariaColSpan`](/en-US/docs/Web/API/Element/ariaColSpan) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-colspan` attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
 
 ## Associated roles
 
-Used in roles: 
+Used in roles:
  - [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/Cell_role)
 
-Inherits into roles: 
+Inherits into roles:
  - [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role)
  - [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role)
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-colspan","ARIA: aria-colspan Attribute")}}  | {{Spec2('ARIA')}} |
 

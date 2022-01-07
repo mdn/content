@@ -115,21 +115,21 @@ Let's look back at a simple fetch example that we saw in the previous article:
 
 ```js
 fetch('coffee.jpg')
-.then(response => {
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  return response.blob();
-})
-.then(myBlob => {
-  let objectURL = URL.createObjectURL(myBlob);
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-})
-.catch(e => {
-  console.log('There has been a problem with your fetch operation: ' + e.message);
-});
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.blob();
+  })
+  .then(myBlob => {
+    let objectURL = URL.createObjectURL(myBlob);
+    let image = document.createElement('img');
+    image.src = objectURL;
+    document.body.appendChild(image);
+  })
+  .catch(e => {
+    console.log('There has been a problem with your fetch operation: ' + e.message);
+  });
 ```
 
 By now, you should have a reasonable understanding of promises and how they work, but let's convert this to use async/await to see how much simpler it makes things:
@@ -151,9 +151,9 @@ async function myFetch() {
 }
 
 myFetch()
-.catch(e => {
-  console.log('There has been a problem with your fetch operation: ' + e.message);
-});
+  .catch(e => {
+    console.log('There has been a problem with your fetch operation: ' + e.message);
+  });
 ```
 
 It makes code much simpler and easier to understand — no more `.then()` blocks everywhere!
@@ -164,18 +164,19 @@ Since an `async` keyword turns a function into a promise, you could refactor you
 async function myFetch() {
   let response = await fetch('coffee.jpg');
   if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  return await response.blob();
-
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  return await response.blob();
 }
 
-myFetch().then((blob) => {
-  let objectURL = URL.createObjectURL(blob);
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-}).catch(e => console.log(e));
+myFetch()
+  .then(blob => {
+    let objectURL = URL.createObjectURL(blob);
+    let image = document.createElement('img');
+    image.src = objectURL;
+    document.body.appendChild(image);
+  })
+  .catch(e => console.log(e));
 ```
 
 You can try typing in the example yourself, or running our [live example](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await.html) (see also the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await.html)).
@@ -210,14 +211,13 @@ async function myFetch() {
     let response = await fetch('coffee.jpg');
 
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
-    let myBlob = await response.blob();
-    let objectURL = URL.createObjectURL(myBlob);
-    let image = document.createElement('img');
-    image.src = objectURL;
-    document.body.appendChild(image);
-
+    let myBlob = await response.blob();
+    let objectURL = URL.createObjectURL(myBlob);
+    let image = document.createElement('img');
+    image.src = objectURL;
+    document.body.appendChild(image);
   } catch(e) {
     console.log(e);
   }
@@ -234,21 +234,19 @@ If you wanted to use the second (refactored) version of the code that we showed 
 async function myFetch() {
   let response = await fetch('coffee.jpg');
   if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
+    throw new Error(`HTTP error! status: ${response.status}`);
   }
-  return await response.blob();
-
+  return await response.blob();
 }
 
-myFetch().then((blob) => {
-  let objectURL = URL.createObjectURL(blob);
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-})
-.catch((e) =>
-  console.log(e)
-);
+myFetch()
+  .then(blob => {
+    let objectURL = URL.createObjectURL(blob);
+    let image = document.createElement('img');
+    image.src = objectURL;
+    document.body.appendChild(image);
+  })
+  .catch(e => console.log(e));
 ```
 
 This is because the `.catch()` block will catch errors occurring in both the async function call and the promise chain. If you used the `try`/`catch` block here, you might still get unhandled errors in the `myFetch()` function when it's called.
@@ -279,10 +277,7 @@ async function fetchAndDecode(url, type) {
       content = await response.text();
     }
   }
-
   return content;
-
-
 }
 
 async function displayContent() {
@@ -309,9 +304,7 @@ async function displayContent() {
 }
 
 displayContent()
-.catch((e) =>
-  console.log(e)
-);
+  .catch(e => console.log(e));
 ```
 
 You'll see that the `fetchAndDecode()` function has been converted easily into an async function with just a few changes. See the `Promise.all()` line:
@@ -332,16 +325,16 @@ Async/await makes your code look synchronous, and in a way it makes it behave mo
 
 ```js
 async function makeResult(items) {
-  let newArr = [];
-  for(let i=0; i < items.length; i++) {
-    newArr.push('word_'+i);
+  let newArr = [];
+  for(let i = 0; i < items.length; i++) {
+    newArr.push('word_' + i);
   }
-  return newArr;
+  return newArr;
 }
 
 async function getResult() {
-  let result = await makeResult(items); // Blocked on this line
-  useThatResult(result); // Will not be executed before makeResult() is done
+  let result = await makeResult(items); // Blocked on this line
+  useThatResult(result); // Will not be executed before makeResult() is done
 }
 ```
 
@@ -371,11 +364,12 @@ Each one ends by recording a start time, seeing how long the `timeTest()` promis
 
 ```js
 let startTime = Date.now();
-timeTest().then(() => {
-  let finishTime = Date.now();
-  let timeTaken = finishTime - startTime;
-  alert("Time taken in milliseconds: " + timeTaken);
-})
+timeTest()
+  .then(() => {
+    let finishTime = Date.now();
+    let timeTaken = finishTime - startTime;
+    alert("Time taken in milliseconds: " + timeTaken);
+  })
 ```
 
 It is the `timeTest()` function that differs in each case.
@@ -440,13 +434,15 @@ async function timeTest() {
 }
 
 let startTime = Date.now();
-timeTest().then(() => {})
-.catch(e => {
-  console.log(e);
-  let finishTime = Date.now();
-  let timeTaken = finishTime - startTime;
-  alert("Time taken in milliseconds: " + timeTaken);
-})
+
+timeTest()
+  .then(() => {})
+  .catch(e => {
+    console.log(e);
+    let finishTime = Date.now();
+    let timeTaken = finishTime - startTime;
+    alert("Time taken in milliseconds: " + timeTaken);
+  })
 ```
 
 In the above example, the error is handled properly, and the alert appears after approximately 7 seconds.
@@ -481,13 +477,15 @@ async function timeTest() {
 }
 
 let startTime = Date.now();
-timeTest().then(() => {
-}).catch(e => {
-  console.log(e);
-  let finishTime = Date.now();
-  let timeTaken = finishTime - startTime;
-  alert("Time taken in milliseconds: " + timeTaken);
-})
+
+timeTest()
+  .then(() => {})
+  .catch(e => {
+    console.log(e);
+    let finishTime = Date.now();
+    let timeTaken = finishTime - startTime;
+    alert("Time taken in milliseconds: " + timeTaken);
+  })
 ```
 
 In this example, we have an unhandled error in the console (after 2 seconds), and the alert appears after approximately 5 seconds.
@@ -521,13 +519,15 @@ async function timeTest() {
 }
 
 let startTime = Date.now();
-timeTest().then(() => {
-}).catch(e => {
-  console.log(e);
-  let finishTime = Date.now();
-  let timeTaken = finishTime - startTime;
-  alert("Time taken in milliseconds: " + timeTaken);
-})
+
+timeTest()
+  .then(() => {})
+  .catch(e => {
+    console.log(e);
+    let finishTime = Date.now();
+    let timeTaken = finishTime - startTime;
+    alert("Time taken in milliseconds: " + timeTaken);
+  })
 ```
 
 In this example, the error is handled properly after around 2 seconds and we also see the alert after around 2 seconds.

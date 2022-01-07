@@ -15,7 +15,7 @@ NASA conducted research on the perception of color, and found that luminance con
 
 ![Comparison of the stability of the spatial localization of yellow vs. red. Both are roughly isoluminant with their backgrounds. The misalignment and gap between the chromatic bars and black bars is physically the same for the yellow and red but much less visually obvious for the yellow.](yellow_edge_3.gif)   ![Comparison of the stability of the spatial localization of yellow vs. red. Both are roughly isoluminant with their backgrounds. The misalignment and gap between the chromatic bars and black bars is physically the same for the yellow and red but much less visually obvious for the yellow.](yellow_edge_4.gif)
 
-**\*"Spatial Localization.** Symbols which have the same luminance as their background are perceptually less securely located in space and time than are symbols with higher luminance contrast. They tend to "float" visually or be "captured" by adjacent symbols with high luminance-contrast. The phenomenon seems to be especially problematic for symbol/background combinations that differ only in the blue channel."\*
+"_**Spatial Localization.** Symbols which have the same luminance as their background are perceptually less securely located in space and time than are symbols with higher luminance contrast. They tend to "float" visually or be "captured" by adjacent symbols with high luminance-contrast. The phenomenon seems to be especially problematic for symbol/background combinations that differ only in the blue channel._"
 
 ### Distance between stripes
 
@@ -27,17 +27,17 @@ In 2005, Arnold Wilkins, John Emmett, and Graham Harding evaluated the guideline
 
 > **Note:** The steps necessary to evaluate material reduce to the following:
 >
-> Look at the screen
+> Look at the screen:
 >
-> Are there more than five stripes?
+> * Are there more than five stripes?
 >
-> If so, do they last longer than 0.5 s?
+> * If so, do they last longer than 0.5 s?
 >
-> If so, does the brightness exceed the stated limit?
+> * If so, does the brightness exceed the stated limit?
 >
-> If so, categorize the motion of the pattern
+> * If so, categorize the motion of the pattern.
 >
-> Are the guidelines contravened?
+> * Are the guidelines contravened?
 >
 > If so, reduce brightness.
 

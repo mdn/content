@@ -28,10 +28,11 @@ var FileSystemFileHandle = Window.showSaveFilePicker();
 
   - : An optional object containing options, which are as follows:
 
-    - `excludeAcceptAllOption`:A {{jsxref('Boolean')}}. Default
+    - `excludeAcceptAllOption`: A {{jsxref('Boolean')}}. Default
       `false`. By default the picker should include an option to not apply
       any file type filters (instigated with the type option below). Setting this option
       to `true` means that option is _not_ available.
+    - `suggestedName`: A {{jsxref('String')}}. The suggested file name.
     - `types`: An {{jsxref('Array')}} of allowed file types to save. Each
       item is an object with the following options:
 

@@ -11,16 +11,20 @@ The `substring` function returns a part of a given string.
 
 ### Syntax
 
-    substring(string ,start [,length] )
+```
+substring(string, start)
+substring(string, start, length)
+```
 
 ### Arguments
 
-- _`string`_
+- `string`
   - : The string to evaluate.
-- _`start`_
+- `start`
   - : The position within*`string`* the substring begins
-- _`length`_(optional)
-  - : The length of the substring. If omitted, the returned string will contain every character from the*`start`* position to the end of*`string`*.
+- `length` {{optional_inline}}
+  - : The length of the substring.
+    If omitted, the returned string will contain every character from the `start` position to the end of `string`.
 
 ### Returns
 

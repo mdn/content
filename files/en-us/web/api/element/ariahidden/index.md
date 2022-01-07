@@ -13,7 +13,7 @@ browser-compat: api.Element.ariaHidden
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaHidden`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute) attribute, which indicates whether the element is exposed to an accessibility API.
+The **`ariaHidden`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)) attribute, which indicates whether the element is exposed to an accessibility API.
 
 ## Syntax
 
@@ -35,7 +35,7 @@ A {{domxref("DOMString")}} with one of the following values:
 
 ## Examples
 
-In this example the `aria-hidden` attribute on the element with an ID of `hidden` is set to "true". Using `ariaHidden` we update the value to "false".
+In this example the [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute on the element with an ID of `hidden` is set to "true". Using `ariaHidden` we update the value to "false".
 
 ```html
 <div id="hidden" aria-hidden="true">Some things are better left unsaid.</div>

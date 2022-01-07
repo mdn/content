@@ -7,7 +7,7 @@ tags:
   - Web Speech API
 browser-compat: api.SpeechRecognition.soundend_event
 ---
-{{SeeCompatTable}} {{APIRef("Web Speech API")}}
+{{APIRef("Web Speech API")}}
 
 The **`soundend`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when any sound — recognisable speech or not — has stopped being detected.
 

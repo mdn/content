@@ -22,7 +22,7 @@ it throws an error.
 ## Syntax
 
 ```js
-BluetoothRemoteGATTCharacteristic.readValue().then(function(dataView) { ... })
+BluetoothRemoteGATTCharacteristic.readValue().then(function(dataView) { /* ... */ })
 ```
 
 ### Returns

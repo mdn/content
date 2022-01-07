@@ -19,8 +19,7 @@ html,body,svg { height:100% }
 ```
 
 ```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
   <!-- Some graphical objects to use -->
   <defs>
     <circle id="myCircle" cx="0" cy="0" r="5" />
@@ -32,7 +31,7 @@ html,body,svg { height:100% }
   </defs>
 
   <!-- using my graphical objects -->
-  <use x="5" y="5" xlink:href="#myCircle" fill="url('#myGradient')" />
+  <use x="5" y="5" href="#myCircle" fill="url('#myGradient')" />
 </svg>
 ```
 

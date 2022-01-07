@@ -29,7 +29,7 @@ var analyserNode = new AnalyserNode(context, options);
 
   - : An object with the following properties, all optional:
 
-    - **`fftSize`**: The desired initial size of the [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform) for [frequency-domain](https://en.wikipedia.org/wiki/Frequency_domain) analysis. 
+    - **`fftSize`**: The desired initial size of the [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform) for [frequency-domain](https://en.wikipedia.org/wiki/Frequency_domain) analysis.
       The default is `2048`.
     - **`maxDecibels`**: The desired initial maximum power in [dB](https://en.wikipedia.org/wiki/Decibel) for FFT analysis.
       The default is `-30`.

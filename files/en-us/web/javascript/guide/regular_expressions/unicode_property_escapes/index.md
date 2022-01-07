@@ -107,7 +107,7 @@ If a character is used in a limited set of scripts, the `Script` property will o
 // it can also be written in the Thaana script
 
 "٢".match(/\p{Script=Thaana}/u);
-// null as Thaana is not the predominant script        super()
+// null as Thaana is not the predominant script
 
 "٢".match(/\p{Script_Extensions=Thaana}/u);
 // ["٢", index: 0, input: "٢", groups: undefined]

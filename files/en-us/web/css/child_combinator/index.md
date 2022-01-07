@@ -37,7 +37,7 @@ span {
 }
 
 div > span {
-  background-color: DodgerBlue;
+  background-color: yellow;
 }
 ```
 

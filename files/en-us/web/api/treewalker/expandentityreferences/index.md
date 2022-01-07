@@ -16,7 +16,7 @@ returns a boolean flag indicating whether or not the children of entity
 reference nodes are visible to the {{domxref("TreeWalker")}}.
 
 If this value is `false`, the children of entity reference nodes (as well as
-all of their descendants) are rejected. This takes precedence over the value of the 
+all of their descendants) are rejected. This takes precedence over the value of the
 {{domxref("TreeWalker.whatToShow")}} method and the associated filter.
 
 ## Syntax

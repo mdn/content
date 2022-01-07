@@ -17,9 +17,9 @@ The `status` role defines a [live region](/en-US/docs/Web/Accessibility/ARIA/ARI
 
 A `status` is a type of [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) providing advisory information that is not important enough to justify an alert. It is often, but not necessarily, presented as a status bar.
 
-As the content is not vital, do not give focus to the status when its content updates. 
+As the content is not vital, do not give focus to the status when its content updates.
 
-If another part of the page controls what appears in the status, make the relationship explicit with the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) attribute on the controlling element (not on the status). 
+If another part of the page controls what appears in the status, make the relationship explicit with the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) attribute on the controlling element (not on the status).
 
 Elements with the role status have an implicit [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) value of `polite` and an implicit [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) value of `true`.  
 

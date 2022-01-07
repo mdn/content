@@ -21,9 +21,9 @@ option.
 ## Syntax
 
 ```js
-PaymentRequest.addEventListener('shippingoptionchange', shippingOptionChangeEvent => { ... });
+PaymentRequest.addEventListener('shippingoptionchange', shippingOptionChangeEvent => { /* ... */ });
 
-PaymentRequest.onshippingoptionchange = function(shippingOptionChangeEvent) { ... };
+PaymentRequest.onshippingoptionchange = function(shippingOptionChangeEvent) { /* ... */ };
 ```
 
 ## Examples

@@ -12,7 +12,7 @@ browser-compat: api.FileSystemFileHandle
 ---
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-The **`FileSystemFileHandle`** interface of the {{domxref('File System Access API')}} represents a handle to a file system entry. The interface is accessed thought the {{domxref('window.showOpenFilePicker()')}} method.
+The **`FileSystemFileHandle`** interface of the {{domxref('File System Access API')}} represents a handle to a file system entry. The interface is accessed through the {{domxref('window.showOpenFilePicker()')}} method.
 
 Note that read and write operations depend on file-access permissions that do not persist after a page refresh if no other tabs for that origin remain open. The {{domxref("FileSystemHandle.queryPermission()", "queryPermission")}} method of the {{domxref("FileSystemHandle")}} interface can be used to verify permission state before accessing a file.
 

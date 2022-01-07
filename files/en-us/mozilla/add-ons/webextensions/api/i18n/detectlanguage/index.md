@@ -19,6 +19,8 @@ Detects the language of the provided text using the [Compact Language Detector](
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
+See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) page for a guide on using this function.
+
 ## Syntax
 
 ```js

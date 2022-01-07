@@ -42,7 +42,7 @@ the OS crashes or there is a loss of system power before the data is flushed to 
 ## Syntax
 
 ```js
-transaction.oncomplete = function(event) { ... };
+transaction.oncomplete = function(event) { /* ... */ };
 ```
 
 ## Example

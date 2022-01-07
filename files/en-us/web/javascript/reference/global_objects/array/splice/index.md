@@ -45,7 +45,7 @@ splice(start, deleteCount, item1, item2, itemN)
 
   - : An integer indicating the number of elements in the array to remove from `start`.
 
-    If `deleteCount` is omitted, or if its value is equal to or larger than `array.length - start` (that is, if it is equal to or greater than the number of elements left in the array, starting at `start`), then all the elements from `start` to the end of the array will be deleted.
+    If `deleteCount` is omitted, or if its value is equal to or larger than `array.length - start` (that is, if it is equal to or greater than the number of elements left in the array, starting at `start`), then all the elements from `start` to the end of the array will be deleted. However, it must not be omitted if there is any `item1` parameter.
 
     If `deleteCount` is `0` or negative, no elements are removed.
     In this case, you should specify at least one new element (see below).

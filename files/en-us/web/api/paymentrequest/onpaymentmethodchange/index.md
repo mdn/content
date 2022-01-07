@@ -29,9 +29,9 @@ This event may not be fired by all payment handlers.
 ## Syntax
 
 ```js
-PaymentRequest.addEventListener('paymentmethodchange', paymentMethodChangeEvent => { ... });
+PaymentRequest.addEventListener('paymentmethodchange', paymentMethodChangeEvent => { /* ... */ });
 
-PaymentRequest.onpaymentmethodchange = function(paymentMethodChangeEvent) { ... };
+PaymentRequest.onpaymentmethodchange = function(paymentMethodChangeEvent) { /* ... */ };
 ```
 
 ### Value

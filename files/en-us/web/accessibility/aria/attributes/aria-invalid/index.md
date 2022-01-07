@@ -10,7 +10,7 @@ tags:
   - Reference
 ---
 
-The `aria-invalid` state indicates the entered value does not conform to the format expected by the application. 
+The `aria-invalid` state indicates the entered value does not conform to the format expected by the application.
 
 ## Description
 
@@ -40,20 +40,81 @@ If you are creating your own form validation scripts, make sure to include `aria
 
 ## Values
 
-- `grammar`	
+- `grammar`
   - : A grammatical error was detected.
-- `false` (default)	
+- `false` (default)
   - : There are no detected errors in the value.
-- `spelling`	
+- `spelling`
   - : A spelling error was detected.
-- `true`	
+- `true`
   - : The value entered by the user has failed validation.
 
 Any value not in this list will be treated as `true`.
 
+## Example
+
+The following snippet shows a simplified version of two form fields with a validation function attached to the blur event. Note that since the default value for `aria-invalid` is `false`, it is not strictly necessary to add the attribute to input.
+
+```html
+<ul>
+  <li>
+    <label for="name">Full Name</label>
+   <input type="text" name="name" id="name" 
+      aria-required="true" aria-invalid="false"
+      onblur="checkValidity('name', ' ', 'Invalid name entered (requires both first and last name)');"/>
+ </li>
+ <li>
+   <label for="email">Email Address</label>
+   <input type="email" name="email" id="email" 
+      aria-required="true" aria-invalid="false"
+      onblur="checkValidity('email', '@', 'Invalid e-mail address');"/>
+  </li>
+</ul>
+```
+
+Note that it is not necessary to validate the fields immediately on blur; the application could wait until the form is submitted (though this is not necessarily recommended).
+
+The snippet below shows a very simple validation function, which only checks for the presence of a particular character (in the real world, validation will likely be more sophisticated):
+
+```js
+function checkValidity(aID, aSearchTerm, aMsg){
+  let elem = document.getElementById(aID);
+  let invalid = (elem.value.indexOf(aSearchTerm) < 0);
+  if (invalid) {
+    elem.setAttribute("aria-invalid", "true");
+    updateAlert(aMsg);
+  } else {
+    elem.setAttribute("aria-invalid", "false");
+    updateAlert();
+  }
+}
+```
+
+The snippet below shows the alert functions, which add (or remove) the error message:
+
+```js
+function updateAlert(msg) {
+    let oldAlert = document.getElementById("alert");
+    if (oldAlert) {
+      document.body.removeChild(oldAlert);
+    }
+
+    if (msg) {
+      let newAlert = document.createElement("div");
+      newAlert.setAttribute("role", "alert");
+      newAlert.setAttribute("id", "alert");
+      let content = document.createTextNode(msg);
+      newAlert.appendChild(content);
+      document.body.appendChild(newAlert);
+    }
+}
+```
+
+Note that the alert has the ARIA role attribute set to [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role).
+
 ## Associated roles
 
-Used in roles: 
+Used in roles:
 
 - [`application`](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
 - [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
@@ -76,7 +137,7 @@ Inherited into role:
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-invalid","ARIA: aria-invalid Attribute")}}  | {{Spec2('ARIA')}} |
 

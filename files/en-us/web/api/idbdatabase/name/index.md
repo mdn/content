@@ -34,7 +34,7 @@ A {{ domxref("DOMString")}} containing the name of the connected database.
 
 This example shows a database connection being opened, the resulting
 {{domxref("IDBDatabase")}} object being stored in a db variable, and the name property
-then being logged. For a full example, see our 
+then being logged. For a full example, see our
 [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages)
  app ([view example live](https://chrisdavidmills.github.io/to-do-notifications/)).
 

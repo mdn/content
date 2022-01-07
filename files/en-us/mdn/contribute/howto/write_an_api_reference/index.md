@@ -29,14 +29,14 @@ Everything else can be learned along the way.
 
 Before starting to document an API, you should have available:
 
-1. The latest spec: 
+1. The latest spec:
    Whether it is a W3C Recommendation or an early editor's draft, you should refer to the latest available draft of the spec that covers (or specs that cover) that API.
    To find it, you can usually do a Web search. The latest version will often be linked to from all versions of the spec, listed under "latest draft" or similar.
 2. The latest modern web browsers:
    These should be experimental/alpha builds such as [Firefox Nightly](https://nightly.mozilla.org/)/[Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) that are more likely to support the features you are documenting.
    This is especially pertinent if you are documenting a nascent/experimental API.
 3. Demos/blog posts/other info: Find as much info as you can.
-4. Useful engineering contacts: 
+4. Useful engineering contacts:
    It is really useful to find yourself a friendly engineering contact to ask questions about the spec, someone who is involved in the standardization of the API, or its implementation in a browser.
    Good places to find them are:
 

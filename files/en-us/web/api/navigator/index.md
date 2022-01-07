@@ -46,7 +46,7 @@ _Doesn't inherit any properties._
 - {{domxref("Navigator.languages")}} {{readonlyInline}} {{experimental_inline}}
   - : Returns an array of {{domxref("DOMString")}} representing the languages known to the user, by order of preference.
 - {{domxref("Navigator.locks")}} {{readonlyinline}} {{experimental_inline}}
-  - : Returns a {{domxref("LockManager")}} object which provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing {{domxref('Lock')}} object
+  - : Returns a {{domxref("LockManager")}} object that provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing {{domxref('Lock')}} object.
 - {{domxref("Navigator.maxTouchPoints")}} {{readonlyInline}}
   - : Returns the maximum number of simultaneous touch contact points are supported by the current device.
 - {{domxref("Navigator.mediaCapabilities")}} {{readonlyinline}} {{experimental_inline}}

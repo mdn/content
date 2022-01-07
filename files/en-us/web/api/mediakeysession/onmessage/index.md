@@ -17,7 +17,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 ## Syntax
 
 ```js
-MediaKeySession.onmessage = function(MediaKeyMessageEvent) { ... }
+MediaKeySession.onmessage = function(MediaKeyMessageEvent) { /* ... */ }
 ```
 
 ## Specifications

@@ -44,7 +44,7 @@ All the configuration required to include the admin application in your website 
 
 After registering the models we'll show how to create a new "superuser", login to the site, and create some books, authors, book instances, and genres. These will be useful for testing the views and templates we'll start creating in the next tutorial.
 
-## Registering models 
+## Registering models
 
 First, open **admin.py** in the catalog application (**/locallibrary/catalog/admin.py**). It currently looks like this — note that it already imports `django.contrib.admin`:
 
@@ -304,7 +304,7 @@ Now navigate to a book instance view in your website; the form should appear as 
 
 Sometimes it can make sense to be able to add associated records at the same time. For example, it may make sense to have both the book information and information about the specific copies you've got on the same detail page.
 
-You can do this by declaring [inlines](https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines), of type [TabularInline](https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.TabularInline) (horizontal layout) or [StackedInline](https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.StackedInline) (vertical layout, just like the default model layout). You can add the `BookInstance` information inline to our `Book` detail by specifiying `inlines` in your `BookAdmin`:
+You can do this by declaring [inlines](https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.ModelAdmin.inlines), of type [TabularInline](https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.TabularInline) (horizontal layout) or [StackedInline](https://docs.djangoproject.com/en/3.1/ref/contrib/admin/#django.contrib.admin.StackedInline) (vertical layout, just like the default model layout). You can add the `BookInstance` information inline to our `Book` detail by specifying `inlines` in your `BookAdmin`:
 
 ```python
 class BooksInstanceInline(admin.TabularInline):

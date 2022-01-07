@@ -192,7 +192,7 @@ Frequency values are represented by the type {{cssxref("&lt;frequency&gt;")}}. I
 
 `1Hz`, which can also be written as `1hz` or `1HZ`, is one cycle per second.
 
-#### Resolution unit
+#### Resolution units
 
 Resolution units are represented by the type {{cssxref("&lt;resolution&gt;")}}. They represent the size of a single dot in a graphical representation, such as a screen, by indicating how many of these dots fit in a CSS inch, centimeter, or pixel. It accepts the following values:
 
@@ -247,13 +247,14 @@ The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object ins
 - {{cssxref("calc()", "calc()")}}
 - {{cssxref("min()", "min()")}}
 - {{cssxref("max()", "max()")}}
+- {{cssxref("minmax()", "minmax()")}}
 - {{cssxref("clamp()", "clamp()")}}
 - {{cssxref("toggle", "toggle()")}}
 - {{cssxref("attr()", "attr()")}}
 
 [Functional notation](/en-US/docs/Web/CSS/CSS_Functions) is a type of value that can represent more complex types or invoke special processing by CSS. The syntax starts with the name of the function immediately followed by a left parenthesis `(` followed by the argument(s) to the notation followed by a right parenthesis `)`. Functions can take multiple arguments, which are formatted similarly to a CSS property value.
 
-White space is allowed, but optional inside the parentheses. (But see notes regarding whitespace within pages for `min()`, `max()` and `clamp()` functions.)
+White space is allowed, but optional inside the parentheses. (But see notes regarding whitespace within pages for `min()`, `max()`, `minmax()`, and `clamp()` functions.)
 
 Some legacy functional notations such as `rgba()` use commas, but generally commas are only used to separate items in a list. If a comma is used to separate arguments, white space is optional before and after the comma.
 

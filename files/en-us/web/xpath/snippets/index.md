@@ -55,7 +55,7 @@ If you are using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) to read a 
 
 Assume we have the following XML document (see also [How to Create a DOM tree](/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree) and [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)):
 
-##### Example: An XML document to use with the custom `evaluateXPath()` utility function 
+##### Example: An XML document to use with the custom `evaluateXPath()` utility function
 
 ```xml
 <?xml version="1.0"?>
@@ -75,7 +75,7 @@ Assume we have the following XML document (see also [How to Create a DOM tree](/
 
 You can now "query" the document with XPath expressions. Although walking the DOM tree can achieve similar results, using XPath expressions is much quicker and more powerful. If you can rely on `id` attributes, `document.getElementById()` is still powerful, but it's not nearly as powerful as XPath. Here are some examples.
 
-##### Example: JavaScript code with the custom `evaluateXPath()` utility function 
+##### Example: JavaScript code with the custom `evaluateXPath()` utility function
 
 ```js
 // display the last names of all people in the doc

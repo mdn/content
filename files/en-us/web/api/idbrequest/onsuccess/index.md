@@ -26,7 +26,7 @@ The event handler takes one parameter, a success [Event](/en-US/docs/Web/API/IDB
 ## Syntax
 
 ```js
-request.onsuccess = function(event) { ... };
+request.onsuccess = function(event) { /* ... */ };
 ```
 
 ## Example

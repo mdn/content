@@ -46,7 +46,7 @@ relative positions of the objects in the scene at the time the event occurred.
 
 However, since the event frame isn't an animation frame, there is no viewer pose
 available to represent the viewer's current point of view; the results of calling
-{{domxref("XRFrame.getViewerPose", "getViewerPose()")}} will be an 
+{{domxref("XRFrame.getViewerPose", "getViewerPose()")}} will be an
 {{domxref("XRViewerPose")}} with an empty {{domxref("XRViewerPose.views", "views")}}
 list.
 

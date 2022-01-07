@@ -692,21 +692,10 @@ For instance: `avg(...numbers)`
 
 ### Anonymous functions
 
-JavaScript lets you create anonymous functions — that is, functions without names:
+JavaScript lets you create anonymous functions — that is, functions without names. In practice, anonymous functions are typically used as arguments to other functions or are made callable by immediately assigning them to a variable that can be used to invoke the function:
 
 ```js
-function() {
-  var sum = 0;
-  for (var i = 0, j = arguments.length; i < j; i++) {
-    sum += arguments[i];
-  }
-  return sum / arguments.length;
-};
-```
-
-But such an anonymous function isn’t useful in isolation — because without a name, there’s no way to call the function. So in practice, anonymous functions are typically used as arguments to other functions or are made callable by immediately assigning them to a variable that can be used to invoke the function:
-
-```js
+// Note that there's no function name before the parentheses
 var avg = function() {
   var sum = 0;
   for (var i = 0, j = arguments.length; i < j; i++) {
@@ -770,7 +759,7 @@ Note that JavaScript functions are themselves objects — like everything else i
 > For a more detailed discussion of object-oriented programming in JavaScript, see [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) and [Details of the object model](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model).
 
 In classic object-oriented programming, objects are collections of data and methods that operate on that data.
-JavaScript uses functions as classes. 
+JavaScript uses functions as classes.
 
 Let's consider a person object with first and last name fields.
 There are two ways in which the name might be displayed: as "first last" or as "last, first". Using the functions and objects that we've discussed previously, we could display the data like this:

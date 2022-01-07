@@ -49,10 +49,13 @@ Some examples won't run if you open them as local files. This can be due to a va
 
 - **They feature asynchronous requests**. Some browsers (including Chrome) will not run async requests (see [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)) if you just run the example from a local file. This is because of security restrictions (for more on web security, read [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)).
 - **They feature a server-side language**. Server-side languages (such as PHP or Python) require a special server to interpret the code and deliver the results.
+- **They include other files**. Browsers commonly treat requests to load resources using the `file://` schema as cross-origin requests.
+  So if you load a local file that includes other local files, this may trigger a {{Glossary("CORS")}} error.
 
 ## Running a simple local HTTP server
 
-To get around the problem of async requests, we need to test such examples by running them through a local web server. One of the easiest ways to do this for our purposes is to use Python's `http.server` module.
+To get around the problem of async requests, we need to test such examples by running them through a local web server.
+One of the easiest ways to do this for our purposes is to use Python's `http.server` module.
 
 > **Note:** Older versions of Python (up to version 2.7) provided a similar module named `SimpleHTTPServer`. If you are using Python 2.x, you can follow this guide by replacing all uses of `http.server` with `SimpleHTTPServer`. However, we recommend you use the latest version of Python.
 

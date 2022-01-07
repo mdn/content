@@ -20,15 +20,25 @@ A **`devicechange`** event is fired on an {{DOMxRef("XRSystem")}} object whene
 
 > **Note:** Not to be confused with the {{domxref("MediaDevices")}} {{DOMxRef("MediaDevices.devicechange_event", "devicechange")}} event.
 
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('devicechange', (event) => { });
+
+ondevicechange = (event) => { });
+```
+
+## Event type
+
+A generic {{DOMxRef("Event")}} with no added properties.
+
 ## Description
 
 ### Trigger
 
 Triggered whenever the availability of immersive XR devices has changed. For example, when a VR headset or AR goggles have been connected or disconnected.
-
-### Event type
-
-A generic {{DOMxRef("Event")}} with no added properties.
 
 ### Use cases
 

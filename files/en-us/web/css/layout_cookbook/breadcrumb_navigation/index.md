@@ -41,13 +41,13 @@ This pattern is laid out using a simple flex layout demonstrating how a line of 
 
 ## Accessibility concerns
 
-I have used the `aria-label` and `aria-current` attributes to help users understand what this navigation is and where the current page is in the structure. See the related links for more information.
+I have used the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) attributes to help users understand what this navigation is and where the current page is in the structure. See the related links for more information.
 
 ## Browser compatibility
 
 The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-#### Flexbox
+### Flexbox
 
 {{Compat("css.properties.flex")}}
 

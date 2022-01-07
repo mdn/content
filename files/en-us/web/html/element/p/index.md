@@ -186,7 +186,7 @@ If extra space is desired, use {{glossary("CSS")}} properties like {{cssxref("ma
 
 ```css
 p {
-  margin-bottom: 2em; // increase white space after a paragraph
+  margin-bottom: 2em; /* increase white space after a paragraph */
 }
 ```
 

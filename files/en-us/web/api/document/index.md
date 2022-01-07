@@ -42,6 +42,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Indicates whether the document is rendered in _quirks_ or _strict_ mode.
 - {{DOMxRef("Document.contentType")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : Returns the Content-Type from the MIME Header of the current document.
+- {{DOMxRef("Document.currentScript")}}{{ReadOnlyInline}}
+  - : Returns the {{HTMLElement("script")}} element whose script is currently being processed and [isn't a JavaScript module](https://github.com/whatwg/html/issues/997).
 - {{DOMxRef("Document.doctype")}}{{ReadOnlyInline}}
   - : Returns the Document Type Definition (DTD) of the current document.
 - {{DOMxRef("Document.documentElement")}}{{ReadOnlyInline}}
@@ -49,13 +51,13 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.documentURI")}}{{ReadOnlyInline}}
   - : Returns the document location as a string.
 - {{DOMxRef("Document.embeds")}}{{ReadOnlyInline}}
-  - : Returns a list of the embedded {{HTMLElement('embed')}} elements within the current document.
+  - : Returns an {{DOMxRef("HTMLCollection")}} of the embedded {{HTMLElement('embed')}} elements in the document.
 - {{domxref("Document.firstElementChild")}} {{readonlyInline}}
   - : Returns the first child element of the current document.
 - {{DOMxRef("Document.fonts")}}
   - : Returns the {{DOMxRef("FontFaceSet")}} interface of the current document.
 - {{DOMxRef("Document.forms")}}{{ReadOnlyInline}}
-  - : Returns a list of the {{HTMLElement("form")}} elements within the current document.
+  - : Returns an {{DOMxRef("HTMLCollection")}} of the {{HTMLElement("form")}} elements in the document.
 - {{DOMxRef("Document.fullscreenElement")}} {{ReadOnlyInline}}
   - : The element that's currently in full screen mode for this document.
 - {{DOMxRef("Document.head")}}{{ReadOnlyInline}}
@@ -63,13 +65,13 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.hidden")}}{{ReadOnlyInline}}
   - : Returns a Boolean value indicating if the page is considered hidden or not.
 - {{DOMxRef("Document.images")}}{{ReadOnlyInline}}
-  - : Returns a list of the images in the current document.
+  - : Returns an {{DOMxRef("HTMLCollection")}} of the images in the document.
 - {{DOMxRef("Document.implementation")}}{{ReadOnlyInline}}
   - : Returns the DOM implementation associated with the current document.
 - {{domxref("Document.lastElementChild")}} {{readonlyInline}}
   - : Returns the last child element of the current document.
 - {{DOMxRef("Document.links")}}{{ReadOnlyInline}}
-  - : Returns a list of all the hyperlinks in the document.
+  - : Returns an {{DOMxRef("HTMLCollection")}} of the hyperlinks in the document.
 - {{DOMxRef("Document.mozSyntheticDocument")}} {{Non-standard_Inline}}
   - : Returns a {{JSxRef("Boolean")}} that is `true` only if this document is synthetic, such as a standalone image, video, audio file, or the like.
 - {{DOMxRef("Document.pictureInPictureElement")}} {{ReadOnlyInline}}
@@ -77,13 +79,13 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.pictureInPictureEnabled")}} {{ReadOnlyInline}}
   - : Returns true if the picture-in-picture feature is enabled.
 - {{DOMxRef("Document.plugins")}}{{ReadOnlyInline}}
-  - : Returns a list of the available plugins.
+  - : Returns an {{DOMxRef("HTMLCollection")}} of the available plugins.
 - {{DOMxRef("Document.pointerLockElement")}} {{ReadOnlyInline}}
   - : Returns the element set as the target for mouse events while the pointer is locked. `null` if lock is pending, pointer is unlocked, or if the target is in another document.
 - {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : Returns the {{DOMxRef("FeaturePolicy")}} interface which provides a simple API for introspecting the feature policies applied to a specific document.
 - {{DOMxRef("Document.scripts")}}{{ReadOnlyInline}}
-  - : Returns all the {{HTMLElement("script")}} elements on the document.
+  - : Returns an {{DOMxRef("HTMLCollection")}} of the {{HTMLElement("script")}} elements in the document.
 - {{DOMxRef("Document.scrollingElement")}}{{ReadOnlyInline}}
   - : Returns a reference to the {{DOMxRef("Element")}} that scrolls the document.
 - {{DOMxRef("Document.styleSheets")}} {{ReadOnlyInline}}
@@ -250,7 +252,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the `document`.
 - {{domxref("Document.getBoxQuads()")}} {{experimental_inline}}
   - : Returns a list of {{domxref("DOMQuad")}} objects representing the CSS fragments of the node.
-- {{DOMxRef("Document.getElementById")}}
+- {{DOMxRef("Document.getElementById", "Document.getElementById()")}}
   - : Returns an object reference to the identified element.
 - {{DOMxRef("Document.getElementsByClassName()")}}
   - : Returns a list of elements with the given class name.
