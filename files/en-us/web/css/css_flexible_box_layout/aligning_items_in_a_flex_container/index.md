@@ -112,8 +112,6 @@ Once again we can switch our `flex-direction` to `column` in order to see how th
 
 > **Note:** The value `space-evenly` is not defined in the flexbox specification and is a later addition to the Box Alignment specification. Browser support for this value is not as good as that of the values defined in the flexbox spec.
 
-See the [documentation for `justify-content` on MDN](/en-US/docs/Web/CSS/justify-content) for more details on all of these values and browser support.
-
 ## Aligning content on the main axis
 
 Now that we have seen how alignment works on the cross axis, we can take a look at the main axis. Here we only have one property available to us — `justify-content`. This is because we are only dealing with items as a group on the main axis. With `justify-content` we control what happens with available space, should there be more space than is needed to display the items.

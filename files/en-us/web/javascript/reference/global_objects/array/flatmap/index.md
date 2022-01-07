@@ -71,7 +71,7 @@ of depth 1.
 
 ### Alternative
 
-#### `reduce()` and `concat()`
+#### Pre-allocate and explicitly iterate
 
 ```js
 var arr = [1, 2, 3, 4];

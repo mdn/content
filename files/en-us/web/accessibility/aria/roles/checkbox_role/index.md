@@ -60,7 +60,7 @@ The developer is required to change the value of the `aria-checked` attribute d
 
 - `onclick`
   - : Handle mouse clicks on both the checkbox and the associated label that will change the state of the checkbox by changing the value of the `aria-checked` attribute and the appearance of the checkbox so it appears checked or unchecked to the sighted user
-- `onKeyPress`
+- `onKeyDown`
 
   - : Handle the case where the user presses the <kbd>Space</kbd> key to change the state of the checkbox by changing the value of the `aria-checked` attribute and the appearance of the checkbox so it appears checked or unchecked to the sighted user
 
@@ -71,40 +71,46 @@ The following example creates an otherwise non-semantic checkbox element using C
 #### HTML
 
 ```html
-<span role="checkbox" id="chkPref" aria-checked="false" onclick="changeCheckbox()" onKeyPress="changeCheckbox()"
+<span role="checkbox" id="chkPref" aria-checked="false" onclick="changeCheckbox()" onKeyDown="changeCheckbox(event.keyCode)"
    tabindex="0" aria-labelledby="chk1-label"></span>
-<label id="chk1-label" onclick="changeCheckbox()" onKeyPress="changeCheckbox()">Remember my preferences</label>
+<label id="chk1-label" onclick="changeCheckbox()" onKeyDown="changeCheckbox(event.keyCode)">Remember my preferences</label>
 ```
 
 #### CSS
 
 ```css
 [role="checkbox"] {
-    padding:5px;
+  padding:5px;
+}
+
+[role="checkbox"]:focus {
+  border: 2px solid #0198E1;
 }
 
 [aria-checked="true"]::before {
-    content: "[x]";
+  content: "[x]";
 }
 
 [aria-checked="false"]::before {
-    content: "[ ]";
+  content: "[ ]";
 }
 ```
 
 #### JavaScript
 
 ```js
-function changeCheckbox(event) {
-    let item = document.getElementById('chkPref');
-    switch(item.getAttribute('aria-checked')) {
-        case "true":
-            item.setAttribute('aria-checked', "false");
-            break;
-        case "false":
-            item.setAttribute('aria-checked', "true");
-            break;
-    }
+function changeCheckbox(keyCode) {
+  const spacebarKeyCode = 32;
+  const item = document.getElementById("chkPref");
+  const checked = item.getAttribute("aria-checked");
+
+  if (keyCode && keyCode !== spacebarKeyCode) {
+    return;
+  } else if (checked === "true") {
+    item.setAttribute("aria-checked", "false");
+  } else {
+    item.setAttribute("aria-checked", "true");
+  }
 }
 ```
 
@@ -120,6 +126,11 @@ When the `checkbox` role is added to an element, the user agent should do the fo
 Assistive technology products should do the following:
 
 - Screen readers should announce the element as a checkbox, and optionally provide instructions on how to activate it.
+
+People implementing checkboxes should do the following:
+- Ensure that the checkbox can be reached and interacted with by both keyboard controls and clicks
+- Keep the `aria-checked` attribute up to date following user interactions
+- Provide styles that indicate when the checkbox has focus
 
 > **Note:** Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and may change.
 
