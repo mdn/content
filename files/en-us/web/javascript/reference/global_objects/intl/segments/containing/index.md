@@ -13,8 +13,6 @@ browser-compat: javascript.builtins.Intl.Segments.containing
 
 The **`.containing()`** method returns an object describing the segment in the string that includes the code unit at the specified index.
 
-{{EmbedInteractiveExample("pages/js/intl-segments-prototype-containing.html", "taller")}}
-
 ## Syntax
 
 ```js
