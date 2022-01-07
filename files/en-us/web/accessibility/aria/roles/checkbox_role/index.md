@@ -101,15 +101,15 @@ The following example creates an otherwise non-semantic checkbox element using C
 ```js
 function changeCheckbox(keyCode) {
   const spacebarKeyCode = 32;
-  const item = document.getElementById('chkPref');
-  const checked = item.getAttribute('aria-checked');
+  const item = document.getElementById("chkPref");
+  const checked = item.getAttribute("aria-checked");
 
   if (keyCode && keyCode !== spacebarKeyCode) {
     return;
-  } else if (checked === 'true') {
-    item.setAttribute('aria-checked', 'false')
+  } else if (checked === "true") {
+    item.setAttribute("aria-checked", "false");
   } else {
-    item.setAttribute('aria-checked', 'true')
+    item.setAttribute("aria-checked", "true");
   }
 }
 ```
