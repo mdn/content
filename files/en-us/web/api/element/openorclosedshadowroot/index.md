@@ -20,7 +20,7 @@ browser-compat: api.Element.openOrClosedShadowRoot
 
 > **Note:** This API is available only to [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
 
-The `Element.openOrCloseShadowRoot` read-only
+The `Element.openOrClosedShadowRoot` read-only
 property represents the shadow root hosted by the element, regardless if its
 {{DOMxRef("ShadowRoot.mode", "mode")}} is `open` or
 `closed`.
@@ -31,7 +31,7 @@ root to an existing element.
 ## Syntax
 
 ```js
-var shadowroot = element.openOrCloseShadowRoot;
+var shadowroot = element.openOrClosedShadowRoot;
 ```
 
 ### Value
