@@ -39,6 +39,13 @@ This article provides information about the changes in Firefox 97 that will affe
 
 #### DOM
 
+- The reason for an abort signal can now be set using {{domxref("AbortController.abort()")}} (or {{domxref("AbortSignal.abort()")}}), and will be available in the {{domxref("AbortSignal.reason")}} property.
+  This reason defaults to being an "AbortError" {{domxref("DOMException")}}.
+  The reason can be thrown or handled via promise rejection as appropriate.
+  ({{bug(1737771)}}).
+- The convenience method {{domxref("AbortSignal.throwIfAborted()")}} can be used to check if a signal has been aborted, and if so throw the {{domxref("AbortSignal.reason()")}}.
+  This makes it easier for developers to handle abort signals in code where you can't simply pass the signal to an abortable method. ({{bug(1745372)}}).
+
 #### Media, WebRTC, and Web Audio
 
 #### Removals
