@@ -140,7 +140,7 @@ function onDivClick(e) {
         e.eventPhase == 3 ? 'bubbling' : 'error';
     const para = document.createElement('p');
     para.textContent = `${e.currentTarget.id}; eventPhase: ${level}`;
-    divInfo.appendChild(paragraph);
+    divInfo.appendChild(para);
 }
 
 function clear() {
