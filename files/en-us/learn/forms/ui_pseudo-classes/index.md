@@ -163,7 +163,7 @@ First of all, we'll add a paragraph to the top of the form to say what you are l
 <p>Required fields are labelled with "required".</p>
 ```
 
-Screenreader users will get "required" read out as an extra bit of information when they get to each required input, which sighted users will get our label.
+Screenreader users will get "required" read out as an extra bit of information when they get to each required input, while sighted users will get our label.
 
 Since form inputs don't directly support having generated content put on them (this is because generated content is placed relative to an element's formatting box, but form inputs work more like replaced elements and therefore don't have one), we will add an empty [`<span>`](/en-US/docs/Web/HTML/Element/span) to hang the generated content on:
 
@@ -214,7 +214,7 @@ Then we give the generated content the content "required", which is what we want
 
 ## Styling controls based on whether their data is valid
 
-The other really important, fundamental concept in form validation is whether a form control's data is valid or not (in the case of numerical data, we can also talk about in-range and out-of-range data). Form controls with [constraint limitations](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation) can be targeted based on these states.
+The other really important, fundamental concept in form validation is whether a form control's data is valid or not (in the case of numerical data, we can also talk about in-range and out-of-range data). Form controls with [constraint limitations](/en-US/docs/Web/Guide/HTML/Constraint_validation) can be targeted based on these states.
 
 ### :valid and :invalid
 

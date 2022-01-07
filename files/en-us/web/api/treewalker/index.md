@@ -24,7 +24,7 @@ _This interface doesn't inherit any property._
 
     | Constant                                                        | Numerical value                                 | Description                                                                                                                                                                                                                                                                                                                                                                                                            |
     | --------------------------------------------------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `NodeFilter.SHOW_ALL`                                           | `-1` (that is the max value of `unsigned long`) | Shows all nodes.                                                                                                                                                                                                                                                                                                                                                                                                       |
+    | `NodeFilter.SHOW_ALL`                                           | `4294967295` (that is the max value of `unsigned long`) | Shows all nodes.                                                                                                                                                                                                                                                                                                                                                                                                       |
     | `NodeFilter.SHOW_ATTRIBUTE` {{deprecated_inline}}        | `2`                                             | Shows attribute {{ domxref("Attr") }} nodes. This is meaningful only when creating a {{ domxref("TreeWalker") }} with an {{ domxref("Attr") }} node as its root. In this case, it means that the attribute node will appear in the first position of the iteration or traversal. Since attributes are never children of other nodes, they do not appear when traversing over the document tree. |
     | `NodeFilter.SHOW_CDATA_SECTION` {{deprecated_inline}}    | `8`                                             | Shows {{ domxref("CDATASection") }} nodes.                                                                                                                                                                                                                                                                                                                                                                  |
     | `NodeFilter.SHOW_COMMENT`                                       | `128`                                           | Shows {{ domxref("Comment") }} nodes.                                                                                                                                                                                                                                                                                                                                                                          |
@@ -54,7 +54,24 @@ _This interface doesn't inherit any method._
 - {{domxref("TreeWalker.parentNode()")}}
   - : Moves the current {{domxref("Node")}} to the first _visible_ ancestor node in the document order, and returns the found node. It also moves the current node to this one. If no such node exists, or if it is before that the _root node_ defined at the object construction, returns `null` and the current node is not changed.
 - {{domxref("TreeWalker.firstChild()")}}
-  - : Moves the current {{domxref("Node")}} to the first _visible_ child of the current node, and returns the found child. It also moves the current node to this child. If no such child exists, returns `null` and the current node is not changed.
+  - : Moves the current {{domxref("Node")}} to the first _visible_ child of the current node, and returns the found child. It also moves the current node to this child. If no such child exists, returns `null` and the current node is not changed. Note that the node returned by `firstChild()` is dependent on the value of `whatToShow` set during instantiation of the `TreeWalker` object. Assuming the following HTML tree, and if you set the `whatToShow` to `NodeFilter.SHOW_ALL` a call to `firstChild()` will return a `Text` node and not an `HTMLDivElement` ojbect.
+  ```html
+  <!DOCTYPE html>
+  <html>
+    <head><title>Demo</title>
+    <body>
+      <div id="container"></div>
+    </body>
+  </html>
+  ```
+  ```js
+  let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ALL);
+  let node = walker.firstChild(); // nodeName: "#text"
+  // But if we do:
+  let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT);
+  let node = walker.firstChild(); // nodeName: "DIV"
+  ```
+  The same applies to `nextSibling()`, `previousSibling()`, `firstChild()` and `lastChild()`
 - {{domxref("TreeWalker.lastChild()")}}
   - : Moves the current {{domxref("Node")}} to the last _visible_ child of the current node, and returns the found child. It also moves the current node to this child. If no such child exists, `null` is returned and the current node is not changed.
 - {{domxref("TreeWalker.previousSibling()")}}

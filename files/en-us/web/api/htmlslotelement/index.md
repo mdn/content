@@ -23,9 +23,9 @@ The **`HTMLSlotElement`** interface of the [Shadow DOM API](/en-US/docs/Web/Web_
 - {{domxref('HTMLSlotElement.assign()')}}
   - : Sets the manually assigned nodes for this slot to the given nodes.
 - {{domxref('HTMLSlotElement.assignedNodes()')}}
-  - : Returns a sequence of the nodes assigned to this slot, and if the `flatten` option is set to `true`, the assigned nodes of any other slots that are descendants of this slot. If no assigned nodes are found, it returns the slot's fallback content.
+  - : Returns a sequence of the nodes assigned to this slot. If the `flatten` option is set to `true`, it returns a sequence of both the nodes assigned to this slot, and the nodes assigned to any other slots that are descendants of this slot. If no assigned nodes are found, it returns the slot's fallback content.
 - {{domxref('HTMLSlotElement.assignedElements()')}}
-  - : Returns a sequence of the elements assigned to this slot (and no other nodes). If the `flatten` option is set to `true`, it also returns the assigned elements of any other slots that are descendants of this slot. If no assigned nodes are found, it returns the slot's fallback content.
+  - : Returns a sequence of the elements assigned to this slot (and no other nodes). If the `flatten` option is set to `true`, it returns a sequence of both the elements assigned to this slot, and the elements assigned to any other slots that are descendants of this slot. If no assigned elements are found, it returns the slot's fallback content.
 
 ## Events
 

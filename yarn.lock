@@ -39,16 +39,16 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.2.tgz#3d33b0ccb96deb766b82aea8b60fed759884776c"
   integrity sha512-IzFTNGGMx+2fUPO2Gne9l9AiiRKIAAr+gsQNWmHzEnExhSbEmXX8BEfmR6ZW/6wu9mACWWmhMWtvjGf/lwcpog==
 
-"@mdn/yari@0.4.867":
-  version "0.4.867"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.4.867.tgz#f3b95230e4aced9af247bdba26c4b4c2b8f05a19"
-  integrity sha512-LZsqOJcbLlofKQZ72HwRS2btC11kdjdFenvEYbaHVGRBl5Z1HxAp3iH+MKjU/+jFI74XJjVSwZ4Nru3fXLsYaQ==
+"@mdn/yari@0.6.7":
+  version "0.6.7"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.6.7.tgz#1511584714663534aa37a175524b9526bcd70577"
+  integrity sha512-zf75HqlXvOR1hn2PcsrWN7wH6wnRvxgKliIUxEA+rVmf0nha0nm97hffHIy/CMRXNwq8LRHlGRclPMwJbRZgsQ==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
     "@mdn/browser-compat-data" "4.1.2"
     accept-language-parser "1.5.0"
-    browser-specs "^2.20.0"
+    browser-specs "^2.21.0"
     chalk "4.1.2"
     cheerio "1.0.0-rc.10"
     cli-progress "^3.9.1"
@@ -81,6 +81,7 @@
     inquirer "^8.2.0"
     is-svg "4.2.2"
     js-yaml "4.1.0"
+    klaw-sync "^6.0.0"
     loglevel "^1.8.0"
     lru-cache "^6.0.0"
     md5-file "5.0.0"
@@ -548,10 +549,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^2.20.0:
-  version "2.20.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.20.0.tgz#1a4ae91a0cfa8794e69c327d38d1f1d74eed1839"
-  integrity sha512-uCP6DLY75H2HrSwJk6+wAnNioq5PqhH+raCK7f+JlHQc+KThW0ULU1yh/AdrYHszV9GXrUJAawS4cPRhA5A3zQ==
+browser-specs@^2.21.0:
+  version "2.21.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.21.0.tgz#f1505fbb9adf50932f96ec4ad202f8dc051dba3f"
+  integrity sha512-HnV+fV9xvN4a5zvi47Le2ShBxYJ2pU+crtGL+sJGRcBh5mkUkS9BswQEuwKM2VZ4z1FHmBTGKtnn4NeVglHXag==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -1991,6 +1992,11 @@ graceful-fs@^4.1.10, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0,
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
   integrity sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
 
+graceful-fs@^4.1.11:
+  version "4.2.8"
+  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
+  integrity sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==
+
 has-ansi@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/has-ansi/-/has-ansi-2.0.0.tgz#34f5049ce1ecdf2b0649af3ef24e45ed35416d91"
@@ -2700,6 +2706,13 @@ keyv@^4.0.0:
   integrity sha512-xz6Jv6oNkbhrFCvCP7HQa8AaII8y8LRpoSm661NOKLr4uHuBwhX4epXrPQgF3+xdJnN4Esm5X0xwY4bOlALOtw==
   dependencies:
     json-buffer "3.0.1"
+
+klaw-sync@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/klaw-sync/-/klaw-sync-6.0.0.tgz#1fd2cfd56ebb6250181114f0a581167099c2b28c"
+  integrity sha512-nIeuVSzdCCs6TDPTqI8w1Yre34sSq7AkZ4B3sfOBbI2CgVSB4Du4aLQijFU2+lhAFCwt9+42Hel6lQNIv6AntQ==
+  dependencies:
+    graceful-fs "^4.1.11"
 
 kuler@1.0.x:
   version "1.0.1"

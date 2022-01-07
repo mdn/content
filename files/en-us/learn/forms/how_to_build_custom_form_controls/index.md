@@ -214,7 +214,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
 }
 ```
 
-We don't need an extra element to design the down arrow; instead, we're using the {{cssxref(":after")}} pseudo-element. It could also be implemented using a simple background image on the `select` class.
+We don't need an extra element to design the down arrow; instead, we're using the {{cssxref("::after")}} pseudo-element. It could also be implemented using a simple background image on the `select` class.
 
 ```css
 .select:after {

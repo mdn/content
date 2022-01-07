@@ -38,7 +38,7 @@ For more than one button pressed simultaneously, the values are combined (e.g., 
 
 ## Example
 
-This example logs the `buttons` property when you trigger a {{Event("mousedown")}} event.
+This example logs the `buttons` property when you trigger a {{domxref("Element/mousedown_event", "mousedown")}} event.
 
 ### HTML
 

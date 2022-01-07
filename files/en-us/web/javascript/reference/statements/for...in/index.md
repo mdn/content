@@ -10,7 +10,7 @@ browser-compat: javascript.statements.for_in
 {{jsSidebar("Statements")}}
 
 The **`for...in` statement** iterates over all [enumerable
-properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object that are keyed by strings (ignoring ones keyed by [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)s),
+properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object that are keyed by strings (ignoring ones keyed by [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)),
 including inherited enumerable properties.
 
 {{EmbedInteractiveExample("pages/js/statement-forin.html")}}

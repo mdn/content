@@ -9,7 +9,7 @@ tags:
 ---
 {{FirefoxSidebar}}{{draft}}
 
-This article provides information about the changes in Firefox 97 that will affect developers. Firefox 97 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), and will ship on [February 8, 2022](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 97 that will affect developers. Firefox 97 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta), and will ship on [February 8, 2022](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
 
 ## Changes for web developers
 

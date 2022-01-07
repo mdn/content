@@ -18,12 +18,15 @@ To help you choose what content issues to work on, we've sorted them using GitHu
 
 The labels below help you find tasks based on how much time you have available.
 
-| Label                                                                                                                                                                                                                                                                             | Description                                                           |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| [10-minute tasks on the content repo](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%2210+minute+task%22) [10-minute tasks on the sprints repo](https://github.com/mdn/sprints/issues?q=is%3Aissue+is%3Aopen+label%3A%2210+minute+task%22)                 | A really quick task, which will probably take you 10 minutes or less. |
-| [30-minute tasks on the content repo](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%2230+minute+task%22) [30-minute tasks on the sprints repo](https://github.com/mdn/sprints/issues?q=is%3Aissue+is%3Aopen+label%3A%2230+minute+task%22)                 | A slightly more involved task — might take around 30 minutes.         |
-| [1-hour tasks on the content repo](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%221+hour+task%22) [1-hour tasks on the sprints repo](https://github.com/mdn/sprints/issues?q=is%3Aissue+is%3Aopen+label%3A%221+hour+task%22)                             | A long task — will take an hour, or maybe even two.                   |
-| [multiple hour tasks on the content repo](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22multiple+hour+task%22) [multiple hour tasks on the sprints repo](https://github.com/mdn/sprints/issues?q=is%3Aissue+is%3Aopen+label%3A%22multiple+hour+task%22) | A very in-depth task taking multiple hours to complete.               |
+| Label                                                                                                                                       | Description                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| [Less-than-30-minute tasks on the content repo](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-30mins%22) | A task that will probably take less than 30 minutes.              |
+| [Less-than-3-hour tasks on the content repo](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-3hr%22)       | A task that will probably take less than 3 hours.                 |
+| [Less-than-2-day tasks on the content repo](https://github.com/mdn/content/issues?q=is%3Aissue+is%3Aopen+label%3A%22time%3A+-2days%22)      | A task that will probably take less than 2 days.                  |
+| [10-minute tasks on the sprints repo](https://github.com/mdn/sprints/issues?q=is%3Aissue+is%3Aopen+label%3A%2210+minute+task%22)            | A really quick task, which will probably take 10 minutes or less. |
+| [30-minute tasks on the sprints repo](https://github.com/mdn/sprints/issues?q=is%3Aissue+is%3Aopen+label%3A%2230+minute+task%22)            | A slightly more involved task — might take around 30 minutes.     |
+| [1-hour tasks on the sprints repo](https://github.com/mdn/sprints/issues?q=is%3Aissue+is%3Aopen+label%3A%221+hour+task%22)                  | A long task — will take an hour, or maybe even two.               |
+| [multiple hour tasks on the sprints repo](https://github.com/mdn/sprints/issues?q=is%3Aissue+is%3Aopen+label%3A%22multiple+hour+task%22)    | A very in-depth task taking multiple hours to complete.           |
 
 If you'd prefer to browse your tasks and choose by technology category instead, you can also find the same issues organized into project boards:
 

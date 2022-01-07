@@ -1438,6 +1438,52 @@ This feature is enabled on Android in all builds, but behind a preference on Des
   </tbody>
 </table>
 
+### Screen Orientation API
+
+#### ScreenOrientation.lock()
+
+The {{domxref("ScreenOrientation.lock()")}} method allows a device to be locked to a particular orientation, if supported by the device and allowed by browser pre-lock requirements.
+Typically locking the orientation is only allowed on mobile devices when the document is being displayed full screen.
+See {{bug(1697647)}} for more details.
+
+Note that since locking the screen orientation isn't typically supported on desktop systems, you will need to use Firefox for Android Nightly build and enable the preference in `about:config`.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version changed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>97</td>
+      <td>No.</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.screenorientation.allow-lock</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## Security and privacy
 
 ### Block plain text requests from Flash on encrypted pages

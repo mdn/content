@@ -65,7 +65,7 @@ Using the `oncanplaythrough` event handler property:
 const video = document.querySelector('video');
 
 video.oncanplaythrough = (event) => {
-  console.log('I think I can play thru the entire ' +
+  console.log('I think I can play through the entire ' +
       'video without ever having to stop to buffer.');
 };
 ```

@@ -66,7 +66,7 @@ Unicode order. All `undefined` elements are sorted to the end of the array.
 > encoded as two surrogate code units, of the range
 > `\uD800`-`\uDFFF`. The value of each code unit is taken
 > separately into account for the comparison. Thus the character formed by the surrogate
-> pair `\uD655\uDE55` will be sorted before the character
+> pair `\uD855\uDE51` will be sorted before the character
 > `\uFF3A`.
 
 If `compareFunction` is supplied, all non-`undefined` array

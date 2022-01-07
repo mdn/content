@@ -345,7 +345,7 @@ For example, if you declare a variable and give it a value enclosed in quotes, t
 let myString = 'Hello';
 ```
 
-Even if the value contains numbers, it is still a string, so be careful:
+Even if the value enclosed in quotes is just digits, it is still a string — not a number — so be careful:
 
 ```js
 let myNumber = '500'; // oops, this is still a string

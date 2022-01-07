@@ -74,7 +74,7 @@ The attribute value is a semicolon-separated list of control point descriptions.
         The values of `x1 y1 x2 y2` must all be in the range 0 to 1.
 
 *   Safari issues
-    *   :`keyTimes` and `keySplines` values should be separated with semicolumn without space before, f.e: `keyTimes="0; 0.25; 0.5; 0.75; 1"`
+    *   :`keyTimes` values should be separated with semicolumn without space before, f.e: `keyTimes="0; 0.25; 0.5; 0.75; 1"`
 
 
 ## Specifications
