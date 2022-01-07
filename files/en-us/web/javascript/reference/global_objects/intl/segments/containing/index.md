@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Intl.Segments.containing
 ---
 {{JSRef}}
 
-The **`.containing()`** method returns an object describing the segment in the string that includes the code unit at the specified index.
+The **`Intl.Segments.containing()`** method returns an object describing the segment in the string that includes the code unit at the specified index.
 
 ## Syntax
 
