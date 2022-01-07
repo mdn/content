@@ -19,7 +19,7 @@ The **`Intl.Segments.@@iterator`** method is part of [the iterable protocol](/en
 segments[Symbol.iterator]
 ```
 
-The one iterator function available is `.next()`, as [described on the iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) page.
+The one iterator function available is `.next()`, as described in the [iterator protocol page](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol).
 
 ### Return value
 
