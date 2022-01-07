@@ -37,7 +37,11 @@ new Intl.Segmenter(locales, options)
         - `"sentence"`
           - : Split the input into segments at sentence boundaries, as determined by the locale.
     - `localeMatcher` {{ optional_inline }}
-      - : The locale matching algorithm to use. Possible values are "`lookup`" and "`best fit`"; the default is "`best fit`". For information about this option, see the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation) page.
+      - : The locale matching algorithm to use. Possible values are:
+        - `"best fit"` (default)
+          - : The runtime may choose a possibly more suited locale than the result of the lookup algorithm.
+        - `"lookup"`
+          - : Use the [BCP 47 Lookup algorithm](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4) to choose the locale from `locales`. For each locale in `locales`, the runtime returns the first supported locale (possibly removing restricting subtags of the provided locale tag to find such a supported locale. In other words providing `"de-CH"` as `locales` may result in using `"de"` if `"de"` is supported but `"de-CH"` is not).
 
 
 ### Return value
