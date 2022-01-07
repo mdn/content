@@ -35,6 +35,9 @@ Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarge
 
 _The **`AbortSignal`** interface inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
+- {{domxref("AbortSignal.throwIfAborted()")}}
+  - : Throws the signal's abort {{domxref("AbortSignal.reason", "reason")}} if the signal has been aborted; otherwise it does nothing.
+
 ## Static methods
 
 - {{domxref("AbortSignal.abort()")}}
@@ -42,11 +45,11 @@ _The **`AbortSignal`** interface inherits methods from its parent interface, {{d
 
 ## Examples
 
-In the following snippet, we aim to download a video using the [Fetch API](/en-US/docs/Web/API/Fetch_API).
+The following snippet shows how we might use a signal to abort downloading a video using the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
-We first create a controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated {{domxref("AbortSignal")}} object using the {{domxref("AbortController.signal")}} property.
+We first create an abort controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated {{domxref("AbortSignal")}} object using the {{domxref("AbortController.signal")}} property.
 
-When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{signal}` below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.
+When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{signal}` below). This associates the signal and controller with the fetch request, and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.
 
 ```js
 var controller = new AbortController();
