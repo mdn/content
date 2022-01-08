@@ -10,7 +10,7 @@ browser-compat: api.Navigator.javaEnabled
 ---
 {{ APIRef("HTML DOM") }}
 
-This method always returns false.
+This method returns true if Java is enabled in the browser, otherwise it returns false.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ result = window.navigator.javaEnabled()
 ## Example
 
     if (window.navigator.javaEnabled()) {
-       // code will never be executed; the condition is always false
+       // code will only be executed if java is enabled
     }
 
 ## Specifications
