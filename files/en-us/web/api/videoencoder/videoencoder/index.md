@@ -23,7 +23,7 @@ new VideoEncoder(init);
 - `init`
   - : An object containing two required callbacks.
     - `output`
-      - : A callback which takes a {{domxref("EncodedVideoChunk")}} object as the first argument, and an optional metadata object as the second. The metadata object has three members:
+      - : A callback which takes an {{domxref("EncodedVideoChunk")}} object as the first argument, and an optional metadata object as the second. The metadata object has three members:
         - `decoderconfig` {{Optional_Inline}}
           - : An object containing:
             - `codec`
