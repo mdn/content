@@ -71,12 +71,14 @@ div, #event-log {
 const source = document.getElementById("source");
 const target = document.getElementById("target");
 const event_log = document.getElementById("event-log");
+
 function dragstart_handler(ev) {
   event_log.textContent += "dragStart\n";
   // Change the source element's background color to signify drag has started
   ev.currentTarget.style.border = "dashed";
   ev.dataTransfer.setData("text", ev.target.id);
 }
+
 function dragover_handler(ev) {
   event_log.textContent += "dragOver\n";
   // Change the target element's border to signify a drag over event
@@ -84,36 +86,43 @@ function dragover_handler(ev) {
   ev.currentTarget.style.background = "lightblue";
   ev.preventDefault();
 }
+
 function drop_handler(ev) {
   event_log.textContent += "Drop\n";
   ev.preventDefault();
   const data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
 }
+
 function dragenter_handler(ev) {
   event_log.textContent += "dragEnter\n";
   // Change the source element's background color for enter events
   ev.currentTarget.style.background = "yellow";
 }
+
 function dragleave_handler(ev) {
   event_log.textContent += "dragLeave\n";
   // Change the source element's border back to white
   ev.currentTarget.style.background = "white";
 }
+
 function dragend_handler(ev) {
   event_log.textContent += "dragEnd\n";
   // Change the target element's background color to visually indicate
   // the drag ended.
   target.style.background = "pink";
 }
+
 // Set handlers for the source's drag - start/enter/leave/end events
 source.ondragstart = dragstart_handler;
 source.ondragenter = dragenter_handler;
 source.ondragleave = dragleave_handler;
 source.ondragend = dragend_handler;
+
 // Set handlers for the target's drop and dragover events
 target.ondrop = drop_handler;
 target.ondragover = dragover_handler;
+
 // Set click event listener on button to reload the example
 const button = document.getElementById("reload");
 button.addEventListener("click", () => {
