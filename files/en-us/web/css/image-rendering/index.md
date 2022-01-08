@@ -44,7 +44,7 @@ image-rendering: unset;
 - `crisp-edges`
   - : The image is scaled with the nearest-neighbor algorithm.
 - `pixelated`
-  - : Using the nearest-neighbor algorithm, the image is scaled up to the next integer multiple that is larger or equal to than its original size, then scaled down to the target size as for `smooth`. When scaling up to integer multiples of the original size, this will have the same effect as `crisp-edges`.
+  - : Using the nearest-neighbor algorithm, the image is scaled up to the next integer multiple that is greater than or equal to its original size, then scaled down to the target size, as for `smooth`. When scaling up to integer multiples of the original size, this will have the same effect as `crisp-edges`.
 
 > **Note:** The values `optimizeQuality` and `optimizeSpeed` present in an early draft (and coming from its SVG counterpart {{SVGAttr("image-rendering")}}) are defined as synonyms for the `smooth` and `pixelated` values respectively.
 
