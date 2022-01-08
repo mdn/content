@@ -300,7 +300,7 @@ Many of the elements used to define form controls have some of their own specifi
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/autofocus"
+          ><a href="/en-US/docs/Web/HTML/Global_attributes/autofocus"
             >autofocus</a
           ></code
         >
