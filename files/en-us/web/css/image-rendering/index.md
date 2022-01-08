@@ -42,9 +42,9 @@ image-rendering: unset;
 - `high-quality` {{Experimental_Inline}}
   - : Identical to `smooth`, but with a preference for higher-quality scaling. If system resources are constrained, images with `high-quality` should be prioritized over those with any other value, when considering which images to degrade the quality of and to what degree.
 - `crisp-edges`
-  - : The image must be scaled with an algorithm that preserves contrast and edges in the image, and which does not smooth colors or introduce blur to the image in the process. Suitable algorithms include nearest-neighbor and [other non-smoothing scaling algorithms](https://en.wikipedia.org/wiki/Pixel-art_scaling_algorithms) such as 2×SaI and [hqx-family](https://en.wikipedia.org/wiki/Hqx) algorithms. This value is intended for pixel-art images, such as in browser games.
+  - : The image is scaled with the nearest-neighbor algorithm.
 - `pixelated`
-  - : When scaling the image up, the nearest-neighbor algorithm must be used, so that the image appears to be composed of large pixels. When scaling down, this is the same as `auto`.
+  - : Using the nearest-neighbor algorithm, the image is scaled up to the next integer multiple that is greater than or equal to its original size, then scaled down to the target size, as for `smooth`. When scaling up to integer multiples of the original size, this will have the same effect as `crisp-edges`.
 
 > **Note:** The values `optimizeQuality` and `optimizeSpeed` present in an early draft (and coming from its SVG counterpart {{SVGAttr("image-rendering")}}) are defined as synonyms for the `smooth` and `pixelated` values respectively.
 
