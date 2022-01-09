@@ -17,7 +17,7 @@ For example, the `CONNECT` method can be used to access websites that use
   server")}} to tunnel the [TCP](</en-US/docs/Glossary/TCP>) connection to
 the desired destination. The server then proceeds to make the connection on behalf of
 the client. Once the connection has been established by the server, the
-{{Glossary("Proxy server")}} continues to proxy the [TCP](</en-US/docs/Glossary/Transmission_Control_Protocol_(TCP)>) stream to and
+{{Glossary("Proxy server")}} continues to proxy the TCP stream to and
 from the client.
 
 `CONNECT` is a hop-by-hop method.
