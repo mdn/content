@@ -24,7 +24,7 @@ Adding `aria-hidden="true"` to an element removes that element and all of its ch
 
 The presence of the `aria-hidden` attribute hides content from assistive technology but doesn't visually hide anything.  
 
-`aria-hidden="true"` should not be used on elements that can recieve focus. Additionally, since this attribute is inherited by an element's children, it should not be added onto the parent or ancestor of a focusable element.
+`aria-hidden="true"` should not be used on elements that can receive focus. Additionally, since this attribute is inherited by an element's children, it should not be added onto the parent or ancestor of a focusable element.
 
 > **Warning:** Do not use `aria-hidden="true"` on focusable elements.
 
