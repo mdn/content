@@ -16,12 +16,13 @@ Learn how to create add-ons for [Firefox](https://www.mozilla.org/firefox/), how
 
 ## Key resources
 
+- Firefox developer guide
+  - : Our [developer guide](https://firefox-source-docs.mozilla.org/contributing/index.html) explains how to get Firefox source code, how to build it on Linux, macOS and Windows, how to find your way around, and how to contribute to the project.
+- Firefox add-on guide
+  - : The [Add-on guide](/en-US/docs/Mozilla/Add-ons) provides information about developing and deploying Firefox extensions.
 - Developer release notes
   - : [Developer-focused release notes](/en-US/docs/Mozilla/Firefox/Releases); learn what new capabilities for both Web sites and add-ons arrive in each version of Firefox.
-- Project documentation
-  - : Get detailed information about [the internals of Firefox](/en-US/docs/Mozilla) and its build system, so you can find your way around in the code.
-- Developer guide
-  - : Our [developer guide](https://firefox-source-docs.mozilla.org/contributing/index.html) provides details on how to get and compile the Firefox source code, how to find your way around, and how to contribute to the project.
+
 
 ## Firefox channels
 
