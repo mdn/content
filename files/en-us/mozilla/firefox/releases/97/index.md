@@ -27,6 +27,14 @@ This article provides information about the changes in Firefox 97 that will affe
 
 #### Removals
 
+### SVG
+
+#### Removals
+
+- A number of `SVGPathSeg` APIs are now disabled by default behind a preference, and are expected to be removed in future revisions.
+  This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/docs/Web/API/SVGPathElement), `SVGAnimatedPathData`.
+  (See {{bug(1388931)}} for more details.)
+
 ### HTTP
 
 #### Removals
