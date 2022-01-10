@@ -128,4 +128,3 @@ If you must use image maps, you may want to look into [Matt Stow's jQuery plugin
 - {{htmlelement("map")}}
 - {{htmlelement("area")}}
 - [Online image map editor](http://www.maschek.hu/imagemap/imgmap)
-- [Advice on handling email clients](https://blog.goolara.com/2014/06/05/image-maps-revisited/)

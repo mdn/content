@@ -44,7 +44,7 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{
 - {{domxref("HTMLSelectElement.size")}}
   - : A `long` reflecting the {{htmlattrxref("size", "select")}} HTML attribute, which contains the number of visible items in the control. The default is 1, unless `multiple` is `true`, in which case it is 4.
 - {{domxref("HTMLSelectElement.type")}}{{ReadOnlyInline}}
-  - : A {{domxref("DOMString")}} represeting the form control's type. When `multiple` is `true`, it returns `"select-multiple"`; otherwise, it returns `"select-one"`.
+  - : A {{domxref("DOMString")}} representing the form control's type. When `multiple` is `true`, it returns `"select-multiple"`; otherwise, it returns `"select-one"`.
 - {{domxref("HTMLSelectElement.validationMessage")}}{{ReadOnlyInline}}
   - : A {{domxref("DOMString")}} representing a localized message that describes the validation constraints that the control does not satisfy (if any). This attribute is the empty string if the control is not a candidate for constraint validation (`willValidate` is false), or it satisfies its constraints.
 - {{domxref("HTMLSelectElement.validity")}}{{ReadOnlyInline}}

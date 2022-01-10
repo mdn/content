@@ -82,7 +82,7 @@ The promise is rejected when one of the following exceptions are encountered:
 - {{exception("InvalidAccessError")}}
   - : Raised when the base key is not a key for the requested derivation algorithm or if
     the [`CryptoKey.usages`](/en-US/docs/Web/API/CryptoKey) value of that key doesn't contain
-    `deriveKey`.
+    `deriveBits`.
 - {{exception("NotSupported")}}
   - : Raised when trying to use an algorithm that is either unknown or isn't suitable for
     derivation, or if the algorithm requested for the derived key doesn't define a key

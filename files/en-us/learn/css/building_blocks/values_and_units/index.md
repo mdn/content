@@ -287,6 +287,8 @@ Quite often in examples here in the learn section or elsewhere on MDN you will s
 
 **Try playing with different color values in the live examples below, to get more of an idea how they work.**
 
+{{EmbedGHLiveSample("css-examples/learn/values-units/color-keywords.html", '100%', 700)}}
+
 ### Hexadecimal RGB values
 
 The next type of color value you are likely to encounter is hexadecimal codes. Each hex value consists of a hash/pound symbol (#) followed by six hexadecimal numbers, each of which can take one of 16 values between 0 and f (which represents 15) — so `0123456789abcdef`. Each pair of values represents one of the channels — red, green and blue — and allows us to specify any of the 256 available values for each (16 x 16 = 256.)

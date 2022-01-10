@@ -27,7 +27,7 @@ formatToParts(list)
 ### Parameters
 
 - `list`
-  - : An {{jsxref("Array")}} of values to be formatted according to a locale.
+  - : An iterable object, such as an {{jsxref("Array")}}, to be formatted according to a locale.
 
 ### Return value
 

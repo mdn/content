@@ -108,7 +108,7 @@ let num = 6; // Initialization
 ```
 
 Note that it is the order in which code is _executed_ that matters, not the order in which it is written in the source file.
-The code will succceed provided the line that initializes the variable is executed before any line that reads it.
+The code will succeed provided the line that initializes the variable is executed before any line that reads it.
 
 For information and examples see [`let` > temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz).
 
@@ -116,7 +116,7 @@ For information and examples see [`let` > temporal dead zone](/en-US/docs/Web/Ja
 ## `class` hoisting
 
 Classes defined using a [class declaration](/en-US/docs/Web/JavaScript/Reference/Classes#class_declarations) are hoisted, which means that JavaScript has a reference to the class.
-However the class is not intialized by default, so any code that uses it before the line in which it is initialized is executed will throw a `ReferenceError`.
+However the class is not initialized by default, so any code that uses it before the line in which it is initialized is executed will throw a `ReferenceError`.
 
 
 ## Function and class expression hoisting

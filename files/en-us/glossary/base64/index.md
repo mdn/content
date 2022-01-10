@@ -154,7 +154,7 @@ function base64EncArr (aBytes) {
     if (nIdx > 0 && (nIdx * 4 / 3) % 76 === 0) { sB64Enc += "\r\n"; }
     nUint24 |= aBytes[nIdx] << (16 >>> nMod3 & 24);
     if (nMod3 === 2 || aBytes.length - nIdx === 1) {
-      sB64Enc += String.fromCharCode(uint6ToB64(nUint24 >>> 18 & 63), uint6ToB64(nUint24 >>> 12 & 63), uint6ToB64(nUint24 >>> 6 & 63), uint6ToB64(nUint24 & 63));
+      sB64Enc += String.fromCodePoint(uint6ToB64(nUint24 >>> 18 & 63), uint6ToB64(nUint24 >>> 12 & 63), uint6ToB64(nUint24 >>> 6 & 63), uint6ToB64(nUint24 & 63));
       nUint24 = 0;
     }
   }
@@ -171,7 +171,7 @@ function UTF8ArrToStr (aBytes) {
 
   for (var nPart, nLen = aBytes.length, nIdx = 0; nIdx < nLen; nIdx++) {
     nPart = aBytes[nIdx];
-    sView += String.fromCharCode(
+    sView += String.fromCodePoint(
       nPart > 251 && nPart < 254 && nIdx + 5 < nLen ? /* six bytes */
         /* (nPart - 252 << 30) may be not so safe in ECMAScript! So...: */
         (nPart - 252) * 1073741824 + (aBytes[++nIdx] - 128 << 24) + (aBytes[++nIdx] - 128 << 18) + (aBytes[++nIdx] - 128 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
@@ -199,7 +199,12 @@ function strToUTF8Arr (sDOMStr) {
   /* mapping... */
 
   for (var nMapIdx = 0; nMapIdx < nStrLen; nMapIdx++) {
-    nChr = sDOMStr.charCodeAt(nMapIdx);
+    nChr = sDOMStr.codePointAt(nMapIdx);
+
+    if (nChr > 65536) {
+      nMapIdx++;
+    }
+
     nArrLen += nChr < 0x80 ? 1 : nChr < 0x800 ? 2 : nChr < 0x10000 ? 3 : nChr < 0x200000 ? 4 : nChr < 0x4000000 ? 5 : 6;
   }
 
@@ -208,7 +213,7 @@ function strToUTF8Arr (sDOMStr) {
   /* transcription... */
 
   for (var nIdx = 0, nChrIdx = 0; nIdx < nArrLen; nChrIdx++) {
-    nChr = sDOMStr.charCodeAt(nChrIdx);
+    nChr = sDOMStr.codePointAt(nChrIdx);
     if (nChr < 128) {
       /* one byte */
       aBytes[nIdx++] = nChr;
@@ -227,6 +232,7 @@ function strToUTF8Arr (sDOMStr) {
       aBytes[nIdx++] = 128 + (nChr >>> 12 & 63);
       aBytes[nIdx++] = 128 + (nChr >>> 6 & 63);
       aBytes[nIdx++] = 128 + (nChr & 63);
+      nChrIdx++;
     } else if (nChr < 0x4000000) {
       /* five bytes */
       aBytes[nIdx++] = 248 + (nChr >>> 24);
@@ -234,6 +240,7 @@ function strToUTF8Arr (sDOMStr) {
       aBytes[nIdx++] = 128 + (nChr >>> 12 & 63);
       aBytes[nIdx++] = 128 + (nChr >>> 6 & 63);
       aBytes[nIdx++] = 128 + (nChr & 63);
+      nChrIdx++;
     } else /* if (nChr <= 0x7fffffff) */ {
       /* six bytes */
       aBytes[nIdx++] = 252 + (nChr >>> 30);
@@ -242,6 +249,7 @@ function strToUTF8Arr (sDOMStr) {
       aBytes[nIdx++] = 128 + (nChr >>> 12 & 63);
       aBytes[nIdx++] = 128 + (nChr >>> 6 & 63);
       aBytes[nIdx++] = 128 + (nChr & 63);
+      nChrIdx++;
     }
   }
 

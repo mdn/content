@@ -276,7 +276,7 @@ The output of which looks something like this:
 
 ## Tables for visually impaired users
 
-Let's recap briefly on how we use data tables. A table can be a handy tool, for giving us quick access to data and allowing us to look up different values. For example, It takes only a short glance at the table below to find out how many rings were sold in Gent last August. To understand its information we make visual associations between the data in this table and its column and/or row headers.
+Let's recap briefly on how we use data tables. A table can be a handy tool, for giving us quick access to data and allowing us to look up different values. For example, it takes only a short glance at the table below to find out how many rings were sold in Gent during August 2016. To understand its information we make visual associations between the data in this table and its column and/or row headers.
 
 <table>
   <caption>

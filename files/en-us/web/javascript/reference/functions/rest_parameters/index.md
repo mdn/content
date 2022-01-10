@@ -76,8 +76,8 @@ There are three main differences between rest parameters and the
 - The `...restParam` bundles all the extra parameters into a single array,
   therefore it does not contain any named argument defined **before** the
   `...restParam`. Whereas the `arguments` object contains all of
-  the parameters -- including all of the stuff in the `...restParam` --
-  **un**bundled.
+  the parameters — including the parameters in the `...restParam` array —
+  bundled into one array-like object.
 
 ### From arguments to an array
 

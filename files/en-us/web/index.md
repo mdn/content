@@ -26,6 +26,8 @@ The open Web presents incredible opportunities for developers. To take full adva
   - : Cascading Style Sheets are used to describe the appearance of Web content.
 - [JavaScript](/en-US/docs/Web/JavaScript)
   - : JavaScript is a programming language used to add interactivity to a website.
+- [Events](/en-US/docs/Web/Events)
+  - : Events are actions or occurrences that happen in the system you are programming, which the system tells you about so your code can react to them.
 - [SVG](/en-US/docs/Web/SVG)
   - : Scalable Vector Graphics let you describe images as sets of vectors and shapes in order to allow them to scale smoothly regardless of the size at which they're drawn.
 - [MathML](/en-US/docs/Web/MathML)
