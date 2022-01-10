@@ -17,6 +17,8 @@ function calls) or elements (for array literals) are expected, or an object expr
 to be expanded in places where zero or more key-value pairs (for object literals) are
 expected.
 
+*Note*: Spread is a syntax and not an operator.
+
 {{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
 
 ## Description
