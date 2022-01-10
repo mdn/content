@@ -21,6 +21,9 @@ This article provides information about the changes in Firefox 97 that will affe
 
 ### CSS
 
+- The CSS units `cap` and `ic` are now supported for use with {{cssxref("&lt;length&gt;")}} and {{cssxref("&lt;length-percentage&gt;")}} data types.
+  For more information see {{bug(1702924)}} and {{bug(1531223)}}.
+
 #### Removals
 
 ### JavaScript

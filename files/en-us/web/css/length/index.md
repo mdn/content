@@ -39,7 +39,7 @@ Font-relative lengths define the `<length>` value in terms of the size of a part
   - : Represents the "cap height" (nominal height of capital letters) of the element’s {{Cssxref("font")}}.
 - `ch`
 
-  - : Represents the width, or more precisely the advance measure, of the glyph "0" (zero, the Unicode character U+0030) in the element's {{Cssxref("font")}}.
+  - : Represents the width, or more precisely the {{Glossary("advance measure")}}, of the glyph "0" (zero, the Unicode character U+0030) in the element's {{Cssxref("font")}}.
 
     In the cases where it is impossible or impractical to determine the measure of the “0” glyph, it must be assumed to be 0.5em wide by 1em tall.
 
@@ -48,7 +48,7 @@ Font-relative lengths define the `<length>` value in terms of the size of a part
 - `ex`
   - : Represents the [x-height](https://en.wikipedia.org/wiki/X-height) of the element's {{Cssxref("font")}}. On fonts with the "x" letter, this is generally the height of lowercase letters in the font; `1ex ≈ 0.5em` in many fonts.
 - `ic` {{experimental_inline}}
-  - : Equal to the used advance measure of the "水" glyph (CJK water ideograph, U+6C34), found in the font used to render it.
+  - : Equal to the used {{Glossary("advance measure")}} of the "水" glyph (CJK water ideograph, U+6C34), found in the font used to render it.
 - `lh` {{experimental_inline}}
   - : Equal to the computed value of the {{Cssxref("line-height")}} property of the element on which it is used, converted to an absolute length.
 - `rem`
