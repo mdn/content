@@ -29,10 +29,10 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}_.
 
-- {{domxref("HTMLTableRowElement.deleteCell()")}}
-  - : Removes the cell at the given position in the row. If it is equal to `-1`, it deletes the last cell of the row. If the given position is greater (or equal as it starts at zero) than the amount of cells in the row, or is smaller than `-1`, it raises a {{domxref("DOMException")}} with the `IndexSizeError` value.
-- {{domxref("HTMLTableRowElement.insertCell()")}}
-  - : Inserts a new cell just before the given position in the row. If the given position is not given or is `-1`, it appends the cell to the row. If the given position is greater (or equal as it starts at zero) than the amount of cells in the row, or is smaller than `-1`, it raises a {{domxref("DOMException")}} with the `IndexSizeError` value. Returns a reference to a {{domxref("HTMLTableCellElement")}}.
+- {{domxref("HTMLTableRowElement.deleteCell()", "deleteCell(index)")}}
+  - : Removes the cell corresponding to `index`. If `index` is `-1`, the last cell of the row is removed. If `index` is less than `-1` or greater than the amount of cells in the collection, a {{DOMxRef("DOMException")}} with the value `IndexSizeError` is raised.
+- {{domxref("HTMLTableRowElement.insertCell()", "insertCell(index)")}}
+  - : Returns an {{DOMxRef("HTMLTableCellElement")}} representing a new cell of the row. The cell is inserted in the collection of cells immediately before the given `index` position in the row. If `index` is `-1`, the new cell is appended to the collection. If `index` is less than `-1` or greater than the number of cells in the collection, a {{DOMxRef("DOMException")}} with the value `IndexSizeError` is raised.
 
 ## Deprecated properties
 

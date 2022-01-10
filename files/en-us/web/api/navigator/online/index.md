@@ -28,15 +28,14 @@ value, you cannot assume that a true value necessarily means that the browser ca
 the internet. You could be getting false positives, such as in cases where the computer
 is running a virtualization software that has virtual ethernet adapters that are always
 "connected." Therefore, if you really want to determine the online status of the
-browser, you should develop additional means for checking. To learn more, see the HTML5
-Rocks article, [Working Off the Grid](http://www.html5rocks.com/en/mobile/workingoffthegrid.html).
+browser, you should develop additional means for checking.
 
 In Firefox and Internet Explorer, switching the browser to offline mode sends a
 `false` value. Until Firefox 41, all other conditions return a
 `true` value; testing actual behavior on Nightly 68 on Windows shows that it
 only looks for LAN connection like Chrome and Safari giving false positives.
 
-You can see changes in the network state by listening for the events on [`window.ononline`](/en-US/docs/Web/API/document.ononline) and [`window.onoffline`](/en-US/docs/Web/API/document.onoffline).
+You can see changes in the network state by listening for the events on [`document.ononline`](/en-US/docs/Web/API/Document/ononline) and [`document.onoffline`](/en-US/docs/Web/API/Document/onoffline).
 
 ## Syntax
 
@@ -69,7 +68,7 @@ always come out as `false`/`undefined`.
 ### Listening for changes in network status
 
 To see changes in the network state, use
-[`addEventListener`](/en-US/docs/DOM/element.addEventListener) to
+[`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) to
 listen for the events on `window.online` and `window.offline`, as
 in the following example:
 
@@ -89,15 +88,6 @@ window.addEventListener('online', function(e) { console.log('online'); });
 
 ## Notes
 
-See [Online/Offline Events](/en-US/docs/Online_and_offline_events) for a
+See [Online/Offline Events](/en-US/docs/Web/API/Navigator/Online_and_offline_events) for a
 more detailed description of this property as well as new offline-related features
 introduced in Firefox 3.
-
-## See also
-
-- [HTML5 Rocks:
-  Working Off the Grid With HTML5 Offline](http://www.html5rocks.com/en/mobile/workingoffthegrid.html)
-- [HTML5 Rocks:
-  "Offline": What does it mean and why should I care?](http://www.html5rocks.com/en/tutorials/offline/whats-offline/)
-- [Mozilla Blog:
-  Offline Web Applications](http://hacks.mozilla.org/2010/01/offline-web-applications/)

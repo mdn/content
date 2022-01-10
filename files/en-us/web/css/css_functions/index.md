@@ -194,6 +194,12 @@ These functions may be used wherever an {{cssxref("&lt;image&gt;")}} is valid as
   - : Is similar to `radial-gradient()` and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container.
 - {{cssxref("gradient/repeating-conic-gradient()","repeat-conic-gradiant()")}}
   - : Is similar to `conic-gradient()` and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container.
+- {{cssxref("cross-fade()")}}
+  - : Can be used to blend two or more images at a defined transparency.
+- {{cssxref("element()")}}
+  - : Defines an `<image>` value generated from an arbitrary HTML element.
+- {{cssxref("paint()")}}
+  - : Defines an `<image>` value generated with a PaintWorklet.
 
 ## Counter functions
 
@@ -203,6 +209,8 @@ The counter functions are generally used with the {{cssxref("content")}} propert
   - : Returns a string representing the current value of the named counter, if there is one.
 - {{cssxref("counters()")}}
   - : Enables nested counters, returning a concatenated string representing the current values of the named counters, if there are any.
+- {{cssxref("symbols()")}}
+  - : Lets you define counter styles inline, directly as the value of a property.
 
 ## Font functions
 
@@ -233,6 +241,32 @@ The following functions may be used as values for the {{cssxref("&lt;basic-shape
   - : Defines an inset rectangle.
 - {{cssxref("basic-shape/polygon()","polygon()")}}
   - : Defines a polygon.
+- {{cssxref("path()")}}
+  - : Accepts an SVG path string to enable a shape to be drawn.
+
+## Reference functions
+
+The following functions are used as a value of properties to reference a value defined elsewhere.
+
+- {{cssxref("attr()")}}
+  - : Used to retrieve the value of an attribute of the selected element and use it in the stylesheet.
+- {{cssxref("env()")}}
+  - : Used to insert the value of a user agent-defined environment variable.
+- {{cssxref("url()")}}
+  - : Used to include a file.
+- {{cssxref("var()")}}
+  - : Used to insert a value of a custom property instead of any part of a value of another property.
+
+## CSS grid functions
+
+The following functions are used to define a CSS grid.
+
+- {{cssxref("fit-content()")}}
+  - : Clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
+- {{cssxref("minmax()")}}
+  - : Defines a size range greater than or equal to _min_ and less than or equal to _max_.
+- {{cssxref("repeat()")}}
+  - : Represents a repeated fragment of the track list, allowing a large number of columns or rows that exhibit a recurring pattern.
 
 ## Specifications
 
