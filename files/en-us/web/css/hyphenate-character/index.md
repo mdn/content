@@ -11,12 +11,6 @@ browser-compat: css.properties.hyphenate-character
 
 The **`hyphenate-character`** [CSS](/en-US/docs/Web/CSS) property sets the character (or string) used at the end of a line before a hyphenation break.
 
-<!--
-
-{{EmbedInteractiveExample("pages/css/text-overflow.html")}}
-
--->
-
 Both automatic and soft hyphens are displayed according to the specified hyphenate-character value.
 
 
@@ -48,50 +42,46 @@ hyphenate-character: <string>;
 
 ## Examples
 
-EXPERIMENT!
-
+This example shows three identical blocks of text that have {{cssxref("hyphens")}} set to ensure that they break whereever needed, and on soft hyphen breaks (created using `&shy;`).
+The first block has the value of the hyphen changed to the equals symbol ("`=`").
+The second block has `hyphenate-character: auto`, while the third does not apply `hyphenate-character`
+Note that in this case there is no difference in the rendering of the last two blocks.
 #### HTML
 
 ```html
-<div id="examplecontainer">
-  <p id="nochar" lang="en">nochar Extremely long lines. Superc&shy;alifragilisticexpialidocious </p>
-  <p id="breakauto" lang="en">auto Extremely long lines. Superc&shy;alifragilisticexpialidocious </p>
-  <p id="breakequals" lang="en">equals Extremely long lines. Superc&shy;alifragilisticexpialidocious</p>
-  <p id="webauto" lang="en">webauto Extremely long lines. Superc&shy;alifragilisticexpialidocious </p>
-  <p id="webequals" lang="en">webequalsExtremely long lines.Superc&shy;alifragilisticexpialidocious </p> 
-</div>
+<dl>
+  <dt><code>hyphenate-character: "="</code></dt>
+  <dd id="string" lang="en">Superc&shy;alifragilisticexpialidocious</dd>
+  <dt><code>hyphenate-character: auto</code></dt>
+  <dd id="auto" lang="en">Superc&shy;alifragilisticexpialidocious</dd>
+  <dt><code>hyphenate-character is not set</code></dt>
+  <dd lang="en">Superc&shy;alifragilisticexpialidocious</dd>
+</dl>
 ```
 
 #### CSS
 
 ```css
-#examplecontainer  {
-  width: 75px;
+dd {
+  width: 90px;
   border: 1px solid black;
   hyphens: auto;
- }
-#nochar {
-  /* hyphenate-character: "="; */
 }
-#breakauto {
+
+dd#string {
+  -webkit-hyphenate-character: "᐀";
+  hyphenate-character: "=";
+}
+
+dd#auto {
+  -webkit-hyphenate-character: auto;
   hyphenate-character: auto;
 }
-#breakequals {
-  hyphenate-character: "=";
-
-}
-#webequals {
-  -webkit-hyphenate-character: "᐀";
-}
-#webauto {
-  -webkit-hyphenate-character: auto;
-}
-
 ```
 
 #### Result
 
-{{EmbedLiveSample("Examples", "100%", 490)}}
+{{EmbedLiveSample("Examples", "100%", 350)}}
 
 
 ## Specifications
