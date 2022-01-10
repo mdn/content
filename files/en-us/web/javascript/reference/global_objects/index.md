@@ -65,7 +65,7 @@ Error objects are a special type of fundamental object. They include the basic 
 - {{JSxRef("Error")}}
 - {{JSxRef("AggregateError")}}
 - {{JSxRef("EvalError")}}
-- {{JSxRef("InternalError")}}
+- {{Non-Standard_Inline}} {{JSxRef("InternalError")}}
 - {{JSxRef("RangeError")}}
 - {{JSxRef("ReferenceError")}}
 - {{JSxRef("SyntaxError")}}
