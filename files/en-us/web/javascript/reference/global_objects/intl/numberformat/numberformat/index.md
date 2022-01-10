@@ -113,7 +113,7 @@ new Intl.NumberFormat(locales, options)
           formatted number.
         - "`engineering`" return the exponent of ten when
           divisible by three
-        - "`compact`" string representing exponent, defaults is using the "short" form.
+        - "`compact`" string representing exponent; defaults to using the "short" form.
 
     - `numberingSystem`
       - : Numbering System. Possible values include: "`arab`",
@@ -127,7 +127,7 @@ new Intl.NumberFormat(locales, options)
 
     - `signDisplay`
 
-      - : When to display the sign for the number; defaults to "`auto`"
+      - : When to display the sign for the number; defaults to "`auto`":
 
         - "`always`" always display sign
         - "`auto`" sign display for negative numbers only
@@ -163,33 +163,33 @@ new Intl.NumberFormat(locales, options)
 
     - `useGrouping`
       - : Whether to use grouping separators, such as thousands separators or
-        thousand/lakh/crore separators. the default is `auto`.
+        thousand/lakh/crore separators. The default is `auto`.
 
-        - "`always`" display grouping separators even if the locale prefers otherwise
-        - "`auto`" display grouping separators based on the locale preference, which may also be dependent on the currency
-        - "`false`" do not display grouping separators
-        - "`min2`" display grouping separators when there are at least 2 digits in a group
-        - "`true`" alias for `always`
+        - "`always`": display grouping separators even if the locale prefers otherwise
+        - "`auto`": display grouping separators based on the locale preference, which may also be dependent on the currency
+        - "`false`": do not display grouping separators
+        - "`min2`": display grouping separators when there are at least 2 digits in a group
+        - "`true`": alias for `always`
 
     - `roundingMode`
-      - : Options for rounding modes reflecting the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html). the default is `halfExpand`.
+      - : Options for rounding modes reflecting the [ICU user guide](https://unicode-org.github.io/icu/userguide/format_parse/numbers/rounding-modes.html). The default is `halfExpand`.
 
-        - "`ceil`" toward +∞
-        - "`floor`" toward -∞
-        - "`expand`" away from 0
-        - "`trunc`" toward 0
-        - "`halfCeil`" ties toward +∞
-        - "`halfFloor`" ties toward -∞
-        - "`halfExpand`" ties away from 0
-        - "`halfTrunc`" ties toward 0
-        - "`halfEven`" ties toward the value with even cardinality
+        - "`ceil`": toward +∞
+        - "`floor`": toward -∞
+        - "`expand`": away from 0
+        - "`trunc`": toward 0
+        - "`halfCeil`": ties toward +∞
+        - "`halfFloor`": ties toward -∞
+        - "`halfExpand`": ties away from 0
+        - "`halfTrunc`": ties toward 0
+        - "`halfEven`": ties toward the value with even cardinality
 
     - `roundingPriority`
-      - : Options for control rounding behavior
+      - : Options for control rounding behavior:
 
-        - "`auto`" the significant digits always win a conflict
-        - "`morePrecision`" the result with more precision wins a conflict
-        - "`lessPrecision`" the result with less precision wins a conflict
+        - "`auto`": the significant digits always win a conflict
+        - "`morePrecision`": the result with more precision wins a conflict
+        - "`lessPrecision`": the result with less precision wins a conflict
 
     - `roundingIncrement`
       - : A Number in the following list:
@@ -197,11 +197,11 @@ new Intl.NumberFormat(locales, options)
         > **Note:** `roundingIncrement` option cannot be mixed with significant digits rounding or any setting of `roundingPriority` other than "auto".
 
     - `trailingZeroDisplay`
-      - : A string expressing the strategy for displaying trailing zeros on whole numbers, the defaults is "`auto`".
+      - : A string expressing the strategy for displaying trailing zeros on whole numbers. The default is "`auto`".
 
-        - "`auto`" keep trailing zeros according to minimumFractionDigits and minimumSignificantDigits
-        - "`stripIfInteger`" the result with more precision wins a conflict
-        - "`lessPrecision`" same as "auto", but remove the fraction digits if they are all zero
+        - "`auto`": keep trailing zeros according to minimumFractionDigits and minimumSignificantDigits
+        - "`stripIfInteger`": the result with more precision wins a conflict
+        - "`lessPrecision`": same as "auto", but remove the fraction digits if they are all zero
 
     The following properties fall into two groups:
     `minimumIntegerDigits`, `minimumFractionDigits`, and

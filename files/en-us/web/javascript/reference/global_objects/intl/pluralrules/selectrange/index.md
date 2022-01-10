@@ -15,7 +15,7 @@ browser-compat: javascript.builtins.Intl.PluralRules.selectRange
 ---
 {{JSRef}}
 
-The **`Intl.PluralRules.prototype.selectRange()`** receives two values and returns a {{jsxref("String")}} indicating which plural rule to use for locale-aware formatting.
+The **`Intl.PluralRules.prototype.selectRange()`** method receives two values and returns a {{jsxref("String")}} indicating which plural rule to use for locale-aware formatting.
 
 ## Syntax
 
@@ -25,14 +25,14 @@ formatRange(startRange, endRange)
 
 ### Return value
 
-A string representing the pluralization category of the `number`, can be one
+A string representing the pluralization category of the `number`; can be one
 of `zero`, `one`, `two`, `few`,
 `many` or `other`, that are relevant for the locale whose localization is specified in [LDML Language Plural Rules](https://unicode-org.github.io/cldr-staging/charts/37/supplemental/language_plural_rules.html#rules).
 
 ## Description
 
 This function selects a pluralization category according to the locale and formatting
-options of a {{jsxref("Intl.PluralRules")}} object.
+options of an {{jsxref("Intl.PluralRules")}} object.
 
 ## Examples
 

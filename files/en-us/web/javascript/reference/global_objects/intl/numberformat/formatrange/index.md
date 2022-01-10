@@ -14,9 +14,9 @@ browser-compat: javascript.builtins.Intl.NumberFormat.formatRange
 ---
 {{JSRef}}
 
-The **`Intl.NumberFormat.prototype.formatRange()`** method format a range of
-numbers according to the locale and formatting options of this
-{{jsxref("Intl.NumberFormat")}} object.
+The **`Intl.NumberFormat.prototype.formatRange()`** method formats a range of
+numbers according to the locale and formatting options of the
+{{jsxref("Intl.NumberFormat")}} object from which the method is called.
 
 ## Syntax
 
@@ -27,21 +27,21 @@ formatRange(startRange, endRange)
 ### Parameters
 
 - `startRange`
-  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}} to formatRange.
+  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
 
 - `endRange`
-  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}} to formatRange.
+  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
 
 ## Description
 
-The `formatRange` getter function format a range of numbers into a string according to the
-locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
+The `formatRange` getter function formats a range of numbers into a string according to the
+locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object from which it is called.
 
 ## Examples
 
 ### Using formatRange
 
-Use the `formatRange` getter function for formatting a range of currency values.
+Use the `formatRange` getter function for formatting a range of currency values:
 
 ```js
 const nf = new Intl.NumberFormat("en-US", {

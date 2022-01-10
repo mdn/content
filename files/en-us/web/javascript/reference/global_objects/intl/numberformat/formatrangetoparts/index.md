@@ -29,10 +29,10 @@ formatRangeToParts(startRange, endRange)
 ### Parameters
 
 - `startRange`
-  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}} to formatRange.
+  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
 
 - `endRange`
-  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}} to formatRange.
+  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
 
 ### Return value
 
@@ -42,9 +42,8 @@ An {{jsxref("Array")}} of objects containing the formatted range of numbers in p
 
 The `formatRangeToParts()` method is useful when custom formatting ranges of number
 strings. It returns an {{jsxref("Array")}} of objects containing the locale-specific
-tokens from which it possible to build custom strings while preserving the
-locale-specific parts. The structure of the `formatRangeToParts()` method returns,
-looks like this:
+tokens from which it is possible to build custom strings while preserving the
+locale-specific parts. The structure of the array the `formatRangeToParts()` method returns looks like this:
 
 ```js
 [
@@ -60,7 +59,7 @@ looks like this:
 Possible types are the following:
 
 - currency
-  - : The currency string, such as the symbols "$" and "€" or the name "Dollar", "Euro"
+  - : The currency string, such as the symbols "$" and "€" or the name "Dollar", "Euro",
     depending on how `currencyDisplay` is specified.
 - decimal
   - : The decimal separator string (".").
@@ -106,7 +105,7 @@ formatter.formatRange(startRange, endRange)
 // "3.500,00–9.500,00 €"
 ```
 
-However, in many User Interfaces there is a desire to customize the formatting of this
+However, for many user interfaces there is a need to customize the formatting of this
 string. The `formatRangeToParts` method enables locale-aware formatting of
 strings produced by `NumberFormat` formatters by providing you the string
 in parts:
