@@ -318,7 +318,7 @@ Now onto the next major task for this article — let's add some functionality f
 
     > **Note:** As you may have noticed, reactive statements aren't limited to variable declarations. You can put _any_ JavaScript statement after the `$:` sign.
 
-4.  Now try going back to `localhost:5000`, pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> to open your browser console and typing something into the input field. You should see your entries logged. At this point, you can delete the reactive `console.log()` if you wish.
+4.  Now try going back to `localhost:5042`, pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> to open your browser console and typing something into the input field. You should see your entries logged. At this point, you can delete the reactive `console.log()` if you wish.
 5.  Next up we'll create a function to add the new todo — `addTodo()` — which will push a new `todo` object onto the `todos` array. Add this to the bottom of your `<script>` block inside `src/components/Todos.svelte`:
 
     ```js

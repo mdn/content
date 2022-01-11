@@ -224,7 +224,7 @@ and use it to make a pull request.
 
 1. Next, you'll want to start the local preview service, so you can see
 the changes you'll make as they would look in production. Once started,
-this local preview service is available at `http://localhost:5000/`
+this local preview service is available at `http://localhost:5042/`
 within your browser.
 
     ```sh
@@ -267,10 +267,10 @@ it's important to keep the following in mind:**
 1. Once you've made and saved your changes, open a browser, and navigate
 to the page(s) you've changed. For example, if you changed
 `files/en-us/web/javascript/index.md`, open
-`http://localhost:5000/en-us/docs/web/javascript` in your browser.
+`http://localhost:5042/en-us/docs/web/javascript` in your browser.
 
 1. You might have noticed that at the top of each page that you preview,
-for example the `http://localhost:5000/en-us/docs/web/javascript` page,
+for example the `http://localhost:5042/en-us/docs/web/javascript` page,
 there is a `Show flaws` button. Click on that button to see if your
 changes have introduced flaws on the page. You can also fix flaws on a
 particular page by running the command:
