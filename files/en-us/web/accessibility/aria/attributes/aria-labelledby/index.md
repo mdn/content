@@ -64,7 +64,7 @@ In this example, that accessible name is "Yellow".
    ```html
    <h2 id="attr" class="article-title">13 ARIA attributes you need to know</h2>
    <p>There are over 50 ARIA states and properties, but 13 of them stand out &helip; 
-     <a href="13.html" id="rm13" aria-labelledby="attr rm13">read more</a>
+     <a href="13.html" id="rm13" aria-labelledby="rm13 attr">read more</a>
    </p>
    ```
 

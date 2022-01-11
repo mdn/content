@@ -39,7 +39,7 @@ Tasks get added to the task queue when:
 - An event fires, adding the event's callback function to the task queue.
 - A timeout or interval created with {{domxref("setTimeout()")}} or {{domxref("setInterval()")}} is reached, causing the corresponding callback to be added to the task queue.
 
-The event loop driving your code handles these tasks one after another, in the order in which they were enqueued. Only tasks which were _already in the task queue_ when the event loop pass began will be executed during the current iteration. The rest will have to wait until the following iteration.
+The event loop driving your code handles these tasks one after another, in the order in which they were enqueued. The oldest runnable task in the task queue will be executed during a single iteration of the event loop. After that, microtasks will be executed until the microtask queue is empty, and then the browser may choose to update rendering. Then the browser moves on to the next iteration of event loop.
 
 ### Microtasks
 

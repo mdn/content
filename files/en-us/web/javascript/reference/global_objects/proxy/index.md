@@ -394,9 +394,6 @@ var docCookies = new Proxy(docCookies, {
     if (!sKey in oTarget) { return false; }
     return oTarget.removeItem(sKey);
   },
-  enumerate: function (oTarget, sKey) {
-    return oTarget.keys();
-  },
   ownKeys: function (oTarget, sKey) {
     return oTarget.keys();
   },
