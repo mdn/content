@@ -555,42 +555,44 @@ The [`@layer`](en-US/docs/Web/CSS/@layer) rule declares a cascade layer, which a
 
 ## SVG
 
-### Presentation attribute: d
+### SVGPathSeg APIs
 
-The SVG {{SVGAttr('d')}} attribute, used to define a path to be drawn, is now a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation). It can be used as a property in CSS and accepts the values [path()](</en-US/docs/Web/CSS/path()>) or `none`. (See {{bug(1340422)}} for more details.)
+The SVGPathSeg APIs are being unshipped, and have been placed behind a preference.
+This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/docs/Web/API/SVGPathElement), `SVGAnimatedPathData`.
+(See {{bug(1388931)}} for more details.)
 
 <table>
   <thead>
     <tr>
       <th>Release channel</th>
-      <th>Version added</th>
+      <th>Version removed</th>
       <th>Enabled by default?</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>91</td>
+      <td>97</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>91</td>
+      <td>97</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>91</td>
+      <td>97</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>91</td>
+      <td>97</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>layout.css.d-property.enabled</code></td>
+      <td colspan="2"><code>dom.svg.pathSeg.enabled</code></td>
     </tr>
   </tbody>
 </table>
