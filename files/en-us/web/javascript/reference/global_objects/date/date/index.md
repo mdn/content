@@ -96,7 +96,7 @@ There are five basic forms for the `Date()` constructor:
 
         Values from `0` to `99` map to the years
         `1900` to `1999`. All other values are the actual year.
-        See the [example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#two_digit_years_map_to_1900_%e2%80%93_1999).
+        See the [example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#interpretation_of_two-digit_years).
 
     - `monthIndex`
       - : Integer value representing the month, beginning with `0` for January
