@@ -41,7 +41,7 @@ The `<tbody>` element, along with its cousins {{HTMLElement("thead")}} and {{HTM
       <td>
         The <code>&#x3C;tbody></code> element is not a required child element
         for a parent {{ HTMLElement("table") }} element to graphically
-        render. However, it must not be present, if its parent
+        render. However, it must be present, if its parent
         {{ HTMLElement("table") }} element has a
         {{ HTMLElement("tr") }} element as a child.
       </td>
