@@ -51,6 +51,12 @@ expression returns `false`:
 'Blue Whale'.includes('blue')  // returns false
 ```
 
+However, you emulate a case insensitive match by changing the case of the original string:
+
+```js
+'Blue Whale'.toLowerCase().includes('blue')  // returns true
+```
+
 ## Polyfill
 
 This method has been added to the ECMAScript 2015 specification and may not be
