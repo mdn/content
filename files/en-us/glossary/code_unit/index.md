@@ -16,7 +16,7 @@ myString.length;
 // 2
 ```
 
-Also, since not all of the code points defined by Unicode fit into 16 bits, many Unicode code points are encoded as a pair of code points, which is called a *surrogate pair*:
+Also, since not all of the code points defined by Unicode fit into 16 bits, many Unicode code points are encoded as a pair of code units, which is called a *surrogate pair*:
 
 ```js
 const face = '🥵';
