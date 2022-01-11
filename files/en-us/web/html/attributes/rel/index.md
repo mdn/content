@@ -139,7 +139,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 - {{htmlattrdef("noreferrer")}}
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, including this value makes the referrer unknown (no `Referer` header will be included), and creates a top-level browsing context as if `noopener` were also set.
 - {{htmlattrdef("opener")}}
-  - : Creates an auxiliary browsing context if the hyperlink would otherwise create a top-level browsing context that is not anauxiliary browsing context (i.e., has "`_blank`" as `target` attribute value). Effectively, the opposite of {{anch("noopener")}}.
+  - : Creates an auxiliary browsing context if the hyperlink would otherwise create a top-level browsing context that is not an auxiliary browsing context (i.e., has "`_blank`" as `target` attribute value). Effectively, the opposite of {{anch("noopener")}}.
 - {{htmlattrdef("pingback")}}
   - : Gives the address of the pingback server that handles pingbacks to the current document.
 - {{htmlattrdef("preconnect")}}
