@@ -27,7 +27,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
   </caption>
   <tbody>
     <tr>
-      <td><code>form </code>{{readonlyInline}}</td>
+      <td>{{domxref("HTMLInputElement.form", "form")}} {{readonlyInline}}</td>
       <td>
         <em>{{domxref("HTMLFormElement")}} object:</em>
         <strong>Returns</strong> a reference to the parent
@@ -35,7 +35,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>formAction</code></td>
+      <td>{{domxref("HTMLInputElement.formAction", "formAction")}}</td>
       <td>
         <em><code>string</code>:</em> <strong>Returns / Sets</strong> the
         element's {{ htmlattrxref("formaction", "input") }}
@@ -46,7 +46,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>formEnctype</code></td>
+      <td>{{domxref("HTMLInputElement.formEnctype", "formEnctype")}}</td>
       <td>
         <em><code>string</code>:</em> <strong>Returns / Sets</strong> the
         element's {{ htmlattrxref("formenctype", "input") }}
@@ -57,7 +57,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>formMethod</code></td>
+      <td>{{domxref("HTMLInputElement.formMethod", "formMethod")}}</td>
       <td>
         <em><code>string</code>:</em> <strong>Returns / Sets</strong> the
         element's {{ htmlattrxref("formmethod", "input") }}
@@ -68,7 +68,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>formNoValidate</code></td>
+      <td>{{domxref("HTMLInputElement.formNoValidate", "formNoValidate")}}</td>
       <td>
         <em>A boolean value:</em> <strong>Returns / Sets</strong> the element's
         {{ htmlattrxref("formnovalidate", "input") }} attribute,
@@ -78,7 +78,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>formTarget</code></td>
+      <td>{{domxref("HTMLInputElement.formTarget", "formTarget")}}</td>
       <td>
         <em><code>string</code>:</em> <strong>Returns / Sets</strong> the
         element's {{ htmlattrxref("formtarget", "input") }}
@@ -97,7 +97,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
   </caption>
   <tbody>
     <tr>
-      <td><code>name</code></td>
+      <td>{{domxref("HTMLInputElement.name", "name")}}</td>
       <td>
         <em><code>string</code>:</em> <strong>Returns / Sets</strong> the
         element's {{ htmlattrxref("name", "input") }} attribute,
@@ -105,7 +105,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>type</code></td>
+      <td>{{domxref("HTMLInputElement.type", "type")}}</td>
       <td>
         <em><code>string</code>:</em> <strong>Returns / Sets</strong> the
         element's {{ htmlattrxref("type", "input") }} attribute,
@@ -115,7 +115,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>disabled</code></td>
+      <td>{{domxref("HTMLInputElement.disabled", "disabled")}}</td>
       <td>
         <em>A boolean value:</em> <strong>Returns / Sets</strong> the element's
         {{ htmlattrxref("disabled", "input") }} attribute,
@@ -125,7 +125,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>autofocus</code></td>
+      <td>{{domxref("HTMLInputElement.autofocus", "autofocus")}}</td>
       <td>
         <em>A boolean value:</em> <strong>Returns / Sets</strong> the element's
         {{ htmlattrxref("autofocus", "input") }} attribute, which
@@ -139,7 +139,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>required</code></td>
+      <td>{{domxref("HTMLInputElement.required", "required")}}</td>
       <td>
         <em>A boolean value:</em> <strong>Returns / Sets</strong> the element's
         {{ htmlattrxref("required", "input") }} attribute,
@@ -147,7 +147,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>value</code></td>
+      <td>{{domxref("HTMLInputElement.value", "value")}}</td>
       <td>
         <em><code>string</code>:</em> <strong>Returns / Sets</strong> the
         current value of the control.
@@ -158,14 +158,14 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>validity</code> {{readonlyInline}}</td>
+      <td>{{domxref("HTMLInputElement.validity", "validity")}} {{readonlyInline}}</td>
       <td>
         <em>{{domxref("ValidityState")}}<code> object</code>:</em>
         <strong>Returns</strong> the element's current validity state.
       </td>
     </tr>
     <tr>
-      <td><code>validationMessage</code> {{readonlyInline}}</td>
+      <td>{{domxref("HTMLInputElement.validationMessage", "validationMessage")}} {{readonlyInline}}</td>
       <td>
         <em><code>string</code>:</em> <strong>Returns</strong> a localized
         message that describes the validation constraints that the control does
@@ -177,7 +177,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>willValidate</code> {{readonlyInline}}</td>
+      <td>{{domxref("HTMLInputElement.willValidate", "willValidate")}} {{readonlyInline}}</td>
       <td>
         <em>A boolean value:</em> <strong>Returns</strong> whether the element
         is a candidate for constraint validation. It is <code>false</code> if
@@ -199,7 +199,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
   </caption>
   <tbody>
     <tr>
-      <td><code>checked</code></td>
+      <td>{{domxref("HTMLInputElement.checked", "checked")}}</td>
       <td>
         <em>A boolean value:</em> <strong>Returns / Sets</strong> the current
         state of the element when {{htmlattrxref("type","input")}}
@@ -207,7 +207,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>defaultChecked</code></td>
+      <td>{{domxref("HTMLInputElement.defaultChecked", "defaultChecked")}}</td>
       <td>
         <em>A boolean value:</em> <strong>Returns / Sets</strong> the default
         state of a radio button or checkbox as originally specified in HTML that
@@ -215,7 +215,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>indeterminate</code></td>
+      <td>{{domxref("HTMLInputElement.indeterminate", "indeterminate")}}</td>
       <td>
         <em>A boolean value:</em> <strong>Returns</strong> whether the checkbox
         or radio button is in indeterminate state. For checkboxes, the effect is
@@ -235,7 +235,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
   </caption>
   <tbody>
     <tr>
-      <td><code>alt</code></td>
+      <td>{{domxref("HTMLInputElement.alt", "alt")}}</td>
       <td>
         <em><code>string</code>: </em><strong>Returns / Sets</strong> the
         element's {{ htmlattrxref("alt", "input") }} attribute,
@@ -244,7 +244,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>height</code></td>
+      <td>{{domxref("HTMLInputElement.height", "height")}}</td>
       <td>
         <em><code>string</code>: </em><strong>Returns / Sets</strong> the
         element's {{ htmlattrxref("height", "input") }} attribute,
@@ -254,7 +254,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>src</code></td>
+      <td>{{domxref("HTMLInputElement.src", "src")}}</td>
       <td>
         <code><em>string</em></code
         ><em>:</em> <strong>Returns / Sets</strong> the element's
@@ -265,7 +265,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>width</code></td>
+      <td>{{domxref("HTMLInputElement.width", "width")}}</td>
       <td>
         <code><em>string</em></code
         ><em>:</em> <strong>Returns / Sets</strong> the element's
@@ -284,7 +284,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
   </caption>
   <tbody>
     <tr>
-      <td><code>accept</code></td>
+      <td>{{domxref("HTMLInputElement.accept", "accept")}}</td>
       <td>
         <em><code>string</code>: </em><strong>Returns / Sets</strong> the
         element's {{ htmlattrxref("accept", "input") }} attribute,
@@ -293,7 +293,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>allowdirs</code> {{non-standard_inline}}</td>
+      <td>{{domxref("HTMLInputElement.allowdirs", "allowdirs")}} {{non-standard_inline}}</td>
       <td>
         <em>A boolean value:</em> Part of the non-standard Directory Upload API;
         <strong>indicates</strong> whether or not to allow directories and files
@@ -302,7 +302,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>files</code></td>
+      <td>{{domxref("HTMLInputElement.files", "files")}}</td>
       <td>
         <strong>Returns/accepts</strong> a {{domxref("FileList")}}
         object, which contains a list of {{domxref("File")}} objects
@@ -342,7 +342,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
   </caption>
   <tbody>
     <tr>
-      <td><code>autocomplete</code></td>
+      <td>{{domxref("HTMLInputElement.autocomplete", "autocomplete")}}</td>
       <td>
         <em><code>string</code>: </em><strong>Returns / Sets</strong> the
         element's {{htmlattrxref("autocomplete", "input")}}
@@ -358,7 +358,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>max</code></td>
+      <td>{{domxref("HTMLInputElement.max", "max")}}</td>
       <td>
         <em><code>string</code>:</em> <strong>Returns / Sets</strong> the
         element's {{ htmlattrxref("max", "input") }} attribute,
@@ -368,7 +368,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>maxLength</code></td>
+      <td>{{domxref("HTMLInputElement.maxLength", "maxLength")}}</td>
       <td>
         <em><code>long</code>:</em> <strong>Returns / Sets</strong> the
         element's {{ htmlattrxref("maxlength", "input") }}
@@ -378,7 +378,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>min</code></td>
+      <td>{{domxref("HTMLInputElement.min", "min")}}</td>
       <td>
         <em><code>string</code>:</em> <strong>Returns / Sets</strong> the
         element's {{ htmlattrxref("min", "input") }} attribute,
@@ -388,7 +388,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>minLength</code></td>
+      <td>{{domxref("HTMLInputElement.minLength", "minLength")}}</td>
       <td>
         <em><code>long</code>:</em> <strong>Returns / Sets</strong> the
         element's {{ htmlattrxref("minlength", "input") }}
@@ -398,7 +398,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>pattern</code></td>
+      <td>{{domxref("HTMLInputElement.pattern", "pattern")}}</td>
       <td>
         <em><code>string</code>:</em> <strong>Returns / Sets</strong> the
         element's {{ htmlattrxref("pattern", "input") }}
@@ -412,7 +412,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>placeholder</code></td>
+      <td>{{domxref("HTMLInputElement.placeholder", "placeholder")}}</td>
       <td>
         <em><code>string</code>: </em><strong>Returns / Sets</strong> the
         element's {{ htmlattrxref("placeholder", "input") }}
@@ -425,7 +425,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>readOnly</code></td>
+      <td>{{domxref("HTMLInputElement.readOnly", "readOnly")}}</td>
       <td>
         <em><code>boolean</code>:</em><strong> Returns / Sets</strong> the
         element's {{ htmlattrxref("readonly", "input") }}
@@ -438,7 +438,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>selectionStart</code></td>
+      <td>{{domxref("HTMLInputElement.selectionStart", "selectionStart")}}</td>
       <td>
         <em><code>unsigned long</code>:</em> <strong>Returns / Sets</strong> the
         beginning index of the selected text. When nothing is selected, this
@@ -447,7 +447,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>selectionEnd</code></td>
+      <td>{{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}}</td>
       <td>
         <em><code>unsigned long</code>:</em> <strong>Returns / Sets</strong> the
         end index of the selected text. When there's no selection, this returns
@@ -456,7 +456,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>selectionDirection</code></td>
+      <td>{{domxref("HTMLInputElement.selectionDirection", "selectionDirection")}}</td>
       <td>
         <em><code>string</code>:</em> <strong>Returns / Sets</strong> the
         direction in which selection occurred. Possible values are:<br /><code
@@ -470,7 +470,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>size</code></td>
+      <td>{{domxref("HTMLInputElement.size", "size")}}</td>
       <td>
         <em><code>unsigned long</code>:</em> <strong>Returns / Sets</strong> the
         element's {{ htmlattrxref("size", "input") }} attribute,
@@ -493,7 +493,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
   </caption>
   <tbody>
     <tr>
-      <td><code>defaultValue</code></td>
+      <td>{{domxref("HTMLInputElement.defaultValue", "defaultValue")}}</td>
       <td>
         <em><code>string</code>:</em> <strong>Returns / Sets</strong> the
         default value as originally specified in the HTML that created this
@@ -501,14 +501,14 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>dirName</code></td>
+      <td>{{domxref("HTMLInputElement.dirName", "dirName")}}</td>
       <td>
         <em><code>string</code>:</em> <strong>Returns / Sets</strong> the
         directionality of the element.
       </td>
     </tr>
     <tr>
-      <td><code>accessKey</code></td>
+      <td>{{domxref("HTMLInputElement.accessKey", "accessKey")}}</td>
       <td>
         <em><code>string</code>: </em><strong>Returns</strong> a string
         containing a single character that switches input focus to the control
@@ -516,7 +516,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>list</code> {{readonlyInline}}</td>
+      <td>{{domxref("HTMLInputElement.list", "list")}} {{readonlyInline}}</td>
       <td>
         <em>{{domxref("HTMLElement")}}<code> object</code>:</em>
         <strong>Returns</strong> the element pointed by the
@@ -525,7 +525,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>multiple</code></td>
+      <td>{{domxref("HTMLInputElement.multiple", "multiple")}}</td>
       <td>
         <em>A boolean value:</em> <strong>Returns / Sets</strong> the element's
         {{ htmlattrxref("multiple", "input") }} attribute,
@@ -534,17 +534,14 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>files</code></td>
+      <td>{{domxref("HTMLInputElement.files", "files")}}</td>
       <td>
         <em>{{domxref("FileList")}}<code> array</code>:</em>
         <strong>Returns</strong> the list of selected files.
       </td>
     </tr>
     <tr>
-      <td>
-        {{domxref("HTMLInputElement.labels")}}
-        {{readonlyInline}}
-      </td>
+      <td>{{domxref("HTMLInputElement.labels", "labels")}} {{readonlyInline}}</td>
       <td>
         <em>{{domxref("NodeList")}}<code> array</code>:</em>
         <strong>Returns</strong> a list of {{ HTMLElement("label") }}
@@ -552,7 +549,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>step</code></td>
+      <td>{{domxref("HTMLInputElement.step", "step")}}</td>
       <td>
         <code><em>string</em></code
         ><em>:</em> <strong>Returns / Sets</strong> the element's
@@ -566,7 +563,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>valueAsDate</code></td>
+      <td>{{domxref("HTMLInputElement.valueAsDate", "valueAsDate")}}</td>
       <td>
         <em>{{jsxref("Date")}}<code> object</code>:</em>
         <strong>Returns / Sets</strong> the value of the element, interpreted as
@@ -574,7 +571,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>valueAsNumber</code></td>
+      <td>{{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}}</td>
       <td>
         <em><code>double</code>:</em> <strong>Returns</strong> the value of the
         element, interpreted as one of the following, in order:
@@ -586,7 +583,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>autocapitalize</code> {{experimental_inline}}</td>
+      <td>{{domxref("HTMLInputElement.autocapitalize", "autocapitalize")}} {{experimental_inline}}</td>
       <td>
         <code><em>string</em></code
         ><em>:</em> <strong>Defines</strong> the capitalization behavior for
@@ -595,7 +592,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>inputmode</code></td>
+      <td>{{domxref("HTMLInputElement.inputmode", "inputmode")}}</td>
       <td>
         Provides a hint to browsers as to the type of virtual keyboard
         configuration to use when editing this element or its contents.
@@ -604,9 +601,9 @@ The **`HTMLInputElement`** interface provides special properties and methods for
   </tbody>
 </table>
 
-- {{domxref("HTMLInputElement.align")}} {{deprecated_inline}}
+- {{domxref("HTMLInputElement.align", "align")}} {{deprecated_inline}}
   - : `string`_:_ **Represents** the alignment of the element. _Use CSS instead._
-- {{domxref("HTMLInputElement.useMap")}} {{deprecated_inline}}
+- {{domxref("HTMLInputElement.useMap", "useMap")}} {{deprecated_inline}}
   - : `string`_:_ **Represents** a client-side image map.
 
 ## Methods
@@ -632,32 +629,24 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td>
-        {{domxref("HTMLInputElement.select()", "select()")}}
-      </td>
+      <td>{{domxref("HTMLInputElement.select()", "select()")}}</td>
       <td>
         Selects all the text in the input element, and focuses it so the user
         can subsequently replace all of its content.
       </td>
     </tr>
     <tr>
-      <td>
-        {{domxref("HTMLInputElement.setSelectionRange()", "setSelectionRange()")}}
-      </td>
+      <td>{{domxref("HTMLInputElement.setSelectionRange()", "setSelectionRange()")}}</td>
       <td>
         Selects a range of text in the input element (but does not focus it).
       </td>
     </tr>
     <tr>
-      <td>
-        {{domxref("HTMLInputElement.setRangeText()", "setRangeText()")}}
-      </td>
+      <td>{{domxref("HTMLInputElement.setRangeText()", "setRangeText()")}}</td>
       <td>Replaces a range of text in the input element with new text.</td>
     </tr>
     <tr>
-      <td>
-        {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}}
-      </td>
+      <td>{{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}}</td>
       <td>
         Sets a custom validity message for the element. If this message is not
         the empty string, then the element is suffering from a custom validity
@@ -665,9 +654,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td>
-        {{domxref("HTMLInputElement.checkValidity()", "checkValidity()")}}
-      </td>
+      <td>{{domxref("HTMLInputElement.checkValidity()", "checkValidity()")}}</td>
       <td>
         Returns a boolean value that is <code>false</code> if the element is a
         candidate for constraint validation, and it does not satisfy its
@@ -678,7 +665,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
-      <td><code>reportValidity()</code></td>
+      <td>{{domxref("HTMLInputElement.reportValidity()", "reportValidity()")}}</td>
       <td>
         Runs the <code>checkValidity()</code> method, and if it returns false
         (for an invalid input or no pattern attribute provided), then it reports
@@ -689,7 +676,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
   </tbody>
 </table>
 
-- {{domxref("HTMLInputElement.stepDown()")}}
+- {{domxref("HTMLInputElement.stepDown()", "stepDown()")}}
 
   - : Decrements the {{htmlattrxref("value","input")}} by ({{htmlattrxref("step","input")}} \* n), where n defaults to 1 if not specified. Throws an `InvalidStateError` exception:
 
@@ -698,7 +685,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
     - if the {{htmlattrxref("value","input")}} cannot be converted to a number,
     - if the resulting value is above the {{htmlattrxref("max","input")}} or below the {{htmlattrxref("min","input")}}.
 
-- {{domxref("HTMLInputElement.stepUp()")}}
+- {{domxref("HTMLInputElement.stepUp()", "stepUp()")}}
 
   - : Increments the {{htmlattrxref("value","input")}} by ({{htmlattrxref("step","input")}} \* n), where n defaults to 1 if not specified. Throws an `InvalidStateError` exception:
 
@@ -707,9 +694,9 @@ The **`HTMLInputElement`** interface provides special properties and methods for
     - if the {{htmlattrxref("value","input")}} cannot be converted to a number,
     - if the resulting value is above the {{htmlattrxref("max","input")}} or below the {{htmlattrxref("min","input")}}.
 
-- {{domxref("HTMLInputElement.mozSetFileArray()")}} {{non-standard_inline}}
+- {{domxref("HTMLInputElement.mozSetFileArray()", "mozSetFileArray()")}} {{non-standard_inline}}
   - : Sets the files selected on the input to the given array of {{domxref("File")}} objects. This is an alternative to `mozSetFileNameArray()` which can be used in frame scripts: a chrome script can [open files as File objects](/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) and send them via [message manager](/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox/The_message_manager).
-- {{domxref("HTMLInputElement.mozGetFileNameArray()")}} {{non-standard_inline}}
+- {{domxref("HTMLInputElement.mozGetFileNameArray()", "mozGetFileNameArray()")}} {{non-standard_inline}}
   - : Returns an array of all the file names from the input.
 
 ## Events
