@@ -52,8 +52,8 @@ Number.isSafeInteger(testValue)
 
 ### Return value
 
-A {{jsxref("Boolean")}} indicating whether or not the given value is a number that is a
-safe integer.
+The boolean value `true` if the given value is a number that is a
+safe integer. Otherwise `false`.
 
 ## Polyfill
 

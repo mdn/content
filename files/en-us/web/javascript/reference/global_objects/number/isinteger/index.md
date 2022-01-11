@@ -29,7 +29,7 @@ Number.isInteger(value)
 
 ### Return value
 
-A {{jsxref("Boolean")}} indicating whether or not the given value is an integer.
+The boolean value `true` if the given value is an integer. Otherwise `false`.
 
 ## Description
 
