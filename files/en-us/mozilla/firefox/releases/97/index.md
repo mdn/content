@@ -29,6 +29,9 @@ This article provides information about the changes in Firefox 97 that will affe
 
 ### SVG
 
+- The SVG {{SVGAttr('d')}} attribute, used to define a path to be drawn, can now be used as a property in CSS.
+  It accepts the values [path()](</en-US/docs/Web/CSS/path()>) or `none`. (See {{bug(1744599)}} for details.)
+
 #### Removals
 
 - A number of `SVGPathSeg` APIs are now disabled by default behind a preference, and are expected to be removed in future revisions.
