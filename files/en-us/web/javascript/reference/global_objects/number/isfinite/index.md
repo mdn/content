@@ -31,7 +31,7 @@ Number.isFinite(value)
 
 ### Return value
 
-A {{jsxref("Boolean")}} indicating whether or not the given value is a finite number.
+The boolean value `true` if the given value is a finite number. Otherwise `false`.
 
 ## Description
 
