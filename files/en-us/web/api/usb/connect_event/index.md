@@ -27,7 +27,7 @@ onconnect = event => { };
 
 A {{domxref("USBConnectionEvent")}}. Inherits from {{domxref("Event")}}.
 
-{{InheritanceDiagram(500, 70, 50, "USBConnectionEvent")}}
+{{InheritanceDiagram("USBConnectionEvent")}}
 
 ## Event properties
 

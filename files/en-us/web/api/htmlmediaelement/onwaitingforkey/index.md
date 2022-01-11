@@ -12,8 +12,6 @@ for an encryption key.
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
-{{InheritanceDiagram}}
-
 ## Syntax
 
 ```js

@@ -12,8 +12,6 @@ content decryption module.
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
-{{InheritanceDiagram}}
-
 ## Syntax
 
 ```js
