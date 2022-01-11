@@ -16,7 +16,7 @@ myString.length;
 // 2
 ```
 
-Also, since not all of the code points defined by Unicode fit into 16 bits, many Unicode code points are encoded as a pair of code units, which is called a *surrogate pair*:
+Also, since not all of the code points defined by Unicode fit into 16 bits, many Unicode code points are encoded as a pair of UTF-16 code units, which is called a *surrogate pair*:
 
 ```js
 const face = '🥵';
@@ -24,7 +24,7 @@ face.length;
 // 2
 ```
 
-The {{jsxref("String/codePointAt", "codePointAt()")}} method of the JavaScript {{jsxref("String")}}  object enables you to retrieve the Unicode code point from its encoded form:
+The {{jsxref("String/codePointAt", "codePointAt()")}} method of the JavaScript {{jsxref("String")}} object enables you to retrieve the Unicode code point from its encoded form:
 
 ```js
 const face = '🥵';
