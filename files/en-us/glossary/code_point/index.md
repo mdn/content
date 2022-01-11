@@ -11,4 +11,4 @@ Character encoding forms, such as UTF-8 and UTF-16, determine how a Unicode code
 
 ## See also
 
-- [The Unicode Standard: Code Points and Characters](http://www.unicode.org/versions/Unicode14.0.0/ch02.pdf#G25564)
+- [The Unicode Standard: Code Points and Characters](https://www.unicode.org/versions/Unicode14.0.0/ch02.pdf#G25564)
