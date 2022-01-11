@@ -15,20 +15,21 @@ Both automatic and soft hyphens are displayed according to the specified hyphena
 
 ## Syntax
 
-The value either sets the string to use instead of a "hyphen", or indicates that the user agent should select an appropriate string based on the current typographic conventions.
+The value either sets the string to use instead of a hyphen, or indicates that the user agent should select an appropriate string based on the current typographic conventions (default).
 
 ```css
-hyphenate-character: auto;
 hyphenate-character: <string>;
+hyphenate-character: auto;
 ```
 
 ### Values
 
-- `auto`
-  - : The user-agent selects an appropriate string based on the content language’s typographic conventions.
 - `<string>`
   - : The {{cssxref("&lt;string&gt;")}} to use at the end of the line before a hyphenation break.
     The user agent may truncate this value if too many characters are used.
+- `auto`
+  - : The user-agent selects an appropriate string based on the content language’s typographic conventions.
+    This is the default property value, and only needs to be explicitly set in order to override a different inherited value.
 
 ## Formal definition
 
@@ -40,7 +41,8 @@ hyphenate-character: <string>;
 
 ## Examples
 
-This example shows three identical blocks of text that have {{cssxref("hyphens")}} set to ensure that they break wherever needed, and on soft hyphen breaks (created using `&shy;`). The first block has the value of the hyphen changed to the equals symbol ("`=`"). The second block has `hyphenate-character: auto`, while the third does not apply `hyphenate-character` Note that in this case there is no difference in the rendering of the last two blocks.
+This example shows two identical blocks of text that have {{cssxref("hyphens")}} set to ensure that they break wherever needed, and on soft hyphen breaks (created using `&shy;`).
+The first block has the value of the hyphen changed to the equals symbol ("`=`"). The second block has no hyphenate-chacter set, which is equivalent to `hyphenate-character: auto` for user agents that support this property.
 
 #### HTML
 
@@ -48,8 +50,6 @@ This example shows three identical blocks of text that have {{cssxref("hyphens")
 <dl>
   <dt><code>hyphenate-character: "="</code></dt>
   <dd id="string" lang="en">Superc&shy;alifragilisticexpialidocious</dd>
-  <dt><code>hyphenate-character: auto</code></dt>
-  <dd id="auto" lang="en">Superc&shy;alifragilisticexpialidocious</dd>
   <dt><code>hyphenate-character is not set</code></dt>
   <dd lang="en">Superc&shy;alifragilisticexpialidocious</dd>
 </dl>
@@ -67,11 +67,6 @@ dd {
 dd#string {
   -webkit-hyphenate-character: "᐀";
   hyphenate-character: "=";
-}
-
-dd#auto {
-  -webkit-hyphenate-character: auto;
-  hyphenate-character: auto;
 }
 ```
 
