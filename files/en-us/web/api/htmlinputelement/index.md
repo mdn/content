@@ -27,7 +27,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
   </caption>
   <tbody>
     <tr>
-      <td><code>form </code>{{readonlyInline}}</td>
+      <td>{{domxref("HTMLInputElement.form", "form")}} {{readonlyInline}}</td>
       <td>
         <em>{{domxref("HTMLFormElement")}} object:</em>
         <strong>Returns</strong> a reference to the parent
