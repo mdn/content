@@ -60,6 +60,7 @@ To add hyphens when words are broken, use the CSS {{cssxref("hyphens")}} propert
 {{EmbedGHLiveSample("css-examples/css-text/hyphens.html", '100%', 600)}}
 
 You can also use the {{cssxref("hyphenate-character")}} property to use the string of your choice instead of the hyphen character at the end of the line (before the hyphenation line break).
+
 This property also takes the value `auto`, which will select the correct value to mark a mid-word line break according to the typographic conventions of the current content language.
 
 ## The `<wbr>` element

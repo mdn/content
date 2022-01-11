@@ -13,7 +13,6 @@ The **`hyphenate-character`** [CSS](/en-US/docs/Web/CSS) property sets the chara
 
 Both automatic and soft hyphens are displayed according to the specified hyphenate-character value.
 
-
 ## Syntax
 
 The value either sets the string to use instead of a "hyphen", or indicates that the user agent should select an appropriate string based on the current typographic conventions.
@@ -31,7 +30,6 @@ hyphenate-character: <string>;
   - : The {{cssxref("&lt;string&gt;")}} to use at the end of the line before a hyphenation break.
     The user agent may truncate this value if too many characters are used.
 
-
 ## Formal definition
 
 {{CSSInfo}}
@@ -42,10 +40,8 @@ hyphenate-character: <string>;
 
 ## Examples
 
-This example shows three identical blocks of text that have {{cssxref("hyphens")}} set to ensure that they break whereever needed, and on soft hyphen breaks (created using `&shy;`).
-The first block has the value of the hyphen changed to the equals symbol ("`=`").
-The second block has `hyphenate-character: auto`, while the third does not apply `hyphenate-character`
-Note that in this case there is no difference in the rendering of the last two blocks.
+This example shows three identical blocks of text that have {{cssxref("hyphens")}} set to ensure that they break wherever needed, and on soft hyphen breaks (created using `&shy;`). The first block has the value of the hyphen changed to the equals symbol ("`=`"). The second block has `hyphenate-character: auto`, while the third does not apply `hyphenate-character` Note that in this case there is no difference in the rendering of the last two blocks.
+
 #### HTML
 
 ```html
