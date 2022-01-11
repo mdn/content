@@ -13,9 +13,6 @@ The **`EpochTimeStamp`** type represents a timestamp value in milliseconds (excl
 
 This was previously known as {{domxref("DOMTimeStamp")}}.
 
-> **Note:** The use of `EpochTimeStamp` is discouraged.
-> Where possible {{domxref("DOMHighResTimeStamp")}} should be used instead.
-
 
 ## Specifications
 
