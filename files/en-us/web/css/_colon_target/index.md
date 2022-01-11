@@ -39,13 +39,9 @@ The following element would be selected by a `:target` selector when the current
 
 There are two caveats that make the `:target` selector unsuitable for use with dynamic content.
 
-1. The target element is determined at the time of `DOMContentLoad`, upon navigations triggered by clicking on links, 
-and when setting `window.location` or `window.location.hash`. It does NOT update when changing the location hash via 
-`window.history.pushState()` or `window.history.replaceState()`. Pages relying on `history` to navigate cannot rely
-on `:target` to highlight content.
+1. The target element is determined at the time of `DOMContentLoad`, upon navigations triggered by clicking on links, and when setting `window.location` or `window.location.hash`. It does NOT update when changing the location hash via `window.history.pushState()` or `window.history.replaceState()`. Pages relying on `history` to navigate cannot rely on `:target` to highlight content.
 
-2. Because the target element has already been determined on `DOMContentLoaded`, the `:target` selector does not select 
-a matching element added to the DOM at some time after `DOMContentLoaded`.
+2. Because the target element has already been determined on `DOMContentLoaded`, the `:target` selector does not select a matching element added to the DOM at some time after `DOMContentLoaded`.
 
 ## Examples
 
