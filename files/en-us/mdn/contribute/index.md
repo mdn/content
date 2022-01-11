@@ -10,7 +10,7 @@ tags:
 
 MDN Web Docs needs your help! We have a large number of typos to fix, examples to write, bugs to fix, people to talk to, and more, and the number is growing as more people start using the site. This page outlines what you can do to help.
 
-> **Note:** If you haven't contributed to MDN previously, the [Getting Started](/en-US/docs/MDN/Contribute/Getting_started) guide explains the process in four simple steps. Good news, you're already on step 3: "Finding out how you can help"!
+> **Note:** If you haven't contributed to MDN previously, the [Getting Started](/en-US/docs/MDN/Contribute/Getting_started) guide explains the process in four simple steps. Good news, you're already on step 2: "Picking a task to complete."!
 
 ## What can I do to help?
 
