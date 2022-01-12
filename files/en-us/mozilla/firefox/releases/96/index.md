@@ -64,7 +64,7 @@ No notable changes.
 
 ### WebDriver conformance (Marionette)
 
-- Added the command `WebDriver:GetElementShadowRoot` to retrieve the root node of a DOM subtree for a given element ({{bug(1700073)}}).
+- Added the command `WebDriver:GetElementShadowRoot` to retrieve the shadow root (open or closed) hosted by a given element ({{bug(1700073)}}).
 - Fixed a bug in `WebDriver:ExecuteScript` and `WebDriver:ExecuteAsyncScript` that caused a `cyclic object value` error when trying to return the `ShadowRoot` of an element ({{bug(1489490)}}).
 - `WebDriver:Print` has been enhanced to support page ranges when printing documents as PDF ({{bug(1678347)}}).
 
