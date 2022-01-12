@@ -18,7 +18,7 @@ A `link` widget provides an interactive reference to a resource. The target reso
 
 The `link` role is used to identify an element that creates a hyperlink to a resource that is in the application or external. 
 
-When this role is added to an element, tab can be used to change focus to the link, and enter used to execute the link. When not using semantic HTML for its intended purpose, interactive features must be re-implemented. Use the {{HTMLattrXRef('tabindex')}} attribute with a value of `0` to may optionally be used with this role to directly specify the position of the element in the tab order.
+When not using semantic HTML for its intended purpose, interactive features must be re-implemented. For example, when `role="link"` is added to an element, <kbd>tab</kbd> should be able to be used to give focus to the link, and <kbd>enter</kbd> to execute the link. Use the {{HTMLattrXRef('tabindex')}} attribute with a value of `0` to ensure the link is in the correct tab focus order.
 
 > **Warning:** Applying the `link` role to an element will not cause browsers to enhance the element with standard link appearance or behaviors, such as underlining, focus rings, navigation to the link target, or context menu actions. That's the developer's responsibility.
 
