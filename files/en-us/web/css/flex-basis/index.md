@@ -17,7 +17,7 @@ The **`flex-basis`** [CSS](/en-US/docs/Web/CSS) property sets the initial main s
 
 In this example the {{cssxref("flex-grow")}} and {{cssxref("flex-shrink")}} properties are both set to `1` on all three items, indicating that the flex item can grow and shrink from the initial `flex-basis`.
 
-The demo then changes the `flex-basis` on the first item. It will then grow and shrink from that flex-basis. This means that, for example, when the `flex-basis` of the first item is `200px`, it will start out at 200px but then shrink to fit the space available with the other items being at least `min-content` sized.
+The demo then changes the `flex-basis` on the first item. It will then grow and shrink from that flex-basis. This means that, for example, when the `flex-basis` of the first item is `2000px`, it will start out at 2000px but then shrink to fit the space available with the other items being at least `min-content` sized.
 
 The image below shows how the Firefox [Flexbox Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts) helps you understand the size items become:
 
