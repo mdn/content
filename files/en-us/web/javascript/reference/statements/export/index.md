@@ -96,7 +96,7 @@ export default class { .. }
 ```
 
 Named exports are useful to export several values. During the import, it is mandatory
-to use the same name of the corresponding object.
+to import them within curly braces with the same name of the corresponding object.
 
 But a default export can be imported with any name for example:
 
