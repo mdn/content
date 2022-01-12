@@ -67,6 +67,11 @@ These articles will provide instruction on the fundamental layout tools and tech
   - : Grid systems are a very common feature used in CSS layouts. Prior to **CSS Grid Layout**, they tended to be implemented using floats or other layout features. You'd first imagine your layout as a set number of columns (e.g., 4, 6, or 12), and then you'd fit your content columns inside these imaginary columns. In this article, we'll explore how these older methods work so that you understand how they were used if you work on an older project.
 - [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
   - : In this module, we recommend using Flexbox and Grid as the main layout methods for your designs. However, there are bound to be visitors to a site you develop in the future who use older browsers, or browsers which do not support the methods you have used. This will always be the case on the web — as new features are developed, different browsers will prioritise different features. This article explains how to use modern web techniques without excluding users of older technology.
+
+## Assessments
+
+The following assessment will test your understanding of the CSS layout methods covered in the guides above:
+
 - [Assessment: Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
   - : An assessment to test your knowledge of different layout methods by laying out a webpage.
 
