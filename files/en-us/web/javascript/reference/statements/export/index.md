@@ -293,4 +293,4 @@ import { myFunction, myVariable, myClass } from 'parentModule.js'
 - [ES
   modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
 - [Axel Rauschmayer's book:
-  "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+  "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
