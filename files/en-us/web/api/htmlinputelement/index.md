@@ -656,7 +656,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
     <tr>
       <td>{{domxref("HTMLInputElement.showPicker()", "showPicker()")}}</td>
       <td>
-        Show a browser picker for date, time, color, and files.
+        Shows a browser picker for date, time, color, and files.
       </td>
     </tr>
     <tr>
