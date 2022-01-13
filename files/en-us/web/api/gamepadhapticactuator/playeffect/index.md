@@ -26,8 +26,6 @@ gamepadHapticActuatorInstance.playEffect(type, params).then(function(result) { /
 
 - _type_
   - : A string representing the desired effect. This can vary depending on the hardware type, possible values are "dual-rumble" or "vibration".
-- _params_
-  - : A double representing the duration of the playEffect, in milliseconds.
 
 - _params_
 
