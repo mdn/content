@@ -359,7 +359,7 @@ class Teacher extends Person {
 }
 ```
 
-Now when we instantiate `Teacher` object instances, we can call methods and properties defined on both `Teacher`and `Person` as we'd expect:
+Now when we instantiate `Teacher` object instances, we can call methods and properties defined on both `Teacher` and `Person` as we'd expect:
 
 ```js
 let snape = new Teacher('Severus', 'Snape', 58, 'male', ['Potions'], 'Dark arts', 5);
