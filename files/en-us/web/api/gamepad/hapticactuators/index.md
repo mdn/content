@@ -27,7 +27,11 @@ An array containing {{domxref("GamepadHapticActuator")}} objects.
 
 ## Examples
 
-TBC
+```js
+const gamepad = navigator.getGamepads()[0];
+
+gamepad.hapticActuators[0].pulse();
+````
 
 ## Specifications
 
