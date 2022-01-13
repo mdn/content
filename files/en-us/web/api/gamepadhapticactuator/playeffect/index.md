@@ -14,7 +14,7 @@ browser-compat: api.GamepadHapticActuator.playEffect
 ---
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 
-The **`playEffect()`** method of the {{domxref("GamepadHapticActuator")}} interface Makes the hardware play a specific vibration pattern.
+The **`playEffect()`** method of the {{domxref("GamepadHapticActuator")}} interface makes the hardware play a specific vibration pattern.
 
 ## Syntax
 
