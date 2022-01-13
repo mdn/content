@@ -523,7 +523,7 @@
 /en-US/docs/CSS/ID_selectors	/en-US/docs/Web/CSS/ID_selectors
 /en-US/docs/CSS/Interactive	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS/Layout_mode	/en-US/docs/Web/CSS/Layout_mode
-/en-US/docs/CSS/List_of_Proprietary_CSS_Features	/en-US/docs/Web/CSS/List_of_Proprietary_CSS_Features
+/en-US/docs/CSS/List_of_Proprietary_CSS_Features	/en-US/docs/Web/CSS/Reference
 /en-US/docs/CSS/Media/Bitmap	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS/Media/TV	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS/Media/Tactile	/en-US/docs/Web/CSS/@media
@@ -1114,7 +1114,7 @@
 /en-US/docs/CSS_Reference	/en-US/docs/Web/CSS/Reference
 /en-US/docs/CSS_Reference/Draft_Implementations_of_CSS_Features	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/CSS_Reference/Draft_Implementations_of_CSS_Features_in_Mozilla	/en-US/docs/Web/CSS/Mozilla_Extensions
-/en-US/docs/CSS_Reference/List_of_Proprietary_CSS_Features	/en-US/docs/Web/CSS/List_of_Proprietary_CSS_Features
+/en-US/docs/CSS_Reference/List_of_Proprietary_CSS_Features	/en-US/docs/Web/CSS/Reference
 /en-US/docs/CSS_Reference/Mozilla_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/CSS_Reference:Mozilla_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/CSS_Support_Charts	/en-US/docs/Web/CSS
@@ -10136,6 +10136,7 @@
 /en-US/docs/Web/CSS/Grouping_selectors	/en-US/docs/Web/CSS/Selector_list
 /en-US/docs/Web/CSS/Interactive	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/Layout_cookbook/Recipe:_Media_Objects	/en-US/docs/Web/CSS/Layout_cookbook/Media_objects
+/en-US/docs/Web/CSS/List_of_Proprietary_CSS_Features	/en-US/docs/Web/CSS/Reference
 /en-US/docs/Web/CSS/Microsoft_CSS_extensions	/en-US/docs/Web/CSS/Microsoft_extensions
 /en-US/docs/Web/CSS/Motion_Path	/en-US/docs/Web/CSS/CSS_Motion_Path
 /en-US/docs/Web/CSS/Other_Resources	/en-US/docs/Web/CSS
