@@ -654,6 +654,12 @@ The **`HTMLInputElement`** interface provides special properties and methods for
       </td>
     </tr>
     <tr>
+      <td>{{domxref("HTMLInputElement.showPicker()", "showPicker()")}}</td>
+      <td>
+        Shows a browser picker for date, time, color, and files.
+      </td>
+    </tr>
+    <tr>
       <td>{{domxref("HTMLInputElement.checkValidity()", "checkValidity()")}}</td>
       <td>
         Returns a boolean value that is <code>false</code> if the element is a
