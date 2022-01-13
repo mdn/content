@@ -18,9 +18,9 @@ The **`connect`** event of the {{DOMxRef("USB")}} interface is fired whenever a 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('disconnect', event => { });
+addEventListener('disconnect', event => { })
 
-ondisconnect = event => { };
+ondisconnect = event => { }
 ```
 
 ## Event type

@@ -20,14 +20,16 @@ This only applies to Progressive Web Apps installed on desktop operating systems
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('geometrychange', (event) => { });
-ongeometrychange = (event) => { });
+addEventListener('geometrychange', event => { })
+
+ongeometrychange = event => { }
 ```
 
 ## Event type
 
 A {{domxref("WindowControlsOverlayGeometryChangeEvent")}}. Inherits from {{domxref("Event")}}.
-{{InheritanceDiagram(600, 70, 50, "WindowControlsOverlayGeometryChangeEvent")}}
+
+{{InheritanceDiagram("WindowControlsOverlayGeometryChangeEvent")}}
 
 ## Event properties
 
