@@ -14,7 +14,7 @@ The **`BeforeInstallPromptEvent`** is fired at the {{domxref("Window.onbeforein
 
 This interface inherits from the {{domxref("Event")}} interface.
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{InheritanceDiagram}}
 
 ## Constructor
 

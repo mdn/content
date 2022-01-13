@@ -22,7 +22,7 @@ Additionally, synchronous requests are not allowed from within a service worker 
 
 This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}.
 
-{{InheritanceDiagram(700, 85, 20)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

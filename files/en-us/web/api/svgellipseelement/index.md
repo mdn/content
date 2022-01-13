@@ -12,7 +12,7 @@ browser-compat: api.SVGEllipseElement
 
 The **`SVGEllipseElement`** interface provides access to the properties of {{SVGElement("ellipse")}} elements.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

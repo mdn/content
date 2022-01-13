@@ -23,7 +23,7 @@ If {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} is called outside of t
 
 This interface inherits from the {{domxref("Event")}} interface.
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{InheritanceDiagram}}
 
 > **Note:** This interface is only available when the global scope is a {{domxref("ServiceWorkerGlobalScope")}}. It is not available when it is a {{domxref("Window")}}, or the scope of another kind of worker.
 

@@ -13,7 +13,7 @@ browser-compat: api.SVGFEMergeNodeElement
 
 The **`SVGFEMergeNodeElement`** interface corresponds to the {{SVGElement("feMergeNode")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
