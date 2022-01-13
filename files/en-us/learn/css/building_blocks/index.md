@@ -71,7 +71,7 @@ This module contains the following articles, which cover the most essential part
 
 ## Assessments
 
-Want to test your CSS skills? The following assessments will test your understanding of the CSS covered in the guides above.
+The following assessments will test your understanding of the CSS covered in the guides above.
 
 - [Fundamental CSS comprehension](/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
   - : This assessment tests your understanding of basic syntax, selectors, specificity, box model, and more.
