@@ -149,7 +149,9 @@ Examples:
 
 #### Event pages
 
-Events are documented as sub pages of their target interfaces, using the slug _eventname_\_event with the title set to `Interface eventName event`. The event handler `onEventName` is represented on the `eventName_event` page. Don't create pages for `on` event handler properties. Mention both ways to access the event on the `eventName_event` page.
+Document events as sub pages of their target interfaces and use the slug _eventname_\_event with the title set to `Interface: eventName event`.
+
+Don't create pages for `on` event handler properties. Mention both ways to access the event on the `eventName_event` page.
 
 Example:
 

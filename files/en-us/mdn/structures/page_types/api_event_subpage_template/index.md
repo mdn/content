@@ -110,11 +110,11 @@ onNameOfTheEvent = event => { };
 
 If the event has a special type, mention it along with its inheritance. If not, indicate that it it a generic event:
 
-A generic {{domxref("Event")}}.
+_A generic {{domxref("Event")}}._
 
 Or, for example:
 
-An {{domxref("XRSessionEvent")}}. Inherits from {{domxref("Event")}}.
+_An {{domxref("XRSessionEvent")}}. Inherits from {{domxref("Event")}}._
 
 {{InheritanceDiagram("XRSessionEvent")}}
 
@@ -142,7 +142,7 @@ which can provide more information.
 
 ## Examples
 
-Fill in a simple example that nicely shows a typical usage of the event, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information). You can show how to use the event with {{domxref("EventTarget.addEventListener", "addEventListener()")}} and with the event handler property.
+Fill in a simple example that nicely shows a typical usage of the event, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information). You should show how to use the event with both, {{domxref("EventTarget.addEventListener", "addEventListener()")}} and with the event handler property.
 
 ```js
 my code block
