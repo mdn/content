@@ -37,7 +37,7 @@ This interface is accessible through the {{domxref("Gamepad.hapticActuators")}} 
 ```js
 const gamepad = navigator.getGamepads()[0];
 
-gamepad.hapticActuators[0].pulse();
+gamepad.hapticActuators[0].pulse(1.0, 200);
 
 gamepad.vibrationActuator.playEffect('dual-rumble', {
   startDelay: 0,
