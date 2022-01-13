@@ -44,7 +44,7 @@ onsqueezestart = (event) => { });
 
 An {{domxref("XRInputSourceEvent")}}. Inherits from {{domxref("Event")}}.
 
-{{InheritanceDiagram(500, 70, 50, "XRInputSourceEvent")}}
+{{InheritanceDiagram("XRInputSourceEvent")}}
 
 ## Event properties
 

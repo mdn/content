@@ -29,7 +29,7 @@ oninputsourceschange = (event) => { });
 
 An {{domxref("XRInputSourcesChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
-{{InheritanceDiagram(500, 70, 50, "XRInputSourcesChangeEvent")}}
+{{InheritanceDiagram("XRInputSourcesChangeEvent")}}
 
 ## Event properties
 

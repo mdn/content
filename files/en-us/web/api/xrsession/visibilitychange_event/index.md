@@ -28,7 +28,7 @@ onvisibilitychange = (event) => { });
 
 An {{domxref("XRSessionEvent")}}. Inherits from {{domxref("Event")}}.
 
-{{InheritanceDiagram(500, 70, 50, "XRSessionEvent")}}
+{{InheritanceDiagram("XRSessionEvent")}}
 
 ## Event properties
 
