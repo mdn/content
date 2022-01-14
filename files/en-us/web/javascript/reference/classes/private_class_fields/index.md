@@ -41,6 +41,8 @@ class ClassWithPrivateStaticMethod {
 
 ### Private fields
 
+Private fields include private instance fields and private static fields.
+
 #### Private instance fields
 
 Private instance fields are declared with **# names** (pronounced
