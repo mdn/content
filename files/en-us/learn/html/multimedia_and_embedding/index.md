@@ -59,7 +59,7 @@ This module contains the following articles, which will take you through all the
 
 ## Assessments
 
-The following assessment will test your understanding of the HTML basics covered in the guides above:
+The following assessment will test your understanding of the material covered in the guides above.
 
 - [Mozilla splash page](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
   - : In this assessment, we'll test your knowledge of some of the techniques discussed in this module's articles, getting you to add some images and video to a funky splash page all about Mozilla!
