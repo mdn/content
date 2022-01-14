@@ -16,8 +16,7 @@ browser-compat: api.Navigator.sendBeacon
 {{APIRef("HTML DOM")}}
 
 The **`navigator.sendBeacon()`**
-method {{glossary("Asynchronous", "asynchronously")}} sends a small amount of data
-over {{Glossary("HTTP")}} to a web server.
+method {{glossary("Asynchronous", "asynchronously")}} sends an [HTTP POST](/en-US/docs/Web/HTTP/Methods/POST) request containing a small amount of data to a web server.
 
 It’s intended to be used for
 sending analytics data to a web server, and avoids some of the problems with
@@ -74,6 +73,8 @@ This means:
 - The data is sent reliably
 - It's sent asynchronously
 - It doesn't impact the loading of the next page
+
+The data is sent as an [HTTP POST](/en-US/docs/Web/HTTP/Methods/POST) request.
 
 ### Sending analytics at the end of a session
 
