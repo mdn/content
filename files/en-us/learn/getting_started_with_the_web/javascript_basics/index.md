@@ -40,7 +40,7 @@ However, getting comfortable with JavaScript is more challenging than getting co
 
 > **Warning:** If you haven't been following along with the rest of our course, [download this example code](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip) and use it as a starting point.
 
-1.  Go to your test site and create a new folder named `scripts`. Within the scripts folder, create a new file called `main.js`, and save it.
+1.  Go to your test site and create a new folder named `scripts`. Within the scripts folder, create a new text document called `main.js`, and save it.
 2.  In your `index.html` file, enter this code on a new line, just before the closing `</body>` tag:
 
     ```html
