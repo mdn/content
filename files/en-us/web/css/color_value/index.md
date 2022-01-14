@@ -846,7 +846,7 @@ There are a few caveats to consider when using color keywords:
 
 The `transparent` keyword represents a fully transparent color. This makes the background behind the colored item completely visible. Technically, `transparent` is a shortcut for `rgba(0,0,0,0)`.
 
-> **Note:** To prevent unexpected behavior, such as in a {{cssxref("gradient")}}, the current CSS spec states that `transparent` should be calculated in the [alpha-premultiplied color space](https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax). However, be aware that older browsers may treat it as black with an alpha value of `0`.
+> **Note:** To prevent unexpected behavior, such as in a {{cssxref("gradient")}}, the current CSS spec states that `transparent` should be calculated in the [alpha-premultiplied color space](https://www.w3.org/TR/css-color-4/#interpolation-alpha). However, be aware that older browsers may treat it as black with an alpha value of `0`.
 
 > **Note:** `transparent` wasn't a true color in CSS Level 2 (Revision 1). It was a special keyword that could be used instead of a regular `<color>` value on two CSS properties: {{Cssxref("background")}} and {{Cssxref("border")}}. It was essentially added to allow developers to override an inherited solid color. With the advent of alpha channels in CSS Colors Level 3, `transparent` was redefined as a true color. It can now be used wherever a `<color>` value can be used.
 
@@ -1114,7 +1114,7 @@ as well as custom color spaces, defined via the [`@color-profile`](/en-US/docs/W
 
 ## Interpolation
 
-In animations and [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients), `<color>` values are interpolated on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the [alpha-premultiplied sRGBA color space](https://www.gimp.org/docs/plug-in/appendix-alpha.html) to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the [timing function](/en-US/docs/Web/CSS/easing-function).
+In animations and [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients), `<color>` values are interpolated on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the [alpha-premultiplied sRGBA color space](https://www.w3.org/TR/css-color-4/#interpolation-alpha) to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the [timing function](/en-US/docs/Web/CSS/easing-function).
 
 ## Accessibility considerations
 
