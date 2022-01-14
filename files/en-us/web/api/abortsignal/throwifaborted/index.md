@@ -104,7 +104,7 @@ myCoolPromiseAPI({ ..., signal })
 controller.abort();
 ```
 
-APIs that do not return promises might react in similar manner.
+APIs that do not return promises might react in a similar manner.
 In some cases it may make sense to absorb the signal. 
 
 ## Specifications
