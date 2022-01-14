@@ -12,7 +12,9 @@ The browser provides a UI that enables the user to select a sidebar to display. 
 
 The browser may include a number of built-in sidebars. For example, Firefox includes a sidebar for interacting with bookmarks:
 
-![](bookmarks-sidebar.png)Using the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json key, an extension can add its own sidebar to the browser. It will be listed alongside the built-in sidebars, and the user will be able to open it using the same mechanism as for the built-in sidebars.
+![](bookmarks-sidebar.png)
+
+Using the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json key, an extension can add its own sidebar to the browser. It will be listed alongside the built-in sidebars, and the user will be able to open it using the same mechanism as for the built-in sidebars.
 
 Like a browser action popup, the sidebar's contents are specified as an HTML document. When the user opens the sidebar, the sidebar's document is loaded into every open browser window. Each window gets its own instance of the document. When new windows are opened, they get their own sidebar documents as well.
 
