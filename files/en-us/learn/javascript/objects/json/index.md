@@ -238,7 +238,7 @@ To obtain the JSON, we use an API called {{domxref("XMLHttpRequest")}} (often ca
     }
     ```
 
-Here we are storing the response to our request (available in the [`response`](/en-US/docs/Web/API/XMLHttpRequest/response) property) in a variable called `superHeroes`; this variable now contains the JavaScript object based on the JSON! We are then passing that object to two function calls — the first one fills the <`header>` with the correct data, while the second one creates an information card for each hero on the team, and inserts it into the `<section>`.
+Here we are storing the response to our request (available in the [`response`](/en-US/docs/Web/API/XMLHttpRequest/response) property) in a variable called `superHeroes`; this variable now contains the JavaScript object based on the JSON! We are then passing that object to two function calls — the first one fills the `<header>` with the correct data, while the second one creates an information card for each hero on the team, and inserts it into the `<section>`.
 
 We have wrapped the code in an event handler that runs when the load event fires on the request object (see [`onload`](/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload)) — this is because the load event fires when the response has successfully returned; doing it this way guarantees that `request.response` will definitely be available when we come to try to do something with it.
 
