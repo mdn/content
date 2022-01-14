@@ -47,6 +47,7 @@ button.addEventListener("click", async () => {
     await dateInput.showPicker();
     // A date picker is shown.
   } catch (error) {
+    window.alert(error);
     // Use external library when this fails.
   }
 });
