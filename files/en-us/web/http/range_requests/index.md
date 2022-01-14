@@ -39,7 +39,7 @@ A download manager might disable its pause button in that case.
 
 ## Requesting a specific range from a server
 
-If the server supports range requests, then by including the {{HTTPHeader("Range")}} header in your HTTP request you can specify which part or parts of the document you want the server to return.
+If the server supports range requests, then by including the {{HTTPHeader("Range")}} header in your HTTP request, you can specify which part or parts of the document you want the server to return.
 
 ### Single part ranges
 
