@@ -16,7 +16,7 @@ The **`HTMLSelectElement.namedItem()`** method returns the
 whose `name` or `id` match the specified name, or
 `null` if no option matches.
 
-In JavaScript, using `nameItem`, like `selectElt.namedItem('value')` is equivalent to `selectElt.options.namedItem('value')`.
+In JavaScript, using `selectElt.namedItem('value')` is equivalent to `selectElt.options.namedItem('value')`.
 
 ## Syntax
 
