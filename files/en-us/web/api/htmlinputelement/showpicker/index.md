@@ -17,7 +17,7 @@ user.
 
 A browser picker is shown when the element is one of these types: `"date"`,
 `"month"`, `"week"`, `"time"`, `"datetime-local"`, `"color"`, or `"file"`. It
-can also be prepopulated with items from `<datalist>` or "autocomplete".
+can also be prepopulated with items from a {{htmlelement("datalist")}} element or {{htmlattrdef("autocomplete")}} attribute.
 
 ### Return value
 
