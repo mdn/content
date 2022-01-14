@@ -553,6 +553,50 @@ The [`@layer`](en-US/docs/Web/CSS/@layer) rule declares a cascade layer, which a
   </tbody>
 </table>
 
+
+### Property: hyphenate-character
+
+The {{cssxref("hyphenate-character")}} property can be used to set a string that is used instead of a hyphen character (`-`) at the end of a hyphenation line break.
+It can also be used to specify that the character is selected to be appropriate for the language conventions of the affected content. 
+(See {{bug(1746187)}} for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>97</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.hyphenate-character.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
 ## SVG
 
 ### SVGPathSeg APIs
