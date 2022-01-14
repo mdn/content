@@ -10,7 +10,7 @@ tags:
   - Accessibility
 ---
 
-A `link` widget provides an interactive reference to a resource. The target resource can be either external or local, i.e., either outside or within the current page or application.
+A `link` widget provides an interactive reference to a resource. The target resource can be either external or local; i.e., either outside or within the current page or application.
 
 > **Note:** Where possible, it is recommended that you use a native {{HTMLElement("a")}} element rather than the `link` role, as native elements are more widely supported by user agents and assistive technology. Native {{HTMLElement("a")}} elements also support keyboard and focus requirements by default, without need for additional customization.
 
@@ -18,7 +18,7 @@ A `link` widget provides an interactive reference to a resource. The target reso
 
 The `link` role is used to identify an element that creates a hyperlink to a resource that is in the application or external. 
 
-When not using semantic HTML for its intended purpose, interactive features must be re-implemented. For example, when `role="link"` is added to an element, the <kbd>tab</kbd> should enable giving focus to the link and <kbd>enter</kbd> should execute the link when focused. 
+When not using semantic HTML for its intended purpose, interactive features must be re-implemented. For example, when `role="link"` is added to an element, the <kbd>tab</kbd> key should enable giving focus to the link and the <kbd>enter</kbd> key should execute the link when focused. 
 
 Use the {{HTMLattrXRef('tabindex')}} attribute with a value of `0` to ensure the link is in the correct tab focus order.
 
@@ -26,7 +26,7 @@ Use the {{HTMLattrXRef('tabindex')}} attribute with a value of `0` to ensure the
 
 ## Examples
 
-To recreate an accessible link using the `link` role on an element that is not an {{HTMLElement('a')}}, you need ensure the link receives focus in the correct tab order, that the element looks like a link, and that the "link" behaves like a link. 
+To recreate an accessible link using the `link` role on an element that is not an {{HTMLElement('a')}}, you need to ensure the link receives focus in the correct tab order, that the element looks like a link, and that the "link" behaves like a link. 
 
 ```html
 <span data-href="https://mozilla.org" tabindex="0" role="link">
@@ -72,13 +72,13 @@ function navigateLink(e) {
 }
 ```
 
-If the element with the `role="link"` set hits the <kbd>Enter</kbd> key, this executes the link, going to the linked page or moving focus to the in page target. 
+If the element with `role="link"` receives an <kbd>Enter</kbd> key event, this executes the link, going to the linked page or moving focus to the in page target. 
 
-Optionally, <kbd>Shift + F10</kbd> opens a context menu for the link.
+Optionally, <kbd>Shift</kbd> + <kbd>F10</kbd> opens a context menu for the link.
 
 ## Best practices
 
-The various widget role are used to define common interactive patterns. Similar to the document structure roles, some of these roles, including the `link` role, duplicate the semantics of native HTML elements that are well supported, and should not be used. 
+The various widget roles are used to define common interactive patterns. Similar to the document-structure roles, some of these roles, including the `link` role, duplicate the semantics of native HTML elements that are well supported, and should not be used. 
 
 Avoid using `link`, which we've included for completeness. The {{HTMLElement('a')}} semantic equivalent with accessible interactivity is available and supported. 
 
