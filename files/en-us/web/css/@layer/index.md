@@ -56,11 +56,11 @@ Or, multiple layers can be defined at once. For example:
 
 This is useful because the initial order in which layers are declared indicates which layer has precedence. As with declarations, the last layer to be listed will win if declarations are found in multiple layers. Therefore, with the preceding example, if a competing rule was found in `theme` and `utilities` the one in `utilities` would win and be applied.
 
-The rule in `utilities` would be applied _even if it has lower specificity_ than the rule in `theme`. This is because once layer order has been established, specificity and order of appearance are ignored. This enables the creation of simpler CSS selectors, as you do not have to ensure that a selector will have high enough specificity to override competing rules, all you need to ensure is that it appears in a later layer.
+The rule in `utilities` would be applied _even if it has lower specificity_ than the rule in `theme`. This is because once layer order has been established, specificity and order of appearance matter only relatively to their own layer and the last layer will always be stronger than the previous ones. This enables the creation of simpler CSS selectors, as you do not have to ensure that a selector will have high enough specificity to override competing rules, all you need to ensure is that it appears in a later layer.
 
 > **Note:** Having declared your layer names, thus setting their order, you can add CSS rules to the layer by redeclaring the name. The styles are then appended to the layer and the layer order will not be changed.
 
-Any styles not in a layer are gathered together and placed into an anonymous layer that comes first in the order of layers, this means that anything in a layer will override things not in a layer.
+**N.B.**: any styles not in a layer (i.e. _Unlayered styles_) are gathered together and placed into an anonymous layer that comes last in the order of layers, this means that anything out of a layer will override things in a layer.
 
 ### Nesting layers
 
@@ -108,7 +108,7 @@ Then an anonymous, unnamed, layer is created. This functions in the same way as 
 
 In the following example, two CSS rules are created. One for the {{htmlelement("p")}} element, which is inside a layer named `type`. In addition a rule is created outside of any layer for `.box p`.
 
-Without layers, the selector `box p` would have the highest specificity and therefore the text `Hello, world!` will display in green. With layers, specificity and order outside of layers is ignored. As the `type` layer comes after the anonymous layer created to hold non-layer content, the text will be purple.
+Without layers, the selector `box p` would have the highest specificity and therefore the text `Hello, world!` will display in rebeccapurple. With layers, the anonymous _Unlayered style_ layer always wins over the declared ones. Therefore, as the `type` layer comes before the anonymous layer created to hold non-layer content, the text will be green and bold.
 
 #### HTML
 
@@ -122,12 +122,12 @@ Without layers, the selector `box p` would have the highest specificity and ther
 
 ```css
 @layer type {
-  p {
+  .box p {
     color: rebeccapurple;
   }
 }
 
-.box p {
+p {
   font-weight: bold;
   color: green;
 }
