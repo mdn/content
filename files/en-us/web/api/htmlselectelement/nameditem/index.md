@@ -16,15 +16,12 @@ The **`HTMLSelectElement.namedItem()`** method returns the
 whose `name` or `id` match the specified name, or
 `null` if no option matches.
 
-In JavaScript, using the array bracket syntax with a {{jsxref("String")}}, like
-`selectElt["value"]` is equivalent to
-` selectElt``.namedItem("value") `.
+In JavaScript, using `selectElt.namedItem('value')` is equivalent to `selectElt.options.namedItem('value')`.
 
 ## Syntax
 
 ```js
-var item = collection.namedItem(str);
-var item = collection[str];
+var item = select.namedItem(str);
 ```
 
 ### Parameters
@@ -51,8 +48,18 @@ var item = collection[str];
 ### JavaScript
 
 ```js
-elem1 = document.forms[0]['myFormControl']['o1']; // Returns the HTMLOptionElement representing #o1
+let selectElt = document.getElementById('myFormControl');
+elem1 = selectElt.namedItem('o1'); // Returns the HTMLOptionElement representing #o1
 ```
+
+But, you cannot write:
+
+```js
+let selectElt = document.getElementById('myFormControl');
+elem1 = selectElt.o1; // Returns undefined
+elem1 = selectElt['o1']; // Returns undefined
+```
+
 
 ## Specifications
 
