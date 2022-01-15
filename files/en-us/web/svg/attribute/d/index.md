@@ -4,18 +4,19 @@ slug: Web/SVG/Attribute/d
 tags:
   - SVG
   - SVG Attribute
+browser-compat: svg.elements.path.d
 ---
 {{SVGRef}}
 
 The **`d`** attribute defines a path to be drawn.
 
-A path definition is a list of [path commands](#path_commands) where each command is composed of a command letter and numbers that represent the command parameters. The commands are detailed below.
+A path definition is a list of [path commands](#path_commands) where each command is composed of a command letter and numbers that represent the command parameters.
+The commands are [detailed below](#path_commands).
 
-You can use this attribute with the following SVG elements:
+You can use this attribute with the following SVG elements: [`<path>`](#path), [`<glyph>`](#path), [`<missing-glyph>`](#missing-glyph).
 
-*   {{SVGElement("path")}}
-*   {{SVGElement("glyph")}}
-*   {{SVGElement("missing-glyph")}}
+`d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can be also be [used as a CSS property](#using_d_as_a_css_property).
+
 
 ## Example
 
@@ -25,7 +26,7 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path fill="none" stroke="red"
+  <path fill="none" stroke="red"
     d="M 10,30
        A 20,20 0,0,1 50,30
        A 20,20 0,0,1 90,30
@@ -33,6 +34,7 @@ html,body,svg { height:100% }
        Q 10,60 10,30 z" />
 </svg>
 ```
+
 
 {{EmbedLiveSample('Example', '100%', 200)}}
 
@@ -45,9 +47,7 @@ For {{SVGElement('path')}}, `d` is a string containing a series of path commands
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong
-        >
+        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -72,9 +72,7 @@ For {{SVGElement('glyph')}}, `d` is a string containing a series of path command
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong
-        >
+        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -101,9 +99,7 @@ For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong
-        >
+        <strong><a href="/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -116,6 +112,40 @@ For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path
     </tr>
   </tbody>
 </table>
+
+
+## Using d as a CSS property
+
+`d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can be also be modified using CSS.
+The property takes either [path()](/en-US/docs/Web/CSS/path()#_flaws) or `none`.
+
+The example below shows how you might apply a new path on hover over an element.
+The new path is the same as the old one, but adds a line across the heart.
+
+```css
+html,body,svg { height:100% }
+
+/* This path is displayed on hover*/
+#svg_css_ex1:hover path {
+  d: path("M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 z M5,5 L90,90")
+}
+```
+
+```html
+<svg id="svg_css_ex1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path fill="none" stroke="red"
+    d="M 10,30
+       A 20,20 0,0,1 50,30
+       A 20,20 0,0,1 90,30
+       Q 90,60 50,90
+       Q 10,60 10,30 z
+       " />
+</svg>
+```
+
+{{EmbedLiveSample('Using d as a CSS Property', '100%', 200)}}
+
+
 
 ## Path commands
 
@@ -135,8 +165,8 @@ SVG defines 6 types of path commands, for a total of 20 commands:
 It is always possible to specify a negative value as an argument to a command:
 
 *   negative angles will be anti-clockwise;
-*   *absolute* negative *x* and *y* values are interpreted as negative coordinates;
-*   *relative* negative *x* values move to the left, and relative negative *y* values move upwards.
+*   *absolute* negative *x* and *y* values are interpreted as negative coordinates;
+*   *relative* negative *x* values move to the left, and relative negative *y* values move upwards.
 
 ### MoveTo path commands
 
@@ -1029,7 +1059,6 @@ html,body,svg { height:100% }
 
 {{EmbedLiveSample('ClosePath', '100%', 200)}}
 
-> **Note:** As a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation) `d` can be used as a CSS property
 
 ## Specifications
 
@@ -1053,8 +1082,7 @@ html,body,svg { height:100% }
       </td>
       <td>{{Spec2("SVG1.1")}}</td>
       <td>
-        Initial definition for <code>&#x3C;glyph></code> and
-        <code>&#x3C;missing-glyph></code>
+        Initial definition for <code>&#x3C;glyph></code> and <code>&#x3C;missing-glyph></code>
       </td>
     </tr>
     <tr>
@@ -1066,3 +1094,7 @@ html,body,svg { height:100% }
     </tr>
   </tbody>
 </table>
+
+## Browser compatibility
+
+{{Compat}}

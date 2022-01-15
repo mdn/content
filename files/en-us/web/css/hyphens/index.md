@@ -15,11 +15,13 @@ The **`hyphens`** [CSS](/en-US/docs/Web/CSS) property specifies how words should
 
 {{EmbedInteractiveExample("pages/css/hyphens.html")}}
 
-> **Note:** In the above demo, the string "An extra­ordinarily long English word!" contains the hidden `&shy;` character: `An extra&shy;­ordinarily long English word!`. This character is used to indicate a potential place to insert a hyphen when `hyphens: manual;` is specified.
+> **Note:** In the above demo, the string "An extraordinarily long English word!" contains the hidden `&shy;` (soft hyphen) character: `An extra&shy;ordinarily long English word!`. This character is used to indicate a potential place to insert a hyphen when `hyphens: manual;` is specified.
 
 Hyphenation rules are language-specific. In HTML, the language is determined by the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute, and browsers will hyphenate only if this attribute is present and the appropriate hyphenation dictionary is available. In XML, the [`xml:lang`](/en-US/docs/Web/SVG/Attribute/xml:lang) attribute must be used.
 
 > **Note:** The rules defining how hyphenation is performed are not explicitly defined by the specification, so the exact hyphenation may vary from browser to browser.
+
+If supported, {{cssxref("hyphenate-character")}} may be used to specify an alternative hyphenation character to use at the end of the line being broken.
 
 ## Syntax
 
@@ -125,7 +127,7 @@ dd.auto {
 
 ## See also
 
-- {{Cssxref("content")}}
+- {{cssxref("content")}}
 - {{cssxref("overflow-wrap")}} (formerly `word-wrap`)
 - {{cssxref("word-break")}}
 - [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_Text/Wrapping_text)
