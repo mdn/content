@@ -96,7 +96,7 @@ export default class { .. }
 ```
 
 Named exports are useful to export several values. During the import, it is mandatory
-to use the same name of the corresponding object.
+to import them within curly braces with the same name of the corresponding object.
 
 But a default export can be imported with any name for example:
 
@@ -293,4 +293,4 @@ import { myFunction, myVariable, myClass } from 'parentModule.js'
 - [ES
   modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
 - [Axel Rauschmayer's book:
-  "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+  "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

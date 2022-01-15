@@ -169,7 +169,7 @@ Next, we pass the result of invoking `Math.random()` through [`Math.floor()`](/e
 Math.floor(Math.random()) + 1
 ```
 
-Rounding a random decimal number between 0 and 1 down will always return 0, so adding 1 to it will always return 1.  We need to multiply the random number by 100 before we round it down. The following would give us a random number between 0 and 99:
+Rounding a random decimal number between 0 and 1 down will always return 0, so adding 1 to it will always return 1. We need to multiply the random number by 100 before we round it down. The following would give us a random number between 0 and 99:
 
 ```js
 Math.floor(Math.random()*100);

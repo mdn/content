@@ -13,7 +13,7 @@ browser-compat: api.SVGRectElement
 
 The `SVGRectElement` interface provides access to the properties of {{SVGElement("rect")}} elements, as well as methods to manipulate them.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

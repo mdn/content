@@ -52,11 +52,8 @@ Except when using the `not` or `only` logical operators, the media type is optio
   - : Intended for paged material and documents viewed on a screen in print preview mode. (Please see [paged media](/en-US/docs/Web/CSS/Paged_Media) for information about formatting issues that are specific to these formats.)
 - `screen`
   - : Intended primarily for screens.
-- `speech`
-  - : Intended for speech synthesizers.
 
 > **Note:** CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`), but they were deprecated in [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) and shouldn't be used.
-> The `aural` type has been replaced by `speech`, which is similar.
 
 ### Media features
 

@@ -115,7 +115,7 @@ npm run dev
 
 > **Note:** degit doesn't do any kind of magic — it just lets you download and unzip the latest version of a git repo's contents. This is much quicker than using `git clone` because it will not download all the history of the repo, or create a complete local clone.
 
-After running `npm run dev`, Svelte will compile and build your application. It will start a local server at `localhost:5000`. Svelte will watch for file updates, and automatically recompile and refresh the app for you when changes are made to the source files. Your browser will display something like this:
+After running `npm run dev`, Svelte will compile and build your application. It will start a local server at `localhost:5042`. Svelte will watch for file updates, and automatically recompile and refresh the app for you when changes are made to the source files. Your browser will display something like this:
 
 ![A simple start page that says hello world, and gives a link to the official svelte tutorials](01-svelte-starter-app.png)
 
@@ -281,7 +281,7 @@ We are applying a style to our [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Ele
 
 In Svelte, CSS inside a component's `<style>` block will be scoped only to that component. This works by adding a class to selected elements, which is based on a hash of the component styles.
 
-You can see this in action by opening `localhost:5000` in a new browser tab, right/<kbd>Ctrl</kbd>-clicking on the _HELLO WORLD!_ label, and choosing _Inspect_:
+You can see this in action by opening `localhost:5042` in a new browser tab, right/<kbd>Ctrl</kbd>-clicking on the _HELLO WORLD!_ label, and choosing _Inspect_:
 
 ![Svelte starter app with devtools open, showing classes for scoped styles](02-svelte-component-scoped-styles.png)
 
@@ -298,7 +298,7 @@ At this point you can try updating your `App.svelte` component — for example c
 <h1>Hello {name} from MDN!</h1>
 ```
 
-Just save your changes and the app running at `localhost:5000` will be automatically updated.
+Just save your changes and the app running at `localhost:5042` will be automatically updated.
 
 ### A first look at Svelte reactivity
 

@@ -969,7 +969,7 @@ In addition to the attributes listed in the table below, the [`GlobalEventHandle
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/HTML/Element/form#attr-method">method</a>
+        <code><a href="/en-US/docs/Web/HTML/Element/form#attr-method">method</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>

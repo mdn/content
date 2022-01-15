@@ -30,7 +30,7 @@ of a CDATA section itself, `]]>`.
 
 > **Note:* CDATA sections should not be used within HTML they are considered as comments and not displayed.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

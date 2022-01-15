@@ -34,7 +34,7 @@ var d = document.getElementById("div1");
 var topPos = d.offsetTop;
 
 if (topPos > 10) {
-  // object is offset more
+  // object offset is more
   // than 10 pixels from its parent
 }
 ```

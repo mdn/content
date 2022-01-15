@@ -19,7 +19,7 @@ The **`HTMLAudioElement`** interface provides access to the properties of {{HTML
 
 This element is based on, and inherits properties and methods from, the {{domxref("HTMLMediaElement")}} interface.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Constructor
 

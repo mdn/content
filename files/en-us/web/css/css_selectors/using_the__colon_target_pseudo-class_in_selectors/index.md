@@ -14,18 +14,18 @@ When a URL points at a specific piece of a document, it can be difficult for the
 
 ## Picking a Target
 
-The [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) {{cssxref(":target")}} is used to style the target element of a URL containing a fragment identifier. For example, the URL `https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors#example` contains the fragment identifier `#example`. In HTML, identifiers are found as the values of either `id` or `name` attributes, since the two share the same namespace. Thus, the example URL would point to the heading "example" in this document.
+The [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) {{cssxref(":target")}} is used to style the target element of a URL containing a fragment identifier. For example, the URL `https://developer.mozilla.org/en-US/docs/Web/CSS#reference` contains the fragment identifier `#reference`. In HTML, identifiers are found as the values of either `id` or `name` attributes, since the two share the same namespace. Thus, the example URL would point to the heading "reference" in that document.
 
 Suppose you wish to style any `h2` element that is the target of a URL, but do not want any other kind of element to get a target style. This is simple enough:
 
 ```css
-h2:target { font-weight: bold; }
+h2:target { outline: 2px solid; }
 ```
 
-It's also possible to create styles that are specific to a particular fragment of the document. This is done using the same identifying value that is found in the URI. Thus, to add a border to the `#example` fragment, we would write:
+It's also possible to create styles that are specific to a particular fragment of the document. This is done using the same identifying value that is found in the URI. Thus, to add a background color to the `#reference` fragment, we would write:
 
 ```css
-#example:target { border: 1px solid black; }
+#reference:target { background-color: yellow; }
 ```
 
 ## Targeting all elements

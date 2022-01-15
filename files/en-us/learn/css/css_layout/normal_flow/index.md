@@ -91,7 +91,9 @@ span {
 
 ## Summary
 
-Now that you understand normal flow and how the browser lays things out by default, let's proceed to learn how to change this default display in order to create the layout needed by your design.
+In this lesson you've learned the basics of normal flow — the default layout for CSS elements. By understanding how inline elements, block elements, and margins behave by default, it'll be easier to modify their behavior in the future.
+
+In the next lesson, we'll build on this knowledge by making changes to CSS elements using flexbox.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
 

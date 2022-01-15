@@ -9,9 +9,7 @@ browser-compat: svg.elements.linearGradient
 ---
 {{SVGRef}}
 
-The **`<linearGradient>`** element lets authors define linear gradients that can be applied to fill or stroke of graphical elements.
-
-> **Note:** Don't be confused with CSS {{cssxref('linear-gradient()')}} as CSS gradients can only apply to HTML elements where SVG gradient can only apply to SVG elements.
+The **`<linearGradient>`** element lets authors define linear gradients to apply to other SVG elements.
 
 ## Example
 
@@ -52,19 +50,19 @@ html,body,svg { height:100% }
         *Value type*: `pad`|`reflect`|`repeat` ; *Default value*: `pad`; *Animatable*: **yes**
 *   {{SVGAttr("x1")}}
     *   : This attribute defines the x coordinate of the starting point of the vector gradient along which the linear gradient is drawn.
-        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; *Default value*: `0%`; *Animatable*: **yes**
+        *Value type*: {{cssxref("length-percentage")}} | {{cssxref("number")}}; *Default value*: `0%`; *Animatable*: **yes**
 *   {{SVGAttr("x2")}}
     *   : This attribute defines the x coordinate of the ending point of the vector gradient along which the linear gradient is drawn.
-        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; *Default value*: `100%`; *Animatable*: **yes**
+        *Value type*:  {{cssxref("length-percentage")}} | {{cssxref("number")}}; *Default value*: `100%`; *Animatable*: **yes**
 *   {{SVGAttr("xlink:href")}}
     *   : {{Deprecated_Header}}An [\<IRI>](/en-US/docs/Web/SVG/Content_type#iri) reference to another `<linearGradient>` element that will be used as a template.
         *Value type*: [**\<IRI>**](/en-US/docs/Web/SVG/Content_type#iri) ; *Default value*: none; *Animatable*: **yes**
 *   {{SVGAttr("y1")}}
     *   : This attribute defines the y coordinate of the starting point of the vector gradient along which the linear gradient is drawn.
-        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; *Default value*: `0%`; *Animatable*: **yes**
+        *Value type*:  {{cssxref("length-percentage")}} | {{cssxref("number")}}; *Default value*: `0%`; *Animatable*: **yes**
 *   {{SVGAttr("y2")}}
     *   : This attribute defines the y coordinate of the ending point of the vector gradient along which the linear gradient is drawn.
-        *Value type*: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; *Default value*: `0%`; *Animatable*: **yes**
+        *Value type*:  {{cssxref("length-percentage")}} | {{cssxref("number")}}; *Default value*: `0%`; *Animatable*: **yes**
 
 ### Global attributes
 

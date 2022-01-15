@@ -553,11 +553,12 @@ The [`@layer`](en-US/docs/Web/CSS/@layer) rule declares a cascade layer, which a
   </tbody>
 </table>
 
-## SVG
 
-### Presentation attribute: d
+### Property: hyphenate-character
 
-The SVG {{SVGAttr('d')}} attribute, used to define a path to be drawn, is now a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation). It can be used as a property in CSS and accepts the values [path()](</en-US/docs/Web/CSS/path()>) or `none`. (See {{bug(1340422)}} for more details.)
+The {{cssxref("hyphenate-character")}} property can be used to set a string that is used instead of a hyphen character (`-`) at the end of a hyphenation line break.
+It can also be used to specify that the character is selected to be appropriate for the language conventions of the affected content. 
+(See {{bug(1746187)}} for more details.)
 
 <table>
   <thead>
@@ -570,27 +571,72 @@ The SVG {{SVGAttr('d')}} attribute, used to define a path to be drawn, is now a 
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>91</td>
-      <td>No</td>
+      <td>97</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>91</td>
+      <td>97</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>91</td>
+      <td>97</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>91</td>
+      <td>97</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>layout.css.d-property.enabled</code></td>
+      <td colspan="2"><code>layout.css.hyphenate-character.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
+## SVG
+
+### SVGPathSeg APIs
+
+The SVGPathSeg APIs are being unshipped, and have been placed behind a preference.
+This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/docs/Web/API/SVGPathElement), `SVGAnimatedPathData`.
+(See {{bug(1388931)}} for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version removed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.svg.pathSeg.enabled</code></td>
     </tr>
   </tbody>
 </table>

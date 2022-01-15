@@ -19,7 +19,7 @@ The **`HTMLMediaElement`** interface adds to {{domxref("HTMLElement")}} the prop
 
 The {{domxref("HTMLVideoElement")}} and {{domxref("HTMLAudioElement")}} elements both inherit this interface.
 
-{{InheritanceDiagram(600, 180)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

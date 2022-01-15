@@ -30,7 +30,10 @@ the document with [CSS](/en-US/docs/Web/CSS).
 
 ```js
 var idStr = element.id; // Get the id
-element.id = idStr; // Set the id
+```
+
+```js
+element.id = 'newid'; // Set the id
 ```
 
 - `idStr` is the identifier of the element.

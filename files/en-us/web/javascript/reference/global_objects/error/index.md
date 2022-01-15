@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Error
 ---
 {{JSRef}}
 
-`Error` objects are thrown when runtime errors occur. The `Error` object can also be used as a base object for user-defined exceptions. See below for standard built-in error types.
+`Error` objects are thrown when runtime errors occur. The `Error` object can also be used as a base object for user-defined exceptions. See below for standard built-in error types.
 
 ## Description
 
@@ -101,7 +101,7 @@ try {
     console.error(e.name + ': ' + e.message)
   }
   // ... etc
-  
+
   else {
     // If none of our cases matched leave the Error unhandled
     throw e;
@@ -113,8 +113,8 @@ try {
 
 Sometimes a block of code can fail for reasons that require different handling, but which throw very similar errors (i.e. with the same type and message).
 
-If you don't have control over the original errors that are thrown, one option is to catch them and throw new <code>Error</code> objects that have more specific messages.
-The original error should be passed to the new <code>Error</code> in the constructor `option` parameter (`cause` property), as this ensures that the original error and stack trace are available to higher level try/catch blocks.
+If you don't have control over the original errors that are thrown, one option is to catch them and throw new `Error` objects that have more specific messages.
+The original error should be passed to the new `Error` in the constructor `option` parameter (`cause` property), as this ensures that the original error and stack trace are available to higher level try/catch blocks.
 
 The example below shows this for two methods that would otherwise fail with similar errors (`doFailSomeWay()` and `doFailAnotherWay()`):
 
@@ -147,6 +147,7 @@ try {
 ```
 
 You can also use the `cause` property in [custom error types](#custom_error_types), provided the subclasses' constructor passes the `options` parameter when calling `super()`:
+
 ```js
 class MyError extends Error {
   constructor(/* some arguments */) {
@@ -158,15 +159,15 @@ class MyError extends Error {
 
 ### Custom Error Types
 
-You might want to define your own error types deriving from `Error` to be able to `throw new MyError()` and use `instanceof MyError` to check the kind of error in the exception handler.  This results in cleaner and more consistent error handling code.
+You might want to define your own error types deriving from `Error` to be able to `throw new MyError()` and use `instanceof MyError` to check the kind of error in the exception handler. This results in cleaner and more consistent error handling code.
 
-See ["What's a good way to extend Error in JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) on StackOverflow for an in-depth discussion.
+See ["What's a good way to extend Error in JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) on StackOverflow for an in-depth discussion.
 
-#### ES6 Custom Error Class
+#### ES6 Custom Error Class
 
-> **Warning:** Versions of Babel prior to 7 can handle `CustomError` class methods, but only when they are declared with [Object.defineProperty()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Otherwise, old versions of Babel and other transpilers will not correctly handle the following code without [additional configuration](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
+> **Warning:** Versions of Babel prior to 7 can handle `CustomError` class methods, but only when they are declared with [Object.defineProperty()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Otherwise, old versions of Babel and other transpilers will not correctly handle the following code without [additional configuration](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
 
-> **Note:** Some browsers include the `CustomError` constructor in the stack trace when using ES2015 classes.
+> **Note:** Some browsers include the `CustomError` constructor in the stack trace when using ES2015 classes.
 
 ```js
 class CustomError extends Error {
@@ -174,15 +175,15 @@ class CustomError extends Error {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
     super(...params)
 
-    // Maintains proper stack trace for where our error was thrown (only available on V8)
+    // Maintains proper stack trace for where our error was thrown (only available on V8)
     if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, CustomError)
+      Error.captureStackTrace(this, CustomError)
     }
 
     this.name = 'CustomError'
     // Custom debugging information
     this.foo = foo
-    this.date = new Date()
+    this.date = new Date()
   }
 }
 
@@ -198,7 +199,7 @@ try {
 
 #### ES5 Custom Error Object
 
-> **Warning:** All browsers include the `CustomError` constructor in the stack trace when using a prototypal declaration.
+> **Warning:** All browsers include the `CustomError` constructor in the stack trace when using a prototypal declaration.
 
 ```js
 function CustomError(foo, message, fileName, lineNumber) {
@@ -235,7 +236,6 @@ try {
   console.error(e.message); //bazMessage
 }
 ```
-
 
 ## Specifications
 

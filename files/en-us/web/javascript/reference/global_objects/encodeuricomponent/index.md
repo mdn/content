@@ -88,14 +88,14 @@ the integrity of the data.
 
 For [`application/x-www-form-urlencoded`](https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm), spaces are to be replaced by `+`, so one may wish to follow a `encodeURIComponent()` replacement with an additional replacement of `%20` with `+`.
 
-To be more stringent in adhering to [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986) (which reserves !, ', (, ),
+To be more stringent in adhering to {{rfc("3986")}} (which reserves !, ', (, ),
 and \*), even though these characters have no formalized URI delimiting uses, the
 following can be safely used:
 
 ```js
 function fixedEncodeURIComponent(str) {
   return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
-    return '%' + c.charCodeAt(0).toString(16);
+    return '%' + c.charCodeAt(0).toString(16).toUpperCase();
   });
 }
 ```

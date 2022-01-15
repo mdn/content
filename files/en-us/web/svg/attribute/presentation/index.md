@@ -22,7 +22,7 @@ SVG presentation attributes are CSS properties that can be used as attributes on
 *   [color-profile](#attr-color-profile)
 *   [color-rendering](#attr-color-rendering)
 *   [cursor](#attr-cursor)
-*   [d](#attr-d)
+*   [d](#attr-d) 
 *   [direction](#attr-direction)
 *   [display](#attr-display)
 *   [dominant-baseline](#attr-dominant-baseline)

@@ -15,7 +15,7 @@ HTML {{HTMLElement("script")}} elements expose the **`HTMLScriptElement`** inter
 
 JavaScript files should be served with the `application/javascript` [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), but browsers are lenient and block them only if the script is served with an image type (`image/*`), video type (`video/*`), audio type (`audio/*`), or `text/csv`. If the script is blocked, its element receives an {{event("error")}} event; otherwise, it receives a {{event("load")}} event.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

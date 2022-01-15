@@ -19,7 +19,7 @@ The **`SyncEvent`** interface represents a sync action that is dispatched on the
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{InheritanceDiagram}}
 
 ## Constructor
 

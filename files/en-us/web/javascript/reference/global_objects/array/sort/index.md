@@ -40,7 +40,7 @@ sort(function compareFn(firstEl, secondEl) { /* ... */ })
 
 ### Parameters
 
-- `compareFunction` {{optional_inline}}
+- `compareFn` {{optional_inline}}
 
   - : Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
 

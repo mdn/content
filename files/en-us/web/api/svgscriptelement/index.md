@@ -13,7 +13,7 @@ browser-compat: api.SVGScriptElement
 
 The **`SVGScriptElement`** interface corresponds to the SVG {{SVGElement("script")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
