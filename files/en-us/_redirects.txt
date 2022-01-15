@@ -8711,6 +8711,7 @@
 /en-US/docs/Web/API/TouchEvent/TouchEvent()	/en-US/docs/Web/API/TouchEvent/TouchEvent
 /en-US/docs/Web/API/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/Web/API/TouchList.length	/en-US/docs/Web/API/TouchList/length
+/en-US/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/en-US/docs/Web/API/Pointer_events
 /en-US/docs/Web/API/Transaction	/en-US/docs/Web/API/IDBTransaction
 /en-US/docs/Web/API/TransactionSync	/en-US/docs/Web/API/IDBTransactionSync
 /en-US/docs/Web/API/TransitionEvent.TransitionEvent	/en-US/docs/Web/API/TransitionEvent/TransitionEvent
