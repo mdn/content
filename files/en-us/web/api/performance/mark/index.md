@@ -29,6 +29,7 @@ The `mark()'s` stores its data internally as
 
 ```js
 performance.mark(name);
+performance.mark(measureName, markOptions)
 ```
 
 ### Arguments
@@ -38,6 +39,14 @@ performance.mark(name);
     `name` given to this method already exists in the
     {{domxref("PerformanceTiming")}} interface, {{jsxref("SyntaxError")}} is
     thrown.
+
+- `markOptions` {{optional_inline}}
+  - : An object for specifying a timestamp and additional metadata for the mark.
+
+      - `detail`
+        - : Arbitrary metadata to include in the mark.
+      - `startTime`
+        - : {{domxref("DOMHighResTimeStamp")}} to use as the mark time.
 
 ### Return value
 
