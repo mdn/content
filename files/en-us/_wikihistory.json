@@ -79618,14 +79618,6 @@
       "AFBarstow"
     ]
   },
-  "Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent": {
-    "modified": "2019-03-23T22:45:08.477Z",
-    "contributors": [
-      "chrisdavidmills",
-      "rolfedh",
-      "AFBarstow"
-    ]
-  },
   "Web/API/Touch_events/Using_Touch_Events": {
     "modified": "2020-07-19T15:08:21.484Z",
     "contributors": [
