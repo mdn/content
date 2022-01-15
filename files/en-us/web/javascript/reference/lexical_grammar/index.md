@@ -215,7 +215,7 @@ Additionally, the literals `null`, `true`, and `false` cannot be used as identif
 
 ### Reserved word usage
 
-Reserved words actually only apply to *Identifier*s (vs. *IdentifierName*s) . As described in [es5.github.com/#A.1](https://es5.github.com/#A.1), these are all *IdentifierName*s which do not exclude _ReservedWords_.
+Reserved words actually only apply to *Identifier*s (vs. *IdentifierName*s) . As described in [es5.github.io/#A.1](https://es5.github.io/#A.1), these are all *IdentifierName*s which do not exclude _ReservedWords_.
 
 ```js
 a.import
