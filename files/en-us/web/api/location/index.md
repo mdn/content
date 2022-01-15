@@ -66,7 +66,7 @@ document.body.addEventListener('click', function (evt) {
 - {{domxref("Location.ancestorOrigins")}}
   - : Is a static {{domxref("DOMStringList")}} containing, in reverse order, the origins of all ancestor browsing contexts of the document associated with the given `Location` object.
 - {{domxref("Location.href")}}
-  - : Is a stringifier that returns a {{domxref("USVString")}} containing the entire URL. If changed, the associated document navigates to the new page. It can be set from a different origin than the associated document.
+  - : Is a {{Glossary("stringifier")}} that returns a {{domxref("USVString")}} containing the entire URL. If changed, the associated document navigates to the new page. It can be set from a different origin than the associated document.
 - {{domxref("Location.protocol")}}
   - : Is a {{domxref("USVString")}} containing the protocol scheme of the URL, including the final `':'`.
 - {{domxref("Location.host")}}

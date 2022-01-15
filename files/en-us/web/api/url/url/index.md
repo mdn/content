@@ -29,7 +29,7 @@ const url = new URL(url [, base])
 ### Parameters
 
 - `url`
-  - : A {{domxref("USVString")}} or any other object with a [stringifier](/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers) — including, for example, an {{htmlelement("a")}} or {{htmlelement("area")}} element — that represents an absolute or relative URL.
+  - : A {{domxref("USVString")}} or any other object with a {{Glossary("stringifier")}} — including, for example, an {{htmlelement("a")}} or {{htmlelement("area")}} element — that represents an absolute or relative URL.
     If `url` is a relative URL, `base` is
     required, and will be used as the base URL. If `url` is an
     absolute URL, a given `base` will be ignored.
