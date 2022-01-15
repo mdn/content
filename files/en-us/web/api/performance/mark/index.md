@@ -46,7 +46,7 @@ performance.mark(measureName, markOptions)
       - `detail`
         - : Arbitrary metadata to include in the mark.
       - `startTime`
-        - : {{domxref("DOMHighResTimeStamp")}} to be used as the mark time.
+        - : {{domxref("DOMHighResTimeStamp")}} to use as the mark time.
 
 ### Return value
 
