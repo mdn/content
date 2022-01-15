@@ -51,7 +51,7 @@ const fetchResponsePromise = fetch(resource [, init])
 
   - : This defines the resource that you wish to fetch. This can either be:
 
-    - A string or any other object with a [stringifier](/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers) — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch.
+    - A string or any other object with a {{Glossary("stringifier")}} — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch.
     - A {{domxref("Request")}} object.
 
 - `init` {{optional_inline}}
