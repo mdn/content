@@ -91,7 +91,7 @@ span {
 
 ## Summary
 
-In this lesson you've learned the basics of normal flow—the default layout for CSS elements. By understanding how inline elements, block elements, and margins behave by default, it'll easier to modify their behavior in the future.
+In this lesson you've learned the basics of normal flow — the default layout for CSS elements. By understanding how inline elements, block elements, and margins behave by default, it'll be easier to modify their behavior in the future.
 
 In the next lesson, we'll build on this knowledge by making changes to CSS elements using flexbox.
 
