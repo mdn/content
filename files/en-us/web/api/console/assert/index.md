@@ -62,27 +62,6 @@ for (let number = 2; number <= 5; number += 1) {
 // Assertion failed: {number: 5, errorMsg: "the # is not even"}
 ```
 
-Note that, while a string containing a substitution string works as a parameter for
-`console.log` in Node and many, if not most, browsers...
-
-```js
-console.log('the word is %s', 'foo');
-// output: the word is foo
-```
-
-...the use of such a string does not currently work as intended as a parameter for
-`console.assert` in all browsers:
-
-```js
-console.assert(false, 'the word is %s', 'foo');
-// correct output in Node.js and some browsers
-//     (e.g. Firefox v60.0.2):
-// Assertion failed: the word is foo
-// incorrect output in some browsers
-//     (e.g. Chrome v67.0.3396.87):
-// Assertion failed: the word is %s foo
-```
-
 See [Outputting
 text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for further
 details.
