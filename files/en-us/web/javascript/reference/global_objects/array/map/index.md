@@ -148,7 +148,7 @@ if (!Array.prototype.map) {
     var len = O.length >>> 0;
 
     // 4. If IsCallable(callback) is false, throw a TypeError exception.
-    // See: https://es5.github.com/#x9.11
+    // See: https://es5.github.io/#x9.11
     if (typeof callback !== 'function') {
       throw new TypeError(callback + ' is not a function');
     }
