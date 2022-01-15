@@ -23,12 +23,10 @@ shape-outside: inset(20px 50px 10px 0 round 50px);
 
 ### Values
 
-- `<length-percentage>{1.4}`
+- `<length-percentage>{1,4}`
   - : When all of the four arguments are supplied they represent the top, right, bottom and left offsets from the reference box inward that define the positions of the edges of the inset rectangle. These arguments follow the syntax of the margin shorthand, that let you set all four insets with one, two or four values.
 - `<border-radius>`
   - : The optional [`<border-radius>`](/en-US/docs/Web/CSS/border-radius) argument(s) define rounded corners for the inset rectangle using the border-radius shorthand syntax.
-
-When all of the first four arguments are supplied they represent the top, right, bottom and left offsets from the reference box inward that define the positions of the edges of the inset rectangle. These arguments follow the syntax of the margin shorthand, that let you set all four insets with one, two or four values.
 
 ## Examples
 

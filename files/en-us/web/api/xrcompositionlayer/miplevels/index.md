@@ -14,9 +14,11 @@ browser-compat: api.XRCompositionLayer.mipLevels
 ---
 {{APIRef("WebXR Device API")}}
 
-The read-only **`mipLevels`** property of the {{domxref("XRCompositionLayer")}} interface is a layer's number of mip levels in the color and texture data.
+The read-only **`mipLevels`** property of the {{domxref("XRCompositionLayer")}} interface is a layer's number of mip levels in the color and texture data. See also [Mipmap](https://en.wikipedia.org/wiki/Mipmap) on Wikipedia.
 
 The desired number of mip levels can be specified when creating layers. However, if the user agent can't create the requested number, it can create less. Use `mipLevels` to determine the actual number of mip levels for a layer.
+
+The `viewPixelWidth` and `viewPixelHeight` need to be powers of two as they get successively halved at each mip level.
 
 ## Value
 
@@ -32,8 +34,8 @@ The `mipLevels` property indicates the actual number of mip levels that have bee
 let xrGLBinding = new XRWebGLBinding(session, gl);
 let quadLayer = xrGLBinding.createQuadLayer({
   space: refSpace,
-  viewPixelHeight: layerHeight,
-  viewPixelWidth: layerWidth,
+  viewPixelHeight: 512,
+  viewPixelWidth: 512,
   width: 1.0,
   height: 1.0,
   mipLevels: 5,

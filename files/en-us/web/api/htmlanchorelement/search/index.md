@@ -45,7 +45,7 @@ Alternatively, [`URLSearchParams`](/en-US/docs/Web/API/URLSearchParams/get#examp
 
 ```js
 let params = new URLSearchParams(queryString);
-let q = parseInt(params.get("q"); // returns the number 123
+let q = parseInt(params.get("q")); // returns the number 123
 ```
 
 ## Specifications

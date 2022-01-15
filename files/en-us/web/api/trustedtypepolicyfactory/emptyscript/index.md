@@ -17,7 +17,9 @@ This object can be used when the application requires an empty string to be inse
 
 ## Syntax
 
-    var emptyScript = TrustedTypePolicyFactory.emptyScript;
+```js
+var emptyScript = TrustedTypePolicyFactory.emptyScript;
+```
 
 ### Value
 

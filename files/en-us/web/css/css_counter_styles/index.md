@@ -20,6 +20,10 @@ tags:
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
 
+### Functions
+
+- {{cssxref("symbols()")}}
+
 ### At-rules
 
 - {{cssxref("@counter-style")}}
@@ -36,7 +40,7 @@ tags:
 
 ## Guides
 
-- [Using CSS counters](/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- [Using CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
   - : Describes how to use counters to number any HTML element or to perform complex counting.
 
 ## Specifications

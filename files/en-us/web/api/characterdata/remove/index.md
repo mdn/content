@@ -2,38 +2,40 @@
 title: CharacterData.remove()
 slug: Web/API/CharacterData/remove
 tags:
-  - API
-  - CharacterData
-  - DOM
   - Method
+  - Reference
 browser-compat: api.CharacterData.remove
 ---
 {{APIRef("DOM")}}
 
-The **`CharacterData.remove()`** method removes text.
+The **`remove()`** method of the {{domxref("CharacterData")}} removes the text contained in the node.
 
 ## Syntax
 
 ```js
-remove()
+remove();
 ```
 
-## Examples
+### Parameters
+
+None.
+
+## Example
 
 ### Using `remove()`
 
 ```html
-<p id="myText">Some text</p>
+<span>Result: </span>A long string.
 ```
 
 ```js
-let text = document.getElementById('myText').firstChild;
-text.remove(); // Removes the text
+let span = document.getElementsByTagName("span")[0];
+let textnode = span.nextSibling;
+
+textnode.remove(); // Removes the text
 ```
 
-```html
-<p id="myText"></p>
-```
+{{EmbedLiveSample("Example", "100%", 50)}}
 
 ## Specifications
 
@@ -46,3 +48,4 @@ text.remove(); // Removes the text
 ## See also
 
 - {{domxref("Element.remove()")}}
+- {{domxref("CharacterData.deleteData()")}}

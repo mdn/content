@@ -105,11 +105,7 @@ First, we declare the variables `supportedHandlers`, which is compatible with {{
 ```js
 let supportedHandlers = [
   {
-    supportedMethods: "basic-card",
-    data: {
-      supportedNetworks: ["visa", "mastercard", "amex", "discover"],
-      supportedTypes: ["credit", "debit"]
-    }
+    supportedMethods: "https://example.com/pay"
   }
 ];
 
@@ -132,7 +128,7 @@ let defaultPaymentDetails = {
 };
 ```
 
-`supportedHandlers` describes the supported payment handlers and the details for those. In this example, only the Basic Card handler is supported, and it's configured to permit both debit and credit cards from Visa, Master Card, American Express, and Discover.
+`supportedHandlers` describes the supported payment handlers and the details for those. In this example, only the Example Pay payment handler is supported.
 
 `defaultPaymentDetails` describes the payment being requested. A description of the total amount being requested (including a label and the currency used), a list of the line items (in this case only one, "Original donation amount"), and a list of shipping options available; in this case only one.
 
@@ -203,7 +199,7 @@ The `shippingaddresschange` event doesn't receive the {{domxref("PaymentRequest"
 
 That's done by removing all shipping options currently set on the request, then set up an object named `shippingAddressErrors` which contains a `country` property which is an error message describing why the stated country isn't being permitted as a value.
 
-Then an object is created with its `error` set to a generic message about address errors and with the reset of the object's values taken from `shippingAddressErrors`, and, using "`...defaultPaymentDetails`" as the final entry in the object, the remeainder of the properties' values are taken from `defaultPaymentDetails`.
+Then an object is created with its `error` set to a generic message about address errors and with the reset of the object's values taken from `shippingAddressErrors`, and, using "`...defaultPaymentDetails`" as the final entry in the object, the remainder of the properties' values are taken from `defaultPaymentDetails`.
 
 The final step is to call the event's {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}} method, passing along the `updateDetails` object. This lets the Payment Request API know to present the specified error or errors but to allow the user to keep trying to edit the address.
 

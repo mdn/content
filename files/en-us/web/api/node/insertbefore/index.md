@@ -2,22 +2,19 @@
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
 tags:
-  - API
-  - DOM
   - Method
-  - Node
   - Reference
 browser-compat: api.Node.insertBefore
 ---
 {{APIRef("DOM")}}
 
-The **`Node.insertBefore()`** method
-inserts a node before a _reference node_ as a child of a specified _parent
-node_.
+The **`insertBefore()`** method of the {{domxref("Node")}} interface
+inserts a node before a _reference node_ as a child of a specified _parent node_.
 
-If the given node already exists in the document, `insertBefore()` moves it
-from its current position to the new position. (That is, it will automatically be
-removed from its existing parent before appending it to the specified new parent.)
+If the given node already exists in the document,
+`insertBefore()` moves it from its current position to the new position.
+(That is, it will automatically be removed from its existing parent
+before appending it to the specified new parent.)
 
 This means that a node cannot be in two locations of the document simultaneously.
 
@@ -32,30 +29,30 @@ node.
 ## Syntax
 
 ```js
-let insertedNode = parentNode.insertBefore(newNode, referenceNode)
+insertBefore(newNode, referenceNode);
 ```
 
-- `insertedNode`
-  - : The node being inserted (the same as `newNode`)
-- `parentNode`
-  - : The parent of the newly inserted node.
+### Parameters
+
 - `newNode`
   - : The node to be inserted.
 - `referenceNode`
   - : The node before which `newNode` is inserted. If this is
     `null`, then `newNode` is inserted at the end of
-    `parentNode`'s child nodes.
-
-> **Note:** `referenceNode` is **not**
-> an optional parameter. You must explicitly pass a {{domxref("Node")}} or
-> `null`. Failing to provide it or passing invalid values may [behave](https://code.google.com/p/chromium/issues/detail?id=419780) [differently](https://bugzilla.mozilla.org/show_bug.cgi?id=119489) in
-> different browser versions.
+    node's child nodes.
+    > **Note:** `referenceNode` is **not** an optional parameter.
+    > You must explicitly pass a {{domxref("Node")}} or `null`.
+    > Failing to provide it or passing invalid values may [behave](https://code.google.com/p/chromium/issues/detail?id=419780) [differently](https://bugzilla.mozilla.org/show_bug.cgi?id=119489) in different browser versions.
 
 ### Return value
 
-Returns the added child (unless `newNode` is a
-{{domxref("DocumentFragment")}}, in which case the empty {{domxref("DocumentFragment")}}
-is returned).
+Returns the added child (unless `newNode` is a {{domxref("DocumentFragment")}},
+in which case the empty {{domxref("DocumentFragment")}} is returned).
+
+### Exceptions
+
+Pre-insert validiy
+
 
 ## Example
 
@@ -111,20 +108,19 @@ parentDiv.insertBefore(sp1, sp2)
 </script>
 ```
 
-> **Note:** There is no `insertAfter()` method. It can be
-> emulated by combining the `insertBefore` method with
-> {{domxref("Node.nextSibling")}}.
-
-In the previous example, `sp1` could be inserted after `sp2`
-using:
-
-```js
-parentDiv.insertBefore(sp1, sp2.nextSibling)
-```
-
-If `sp2` does not have a next sibling, then it must be the last child —
-`sp2.nextSibling` returns `null`, and `sp1` is inserted
-at the end of the child node list (immediately after `sp2`).
+> **Note:** There is no `insertAfter()` method.
+> It can be emulated by combining the `insertBefore` method
+> with {{domxref("Node.nextSibling")}}.
+>
+> In the previous example, `sp1` could be inserted after `sp2` using:
+>
+> ```js
+> parentDiv.insertBefore(sp1, sp2.nextSibling)
+> ```
+>
+> If `sp2` does not have a next sibling, then it must be the last child —
+> `sp2.nextSibling` returns `null`, and `sp1` is inserted
+> at the end of the child node list (immediately after `sp2`).
 
 ### Example 3
 

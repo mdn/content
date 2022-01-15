@@ -7,7 +7,6 @@ tags:
   - Dictionary
   - Reference
   - Web Crypto API
-browser-compat: api.CryptoKeyPair
 ---
 {{APIRef("Web Crypto API")}}
 
@@ -41,11 +40,9 @@ The examples for `SubtleCrypto` methods often use `CryptoKeyPair` objects. For e
 
 ## Specifications
 
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
+| Specification                        | Status                           | Comment         |
+| ------------------------------------ | -------------------------------- | --------------- |
+| {{SpecName('Web Crypto API')}} | {{Spec2('Web Crypto API')}} | |
 
 ## See also
 

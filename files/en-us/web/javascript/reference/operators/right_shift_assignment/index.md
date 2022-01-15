@@ -45,6 +45,6 @@ b >>= 2;  // -2 (-00000000000000000000000000000010)
 ## See also
 
 - [Assignment
-  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+  operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
 - [Right shift
   operator](/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift)

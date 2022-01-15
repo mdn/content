@@ -15,7 +15,9 @@ The **`readable`** read-only property of the {{domxref("SerialPort")}} interface
 
 ## Syntax
 
-    var readableStream = SerialPort.readable;
+```js
+var readableStream = SerialPort.readable;
+```
 
 ### Value
 

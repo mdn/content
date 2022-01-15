@@ -31,7 +31,7 @@ var absoluteOrientationSensor = new AbsoluteOrientationSensor([options])
 
   - : Options are as follows:
 
-    - `frequency`: The desired number of times per second a sample should be taken, meaning the number of times per second that {{domxref('sensor.onreading')}} will be called. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends device hardware and consequently may be less than requested.
+    - `frequency`: The desired number of times per second a sample should be taken, meaning the number of times per second that {{domxref('sensor.onreading')}} will be called. A whole number or decimal may be used, the latter for frequencies less than a second. The actual reading frequency depends on the device hardware and consequently may be less than requested.
     - `referenceFrame`: Either `'device'` or `'screen'`. The default is `'device'`.
 
 ## Specifications

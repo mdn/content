@@ -16,7 +16,7 @@ browser-compat: api.Accelerometer.y
 ---
 {{APIRef("Sensor API")}}{{SeeCompatTable}}
 
-The **`y`** read-only property of the {{domxref("Accelerometer")}} interface returns a double precision integer containing the acceleration of the device along the its y axis.
+The **`y`** read-only property of the {{domxref("Accelerometer")}} interface returns a double precision integer containing the acceleration of the device along its y axis.
 
 If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 

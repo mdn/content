@@ -39,8 +39,8 @@ An ASCII string containing decoded data from `encodedData`.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} (name: `InvalidCharacterError`)
-  - : Throws if `encodedData` is not valid base64.
+- `InvalidCharacterError` {{domxref("DOMException")}}
+  - : Thrown if `encodedData` is not valid base64.
 
 ## Example
 

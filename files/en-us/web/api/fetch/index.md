@@ -19,13 +19,7 @@ resource from the network, returning a promise which is fulfilled once the respo
 available.
 
 The promise resolves to the {{domxref("Response")}} object
-representing the response to your request. The promise _does not_ reject on HTTP
-errors — it only rejects on network errors. You must use `then` handlers to
-check for HTTP errors.
-
-`WindowOrWorkerGlobalScope` is implemented by both {{domxref("Window")}} and
-{{domxref("WorkerGlobalScope")}}, which means that the `fetch()` method is
-available in pretty much any context in which you might want to fetch resources.
+representing the response to your request.
 
 A {{domxref("fetch()")}} promise only rejects when a
 network error is encountered (which is usually when there’s a permissions issue or
@@ -33,6 +27,10 @@ similar). A {{domxref("fetch()")}} promise _does
 not_ reject on HTTP errors (`404`, etc.). Instead, a
 `then()` handler must check the {{domxref("Response.ok")}} and/or
 {{domxref("Response.status")}} properties.
+
+`WindowOrWorkerGlobalScope` is implemented by both {{domxref("Window")}} and
+{{domxref("WorkerGlobalScope")}}, which means that the `fetch()` method is
+available in pretty much any context in which you might want to fetch resources.
 
 The `fetch()` method is controlled by the `connect-src` directive
 of [Content Security Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)
@@ -137,8 +135,133 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
   - : The request was aborted due to a call to the {{domxref("AbortController")}}
     {{domxref("AbortController.abort", "abort()")}} method.
 - `TypeError`
-  - : The specified URL string includes user credentials. This information should instead
-    be provided using an {{HTTPHeader("Authorization")}} header.
+  - : Can occur for the following reasons:
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Reason</th>
+      <th scope="col">Failing examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Invalid header name</td>
+      <td>
+        <pre>
+// space in "C ontent-Type"
+const headers = {
+    "C ontent-Type": "text/xml",
+    "Breaking-Bad": "<3"
+};
+fetch('https://example.com/', { headers });
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Invalid header value. The header object must contain exactly two elements.
+      </td>
+      <td>
+        <pre>
+const headers = [
+    ["Content-Type", "text/html", "extra"],
+    ["Accept"],
+];
+fetch('https://example.com/', { headers });
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Invalid URL or scheme, or using a scheme that fetch does not support, or using a scheme that is not supported for a particular request mode.
+      </td>
+      <td>
+        <pre>
+fetch('blob://example.com/', { mode: 'cors' })
+        </pre>
+      </td>
+    </tr>
+      <td>URL includes credentials</td>
+      <td>
+        <pre>
+fetch('https://user:password@example.com/')
+        </pre>
+      </td>
+    <tr>
+      <td>Invalid referrer URL</td>
+      <td>
+        <pre>
+fetch('https://example.com/', {
+  referrer: './abc\u0000df'
+})
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>Invalid modes (<code>navigate</code> and <code>websocket</code>)</td>
+      <td>
+        <pre>
+fetch('https://example.com/', { mode: 'navigate' })
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        If the request cache mode is "only-if-cached" and the request mode is other than "same-origin".
+      </td>
+      <td>
+        <pre>
+fetch('https://example.com/', {
+  cache: 'only-if-cached',
+  mode: 'no-cors'
+})
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        If the request method is an invalid name token or one of forbidden headers.
+        CONNECT, TRACE or TRACK
+      </td>
+      <td>
+        <pre>
+fetch('https://example.com/', { method: 'CONNECT' })
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        If the request mode is "no-cors" and the request method is not a CORS-safe-listed method (GET, HEAD, or POST)
+      </td>
+      <td>
+        <pre>
+fetch('https://example.com/', {
+  method: 'CONNECT',
+  mode: 'no-cors'
+})
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        If the request method is GET or HEAD and the body is non-null or not undefined.
+      </td>
+      <td>
+        <pre>
+fetch('https://example.com/', {
+  method: 'GET',
+  body: new FormData()
+})
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>If fetch throws a network error.</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Examples
 

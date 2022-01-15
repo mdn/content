@@ -118,7 +118,11 @@ In addition, the references for specific values of display explain how these for
 
 Elements either participate in the formatting context of their containing block or establish an independent formatting context. A grid container, for example, establishes a new **Grid Formatting Context** for its children.
 
-**Independent formatting contexts** contain floats, and margins do not collapse across formatting context boundaries. Therefore, creating a new block formatting context can ensure that floats remain inside a box. Developers sometimes clear floats by changing the value of the {{cssxref("overflow")}} property, as this creates a new block formatting context. The newer value of `display: flow-root` creates a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) in order to gain the useful effects of this, without any unwanted issues caused by changing the value of overflow.
+**Independent formatting contexts** contain floats, and margins do not collapse across formatting context boundaries. Therefore, creating a new block formatting context can ensure that floats and margins remain inside a box. To do this, add `display: flow-root` to the box on which you wish to create a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
+
+The following example shows the effect of `display: flow-root`. The box with the black background appears to wrap round the floated item and text. If you remove `display: flow-root` from the editable CSS the floated item will poke out of the bottom of the box as it is no longer contained.
+
+{{EmbedGHLiveSample("css-examples/display/two-value/block-flow-root.html", '100%', 720)}}
 
 ### Block boxes
 

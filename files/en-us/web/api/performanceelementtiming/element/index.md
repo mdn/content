@@ -15,7 +15,9 @@ The **`element`** read-only property of the {{domxref("PerformanceElementTiming"
 
 ## Syntax
 
-    var element = PerformanceElementTiming.element;
+```js
+var element = PerformanceElementTiming.element;
+```
 
 ### Value
 

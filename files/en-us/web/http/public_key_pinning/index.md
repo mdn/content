@@ -98,7 +98,7 @@ Header always set Public-Key-Pins "pin-sha256=\"base64+primary==\"; pin-sha256=\
 
 #### Nginx
 
-Adding the following line and inserting the appropriate `pin-sha256="..."` values will enable HPKP on your nginx. This requires the `ngx_http_headers_module.`
+Adding the following line and inserting the appropriate `pin-sha256="..."` values will enable HPKP on your Nginx. This requires the `ngx_http_headers_module.`
 
 ```
 add_header Public-Key-Pins 'pin-sha256="base64+primary=="; pin-sha256="base64+backup=="; max-age=5184000; includeSubDomains' always;
@@ -112,7 +112,7 @@ The following line with your relevant key information (pin-sha256="..." fields) 
 setenv.add-response-header  = ( "Public-Key-Pins" => "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")
 ```
 
-**Note:** This requires the `mod_setenv` server.module loaded which can be included by the following if not already loaded.
+> **Note:** This requires the `mod_setenv` server.module loaded which can be included by the following if not already loaded.
 
 ```
 server.modules += ( "mod_setenv" )

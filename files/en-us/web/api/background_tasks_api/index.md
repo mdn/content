@@ -26,7 +26,7 @@ Because event handling and screen updates are two of the most obvious ways users
 
 Because idle callbacks are intended to give your code a way to cooperate with the event loop to ensure that the system is utilized to its full potential without over-tasking it, resulting in lag or other performance problems, you should be thoughtful about how you go about using them.
 
-- **Use idle callbacks for tasks which don't have high priority.** Because you don't know how many callbacks have been established, and you don't know how busy the user's system is, you don't know how often your callback will be run (unless you specify a `timeout`. There's no guarantee that every pass through the event loop (or even every screen update cycle) will include any idle callbacks being executed; if the event loop uses all available time, you're out of luck (again, unless you've used a `timeout`).
+- **Use idle callbacks for tasks which don't have high priority.** Because you don't know how many callbacks have been established, and you don't know how busy the user's system is, you don't know how often your callback will be run (unless you specify a `timeout`). There's no guarantee that every pass through the event loop (or even every screen update cycle) will include any idle callbacks being executed; if the event loop uses all available time, you're out of luck (again, unless you've used a `timeout`).
 - **Idle callbacks should do their best not to overrun the time allotted.** While the browser, your code, and the Web in general will continue to run normally if you go over the specified time limit (even if you go _way_ over it), the time restriction is intended to ensure that you leave the system enough time to finish the current pass through the event loop and get on to the next one without causing other code to stutter or animation effects to lag. Currently, {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} has an upper limit of 50 milliseconds, but in reality you will often have less time than that, since the event loop may already be eating into that time on complex sites, with browser extensions needing processor time, and so forth.
 - **Avoid making changes to the DOM within your idle callback.** By the time your callback is run, the current frame has already finished drawing, and all layout updates and computations have been completed. If you make changes that affect layout, you may force a situation in which the browser has to stop and do recalculations that would otherwise be unnecessary. If your callback needs to change the DOM, it should use {{domxref("Window.requestAnimationFrame()")}} to schedule that.
 - **Avoid tasks whose run time can't be predicted.** Your idle callback should avoid doing anything that could take an unpredictable amount of time. For example, anything which might affect layout should be avoided. You should also avoid resolving or rejecting {{jsxref("Promise")}}s, since that would invoke the handler for that promise's resolution or rejection as soon as your callback returns.
@@ -86,32 +86,29 @@ Below you'll find only the HTML and JavaScript for this example. The CSS is not 
 
 ### HTML content
 
-In order to be oriented about what we're trying to accomplish, let's have a look at the HTML. This establishes a box (ID `"Container"`) that's used to present the progress of an operation (because you never know how long decoding "quantum filament tachyon emissions" will take, after all) as well as a second main box (with the ID `"logBox"`), which is used to display textual output.
+In order to be oriented about what we're trying to accomplish, let's have a look at the HTML. This establishes a box (`id="container"`) that's used to present the progress of an operation (because you never know how long decoding "quantum filament tachyon emissions" will take, after all) as well as a second main box (`id="logBox"`), which is used to display textual output.
 
 ```html
 <p>
-  Demonstration of using <a href="/en-US/docs/Web/API/Background_Tasks_API">
-  cooperatively scheduled background tasks</a> using the <code>requestIdleCallback()</code>
-  method.
+  Demonstration of using cooperatively scheduled background tasks using the
+  <code>requestIdleCallback()</code> method.
 </p>
 
-<div class="container">
+<div id="container">
   <div class="label">Decoding quantum filament tachyon emissions...</div>
+  
   <progress id="progress" value="0"></progress>
-  <div class="button" id="startButton">
-    Start
-  </div>
+  
+  <button class="button" id="startButton">Start</button>
+  
   <div class="label counter">
     Task <span id="currentTaskNumber">0</span> of <span id="totalTaskCount">0</span>
   </div>
 </div>
 
-<div class="logBox">
-  <div class="logHeader">
-    Log
-  </div>
-  <div id="log">
-  </div>
+<div id="logBox">
+  <div class="logHeader">Log</div>
+  <div id="log"></div>
 </div>
 ```
 
@@ -123,7 +120,7 @@ body {
   font-size: 16px;
 }
 
-.logBox {
+#logBox {
   margin-top: 16px;
   width: 400px;
   height:500px;
@@ -150,7 +147,7 @@ body {
   height: 460px;
 }
 
-.container {
+#container {
   width: 400px;
   padding: 6px;
   border-radius: 6px;
@@ -291,7 +288,7 @@ Next, we check to see if we already have an idle callback created; if `taskHandl
 
 ##### Running tasks
 
-Our idle callback handler, runTaskQueue(), gets called when the browser determines there's enough idle time available to let us do some work or our timeout of one second expires. This function's job is to run our enqueued tasks.
+Our idle callback handler, `runTaskQueue()`, gets called when the browser determines there's enough idle time available to let us do some work or our timeout of one second expires. This function's job is to run our enqueued tasks.
 
 ```js
 function runTaskQueue(deadline) {
@@ -458,7 +455,7 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 
 `decodeTechnoStuff()` starts by zeroing the values of totalTaskCount (the number of tasks added to the queue so far) and currentTaskNumber (the task currently being run), and then calls `updateDisplay()` to reset the display to its "nothing's happened yet" state.
 
-This example will create a random number of tasks (between 100 and 200 of them). To do so, we use the [`getRandomIntInclusive()` function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive) that's provided as an example in the documentation for {{jsxref("Math.random()")}} to get the number of tasks to create.
+This example will create a random number of tasks (between 100 and 200 of them). To do so, we use the [`getRandomIntInclusive()` function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_integer_between_two_values_inclusive) that's provided as an example in the documentation for {{jsxref("Math.random()")}} to get the number of tasks to create.
 
 Then we start a loop to create the actual tasks. For each task, we create an object, `taskData`, which includes two properties:
 

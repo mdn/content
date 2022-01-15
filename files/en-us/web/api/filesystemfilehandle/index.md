@@ -12,7 +12,7 @@ browser-compat: api.FileSystemFileHandle
 ---
 {{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
-The **`FileSystemFileHandle`** interface of the {{domxref('File System Access API')}} represents a handle to a file system entry. The interface is accessed thought the {{domxref('window.showOpenFilePicker()')}} method.
+The **`FileSystemFileHandle`** interface of the {{domxref('File System Access API')}} represents a handle to a file system entry. The interface is accessed through the {{domxref('window.showOpenFilePicker()')}} method.
 
 Note that read and write operations depend on file-access permissions that do not persist after a page refresh if no other tabs for that origin remain open. The {{domxref("FileSystemHandle.queryPermission()", "queryPermission")}} method of the {{domxref("FileSystemHandle")}} interface can be used to verify permission state before accessing a file.
 
@@ -25,9 +25,11 @@ _Inherits properties from its parent, {{DOMxRef("FileSystemHandle")}}._
 _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 
 - {{domxref('FileSystemFileHandle.getFile', 'getFile()')}}
-  - : Returns a {{domxref('File','file object')}} representing the state on disk of the entry represented by the handle.
+  - : Returns a {{jsxref('Promise')}} which resolves to a {{domxref('File')}} object
+      representing the state on disk of the entry represented by the handle.
 - {{domxref('FileSystemFileHandle.createWritable', 'createWritable()')}}
-  - : Creates a {{domxref('FileSystemWritableFileStream')}} that can be used to write to a file.
+  - : Returns a {{jsxref('Promise')}} which resolves to a newly created {{domxref('FileSystemWritableFileStream')}}
+      object that can be used to write to a file.
 
 ## Examples
 

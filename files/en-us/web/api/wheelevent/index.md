@@ -13,7 +13,7 @@ browser-compat: api.WheelEvent
 
 The **`WheelEvent`** interface represents events that occur due to the user moving a mouse wheel or similar input device.
 
-> **Note:** This is the standard wheel event interface to use. Old versions of browsers implemented the non-standard and non-cross-browser-compatible {{DOMxRef("MouseWheelEvent")}} and {{DOMxRef("MouseScrollEvent")}} interfaces. Use this interface and avoid the non-standard ones.
+> **Note:** This is the standard wheel event interface to use. Old versions of browsers implemented the non-standard and non-cross-browser-compatible `MouseWheelEvent` and {{DOMxRef("MouseScrollEvent")}} interfaces. Use this interface and avoid the non-standard ones.
 
 > **Note:** Do not confuse the {{domxref("Element/wheel_event", "wheel")}} event with the {{domxref("Element/scroll_event", "scroll")}} event. The default action of a `wheel` event is implementation-defined. Thus, a `wheel` event doesn't necessarily dispatch a `scroll` event. Even when it does, that doesn't mean that the `delta*` values in the `wheel` event necessarily reflect the content's scrolling direction. Therefore, do not rely on `delta*` properties to get the content's scrolling direction. Instead, detect value changes to {{DOMxRef("Element.scrollLeft", "scrollLeft")}} and {{DOMxRef("Element.scrollTop", "scrollTop")}} of the target in the `scroll` event.
 
@@ -71,4 +71,3 @@ _This interface doesn't define any specific methods, but inherits methods from i
 - Interfaces replaced by this one:
 
   - Gecko's legacy mouse wheel event object: {{DOMxRef("MouseScrollEvent")}}
-  - Non-gecko browsers' legacy mouse wheel event object: {{DOMxRef("MouseWheelEvent")}}

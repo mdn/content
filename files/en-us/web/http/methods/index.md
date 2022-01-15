@@ -14,9 +14,9 @@ HTTP defines a set of **request methods** to indicate the desired action to be p
 - [`GET`](/en-US/docs/Web/HTTP/Methods/GET)
   - : The `GET` method requests a representation of the specified resource. Requests using `GET` should only retrieve data.
 - [`HEAD`](/en-US/docs/Web/HTTP/Methods/HEAD)
-  - : The `HEAD` method asks for a response identical to that of a `GET` request, but without the response body.
+  - : The `HEAD` method asks for a response identical to a `GET` request, but without the response body.
 - [`POST`](/en-US/docs/Web/HTTP/Methods/POST)
-  - : The `POST` method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server.
+  - : The `POST` method submits an entity to the specified resource, often causing a change in state or side effects on the server.
 - [`PUT`](/en-US/docs/Web/HTTP/Methods/PUT)
   - : The `PUT` method replaces all current representations of the target resource with the request payload.
 - [`DELETE`](/en-US/docs/Web/HTTP/Methods/DELETE)
@@ -24,11 +24,11 @@ HTTP defines a set of **request methods** to indicate the desired action to be p
 - [`CONNECT`](/en-US/docs/Web/HTTP/Methods/CONNECT)
   - : The `CONNECT` method establishes a tunnel to the server identified by the target resource.
 - [`OPTIONS`](/en-US/docs/Web/HTTP/Methods/OPTIONS)
-  - : The `OPTIONS` method is used to describe the communication options for the target resource.
+  - : The `OPTIONS` method describes the communication options for the target resource.
 - [`TRACE`](/en-US/docs/Web/HTTP/Methods/TRACE)
   - : The `TRACE` method performs a message loop-back test along the path to the target resource.
 - [`PATCH`](/en-US/docs/Web/HTTP/Methods/PATCH)
-  - : The `PATCH` method is used to apply partial modifications to a resource.
+  - : The `PATCH` method applies partial modifications to a resource.
 
 ## Specifications
 

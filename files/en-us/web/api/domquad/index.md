@@ -16,7 +16,7 @@ A `DOMQuad` is a collection of four `DOMPoint`s defining the corners of an arbit
 
 ## Constructor
 
-- {{domxref("DOMQuad.DOMQuad()")}}
+- {{domxref("DOMQuad.DOMQuad", "DOMQuad()")}}
   - : Creates a new `DOMQuad` object.
 
 ## Properties

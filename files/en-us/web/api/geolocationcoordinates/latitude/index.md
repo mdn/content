@@ -16,7 +16,9 @@ The **`GeolocationCoordinates.latitude`** read-only property is a `double` repre
 
 ## Syntax
 
-    let lat = geolocationCoordinatesinstance.latitude
+```js
+let lat = geolocationCoordinatesinstance.latitude
+```
 
 ### Value
 

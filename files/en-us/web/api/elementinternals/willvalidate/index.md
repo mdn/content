@@ -11,21 +11,17 @@ browser-compat: api.ElementInternals.willValidate
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`willValidate`** read-only property of the {{domxref("ElementInternals")}} interface returns true if the element is a submittable element that is a candidate for [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation).
+The **`willValidate`** read-only property of the {{domxref("ElementInternals")}} interface returns `true` if the element is a submittable element that is a candidate for [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation).
 
-## Syntax
+Elements that are barred from being candidates for constraint validation include those that have the attributes: `disabled`, `hidden` or `readonly`, input elements of `type=button` or `type=reset`, or any element that is a {{htmlelement("datalist")}} element or has a `<datalist>` element ancestor.
 
-```js
-let willValidate = ElementInternals.willValidate;
-```
+## Value
 
-### Value
-
-A boolean value, true if the element is a candidate for constraint validation.
+`true` if the element is a candidate for constraint validation, otherwise `false`.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the element does not have its `formAssociated` property set to `true`.
 
 ## Examples

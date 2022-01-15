@@ -150,7 +150,7 @@ Some combination—but not necessarily all—of the following properties will ex
 
 ### Properties of shared screen tracks
 
-These constraints apply to `MediaTrackConstraints` objects specified as part of the {{domxref("DisplayMediaStreamConstraints")}} object's {{domxref("DisplayMediaStreamConstraints.video", "video")}} property when using {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} to obtain a stream for screen sharing.
+These constraints apply to the `video` property of the object passed into {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} to obtain a stream for screen sharing.
 
 - {{domxref("MediaTrackConstraints.cursor", "cursor")}}
 

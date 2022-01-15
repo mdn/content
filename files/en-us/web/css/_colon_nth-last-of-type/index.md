@@ -12,7 +12,7 @@ browser-compat: css.selectors.nth-last-of-type
 ---
 {{CSSRef}}
 
-The **`:nth-last-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements of a given type, based on their position among a group of siblings, counting from the end.
+The **`:nth-last-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among siblings of the same type (tag name), counting from the end.
 
 ```css
 /* Selects every fourth <p> element

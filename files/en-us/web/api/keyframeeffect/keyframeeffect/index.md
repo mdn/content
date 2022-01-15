@@ -48,14 +48,29 @@ The multi-argument constructor (see above) creates a completely new {{domxref("K
       - : The number of milliseconds to delay after the end of an animation. This is primarily of use when sequencing animations based on the end time of another animation. Defaults to 0.
     - `fill` {{optional_inline}}
       - : Dictates whether the animation's effects should be reflected by the element(s) prior to playing (`"backwards"`), retained after the animation has completed playing (`"forwards"`), or `both`. Defaults to `"none"`.
-    - {{domxref("EffectTiming.iterationStart", "iterationStart")}} {{optional_inline}}
+    - `iterationStart` {{optional_inline}}
       - : Describes at what point in the iteration the animation should start. 0.5 would indicate starting halfway through the first iteration for example, and with this value set, an animation with 2 iterations would end halfway through a third iteration. Defaults to 0.0.
-    - {{domxref("EffectTiming.iterations", "iterations")}} {{optional_inline}}
+    - `iterations` {{optional_inline}}
       - : The number of times the animation should repeat. Defaults to `1`, and can also take a value of {{jsxref("Infinity")}} to make it repeat for as long as the element exists.
-    - {{domxref("KeyframeEffect/composite", "composite")}}
-      - : Determines how values are combined between this animation and the element's underlying values.
-    - {{domxref("KeyframeEffect/iterationComposite", "iterationComposite")}}
-      - : Determines how values build from iteration to iteration in the current animation.
+    - `composite` {{optional_inline}}
+      - : Determines how values are combined between this animation and other, separate
+        animations that do not specify their own specific composite operation. Defaults to
+        `replace`.
+
+        - `add` dictates an additive effect, where each successive iteration
+          builds on the last. For instance with `transform`, a
+          `translateX(-200px)` would not override an earlier
+          `rotate(20deg)` value but result in
+          `translateX(-200px) rotate(20deg)`.
+        - `accumulate` is similar but a little smarter: `blur(2)`
+          and `blur(5)` become `blur(7)`, not
+          `blur(2) blur(5)`.
+        - `replace` overwrites the previous value with the new one.
+
+    - `iterationComposite` {{optional_inline}}
+      - : Determines how values build from iteration to iteration in this animation. Can be
+        set to `accumulate` or `replace` (see above). Defaults
+        to `replace`.
 
 The single argument constructor (see above) creates a clone of an existing  {{domxref("KeyframeEffect")}} object instance. Its parameter is as follows:
 

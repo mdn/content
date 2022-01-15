@@ -29,15 +29,15 @@ To specify the layout type of a layer, use one of the layer creation methods and
 A string. Possible values:
 
 - `default`
-  - : The layer accommodates all views of the session.
+  - : The layer accommodates all views of the session. It is recommended to use the `texture-array` texture type for `default` layouts.
 - `mono`
   - : A single {{domxref("XRSubImage")}} is allocated and presented to both eyes.
 - `stereo`
-  - : The user agent decides how it allocates the {{domxref("XRSubImage")}} (one or two) and the layout (top/bottom or left/right).
+  - : The user agent decides how it allocates the {{domxref("XRSubImage")}} (one or two) and the layout (top/bottom or left/right). It is recommended to use the `texture-array` texture type for `stereo` layouts.
 - `stereo-left-right`
-  - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the left area of the texture, right eye the right.
+  - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the left area of the texture, right eye the right. This layout is designed to minimize draw calls for content that is already in stereo (for example stereo videos or images).
 - `stereo-top-bottom`
-  - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the top area of the texture, right eye the bottom.
+  - : A single {{domxref("XRSubImage")}} is allocated. Left eye gets the top area of the texture, right eye the bottom. This layout is designed to minimize draw calls for content that is already in stereo (for example stereo videos or images).
 
 ## Examples
 

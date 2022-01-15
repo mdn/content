@@ -17,7 +17,9 @@ The **`isScriptURL()`** method of the {{domxref("TrustedTypePolicyFactory")}} in
 
 ## Syntax
 
-    var isScriptURL = TrustedTypePolicyFactory.isScriptURL(value);
+```js
+var isScriptURL = TrustedTypePolicyFactory.isScriptURL(value);
+```
 
 ### Parameters
 

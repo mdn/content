@@ -12,7 +12,7 @@ The `FileReaderSync` interface allows to read {{DOMxRef("File")}} or {{DOMxRef("
 
 {{AvailableInWorkers}}
 
-> **Warning:** This interface is **only available** in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
+> **Warning:** This interface is **only available** in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
 
 ## Properties
 

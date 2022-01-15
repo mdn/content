@@ -20,7 +20,7 @@ The `MediaKeySession.generateRequest()` method returns a
 ## Syntax
 
 ```js
-mediaKeySession.generateRequest().then(function) { ... });
+mediaKeySession.generateRequest().then(function) { /* ... */ });
 ```
 
 ## Specifications

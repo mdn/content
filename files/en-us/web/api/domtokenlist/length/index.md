@@ -2,29 +2,19 @@
 title: DOMTokenList.length
 slug: Web/API/DOMTokenList/length
 tags:
-  - API
-  - DOM
-  - DOMTokenList
   - Property
   - Reference
-  - length
+  - Read-only
 browser-compat: api.DOMTokenList.length
 ---
 {{APIRef("DOM")}}
 
-The **`length`** read-only property of the
-{{domxref("DOMTokenList")}} interface is an `integer` representing the number
+The read-only **`length`** property of the {{domxref("DOMTokenList")}} interface is an `integer` representing the number
 of objects stored in the object.
 
-## Syntax
+## Value
 
-```js
-tokenList.length;
-```
-
-### Value
-
-An `integer`.
+An positive integer, or `0` if the list is empty..
 
 ## Examples
 
@@ -42,9 +32,9 @@ First, the HTML:
 Now the JavaScript:
 
 ```js
-let span = document.querySelector("span");
-let classes = span.classList;
-let length = classes.length;
+const span = document.querySelector("span");
+const classes = span.classList;
+const length = classes.length;
 
 span.textContent = `classList length = ${length}`;
 ```

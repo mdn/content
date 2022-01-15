@@ -3,7 +3,6 @@ title: ResizeObserverEntry.contentBoxSize
 slug: Web/API/ResizeObserverEntry/contentBoxSize
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - Resize Observer API
@@ -11,19 +10,13 @@ tags:
   - contentBoxSize
 browser-compat: api.ResizeObserverEntry.contentBoxSize
 ---
-{{APIRef("Resize Observer API")}}{{SeeCompatTable}}
+{{APIRef("Resize Observer API")}}
 
 The **`contentBoxSize`** read-only property of
 the {{domxref("ResizeObserverEntry")}} interface returns an array containing the new
 content box size of the observed element when the callback is run.
 
-## Syntax
-
-```js
-var myContentBoxSize = ResizeObserverEntry.contentBoxSize;
-```
-
-### Value
+## Value
 
 An array containing objects with the new content box size of the observed element.
 The array is necessary to support elements that have multiple fragments, which occur in multi-column scenarios. Each object in the array contains two properties:

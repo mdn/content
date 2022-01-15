@@ -5,6 +5,7 @@ tags:
   - Constructor
   - JavaScript
   - Reference
+  - Polyfill
 browser-compat: javascript.builtins.Error.Error
 ---
 {{JSRef}}
@@ -17,8 +18,8 @@ The **`Error`** constructor creates an error object.
 new Error()
 new Error(message)
 new Error(message, options)
-new Error(message, options, fileName)
-new Error(message, options, fileName, lineNumber)
+new Error(message, fileName)
+new Error(message, fileName, lineNumber)
 ```
 
 ### Parameters
@@ -33,10 +34,9 @@ new Error(message, options, fileName, lineNumber)
           When catching and re-throwing an error with a more-specific or useful error message, this property should be used to pass the original error.
 - `fileName` {{Optional_Inline}}{{Non-standard_inline}}
   - : The value for the `fileName` property on the created `Error` object.
-    Defaults to the name of the file containing the code that
-    called the `Error()` constructor.
+    Defaults to the name of the file containing the code that called the `Error()` constructor.
 - `lineNumber` {{Optional_Inline}}{{Non-standard_inline}}
-  - : The value for the `lineNumber` property on the created `Error` object. 
+  - : The value for the `lineNumber` property on the created `Error` object.
      Defaults to the line number containing the `Error()` constructor invocation.
 
 ## Examples
@@ -79,6 +79,7 @@ For a more detailed example see [Error > Differentiate between similar errors](/
 
 ## See also
 
+- [A polyfill of `Error`](https://github.com/zloirock/core-js#ecmascript-error) with modern behavior like support `cause` is available in [`core-js`](https://github.com/zloirock/core-js)
 - {{JSxRef("Statements/throw", "throw")}}
 - {{JSxRef("Statements/try...catch", "try...catch")}}
 - [Error causes](https://v8.dev/features/error-cause) (v8.dev/features)

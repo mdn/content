@@ -20,7 +20,7 @@ The **`SyncManager.getTags`** method of the
 ## Syntax
 
 ```js
-SyncManager.getTags().then(function(tags[]) { ... })
+SyncManager.getTags().then(function(tags[]) { /* ... */ })
 ```
 
 ### Returns

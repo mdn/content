@@ -55,11 +55,15 @@ In the example below there is a checkbox and label. Let's say, you want the labe
 
 ## Adding hyphens
 
-To add hyphens when words are broken, use the CSS {{cssxref("hyphens")}} property. Using a value of `auto`, the browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses. To have some control over the process, use a value of `manual`, then insert a hard or soft break character into the string. A hard break (`‐`) will always break, even if it is not necessary to do so. A soft break (`­`) only breaks if breaking is needed.
+To add hyphens when words are broken, use the CSS {{cssxref("hyphens")}} property. Using a value of `auto`, the browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses. To have some control over the process, use a value of `manual`, then insert a hard or soft break character into the string. A hard break (`‐`) will always break, even if it is not necessary to do so. A soft break (`&shy;`) only breaks if breaking is needed.
 
-{{EmbedGHLiveSample("css-examples/css-text/hyphens.html", '100%', 660)}}
+{{EmbedGHLiveSample("css-examples/css-text/hyphens.html", '100%', 600)}}
 
-## The \<wbr> element
+You can also use the {{cssxref("hyphenate-character")}} property to use the string of your choice instead of the hyphen character at the end of the line (before the hyphenation line break).
+
+This property also takes the value `auto`, which will select the correct value to mark a mid-word line break according to the typographic conventions of the current content language.
+
+## The `<wbr>` element
 
 If you know where you want a long string to break, then it is also possible to insert the HTML {{HTMLElement("wbr")}} element. This can be useful in cases such as displaying a long URL on a page. You can then add the property in order to break the string in sensible places that will make it easier to read.
 

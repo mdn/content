@@ -142,7 +142,7 @@ Each message received has some combination of the following fields, one per line
 - `id`
   - : The event ID to set the [`EventSource`](/en-US/docs/Web/API/EventSource) object's last event ID value.
 - `retry`
-  - : The reconnection time to use when attempting to send the event. This must be an integer, specifying the reconnection time in milliseconds. If a non-integer value is specified, the field is ignored.
+  - : The reconnection time. If the connection to the server is lost, the browser will wait for the specified time before attempting to reconnect. This must be an integer, specifying the reconnection time in milliseconds. If a non-integer value is specified, the field is ignored.
 
 All other field names are ignored.
 

@@ -61,7 +61,7 @@ Specify a single box-shadow using:
   - If a third value is given, it is interpreted as a `<blur-radius>`.
   - If a fourth value is given, it is interpreted as a `<spread-radius>`.
 
-- Optionally, the [`inset`](#inset) keyword.
+- Optionally, the `inset` keyword.
 - Optionally, a [`<color>`](#color) value.
 
 To specify multiple shadows, provide a comma-separated list of shadows.

@@ -26,8 +26,8 @@ starts being gathered into a {{domxref("Blob")}}.
 ## Syntax
 
 ```js
-MediaRecorder.onstart = function(event) { ... }
-MediaRecorder.addEventListener('start', function(event) { ... })
+MediaRecorder.onstart = function(event) { /* ... */ }
+MediaRecorder.addEventListener('start', function(event) { /* ... */ })
 ```
 
 ## Example

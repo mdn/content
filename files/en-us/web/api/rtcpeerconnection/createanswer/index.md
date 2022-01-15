@@ -35,8 +35,7 @@ RTCPeerConnection.createAnswer(successCallback, failureCallback[, options]); {{d
 ### Parameters
 
 - `options` {{optional_inline}}
-  - : An object which contains options which customize the answer; this is based on the
-    {{domxref("RTCAnswerOptions")}} dictionary.
+  - : An optional object providing options requested for the answer. Currently, there are no available options.
 
 ### Deprecated parameters
 
@@ -54,8 +53,7 @@ should update any existing code to use the {{jsxref("Promise")}}-based version o
     {{domxref("DOMException")}} object explaining why the request to create an answer
     failed.
 - `options` {{optional_inline}}
-  - : An optional {{domxref("RTCOfferOptions")}} object providing options requested for
-    the answer.
+  - : An optional object providing options requested for the answer.
 
 ### Exceptions
 

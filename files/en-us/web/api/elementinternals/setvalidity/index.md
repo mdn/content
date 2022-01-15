@@ -57,16 +57,16 @@ ElementInternals.setValidity(flags, message, anchor);
 
 ### Return value
 
-Undefined.
+None.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the element does not have its `formAssociated` property set to `true`.
-- {{domxref("DOMException")}} `TypeError`
-  - : One or more `flags` is `true`.
-- {{domxref("DOMException")}} `NotFoundError`
-  - : If `anchor` is given, but the anchor is not a shadow-including descendant of the element.
+- `TypeError` {{domxref("DOMException")}}
+  - : Thrown if one or more `flags` is `true`.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if `anchor` is given, but the anchor is not a shadow-including descendant of the element.
 
 ## Examples
 

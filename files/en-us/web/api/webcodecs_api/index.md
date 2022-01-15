@@ -30,14 +30,14 @@ It gives access to raw video frames, chunks of audio data, image decoders, audio
 ##  Interfaces
 
 - {{domxref("AudioDecoder")}}
-  - : Decodes {{domxref("AudioEncoderChunk")}} objects.
+  - : Decodes {{domxref("EncodedAudioChunk")}} objects.
 - {{domxref("VideoDecoder")}}
   - : Decodes {{domxref("EncodedVideoChunk")}} objects.
 - {{domxref("AudioEncoder")}}
   - : Encodes {{domxref("AudioData")}} objects.
 - {{domxref("VideoEncoder")}}
   - : Encodes {{domxref("VideoFrame")}} objects.
-- {{domxref("AudioEncoderChunk")}}
+- {{domxref("EncodedAudioChunk")}}
   - : Represents codec-specific encoded audio bytes.
 - {{domxref("EncodedVideoChunk")}}
   - : Represents codec-specific encoded video bytes.

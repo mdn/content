@@ -38,9 +38,8 @@ mediaSource.removeSourceBuffer(sourceBuffer);
 
 ### Exceptions
 
-| Exception       | Explanation                                                                                      |
-| --------------- | ------------------------------------------------------------------------------------------------ |
-| `NotFoundError` | The supplied sourceBuffer doesn't exist in {{domxref("MediaSource.sourceBuffers")}}. |
+- `NotFoundError` {{domxref("DOMException")}}
+  - :  Thrown if the supplied sourceBuffer doesn't exist in {{domxref("MediaSource.sourceBuffers")}}.
 
 ## Examples
 

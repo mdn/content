@@ -69,7 +69,7 @@ A new array containing the extracted elements.
 elements from the original array. Elements of the original array are copied into the
 returned array as follows:
 
-- For object `slice` copies object references into the new array. Both the
+- For objects, `slice` copies object references into the new array. Both the
   original and new array refer to the same object. If an object changes, the changes are
   visible to both the new and original arrays.
 - For strings, numbers and booleans (not {{jsxref("String")}}, {{jsxref("Number")}}

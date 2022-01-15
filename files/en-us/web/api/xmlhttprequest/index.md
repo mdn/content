@@ -19,7 +19,7 @@ browser-compat: api.XMLHttpRequest
 
 `XMLHttpRequest` is used heavily in [AJAX](/en-US/docs/Web/Guide/AJAX) programming.
 
-{{InheritanceDiagram(650, 70)}}
+{{InheritanceDiagram}}
 
 Despite its name, `XMLHttpRequest` can be used to retrieve any type of data, not just XML.
 

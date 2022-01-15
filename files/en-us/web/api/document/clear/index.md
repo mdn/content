@@ -7,18 +7,12 @@ tags:
   - Document
   - HTML DOM
   - Method
-  - NeedsExample
-  - NeedsSpecTable
   - Reference
 browser-compat: api.Document.clear
 ---
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
-The **`Document.clear()`** method clears the whole specified
-document in early (pre-1.0) versions of Mozilla.
-
-In recent versions of Mozilla-based applications, as well as in Internet Explorer and
-Netscape 4, this method does nothing.
+The **`Document.clear()`** method does nothing, but doesn't raise any error.
 
 ## Syntax
 
@@ -28,7 +22,7 @@ document.clear();
 
 ## Specifications
 
-- [HTML5](https://www.whatwg.org/html/#dom-document-clear)
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -12,7 +12,7 @@ tags:
   - ongamepadconnected
 browser-compat: api.Window.ongamepadconnected
 ---
-{{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}
 
 The **`ongamepadconnected`** property of the
 {{domxref("Window")}} interface represents an event handler that will run when a gamepad
@@ -23,7 +23,7 @@ The event object is of type {{domxref("GamepadEvent")}}.
 ## Syntax
 
 ```js
-window.ongamepadconnected = function() { ... };
+window.ongamepadconnected = function() { /* ... */ };
 ```
 
 ## Examples

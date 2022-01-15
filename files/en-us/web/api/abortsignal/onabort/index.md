@@ -19,12 +19,12 @@ The **`onabort`** read-only property of the {{domxref("AbortSignal")}} interface
 ## Syntax
 
 ```js
-abortSignal.onabort = function() { ... };
+abortSignal.onabort = function() { /* ... */ };
 ```
 
 ## Examples
 
-In the following snippet, we create a new `AbortController` object, and get its {{domxref("AbortSignal")}} (available using the `signal` property). Later on we check whether or not it the signal has been aborted using the `onabort` property, and send an appropriate log to the console.
+In the following snippet, we create a new `AbortController` object, and get its {{domxref("AbortSignal")}} (available using the `signal` property). Later on we check whether or not the signal has been aborted using the `onabort` property, and send an appropriate log to the console.
 
 ```js
 var controller = new AbortController();

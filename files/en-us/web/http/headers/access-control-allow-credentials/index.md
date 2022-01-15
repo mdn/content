@@ -13,29 +13,29 @@ browser-compat: http.headers.Access-Control-Allow-Credentials
 {{HTTPSidebar}}
 
 The **`Access-Control-Allow-Credentials`** response header
-tells browsers whether to expose the response to frontend JavaScript code when the
+tells browsers whether to expose the response to the frontend JavaScript code when the
 request's credentials mode ({{domxref("Request.credentials")}}) is `include`.
 
 When a request's credentials mode ({{domxref("Request.credentials")}}) is
-`include`, browsers will only expose the response to frontend JavaScript code
+`include`, browsers will only expose the response to the frontend JavaScript code
 if the `Access-Control-Allow-Credentials` value is `true`.
 
-Credentials are cookies, authorization headers or TLS client certificates.
+Credentials are cookies, authorization headers, or TLS client certificates.
 
 When used as part of a response to a preflight request, this indicates whether or not
 the actual request can be made using credentials. Note that simple {{HTTPMethod("GET")}}
-requests are not preflighted, and so if a request is made for a resource with
-credentials, if this header is not returned with the resource, the response is ignored
-by the browser and not returned to web content.
+requests are not preflighted. So, if a request is made for a resource with
+credentials, and if this header is not returned with the resource; the response is ignored
+by the browser and not returned to the web content.
 
 The `Access-Control-Allow-Credentials` header works in conjunction with the
 {{domxref("XMLHttpRequest.withCredentials")}} property or with the
 `credentials` option in the {{domxref("Request.Request()", "Request()")}}
-constructor of the Fetch API. For a CORS request with credentials, in order for browsers
-to expose the response to frontend JavaScript code, both the server (using the
+constructor of the Fetch API. For a CORS request with credentials, for browsers
+to expose the response to the frontend JavaScript code, both the server (using the
 `Access-Control-Allow-Credentials` header) and the client (by setting the
 credentials mode for the XHR, Fetch, or Ajax request) must indicate that they’re opting
-in to including credentials.
+into including credentials.
 
 <table class="properties">
   <tbody>

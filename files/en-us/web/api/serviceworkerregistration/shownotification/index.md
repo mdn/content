@@ -36,16 +36,11 @@ serviceWorkerRegistration.showNotification(title, [options]);
   - : An object that allows configuring the notification. It can have the following
     properties:
 
-    - `actions`: An array of actions to display in the notification. The
-      members of the array should be an object literal. It may contain the following
-      values:
+    - `actions`: An array of actions to display in the notification. Each element in the array is an object with the following members:
 
-      - action: A {{domxref("DOMString")}} identifying a user action to be displayed
-        on the notification.
-      - title: A {{domxref("DOMString")}} containing action text to be shown to the
-        user.
-      - icon: A {{domxref("USVString")}} containing the URL of an icon to display
-        with the action.
+      - `action`: A {{domxref("DOMString")}} identifying a user action to be displayed on the notification.
+      - `title`: A {{domxref("DOMString")}} containing action text to be shown to the user.
+      - `icon`: A {{domxref("USVString")}} containing the URL of an icon to display with the action.
 
       Appropriate responses are built using `event.action` within the
       {{event("notificationclick")}} event.
@@ -66,8 +61,8 @@ serviceWorkerRegistration.showNotification(title, [options]);
     - `image`: a {{domxref("USVString")}} containing the URL of an image to
       be displayed in the notification.
     - `lang`: Specify the lang used within the notification. This string
-      must be a valid [BCP 47 language
-      tag](https://datatracker.ietf.org/doc/html/bcp47).
+      must be a valid language tag according to
+      {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
     - `renotify`: A boolean that indicates whether to suppress vibrations
       and audible alerts when reusing a `tag` value.
       If *options*’s `renotify` is true

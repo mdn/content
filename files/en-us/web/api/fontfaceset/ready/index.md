@@ -5,7 +5,6 @@ tags:
   - API
   - CSSFontLoading API
   - CSSOM
-  - Experimental
   - FontFaceSet
   - Fonts
   - Property
@@ -13,26 +12,29 @@ tags:
   - Reference
 browser-compat: api.FontFaceSet.ready
 ---
-{{APIRef("CSSFontLoading")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("CSS Font Loading API")}}
 
-The `ready` readonly property of the {{domxref("FontFaceSet")}} interface
+The `ready` read-only property of the {{domxref("FontFaceSet")}} interface
 returns a {{jsxref("Promise")}} that resolves to the given {{domxref("FontFaceSet")}}.
 
-## Syntax
+The promise will only resolve once the document has completed loading fonts, layout operations are completed, and no further font loads are needed.
 
-```js
-fontFaceSet.ready.then(function(fontFaceSet) {
-  // ...
-});
-```
-
-### Returns
+## Value
 
 A {{jsxref("Promise")}} that resolves to the given {{domxref("FontFaceSet")}}.
 
-### Parameters
+## Examples
 
-None.
+In the following example the value of `ready` is printed to the console once the promise has resolved.
+
+```js
+async function isReady() {
+  let ready = await document.fonts.ready;
+  console.log(ready);
+}
+
+isReady();
+```
 
 ## Specifications
 

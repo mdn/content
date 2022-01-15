@@ -2,12 +2,8 @@
 title: Event.stopImmediatePropagation()
 slug: Web/API/Event/stopImmediatePropagation
 tags:
-  - API
-  - Event
-  - Level 3
   - Method
   - Reference
-  - stopImmediatePropagation
 browser-compat: api.Event.stopImmediatePropagation
 ---
 {{APIRef("DOM")}}

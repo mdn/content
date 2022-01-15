@@ -66,7 +66,7 @@ properties:
     - `"none"`
 
 - `attStmt`
-  - : A an attestation statement that is of the format defined by `"fmt"`. For
+  - : An attestation statement that is of the format defined by `"fmt"`. For
     now, [see the
     WebAuthn specification for details on each format](https://www.w3.org/TR/webauthn/#defined-attestation-formats).
 

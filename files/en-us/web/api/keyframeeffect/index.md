@@ -42,7 +42,7 @@ _This interface inherits some of its methods from its parent, {{domxref("Animat
 - {{domxref("KeyframeEffect.getKeyframes()")}}
   - : Returns the computed keyframes that make up this effect along with their computed keyframe offsets.
 - {{domxref("AnimationEffect.getTiming()")}}
-  - : The {{domxref("EffectTiming")}} object associated with the animation containing all the animation's timing values.
+  - : Returns the object associated with the animation containing all the animation's timing values.
 - {{domxref("KeyframeEffect.setKeyframes()")}}
   - : Replaces the set of keyframes that make up this effect.
 - {{domxref("AnimationEffect.updateTiming()")}}

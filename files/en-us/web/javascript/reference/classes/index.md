@@ -13,7 +13,9 @@ browser-compat: javascript.classes
 ---
 {{JsSidebar("Classes")}}
 
-Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 class-like semantics.
+Classes are a template for creating objects.
+They encapsulate data with code to work on that data.
+Classes in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 class-like semantics.
 
 ## Defining classes
 
@@ -21,7 +23,8 @@ Classes are in fact "special {{jsxref("Functions", "functions", "", "true")}}", 
 
 ### Class declarations
 
-One way to define a class is using a **class declaration**. To declare a class, you use the `class` keyword with the name of the class ("Rectangle" here).
+One way to define a class is using a **class declaration**.
+To declare a class, you use the `class` keyword with the name of the class ("Rectangle" here).
 
 ```js
 class Rectangle {
@@ -34,7 +37,8 @@ class Rectangle {
 
 #### Hoisting
 
-An important difference between **function declarations** and **class declarations** is that function declarations are {{Glossary("Hoisting", "hoisted")}} and class declarations are not. You first need to declare your class and then access it, otherwise code like the following will throw a {{jsxref("ReferenceError")}}:
+An important difference between **function declarations** and **class declarations** is that while functions can be called in code that appears before they are defined, classes must be defined before they can be constructed.
+Code like the following will throw a {{jsxref("ReferenceError")}}:
 
 ```js example-bad
 const p = new Rectangle(); // ReferenceError
@@ -42,9 +46,15 @@ const p = new Rectangle(); // ReferenceError
 class Rectangle {}
 ```
 
+This occurs because while the class is {{Glossary("Hoisting", "hoisted")}} its values are not initialized.
+
+
 ### Class expressions
 
-A **class expression** is another way to define a class. Class expressions can be named or unnamed. The name given to a named class expression is local to the class's body. However, it can be accessed via the {{jsxref("Function.name", "name")}} property.
+A **class expression** is another way to define a class.
+Class expressions can be named or unnamed.
+The name given to a named class expression is local to the class's body.
+However, it can be accessed via the {{jsxref("Function.name", "name")}} property.
 
 ```js
 // unnamed
@@ -68,11 +78,12 @@ console.log(Rectangle.name);
 // output: "Rectangle2"
 ```
 
-> **Note:** Class **expressions** are subject to the same hoisting restrictions as described in the {{anch("Class declarations")}} section.
+> **Note:** Class **expressions** must be declared before they can be used (they are subject to the same hoisting restrictions as described in the [class declarations](#class_declarations) section).
 
 ## Class body and method definitions
 
-The body of a class is the part that is in curly brackets `{}`. This is where you define class members, such as methods or constructor.
+The body of a class is the part that is in curly brackets `{}`.
+This is where you define class members, such as methods or constructor.
 
 ### Strict mode
 
@@ -80,9 +91,19 @@ The body of a class is executed in {{jsxref("Strict_mode", "strict mode", "", "t
 
 ### Constructor
 
-The {{jsxref("Classes/constructor", "constructor", "", "true")}} method is a special method for creating and initializing an object created with a `class`. There can only be one special method with the name "constructor" in a class. A {{jsxref("SyntaxError")}} will be thrown if the class contains more than one occurrence of a `constructor` method.
+The {{jsxref("Classes/constructor", "constructor", "", "true")}} method is a special method for creating and initializing an object created with a `class`.
+There can only be one special method with the name "constructor" in a class.
+A {{jsxref("SyntaxError")}} will be thrown if the class contains more than one occurrence of a `constructor` method.
 
 A constructor can use the `super` keyword to call the constructor of the super class.
+
+
+### Static initialization blocks
+
+[Class `static` initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks) allow flexible initialization of [class `static` properties](#static_methods_and_properties) including the evaluation of statements during initialization, and granting access to private scope.
+
+Multiple static blocks can be declared, and these can be interleaved with the declaration of static properties and methods (all static items are evaluated in declaration order).
+
 
 ### Prototype methods
 
@@ -133,7 +154,9 @@ console.log([...pentagon.getSides()]); // [1,2,3,4,5]
 
 ### Static methods and properties
 
-The {{jsxref("Classes/static", "static", "", "true")}} keyword defines a static method or property for a class. Static members (properties and methods) are called without instantiating their class and **cannot** be called through a class instance. Static methods are often used to create utility functions for an application, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
+The {{jsxref("Classes/static", "static", "", "true")}} keyword defines a static method or property for a class.
+Static members (properties and methods) are called without instantiating their class and **cannot** be called through a class instance.
+Static methods are often used to create utility functions for an application, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
 
 ```js
 class Point {
@@ -164,7 +187,8 @@ console.log(Point.distance(p1, p2)); // 7.0710678118654755
 
 ### Binding `this` with prototype and static methods
 
-When a static or prototype method is called without a value for {{jsxref("Operators/this", "this")}}, such as by assigning the method to a variable and then calling it, the `this` value will be `undefined` inside the method. This behavior will be the same even if the {{jsxref("Strict_mode", "\"use strict\"")}} directive isn't present, because code within the `class` body's syntactic boundary is always executed in strict mode.
+When a static or prototype method is called without a value for {{jsxref("Operators/this", "this")}}, such as by assigning the method to a variable and then calling it, the `this` value will be `undefined` inside the method.
+This behavior will be the same even if the {{jsxref("Strict_mode", "\"use strict\"")}} directive isn't present, because code within the `class` body's syntactic boundary is always executed in strict mode.
 
 ```js
 class Animal {
@@ -186,7 +210,8 @@ let eat = Animal.eat;
 eat(); // undefined
 ```
 
-If we rewrite the above using traditional function-based syntax in non–strict mode, then `this` method calls are automatically bound to the initial `this` value, which by default is the {{Glossary("Global_object", "global object")}}. In strict mode, autobinding will not happen; the value of `this` remains as passed.
+If we rewrite the above using traditional function-based syntax in non–strict mode, then `this` method calls are automatically bound to the initial `this` value, which by default is the {{Glossary("Global_object", "global object")}}.
+In strict mode, autobinding will not happen; the value of `this` remains as passed.
 
 ```js
 function Animal() { }
@@ -258,7 +283,8 @@ class Rectangle {
 }
 ```
 
-It's an error to reference private fields from outside of the class; they can only be read or written within the class body. By defining things that are not visible outside of the class, you ensure that your classes' users can't depend on internals, which may change from version to version.
+It's an error to reference private fields from outside of the class; they can only be read or written within the class body.
+By defining things that are not visible outside of the class, you ensure that your classes' users can't depend on internals, which may change from version to version.
 
 > **Note:** Private fields can only be declared up-front in a field declaration.
 
@@ -320,7 +346,8 @@ d.speak(); // Mitzie barks.
 // For similar methods, the child's method takes precedence over parent's method
 ```
 
-Note that classes cannot extend regular (non-constructible) objects. If you want to inherit from a regular object, you can instead use {{jsxref("Object.setPrototypeOf()")}}:
+Note that classes cannot extend regular (non-constructible) objects
+If you want to inherit from a regular object, you can instead use {{jsxref("Object.setPrototypeOf()")}}:
 
 ```js
 const Animal = {
@@ -344,9 +371,11 @@ d.speak(); // Mitzie makes a noise.
 
 ## Species
 
-You might want to return {{jsxref("Array")}} objects in your derived array class `MyArray`. The species pattern lets you override default constructors.
+You might want to return {{jsxref("Array")}} objects in your derived array class `MyArray`.
+The species pattern lets you override default constructors.
 
-For example, when using methods such as {{jsxref("Array.map", "map()")}} that returns the default constructor, you want these methods to return a parent `Array` object, instead of the `MyArray` object. The {{jsxref("Symbol.species")}} symbol lets you do this:
+For example, when using methods such as {{jsxref("Array.map", "map()")}} that returns the default constructor, you want these methods to return a parent `Array` object, instead of the `MyArray` object.
+The {{jsxref("Symbol.species")}} symbol lets you do this:
 
 ```js
 class MyArray extends Array {
@@ -363,7 +392,8 @@ console.log(mapped instanceof Array);   // true
 
 ## Super class calls with `super`
 
-The {{jsxref("Operators/super", "super")}} keyword is used to call corresponding methods of super class. This is one advantage over prototype-based inheritance.
+The {{jsxref("Operators/super", "super")}} keyword is used to call corresponding methods of super class.
+This is one advantage over prototype-based inheritance.
 
 ```js
 class Cat {
@@ -391,7 +421,9 @@ l.speak();
 
 ## Mix-ins
 
-Abstract subclasses or _mix-ins_ are templates for classes. An ECMAScript class can only have a single superclass, so multiple inheritance from tooling classes, for example, is not possible. The functionality must be provided by the superclass.
+Abstract subclasses or _mix-ins_ are templates for classes.
+An ECMAScript class can only have a single superclass, so multiple inheritance from tooling classes, for example, is not possible.
+The functionality must be provided by the superclass.
 
 A function with a superclass as input and a subclass extending that superclass as output can be used to implement mix-ins in ECMAScript:
 
@@ -414,7 +446,8 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
 
 ## Re-running a class definition
 
-A class can't be redefined. Attempting to do so produces a `SyntaxError`.
+A class can't be redefined.
+Attempting to do so produces a `SyntaxError`.
 
 If you're experimenting with code in a web browser, such as the Firefox Web Console (**Tools** > **Web Developer** > **Web Console**) and you 'Run' a definition of a class with the same name twice, you'll get a `SyntaxError: redeclaration of let ClassName;`. (See further discussion of this issue in {{Bug(1428672)}}.) Doing something similar in Chrome Developer Tools gives you a message like `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
 

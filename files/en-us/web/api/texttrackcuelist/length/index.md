@@ -17,7 +17,9 @@ The **`length`** read-only property of the {{domxref("TextTrackCueList")}} inter
 
 ## Syntax
 
-    var length = TextTrackCueList.length;
+```js
+var length = TextTrackCueList.length;
+```
 
 ### Value
 

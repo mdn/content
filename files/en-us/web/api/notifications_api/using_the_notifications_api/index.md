@@ -18,7 +18,7 @@ Typically, system notifications refer to the operating system's standard notific
 
 ![](android-notification.png)
 
-The system notification system will vary of course by platform and browser, but this is ok, and the Notifications API is written to be general enough for compatibility with most system notification systems.
+The system notification system will vary of course by platform and browser, but this is OK, and the Notifications API is written to be general enough for compatibility with most system notification systems.
 
 ## Examples
 

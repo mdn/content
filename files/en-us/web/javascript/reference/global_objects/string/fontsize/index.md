@@ -53,7 +53,7 @@ var worldString = 'Hello, world';
 
 console.log(worldString.small());     // <small>Hello, world</small>
 console.log(worldString.big());       // <big>Hello, world</big>
-console.log(worldString.fontsize(7)); // <font size="7">Hello, world</fontsize>
+console.log(worldString.fontsize(7)); // <font size="7">Hello, world</font>
 ```
 
 With the {{domxref("HTMLElement/style", "element.style")}} object you can get

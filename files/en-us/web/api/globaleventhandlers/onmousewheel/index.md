@@ -28,7 +28,7 @@ See the [DOM event handlers](/en-US/docs/Web/Guide/Events/Event_handlers)
 page for information on working with `on...` handlers.
 
 The `mousewheel` event is fired asynchronously when a mouse wheel or similar
-device is operated. It's represented by the [`MouseWheelEvent`](/en-US/docs/Web/API/MouseWheelEvent "The MouseWheelEvent interface represents events that occur due to the user turning a mouse wheel.")
+device is operated. It's represented by the [`WheelEvent`](/en-US/docs/Web/API/WheelEvent "The WheelEvent interface represents events that occur due to the user turning a mouse wheel.")
 interface.
 
 See the {{event("mousewheel")}} event documentation for more information about the

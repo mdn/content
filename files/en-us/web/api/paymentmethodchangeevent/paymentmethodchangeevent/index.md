@@ -50,9 +50,9 @@ the options specified for the payment method given in the `methodName`
 property.
 
 The type of the `methodDetails` property depends on the payment method. For
-example, if `methodName` is `basic-card`, indicating that the
-basic card payment method is being used for validation, the `methodDetails`
-field must be a {{domxref("BasicCardChangeDetails")}} object.
+example, if `methodName` is `https://example.com/pay`, indicating that the
+Example Pay payment method is being used for validation, the shape of `methodDetails`
+is defined by the payment method.
 
 ## Specifications
 

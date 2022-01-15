@@ -8,7 +8,7 @@ tags:
   - Property
 browser-compat: api.NDEFReader.onreadingerror
 ---
-{{Draft}}{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 The `onreadingerror` property of the {{DOMxRef("NDEFReader")}} interface is called whenever an error occurs during reading of NFC tags, e.g. when tags leave the reader's magnetic induction field.
 

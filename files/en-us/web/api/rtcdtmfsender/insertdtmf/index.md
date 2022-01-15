@@ -17,9 +17,8 @@ browser-compat: api.RTCDTMFSender.insertDTMF
 ---
 {{APIRef("WebRTC")}}
 
-The
-**`insertDTMF()`** method on the
-{{domxref("RTCDTMFSender")}} interface starts sending {{Glossary("DTMF")}} tones to the remote peer over the
+The **`insertDTMF()`** method on the {{domxref("RTCDTMFSender")}} interface
+starts sending {{Glossary("DTMF")}} tones to the remote peer over the
 {{domxref("RTCPeerConnection")}}.
 
 Sending of the tones is performed asynchronously,
@@ -59,11 +58,11 @@ RTCDTMFSender.insertDTMF(tones[, duration[, interToneGap]]);
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : The DTMF tones couldn't be sent because the track has been stopped, or is in a
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the DTMF tones couldn't be sent because the track has been stopped or is in a
     read-only or inactive state.
-- `InvalidCharacterError`
-  - : One or more of the characters in `tones` is not valid DTMF.
+- `InvalidCharacterError` {{domxref("DOMException")}}
+  - : Thrown if one or more of the characters in `tones` is not valid DTMF (0-9, A-Z, # or ,).
 
 ## Example
 

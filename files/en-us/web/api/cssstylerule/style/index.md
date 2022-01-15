@@ -15,7 +15,9 @@ The read-only **`style`** property is the {{ domxref("CSSStyleDeclaration") }} i
 
 ## Syntax
 
-    styleObj = cssRule.style
+```js
+styleObj = cssRule.style
+```
 
 ### Value
 

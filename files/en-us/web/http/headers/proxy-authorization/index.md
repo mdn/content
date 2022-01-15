@@ -51,8 +51,8 @@ Proxy-Authorization: <type> <credentials>
       encoded (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 
     > **Note:** Base64 encoding does not mean encryption or hashing! This
-    > method is equally secure as sending the credentials in clear text (base64 is a
-    > reversible encoding). Prefer to use HTTPS in conjunction with Basic
+    > method is as secure as sending the credentials in clear text (base64 is a
+    > reversible encoding). It is preferable to use HTTPS in conjunction with Basic
     > Authentication.
 
 ## Examples

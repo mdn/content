@@ -34,9 +34,9 @@ A {{jsxref("Promise")}} that resolves with `undefined`.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if {{domxref("HTMLMediaElement.disableRemotePlayback","disableRemotePlayback")}} is `true` for the media element.
-- {{domxref("DOMException")}} `NotFoundError`
+- `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if an `id` is passed but it does not match any available `callbackId`.
 
 ## Examples

@@ -9,7 +9,7 @@ tags:
   - sizing
 browser-compat: css.properties.width.max-content
 ---
-The `max-content` sizing keyword represents the intrinsic maximum width of the content. For text content this means that the content will not wrap at all even if it causes overflows.
+The `max-content` sizing keyword represents the intrinsic maximum width or height of the content. For text content this means that the content will not wrap at all even if it causes overflows.
 
 ## Syntax
 

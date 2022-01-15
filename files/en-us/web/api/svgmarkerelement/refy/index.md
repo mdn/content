@@ -15,7 +15,9 @@ The **`refY`** read-only property of the {{domxref("SVGMarkerElement")}} interfa
 
 ## Syntax
 
-    let refY = SVGMarkerElement.refY;
+```js
+let refY = SVGMarkerElement.refY;
+```
 
 ### Value
 

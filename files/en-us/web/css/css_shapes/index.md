@@ -36,7 +36,7 @@ The example below shows an image that has been floated left, and the `shape-outs
 ## Guides
 
 - [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
-- [Shapes from Box Values](/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values)
+- [Shapes from Box Values](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values)
 - [Basic Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
 - [Shapes from Images](/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
 - [Edit Shape Paths in CSS — Firefox Developer Tools](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes)

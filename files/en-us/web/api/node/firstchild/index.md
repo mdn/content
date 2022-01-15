@@ -2,27 +2,27 @@
 title: Node.firstChild
 slug: Web/API/Node/firstChild
 tags:
-  - API
-  - DOM
-  - Node
   - Property
   - Reference
 browser-compat: api.Node.firstChild
 ---
 {{APIRef("DOM")}}
 
-The **`Node.firstChild`** read-only
-property returns the node's first child in the tree, or `null` if the node
-has no children.
+The read-only **`firstChild`** property of the {{domxref("Node")}} interface
+returns the node's first child in the tree,
+or `null` if the node has no children.
 
-If the node is a `Document`, it returns the first
-node in the list of its direct children.
+If the node is a {{domxref("Document")}},
+this property returns the first node in the list of its direct children.
 
-## Syntax
+> **Note:** This property returns any type of node that is the first child of this one.
+> It may be a {{domxref("Text")}} or a {{domxref("Comment")}} node.
+> If you want to get the first {{domxref("Element")}} that is a child of another element,
+> consider using {{domxref("Element.firstElementChild")}}.
 
-```js
-var childNode = node.firstChild;
-```
+## Value
+
+A {{domxref("Node")}}, or `null` if there are none.
 
 ## Example
 
@@ -35,7 +35,7 @@ might interfere with using this property.
 </p>
 
 <script>
-  var p01 = document.getElementById('para-01');
+  const p01 = document.getElementById('para-01');
   console.log(p01.firstChild.nodeName);
 </script>
 ```
@@ -43,7 +43,7 @@ might interfere with using this property.
 In the above, the [console](/en-US/docs/Web/API/console) will show '#text'
 because a text node is inserted to maintain the whitespace between the end of the
 opening `<p>` and `<span>` tags. **Any**
-[whitespace](/en-US/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM)
+[whitespace](/en-US/docs/Web/API/Document_Object_Model/Whitespace)
 will create a `#text` node, from a single space to multiple spaces, returns,
 tabs, and so on.
 
@@ -57,7 +57,7 @@ span element becomes the paragraph's first child.
 <p id="para-01"><span>First span</span></p>
 
 <script>
-  var p01 = document.getElementById('para-01');
+  const p01 = document.getElementById('para-01');
   console.log(p01.firstChild.nodeName);
 </script>
 ```
@@ -66,8 +66,7 @@ Now the console will show 'SPAN'.
 
 To avoid the issue with `node.firstChild` returning `#text` or
 `#comment` nodes, {{domxref("Element.firstElementChild")}} can be used to
-return only the first element node. However, `node.firstElementChild`
-requires a shim for Internet Explorer 9 and earlier.
+return only the first element node.
 
 ## Specifications
 
@@ -76,3 +75,8 @@ requires a shim for Internet Explorer 9 and earlier.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Element.firstElementChild")}}
+- {{domxref("Node.lastChild")}}

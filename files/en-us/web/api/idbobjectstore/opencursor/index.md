@@ -52,11 +52,12 @@ operation are fired.
 
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
-| Exception                  | Description                                                                                         |
-| -------------------------- | --------------------------------------------------------------------------------------------------- |
-| `InvalidStateError`        | This {{domxref("IDBObjectStore")}} or {{domxref("IDBIndex")}} has been deleted. |
-| `TransactionInactiveError` | This {{domxref("IDBObjectStore")}}'s transaction is inactive.                            |
-| `DataError`                | The specified key or key range is invalid.                                                          |
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if this {{domxref("IDBObjectStore")}} or {{domxref("IDBIndex")}} has been deleted.
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if this {{domxref("IDBObjectStore")}}'s transaction is inactive.
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if the specified key or key range is invalid.
 
 ## Example
 

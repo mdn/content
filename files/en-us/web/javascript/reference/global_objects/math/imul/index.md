@@ -47,7 +47,7 @@ If you use normal JavaScript floating point numbers in imul, you will experience
 degrade in performance. This is because of the costly conversion from a floating point
 to an integer for multiplication, and then converting the multiplied integer back into a
 floating point. The reason imul exists is because it is faster in only one (so far)
-circumstance: AsmJS. AsmJS allows for JIST-optimizers to more easily implement internal
+circumstance: AsmJS. AsmJS allows for JIT-optimizers to more easily implement internal
 integers in JavaScript. Multiplying two numbers stored internally as integers (which is
 only possible with AsmJS) with imul is the only potential circumstance where Math.imul
 may prove performant in current browsers.

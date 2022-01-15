@@ -3,7 +3,6 @@ title: SpeechRecognition.onerror
 slug: Web/API/SpeechRecognition/onerror
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognition
@@ -13,7 +12,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.onerror
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`onerror`** property of the
 {{domxref("SpeechRecognition")}} interface represents an event handler that will run
@@ -22,7 +21,7 @@ when a speech recognition error occurs (when the [error](/en-US/docs/Web/API/Spe
 ## Syntax
 
 ```js
-mySpeechRecognition.onerror = function() { ... };
+mySpeechRecognition.onerror = function() { /* ... */ };
 ```
 
 ## Examples

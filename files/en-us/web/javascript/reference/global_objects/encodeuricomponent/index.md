@@ -21,17 +21,16 @@ characters).
 ## Syntax
 
 ```js
-encodeURIComponent(str);
+encodeURIComponent(uriComponent);
 ```
 
 ### Parameters
 
-- `str`
-  - : String. A component of a URI.
-
+- `uriComponent`
+  - : A string, number, boolean, null, undefined, or any object. Before encoding, the `uriComponent` gets converted to string.
 ### Return value
 
-A new string representing the provided string encoded as a URI component.
+A new string representing the provided _uriComponent_ encoded as a URI component.
 
 ## Description
 
@@ -67,7 +66,7 @@ Note that a {{jsxref("URIError")}} will be thrown if one attempts to encode a su
 which is not part of a high-low pair, e.g.,
 
 ```js
-// high-low pair ok
+// high-low pair OK
 console.log(encodeURIComponent('\uD800\uDFFF'));
 
 // lone high surrogate throws "URIError: malformed URI sequence"
@@ -89,14 +88,14 @@ the integrity of the data.
 
 For [`application/x-www-form-urlencoded`](https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm), spaces are to be replaced by `+`, so one may wish to follow a `encodeURIComponent()` replacement with an additional replacement of `%20` with `+`.
 
-To be more stringent in adhering to [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986) (which reserves !, ', (, ),
+To be more stringent in adhering to {{rfc("3986")}} (which reserves !, ', (, ),
 and \*), even though these characters have no formalized URI delimiting uses, the
 following can be safely used:
 
 ```js
 function fixedEncodeURIComponent(str) {
   return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
-    return '%' + c.charCodeAt(0).toString(16);
+    return '%' + c.charCodeAt(0).toString(16).toUpperCase();
   });
 }
 ```

@@ -37,18 +37,18 @@ element.outerHTML = htmlString;
 ### Value
 
 Reading the value of `outerHTML` returns a {{domxref("DOMString")}}
-containing an HTML serialization of the `element` and its descendants.
+containing an HTML serialization of the `element` and its descendants.
 Setting the value of `outerHTML` replaces the element and all of its
 descendants with a new DOM tree constructed by parsing the specified
 `htmlString`.
 
 ### Exceptions
 
-- `SyntaxError`
-  - : An attempt was made to set `outerHTML` using an HTML string which is not
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if an attempt was made to set `outerHTML` using an HTML string which is not
     valid.
-- `NoModificationAllowedError`
-  - : An attempt was made to set `outerHTML` on an element which is a direct
+- `NoModificationAllowedError` {{domxref("DOMException")}}
+  - : Thrown if an attempt was made to set `outerHTML` on an element which is a direct
     child of a {{domxref("Document")}}, such as {{domxref("Document.documentElement")}}.
 
 ## Examples
@@ -141,6 +141,6 @@ console.log(anc.outerHTML); // output: "<a href='https://developer.mozilla.org?a
 
 ## See also
 
-- Serializing DOM trees into XML or HTML: {{domxref("XMLSerializer")}}
+- Serializing DOM trees into XML strings: {{domxref("XMLSerializer")}}
 - Parsing XML or HTML into DOM trees: {{domxref("DOMParser")}}
 - {{domxref("HTMLElement.outerText")}}

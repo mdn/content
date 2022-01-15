@@ -13,19 +13,14 @@ browser-compat: api.ElementInternals.form
 
 The **`form`** read-only property of the {{domxref("ElementInternals")}} interface returns the {{domxref("HTMLFormElement")}} associated with this element.
 
-## Syntax
-
-```js
-let form = ElementInternals.form;
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLFormElement")}}.
 
 ## Examples
 
-The following example shows a custom checkbox component inside a form with an ID of `myForm`. Printing `form.length` to the console, gives us the value of {{domxref("HTMLFormElement.length")}}.
+The following example shows a custom checkbox component inside a form with an ID of `myForm`.
+Printing `form.length` to the console, gives us the value of {{domxref("HTMLFormElement.length")}}.
 
 ```html
 <form id="myForm"><custom-checkbox id="join-checkbox"></custom-checkbox>

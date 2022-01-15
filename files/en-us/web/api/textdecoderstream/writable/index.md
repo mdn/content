@@ -15,7 +15,9 @@ The **`writable`** read-only property of the {{domxref("TextDecoderStream")}} in
 
 ## Syntax
 
-    var writable = TextDecoderStream.writable;
+```js
+var writable = TextDecoderStream.writable;
+```
 
 ### Value
 

@@ -42,7 +42,7 @@ var timeoutID = setTimeout(code[, delay]);
     the specified function or code is executed. If this parameter is omitted, a value of 0
     is used, meaning execute "immediately", or more accurately, the next event cycle. Note
     that in either case, the actual delay may be longer than intended; see
-    {{anch("Reasons_for_delays", "Reasons for delays longer than specified")}} below.
+    {{anch("reasons_for_delays_longer_than_specified", "Reasons for delays longer than specified")}} below.
 - `arg1, ..., argN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by
     `function`.
@@ -128,7 +128,7 @@ setTimeout(myArray.myMethod, 1.5*1000, '1'); // prints "undefined" after 1.5 sec
 ```
 
 The `myArray.myMethod` function is passed to `setTimeout`, then
-when it's called, its `this` is not set so it defaults to the
+when it's called, its `this` is not set, so it defaults to the
 `window` object.
 
 There's also no option to pass a `thisArg` to

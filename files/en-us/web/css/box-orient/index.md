@@ -10,7 +10,7 @@ browser-compat: css.properties.box-orient
 ---
 {{CSSRef}}{{Non-standard_header}}
 
-> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) for information about the current standard.
+> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
 
 The **`box-orient`** [CSS ](/en-US/docs/Web/CSS)property sets whether an element lays out its contents horizontally or vertically.
 
@@ -46,7 +46,7 @@ The inline and block axes are the writing-mode dependent keywords which, in Engl
 
 ## Description
 
-HTML DOM elements lay out their contents along the inline-axis by default. This CSS property will only apply to HTML elements with a CSS {{CSSxRef("display")}} value of {{CSSxRef("box")}} or {{CSSxRef("inline-box")}}.
+HTML DOM elements lay out their contents along the inline-axis by default. This CSS property will only apply to HTML elements with a CSS {{CSSxRef("display")}} value of `box` or `inline-box`.
 
 ## Formal definition
 
@@ -60,7 +60,7 @@ HTML DOM elements lay out their contents along the inline-axis by default. This 
 
 ### Setting horizontal box orientation
 
-Here, he `box-orient` property will cause the two {{HTMLElement("p")}} sections in the example to display in the same line.
+Here, the `box-orient` property will cause the two {{HTMLElement("p")}} sections in the example to display in the same line.
 
 #### HTML
 

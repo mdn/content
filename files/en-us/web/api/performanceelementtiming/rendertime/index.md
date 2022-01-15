@@ -15,7 +15,9 @@ The **`renderTime`** read-only property of the {{domxref("PerformanceElementTimi
 
 ## Syntax
 
-    var renderTime = PerformanceElementTiming.renderTime;
+```js
+var renderTime = PerformanceElementTiming.renderTime;
+```
 
 ### Value
 

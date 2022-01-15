@@ -10,6 +10,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`RTCPeerConnectionIceEvent()`** constructor creates a new
@@ -18,7 +19,7 @@ The **`RTCPeerConnectionIceEvent()`** constructor creates a new
 ## Syntax
 
 ```js
- var event = new RTCPeerConnectionIceEvent(type, options);
+var event = new RTCPeerConnectionIceEvent(type, options);
 ```
 
 ### Parameters
@@ -61,5 +62,5 @@ the provided options.
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - Its usual target: {{domxref("RTCPeerConnection")}}.

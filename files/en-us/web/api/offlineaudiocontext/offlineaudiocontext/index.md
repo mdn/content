@@ -21,8 +21,8 @@ audio to an {{domxref("AudioBuffer")}} rather than to an audio output device.
 ## Syntax
 
 ```js
-OfflineAudioContext(options);
-OfflineAudioContext(numberOfChannels, length, sampleRate);
+new OfflineAudioContext(options);
+new OfflineAudioContext(numberOfChannels, length, sampleRate);
 ```
 
 ### Parameters

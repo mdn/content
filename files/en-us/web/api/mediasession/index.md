@@ -28,7 +28,7 @@ For example, a smartphone might have a standard panel in its lock screen that pr
 ## Methods
 
 - {{domxref("MediaSession.setActionHandler", "setActionHandler()")}}
-  - : Sets an action handler for a [media session action](/en-US/docs/Web/API/MediaSessionAction), such as play or pause.
+  - : Sets an action handler for a media session action, such as play or pause.
 - {{domxref("MediaSession.setPositionState", "setPositionState()")}}
   - : Sets the current playback position and speed of the media currently being presented.
 

@@ -41,10 +41,13 @@ var promise = navigator.mediaDevices.getDisplayMedia(constraints);
 ### Parameters
 
 - `constraints` {{optional_inline}}
-  - : An optional {{domxref("MediaStreamConstraints")}} object specifying requirements for
+  - : An optional object specifying requirements for
     the returned {{domxref("MediaStream")}}. Since `getDisplayMedia()` requires
     a video track, the returned stream will have one even if no video track is expressly
-    requested by the `constraints` object.
+    requested by the `constraints` object. For more details, see the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters)
+    section under the {{domxref("MediaDevices.getUserMedia()")}} method, as well
+    as the article [Capabilities,
+    constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
 
 ### Return value
 
@@ -59,30 +62,27 @@ audio track.
 
 ### Exceptions
 
-Rejections of the returned promise are made by passing a {{domxref("DOMException")}}
-error object to the promise's failure handler. Possible errors are:
-
-- {{JSxRef("AbortError")}}
-  - : An error or failure that doesn't match any of the other exceptions below occurred.
-- {{JSxRef("InvalidStateError")}}
-  - : The call to `getDisplayMedia()` was not made from code running due to a
+- `AbortError` {{domxref("DOMException")}}
+  - : Returned if an error or failure does not match any of the other exceptions listed here.
+- `InvalidStateError`  {{domxref("DOMException")}}
+  - : Returned if the call to `getDisplayMedia()` was not made from code running due to a
     user action, such as an event handler. Another potential cause for this event: the
     {{domxref("document")}} in whose context `getDisplayMedia()` was called is
     not fully active; for example, perhaps it is not the frontmost tab.
-- {{JSxRef("NotAllowedError")}}
-  - : Permission to access a screen area was denied by the user, or the current browsing
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Returned if the permission to access a screen area was denied by the user, or the current browsing
     instance is not permitted access to screen sharing.
-- {{JSxRef("NotFoundError")}}
-  - : No sources of screen video are available for capture.
-- {{JSxRef("NotReadableError")}}
-  - : The user selected a screen, window, tab, or other source of screen data, but a
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Returned if no sources of screen video are available for capture.
+- `NotReadableError`  {{domxref("DOMException")}}
+  - : Returned if the user selected a screen, window, tab, or other source of screen data, but a
     hardware or operating system level error or lockout occurred, preventing the sharing
     of the selected source.
-- {{JSxRef("OverconstrainedError")}}
-  - : After creating the stream, applying the specified `constraints` fails
+- `OverconstrainedError` {{domxref("DOMException")}}
+  - : Returned if, after creating the stream, applying the specified `constraints` fails
     because no compatible stream could be generated.
-- {{JSxRef("TypeError")}}
-  - : The specified `constraints` include constraints which are not permitted
+- `TypeError` {{domxref("DOMException")}}
+  - : Returned if the specified `constraints` include constraints which are not permitted
     when calling `getDisplayMedia()`. These unsupported constraints are
     `advanced` and any constraints which in turn have a member named
     `min` or `exact`.
@@ -111,8 +111,7 @@ details measures browsers are required to take in order to fully support
 
 In the example below, a `startCapture()` method is created which initiates
 screen capture given a set of options specified by the `displayMediaOptions`
-parameter. The options are specified in the form of a
-{{domxref("MediaStreamConstraints")}} object which specifies the preferred stream
+parameter. The options are specified in an object which specifies the preferred stream
 configuration and the [display
 surface](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture#visible_vs_logical_display_surfaces) from which video is to be captured.
 

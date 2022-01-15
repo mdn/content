@@ -13,28 +13,17 @@ browser-compat: api.MouseEvent.ctrlKey
 ---
 {{APIRef("DOM Events")}}
 
-The **`MouseEvent.ctrlKey`** read-only property is a
-boolean value that indicates whether the <kbd>ctrl</kbd> key was pressed or not
-when a given mouse event occurs.
+The **`MouseEvent.ctrlKey`** read-only property is a boolean value that indicates whether the <kbd>ctrl</kbd> key was pressed or not when a given mouse event occurs.
 
-> **Note:** On Macintosh keyboards, this key is the <kbd>control</kbd>
-> key.
+> **Note:** On Macintosh keyboards, this key is the <kbd>control</kbd> key.
 
-## Syntax
+## Value
 
-```js
-var ctrlKeyPressed = instanceOfMouseEvent.ctrlKey
-```
-
-### Return value
-
-A boolean value, where `true` indicates that the key is pressed, and
-`false` indicates that the key is _not_ pressed.
+A boolean value, where `true` indicates that the key is pressed, and `false` indicates that the key is _not_ pressed.
 
 ## Example
 
-This example logs the `ctrlKey` property when you trigger a
-{{Event("click")}} event.
+This example logs the `ctrlKey` property when you trigger a {{Event("click")}} event.
 
 ### HTML
 

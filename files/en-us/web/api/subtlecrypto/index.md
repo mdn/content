@@ -14,7 +14,7 @@ browser-compat: api.SubtleCrypto
 ---
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-The **`SubtleCrypto`** interface of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) provides a number of low-level cryptographic functions. Access to the features of `SubtleCrypto` is obtained through the {{domxref("Crypto.subtle", "subtle")}} property of the {{domxref("Crypto")}} object you get from {{domxref("Window.crypto")}}.
+The **`SubtleCrypto`** interface of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) provides a number of low-level cryptographic functions. Access to the features of `SubtleCrypto` is obtained through the {{domxref("Crypto.subtle", "subtle")}} property of the {{domxref("Crypto")}} object you get from the {{domxref("crypto_property", "crypto")}} property.
 
 > **Warning:** This API provides a number of low-level cryptographic primitives. It's very easy to misuse them, and the pitfalls involved can be very subtle.
 >
@@ -22,7 +22,7 @@ The **`SubtleCrypto`** interface of the [Web Crypto API](/en-US/docs/Web/API/Web
 >
 > Errors in security system design and implementation can make the security of the system completely ineffective.
 >
-> **If you're not sure you know what you are doing, you probably shouldn't be using this API.**
+> Please learn and experiment, but don't guarantee or imply the security of your work before an individual knowledgeable in this subject matter thoroughly reviews it. The [Crypto 101 Course](https://www.crypto101.io/) can be a great place to start learning about the design and implementation of secure systems.
 
 ## Properties
 
@@ -275,6 +275,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
 ## See also
 
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
+- [Non-cryptographic uses of SubtleCrypto](/en-US/docs/Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto)
 - [Web security](/en-US/docs/Web/Security)
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)
 - {{domxref("Crypto")}} and {{domxref("Crypto.subtle")}}.

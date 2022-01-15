@@ -5,6 +5,7 @@ tags:
   - Event
 browser-compat: api.AudioTrackList.removetrack_event
 ---
+
 {{APIRef}}
 
 The `removetrack` event is fired when a track is removed from an [`AudioTrackList`](/en-US/docs/Web/API/AudioTrackList).
@@ -41,9 +42,9 @@ The `removetrack` event is fired when a track is removed from an [`AudioTrackLis
 Using `addEventListener()`:
 
 ```js
-const videoElement = document.querySelector('video');
+const videoElement = document.querySelector("video");
 
-videoElement.audioTracks.addEventListener('removetrack', (event) => {
+videoElement.audioTracks.addEventListener("removetrack", (event) => {
   console.log(`Audio track: ${event.track.label} removed`);
 });
 ```
@@ -51,7 +52,7 @@ videoElement.audioTracks.addEventListener('removetrack', (event) => {
 Using the `onremovetrack` event handler property:
 
 ```js
-const videoElement = document.querySelector('video');
+const videoElement = document.querySelector("video");
 
 videoElement.audioTracks.onremovetrack = (event) => {
   console.log(`Audio track: ${event.track.label} removed`);
@@ -72,4 +73,4 @@ videoElement.audioTracks.onremovetrack = (event) => {
 - This event on [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList) targets: [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event)
 - This event on [`MediaStream`](/en-US/docs/Web/API/MediaStream) targets: [`removetrack`](/en-US/docs/Web/API/MediaStream/removetrack_event)
 - [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

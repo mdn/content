@@ -78,6 +78,7 @@ text-emphasis-style: unset;
 
 ```css
 h2 {
+  -webkit-text-emphasis-style: sesame;
   text-emphasis-style: sesame;
 }
 ```

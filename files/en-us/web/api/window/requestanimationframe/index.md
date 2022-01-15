@@ -87,8 +87,9 @@ const element = document.getElementById('some-element-you-want-to-animate');
 let start, previousTimeStamp;
 
 function step(timestamp) {
-  if (start === undefined)
+  if (start === undefined) {
     start = timestamp;
+    }
   const elapsed = timestamp - start;
 
   if (previousTimeStamp !== timestamp) {
@@ -121,7 +122,6 @@ Edge versions below 17 and Internet Explorer do not reliably fire
 
 ## See also
 
-- {{domxref("Window.mozAnimationStartTime")}}
 - {{domxref("Window.cancelAnimationFrame()")}}
 - [mozRequestAnimationFrame](http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html)
   \- Blog post
@@ -129,9 +129,6 @@ Edge versions below 17 and Internet Explorer do not reliably fire
   for smart animating](https://paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
 - [Animating
   with javascript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
-- [Using
-  PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 1](https://blogs.msdn.com/b/ie/archive/2011/07/05/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-1.aspx) - Blog
-  post
 - [TestUFO: Test your web
   browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)
 - Paul Irish: [requestAnimationFrame

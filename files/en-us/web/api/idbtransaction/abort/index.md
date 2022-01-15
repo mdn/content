@@ -31,11 +31,8 @@ transaction.abort();
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following type:
-
-| **Exception**                                | **Description**                                        |
-| -------------------------------------------- | ------------------------------------------------------ |
-| {{exception("InvalidStateError")}} | The transaction has already been committed or aborted. |
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the transaction has already been committed or aborted.
 
 ## Example
 

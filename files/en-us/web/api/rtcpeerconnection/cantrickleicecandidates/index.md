@@ -15,6 +15,7 @@ tags:
   - canTrickleIceCandidates
 browser-compat: api.RTCPeerConnection.canTrickleIceCandidates
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **{{domxref("RTCPeerConnection")}}** property **`canTrickleIceCandidates`**
@@ -37,7 +38,7 @@ offer contains all of the candidates.
 ## Syntax
 
 ```js
- var canTrickle = RTCPeerConnection.canTrickleIceCandidates;
+var canTrickle = RTCPeerConnection.canTrickleIceCandidates;
 ```
 
 ### Value
@@ -85,7 +86,7 @@ been established, this value is `null`.
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection.addIceCandidate()")}}
 - [Lifetime of a WebRTC
   session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)

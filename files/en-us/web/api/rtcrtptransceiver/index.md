@@ -25,9 +25,9 @@ A transceiver is uniquely identified using its {{domxref("RTCRtpTransceiver.mid"
 ## Properties
 
 - {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} {{ReadOnlyInline}}
-  - : A read-only string from the enum {{domxref("RTCRtpTransceiverDirection")}} which indicates the transceiver's current directionality, or `null` if the transceiver is stopped or has never participated in an exchange of offers and answers. To change the transceiver's directionality, set the value of the {{domxref("RTCRtpTransceiver.direction", "direction")}} property.
+  - : A read-only string which indicates the transceiver's current directionality, or `null` if the transceiver is stopped or has never participated in an exchange of offers and answers. To change the transceiver's directionality, set the value of the {{domxref("RTCRtpTransceiver.direction", "direction")}} property.
 - {{domxref("RTCRtpTransceiver.direction", "direction")}}
-  - : A string from the enum {{domxref("RTCRtpTransceiverDirection")}} which is used to set the transceiver's desired direction.
+  - : A string which is used to set the transceiver's desired direction.
 - {{domxref("RTCRtpTransceiver.mid", "mid")}} {{ReadOnlyInline}}
   - : The media ID of the m-line associated with this transceiver. This association is established, when possible, whenever either a local or remote description is applied. This field is `null` if neither a local or remote description has been applied, or if its associated m-line is rejected by either a remote offer or any answer.
 - {{domxref("RTCRtpTransceiver.receiver", "receiver")}} {{ReadOnlyInline}}

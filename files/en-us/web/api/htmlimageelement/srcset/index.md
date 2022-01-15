@@ -118,7 +118,7 @@ displays while the 400-pixel version should be used for 2x displays.
 <div class="box">
   <img src="/en-us/web/html/element/img/clock-demo-200px.png"
        alt="Clock"
-       srcset="/en-us/web/html/element/img/clock-demo-200px.png 1x, /en-us/web/html/element/img/clock-demo-400px.png">
+       srcset="/en-us/web/html/element/img/clock-demo-200px.png 1x, /en-us/web/html/element/img/clock-demo-400px.png 2x">
 </div>
 ```
 
@@ -146,17 +146,19 @@ the wrap must occur.
 ### JavaScript
 
 The following code is run within a handler for the {{domxref("Window", "window")}}'s
-{{domxref("Window.load_event", "load")}} event.  It uses the image's 
+{{domxref("Window.load_event", "load")}} event.  It uses the image's
 {{domxref("HTMLImageElement.currentSrc", "currentSrc")}} property to fetch and display
 the URL selected by the browser from the `srcset`.
 
 ```js
-let box = document.querySelector(".box");
-let image = box.querySelector("img");
+window.addEventListener("load", () => {
+  let box = document.querySelector(".box");
+  let image = box.querySelector("img");
 
-let newElem = document.createElement("p");
-newElem.innerHTML = `Image: <code>${image.currentSrc}</code>`;
-box.appendChild(newElem);
+  let newElem = document.createElement("p");
+  newElem.innerHTML = `Image: <code>${image.currentSrc}</code>`;
+  box.appendChild(newElem);
+});
 ```
 
 ### Result

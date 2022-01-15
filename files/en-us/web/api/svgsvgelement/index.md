@@ -13,11 +13,11 @@ browser-compat: api.SVGSVGElement
 
 The **`SVGSVGElement`** interface provides access to the properties of {{SVGElement("svg")}} elements, as well as methods to manipulate them. This interface contains also various miscellaneous commonly-used utility methods, such as matrix operations and the ability to control the time of redraw on visual rendering devices.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
-_This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGZoomAndPan")}}, {{domxref("SVGFitToViewBox")}}, and {{domxref("WindowEventHandlers")}}._
+_This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGFitToViewBox")}} and {{domxref("WindowEventHandlers")}}._
 
 - {{domxref("SVGSVGElement.x")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("x")}} attribute of the given {{SVGElement("svg")}} element.
@@ -70,7 +70,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 
 ## Methods
 
-_This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGZoomAndPan")}}, {{domxref("SVGFitToViewBox")}}, and {{domxref("WindowEventHandlers")}}._
+_This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGFitToViewBox")}} and {{domxref("WindowEventHandlers")}}._
 
 - {{domxref("SVGSVGElement.suspendRedraw()")}} {{deprecated_inline}}
 

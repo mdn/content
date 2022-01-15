@@ -13,7 +13,7 @@ browser-compat: api.RTCIceServer
 ---
 {{DefaultAPISidebar("WebRTC")}}
 
-The **`RTCIceServer`** dictionary defines how to connect to a single ICE server (such as a {{Glossary("STUN")}} or {{Glossary("TURN")}} server). Objects of this type are provided in the [configuration](/en-US/docs/Web/API/RTCConfiguration) of an {{domxref("RTCPeerConnection")}}, in the {{domxref("RTCConfiguration.iceServers", "iceServers")}} array.
+The **`RTCIceServer`** dictionary defines how to connect to a single ICE server (such as a {{Glossary("STUN")}} or {{Glossary("TURN")}} server). Objects of this type are provided in the [configuration](/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#parameters) of an {{domxref("RTCPeerConnection")}}, in the `iceServers` array.
 
 ## Properties
 
@@ -66,6 +66,5 @@ Once the configuration object has been created, it is passed into the {{domxref(
 ## See also
 
 - {{domxref("RTCPeerConnection")}}
-- {{domxref("RTCConfiguration")}}
 - [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
 - [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)

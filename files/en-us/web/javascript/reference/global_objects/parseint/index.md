@@ -46,7 +46,7 @@ An integer parsed from the given `string`.
 
 Or {{jsxref("NaN")}} when
 
-- the `radix` is smaller than `2` or bigger than
+- the `radix` modulo `2**32` is smaller than `2` or bigger than
   `36`, or
 - the first non-whitespace character cannot be converted to a number.
 
@@ -169,7 +169,7 @@ parseInt('0xF', 16)
 parseInt('F', 16)
 parseInt('17', 8)
 parseInt(021, 8)
-parseInt('015', 10)    // but `parseInt(015, 8)` will return 13
+parseInt('015', 10)    // but `parseInt('015', 8)` will return 13
 parseInt(15.99, 10)
 parseInt('15,123', 10)
 parseInt('FXX123', 16)

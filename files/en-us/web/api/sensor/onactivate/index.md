@@ -23,7 +23,7 @@ called when one of the Sensor interface's child interfaces becomes active.
 
 ```js
 sensorInstance.onactivate = function
-   sensorInstance.addEventListener('activate', function() { ... })
+   sensorInstance.addEventListener('activate', function() { /* ... */ })
 ```
 
 Because {{domxref('Sensor')}} is a base class, `onactivate` may only be used

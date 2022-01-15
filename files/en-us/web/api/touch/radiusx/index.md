@@ -22,7 +22,9 @@ This value, in combination with {{ domxref("Touch.radiusY") }} and {{ domxref("T
 
 ## Syntax
 
-    var xRadius = touchItem.radiusX;
+```js
+var xRadius = touchItem.radiusX;
+```
 
 ### Return value
 

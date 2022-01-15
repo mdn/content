@@ -41,7 +41,7 @@ formData.append(name, value, filename);
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ## Example
 

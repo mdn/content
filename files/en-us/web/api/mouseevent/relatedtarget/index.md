@@ -13,8 +13,9 @@ browser-compat: api.MouseEvent.relatedTarget
 ---
 {{APIRef("DOM Events")}}
 
-The **`MouseEvent.relatedTarget`** read-only property is the
-secondary target for the mouse event, if there is one. That is:
+The **`MouseEvent.relatedTarget`** read-only property is the secondary target for the mouse event, if there is one.
+
+That is:
 
 <table class="no-markdown">
   <thead>
@@ -26,7 +27,7 @@ secondary target for the mouse event, if there is one. That is:
   </thead>
   <tbody>
     <tr>
-      <td>{{Event("mouseenter")}}</td>
+      <td>{{domxref("Element/mouseenter_event", "mouseenter")}}</td>
       <td>
         The {{domxref("EventTarget")}} the pointing device entered to
       </td>
@@ -35,7 +36,7 @@ secondary target for the mouse event, if there is one. That is:
       </td>
     </tr>
     <tr>
-      <td>{{Event("mouseleave")}}</td>
+      <td>{{domxref("Element/mouseleave_event", "mouseleave")}}</td>
       <td>
         The {{domxref("EventTarget")}} the pointing device exited from
       </td>
@@ -44,7 +45,7 @@ secondary target for the mouse event, if there is one. That is:
       </td>
     </tr>
     <tr>
-      <td>{{Event("mouseout")}}</td>
+      <td>{{domxref("Element/mouseout_event", "mouseout")}}</td>
       <td>
         The {{domxref("EventTarget")}} the pointing device exited from
       </td>
@@ -53,7 +54,7 @@ secondary target for the mouse event, if there is one. That is:
       </td>
     </tr>
     <tr>
-      <td>{{Event("mouseover")}}</td>
+      <td>{{domxref("Element/mouseover_event", "mouseover")}}</td>
       <td>
         The {{domxref("EventTarget")}} the pointing device entered to
       </td>
@@ -87,13 +88,7 @@ For events with no secondary target, `relatedTarget` returns
 
 {{domxref("FocusEvent.relatedTarget")}} is a similar property for focus events.
 
-## Syntax
-
-```js
-var target = instanceOfMouseEvent.relatedTarget
-```
-
-### Return value
+## Value
 
 An {{domxref("EventTarget")}} object or `null`.
 
@@ -178,5 +173,4 @@ function overListener(event) {
 ## See also
 
 - {{ domxref("MouseEvent") }}
-- [Comparison of Event
-  Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)

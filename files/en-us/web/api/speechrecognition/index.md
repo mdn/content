@@ -3,7 +3,6 @@ title: SpeechRecognition
 slug: Web/API/SpeechRecognition
 tags:
   - API
-  - Experimental
   - Interface
   - Reference
   - SpeechRecognition
@@ -12,7 +11,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`SpeechRecognition`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is the controller interface for the recognition service; this also handles the {{domxref("SpeechRecognitionEvent")}} sent from the recognition service.
 

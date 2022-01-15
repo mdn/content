@@ -67,7 +67,7 @@ Sometimes, during the lifetime of a WebRTC session, network conditions change. O
 
 > **Note:** Different browsers support ICE restart under different sets of conditions. Not all browsers will perform ICE restart due to network congestion, for example.
 
-If you need to change the configuration of the connection in some way (such as changing to a different set of ICE servers), you can do so before restarting ICE by calling {{domxref("RTCPeerConnection.setConfiguration()")}} with an updated {{domxref("RTCConfiguration")}} dictionary before restarting ICE.
+If you need to change the configuration of the connection in some way (such as changing to a different set of ICE servers), you can do so before restarting ICE by calling {{domxref("RTCPeerConnection.setConfiguration()")}} with an updated configuration object before restarting ICE.
 
 To explicitly trigger ICE restart, start the renegotiation process by calling {{domxref("RTCPeerConnection.createOffer()")}}, specifying the `iceRestart` option with a value of `true`. Then handle the connection process from then on just like you normally would. This generates new values for the ICE username fragment (ufrag) and password, which will be used by the renegotiation process and the resulting connection.
 

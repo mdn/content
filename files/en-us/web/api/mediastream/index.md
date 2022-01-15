@@ -30,7 +30,7 @@ _This interface inherits properties from its parent, {{domxref("EventTarget")}}.
 - {{domxref("MediaStream.active")}} {{readonlyinline}}
   - : A Boolean value that returns `true` if the `MediaStream` is active, or `false` otherwise.
 - {{domxref("MediaStream.id")}} {{readonlyInline}}
-  - : A {{domxref("DOMString")}} containing 36 characters denoting a universally unique identifier (UUID) for the object.
+  - : A {{domxref("DOMString")}} containing 36 characters denoting a universally unique identifier ({{Glossary("UUID")}}) for the object.
 
 ### Event handlers
 

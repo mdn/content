@@ -45,9 +45,9 @@ Created frames may then turned into a media track, for example with the {{domxre
 - {{domxref("VideoFrame.displayHeight")}}{{ReadOnlyInline}}
   - : Returns the height of the `VideoFrame` when displayed after applying aspect ratio adjustments.
 - {{domxref("VideoFrame.duration")}}{{ReadOnlyInline}}
-  - : Returns an integer indicating the duration of the audio in microseconds.
+  - : Returns an integer indicating the duration of the video in microseconds.
 - {{domxref("VideoFrame.timestamp")}}{{ReadOnlyInline}}
-  - : Returns an integer indicating the timestamp of the audio in microseconds.
+  - : Returns an integer indicating the timestamp of the video in microseconds.
 - {{domxref("VideoFrame.colorSpace")}}{{ReadOnlyInline}}
   - : Returns a {{domxref("VideoColorSpace")}} object.
 

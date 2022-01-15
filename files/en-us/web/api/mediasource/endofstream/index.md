@@ -51,27 +51,9 @@ mediaSource.endOfStream(endOfStreamError);
 
 ### Exceptions
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>
-        {{domxref("MediaSource.readyState")}} is not equal to
-        <code>open</code>, or one or more of the
-        {{domxref("SourceBuffer")}} objects in
-        {{domxref("MediaSource.sourceBuffers")}} are being updated
-        (i.e. their {{domxref("SourceBuffer.updating")}} property is
-        <code>true</code>.)
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if {{domxref("MediaSource.readyState")}} is not equal to `open`, or one or more of the {{domxref("SourceBuffer")}} objects in {{domxref("MediaSource.sourceBuffers")}} are being updated (i.e. their {{domxref("SourceBuffer.updating")}} property is
+      `true`.)
 
 ## Example
 

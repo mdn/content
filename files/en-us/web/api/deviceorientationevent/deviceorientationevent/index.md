@@ -25,7 +25,7 @@ var deviceOrientationEvent = new DeviceOrientationEvent(type[, options])
 
 - _type_
   - : Either `"deviceorientation"` or `"deviceorientationabsolute"`.
-    If the later, then `options.absolute` should be true.
+    If the latter, then `options.absolute` should be true.
 - _options_ {{optional_inline}}
 
   - : Options are as follows:

@@ -65,7 +65,7 @@ function onInputSourcesChange(event) {
 }
 ```
 
-You can also add a handler for `inputsourceschange` events by setting the {{domxref("XRSession.oninputsourceschange", "oninputsourceschange")}} event handler:
+You can also add a handler for `inputsourceschange` events by setting the `oninputsourceschange` event handler:
 
 ```js
 xrSession.oninputsourceschange = onInputSourcesChange;

@@ -17,8 +17,10 @@ This event is only fired for ports associated with removable devices such as tho
 
 ## Syntax
 
-    Serial.ondisconnect = function(event);
-    Serial.addEventListener('disconnect', function(event));
+```js
+Serial.ondisconnect = function(event);
+Serial.addEventListener('disconnect', function(event));
+```
 
 ## Example
 

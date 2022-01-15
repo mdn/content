@@ -12,7 +12,7 @@ browser-compat: api.Window.transitionstart_event
 ---
 {{APIRef}} {{SeeCompatTable}}
 
-The **`transitionstart`** event is fired when a [CSS transition](/en-US/docs/CSS/Using_CSS_transitions) has actually started, i.e., after any {{cssxref("transition-delay")}} has ended.
+The **`transitionstart`** event is fired when a [CSS transition](/en-US/docs/Web/CSS/Using_CSS_transitions) has actually started, i.e., after any {{cssxref("transition-delay")}} has ended.
 
 <table class="properties">
   <tbody>

@@ -12,7 +12,7 @@ browser-compat: api.HTMLSpanElement
 
 The **`HTMLSpanElement`** interface represents a {{HTMLElement("span")}} element and derives from the {{DOMxRef("HTMLElement")}} interface, but without implementing any additional properties or methods.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

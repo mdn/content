@@ -15,7 +15,9 @@ The **`writable`** read-only property of the {{domxref("SerialPort")}} interface
 
 ## Syntax
 
-    var writableStream = SerialPort.writable;
+```js
+var writableStream = SerialPort.writable;
+```
 
 ### Value
 

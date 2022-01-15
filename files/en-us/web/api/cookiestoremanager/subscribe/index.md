@@ -15,7 +15,9 @@ The **`subscribe()`** method of the {{domxref("CookieStoreManager")}} interface 
 
 ## Syntax
 
-    let promise = registration.cookies.subscribe(subscriptions);
+```js
+let promise = registration.cookies.subscribe(subscriptions);
+```
 
 ### Parameters
 

@@ -2257,7 +2257,7 @@ Starting in Firefox 60 {{geckoRelease("60.0")}}, Gecko sets `keyCode` values of 
   </tfoot>
 </table>
 
-**Note:** Recent Mac doesn't have a <kbd>NumLock</kbd> key, and therefore state. That's why the unlocked state is not available.
+> **Note:** Recent Mac doesn't have a <kbd>NumLock</kbd> key, and therefore state. That's why the unlocked state is not available.
 
 ## Constants for keyCode value
 

@@ -24,7 +24,7 @@ animation.updateTiming(timing);
 ### Parameters
 
 - `timing`
-  - : An [`OptionalEffectTiming`](https://drafts.csswg.org/web-animations/#dictdef-optionaleffecttiming) object containing the timing properties to update.
+  - : An object containing the timing properties to update.
 
 ### Return Value
 

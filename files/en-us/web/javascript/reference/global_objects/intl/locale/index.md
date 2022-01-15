@@ -35,22 +35,34 @@ Traditionally, the Intl API used strings to represent locales, just as Unicode d
   - : Returns basic, core information about the `Locale` in the form of a substring of the complete data string.
 - {{jsxref("Intl/Locale/calendar", "Intl.Locale.prototype.calendar")}}
   - : Returns the part of the `Locale` that indicates the Locale's calendar era.
+- {{jsxref("Intl/Locale/calendars", "Intl.Locale.prototype.calendars")}}
+  - : Returns an {{jsxref("Array")}} of available calendar identifiers, according to the locale's rules.
 - {{jsxref("Intl/Locale/caseFirst", "Intl.Locale.prototype.caseFirst")}}
   - : Returns whether case is taken into account for the locale's collation rules.
 - {{jsxref("Intl/Locale/collation", "Intl.Locale.prototype.collation")}}
   - : Returns the collation type for the `Locale`, which is used to order strings according to the locale's rules.
 - {{jsxref("Intl/Locale/hourCycle", "Intl.Locale.prototype.hourCycle")}}
   - : Returns the time keeping format convention used by the locale.
+- {{jsxref("Intl/Locale/hourCycles", "Intl.Locale.prototype.hourCycles")}}
+  - : Returns an {{jsxref("Array")}} of hour cycle identifiers, indicating either the 12-hour format ("h11", "h12") or the 24-hour format ("h23", "h24").
 - {{jsxref("Intl/Locale/language", "Intl.Locale.prototype.language")}}
   - : Returns the language associated with the locale.
 - {{jsxref("Intl/Locale/numberingSystem", "Intl.Locale.prototype.numberingSystem")}}
   - : Returns the numeral system used by the locale.
+- {{jsxref("Intl/Locale/numberingSystems", "Intl.Locale.prototype.numberingSystems")}}
+  - : Returns an {{jsxref("Array")}} of numbering system identifiers available according to the locale's rules.
 - {{jsxref("Intl/Locale/numeric", "Intl.Locale.prototype.numeric")}}
   - : Returns whether the locale has special collation handling for numeric characters.
 - {{jsxref("Intl/Locale/region", "Intl.Locale.prototype.region")}}
   - : Returns the region of the world (usually a country) associated with the locale.
 - {{jsxref("Intl/Locale/script", "Intl.Locale.prototype.script")}}
   - : Returns the script used for writing the particular language used in the locale.
+- {{jsxref("Intl/Locale/textInfo", "Intl.Locale.prototype.textInfo")}}
+  - : Returns the part indicating the ordering of characters `ltr` (left-to-right) or `rtl` (right-to-left).
+- {{jsxref("Intl/Locale/timeZones", "Intl.Locale.prototype.timeZones")}}
+  - : Returns an {{jsxref("Array")}} of time zone identifiers, associated with the `Locale`.
+- {{jsxref("Intl/Locale/weekInfo", "Intl.Locale.prototype.weekInfo")}}
+  - : Returns [UTS 35's Week Elements](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Patterns_Week_Elements) according to the locale rules.
 
 ## Instance methods
 

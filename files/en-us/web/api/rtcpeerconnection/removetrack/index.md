@@ -46,8 +46,8 @@ pc.removeTrack(sender);
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : The connection is not open.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the connection is not open.
 
 ## Example
 

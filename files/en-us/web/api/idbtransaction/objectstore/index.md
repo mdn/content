@@ -41,12 +41,10 @@ An {{domxref("IDBObjectStore")}} object for accessing an object store.
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of one of the following types:
-
-| Exception           | Description                                                                                                   |
-| ------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `NotFoundError`     | The requested object store is not in this transaction's scope.                                                |
-| `InvalidStateError` | The request was made on a source object that has been deleted or removed, or if the transaction has finished. |
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if the requested object store is not in this transaction's scope.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the request was made on a source object that has been deleted or removed, or if the transaction has finished.
 
 ## Example
 
@@ -117,6 +115,5 @@ function addData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example
-  live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+  ([view example live](https://mdn.github.io/to-do-notifications/).)

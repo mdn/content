@@ -77,7 +77,7 @@ If the destination is an `AudioParam`, `connect()` returns
 The most obvious use of the `connect()` method is to direct the audio output
 from one node into the audio input of another node for further processing. For example,
 you might send the audio from a {{domxref("MediaElementAudioSourceNode")}}—that is, the
-audio from an HTML5 media element such as {{HTMLElement("audio")}}—through a band pass
+audio from an HTML media element such as {{HTMLElement("audio")}}—through a band pass
 filter implemented using a {{domxref("BiquadFilterNode")}} to reduce noise before then
 sending the audio along to the speakers.
 
@@ -115,7 +115,7 @@ var oscillator = audioCtx.createOscillator();
 var lfo = audioCtx.createOscillator();
 
 // set the frequency of the second oscillator to a low number
-lfo.frequency.value = 2.0; // 2Hz: two oscillations par second
+lfo.frequency.value = 2.0; // 2Hz: two oscillations per second
 
 // create a gain whose gain AudioParam will be controlled by the LFO
 var gain = audioCtx.createGain();

@@ -49,14 +49,14 @@ navigator.mediaDevices.selectAudioOutput(options)
 A {{ jsxref("Promise") }} that receives a {{domxref("MediaDeviceInfo")}} object when the promise is fulfilled.
 The object describes the user-selected audio output device.
 
-The promise may be rejected with one of the following errors:
+### Exceptions
 
-- `NotAllowedError`
-  - : The current page has not been granted the {{HTTPHeader("Feature-Policy/speaker-selection","speaker-selection")}} permission or the user closed the selection prompt without choosing a device.
-- `NotFoundError`
-  - : There are no available audio output devices.
-- `InvalidStateError`
-  - : `selectAudioOutput` requires {{Glossary("transient activation")}} (you must trigger it from some kind of UI event).
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Returned if the current page has not been granted the {{HTTPHeader("Feature-Policy/speaker-selection","speaker-selection")}} permission or the user closed the selection prompt without choosing a device.
+- `NotFoundError`  {{domxref("DOMException")}}
+  - : Returned if there are no available audio output devices.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if there hasn't been a {{Glossary("transient activation")}} (you must trigger it from some kind of UI event).
 
 ## Example
 

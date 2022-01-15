@@ -8,7 +8,7 @@ tags:
   - Primitive
 browser-compat: javascript.builtins.null
 ---
-{{jsSidebar("Operators")}}
+{{jsSidebar("Objects")}}
 
 The value `null` represents the intentional absence of any object value. It
 is one of JavaScript's [primitive values](/en-US/docs/Glossary/Primitive) and
@@ -56,7 +56,7 @@ typeof undefined     // "undefined"
 null === undefined   // false
 null  == undefined   // true
 null === null        // true
-null == null         // true
+null  == null        // true
 !null                // true
 isNaN(1 + null)      // false
 isNaN(1 + undefined) // true

@@ -33,10 +33,6 @@ tags:
 - {{CSSxRef("text-overflow")}}
 - {{CSSxRef("user-select")}}
 
-## Guides
-
-- [Using URL values for the `cursor` property](/en-US/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property)
-  - : Explains how a URL can be used with the {{CSSxRef("cursor")}} property to produce custom cursors.
 
 ## Specifications
 

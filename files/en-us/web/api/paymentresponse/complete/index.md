@@ -61,11 +61,11 @@ the exceptions listed below.
 
 ### Exceptions
 
-- `AbortError`
-  - : The document in which the payment request is taking place became inactive while the
+- `AbortError` {{domxref("DOMException")}}
+  - : Returned if the document in which the payment request is taking place became inactive while the
     user interface was shown.
-- `InvalidStateError`
-  - : The payment has already completed, or `complete()` was called while a
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the payment has already completed, or `complete()` was called while a
     request to retry the payment is pending. You can't treat a payment as complete after
     requesting that the payment be tried again.
 

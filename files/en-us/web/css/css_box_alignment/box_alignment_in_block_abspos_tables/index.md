@@ -25,10 +25,6 @@ The {{cssxref("justify-self")}} property is used to align an item inside its con
 
 This property does not apply to floated elements or table cells.
 
-### Absolutely positioned elements
-
-The alignment container is the positioned block, accounting for the offset values of top, left, bottom, and right. The normal keyword resolves to `stretch`, unless the positioned item is a replaced element, in which case it resolves to `start`.
-
 ## align-self
 
 The {{cssxref("align-self")}} property does not apply to block-level boxes (including floats), because there is more than one item in the block axis. It also does not apply to table cells.

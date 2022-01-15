@@ -12,11 +12,11 @@ browser-compat: http.headers.If-Modified-Since
 {{HTTPSidebar}}
 
 The **`If-Modified-Since`** request HTTP header makes the
-request conditional: the server will send back the requested resource, with a
+request conditional: the server sends back the requested resource, with a
 {{HTTPStatus("200")}} status, only if it has been last modified after the given date. If
-the resource has not been modified since, the response will be a {{HTTPStatus("304")}}
+the resource has not been modified since, the response is a {{HTTPStatus("304")}}
 without any body; the {{HTTPHeader("Last-Modified")}} response header of a previous
-request will contain the date of last modification. Unlike
+request contains the date of last modification. Unlike
 {{HTTPHeader("If-Unmodified-Since")}}, `If-Modified-Since` can only be used
 with a {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}}.
 

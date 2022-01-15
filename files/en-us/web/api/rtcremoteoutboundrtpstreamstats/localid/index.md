@@ -52,7 +52,7 @@ includes an `remote-outbound-rtp` statistics object (of type
 `RTCRemoteOutboundRtpStreamstats`), it should also have a corresponding
 `inbound-rtp` object. Both of these provide information about the same batch
 of packets being transmitted from the remote peer to the local device. The difference is
-that `remote-outbound-rtp` describes statistics about the transmission(s) 
+that `remote-outbound-rtp` describes statistics about the transmission(s)
 from the perspective of the remote peer, while `inbound-rtp` offers
 statistics about the incoming data from the local peer's perspective.
 

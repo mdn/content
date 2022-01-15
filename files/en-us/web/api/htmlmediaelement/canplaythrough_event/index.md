@@ -41,15 +41,6 @@ The `canplaythrough` event is fired when the user agent can play the media, and 
         {{domxref("GlobalEventHandlers.oncanplaythrough")}}
       </td>
     </tr>
-    <tr>
-      <th scope="row">Specification</th>
-      <td>
-        <a
-          href="https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-playing"
-          >HTML5 media</a
-        >
-      </td>
-    </tr>
   </tbody>
 </table>
 
@@ -74,7 +65,7 @@ Using the `oncanplaythrough` event handler property:
 const video = document.querySelector('video');
 
 video.oncanplaythrough = (event) => {
-  console.log('I think I can play thru the entire ' +
+  console.log('I think I can play through the entire ' +
       'video without ever having to stop to buffer.');
 };
 ```

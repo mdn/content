@@ -77,28 +77,27 @@ Using the `flex-direction` property with values of `row-reverse` or `column-reve
 
 ```html
 <h4>This is a Column-Reverse</h4>
-<div id="content">
-  <div class="box" style="background-color:red;">A</div>
-  <div class="box" style="background-color:lightblue;">B</div>
-  <div class="box" style="background-color:yellow;">C</div>
+<div id="col-rev" class="content">
+  <div class="box red">A</div>
+  <div class="box lightblue">B</div>
+  <div class="box yellow">C</div>
 </div>
 <h4>This is a Row-Reverse</h4>
-<div id="content1">
-  <div class="box1" style="background-color:red;">A</div>
-  <div class="box1" style="background-color:lightblue;">B</div>
-  <div class="box1" style="background-color:yellow;">C</div>
+<div id="row-rev" class="content">
+  <div class="box red">A</div>
+  <div class="box lightblue">B</div>
+  <div class="box yellow">C</div>
 </div>
 ```
 
 #### CSS
 
 ```css
-#content {
+.content {
   width: 200px;
   height: 200px;
   border: 1px solid #c3c3c3;
   display: flex;
-  flex-direction: column-reverse;
 }
 
 .box {
@@ -106,17 +105,24 @@ Using the `flex-direction` property with values of `row-reverse` or `column-reve
   height: 50px;
 }
 
-#content1 {
-  width: 200px;
-  height: 200px;
-  border: 1px solid #c3c3c3;
-  display: flex;
+#col-rev {
+  flex-direction: column-reverse;
+}
+
+#row-rev {
   flex-direction: row-reverse;
 }
 
-.box1 {
-  width: 50px;
-  height: 50px;
+.red {
+  background-color: red;
+}
+
+.lightblue {
+  background-color: lightblue;
+}
+
+.yellow {
+  background-color: yellow;
 }
 ```
 

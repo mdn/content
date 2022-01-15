@@ -42,14 +42,9 @@ let pc = new RTCPeerConnection();
 let dc = pc.createDataChannel("PlayerControl");
 
 dc.onerror = function(event) {
-  myUILibrary.doAlertBox({
-    'Network Error',        // Alert title
-    'The error "' + event.message +
-           '" occurred while handling player control network messages.',
-    event.filename,
-    event.lineno,
-    event.colno
-  });
+  myUILibrary.doAlertBox('Network Error', // Alert title
+    `The error ${event.message} occurred while handling player control network messages`, // Error msg
+    event.filename, event.lineno, event.colno); // Error location
 }
 
 /* ... */

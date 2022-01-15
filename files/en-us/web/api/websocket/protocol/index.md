@@ -19,7 +19,7 @@ object, or the empty string if no connection is established.
 ## Syntax
 
 ```js
-var protocol = aWebSocket.protocol;
+const protocol = aWebSocket.protocol;
 ```
 
 ## Value

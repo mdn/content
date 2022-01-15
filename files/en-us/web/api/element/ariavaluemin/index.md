@@ -13,12 +13,14 @@ browser-compat: api.Element.ariaValueMin
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaValueMin`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute) attribute, which defines the minimum allowed value for a range widget.
+The **`ariaValueMin`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) attribute, which defines the minimum allowed value for a range widget.
 
 ## Syntax
 
-    var ariaValueMin = element.ariaValueMin;
-    element.ariaValueMin = ariaValueMin
+```js
+var ariaValueMin = element.ariaValueMin;
+element.ariaValueMin = ariaValueMin
+```
 
 ### Value
 

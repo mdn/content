@@ -23,7 +23,9 @@ In Chrome a policy with a name of "default" creates a special policy that will b
 
 ## Syntax
 
-    var policy = TrustedTypePolicyFactory.createPolicy(policyName,policyOptions);
+```js
+var policy = TrustedTypePolicyFactory.createPolicy(policyName,policyOptions);
+```
 
 ### Parameters
 

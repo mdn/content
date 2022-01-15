@@ -11,8 +11,7 @@ browser-compat: api.CanvasRenderingContext2D.putImageData
 ---
 {{APIRef}}
 
-The
-**`CanvasRenderingContext2D.putImageData()`**
+The **`CanvasRenderingContext2D.putImageData()`**
 method of the Canvas 2D API paints data from the given {{domxref("ImageData")}} object
 onto the canvas. If a dirty rectangle is provided, only the pixels from that rectangle
 are painted. This method is not affected by the canvas transformation matrix.
@@ -21,8 +20,7 @@ are painted. This method is not affected by the canvas transformation matrix.
 > {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}} method.
 
 You can find more information about `putImageData()` and general
-manipulation of canvas contents in the article [Pixel
-manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas).
+manipulation of canvas contents in the article [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas).
 
 ## Syntax
 
@@ -52,11 +50,11 @@ void ctx.putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight
 - `dirtyHeight` {{optional_inline}}
   - : Height of the rectangle to be painted. Defaults to the height of the image data.
 
-### Errors thrown
+### Exceptions
 
-- `NotSupportedError`
+- `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if any of the arguments is infinite.
-- `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the `ImageData` object's data has been detached.
 
 ## Examples
@@ -141,8 +139,10 @@ console.log("after:", pixels2);
 
 The output might look like:
 
-    before: Uint8ClampedArray(4) [ 1, 127, 255, 1 ]
-    after: Uint8ClampedArray(4) [ 255, 255, 255, 1 ]
+```plain
+before: Uint8ClampedArray(4) [ 1, 127, 255, 1 ]
+after: Uint8ClampedArray(4) [ 255, 255, 255, 1 ]
+````
 
 ## Specifications
 
@@ -166,5 +166,4 @@ The output might look like:
 - The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("ImageData")}} object
 - {{domxref("CanvasRenderingContext2D.getImageData()")}}
-- [Pixel
-  manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+- [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

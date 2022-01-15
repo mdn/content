@@ -5,12 +5,12 @@ tags:
   - API
   - CSSFontLoading
   - CSSOM
-  - Experimental
   - Fonts
   - NeedsContent
   - Reference
+browser-compat: api.FontFace
 ---
-{{DefaultAPISidebar("CSS Font Loading API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("CSS Font Loading API")}}
 
 The CSS Font Loading API provides events and interfaces for dynamically loading font resources.
 
@@ -22,17 +22,15 @@ The CSS Font Loading API provides events and interfaces for dynamically loading 
   - : Represents a single usable font face.
 - {{domxref('FontFaceSet')}}
   - : An interface loading font faces and checking their download statuses.
-- {{domxref('FontFaceSource')}}
-  - : A {{Glossary("mixin")}} providing all of the fonts used in font-related operations, unless defined otherwise. It defines the {{domxref("FontFaceSources.fonts")}} property available to {{domxref("Document")}} and {{domxref("WorkerGlobalScope")}}.
 - {{domxref('FontFaceSetLoadEvent')}}
   - : Fired whenever a {{domxref("FontFaceSet")}} loads.
 
 ## Specifications
 
-{{Specifications("api.FontFace")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-### FontFace interface
+### FontFace
 
-{{Compat("api.FontFace")}}
+{{Compat}}

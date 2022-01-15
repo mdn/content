@@ -23,7 +23,7 @@ None.
 
 ### Return value
 
-A new [`DOMParser`](/en-US/docs/Web/API/DOMParser) object. This object can be used to parse the text of a document using the `parseFromString()` method.
+A new [`DOMParser`](/en-US/docs/Web/API/DOMParser) object. This object can be used to parse the text of a document using the `parseFromString()` method.
 
 ## Specifications
 

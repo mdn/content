@@ -26,7 +26,7 @@ See [compositing examples](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing/E
 
 ## Clipping paths
 
-A clipping path is like a normal canvas shape but it acts as a mask to hide unwanted parts of shapes. This is visualized in the image on the right. The red star shape is our clipping path. Everything that falls outside of this path won't get drawn on the canvas.
+A clipping path is like a normal canvas shape but it acts as a mask to hide unwanted parts of shapes. This is visualized in the image below. The red star shape is our clipping path. Everything that falls outside of this path won't get drawn on the canvas.
 
 ![](canvas_clipping_path.png)
 

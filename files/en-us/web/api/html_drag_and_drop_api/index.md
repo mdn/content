@@ -129,7 +129,7 @@ Each [drag event type](/en-US/docs/Web/API/DragEvent#event_types) has an associa
   </tbody>
 </table>
 
-**Note:** Neither `dragstart` nor `dragend` events are fired when dragging a file into the browser from the OS.
+> **Note:** Neither `dragstart` nor `dragend` events are fired when dragging a file into the browser from the OS.
 
 ## Interfaces
 
@@ -147,7 +147,7 @@ The {{domxref("DataTransferItemList")}} object is a list of {{domxref("DataTrans
 
 A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTransferItem")}} interfaces is that the former uses the synchronous {{domxref("DataTransfer.getData","getData()")}} method to access a drag item's data, but the latter instead uses the asynchronous {{domxref("DataTransferItem.getAsString","getAsString()")}} method.
 
-**Note:** {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} are broadly supported on desktop browsers. However, the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have limited browser support. See {{anch("Interoperability")}} for more information about drag-and-drop interoperability.
+> **Note:** {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} are broadly supported on desktop browsers. However, the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have limited browser support. See {{anch("Interoperability")}} for more information about drag-and-drop interoperability.
 
 ### Gecko-specific interfaces
 

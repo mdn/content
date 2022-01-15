@@ -16,6 +16,7 @@ tags:
   - setRemoteDescription
 browser-compat: api.RTCPeerConnection.setRemoteDescription
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnection")}}
@@ -58,19 +59,19 @@ The `sessionDescription` parameter is technically of type
 `RTCSessionDescription`. This lets you simplify code such as the following:
 
 ```js
-myPeerConnection.setRemoteDescription(new RTCSessionDescription(description))
-.then(function () {
-  return createMyStream();
-})
+myPeerConnection
+  .setRemoteDescription(new RTCSessionDescription(description))
+  .then(function () {
+    return createMyStream();
+  });
 ```
 
 to be:
 
 ```js
-myPeerConnection.setRemoteDescription(description)
-.then(function () {
+myPeerConnection.setRemoteDescription(description).then(function () {
   return createMyStream();
-})
+});
 ```
 
 Using
@@ -97,35 +98,35 @@ connection). The promise fulfillment handler receives no input parameters.
 > intermediary steps handled by the WebRTC layer to ensure that an active connection
 > can be changed without losing the connection if the change does not succeed. See
 > {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and
-		current descriptions")}} for more details on this process.
+
+    	current descriptions")}} for more details on this process.
 
 ### Exceptions
 
 The following exceptions are reported to the rejection handler for the promise returned
 by `setRemoteDescription()`:
 
-- `InvalidAccessError`
-  - : The content of the description is invalid.
-- `InvalidStateError`
-  - : The {{domxref("RTCPeerConnection")}} is closed, or it's in a state which isn't
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Returned if the content of the description is invalid.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the {{domxref("RTCPeerConnection")}} is closed, or it's in a state that is not
     compatible with the specified description's
-    {{domxref("RTCSessionDescription.type", "type")}}. For example, if the
+    {{domxref("RTCSessionDescription.type", "type")}}. For example, this exception is thrown if the
     `type` is `rollback` and the signaling state is one of
     `stable`, `have-local-pranswer`, or
-    `have-remote-pranswer`, this exception is thrown, because you can't
+    `have-remote-pranswer` because you cannot
     roll back a connection that's either fully established or is in the final stage of
     becoming connected.
-- `OperationError`
-  - : Any errors that occur which don't match the others specifeid here are reported as
-    `OperationError`. This includes identity validation errors.
-- `RTCError`
-  - : An `RTCError` with the {{domxref("RTCError.errorDetail",
-		"errorDetail")}} set to `sdp-syntax-error` is reported if the
-    {{Glossary("SDP")}} specified by {{domxref("RTCSessionDescription.sdp")}}. The
+- `OperationError` {{domxref("DOMException")}}
+  - : Returned if an error does not match the ones specified here. This includes identity validation errors.
+- `RTCError` {{domxref("DOMException")}}
+  - : Returned with the {{domxref("RTCError.errorDetail",
+    "errorDetail")}} set to `sdp-syntax-error` if the
+    {{Glossary("SDP")}} specified by {{domxref("RTCSessionDescription.sdp")}} is not valid. The
     error object's {{domxref("RTCError.sdpLineNumber", "sdpLineNumber")}} property
     indicates the line number within the SDP on which the syntax error was detected.
-- `TypeError`
-  - : The specified `RTCSessionDescriptionInit` or
+- `TypeError` {{domxref("DOMException")}}
+  - : Returned if the specified `RTCSessionDescriptionInit` or
     `RTCSessionDescription` object is missing the
     {{domxref("RTCSessionDescription.type", "type")}} property, or no description
     parameter was provided at all.
@@ -211,23 +212,25 @@ explanation of what's going on.
 function handleOffer(msg) {
   createMyPeerConnection();
 
-  myPeerConnection.setRemoteDescription(msg.description).then(function () {
-    return navigator.mediaDevices.getUserMedia(mediaConstraints);
-  })
-  .then(function(stream) {
-    document.getElementById("local_video").srcObject = stream;
-    return myPeerConnection.addStream(stream);
-  })
-  .then(function() {
-    return myPeerConnection.createAnswer();
-  })
-  .then(function(answer) {
-    return myPeerConnection.setLocalDescription(answer);
-  })
-  .then(function() {
-    // Send the answer to the remote peer using the signaling server
-  })
-  .catch(handleGetUserMediaError);
+  myPeerConnection
+    .setRemoteDescription(msg.description)
+    .then(function () {
+      return navigator.mediaDevices.getUserMedia(mediaConstraints);
+    })
+    .then(function (stream) {
+      document.getElementById("local_video").srcObject = stream;
+      return myPeerConnection.addStream(stream);
+    })
+    .then(function () {
+      return myPeerConnection.createAnswer();
+    })
+    .then(function (answer) {
+      return myPeerConnection.setLocalDescription(answer);
+    })
+    .then(function () {
+      // Send the answer to the remote peer using the signaling server
+    })
+    .catch(handleGetUserMediaError);
 }
 ```
 
@@ -251,7 +254,7 @@ caller.
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection.remoteDescription")}},
   {{domxref("RTCPeerConnection.pendingRemoteDescription")}},
   {{domxref("RTCPeerConnection.currentRemoteDescription")}}

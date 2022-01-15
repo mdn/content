@@ -15,7 +15,9 @@ The **`request`** read-only property of the {{domxref("BackgroundFetchRecord")}}
 
 ## Syntax
 
-    var request = BackgroundFetchRecord.request;
+```js
+var request = BackgroundFetchRecord.request;
+```
 
 ### Value
 

@@ -11,7 +11,7 @@ tags:
 
 The **[CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)** exposes CSS values as typed JavaScript objects to allow their performant manipulation.
 
-Converting [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) value strings into meaningfully-typed JavaScript representations and back (via {{domxref("HTMLElement.style")}} can incur a significant performance overhead.
+Converting [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) value strings into meaningfully-typed JavaScript representations and back (via {{domxref("HTMLElement.style")}}) can incur a significant performance overhead.
 
 The CSS Typed OM makes CSS manipulation more logical and performant by providing object features (rather than CSSOM string manipulation), providing access to types, methods, and an object model for CSS values.
 
@@ -199,7 +199,7 @@ for ( let i = 0; i < ofInterest.length; i++ ) {
 
 {{EmbedLiveSample("CSSUnitValue_and_CSSKeywordValue", 120, 300)}}
 
-For those of you using a non-supporting browser, the above output should looks something like this:
+For those of you using a non-supporting browser, the above output should look something like this:
 
 | Property                                             | Value | Unit        |
 | ---------------------------------------------------- | ----- | ----------- |

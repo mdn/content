@@ -27,30 +27,32 @@ In the case of {{domxref("XRBoundedReferenceSpace")}} objects, the `reset` event
 
 In either case, the event is sent before any WebXR animation frames which make use of the new origin are executed.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("XRReferenceSpaceEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
-      <td>
-        {{domxref("XRReferenceSpace/onreset", "onreset")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable.
 
-## Usage notes
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('reset', event => { })
+
+onreset = event => { }
+```
+
+## Event type
+
+An {{domxref("XRReferenceSpaceEvent")}}. Inherits from {{domxref("Event")}}.
+
+## Event properties
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("XRReferenceSpaceEvent.referenceSpace", "referenceSpace")}} {{ReadOnlyInline}}
+  - : An {{domxref("XRReferenceSpace")}} indicating the reference space that generated the event.
+- {{domxref("XRReferenceSpaceEvent.transform", "transform")}} {{ReadOnlyInline}}
+  - : An {{domxref("XRRigidTransform")}} object indicating the position and orientation of the specified `referenceSpace` object's native origin after the event, defined relative to the coordinate system before the event.
+
+## Description
 
 The `reset` event indicates that the coordinate system has been reset or reconfigured by changing the reference space's origin, moving and rotating it as indicated by the event's {{domxref("XRReferenceSpaceEvent.transform", "transform")}} property. The event is sent before any animation frame callbacks are executed to render the pending frame, to ensure that those callbacks have the updated coordinate system available.
 
@@ -66,7 +68,7 @@ There are a number of reasons why a reset might occur. Most common among them ar
 
 ### Manual resets
 
-If you've spent any time using a VR headset, you've had times when you've started it up and although you're facing straight ahead, the headset thinks you're looking at the sky or the floor; or times when you point the hand controller straight forward, but it thinks you're pointing it up and to the right somewhere. When that happens, you typically hold down a button somewhere and it causes the world to resynchronize to the device's current orientation. That works by sending a \`reset\` event to the reference space or reference spaces that are based on the headset's orientation.
+If you've spent any time using a VR headset, you've had times when you've started it up and although you're facing straight ahead, the headset thinks you're looking at the sky or the floor; or times when you point the hand controller straight forward, but it thinks you're pointing it up and to the right somewhere. When that happens, you typically hold down a button somewhere and it causes the world to resynchronize to the device's current orientation. That works by sending a `reset` event to the reference space or reference spaces that are based on the headset's orientation.
 
 ### Handling discontinuities
 
@@ -88,7 +90,7 @@ viewerRefSpace.addEventListener("reset", (event) => {
 });
 ```
 
-The second option is to set the `XRReferenceSpace` object's {{domxref("XRReferenceSpace.onreset", "onreset")}} event handler property:
+The second option is to set the `XRReferenceSpace` object's `onreset` event handler property:
 
 ```js
 viewerRefSpace.onreset = (event) => {

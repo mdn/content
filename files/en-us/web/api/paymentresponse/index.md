@@ -18,7 +18,7 @@ The **`PaymentResponse`** interface of the [Payment Request API](/en-US/docs/We
 ## Properties
 
 - {{domxref('PaymentResponse.details')}} {{readonlyinline}} {{securecontext_inline}}
-  - : Returns a JSON-serializable object that provides a payment method specific message used by the merchant to process the transaction and determine successful fund transfer. The contents of the object depend on the payment method being used; for example, if the Basic Card payment method is used, this object must conform to the structure defined in the {{domxref("BasicCardResponse")}} dictionary.
+  - : Returns a JSON-serializable object that provides a payment method specific message used by the merchant to process the transaction and determine successful fund transfer. The contents of the object depend on the payment method being used. Developers need to consult whomever controls the URL for the expected shape of the details object.
 - {{domxref('PaymentResponse.methodName')}} {{readonlyinline}} {{securecontext_inline}}
   - : Returns the payment method identifier for the payment method that the user selected, for example, Visa, Mastercard, Paypal, etc..
 - {{domxref('PaymentResponse.payerEmail')}} {{readonlyinline}} {{securecontext_inline}}{{deprecated_inline}}

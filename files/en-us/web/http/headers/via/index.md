@@ -12,7 +12,7 @@ browser-compat: http.headers.Via
 {{HTTPSidebar}}
 
 The **`Via`** general header is added by proxies, both forward
-and reverse proxies, and can appear in the request headers and the response headers. It
+and reverse, and can appear in the request or response headers. It
 is used for tracking message forwards, avoiding request loops, and identifying the
 protocol capabilities of senders along the request/response chain.
 

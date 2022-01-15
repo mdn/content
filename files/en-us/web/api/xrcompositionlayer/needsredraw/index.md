@@ -28,7 +28,7 @@ A boolean. `true` indicates a rerendering is needed in the next frame, `false` i
 
 ### Redrawing layers
 
-Use the `needsRedrawing` property to check if a layer needs to be redrawn and then redraw it.
+Use the `needsRedraw` property to check if a layer needs to be redrawn and then redraw it.
 
 ```js
 function onXRFrame(time, frame) {

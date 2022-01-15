@@ -27,7 +27,7 @@ processing {{event("animationend")}} events.
 
 The `animationend` event fires when a [CSS animation](/en-US/docs/Web/CSS/CSS_Animations)
 reaches the end of its active period (which is calculated as
-`{{cssxref("animation-duration")}} * {{cssxref("animation-iteration-count")}}) + {{cssxref("animation-delay")}}`).
+`({{cssxref("animation-duration")}} * {{cssxref("animation-iteration-count")}}) + {{cssxref("animation-delay")}}`).
 
 ## Syntax
 

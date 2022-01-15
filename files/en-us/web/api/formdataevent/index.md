@@ -45,8 +45,14 @@ formElem.addEventListener('submit', (e) => {
   // on form submission, prevent default
   e.preventDefault();
 
+  console.log(form.querySelector('input[name="field1"]')); // FOO
+  console.log(form.querySelector('input[name="field2"]')); // BAR
+
   // construct a FormData object, which fires the formdata event
-  new FormData(formElem);
+  const formData = new FormData(formElem);
+  // formdata gets modified by the formdata event
+  console.log(formData.get('field1')); // foo
+  console.log(formData.get('field2')); // bar
 });
 
 // formdata handler to retrieve data
@@ -54,16 +60,10 @@ formElem.addEventListener('submit', (e) => {
 formElem.addEventListener('formdata', (e) => {
   console.log('formdata fired');
 
-  // Get the form data from the event object
-  let data = e.formData;
-  for (var value of data.values()) {
-    console.log(value);
-  }
-
-  // submit the data via XHR
-  var request = new XMLHttpRequest();
-  request.open("POST", "/formHandler");
-  request.send(data);
+  // modifies the form data
+  const formData = e.formData; 
+  formData.set('field1', formData.get('field1').toLowerCase());
+  formData.set('field2', formData.get('field2').toLowerCase());
 });
 ```
 

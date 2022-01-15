@@ -45,7 +45,7 @@ An element receives a **`click`** event when a pointing device button (such as a
 
 If the button is pressed on one element and the pointer is moved outside the element before the button is released, the event is fired on the most specific ancestor element that contained both elements.
 
-`click` fires after both the {{event("mousedown")}} and {{event("mouseup")}} events have fired, in that order.
+`click` fires after both the {{domxref("Element/mousedown_event", "mousedown")}} and {{domxref("Element/mouseup_event", "mouseup")}} events have fired, in that order.
 
 ## Usage notes
 
@@ -123,10 +123,10 @@ Try making rapid, repeated clicks on the button to increase the click count. If 
 ## See also
 
 - [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-- {{event("auxclick")}}
-- {{event("contextmenu")}}
-- {{event("dblclick")}}
-- {{event("mousedown")}}
-- {{event("mouseup")}}
-- {{event("pointerdown")}}
-- {{event("pointerup")}}
+- {{domxref("Element/auxclick_event", "auxclick")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/pointerdown_event", "pointerdown")}}
+- {{domxref("Element/pointerup_event", "pointerup")}}

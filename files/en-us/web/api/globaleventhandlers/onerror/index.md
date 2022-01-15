@@ -28,7 +28,7 @@ For historical reasons, different arguments are passed to `window.onerror` and `
 ### window\.onerror
 
 ```js
-window.onerror = function(message, source, lineno, colno, error) { ... };
+window.onerror = function(message, source, lineno, colno, error) { /* ... */ };
 ```
 
 Function parameters:
@@ -37,14 +37,14 @@ Function parameters:
 - `source`: URL of the script where the error was raised (string)
 - `lineno`: Line number where error was raised (number)
 - `colno`: Column number for the line where the error occurred (number)
-- `error`: [Error Object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) (object)
+- `error`: [Error Object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) (object). May be `null` if no corresponding Error Object is available.
 
 When the function returns `true`, this prevents the firing of the default event handler.
 
 ### window\.addEventListener('error')
 
 ```js
-window.addEventListener('error', function(event) { ... })
+window.addEventListener('error', function(event) { /* ... */ })
 ```
 
 `event` of type {{domxref("ErrorEvent")}} contains all the information about the event and the error.
@@ -52,7 +52,7 @@ window.addEventListener('error', function(event) { ... })
 ### element.onerror
 
 ```js
-element.onerror = function(event) { ... }
+element.onerror = function(event) { /* ... */ }
 ```
 
 `element.onerror` accepts a function with a single argument of type {{domxref("Event")}}.
@@ -72,7 +72,7 @@ When an error occurs in a script, loaded from a [different origin](/en-US/docs/
 ```js
 window.onerror = function (msg, url, lineNo, columnNo, error) {
   var string = msg.toLowerCase();
-  var substring = "script error";
+  var substring = 'script error';
   if (string.indexOf(substring) > -1){
     alert('Script Error: See Browser Console for Detail');
   } else {

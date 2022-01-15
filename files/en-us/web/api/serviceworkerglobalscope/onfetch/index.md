@@ -21,7 +21,7 @@ when the {{domxref("fetch()")}} method is called.)
 ## Syntax
 
 ```js
-serviceWorkerGlobalScope.onfetch = function(fetchEvent) { ... };
+serviceWorkerGlobalScope.onfetch = function(fetchEvent) { /* ... */ };
 ```
 
 ## Example

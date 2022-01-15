@@ -28,7 +28,7 @@ In both cases, the method call takes up to three arguments:
 
 - A mandatory success callback: If the location retrieval is successful, the callback executes with a {{domxref("GeolocationPosition")}} object as its only parameter, providing access to the location data.
 - An optional error callback: If the location retrieval is unsuccessful, the callback executes with a {{domxref("GeolocationPositionError")}} object as its only parameter, providing access information on what went wrong.
-- An optional {{domxref("PositionOptions")}} object, which provides options for retrieval of the position data.
+- An optional object which provides options for retrieval of the position data.
 
 For further information on Geolocation usage, read [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API).
 
@@ -44,11 +44,6 @@ For further information on Geolocation usage, read [Using the Geolocation API](/
   - : A `GeolocationPositionError` is returned by an unsuccessful call to one of the methods contained inside {{domxref("Geolocation")}}, inside an error callback, and contains an error code and message.
 - {{domxref("Navigator.geolocation")}}
   - : The entry point into the API. Returns a {{domxref("Geolocation")}} object instance, from which all other functionality can be accessed.
-
-## Dictionaries
-
-- {{domxref("PositionOptions")}}
-  - : Represents an object containing options to pass in as a parameter of {{domxref("Geolocation.getCurrentPosition()")}} and {{domxref("Geolocation.watchPosition()")}}.
 
 ## Examples
 

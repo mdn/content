@@ -30,7 +30,7 @@ formData.delete(name);
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ## Example
 

@@ -15,7 +15,7 @@ redirect a page to. It only provides a meaning when served with a
 `3xx` (redirection) or `201` (created) status response.
 
 In cases of redirection, the HTTP method used to make the new request to fetch the page
-pointed to by `Location` depends of the original method and of the kind of
+pointed to by `Location` depends on the original method and the kind of
 redirection:
 
 - {{HTTPStatus("303")}} (See Also) responses always lead to the use of a
@@ -31,9 +31,9 @@ All responses with one of these status codes send a `Location` header.
 
 In cases of resource creation, it indicates the URL to the newly created resource.
 
-`Location` and {{HTTPHeader("Content-Location")}} are different:
-`Location` indicates the target of a redirection (or the URL of a newly
-created resource), while {{HTTPHeader("Content-Location")}} indicates the direct URL to
+`Location` and {{HTTPHeader("Content-Location")}} are different.
+`Location` indicates the target of a redirection or the URL of a newly
+created resource. {{HTTPHeader("Content-Location")}} indicates the direct URL to
 use to access the resource when [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) happened,
 without the need of further content negotiation. `Location` is a header
 associated with the response, while {{HTTPHeader("Content-Location")}} is associated

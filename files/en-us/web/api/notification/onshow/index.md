@@ -20,7 +20,7 @@ interface specifies an event listener to receive {{domxref("Element/show_event",
 ## Syntax
 
 ```js
-Notification.onshow = function() { ... };
+Notification.onshow = function() { /* ... */ };
 ```
 
 ## Browser compatibility

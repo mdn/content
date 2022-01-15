@@ -78,7 +78,7 @@ console.log(letter);
 } // undefined
 ```
 
-**reason:** When `next().done=true`  or 
+**reason:** When `next().done=true`  or
 `currentIndex>length` the `for..of` loop ends. See [Iteration
 protocols.](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 

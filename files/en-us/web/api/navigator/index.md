@@ -31,8 +31,6 @@ _Doesn't inherit any properties._
   - : Returns the {{domxref("CredentialsContainer")}} interface which exposes methods to request credentials and notify the user agent when interesting events occur such as successful sign in or sign out.
 - {{domxref("Navigator.deviceMemory")}} {{readonlyInline}} {{experimental_inline}}
   - : Returns the amount of device memory in gigabytes. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024.
-- {{domxref("Navigator.doNotTrack")}} {{readonlyInline}} {{experimental_inline}}
-  - : Reports the value of the user's do-not-track preference. When this value is "yes", your web site or application should not track the user.
 - {{domxref("Navigator.geolocation")}} {{readonlyInline}}
   - : Returns a {{domxref("Geolocation")}} object allowing accessing the location of the device.
 - {{domxref("Navigator.hid")}} {{readonlyInline}}
@@ -48,7 +46,7 @@ _Doesn't inherit any properties._
 - {{domxref("Navigator.languages")}} {{readonlyInline}} {{experimental_inline}}
   - : Returns an array of {{domxref("DOMString")}} representing the languages known to the user, by order of preference.
 - {{domxref("Navigator.locks")}} {{readonlyinline}} {{experimental_inline}}
-  - : Returns a {{domxref("LockManager")}} object which provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing {{domxref('Lock')}} object
+  - : Returns a {{domxref("LockManager")}} object that provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing {{domxref('Lock')}} object.
 - {{domxref("Navigator.maxTouchPoints")}} {{readonlyInline}}
   - : Returns the maximum number of simultaneous touch contact points are supported by the current device.
 - {{domxref("Navigator.mediaCapabilities")}} {{readonlyinline}} {{experimental_inline}}
@@ -77,6 +75,8 @@ _Doesn't inherit any properties._
   - : Returns the vendor name of the current browser (e.g., "Netscape6").
 - {{domxref("Navigator.webdriver")}} {{readonlyInline}} {{experimental_inline}}
   - : Indicates whether the user agent is controlled by automation.
+- {{domxref("Navigator.windowControlsOverlay")}} {{readonlyInline}}
+  - : Returns the {{domxref("WindowControlsOverlay")}} interface which exposes information about the geometry of the title bar in desktop Progressive Web Apps, and an event to know whenever it changes.
 - {{domxref("Navigator.xr")}} {{readonlyInline}} {{experimental_inline}}
   - : Returns {{domxref("XRSystem")}} object, which represents the entry point into the [WebXR API](/en-US/docs/Web/API/WebXR_Device_API).
 
@@ -105,6 +105,8 @@ _Doesn't inherit any properties._
   - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is `true`).
 - {{domxref("Navigator.battery")}} {{readonlyInline}} {{deprecated_inline}}
   - : Returns a {{domxref("BatteryManager")}} object you can use to get information about the battery charging status.
+- {{domxref("Navigator.doNotTrack")}} {{readonlyInline}} {{experimental_inline}}
+  - : Reports the value of the user's do-not-track preference. When this value is "yes", your web site or application should not track the user.
 - {{domxref("Navigator.mimeTypes")}} {{readonlyInline}}{{deprecated_inline}}
   - : Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.
 - {{domxref("Navigator.oscpu")}} {{readonlyInline}} {{deprecated_inline}}

@@ -14,7 +14,7 @@ browser-compat: http.headers.Viewport-Width
 ---
 {{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
 
-The **`Viewport-Width`** [device client hint](/en-US/docs/Glossary/Client_hints) request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}. The value is rounded up to the smallest following integer (i.e. ceiling value).
+The **`Viewport-Width`** [device client hint](/en-US/docs/Web/HTTP/Client_hints) request header provides the client's layout viewport width in {{Glossary("CSS pixel","CSS pixels")}}. The value is rounded up to the smallest following integer (i.e. ceiling value).
 
 <table class="properties">
   <tbody>
@@ -22,7 +22,7 @@ The **`Viewport-Width`** [device client hint](/en-US/docs/Glossary/Client_hints)
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        {{Glossary("Client hints","Client hint")}}
+        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
@@ -74,7 +74,7 @@ Viewport-Width: 320
 
 ## See also
 
-- [Adapting to Users with Client Hints](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints) (developer.google.com)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
 - Device client hints
 
   - {{HTTPHeader("Content-DPR")}}

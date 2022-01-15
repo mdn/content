@@ -79,7 +79,7 @@ The site's {{HTMLElement("body")}} is configured here to use one of a number of 
 
 The wrapper establishes a CSS grid with two columns and two rows. The first column (sized automatically based on its content) is used for the sidebar and the second column (which will be used for body content) is sized to be at least the width of the contents of the column and at most all remaining available space.
 
-The first row will be used specially for the site header. The rows are sized the same way as the columns: the first one is automatically sized and the one uses the remaining space, but at least enough space to provide room for all elements within it.
+The first row will be used specially for the site header. The rows are sized the same way as the columns: the first one is automatically sized and the second one uses the remaining space, but at least enough space to provide room for all elements within it.
 
 The wrapper's width is fixed at 700px so that it will fit in the available space when presented inline on MDN below.
 

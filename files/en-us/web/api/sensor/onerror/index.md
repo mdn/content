@@ -24,7 +24,7 @@ interfaces of the {{domxref("Sensor")}} interface.
 
 ```js
 sensorInstance.onerror = function
-  sensorInstance.addEventListener('error', function() { ... })
+  sensorInstance.addEventListener('error', function() { /* ... */ })
 ```
 
 Because {{domxref('Sensor')}} is a base class, `onerror` may only be used on

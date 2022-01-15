@@ -64,13 +64,13 @@ Each `@counter-style` is identified by a name and has a set of descriptors.
 <!---->
 
 - {{cssxref("@counter-style/fallback", "fallback")}}
-  - : Specifies a system to fall back into if either the specified system is unable to construct the representation of a counter value or if the counter value outside the specified range. If the specified fallback also fails to represent the value, then the fallback style's fallback is used, if one is specified. If there are either no fallback systems described or if the chain of fallback systems are unable to represent a counter value, then it will ultimately fall back to the decimal style.
+  - : Specifies a system to fall back into if either the specified system is unable to construct the representation of a counter value or if the counter value is outside the specified range. If the specified fallback also fails to represent the value, then the fallback style's fallback is used, if one is specified. If there are either no fallback systems described or if the chain of fallback systems are unable to represent a counter value, then it will ultimately fall back to the decimal style.
 
 <!---->
 
 - {{cssxref("@counter-style/symbols", "symbols")}}
 
-  - : Specifies the symbols that are to be used for the marker representations. Symbols can contain string, images or custom identifiers. How the symbols are used to construct the marker representation is up to the algorithm specified in the system descriptor. For example, if the system specified is fixed, then each of the N symbols specified in the descriptor will be used to represent the first N counter symbols. Once the specified set of symbols have exhausted, the fallback style will be used for the rest of the list.
+  - : Specifies the symbols that are to be used for the marker representations. Symbols can contain strings, images, or custom identifiers. How the symbols are used to construct the marker representation is up to the algorithm specified in the system descriptor. For example, if the system specified is fixed, then each of the N symbols specified in the descriptor will be used to represent the first N counter symbols. Once the specified set of symbols have exhausted, the fallback style will be used for the rest of the list.
 
     The below `@counter-style` rule uses images instead of character symbols. Image values for symbols is currently an 'at risk' feature, and is not implemented in any browser.
 
@@ -85,7 +85,7 @@ Each `@counter-style` is identified by a name and has a set of descriptors.
 <!---->
 
 - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
-  - : While the symbols specified in the symbols descriptor is used for constructing marker representation by most algorithms, some systems such as 'additive' rely on _additive tuples_ described in this descriptor. Each additive tuple consists of a counter symbol and a non negative integer weight. The additive tuples must be specified in the descending order of their weights.
+  - : While the symbols specified in the symbols descriptor is used for constructing marker representation by most algorithms, some systems such as 'additive' rely on _additive tuples_ described in this descriptor. Each additive tuple consists of a counter symbol and a non-negative integer weight. The additive tuples must be specified in the descending order of their weights.
 
 <!---->
 

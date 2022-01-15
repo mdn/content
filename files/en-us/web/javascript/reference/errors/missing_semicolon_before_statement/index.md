@@ -81,7 +81,7 @@ array[0] = 'there';
 ### Bad keywords
 
 If you come from another programming language, it is also common to use keywords that
-don't mean the same or have no meaning at all in javaScript:
+don't mean the same or have no meaning at all in JavaScript:
 
 ```js example-bad
 def print(info){

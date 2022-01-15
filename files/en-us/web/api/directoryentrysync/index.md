@@ -285,7 +285,7 @@ None
 
 ##### Returns
 
-`void`
+{{jsxref('undefined')}}
 
 ##### Exceptions
 

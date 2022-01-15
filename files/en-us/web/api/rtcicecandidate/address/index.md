@@ -56,8 +56,7 @@ address to the user. This can occur without the remote peer's consent.
 Applications being built with user privacy and security in mind can choose to limit the
 permitted candidates to relay candidates only. Doing so prevents the remote user's
 address from being exposed, but reduces the pool of available candidates to choose from.
-To do this, configure the ICE agent's ICE transport policy using
-{{domxref("RTCConfiguration")}}, like this:
+To do this, configure the ICE agent's ICE transport policy with an object confirming to the `configuration` property described in {{domxref("RTCPeerConnection.setConfiguration")}}, like this:
 
 ```js
 var rtcConfig = {
@@ -72,7 +71,7 @@ var rtcConfig = {
 }
 ```
 
-By setting {{domxref("RTCConfiguration.iceTransportPolicy")}} to `"relay"`,
+By setting `iceTransportPolicy` to `"relay"`,
 any host candidates (candidates where the IP address is the peer's own IP address) are
 left out of the pool of candidates, as are any other candidates which aren't relay candidates.
 

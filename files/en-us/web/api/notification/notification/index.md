@@ -36,8 +36,9 @@ var notification = new Notification(title, options);
       behavior, but you can override that behavior by setting values of `ltr`
       and `rtl` (although most browsers seem to ignore these settings.)
     - `lang`: The notification's language, as specified using a
-      {{domxref("DOMString")}} representing a [BCP 47 language tag](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). See
-      the Sitepoint [ISO
+      {{domxref("DOMString")}} representing a language tag
+      according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+      See the Sitepoint [ISO
       2 letter language codes](https://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/) page for a simple reference.
     - `badge`: A {{domxref("USVString")}} containing the URL of the image
       used to represent the notification when there isn't enough space to display the
@@ -60,11 +61,15 @@ var notification = new Notification(title, options);
     - `requireInteraction`: Indicates that a notification should remain
       active until the user clicks or dismisses it, rather than closing automatically.
       The default value is `false`.
-    - `actions`: An array of {{domxref("NotificationAction")}}s
-      representing the actions available to the user when the notification is presented.
-      These are options the user can choose among in order to act on the action within
-      the context of the notification itself. The action's name is sent to the service
-      worker notification handler to let it know the action was selected by the user.
+    - `actions`: An array of actions to display in the notification. Each element in the array is an object with the following members:
+
+      - `action`: A {{domxref("DOMString")}} identifying a user action to be displayed on the notification.
+      - `title`: A {{domxref("DOMString")}} containing action text to be shown to the user.
+      - `icon`: A {{domxref("USVString")}} containing the URL of an icon to display with the action.
+
+      Appropriate responses are built using `event.action` within the
+      {{event("notificationclick")}} event.
+
     - `silent`: A boolean value specifying whether the
       notification is silent (no sounds or vibrations issued), regardless of the device
       settings. The default is `false`, which means it won't be silent.

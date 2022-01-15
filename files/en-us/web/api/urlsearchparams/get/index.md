@@ -38,7 +38,7 @@ If the URL of your page is `https://example.com/?name=Jonathan&age=18`
 you could parse out the 'name' and 'age' parameters using:
 
 ```js
-let params = new URLSearchParams(document.location.search.substring(1));
+let params = new URLSearchParams(document.location.search);
 let name = params.get("name"); // is the string "Jonathan"
 let age = parseInt(params.get("age"), 10); // is the number 18
 ```

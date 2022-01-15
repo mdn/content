@@ -224,7 +224,7 @@ and use it to make a pull request.
 
 1. Next, you'll want to start the local preview service, so you can see
 the changes you'll make as they would look in production. Once started,
-this local preview service is available at `http://localhost:5000/`
+this local preview service is available at `http://localhost:5042/`
 within your browser.
 
     ```sh
@@ -267,10 +267,10 @@ it's important to keep the following in mind:**
 1. Once you've made and saved your changes, open a browser, and navigate
 to the page(s) you've changed. For example, if you changed
 `files/en-us/web/javascript/index.md`, open
-`http://localhost:5000/en-us/docs/web/javascript` in your browser.
+`http://localhost:5042/en-us/docs/web/javascript` in your browser.
 
 1. You might have noticed that at the top of each page that you preview,
-for example the `http://localhost:5000/en-us/docs/web/javascript` page,
+for example the `http://localhost:5042/en-us/docs/web/javascript` page,
 there is a `Show flaws` button. Click on that button to see if your
 changes have introduced flaws on the page. You can also fix flaws on a
 particular page by running the command:
@@ -518,6 +518,13 @@ push your branch to your fork:
 
 1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
+> **Note:** If the slug of the page you wish to delete contain special
+  characters, include it in quotes:
+
+```sh
+yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
+```
+
 ### Redirecting a document
 
 If you are [moving a document](#moving-one-or-more-documents) as shown
@@ -695,8 +702,9 @@ you can follow the below steps to unarchive it:
 directory into the appropriate place inside this repo, and update the
 page's meta data (like `slug`) if needed.
 
-> **Note:** To archive a currently-non-archived page, you need to follow the
+> **Note:** To archive a non-archived page, you need to follow the
 above procedure, but move the page in question the opposite way between repos.
+When removing the page from MDN, remember to use the [delete command](#deleting-a-document).
 
 **Note:** You can have an archived page with non-archived pages below it in the
 hierarchy, and vice-versa. To achieve this you need to have the same directory
@@ -707,27 +715,27 @@ with the [content mozilla directory](https://github.com/mdn/content/tree/main/fi
 Both locations represent the same directory structure, but the
 `index.html` file appears in the latter, therefore the page is not archived.
 
-### Making a change that depends on a macro update
+### Making a change that depends on external content
 
-KumaScript macros are still used on MDN pages, even in the new platform.
-These are the function names surrounded by handlebars-style double curly
-braces that you'll see in the source code on occasion, for example
-`{{domxref}}` Eventually we have to replace them with something else,
-but they are here for now. They live in <https://github.com/mdn/yari/tree/main/kumascript/macros>.
+Some MDN content is created from external data files or repositories using KS macros.
+Generally you should create a PR to first update the external content before
+updating the associated MDN pages.
 
-Sometimes you'll want to make a change to the content that relies on a
-macro change. Take [https://github.com/mdn/content/pull/187](https://github.com/mdn/content/pull/187).
-Florian wanted to add documentation for a new WebGL extension to MDN, but
-this change relied on the new feature's spec being added to
-<https://github.com/mdn/yari/blob/main/kumascript/macros/SpecData.json>.
-If not, the specification table on the new page would not render properly
-because the data it relies on would not be there.
+Relevant external content includes (non-exhaustively):
 
-In such situations:
-
-1. Make the required PR to <https://github.com/mdn/yari/tree/main/kumascript/macros>
-   first, and get that merged.
-2. Add the content to this repo.
+- [GroupData.json](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json):
+Data definition of
+[Sidebars](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars)
+used by `{{APIRef}}` macro.
+- [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples):
+Source code repo for interactive examples inserted using the
+`{{EmbedInteractiveExample}}` macro.
+- [https://github.com/mdn/learning-area](https://github.com/mdn/learning-area):
+Source code repo for examples referenced in the
+[Learning Area](https://developer.mozilla.org/en-US/docs/Learn)
+- [JSON structured data](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/JSON_Structured_Data)
+provides more information about JSON data used to define inheritance diagrams
+(`{{InheritanceDiagram}}` macro), specification tables, etc.
 
 ## Frequently asked questions (FAQ)
 
@@ -752,7 +760,7 @@ to the <https://github.com/mdn/translated-content> repo.
 
 In general, we do not approve of copying content from other sources and putting
 it on MDN. MDN should be made up of original content wherever possible. If we
-receive a pull request and discover that it contains plagiarised content,
+receive a pull request and discover that it contains plagiarized content,
 we will close it and request that the submitter resubmit the change with
 the content rewritten into their own words.
 

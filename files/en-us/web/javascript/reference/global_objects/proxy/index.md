@@ -180,11 +180,8 @@ A function proxy could easily extend a constructor with a new constructor. This 
 
 ```js
 function extend(sup, base) {
-  var descriptor = Object.getOwnPropertyDescriptor(
-    base.prototype, 'constructor'
-  );
   base.prototype = Object.create(sup.prototype);
-  var handler = {
+  base.prototype.constructor = new Proxy(base, {
     construct: function(target, args) {
       var obj = Object.create(base.prototype);
       this.apply(target, obj, args);
@@ -194,11 +191,8 @@ function extend(sup, base) {
       sup.apply(that, args);
       base.apply(that, args);
     }
-  };
-  var proxy = new Proxy(base, handler);
-  descriptor.value = proxy;
-  Object.defineProperty(base.prototype, 'constructor', descriptor);
-  return proxy;
+  });
+  return base.prototype.constructor;
 }
 
 var Person = function(name) {
@@ -399,9 +393,6 @@ var docCookies = new Proxy(docCookies, {
   deleteProperty: function (oTarget, sKey) {
     if (!sKey in oTarget) { return false; }
     return oTarget.removeItem(sKey);
-  },
-  enumerate: function (oTarget, sKey) {
-    return oTarget.keys();
   },
   ownKeys: function (oTarget, sKey) {
     return oTarget.keys();

@@ -16,6 +16,7 @@ tags:
   - unit
   - lch
   - lab
+  - lwb
 browser-compat: css.types.color
 ---
 {{CSSRef}}
@@ -29,6 +30,8 @@ A `<color>` can be defined in any of the following ways:
 - Using the [RGB cubic-coordinate](https://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation) system (via the #-hexadecimal or the `rgb()` and `rgba()` functional notations).
   These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
 - Using the [HSL cylindrical-coordinate](https://en.wikipedia.org/wiki/HSL_and_HSV) system (via the {{cssxref("color_value/hsl()","hsl()")}} and {{cssxref("color_value/hsla()","hsla()")}} functional notations).
+  These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
+- Using the [HWB cylindrical-coordinate](https://en.wikipedia.org/wiki/HWB_color_model) system (via the {{cssxref("color_value/hwb()","hwb()")}} functional notation).
   These always specify a color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB)
 - Using the [LCH cylindrical coordinate system](https://en.wikipedia.org/wiki/CIELAB_color_space#Cylindrical_representation:_CIELCh_or_CIEHLC), via the {{cssxref("color_value/lch()","lch()")}} functional notation.
   This can specify any visible color.
@@ -843,7 +846,7 @@ There are a few caveats to consider when using color keywords:
 
 The `transparent` keyword represents a fully transparent color. This makes the background behind the colored item completely visible. Technically, `transparent` is a shortcut for `rgba(0,0,0,0)`.
 
-> **Note:** To prevent unexpected behavior, such as in a {{cssxref("gradient")}}, the current CSS spec states that `transparent` should be calculated in the [alpha-premultiplied color space](https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax). However, be aware that older browsers may treat it as black with an alpha value of `0`.
+> **Note:** To prevent unexpected behavior, such as in a {{cssxref("gradient")}}, the current CSS spec states that `transparent` should be calculated in the [alpha-premultiplied color space](https://www.w3.org/TR/css-color-4/#interpolation-alpha). However, be aware that older browsers may treat it as black with an alpha value of `0`.
 
 > **Note:** `transparent` wasn't a true color in CSS Level 2 (Revision 1). It was a special keyword that could be used instead of a regular `<color>` value on two CSS properties: {{Cssxref("background")}} and {{Cssxref("border")}}. It was essentially added to allow developers to override an inherited solid color. With the advent of alpha channels in CSS Colors Level 3, `transparent` was redefined as a true color. It can now be used wherever a `<color>` value can be used.
 
@@ -908,6 +911,28 @@ HSL colors are expressed through the functional `hsl()` and `hsla()` notations.
 - Functional notation: `hsl[a](H S L[ / A])`
   - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
 
+### HWB colors
+
+Similar to HSL color model, the HWB color model defines a given color in the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) according to its hue, whiteness and blackness components.
+
+As with HSL, HWB can be more intuitive to use than RGB. A hue is specified in the same way, followed by the amount of whiteness and blackness, respectively, in percentage values. This function also accepts a alpha value.
+
+> **Note:** There is **no** separate `hwba()` function as there is with HSL, the alpha value is an optional parameter, if it is not specified an alpha value of 1 (or 100%) is used. To specify this value a forward slash (`/`) must follow the blackness value before the alpha value is specified.
+
+#### Syntax
+
+HWB colors are expressed through the functional `hwb()` notation.
+
+> **Note:** The HWB function does **not** use commas to separate it's values as with previous color functions.
+
+- Functional notation: `hwb(H W B[ / A])`
+
+  - : Same as HSL: `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
+
+    `W` (whiteness) and `B` (blackness) are percentages. These two colors mix, so you would need `0%` **whiteness** and `100%` **blackness** to produce the color black. And vice versa `100%` whiteness and `0%` blackness for the color white. `50%` of both values renders a mid grey and any other variations a shade of the hue specified.
+
+    `A` (alpha), optional, can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity). When specifying an alpha value it must be preceded with a forward slash (`/`).
+
 ### System Colors
 
 In _forced colors mode_ (detectable with the [forced-colors](/en-US/docs/Web/CSS/@media/forced-colors) media query), most colors are restricted into a user- and browser-defined palette. These system colors are exposed by the following keywords, which can be used to ensure that the rest of the page integrates well with the restricted palette. These values may also be used in other contexts, but are not widely supported by browsers.
@@ -918,6 +943,8 @@ The keywords in the following list are defined by the CSS Color Module Level 4 s
 
 - ActiveText
   - : Text of active links
+- ButtonBorder
+  - : Base border color of controls
 - ButtonFace
   - : Background color of controls
 - ButtonText
@@ -1087,7 +1114,7 @@ as well as custom color spaces, defined via the [`@color-profile`](/en-US/docs/W
 
 ## Interpolation
 
-In animations and [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients), `<color>` values are interpolated on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the [alpha-premultiplied sRGBA color space](https://www.gimp.org/docs/plug-in/appendix-alpha.html) to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the [timing function](/en-US/docs/Web/CSS/easing-function).
+In animations and [gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients), `<color>` values are interpolated on each of their red, green, and blue components. Each component is interpolated as a real, floating-point number. Note that interpolation of colors happens in the [alpha-premultiplied sRGBA color space](https://www.w3.org/TR/css-color-4/#interpolation-alpha) to prevent unexpected gray colors from appearing. In animations, the interpolation's speed is determined by the [timing function](/en-US/docs/Web/CSS/easing-function).
 
 ## Accessibility considerations
 
@@ -1226,6 +1253,19 @@ This example shows the many ways in which a single color can be created with the
     hsl(270, 60%, 50%, 15%)
     hsl(270 60% 50% / .15)
     hsl(270 60% 50% / 15%)
+
+### HWB syntax variations
+
+    /* These examples all specify varying shades of a lime green. */
+    hwb(90 10% 10%)
+    hwb(90 50% 10%)
+    hwb(90deg 10% 10%)
+    hwb(1.5708rad 60% 0%)
+    hwb(.25turn 0% 40%)
+
+    /* Same lime green but with an alpha value */
+    hwb(90 10% 10% / 0.5)
+    hwb(90 10% 10% / 50%)
 
 ### Fully saturated colors
 
@@ -1422,7 +1462,7 @@ This example shows the many ways in which a single color can be created with the
       <td>{{SpecName('CSS4 Colors', '#changes-from-3')}}</td>
       <td>{{Spec2('CSS4 Colors')}}</td>
       <td>
-        Adds LCH and Lab colors, the <code>color()</code> functional notation,
+        Adds LCH and Lab colors, the <code>hwb()</code> function, the <code>color()</code> functional notation,
         <code>rebeccapurple</code>, four- (<code>#RGBA</code>) and eight-digit
         (<code>#RRGGBBAA</code>) hexadecimal notations, <code>rgba()</code> and
         <code>hsla()</code> as aliases of <code>rgb()</code> and

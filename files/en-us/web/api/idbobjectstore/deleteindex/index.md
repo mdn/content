@@ -15,10 +15,10 @@ browser-compat: api.IDBObjectStore.deleteIndex
 {{ APIRef("IndexedDB") }}
 
 The **`deleteIndex()`** method of the
-{{domxref("IDBObjectStore")}} interface destroys the index with the specified name in
-the connected database, used during a version upgrade.
+{{domxref("IDBObjectStore")}} interface destroys the index with the specified name in
+the connected database, used during a version upgrade.
 
-Note that this method must be called only from a `VersionChange` transaction
+Note that this method must be called only from a `VersionChange` transaction
 mode callback. Note that this method synchronously modifies the
 {{domxref("IDBObjectStore.indexNames")}} property.
 
@@ -32,61 +32,31 @@ objectStore.deleteIndex(indexName);
 
 ### Parameters
 
-- indexName
+- `indexName`
   - : The name of the existing index to remove.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None.
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of one of the following types:
-
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>
-        Occurs if the method was not called from
-        a <code>versionchange</code> transaction mode callback.
-      </td>
-    </tr>
-    <tr>
-      <td><code>TransactionInactiveError</code></td>
-      <td>
-        Occurs if the transaction this {{domxref("IDBObjectStore")}}
-        belongs to is not active (e.g. has been deleted or removed.) In Firefox
-        previous to version 41, an <code>InvalidStateError</code> was raised in
-        this case as well, which was misleading; this has now been fixed (see
-        {{Bug("1176165")}}.)
-      </td>
-    </tr>
-    <tr>
-      <td><code>NotFoundError</code></td>
-      <td>
-        Occurs if there is no index with the given name (case-sensitive) in the
-        database.<br /> 
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the method was not called from a `versionchange` transaction mode callback.
+- `TransactionInactiveError` {{domxref("DOMException")}}
+  - : Thrown if the transaction this {{domxref("IDBObjectStore")}} belongs to is not active (e.g. has been deleted or removed.)
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if there is no index with the given name (case-sensitive) in the database.
 
 ## Example
 
 In the following example you can see
-the {{domxref("IDBOpenDBRequest.onupgradeneeded")}} handler being used to update the
+the {{domxref("IDBOpenDBRequest.onupgradeneeded")}} handler being used to update the
 database structure if a database with a higher version number is loaded.
-{{domxref("IDBObjectStore.createIndex")}} is used to create new indexes on the object
+{{domxref("IDBObjectStore.createIndex")}} is used to create new indexes on the object
 store, after which we delete the unneeded old indexes with `deleteIndex()`.
- For a full working example, see our [To-do
-Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+For a full working example, see our
+[To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
 var db;
@@ -125,12 +95,12 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
   // define what data items the objectStore will contain
 
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
-  objectStore.createIndex("notified", "notified", { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
+  objectStore.createIndex("notified", "notified", { unique: false });
 
   objectStore.deleteIndex("seconds");
   objectStore.deleteIndex("contact");

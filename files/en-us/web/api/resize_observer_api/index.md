@@ -51,8 +51,8 @@ The code will usually follow this kind of pattern (taken from resize-observer-bo
 const resizeObserver = new ResizeObserver(entries => {
   for (let entry of entries) {
     if(entry.contentBoxSize) {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentBoxSize.inlineSize/10) +
-                                                      (entry.contentBoxSize.blockSize/10)) + 'px';
+      entry.target.style.borderRadius = Math.min(100, (entry.contentBoxSize[0].inlineSize/10) +
+                                                      (entry.contentBoxSize[0].blockSize/10)) + 'px';
     } else {
       entry.target.style.borderRadius = Math.min(100, (entry.contentRect.width/10) +
                                                       (entry.contentRect.height/10)) + 'px';
@@ -65,9 +65,7 @@ resizeObserver.observe(document.querySelector('div'));
 
 ## Specifications
 
-| Specification                                                |
-| ------------------------------------------------------------ |
-| [Resize Observer](https://drafts.csswg.org/resize-observer/) |
+{{Specifications("api.ResizeObserver")}}
 
 ## Browser compatibility
 
@@ -75,4 +73,4 @@ resizeObserver.observe(document.querySelector('div'));
 
 ## See also
 
-- [ResizeObserver: It’s Like document.onresize for Elements](https://developers.google.com/web/updates/2016/10/resizeobserver)
+- [ResizeObserver: It’s Like document.onresize for Elements](https://web.dev/resize-observer/)

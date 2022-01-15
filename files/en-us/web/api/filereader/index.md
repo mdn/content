@@ -46,17 +46,17 @@ See [Using files from web applications](/en-US/docs/Web/API/File/Using_files_fro
 ### Event handlers
 
 - {{domxref("FileReader.onabort")}}
-  - : A handler for the {{event("abort")}} event. This event is triggered each time the reading operation is aborted.
+  - : A handler for the {{domxref("FileReader.abort_event")}} event. This event is triggered each time the reading operation is aborted.
 - {{domxref("FileReader.onerror")}}
-  - : A handler for the {{event("error")}} event. This event is triggered each time the reading operation encounter an error.
+  - : A handler for the {{domxref("FileReader.error_event")}} event. This event is triggered each time the reading operation encounter an error.
 - {{domxref("FileReader.onload")}}
-  - : A handler for the {{event("load")}} event. This event is triggered each time the reading operation is successfully completed.
+  - : A handler for the {{domxref("FileReader.load_event")}} event. This event is triggered each time the reading operation is successfully completed.
 - {{domxref("FileReader.onloadstart")}}
-  - : A handler for the {{event("loadstart")}} event. This event is triggered each time the reading is starting.
+  - : A handler for the {{domxref("FileReader.loadstart_event")}} event. This event is triggered each time the reading is starting.
 - {{domxref("FileReader.onloadend")}}
-  - : A handler for the {{event("loadend")}} event. This event is triggered each time the reading operation is completed (either in success or failure).
+  - : A handler for the {{domxref("FileReader.loadend_event")}} event. This event is triggered each time the reading operation is completed (either in success or failure).
 - {{domxref("FileReader.onprogress")}}
-  - : A handler for the {{event("progress")}} event. This event is triggered while reading a {{domxref("Blob")}} content.
+  - : A handler for the {{domxref("FileReader.progress")}} event. This event is triggered while reading a {{domxref("Blob")}} content.
 
 > **Note:** As `FileReader` inherits from {{domxref("EventTarget")}}, all those events can also be listened for by using the {{domxref("EventTarget.addEventListener()","addEventListener")}} method.
 

@@ -35,25 +35,11 @@ None.
 
 ### Exceptions
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Exception</th>
-      <th scope="col">Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>InvalidStateError</code></td>
-      <td>
-        The {{domxref("MediaSource.readyState")}} property of the
-        parent media source is not equal to <code>open</code>, or this
-        <code>SourceBuffer</code> has been removed from the
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref("MediaSource.readyState")}} property of the
+        parent media source is not equal to `open`, or this
+        `SourceBuffer` has been removed from the
         {{domxref("MediaSource")}}.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Example
 

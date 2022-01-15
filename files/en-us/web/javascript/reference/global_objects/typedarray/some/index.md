@@ -25,19 +25,19 @@ array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Type
 
 ```js
 // Arrow function
-some((element) => { ... } )
-some((element, index) => { ... } )
-some((element, index, array) => { ... } )
+some((element) => { /* ... */ } )
+some((element, index) => { /* ... */ } )
+some((element, index, array) => { /* ... */ } )
 
 // Callback function
 some(callbackFn)
 some(callbackFn, thisArg)
 
 // Inline callback function
-some(function callbackFn(element) { ... })
-some(function callbackFn(element, index) { ... })
-some(function callbackFn(element, index, array){ ... })
-some(function callbackFn(element, index, array) { ... }, thisArg)
+some(function(element) { /* ... */ })
+some(function(element, index) { /* ... */ })
+some(function(element, index, array){ /* ... */ })
+some(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters

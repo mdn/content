@@ -81,11 +81,6 @@ function draw() {
 draw();
 ```
 
-## Parameters
-
-- array
-  - : The {{jsxref("Uint8Array")}} that the frequency domain data will be copied to.
-
 ## Specifications
 
 {{Specifications}}

@@ -24,8 +24,6 @@ element.scroll(options)
 
 ### Parameters
 
-#### Calling with coordinates
-
 - `x-coord`
   - : The pixel along the horizontal axis of the element that you want displayed in the
     upper left.
@@ -33,10 +31,16 @@ element.scroll(options)
   - : The pixel along the vertical axis of the element that you want displayed in the
     upper left.
 
-#### Calling with `options`
+\- or -
 
 - `options`
-  - : A {{domxref("ScrollToOptions")}} dictionary.
+  - : A dictionary containing the following parameters:
+    - `top`
+      - : Specifies the number of pixels along the Y axis to scroll the window or element.
+    - `left`
+      - : Specifies the number of pixels along the X axis to scroll the window or element.
+    - `behavior`
+      - : Specifies whether the scrolling should animate smoothly (`smooth`), happen instantly in a single jump (`instant`), or let the browser choose (`auto`, default).
 
 ## Examples
 

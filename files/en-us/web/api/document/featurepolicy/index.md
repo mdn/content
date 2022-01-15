@@ -15,7 +15,9 @@ The **`featurePolicy`** read-only property of the {{domxref("Document")}} interf
 
 ## Syntax
 
-    var policy = iframeElement.featurePolicy
+```js
+var policy = iframeElement.featurePolicy
+```
 
 ### Value
 

@@ -16,7 +16,7 @@ This article provides information on getting started with service workers, inclu
 
 One overriding problem that web users have suffered with for years is loss of connectivity. The best web app in the world will provide a terrible user experience if you can’t download it. There have been various attempts to create technologies to solve this problem, and some of the issues have been solved. But the overriding problem is that there still isn’t a good overall control mechanism for asset caching and custom network requests.
 
-The previous attempt — [AppCache](/en-US/docs/Web/HTML/Using_the_application_cache) — seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn’t follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag) for more details.
+The previous attempt, _AppCache_, seemed to be a good idea because it allowed you to specify assets to cache really easily. However, it made many assumptions about what you were trying to do and then broke horribly when your app didn’t follow those assumptions exactly. Read Jake Archibald's (unfortunately-titled but well-written) [Application Cache is a Douchebag](https://alistapart.com/article/application-cache-is-a-douchebag) for more details.
 
 > **Note:** From Firefox 84, AppCache has been removed ({{bug("1619673")}}). It is also planned for removal in Chomium 90, and is deprecated in Safari.
 
@@ -145,7 +145,7 @@ You can see the [source code on GitHub](https://github.com/mdn/sw-test/), and [v
 
 ## Enter service workers
 
-**NOTE** : We're using the [es6](http://es6-features.org/) **arrow functions** syntax in the Service Worker Implementation
+> **Note:** We're using the [es6](http://es6-features.org/) **arrow functions** syntax in the Service Worker Implementation.
 
 Now let’s get on to service workers!
 
@@ -228,7 +228,7 @@ self.addEventListener('install', (event) => {
 
 1.  Here we add an `install` event listener to the service worker (hence `self`), and then chain a {{domxref("ExtendableEvent.waitUntil()") }} method onto the event — this ensures that the service worker will not install until the code inside `waitUntil()` has successfully occurred.
 2.  Inside `waitUntil()` we use the [`caches.open()`](/en-US/docs/Web/API/CacheStorage/open) method to create a new cache called `v1`, which will be version 1 of our site resources cache. This returns a promise for a created cache; once resolved, we then call a function that calls `addAll()` on the created cache, which for its parameter takes an array of origin-relative URLs to all the resources you want to cache.
-3.  If the promise is rejected, the install fails, and the worker won’t do anything. This is ok, as you can fix your code and then try again the next time registration occurs.
+3.  If the promise is rejected, the install fails, and the worker won’t do anything. This is OK, as you can fix your code and then try again the next time registration occurs.
 4.  After a successful installation, the service worker activates. This doesn’t have much of a distinct use the first time your service worker is installed/activated, but it means more when the service worker is updated (see the {{anch("Updating your service worker") }} section later on.)
 
 > **Note:** [localStorage](/en-US/docs/Web/API/Web_Storage_API) works in a similar way to service worker cache, but it is synchronous, so not allowed in service workers.
@@ -357,7 +357,7 @@ self.addEventListener('fetch', (event) => {
       }).catch(() => {
         return caches.match('./sw-test/gallery/myLittleVader.jpg');
       })
-    });
+    })
   );
 });
 ```
@@ -431,7 +431,7 @@ Firefox has also started to implement some useful tools related to service worke
 ## See also
 
 - [Understanding Service Workers](http://blog.88mph.io/2017/07/28/understanding-service-workers/)
-- [The Service Worker Cookbook](https://serviceworke.rs/)
+- [The Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - Download the [Service Workers 101 cheatsheet](sw101.png).
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

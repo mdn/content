@@ -17,7 +17,9 @@ The **`encoding`** read-only property of the {{domxref("TextEncoderStream")}} in
 
 ## Syntax
 
-    var encoding = TextEncoderStream.encoding;
+```js
+var encoding = TextEncoderStream.encoding;
+```
 
 ### Value
 

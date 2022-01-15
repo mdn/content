@@ -22,19 +22,19 @@ for each array element.
 
 ```js
 // Arrow function
-forEach((element) => { ... } )
-forEach((element, index) => { ... } )
-forEach((element, index, array) => { ... } )
+forEach((element) => { /* ... */ } )
+forEach((element, index) => { /* ... */ } )
+forEach((element, index, array) => { /* ... */ } )
 
 // Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 
 // Inline callback function
-forEach(function callbackFn(element) { ... })
-forEach(function callbackFn(element, index) { ... })
-forEach(function callbackFn(element, index, array){ ... })
-forEach(function callbackFn(element, index, array) { ... }, thisArg)
+forEach(function(element) { /* ... */ })
+forEach(function(element, index) { /* ... */ })
+forEach(function(element, index, array){ /* ... */ })
+forEach(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
@@ -86,7 +86,7 @@ visited are not visited. If elements that are already visited are removed (e.g. 
 will be skipped. ([See
 this example, below](#modifying_the_array_during_iteration).)
 
-**Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
+> **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
 `forEach()` executes the `callbackFn` function once for
 each array element; unlike {{jsxref("Array.prototype.map()", "map()")}} or

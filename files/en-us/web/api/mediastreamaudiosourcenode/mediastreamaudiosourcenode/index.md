@@ -35,10 +35,11 @@ audioSourceNode = new MediaStreamAudioSourceNode(context, options);
     be associated with.
 - `options`
 
-  - : A {{domxref("MediaStreamAudioSourceOptions")}} object defining the properties you
+  - : An object defining the properties you
     want the `MediaStreamAudioSourceNode` to have:
 
-    {{page("/en-US/docs/Web/API/MediaStreamAudioSourceOptions", "Properties")}}
+    - `mediaStream`
+      - : A required property which specifies the {{domxref("MediaStream")}} from which to obtain audio for the node.
 
 ### Return value
 
@@ -47,8 +48,8 @@ whose media is obtained from the specified source stream.
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : The specified {{domxref("MediaStream")}} doesn't have any audio tracks.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the specified {{domxref("MediaStream")}} does not contain any audio tracks.
 
 ## Examples
 

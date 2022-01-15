@@ -18,7 +18,9 @@ The **`getIds()`** method of the {{domxref("BackgroundFetchManager")}} interface
 
 ## Syntax
 
-    let stringArray = BackgroundFetchManager.getIds();
+```js
+let stringArray = BackgroundFetchManager.getIds();
+```
 
 ### Parameters
 

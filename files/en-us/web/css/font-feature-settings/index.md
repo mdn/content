@@ -110,4 +110,4 @@ td.tabular { font-feature-settings: "tnum"; }
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
-- [OpenType Feature Tags](https://www.microsoft.com/typography/otspec/featurelist.htm) list
+- [OpenType Feature Tags](https://docs.microsoft.com/typography/opentype/spec/featurelist) list

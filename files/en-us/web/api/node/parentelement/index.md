@@ -2,28 +2,21 @@
 title: Node.parentElement
 slug: Web/API/Node/parentElement
 tags:
-  - API
-  - DOM
-  - JavaScript
-  - NeedsBrowserCompatibility
-  - Node
   - Property
+  - Reference
+  - Read-only
 browser-compat: api.Node.parentElement
 ---
 {{APIRef("DOM")}}
 
-The **`Node.parentElement`** read-only property returns the DOM
-node's parent {{DOMxRef("Element")}}, or `null` if the node either has no
+The read-only **`parentElement`** property of {{domxref("Node")}} interface
+returns the DOM node's parent {{DOMxRef("Element")}}, or `null` if the node either has no
 parent, or its parent isn't a DOM {{DOMxRef("Element")}}.
 
-## Syntax
+## Value
 
-```js
-parentElement = node.parentElement
-```
-
-`parentElement` is the parent element of the current node. This is always a
-DOM {{DOMxRef("Element")}} object, or `null`.
+An {{domxref("Element")}} that is the parent element of the current node,
+or `null` if there isn't one.
 
 ## Example
 
@@ -39,12 +32,8 @@ if (node.parentElement) {
 
 ## Browser compatibility
 
-On some browsers, the `parentElement` property is only defined on nodes that
-are themselves an {{DOMxRef("Element")}}. In particular, it is not defined on text
-nodes.
-
 {{Compat}}
 
 ## See also
 
-- {{DOMxRef("Node.parentNode")}}
+- {{domxref("Node.parentNode")}}

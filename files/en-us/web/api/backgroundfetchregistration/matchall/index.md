@@ -15,7 +15,9 @@ The **`matchAll()`** method of the {{domxref("BackgroundFetchRegistration")}} in
 
 ## Syntax
 
-    let records = BackgroundFetchRegistration.matchAll(request,options);
+```js
+let records = BackgroundFetchRegistration.matchAll(request,options);
+```
 
 ### Parameters
 
@@ -48,8 +50,8 @@ A {{jsxref("Promise")}} that resolves with an array of all matching {{domxref("B
 
 ### Exceptions
 
-- `InvalidStateError`
-  - : If the {{domxref("BackgroundFetchRegistration.recordsAvailable","recordsAvailable")}} flag is `false`, indicating that there is not a fetch in progress, return a promise that resolves with an `InvalidStateError` {{domxref("DOMException")}}.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the {{domxref("BackgroundFetchRegistration.recordsAvailable","recordsAvailable")}} flag is `false`, indicating that there is no fetch in progress.
 
 ## Examples
 

@@ -4,7 +4,6 @@ slug: Web/API/SpeechRecognition/SpeechRecognition
 tags:
   - API
   - Constructor
-  - Experimental
   - Reference
   - SpeechRecognition
   - Web Speech API
@@ -12,7 +11,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.SpeechRecognition
 ---
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+{{APIRef("Web Speech API")}}
 
 The **`SpeechRecognition()`** constructor creates a new
 {{domxref("SpeechRecognition")}} object instance.
@@ -20,7 +19,7 @@ The **`SpeechRecognition()`** constructor creates a new
 ## Syntax
 
 ```js
-var myRecognition = new SpeechRecognition();
+new SpeechRecognition()
 ```
 
 ### Parameters

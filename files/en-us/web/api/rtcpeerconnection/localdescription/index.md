@@ -12,9 +12,8 @@ browser-compat: api.RTCPeerConnection.localDescription
 ---
 {{APIRef("WebRTC")}}
 
-The read-only property **`RTCPeerConnection.localDescription`**
-returns an {{domxref("RTCSessionDescription")}} describing the session for the local end
-of the connection. If it has not yet been set, this is `null`.
+The read-only property **`RTCPeerConnection.localDescription`** returns an {{domxref("RTCSessionDescription")}} describing the session for the local end of the connection.
+If it has not yet been set, this is `null`.
 
 ## Syntax
 
@@ -22,18 +21,13 @@ of the connection. If it has not yet been set, this is `null`.
  var sessionDescription = peerConnection.localDescription;
 ```
 
-On a more fundamental level, the returned value is the value of
-{{domxref("RTCPeerConnection.pendingLocalDescription")}} if that property isn't
-`null`; otherwise, the value of
-{{domxref("RTCPeerConnection.currentLocalDescription")}} is returned. See
-{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current
-  descriptions")}} for details on this algorithm and why it's used.
+On a more fundamental level, the returned value is the value of {{domxref("RTCPeerConnection.pendingLocalDescription")}} if that property isn't `null`;
+otherwise, the value of {{domxref("RTCPeerConnection.currentLocalDescription")}} is returned.
+See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}} for details on this algorithm and why it's used.
 
 ## Example
 
-This example looks at the `localDescription` and displays an alert
-containing the {{domxref("RTCSessionDescription")}} object's `type` and
-`sdp` fields.
+This example looks at the `localDescription` and displays an alert containing the {{domxref("RTCSessionDescription")}} object's `type` and `sdp` fields.
 
 ```js
 var pc = new RTCPeerConnection();
@@ -66,4 +60,4 @@ else {
   {{domxref("RTCPeerConnection.remoteDescription")}},
   {{domxref("RTCPeerConnection.pendingRemoteDescription")}},
   {{domxref("RTCPeerConnection.currentRemoteDescription")}}
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

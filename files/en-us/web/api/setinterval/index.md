@@ -95,211 +95,63 @@ function myCallback(a, b)
 The following example calls the `flashtext()` function once a second until
 the Stop button is pressed.
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>setInterval/clearInterval example</title>
-
-  <script>
-    var nIntervId;
-
-    function changeColor() {
-      nIntervId = setInterval(flashText, 1000);
-    }
-
-    function flashText() {
-      var oElem = document.getElementById('my_box');
-      if(oElem.style.color === 'red') {
-        oElem.style.color = 'blue'
-      } else {
-        oElem.style.color = 'red'
-      }
-    }
-
-    function stopTextColor() {
-      clearInterval(nIntervId);
-    }
-  </script>
-</head>
-
-<body onload="changeColor();">
-  <div id="my_box">
-    <p>Hello World</p>
-  </div>
-
-  <button onclick="stopTextColor();">Stop</button>
-</body>
-</html>
-```
-
-### Example 3: Typewriter simulation
-
-The following example simulates typewriter by first clearing and then slowly
-typing content into the [`NodeList`](/en-US/docs/Web/API/NodeList)
-that matches a specified group of selectors.
+#### HTML
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8" />
-<title>JavaScript Typewriter - MDN Example</title>
-<script>
-  function Typewriter (sSelector, nRate) {
-
-  function clean () {
-    clearInterval(nIntervId);
-    bTyping = false;
-    bStart = true;
-    oCurrent = null;
-    aSheets.length = nIdx = 0;
-  }
-
-  function scroll (oSheet, nPos, bEraseAndStop) {
-    if (!oSheet.hasOwnProperty('parts') || aMap.length < nPos) { return true; }
-
-    var oRel, bExit = false;
-
-    if (aMap.length === nPos) { aMap.push(0); }
-
-    while (aMap[nPos] < oSheet.parts.length) {
-      oRel = oSheet.parts[aMap[nPos]];
-
-      scroll(oRel, nPos + 1, bEraseAndStop) ? aMap[nPos]++ : bExit = true;
-
-      if (bEraseAndStop && (oRel.ref.nodeType - 1 | 1) === 3 && oRel.ref.nodeValue) {
-        bExit = true;
-        oCurrent = oRel.ref;
-        sPart = oCurrent.nodeValue;
-        oCurrent.nodeValue = '';
-      }
-
-      oSheet.ref.appendChild(oRel.ref);
-      if (bExit) { return false; }
-    }
-
-    aMap.length--;
-    return true;
-  }
-
-  function typewrite () {
-    if (sPart.length === 0 && scroll(aSheets[nIdx], 0, true) && nIdx++ === aSheets.length - 1) { clean(); return; }
-
-    oCurrent.nodeValue += sPart.charAt(0);
-    sPart = sPart.slice(1);
-  }
-
-  function Sheet (oNode) {
-    this.ref = oNode;
-    if (!oNode.hasChildNodes()) { return; }
-    this.parts = Array.prototype.slice.call(oNode.childNodes);
-
-    for (var nChild = 0; nChild < this.parts.length; nChild++) {
-      oNode.removeChild(this.parts[nChild]);
-      this.parts[nChild] = new Sheet(this.parts[nChild]);
-    }
-  }
-
-  var
-    nIntervId, oCurrent = null, bTyping = false, bStart = true,
-    nIdx = 0, sPart = "", aSheets = [], aMap = [];
-
-  this.rate = nRate || 100;
-
-  this.play = function () {
-    if (bTyping) { return; }
-    if (bStart) {
-      var aItems = document.querySelectorAll(sSelector);
-
-      if (aItems.length === 0) { return; }
-      for (var nItem = 0; nItem < aItems.length; nItem++) {
-        aSheets.push(new Sheet(aItems[nItem]));
-        /* Uncomment the following line if you have previously hidden your elements via CSS: */
-        // aItems[nItem].style.visibility = "visible";
-      }
-
-      bStart = false;
-    }
-
-    nIntervId = setInterval(typewrite, this.rate);
-    bTyping = true;
-  };
-
-  this.pause = function () {
-    clearInterval(nIntervId);
-    bTyping = false;
-  };
-
-  this.terminate = function () {
-    oCurrent.nodeValue += sPart;
-    sPart = "";
-    for (nIdx; nIdx < aSheets.length; scroll(aSheets[nIdx++], 0, false));
-    clean();
-  };
-}
-
-/* usage: */
-var oTWExample1 = new Typewriter(/* elements: */ '#article, h1, #info, #copyleft', /* frame rate (optional): */ 15);
-
-/* default frame rate is 100: */
-var oTWExample2 = new Typewriter('#controls');
-
-/* you can also change the frame rate value modifying the "rate" property; for example: */
-// oTWExample2.rate = 150;
-
-onload = function () {
-  oTWExample1.play();
-  oTWExample2.play();
-};
-</script>
-<style type="text/css">
-span.intLink, a, a:visited {
-  cursor: pointer;
-  color: #000000;
-  text-decoration: underline;
-}
-
-#info {
-  width: 180px;
-  height: 150px;
-  float: right;
-  background-color: #eeeeff;
-  padding: 4px;
-  overflow: auto;
-  font-size: 12px;
-  margin: 4px;
-  border-radius: 5px;
-  /* visibility: hidden; */
-}
-</style>
-</head>
-
-<body>
-
-<p id="copyleft" style="font-style: italic; font-size: 12px; text-align: center;">CopyLeft 2012 by <a href="https://developer.mozilla.org/" target="_blank">Mozilla Developer Network</a></p>
-<p id="controls" style="text-align: center;">[&nbsp;<span class="intLink" onclick="oTWExample1.play();">Play</span> | <span class="intLink" onclick="oTWExample1.pause();">Pause</span> | <span class="intLink" onclick="oTWExample1.terminate();">Terminate</span>&nbsp;]</p>
-<div id="info">
-Vivamus blandit massa ut metus mattis in fringilla lectus imperdiet. Proin ac ante a felis ornare vehicula. Fusce pellentesque lacus vitae eros convallis ut mollis magna pellentesque. Pellentesque placerat enim at lacus ultricies vitae facilisis nisi fringilla. In tincidunt tincidunt tincidunt.
+<div id="my_box">
+  <h3>Hello World</h3>
 </div>
-<h1>JavaScript Typewriter</h1>
-
-<div id="article">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices dolor ac dolor imperdiet ullamcorper. Suspendisse quam libero, luctus auctor mollis sed, malesuada condimentum magna. Quisque in ante tellus, in placerat est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec a mi magna, quis mattis dolor. Etiam sit amet ligula quis urna auctor imperdiet nec faucibus ante. Mauris vel consectetur dolor. Nunc eget elit eget velit pulvinar fringilla consectetur aliquam purus. Curabitur convallis, justo posuere porta egestas, velit erat ornare tortor, non viverra justo diam eget arcu. Phasellus adipiscing fermentum nibh ac commodo. Nam turpis nunc, suscipit a hendrerit vitae, volutpat non ipsum.</p>
-<form>
-<p>Phasellus ac nisl lorem: <input type="text" /><br />
-<textarea style="width: 400px; height: 200px;">Nullam commodo suscipit lacus non aliquet. Phasellus ac nisl lorem, sed facilisis ligula. Nam cursus lobortis placerat. Sed dui nisi, elementum eu sodales ac, placerat sit amet mauris. Pellentesque dapibus tellus ut ipsum aliquam eu auctor dui vehicula. Quisque ultrices laoreet erat, at ultrices tortor sodales non. Sed venenatis luctus magna, ultricies ultricies nunc fringilla eget. Praesent scelerisque urna vitae nibh tristique varius consequat neque luctus. Integer ornare, erat a porta tempus, velit justo fermentum elit, a fermentum metus nisi eu ipsum. Vivamus eget augue vel dui viverra adipiscing congue ut massa. Praesent vitae eros erat, pulvinar laoreet magna. Maecenas vestibulum mollis nunc in posuere. Pellentesque sit amet metus a turpis lobortis tempor eu vel tortor. Cras sodales eleifend interdum.</textarea></p>
-<input type="submit" value="Send" />
-</form>
-<p>Duis lobortis sapien quis nisl luctus porttitor. In tempor semper libero, eu tincidunt dolor eleifend sit amet. Ut nec velit in dolor tincidunt rhoncus non non diam. Morbi auctor ornare orci, non euismod felis gravida nec. Curabitur elementum nisi a eros rutrum nec blandit diam placerat. Aenean tincidunt risus ut nisi consectetur cursus. Ut vitae quam elit. Donec dignissim est in quam tempor consequat. Aliquam aliquam diam non felis convallis suscipit. Nulla facilisi. Donec lacus risus, dignissim et fringilla et, egestas vel eros. Duis malesuada accumsan dui, at fringilla mauris bibStartum quis. Cras adipiscing ultricies fermentum. Praesent bibStartum condimentum feugiat.</p>
-<p>Nam faucibus, ligula eu fringilla pulvinar, lectus tellus iaculis nunc, vitae scelerisque metus leo non metus. Proin mattis lobortis lobortis. Quisque accumsan faucibus erat, vel varius tortor ultricies ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec libero nunc. Nullam tortor nunc, elementum a consectetur et, ultrices eu orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a nisl eu sem vehicula egestas.</p>
-</div>
-</body>
-</html>
+<button id="start">Start</button>
+<button id="stop">Stop</button>
 ```
 
-[View this demo in action](/files/3997/typewriter.html). See also: [`clearInterval()`](/en-US/docs/Web/API/clearInterval).
+#### CSS
+
+```css
+.go {
+  color: green;
+}
+.stop {
+  color: red;
+}
+```
+
+#### JavaScript
+
+```js
+// variable to store our intervalID
+let nIntervId;
+
+function changeColor() {
+  // check if already an interval has been set up
+  if (!nIntervId) {
+    nIntervId = setInterval(flashText, 1000);
+  }
+}
+
+function flashText() {
+  const oElem = document.getElementById("my_box");
+  if (oElem.className === "go") {
+    oElem.className = "stop";
+  } else {
+    oElem.className = "go";
+  }
+}
+
+function stopTextColor() {
+  clearInterval(nIntervId);
+  // release our intervalID from the variable
+  nIntervId = null; 
+}
+
+document.getElementById("start").addEventListener("click", changeColor);
+document.getElementById("stop").addEventListener("click", stopTextColor);
+```
+#### Result
+
+{{EmbedLiveSample("Example_2:_Alternating_two_colors")}}
+
+See also: [`clearInterval()`](/en-US/docs/Web/API/clearInterval).
 
 ## Callback arguments
 
@@ -485,7 +337,7 @@ circumstances, although these should not be common. Note also that the actual am
 time that elapses between calls to the callback may be longer than the given
 `delay`; see
 {{SectionOnPage("/en-US/docs/Web/API/setTimeout", "Reasons for
-  delays longer than specified")}} for examples.
+ delays longer than specified")}} for examples.
 
 ### Ensure that execution duration is shorter than interval frequency
 

@@ -13,7 +13,7 @@ browser-compat: api.HTMLTableColElement
 
 The **`HTMLTableColElement`** interface provides special properties (beyond the {{domxref("HTMLElement")}} interface it also has available to it inheritance) for manipulating single or grouped table column elements.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

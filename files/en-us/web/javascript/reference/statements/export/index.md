@@ -54,7 +54,7 @@ export { name1 as default, … };
 
 // Aggregating modules
 export * from …; // does not set the default export
-export * as name1 from …; // Draft ECMAScript® 2O21
+export * as name1 from …; // ECMAScript® 2O20
 export { name1, name2, …, nameN } from …;
 export { import1 as name1, import2 as name2, …, nameN } from …;
 export { default, … } from …;
@@ -79,7 +79,7 @@ export { myFunction, myVariable };
 // export individual features (can export var, let,
 // const, function, class)
 export let myVariable = Math.sqrt(2);
-export function myFunction() { ... };
+export function myFunction() { /* ... */ };
 ```
 
 Default exports:
@@ -89,14 +89,14 @@ Default exports:
 export { myFunction as default };
 
 // export individual features as default
-export default function () { ... }
+export default function () { /* ... */ }
 export default class { .. }
 
 // each export overwrites the previous one
 ```
 
 Named exports are useful to export several values. During the import, it is mandatory
-to use the same name of the corresponding object.
+to import them within curly braces with the same name of the corresponding object.
 
 But a default export can be imported with any name for example:
 
@@ -293,4 +293,4 @@ import { myFunction, myVariable, myClass } from 'parentModule.js'
 - [ES
   modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
 - [Axel Rauschmayer's book:
-  "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+  "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)

@@ -1,5 +1,5 @@
 ---
-title: validityState.badInput
+title: ValidityState.badInput
 slug: Web/API/ValidityState/badInput
 tags:
   - API
@@ -25,7 +25,7 @@ var input = document.getElementById("age");
 if (input.validity.badInput) {
   console.log("Bad input detected…");
 } else {
-  console.log("Content of input ok.");
+  console.log("Content of input OK.");
 }
 ```
 
@@ -39,5 +39,5 @@ if (input.validity.badInput) {
 
 ## See also
 
-- [Guide: Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Guide: Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
 - [Tutorial: Form data validation](/en-US/docs/Learn/Forms/Form_validation)

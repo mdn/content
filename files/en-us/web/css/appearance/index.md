@@ -265,11 +265,49 @@ The following values are implemented only for one or both of the prefixed proper
 
 ```css
 .exampleone {
-  appearance: menulist-button;
+-webkit-appearance: menulist-button;
+   -moz-appearance: menulist-button;
+        appearance: menulist-button;
 }
 ```
 
-See also [this JSFiddle](https://jsfiddle.net/go392m5s/) for an example showing how you might use `appearance: none` to apply custom styling to radio buttons and checkboxes.
+### Apply custom styling
+
+#### HTML
+
+```html
+<p><input type="checkbox" id="check"><label for="check">Agree to something</label></p>
+```
+
+#### CSS
+
+```css
+input {
+  appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+input[type="checkbox"] {
+  border: 2px solid #555;
+  width: 20px;
+  height: 20px;
+  padding: 4px;
+}
+input[type="checkbox"]:checked {
+  background: #555;
+  background-clip: content-box;
+}
+label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 -2px 8px;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Apply_custom_styling", 1050, 100)}}
 
 ## Specifications
 

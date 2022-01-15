@@ -58,10 +58,10 @@ which successfully resolves once the WebGL context is ready to be used for rende
 This method doesn't throw traditional exceptions; instead, the promise rejects with one
 of the following errors as the value passed into the rejection handler:
 
-- `AbortError`
-  - : Switching the context over to the WebXR-compatible context failed.
-- `InvalidStateError`
-  - : The WebGL context has been lost or there is no available WebXR device.
+- `AbortError` {{domxref("DOMException")}}
+  - : Returned if switching the context over to the WebXR-compatible context failed.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Returned if the WebGL context has been lost or there is no available WebXR device.
 
 ## Usage notes
 

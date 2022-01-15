@@ -30,7 +30,14 @@ element.scrollTo(options)
 
 \- or -
 
-- `options` is a {{domxref("ScrollToOptions")}} dictionary.
+- `options`
+  - : A dictionary containing the following parameters:
+    - `top`
+      - : Specifies the number of pixels along the Y axis to scroll the window or element.
+    - `left`
+      - : Specifies the number of pixels along the X axis to scroll the window or element.
+    - `behavior`
+      - : Specifies whether the scrolling should animate smoothly (`smooth`), or happen instantly in a single jump (`auto`, the default value).
 
 ## Examples
 

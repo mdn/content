@@ -22,12 +22,8 @@ The **`PaymentValidationErrors`** dictionary represents objects providing inform
 
 - {{domxref("PyamentValidationErrors.error", "error")}} {{optional_inline}}
   - : A general description of a payment error from which the user may attempt to recover by retrying the payment, possibly after correcting mistakes in the payment information. `error` can be provided all by itself to provide only a generic error message, or in concert with the other properties to serve as an overview while other properties' values gude the user to errors in specific fields in the payment form.
-- {{domxref("PaymentValidationErrors.payer", "payer")}} {{optional_inline}}
-  - : A {{domxref("PayerErrors")}} compliant object which provides appropriate error messages for any of the fields describing the payer which failed validation.
 - {{domxref("PaymentValidationErrors.paymentMethod", "paymentMethod")}} {{optional_inline}}
-  - : Any payment method specific errors which may have occurred. This object's contents will vary depending on the payment used. For example, if the user chose to pay by credit  card using the `basic-card` payment method, this is a {{domxref("BasicCardErrors")}} object.
-- {{domxref("PaymentValidationErrorsi.shippingAddress", "shippingAddress")}} {{optional_inline}}
-  - : An {{domxref("AddressErrors")}} object which contains error messages for any of the fields in the shipping address that failed validation.
+  - : Any payment method specific errors which may have occurred. This object's contents will vary depending on the payment method used.
 
 ## Example
 

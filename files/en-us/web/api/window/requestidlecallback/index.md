@@ -52,10 +52,7 @@ An ID which can be used to cancel the callback by passing it into the
 
   - : Contains optional configuration parameters. Currently only one property is defined:
 
-    - `timeout`: If `timeout` is specified and has a positive
-      value, and the callback has not already been called by the time _timeout_
-      milliseconds have passed, a task to execute the callback is queued in the event loop,
-      even if doing so risks causing a negative performance impact.
+    - `timeout`: If the number of milliseconds represented by this parameter has elapsed and the callback has not already been called, then a task to execute the callback is queued in the event loop (even if doing so risks causing a negative performance impact). `timeout` must be a positive value or it is ignored.
 
 ## Example
 

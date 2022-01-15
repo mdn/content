@@ -13,11 +13,9 @@ browser-compat: api.MouseEvent.screenX
 ---
 {{APIRef("DOM Events")}}
 
-The **`screenX`** read-only property of the
-{{domxref("MouseEvent")}} interface provides the horizontal coordinate (offset) of the
-mouse pointer in global (screen) coordinates.
+The **`screenX`** read-only property of the {{domxref("MouseEvent")}} interface provides the horizontal coordinate (offset) of the mouse pointer in global (screen) coordinates.
 
-**Note:** In a multiscreen environment, screens aligned horizontally will be treated as a single device, and so the range of the `screenX` value will increase to the combined width of the screens.
+> **Note:** In a multiscreen environment, screens aligned horizontally will be treated as a single device, and so the range of the `screenX` value will increase to the combined width of the screens.
 
 ## Syntax
 
@@ -27,23 +25,22 @@ var x = instanceOfMouseEvent.screenX
 
 ### Return value
 
-A `double` floating point value. Early versions of the spec defined this as
-an integer referring to the number of pixels. See the "Browser compatibility" section
-for details.
+A `double` floating point value.
+
+Early versions of the spec defined this as an integer referring to the number of pixels.
 
 ## Example
 
-This example displays your mouse's coordinates whenever you trigger the
-{{Event("mousemove")}} event.
+This example displays your mouse's coordinates whenever you trigger the {{Event("mousemove")}} event.
 
-#### HTML
+### HTML
 
 ```html
 <p>Move your mouse to see its position.</p>
 <p id="screen-log"></p>
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
 let screenLog = document.querySelector('#screen-log');
@@ -56,15 +53,13 @@ function logKey(e) {
 }
 ```
 
-#### Result
+### Result
 
 {{EmbedLiveSample("Example")}}
 
 ### Routing an event
 
-When you trap events on the window, document, or other roomy elements, you can get the
-coordinates of that event (e.g., a click) and route it properly, as the following
-example demonstrates:
+When you trap events on the window, document, or other roomy elements, you can get the coordinates of that event (e.g., a click) and route it properly, as the following example demonstrates:
 
 ```js
 function checkClickMap(e) {
@@ -86,5 +81,4 @@ function checkClickMap(e) {
 
 - {{ domxref("MouseEvent") }}
 - {{ domxref("MouseEvent.screenY","screenY") }}
-- {{ domxref("MouseEvent.clientX","clientX") }} / {{ domxref("MouseEvent.clientY",
-    "clientY") }}
+- {{ domxref("MouseEvent.clientX","clientX") }} / {{ domxref("MouseEvent.clientY", "clientY") }}

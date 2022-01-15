@@ -13,14 +13,16 @@ browser-compat: api.Element.ariaMultiSelectable
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaMultiSelectable`** property of the {{domxref("Element")}} interface reflects the value of the `aria-multiselectable` attribute, which indicates that the user may select more than one item from the current selectable descendants.
+The **`ariaMultiSelectable`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) attribute, which indicates that the user may select more than one item from the current selectable descendants.
 
 > **Note:** Where possible use an HTML {{htmlelement("select")}} element as this has built in semantics and does not require ARIA attributes.
 
 ## Syntax
 
-    var ariaMultiSelectable = element.ariaMultiSelectable;
-    element.ariaMultiSelectable = ariaMultiSelectable
+```js
+var ariaMultiSelectable = element.ariaMultiSelectable;
+element.ariaMultiSelectable = ariaMultiSelectable
+```
 
 ### Value
 

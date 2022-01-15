@@ -37,14 +37,13 @@ var paymentRequest = new PaymentRequest(methodData, details, [options]);
         payment methods that the merchant website accepts. Starting with more recent
         browsers, this parameter is more generic than credit cards, it is a single
         {{domxref("DOMString")}}, and the meaning of the `data` parameter
-        changes with the `supportedMethods`. For example, the basic card
-        payment method is selected by specifying the string `basic-card` here.
+        changes with the `supportedMethods`. For example, the Example Pay payment method
+        is selected by specifying the string `https://example.com/pay` here.
     - `data`
       - : A JSON-serializable object that provides optional information that might be
         needed by the supported payment methods. This has to conform to the type expected
-        by the payment handler indicated by `supportedMethods`. For basic
-        credit card services, this structure should match the
-        {{domxref("BasicCardRequest")}} dictionary.
+        by the payment handler indicated by `supportedMethods`. Developers need to consult
+        whomever controls the payment methods for the expected shape of the data object.
 
 - `details`
 
@@ -74,8 +73,7 @@ var paymentRequest = new PaymentRequest(methodData, details, [options]);
             item indicating the different amount in `details.modifiers.total`.
         - `data`
           - : A JSON-serializable object that provides optional information that might be
-            needed by the supported payment methods. This has to conform to the structure
-            defined in the {{domxref("BasicCardRequest")}} dictionary.
+            needed by the supported payment methods.
         - `total`
           - : A total amount for the payment request that overrides value in
             details.total. This is typically used when
@@ -120,11 +118,7 @@ complete context of instantiating a `PaymentRequest` object.
 
 ```js
 var supportedInstruments = [{
- supportedMethods: 'basic-card',
- data: {
-   supportedNetworks: ['visa', 'mastercard', 'amex', 'jcb',
-                       'diners', 'discover', 'mir', 'unionpay']
- }
+ supportedMethods: 'https://example.com/pay'
 }];
 
 var details = {

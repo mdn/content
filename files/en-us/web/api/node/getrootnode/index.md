@@ -2,24 +2,21 @@
 title: Node.getRootNode()
 slug: Web/API/Node/getRootNode
 tags:
-  - API
-  - DOM
   - Method
-  - Node
   - Reference
-  - getRootNode
 browser-compat: api.Node.getRootNode
 ---
 {{APIRef("DOM")}}
 
-The **`getRootNode()`** method of the {{domxref("Node")}}
-interface returns the context object's root, which optionally includes the shadow root
-if it is available.
+The **`getRootNode()`** method of the {{domxref("Node")}} interface
+returns the context object's root,
+which optionally includes the shadow root if it is available.
 
 ## Syntax
 
 ```js
-var root = node.getRootNode(options);
+getRootNode();
+getRootNode(options);
 ```
 
 ### Parameters
@@ -32,7 +29,7 @@ var root = node.getRootNode(options);
       root should be returned (`false`, the default), or a root node beyond
       shadow root (`true`).
 
-### Returns
+### Return value
 
 An object inheriting from {{domxref('Node')}}. This will differ in exact form depending
 on where you called `getRootNode()`; for example:
@@ -51,8 +48,8 @@ rootNode = node.getRootNode();
 ```
 
 This more complex example shows the difference between returning a normal root, and a
-root including the shadow root. (See the [full
-source code](<https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html>)):
+root including the shadow root.
+(See the [full source code](<https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html>)):
 
 ```html
 <!-- source: https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode()/demo/getRootNode.html -->
@@ -63,7 +60,7 @@ source code](<https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode
 <script>
   // works on Chrome 54+, Opera 41+
 
-  var parent = document.querySelector('.js-parent'),
+  const parent = document.querySelector('.js-parent'),
       child = document.querySelector('.js-child'),
       shadowHost = document.querySelector('.js-shadowHost');
 
@@ -71,10 +68,10 @@ source code](<https://github.com/jserz/js_piece/blob/master/DOM/Node/getRootNode
   console.log(child.getRootNode().nodeName); // #document
 
   // create a ShadowRoot
-  var shadowRoot = shadowHost.attachShadow({mode:'open'});
+  const shadowRoot = shadowHost.attachShadow({mode:'open'});
   shadowRoot.innerHTML = '<style>div{background:#2bb8aa;}</style>'
       + '<div class="js-shadowChild">content</div>';
-  var shadowChild = shadowRoot.querySelector('.js-shadowChild');
+  const shadowChild = shadowRoot.querySelector('.js-shadowChild');
 
   // The default value of composed is false
   console.log(shadowChild.getRootNode() === shadowRoot); // true

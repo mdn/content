@@ -13,21 +13,11 @@ browser-compat: api.ShadowRoot.delegatesFocus
 ---
 {{APIRef("Shadow DOM")}}
 
-The **`delegatesFocus`** read-only property of the
-{{domxref("ShadowRoot")}} interface returns a boolean that indicates whether
-delegatesFocus was set when the shadow was attached (see
-{{domxref("Element.attachShadow()")}}).
+The **`delegatesFocus`** read-only property of the {{domxref("ShadowRoot")}} interface returns `true` if the shadow root delegates focus, and `false` otherwise.
 
-## Syntax
+If `true`, when a non-focusable part of the shadow DOM is clicked, the first focusable part is given focus, and the shadow host is given any available `:focus` styling.
 
-```js
-var df = shadowRoot.delegatesFocus
-```
-
-### Value
-
-A boolean value — `true` if the shadow root does delegate focus,
-`false` if it doesn't.
+The property value is set using the `delegatesFocus` property of the object passed to {{domxref("Element.attachShadow()")}}).
 
 ## Examples
 

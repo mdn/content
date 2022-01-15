@@ -15,7 +15,8 @@ The **`navigator.share()`** method of the [Web Share API](/en-US/docs/Web/API/We
 
 This method requires that the current document have the [web-share](/en-US/docs/Web/HTTP/Headers/Feature-Policy/web-share) permission policy and {{Glossary("transient activation")}}. (It must be triggered off a UI event like a button click and cannot be launched at arbitrary points by a script.) Further, the method must specify valid data that is supported for sharing by the native implementation.
 
-The method resolves a {{jsxref("Promise")}} with `undefined` as soon as the data is successfully passed to the _share target_.
+The method resolves a {{jsxref("Promise")}} with `undefined`.
+On Windows this happens when the share popup is launched, while on Android the promise resolves once the data has successfully been passed to the _share target_.
 
 ## Syntax
 
@@ -36,12 +37,12 @@ navigator.share(data)
 
     - `url`: A {{domxref("USVString")}} representing a URL to be shared.
     - `text`: A {{domxref("USVString")}} representing text to be shared.
-    - `title`: A {{domxref("USVString")}} representing a title to be shared.
-    - `files`: An array of {{domxref("File")}} objects representing files to be shared.
+    - `title`: A {{domxref("USVString")}} representing a title to be shared. May be ignored by the target.
+    - `files`: An array of {{domxref("File")}} objects representing files to be shared. See [below](#shareable_file_types) for shareable file types.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with `undefined` once the data has been sent to the share target, or rejected with one of the [Exceptions](#exceptions) given below.
+A {{jsxref("Promise")}} that resolves with `undefined`, or rejected with one of the [Exceptions](#exceptions) given below.
 
 ### Exceptions
 
@@ -62,6 +63,56 @@ The {{jsxref("Promise")}} may be rejected with one of the following `DOMExceptio
   - : The user canceled the share operation or there are no share targets available.
 - `DataError`
   - : There was a problem starting the share target or transmitting the data.
+
+## Shareable file types
+
+The following is a list of usually shareable file types. However, you should always test with {{domxref("navigator.canShare()")}} if sharing would succeed.
+
+- Application
+  - `.pdf` - `application/pdf`
+- Audio
+  - `.flac` - `audio/flac`
+  - `.m4a` - `audio/x-m4a`
+  - `.mp3` - `audio/mpeg` (also accepts `audio/mp3`)
+  - `.oga` - `audio/ogg`
+  - `.ogg` - `audio/ogg`
+  - `.opus` - `audio/ogg`
+  - `.wav` - `audio/wav`
+  - `.weba` - `audio/webm`
+- Image
+  - `.bmp` - `image/bmp`
+  - `.gif` - `image/gif`
+  - `.ico` - `image/x-icon`
+  - `.jfif` - `image/jpeg`
+  - `.jpeg` - `image/jpeg`
+  - `.jpg` - `image/jpeg`
+  - `.pjp` - `image/jpeg`
+  - `.pjpeg` - `image/jpeg`
+  - `.png` - `image/png`
+  - `.svg` - `image/svg+xml`
+  - `.svgz` - `image/svg+xml`
+  - `.tif` - `image/tiff`
+  - `.tiff` - `image/tiff`
+  - `.webp` - `image/webp`
+  - `.xbm` - `image/x-xbitmap`
+- Text
+  - `.css` - `text/css`
+  - `.csv` - `text/csv`
+  - `.ehtml` - `text/html`
+  - `.htm` - `text/html`
+  - `.html` - `text/html`
+  - `.shtm` - `text/html`
+  - `.shtml` - `text/html`
+  - `.text` - `text/plain`
+  - `.txt` - `text/plain`
+- Video
+  - `.m4v` - `video/mp4`
+  - `.mp4` - `video/mp4`
+  - `.mpeg` - `video/mpeg`
+  - `.mpg` - `video/mpeg`
+  - `.ogm` - `video/ogg`
+  - `.ogv` - `video/ogg`
+  - `.webm` - `video/webm`
 
 ## Examples
 
