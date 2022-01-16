@@ -7,7 +7,6 @@ tags:
   - JavaScript
   - Method
   - Prototype
-  - Polyfill
 browser-compat: javascript.builtins.Array.every
 ---
 {{JSRef}}
