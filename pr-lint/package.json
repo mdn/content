@@ -11,6 +11,6 @@
   },
   "dependencies": {
     "@actions/github": "4.0.0",
-    "boxen": "5.0.0"
+    "boxen": "5.1.2"
   }
 }
