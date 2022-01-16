@@ -16,7 +16,7 @@ A **`WeakMap`** is a collection of key/value pairs whose keys must be objects, w
 
 `WeakMap` allows associating data to objects in a way that doesn't prevent the key objects from being collected, even if the values reference the keys. However, a `WeakMap` doesn't allow observing the liveness of its keys, which is why it doesn't allow enumeration; if a `WeakMap` exposed any method to obtain a list of its keys, the list would depend on the state of garbage collection, introducing non-determinism. If you want to have a list of keys, you should use a {{jsxref("Map")}} rather than a `WeakMap`.
 
-You can learn more about `WeakMap` in the [WeakMap object](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object) section of th [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections) guide.
+You can learn more about `WeakMap` in the [WeakMap object](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object) section of the [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections) guide.
 
 ## Description
 
