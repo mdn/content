@@ -33,7 +33,7 @@ With the basic understanding that you gain from this preparation, you'll be read
 - [Client-Server overview](/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview)
   - : Now that you know the purpose and potential benefits of server-side programming, we're going to examine what happens when a server receives a "dynamic request" from a browser. As most websites' server-side code handles requests and responses in a similar way, this will help you understand what you need to do when writing your own code.
 - [Server-side web frameworks](/en-US/docs/Learn/Server-side/First_steps/Web_frameworks)
-  - : The previous article explained what a server-side web application needs to do to respond to web browser requests. This article explains how web frameworks can simplify these tasks, and helps you choose the right framework for your first server-side web application.
+  - : The previous article explained what a server-side web application needs to do to respond to web browser requests. This article explains how web frameworks can simplify do these tasks, and helps you choose the right framework for your first server-side web application.
 - [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)
   - : Website security requires vigilance in all aspects of building and operating a site. This introductory article helps you understand the first important steps you can take to protect your web application against the most common threats.
 
