@@ -42,9 +42,9 @@ scale(sx, sy)
 ### Values
 
 - `sx`
-  - : A {{cssxref("&lt;number&gt;")}} representing the abscissa of the scaling vector.
+  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the abscissa of the scaling vector.
 - `sy`
-  - : A {{cssxref("&lt;number&gt;")}} representing the ordinate of the scaling vector. If not defined, its default value
+  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the ordinate of the scaling vector. If not defined, its default value
     is `sx`, resulting in a uniform scaling that preserves the element's aspect ratio.
 
 <table class="standard-table">
