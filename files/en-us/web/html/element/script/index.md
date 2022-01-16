@@ -99,7 +99,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Normal `script` elements pass minimal information to the {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} for scripts which do not pass the standard {{Glossary("CORS")}} checks. To allow error logging for sites which use a separate domain for static media, use this attribute. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for a more descriptive explanation of its valid arguments.
 - {{htmlattrdef("defer")}}
 
-  - : This Boolean attribute is set to indicate to a browser that the script is meant to be executed after the document has been parsed, but before firing {{event("DOMContentLoaded")}}.
+  - : This Boolean attribute is set to indicate to a browser that the script is meant to be executed after the document has been parsed, but before firing {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}.
 
     Scripts with the `defer` attribute will prevent the `DOMContentLoaded` event from firing until the script has loaded and finished evaluating.
 
@@ -155,7 +155,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 Scripts without {{HTMLAttrxRef("async", "script")}} , {{HTMLAttrxRef("defer", "script")}} or `type="module"` attributes, as well as inline scripts, are fetched and executed immediately, before the browser continues to parse the page.
 
-The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`); a video type (`video/*`); an audio (`audio/*`) type; or `text/csv`. If the script is blocked, an {{event("error")}} is sent to the element, if not a {{event("load")}} event is sent.
+The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`); a video type (`video/*`); an audio (`audio/*`) type; or `text/csv`. If the script is blocked, an {{domxref("Element/error_event", "error")}} is sent to the element, if not a {{domxref("Element/load_event", "load")}} event is sent.
 
 ## Examples
 
