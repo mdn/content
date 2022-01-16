@@ -24,7 +24,7 @@ By default, the HTML5 {{htmlelement("header")}} element has an identical meaning
 
 A `banner` landmark role converts the container element upon which it is applied into a header. It should be reserved for the site header content that is common across the site generally at the top of every page.
 
-The banner is typically includes things a logo or corporate identity, possibly a site-specific search tool, and is generally what your marketing team would call the header or top banner of the site. If the [`header` element](/en-US/docs/Web/HTML/Element/header) technique is not being used for that banner, a declaration of `role="banner"` should be used to define a banner landmark to assistive technologies.
+The banner typically includes things such as a logo or corporate identity, or possibly a site-specific search tool, and is generally what your marketing team would call the “header” or “top banner” of the site. If the [`header` element](/en-US/docs/Web/HTML/Element/header) technique is not being used for that banner, a declaration of `role="banner"` should be used to define a banner landmark to assistive technologies.
 
 Assistive technologies can identify the main `header` element of a page as the `banner` if is a descendant of the [`body` element](/en-US/docs/Web/HTML/Element/body), and not nested within an `article`, `aside`, `main`, `nav` or `section` subsection.
 
