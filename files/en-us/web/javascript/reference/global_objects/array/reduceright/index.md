@@ -246,47 +246,6 @@ look like this:
 The value returned by `reduceRight` this time would be, of course,
 `20`.
 
-## Polyfill
-
-`reduceRight` was added to the ECMA-262 standard in the 5th edition; as such
-it may not be present in all implementations of the standard. You can work around this
-by inserting the following code at the beginning of your scripts, allowing use of
-`reduceRight` in implementations which do not natively support it.
-
-```js
-// Production steps of ECMA-262, Edition 5, 15.4.4.22
-// Reference: https://es5.github.io/#x15.4.4.22
-if ('function' !== typeof Array.prototype.reduceRight) {
-  Array.prototype.reduceRight = function(callback /*, initialValue*/) {
-    'use strict';
-    if (null === this || 'undefined' === typeof this) {
-      throw new TypeError('Array.prototype.reduce called on null or undefined');
-    }
-    if ('function' !== typeof callback) {
-      throw new TypeError(callback + ' is not a function');
-    }
-    var t = Object(this), len = t.length >>> 0, k = len - 1, value;
-    if (arguments.length >= 2) {
-      value = arguments[1];
-    } else {
-      while (k >= 0 && !(k in t)) {
-        k--;
-      }
-      if (k < 0) {
-        throw new TypeError('Reduce of empty array with no initial value');
-      }
-      value = t[k--];
-    }
-    for (; k >= 0; k--) {
-      if (k in t) {
-        value = callback(value, t[k], k, t);
-      }
-    }
-    return value;
-  };
-}
-```
-
 ## Examples
 
 ### Sum up all values within an array
