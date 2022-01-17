@@ -5337,11 +5337,13 @@
 /en-US/docs/Learn/JavaScript/Introduction_to_JavaScript_1/What_went_wrong	/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong
 /en-US/docs/Learn/JavaScript/JavaScript_building_blocks	/en-US/docs/Learn/JavaScript/Building_blocks
 /en-US/docs/Learn/JavaScript/Object-oriented	/en-US/docs/Learn/JavaScript/Objects
-/en-US/docs/Learn/JavaScript/Object-oriented/Advanced	/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
+/en-US/docs/Learn/JavaScript/Object-oriented/Advanced	/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /en-US/docs/Learn/JavaScript/Object-oriented/Introduction	/en-US/docs/Learn/JavaScript/Objects/Basics
 /en-US/docs/Learn/JavaScript/Object-oriented/Introduction_to_objects	/en-US/docs/Learn/JavaScript/Objects/Basics
-/en-US/docs/Learn/JavaScript/Objects/Advanced	/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
+/en-US/docs/Learn/JavaScript/Objects/Advanced	/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+/en-US/docs/Learn/JavaScript/Objects/Inheritance	/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /en-US/docs/Learn/JavaScript/Objects/Introduction	/en-US/docs/Learn/JavaScript/Objects/Basics
+/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS	/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /en-US/docs/Learn/JavaScript/Objects/Object_building_practise	/en-US/docs/Learn/JavaScript/Objects/Object_building_practice
 /en-US/docs/Learn/Open_a_file_in_a_browser	/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files
 /en-US/docs/Learn/Other_learning_material	/en-US/docs/Learn

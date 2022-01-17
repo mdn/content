@@ -37,12 +37,12 @@ You should also have some familiarity with JavaScript basics before looking at J
 
 - [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
   - : In the first article looking at JavaScript objects, we'll look at fundamental JavaScript object syntax, and revisit some JavaScript features we've already looked at earlier on in the course, reiterating the fact that many of the features you've already dealt with are in fact objects.
-- [Object-oriented JavaScript for beginners](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-  - : With the basics out of the way, we'll now focus on object-oriented JavaScript (OOJS) — this article presents a basic view of object-oriented programming (OOP) theory, then explores how JavaScript emulates object classes via constructor functions, and how to create object instances.
 - [Object prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
-  - : Prototypes are the mechanism by which JavaScript objects inherit features from one another, and they work differently to inheritance mechanisms in classical object-oriented programming languages. In this article, we explore that difference, explain how prototype chains work, and look at how the prototype property can be used to add methods to existing constructors.
-- [Inheritance in JavaScript](/en-US/docs/Learn/JavaScript/Objects/Inheritance)
-  - : With most of the gory details of OOJS now explained, this article shows how to create "child" object classes (constructors) that inherit features from their "parent" classes. In addition, we present some advice on when and where you might use OOJS.
+  - : Prototypes are the mechanism by which JavaScript objects inherit features from one another, and they work differently to inheritance mechanisms in classical object-oriented programming languages. In this article, we explore how prototype chains work.
+- [Object-oriented programming](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)
+  - : In this article we'll describe some of the basic principles of "classical" object-oriented programming, and look at the ways it is different from the prototype model in JavaScript.
+- [Classes in JavaScript](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
+  - : JavaScript provides some features for people wanting to implement "classical" object-oriented programs, and in this article we'll describe these features.
 - [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)
   - : JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax, which is commonly used for representing and transmitting data on web sites (i.e. sending some data from the server to the client, so it can be displayed on a web page). You'll come across it quite often, so in this article, we give you all you need to work with JSON using JavaScript, including parsing the JSON so you can access data items within it and writing your own JSON.
 - [Object building practice](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice)
