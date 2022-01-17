@@ -20,7 +20,7 @@ Represents the `local` storage area. Items in `local` storage are local to the m
 The browser may restrict the amount of data that an extension can store in the local storage area:
 
 - Chrome limits the extension to 5MB of data using this API unless it has the [`"unlimitedStorage"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage).
-- Firefox enables you to ask for the `"unlimitedStorage"` permission from version 56 onwards. It does not yet restrict the amount of data your extension can store, but will start doing so in a future release. Thus, it's a good idea to ask for the `"unlimitedStorage"` permission now, if you intend to store a large amount of data.
+- In Firefox, the amount of data an extension can store is subjected to the same [storage limits](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#storage_limits) enforced on IndexedDB databases. Extensions that intend to store a large amount of data require the ["unlimitedStorage"]((/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage)) permission. However, extensions with this permission may get a quota exceeded error when the free disk space is below the threshold applied to an IndexedDB in persistent mode.
 
 When the extension is uninstalled, its associated local storage is cleared.
 
