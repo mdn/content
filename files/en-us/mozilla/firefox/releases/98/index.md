@@ -25,6 +25,8 @@ This article provides information about the changes in Firefox 98 that will affe
 
 ### JavaScript
 
+- The property `colorSpaceConversion` can be passed to the method {{domxref("createImageBitmap()")}} using the `options` object ({{bug(1748868)}}).
+
 #### Removals
 
 ### HTTP
