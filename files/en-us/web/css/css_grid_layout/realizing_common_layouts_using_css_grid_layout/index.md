@@ -465,7 +465,7 @@ This is all looking fairly complete now, however we sometimes have these cards w
 
 ![The layout has gaps as there is not space to layout a two track item.](11-grid-auto-flow-sparse.png)
 
-I can cause a grid to backfill those gaps by setting {{cssxref("grid-auto-flow")}}`: dense `on the grid container. Take care when doing this however as it does take items away from their logical source order. You should only do this if your items do not have a set order – and be aware of the [issues](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility#visual_not_logical_re-ordering) of the tab order following the source and not your reordered display.
+I can cause a grid to backfill those gaps by setting {{cssxref("grid-auto-flow")}}`: dense` on the grid container. Take care when doing this however as it does take items away from their logical source order. You should only do this if your items do not have a set order – and be aware of the [issues](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility#visual_not_logical_re-ordering) of the tab order following the source and not your reordered display.
 
 ```html hidden
 <ul class="listing">

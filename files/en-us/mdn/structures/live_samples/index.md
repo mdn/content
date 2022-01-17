@@ -143,7 +143,7 @@ el.onclick = function() {
 
 ### Result
 
-Here is the result of running the code blocks above via` \{{EmbedLiveSample('Live_sample_demo')}}`:
+Here is the result of running the code blocks above via `\{{EmbedLiveSample('Live_sample_demo')}}`:
 
 {{EmbedLiveSample('Live_sample_demo')}}
 

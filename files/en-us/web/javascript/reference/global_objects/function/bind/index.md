@@ -37,7 +37,7 @@ bind(thisArg, arg1, ... , argN)
     operator. When using `bind` to create a function (supplied as a callback)
     inside a `setTimeout`, any primitive value passed as
     `thisArg` is converted to object. If no arguments are provided
-    to `bind `, or if the `thisArg` is
+    to `bind`, or if the `thisArg` is
     `null` or `undefined`, the
     `this` of the executing scope is treated as the
     `thisArg` for the new function.

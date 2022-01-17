@@ -17,7 +17,7 @@ Instead, they're called on the class itself.
 
 Static methods are often utility functions, such as functions to create or clone objects, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
 
-> **Note:** In the context of classes, MDN Web Docs content uses the terms properties and [fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) interchangeably. 
+> **Note:** In the context of classes, MDN Web Docs content uses the terms properties and [fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) interchangeably.
 
 {{EmbedInteractiveExample("pages/js/classes-static.html")}}
 
@@ -103,7 +103,7 @@ Static members are not directly accessible using the {{JSxRef("Operators/this", 
 non-static methods. You need to call them using the class name:
 `CLASSNAME.STATIC_METHOD_NAME()` /
 `CLASSNAME.STATIC_PROPERTY_NAME` or by calling the method as a property of
-the `constructor`: `this.constructor.STATIC_METHOD_NAME() `/
+the `constructor`: `this.constructor.STATIC_METHOD_NAME()` /
 `this.constructor.STATIC_PROPERTY_NAME`
 
 ```js

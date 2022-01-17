@@ -161,7 +161,7 @@ There are two valid formats for shortcut keys: as a **key combination** or as a 
 
 ### Key combinations
 
-> **Note:** On Macs, `"Ctrl"` is interpreted as` "Command"`, so if you actually need `"Ctrl"`, specify `"MacCtrl"`.
+> **Note:** On Macs, `"Ctrl"` is interpreted as `"Command"`, so if you actually need `"Ctrl"`, specify `"MacCtrl"`.
 
 Key combinations must consist of 2 or 3 keys:
 

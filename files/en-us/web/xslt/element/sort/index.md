@@ -9,7 +9,7 @@ tags:
 ---
 {{ XsltRef() }}
 
-The` <xsl:sort>` element defines a sort key for nodes selected by `<xsl:apply-templates>` or `<xsl:for-each>` and determines the order in which they are processed.
+The `<xsl:sort>` element defines a sort key for nodes selected by `<xsl:apply-templates>` or `<xsl:for-each>` and determines the order in which they are processed.
 
 ### Syntax
 

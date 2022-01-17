@@ -35,7 +35,7 @@ The WebAssembly function `exported_func` is exported for use in our environment 
 
 ## Converting the text .wat into a binary .wasm file
 
-Let’s have a go at converting the above `.wat` text representation example into `.wasm `assembly format.
+Let’s have a go at converting the above `.wat` text representation example into `.wasm` assembly format.
 
 1.  To start with, make a copy of the above listing inside a text file; call it `simple.wat`.
 2.  We need to assemble this textual representation into the assembly language the browser actually reads before we can use it. To do this, we can use the wabt tool, which includes compilers to convert between WebAssembly’s text representation and wasm, and vice versa, plus more besides. Go to <https://github.com/webassembly/wabt> — follow the instructions on this page to set up the tool.
