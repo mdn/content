@@ -271,7 +271,7 @@ console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 
 ### Different meaning of '?!' combination usage in Assertions and  Ranges
 
-Different meaning of `?!` combination usage in [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/ `and [Ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`.
+Different meaning of `?!` combination usage in [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/` and [Ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`.
 
 ```js
 let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";

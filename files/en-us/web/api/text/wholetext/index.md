@@ -38,7 +38,7 @@ para.removeChild(para.childNodes[1]); // Delete the strong element
 
 Now you end up with _"Through-hiking is great! However, casting a ballot is tricky."_, with two nodes before the hyperlink:
 
-1. `Through-hiking is great!  `
+1. `Through-hiking is great!`
 2. ` However, `
 
 To get those two nodes at once, you would call `para.childNodes[0].wholeText`:

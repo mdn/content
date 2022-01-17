@@ -24,9 +24,9 @@ The nearest integer greater than or equal to `number`.
 
 for example:
 
-` ceiling (5.2)` = _6_
+`ceiling (5.2)` = _6_
 
-` ceiling (-5.2)` = _-5_
+`ceiling (-5.2)` = _-5_
 
 ### Defined
 

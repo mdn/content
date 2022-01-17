@@ -442,7 +442,7 @@ The following properties were once supported with the -webkit- prefix but are no
 - `-webkit-grid-columns` (See [`grid-column)`](/en-US/docs/Web/CSS/grid-column)
 - `-webkit-grid-rows` (See [`grid-row)`](/en-US/docs/Web/CSS/grid-row)
 - `-webkit-hyphenate-charset`
-- `-webkit-image-set (See `{{CSSxRef("image/image-set()", "image-set")}})
+- `-webkit-image-set (See {{CSSxRef("image/image-set()", "image-set")}})
 - `-webkit-mask-attachment`
 - `-webkit-match-nearest-mail-blockquote-color`
 - {{CSSxRef("-webkit-overflow-scrolling", "-webkit-overflow-scrolling")}}

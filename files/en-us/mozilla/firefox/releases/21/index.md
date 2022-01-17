@@ -102,7 +102,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
     - `nsINavHistoryFullVisitResultNode`
 
-  - Deprecated, use` mozIAsyncHistory::updatePlaces` instead:
+  - Deprecated, use `mozIAsyncHistory::updatePlaces` instead:
 
     - `nsINavHistoryService::AddVisit`
 

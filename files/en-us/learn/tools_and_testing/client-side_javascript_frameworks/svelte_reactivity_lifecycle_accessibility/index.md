@@ -556,7 +556,7 @@ To select the text of a DOM input node we have to call [`select()`](/en-US/docs/
 node.addEventListener('focus', event => node.select()).
 ```
 
-And, in order to avoid memory leaks, we should also call the [`removeEventListener() `](/en-US/docs/Web/API/EventTarget/removeEventListener)function when the node is destroyed.
+And, in order to avoid memory leaks, we should also call the [`removeEventListener()`](/en-US/docs/Web/API/EventTarget/removeEventListener) function when the node is destroyed.
 
 > **Note:** All this is just standard WebAPI functionality; nothing here is specific to Svelte.
 
