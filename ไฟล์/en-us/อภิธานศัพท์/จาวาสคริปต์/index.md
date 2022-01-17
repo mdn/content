@@ -1,4 +1,4 @@
----
+JavaScript---dow1994
 title: JavaScript
 slug: Glossary/JavaScript
 tags:
