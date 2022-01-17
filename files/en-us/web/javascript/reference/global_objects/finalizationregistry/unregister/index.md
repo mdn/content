@@ -33,7 +33,7 @@ unregister(unregisterToken);
 ## Notes
 
 When a target object has been reclaimed, it is no longer registered in the registry.
-There is no need to all `unregister` in your cleanup callback. Only call
+There is no need to call `unregister` in your cleanup callback. Only call
 `unregister` if you haven't received a cleanup callback and no longer need
 to receive one.
 
