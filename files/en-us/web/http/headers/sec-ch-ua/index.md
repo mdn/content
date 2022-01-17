@@ -21,7 +21,7 @@ The **`Sec-CH-UA`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#u
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        [Client hint](/en-US/docs/Web/HTTP/Client_hints)
+        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
