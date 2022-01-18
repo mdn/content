@@ -134,7 +134,7 @@ $ python3 -V
   python3: command not found
 ```
 
-You can easily install Python 3 (along with the _pip3_ tool) from[ python.org](https://www.python.org/):
+You can easily install Python 3 (along with the _pip3_ tool) from [python.org](https://www.python.org/):
 
 1.  Download the required installer:
 
@@ -160,7 +160,7 @@ pip3 list
 
 ### Windows 10
 
-Windows doesn't include Python by default, but you can easily install it (along with the _pip3_ tool) from[ python.org](https://www.python.org/):
+Windows doesn't include Python by default, but you can easily install it (along with the _pip3_ tool) from [python.org](https://www.python.org/):
 
 1.  Download the required installer:
 

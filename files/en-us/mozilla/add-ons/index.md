@@ -28,7 +28,7 @@ Extensions written using WebExtensions APIs for Firefox are designed to be cross
 
 ### Extension Workshop
 
-The [Firefox Extension Workshop ](https://extensionworkshop.com)can help you develop extensions for Firefox and give your users simple, yet powerful ways to customize their browsing experience. You’ll find:
+The [Firefox Extension Workshop](https://extensionworkshop.com) can help you develop extensions for Firefox and give your users simple, yet powerful ways to customize their browsing experience. You’ll find:
 
 - [Overview of the Firefox extension features](https://extensionworkshop.com/#about)
 - [Tools and processes for developing and testing](https://extensionworkshop.com/documentation/develop/)
@@ -44,24 +44,24 @@ In 2020, Mozilla will release a new Firefox for Android experience. This new, hi
 
 ### Migrate an existing extension
 
-If you maintain a legacy extension, such as an XUL overlay, bootstrapped, or Add-on SDK-based extension, you can still port it to use WebExtension APIs.  There are some [porting resources on Firefox Extension Workshop](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/), our site for Firefox-specific development resources.
+If you maintain a legacy extension, such as an XUL overlay, bootstrapped, or Add-on SDK-based extension, you can still port it to use WebExtension APIs. There are some [porting resources on Firefox Extension Workshop](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/), our site for Firefox-specific development resources.
 
 For more information about transition support, please visit our [wiki page.](//wiki.mozilla.org/Add-ons/developer/communication)
 
 ## Publishing add-ons
 
-[Addons.mozilla.org](https://addons.mozilla.org), commonly known as "AMO," is Mozilla's official site for developers to list add-ons, and for users to discover them. By uploading your add-on to AMO, you can participate in our community of users and creators and find an audience for your add-on.
+[Addons.mozilla.org](https://addons.mozilla.org), commonly known as "AMO," is Mozilla's official site for developers to list add-ons, and for users to discover them. By uploading your add-on to AMO, you can participate in our community of users and creators and find an audience for your add-on.
 
 You are not required to list your add-on on AMO, but your add-on must be signed by Mozilla else users will not be able to install it.
 
-For an overview for the process of publishing your add-on see [Signing and distributing your add-on](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/).
+For an overview for the process of publishing your add-on see [Signing and distributing your add-on](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/).
 
 ## Other types of add-ons
 
 In addition to extensions, there are a few other add-on types that allow users to customize Firefox. Those add-ons include:
 
-- [User dictionaries](/en-US/docs/Mozilla/Creating_a_spell_check_dictionary_add-on) let you spell-check in different languages.
-- [Language packs](https://support.mozilla.org/kb/use-firefox-interface-other-languages-language-pack) let you have more languages available for the user interface of Firefox.
+- [User dictionaries](/en-US/docs/Mozilla/Creating_a_spell_check_dictionary_add-on) let you spell-check in different languages.
+- [Language packs](https://support.mozilla.org/kb/use-firefox-interface-other-languages-language-pack) let you have more languages available for the user interface of Firefox.
 
 ## Contact us
 
