@@ -39,7 +39,7 @@ existing ones removed.
 See {{SectionOnPage("/en-US/docs/Web/API/TextTrackList", "Event handlers")}} to learn
 more about watching for changes to a media element's track list.
 
-### Value
+## Value
 
 A {{DOMxRef("TextTrackList")}} object representing the list of text tracks included in the media element. The list of tracks can be accessed using `textTracks[n]` to get the *n*th text track from the object’s list of text tracks, or using the `textTracks`.[`getTrackById()`](/en-US/docs/Web/API/TextTrackList/getTrackById)
 method.
