@@ -245,7 +245,7 @@ To have the equivalent output using a normal string you'd have to include line b
 
 ```js
 const output = 'I like the song.\nI gave it a score of 90%.';
-console.log(output);  // I like the song".
+console.log(output);  // I like the song.
                       // I gave it a score of 90%.
 ```
 
