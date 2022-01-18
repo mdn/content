@@ -27,8 +27,8 @@ createCylinderLayer(init)
     - `aspectRatio`: Optional. A number indicating the ratio of the visible cylinder section. It is the ratio of the width of the visible section of the cylinder divided by its height. The width is calculated by multiplying the `radius` with the `centralAngle`. The default value is `2.0`.
     - `centralAngle`: Optional. A number indicating the angle in radians of the visible section of the cylinder. Default value: `0.78539` (π / 4).
     - `colorFormat`: Optional. A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
-        - `gl.RGB`
-        - `gl.RGBA`
+      - `gl.RGB`
+      - `gl.RGBA`
       Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled:
       - `ext.SRGB_EXT`
       - `ext.SRGB_ALPHA_EXT`
