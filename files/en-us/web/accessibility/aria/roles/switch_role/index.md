@@ -15,12 +15,14 @@ The ARIA **`switch`** role is functionally identical to the [checkbox](/en-US/do
 
 This example creates a widget and assigns the ARIA `switch` role to it.
 
-    <button type="button" role="switch" aria-checked="true"
-        id="speakerPower" class="switch">
-        <span aria-hidden="true">off</span>
-        <span aria-hidden="true">on</span>
-    </button>
-    <label for="speakerPower" class="switch">Speaker power</label>
+```html
+<button type="button" role="switch" aria-checked="true"
+    id="speakerPower" class="switch">
+    <span aria-hidden="true">off</span>
+    <span aria-hidden="true">on</span>
+</button>
+<label for="speakerPower" class="switch">Speaker power</label>
+```
 
 ## Description
 
