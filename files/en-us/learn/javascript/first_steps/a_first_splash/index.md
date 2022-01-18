@@ -135,7 +135,7 @@ You can assign a value to your variable or constant with an equals sign (`=`) fo
 In our example:
 
 - The first variable — `randomNumber` — is assigned a random number between 1 and 100, calculated using a mathematical algorithm.
-- The first three constants are each made to store a reference to the results paragraphs in our HTML, and are used to insert values into the paragraphs later on in the code (note how they are inside a `<div>` element, which is itself used to select all three later on for resetting, when we restart the game):
+- The first three constants are each made, to store a reference to the results paragraphs in our HTML, and are used to insert values into the paragraphs later in the code (note how they are inside a `<div>` element, which is itself used to select all three `<p>` elements, later for resetting, when we restart the game):
 
   ```html
   <div class="resultParas">
