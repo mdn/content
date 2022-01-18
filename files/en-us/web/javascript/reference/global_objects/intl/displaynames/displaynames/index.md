@@ -76,10 +76,10 @@ new Intl.DisplayNames(locales, options)
         - "`region`"
         - "`script`"
 
-     - `languageDisplay`
-       - : The `languageDisplay` it's only usable along with type `language`, defaults to `dialect`.
-         - "`dialect`"
-         - "`standard`"
+    - `languageDisplay`
+      - : The `languageDisplay` it's only usable along with type `language`, defaults to `dialect`.
+        - "`dialect`"
+        - "`standard`"
 
     - `fallback`
 
