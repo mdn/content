@@ -14,7 +14,7 @@ tags:
 
 The `mark` role semantically denotes HTML elements containing text that is marked/highlighted for reference purposes. This is semantically equivalent to the HTML {{HTMLElement('mark')}} element. If possible, you should use this element instead.
 
-> **Warning:** The `mark` roll be part of WAI-ARIA 1.3, which is still being drafted.
+> **Warning:** The `mark` role will be part of WAI-ARIA 1.3, which is still being drafted.
 
 ## Examples
 
