@@ -30,7 +30,7 @@ worker.postMessage(sab);
 
 Shared memory can be created and updated simultaneously in workers or the main thread. Depending on the system (the CPU, the OS, the Browser) it can take a while until the change is propagated to all contexts. To synchronize, {{jsxref("Atomics", "atomic", "", 1)}} operations are needed.
 
-### APIs which use SharedArrayBuffer objects
+### APIs which use SharedArrayBuffer objects
 
 - [`WebGLRenderingContext.bufferData()`](/en-US/docs/Web/API/WebGLRenderingContext/bufferData "The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.")
 - [`WebGLRenderingContext.bufferSubData()`](/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData "The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.")
@@ -56,9 +56,9 @@ To check if cross origin isolation has been successful, you can test against the
 
 ```js
 if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  // Post SharedArrayBuffer
 } else {
-  // Do something else
+  // Do something else
 }
 ```
 
@@ -134,6 +134,6 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 - {{jsxref("ArrayBuffer")}}
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
-- [parlib-simple ](https://github.com/lars-t-hansen/parlib-simple)– a simple library providing synchronization and work distribution abstractions.
+- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – a simple library providing synchronization and work distribution abstractions.
 - [Shared Memory – a brief tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
 - [A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

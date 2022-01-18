@@ -71,21 +71,21 @@ Highlights:
   - `-webkit-box-sizing`
   - `-webkit-user-select`
   - `-webkit-linear-gradient()` {{bug("1210575")}}
-  - `-webkit-radial-gradient"()` {{bug("1210575")}}
-  - `-webkit-repeating-linear-gradient()` {{bug("1210575")}}
-  - `-webkit-repeating-radial-gradient()` {{bug("1210575")}}
+  - `-webkit-radial-gradient"()` {{bug("1210575")}}
+  - `-webkit-repeating-linear-gradient()` {{bug("1210575")}}
+  - `-webkit-repeating-radial-gradient()` {{bug("1210575")}}
 
 ### JavaScript
 
 #### New APIs
 
-- {{jsxref("Symbol.toPrimitive")}}, {{jsxref("Symbol.prototype.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}, and {{jsxref("Date.prototype.@@toPrimitive", "Date.prototype[@@toPrimitive]")}} have been implemented ({{bug(1054756)}}).
+- {{jsxref("Symbol.toPrimitive")}}, {{jsxref("Symbol.prototype.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}, and {{jsxref("Date.prototype.@@toPrimitive", "Date.prototype[@@toPrimitive]")}} have been implemented ({{bug(1054756)}}).
 
 #### Changes
 
 - The [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) bindings in the global level have been made compliant with ES2015 semantics. See {{bug(589199)}} and the blog post ["Breaking changes in let and const in Firefox Nightly 44"](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/). In addition, `let` is now available to default Web JavaScript (strict and non-strict) and does not require a version opt-in anymore ({{bug(932517)}}).
-- If [typed arrays'](/en-US/docs/Web/JavaScript/Typed_arrays) (like {{jsxref("Int8Array", "Int8Array")}}) and {{jsxref("ArrayBuffer", "ArrayBuffer")}}) constructors are called as a function without the {{jsxref("Operators/new", "new")}} operator, a {{jsxref("TypeError")}} is now thrown as per the ES2015 specification ({{bug(980945)}}, {{bug(1214936)}}).
-- The {{jsxref("RegExp")}} sticky flag now follows the ES2015 standard for[ anchored sticky regular expressions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky#anchored_sticky_flag) ({{bug(773687)}}).
+- If [typed arrays'](/en-US/docs/Web/JavaScript/Typed_arrays) (like {{jsxref("Int8Array", "Int8Array")}}) and {{jsxref("ArrayBuffer", "ArrayBuffer")}}) constructors are called as a function without the {{jsxref("Operators/new", "new")}} operator, a {{jsxref("TypeError")}} is now thrown as per the ES2015 specification ({{bug(980945)}}, {{bug(1214936)}}).
+- The {{jsxref("RegExp")}} sticky flag now follows the ES2015 standard for [anchored sticky regular expressions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky#anchored_sticky_flag) ({{bug(773687)}}).
 - The [JavaScript shell](/en-US/docs/Mozilla/Projects/SpiderMonkey/Introduction_to_the_JavaScript_shell) (SpiderMonkey's REPL) now defaults to the default, Web-compatible JS version (and not JS1.7+ anymore) ({{bug(1192329)}}).
 
 #### Removals
@@ -104,7 +104,7 @@ Highlights:
 - The obsolete property `DocumentType.internalSubset` has been removed ({{bug(801545)}}).
 - For compatibility with existing sites, the properties {{domxref("Window.orientation")}} and {{domxref("Window.onorientationchange")}}, as well as the {{event("orientationchange")}} event have been implemented ({{bug(920734)}}).
 - An {{HTMLElement("iframe")}} with explicit fullscreen request should not exit fullscreen implicitly ({{bug(1187801)}}).
-- The events {{event("mouseover")}}, {{event("mouseout")}}, {{event("mouseenter")}}, {{event("mouseleave")}}, {{event("pointermove")}}, {{event("pointerover")}}, {{event("pointerout")}}, {{event("pointerenter")}} and {{event("pointerleave")}} are now triggered for disabled form elements ({{bug(218093)}}).
+- The events {{event("mouseover")}}, {{event("mouseout")}}, {{event("mouseenter")}}, {{event("mouseleave")}}, {{event("pointermove")}}, {{event("pointerover")}}, {{event("pointerout")}}, {{event("pointerenter")}} and {{event("pointerleave")}} are now triggered for disabled form elements ({{bug(218093)}}).
 - The method {{domxref("Element.webkitMatchesSelector()")}} has been added ({{bug(1216193)}}) to improve interoperability.
 - To match the spec, the method {{domxref("Document.createAttribute()")}} now converts the input to lower case ({{bug(1176313)}}).
 - The non-standard `dialog` feature for {{domxref("Window.open()")}} is no longer available to Web content. It is still available to extensions and other code with chrome privileges ({{bug(1095236)}}.
@@ -128,7 +128,7 @@ Highlights:
 
 #### Service Workers
 
-- The {{domxref("ServiceWorkerMessageEvent")}} and {{domxref("ExtendableMessageEvent")}} interfaces have been implemented ({{bug(1143717)}} and {{bug(1207068)}}).
+- The {{domxref("ServiceWorkerMessageEvent")}} and {{domxref("ExtendableMessageEvent")}} interfaces have been implemented ({{bug(1143717)}} and {{bug(1207068)}}).
 - {{domxref("Headers")}} objects now support a pair iterator, meaning that the methods {{domxref("Headers.entries()")}}, {{domxref("Headers.keys()")}}, and {{domxref("Headers.values()")}} are now available; {{jsxref("Symbol.iterator")}} now also returns the default iterator for them ({{bug(1108181)}}).
 - The {{domxref('XMLHttpRequest')}} API has been disabled on Service Workers ({{bug(931243)}}).
 - The interface {{domxref("FetchEvent")}} now extends {{domxref("ExtendableEvent")}}, giving it access to the {{domxref("ExtendableEvent.waitUntil()")}} method. ({{bug(1214772)}}).

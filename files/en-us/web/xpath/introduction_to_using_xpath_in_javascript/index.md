@@ -48,14 +48,14 @@ Returns `xpathResult`, which is an `XPathResult` object of the type [specified](
 We create a namespace resolver using the `createNSResolver` method of the [document](/en-US/docs/Web/API/Document) object.
 
 ```js
-var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 ```
 
 Or alternatively by using the `createNSResolver` method of a `XPathEvaluator` object.
 
 ```js
 var xpEvaluator = new XPathEvaluator();
-var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
+var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 ```
 
 And then pass `document.evaluate`, the `nsResolver` variable as the `namespaceResolver` parameter.
@@ -155,7 +155,7 @@ Snapshots do not change with document mutations, so unlike the iterators, the sn
 ```js
 var nodesSnapshot = document.evaluate('//phoneNumber', documentNode, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
 
-for ( var i=0 ; i < nodesSnapshot.snapshotLength; i++ )
+for ( var i=0; i < nodesSnapshot.snapshotLength; i++ )
 {
   alert( nodesSnapshot.snapshotItem(i).textContent );
 }
@@ -249,7 +249,7 @@ req.send(null);
 
 var xmlDoc = req.responseXML;
 
-var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
+var nsResolver = xmlDoc.createNSResolver( xmlDoc.ownerDocument == null ? xmlDoc.documentElement : xmlDoc.ownerDocument.documentElement);
 
 var personIterator = xmlDoc.evaluate('//person', xmlDoc, nsResolver, XPathResult.ANY_TYPE, null );
 ```
@@ -277,7 +277,7 @@ In order to associate the '`mathml:`' prefix with the namespace URI '`http://www
 ```js
 function nsResolver(prefix) {
   var ns = {
-    'xhtml' : 'http://www.w3.org/1999/xhtml',
+    'xhtml': 'http://www.w3.org/1999/xhtml',
     'mathml': 'http://www.w3.org/1998/Math/MathML'
   };
   return ns[prefix] || null;
@@ -358,7 +358,7 @@ var thisitemEl = thislevel.iterateNext();
 ## See also
 
 - [XPath](/en-US/docs/Web/XPath)
-- [XML Path Language ](https://www.xml.com/pub/a/2000/08/holman/index.html?page=2#xpath-info)from _[What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/)_ by G. Ken Holman
+- [XML Path Language](https://www.xml.com/pub/a/2000/08/holman/index.html?page=2#xpath-info) from _[What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/)_ by G. Ken Holman
 
 ## Original Document Information
 

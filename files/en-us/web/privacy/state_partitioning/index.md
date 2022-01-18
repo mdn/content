@@ -87,7 +87,7 @@ efforts as the Work Item is standardized.
 - [**Network Partitioning**](#network_partitioning): Enabled by default for all users since Firefox 85.
 - [**Dynamic State Partitioning**](#dynamic_state_partitioning):
   - Since Firefox 86: Enabled for users that have
-    ["Strict" privacy protections ](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection)enabled.
+    ["Strict" privacy protections](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection) enabled.
   - Since Firefox 90: Enabled in private browsing.
 
 ### Network Partitioning
@@ -197,7 +197,7 @@ third-party integrations that are common on the web to continue to function.
 
 Third-party frames may use
 [`document.requestStorageAccess`
-](/en-US/docs/Web/API/Document/requestStorageAccess)to request unpartitioned storage access through the
+](/en-US/docs/Web/API/Document/requestStorageAccess) to request unpartitioned storage access through the
 [Storage Access API](/en-US/docs/Web/API/Storage_Access_API). Once
 granted, the requesting third-party will gain access to its first-party
 storage bucket (i.e., the storage it would have access to if visited as a
