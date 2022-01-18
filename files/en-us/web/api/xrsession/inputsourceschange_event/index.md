@@ -71,6 +71,7 @@ You can also add a handler for `inputsourceschange` events by setting the `oninp
 ```js
 xrSession.oninputsourceschange = onInputSourcesChange;
 ```
+
 ## Specifications
 
 {{Specifications}}

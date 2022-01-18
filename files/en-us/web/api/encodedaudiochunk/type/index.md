@@ -23,6 +23,7 @@ A string, one of:
   - : The data is not a key chunk.
 
 ## Examples
+
 In the following example the `type` is printed to the console.
 
 ```js

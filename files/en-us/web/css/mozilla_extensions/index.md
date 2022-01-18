@@ -74,6 +74,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 > **Note:** To maximize the compatibility of your CSS, you should use the unprefixed standard properties instead of the prefixed ones listed below. Once a given property is standardized and implemented without the prefix, the prefixed version is typically dropped after a while.
 
 - ### A
+
 - {{CSSxRef("animation", "-moz-animation")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("animation-delay", "-moz-animation-delay")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("animation-direction", "-moz-animation-direction")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
@@ -84,7 +85,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("animation-play-state", "-moz-animation-play-state")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("animation-timing-function","-moz-animation-timing-function")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("appearance","-moz-appearance")}} {{Experimental_Inline}}
+
 - ### B
+
 - {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("background-clip", "-moz-background-clip")}}{{deprecated_inline}}
 - {{CSSxRef("background-origin", "-moz-background-origin")}}{{deprecated_inline}}
@@ -100,7 +103,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("border-inline-start-style","-moz-border-start-style")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start-style")}}]
 - {{CSSxRef("border-inline-start-width","-moz-border-start-width")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start-width")}}]
 - {{CSSxRef("box-sizing", "-moz-box-sizing")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
+
 - ### C
+
 - {{CSSxRef("clip-path")}} {{Experimental_Inline}} \[Applying to more than SVG]
 - {{CSSxRef("column-count","-moz-column-count")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("column-fill","-moz-column-fill")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
@@ -111,7 +116,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("column-rule-style","-moz-column-rule-style")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("column-rule-color","-moz-column-rule-color")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("-moz-context-properties")}} {{Experimental_Inline}}
+
 - ### F–M
+
 - {{CSSxRef("filter")}} {{Experimental_Inline}} \[Applying to more than SVG]
 - {{CSSxRef("font-feature-settings","-moz-font-feature-settings")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("font-language-override","-moz-font-language-override")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
@@ -119,20 +126,26 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("margin-inline-end","-moz-margin-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("margin-inline-end")}}]
 - {{CSSxRef("margin-inline-start","-moz-margin-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("margin-inline-start")}}]
 - {{CSSxRef("mask")}} {{Experimental_Inline}} \[Applying to more than SVG]
+
 - ### O
+
 - {{CSSxRef("opacity","-moz-opacity")}} {{deprecated_inline}}
 - {{CSSxRef("outline","-moz-outline")}} {{deprecated_inline}}
 - {{CSSxRef("outline-color","-moz-outline-color")}} {{deprecated_inline}}
 - {{CSSxRef("outline-offset","-moz-outline-offset")}} {{deprecated_inline}}
 - {{CSSxRef("outline-style","-moz-outline-style")}} {{deprecated_inline}}
 - {{CSSxRef("outline-width","-moz-outline-width")}} {{deprecated_inline}}
+
 - ### P
+
 - {{CSSxRef("padding-inline-end","-moz-padding-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("padding-inline-start")}}]
 - {{CSSxRef("padding-inline-start","-moz-padding-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("padding-inline-end")}}]
 - {{CSSxRef("perspective", "-moz-perspective")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("perspective-origin","-moz-perspective-origin")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("pointer-events")}} {{Experimental_Inline}} \[Applying to more than SVG]
+
 - ### T–U
+
 - {{CSSxRef("tab-size","-moz-tab-size")}} {{Experimental_Inline}}
 - {{CSSxRef("text-align-last","-moz-text-align-last")}}{{deprecated_inline}}
 - {{CSSxRef("text-decoration-color","-moz-text-decoration-color")}}{{deprecated_inline}}
@@ -415,6 +428,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 ## Pseudo-elements and pseudo-classes
 
 - ### A – D
+
 - {{CSSxRef("::-moz-anonymous-block")}}
 - {{CSSxRef("::-moz-anonymous-positioned-block")}}
 - {{CSSxRef(":-moz-any")}}
@@ -424,7 +438,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("::-moz-color-swatch")}}
 - {{CSSxRef("::-moz-cell-content")}}
 - {{CSSxRef(":-moz-drag-over")}}
+
 - ### F – I
+
 - {{CSSxRef(":-moz-first-node")}}
 - {{CSSxRef("::-moz-focus-inner")}}
 - {{CSSxRef("::-moz-focus-outer")}}
@@ -435,7 +451,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef(":-moz-handler-crashed")}}
 - {{CSSxRef(":-moz-handler-disabled")}}
 - {{CSSxRef("::-moz-inline-table")}}
+
 - ### L
+
 - {{CSSxRef(":-moz-last-node")}}
 - {{CSSxRef(":-moz-list-bullet")}}
 - {{CSSxRef(":-moz-list-number")}}
@@ -445,7 +463,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef(":-moz-lwtheme")}}
 - {{CSSxRef(":-moz-lwtheme-brighttext")}}
 - {{CSSxRef(":-moz-lwtheme-darktext")}}
+
 - ### N – R
+
 - {{CSSxRef(":-moz-native-anonymous")}}
 - {{CSSxRef(":-moz-only-whitespace")}}
 - {{CSSxRef("::-moz-page")}}
@@ -460,7 +480,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("::-moz-range-track")}}
 - {{CSSxRef(":-moz-read-only")}}
 - {{CSSxRef(":-moz-read-write")}}
+
 - ### S
+
 - {{CSSxRef("::-moz-scrolled-canvas")}}
 - {{CSSxRef("::-moz-scrolled-content")}}
 - {{CSSxRef("::-moz-scrolled-page-sequence")}}
@@ -468,7 +490,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef(":-moz-submit-invalid")}}
 - {{CSSxRef(":-moz-suppressed")}}
 - {{CSSxRef("::-moz-svg-foreign-content")}}
+
 - ### T
+
 - {{CSSxRef("::-moz-table")}}
 - {{CSSxRef("::-moz-table-cell")}}
 - {{CSSxRef("::-moz-table-column")}}
@@ -490,7 +514,9 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef(":-moz-tree-row(hover)")}}
 - {{CSSxRef(":-moz-tree-separator")}}
 - {{CSSxRef(":-moz-tree-twisty")}}
+
 - ### U – X
+
 - {{CSSxRef(":-moz-ui-invalid")}}
 - {{CSSxRef(":-moz-ui-valid")}}
 - {{CSSxRef(":-moz-user-disabled")}}
