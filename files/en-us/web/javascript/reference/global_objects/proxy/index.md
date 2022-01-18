@@ -14,7 +14,9 @@ The `Proxy` object enables you to create a proxy for another object, which can i
 
 ## Description
 
-A `Proxy` is created with two parameters:
+A `Proxy` is a wrapper for an object that you can use to change the way properties are retrieved and set, and you can alter other operations.
+
+You create a Proxy with two parameters:
 
 - `target`: the original object which you want to proxy
 - `handler`: an object that defines which operations will be intercepted and how to redefine intercepted operations.
