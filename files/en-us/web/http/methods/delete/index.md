@@ -79,7 +79,7 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
     <h1>File deleted.</h1>
   </body>
 </html>
-````
+```
 
 ## Specifications
 

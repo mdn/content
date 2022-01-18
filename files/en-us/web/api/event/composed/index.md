@@ -93,7 +93,7 @@ Whereas the `<closed-shadow>` element's composed path is a follows:
 
 ```plain
 Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
-````
+```
 
 In the second case, the event listeners only propagate as far as the
 `<closed-shadow>` element itself, but not to the nodes inside the
