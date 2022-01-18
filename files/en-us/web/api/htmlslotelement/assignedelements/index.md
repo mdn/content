@@ -33,7 +33,7 @@ HTMLSlotElement.assignedElements(options)
   - : An object that sets options for the nodes to be returned. The available options are:
 
     - `flatten`
-      - : A {{jsxref('Boolean')}} indicating whether to return the
+      - : A boolean value indicating whether to return the
         assigned elements of any available child `<slot>` elements
         (`true`) or not (`false`). Defaults to `false`.
 
