@@ -180,7 +180,7 @@ If you want to know how to serialize and submit a form via [AJAX](/en-US/docs/W
 
 ## Gotchas
 
-The `FormData` doesn't include data from the fields that are disabled or the fieldsets that are disabled.
+The `FormData` object doesn't include data from the fields that are disabled or the fieldsets that are disabled.
 
 ## See also
 
