@@ -13,12 +13,14 @@ The `<xsl:sort>` element defines a sort key for nodes selected by `<xsl:apply-te
 
 ### Syntax
 
-    <xsl:sort
-    	select=EXPRESSION
-    	order="ascending" | "descending"
-    	case-order="upper-first" | "lower-first"
-    	lang=XML:LANG-CODE
-    	data-type="text" | "number" />
+```xml
+<xsl:sort
+  select=EXPRESSION
+  order="ascending" | "descending"
+  case-order="upper-first" | "lower-first"
+  lang=XML:LANG-CODE
+  data-type="text" | "number" />
+```
 
 ### Required Attributes
 

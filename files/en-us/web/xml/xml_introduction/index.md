@@ -86,13 +86,15 @@ Like HTML, XML offers methods (called entities) for referring to some special re
 
 Even though there are only 5 declared entities, more can be added using the document's [Document Type Definition](/en-US/docs/Glossary/Doctype). For example, to create a new `&warning;` entity, you can do this:
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE body [
-      <!ENTITY warning "Warning: Something bad happened... please refresh and try again.">
-    ]>
-    <body>
-      <message> &warning; </message>
-    </body>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE body [
+  <!ENTITY warning "Warning: Something bad happened... please refresh and try again.">
+]>
+<body>
+  <message> &warning; </message>
+</body>
+```
 
 You can also use numeric character references to specify special characters; for example, \&#xA9; is the "©" symbol.
 
@@ -102,11 +104,15 @@ XML is usually used for descriptive purposes, but there are ways to display XML 
 
 One way to style XML output is to specify [CSS](/en-US/docs/Web/CSS) to apply to the document using the `xml-stylesheet` processing instruction.
 
-    <?xml-stylesheet type="text/css" href="stylesheet.css"?>
+```xml
+<?xml-stylesheet type="text/css" href="stylesheet.css"?>
+```
 
 There is also another more powerful way to display XML: the **Extensible Stylesheet Language Transformations** ([XSLT](/en-US/docs/Web/XSLT)) which can be used to transform XML into other languages such as HTML. This makes XML incredibly versatile.
 
-    <?xml-stylesheet type="text/xsl" href="transform.xsl"?>
+```xml
+<?xml-stylesheet type="text/xsl" href="transform.xsl"?>
+```
 
 ## Recommendations
 

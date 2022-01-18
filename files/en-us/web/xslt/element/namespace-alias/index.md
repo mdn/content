@@ -13,7 +13,9 @@ The `<xsl:namespace-alias>` element is a rarely used device that maps a namespac
 
 ### Syntax
 
-    <xsl:namespace-alias stylesheet-prefix=NAME result-prefix=NAME />
+```xml
+<xsl:namespace-alias stylesheet-prefix=NAME result-prefix=NAME />
+```
 
 ### Required Attributes
 

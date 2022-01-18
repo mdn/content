@@ -1139,8 +1139,8 @@ In this example we provide a `<div>` and a text input. Entering a valid color in
 
 ```css
 div {
-  width: 100%;
-  height: 200px;
+  width: 100%;
+  height: 200px;
 }
 ```
 
@@ -1181,91 +1181,99 @@ inputElem.addEventListener('change', () => {
 
 This example shows the many ways in which a single color can be created with the various RGB color syntaxes.
 
-    /* These syntax variations all specify the same color: a fully opaque hot pink. */
+```css
+/* These syntax variations all specify the same color: a fully opaque hot pink. */
 
-    /* Hexadecimal syntax */
-    #f09
-    #F09
-    #ff0099
-    #FF0099
+/* Hexadecimal syntax */
+#f09
+#F09
+#ff0099
+#FF0099
 
-    /* Functional syntax */
-    rgb(255,0,153)
-    rgb(255, 0, 153)
-    rgb(255, 0, 153.0)
-    rgb(100%,0%,60%)
-    rgb(100%, 0%, 60%)
-    rgb(100%, 0, 60%) /* ERROR! Don't mix numbers and percentages. */
-    rgb(255 0 153)
+/* Functional syntax */
+rgb(255,0,153)
+rgb(255, 0, 153)
+rgb(255, 0, 153.0)
+rgb(100%,0%,60%)
+rgb(100%, 0%, 60%)
+rgb(100%, 0, 60%) /* ERROR! Don't mix numbers and percentages. */
+rgb(255 0 153)
 
-    /* Hexadecimal syntax with alpha value */
-    #f09f
-    #F09F
-    #ff0099ff
-    #FF0099FF
+/* Hexadecimal syntax with alpha value */
+#f09f
+#F09F
+#ff0099ff
+#FF0099FF
 
-    /* Functional syntax with alpha value */
-    rgb(255, 0, 153, 1)
-    rgb(255, 0, 153, 100%)
+/* Functional syntax with alpha value */
+rgb(255, 0, 153, 1)
+rgb(255, 0, 153, 100%)
 
-    /* Whitespace syntax */
-    rgb(255 0 153 / 1)
-    rgb(255 0 153 / 100%)
+/* Whitespace syntax */
+rgb(255 0 153 / 1)
+rgb(255 0 153 / 100%)
 
-    /* Functional syntax with floats value */
-    rgb(255, 0, 153.6, 1)
-    rgb(2.55e2, 0e0, 1.53e2, 1e2%)
+/* Functional syntax with floats value */
+rgb(255, 0, 153.6, 1)
+rgb(2.55e2, 0e0, 1.53e2, 1e2%)
+```
 
 ### RGB transparency variations
 
-    /* Hexadecimal syntax */
-    #3a30                    /*   0% opaque green */
-    #3A3F                    /* full opaque green */
-    #33aa3300                /*   0% opaque green */
-    #33AA3380                /*  50% opaque green */
+```css
+/* Hexadecimal syntax */
+#3a30                    /*   0% opaque green */
+#3A3F                    /* full opaque green */
+#33aa3300                /*   0% opaque green */
+#33AA3380                /*  50% opaque green */
 
-    /* Functional syntax */
-    rgba(51, 170, 51, .1)    /*  10% opaque green */
-    rgba(51, 170, 51, .4)    /*  40% opaque green */
-    rgba(51, 170, 51, .7)    /*  70% opaque green */
-    rgba(51, 170, 51,  1)    /* full opaque green */
+/* Functional syntax */
+rgba(51, 170, 51, .1)    /*  10% opaque green */
+rgba(51, 170, 51, .4)    /*  40% opaque green */
+rgba(51, 170, 51, .7)    /*  70% opaque green */
+rgba(51, 170, 51,  1)    /* full opaque green */
 
-    /* Whitespace syntax */
-    rgba(51 170 51 / 0.4)    /*  40% opaque green */
-    rgba(51 170 51 / 40%)    /*  40% opaque green */
+/* Whitespace syntax */
+rgba(51 170 51 / 0.4)    /*  40% opaque green */
+rgba(51 170 51 / 40%)    /*  40% opaque green */
 
-    /* Functional syntax with floats value */
-    rgba(51, 170, 51.6, 1)
-    rgba(5.1e1, 1.7e2, 5.1e1, 1e2%)
+/* Functional syntax with floats value */
+rgba(51, 170, 51.6, 1)
+rgba(5.1e1, 1.7e2, 5.1e1, 1e2%)
+```
 
 ### HSL syntax variations
 
-    /* These examples all specify the same color: a lavender. */
-    hsl(270,60%,70%)
-    hsl(270, 60%, 70%)
-    hsl(270 60% 70%)
-    hsl(270deg, 60%, 70%)
-    hsl(4.71239rad, 60%, 70%)
-    hsl(.75turn, 60%, 70%)
+```css
+/* These examples all specify the same color: a lavender. */
+hsl(270,60%,70%)
+hsl(270, 60%, 70%)
+hsl(270 60% 70%)
+hsl(270deg, 60%, 70%)
+hsl(4.71239rad, 60%, 70%)
+hsl(.75turn, 60%, 70%)
 
-    /* These examples all specify the same color: a lavender that is 15% opaque. */
-    hsl(270, 60%, 50%, .15)
-    hsl(270, 60%, 50%, 15%)
-    hsl(270 60% 50% / .15)
-    hsl(270 60% 50% / 15%)
+/* These examples all specify the same color: a lavender that is 15% opaque. */
+hsl(270, 60%, 50%, .15)
+hsl(270, 60%, 50%, 15%)
+hsl(270 60% 50% / .15)
+hsl(270 60% 50% / 15%)
+```
 
 ### HWB syntax variations
 
-    /* These examples all specify varying shades of a lime green. */
-    hwb(90 10% 10%)
-    hwb(90 50% 10%)
-    hwb(90deg 10% 10%)
-    hwb(1.5708rad 60% 0%)
-    hwb(.25turn 0% 40%)
+```css
+/* These examples all specify varying shades of a lime green. */
+hwb(90 10% 10%)
+hwb(90 50% 10%)
+hwb(90deg 10% 10%)
+hwb(1.5708rad 60% 0%)
+hwb(.25turn 0% 40%)
 
-    /* Same lime green but with an alpha value */
-    hwb(90 10% 10% / 0.5)
-    hwb(90 10% 10% / 50%)
+/* Same lime green but with an alpha value */
+hwb(90 10% 10% / 0.5)
+hwb(90 10% 10% / 50%)
+```
 
 ### Fully saturated colors
 
@@ -1436,16 +1444,18 @@ This example shows the many ways in which a single color can be created with the
 
 ### HSL transparency variations
 
-    hsla(240, 100%, 50%, .05)     /*   5% opaque blue */
-    hsla(240, 100%, 50%, .4)      /*  40% opaque blue */
-    hsla(240, 100%, 50%, .7)      /*  70% opaque blue */
-    hsla(240, 100%, 50%, 1)       /* full opaque blue */
+```css
+hsla(240, 100%, 50%, .05)     /*   5% opaque blue */
+hsla(240, 100%, 50%, .4)      /*  40% opaque blue */
+hsla(240, 100%, 50%, .7)      /*  70% opaque blue */
+hsla(240, 100%, 50%, 1)       /* full opaque blue */
 
-    /* Whitespace syntax */
-    hsla(240 100% 50% / .05)      /*   5% opaque blue */
+/* Whitespace syntax */
+hsla(240 100% 50% / .05)      /*   5% opaque blue */
 
-    /* Percentage value for alpha */
-    hsla(240 100% 50% / 5%)       /*   5% opaque blue */
+/* Percentage value for alpha */
+hsla(240 100% 50% / 5%)       /*   5% opaque blue */
+```
 
 ## Specifications
 
