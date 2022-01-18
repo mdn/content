@@ -8,7 +8,7 @@ tags:
   - ARIA widget
   - Reference
 ---
-The ARIA `tab` role indicates an interactive element inside a `tablist` that, when activated, displays its associated [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role).
+The ARIA `tab` role indicates an interactive element inside a `tablist` that, when activated, displays its associated `tabpanel`.
 
 ```html
 <button role="tab" aria-selected="true" aria-controls="tabpanel-id" id="tab-id">Tab label</button>
@@ -16,7 +16,7 @@ The ARIA `tab` role indicates an interactive element inside a `tablist` that, wh
 
 ## Description
 
-An element with the `tab` role controls the visibility of an associated element with the `tabpanel` role. The common user experience pattern is a group of visual tabs above, or to the side of, a content area, and selecting a different tab changes the content and makes the selected tab more prominent than the other tabs.
+An element with the `tab` role controls the visibility of an associated element with the [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) role. The common user experience pattern is a group of visual tabs above, or to the side of, a content area, and selecting a different tab changes the content and makes the selected tab more prominent than the other tabs.
 
 Elements with the role `tab` *must* either be a child of an element with the `tablist` role, or have their `id` as part of the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) property of a `tablist`. This combination identifies to assistive technology that the element is part of a group of related elements. Some assistive technology will provide a count of the number of `tab` role elements inside a `tablist`, and inform users of which `tab` they currently have targeted. Further, an element with the `tab` role *should* contain the [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls) property identifying a corresponding `tabpanel` (that has a `tabpanel` role) by that element's `id`. When an element with the `tabpanel` role has focus, or a child of it has focus, that indicates that the connected element with the `tab` role is the active tab in a `tablist`.
 
@@ -28,7 +28,7 @@ When elements with the `tab` role are selected or active they should have their 
   - : boolean
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
   - : `id` of element with `tabpanel` role
-- `id`
+- {{htmlattrxref("id")}} 
   - : content
 
 ### Keyboard interaction
@@ -186,7 +186,13 @@ function changeTabs(e) {
 
 ## Best practices
 
-It is recommended to use a `button` element with the role `tab` for their built-in functional and accessible features instead, as opposed to needing to add them yourself. For controlling tab key functionality for elements with the role `tab`, it is recommended to set all non-active elements to `tabindex="-1"`, and to set the active element to `tabindex="0"`.
+It is recommended to use a {{HTMLElement('button')}} element with the role `tab` for their built-in functional and accessible features instead, as opposed to needing to add them yourself. For controlling tab key functionality for elements with the role `tab`, it is recommended to set all non-active elements to `tabindex="-1"`, and to set the active element to `tabindex="0"`.
+
+## Precedence order
+
+What are the related properties, and in what order will this attribute or property be read, which property will take precedence over this one, and which property will be overwritten.
+
+Screenreader support is still to be determined. Visit https://github.com/mdn/content/blob/main/rfcs/aria-roles.md for more information.
 
 ## Specifications
 
@@ -195,11 +201,10 @@ It is recommended to use a `button` element with the role `tab` for their built-
 | {{SpecName("ARIA","#tab","tab")}}                                     | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#tabpanel","tabs")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-## Precedence order
+## See also
 
-What are the related properties, and in what order will this attribute or property be read, which property will take precedence over this one, and which property will be overwritten.
-
-Screenreader support is still to be determined. Visit https://github.com/mdn/content/blob/main/rfcs/aria-roles.md for more information.
+- HTML {{HTMLElement('button')}} element
+- [ARIA `tabpanel` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)
 
 <section id="Quick_links">
 
