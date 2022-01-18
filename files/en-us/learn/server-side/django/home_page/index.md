@@ -55,7 +55,7 @@ As you'll see in the next section, we have 5 pages to display, which is too muc
 
 ## Defining the resource URLs
 
-As this version of [LocalLibrary ](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)is essentially read-only for end users, we just need to provide a landing page for the site (a home page), and pages that _display_ list and detail views for books and authors.
+As this version of [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) is essentially read-only for end users, we just need to provide a landing page for the site (a home page), and pages that _display_ list and detail views for books and authors.
 
 The URLs that we'll need for our pages are:
 

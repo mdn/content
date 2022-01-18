@@ -74,6 +74,6 @@ Looking for the [`Document`](/en-US/docs/Web/API/Document "The Document interfac
 - The [`setTimeout`](/en-US/docs/Web/API/setTimeout) and [`setInterval`](/en-US/docs/Web/API/setInterval) functions were first specified on the [`Window`](/en-US/docs/Web/API/Window) interface in HTML Standard.
 - [XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) makes it possible to send asynchronous HTTP requests.
 - The [CSS Object Model](http://dev.w3.org/csswg/cssom/) abstract CSS rules as objects.
-- [WebWorkers ](https://www.whatwg.org/specs/web-workers/current-work/)allows parallel computation.
+- [WebWorkers](https://www.whatwg.org/specs/web-workers/current-work/) allows parallel computation.
 - [WebSockets](https://www.whatwg.org/C/#network) allows low-level bidirectional communication.
 - [Canvas 2D Context](https://www.whatwg.org/html/#2dcontext) is a drawing API for [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas).

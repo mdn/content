@@ -31,7 +31,7 @@ You can let the user download to a location of their choice by specifying the `s
 
 The downloads API also provides features to cancel, pause, resume, erase, and remove downloads; search for downloaded files in the download manager; show downloaded files in the computer’s file manager; and open a file in an associated application.
 
-To use this API, you need to have the `"downloads"`[ API permission](/en-US/docs/Web/API/Permissions#api_permissions) specified in your[ `manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
+To use this API, you need to have the `"downloads"` [API permission](/en-US/docs/Web/API/Permissions#api_permissions) specified in your [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
 Example: [Latest download](https://github.com/mdn/webextensions-examples/tree/master/latest-download)
 API reference: [downloads API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads)
@@ -48,7 +48,7 @@ API references: [HTML input element](/en-US/docs/Web/HTML/Element/input/file) | 
 
 ## Open files in an extension using drag and drop
 
-The Web Drag and Drop API offers an alternative to using a file picker. To use this method, establish a ‘drop zone’ that fits with your UI, then add listeners for the[ `dragenter`](/en-US/docs/Web/API/Document/dragenter_event),[ `dragover`](/en-US/docs/Web/API/Document/dragover_event), and[ `drop`](/en-US/docs/Web/API/Document/drop_event) events to the element. In the handler for the drop event, your code can access any file dropped by the user from the object offered by the `dataTransfer` property using [`DataTransfer.files`](/en-US/docs/Web/API/DataTransfer/files). Your code can then access and manipulate the files using the [DOM File API](/en-US/docs/Web/API/File).
+The Web Drag and Drop API offers an alternative to using a file picker. To use this method, establish a ‘drop zone’ that fits with your UI, then add listeners for the [`dragenter`](/en-US/docs/Web/API/Document/dragenter_event), [`dragover`](/en-US/docs/Web/API/Document/dragover_event), and [`drop`](/en-US/docs/Web/API/Document/drop_event) events to the element. In the handler for the drop event, your code can access any file dropped by the user from the object offered by the `dataTransfer` property using [`DataTransfer.files`](/en-US/docs/Web/API/DataTransfer/files). Your code can then access and manipulate the files using the [DOM File API](/en-US/docs/Web/API/File).
 
 Example: [Imagify](https://github.com/mdn/webextensions-examples/tree/master/imagify)
 Guides: [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications) | [File drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop)

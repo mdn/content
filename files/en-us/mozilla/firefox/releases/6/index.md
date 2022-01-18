@@ -81,7 +81,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 ### JavaScript
 
 - In the past, it was possible to use the `new` operator on several built-in functions (eval, parseInt, Date.parse...) that should not have allowed it, according to the specification. This behavior is no longer supported. Using the `new` operator in this way was never officially supported and was not widely done, so it's unlikely that this change affects you.
-- ECMAScript 2015 [WeakMaps](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) have been added as a prototype implementation.
+- ECMAScript 2015 [WeakMaps](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) have been added as a prototype implementation.
 
 ### SVG
 
@@ -113,7 +113,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - Support for microsummaries has been removed; these were never widely used, were not very discoverable, and continuing to support them was making improvements to the Places (bookmark and history) architecture difficult.
 - WebGL now supports the [`OES_texture_float`](http://www.khronos.org/registry/gles/extensions/OES/OES_texture_float.txt) extension.
 - The new [Scratchpad](/en-US/docs/Tools/Scratchpad) tool provides a handy place to experiment with JavaScript code.
-- The `console.trace()` method has been added to the [Console API ](/en-US/docs/Web/API/Console_API)(see {{ bug('585956') }}).
+- The `console.trace()` method has been added to the [Console API](/en-US/docs/Web/API/Console_API) (see {{ bug('585956') }}).
 
 ## Changes for Mozilla and add-on developers
 

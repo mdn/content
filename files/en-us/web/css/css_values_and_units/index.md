@@ -345,4 +345,4 @@ Some legacy functional notations such as `rgba()` use commas, but generally comm
 ## See also
 
 - [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
-- [Introduction to CSS: Values and Units ](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)

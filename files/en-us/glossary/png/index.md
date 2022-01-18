@@ -12,4 +12,4 @@ tags:
 
 ## See also
 
-- [PNG ](https://en.wikipedia.org/wiki/Portable_Network_Graphics)on Wikipedia
+- [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) on Wikipedia

@@ -159,4 +159,4 @@ Not part of any standard. This property originated in Internet Explorer. Apple h
 
 - [`zoom` entry in CSS-Tricks' CSS Almanac](https://css-tricks.com/almanac/properties/z/zoom/)
 - The [`zoom` viewport descriptor](/en-US/docs/Web/CSS/@viewport/zoom), for use with [`@viewport`](/en-US/docs/Web/CSS/@viewport)
-- [Bug 390936: Implement Internet Explorer `zoom` property for CSS ](https://bugzilla.mozilla.org/show_bug.cgi?id=390936)on the Firefox issue tracker Bugzilla
+- [Bug 390936: Implement Internet Explorer `zoom` property for CSS](https://bugzilla.mozilla.org/show_bug.cgi?id=390936) on the Firefox issue tracker Bugzilla

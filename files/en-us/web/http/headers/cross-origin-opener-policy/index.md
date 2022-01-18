@@ -43,7 +43,7 @@ Cross-Origin-Opener-Policy: same-origin
 - `unsafe-none`
   - : This is the default value. Allows the document to be added to its opener's browsing context group unless the opener itself has a COOP of `same-origin` or `same-origin-allow-popups`.
 - `same-origin-allow-popups`
-  - : Retains references to newly opened windows or tabs that either don't set COOP or that opt-out of isolation by setting a COOP of `unsafe-none`.
+  - : Retains references to newly opened windows or tabs that either don't set COOP or that opt out of isolation by setting a COOP of `unsafe-none`.
 - `same-origin`
   - : Isolates the browsing context exclusively to same-origin documents. Cross-origin documents are not loaded in the same browsing context.
 

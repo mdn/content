@@ -34,7 +34,7 @@ let name1 [= value1] [, name2 [= value2]] [, ..., nameN [= valueN];
     legal JavaScript expression.
 
 Alternatively, the [Destructuring
-Assignment ](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)syntax can also be used to declare variables.
+Assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax can also be used to declare variables.
 
 ```js
 let { bar } = foo; // where foo = { bar:10, baz:12 };
@@ -199,21 +199,21 @@ switch(x) {
 ### Temporal dead zone (TDZ)
 
 `let` variables cannot be read/written until they have been fully
-initialized, which happens when they are declared (if no initial value is specified on
+initialized, which happens when they are declared (if no initial value is specified on
 declaration, the variable is initialized with a value of
-`undefined`). Accessing the variable before the initialization results in a
+`undefined`). Accessing the variable before the initialization results in a
 {{jsxref("ReferenceError")}}.
 
 > **Note:** This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables,
 > which will return a value of `undefined` if they are accessed before they
 > are declared.
 
-The variable is said to be in a "temporal dead zone" (TDZ) from the start of the block
+The variable is said to be in a "temporal dead zone" (TDZ) from the start of the block
 until the initialization has completed.
 
 ```js example-bad
 { // TDZ starts at beginning of scope
-  console.log(bar); // undefined
+  console.log(bar); // undefined
   console.log(foo); // ReferenceError
   var bar = 1;
   let foo = 2; // End of TDZ (for foo)
@@ -222,13 +222,13 @@ until the initialization has completed.
 
 The term "temporal" is used because the zone depends on the order of execution (time)
 rather than the order in which the code is written (position). For example, the code
-below works because, even though the function that uses the `let` variable
-appears before the variable is declared, the function is _called_ outside the
+below works because, even though the function that uses the `let` variable
+appears before the variable is declared, the function is _called_ outside the
 TDZ.
 
 ```js
 {
-    // TDZ starts at beginning of scope
+    // TDZ starts at beginning of scope
     const func = () => console.log(letVar); // OK
 
     // Within the TDZ letVar access throws `ReferenceError`
@@ -259,7 +259,7 @@ console.log(typeof undeclaredVariable);
 
 #### TDZ combined with lexical scoping
 
-The following code results in a `ReferenceError` at the line shown:
+The following code results in a `ReferenceError` at the line shown:
 
 ```js example-bad
 function test(){
@@ -271,11 +271,11 @@ function test(){
 test();
 ```
 
-The `if` block is evaluated because the outer `var foo` has a
-value. However due to lexical scoping this value is not available inside the block: the
+The `if` block is evaluated because the outer `var foo` has a
+value. However due to lexical scoping this value is not available inside the block: the
 identifier `foo` _inside_ the `if` block is the
-`let foo`. The expression `(foo + 55)` throws
-a `ReferenceError` because initialization of `let foo` has not
+`let foo`. The expression `(foo + 55)` throws
+a `ReferenceError` because initialization of `let foo` has not
 completed — it is still in the temporal dead zone.
 
 This phenomenon can be confusing in a situation like the following. The instruction

@@ -129,7 +129,7 @@ Open the console (**Tools ➤ Web developer ➤ Web Console**) and reload the pa
 
 ![A Javascript error is shown in the Console](js-error.png)
 
-In this example, we learn (quite clearly) what the error is, and we can go fix it (we will cover JavaScript in [another series ](/en-US/docs/Learn/JavaScript)of articles).
+In this example, we learn (quite clearly) what the error is, and we can go fix it (we will cover JavaScript in [another series](/en-US/docs/Learn/JavaScript) of articles).
 
 ### More things to check
 

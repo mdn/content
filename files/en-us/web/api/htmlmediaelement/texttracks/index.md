@@ -39,18 +39,9 @@ existing ones removed.
 See {{SectionOnPage("/en-US/docs/Web/API/TextTrackList", "Event handlers")}} to learn
 more about watching for changes to a media element's track list.
 
-## Syntax
+## Value
 
-```js
-var textTracks = mediaElement.textTracks;
-```
-
-### Value
-
-A {{DOMxRef("TextTrackList")}} object representing the list of text tracks included in
-the media element. The list of tracks can be accessed using array notation, or using the
-object's
-[`getTrackById()`](/en-US/docs/Web/API/VideoTrackList/getTrackById)
+A {{DOMxRef("TextTrackList")}} object representing the list of text tracks included in the media element. The list of tracks can be accessed using `textTracks[n]` to get the *n*th text track from the object’s list of text tracks, or using the `textTracks`.[`getTrackById()`](/en-US/docs/Web/API/TextTrackList/getTrackById)
 method.
 
 Each track is represented by a {{DOMxRef("TextTrack")}} object which provides
