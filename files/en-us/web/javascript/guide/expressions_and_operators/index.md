@@ -218,7 +218,7 @@ However, it evaluates from left to right:
        into a reference to the variable named `y`.
     2. The assignment expression `x = f()` starts to evaluate.
         1. The `x` on this assignment’s left-hand side evaluates
-           into a reference to the variable named `y`.
+           into a reference to the variable named `x`.
         2. The function call `f()` prints "F!" to the console and
            then evaluates to the number `2`.
         3. That `2` result from `f()` is assigned to `x`.
@@ -243,7 +243,7 @@ However, it evaluates from left to right:
        2. The assignment expression `x = g()` starts to evaluate.
           1. The `x` on this assignment’s left-hand side evaluates
              into a reference to the variable named `x`.
-          2. The function call `g()` prints "3!" to the console and
+          2. The function call `g()` prints "G!" to the console and
              then evaluates to the number `3`.
           3. That `3` result from `f()` is assigned to `x`.
        3. The assignment expression `x = g()` has now finished evaluating;
