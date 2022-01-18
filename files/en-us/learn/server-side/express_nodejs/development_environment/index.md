@@ -147,7 +147,7 @@ As a slightly more exciting test let's create a very basic "pure node" server th
     Server running at http://127.0.0.1:3000/
     ```
 
-3.  Navigate to the URL [http://127.0.0.1:3000 ](http://127.0.0.1:3000). If everything is working, the browser should display the string "Hello World".
+3.  Navigate to the URL [http://127.0.0.1:3000](http://127.0.0.1:3000). If everything is working, the browser should display the string "Hello World".
 
 ## Using NPM
 

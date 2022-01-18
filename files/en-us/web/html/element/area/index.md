@@ -77,7 +77,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     This attribute must not be used if `shape` is set to `default`.
 
     - `rect`: the value is `x1,y1,x2,y2`.
-      The value specifies the coordinates of the top-left and bottom-right corner of the rectangle.`
+      The value specifies the coordinates of the top-left and bottom-right corner of the rectangle.
       For example, in `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` the coordinates are `0,0` and `253,27`, indicating the top-left and bottom-right corners of the rectangle, respectively.
     - `circle`: the value is `x,y,radius`. Value specifies the coordinates of the circle center and the radius.
       For example: `<area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN">`

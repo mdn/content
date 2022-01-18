@@ -41,13 +41,13 @@ In any programming language, the code needs to make decisions and carry out acti
 
 Human beings (and other animals) make decisions all the time that affect their lives, from small ("should I eat one cookie or two?") to large ("should I stay in my home country and work on my father's farm, or should I move to America and study astrophysics?")
 
-Conditional statements allow us to represent such decision making in JavaScript, from the choice that must be made (for example, "one cookie or two"), to the resulting outcome of those choices (perhaps the outcome of "ate one cookie" might be "still felt hungry", and the outcome of "ate two cookies" might be "felt full, but mom scolded me for eating all the cookies".)
+Conditional statements allow us to represent such decision making in JavaScript, from the choice that must be made (for example, "one cookie or two"), to the resulting outcome of those choices (perhaps the outcome of "ate one cookie" might be "still felt hungry", and the outcome of "ate two cookies" might be "felt full, but mom scolded me for eating all the cookies".)
 
 ![](cookie-choice-small.png)
 
 ## if...else statements
 
-Let's look at by far the most common type of conditional statement you'll use in JavaScript — the humble [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)[ statement](/en-US/docs/Web/JavaScript/Reference/Statements/if...else).
+Let's look at by far the most common type of conditional statement you'll use in JavaScript — the humble [`if...else` statement](/en-US/docs/Web/JavaScript/Reference/Statements/if...else).
 
 ### Basic if ... else syntax
 
@@ -151,7 +151,7 @@ function setWeather() {
 
 1.  Here we've got an HTML {{htmlelement("select")}} element allowing us to make different weather choices, and a simple paragraph.
 2.  In the JavaScript, we are storing a reference to both the {{htmlelement("select")}} and {{htmlelement("p")}} elements, and adding an event listener to the `<select>` element so that when its value is changed, the `setWeather()` function is run.
-3.  When this function is run, we first set a variable called `choice` to the current value selected in the `<select>` element. We then use a conditional statement to show different text inside the paragraph depending on what the value of `choice` is. Notice how all the conditions are tested in `else if() {...}` blocks, except for the first one, which is tested in an `if() {...}` block.
+3.  When this function is run, we first set a variable called `choice` to the current value selected in the `<select>` element. We then use a conditional statement to show different text inside the paragraph depending on what the value of `choice` is. Notice how all the conditions are tested in `else if() {...}` blocks, except for the first one, which is tested in an `if() {...}` block.
 4.  The very last choice, inside the `else {...}` block, is basically a "last resort" option — the code inside it will be run if none of the conditions are `true`. In this case, it serves to empty the text out of the paragraph if nothing is selected, for example, if a user decides to re-select the "--Make a choice--" placeholder option shown at the beginning.
 
 > **Note:** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) on there also.)
@@ -160,13 +160,13 @@ function setWeather() {
 
 Comparison operators are used to test the conditions inside our conditional statements. We first looked at comparison operators back in our [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math#comparison_operators) article. Our choices are:
 
-- `===` and `!==` — test if one value is identical to, or not identical to, another.
+- `===` and `!==` — test if one value is identical to, or not identical to, another.
 - `<` and `>` — test if one value is less than or greater than another.
 - `<=` and `>=` — test if one value is less than or equal to, or greater than or equal to, another.
 
 > **Note:** Review the material at the previous link if you want to refresh your memories on these.
 
-We wanted to make a special mention of testing boolean (`true`/`false`) values, and a common pattern you'll come across again and again. Any value that is not `false`, `undefined`, `null`, `0`, `NaN`, or an empty string (`''`) actually returns `true` when tested as a conditional statement, therefore you can use a variable name on its own to test whether it is `true`, or even that it exists (that is, it is not undefined.) So for example:
+We wanted to make a special mention of testing boolean (`true`/`false`) values, and a common pattern you'll come across again and again. Any value that is not `false`, `undefined`, `null`, `0`, `NaN`, or an empty string (`''`) actually returns `true` when tested as a conditional statement, therefore you can use a variable name on its own to test whether it is `true`, or even that it exists (that is, it is not undefined.) So for example:
 
 ```js
 let cheese = 'Cheddar';
@@ -264,7 +264,7 @@ if (x === 5 || 7 || 10 || 20) {
 }
 ```
 
-In this case the condition inside `if(...)`  will always evaluate to true since 7 (or any other non-zero value) always evaluates to `true`. This condition is actually saying "if x equals 5, or 7 is true — which it always is". This is logically not what we want! To make this work you've got to specify a complete test either side of each OR operator:
+In this case the condition inside `if(...)` will always evaluate to true since 7 (or any other non-zero value) always evaluates to `true`. This condition is actually saying "if x equals 5, or 7 is true — which it always is". This is logically not what we want! To make this work you've got to specify a complete test either side of each OR operator:
 
 ```js
 if (x === 5 || x === 7 || x === 10 || x === 20) {
@@ -411,7 +411,7 @@ In this example, you are going to help us finish a simple calendar application. 
 - An `onchange` event handler to detect when the value selected in the `<select>` menu is changed.
 - A function called `createCalendar()` that draws the calendar and displays the correct month in the {{htmlelement("h1")}} element.
 
-We need you to write a conditional statement inside the `onchange` handler function, just below the `// ADD CONDITIONAL HERE` comment. It should:
+We need you to write a conditional statement inside the `onchange` handler function, just below the `// ADD CONDITIONAL HERE` comment. It should:
 
 1.  Look at the selected month (stored in the `choice` variable. This will be the `<select>` element value after the value changes, so "January" for example.)
 2.  Set a variable called `days` to be equal to the number of days in the selected month. To do this you'll have to look up the number of days in each month of the year. You can ignore leap years for the purposes of this example.

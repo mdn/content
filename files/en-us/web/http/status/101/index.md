@@ -11,11 +11,11 @@ tags:
 {{HTTPSidebar}}
 
 The HTTP **`101 Switching Protocols`** response code indicates
-the protocol the server is switching to as requested by a client which sent the message
-including the {{HTTPHeader("Upgrade")}} request header.
+a protocol to which the server switches. 
+The protocol is specified in the {{HTTPHeader("Upgrade")}} request header received from a client.
 
 The server includes in this response an {{HTTPHeader("Upgrade")}} response header to
-indicate the protocol it switched to. The process is described in detail in the article
+indicate the protocol it switched to. The process is described in the following article:
 [Protocol upgrade
 mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism).
 

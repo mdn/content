@@ -61,17 +61,17 @@ SVG makes use of a number of data types. This article lists these types along wi
         The following are examples of legal clock values:
 
         *   Full clock values:
-            ` 02:30:03  `= 2 hours, 30 minutes and 3 seconds
+            `02:30:03` = 2 hours, 30 minutes and 3 seconds
             `50:00:10.25` = 50 hours, 10 seconds and 250 milliseconds
         *   Partial clock value:
-            ` 02:33  `= 2 minutes and 33 seconds
+            `02:33` = 2 minutes and 33 seconds
             `00:10.5` = 10.5 seconds = 10 seconds and 500 milliseconds
         *   Timecount values:
-            ` 3.2h  `= 3.2 hours = 3 hours and 12 minutes
-            ` 45min  `= 45 minutes
-            ` 30s  `= 30 seconds
-            ` 5ms  `= 5 milliseconds
-            ` 12.467  `= 12 seconds and 467 milliseconds
+            `3.2h` = 3.2 hours = 3 hours and 12 minutes
+            `45min` = 45 minutes
+            `30s` = 30 seconds
+            `5ms` = 5 milliseconds
+            `12.467`= 12 seconds and 467 milliseconds
 
         Fractional values are just (base 10) floating point definitions of seconds. Thus:
 

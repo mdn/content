@@ -88,7 +88,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attri
 - {{HTMLAttrDef("disabled")}}
   - : This Boolean attribute indicates that the form control is not available for interaction.
 - {{HTMLAttrDef("form")}}
-  - : The form element that this element is associated with (its _form owner_). The value of the attribute must be an `id` of a {{HTMLElement("form")}} element in the same document. If this attribute is not specified, this element must be a descendant of a {{HTMLElement("form")}} element. This attribute enables you to place `<keygen> `elements anywhere within a document, not just as descendants of their form elements.
+  - : The form element that this element is associated with (its _form owner_). The value of the attribute must be an `id` of a {{HTMLElement("form")}} element in the same document. If this attribute is not specified, this element must be a descendant of a {{HTMLElement("form")}} element. This attribute enables you to place `<keygen>` elements anywhere within a document, not just as descendants of their form elements.
 - {{HTMLAttrDef("keytype")}}
   - : The type of key generated. The default value is `RSA`.
 - {{HTMLAttrDef("name")}}

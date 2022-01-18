@@ -12,7 +12,7 @@ browser-compat: webextensions.api.theme
 
 Enables browser extensions to update the browser theme.
 
-To use this API, an extension must request the "theme" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its[ manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
+To use this API, an extension must request the "theme" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
 > **Note:** When we set up a theme in a background file, we must declare the 'theme' [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and therefore we cannot use the [theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) function of the manifest, since it's not compatible.
 

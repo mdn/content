@@ -79,5 +79,5 @@ The various layout methods have different browser support. See the charts below 
 
 - {{Cssxref("grid-template-columns")}}
 - [CSS Grid Layout on MDN](/en-US/docs/Web/CSS/CSS_Grid_Layout)
-- Article:[ CSS Grid: More flexibility with minmax()](https://css-irl.info/more-flexibility-with-minmax/)
+- Article: [CSS Grid: More flexibility with minmax()](https://css-irl.info/more-flexibility-with-minmax/)
 - Article: [Breaking Out with CSS Grid](https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/)

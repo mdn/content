@@ -12,7 +12,7 @@ Dynamic Adaptive Streaming over HTTP (DASH) is an adaptive streaming protocol. T
 
 Firefox 21 includes an implementation of DASH for HTML5 WebM video which is turned off by default. It can be enabled via "about:config" and the "media.dash.enabled" preference.
 
-Firefox 23 removed support for DASH for HTML5 WebM video.  It will be replaced by an implementation of the [Media Source Extensions API ](https://www.w3.org/TR/media-source/)which will allow support for DASH via Javascript libraries such as dash.js. See bug [778617](https://bugzilla.mozilla.org/show_bug.cgi?id=778617) for details.
+Firefox 23 removed support for DASH for HTML5 WebM video. It will be replaced by an implementation of the [Media Source Extensions API](https://www.w3.org/TR/media-source/) which will allow support for DASH via Javascript libraries such as dash.js. See bug [778617](https://bugzilla.mozilla.org/show_bug.cgi?id=778617) for details.
 
 ## Using DASH - Server Side
 
@@ -30,7 +30,7 @@ Create the audio using:
 
 Create each video variant.
 
-    ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 -g 150 -tile-columns 4 -frame-parallel 1  -f webm -dash 1 \
+    ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 -g 150 -tile-columns 4 -frame-parallel 1 -f webm -dash 1 \
     -an -vf scale=160:90 -b:v 250k -dash 1 video_160x90_250k.webm
 
     ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 -g 150 -tile-columns 4 -frame-parallel 1  -f webm -dash 1 \
@@ -48,7 +48,7 @@ Create each video variant.
 Or do it in all in one command.
 
     ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 \
-    -g 150 -tile-columns 4 -frame-parallel 1  -f webm -dash 1 \
+    -g 150 -tile-columns 4 -frame-parallel 1 -f webm -dash 1 \
     -an -vf scale=160:90 -b:v 250k -dash 1 video_160x90_250k.webm \
     -an -vf scale=320:180 -b:v 500k -dash 1 video_320x180_500k.webm \
     -an -vf scale=640:360 -b:v 750k -dash 1 video_640x360_750k.webm \
@@ -64,9 +64,9 @@ Or do it in all in one command.
       -f webm_dash_manifest -i video_1280x720_1500k.webm \
       -f webm_dash_manifest -i my_audio.webm \
       -c copy \
-      -map 0 -map 1 -map 2 -map 3 -map 4 \
+      -map 0 -map 1 -map 2 -map 3 -map 4 \
       -f webm_dash_manifest \
-      -adaptation_sets "id=0,streams=0,1,2,3 id=1,streams=4" \
+      -adaptation_sets "id=0,streams=0,1,2,3 id=1,streams=4" \
       my_video_manifest.mpd
 
 The `-map` arguments correspond to the input files in the sequence they are given; you should have one for each file. The `-adaptation_sets` argument assigns them into adaptation sets; for example, this creates one set (0) that contains the streams 0, 1, 2 and 3 (the videos), and another set (1) that contains only stream 4, the audio stream.

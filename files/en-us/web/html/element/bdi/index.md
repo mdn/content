@@ -43,7 +43,7 @@ For example, consider some text like:
 
     EMBEDDED-TEXT - 1st place
 
-If `EMBEDDED-TEXT` is LTR, this works fine. But if `EMBEDDED-TEXT` is RTL, then  ` - 1` will be treated as RTL text (because it consists of neutral and weak characters). The result will be garbled:
+If `EMBEDDED-TEXT` is LTR, this works fine. But if `EMBEDDED-TEXT` is RTL, then `- 1` will be treated as RTL text (because it consists of neutral and weak characters). The result will be garbled:
 
     1 - EMBEDDED-TEXTst place
 

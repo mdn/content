@@ -16,10 +16,10 @@ Generally speaking, a function is a "subprogram" that can be _called_ by code
 external (or internal in the case of recursion) to the function. Like the program
 itself, a function is composed of a sequence of statements called the _function
 body_. Values can be _passed_ to a function, and the function
-will *return* a value.
+will *return* a value.
 
-In JavaScript, functions are first-class objects, because they can have properties and
-methods just like any other object. What distinguishes them from other objects is that
+In JavaScript, functions are first-class objects, because they can have properties and
+methods just like any other object. What distinguishes them from other objects is that
 functions can be called. In brief, they are
 [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
 objects.
@@ -33,18 +33,18 @@ Every function in JavaScript is a `Function` object. See
 {{jsxref("Function")}} for information on properties and methods of
 `Function` objects.
 
-To return a value other than the default, a function must have a
+To return a value other than the default, a function must have a
 [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return)
 statement that specifies the value to return. A function without a return statement
-will return a default value. In the case of a [constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
+will return a default value. In the case of a [constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
 called with the
 [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)
-keyword, the default value is the value of its `this` parameter. For all
+keyword, the default value is the value of its `this` parameter. For all
 other functions, the default return value is {{jsxref("undefined")}}.
 
 The parameters of a function call are the function's _arguments_. Arguments may be passed _by value_
 (in the case of [primitive values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#primitive_values))
-or _by reference_ (in the case of [objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#objects)). 
+or _by reference_ (in the case of [objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#objects)).
 This means that if a function reassigns a primitive type parameter, the value won't change outside the function. In the case of
 an object type parameter, if it's reassigned or mutated, the change will impact outside of the function.
 See the following example:
@@ -143,11 +143,11 @@ It is also possible to provide a name inside the definition in order to create a
 
 ```js
 var myFunction = function namedFunction(){
-    statements
+    statements
 }
 ```
 
-One of the benefits of creating a named function expression is that in case we
+One of the benefits of creating a named function expression is that in case we
 encountered an error, the stack trace will contain the name of the function, making it
 easier to find the origin of the error.
 
@@ -155,7 +155,7 @@ As we can see, both examples do not start with the `function` keyword.
 Statements involving functions which do not start with `function` are
 function expressions.
 
-When functions are used only once, a common pattern is an [IIFE (Immediately Invoked Function Expression)](/en-US/docs/Glossary/IIFE).
+When functions are used only once, a common pattern is an [IIFE (Immediately Invoked Function Expression)](/en-US/docs/Glossary/IIFE).
 
 ```js
 (function() {
@@ -167,7 +167,7 @@ IIFE are function expressions that are invoked as soon as the function is declar
 
 ### The generator function declaration (`function*` statement)
 
-There is a special syntax for generator function declarations (see
+There is a special syntax for generator function declarations (see
 {{jsxref('Statements/function*', 'function* statement')}} for details):
 
 ```js
@@ -219,8 +219,8 @@ param => expression
 
 - `param`
   - : The name of an argument. Zero arguments need to be indicated with `()`.
-    For only one argument, the parentheses are not required.
-    (like `foo => 1`)
+    For only one argument, the parentheses are not required.
+    (like `foo => 1`)
 - `statements` or `expression`
   - : Multiple statements need to be enclosed in brackets. A single expression requires
     no brackets. The expression is also the implicit return value of the function.
@@ -280,7 +280,7 @@ the `new` operator) has the same effect as invoking it as a constructor.
 ### Default parameters
 
 Default function parameters allow formal parameters to be initialized with default
-values if no value or `undefined` is passed. For more details, see[ default
+values if no value or `undefined` is passed. For more details, see [default
 parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters).
 
 ### Rest parameters
@@ -328,7 +328,7 @@ definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) 
 ```js
 var obj = {
   foo() {},
-  bar() {}
+  bar() {}
 };
 ```
 
@@ -347,7 +347,7 @@ A _function declaration_ of a function named `multiply`:
 
 ```js
 function multiply(x, y) {
-   return x * y;
+  return x * y;
 } // there is no semicolon here
 ```
 

@@ -119,7 +119,7 @@ Specifying a style on an element overrides any style specified on an ancestor, f
 
 ## Region styling
 
-Region styling plays a special role in IMSC since a style property specified on a region is inherited by all elements that are selected to the region, starting with the `<body>` element, as if the `<region>` element was the parent of the `<body> `element. For example, in the following example, the text "Hello, I am Mork from Ork" will appear in yellow.
+Region styling plays a special role in IMSC since a style property specified on a region is inherited by all elements that are selected to the region, starting with the `<body>` element, as if the `<region>` element was the parent of the `<body>` element. For example, in the following example, the text "Hello, I am Mork from Ork" will appear in yellow.
 
 ```xml
 <tt

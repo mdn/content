@@ -45,6 +45,7 @@ The `fixedFoveation` property allows you to set the level of foveation at runtim
 let glProjectionLayer = glBinding.createProjectionLayer(/* ... */);
 glProjectionLayer.fixedFoveation = 1; // maximum foveation
 ```
+
 ## Specifications
 
 {{Specifications}}

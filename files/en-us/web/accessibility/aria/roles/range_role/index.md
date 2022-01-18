@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: range role'
 slug: Web/Accessibility/ARIA/Roles/range_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -17,7 +17,7 @@ The `range` abstract role is a generic type of structure role representing a ran
 
 ## Description
 
-The `range` role is an abstract role. It must not be used by web authors. It is the superclass for structural roles for elements that accept a value within a range of values, including the [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role) role, [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role) and [`slider` ](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role). For these three, consider using the {{HTMLElement("meter")}} element, the  {{HTMLElement("progress")}} element, and the {{HTMLElement("input/range")}}, respectively.
+The `range` role is an abstract role. It must not be used by web authors. It is the superclass for structural roles for elements that accept a value within a range of values, including the [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role) role, [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role) and [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role). For these three, consider using the {{HTMLElement("meter")}} element, the  {{HTMLElement("progress")}} element, and the {{HTMLElement("input/range")}}, respectively.
 
 ## Best Practices
 

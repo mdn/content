@@ -207,9 +207,9 @@ fixedMultiline = buggyMultiline.replace(/\Bo/gim,'e');
 console.log(4, fixedMultiline); // fix  'greon' but does not touch 'on'.
 ```
 
-### Matching the beginning of input using a ^ control character
+### Matching the beginning of input using a ^ control character
 
-Use `^` for matching at the beginning of input. In this example, we can get the fruits that start with 'A' by a `/^A/` regex. For selecting appropriate fruits we can use the [filter ](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)method with an [arrow](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) function.
+Use `^` for matching at the beginning of input. In this example, we can get the fruits that start with 'A' by a `/^A/` regex. For selecting appropriate fruits we can use the [filter](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method with an [arrow](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) function.
 
 ```js
 let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
@@ -271,7 +271,7 @@ console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 
 ### Different meaning of '?!' combination usage in Assertions and  Ranges
 
-Different meaning of `?!` combination usage in [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/ `and [Ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`.
+Different meaning of `?!` combination usage in [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/` and [Ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`.
 
 ```js
 let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";

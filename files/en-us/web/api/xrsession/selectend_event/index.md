@@ -35,6 +35,7 @@ addEventListener('selectend', event => { })
 
 onselectend = event => { }
 ```
+
 ## Event type
 
 An {{domxref("XRInputSourceEvent")}}. Inherits from {{domxref("Event")}}.

@@ -54,7 +54,7 @@ The counter's name must not be `none`, `inherit`, or `initial`; otherwise the de
 
 The value of a counter can be displayed using either the {{cssxref("counter()", "counter()")}} or {{cssxref("counters()", "counters()")}} function in a {{cssxref("content")}} property.
 
-For example, the following declaration uses `counter()` to prefix each `h3` heading with the text `Section <number>: `, where `<number>` is the value of the count in decimal (the default display style):
+For example, the following declaration uses `counter()` to prefix each `h3` heading with the text `Section <number>:`, where `<number>` is the value of the count in decimal (the default display style):
 
 ```css
 h3::before {
