@@ -11,7 +11,7 @@ tags:
 ---
 The `option` role is used for selectable items in a `listbox`.
 
-##  Description
+## Description
 
 The `option` role is used to identify selections a user can make in a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role). These options are similar to the {{HTMLElement('option')}} elements in a {{HTMLElement('select')}} element, but they can contain images.
 
@@ -23,16 +23,16 @@ Authors can also explicitly provide an accessible name by specifying [`aria-labe
 
 It is highly recommended to use a {{HTMLElement('select')}} element or an  {{HTMLElement('input')}} element with the `checkbox` or `radio` type instead, when possible. These native HTML elements provide keyboard interactivity to manage focus for all the descendants for you automatically.
 
-###  Associated ARIA roles, states, and properties
+### Associated ARIA roles, states, and properties
 
-####  Associated Roles
+#### Associated Roles
 
 
 -	[`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
 	-	: An `option` _must_ be contained in or owned by a `listbox`
 
 
-####  States and Properties
+#### States and Properties
 
 -	[`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
 	-	: Used to describe the selection state of the option. Required.
@@ -66,7 +66,7 @@ It is highly recommended to use a {{HTMLElement('select')}} element or an  {{HTM
 
 (For further details and a full list of ARIA states and properties see the <a href="https://www.w3.org/TR/wai-aria-1.1/#option">ARIA `option` (role)</a> documentation.)
 
-##  Specifications
+## Specifications
 
 <table>
 	<tbody>
@@ -85,7 +85,7 @@ It is highly recommended to use a {{HTMLElement('select')}} element or an  {{HTM
 	</tbody>
 </table>
 
-##  See also
+## See also
 
 - HTML {{HTMLElement('select')}} element
 - HTML {{HTMLElement('label')}} element
