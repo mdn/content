@@ -49,6 +49,7 @@ The `alertdialog` must have an accessible name, defined with [`aria-labelledby`]
   </div>
 </div>
 ```
+
 The code snippet above shows how to mark up an alert dialog that only provides a message and an OK button.
 
 ### Example 2: Confirmation dialog with two options

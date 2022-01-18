@@ -36,6 +36,7 @@ browser-compat: path.to.feature.NameOfTheProperty
 > browser-compat: path.to.feature.NameOfTheEventHandler
 > ---
 > ```
+>
 > - **title**
 >   - : Title heading displayed at top of page.
 >       Format as _NameOfTheParentInterface_**.**_NameOfTheEventHandler_.

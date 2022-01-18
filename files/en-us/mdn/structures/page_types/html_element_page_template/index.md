@@ -34,6 +34,7 @@ browser-compat: path.to.feature.NameOfTheElement
 > browser-compat: html.elements.NameOfTheElement
 > ---
 > ```
+>
 > - **title**
 >   - : Title heading displayed at top of page.
 >       Format as `'<NameOfTheElement>: Description of element's purpose'`.

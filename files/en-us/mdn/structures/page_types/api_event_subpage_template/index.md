@@ -34,6 +34,7 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 > browser-compat: path.to.feature.NameOfTheEvent_event
 > ---
 > ```
+>
 > - **title**
 >   - : Title heading displayed at top of page.
 >       Format as "_NameOfTheParentInterface_**:** _NameOfTheEvent_ **event**".

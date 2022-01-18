@@ -43,6 +43,7 @@ While adding `disabled` to an HTML form control causes `:disabled` user-agent st
   opacity: 0.5;
 }
 ```
+
 > **Note:** If you are using CSS's [`pointer-events: none;`](/en-US/docs/Web/CSS/pointer-events) to make an element non-clickable, make sure you disable interactivity with JavaScript as well. `pointer-events: none;` prevents mouse clicks, but does not prevent the element from being activated via the keyboard.
 
 ```js

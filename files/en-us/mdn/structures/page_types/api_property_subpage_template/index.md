@@ -35,6 +35,7 @@ browser-compat: path.to.feature.NameOfTheProperty
 > browser-compat: path.to.feature.NameOfTheProperty
 > ---
 > ```
+>
 > - **title**
 >   - : Title heading displayed at top of page.
 >       Format as _NameOfTheParentInterface_**.**_NameOfTheProperty_.

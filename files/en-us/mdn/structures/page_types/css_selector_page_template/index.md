@@ -33,6 +33,7 @@ browser-compat: css.selectors.NameOfTheSelector
 > browser-compat: css.selectors.NameOfTheSelector
 > ---
 > ```
+>
 > - **title**
 >   - : Title heading displayed at top of page. Format as _:NameOfTheSelector_.
 >       For example, the [`:hover`](/en-US/docs/Web/CSS/:hover) selector has a title of _:hover_.

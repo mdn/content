@@ -198,9 +198,11 @@ Here's a non-exhaustive list of built-in methods and operators that might cause 
 
 - {{jsxref("Operators/Unary_negation", "- (unary negation)")}}
   - : Consider the following example:
+
       ```js
       let stoppingForce = obj.mass * -obj.velocity;
       ```
+
       If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propagates out into `stoppingForce`.
 - {{jsxref("Math.atan2")}}, {{jsxref("Math.ceil")}}, {{jsxref("Math.pow")}}, {{jsxref("Math.round")}}
   - : In some cases,it's possible for a `-0` to be introduced into an expression as a return value of these methods even when no `-0` exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to `-0`. Refer to the documentation for the individual methods.

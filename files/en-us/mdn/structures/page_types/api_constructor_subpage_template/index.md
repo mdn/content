@@ -34,6 +34,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 > browser-compat: path.to.feature.NameOfTheConstructor
 > ---
 > ```
+>
 > - **title**
 >   - : Title heading displayed at top of page.
 >       Format as _NameOfTheParentInterface_**()**.

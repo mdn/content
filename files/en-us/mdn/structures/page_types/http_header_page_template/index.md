@@ -35,6 +35,7 @@ browser-compat: path.to.feature.NameOfTheHeader
 > browser-compat: path.to.feature.NameOfTheHeader
 > ---
 > ```
+>
 > - **title**
 >   - : Title heading displayed at top of page. Format as _NameOfTheHeader_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header has a _title_ of `Cache-Control`.
 > - **slug**

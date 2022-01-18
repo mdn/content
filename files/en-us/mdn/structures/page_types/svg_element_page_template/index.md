@@ -34,6 +34,7 @@ browser-compat: path.to.feature.NameOfTheElement
 > browser-compat: svg.elements.NameOfTheElement
 > ---
 > ```
+>
 > - **title**
 >   - : Title heading displayed at top of page.
 >       Format as **<**_NameOfTheElement_**>**.

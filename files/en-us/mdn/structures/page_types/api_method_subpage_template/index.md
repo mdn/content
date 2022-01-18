@@ -35,6 +35,7 @@ browser-compat: path.to.feature.NameOfTheMethod
 > browser-compat: path.to.feature.NameOfTheMethod
 > ---
 > ```
+>
 > - **title**
 >   - : Title heading displayed at top of page.
 >       Format as _NameOfTheParentInterface_**.**_NameOfTheMethod_**()**.

@@ -87,6 +87,7 @@ The `aria-keyshortcuts` attribute is very similar to the [problematic](https://w
 <strong><u>S</u></strong>tress reliever!</p>
 <button accesskey="s">Stress reliever</button>
 ```
+
 In this example, we ensured the presence of the shortcut was known to sited users a well by highlighting the non-modifier character.
 
 While the goal of the `accesskey` attribute matches the intention of `aria-keyshortcuts` and to do so natively, `accesskey` is rife with issues. Because of these issues, it is generally advised not to use accesskeys for most general-purpose websites and web apps.

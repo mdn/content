@@ -33,6 +33,7 @@ browser-compat: css.properties.NameOfTheProperty
 > browser-compat: css.properties.NameOfTheProperty
 > ---
 > ```
+>
 > - **title**
 >   - : Title heading displayed at top of page. Format as _NameOfTheProperty.
 >       For example, the [`background-color`](/en-US/docs/Web/CSS/background-color) property has a title of _background-color_.

@@ -46,6 +46,7 @@ h3::before {
   counter-increment: section; /* Increment the value of section counter by 1 */
 }
 ```
+
 You can specify the value to increment or decrement the counter after the counter name, using a positive or negative number.
 
 The counter's name must not be `none`, `inherit`, or `initial`; otherwise the declaration is ignored.

@@ -26,6 +26,7 @@ tags:
 >   - The term
 > ---
 > ```
+>
 > - **title**
 >   - : Title heading displayed at top of page.
 >       Format as: `Term being defined`.
