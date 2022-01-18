@@ -169,7 +169,7 @@ When applied to a {{HTMLElement('td')}}, it returns cell semantics to the elemen
 - [`role="row"`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
 - [`role="gridcell"`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [HTML `<td>` element](/en-US/docs/Web/HTML/Element/td)
-- [HTML `<th>` element ](/en-US/docs/Web/HTML/Element/th)
+- [HTML `<th>` element](/en-US/docs/Web/HTML/Element/th)
 - [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
 - [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
 

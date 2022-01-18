@@ -105,7 +105,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Warning:** This attribute must not be used if the `src` attribute is absent (i.e. for inline scripts), in this case it would have no effect.
     >
-    > The `defer` attribute has no effect on [module scripts ](/en-US/docs/Web/JavaScript/Guide/Modules)— they defer by default.
+    > The `defer` attribute has no effect on [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules) — they defer by default.
 
     Scripts with the `defer` attribute will execute in the order in which they appear in the document.
 

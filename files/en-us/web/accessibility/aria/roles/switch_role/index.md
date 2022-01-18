@@ -16,7 +16,7 @@ The ARIA **`switch`** role is functionally identical to the [checkbox](/en-US/do
 This example creates a widget and assigns the ARIA `switch` role to it.
 
     <button type="button" role="switch" aria-checked="true"
-        id="speakerPower" class="switch">
+        id="speakerPower" class="switch">
         <span aria-hidden="true">off</span>
         <span aria-hidden="true">on</span>
     </button>
@@ -24,11 +24,11 @@ This example creates a widget and assigns the ARIA `switch` role to it.
 
 ## Description
 
-The ARIA **`switch`** role is identical to the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, except instead of being "checked" or "unchecked", it is either "on" or "off."  Like the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute is required. The two possible values are `true` and `false`. Unlike a `<checkbox>` or `role="checkbox"`, there is no `indeterminate` or `mixed` state. The `switch` role does not support the value `mixed` for the `aria-checked` attribute; assigning a value of `mixed` to a `switch` instead sets the value to `false`.
+The ARIA **`switch`** role is identical to the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, except instead of being "checked" or "unchecked", it is either "on" or "off". Like the [checkbox](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role) role, the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute is required. The two possible values are `true` and `false`. Unlike a `<checkbox>` or `role="checkbox"`, there is no `indeterminate` or `mixed` state. The `switch` role does not support the value `mixed` for the `aria-checked` attribute; assigning a value of `mixed` to a `switch` instead sets the value to `false`.
 
 Assistive technologies may choose to represent `switch` widgets with a specialized presentation to reflect the notion of an on/off switch.
 
-Since a switch is an interactive control, it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the `tabindex` attribute to change this. The expected keyboard shortcut for toggling the value of a switch is the <kbd>Space</kbd> key. The developer is required to change the value of the `aria-checked` attribute dynamically when the switch is toggled.
+Since a switch is an interactive control, it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the `tabindex` attribute to change this. The expected keyboard shortcut for toggling the value of a switch is the <kbd>Space</kbd> key. The developer is required to change the value of the `aria-checked` attribute dynamically when the switch is toggled.
 
 ### Associated ARIA roles, states, and properties
 
@@ -40,7 +40,7 @@ Since a switch is an interactive control, it must be focusable and keyboard acce
 ### Required JavaScript features
 
 - Handler for click events
-  - : When the user clicks on the switch widget, a [click event ](/en-US/docs/Web/API/Element/click_event)is fired, which must be handled in order to change the state of the widget.
+  - : When the user clicks on the switch widget, a [click event](/en-US/docs/Web/API/Element/click_event) is fired, which must be handled in order to change the state of the widget.
 - Changing the `aria-checked` attribute
   - : When a click event is fired on the switch widget, the handler must change the value of the `aria-checked` attribute from `true` to `false`, or vice versa.
 
@@ -50,7 +50,7 @@ When the `switch` role is added to an element, the {{Glossary("user agent")}} ha
 
 - The element is exposed to the system's accessibility infrastructure as having the `switch` role.
 - When the `aria-checked` attribute's value changes, an accessible event is fired using the system's accessibility API if one is available and it supports the `switch` role.
-- All elements that are descendants of an element with the `switch` role applied to it are automatically assigned role `presentation`. This prevents elements that are used to construct the switch from being interacted with individually by assistive technologies. Text in these elements remains visible to the user agent and may be read or otherwise delivered to the user, unless it's expressly hidden using {{cssxref("display", "display: none")}} or `aria-hidden="true"`.
+- All elements that are descendants of an element with the `switch` role applied to it are automatically assigned role `presentation`. This prevents elements that are used to construct the switch from being interacted with individually by assistive technologies. Text in these elements remains visible to the user agent and may be read or otherwise delivered to the user, unless it's expressly hidden using {{cssxref("display", "display: none")}} or `aria-hidden="true"`.
 
 The assistive technology, if it supports the `switch` role, responds by doing the following:
 
@@ -72,9 +72,9 @@ The HTML is fairly simple here. The switch is implemented as a {{HTMLElement("bu
 
 ```html
 <button role="switch" aria-checked="true"
-      id="speakerPower" class="switch">
-  <span>off</span>
-  <span>on</span>
+      id="speakerPower" class="switch">
+  <span>off</span>
+  <span>on</span>
 </button>
 <label for="speakerPower" class="switch">Speaker power</label>
 ```

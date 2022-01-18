@@ -31,7 +31,7 @@ TypeError: 'x' is not a function or its return value is not iterable (Chrome)
 The value which is given as the right hand-side of [for…of
 ](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)or as argument of a function such as {{jsxref("Promise.all")}} or
 {{jsxref("TypedArray.from")}}, is not an [iterable
-object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).  An iterable can be a built-in iterable type such as
+object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). An iterable can be a built-in iterable type such as
 {{jsxref("Array")}}, {{jsxref("String")}} or {{jsxref("Map")}}, a generator result, or
 an object implementing the [iterable
 protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
@@ -42,7 +42,7 @@ protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_
 
 In JavaScript, {{jsxref("Object")}}s are not iterable unless they implement the [iterable
 protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). Therefore, you cannot use [for…of
-](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)to iterate over the properties of an object.
+](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) to iterate over the properties of an object.
 
 ```js example-bad
 var obj = { 'France': 'Paris', 'England': 'London' };
@@ -118,8 +118,8 @@ for (let x of generate(1,2))
 ### Iterating over a custom iterable
 
 Custom iterables can be created by implementing the
-{{jsxref("Symbol.iterator")}} method. You must be certain that your iterator method
-returns an object which is an iterator, which is to say it must have a next method.
+{{jsxref("Symbol.iterator")}} method. You must be certain that your iterator method
+returns an object which is an iterator, which is to say it must have a next method.
 
 ```js example-bad
 const myEmptyIterable = {

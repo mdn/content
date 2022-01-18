@@ -281,4 +281,4 @@ The following functions are used to define a CSS grid.
 ## See also
 
 - [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
-- [Introduction to CSS: Values and Units ](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
