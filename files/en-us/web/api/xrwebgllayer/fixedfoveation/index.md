@@ -22,6 +22,7 @@ It is most useful for low contrast textures, such as background images but less 
 ## Value
 
 A number between 0 and 1.
+
 - The minium amount of foveation is indicated by 0 (full resolution).
 - The maximum amount of foveation is indicated by 1 (the edges render at lower resolution).
 

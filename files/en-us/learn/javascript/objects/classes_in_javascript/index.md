@@ -59,6 +59,7 @@ class Person {
 ```
 
 This declares a class called `Person`, with:
+
 * a `name` property.
 * a constructor that takes a `name` parameter that is used to initialize the new object's `name` property
 * an `introduceSelf()` method that can refer to the object's properties using `this`.
@@ -68,6 +69,7 @@ The `name;` declaration is optional: you could omit it, and the line `this.name 
 You could also initialize the property to a default value when you declare it, with a line like `name = '';`.
 
 The constructor is defined using the {{jsxref("Classes/constructor", "constructor")}} keyword. Just like a [constructor outside a class definition](/en-US/docs/Learn/JavaScript/Objects/Basics#introducing_constructors), it will:
+
 * create a new object
 * bind `this` to the new object, so you can refer to `this` in your constructor code
 * run the code in the constructor

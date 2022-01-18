@@ -39,11 +39,13 @@ When both the `aria-valuetext` and `aria-valuenow` are included, the `aria-value
 ## Associated roles
 
 Used in roles:
+
 - [`range`](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
 - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
 - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 
 Inherited into roles:
+
 - [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)
 - [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)

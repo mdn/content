@@ -26,6 +26,7 @@ tags:
 >   - The term
 > ---
 > ```
+>
 > - **title**
 >   - : Title heading displayed at top of page.
 >       Format as: `Term being defined`.
@@ -34,6 +35,7 @@ tags:
 >       This will be formatted as snake case of the title: `Glossary/Term_being_defined`.
 > - **tags**
 >   - : Always include the following tags: **Glossary**, _Term being defined_.
+>
 > ---
 > _Remember to remove this whole explanatory note before publishing_
 

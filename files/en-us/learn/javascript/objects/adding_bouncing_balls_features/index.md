@@ -109,6 +109,7 @@ Create a definition for an `EvilCircle` class. It should inherit from `Shape` us
 #### EvilCircle constructor
 
 The constructor for `EvilCircle` should:
+
 - be passed just `x`, `y` arguments
 - pass the `x`, `y` arguments up to the `Shape` superclass along with values for `velX` and `velY` hardcoded to 20. You should do this with code like `super(x, y, 20, 20);`
 - set `color` to `white` and `size` to `10`.
