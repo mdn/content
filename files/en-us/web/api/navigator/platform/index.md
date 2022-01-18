@@ -13,11 +13,11 @@ browser-compat: api.Navigator.platform
 ---
 {{ APIRef("HTML DOM") }} {{Deprecated_Header}}
 
-> **Note:** The recommended alternative to this property is {{domxref("NavigatorUAData.platform")}}, which is returned from {{domxref("Navigator.userAgentData")}}.
+
+> **Note:** The recommended alternative to this property is {{domxref("NavigatorUAData.platform", "navigator.userAgentData.platform")}}. However, {{domxref("NavigatorUAData.platform", "navigator.userAgentData.platform")}} is not yet supported by some major browsers, and the specification which defines it has not yet been adopted by any standards group (specifically, it is not part of any specification published by the W3C or WHATWG).
 
 Returns a string representing the platform of the browser.
 The specification allows browsers to always return the empty string, so don't rely on this property to get a reliable answer.
-
 
 ## Value
 
