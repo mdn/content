@@ -14,7 +14,7 @@ The `button` role is for clickable elements that trigger a response when activat
 
 ## Description
 
-The button role identifies an element as a button to assistive technology such as screen readers. A button is a widget used to perform actions such as submitting a form, opening a dialog, canceling an action, or performing a command such as inserting a new record or displaying information. Adding `role="button"` tells assistive technology that the element is a button but provides no button functionality. Use {{HTMLElement("button")}} or {{HTM  LElement("input")}} with `type="button"` instead. 
+The button role identifies an element as a button to assistive technology such as screen readers. A button is a widget used to perform actions such as submitting a form, opening a dialog, canceling an action, or performing a command such as inserting a new record or displaying information. Adding `role="button"` tells assistive technology that the element is a button but provides no button functionality. Use {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` instead. 
 
 This `button` role can be used in combination with the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute to [create toggle buttons](#toggle_buttons).
 
