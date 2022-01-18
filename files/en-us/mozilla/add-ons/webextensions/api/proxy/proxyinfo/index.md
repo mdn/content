@@ -22,7 +22,7 @@ Values of this type are objects. They contain the following properties:
 
   - : `string`. This describes whether to proxy at all, and if so, what kind of proxy to use. It may take one of the following values:
 
-    - `"direct"`: don't proxy the request. If this value is given, all other properties of this object are ignored.
+    - `"direct"`: don't proxy the request. If this value is given, all other properties of this object are ignored. However, this setting doesn't override any [proxy set by the user](https://support.mozilla.org/en-US/kb/connection-settings-firefox). Use {{WebExtAPIRef("proxy.settings")}} to check whether a manual proxy is being used and, if necessary, monitor those settings for changes using [`BrowserSetting.onChange`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/onChange).
     - `"http"`: HTTP proxy (or SSL CONNECT for HTTPS)
     - `"https"`: HTTP proxying over TLS connection to proxy
     - `"socks"`: SOCKS v5 proxy
