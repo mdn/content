@@ -12,4 +12,4 @@ Display resolution is expressed in the unit of pixels. eg: A “800 x 600” pix
 
 ## See also
 
-- [Pixel ](https://en.wikipedia.org/wiki/Pixel)on Wikipedia
+- [Pixel](https://en.wikipedia.org/wiki/Pixel) on Wikipedia

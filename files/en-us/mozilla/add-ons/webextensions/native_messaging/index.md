@@ -95,7 +95,7 @@ For example, here's a manifest for the `"ping_pong"` native application:
 
 This allows the extension whose ID is `"ping_pong@example.org"` to connect, by passing the name `"ping_pong"` into the relevant {{WebExtAPIRef("runtime")}} API function. The application itself is at `"/path/to/native-messaging/app/ping_pong.py"`.
 
-> **Note:** Chrome identifies allowed extensions with another key: `allowed_origins`, using the ID of the WebExtension. Refer to [Chrome documentation for more details ](https://developer.chrome.com/apps/nativeMessaging#native-messaging-host)and see [Chrome incompatibilities below](#chrome_incompatibilities).
+> **Note:** Chrome identifies allowed extensions with another key: `allowed_origins`, using the ID of the WebExtension. Refer to [Chrome documentation for more details](https://developer.chrome.com/apps/nativeMessaging#native-messaging-host) and see [Chrome incompatibilities below](#chrome_incompatibilities).
 
 ### Windows setup
 

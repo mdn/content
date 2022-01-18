@@ -98,11 +98,11 @@ IE8 is listed as being significant too, but it is older and no longer capable. O
 
 ### Using analytics
 
-A much more accurate source of data, if you can get it, comes from an analytics app like [Google Analytics](https://www.google.com/analytics/). This is an application that will give you accurate stats on exactly what browsers people are using to browse your site. Of course, this relies on you already having a site to use it on, so it isn't much good for completely new sites.
+A much more accurate source of data, if you can get it, comes from an analytics app like [Google Analytics](https://www.google.com/analytics/). This is an application that will give you accurate stats on exactly what browsers people are using to browse your site. Of course, this relies on you already having a site to use it on, so it isn't much good for completely new sites.
 
 But an analytics history can be useful for finding support stats to influence say a new version of a company's site, or new features you are adding to an existing site. If you have these available, they are far more accurate than global browser stats like those mentioned above.
 
-You may also consider using open source and privacy focussed analytics platforms like [Open Web Analytics](http://www.openwebanalytics.com) and [Matomo](https://matomo.org). They expect you to self-host the analytics platform.
+You may also consider using open source and privacy focussed analytics platforms like [Open Web Analytics](http://www.openwebanalytics.com) and [Matomo](https://matomo.org). They expect you to self-host the analytics platform.
 
 #### Setting up Google analytics
 
@@ -128,7 +128,7 @@ There is a huge amount of data you could look at using Google Analytics — cust
 
 You should also be encouraged to look at the different options on the left hand side, and see what kinds of data you can find out. For example, you can find out what browsers and operating systems your users are using by selecting _Audience > Technology > Browser & OS_ from the left hand menu.
 
-> **Note:** When using Google analytics, you need to beware of misleading bias, e.g. "We  have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.
+> **Note:** When using Google analytics, you need to beware of misleading bias, e.g. "We have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.
 
 ### Other considerations
 
@@ -192,7 +192,7 @@ It is generally better to have a real device running the browser you want to tes
 The following are also good options, if you can get them:
 
 - A Linux PC available, in case you need to test bugs specific to Linux versions of browsers. Linux users commonly use Firefox, Opera, and Chrome. If you only have one machine available, you could consider creating a dual boot machine running Linux and Windows on separate partitions. Ubuntu's installer makes this quite easy to set up; see [WindowsDualBoot](https://help.ubuntu.com/community/WindowsDualBoot) for help with this.
-- A couple of lower-spec mobile devices, so you can test performance of features like animations on less powerful processors.
+- A couple of lower-spec mobile devices, so you can test performance of features like animations on less powerful processors.
 
 Your main work machine can also be a place to install other tools for specific purposes, such as accessibility auditing tools, screen readers, and emulators/virtual machines.
 
@@ -272,15 +272,15 @@ Having multiple virtual machines is very useful, particularly for Windows IE/Edg
 
 As mentioned in the last chapter, you can take a lot of the pain out of browser testing by using some kind of automation system. You can set up your own testing automation system ([Selenium](https://www.seleniumhq.org/) being the popular app of choice), which does take some setup, but can be very rewarding when you get it worked out.
 
-There are also commercial tools available such as [Sauce Labs](https://saucelabs.com/), [Browser Stack](https://www.browserstack.com/) and [LambdaTest ](https://www.lambdatest.com/)that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing.
+There are also commercial tools available such as [Sauce Labs](https://saucelabs.com/), [Browser Stack](https://www.browserstack.com/) and [LambdaTest](https://www.lambdatest.com/) that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing.
 
-Another alternative is to use no-code test automation tools such as [Endtest](https://endtest.io).
+Another alternative is to use no-code test automation tools such as [Endtest](https://endtest.io).
 
 We will look at how to use such tools later on in the module.
 
 ## User testing
 
-Before we move on, we'll finish this article off by talking a bit about user testing — this can be a good option if you have a willing user group to test your new functionality on. Bear in mind that this can be as lo-fi or as sophisticated as you like — your user group could be a group of friends, a group of colleagues, or a group of unpaid or paid volunteers, depending on whether you have any money to spend on testing.
+Before we move on, we'll finish this article off by talking a bit about user testing — this can be a good option if you have a willing user group to test your new functionality on. Bear in mind that this can be as lo-fi or as sophisticated as you like — your user group could be a group of friends, a group of colleagues, or a group of unpaid or paid volunteers, depending on whether you have any money to spend on testing.
 
 Generally you'll get your users to look at the page or view containing the new functionality on some kind of a development server, so you are not putting the final site or change live until it is finished. You should get them to follow some steps and report the results they get. It is useful to provide a set of steps (sometimes called a script) so that you get more reliable results pertaining to what you were trying to test. We mentioned this in the {{anch("What are you going to test")}} section above — it is easy to turn the test criteria detailed there into steps to follow. For example, the following would work for a sighted user:
 
@@ -293,7 +293,7 @@ Generally you'll get your users to look at the page or view containing the new f
 
 When running tests, it can also be a good idea to:
 
-- Set up a separate browser profile where possible, with browser extensions and other such things disabled, and run your tests in that profile (see [Use the Profile Manager to create and remove Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles) and [Share Chrome with others or add personas](https://support.google.com/chrome/answer/2364824), for example).
+- Set up a separate browser profile where possible, with browser extensions and other such things disabled, and run your tests in that profile (see [Use the Profile Manager to create and remove Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles) and [Share Chrome with others or add personas](https://support.google.com/chrome/answer/2364824), for example).
 - Use browser's private mode functionality when running tests, where available (e.g. [Private Browsing](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history) in Firefox, [Incognito Mode](https://support.google.com/chrome/answer/95464) in Chrome) so things like cookies and temp files are not saved.
 
 These steps are designed to make sure that the browser you are testing in is as "pure" as possible, i.e. there is nothing installed that could affect the results of the tests.

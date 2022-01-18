@@ -44,17 +44,17 @@ For the average website, [25% of bandwidth comes from video](https://discuss.htt
 
 ## Optimizing video delivery
 
-It's best to[ compress all video](#compress), [optimize `<source>` order](#omptimize), set [autoplay](/en-US/docs/Learn/Performance/Multimedia#video_autoplay), [remove audio from muted video](#muted), [optimize video preload](/en-US/docs/Learn/Performance/Multimedia#video_preload), and [consider streaming](/en-US/docs/Learn/Performance/Multimedia#consider_streaming) the video. The sections below describe each of these optimization techniques.
+It's best to [compress all video](#compress), [optimize `<source>` order](#omptimize), set [autoplay](/en-US/docs/Learn/Performance/Multimedia#video_autoplay), [remove audio from muted video](#muted), [optimize video preload](/en-US/docs/Learn/Performance/Multimedia#video_preload), and [consider streaming](/en-US/docs/Learn/Performance/Multimedia#consider_streaming) the video. The sections below describe each of these optimization techniques.
 
 ### Compress all videos
 
-Most video compression work compares adjacent frames within a video, with the intent of removing detail that is identical in both frames. Compress the video and export to multiple video formats, including WebM, MPEG-4/H.264, and Ogg/Theora.
+Most video compression work compares adjacent frames within a video, with the intent of removing detail that is identical in both frames. Compress the video and export to multiple video formats, including WebM, MPEG-4/H.264, and Ogg/Theora.
 
-Your video editing software probably has a feature to reduce file size. If not, there are online tools, such as [FFmpeg](https://www.ffmpeg.org/) (discussed in section below), that encode, decode, convert, and perform other optimization functions.
+Your video editing software probably has a feature to reduce file size. If not, there are online tools, such as [FFmpeg](https://www.ffmpeg.org/) (discussed in section below), that encode, decode, convert, and perform other optimization functions.
 
 ### Optimize `<source>` order
 
-Order video source from smallest to largest.  For example, given video compressions in three different formats at 10MB, 12MB, and 13MB, declare the smallest first and the largest last:
+Order video source from smallest to largest. For example, given video compressions in three different formats at 10MB, 12MB, and 13MB, declare the smallest first and the largest last:
 
     <video width="400" height="300" controls="controls">
       <!-- WebM: 10 MB -->
@@ -75,7 +75,7 @@ To ensure that a looping background video autoplays, you must add several attrib
 
     <video autoplay="" loop="" muted="true" playsinline="" src="backgroundvideo.mp4">
 
-While the `loop` and `autoplay` make sense for a looping and autoplaying video, the `muted` attribute is required for autoplay in mobile browsers.
+While the `loop` and `autoplay` make sense for a looping and autoplaying video, the `muted` attribute is required for autoplay in mobile browsers.
 
 `Playsinline` is required for mobile Safari, allowing videos to play without forcing fullscreen mode.
 
@@ -89,7 +89,7 @@ For hero-video or other video without audio, removing audio is smart.
       <source src="web_banner.mp4" type="video/mp4">
     </video>
 
-This hero-video code (above) is common to conference websites and corporate home pages. It includes a video that is auto-playing, looping, and muted. There are no controls, so there is no way to hear audio. The audio is often empty, but still present, and still using bandwidth. There is no reason to serve audio with video that is always muted. **Removing audio can save 20% of the bandwidth.**
+This hero-video code (above) is common to conference websites and corporate home pages. It includes a video that is auto-playing, looping, and muted. There are no controls, so there is no way to hear audio. The audio is often empty, but still present, and still using bandwidth. There is no reason to serve audio with video that is always muted. **Removing audio can save 20% of the bandwidth.**
 
 Depending on your choice of software, you might be able to remove audio during export and compression. If not, a free utility called [FFmpeg](https://www.ffmpeg.org/) can do it for you. This is the FFmpeg command string to remove audio:
 
@@ -97,19 +97,19 @@ Depending on your choice of software, you might be able to remove audio during e
 
 ### Video preload
 
-The preload attribute has three available options: `auto`|`metadata`|`none`. The default setting is `metadata`. These settings control how much of a video file downloads with page load. You can save data by deferring download for less popular videos.
+The preload attribute has three available options: `auto`|`metadata`|`none`. The default setting is `metadata`. These settings control how much of a video file downloads with page load. You can save data by deferring download for less popular videos.
 
-Setting `preload="none"` results in none of the video being downloaded until playback. It delays startup, but offers significant data savings for videos with a low probability of playback.
+Setting `preload="none"` results in none of the video being downloaded until playback. It delays startup, but offers significant data savings for videos with a low probability of playback.
 
 Offering more modest bandwidth savings, setting `preload="metadata"` may download up to 3% of the video on page load. This is a useful option for some small or moderately sized files.
 
-Changing the setting to `auto` tells the browser to automatically download the entire video. Do this only when playback is very likely. Otherwise, it wastes a lot of bandwidth.
+Changing the setting to `auto` tells the browser to automatically download the entire video. Do this only when playback is very likely. Otherwise, it wastes a lot of bandwidth.
 
 
 
 ### Consider streaming
 
-[Video streaming allows the proper video size and bandwidth](https://www.smashingmagazine.com/2018/10/video-playback-on-the-web-part-2/) (based on network speed) to be delivered to the end user.  Similar to responsive images, the correct size video is delivered to the browser, ensuring fast video startup, low buffering, and optimized playback.
+[Video streaming allows the proper video size and bandwidth](https://www.smashingmagazine.com/2018/10/video-playback-on-the-web-part-2/) (based on network speed) to be delivered to the end user. Similar to responsive images, the correct size video is delivered to the browser, ensuring fast video startup, low buffering, and optimized playback.
 
 ## Conclusion
 
