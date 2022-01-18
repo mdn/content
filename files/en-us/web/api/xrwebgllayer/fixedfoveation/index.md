@@ -46,6 +46,7 @@ The `fixedFoveation` property allows you to set the level of foveation at runtim
 let glLayer = xrSession.renderState.baseLayer;
 glLayer.fixedFoveation = 1; // maximum foveation
 ```
+
 ## Specifications
 
 {{Specifications}}

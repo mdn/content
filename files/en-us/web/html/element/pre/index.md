@@ -93,6 +93,7 @@ People experiencing low vision conditions and browsing with the aid of assistive
 A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}} elements, supplemented by a combination of an {{htmlattrxref("id")}} and the [ARIA](/en-US/docs/Web/Accessibility/ARIA) `role` and [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attributes allow the preformatted text to be announced as an image, with the `figcaption` serving as the image's alternate description.
 
 ### Example
+
 ```html
 <figure role="img" aria-labelledby="cow-caption">
   <pre>

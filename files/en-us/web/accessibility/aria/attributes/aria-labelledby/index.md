@@ -13,6 +13,7 @@ tags:
 The `aria-labelledby` attribute identifies the element (or elements) that labels the element it is applied to. 
 
 ## Description
+
 The `aria-labelledby` property enables authors to reference other elements on the page to define an accessible name. This is useful when using elements that don't have native support for associating elements to provide an accessible name. 
 
 Some elements get their [accessible name](/en-US/docs/Glossary/Accessible_Name) from their inner content. For example, the accessible name for a {{HTMLElement('button')}}, {{HTMLElement('a')}}, or {{HTMLElement('td')}} comes from the text between the opening and closing tags. Other elements, such as form {{HTMLElement('textarea')}}, {{HTMLElement('fieldset')}}, and {{HTMLElement('table')}} get their accessible name from the content of associated elements; for these elements, the accessible name comes from the {{HTMLElement('label')}} with a `for` attribute, {{HTMLElement('legend')}}, and {{HTMLElement('caption')}} respectively. 
