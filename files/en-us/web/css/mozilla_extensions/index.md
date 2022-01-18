@@ -73,7 +73,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 > **Note:** To maximize the compatibility of your CSS, you should use the unprefixed standard properties instead of the prefixed ones listed below. Once a given property is standardized and implemented without the prefix, the prefixed version is typically dropped after a while.
 
-- ### A
+### A
 
 - {{CSSxRef("animation", "-moz-animation")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("animation-delay", "-moz-animation-delay")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
@@ -86,7 +86,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("animation-timing-function","-moz-animation-timing-function")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("appearance","-moz-appearance")}} {{Experimental_Inline}}
 
-- ### B
+### B
 
 - {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("background-clip", "-moz-background-clip")}}{{deprecated_inline}}
@@ -104,7 +104,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("border-inline-start-width","-moz-border-start-width")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("border-inline-start-width")}}]
 - {{CSSxRef("box-sizing", "-moz-box-sizing")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 
-- ### C
+### C
 
 - {{CSSxRef("clip-path")}} {{Experimental_Inline}} \[Applying to more than SVG]
 - {{CSSxRef("column-count","-moz-column-count")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
@@ -117,7 +117,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("column-rule-color","-moz-column-rule-color")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("-moz-context-properties")}} {{Experimental_Inline}}
 
-- ### F–M
+### F–M
 
 - {{CSSxRef("filter")}} {{Experimental_Inline}} \[Applying to more than SVG]
 - {{CSSxRef("font-feature-settings","-moz-font-feature-settings")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
@@ -127,7 +127,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("margin-inline-start","-moz-margin-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("margin-inline-start")}}]
 - {{CSSxRef("mask")}} {{Experimental_Inline}} \[Applying to more than SVG]
 
-- ### O
+### O
 
 - {{CSSxRef("opacity","-moz-opacity")}} {{deprecated_inline}}
 - {{CSSxRef("outline","-moz-outline")}} {{deprecated_inline}}
@@ -136,7 +136,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("outline-style","-moz-outline-style")}} {{deprecated_inline}}
 - {{CSSxRef("outline-width","-moz-outline-width")}} {{deprecated_inline}}
 
-- ### P
+### P
 
 - {{CSSxRef("padding-inline-end","-moz-padding-end")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("padding-inline-start")}}]
 - {{CSSxRef("padding-inline-start","-moz-padding-start")}} {{Deprecated_Inline}} \[Superseded by the standard version {{CSSxRef("padding-inline-end")}}]
@@ -144,7 +144,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("perspective-origin","-moz-perspective-origin")}} {{Deprecated_Inline}} \[Prefixed version still accepted]
 - {{CSSxRef("pointer-events")}} {{Experimental_Inline}} \[Applying to more than SVG]
 
-- ### T–U
+### T–U
 
 - {{CSSxRef("tab-size","-moz-tab-size")}} {{Experimental_Inline}}
 - {{CSSxRef("text-align-last","-moz-text-align-last")}}{{deprecated_inline}}
@@ -257,16 +257,16 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ### {{CSSxRef("background-image")}}
 
-- #### Gradients
+#### Gradients
 
   - {{CSSxRef("linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}
   - {{CSSxRef("radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}
 
-- #### Elements
+#### Elements
 
   - {{CSSxRef("element","-moz-element")}}
 
-- #### Sub-images
+#### Sub-images
 
   - {{CSSxRef("-moz-image-rect")}}
 
@@ -427,7 +427,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 
 ## Pseudo-elements and pseudo-classes
 
-- ### A – D
+### A – D
 
 - {{CSSxRef("::-moz-anonymous-block")}}
 - {{CSSxRef("::-moz-anonymous-positioned-block")}}
@@ -439,7 +439,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef("::-moz-cell-content")}}
 - {{CSSxRef(":-moz-drag-over")}}
 
-- ### F – I
+### F – I
 
 - {{CSSxRef(":-moz-first-node")}}
 - {{CSSxRef("::-moz-focus-inner")}}
@@ -452,7 +452,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef(":-moz-handler-disabled")}}
 - {{CSSxRef("::-moz-inline-table")}}
 
-- ### L
+### L
 
 - {{CSSxRef(":-moz-last-node")}}
 - {{CSSxRef(":-moz-list-bullet")}}
@@ -464,7 +464,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef(":-moz-lwtheme-brighttext")}}
 - {{CSSxRef(":-moz-lwtheme-darktext")}}
 
-- ### N – R
+### N – R
 
 - {{CSSxRef(":-moz-native-anonymous")}}
 - {{CSSxRef(":-moz-only-whitespace")}}
@@ -481,7 +481,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef(":-moz-read-only")}}
 - {{CSSxRef(":-moz-read-write")}}
 
-- ### S
+### S
 
 - {{CSSxRef("::-moz-scrolled-canvas")}}
 - {{CSSxRef("::-moz-scrolled-content")}}
@@ -491,7 +491,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef(":-moz-suppressed")}}
 - {{CSSxRef("::-moz-svg-foreign-content")}}
 
-- ### T
+### T
 
 - {{CSSxRef("::-moz-table")}}
 - {{CSSxRef("::-moz-table-cell")}}
@@ -515,7 +515,7 @@ Mozilla applications such as Firefox support a number of special **Mozilla exten
 - {{CSSxRef(":-moz-tree-separator")}}
 - {{CSSxRef(":-moz-tree-twisty")}}
 
-- ### U – X
+### U – X
 
 - {{CSSxRef(":-moz-ui-invalid")}}
 - {{CSSxRef(":-moz-ui-valid")}}
