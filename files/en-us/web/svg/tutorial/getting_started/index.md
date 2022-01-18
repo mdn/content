@@ -51,10 +51,16 @@ The rendering process involves the following:
     *   If the HTML is HTML5, and the browser is a conforming HTML5 browser, the SVG can also be directly embedded. However, there may be syntax changes necessary to conform to the HTML5 specification.
     *   The SVG file can be referenced with an `object` element:
 
-                    <object data="image.svg" type="image/svg+xml" />
+        ```html
+        <object data="image.svg" type="image/svg+xml" />
+        ```
+
     *   Likewise an `iframe` element can be used:
 
-                    <iframe src="image.svg"></iframe>
+        ```html
+        <iframe src="image.svg"></iframe>
+        ```
+
     *   An `img` element can theoretically be used too. However, this technique doesn't work in Firefox before 4.0.
     *   Finally, SVG can be created dynamically with JavaScript and injected into the HTML DOM. With this method, replacement technologies can be implemented for browsers which normally can't process SVG.
 
@@ -70,15 +76,18 @@ Due to the potentially massive size SVG files can reach when used for some appli
 ### A word on Webservers
 
 Now that you have an idea of how to create basic SVG files, the next stage is to upload them to a Webserver. There are some gotchas at this stage though. For normal SVG files, servers should send the HTTP headers:
-
-    Content-Type: image/svg+xml
-    Vary: Accept-Encoding
+```
+Content-Type: image/svg+xml
+Vary: Accept-Encoding
+```
 
 For gzip-compressed SVG files, servers should send the HTTP headers:
 
-    Content-Type: image/svg+xml
-    Content-Encoding: gzip
-    Vary: Accept-Encoding
+```
+Content-Type: image/svg+xml
+Content-Encoding: gzip
+Vary: Accept-Encoding
+```
 
 You can check that your server is sending the correct HTTP headers with your SVG files by using the [Network Monitor panel](/en-US/docs/Tools/Network_Monitor#headers) or a site such as [websniffer.cc](https://websniffer.cc/). Submit the URL of one of your SVG files and look at the HTTP response headers. If you find that your server is not sending the headers with the values given above, then you should contact your Web host. If you have problems convincing them to correctly configure their servers for SVG, there may be ways to do it yourself. See the [server configuration page](https://www.w3.org/services/svg-server/) on the w3.org for a range of simple solutions.
 

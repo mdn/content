@@ -173,7 +173,9 @@ In a Web environment, the most obvious method to convert a simple syntax into a 
 
 [TeXZilla](https://github.com/fred-wang/TeXZilla) has an [\<x-tex>](https://github.com/fred-wang/x-tex) custom element, that can be used to write things like
 
-    <x-tex>\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1</x-tex>
+```
+<x-tex>\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1</x-tex>
+```
 
 and get it automatically converted into MathML. This is still a work-in-progress, but could be improved in the future thanks to Web Components and shadow DOM. Alternatively, you can use the more traditional [Javascript parsing of expressions at load time](https://github.com/fred-wang/TeXZilla/wiki/Advanced-Usages#parsing-tex-expressions-in-your-web-page) as all the other tools in this section do.
 

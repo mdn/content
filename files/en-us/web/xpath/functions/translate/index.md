@@ -11,7 +11,9 @@ The `translate` function evaluates a string and a set of characters to translate
 
 ### Syntax
 
-    translate(string, abc, XYZ)
+```
+translate(string, abc, XYZ)
+```
 
 ### Arguments
 

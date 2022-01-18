@@ -13,22 +13,28 @@ Note that the idempotence of a method is not guaranteed by the server and some a
 
 `GET /pageX HTTP/1.1` is idempotent. Called several times in a row, the client gets the same results:
 
-    GET /pageX HTTP/1.1
-    GET /pageX HTTP/1.1
-    GET /pageX HTTP/1.1
-    GET /pageX HTTP/1.1
+```
+GET /pageX HTTP/1.1
+GET /pageX HTTP/1.1
+GET /pageX HTTP/1.1
+GET /pageX HTTP/1.1
+```
 
 `POST /add_row HTTP/1.1` is not idempotent; if it is called several times, it adds several rows:
 
-    POST /add_row HTTP/1.1
-    POST /add_row HTTP/1.1   -> Adds a 2nd row
-    POST /add_row HTTP/1.1   -> Adds a 3rd row
+```
+POST /add_row HTTP/1.1
+POST /add_row HTTP/1.1   -> Adds a 2nd row
+POST /add_row HTTP/1.1   -> Adds a 3rd row
+```
 
 `DELETE /idX/delete HTTP/1.1` is idempotent, even if the returned status code may change between requests:
 
-    DELETE /idX/delete HTTP/1.1   -> Returns 200 if idX exists
-    DELETE /idX/delete HTTP/1.1   -> Returns 404 as it just got deleted
-    DELETE /idX/delete HTTP/1.1   -> Returns 404
+```
+DELETE /idX/delete HTTP/1.1   -> Returns 200 if idX exists
+DELETE /idX/delete HTTP/1.1   -> Returns 404 as it just got deleted
+DELETE /idX/delete HTTP/1.1   -> Returns 404
+```
 
 ## See also
 

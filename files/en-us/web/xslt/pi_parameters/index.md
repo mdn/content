@@ -12,7 +12,7 @@ To solve this two new PIs are implemented in [Firefox 2](/en-US/Firefox_2) (see 
 
 The following document passes the two parameters "color" and "size" to the stylesheet "style.xsl".
 
-```plain
+```xml
 <?xslt-param name="color" value="blue"?>
 <?xslt-param name="size" select="2"?>
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
@@ -55,19 +55,27 @@ Note that `value="..."` is not strictly equal to `select="'...'"` since the valu
 
 Set the parameter 'color' to the string 'red':
 
-    <?xslt-param name="color" value="red"?>
+```xml
+<?xslt-param name="color" value="red"?>
+```
 
 Set the parameter 'columns' to the number 2:
 
-    <?xslt-param name="columns" select="2"?>
+```xml
+<?xslt-param name="columns" select="2"?>
+```
 
 Set the parameter 'books' to a nodeset containing all `<book>` elements in the null namespace:
 
-    <?xslt-param name="books" select="//book"?>
+```xml
+<?xslt-param name="books" select="//book"?>
+```
 
 Set the parameter 'show-toc' to boolean `true`:
 
-     <?xslt-param name="show-toc" select="true()"?>
+```xml
+<?xslt-param name="show-toc" select="true()"?>
+```
 
 ##### The select attribute context
 
@@ -103,9 +111,10 @@ If **namespace** is missing, the PI is ignored. If **namespace** is empty, the p
 
 Set the parameter 'books' to a nodeset containing all `<book>` elements in the 'http\://www\.example.org/myNamespace' namespace:
 
-    <?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?>
-    <?xslt-param name="books" select="//my:book"?>
-
+```xml
+<?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?>
+<?xslt-param name="books" select="//my:book"?>
+```
 ### Supported versions
 
 Supported as of Firefox 2.0.0.1. The **value** attribute is supported in Firefox 2, but the **select** attribute crashes for some expressions in the 2.0 release.

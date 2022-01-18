@@ -319,12 +319,16 @@ For example, this line in the HTTP headers will enable use of a camera for the d
 and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same
 origin:
 
-    Feature-Policy: camera 'self'
+```
+Feature-Policy: camera 'self'
+```
 
 This will request access to the microphone for the current origin and the specific
 origin https\://developer.mozilla.org:
 
-    Feature-Policy: microphone 'self' https://developer.mozilla.org
+```
+Feature-Policy: microphone 'self' https://developer.mozilla.org
+```
 
 If you're using `getUserMedia()` within an `<iframe>`, you
 can request permission just for that frame, which is clearly more secure than requesting
