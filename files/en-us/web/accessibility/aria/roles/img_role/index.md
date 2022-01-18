@@ -95,7 +95,7 @@ If `aria-labelledby` were used, the screen reader would read it. In this case, o
 
 ## Examples
 
-````html
+```html
 <span role="img" aria-label="Rating: 4 out of 5 stars">
     <span>★</span>
     <span>★</span>
@@ -103,7 +103,7 @@ If `aria-labelledby` were used, the screen reader would read it. In this case, o
     <span>★</span>
     <span>☆</span>
 </span>
-````
+```
 
 
 ## Specifications

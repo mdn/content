@@ -24,7 +24,7 @@ When an element has required descendents, such as the various {{HTMLElement('tab
 
 If `presentation` or `none` is applied to a {{HTMLElement('table')}}  element, the descendant {{HTMLElement('caption')}}, {{HTMLElement('thead')}}, {{HTMLElement('tbody')}}, {{HTMLElement('tfoot')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, and {{HTMLElement('td')}} elements inherit the role and are thus not exposed to assistive technologies. But, elements inside of the {{HTMLElement('th')}} and {{HTMLElement('td')}} elements, including nested tables, are exposed to assistive technologies.
 
-````html
+```html
 <ul role="presentation">
   <li>
     <a href="#">Link 1</a>
@@ -36,7 +36,7 @@ If `presentation` or `none` is applied to a {{HTMLElement('table')}}  element, t
     <a href="#">Link 3</a>
   </li>
 </ul>
-````
+```
 
 Because the `presentation` role was applied to the {{HTMLElement('ul')}} element, every child {{HTMLElement('li')}} element inherits the `presentation` role. This is because ARIA requires the `listitem` elements to have a parent `list` element. While the {{HTMLElement('li')}}  elements, in this case, are not exposed to assistive technologies, descendants of those required elements are exposed. If we had nested a list within one of those {{HTMLElement('li')}}'s, they would be visible to assistive technologies. For elements with no required children, any elements nested inside the element with `role="presentation"` or `role="none"` preserve their semantics.  In this case, the {{HTMLElement('a')}} elements contained inside of those {{HTMLElement('li')}} elements are exposed.
 
