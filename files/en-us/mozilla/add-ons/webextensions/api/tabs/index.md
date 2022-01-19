@@ -37,7 +37,7 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 - {{WebExtAPIRef("tabs.MutedInfo")}}
   - : This object contains a boolean indicating whether the tab is muted, and the reason for the last state change.
 - {{WebExtAPIRef("tabs.PageSettings")}}
-  - : Used to control how a tab is rendered as a PDF by the [`tabs.saveAsPDF()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF "Saves the current page as a PDF. This will open a dialog, supplied by the underlying operating system, asking the user where they want to save the PDF.") method.
+  - : Used to control how a tab is rendered as a PDF by the [`tabs.saveAsPDF()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF) method.
 - {{WebExtAPIRef("tabs.Tab")}}
   - : This type contains information about a tab.
 - {{WebExtAPIRef("tabs.TabStatus")}}
@@ -79,9 +79,9 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 - {{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}
   - : Gets details about all tabs in the specified window.
 - {{WebExtAPIRef("tabs.getCurrent()")}}
-  - : Gets information about the tab that this script is running in, as a [`tabs.Tab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab "This type contains information about a tab.") object.
+  - : Gets information about the tab that this script is running in, as a [`tabs.Tab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) object.
 - {{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}
-  - : Gets the tab that is selected in the specified window. **Deprecated: use [`tabs.query({active: true})`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query "Gets all tabs that have the specified properties, or all tabs if no properties are specified.") instead.**
+  - : Gets the tab that is selected in the specified window. **Deprecated: use [`tabs.query({active: true})`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) instead.**
 - {{WebExtAPIRef("tabs.getZoom()")}}
   - : Gets the current zoom factor of the specified tab.
 - {{WebExtAPIRef("tabs.getZoomSettings()")}}

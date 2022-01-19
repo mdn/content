@@ -10,7 +10,7 @@ browser-compat: api.IDBDatabase.versionchange_event
 ---
 {{APIRef("IndexedDB")}}
 
-The `versionchange` event is fired when a database structure change ([`IDBOpenDBRequest.onupgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded "In the following example you can see the onupgradeneeded handler being used to update the database structure if a database with a higher version number is loaded. For a full working example, see our To-do Notifications app (view example live.)") event or [`IDBFactory.deleteDatabase`](/en-US/docs/Web/API/IDBFactory/deleteDatabase "The deleteDatabase() method of the IDBFactory interface requests the deletion of a database. The method returns an IDBOpenDBRequest object immediately, and performs the deletion operation asynchronously.")) was requested.
+The `versionchange` event is fired when a database structure change ([`IDBOpenDBRequest.onupgradeneeded`](/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded) event or [`IDBFactory.deleteDatabase`](/en-US/docs/Web/API/IDBFactory/deleteDatabase)) was requested.
 
 <table class="properties">
   <tbody>

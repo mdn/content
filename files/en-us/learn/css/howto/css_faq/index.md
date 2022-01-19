@@ -235,7 +235,7 @@ transform: rotate(90deg);
 
 > **Note:** For more information on dealing with prefixed properties, see [Handling common HTML and CSS problems — Handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes) from our [Cross-browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.
 
-> **Note:** See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions "CSS Reference/Mozilla Extensions") page for more information on the Mozilla-prefixed CSS properties.
+> **Note:** See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions) page for more information on the Mozilla-prefixed CSS properties.
 
 ## How does z-index relate to positioning?
 

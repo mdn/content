@@ -123,7 +123,7 @@ That is, the rendered outline might show the primary title, _HTML_, followed by 
 
 Or, the rendered outline for that document might instead look like the following:
 
-![Rendered outline that includes an <hgroup> element, with parens around the secondary heading](outline-paren.png)
+![Rendered outline that includes an \<hgroup> element, with parens around the secondary heading](outline-paren.png)
 
 That is, the rendered outline might show the primary title, _HTML_, followed by the secondary title shown in parentheses: _(Living Standard — Last Updated 12 August 2016)_.
 

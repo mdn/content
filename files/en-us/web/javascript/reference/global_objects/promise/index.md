@@ -226,7 +226,7 @@ In the above example, the inner text of the `<iframe>` will be updated only if t
 
 ## Instance methods
 
-See the [Microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide "Microtask_guide") to learn more about how these methods use the Microtask queue and services.
+See the [Microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) to learn more about how these methods use the Microtask queue and services.
 
 - {{jsxref("Promise.prototype.catch()")}}
   - : Appends a rejection handler callback to the promise, and returns a new promise resolving to the return value of the callback if it is called, or to its original fulfillment value if the promise is instead fulfilled.

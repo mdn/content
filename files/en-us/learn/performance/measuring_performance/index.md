@@ -56,7 +56,7 @@ The [Performance API](/en-US/docs/Web/API/Performance_API/Using_the_Performance_
 
 The [PerformanceEntry](/en-US/docs/Web/API/PerformanceEntry) object is part of the _performance timeline_. A _performance entry_ can be directly created by making a performance _{{domxref("PerformanceMark","mark")}}_ or _{{domxref("PerformanceMeasure","measure")}}_ (for example by calling the {{domxref("Performance.mark","mark()")}} method) at an explicit point in an application. Performance entries are also created in indirect ways; such as loading a resource, like an image.
 
-The [PerformanceObserver API](/en-US/docs/Web/API/PerformanceObserver) can be used to observe performance measurement events and it can notify you of new [performance entries](/en-US/docs/Web/API/PerformanceEntry "The PerformanceEntry object encapsulates a single performance metric that is part of the performance timeline. A performance entry can be directly created by making a performance mark or measure (for example by calling the mark() method) at an explicit point in an application. Performance entries are also created in indirect ways such as loading a resource (such as an image).") as they are recorded in the browser's performance timeline.
+The [PerformanceObserver API](/en-US/docs/Web/API/PerformanceObserver) can be used to observe performance measurement events and it can notify you of new [performance entries](/en-US/docs/Web/API/PerformanceEntry) as they are recorded in the browser's performance timeline.
 
 While this article does not dive into using these APIs, it is useful to know they exist. You can also refer to  the [Navigation and timings](/en-US/docs/Web/Performance/Navigation_and_resource_timings)  article for further examples on using performance Web APIs.
 
