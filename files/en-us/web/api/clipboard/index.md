@@ -27,10 +27,10 @@ Calls to the methods of the `Clipboard` object will not succeed if the user hasn
 
 All of the Clipboard API methods operate asynchronously; they return a {{jsxref("Promise")}} which is resolved once the clipboard access has been completed. The promise is rejected if clipboard access is denied.
 
-> **Note:** The **clipboard** is a data buffer that is used for short-term, data storage and/or data transfers, this can be between documents or applications
->  It is usually implemented as an anonymous, temporary [data buffer](https://en.wikipedia.org/wiki/Data_buffer "Data buffer"), sometimes called the paste buffer, that can be accessed from most or all programs within the environment via defined [programming interfaces](https://en.wikipedia.org/wiki/Application_programming_interface "Application programming interface").
+> **Note:** The **clipboard** is a data buffer that is used for short-term, data storage and/or data transfers, this can be between documents or applications
+> It is usually implemented as an anonymous, temporary [data buffer](https://en.wikipedia.org/wiki/Data_buffer "Data buffer"), sometimes called the paste buffer, that can be accessed from most or all programs within the environment via defined [programming interfaces](https://en.wikipedia.org/wiki/Application_programming_interface "Application programming interface").
 >
-> A typical application accesses clipboard functionality by mapping [user input](https://en.wikipedia.org/wiki/User_input "User input") such as [keybindings](https://en.wikipedia.org/wiki/Keybinding), [menu selections](<https://en.wikipedia.org/wiki/Menu_(computing)> "Menu (computing)"), etc. to these interfaces.
+> A typical application accesses clipboard functionality by mapping [user input](https://en.wikipedia.org/wiki/User_input "User input") such as [keybindings](https://en.wikipedia.org/wiki/Keybinding), [menu selections](<https://en.wikipedia.org/wiki/Menu_(computing)> "Menu (computing)"), etc. to these interfaces.
 
 ## Methods
 
