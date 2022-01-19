@@ -113,8 +113,6 @@ Offering more modest bandwidth savings, setting `preload="metadata"` may downloa
 
 Changing the setting to `auto` tells the browser to automatically download the entire video. Do this only when playback is very likely. Otherwise, it wastes a lot of bandwidth.
 
-
-
 ### Consider streaming
 
 [Video streaming allows the proper video size and bandwidth](https://www.smashingmagazine.com/2018/10/video-playback-on-the-web-part-2/) (based on network speed) to be delivered to the end user. Similar to responsive images, the correct size video is delivered to the browser, ensuring fast video startup, low buffering, and optimized playback.

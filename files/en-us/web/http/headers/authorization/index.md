@@ -63,7 +63,6 @@ Authorization: Digest username=<username>,
     opaque="<opaque>"
 ```
 
-
 ## Directives
 
 - `<auth-scheme>`
@@ -71,7 +70,6 @@ Authorization: Digest username=<username>,
     Some of the more common types are (case-insensitive): [`Basic`](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
 
     > **Note:** For more information/options see [HTTP Authentication > Authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes)
-
 
 Other than `<auth-scheme>` the remaining directives are specific to each [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
 Generally you will need to check the relevant specifications for these (keys for a small subset of schemes are listed below).
@@ -85,7 +83,6 @@ Generally you will need to check the relevant specifications for these (keys for
     > **Note:** For information about the encoding algorithm, see the examples: below, in {{HTTPHeader("WWW-Authenticate")}}, in [HTTP Authentication](/en-US/docs/Web/HTTP/Authentication), and in the relevant specifications.
 
 ### Digest
-
 
 - \<response>
   - : A string of the hex digits that proves that the user knows a password.
@@ -121,7 +118,6 @@ Generally you will need to check the relevant specifications for these (keys for
 - **`userhash`** {{optional_inline}}
   - : `"true` if the username has been hashed. `"false"` by default.
 
-
 ## Examples
 
 ### Basic authentication
@@ -146,7 +142,6 @@ See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples
 | {{RFC("7616")}}                                 | HTTP Digest Access Authentication |
 
 <!-- {{Specifications}} -->
-
 
 ## Browser compatibility
 

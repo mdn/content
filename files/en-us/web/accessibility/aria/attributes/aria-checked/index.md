@@ -91,4 +91,3 @@ myHTMLElement.ariaChecked = true;
     {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
 
 </section>
-

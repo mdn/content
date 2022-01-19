@@ -28,7 +28,6 @@ The **`EncodedVideoChunk`** interface of the {{domxref('WebCodecs API','','',' '
 - {{domxref("EncodedVideoChunk.byteLength")}}{{ReadOnlyInline}}
   - : Returns an integer representing the length of the video in bytes.
 
-
 ## Methods
 
 - {{domxref("EncodedVideoChunk.copyTo()")}}

@@ -78,7 +78,6 @@ Buttons can be operated by mouse, touch, and keyboard users. For native HTML `
 - `onKeyDown`
   - : Handles the event raised when the button is activated using the Enter or Space key on the keyboard. (Note not the [deprecated onKeyPress](/en-US/docs/Web/API/Document/keypress_event))
 
-
 ## Examples
 
 ### Basic button example
@@ -242,8 +241,6 @@ If a link performs the action of a button, giving the element `role="button"` he
 | -------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#button","button")}}                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#button","button")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
-
 
 ## See also
 

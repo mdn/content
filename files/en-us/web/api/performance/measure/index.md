@@ -21,7 +21,6 @@ The `measure` can be retrieved using any of the {{domxref("Performance")}} inter
 {{domxref("Performance.getEntriesByName","getEntriesByName()")}} or
 {{domxref("Performance.getEntriesByType","getEntriesByType()")}}).
 
-
 {{AvailableInWorkers}}
 
 ## Syntax
@@ -63,7 +62,6 @@ If only `measureName` is specified, the start timestamp is set to zero, and the 
   - : A {{domxref("DOMString")}} representing the name of the measure's ending mark.
     This may also be the name of a {{domxref("PerformanceTiming")}} property.
     Specifying a name that does not represent an existing {{domxref('PerformanceMark')}} or {{domxref("PerformanceTiming")}} raises a `SyntaxError` {{domxref("DOMException")}}.
-
 
 ### Return value
 
@@ -110,7 +108,6 @@ The returned _measure_ will have the following property values:
 
 - `RangeError`
   - : The `MeasureOptions.detail` value is non-`null` and memory cannot be allocated during serialization using the HTML "StructuredSerialize" algorithm.
-
 
 ## Example
 

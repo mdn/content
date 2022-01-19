@@ -47,7 +47,6 @@ console.log(uInt8Array.byteLength);  // 0
 > However their underlying buffer is an {{jsxref("ArrayBuffer")}}, which is a transferable object.
 > We could have sent `uInt8Array.buffer` in the data parameter, but not `uInt8Array` in the transfer array.
 
-
 ### Transferring during a cloning operation
 
 The code below shows a {{domxref("structuredClone()")}} operation where the underlying buffer is copied from the original object to the clone.
@@ -86,7 +85,6 @@ The items that can be _transferred_ are:
 - {{domxref("ImageBitmap")}}
 - {{domxref("VideoFrame")}}
 - {{domxref("OffscreenCanvas")}}
-
 
 > **Note:** Transferrable objects are marked up in [Web IDL files](https://github.com/w3c/webref/tree/main/ed/idl) with the attribute `Transferrable`.
 

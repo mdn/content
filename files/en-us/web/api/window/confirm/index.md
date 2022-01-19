@@ -45,8 +45,6 @@ Produces:
 
 ![firefox confirm](firefoxcomfirmdialog_zpsf00ec381.png)
 
-
-
 ## Notes
 
 Dialog boxes are modal windows — they

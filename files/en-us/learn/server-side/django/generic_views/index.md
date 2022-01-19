@@ -194,11 +194,8 @@ You might also use the `{% empty %}` template tag to define what happens if the 
 </ul>
 ```
 
-
 While not used here, within the loop Django will also create other variables that you can use to track the iteration.
 For example, you can test the `forloop.last` variable to perform conditional processing the last time that the loop is run.
-
-
 
 #### Accessing variables
 

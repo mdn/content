@@ -102,7 +102,6 @@ You can use any of the {{cssxref("list-style-type")}} values or your own [custom
 
 Examples showing the use of `counter()` and `counter()` are given below in the [basic example](#basic_example) and [Example of a nested counter](#example_of_a_nested_counter), respectively.
 
-
 ### Reversed counters
 
 A reversed counter is one that is intended to count down (decrement) rather than up (increment).
@@ -133,7 +132,6 @@ Unlike author-created counters, `list-item` _automatically_ increments or decrem
 
 The `list-item` counter can be used to manipulate the default behavior of ordered lists using CSS.
 For example, you can change the default initial value, or use {{cssxref("counter-increment")}} to change the way in which the list items increment or decrement.
-
 
 ## Examples
 
@@ -168,7 +166,6 @@ h3::before {
 
 {{EmbedLiveSample("Basic_example", "100%", 150)}}
 
-
 ### Basic example: reversed counter
 
 This example is the same as the one above but uses a reversed counter.
@@ -202,7 +199,6 @@ h3::before {
 #### Result
 
 {{EmbedLiveSample("Reversing a counter", "100%", 150)}}
-
 
 ### A more sophisticated example
 

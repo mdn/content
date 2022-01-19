@@ -38,8 +38,6 @@ The marquee is required to have an accessible name.  Use [`aria-labelledby`](/en
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#marquee","ARIA: marquee role")}}                                             | {{Spec2('ARIA')}}                         |
 
-
-
 ## See Also
 
 - [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)

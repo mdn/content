@@ -55,4 +55,3 @@ new AudioData(init);
 ## Browser compatibility
 
 {{Compat}}
-

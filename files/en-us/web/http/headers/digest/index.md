@@ -32,7 +32,6 @@ It can be used to verify that the representation data has not been modified duri
   </tbody>
 </table>
 
-
 ## Syntax
 
 ```

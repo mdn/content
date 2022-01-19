@@ -27,10 +27,8 @@ It is highly recommended to use a {{HTMLElement('select')}} element or an  {{HTM
 
 #### Associated Roles
 
-
 -	[`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
 	-	: An `option` _must_ be contained in or owned by a `listbox`
-
 
 #### States and Properties
 

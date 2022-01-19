@@ -35,7 +35,6 @@ Unless blocked by a user agent permission policy, it is sent by default (without
   </tbody>
 </table>
 
-
 ## Syntax
 
 ```http
@@ -46,7 +45,6 @@ Sec-CH-UA-Platform: <platform>
 
 - `<platform>`
   - : One of the following strings: `"Android"`, `"Chrome OS"`, `"iOS"`, `"Linux"`, `"macOS"`, `"Windows"`, or `"Unknown"`.
-
 
 ## Examples
 

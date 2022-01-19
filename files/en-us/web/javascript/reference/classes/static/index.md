@@ -21,7 +21,6 @@ Static methods are often utility functions, such as functions to create or clone
 
 {{EmbedInteractiveExample("pages/js/classes-static.html")}}
 
-
 ## Syntax
 
 ```js

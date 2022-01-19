@@ -45,7 +45,6 @@ A sorted array of unique string values indicating the values supported by the im
 - `RangeError`
   - : An unsupported key was passed as a parameter.
 
-
 ## Examples
 
 ### Feature testing
@@ -69,7 +68,6 @@ Intl.supportedValuesOf("calendar").forEach(function(calendar) {
 });
 ```
 > **Note:** The array returned for calendar values will always include the value "gregory" (gregorian).
-
 
 The other values are all obtained in the same way:
 ```js
@@ -96,7 +94,6 @@ Intl.supportedValuesOf("unit").forEach(function(unit) {
 
 ### Invalid key throws RangeError
 
-
 ```js
 try {
   Intl.supportedValuesOf("someInvalidKey");
@@ -109,7 +106,6 @@ try {
 
 [Intl.supportedValuesOf() polyfill in proposal TC39](https://github.com/tc39/proposal-intl-enumeration/tree/master/polyfill)
 
-
 ## Specifications
 
 {{Specifications}}
@@ -121,4 +117,3 @@ try {
 ## See also
 
 - {{jsxref("Global_Objects/Intl", "Intl")}}
-

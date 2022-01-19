@@ -71,7 +71,6 @@ browser-compat: path.to.feature.NameOfTheHeader
 >
 > _Remember to remove this whole explanatory note before publishing_
 
-
 {{SeeCompatTable}}{{deprecated_header}}{{httpsidebar}}
 
 The summary paragraph — start by naming the http header and saying what it does.

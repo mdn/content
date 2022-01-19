@@ -86,7 +86,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     The values are numbers of CSS pixels.
 
-
 - {{htmlattrdef("download")}}
   - : This attribute, if present, indicates that the author intends the hyperlink to be used for downloading a resource.
     See {{HTMLElement("a")}} for a full description of the {{htmlattrxref("download", "a")}} attribute.

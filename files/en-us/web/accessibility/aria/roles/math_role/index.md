@@ -12,7 +12,6 @@ tags:
 
 The `math` role indicates that the content represents a mathematical expression.
 
-
 ## Description
 
 Content with the role `math` is intended to be marked up in an accessible format such as [MathML](https://developer.mozilla.org/en-US/docs/Web/MathML), or with another type of textual representation, which can be converted to an accessible format by the browser or a polyfill library.
@@ -50,7 +49,6 @@ Had an image been used, the `alt` attribute would be used along with the `math` 
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#math","ARIA: math role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_math_role","math role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
 
 ## See Also
 

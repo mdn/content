@@ -37,7 +37,6 @@ The **`AudioDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} d
 - {{domxref("AudioDecoder.close()")}}
   - : Ends all pending work and releases system resources.
 
-
 ## Specifications
 
 {{Specifications}}
@@ -45,4 +44,3 @@ The **`AudioDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} d
 ## Browser compatibility
 
 {{Compat}}
-

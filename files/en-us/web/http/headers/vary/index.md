@@ -42,7 +42,6 @@ Vary: <header-name>, <header-name>, ...
 - \<header-name>
   - : A comma-separated list of request header names that could have influenced the generation of this response.
 
-
 ## Specifications
 
 {{Specifications}}

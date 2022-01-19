@@ -11,7 +11,6 @@ tags:
 ---
 The `term` role can be used for a word or phrase with an optional corresponding [`definition`](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role).
 
-
 ## Description
 
 The `term` role can be used for a word or phrase with an optional corresponding [`definition`](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role). It is equivalent in semantics to the HTML {{HTMLElement('dfn')}} element and the definition term ({{HTMLElement('dt')}}) element within a definition list ({{HTMLElement('dl')}} ).
@@ -67,14 +66,12 @@ Allow the term itself to define the accessible name. Do not use `aria-label` or 
 
 ### Prefer HTML
 
-
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#term","ARIA: term role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_term_role","term role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
 
 ## See Also
 

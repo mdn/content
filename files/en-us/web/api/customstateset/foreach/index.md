@@ -42,4 +42,3 @@ Undefined.
 ## Browser compatibility
 
 {{Compat}}
-

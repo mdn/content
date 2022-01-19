@@ -48,4 +48,3 @@ async function getContacts() {
 ## Browser compatibility
 
 {{Compat}}
-

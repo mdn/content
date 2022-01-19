@@ -29,8 +29,6 @@ Do not use.
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#range","ARIA: range role")}}                                             | {{Spec2('ARIA')}}                         |
 
-
-
 ## See Also
 
 - [ARIA: `structure` role](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role)
@@ -42,7 +40,6 @@ Do not use.
 - {{HTMLElement("input/range")}}
 - {{HTMLElement("meter")}}
 - {{HTMLElement("progress")}}
-
 
 <section id="Quick_links">
 

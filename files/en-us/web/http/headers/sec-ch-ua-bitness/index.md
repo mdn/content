@@ -34,7 +34,6 @@ This might be used by a server, for example, to select and offer the correct bin
   </tbody>
 </table>
 
-
 ## Syntax
 
 ```http
@@ -45,7 +44,6 @@ Sec-CH-UA-Bitness: <bitness>
 
 - `<bitness>`
   - : A string indicating the underlying platform architecture bitness, such as: `"64"`, `"32"`.
-
 
 ## Examples
 
@@ -68,7 +66,6 @@ Sec-CH-UA-Mobile: ?0
 Sec-CH-UA-Platform: "Windows"
 Sec-CH-UA-Bitness: "64"
 ```
-
 
 ## Specifications
 

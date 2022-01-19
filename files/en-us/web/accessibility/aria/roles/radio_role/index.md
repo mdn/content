@@ -72,7 +72,6 @@ As `radio` is an interactive control; it must be focusable and keyboard accessib
 
 If any of the radio roles in a group has `aria-required="true"` set, it is as if all of the radios in the group had the attribute making the selection of one of the radios in the radiogroup being required to be valid;  though not necessarily the one that has the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute set.
 
-
 ## Associated WAI-ARIA Roles, States, and Properties
 
 - ['radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) role
@@ -90,7 +89,6 @@ If any of the radio roles in a group has `aria-required="true"` set, it is as if
 - [`tabindex="0"`](/en-US/docs/Web/HTML/Global_attributes/tabindex)
   - : Used to make it focusable so the assistive technology user can tab to it and start reading right away.
 
-
 ## Keyboard interactions
 
   - <kbd>Tab</kbd> + <kbd>Shift</kbd>
@@ -101,7 +99,6 @@ If any of the radio roles in a group has `aria-required="true"` set, it is as if
   
   - <kbd>Right Arrow</kbd> and <kbd>Down Arrow</kbd>
     - : Move focus to the next radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the last button, focus moves to the first button.
-
 
   - <kbd>Left Arrow</kbd> and <kbd>Up Arrow</kbd>
     - : Move focus to the previous radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the first button, focus moves to the last button.

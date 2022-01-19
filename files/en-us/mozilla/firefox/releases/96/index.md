@@ -45,13 +45,11 @@ No notable changes.
   ({{bug(1666203)}}).
 - The [Web Locks API](/en-US/docs/Web/API/Web_Locks_API) is enabled by default, allowing web apps running in multiple tabs or workers to coordinate the use of resources. ({{bug(1740044)}}).
 
-
 #### Canvas
 
 - Image encoder support has been added for the [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) image format.
   This allows canvas elements to export their content as webp data when using the methods: {{domxref("HTMLCanvasElement.toDataURL()")}}, {{domxref("HTMLCanvasElement.toBlob()")}}, and {{domxref("OffscreenCanvas.convertToBlob", "OffscreenCanvas.toBlob")}}.
   ({{bug(1511670)}}).
-
 
 #### DOM
 
@@ -69,7 +67,6 @@ No notable changes.
 - `WebDriver:Print` has been enhanced to support page ranges when printing documents as PDF ({{bug(1678347)}}).
 
 ## Changes for add-on developers
-
 
 ## Older versions
 

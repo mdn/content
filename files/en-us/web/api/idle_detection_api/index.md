@@ -70,5 +70,3 @@ stopButton.addEventListener('click', () => {
 ## Browser compatibility
 
 {{Compat}}
-
-

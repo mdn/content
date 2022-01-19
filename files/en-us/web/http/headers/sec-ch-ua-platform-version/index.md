@@ -15,7 +15,6 @@ browser-compat: http.headers.Sec-CH-UA-Platform-Version
 
 The **`Sec-CH-UA-Platform-Version`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the version of the operating system on which the user agent is running. 
 
-
 <table class="properties">
   <tbody>
     <tr>
@@ -31,7 +30,6 @@ The **`Sec-CH-UA-Platform-Version`** [user agent client hint](/en-US/docs/Web/HT
     </tr>
   </tbody>
 </table>
-
 
 ## Syntax
 

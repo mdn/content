@@ -31,7 +31,6 @@ The API has three main methods for sanitizing data:
 3. {{domxref('Sanitizer.sanitize()')}} sanitizes data that is in a {{domxref('Document')}} or {{domxref('DocumentFragment')}}.
   It might be used, for example, to sanitize a {{domxref('Document')}} instance in a frame.
 
-
 ### Parsing and sanitizing strings
 
 The result of parsing a string of HTML depends on the context/the element into which it is inserted.
@@ -58,14 +57,12 @@ The parser may also perform normalization operations on the input string.
 As a result, even if the HTML is valid and the sanitizer method does nothing, the sanitized output may not precisely match the unsanitized input.
 This applies to both methods.
 
-
 ## Interfaces
 
 - {{domxref('Sanitizer')}}
   - : Provides the functionality to define a sanitizer configuration, to sanitize untrusted strings of HTML for later insertion into the DOM, and to sanitize {{domxref('Document')}} and {{domxref('DocumentFragment')}} objects.
 - {{domxref('Element/setHTML','Element.setHTML()')}}
   - : Parses a string of HTML into a subtree of nodes, sanitizes it using a `Sanitizer` object, then sets it as a child of the current element.
-
 
 ## Examples
 
@@ -122,7 +119,6 @@ document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 > let sanitizedString = new Sanitizer().sanitizeFor("div", unsanitized_string).innerHTML;
 > ```
 
-
 ### Sanitize a frame
 
 To sanitize data from an {{HTMLElement("iframe")}} with id `userFrame`:
@@ -138,7 +134,6 @@ const unsantitized_frame_tree = frame_element.contentWindow.document;
 const sanitized_frame_tree = sanitizer.sanitize(unsanititized_frame_tree);
 frame_element.replaceChildren(sanitized_frame_tree);
 ```
-
 
 ## Specifications
 

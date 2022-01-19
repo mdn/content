@@ -28,7 +28,6 @@ The **`EncodedAudioChunk`** interface of the {{domxref('WebCodecs API','','',' '
 - {{domxref("EncodedAudioChunk.byteLength")}}{{ReadOnlyInline}}
   - : Returns an integer representing the length of the audio in bytes.
 
-
 ## Methods
 
 - {{domxref("EncodedAudioChunk.copyTo()")}}
@@ -41,4 +40,3 @@ The **`EncodedAudioChunk`** interface of the {{domxref('WebCodecs API','','',' '
 ## Browser compatibility
 
 {{Compat}}
-

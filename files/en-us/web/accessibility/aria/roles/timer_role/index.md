@@ -39,7 +39,6 @@ Along with [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role), [`log
 - [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
   - : Used to give the timer a more descriptive role text for screen readers to speak. This should be localized.
 
-
 ## Examples
 
 Some prominent web timers include clocks, stop watches and countdowns, such as ticketing websites, e-commerce sites, and event countdowns (see <https://countingdownto.com/>).
@@ -91,7 +90,6 @@ One way around this would be to first clear the contents of the live region, and
 | Specification                                    | Status                   |
 | ------------------------------------------------ | ------------------------ |
 | {{SpecName("ARIA","#timer","timer")}} | {{Spec2('ARIA')}} |
-
 
 ## See also
 

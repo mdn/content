@@ -107,7 +107,6 @@ border, or content via the `paint()` CSS function.
 - [Simulating Drop Shadows with the CSS Paint API](https://css-tricks.com/simulating-drop-shadows-with-the-css-paint-api/)
 - [CSS Paint API Being predictably random](https://jakearchibald.com/2020/css-paint-predictably-random/)
 
-
 ### Worklets
 
 An API for running scripts in various stages of the rendering pipeline independent of the main JavaScript execution environment.

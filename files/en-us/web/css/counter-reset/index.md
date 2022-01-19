@@ -26,7 +26,6 @@ In addition to author-created counters, the property can also reset the `list-it
 These have the same behavior as author-created counters, except they are _automatically_ incremented/decremented by one with each list element.
 This behavior can be overridden using {{cssxref("counter-increment")}}.
 
-
 ## Syntax
 
 ```css

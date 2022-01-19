@@ -45,7 +45,6 @@ Inherited into roles:
 - [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 - [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
 
-
 ## Specifications
 
 | Specification | Status | 

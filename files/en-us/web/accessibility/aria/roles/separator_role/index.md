@@ -62,7 +62,6 @@ If the separator is focusable, providing a visible boundary between two sections
 
 An accessible name, with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) should be included if there is more than one focusable separator.
 
-
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) (default is horizontal for separator)
@@ -99,7 +98,6 @@ An accessible name, with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attri
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#separator","ARIA: separator role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_separator_role","separator role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
 
 ## See Also
 

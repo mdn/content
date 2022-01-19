@@ -105,14 +105,11 @@ If `aria-labelledby` were used, the screen reader would read it. In this case, o
 </span>
 ```
 
-
 ## Specifications
 
 | Specification                                | Status                   |
 | -------------------------------------------- | ------------------------ |
 | {{SpecName("ARIA","#img","img")}} | {{Spec2('ARIA')}} |
-
-
 
 ## See also
 

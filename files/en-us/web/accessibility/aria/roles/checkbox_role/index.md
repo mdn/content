@@ -47,7 +47,6 @@ The developer is required to change the value of the `aria-checked` attribute d
 - `tabindex="0"`
   - : Used to make it focusable so the assistive technology user can tab to it and start reading right away.
 
-
 ### Keyboard interactions
 
 | Key              | Function               |

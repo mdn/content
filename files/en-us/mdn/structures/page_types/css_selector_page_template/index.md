@@ -79,7 +79,6 @@ browser-compat: css.selectors.NameOfTheSelector
 >
 > _Remember to remove this whole explanatory note before publishing_
 
-
 {{CSSRef}}{{SeeCompatTable}}{{Deprecated_Header}}
 
 The summary paragraph — start by naming the selector and saying what it does. This should ideally be 1 or 2 short sentences.

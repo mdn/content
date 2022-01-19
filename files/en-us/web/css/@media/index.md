@@ -132,7 +132,6 @@ Media feature expressions test for their presence or value, and are entirely opt
 - {{cssxref("@media/width", "width")}}
   - : Width of the viewport including width of scrollbar.
 
-
 ### Logical operators
 
 The _logical operators_ `not`, `and`, and `only` can be used to compose a complex media query.
@@ -157,7 +156,6 @@ You can also combine multiple media queries into a single rule by separating the
     Each query in a comma-separated list is treated separately from the others
      Thus, if any of the queries in a list is `true`, the entire media statement returns `true`.
      In other words, lists behave like a logical `or` operator.
-
 
 ## Accessibility concerns
 

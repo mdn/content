@@ -45,4 +45,3 @@ const videoDecoder = new VideoDecoder({
 ## Browser compatibility
 
 {{Compat}}
-

@@ -75,7 +75,6 @@ A parent row is a row that can be expanded or collapsed to show or hide a set of
 - `undefined` (default)
   - : The element does not own or control a grouping element that is expandable.
 
-
 ## ARIAMixin API
 
 - {{domxref("Element.ariaExpanded")}}

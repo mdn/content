@@ -151,7 +151,6 @@ if( i &lt; 10 &amp;&amp; i &gt; 0 )
 
 {{EmbedLiveSample("Escaping_reserved_characters")}}
 
-
 ## Specifications
 
 {{Specifications}}
