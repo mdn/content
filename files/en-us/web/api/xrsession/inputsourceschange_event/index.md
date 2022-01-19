@@ -29,6 +29,8 @@ oninputsourceschange = event => { }
 
 An {{domxref("XRInputSourcesChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
+{{InheritanceDiagram("XRInputSourcesChangeEvent")}}
+
 ## Event properties
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._

@@ -43,6 +43,8 @@ onsqueezeend = event => { }
 
 An {{domxref("XRInputSourceEvent")}}. Inherits from {{domxref("Event")}}.
 
+{{InheritanceDiagram("XRInputSourceEvent")}}
+
 ## Event properties
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
