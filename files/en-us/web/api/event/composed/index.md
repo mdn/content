@@ -56,7 +56,23 @@ customElements.define('open-shadow',
         .appendChild(pElem);
 
   }
-});
+
+customElements.define('closed-shadow',
+  class extends HTMLElement {
+    constructor() {
+      super();
+
+      const pElem = document.createElement('p');
+      pElem.textContent = this.getAttribute('text');
+
+      const shadowRoot = this.attachShadow({
+        mode: 'closed'
+      });
+
+      shadowRoot.appendChild(pElem);
+    }
+  }
+);
 ```
 
 We then insert one of each element into our page:
