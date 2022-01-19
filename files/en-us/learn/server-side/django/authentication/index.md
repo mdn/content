@@ -179,10 +179,10 @@ The URLs (and implicitly, views) that we just added expect to find their associa
 For this site, we'll put our HTML pages in the **templates/registration/** directory. This directory should be in your project root directory, i.e the same directory as the **catalog** and **locallibrary** folders. Please create these folders now.
 
 > **Note:** Your folder structure should now look like the below:
-> locallibrary (Django project folder)
-> \\_catalog
-> \\_locallibrary
-> \\_templates **(new)**
+> locallibrary (Django project folder) \
+> \\_catalog \
+> \\_locallibrary \
+> \\_templates **(new)** \
 > \\_registration
 
 To make the **templates** directory visible to the template loader we need to add it in the template search path. Open the project settings (**/locallibrary/locallibrary/settings.py**).
