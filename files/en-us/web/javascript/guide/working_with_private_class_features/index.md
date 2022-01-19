@@ -44,9 +44,9 @@ class PrivateCounter {
     this.#init = start;
     this.reset(start);
   }
-  increase(x = 1) { this.#count += x; }
-  decrease(x = 1) { this.#count -= x; }
-  reset(x = this.#init) { this.#count = x; }
+  increase(x = 1) { return this.#count += x; }
+  decrease(x = 1) { return this.#count -= x; }
+  reset(x = this.#init) { return this.#count = x; }
   get current() {
      return this.#count;
   }
