@@ -41,7 +41,7 @@ shadow DOM as the text content of a `<p>` element. The only difference
 between the two is that their shadow roots are attached with their modes set to
 `open` and `closed` respectively.
 
-The first definition looks like this:
+The two definitions look like this:
 
 ```js
 customElements.define('open-shadow',
