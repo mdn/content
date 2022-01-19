@@ -115,6 +115,7 @@ Set the parameter 'books' to a nodeset containing all `<book>` elements in the '
 <?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?>
 <?xslt-param name="books" select="//my:book"?>
 ```
+
 ### Supported versions
 
 Supported as of Firefox 2.0.0.1. The **value** attribute is supported in Firefox 2, but the **select** attribute crashes for some expressions in the 2.0 release.
