@@ -67,9 +67,11 @@ Intl.supportedValuesOf("calendar").forEach(function(calendar) {
    // "buddhist", "chinese", "coptic", "dangi", ...
 });
 ```
+
 > **Note:** The array returned for calendar values will always include the value "gregory" (gregorian).
 
 The other values are all obtained in the same way:
+
 ```js
 Intl.supportedValuesOf("collation").forEach(function(collation) {
    // "big5han", "compat", "dict", "emoji", ...

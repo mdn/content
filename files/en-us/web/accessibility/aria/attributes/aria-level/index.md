@@ -29,6 +29,7 @@ The `aria-level` attribute is a required attribute of the [`heading`](/en-US/doc
 ```html
 <div role="heading" aria-level="3">Heading for this sub section</div>
 ```
+
 Opt for using the {{htmlelement('h1')}} thru {{htmlelement('h6')}} elements instead.
 
 ### Within `treegrid` role

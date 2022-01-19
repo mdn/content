@@ -294,12 +294,14 @@ Shallow copy using [spread sequence](/en-US/docs/Web/JavaScript/Reference/Operat
 let shallowCopySpread = [...fruits]
 // ["Strawberry", "Mango"]
 ```
+
 Shallow copy using {{jsxref("Array.slice()")}}:
 
 ```js
 let shallowCopySlice = fruits.slice()
 // ["Strawberry", "Mango"]
 ```
+
 Shallow copy using {{jsxref("Array.from()")}}:
 
 ```js

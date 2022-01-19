@@ -77,6 +77,7 @@ The `Origin` header value may be `null` in a number of cases, including (non-exh
 ```http
 Origin: https://developer.mozilla.org
 ```
+
 ```http
 Origin: http://developer.mozilla.org:80
 ```

@@ -48,7 +48,9 @@ Including better semantics, the above could also be written:
   <dfn role="term">Mansplaining</dfn>, <span role="definition">a portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it</span>. 
 </p>
 ```
+
 or without any ARIA (but possibly not how you want it presented)
+
 ```html
 <dl>
   <dt>Mansplaining</dt>

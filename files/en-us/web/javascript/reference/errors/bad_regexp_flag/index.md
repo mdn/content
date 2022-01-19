@@ -81,6 +81,7 @@ let obj = {
 
 // SyntaxError: invalid regular expression flag "W"
 ```
+
 An expression containing two slashes is interpreted as a regular expression literal.
 Most likely the intent was to create a string literal, using single or double quotes as shown below:
 

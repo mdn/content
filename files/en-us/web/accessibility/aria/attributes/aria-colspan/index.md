@@ -132,6 +132,7 @@ The following is an example of part of a bowling tournament league scoring sprea
         <span role="cell">18</span>  
       ...
 ```
+
 If we had used a {{HTMLElement('table')}} and semantic table elements our markup would have been less verbose and accessible by default.
 
 ## Values

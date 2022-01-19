@@ -296,6 +296,7 @@ The expression inside the `if( ... )` is the test. This uses the identity operat
 1.  ```js
     let myVariable = document.querySelector('h1');
     ```
+
 2.  ```js
     alert('hello!');
     ```

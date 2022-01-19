@@ -118,7 +118,7 @@ for (let i = 0; i < 100; i++) {
 }
 ```
 
-- `random(x)`, defined earlier in the code, returns a whole number between `0` and `x-1`.
+- `random(x)`, defined earlier in the code, returns a whole number between `0` and `x-1`.
 - `WIDTH` and `HEIGHT` are the width and height of the inner browser window.
 
 You should get the basic idea — we are using a loop to run 100 iterations of this code, each one of which draws a circle in a random position on the page.
@@ -230,6 +230,7 @@ for (initializer; condition; final-expression) {
   // code to run
 }
 ```
+
 Here we have:
 
 1. The keyword `for`, followed by some parentheses.
@@ -377,7 +378,7 @@ console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmi
 If you want to exit a loop before all the iterations have been completed, you can use the [break](/en-US/docs/Web/JavaScript/Reference/Statements/break) statement.
 We already met this in the previous article when we looked at [switch statements](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#switch_statements) — when a case is met in a switch statement that matches the input expression, the `break` statement immediately exits the switch statement and moves on to the code after it.
 
-It's the same with loops — a `break` statement will immediately exit the loop and make the browser move on to any code that follows it.
+It's the same with loops — a `break` statement will immediately exit the loop and make the browser move on to any code that follows it.
 
 Say we wanted to search through an array of contacts and telephone numbers and return just the number we wanted to find?
 First, some simple HTML — a text {{htmlelement("input")}} allowing us to enter a name to search for, a {{htmlelement("button")}} element to submit a search, and a {{htmlelement("p")}} element to display the results in:
@@ -419,7 +420,7 @@ btn.addEventListener('click', () => {
 {{ EmbedLiveSample('Exiting_loops_with_break', '100%', 100) }}
 
 1. First of all, we have some variable definitions — we have an array of contact information, with each item being a string containing a name and phone number separated by a colon.
-2. Next, we attach an event listener to the button (`btn`) so that when it is pressed some code is run to perform the search and return the results.
+2. Next, we attach an event listener to the button (`btn`) so that when it is pressed some code is run to perform the search and return the results.
 3. We store the value entered into the text input in a variable called `searchName`, before then emptying the text input and focusing it again, ready for the next search.
    Note that we also run the [`toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) method on the string, so that searches will be case-insensitive.
 5. Now on to the interesting part, the `for...of` loop:
@@ -473,10 +474,10 @@ Here's the output:
 
 {{ EmbedLiveSample('Skipping_iterations_with_continue', '100%', 100) }}
 
-1. In this case, the input should be a number (`num`). The `for` loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that says the loop will stop when the counter becomes bigger than the input `num`, and an iterator that adds 1 to the counter each time.
-2. Inside the loop, we find the square root of each number using [Math.sqrt(i)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt), then check whether the square root is an integer by testing whether it is the same as itself when it has been rounded down to the nearest integer (this is what [Math.floor()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) does to the number it is passed).
+1. In this case, the input should be a number (`num`). The `for` loop is given a counter starting at 1 (as we are not interested in 0 in this case), an exit condition that says the loop will stop when the counter becomes bigger than the input `num`, and an iterator that adds 1 to the counter each time.
+2. Inside the loop, we find the square root of each number using [Math.sqrt(i)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt), then check whether the square root is an integer by testing whether it is the same as itself when it has been rounded down to the nearest integer (this is what [Math.floor()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) does to the number it is passed).
 3. If the square root and the rounded down square root do not equal one another (`!==`), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the `continue` statement to skip on to the next loop iteration without recording the number anywhere.
-4. If the square root is an integer, we skip past the `if` block entirely, so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space on to the end of the paragraph content.
+4. If the square root is an integer, we skip past the `if` block entirely, so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space on to the end of the paragraph content.
 
 > **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
@@ -561,7 +562,7 @@ console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmi
 
 > **Note:** Again, this works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)).
 
-> **Warning:** With while and do...while — as with all loops — you must make sure that the initializer is incremented or, depending on the case, decremented, so the condition eventually becomes false.
+> **Warning:** With while and do...while — as with all loops — you must make sure that the initializer is incremented or, depending on the case, decremented, so the condition eventually becomes false.
 > If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an **infinite loop**.
 
 ## Active learning: Launch countdown
@@ -765,7 +766,7 @@ If you get really stuck, press "Show solution" to see a solution.
 <h2>Live output</h2>
 <div class="output" style="height: 100px;overflow: auto;">
   <p class="admitted">Admit: </p>
-  <p class="refused">Refuse: </p>
+  <p class="refused">Refuse: </p>
 </div>
 
 <h2>Editable code</h2>

@@ -58,6 +58,7 @@ Sec-CH-UA-Mobile: ?0
 ```
 
 A browser on a mobile device would usually send requests with the following header:
+
 ```http
 Sec-CH-UA-Mobile: ?1
 ```

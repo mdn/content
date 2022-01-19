@@ -405,6 +405,7 @@ Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
 ### Access-Control-Max-Age
 
 The {{HTTPHeader("Access-Control-Max-Age")}} header indicates how long the results of a preflight request can be cached. For an example of a preflight request, see the above examples.
+
 ```
 Access-Control-Max-Age: <delta-seconds>
 ```

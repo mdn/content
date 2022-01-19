@@ -29,6 +29,7 @@ A non-focusable separator is a static structural element that can be used to hel
 <h2>Two years later, my second post</h2>
   ....
 ```
+
 In the example, an image creates a visual separator between two blog posts. The author could have used a semantic thematic break {{HTMLElement('hr')}} element and styled it with CSS to make it blue (and not have to change the image when they change the blog's theme), or the author could have encompassed each post in the semantic {{HTMLElement('article')}} element, or both.
 
 ```html

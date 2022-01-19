@@ -39,6 +39,7 @@ If an element has `role="alert"` and `display: none;` set, when the [`display`](
 ```html
 <p role="alert" style="display: none;">This alert will trigger when the element becomes visible.</p>
 ```
+
 While triggering an alert via CSS alone is possible, it is better to rely on JavaScript because it has more browser/screen reader support and is often more appropriate as part of a larger user interaction, such as inside an event handler or form validation.
 
 With JavaScript, developers control the adding and removing of alerts as appropriate.
@@ -93,6 +94,7 @@ Sometimes it is useful to add an `alert` role to an element that is already visi
 ```html
 <p id="formInstruction">You must select at least 3 options</p>
 ```
+
 ```js
 // When the user tries to submit the form with less than 3 checkboxes selected:
 document.getElementById("formInstruction").setAttribute("role", "alert");
@@ -107,9 +109,11 @@ If an element already has `role="alert"` and is initially hidden using CSS, maki
   display:none;
 }
 ```
+
 ```html
 <p id="expirationWarning" role="alert" class="hidden">Your log in session will expire in 2 minutes</p>
 ```
+
 ```js
 // removing the 'hidden' class makes the element visible, which will make the screen reader announce the alert:
 document.getElementById("expirationWarning").classList.remove('hidden'); 
