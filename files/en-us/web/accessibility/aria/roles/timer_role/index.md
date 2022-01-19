@@ -22,21 +22,21 @@ This defines this `div` element as a timer with no remaining time.
 
 The `timer` role indicates to assistive technologies that this part of the web content is a live region containing a timer listing the time remaining or elapsed time. A timer's inner text should be an updating current time measurement. While the value does not necessarily need to be machine parsable, it should continuously update at regular intervals unless the timer is paused or reaches its end-point.
 
-Along with alert, log, and marquee, the `timer` role is a live region and can be modified by live region attributes.
+Along with [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role), [`log`](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role), and [`marquee`](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role), the `timer` role is a live region and can be modified by [live region](en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)  attributes.
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- aria-label
-  - : Used to provide the name of the timer. Use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present, otherwise use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+  - : Used to provide the name of the timer. Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`.
 
-- aria-live
+- [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)
 
   - : Elements with the role `timer` have an implicit [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) value of `off`.
 
-- aria-describedby
+- [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
   - : Used to indicate the idref of an element that contains additional instructions for navigating or operating this element.
 
-- aria-roledescription
+- [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
   - : Used to give the timer a more descriptive role text for screen readers to speak. This should be localized.
 
 
@@ -76,7 +76,7 @@ The first time the function executes, the entirety of the string that is added w
 
 One way around this would be to first clear the contents of the live region, and then inject the new content. However, this can sometimes be unreliable, as it's dependent on the exact timing of these two updates.
 
-`aria-atomic="true"` ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "Time: 17:34").
+[`aria-atomic="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "Time: 17:34").
 
 ```html
 <div id="clock" role="timer" aria-live="polite" aria-atomic="true"></div>
