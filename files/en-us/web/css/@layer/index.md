@@ -12,7 +12,7 @@ browser-compat: css.at-rules.layer
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) declares a _cascade layer_, rules within a cascade layer cascade together, giving more control over the cascade to web developers.
+The **`@layer`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) declares a _cascade layer_. Rules within a cascade layer cascade together, giving more control over the cascade to web developers.
 
 ```css
 @layer utilities {
@@ -45,22 +45,22 @@ A cascade layer can be created with {{cssxref("@import")}}, in this case the rul
 You can also create a named cascade layer without assigning any styles. This can be a single name:
 
 ```css
-@layer utilities
+@layer utilities;
 ```
 
 Or, multiple layers can be defined at once. For example:
 
 ```css
-@layer theme, layout, utilities
+@layer theme, layout, utilities;
 ```
 
 This is useful because the initial order in which layers are declared indicates which layer has precedence. As with declarations, the last layer to be listed will win if declarations are found in multiple layers. Therefore, with the preceding example, if a competing rule was found in `theme` and `utilities` the one in `utilities` would win and be applied.
 
 The rule in `utilities` would be applied _even if it has lower specificity_ than the rule in `theme`. This is because once layer order has been established, specificity and order of appearance are ignored. This enables the creation of simpler CSS selectors, as you do not have to ensure that a selector will have high enough specificity to override competing rules, all you need to ensure is that it appears in a later layer.
 
-> **Note:** Having declared your layer names, thus setting their order, you can add CSS rules to the layer by redeclaring the name. The styles are then appended to the layer and the layer order will not be changed.
+> **Note:** Having declared your layer names, thus setting their order, you can add CSS rules to the layer by re-declaring the name. The styles are then appended to the layer and the layer order will not be changed.
 
-Any styles not in a layer are gathered together and placed into an anonymous layer that comes first in the order of layers, this means that anything in a layer will override things not in a layer.
+Any styles not in a layer are gathered together and placed into an anonymous layer that comes after all the declared layers. This means that any styles declared outside of a layer will override styles declared in a layer.
 
 ### Nesting layers
 
@@ -106,9 +106,11 @@ Then an anonymous, unnamed, layer is created. This functions in the same way as 
 
 ### Simple example
 
-In the following example, two CSS rules are created. One for the {{htmlelement("p")}} element, which is inside a layer named `type`. In addition a rule is created outside of any layer for `.box p`.
+In the following example, two CSS rules are created. One for the {{htmlelement("p")}} element outside of any layer and one inside a layer named `type` for `.box p`.
 
-Without layers, the selector `box p` would have the highest specificity and therefore the text `Hello, world!` will display in green. With layers, specificity and order outside of layers is ignored. As the `type` layer comes after the anonymous layer created to hold non-layer content, the text will be purple.
+Without layers, the selector `.box p` would have the highest specificity and therefore the text `Hello, world!` will display in green. As the `type` layer comes before the anonymous layer created to hold non-layer content, the text will be purple.
+
+Also notice order. Even though we declare the non-layered style first, it's still applied _after_ the layer styles.
 
 #### HTML
 
@@ -121,15 +123,16 @@ Without layers, the selector `box p` would have the highest specificity and ther
 #### CSS
 
 ```css
-@layer type {
-  p {
-    color: rebeccapurple;
-  }
+p {
+  color: rebeccapurple;
 }
 
-.box p {
-  font-weight: bold;
-  color: green;
+@layer type {
+  .box p {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: green;
+  }
 }
 ```
 
@@ -164,7 +167,7 @@ My green border, font-size, and padding come from the <code>base</code> layer.</
   .item {
     color: green;
     border: 5px solid green;
-    font-size: 1.5em;
+    font-size: 1.3em;
     padding: .5em;
   }
 }
