@@ -47,4 +47,3 @@ let audioData2 = AudioData.clone();
 ## Browser compatibility
 
 {{Compat}}
-

@@ -78,7 +78,6 @@ WWW-Authenticate: Basic realm=<realm>
 WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 ```
 
-
 ## Directives
 
 - `<auth-scheme>`
@@ -95,7 +94,6 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 
 Other than `<auth-scheme>` and the key `realm`, authorization parameters are specific to each [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
 Generally you will need to check the relevant specifications for these (keys for a small subset of schemes are listed below).
-
 
 ### Basic
 
@@ -140,7 +138,6 @@ Generally you will need to check the relevant specifications for these (keys for
 - **`userhash`** {{optional_inline}}
   - : A server may specify `"true"` to indicate that it supports username hashing (default is `"false"`)
 
-
 ## Examples
 
 ### Basic authentication
@@ -161,7 +158,6 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 For `"Basic"` authentication the credentials are constructed by first combining the username and the password with a colon (`aladdin:opensesame`), and then by encoding the resulting string in [`base64`](/en-US/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 
 > **Note:** See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or Nginx servers to password protect your site with HTTP basic authentication.
-
 
 ### Digest authentication with SHA-256 and MD5
 
@@ -220,8 +216,6 @@ Authorization: Digest username="Mufasa",
         6794697cf8db5856cb6c1",
     opaque="FQhe/qaU925kfnzjCev0ciny7QMkPqMAFRtzCUYo5tdS"
 ```
-
-
 
 ## Specifications
 

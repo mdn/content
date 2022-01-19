@@ -62,4 +62,3 @@ let imageDecoder = new ImageDecoder(init);
 ## Browser compatibility
 
 {{Compat}}
-

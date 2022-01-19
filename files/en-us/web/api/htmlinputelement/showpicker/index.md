@@ -69,7 +69,6 @@ button.addEventListener("click", () => {
 
 {{EmbedLiveSample("Example")}}
 
-
 ## Specifications
 
 {{Specifications}}

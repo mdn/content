@@ -91,7 +91,6 @@ const transferred = structuredClone(
    { transfer: [arrayBuffer1] });
 ```
 
-
 ## Specifications
 
 {{Specifications}}

@@ -109,7 +109,6 @@ Schemes can differ in security strength and in their availability in client or s
 The "Basic" authentication scheme offers very poor security, but is widely supported and easy to set up.
 It is introduced in more detail below.
 
-
 ## Basic authentication scheme
 
 The "Basic" HTTP authentication scheme is defined in {{rfc(7617)}}, which transmits credentials as user ID/password pairs, encoded using base64.

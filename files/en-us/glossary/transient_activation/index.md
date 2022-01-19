@@ -21,5 +21,3 @@ Examples of APIs that require _transient activation_ are:
 
 - {{domxref("MediaDevices.selectAudioOutput()")}}
 - [HTML Living Standard > Transient activation](https://html.spec.whatwg.org/multipage/interaction.html#transient-activation)
-
-

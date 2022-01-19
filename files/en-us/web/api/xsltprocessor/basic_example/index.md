@@ -11,7 +11,6 @@ The example takes an XML document that contains information about an article (ti
 
 The XML document (**example.xml**) is shown below.
 
-
 ```xml
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="example.xsl"?>

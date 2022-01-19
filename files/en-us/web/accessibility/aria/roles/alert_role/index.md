@@ -135,7 +135,6 @@ document.getElementById("expirationWarning").classList.remove('hidden');
 - [ARIA alert support - The Paciello Group](https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/)
 - [ARIA Practices alert example](https://w3c.github.io/aria-practices/examples/alert/alert.html)
 
-
 <section id="Quick_links">
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)

@@ -444,7 +444,6 @@ The output is as follows:
 
 > **Note:** for the full source code, see [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) here.)
 
-
 ## Event bubbling and capture
 
 Event bubbling and capture are terms that describe phases in how the browser handles events targeted at nested elements.

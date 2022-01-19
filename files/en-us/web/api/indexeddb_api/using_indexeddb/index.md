@@ -673,7 +673,6 @@ We have a complete example using the IndexedDB API. The example uses IndexedDB t
 * [Try the example](https://mdn.github.io/dom-examples/indexeddb-api/index.html)
 * [See the source code](https://github.com/mdn/dom-examples/tree/master/indexeddb-api)
 
-
 ## See also
 
 Further reading for you to find out more information if desired.

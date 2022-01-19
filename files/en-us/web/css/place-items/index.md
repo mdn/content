@@ -219,7 +219,6 @@ values.addEventListener('change', function (evt) {
 
 {{EmbedLiveSample("Placing_items_in_a_flex_container", 260, 290)}}
 
-
 ### Placing items in a grid container
 
 The following grid container has items which are smaller than the grid areas they are placed in, therefore `place-items` will move them in the block and inline dimensions.

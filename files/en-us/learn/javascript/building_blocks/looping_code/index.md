@@ -77,7 +77,6 @@ button {
 
 Here's the JavaScript code that implements this example:
 
-
 ```js
 const btn = document.querySelector('button');
 const canvas = document.querySelector('canvas');
@@ -931,7 +930,6 @@ for (const item of array) {
   // code to run
 }
 ```
-
 
 `for`:
 

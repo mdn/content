@@ -32,5 +32,3 @@ console.log(VideoFrame.displayHeight);
 ## Browser compatibility
 
 {{Compat}}
-
-

@@ -22,7 +22,6 @@ The `definition` ARIA role can be included an element that is a definition of a 
 
 > **Note:** Instead of a `<span>` with the [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role) and `definition` roles, use the {{HTMLElement('dfn')}} element. **Always use native element if available**
 
-
 ```html
 <p><dfn>Mansplaining</dfn>, a portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it. </p>
 ```
@@ -33,7 +32,6 @@ The `definition` ARIA role can be included an element that is a definition of a 
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#definition","ARIA: definition role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_definition_role","definition role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
 
 ## See Also
 

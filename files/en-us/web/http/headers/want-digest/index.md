@@ -122,7 +122,6 @@ Want-Digest: sha-256, sha-512
 
 {{Specifications("http.headers.Want-Digest")}}
 
-
 ## Browser compatibility
 
 {{Compat}}

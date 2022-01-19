@@ -35,7 +35,6 @@ Unless blocked by a user agent permission policy, it is sent by default, without
   </tbody>
 </table>
 
-
 ## Syntax
 
 ```http
@@ -47,7 +46,6 @@ Sec-CH-UA-Mobile: <boolean>
 - `<boolean>`
   - : `?1` indicates that the user-agent prefers a mobile experience (true).
     `?0` indicates that user-agent does not prefer a mobile experience (false).
-
 
 ## Examples
 

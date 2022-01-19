@@ -23,7 +23,6 @@ If another part of the page controls what appears in the status, make the relati
 
 Elements with the role status have an implicit [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) value of `polite` and an implicit [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) value of `true`.  
 
-
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
@@ -43,8 +42,6 @@ Elements with the role status have an implicit [`aria-live`](/en-US/docs/Web/Acc
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#status","ARIA: status role")}}                                             | {{Spec2('ARIA')}}                         |
-
-
 
 ## See Also
 

@@ -159,7 +159,6 @@ And/or include a list of links to useful code samples that live elsewhere:
 
 {{Compat("path.to.feature.Interface_1")}}
 
-
 {{Compat("path.to.feature.Interface_2")}}
 
 ## See also

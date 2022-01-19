@@ -33,7 +33,6 @@ tags:
 - {{CSSxRef("text-overflow")}}
 - {{CSSxRef("user-select")}}
 
-
 ## Specifications
 
 | Specification                                | Status                               | Comment             |

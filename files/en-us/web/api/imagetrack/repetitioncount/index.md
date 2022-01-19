@@ -33,5 +33,3 @@ console.log(track.repetitionCount);
 ## Browser compatibility
 
 {{Compat}}
-
-

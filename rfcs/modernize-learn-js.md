@@ -35,7 +35,6 @@ Examples:
   support, making it clear that we only support modern browsers in these guides,
   and setting up tools like Babel.js if you want to support ancient engines.
 
-
 ## Priority assessment
 
 This list checks this project against the [OWD prioritization criteria](https://github.com/openwebdocs/project/blob/main/steering-committee/prioritization-criteria.md).

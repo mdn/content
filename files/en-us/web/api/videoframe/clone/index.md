@@ -47,4 +47,3 @@ let videoFrame2 = VideoFrame.clone();
 ## Browser compatibility
 
 {{Compat}}
-

@@ -30,7 +30,6 @@ This configuration may be customized using constructor options.
 - {{domxref('Sanitizer.sanitize()')}}
   - : Returns a sanitized {{domxref('DocumentFragment')}} from an input {{domxref('Document')}} or {{domxref('DocumentFragment')}}
 
-
 ## Examples
 
 For examples see the {{domxref('HTML Sanitizer API')}} and the individual methods.

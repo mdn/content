@@ -28,13 +28,11 @@ The `structure` role is the superclass for all document structure roles, which a
 
 Do not use `role="structure"`. Do use HTML and subclass structure roles.
 
-
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#structure","ARIA: structure role")}}                                             | {{Spec2('ARIA')}}                         |
-
 
 ## See Also
 
@@ -54,7 +52,6 @@ Do not use `role="structure"`. Do use HTML and subclass structure roles.
 - [ARIA: `separator` role](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
 -->]
 </div>
-
 
 <section id="Quick_links">
 

@@ -198,7 +198,6 @@ Now:
 - visit "`about:addons`" to open the settings and click the Preferences button next to the extension's entry and change the border color.
 - reload the web page to see the difference.
 
-
 ## Learn more
 
 - [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) key of `manifest.json` reference documentation

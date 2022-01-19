@@ -38,9 +38,7 @@ tags:
 | {{SpecName("ARIA","#menubar","ARIA: menubar role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#menu","menubar role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-
 ## See Also
-
 
 <section id="Quick_links">
 

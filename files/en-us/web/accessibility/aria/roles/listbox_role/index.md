@@ -212,8 +212,6 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 | {{SpecName("ARIA","#listbox","ARIA listbox role")}}                     | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#Listbox","Listbox Role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-
-
 ## See also
 
 - HTML {{HTMLElement('select')}} element

@@ -39,7 +39,6 @@ tags:
 > ---
 > _Remember to remove this whole explanatory note before publishing_
 
-
 The **TermBeingDefined** is ... (include concise definition of the term being defined).
 
 Include further supporting information as required, but not much — no more than 2 more small paragraphs. Any further detailed information, code examples, tutorials, etc. should go in separate articles.

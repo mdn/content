@@ -48,7 +48,6 @@ The {{HTMLElement('a')}} is a special case. Its role would have been exposed eve
 
 None. If a global ARIA state and property is set, `presentation` or `none` will be ignored, and the implicit role of the element will be used.
 
-
 ## Examples
 
 ```html
@@ -62,11 +61,9 @@ None. If a global ARIA state and property is set, `presentation` or `none` will 
 | {{SpecName("ARIA","#presentation","ARIA: presentation role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#presentation_role","Hiding semantics with the presentation role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-
 ## See Also
 
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) versus [`role="presentation/none"`](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html) - by Scott O'Hara
-
 
 <section id="Quick_links">
 

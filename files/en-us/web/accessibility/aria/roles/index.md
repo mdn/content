@@ -20,11 +20,9 @@ For example, `<ul role="tabpanel">` will be announced as a 'tab panel' by screen
 
 The [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes) associated with each role are included in the role's pages, with each attribute also having a dedicated page.
 
-
 ## ARIA role types
 
 There are 6 categories of ARIA roles:
-
 
 ### 1. Document structure roles
 
@@ -38,7 +36,6 @@ Document Structure roles are used to provide a structural description for a sect
   - [note](/en-US/docs/Web/Accessibility/ARIA/Roles/note_role)
 
 For most document structure roles, semantic HTML equivalent elements are available and supported. Avoid using [application](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role), [article](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) (use {{HTMLElement('article')}}), [cell](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) (use {{HTMLElement('td')}}), [columnheader](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) (use {{HTMLElement('th', '&lt;th scope="col">')}}), [definition](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role) (use {{HTMLElement('dd')}} in a {{HTMLElement('dl')}}), [directory](/en-US/docs/Web/Accessibility/ARIA/Roles/directory_role), [document](/en-US/docs/Web/Accessibility/ARIA/Roles/document_role), [figure](/en-US/docs/Web/Accessibility/ARIA/Roles/figure_role) (use {{HTMLElement('figure')}} instead), [group](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role), [heading](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role) (use {{HTMLElement('h1')}} thru {{HTMLElement('h6')}}), [img](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) (use {{HTMLElement('img')}} or {{HTMLElement('picture')}} instead), [list](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) (use either {{HTMLElement('ul')}} or {{HTMLElement('ol')}} instead), [listitem](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role) (use {{HTMLElement('li')}} instead), [meter](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)  (use {{HTMLElement('meter')}} instead), [row](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) (use the {{HTMLElement('tr')}} with {{HTMLElement('table')}}), [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) (use {{HTMLElement('thead')}}, {{HTMLElement('tfoot')}} and {{HTMLElement('tbody')}}), [rowheader](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) (use {{HTMLElement('tr','&lt;tr col="row">')}}), [separator](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (use {{HTMLElement('hr')}} if it doesn't have focus), [table](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) (use {{HTMLElement('table')}}), and [term](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role) (use {{HTMLElement('dfn')}} or {{HTMLElement('dt')}} in a {{HTMLElement('dl')}}).  These are included for completeness, but in most cases are rarely, if ever, useful.
-
 
 ### 2. Widget roles
 
@@ -69,7 +66,6 @@ Avoid using [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [listbox
 
 Note that there is also a widget role (`role="widget"`), which is an abstract role and not in the widget role category.
 
-
 ### 3. Landmark roles
 
 Landmark roles provide a way to identify the organization and structure of a web page. By classifying and labeling sections of a page, structural information conveyed visually through layout is represented programmatically. Screen readers use landmark roles to provide keyboard navigation to important sections of a page. Use these sparingly. Too many landmark roles create "noise" in screen readers, making it difficult to understand the overall layout of the page.
@@ -83,7 +79,6 @@ Landmark roles provide a way to identify the organization and structure of a web
   - [region](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role) ({{HTMLElement('section')}})
   - [search](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)
 
-
 ### 4. Live region roles
 
 Live Region roles are used to define elements with content that will be dynamically changed. Sighted users can see dynamic changes when they are visually noticeable. These roles help low vision and blind users know if content has been updated. Assistive technologies, like screen readers, can be made to announce dynamic content changes:
@@ -94,14 +89,12 @@ Live Region roles are used to define elements with content that will be dynamica
   - [status](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
   - [timer](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
 
-
 ### 5. Window roles
 
 Window roles define sub-windows to the main document window, within the same window, such as pop up modal dialogs:
 
   - [alertdialog](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
   - [dialog](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
-
 
 ### 6. Abstract roles
 
@@ -113,13 +106,11 @@ Avoid using [command](/en-US/docs/Web/Accessibility/ARIA/Roles/command_role), [c
 
 > **Warning:** "Abstract roles are used for the ontology. Authors **MUST NOT** use abstract roles in content." - The WAI-ARIA specification
 
-
 ## Roles defined on MDN
 
 The following are the reference pages covering the WAI-ARIA roles discussed on <abbr title="Mozilla Developer Network">MDN</abbr>.
 
 {{SubpagesWithSummaries}}
-
 
 ## See also
 

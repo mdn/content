@@ -56,7 +56,6 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
   - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerPolicy", "script")}} HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
 
-
 ## Static methods
 
 - {{domxref("HTMLScriptElement.supports()")}}

@@ -93,7 +93,6 @@ Inherited into roles:
 - [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
 
-
 ## Specifications
 
 | Specification | Status | 
@@ -112,4 +111,3 @@ Inherited into roles:
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
 {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
 </section>
-

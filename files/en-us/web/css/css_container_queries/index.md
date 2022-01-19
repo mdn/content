@@ -59,7 +59,6 @@ The `container-type` property can have the following values:
 - `state`
   - : Establishes a query container for state queries.
 
-
 > **Note:** to understand what happens when you apply layout, style, and size containment to a box, see the documentation for {{cssxref("contain")}}.
 
 #### Single-axis containment

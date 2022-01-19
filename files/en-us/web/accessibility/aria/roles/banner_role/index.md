@@ -76,7 +76,6 @@ While it is best to use the `header` element and ensure it is not a descendant 
 | {{SpecName("ARIA","#banner","ARIA: banner role")}}                                         | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_banner","Banner landmark role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-
 ## See also
 
 - [HTML `header` element](/en-US/docs/Web/HTML/Element/header)

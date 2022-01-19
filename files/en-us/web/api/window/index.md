@@ -302,7 +302,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
 
-
 ### Deprecated methods
 
 - {{domxref("Window.back()")}} {{Non-standard_inline}} {{deprecated_inline}}

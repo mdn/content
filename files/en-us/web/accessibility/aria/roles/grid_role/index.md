@@ -14,8 +14,6 @@ tags:
 ---
 The grid role is for a widget that contains one or more rows of cells. The position of each cell is significant and can be focused using keyboard input.
 
-
-
 ## Description
 
 The `grid` role is a composite widget containing a collection of one or more rows with one or more cells where some or all cells in the grid are focusable by using methods of two-dimensional navigation, such as directional arrow keys.
@@ -596,8 +594,6 @@ Even if the keyboard use is properly implemented, some users might not be aware 
 | -------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#grid","Role Grid")}}                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#grid","Role Grid")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
-
 
 ## See also
 

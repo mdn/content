@@ -51,7 +51,6 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `DataError` {{domxref("DOMException")}}
   - : Thrown if the specified key or key range is invalid.
 
-
 ## Example
 
 In this simple fragment we create a transaction, retrieve an object store, then count

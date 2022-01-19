@@ -51,5 +51,3 @@ console.log(VideoFrame.format);
 ## Browser compatibility
 
 {{Compat}}
-
-

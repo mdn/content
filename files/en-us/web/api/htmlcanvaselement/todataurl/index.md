@@ -21,7 +21,6 @@ Browsers are required to support `image/png`; many will support additional forma
 
 The created image data will have a resolution of 96dpi for file formats that support encoding resolution metadata.
 
-
 ## Syntax
 
 ```js

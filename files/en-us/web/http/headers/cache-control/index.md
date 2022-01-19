@@ -124,7 +124,6 @@ The `s-maxage` response directive also indicates how long the response is fresh 
 Cache-Control: s-maxage=604800
 ```
 
-
 #### `no-cache`
 
 The `no-cache` response directive indicates that the response can be stored in caches, but must be validated with the origin server before each reuse — even when the cache is disconnected from the origin server.

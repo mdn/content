@@ -93,5 +93,4 @@ If you want to know what mobile and tablet devices have which viewport widths, t
   </tbody>
 </table>
 
-
 {{QuickLinksWithSubpages("/en-US/docs/Web/HTML")}}

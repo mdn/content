@@ -66,7 +66,6 @@ Sec-CH-UA: "<brand>";v="<significant version>", ...
 - `<significant version>`
   - : The "marketing" version number associated with distinguishable web-exposed features.
 
-
 ## Examples
 
 `Sec-CH-UA` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints).

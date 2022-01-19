@@ -40,5 +40,3 @@ console.log(chunk.timestamp); //23000000
 ## Browser compatibility
 
 {{Compat}}
-
-

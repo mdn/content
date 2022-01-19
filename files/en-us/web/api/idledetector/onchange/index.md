@@ -41,4 +41,3 @@ In the following example, the `change` callback prints the status of `userState`
 ## Browser compatibility
 
 {{Compat}}
-
