@@ -98,7 +98,7 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 ## See also
 
 - The {{HTMLElement('form')}} element
-- - The {{HTMLElement('input')}} element
+- The {{HTMLElement('input')}} element
 - [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
 
