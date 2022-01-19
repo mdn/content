@@ -279,7 +279,7 @@ The {{cssxref("float")}} property has four possible values:
 - `none` — Specifies no floating at all. This is the default value.
 - `inherit` — Specifies that the value of the `float` property should be inherited from the element's parent element.
 
-In the example below, we float a `<div>` left and give it a {{cssxref("margin")}} on the right to push the surrounding text away it. This gives us the effect of text wrapped around the boxed element, and is most of what you need to know about floats as used in modern web design.
+In the example below, we float a `<div>` left and give it a {{cssxref("margin")}} on the right to push the surrounding text away from it. This gives us the effect of text wrapped around the boxed element, and is most of what you need to know about floats as used in modern web design.
 
 ```css hidden
 body {
