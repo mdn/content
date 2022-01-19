@@ -13,16 +13,18 @@ The `<xsl:number>` element counts things sequentially. It can also be used to qu
 
 ### Syntax
 
-    <xsl:number
-    	count=EXPRESSION
-    	level="single" | "multiple" | "any"
-    	from=EXPRESSION
-    	value=EXPRESSION
-    	format=FORMAT-STRING
-    	lang=XML:LANG-CODE
-    	letter-value="alphabetic" | "traditional"
-    	grouping-separator=CHARACTER
-    	grouping-size=NUMBER  />
+```xml
+<xsl:number
+  count=EXPRESSION
+  level="single" | "multiple" | "any"
+  from=EXPRESSION
+  value=EXPRESSION
+  format=FORMAT-STRING
+  lang=XML:LANG-CODE
+  letter-value="alphabetic" | "traditional"
+  grouping-separator=CHARACTER
+  grouping-size=NUMBER  />
+```
 
 ### Required Attributes
 
