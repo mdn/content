@@ -46,6 +46,7 @@ The code below shows a simple slider with a maximum value of 9.
 ## Associated roles
 
 Used in roles:
+
 - [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role) 
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) (required)
 - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
@@ -53,6 +54,7 @@ Used in roles:
 - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role) (required)
 
 Inherited into roles:
+
 - [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)
 - [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)

@@ -123,6 +123,7 @@ if (browserType.endsWith('zilla')) {
 ## Extracting a substring from a string
 
 You can extract a substring from a string using the {{jsxref("String.prototype.slice()", "slice()")}} method. You pass it:
+
 * the index at which to start extracting
 * the index at which to stop extracting. This is exclusive, meaning that the character at this index is not included in the extracted substring.
 

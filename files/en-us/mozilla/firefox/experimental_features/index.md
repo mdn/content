@@ -1311,6 +1311,7 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
 #### ElementInternals: Form associated custom element methods and properties
 
 New {{domxref("ElementInternals")}} properties and methods that allow a custom elements to interact with a form:
+
 - property: {{domxref("ElementInternals.form","form")}} gets the form associated with the element
 - property: {{domxref("ElementInternals.labels","labels")}} gets the list of labels associated with the element
 - property: {{domxref("ElementInternals.willValidate", "willValidate")}} checks if a custom form element will be validated.

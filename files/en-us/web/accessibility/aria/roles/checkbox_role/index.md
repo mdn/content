@@ -128,6 +128,7 @@ Assistive technology products should do the following:
 - Screen readers should announce the element as a checkbox, and optionally provide instructions on how to activate it.
 
 People implementing checkboxes should do the following:
+
 - Ensure that the checkbox can be reached and interacted with by both keyboard controls and clicks
 - Keep the `aria-checked` attribute up to date following user interactions
 - Provide styles that indicate when the checkbox has focus

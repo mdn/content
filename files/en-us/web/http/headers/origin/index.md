@@ -55,12 +55,14 @@ The `Origin` header is similar to the {{HTTPHeader("Referer")}} header, but does
 It is used to provide the "security context" for the origin request, except in cases where the origin information would be sensitive or unnecessary.
 
 Broadly speaking, user agents add the {{httpheader("Origin")}} request header to:
+
 - {{Glossary("CORS", "cross origin")}} requests.
 - [same-origin](/en-US/docs/Web/Security/Same-origin_policy) requests except for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests (i.e. they are added to same-origin {{HTTPMethod("POST")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("PATCH")}}, and {{HTTPMethod("DELETE")}} requests).
 
 There are some exceptions to the above rules; for example, if a cross-origin {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} request is made in [no-cors mode](/en-US/docs/Web/API/Request/mode#value), the `Origin` header will not be added.
 
 The `Origin` header value may be `null` in a number of cases, including (non-exhaustively):
+
 - Origins whose scheme is not one of `http`, `https`, `ftp`, `ws`, `wss`, or `gopher` (including `blob`, `file` and `data`).
 - Cross-origin images and media data, including that in `<img>`, `<video>` and `<audio>` elements.
 - Documents created programmatically using `createDocument()`, generated from a `data:` url, or that do not have a creator browsing context. 

@@ -251,6 +251,7 @@ State Partitioning mechanism in Firefox and it does not rely on temporary
 heuristics.
 
 Features disabled by the pref include:
+
 - [Storage access heuristics](#storage_access_heuristics): Unpartitioned storage
   access can only be aquired via the Storage Access API.
 - Automatic storage access grants:
