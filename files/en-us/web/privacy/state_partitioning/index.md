@@ -306,4 +306,6 @@ For example, to disable partitioning for `tracker.example`
 on `example.com` and for `social.example` on
 `news.example`, you would set the pref to the following:
 
-     https://tracker.example,http://example.com;https://social.example,https://news.example
+```
+https://tracker.example,http://example.com;https://social.example,https://news.example
+```

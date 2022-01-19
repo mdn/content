@@ -11,7 +11,9 @@ The `string` function converts the given argument to a string.
 
 ### Syntax
 
-    string( [object] )
+```
+string( [object] )
+```
 
 ### Arguments
 

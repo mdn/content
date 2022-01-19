@@ -11,7 +11,9 @@ The `starts-with` checks whether the first string starts with the second string 
 
 ### Syntax
 
-    starts-with(haystack, needle)
+```
+starts-with(haystack, needle)
+```
 
 ### Arguments
 

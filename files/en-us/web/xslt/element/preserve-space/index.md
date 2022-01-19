@@ -13,7 +13,9 @@ The `<xsl:preserve-space>` element defines the elements in the source document f
 
 ### Syntax
 
-    <xsl:preserve-space elements=LIST-OF-ELEMENT-NAMES  />
+```xml
+<xsl:preserve-space elements=LIST-OF-ELEMENT-NAMES />
+```
 
 ### Required Attributes
 
