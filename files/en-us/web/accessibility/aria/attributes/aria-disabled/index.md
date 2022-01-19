@@ -91,6 +91,7 @@ If you used just CSS to style the disabled state using an attribute selector, th
 ## Associated roles
 
 Used in roles:
+
 - [`application`](/en-US/docs/Web/Accessibility/ARIA/roles/application_role)
 - [`button`](/en-US/docs/Web/Accessibility/ARIA/roles/button_role)
 - [`composite`](/en-US/docs/Web/Accessibility/ARIA/roles/composite_role)
@@ -104,6 +105,7 @@ Used in roles:
 - [`tab`](/en-US/docs/Web/Accessibility/ARIA/roles/tab_role)
 
 Inherits into roles:
+
 - [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/roles/checkbox_role)
 - [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/roles/columnheader_role)
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/roles/combobox_role)

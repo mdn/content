@@ -47,6 +47,7 @@ If the non-changeable value shouldn't be able to receive focus, use [`aria-disab
 ## Associated roles
 
 Used in roles:
+
 - [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
 - [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
@@ -58,6 +59,7 @@ Used in roles:
 - [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role)
 
 Inherited into roles:
+
 - [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 - [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
 - [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)

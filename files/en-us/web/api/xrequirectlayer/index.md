@@ -21,7 +21,8 @@ The **`XREquirectLayer`** interface of the [WebXR Device API](/en-US/docs/Web/AP
 
 `XREquirectLayer` requires the `layers` feature to be enabled for the {{domxref("XRSession")}}. You can request it in {{domxref("XRSystem.requestSession()")}}.
 
-To create a new `XREquirectLayer`, call either
+To create a new `XREquirectLayer`, call either:
+
 - {{domxref("XRWebGLBinding.createEquirectLayer()")}} for a WebGL opaque texture layer, or
 - {{domxref("XRMediaBinding.createEquirectLayer()")}} for an HTML {{HTMLElement("video")}} playback layer.
 

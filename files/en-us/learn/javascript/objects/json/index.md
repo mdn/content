@@ -215,6 +215,7 @@ async function populate() {
 To obtain the JSON, we use an API called [Fetch](/en-US/docs/Web/API/Fetch_API). This API allows us to make network requests to retrieve resources from a server via JavaScript (e.g. images, text, JSON, even HTML snippets), meaning that we can update small sections of content without having to reload the entire page.
 
 In our function, the first four lines use the Fetch API to fetch the JSON from the server:
+
 * we declare the `requestURL` variable to store the GitHub URL
 * we use the URL to initialize a new {{domxref("Request")}} object.
 * we make the network request using the {{domxref("fetch", "fetch()")}} function, and this returns a {{domxref("Response")}} object

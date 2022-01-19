@@ -268,7 +268,9 @@ Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(Componen
 
 This is an example for illustration only. This function will need to take namespace prefixes from the `xpathExpression` and return the URI that corresponds to that prefix. For example, the expression:
 
-    '//xhtml:td/mathml:math'
+```
+'//xhtml:td/mathml:math'
+```
 
 will select all [MathML](/en-US/docs/Web/MathML) expressions that are the children of (X)HTML table data cell elements.
 

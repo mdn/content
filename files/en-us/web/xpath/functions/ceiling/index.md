@@ -11,7 +11,9 @@ The `ceiling` function evaluates a decimal number and returns the smallest integ
 
 ### Syntax
 
-    ceiling(number )
+```
+ceiling( number )
+```
 
 ### Arguments
 

@@ -338,7 +338,7 @@ There are five types of positioning you should know about:
 
 ### Simple positioning example
 
-To provide familiarity with these page layout techniques, we'll show you a couple of quick examples. Our examples will all feature the same HTML, which is as follows:
+To provide familiarity with these page layout techniques, we'll show you a couple of quick examples. Our examples will all feature the same HTML structure (a heading followed by three paragraphs), which is as follows:
 
 ```html
 <h1>Positioning</h1>
@@ -444,7 +444,7 @@ Here we give our middle paragraph a {{cssxref("position")}} value of `absolute` 
 <p>I am a basic block level element.</p>
 ```
 
-```css
+```css hidden
 body {
   width: 500px;
   margin: 0 auto;

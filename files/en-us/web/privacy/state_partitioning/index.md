@@ -251,6 +251,7 @@ State Partitioning mechanism in Firefox and it does not rely on temporary
 heuristics.
 
 Features disabled by the pref include:
+
 - [Storage access heuristics](#storage_access_heuristics): Unpartitioned storage
   access can only be aquired via the Storage Access API.
 - Automatic storage access grants:
@@ -306,4 +307,6 @@ For example, to disable partitioning for `tracker.example`
 on `example.com` and for `social.example` on
 `news.example`, you would set the pref to the following:
 
-     https://tracker.example,http://example.com;https://social.example,https://news.example
+```
+https://tracker.example,http://example.com;https://social.example,https://news.example
+```

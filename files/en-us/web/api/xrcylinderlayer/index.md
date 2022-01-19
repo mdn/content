@@ -21,7 +21,8 @@ The **`XRCylinderLayer`** interface of the [WebXR Device API](/en-US/docs/Web/AP
 
 `XRCylinderLayer` requires the `layers` feature to be enabled for the {{domxref("XRSession")}}. You can request it in {{domxref("XRSystem.requestSession()")}}.
 
-To create a new `XRCylinderLayer`, call either
+To create a new `XRCylinderLayer`, call either:
+
 - {{domxref("XRWebGLBinding.createCylinderLayer()")}} for a WebGL opaque texture layer, or
 - {{domxref("XRMediaBinding.createCylinderLayer()")}} for an HTML {{HTMLElement("video")}} playback layer.
 

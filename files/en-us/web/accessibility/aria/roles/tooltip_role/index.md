@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: tooltip role'
 slug: Web/Accessibility/ARIA/Roles/tooltip_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -38,7 +38,7 @@ The accessible name of a tooltip can come from the contents, or from an [`aria-l
 
 * The element that serves as the tooltip container has `role="tooltip"` set.
 * The element that triggers the tooltip references the tooltip element with [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby).
-  
+
 ### Keyboard interactions
 
 - <kbd>Escape</kbd>
@@ -73,11 +73,11 @@ The tooltip should appear on focus or when the element is hovered on, without ke
     <li>Unique to this website</li>
   </ul>
 </div>
+```
 
-````
 The tooltip can be instantiated with CSS. Change the class name with JavaScript to a class that hides the tooltip if the user hits the <kbd>Escape</kbd> key.
 
-````css
+```css
 [role=tooltip],
 .hidetooltip.hidetooltip.hidetooltip + [role=tooltip] {
   visibility: hidden;
@@ -95,7 +95,8 @@ The tooltip can be instantiated with CSS. Change the class name with JavaScript 
 [aria-describedby]:focus + [role=tooltip] {
  visibility: visible;
 }
-````
+```
+
 The above hides the tooltip with CSS in the default state or if the hidetooltip class has been added with JavaScript (when the user hit <kbd>Escape</kbd>), with high specificity to ensure the tooltip doesn't show. When the owning element receives focus, it gets positioned relatively and the tooltip becomes visible.
 
 

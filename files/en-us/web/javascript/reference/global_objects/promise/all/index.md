@@ -58,6 +58,8 @@ input promises rejecting. In comparison, the promise returned by
 regardless of whether or not one rejects. Consequently, it will always return the final
 result of every promise and function from the input iterable.
 
+> **Note:** The order of the promise array is preserved upon completion of this method.
+
 ### Fulfillment
 
 The returned promise is fulfilled with an array containing **all** the

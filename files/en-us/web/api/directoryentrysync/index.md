@@ -28,15 +28,17 @@ If you want to create subdirectories, you have to create each child directory in
 
 #### Example
 
-The `getFile()` method returns a `FileEntrySync`, which represents a file in the file system.  The following creates an empty file called `seekrits.txt` in the root directory.
+The `getFile()` method returns a `FileEntrySync`, which represents a file in the file system. The following creates an empty file called `seekrits.txt` in the root directory.
 
 ```js
 var fileEntry = fs.root.getFile('seekrits.txt', {create: true});
 ```
 
-The `getDirectory()` method returns a `DirectoryEntrySync`, which represents a file in the file system. The following creates a new directory called `superseekrit` in the root directory.
+The `getDirectory()` method returns a `DirectoryEntrySync`, which represents a file in the file system. The following creates a new directory called `superseekrit` in the root directory.
 
-    var dirEntry = fs.root.getDirectory('superseekrit', {create: true});
+```js
+var dirEntry = fs.root.getDirectory('superseekrit', {create: true});
+```
 
 ## Method overview
 
@@ -116,7 +118,7 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 
 ### getFile()
 
-Depending on how you've set the `options` parameter, the method either creates a file or looks up an existing file.
+Depending on how you've set the `options` parameter, the method either creates a file or looks up an existing file.
 
     void getFile (
       in DOMString path, in optional Flags options
@@ -127,7 +129,7 @@ Depending on how you've set the `options` parameter, the method either creates
 - path
   - : Either an absolute path or a relative path from the directory to the file to be looked up or created. You cannot create a file whose immediate parent does not exist. Create the parent directory first.
 - options
-  - : An object literal describing the behavior of the method. If the file does not exist, it is created.
+  - : An object literal describing the behavior of the method. If the file does not exist, it is created.
 
 <table class="no-markdown">
   <thead>
@@ -334,8 +336,8 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 
 ## See also
 
-Specification: {{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
+Specification: {{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
 
 Reference: [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 
-Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

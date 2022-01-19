@@ -14,7 +14,9 @@ SVG makes use of a number of data types. This article lists these types along wi
 *   \<angle>
     *   : Angles are specified in one of two ways. When used in the value of a property in a stylesheet, an \<angle> is defined as follows:
 
-            angle ::= number (~"deg" | ~"grad" | ~"rad")?
+        ```
+        angle ::= number (~"deg" | ~"grad" | ~"rad")?
+        ```
 
         where `deg` indicates degrees, `grad` indicates grads and `rad` indicates radians.
 
@@ -33,7 +35,9 @@ SVG makes use of a number of data types. This article lists these types along wi
 *   \<anything>
     *   : The basic type \<anything> is a sequence of zero or more characters. Specifically:
 
-            anything ::= Char*
+        ```
+        anything ::= Char*
+        ```
 
         where [Char](https://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char) is the production for a character, as defined in XML 1.0 , section 2.2.
 
@@ -42,19 +46,21 @@ SVG makes use of a number of data types. This article lists these types along wi
 *   \<clock-value>
     *   : Clock values have the same syntax as in [SMIL Animation](https://www.w3.org/TR/2001/REC-smil-animation-20010904/) specification. The grammar for clock values is repeated here:
 
-            Clock-val         ::= Full-clock-val | Partial-clock-val
-                                  | Timecount-val
-            Full-clock-val    ::= Hours ":" Minutes ":" Seconds ("." Fraction)?
-            Partial-clock-val ::= Minutes ":" Seconds ("." Fraction)?
-            Timecount-val     ::= Timecount ("." Fraction)? (Metric)?
-            Metric            ::= "h" | "min" | "s" | "ms"
-            Hours             ::= DIGIT+; any positive number
-            Minutes           ::= 2DIGIT; range from 00 to 59
-            Seconds           ::= 2DIGIT; range from 00 to 59
-            Fraction          ::= DIGIT+
-            Timecount         ::= DIGIT+
-            2DIGIT            ::= DIGIT DIGIT
-            DIGIT             ::= [0-9]
+        ```
+        Clock-val         ::= Full-clock-val | Partial-clock-val
+                              | Timecount-val
+        Full-clock-val    ::= Hours ":" Minutes ":" Seconds ("." Fraction)?
+        Partial-clock-val ::= Minutes ":" Seconds ("." Fraction)?
+        Timecount-val     ::= Timecount ("." Fraction)? (Metric)?
+        Metric            ::= "h" | "min" | "s" | "ms"
+        Hours             ::= DIGIT+; any positive number
+        Minutes           ::= 2DIGIT; range from 00 to 59
+        Seconds           ::= 2DIGIT; range from 00 to 59
+        Fraction          ::= DIGIT+
+        Timecount         ::= DIGIT+
+        2DIGIT            ::= DIGIT DIGIT
+        DIGIT             ::= [0-9]
+        ```
 
         For `Timecount` values, the default metric suffix is "`s`" (for seconds). No embedded white space is allowed in clock values, although leading and trailing white space characters will be ignored.
 
@@ -91,11 +97,13 @@ SVG makes use of a number of data types. This article lists these types along wi
 
         The format of an RGB value in hexadecimal notation is a "`#`" immediately followed by either three or six hexadecimal characters. The three-digit RGB notation (`#rgb`) is converted into six-digit form (`#rrggbb`) by replicating digits, not by adding zeros. For example, `#fb0` expands to `#ffbb00`. This ensures that white (`#ffffff`) can be specified with the short notation (`#fff`) and removes any dependencies on the color depth of the display. The format of an RGB value in the functional notation is an RGB start-function, followed by a comma-separated list of three numerical values (either three integer values or three percentage values) followed by "`)`". An RGB start-function is the case-insensitive string "`rgb(`", for example "`RGB(`" or "`rGb(`". For compatibility, the all-lowercase form "`rgb(`" is preferred. The integer value `255` corresponds to `100%`, and to `F` or `FF` in the hexadecimal notation: `rgb(255,255,255)` = `rgb(100%,100%,100%)` = `#FFF`. White space characters are allowed around the numerical values. All RGB colors are specified in the sRGB color space. Using sRGB provides an unambiguous and objectively measurable definition of the color, which can be related to international standards.
 
-            color    ::= "#" hexdigit hexdigit hexdigit (hexdigit hexdigit hexdigit)?
-                         | "rgb("integer, integer, integer")"
-                         | "rgb("integer "%", integer "%", integer "%)"
-                         | color-keyword
-            hexdigit ::= [0-9A-Fa-f]
+        ```
+        color    ::= "#" hexdigit hexdigit hexdigit (hexdigit hexdigit hexdigit)?
+                      | "rgb("integer, integer, integer")"
+                      | "rgb("integer "%", integer "%", integer "%)"
+                      | color-keyword
+        hexdigit ::= [0-9A-Fa-f]
+        ```
 
         where `color-keyword` matches (case insensitively) one of the color keywords listed in [CSS Color Module Level 3](https://www.w3.org/TR/css3-color/), or one of the system color keywords listed in [User preferences for colors](https://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors) (CSS2, section 18.2).
 
@@ -128,7 +136,9 @@ SVG makes use of a number of data types. This article lists these types along wi
 *   \<integer>
     *   : An \<integer> is specified as an optional sign character (`+` or `-`) followed by one or more digits `0` to `9`:
 
-            integer ::= [+-]? [0-9]+
+        ```
+        integer ::= [+-]? [0-9]+
+        ```
 
         If the sign character is not present, the number is non-negative.
 
@@ -143,21 +153,29 @@ SVG makes use of a number of data types. This article lists these types along wi
 
         On the Internet, resources are identified using *IRI*s (Internationalized Resource Identifiers). For example, an SVG file called `someDrawing.svg` located at <http://example.com> might have the following *IRI*:
 
-            http://example.com/someDrawing.svg
+        ```
+        http://example.com/someDrawing.svg
+        ```
 
         An *IRI* can also address a particular element within an XML document by including an *IRI* fragment identifier as part of the *IRI*. An *IRI* which includes an *IRI* fragment identifier consists of an optional base *IRI*, followed by a "`#`" character, followed by the *IRI* fragment identifier. For example, the following *IRI* can be used to specify the element whose ID is "`Lamppost`" within file `someDrawing.svg`:
 
-            http://example.com/someDrawing.svg#Lamppost
+        ```
+        http://example.com/someDrawing.svg#Lamppost
+        ```
 
         *IRI*s are used in the {{SVGAttr("xlink:href")}} attribute. Some attributes allow both *IRI*s and text strings as content. To disambiguate a text string from a relative IRI, the functional notation \<FuncIRI> is used. This is an *IRI* delimited with a functional notation. Note: For historical reasons, the delimiters are "`url(`" and "`)`", for compatibility with the CSS specifications. The *FuncIRI* form is used in presentation attributes .
 
         SVG makes extensive use of *IRI* references, both absolute and relative, to other objects. For example, to fill a rectangle with a linear gradient, you first define a {{SVGElement("linearGradient")}} element and give it an ID, as in:
 
-            <linearGradient xml:id="MyGradient">...</linearGradient>
+        ```
+        <linearGradient xml:id="MyGradient">...</linearGradient>
+        ```
 
         You then reference the linear gradient as the value of the {{SVGAttr("fill")}} attribute for the rectangle, as in the following example:
 
-            <rect fill="url(#MyGradient)"/>
+        ```
+        <rect fill="url(#MyGradient)"/>
+        ```
 
         SVG supports two types of *IRI* references:
 
@@ -171,7 +189,9 @@ SVG makes use of a number of data types. This article lists these types along wi
 *   \<length>
     *   : A length is a distance measurement, given as a number along with a unit. Lengths are specified in one of two ways. When used in a stylesheet, a \<length> is defined as follows:
 
-            length ::= number (~"em" | ~"ex" | ~"px" | ~"in" | ~"cm" | ~"mm" | ~"pt" | ~"pc")?
+        ```
+        length ::= number (~"em" | ~"ex" | ~"px" | ~"in" | ~"cm" | ~"mm" | ~"pt" | ~"pc")?
+        ```
 
         [See the CSS2 specification](https://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#length-units) for the meanings of the unit identifiers.
 
@@ -179,7 +199,9 @@ SVG makes use of a number of data types. This article lists these types along wi
 
         When lengths are used in an SVG attribute, a \<length> is instead defined as follows:
 
-            length ::= number ("em" | "ex" | "px" | "in" | "cm" | "mm" | "pt" | "pc" | "%")?
+        ```
+        length ::= number ("em" | "ex" | "px" | "in" | "cm" | "mm" | "pt" | "pc" | "%")?
+        ```
 
         The unit identifiers in such \<length> values must be in lower case.
 
@@ -199,8 +221,10 @@ SVG makes use of a number of data types. This article lists these types along wi
 
         The following is a template for an EBNF grammar describing the \<list-of-*T*s> syntax:
 
-            list-of-Ts ::= T
-                           | T, list-of-Ts
+        ```
+        list-of-Ts ::= T
+                        | T, list-of-Ts
+        ```
 
         Within the SVG DOM, values of a \<list-of-*T*s> type are represented by an interface specific for the particular type *T*. For example, a \<list-of-lengths> is represented in the SVG DOM using an {{domxref("SVGLengthList")}} or {{domxref("SVGAnimatedLengthList")}} object.
 
@@ -209,22 +233,28 @@ SVG makes use of a number of data types. This article lists these types along wi
 *   \<name>
     *   : A name, which is a string where a few characters of syntactic significance are disallowed.
 
-            name  ::= [^,()#x20#x9#xD#xA] /* any char except ",", "(", ")" or wsp */
+        ```
+        name  ::= [^,()#x20#x9#xD#xA] /* any char except ",", "(", ")" or wsp */
+        ```
 
 ## Number
 
 *   \<number>
     *   : Real numbers are specified in one of two ways. When used in a stylesheet, a \<number> is defined as follows:
 
-            number ::= integer
-                       | [+-]? [0-9]* "." [0-9]+
+        ```
+        number ::= integer
+                    | [+-]? [0-9]* "." [0-9]+
+        ```
 
         This syntax is the same as the definition in CSS (CSS2, section 4.3.1).
 
         When used in an SVG attribute, a \<number> is defined differently, to allow numbers with large magnitudes to be specified more concisely:
 
-            number ::= integer ([Ee] integer)?
-                       | [+-]? [0-9]* "." [0-9]+ ([Ee] integer)?
+        ```
+        number ::= integer ([Ee] integer)?
+                    | [+-]? [0-9]* "." [0-9]+ ([Ee] integer)?
+        ```
 
         Within the SVG DOM, a \<number> is represented as a float, {{domxref("SVGNumber")}} or a {{domxref("SVGAnimatedNumber")}}.
 
@@ -233,8 +263,10 @@ SVG makes use of a number of data types. This article lists these types along wi
 *   \<number-optional-number>
     *   : A pair of \<number>s, where the second \<number> is optional.
 
-            number-optional-number ::= number
-                                       | number, number
+        ```
+        number-optional-number ::= number
+                                    | number, number
+        ```
 
         In the SVG DOM, a \<number-optional-number> is represented using a pair of {{domxref("SVGAnimatedInteger")}} or {{domxref("SVGAnimatedNumber")}} objects.
 
@@ -255,7 +287,9 @@ SVG makes use of a number of data types. This article lists these types along wi
 *   \<percentage>
     *   : Percentages are specified as a number followed by a "`%`" character:
 
-            percentage ::= number "%"
+        ```
+        percentage ::= number "%"
+        ```
 
         Note that the definition of \<number> depends on whether the percentage is specified in a stylesheet or in an attribute that is not also a presentation attribute.
 

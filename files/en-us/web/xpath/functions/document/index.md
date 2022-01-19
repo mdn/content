@@ -11,7 +11,9 @@ The `document` finds a node-set in an external document, or multiple external do
 
 ### Syntax
 
-    document(URI [,node-set] )
+```
+document( URI [,node-set] )
+```
 
 ### Arguments
 

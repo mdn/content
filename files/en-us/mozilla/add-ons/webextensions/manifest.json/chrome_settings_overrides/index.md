@@ -170,6 +170,7 @@ The `chrome_settings_overrides` key is an object that may have the following pro
 </table>
 
 ## Example
+
 This example shows how to set a search provider.
 
 

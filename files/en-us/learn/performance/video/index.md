@@ -56,14 +56,16 @@ Your video editing software probably has a feature to reduce file size. If not, 
 
 Order video source from smallest to largest. For example, given video compressions in three different formats at 10MB, 12MB, and 13MB, declare the smallest first and the largest last:
 
-    <video width="400" height="300" controls="controls">
-      <!-- WebM: 10 MB -->
-      <source src="video.webm" type="video/webm" />
-      <!-- MPEG-4/H.264: 12 MB -->
-      <source src="video.mp4" type="video/mp4" />
-      <!-- Ogg/Theora: 13 MB -->
-      <source src="video.ogv" type="video/ogv" />
-    </video>
+```html
+<video width="400" height="300" controls="controls">
+  <!-- WebM: 10 MB -->
+  <source src="video.webm" type="video/webm" />
+  <!-- MPEG-4/H.264: 12 MB -->
+  <source src="video.mp4" type="video/mp4" />
+  <!-- Ogg/Theora: 13 MB -->
+  <source src="video.ogv" type="video/ogv" />
+</video>
+```
 
 The browser downloads the first format it understands. The goal is to offer smaller versions ahead of larger versions. With the smallest version, make sure that the most compressed video still looks good. There are some compression algorithms that can make video look (bad) like an animated GIF. While a 128 Kb video may seem like it could provide a better user experience than a 10 MB download, a grainy GIF-like video may reflect poorly on the brand or project.
 
@@ -73,7 +75,9 @@ See [CanIUse.com](https://caniuse.com/#search=video) for current browser support
 
 To ensure that a looping background video autoplays, you must add several attributes to the video tag: `autoplay`, `muted`, and `playsinline.`
 
-    <video autoplay="" loop="" muted="true" playsinline="" src="backgroundvideo.mp4">
+```html
+<video autoplay="" loop="" muted="true" playsinline="" src="backgroundvideo.mp4">
+```
 
 While the `loop` and `autoplay` make sense for a looping and autoplaying video, the `muted` attribute is required for autoplay in mobile browsers.
 
@@ -83,17 +87,21 @@ While the `loop` and `autoplay` make sense for a looping and autoplaying video, 
 
 For hero-video or other video without audio, removing audio is smart.
 
-    <video autoplay="" loop="" muted="true" playsinline="" id="hero-video">
-      <source src="banner_video.webm"
-              type='video/webm; codecs="vp8, vorbis"'>
-      <source src="web_banner.mp4" type="video/mp4">
-    </video>
+```html
+<video autoplay="" loop="" muted="true" playsinline="" id="hero-video">
+  <source src="banner_video.webm"
+          type='video/webm; codecs="vp8, vorbis"'>
+  <source src="web_banner.mp4" type="video/mp4">
+</video>
+```
 
 This hero-video code (above) is common to conference websites and corporate home pages. It includes a video that is auto-playing, looping, and muted. There are no controls, so there is no way to hear audio. The audio is often empty, but still present, and still using bandwidth. There is no reason to serve audio with video that is always muted. **Removing audio can save 20% of the bandwidth.**
 
 Depending on your choice of software, you might be able to remove audio during export and compression. If not, a free utility called [FFmpeg](https://www.ffmpeg.org/) can do it for you. This is the FFmpeg command string to remove audio:
 
-    ffmpeg -i original.mp4 -an -c:v copy audioFreeVersion.mp4
+```
+ffmpeg -i original.mp4 -an -c:v copy audioFreeVersion.mp4
+```
 
 ### Video preload
 

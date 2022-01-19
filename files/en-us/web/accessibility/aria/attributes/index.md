@@ -21,6 +21,7 @@ ARIA attributes enable modifying an element's states and properties as defined i
 There are 4 categories of ARIA states and properties:
 
 1. ### Widget Attributes
+
    - [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete)
    - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
    - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
@@ -47,16 +48,19 @@ There are 4 categories of ARIA states and properties:
    - [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
 
 2. ### Live Region Attributes
+
    - [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
    - [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)
    - [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
    - [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
 
 3. ### Drag-and-Drop Attributes
+
    - [`aria-dropeffect`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
    - [`aria-grabbed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed)
 
 4. ### Relationship Attributes
+
     - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
     - [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
     - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)

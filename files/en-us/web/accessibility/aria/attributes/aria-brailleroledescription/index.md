@@ -46,6 +46,7 @@ A few rules to remember:
 > **Note:** Do NOT use `aria-brailleroledescription` to replicate `aria-roledescription`. Only include this attribute when `aria-roledescription` does not provide an adequate braille representation.
 
 The `aria-brailleroledescription` value will not be exposed to the braille user if:
+
 - The value is empty or contains only whitespace characters or the empty Braille pattern: dots-0 (U+2800).
 - The element to which the attribute is applied has an explicit or implicit WAI-ARIA role where `aria-brailleroledescription` is prohibited, including the `generic` role.
 - The element to which the attribute is applied does not have a valid `aria-roledescription`.

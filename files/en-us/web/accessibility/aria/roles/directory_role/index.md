@@ -33,6 +33,7 @@ Use the [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) role instea
 
 
 ## See Also
+
 - [The `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
 - The {{HTMLElement('ul')}} element
 - The {{HTMLElement('ol')}} element

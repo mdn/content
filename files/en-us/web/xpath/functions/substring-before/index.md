@@ -11,7 +11,9 @@ The `substring-before` function returns a string that is the part of a given str
 
 ### Syntax
 
-    substring-before(haystack ,needle )
+```
+substring-before( haystack, needle )
+```
 
 ### Arguments
 

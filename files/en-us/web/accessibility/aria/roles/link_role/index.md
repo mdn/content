@@ -33,6 +33,7 @@ To recreate an accessible link using the `link` role on an element that is not a
   Fake accessible link created using a span
 </span>
 ```
+
 ### CSS
 
 ```css
@@ -52,7 +53,9 @@ span[role="link"]:focus {
   outline: 1px dotted;
 }
 ```
+
 ### JavaScript
+
 ```JavaScript
 const fakeLinks = document.querySelectorAll('[role="link"]');
 

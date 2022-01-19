@@ -11,7 +11,9 @@ The `count` function counts the number of nodes in a node-set and returns an int
 
 ### Syntax
 
-    count(node-set )
+```
+count( node-set )
+```
 
 ### Arguments
 

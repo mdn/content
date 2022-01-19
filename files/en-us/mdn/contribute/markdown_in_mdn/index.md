@@ -67,6 +67,7 @@ const greeting = "I'm a good example";
 const greeting = "I'm a bad example";
 ```
 ````
+
 These will be rendered as:
 
 ```js example-good

@@ -66,18 +66,22 @@ The types of reference space are listed in the table below, with brief informati
 
 There are two situations in which you need to obtain an `XRReferenceSpace`. The first is when you set up your scene and need to obtain a reference space to represent the user's viewpoint on the world for the duration of the {{domxref("XRSession")}}. To do that, call the {{domxref("XRSession")}} method {{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}}, specifying the reference space type you wish to obtain.
 
-    xrSession.requestReferenceSpace("local").then((refSpace) => {
-      xrReferenceSpace = refSpace;
-      /* ... */
-    });
+```js
+xrSession.requestReferenceSpace("local").then((refSpace) => {
+  xrReferenceSpace = refSpace;
+  /* ... */
+});
+```
 
 The other situation in which you may need to acquire a new reference space is if you need to move the origin to a new position; this is commonly done, for example, when your project allows the user to move through the environment using input devices such as the keyboard, mouse, touchpad, or game controls that are not connected through the XR device. Since the origin will typically be the user's location in the space, you need to change the origin to reflect their movement and any orientation changes they make.
 
 To move or rotate the user's view of the world, you need to change the `XRReferenceSpace` used to represent that viewpoint. However, `XRReferenceSpace` is immutable, so you need to instead create a new reference space representing the changed viewpoint. This is easily done using the {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} method.
 
-    let offsetTransform = new XRRigidTransform({x: 2, y: 0, z: 1},
-                                               {x: 0, y: 1, z: 0, w: 1});
-    xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(offsetTransform);
+```js
+let offsetTransform = new XRRigidTransform({x: 2, y: 0, z: 1},
+                                           {x: 0, y: 1, z: 0, w: 1});
+xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(offsetTransform);
+```
 
 This replaces the `XRReferenceSpace` with a new one whose origin and orientation are adjusted to place the new origin at (2, 0, 1) relative to the current origin and rotated given a unit {{Glossary("quaternion")}} that orients the space to put the viewer facing straight up relative to the previous world orientation.
 

@@ -11,7 +11,9 @@ The `generate-id` function generates a unique id for the first node in a given n
 
 ### Syntax
 
-    generate-id( [node-set] )
+```
+generate-id( [node-set] )
+```
 
 ### Arguments
 
