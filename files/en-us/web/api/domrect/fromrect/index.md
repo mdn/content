@@ -21,7 +21,7 @@ object with a given location and dimensions.
 ## Syntax
 
 ```js
-var domRect = DOMRect.fromRect(rectangle)
+fromRect(rectangle)
 ```
 
 ### Parameters
