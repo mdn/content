@@ -39,7 +39,7 @@ var domRect = DOMRectReadOnly.fromRect(rectangle)
 
 ### Return value
 
-An instance of {{domxref("DOMRect")}}.
+An instance of {{domxref("DOMRectReadOnly")}}.
 
 ## Specifications
 
