@@ -599,7 +599,7 @@ Along with objects, functions are the core component in understanding JavaScript
 
 ```js
 function add(x, y) {
-  var total = x + y;
+  const total = x + y;
   return total;
 }
 ```
@@ -624,9 +624,9 @@ That may seem a little silly, but functions have access to an additional variabl
 
 ```js
 function add() {
-  var sum = 0;
-  for (var i = 0; i < arguments.length; i++) {
-    sum += arguments[i];
+  let sum = 0;
+  for (const item of arguments) {
+    sum += item;
   }
   return sum;
 }
@@ -638,9 +638,9 @@ That's really not any more useful than writing `2 + 3 + 4 + 5` though. Let's cre
 
 ```js
 function avg() {
-  var sum = 0;
-  for (var i = 0; i < arguments.length; i++) {
-    sum += arguments[i];
+  let sum = 0;
+  for (const item of arguments) {
+    sum += item;
   }
   return sum / arguments.length;
 }
@@ -648,13 +648,13 @@ function avg() {
 avg(2, 3, 4, 5); // 3.5
 ```
 
-This is pretty useful, but it does seem a little verbose. To reduce this code a bit more we can look at substituting the use of the arguments array through [Rest parameter syntax](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters). In this way, we can pass in any number of arguments into the function while keeping our code minimal. The **rest parameter operator** is used in function parameter lists with the format: **...variable** and it will include within that variable the entire list of uncaptured arguments that the function was called with. We will also replace the **for** loop with a **for...of** loop to return the values within our variable.
+This is pretty useful, but it does seem a little verbose. To reduce this code a bit more we can look at substituting the use of the arguments array through [Rest parameter syntax](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters). In this way, we can pass in any number of arguments into the function while keeping our code minimal. The **rest parameter operator** is used in function parameter lists with the format: **...variable** and it will include within that variable the entire list of uncaptured arguments that the function was called with.
 
 ```js
 function avg(...args) {
-  var sum = 0;
-  for (let value of args) {
-    sum += value;
+  let sum = 0;
+  for (const item of args) {
+    sum += item;
   }
   return sum / args.length;
 }
@@ -668,9 +668,9 @@ It is important to note that wherever the rest parameter operator is placed in a
 
 ```js
 function avgArray(arr) {
-  var sum = 0;
-  for (var i = 0; j = arr.length; i < j; i++) {
-    sum += arr[i];
+  let sum = 0;
+  for (const item of arr) {
+    sum += item;
   }
   return sum / arr.length;
 }
@@ -696,10 +696,10 @@ JavaScript lets you create anonymous functions — that is, functions without na
 
 ```js
 // Note that there's no function name before the parentheses
-var avg = function() {
-  var sum = 0;
-  for (var i = 0, j = arguments.length; i < j; i++) {
-    sum += arguments[i];
+let avg = function() {
+  let sum = 0;
+  for (const item of arguments) {
+    sum += item;
   }
   return sum / arguments.length;
 };
