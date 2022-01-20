@@ -32,9 +32,9 @@ var animationPlaybackEvent = new AnimationPlaybackEvent(type, eventInitDict);
   - : An optional `EventInit` dictionary object containing the following fields:
 
     - `bubbles` {{optional_inline}}
-      - : Defaults to `false`, of type [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "The Boolean object is an object wrapper for a boolean value."), indicating if the event bubbles or not.
+      - : Defaults to `false`, of type [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean), indicating if the event bubbles or not.
     - `cancelable` {{optional_inline}}
-      - : Defaults to `false`, of type [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "The Boolean object is an object wrapper for a boolean value."), indicating if the event can be canceled or not.
+      - : Defaults to `false`, of type [`Boolean`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean), indicating if the event can be canceled or not.
     - `detail` {{optional_inline}}
       - : Defaults to `null`, of type any — an event-dependent value associated with the event.
 

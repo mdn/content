@@ -69,4 +69,4 @@ Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,unixsum=30637
 - {{HTTPHeader("Want-Digest")}}
 
 - [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests)
-- [`206 Partial Content`](/en-US/docs/Web/HTTP/Status/206 "The HTTP 206 Partial Content success status response code indicates that the request has succeeded and has the body contains the requested ranges of data, as described in the Range header of the request.")
+- [`206 Partial Content`](/en-US/docs/Web/HTTP/Status/206)

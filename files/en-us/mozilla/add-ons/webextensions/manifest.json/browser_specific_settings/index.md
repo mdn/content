@@ -69,7 +69,7 @@ See the list of [valid Gecko versions](https://addons.mozilla.org/en-US/firefox/
 
 The extension ID must be one of the following:
 
-- [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier "Generating_GUIDs")
+- [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 - A string formatted like an email address: `extensionname@example.org`
 
 The latter format is easier to generate and manipulate. Be aware that using a real email address here may attract spam.

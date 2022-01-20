@@ -44,7 +44,7 @@ Longer-term discussions happen on our [MDN discussion forum](https://discourse.m
 
 ### Documentation issues
 
-If you see a problem in the documentation and can't fix it yourself for any reason, you can [report the issue](https://github.com/mdn/content/issues/new/choose "Report a documentation content problem.")! For some problems of translation, you can [report to translated content](https://github.com/mdn/translated-content/issues/new/choose "Report a translation problem."). You can use this form for any documentation issue at all, for example:
+If you see a problem in the documentation and can't fix it yourself for any reason, you can [report the issue](https://github.com/mdn/content/issues/new/choose)! For some problems of translation, you can [report to translated content](https://github.com/mdn/translated-content/issues/new/choose "Report a translation problem."). You can use this form for any documentation issue at all, for example:
 
 - a simple correction
 - a request for an entirely new piece of content

@@ -33,7 +33,7 @@ To use the sessions API you must have the "sessions" [API permission](/en-US/doc
 ## Properties
 
 - {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}
-  - : The maximum number of sessions that will be returned by a call to [`sessions.getRecentlyClosed()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed "Returns an array Session objects, representing windows and tabs that were closed in the current browsing session (that is: the time since the browser was started).").
+  - : The maximum number of sessions that will be returned by a call to [`sessions.getRecentlyClosed()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed).
 
 ## Functions
 

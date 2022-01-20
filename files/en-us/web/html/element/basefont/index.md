@@ -22,7 +22,7 @@ You should not use this element; instead, you should use CSS properties such as 
 
 ## Attributes
 
-Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes "HTML/Global attributes").
+Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - {{htmlattrdef("color")}}
   - : This attribute sets the text color using either a named color or a color specified in the hexadecimal #RRGGBB format.

@@ -28,7 +28,7 @@ Audio nodes are linked via their inputs and outputs, forming a chain that starts
 4.  Choose the final destination for the audio, such as the user's computer speakers.
 5.  Establish connections from the audio sources through zero or more effects, eventually ending at the chosen destination.
 
-> **Note:** The number of audio channels available on a signal is frequently presented in a numeric format, such as 2.0 or 5.1. This is called {{interwiki("wikipedia", "Surround_sound#Channel_notation", "channel notation")}}. The first number is the number of full frequency range audio channels that the signal includes. The number after the period indicates the number of those channels which are reserved for low-frequency effect (LFE) outputs; these are often referred to as **subwoofers**.
+> **Note:** The number of audio channels available on a signal is frequently presented in a numeric format, such as 2.0 or 5.1. This is called {{interwiki("wikipedia", "Surround_sound#Channel_notation", "channel notation")}}. The first number is the number of full frequency range audio channels that the signal includes. The number after the period indicates the number of those channels which are reserved for low-frequency effect (LFE) outputs; these are often referred to as **subwoofers**.
 
 ![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](webaudioapi_en.svg)
 
@@ -45,7 +45,7 @@ Audio sources can be obtained in a number of ways:
 
 ## Audio data: what's in a sample
 
-When an audio signal is processed, **sampling** means the conversion of a [continuous signal](https://en.wikipedia.org/wiki/Continuous_signal "Continuous signal") to a [discrete signal](https://en.wikipedia.org/wiki/Discrete_signal "Discrete signal"); or put another way, a continuous sound wave, such as a band playing live, is converted to a sequence of samples (a discrete-time signal) that allow a computer to handle the audio in distinct blocks.
+When an audio signal is processed, **sampling** means the conversion of a [continuous signal](https://en.wikipedia.org/wiki/Continuous_signal) to a [discrete signal](https://en.wikipedia.org/wiki/Discrete_signal); or put another way, a continuous sound wave, such as a band playing live, is converted to a sequence of samples (a discrete-time signal) that allow a computer to handle the audio in distinct blocks.
 
 A lot more information can be found on the Wikipedia page [Sampling (signal processing)](https://en.wikipedia.org/wiki/Sampling_%28signal_processing%29).
 
@@ -75,11 +75,11 @@ var context = new AudioContext();
 var buffer = context.createBuffer(2, 22050, 44100);
 ```
 
-> **Note:** In [digital audio](https://en.wikipedia.org/wiki/Digital_audio "Digital audio"), **44,100 [Hz](https://en.wikipedia.org/wiki/Hertz)** (alternately represented as **44.1 kHz**) is a common [sampling frequency](https://en.wikipedia.org/wiki/Sampling_frequency "Sampling frequency"). Why 44.1kHz?
+> **Note:** In [digital audio](https://en.wikipedia.org/wiki/Digital_audio), **44,100 [Hz](https://en.wikipedia.org/wiki/Hertz)** (alternately represented as **44.1 kHz**) is a common [sampling frequency](https://en.wikipedia.org/wiki/Sampling_frequency). Why 44.1kHz?
 >
-> Firstly, because the [hearing range](https://en.wikipedia.org/wiki/Hearing_range "Hearing range") of human ears is roughly 20 Hz to 20,000 Hz. Via the [Nyquist–Shannon sampling theorem](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem "Nyquist–Shannon sampling theorem"), the sampling frequency must be greater than twice the maximum frequency one wishes to reproduce. Therefore, the sampling rate has to be greater than 40 kHz.
+> Firstly, because the [hearing range](https://en.wikipedia.org/wiki/Hearing_range) of human ears is roughly 20 Hz to 20,000 Hz. Via the [Nyquist–Shannon sampling theorem](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem), the sampling frequency must be greater than twice the maximum frequency one wishes to reproduce. Therefore, the sampling rate has to be greater than 40 kHz.
 >
-> Secondly, signals must be [low-pass filtered](https://en.wikipedia.org/wiki/Low-pass_filter "Low-pass filter") before sampling, otherwise [aliasing](https://en.wikipedia.org/wiki/Aliasing) occurs. While an ideal low-pass filter would perfectly pass frequencies below 20 kHz (without attenuating them) and perfectly cut off frequencies above 20 kHz, in practice a [transition band](https://en.wikipedia.org/wiki/Transition_band "Transition band") is necessary, where frequencies are partly attenuated. The wider this transition band is, the easier and more economical it is to make an [anti-aliasing filter](https://en.wikipedia.org/wiki/Anti-aliasing_filter "Anti-aliasing filter"). The 44.1 kHz sampling frequency allows for a 2.05 kHz transition band.
+> Secondly, signals must be [low-pass filtered](https://en.wikipedia.org/wiki/Low-pass_filter "Low-pass filter") before sampling, otherwise [aliasing](https://en.wikipedia.org/wiki/Aliasing) occurs. While an ideal low-pass filter would perfectly pass frequencies below 20 kHz (without attenuating them) and perfectly cut off frequencies above 20 kHz, in practice a [transition band](https://en.wikipedia.org/wiki/Transition_band) is necessary, where frequencies are partly attenuated. The wider this transition band is, the easier and more economical it is to make an [anti-aliasing filter](https://en.wikipedia.org/wiki/Anti-aliasing_filter). The 44.1 kHz sampling frequency allows for a 2.05 kHz transition band.
 
 If you use this call above, you will get a stereo buffer with two channels, that when played back on an AudioContext running at 44100Hz (very common, most normal sound cards run at this rate), will last for 0.5 seconds: 22050 frames/44100Hz = 0.5 seconds.
 
