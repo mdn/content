@@ -48,10 +48,8 @@ stylesheet.insertRule(rule [, index])
 
 The newly inserted rule's index within the stylesheet's rule-list.
 
-### Restrictions
+### Exceptions
 
-CSS has some intuitive and not-so-intuitive restrictions affecting where rules can be
-inserted. Violating them will raise an exception.
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `index` > `{{domxref("CSSRuleList", "", "", "1")}}.length`.
