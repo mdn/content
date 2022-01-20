@@ -669,7 +669,7 @@ It is important to note that wherever the rest parameter operator is placed in a
 ```js
 function avgArray(arr) {
   var sum = 0;
-  for (var i = 0, j = arr.length; i < j; i++) {
+  for (var i = 0; j = arr.length; i < j; i++) {
     sum += arr[i];
   }
   return sum / arr.length;
