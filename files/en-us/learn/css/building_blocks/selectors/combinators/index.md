@@ -54,7 +54,7 @@ In the example below, we are matching only the `<p>` element which is inside an 
 
 ## Child combinator
 
-The **child combinator** (`>`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the direct children of elements matched by the first. Descendent elements further down the hierarchy don't match. For example, to select only `<p>` elements that are direct children of `<article>` elements:
+The **child combinator** (`>`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the direct children of elements matched by the first. Descendant elements further down the hierarchy don't match. For example, to select only `<p>` elements that are direct children of `<article>` elements:
 
 ```css
 article > p
