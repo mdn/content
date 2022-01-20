@@ -160,7 +160,7 @@ Or what about some kind of button bar for controlling your app? This might not n
 </section>
 ```
 
-Sections with no headings do not appear in the document outline. If you did want force the inclusion of such an HTML block inside the document outline but not affect the visual output in any way, you could include a heading but hide it:
+Sections with no headings do not appear in the document outline. If you did want to force the inclusion of such an HTML block inside the document outline but not affect the visual output in any way, you could include a heading but hide it:
 
 ```html
 <section>
