@@ -1,21 +1,21 @@
 ---
-title: Save-Data
-slug: Web/HTTP/Headers/Save-Data
+title: Sec-CH-Save-Data
+slug: Web/HTTP/Headers/Sec-CH-Save-Data
 tags:
-  - Save-Data
+  - Sec-CH-Save-Data
   - Client hints
   - HTTP
   - HTTP Header
   - Reference
   - Request header
-browser-compat: http.headers.Save-Data
+browser-compat: http.headers.Sec-CH-Save-Data
 ---
 {{HTTPSidebar}}
 
-The **`Save-Data`** [network client hint](/en-US/docs/Web/HTTP/Client_hints#network_client_hints) request header field is a boolean which indicates the client's preference for reduced data usage.
+The **`Sec-CH-Save-Data`** [network client hint](/en-US/docs/Web/HTTP/Client_hints#network_client_hints) request header field is a boolean which indicates the client's preference for reduced data usage.
 This could be for reasons such as high transfer costs, slow connection speeds, etc.
 
-**`Save-Data`** is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints), and hence may be sent by the client even if not requested by the server using an {{HTTPHeader("Accept-CH")}} response header.
+**`Sec-CH-Save-Data`** is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints), and hence may be sent by the client even if not requested by the server using an {{HTTPHeader("Accept-CH")}} response header.
 Further, it should be used to reduce data sent to the client irrespective of the values of other client hints that indicate network capability, like {{HTTPHeader("Downlink")}} and {{HTTPHeader("RTT")}}.
 
 <table class="properties">
@@ -50,7 +50,7 @@ different markup and styling, disabled polling and automatic updates, and so on.
 ## Syntax
 
 ```http
-Save-Data: <sd-token>
+Sec-CH-Save-Data: <sd-token>
 ```
 
 ## Directives
@@ -63,16 +63,16 @@ Save-Data: <sd-token>
 
 The {{HTTPHeader("Vary")}} header ensures that the content is cached properly (for
 instance ensuring that the user is not served a lower-quality image from the cache when
-`Save-Data` header is no longer present \[_e.g._ after having switched from cellular to Wi-Fi]).
+`Sec-CH-Save-Data` header is no longer present \[_e.g._ after having switched from cellular to Wi-Fi]).
 
-### With `Save-Data: on`
+### With `Sec-CH-Save-Data: on`
 
 Request:
 
 ```
 GET /image.jpg HTTP/1.0
 Host: example.com
-Save-Data: on
+Sec-CH-Save-Data: on
 ```
 
 Response:
@@ -80,14 +80,14 @@ Response:
 ```
 HTTP/1.0 200 OK
 Content-Length: 102832
-Vary: Accept-Encoding, Save-Data
+Vary: Accept-Encoding, Sec-CH-Save-Data
 Cache-Control: public, max-age=31536000
 Content-Type: image/jpeg
 
 [...]
 ```
 
-### Without `Save-Data`
+### Without `Sec-CH-Save-Data`
 
 Request:
 
@@ -101,7 +101,7 @@ Response:
 ```
 HTTP/1.0 200 OK
 Content-Length: 481770
-Vary: Accept-Encoding, Save-Data
+Vary: Accept-Encoding, Sec-CH-Save-Data
 Cache-Control: public, max-age=31536000
 Content-Type: image/jpeg
 

@@ -10826,6 +10826,7 @@
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/webauthn	/en-US/docs/Web/HTTP/Headers/Feature-Policy/publickey-credentials-get
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/xr	/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
 /en-US/docs/Web/HTTP/Headers/Ranges	/en-US/docs/Web/HTTP/Headers/Range
+/en-US/docs/Web/HTTP/Headers/Save-Data	/en-US/docs/Web/HTTP/Headers/Sec-CH-Save-Data
 /en-US/docs/Web/HTTP/History_of_HTTP_versions	/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 /en-US/docs/Web/HTTP/Pipelining_FAQ	/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
