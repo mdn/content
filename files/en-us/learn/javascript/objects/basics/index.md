@@ -301,11 +301,11 @@ Note that `createPerson()` takes a parameter `name` to set the value of the `nam
 Now we can create as many objects as we like, reusing the definition:
 
 ```js
-const salva = createNewPerson('Salva');
+const salva = createPerson('Salva');
 salva.name;
 salva.introduceSelf();
 
-const frankie = createNewPerson('Frankie');
+const frankie = createPerson('Frankie');
 frankie.name;
 frankie.introduceSelf();
 ```
