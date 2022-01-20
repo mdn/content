@@ -77,7 +77,7 @@ When a `for` loop executes, the following occurs:
 ### Example
 
 In the example below, the function contains a `for` statement that counts
-the number of selected options in a scrolling list (a [`<select>`](/en-US/docs/Web/HTML/Element/select "The HTML <select> element represents a control that provides a menu of options")
+the number of selected options in a scrolling list (a [`<select>`](/en-US/docs/Web/HTML/Element/select)
 element that allows multiple selections). The `for` statement declares the
 variable `i` and initializes it to `0`. It checks that
 `i` is less than the number of options in the `<select>`

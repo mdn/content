@@ -46,7 +46,7 @@ _The `AnimationEvent()` constructor also inherits arguments from
     `(-1 * delay)`. It defaults to `0.0`.
 - `pseudoElement` {{optional_inline}}
   - : Is a {{domxref("DOMString")}}, starting with `"::"`, containing the name
-    of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements "Learn more about pseudo-elements.") the animation runs on.
+    of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on.
     If the animation doesn't run on a pseudo-element but on the element itself, specify an
     empty string: `""`. It defaults to `""`.
 

@@ -15,7 +15,7 @@ browser-compat: api.DeviceOrientationEvent.alpha
 
 Returns the rotation of the device around the Z axis; that is, the number of degrees by
 which the device is being twisted around the center of the screen. See [Orientation and motion data
-explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained "Orientation and motion data explained") for details.
+explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained) for details.
 
 ## Syntax
 

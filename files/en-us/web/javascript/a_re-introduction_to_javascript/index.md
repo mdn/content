@@ -23,7 +23,7 @@ Unlike most programming languages, the JavaScript language has no concept of inp
 
 ## Overview
 
-JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with object prototypes, instead of classes (see more about [prototypical inheritance](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain "prototypical inheritance") and ES2015 [classes](/en-US/docs/Web/JavaScript/Reference/Classes)). JavaScript also supports functional programming — because they are objects, functions may be stored in variables and passed around like any other object.
+JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. Its syntax is based on the Java and C languages — many structures from those languages apply to JavaScript as well. JavaScript supports object-oriented programming with object prototypes, instead of classes (see more about [prototypical inheritance](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) and ES2015 [classes](/en-US/docs/Web/JavaScript/Reference/Classes)). JavaScript also supports functional programming — because they are objects, functions may be stored in variables and passed around like any other object.
 
 Let's start off by looking at the building blocks of any language: the types. JavaScript programs manipulate values, and those values all belong to a type. JavaScript's types are:
 

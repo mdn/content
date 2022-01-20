@@ -26,7 +26,7 @@ The differences are:
 
 - **The button’s visibility:**
 
-  - The page action is hidden by default (although this default can be changed via the `show_matches` and `hide_matches` [manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) properties), and you call [`pageAction.show()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show "Shows the page action for a given tab. The page action is shown whenever the given tab is the active tab.") and [`pageAction.hide()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide "Hides the page action for a given tab.") to show or hide it in specific tabs.
+  - The page action is hidden by default (although this default can be changed via the `show_matches` and `hide_matches` [manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) properties), and you call [`pageAction.show()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show) and [`pageAction.hide()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) to show or hide it in specific tabs.
   - The browser action is always displayed.
 
 Use a page action when the action relates to the current page. Use a browser action when the action relates to the browser as a whole or to many pages. For example:

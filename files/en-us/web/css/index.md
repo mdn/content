@@ -20,7 +20,7 @@ tags:
 
 CSS is among the core languages of the **open web** and is standardized across Web browsers according to [W3C specifications](https://w3.org/Style/CSS/#specs). Previously, development of various parts of CSS specification was done synchronously, which allowed versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, CSS3. However, CSS4 has never become an official version.
 
-From CSS3, the scope of the specification increased significantly and the progress on different CSS modules started to differ so much, that it became more effective to [develop and release recommendations separately per module](https://www.w3.org/Style/CSS/current-work). Instead of versioning the CSS specification, W3C now periodically takes a snapshot of [the latest stable state of the CSS specification](https://www.w3.org/TR/css/).
+From CSS3, the scope of the specification increased significantly and the progress on different CSS modules started to differ so much, that it became more effective to [develop and release recommendations separately per module](https://www.w3.org/Style/CSS/current-work). Instead of versioning the CSS specification, W3C now periodically takes a snapshot of [the latest stable state of the CSS specification](https://www.w3.org/TR/css/).
 
 ## Key resources
 
@@ -65,11 +65,11 @@ Our [CSS Learning Area](/en-US/docs/Learn/CSS) features multiple modules that te
 - CSS key concepts:
 
   - The [syntax and forms of the language](/en-US/docs/Web/CSS/Syntax)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity), [inheritance](/en-US/docs/Web/CSS/inheritance), and [the Cascade](/en-US/docs/Web/CSS/Cascade)
+  - [Specificity](/en-US/docs/Web/CSS/Specificity), [inheritance](/en-US/docs/Web/CSS/inheritance), and [the Cascade](/en-US/docs/Web/CSS/Cascade)
   - [CSS units and values](/en-US/docs/Web/CSS/CSS_Values_and_Units) and [functional notations](/en-US/docs/Web/CSS/CSS_Functions)
   - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) and [margin collapse](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
   - The [containing block](/en-US/docs/Web/CSS/Containing_block)
-  - [Stacking](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context "The stacking context") and [block-formatting](/en-US/docs/Web/Guide/CSS/Block_formatting_context "block formatting context") contexts
+  - [Stacking](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) and [block-formatting](/en-US/docs/Web/Guide/CSS/Block_formatting_context) contexts
   - [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
   - [CSS shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
   - [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
