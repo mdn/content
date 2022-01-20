@@ -5,6 +5,7 @@ tags:
   - Classes
   - JavaScript
   - Language feature
+browser-compat: javascript.classes.public_class_fields
 ---
 {{JsSidebar("Classes")}}
 
@@ -281,11 +282,11 @@ console.log(instance.msg)
 
 ## Specifications
 
-{{Specifications("javascript.classes")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## See also
 
