@@ -249,7 +249,7 @@ The following table summarizes the available traps available to `Proxy` objects.
           </dd>
           <dt>Inherited property access</dt>
           <dd>
-            <!-- markdownlint-disable-next-line MD011 -->
+            <!-- markdownlint-disable MD011 -->
             <code>Object.create(<var>proxy</var>)[foo]</code
             ><br />{{jsxref("Reflect.get()")}}
           </dd>
@@ -286,10 +286,10 @@ The following table summarizes the available traps available to `Proxy` objects.
           </dd>
           <dt>Inherited property assignment</dt>
           <dd>
-            <!-- markdownlint-disable-next-line MD011 -->
             <code>Object.create(<var>proxy</var>)[foo] = bar</code
             ><br />{{jsxref("Reflect.set()")}}
           </dd>
+            <!-- markdownlint-enable MD011 -->
         </dl>
       </td>
       <td>
