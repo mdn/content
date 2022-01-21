@@ -61,7 +61,7 @@ forEach(function(element, index, array) { /* ... */ }, thisArg)
 
 `forEach()` calls a provided `callbackFn` function once
 for each element in an array in ascending index order. It is not invoked for index properties
-that have been deleted or are uninitialized. (For sparse arrays, [see example below](#sparsearray).)
+that have been deleted or are uninitialized. (For sparse arrays, [see example below](#no_operation_for_uninitialized_values_sparse_arrays).)
 
 `callbackFn` is invoked with three arguments:
 
