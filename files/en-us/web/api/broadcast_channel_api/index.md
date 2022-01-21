@@ -38,9 +38,9 @@ It is enough to call the {{domxref("BroadcastChannel.postMessage", "postMessage(
 bc.postMessage('This is a test message.');
 ```
 
-Any kind of object can be sent, not just a {{domxref("DOMString")}}.
+Data sent to the channel is serialized using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). That means you can send a broad variety of data objects safely without having to serialize them yourself.
 
-The API doesn't associate any semantics to messages, so it is up to the code to know what kind of messages to expect and what to do with them.
+The API doesn't associate any semantics to messages, so it is up to the code to know what kind of messages to expect and what to do with them.
 
 ### Receiving a message
 
