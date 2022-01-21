@@ -327,7 +327,7 @@ myArray.sort()
 
 `sort()` can also take a callback function to determine how array elements are compared.
 
-The `sort` method (and others below) that take a callback are known as _iterative methods_, because they iterate over the entire array in some fashion. Each one takes an optional second argument called `thisObject`. If provided, `thisObject` becomes the value of the `this` keyword inside the body of the callback function. If not provided, as with other cases where a function is invoked outside of an explicit object context, `this` will refer to the global object ([`window`](/en-US/docs/Web/API/Window "The Window interface represents a window containing a DOM document; the document property points to the DOM document loaded in that window.")) when using arrow function as callback, or `undefined` when using normal function as callback.
+The `sort` method (and others below) that take a callback are known as _iterative methods_, because they iterate over the entire array in some fashion. Each one takes an optional second argument called `thisObject`. If provided, `thisObject` becomes the value of the `this` keyword inside the body of the callback function. If not provided, as with other cases where a function is invoked outside of an explicit object context, `this` will refer to the global object ([`window`](/en-US/docs/Web/API/Window)) when using arrow function as callback, or `undefined` when using normal function as callback.
 
 The callback function is called with two arguments, that are array's elements.
 

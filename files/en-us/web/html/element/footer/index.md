@@ -109,7 +109,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 ## Usage notes
 
 - Enclose information about the author in an {{HTMLElement("address")}} element that can be included into the `<footer>` element.
-- The `<footer>` element is not sectioning content and therefore doesn't introduce a new section in the [outline](/en-US/docs/Web/HTML/Element/Heading_Elements "Sections and Outlines of an HTML5 document").
+- The `<footer>` element is not sectioning content and therefore doesn't introduce a new section in the [outline](/en-US/docs/Web/HTML/Element/Heading_Elements).
 
 ## Examples
 

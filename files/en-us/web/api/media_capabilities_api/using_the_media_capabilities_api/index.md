@@ -78,7 +78,7 @@ const audioConfiguration = {
 };
 ```
 
-Had we been testing encoding capabilities, we would have created a {{domxref("MediaEncodingConfiguration")}}, which requires the type of media being tested — either `record` (for recording media, i.e. a {{domxref("MediaRecorder")}} object) or `transmission` (for media transmitted over electronic means like [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection "The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed.")) — plus either an audio or video configuration as described above.
+Had we been testing encoding capabilities, we would have created a {{domxref("MediaEncodingConfiguration")}}, which requires the type of media being tested — either `record` (for recording media, i.e. a {{domxref("MediaRecorder")}} object) or `transmission` (for media transmitted over electronic means like [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection)) — plus either an audio or video configuration as described above.
 
 ### Querying the browser about decoding abilities
 

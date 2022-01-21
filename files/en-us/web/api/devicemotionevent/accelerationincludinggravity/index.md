@@ -68,4 +68,4 @@ property:
 - [Detecting device
   orientation](/en-US/docs/Web/Events/Detecting_device_orientation)
 - [Orientation and motion data
-  explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained "Orientation and motion data explained")
+  explained](/en-US/docs/Web/Events/Orientation_and_motion_data_explained)

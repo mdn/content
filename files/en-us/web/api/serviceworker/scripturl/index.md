@@ -12,7 +12,7 @@ browser-compat: api.ServiceWorker.scriptURL
 ---
 {{APIRef("Service Workers API")}}
 
-Returns the `ServiceWorker` serialized script URL defined as part of [`ServiceWorkerRegistration`](/en-US/docs/Web/API/ServiceWorkerRegistration "ServiceWorkerRegistion is an interface object representing the service worker registration. You register a service worker to control one or more pages that share the same origin.").
+Returns the `ServiceWorker` serialized script URL defined as part of [`ServiceWorkerRegistration`](/en-US/docs/Web/API/ServiceWorkerRegistration).
 Must be on the same origin as the document that registers the
 `ServiceWorker`.
 

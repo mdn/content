@@ -28,7 +28,7 @@ You can detect when tracks are added to and removed from an
 [`<video>`](/en-US/docs/Web/HTML/Element/video) element
 using the `addtrack` and `removetrack` events. However, these
 events aren't sent directly to the media element itself. Instead, they're sent to the
-track list object of the [`HTMLMediaElement`](/en-US/docs/Web/API/HTMLMediaElement "The HTMLMediaElement interface adds to HTMLElement the properties and methods needed to support basic media-related capabilities that are common to audio and video.")
+track list object of the [`HTMLMediaElement`](/en-US/docs/Web/API/HTMLMediaElement)
 that corresponds to the type of track that was added to the element
 
 The returned list is _live_; that is, as tracks are added to and removed from
@@ -72,7 +72,7 @@ children
 ```
 
 The `HTMLMediaElement.textTracks` returns a
-`textTracksList` thru which we can iterate.  Here we print all the properties
+`textTracksList` thru which we can iterate. Here we print all the properties
 of each English track to the console.
 
 ```js

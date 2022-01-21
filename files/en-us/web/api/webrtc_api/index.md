@@ -15,7 +15,7 @@ tags:
 ---
 {{DefaultAPISidebar("WebRTC")}}
 
-**WebRTC** (Web Real-Time Communication) is a technology that enables Web applications and sites to capture and optionally stream audio and/or video media, as well as to exchange arbitrary data between browsers without requiring an intermediary. The set of standards that comprise WebRTC makes it possible to share data and perform teleconferencing peer-to-peer, without requiring that the user install plug-ins or any other third-party software.
+**WebRTC** (Web Real-Time Communication) is a technology that enables Web applications and sites to capture and optionally stream audio and/or video media, as well as to exchange arbitrary data between browsers without requiring an intermediary. The set of standards that comprise WebRTC makes it possible to share data and perform teleconferencing peer-to-peer, without requiring that the user install plug-ins or any other third-party software.
 
 WebRTC consists of several interrelated APIs and protocols which work together to achieve this. The documentation you'll find here will help you understand the fundamentals of WebRTC, how to set up and use both data and media connections, and more.
 
@@ -23,15 +23,15 @@ WebRTC consists of several interrelated APIs and protocols which work together t
 
 Because implementations of WebRTC are still evolving, and because each browser has [different levels of support for codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs) and WebRTC features, you should _strongly_ consider making use of [the Adapter.js library](https://github.com/webrtcHacks/adapter) provided by Google before you begin to write your code.
 
-Adapter.js uses shims and polyfills to smooth over the differences among the WebRTC implementations across the environments supporting it. Adapter.js also handles prefixes and other naming differences to make the entire WebRTC development process easier, with more broadly compatible results. The library is also [available as an NPM package](https://www.npmjs.com/package/webrtc-adapter).
+Adapter.js uses shims and polyfills to smooth over the differences among the WebRTC implementations across the environments supporting it. Adapter.js also handles prefixes and other naming differences to make the entire WebRTC development process easier, with more broadly compatible results. The library is also [available as an NPM package](https://www.npmjs.com/package/webrtc-adapter).
 
 To learn more about Adapter.js, see [Improving compatibility using WebRTC adapter.js](/en-US/docs/Web/API/WebRTC_API/adapter.js).
 
 ## WebRTC concepts and usage
 
-WebRTC serves multiple purposes; together with the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API), they provide powerful multimedia capabilities to the Web, including support for audio and video conferencing, file exchange, screen sharing, identity management, and interfacing with legacy telephone systems including support for sending {{Glossary("DTMF")}} (touch-tone dialing) signals. Connections between peers can be made without requiring any special drivers or plug-ins, and can often be made without any intermediary servers.
+WebRTC serves multiple purposes; together with the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API), they provide powerful multimedia capabilities to the Web, including support for audio and video conferencing, file exchange, screen sharing, identity management, and interfacing with legacy telephone systems including support for sending {{Glossary("DTMF")}} (touch-tone dialing) signals. Connections between peers can be made without requiring any special drivers or plug-ins, and can often be made without any intermediary servers.
 
-Connections between two peers are represented by the {{DOMxRef("RTCPeerConnection")}} interface. Once a connection has been established and opened using `RTCPeerConnection`, media streams ({{DOMxRef("MediaStream")}}s) and/or data channels ({{DOMxRef("RTCDataChannel")}}s) can be added to the connection.
+Connections between two peers are represented by the {{DOMxRef("RTCPeerConnection")}} interface. Once a connection has been established and opened using `RTCPeerConnection`, media streams ({{DOMxRef("MediaStream")}}s) and/or data channels ({{DOMxRef("RTCDataChannel")}}s) can be added to the connection.
 
 Media streams can consist of any number of tracks of media information; tracks, which are represented by objects based on the {{DOMxRef("MediaStreamTrack")}} interface, may contain one of a number of types of media data, including audio, video, and text (such as subtitles or even chapter names). Most streams consist of at least one audio track and likely also a video track, and can be used to send and receive both live media or stored media information (such as a streamed movie).
 
@@ -64,15 +64,15 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{DOMxRef("RTCIceTransport")}}
   - : Represents information about an {{Glossary("ICE")}} transport.
 - {{DOMxRef("RTCPeerConnectionIceEvent")}}
-  - : Represents events that occur in relation to ICE candidates with the target, usually an {{DOMxRef("RTCPeerConnection")}}. Only one event is of this type: {{event("icecandidate")}}.
+  - : Represents events that occur in relation to ICE candidates with the target, usually an {{DOMxRef("RTCPeerConnection")}}. Only one event is of this type: {{event("icecandidate")}}.
 - {{DOMxRef("RTCRtpSender")}}
   - : Manages the encoding and transmission of data for a {{DOMxRef("MediaStreamTrack")}} on an {{DOMxRef("RTCPeerConnection")}}.
 - {{DOMxRef("RTCRtpReceiver")}}
   - : Manages the reception and decoding of data for a {{DOMxRef("MediaStreamTrack")}} on an {{DOMxRef("RTCPeerConnection")}}.
 - {{DOMxRef("RTCTrackEvent")}}
-  - : The interface used to represent a {{domxref("RTCPeerConnection.track_event", "track")}} event, which indicates that an {{DOMxRef("RTCRtpReceiver")}} object was added to the {{DOMxRef("RTCPeerConnection")}} object, indicating that a new incoming {{DOMxRef("MediaStreamTrack")}} was created and added to the `RTCPeerConnection`.
+  - : The interface used to represent a {{domxref("RTCPeerConnection.track_event", "track")}} event, which indicates that an {{DOMxRef("RTCRtpReceiver")}} object was added to the {{DOMxRef("RTCPeerConnection")}} object, indicating that a new incoming {{DOMxRef("MediaStreamTrack")}} was created and added to the `RTCPeerConnection`.
 - {{DOMxRef("RTCSctpTransport")}}
-  - : Provides information which describes a Stream Control Transmission Protocol (**{{Glossary("SCTP")}}**) transport and also provides a way to access the underlying Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) transport over which SCTP packets for all of an [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection "The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed.")'s data channels are sent and received.
+  - : Provides information which describes a Stream Control Transmission Protocol (**{{Glossary("SCTP")}}**) transport and also provides a way to access the underlying Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) transport over which SCTP packets for all of an [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection)'s data channels are sent and received.
 
 #### Dictionaries
 
@@ -104,9 +104,9 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}
   - : An {{domxref("RTCPeerConnectionIceErrorEvent")}} indicating that an error has occurred while gathering ICE candidates.
 - {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
-  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE connection's state—found in the {{domxref("RTCPeerConnection.iceconnectionstate", "iceconnectionstate")}} property—changes.
+  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE connection's state—found in the {{domxref("RTCPeerConnection.iceconnectionstate", "iceconnectionstate")}} property—changes.
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
-  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE gathering state—found in the {{domxref("RTCPeerConnection.icegatheringstate", "icegatheringstate")}} property—changes.
+  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE gathering state—found in the {{domxref("RTCPeerConnection.icegatheringstate", "icegatheringstate")}} property—changes.
 - {{domxref("RTCDataChannel.message_event", "message")}}
   - : A message has been received on the data channel. The event is of type {{domxref("MessageEvent")}}.
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
@@ -116,7 +116,7 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}}
   - : The currently-selected pair of ICE candidates has changed for the `RTCIceTransport` on which the event is fired.
 - {{domxref("RTCPeerConnection.track_event", "track")}}
-  - : The `track` event, of type {{domxref("RTCTrackevent")}} is sent to an {{domxref("RTCPeerConnection")}} when a new track is added to the connection following the successful negotiation of the media's streaming.
+  - : The `track` event, of type {{domxref("RTCTrackevent")}} is sent to an {{domxref("RTCPeerConnection")}} when a new track is added to the connection following the successful negotiation of the media's streaming.
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
   - : Sent to the peer connection when its {{domxref("RTCPeerConnection.signalingstate", "signalingstate")}} has changed. This happens as a result of a call to either {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} or {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.
 - {{domxref("RTCDtlsTransport.statechange_event", "statechange")}}
@@ -138,7 +138,7 @@ These APIs are used to manage user identity and security, in order to authentica
 - {{DOMxRef("RTCIdentityProvider")}}
   - : Enables a user agent is able to request that an identity assertion be generated or validated.
 - {{DOMxRef("RTCIdentityAssertion")}}
-  - : Represents the identity of the remote peer of the current connection. If no peer has yet been set and verified this interface returns `null`. Once set it can't be changed.
+  - : Represents the identity of the remote peer of the current connection. If no peer has yet been set and verified this interface returns `null`. Once set it can't be changed.
 - {{DOMxRef("RTCIdentityProviderRegistrar")}}
   - : Registers an identity provider (idP).
 - {{DOMxRef("RTCCertificate")}}
@@ -169,7 +169,7 @@ These interfaces and events are related to interactivity with Public-Switched Te
 - [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
   - : WebRTC lets you build peer-to-peer communication of arbitrary data, audio, or video—or any combination thereof—into a browser application. In this article, we'll look at the lifetime of a WebRTC session, from establishing the connection all the way through closing the connection when it's no longer needed.
 - [Establishing a connection: The perfect negotiation pattern](/en-US/docs/Web/API/WebRTC_API/Perfect_negotiation)
-  - : **Perfect negotiation** is a design pattern which is recommended for your signaling process to follow, which provides transparency in negotiation while allowing both sides to be either the offerer or the answerer, without significant coding needed to differentiate the two.
+  - : **Perfect negotiation** is a design pattern which is recommended for your signaling process to follow, which provides transparency in negotiation while allowing both sides to be either the offerer or the answerer, without significant coding needed to differentiate the two.
 - [Signaling and two-way video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
   - : A tutorial and example which turns a WebSocket-based chat system created for a previous example and adds support for opening video calls among participants. The chat server's WebSocket connection is used for WebRTC signaling.
 - [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs)
