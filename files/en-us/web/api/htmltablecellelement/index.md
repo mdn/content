@@ -62,7 +62,7 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 - {{domxref("HTMLTableCellElement.bgColor")}} {{deprecated_inline}}
   - : A string containing the background color of the cells. It reflects the obsolete {{htmlattrxref("bgColor", "td")}} attribute.
 - {{domxref("HTMLTableCellElement.ch")}} {{deprecated_inline}}
-  - : A string containing one single chararcter. This character is the one to align all the cell of a column on. It reflects the {{htmlattrxref("char", "td")}} and default to the decimal points associated with the language, e.g. `'.'` for English, or `','` for French. This property was optional and was not very well supported.
+  - : A string containing one single character. This character is the one to align all the cell of a column on. It reflects the {{htmlattrxref("char", "td")}} and default to the decimal points associated with the language, e.g. `'.'` for English, or `','` for French. This property was optional and was not very well supported.
 - {{domxref("HTMLTableCellElement.chOff")}} {{deprecated_inline}}
   - : A string containing a integer indicating how many characters must be left at the right (for left-to-right scripts; or at the left for right-to-left scripts) of the character defined by `HTMLTableCellElement.ch`. This property was optional and was not very well supported.
 - {{domxref("HTMLTableCellElement.height")}} {{deprecated_inline}}

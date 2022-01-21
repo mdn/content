@@ -253,7 +253,7 @@ heuristics.
 Features disabled by the pref include:
 
 - [Storage access heuristics](#storage_access_heuristics): Unpartitioned storage
-  access can only be aquired via the Storage Access API.
+  access can only be acquired via the Storage Access API.
 - Automatic storage access grants:
   [document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess)
   will always prompt the user.

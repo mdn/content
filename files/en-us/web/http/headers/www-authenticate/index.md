@@ -149,7 +149,7 @@ A server that only supports basic authentication might have a `WWW-Authenticate`
 WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
 ```
 
-A user-agent recieving this header would first prompt the user for their username and password, and then re-request the resource: this time including the (encoded) credentials in the {{HTTPHeader("Authorization")}} header.
+A user-agent receiving this header would first prompt the user for their username and password, and then re-request the resource: this time including the (encoded) credentials in the {{HTTPHeader("Authorization")}} header.
 The {{HTTPHeader("Authorization")}} header might look like this:
 
 ```https

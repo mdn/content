@@ -359,7 +359,7 @@ In theory, if directives are conflicted, the most restrictive directive should b
 # conflicted
 Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
 
-# equivalant to
+# equivalent to
 Cache-Control: no-store
 ```
 

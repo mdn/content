@@ -82,7 +82,7 @@ Had we been testing encoding capabilities, we would have created a {{domxref("Me
 
 ### Querying the browser about decoding abilities
 
-Now that we've created a video decoding configuration we can pass it as a paramater of the {{domxref("MediaCapabilities.decodingInfo", "decodingInfo()")}} method to determine if a video matching this configuration would be decodable and if the playback would be smooth and power efficient.
+Now that we've created a video decoding configuration we can pass it as a parameter of the {{domxref("MediaCapabilities.decodingInfo", "decodingInfo()")}} method to determine if a video matching this configuration would be decodable and if the playback would be smooth and power efficient.
 
 ```js
 var promise = navigator.mediaCapabilities.decodingInfo(videoConfiguration);

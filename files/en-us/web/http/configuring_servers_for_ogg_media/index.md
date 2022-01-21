@@ -80,7 +80,7 @@ One common way to reduce the load on a web server is to use [gzip or deflate com
 
 Although it's unlikely, it's possible the browser may advertise that it supports HTTP compression (gzip/deflate) using the `Accept-Encoding: gzip,deflate` header when requesting media files. Your server should be configured to not do so. The data in media files is already compressed, so you won't get any real benefit from compression, and the use of compression makes it impossible for the browser to properly seek the video or determine its duration.
 
-Another probelm with allowing HTTP compression for media streaming: Apache servers don't send the {{HTTPHeader("Content-Length")}} response header if gzip encoding is used.
+Another problem with allowing HTTP compression for media streaming: Apache servers don't send the {{HTTPHeader("Content-Length")}} response header if gzip encoding is used.
 
 ### Getting the duration of Ogg media
 

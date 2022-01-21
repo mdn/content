@@ -37,8 +37,8 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
  <li>NSS/NSPR objects whose collection elements can be referenced by name support associative indexing.</li>
  <li>NSS/NSPR objects which have "get" and "set" API function calls are exposed as Python properties.</li>
  <li>All NSS/NSPR Python objects can print their current value by evaluting the Python object in a string context or by using the Python str() function.</li>
- <li>Support threading. The Python Global Interpreter Lock (GIL) is released prior to calling NSS/NSPR C functions and reaquired after the NSS/NSPR C function returns. This allows other Python threads to execute during the time a NSS/NSPR function is progress in another thread. Also, any "global" values which are set in python-nss are actually thread-local. Examples of this are the various callbacks which can be set and their parameters. Thus each thread gets it own set of callbacks.</li>
- <li>Many methods/functions provide sane default (keyword) parameters freeing the Python programmer from having to specify all parameters yet allowing them to be overriden when necessary.</li>
+ <li>Support threading. The Python Global Interpreter Lock (GIL) is released prior to calling NSS/NSPR C functions and reacquired after the NSS/NSPR C function returns. This allows other Python threads to execute during the time a NSS/NSPR function is progress in another thread. Also, any "global" values which are set in python-nss are actually thread-local. Examples of this are the various callbacks which can be set and their parameters. Thus each thread gets it own set of callbacks.</li>
+ <li>Many methods/functions provide sane default (keyword) parameters freeing the Python programmer from having to specify all parameters yet allowing them to be overridden when necessary.</li>
  <li>Error codes are <em>never</em> returned from methods/functions. python-nss follows the existing Python exception mechanism. Any error reported by NSS/NSPR is converted into a Python exception and raised. The exact error code, error description, and often contextual error information will be present in the exception object.</li>
  <li>Enumerated constants used in the NSS/NSPR API's are available in the Python module under the <em>exact</em> same name as they appear in the C header files of NSS/NSPR.</li>
  <li>Convenience functions are provided to translate between the numeric value of an enumerated constant and it's string representation and visa versa.</li>
@@ -176,7 +176,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
     <ul>
      <li>Allow custom include root in setup.py as command line arg.</li>
      <li>Add TLS chacha20 poly1305 constants.</li>
-     <li>Remove checks for whether a socket is open for reading. It's not possible for the binding to know in all cases, especially if the socket is created from an xternal socket passed in.</li>
+     <li>Remove checks for whether a socket is open for reading. It's not possible for the binding to know in all cases, especially if the socket is created from an external socket passed in.</li>
      <li>The following module functions were added:
       <ul>
        <li>nss.get_all_tokens</li>
@@ -622,7 +622,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
       <p>Rewrite setup_certs.py, it was written like an expect script reacting to prompts read from a pseudo terminal but it was fragile and would hang on some systems. New version uses temporary password file and writes hardcoded responses to the stdin of certuil and modutil.</p>
      </li>
      <li>
-      <p>setup_certs now creates a new sql sytle NSS database (sql:pki)</p>
+      <p>setup_certs now creates a new sql style NSS database (sql:pki)</p>
      </li>
      <li>
       <p>All tests and examples now load the sql:pki database. Command line arg and variable changed from dbdir to db_name to reflect the database specification is no longer just a directory.</p>
