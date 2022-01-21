@@ -622,7 +622,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
       <p>Rewrite setup_certs.py, it was written like an expect script reacting to prompts read from a pseudo terminal but it was fragile and would hang on some systems. New version uses temporary password file and writes hardcoded responses to the stdin of certuil and modutil.</p>
      </li>
      <li>
-      <p>setup_certs now creates a new sql sytle NSS database (sql:pki)</p>
+      <p>setup_certs now creates a new sql style NSS database (sql:pki)</p>
      </li>
      <li>
       <p>All tests and examples now load the sql:pki database. Command line arg and variable changed from dbdir to db_name to reflect the database specification is no longer just a directory.</p>
