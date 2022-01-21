@@ -45,7 +45,7 @@ In many cases, you may be able to add the `EmbedLiveSample` or `LiveSampleLink` 
 #### EmbedLiveSample macro
 
 ```js
- \{{EmbedLiveSample(<em>block_ID</em>, <em>width</em>, <em>height</em>, <em>screenshot_URL</em>, <em>page_slug</em>)}}
+\{{EmbedLiveSample(block_ID, width, height, screenshot_URL, page_slug)}}
 ```
 
 - block_ID
@@ -65,7 +65,7 @@ In many cases, you may be able to add the `EmbedLiveSample` or `LiveSampleLink` 
 #### LiveSampleLink macro
 
 ```js
- \{{LiveSampleLink(<em>block_ID</em>, <em>link_text</em>)}}
+\{{LiveSampleLink(block_ID, link_text)}}
 ```
 
 - block_ID
