@@ -14,14 +14,14 @@ browser-compat: api.DOMRect.fromRect
 ---
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-The **`fromRect()`** property of the
-{{domxref("DOMRect")}} interface creates a new `DOMRect`
+The **`fromRect()`** static method of the
+{{domxref("DOMRect")}} object creates a new `DOMRect`
 object with a given location and dimensions.
 
 ## Syntax
 
 ```js
-fromRect(rectangle)
+DOMRect.fromRect(rectangle)
 ```
 
 ### Parameters
