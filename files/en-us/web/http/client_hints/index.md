@@ -54,7 +54,7 @@ The user agent appends the requested client hint headers, or at least the subset
 
 In other words, the request for a specific set of hints does not expire until the browser is shut down.
 
-A server can replace the set of client hints it is interested in recieving by resending the `Accept-CH` response header with a new list.
+A server can replace the set of client hints it is interested in receiving by resending the `Accept-CH` response header with a new list.
 For example, to stop requesting any hints it would send `Accept-CH` with an empty list.
 
 ## Low entropy hints
