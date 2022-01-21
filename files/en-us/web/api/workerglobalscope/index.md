@@ -61,7 +61,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : Fired at the global/worker scope object when the user's preferred languages change.
     Also available via the {{domxref("WorkerGlobalScope.onlanguagechange")}} property.
 - `rejectionhandled` {{non-standard_inline}}
-  - : An event handler for handled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)) rejection events.
+  - : An event handler for handled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) rejection events.
     Also available via the {{domxref("WorkerGlobalScope.onrejectionhandled")}} property.
 - `unhandledrejection` {{non-standard_inline}}
   - : An event handler for unhandled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)) rejection events.
