@@ -82,12 +82,12 @@ a.length = Math.max(0, a.length - 1);
 
 let b = new Array(Math.pow(2, 32) - 1);
 b.length = Math.min(0xffffffff, b.length + 1);
+// 0xffffffff is the hexadecimal notation for 2^32 - 1
+// which can also be written as (-1 >>> 0)
+
 b.length = 3;
 
 let c = new Array(3);
-
-// 0xffffffff is the hexadecimal notation for 2^32 - 1
-// which can also be written as (-1 >>> 0)
 ```
 
 ## See also
