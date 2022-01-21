@@ -143,7 +143,7 @@ More recent browsers, including Firefox, also support listening to the `XMLHttpR
   - [Ajax — Getting Started](/en-US/docs/Web/Guide/AJAX/Getting_Started)
   - [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
   - [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-  - [Fetch API](/en-US/docs/Web/API/Fetch_API "Fetch API")
+  - [Fetch API](/en-US/docs/Web/API/Fetch_API)
 
 - [HTML5 Rocks — New Tricks in XMLHttpRequest2](https://www.html5rocks.com/en/tutorials/file/xhr2/)
 - Feature-Policy directive {{httpheader("Feature-Policy/sync-xhr", "sync-xhr")}}

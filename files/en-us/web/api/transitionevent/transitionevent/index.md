@@ -43,7 +43,7 @@ _The `TransitionEvent()` constructor also inherits arguments from
     seconds, when this event fired, excluding any time the animation was paused. For an
     `"animationstart"` event, `elapsedTime` is `0.0`
     unless there was a negative value for
-    [`animation-delay`](/en-US/docs/Web/CSS/animation-delay "The animation-delay CSS property specifies when the animation should start. This lets the animation sequence begin some time after it's applied to an element."),
+    [`animation-delay`](/en-US/docs/Web/CSS/animation-delay),
     in which case the event will be fired with `elapsedTime` containing
     `(-1 * delay)`. It defaults to `0.0`.
 - `pseudoElement` {{optional_inline}}

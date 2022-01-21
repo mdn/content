@@ -116,5 +116,5 @@ function printPage (sURL) {
 - [`window.print`](/en-US/docs/Web/API/Window/print)
 - [`window.onbeforeprint`](/en-US/docs/Web/API/WindowEventHandlers/onbeforeprint)
 - [`window.onafterprint`](/en-US/docs/Web/API/WindowEventHandlers/onafterprint)
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries "CSS/Media queries")
+- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 - {{cssxref("@media")}}

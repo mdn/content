@@ -148,6 +148,6 @@ document.querySelector("#myfiles").onchange=pullfiles;
 
 ## See also
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications "Using files from web applications")
+- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
 - [`File`](/en-US/docs/Web/API/File)
 - [`FileReader`](/en-US/docs/Web/API/FileReader)

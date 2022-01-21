@@ -17,7 +17,7 @@ browser-compat: webextensions.api.browserAction.onClicked
 
 Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup.
 
-To define a right-click action, use the [`contextMenus`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus) API with the "browser_action" [context type](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType "The different contexts a menu can appear in.").
+To define a right-click action, use the [`contextMenus`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus) API with the "browser_action" [context type](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType).
 
 ## Syntax
 

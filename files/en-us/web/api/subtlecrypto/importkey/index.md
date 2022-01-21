@@ -91,7 +91,7 @@ const result = crypto.subtle.importKey(
 
 ### Return value
 
-- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.")
+- `result` is a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
   that fulfills with the imported key as a {{domxref("CryptoKey")}} object.
 
 ### Exceptions

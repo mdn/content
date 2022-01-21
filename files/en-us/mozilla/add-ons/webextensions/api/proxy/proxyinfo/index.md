@@ -33,13 +33,13 @@ Values of this type are objects. They contain the following properties:
 - `port`
   - : `number`. The port number of the proxy server. Mandatory unless `type` is `"direct"`.
 - `username`
-  - : `string`. Username for the proxy service. This is usable with "socks". For HTTP proxy authorizations, use [`webRequest.onAuthRequired`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired "Fired when the server sends a 401 or 407 status code: that is, when the server is asking the client to provide authentication credentials such as a username and password.").
+  - : `string`. Username for the proxy service. This is usable with "socks". For HTTP proxy authorizations, use [`webRequest.onAuthRequired`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired).
 - `password`
-  - : `string`. Password for the proxy service. This is usable with "socks". For HTTP proxy authorizations, use [`webRequest.onAuthRequired`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired "Fired when the server sends a 401 or 407 status code: that is, when the server is asking the client to provide authentication credentials such as a username and password.").
+  - : `string`. Password for the proxy service. This is usable with "socks". For HTTP proxy authorizations, use [`webRequest.onAuthRequired`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired).
 - `proxyDNS`
   - : `boolean`. If true, the proxy server is used to resolve certain DNS queries (only usable with `"socks4"` and `"socks"`). Defaults to `false`.
 - `failoverTimeout`
-  - : `number`.  Failover timeout in seconds. If the connection fails to connect the proxy server after this number of seconds, the next proxy server in the array returned from the `proxy.onRequest` listener will be used.
+  - : `number`. Failover timeout in seconds. If the connection fails to connect the proxy server after this number of seconds, the next proxy server in the array returned from the `proxy.onRequest` listener will be used.
 - `proxyAuthorizationHeader`
 
   - : `string.` This string, if set to non-empty, is passed directly as a value to the {{httpheader("Proxy-Authorization")}} request header sent to HTTP proxies as part of plain HTTP requests and CONNECT requests. In other words, this can be used to directly authenticate to HTTP proxies requiring (non-challenging) authentication.
