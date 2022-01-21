@@ -7,9 +7,9 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
-In [the last article](/en-US/Learn/JavaScript/Objects/Object-oriented_programming) we introduced some basic concepts of object-oriented programming (OOP), and discussed an example where we used OOP principles to model professors and students in a school.
+In [the last article](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming) we introduced some basic concepts of object-oriented programming (OOP), and discussed an example where we used OOP principles to model professors and students in a school.
 
-We also talked about how it's possible to use [prototypes](/en-US/Learn/JavaScript/Objects/Object_prototypes) and [constructors](/en-US/docs/Learn/JavaScript/Objects/Basics#introducing_constructors) to implement a model like this, and that JavaScript also provides features that map more closely to classical OOP concepts.
+We also talked about how it's possible to use [prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes) and [constructors](/en-US/docs/Learn/JavaScript/Objects/Basics#introducing_constructors) to implement a model like this, and that JavaScript also provides features that map more closely to classical OOP concepts.
 
 In this article we'll go through these features. It's worth keeping in mind that the features described here are not a new way of combining objects: under the hood, they still use prototypes. They're just a way to make it easier to set up a prototype chain.
 
@@ -143,7 +143,7 @@ With this declaration we can now create and use professors:
 
 ```js
 const walsh = new Professor('Walsh', 'Psychology');
-walsh.introduceSelf();  // 'My name is Professor Walsh, and I will be your Psychology professor'
+walsh.introduceSelf();  // 'My name is Walsh, and I will be your Psychology professor'
 
 walsh.grade('my paper'); // some random grade
 ```
@@ -219,7 +219,7 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-In this article we've gone through the main tools available in JavaScript for writing object-oriented programs. We haven't covered everything here, but this should be enough to get you started. Our [article on Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) is a good place to learn more.
+In this article we've gone through the main tools available in JavaScript for writing object-oriented programs. We haven't covered everything here, but this should be enough to get you started. Our [article on Classes](/en-US/docs/Web/JavaScript/Reference/Classes) is a good place to learn more.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
