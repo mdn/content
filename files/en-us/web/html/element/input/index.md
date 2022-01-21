@@ -1021,7 +1021,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
         A non-empty input whose current value is NOT within the range limits
         specified by the {{ htmlattrxref("min", "input", "", 1)}}
         and {{ htmlattrxref("max", "input", "", 1)}} attributes or
-        does not adher to the
+        does not adhere to the
         {{ htmlattrxref("step", "input", "", 1)}} constraint.
       </td>
     </tr>
