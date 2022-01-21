@@ -88,13 +88,13 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 The `<hgroup>` element allows the primary heading for a document section to be grouped with any secondary headings—such as subheadings or alternative titles—to form a _multi-level_ heading.
 
-In other words, the `<hgroup>` element prevents any of its secondary [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) children from creating separate sections of their own in the outline—as those [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) elements otherwise normally would if they were not children of any `<hgroup>`.
+In other words, the `<hgroup>` element prevents any of its secondary [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) children from creating separate sections of their own in the outline—as those [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) elements otherwise normally would if they were not children of any `<hgroup>`.
 
 So in the abstract outline produced by the [HTML outline algorithm defined in the HTML specification](/en-US/docs/Web/HTML/Element/Heading_Elements#the_html5_outline_algorithm), the `<hgroup>` as a whole forms a single logical heading, with the entire set of [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) children of the `<hgroup>` going into the outline as one _multi-level_ unit, to comprise that single logical heading in the abstract outline.
 
 To produce any (non-abstract) _rendered_ view of such an outline, some choice must be made in the design of the rendering tool about how to render `<hgroup>` headings in such a way as to convey their multi-level nature. There are a variety of ways an `<hgroup>` might be shown in a rendered outline; for example:
 
-- an `<hgroup>` might be shown in a rendered outline in with a colon character and space (“`: `”) or other such punctuation after the primary heading and before the first secondary heading (and with the same or similar punctuation before any other secondary headings
+- an `<hgroup>` might be shown in a rendered outline in with a colon character and space (": ") or other such punctuation after the primary heading and before the first secondary heading (and with the same or similar punctuation before any other secondary headings
 - an `<hgroup>` might be shown in a rendered outline in with the primary heading followed by parentheses around the secondary heading(s)
 
 Consider the following HTML document:

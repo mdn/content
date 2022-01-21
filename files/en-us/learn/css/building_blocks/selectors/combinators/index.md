@@ -42,7 +42,7 @@ The final selectors we will look at are called combinators, because they combine
 
 ## Descendant combinator
 
-The **descendant combinator** — typically represented by a single space (` `) character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc) element matching the first selector. Selectors that utilize a descendant combinator are called *descendant selectors*.
+The **descendant combinator** — typically represented by a single space (" ") character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc) element matching the first selector. Selectors that utilize a descendant combinator are called *descendant selectors*.
 
 ```css
 body article p
@@ -54,7 +54,7 @@ In the example below, we are matching only the `<p>` element which is inside an 
 
 ## Child combinator
 
-The **child combinator** (`>`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the direct children of elements matched by the first. Descendant elements further down the hierarchy don't match. For example, to select only `<p>` elements that are direct children of `<article>` elements:
+The **child combinator** (`>`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the direct children of elements matched by the first. Descendant elements further down the hierarchy don't match. For example, to select only `<p>` elements that are direct children of `<article>` elements:
 
 ```css
 article > p
@@ -106,7 +106,7 @@ It is often better to create a simple class and apply that to the element in que
 
 ## Test your skills!
 
-We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Selectors_Tasks).
+We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Selectors_Tasks).
 
 ## Moving on
 

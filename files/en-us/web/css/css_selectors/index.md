@@ -51,7 +51,7 @@ tags:
 ## Combinators
 
 - [Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator)
-  - : The ` ` (space) combinator selects nodes that are descendants of the first element.  
+  - : The " " (space) combinator selects nodes that are descendants of the first element.  
     **Syntax:** `A B`  
     **Example:** `div span` will match all {{HTMLElement("span")}} elements that are inside a {{HTMLElement("div")}} element.  
 
