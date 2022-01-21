@@ -161,7 +161,7 @@ One of the most difficult tasks is to maintain a constant and high framerate va
 
 Based on the Wikipedia definition, IPD is the distance between the centers of the pupils of the two eyes. IPD is critical for the design of binocular viewing systems, where both eye pupils need to be positioned within the exit pupils of the viewing system.
 
-Interpupillary distace ( IPD ) can be calculated using {{domxref("VREyeParameters.offset")}} in WebVR, which is equal to half the IPD.
+Interpupillary distance ( IPD ) can be calculated using {{domxref("VREyeParameters.offset")}} in WebVR, which is equal to half the IPD.
 
 This value is returned by the HMD and its value may be around 60 to 70 mm; in the case of some HMDs like Oculus Rift's, you can set your own IPD. Normally we don't change this value but you can play with it to change the scale of the entire scene. For example, if your IPD is set to 6000 mm, the user would view the scene like a giant looking at a Lilliputian world.
 
