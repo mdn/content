@@ -140,7 +140,7 @@ To reiterate, each `<section>` should be identified, typically by including a he
 
 Circumstances where you might see `<section>` used without a heading are typically found in web application/UI sections rather than in traditional document structures. In a document, it doesn't really make any sense to have a separate section of content without a heading to describe its contents. Such headings are useful for all readers, but particularly useful for users of assistive technologies like screenreaders, and they are also good for SEO.
 
-Consider however a secondary navigation mechanism. If the global navigation is already wrapped in a `<nav>` element, you could conceiveably wrap a previous/next menu in a `<section>`:
+Consider however a secondary navigation mechanism. If the global navigation is already wrapped in a `<nav>` element, you could conceivably wrap a previous/next menu in a `<section>`:
 
 ```html
 <section>
