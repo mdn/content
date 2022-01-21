@@ -59,7 +59,7 @@ if(navigator.getVRDisplays && navigator.getGamepads) {
 }
 ```
 
-Here we first use a tracking variable, `initialRun`, to note that this is the first time we have loaded the page. You'll find out more about this later on. Next, we detect to see if the WebVR and Gamepad APIs are supported by cheking for the existence of the {{domxref("Navigator.getVRDisplays()")}} and {{domxref("Navigator.getGamepads()")}} methods. If so, we run our `reportDisplays()` custom function to start the process off. This function looks like so:
+Here we first use a tracking variable, `initialRun`, to note that this is the first time we have loaded the page. You'll find out more about this later on. Next, we detect to see if the WebVR and Gamepad APIs are supported by checking for the existence of the {{domxref("Navigator.getVRDisplays()")}} and {{domxref("Navigator.getGamepads()")}} methods. If so, we run our `reportDisplays()` custom function to start the process off. This function looks like so:
 
 ```js
 function reportDisplays() {
