@@ -87,7 +87,7 @@ Another example where this might be suitable is when using ASCII emoji combinati
 </div>
 ```
 
-If `aria-labelledby` were used, the screen reader would read it. In this case, only the contents of the `aria-label` are announced to screen reader users, hiding the jibberish of the characters without the need for descendant ARIA to hide things, but also hiding potential content that may be part of the image.
+If `aria-labelledby` were used, the screen reader would read it. In this case, only the contents of the `aria-label` are announced to screen reader users, hiding the gibberish of the characters without the need for descendant ARIA to hide things, but also hiding potential content that may be part of the image.
 
 ### Associated WAI-ARIA Roles, States, and Properties
 

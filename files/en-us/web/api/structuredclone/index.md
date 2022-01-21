@@ -60,7 +60,7 @@ console.assert(clone.name === "MDN"); // they do have the same values
 console.assert(clone.itself === clone); // and the circular reference is preserved
 ```
 
-### Transfering values
+### Transferring values
 
 {{Glossary("Transferable objects")}} (only) can be transferred rather than duplicated in the cloned object, using the optional parameter's `transfer` value.
 Transferring makes the original object unusable.

@@ -757,7 +757,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
     The value must be a positive number—integer or float—or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as `{{anch("min")}}` and `{{anch("max")}}`).
 
-    If `any` is not explicity set, valid values for the `number`, date/time input types, and `range` input types are equal to the basis for stepping — the `{{anch("min")}}` value and increments of the step value, up to the `{{anch("max")}}` value, if specified.
+    If `any` is not explicitly set, valid values for the `number`, date/time input types, and `range` input types are equal to the basis for stepping — the `{{anch("min")}}` value and increments of the step value, up to the `{{anch("max")}}` value, if specified.
 
     For example, if you have `<input type="number" min="10" step="2">`, then any even integer, `10` or greater, is valid. If omitted, `<input type="number">`, any integer is valid, but floats (like `4.2`) are not valid, because `step` defaults to `1`. For `4.2` to be valid, `step` would have had to be set to `any`, 0.1, 0.2, or any the `min` value would have had to be a number ending in `.2`, such as `<input type="number" min="-5.2">`
 
@@ -1021,7 +1021,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
         A non-empty input whose current value is NOT within the range limits
         specified by the {{ htmlattrxref("min", "input", "", 1)}}
         and {{ htmlattrxref("max", "input", "", 1)}} attributes or
-        does not adher to the
+        does not adhere to the
         {{ htmlattrxref("step", "input", "", 1)}} constraint.
       </td>
     </tr>

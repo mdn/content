@@ -57,7 +57,7 @@ globally (in the top-most scope).
 An explanation of why the name "**let**" was chosen can be found [here](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri).
 
 > **Note:** Many issues with `let` variables can be avoided by declaring them at the
-> top of the scope in which they are used (doing so may impact readibility).
+> top of the scope in which they are used (doing so may impact readability).
 
 ## Examples
 

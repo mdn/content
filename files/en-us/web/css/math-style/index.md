@@ -21,7 +21,7 @@ math-style: normal;
 math-style: compact;
 
 /* Global values */
-math-sytle: inherit;
+math-style: inherit;
 math-style: initial;
 math-style: revert;
 math-style: unset;

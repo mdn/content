@@ -32,7 +32,7 @@ var promise = USBDevice.isochronousTransferOut(endpointNumber, data, packetLengt
 - data
   - : A {{domxref("TypedArray")}} containing the data to send to the device.
 - packetLengths
-  - : An array of lengths for the packets being transfered.
+  - : An array of lengths for the packets being transferred.
 
 ### Return value
 

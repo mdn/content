@@ -34,7 +34,7 @@ Use caution when using `aria-hidden` to hide visibly rendered content from assis
 
 > **Note:** Consider all disabilities when hiding visibly rendered content from assistive technologies. Not all users of assistive technology are visually impaired. If visible content doesn't match text content in the accessibility API, the user experience will be negatively impacted for sighted users.
 
-On the surface, the `aria-hidden="true"` and the `role="presentation"` and its synonoym `role="none"` seem similar, but the intent behind each is different.
+On the surface, the `aria-hidden="true"` and the `role="presentation"` and its synonym `role="none"` seem similar, but the intent behind each is different.
 
 - `aria-hidden="true"` will remove the entire element from the accessibility API.
 - `role="presentation"` and `role="none"` will remove the semantic meaning of an element while still exposing it and its content to assistive technology.  

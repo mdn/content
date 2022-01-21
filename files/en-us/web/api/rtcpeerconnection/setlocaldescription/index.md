@@ -50,7 +50,7 @@ pc.setLocalDescription(sessionDescription, successCallback, errorCallback); {{de
 
 #### Implicit description
 
-If you don't explicity provide a session description, the WebRTC runtime will try to
+If you don't explicitly provide a session description, the WebRTC runtime will try to
 handle it correctly. If the signaling state is one of `stable`,
 `have-local-offer`, or `have-remote-pranswer`, the WebRTC runtime
 automatically creates a new offer and sets that as the new local description. Otherwise,

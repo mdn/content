@@ -87,5 +87,5 @@ The examples for `SubtleCrypto` methods often use `CryptoKey` objects. For examp
 
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
 - [Web security](/en-US/docs/Web/Security)
-- [Privacy, permissions, and incormation security](/en-US/docs/Web/Privacy)
+- [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)
 - {{domxref("Crypto")}} and {{domxref("Crypto.subtle")}}.

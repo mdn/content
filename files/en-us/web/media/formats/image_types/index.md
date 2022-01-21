@@ -777,7 +777,7 @@ If you use ICO files, you should use the BMP format, as support for PNG inside I
 ### JPEG (Joint Photographic Experts Group image)
 
 The {{Glossary("JPEG")}} (typically pronounced "**jay-peg**") image format is currently the most widely used lossy compression format for still images.
-It's particulary useful for photographs; applying lossy compression to content requiring sharpness, like diagrams or charts, can produce unsatisfactory results.
+It's particularly useful for photographs; applying lossy compression to content requiring sharpness, like diagrams or charts, can produce unsatisfactory results.
 
 JPEG is actually a data format for compressed photos, rather than a file type.
 The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes the format of the files we think of as "JPEG" images.

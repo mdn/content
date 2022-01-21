@@ -18,7 +18,7 @@ The {{domxref("IntersectionObserver")}} interface's read-only
 **`thresholds`** property returns the list of intersection
 thresholds that was specified when the observer was instantiated with
 {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}}. If
-only one threshold ratio was provided when instanitating the object, this will be an
+only one threshold ratio was provided when instantiating the object, this will be an
 array containing that single value.
 
 See {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "Thresholds")}} to

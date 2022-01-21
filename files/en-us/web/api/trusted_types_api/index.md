@@ -21,7 +21,7 @@ Trusted Types works alongside [Content-Security Policy](/en-US/docs/Web/HTTP/CSP
 
 ### Injection Sinks
 
-The Trusted Types API locks down injection sinks that can act as a vector for DOM-XSS attacks. An injection sink is any Web API function that should only be called with trusted, validated or santized input. Examples of injection sinks include:
+The Trusted Types API locks down injection sinks that can act as a vector for DOM-XSS attacks. An injection sink is any Web API function that should only be called with trusted, validated or sanitized input. Examples of injection sinks include:
 
 - Functions that insert HTML into the document such as {{domxref("Element.innerHTML")}}, {{domxref("Element.outerHTML")}}, or {{domxref("Document.write")}}.
 - Functions that create a new same-origin {{domxref("Document")}} with caller-controlled markup such as {{domxref("DOMParser.parseFromString")}}.

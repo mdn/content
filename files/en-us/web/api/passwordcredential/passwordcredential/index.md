@@ -44,7 +44,7 @@ Either of the following:
 
 ## Examples
 
-This example shows how to set up an {{domxref("HTMLFormElement")}} to caputure data
+This example shows how to set up an {{domxref("HTMLFormElement")}} to capture data
 which we'll use to create a {{domxref("PasswordCredential")}} object.
 
 Starting with the form element.

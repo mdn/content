@@ -190,7 +190,7 @@ Assertions include boundaries, which indicate the beginnings and endings of line
 buggyMultiline = `tey, ihe light-greon apple
 tangs on ihe greon traa`;
 
-// 1) Use ^ to fix the matching at the begining of the string, and right after newline.
+// 1) Use ^ to fix the matching at the beginning of the string, and right after newline.
 buggyMultiline = buggyMultiline.replace(/^t/gim,'h');
 console.log(1, buggyMultiline); // fix 'tey', 'tangs' => 'hey', 'hangs'. Avoid 'traa'.
 
@@ -228,7 +228,7 @@ let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
 // Selecting fruits that dose not start by 'A' by a /^[^A]/ regex.
 // In this example, two meanings of '^' control symbol are represented:
-// 1) Matching begining of the input
+// 1) Matching beginning of the input
 // 2) A negated or complemented character class: [^A]
 // That is, it matches anything that is not enclosed in the brackets.
 

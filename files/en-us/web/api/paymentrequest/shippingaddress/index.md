@@ -49,7 +49,7 @@ shipping cost.
     });
 
     payment.show().then(function(paymentResponse) {
-        // Processing of paymentResponse exerpted for brevity.
+        // Processing of paymentResponse excerpted for brevity.
     }).catch(function(err) {
         console.error("Uh oh, something bad happened", err.message);
     });

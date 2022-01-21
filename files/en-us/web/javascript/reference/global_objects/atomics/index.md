@@ -91,7 +91,7 @@ Atomics.xor(ta, 0, 1); // 10
 Atomics.load(ta, 0); // 11
 ```
 
-### Waiting and notifiying
+### Waiting and notifying
 
 Given a shared `Int32Array`:
 

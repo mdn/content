@@ -73,7 +73,7 @@ framebuffer:
   {{domxref("WebGLLayerInit.alpha", "alpha")}} property is `true` when
   creating the layer.
 - The XR compositor assumes that opaque framebuffers use colors with premultiplied
-  allpha, regardless of whether or not the WebGL context's
+  alpha, regardless of whether or not the WebGL context's
   {{domxref("WebGLContextAttributes.premultipliedAlpha", "premultipliedAlpha")}} context
   attribute is set.
 

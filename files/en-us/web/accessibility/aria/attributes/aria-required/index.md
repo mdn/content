@@ -37,7 +37,7 @@ The attribute should be added to the form-control role. If the user needs to fil
 <div role="textbox" contenteditable aria-labelledby="tblabel" aria-required="true" id="email1"></div>
 ```
 
-In this example, JavaScript must be used to prevent the containing form from being sumbmitted if the textbox has no content.
+In this example, JavaScript must be used to prevent the containing form from being submitted if the textbox has no content.
 
 This could be written semantically, without the need for JavaScript:
 

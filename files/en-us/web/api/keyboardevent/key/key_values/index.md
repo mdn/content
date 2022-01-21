@@ -2640,7 +2640,7 @@ These media keys are used specifically for controlling audio.
     <tr>
       <td><code>"AudioBassBoostUp"</code></td>
       <td>
-        Increases the amoung of bass boosting, or cycles upward through a set of
+        Increases the amount of bass boosting, or cycles upward through a set of
         bass boost modes or states.
       </td>
       <td><code>VK_BASS_BOOST_UP</code></td>
@@ -3047,7 +3047,7 @@ These key values represent buttons or keys present on television devices, or com
       <td><code>"TVTerrestrialDigital"</code></td>
       <td>
         Selects digital terrestrial television service (digital cable or antenna
-        receiption).
+        reception).
       </td>
       <td></td>
       <td></td>
@@ -3129,7 +3129,7 @@ The values below are derived in part form a number of consumer electronics techn
     <tr>
       <td><code>"ColorF1Green"</code> [3]</td>
       <td>
-        General-purpose media funciton key, color-coded green. This has index
+        General-purpose media function key, color-coded green. This has index
         <code>1</code> among the colored keys.
       </td>
       <td><code>VK_COLORED_KEY_1</code></td>
@@ -3140,7 +3140,7 @@ The values below are derived in part form a number of consumer electronics techn
     <tr>
       <td><code>"ColorF2Yellow"</code> [3]</td>
       <td>
-        General-purpose media funciton key, color-coded yellow. This has index
+        General-purpose media function key, color-coded yellow. This has index
         <code>2</code> among the colored keys.
       </td>
       <td><code>VK_COLORED_KEY_2</code></td>
@@ -3151,7 +3151,7 @@ The values below are derived in part form a number of consumer electronics techn
     <tr>
       <td><code>"ColorF3Blue"</code> [3]</td>
       <td>
-        General-purpose media funciton key, color-coded blue. This has index
+        General-purpose media function key, color-coded blue. This has index
         <code>3</code> among the colored keys.
       </td>
       <td><code>VK_COLORED_KEY_3</code></td>
@@ -3162,7 +3162,7 @@ The values below are derived in part form a number of consumer electronics techn
     <tr>
       <td><code>"ColorF4Grey"</code></td>
       <td>
-        General-purpose media funciton key, color-coded grey. This has index
+        General-purpose media function key, color-coded grey. This has index
         <code>4</code> among the colored keys.
       </td>
       <td><code>VK_COLORED_KEY_4</code></td>
@@ -3173,7 +3173,7 @@ The values below are derived in part form a number of consumer electronics techn
     <tr>
       <td><code>"ColorF5Brown"</code></td>
       <td>
-        General-purpose media funciton key, color-coded brown. This has index
+        General-purpose media function key, color-coded brown. This has index
         <code>5</code> among the colored keys.
       </td>
       <td><code>VK_COLORED_KEY_5</code></td>
@@ -3218,7 +3218,7 @@ The values below are derived in part form a number of consumer electronics techn
     </tr>
     <tr>
       <td><code>"Exit"</code></td>
-      <td>The Exit button, which exits the curreent application or menu.</td>
+      <td>The Exit button, which exits the current application or menu.</td>
       <td><code>VK_EXIT</code></td>
       <td></td>
       <td><code>Qt::Key_Exit</code> (0x0102000a)</td>
@@ -3408,7 +3408,7 @@ The values below are derived in part form a number of consumer electronics techn
     <tr>
       <td><code>"Link"</code></td>
       <td>
-        Opens content liniked to the current program, if available and possible.
+        Opens content linked to the current program, if available and possible.
       </td>
       <td><code>VK_LINK</code></td>
       <td></td>

@@ -126,7 +126,7 @@ console.log("Hello world");
 
 > **Warning:** If you want scripts to be runnable directly in a shell environment, encode them in UTF-8 without a [BOM](https://en.wikipedia.org/wiki/Byte_order_mark). Although a BOM will not cause any problems for code running in a browser, it is not advised to use a BOM with a hashbang in a script — because the BOM will prevent the script from working when you try to run it in a Unix/Linux shell environment. So if you want scripts to be runnable directly in a shell environment, encode them in UTF-8 without a BOM.
 
-You must only use the `#!` comment style to specify a JavaScript interpreter. In all other cases just use a `//` comment (or mulitiline comment).
+You must only use the `#!` comment style to specify a JavaScript interpreter. In all other cases just use a `//` comment (or multiline comment).
 
 ## Keywords
 

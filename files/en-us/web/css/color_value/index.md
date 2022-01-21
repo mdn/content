@@ -37,7 +37,7 @@ A `<color>` can be defined in any of the following ways:
   This can specify any visible color.
 - Using the [Lab coordinate system](https://en.wikipedia.org/wiki/CIELAB_color_space), via the {{cssxref("color_value/lab()","lab()")}} functional notation.
   This can specify any visible color.
-- Using the {{cssxref("color_value/color()","color()")}} functional notation, to specify a color in a variety of predifined or custom color spaces.
+- Using the {{cssxref("color_value/color()","color()")}} functional notation, to specify a color in a variety of predefined or custom color spaces.
 
 > **Note:** This article describes the `<color>` data type in detail. To learn more about using color in HTML, see [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color).
 

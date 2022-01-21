@@ -18,7 +18,7 @@ Some tables have hundreds, even millions, of rows. Even for tables with fewer ro
 
 Included on the {{HTMLElement('table')}} element or on an element with a role of [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role), the value is the number of rows in the full table, as an integer. If the total number of rows is not known, include `aria-rowcount="-1"`, which tells the browser to not count the total number of rows. 
 
-If all of the rows are loaded and in the DOM, you don't need to include `aria-rowcount` as browsers automatically count the total number of rows. However, if the rows aren't all present in the DOM at any time, this attribute is needed to provide the number of rows when the full table size is known and to tell the browser to not automotically count the rows when the total number of rows is not known.  
+If all of the rows are loaded and in the DOM, you don't need to include `aria-rowcount` as browsers automatically count the total number of rows. However, if the rows aren't all present in the DOM at any time, this attribute is needed to provide the number of rows when the full table size is known and to tell the browser to not automatically count the rows when the total number of rows is not known.  
 
 ## Example
 
