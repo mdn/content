@@ -89,7 +89,7 @@ This isn't appreciably different from older WebRTC connection establishment code
 
 ### Handling incoming tracks
 
-We next need to set up a handler for {{domxref("RTCPeerConnection.track_event", "track")}} events to handle inbound video and audio tracks that have been negotiatied to be received by this peer connection. To do this, we implement the {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler.
+We next need to set up a handler for {{domxref("RTCPeerConnection.track_event", "track")}} events to handle inbound video and audio tracks that have been negotiated to be received by this peer connection. To do this, we implement the {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.ontrack", "ontrack")}} event handler.
 
 ```js
 pc.ontrack = ({track, streams}) => {
