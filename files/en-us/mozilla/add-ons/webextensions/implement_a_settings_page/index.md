@@ -185,11 +185,13 @@ getting.then(onGot, onError);
 
 At this point, the complete extension should look like this:
 
-    settings/
-        borderify.js
-        manifest.json
-        options.html
-        options.js
+```
+settings/
+    borderify.js
+    manifest.json
+    options.html
+    options.js
+```
 
 Now:
 

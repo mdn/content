@@ -91,19 +91,23 @@ Tables are still considered valid markup but should be used for displaying tabul
 
 Rather than deeply nesting tables as in:
 
+```html
+<table>
+  <table>
     <table>
-      <table>
-        <table>
-              ...
-        </table>
-      </table>
+          ...
     </table>
+  </table>
+</table>
+```
 
 use non-nested tables or divs as in
 
-    <table>...</table>
-    <table>...</table>
-    <table>...</table>
+```html
+<table>...</table>
+<table>...</table>
+<table>...</table>
+```
 
 See also: [CSS Flexible Box Layout](https://www.w3.org/TR/css-flexbox-1/) and [CSS Grid Layout](https://www.w3.org/TR/css-grid-1/) specifications.
 
@@ -121,7 +125,9 @@ If the browser can immediately determine the height and/or width of your images 
 
 Tables should use the CSS selector: property combination:
 
-      table-layout: fixed;
+```css
+table-layout: fixed;
+```
 
 and should specify widths of columns using the [`<col>`](/en-US/docs/Web/HTML/Element/col) and the [`<colgroup>`](/en-US/docs/Web/HTML/Element/colgroup) elements.
 

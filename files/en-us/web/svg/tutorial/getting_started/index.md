@@ -76,6 +76,7 @@ Due to the potentially massive size SVG files can reach when used for some appli
 ### A word on Webservers
 
 Now that you have an idea of how to create basic SVG files, the next stage is to upload them to a Webserver. There are some gotchas at this stage though. For normal SVG files, servers should send the HTTP headers:
+
 ```
 Content-Type: image/svg+xml
 Vary: Accept-Encoding

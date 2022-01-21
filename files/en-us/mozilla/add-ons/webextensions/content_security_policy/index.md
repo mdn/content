@@ -50,7 +50,9 @@ Compared to a website, extensions have access to additional privileged APIs, so 
 
 The default content security policy for extensions is:
 
-    "script-src 'self'; object-src 'self';"
+```
+"script-src 'self'; object-src 'self';"
+```
 
 This will be applied to any extension that has not explicitly set its own content security policy using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key. It has the following consequences:
 

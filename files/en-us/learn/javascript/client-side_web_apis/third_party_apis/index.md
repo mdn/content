@@ -95,7 +95,9 @@ Third party APIs have a slightly different permissions system — they tend to u
 
 You'll find a line similar to the following in the Mapquest API example:
 
-    L.mapquest.key = 'YOUR-API-KEY-HERE';
+```
+L.mapquest.key = 'YOUR-API-KEY-HERE';
+```
 
 This line specifies an API or developer key to use in your application — the developer of the application must apply to get a key, and then include it in their code to be allowed access to the API's functionality. In our example we've just provided a placeholder.
 
@@ -256,8 +258,9 @@ Next, we use a couple of [`if()`](/en-US/docs/Web/JavaScript/Reference/Statement
 
 So, a complete URL would end up looking something like this:
 
-    https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=YOUR-API-KEY-HERE&page=0&q=cats
-    &fq=document_type:("article")&begin_date=20170301&end_date=20170312
+```
+https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=YOUR-API-KEY-HERE&page=0&q=cats&fq=document_type:("article")&begin_date=20170301&end_date=20170312
+```
 
 > **Note:** You can find more details of what URL parameters can be included at the [NYTimes developer docs](https://developer.nytimes.com/).
 

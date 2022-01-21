@@ -105,11 +105,13 @@ This script will be loaded into the pages that match the pattern given in the `c
 
 First, double check that you have the right files in the right places:
 
-    borderify/
-        icons/
-            border-48.png
-        borderify.js
-        manifest.json
+```
+borderify/
+    icons/
+        border-48.png
+    borderify.js
+    manifest.json
+```
 
 ### Installing
 

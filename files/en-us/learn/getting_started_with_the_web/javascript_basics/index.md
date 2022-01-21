@@ -111,8 +111,10 @@ myVariable;
 
 After assigning a value to a variable, you can change it later in the code:
 
-    let myVariable = 'Bob';
-    myVariable = 'Steve';
+```js
+let myVariable = 'Bob';
+myVariable = 'Steve';
+```
 
 Note that variables may hold values that have different [data types](/en-US/docs/Web/JavaScript/Data_structures):
 

@@ -218,17 +218,19 @@ The Vue CLI comes with a built-in development server. This allows you to run you
 
 In your terminal, try running `npm run serve` (or `yarn serve` if you prefer yarn). Your terminal should output something like the following:
 
-    INFO  Starting development server...
-    98% after emitting CopyPlugin
+```
+INFO  Starting development server...
+98% after emitting CopyPlugin
 
-     DONE  Compiled successfully in 18121ms
+  DONE  Compiled successfully in 18121ms
 
-      App running at:
-      - Local:   <http://localhost:8080/>
-      - Network: <http://192.168.1.9:8080/>
+  App running at:
+  - Local:   <http://localhost:8080/>
+  - Network: <http://192.168.1.9:8080/>
 
-      Note that the development build is not optimized.
-      To create a production build, run npm run build.
+  Note that the development build is not optimized.
+  To create a production build, run npm run build.
+```
 
 If you navigate to the “local” address in a new browser tab (this should be something like `http://localhost:8080` as stated above, but may vary based on your setup), you should see your app. Right now, it should contain a welcome message, a link to the Vue documentation, links to the plugins you added when you initialized the app with your CLI, and some other useful links to the Vue community and ecosystem.
 

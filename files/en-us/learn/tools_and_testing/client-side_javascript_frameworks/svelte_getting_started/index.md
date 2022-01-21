@@ -123,26 +123,28 @@ After running `npm run dev`, Svelte will compile and build your application. It 
 
 The starter template comes with the following structure:
 
-    moz-todo-svelte
-    ├── README.md
-    ├── package.json
-    ├── package-lock.json
-    ├── rollup.config.js
-    ├── .gitignore
-    ├── node_modules
-    ├── public
-    │   ├── favicon.png
-    │   ├── index.html
-    │   ├── global.css
-    │   └── build
-    │       ├── bundle.css
-    │       ├── bundle.js
-    │       └── bundle.js.map
-    ├── scripts
-    │   └── setupTypeScript.js
-    └── src
-        ├── App.svelte
-        └── main.js
+```
+moz-todo-svelte
+├── README.md
+├── package.json
+├── package-lock.json
+├── rollup.config.js
+├── .gitignore
+├── node_modules
+├── public
+│   ├── favicon.png
+│   ├── index.html
+│   ├── global.css
+│   └── build
+│       ├── bundle.css
+│       ├── bundle.js
+│       └── bundle.js.map
+├── scripts
+│   └── setupTypeScript.js
+└── src
+    ├── App.svelte
+    └── main.js
+```
 
 The contents are as follows:
 

@@ -92,37 +92,39 @@ To find out whether a given domain name is available,
 - Go to a domain name registrar's website. Most of them provide a “whois” service that tells you whether a domain name is available.
 - Alternatively, if you use a system with a built-in shell, type a `whois` command into it, as shown here for `mozilla.org`:
 
-<!---->
-
-    $ whois mozilla.org
-    Domain Name:MOZILLA.ORG
-    Domain ID: D1409563-LROR
-    Creation Date: 1998-01-24T05:00:00Z
-    Updated Date: 2013-12-08T01:16:57Z
-    Registry Expiry Date: 2015-01-23T05:00:00Z
-    Sponsoring Registrar:MarkMonitor Inc. (R37-LROR)
-    Sponsoring Registrar IANA ID: 292
-    WHOIS Server:
-    Referral URL:
-    Domain Status: clientDeleteProhibited
-    Domain Status: clientTransferProhibited
-    Domain Status: clientUpdateProhibited
-    Registrant ID:mmr-33684
-    Registrant Name:DNS Admin
-    Registrant Organization:Mozilla Foundation
-    Registrant Street: 650 Castro St Ste 300
-    Registrant City:Mountain View
-    Registrant State/Province:CA
-    Registrant Postal Code:94041
-    Registrant Country:US
-    Registrant Phone:+1.6509030800
+  ```
+  $ whois mozilla.org
+  Domain Name:MOZILLA.ORG
+  Domain ID: D1409563-LROR
+  Creation Date: 1998-01-24T05:00:00Z
+  Updated Date: 2013-12-08T01:16:57Z
+  Registry Expiry Date: 2015-01-23T05:00:00Z
+  Sponsoring Registrar:MarkMonitor Inc. (R37-LROR)
+  Sponsoring Registrar IANA ID: 292
+  WHOIS Server:
+  Referral URL:
+  Domain Status: clientDeleteProhibited
+  Domain Status: clientTransferProhibited
+  Domain Status: clientUpdateProhibited
+  Registrant ID:mmr-33684
+  Registrant Name:DNS Admin
+  Registrant Organization:Mozilla Foundation
+  Registrant Street: 650 Castro St Ste 300
+  Registrant City:Mountain View
+  Registrant State/Province:CA
+  Registrant Postal Code:94041
+  Registrant Country:US
+  Registrant Phone:+1.6509030800
+  ```
 
 As you can see, I can't register `mozilla.org` because the Mozilla Foundation has already registered it.
 
 On the other hand, let's see if I could register `afunkydomainname.org`:
 
-    $ whois afunkydomainname.org
-    NOT FOUND
+```
+$ whois afunkydomainname.org
+NOT FOUND
+```
 
 As you can see, the domain does not exist in the `whois` database (at the time of writing), so we could ask to register it. Good to know!
 

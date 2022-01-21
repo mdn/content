@@ -135,8 +135,10 @@ console.log("main render");
 
 Now, open the app in your browser. You should see both messages in your console, with each one repeating three times. Note how "main render" logged first, and "side effect" logged second, even though the "side effect" log appears first in the code.
 
-    main render (3)                                     Todo.js:100
-    side effect (3)                                     Todo.js:98
+```
+main render (3)                                     Todo.js:100
+side effect (3)                                     Todo.js:98
+```
 
 That's it for our experimentation for now. Delete `console.log("main render")` now, and lets move on to implementing our focus management.
 
@@ -182,12 +184,14 @@ We need to refactor our approach so that focus changes only when `isEditing` cha
 
 In order to meet our refined criteria, we need to know not just the value of `isEditing`, but also _when that value has changed_. In order to do that, we need to be able to read the previous value of the `isEditing` constant. Using pseudocode, our logic should be something like this:
 
-    if (wasNotEditingBefore && isEditingNow) {
-      focusOnEditField()
-    }
-    if (wasEditingBefore && isNotEditingNow) {
-      focusOnEditButton()
-    }
+```
+if (wasNotEditingBefore && isEditingNow) {
+  focusOnEditField()
+}
+if (wasEditingBefore && isNotEditingNow) {
+  focusOnEditButton()
+}
+```
 
 The React team had discussed [ways to get a component’s previous state](https://reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state), and has provided an example custom hook we can use for the job.
 

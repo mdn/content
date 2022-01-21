@@ -78,7 +78,9 @@ Let's implement something that demonstrates this, although we'll keep it simple 
 1.  Start by making local copies of our [`css-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect.html), [`flex-layout.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/flex-layout.css), [`float-layout.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/float-layout.css), and [`basic-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/basic-styling.css) files. Save them in a new directory.
 2.  We will add the HTML5 Shiv to our example too so that the HTML5 semantic elements will style properly in older versions of IE. Download the latest version (see [Manual installation](https://github.com/aFarkas/html5shiv#manual-installation)), unzip the ZIP file, copy the `html5shiv-printshiv.min.js` and `html5shiv.min.js` files into your example directory, and link to one of the files by putting the following under your {{htmlelement("title")}} element:
 
-        <script src="html5shiv.min.js"></script>
+    ```html
+    <script src="html5shiv.min.js"></script>
+    ```
 
 3.  Have a look at your example CSS files — you'll see that `basic-styling.css` handles all the styling that we want to give to every browser, whereas the other two CSS files contain the CSS we want to selectively apply to browser depending on their support levels. You can look at the different effects these two files have by manually changing the CSS file referred to by the second {{htmlelement("link")}} element, but let's instead implement some JavaScript to automatically swap them as needed.
 4.  First, remove the contents of the second `<link>` element's `href` attribute. We will fill this in dynamically later on.
@@ -285,8 +287,10 @@ Let's have a look at how Modernizr works in terms of selectively applying CSS.
 
 At this point, try loading your page, and you'll get an idea of how Modernizr works for CSS features. If you look at the DOM inspector of your browser's developer tools, you'll see that Modernizr has updated your `<html>` `class` value like so:
 
-    <html class="js no-htmlimports sizes flash transferables applicationcache blobconstructor
-    blob-constructor cookies cors ...AND LOADS MORE VALUES!>
+```html
+<html class="js no-htmlimports sizes flash transferables applicationcache blobconstructor
+blob-constructor cookies cors ...AND LOADS MORE VALUES!">
+```
 
 It now contains a large number of classes that indicate the support status of different technology features. As an example, if the browser didn't support flexbox at all, `<html>` would be given a class name of `no-flexbox`. If it did support modern flexbox, it would get a class name of `flexbox`. If you search through the class list, you'll also see others relating to flexbox, like:
 
@@ -343,10 +347,12 @@ Modernizr is also equally well-prepared for implementing JavaScript feature dete
 
 For example, load up our [`modernizr-css.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-css.html) example in your browser, then try going to your JavaScript console and typing in `Modernizr.` followed by some of those class names (they are the same here too). For example:
 
-    Modernizr.flexbox
-    Modernizr.websqldatabase
-    Modernizr.xhr2
-    Modernizr.fetch
+```
+Modernizr.flexbox
+Modernizr.websqldatabase
+Modernizr.xhr2
+Modernizr.fetch
+```
 
 The console will return `true`/`false` values to indicate whether your browser supports those features or not.
 

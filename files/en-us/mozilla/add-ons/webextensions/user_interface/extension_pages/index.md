@@ -20,10 +20,12 @@ Think of the background page as a "hidden extension page".
 
 You can include HTML files—and associated CSS or JavaScript files—in your extension. The files can be included in the root or organized within meaningful sub-folders.
 
-    /my-extension
-        /manifest.json
-        /my-page.html
-        /my-page.js
+```
+/my-extension
+    /manifest.json
+    /my-page.html
+    /my-page.js
+```
 
 ## Displaying extension pages
 

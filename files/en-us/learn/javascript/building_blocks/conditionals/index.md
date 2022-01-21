@@ -53,11 +53,13 @@ Let's look at by far the most common type of conditional statement you'll use in
 
 Basic `if...else` syntax looks like the following in {{glossary("pseudocode")}}:
 
-    if (condition) {
-      code to run if condition is true
-    } else {
-      run some other code instead
-    }
+```
+if (condition) {
+  code to run if condition is true
+} else {
+  run some other code instead
+}
+```
 
 Here we've got:
 
@@ -71,18 +73,22 @@ This code is pretty human-readable — it is saying "**if** the **condition** re
 
 You should note that you don't have to include the `else` and the second curly brace block — the following is also perfectly legal code:
 
-    if (condition) {
-      code to run if condition is true
-    }
+```
+if (condition) {
+  code to run if condition is true
+}
 
-    run some other code
+run some other code
+```
 
 However, you need to be careful here — in this case, the second block of code is not controlled by the conditional statement, so it **always** runs, regardless of whether the condition returns `true` or `false`. This is not necessarily a bad thing, but it might not be what you want — often you want to run one block of code _or_ the other, not both.
 
 As a final point, you may sometimes see `if...else` statements written without the curly braces, in the following shorthand style:
 
-    if (condition) code to run if condition is true
-    else run some other code instead
+```
+if (condition) code to run if condition is true
+else run some other code instead
+```
 
 This is perfectly valid code, but using it is not recommended — it is much easier to read the code and work out what is going on if you use the curly braces to delimit the blocks of code, and use multiple lines and indentation.
 
@@ -278,20 +284,22 @@ if (x === 5 || x === 7 || x === 10 || x === 20) {
 
 In such a case, [`switch` statements](/en-US/docs/Web/JavaScript/Reference/Statements/switch) are your friend — they take a single expression/value as an input, and then look through a number of choices until they find one that matches that value, executing the corresponding code that goes along with it. Here's some more pseudocode, to give you an idea:
 
-    switch (expression) {
-      case choice1:
-        run this code
-        break;
+```
+switch (expression) {
+  case choice1:
+    run this code
+    break;
 
-      case choice2:
-        run this code instead
-        break;
+  case choice2:
+    run this code instead
+    break;
 
-      // include as many cases as you like
+  // include as many cases as you like
 
-      default:
-        actually, just run this code
-    }
+  default:
+    actually, just run this code
+}
+```
 
 Here we've got:
 
@@ -358,7 +366,9 @@ function setWeather() {
 
 There is one final bit of syntax we want to introduce you to before we get you to play with some examples. The [ternary or conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) is a small bit of syntax that tests a condition and returns one value/expression if it is `true`, and another if it is `false` — this can be useful in some situations, and can take up a lot less code than an `if...else` block if you have two choices that are chosen between via a `true`/`false` condition. The pseudocode looks like this:
 
-    ( condition ) ? run this code : run this code instead
+```
+( condition ) ? run this code : run this code instead
+```
 
 So let's look at a simple example:
 

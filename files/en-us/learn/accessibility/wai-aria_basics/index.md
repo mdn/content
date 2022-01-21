@@ -345,7 +345,9 @@ But what about screenreaders? They still won't see the elements as buttons. If w
 
 We can fix this using a WAI-ARIA role. Make a local copy of [fake-div-buttons.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html), and add [`role="button"`](/en-US/docs/Web/accessibility/ARIA/roles/button_role) to each button `<div>`, for example:
 
-    <div data-message="This is from the first button" tabindex="0" role="button">Click me!</div>
+```html
+<div data-message="This is from the first button" tabindex="0" role="button">Click me!</div>
+```
 
 Now when you try this using a screenreader, you'll have buttons be reported using phrases like "Click me!, button" — much better.
 

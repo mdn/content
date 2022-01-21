@@ -62,7 +62,7 @@ const browserType = 'mozilla';
 browserType.length;
 ```
 
-This should return the number 7, because "mozilla" is 7 characters long. This is useful for many reasons; for example, you might want to find the lengths of a series of names so you can display them in order of length, or let a user know that a username they have entered into a form field is too long if it is over a certain length.
+This should return the number 7, because "mozilla" is 7 characters long. This is useful for many reasons; for example, you might want to find the lengths of a series of names so you can display them in order of length, or let a user know that a username they have entered into a form field is too long if it is over a certain length.
 
 ## Retrieving a specific string character
 
@@ -80,7 +80,7 @@ To retrieve the last character of _any_ string, we could use the following line,
 browserType[browserType.length-1];
 ```
 
-The length of the string "mozilla" is 7, but because the count starts at 0, the last character's position is 6; using  `length-1` gets us the last character.
+The length of the string "mozilla" is 7, but because the count starts at 0, the last character's position is 6; using `length-1` gets us the last character.
 
 ## Testing if a string contains a substring
 
@@ -136,7 +136,7 @@ console.log(browserType.slice(1, 4)); // "ozi"
 
 The character at index `1` is `"o"`, and the character at index 4 is `"l"`. So we extract all characters starting at `"o"` and ending just before `"l"`, giving us `"ozi"`.
 
-If you know that you want to extract all of the remaining characters in a string after a certain character, you don't have to include the second parameter. Instead, you only need to include the character position from where you want to extract the remaining characters in a string. Try the following:
+If you know that you want to extract all of the remaining characters in a string after a certain character, you don't have to include the second parameter. Instead, you only need to include the character position from where you want to extract the remaining characters in a string. Try the following:
 
 ```js
 browserType.slice(2); // "zilla"
@@ -160,7 +160,7 @@ console.log(radData.toUpperCase());
 
 ## Updating parts of a string
 
-You can replace one substring inside a string with another substring using the {{jsxref("String.prototype.replace()", "replace()")}} method.
+You can replace one substring inside a string with another substring using the {{jsxref("String.prototype.replace()", "replace()")}} method.
 
 In this example, we're providing two parameters — the string we want to replace, and the string we want to replace it with:
 
@@ -191,7 +191,7 @@ Each example comes with a "Reset" button, which you can use to reset the code if
 
 ### Filtering greeting messages
 
-In the first exercise we'll start you off simple — we have an array of greeting card messages, but we want to sort them to list just the Christmas messages. We want you to fill in a conditional test inside the `if( ... )` structure, to test each string and only print it in the list if it is a Christmas message.
+In the first exercise we'll start you off simple — we have an array of greeting card messages, but we want to sort them to list just the Christmas messages. We want you to fill in a conditional test inside the `if( ... )` structure, to test each string and only print it in the list if it is a Christmas message.
 
 Think about how you could test whether the message in each case is a Christmas message. What string is present in all of those messages, and what method could you use to test whether it is present?
 
@@ -209,7 +209,7 @@ Think about how you could test whether the message in each case is a Christmas m
 <h2>Editable code</h2>
 <p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-<textarea id="code" class="playable-code" style="height: 290px; width: 95%">
+<textarea id="code" class="playable-code" style="height: 290px; width: 95%">
 const list = document.querySelector('.output ul');
 list.innerHTML = '';
 const greetings = ['Happy Birthday!',
@@ -357,7 +357,7 @@ textarea.onkeyup = function(){
 
 ### Fixing capitalization
 
-In this exercise we have the names of cities in the United Kingdom, but the capitalization is all messed up. We want you to change them so that they are all lower case, except for a capital first letter. A good way to do this is to:
+In this exercise we have the names of cities in the United Kingdom, but the capitalization is all messed up. We want you to change them so that they are all lower case, except for a capital first letter. A good way to do this is to:
 
 1.  Convert the whole of the string contained in the `city` variable to lower case and store it in a new variable.
 2.  Grab the first letter of the string in this new variable and store it in another variable.
@@ -380,7 +380,7 @@ In this exercise we have the names of cities in the United Kingdom, but the cap
 <h2>Editable code</h2>
 <p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-<textarea id="code" class="playable-code" style="height: 250px; width: 95%">
+<textarea id="code" class="playable-code" style="height: 250px; width: 95%">
 const list = document.querySelector('.output ul');
 list.innerHTML = '';
 const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
@@ -522,11 +522,15 @@ textarea.onkeyup = function(){
 
 In this last exercise, the array contains a bunch of strings containing information about train stations in the North of England. The strings are data items that contain the three-letter station code, followed by some machine-readable data, followed by a semicolon, followed by the human-readable station name. For example:
 
-    MAN675847583748sjt567654;Manchester Piccadilly
+```
+MAN675847583748sjt567654;Manchester Piccadilly
+```
 
-We want to extract the station code and name, and put them together in a string with the following structure:
+We want to extract the station code and name, and put them together in a string with the following structure:
 
-    MAN: Manchester Piccadilly
+```
+MAN: Manchester Piccadilly
+```
 
 We'd recommend doing it like this:
 
@@ -550,7 +554,7 @@ We'd recommend doing it like this:
 <h2>Editable code</h2>
 <p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
 
-<textarea id="code" class="playable-code" style="height: 285px; width: 95%">
+<textarea id="code" class="playable-code" style="height: 285px; width: 95%">
 const list = document.querySelector('.output ul');
 list.innerHTML = '';
 const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',

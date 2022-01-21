@@ -103,25 +103,33 @@ Why is this? The answer is because JavaScript, generally speaking, is **single-t
 
 A **thread** is basically a single process that a program can use to complete tasks. Each thread can only do a single task at once:
 
-    Task A --> Task B --> Task C
+```
+Task A --> Task B --> Task C
+```
 
 Each task will be run sequentially; a task has to complete before the next one can be started.
 
 As we said earlier, many computers now have multiple cores, so can do multiple things at once. Programming languages that can support multiple threads can use multiple cores to complete multiple tasks simultaneously:
 
-    Thread 1: Task A --> Task B
-    Thread 2: Task C --> Task D
+```
+Thread 1: Task A --> Task B
+Thread 2: Task C --> Task D
+```
 
 ### JavaScript is single-threaded
 
 JavaScript is traditionally single-threaded. Even with multiple cores, you could only get it to run tasks on a single thread, called the **main thread**. Our example from above is run like this:
 
-    Main thread: Render circles to canvas --> Display alert()
+```
+Main thread: Render circles to canvas --> Display alert()
+```
 
 After some time, JavaScript gained some tools to help with such problems. [Web workers](/en-US/docs/Web/API/Web_Workers_API) allow you to send some of the JavaScript processing off to a separate thread, called a worker so that you can run multiple JavaScript chunks simultaneously. You'd generally use a worker to run expensive processes off the main thread so that user interaction is not blocked.
 
-      Main thread: Task A --> Task C
-    Worker thread: Expensive task B
+```
+  Main thread: Task A --> Task C
+Worker thread: Expensive task B
+```
 
 With this in mind, have a look at [simple-sync-worker.html](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-worker.html) ([see it running live](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-worker.html)), again with your browser's JavaScript console open. This is a rewrite of our previous example that calculates the 10 million dates, but this time we're using a worker for the calculation. You can see the worker's code here: [worker.js](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/worker.js). Now when you click the button, the browser is able to display the paragraph before the dates have finished calculating. Once the worker has finished calculating, it logs the final date to the console. The first operation no longer blocks the second.
 
@@ -131,19 +139,25 @@ Web workers are pretty useful, but they do have their limitations. A major one i
 
 The second problem is that although code run in a worker is not blocking, it is still basically synchronous. This becomes a problem when a function relies on the results of multiple previous processes to function. Consider the following thread diagrams:
 
-    Main thread: Task A --> Task B
+```
+Main thread: Task A --> Task B
+```
 
 In this case, let's say Task A is doing something like fetching an image from the server and Task B then does something to the image like applying a filter to it. If you start running Task A and then immediately try to run Task B, you'll get an error, because the image won't be available yet.
 
-      Main thread: Task A --> Task B --> |Task D|
-    Worker thread: Task C -----------> |      |
+```
+  Main thread: Task A --> Task B --> |Task D|
+Worker thread: Task C -----------> |      |
+```
 
 In this case, let's say Task D makes use of the results of both Task B and Task C. If we can guarantee that these results will both be available at the same time, then we might be OK, but this is unlikely. If Task D tries to run when one of its inputs is not yet available, it will throw an error.
 
 To fix such problems, browsers allow us to run certain operations asynchronously. Features like [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) allow you to set an operation running (e.g. the fetching of an image from the server), and then wait until the result has returned before running another operation:
 
-    Main thread: Task A                   Task B
-        Promise:      |__async operation__|
+```
+Main thread: Task A                   Task B
+    Promise:      |__async operation__|
+```
 
 Since the operation is happening somewhere else, the main thread is not blocked while the async operation is being processed.
 
