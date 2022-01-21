@@ -87,7 +87,7 @@ There are a few caveats to consider when using color keywords:
     </tr>
   </thead>
   <tbody>
-    <tr style="position: relative">
+    <tr>
       <td rowspan="16">{{SpecName("CSS1")}}</td>
       <td style="text-align: center"><code>black</code></td>
       <td><code>#000000</code></td>
@@ -1277,7 +1277,7 @@ hwb(90 10% 10% / 50%)
 
 ### Fully saturated colors
 
-<table class="standard-table">
+<table>
   <thead>
     <tr>
       <th scope="col">Notation</th>
@@ -1356,7 +1356,7 @@ hwb(90 10% 10% / 50%)
 
 ### Lighter and darker greens
 
-<table class="standard-table">
+<table>
   <thead>
     <tr>
       <th scope="col">Notation</th>
@@ -1400,7 +1400,7 @@ hwb(90 10% 10% / 50%)
 
 ### Saturated and desaturated greens
 
-<table class="standard-table">
+<table>
   <thead>
     <tr>
       <th scope="col">Notation</th>
@@ -1459,7 +1459,7 @@ hsla(240 100% 50% / 5%)       /*   5% opaque blue */
 
 ## Specifications
 
-<table class="standard-table">
+<table>
   <thead>
     <tr>
       <th scope="col">Specification</th>
