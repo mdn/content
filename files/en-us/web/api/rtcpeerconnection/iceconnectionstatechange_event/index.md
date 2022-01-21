@@ -58,7 +58,7 @@ When an ICE restart is processed, the gathering and connectivity checking proces
 
 ### State transitions as negotiation ends
 
-When the negotiation process runs out of candidates to check, the ICE connection transitions to one of two states. If no suitable candidates were found, the state transitions to `failed`. If at least one suitable candidate was successfully identified, the state transitions to `completed`. The ICE layer makes this determination upon receiving the end-of-candidates signal, which is provided by caling {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} with a candidate whose {{domxref("RTCIceCandidate.candidate", "candidate")}} property is an empty string (""), or by setting the {{domxref("RTCPeerConnection")}} property {{domxref("RTCPeerConnection.canTrickleIceCandidates", "canTrickleIceCandidates")}} to `false`.
+When the negotiation process runs out of candidates to check, the ICE connection transitions to one of two states. If no suitable candidates were found, the state transitions to `failed`. If at least one suitable candidate was successfully identified, the state transitions to `completed`. The ICE layer makes this determination upon receiving the end-of-candidates signal, which is provided by calling {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} with a candidate whose {{domxref("RTCIceCandidate.candidate", "candidate")}} property is an empty string (""), or by setting the {{domxref("RTCPeerConnection")}} property {{domxref("RTCPeerConnection.canTrickleIceCandidates", "canTrickleIceCandidates")}} to `false`.
 
 ## Examples
 

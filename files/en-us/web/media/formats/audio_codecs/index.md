@@ -1274,7 +1274,7 @@ Opus is a good all-around audio codec for use in your web applications, and can 
           {{interwiki("wikipedia", "Nyquist–Shannon sampling theorem")}}
           shows that audio bandwidth can be as much as one half of the sampling
           rate, Opus doesn't allow encoding outside a maximum 20 kHz audio
-          frequency band, since the human ear can't percieve anything above the
+          frequency band, since the human ear can't perceive anything above the
           20 kHz point anyway. This saves some space in the encoded audio.
         </p>
       </td>

@@ -55,7 +55,7 @@ request.addEventListener('shippingaddresschange', function(evt) {
 });
 
 payment.show().then(function(paymentResponse) {
-  // Processing of paymentResponse exerpted for the same of brevity.
+  // Processing of paymentResponse excerpted for the same of brevity.
 }).catch(function(err) {
   console.error("Uh oh, something bad happened", err.message);
 });

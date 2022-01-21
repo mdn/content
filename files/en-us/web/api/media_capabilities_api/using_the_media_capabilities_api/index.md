@@ -107,7 +107,7 @@ navigator.mediaCapabilities.decodingInfo(videoConfiguration).then(result => {
 
 In our video decoding example, a `TypeError` would be raised if the media configuration passed to the {{domxref("MediaCapabilities.decodingInfo", "decodingInfo()")}} method was invalid. There are a few reasons why an error might occur, including:
 
-- The specified `type` isn't one of the two permtited values: `file` or `media-source`
+- The specified `type` isn't one of the two permitted values: `file` or `media-source`
 - The `contentType` given is
 
 The error can be due to the `type` not being one of the two possible values, the `contentType` not being a valid codec MIME type, or invalid or omitted definitions required in the {{domxref("VideoConfiguration")}}.

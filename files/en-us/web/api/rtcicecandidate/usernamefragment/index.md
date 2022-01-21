@@ -69,7 +69,7 @@ of messages going back and forth.
 
 To do so, you can compare the value of `usernameFragment` to the current
 `usernameFragment` being used for the connection after receiving the
-candidate from the signaling server and before caling
+candidate from the signaling server and before calling
 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} to add it to the
 set of possible candidates.
 

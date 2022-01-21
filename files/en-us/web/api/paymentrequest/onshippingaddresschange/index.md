@@ -46,7 +46,7 @@ to `show()`.
     });
 
     payment.show().then(function(paymentResponse) {
-      // Processing of paymentResponse exerpted for the same of clarity.
+      // Processing of paymentResponse excerpted for the same of clarity.
     }).catch(function(err) {
       console.error("Uh oh, something bad happened", err.message);
     });

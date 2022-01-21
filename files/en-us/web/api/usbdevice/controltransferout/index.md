@@ -32,7 +32,7 @@ var promise = USBDevice.controlTransferOut(setup, data)
   - : An object that sets options for . The available options are:
 
     - `requestType`: Must be one of three values specifying whether the
-      tranfer is `"standard"` (common to all USB devices)
+      transfer is `"standard"` (common to all USB devices)
       `"class"` (common to an industry-standard class of devices) or
       `"vendor"`.
     - `recipient`: Specifices the target of the transfer on the device, one
@@ -43,7 +43,7 @@ var promise = USBDevice.controlTransferOut(setup, data)
     - `index`: The interface number of the recipient.
 
 - data
-  - : A {{domxref("TypedArray")}} containing the data that will be transfered to the
+  - : A {{domxref("TypedArray")}} containing the data that will be transferred to the
     device. Not all commands require data; some commands can send data just through the
     value parameter. Check with your device to see what the specific request requires.
 

@@ -26,7 +26,7 @@ XMLHttpRequest.onprogress = callback;
 
 ### Event
 
-- _`event.loaded`_  the amount of data currently transfered.
+- _`event.loaded`_  the amount of data currently transferred.
 - _`event.total`_  the total amount of data to be transferred.
 
 ```js

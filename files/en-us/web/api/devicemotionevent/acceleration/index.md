@@ -18,7 +18,7 @@ browser-compat: api.DeviceMotionEvent.acceleration
 The `acceleration` property returns the amount of acceleration recorded by
 the device, in [meters
 per second squared (m/s²)](https://en.wikipedia.org/wiki/Meter_per_second_squared). The acceleration value does not include the effect of
-the gravity force, in constrast to
+the gravity force, in contrast to
 {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}.
 
 > **Note:** If the hardware doesn't know how to remove gravity from the

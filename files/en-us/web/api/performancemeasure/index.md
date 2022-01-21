@@ -22,7 +22,7 @@ browser-compat: api.PerformanceMeasure
 This interface defines:
 
 - `PerformanceMeasure.detail`
-  - : Contains arbitrary metatdata about the measure.
+  - : Contains arbitrary metadata about the measure.
     This may be passed in as a property of the {{domxref("Performance.measure()","performance.measure()")}} argument `MeasureOptions`.
 
 In addition, it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:

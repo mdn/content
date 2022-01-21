@@ -32,7 +32,7 @@ let rtpTimestamp = RTCRtpContributingSource.rtpTimestamp
 
 ### Value
 
-An integer value specifiying a source-generated timestamp indicating the time at which
+An integer value specifying a source-generated timestamp indicating the time at which
 the media in this packet, scheduled for play out at the time indicated by
 {{domxref("RTCRtpContributingSource.timestamp", "timestamp")}}, was initially sampled or
 generated. This value may be useful for sequencing and synchronization purposes.

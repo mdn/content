@@ -13,7 +13,7 @@ tags:
 ---
 {{DefaultAPISidebar("WebXR Device API")}}{{draft}}
 
-Among the various reference spaces available in the WebXR set of APIs, the **`bounded-floor` reference space** is somehwat unique. Not only is it represented by a unique subclass, {{domxref("XRBoundedReferenceSpace")}}, but it's the only one which restricts movement based not upon virtual restrictions but upon limitations imposed by the real world. This article examines bounded reference spaces as represented by `XRBoundedReferenceSpace`, describing what they are and how they're used.
+Among the various reference spaces available in the WebXR set of APIs, the **`bounded-floor` reference space** is somewhat unique. Not only is it represented by a unique subclass, {{domxref("XRBoundedReferenceSpace")}}, but it's the only one which restricts movement based not upon virtual restrictions but upon limitations imposed by the real world. This article examines bounded reference spaces as represented by `XRBoundedReferenceSpace`, describing what they are and how they're used.
 
 There are many uses for bounded reference spaces, including projects such as virtual paint studios or 3D construction, modeling, or sculpting systems; training simulations or lesson scenarios; dance or other performance-based games; or the preview of 3D objects in the real world using augmented reality.
 

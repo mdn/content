@@ -116,7 +116,7 @@ You can apply a filter that narrows the audio bandwidth, removing any audio freq
 
 If you know what kind of audio you're most likely to handle, you can potentially find special filtering techniques applicable specifically to that kind of sound, that will optimize the encoding.
 
-The most commonly-used compression methods for audio apply the science of **{{interwiki("wikipedia", "psychoacoustics")}}**. This is the science that studies how humans percieve sound, and what parts of the audio frequencies we hear are most important to how we respond to those sounds, given the context and content of the sound. Factors such as the ability to sense the change in frequency of a sound, the overall range of human hearing versus the frequencies of the audio signal, audio localization, and so forth all can be considered by a codec.
+The most commonly-used compression methods for audio apply the science of **{{interwiki("wikipedia", "psychoacoustics")}}**. This is the science that studies how humans perceive sound, and what parts of the audio frequencies we hear are most important to how we respond to those sounds, given the context and content of the sound. Factors such as the ability to sense the change in frequency of a sound, the overall range of human hearing versus the frequencies of the audio signal, audio localization, and so forth all can be considered by a codec.
 
 By using a sound (no pun intended) understanding of psychoacoustics, it's possible to design a compression method that will minimize the compressed size of the audio while maximizing the perceived fidelity of the sound. An algorithm employing psychoacoustics may use any of the techniques mentioned here, and will almost certainly apply others as well.
 
