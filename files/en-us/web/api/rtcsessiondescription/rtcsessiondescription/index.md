@@ -33,7 +33,7 @@ sessionDescription = new RTCSessionDescription(rtcSessionDescriptionInit);
 
 ### Values
 
-- <span id="rtcSessionDescriptionInit">`rtcSessionDescriptionInit`</span> {{optional_inline}}
+- `rtcSessionDescriptionInit` {{optional_inline}}
 
   - : An object providing the default values for the session description; the object
     conforms to the `RTCSessionDescriptionInit` dictionary. That dictionary has
