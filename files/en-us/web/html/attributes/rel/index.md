@@ -88,7 +88,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 - {{htmlattrdef("canonical")}}
   - : Valid for {{htmlelement('link')}}, it defines the preferred URL for the current document, which is useful for search engines.
 - {{htmlattrdef("dns-prefetch")}}
-  - : Relevant for the {{htmlelement('link')}} element both in the {{htmlelement('body')}} and {{htmlelement('head')}}, it tells the browser to preemptively perform DNS resolution for the target resource's origin. Useful for resources the user will likely need, it helps reduce latency and thereby improves performance when the user does access the resources as the browser preemptively performed DNS resolution for the origin of the specified resource. See [dns-prefetch](/en-US/docs/Web/Performance/dns-prefetch) described in [resource hints]().
+  - : Relevant for the {{htmlelement('link')}} element both in the {{htmlelement('body')}} and {{htmlelement('head')}}, it tells the browser to preemptively perform DNS resolution for the target resource's origin. Useful for resources the user will likely need, it helps reduce latency and thereby improves performance when the user does access the resources as the browser preemptively performed DNS resolution for the origin of the specified resource. See [dns-prefetch](/en-US/docs/Web/Performance/dns-prefetch) described in [resource hints](https://w3c.github.io/resource-hints/).
 - {{htmlattrdef("external")}}
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, it indicates the referenced document is not part of the current site. This can be used with attribute selectors to style external links in a way that indicates to the user that they will be leaving the current site.
 - {{htmlattrdef("help")}}
@@ -105,7 +105,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
     If there are multiple `<link rel="icon">`s, the browser uses their [`media`](media) attribute, [`type`](type), and [`sizes`](sizes) attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.
 
-    > **Note:** Prior to Firefox 83 the [crossorigin](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute was not supported for `rel="icon"` there is also [an open issue for Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
+    > **Note:** Prior to Firefox 83 the [crossorigin](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute was not supported for `rel="icon"` there is also [an open issue for Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
 
     > **Note:** Apple's iOS does not use this link type, nor the [`sizes`](sizes) attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder.
     > Instead it uses the non-standard [`apple-touch-icon`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) and [`apple-touch-startup-image`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) respectively.

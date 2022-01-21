@@ -71,7 +71,7 @@ async function fileHash(file) {
   // This gets us an array where each byte of the array buffer becomes one item in the array
   const uint8ViewOfHash = new Uint8Array(hashAsArrayBuffer);
   // We then convert it to a regular array so we can convert each item to hexadecimal strings
-  // Where to characters of 0-9 or a-f represent a number between 0 and 16, containing 4 bits of information, so 2 of them is 8 bits (1 byte). 
+  // Where to characters of 0-9 or a-f represent a number between 0 and 16, containing 4 bits of information, so 2 of them is 8 bits (1 byte).
   const hashAsString = Array.from(uint8ViewOfHash).map(b => b.toString(16).padStart(2, '0')).join('');
 	return hashAsString;
 }
@@ -187,7 +187,7 @@ async function hashTheseFiles(e) {
 
 {{EmbedLiveSample("how-git-stores-files")}}
 
-Notice how it uses the [Encoding API]() to produce the header, which is concatenated with the original ArrayBuffer to produce the string to be hashed.
+Notice how it uses the [Encoding API](/en-US/docs/Web/API/Encoding_API) to produce the header, which is concatenated with the original ArrayBuffer to produce the string to be hashed.
 
 ## How git generates commit hashes
 
