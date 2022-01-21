@@ -286,7 +286,8 @@ The following table summarizes the available traps available to `Proxy` objects.
           </dd>
           <dt>Inherited property assignment</dt>
           <dd>
-            <code>Object.create[<var>proxy</var>](foo) = bar</code
+            <!-- markdownlint-disable-next-line MD011 -->
+            <code>Object.create(<var>proxy</var>)[foo] = bar</code
             ><br />{{jsxref("Reflect.set()")}}
           </dd>
         </dl>
