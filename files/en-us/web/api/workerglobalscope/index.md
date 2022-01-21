@@ -64,7 +64,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : An event handler for handled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) rejection events.
     Also available via the {{domxref("WorkerGlobalScope.onrejectionhandled")}} property.
 - `unhandledrejection` {{non-standard_inline}}
-  - : An event handler for unhandled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)) rejection events.
+  - : An event handler for unhandled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) rejection events.
     Also available via the {{domxref("WorkerGlobalScope.onunhandledrejection")}} property.
 
 ## Methods
