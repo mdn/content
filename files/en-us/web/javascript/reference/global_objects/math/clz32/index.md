@@ -132,7 +132,7 @@ var countTrailsMethods = (function(stdlib, foreign, heap) {
         integer = integer | 0; // coerce to an integer
         return ctrz(~integer) |0;
     }
-    // unfourtunately, ASM.JS demands slow crummy objects:
+    // unfortunately, ASM.JS demands slow crummy objects:
     return {a: ctrz, b: ctron};
 })(window, null, null);
 var ctrz = countTrailsMethods.a;

@@ -38,7 +38,7 @@ Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) algorithm 
 ## Description
 
 Sometimes, it is convenient to be able to identify the most likely locale language
-identifier subtags based on an incomplete langauage ID. The Add Likely Subtags
+identifier subtags based on an incomplete language ID. The Add Likely Subtags
 algorithm gives us this functionality. For instance, given the language ID "en", the
 algorithm would return "en-Latn-US", since English can only be written in the Latin
 script, and is most likely to be used in the United States, as it is the largest

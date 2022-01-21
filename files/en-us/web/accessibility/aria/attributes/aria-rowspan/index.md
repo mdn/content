@@ -16,7 +16,7 @@ The `aria-rowspan` attribute defines the number of rows spanned by a cell or gri
 
 Similar to the `rowspan` attribute of the {{HTMLElement('td')}} and {{HTMLElement('th')}} elements, but for cells and gridcells which are not contained in a native table, the `aria-rowspan` attribute defines the number of rows spanned by a `cell` or `gridcell` within a `table`, `grid`, or `treegrid`. 
 
-This attribute is intended for cells and gridcells which are **not** part of an HTML {{HTMLElement('table')}}. When a cell is nested in a semantic `<table>`, the `rowspan` attribute should be used when a <td> or <th> spans more than one row. If both are present, `rowspan` takes precendence over `aria-rowspan`. But, like all ARIA attributes, `aria-rowspan` only impacts the accessibility tree. It doesn't change your layout.
+This attribute is intended for cells and gridcells which are **not** part of an HTML {{HTMLElement('table')}}. When a cell is nested in a semantic `<table>`, the `rowspan` attribute should be used when a <td> or <th> spans more than one row. If both are present, `rowspan` takes precedence over `aria-rowspan`. But, like all ARIA attributes, `aria-rowspan` only impacts the accessibility tree. It doesn't change your layout.
 
 > **Note:** ARIA modifies the accessibility tree and how assistive technology presents content to your users. ARIA doesn't change anything about an element's function, behavior, or appearance. When using non-semantic elements, you must use CSS to manage layout and appearance.
 
