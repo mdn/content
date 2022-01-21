@@ -51,7 +51,7 @@ This method may raise a {{domxref("DOMException")}} of the following type:
 
 The following example illustrates how you'd use a lower bound key range. Here we
 declare `keyRangeValue = IDBKeyRange.lowerBound("F", false);` — a range that
-includes the value "F" and everthing after it. We open a transaction (using
+includes the value "F" and everything after it. We open a transaction (using
 {{domxref("IDBTransaction")}}) and an object store, and open a Cursor with
 {{domxref("IDBObjectStore.openCursor")}}, declaring `keyRangeValue` as its
 optional key range value. This means that the cursor will only retrieve the record with

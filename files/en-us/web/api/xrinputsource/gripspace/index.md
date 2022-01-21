@@ -55,7 +55,7 @@ As shown in the diagram above, the coordinate system is oriented as follows:
 ## Examples
 
 In tis example, taken from the frame rendering callback, the `gripSpace` is
-used to render a mesh that represents the position and orieintation of the controller in
+used to render a mesh that represents the position and orientation of the controller in
 the virtual environment.
 
 ```js

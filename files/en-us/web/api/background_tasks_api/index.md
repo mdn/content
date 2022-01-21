@@ -203,7 +203,7 @@ let taskHandle = null;
 These variables are used to manage the list of tasks that are waiting to be performed, as well as status information about the task queue and its execution:
 
 - `taskList` is an {{jsxref("Array")}} of objects, each representing one task waiting to be run.
-- `totalTaskCount` is a counter of the number of tasks that have been added to the queue; it will only go up, never down. We use this to do the math to present progress as a precentage of total work to do.
+- `totalTaskCount` is a counter of the number of tasks that have been added to the queue; it will only go up, never down. We use this to do the math to present progress as a percentage of total work to do.
 - `currentTaskNumber` is used to track how many tasks have been processed so far.
 - `taskHandle` is a reference to the task currently being processed.
 
