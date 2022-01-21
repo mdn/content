@@ -22,7 +22,7 @@ Some structural roles, like [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Ro
 
 Most of the following roles were never needed but were added to ARIA for completeness. We've included them here for completeness as well. 
 
-## Structural roles
+## Structural roles with HTML equivalents
 
 The structure roles with HTML equivalents are listed below:
 
