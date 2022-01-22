@@ -38,7 +38,7 @@ The function `square` takes one parameter, called `number`. The function consist
 return number * number;
 ```
 
-Parameters are passed to functions **by value**; the value is passed to the function, but if the function then changes the value of the parameter, **the change is not reflected globally or in the caller**.
+Parameters are passed to functions **by value**; the value is passed to the function, but if the function then changes the value of the parameter, **the change is not reflected globally or in the calling code**.
 
 If as a parameter you pass a reference — which will necessarily be a reference to an object of some kind — and the function changes the object's properties, that change is visible outside the function, as shown in the following example:
 
