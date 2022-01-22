@@ -32,14 +32,14 @@ Firefox 18 was released on January 8, 2013. This article lists key changes that 
 - {{domxref("BlobBuilder", "MozBlobBuilder")}} is removed. Developers need to use {{domxref("Blob")}} constructor for creating a `Blob` object. ({{bug("744907")}})
 - The {{event("visibilitychange")}} event and the [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API) has been unprefixed ({{bug("812086")}}).
 - {{domxref("TextDecoder")}} and {{domxref("TextEncoder")}} have been added. Note that the implementation and spec of these evolved and have been changed in Firefox 19 ({{bug("764234")}}).
-- ` HTMLMediaElement.src` has been separate in two properties: the standard `src` property, dealing with {{domxref("DOMString")}}, and the prefixed `mozSrcObject` property, dealing with [media streams](/en-US/docs/Web/API/Media_Streams_API) ({{bug("792665")}}).
+- `HTMLMediaElement.src` has been separate in two properties: the standard `src` property, dealing with {{domxref("DOMString")}}, and the prefixed `mozSrcObject` property, dealing with [media streams](/en-US/docs/Web/API/Media_Streams_API) ({{bug("792665")}}).
 - Support for [transferable objects.](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#passing_data_by_transferring_.c2.a0ownership_%28transferable_objects%29)
 - The {{domxref("Screen.lockOrientation()")}} method now supports an `Array` of {{domxref("DOMString")}} as argument ({{bug("784549")}}.
 
 ### JavaScript
 
 - Harmony's (ECMAScript 2015) [Direct Proxies](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) have been landed ({{bug("703537")}}). Warning: the implementation contains a couple of known bugs, missing features and misalignments with the current state of the spec. Do not rely on it for production code.
-- The ECMAScript 2015 `contains()` method is now implemented on strings. This is unfortunately not compatible with Mootools 1.2, which expects different behavior from `contains()` on strings but does not ensure it. Newer versions of Mootools fix this issue; sites should upgrade their Mootools version to something newer than 1.2.
+- The ECMAScript 2015 `contains()` method is now implemented on strings. This is unfortunately not compatible with Mootools 1.2, which expects different behavior from `contains()` on strings but does not ensure it. Newer versions of Mootools fix this issue; sites should upgrade their Mootools version to something newer than 1.2.
 
 ### WebGL
 
