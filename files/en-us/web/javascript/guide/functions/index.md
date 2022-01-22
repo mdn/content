@@ -38,9 +38,9 @@ The function `square` takes one parameter, called `number`. The function consist
 return number * number;
 ```
 
-Primitive parameters (such as a number) are passed to functions **by value**; the value is passed to the function, but if the function changes the value of the parameter, **this change is not reflected globally or in the calling function**.
+Parameters are passed to functions **by value** — so if the code within the body of a function assigns a completely new value to a parameter that was passed to the function, **the change is not reflected globally or in the code which called that function**.
 
-If you pass an object (i.e., a non-primitive value, such as {{jsxref("Array")}} or a user-defined object) as a parameter and the function changes the object's properties, that change is visible outside the function, as shown in the following example:
+However, when you pass an object as a parameter, if the function changes the object's properties, that change is visible outside the function, as shown in the following example:
 
 ```js
 function myFunc(theObject) {
