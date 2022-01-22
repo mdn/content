@@ -46,9 +46,11 @@ math-style: unset;
 
 ### CSS
 
-    math {
-      math-style: compact;
-    }
+```css
+math {
+  math-style: compact;
+}
+```
 
 ## Specifications
 

@@ -64,7 +64,9 @@ httpRequest.send();
 
 The parameter to the `send()` method can be any data you want to send to the server if `POST`-ing the request. Form data should be sent in a format that the server can parse, like a query string:
 
-    "name=value&anothername="+encodeURIComponent(myVar)+"&so=on"
+```
+"name=value&anothername="+encodeURIComponent(myVar)+"&so=on"
+```
 
 or other formats, like `multipart/form-data`, JSON, XML, and so on.
 
@@ -100,7 +102,7 @@ The full list of the `readyState` values is documented at [XMLHTTPRequest.readyS
 - 3 (interactive) or (**processing request**)
 - 4 (complete) or (**request finished and response is ready**)
 
-Next, check the [HTTP response status codes](/en-US/docs/Web/HTTP/Status) of the HTTP response. The possible codes are listed at the [W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). In the following example, we differentiate between a successful and unsuccessful AJAX call by checking for a [`200 OK`](/en-US/docs/Web/HTTP/Status#successful_responses) response code.
+Next, check the [HTTP response status codes](/en-US/docs/Web/HTTP/Status) of the HTTP response. The possible codes are listed at the [W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). In the following example, we differentiate between a successful and unsuccessful AJAX call by checking for a [`200 OK`](/en-US/docs/Web/HTTP/Status#successful_responses) response code.
 
 ```js
 if (httpRequest.status === 200) {
@@ -117,7 +119,7 @@ After checking the state of the request and the HTTP status code of the response
 - `httpRequest.responseText` – returns the server response as a string of text
 - `httpRequest.responseXML` – returns the response as an `XMLDocument` object you can traverse with JavaScript DOM functions
 
-Note that the steps above are valid only if you used an asynchronous request (the third parameter of `open()` was unspecified or set to `true`). If you used a **synchronous** request you don't need to specify a function, but this is highly discouraged as it makes for an awful user experience.
+Note that the steps above are valid only if you used an asynchronous request (the third parameter of `open()` was unspecified or set to `true`). If you used a **synchronous** request you don't need to specify a function, but this is highly discouraged as it makes for an awful user experience.
 
 ## Step 3 – A Simple Example
 
@@ -227,34 +229,34 @@ First we'll add a text box to our HTML so the user can enter their name:
 
 ```html
 <label>Your name:
-  <input type="text" id="ajaxTextbox" />
+  <input type="text" id="ajaxTextbox" />
 </label>
 <span id="ajaxButton" style="cursor: pointer; text-decoration: underline">
-  Make a request
+  Make a request
 </span>
 ```
 
 We'll also add a line to our event handler to get the user's data from the text box and send it to the `makeRequest()` function along with the URL of our server-side script:
 
 ```js
-  document.getElementById("ajaxButton").onclick = function() {
-      var userName = document.getElementById("ajaxTextbox").value;
-      makeRequest('test.php',userName);
-  };
+document.getElementById("ajaxButton").onclick = function() {
+    var userName = document.getElementById("ajaxTextbox").value;
+    makeRequest('test.php',userName);
+};
 ```
 
 We need to modify `makeRequest()` to accept the user data and pass it along to the server. We'll change the request method from `GET` to `POST`, and include our data as a parameter in the call to `httpRequest.send()`:
 
 ```js
-  function makeRequest(url, userName) {
+function makeRequest(url, userName) {
 
-    ...
+  ...
 
-    httpRequest.onreadystatechange = alertContents;
-    httpRequest.open('POST', url);
-    httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    httpRequest.send('userName=' + encodeURIComponent(userName));
-  }
+  httpRequest.onreadystatechange = alertContents;
+  httpRequest.open('POST', url);
+  httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  httpRequest.send('userName=' + encodeURIComponent(userName));
+}
 ```
 
 The function `alertContents()` can be written the same way it was in Step 3 to alert our computed string, if that's all the server returns. However, let's say the server is going to return both the computed string and the original user data. So if our user typed "Jane" in the text box, the server's response would look like this:
@@ -291,12 +293,14 @@ For more on DOM methods, be sure to check out [Document Object Model (DOM)](/en-
 
 Another simple example follows — here we are loading a text file via XHR, the structure of which is assumed to be like this:
 
-    TIME: 312.05
-    TIME: 312.07
-    TIME: 312.10
-    TIME: 312.12
-    TIME: 312.14
-    TIME: 312.15
+```
+TIME: 312.05
+TIME: 312.07
+TIME: 312.10
+TIME: 312.12
+TIME: 312.14
+TIME: 312.15
+```
 
 Once the text file is loaded, we `split()` the items into an array at each newline character (`\n` — basically where each line break is in the text file), and then print the complete list of timestamps, and the last timestamp, onto the page.
 

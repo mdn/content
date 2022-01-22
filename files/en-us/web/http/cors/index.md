@@ -133,15 +133,17 @@ Content-Type: application/xml
 […XML Data…]
 ```
 
-In response, the server returns a {{HTTPHeader("Access-Control-Allow-Origin")}} header with `Access-Control-Allow-Origin: *`, which means that the resource can be accessed by **any** origin.
+In response, the server returns a {{HTTPHeader("Access-Control-Allow-Origin")}} header with `Access-Control-Allow-Origin: *`, which means that the resource can be accessed by **any** origin.
 
 ```
 Access-Control-Allow-Origin: *
 ```
 
-This pattern of the {{HTTPHeader("Origin")}} and {{HTTPHeader("Access-Control-Allow-Origin")}} headers is the simplest use of the access control protocol. If the resource owners at `https://bar.other` wished to restrict access to the resource to requests _only_ from `https://foo.example`, (i.e no domain other than `https://foo.example` can access the resource in a cross-origin manner) they would send:
+This pattern of the {{HTTPHeader("Origin")}} and {{HTTPHeader("Access-Control-Allow-Origin")}} headers is the simplest use of the access control protocol. If the resource owners at `https://bar.other` wished to restrict access to the resource to requests _only_ from `https://foo.example`, (i.e no domain other than `https://foo.example` can access the resource in a cross-origin manner) they would send:
 
-    Access-Control-Allow-Origin: https://foo.example
+```
+Access-Control-Allow-Origin: https://foo.example
+```
 
 > **Note:** When responding to a [credentialed requests](#requests_with_credentials) request, the server **must** specify an origin in the value of the `Access-Control-Allow-Origin` header, instead of specifying the "`*`" wildcard.
 
@@ -201,7 +203,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 The {{HTTPHeader("Access-Control-Request-Method")}} header notifies the server as part of a preflight request that when the actual request is sent, it will do so with a `POST` request method. The {{HTTPHeader("Access-Control-Request-Headers")}} header notifies the server that when the actual request is sent, it will do so with `X-PINGOTHER` and `Content-Type` custom headers. Now the server has an opportunity to determine whether it can accept a request under these conditions.
 
-Lines 13 - 22 above are the response that the server returns, which indicate that the request method (`POST`) and request headers (`X-PINGOTHER`) are acceptable. Let's have a closer look at lines 16-19:
+Lines 13 - 22 above are the response that the server returns, which indicate that the request method (`POST`) and request headers (`X-PINGOTHER`) are acceptable. Let's have a closer look at lines 16-19:
 
 ```
 Access-Control-Allow-Origin: https://foo.example
@@ -210,7 +212,7 @@ Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 86400
 ```
 
-The server responds with `Access-Control-Allow-Origin: https://foo.example`, restricting access to the requesting origin domain only. It also responds with `Access-Control-Allow-Methods`, which says that `POST` and `GET` are valid methods to query the resource in question (this header is similar to the {{HTTPHeader("Allow")}} response header, but used strictly within the context of access control).
+The server responds with `Access-Control-Allow-Origin: https://foo.example`, restricting access to the requesting origin domain only. It also responds with `Access-Control-Allow-Methods`, which says that `POST` and `GET` are valid methods to query the resource in question (this header is similar to the {{HTTPHeader("Allow")}} response header, but used strictly within the context of access control).
 
 The server also sends `Access-Control-Allow-Headers` with a value of "`X-PINGOTHER, Content-Type`", confirming that these are permitted headers to be used with the actual request. Like `Access-Control-Allow-Methods`, `Access-Control-Allow-Headers` is a comma-separated list of acceptable headers.
 
@@ -343,11 +345,11 @@ CORS-preflight requests must never include credentials. The _response_ to a pref
 
 When responding to a credentialed request:
 
-- The server **must not** specify the "`*`" wildcard for the `Access-Control-Allow-Origin` response-header value, but must instead specify an explicit origin; for example: `Access-Control-Allow-Origin: https://example.com`
+- The server **must not** specify the "`*`" wildcard for the `Access-Control-Allow-Origin` response-header value, but must instead specify an explicit origin; for example: `Access-Control-Allow-Origin: https://example.com`
 
-- The server **must not** specify the "`*`" wildcard for the `Access-Control-Allow-Headers` response-header value, but must instead specify an explicit list of header names; for example, `Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
+- The server **must not** specify the "`*`" wildcard for the `Access-Control-Allow-Headers` response-header value, but must instead specify an explicit list of header names; for example, `Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
 
-- The server **must not** specify the "`*`" wildcard for the `Access-Control-Allow-Methods` response-header value, but must instead specify an explicit list of method names; for example, `Access-Control-Allow-Methods: POST, GET`
+- The server **must not** specify the "`*`" wildcard for the `Access-Control-Allow-Methods` response-header value, but must instead specify an explicit list of method names; for example, `Access-Control-Allow-Methods: POST, GET`
 
 If a request includes a credential (most commonly a `Cookie` header) and the response includes an `Access-Control-Allow-Origin: *` header (that is, with the wildcard), the browser will block access to the response, and report a CORS error in the devtools console.
 
@@ -359,7 +361,7 @@ Also note that any `Set-Cookie` response header in a response would not set a co
 
 Note that cookies set in CORS responses are subject to normal third-party cookie policies. In the example above, the page is loaded from `foo.example` but the cookie on line 20 is sent by `bar.other`, and would thus not be saved if the user's browser is configured to reject all third-party cookies.
 
-Cookie in the request (line 10) may also be suppressed in normal third-party cookie policies. The enforced cookie policy may therefore nullify the capability described in this chapter, effectively preventing you from making credentialed requests whatsoever.
+Cookie in the request (line 10) may also be suppressed in normal third-party cookie policies. The enforced cookie policy may therefore nullify the capability described in this chapter, effectively preventing you from making credentialed requests whatsoever.
 
 Cookie policy around the [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) attribute would apply.
 
@@ -434,7 +436,7 @@ An example of a {{Glossary("preflight request")}} is given above, including an e
 
 ### Access-Control-Allow-Headers
 
-The {{HTTPHeader("Access-Control-Allow-Headers")}} header is used in response to a {{Glossary("preflight request")}} to indicate which HTTP headers can be used when making the actual request. This header is the server side response to the browser's {{HTTPHeader("Access-Control-Request-Headers")}} header.
+The {{HTTPHeader("Access-Control-Allow-Headers")}} header is used in response to a {{Glossary("preflight request")}} to indicate which HTTP headers can be used when making the actual request. This header is the server side response to the browser's {{HTTPHeader("Access-Control-Request-Headers")}} header.
 
 ```
 Access-Control-Allow-Headers: <header-name>[, <header-name>]*
@@ -470,7 +472,7 @@ Examples of this usage can be [found above.](#preflighted_requests)
 
 ### Access-Control-Request-Headers
 
-The {{HTTPHeader("Access-Control-Request-Headers")}} header is used when issuing a preflight request to let the server know what HTTP headers will be used when the actual request is made (such as with {{domxref("XMLHttpRequest.setRequestHeader()","setRequestHeader()")}}). This browser-side header will be answered by the complementary server-side header of {{HTTPHeader("Access-Control-Allow-Headers")}}.
+The {{HTTPHeader("Access-Control-Request-Headers")}} header is used when issuing a preflight request to let the server know what HTTP headers will be used when the actual request is made (such as with {{domxref("XMLHttpRequest.setRequestHeader()","setRequestHeader()")}}). This browser-side header will be answered by the complementary server-side header of {{HTTPHeader("Access-Control-Allow-Headers")}}.
 
 ```
 Access-Control-Request-Headers: <field-name>[, <field-name>]*

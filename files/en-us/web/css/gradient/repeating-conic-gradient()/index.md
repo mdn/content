@@ -58,19 +58,21 @@ Because `<gradient>`s belong to the `<image>` data type, they can only be used w
 
 ### Understanding repeating conic gradients
 
-The repeating-conic-gradient syntax is similar to the {{cssxref("gradient/conic-gradient()", "conic-gradient()")}} and {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}} syntax. Like the non-repeating conic-gradient, the color-stops are placed around a gradient arc. Like the repeating radial gradient, the size of the repeating section is the first color stop subtracted from the angle of the last color stop.
+The repeating-conic-gradient syntax is similar to the {{cssxref("gradient/conic-gradient()", "conic-gradient()")}} and {{cssxref("gradient/repeating-radial-gradient()", "repeating-radial-gradient()")}} syntax. Like the non-repeating conic-gradient, the color-stops are placed around a gradient arc. Like the repeating radial gradient, the size of the repeating section is the first color stop subtracted from the angle of the last color stop.
 
 ![Comparison of the color stops for repeating and non-repeating conic and radial gradients](repeatingconicgradient.png)
 
 The above gradients are defined as being one third blue, one third red, and one third yellow.
 
-    repeating-conic-gradient(from 0deg, red 0deg 30deg, yellow 30deg 60deg, blue 60deg 90deg);
+```css
+repeating-conic-gradient(from 0deg, red 0deg 30deg, yellow 30deg 60deg, blue 60deg 90deg);
 
-    repeating-radial-gradient(red 0 8%, yellow 8% 16%, blue 16% 24%);
+repeating-radial-gradient(red 0 8%, yellow 8% 16%, blue 16% 24%);
 
-    conic-gradient(red 120deg, yellow 120deg 240deg, blue 240deg);
+conic-gradient(red 120deg, yellow 120deg 240deg, blue 240deg);
 
-    radial-gradient(red 33%, yellow 33% 66%, blue 66%);
+radial-gradient(red 33%, yellow 33% 66%, blue 66%);
+```
 
 For a repeating gradient to repeat we define the first and last color stops. Like in non-repeating gradients, the first and last color stops are assumed to be 0 and either 100% or 360deg if not explicitly declared. When defaulting to these values, the repeating arc is 360 degrees, and therefore doesn't repeat.
 

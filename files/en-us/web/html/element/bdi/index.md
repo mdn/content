@@ -41,11 +41,15 @@ The `<bdi>` element is used to wrap a span of text and instructs the bidirection
 
 For example, consider some text like:
 
-    EMBEDDED-TEXT - 1st place
+```
+EMBEDDED-TEXT - 1st place
+```
 
 If `EMBEDDED-TEXT` is LTR, this works fine. But if `EMBEDDED-TEXT` is RTL, then `- 1` will be treated as RTL text (because it consists of neutral and weak characters). The result will be garbled:
 
-    1 - EMBEDDED-TEXTst place
+```
+1 - EMBEDDED-TEXTst place
+```
 
 If you know the directionality of `EMBEDDED-TEXT` in advance, you can fix this problem by wrapping `EMBEDDED-TEXT` in a {{HTMLElement("span")}} with the {{htmlattrxref("dir")}} attribute set to the known directionality. But if you don't know the directionality - for example, because `EMBEDDED-TEXT` is being read from a database or entered by the user - you should use `<bdi>` to prevent the directionality of `EMBEDDED-TEXT` from affecting its surroundings.
 
@@ -122,8 +126,8 @@ This example lists the winners of a competition using {{HTMLElement("span")}} el
 
 ```html
 <ul>
- <li><span class="name">Henrietta Boffin</span> - 1st place</li>
- <li><span class="name">Jerry Cruncher</span> - 2nd place</li>
+  <li><span class="name">Henrietta Boffin</span> - 1st place</li>
+  <li><span class="name">Jerry Cruncher</span> - 2nd place</li>
 </ul>
 ```
 
@@ -145,8 +149,8 @@ This example lists the winners of a competition using {{HTMLElement("span")}} el
 
 ```html
 <ul>
- <li><span class="name">اَلأَعْشَى</span> - 1st place</li>
- <li><span class="name">Jerry Cruncher</span> - 2nd place</li>
+  <li><span class="name">اَلأَعْشَى</span> - 1st place</li>
+  <li><span class="name">Jerry Cruncher</span> - 2nd place</li>
 </ul>
 ```
 
@@ -168,8 +172,8 @@ This example lists the winners of a competition using `<bdi>` elements. These el
 
 ```html
 <ul>
- <li><bdi class="name">اَلأَعْشَى</bdi> - 1st place</li>
- <li><bdi class="name">Jerry Cruncher</bdi> - 2nd place</li>
+  <li><bdi class="name">اَلأَعْشَى</bdi> - 1st place</li>
+  <li><bdi class="name">Jerry Cruncher</bdi> - 2nd place</li>
 </ul>
 ```
 
