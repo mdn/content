@@ -11,7 +11,7 @@ browser-compat: api.IdleDetector.userState
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}}
 
-The **`userState`** read-only property of the {{domxref("IdleDetector")}} interface returns a string indicating whether the users has interacted with the device since the call to `start()`.
+The **`userState`** read-only property of the {{domxref("IdleDetector")}} interface returns a string indicating whether the user has interacted with the device since the call to `start()`.
 
 ## Value
 

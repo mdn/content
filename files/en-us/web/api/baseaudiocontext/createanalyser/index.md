@@ -15,7 +15,7 @@ browser-compat: api.BaseAudioContext.createAnalyser
 
 The `createAnalyser()` method of the
 {{domxref("BaseAudioContext")}} interface creates an {{domxref("AnalyserNode")}}, which
-can be used to expose audio time and frequency data and create data visualisations.
+can be used to expose audio time and frequency data and create data visualizations.
 
 > **Note:** The {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} constructor is the
 > recommended way to create an {{domxref("AnalyserNode")}}; see

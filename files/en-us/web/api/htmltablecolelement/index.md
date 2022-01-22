@@ -11,7 +11,7 @@ browser-compat: api.HTMLTableColElement
 ---
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLTableColElement`** interface provides special properties (beyond the {{domxref("HTMLElement")}} interface it also has available to it inheritance) for manipulating single or grouped table column elements.
+The **`HTMLTableColElement`** interface provides properties for manipulating single or grouped table column elements.
 
 {{InheritanceDiagram}}
 
