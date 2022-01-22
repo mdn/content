@@ -47,9 +47,11 @@ for(var entry of list.entries()) {
 
 results in:
 
-    Array [ 0, <p> ]
-    Array [ 1, #text "hey" ]
-    Array [ 2, <span> ]
+```
+Array [ 0, <p> ]
+Array [ 1, #text "hey" ]
+Array [ 2, <span> ]
+```
 
 ## Browser compatibility
 

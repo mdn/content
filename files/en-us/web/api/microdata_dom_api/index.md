@@ -108,11 +108,13 @@ itemprop="http://example.com/color">white</span> paws and belly.</p>
 
 ...it would result in the following output:
 
-    name
-    http://example.com/fn
-    desc
-    http://example.com/color
-    img
+```
+name
+http://example.com/fn
+desc
+http://example.com/color
+img
+```
 
 (The duplicate occurrence of "http\://example.com/color" is not included in the list.)
 

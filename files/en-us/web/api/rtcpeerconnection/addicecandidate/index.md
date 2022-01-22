@@ -53,7 +53,9 @@ addIceCandidate(candidate, successCallback, failureCallback) // deprecated
         The syntax of the candidate string is described in {{RFC(5245, "", 15.1)}}.
         For an a-line (attribute line) that looks like this:
 
-            a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+        ```
+        a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+        ```
 
         the corresponding `candidate` string's value will be
         `"candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host"`.
@@ -103,7 +105,9 @@ addIceCandidate(candidate, successCallback, failureCallback) // deprecated
 
     If no `candidate` object is specified, or its value is `null`, an end-of-candidates signal is sent to the remote peer using the `end-of-candidates` a-line, formatted like this:
 
-        a=end-of-candidates
+    ```
+    a=end-of-candidates
+    ```
 
 ### Deprecated parameters
 

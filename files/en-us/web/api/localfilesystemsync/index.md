@@ -12,7 +12,7 @@ browser-compat: api.LocalFileSystemSync
 ---
 {{APIRef("File System API")}}{{non-standard_header()}}
 
-The `LocalFileSystemSync` interface of the [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) gives you access to a sandboxed file system. It is intended to be used with [WebWorkers](/en-US/docs/Web/API/Worker). The methods are implemented by [worker](/en-US/docs/Web/API/Worker) objects.
+The `LocalFileSystemSync` interface of the [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) gives you access to a sandboxed file system. It is intended to be used with [WebWorkers](/en-US/docs/Web/API/Worker). The methods are implemented by [worker](/en-US/docs/Web/API/Worker) objects.
 
 ## About this document
 
@@ -110,10 +110,12 @@ Because you are using a synchronous API, you don't need success and error callba
 
 Requests a file system where data should be stored. You access a sandboxed file system by requesting a `LocalFileSystemSync` object from within a web worker using this global method, `window.requestFileSystemSync()`. \[ RESEARCH ]
 
-    FileSystemSync requestFileSystemSync(
-      in unsigned short type,
-      in unsigned long long size
-    );
+```
+FileSystemSync requestFileSystemSync(
+  in unsigned short type,
+  in unsigned long long size
+);
+```
 
 ##### Parameters
 
@@ -133,15 +135,17 @@ This method can raise an [FileException](/en-US/docs/Web/API/FileException) with
 
 | Exception        | Description                                                                                                                                                                                                                                                                                |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `SECURITY_ERROR` | The application does not have permission to access the file system interface. For example, you cannot run from `file://`. For more details, see the [article on basic concepts](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction#you_cannot_run_your_app_from_file:.2f.2f). |
+| `SECURITY_ERROR` | The application does not have permission to access the file system interface. For example, you cannot run from `file://`. For more details, see the [article on basic concepts](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction#you_cannot_run_your_app_from_file:.2f.2f). |
 
 ### resolveLocalFileSystemSyncURL()
 
 Allows the user to look up the `Entry` for a file or directory referred to by a local URL.
 
-    void resolveLocalFileSystemURL(
-      in DOMString url
-    );
+```
+void resolveLocalFileSystemURL(
+  in DOMString url
+);
+```
 
 ##### Parameter
 
@@ -196,4 +200,4 @@ Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", 
 
 Reference: [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 
-Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

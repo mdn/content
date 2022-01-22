@@ -59,7 +59,7 @@ Before getting farther into this, it's important to note again that most develop
 
 ### Enqueueing microtasks
 
-As such, you should typically use microtasks only when there's no other solution, or when creating frameworks or libraries that need to use microtasks in order to create the functionality they're implementing. While there have been tricks available that made it possible to enqueue microtasks in the past (such as by creating a promise that resolves immediately), the addition of  the {{domxref("queueMicrotask()")}} method adds a standard way to introduce a microtask safely and without tricks.
+As such, you should typically use microtasks only when there's no other solution, or when creating frameworks or libraries that need to use microtasks in order to create the functionality they're implementing. While there have been tricks available that made it possible to enqueue microtasks in the past (such as by creating a promise that resolves immediately), the addition of the {{domxref("queueMicrotask()")}} method adds a standard way to introduce a microtask safely and without tricks.
 
 By introducing `queueMicrotask()`, the quirks that arise when sneaking in using promises to create microtasks can be avoided. For instance, when using promises to create microtasks, exceptions thrown by the callback are reported as rejected promises rather than being reported as standard exceptions. Also, creating and destroying promises takes additional overhead both in terms of time and memory that a function which properly enqueues microtasks avoids.
 
@@ -113,15 +113,19 @@ Executing this code twice in a row gives the following results.
 
 When the data is not cached:
 
-    Fetching data
-    Data fetched
-    Loaded data
+```
+Fetching data
+Data fetched
+Loaded data
+```
 
 When the data is cached:
 
-    Fetching data
-    Loaded data
-    Data fetched
+```
+Fetching data
+Loaded data
+Data fetched
+```
 
 Even worse, sometimes the element's `data` property will be set and other times it won't be by the time this code finishes running.
 

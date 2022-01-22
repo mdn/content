@@ -17,7 +17,9 @@ An object of this type is returned by the `files` property of the HTML {{HTMLEle
 
 All `<input>` element nodes have a `files` attribute of type `FileList` on them which allows access to the items in this list. For example, if the HTML includes the following file input:
 
-    <input id="fileItem" type="file">
+```html
+<input id="fileItem" type="file">
+```
 
 The following line of code fetches the first file in the node's file list as a [`File`](/en-US/docs/Web/API/File) object:
 
@@ -60,9 +62,11 @@ var file = document.getElementById('fileItem').files[0];
 
 Returns a [`File`](/en-US/docs/Web/API/File) object representing the file at the specified index in the file list.
 
-     File item(
-       index
-     );
+```
+File item(
+  index
+);
+```
 
 #### Parameters
 

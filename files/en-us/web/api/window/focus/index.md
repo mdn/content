@@ -21,7 +21,9 @@ window.focus()
 
 ## Example
 
-    if (clicked) { window.focus(); }
+```js
+if (clicked) { window.focus(); }
+```
 
 ## Specifications
 

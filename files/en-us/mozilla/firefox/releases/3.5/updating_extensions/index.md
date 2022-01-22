@@ -18,16 +18,22 @@ Start by editing your extension's `install.rdf` file, updating `maxVersion` to 3
 
 Then create a new Firefox profile so that your testing doesn't risk your usual profile.  Navigate to the directory containing Firefox, then issue the command:
 
-    firefox -createProfile testBeta4
+```bash
+firefox -createProfile testBeta4
+```
 
 On the Mac, you need to navigate all the way into the Firefox application bundle:
 
-    cd /Applications/Firefox.app/Contents/MacOS/
-    firefox -createProfile testBeta4
+```bash
+cd /Applications/Firefox.app/Contents/MacOS/
+firefox -createProfile testBeta4
+```
 
 Launch Firefox using the new profile by issuing this command on the command line:
 
-    firefox -P testBeta4
+```bash
+firefox -P testBeta4
+```
 
 Test your extension thoroughly.  We suggest you set the following preferences to `true` in order to be alerted to any JavaScript warnings or exceptions:
 
