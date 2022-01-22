@@ -308,6 +308,14 @@ async function getProcessedData(url) {
   }
   return processDataInWorker(v)
 }
+
+// alternatively, you can chain the promise with .catch
+async function getProcessedData(url) {
+  const v = await downloadData(url).catch(e => { 
+    return downloadFallbackData(url)
+  })
+  return processDataInWorker(v)
+}
 ```
 
 In the second example, notice there is no `await` statement after the
