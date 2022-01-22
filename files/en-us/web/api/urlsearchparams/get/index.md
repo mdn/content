@@ -46,7 +46,9 @@ let age = parseInt(params.get("age"), 10); // is the number 18
 Requesting a parameter that isn't present in the query string will return
 **`null`**:
 
-    let address = params.get("address"); // null
+```js
+let address = params.get("address"); // null
+```
 
 ## Specifications
 

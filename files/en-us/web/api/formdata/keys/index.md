@@ -44,8 +44,10 @@ for (var key of formData.keys()) {
 
 The result is:
 
-    key1
-    key2
+```
+key1
+key2
+```
 
 ## Specifications
 
