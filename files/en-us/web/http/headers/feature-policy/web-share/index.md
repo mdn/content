@@ -1,5 +1,5 @@
 ---
-title: web-share
+title: 'Feature-Policy: web-share'
 slug: Web/HTTP/Headers/Feature-Policy/web-share
 tags:
   - Feature-Policy
