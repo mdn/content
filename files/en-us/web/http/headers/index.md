@@ -101,7 +101,7 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
   - : User agent's underlying operation system/platform.
 - {{HTTPHeader("Sec-CH-UA-Platform-Version")}} {{experimental_inline}}
   - : User agent's underlying operation system version.
- 
+
 ### Device client hints
 
 - {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}{{experimental_inline}}
@@ -289,7 +289,7 @@ _Learn more about CORS [here](CORS)._
   - : Allows sites to opt in to reporting and/or enforcement of Certificate Transparency requirements, which prevents the use of misissued certificates for that site from going unnoticed. When a site enables the Expect-CT header, they are requesting that Chrome check that any certificate for that site appears in public CT logs.
 - {{HTTPHeader("Feature-Policy")}}
   - : Provides a mechanism to allow and deny the use of browser features in its own frame, and in iframes that it embeds.
-- {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
+- {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
   - : Provides a mechanism to allow web applications to isolate their origins.
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : Force communication using HTTPS instead of HTTP.

@@ -10,13 +10,13 @@ tags:
   - Reference
 ---
 
-The `aria-labelledby` attribute identifies the element (or elements) that labels the element it is applied to. 
+The `aria-labelledby` attribute identifies the element (or elements) that labels the element it is applied to.
 
 ## Description
 
-The `aria-labelledby` property enables authors to reference other elements on the page to define an accessible name. This is useful when using elements that don't have native support for associating elements to provide an accessible name. 
+The `aria-labelledby` property enables authors to reference other elements on the page to define an accessible name. This is useful when using elements that don't have native support for associating elements to provide an accessible name.
 
-Some elements get their [accessible name](/en-US/docs/Glossary/Accessible_Name) from their inner content. For example, the accessible name for a {{HTMLElement('button')}}, {{HTMLElement('a')}}, or {{HTMLElement('td')}} comes from the text between the opening and closing tags. Other elements, such as form {{HTMLElement('textarea')}}, {{HTMLElement('fieldset')}}, and {{HTMLElement('table')}} get their accessible name from the content of associated elements; for these elements, the accessible name comes from the {{HTMLElement('label')}} with a `for` attribute, {{HTMLElement('legend')}}, and {{HTMLElement('caption')}} respectively. 
+Some elements get their [accessible name](/en-US/docs/Glossary/Accessible_Name) from their inner content. For example, the accessible name for a {{HTMLElement('button')}}, {{HTMLElement('a')}}, or {{HTMLElement('td')}} comes from the text between the opening and closing tags. Other elements, such as form {{HTMLElement('textarea')}}, {{HTMLElement('fieldset')}}, and {{HTMLElement('table')}} get their accessible name from the content of associated elements; for these elements, the accessible name comes from the {{HTMLElement('label')}} with a `for` attribute, {{HTMLElement('legend')}}, and {{HTMLElement('caption')}} respectively.
 
 All interactive elements must have an accessible name. `aria-labelledby` can be used to reference another element to define its accessible name, when an element's accessible name needs to use content from elsewhere in the DOM.
 
@@ -58,8 +58,8 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
    <span id="color">Yellow</span>
    ```
 
-In this example, that accessible name is "Yellow". 
-   
+   In this example, that accessible name is "Yellow".
+
 2. The `aria-labelledby` property takes as value an id reference list, which means you can combine more than one element into a single accessible name. You can include the {{htmlattrxref('id')}} of the element itself to reference its own content.
 
    ```html
@@ -69,18 +69,18 @@ In this example, that accessible name is "Yellow".
    </p>
    ```
 
-In this example, the accessible name is "read more 13 ARIA attributes you need to know".
-   
+    In this example, the accessible name is "read more 13 ARIA attributes you need to know".
+
 3. The `aria-labelledby` property value order matters. When more than one element is referenced by `aria-labelledby`, the content from each referenced element is combined in the order that they are referenced in the `aria-labelledby` value. Had we written `aria-labelledby="attr rm13">`, the accessible name would have been "13 ARIA attributes you need to know read more".
-       
+
 4. The `aria-labelledby` property ignores repeated `id`s in its value. If an element is referenced more than one time, only the first reference is processed. `aria-labelledby="attr attr rm13 rm13">` is treated as `aria-labelledby="attr rm13">`
 
 5. The `aria-labelledby` property value can include content from elements that aren't even visible. While you should provide assistive technology users with the same content and all other users, you can include content from elements with the HTML {{htmlattrxref('hidden')}} attribute, CSS [`display: none`](/en-US/docs/Web/CSS/display), and CSS [`visibility: hidden`](/en-US/docs/Web/CSS/visibility) in the calculated name string.
-   
+
 6. The `aria-labelledby` property incorporates the value of input elements. If the value references an `<input>`, the current value of the form control is included in the calculated name string, changing if the value is updated.
-   
+
 7. The `aria-labelledby` property cannot be chained. If an element with `aria-labelledby` references another element that also has `aria-labelledby`, the `aria-labelledby` attribute on the referenced element is ignored.
-   
+
 > **Warning:** Because calculating the name of an element with `aria-labelledby` can be complex and reference hidden content, testing with assistive technologies to ensure the expected name is presented to users is very important.
 
 ## Values
@@ -96,7 +96,7 @@ The `aria-labelledby` attribute is **NOT** supported in [`code`](/en-US/docs/Web
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-labelledby","ARIA: aria-labelledby Attribute")}}  | {{Spec2('ARIA')}} |
 

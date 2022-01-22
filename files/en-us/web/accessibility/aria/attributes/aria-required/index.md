@@ -14,11 +14,11 @@ The `aria-required` attribute indicates that user input is required on the eleme
 
 ## Description
 
-When a semantic HTML {{htmlelement("input")}}, {{htmlelement("select")}}, or {{htmlelement("textarea")}} must have a value, it should have the {{ htmlattrxref("required", "input") }} attribute applied to it. The HTML `required` attribute disables submitting the form unless the required form controls have valid values, while ensuring those navigating with the aid of assistive technologies understand which semantic form controls need valid content. 
+When a semantic HTML {{htmlelement("input")}}, {{htmlelement("select")}}, or {{htmlelement("textarea")}} must have a value, it should have the {{ htmlattrxref("required", "input") }} attribute applied to it. The HTML `required` attribute disables submitting the form unless the required form controls have valid values, while ensuring those navigating with the aid of assistive technologies understand which semantic form controls need valid content.
 
-When form controls are created using non-semantic elements, such as a {{HTMLElement('div')}} with a [role](/en-US/docs/Web/Accessibility/ARIA/Roles/) of [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role), the `aria-required` attribute should be included, with a value of `true`, to indicate to assistive technologies that user input is required on the element for the form to be submittable. The `aria-required` attribute can be used with HTML form elements; it is not limited to elements that have an ARIA role assigned. 
+When form controls are created using non-semantic elements, such as a {{HTMLElement('div')}} with a [role](/en-US/docs/Web/Accessibility/ARIA/Roles/) of [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role), the `aria-required` attribute should be included, with a value of `true`, to indicate to assistive technologies that user input is required on the element for the form to be submittable. The `aria-required` attribute can be used with HTML form elements; it is not limited to elements that have an ARIA role assigned.
 
-Similar to the HTML `required` attribute set on semantic HTML form controls, the `aria-required` attribute explicitly conveys to assistive technologies that the element is required before a form may be submitted. The `required` attribute on a semantic HTML form control will prevent the form control from being submitted if no value is present — providing native error messaging in some browsers if a required value is invalid when the user attempts to submit the form. The `aria-required` attribute, like all ARIA states and properties, has no impact on element functionality. Functionality and behavior must be added in with JavaScript. 
+Similar to the HTML `required` attribute set on semantic HTML form controls, the `aria-required` attribute explicitly conveys to assistive technologies that the element is required before a form may be submitted. The `required` attribute on a semantic HTML form control will prevent the form control from being submitted if no value is present — providing native error messaging in some browsers if a required value is invalid when the user attempts to submit the form. The `aria-required` attribute, like all ARIA states and properties, has no impact on element functionality. Functionality and behavior must be added in with JavaScript.
 
 > **Note:** ARIA only modifies the accessibility tree, modifying how assistive technology presents content to users. ARIA does not change anything about an element's function or behavior. When not using semantic HTML elements for their intended purpose and default functionality, you must use JavaScript to manage behavior, focus, and ARIA states.
 
@@ -26,7 +26,7 @@ The CSS {{CSSXRef(':required')}} and {{CSSXRef(':optional')}} pseudoclasses matc
 
 If a form contains both required and optional form elements, the required elements should be indicated visually using a treatment that does not rely solely on color to convey meaning. Typically, descriptive text and/or an icon are used.
 
-> **Note:** Which elements are required should be apparent to all users. Ensure the visual presentation indicates the form control is required in a consistent, visible manner, remembering that color is not enough to convey information. 
+> **Note:** Which elements are required should be apparent to all users. Ensure the visual presentation indicates the form control is required in a consistent, visible manner, remembering that color is not enough to convey information.
 
 ## Examples
 
@@ -53,7 +53,7 @@ This could be written semantically, without the need for JavaScript:
 - `false`
   - : The element is not required.
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaRequired")}}
   - : The  [`ariaRequired`](/en-US/docs/Web/API/Element/ariaRequired) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-required` attribute.
@@ -62,7 +62,7 @@ This could be written semantically, without the need for JavaScript:
 
 ## Associated roles
 
-Used in roles: 
+Used in roles:
 
 - [`checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role)
@@ -83,14 +83,14 @@ Inherits into roles:
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-required","ARIA: aria-required Attribute")}}  | {{Spec2('ARIA')}} |
 
 ## See Also
 
 - HTML {{ htmlattrxref("required", "input") }} attribute
-- [`:optional` pseudoclass](/en-US/docs/Web/CSS/:optional) 
+- [`:optional` pseudoclass](/en-US/docs/Web/CSS/:optional)
 - [`:required` pseudoclass](/en-US/docs/Web/CSS/:required)
 - [`aria-invalid` attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
 - [MDN Understanding WCAG, Guideline 3.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)

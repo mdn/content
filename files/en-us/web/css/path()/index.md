@@ -23,7 +23,7 @@ path( [[<'fill-rule'>,]?<string>)
 - `<'fill-rule'>`
   - : The filling rule for the interior of the path. Possible values are nonzero or evenodd. The default value is nonzero. See [fill-rule](/en-US/docs/Web/SVG/Attribute/fill-rule) for more details.
 - `<string>`
-  - : The string is a [data string](/en-US/docs/Web/SVG/Attribute/d) for defining an [SVG path](/en-US/docs/Web/SVG/Element/path) 
+  - : The string is a [data string](/en-US/docs/Web/SVG/Attribute/d) for defining an [SVG path](/en-US/docs/Web/SVG/Element/path)
 
 ## Examples
 
@@ -65,7 +65,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-#### Result 
+#### Result
 
 {{EmbedLiveSample('Modify the value of the SVG path d attribute', '100%', 200)}}
 

@@ -7,9 +7,9 @@ tags:
   - Meter
   - Web Development
 ---
-The `meter` role is used to identify an element being used as a meter.
+The `meter` role is used to identify an element being used as a meter.
 
-> **Note:** Where possible, it is recommended that you use a native {{HTMLElement("meter")}} element rather than the `meter` role, as native elements are more widely supported by user agents and assistive technology. 
+> **Note:** Where possible, it is recommended that you use a native {{HTMLElement("meter")}} element rather than the `meter` role, as native elements are more widely supported by user agents and assistive technology.
 
 ## Description
 
@@ -22,13 +22,13 @@ Each element with `role="meter"` must also have one of the following:
 
 ### Associated ARIA roles, states, and properties
 
-- [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) 
+- [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
   - : Set to a decimal value between `aria-valuemin` and `aria-valuemax` indicating the current value of the meter.
-- [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) 
+- [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
   - : Assistive technologies often present the value of `aria-valuenow` as a percentage. If this would not be accurate use this property to make the meter value understandable.
-- [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) 
+- [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
   - : Set to a decimal value representing the minimum value, and less than `aria-valuemax`.
-- [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) 
+- [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
   - : Set to a decimal value representing the maximum value, and greater than `aria-valuemin`.
 
 It is recommended to use a native {{HTMLElement("meter")}} element rather than the `meter` role. User agents provide a stylize widget for the {{HTMLElement("meter")}} element based on the current `value` as it relates to the `min` and `max` values. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript and CSS.
@@ -62,7 +62,7 @@ In the above scenario, when the `aria-valuenow` value updates, the width of the 
 | -------------------------------------------------------- | ---------------------------- |
 | {{SpecName("ARIA 1.2","#meter","meter")}} | {{Spec2('ARIA 1.2')}} |
 
-## See also 
+## See also
 
 - {{HTMLElement('meter')}}
 - {{HTMLElement('progress')}}

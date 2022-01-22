@@ -10,13 +10,13 @@ tags:
   - Reference
 ---
 
-The `aria-rowcount` attribute defines the total number of rows in a table, grid, or treegrid. 
+The `aria-rowcount` attribute defines the total number of rows in a table, grid, or treegrid.
 
 ## Description
 
-Some tables have hundreds, even millions, of rows. Even for tables with fewer rows, loading only a subsection of rows may be a design requirement, improve performance, or improve user experience. When only a subset of rows are loaded, you do need to let all users know that only a subset of the data is being displayed. The `aria-rowcount` attribute is used to define the total number of rows in a table, grid, or treegrid. 
+Some tables have hundreds, even millions, of rows. Even for tables with fewer rows, loading only a subsection of rows may be a design requirement, improve performance, or improve user experience. When only a subset of rows are loaded, you do need to let all users know that only a subset of the data is being displayed. The `aria-rowcount` attribute is used to define the total number of rows in a table, grid, or treegrid.
 
-Included on the {{HTMLElement('table')}} element or on an element with a role of [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role), the value is the number of rows in the full table, as an integer. If the total number of rows is not known, include `aria-rowcount="-1"`, which tells the browser to not count the total number of rows. 
+Included on the {{HTMLElement('table')}} element or on an element with a role of [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role), the value is the number of rows in the full table, as an integer. If the total number of rows is not known, include `aria-rowcount="-1"`, which tells the browser to not count the total number of rows.
 
 If all of the rows are loaded and in the DOM, you don't need to include `aria-rowcount` as browsers automatically count the total number of rows. However, if the rows aren't all present in the DOM at any time, this attribute is needed to provide the number of rows when the full table size is known and to tell the browser to not automatically count the rows when the total number of rows is not known.  
 
@@ -52,13 +52,13 @@ The following example shows a grid with 24 rows, of which the first row and rows
   </div>
 </div>
 ```
-    
+
 ## Values
 
 - `<integer>`
   - : The number of rows in the full table or `-1` is the table size is not known.
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaRowCount")}}
   - : The  [`ariaRowCount`](/en-US/docs/Web/API/Element/ariaRowCount) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowcount` attribute.
@@ -67,7 +67,7 @@ The following example shows a grid with 24 rows, of which the first row and rows
 
 ## Associated roles
 
-Used in roles: 
+Used in roles:
 
 - [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
 
@@ -78,7 +78,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-rowcount","ARIA: aria-rowcount Attribute")}}  | {{Spec2('ARIA')}} |
 

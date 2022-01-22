@@ -60,7 +60,7 @@ The `role` attribute only adds semantics; all of the functionality that comes na
 </fieldset>
 ```
 
-The native HTML radio ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio))  form control had two states ("checked" or "not checked"). Similarly, an element with `role="radio"`  can expose two states through the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute: `true` and `false`. The value of `mixed` correlates to the  `indeterminate` value of HTML `checked` attribute, meaning neither checked nor unchecked. While `mixed` is valid on both radios and checkboxes, it is rarely useful for a radio button. 
+The native HTML radio ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)) form control had two states ("checked" or "not checked"). Similarly, an element with `role="radio"` can expose two states through the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute: `true` and `false`. The value of `mixed` correlates to the  `indeterminate` value of HTML `checked` attribute, meaning neither checked nor unchecked. While `mixed` is valid on both radios and checkboxes, it is rarely useful for a radio button.
 
 If a radio button is checked, the radio element has `aria-checked` set to `true`. If it is not checked, it has `aria-checked` set to `false`.
 
@@ -68,7 +68,7 @@ Each radio button element has role `radio`. The radio role should always be nest
 
 Each radio element is labelled by its content, has a visible label referenced by `aria-labelledby`, or has a label specified with `aria-label`. The containing radiogroup element should either have a visible label referenced by `aria-labelledby` or a label specified with `aria-label`. If elements providing additional information about either the radio group or each radio button are present, those elements should be referenced by the radiogroup element or radio elements with the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) property.
 
-As `radio` is an interactive control; it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a radio is the <kbd>Space</kbd> key. Use JavaScript to toggle the `aria-checked` attribute to `true` when a radio becomes checked while ensuing that all the other radio roles in the group are set to  `aria-checked="false"`.
+As `radio` is an interactive control; it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a radio is the <kbd>Space</kbd> key. Use JavaScript to toggle the `aria-checked` attribute to `true` when a radio becomes checked while ensuing that all the other radio roles in the group are set to `aria-checked="false"`.
 
 If any of the radio roles in a group has `aria-required="true"` set, it is as if all of the radios in the group had the attribute making the selection of one of the radios in the radiogroup being required to be valid;  though not necessarily the one that has the [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) attribute set.
 
@@ -252,7 +252,7 @@ No JavaScript (or even CSS) would be needed had we used semantic HTML element wi
 
 ## Best practices
 
-The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the native [HTML radio](/en-US/docs/Web/HTML/Element/input/radio) using form controls instead of recreating a radio's functionality with JavaScript and ARIA.
+The first rule of ARIA is: if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding an ARIA role, state or property to make it accessible. As such, it is recommended to use the native [HTML radio](/en-US/docs/Web/HTML/Element/input/radio) using form controls instead of recreating a radio's functionality with JavaScript and ARIA.
 
 ## See also
 

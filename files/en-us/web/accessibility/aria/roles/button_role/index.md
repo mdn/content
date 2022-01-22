@@ -14,9 +14,9 @@ The `button` role is for clickable elements that trigger a response when activat
 
 ## Description
 
-The button role identifies an element as a button to assistive technology such as screen readers. A button is a widget used to perform actions such as submitting a form, opening a dialog, canceling an action, or performing a command such as inserting a new record or displaying information. Adding `role="button"` tells assistive technology that the element is a button but provides no button functionality. Use {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` instead. 
+The button role identifies an element as a button to assistive technology such as screen readers. A button is a widget used to perform actions such as submitting a form, opening a dialog, canceling an action, or performing a command such as inserting a new record or displaying information. Adding `role="button"` tells assistive technology that the element is a button but provides no button functionality. Use {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` instead.
 
-This `button` role can be used in combination with the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute to [create toggle buttons](#toggle_buttons).
+This `button` role can be used in combination with the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute to [create toggle buttons](#toggle_buttons).
 
 ```html
 <div id="saveChanges" tabindex="0" role="button" aria-pressed="false">Save</div>
@@ -30,9 +30,9 @@ The above example creates a focusable button, but requires JavaScript and CSS to
 
 > **Note:** If using `role="button"` instead of the semantic `<button>` or `<input type="button">` elements, you will need to make the element focusable and define event handlers for {{event("click")}} and {{event("keydown")}} events. This includes handling the <kbd>Enter</kbd> and <kbd>Space</kbd> keypresses in order to process all forms of user input. See [the official WAI-ARIA example code](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
 
-In addition to the ordinary button widget, `role="button"` should be included when creating a toggle button or menu button using a non-button element. 
+In addition to the ordinary button widget, `role="button"` should be included when creating a toggle button or menu button using a non-button element.
 
-A toggle button is a two-state button that can be either off (not pressed) or on (pressed). The [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute values of `true` or `false` identify a button as a toggle button. 
+A toggle button is a two-state button that can be either off (not pressed) or on (pressed). The [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute values of `true` or `false` identify a button as a toggle button.
 
 A menu button is a button that controls a menu and has an [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) property attribute set to either `menu` or `true`.
 
@@ -41,19 +41,19 @@ A menu button is a button that controls a menu and has an [`aria-haspopup`](/en-
 - [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
   - : The `aria-pressed`  attribute defines the button as a toggle button. The value describes the state of the button. The values include `aria-pressed="false"` when a button is not currently pressed, `aria-pressed="true"` to indicate a button is currently pressed, and `aria-pressed="mixed"` if the button is considered to be partially pressed. If the attribute is omitted or set to its default value of `aria-pressed="undefined"`, the element does not support being pressed.  
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
-  - : If the button controls a grouping of other elements, the `aria-expanded` state indicates whether the controlled grouping is currently expanded or collapsed.  If the button has `aria-expanded="false"` set, the grouping is not currently expanded; If the button has `aria-expanded="true"` set, it is currently expanded; if the button has `aria-expanded="undefined"` set or the attribute is omitted, it is not expandable.
+  - : If the button controls a grouping of other elements, the `aria-expanded` state indicates whether the controlled grouping is currently expanded or collapsed. If the button has `aria-expanded="false"` set, the grouping is not currently expanded; If the button has `aria-expanded="true"` set, it is currently expanded; if the button has `aria-expanded="undefined"` set or the attribute is omitted, it is not expandable.
 
 ### Basic buttons
 
-Buttons should always have an accessible name. For most buttons, this name will be the same as the text inside the button, between the opening and closing tags. In some cases, for example buttons represented by icons, the accessible name may be provided from the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attributes.
+Buttons should always have an accessible name. For most buttons, this name will be the same as the text inside the button, between the opening and closing tags. In some cases, for example buttons represented by icons, the accessible name may be provided from the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attributes.
 
 ### Toggle buttons
 
-A toggle button typically has two states: pressed and not pressed. A third mixed state is available for toggle buttons that control other elements, such as other toggle buttons or checkboxes, which do not all share the same value.  Whether an element is a toggle button or not can be indicated with the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute in addition to the `button` role (if the element is not already a native button element):
+A toggle button typically has two states: pressed and not pressed. A third mixed state is available for toggle buttons that control other elements, such as other toggle buttons or checkboxes, which do not all share the same value. Whether an element is a toggle button or not can be indicated with the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute in addition to the `button` role (if the element is not already a native button element):
 
 - If `aria-pressed` is not used, or is set to the "undefined" state, the button is not a toggle button.
-- If `aria-pressed="false"` is used the button is a toggle button that is currently not pressed.
-- If `aria-pressed="true"` is used the button is a toggle button that is currently pressed.
+- If `aria-pressed="false"` is used the button is a toggle button that is currently not pressed.
+- If `aria-pressed="true"` is used the button is a toggle button that is currently pressed.
 - if `aria-pressed="mixed"` is used, the button is considered to be partially pressed.
 
 As an example, the mute button on an audio player labeled "mute" could indicate that sound is muted by setting the `aria-pressed` state true. The label of a toggle button should not change when its state changes. In our example the label remains "Mute" with a screen reader reading "Mute toggle button pressed" or "Mute toggle button not pressed" depending on the value of `aria-pressed`. If the design were to call for the button label to change from "Mute" to "Unmute," a toggle button would not be appropriate, so the `aria-pressed` attribute would be omitted.
@@ -71,18 +71,18 @@ Following button activation, focus is set depending on the type of action the bu
 
 #### Required event handlers
 
-Buttons can be operated by mouse, touch, and keyboard users. For native HTML `<button>` elements, the button's `onclick` event fires for mouse clicks and when the user presses <kbd>Space</kbd> or <kbd>Enter</kbd> while the button has focus. But if another tag is used to create a button, the `onclick` event only fires when clicked by the mouse cursor, even if `role="button"` is used. Because of this, separate key event handlers must be added to the element so that the button is be triggered when the <kbd>Space</kbd> or <kbd>Enter</kbd> key is pressed.
+Buttons can be operated by mouse, touch, and keyboard users. For native HTML `<button>` elements, the button's `onclick` event fires for mouse clicks and when the user presses <kbd>Space</kbd> or <kbd>Enter</kbd> while the button has focus. But if another tag is used to create a button, the `onclick` event only fires when clicked by the mouse cursor, even if `role="button"` is used. Because of this, separate key event handlers must be added to the element so that the button is be triggered when the <kbd>Space</kbd> or <kbd>Enter</kbd> key is pressed.
 
 - `onclick`
   - : Handles the event raised when the button is activated using a mouse click or touch event.
 - `onKeyDown`
-  - : Handles the event raised when the button is activated using the Enter or Space key on the keyboard. (Note not the [deprecated onKeyPress](/en-US/docs/Web/API/Document/keypress_event))
+  - : Handles the event raised when the button is activated using the Enter or Space key on the keyboard. (Note not the [deprecated onKeyPress](/en-US/docs/Web/API/Document/keypress_event))
 
 ## Examples
 
 ### Basic button example
 
-In this example, a span element has been given the `button` role. Because a `<span>` element is used, the `tabindex` attribute is required to make the button focusable and part of the page's tab order. The included CSS style is provided to make the `<span>` element look like a button, and to provide visual cues when the button has focus.
+In this example, a span element has been given the `button` role. Because a `<span>` element is used, the `tabindex` attribute is required to make the button focusable and part of the page's tab order. The included CSS style is provided to make the `<span>` element look like a button, and to provide visual cues when the button has focus.
 
 The `handleBtnClick` and `handleBtnKeyDown` event handlers perform the button's action when activated using a mouse click or the <kbd>Space</kbd> or <kbd>Enter</kbd> key. In this case, the action is to add a new name to the list of names.
 
@@ -102,9 +102,9 @@ Try the example by adding a name to the text box. The button will cause the name
 
 ```css
 [role="button"] {
-  padding: 2px;
-  background-color: navy;
-  color: white;
+  padding: 2px;
+  background-color: navy;
+  color: white;
   cursor: default;
 }
 [role="button"]:hover,
@@ -152,7 +152,7 @@ function handleCommand(event) {
 
 ### Toggle button example
 
-In this snippet a {{HTMLElement("span")}} element is converted to a toggle button using the `button` role and the `aria-pressed` attribute. When the button is activated, the `aria-pressed` value switches states; changing from `true` to `false` and back again.
+In this snippet a {{HTMLElement("span")}} element is converted to a toggle button using the `button` role and the `aria-pressed` attribute. When the button is activated, the `aria-pressed` value switches states; changing from `true` to `false` and back again.
 
 #### HTML
 
@@ -168,7 +168,7 @@ In this snippet a {{HTMLElement("span")}} element is converted to a toggle butto
 </span>
 
 <audio id="audio" src="https://soundbible.com/mp3/Tyrannosaurus%20Rex%20Roar-SoundBible.com-807702404.mp3">
-  Your browser does not support the `audio` element.
+  Your browser does not support the `audio` element.
 </audio>
 ```
 
@@ -177,14 +177,14 @@ In this snippet a {{HTMLElement("span")}} element is converted to a toggle butto
 ```css
 button,
 [role="button"] {
-    padding: 3px;
-    border: 2px solid transparent;
+    padding: 3px;
+    border: 2px solid transparent;
 }
 
 button:active,
 button:focus,
 [role="button"][aria-pressed="true"] {
-    border: 2px solid #000;
+    border: 2px solid #000;
 }
 ```
 
@@ -192,24 +192,24 @@ button:focus,
 
 ```js
 function handleBtnClick(event) {
-  toggleButton(event.target);
+  toggleButton(event.target);
 }
 
 function handleBtnKeyDown(event) {
-  // Check to see if space or enter were pressed
-  if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") { // "Spacebar" for IE11 support
+  // Check to see if space or enter were pressed
+  if (event.key === " " || event.key === "Enter" || event.key === "Spacebar") { // "Spacebar" for IE11 support
     // Prevent the default action to stop scrolling when space is pressed
-    event.preventDefault();
-    toggleButton(event.target);
-  }
+    event.preventDefault();
+    toggleButton(event.target);
+  }
 }
 
 function toggleButton(element) {
   var audio = document.getElementById('audio');
-  // Check to see if the button is pressed
-  var pressed = (element.getAttribute("aria-pressed") === "true");
-  // Change aria-pressed to the opposite state
-  element.setAttribute("aria-pressed", !pressed);
+  // Check to see if the button is pressed
+  var pressed = (element.getAttribute("aria-pressed") === "true");
+  // Change aria-pressed to the opposite state
+  element.setAttribute("aria-pressed", !pressed);
   // toggle the play state of the audio file
   if(pressed) {
      audio.pause();
@@ -225,15 +225,15 @@ function toggleButton(element) {
 
 ## Accessibility concerns
 
-Buttons are interactive controls and thus focusable. If the `button` role is added to an element that is not focusable by itself (such as `<span>`, `<div>` or `<p>`) then, the `tabindex` attribute has to be used to make the button focusable.
+Buttons are interactive controls and thus focusable. If the `button` role is added to an element that is not focusable by itself (such as `<span>`, `<div>` or `<p>`) then, the `tabindex` attribute has to be used to make the button focusable.
 
 > **Warning:** Be careful when marking up links with the button role. Buttons are expected to be triggered using the <kbd>Space</kbd> or <kbd>Enter</kbd> key, while links are expected to be triggered using the <kbd>Enter</kbd> key. In other words, when links are used to behave like buttons, adding `role="button"` alone is not sufficient. It will also be necessary to add a key event handler that listens for the <kbd>Space</kbd> key in order to be consistent with native buttons.
 
-When the `button` role is used, screen readers announce the element as a button, generally saying "click" followed by the button's accessible name. The accessible name is either the content of the element or the value of an `aria-label` or element referenced by an  `aria-labelledby` attribute, or description, if included.
+When the `button` role is used, screen readers announce the element as a button, generally saying "click" followed by the button's accessible name. The accessible name is either the content of the element or the value of an `aria-label` or element referenced by an `aria-labelledby` attribute, or description, if included.
 
 ## Best practices
 
-If a link performs the action of a button, giving the element `role="button"` helps assistive technology users understand the function of the element. However, a better solution is to adjust the visual design so it matches the function and ARIA role.  Where possible, it is recommended to use native HTML buttons (`<button>`, `<input type="button">`,  `<input type="submit">`, `<input type="reset">` and `<input type="image">`) rather than the `button` role, as native HTML buttons are supported by all user agents and assistive technology and provide keyboard and focus requirements by default, without need for additional customization.
+If a link performs the action of a button, giving the element `role="button"` helps assistive technology users understand the function of the element. However, a better solution is to adjust the visual design so it matches the function and ARIA role. Where possible, it is recommended to use native HTML buttons (`<button>`, `<input type="button">`, `<input type="submit">`, `<input type="reset">` and `<input type="image">`) rather than the `button` role, as native HTML buttons are supported by all user agents and assistive technology and provide keyboard and focus requirements by default, without need for additional customization.
 
 ## Specifications
 
