@@ -96,11 +96,11 @@ In order to be oriented about what we're trying to accomplish, let's have a look
 
 <div id="container">
   <div class="label">Decoding quantum filament tachyon emissions...</div>
-  
+
   <progress id="progress" value="0"></progress>
-  
+
   <button class="button" id="startButton">Start</button>
-  
+
   <div class="label counter">
     Task <span id="currentTaskNumber">0</span> of <span id="totalTaskCount">0</span>
   </div>
@@ -384,7 +384,7 @@ If the log was scrolled to the end when we started, we make sure it still is. Th
 
 #### Adding text to the log
 
-The `log()` function adds the specified text to the log. Since we don't know at the time `log()` is called whether or not it's safe to immediately touch the DOM, we will cache the log text until it's safe to update. Above, in the code for ` updateDisplay``() `, you can find the code that actually adds the logged text to the log element when the animation frame is being updated.
+The `log()` function adds the specified text to the log. Since we don't know at the time `log()` is called whether or not it's safe to immediately touch the DOM, we will cache the log text until it's safe to update. Above, in the code for `updateDisplay()`, you can find the code that actually adds the logged text to the log element when the animation frame is being updated.
 
 ```js
 function log(text) {
@@ -462,7 +462,7 @@ Then we start a loop to create the actual tasks. For each task, we create an obj
 - `count` is the number of strings to output into the log from the task.
 - `text` is the text to output to the log the number of times specified by `count`.
 
-Each task is then enqueued by calling `enqueueTask()`, passing in ` logTaskHandler``() ` as the handler function and the `taskData` object as the object to pass into the function when it's called.
+Each task is then enqueued by calling `enqueueTask()`, passing in `logTaskHandler()` as the handler function and the `taskData` object as the object to pass into the function when it's called.
 
 ### Result
 

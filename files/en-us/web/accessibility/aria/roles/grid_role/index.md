@@ -73,7 +73,7 @@ If the grid is used as an interactive widget, [keyboard](#keyboard-use) interac
 - [aria-level](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-level_attribute)
   - : Indicates the hierarchical level of the grid within other structures.
 - [aria-multiselectable](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-multiselectable_attribute)
-  - : If ` aria-``multiselectable ` is set to `true`, multiple items in the grid can be selected. The default value is `false`.
+  - : If `aria-multiselectable` is set to `true`, multiple items in the grid can be selected. The default value is `false`.
 - [aria-readonly](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute)
   - : If the user can navigate the grid but not change the value or values of the grid, the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) should be set to `true`. The default value is `false`.
 
