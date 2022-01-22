@@ -7,7 +7,7 @@ tags:
 ---
 {{SVGRef}}
 
-The **`x`** attribute defines a x-axis coordinate in the user coordinate system.
+The **`x`** attribute defines an x-axis coordinate in the user coordinate system.
 
 You can use this attribute with the following SVG elements:
 
