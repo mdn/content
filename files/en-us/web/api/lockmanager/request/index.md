@@ -47,12 +47,12 @@ LockManager.request(name, {options}, callback)
      Valid values are:
 
     - `mode` {{optional_inline}}
-      
+
       - : Either `"exclusive"` or `"shared"`.
         The default value is `"exclusive"`.
 
     - `ifAvailable` {{optional_inline}}
-    
+
       - : If `true`, the lock request will only be granted if it is not already held.
         If it cannot be granted, the callback will be invoked with `null` instead of a `Lock` instance.
         The default value is `false`.
@@ -87,7 +87,7 @@ This method may return a promise rejected with a {{domxref("DOMException")}} of 
 - `SecurityError` {{domxref("DOMException")}}
   - : If a lock manager cannot be obtained for the current environment.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : If `names` starts with a hyphen (`-`), both options `steal` and `ifAvailable` are `true`, or if option `signal` exists and _either_ option `steal` or `ifAvailable` is `true`. 
+  - : If `names` starts with a hyphen (`-`), both options `steal` and `ifAvailable` are `true`, or if option `signal` exists and _either_ option `steal` or `ifAvailable` is `true`.
 - `AbortError` {{domxref("DOMException")}}
   - : If the option `signal` exists and is aborted.
 
@@ -96,7 +96,7 @@ This method may return a promise rejected with a {{domxref("DOMException")}} of 
 ### General Example
 
 The following example shows the basic use of the `request()` method with an asynchronous function as the callback.
-Once the callback is invoked, no other running code on this origin can hold \``my_resource`\` until the callback returns.
+Once the callback is invoked, no other running code on this origin can hold `my_resource` until the callback returns.
 
 ```js
 await navigator.locks.request('my_resource', async lock => {
@@ -106,10 +106,10 @@ await navigator.locks.request('my_resource', async lock => {
 
 ### Mode Example
 
-The following example shows how to use the `mode` option for readers and writers.
+The following example shows how to use the `mode` option for readers and writers.
 
 Notice that both functions use a lock called `my_resource`.
-The `do_read()` requests a lock in `'shared'` mode meaning that multiple calls may occur simultaneously across different event handlers, tabs, or workers.
+The `do_read()` requests a lock in `'shared'` mode meaning that multiple calls may occur simultaneously across different event handlers, tabs, or workers.
 
 ```js
 async function do_read() {
@@ -119,7 +119,7 @@ async function do_read() {
 }
 ```
 
-The `do_write()` function use the same lock but in `'exclusive'` mode which will delay invocation of the `request()` call in `do_read()` until the write operation has completed.
+The `do_write()` function use the same lock but in `'exclusive'` mode which will delay invocation of the `request()` call in `do_read()` until the write operation has completed.
 This applies across event handlers, tabs, or workers.
 
 ```js
@@ -133,7 +133,7 @@ function do_write() {
 ### ifAvailable Example
 
 To grab a lock only if it isn't already being held, use the `ifAvailable` option.
-In this function `await` means the method will not return until the callback is complete.
+In this function `await` means the method will not return until the callback is complete.
 Since the lock is only granted if it was available, this call avoids needing to wait on the lock being released elsewhere.
 
 ```js

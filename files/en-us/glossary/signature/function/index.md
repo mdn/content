@@ -28,7 +28,7 @@ MyObject.prototype.myFunction(value)
 
 - The method is installed on an {{Glossary("object")}} called `MyObject`.
 - The method is installed on the `prototype` of `MyObject` (thus it is an {{Glossary("Method", "instance method")}}) as opposed to being a {{Glossary("static method")}}.
-- The name of the method is ` myFunction``. `
+- The name of the method is `myFunction`.
 - The method accepts one parameter, which is called `value` and is not further defined.
 
 ### Signatures in Java
