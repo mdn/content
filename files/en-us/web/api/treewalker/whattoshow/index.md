@@ -10,9 +10,9 @@ browser-compat: api.TreeWalker.whatToShow
 ---
 {{ APIRef("DOM") }}
 
-The **`TreeWalker.whatToShow`** read-only property returns an
-`unsigned long` being a bitmask made of constants describing the types of
-{{domxref("Node")}} that must to be presented. Non-matching nodes are skipped, but their
+The **`TreeWalker.whatToShow`** read-only property returns a
+bitmask that indicates the types of
+[nodes](/en-US/docs/Web/API/Node) to show. Non-matching nodes are skipped, but their
 children may be included, if relevant. The possible values are:
 
 <table class="no-markdown">
