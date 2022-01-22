@@ -14,7 +14,9 @@ browser-compat: webextensions.api.webRequest.filterResponseData
 ---
 {{AddonSidebar()}}
 
-Use this function to create a {{WebExtAPIRef("webRequest.StreamFilter")}} object for a request. Then use the stream filter to monitor and modify the response. You'd typically call this function from a `webRequest` event listener.
+Use this function to create a {{WebExtAPIRef("webRequest.StreamFilter")}} object for a request. The stream filter gives the web extension full control over the stream, with the ability to monitor and modify the response. The `webRequest.StreamFilter` must have an `ondata` listener to process the stream — even if it only implements `filter.write(event.data)` to pass through the stream data — and the extension must call `close()` or `disconnect()` when it has finished monitoring the stream.
+
+You typically call this function from a `webRequest` event listener.
 
 Firefox uses an optimized byte cache for script requests. This optimized byte cache overrides the normal request caching. Data from this cache is not available in a form useful to extensions. If your extension needs to filter scripts, create your filter in {{WebExtAPIRef("webRequest.onBeforeRequest")}}. Doing this ensures that the filter is created prior to the attempt to load from cache, thereby avoiding the optimized cache.
 
