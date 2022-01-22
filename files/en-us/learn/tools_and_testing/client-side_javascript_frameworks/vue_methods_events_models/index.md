@@ -131,7 +131,7 @@ If you fill it out and click the "Add" button, the page will post the form back 
 
 To make a method available to the `ToDoForm` component, we need to add it to the component object, and this is done inside a `methods` property to our component, which goes in the same place as `data()`, `props`, etc. The `methods` property holds any methods we might need to call in our component. When referenced, methods are fully run, so it's not a good idea to use them to display information inside the template. For displaying data that comes from calculations, you should use a `computed` property, which we'll cover later.
 
-1.  In this component, we need to add an `onSubmit()` method to a `methods` property inside the `ToDoForm` component object.  We'll use this to handle the submit action.
+1.  In this component, we need to add an `onSubmit()` method to a `methods` property inside the `ToDoForm` component object. We'll use this to handle the submit action.
 
     Add this like so:
 
@@ -230,7 +230,9 @@ The first thing we need is a `data` property in our form to track the value of t
 
 4.  Now go back to your running app, add some text to the `<input>` field, and click the "Add" button. You should see the value you entered logged to your console, for example:
 
-        Label value: My value
+    ```
+    Label value: My value
+    ```
 
 ## Changing `v-model` behavior with modifiers
 
@@ -289,7 +291,7 @@ In the `onSubmit` event of our `ToDoForm`, let's add a `todo-added` event. Custo
 
 4.  When you submit your `ToDoForm`, you should see the console log from the `addToDo()` method. This is good, but we're still not passing any data back into the `App.vue` component. We can do that by passing additional arguments to the `this.$emit()` function back in the `ToDoForm` component.
 
-    In this case, when we fire the event we want to pass the `label` data along with it. this is done by including the data you want to pass as another parameter in the `$emit()` method:  `this.$emit("todo-added", this.label)`. This is similar to how native JavaScript events include data, except custom Vue events include no event object by default. This means that the emitted event will directly match whatever object you submit. So in our case, our event object will just be a string.
+    In this case, when we fire the event we want to pass the `label` data along with it. this is done by including the data you want to pass as another parameter in the `$emit()` method: `this.$emit("todo-added", this.label)`. This is similar to how native JavaScript events include data, except custom Vue events include no event object by default. This means that the emitted event will directly match whatever object you submit. So in our case, our event object will just be a string.
 
     Update your `onSubmit()` method like so:
 
@@ -305,9 +307,9 @@ In the `onSubmit` event of our `ToDoForm`, let's add a `todo-added` event. Custo
 
     ```js
     methods: {
-      addToDo(toDoLabel) {
-        console.log('To-do added:', toDoLabel);
-      }
+      addToDo(toDoLabel) {
+        console.log('To-do added:', toDoLabel);
+      }
     }
     ```
 
@@ -351,11 +353,11 @@ Update your `ToDoForm` component’s `onSubmit()` method to this:
 
 ```js
 onSubmit() {
-  if(this.label === "") {
-    return;
-  }
-  this.$emit('todo-added', this.label);
-  this.label = "";
+  if(this.label === "") {
+    return;
+  }
+  this.$emit('todo-added', this.label);
+  this.label = "";
 }
 ```
 

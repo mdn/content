@@ -307,8 +307,10 @@ Property pages must have the following sections:
 
 5. **Syntax**: The syntax section should show how to get the property, and how to set it, if it's not read only. Use the `syntaxbox` class for it and italics for part to be replaced by the actual variable name. For example:
 
-       var myType = oscillator.type;
-       oscillator.type = aType;
+    ```js
+    var myType = oscillator.type;
+    oscillator.type = aType;
+    ```
 
     The syntax section should also have a subsection — "Value", which will contain a description of the property's value. This should contain the data type of the property, and what it represents. For an example, see {{domxref("SpeechRecognition.grammars")}}
 

@@ -403,7 +403,9 @@ If something goes wrong, check the [browser console](https://extensionworkshop.c
 
 If you haven't managed to run the application, you should see an error message giving you a clue about the problem.
 
-    "No such native application <name>"
+```
+"No such native application <name>"
+```
 
 - Check that the name passed to `runtime.connectNative()` matches the name in the app manifest
 - macOS/Linux: check that name of the app manifest is `<name>.json`.
@@ -411,21 +413,21 @@ If you haven't managed to run the application, you should see an error message g
 - Windows: check that the registry key is in the correct place, and that its name matches the name in the app manifest.
 - Windows: check that the path given in the registry key points to the app manifest.
 
-<!---->
-
-    "Error: Invalid application <name>"
+  ```
+  "Error: Invalid application <name>"
+  ```
 
 - Check that the application's name contains no invalid characters.
 
-<!---->
-
-    "'python' is not recognized as an internal or external command, ..."
+  ```
+  "'python' is not recognized as an internal or external command, ..."
+  ```
 
 - Windows: if your application is a Python script, check that you have Python installed and have your path set up for it.
 
-<!---->
-
-    "File at path <path> does not exist, or is not executable"
+  ```
+  "File at path <path> does not exist, or is not executable"
+  ```
 
 - If you see this, then the app manifest has been found successfully.
 - Check that the "path" in the app's manifest is correct.
@@ -433,21 +435,21 @@ If you haven't managed to run the application, you should see an error message g
 - Check that the app is at the location pointed to by the `"path"` property in the app's manifest.
 - Check that the app is executable.
 
-<!---->
-
-    "This extension does not have permission to use native application <name>"
+  ```
+  "This extension does not have permission to use native application <name>"
+  ```
 
 - Check that the `"allowed_extensions"` key in the app manifest contains the add-on's ID.
 
-<!---->
-
-    "TypeError: browser.runtime.connectNative is not a function"
+  ```
+      "TypeError: browser.runtime.connectNative is not a function"
+  ```
 
 - Check that the extension has the `"nativeMessaging"` permission.
 
-<!---->
-
-    "[object Object]       NativeMessaging.jsm:218"
+  ```
+  "[object Object]       NativeMessaging.jsm:218"
+  ```
 
 - There was a problem starting the application.
 

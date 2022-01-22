@@ -45,9 +45,11 @@ With {{Glossary("Hypertext")}} and {{Glossary("HTTP")}}, **_URL_** is one of the
 
 Here are some examples of URLs:
 
-    https://developer.mozilla.org
-    https://developer.mozilla.org/en-US/docs/Learn/
-    https://developer.mozilla.org/en-US/search?q=URL
+```
+https://developer.mozilla.org
+https://developer.mozilla.org/en-US/docs/Learn/
+https://developer.mozilla.org/en-US/search?q=URL
+```
 
 Any of those URLs can be typed into your browser's address bar to tell it to load the associated page (resource).
 

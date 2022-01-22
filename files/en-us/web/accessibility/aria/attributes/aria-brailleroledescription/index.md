@@ -1,7 +1,7 @@
 ---
 title: 'aria-brailleroledescription'
 slug: web/Accessibility/ARIA/Attributes/aria-brailleroledescription
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -13,11 +13,11 @@ The global `aria-brailleroledescription` attribute defines a human-readable, aut
 
 ## Description
 
-Braille is not a one-to-one transliteration of letters and numbers, but rather it includes various abbreviations, contractions, and characters that represent words (known as lolograms). 
+Braille is not a one-to-one transliteration of letters and numbers, but rather it includes various abbreviations, contractions, and characters that represent words (known as lolograms).
 
-Instead of converting long role descriptions to Braille, the `aria-brailleroledescription` attribute allows for providing an abbreviated version of the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) value, which is a human-readable, author-localized description for the role of an element, for improved user experience with Braille interfaces. 
+Instead of converting long role descriptions to Braille, the `aria-brailleroledescription` attribute allows for providing an abbreviated version of the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) value, which is a human-readable, author-localized description for the role of an element, for improved user experience with Braille interfaces.
 
-Basically, the value of `aria-brailleroledescription` is an abbreviated version of the `aria-roledescription` attribute to be converted into Braille.  
+Basically, the value of `aria-brailleroledescription` is an abbreviated version of the `aria-roledescription` attribute to be converted into Braille.
 
 ```html
 <article aria-roledescription="slide" aria-brailleroledescription="sld" aria-labelledby="slide1heading">
@@ -28,7 +28,7 @@ Basically, the value of `aria-brailleroledescription` is an abbreviated version 
 
 Most assistive technologies, like screen readers, will read the above as "slide, welcome to by talk. Image, Me." Braille assistive technologies will present "sld welcome to my talk gra me" in Braille. The semantic {{HTMLElement('article')}} is given the role of "slide" by the `aria-roledescription` attribute; "slide" being a role not defined in the specification, but is a common role for slides in a presentation. In Braille, the role is presented as "sld". The "gra" is short for "graphic", which is how the "image" role is shortened in Braille.
 
-The `aria-brailleroledescription` attribute should only be used to clarify the purpose of non-interactive container roles like "group" or "region", or to provide a more specific description of a widget in a braille context. 
+The `aria-brailleroledescription` attribute should only be used to clarify the purpose of non-interactive container roles like "group" or "region", or to provide a more specific description of a widget in a braille context.
 
 As the `aria-brailleroledescription` attribute overrides how assistive technologies localize and express the name of a role in Braille, inappropriate values will prevent users from understanding and interacting with an element on braille interfaces.
 
@@ -38,7 +38,7 @@ A few rules to remember:
 
 - Only apply `aria-brailleroledescription` to elements with a valid ARIA role or elements with implicit role semantics.
 - The `aria-brailleroledescription`, if present, must have a non-empty, none null value that is different from the `aria-roledescription` value, which, in turn, is different from the ARIA explicit or role or implicit semantic role.
-- Avoid using Unicode Braille Patterns. If they must be used, ensure the `aria-brailleroledescription` value contains  content other than Unicode Braille Patterns, whitespace, and Braille Pattern dots-0. 
+- Avoid using Unicode Braille Patterns. If they must be used, ensure the `aria-brailleroledescription` value contains  content other than Unicode Braille Patterns, whitespace, and Braille Pattern dots-0.
 - Ensure the value is always localized to the document's language.
 
 > **Warning:** If the content is only in Unicode Braille Patterns, the value will not be translated according to the user's preferred translation table.
@@ -76,5 +76,5 @@ Used in **ALL** roles (except [`generic`](/en-US/docs/Web/Accessibility/ARIA/rol
 <section id="Quick_links">
 1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
 </section>

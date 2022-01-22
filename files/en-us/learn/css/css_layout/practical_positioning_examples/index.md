@@ -206,29 +206,31 @@ The second rule we'll add here makes it so that a panel with a `class` of `activ
 
 The final step to getting this feature working is to add some JavaScript. Put the following block of code, exactly as written in between your opening and closing {{htmlelement("script")}} tags (you'll find these below the HTML content):
 
-    var tabs = document.querySelectorAll('.info-box li a');
-    var panels = document.querySelectorAll('.info-box article');
+```js
+var tabs = document.querySelectorAll('.info-box li a');
+var panels = document.querySelectorAll('.info-box article');
 
+for(i = 0; i < tabs.length; i++) {
+  var tab = tabs[i];
+  setTabHandler(tab, i);
+}
+
+function setTabHandler(tab, tabPos) {
+  tab.onclick = function() {
     for(i = 0; i < tabs.length; i++) {
-      var tab = tabs[i];
-      setTabHandler(tab, i);
+      tabs[i].className = '';
     }
 
-    function setTabHandler(tab, tabPos) {
-      tab.onclick = function() {
-        for(i = 0; i < tabs.length; i++) {
-          tabs[i].className = '';
-        }
+    tab.className = 'active';
 
-        tab.className = 'active';
-
-        for(i = 0; i < panels.length; i++) {
-          panels[i].className = '';
-        }
-
-        panels[tabPos].className = 'active-panel';
-      }
+    for(i = 0; i < panels.length; i++) {
+      panels[i].className = '';
     }
+
+    panels[tabPos].className = 'active-panel';
+  }
+}
+```
 
 This code does the following:
 

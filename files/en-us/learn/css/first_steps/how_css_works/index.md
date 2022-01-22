@@ -79,14 +79,16 @@ Take the following HTML code:
 
 In the DOM, the node corresponding to our `<p>` element is a parent. Its children are a text node and the three nodes corresponding to our `<span>` elements. The `SPAN` nodes are also parents, with text nodes as their children:
 
-    P
-    ├─ "Let's use:"
-    ├─ SPAN
-    |  └─ "Cascading"
-    ├─ SPAN
-    |  └─ "Style"
-    └─ SPAN
-       └─ "Sheets"
+```
+P
+├─ "Let's use:"
+├─ SPAN
+|  └─ "Cascading"
+├─ SPAN
+|  └─ "Style"
+└─ SPAN
+    └─ "Sheets"
+```
 
 This is how a browser interprets the previous HTML snippet —it renders the above DOM tree and then outputs it in the browser like so:
 

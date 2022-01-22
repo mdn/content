@@ -50,7 +50,6 @@ The newly inserted rule's index within the stylesheet's rule-list.
 
 ### Exceptions
 
-
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `index` > `{{domxref("CSSRuleList", "", "", "1")}}.length`.
 - `HierarchyRequestError` {{domxref("DOMException")}}

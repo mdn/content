@@ -305,17 +305,19 @@ Text tracks for displaying with HTML5 video need to be written in WebVTT, a text
 
 A typical WebVTT file will look something like this:
 
-    WEBVTT
+```
+WEBVTT
 
-    1
-    00:00:22.230 --> 00:00:24.606
-    This is the first subtitle.
+1
+00:00:22.230 --> 00:00:24.606
+This is the first subtitle.
 
-    2
-    00:00:30.739 --> 00:00:34.074
-    This is the second.
+2
+00:00:30.739 --> 00:00:34.074
+This is the second.
 
-      ...
+...
+```
 
 To get this displayed along with the HTML media playback, you need to:
 

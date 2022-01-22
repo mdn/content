@@ -173,13 +173,15 @@ The double curly braces that contain `item.description` instructs Angular to pop
 
 In the browser, you should see the list of items as follows:
 
-    My To Do List
-    What would you like to do today?
+```
+My To Do List
+What would you like to do today?
 
-    * eat
-    * sleep
-    * play
-    * laugh
+* eat
+* sleep
+* play
+* laugh
+```
 
 ## Add items to the list
 

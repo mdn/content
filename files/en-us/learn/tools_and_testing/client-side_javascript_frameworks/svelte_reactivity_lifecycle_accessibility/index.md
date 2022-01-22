@@ -467,8 +467,10 @@ The one you'll use most frequently is `onMount()`, which lets us run a callback 
 3.  Now remove the `if (autofocus) nameEl.focus()` line to avoid throwing the error we were seeing before.
 4.  The app will now work again, and you'll see the following in your console:
 
-        initializing: undefined
-        mounted: <input id="todo-0" class="input input__lg" type="text" autocomplete="off">
+    ```
+    initializing: undefined
+    mounted: <input id="todo-0" class="input input__lg" type="text" autocomplete="off">
+    ```
 
     As you can see, while the component is initializing `nameEl` is undefined, which makes sense because the node input doesn't even exist yet. After the component has been mounted, Svelte assigned a reference to the `<input>` DOM node to the `nameEl` variable, thanks to the `bind:this={nameEl} directive`.
 

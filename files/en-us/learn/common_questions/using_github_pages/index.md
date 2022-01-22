@@ -94,9 +94,11 @@ This may seem a bit scary at first, but don't worry — you'll soon get the hang
 
 If you want to make more changes to your test site and upload those to GitHub, you need to make the change to your files just like you did before. Then, you need to enter the following commands (pressing Enter after each one) to push those changes to GitHub:
 
-    git add --all
-    git commit -m 'another commit'
-    git push
+```
+git add --all
+git commit -m 'another commit'
+git push
+```
 
 You can replace _another commit_ with a more suitable message to describe what change you just made.
 

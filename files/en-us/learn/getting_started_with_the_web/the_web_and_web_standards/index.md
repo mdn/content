@@ -72,11 +72,13 @@ You are probably reading these words inside a web browser in this very moment (u
 
 Hypertext Transfer Protocol, or [HTTP](/en-US/docs/Web/HTTP/Basics_of_HTTP), is a messaging protocol that allows web browsers to communicate with web servers (where web sites are stored). A typical conversation goes something like
 
-    "Hello web server. Can you give me the files I need to render bbc.co.uk"?
+```
+"Hello web server. Can you give me the files I need to render bbc.co.uk"?
 
-    "Sure thing web browser — here you go"
+"Sure thing web browser — here you go"
 
-    [Downloads files and renders web page]
+[Downloads files and renders web page]
+```
 
 The actual syntax for HTTP messages (called requests and responses) is not that human-readable, but this gives you the basic idea.
 

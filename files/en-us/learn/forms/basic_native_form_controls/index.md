@@ -260,7 +260,9 @@ If the image button is used to submit the form, this control doesn't submit its 
 
 So for example when you click on the image at coordinate (123, 456) and it submits via the `get` method, you'll see the values appended to the URL as follows:
 
-    http://foo.com?pos.x=123&pos.y=456
+```
+http://foo.com?pos.x=123&pos.y=456
+```
 
 This is a very convenient way to build a "hot map". How these values are sent and retrieved is detailed in the [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) article.
 
@@ -280,9 +282,11 @@ In this example, a file picker is created that requests graphic image files. The
 
 On some mobile devices, the file picker can access photos, videos, and audio captured directly by the device's camera and microphone by adding capture information to the `accept` attribute like so:
 
-    <input type="file" accept="image/*;capture=camera">
-    <input type="file" accept="video/*;capture=camcorder">
-    <input type="file" accept="audio/*;capture=microphone">
+```html
+<input type="file" accept="image/*;capture=camera">
+<input type="file" accept="video/*;capture=camcorder">
+<input type="file" accept="audio/*;capture=microphone">
+```
 
 ## Common attributes
 

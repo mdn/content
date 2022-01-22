@@ -130,7 +130,9 @@ Ember uses a command-line interface (CLI) tool for building and scaffolding part
 1.  You'll need node and npm installed before you can install ember-cli. [Go here to find out how to install node and npm](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups), if you haven't already got them.
 2.  Now type the following into your terminal to install ember-cli:
 
-        npm install -g ember-cli
+    ```
+    npm install -g ember-cli
+    ```
 
     This tool provides the `ember` program in your terminal, which is used to create, build, develop, test, and scaffold your application (run `ember --help` for a full list of commands and their options).
 
@@ -215,13 +217,15 @@ ember server
 
 This should give you an output similar to the following:
 
-    Build successful (190ms) – Serving on http://localhost:4200/
+```
+Build successful (190ms) – Serving on http://localhost:4200/
 
-    Slowest Nodes (totalTime >= 5%)          | Total (avg)
-    -----------------------------------------+-----------
-    BroccoliMergeTrees (17)                  | 35ms (2 ms)
-    Package /assets/vendor.js (1)            | 13ms
-    Concat: Vendor Styles/assets/vend... (1) | 12ms
+Slowest Nodes (totalTime >= 5%)          | Total (avg)
+-----------------------------------------+-----------
+BroccoliMergeTrees (17)                  | 35ms (2 ms)
+Package /assets/vendor.js (1)            | 13ms
+Concat: Vendor Styles/assets/vend... (1) | 12ms
+```
 
 The development server launches at `http://localhost:4200`, which you can visit in your browser to check out what your work looks like so far.
 

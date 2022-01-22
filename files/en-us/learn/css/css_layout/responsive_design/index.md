@@ -110,7 +110,9 @@ By using a flexible grid, you only need to add in a breakpoint and change the de
 
 In the early days of responsive design, our only option for performing layout was to use [floats](/en-US/docs/Learn/CSS/CSS_layout/Floats). Flexible floated layouts were achieved by giving each element a percentage width, and ensuring that across the layout the totals were not more than 100%. In his original piece on fluid grids, Marcotte detailed a formula for taking a layout designed using pixels and converting it into percentages.
 
-    target / context = result
+```
+target / context = result
+```
 
 For example, if our target column size is 60 pixels, and the context (or container) it is in is 960 pixels, we divide 60 by 960 to get a value we can use in our CSS, after moving the decimal point two places to the right.
 

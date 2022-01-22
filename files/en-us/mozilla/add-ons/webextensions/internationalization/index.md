@@ -125,9 +125,9 @@ To call a message string like this, you need to specify it like this:
 4.  The name of the message you want to call as defined in `messages.json`, followed by
 5.  Two underscores
 
-<!---->
-
-    __MSG_ + messageName + __
+```
+__MSG_ + messageName + __
+```
 
 ### Specifying a default locale
 
@@ -185,11 +185,15 @@ The `"placeholders"` member defines all the placeholders, and where they are ret
 
 Let's run through an example: the original `notificationContent` message string in the `en/messages.json` file is
 
-    You clicked $URL$.
+```
+You clicked $URL$.
+```
 
 Let's say the link clicked on points to `https://developer.mozilla.org`. After the {{WebExtAPIRef("i18n.getMessage()")}} call, the contents of the second parameter are made available in messages.json as `$1`, which replaces the `$URL$` placeholder as defined in the `"url"` placeholder. So the final message string is
 
-    You clicked https://developer.mozilla.org.
+```
+You clicked https://developer.mozilla.org.
+```
 
 ### Direct placeholder usage
 
@@ -266,11 +270,15 @@ Suppose the `default_locale` is set to `fr`, and the browser's current locale is
 
 The i18n module provides us with some predefined messages, which we can call in the same way as we saw earlier in {{anch("Calling message strings from manifests and extension CSS")}}. For example:
 
-    __MSG_extensionName__
+```
+__MSG_extensionName__
+```
 
 Predefined messages use exactly the same syntax, except with `@@` before the message name, for example
 
-    __MSG_@@ui_locale__
+```
+__MSG_@@ui_locale__
+```
 
 The following table shows the different available predefined messages:
 
@@ -392,10 +400,10 @@ padding-left: 1.5em;
 
 ## Testing out your extension
 
-To test your extension's localization, you use [Firefox](https://www.mozilla.org/en-US/firefox/new/) or [Firefox Beta](https://www.mozilla.org/en-US/firefox/channel/desktop/), the Firefox builds in which you can install language packs. 
+To test your extension's localization, you use [Firefox](https://www.mozilla.org/en-US/firefox/new/) or [Firefox Beta](https://www.mozilla.org/en-US/firefox/channel/desktop/), the Firefox builds in which you can install language packs.
 
 Then, for each locale supported in the extension you want to test, follow the instructions to [Use Firefox in another language](https://support.mozilla.org/en-US/kb/use-firefox-another-language) to switch the Firefox UI language. (If you know your way around Settings, under Language, use Set Alternatives.)
 
-Once Firefox is running in your test language, [install the extension temporarily](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox). After installing your extension, in `about:debugging`, if you've set up your extension correctly, you see the extension listed with its icon, name, and description in the chosen language. You can also see the localized extension details in `about:addons`. Now exercise the extension's features to ensure the translations you need are in place. 
+Once Firefox is running in your test language, [install the extension temporarily](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox). After installing your extension, in `about:debugging`, if you've set up your extension correctly, you see the extension listed with its icon, name, and description in the chosen language. You can also see the localized extension details in `about:addons`. Now exercise the extension's features to ensure the translations you need are in place.
 
 If you'd like to try this process out, you can use the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension. Set up Firefox to display one of the languages supported in this example (German, Dutch, or Japanese). Load the extension and go to a website. Click a link to see the translated version of the notification reporting the link's URL.

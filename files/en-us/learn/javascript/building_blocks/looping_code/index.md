@@ -487,12 +487,14 @@ Here's the output:
 
 First, let's have a look at the [while](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop. This loop's syntax looks like so:
 
-    initializer
-    while (condition) {
-      // code to run
+```
+initializer
+while (condition) {
+  // code to run
 
-      final-expression
-    }
+  final-expression
+}
+```
 
 This works in a very similar way to the `for` loop, except that the initializer variable is set before the loop, and the final-expression is included inside the loop after the code to run, rather than these two items being included inside the parentheses.
 The condition is included inside the parentheses, which are preceded by the `while` keyword rather than `for`.
@@ -527,12 +529,14 @@ console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmi
 
 The [do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) loop is very similar, but provides a variation on the while structure:
 
-    initializer
-    do {
-      // code to run
+```
+initializer
+do {
+  // code to run
 
-      final-expression
-    } while (condition)
+  final-expression
+} while (condition)
+```
 
 In this case, the initializer again comes first, before the loop starts. The keyword directly precedes the curly braces containing the code to run and the final expression.
 
