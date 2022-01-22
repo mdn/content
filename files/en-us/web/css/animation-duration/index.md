@@ -84,6 +84,8 @@ animation-duration: unset;
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("Examples","100%","250")}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for more examples.
