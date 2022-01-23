@@ -18,12 +18,12 @@ A `StreamFilter` is an object you use to monitor and modify HTTP responses.
 
 To create a `StreamFilter`, call {{WebExtAPIRef("webRequest.filterResponseData()")}}, passing the ID of the web request you want to filter.
 
-You can think of the stream filter as sitting between the networking stack and the browser's rendering engine. The filter is passed HTTP response data as it's received from the network. It can examine and modify the data before passing it along to the rendering engine, where it is parsed and rendered. Therefore, the stream filter gives the web extension full control over the stream. It must have an `ondata` listener to process the stream, even if it only implements `filter.write(event.data)` to pass through the stream data.
+You can think of the stream filter as sitting between the networking stack and the browser's rendering engine. The filter is passed HTTP response data as it's received from the network. It can examine and modify the data before passing it along to the rendering engine, where it is parsed and rendered. The filter has full control over the response body, and the default behavior without any listeners or write calls is to have a stream without content that never closes.
 
 The filter generates four different events:
 
 - {{WebEXTAPIRef("webRequest.StreamFilter.onstart", "onstart")}} when the filter is about to start receiving response data.
-- {{WebEXTAPIRef("webRequest.StreamFilter.ondata", "ondata")}} when some response data has been received by the filter and is available to be examined or modified. This event should always be implemented.
+- {{WebEXTAPIRef("webRequest.StreamFilter.ondata", "ondata")}} when some response data has been received by the filter and is available to be examined or modified. 
 - {{WebEXTAPIRef("webRequest.StreamFilter.onstop", "onstop")}} when the filter has finished receiving response data.
 - {{WebEXTAPIRef("webRequest.StreamFilter.onerror", "onerror")}} if an error has occurred in initializing and operating the filter.
 
@@ -39,9 +39,9 @@ Note that the request is blocked during the execution of any event listeners.
 
 The filter provides a {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}} function. At any time from the `onstart` event onwards you can use this function to write data to the output stream.
 
-If you assign listeners to any of the filter's events, then all the response data passed to the rendering engine will be supplied through calls you make to `write()`: so if you add a listener but don't call `write()`, then the rendered page will be blank.
+If you assign listeners to any of the filter's events, all the response data passed to the rendering engine is supplied through calls you make to `write()`. So, if you add a listener and don't call `write()` the rendered page is blank.
 
-Once you have finished interacting with the response you call either of the following:
+Once you have finished interacting with the response, call either of the following:
 
 - {{WebEXTAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}: This disconnects the filter from the request, so the rest of the response is processed normally.
 - {{WebEXTAPIRef("webRequest.StreamFilter.close()", "close()")}}: This closes the request, so no additional response data will be processed.

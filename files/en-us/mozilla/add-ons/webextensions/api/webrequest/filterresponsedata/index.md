@@ -14,7 +14,7 @@ browser-compat: webextensions.api.webRequest.filterResponseData
 ---
 {{AddonSidebar()}}
 
-Use this function to create a {{WebExtAPIRef("webRequest.StreamFilter")}} object for a request. The stream filter gives the web extension full control over the stream, with the ability to monitor and modify the response. The `webRequest.StreamFilter` must have an `ondata` listener to process the stream — even if it only implements `filter.write(event.data)` to pass through the stream data — and the extension must call `close()` or `disconnect()` when it has finished monitoring the stream.
+Use this function to create a {{WebExtAPIRef("webRequest.StreamFilter")}} object for a request. The stream filter gives the web extension full control over the stream, with the ability to monitor and modify the response. It's the extension's responsibility to write and close or disconnect the stream, as the default behavior is to keep the request open without a response.
 
 You typically call this function from a `webRequest` event listener.
 
@@ -40,6 +40,21 @@ var filter = browser.webRequest.filterResponseData(
 A {{WebExtAPIRef("webRequest.StreamFilter")}} object that you can use to monitor and modify the response.
 
 ## Examples
+
+This example shows a minimal implementation that passes through the stream data and closes the filter stream when the stream finishes receiving data.
+
+```js
+var filter = browser.webRequest.filterResponseData(details.requestId);
+filter.ondata = event => {
+  console.log(`filter.ondata received ${e.data.byteLength} bytes`);
+  filter.write(event.data);
+};
+filter.onstop = event => {
+  // The extension should always call filter.close() or filter.disconnect()
+  // after creating the StreamFilter, otherwise the response is kept alive forever.
+  filter.close();
+};
+```
 
 This example, taken from the [http-response](https://github.com/mdn/webextensions-examples/tree/master/http-response) example extension, creates a filter in {{WebExtAPIRef("webRequest.onBeforeRequest")}} and uses it, to modify the first chunk of the response:
 
