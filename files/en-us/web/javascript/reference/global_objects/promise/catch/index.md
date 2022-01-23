@@ -88,7 +88,7 @@ Promise.resolve().catch(function XXX(){});
 
 The `catch` method is used for error handling in promise composition. Since
 it returns a {{jsxref("Promise")}}, it [can be
-chained](/en-US/docs/Web/JavaScript/Guide/Using_promises#Chaining_after_a_catch) in the same way as its sister method, {{jsxref("Promise.then",
+chained](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining_after_a_catch) in the same way as its sister method, {{jsxref("Promise.then",
   "then()")}}.
 
 ## Examples
