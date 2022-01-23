@@ -107,7 +107,7 @@ The basic approach for implementing a web component generally looks something li
 
   - : Extensions to the `Event` interface related to shadow DOM:
 
-    - {{domxref("Event.composed")}}: Returns a {{jsxref("Boolean")}} which indicates whether the event will propagate across the shadow DOM boundary into the standard DOM (`true`), or not  (`false`).
+    - {{domxref("Event.composed")}}: Returns `true` if the event will propagate across the shadow DOM boundary into the standard DOM, otherwise `false`.
     - {{domxref("Event.composedPath")}}: Returns the event’s path (objects on which listeners will be invoked). This does not include nodes in shadow trees if the shadow root was created with {{domxref("ShadowRoot.mode")}} closed.
 
 ### HTML templates
@@ -134,7 +134,7 @@ The basic approach for implementing a web component generally looks something li
 
     - {{cssxref("::slotted")}}: Matches any content that is inserted into a slot.
 
-- The {{event("slotchange")}} event
+- The {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} event
   - : Fired on an {{domxref("HTMLSlotElement")}} instance ({{htmlelement("slot")}} element) when the node(s) contained in that slot change.
 
 ## Examples

@@ -311,8 +311,8 @@ this purpose:
 
 - [ECMAScript
   exceptions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)
-- [`DOMException`](/en-US/docs/Web/API/DOMException "The DOMException interface represents an abnormal event (called an exception) which occurs as a result of calling a method or accessing a property of a web API.")
-  and [`DOMError`](/en-US/docs/Web/API/DOMError "The DOMError interface describes an error object that contains an error name.")
+- [`DOMException`](/en-US/docs/Web/API/DOMException)
+  and [`DOMError`](/en-US/docs/Web/API/DOMError)
 
 ### `throw` statement
 

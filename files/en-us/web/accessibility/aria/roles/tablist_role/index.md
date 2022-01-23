@@ -30,15 +30,14 @@ tags:
 
 ### Prefer HTML
 -->
+
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#tablist","ARIA: tablist role")}}                                             | {{Spec2('ARIA')}}                         |
 
-
 ## See Also
-
 
 <section id="Quick_links">
 

@@ -50,4 +50,3 @@ encoder.encode(data);
 ## Browser compatibility
 
 {{Compat}}
-

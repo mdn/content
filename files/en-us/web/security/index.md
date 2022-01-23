@@ -15,7 +15,7 @@ Ensuring that your website or open web application is secure is critical. Even s
 
 ## Connection security
 
-- [Transport layer security (TLS)](/en-US/docs/Web/Security/Transport_Layer_Security)
+- [Transport layer security (TLS)](/en-US/docs/Web/Security/Transport_Layer_Security)
   - : The Transport Layer Security ({{Glossary("TLS")}}) protocol is the standard for enabling two networked applications or devices to exchange information privately and robustly. Applications that use TLS can choose their security parameters, which can have a substantial impact on the security and reliability of data. This article provides an overview of TLS and the kinds of decisions you need to make when securing your content.
 - HTTPS
   - : **HTTPS** (**_HyperText Transfer Protocol Secure_**) is an encrypted version of the {{Glossary("HTTP")}} protocol. It uses {{Glossary("SSL")}} or {{Glossary("TLS")}} to encrypt all communication between a client and a server. This secure connection allows clients to be sure that they are connected with the intended server, and to exchange sensitive data.
@@ -68,9 +68,9 @@ Ensuring that your website or open web application is secure is critical. Even s
 In [clickjacking](/en-US/docs/Glossary/Clickjacking), a user is fooled into clicking on a UI element that performs some action other than what the user expects.
 
 - [HTTP X-Frame-Options](/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether or not a browser should be allowed to render a page in a [`<frame>`](/en-US/docs/Web/HTML/Element/frame "<frame> is an HTML element which defines a particular area in which another HTML document can be displayed. A frame should be used within a <frameset>."), [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe "The HTML Inline Frame element (<iframe>) represents a nested browsing context, embedding another HTML page into the current one."), [`<embed>`](/en-US/docs/Web/HTML/Element/embed "The HTML <embed> element embeds external content at the specified point in the document. This content is provided by an external application or other source of interactive content such as a browser plug-in.") or [`<object>`](/en-US/docs/Web/HTML/Element/object "The HTML <object> element represents an external resource, which can be treated as an image, a nested browsing context, or a resource to be handled by a plugin."). Sites can use this to avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks, by ensuring that their content is not embedded into other sites.
+  - : The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether or not a browser should be allowed to render a page in a [`<frame>`](/en-US/docs/Web/HTML/Element/frame), [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), [`<embed>`](/en-US/docs/Web/HTML/Element/embed) or [`<object>`](/en-US/docs/Web/HTML/Element/object). Sites can use this to avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks, by ensuring that their content is not embedded into other sites.
 - [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
-  - : The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** directive specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or {{HTMLElement("applet")}}.
+  - : The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** directive specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or {{HTMLElement("applet")}}.
 
 ## User information security
 

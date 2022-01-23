@@ -22,7 +22,7 @@ Highlights:
 
 ### HTML
 
-- When faced with an invalid `type` value, {{HTMLElement("ul")}} no longer maps to `decimal`, but now behaves as if no `type` value were specified ({{bug(241719)}}).
+- When faced with an invalid `type` value, {{HTMLElement("ul")}} no longer maps to `decimal`, but now behaves as if no `type` value were specified ({{bug(241719)}}).
 - The attribute `pattern` on {{HTMLElement("input")}} is now treated as {{jsxref("RegExp", "a regular expression", "", 1)}} with `"u"` (unicode) flag ({{bug(1227906)}}).
 
 ### CSS
@@ -34,15 +34,15 @@ Highlights:
 
 - The properties {{cssxref("text-emphasis")}}, {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}} and {{cssxref("text-emphasis-position")}} are now enabled by default ({{bug(1231485)}}).
 - Gecko now accepts the `-webkit-` prefixed version of [some properties](https://wiki.mozilla.org/Compatibility/Mobile/Non_Standard_Compatibility); it requires to switch `layout.css.prefixes.webkit` to `true` ({{bug(1213126)}}).
-- The experimental support of the {{cssxref("@font/font-display", "font-display")}} descriptor (of {{cssxref("@font")}}; it requires to switch `layout.css.font-display.enabled` to `true` ({{bug(1157064)}}).
+- The experimental support of the {{cssxref("@font/font-display", "font-display")}} descriptor (of {{cssxref("@font")}}; it requires to switch `layout.css.font-display.enabled` to `true` ({{bug(1157064)}}).
 - Added support for [`@media (-webkit-transform-3d)`](/en-US/docs/Web/CSS/@media/-webkit-transform-3d) as a media query for 3D transform support, if about:config pref `layout.css.prefixes.webkit` is set to `true` ({{bug(1239799)}}).
-- {{cssxref("linear-gradient()")}} support for the omission of `0deg` units ({{bug(1239153)}}).
+- {{cssxref("linear-gradient()")}} support for the omission of `0deg` units ({{bug(1239153)}}).
 - Added `-webkit-filter` for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false` ({{bug(1236506)}}).
-- \[css-align] "unsafe start" (formerly "true start") should serialize to "start" etc ({{bug(1230398)}}).
+- \[css-align] "unsafe start" (formerly "true start") should serialize to "start" etc ({{bug(1230398)}}).
 
 ### JavaScript
 
-- The ES2015 {{jsxref("RegExp.prototype.unicode", "RegExp unicode (u) flag", "", 1)}} has been implemented ({{bug(1135377)}}).
+- The ES2015 {{jsxref("RegExp.prototype.unicode", "RegExp unicode (u) flag", "", 1)}} has been implemented ({{bug(1135377)}}).
 - The ES2015 block-level functions have been implemented ({{bug(1071646)}}).
 - The ES2015 {{jsxref("TypedArray.prototype.sort()")}} method has been implemented ({{bug(1121937)}}).
 - The ES2015 {{jsxref("Functions/arguments/@@iterator", "arguments[@@iterator]")}} has been implemented ({{bug(1067049)}}).
@@ -64,13 +64,13 @@ Highlights:
 
 #### Canvas
 
-- The remaining parts of the experimental {{domxref("OffscreenCanvas")}} API has been implemented; new features: {{domxref("OffscreenCanvas.OffscreenCanvas", "OffscreenCanvas()")}} constructor,  {{domxref("OffscreenCanvas.toBlob()")}}, and {{domxref("OffscreenCanvas.transferToImageBitmap()")}}. To use this experimental API set `gfx.offscreencanvas.enabled` to `true` in about:config ({{bug(1172796)}}).
+- The remaining parts of the experimental {{domxref("OffscreenCanvas")}} API has been implemented; new features: {{domxref("OffscreenCanvas.OffscreenCanvas", "OffscreenCanvas()")}} constructor, {{domxref("OffscreenCanvas.toBlob()")}}, and {{domxref("OffscreenCanvas.transferToImageBitmap()")}}. To use this experimental API set `gfx.offscreencanvas.enabled` to `true` in about:config ({{bug(1172796)}}).
 - The {{domxref("ImageBitmap.close()")}} method is now supported ({{bug(1172796)}}).
 - A new {{domxref("ImageBitmapRenderingContext")}} rendering context is now implemented. Use `"bitmaprenderer"` with {{domxref("OffscreenCanvas.getContext()")}} or {{domxref("HTMLCanvasElement.getContext()")}} to obtain this context. ({{bug(1172796)}}).
 
 #### WebGL
 
-- The {{domxref("WEBGL_compressed_texture_etc")}} extension has been implemented, allowing the use of [ETC2 compressed texture formats ](https://en.wikipedia.org/wiki/Ericsson_Texture_Compression)({{bug(917505)}}). To use this extension, set the preference `webgl.enable-draft-extensions` to `true` in about:config.
+- The {{domxref("WEBGL_compressed_texture_etc")}} extension has been implemented, allowing the use of [ETC2 compressed texture formats](https://en.wikipedia.org/wiki/Ericsson_Texture_Compression) ({{bug(917505)}}). To use this extension, set the preference `webgl.enable-draft-extensions` to `true` in about:config.
 
 #### IndexedDB
 

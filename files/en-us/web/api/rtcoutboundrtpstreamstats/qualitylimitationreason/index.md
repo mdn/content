@@ -47,8 +47,6 @@ duration of the media, in seconds, whose quality was reduced for that reason.
 
 ## Examples
 
-
-
 ## Specifications
 
 {{Specifications}}

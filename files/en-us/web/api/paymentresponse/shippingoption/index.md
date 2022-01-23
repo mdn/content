@@ -44,7 +44,7 @@ is called. It calls `updateDetails()` to toggle the shipping method between
     });
 
     payment.show().then(function(paymentResponse) {
-      // Processing of paymentResponse exerpted for the same of brevity.
+      // Processing of paymentResponse excerpted for the same of brevity.
     }).catch(function(err) {
       console.error("Uh oh, something bad happened", err.message);
     });

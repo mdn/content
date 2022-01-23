@@ -326,7 +326,7 @@ This is a lot of code — phew! Let's go through each section and explain what i
   guessCount === 1
   ```
 
-  If it is, we make the guesses paragraph's text content equal to `Previous guesses: `. If not, we don't.
+  If it is, we make the guesses paragraph's text content equal to `Previous guesses:`. If not, we don't.
 
 - Line 6 appends the current `userGuess` value onto the end of the `guesses` paragraph, plus a blank space so there will be a space between each guess shown.
 - The next block does a few checks:

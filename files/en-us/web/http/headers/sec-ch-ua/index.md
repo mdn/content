@@ -21,7 +21,7 @@ The **`Sec-CH-UA`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#u
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        [Client hint](/en-US/docs/Web/HTTP/Client_hints)
+        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
@@ -66,7 +66,6 @@ Sec-CH-UA: "<brand>";v="<significant version>", ...
 - `<significant version>`
   - : The "marketing" version number associated with distinguishable web-exposed features.
 
-
 ## Examples
 
 `Sec-CH-UA` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints).
@@ -79,12 +78,15 @@ They also have an intentionally incorrect brand string, which may appear in any 
 ```http
 Sec-CH-UA: "(Not(A:Brand";v="8", "Chromium";v="98"
 ```
+
 ```http
 Sec-CH-UA: " Not A;Brand";v="99", "Chromium";v="96", "Google Chrome";v="96"
 ```
+
 ```http
 Sec-CH-UA: " Not A;Brand";v="99", "Chromium";v="96", "Microsoft Edge";v="96"
 ```
+
 ```http
 Sec-CH-UA: "Opera";v="81", " Not;A Brand";v="99", "Chromium";v="95"
 ```

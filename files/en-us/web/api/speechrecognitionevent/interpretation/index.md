@@ -33,7 +33,7 @@ var myInterpretation = event.interpretation;
 ### Value
 
 The returned value can be of any type. If no semantic interpretation has been returned
-by the speec recognition system, `null` will be returned.
+by the speech recognition system, `null` will be returned.
 
 ## Examples
 

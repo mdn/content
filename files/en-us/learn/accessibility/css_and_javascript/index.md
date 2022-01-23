@@ -317,10 +317,12 @@ In addition, the `errorField` is placed at the top of the source order (although
 
 As a final note, we have used some WAI-ARIA attributes in our demo to help solve accessibility problems caused by areas of content constantly updating without a page reload (screen readers won't pick this up or alert users to it by default):
 
-    <div class="errors" role="alert" aria-relevant="all">
-      <ul>
-      </ul>
-    </div>
+```html
+<div class="errors" role="alert" aria-relevant="all">
+  <ul>
+  </ul>
+</div>
+```
 
 We will explain these attributes in our next article, which covers [WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) in much more detail.
 

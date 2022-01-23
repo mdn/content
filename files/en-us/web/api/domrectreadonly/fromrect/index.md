@@ -15,14 +15,14 @@ browser-compat: api.DOMRectReadOnly.fromRect
 ---
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-The **`fromRect()`** property of the
-{{domxref("DOMRectReadOnly")}} interface creates a new `DOMRectReadOnly`
+The **`fromRect()`** static method of the
+{{domxref("DOMRectReadOnly")}} object creates a new `DOMRectReadOnly`
 object with a given location and dimensions.
 
 ## Syntax
 
 ```js
-var domRect = DOMRectReadOnly.fromRect(rectangle)
+DOMRectReadOnly.fromRect(rectangle)
 ```
 
 ### Parameters
@@ -39,7 +39,7 @@ var domRect = DOMRectReadOnly.fromRect(rectangle)
 
 ### Return value
 
-An instance of {{domxref("DOMRect")}}.
+An instance of {{domxref("DOMRectReadOnly")}}.
 
 ## Specifications
 

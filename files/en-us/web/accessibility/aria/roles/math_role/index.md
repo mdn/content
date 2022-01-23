@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: math role'
 slug: Web/Accessibility/ARIA/Roles/math_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -11,7 +11,6 @@ tags:
 ---
 
 The `math` role indicates that the content represents a mathematical expression.
-
 
 ## Description
 
@@ -32,17 +31,17 @@ If you use image or non-semantic HTML to create an equation, use the `math` role
 
 The above pythagorean theorem is written accessibly as:
 
-````html
+```html
 <div role="math" aria-label="a^{2} + b^{2} = c^{2}">
    a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
 </div>
-````
+```
 
 Had an image been used, the `alt` attribute would be used along with the `math` role:
 
-````html
+```html
 <img src="pythagorean_theorem.gif" alt="a^{2} + b^{2} = c^{2}" role="math">
-````
+```
 
 ## Specifications
 
@@ -51,8 +50,8 @@ Had an image been used, the `alt` attribute would be used along with the `math` 
 | {{SpecName("ARIA","#math","ARIA: math role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_math_role","math role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-
 ## See Also
+
 - [MathML on MDN](https://developer.mozilla.org/en-US/docs/Web/MathML) and the [`<math>`](https://developer.mozilla.org/en-US/docs/Web/MathML/Element/math) element (not HTML)
 - [The MathML specification](https://www.w3.org/TR/MathML3/)
 

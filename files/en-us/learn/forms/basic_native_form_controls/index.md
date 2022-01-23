@@ -56,7 +56,7 @@ All basic text controls share some common behaviors:
 - They can be marked as {{htmlattrxref("readonly","input")}} (the user cannot modify the input value but it is still sent with the rest of the form data) or {{htmlattrxref("disabled","input")}} (the input value can't be modified and is never sent with the rest of the form data).
 - They can have a {{htmlattrxref("placeholder","input")}}; this is text that appears inside the text input box that should be used to briefly describe the purpose of the box.
 - They can be constrained in [`size`](/en-US/docs/Web/HTML/Attributes/size) (the physical size of the box) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) (the maximum number of characters that can be entered into the box).
-- They can benefit from [spell checking](/en-US/docs/Web/HTML/Element/input#attr-spellcheck) (using the [`spellcheck` ](/en-US/docs/Web/HTML/Global_attributes/spellcheck)attribute), if the browser supports it.
+- They can benefit from [spell checking](/en-US/docs/Web/HTML/Element/input#attr-spellcheck) (using the [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) attribute), if the browser supports it.
 
 > **Note:** The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many different forms depending on its [`type`](/en-US/docs/Web/HTML/Attributes/type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
 
@@ -260,7 +260,9 @@ If the image button is used to submit the form, this control doesn't submit its 
 
 So for example when you click on the image at coordinate (123, 456) and it submits via the `get` method, you'll see the values appended to the URL as follows:
 
-    http://foo.com?pos.x=123&pos.y=456
+```
+http://foo.com?pos.x=123&pos.y=456
+```
 
 This is a very convenient way to build a "hot map". How these values are sent and retrieved is detailed in the [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) article.
 
@@ -280,9 +282,11 @@ In this example, a file picker is created that requests graphic image files. The
 
 On some mobile devices, the file picker can access photos, videos, and audio captured directly by the device's camera and microphone by adding capture information to the `accept` attribute like so:
 
-    <input type="file" accept="image/*;capture=camera">
-    <input type="file" accept="video/*;capture=camcorder">
-    <input type="file" accept="audio/*;capture=microphone">
+```html
+<input type="file" accept="image/*;capture=camera">
+<input type="file" accept="video/*;capture=camcorder">
+<input type="file" accept="audio/*;capture=microphone">
+```
 
 ## Common attributes
 

@@ -19,7 +19,9 @@ This is especially important for intranets and other non-public websites; if we 
 
 When an event handler content attribute (`onclick`, `onmouseover`, and so forth) is used on HTML element, all name lookup in the attribute first happens on the element itself, then on the element's form if the element is a form control, then on the document, and then on the window (where the global variables you have defined are). For example, if you have this markup:
 
-    <div onclick="alert(ownerDocument)">Click me</div>
+```html
+<div onclick="alert(ownerDocument)">Click me</div>
+```
 
 then clicking on the text alerts the `ownerDocument` of the `div`. This happens even if there is a `var ownerDocument` declared in global scope.
 
@@ -27,12 +29,14 @@ What this means is that any time you access a global variable in an event handle
 
 To avoid this, fully qualify global variable access using "window.", like so:
 
-    <script>
-      function localName() {
-        alert('Function localName has been called');
-      }
-    </script>
-    <div onclick="window.localName()">Clicking me should show an alert<div>
+```html
+<script>
+  function localName() {
+    alert('Function localName has been called');
+  }
+</script>
+<div onclick="window.localName()">Clicking me should show an alert<div>
+```
 
 ### Don't concatenate scripts you don't control
 
@@ -94,12 +98,14 @@ Make sure to test what happens in a browser that doesn't implement the feature y
 
 Vendor-prefixed features can change behavior in future releases.  Once a browser has shipped a feature unprefixed, however, you can use the prefixed version to target old releases by making sure to always use the unprefixed version of the feature when available.  A good example, for a browser vendor using the `-vnd` CSS prefix that has shipped an unprefixed implementation of the `make-it-pretty` property, with a behavior for the value `"sometimes"` that differs from the prefixed version:
 
-    <style>
-      .pretty-element {
-        -vnd-make-it-pretty: sometimes;
-        make-it-pretty: sometimes;
-      }
-    </style>
+```html
+<style>
+  .pretty-element {
+    -vnd-make-it-pretty: sometimes;
+    make-it-pretty: sometimes;
+  }
+</style>
+```
 
 The order of the declarations in the rule above is important: the unprefixed one needs to come last.
 

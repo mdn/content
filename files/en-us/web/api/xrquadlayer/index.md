@@ -21,7 +21,8 @@ The **`XRQuadLayer`** interface of the [WebXR Device API](/en-US/docs/Web/API/We
 
 `XRQuadLayer` requires the `layers` feature to be enabled for the {{domxref("XRSession")}}. You can request it in {{domxref("XRSystem.requestSession()")}}.
 
-To create a new `XRQuadLayer`, call either
+To create a new `XRQuadLayer`, call either:
+
 - {{domxref("XRWebGLBinding.createQuadLayer()")}} for a WebGL opaque texture quad layer, or
 - {{domxref("XRMediaBinding.createQuadLayer()")}} for an HTML {{HTMLElement("video")}} playback quad layer.
 

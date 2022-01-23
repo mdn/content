@@ -25,7 +25,6 @@ This could, for example, be passed to a fetch method in order to run its abort l
 
 > **Note:** The method is similar in purpose to {{JSxRef("Promise.reject")}}.
 
-
 ## Syntax
 
 ```js

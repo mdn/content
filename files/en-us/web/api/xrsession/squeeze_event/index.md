@@ -39,9 +39,12 @@ addEventListener('squeeze', event => { })
 
 onsqueeze = event => { }
 ```
+
 ## Event type
 
 An {{domxref("XRInputSourceEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("XRInputSourceEvent")}}
 
 ## Event properties
 

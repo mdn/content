@@ -50,6 +50,7 @@ If an autocomplete list value is automatically accepted when the field loses foc
 ## Associated roles
 
 Used in roles:
+
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role) role
 - [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) role
 - inherits from [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role) role

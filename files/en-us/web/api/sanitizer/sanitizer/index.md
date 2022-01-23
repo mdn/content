@@ -48,7 +48,6 @@ new Sanitizer(config)
       - : A {{jsxref('Boolean')}} value set to `false` (default) to remove HTML comments.
         Set to `true` ensures that comments are retained.
 
-
 ## Examples
 
 The example below shows a sanitization operation using the {{domxref("Sanitizer.sanitizeFor()")}} method.
@@ -67,7 +66,6 @@ const sanitized =  new Sanitizer().sanitizeFor("div", unsanitized);
 ```
 
 <!-- Add other examples showing use of parameter when it is implemented somewhere -->
-
 
 ## Specifications
 

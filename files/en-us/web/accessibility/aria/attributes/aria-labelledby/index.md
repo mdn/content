@@ -13,6 +13,7 @@ tags:
 The `aria-labelledby` attribute identifies the element (or elements) that labels the element it is applied to. 
 
 ## Description
+
 The `aria-labelledby` property enables authors to reference other elements on the page to define an accessible name. This is useful when using elements that don't have native support for associating elements to provide an accessible name. 
 
 Some elements get their [accessible name](/en-US/docs/Glossary/Accessible_Name) from their inner content. For example, the accessible name for a {{HTMLElement('button')}}, {{HTMLElement('a')}}, or {{HTMLElement('td')}} comes from the text between the opening and closing tags. Other elements, such as form {{HTMLElement('textarea')}}, {{HTMLElement('fieldset')}}, and {{HTMLElement('table')}} get their accessible name from the content of associated elements; for these elements, the accessible name comes from the {{HTMLElement('label')}} with a `for` attribute, {{HTMLElement('legend')}}, and {{HTMLElement('caption')}} respectively. 
@@ -74,7 +75,6 @@ In this example, the accessible name is "read more 13 ARIA attributes you need t
        
 4. The `aria-labelledby` property ignores repeated `id`s in its value. If an element is referenced more than one time, only the first reference is processed. `aria-labelledby="attr attr rm13 rm13">` is treated as `aria-labelledby="attr rm13">`
 
-   
 5. The `aria-labelledby` property value can include content from elements that aren't even visible. While you should provide assistive technology users with the same content and all other users, you can include content from elements with the HTML {{htmlattrxref('hidden')}} attribute, CSS [`display: none`](/en-US/docs/Web/CSS/display), and CSS [`visibility: hidden`](/en-US/docs/Web/CSS/visibility) in the calculated name string.
    
 6. The `aria-labelledby` property incorporates the value of input elements. If the value references an `<input>`, the current value of the form control is included in the calculated name string, changing if the value is updated.

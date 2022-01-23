@@ -47,4 +47,3 @@ VideoDecoder.flush();
 ## Browser compatibility
 
 {{Compat}}
-

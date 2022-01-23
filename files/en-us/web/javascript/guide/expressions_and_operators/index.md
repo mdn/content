@@ -218,7 +218,7 @@ However, it evaluates from left to right:
        into a reference to the variable named `y`.
     2. The assignment expression `x = f()` starts to evaluate.
         1. The `x` on this assignment’s left-hand side evaluates
-           into a reference to the variable named `y`.
+           into a reference to the variable named `x`.
         2. The function call `f()` prints "F!" to the console and
            then evaluates to the number `2`.
         3. That `2` result from `f()` is assigned to `x`.
@@ -238,15 +238,15 @@ However, it evaluates from left to right:
     1. The `y` on this assignment’s left-hand evaluates
        into a reference to the variable named `y`.
     2. The inner array literal `[ f(), x = g() ]` starts to evaluate.
-      1. The function call `f()` prints "F!" to the console and
+       1. The function call `f()` prints "F!" to the console and
          then evaluates to the number `2`.
-      2. The assignment expression `x = g()` starts to evaluate.
+       2. The assignment expression `x = g()` starts to evaluate.
           1. The `x` on this assignment’s left-hand side evaluates
              into a reference to the variable named `x`.
-          2. The function call `g()` prints "3!" to the console and
+          2. The function call `g()` prints "G!" to the console and
              then evaluates to the number `3`.
           3. That `3` result from `f()` is assigned to `x`.
-      3. The assignment expression `x = g()` has now finished evaluating;
+       3. The assignment expression `x = g()` has now finished evaluating;
          its result is the new value of `x`, which is `3`.
          That `3` result becomes the next element
          in the inner array literal (after the `2` from the `f()`).
@@ -819,7 +819,7 @@ The rules of logic guarantee that these evaluations are always correct. Note tha
 _anything_ part of the above expressions is not evaluated, so any side effects of
 doing so do not take effect.
 
-Note that for the second case, in modern code you can use the new [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null "The value null represents the intentional absence of any object value. It is one of JavaScript's primitive values and is treated as falsy for boolean operations.")
+Note that for the second case, in modern code you can use the new [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)
 or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "The global undefined property represents the primitive value undefined.
 It is one of JavaScript's primitive types.").
 It is thus the better alternative to provide defaults, when values like `''` or `0` are valid values for the first expression, too.

@@ -45,7 +45,6 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 _Doesn't implement any specific method, but inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-
 ## Specifications
 
 {{Specifications}}

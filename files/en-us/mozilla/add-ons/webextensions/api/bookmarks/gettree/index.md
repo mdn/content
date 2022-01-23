@@ -33,7 +33,7 @@ None.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array containing one object, a [`bookmarks.BookmarkTreeNode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode "An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders.") object representing the root node.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array containing one object, a [`bookmarks.BookmarkTreeNode`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) object representing the root node.
 
 ## Examples
 

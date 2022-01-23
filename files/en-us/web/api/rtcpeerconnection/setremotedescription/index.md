@@ -180,7 +180,7 @@ pc.setRemoteDescription(sessionDescription, successCallback, errorCallback);
     once the description has been successfully set. At that time, the offer can be
     sent to a remote peer via the signaling server.
 - `errorCallback` {{deprecated_inline}}
-  - : A function matching the signautre `RTCPeerConnectionErrorCallback`
+  - : A function matching the signature `RTCPeerConnectionErrorCallback`
     which gets called if the description can't be set. It is passed a single
     {{domxref("DOMException")}} object explaining why the request failed.
 

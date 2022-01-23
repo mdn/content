@@ -31,10 +31,10 @@ while (condition)
 - `statement`
 
   - : An optional statement that is executed as long as the condition evaluates to true.
-    To execute multiple statements within the loop, use a [block](/en-US/docs/JavaScript/Reference/Statements/block) statement
+    To execute multiple statements within the loop, use a {{jsxref("Statements/block", "block", "", 1)}} statement
     (`{ /* ... */ }`) to group those statements.
 
-    Note: Use the `break` statement to stop a loop before condition evaluates
+    Note: Use the {{jsxref("Statements/break", "break")}} statement to stop a loop before `condition` evaluates
     to true.
 
 ## Examples
@@ -76,3 +76,5 @@ so the loop terminates.
 
 - {{jsxref("Statements/do...while", "do...while")}}
 - {{jsxref("Statements/for", "for")}}
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/continue", "continue")}}

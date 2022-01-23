@@ -58,4 +58,3 @@ console.log('IdleDetector is active.');
 ## Browser compatibility
 
 {{Compat}}
-

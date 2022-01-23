@@ -70,7 +70,7 @@ The **`USBDevice`** interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API
 - {{domxref("USBDevice.open()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when a device session has started.
 - {{domxref("USBDevice.releaseInterface()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves when a cliamed interface is released from exclusive access.
+  - : Returns a {{jsxref("Promise")}} that resolves when a claimed interface is released from exclusive access.
 - {{domxref("USBDevice.reset()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when the device is reset and all app operations canceled and their promises rejected.
 - {{domxref("USBDevice.selectAlternateInterface()")}}

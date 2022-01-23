@@ -102,7 +102,6 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
 - {{HTTPHeader("Sec-CH-UA-Platform-Version")}} {{experimental_inline}}
   - : User agent's underlying operation system version.
  
-
 ### Device client hints
 
 - {{HTTPHeader("Content-DPR")}} {{deprecated_inline}}{{experimental_inline}}

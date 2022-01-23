@@ -122,7 +122,7 @@ The first rule of ARIA use is "if you can use a native feature with the semantic
 </select>
 ```
 
-This HTML `<select>` version is accessibile and interactive, and needs no ARIA or JavaScript to function.
+This HTML `<select>` version is accessible and interactive, and needs no ARIA or JavaScript to function.
 
 If the above isn't styleable to your liking, you can also create a list of selectable options with HTML checkboxes, which is also semantic, focusable, and infinitely stylable with CSS:
 

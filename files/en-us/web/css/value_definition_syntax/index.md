@@ -154,7 +154,7 @@ But not:
 - `center 3%`, as only one of the components must be present.
 - `3em 4.5em`, as a component must be present at most one time.
 
-> **Note:** the double bar has precedence over the single bar, meaning that `bold | thin || <length>` is equivalent to `bold | [ thin || <length> ]`. It describes `bold`, `thin`, `<length>`, `<length> thin`, or `thin <length> `but not `bold <length>` as only one entity from each side of the `|` combinator can be present.
+> **Note:** the double bar has precedence over the single bar, meaning that `bold | thin || <length>` is equivalent to `bold | [ thin || <length> ]`. It describes `bold`, `thin`, `<length>`, `<length> thin`, or `thin <length>` but not `bold <length>` as only one entity from each side of the `|` combinator can be present.
 
 ## Component value multipliers
 

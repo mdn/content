@@ -46,7 +46,7 @@ result = 2 && 0;       // result is assigned 0
 result = 'foo' && 4;   // result is assigned 4
 ```
 
-Even though the `&&` operator can be used with non-Boolean operands, it is still considered a boolean operator since its return value can always be 
+Even though the `&&` operator can be used with non-Boolean operands, it is still considered a boolean operator since its return value can always be
 converted to a [boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#Boolean_type).
 To explicitly convert its return value (or any expression in general) to the corresponding boolean value, use a double [`NOT operator`](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT) or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} constructor.
 

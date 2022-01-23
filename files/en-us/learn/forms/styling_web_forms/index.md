@@ -39,7 +39,7 @@ In the previous few articles we looked at all the HTML you'll need to create and
 
 Form controls were added to HTML in [the HTML 2 specification](https://www.ietf.org/rfc/rfc1866.txt) in 1995; CSS wasn't released until late 1996, and wasn't supported very well by browsers for a few years after that. Browsers relied on the underlying operating system to manage and render form controls.
 
-And even with CSS available to style HTML, browser vendors have historically been reluctant to make form controls stylable because users were so accustomed to the visual appearance of their respective platforms. But this has changed. Website owners want form styles that fit in with their overall site design more than ever, and the web platform has changed to make this more possible.
+And even with CSS available to style HTML, browser vendors have historically been reluctant to make form controls stylable because users were so accustomed to the visual appearance of their respective platforms. But this has changed. Website owners want form styles that fit in with their overall site design more than ever, and the web platform has changed to make this more possible.
 
 For some form widgets, it is still difficult to rebuild controls to make them stylable, but we can now use CSS to style many form features, though we do need to take extra care to ensure we don't break usability.
 
@@ -85,7 +85,7 @@ The real problem with all these controls is that they have a very complex struct
 
 If you want to thoroughly customize those widgets, you really have to create your own using HTML, CSS, and JavaScript. This is beyond the scope of the core form articles, but we do look at this in an advanced article [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
 
-> **Note:** there are some proprietary CSS pseudo-elements available that allow you to style internal components of these form controls, such as {{cssxref('::-moz-range-track')}}, but these are not consistent across browsers, so can't be relied upon. We will mention these later as well.
+> **Note:** there are some proprietary CSS pseudo-elements available that allow you to style internal components of these form controls, such as {{cssxref('::-moz-range-track')}}, but these are not consistent across browsers, so can't be relied upon. We will mention these later as well.
 
 ## The good
 
@@ -112,7 +112,7 @@ The screenshots below show the difference. On the left is the default rendering 
 
 ![Form controls with default and inherited font families. By default, some types are serif and others are sans serif. Inheriting should change the fonts of all to the parent's font family - in this case a paragraph. Oddly, input of type submit does not inherit from the parent paragraph.](forms_fontfamily.png)
 
-The defaults differed in a number of ways. Inheriting should change their fonts to that of the parent's font family — in this case the default serif font of the parent container. They all do, with a strange exception — `<input type="submit">` does not inherit from the parent paragraph in Chrome. Rather, it uses the {{cssxref('font-family#Values', 'font-family: system-ui')}}. This is another reason to use `<button>` elements over their equivalent input types!
+The defaults differed in a number of ways. Inheriting should change their fonts to that of the parent's font family — in this case the default serif font of the parent container. They all do, with a strange exception — `<input type="submit">` does not inherit from the parent paragraph in Chrome. Rather, it uses the {{cssxref('font-family#Values', 'font-family: system-ui')}}. This is another reason to use `<button>` elements over their equivalent input types!
 
 There's a lot of debate as to whether forms look better using the system default styles, or customized styles designed to match your content. This decision is yours to make, as the designer of your site, or web application.
 
@@ -206,8 +206,8 @@ Add the above code into the body of your HTML.
 
 This is where the fun begins! Before we start coding, we need three additional assets:
 
-1.  The postcard [background](background.jpg "The postcard background") — download this image and save it in the same directory as your working HTML file.
-2.  A typewriter font: [The "Secret Typewriter" font from fontsquirrel.com](https://www.fontsquirrel.com/fonts/Secret-Typewriter) — download the TTF file into the same directory as above.
+1.  [The postcard background](background.jpg) — download this image and save it in the same directory as your working HTML file.
+2.  A typewriter font: [The "Secret Typewriter" font from fontsquirrel.com](https://www.fontsquirrel.com/fonts/Secret-Typewriter) — download the TTF file into the same directory as above.
 3.  A hand drawn font: [The "Journal" font from fontsquirrel.com](https://www.fontsquirrel.com/fonts/Journal) — download the TTF file into the same directory as above.
 
 Your fonts need some more processing before you start:
@@ -251,18 +251,18 @@ body {
 
 form {
   position : relative;
-  width  : 740px;
-  height : 498px;
+  width  : 740px;
+  height : 498px;
   margin : 0 auto;
   padding: 1em;
-  box-sizing: border-box;
+  box-sizing: border-box;
   background : #FFF url(background.jpg);
 
   /* we create our grid */
-  display  : grid;
-  grid-gap : 20px;
-  grid-template-columns : repeat(2, 1fr);
-  grid-template-rows    : 10em 1em 1em 1em;
+  display  : grid;
+  grid-gap : 20px;
+  grid-template-columns : repeat(2, 1fr);
+  grid-template-rows    : 10em 1em 1em 1em;
 }
 ```
 
@@ -271,7 +271,7 @@ Notice that we've used some [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) and 
 ```css
 h1 {
   font : 1em "typewriter", monospace;
-  align-self : end;
+  align-self : end;
 }
 
 #message {
@@ -279,7 +279,7 @@ h1 {
 }
 
 #from, #reply {
-   display: flex;
+   display: flex;
 }
 ```
 

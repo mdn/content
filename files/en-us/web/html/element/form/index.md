@@ -150,7 +150,7 @@ The following attributes control behavior during form submission.
     - `get`: The [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); form data appended to the `action` URL with a `?` separator. Use this method when the form [has no side-effects](/en-US/docs/Glossary/Idempotent).
     - `dialog`: When the form is inside a {{HTMLElement("dialog")}}, closes the dialog and throws a submit event on submission without submitting data or clearing the form.
 
-    This value is overridden by {{htmlattrxref("formmethod", "button")}} attributes on {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image"> `](/en-US/docs/Web/HTML/Element/input/image)elements.
+    This value is overridden by {{htmlattrxref("formmethod", "button")}} attributes on {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) elements.
 
 - {{htmlattrdef("novalidate")}}
   - : This Boolean attribute indicates that the form shouldn't be validated when submitted. If this attribute is not set (and therefore the form **_is_** validated), it can be overridden by a {{htmlattrxref("formnovalidate", "button")}} attribute on a {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) element belonging to the form.

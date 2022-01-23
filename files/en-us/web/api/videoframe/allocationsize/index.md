@@ -60,4 +60,3 @@ let size = VideoFrame.allocationSize({rect: videoRect})
 ## Browser compatibility
 
 {{Compat}}
-

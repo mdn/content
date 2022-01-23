@@ -79,7 +79,7 @@ The name can include the following characters:
 At least this property must be set for every string. The `"message"` member contains a localized string that can contain {{anch("placeholders")}}. You can use:
 
 - _$placeholder_name$_ (case insensitive) to insert a particular placeholder (for example $URL$ in the example above) into your string.
-- `$1`, `$2`,` $3`, etc. to directly insert values obtained from a {{WebExtAPIRef("i18n.getMessage()")}} call into your string.
+- `$1`, `$2`, `$3`, etc. to directly insert values obtained from a {{WebExtAPIRef("i18n.getMessage()")}} call into your string.
 
 Other points to note:
 

@@ -38,7 +38,6 @@ CSS Transition events are supported. Examples include:
 - `transitionend`
 - `transitioncancel`
 
-
 ### Safari 10.1 and above (Desktop)
 
 Do not enable Auto-Play (does not work for gifs)
@@ -93,7 +92,6 @@ Most Operating Systems have a way to let the user make an adjustment on the work
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)
 - [Color vision simulation](/en-US/docs/Tools/Accessibility_inspector/Simulation)
 - Discussion: "[What is the “grayscale” setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)"
-
 
 ### Contributors
 

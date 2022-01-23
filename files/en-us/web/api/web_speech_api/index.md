@@ -76,7 +76,6 @@ The [Web Speech API repo](https://github.com/mdn/web-speech-api/) on GitHub cont
 | ------------------ |
 | [Web Speech API](https://wicg.github.io/speech-api/) |
 
-
 ## Browser compatibility
 
 ### `SpeechRecognition`

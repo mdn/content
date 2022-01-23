@@ -12,10 +12,10 @@ tags:
   - setSinkId
 browser-compat: api.HTMLMediaElement.setSinkId
 ---
-{{APIRef("HTML DOM")}} {{SeeCompatTable}}
+{{APIRef("HTML DOM")}} {{SeeCompatTable}}
 
-The **`HTMLMediaElement.setSinkId()`** method sets the ID of
-the audio device to use for output and returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future.").
+The **`HTMLMediaElement.setSinkId()`** method sets the ID of
+the audio device to use for output and returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 This only works when the application is authorized to use the specified device.
 
 ## Syntax
@@ -31,7 +31,7 @@ A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 ### Parameters
 
 - sinkId
-  - : The {{domxref("MediaDeviceInfo.deviceId")}} of the audio output device.
+  - : The {{domxref("MediaDeviceInfo.deviceId")}} of the audio output device.
 
 ### Exceptions
 

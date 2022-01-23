@@ -49,10 +49,10 @@ If you have worked with HTML or CSS already, e.g., by working through these tuto
 
 The CSS properties used to style text generally fall into two categories, which we'll look at separately in this article:
 
-- **Font styles**: Properties that affect a text's font, e.g., which font gets applied, it's size, and whether it's bold, italic, etc.
+- **Font styles**: Properties that affect a text's font, e.g., which font gets applied, its size, and whether it's bold, italic, etc.
 - **Text layout styles**: Properties that affect the spacing and other layout features of the text, allowing manipulation of, for example, the space between lines and letters, and how the text is aligned within the content box.
 
-> **Note:** Bear in mind that the text inside an element is all affected as one single entity. You can't select and style subsections of text unless you wrap them in an appropriate element (such as a {{htmlelement("span")}} or {{htmlelement("strong")}}), or use a text-specific pseudo-element like [::first-letter](/en-US/docs/Web/CSS/::first-letter) (selects the first letter of an element's text), [::first-line](/en-US/docs/Web/CSS/::first-line) (selects the first line of an element's text), or [::selection](/en-US/docs/Web/CSS/::selection) (selects the text currently highlighted by the cursor.)
+> **Note:** Bear in mind that the text inside an element is all affected as one single entity. You can't select and style subsections of text unless you wrap them in an appropriate element (such as a {{htmlelement("span")}} or {{htmlelement("strong")}}), or use a text-specific pseudo-element like [::first-letter](/en-US/docs/Web/CSS/::first-letter) (selects the first letter of an element's text), [::first-line](/en-US/docs/Web/CSS/::first-line) (selects the first line of an element's text), or [::selection](/en-US/docs/Web/CSS/::selection) (selects the text currently highlighted by the cursor).
 
 ## Fonts
 
@@ -71,7 +71,7 @@ predator — Tommy the cat had many a story to tell. But it was a rare
 occasion such as this that he did.</p>
 ```
 
-You can find the [finished example on GitHub](https://mdn.github.io/learning-area/css/styling-text/fundamentals/) (see also [the source code](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html).)
+You can find the [finished example on GitHub](https://mdn.github.io/learning-area/css/styling-text/fundamentals/) (see also [the source code](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html)).
 
 ### Color
 
@@ -327,10 +327,10 @@ occasion such as this that he did.</p>
 In our previous module's [CSS values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units) article, we reviewed length and size units. Font size (set with the {{cssxref("font-size")}} property) can take values measured in most of these units (and others, such as [percentages](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#percentages)); however, the most common units you'll use to size text are:
 
 - `px` (pixels): The number of pixels high you want the text to be. This is an absolute unit — it results in the same final computed value for the font on the page in pretty much any situation.
-- `em`s: 1 `em` is equal to the font size set on the parent element of the current element we are styling (more specifically, the width of a capital letter M contained inside the parent element.) This can become tricky to work out if you have a lot of nested elements with different font sizes set, but it is doable, as you'll see below. Why bother? It is quite natural once you get used to it, and you can use `em` to size everything, not just text. You can have an entire website sized using `em`, which makes maintenance easy.
+- `em`s: 1 `em` is equal to the font size set on the parent element of the current element we are styling (more specifically, the width of a capital letter M contained inside the parent element). This can become tricky to work out if you have a lot of nested elements with different font sizes set, but it is doable, as you'll see below. Why bother? It is quite natural once you get used to it, and you can use `em` to size everything, not just text. You can have an entire website sized using `em`, which makes maintenance easy.
 - `rem`s: These work just like `em`, except that 1 `rem` is equal to the font size set on the root element of the document (i.e. {{htmlelement("html")}}), not the parent element. This makes doing the maths to work out your font sizes much easier, although if you want to support really old browsers, you might struggle — `rem` is not supported in Internet Explorer 8 and below.
 
-The `font-size` of an element is inherited from that element's parent element. This all starts with the root element of the entire document — {{htmlelement("html")}} — the standard `font-size` of which is set to 16`px` across browsers. Any paragraph (or another element that doesn't have a different size set by the browser) inside the root element will have a final size of 16 `px`. Other elements may have different default sizes, for example, an {{htmlelement("h1")}} element has a size of 2 `em` set by default. So it will have a final size of 32 `px`.
+The `font-size` of an element is inherited from that element's parent element. This all starts with the root element of the entire document — {{htmlelement("html")}} — the standard `font-size` of which is set to 16`px` across browsers. Any paragraph (or another element that doesn't have a different size set by the browser) inside the root element will have a final size of 16 `px`. Other elements may have different default sizes. For example, an {{htmlelement("h1")}} element has a size of 2 `em` set by default, so it will have a final size of 32 `px`.
 
 Things become more tricky when you start altering the font size of nested elements. For example, if you had an {{htmlelement("article")}} element in your page, and set its `font-size` to 1.5 `em` (which would compute to 24 `px` final size), and then wanted the paragraphs inside the `<article>` elements to have a computed font size of 20 `px`, what `em` value would you use?
 
@@ -386,7 +386,7 @@ CSS provides four common properties to alter the visual weight/emphasis of text:
 
 - {{cssxref("font-style")}}: Used to turn italic text on or off. Possible values are as follows (you'll rarely use this, unless you want to turn some italic styling off for some reason):
 
-  - `normal`: Sets the text to the normal font (turns existing italics off.)
+  - `normal`: Sets the text to the normal font (turns existing italics off).
   - `italic`: Sets the text to use the italic version of the font, if available; if not, it will simulate italics with oblique instead.
   - `oblique`: Sets the text to use a simulated version of an italic font, created by slanting the normal version.
 
@@ -404,7 +404,7 @@ CSS provides four common properties to alter the visual weight/emphasis of text:
   - `capitalize`: Transforms all words to have the first letter capitalized.
   - `full-width`: Transforms all glyphs to be written inside a fixed-width square, similar to a monospace font, allowing aligning of, e.g., Latin characters along with Asian language glyphs (like Chinese, Japanese, Korean).
 
-- {{cssxref("text-decoration")}}: Sets/unsets text decorations on fonts (you'll mainly use this to unset the default underline on links when styling them.) Available values are:
+- {{cssxref("text-decoration")}}: Sets/unsets text decorations on fonts (you'll mainly use this to unset the default underline on links when styling them). Available values are:
 
   - `none`: Unsets any text decorations already present.
   - `underline`: Underlines the text.
@@ -575,7 +575,7 @@ p {
 
 ### Line height
 
-The {{cssxref("line-height")}} property sets the height of each line of text. This property can not only take most [length and size units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size), but can also take a unitless value, which acts as a multiplier and is generally considered the best option. With a unitless value, the {{cssxref("font-size")}} gets multiplied and results in the `line-height`. Body text generally looks nicer and is easier to read when the lines are spaced apart. The recommended line height is around 1.5 – 2 (double spaced.) To set our lines of text to 1.6 times the height of the font, we'd use:
+The {{cssxref("line-height")}} property sets the height of each line of text. This property can not only take most [length and size units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size), but can also take a unitless value, which acts as a multiplier and is generally considered the best option. With a unitless value, the {{cssxref("font-size")}} gets multiplied and results in the `line-height`. Body text generally looks nicer and is easier to read when the lines are spaced apart. The recommended line height is around 1.5 – 2 (double spaced). To set our lines of text to 1.6 times the height of the font, we'd use:
 
 ```css
 p {
@@ -707,7 +707,7 @@ Text layout styles:
 - {{cssxref("text-overflow")}}: Define how overflowed content that is not displayed is signaled to users.
 - {{cssxref("white-space")}}: Define how whitespace and associated line breaks inside the element are handled.
 - {{cssxref("word-break")}}: Specify whether to break lines within words.
-- {{cssxref("direction")}}: Define the text direction (This depends on the language and usually it's better to let HTML handle that part as it is tied to the text content.)
+- {{cssxref("direction")}}: Define the text direction. (This depends on the language and usually it's better to let HTML handle that part as it is tied to the text content.)
 - {{cssxref("hyphens")}}: Switch on and off hyphenation for supported languages.
 - {{cssxref("line-break")}}: Relax or strengthen line breaking for Asian languages.
 - {{cssxref("text-align-last")}}: Define how the last line of a block or a line, right before a forced line break, is aligned.

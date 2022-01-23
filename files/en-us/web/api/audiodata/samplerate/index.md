@@ -32,5 +32,3 @@ console.log(AudioData.duration);
 ## Browser compatibility
 
 {{Compat}}
-
-

@@ -28,7 +28,6 @@ throwIfAborted()
 
 {{jsxref('undefined')}}
 
-
 ## Examples
 
 The examples below come from the specification.

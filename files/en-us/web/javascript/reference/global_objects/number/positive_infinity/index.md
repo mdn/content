@@ -22,8 +22,8 @@ This value behaves slightly differently than mathematical infinity:
 
 - Any positive value, including `POSITIVE_INFINITY`, multiplied by `POSITIVE_INFINITY` is `POSITIVE_INFINITY`.
 - Any negative value, including {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}, multiplied by `POSITIVE_INFINITY` is {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}.
-- Any positive number divided by `POSITIVE_INFINITY` is positive Zero.
-- Any negative number divided by `POSITIVE_INFINITY` is negative Zero.
+- Any positive number divided by `POSITIVE_INFINITY` is [positive zero](https://en.wikipedia.org/wiki/Signed_zero) (as defined in [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754)).
+- Any negative number divided by `POSITIVE_INFINITY` is [negative zero](https://en.wikipedia.org/wiki/Signed_zero) (as defined in [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754).
 - Zero multiplied by `POSITIVE_INFINITY` is {{jsxref("NaN")}}.
 - {{jsxref("Global_Objects/NaN", "NaN")}} multiplied by `POSITIVE_INFINITY` is {{jsxref("NaN")}}.
 - `POSITIVE_INFINITY`, divided by any negative value except {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}, is {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}.

@@ -11,7 +11,9 @@ tags:
 
 TTFB is the time it takes between the start of the request and the start of the response, in milliseconds:
 
-    TTFB = responseStart - navigationStart
+```
+TTFB = responseStart - navigationStart
+```
 
 ## See also
 

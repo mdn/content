@@ -25,7 +25,7 @@ tags:
 - Support of a non-standard Mozilla-only media query to determine the operating system version has been added: [`-moz-os-version`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#-moz-os-version) ({{bug("810399")}}). The property is currently only implemented on Windows.
 - The `-moz-osx-font-smoothing` CSS property has been added ({{bug("857142")}}).
 - Our experimental support for {{cssxref("filter")}} now supports the `hue-rotate()` functional notation ({{bug(897392)}}). It is still preffed off by default.
-- ` page-break-inside``: avoid ` is now working with the height of a block ({{bug(883676)}}).
+- `page-break-inside`: `avoid` is now working with the height of a block ({{bug(883676)}}).
 
 ### HTML
 

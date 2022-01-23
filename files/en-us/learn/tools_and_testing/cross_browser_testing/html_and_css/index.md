@@ -338,7 +338,9 @@ The [prefix-free JavaScript library](https://leaverou.github.io/prefixfree/) can
 
 Another solution is to add prefixes automatically during development, and this (and other things besides) can be done using tools like [Autoprefixer](https://github.com/postcss/autoprefixer) and [PostCSS](https://postcss.org/). These tools can be used in a variety of ways, for example [Autoprefixer](https://tools.hubsadda.com/autoprefixer/) has an [online version](https://autoprefixer.github.io/) that allows you to enter your non-prefixed CSS on the left, and gives you a prefix-added version on the right. You can choose which browsers you want to make sure you support using the notation outlined in [Autoprefixer options](https://github.com/postcss/autoprefixer#options); also see [Browserslist queries](https://github.com/ai/browserslist#queries), which this is based on, for more detail. As an example, the following query will select the last 2 versions of all major browsers and versions of IE above 9.
 
-    last 2 versions, ie > 9
+```
+last 2 versions, ie > 9
+```
 
 Autoprefixer can also be used in other, more convenient ways — see [Autoprefixer usage](https://github.com/postcss/autoprefixer#usage). For example, you can use it with a task runner/build tool such as [Gulp](https://gulpjs.com/) or [Webpack](https://webpack.github.io/) to automatically add prefixes once development has been done. (Explaining how these work is somewhat beyond the scope of this article.)
 

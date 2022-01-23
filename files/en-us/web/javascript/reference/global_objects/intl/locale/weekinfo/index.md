@@ -21,7 +21,6 @@ The **`Intl.Locale.prototype.weekInfo`** property is an accessor property which 
 
 Returns the `Locale` information associated with the Locale data specified in [UTS 35's Week Elements.](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Patterns_Week_Elements).
 
-
 ## Examples
 
 ### Obtaining the Week Information
@@ -53,5 +52,3 @@ console.log(msBN.weekInfo) // logs {firstDay: 7, weekend: [5, 7], minimalDays: 1
 ## See also
 
 - {{jsxref("Intl/Locale", "Intl.Locale")}}
-
-

@@ -46,7 +46,9 @@ var gettingPanel = browser.sidebarAction.getPanel(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string containing the URL for the panel's document. This will be a fully qualifed URL, such as:
 
-    moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/sidebar.html
+```
+moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/sidebar.html
+```
 
 ## Browser compatibility
 

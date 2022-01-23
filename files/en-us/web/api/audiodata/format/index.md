@@ -49,5 +49,3 @@ console.log(AudioData.format);
 ## Browser compatibility
 
 {{Compat}}
-
-

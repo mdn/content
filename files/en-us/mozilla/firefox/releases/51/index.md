@@ -172,7 +172,7 @@ tags:
   - All supporting user interface features and functionality for the removed APIs have been removed as well.
   - [Social service provider manifest](/en-US/docs/Mozilla/Projects/Social_API/Manifest) properties supporting the removed functionality are no longer supported.
 
-- If an add-on uses` mimeTypes.rdf` to provide a file extension to MIME type mapping, it must now register an entry in the `"ext-to-type-mapping"` category ({{bug(306471)}}).
+- If an add-on uses `mimeTypes.rdf` to provide a file extension to MIME type mapping, it must now register an entry in the `"ext-to-type-mapping"` category ({{bug(306471)}}).
 - The [Browser API](/en-US/docs/Mozilla/Gecko/Chrome/API/Browser_API) now includes a `detail` object on the event object of the [`mozbrowserlocationchange`](/en-US/docs/Web/Events/mozbrowserlocationchange) event that contains `canGoForward`/`canGoBack` properties, allowing retrieval of the mozBrowser's back/forward status synchronously ({{bug(1279635)}}).
 
 ## Older versions

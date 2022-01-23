@@ -33,7 +33,6 @@ This might be used by a server, for example, to select and offer the correct bin
   </tbody>
 </table>
 
-
 ## Syntax
 
 ```http
@@ -44,7 +43,6 @@ Sec-CH-UA-Arch: <arch>
 
 - `<arch>`
   - : A string indicating the underlying platform architecture, such as: `"x86"`, `"ARM"`.
-
 
 ## Examples
 

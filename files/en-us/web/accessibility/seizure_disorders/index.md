@@ -1,6 +1,6 @@
 ---
 title: Web accessibility for seizures and physical reactions
-slug: Web/Accessibility/Seizure_disorders 
+slug: Web/Accessibility/Seizure_disorders
 tags:
   - Media Queries
   - PEAT
@@ -82,7 +82,7 @@ These standards are based on earlier research. In 2004, The Epilepsy Foundation 
 
 ### Size and distance
 
-#### How big? It depends.  
+#### How big? It depends.
 
 "Relative" size and distance both matter. According to [PEAT](https://trace.umd.edu/peat), _"The combined area of flashes occurring concurrently occupies no more than a total of one quarter of any 341 x 256 pixel rectangle anywhere on the displayed screen area when the content is viewed at 1024 by 768 pixels."_
 
@@ -520,7 +520,7 @@ Eric Bailey, of CSS-Tricks, found an innovative use the update feature which, us
 
 From W3.org's page on [Media Queries 4](https://www.w3.org/TR/mediaqueries-4/):
 
-The `update `media feature is used to query the ability of the output device to modify the appearance of content once it has been rendered. It has the values of "none", "slow", and "fast".
+The `update` media feature is used to query the ability of the output device to modify the appearance of content once it has been rendered. It has the values of "none", "slow", and "fast".
 
 ## Developmental & Experimental Features
 
@@ -556,7 +556,7 @@ Section 4.2 from the CSSWG.org drafts integrates with the [event loop](https://h
 
 #### Personalization Help and Support
 
-The requirement for the `literal `property is taken from [section 23 Non-literal Text and Images](https://www.w3.org/TR/personalization-semantics-help-1.0/).
+The requirement for the `literal` property is taken from [section 23 Non-literal Text and Images](https://www.w3.org/TR/personalization-semantics-help-1.0/).
 
 **Requirement:** Some users cannot understand non-literal text and icons such as metaphors, idioms etc. The `literal` property is intended to identify text or images as non-literal and allows the author to explain non-literal text and images to users.
 
@@ -595,6 +595,7 @@ The Web Animations model is intended to provide the features necessary for expre
 - [WCAG 2.1 Understanding 2.3.1 - missing/vague dimension definitions #585](https://github.com/w3c/wcag/issues/585)
 
 #### Epilepsy and Seizures
+
 - [Shedding Light on Photosensitivity, One of Epilepsy's Most Complex Conditions](https://www.epilepsy.com/article/2014/3/shedding-light-photosensitivity-one-epilepsys-most-complex-conditions-0) Epilepsy Foundation: _"Certain individuals are born with special sensitivity to flashing lights or contrasting visual patterns, such as stripes, grids and checkerboards. Because of this condition, their brain will produce seizure-like discharges when exposed to this type of visual stimulation."_
 - [Gamma oscillations and photosensitive epilepsy](https://www.sciencedirect.com/science/article/pii/S0960982217304062?via%3Dihub) Current Biology [Volume 27, Issue 9](https://www.sciencedirect.com/science/journal/09609822/27/9), 8 May 2017, Pages R336-R338: _"Certain [visual images](https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/retina-image), even in the absence of [motion](https://www.sciencedirect.com/topics/biochemistry-genetics-and-molecular-biology/motion) or flicker, can trigger seizures in patients with photosensitive epilepsy."_
 - [Photosensitive Seizures. Cedars-Sinai](https://www.cedars-sinai.edu/Patients/Health-Conditions/Photosensitive-Seizures.aspx) "_Photosensitive seizures are triggered by flashing or flickering lights. These seizures can also be triggered by certain patterns such as stripes._"

@@ -69,7 +69,7 @@ Because of the event handler we set up inside the `ReportingObserver()` construc
 
 ![image of a jolly bearded man with various stats displayed below it about a deprecated feature](reporting_api_example.png)
 
-The report details are displayed via the `displayReports()` fuction, which takes the observer callback's `reports` parameter as its parameter:
+The report details are displayed via the `displayReports()` function, which takes the observer callback's `reports` parameter as its parameter:
 
 ```js
 function displayReports(reports) {

@@ -33,5 +33,3 @@ console.log(tracks.selectedIndex);
 ## Browser compatibility
 
 {{Compat}}
-
-

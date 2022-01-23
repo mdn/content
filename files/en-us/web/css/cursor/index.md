@@ -55,7 +55,6 @@ The browser will try to load the first image specified, falling back to the next
 
 Each `<url>` may be optionally followed by a pair of space-separated numbers, which set the `<x>` `<y>` coordinates of the cursor's hotspot relative to the top-left corner of the image.
 
-
 ### Values
 
 - `<url>` {{optional_inline}}

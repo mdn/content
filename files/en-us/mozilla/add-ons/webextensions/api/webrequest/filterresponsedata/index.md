@@ -18,7 +18,7 @@ Use this function to create a {{WebExtAPIRef("webRequest.StreamFilter")}} object
 
 Firefox uses an optimized byte cache for script requests. This optimized byte cache overrides the normal request caching. Data from this cache is not available in a form useful to extensions. If your extension needs to filter scripts, create your filter in {{WebExtAPIRef("webRequest.onBeforeRequest")}}. Doing this ensures that the filter is created prior to the attempt to load from cache, thereby avoiding the optimized cache.
 
-To use this API you must have the `"webRequestBlocking"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), as well as the normal permissions needed for the event listener (the `"webRequest"` permission and the [host permission ](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)for the host).
+To use this API you must have the `"webRequestBlocking"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), as well as the normal permissions needed for the event listener (the `"webRequest"` permission and the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the host).
 
 ## Syntax
 

@@ -97,5 +97,5 @@ We track the "last access time" for each origin using temporary storage. Once th
 
 ## See also
 
-- [Working with quota on mobile browsers](http://www.html5rocks.com/en/tutorials/offline/quota-research/), by [Eiji Kitamura.](http://blog.agektmr.com "Eiji Kitamura") A detailed analysis of client-side storage on mobile browsers.
+- [Working with quota on mobile browsers](http://www.html5rocks.com/en/tutorials/offline/quota-research/), by [Eiji Kitamura.](http://blog.agektmr.com) A detailed analysis of client-side storage on mobile browsers.
 - [Storage for the web](https://web.dev/storage-for-the-web/) (https://web.dev/)

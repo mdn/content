@@ -13,18 +13,20 @@ The `<xsl:decimal-format>` element defines the characters and symbols that are t
 
 ### Syntax
 
-    <xsl:decimal-format
-    	name=NAME
-    	decimal-separator=CHARACTER
-    	grouping-separator=CHARACTER
-    	infinity=STRING
-    	minus-sign=CHARACTER
-    	NaN=STRING
-    	percent=CHARACTER
-    	per-mille=CHARACTER
-    	zero-digit=CHARACTER
-    	digit=CHARACTER
-    	pattern-separator=CHARACTER />
+```xml
+<xsl:decimal-format
+  name=NAME
+  decimal-separator=CHARACTER
+  grouping-separator=CHARACTER
+  infinity=STRING
+  minus-sign=CHARACTER
+  NaN=STRING
+  percent=CHARACTER
+  per-mille=CHARACTER
+  zero-digit=CHARACTER
+  digit=CHARACTER
+  pattern-separator=CHARACTER />
+```
 
 ### Required Attributes
 

@@ -17,7 +17,6 @@ The `columnheader` value of the ARIA role attribute identifies an element as bei
 
 An element with *role="columnheader"* nested as a descendant for an element with *role="row"*, is a static tabular structure of a column header cell in a tabular container, either a table or grid, or other chart that needs to show data relationships. To be supported, the columnheader must be nested in an element with the [role of `row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role).
 
-
 ### Associated WAI-ARIA roles, states, and properties
 
 All columnheaders should be nested within a [row](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role). Every row, in turn, should be nested within a [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [table](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role), alternatively within a [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) nested within one of the above.
@@ -85,7 +84,6 @@ Columnheader has the same semantics `<th scope="col">`.
 | --------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#columnheader","ARIA: columnheader role")}}| {{Spec2('ARIA')}}|
 | {{SpecName("ARIA Authoring Practices 1.2","#table","Table")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
 
 ## See Also
 

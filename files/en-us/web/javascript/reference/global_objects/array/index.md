@@ -128,7 +128,6 @@ let shallowCopySpread = [...fruits]
 This is a shallow copy made using the [spread sequence](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) operator:
 Other ways to copy an array are discussed below in [Copying an array](#copying_an_array).
 
-
 ### Accessing array elements
 
 JavaScript arrays are zero-indexed. The first element of an array is at index `0`, and the last element is at the index value equal to the value of the array's {{jsxref("Array.length", "length")}} property minus `1`.
@@ -295,12 +294,14 @@ Shallow copy using [spread sequence](/en-US/docs/Web/JavaScript/Reference/Operat
 let shallowCopySpread = [...fruits]
 // ["Strawberry", "Mango"]
 ```
+
 Shallow copy using {{jsxref("Array.slice()")}}:
 
 ```js
 let shallowCopySlice = fruits.slice()
 // ["Strawberry", "Mango"]
 ```
+
 Shallow copy using {{jsxref("Array.from()")}}:
 
 ```js
@@ -316,7 +317,6 @@ If you need a _deep copy_ of all elements — that is, in which even nested arr
 let deepCopy = JSON.parse(JSON.stringify(fruits));
 // ["Strawberry", "Mango"]
 ```
-
 
 ## Constructor
 

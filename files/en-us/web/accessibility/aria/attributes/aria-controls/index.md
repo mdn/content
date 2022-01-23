@@ -60,7 +60,7 @@ In this tabs example, each tab controls one tabpanel:
 ## Values
 
  - `id` list
-   - : Space seperated list of one or more ID values referencing the elements being controlled by the current element
+   - : Space separated list of one or more ID values referencing the elements being controlled by the current element
 
 ## ARIAMixin API
 

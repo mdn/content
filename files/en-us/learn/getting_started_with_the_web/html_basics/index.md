@@ -18,7 +18,9 @@ HTML (**H**yper**t**ext **M**arkup **L**anguage) is the code that is used to str
 
 HTML is a _markup language_ that defines the structure of your content. HTML consists of a series of **{{Glossary("element", "elements")}}**, which you use to enclose, or wrap, different parts of the content to make it appear a certain way, or act a certain way. The enclosing {{Glossary("tag", "tags")}} can make a word or image hyperlink to somewhere else, can italicize words, can make the font bigger or smaller, and so on.  For example, take the following line of content:
 
-    My cat is very grumpy
+```
+My cat is very grumpy
+```
 
 If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in paragraph tags:
 
@@ -143,6 +145,7 @@ Heading elements allow you to specify that certain parts of your content are hea
 <h3>My subheading</h3>
 <h4>My sub-subheading</h4>
 ```
+
 > **Note:** Anything in HTML between `<!--` and `-->` is a **HTML comment**. The browser ignores comments as it renders the code. In other words, they are not visible on the page - just in the code. HTML comments are a way for you to write helpful notes about your code or logic.
 
 Now try adding a suitable title to your HTML page just above your {{htmlelement("img")}} element.

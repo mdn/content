@@ -185,11 +185,13 @@ getting.then(onGot, onError);
 
 At this point, the complete extension should look like this:
 
-    settings/
-        borderify.js
-        manifest.json
-        options.html
-        options.js
+```
+settings/
+    borderify.js
+    manifest.json
+    options.html
+    options.js
+```
 
 Now:
 
@@ -197,7 +199,6 @@ Now:
 - load a web page
 - visit "`about:addons`" to open the settings and click the Preferences button next to the extension's entry and change the border color.
 - reload the web page to see the difference.
-
 
 ## Learn more
 

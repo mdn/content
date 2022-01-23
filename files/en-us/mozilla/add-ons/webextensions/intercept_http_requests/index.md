@@ -63,6 +63,7 @@ Here we use {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} to
 The `{urls: ["<all_urls>"]}` [pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) means we will intercept HTTP requests to all URLs.
 
 To test it out:
+
 - [Install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
 - Open the [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/) (use <kbd>Ctrl + Shift + J</kbd>)
 - Enable *Show Content Messages* in the menu:

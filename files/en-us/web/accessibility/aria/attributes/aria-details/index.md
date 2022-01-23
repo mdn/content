@@ -33,7 +33,7 @@ Unlike `aria-describedby`, elements referenced by `aria-details` are not used in
 
 ## Example
 
-When it comes to definiton and term roles, the `aria-details` would be included on the [`term`](/en-US/docs/Web/Accessibility/ARIA/roles/term_role) element with the `id` of the element with a [`definition`](/en-US/docs/Web/Accessibility/ARIA/roles/definition_role) role.
+When it comes to definition and term roles, the `aria-details` would be included on the [`term`](/en-US/docs/Web/Accessibility/ARIA/roles/term_role) element with the `id` of the element with a [`definition`](/en-US/docs/Web/Accessibility/ARIA/roles/definition_role) role.
 
 ```html
 <p>The <strong>cubic-bezier()<strong> functional notation defines a cubic 

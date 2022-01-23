@@ -63,7 +63,6 @@ The current implementation is a little inelegant but is basically functional. (S
   </tbody>
 </table>
 
-
 ### inert attribute
 
 The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{jsxref("Boolean")}}, when present, may make the browser "ignore" the element from assistive technologies, page search and text selection. For more details on the status of this feature see {{bug(1655722)}}.
@@ -553,7 +552,6 @@ The [`@layer`](en-US/docs/Web/CSS/@layer) rule declares a cascade layer, which a
   </tbody>
 </table>
 
-
 ### Property: hyphenate-character
 
 The {{cssxref("hyphenate-character")}} property can be used to set a string that is used instead of a hyphen character (`-`) at the end of a hyphenation line break.
@@ -595,7 +593,6 @@ It can also be used to specify that the character is selected to be appropriate 
     </tr>
   </tbody>
 </table>
-
 
 ## SVG
 
@@ -1311,6 +1308,7 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
 #### ElementInternals: Form associated custom element methods and properties
 
 New {{domxref("ElementInternals")}} properties and methods that allow a custom elements to interact with a form:
+
 - property: {{domxref("ElementInternals.form","form")}} gets the form associated with the element
 - property: {{domxref("ElementInternals.labels","labels")}} gets the list of labels associated with the element
 - property: {{domxref("ElementInternals.willValidate", "willValidate")}} checks if a custom form element will be validated.
@@ -1353,7 +1351,6 @@ See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}
     </tr>
   </tbody>
 </table>
-
 
 ### Payment Request API
 
@@ -1706,7 +1703,6 @@ This also changes the console warning; if the upgrade succeeds, the message indi
     </tr>
   </tbody>
 </table>
-
 
 ### Clear-Site-Data "cache" directive
 

@@ -280,13 +280,15 @@ It's possible to create some pretty complex layouts with flexbox. It's perfectly
 
 The HTML for this is fairly simple. We've got a {{htmlelement("section")}} element containing three {{htmlelement("article")}}s. The third {{htmlelement("article")}} contains three {{htmlelement("div")}}s, and the first {{htmlelement("div")}} contains five {{htmlelement("button")}}s :
 
-    section - article
-              article
-              article - div - button
-                        div   button
-                        div   button
-                              button
-                              button
+```
+section - article
+          article
+          article - div - button
+                    div   button
+                    div   button
+                          button
+                          button
+```
 
 Let's look at the code we've used for the layout.
 

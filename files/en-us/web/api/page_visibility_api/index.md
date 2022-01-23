@@ -168,4 +168,4 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 ## See also
 
 - Description of the [Page Visibility API](https://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx "Page Visibility on IEBlog") on the IEBlog.
-- Description of the [Page Visibility API](https://code.google.com/chrome/whitepapers/pagevisibility.html "Page Visibility API by Google") by Google
+- Description of the [Page Visibility API](https://code.google.com/chrome/whitepapers/pagevisibility.html) by Google

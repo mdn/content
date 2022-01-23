@@ -17,7 +17,7 @@ browser-compat: html.elements.input.input-file
 
 {{HTMLRef("Input_types")}}
 
-{{HTMLElement("input")}} elements with **`type="file"`** let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using[ form submission](/en-US/docs/Learn/Forms), or manipulated using JavaScript code and [the File API](/en-US/docs/Web/API/File/Using_files_from_web_applications).
+{{HTMLElement("input")}} elements with **`type="file"`** let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using [form submission](/en-US/docs/Learn/Forms), or manipulated using JavaScript code and [the File API](/en-US/docs/Web/API/File/Using_files_from_web_applications).
 
 {{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
 
@@ -374,7 +374,7 @@ function updateImageDisplay() {
     const list = document.createElement('ol');
     preview.appendChild(list);
 
-    for(const file of curFiles) {
+    for(const file of curFiles) {
       const listItem = document.createElement('li');
       const para = document.createElement('p');
       if(validFileType(file)) {
@@ -401,15 +401,15 @@ The custom `validFileType()` function takes a {{domxref("File")}} object as a pa
 // https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
 const fileTypes = [
   "image/apng",
-  "image/bmp",
-  "image/gif",
-  "image/jpeg",
-  "image/pjpeg",
-  "image/png",
-  "image/svg+xml",
-  "image/tiff",
-  "image/webp",
-  "image/x-icon"
+  "image/bmp",
+  "image/gif",
+  "image/jpeg",
+  "image/pjpeg",
+  "image/png",
+  "image/svg+xml",
+  "image/tiff",
+  "image/webp",
+  "image/x-icon"
 ];
 
 function validFileType(file) {

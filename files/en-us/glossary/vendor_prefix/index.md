@@ -22,11 +22,13 @@ The major browsers use the following prefixes:
 
 Sample usage:
 
-    -webkit-transition: all 4s ease;
-    -moz-transition: all 4s ease;
-    -ms-transition: all 4s ease;
-    -o-transition: all 4s ease;
-    transition: all 4s ease;
+```css
+-webkit-transition: all 4s ease;
+-moz-transition: all 4s ease;
+-ms-transition: all 4s ease;
+-o-transition: all 4s ease;
+transition: all 4s ease;
+```
 
 ## API prefixes
 

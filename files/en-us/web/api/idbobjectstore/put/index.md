@@ -70,7 +70,6 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `DataCloneError` {{domxref("DOMException")}}
   - : Thrown if the data being stored could not be cloned by the internal structured cloning algorithm.
 
-
 ## Parameters
 
 - value

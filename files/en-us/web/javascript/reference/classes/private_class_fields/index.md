@@ -6,6 +6,7 @@ tags:
   - Private
   - JavaScript
   - Language feature
+browser-compat: javascript.classes.private_class_fields
 ---
 {{JsSidebar("Classes")}}
 
@@ -256,11 +257,11 @@ console.log(Derived.publicStaticMethod2());
 
 ## Specifications
 
-{{Specifications("javascript.classes")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## See also
 

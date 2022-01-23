@@ -60,7 +60,6 @@ elem1 = selectElt.o1; // Returns undefined
 elem1 = selectElt['o1']; // Returns undefined
 ```
 
-
 ## Specifications
 
 {{Specifications}}

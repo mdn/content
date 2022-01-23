@@ -20,7 +20,6 @@ The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitiz
 
 > **Note:** Use {{domxref("Sanitizer.sanitizeFor()")}} instead of this method if the string must be inserted into the DOM at a later point, for example if the target element is not yet available.
 
-
 ## Syntax
 
 ```js
@@ -66,7 +65,6 @@ document.getElementById("target").setHTML(unsanitized_string, sanitizer);
 ## Browser compatibility
 
 {{Compat}}
-
 
 ## See also
 

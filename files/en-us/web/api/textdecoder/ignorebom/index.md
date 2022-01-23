@@ -20,5 +20,3 @@ The **`ignoreBOM`** property of the {{domxref("TextDecoder")}} interface is a {{
 ## Browser compatibility
 
 {{Compat}}
-
-

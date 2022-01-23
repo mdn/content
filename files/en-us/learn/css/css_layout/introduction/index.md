@@ -279,7 +279,7 @@ The {{cssxref("float")}} property has four possible values:
 - `none` — Specifies no floating at all. This is the default value.
 - `inherit` — Specifies that the value of the `float` property should be inherited from the element's parent element.
 
-In the example below, we float a `<div>` left and give it a {{cssxref("margin")}} on the right to push the surrounding text away it. This gives us the effect of text wrapped around the boxed element, and is most of what you need to know about floats as used in modern web design.
+In the example below, we float a `<div>` left and give it a {{cssxref("margin")}} on the right to push the surrounding text away from it. This gives us the effect of text wrapped around the boxed element, and is most of what you need to know about floats as used in modern web design.
 
 ```css hidden
 body {
@@ -338,7 +338,7 @@ There are five types of positioning you should know about:
 
 ### Simple positioning example
 
-To provide familiarity with these page layout techniques, we'll show you a couple of quick examples. Our examples will all feature the same HTML, which is as follows:
+To provide familiarity with these page layout techniques, we'll show you a couple of quick examples. Our examples will all feature the same HTML structure (a heading followed by three paragraphs), which is as follows:
 
 ```html
 <h1>Positioning</h1>
@@ -444,7 +444,7 @@ Here we give our middle paragraph a {{cssxref("position")}} value of `absolute` 
 <p>I am a basic block level element.</p>
 ```
 
-```css
+```css hidden
 body {
   width: 500px;
   margin: 0 auto;

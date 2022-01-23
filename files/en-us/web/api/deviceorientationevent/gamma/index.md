@@ -15,9 +15,9 @@ browser-compat: api.DeviceOrientationEvent.gamma
 {{ apiref("Device Orientation Events") }}
 
 Returns the rotation of the device around the Y axis; that is, the number of degrees,
-ranged between `-90` and `90`, by which the device is tilted left
+ranged between `-90` and `90`, by which the device is tilted left
 or right. See [Orientation and motion data
-explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained "Orientation and motion data explained") for details.
+explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained) for details.
 
 ## Syntax
 
@@ -36,8 +36,8 @@ var gamma = orientationEvent.gamma;
 ## See also
 
 - {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/en-US/docs/Web/API/Detecting_device_orientation "Detecting device orientation")
+- [Detecting device orientation](/en-US/docs/Web/API/Detecting_device_orientation)
 - [Orientation and motion data
-  explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained "Orientation and motion data explained")
+  explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained)
 - {{ domxref("window.ondeviceorientation") }}
 - {{ event("deviceorientation") }}
