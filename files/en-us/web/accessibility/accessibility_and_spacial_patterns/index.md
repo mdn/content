@@ -7,7 +7,7 @@ tags:
   - patterns
   - photosensitive seizure
 ---
-
+{{draft}}
 
 ### Spatial Localization
 
