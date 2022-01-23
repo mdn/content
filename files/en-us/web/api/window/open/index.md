@@ -87,7 +87,8 @@ function openRequestedPopup() {
   windowObjectReference = window.open("http://www.cnn.com/", "CNN_WindowName", windowFeatures);
 }
 ```
-
+In Firefox on desktop, calling the function above creates a new browser window with a non-editable address bar and without the navigation buttons:
+![CNN's home page shown in a Firefox window with a non-editable address bar and without navigation buttons](popup.png)
 ```js
 var windowObjectReference;
 
