@@ -12,7 +12,7 @@ tags:
 
 The `generic` role creates a nameless container element which has no semantic meaning on its own. 
 
-> **Note:** The `generic` role is the implicit role of generic elements used by user-agents. It is included here for completeness of documentation. It should not be used by web authors.
+> **Note:** The `generic` role is the implicit role of generic elements used by user agents. It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description
 
@@ -33,7 +33,7 @@ None. If a global ARIA state and property is set, `generic` or `none` will be ig
 
 ## Examples
 
-This role is for use by user-agents and not by developers. As such, no appropriate example exists.
+This role is for use by user agents and not by developers. As such, no appropriate example exists.
 
 ## Specifications
 
