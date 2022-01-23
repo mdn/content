@@ -46,7 +46,7 @@ _Doesn't inherit any properties._
 - {{domxref("Navigator.languages")}} {{readonlyInline}} {{experimental_inline}}
   - : Returns an array of {{domxref("DOMString")}} representing the languages known to the user, by order of preference.
 - {{domxref("Navigator.locks")}} {{readonlyinline}} {{experimental_inline}}
-  - : Returns a {{domxref("LockManager")}} object which provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing {{domxref('Lock')}} object
+  - : Returns a {{domxref("LockManager")}} object that provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing {{domxref('Lock')}} object.
 - {{domxref("Navigator.maxTouchPoints")}} {{readonlyInline}}
   - : Returns the maximum number of simultaneous touch contact points are supported by the current device.
 - {{domxref("Navigator.mediaCapabilities")}} {{readonlyinline}} {{experimental_inline}}
@@ -75,6 +75,8 @@ _Doesn't inherit any properties._
   - : Returns the vendor name of the current browser (e.g., "Netscape6").
 - {{domxref("Navigator.webdriver")}} {{readonlyInline}} {{experimental_inline}}
   - : Indicates whether the user agent is controlled by automation.
+- {{domxref("Navigator.windowControlsOverlay")}} {{readonlyInline}}
+  - : Returns the {{domxref("WindowControlsOverlay")}} interface which exposes information about the geometry of the title bar in desktop Progressive Web Apps, and an event to know whenever it changes.
 - {{domxref("Navigator.xr")}} {{readonlyInline}} {{experimental_inline}}
   - : Returns {{domxref("XRSystem")}} object, which represents the entry point into the [WebXR API](/en-US/docs/Web/API/WebXR_Device_API).
 

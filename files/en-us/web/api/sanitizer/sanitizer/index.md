@@ -48,7 +48,6 @@ new Sanitizer(config)
       - : A {{jsxref('Boolean')}} value set to `false` (default) to remove HTML comments.
         Set to `true` ensures that comments are retained.
 
-
 ## Examples
 
 The example below shows a sanitization operation using the {{domxref("Sanitizer.sanitizeFor()")}} method.
@@ -58,7 +57,7 @@ To simplify the presentation the result that is shown is actually the _innerHTML
 > **Note:** The API _only_ sanitizes HTML in strings in the context of a particular element/tag.
 > For more information see {{domxref('HTML Sanitizer API')}} (and {{domxref("Sanitizer.sanitizeFor()")}}).
 
-This example shows the result of sanitizing a string with disallowed `script` element using the default sanitizer (in a `div` context). 
+This example shows the result of sanitizing a string with disallowed `script` element using the default sanitizer (in a `div` context).
 
 ```js
 let unsanitized = "abc <script>alert(1)</script> def"
@@ -67,7 +66,6 @@ const sanitized =  new Sanitizer().sanitizeFor("div", unsanitized);
 ```
 
 <!-- Add other examples showing use of parameter when it is implemented somewhere -->
-
 
 ## Specifications
 

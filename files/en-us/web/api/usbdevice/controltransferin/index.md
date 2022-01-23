@@ -32,7 +32,7 @@ var promise = USBDevice.controlTransferIn(setup, length)
   - : An object that sets options for . The available options are:
 
     - `requestType`: Must be one of three values specifying whether the
-      tranfer is `"standard"` (common to all USB devices)
+      transfer is `"standard"` (common to all USB devices)
       `"class"` (common to an industry-standard class of devices) or
       `"vendor"`.
     - `recipient`: Specifices the target of the transfer on the device, one

@@ -276,7 +276,7 @@ The output of which looks something like this:
 
 ## Tables for visually impaired users
 
-Let's recap briefly on how we use data tables. A table can be a handy tool, for giving us quick access to data and allowing us to look up different values. For example, It takes only a short glance at the table below to find out how many rings were sold in Gent last August. To understand its information we make visual associations between the data in this table and its column and/or row headers.
+Let's recap briefly on how we use data tables. A table can be a handy tool, for giving us quick access to data and allowing us to look up different values. For example, it takes only a short glance at the table below to find out how many rings were sold in Gent during August 2016. To understand its information we make visual associations between the data in this table and its column and/or row headers.
 
 <table>
   <caption>
@@ -345,7 +345,7 @@ Let's recap briefly on how we use data tables. A table can be a handy tool, for 
 
 But what if you cannot make those visual associations? How then can you read a table like the above? Visually impaired people often use a screenreader that reads out information on web pages to them. This is no problem when you're reading plain text but interpreting a table can be quite a challenge for a blind person. Nevertheless, with the proper markup we can replace visual associations by programmatic ones.
 
-> **Note:** There are around 253 Million people living with Visual Impairment according to [WHO data in 2017](https://www.who.int/mediacentre/factsheets/fs282/en/ "Vision Impairment Data").
+> **Note:** There are around 253 Million people living with Visual Impairment according to [WHO data in 2017](https://www.who.int/mediacentre/factsheets/fs282/en/).
 
 This section of the article provides further techniques for making tables as accessible as possible.
 

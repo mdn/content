@@ -58,4 +58,3 @@ The {{CSSxRef("resize")}} property sets whether or not an item can be resized an
 The keyword value of `both` for the resize property works whether you are thinking physically or logically. It sets both dimensions at once. Try playing with the below example.
 
 {{EmbedGHLiveSample("css-examples/logical/size-resize.html", "100%", 700)}}
-

@@ -17,7 +17,7 @@ The **`onconnect`** property of the {{domxref("SharedWorkerGlobalScope")}} inter
 ## Syntax
 
 ```js
-onconnect = function() { ... };
+onconnect = function() { /* ... */ };
 ```
 
 ## Examples

@@ -19,6 +19,8 @@ Gets the [accept-languages](/en-US/docs/Web/HTTP/Content_negotiation#the_accept-
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
+See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) page for a guide on using this function.
+
 ## Syntax
 
 ```js

@@ -40,7 +40,7 @@ let querying = browser.tabs.query(queryObj)
     - `autoDiscardable`{{optional_inline}}
       - : `boolean`. Whether the tabs can be discarded automatically by the browser when resources are low.
     - `cookieStoreId` {{optional_inline}}
-      - : `string`. Use this to return only tabs whose cookie store ID is `cookieStoreId`. This option is only available if the add-on has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+      - : `string` or `array` of `string`. Use this to return tabs whose `tab.cookieStoreId` matches any of the `cookieStoreId` strings. This option is only available if the add-on has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
     - `currentWindow`{{optional_inline}}
       - : `boolean`. Whether the tabs are in the current window.
     - `discarded`{{optional_inline}}

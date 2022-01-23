@@ -145,7 +145,7 @@ You can see the [source code on GitHub](https://github.com/mdn/sw-test/), and [v
 
 ## Enter service workers
 
-**NOTE** : We're using the [es6](http://es6-features.org/) **arrow functions** syntax in the Service Worker Implementation
+> **Note:** We're using the [es6](http://es6-features.org/) **arrow functions** syntax in the Service Worker Implementation.
 
 Now let’s get on to service workers!
 
@@ -357,7 +357,7 @@ self.addEventListener('fetch', (event) => {
       }).catch(() => {
         return caches.match('./sw-test/gallery/myLittleVader.jpg');
       })
-    });
+    })
   );
 });
 ```
@@ -431,7 +431,7 @@ Firefox has also started to implement some useful tools related to service worke
 ## See also
 
 - [Understanding Service Workers](http://blog.88mph.io/2017/07/28/understanding-service-workers/)
-- [The Service Worker Cookbook](https://serviceworke.rs/)
+- [The Service Worker Cookbook](https://github.com/mozilla/serviceworker-cookbook)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - Download the [Service Workers 101 cheatsheet](sw101.png).
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

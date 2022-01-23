@@ -3,7 +3,6 @@ title: SpeechRecognition.onnomatch
 slug: Web/API/SpeechRecognition/onnomatch
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognition
@@ -13,7 +12,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.onnomatch
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`onnomatch`** property of the
 {{domxref("SpeechRecognition")}} interface represents an event handler that will run
@@ -32,7 +31,7 @@ This may involve some degree of recognition, which doesn't meet or exceed the
 ## Syntax
 
 ```js
-mySpeechRecognition.onnomatch = function() { ... };
+mySpeechRecognition.onnomatch = function() { /* ... */ };
 ```
 
 ## Examples

@@ -50,7 +50,7 @@ You'll want to clear the canvas before drawing, so that when the code is updated
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions2.html", '100%', 400)}}
+{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions2.html", '100%', 700)}}
 
 > **Callout:**
 >
@@ -71,6 +71,18 @@ Try updating the live code below to recreate the finished example:
 > **Callout:**
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions3-download.html) to work in your own editor or in an online editor.
+
+## Functions 4
+
+In this task, we have an array of names, and we're using {{jsxref("Array.filter()")}} to get an array of only names shorter than 5 characters. The filter is currently being passed a named function `isShort()` which checks the length of the name, returning `true` if the name is less than 5 characters long, and `false` otherwise.
+
+We'd like you to change this into an arrow function. See how compact you can make it.
+
+{{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions4.html", '100%', 400)}}
+
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/functions/functions4-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

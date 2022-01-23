@@ -64,6 +64,11 @@ See this code in a [JSFiddle demo](https://jsfiddle.net/zfnj5rv4/) or interact w
 ### CSS
 
 ```css
+body {
+  /* Prevent the user selecting text in the example */
+  user-select: none;
+}
+
 #draggable {
   width: 200px;
   height: 20px;

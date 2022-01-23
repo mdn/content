@@ -195,7 +195,7 @@ The problem with the above example is that the user will not know what the acces
 To disable a submit button, specify the {{htmlattrxref("disabled")}} global attribute on it, like so:
 
 ```html
-<input type="submit" value="Disabled" disabled>
+<input type="submit" value="Send" disabled>
 ```
 
 You can enable and disable buttons at run time by setting `disabled` to `true` or `false`; in JavaScript this looks like `btn.disabled = true` or `btn.disabled = false`.

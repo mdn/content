@@ -15,7 +15,7 @@ browser-compat: api.MouseEvent.screenX
 
 The **`screenX`** read-only property of the {{domxref("MouseEvent")}} interface provides the horizontal coordinate (offset) of the mouse pointer in global (screen) coordinates.
 
-**Note:** In a multiscreen environment, screens aligned horizontally will be treated as a single device, and so the range of the `screenX` value will increase to the combined width of the screens.
+> **Note:** In a multiscreen environment, screens aligned horizontally will be treated as a single device, and so the range of the `screenX` value will increase to the combined width of the screens.
 
 ## Syntax
 
@@ -33,14 +33,14 @@ Early versions of the spec defined this as an integer referring to the number of
 
 This example displays your mouse's coordinates whenever you trigger the {{Event("mousemove")}} event.
 
-#### HTML
+### HTML
 
 ```html
 <p>Move your mouse to see its position.</p>
 <p id="screen-log"></p>
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
 let screenLog = document.querySelector('#screen-log');
@@ -53,7 +53,7 @@ function logKey(e) {
 }
 ```
 
-#### Result
+### Result
 
 {{EmbedLiveSample("Example")}}
 

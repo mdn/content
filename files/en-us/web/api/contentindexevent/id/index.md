@@ -15,7 +15,7 @@ browser-compat: api.ContentIndexEvent.id
 
 The read-only **`id`** property of the
 {{domxref("ContentIndexEvent")}} interface is a {{jsxref('String')}} which identifies
-the deleted content index via it's `id`.
+the deleted content index via its `id`.
 
 ## Syntax
 

@@ -31,7 +31,7 @@ var file = document.getElementById('fileItem').files[0];
   <tbody>
     <tr>
       <td>
-        <code>File <a href="#item()">item</a>(index);</code>
+        <code>File <a href="#item">item</a>(index);</code>
       </td>
     </tr>
   </tbody>
@@ -148,6 +148,6 @@ document.querySelector("#myfiles").onchange=pullfiles;
 
 ## See also
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications "Using files from web applications")
+- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications)
 - [`File`](/en-US/docs/Web/API/File)
 - [`FileReader`](/en-US/docs/Web/API/FileReader)

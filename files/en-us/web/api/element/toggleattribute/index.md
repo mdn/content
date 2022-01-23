@@ -17,7 +17,8 @@ present and adding it if it is not present) on the given element.
 ## Syntax
 
 ```js
-Element.toggleAttribute(name [, force]);
+toggleAttribute(name);
+toggleAttribute(name, force);
 ```
 
 ### Parameters
@@ -27,8 +28,10 @@ Element.toggleAttribute(name [, force]);
     attribute name is automatically converted to all lower-case when
     `toggleAttribute()` is called on an HTML element in an HTML document.
 - `force` {{optional_inline}}
-  - : A boolean value to determine whether the attribute should be added or removed, no
-    matter whether the attribute is present or not at the moment.
+  - : A boolean value which has the following effects:
+    - if not specified at all, the `toggleAttribute` method “toggles” the attribute named `name` — removing it if it is present, or else adding it if it is not present
+    - if true, the `toggleAttribute` method adds an attribute named `name`
+    - if false, the `toggleAttribute` method removes the attribute named `name`
 
 ### Return value
 

@@ -15,7 +15,9 @@ The **`responseReady`** read-only property of the {{domxref("BackgroundFetchReco
 
 ## Syntax
 
-    var response = BackgroundFetchRecord.responseReady;
+```js
+var response = BackgroundFetchRecord.responseReady;
+```
 
 ### Value
 

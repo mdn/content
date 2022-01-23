@@ -11,7 +11,7 @@ browser-compat: api.Location.toString
 ---
 {{ApiRef("Location")}}
 
-The **`toString()`** stringifier method of the
+The **`toString()`** {{Glossary("stringifier")}} method of the
 {{domxref("Location")}} interface returns a {{domxref("USVString")}} containing the
 whole URL. It is a read-only version of {{domxref("Location.href")}}.
 

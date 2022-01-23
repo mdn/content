@@ -15,7 +15,6 @@ browser-compat: javascript.builtins.Object.hasOwn
 The **`Object.hasOwn()`** static method returns `true` if the specified object has the indicated property as its _own_ property.
 If the property is inherited, or does not exist, the method returns `false`.
 
-
 > **Note:** `Object.hasOwn()` is intended as a replacement for {{jsxref("Object.hasOwnProperty()")}}.
 
 {{EmbedInteractiveExample("pages/js/object-hasown.html")}}
@@ -55,10 +54,10 @@ external object, `Object.hasOwn()` is more intuitive.
 
 ## Examples
 
-### Using hasOwn to test for a property's existence 
+### Using hasOwn to test for a property's existence
 
 The following code shows how to determine whether the `example` object contains a property named `prop`.
- 
+
 ```js
 let example = {};
 Object.hasOwn(example, 'prop');   // false = 'prop' has not been defined

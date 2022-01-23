@@ -13,7 +13,7 @@ browser-compat: api.SVGDefsElement
 
 The **`SVGDefsElement`** interface corresponds to the {{SVGElement("defs")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

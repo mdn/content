@@ -51,7 +51,7 @@ _There is no active learning available yet. [Please, consider contributing](/en-
 
 ### Creating and editing webpages
 
-To create and edit a website, you need a text editor. Text editors create and modify unformatted text files.  Other formats, like **{{Glossary("RTF")}}**, let you add formatting, like bold or underline.  Those formats are not suitable for writing web pages. You should put some thought into which text editor you use, since you'll be working with it extensively while you're building the website.
+To create and edit a website, you need a text editor. Text editors create and modify unformatted text files. Other formats, like **{{Glossary("RTF")}}**, let you add formatting, like bold or underline. Those formats are not suitable for writing web pages. You should put some thought into which text editor you use, since you'll be working with it extensively while you're building the website.
 
 All desktop operating systems come with a basic text editor. These editors are all straightforward, but lack special features for webpage coding. If you want something a bit fancier, there are plenty of third-party tools available. Third-party editors often come with extra features, including syntax coloring, auto-completion, collapsible sections, and code search. Here is a short list of editors:
 
@@ -192,7 +192,7 @@ Uploading files to a web server is a very important step while creating a websit
   <thead>
     <tr>
       <th scope="col">Operating system</th>
-      <th colspan="2" scope="col"> FTP software</th>
+      <th colspan="2" scope="col">FTP software</th>
     </tr>
   </thead>
   <tbody>
@@ -242,7 +242,7 @@ Uploading files to a web server is a very important step while creating a websit
       <td>Chrome OS</td>
       <td>
         <ul>
-          <li><a href="https://shiftedit.net/">ShiftEdit</a> (All OS)</li>
+          <li><a href="https://shiftedit.net/">ShiftEdit</a> (All OS)</li>
         </ul>
       </td>
       <td></td>
@@ -259,7 +259,7 @@ As you already know, you need a web browser to view websites. There are [dozens]
 - [Microsoft Internet Explorer](https://windows.microsoft.com/en-US/internet-explorer/download-ie)
 - [Apple Safari](https://www.apple.com/safari/)
 
-If you're targeting a specific group (e.g., technical platform or country), you may have to test the site with additional browsers, like [Opera](https://www.opera.com/), [Konqueror](https://www.konqueror.org/), or[ UC Browser](https://www.ucweb.com/ucbrowser/).
+If you're targeting a specific group (e.g., technical platform or country), you may have to test the site with additional browsers, like [Opera](https://www.opera.com/), [Konqueror](https://www.konqueror.org/), or [UC Browser](https://www.ucweb.com/ucbrowser/).
 
 But testing gets complicated because some browsers only run on certain operating systems. Apple Safari runs on iOS and Mac OS, while Internet Explorer runs only on Windows. It's best to take advantage of services like [Browsershots](http://browsershots.org/) or [Browserstack](https://www.browserstack.com/). Browsershots furnishes screenshots of your website as it will look in various browsers. Browserstack actually gives you full remote access to virtual machines so you can test your site in the most common environments. Alternatively, you can set up your own virtual machine, but that takes some expertise. (If you're going that route, Microsoft has some tools for developers including a ready-to-use virtual machine at [modern.ie](https://modern.ie).)
 

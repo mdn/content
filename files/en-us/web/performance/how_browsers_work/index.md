@@ -106,7 +106,7 @@ As the server sends data in TCP packets, the user's client confirms delivery by 
 
 ## Parsing
 
-Once the browser receives the first chunk of data, it can begin parsing the information received. {{glossary('speculative parsing', 'Parsing')}} is the step the browser takes to turn the data it receives over the network into the {{glossary('DOM')}} and {{glossary('CSSOM')}}, which is used by the renderer to paint a page to the screen.
+Once the browser receives the first chunk of data, it can begin parsing the information received. {{glossary('parse', 'Parsing')}} is the step the browser takes to turn the data it receives over the network into the {{glossary('DOM')}} and {{glossary('CSSOM')}}, which is used by the renderer to paint a page to the screen.
 
 The DOM is the internal representation of the markup for the browser. The DOM is also exposed, and can be manipulated through various APIs in JavaScript.
 
@@ -167,7 +167,7 @@ Rendering steps include style, layout, paint and, in some cases, compositing. Th
 
 ### Style
 
-The third step in the critical rendering path is combining the DOM and CSSOM into a render tree.The computed style tree, or render tree, construction starts with the root of the DOM tree, traversing each visible node.
+The third step in the critical rendering path is combining the DOM and CSSOM into a render tree. The computed style tree, or render tree, construction starts with the root of the DOM tree, traversing each visible node.
 
 Tags that aren't going to be displayed, like the [`<head>`](/en-US/docs/Web/HTML/Element/head) and its children and any nodes with `display: none`, such as the `script { display: none; }` you will find in user agent stylesheets, are not included in the render tree as they will not appear in the rendered output. Nodes with `visibility: hidden` applied are included in the render tree, as they do take up space. As we have not given any directives to override the user agent default, the `script` node in our code example above will not be included in the render tree.
 

@@ -90,18 +90,17 @@ In order to be oriented about what we're trying to accomplish, let's have a look
 
 ```html
 <p>
-  Demonstration of using <a href="/en-US/docs/Web/API/Background_Tasks_API">
-  cooperatively scheduled background tasks</a> using the <code>requestIdleCallback()</code>
-  method.
+  Demonstration of using cooperatively scheduled background tasks using the
+  <code>requestIdleCallback()</code> method.
 </p>
 
 <div id="container">
   <div class="label">Decoding quantum filament tachyon emissions...</div>
-  
+
   <progress id="progress" value="0"></progress>
-  
+
   <button class="button" id="startButton">Start</button>
-  
+
   <div class="label counter">
     Task <span id="currentTaskNumber">0</span> of <span id="totalTaskCount">0</span>
   </div>
@@ -204,7 +203,7 @@ let taskHandle = null;
 These variables are used to manage the list of tasks that are waiting to be performed, as well as status information about the task queue and its execution:
 
 - `taskList` is an {{jsxref("Array")}} of objects, each representing one task waiting to be run.
-- `totalTaskCount` is a counter of the number of tasks that have been added to the queue; it will only go up, never down. We use this to do the math to present progress as a precentage of total work to do.
+- `totalTaskCount` is a counter of the number of tasks that have been added to the queue; it will only go up, never down. We use this to do the math to present progress as a percentage of total work to do.
 - `currentTaskNumber` is used to track how many tasks have been processed so far.
 - `taskHandle` is a reference to the task currently being processed.
 
@@ -385,7 +384,7 @@ If the log was scrolled to the end when we started, we make sure it still is. Th
 
 #### Adding text to the log
 
-The `log()` function adds the specified text to the log. Since we don't know at the time `log()` is called whether or not it's safe to immediately touch the DOM, we will cache the log text until it's safe to update. Above, in the code for ` updateDisplay``() `, you can find the code that actually adds the logged text to the log element when the animation frame is being updated.
+The `log()` function adds the specified text to the log. Since we don't know at the time `log()` is called whether or not it's safe to immediately touch the DOM, we will cache the log text until it's safe to update. Above, in the code for `updateDisplay()`, you can find the code that actually adds the logged text to the log element when the animation frame is being updated.
 
 ```js
 function log(text) {
@@ -456,14 +455,14 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 
 `decodeTechnoStuff()` starts by zeroing the values of totalTaskCount (the number of tasks added to the queue so far) and currentTaskNumber (the task currently being run), and then calls `updateDisplay()` to reset the display to its "nothing's happened yet" state.
 
-This example will create a random number of tasks (between 100 and 200 of them). To do so, we use the [`getRandomIntInclusive()` function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive) that's provided as an example in the documentation for {{jsxref("Math.random()")}} to get the number of tasks to create.
+This example will create a random number of tasks (between 100 and 200 of them). To do so, we use the [`getRandomIntInclusive()` function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_integer_between_two_values_inclusive) that's provided as an example in the documentation for {{jsxref("Math.random()")}} to get the number of tasks to create.
 
 Then we start a loop to create the actual tasks. For each task, we create an object, `taskData`, which includes two properties:
 
 - `count` is the number of strings to output into the log from the task.
 - `text` is the text to output to the log the number of times specified by `count`.
 
-Each task is then enqueued by calling `enqueueTask()`, passing in ` logTaskHandler``() ` as the handler function and the `taskData` object as the object to pass into the function when it's called.
+Each task is then enqueued by calling `enqueueTask()`, passing in `logTaskHandler()` as the handler function and the `taskData` object as the object to pass into the function when it's called.
 
 ### Result
 

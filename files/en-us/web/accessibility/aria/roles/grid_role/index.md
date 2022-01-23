@@ -14,8 +14,6 @@ tags:
 ---
 The grid role is for a widget that contains one or more rows of cells. The position of each cell is significant and can be focused using keyboard input.
 
-
-
 ## Description
 
 The `grid` role is a composite widget containing a collection of one or more rows with one or more cells where some or all cells in the grid are focusable by using methods of two-dimensional navigation, such as directional arrow keys.
@@ -75,7 +73,7 @@ If the grid is used as an interactive widget, [keyboard](#keyboard-use) interac
 - [aria-level](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-level_attribute)
   - : Indicates the hierarchical level of the grid within other structures.
 - [aria-multiselectable](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-multiselectable_attribute)
-  - : If ` aria-``multiselectable ` is set to `true`, multiple items in the grid can be selected. The default value is `false`.
+  - : If `aria-multiselectable` is set to `true`, multiple items in the grid can be selected. The default value is `false`.
 - [aria-readonly](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute)
   - : If the user can navigate the grid but not change the value or values of the grid, the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) should be set to `true`. The default value is `false`.
 
@@ -596,8 +594,6 @@ Even if the keyboard use is properly implemented, some users might not be aware 
 | -------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#grid","Role Grid")}}                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#grid","Role Grid")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
-
 
 ## See also
 

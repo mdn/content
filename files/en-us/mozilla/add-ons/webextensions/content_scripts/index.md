@@ -12,7 +12,7 @@ A content script is a part of your extension that runs in the context of a parti
 
 Just like the scripts loaded by normal web pages, content scripts can read and modify the content of their pages using the standard DOM APIs.
 
-Content scripts can only access [a small subset of the WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis), but they can [communicate with background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts) using a messaging system, and thereby indirectly access the WebExtension APIs.
+Content scripts can only access [a small subset of the WebExtension APIs](#webextension_apis), but they can [communicate with background scripts](#communicating_with_background_scripts) using a messaging system, and thereby indirectly access the WebExtension APIs.
 
 > **Note:** Content scripts are blocked on the following domains:
 >
@@ -21,7 +21,6 @@ Content scripts can only access [a small subset of the WebExtension APIs](/en-US
 > - addons.cdn.mozilla.net
 > - addons.mozilla.org
 > - api.accounts.firefox.com
-> - content.cdn.mozilla.net
 > - content.cdn.mozilla.net
 > - discovery.addons.mozilla.org
 > - input.mozilla.org
@@ -115,7 +114,7 @@ Now an extension injects a content script into the page:
 let pageScriptPara = document.getElementById("page-script-para");
 pageScriptPara.style.backgroundColor = "blue";
 
-// can't see page-script-added properties
+// can't see properties added by page-script.js
 console.log(window.foo);  // undefined
 
 // sees the original form of redefined properties
@@ -503,17 +502,21 @@ window.addEventListener("message", function(event) {
 
 In Chrome, this produces output like this:
 
-    In content script, window.x: 1
-    In content script, window.y: 2
-    In page script, window.x: undefined
-    In page script, window.y: undefined
+```
+In content script, window.x: 1
+In content script, window.y: 2
+In page script, window.x: undefined
+In page script, window.y: undefined
+```
 
 In Firefox, this produces output like this:
 
-    In content script, window.x: undefined
-    In content script, window.y: 2
-    In page script, window.x: 1
-    In page script, window.y: undefined
+```
+In content script, window.x: undefined
+In content script, window.y: 2
+In page script, window.x: 1
+In page script, window.y: undefined
+```
 
 The same applies to [`setTimeout()`](/en-US/docs/Web/API/setTimeout), [`setInterval()`](/en-US/docs/Web/API/setInterval), and [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function).
 

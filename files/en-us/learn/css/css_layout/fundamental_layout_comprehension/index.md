@@ -1,5 +1,5 @@
 ---
-title: 'Test Your Skills: Fundamental layout comprehension'
+title: 'Fundamental layout comprehension'
 slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 tags:
   - Assessment
@@ -9,6 +9,7 @@ tags:
   - Learn
 ---
 {{LearnSidebar}}
+{{PreviousMenu("Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
 
 If you have worked through this module then you will have already covered the basics of what you need to know to do CSS layout today, and to work with older CSS as well. This task will test some of your knowledge by way of developing a simple webpage layout using a variety of techniques.
 
@@ -66,6 +67,9 @@ If you would like your work assessed, or are stuck and want to ask for help:
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
     - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
     - A link to the actual task or assessment page, so we can find the question you want help with.
+
+{{PreviousMenu("Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
+
 
 ## In this module
 

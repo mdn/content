@@ -34,6 +34,7 @@ eyeDropper.open({ signal: abortController.signal });
 A {{jsxref("Promise")}} that eventually resolves when the user selects a pixel color from the screen.
 
 The promise resolves to an object with the following property:
+
 - `sRGBHex`
   - : A string representing the selected color, in hexadecimal sRGB format (`#aabbcc`).
 

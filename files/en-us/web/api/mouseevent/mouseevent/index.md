@@ -74,8 +74,8 @@ The **`MouseEvent()`** constructor creates a new
 
     - `"relatedTarget"`, optional {{domxref("EventTarget")}}, defaulting to `null`
       that is the element just left
-      (in case of a {{event("mouseenter")}} or {{event("mouseover")}})
-      or is entering (in case of a {{event("mouseout")}} or {{event("mouseleave")}}).
+      (in case of a {{domxref("Element/mouseenter_event", "mouseenter")}} or {{domxref("Element/mouseover_event", "mouseover")}})
+      or is entering (in case of a {{domxref("Element/mouseout_event", "mouseout")}} or {{domxref("Element/mouseleave_event", "mouseleave")}}).
     - `"region"`, optional {{domxref("DOMString")}}, defaulting to `null`,
       that is the ID of the hit region affected by the event.
       The absence of any affected hit region is represented with the `null` value.

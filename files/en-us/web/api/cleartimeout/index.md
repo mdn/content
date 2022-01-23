@@ -40,7 +40,7 @@ see a message popping up in a second. If you click the page multiple times in
 one second, the alert only appears once.
 
 ```js
-var alarm = {
+const alarm = {
   remind: function(aMessage) {
     alert(aMessage);
     this.timeoutID = undefined;
@@ -60,7 +60,7 @@ var alarm = {
     clearTimeout(this.timeoutID);
   }
 };
-window.onclick = function() { alarm.setup(); };
+window.addEventListener('click', () => alarm.setup() );
 ```
 
 ## Notes

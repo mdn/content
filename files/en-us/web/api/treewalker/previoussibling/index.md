@@ -32,7 +32,7 @@ var treeWalker = document.createTreeWalker(
     { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
     false
 );
-var node = treeWalker.previousSibling(); // returns null as there is no previous sibiling
+var node = treeWalker.previousSibling(); // returns null as there is no previous sibling
 ```
 
 ## Specifications

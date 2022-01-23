@@ -29,11 +29,7 @@ The XML file that describes a search engine follows the basic template below. Se
   <Description>[Search engine full name and summary]</Description>
   <InputEncoding>[UTF-8]</InputEncoding>
   <Image width="16" height="16" type="image/x-icon">[https://example.com/favicon.ico]</Image>
-  <Url type="text/html" template="[searchURL]">
-    <Param name="[key name]" value="{searchTerms}"/>
-    <!-- other Params if you need them… -->
-    <Param name="[other key name]" value="[parameter value]"/>
-  </Url>
+  <Url type="text/html" template="[searchURL]"/>
   <Url type="application/x-suggestions+json" template="[suggestionURL]"/>
   <moz:SearchForm>[https://example.com/search]</moz:SearchForm>
 </OpenSearchDescription>
@@ -77,11 +73,9 @@ The XML file that describes a search engine follows the basic template below. Se
 
     For search suggestions, the `application/x-suggestions+json` URL template is used to fetch a suggestion list in [JSON](/en-US/docs/Glossary/JSON) format. For details on how to implement search suggestion support on a server, see [Supporting search suggestions in search plugins](/en-US/docs/Archive/Add-ons/Supporting_search_suggestions_in_search_plugins).
 
-- Param
-  - : The parameters that must be passed in along with the search query as key/value pairs. When specifying values, you can use `{searchTerms}` to insert the search terms entered by the user in the search bar.
 - moz:SearchForm
 
-  - : The URL for the site's search page for which the plugin. This lets Firefox users visit the web site directly.
+  - : The URL for the site's search initiation page for the plugin. This lets Firefox users visit the web site, and search from the site directly.
 
     > **Note:** Since this element is Firefox-specific, and not part of the OpenSearch specification, we use the `moz:` XML namespace prefix in the example above to ensure that other user agents that don't support this element can safely ignore it.
 

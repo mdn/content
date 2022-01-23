@@ -38,7 +38,7 @@ If you use background images a lot in your CSS, you can reduce the number of HTT
 
 For the purposes of this article, a CDN is a means to reduce the physical distance between your server and your visitor. As the distance between your server origin and visitor increases, the load times will increase. Suppose your website server is located in the United States and it has a visitor from India; the page load time will be much higher for the Indian visitor compared to a visitor from the US.
 
-A CDN is a geographically distributed network of servers that work together to shorten the distance between the user and your website. CDNs store cached versions of your website and serve them to visitors via the network node closest to the user, thereby reducing [latency](http://www.webperformancetoday.com/2012/04/02/latency-101-what-is-latency-and-why-is-it-such-a-big-deal/).
+A CDN is a geographically distributed network of servers that work together to shorten the distance between the user and your website. CDNs store cached versions of your website and serve them to visitors via the network node closest to the user, thereby reducing [latency](/en-US/docs/Web/Performance/Understanding_latency).
 
 Further reading:
 
@@ -91,19 +91,23 @@ Tables are still considered valid markup but should be used for displaying tabul
 
 Rather than deeply nesting tables as in:
 
+```html
+<table>
+  <table>
     <table>
-      <table>
-        <table>
-              ...
-        </table>
-      </table>
+          ...
     </table>
+  </table>
+</table>
+```
 
 use non-nested tables or divs as in
 
-    <table>...</table>
-    <table>...</table>
-    <table>...</table>
+```html
+<table>...</table>
+<table>...</table>
+<table>...</table>
+```
 
 See also: [CSS Flexible Box Layout](https://www.w3.org/TR/css-flexbox-1/) and [CSS Grid Layout](https://www.w3.org/TR/css-grid-1/) specifications.
 
@@ -121,7 +125,9 @@ If the browser can immediately determine the height and/or width of your images 
 
 Tables should use the CSS selector: property combination:
 
-      table-layout: fixed;
+```css
+table-layout: fixed;
+```
 
 and should specify widths of columns using the [`<col>`](/en-US/docs/Web/HTML/Element/col) and the [`<colgroup>`](/en-US/docs/Web/HTML/Element/colgroup) elements.
 

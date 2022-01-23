@@ -16,7 +16,6 @@ The `none` role is a synonym for the [`presentation`](/en-US/docs/Web/Accessibil
 
 See the [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) role for more information.
 
-
 <section id="Quick_links">
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)

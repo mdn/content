@@ -29,7 +29,7 @@ const url = new URL(url [, base])
 ### Parameters
 
 - `url`
-  - : A {{domxref("USVString")}} or any other object with a [stringifier](/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers) — including, for example, an {{htmlelement("a")}} or {{htmlelement("area")}} element — that represents an absolute or relative URL.
+  - : A {{domxref("USVString")}} or any other object with a {{Glossary("stringifier")}} — including, for example, an {{htmlelement("a")}} or {{htmlelement("area")}} element — that represents an absolute or relative URL.
     If `url` is a relative URL, `base` is
     required, and will be used as the base URL. If `url` is an
     absolute URL, a given `base` will be ignored.
@@ -71,6 +71,8 @@ let d = new URL('/en-US/docs', b);                     // =
         new URL('http://www.example.com', );           // => 'http://www.example.com/'
         new URL('http://www.example.com', b);          // => 'http://www.example.com/'
 
+        new URL("", "https://example.com/?query=1")    // => 'https://example.com/?query=1' (Edge before 79 removes query arguments)
+        new URL("/a", "https://example.com/?query=1")  // => 'https://example.com/a' (see relative URLs)
         new URL("//foo.com", "https://example.com")    // => 'https://foo.com' (see relative URLs)
 ```
 

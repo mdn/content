@@ -42,4 +42,3 @@ VideoDecoder.close();
 ## Browser compatibility
 
 {{Compat}}
-

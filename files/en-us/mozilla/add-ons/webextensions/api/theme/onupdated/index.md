@@ -13,7 +13,7 @@ browser-compat: webextensions.api.theme.onUpdated
 
 Fires when a theme supplied as a browser extension is applied or removed. Specifically:
 
-- when a [static theme](/en-US/docs/Mozilla/Add-ons/Themes/Theme_concepts#static_themes) is installed
+- when a [static theme](https://extensionworkshop.com/documentation/themes/static-themes/) is installed
 - when a [dynamic theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme) calls [`theme.update()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/update) or [`theme.reset()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/update)
 - when a theme gets uninstalled.
 

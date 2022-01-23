@@ -56,7 +56,7 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
   - : If there is a named line with the name '\<custom-ident>-start', it contributes the first such line to the grid item’s placement.
 
-    **Note:** Named grid areas automatically generate implicit named lines of this form, so specifying `grid-row-start: foo;` will choose the start edge of that named grid area (unless another line named `foo-start` was explicitly specified before it).
+    > **Note:** Named grid areas automatically generate implicit named lines of this form, so specifying `grid-row-start: foo;` will choose the start edge of that named grid area (unless another line named `foo-start` was explicitly specified before it).
 
     Otherwise, this is treated as if the integer `1` had been specified along with the `<custom-ident>`.
 

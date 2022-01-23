@@ -37,8 +37,8 @@ its content and resources. The resource removal is processed _after_ the
 ## Syntax
 
 ```js
-window.addEventListener("unload", function(event) { ... });
-window.onunload = function(event) { ... };
+window.addEventListener("unload", function(event) { /* ... */ });
+window.onunload = function(event) { /* ... */ };
 ```
 
 Typically, it is better to use {{domxref("EventTarget.addEventListener",

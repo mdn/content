@@ -32,8 +32,8 @@ itself.
 ## Syntax
 
 ```js
-ServiceWorkerGlobalScope.onnotificationclose = function(NotificationEvent) { ... };
-ServiceWorkerGlobalScope.addEventListener('notificationclose', function(NotificationEvent) { ... });
+ServiceWorkerGlobalScope.onnotificationclose = function(NotificationEvent) { /* ... */ };
+ServiceWorkerGlobalScope.addEventListener('notificationclose', function(NotificationEvent) { /* ... */ });
 ```
 
 ## Example

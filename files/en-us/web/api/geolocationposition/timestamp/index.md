@@ -16,7 +16,9 @@ The **`GeolocationPosition.timestamp`** read-only property returns a {{domxref("
 
 ## Syntax
 
-    var timestamp = geolocationPositionInstance.timestamp
+```js
+var timestamp = geolocationPositionInstance.timestamp
+```
 
 ### Value
 

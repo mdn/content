@@ -16,7 +16,7 @@ browser-compat: http.headers.WWW-Authenticate
 The HTTP **`WWW-Authenticate`** response header defines the [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) methods ("challenges") that might be used to gain access to a specific resource.
 
 > **Note:** This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework), which can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
-> Each "challenge" lists a scheme supported by the server and additional parameters that are defined for that scheme type. 
+> Each "challenge" lists a scheme supported by the server and additional parameters that are defined for that scheme type.
 
 A server using [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) will respond with a {{HTTPStatus("401")}} `Unauthorized` response to a request for a protected resource.
 This response must include at least one `WWW-Authenticate` header and at least one {{Glossary("challenge")}}, to indicate what authentication schemes can be used to access the resource (and any additional data that each particular scheme needs).
@@ -45,6 +45,7 @@ The client is expected to select the most secure of the challenges it understand
 
 At least one challenge must be specified.
 Multiple challenges may be specified, comma-separated, in a single header, or in individual headers:
+
 ```http
 // Challenges specified in single header
 WWW-Authenticate: challenge1, ..., challengeN
@@ -78,7 +79,6 @@ WWW-Authenticate: Basic realm=<realm>
 WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 ```
 
-
 ## Directives
 
 - `<auth-scheme>`
@@ -95,7 +95,6 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 
 Other than `<auth-scheme>` and the key `realm`, authorization parameters are specific to each [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
 Generally you will need to check the relevant specifications for these (keys for a small subset of schemes are listed below).
-
 
 ### Basic
 
@@ -120,7 +119,7 @@ Generally you will need to check the relevant specifications for these (keys for
     The specification contains advice on possible algorithms for generating this value.
     The nonce value is opaque to the client.
 - **`opaque`**
-  - : A server-specified quoted string that should be returned unchanged in the {{HTTPHeader("Authorization")}}. 
+  - : A server-specified quoted string that should be returned unchanged in the {{HTTPHeader("Authorization")}}.
     This is opaque to the client. The server is recommended to include Base64 or hexadecimal data.
 - **`stale`** {{optional_inline}}
   - : A case-insensitive flag indicating that the previous request from the client was rejected because the `nonce` used is too old (stale).
@@ -140,7 +139,6 @@ Generally you will need to check the relevant specifications for these (keys for
 - **`userhash`** {{optional_inline}}
   - : A server may specify `"true"` to indicate that it supports username hashing (default is `"false"`)
 
-
 ## Examples
 
 ### Basic authentication
@@ -151,7 +149,7 @@ A server that only supports basic authentication might have a `WWW-Authenticate`
 WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
 ```
 
-A user-agent recieving this header would first prompt the user for their username and password, and then re-request the resource: this time including the (encoded) credentials in the {{HTTPHeader("Authorization")}} header.
+A user-agent receiving this header would first prompt the user for their username and password, and then re-request the resource: this time including the (encoded) credentials in the {{HTTPHeader("Authorization")}} header.
 The {{HTTPHeader("Authorization")}} header might look like this:
 
 ```https
@@ -161,7 +159,6 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 For `"Basic"` authentication the credentials are constructed by first combining the username and the password with a colon (`aladdin:opensesame`), and then by encoding the resulting string in [`base64`](/en-US/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 
 > **Note:** See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or Nginx servers to password protect your site with HTTP basic authentication.
-
 
 ### Digest authentication with SHA-256 and MD5
 
@@ -220,8 +217,6 @@ Authorization: Digest username="Mufasa",
         6794697cf8db5856cb6c1",
     opaque="FQhe/qaU925kfnzjCev0ciny7QMkPqMAFRtzCUYo5tdS"
 ```
-
-
 
 ## Specifications
 

@@ -37,7 +37,7 @@ animate(keyframes, options)
     milliseconds), **or** an Object containing one or more timing properties described in the [`KeyframeEffect()` options parameter](/en-US/docs/Web/API/KeyframeEffect) and/or the following options:
 
     - `id {{optional_inline}}`
-      - : A property unique to `animate()`: a [`DOMString`](/en-US/docs/Web/API/DOMString "DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String.")
+      - : A property unique to `animate()`: a [`DOMString`](/en-US/docs/Web/API/DOMString)
         with which to reference the animation.
 
 ### Return value

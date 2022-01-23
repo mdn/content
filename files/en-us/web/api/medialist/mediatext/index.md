@@ -13,7 +13,7 @@ browser-compat: api.MediaList.mediaText
 {{APIRef("CSSOM")}}
 
 The **`mediaText`** property of the {{domxref("MediaList")}}
-interface is a stringifier that returns a {{domxref("DOMString")}} representing the
+interface is a {{Glossary("stringifier")}} that returns a {{domxref("DOMString")}} representing the
 `MediaList` as text, and also allows you to set a new `MediaList`.
 
 ## Syntax

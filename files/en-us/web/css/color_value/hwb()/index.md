@@ -13,21 +13,22 @@ browser-compat: css.types.color.hwb
 ---
 {{CSSRef}}
 
-The **`hwb()`** functional notation expresses a given color according to its hue, whitness, and blackness. An optional alpha component represents the color's transparency.
+The **`hwb()`** functional notation expresses a given color according to its hue, whiteness, and blackness. An optional alpha component represents the color's transparency.
 
 ## Syntax
 
 ```css
 hwb(194 0% 0%) /* #00c3ff */
 hwb(194 0% 0% / .5) /* #00c3ff with 50% opacity */
-hwb(194, 0%, 0%, .5); /* with comma-separated values */
 ```
 
 ### Values
 
-- Functional notation: `hwb[a](H W B[/ A])`
+> **Note:** The HWB function does **not** use commas to separate it's values as with previous color functions and the optional alpha value needs to be preceded with a forward slash (`/`) if specified.
 
-  - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
+- Functional notation: `hwb(H W B[ / A])`
+
+  - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in {{SpecName("CSS4 Colors","#typedef-hue")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
 
     `W` (whiteness) specifies the amount of white to mix in, as a percentage from 0% (no whiteness) to 100% (full whiteness).
 
@@ -42,5 +43,3 @@ hwb(194, 0%, 0%, .5); /* with comma-separated values */
 ## Browser compatibility
 
 {{Compat}}
-
-The `hwb()` value has yet to be implemented in any browser. [Mozilla bug: 1352755](https://bugzilla.mozilla.org/show_bug.cgi?id=1352755)

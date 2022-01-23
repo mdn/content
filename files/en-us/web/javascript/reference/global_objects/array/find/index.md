@@ -35,19 +35,19 @@ values satisfy the testing function, {{jsxref("undefined")}} is returned.
 
 ```js
 // Arrow function
-find((element) => { ... } )
-find((element, index) => { ... } )
-find((element, index, array) => { ... } )
+find((element) => { /* ... */ } )
+find((element, index) => { /* ... */ } )
+find((element, index, array) => { /* ... */ } )
 
 // Callback function
 find(callbackFn)
 find(callbackFn, thisArg)
 
 // Inline callback function
-find(function(element) { ... })
-find(function(element, index) { ... })
-find(function(element, index, array){ ... })
-find(function(element, index, array) { ... }, thisArg)
+find(function(element) { /* ... */ })
+find(function(element, index) { /* ... */ })
+find(function(element, index, array){ /* ... */ })
+find(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
@@ -103,7 +103,7 @@ by `find` are set _before_ the first invocation of
   visits that element's index.
 - Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.
 
-**Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
+> **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
 ## Examples
 
@@ -181,6 +181,13 @@ array.find(function(value, index) {
   console.log('Visited index ', index, ' with value ', value);
 });
 // expected output:
+// Visited index 0 with value 0
+// Visited index 1 with value 1
+// Visited index 2 with value undefined
+// Visited index 3 with value undefined
+// Visited index 4 with value undefined
+// Visited index 5 with value 5
+// Visited index 6 with value 6
 // Deleting array[5] with value 5
 // Visited index 0 with value 0
 // Visited index 1 with value 1

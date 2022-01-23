@@ -14,19 +14,19 @@ The **Gamepad API** is a way for developers to access and respond to signals fro
 
 ## Interfaces
 
-- [`Gamepad`](/en-US/docs/Web/API/Gamepad "The Gamepad interface of the Gamepad API defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id.")
+- [`Gamepad`](/en-US/docs/Web/API/Gamepad)
   - : Represents a gamepad/controller connected to the computer.
-- [`GamepadButton`](/en-US/docs/Web/API/GamepadButton "The GamepadButton interface defines an individual button of a gamepad or other controller, allowing access to the current state of different types of buttons available on the control device.")
+- [`GamepadButton`](/en-US/docs/Web/API/GamepadButton)
   - : Represents a button on one of the connected controllers.
-- [`GamepadEvent`](/en-US/docs/Web/API/GamepadEvent "The GamepadEvent interface of the Gamepad API contains references to gamepads connected to the system, which is what the gamepad events Window.gamepadconnected and Window.gamepaddisconnected are fired in response to.")
+- [`GamepadEvent`](/en-US/docs/Web/API/GamepadEvent)
   - : The event object representing events fired that are related to gamepads.
 
 ### Experimental Gamepad extensions
 
-- [`GamepadHapticActuator`](/en-US/docs/Web/API/GamepadHapticActuator "The GamepadHapticActuator interface of the Gamepad API represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.")
+- [`GamepadHapticActuator`](/en-US/docs/Web/API/GamepadHapticActuator)
   - : Represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.
-- [`GamepadPose`](/en-US/docs/Web/API/GamepadPose "The GamepadPose interface of the Gamepad API represents the pose of a WebVR controller at a given timestamp (which includes orientation, position, velocity, and acceleration information.)")
-  - : Represents the pose of a controller (e.g. position and orientation in 3D space) in the case of a [WebVR](/en-US/docs/Web/API/WebVR_API) controller. This is *not* used by the newer [WebXR](/en-US/docs/Web/API/WebXR_Device_API) standard.
+- [`GamepadPose`](/en-US/docs/Web/API/GamepadPose)
+  - : Represents the pose of a controller (e.g. position and orientation in 3D space) in the case of a [WebVR](/en-US/docs/Web/API/WebVR_API) controller. This is *not* used by the newer [WebXR](/en-US/docs/Web/API/WebXR_Device_API) standard.
 
 See also the [extensions to the Gamepad interface](/en-US/docs/Web/API/Gamepad#experimental_extensions_to_gamepad), for features that allow you to access the above information.
 

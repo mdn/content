@@ -32,5 +32,3 @@ console.log(VideoFrame.visibleRect);
 ## Browser compatibility
 
 {{Compat}}
-
-

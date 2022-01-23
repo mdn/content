@@ -32,7 +32,7 @@ An instance of this event is passed to the {{domxref('ServiceWorkerGlobalScope.o
 
 Inherits methods from its parent {{domxref('ExtendableEvent')}}.
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{InheritanceDiagram}}
 
 ## Examples
 

@@ -20,7 +20,7 @@ Creating a worker is done by calling the `Worker("path/to/worker/script")` const
 
 Workers may themselves spawn new workers, as long as those workers are hosted at the same [origin](/en-US/docs/Web/Security/Same-origin_policy) as the parent page. (Note: [nested workers are not yet implemented in WebKit](https://bugs.webkit.org/show_bug.cgi?id=22723)).
 
-[Not all interfaces and functions are available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers "Functions and classes available to Web Workers") to scripts inside a `Worker`. Workers may use {{domxref("XMLHttpRequest")}} for network communication, but its `responseXML` and `channel` attributes are always `null`. ([`fetch`](/en-US/docs/Web/API/Fetch_API) is also available, with no such restrictions.)
+[Not all interfaces and functions are available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) to scripts inside a `Worker`. Workers may use {{domxref("XMLHttpRequest")}} for network communication, but its `responseXML` and `channel` attributes are always `null`. ([`fetch`](/en-US/docs/Web/API/Fetch_API) is also available, with no such restrictions.)
 
 ## Constructors
 

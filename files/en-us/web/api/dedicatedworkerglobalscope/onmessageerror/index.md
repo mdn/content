@@ -23,7 +23,7 @@ fired on the worker—that is, when it receives a message that cannot be
 ## Syntax
 
 ```js
-onmessageerror = function() { ... };
+onmessageerror = function() { /* ... */ };
 ```
 
 ## Specifications

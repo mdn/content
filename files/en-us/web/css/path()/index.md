@@ -6,23 +6,24 @@ tags:
   - CSS Function
   - Function
   - Reference
+browser-compat: css.types.basic-shape.path
 ---
 {{CSSRef}}
 
-The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) accepts an SVG path string, and is used in CSS Shapes and CSS Motion Path to enable a shape to be drawn.
+The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) accepts an SVG path string, and is used in CSS Shapes and CSS Motion Path to enable a shape to be drawn.
 
 ## Syntax
 
 ```css
-path( [[<'fill-rule'>,]?<string>)
+path( [[<'fill-rule'>,]?<string>)
 ```
 
 ### Parameters
 
 - `<'fill-rule'>`
   - : The filling rule for the interior of the path. Possible values are nonzero or evenodd. The default value is nonzero. See [fill-rule](/en-US/docs/Web/SVG/Attribute/fill-rule) for more details.
-- \<string>
-  - : The string is an [SVG path data string](/en-US/docs/Web/SVG/Element/path).
+- `<string>`
+  - : The string is a [data string](/en-US/docs/Web/SVG/Attribute/d) for defining an [SVG path](/en-US/docs/Web/SVG/Element/path) 
 
 ## Examples
 
@@ -39,11 +40,42 @@ The `path()` function is used to create a path for the item to travel round. Cha
 
 {{EmbedGHLiveSample("css-examples/path/offset-path.html", '100%', 960)}}
 
+### Modify the value of the SVG path d attribute
+
+The `path()` can be used to modify the value of the SVG [`d` attribute](/en-US/docs/Web/SVG/Attribute/d), which can also be seet to `none` in your CSS.
+
+The "V" symbol will flip vertically when you hover over it, if `d` is supported as a CSS property.
+
+#### CSS
+
+```css
+html,body,svg { height:100% }
+
+/* This path is displayed on hover*/
+#svg_css_ex1:hover path {
+  d: path("M20,80 L50,20 L80,80")
+}
+```
+
+#### HTML
+
+```html
+<svg id="svg_css_ex1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+ <path fill="none" stroke="red" d="M20,20 L50,80 L80,20" />
+</svg>
+```
+
+#### Result 
+
+{{EmbedLiveSample('Modify the value of the SVG path d attribute', '100%', 200)}}
+
 ## Specifications
 
-| Specification                                                            | Status                           |
-| ------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('CSS Shapes', '#funcdef-path', 'path()')}} | {{Spec2('CSS Shapes')}} |
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

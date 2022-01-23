@@ -30,7 +30,7 @@ Several tools and browser extensions are available to help developers support Fi
 - View page source, with syntax highlighting and find features.
 - [Browser extensions](https://addons.mozilla.org/extensions/showlist.php?application=firefox&category=Developer%20Tools) including the [FireBug](http://www.joehewitt.com/software/firebug/), [Web Developer toolbar](</en-US/docs/Web_Developer_Extension_(external)>), [Live HTTP Headers](</en-US/docs/Live_HTTP_Headers_(external)>), [HTML Validator](</en-US/docs/HTML_Validator_(external)>) and many more.
 
-**Note:** Some extensions do not currently support Firefox 1.5, and will be automatically disabled.
+> **Note:** Some extensions do not currently support Firefox 1.5, and will be automatically disabled.
 
 ## Overview
 

@@ -30,7 +30,7 @@ var myConfidence = speechRecognitionAlternativeInstance.confidence;
 
 ### Returns
 
-A number betwen 0 and 1.
+A number between 0 and 1.
 
 ## Examples
 

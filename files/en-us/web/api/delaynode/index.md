@@ -12,7 +12,7 @@ browser-compat: api.DelayNode
 ---
 {{APIRef("Web Audio API")}}
 
-The **`DelayNode`** interface represents a [delay-line](https://en.wikipedia.org/wiki/Digital_delay_line "Wikipedia: Digital delay line"); an {{domxref("AudioNode")}} audio-processing module that causes a delay between the arrival of an input data and its propagation to the output.
+The **`DelayNode`** interface represents a [delay-line](https://en.wikipedia.org/wiki/Digital_delay_line); an {{domxref("AudioNode")}} audio-processing module that causes a delay between the arrival of an input data and its propagation to the output.
 
 A `DelayNode` always has exactly one input and one output, both with the same amount of channels.
 

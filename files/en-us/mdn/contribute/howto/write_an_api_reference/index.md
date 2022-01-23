@@ -29,14 +29,14 @@ Everything else can be learned along the way.
 
 Before starting to document an API, you should have available:
 
-1. The latest spec: 
+1. The latest spec:
    Whether it is a W3C Recommendation or an early editor's draft, you should refer to the latest available draft of the spec that covers (or specs that cover) that API.
    To find it, you can usually do a Web search. The latest version will often be linked to from all versions of the spec, listed under "latest draft" or similar.
 2. The latest modern web browsers:
    These should be experimental/alpha builds such as [Firefox Nightly](https://nightly.mozilla.org/)/[Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) that are more likely to support the features you are documenting.
    This is especially pertinent if you are documenting a nascent/experimental API.
 3. Demos/blog posts/other info: Find as much info as you can.
-4. Useful engineering contacts: 
+4. Useful engineering contacts:
    It is really useful to find yourself a friendly engineering contact to ask questions about the spec, someone who is involved in the standardization of the API, or its implementation in a browser.
    Good places to find them are:
 
@@ -246,7 +246,7 @@ Now you should be ready to start writing your interface pages. Each interface re
    - \\{{Non-standard_header}}
 
 3. **Description**: the first paragraph of the interface page should provide a short concise description of the interface's overarching purpose. You may also want to include a couple more paragraphs if any additional description is required. If the interface is actually a dictionary, you should use that term instead of "interface".
-4. **Inheritance diagram:** Use the [`InheritanceDiagram`](https://github.com/mdn/yari/blob/main/kumascript/macros/InheritanceDiagram.ejs) macro to embed an SVG inheritance diagram for the interface. For most interfaces, you won't need any parameters, but if the inheritance chain is long, you may need to use \\{{InheritanceDiagram(600, 120)}} to make room vertically for two rows of boxes.
+4. **Inheritance diagram:** Use the [`InheritanceDiagram`](https://github.com/mdn/yari/blob/main/kumascript/macros/InheritanceDiagram.ejs) macro to embed an SVG inheritance diagram for the interface.
 5. **List of properties, List of methods**: These sections should be titled  "Properties" and "Methods", and provide links (using the \\{{domxref}} macro) to a reference  page for each property/method of that interface, along with a description of what  each one does. These should be marked up using description/definition  lists, which can be created using the  "Definition List", "Definition  Term", and "Definition Description" buttons on the MDN editor toolbar. Each description should be short and concise — one sentence if possible. See the "Referencing other API features with the \\{{domxref}} macro" section for a quicker way to create links to other pages.
 
    At the beginning of both sections, before the beginning of the list of properties/methods, indicate inheritance using the appropriate sentence, in italics:
@@ -259,7 +259,7 @@ Now you should be ready to start writing your interface pages. Each interface re
 
    > **Note:** Properties that are read-only should have the \\{{readonlyInline}} macro, which creates a nifty little "Read only" badge, included on the same line as their \\{{domxref}} links (after the use of the \\{{experimentalInline}}, \\{{non-standard_Inline}} and \\{{deprecatedInline}} macros, if some of these are needed.
 
-6. **Examples**: Include a code listing to show typical usage of a major feature of the API. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you could reference a [Github](https://github.com/) repo containing the full example, and you could  also link to a live example created using the [Github gh-pages ](https://help.github.com/articles/creating-project-pages-manually/)feature (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN [Live Sample](/en-US/docs/MDN/Structures/Live_samples) feature to make it live and playable in the page.
+6. **Examples**: Include a code listing to show typical usage of a major feature of the API. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you could reference a [Github](https://github.com/) repo containing the full example, and you could also link to a live example created using the [Github gh-pages](https://help.github.com/articles/creating-project-pages-manually/) feature (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN [Live Sample](/en-US/docs/MDN/Structures/Live_samples) feature to make it live and playable in the page.
 7. **Specifications table**: At this point you need to include a specifications table — see the "Creating a spec reference table" section  for more details.
 8. **Browser compatibility**: Now you need to include a browser compatibility table. See [Compatibility tables](/en-US/docs/MDN/Structures/Compatibility_tables) for details.
 9. **Polyfill**: If appropriate, include this section, providing code for a polyfill that enables the API to be used even on browsers that don't implement it. If no polyfill exists or is needed, leave this section out entirely.
@@ -307,8 +307,10 @@ Property pages must have the following sections:
 
 5. **Syntax**: The syntax section should show how to get the property, and how to set it, if it's not read only. Use the `syntaxbox` class for it and italics for part to be replaced by the actual variable name. For example:
 
-       var myType = oscillator.type;
-       oscillator.type = aType;
+    ```js
+    var myType = oscillator.type;
+    oscillator.type = aType;
+    ```
 
     The syntax section should also have a subsection — "Value", which will contain a description of the property's value. This should contain the data type of the property, and what it represents. For an example, see {{domxref("SpeechRecognition.grammars")}}
 

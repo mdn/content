@@ -26,7 +26,7 @@ use the method {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}
 ```js
 const content = element.innerHTML;
 
-element.innerHTML = htmlString;
+element.innerHTML = content;
 ```
 
 ### Value
@@ -96,7 +96,7 @@ Doing so causes the user agent to follow these steps:
 2. If the element whose contents are being replaced is a {{HTMLElement("template")}} element,
    then the `<template>` element's {{domxref("HTMLTemplateElement.content", "content")}} attribute is replaced with the new `DocumentFragment` created in step 1.
 3. For all other elements, the element's contents are replaced with the nodes in the new `DocumentFragment`.
-    
+
 ### Appending HTML to an element  
 
 Setting the value of `innerHTML` lets you append new contents to the existing one of an element.
@@ -104,6 +104,7 @@ Setting the value of `innerHTML` lets you append new contents to the existing on
 For example, we can append a new list item (`<li>`) to the existing list (`<ul>`):
 
 #### HTML
+
 ```html
 <ul id="list">
   <li><a href="#">Item 1</a></li>
@@ -113,6 +114,7 @@ For example, we can append a new list item (`<li>`) to the existing list (`<ul>`
 ```
 
 #### JavaScript
+
 ```js
 const list = document.getElementById("list");
 
@@ -142,7 +144,7 @@ Although this may look like a {{interwiki("wikipedia", "cross-site scripting")}}
 attack, the result is harmless. HTML5 specifies that a {{HTMLElement("script")}} tag
 inserted with `innerHTML` [should not execute](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
 
-However, there are ways to execute JavaScript without using {{HTMLElement("script")}} elements, 
+However, there are ways to execute JavaScript without using {{HTMLElement("script")}} elements,
 so there is still a security risk whenever you use `innerHTML` to set strings over which you have no control.
 For example:
 
@@ -152,9 +154,9 @@ el.innerHTML = name; // shows the alert
 ```
 
 For that reason, it is recommended that instead of `innerHTML` you use:
+
 - {{domxref("Element.SetHTML()")}} to sanitize the text before it is inserted into the DOM.
 - {{domxref("Node.textContent")}} when inserting plain text, as this inserts it as raw text rather than parsing it as HTML.
-
 
 > **Warning:** If your project is one that will undergo any form of security review, using `innerHTML` most likely will result in your code being rejected.
 > For example, [if you use `innerHTML`](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) in a [browser extension](/en-US/docs/Mozilla/Add-ons/WebExtensions) and submit
@@ -179,7 +181,7 @@ function log(msg) {
 log("Logging mouse events inside this container...");
 ```
 
-The `log()` function creates the log output by getting the current time from a {{jsxref("Date")}} object using 
+The `log()` function creates the log output by getting the current time from a {{jsxref("Date")}} object using
 {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, and building a string with the timestamp and the message text.
 Then the message is appended to the box with the class `"log"`.
 
@@ -261,5 +263,5 @@ You can see output into the log by moving the mouse in and out of the box, click
 - {{domxref("Element.insertAdjacentHTML()")}}
 - {{domxref("Element.outerHTML")}}
 - {{domxref("Element.setHTML")}}
-- Parsing HTML into a DOM tree: {{domxref("DOMParser")}}
-- Serializing XML or HTML into a DOM tree: {{domxref("XMLSerializer")}}
+- Parsing HTML or XML into a DOM tree: {{domxref("DOMParser")}}
+- Serializing a DOM tree into an XML string: {{domxref("XMLSerializer")}}

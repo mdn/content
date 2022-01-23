@@ -3,7 +3,6 @@ title: SpeechSynthesis.cancel()
 slug: Web/API/SpeechSynthesis/cancel
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - SpeechSynthesis
@@ -13,7 +12,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.cancel
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`cancel()`** method of the {{domxref("SpeechSynthesis")}}
 interface removes all utterances from the utterance queue.
@@ -23,12 +22,12 @@ If an utterance is currently being spoken, speaking will stop immediately.
 ## Syntax
 
 ```js
-speechSynthesisInstance.cancel();
+cancel()
 ```
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ### Parameters
 

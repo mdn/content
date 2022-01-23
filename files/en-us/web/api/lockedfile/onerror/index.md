@@ -17,7 +17,9 @@ Specifies an event listener to receive {{event("error")}} events. These events o
 
 ## Syntax
 
-    instanceOfLockedFile.onerror = funcRef;
+```js
+instanceOfLockedFile.onerror = funcRef;
+```
 
 Where `funcRef` is a function to be called when the {{event("error")}} event occurs.
 

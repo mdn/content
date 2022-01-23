@@ -204,12 +204,14 @@ To create a component, we use the `ember generate component` command, followed b
 
     These will generate some new files, as shown in the resulting terminal output:
 
-        installing component
-          create app/components/header.hbs
-          skip app/components/header.js
-          tip to add a class, run `ember generate component-class header`
-        installing component-test
-          create tests/integration/components/header-test.js
+    ```
+    installing component
+      create app/components/header.hbs
+      skip app/components/header.js
+      tip to add a class, run `ember generate component-class header`
+    installing component-test
+      create tests/integration/components/header-test.js
+    ```
 
 `header.hbs` is the template file where we’ll include the HTML structure for just that component. Later on we'll add the required dynamic functionality such as data bindings, responding to user interaction, etc.
 

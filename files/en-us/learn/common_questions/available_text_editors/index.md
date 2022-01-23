@@ -384,7 +384,7 @@ Here are some popular editors:
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a href="https://code.visualstudio.com/docs/supporting/faq">FAQ</a>     
+        <a href="https://code.visualstudio.com/docs/supporting/faq">FAQ</a>
       </td>
       <td><a href="https://code.visualstudio.com/docs">Documentation</a></td>
       <td><a href="https://marketplace.visualstudio.com/VSCode">Yes</a></td>

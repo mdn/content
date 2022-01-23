@@ -29,9 +29,9 @@ _This interface provides the following properties._
 
     - `'screen'`: A screen wake lock. Prevents devices from dimming or locking the screen.
 
-## Event handlers
+## Events
 
-- {{domxref("WakeLockSentinel.onrelease", "onrelease")}}
+- {{domxref("WakeLockSentinel.release_event", "release")}}
   - : Fired when the {{domxref('WakeLockSentinel.release','release()')}} method is called or the wake lock is released by the user agent.
 
 ## Methods

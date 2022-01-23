@@ -3,7 +3,6 @@ title: SpeechRecognition.interimResults
 slug: Web/API/SpeechRecognition/interimResults
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognition
@@ -12,7 +11,7 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.interimResults
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`interimResults`** property of the
 {{domxref("SpeechRecognition")}} interface controls whether interim results should be
@@ -22,14 +21,7 @@ is `false`.)
 
 The default value for **`interimResults`** is `false`.
 
-## Syntax
-
-```js
-var myInterimResult = mySpeechRecognition.interimResults;
-mySpeechRecognition.interimResults = false;
-```
-
-### Value
+## Value
 
 A boolean value representing the state of the current
 `SpeechRecognition`'s interim results. `true` means interim

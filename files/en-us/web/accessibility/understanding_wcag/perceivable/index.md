@@ -324,7 +324,7 @@ This guideline refers to the ability of content to be consumed by users in multi
         <p>
           <a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html"
             >Understanding Orientation</a
-          > 
+          >
         </p>
       </td>
     </tr>
@@ -342,7 +342,7 @@ This guideline refers to the ability of content to be consumed by users in multi
           <a href="https://www.w3.org/TR/WCAG21/#input-purposes"
             >53 input fields</a
           >
-          to programmatically identify the purpose of a field.   
+          to programmatically identify the purpose of a field.
         </p>
       </td>
       <td>
@@ -553,7 +553,7 @@ This guideline relates to making sure core content is easy to discern from backg
         <ul>
           <li>
             No horizontal scrolling for left-to-right languages (like English)
-            or right-to-left languages (like Arabic)   
+            or right-to-left languages (like Arabic)
           </li>
           <li>
             No vertical scrolling for top-to-bottom languages (like Japanese)
@@ -580,7 +580,7 @@ This guideline relates to making sure core content is easy to discern from backg
       </td>
       <td>
         Minimum color contrast ratio of 3:1 for user interface components and
-        graphical objects. 
+        graphical objects.
       </td>
       <td>
         <a
@@ -600,7 +600,7 @@ This guideline relates to making sure core content is easy to discern from backg
       <td>
         <p>
           No loss of content or functionality occurs when the following styles
-          are applied: 
+          are applied:
         </p>
         <ul>
           <li>
@@ -639,7 +639,7 @@ This guideline relates to making sure core content is easy to discern from backg
           <li>dismissible (can be closed/removed)</li>
           <li>
             hoverable (the additional content does not disappear when the
-            pointer is over it) 
+            pointer is over it)
           </li>
           <li>
             persistent (the additional content does not disappear without user

@@ -149,28 +149,34 @@ This example uses a stylesheet named `style.css` to provide the ability to set a
 
 The stylesheet defines:
 
-    #reload-button {
-      fill: var(--reload-button-color);
-    }
+```css
+#reload-button {
+  fill: var(--reload-button-color);
+}
+```
 
 where `#reload-button` is the Firefox internal CSS selector for the reload button and `--reload-button-color` is an arbitrary name.
 
 In the `manifest.json` file, `--reload-button-color` is then mapped to the name to be used in the `theme` `colors` property:
 
-    "theme_experiment": {
-      "stylesheet": "style.css",
-      "colors": {
-        "reload_button": "--reload-button-color"
-      }
-    }
+```json
+"theme_experiment": {
+  "stylesheet": "style.css",
+  "colors": {
+    "reload_button": "--reload-button-color"
+  }
+}
+```
 
 The argument `reload_button` is used in the same way as any other `theme` property:
 
-    "theme": {
-      "colors": {
-        "reload_button": "orange"
-      }
-    }
+```json
+"theme": {
+  "colors": {
+    "reload_button": "orange"
+  }
+}
+```
 
 This has the effect of making the reload icon orange.
 

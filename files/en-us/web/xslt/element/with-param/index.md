@@ -13,9 +13,11 @@ The `<xsl:with-param>` element sets the value of a parameter to be passed into a
 
 ### Syntax
 
-    <xsl:with-param name=NAME select=EXPRESSION>
-    	TEMPLATE
-    </xsl:with-param>
+```xml
+<xsl:with-param name=NAME select=EXPRESSION>
+  TEMPLATE
+</xsl:with-param>
+```
 
 ### Required Attributes
 

@@ -348,7 +348,9 @@ This works in much the same way as the previous one, except that instead of usin
 
 Once we've successfully received our blob, we create an object URL out of it using {{domxref("URL.createObjectURL()", "createObjectURL()")}}. This returns a temporary internal URL that points to an object referenced inside the browser. These are not very readable, but you can see what one looks like by opening up the Can Store app, Ctrl-/Right-clicking on an image, and selecting the "View image" option (which might vary slightly depending on what browser you are using). The object URL will be visible inside the address bar, and should be something like this:
 
-    blob:http://localhost:7800/9b75250e-5279-e249-884f-d03eb1fd84f4
+```
+blob:http://localhost:7800/9b75250e-5279-e249-884f-d03eb1fd84f4
+```
 
 ### Challenge: An XHR version of the Can Store
 

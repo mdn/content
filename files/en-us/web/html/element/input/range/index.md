@@ -19,7 +19,7 @@ browser-compat: html.elements.input.input-range
 
 {{HTMLElement("input")}} elements of type **`range`** let the user specify a numeric value which must be no less than a given value, and no more than another given value. The precise value, however, is not considered important. This is typically represented using a slider or dial control rather than a text entry box like the {{HTMLElement('input/number', 'number')}} input type.
 
-Because this kind of widget is imprecise, it shouldn't typically be used unless the control's exact value isn't important.
+Because this kind of widget is imprecise, it should only be used if the control's exact value isn't important.
 
 {{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}
 
@@ -106,7 +106,7 @@ This value must be greater than or equal to the value of the [`min`](/en-US/docs
 
 The lowest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation). If a value is specified for `min` that isn't a valid number, the input has no minimum value.
 
-This value must be less than or equal to the value of the [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute. See the [HTML `min `attribute.](/en-US/docs/Web/HTML/Attributes/min)
+This value must be less than or equal to the value of the [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute. See the HTML [`min`](/en-US/docs/Web/HTML/Attributes/min) attribute.
 
 ### step
 

@@ -12,7 +12,7 @@ tags:
   - Reference
 browser-compat: api.CSSTransformValue.entries
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSTransformValue.entries()`** method
 returns an array of a given object's own enumerable

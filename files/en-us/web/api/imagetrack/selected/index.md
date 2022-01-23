@@ -33,5 +33,3 @@ console.log(track.selected); // this is the selected track so should return true
 ## Browser compatibility
 
 {{Compat}}
-
-

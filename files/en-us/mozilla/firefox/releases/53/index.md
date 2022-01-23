@@ -25,7 +25,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 - The `mask-*` longhand properties (see [CSS Masks](/en-US/docs/Web/CSS/CSS_Masking)) are all supported and available by default (see {{bug(1251161)}}).
 - Added {{cssxref("caret-color")}} property ({{bug(1063162)}}).
-- Implemented the {{cssxref("place-items")}}/{{cssxref("place-self")}}/{{cssxref("place-content")}} shorthands ({{bug(1319958)}}).
+- Implemented the {{cssxref("place-items")}}/{{cssxref("place-self")}}/{{cssxref("place-content")}} shorthands ({{bug(1319958)}}).
 - Added `flow-root` value to {{cssxref("display")}} property ({{bug(1322191)}}).
 - {{cssxref("tab-size", "-moz-tab-size")}} now accepts {{cssxref("&lt;length&gt;")}} values ({{bug(943918)}}), and is now animatable ({{bug(1308110)}}).
 - {{cssxref("mask-mode")}}:luminance doesn't work on gradient masks ({{bug(1346265)}}).
@@ -49,20 +49,20 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 - {{jsxref("SharedArrayBuffer")}} can now be used in {{jsxref("DataView")}} objects ({{bug(1246597)}}).
 - In earlier versions of the specification, {{jsxref("SharedArrayBuffer")}} objects needed to be explicitly transferred during [structured cloning](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). In the new specification they aren't [transferable objects](/en-US/docs/Web/API/Transferable) anymore and thus must not be in the transfer list. The new behavior used to present a console warning only, but will now throw an error ({{bug(1302037)}}).
 - The {{jsxref("ArrayBuffer")}} length is now limited to {{jsxref("Number.MAX_SAFE_INTEGER")}} (>= 2 \*\* 53) ({{bug(1255128)}}).
-- {{jsxref("Error")}} and other native error object prototypes like {{jsxref("RangeError")}} etc. are now ordinary objects instead of proper Error objects. (In particular, `Object.prototype.toString.call(Error.prototype)` is now `"[object Object]"` instead of `"[object Error]"`.) ({{bug(1213341)}}).
+- {{jsxref("Error")}} and other native error object prototypes like {{jsxref("RangeError")}} etc. are now ordinary objects instead of proper Error objects. (In particular, `Object.prototype.toString.call(Error.prototype)` is now `"[object Object]"` instead of `"[object Error]"`.) ({{bug(1213341)}}).
 
 ### Events
 
-- CSS Transitions: The {{event("transitionstart")}}, {{event("transitionrun")}}, and {{event("transitioncancel")}} events have been implemented (see {{bug(1264125)}} and {{bug(1287983)}}).
+- CSS Transitions: The {{event("transitionstart")}}, {{event("transitionrun")}}, and {{event("transitioncancel")}} events have been implemented (see {{bug(1264125)}} and {{bug(1287983)}}).
 - The {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent")}} constructor has been implemented (see {{bug(1002256)}}).
-- The {{domxref("MouseEvent.x")}} and {{domxref("MouseEvent.y")}} aliases of {{domxref("MouseEvent.clientX")}}/{{domxref("MouseEvent.clientY")}} have been implemented (see {{bug(424390)}}).
+- The {{domxref("MouseEvent.x")}} and {{domxref("MouseEvent.y")}} aliases of {{domxref("MouseEvent.clientX")}}/{{domxref("MouseEvent.clientY")}} have been implemented (see {{bug(424390)}}).
 - The {{Event("auxclick")}} event and corresponding {{domxref("GlobalEventHandlers.onauxclick")}} handler have been implemented (see {{bug(1304044)}}).
 - The {{Event("transitioncancel")}} event is now fired after a [transition](/en-US/docs/Web/CSS/CSS_Transitions) is cancelled. See {{domxref("GlobalEventHandlers.ontransitioncancel")}} for more details and an example ({{bug("1264125")}}).
 
 ### DOM
 
 - The {{domxref("HTMLAnchorElement/pathname", "pathname")}} and {{domxref("HTMLAnchorElement/search", "search")}} {{domxref("HTMLHyperLinkElementUtils")}} properties previously returned the wrong parts of the URL. For example, for a URL of `http://z.com/x?a=true&b=false`, `pathname` would return "`/x?a=true&b=false"` and `search` would return "", rather than "`/x`" and "`?a=true&b=false"` respectively. This has now been fixed ({{bug(1310483)}}).
-- The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a {{domxref("USVString")}} or sequence of {{domxref("USVString")}}s as an init object ({{bug("1330678")}}).
+- The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a {{domxref("USVString")}} or sequence of {{domxref("USVString")}}s as an init object ({{bug("1330678")}}).
 - The {{domxref("Selection.setBaseAndExtent()")}} method of the [Selection API](/en-US/docs/Web/API/Selection) is now implemented (see {{bug(1321623)}}).
 - The ["fakepath"](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly) addition to `file` type {{htmlelement("input")}} `values` has been implemented in Gecko, giving it parity with other browsers (see {{bug(1274596)}}).
 - {{domxref("Node.getRootNode()")}} has been implemented, replacing the deprecated `Node.rootNode` property ({{bug(1269155)}}).

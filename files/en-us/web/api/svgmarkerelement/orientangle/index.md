@@ -15,7 +15,9 @@ The **`orientAngle`** read-only property of the {{domxref("SVGMarkerElement")}} 
 
 ## Syntax
 
-    let angle = SVGMarkerElement.orientAngle;
+```js
+let angle = SVGMarkerElement.orientAngle;
+```
 
 ### Value
 

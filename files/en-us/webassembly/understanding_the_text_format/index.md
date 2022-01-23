@@ -406,7 +406,7 @@ In JavaScript, the equivalent calls to create such a table instance would look s
 ```js
 function() {
   // table section
-  var tbl = new WebAssembly.Table({initial:2, element:"funcref"});
+  var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
 
   // function sections:
   var f1 = ... /* some imported WebAssembly function */
@@ -542,7 +542,7 @@ After converting to assembly, we then use `shared0.wasm` and `shared1.wasm` in J
 var importObj = {
   js: {
     memory : new WebAssembly.Memory({ initial: 1 }),
-    table : new WebAssembly.Table({ initial: 1, element: "funcref" })
+    table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })
   }
 };
 
@@ -595,7 +595,7 @@ At the time of writing (June 2020) this is at an early stage, and the only multi
     i32.const 1
     i32.const 2
   )
-  (func (export "add_to_numbers") (result i32)
+  (func (export "add_two_numbers") (result i32)
     call $get_two_numbers
     i32.add
   )

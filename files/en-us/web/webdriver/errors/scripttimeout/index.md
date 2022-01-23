@@ -33,7 +33,9 @@ except exceptions.ScriptTimeoutException as e:
 
 Output:
 
-    ScriptTimeoutException: Timed out after 35000 ms
+```
+ScriptTimeoutException: Timed out after 35000 ms
+```
 
 However, it is possible to _extend_ the session’s default script timeout by using capabilities if you have a script that you expect will take longer:
 
@@ -51,7 +53,9 @@ print("finished successfully")
 
 Output:
 
-    finished successfully
+```
+finished successfully
+```
 
 ## See also
 

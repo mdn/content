@@ -463,7 +463,8 @@ var AJAXSubmit = (function () {
     for (var nItem = 0; nItem < oTarget.elements.length; nItem++) {
       oField = oTarget.elements[nItem];
       if (!oField.hasAttribute("name")) { continue; }
-      sFieldType = oField.nodeName.toUpperCase() === "INPUT" ? oField.getAttribute("type").toUpperCase() : "TEXT";
+      sFieldType = oField.nodeName.toUpperCase() === "INPUT" && oField.hasAttribute("type") ?
+      oField.getAttribute("type").toUpperCase() : "TEXT";
       if (sFieldType === "FILE" && oField.files.length > 0) {
         if (this.technique === 3) {
           /* enctype is multipart/form-data */
@@ -704,8 +705,8 @@ function AJAXSubmit (oFormElement) {
     for (var nItem = 0; nItem < oFormElement.elements.length; nItem++) {
       oField = oFormElement.elements[nItem];
       if (!oField.hasAttribute("name")) { continue; }
-      sFieldType = oField.nodeName.toUpperCase() === "INPUT" ?
-          oField.getAttribute("type").toUpperCase() : "TEXT";
+      sFieldType = oField.nodeName.toUpperCase() === "INPUT" && oField.hasAttribute("type") ?
+      oField.getAttribute("type").toUpperCase() : "TEXT";
       if (sFieldType === "FILE") {
         for (nFile = 0; nFile < oField.files.length;
             sSearch += "&" + escape(oField.name) + "=" + escape(oField.files[nFile++].name));

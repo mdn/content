@@ -16,8 +16,10 @@ The **`name`** property of the {{domxref("CSSKeyframeRule")}} interface gets and
 
 ## Syntax
 
-    var name = CSSKeyframesRule.name;
-    CSSKeyframesRule.name = name;
+```js
+var name = CSSKeyframesRule.name;
+CSSKeyframesRule.name = name;
+```
 
 ### Value
 

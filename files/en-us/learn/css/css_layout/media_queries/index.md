@@ -59,7 +59,6 @@ The possible types of media you can specify are:
 - `all`
 - `print`
 - `screen`
-- `speech`
 
 The following media query will only set the body to 12pt if the page is printed. It will not apply when the page is loaded in a browser.
 

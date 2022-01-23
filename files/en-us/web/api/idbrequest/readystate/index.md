@@ -46,7 +46,7 @@ associated record from the {{domxref("IDBObjectStore")}} (made available
 as `objectStoreTitleRequest.result`), updates
 one property of the record, and then puts the updated record back into the object
 store in another request. The `readyState` of the 2nd request is logged to
-the developer console. For a full working example, see our 
+the developer console. For a full working example, see our
 [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
 ([view example live](https://mdn.github.io/to-do-notifications/).)
 

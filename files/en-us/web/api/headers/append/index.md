@@ -41,7 +41,7 @@ myHeaders.append(name, value);
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ## Example
 

@@ -35,5 +35,3 @@ console.log(document.fonts.status);
 ## Browser compatibility
 
 {{Compat}}
-
-

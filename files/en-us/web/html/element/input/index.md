@@ -644,7 +644,7 @@ A few additional non-standard attributes are listed following the descriptions o
   - : Global value valid for all elements, it provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents. Values include `none`, `text`, `tel`, `url`, `email`, `numeric`, `decimal`, and `search`.
 - {{htmlattrdef("list")}}
 
-  - : The value given to the `list` attribute should be the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The `<datalist>` provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
+  - : The value given to the `list` attribute should be the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The `<datalist>` provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
     It is valid on `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, and `color`.
 
@@ -753,11 +753,11 @@ A few additional non-standard attributes are listed following the descriptions o
     If not explicitly included:
 
     - `step` defaults to 1 for `number` and `range`.
-    - For the date/time input types, `step` is expressed in seconds, with the **default step being 60 seconds**. The step scale factor is 1000 (which converts the seconds to milliseconds, as used in other algorithms).
+    - For the date/time input types, `step` is expressed in seconds, with the **default step being 60 seconds**. The step scale factor is 1000 (which converts the seconds to milliseconds, as used in other algorithms).
 
     The value must be a positive number—integer or float—or the special value `any`, which means no stepping is implied, and any value is allowed (barring other constraints, such as `{{anch("min")}}` and `{{anch("max")}}`).
 
-    If `any` is not explicity set, valid values for the `number`, date/time input types, and `range` input types are equal to the basis for stepping — the `{{anch("min")}}` value and increments of the step value, up to the `{{anch("max")}}` value, if specified.
+    If `any` is not explicitly set, valid values for the `number`, date/time input types, and `range` input types are equal to the basis for stepping — the `{{anch("min")}}` value and increments of the step value, up to the `{{anch("max")}}` value, if specified.
 
     For example, if you have `<input type="number" min="10" step="2">`, then any even integer, `10` or greater, is valid. If omitted, `<input type="number">`, any integer is valid, but floats (like `4.2`) are not valid, because `step` defaults to `1`. For `4.2` to be valid, `step` would have had to be set to `any`, 0.1, 0.2, or any the `min` value would have had to be a number ending in `.2`, such as `<input type="number" min="-5.2">`
 
@@ -1021,7 +1021,7 @@ Inputs, being replaced elements, have a few features not applicable to non form 
         A non-empty input whose current value is NOT within the range limits
         specified by the {{ htmlattrxref("min", "input", "", 1)}}
         and {{ htmlattrxref("max", "input", "", 1)}} attributes or
-        does not adher to the
+        does not adhere to the
         {{ htmlattrxref("step", "input", "", 1)}} constraint.
       </td>
     </tr>
@@ -1154,7 +1154,7 @@ Also see:
 
 - [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
 - [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling) and
-- the[ compatibility table of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls).
+- the [compatibility table of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls).
 
 ## Additional features
 
@@ -1318,9 +1318,9 @@ function validate(input) {
   let validityState_object = input.validity;
   if(validityState_object.valueMissing) {
      input.setCustomValidity('A value is required');
-  } else if (input.rangeUnderflow) {
+  } else if (validityState_object.rangeUnderflow) {
     input.setCustomValidity('Your value is too low');
-  } else if (input.rangeOverflow) {
+  } else if (validityState_object.rangeOverflow) {
     input.setCustomValidity('Your value is too high');
   } else {
     input.setCustomValidity('');

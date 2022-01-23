@@ -35,7 +35,7 @@ The WebAssembly function `exported_func` is exported for use in our environment 
 
 ## Converting the text .wat into a binary .wasm file
 
-Let’s have a go at converting the above `.wat` text representation example into `.wasm `assembly format.
+Let’s have a go at converting the above `.wat` text representation example into `.wasm` assembly format.
 
 1.  To start with, make a copy of the above listing inside a text file; call it `simple.wat`.
 2.  We need to assemble this textual representation into the assembly language the browser actually reads before we can use it. To do this, we can use the wabt tool, which includes compilers to convert between WebAssembly’s text representation and wasm, and vice versa, plus more besides. Go to <https://github.com/webassembly/wabt> — follow the instructions on this page to set up the tool.
@@ -68,4 +68,4 @@ This will give you an output in your terminal in the following way:
 - [Compiling from C/C++ to WebAssembly](/en-US/docs/WebAssembly/C_to_wasm) — tools like Binaryen/Emscripten both compile your source code to wasm, and create the API code needed to run the module in a JavaScript context. Find out more about how to use them.
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API) — read this if you want to find out more about how the WebAssembly API code works.
 - [Text format](https://webassembly.github.io/spec/core/text/index.html) — more explanation of the text format, on the WebAssembly GitHub repo.
-- [wast-loader](https://github.com/xtuc/webassemblyjs/tree/master/packages/wast-loader) — a loader for WebPack that takes care of all of this for you.
+- [wast-loader](https://github.com/xtuc/webassemblyjs/tree/master/packages/wast-loader) — a loader for webpack that takes care of all of this for you.

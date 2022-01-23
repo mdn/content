@@ -153,13 +153,13 @@ For RTMP transfer you can use the [Nginx RTMP Module](https://github.com/arut/ng
 
 [SHOUTcast](https://en.wikipedia.org/wiki/SHOUTcast) is a cross-platform proprietary technology for streaming media. Developed by Nullsoft, it allows digital audio content in MP3 or AAC format to be broadcast. For web use, SHOUTcast streams are transmitted over HTTP.
 
-**Note:** [SHOUTcast URLs may require a semi-colon to be appended to them](https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
+> **Note:** [SHOUTcast URLs may require a semi-colon to be appended to them](https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
 
 ### Icecast
 
 The [Icecast](https://www.icecast.org/) server is an open source technology for streaming media. Maintained by the [Xiph.org Foundation](https://www.xiph.org/), it streams Ogg Vorbis/Theora as well as MP3 and AAC format via the SHOUTcast protocol.
 
-**Note:** SHOUTcast and Icecast are among the most established and popular technologies, but there are many [more streaming media systems available](https://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers).
+> **Note:** SHOUTcast and Icecast are among the most established and popular technologies, but there are many [more streaming media systems available](https://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers).
 
 ### Streaming Services
 

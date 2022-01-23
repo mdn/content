@@ -41,23 +41,25 @@ In any programming language, the code needs to make decisions and carry out acti
 
 Human beings (and other animals) make decisions all the time that affect their lives, from small ("should I eat one cookie or two?") to large ("should I stay in my home country and work on my father's farm, or should I move to America and study astrophysics?")
 
-Conditional statements allow us to represent such decision making in JavaScript, from the choice that must be made (for example, "one cookie or two"), to the resulting outcome of those choices (perhaps the outcome of "ate one cookie" might be "still felt hungry", and the outcome of "ate two cookies" might be "felt full, but mom scolded me for eating all the cookies".)
+Conditional statements allow us to represent such decision making in JavaScript, from the choice that must be made (for example, "one cookie or two"), to the resulting outcome of those choices (perhaps the outcome of "ate one cookie" might be "still felt hungry", and the outcome of "ate two cookies" might be "felt full, but mom scolded me for eating all the cookies".)
 
 ![](cookie-choice-small.png)
 
 ## if...else statements
 
-Let's look at by far the most common type of conditional statement you'll use in JavaScript — the humble [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)[ statement](/en-US/docs/Web/JavaScript/Reference/Statements/if...else).
+Let's look at by far the most common type of conditional statement you'll use in JavaScript — the humble [`if...else` statement](/en-US/docs/Web/JavaScript/Reference/Statements/if...else).
 
 ### Basic if ... else syntax
 
 Basic `if...else` syntax looks like the following in {{glossary("pseudocode")}}:
 
-    if (condition) {
-      code to run if condition is true
-    } else {
-      run some other code instead
-    }
+```
+if (condition) {
+  code to run if condition is true
+} else {
+  run some other code instead
+}
+```
 
 Here we've got:
 
@@ -71,18 +73,22 @@ This code is pretty human-readable — it is saying "**if** the **condition** re
 
 You should note that you don't have to include the `else` and the second curly brace block — the following is also perfectly legal code:
 
-    if (condition) {
-      code to run if condition is true
-    }
+```
+if (condition) {
+  code to run if condition is true
+}
 
-    run some other code
+run some other code
+```
 
 However, you need to be careful here — in this case, the second block of code is not controlled by the conditional statement, so it **always** runs, regardless of whether the condition returns `true` or `false`. This is not necessarily a bad thing, but it might not be what you want — often you want to run one block of code _or_ the other, not both.
 
 As a final point, you may sometimes see `if...else` statements written without the curly braces, in the following shorthand style:
 
-    if (condition) code to run if condition is true
-    else run some other code instead
+```
+if (condition) code to run if condition is true
+else run some other code instead
+```
 
 This is perfectly valid code, but using it is not recommended — it is much easier to read the code and work out what is going on if you use the curly braces to delimit the blocks of code, and use multiple lines and indentation.
 
@@ -151,7 +157,7 @@ function setWeather() {
 
 1.  Here we've got an HTML {{htmlelement("select")}} element allowing us to make different weather choices, and a simple paragraph.
 2.  In the JavaScript, we are storing a reference to both the {{htmlelement("select")}} and {{htmlelement("p")}} elements, and adding an event listener to the `<select>` element so that when its value is changed, the `setWeather()` function is run.
-3.  When this function is run, we first set a variable called `choice` to the current value selected in the `<select>` element. We then use a conditional statement to show different text inside the paragraph depending on what the value of `choice` is. Notice how all the conditions are tested in `else if() {...}` blocks, except for the first one, which is tested in an `if() {...}` block.
+3.  When this function is run, we first set a variable called `choice` to the current value selected in the `<select>` element. We then use a conditional statement to show different text inside the paragraph depending on what the value of `choice` is. Notice how all the conditions are tested in `else if() {...}` blocks, except for the first one, which is tested in an `if() {...}` block.
 4.  The very last choice, inside the `else {...}` block, is basically a "last resort" option — the code inside it will be run if none of the conditions are `true`. In this case, it serves to empty the text out of the paragraph if nothing is selected, for example, if a user decides to re-select the "--Make a choice--" placeholder option shown at the beginning.
 
 > **Note:** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) on there also.)
@@ -160,13 +166,13 @@ function setWeather() {
 
 Comparison operators are used to test the conditions inside our conditional statements. We first looked at comparison operators back in our [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math#comparison_operators) article. Our choices are:
 
-- `===` and `!==` — test if one value is identical to, or not identical to, another.
+- `===` and `!==` — test if one value is identical to, or not identical to, another.
 - `<` and `>` — test if one value is less than or greater than another.
 - `<=` and `>=` — test if one value is less than or equal to, or greater than or equal to, another.
 
 > **Note:** Review the material at the previous link if you want to refresh your memories on these.
 
-We wanted to make a special mention of testing boolean (`true`/`false`) values, and a common pattern you'll come across again and again. Any value that is not `false`, `undefined`, `null`, `0`, `NaN`, or an empty string (`''`) actually returns `true` when tested as a conditional statement, therefore you can use a variable name on its own to test whether it is `true`, or even that it exists (that is, it is not undefined.) So for example:
+We wanted to make a special mention of testing boolean (`true`/`false`) values, and a common pattern you'll come across again and again. Any value that is not `false`, `undefined`, `null`, `0`, `NaN`, or an empty string (`''`) actually returns `true` when tested as a conditional statement, therefore you can use a variable name on its own to test whether it is `true`, or even that it exists (that is, it is not undefined.) So for example:
 
 ```js
 let cheese = 'Cheddar';
@@ -198,9 +204,9 @@ It is perfectly OK to put one `if...else` statement inside another one — to ne
 ```js
 if (choice === 'sunny') {
   if (temperature < 86) {
-    para.textContent = 'It is ' + temperature + ' degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.';
+    para.textContent = `It is ${temperature} degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.`;
   } else if (temperature >= 86) {
-    para.textContent = 'It is ' + temperature + ' degrees outside — REALLY HOT! If you want to go outside, make sure to put some sunscreen on.';
+    para.textContent = `It is ${temperature} degrees outside — REALLY HOT! If you want to go outside, make sure to put some sunscreen on.`;
   }
 }
 ```
@@ -218,9 +224,9 @@ To give you an AND example, the previous example snippet can be rewritten to thi
 
 ```js
 if (choice === 'sunny' && temperature < 86) {
-  para.textContent = 'It is ' + temperature + ' degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.';
+  para.textContent = `It is ${temperature} degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.`;
 } else if (choice === 'sunny' && temperature >= 86) {
-  para.textContent = 'It is ' + temperature + ' degrees outside — REALLY HOT! If you want to go outside, make sure to put some sunscreen on.';
+  para.textContent = `It is ${temperature} degrees outside — REALLY HOT! If you want to go outside, make sure to put some sunscreen on.`;
 }
 ```
 
@@ -264,7 +270,7 @@ if (x === 5 || 7 || 10 || 20) {
 }
 ```
 
-In this case the condition inside `if(...)`  will always evaluate to true since 7 (or any other non-zero value) always evaluates to `true`. This condition is actually saying "if x equals 5, or 7 is true — which it always is". This is logically not what we want! To make this work you've got to specify a complete test either side of each OR operator:
+In this case the condition inside `if(...)` will always evaluate to true since 7 (or any other non-zero value) always evaluates to `true`. This condition is actually saying "if x equals 5, or 7 is true — which it always is". This is logically not what we want! To make this work you've got to specify a complete test either side of each OR operator:
 
 ```js
 if (x === 5 || x === 7 || x === 10 || x === 20) {
@@ -278,20 +284,22 @@ if (x === 5 || x === 7 || x === 10 || x === 20) {
 
 In such a case, [`switch` statements](/en-US/docs/Web/JavaScript/Reference/Statements/switch) are your friend — they take a single expression/value as an input, and then look through a number of choices until they find one that matches that value, executing the corresponding code that goes along with it. Here's some more pseudocode, to give you an idea:
 
-    switch (expression) {
-      case choice1:
-        run this code
-        break;
+```
+switch (expression) {
+  case choice1:
+    run this code
+    break;
 
-      case choice2:
-        run this code instead
-        break;
+  case choice2:
+    run this code instead
+    break;
 
-      // include as many cases as you like
+  // include as many cases as you like
 
-      default:
-        actually, just run this code
-    }
+  default:
+    actually, just run this code
+}
+```
 
 Here we've got:
 
@@ -358,7 +366,9 @@ function setWeather() {
 
 There is one final bit of syntax we want to introduce you to before we get you to play with some examples. The [ternary or conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) is a small bit of syntax that tests a condition and returns one value/expression if it is `true`, and another if it is `false` — this can be useful in some situations, and can take up a lot less code than an `if...else` block if you have two choices that are chosen between via a `true`/`false` condition. The pseudocode looks like this:
 
-    ( condition ) ? run this code : run this code instead
+```
+( condition ) ? run this code : run this code instead
+```
 
 So let's look at a simple example:
 
@@ -392,9 +402,7 @@ function update(bgColor, textColor) {
   html.style.color = textColor;
 }
 
-select.onchange = function() {
-  ( select.value === 'black' ) ? update('black','white') : update('white','black');
-}
+select.addEventListener('change', () => ( select.value === 'black' ) ? update('black','white') : update('white','black'));
 ```
 
 {{ EmbedLiveSample('Ternary_operator_example', '100%', 300, "", "") }}
@@ -413,7 +421,7 @@ In this example, you are going to help us finish a simple calendar application. 
 - An `onchange` event handler to detect when the value selected in the `<select>` menu is changed.
 - A function called `createCalendar()` that draws the calendar and displays the correct month in the {{htmlelement("h1")}} element.
 
-We need you to write a conditional statement inside the `onchange` handler function, just below the `// ADD CONDITIONAL HERE` comment. It should:
+We need you to write a conditional statement inside the `onchange` handler function, just below the `// ADD CONDITIONAL HERE` comment. It should:
 
 1.  Look at the selected month (stored in the `choice` variable. This will be the `<select>` element value after the value changes, so "January" for example.)
 2.  Set a variable called `days` to be equal to the number of days in the selected month. To do this you'll have to look up the number of days in each month of the year. You can ignore leap years for the purposes of this example.
@@ -457,13 +465,13 @@ const select = document.querySelector('select');
 const list = document.querySelector('ul');
 const h1 = document.querySelector('h1');
 
-select.onchange = function() {
+select.addEventListener('change', () => {
   const choice = select.value;
 
   // ADD CONDITIONAL HERE
 
   createCalendar(days, choice);
-}
+});
 
 function createCalendar(days, choice) {
   list.innerHTML = '';
@@ -555,7 +563,35 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-const jsSolution = 'const select = document.querySelector(\'select\');\nconst list = document.querySelector(\'ul\');\nconst h1 = document.querySelector(\'h1\');\n\nselect.onchange = function() {\n const choice = select.value;\n let days = 31;\n if(choice === \'February\') {\n days = 28;\n } else if(choice === \'April\' || choice === \'June\' || choice === \'September\'|| choice === \'November\') {\n days = 30;\n }\n\n createCalendar(days, choice);\n}\n\nfunction createCalendar(days, choice) {\n list.innerHTML = \'\';\n h1.textContent = choice;\n for(let i = 1; i <= days; i++) {\n const listItem = document.createElement(\'li\');\n listItem.textContent = i;\n list.appendChild(listItem);\n }\n }\n\ncreateCalendar(31,\'January\');';
+const jsSolution = `const select = document.querySelector('select');
+const list = document.querySelector('ul');
+const h1 = document.querySelector('h1');
+
+select.addEventListener('change', () => {
+  const choice = select.value;
+
+  let days = 31;
+  if (choice === 'February') {
+    days = 28;
+  } else if (choice === 'April' || choice === 'June' || choice === 'September'|| choice === 'November') {
+    days = 30;
+  }
+
+  createCalendar(days, choice);
+});
+
+function createCalendar(days, choice) {
+  list.innerHTML = '';
+  h1.textContent = choice;
+  for (let i = 1; i <= days; i++) {
+    const listItem = document.createElement('li');
+    listItem.textContent = i;
+    list.appendChild(listItem);
+  }
+}
+
+createCalendar(31,'January');`
+
 let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
@@ -638,11 +674,11 @@ If you make a mistake, you can always reset the example with the "Reset" button.
 const select = document.querySelector('select');
 const html = document.querySelector('.output');
 
-select.onchange = function() {
+select.addEventListener('change', () => {
   const choice = select.value;
 
-  // ADD SWITCH STATEMENT
-}
+  // ADD CONDITIONAL HERE
+});
 
 function update(bgColor, textColor) {
   html.style.backgroundColor = bgColor;
@@ -707,7 +743,36 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-const jsSolution = 'const select = document.querySelector(\'select\');\nconst html = document.querySelector(\'.output\');\n\nselect.onchange = function() {\n const choice = select.value;\n\n switch(choice) {\n case \'black\':\n update(\'black\',\'white\');\n break;\n case \'white\':\n update(\'white\',\'black\');\n break;\n case \'purple\':\n update(\'purple\',\'white\');\n break;\n case \'yellow\':\n update(\'yellow\',\'darkgray\');\n break;\n case \'psychedelic\':\n update(\'lime\',\'purple\');\n break;\n }\n}\n\nfunction update(bgColor, textColor) {\n html.style.backgroundColor = bgColor;\n html.style.color = textColor;\n}';
+const jsSolution = `const select = document.querySelector('select');
+const html = document.querySelector('.output');
+
+select.addEventListener('change', () => {
+  const choice = select.value;
+
+  switch(choice) {
+    case 'black':
+      update('black','white');
+      break;
+    case 'white':
+      update('white','black');
+      break;
+    case 'purple':
+      update('purple','white');
+      break;
+    case 'yellow':
+      update('yellow','darkgray');
+      break;
+    case 'psychedelic':
+      update('lime','purple');
+      break;
+  }
+});
+
+function update(bgColor, textColor) {
+  html.style.backgroundColor = bgColor;
+  html.style.color = textColor;
+}`;
+
 let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);

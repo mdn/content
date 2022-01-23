@@ -41,7 +41,7 @@ formData.append(name, value, filename);
 
 ### Returns
 
-Void.
+{{jsxref('undefined')}}.
 
 ## Example
 
@@ -88,6 +88,6 @@ formData.getAll('name'); // ["true", "74", "John"]
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

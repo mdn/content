@@ -115,7 +115,7 @@ function errorCallback(error) {
 
 ## Examples
 
-In the following example the Geolocation API is used to retrieve the user's latitude and longitude. If sucessful, the available hyperlink is populated with an `openstreetmap.org` URL that will show their location.
+In the following example the Geolocation API is used to retrieve the user's latitude and longitude. If successful, the available hyperlink is populated with an `openstreetmap.org` URL that will show their location.
 
 ```css hidden
 body {

@@ -16,7 +16,7 @@ The **`onperiodicsync`** property of the {{domxref("ServiceWorkerGlobalScope")}}
 ## Syntax
 
 ```js
-ServiceWorkerGlobalScope.onperiodicsync = function(event) { ... };
+ServiceWorkerGlobalScope.onperiodicsync = function(event) { /* ... */ };
 ```
 
 ## Examples

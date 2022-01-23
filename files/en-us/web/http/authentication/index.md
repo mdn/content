@@ -23,7 +23,7 @@ The challenge and response flow works like this:
 2. A client that wants to authenticate itself with the server can then do so by including an {{HTTPHeader("Authorization")}} request header with the credentials.
 3. Usually a client will present a password prompt to the user and will then issue the request including the correct `Authorization` header.
 
-![A sequence diagram illustrating HTTP messages between a client and a server lifeline.](http-auth-sequence-diagram.png "Sequence Diagram of Client-server HTTP Authentication")
+![A sequence diagram illustrating HTTP messages between a client and a server lifeline.](http-auth-sequence-diagram.png)
 
 The general message flow above is the same for most (if not all) [authentication schemes](#authentication_schemes).
 The actual information in the headers and the way it is encoded does change!
@@ -100,7 +100,7 @@ Some common authentication schemes include:
 - **VAPID**
   - : See {{rfc(8292)}}
 - **SCRAM**
-  - : See {{rfc(7804)}} 
+  - : See {{rfc(7804)}}
 - **AWS4-HMAC-SHA256**
   - : See [AWS docs](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html). This scheme is used for AWS3 server authentication.
 
@@ -108,7 +108,6 @@ Schemes can differ in security strength and in their availability in client or s
 
 The "Basic" authentication scheme offers very poor security, but is widely supported and easy to set up.
 It is introduced in more detail below.
-
 
 ## Basic authentication scheme
 

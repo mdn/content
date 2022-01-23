@@ -39,7 +39,7 @@ In this case the left auto margin takes up any available space and pushes the it
 
 The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-#### Flexbox
+### Flexbox
 
 {{Compat("css.properties.flex")}}
 

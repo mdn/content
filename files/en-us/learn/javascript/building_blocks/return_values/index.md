@@ -49,8 +49,8 @@ There's one last essential concept about functions for us to discuss — return
 Let's return to a familiar example (from a [previous article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#built-in_browser_functions) in this series):
 
 ```js
-let myText = 'The weather is cold';
-let newString = myText.replace('cold', 'warm');
+const myText = 'The weather is cold';
+const newString = myText.replace('cold', 'warm');
 console.log(newString); // Should print "The weather is warm"
 // the replace() string function takes a string,
 // replaces one substring with another, and returns
@@ -154,19 +154,19 @@ Let's have a go at writing our own functions featuring return values.
 3.  Next, we're going to include a way to print out information about the number entered into the text input. Enter the following event handler below the existing functions:
 
     ```js
-    input.onchange = function() {
+    input.addEventListener('change', () => {
       const num = parseFloat(input.value);
       if (isNaN(num)) {
         para.textContent = 'You need to enter a number!';
       } else {
-        para.textContent = num + ' squared is ' + squared(num) + '. ' +
-                           num + ' cubed is ' + cubed(num) + '. ' +
-                           num + ' factorial is ' + factorial(num) + '.';
+        para.textContent = `${num} squared is ${squared(num)}. `;
+        para.textContent += `${num} cubed is ${cubed(num)}. `;
+        para.textContent += `${num} factorial is ${factorial(num)}. `;
       }
-    }
+    });
     ```
 
-    Here we are creating an `onchange` event handler. It runs whenever the `change` event fires on the text input — that is, when a new value is entered into the text `input`, and submitted (e.g., enter a value, then unfocus the input by pressing <kbd>Tab</kbd> or <kbd>Return</kbd>). When this anonymous function runs, the value in the `input` is stored in the `num` constant.
+    Here we are adding a listener to the `change` event. It runs whenever the `change` event fires on the text input — that is, when a new value is entered into the text `input`, and submitted (e.g., enter a value, then unfocus the input by pressing <kbd>Tab</kbd> or <kbd>Return</kbd>). When this anonymous function runs, the value in the `input` is stored in the `num` constant.
 
     Next, we do a conditional test. If the entered value is not a number, an error message is printed to the paragraph. The test looks at whether the expression `isNaN(num)` returns `true`. The [`isNaN()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function to test whether the `num` value is not a number — if so, it returns `true`, and if not, it returns `false`.
 

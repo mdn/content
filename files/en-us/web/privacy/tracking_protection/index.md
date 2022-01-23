@@ -15,7 +15,9 @@ If blocked content is part of the page layout, users may notice layout issues wh
 
 When Firefox blocks content, it logs a message to the Web Console like this:
 
-    The resource at "http://some/url" was blocked because tracking protection is enabled.
+```
+The resource at "http://some/url" was blocked because tracking protection is enabled.
+```
 
 Note that with Firefox for Android, you can access console output using the remote debugger.
 

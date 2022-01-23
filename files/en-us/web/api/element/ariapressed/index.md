@@ -13,14 +13,16 @@ browser-compat: api.Element.ariaPressed
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaPressed`** property of the {{domxref("Element")}} interface reflects the value of the `aria-pressed` attribute, which indicates the current "pressed" state of toggle buttons.
+The **`ariaPressed`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute, which indicates the current "pressed" state of toggle buttons.
 
 > **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="button"` or the {{htmlelement("button")}} element as these have built in semantics and do not require ARIA attributes.
 
 ## Syntax
 
-    var ariaPressed = element.ariaPressed;
-    element.ariaPressed = ariaPressed
+```js
+var ariaPressed = element.ariaPressed;
+element.ariaPressed = ariaPressed
+```
 
 ### Value
 

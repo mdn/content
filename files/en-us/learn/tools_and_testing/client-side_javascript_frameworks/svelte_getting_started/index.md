@@ -56,7 +56,7 @@ The outcome of this approach is not only smaller application bundles and better 
 
 Svelte sticks closely to the classic web development model of HTML, CSS, and JS, just adding a few extensions to HTML and JavaScript. It arguably has fewer concepts and tools to learn than some of the other framework options.
 
-Its main current disadvantages are that it is a young framework — its ecosystem is therefore more limited in terms of tooling, support, plugins, clear usage patterns, etc. than more mature frameworks, and there are also less job opportunities. But its advantages should be enough to make you interested to explore it.
+Its main current disadvantages are that it is a young framework — its ecosystem is therefore more limited in terms of tooling, support, plugins, clear usage patterns, etc. than more mature frameworks, and there are also fewer job opportunities. But its advantages should be enough to make you interested to explore it.
 
 > **Note:** recently Svelte has added [official TypeScript support](https://svelte.dev/blog/svelte-and-typescript), one of its most requested features. We'll look at it later on in this tutorial series.
 
@@ -115,7 +115,7 @@ npm run dev
 
 > **Note:** degit doesn't do any kind of magic — it just lets you download and unzip the latest version of a git repo's contents. This is much quicker than using `git clone` because it will not download all the history of the repo, or create a complete local clone.
 
-After running `npm run dev`, Svelte will compile and build your application. It will start a local server at `localhost:5000`. Svelte will watch for file updates, and automatically recompile and refresh the app for you when changes are made to the source files. Your browser will display something like this:
+After running `npm run dev`, Svelte will compile and build your application. It will start a local server at `localhost:5042`. Svelte will watch for file updates, and automatically recompile and refresh the app for you when changes are made to the source files. Your browser will display something like this:
 
 ![A simple start page that says hello world, and gives a link to the official svelte tutorials](01-svelte-starter-app.png)
 
@@ -123,26 +123,28 @@ After running `npm run dev`, Svelte will compile and build your application. It 
 
 The starter template comes with the following structure:
 
-    moz-todo-svelte
-    ├── README.md
-    ├── package.json
-    ├── package-lock.json
-    ├── rollup.config.js
-    ├── .gitignore
-    ├── node_modules
-    ├── public
-    │   ├── favicon.png
-    │   ├── index.html
-    │   ├── global.css
-    │   └── build
-    │       ├── bundle.css
-    │       ├── bundle.js
-    │       └── bundle.js.map
-    ├── scripts
-    │   └── setupTypeScript.js
-    └── src
-        ├── App.svelte
-        └── main.js
+```
+moz-todo-svelte
+├── README.md
+├── package.json
+├── package-lock.json
+├── rollup.config.js
+├── .gitignore
+├── node_modules
+├── public
+│   ├── favicon.png
+│   ├── index.html
+│   ├── global.css
+│   └── build
+│       ├── bundle.css
+│       ├── bundle.js
+│       └── bundle.js.map
+├── scripts
+│   └── setupTypeScript.js
+└── src
+    ├── App.svelte
+    └── main.js
+```
 
 The contents are as follows:
 
@@ -281,7 +283,7 @@ We are applying a style to our [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Ele
 
 In Svelte, CSS inside a component's `<style>` block will be scoped only to that component. This works by adding a class to selected elements, which is based on a hash of the component styles.
 
-You can see this in action by opening `localhost:5000` in a new browser tab, right/<kbd>Ctrl</kbd>-clicking on the _HELLO WORLD!_ label, and choosing _Inspect_:
+You can see this in action by opening `localhost:5042` in a new browser tab, right/<kbd>Ctrl</kbd>-clicking on the _HELLO WORLD!_ label, and choosing _Inspect_:
 
 ![Svelte starter app with devtools open, showing classes for scoped styles](02-svelte-component-scoped-styles.png)
 
@@ -298,7 +300,7 @@ At this point you can try updating your `App.svelte` component — for example c
 <h1>Hello {name} from MDN!</h1>
 ```
 
-Just save your changes and the app running at `localhost:5000` will be automatically updated.
+Just save your changes and the app running at `localhost:5042` will be automatically updated.
 
 ### A first look at Svelte reactivity
 
@@ -429,7 +431,7 @@ A REPL ([read–eval–print loop](https://en.wikipedia.org/wiki/Read%E2%80%93ev
 
 Svelte's REPL is much more than that. It's an online tool that allows you to create complete apps, save them online, and share with others.
 
-It's the easiest way to start playing with Svelte from any machine, without having to install anything. It is also widely used by Svelte community. If you want to share an idea, ask for help, or report an issue, it's always extremely useful to create a REPL instance demomstrating the issue.
+It's the easiest way to start playing with Svelte from any machine, without having to install anything. It is also widely used by Svelte community. If you want to share an idea, ask for help, or report an issue, it's always extremely useful to create a REPL instance demonstrating the issue.
 
 Let's have a quick look at the Svelte REPL and how you'd use it. It looks like so:
 

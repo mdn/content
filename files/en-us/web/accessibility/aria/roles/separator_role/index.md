@@ -10,11 +10,11 @@ tags:
   - document structure role
 ---
 
-The `separator` role indicates the element is a divider that separates and distinguishes sections of content or groups of menuitems. The implicit ARIA role the native thematic break {{HTMLElement('hr')}} element is `separator`. 
+The `separator` role indicates the element is a divider that separates and distinguishes sections of content or groups of menuitems. The implicit ARIA role the native thematic break {{HTMLElement('hr')}} element is `separator`.
 
 ## Description
 
-A separator is a divider that separates and distinguishes sections of content or groups of menuitems. There are two types of separators: a static structure that provides a visible boundary, identical to the HTML {{HTMLElement('hr')}} element, and a focusable, moveable widget. 
+A separator is a divider that separates and distinguishes sections of content or groups of menuitems. There are two types of separators: a static structure that provides a visible boundary, identical to the HTML {{HTMLElement('hr')}} element, and a focusable, moveable widget.
 
 Elements with the role `separator` have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `horizontal`.
 
@@ -29,6 +29,7 @@ A non-focusable separator is a static structural element that can be used to hel
 <h2>Two years later, my second post</h2>
   ....
 ```
+
 In the example, an image creates a visual separator between two blog posts. The author could have used a semantic thematic break {{HTMLElement('hr')}} element and styled it with CSS to make it blue (and not have to change the image when they change the blog's theme), or the author could have encompassed each post in the semantic {{HTMLElement('article')}} element, or both.
 
 ```html
@@ -58,21 +59,20 @@ An accessible name is not needed.
 
 The separator role can be used to identify the element as a visual separator between groups of items within a menu, such as groups of `menuitemradio` or `menuitemcheckbox` elements.
 
-If the separator is focusable, providing a visible boundary between two sections of content and enabling the user to change the relative size of the sections it separates by changing its position, the value of [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) must be set to a number reflecting the current position of the separator and the value must be updated when it changes. The [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) and [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) should also be included if they aren't set to the default values of 0 and 100, respectively. 
+If the separator is focusable, providing a visible boundary between two sections of content and enabling the user to change the relative size of the sections it separates by changing its position, the value of [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) must be set to a number reflecting the current position of the separator and the value must be updated when it changes. The [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) and [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) should also be included if they aren't set to the default values of 0 and 100, respectively.
 
 An accessible name, with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) should be included if there is more than one focusable separator.
-
 
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) (default is horizontal for separator)
   - : By default, the divider for `separator` roles is assumed to be horizontal. The value can be included and set to horizontal, undefined (the default for other roles unless otherwise specified), or vertical.
 
-- [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) 
+- [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
   - : If the separator is focusable and has a known value, the `aria-valuenow` defines the current value. If not focusable or the value is unknown, do not include this attribute.
 
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) (default is 0)
-  - : If the separator is focusable, and the minimum value is not 0, include the minimum value with `aria-valuemin`. If the 
+  - : If the separator is focusable, and the minimum value is not 0, include the minimum value with `aria-valuemin`. If the
 
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) (default is 100)
   - : If the separator is focusable, and the maximum value is not 100, include `aria-valuemax` with a value equal to or larger than `aria-valuemin`.
@@ -99,7 +99,6 @@ An accessible name, with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attri
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#separator","ARIA: separator role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_separator_role","separator role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
 
 ## See Also
 

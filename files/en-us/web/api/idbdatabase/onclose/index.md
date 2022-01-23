@@ -27,7 +27,7 @@ the connection has been closed.
 ## Syntax
 
 ```js
-IDBDatabase.onclose = function(event) { ... };
+IDBDatabase.onclose = function(event) { /* ... */ };
 ```
 
 ### Value

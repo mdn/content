@@ -38,16 +38,19 @@ This property corresponds to the {{CSSxRef("margin-top")}} and {{CSSxRef("margin
 
 This property is a shorthand for the following CSS properties:
 
-- [`margin-inline-start`](/en-US/docs/Web/CSS/margin-inline-start)
-- [`margin-inline-end`](/en-US/docs/Web/CSS/margin-inline-end)
-
-If 2 values are specified, the first value sets the start, the second value sets the end. If 1 value is specified, it sets both properties with the same value.
+- {{cssxref("margin-inline-start")}}
+- {{cssxref("margin-inline-end")}}
 
 ## Syntax
 
+The `margin-inline` property may be specified using one or two values.
+
+- When **one** value is specified, it applies the same margin to **both start and end**.
+- When **two** values are specified, the first margin applies to the **start**, the second to the **end**.
+
 ### Values
 
-The `margin-inline` property takes the same values as the {{CSSxRef("margin-left")}} property.
+The `margin-inline` property takes the same values as the {{CSSxRef("margin", "", "#values")}} property.
 
 ## Formal definition
 

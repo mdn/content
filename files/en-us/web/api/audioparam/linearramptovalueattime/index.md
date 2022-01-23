@@ -38,7 +38,7 @@ var AudioParam = AudioParam.linearRampToValueAtTime(value, endTime)
 ### Returns
 
 A reference to this `AudioParam` object. In some browsers older
-implementations of this interface return void.
+implementations of this interface return {{jsxref('undefined')}}.
 
 ## Example
 

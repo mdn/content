@@ -31,7 +31,7 @@ Before starting this module, you should have:
 3.  Basic familiarity with HTML, as discussed in the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module.
 4.  An understanding of the basics of CSS, as discussed in the [CSS first steps](/en-US/docs/Learn/CSS/First_steps) module.
 
-> **Note:** If you are working on a computer/tablet/another device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> **Note:** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
 ## Guides
 
@@ -71,7 +71,7 @@ This module contains the following articles, which cover the most essential part
 
 ## Assessments
 
-Want to test your CSS skills? The following assessments will test your understanding of the CSS covered in the guides above.
+The following assessments will test your understanding of the CSS covered in the guides above.
 
 - [Fundamental CSS comprehension](/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
   - : This assessment tests your understanding of basic syntax, selectors, specificity, box model, and more.

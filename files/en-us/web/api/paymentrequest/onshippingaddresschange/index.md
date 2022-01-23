@@ -22,9 +22,9 @@ shipping address, including when an address is added by the user for the first t
 ## Syntax
 
 ```js
-PaymentRequest.addEventListener('shippingaddresschange', shippingAddressChangeEvent => { ... });
+PaymentRequest.addEventListener('shippingaddresschange', shippingAddressChangeEvent => { /* ... */ });
 
-PaymentRequest.onshippingaddresschange = function(shippingAddressChangeEvent) { ... };
+PaymentRequest.onshippingaddresschange = function(shippingAddressChangeEvent) { /* ... */ };
 ```
 
 ## Examples
@@ -46,7 +46,7 @@ to `show()`.
     });
 
     payment.show().then(function(paymentResponse) {
-      // Processing of paymentResponse exerpted for the same of clarity.
+      // Processing of paymentResponse excerpted for the same of clarity.
     }).catch(function(err) {
       console.error("Uh oh, something bad happened", err.message);
     });

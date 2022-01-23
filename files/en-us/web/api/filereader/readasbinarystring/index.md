@@ -14,7 +14,7 @@ browser-compat: api.FileReader.readAsBinaryString
 The `readAsBinaryString` method is used to start reading the contents of the
 specified {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is
 finished, the {{domxref("FileReader.readyState","readyState")}} becomes
-`DONE`, and the {{event("loadend")}} is triggered. At that time, the
+`DONE`, and the {{domxref("FileReader.loadend_event")}} is triggered. At that time, the
 {{domxref("FileReader.result","result")}} attribute contains the raw binary data from
 the file.
 

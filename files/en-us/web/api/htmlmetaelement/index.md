@@ -12,7 +12,7 @@ browser-compat: api.HTMLMetaElement
 
 The **`HTMLMetaElement`** interface contains descriptive metadata about a document. It inherits all of the properties and methods described in the {{domxref("HTMLElement")}} interface.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

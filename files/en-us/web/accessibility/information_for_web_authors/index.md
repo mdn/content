@@ -43,7 +43,6 @@ tags:
 
     from WebThing
 
-
 3.  [<dfn>WAVE 4.0 beta (Web Accessibility Versatile Evaluator)</dfn>](https://wave.webaim.org/) from  [WebAIM](https://www.webaim.org/)
 
     WAVE 4.0 beta is another powerful, free online webpage accessibility validation service that identifies accessibility errors and reports accessibility warnings about webpage related to Section 508 standards and/or the WCAG guidelines. Its purpose is to aid humans in the web accessibility evaluation process. Rather than providing a complex technical report, WAVE 4.0 shows the original web page with embedded icons and indicators that reveal the accessibility information within your page. You can get accessibility report for errors, warnings. You can view the structure and order view of the document. You can see a text-only view and outline view of the document.
@@ -63,7 +62,7 @@ tags:
 5.  [Color contrast analyzer](https://juicystudio.com/services/colourcontrast.php#contrast)
 
     by Juicy Studio
-    How can a web author establish easily and quickly if the background color and foreground (text) color in use in his webpages have sufficient color contrast difference and sufficient color brightness difference? [Color contrast analyzer](https://juicystudio.com/services/colourcontrast.php#contrast) is an excellent tool for such task. Effective color contrast and effective color brightness difference have a **decisive importance for reading**, furthermore for people with partial color deficiency (see the excellent examples in [Effective Color Contrast](http://www.lighthouse.org/accessibility/effective-color-contrast/) by Lighthouse International). 
+    How can a web author establish easily and quickly if the background color and foreground (text) color in use in his webpages have sufficient color contrast difference and sufficient color brightness difference? [Color contrast analyzer](https://juicystudio.com/services/colourcontrast.php#contrast) is an excellent tool for such task. Effective color contrast and effective color brightness difference have a **decisive importance for reading**, furthermore for people with partial color deficiency (see the excellent examples in [Effective Color Contrast](http://www.lighthouse.org/accessibility/effective-color-contrast/) by Lighthouse International).
 
     The [Juicy Studio CSS analyzer](https://juicystudio.com/services/csstest.php) will also analyze and report the color contrast and color brightness differences involved in your stylesheets.
 

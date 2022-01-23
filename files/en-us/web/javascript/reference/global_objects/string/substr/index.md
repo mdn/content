@@ -11,7 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.substr
 ---
-{{JSRef}}
+{{JSRef}} {{deprecated_header}}
 
 The **`substr()`** method returns a portion
 of the string, starting at the specified index and extending for a given number of
@@ -42,8 +42,8 @@ A new string containing the specified part of the given string.
 `substr()` extracts `length` characters from a
 `str`, counting from the `start` index.
 
-- If `start` is a non-negative number, the index starts counting at
-  the start of the string. Its value is capped at `str.length`.
+- If `start` is a non-negative number, the index starts counting from
+  the start of the string. Its value is capped at `str.length - 1`.
 - If `start` is a negative number, the index starts counting
   from the end of the string. Its value is capped at
   `-str.length`.

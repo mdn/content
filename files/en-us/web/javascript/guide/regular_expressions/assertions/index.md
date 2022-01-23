@@ -190,7 +190,7 @@ Assertions include boundaries, which indicate the beginnings and endings of line
 buggyMultiline = `tey, ihe light-greon apple
 tangs on ihe greon traa`;
 
-// 1) Use ^ to fix the matching at the begining of the string, and right after newline.
+// 1) Use ^ to fix the matching at the beginning of the string, and right after newline.
 buggyMultiline = buggyMultiline.replace(/^t/gim,'h');
 console.log(1, buggyMultiline); // fix 'tey', 'tangs' => 'hey', 'hangs'. Avoid 'traa'.
 
@@ -207,9 +207,9 @@ fixedMultiline = buggyMultiline.replace(/\Bo/gim,'e');
 console.log(4, fixedMultiline); // fix  'greon' but does not touch 'on'.
 ```
 
-### Matching the beginning of input using a ^ control character
+### Matching the beginning of input using a ^ control character
 
-Use `^` for matching at the beginning of input. In this example, we can get the fruits that start with 'A' by a `/^A/` regex. For selecting appropriate fruits we can use the [filter ](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)method with an [arrow](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) function.
+Use `^` for matching at the beginning of input. In this example, we can get the fruits that start with 'A' by a `/^A/` regex. For selecting appropriate fruits we can use the [filter](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method with an [arrow](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) function.
 
 ```js
 let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
@@ -228,7 +228,7 @@ let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
 // Selecting fruits that dose not start by 'A' by a /^[^A]/ regex.
 // In this example, two meanings of '^' control symbol are represented:
-// 1) Matching begining of the input
+// 1) Matching beginning of the input
 // 2) A negated or complemented character class: [^A]
 // That is, it matches anything that is not enclosed in the brackets.
 
@@ -269,9 +269,9 @@ For example, `/\d+(?!\.)/` matches a number only if it is not followed by a deci
 console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 ```
 
-### Different meaning of '?!' combination usage in Assertions and  Ranges 
+### Different meaning of '?!' combination usage in Assertions and  Ranges
 
-Different meaning of `?!` combination usage in [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/ `and [Ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`.
+Different meaning of `?!` combination usage in [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) `/x(?!y)/` and [Ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) `[^?!]`.
 
 ```js
 let orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";

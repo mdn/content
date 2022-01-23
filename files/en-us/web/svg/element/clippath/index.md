@@ -36,7 +36,7 @@ html,body,svg { height:100% }
     Only the portion of the red heart
     inside the clip circle is visible.
   -->
-  <use clip-path="url(#myClip)" xlink:href="#heart" fill="red" />
+  <use clip-path="url(#myClip)" href="#heart" fill="red" />
 </svg>
 ```
 

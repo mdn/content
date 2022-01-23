@@ -240,7 +240,7 @@ Creates a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) o
 
 ##### Returns
 
-`void`
+{{jsxref('undefined')}}.
 
 ##### Exceptions
 
@@ -267,7 +267,7 @@ Creates a cursor over the records of this index's referenced object store, as ar
 
 ##### Returns
 
-`void`
+{{jsxref('undefined')}}.
 
 ##### Exceptions
 

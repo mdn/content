@@ -41,7 +41,7 @@ The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',
 - {{domxref("RemotePlayback.cancelWatchAvailability()")}}
   - : Cancels the request to monitor the availability of remote playback devices.
 - {{domxref("RemotePlayback.prompt()")}}
-  - : Prompts the user to select and give permission to connect to a remote playbabk device.
+  - : Prompts the user to select and give permission to connect to a remote playback device.
 
 ## Examples
 

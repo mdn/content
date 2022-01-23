@@ -80,4 +80,3 @@ labeled-checkbox:--checked { border: solid; }
 ## Browser compatibility
 
 {{Compat}}
-

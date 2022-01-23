@@ -116,14 +116,17 @@ const el = document.querySelector('#user');
 
 // set a data attribute
 el.dataset.dateOfBirth = '1960-10-03';
-// Result: el.dataset.dateOfBirth === '1960-10-03'
+// Result on JS: el.dataset.dateOfBirth === '1960-10-03'
+// Result on HTML: <div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth="1960-10-03">John Doe</div>
 
 delete el.dataset.dateOfBirth;
-// Result: el.dataset.dateOfBirth === undefined
+// Result on JS: el.dataset.dateOfBirth === undefined
+// Result on HTML: <div id="user" data-id="1234567890" data-user="johndoe">John Doe</div>
 
 if ('someDataAttr' in el.dataset === false) {
   el.dataset.someDataAttr = 'mydata';
-  // Result: 'someDataAttr' in el.dataset === true
+  // Result on JS: 'someDataAttr' in el.dataset === true
+  // Result on HTML: <div id="user" data-id="1234567890" data-user="johndoe" data-some-data-attr = "mydata">John Doe</div>
 }
 ```
 

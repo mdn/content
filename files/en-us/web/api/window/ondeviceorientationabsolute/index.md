@@ -19,8 +19,8 @@ containing information about an absolute device orientation change.
 ## Syntax
 
 ```js
-window.ondeviceorientationabsolute = function(event) { ... };
-window.addEventListener('deviceorientationabsolute', function(event) { ... });
+window.ondeviceorientationabsolute = function(event) { /* ... */ };
+window.addEventListener('deviceorientationabsolute', function(event) { /* ... */ });
 ```
 
 ## Specifications
@@ -36,4 +36,4 @@ This event handler is not currently part of any specification.
 - {{ event("deviceorientation") }}
 - {{ domxref("DeviceOrientationEvent") }}
 - {{domxref("Window.ondeviceorientation","ondeviceorientation")}}
-- [Detecting device orientation](/en-US/docs/Detecting_device_orientation "Detecting device orientation")
+- [Detecting device orientation](/en-US/docs/Detecting_device_orientation)

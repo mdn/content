@@ -13,7 +13,7 @@ browser-compat: api.SVGFEDiffuseLightingElement
 
 The **`SVGFEDiffuseLightingElement`** interface corresponds to the {{SVGElement("feDiffuseLighting")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

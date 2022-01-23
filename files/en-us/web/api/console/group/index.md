@@ -13,7 +13,7 @@ browser-compat: api.console.group
 {{APIRef("Console API")}}
 
 The **`console.group()`** method creates a new inline group in the [Web
-console](/en-US/docs/Tools/Web_Console) log. This indents following console messages by an additional level,
+console](/en-US/docs/Tools/Web_Console) log, causing any subsequent console messages to be idented by an additional level,
 until {{domxref("console.groupEnd()")}} is called.
 
 {{AvailableInWorkers}}
@@ -37,12 +37,11 @@ messages. To create a new nested block, call `console.group()`. The
 `console.groupCollapsed()` method is similar, but the new block is
 collapsed and requires clicking a disclosure button to read it.
 
-**Note:** From Gecko 9 until Gecko 51, the `groupCollapsed()`
-method was the same as `group()`. Collapsed groups are fully supported
-starting in Gecko 52. See {{bug("1088360")}}.
+> **Note:** From Gecko 9 until Gecko 51, the `groupCollapsed()` method was the same as `group()`.
+> Collapsed groups are fully supported starting in Gecko 52. See {{bug("1088360")}}.
 
-To exit the current group, call `console.groupEnd()`. For example, given
-this code:
+To exit the current group, call `console.groupEnd()`.
+For example, given this code:
 
 ```js
 console.log("This is the outer level");

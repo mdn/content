@@ -17,6 +17,8 @@ browser-compat: webextensions.api.i18n.getMessage
 
 Gets the localized string for the specified message.
 
+See the [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) page for a guide on using this function.
+
 ## Syntax
 
 ```js
@@ -77,7 +79,9 @@ This would work with a \_locales/en/messages.json file containing:
 
 If `target.url` is "https\://developer.mozilla.org", then the value of message, in the "en" locale, would be:
 
-    "You clicked https://developer.mozilla.org."
+```
+"You clicked https://developer.mozilla.org."
+```
 
 {{WebExtExamples}}
 

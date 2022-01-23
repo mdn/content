@@ -81,7 +81,7 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-  /* To give a little highligh on active elements */
+  /* To give a little highlight on active elements */
   border-color: #000;
 }
 

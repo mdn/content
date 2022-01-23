@@ -18,7 +18,9 @@ HTML (**H**yper**t**ext **M**arkup **L**anguage) is the code that is used to str
 
 HTML is a _markup language_ that defines the structure of your content. HTML consists of a series of **{{Glossary("element", "elements")}}**, which you use to enclose, or wrap, different parts of the content to make it appear a certain way, or act a certain way. The enclosing {{Glossary("tag", "tags")}} can make a word or image hyperlink to somewhere else, can italicize words, can make the font bigger or smaller, and so on.  For example, take the following line of content:
 
-    My cat is very grumpy
+```
+My cat is very grumpy
+```
 
 If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in paragraph tags:
 
@@ -137,11 +139,14 @@ This section will cover some of the essential HTML elements you'll use for marki
 Heading elements allow you to specify that certain parts of your content are headings — or subheadings. In the same way that a book has the main title, chapter titles, and subtitles, an HTML document can too. HTML contains 6 heading levels, {{htmlelement("h1")}}–{{htmlelement("h6")}}, although you'll commonly only use 3 to 4 at most:
 
 ```html
+<!-- 4 heading levels: -->
 <h1>My main title</h1>
 <h2>My top level heading</h2>
 <h3>My subheading</h3>
 <h4>My sub-subheading</h4>
 ```
+
+> **Note:** Anything in HTML between `<!--` and `-->` is a **HTML comment**. The browser ignores comments as it renders the code. In other words, they are not visible on the page - just in the code. HTML comments are a way for you to write helpful notes about your code or logic.
 
 Now try adding a suitable title to your HTML page just above your {{htmlelement("img")}} element.
 
@@ -213,7 +218,7 @@ Links are very important — they are what makes the web a web! To add a link, w
 
 You might get unexpected results if you omit the `https://` or `http://` part, called the _protocol_, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.
 
-> **Note:** `href` might appear like a rather obscure choice for an attribute name at first. If you are having trouble remembering it, remember that it stands for **\*h**ypertext **ref**erence\*.
+> **Note:** `href` might appear like a rather obscure choice for an attribute name at first. If you are having trouble remembering it, remember that it stands for _**h**ypertext **ref**erence_.
 
 Add a link to your page now, if you haven't already done so.
 

@@ -37,8 +37,8 @@ crypto.getRandomValues(typedArray)
 ### Parameters
 
 - `typedArray`
-  - : An integer-based {{jsxref("TypedArray")}}, that is an {{jsxref("Int8Array")}}, a {{jsxref("Uint8Array")}}, an {{jsxref("Int16Array")}}, a {{jsxref("Uint16Array")}}, an
-    {{jsxref("Int32Array")}}, or a {{jsxref("Uint32Array")}}.
+  - : An integer-based {{jsxref("TypedArray")}}, that is one of: {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Uint8ClampedArray")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}},
+    {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, {{jsxref("BigUint64Array")}} (but **not** `Float32Array` nor `Float64Array`).
     All elements in the array are overwritten with random numbers.
 
 ### Return value

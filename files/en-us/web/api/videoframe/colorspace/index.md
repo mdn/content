@@ -32,5 +32,3 @@ console.log(VideoFrame.colorSpace);
 ## Browser compatibility
 
 {{Compat}}
-
-

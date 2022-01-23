@@ -59,6 +59,13 @@ color: hsla(30 100% 50% / 0.6);
 color: hsl(30.0 100% 50% / 60%);
 color: hsla(30.2 100% 50% / 60%);
 
+/* <hwb()> values */
+color: hwb(90 10% 10%);
+color: hwb(90 10% 10% / 0.5);
+color: hwb(90deg 10% 10%);
+color: hwb(1.5708rad 60% 0%);
+color: hwb(.25turn 0% 40% / 50%);
+
 /* Global values */
 color: inherit;
 color: initial;

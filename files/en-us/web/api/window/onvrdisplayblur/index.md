@@ -36,7 +36,7 @@ The event object is of type {{domxref("VRDisplayEvent")}}.
 ## Syntax
 
 ```js
-window.onvrdisplayblur = function() { ... };
+window.onvrdisplayblur = function() { /* ... */ };
 ```
 
 ## Examples

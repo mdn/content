@@ -146,7 +146,7 @@ set DEBUG=author,book
 export DEBUG="author,book"
 ```
 
-> **Note:** Calls to `debug` can replace logging you might previously have done using `console.log()` or `console.error()`. Replace any `console.log()` calls in your code with logging via the [debug ](https://www.npmjs.com/package/debug)module. Turn the logging on and off in your development environment by setting the DEBUG variable and observe the impact this has on logging.
+> **Note:** Calls to `debug` can replace logging you might previously have done using `console.log()` or `console.error()`. Replace any `console.log()` calls in your code with logging via the [debug](https://www.npmjs.com/package/debug) module. Turn the logging on and off in your development environment by setting the DEBUG variable and observe the impact this has on logging.
 
 If you need to log website activity you can use a logging library like _Winston_ or _Bunyan_. For more information on this topic see: [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html).
 
@@ -332,7 +332,7 @@ When this operation completes, you should be able to go back to the page on GitH
 
 This section explains the changes you'll need to make to our _LocalLibrary_ application to get it to work on Heroku.
 
-#### Set node version 
+#### Set node version
 
 The **package.json** contains everything needed to work out your application dependencies and what file should be launched to start your site. Heroku detects the presence of this file, and will use it to provision your app environment.
 

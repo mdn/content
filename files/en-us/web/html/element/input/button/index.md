@@ -74,7 +74,7 @@ If you don't specify a `value`, you get an empty button:
 
 ## Using buttons
 
-`<input type="button">` elements have no default behavior (their cousins,` <input type="submit">` and [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset) are used to submit and reset forms, respectively). To make buttons do anything, you have to write JavaScript code to do the work.
+`<input type="button">` elements have no default behavior (their cousins, `<input type="submit">` and [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset) are used to submit and reset forms, respectively). To make buttons do anything, you have to write JavaScript code to do the work.
 
 ### A simple button
 

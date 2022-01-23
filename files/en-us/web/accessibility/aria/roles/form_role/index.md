@@ -20,7 +20,8 @@ The `form` role can be used to identify a group of elements on a page that provi
 
 This is a form that collects and saves a user's contact information.
 
-> **Warning**: Use an HTML {{htmlelement("form")}} element to contain your form controls, rather than the ARIA `form` role, unless you have a very good reason. The HTML `<form>` element is sufficient to tell assistive technologies that there is a form.
+> **Warning:** Use an HTML {{htmlelement("form")}} element to contain your form controls, rather than the ARIA `form` role, unless you have a very good reason.
+> The HTML `<form>` element is sufficient to tell assistive technologies that there is a form.
 
 ## Description
 
@@ -115,14 +116,11 @@ Using the {{HTMLElement('form')}} element  will automatically communicate a sect
 | {{SpecName("ARIA","#form","ARIA Form Role")}}                     | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#form","Role Form")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-
-
 ## See also
 
-- The {{HTMLElement('form')}} element 
-- The {{HTMLElement('legend')}} element 
+- The {{HTMLElement('form')}} element
+- The {{HTMLElement('legend')}} element
 - [form (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#form)
-
 
 <section id="Quick_links">
 

@@ -14,8 +14,6 @@ The **`SVGRect`** represents a rectangle. Rectangles consist of an `x` and `y` 
 
 An **`SVGRect`** object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-{{InheritanceDiagram(600, 140)}}
-
 ## Properties
 
 - {{domxref("SVGRect.x")}}
@@ -29,7 +27,7 @@ An **`SVGRect`** object can be designated as read only, which means that attempt
 
 ## Methods
 
-_This interface also inherits properties from its parent, {{domxref("DOMRectReadOnly")}}._
+None.
 
 ## Specifications
 

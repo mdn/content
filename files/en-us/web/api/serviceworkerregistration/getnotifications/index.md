@@ -28,7 +28,7 @@ that same origin.
 
 ```js
 serviceWorkerRegistration.getNotifications(options)
-.then(function(notificationsList) { ... });
+.then(function(notificationsList) { /* ... */ });
 ```
 
 ### Parameters

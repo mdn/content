@@ -43,4 +43,3 @@ document.fonts.onloadingdone = () => {
 ## Browser compatibility
 
 {{Compat}}
-

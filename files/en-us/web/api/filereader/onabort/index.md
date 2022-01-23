@@ -14,7 +14,7 @@ The **`FileReader.onabort`** property contains an event handler executed when th
 ## Syntax
 
 ```js
-reader.onabort = function() { ... };
+reader.onabort = function() { /* ... */ };
 ```
 
 ## Browser compatibility

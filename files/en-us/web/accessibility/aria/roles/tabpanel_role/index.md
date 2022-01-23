@@ -24,7 +24,6 @@ An element with the `tabpanel` role
 
 ### Associated Roles and Attributes
 
-
 ### Keyboard interaction
 
 | Key               | Action |
@@ -34,7 +33,7 @@ An element with the `tabpanel` role
 | <kbd>←</kbd>      |        |
 | <kbd>Delete</kbd> |        |
 
-### Required JavaScript features 
+### Required JavaScript features
 
 > **Note:** Include note about semantic alternatives to using this role or attribute. The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Then post full details in best practices section below.
 
@@ -62,7 +61,6 @@ Any additional benefits this feature has for non-typical screen reader users, li
 ## Precedence order
 
 What are the related properties, and in what order will this attribute or property be read, which property will take precedence over this one, and which property will be overwritten.
-
 
 <section id="Quick_links">
 

@@ -98,7 +98,7 @@ Clearly, you have very little time to render your scene each frame. Not only tha
 
 Not only that, but if your rendering crosses the vertical refresh boundary, you can wind up with a **tearing** effect. Tearing occurs when the display hardware starts the next refresh cycle while the previous frame is still being drawn to the screen. As a result, you wind up with the visual effect of the top part of the screen showing the new frame, while the bottom part of the frame shows some combination of the previous frame and possibly even the frame before that one.
 
-Your mission, then, is to keep your code tight and lightweight enough that you don't overrrun the time available to you or otherwise cause dropped frames or excessively abuse the main thread.
+Your mission, then, is to keep your code tight and lightweight enough that you don't overrun the time available to you or otherwise cause dropped frames or excessively abuse the main thread.
 
 For these reasons, unless your renderer is fairly small and lightweight, with little to do, you should consider offloading everything you can to a worker so you can be computing the next frame while the browser handles other things. By having your computations and data ready before the frame is actually called for, you can make your site or app render much more efficiently, improving main thread performance and generally making the user experience better.
 
@@ -116,7 +116,7 @@ To create the illusion of three dimensions when rendering graphics, we need to s
 
 The typical human's {{interwiki("wikipedia", "pupillary distance")}}—the distance between the centers of the pupils—is between 54 and 74 millimeters (0.054 to 0.074 meters). So if the center of the viewer's head is located at `[0.0, 2.0, 0.0]` (about two meters above ground level at the center of the space horizontally), we first need to render the scene from, say, `[-0.032, 2.0, 0.0]` (32mm to the left of center) and then render it again at `[0.032, 2.0, 0.0]` (32mm right of center.) This way, we place the positions of the viewer's eyes at an average human pupillary distance of 64mm.
 
-That distance (or whatever pupillary distance the XR system is configured to use) is enough to allow our minds to see just enough difference due to retinal disparity (the difference in what each retina sees) and the parallax effect to allow our brains to calculate the distance to and depth of objects, thus enabling us to percieve three dimensions despite our retinas only being 2D surfaces.
+That distance (or whatever pupillary distance the XR system is configured to use) is enough to allow our minds to see just enough difference due to retinal disparity (the difference in what each retina sees) and the parallax effect to allow our brains to calculate the distance to and depth of objects, thus enabling us to perceive three dimensions despite our retinas only being 2D surfaces.
 
 This is illustrated in the diagram below, in which we see how each eye perceives a die located directly in front of the viewer. While this diagram exaggerates the effect in some respects for illustrative purposes, the concept is the same. Each eye sees an area whose boundaries make up an arc in front of the eye. Because each eye is offset to one side or the other of the head's centerline, and each eye sees about the same field of view, the result is that each eye sees a slightly different part of the world in front of it, and from a slightly different angle.
 
@@ -323,7 +323,7 @@ const yDistanceMoved = ySpeedPerSecond * deltaTime;
 const ZDistanceMoved = zSpeedPerSecond * deltaTime;
 ```
 
-`xSpeedPerSecond`, `ySpeedPerSecond`, and `zSpeedPerSecond` each contian that axis's component of the object's velocity. In other words, `[xDistanceMoved, yDistanceMoved, zDistanceMoved]` is a vector representing the velocity of the object.
+`xSpeedPerSecond`, `ySpeedPerSecond`, and `zSpeedPerSecond` each contain that axis's component of the object's velocity. In other words, `[xDistanceMoved, yDistanceMoved, zDistanceMoved]` is a vector representing the velocity of the object.
 
 ## Additional tasks related to animating the scene
 

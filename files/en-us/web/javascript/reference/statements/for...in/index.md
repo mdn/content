@@ -10,7 +10,7 @@ browser-compat: javascript.statements.for_in
 {{jsSidebar("Statements")}}
 
 The **`for...in` statement** iterates over all [enumerable
-properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object that are keyed by strings (ignoring ones keyed by [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)s),
+properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object that are keyed by strings (ignoring ones keyed by [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)),
 including inherited enumerable properties.
 
 {{EmbedInteractiveExample("pages/js/statement-forin.html")}}
@@ -178,9 +178,6 @@ investigating whether to remove the nonstandard behavior as well.
 
 - {{jsxref("Statements/for...of", "for...of")}} – a similar statement that iterates
   over the property _values_
-- {{jsxref("Statements/for_each...in", "for each...in")}} – a similar but deprecated
-  statement that iterates over the values of an object's properties, rather than the
-  property names themselves
 - {{jsxref("Statements/for", "for")}}
 - [Iterators and
   Generator functions](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) (usable with `for...of` syntax)

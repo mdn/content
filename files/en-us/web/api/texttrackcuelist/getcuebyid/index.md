@@ -17,7 +17,9 @@ The **`getCueById()`** method of the {{domxref("TextTrackCueList")}} interface r
 
 ## Syntax
 
-    var cue = TextTrackCueList.getCueById(id);
+```js
+var cue = TextTrackCueList.getCueById(id);
+```
 
 ### Parameters
 

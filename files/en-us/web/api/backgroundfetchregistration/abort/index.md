@@ -15,7 +15,9 @@ The **`abort()`** method of the {{domxref("BackgroundFetchRegistration")}} inter
 
 ## Syntax
 
-    let status = BackgroundFetchRegistration.abort();
+```js
+let status = BackgroundFetchRegistration.abort();
+```
 
 ### Parameters
 

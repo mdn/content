@@ -350,7 +350,7 @@ Removes from this object store any records that correspond to the given key.
 
 ##### Returns
 
-`void`
+{{jsxref('undefined')}}.
 
 ##### Exceptions
 

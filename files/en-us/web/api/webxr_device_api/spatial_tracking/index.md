@@ -60,7 +60,7 @@ There is only one way to create an {{domxref("XRPose")}}, and that's using the�
 For example, if you wish to draw a hand controller's representation using the controller's {{domxref("XRInputSource.gripSpace", "gripSpace")}}, you can get the pose needed like this:
 
 ```js
-let controlPose = frame.getPose(worldRefSpace, inputSource.gripSpace);
+let controlPose = frame.getPose(inputSource.gripSpace, worldRefSpace);
 ```
 
 This converts the position and orientation of the input's grip space to use the world's coordinate system, then generates the corresponding `XRPose`, storing it in `controlPose`. You can then apply `controlPose`'s {{domxref("XRPose.transform", "transform")}} to the vertices in the object model representing the controller to calculate the WebGL coordinates to use when rendering the controller's representation to the framebuffer.
@@ -166,7 +166,7 @@ function myDrawFrame(currentFrameTime, frame) {
 
 Sometimes, while the user is actively using their XR hardware with your app, the flow of data containing updates as to the user's position and orientation might be lost for a period of time. Not only does your app need to determine what to show the user during these periods, but it needs to cleanly recover when tracking resumes.
 
-Once the XR hardware begins providing tracking information, it will continue to do so until the XR session is clsoed. This data is obtained during each frame by calling the {{domxref("XRFrame")}} method {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} to get the position and facing direction of the viewer (defining what the user should see), and {{domxref("XRFrame.getPose", "getPose()")}} to get any other poses, such as the positions of the hand controllers and any other parts of the XR system.
+Once the XR hardware begins providing tracking information, it will continue to do so until the XR session is closed. This data is obtained during each frame by calling the {{domxref("XRFrame")}} method {{domxref("XRFrame.getViewerPose", "getViewerPose()")}} to get the position and facing direction of the viewer (defining what the user should see), and {{domxref("XRFrame.getPose", "getPose()")}} to get any other poses, such as the positions of the hand controllers and any other parts of the XR system.
 
 ### Detecting and functioning after tracking loss
 

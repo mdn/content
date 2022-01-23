@@ -50,9 +50,9 @@ Now it is time to add one of the major parts of functionality that we're still m
 
 ## Creating an editing component
 
-We can start by creating a separate component to handle the editing functionality. In your `components` directory, create a new file called `ToDoItemEditForm.vue`.  Copy the following code into that file:
+We can start by creating a separate component to handle the editing functionality. In your `components` directory, create a new file called `ToDoItemEditForm.vue`. Copy the following code into that file:
 
-```js
+```html
 <template>
   <form class="stack-small" @submit.prevent="onSubmit">
     <div>
@@ -206,7 +206,7 @@ It's important to note that `v-else` and `v-else-if` blocks need to be the first
 
 Lastly, you can use a `v-if` + `v-else` at the root of your component to display only one block or another, since Vue will only render one of these blocks at a time. We'll do this in our app, as it will allow us to replace the code that displays our to-do item with the edit form.
 
-First of all add `v-if="!isEditing"` to the root `<div>` in your `ToDoItem` component,
+First of all add `v-if="!isEditing"` to the root `<div>` in your `ToDoItem` component,
 
 ```html
 <div class="stack-small" v-if="!isEditing">
@@ -251,7 +251,7 @@ itemEdited(newLabel) {
 }
 ```
 
-Next, we'll need an `editCancelled()` method. This method will take no arguments and just serve to set `isEditing` back to `false`.  Add this method below the previous one:
+Next, we'll need an `editCancelled()` method. This method will take no arguments and just serve to set `isEditing` back to `false`. Add this method below the previous one:
 
 ```js
 editCancelled() {
@@ -276,21 +276,23 @@ Now we can toggle between the edit form and the checkbox. However, we haven’t 
 
 Add the following new methods to your `App.vue`'s component object, below the existing methods inside the `methods` property:
 
-    deleteToDo(toDoId) {
-      const itemIndex = this.ToDoItems.findIndex(item => item.id === toDoId);
-      this.ToDoItems.splice(itemIndex, 1);
-    },
-    editToDo(toDoId, newLabel) {
-      const toDoToEdit = this.ToDoItems.find(item => item.id === toDoId);
-      toDoToEdit.label = newLabel;
-    }
+```js
+deleteToDo(toDoId) {
+  const itemIndex = this.ToDoItems.findIndex(item => item.id === toDoId);
+  this.ToDoItems.splice(itemIndex, 1);
+},
+editToDo(toDoId, newLabel) {
+  const toDoToEdit = this.ToDoItems.find(item => item.id === toDoId);
+  toDoToEdit.label = newLabel;
+}
+```
 
 Next, we'll add the event listeners for the `item-deleted` and `item-edited` events:
 
 - For `item-deleted`, you'll need to pass the `item.id` to the method.
 - For `item-edited`, you'll need to pass the `item.id` and the special `$event` variable. This is a special Vue variable used to pass event data to methods. When using native HTML events (like `click`), this will pass the native event object to your method.
 
-Update the `<to-do-item></to-do-item>` call inside the `App.vue` template to look like this:
+Update the `<to-do-item></to-do-item>` call inside the `App.vue` template to look like this:
 
 ```js
 <to-do-item :label="item.label" :done="item.done" :id="item.id"
@@ -353,7 +355,7 @@ For example:
   **Result**: `updateDoneStatus()` method invoked to update done status of associated todo item.
 - `item-deleted` event emitted by the `deleteToDo()` method inside the `ToDoItem` component when the "Delete" button is pressed.
   **Result**: `deleteToDo()` method invoked to delete associated todo item.
-- `item-edited` event emitted by the `itemEdited()` method inside the `ToDoItem` component when the `item-edited` event emitted by the `onSubmit()` method inside the `ToDoItemEditForm` has been successfully listened for. Yes, this is a chain of two different `item-edit` events!
+- `item-edited` event emitted by the `itemEdited()` method inside the `ToDoItem` component when the `item-edited` event emitted by the `onSubmit()` method inside the `ToDoItemEditForm` has been successfully listened for. Yes, this is a chain of two different `item-edit` events!
   **Result**: `editToDo()` method invoked to update label of associated todo item.
 
 **ToDoForm.vue**
@@ -376,7 +378,7 @@ For example:
 
 - `item-edited` event emitted by the `onSubmit()` method inside the `ToDoItemEditForm` component when the form is successfully submitted.
   **Result**: `itemEdited()` method is invoked, which emits the `item-edited` event (which is then listened for inside `App.vue`, see above), and sets `this.isEditing` back to `false`, so that the edit form is no longer shown on re-render.
-- `edit-cancelled` event emitted by the `onCancel()` method inside the `ToDoItemEditForm` component when the "Cancel"  button is clicked.
+- `edit-cancelled` event emitted by the `onCancel()` method inside the `ToDoItemEditForm` component when the "Cancel" button is clicked.
   **Result**: `editCancelled()` method is invoked, which sets `this.isEditing` back to `false`, so that the edit form is no longer shown on re-render.
 
 **ToDoItemEditForm.vue**

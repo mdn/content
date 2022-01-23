@@ -15,8 +15,8 @@ The `aria-haspopup` attribute indicates the availability and type of interactive
 ## Description
 
 In ARIA, interactive menus, listboxes, trees, grids, and dialogs that appear on top of other content when triggered to appear are considered "popups". These popups are triggered by one or more interactive elements on the page. The availability and type of popup the interactive element will trigger should be identified with the `aria-haspopup` state.
- 
-The presence of the `aria-haspopup`, with one of six enumerated values - `menu`, `listbox`, `tree`, `grid`, `dialog`, or `true` - indicates the element can trigger a popup and what kind of popup will be displayed. In turn, the element that pops up must be of the role indicated. The value `true` is the same as `menu`. Any other value, including an empty string or other [role](/en-US/docs/Web/Accessibility/ARIA/Roles), is treated as if `false` were set. 
+
+The presence of the `aria-haspopup`, with one of six enumerated values - `menu`, `listbox`, `tree`, `grid`, `dialog`, or `true` - indicates the element can trigger a popup and what kind of popup will be displayed. In turn, the element that pops up must be of the role indicated. The value `true` is the same as `menu`. Any other value, including an empty string or other [role](/en-US/docs/Web/Accessibility/ARIA/Roles), is treated as if `false` were set.
 
 A [`tooltip`](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role) is not considered to be a popup in this context, as is not interactive.
 
@@ -32,7 +32,7 @@ When creating a [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menubar_rol
 
 ## Values
 
-- `false` (default)	
+- `false` (default)
   - : The element does not have a popup.
 - `true`		
   - : The popup is a menu.
@@ -47,7 +47,7 @@ When creating a [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menubar_rol
 - `dialog`		
   - : The popup is a dialog.
   
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaHasPopup")}}
   - : The  [`ariaHasPopup`](/en-US/docs/Web/API/Element/ariaHasPopup) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-haspopup` attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
@@ -71,15 +71,15 @@ Used in roles:
 
 Inherited into roles:
 
-- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role) 
-- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitemcheckbox_role) 
-- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitemradio_role) 
-- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowheader_role) 
-- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/Searchbox_role) 
+- [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Columnheader_role)
+- [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitemcheckbox_role)
+- [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menuitemradio_role)
+- [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/Rowheader_role)
+- [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/Searchbox_role)
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-haspopup","ARIA: aria-haspopup Attribute")}}  | {{Spec2('ARIA')}} |
 

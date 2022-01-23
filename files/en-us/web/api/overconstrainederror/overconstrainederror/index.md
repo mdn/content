@@ -31,7 +31,7 @@ var OverconstrainedError = new OverconstrainedError()
 ### Parameters
 
 - constraint
-  - : The constraint that was not satified.
+  - : The constraint that was not satisfied.
 - message
   - : Text for the error's `message` property.
 

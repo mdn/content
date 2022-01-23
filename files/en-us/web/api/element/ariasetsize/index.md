@@ -13,12 +13,14 @@ browser-compat: api.Element.ariaSetSize
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaSetSize`** property of the {{domxref("Element")}} interface reflects the value of the `aria-setsize` attribute, which defines the number of items in the current set of listitems or treeitems.
+The **`ariaSetSize`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) attribute, which defines the number of items in the current set of listitems or treeitems.
 
 ## Syntax
 
-    var ariaSetSize = element.ariaSetSize;
-    element.ariaSetSize = ariaSetSize
+```js
+var ariaSetSize = element.ariaSetSize;
+element.ariaSetSize = ariaSetSize
+```
 
 ### Value
 

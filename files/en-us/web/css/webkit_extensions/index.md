@@ -334,7 +334,7 @@ The following properties are supported in at least one browser without a prefix,
 
 ## Supported in Firefox with `-webkit-` prefix
 
-The following properties are supported with the `-webkit-` prefix in Firefox. Many of these are supported with no prefix as well: see [Formerly proprietary properties that are now standard ](#formerly_proprietary_properties_that_are_now_standard)above.
+The following properties are supported with the `-webkit-` prefix in Firefox. Many of these are supported with no prefix as well: see [Formerly proprietary properties that are now standard](#formerly_proprietary_properties_that_are_now_standard) above.
 
 > **Note:** Due to the legacy code in a multitude of web sites that used -webkit- prefixed properties, Edge and Firefox redirect many -webkit- prefixed properties to -moz-, -ms-, and unprefixed equivalents.
 
@@ -442,7 +442,7 @@ The following properties were once supported with the -webkit- prefix but are no
 - `-webkit-grid-columns` (See [`grid-column)`](/en-US/docs/Web/CSS/grid-column)
 - `-webkit-grid-rows` (See [`grid-row)`](/en-US/docs/Web/CSS/grid-row)
 - `-webkit-hyphenate-charset`
-- `-webkit-image-set (See `{{CSSxRef("image/image-set()", "image-set")}})
+- `-webkit-image-set (See {{CSSxRef("image/image-set()", "image-set")}})
 - `-webkit-mask-attachment`
 - `-webkit-match-nearest-mail-blockquote-color`
 - {{CSSxRef("-webkit-overflow-scrolling", "-webkit-overflow-scrolling")}}

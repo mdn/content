@@ -13,12 +13,14 @@ browser-compat: api.Element.ariaColIndex
 ---
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaColIndex`** property of the {{domxref("Element")}} interface reflects the value of the `aria-colindex` attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
+The **`ariaColIndex`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
 
 ## Syntax
 
-    var ariaColIndex = element.ariaColIndex;
-    element.ariaColIndex = ariaColIndex
+```js
+var ariaColIndex = element.ariaColIndex;
+element.ariaColIndex = ariaColIndex
+```
 
 ### Value
 

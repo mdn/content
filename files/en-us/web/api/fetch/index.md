@@ -19,13 +19,7 @@ resource from the network, returning a promise which is fulfilled once the respo
 available.
 
 The promise resolves to the {{domxref("Response")}} object
-representing the response to your request. The promise _does not_ reject on HTTP
-errors — it only rejects on network errors. You must use `then` handlers to
-check for HTTP errors.
-
-`WindowOrWorkerGlobalScope` is implemented by both {{domxref("Window")}} and
-{{domxref("WorkerGlobalScope")}}, which means that the `fetch()` method is
-available in pretty much any context in which you might want to fetch resources.
+representing the response to your request.
 
 A {{domxref("fetch()")}} promise only rejects when a
 network error is encountered (which is usually when there’s a permissions issue or
@@ -33,6 +27,10 @@ similar). A {{domxref("fetch()")}} promise _does
 not_ reject on HTTP errors (`404`, etc.). Instead, a
 `then()` handler must check the {{domxref("Response.ok")}} and/or
 {{domxref("Response.status")}} properties.
+
+`WindowOrWorkerGlobalScope` is implemented by both {{domxref("Window")}} and
+{{domxref("WorkerGlobalScope")}}, which means that the `fetch()` method is
+available in pretty much any context in which you might want to fetch resources.
 
 The `fetch()` method is controlled by the `connect-src` directive
 of [Content Security Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)
@@ -53,7 +51,7 @@ const fetchResponsePromise = fetch(resource [, init])
 
   - : This defines the resource that you wish to fetch. This can either be:
 
-    - A string or any other object with a [stringifier](/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers) — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch.
+    - A string or any other object with a {{Glossary("stringifier")}} — including a {{domxref("URL")}} object — that provides the URL of the resource you want to fetch.
     - A {{domxref("Request")}} object.
 
 - `init` {{optional_inline}}

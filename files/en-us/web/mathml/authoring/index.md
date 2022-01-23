@@ -173,7 +173,9 @@ In a Web environment, the most obvious method to convert a simple syntax into a 
 
 [TeXZilla](https://github.com/fred-wang/TeXZilla) has an [\<x-tex>](https://github.com/fred-wang/x-tex) custom element, that can be used to write things like
 
-    <x-tex>\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1</x-tex>
+```
+<x-tex>\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1</x-tex>
+```
 
 and get it automatically converted into MathML. This is still a work-in-progress, but could be improved in the future thanks to Web Components and shadow DOM. Alternatively, you can use the more traditional [Javascript parsing of expressions at load time](https://github.com/fred-wang/TeXZilla/wiki/Advanced-Usages#parsing-tex-expressions-in-your-web-page) as all the other tools in this section do.
 
@@ -272,28 +274,38 @@ input.html
 
 Then to generate the HTML page input.html with TeX expressions replaced by MathML expressions, just do
 
-    cat input.html | itex2MML > output.html
+```bash
+cat input.html | itex2MML > output.html
+```
 
 There are even more sophisticated tools to convert arbitrary LaTeX documents into HTML+MathML. For example [TeX4ht](https://www.tug.org/tex4ht/) is often included in TeX distributions and has an option to use MathML instead of PNG images. This command will generate an XHTML+MathML document foo.xml from a foo.tex LaTeX source:
 
-       mk4ht mzlatex foo.tex # Linux/Mac platforms
-       mzlatex foo.tex       # Windows platform
+```
+mk4ht mzlatex foo.tex # Linux/Mac platforms
+mzlatex foo.tex       # Windows platform
+```
 
 Note that [tex4ebook](https://github.com/michal-h21/tex4ebook) relies on TeX4ht to generate EPUB documents.
 
 [LaTeXML](https://dlmf.nist.gov/LaTeXML/) is another tool that can generate HTML5 and EPUB documents. Windows users can watch this [video tutorial](https://www.youtube.com/watch?v=Dg881w2e-lI). Given a foo.tex LaTeX file, you can use these simple commands:
 
-      latexmlc --dest foo.html foo.tex # Generate a HTML5 document foo.html
-      latexmlc --dest foo.epub foo.tex # Generate an EPUB document foo.epub
+```bash
+latexmlc --dest foo.html foo.tex # Generate a HTML5 document foo.html
+latexmlc --dest foo.epub foo.tex # Generate an EPUB document foo.epub
+```
 
 To handle the case of browsers without MathML support, you can use the `--javascript` parameter to tell LaTeXML to include one of the [fallback scripts](#fallback_for_browsers_without_mathml_support):
 
-      latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathml.css/mspace.js foo.tex  # Add the CSS fallback
-      latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Add the MathJax fallback
+```bash
+latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathml.css/mspace.js foo.tex  # Add the CSS fallback
+latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Add the MathJax fallback
+```
 
 If your LaTeX document is big, you might want to split it into several small pages rather than putting everything in a single large page. For example, this will split the pages at the `\section` level:
 
-      latexmlc --dest foo.html --splitat=section foo.tex
+```bash
+latexmlc --dest foo.html --splitat=section foo.tex
+```
 
 ### Server-side Conversion
 
@@ -305,13 +317,13 @@ If your LaTeX document is big, you might want to split it into several small pag
 
   - This might be a bit more difficult to set up, since you need some admin right on your server.
 
-[TeXZilla](https://github.com/fred-wang/TeXZilla), [LaTeXML](https://dlmf.nist.gov/LaTeXML/) and [Mathoid](https://github.com/gwicke/mathoid) and can be used to perform server-side LaTeX-to-MathML conversion.[ Instiki](http://instiki.org/show/HomePage) and [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) are two wiki engines that support LaTeX-to-MathML conversion.
+[TeXZilla](https://github.com/fred-wang/TeXZilla), [LaTeXML](https://dlmf.nist.gov/LaTeXML/) and [Mathoid](https://github.com/gwicke/mathoid) and can be used to perform server-side LaTeX-to-MathML conversion. [Instiki](http://instiki.org/show/HomePage) and [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) are two wiki engines that support LaTeX-to-MathML conversion.
 
 ## Graphical Interface
 
 ### Input Box
 
-[TeXZilla](https://github.com/fred-wang/TeXZilla) has several interfaces, including a [CKEditor plugin](https://ckeditor.com/addon/texzilla) used on MDN, an [online demo](https://fred-wang.github.io/TeXZilla/), a [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/texzilla/) or a [FirefoxOS Webapp](https://marketplace.firefox.com/app/texzilla-1/). It has also been integrated into [SeaMonkey](https://www.seamonkey-project.org/) since version 2.28 and into [Thunderbird](https://www.mozilla.org/thunderbird/) since version 31.[ Abiword](http://abisource.org/) contains a small equation editor, based on itex2MML. Finally, [Bluegriffon](http://www.bluegriffon.com/) has an add-on to insert MathML formulas in your document, using ASCII/LaTeX-like syntax.
+[TeXZilla](https://github.com/fred-wang/TeXZilla) has several interfaces, including a [CKEditor plugin](https://ckeditor.com/addon/texzilla) used on MDN, an [online demo](https://fred-wang.github.io/TeXZilla/), a [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/texzilla/) or a [FirefoxOS Webapp](https://marketplace.firefox.com/app/texzilla-1/). It has also been integrated into [SeaMonkey](https://www.seamonkey-project.org/) since version 2.28 and into [Thunderbird](https://www.mozilla.org/thunderbird/) since version 31.[Abiword](http://abisource.org/) contains a small equation editor, based on itex2MML. Finally, [Bluegriffon](http://www.bluegriffon.com/) has an add-on to insert MathML formulas in your document, using ASCII/LaTeX-like syntax.
 
 ![BlueGriffon](mathml-shot1.png)
 

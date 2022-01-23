@@ -52,7 +52,7 @@ new Promise(executor)
     - The `executor` return value is ignored.
     - If an error is thrown in the `executor`, the promise is rejected.
 
-    So the mechanism by which the code within the `executor` has affect is as follows:
+    So the mechanism by which the code within the `executor` has effect is as follows:
 
     - At the time when the constructor generates the new `Promise` object, it also generates a corresponding pair of functions for `resolutionFunc` and `rejectionFunc`; these are "tethered" to the `Promise` object.
     - The code within the `executor` has the opportunity to perform some operation and then reflect the operation's outcome (if the value is not another Promise object) as either "resolved" or "rejected", by terminating with an invocation of either the `resolutionFunc` or the `rejectionFunc`, respectively.

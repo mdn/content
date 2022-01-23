@@ -10,14 +10,14 @@ browser-compat: api.DOMTokenList
 
 The **`DOMTokenList`** interface represents a set of space-separated tokens. Such a set is returned by {{domxref("Element.classList")}} or {{domxref("HTMLLinkElement.relList")}}, and many others.
 
-A `DOMTokkenList` is indexed beginning with `0` as with JavaScript {{jsxref("Array")}} objects. `DOMTokenList` is always case-sensitive.
+A `DOMTokenList` is indexed beginning with `0` as with JavaScript {{jsxref("Array")}} objects. `DOMTokenList` is always case-sensitive.
 
 ## Properties
 
 - {{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}
   - : Is an `integer` representing the number of objects stored in the object.
 - {{domxref("DOMTokenList.value")}}
-  - : A stringifier property that returns the value of the list as a string.
+  - : A {{Glossary("stringifier")}} property that returns the value of the list as a string.
 
 ## Methods
 

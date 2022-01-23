@@ -63,7 +63,6 @@ The current implementation is a little inelegant but is basically functional. (S
   </tbody>
 </table>
 
-
 ### inert attribute
 
 The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{jsxref("Boolean")}}, when present, may make the browser "ignore" the element from assistive technologies, page search and text selection. For more details on the status of this feature see {{bug(1655722)}}.
@@ -140,6 +139,46 @@ Layout for `input type="search"` has been updated. This causes a search field t
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>layout.forms.input-type-search.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Toggle password display
+
+HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password)) include an "eye" icon that can be toggled to display or obscure the password text ({{bug(502258)}}).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>96</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>96</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>96</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>96</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.forms.input-type-show-password-button.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -513,11 +552,11 @@ The [`@layer`](en-US/docs/Web/CSS/@layer) rule declares a cascade layer, which a
   </tbody>
 </table>
 
-## SVG
+### Property: hyphenate-character
 
-### Presentation attribute: d
-
-The SVG {{SVGAttr('d')}} attribute, used to define a path to be drawn, is now a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation). It can be used as a property in CSS and accepts the values [path()](</en-US/docs/Web/CSS/path()>) or `none`. (See {{bug(1340422)}} for more details.)
+The {{cssxref("hyphenate-character")}} property can be used to set a string that is used instead of a hyphen character (`-`) at the end of a hyphenation line break.
+It can also be used to specify that the character is selected to be appropriate for the language conventions of the affected content. 
+(See {{bug(1746187)}} for more details.)
 
 <table>
   <thead>
@@ -530,27 +569,71 @@ The SVG {{SVGAttr('d')}} attribute, used to define a path to be drawn, is now a 
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>91</td>
-      <td>No</td>
+      <td>97</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>91</td>
+      <td>97</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>91</td>
+      <td>97</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>91</td>
+      <td>97</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>layout.css.d-property.enabled</code></td>
+      <td colspan="2"><code>layout.css.hyphenate-character.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+## SVG
+
+### SVGPathSeg APIs
+
+The SVGPathSeg APIs are being unshipped, and have been placed behind a preference.
+This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/docs/Web/API/SVGPathElement), `SVGAnimatedPathData`.
+(See {{bug(1388931)}} for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version removed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.svg.pathSeg.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -1225,11 +1308,13 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
 #### ElementInternals: Form associated custom element methods and properties
 
 New {{domxref("ElementInternals")}} properties and methods that allow a custom elements to interact with a form:
+
 - property: {{domxref("ElementInternals.form","form")}} gets the form associated with the element
 - property: {{domxref("ElementInternals.labels","labels")}} gets the list of labels associated with the element
+- property: {{domxref("ElementInternals.willValidate", "willValidate")}} checks if a custom form element will be validated.
 - method: {{domxref("ElementInternals.setFormValue()","setFormValue()")}} set the sanitized value and user-entered data, if needed.
 
-See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556449)}}.
+See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}, {{bug(1556449)}}.
 
 <table>
   <thead>
@@ -1266,7 +1351,6 @@ See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556449)}}
     </tr>
   </tbody>
 </table>
-
 
 ### Payment Request API
 
@@ -1359,7 +1443,7 @@ The addition of a constructor to the {{domxref("CSSStyleSheet")}} interface as w
 ### WebShare API
 
 The [Web Share API](/en-US/docs/Web/API/Web_Share_API) allows sharing of files, URLs and other data from a site.
-Note that Firefox implements {{domxref("Navigator.share()")}} but not {{domxref("Navigator.canShare()")}} ({{bug(1666203)}}).
+This feature is enabled on Android in all builds, but behind a preference on Desktop (unless specified below).
 
 <table>
   <thead>
@@ -1388,11 +1472,57 @@ Note that Firefox implements {{domxref("Navigator.share()")}} but not {{domxref(
     <tr>
       <th>Release</th>
       <td>71</td>
-      <td>No</td>
+      <td>No (Desktop). Yes (Android).</td>
     </tr>
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.webshare.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Screen Orientation API
+
+#### ScreenOrientation.lock()
+
+The {{domxref("ScreenOrientation.lock()")}} method allows a device to be locked to a particular orientation, if supported by the device and allowed by browser pre-lock requirements.
+Typically locking the orientation is only allowed on mobile devices when the document is being displayed full screen.
+See {{bug(1697647)}} for more details.
+
+Note that since locking the screen orientation isn't typically supported on desktop systems, you will need to use Firefox for Android Nightly build and enable the preference in `about:config`.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version changed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>97</td>
+      <td>No.</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.screenorientation.allow-lock</code></td>
     </tr>
   </tbody>
 </table>
@@ -1569,6 +1699,50 @@ This also changes the console warning; if the upgrade succeeds, the message indi
       <th>Preference name</th>
       <td colspan="2">
         <code>dom.security.featurePolicy.header.enabled</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Clear-Site-Data "cache" directive
+
+The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP response header `cache` directive clears the browser cache for the requesting website.
+
+> **Note:** This was originally enabled by default, but put behind a preference in version 94 ({{bug(1729291)}}).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>63</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>63</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>63</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>63</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+        <code>privacy.clearsitedata.cache.enabled</code>
       </td>
     </tr>
   </tbody>

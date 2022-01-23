@@ -148,7 +148,7 @@ The following are all **absolute** length units — they are not relative to any
 
 | Unit | Name                | Equivalent to        |
 | ---- | ------------------- | -------------------- |
-| `cm` | Centimeters         | 1cm = 38px = 25/64in |
+| `cm` | Centimeters         | 1cm = 37.8px = 25.2/64in |
 | `mm` | Millimeters         | 1mm = 1/10th of 1cm  |
 | `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm   |
 | `in` | Inches              | 1in = 2.54cm = 96px  |
@@ -286,6 +286,8 @@ The standard color system available in modern computers is 24 bit, which allows 
 Quite often in examples here in the learn section or elsewhere on MDN you will see the color keywords used, as they are a simple and understandable way of specifying color. There are a number of these keywords, some of which have fairly entertaining names! You can see a full list on the page for the [`<color>`](/en-US/docs/Web/CSS/color_value) value type.
 
 **Try playing with different color values in the live examples below, to get more of an idea how they work.**
+
+{{EmbedGHLiveSample("css-examples/learn/values-units/color-keywords.html", '100%', 700)}}
 
 ### Hexadecimal RGB values
 

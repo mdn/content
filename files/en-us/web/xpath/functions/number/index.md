@@ -11,7 +11,9 @@ The `number` function converts an object to a number and returns the number.
 
 ### Syntax
 
-    number( [object] )
+```
+number( [object] )
+```
 
 ### Arguments
 

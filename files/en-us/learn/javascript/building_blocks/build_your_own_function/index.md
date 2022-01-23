@@ -80,7 +80,7 @@ To begin with, let's put together a basic function.
     const html = document.querySelector('html');
 
     const panel = document.createElement('div');
-    panel.setAttribute('class', 'msgBox');
+    panel.setAttribute('class','msgBox');
     html.appendChild(panel);
 
     const msg = document.createElement('p');
@@ -91,9 +91,7 @@ To begin with, let's put together a basic function.
     closeBtn.textContent = 'x';
     panel.appendChild(closeBtn);
 
-    closeBtn.onclick = function() {
-      panel.parentNode.removeChild(panel);
-    }
+    closeBtn.addEventListener('click', () => panel.parentNode.removeChild(panel));
     ```
 
 This is quite a lot of code to go through, so we'll walk you through it bit by bit.
@@ -128,14 +126,12 @@ closeBtn.textContent = 'x';
 panel.appendChild(closeBtn);
 ```
 
-Finally, we use an {{domxref("GlobalEventHandlers.onclick")}} event handler to make it so that when the button is clicked, some code is run to delete the whole panel from the page — to close the message box.
+Finally, we call {{domxref("EventTarget/addEventListener", "addEventListener()")}} to add a function that will be called when the user clicks the "close" button. The code will delete the whole panel from the page — to close the message box.
 
-Briefly, the `onclick` handler is a property available on the button (or in fact, any element on the page) that can be set to a function to specify what code to run when the button is clicked. You'll learn a lot more about these in our later [events article](/en-US/docs/Learn/JavaScript/Building_blocks/Events). We are making the `onclick` handler equal to an anonymous function, which contains the code to run when the button is clicked. The line inside the function uses the {{domxref("Node.removeChild()")}} DOM API function to specify that we want to remove a specific child element of the HTML element — in this case the panel `<div>`.
+Briefly, the `addEventListener()` method is provided by the button (or in fact, any element on the page) that can be passed a function and the name of an event. In this case the name of the event is 'click', meaning that when the user clicks the button, the function will be run. You'll learn a lot more about events in our [events article](/en-US/docs/Learn/JavaScript/Building_blocks/Events). The line inside the function uses the {{domxref("Node.removeChild()")}} DOM API function to specify that we want to remove a specific child element of the HTML element — in this case the panel `<div>`.
 
 ```js
-closeBtn.onclick = function() {
-  panel.parentNode.removeChild(panel);
-}
+closeBtn.addEventListener('click', () => panel.parentNode.removeChild(panel));
 ```
 
 Basically, this whole block of code is generating a block of HTML that looks like so, and inserting it into the page:
@@ -177,10 +173,10 @@ You've now got your function definition written into your `<script>` element jus
 5.  Finally, add the following line below the previous one:
 
     ```js
-    btn.onclick = displayMessage;
+    btn.addEventListener('click', displayMessage);
     ```
 
-    In a similar way to our `closeBtn.onclick...` line inside the function, here we are calling some code in response to a button being clicked. But in this case, instead of calling an anonymous function containing some code, we are calling our function name directly.
+    In a similar way to our `closeBtn.addEventListener...` line inside the function, here we are calling some code in response to a button being clicked. But in this case, instead of calling an anonymous function containing some code, we are calling our `displayMessage()` function by name.
 
 6.  Try saving and refreshing the page — now you should see the message box appear when you click the button.
 
@@ -227,15 +223,13 @@ As it stands, the function is still not very useful — we don't want to just sh
 3.  Last but not least, you now need to update your function call to include some updated message text. Change the following line:
 
     ```js
-    btn.onclick = displayMessage;
+    btn.addEventListener('click', displayMessage);
     ```
 
     to this block:
 
     ```js
-    btn.onclick = function() {
-      displayMessage('Woo, this is a different message!');
-    };
+    btn.addEventListener('click', () => displayMessage('Woo, this is a different message!'));
     ```
 
     If we want to specify parameters inside parentheses for the function we are calling, then we can't call it directly — we need to put it inside an anonymous function so that it isn't in the immediate scope and therefore isn't called immediately. Now it will not be called until the button is clicked.

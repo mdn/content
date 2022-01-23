@@ -43,7 +43,7 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
 - {{domxref("URL.hostname", "hostname")}}
   - : A {{domxref("USVString")}} containing the domain of the URL.
 - {{domxref("URL.href", "href")}}
-  - : A stringifier that returns a {{domxref("USVString")}} containing the whole URL.
+  - : A {{Glossary("stringifier")}} that returns a {{domxref("USVString")}} containing the whole URL.
 - {{domxref("URL.origin", "origin")}} {{readonlyInline}}
   - : Returns a {{domxref("USVString")}} containing the origin of the URL, that is its scheme, its domain and its port.
 - {{domxref("URL.password", "password")}}

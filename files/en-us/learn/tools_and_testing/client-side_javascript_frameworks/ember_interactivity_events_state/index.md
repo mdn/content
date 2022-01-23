@@ -142,10 +142,12 @@ ember generate service todo-data
 
 This should give you a terminal output like so:
 
-    installing service
-      create app/services/todo-data.js
-    installing service-test
-      create tests/unit/services/todo-data-test.js
+```
+installing service
+  create app/services/todo-data.js
+installing service-test
+  create tests/unit/services/todo-data-test.js
+```
 
 This creates a `todo-data.js` file inside the `todomvc/app/services` directory to contain our service, which initially contains an import statement and an empty class:
 

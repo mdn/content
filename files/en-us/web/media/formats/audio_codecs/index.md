@@ -358,7 +358,7 @@ In addition to providing audio for specific speakers in a sound system, some cod
 
 ### Audio frequency bandwidth
 
-The **audio frequency bandwidth** of a codec indicates the range of audio frequencies that can be represented using the codec. Some codecs operate specifically by eliminating audio that falls outside a given frequency range. There is a correlation between the sample rate and the maxium sound frequency that can be represented by a waveform represented by a codec. At a theoretical level, the maximum frequency a codec can represent is the sample rate divided by two; this frequency is called the {{interwiki("wikipedia", "Nyquist frequency")}}. In reality, the maximum is slightly lower, but it's close.
+The **audio frequency bandwidth** of a codec indicates the range of audio frequencies that can be represented using the codec. Some codecs operate specifically by eliminating audio that falls outside a given frequency range. There is a correlation between the sample rate and the maximum sound frequency that can be represented by a waveform represented by a codec. At a theoretical level, the maximum frequency a codec can represent is the sample rate divided by two; this frequency is called the {{interwiki("wikipedia", "Nyquist frequency")}}. In reality, the maximum is slightly lower, but it's close.
 
 The audio frequency bandwidth comes into play especially vividly when a codec is designed or configured to represent human speech rather than a broad range of sounds. Human speech generally resides within the audio frequency range of 300 Hz to 18 kHz. However, the vast majority of human vocalizations exist in the range 300 Hz to 8 kHz, and you can capture enough of human vocalizations in the frequency range 500 Hz to 3 kHz to still be understandable.
 
@@ -1274,7 +1274,7 @@ Opus is a good all-around audio codec for use in your web applications, and can 
           {{interwiki("wikipedia", "Nyquist–Shannon sampling theorem")}}
           shows that audio bandwidth can be as much as one half of the sampling
           rate, Opus doesn't allow encoding outside a maximum 20 kHz audio
-          frequency band, since the human ear can't percieve anything above the
+          frequency band, since the human ear can't perceive anything above the
           20 kHz point anyway. This saves some space in the encoded audio.
         </p>
       </td>

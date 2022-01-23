@@ -134,7 +134,7 @@ $ python3 -V
   python3: command not found
 ```
 
-You can easily install Python 3 (along with the _pip3_ tool) from[ python.org](https://www.python.org/):
+You can easily install Python 3 (along with the _pip3_ tool) from [python.org](https://www.python.org/):
 
 1.  Download the required installer:
 
@@ -160,7 +160,7 @@ pip3 list
 
 ### Windows 10
 
-Windows doesn't include Python by default, but you can easily install it (along with the _pip3_ tool) from[ python.org](https://www.python.org/):
+Windows doesn't include Python by default, but you can easily install it (along with the _pip3_ tool) from [python.org](https://www.python.org/):
 
 1.  Download the required installer:
 
@@ -213,7 +213,7 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **Note:** The `VIRTUALENVWRAPPER_PYTHON` and `VIRTUALENVWRAPPER_VIRTUALENV_ARGS `variables point to the normal installation location for Python3, and `source /usr/local/bin/virtualenvwrapper.sh` points to the normal location of the `virtualenvwrapper.sh` script. If the _virtualenv_ doesn't work when you test it, one thing to check is that Python and the script are in the expected location (and then change the startup file appropriately).
+> **Note:** The `VIRTUALENVWRAPPER_PYTHON` and `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` variables point to the normal installation location for Python3, and `source /usr/local/bin/virtualenvwrapper.sh` points to the normal location of the `virtualenvwrapper.sh` script. If the _virtualenv_ doesn't work when you test it, one thing to check is that Python and the script are in the expected location (and then change the startup file appropriately).
 >
 > You can find the correct locations for your system using the commands `which virtualenvwrapper.sh` and `which python3`.
 

@@ -178,6 +178,10 @@ formElem.addEventListener('formdata', (e) => {
 
 If you want to know how to serialize and submit a form via [AJAX](/en-US/docs/Web/Guide/AJAX) _without_ using FormData objects, please read [this paragraph](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files).
 
+## Gotchas
+
+The `FormData` object doesn't include data from the fields that are disabled or the fieldsets that are disabled.
+
 ## See also
 
 - [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)

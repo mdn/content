@@ -36,16 +36,11 @@ serviceWorkerRegistration.showNotification(title, [options]);
   - : An object that allows configuring the notification. It can have the following
     properties:
 
-    - `actions`: An array of actions to display in the notification. The
-      members of the array should be an object literal. It may contain the following
-      values:
+    - `actions`: An array of actions to display in the notification. Each element in the array is an object with the following members:
 
-      - action: A {{domxref("DOMString")}} identifying a user action to be displayed
-        on the notification.
-      - title: A {{domxref("DOMString")}} containing action text to be shown to the
-        user.
-      - icon: A {{domxref("USVString")}} containing the URL of an icon to display
-        with the action.
+      - `action`: A {{domxref("DOMString")}} identifying a user action to be displayed on the notification.
+      - `title`: A {{domxref("DOMString")}} containing action text to be shown to the user.
+      - `icon`: A {{domxref("USVString")}} containing the URL of an icon to display with the action.
 
       Appropriate responses are built using `event.action` within the
       {{event("notificationclick")}} event.

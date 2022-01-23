@@ -39,7 +39,8 @@ This extension exposes three new methods.
 ## Examples
 
 The following example shows how to draw a given geometry multiple times with a single draw call.
-> **Warning:** The following is educational, not production level code. It should generally be avoided to construct data / buffers within the rendering loop or right before use. 
+> **Warning:** The following is educational, not production level code. It should generally be avoided to construct data / buffers within the rendering loop or right before use.
+
 ```js
 // enable the extension
 const ext = gl.getExtension('ANGLE_instanced_arrays');
@@ -65,7 +66,7 @@ gl.bindBuffer(gl.ARRAY_BUFFER, instancePositionBuffer);
 gl.enableVertexAttribArray(instancePositionAttributeLocation);
 gl.vertexAttribPointer(instancePositionAttributeLocation, 3, gl.FLOAT, false, 0, 0);
 
-// mark the attribe as instanced and advance it every single(1) instance rather than every vertex
+// mark the attribute as instanced and advance it every single(1) instance rather than every vertex
 ext.vertexAttribDivisorANGLE(instancePositionAttributeLocation, 1);
 
 // draw geometry for each instance

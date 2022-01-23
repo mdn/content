@@ -44,7 +44,7 @@ These types include keywords and identifiers as well as strings, and urls.
 - `<string>`
   - : A quoted string, such as used for a value of the {{cssxref("content")}} property. See more information on the {{cssxref("&lt;string&gt;")}} type.
 - `<url>`
-  - : A pointer to a resource, for example as the value of {{cssxref("background-image")}}. See more information on the {{cssxref("url")}} page.
+  - : A pointer to a resource, for example as the value of {{cssxref("background-image")}}. See more information on the {{cssxref("url()")}} page.
 
 ## Numeric data types
 
@@ -67,16 +67,16 @@ These data types are used to indicate quantities, indexes, and positions. The ma
 
 These types are used to specify distance and other quantities.
 
-- \<length>
+- `<length>`
   - : Lengths are a `<dimension>` and refer to distances. See more information on the {{cssxref("&lt;length&gt;")}} page.
 - `<angle>`
-  - : Angles are used in properties such as {{cssxref("&lt;linear-gradient&gt;")}} and are a \<dimension> with one of `deg`, `grad`, `rad`, or `turn` units attached. See more information on the {{cssxref("&lt;angle&gt;")}} page.
+  - : Angles are used in properties such as {{cssxref("gradient/linear-gradient()", "linear-gradient()")}} and are a `<dimension>` with one of `deg`, `grad`, `rad`, or `turn` units attached. See more information on the {{cssxref("&lt;angle&gt;")}} page.
 - `<time>`
   - : Duration units are a `<dimension>` with an `s` or `ms` unit. See more information on the {{cssxref("&lt;time&gt;")}} page.
 - `<frequency>`
   - : Frequencies are a `<dimension>` with a `Hz` or `kHz` unit attached. See more information on the {{cssxref("&lt;frequency&gt;")}} page.
 - `<resolution>`
-  - : Is a \<dimension> with a unit identifier of `dpi`, `dpcm`, `dppx`, or `x`. See more information on the {{cssxref("&lt;resolution&gt;")}} page.
+  - : Is a `<dimension>` with a unit identifier of `dpi`, `dpcm`, `dppx`, or `x`. See more information on the {{cssxref("&lt;resolution&gt;")}} page.
 
 ## Combinations of types
 
@@ -134,5 +134,5 @@ The {{cssxref("&lt;position&gt;")}} data type is interpreted as defined for the 
 ## See also
 
 - [CSS Units and Values](/en-US/docs/Web/CSS/CSS_Values_and_Units)
-- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
 - [CSS Functional Notation](/en-US/docs/Web/CSS/CSS_Functions)

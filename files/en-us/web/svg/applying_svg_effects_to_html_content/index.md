@@ -7,7 +7,7 @@ tags:
   - HTML
   - SVG
 ---
-Modern browsers support using [SVG](/en-US/docs/SVG) within [CSS](/en-US/docs/Web/CSS "Cascading Style Sheets") styles to apply graphical effects to HTML content.
+Modern browsers support using [SVG](/en-US/docs/SVG) within [CSS](/en-US/docs/Web/CSS) styles to apply graphical effects to HTML content.
 
 You may specify SVG in styles either within the same document or an external style sheet. There are 3 properties you can use: [`mask`](/en-US/docs/Web/CSS/mask), [`clip-path`](/en-US/docs/Web/CSS/clip-path), and [`filter`](/en-US/docs/Web/CSS/filter).
 
@@ -226,7 +226,7 @@ Blurring is computation heavy, so ensure to use it sparingly, especially in elem
 
 ### Example: Text Effects
 
-SVG effects can also be used to add a more dynamic and flexible approach to adding text compared to plain HTML text. 
+SVG effects can also be used to add a more dynamic and flexible approach to adding text compared to plain HTML text.
 
 By creating the text using SVG elements combined with HTML you can make a variety of different text effects. You can rotate the text:
 

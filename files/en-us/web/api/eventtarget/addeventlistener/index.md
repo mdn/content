@@ -14,7 +14,8 @@ sets up a function that will be called whenever the specified event is delivered
 Common targets are {{domxref("Element")}}, or its children, {{domxref("Document")}}, and {{domxref("Window")}},
 but the target may be any object that supports events (such as {{domxref("XMLHttpRequest")}}).
 
-> **Warning:** The `addEventListener()` method is the _recommended_ way to register an event listener. The benefits are as follows:
+> **Note:** The `addEventListener()` method is the _recommended_ way to register an event listener. The benefits are as follows:
+>
 > - It allows adding more than one handler for an event. This is particularly
 >   useful for libraries, JavaScript modules, or any other kind of
 >   code that needs to work well with other libraries or extensions.
@@ -44,9 +45,9 @@ such as during the bubbling phase.
 ## Syntax
 
 ```js
-target.addEventListener(type, listener);
-target.addEventListener(type, listener, options);
-target.addEventListener(type, listener, useCapture);
+addEventListener(type, listener);
+addEventListener(type, listener, options);
+addEventListener(type, listener, useCapture);
 ```
 
 ### Parameters
@@ -747,7 +748,7 @@ can respond to the change).
 const els = document.getElementsByTagName('*');
 
 // Case 1
-for(let i=0 ; i < els.length; i++){
+for(let i = 0; i < els.length; i++){
   els[i].addEventListener("click", function(e){/*do something*/}, false);
 }
 
@@ -756,7 +757,7 @@ function processEvent(e){
   /* do something */
 }
 
-for(let i=0 ; i < els.length; i++){
+for(let i = 0 ; i < els.length; i++){
   els[i].addEventListener("click", processEvent, false);
 }
 ```
@@ -772,37 +773,38 @@ anonymous functions the loop might create.) In the second case, it's possible to
 because `processEvent` is the function reference.
 
 Actually, regarding memory consumption, the lack of keeping a function reference is not
-the real issue; rather it is the lack of keeping a STATIC function reference. In both
-problem-cases below, a function reference is kept, but since it is redefined on each
-iteration, it is not static. In the third case, the reference to the anonymous function
+the real issue; rather it is the lack of keeping a *static* function reference. In both
+problem-cases below, a function reference is kept, but it is redefined on each
+iteration. In the third case, the reference to the anonymous function
 is being reassigned with each iteration. In the fourth case, the entire function
-definition is unchanging, but it is still being repeatedly defined as if new (unless it
-was \[\[promoted]] by the compiler) and so is not static. Therefore, though appearing to
-be \[\[Multiple identical event listeners]], in both cases each iteration will instead
-create a new listener with its own unique reference to the handler function. However,
-since the function definition itself does not change, the SAME function may still be
-called for every duplicate listener (especially if the code gets optimized.)
-
-Also in both cases, because the function reference was kept but repeatedly redefined
-with each add, the remove-statement from above can still remove a listener, but now only
-the last one added.
+definition is unchanging, but it is still being repeatedly defined as if new. So neither is static. Therefore, though appearing to
+be multiple identical event listeners, in both cases each iteration will instead
+create a new listener with its own unique reference to the handler function.
 
 ```js
-// For illustration only: Note "MISTAKE" of [j] for [i] thus causing desired events to all attach to SAME element
+const els = document.getElementsByTagName('*');
+
+function processEvent(e){
+  /* do something */
+}
+
+// For illustration only: Note the mistake of [j] for [i]. We are registering all event listeners to the first element
 
 // Case 3
-for(let i=0, j=0 ; i<els.length ; i++){
-  /* do lots of stuff with j */
-  els[j].addEventListener("click", processEvent = function(e){/*do something*/}, false);
+for(let i = 0, j = 0 ; i < els.length ; i++){
+  els[j].addEventListener("click", processEvent = function(e){/* do something */}, false);
 }
 
 // Case 4
-for(let i=0, j=0 ; i<els.length ; i++){
-  /* do lots of stuff with j */
-  function processEvent(e){/*do something*/};
+for(let i = 0, j = 0 ; i < els.length ; i++){
+  function processEvent(e){/* do something */};
   els[j].addEventListener("click", processEvent, false);
 }
 ```
+
+Also in both case 3 and case 4, because the function reference was kept but repeatedly redefined
+with each `addEventListener()`, `removeEventListener("click", processEvent, false)` can still remove a listener, but now only
+the last one added.
 
 ### Improving scrolling performance with passive listeners
 
@@ -816,7 +818,7 @@ To prevent this problem, some browsers (specifically, Chrome and Firefox) have c
 the default value of the `passive` option to `true` for the
 {{event("touchstart")}} and {{event("touchmove")}} events on the document-level nodes
 {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. This
-prevents the event listener from being called, so it can't block page rendering while
+prevents the event listener from [canceling the event](/en-US/docs/Web/API/Event/preventDefault), so it can't block page rendering while
 the user is scrolling.
 
 > **Note:** See the compatibility table below if you need to know which

@@ -9,8 +9,7 @@ tags:
   - ARIA roles
   - document structure role
 ---
-The `term` role can be used for a word or phrase with an optional corresponding [`definition`](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role). 
-
+The `term` role can be used for a word or phrase with an optional corresponding [`definition`](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role).
 
 ## Description
 
@@ -20,7 +19,7 @@ The `term` role is used to explicitly identify a word or phrase for which a defi
 
 Don't use the  `role="term"` on interactive elements like links because it can interfere with assistive technology users ability to interact with the element. Also, the term itself is the accessible name, so do not use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby).
 
-> **Warning**: The accessible name should be the term itself, so DO NOT use `aria-label` or `aria-labelledby`.
+> **Warning:** The accessible name should be the term itself, so DO NOT use `aria-label` or `aria-labelledby`.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -49,7 +48,9 @@ Including better semantics, the above could also be written:
   <dfn role="term">Mansplaining</dfn>, <span role="definition">a portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it</span>. 
 </p>
 ```
+
 or without any ARIA (but possibly not how you want it presented)
+
 ```html
 <dl>
   <dt>Mansplaining</dt>
@@ -59,7 +60,7 @@ or without any ARIA (but possibly not how you want it presented)
 
 ## Accessibility Concerns
 
-Don't use the  `role="term"` on interactive elements such as links as it can interfere with the assistive technology user's ability to interact with the element. 
+Don't use the  `role="term"` on interactive elements such as links as it can interfere with the assistive technology user's ability to interact with the element.
 
 ## Best Practices
 
@@ -67,14 +68,12 @@ Allow the term itself to define the accessible name. Do not use `aria-label` or 
 
 ### Prefer HTML
 
-
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#term","ARIA: term role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_term_role","term role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
 
 ## See Also
 

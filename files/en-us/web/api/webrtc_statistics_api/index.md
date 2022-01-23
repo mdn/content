@@ -366,7 +366,7 @@ The {{domxref("RTCStatsReport")}} object contains a map of named objects based o
       <th scope="row"><code>remote-outbound-rtp</code></th>
       <td>
         Statistics describing the state of the outbound data stream from the
-        perpsective of the remote peer.
+        perspective of the remote peer.
       </td>
       <td>
         <ul>

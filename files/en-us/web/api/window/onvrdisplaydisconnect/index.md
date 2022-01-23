@@ -27,7 +27,7 @@ The event object is of type {{domxref("VRDisplayEvent")}}.
 ## Syntax
 
 ```js
-window.onvrdisplaydisconnect = function() { ... };
+window.onvrdisplaydisconnect = function() { /* ... */ };
 ```
 
 ## Examples

@@ -18,7 +18,7 @@ The `oncomplete` event handler of the `OfflineAudioContext` interface is called 
 
 ```js
 var offlineAudioCtx = new OfflineAudioContext();
-offlineAudioCtx.oncomplete = function() { ... }
+offlineAudioCtx.oncomplete = function() { /* ... */ }
 ```
 
 ## Example

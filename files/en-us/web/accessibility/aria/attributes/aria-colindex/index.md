@@ -10,19 +10,19 @@ tags:
   - Reference
 ---
 
-The `aria-colindex` attribute defines an element's column index or position with respect to the total number of columns within a `table`, `grid`, or `treegrid`. 
+The `aria-colindex` attribute defines an element's column index or position with respect to the total number of columns within a `table`, `grid`, or `treegrid`.
 
 ## Description
 
 Some tables are very large, and as a result have only a portion of its content is initially displayed. While loading only a subsection of the columns may improve user experience, you need to let all users know what portions of the content are being displayed, and that all the table's content is not present.
 
-ARIA provides several attributes to provide information about `table`, `grid`, and `treegrid` structures. The `aria-colindex` attribute defines the substructure, an element's column index or position with respect to the total number of columns, within such structures. 
+ARIA provides several attributes to provide information about `table`, `grid`, and `treegrid` structures. The `aria-colindex` attribute defines the substructure, an element's column index or position with respect to the total number of columns, within such structures.
 
-Used in conjunction with the [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) attribute, which informs assistive technologies how many columns the table would have if all columns were present, the `aria-colindex` is used an element's column index or position with respect to that total number of columns. 
+Used in conjunction with the [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) attribute, which informs assistive technologies how many columns the table would have if all columns were present, the `aria-colindex` is used an element's column index or position with respect to that total number of columns.
 
 If all of the columns are present in the DOM, including `aria-colindex` is not necessary as user agents can calculate the column index of each cell or gridcell. However, if any of the columns are left out of the DOM at any time, use `aria-colindex` to indicate the column of each cell or gridcell with respect to the full table.
 
-The value for `aria-colindex` is an integer greater than or equal to 1. Each value should be greater than the previous column's `aria-colindex` and less than or equal to the number of columns in the full table. 
+The value for `aria-colindex` is an integer greater than or equal to 1. Each value should be greater than the previous column's `aria-colindex` and less than or equal to the number of columns in the full table.
 
 If a cell or gridcell spans multiple columns, set [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) to the number of columns it spans if not using {{htmlelement('td')}} and {{htmlelement('th')}} HTML elements, and set `aria-colindex` to the value of the start of the span; the value it would have had if it was only one column wide spanning only the first of its columns.
 
@@ -52,7 +52,7 @@ The following example shows a grid with 6 columns, of which columns 1, 2, 5, and
 </div>
 ```
 
-The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so." If we employ native HTML semantics with {{HTMLElement('table')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, etc., and only display a subsection of columns, the `aria-colcount` and `aria-colindex` attribute are still necessary, but the mark up is not as verbose. 
+The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so." If we employ native HTML semantics with {{HTMLElement('table')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, etc., and only display a subsection of columns, the `aria-colcount` and `aria-colindex` attribute are still necessary, but the mark up is not as verbose.
 
 When using semantic table header elements and not all columns are in the DOM, the `aria-colindex` attribute only needs to be defined once per column in the column header {{HTMLElement('th')}}.
 
@@ -85,7 +85,7 @@ If all the columns are in the DOM, neither `aria-colcount` nor `aria-colindex` a
 - `<integer>`
   - : Integer greater than or equal to 1 and less than or equal to the total number of columns if all were present.
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaColIndex")}}
   - : The  [`ariaColIndex`](/en-US/docs/Web/API/Element/ariaColIndex) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-colindex` attribute.
@@ -94,7 +94,7 @@ If all the columns are in the DOM, neither `aria-colcount` nor `aria-colindex` a
 
 ## Associated roles
 
-Used in roles: 
+Used in roles:
 
 - [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
 - [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
@@ -107,7 +107,7 @@ Inherits into roles:
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-colindex","ARIA: aria-colindex Attribute")}}  | {{Spec2('ARIA')}} |
 
@@ -116,8 +116,8 @@ Inherits into roles:
 - [`aria-colindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) attribute
 - [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) attribute
 - [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) attribute
-- HTML {{HTMLElement('table')}} element 
-- HTML {{HTMLElement('th')}} element 
+- HTML {{HTMLElement('table')}} element
+- HTML {{HTMLElement('th')}} element
 - HTML {{HTMLElement('td')}} element
 
 <section id="Quick_links">

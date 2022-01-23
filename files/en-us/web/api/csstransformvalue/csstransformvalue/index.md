@@ -12,7 +12,7 @@ tags:
   - Reference
 browser-compat: api.CSSTransformValue.CSSTransformValue
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{Draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSTransformValue()`** constructor
 creates a new {{domxref("CSSTransformValue")}} object which represents a list of

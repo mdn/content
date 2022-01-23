@@ -16,11 +16,14 @@ The **`Element.scrollIntoViewIfNeeded()`** method scrolls the current element in
 
 ## Syntax
 
-TODO
+```js
+element.scrollIntoViewIfNeeded();
+element.scrollIntoViewIfNeeded(centerIfNeeded); // Boolean parameter
+```
 
 ### Parameters
 
-- _`opt_center`_
+- `centerIfNeeded` {{optional_inline}}
 
   - : Is an optional boolean value with a default of `true`:
 

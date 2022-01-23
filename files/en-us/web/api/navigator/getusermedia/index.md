@@ -42,7 +42,7 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 ### Parameters
 
 - `constraints`
-  - : A {{domxref("MediaStreamConstraints")}} object specifying the types of media to
+  - : An object specifying the types of media to
     request, along with any requirements for each type. For details, see the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters)
     section under the modern {{domxref("MediaDevices.getUserMedia()")}} method, as well
     as the article [Capabilities,

@@ -31,7 +31,7 @@ service worker can't have a scope broader than its own location, only use the
 
 ```js
 serviceWorkerContainer.register(scriptURL, options)
-  .then(function(serviceWorkerRegistration) { ... });
+  .then(function(serviceWorkerRegistration) { /* ... */ });
 ```
 
 ### Parameters

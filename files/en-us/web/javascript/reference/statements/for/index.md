@@ -50,7 +50,7 @@ for ([initialization]; [condition]; [final-expression])
 - `statement`
   - : A statement that is executed as long as the condition evaluates to true. To execute
     multiple statements within the loop, use a {{jsxref("Statements/block", "block", "",
-    0)}} statement (`{ ... }`) to group those statements. To execute no
+    0)}} statement (`{ /* ... */ }`) to group those statements. To execute no
     statement within the loop, use an {{jsxref("Statements/empty", "empty", "", 0)}}
     statement (`;`).
 

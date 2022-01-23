@@ -10,7 +10,7 @@ This page describes how we use Markdown to write documentation on MDN. We have c
 
 ## Baseline: GitHub-Flavored Markdown
 
-The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. This means that for anything not otherwise specified in this page, you can refer to the GFM specification. GFM in turn is a superset of CommonMark ([http://spec.commonmark.org/](https://spec.commonmark.org/)).
+The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. This means that for anything not otherwise specified in this page, you can refer to the GFM specification. GFM in turn is a superset of CommonMark ([https://spec.commonmark.org/](https://spec.commonmark.org/)).
 
 ## Example code blocks
 
@@ -62,7 +62,21 @@ For example:
 ```js example-good
 const greeting = "I'm a good example";
 ```
+
+```js example-bad
+const greeting = "I'm a bad example";
+```
 ````
+
+These will be rendered as:
+
+```js example-good
+const greeting = "I'm a good example";
+```
+
+```js example-bad
+const greeting = "I'm a bad example";
+```
 
 ### Discussion reference
 
@@ -223,14 +237,14 @@ To create definition lists in MDN authors write a modified form of a GFM unorder
 
 - The GFM `<ul>` contains any number of top-level GFM `<li>` elements.
 - Each of these top-level GFM `<li>` elements must contain, as its final element, one GFM `<ul>` element.
-- This final nested `<ul>` must contain a single GFM `<li>` element, whose text content must start with `: ` (a colon followed by a space). This element may contain block elements, including paragraphs, code blocks, embedded lists, and notes.
+- This final nested `<ul>` must contain a single GFM `<li>` element, whose text content must start with ": " (a colon followed by a space). This element may contain block elements, including paragraphs, code blocks, embedded lists, and notes.
 
 Each of these top-level GFM `<li>` elements will be transformed into a
 `<dt>`/`<dd>` pair, as follows:
 
 - The top-level GFM `<li>` element will be parsed as a GFM `<li>` element
   and its internal contents will comprise the contents of the `<dt>`, except for the final nested `<ul>`, which will not be included in the `<dt>`.
-- The `<li>` element in the final nested `<ul>` will be parsed as a GFM `<li>` element and its internal contents will comprise the contents of the `<dd>`, except for the leading `: `, which will be discarded.
+- The `<li>` element in the final nested `<ul>` will be parsed as a GFM `<li>` element and its internal contents will comprise the contents of the `<dd>`, except for the leading ": ", which will be discarded.
 
 For example, this is a `<dl>`:
 
@@ -437,7 +451,7 @@ This issue was resolved in <https://github.com/mdn/content/issues/4325>, <https:
 
 ## Superscript and subscript
 
-Writers will be able to use the HTML {{HTMLElement("sup")}}> and {{HTMLElement("sub")}} elements if necessary, but should use alternatives if possible. In particular:
+Writers will be able to use the HTML {{HTMLElement("sup")}} and {{HTMLElement("sub")}} elements if necessary, but should use alternatives if possible. In particular:
 
 - For exponentiation, use the caret: `2^53`.
 - For ordinal expressions like 1

@@ -13,6 +13,7 @@ tags:
   - WebRTC
 browser-compat: api.RTCSessionDescription
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`RTCSessionDescription`** interface describes one end of a connection—or potential connection—and how it's configured. Each `RTCSessionDescription` consists of a description {{domxref("RTCSessionDescription.type", "type")}} indicating which part of the offer/answer negotiation process it describes and of the {{Glossary("SDP")}} descriptor of the session.
@@ -91,19 +92,25 @@ _The `RTCSessionDescription` doesn't inherit any methods._
 
 ```js
 signalingChannel.onmessage = function (evt) {
-    if (!pc)
-        start(false);
+  if (!pc) start(false);
 
-    var message = JSON.parse(evt.data);
-    if (message.sdp)
-        pc.setRemoteDescription(new RTCSessionDescription(message), function () {
-            // if we received an offer, we need to answer
-            if (pc.remoteDescription.type == "offer")
-                pc.createAnswer(localDescCreated, logError);
-        }, logError);
-    else
-        pc.addIceCandidate(new RTCIceCandidate(message.candidate),
-            function () {}, logError);
+  var message = JSON.parse(evt.data);
+  if (message.sdp)
+    pc.setRemoteDescription(
+      new RTCSessionDescription(message),
+      function () {
+        // if we received an offer, we need to answer
+        if (pc.remoteDescription.type == "offer")
+          pc.createAnswer(localDescCreated, logError);
+      },
+      logError
+    );
+  else
+    pc.addIceCandidate(
+      new RTCIceCandidate(message.candidate),
+      function () {},
+      logError
+    );
 };
 ```
 
@@ -117,5 +124,5 @@ signalingChannel.onmessage = function (evt) {
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection.setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription()")}}
