@@ -14,7 +14,7 @@ Every JavaScript function is actually a `Function` object. This can be seen with
 ## Constructor
 
 - {{jsxref("Function/Function", "Function()")}}
-  - : Creates a new `Function` object. Calling the constructor directly can create functions dynamically but suffers from security and similar (but far less significant) performance issues to {{jsxref("Global_Objects/eval", "eval")}}. However, unlike eval, the `Function` constructor creates functions that execute in the global scope only.
+  - : Creates a new `Function` object. Calling the constructor directly can create functions dynamically but suffers from security and similar (but far less significant) performance issues to {{jsxref("Global_Objects/eval", "eval()")}}. However, unlike `eval()`, the `Function` constructor creates functions that execute in the global scope only.
 
 ## Instance properties
 
@@ -47,7 +47,7 @@ Every JavaScript function is actually a `Function` object. This can be seen with
 
 ### Difference between Function constructor and function declaration
 
-Functions created with the `Function` constructor do not create closures to their creation contexts; they always are created in the global scope. When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the `Function` constructor was created. This is different from using {{jsxref("Global_Objects/eval", "eval")}} with code for a function expression.
+Functions created with the `Function` constructor do not create closures to their creation contexts; they always are created in the global scope. When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the `Function` constructor was created. This is different from using {{jsxref("Global_Objects/eval", "eval()")}} with code for a function expression.
 
 ```js
 var x = 10;
