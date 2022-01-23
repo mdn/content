@@ -38,8 +38,6 @@ The function `square` takes one parameter, called `number`. The function consist
 return number * number;
 ```
 
-### Call-by-sharing
-
 Parameters are essentially passed to functions **by value** — so if the code within the body of a function assigns a completely new value to a parameter that was passed to the function, **the change is not reflected globally or in the code which called that function**.
 
 When you pass an object as a parameter, if the function changes the object's properties, that change is visible outside the function, as shown in the following example:
@@ -58,8 +56,6 @@ myFunc(mycar);
 y = mycar.make; // y gets the value "Toyota"
                 // (the make property was changed by the function)
 ```
-
-The precise term for this behavior is [call-by-sharing](https://en.wiktionary.org/wiki/call_by_sharing), which is different from both strict call-by-value behavior and strict call-by-reference behavior.
 
 ### Function expressions
 
