@@ -26,7 +26,7 @@ A shader is essentially a function required to draw something on the screen. Sha
 
 Vertex shaders manipulate coordinates in a 3D space and are called once per vertex. The purpose of the vertex shader is to set up the `gl_Position` variable — this is a special, global, and built-in GLSL variable. `gl_Position` is used to store the position of the current vertex.
 
-The `void main()` function is a standard way of defining the `gl_Position` variable. Everything inside  `void main()` will be executed by the vertex shader.  A vertex shader yields a variable containing how to project a vertex's position in 3D space onto a 2D screen.
+The `void main()` function is a standard way of defining the `gl_Position` variable. Everything inside `void main()` will be executed by the vertex shader. A vertex shader yields a variable containing how to project a vertex's position in 3D space onto a 2D screen.
 
 ### Fragment shaders
 
@@ -56,23 +56,23 @@ Here's the HTML structure we will use.
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>MDN Games: Shaders demo</title>
-	<style>
-		body { margin: 0; padding: 0; font-size: 0; }
-		canvas { width: 100%; height: 100%; }
-	</style>
-	<script src="three.min.js"></script>
+  <meta charset="utf-8">
+  <title>MDN Games: Shaders demo</title>
+  <style>
+    body { margin: 0; padding: 0; font-size: 0; }
+    canvas { width: 100%; height: 100%; }
+  </style>
+  <script src="three.min.js"></script>
 </head>
 <body>
   <script id="vertexShader" type="x-shader/x-vertex">
-	// vertex shader's code goes here
+  // vertex shader's code goes here
   </script>
   <script id="fragmentShader" type="x-shader/x-fragment">
-	// fragment shader's code goes here
+  // fragment shader's code goes here
   </script>
   <script>
-	// scene setup goes here
+  // scene setup goes here
   </script>
 </body>
 </html>
@@ -98,7 +98,7 @@ Let's continue by writing a simple vertex shader — add the code below inside t
 
 ```glsl
 void main() {
-	gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
+  gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
 }
 ```
 
@@ -114,7 +114,7 @@ Now we'll add the texture shader to the code — add the code below to the body'
 
 ```glsl
 void main() {
-	gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
+  gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
 }
 ```
 
@@ -132,8 +132,8 @@ Then, create the [`shaderMaterial`](https://threejs.org/docs/#Reference/Material
 
 ```js
 var shaderMaterial = new THREE.ShaderMaterial( {
-	vertexShader: document.getElementById( 'vertexShader' ).textContent,
-	fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+  vertexShader: document.getElementById( 'vertexShader' ).textContent,
+  fragmentShader: document.getElementById( 'fragmentShader' ).textContent
 });
 ```
 

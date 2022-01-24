@@ -37,8 +37,7 @@ new Intl.DateTimeFormat(locales, options)
     browser's default locale, pass an empty array. Unicode extension are supported
     (for example "`en-US-u-ca-buddhist`"). For the general form and
     interpretation of the `locales` argument, see the
-    {{jsxref("Global_Objects/Intl", "Intl",
-			"#Locale_identification_and_negotiation", 1)}} page. The following Unicode
+    {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page. The following Unicode
     extension keys are allowed:
 
     - `nu`

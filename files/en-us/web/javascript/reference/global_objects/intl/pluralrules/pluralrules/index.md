@@ -29,8 +29,7 @@ new Intl.PluralRules(locales, options)
 - `locales` {{optional_inline}}
   - : A string with a BCP 47 language tag, or an array of such strings. For the
     general form and interpretation of the `locales`
-    argument, see the {{jsxref("Global_Objects/Intl", "Intl",
-			"#Locale_identification_and_negotiation", 1)}} page.
+    argument, see the {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page.
 - `options` {{optional_inline}}
 
   - : An object with some or all of the following properties:

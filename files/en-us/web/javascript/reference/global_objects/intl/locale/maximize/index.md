@@ -32,8 +32,7 @@ maximize()
 
 A {{jsxref("Intl/Locale", "Locale")}} instance whose `baseName` property returns
 the result of the [Add
-Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) algorithm executed against _{{jsxref("Intl/Locale/baseName",
-		"locale.baseName")}}_.
+Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) algorithm executed against _{{jsxref("Intl/Locale/baseName", "locale.baseName")}}_.
 
 ## Description
 
@@ -49,7 +48,7 @@ Other subtags after the "-u" in the locale identifier are called extension subta
 are not affected by the `maximize()` method. Examples of these subtags
 include {{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}},
 {{jsxref("Intl/Locale/calendar", "Locale.calendar")}}, and {{jsxref("Intl/Locale/numeric",
-	"Locale.numeric")}}.
+  "Locale.numeric")}}.
 
 ## Examples
 
