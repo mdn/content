@@ -96,36 +96,53 @@ The summary paragraph — start by naming the event, saying what interface it is
 This should ideally be 1 or 2 short sentences.
 You could copy most of this from the property's summary on the corresponding API reference page.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes/No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes/No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>
-        A link to the parent interface the event is fired on, e.g.
-        {{domxref("VRDisplayEvent")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        A link to the event's corresponding event handler property, e.g.
-        {{domxref("Window/onvrdisplaypresentchange", "onvrdisplaypresentchange")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener('NameOfTheEvent', event => { });
+
+onNameOfTheEvent = event => { };
+```
+
+## Event type
+
+If the event has a special type, mention it along with its inheritance. If not, indicate that it it a generic event:
+
+_A generic {{domxref("Event")}}._
+
+Or, for example:
+
+_An {{domxref("XRSessionEvent")}}. Inherits from {{domxref("Event")}}._
+
+{{InheritanceDiagram("XRSessionEvent")}}
+
+## Event properties
+
+If the event is not just a generic {{domxref("Event")}}, list the additional properties the event has.
+
+_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+
+- {{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
+  - : The {{domxref("XRSession")}} to which the event refers.
+
+## Description
+
+If you want to provide additional text (too long for the summary), add a Description section.
+It may contain the headings
+
+### Trigger
+
+and
+
+### Use cases
+
+which can provide more information.
 
 ## Examples
 
-Fill in a simple example that nicely shows a typical usage of the event, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information).
+Fill in a simple example that nicely shows a typical usage of the event, then perhaps some more complex examples (see our guide on how to add [code examples](/en-US/docs/MDN/Structures/Code_examples) for more information). You should show how to use the event with both, {{domxref("EventTarget.addEventListener", "addEventListener()")}} and with the event handler property.
 
 ```js
 my code block
