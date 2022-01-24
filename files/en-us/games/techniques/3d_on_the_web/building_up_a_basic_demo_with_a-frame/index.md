@@ -11,11 +11,11 @@ tags:
 ---
 {{GamesSidebar}}
 
-The [WebVR](/en-US/docs/Games/Techniques/3D_on_the_web/WebVR) and [WebGL](/en-US/docs/Web/API/WebGL_API) APIs already enable us to start creating virtual reality (VR) experiences inside web browsers, but the community is still waiting for tools and libraries to appear, to make this easier. Mozilla's [A-Frame](https://aframe.io/) framework provides a markup language allowing us to build 3D VR landscapes using a system familiar to web developers, which follows game development coding principles; this is useful for quickly and successfully building prototypes and demos, without having to write a lot of JavaScript or GLSL. This article explains how to get up and running with A-Frame, and how to use it to build up a simple demo.
+The [WebVR](/en-US/docs/Games/Techniques/3D_on_the_web/WebVR) and [WebGL](/en-US/docs/Web/API/WebGL_API) APIs already enable us to start creating virtual reality (VR) experiences inside web browsers, but the community is still waiting for tools and libraries to appear, to make this easier. Mozilla's [A-Frame](https://aframe.io/) framework provides a markup language allowing us to build 3D VR landscapes using a system familiar to web developers, which follows game development coding principles; this is useful for quickly and successfully building prototypes and demos, without having to write a lot of JavaScript or GLSL. This article explains how to get up and running with A-Frame, and how to use it to build up a simple demo.
 
 ## High level overview
 
-The current version of A-Frame is 0.3.2, which means it's highly experimental, but it already works and you can test it right away in the browser. It runs on desktop, mobile (iOS and Android), and Oculus Rift, Gear VR and HTC Vive.
+The current version of A-Frame is 0.3.2, which means it's highly experimental, but it already works and you can test it right away in the browser. It runs on desktop, mobile (iOS and Android), and Oculus Rift, Gear VR and HTC Vive.
 
 A-Frame is built on top of [WebGL](/en-US/docs/Web/API/WebGL_API), and provides pre built components to use in applications — models, video players, skyboxes, geometries, controls, animations, cursors, etc. It is based on the [entity component system](https://en.wikipedia.org/wiki/Entity_component_system), which is known in the game development world, but it targets web developers with a familiar markup structure, manipulable with JavaScript. The end result is 3D web experiences, which are VR-enabled by default.
 
@@ -24,7 +24,7 @@ A-Frame is built on top of [WebGL](/en-US/docs/Web/API/WebGL_API), and provides 
 Let's start by setting up an environment to create something with A-Frame. We'll then build up a demo and run it. You should start off by:
 
 - Making sure you are using a modern browser with good WebGL support (and WebVR support if you have available VR hardware) such as the latest Firefox or Chrome — download [Firefox Nightly](https://nightly.mozilla.org/) or Chrome (v54 or higher).
-- (Optional) set up a VR device such as Oculus Rift or Google Cardboard.
+- (Optional) set up a VR device such as Oculus Rift or Google Cardboard.
 - Create a new directory to store your project in.
 - Save a copy of the latest [A-Frame JavaScript library file](https://github.com/aframevr/aframe/tree/master/dist) inside your directory (check the GitHub repository for latest stable a dev builds).
 - Open the [A-Frame documentation](https://aframe.io/docs/) in a separate tab — it is useful to refer to.
@@ -42,7 +42,7 @@ The first step is to create an HTML document — inside your project directory, 
   <script src="aframe.min.js"></script>
 </head>
 <body>
-	<!-- HTML goes here -->
+  <!-- HTML goes here -->
 </body>
 </html>
 ```

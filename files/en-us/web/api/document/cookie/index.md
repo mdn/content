@@ -102,7 +102,7 @@ single cookie at a time using this method. Consider also that:
       cross-site and same-site.
 
 - The cookie value string can use {{jsxref("Global_Objects/encodeURIComponent",
-		"encodeURIComponent()")}} to ensure that the string does not contain any commas,
+  "encodeURIComponent()")}} to ensure that the string does not contain any commas,
   semicolons, or whitespace (which are disallowed in cookie values).
 - Some user agent implementations support the following cookie prefixes:
 

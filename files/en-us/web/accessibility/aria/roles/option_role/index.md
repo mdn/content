@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: option role'
 slug: Web/Accessibility/ARIA/Roles/option_role
-tags: 
+tags:
   - Accessibility
   - ARIA
   - roles
@@ -27,60 +27,60 @@ It is highly recommended to use a {{HTMLElement('select')}} element or an  {{HTM
 
 #### Associated Roles
 
--	[`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
-	-	: An `option` _must_ be contained in or owned by a `listbox`
+- [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
+  - : An `option` _must_ be contained in or owned by a `listbox`
 
 #### States and Properties
 
--	[`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
-	-	: Used to describe the selection state of the option. Required.
+- [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
+  - : Used to describe the selection state of the option. Required.
 
--	[`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
-	-	: Used to describe the checked state when options are used in a multiple selection fashion. Supports `true`, `false` and `mixed`. Optional.
+- [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
+  - : Used to describe the checked state when options are used in a multiple selection fashion. Supports `true`, `false` and `mixed`. Optional.
 
--	[`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
-	-	: Used to describe the position in the set of options when it does not match the DOM, such as virtual scrolling where only some options are present at a time. Optional.
+- [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
+  - : Used to describe the position in the set of options when it does not match the DOM, such as virtual scrolling where only some options are present at a time. Optional.
 
--	[`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
-	-	: Used in conjunction with `aria-posinset` to declare the total number of options. Optional.
+- [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
+  - : Used in conjunction with `aria-posinset` to declare the total number of options. Optional.
 
--	[`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
-	-	: Used to indicate that the option is present but not editable. Optional.
+- [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
+  - : Used to indicate that the option is present but not editable. Optional.
 
--	[`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
-	-	: Used to hide the option from accessibility tools. It should only be used to hide non-visible content or visible content if it improves the experience of assistive technology, such as redundant content. Optional.
+- [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
+  - : Used to hide the option from accessibility tools. It should only be used to hide non-visible content or visible content if it improves the experience of assistive technology, such as redundant content. Optional.
 
--	[`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
-	-	: Used to indicate that the value of the option is considered invalid by the application. Optional.
+- [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
+  - : Used to indicate that the value of the option is considered invalid by the application. Optional.
 
--	[`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
-	-	: Used to indicate that an element is being modified, such as while it is loadingOptional.
+- [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
+  - : Used to indicate that an element is being modified, such as while it is loadingOptional.
 
--	[`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-	-	: Used to indicate which element labels the option. The content of the option should be used instead where appropriate. Optional.
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+  - : Used to indicate which element labels the option. The content of the option should be used instead where appropriate. Optional.
 
--	[`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-	-	: Used to label the option. If the label is present in the DOM, `aria-labelledby` should be used instead. Optional.
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+  - : Used to label the option. If the label is present in the DOM, `aria-labelledby` should be used instead. Optional.
 
 (For further details and a full list of ARIA states and properties see the <a href="https://www.w3.org/TR/wai-aria-1.1/#option">ARIA `option` (role)</a> documentation.)
 
 ## Specifications
 
 <table>
-	<tbody>
-		<tr>
-			<th scope="col">Specification</th>
-			<th scope="col">Status</th>
-		</tr>
-		<tr>
-			<td>{{SpecName("ARIA","#option","ARIA option role")}}</td>
-			<td>{{Spec2('ARIA')}}</td>
-		</tr>
-		<tr>
-			<td>{{SpecName("ARIA Authoring Practices 1.2","#Listbox","option in a Listbox example")}}</td>
-			<td>{{Spec2('ARIA Authoring Practices 1.2')}}</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+    </tr>
+    <tr>
+      <td>{{SpecName("ARIA","#option","ARIA option role")}}</td>
+      <td>{{Spec2('ARIA')}}</td>
+    </tr>
+    <tr>
+      <td>{{SpecName("ARIA Authoring Practices 1.2","#Listbox","option in a Listbox example")}}</td>
+      <td>{{Spec2('ARIA Authoring Practices 1.2')}}</td>
+    </tr>
+  </tbody>
 </table>
 
 ## See also
@@ -93,7 +93,7 @@ It is highly recommended to use a {{HTMLElement('select')}} element or an  {{HTM
 - [ARIA: `listbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
 
 <section id="Quick_links">
-	<ol>
-	  <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-	</ol>
+  <ol>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+  </ol>
 </section>

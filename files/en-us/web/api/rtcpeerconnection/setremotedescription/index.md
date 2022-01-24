@@ -83,8 +83,7 @@ await myPeerConnection.setRemoteDescription(description);
 createMyStream();
 ```
 
-Since it's unnecessary, the {{domxref("RTCSessionDescription.RTCSessionDescription",
-	"RTCSessionDescription()")}} constructor is deprecated.
+Since it's unnecessary, the {{domxref("RTCSessionDescription.RTCSessionDescription", "RTCSessionDescription()")}} constructor is deprecated.
 
 ### Return value
 
@@ -136,7 +135,7 @@ by `setRemoteDescription()`:
 When you call `setRemoteDescription()`, the ICE agent checks to make sure
 the {{domxref("RTCPeerConnection")}} is in either the `stable` or
 `have-remote-offer` {{domxref("RTCPeerConnection.signalingState",
-	"signalingState")}}. These states indicate that either an existing connection is being
+  "signalingState")}}. These states indicate that either an existing connection is being
 renegotiated or that an offer previously specified by an earlier call to
 `setRemoteDescription()` is to be replaced with the new offer. In either of
 those two cases, we're at the beginning of the negotiation process, and the offer is
