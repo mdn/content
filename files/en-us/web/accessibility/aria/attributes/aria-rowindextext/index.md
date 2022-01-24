@@ -10,7 +10,7 @@ tags:
   - Reference
 ---
 
-The `aria-rowindextext` attribute defines a human-readable text alternative of `aria-rowindex`. 
+The `aria-rowindextext` attribute defines a human-readable text alternative of `aria-rowindex`.
 
 ## Description
 
@@ -25,7 +25,7 @@ The `aria-rowindextext` is added to each {{HTMLElement('row')}} or to elements w
 - `<string>`
   - The human readable text alternative of the numeric [`aria-spanindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-spanindex)
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaRowIndexText")}}
   - : The  [`ariaRowIndexText`](/en-US/docs/Web/API/Element/ariaRowIndexText) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowindextext` attribute.
@@ -34,7 +34,7 @@ The `aria-rowindextext` is added to each {{HTMLElement('row')}} or to elements w
 
 ## Associated roles
 
-Used in roles: 
+Used in roles:
 
 - [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
 - [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
@@ -47,7 +47,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-rowindextext","ARIA: aria-rowindextext Attribute")}}  | {{Spec2('ARIA')}} |
 

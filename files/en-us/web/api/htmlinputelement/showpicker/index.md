@@ -13,7 +13,7 @@ browser-compat: api.HTMLInputElement.showPicker
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLInputElement.showPicker()`** method shows a browser picker to the
-user. 
+user.
 
 A browser picker is shown when the element is one of these types: `"date"`,
 `"month"`, `"week"`, `"time"`, `"datetime-local"`, `"color"`, or `"file"`. It

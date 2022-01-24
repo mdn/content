@@ -105,7 +105,7 @@ The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{
 
 ### Layout for input type="search"
 
-Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See {{bug(558594)}} for more details)
+Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See {{bug(558594)}} for more details)
 
 <table>
   <thead>
@@ -555,7 +555,7 @@ The [`@layer`](en-US/docs/Web/CSS/@layer) rule declares a cascade layer, which a
 ### Property: hyphenate-character
 
 The {{cssxref("hyphenate-character")}} property can be used to set a string that is used instead of a hyphen character (`-`) at the end of a hyphenation line break.
-It can also be used to specify that the character is selected to be appropriate for the language conventions of the affected content. 
+It can also be used to specify that the character is selected to be appropriate for the language conventions of the affected content.
 (See {{bug(1746187)}} for more details.)
 
 <table>
@@ -1147,7 +1147,7 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
 
 #### HTML Sanitizer API
 
-The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document’s DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}}) for more information. See {{bug('1673309')}} for more details.
+The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document’s DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}}) for more information. See {{bug('1673309')}} for more details.
 
 <table>
   <thead>
@@ -1878,7 +1878,7 @@ The Network Monitor displays information for [server-sent](/en-US/docs/Web/API/S
 
 ### CSS browser compatibility tooltips
 
-The CSS Rules View can display browser compatibility tooltips next to any CSS properties that have known issues. For more information see: [Examine and edit HTML > Browser Compat Warnings](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#browser_compat_warnings).
+The CSS Rules View can display browser compatibility tooltips next to any CSS properties that have known issues. For more information see: [Examine and edit HTML > Browser Compat Warnings](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#browser_compat_warnings).
 
 <table>
   <thead>

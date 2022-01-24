@@ -167,7 +167,7 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
     - `inline-block`
 
       - : The element generates a block element box that will be flowed with surrounding content as if it were a single inline box (behaving much like a replaced element would).
-      
+
         It is equivalent to `inline flow-root`.
 
     - `inline-table`

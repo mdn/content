@@ -50,7 +50,7 @@ Cookies:
 
 DOM Storage:
 
-- [localStorage](/en-US/docs/Web/API/Web_Storage_API): [`Window.localStorage`](/en-US/docs/Web/API/Window/localStorage): read and write attempts throw a `SecurityError` exception.  Prior to Firefox 70: [`Window.localStorage`](/en-US/docs/Web/API/Window/localStorage) is `null`. Thus, attempts to read and write using this object will throw a `TypeError` exception.
+- [localStorage](/en-US/docs/Web/API/Web_Storage_API): [`Window.localStorage`](/en-US/docs/Web/API/Window/localStorage): read and write attempts throw a `SecurityError` exception. Prior to Firefox 70: [`Window.localStorage`](/en-US/docs/Web/API/Window/localStorage) is `null`. Thus, attempts to read and write using this object will throw a `TypeError` exception.
 - [sessionStorage](/en-US/docs/Web/API/Web_Storage_API): read and write attempts are permitted.
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API): attempting to access the IndexedDB factory object throws a `SecurityError` exception.
 
@@ -101,7 +101,7 @@ Third-party storage access may be granted to resources that have been classified
 
 ### Scope of storage access
 
-When storage access is granted, it is scoped to the site of the opener document or subdomains of that origin. Access that is granted on the subdomain of an origin does extend to the top-level origin. As an example, if a resource from `tracker.example` is granted storage access on `foo.example.com`, then `tracker.example` will be able to access its cookies on `bar.foo.example.com` and on `example.com`. 
+When storage access is granted, it is scoped to the site of the opener document or subdomains of that origin. Access that is granted on the subdomain of an origin does extend to the top-level origin. As an example, if a resource from `tracker.example` is granted storage access on `foo.example.com`, then `tracker.example` will be able to access its cookies on `bar.foo.example.com` and on `example.com`.
 
 When storage access is granted to `tracker.example` on `example.com`, all resources loaded from `tracker.example` on any top-level document loaded from `example.com` are immediately given storage access. This includes all resources loaded in the main context of the page, embedded `<iframe>`s, and resources loaded within embedded `<iframe>`s. Storage access is not extended to other resources loaded on `example.com` (e.g. `other-tracker.example`), nor to other first parties on which `tracker.example` is embedded (e.g. `example.org`).
 
@@ -119,9 +119,9 @@ Consider the following embedding scenarios on a top-level page loaded from `exam
 
 ### Storage access expiration
 
-The storage access grant expires after 30 days. Domains classified as tracking resources may be granted third-party storage access on multiple first parties, and the storage permission for each party expires independently. The above heuristics will also serve to extend the lifetime of a third-party storage permission on origins that have already been granted access.  Each time the heuristic is activated, or a success call to the Storage Access API is made, the pre-existing storage access expiration will be extended by 30 days, counting from the time the previous access was granted.
+The storage access grant expires after 30 days. Domains classified as tracking resources may be granted third-party storage access on multiple first parties, and the storage permission for each party expires independently. The above heuristics will also serve to extend the lifetime of a third-party storage permission on origins that have already been granted access. Each time the heuristic is activated, or a success call to the Storage Access API is made, the pre-existing storage access expiration will be extended by 30 days, counting from the time the previous access was granted.
 
-Please note that in the future we expect to make changes to how long storage access will remain valid for.  As mentioned before, the way to know that you will be able to use storage as a third-party going forward will be using the Storage Access API.
+Please note that in the future we expect to make changes to how long storage access will remain valid for. As mentioned before, the way to know that you will be able to use storage as a third-party going forward will be using the Storage Access API.
 
 ## Debugging
 

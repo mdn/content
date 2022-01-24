@@ -22,7 +22,7 @@ SVG presentation attributes are CSS properties that can be used as attributes on
 *   [color-profile](#attr-color-profile)
 *   [color-rendering](#attr-color-rendering)
 *   [cursor](#attr-cursor)
-*   [d](#attr-d) 
+*   [d](#attr-d)
 *   [direction](#attr-direction)
 *   [display](#attr-display)
 *   [dominant-baseline](#attr-dominant-baseline)
@@ -136,13 +136,13 @@ SVG presentation attributes are CSS properties that can be used as attributes on
     *   : It indicates how to determine what side of a path is inside a shape.
         *Value*: **`nonzero`**|`evenodd`|`inherit`; *Animatable*: **Yes**
 *   {{SVGAttr('filter')}}
-    *   : It defines the filter effects defined by the {{SVGElement('filter')}} element that shall be applied to its element.
+    *   : It defines the filter effects defined by the {{SVGElement('filter')}} element that shall be applied to its element.
         *Value*: [\<FuncIRI>](/en-US/docs/Web/SVG/Content_type#funciri)|**`none`**|`inherit`; *Animatable*: **Yes**
 *   {{SVGAttr('flood-color')}}
-    *   : It indicates what color to use to flood the current filter primitive subregion defined through the {{SVGElement('feFlood')}} or {{SVGElement('feDropShadow')}} element.
+    *   : It indicates what color to use to flood the current filter primitive subregion defined through the {{SVGElement('feFlood')}} or {{SVGElement('feDropShadow')}} element.
         *Value*: [\<color>](/en-US/docs/Web/SVG/Content_type#color); *Animatable*: **Yes**
 *   {{SVGAttr('flood-opacity')}}
-    *   : It indicates the opacity value to use across the current filter primitive subregion defined through the {{SVGElement('feFlood')}} or {{SVGElement('feDropShadow')}} element.
+    *   : It indicates the opacity value to use across the current filter primitive subregion defined through the {{SVGElement('feFlood')}} or {{SVGElement('feDropShadow')}} element.
         *Value*: [\<number>](/en-US/docs/Web/SVG/Content_type#number)|[\<percentage>](/en-US/docs/Web/SVG/Content_type#percentage); *Animatable*: **Yes**
 *   {{SVGAttr('font-family')}}
     *   : It indicates which font family will be used to render the text of the element.
@@ -181,7 +181,7 @@ SVG presentation attributes are CSS properties that can be used as attributes on
     *   : It controls spacing between text characters.
         *Value*: **`normal`**|[\<length>](/en-US/docs/Web/SVG/Content_type#length)|`inherit`; *Animatable*: **Yes**
 *   {{SVGAttr('lighting-color')}}
-    *   : It defines the color of the light source for filter primitives elements {{SVGElement('feDiffuseLighting')}} and {{SVGElement('feSpecularLighting')}}.
+    *   : It defines the color of the light source for filter primitives elements {{SVGElement('feDiffuseLighting')}} and {{SVGElement('feSpecularLighting')}}.
         *Value*: [\<color>](/en-US/docs/Web/SVG/Content_type#color); *Animatable*: **Yes**
 *   {{SVGAttr('marker-end')}}
     *   : It defines the arrowhead or polymarker that will be drawn at the final vertex of the given {{SVGElement('path')}} element or basic shape.
@@ -205,7 +205,7 @@ SVG presentation attributes are CSS properties that can be used as attributes on
     *   : Defines whether or when an element may be the target of a mouse event.
         *Value*: `bounding-box`|**`visiblePainted`**|`visibleFil`|`visibleStroke`|`visible` |`painted`|`fill`|`stroke`|`all`|`none`; *Animatable*: **Yes**
 *   {{SVGAttr('shape-rendering')}}
-    *   : Hints about what tradeoffs to make as the browser renders {{SVGElement('path')}} element or basic shapes.
+    *   : Hints about what tradeoffs to make as the browser renders {{SVGElement('path')}} element or basic shapes.
         *Value*: **`auto`**|`optimizeSpeed`|`crispEdges`|`geometricPrecision` |`inherit`; *Animatable*: **Yes**
 *   {{SVGAttr('solid-color')}}
     *   : -

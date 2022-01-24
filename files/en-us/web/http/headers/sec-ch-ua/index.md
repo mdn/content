@@ -71,7 +71,7 @@ Sec-CH-UA: "<brand>";v="<significant version>", ...
 `Sec-CH-UA` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints).
 Unless explicitly blocked by a user agent policy, it will be sent in all requests (without the server having to opt in by sending {{HTTPHeader("Accept-CH")}}).
 
-Strings from Chromium, Chrome, Edge, and Opera desktop browsers are shown below. 
+Strings from Chromium, Chrome, Edge, and Opera desktop browsers are shown below.
 Note that they all share the "Chromium" brand, but have an additional brand indicating their origin.
 They also have an intentionally incorrect brand string, which may appear in any position and have different text.
 

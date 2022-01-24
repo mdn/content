@@ -143,7 +143,7 @@ The techniques below describe each composite role as well as their required and 
 
 - [`aria-dropeffect`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect) {{deprecated_inline}}
 - [`aria-grabbed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed) {{deprecated_inline}}
- 
+
 ### Relationship attributes
 
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)

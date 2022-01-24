@@ -10,8 +10,8 @@ tags:
 ---
 {{HTTPSidebar}}
 
-The HTTP **`101 Switching Protocols`** response code indicates
-a protocol to which the server switches. 
+The HTTP **`101 Switching Protocols`** response code indicates
+a protocol to which the server switches.
 The protocol is specified in the {{HTTPHeader("Upgrade")}} request header received from a client.
 
 The server includes in this response an {{HTTPHeader("Upgrade")}} response header to
