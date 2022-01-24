@@ -56,7 +56,9 @@ typeof Object(1n) === 'object'  // true
 
 The following operators may be used with BigInt values or object-wrapped BigInt values:
 
-    + * - % **
+```
++ * - % **
+```
 
 [Bitwise operators](/en-US/docs/Web/JavaScript/Reference/Operators) are supported as well, except `>>>` (zero-fill right shift), as every BigInt value is signed.
 

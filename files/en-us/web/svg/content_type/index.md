@@ -24,7 +24,9 @@ SVG makes use of a number of data types. This article lists these types along wi
 
         When angles are used in an SVG attribute, \<angle> is instead defined as follows:
 
-            angle ::= number ("deg" | "grad" | "rad")?
+        ```
+        angle ::= number ("deg" | "grad" | "rad")?
+        ```
 
         The unit identifiers in such \<angle> values must be in lower case.
 

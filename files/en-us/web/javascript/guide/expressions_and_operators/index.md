@@ -612,8 +612,10 @@ Conceptually, the bitwise logical operators work as follows:
   Numbers with more than 32 bits get their most significant bits discarded.
   For example, the following integer with more than 32 bits will be converted to a 32 bit integer:
 
-      Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
-      After:               1010 0000 0000 0000 0110 0000 0000 0001
+  ```
+  Before: 1110 0110 1111 1010 0000 0000 0000 0110 0000 0000 0001
+  After:               1010 0000 0000 0000 0110 0000 0000 0001
+  ```
 
 - Each bit in the first operand is paired with the corresponding bit in the second operand: first bit to first bit, second bit to second bit, and so on.
 - The operator is applied to each pair of bits, and the result is constructed bitwise.

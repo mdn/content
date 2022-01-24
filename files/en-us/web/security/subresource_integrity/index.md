@@ -28,7 +28,9 @@ An `integrity` value begins with at least one string, with each string including
 
 Example `integrity` string with base64-encoded sha384 hash:
 
-    sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
+```
+sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
+```
 
 So `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` is the "hash" part, and the prefix `sha384` indicates that it's a sha384 hash.
 
@@ -53,17 +55,19 @@ shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 > **Note:**
 >
 > - The pipe-through-`xxd` step takes the hexadecimal output from `shasum` and converts it to binary.
-> - The pipe-through-`awk` step is necessary because `shasum` will pass the hashed filename in its output to `xxd`. That can have disastrous consequences if the filename happens to have valid hex characters in it — because `xxd` will also decode that and pass it to `base64`.
+> - The pipe-through-`awk` step is necessary because `shasum` will pass the hashed filename in its output to `xxd`. That can have disastrous consequences if the filename happens to have valid hex characters in it — because `xxd` will also decode that and pass it to `base64`.
 
 In a Windows environment, you can create a tool for generating SRI hashes with the following code:
 
-    @echo off
-    set bits=384
-    openssl dgst -sha%bits% -binary %1% | openssl base64 -A > tmp
-    set /p a= < tmp
-    del tmp
-    echo sha%bits%-%a%
-    pause
+```bat
+@echo off
+set bits=384
+openssl dgst -sha%bits% -binary %1% | openssl base64 -A > tmp
+set /p a= < tmp
+del tmp
+echo sha%bits%-%a%
+pause
+```
 
 To use that code:
 
@@ -76,7 +80,9 @@ To use that code:
 
 For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin. Therefore, the resource must be served with an [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) header that allows the resource to be shared with the requesting origin; for example:
 
-    Access-Control-Allow-Origin: *
+```
+Access-Control-Allow-Origin: *
+```
 
 ## Examples
 
