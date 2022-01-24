@@ -317,7 +317,9 @@ When specifying the URI of media for an {{ HTMLElement("audio") }} or {{ HTMLEle
 
 A time range is specified using the syntax:
 
-    #t=[starttime][,endtime]
+```
+#t=[starttime][,endtime]
+```
 
 The time can be specified as a number of seconds (as a floating-point value) or as an hours/minutes/seconds time separated with colons (such as 2:05:01 for 2 hours, 5 minutes, and 1 second).
 
@@ -378,18 +380,20 @@ If these work but the files you are supplying don't, there are two possible issu
 
 Although this is usually supported, you may need to add the following to your media server's `.htaccess` file.
 
-    # AddType TYPE/SUBTYPE EXTENSION
+```
+# AddType TYPE/SUBTYPE EXTENSION
 
-    AddType audio/mpeg mp3
-    AddType audio/mp4 m4a
-    AddType audio/ogg ogg
-    AddType audio/ogg oga
+AddType audio/mpeg mp3
+AddType audio/mp4 m4a
+AddType audio/ogg ogg
+AddType audio/ogg oga
 
-    AddType video/mp4 mp4
-    AddType video/mp4 m4v
-    AddType video/ogg ogv
-    AddType video/webm webm
-    AddType video/webm webmv
+AddType video/mp4 mp4
+AddType video/mp4 m4v
+AddType video/ogg ogv
+AddType video/webm webm
+AddType video/webm webmv
+```
 
 #### 2. Your files have been encoded incorrectly
 

@@ -55,11 +55,13 @@ console.countReset();
 
 Console output will look something like this:
 
-    "default: 1"
-    "default: 2"
-    "default: 3"
-    "default: 4"
-    "default: 0"
+```
+"default: 1"
+"default: 2"
+"default: 3"
+"default: 4"
+"default: 0"
+```
 
 Note that the call to `console.counterReset()` resets the value of the
 default counter to zero.

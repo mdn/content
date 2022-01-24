@@ -102,7 +102,9 @@ playButton.addEventListener('click', function() {
 
 The toggle that turns the IIR filter on and off is set up in the similar way. First, the HTML:
 
-    <button class="button-filter" role="switch" data-filteron="false" aria-pressed="false" aria-describedby="label" disabled></button>
+```html
+<button class="button-filter" role="switch" data-filteron="false" aria-pressed="false" aria-describedby="label" disabled></button>
+```
 
 The filter button's `click` handler then connects the `IIRFilter` up to the graph, between the source and the detination:
 

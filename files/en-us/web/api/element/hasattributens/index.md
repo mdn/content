@@ -25,13 +25,15 @@ result = element.hasAttributeNS(namespace,localName)
 
 ## Example
 
-    // Check that the attribute exists before you set a value
-    var d = document.getElementById("div1");
-    if (d.hasAttributeNS(
-           "http://www.mozilla.org/ns/specialspace/",
-           "special-align")) {
-      d.setAttribute("align", "center");
-    }
+```js
+// Check that the attribute exists before you set a value
+var d = document.getElementById("div1");
+if (d.hasAttributeNS(
+        "http://www.mozilla.org/ns/specialspace/",
+        "special-align")) {
+  d.setAttribute("align", "center");
+}
+```
 
 ## Notes
 

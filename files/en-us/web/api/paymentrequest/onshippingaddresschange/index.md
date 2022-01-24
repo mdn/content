@@ -36,20 +36,22 @@ when sending payment information to the server, you should add event listeners f
 {{domxref('PaymentRequest')}} object after instantiation, but before the call
 to `show()`.
 
-    // Initialization of PaymentRequest arguments are excerpted for clarity.
-    var payment = new PaymentRequest(supportedInstruments, details, options);
+```js
+// Initialization of PaymentRequest arguments are excerpted for clarity.
+var payment = new PaymentRequest(supportedInstruments, details, options);
 
-    request.addEventListener('shippingaddresschange', function(evt) {
-      evt.updateWith(new Promise(function(resolve) {
-        updateDetails(details, request.shippingAddress, resolve);
-      }));
-    });
+request.addEventListener('shippingaddresschange', function(evt) {
+  evt.updateWith(new Promise(function(resolve) {
+    updateDetails(details, request.shippingAddress, resolve);
+  }));
+});
 
-    payment.show().then(function(paymentResponse) {
-      // Processing of paymentResponse excerpted for the same of clarity.
-    }).catch(function(err) {
-      console.error("Uh oh, something bad happened", err.message);
-    });
+payment.show().then(function(paymentResponse) {
+  // Processing of paymentResponse excerpted for the same of clarity.
+}).catch(function(err) {
+  console.error("Uh oh, something bad happened", err.message);
+});
+```
 
 ## Browser compatibility
 

@@ -53,10 +53,12 @@ console.count();
 
 Console output will look something like this:
 
-    "default: 1"
-    "default: 2"
-    "default: 3"
-    "default: 4"
+```
+"default: 1"
+"default: 2"
+"default: 3"
+"default: 4"
+```
 
 The label is displayed as `default` because no explicit label was supplied.
 

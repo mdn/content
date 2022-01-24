@@ -118,10 +118,12 @@ The `initKeyEvent` is the current Gecko equivalent of the DOM Level 3 Events
 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}
 {{domxref("Keyboard.initKeyboardEvent()")}} method with the following arguments:
 
-    typeArg of type DOMString
-    canBubbleArg of type boolean
-    cancelableArg of type boolean
-    viewArg of type views::AbstractView
-    keyIdentifierArg of type DOMString
-    keyLocationArg of type unsigned long
-    modifiersList of type DOMString);
+```
+typeArg of type DOMString
+canBubbleArg of type boolean
+cancelableArg of type boolean
+viewArg of type views::AbstractView
+keyIdentifierArg of type DOMString
+keyLocationArg of type unsigned long
+modifiersList of type DOMString);
+```

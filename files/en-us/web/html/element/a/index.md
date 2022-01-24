@@ -20,7 +20,7 @@ browser-compat: html.elements.a
 
 The **`<a>`** [HTML](/en-US/docs/Web/HTML) element (or _anchor_ element), with [its `href` attribute](#attr-href), creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
 
-Content within each `<a>` **should** indicate the link's destination. If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
+Content within each `<a>` **should** indicate the link's destination. If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
 
 {{EmbedInteractiveExample("pages/tabbed/a.html")}}
 
@@ -439,16 +439,18 @@ If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("al
 
 A **skip link** is a link placed as early as possible in {{HTMLElement("body")}} content that points to the beginning of the page's main content. Usually, CSS hides a skip link offscreen until focused.
 
-    <body>
-      <a href="#content" class="skip-link">Skip to main content</a>
+```html
+<body>
+  <a href="#content" class="skip-link">Skip to main content</a>
 
-      <header>
-        …
-      </header>
+  <header>
+    …
+  </header>
 
-      <main id="content"> </main> <!-- The skip link jumps to here -->
+  <main id="content"> </main> <!-- The skip link jumps to here -->
 
-    </body>
+</body>
+```
 
 ```css
 .skip-link {

@@ -13,7 +13,7 @@ browser-compat: api.IDBFactory.databases
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`databases`** method of the {{domxref("IDBFactory")}} interface returns a list representing all the available databases, including their names and versions.
+The **`databases`** method of the {{domxref("IDBFactory")}} interface returns a list representing all the available databases, including their names and versions.
 
 {{AvailableInWorkers}}
 
@@ -31,7 +31,7 @@ The method does not take in any parameters.
 
 ### Return value
 
-A promise that resolves either to an error or a list of dictionaries, each with two elements, `name` and `version`:
+A promise that resolves either to an error or a list of dictionaries, each with two elements, `name` and `version`:
 
 - `name`
   - : The database name.
@@ -49,10 +49,12 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 
 ## Example
 
-    const promise = indexedDB.databases()
-    promise.then(databases => {
-      console.log(databases)
-    })
+```js
+const promise = indexedDB.databases()
+promise.then(databases => {
+  console.log(databases)
+})
+```
 
 ## Specifications
 

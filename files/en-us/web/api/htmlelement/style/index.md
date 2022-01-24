@@ -72,10 +72,12 @@ console.log(out)
 
 The output would be something like:
 
-    ...
-    fontWeight = '' > 'bold'
-    color = 'red' > 'rgb(255, 0, 0)'
-    ...
+```
+...
+fontWeight = '' > 'bold'
+color = 'red' > 'rgb(255, 0, 0)'
+...
+```
 
 Note the presence of the value `bold` for `font-weight` in the computed style and the absence of it in the element's `style` property
 

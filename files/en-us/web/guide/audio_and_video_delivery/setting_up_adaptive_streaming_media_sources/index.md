@@ -120,17 +120,19 @@ A useful piece of software when dealing with MPEG-DASH is [Dash Encoder](https:/
 
 Once encoded your file structure may look something like this:
 
-    play list ->                /segments/news.mp4.mpd
+```
+play list ->                /segments/news.mp4.mpd
 
-    main segment folder ->      /segments/main/
+main segment folder ->      /segments/main/
 
-    100 Kbps segment folder ->  /segments/main/news100 contains (1.m4s, 2.m4s, 3.m4s ... )
+100 Kbps segment folder ->  /segments/main/news100 contains (1.m4s, 2.m4s, 3.m4s ... )
 
-    200 Kbps segment folder ->  /segments/main/news200 contains (1.m4s, 2.m4s, 3.m4s ... )
+200 Kbps segment folder ->  /segments/main/news200 contains (1.m4s, 2.m4s, 3.m4s ... )
 
-    300 Kbps segment folder ->  /segments/main/news300 contains (1.m4s, 2.m4s, 3.m4s ... )
+300 Kbps segment folder ->  /segments/main/news300 contains (1.m4s, 2.m4s, 3.m4s ... )
 
-    400 Kbps segment folder ->  /segments/main/news400 contains (1.m4s, 2.m4s, 3.m4s ... )
+400 Kbps segment folder ->  /segments/main/news400 contains (1.m4s, 2.m4s, 3.m4s ... )
+```
 
 The playlist or `.mpd` file contains XML that explicitly lists where all the various bitrate files reside.
 
@@ -226,21 +228,23 @@ There are a number of useful tools available for HLS encoding
 
 The HLS Index File (much like MPEG-DASH's `.mpd` file) contains the information on where all the media segments reside, as well as other meta data such as bandwidth application. Apple uses the `.m3u8` format (an extension of its `.m3u` playlist format) for index files — see below for an example:
 
-    #EXT-X-VERSION:3
-    #EXTM3U
-    #EXT-X-TARGETDURATION:10
-    #EXT-X-MEDIA-SEQUENCE:1
+```
+#EXT-X-VERSION:3
+#EXTM3U
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:1
 
-    # Old-style integer duration; avoid for newer clients.
-    #EXTINF:10,
-    http://media.example.com/segment0.ts
+# Old-style integer duration; avoid for newer clients.
+#EXTINF:10,
+http://media.example.com/segment0.ts
 
-    # New-style floating-point duration; use for modern clients.
-    #EXTINF:10.0,
-    http://media.example.com/segment1.ts
-    #EXTINF:9.5,
-    http://media.example.com/segment2.ts
-    #EXT-X-ENDLIST
+# New-style floating-point duration; use for modern clients.
+#EXTINF:10.0,
+http://media.example.com/segment1.ts
+#EXTINF:9.5,
+http://media.example.com/segment2.ts
+#EXT-X-ENDLIST
+```
 
 > **Note:** Comprehensive information on how to encode media for Apple's HLS format can be found on [Apple's Developer Pages](https://developer.apple.com/streaming/).
 
