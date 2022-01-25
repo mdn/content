@@ -33,7 +33,9 @@ nodeItem = nodeList.item(index)
 JavaScript also offers an array-like bracketed syntax for obtaining an item from a
 NodeList by index:
 
-    nodeItem = nodeList[index]
+```js
+nodeItem = nodeList[index]
+```
 
 ## Example
 

@@ -83,10 +83,12 @@ console.count("alice");
 
 We will see output like this:
 
-    "bob: 1"
-    "alice: 1"
-    "alice: 2"
-    "alice: 3"
+```
+"bob: 1"
+"alice: 1"
+"alice: 2"
+"alice: 3"
+```
 
 We're now maintaining separate counts based only on the value of `label`.
 

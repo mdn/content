@@ -45,8 +45,10 @@ for (var pair of myHeaders.entries()) {
 
 The result is:
 
-    content-type: text/xml
-    vary: Accept-Language
+```
+content-type: text/xml
+vary: Accept-Language
+```
 
 ## Browser compatibility
 

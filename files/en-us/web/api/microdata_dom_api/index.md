@@ -124,17 +124,19 @@ The HTMLPropertiesCollection interface is used for collections of elements that 
 
 ### Interface description language
 
-    interface HTMLPropertiesCollection : HTMLCollection {
-      // inherits length and item()
-      getter PropertyNodeList? namedItem(DOMString name); // shadows inherited namedItem()
-      readonly attribute DOMString[] names;
-    };
+```
+interface HTMLPropertiesCollection : HTMLCollection {
+  // inherits length and item()
+  getter PropertyNodeList? namedItem(DOMString name); // shadows inherited namedItem()
+  readonly attribute DOMString[] names;
+};
 
-    typedef sequence<any> PropertyValueArray;
+typedef sequence<any> PropertyValueArray;
 
-    interface PropertyNodeList : NodeList {
-      PropertyValueArray getValues();
-    };
+interface PropertyNodeList : NodeList {
+  PropertyValueArray getValues();
+};
+```
 
 - `collection . length`
   - : Returns the number of elements in the collection.

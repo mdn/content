@@ -89,11 +89,13 @@ console.count("alice");
 
 We will see output like this:
 
-    "bob: 1"
-    "alice: 1"
-    "alice: 2"
-    "bob: 0"
-    "alice: 3"
+```
+"bob: 1"
+"alice: 1"
+"alice: 2"
+"bob: 0"
+"alice: 3"
+```
 
 Resetting the value of the counter "bob" only changes the value of that counter. The
 value of "alice" is unchanged.

@@ -49,9 +49,11 @@ for(var value of list.values()) {
 
 The result is:
 
-    <p>
-    #text "hey"
-    <span>
+```
+<p>
+#text "hey"
+<span>
+```
 
 ## Browser compatibility
 
