@@ -24,11 +24,13 @@ tags:
 - {{cssxref("animation-iteration-count")}}
 - {{cssxref("animation-name")}}
 - {{cssxref("animation-play-state")}}
+- {{cssxref("animation-timeline")}}
 - {{cssxref("animation-timing-function")}}
 
 ### CSS At-rules
 
 - {{cssxref("@keyframes")}}
+- {{cssxref("@scroll-timeline")}}
 
 ## Guides
 
