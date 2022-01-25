@@ -132,9 +132,9 @@ On the {{HTMLelement("input")}} element, the most important attribute is the `ty
 This attribute is extremely important because it defines the way the {{HTMLelement("input")}} element appears and behaves.
 You'll find more about this in the [Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls) article later on.
 
-- In our simple example, we use the value {{HTMLelement("input/text")}} for the first input — the default value for this attribute.
+- In our simple example, we use the value {{HTMLelement("input/text", "text")}} for the first input — the default value for this attribute.
   It represents a basic single-line text field that accepts any kind of text input.
-- For the second input, we use the value {{HTMLelement("input/email")}}, which defines a single-line text field that only accepts a well-formed e-mail address.
+- For the second input, we use the value {{HTMLelement("input/email", "email")}}, which defines a single-line text field that only accepts a well-formed e-mail address.
   This turns a basic text field into a kind of "intelligent" field that will perform some validation checks on the data typed by the user.
   It also causes a more appropriate keyboard layout for entering email addresses (e.g. with an @ symbol by default) to appear on devices with dynamic keyboards, like smartphones.
   You'll find out more about form validation in the [client-side form validation](/en-US/docs/Learn/Forms/Form_validation) article later on.
