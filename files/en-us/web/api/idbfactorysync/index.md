@@ -11,9 +11,9 @@ tags:
 ---
 {{APIRef("IndexedDB")}} {{ draft() }}
 
-> **Warning:** The synchronous version of the IndexedDB API was originally intended for use only with [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.
+> **Warning:** The synchronous version of the IndexedDB API was originally intended for use only with [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.
 
-The `IDBFactorySync` interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) provide a synchronous means of accessing the capabilities of indexed databases.
+The `IDBFactorySync` interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) provide a synchronous means of accessing the capabilities of indexed databases.
 
 ## Method overview
 
@@ -40,10 +40,12 @@ The `IDBFactorySync` interface of the [IndexedDB API](/en-US/docs/Web/API/Index
 
 Opens and returns a [connection to a database](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection). Blocks the calling thread until the connection object is ready to return. If there is already a database with the specified name, it uses that one; otherwise, it creates the database using the specified name and description.
 
-    IDBDatabaseSync open (
-      in DOMString name,
-      in DOMString description
-    ) raises (IDBDatabaseException);
+```
+IDBDatabaseSync open (
+  in DOMString name,
+  in DOMString description
+) raises (IDBDatabaseException);
+```
 
 ##### Parameters
 

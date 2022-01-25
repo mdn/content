@@ -11,7 +11,7 @@ tags:
 ---
 {{APIRef("IndexedDB")}} {{ draft() }}
 
-> **Warning:** The synchronous version of the IndexedDB API was originally intended for use only with [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.
+> **Warning:** The synchronous version of the IndexedDB API was originally intended for use only with [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.
 
 The `DatabaseSync` interface in the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents a synchronous [connection to a database](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#database_connection).
 
@@ -97,11 +97,13 @@ The `DatabaseSync` interface in the [IndexedDB API](/en-US/docs/Web/API/IndexedD
 
 Creates and returns a new object store with the given name in the connected database.
 
-     IDBObjectStoreSync createObjectStore(
-      in DOMString name,
-      in DOMString keypath,
-      in optional boolean autoIncrement
-    ) raises  (IDBDatabaseException);
+```
+IDBObjectStoreSync createObjectStore(
+  in DOMString name,
+  in DOMString keypath,
+  in optional boolean autoIncrement
+) raises  (IDBDatabaseException);
+```
 
 ##### Parameters
 
@@ -128,10 +130,12 @@ This method can raise an IDBDatabaseException with the following code:
 
 Opens the object store with the given name in the connected database using the specified mode.
 
-    IDBObjectStoreSync openObjectStore (
-      in DOMString name,
-      in optional unsigned short mode
-    ) raises (IDBDatabaseException);
+```
+IDBObjectStoreSync openObjectStore (
+  in DOMString name,
+  in optional unsigned short mode
+) raises (IDBDatabaseException);
+```
 
 ##### Parameters
 
@@ -156,9 +160,11 @@ This method can raise an IDBDatabaseException with the following code:
 
 Destroys an object store with the given name, as well as all indexes that reference that object store.
 
-    void removeObjectStore (
-      in DOMString storeName
-    ) raises (IDBDatabaseException);
+```
+void removeObjectStore (
+  in DOMString storeName
+) raises (IDBDatabaseException);
+```
 
 ##### Parameters
 
@@ -180,9 +186,11 @@ This method can raise an IDBDatabaseException with the following code:
 
 Sets the version of the connected database.
 
-    void setVersion (
-      in DOMString version
-    );
+```
+void setVersion (
+  in DOMString version
+);
+```
 
 ##### Parameters
 
@@ -197,10 +205,12 @@ Sets the version of the connected database.
 
 Creates and returns a transaction, acquiring locks on the given database objects, within the specified timeout duration, if possible.
 
-    IDBTransactionSync transaction (
-      in optional DOMStringList storeNames,
-      in optional unsigned int timeout
-    ) raises (IDBDatabaseException);
+```
+IDBTransactionSync transaction (
+  in optional DOMStringList storeNames,
+  in optional unsigned int timeout
+) raises (IDBDatabaseException);
+```
 
 ##### Parameters
 

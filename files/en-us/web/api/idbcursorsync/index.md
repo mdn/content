@@ -12,7 +12,7 @@ tags:
 ---
 {{APIRef("IndexedDB")}} {{ draft() }}
 
-> **Warning:** The synchronous version of the IndexedDB API was originally intended for use only with [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.
+> **Warning:** The synchronous version of the IndexedDB API was originally intended for use only with [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.
 
 The `IDBCursorSync` interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) for iterating over multiple records in a database. You can have only one instance of `IDBCursorSync` representing a cursor, but you can have an unlimited number of cursors at the same time. Operations are performed on the underlying index or object store. It enables an application to synchronously process all the records in the cursor's range.
 
@@ -155,9 +155,11 @@ The `IDBCursorSync` interface of the [IndexedDB API](/en-US/docs/Web/API/Indexed
 
 Advances the cursor to the next position along its direction, to the item whose key matches the optional `key` parameter. If no key is specified, advance to the immediate next position. Returns false if the cursor has reached the end of its range; otherwise returns true.
 
-    bool continue (
-      in optional any key
-    );
+```
+bool continue (
+  in optional any key
+);
+```
 
 ##### Parameters
 
@@ -168,8 +170,10 @@ Advances the cursor to the next position along its direction, to the item whose 
 
 Deletes the record at the cursor's position, without changing the cursor's position
 
-    void delete (
-    ) raises (DatabaseException);
+```
+void delete (
+) raises (DatabaseException);
+```
 
 ##### Exceptions
 
