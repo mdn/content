@@ -33,7 +33,7 @@ In this example the [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attribu
 ```html
 <div role="slider" aria-valuenow="1"
   aria-valuemin="1" aria-valuemax="7"
-	aria-valuetext="Sunday">
+  aria-valuetext="Sunday">
 ```
 
 ```js
