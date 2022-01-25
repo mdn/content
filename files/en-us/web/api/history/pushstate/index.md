@@ -24,6 +24,7 @@ session history stack.
 ## Syntax
 
 ```js
+history.pushState(state, title)
 history.pushState(state, title, url)
 ```
 
