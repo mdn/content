@@ -225,7 +225,7 @@ We will use the following code snippet as the base template for the _LocalLibra
 
 > **Note:** We also introduce two additional template tags: `url` and `load static`. These tags will be explained in following sections.
 
-Create a new file ***base_generic.html* **in **/locallibrary/catalog/templates/** and paste the following code to the file:
+Create a new file **base_generic.html** in **/locallibrary/catalog/templates/** and paste the following code to the file:
 
 ```html
 <!DOCTYPE html>
@@ -272,7 +272,7 @@ The base template also references a local css file (**styles.css**) that provide
 
 #### The index template
 
-Create a new HTML file ***index.html* **in **/locallibrary/catalog/templates/** and paste the following code in the file.
+Create a new HTML file **index.html** in **/locallibrary/catalog/templates/** and paste the following code in the file.
 This code extends our base template on the first line, and then replaces the default `content` block for the template.
 
 ```html
