@@ -149,7 +149,7 @@ ng serve
 
 When the CLI prompts you about analytics, answer `no`.
 
-In the browser, navigate to <http://localhost:4200/> to see your new starter application.
+In the browser, navigate to `http://localhost:4200/` to see your new starter application.
 If you change any of the source files, the application automatically reloads.
 
 While `ng serve` is running, you might want to open a second terminal tab or window in order to run commands.
