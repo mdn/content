@@ -308,8 +308,10 @@ async function getProcessedData(url) {
   }
   return processDataInWorker(v)
 }
+```
 
-// alternatively, you can chain the promise with .catch
+Alternatively, you can chain the promise with .catch:
+```js
 async function getProcessedData(url) {
   const v = await downloadData(url).catch(e => { 
     return downloadFallbackData(url)
@@ -318,10 +320,10 @@ async function getProcessedData(url) {
 }
 ```
 
-In the second example, notice there is no `await` statement after the
+In the two rewritten versions, notice there is no `await` statement after the
 `return` keyword, although that would be valid too: The return value of an
 async function is implicitly wrapped in {{jsxref("Promise.resolve")}} - if
-it's not already a promise itself (as in this example).
+it's not already a promise itself (as in the examples).
 
 ## Specifications
 
