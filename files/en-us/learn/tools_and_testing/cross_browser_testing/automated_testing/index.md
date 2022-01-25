@@ -15,7 +15,7 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-Manually running tests on several browsers and devices, several times per day, can get tedious, and time-consuming. To handle this efficiently, you should become familiar with automation tools. In this article, we look at what is available, how to use task runners, and how to use the basics of commercial browser test automation apps such as LambdaTest, Sauce Labs, BrowserStack, and TestingBot.
+Manually running tests on several browsers and devices, several times per day, can get tedious, and time-consuming. To handle this efficiently, you should become familiar with automation tools. In this article, we look at what is available, how to use task runners, and how to use the basics of commercial browser test automation apps such as LambdaTest, Sauce Labs, BrowserStack, and TestingBot.
 
 <table>
   <tbody>
@@ -50,7 +50,7 @@ Throughout this module we have detailed loads of different ways in which you can
 We agree — testing all the things we've looked at in previous articles manually can be a real pain. Fortunately, there are tools to help us automate some of this pain away. There are two main ways in which we can automate the tests we've been talking about in this module:
 
 1.  Use a task runner such as [Grunt](https://gruntjs.com/) or [Gulp](https://gulpjs.com/), or [npm scripts](https://docs.npmjs.com/misc/scripts) to run tests and clean up code during your build process. This is a great way to perform tasks like linting and minifying code, adding in CSS prefixes or transpiling nascent JavaScript features for maximum cross-browser reach, and so on.
-2.  Use a browser automation system like [Selenium](https://www.seleniumhq.org/) to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like [LambdaTest](https://www.lambdatest.com/), [Sauce Labs](https://saucelabs.com/), [BrowserStack](https://www.browserstack.com/), and [TestingBot](https://testingbot.com) are based on Selenium, but allow you to access their set up remotely using a simple interface, saving you the hassle of setting up your own testing system.
+2.  Use a browser automation system like [Selenium](https://www.seleniumhq.org/) to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like [LambdaTest](https://www.lambdatest.com/), [Sauce Labs](https://saucelabs.com/), [BrowserStack](https://www.browserstack.com/), and [TestingBot](https://testingbot.com) are based on Selenium, but allow you to access their set up remotely using a simple interface, saving you the hassle of setting up your own testing system.
 
 We will look at how to set up your own Selenium-based testing system in the next article. In this article, we'll look at how to set up a task runner, and use the basic functionality of commercial systems like the ones mentioned above.
 
@@ -85,7 +85,7 @@ To start using Node/npm-based packages on your projects, you need to set up your
 
 For example, let's first create a test directory to allow us to play without fear of breaking anything.
 
-1.  Create a new directory somewhere sensible using your file manager UI, or, on a command line, by navigating to the location you want and running the following command:
+1.  Create a new directory somewhere sensible using your file manager UI, or, on a command line, by navigating to the location you want and running the following command:
 
     ```bash
     mkdir node-test
@@ -137,7 +137,7 @@ Let's look at setting up Gulp and using it to automate some testing tools.
     npm install --save-dev gulp
     ```
 
-5.  Now create a new file inside your project directory called `gulpfile.js`. This is the file that will run all our tasks. Inside this file, put the following:
+5.  Now create a new file inside your project directory called `gulpfile.js`. This is the file that will run all our tasks. Inside this file, put the following:
 
     ```js
     const gulp = require('gulp');
@@ -148,7 +148,7 @@ Let's look at setting up Gulp and using it to automate some testing tools.
     };
     ```
 
-    This requires the `gulp` module we installed earlier, and then exports a default task that does nothing except for printing a message to the terminal — this is useful for letting us know that Gulp is working. Each gulp task is exported in the same basic format — `exports.taskName = taskFunction`. Each function takes one parameter — a callback to run when the task is completed.
+    This requires the `gulp` module we installed earlier, and then exports a default task that does nothing except for printing a message to the terminal — this is useful for letting us know that Gulp is working. Each gulp task is exported in the same basic format — `exports.taskName = taskFunction`. Each function takes one parameter — a callback to run when the task is completed.
 
 6.  You can run your gulp's default task with the following command — try this now:
 
@@ -166,17 +166,17 @@ To add some real tasks to Gulp, we need to think about what we want to do. A rea
 
 See the links above for full instructions on the different gulp packages we are using.
 
-To use each plugin, you need to first install it via npm, then require any dependencies at the top of the `gulpfile.js` file, then add your test(s) to the bottom of it, and finally export the name of your task to be available via gulp's command.
+To use each plugin, you need to first install it via npm, then require any dependencies at the top of the `gulpfile.js` file, then add your test(s) to the bottom of it, and finally export the name of your task to be available via gulp's command.
 
 #### html-tidy
 
 1.  Install using the following line:
 
     ```bash
-    npm install --save-dev gulp-htmltidy
+    npm install --save-dev gulp-htmltidy
     ```
 
-    > **Note:** `--save-dev` adds the package as a dependency to your project. If you look in your project's `package.json` file, you'll see an entry for it in the `devDependencies` property.
+    > **Note:** `--save-dev` adds the package as a dependency to your project. If you look in your project's `package.json` file, you'll see an entry for it in the `devDependencies` property.
 
 2.  Add the following dependency to `gulpfile.js`:
 
@@ -188,10 +188,10 @@ To use each plugin, you need to first install it via npm, then require any depen
 
     ```js
     function html(cb) {
-      return gulp.src('src/index.html')
-            .pipe(htmltidy())
-            .pipe(gulp.dest('build'));
-        cb();
+      return gulp.src('src/index.html')
+            .pipe(htmltidy())
+            .pipe(gulp.dest('build'));
+        cb();
     }
     ```
 
@@ -207,7 +207,7 @@ To use each plugin, you need to first install it via npm, then require any depen
     exports.default = html;
     ```
 
-Here we are grabbing our development `index.html` file with `gulp.src()`, which allows us to grab a source file to do something with.
+Here we are grabbing our development `index.html` file with `gulp.src()`, which allows us to grab a source file to do something with.
 
 We next use the `pipe()` function to pass that source to another command to do something else with. We can chain as many of these together as we want. We first run `htmltidy()` on the source, which goes through and fixes errors in our file. The second `pipe()` function writes the output HTML file to the `build` directory.
 
@@ -233,14 +233,14 @@ In the input version of the file, you may have noticed that we put an empty {{ht
 
     ```js
     function css(cb) {
-        return gulp.src('src/style.css')
-            .pipe(csslint())
-            .pipe(csslint.formatter('compact'))
-            .pipe(autoprefixer({
-                cascade: false
-            }))
-            .pipe(gulp.dest('build'));
-        cb();
+        return gulp.src('src/style.css')
+            .pipe(csslint())
+            .pipe(csslint.formatter('compact'))
+            .pipe(autoprefixer({
+                cascade: false
+            }))
+            .pipe(gulp.dest('build'));
+        cb();
     }
     ```
 
@@ -279,28 +279,28 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
     ```bash
     npm install --save-dev gulp-babel @babel/preset-env
     npm install --save-dev @babel/core
-    npm install jshint gulp-jshint --save-dev
+    npm install jshint gulp-jshint --save-dev
     ```
 
 2.  Add the following dependencies to `gulpfile.js`:
 
     ```js
     const babel = require('gulp-babel');
-    const jshint = require('gulp-jshint');
+    const jshint = require('gulp-jshint');
     ```
 
 3.  Add the following test to the bottom of `gulpfile.js`:
 
     ```js
     function js(cb) {
-        return gulp.src('src/main.js')
-            .pipe(jshint())
-            .pipe(jshint.reporter('default'))
-            .pipe(babel({
-                presets: ['@babel/env']
-            }))
-            .pipe(gulp.dest('build'));
-            cb();
+        return gulp.src('src/main.js')
+            .pipe(jshint())
+            .pipe(jshint.reporter('default'))
+            .pipe(babel({
+                presets: ['@babel/env']
+            }))
+            .pipe(gulp.dest('build'));
+            cb();
     }
     ```
 
@@ -355,13 +355,13 @@ There are many other task runners available. We certainly aren't trying to say t
 
 ## Using commercial testing services to speed up browser testing
 
-Now let's look at commercial third-party browser testing services and what they can do for us.
+Now let's look at commercial third-party browser testing services and what they can do for us.
 
-The basic premise with such applications is that the company that runs each one has a huge server farm that can run many different tests. When you use this service, you provide a URL of the page you want to test along with information, such as what browsers you want it tested in. The app then configures a new VM with the OS and browser you specified, and returns the test results in the form of screenshots, videos, logfiles, text, etc.
+The basic premise with such applications is that the company that runs each one has a huge server farm that can run many different tests. When you use this service, you provide a URL of the page you want to test along with information, such as what browsers you want it tested in. The app then configures a new VM with the OS and browser you specified, and returns the test results in the form of screenshots, videos, logfiles, text, etc.
 
 You can then step up a gear, using an API to access functionality programmatically, which means that such apps can be combined with task runners, such as your own local Selenium environments and others, to create automated tests.
 
-> **Note:** There are other commercial browser testing systems available but in this article, we'll focus on LambdaTest, Sauce Labs, and BrowserStack. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.
+> **Note:** There are other commercial browser testing systems available but in this article, we'll focus on LambdaTest, Sauce Labs, and BrowserStack. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.
 
 ### LambdaTest
 
@@ -370,21 +370,21 @@ You can then step up a gear, using an API to access functionality programmatical
 1.  Let's get started by [signing up on LambdaTest](https://accounts.lambdatest.com/register) for free.
 2.  Sign in. This should happen automatically after you verify your e-mail address.
 
-> **Note:** Unlike other cloud-based cross browser testing service providers, LambdaTest offers a freemium account where you get lifetime access to their platform. The only difference between their premium and their freemium plan is on the amount of consumption. For automation testing through their Selenium Grid, LambdaTest offers 60 minutes per month of free testing.
+> **Note:** Unlike other cloud-based cross browser testing service providers, LambdaTest offers a freemium account where you get lifetime access to their platform. The only difference between their premium and their freemium plan is on the amount of consumption. For automation testing through their Selenium Grid, LambdaTest offers 60 minutes per month of free testing.
 
 #### The basics: Manual tests
 
-Once you sign in to LambdaTest, you will be routed to the LambdaTest Dashboard. The dashboard will provide you details related to how many minutes you have consumed, how many concurrent sessions are running, your total number of tests to date, and more.
+Once you sign in to LambdaTest, you will be routed to the LambdaTest Dashboard. The dashboard will provide you details related to how many minutes you have consumed, how many concurrent sessions are running, your total number of tests to date, and more.
 
 1.  To start off with manual testing you need to select the **"Real Time Testing"** tab from the left navigation menu.
     ![LambdaTest Dashboard](lambdatest-dashboard.png)
-2.  As you click on the **Real Time Testing** you will be directed to a screen where you can choose the browser configuration, browser version, OS, and screen resolution with which you want to test your website.
+2.  As you click on the **Real Time Testing** you will be directed to a screen where you can choose the browser configuration, browser version, OS, and screen resolution with which you want to test your website.
     ![Real Time Testing](mark-as-bug-1.png)
-3.  As you click on the Start button, a loading screen will appear, providing you with a VM (Virtual Machine) based on your configurations. Once loaded, you can perform live, interactive cross-browser testing with a website.
+3.  As you click on the Start button, a loading screen will appear, providing you with a VM (Virtual Machine) based on your configurations. Once loaded, you can perform live, interactive cross-browser testing with a website.
     [![Mark as bug](mark-as-bug-2.png)](https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png)
-    If you notice an issue with the UI, then you can share it with your colleagues by capturing a screenshot of your VM with the screenshot button. You can also record a video of your test session by hitting the recorder button in your test session.
+    If you notice an issue with the UI, then you can share it with your colleagues by capturing a screenshot of your VM with the screenshot button. You can also record a video of your test session by hitting the recorder button in your test session.
 4.  With the in-built image editor, highlight your screenshot before you push it to your colleagues.![Highlight a bug](mark-as-bug-3.png)
-5.  Using the mark as bug button you can push bugs to numerous third-party tools such as Jira, Asana, Trello, and more. That way you can log a bug directly from your test session on LambdaTest to your project management instance. Check out all the [third-party LambdaTest integrations](https://www.lambdatest.com/integrations).
+5.  Using the mark as bug button you can push bugs to numerous third-party tools such as Jira, Asana, Trello, and more. That way you can log a bug directly from your test session on LambdaTest to your project management instance. Check out all the [third-party LambdaTest integrations](https://www.lambdatest.com/integrations).
 
 > **Note:** All the videos and images captured inside a test session are captured inside the gallery, test logs, and issue tracker at LambdaTest.
 
@@ -413,15 +413,15 @@ The [Sauce Labs dashboard](https://saucelabs.com/beta/dashboard/manual) has a lo
     - Take a screenshot.
     - Test in full screen mode.
 
-Once you stop the session, you'll return to the Manual Tests tab, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. In here you can download any screenshots you took, watch a video of the session, view data logs, and more.
+Once you stop the session, you'll return to the Manual Tests tab, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. In here you can download any screenshots you took, watch a video of the session, view data logs, and more.
 
 > **Note:** This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
 
 #### Advanced: The Sauce Labs API
 
-Sauce Labs has a [restful API](https://wiki.saucelabs.com/display/DOCS/The+Sauce+Labs+REST+API) that allows you to programmatically retrieve details of your account and existing tests, and annotate tests with further details, such as their pass/fail state which isn't recordable by manual testing alone. For example, you might want to run one of your own Selenium tests remotely using Sauce Labs to test a certain browser/OS combination, and then pass the test results back to Sauce Labs.
+Sauce Labs has a [restful API](https://wiki.saucelabs.com/display/DOCS/The+Sauce+Labs+REST+API) that allows you to programmatically retrieve details of your account and existing tests, and annotate tests with further details, such as their pass/fail state which isn't recordable by manual testing alone. For example, you might want to run one of your own Selenium tests remotely using Sauce Labs to test a certain browser/OS combination, and then pass the test results back to Sauce Labs.
 
-It has several clients available to allow you to make calls to the API using your favourite environment, be it PHP, Java, Node.js, etc.
+It has several clients available to allow you to make calls to the API using your favourite environment, be it PHP, Java, Node.js, etc.
 
 Let's have a brief look at how we'd access the API using Node.js and [node-saucelabs](https://github.com/danjenkins/node-saucelabs).
 
@@ -576,117 +576,117 @@ Below we've also provided some other ready-made functions you might find useful 
 
 ```js
 function getBuilds(){
-	request({uri: baseUrl + "builds.json"}, function(err, res, body){
-		console.log(JSON.parse(body));
-	});
-	/* Response:
-	[
-		{
-			automation_build: {
-				name: <string>,
-				duration: <int>,
-				status: <string>,
-				hashed_id: <string>
-			}
-		},
-		{
-			automation_build: {
-				name: <string>,
-				duration: <int>,
-				status: <string>,
-				hashed_id: <string>
-			}
-		},
-		...
-	]
-	*/
+  request({uri: baseUrl + "builds.json"}, function(err, res, body){
+    console.log(JSON.parse(body));
+  });
+  /* Response:
+  [
+    {
+      automation_build: {
+        name: <string>,
+        duration: <int>,
+        status: <string>,
+        hashed_id: <string>
+      }
+    },
+    {
+      automation_build: {
+        name: <string>,
+        duration: <int>,
+        status: <string>,
+        hashed_id: <string>
+      }
+    },
+    ...
+  ]
+  */
 };
 
 function getSessionsInBuild(build){
-	let buildId = build.automation_build.hashed_id;
-	request({uri: baseUrl + "builds/" + buildId + "/sessions.json"}, function(err, res, body){
-		console.log(JSON.parse(body));
-	});
-	/* Response:
-	[
-		{
-			automation_session: {
-				name: <string>,
-				duration: <int>,
-				os: <string>,
-				os_version: <string>,
-				browser_version: <string>,
-				browser: <string>,
-				device: <string>,
-				status: <string>,
-				hashed_id: <string>,
-				reason: <string>,
-				build_name: <string>,
-				project_name: <string>,
-				logs: <string>,
-				browser_url: <string>,
-				public_url: <string>,
-				video_url: <string>,
-				browser_console_logs_url: <string>,
-				har_logs_url: <string>
-			}
-		},
-		{
-			automation_session: {
-				name: <string>,
-				duration: <int>,
-				os: <string>,
-				os_version: <string>,
-				browser_version: <string>,
-				browser: <string>,
-				device: <string>,
-				status: <string>,
-				hashed_id: <string>,
-				reason: <string>,
-				build_name: <string>,
-				project_name: <string>,
-				logs: <string>,
-				browser_url: <string>,
-				public_url: <string>,
-				video_url: <string>,
-				browser_console_logs_url: <string>,
-				har_logs_url: <string>
-			}
-		},
-		...
-	]
-	*/
+  let buildId = build.automation_build.hashed_id;
+  request({uri: baseUrl + "builds/" + buildId + "/sessions.json"}, function(err, res, body){
+    console.log(JSON.parse(body));
+  });
+  /* Response:
+  [
+    {
+      automation_session: {
+        name: <string>,
+        duration: <int>,
+        os: <string>,
+        os_version: <string>,
+        browser_version: <string>,
+        browser: <string>,
+        device: <string>,
+        status: <string>,
+        hashed_id: <string>,
+        reason: <string>,
+        build_name: <string>,
+        project_name: <string>,
+        logs: <string>,
+        browser_url: <string>,
+        public_url: <string>,
+        video_url: <string>,
+        browser_console_logs_url: <string>,
+        har_logs_url: <string>
+      }
+    },
+    {
+      automation_session: {
+        name: <string>,
+        duration: <int>,
+        os: <string>,
+        os_version: <string>,
+        browser_version: <string>,
+        browser: <string>,
+        device: <string>,
+        status: <string>,
+        hashed_id: <string>,
+        reason: <string>,
+        build_name: <string>,
+        project_name: <string>,
+        logs: <string>,
+        browser_url: <string>,
+        public_url: <string>,
+        video_url: <string>,
+        browser_console_logs_url: <string>,
+        har_logs_url: <string>
+      }
+    },
+    ...
+  ]
+  */
 }
 
 function getSessionDetails(session){
-	let sessionId = session.automation_session.hashed_id;
-	request({uri: baseUrl + "sessions/" + sessionId + ".json"}, function(err, res, body){
-		console.log(JSON.parse(body));
-	});
-	/* Response:
-	{
-		automation_session: {
-			name: <string>,
-			duration: <int>,
-			os: <string>,
-			os_version: <string>,
-			browser_version: <string>,
-			browser: <string>,
-			device: <string>,
-			status: <string>,
-			hashed_id: <string>,
-			reason: <string>,
-			build_name: <string>,
-			project_name: <string>,
-			logs: <string>,
-			browser_url: <string>,
-			public_url: <string>,
-			video_url: <string>,
-			browser_console_logs_url: <string>,
-			har_logs_url: <string>
-		}
-	}
-	*/
+  let sessionId = session.automation_session.hashed_id;
+  request({uri: baseUrl + "sessions/" + sessionId + ".json"}, function(err, res, body){
+    console.log(JSON.parse(body));
+  });
+  /* Response:
+  {
+    automation_session: {
+      name: <string>,
+      duration: <int>,
+      os: <string>,
+      os_version: <string>,
+      browser_version: <string>,
+      browser: <string>,
+      device: <string>,
+      status: <string>,
+      hashed_id: <string>,
+      reason: <string>,
+      build_name: <string>,
+      project_name: <string>,
+      logs: <string>,
+      browser_url: <string>,
+      public_url: <string>,
+      video_url: <string>,
+      browser_console_logs_url: <string>,
+      har_logs_url: <string>
+    }
+  }
+  */
 }
 ```
 
@@ -705,7 +705,7 @@ Let's get started with a TestingBot Trial.
 
 #### The basics: Manual tests
 
-The [TestingBot dashboard](https://saucelabs.com/beta/dashboard/manual) lists the various options you can choose from. For now, make sure you are on the *Live Web Testing* tab.
+The [TestingBot dashboard](https://saucelabs.com/beta/dashboard/manual) lists the various options you can choose from. For now, make sure you are on the *Live Web Testing* tab.
 
 1.  Enter the URL of the page you want to test.
 2.  Choose the browser/OS combination you want to test by selecting the combination in the grid.
@@ -717,7 +717,7 @@ The [TestingBot dashboard](https://saucelabs.com/beta/dashboard/manual) lists th
     - Stop the session
     - Change the screen resolution
     - Copy text/notes to a remote clipboard
-    - Take, edit, and download screenshots
+    - Take, edit, and download screenshots
     - Test in full screen mode.
 
 Once you stop the session, you'll return to the _Live Web Testing_ page, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. Here you can download any screenshots you took, watch a video of the test, and view logs for the session.
@@ -767,7 +767,7 @@ We'll cover actually running automated TestingBot tests in the next article.
 
 This was quite a ride, but I'm sure you can start to see the benefits of using automation tools to do some of the heavy lifting in terms of testing.
 
-In the next article, we'll look at setting up our own local automation system using Selenium, and how to combine that with services such as Sauce Labs, BrowserStack and TestingBot.
+In the next article, we'll look at setting up our own local automation system using Selenium, and how to combine that with services such as Sauce Labs, BrowserStack and TestingBot.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}
 

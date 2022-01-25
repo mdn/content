@@ -32,11 +32,11 @@ For example a [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request to `/session/123
 
 ```json
 {
-	"value": {
-		"error": "invalid session id",
-		"message": "No active session with ID 1234",
-		"stacktrace": ""
-	}
+  "value": {
+    "error": "invalid session id",
+    "message": "No active session with ID 1234",
+    "stacktrace": ""
+  }
 }
 ```
 
@@ -46,14 +46,14 @@ Because both WebDriver and JavaScript execution is halted by such a dialog, we s
 
 ```json
 {
-	"value": {
-		"error": "unexpected alert open",
-		"message": "",
-		"stacktrace": "",
-		"data": {
-			"text": "Message from window.alert"
-		}
-	}
+  "value": {
+    "error": "unexpected alert open",
+    "message": "",
+    "stacktrace": "",
+    "data": {
+      "text": "Message from window.alert"
+    }
+  }
 }
 ```
 

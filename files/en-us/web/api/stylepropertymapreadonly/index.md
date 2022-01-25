@@ -33,7 +33,7 @@ The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API]
 - {{domxref('StylePropertyMapReadOnly.has()')}}
   - : Indicates whether the specified property is in the `StylePropertyMapReadOnly` object.
 - {{domxref('StylePropertyMapReadOnly.keys()')}}
-  - : Returns a new _array iterator_ containing the keys for each item in `StylePropertyMapReadOnly`.
+  - : Returns a new _array iterator_ containing the keys for each item in `StylePropertyMapReadOnly`.
 - {{domxref('StylePropertyMapReadOnly.values()')}}
   - : Returns a new _array iterator_ containing the values for each index in the `StylePropertyMapReadOnly` object.
 
@@ -74,15 +74,15 @@ const stylePropertyMap = myElement.computedStyleMap();
 
 // iterate thru the map of all the properties and values, adding a <dt> and <dd> for each
 for (const [prop, val] of stylePropertyMap) {
-	// properties
-	const cssProperty = document.createElement('dt');
-	cssProperty.innerText = prop;
-	stylesList.appendChild(cssProperty);
+  // properties
+  const cssProperty = document.createElement('dt');
+  cssProperty.innerText = prop;
+  stylesList.appendChild(cssProperty);
 
-	// values
-	const cssValue = document.createElement('dd');
-	cssValue.innerText = val;
-	stylesList.appendChild(cssValue);
+  // values
+  const cssValue = document.createElement('dd');
+  cssValue.innerText = val;
+  stylesList.appendChild(cssValue);
 }
 ```
 

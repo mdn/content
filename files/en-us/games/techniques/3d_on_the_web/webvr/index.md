@@ -52,7 +52,7 @@ navigator.getVRDevices().then(function(devices) {
   if (gHMD) {
     for (var i = 0; i < devices.length; ++i) {
       if (devices[i] instanceof PositionSensorVRDevice
-      	 && devices[i].hardwareUnitId === gHMD.hardwareUnitId) {
+         && devices[i].hardwareUnitId === gHMD.hardwareUnitId) {
         gPositionSensor = devices[i];
         break;
       }
