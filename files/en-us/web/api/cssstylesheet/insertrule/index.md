@@ -14,8 +14,6 @@ browser-compat: api.CSSStyleSheet.insertRule
 The **`CSSStyleSheet.insertRule()`**
 method inserts a new [CSS rule](/en-US/docs/Web/API/CSSRule) into the [current style sheet](/en-US/docs/Web/API/CSSStyleSheet).
 
-CSS has some intuitive and not-so-intuitive restrictions affecting where rules can be inserted. There are a number of [exceptions](#exceptions) that will be raised when those rules are violated.
-
 > **Note:** Although `insertRule()` is exclusively a method of
 > {{domxref("CSSStyleSheet")}}, it actually inserts the rule into
 > `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` — its internal
