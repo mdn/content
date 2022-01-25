@@ -310,7 +310,7 @@ async function getProcessedData(url) {
 }
 ```
 
-Alternatively, you can chain the promise with .catch:
+Alternatively, you can chain the promise with `catch()`:
 ```js
 async function getProcessedData(url) {
   const v = await downloadData(url).catch(e => { 
