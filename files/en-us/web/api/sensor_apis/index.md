@@ -96,7 +96,7 @@ navigator.permissions.query({ name: 'accelerometer' })
 });
 ```
 
-An alternative approach is to attempt to use the error and listen for the `SecurityError`.
+An alternative approach is to attempt to use the sensor and listen for the `SecurityError`.
 
 ```js
 const sensor = new AbsoluteOrientationSensor();
