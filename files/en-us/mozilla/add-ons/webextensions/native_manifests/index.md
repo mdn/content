@@ -360,25 +360,37 @@ The detailed rules are the same for all the manifest types, except that the penu
 
 For global visibility, create a registry key with the following name:
 
-    HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\NativeMessagingHosts\<name>
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\NativeMessagingHosts\<name>
+```
 
-    HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\ManagedStorage\<name>
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\ManagedStorage\<name>
+```
 
-    HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<name>
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<name>
+```
 
 The key should have a single default value, which is the path to the manifest.
 
-> **Warning:** As of Firefox 64, the 32-bit registry view ([Wow6432Node) ](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system)will be checked first for these keys, followed by the "native" registry view. Use whichever is appropriate for your application.
+> **Warning:** As of Firefox 64, the 32-bit registry view ([Wow6432Node)](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system) will be checked first for these keys, followed by the "native" registry view. Use whichever is appropriate for your application.
 >
-> **For Firefox 63 and older:** This key should _not_ be created under [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system), even if the app is 32-bit. Previous versions of the browser will always look for the key under the "native" view of the registry, not the 32-bit emulation. To ensure that the key is created in the "native" view, you can pass the `KEY_WOW64_64KEY` or `KEY_WOW64_32KEY` flags into `RegCreateKeyEx`. See [Accessing an Alternate Registry View](<https://msdn.microsoft.com/en-us/library/windows/desktop/aa384129(v=vs.85).aspx>).
+> **For Firefox 63 and older:** This key should _not_ be created under [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system), even if the app is 32-bit. Previous versions of the browser will always look for the key under the "native" view of the registry, not the 32-bit emulation. To ensure that the key is created in the "native" view, you can pass the `KEY_WOW64_64KEY` or `KEY_WOW64_32KEY` flags into `RegCreateKeyEx`. See [Accessing an Alternate Registry View](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384129(v=vs.85).aspx).
 
 For per-user visibility, create a registry key with the following name:
 
-    HKEY_CURRENT_USER\SOFTWARE\Mozilla\NativeMessagingHosts\<name>
+```
+HKEY_CURRENT_USER\SOFTWARE\Mozilla\NativeMessagingHosts\<name>
+```
 
-    HKEY_CURRENT_USER\SOFTWARE\Mozilla\ManagedStorage\<name>
+```
+HKEY_CURRENT_USER\SOFTWARE\Mozilla\ManagedStorage\<name>
+```
 
-    HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<name>
+```
+HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<name>
+```
 
 The key should have a single default value, which is the path to the manifest.
 
@@ -386,42 +398,72 @@ The key should have a single default value, which is the path to the manifest.
 
 For global visibility, store the manifest in:
 
-    /Library/Application Support/Mozilla/NativeMessagingHosts/<name>.json
+```
+/Library/Application Support/Mozilla/NativeMessagingHosts/<name>.json
+```
 
-    /Library/Application Support/Mozilla/ManagedStorage/<name>.json
+```
+/Library/Application Support/Mozilla/ManagedStorage/<name>.json
+```
 
-    /Library/Application Support/Mozilla/PKCS11Modules/<name>.json
+```
+/Library/Application Support/Mozilla/PKCS11Modules/<name>.json
+```
 
 For per-user visibility, store the manifest in:
 
-    ~/Library/Application Support/Mozilla/NativeMessagingHosts/<name>.json
+```
+~/Library/Application Support/Mozilla/NativeMessagingHosts/<name>.json
+```
 
-    ~/Library/Application Support/Mozilla/ManagedStorage/<name>.json
+```
+~/Library/Application Support/Mozilla/ManagedStorage/<name>.json
+```
 
-    ~/Library/Application Support/Mozilla/PKCS11Modules/<name>.json
+```
+~/Library/Application Support/Mozilla/PKCS11Modules/<name>.json
+```
 
 ### Linux
 
 For global visibility, store the manifest in either:
 
-    /usr/lib/mozilla/native-messaging-hosts/<name>.json
+```
+/usr/lib/mozilla/native-messaging-hosts/<name>.json
+```
 
-    /usr/lib/mozilla/managed-storage/<name>.json
+```
+/usr/lib/mozilla/managed-storage/<name>.json
+```
 
-    /usr/lib/mozilla/pkcs11-modules/<name>.json
+```
+/usr/lib/mozilla/pkcs11-modules/<name>.json
+```
 
 or:
 
+```
     /usr/lib64/mozilla/native-messaging-hosts/<name>.json
+```
 
+```
     /usr/lib64/mozilla/managed-storage/<name>.json
+```
 
+```
     /usr/lib64/mozilla/pkcs11-modules/<name>.json
+```
 
 For per-user visibility, store the manifest in:
 
-    ~/.mozilla/native-messaging-hosts/<name>.json
+```
+~/.mozilla/native-messaging-hosts/<name>.json
+```
 
-    ~/.mozilla/managed-storage/<name>.json
+```
+~/.mozilla/managed-storage/<name>.json
+```
 
-    ~/.mozilla/pkcs11-modules/<name>.json
+```
+~/.mozilla/pkcs11-modules/<name>.json
+```

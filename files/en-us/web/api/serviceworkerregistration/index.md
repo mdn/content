@@ -49,7 +49,7 @@ _Also implements properties from its parent interface,_ {{domxref("EventTarget")
 ### Event handlers
 
 - {{domxref("ServiceWorkerRegistration.onupdatefound")}} {{readonlyinline}}
-  - : An [`EventListener`](/en-US/docs/Web/API/EventListener "This method is called whenever an event occurs of the type for which the EventListener interface was registered.") property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
+  - : An [`EventListener`](/en-US/docs/Web/API/EventListener) property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
 
 ## Methods
 

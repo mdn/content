@@ -96,13 +96,13 @@ tags:
 - Key values and the corresponding key codes `"Hyper"` and `"Super"` have been added to represent these legacy modifier keys ({{bug(1232919)}}).
 - Two key values for multimedia numeric keypad keys have been added: `"Key11"` and `"Key12"` ({{bug(1232919)}}).
 - The following new key values have been added for audio control keys: `"AudioBassBoostToggle"`, `"AudioTrebleDown"`, and `"AudioTrebleUp"` ({{bug(123919)}}).
-- Key values have been added for these microphone control keys: ` "``MicrophoneToggle" `, ` "``MicrophoneVolumeDown" `, ` "``MicrophoneVolumeUp" `, and ` "``MicrophoneVolumeMute" ` ({{bug(123919)}}).
-- New key values have been added to support speech recognition devices: "`SpeechCorrectionList"` and ` "``SpeechInputToggle" ` ({{bug(1232919)}}).
-- New key values have been added to support special buttons on phones: ` "``AppSwitch" `, ` "``Call" `, ` "``CameraFocus" `, ` "``EndCall" `, ` "``GoBack" `, ` "``GoHome" `, ` "``HeadsetHook" `, ` "``LastNumberRedial" `, ` "``Notification" `, ` "``MannerMode" `, and ` "``VoiceDial" ` ({{bug(1232919)}}).
-- These new application key values have been added: ` "``LaunchContacts" ` and ` "``LaunchPhone" ` ({{bug(1232919)}}).
-- New key values have been added to support television devices: ` "``TV3DMode" `, ` "``TVAntennaCable" `, ` "``TVAudioDescription" `, ` "``TVAudioDescriptionMixDown" `, ` "``TVAudioDescriptionMixUp" `, ` "``TVContentsMenu" `, ` "``TVDataService" `, ` "``TVInput" `, ` "``TVInputComponent1" `, ` "``TVInputComponent2" `, ` "``TVInputComposite1" `, ` "``TVInputComposite2" `, ` "``TVInputHDMI1" `, ` "``TVInputHDMI2" `, ` "``TVInputHDMI3" `, ` "``TVInputHDMI4" `, ` "``TVInputVGA1" `, ` "``TVMediaContext" `, ` "``TVNetwork" `, ` "``TVNumberEntry" `, ` "``TVRadioService" `, ` "``TVSatellite" `, ` "``TVSatelliteBS" `, ` "``TVSatelliteCS" `, ` "``TVSatelliteToggle" `, ` "``TVTerrestrialAnalog" `, ` "``TVTerrestrialDigital" `, ` "``TVTimer" `, and ` "``DVR" ` ({{bug(1232919)}}).
-- The key value ` "``MediaSelect" ` has been replaced with the standard ` "``LaunchMediaPlayer" ` key value ({{bug(1272592)}}).
-- Additional media player key values have been added as well. These are ` "``MediaAudioTrack" `, ` "``MediaSkipBackward" `, ` "``MediaSkipForward" `, ` "``MediaStepBackward" `, ` "``MediaStepForward" `, ` "``MediaTopMenu" `, ` "``NavigateIn" `, ` "``NavigateNext" `, ` "``NavigateOut" `, and ` "``NavigatePrevious" ` ({{bug(1232919)}}).
+- Key values have been added for these microphone control keys: `MicrophoneToggle`, `MicrophoneVolumeDown`, `MicrophoneVolumeUp`, and `MicrophoneVolumeMute` ({{bug(123919)}}).
+- New key values have been added to support speech recognition devices: `SpeechCorrectionList` and `SpeechInputToggle` ({{bug(1232919)}}).
+- New key values have been added to support special buttons on phones: `AppSwitch`, `Call`, `CameraFocus`, `EndCall`, `GoBack`, `GoHome`, `HeadsetHook`, `LastNumberRedial`, `Notification`, `MannerMode`, and `VoiceDial` ({{bug(1232919)}}).
+- These new application key values have been added: `LaunchContacts` and `LaunchPhone` ({{bug(1232919)}}).
+- New key values have been added to support television devices: `TV3DMode`, `TVAntennaCable`, `TVAudioDescription`, `TVAudioDescriptionMixDown`, `TVAudioDescriptionMixUp`, `TVContentsMenu`, `TVDataService`, `TVInput`, `TVInputComponent1`, `TVInputComponent2`, `TVInputComposite1`, `TVInputComposite2`, `TVInputHDMI1`, `TVInputHDMI2`, `TVInputHDMI3`, `TVInputHDMI4`, `TVInputVGA1`, `TVMediaContext`, `TVNetwork`, `TVNumberEntry`, `TVRadioService`, `TVSatellite`, `TVSatelliteBS`, `TVSatelliteCS`, `TVSatelliteToggle`, `TVTerrestrialAnalog`, `TVTerrestrialDigital`, `TVTimer`, and `DVR` ({{bug(1232919)}}).
+- The key value `MediaSelect` has been replaced with the standard `LaunchMediaPlayer` key value ({{bug(1272592)}}).
+- Additional media player key values have been added as well. These are `MediaAudioTrack`, `MediaSkipBackward`, `MediaSkipForward`, `MediaStepBackward`, `MediaStepForward`, `MediaTopMenu`, `NavigateIn`, `NavigateNext`, `NavigateOut`, and `NavigatePrevious` ({{bug(1232919)}}).
 
 #### Canvas
 

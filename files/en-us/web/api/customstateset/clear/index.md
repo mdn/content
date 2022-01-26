@@ -34,4 +34,3 @@ Undefined.
 ## Browser compatibility
 
 {{Compat}}
-

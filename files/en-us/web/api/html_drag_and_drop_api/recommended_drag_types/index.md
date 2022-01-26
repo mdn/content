@@ -39,15 +39,17 @@ As usual, set the `text/plain` type last, as a fallback for the `text/uri-list` 
 
 Note: the URL type is `uri-list` with an _I_, not an _L_.
 
-To drag multiple links, separate each link inside the `text/uri-list` data with a CRLF linebreak. Lines that begin with a number sign (`#`) are comments, and should not be considered URLs. You can use comments to indicate the purpose of a URL, the title associated with a URL, or other data.
+To drag multiple links, separate each link inside the `text/uri-list` data with a CRLF linebreak. Lines that begin with a number sign (`#`) are comments, and should not be considered URLs. You can use comments to indicate the purpose of a URL, the title associated with a URL, or other data.
 
 > **Warning:** The `text/plain` fallback for multiple links should include all URLs, but no comments.
 
 For example, this sample `text/uri-list` data contains two links and a comment:
 
-    http://www.mozilla.org
-    #A second link
-    http://www.example.com
+```
+http://www.mozilla.org
+#A second link
+http://www.example.com
+```
 
 When retrieving a dropped link, ensure you handle when multiple links are dragged, including any comments. For convenience, the special type `URL` may be used to refer to the first valid link within data for the `text/uri-list` type.
 
@@ -59,10 +61,12 @@ var url = event.dataTransfer.getData("URL");
 
 You may also see data with the Mozilla-specific type `text/x-moz-url`. If it appears, it should appear before the `text/uri-list` type. It holds the URLs of links followed by their titles, separated by a linebreak. For example:
 
-    http://www.mozilla.org
-    Mozilla
-    http://www.example.com
-    Example
+```
+http://www.mozilla.org
+Mozilla
+http://www.example.com
+Example
+```
 
 ## Dragging HTML and XML
 
@@ -180,7 +184,7 @@ function dataProvider(){}
 dataProvider.prototype = {
   QueryInterface : function(iid) {
     if (iid.equals(Components.interfaces.nsIFlavorDataProvider)
-                  || iid.equals(Components.interfaces.nsISupports))
+                  || iid.equals(Components.interfaces.nsISupports))
       return this;
     throw Components.results.NS_NOINTERFACE;
   },

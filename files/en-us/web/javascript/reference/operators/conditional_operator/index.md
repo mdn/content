@@ -33,7 +33,7 @@ condition ? exprIfTrue : exprIfFalse
 - `condition`
   - : An expression whose value is used as a condition.
 - `exprIfTrue`
-  - : An expression which is evaluated if the `condition` evaluates to a {{Glossary("truthy")}} value (one which equals or can be converted to `true`).
+  - : An expression which is executed if the `condition` evaluates to a {{Glossary("truthy")}} value (one which equals or can be converted to `true`).
 - `exprIfFalse`
   - : An expression which is executed if the `condition` is {{Glossary("falsy")}} (that is, has a value which can be converted to `false`).
 

@@ -42,4 +42,3 @@ VideoFrame.close();
 ## Browser compatibility
 
 {{Compat}}
-

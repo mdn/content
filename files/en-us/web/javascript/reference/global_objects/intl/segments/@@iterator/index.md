@@ -25,7 +25,6 @@ The one iterator function available is `.next()`, as described in the [iterator 
 
 A new Iterator object.
 
-
 ## Examples
 
 ```js

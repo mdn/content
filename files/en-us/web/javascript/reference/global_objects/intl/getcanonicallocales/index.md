@@ -61,8 +61,6 @@ Intl.getCanonicalLocales polyfill](https://formatjs.io/docs/polyfills/intl-getca
 
 ## See also
 
-- {{jsxref("Intl/NumberFormat/supportedLocalesOf",
-		"Intl.NumberFormat.supportedLocalesOf()")}}
-- {{jsxref("Intl/DateTimeFormat/supportedLocalesOf",
-		"Intl.DateTimeFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl/NumberFormat/supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl/DateTimeFormat/supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
 - {{jsxref("Intl/Collator/supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}

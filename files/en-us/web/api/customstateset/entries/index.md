@@ -34,4 +34,3 @@ A new iterator object that contains an array of `[value, value]` for each elemen
 ## Browser compatibility
 
 {{Compat}}
-

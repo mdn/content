@@ -95,7 +95,6 @@ It documents a single interface member in detail.
 - [capabilities property](/en-US/docs/Web/API/VRDisplay/capabilities) of the [VRDisplay](/en-US/docs/Web/API/VRDisplay) interface (part of the [WebVR API](/en-US/docs/Web/API/WebVR_API))
 - [Request() constructor](/en-US/docs/Web/API/Request/Request) of the [Request](/en-US/docs/Web/API/Request) interface (part of the [Fetch API](/en-US/docs/Web/API/Fetch_API))
 - [vrdisplaypresentchange event](/en-US/docs/Web/API/Window/vrdisplaypresentchange_event) (part of the [WebVR API](/en-US/docs/Web/API/WebVR_API), hangs off the [Window](/en-US/docs/Web/API/Window)) interface
-- [onvrdisplaypresentchange event handler](/en-US/docs/Web/API/Window/onvrdisplaypresentchange) (part of the [WebVR API](/en-US/docs/Web/API/WebVR_API), hangs off the [Window](/en-US/docs/Web/API/Window)) interface
 
 ### Templates
 
@@ -103,7 +102,6 @@ It documents a single interface member in detail.
 - [API property subpage template](/en-US/docs/MDN/Structures/Page_types/API_property_subpage_template)
 - [API constructor subpage template](/en-US/docs/MDN/Structures/Page_types/API_constructor_subpage_template)
 - [API event subpage template](/en-US/docs/MDN/Structures/Page_types/API_event_subpage_template)
-- [API event handler subpage template](/en-US/docs/MDN/Structures/Page_types/API_event_handler_subpage_template)
 
 ## HTML element reference page
 

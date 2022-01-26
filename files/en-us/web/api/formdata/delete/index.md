@@ -57,6 +57,6 @@ formData.delete('username');
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

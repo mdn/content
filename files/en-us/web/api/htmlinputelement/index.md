@@ -354,7 +354,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
         <code>submit</code>, <code>reset</code>, <code>image</code>). Possible
         values are:<br /><code>on</code>: the browser can autocomplete the value
         using previously stored value<br /><code>off</code>: the user must
-        explicity enter a value
+        explicitly enter a value
       </td>
     </tr>
     <tr>

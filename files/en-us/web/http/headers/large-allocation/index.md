@@ -106,7 +106,7 @@ console](/en-US/docs/Tools/Web_Console).
     you are running a non-win32 version of Firefox, this error will appear. This check can
     be disabled with the "dom.largeAllocation.
 
-    forceEnable" boolean preferece in about:config.
+    forceEnable" boolean preference in about:config.
 
 ## Specifications
 

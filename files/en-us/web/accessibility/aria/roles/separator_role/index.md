@@ -29,6 +29,7 @@ A non-focusable separator is a static structural element that can be used to hel
 <h2>Two years later, my second post</h2>
   ....
 ```
+
 In the example, an image creates a visual separator between two blog posts. The author could have used a semantic thematic break {{HTMLElement('hr')}} element and styled it with CSS to make it blue (and not have to change the image when they change the blog's theme), or the author could have encompassed each post in the semantic {{HTMLElement('article')}} element, or both.
 
 ```html
@@ -61,7 +62,6 @@ The separator role can be used to identify the element as a visual separator bet
 If the separator is focusable, providing a visible boundary between two sections of content and enabling the user to change the relative size of the sections it separates by changing its position, the value of [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) must be set to a number reflecting the current position of the separator and the value must be updated when it changes. The [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) and [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) should also be included if they aren't set to the default values of 0 and 100, respectively.
 
 An accessible name, with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) should be included if there is more than one focusable separator.
-
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -99,7 +99,6 @@ An accessible name, with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attri
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#separator","ARIA: separator role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_separator_role","separator role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
 
 ## See Also
 

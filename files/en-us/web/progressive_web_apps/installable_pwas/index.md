@@ -33,7 +33,7 @@ The key element is a web manifest file, which lists all the information about th
 
 It usually resides in the root folder of a web app. It contains useful information, such as the app’s title, paths to different-sized icons that can be used to represent the app on an OS (such as an icon on the home screen, an entry in the Start menu, or an icon on the desktop), and a background color to use in loading or splash screens. This information is needed for the browser to present the web app properly during the installation process, as well as within the device's app-launching interface, such as the home screen of a mobile device.
 
-The `js13kpwa.webmanifest` file of the[ js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) web app is included in the {{HTMLElement("head")}} block of the `index.html` file using the following line of code:
+The `js13kpwa.webmanifest` file of the [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) web app is included in the {{HTMLElement("head")}} block of the `index.html` file using the following line of code:
 
 ```html
 <link rel="manifest" href="js13kpwa.webmanifest">

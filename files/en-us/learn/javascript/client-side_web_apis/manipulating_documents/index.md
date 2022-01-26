@@ -226,15 +226,17 @@ There is another common way to dynamically manipulate styles on your document, w
 1.  Delete the previous five lines you added to the JavaScript.
 2.  Add the following inside your HTML {{htmlelement("head")}}:
 
-        <style>
-        .highlight {
-          color: white;
-          background-color: black;
-          padding: 10px;
-          width: 250px;
-          text-align: center;
-        }
-        </style>
+    ```html
+    <style>
+    .highlight {
+      color: white;
+      background-color: black;
+      padding: 10px;
+      width: 250px;
+      text-align: center;
+    }
+    </style>
+    ```
 
 3.  Now we'll turn to a very useful method for general HTML manipulation — {{domxref("Element.setAttribute()")}} — this takes two arguments, the attribute you want to set on the element, and the value you want to set it to. In this case we will set a class name of highlight on our paragraph:
 

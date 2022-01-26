@@ -410,26 +410,28 @@ Create a new directory called "beasts", and add the three images in that directo
 
 First, double check that you have the right files in the right places:
 
-    beastify/
+```
+beastify/
 
-        beasts/
-            frog.jpg
-            snake.jpg
-            turtle.jpg
+    beasts/
+        frog.jpg
+        snake.jpg
+        turtle.jpg
 
-        content_scripts/
-            beastify.js
+    content_scripts/
+        beastify.js
 
-        icons/
-            beasts-32.png
-            beasts-48.png
+    icons/
+        beasts-32.png
+        beasts-48.png
 
-        popup/
-            choose_beast.css
-            choose_beast.html
-            choose_beast.js
+    popup/
+        choose_beast.css
+        choose_beast.html
+        choose_beast.js
 
-        manifest.json
+    manifest.json
+```
 
 Now load the extension as a temporary add-on. Open "about:debugging" in Firefox, click "Load Temporary Add-on", and select your **manifest.json** file. You should then see the extension's icon appear in the Firefox toolbar:
 

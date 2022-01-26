@@ -54,13 +54,15 @@ A new {{domxref("ChannelMergerNode")}} object instance.
 
 ## Example
 
-    var ac = new AudioContext();
+```js
+var ac = new AudioContext();
 
-    var options = {
-      numberOfInputs : 2
-    }
+var options = {
+  numberOfInputs : 2
+}
 
-    var myMerger = new ChannelMergerNode(ac, options);
+var myMerger = new ChannelMergerNode(ac, options);
+```
 
 ## Specifications
 

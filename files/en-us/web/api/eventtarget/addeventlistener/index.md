@@ -15,6 +15,7 @@ Common targets are {{domxref("Element")}}, or its children, {{domxref("Document"
 but the target may be any object that supports events (such as {{domxref("XMLHttpRequest")}}).
 
 > **Note:** The `addEventListener()` method is the _recommended_ way to register an event listener. The benefits are as follows:
+>
 > - It allows adding more than one handler for an event. This is particularly
 >   useful for libraries, JavaScript modules, or any other kind of
 >   code that needs to work well with other libraries or extensions.

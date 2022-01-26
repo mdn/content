@@ -20,7 +20,7 @@ Writing HTML is fine, but what if something goes wrong, and you can't work out w
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        HTML familiarity, as covered in, for example, <a
+        HTML familiarity, as covered in, for example, <a
           href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Getting started with HTML</a
         >,
@@ -47,9 +47,9 @@ Writing HTML is fine, but what if something goes wrong, and you can't work out w
 
 When writing code of some kind, everything is usually fine, until that dreaded moment when an error occurs — you've done something wrong, so your code doesn't work — either not at all, or not quite how you wanted it to. For example, the following shows an error reported when trying to {{glossary("compile")}} a simple program written in the [Rust](https://www.rust-lang.org/) language.
 
-![A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. The error message reported is error: unterminated double quote string.](error-message.png)Here, the error message is relatively easy to understand — "unterminated double quote string". If you look at the listing, you can probably see how `println!(Hello, world!");` might logically be missing a double quote. However, error messages can quickly get more complicated and less easy to interpret as programs get bigger, and even simple cases can look a little intimidating to someone who doesn't know anything about Rust.
+![A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. The error message reported is error: unterminated double quote string.](error-message.png)Here, the error message is relatively easy to understand — "unterminated double quote string". If you look at the listing, you can probably see how `println!(Hello, world!");` might logically be missing a double quote. However, error messages can quickly get more complicated and less easy to interpret as programs get bigger, and even simple cases can look a little intimidating to someone who doesn't know anything about Rust.
 
-Debugging doesn't have to be scary though —  the key to being comfortable with writing and debugging any programming language or code is familiarity with both the language and the tools.
+Debugging doesn't have to be scary though —  the key to being comfortable with writing and debugging any programming language or code is familiarity with both the language and the tools.
 
 ## HTML and debugging
 
@@ -106,7 +106,7 @@ It's time to study the permissive nature of HTML code.
 
     - The paragraphs and list items have been given closing tags.
     - It isn't clear where the first `<strong>` element should be closed, so the browser has wrapped each separate block of text with its own strong tag, right down to the bottom of the document!
-    - The incorrect nesting has been fixed by the browser as shown here:
+    - The incorrect nesting has been fixed by the browser as shown here:
 
       ```html
       <strong>strong
@@ -132,13 +132,13 @@ The best strategy is to start by running your HTML page through the [Markup Vali
 
 ![The HTML validator homepage](validator.png)
 
-To specify the HTML to validate, you can provide a web address, upload an HTML file, or directly input some HTML code.
+To specify the HTML to validate, you can provide a web address, upload an HTML file, or directly input some HTML code.
 
 ### Active learning: Validating an HTML document
 
 Let's try this with our [sample document](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html).
 
-1.  First, load the [Markup Validation Service](https://validator.w3.org/) in one browser tab, if it isn't already open.
+1.  First, load the [Markup Validation Service](https://validator.w3.org/) in one browser tab, if it isn't already open.
 2.  Switch to the [Validate by Direct Input](https://validator.w3.org/#validate_by_input) tab.
 3.  Copy all of the sample document's code (not just the body) and paste it into the large text area shown in the Markup Validation Service.
 4.  Press the _Check_ button.
@@ -151,14 +151,16 @@ This should give you a list of errors and other information.
 
 The error messages are usually helpful, but sometimes they are not so helpful; with a bit of practice you can work out how to interpret these to fix your code. Let's go through the error messages and see what they mean. You'll see that each message comes with a line and column number to help you to locate the error easily.
 
-- "Consider adding a `lang` attribute to the `html` start tag to declare the language of this document.": This is not an error but a warning. The [recommendation](https://www.w3.org/International/questions/qa-html-language-declarations) is to always define a language, and this warning explains how to do it.
+- "Consider adding a `lang` attribute to the `html` start tag to declare the language of this document.": This is not an error but a warning. The [recommendation](https://www.w3.org/International/questions/qa-html-language-declarations) is to always define a language, and this warning explains how to do it.
 - "End tag `li` implied, but there were open elements" (2 instances): These messages indicate that an element is open that should be closed. The ending tag is implied, but not actually there. The line/column information points to the first line after the line where the closing tag should really be, but this is a good enough clue to see what is wrong.
 - "Unclosed element `strong`": This is really easy to understand — a {{htmlelement("strong")}} element is unclosed, and the line/column information points right to where it is.
 - "End tag `strong` violates nesting rules": This points out the incorrectly nested elements, and the line/column information points out where they are.
 - "End of file reached when inside an attribute value. Ignoring tag": This one is rather cryptic; it refers to the fact that there is an attribute value not properly formed somewhere, possibly near the end of the file because the end of the file appears inside the attribute value. The fact that the browser doesn't render the link should give us a good clue as to what element is at fault.
-- "End of file seen and there were open elements": This is a bit ambiguous, but basically refers to the fact there are open elements that need to be properly closed. The line numbers point to the last few lines of the file, and this error message comes with a line of code that points out an example of an open element:
+- "End of file seen and there were open elements": This is a bit ambiguous, but basically refers to the fact there are open elements that need to be properly closed. The line numbers point to the last few lines of the file, and this error message comes with a line of code that points out an example of an open element:
 
-      example: <a href="https://www.mozilla.org/>link to Mozilla homepage</a> ↩ </ul>↩ </body>↩</html>
+  ```
+  example: <a href="https://www.mozilla.org/>link to Mozilla homepage</a> ↩ </ul>↩ </body>↩</html>
+  ```
 
   > **Note:** An attribute missing a closing quote can result in an open element because the rest of the document is interpreted as the attribute's content.
 

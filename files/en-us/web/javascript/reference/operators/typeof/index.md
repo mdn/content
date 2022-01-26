@@ -195,7 +195,7 @@ class newClass{};
 
 ### Exceptions
 
-All current browsers expose a non-standard host object [`document.all`](/en-US/docs/Web/API/Document/all "The Document interface's read-only all property returns an HTMLAllCollection rooted at the document node. In other words, it returns the entire contents of the page.")
+All current browsers expose a non-standard host object [`document.all`](/en-US/docs/Web/API/Document/all)
 with type `undefined`.
 
 ```js

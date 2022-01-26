@@ -123,8 +123,10 @@ Since the `GET` method has been used, you'll see the URL `www.foo.com/?say=Hi&to
 
 The HTTP request looks like this:
 
-    GET /?say=Hi&to=Mom HTTP/2.0
-    Host: foo.com
+```
+GET /?say=Hi&to=Mom HTTP/2.0
+Host: foo.com
+```
 
 > **Note:** You can find this example on GitHub — see [get-method.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/get-method.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
@@ -152,12 +154,14 @@ Let's look at an example — this is the same form we looked at in the `GET` sec
 
 When the form is submitted using the `POST` method, you get no data appended to the URL, and the HTTP request looks like so, with the data included in the request body instead:
 
-    POST / HTTP/2.0
-    Host: foo.com
-    Content-Type: application/x-www-form-urlencoded
-    Content-Length: 13
+```
+POST / HTTP/2.0
+Host: foo.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 13
 
-    say=Hi&to=Mom
+say=Hi&to=Mom
+```
 
 The `Content-Length` header indicates the size of the body, and the `Content-Type` header indicates the type of resource sent to the server. We'll discuss these headers later on.
 

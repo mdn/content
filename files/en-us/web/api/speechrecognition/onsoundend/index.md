@@ -16,7 +16,7 @@ browser-compat: api.SpeechRecognition.onsoundend
 
 The **`onsoundend`** property of the
 {{domxref("SpeechRecognition")}} interface represents an event handler that will run
-when any sound — recognisable speech or not — has stopped being detected (when the
+when any sound — recognizable speech or not — has stopped being detected (when the
 [`soundend`](/en-US/docs/Web/API/SpeechRecognition/soundend_event)
 event fires.)
 

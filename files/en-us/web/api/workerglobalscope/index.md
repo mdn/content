@@ -24,7 +24,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 - {{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}
   - : Returns the {{domxref("WorkerNavigator")}} associated with the worker. It is a specific navigator object, mostly a subset of the {{domxref("Navigator")}} for browsing scopes, but adapted to workers.
 - {{domxref("WorkerGlobalScope.self")}} {{readOnlyinline}}
-  - : Returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}} or {{domxref("ServiceWorkerGlobalScope")}}.
+  - : Returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}} or {{domxref("ServiceWorkerGlobalScope")}}.
 - {{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}
   - : Returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
 
@@ -61,10 +61,10 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : Fired at the global/worker scope object when the user's preferred languages change.
     Also available via the {{domxref("WorkerGlobalScope.onlanguagechange")}} property.
 - `rejectionhandled` {{non-standard_inline}}
-  - : An event handler for handled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future.") rejection events.
+  - : An event handler for handled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) rejection events.
     Also available via the {{domxref("WorkerGlobalScope.onrejectionhandled")}} property.
 - `unhandledrejection` {{non-standard_inline}}
-  - : An event handler for unhandled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future.") rejection events.
+  - : An event handler for unhandled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) rejection events.
     Also available via the {{domxref("WorkerGlobalScope.onunhandledrejection")}} property.
 
 ## Methods
@@ -101,7 +101,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Schedules a function to execute in a given amount of time.
 - {{domxref("reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
-  
+
 ## Example
 
 You won't access `WorkerGlobalScope` directly in your code; however, its properties and methods are inherited by more specific global scopes such as {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}}. For example, you could import another script into the worker and print out the contents of the worker scope's `navigator` object using the following two lines:

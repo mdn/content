@@ -56,19 +56,21 @@ asynchronously waits for the peer's identity to be verified, then returns the id
 to the caller. If an error occurs and the promise is rejected, this logs the error to
 the console and returns `null` to the caller.
 
-    let pc = new RTCPeerConnection();
+```js
+let pc = new RTCPeerConnection();
 
-    /* ... */
+/* ... */
 
-    async function getIdentityAssertion(pc) {
-      try {
-        const identity = await pc.peerIdentity;
-        return identity;
-      } catch(err) {
-        console.log("Error identifying remote peer: ", err);
-        return null;
-      }
-    }
+async function getIdentityAssertion(pc) {
+  try {
+    const identity = await pc.peerIdentity;
+    return identity;
+  } catch(err) {
+    console.log("Error identifying remote peer: ", err);
+    return null;
+  }
+}
+```
 
 ## Specifications
 

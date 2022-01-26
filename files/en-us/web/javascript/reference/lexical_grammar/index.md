@@ -19,9 +19,9 @@ Control characters have no visual representation but are used to control the int
 
 | Code point | Name                  | Abbreviation | Description                                                                                                                                                                                                                    |
 | ---------- | --------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `U+200C`   | Zero width non-joiner | <ZWNJ>       | Placed between characters to prevent being connected into ligatures in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_non-joiner)).                                                                   |
-| `U+200D`   | Zero width joiner     | <ZWJ>        | Placed between characters that would not normally be connected in order to cause the characters to be rendered using their connected form in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_joiner)). |
-| `U+FEFF`   | Byte order mark       | <BOM>        | Used at the start of the script to mark it as Unicode and the text's byte order ([Wikipedia](https://en.wikipedia.org/wiki/Byte_order_mark)).                                                                                  |
+| `U+200C`   | Zero width non-joiner | \<ZWNJ>      | Placed between characters to prevent being connected into ligatures in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_non-joiner)).                                                                   |
+| `U+200D`   | Zero width joiner     | \<ZWJ>       | Placed between characters that would not normally be connected in order to cause the characters to be rendered using their connected form in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_joiner)). |
+| `U+FEFF`   | Byte order mark       | \<BOM>       | Used at the start of the script to mark it as Unicode and the text's byte order ([Wikipedia](https://en.wikipedia.org/wiki/Byte_order_mark)).                                                                                  |
 
 ## White space
 
@@ -29,12 +29,12 @@ Control characters have no visual representation but are used to control the int
 
 | Code point | Name                           | Abbreviation | Description                                                                                               | Escape sequence |
 | ---------- | ------------------------------ | ------------ | --------------------------------------------------------------------------------------------------------- | --------------- |
-| U+0009     | Character tabulation           | <HT>         | Horizontal tabulation                                                                                     | \t              |
-| U+000B     | Line tabulation                | <VT>         | Vertical tabulation                                                                                       | \v              |
-| U+000C     | Form feed                      | <FF>         | Page breaking control character ([Wikipedia](https://en.wikipedia.org/wiki/Page_break#Form_feed)).        | \f              |
-| U+0020     | Space                          | <SP>         | Normal space                                                                                              |                 |
-| U+00A0     | No-break space                 | <NBSP>       | Normal space, but no point at which a line may break                                                      |                 |
-| Others     | Other Unicode space characters | <USP>        | [Spaces in Unicode on Wikipedia](https://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode) |                 |
+| U+0009     | Character tabulation           | \<HT>        | Horizontal tabulation                                                                                     | \t              |
+| U+000B     | Line tabulation                | \<VT>        | Vertical tabulation                                                                                       | \v              |
+| U+000C     | Form feed                      | \<FF>        | Page breaking control character ([Wikipedia](https://en.wikipedia.org/wiki/Page_break#Form_feed)).        | \f              |
+| U+0020     | Space                          | \<SP>        | Normal space                                                                                              |                 |
+| U+00A0     | No-break space                 | \<NBSP>      | Normal space, but no point at which a line may break                                                      |                 |
+| Others     | Other Unicode space characters | \<USP>       | [Spaces in Unicode on Wikipedia](https://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode) |                 |
 
 ## Line terminators
 
@@ -44,10 +44,10 @@ Only the following Unicode code points are treated as line terminators in ECMASc
 
 | Code point | Name                | Abbreviation | Description                                            | Escape sequence |
 | ---------- | ------------------- | ------------ | ------------------------------------------------------ | --------------- |
-| U+000A     | Line Feed           | <LF>         | New line character in UNIX systems.                    | \n              |
-| U+000D     | Carriage Return     | <CR>         | New line character in Commodore and early Mac systems. | \r              |
-| U+2028     | Line Separator      | <LS>         | [Wikipedia](https://en.wikipedia.org/wiki/Newline)     |                 |
-| U+2029     | Paragraph Separator | <PS>         | [Wikipedia](https://en.wikipedia.org/wiki/Newline)     |                 |
+| U+000A     | Line Feed           | \<LF>        | New line character in UNIX systems.                    | \n              |
+| U+000D     | Carriage Return     | \<CR>        | New line character in Commodore and early Mac systems. | \r              |
+| U+2028     | Line Separator      | \<LS>        | [Wikipedia](https://en.wikipedia.org/wiki/Newline)     |                 |
+| U+2029     | Paragraph Separator | \<PS>        | [Wikipedia](https://en.wikipedia.org/wiki/Newline)     |                 |
 
 ## Comments
 
@@ -126,7 +126,7 @@ console.log("Hello world");
 
 > **Warning:** If you want scripts to be runnable directly in a shell environment, encode them in UTF-8 without a [BOM](https://en.wikipedia.org/wiki/Byte_order_mark). Although a BOM will not cause any problems for code running in a browser, it is not advised to use a BOM with a hashbang in a script — because the BOM will prevent the script from working when you try to run it in a Unix/Linux shell environment. So if you want scripts to be runnable directly in a shell environment, encode them in UTF-8 without a BOM.
 
-You must only use the `#!` comment style to specify a JavaScript interpreter. In all other cases just use a `//` comment (or mulitiline comment).
+You must only use the `#!` comment style to specify a JavaScript interpreter. In all other cases just use a `//` comment (or multiline comment).
 
 ## Keywords
 

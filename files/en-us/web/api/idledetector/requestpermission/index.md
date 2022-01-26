@@ -50,4 +50,3 @@ startButton.addEventListener('click', async () => {
 ## Browser compatibility
 
 {{Compat}}
-

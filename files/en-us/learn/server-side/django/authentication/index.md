@@ -42,7 +42,7 @@ In this tutorial, we'll show you how to allow users to log in to your site with 
 
 ## Overview
 
-Django provides an authentication and authorization ("permission") system, built on top of the session framework discussed in the [previous tutorial](/en-US/docs/Learn/Server-side/Django/Sessions), that allows you to verify user credentials and define what actions each user is allowed to perform. The framework includes built-in models for `Users` and `Groups` (a generic way of applying permissions to more than one user at a time), permissions/flags that designate whether a user may perform a task, forms and views for logging in users, and view tools for restricting content.
+Django provides an authentication and authorization ("permission") system, built on top of the session framework discussed in the [previous tutorial](/en-US/docs/Learn/Server-side/Django/Sessions), that allows you to verify user credentials and define what actions each user is allowed to perform. The framework includes built-in models for `Users` and `Groups` (a generic way of applying permissions to more than one user at a time), permissions/flags that designate whether a user may perform a task, forms and views for logging in users, and view tools for restricting content.
 
 > **Note:** According to Django the authentication system aims to be very generic, and so does not provide some features provided in other web authentication systems. Solutions for some common problems are available as third-party packages. For example, throttling of login attempts and authentication against third parties (e.g. OAuth).
 
@@ -63,15 +63,15 @@ The configuration is set up in the `INSTALLED_APPS` and `MIDDLEWARE` sections of
 ```python
 INSTALLED_APPS = [
     ...
-    'django.contrib.auth',  #Core authentication framework and its default models.
-    'django.contrib.contenttypes',  #Django content type system (allows permissions to be associated with models).
+    'django.contrib.auth',  #Core authentication framework and its default models.
+    'django.contrib.contenttypes',  #Django content type system (allows permissions to be associated with models).
     ....
 
 MIDDLEWARE = [
     ...
-    'django.contrib.sessions.middleware.SessionMiddleware',  #Manages sessions across requests
+    'django.contrib.sessions.middleware.SessionMiddleware',  #Manages sessions across requests
     ...
-    'django.contrib.auth.middleware.AuthenticationMiddleware',  #Associates users with requests using sessions.
+    'django.contrib.auth.middleware.AuthenticationMiddleware',  #Associates users with requests using sessions.
     ....
 ```
 
@@ -127,13 +127,13 @@ That's it! Now you have a "normal library member" account that you will be able 
 
 ## Setting up your authentication views
 
-Django provides almost everything you need to create authentication pages to handle login, log out, and password management "out of the box". This includes a URL mapper, views and forms, but it does not include the templates — we have to create our own!
+Django provides almost everything you need to create authentication pages to handle login, log out, and password management "out of the box". This includes a URL mapper, views and forms, but it does not include the templates — we have to create our own!
 
 In this section, we show how to integrate the default system into the _LocalLibrary_ website and create the templates. We'll put them in the main project URLs.
 
 > **Note:** You don't have to use any of this code, but it is likely that you'll want to because it makes things a lot easier. You'll almost certainly need to change the form handling code if you change your user model (an advanced topic!) but even so, you would still be able to use the stock view functions.
 
-> **Note:** In this case, we could reasonably put the authentication pages, including the URLs and templates, inside our catalog application. However, if we had multiple applications it would be better to separate out this shared login behavior and have it available across the whole site, so that is what we've shown here!
+> **Note:** In this case, we could reasonably put the authentication pages, including the URLs and templates, inside our catalog application. However, if we had multiple applications it would be better to separate out this shared login behavior and have it available across the whole site, so that is what we've shown here!
 
 ### Project URLs
 
@@ -147,7 +147,7 @@ urlpatterns += [
 ]
 ```
 
-Navigate to the <http://127.0.0.1:8000/accounts/> URL (note the trailing forward slash!) and Django will show an error that it could not find this URL, and listing all the URLs it tried. From this you can see the URLs that will work, for example:
+Navigate to the <http://127.0.0.1:8000/accounts/> URL (note the trailing forward slash!) and Django will show an error that it could not find this URL, and listing all the URLs it tried. From this you can see the URLs that will work, for example:
 
 > **Note:** Using the above method adds the following URLs with names in square brackets, which can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.
 >
@@ -176,14 +176,14 @@ The next step is to create a registration directory on the search path and then 
 
 The URLs (and implicitly, views) that we just added expect to find their associated templates in a directory **/registration/** somewhere in the templates search path.
 
-For this site, we'll put our HTML pages in the **templates/registration/** directory. This directory should be in your project root directory, i.e the same directory as the **catalog** and **locallibrary** folders. Please create these folders now.
+For this site, we'll put our HTML pages in the **templates/registration/** directory. This directory should be in your project root directory, i.e the same directory as the **catalog** and **locallibrary** folders. Please create these folders now.
 
 > **Note:** Your folder structure should now look like the below:
-> locallibrary (Django project folder)
->    |\_catalog
->    |\_locallibrary
->    |\_templates **(new)**
->                 |\_registration
+> locallibrary (Django project folder) \
+> \\_catalog \
+> \\_locallibrary \
+> \\_templates **(new)** \
+> \\_registration
 
 To make the **templates** directory visible to the template loader we need to add it in the template search path. Open the project settings (**/locallibrary/locallibrary/settings.py**).
 
@@ -223,23 +223,23 @@ Create a new HTML file called /**locallibrary/templates/registration/login.html*
 
   {% if next %}
     {% if user.is_authenticated %}
-      <p>Your account doesn't have access to this page. To proceed,
-      please login with an account that has access.</p>
-    {% else %}
-      <p>Please login to see this page.</p>
-    {% endif %}
+      <p>Your account doesn't have access to this page. To proceed,
+      please login with an account that has access.</p>
+    {% else %}
+      <p>Please login to see this page.</p>
+    {% endif %}
   {% endif %}
 
   <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
     <table>
       <tr>
-        <td>\{{ form.username.label_tag }}</td>
-        <td>\{{ form.username }}</td>
+        <td>\{{ form.username.label_tag }}</td>
+        <td>\{{ form.username }}</td>
       </tr>
       <tr>
-        <td>\{{ form.password.label_tag }}</td>
-        <td>\{{ form.password }}</td>
+        <td>\{{ form.password.label_tag }}</td>
+        <td>\{{ form.password }}</td>
       </tr>
     </table>
     <input type="submit" value="login" />
@@ -325,7 +325,7 @@ This form is displayed after your email address has been collected. Create **/lo
 
 #### Password reset email
 
-This template provides the text of the HTML email containing the reset link that we will send to users. Create **/locallibrary/templates/registration/password_reset_email.html**, and give it the following contents:
+This template provides the text of the HTML email containing the reset link that we will send to users. Create **/locallibrary/templates/registration/password_reset_email.html**, and give it the following contents:
 
 ```html
 Someone asked for password reset for email \{{ email }}. Follow the link below:
@@ -406,7 +406,7 @@ This section looks at what we can do to selectively control content the user see
 
 ### Testing in templates
 
-You can get information about the currently logged in user in templates with the `\{{ user }}` template variable (this is added to the template context by default when you set up the project as we did in our skeleton).
+You can get information about the currently logged in user in templates with the `\{{ user }}` template variable (this is added to the template context by default when you set up the project as we did in our skeleton).
 
 Typically you will first test against the `\{{ user.is_authenticated }}` template variable to determine whether the user is eligible to see specific content. To demonstrate this, next we'll update our sidebar to display a "Login" link if the user is logged out, and a "Logout" link if they are logged in.
 
@@ -426,15 +426,15 @@ Open the base template (**/locallibrary/catalog/templates/base_generic.html**) a
   </ul>
 ```
 
-As you can see, we use `if`-`else`-`endif` template tags to conditionally display text based on whether `\{{ user.is_authenticated }}` is true. If the user is authenticated then we know that we have a valid user, so we call `\{{ user.get_username }}` to display their name.
+As you can see, we use `if`-`else`-`endif` template tags to conditionally display text based on whether `\{{ user.is_authenticated }}` is true. If the user is authenticated then we know that we have a valid user, so we call `\{{ user.get_username }}` to display their name.
 
-We create the login and logout link URLs using the `url` template tag and the names of the respective URL configurations. Note also how we have appended `?next=\{{request.path}}` to the end of the URLs. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in/out, the views will use this "`next`" value to redirect the user back to the page where they first clicked the login/logout link.
+We create the login and logout link URLs using the `url` template tag and the names of the respective URL configurations. Note also how we have appended `?next=\{{request.path}}` to the end of the URLs. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in/out, the views will use this "`next`" value to redirect the user back to the page where they first clicked the login/logout link.
 
 > **Note:** Try it out! If you're on the home page and you click Login/Logout in the sidebar, then after the operation completes you should end up back on the same page.
 
 ### Testing in views
 
-If you're using function-based views, the easiest way to restrict access to your functions is to apply the `login_required` decorator to your view function, as shown below. If the user is logged in then your view code will execute as normal. If the user is not logged in, this will redirect to the login URL defined in the project settings (`settings.LOGIN_URL`), passing the current absolute path as the `next` URL parameter. If the user succeeds in logging in then they will be returned back to this page, but this time authenticated.
+If you're using function-based views, the easiest way to restrict access to your functions is to apply the `login_required` decorator to your view function, as shown below. If the user is logged in then your view code will execute as normal. If the user is not logged in, this will redirect to the login URL defined in the project settings (`settings.LOGIN_URL`), passing the current absolute path as the `next` URL parameter. If the user succeeds in logging in then they will be returned back to this page, but this time authenticated.
 
 ```python
 from django.contrib.auth.decorators import login_required
@@ -444,9 +444,9 @@ def my_view(request):
     ...
 ```
 
-> **Note:** You can do the same sort of thing manually by testing on `request.user.is_authenticated`, but the decorator is much more convenient!
+> **Note:** You can do the same sort of thing manually by testing on `request.user.is_authenticated`, but the decorator is much more convenient!
 
-Similarly, the easiest way to restrict access to logged-in users in your class-based views is to derive from `LoginRequiredMixin`. You need to declare this mixin first in the superclass list, before the main view class.
+Similarly, the easiest way to restrict access to logged-in users in your class-based views is to derive from `LoginRequiredMixin`. You need to declare this mixin first in the superclass list, before the main view class.
 
 ```python
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -455,7 +455,7 @@ class MyView(LoginRequiredMixin, View):
     ...
 ```
 
-This has exactly the same redirect behavior as the `login_required` decorator. You can also specify an alternative location to redirect the user to if they are not authenticated (`login_url`), and a URL parameter name instead of "`next`" to insert the current absolute path (`redirect_field_name`).
+This has exactly the same redirect behavior as the `login_required` decorator. You can also specify an alternative location to redirect the user to if they are not authenticated (`login_url`), and a URL parameter name instead of "`next`" to insert the current absolute path (`redirect_field_name`).
 
 ```python
 class MyView(LoginRequiredMixin, View):
@@ -469,11 +469,11 @@ For additional detail, check out the [Django docs here](https://docs.djangoproje
 
 Now that we know how to restrict a page to a particular user, let's create a view of the books that the current user has borrowed.
 
-Unfortunately, we don't yet have any way for users to borrow books! So before we can create the book list we'll first extend the `BookInstance` model to support the concept of borrowing and use the Django Admin application to loan a number of books to our test user.
+Unfortunately, we don't yet have any way for users to borrow books! So before we can create the book list we'll first extend the `BookInstance` model to support the concept of borrowing and use the Django Admin application to loan a number of books to our test user.
 
 ### Models
 
-First, we're going to have to make it possible for users to have a `BookInstance` on loan (we already have a `status` and a `due_back` date, but we don't yet have any association between this model and a User. We'll create one using a `ForeignKey` (one-to-many) field. We also need an easy mechanism to test whether a loaned book is overdue.
+First, we're going to have to make it possible for users to have a `BookInstance` on loan (we already have a `status` and a `due_back` date, but we don't yet have any association between this model and a User. We'll create one using a `ForeignKey` (one-to-many) field. We also need an easy mechanism to test whether a loaned book is overdue.
 
 Open **catalog/models.py**, and import the `User` model from `django.contrib.auth.models` (add this just below the previous import line at the top of the file, so `User` is available to subsequent code that makes use of it):
 
@@ -481,7 +481,7 @@ Open **catalog/models.py**, and import the `User` model from `django.contrib.aut
 from django.contrib.auth.models import User
 ```
 
-Next, add the `borrower` field to the `BookInstance` model:
+Next, add the `borrower` field to the `BookInstance` model:
 
 ```python
 borrower = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
@@ -522,17 +522,17 @@ This will make the field visible in the Admin section, allowing us to assign a `
 ```python
 @admin.register(BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
-    list_display = ('book', 'status', 'borrower', 'due_back', 'id')
-    list_filter = ('status', 'due_back')
+    list_display = ('book', 'status', 'borrower', 'due_back', 'id')
+    list_filter = ('status', 'due_back')
 
-    fieldsets = (
-        (None, {
-            'fields': ('book','imprint', 'id')
-        }),
-        ('Availability', {
-            'fields': ('status', 'due_back','borrower')
-        }),
-    )
+    fieldsets = (
+        (None, {
+            'fields': ('book','imprint', 'id')
+        }),
+        ('Availability', {
+            'fields': ('status', 'due_back','borrower')
+        }),
+    )
 ```
 
 ### Loan a few books
@@ -574,7 +574,7 @@ urlpatterns += [
 
 ### Template for on-loan books
 
-Now, all we need to do for this page is add a template. First, create the template file **/catalog/templates/catalog/bookinstance_list_borrowed_user.html** and give it the following contents:
+Now, all we need to do for this page is add a template. First, create the template file **/catalog/templates/catalog/bookinstance_list_borrowed_user.html** and give it the following contents:
 
 ```python
 {% extends "base_generic.html" %}
@@ -643,8 +643,8 @@ For example, we might define a permission to allow a user to mark that a book ha
 ```python
 class BookInstance(models.Model):
     ...
-    class Meta:
-        ...
+    class Meta:
+        ...
         permissions = (("can_mark_returned", "Set book as returned"),)
 ```
 
@@ -654,12 +654,12 @@ Open the **catalog/models.py**, and add the permission as shown above. You will 
 
 ### Templates
 
-The current user's permissions are stored in a template variable called `\{{ perms }}`. You can check whether the current user has a particular permission using the specific variable name within the associated Django "app" — e.g. `\{{ perms.catalog.can_mark_returned }}` will be `True` if the user has this permission, and `False` otherwise. We typically test for the permission using the template `{% if %}` tag as shown:
+The current user's permissions are stored in a template variable called `\{{ perms }}`. You can check whether the current user has a particular permission using the specific variable name within the associated Django "app" — e.g. `\{{ perms.catalog.can_mark_returned }}` will be `True` if the user has this permission, and `False` otherwise. We typically test for the permission using the template `{% if %}` tag as shown:
 
 ```python
 {% if perms.catalog.can_mark_returned %}
     <!-- We can mark a BookInstance as returned. -->
-    <!-- Perhaps add code to link to a "book return" view here. -->
+    <!-- Perhaps add code to link to a "book return" view here. -->
 {% endif %}
 ```
 
@@ -691,10 +691,10 @@ class MyView(PermissionRequiredMixin, View):
     # the catalog application doesn't have such permission!
 ```
 
-> **Note:** There is a small default difference in the behavior above. By **default** for a logged-in user with a permission violation:
+> **Note:** There is a small default difference in the behavior above. By **default** for a logged-in user with a permission violation:
 >
-> - `@permission_required` redirects to login screen (HTTP Status 302).
-> - `PermissionRequiredMixin` returns 403 (HTTP Status Forbidden).
+> - `@permission_required` redirects to login screen (HTTP Status 302).
+> - `PermissionRequiredMixin` returns 403 (HTTP Status Forbidden).
 >
 > Normally you will want the `PermissionRequiredMixin` behavior: return 403 if a user is logged in but does not have the correct permission. To do this for a function view use `@login_required` and `@permission_required` with `raise_exception=True` as shown:
 >
@@ -727,7 +727,7 @@ When you are finished, your page should look something like the screenshot below
 
 Excellent work — you've now created a website that library members can log in into and view their own content and that librarians (with the correct permission) can use to view all loaned books and their borrowers. At the moment we're still just viewing content, but the same principles and techniques are used when you want to start modifying and adding data.
 
-In our next article, we'll look at how you can use Django forms to collect user input, and then start modifying some of our stored data.
+In our next article, we'll look at how you can use Django forms to collect user input, and then start modifying some of our stored data.
 
 ## See also
 

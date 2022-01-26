@@ -42,4 +42,3 @@ const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
 ## Browser compatibility
 
 {{Compat}}
-

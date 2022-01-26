@@ -86,7 +86,8 @@ Another example where this might be suitable is when using ASCII emoji combinati
   </p>
 </div>
 ```
-If `aria-labelledby` were used, the screen reader would read it. In this case, only the contents of the `aria-label` are announced to screen reader users, hiding the jibberish of the characters without the need for descendant ARIA to hide things, but also hiding potential content that may be part of the image.
+
+If `aria-labelledby` were used, the screen reader would read it. In this case, only the contents of the `aria-label` are announced to screen reader users, hiding the gibberish of the characters without the need for descendant ARIA to hide things, but also hiding potential content that may be part of the image.
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
@@ -95,7 +96,7 @@ If `aria-labelledby` were used, the screen reader would read it. In this case, o
 
 ## Examples
 
-````html
+```html
 <span role="img" aria-label="Rating: 4 out of 5 stars">
     <span>★</span>
     <span>★</span>
@@ -103,16 +104,13 @@ If `aria-labelledby` were used, the screen reader would read it. In this case, o
     <span>★</span>
     <span>☆</span>
 </span>
-````
-
+```
 
 ## Specifications
 
 | Specification                                | Status                   |
 | -------------------------------------------- | ------------------------ |
 | {{SpecName("ARIA","#img","img")}} | {{Spec2('ARIA')}} |
-
-
 
 ## See also
 

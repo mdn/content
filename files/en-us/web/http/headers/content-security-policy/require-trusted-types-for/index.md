@@ -18,7 +18,7 @@ When used, those functions only accept non-spoofable, typed values created by Tr
 
 ```
 Content-Security-Policy: require-trusted-types-for 'script';
-````
+```
 
 - `'script'`
   - : Disallows using strings with DOM XSS injection sink functions, and requires matching types created by Trusted Type policies.

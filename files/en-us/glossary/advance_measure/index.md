@@ -15,4 +15,3 @@ For a horizontal inline axis, this will be the width of the character.
 ## See also
 
 - {{cssxref("&lt;length&gt;")}}
-

@@ -41,6 +41,7 @@ In the following example the UUID representing the characteristic named `apparen
 let result = BluetoothUUID.getCharacteristic('apparent_wind_direction');
 console.log(result); // "00002a73-0000-1000-8000-00805f9b34fb"
 ```
+
 ## Specifications
 
 {{Specifications}}
@@ -48,4 +49,3 @@ console.log(result); // "00002a73-0000-1000-8000-00805f9b34fb"
 ## Browser compatibility
 
 {{Compat}}
-

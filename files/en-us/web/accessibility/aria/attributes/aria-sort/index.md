@@ -14,7 +14,7 @@ The `aria-sort` attribute indicates if items in a table or grid are sorted in as
 
 ## Description
 
-If a grid or table provides sort functionality, the `aria-sort` attribute should be set to either `ascending` or `descending` (or `other`) on the header cell element for the sorted column or row. 
+If a grid or table provides sort functionality, the `aria-sort` attribute should be set to either `ascending` or `descending` (or `other`) on the header cell element for the sorted column or row.
 
 The `aria-sort` attribute is only set on the currently sorted column or row.  Set `aria-sort="ascending"` to indicate the data cells in the column or row are sorted in ascending order. If the sort order is reversed, toggle the value to `aria-sort="descending"`. When a different column or row becomes sorted, the single `aria-sort` attribute is moved to the header cell for the newly sorted column or row with the appropriate value for the sort order.
 
@@ -54,6 +54,7 @@ This table loads with the last name column sorted in ascending order.
   ... <!-- the <tbody> -->
 </table>
 ```
+
 If the user clicks on the last name button, [`aria-pressed="true"`](/en-us/web/accessibility/aria/attributes/aria-pressed) would be added to the {{HTMLElement('button')}} element and the `aria-sort` value would be toggled to `"descending"` with JavaScript. If the user clicks on a different header button, the `aria-sort` button would be removed `aria-sort` from the last name header to be placed on the clicked button's {{HTMLElement('th')}} parent.
 
 We provided instructions in the caption for assistive technology who may not see the down arrows that we would add with CSS targeting the  `th[aria-sort="ascending"]` and `th[aria-sort="descending"]` seletors.
@@ -62,14 +63,14 @@ We provided instructions in the caption for assistive technology who may not see
 
 - `ascending`
   - : Items are sorted in ascending order by this column.
-- `descending`	
+- `descending`
   - : Items are sorted in descending order by this column.
 - `none` (default)
   - : There is no defined sort applied to the column.
-- `other`	
+- `other`
   - : A sorting algorithm other than ascending or descending has been applied.
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaSort")}}
   - : The  [`ariaSort`](/en-US/docs/Web/API/Element/ariaSort) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-sort` attribute.
@@ -78,14 +79,14 @@ We provided instructions in the caption for assistive technology who may not see
 
 ## Associated roles
 
-Used in roles: 
+Used in roles:
 
 - [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 - [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-sort","ARIA: aria-sort Attribute")}}  | {{Spec2('ARIA')}} |
 

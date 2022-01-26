@@ -25,22 +25,26 @@ uri = stylesheet.href
 
 ## Example
 
-     // on a local machine:
-     <html>
-      <head>
-       <link rel="StyleSheet" href="example.css" type="text/css" />
-       <script>
-        function sref() {
-         alert(document.styleSheets[0].href);
-        }
-       </script>
-      </head>
-      <body>
-       <div class="thunder">Thunder</div>
-       <button onclick="sref()">ss</button>
-      </body>
-     </html>
-    // returns "file:////C:/Windows/Desktop/example.css
+On a local machine:
+
+```html
+<html>
+<head>
+  <link rel="StyleSheet" href="example.css" type="text/css" />
+  <script>
+  function sref() {
+    alert(document.styleSheets[0].href);
+  }
+  </script>
+</head>
+<body>
+  <div class="thunder">Thunder</div>
+  <button onclick="sref()">ss</button>
+</body>
+</html>
+```
+
+Returns "file:////C:/Windows/Desktop/example.css"
 
 ## Notes
 

@@ -26,7 +26,7 @@ The following list of selector types increases by specificity:
 2.  [Class selectors](/en-US/docs/Web/CSS/Class_selectors) (e.g., `.example`), attributes selectors (e.g., `[type="radio"]`) and pseudo-classes (e.g., `:hover`).
 3.  [ID selectors](/en-US/docs/Web/CSS/ID_selectors) (e.g., `#example`).
 
-Universal selector ({{CSSxRef("Universal_selectors", "*")}}), combinators ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, ['` `'](/en-US/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) and negation pseudo-class ({{CSSxRef(":not", ":not()")}}) have no effect on specificity. (The selectors declared _inside_ `:not()` do, however.)
+Universal selector ({{CSSxRef("Universal_selectors", "*")}}), combinators ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) and negation pseudo-class ({{CSSxRef(":not", ":not()")}}) have no effect on specificity. (The selectors declared _inside_ `:not()` do, however.)
 
 For more information, visit: ["Specificity" in "Cascade and inheritance"](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#Specificity_2), you can also visit: <https://specifishity.com>
 

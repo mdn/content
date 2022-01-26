@@ -25,7 +25,6 @@ This could, for example, be passed to a fetch method in order to run its abort l
 
 > **Note:** The method is similar in purpose to {{JSxRef("Promise.reject")}}.
 
-
 ## Syntax
 
 ```js
@@ -37,7 +36,7 @@ abort(reason)
 
 - `reason`
   - : The reason why the operation was aborted, which can be any JavaScript value.
-    If not specified, the reason is set to "AbortError" {{domxref("DOMException")}}. 
+    If not specified, the reason is set to "AbortError" {{domxref("DOMException")}}.
 
 ### Return value
 

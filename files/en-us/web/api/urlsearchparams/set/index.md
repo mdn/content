@@ -66,44 +66,44 @@ JavaScript interpreter in Firefox](/en-US/docs/Tools/Web_Console/The_command_lin
 'use strict'
 
 function genURL(rExp, aText, bDebug=false){
-	let theURL
+  let theURL
 
-	theURL= new URL('https://regexr.com')
-	theURL.searchParams.set( 'expression', rExp.toString() )
-	theURL.searchParams.set( 'tool', 'replace' )
-	theURL.searchParams.set( 'input', '\u2911\u20dc' )// ⤑⃜
-	theURL.searchParams.set( 'text', aText.join('\n') )
-	if( bDebug ){
-		// Display the key/value pairs
-		for(var pair of theURL.searchParams.entries()) {
-			console.debug(pair[0] + ' = \'' + pair[1] + '\'');
-		}
-		console.debug(theURL)
-	}
-	return theURL
+  theURL= new URL('https://regexr.com')
+  theURL.searchParams.set( 'expression', rExp.toString() )
+  theURL.searchParams.set( 'tool', 'replace' )
+  theURL.searchParams.set( 'input', '\u2911\u20dc' )// ⤑⃜
+  theURL.searchParams.set( 'text', aText.join('\n') )
+  if( bDebug ){
+    // Display the key/value pairs
+    for(var pair of theURL.searchParams.entries()) {
+      console.debug(pair[0] + ' = \'' + pair[1] + '\'');
+    }
+    console.debug(theURL)
+  }
+  return theURL
 }
 var url = genURL(
-	/(^\s*\/\/|\s*[^:]\/\/).*\s*$|\s*\/\*(.|\n)+?\*\/\s*$/gm	// single/multi-line comments
-	// /(^\s*\/\/.*|\s*[^:]\/\/.*)/g								// single-line comments
-	,[
-		"These should work:",
-		"",
-		"// eslint-disable-next-line no-unused-vars",
-		"lockPref(	'keyword.URL',\t\t'https://duckduckgo.com/html/?q=!+'	)\t//      test",
-		"/*",
-		"	* bla bla    ",
-		"*/",
-		"",
-		"/* bla bla */",
-		"",
-		"// bla bla ",
-		"",
-		"These shouldn\'t work:",
-		"console.log(\"http://foo.co.uk/\")",
-		"var url = \"http://regexr.com/foo.html?q=bar\"",
-		"alert(\"https://mediatemple.net\")",
-	]
-	, true
+  /(^\s*\/\/|\s*[^:]\/\/).*\s*$|\s*\/\*(.|\n)+?\*\/\s*$/gm  // single/multi-line comments
+  // /(^\s*\/\/.*|\s*[^:]\/\/.*)/g                          // single-line comments
+  ,[
+    "These should work:",
+    "",
+    "// eslint-disable-next-line no-unused-vars",
+    "lockPref( 'keyword.URL',\t\t'https://duckduckgo.com/html/?q=!+' )\t//      test",
+    "/*",
+    "  * bla bla    ",
+    "*/",
+    "",
+    "/* bla bla */",
+    "",
+    "// bla bla ",
+    "",
+    "These shouldn\'t work:",
+    "console.log(\"http://foo.co.uk/\")",
+    "var url = \"http://regexr.com/foo.html?q=bar\"",
+    "alert(\"https://mediatemple.net\")",
+  ]
+  , true
 )
 console.info( url, url.toString() )
 // window.open( url, 'regex_site' )

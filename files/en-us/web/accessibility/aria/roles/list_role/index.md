@@ -36,7 +36,6 @@ There are no hard and fast rules about which elements you should use to mark up 
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
   - : A collection of related objects, limited to list items when nested in a list, not important enough to have their own place in a page's table of contents.
 
-
 ## Best practices
 
 Only use `role="list"` and `role="listitem"` if you have to — for example if you don't have control over your HTML but are able to improve accessibility dynamically after the fact with JavaScript.
@@ -72,8 +71,6 @@ As an aside, note that if you are using the semantic HTML elements of `<ol>` or 
 | Specification                                    | Status                   |
 | ------------------------------------------------ | ------------------------ |
 | {{SpecName("ARIA","#list","list")}} | {{Spec2('ARIA')}} |
-
-
 
 ## See also
 

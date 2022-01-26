@@ -102,8 +102,6 @@ The techniques below describe each composite role as well as their required and 
    - [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
    - [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 
-
-
 ## States and properties
 
 ### Widget attributes
@@ -134,7 +132,6 @@ The techniques below describe each composite role as well as their required and 
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
 - [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
 
-
 ### Live region attributes
 
 - [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)
@@ -142,12 +139,11 @@ The techniques below describe each composite role as well as their required and 
 - [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
 - [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
 
-
 ### Drag &amp; drop attributes
 
 - [`aria-dropeffect`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect) {{deprecated_inline}}
 - [`aria-grabbed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed) {{deprecated_inline}}
- 
+
 ### Relationship attributes
 
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)

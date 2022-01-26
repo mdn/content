@@ -246,17 +246,23 @@ Our grid works nicely, but it has a fixed width. We really want a flexible (flui
 
 The equation that turns a fixed width into a flexible percentage-based one is as follows.
 
-    target / context = result
+```
+target / context = result
+```
 
 For our column width, our **target width** is 60 pixels and our **context** is the 960 pixel wrapper. We can use the following to calculate a percentage.
 
-    60 / 960 = 0.0625
+```
+60 / 960 = 0.0625
+```
 
 We then move the decimal point 2 places giving us a percentage of 6.25%. So, in our CSS we can replace the 60 pixel column width with 6.25%.
 
 We need to do the same with our gutter width:
 
-    20 / 960 = 0.02083333333
+```
+20 / 960 = 0.02083333333
+```
 
 So we need to replace the 20 pixel {{cssxref("margin-left")}} on our `.col` rule and the 20 pixel {{cssxref("padding-right")}} on `.wrapper` with 2.08333333%.
 

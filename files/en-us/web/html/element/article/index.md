@@ -89,7 +89,7 @@ A given document can have multiple articles in it; for example, on a blog that s
 
 ## Attributes
 
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes "HTML/Global attributes").
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 ## Usage notes
 

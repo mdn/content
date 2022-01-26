@@ -25,7 +25,6 @@ Avoid including controls whose operation requires arrow keys used for toolbar na
 
 If any of the otherwise interactive elements within the toolbar are temporarily disabled, consider letting them remain focusable so screen reader users can be made aware of their presence.
 
-
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
@@ -49,7 +48,6 @@ Implement focus management so the keyboard tab sequence includes one stop for th
 
 - <kbd>End</kbd> (Optional)
   - : Moves focus to last element.
-
 
 #### Horizontal toolbar
 
@@ -93,15 +91,12 @@ Avoid including controls whose operation requires arrow keys used for toolbar na
 
 If any of the otherwise interactive elements within the toolbar are disabled, consider letting them remain focusable so screen reader users can be made aware of their presence.
 
-
-
 ## Specifications
 
 | Specification                                                                                                                    | Status                                           |
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#toolbar","ARIA: toolbar role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#toolbar","toolbar role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
 
 ## See Also
 

@@ -37,8 +37,7 @@ new Intl.DateTimeFormat(locales, options)
     browser's default locale, pass an empty array. Unicode extension are supported
     (for example "`en-US-u-ca-buddhist`"). For the general form and
     interpretation of the `locales` argument, see the
-    {{jsxref("Global_Objects/Intl", "Intl",
-			"#Locale_identification_and_negotiation", 1)}} page. The following Unicode
+    {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} page. The following Unicode
     extension keys are allowed:
 
     - `nu`
@@ -314,7 +313,7 @@ Use the `timeZoneName` option to output a string for the timezone ("GMT", "Pacif
 ```js
 var date = Date.UTC(2021, 11, 17, 3, 0, 42);
 const timezoneNames = ['short', 'long', 'shortOffset', 'longOffset', 'shortGeneric', 'longGeneric']
-	
+
 for (const zoneName of timezoneNames) {
   // Do something with currentValue
   var formatter = new Intl.DateTimeFormat('en-US', {
@@ -323,8 +322,8 @@ for (const zoneName of timezoneNames) {
   });
   console.log(zoneName + ": " + formatter.format(date) );
 }
-	
-// expected output: 
+
+// expected output:
 // > "short: 12/16/2021, PST"
 // > "long: 12/16/2021, Pacific Standard Time"
 // > "shortOffset: 12/16/2021, GMT-8"

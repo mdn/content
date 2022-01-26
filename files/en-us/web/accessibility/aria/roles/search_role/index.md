@@ -83,8 +83,7 @@ If a `search` landmark role in a document is repeated in a document, and both la
 
 #### Redundant descriptions
 
-Screen readers will announce the type of role the landmark is. Because of this, you do not need to describe what the landmark is in its label. For example, a declaration of `role="search"` with an `aria-label="Sitewide search"` may be announced redundantly as, "sitewide search search".
-
+Screen readers will announce the type of role the landmark is. Because of this, you do not need to describe what the landmark is in its label. For example, a declaration of `role="search"` with an [`aria-label="Sitewide search"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) may be announced redundantly as, "sitewide search search".
 
 ## Specifications
 
@@ -93,11 +92,10 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 | {{SpecName("ARIA","#search","ARIA search role")}}                                         | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_search","ARIA search role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-
-
 ## See also
 
 - The {{HTMLElement('form')}} element
+- The {{HTMLElement('input')}} element
 - [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
 

@@ -15,7 +15,7 @@ browser-compat: api.PushEvent.PushEvent
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
 The **`PushEvent()`** constructor creates a new
-{{domxref("PushEvent")}} object. Note that the this constructor is exposed only to a
+{{domxref("PushEvent")}} object. Note that this constructor is exposed only to a
 service worker context.
 
 ## Syntax

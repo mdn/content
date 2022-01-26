@@ -13,9 +13,11 @@ The `<xsl:param>` element establishes a parameter by name and, optionally, a def
 
 ### Syntax
 
-    <xsl:param name=NAME select=EXPRESSION>
-    	TEMPLATE
-    </xsl:param>
+```xml
+<xsl:param name=NAME select=EXPRESSION>
+  TEMPLATE
+</xsl:param>
+```
 
 ### Required Attributes
 

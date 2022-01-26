@@ -37,8 +37,8 @@ specifies valid sources for stylesheets {{HTMLElement("style")}} elements and
       <td>
         <p>
           Yes. If this directive is absent, the user agent will look for
-          the {{CSP("style-src")}} directive, and if both of them are
-          absent, fallback to <code>default-src</code> directive.
+          the {{CSP("style-src")}} directive, and if both of them are
+          absent, fallback to <code>default-src</code> directive.
         </p>
       </td>
     </tr>
@@ -54,10 +54,12 @@ Content-Security-Policy: style-src-elem <source>;
 Content-Security-Policy: style-src-elem <source> <source>;
 ```
 
-`style-src-elem` can be used in conjunction with {{CSP("style-src")}}:
+`style-src-elem` can be used in conjunction with {{CSP("style-src")}}:
 
+```
     Content-Security-Policy: style-src <source>;
     Content-Security-Policy: style-src-elem <source>;
+```
 
 ### Sources
 

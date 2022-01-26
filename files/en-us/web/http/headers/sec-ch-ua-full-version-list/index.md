@@ -60,7 +60,6 @@ Sec-CH-UA-Full-Version-List: "<brand>";v="<full version>", ...
 - `<full version>`
   - : A full version number, such as 98.0.4750.0.
 
-
 ## Examples
 
 A server requests the `Sec-CH-UA-Full-Version-List` header by including the {{HTTPHeader("Accept-CH")}} in a _response_ to any request from the client, using the name of the desired header as a token:

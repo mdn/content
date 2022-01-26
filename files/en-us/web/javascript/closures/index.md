@@ -273,7 +273,7 @@ In the example above, there's a series of nested functions, all of which have ac
 
 ## Creating closures in loops: A common mistake
 
-Prior to the introduction of the [`let` ](/en-US/docs/Web/JavaScript/Reference/Statements/let)keyword in ECMAScript 2015, a common problem with closures occurred when you created them inside a loop. To demonstrate, consider the following example code.
+Prior to the introduction of the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) keyword in ECMAScript 2015, a common problem with closures occurred when you created them inside a loop. To demonstrate, consider the following example code.
 
 ```html
 <p id="help">Helpful notes will appear here</p>
@@ -400,7 +400,7 @@ setupHelp();
 
 This example uses `let` instead of `var`, so every closure binds the block-scoped variable, meaning that no additional closures are required.
 
-Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/en-US/docs/Web/HTML/Element/input "The HTML <input> element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent."), as shown:
+Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/en-US/docs/Web/HTML/Element/input), as shown:
 
 ```js
 function showHelp(help) {

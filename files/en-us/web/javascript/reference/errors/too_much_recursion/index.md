@@ -62,7 +62,7 @@ loop(0);
 // InternalError: too much recursion
 ```
 
-This recursive function is missing a base case. As there is no exit condition, the
+This recursive function is missing a base case. As there is no exit condition, the
 function will call itself infinitely.
 
 ```js example-bad
@@ -81,10 +81,10 @@ loop(0);
 
 ```js example-bad
 class Person{
-	constructor(){}
-	set name(name){
-		this.name = name; // Recursive call
-	}
+  constructor(){}
+  set name(name){
+    this.name = name; // Recursive call
+  }
 }
 
 const tony = new Person();
@@ -96,7 +96,7 @@ set that property. When this happens, the setter function is triggered.
 
 ```js example-bad
 set name(name){
-	this.name = name; // Recursive call
+  this.name = name; // Recursive call
 }
 ```
 
@@ -108,7 +108,7 @@ This issue also appears if the same variable is used in the getter.
 
 ```js example-bad
 get name(){
-	return this.name; // Recursive call
+  return this.name; // Recursive call
 }
 ```
 
@@ -118,13 +118,13 @@ for the getter.
 
 ```js
 class Person{
-	constructor(){}
-	set name(name){
-		this._name = name;
-	}
-	get name(){
-		return this._name;
-	}
+  constructor(){}
+  set name(name){
+    this._name = name;
+  }
+  get name(){
+    return this._name;
+  }
 }
 const tony = new Person();
 tony.name = "Tonisha";

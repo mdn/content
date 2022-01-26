@@ -32,13 +32,15 @@ Several MathML presentation elements have attributes that accept length values u
 
 A replacement for the deprecated constants below is:
 
-    veryverythinmathspace  => 0.05555555555555555em
-    verythinmathspace      => 0.1111111111111111em
-    thinmathspace          => 0.16666666666666666em
-    mediummathspace        => 0.2222222222222222em
-    thickmathspace         => 0.2777777777777778em
-    verythickmathspace     => 0.3333333333333333em
-    veryverythickmathspace => 0.3888888888888889em
+```
+veryverythinmathspace  => 0.05555555555555555em
+verythinmathspace      => 0.1111111111111111em
+thinmathspace          => 0.16666666666666666em
+mediummathspace        => 0.2222222222222222em
+thickmathspace         => 0.2777777777777778em
+verythickmathspace     => 0.3333333333333333em
+veryverythickmathspace => 0.3888888888888889em
+```
 
 | Constant                         | Value     |
 | -------------------------------- | --------- |

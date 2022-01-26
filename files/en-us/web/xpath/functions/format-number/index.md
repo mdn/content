@@ -11,7 +11,9 @@ The `format-number` function evaluates a number and returns a string representin
 
 ### Syntax
 
-    format-number(number ,pattern [,decimal-format] )
+```
+format-number( number, pattern [,decimal-format] )
+```
 
 ### Arguments
 

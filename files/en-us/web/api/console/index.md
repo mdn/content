@@ -272,7 +272,7 @@ The output in the console looks something like this:
 ## See also
 
 - [Firefox Developer Tools](/en-US/docs/Tools)
-- [Web console](/en-US/docs/Tools/Web_Console "Web Console") — how the Web console in Firefox handles console API calls
+- [Web console](/en-US/docs/Tools/Web_Console) — how the Web console in Firefox handles console API calls
 - [Remote Debugging](/en-US/docs/Tools/Remote_Debugging) — how to see console output when the debugging target is a mobile device
 
 ### Other implementations

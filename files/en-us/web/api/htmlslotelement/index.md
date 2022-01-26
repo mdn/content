@@ -30,7 +30,7 @@ The **`HTMLSlotElement`** interface of the [Shadow DOM API](/en-US/docs/Web/Web_
 ## Events
 
 - {{domxref('HTMLSlotElement.slotchange_event', 'slotchange')}}
-  - : Fired on an `HTMLSlotElement` instance ([`<slot>`](/en-US/docs/Web/HTML/Element/slot "The HTML <slot> element—part of the Web Components technology suite—is a placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together.") element) when the node(s) contained in that slot change.
+  - : Fired on an `HTMLSlotElement` instance ([`<slot>`](/en-US/docs/Web/HTML/Element/slot) element) when the node(s) contained in that slot change.
 
 ## Examples
 
@@ -39,8 +39,8 @@ The following snippet is taken from our [slotchange example](https://github.com/
 ```js
 let slots = this.shadowRoot.querySelectorAll('slot');
 slots[1].addEventListener('slotchange', function(e) {
-  let nodes = slots[1].assignedNodes();
-  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
+  let nodes = slots[1].assignedNodes();
+  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
 });
 ```
 

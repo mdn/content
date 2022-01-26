@@ -47,7 +47,9 @@ A pseudo-class is a selector that selects elements that are in a specific state,
 
 Pseudo-classes are keywords that start with a colon:
 
-    :pseudo-class-name
+```css
+:pseudo-class-name
+```
 
 ### Simple pseudo-class example
 
@@ -80,7 +82,9 @@ Some pseudo-classes only apply when the user interacts with the document in some
 
 Pseudo-elements behave in a similar way. However, they act as if you had added a whole new HTML element into the markup, rather than applying a class to existing elements. Pseudo-elements start with a double colon `::`.
 
-    ::pseudo-element-name
+```css
+::pseudo-element-name
+```
 
 > **Note:** Some early pseudo-elements used the single colon syntax, so you may sometimes see this in code or examples. Modern browsers support the early pseudo-elements with single- or double-colon syntax for backwards compatibility.
 

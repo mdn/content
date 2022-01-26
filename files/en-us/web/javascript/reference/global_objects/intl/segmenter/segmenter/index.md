@@ -43,7 +43,6 @@ new Intl.Segmenter(locales, options)
         - `"lookup"`
           - : Use the [BCP 47 Lookup algorithm](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4) to choose the locale from `locales`. For each locale in `locales`, the runtime returns the first supported locale (possibly removing restricting subtags of the provided locale tag to find such a supported locale. In other words providing `"de-CH"` as `locales` may result in using `"de"` if `"de"` is supported but `"de-CH"` is not).
 
-
 ### Return value
 
 A new [`Intl.Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) instance.

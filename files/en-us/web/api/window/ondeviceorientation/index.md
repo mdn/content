@@ -35,4 +35,4 @@ window.addEventListener('deviceorientation', function(event) { /* ... */ });
 
 - {{ event("deviceorientation") }}
 - {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation "Detecting device orientation")
+- [Detecting device orientation](/en-US/docs/Web/Events/Detecting_device_orientation)

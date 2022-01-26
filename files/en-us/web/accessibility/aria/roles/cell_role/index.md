@@ -32,7 +32,7 @@ A better, more semantic way of writing the cells above would be to use the sema
 
 ## Description
 
-The element with `role="cell"` is a cell within a row, optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role), within a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role). If the cell is in a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or` [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), opt for  [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role). Using native HTML {{HTMLElement('td')}} elements, whenever possible, is strongly encouraged.
+The element with `role="cell"` is a cell within a row, optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role), within a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role). If the cell is in a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), opt for  [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role). Using native HTML {{HTMLElement('td')}} elements, whenever possible, is strongly encouraged.
 
 Each element with `role="cell"` MUST be nested in a container element with [`role="row"`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role). That row, in turn, can be nested within an element with [`role="rowgroup"`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role), and should be nested within a `grid`, `table` or `treegrid`. If a cell contains column or row header information, use the `columnheader` or `rowheader` roles, respectively. If the cell does not contain header information and is nested in a `grid` or `treegrid`, the role of `gridcell` may be more appropriate.
 
@@ -169,7 +169,7 @@ When applied to a {{HTMLElement('td')}}, it returns cell semantics to the elemen
 - [`role="row"`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
 - [`role="gridcell"`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [HTML `<td>` element](/en-US/docs/Web/HTML/Element/td)
-- [HTML `<th>` element ](/en-US/docs/Web/HTML/Element/th)
+- [HTML `<th>` element](/en-US/docs/Web/HTML/Element/th)
 - [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
 - [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
 

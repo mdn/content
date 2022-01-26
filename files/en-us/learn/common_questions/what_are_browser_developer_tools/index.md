@@ -186,9 +186,11 @@ To see what happens, try entering the following snippets of code into the consol
 1.  ```js
     alert('hello!');
     ```
+
 2.  ```js
     document.querySelector('html').style.backgroundColor = 'purple';
     ```
+
 3.  ```js
     const myWordmark = document.createElement('img');
     myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
@@ -200,9 +202,11 @@ Now try entering the following incorrect versions of the code and see what you g
 1.  ```js
     alert('hello!);
     ```
+
 2.  ```js
     document.cheeseSelector('html').style.backgroundColor = 'purple';
     ```
+
 3.  ```js
     const myWordmark = document.createElement('img');
     myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');

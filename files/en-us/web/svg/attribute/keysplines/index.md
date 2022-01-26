@@ -76,7 +76,6 @@ The attribute value is a semicolon-separated list of control point descriptions.
 *   Safari issues
     *   :`keyTimes` values should be separated with semicolumn without space before, f.e: `keyTimes="0; 0.25; 0.5; 0.75; 1"`
 
-
 ## Specifications
 
 <table class="no-markdown">

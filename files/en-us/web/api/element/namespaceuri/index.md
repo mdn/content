@@ -47,7 +47,7 @@ In Firefox 3.5 and earlier, the namespace URI for HTML elements in HTML document
 as in XHTML.
 
 You can create an element with the specified `namespaceURI` using the DOM
-Level 2 method [document.createElementNS](/en-US/docs/Web/API/Document/createElementNS "Document.createElementNS").
+Level 2 method [document.createElementNS](/en-US/docs/Web/API/Document/createElementNS).
 
 The DOM does not handle or enforce namespace validation per se. It is up to the DOM
 application to do any validation necessary. Also note that the namespace prefix, once it

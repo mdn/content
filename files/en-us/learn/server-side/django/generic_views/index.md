@@ -184,21 +184,19 @@ Each iteration populates the `book` template variable with information for the c
 ```
 
 You might also use the `{% empty %}` template tag to define what happens if the book list is empty (although our template chooses to use a conditional instead):
+
 ```html
 <ul>
   {% for book in book_list %}
     <li> <!-- code here get information from each book item --> </li>
   {% empty %}
     <p>There are no books in the library.</p>
-  {% endfor %}
+  {% endfor %}
 </ul>
 ```
 
-
 While not used here, within the loop Django will also create other variables that you can use to track the iteration.
 For example, you can test the `forloop.last` variable to perform conditional processing the last time that the loop is run.
-
-
 
 #### Accessing variables
 

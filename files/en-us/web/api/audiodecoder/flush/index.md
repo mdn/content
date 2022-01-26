@@ -49,4 +49,3 @@ AudioDecoder.flush();
 ## Browser compatibility
 
 {{Compat}}
-

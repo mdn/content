@@ -31,7 +31,7 @@ the {{domxref("XRInputSourceArray")}} object.
 ## Value
 
 An integer value indicating the number of {{domxref("XRInputSource")}} objects
-representing WebXR input sources are includled in the array.
+representing WebXR input sources are included in the array.
 
 ## Examples
 

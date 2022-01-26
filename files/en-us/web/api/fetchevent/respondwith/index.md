@@ -17,43 +17,43 @@ browser-compat: api.FetchEvent.respondWith
 
 The **`respondWith()`** method of
 {{domxref("FetchEvent")}} prevents the browser's default fetch handling, and
-allows you to provide a promise for a {{domxref("Response")}} yourself.
+allows you to provide a promise for a {{domxref("Response")}} yourself.
 
 In most cases you can provide any response that the receiver understands. For example,
 if an {{HTMLElement('img')}} initiates the request, the response body needs to be
 image data. For security reasons, there are a few global rules:
 
 - You can only return {{domxref("Response")}} objects of {{domxref("Response.type",
-		"type")}} "`opaque`" if the {{domxref("fetchEvent.request")}} object's
-  {{domxref("request.mode", "mode")}} is "`no-cors`".  This prevents the
+  "type")}} "`opaque`" if the {{domxref("fetchEvent.request")}} object's
+  {{domxref("request.mode", "mode")}} is "`no-cors`". This prevents the
   leaking of private data.
 - You can only return {{domxref("Response")}} objects of {{domxref("Response.type",
-		"type")}} "`opaqueredirect`" if the {{domxref("fetchEvent.request")}}
+  "type")}} "`opaqueredirect`" if the {{domxref("fetchEvent.request")}}
   object's {{domxref("request.mode", "mode")}} is "`manual`".
 - You cannot return {{domxref("Response")}} objects of {{domxref("Response.type",
-		"type")}} "`cors`" if the {{domxref("fetchEvent.request")}} object's
+  "type")}} "`cors`" if the {{domxref("fetchEvent.request")}} object's
   {{domxref("request.mode", "mode")}} is "`same-origin`".
 
 ### Specifying the final URL of a resource
 
 From Firefox 59 onwards, when a service worker provides a {{domxref("Response")}} to
 {{domxref("FetchEvent.respondWith()")}}, the {{domxref("Response.url")}} value will be
-propagated to the intercepted network request as the final resolved URL.  If the
+propagated to the intercepted network request as the final resolved URL. If the
 {{domxref("Response.url")}} value is the empty string, then the
 {{domxref("Request.url","FetchEvent.request.url")}} is used as the final URL.
 
 In the past the {{domxref("Request.url","FetchEvent.request.url")}} was used as the
-final URL in all cases.  The provided {{domxref("Response.url")}} was effectively
+final URL in all cases. The provided {{domxref("Response.url")}} was effectively
 ignored.
 
 This means, for example, if a service worker intercepts a stylesheet or worker script,
-then the provided {{domxref("Response.url")}} will be used to resolve any relative
+then the provided {{domxref("Response.url")}} will be used to resolve any relative
 {{cssxref("@import")}} or
 {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads
 ({{bug(1222008)}}).
 
 For most types of network request this change has no impact because you can't observe
-the final URL.  There are a few, though, where it does matter:
+the final URL. There are a few, though, where it does matter:
 
 - If a {{domxref("fetch()")}} is intercepted,
   then you can observe the final URL on the result's {{domxref("Response.url")}}.
@@ -65,9 +65,9 @@ the final URL.  There are a few, though, where it does matter:
   resolving relative {{cssxref("@import")}} loads.
 
 Note that navigation requests for {{domxref("Window","Windows")}} and
-{{domxref("HTMLIFrameElement","iframes")}} do NOT use the final URL.  The way the HTML
+{{domxref("HTMLIFrameElement","iframes")}} do NOT use the final URL. The way the HTML
 specification handles redirects for navigations ends up using the request URL for the
-resulting {{domxref("Window.location")}}.  This means sites can still provide an
+resulting {{domxref("Window.location")}}. This means sites can still provide an
 "alternate" view of a web page when offline without changing the user-visible URL.
 
 ## Syntax
@@ -92,7 +92,7 @@ A {{domxref("Response")}} or a {{jsxref("Promise")}} that resolves to a
 - `NetworkError` {{domxref("DOMException")}}
   - : Returned if a network error is triggered on certain combinations of
     {{domxref("Request.mode","FetchEvent.request.mode")}} and
-    {{domxref("Response.type")}}  values, as hinted at in the "global rules"
+    {{domxref("Response.type")}} values, as hinted at in the "global rules"
     listed above.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Returned if the event has not been dispatched or `respondWith()` has
@@ -105,15 +105,15 @@ network otherwise.
 
 ```js
 addEventListener('fetch', event => {
-  // Prevent the default, and handle the request ourselves.
-  event.respondWith(async function() {
-    // Try to get the response from a cache.
-    const cachedResponse = await caches.match(event.request);
-    // Return it if we found one.
-    if (cachedResponse) return cachedResponse;
-    // If we didn't find a match in the cache, use the network.
-    return fetch(event.request);
-  }());
+  // Prevent the default, and handle the request ourselves.
+  event.respondWith(async function() {
+    // Try to get the response from a cache.
+    const cachedResponse = await caches.match(event.request);
+    // Return it if we found one.
+    if (cachedResponse) return cachedResponse;
+    // If we didn't find a match in the cache, use the network.
+    return fetch(event.request);
+  }());
 });
 ```
 

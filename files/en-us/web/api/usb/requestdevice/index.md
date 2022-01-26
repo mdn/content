@@ -49,7 +49,7 @@ specified. Both are passed to `requestDevice()`. This triggers a user-agent
 flow that prompts the user to select a device for pairing. Only the selected device is
 passed to `then()`.
 
-The number of filters does not specifiy the number of devices shown by the user agent.
+The number of filters does not specify the number of devices shown by the user agent.
 For example, if only a USB device with product ID `0xa800` is found, then
 only one device will be listed by the user agent. On the other hand if the user agent
 finds two of the first listed device and one of the second, then all three devices will

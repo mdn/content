@@ -45,23 +45,23 @@ _No change._
 
 ### JavaScript
 
-- The ES2015 syntax for [computed property names on object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names) has been implemented ({{bug(924688)}}).
+- The ES2015 syntax for [computed property names on object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names) has been implemented ({{bug(924688)}}).
 
   - This includes [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) method names as well ({{bug(1048384)}}) and can also be used with [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#computed_object_property_names_and_destructuring).
 
-- The ES2015[ shorthand syntax for defining methods](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) on objects has been implemented ({{bug(924672)}}).
-- The ES2015 `Object` method {{jsxref("Object.assign", "Object.assign()")}} has been implemented ({{bug(937855)}}).
-- ES2015 [template strings](/en-US/docs/Web/JavaScript/Reference/Template_literals) and the {{jsxref("String.raw()")}} method are now supported ({{bug(1038259)}}, {{bug(1039774)}}).
-- A new ES2015 object {{jsxref("WeakSet")}} has been added ({{bug(792439)}}).
-- ES2015 [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (only available in the Nightly channel) have been updated to conform with recent specification changes ({{bug(1042602)}}):
+- The ES2015 [shorthand syntax for defining methods](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) on objects has been implemented ({{bug(924672)}}).
+- The ES2015 `Object` method {{jsxref("Object.assign", "Object.assign()")}} has been implemented ({{bug(937855)}}).
+- ES2015 [template strings](/en-US/docs/Web/JavaScript/Reference/Template_literals) and the {{jsxref("String.raw()")}} method are now supported ({{bug(1038259)}}, {{bug(1039774)}}).
+- A new ES2015 object {{jsxref("WeakSet")}} has been added ({{bug(792439)}}).
+- ES2015 [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (only available in the Nightly channel) have been updated to conform with recent specification changes ({{bug(1042602)}}):
 
   - When trying to convert a symbol to a number, a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) will be thrown now.
   - When using loose equality, `Object(sym) == sym` returns `true` now.
 
-- The experimental {{jsxref("TypedArray.prototype.move()")}} method (only available in former Nightly and Aurora channels) has been replaced with the now implemented standard ES2015 {{jsxref("TypedArray.prototype.copyWithin()")}} method ({{bug(1021379)}}).
-- In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), setting a [duplicate property name in object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names) will no longer throw a `SyntaxError` as per ES2015 specification ({{bug(1041128)}}).
+- The experimental {{jsxref("TypedArray.prototype.move()")}} method (only available in former Nightly and Aurora channels) has been replaced with the now implemented standard ES2015 {{jsxref("TypedArray.prototype.copyWithin()")}} method ({{bug(1021379)}}).
+- In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), setting a [duplicate property name in object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names) will no longer throw a `SyntaxError` as per ES2015 specification ({{bug(1041128)}}).
 - In regular expressions (including `String.replace`), the matched text for a capturing group is now `undefined` instead of the empty string when that capturing group didn't get consulted because quantifiers prevented its exercise (see {{bug(369778)}} and [this example code](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#gecko_specific_notes)). Note that due to web compatibility, RegExp.$N will still return an empty string ({{bug(1053944)}}).
-- The ES2015 [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) is now supported in [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ({{bug(933276)}}).
+- The ES2015 [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) is now supported in [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ({{bug(933276)}}).
 - [Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) now uses iterator protocol instead of array-like protocol ({{bug(933276)}}).
 - {{jsxref("Proxy.revocable()")}} has been implemented ({{bug(978279)}}).
 

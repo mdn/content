@@ -28,6 +28,8 @@ onend = event => { }
 
 An {{domxref("XRSessionEvent")}}. Inherits from {{domxref("Event")}}.
 
+{{InheritanceDiagram("XRSessionEvent")}}
+
 ## Event properties
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._

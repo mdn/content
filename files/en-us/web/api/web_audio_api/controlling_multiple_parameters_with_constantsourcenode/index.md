@@ -27,7 +27,7 @@ The diagram below shows how this works; an input value, `N`, is set as the value
 
 ![Dagram in SVG showing how ConstantSourceNode can be used to split an input parameter to share it with multiple nodes.](customsourcenode-as-splitter.svg)
 
-As a result, every time you change `N` (the value of the input {{domxref("AudioParam")}}, the values of the two `GainNode`s' `gain` properties and the value of the `StereoPannerNode`'s `pan` propertry are all set to `N` as well.
+As a result, every time you change `N` (the value of the input {{domxref("AudioParam")}}, the values of the two `GainNode`s' `gain` properties and the value of the `StereoPannerNode`'s `pan` properties are all set to `N` as well.
 
 ## Example
 

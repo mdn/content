@@ -151,5 +151,4 @@ function openRequestedPopup() {
 ## See also
 
 - [Obsolete features](/en-US/docs/Web/API/Window/open/Obsolete_features)
-- [Privileged
-  features](/en-US/docs/Web/API/Window/open/Privileged_features)
+- [Privileged features](/en-US/docs/Web/API/Window/open/Privileged_features)

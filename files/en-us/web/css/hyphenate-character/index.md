@@ -75,11 +75,9 @@ dd#string {
 
 {{EmbedLiveSample("Examples", "100%", 350)}}
 
-
 ## Specifications
 
 {{Specifications}}
-
 
 ## Browser compatibility
 

@@ -97,7 +97,7 @@ h1= title
 p= 'Evaluated and <em>escaped expression</em>:' + title
 ```
 
-If there is no equals symbol after the tag then the content is treated as plain text. Within the plain text you can insert escaped and unescaped data using the `#{}` and` !{}` syntax respectively, as shown below. You can also add raw HTML within the plain text.
+If there is no equals symbol after the tag then the content is treated as plain text. Within the plain text you can insert escaped and unescaped data using the `#{}` and `!{}` syntax respectively, as shown below. You can also add raw HTML within the plain text.
 
 ```plain
 p This is a line with #[em some emphasis] and #[strong strong text] markup.

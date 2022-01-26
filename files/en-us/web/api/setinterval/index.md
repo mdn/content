@@ -147,6 +147,7 @@ function stopTextColor() {
 document.getElementById("start").addEventListener("click", changeColor);
 document.getElementById("stop").addEventListener("click", stopTextColor);
 ```
+
 #### Result
 
 {{EmbedLiveSample("Example_2:_Alternating_two_colors")}}

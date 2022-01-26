@@ -44,7 +44,7 @@ method references.
     been made on an object that's deleted or removed.
 - `NotSupportedError`
   - : A `MediaRecorder` couldn't be created because the specified options
-    weren't valid. The `message` atttribute should provide additional
+    weren't valid. The `message` attribute should provide additional
     information, if it exists.
 - `SecurityError`
   - : The {{domxref("MediaStream")}} is configured to disallow recording. This may be the

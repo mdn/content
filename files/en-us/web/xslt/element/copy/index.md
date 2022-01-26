@@ -13,9 +13,11 @@ The `<xsl:copy>` element transfers a shallow copy (the node and any associated n
 
 ### Syntax
 
-    <xsl:copy use-attribute-sets=LIST-OF-NAMES>
-    	TEMPLATE
-    </xsl:copy>
+```xml
+<xsl:copy use-attribute-sets=LIST-OF-NAMES>
+  TEMPLATE
+</xsl:copy>
+```
 
 ### Required Attributes
 

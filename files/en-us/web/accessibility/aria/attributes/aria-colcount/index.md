@@ -67,8 +67,6 @@ The first rule of ARIA use is "if you can use a native feature with the semantic
 </table>
 ```
 
-
-
 ## Values
 
 - `<integer>`
@@ -90,7 +88,6 @@ Inherits into roles:
 | Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-colcount","ARIA: aria-colcount Attribute")}}  | {{Spec2('ARIA')}} |
-
 
 ## See Also
 

@@ -48,7 +48,7 @@ DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ, originX, originY, originZ);
 
 ### Return value
 
-Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix "The DOMMatrix interface represents 4x4 matrices, suitable for 2D and 3D operations.")
+Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix)
 containing a new matrix being the result of the matrix x and y dimensions being scaled
 by the given factor, centered on the origin given. The original matrix is not modified.
 

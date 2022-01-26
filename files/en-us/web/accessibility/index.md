@@ -28,9 +28,7 @@ The MDN [Accessibility Learning Area](/en-US/docs/Learn/Accessibility) contains 
   - [Mobile accessibility](/en-US/docs/Learn/Accessibility/Mobile)
     - : With web access on mobile devices being so popular, and popular platforms such as iOS and Android having fully-fledged accessibility tools, it is important to consider the accessibility of your web content on these platforms. This article looks at mobile-specific accessibility considerations.
 
-
 ## Other documentation
-
 
   - [Understanding the Web Content Accessibility Guidelines](/en-US/docs/Web/Accessibility/Understanding_WCAG)
     - : This set of articles provides quick explanations to help you understand the steps that need to be taken to conform to the recommendations outlined in the W3C Web Content Accessibility Guidelines 2.0 (WCAG 2.0 or just WCAG, for the purposes of this writing).
@@ -46,7 +44,6 @@ The MDN [Accessibility Learning Area](/en-US/docs/Learn/Accessibility) contains 
     - : When creating web content, be aware of how you can ensure that it is accessible to people with cognitive impairments.
   - [Accessibility for seizure disorders](/en-US/docs/Web/Accessibility/Seizure_disorders)
     - : Some types of visual web content can induce seizures in people with certain brain disorders. Understand the types of content that can be problematic, and find tools and strategies to help you avoid them.
-
 
 ## See also
 

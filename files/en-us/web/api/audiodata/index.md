@@ -66,4 +66,3 @@ In planar format, the number of planes is equal to {{domxref("AudioData.numberOf
 ## Browser compatibility
 
 {{Compat}}
-

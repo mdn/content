@@ -45,14 +45,14 @@ Highlights:
 
 ### JavaScript
 
-- The [ECMAScript 2015](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) Symbol data type has been enabled by default (was available in the Nightly channel since version 33) ({{bug(1066322)}}):
+- The [ECMAScript 2015](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla) Symbol data type has been enabled by default (was available in the Nightly channel since version 33) ({{bug(1066322)}}):
 
   - {{jsxref("Symbol")}}
   - {{jsxref("Symbol.for()")}}
   - {{jsxref("Symbol.keyFor()")}}
   - {{jsxref("Object.getOwnPropertySymbols()")}}
 
-- The old placeholder string `"@@iterator"` has been replaced with the real ES2015 well-known symbol {{jsxref("Symbol.iterator")}} for the [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) interface property key ({{bug(918828)}}).
+- The old placeholder string `"@@iterator"` has been replaced with the real ES2015 well-known symbol {{jsxref("Symbol.iterator")}} for the [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) interface property key ({{bug(918828)}}).
 - The spec-internal abstract operation `ToNumber(string)` now supports binary (`0b`) and octal (`0o`) literals, this is a potentially breaking change from ES5 ({{bug(1079120)}}).
 
   - `Number("0b11")` now returns `3`, not `NaN`.
@@ -64,7 +64,7 @@ Highlights:
   - `const a;` now throws a {{jsxref("SyntaxError")}} ("missing = in const declaration`"`): An initializer is required.
   - `const a = 1; a = 2;` now also throws a {{jsxref("SyntaxError")}} ("invalid assignment to const a").
 
-- The ES2016 method {{jsxref("Array.prototype.includes")}} has been implemented, but for now, it is only enabled in Nightly builds ({{bug(1069063)}}).
+- The ES2016 method {{jsxref("Array.prototype.includes")}} has been implemented, but for now, it is only enabled in Nightly builds ({{bug(1069063)}}).
 - The [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator now triggers the "[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)" when using with [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) ({{bug(1074571)}}).
 - The non-standard [`let` blocks and `let` expressions](/en-US/docs/Web/JavaScript/Reference/Statements/let#non-standard_let_extensions) are deprecated and will now log a warning in the console. Do not use them anymore, they will be removed in the future.
 - [WeakMap](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) constructor now handles optional iterable argument ({{bug(1092537)}}).
@@ -112,7 +112,7 @@ _No change._
 - RC4 is now considered as insecure and all UI indicators will react as such; SSLv3 has been disabled by default in Firefox 34, but the UI has been changed to help the user better understand what is happening ({{bug(1093595)}}).
 - Also, RC4 is no longer offered in the initial handshake of TLS ({{bug(1088915)}}).
 - The [`form-action`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#form-action) directive of CSP 1.1 is now supported ({{bug(529697)}}).
-- In the preferences of Firefox, The [Do not track ](/en-US/docs/Web/HTTP/Headers/DNT)selection widget is again an on/off switch ({{bug(1071747)}}).
+- In the preferences of Firefox, The [Do not track](/en-US/docs/Web/HTTP/Headers/DNT) selection widget is again an on/off switch ({{bug(1071747)}}).
 
 ## Changes for add-on and Mozilla developers
 

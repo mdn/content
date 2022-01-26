@@ -38,7 +38,6 @@ None.
 - {{domxref("USB.disconnect_event", "disconnect")}}
   - : Fired whenever a paired device is disconnected.
 
-
 ## Specifications
 
 {{Specifications}}

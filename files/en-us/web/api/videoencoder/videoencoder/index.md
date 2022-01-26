@@ -72,4 +72,3 @@ const videoEncoder = new VideoEncoder({
 ## Browser compatibility
 
 {{Compat}}
-

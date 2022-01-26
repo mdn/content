@@ -56,7 +56,6 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
   - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerPolicy", "script")}} HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
 
-
 ## Static methods
 
 - {{domxref("HTMLScriptElement.supports()")}}
@@ -117,6 +116,7 @@ affixScriptToHead("myScript2.js", function () { alert("The script \"myScript2.js
 {{domxref("HTMLScriptElement.supports()")}} provides a unified mechanism for checking whether a browser supports particular types of scripts.
 
 The example below shows how to check for module support, using the existance of the `noModule` attribute as a fallback.
+
 ```js
 function checkModuleSupport() {
   if ('supports' in HTMLScriptElement) {

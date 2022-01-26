@@ -9,9 +9,9 @@ tags:
 ---
 {{AddonSidebar()}}
 
-> **Note:** This article discusses building cross-browser extensions for manifest v2. At the time of writing (December 2021), manifest v3 is being introduced by the major browser vendors. Manifest v3 is likely to change the way cross-browser extension development is undertaken. However, work on Manifest v3 is not complete. The major browser vendors are collaborating (with community members) to ease the development of a cross-browser extension in the [W3C WebExtensions Community Group](https://github.com/w3c/webextensions). 
+> **Note:** This article discusses building cross-browser extensions for manifest v2. At the time of writing (December 2021), manifest v3 is being introduced by the major browser vendors. Manifest v3 is likely to change the way cross-browser extension development is undertaken. However, work on Manifest v3 is not complete. The major browser vendors are collaborating (with community members) to ease the development of a cross-browser extension in the [W3C WebExtensions Community Group](https://github.com/w3c/webextensions).
 
-The introduction of the browser extensions API created a uniform landscape for the development of browser extensions. However, there are differences in the API implementations and the scope of coverage among the browsers that use the extensions API (the major ones being Chrome, Edge, Firefox, Opera, and Safari). 
+The introduction of the browser extensions API created a uniform landscape for the development of browser extensions. However, there are differences in the API implementations and the scope of coverage among the browsers that use the extensions API (the major ones being Chrome, Edge, Firefox, Opera, and Safari).
 
 Maximizing the reach of your browser extension means developing it for at least two browsers, possibly more. This article looks at six of the main challenges faced when creating a cross-browser extension and suggests how to address these challenges.
 

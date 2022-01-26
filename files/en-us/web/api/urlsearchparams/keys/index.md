@@ -46,8 +46,10 @@ for(var key of searchParams.keys()) {
 
 The result is:
 
-    key1
-    key2
+```
+key1
+key2
+```
 
 ## Specifications
 

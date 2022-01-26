@@ -17,7 +17,6 @@ You can use this attribute with the following SVG elements: [`<path>`](#path), [
 
 `d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can be also be [used as a CSS property](#using_d_as_a_css_property).
 
-
 ## Example
 
 ```css hidden
@@ -34,7 +33,6 @@ html,body,svg { height:100% }
        Q 10,60 10,30 z" />
 </svg>
 ```
-
 
 {{EmbedLiveSample('Example', '100%', 200)}}
 
@@ -113,7 +111,6 @@ For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path
   </tbody>
 </table>
 
-
 ## Using d as a CSS property
 
 `d` is a [presentation attribute](/en-US/docs/Web/SVG/Attribute/Presentation), and hence can be also be modified using CSS.
@@ -144,8 +141,6 @@ html,body,svg { height:100% }
 ```
 
 {{EmbedLiveSample('Using d as a CSS Property', '100%', 200)}}
-
-
 
 ## Path commands
 
@@ -1058,7 +1053,6 @@ html,body,svg { height:100% }
 ```
 
 {{EmbedLiveSample('ClosePath', '100%', 200)}}
-
 
 ## Specifications
 

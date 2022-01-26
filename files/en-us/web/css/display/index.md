@@ -101,7 +101,6 @@ The keyword values can be grouped into six value categories.
 > **Note:** Browsers that support the two-value syntax, on finding the inner value only, such as when `display: flex` or `display: grid` is specified, will set their outer value to `block`.
 > This will result in expected behavior; for example, if you specify an element to be `display: grid`, you would expect that the box created on the grid container would be a block-level box.
 
-
 ### List Item
 
 - {{CSSxRef("&lt;display-listitem&gt;")}}
@@ -168,7 +167,7 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
     - `inline-block`
 
       - : The element generates a block element box that will be flowed with surrounding content as if it were a single inline box (behaving much like a replaced element would).
-      
+
         It is equivalent to `inline flow-root`.
 
     - `inline-table`

@@ -62,7 +62,7 @@ For further info see [Cross Browser Audio Basics (HTML5 Audio In Detail)](/en-US
 
 The code above creates a video player of dimensions 640x480 pixels, displaying a poster image until the video is played. We instruct the video to autoplay but to be muted by default.
 
-> **Note:** The `autoplay` attribute may be ignored by some mobile browsers. Also, the autoplay feature can be controversial when misused. It's strongly recommended that you read the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) to learn how to use autoplay wisely..
+> **Note:** The `autoplay` attribute may be ignored by some mobile browsers. Also, the autoplay feature can be controversial when misused. It's strongly recommended that you read the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) to learn how to use autoplay wisely..
 
 For further info see [\<video> element](/en-US/docs/Web/HTML/Element/video) and [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player).
 
@@ -317,7 +317,9 @@ When specifying the URI of media for an {{ HTMLElement("audio") }} or {{ HTMLEle
 
 A time range is specified using the syntax:
 
-    #t=[starttime][,endtime]
+```
+#t=[starttime][,endtime]
+```
 
 The time can be specified as a number of seconds (as a floating-point value) or as an hours/minutes/seconds time separated with colons (such as 2:05:01 for 2 hours, 5 minutes, and 1 second).
 
@@ -378,18 +380,20 @@ If these work but the files you are supplying don't, there are two possible issu
 
 Although this is usually supported, you may need to add the following to your media server's `.htaccess` file.
 
-    # AddType TYPE/SUBTYPE EXTENSION
+```
+# AddType TYPE/SUBTYPE EXTENSION
 
-    AddType audio/mpeg mp3
-    AddType audio/mp4 m4a
-    AddType audio/ogg ogg
-    AddType audio/ogg oga
+AddType audio/mpeg mp3
+AddType audio/mp4 m4a
+AddType audio/ogg ogg
+AddType audio/ogg oga
 
-    AddType video/mp4 mp4
-    AddType video/mp4 m4v
-    AddType video/ogg ogv
-    AddType video/webm webm
-    AddType video/webm webmv
+AddType video/mp4 mp4
+AddType video/mp4 m4v
+AddType video/ogg ogv
+AddType video/webm webm
+AddType video/webm webmv
+```
 
 #### 2. Your files have been encoded incorrectly
 
@@ -416,22 +420,22 @@ Another way to show the fallback content of a video, when none of the sources co
 
 ```html
 <video controls>
-  <source src="dynamicsearch.mp4" type="video/mp4"></source>
-  <a href="dynamicsearch.mp4">
-    <img src="dynamicsearch.jpg" alt="Dynamic app search in Firefox OS">
-  </a>
-  <p>Click image to play a video demo of dynamic app search</p>
+  <source src="dynamicsearch.mp4" type="video/mp4"></source>
+  <a href="dynamicsearch.mp4">
+    <img src="dynamicsearch.jpg" alt="Dynamic app search in Firefox OS">
+  </a>
+  <p>Click image to play a video demo of dynamic app search</p>
 </video>
 ```
 
 ```js
 let v = document.querySelector('video'),
-    sources = v.querySelectorAll('source'),
-    lastsource = sources[sources.length-1];
+    sources = v.querySelectorAll('source'),
+    lastsource = sources[sources.length-1];
 lastsource.addEventListener('error', function(ev) {
-  const d = document.createElement('div');
-  d.innerHTML = v.innerHTML;
-  v.parentNode.replaceChild(d, v);
+  const d = document.createElement('div');
+  d.innerHTML = v.innerHTML;
+  v.parentNode.replaceChild(d, v);
 }, false);
 ```
 
@@ -488,7 +492,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 ## Advanced tutorials
 
 - [Adding captions and subtitles to HTML5 video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-  - : This article explains how to add captions and subtitles to HTML5 {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API "WebVTT is a format for displaying timed text tracks (e.g. subtitles) with the <track> element. The primary purpose of WebVTT files is to add subtitles to a <video>.") and the {{ htmlelement("track") }} element.
+  - : This article explains how to add captions and subtitles to HTML5 {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API) and the {{ htmlelement("track") }} element.
 - [Writing Web Audio API code that works in every browser](/en-US/docs/Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser)
   - : A guide to writing cross browser Web Audio API code.
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)

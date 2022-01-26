@@ -14,7 +14,7 @@ The global `aria-describedby` attribute identifies the element (or elements) tha
 
 ## Description
 
-The `aria-describedby` attribute lists the {{HTMLattrxref('id')}}s of the elements that describe the object. It is used to establish a relationship between widgets or groups and the text that describes them. 
+The `aria-describedby` attribute lists the {{HTMLattrxref('id')}}s of the elements that describe the object. It is used to establish a relationship between widgets or groups and the text that describes them.
 
 The `aria-describedby` attribute is not limited to form controls. It can also be used to associate static text with widgets, groups of elements, regions that have a heading, definitions, and more. The `aria-describedby` attribute can be used with semantic HTML elements and with elements that have an ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles/).
 
@@ -39,7 +39,7 @@ The `aria-describedby` property is appropriate when the associated content conta
 ## Values
 
 - ID reference list
-  - : The `id` or space-separated list of elements IDs that describe the current element. 
+  - : The `id` or space-separated list of elements IDs that describe the current element.
 
 ## Associated roles
 

@@ -36,7 +36,7 @@ The [WebXR Device API's](/en-US/docs/Web/API/WebXR_Device_API) **`XRInputSource`
 - {{domxref('XRInputSource.targetRayMode', 'targetRayMode')}}{{readonlyInline}}
   - : A `DOMString` indicating the methodology used to produce the target ray: `gaze`, `tracked-pointer`, or `screen`.
 - {{domxref('XRInputSource.targetRaySpace', 'targetRaySpace')}}{{readonlyInline}}
-  - : An {{domxref("XRSpace")}} object defining the origin of the target ray and the direciton in which it extends. This space is established using the method defined by `targetRayMode`.
+  - : An {{domxref("XRSpace")}} object defining the origin of the target ray and the direction in which it extends. This space is established using the method defined by `targetRayMode`.
 
 ## Methods
 

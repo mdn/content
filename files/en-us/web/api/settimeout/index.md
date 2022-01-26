@@ -298,8 +298,10 @@ console.log('After setTimeout');
 
 Will write to the console:
 
-    After setTimeout
-    foo has been called
+```
+After setTimeout
+foo has been called
+```
 
 This is because even though `setTimeout` was called with a delay of zero,
 it's placed on a queue and scheduled to run at the next opportunity; not immediately.

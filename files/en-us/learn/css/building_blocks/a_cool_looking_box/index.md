@@ -13,6 +13,7 @@ tags:
   - effects
 ---
 {{LearnSidebar}}
+{{PreviousMenu("Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}
 
 In this assessment, you'll get some more practice in creating cool-looking boxes by trying to create an eye-catching box.
 
@@ -85,3 +86,5 @@ If you would like your work assessed, or are stuck and want to ask for help:
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
     - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
     - A link to the actual task or assessment page, so we can find the question you want help with.
+
+{{PreviousMenu("Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}

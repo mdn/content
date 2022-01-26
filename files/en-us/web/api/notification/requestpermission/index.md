@@ -26,7 +26,9 @@ Notification.requestPermission().then(function(permission) { /* ... */ });
 
 Previously, the syntax was based on a simple callback; this version is now deprecated:
 
-    Notification.requestPermission(callback);
+```js
+Notification.requestPermission(callback);
+```
 
 ### Parameters
 

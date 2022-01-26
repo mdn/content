@@ -49,4 +49,3 @@ let size = AudioData.allocationSize({planeIndex: 1})
 ## Browser compatibility
 
 {{Compat}}
-

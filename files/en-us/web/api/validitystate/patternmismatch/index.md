@@ -11,7 +11,11 @@ browser-compat: api.ValidityState.patternMismatch
 ---
 {{draft}}The read-only **`patternMismatch`** property of a **[`ValidityState`](/en-US/docs/Web/API/ValidityState)** object indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute.
 
-If the field supports the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute -- which means the {{HTMLElement("input")}} is of `type` {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}},  or {{HTMLElement("input/search", "search")}} -- and the pattern value is set to a valid regular expression, if the value don't doesn't conform to the constraints set by the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) value, the `patternMismatch` property will be true.
+The `patternMismatch` property will be true if and only if the following conditions are all true:
+
+- the field supports the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute — which means the {{HTMLElement("input")}} is of `type` {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, or {{HTMLElement("input/search", "search")}}
+- the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute contains a valid regular expression
+- the {{HTMLElement("input")}} value doesn't conform to the constraints set by the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) value.
 
 ## Examples
 
@@ -27,7 +31,7 @@ Given the following:
 </p>
 ```
 
-Here we have 3 sections for a north American phone number with an implicit label encompassing all three components of the phone number, expecting 3-digits, 3-digits and 4-digits respectively, as defined by the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute set on each.
+Here we have 3 sections for a North American phone number with an implicit label encompassing all three components of the phone number, expecting 3-digits, 3-digits and 4-digits respectively, as defined by the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute set on each.
 
 If the values are too long or too short, or contain characters that aren't digits, `patternMismatch` will be true. When `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-classes.
 

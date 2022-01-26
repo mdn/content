@@ -47,7 +47,7 @@ Object {onLine: true, userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1
     __proto__: Object
 ```
 
-You could use this navigator object to return more information about the runtime envinronment, as you might do with a normal {{domxref("Navigator")}} object.
+You could use this navigator object to return more information about the runtime environment, as you might do with a normal {{domxref("Navigator")}} object.
 
 ## Specifications
 

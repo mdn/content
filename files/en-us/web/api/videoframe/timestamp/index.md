@@ -32,5 +32,3 @@ console.log(VideoFrame.timestamp);
 ## Browser compatibility
 
 {{Compat}}
-
-

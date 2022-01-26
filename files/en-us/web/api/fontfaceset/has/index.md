@@ -35,4 +35,3 @@ A {{jsxref("Boolean")}}, `true` if `value` exists in the `FontFaceSet`.
 ## Browser compatibility
 
 {{Compat}}
-

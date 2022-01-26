@@ -37,8 +37,6 @@ AudioDecoder.decode(chunk)
 
 ## Examples
 
-
-
 ## Specifications
 
 {{Specifications}}
@@ -46,4 +44,3 @@ AudioDecoder.decode(chunk)
 ## Browser compatibility
 
 {{Compat}}
-

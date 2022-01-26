@@ -36,9 +36,7 @@ tags:
 | {{SpecName("ARIA","#menuitemcheckbox","ARIA: menuitemcheckbox role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#menu","Menu or Menu bar")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-
 ## See Also
-
 
 <section id="Quick_links">
 

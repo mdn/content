@@ -81,9 +81,9 @@ arr.flatMap(x => [x, x * 2]);
 var n = arr.length;
 var acc = new Array(n * 2);
 for (let i = 0; i < n; i++){
-	var x = arr[i];
-	acc[i * 2] = x;
-	acc[i * 2 + 1] = x * 2;
+  var x = arr[i];
+  acc[i * 2] = x;
+  acc[i * 2 + 1] = x * 2;
 }
 // [1, 2, 2, 4, 3, 6, 4, 8]
 ```
@@ -113,7 +113,7 @@ arr1.flatMap(x => [[x * 2]]);
 ```
 
 While the above could have been achieved by using map itself, here is an example that
-better showcases the use of `flatMap`.
+better showcases the use of `flatMap`.
 
 Let's generate a list of words from a list of sentences.
 
@@ -129,7 +129,7 @@ arr1.flatMap(x => x.split(" "));
 
 Notice, the output list length can be different from the input list length.
 
-### For adding and removing items during a `map()`
+### For adding and removing items during a `map()`
 
 `flatMap` can be used as a way to add and remove items (modify the number of
 items) during a `map`. In other words, it allows you to map _many items to
@@ -147,8 +147,8 @@ let a = [5, 4, -3, 20, 17, -33, -4, 18]
 
 a.flatMap( (n) =>
   (n < 0) ?      [] :
-  (n % 2 == 0) ? [n] :
-                 [n-1, 1]
+  (n % 2 == 0) ? [n] :
+                 [n-1, 1]
 )
 
 // expected output: [4, 1, 4, 20, 16, 1, 18]

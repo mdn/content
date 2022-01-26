@@ -28,12 +28,11 @@ throwIfAborted()
 
 {{jsxref('undefined')}}
 
-
 ## Examples
 
 The examples below come from the specification.
 
-### Aborting a polling operation 
+### Aborting a polling operation
 
 This example demonstrates how you can use `throwIfAborted()` to abort a polling operation.
 
@@ -105,7 +104,7 @@ controller.abort();
 ```
 
 APIs that do not return promises might react in a similar manner.
-In some cases it may make sense to absorb the signal. 
+In some cases it may make sense to absorb the signal.
 
 ## Specifications
 
