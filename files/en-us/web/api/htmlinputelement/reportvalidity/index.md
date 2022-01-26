@@ -14,7 +14,7 @@ browser-compat: api.HTMLInputElement.reportValidity
 ---
 {{APIRef("HTML DOM")}}
 
-The **`HTMLInputElement.reportValidity()`** method performs the same validity checking steps as the {{domxref("HTMLInputElement/checkValidity", "checkValidity()")}} method. If the value is invalid, this method also fires the {{domxref("HTMLInputElement/invalid_event", "invalid")}} event on the element, and (if the event isn't canceled) reports the problem to the user.
+The **`reportValidity()`** method of the {{domxref('HTMLInputElement')}} interface performs the same validity checking steps as the {{domxref("HTMLInputElement.checkValidity", "checkValidity()")}} method. If the value is invalid, this method also fires the {{domxref("HTMLInputElement.invalid_event", "invalid")}} event on the element, and (if the event isn't canceled) reports the problem to the user.
 
 ## Syntax
 
