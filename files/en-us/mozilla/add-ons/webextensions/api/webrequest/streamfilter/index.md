@@ -23,7 +23,7 @@ You can think of the stream filter as sitting between the networking stack and t
 The filter generates four different events:
 
 - {{WebEXTAPIRef("webRequest.StreamFilter.onstart", "onstart")}} when the filter is about to start receiving response data.
-- {{WebEXTAPIRef("webRequest.StreamFilter.ondata", "ondata")}} when some response data has been received by the filter and is available to be examined or modified. 
+- {{WebEXTAPIRef("webRequest.StreamFilter.ondata", "ondata")}} when some response data has been received by the filter and is available to be examined or modified.
 - {{WebEXTAPIRef("webRequest.StreamFilter.onstop", "onstop")}} when the filter has finished receiving response data.
 - {{WebEXTAPIRef("webRequest.StreamFilter.onerror", "onerror")}} if an error has occurred in initializing and operating the filter.
 
