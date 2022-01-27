@@ -188,11 +188,11 @@ These functions may be used wherever an {{cssxref("&lt;image&gt;")}} is valid as
   - : Linear gradients transition colors progressively along an imaginary line.
 - {{cssxref("gradient/radial-gradient()","radial-gradient()")}}
   - : Radial gradients transition colors progressively from a center point (origin).
-- {{cssxref("gradient/repeating-linear-gradient()","repeating-linear-gradiant()")}}
+- {{cssxref("gradient/repeating-linear-gradient()","repeating-linear-gradient()")}}
   - : Is similar to `linear-gradient()` and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container.
 - {{cssxref("gradient/repeating-radial-gradient()","repeating-radial-gradient()")}}
   - : Is similar to `radial-gradient()` and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container.
-- {{cssxref("gradient/repeating-conic-gradient()","repeat-conic-gradiant()")}}
+- {{cssxref("gradient/repeating-conic-gradient()","repeating-conic-gradient()")}}
   - : Is similar to `conic-gradient()` and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container.
 - {{cssxref("cross-fade()")}}
   - : Can be used to blend two or more images at a defined transparency.
