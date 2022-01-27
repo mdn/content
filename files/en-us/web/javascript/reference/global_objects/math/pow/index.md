@@ -10,9 +10,8 @@ browser-compat: javascript.builtins.Math.pow
 ---
 {{JSRef}}
 
-The **`Math.pow()`** function returns the
+The **`Math.pow()`** function, given two arguments, _base_ and _exponent_, returns `base`<sup>`exponent`</sup>.
 `base` to the `exponent` power, as in
-`base^exponent` (in math notation, not in JavaScript).
 
 {{EmbedInteractiveExample("pages/js/math-pow.html")}}
 
