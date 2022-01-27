@@ -39,16 +39,16 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.4.tgz#a3764100624151323f7421ff5d90731b9ff9bc48"
   integrity sha512-GT+WV0p/3Y90zfyv3alYZykqkySbFxq6lJcK1RMnaoPoA6RGrbXwOnOhD9RPw+Jy6IKdzfUjvtXvrep+qkwwrQ==
 
-"@mdn/yari@0.6.30":
-  version "0.6.30"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.6.30.tgz#c6387cd89ed5e3760f7351b2659124274eb5a601"
-  integrity sha512-3CEOhqWg3pgIcE01uWh3xpJFgWBdHlJElUUTxYoggC6YmBId1KkoWIvrBkUMYDbCU21dQJEN5vbRck6gshZ46w==
+"@mdn/yari@0.6.37":
+  version "0.6.37"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-0.6.37.tgz#198e0889e4125b4b7501b39139584cacd1fc006c"
+  integrity sha512-OJaN4NwXeIuro4mjpJXrN7dyf0UL9UiLmnyMj/LupydnAbw5zGd79wi/XOE7cA0BcUdTlqBFMylDTEHtK5fmzw==
   dependencies:
     "@caporal/core" "2.0.2"
     "@fast-csv/parse" "4.3.6"
     "@mdn/browser-compat-data" "4.1.4"
     accept-language-parser "1.5.0"
-    browser-specs "^2.21.0"
+    browser-specs "^2.22.0"
     chalk "4.1.2"
     cheerio "1.0.0-rc.10"
     cli-progress "^3.10.0"
@@ -57,7 +57,7 @@
     cookie-parser "1.4.6"
     cssesc "^3.0.0"
     dayjs "1.10.7"
-    dotenv "14.1.0"
+    dotenv "14.3.0"
     ejs "3.1.6"
     express "4.17.2"
     fast-xml-parser "3.21.1"
@@ -549,10 +549,10 @@ braces@^3.0.1:
   dependencies:
     fill-range "^7.0.1"
 
-browser-specs@^2.21.0:
-  version "2.21.0"
-  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.21.0.tgz#f1505fbb9adf50932f96ec4ad202f8dc051dba3f"
-  integrity sha512-HnV+fV9xvN4a5zvi47Le2ShBxYJ2pU+crtGL+sJGRcBh5mkUkS9BswQEuwKM2VZ4z1FHmBTGKtnn4NeVglHXag==
+browser-specs@^2.22.0:
+  version "2.23.0"
+  resolved "https://registry.yarnpkg.com/browser-specs/-/browser-specs-2.23.0.tgz#4748a7ad755906744c1d12147d47f5192ae8984d"
+  integrity sha512-Lxh7Lf4BuHioPW7jyPfuQbM2zwQBE9yRi6PeS4/zsI8qKD1KchE+owEW2yyrvJW/uLdIls2b4oTmpV5fIQxAWw==
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
@@ -1314,10 +1314,10 @@ domutils@^2.6.0, domutils@^2.7.0:
     domelementtype "^2.2.0"
     domhandler "^4.2.0"
 
-dotenv@14.1.0:
-  version "14.1.0"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-14.1.0.tgz#66e9c0c448501b006f4dd9f08080c9011c7a5e6c"
-  integrity sha512-h8V+Yfa8m0YSjf3Rgbno51cxWldb4PEixIJVL55VmW7uAfeLQKiaPrEUiBps+ARK9MeqjJgTf269OMmu6lOODQ==
+dotenv@14.3.0:
+  version "14.3.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-14.3.0.tgz#40f537fe90e229d35361c66cf432903e0db49001"
+  integrity sha512-PCTcOQSXVo9FI1dB7AichJXMEvmiGCq0gnCpjfDUc8505uR+2MeLXWe+Ue4PN5UXa2isHSa78sr7L59fk+2mnQ==
 
 download@^6.2.2:
   version "6.2.5"
