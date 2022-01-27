@@ -14,6 +14,8 @@ browser-compat: html.elements.option
 {{HTMLRef}}
 
 The **`<option>`** [HTML](/en-US/docs/Web/HTML) element is used to define an item contained in a {{HTMLElement("select")}}, an {{HTMLElement("optgroup")}}, or a {{HTMLElement("datalist")}} element. As such, `<option>` can represent menu items in popups and other lists of items in an HTML document.
+  
+Styling the **`<option>`** element is highly limited. Options don't inherit the font set on the parent. In Firefox, only [`color`](/en-US/docs/Web/CSS/color) and [`background-color`](/en-US/docs/Web/CSS/background-color) can be set however in Chrome or Safari it's not possible to set any properties. You can find more details about styling [here](/en-US/docs/Learn/Forms/Advanced_form_styling).
 
 {{EmbedInteractiveExample("pages/tabbed/option.html", "tabbed-standard")}}
 
