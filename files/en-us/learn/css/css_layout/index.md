@@ -72,7 +72,7 @@ These articles will provide instruction on the fundamental layout tools and tech
 
 The following assessment will test your understanding of the CSS layout methods covered in the guides above.
 
-- [Assessment: Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
+- [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
   - : An assessment to test your knowledge of different layout methods by laying out a webpage.
 
 ## See also
