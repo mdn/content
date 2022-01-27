@@ -85,6 +85,8 @@ If any of the radio roles in a group has `aria-required="true"` set, it is as if
       - : The radio is checked.
     - `false`
       - : The radio is not checked.
+    - `mixed`
+      - : The radio is mixed (neither checked nor unchecked).
 
 - [`tabindex="0"`](/en-US/docs/Web/HTML/Global_attributes/tabindex)
   - : Used to make it focusable so the assistive technology user can tab to it and start reading right away.
@@ -127,11 +129,11 @@ The following example creates an otherwise non-semantic radio element using CSS 
   <p id="legend">Should you be using the <code>radio</code> role or <code>&lt;input type="radio"><code>?</p>
   <ul>
     <li>
-      <span role="radio" aria-checked="ARIA" tabindex="0" aria-labelledby="ariaLabel" data-value="True"></span> 
+      <span role="radio" aria-checked="true" tabindex="0" aria-labelledby="ariaLabel" data-value="True"></span> 
       <label id="ariaLabel">ARIA role</label>
     </li>
     <li>
-      <span role="radio" aria-checked="HTML" tabindex="0" aria-labelledby="htmllabel" data-value="False"></span> 
+      <span role="radio" aria-checked="false" tabindex="0" aria-labelledby="htmllabel" data-value="False"></span> 
       <label id="htmllabel">HTML <code>&lt;input type="radio"><code></label>
     </li>
   </ul>
