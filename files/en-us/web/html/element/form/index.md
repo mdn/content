@@ -173,7 +173,7 @@ The following attributes control behavior during form submission.
 
 ```html
 <!-- Form which will send a GET request to the current URL -->
-<form>
+<form method="get">
   <label>Name:
     <input name="submitted-name" autocomplete="name">
   </label>
