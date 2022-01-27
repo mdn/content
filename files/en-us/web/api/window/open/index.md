@@ -136,7 +136,7 @@ function openRequestedPopup() {
 ### Window functionality
 
 - `noopener`
-  - : If this feature is set, the new window will not have access back to the originating window via {{domxref("Window.opener")}} and returns `null`.
+  - : If this feature is set, the new window will not have access to the originating window via {{domxref("Window.opener")}} and returns `null`.
 
     When `noopener` is used, non-empty target names, other than `_top`, `_self`, and `_parent`, are treated like `_blank` in terms of deciding whether to open a new browsing context.
 
