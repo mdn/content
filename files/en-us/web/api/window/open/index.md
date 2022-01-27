@@ -14,28 +14,31 @@ browser-compat: api.Window.open
 ---
 {{APIRef}}
 
-The **`open()`** method loads a specified resource into a new or existing tab, window or {{HTMLElement("iframe")}} (i.e., a new or existing browsing context) under a specified name.
+The **`open()`** method of the {{domxref('Window')}} interface loads a specified resource into a new or existing tab, window, or {{HTMLElement("iframe")}} (i.e., a new or existing browsing context) under a specified name.
 
 ## Syntax
 
 ```js
-let newWindow = window.open(url, windowName, [windowFeatures]);
+open();
+open(url);
+open(url, windowName);
+open(url, windowName, windowFeatures);
 ```
 
 ### Parameters
 
-- `url`
+- `url` {{optional_inline}}
   - : A string indicating the URL or path of the resource to be loaded. If an empty string (`""`) is specified as `url`, a blank page is opened into the targeted browsing context. Note that remote URLs are deferred until after the current script block finishes executing.
 
 - `windowName` {{optional_inline}}
-  - : A string, without whitespace, specifying the name of the browsing context the resource is being loaded into — not the window's {{HTMLElement("title", "", "#attr-target")}}. If the name doesn't indicate an existing context, a new context is created and given the specified name. The special `target` keywords, `_self`, `_blank`, `_parent` and `_top`, can also be used.
+  - : A string, without whitespace, specifying the name of the browsing context the resource is being loaded into — not the window's {{HTMLElement("title", "", "#attr-target")}}. If the name doesn't indicate an existing context, a new context is created and given the specified name. The special `target` keywords, `_self`, `_blank`, `_parent`, and `_top`, can also be used.
 
     This name can be used as the `target` attribute of
     {{HTMLElement("a", "", "#attr-target")}} or {{HTMLElement("form", "",
     "#attr-target")}} elements.
 
 - `windowFeatures` {{optional_inline}}
-  - : A string containing a comma-separated list of window features in the form _name=value_ — or for boolean features, just _name_. These features include options such as the window's default size and position, whether or not to open a minimal popup window, and so forth. See {{anch("Window features")}} below for documentation of each feature that can be specified.
+  - : A string containing a comma-separated list of window features in the form _name=value_ — or for boolean features, just _name_. These features include options such as the window's default size and position, whether or not to open a minimal popup window, and so forth. See {{anch("Window features")}} below for descriptions of each feature.
 
 ### Return value
 
@@ -77,7 +80,7 @@ function openRequestedPopup() {
 
 ## Window features
 
-`windowFeatures` is an optional string containing a comma-separated list of window features such as size, position and UI features. However, most modern browsers will ignore changes to UI features for a better user experience.
+`windowFeatures` is an optional comma-separated list of window features such as size, position, and UI features. Most modern browsers will ignore changes to UI features for a better user experience.
 
 ### Popup feature
 
@@ -91,7 +94,7 @@ function openRequestedPopup() {
 ### Size
 
 - `width` or `innerWidth`
-  - : Specifies the height of the content area, including scrollbars. The minimum required value is 100.
+  - : Specifies the width of the content area, including scrollbars. The minimum required value is 100.
 
 - `height` or `innerHeight`
   - : Specifies the height of the content area, including scrollbars. The minimum required value is 100.
@@ -99,7 +102,7 @@ function openRequestedPopup() {
 ### Position
 
 - `left` or `screenX`
-  - :  Specifies the distance, in pixels, the new window will be generated from the left side of the work area of the user's operating system.
+  - : Species the distance in pixels from the left side of the work area as defined by the user's operating system where the new window will be generated.
 
 - `top` or `screenY`
   - : Specifies the distance, in pixels, the new window will be generated from the left side of the work area of the user's operating system.
