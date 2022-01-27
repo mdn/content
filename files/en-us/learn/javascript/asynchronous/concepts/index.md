@@ -61,7 +61,7 @@ btn.addEventListener('click', () => {
 
   console.log(myDate);
 
-  let pElem = document.createElement('p');
+  const pElem = document.createElement('p');
   pElem.textContent = 'This is a newly-added paragraph.';
   document.body.appendChild(pElem);
 });
