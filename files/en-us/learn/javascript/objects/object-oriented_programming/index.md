@@ -83,7 +83,7 @@ This constructor takes two parameters so we can initialize the `name` and `teach
 
 Now we have a constructor we can create some professors. Programming languages often use the keyword `new` to signal that a constructor is being called.
 
-```
+```js
 walsh = new Professor('Walsh', 'Psychology')
 lillian = new Professor('Lillian', 'Poetry')
 
@@ -148,7 +148,7 @@ In this case we would say that `Person` is the **superclass** or **parent class*
 
 You might notice that `introduceSelf()` is defined in all three classes. The reason is that while all people want to introduce themselves, the way they do it is different:
 
-```
+```js
 walsh = new Professor('Walsh', 'Psychology')
 walsh.introduceSelf()  // 'My name is Professor Walsh, and I will be your Psychology professor'
 
@@ -158,7 +158,7 @@ summers.introduceSelf() // 'My name is Summers, and I'm in the first year'
 
 We might have a default implementation of `introduceSelf()` for people who aren't students _or_ professors:
 
-```
+```js
 pratt = new Person('Pratt')
 pratt.introduceSelf() // 'My name is Pratt'
 ```
@@ -173,7 +173,7 @@ This is a useful feature because it enables the programmer to change the interna
 
 For example, suppose students are allowed to study archery if they are in the second year or above. We could implement this just by exposing the student's `year` property, and other code could examine that to decide whether the student can take the course:
 
-```
+```js
 if (student.year > 1) {
     // allow the student into the class
 }
@@ -192,7 +192,7 @@ class Student : extends Person
        canStudyArchery() { return this.year < 1 }
 ```
 
-```
+```js
 if (student.canStudyArchery()) {
     // allow the student into the class
 }
