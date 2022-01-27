@@ -115,7 +115,7 @@ The `srcset` and `sizes` attributes look complicated, but they're not too hard t
 
 1.  An **image filename** (`elva-fairy-480w.jpg`)
 2.  A space
-3.  The image's **intrinsic width in pixels** (`480w`) — note that this uses the `w` unit, not `px` as you might expect. This is the image's real size, which can be found by inspecting the image file on your computer (for example, on a Mac you can select the image in Finder and press
+3.  The image's **intrinsic width in pixels** (`480w`) — note that this uses the `w` unit, not `px` as you might expect. An image's [intrinsic size](/en-US/docs/Glossary/intrinsic_size) is its real size, which can be found by inspecting the image file on your computer (for example, on a Mac you can select the image in Finder and press
 
     <kbd>Cmd</kbd>
 
