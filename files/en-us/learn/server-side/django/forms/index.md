@@ -647,7 +647,7 @@ Then navigate to the author create page, `http://127.0.0.1:8000/catalog/author/c
 
 ![Form Example: Create Author](forms_example_create_author.png)
 
-Enter values for the fields and then press **Submit** to save the author record. You should now be taken to a detail view for your new author, with a URL of something like _http\://127.0.0.1:8000/catalog/author/10_.
+Enter values for the fields and then press **Submit** to save the author record. You should now be taken to a detail view for your new author, with a URL of something like `http://127.0.0.1:8000/catalog/author/10`.
 
 You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/update/_) — we don't show a screenshot because it looks just like the "create" page!
 
