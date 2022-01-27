@@ -100,7 +100,6 @@ A scroll timeline named `squareTimeline` is declared and applied to the `#square
     transform: rotate(360deg);
   }
 }
-```
 #### Result
 
 {{EmbedLiveSample("Simple example")}}
