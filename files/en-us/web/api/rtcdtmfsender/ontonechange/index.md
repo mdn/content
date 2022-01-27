@@ -13,7 +13,7 @@ tags:
   - ontonechange
 browser-compat: api.RTCDTMFSender.ontonechange
 ---
-{{ APIRef("WebRTC") }}{{draft}}
+{{ APIRef("WebRTC") }}
 
 The **`ontonechange`** property of the {{
   domxref("RTCDTMFSender") }} interface is used to set the event handler for the

@@ -12,7 +12,7 @@ tags:
   - Property
 browser-compat: api.CSSTranslate.x
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`x`** property of the
 {{domxref("CSSTranslate")}} interface gets and sets the abscissa or x-axis of the

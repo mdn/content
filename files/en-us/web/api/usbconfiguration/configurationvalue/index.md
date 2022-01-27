@@ -12,7 +12,7 @@ tags:
   - configurationValue
 browser-compat: api.USBConfiguration.configurationValue
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}
+{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}
 
 The **`configurationValue`** read-only property
 of the {{domxref("USBConfiguration")}} interface null

@@ -12,7 +12,7 @@ tags:
   - Reference
 browser-compat: api.IntersectionObserver.thresholds
 ---
-{{APIRef("Intersection Observer API")}}{{draft}}
+{{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserver")}} interface's read-only
 **`thresholds`** property returns the list of intersection

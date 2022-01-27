@@ -12,7 +12,7 @@ tags:
   - Storage
 browser-compat: api.IDBTransaction.durability
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("IndexedDB")}}
+{{securecontext_header}}{{DefaultAPISidebar("IndexedDB")}}
 
 The **`durability`** read-only property of the
 {{domxref("IDBTransaction")}} interface returns the durability hint the transaction was

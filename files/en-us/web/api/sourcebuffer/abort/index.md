@@ -14,7 +14,7 @@ tags:
   - abort
 browser-compat: api.SourceBuffer.abort
 ---
-{{draft}}{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`abort()`** method of the {{domxref("SourceBuffer")}}
 interface aborts the current segment and resets the segment parser.

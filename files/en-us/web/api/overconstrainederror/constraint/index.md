@@ -14,7 +14,7 @@ tags:
   - constraint
 browser-compat: api.OverconstrainedError.constraint
 ---
-{{draft}}{{securecontext_header}}{{APIRef("Media Capture and
+{{securecontext_header}}{{APIRef("Media Capture and
   Streams")}}{{SeeCompatTable}}
 
 The **`constraint`** read-only property of the

@@ -11,7 +11,7 @@ tags:
   - Property
 browser-compat: api.CSSMathNegate.value
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The CSSMathNegate.value read-only property of the
 {{domxref("CSSMathNegate")}} interface returns a {{domxref('CSSNumericValue')}} object.

@@ -11,7 +11,7 @@ tags:
   - screen
 browser-compat: api.WakeLockSentinel.release
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
 The **`release()`** method of the
 {{domxref("WakeLockSentinel")}} interface releases the

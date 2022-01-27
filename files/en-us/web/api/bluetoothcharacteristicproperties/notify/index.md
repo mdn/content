@@ -13,7 +13,7 @@ tags:
   - notify
 browser-compat: api.BluetoothCharacteristicProperties.notify
 ---
-{{draft}}{{securecontext_header}}{{APIRef("")}}
+{{securecontext_header}}{{APIRef("")}}
 
 The **`notify`** read-only property of the
 {{domxref("BluetoothCharacteristicProperties")}} interface returns a

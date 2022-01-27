@@ -12,7 +12,7 @@ tags:
   - add()
 browser-compat: api.CSSNumericValue.add
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`add()`** method of the
 {{domxref("CSSNumericValue")}} interface adds a supplied number to the

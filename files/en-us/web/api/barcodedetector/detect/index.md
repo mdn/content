@@ -9,7 +9,7 @@ tags:
   - shape detection
 browser-compat: api.BarcodeDetector.detect
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}
 
 The **`detect()`** method of the
 {{domxref("BarcodeDetector")}} interface returns a {{jsxref('Promise')}} which fulfills
