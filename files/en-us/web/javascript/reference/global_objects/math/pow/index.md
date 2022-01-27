@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Math.pow
 ---
 {{JSRef}}
 
-The **`Math.pow()`** function, given two arguments, _base_ and _exponent_, returns `base`<sup>`exponent`</sup>.
+The **`Math.pow()`** static method, given two arguments, _base_ and _exponent_, returns `base`<sup>`exponent`</sup>.
 
 {{EmbedInteractiveExample("pages/js/math-pow.html")}}
 
