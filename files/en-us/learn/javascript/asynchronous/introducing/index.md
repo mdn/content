@@ -206,7 +206,7 @@ doOperation();
 
 Because we have to call callbacks inside callbacks, we get a deeply nested `doOperation()` function, which is much harder to read and debug. This is sometimes called "callback hell" or the "pyramid of doom" (because the indentation looks like a pyramid on its side).
 
-When we nest callbacks like this it can also get very hard to handle errors: often you have to handle errors at each level of the "pyramid", instead of having error handling once at the top level.
+When we nest callbacks like this, it can also get very hard to handle errors: often you have to handle errors at each level of the "pyramid", instead of having error handling once at the top level.
 
 ## Promises
 
