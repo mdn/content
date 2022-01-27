@@ -64,7 +64,7 @@ In this block, the lines are executed one after the other:
     3.  We then give it some text content.
     4.  Finally, we append the paragraph to the document body.
 
-While each operation is being processed, nothing else can happen — rendering is paused. This is because as we said in the previous article, [JavaScript is single threaded](/en-US/docs/Learn/JavaScript/Asynchronous/Concepts#javascript_is_single_threaded). Only one thing can happen at a time, on a single main thread, and everything else is blocked until an operation completes.
+While each operation is being processed, nothing else can happen — rendering is paused. This is because (as we said in the previous article, [JavaScript is single threaded](/en-US/docs/Learn/JavaScript/Asynchronous/Concepts#javascript_is_single-threaded)) only one thing can happen at a time, on a single main thread, and everything else is blocked until an operation completes.
 
 So in the example above, after you've clicked the button the paragraph won't appear until after the OK button is pressed in the alert box. You can try it for yourself:
 
