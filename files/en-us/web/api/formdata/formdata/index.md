@@ -61,7 +61,7 @@ Or you can specify the optional `form` argument when creating the `FormData` obj
 </form>
 ```
 
-> **Note:** Only successful form controls are included in a FormData object, i.e. those with a name, not disabled and checked (radio buttons and checkboxes) or selected (one or more options within a select).
+> **Note:** Only successful form controls are included in a FormData object, i.e. those with a name, not disabled and checked (radio buttons and checkboxes) or selected (one or more options within a select).
 
 ```js
 let myForm = document.getElementById('myForm');

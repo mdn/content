@@ -46,7 +46,6 @@ animation-timeline: unset;
 - `<timeline-name>`
   - : A {{cssxref('custom-ident')}} or string identifying the scroll timeline, declared with the {{cssxref('@scroll-timeline')}} rule. If two or more scroll timelines share the same name, the last declared within the cascade will be used. If no matching scroll timeline is found, the animation is not associated with a timeline.
 
-
 ## Formal definition
 
 {{cssinfo}}

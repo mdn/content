@@ -16,7 +16,7 @@ browser-compat: api.FontFace.unicodeRange
 
 The **`unicodeRange`** property of the
 {{domxref("FontFace")}} interface retrieves or sets the range of unicode codepoints
-encompassing the font. It is equivalent to the {{cssxref("@font-face/unicode-range",
+encompassing the font. It is equivalent to the {{cssxref("@font-face/unicode-range",
   "unicode-range")}} descriptor.
 
 ## Syntax

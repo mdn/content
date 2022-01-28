@@ -33,7 +33,7 @@ onsecuritypolicyviolation = functionRef
 
 Only one `onsecuritypolicyviolation` handler can be assigned to an object at a time.
 
-For greater flexibility, you can pass a [securitypolicyviolation](/en-US/docs/Web/API/Element/securitypolicyviolation_event) event to the {{domxref("EventTarget.addEventListener()")}} method instead.
+For greater flexibility, you can pass a [securitypolicyviolation](/en-US/docs/Web/API/Element/securitypolicyviolation_event) event to the {{domxref("EventTarget.addEventListener()")}} method instead.
 
 ## Example
 

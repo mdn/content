@@ -29,7 +29,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLAnchorElement.hostname")}}
   - : Is a {{domxref("USVString")}} representing the hostname in the referenced URL.
 - {{domxref("HTMLAnchorElement.href")}}
-  - : Is a {{domxref("USVString")}} that is the result of parsing the {{htmlattrxref("href", "a")}} HTML attribute relative to the document, containing a valid URL of a linked resource.
+  - : Is a {{domxref("USVString")}} that is the result of parsing the {{htmlattrxref("href", "a")}} HTML attribute relative to the document, containing a valid URL of a linked resource.
 - {{domxref("HTMLAnchorElement.hreflang")}}
   - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("hreflang", "a")}} HTML attribute, indicating the language of the linked resource.
 - {{domxref("HTMLAnchorElement.origin")}} {{readonlyInline}}
