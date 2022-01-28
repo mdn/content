@@ -50,9 +50,9 @@ myPeerConnection.createOffer(successCallback, failureCallback, [options]) {{depr
         you then apply the returned offer, ICE will restart. Specify `false` to
         keep the same credentials and therefore not restart ICE. **The default is
         `false`**.
-    - `offerToReceiveAudio` {{optional_inline}}
+    - `offerToReceiveAudio` {{optional_inline}} {{deprecated_inline}}
       - : Provides additional control over the directionality of audio. For example, it can be used to ensure that audio can be received, regardless if audio is sent or not.
-    - `offerToReceiveVideo` {{optional_inline}}
+    - `offerToReceiveVideo` {{optional_inline}} {{deprecated_inline}}
       - : Provides additional control over the directionality of video. For example, it can be used to ensure that video can be received, regardless if video is sent or not.
 
 ### Deprecated parameters
