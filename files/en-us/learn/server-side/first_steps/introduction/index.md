@@ -126,7 +126,7 @@ Because the information is in a database, it can also more easily be shared and 
 >
 > For a common search term ("fish", say) you can see literally millions of returned values. Using a database allows these to be stored and shared efficiently, and it allows the presentation of the information to be controlled in just one place.
 
-### Customised user experience
+### Customized user experience
 
 Servers can store and use information about clients to provide a convenient and tailored user experience. For example, many sites store credit cards so that details don't have to be entered again. Sites like Google Maps can use saved or current locations for providing routing information, and search or travel history to highlight local businesses in search results.
 

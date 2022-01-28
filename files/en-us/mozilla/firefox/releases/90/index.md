@@ -37,7 +37,7 @@ This article provides information about the changes in Firefox 90 that will affe
 
 ### HTTP
 
-- The HTTP {{Glossary("Fetch metadata request header", "fetch metadata request headers")}} (`Sec-Fetch-*`) are now supported. These headers provide servers with additional context about requests, including whether they are same-origin, cross-origin, same-site, or user-intiated, and where/how the requested data is to be used. This allows servers to mitigate against several types of cross-origin attacks ({{bug(1695911)}}).
+- The HTTP {{Glossary("Fetch metadata request header", "fetch metadata request headers")}} (`Sec-Fetch-*`) are now supported. These headers provide servers with additional context about requests, including whether they are same-origin, cross-origin, same-site, or user-initiated, and where/how the requested data is to be used. This allows servers to mitigate against several types of cross-origin attacks ({{bug(1695911)}}).
 
 #### Removals
 

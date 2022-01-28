@@ -9,7 +9,7 @@ tags:
   - Response header
   - Deprecated
   - Non-standard
-  - Exerimental
+  - Experimental
 browser-compat: http.headers.Content-DPR
 ---
 {{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}

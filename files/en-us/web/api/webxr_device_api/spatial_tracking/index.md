@@ -192,7 +192,7 @@ A `reset` may occur because the XR hardware lost connectivity for a time, resu
 
 Another reason `reset` may be sent is because the user has exited the bounds of a reference space and entered another reference space, or because the user has been transitioned programmatically from one reference space to another. Any time the bounds geometry of the user's space changes, a `reset` is sent.
 
-`reset` is only used for signficant jumps or transitions; minor things will just be absorbed automatically. The event is always sent to every affected reference space, including those created using `getOffsetReferenceSpace()`, so if you listen for `reset` events, you need to be sure you retain a strong reference to any spaces you're still using.
+`reset` is only used for significant jumps or transitions; minor things will just be absorbed automatically. The event is always sent to every affected reference space, including those created using `getOffsetReferenceSpace()`, so if you listen for `reset` events, you need to be sure you retain a strong reference to any spaces you're still using.
 
 ## See also
 

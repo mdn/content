@@ -653,7 +653,7 @@ AJAXSubmit(myForm);
 > fine in most browsers.
 
 > **Note:** The best way to send binary content is via
-> {{jsxref("ArrayBuffer", "ArrayBuffers")}} or {{domxref("Blob", "Blobs")}} in conjuncton
+> {{jsxref("ArrayBuffer", "ArrayBuffers")}} or {{domxref("Blob", "Blobs")}} in conjunction
 > with the {{domxref("XMLHttpRequest.send()", "send()")}} method and possibly the
 > {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} method of the
 > `FileReader` API. But, since the aim of this script is to work with a [stringifiable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)

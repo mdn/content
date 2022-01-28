@@ -67,7 +67,7 @@ A `MediaTrackCapabilities` object containing the following members:
 
 In the following example we ask for permission to access audio and video devices with {{domxref("mediaDevices.getUserMedia()")}}, as to use `getCapabilities()` we need permission to access the devices.
 
-If `device` is an `InputDeviceInfo` object, then `getCapabilities()` will return an object with members representing its capbilities. A video stream will not include auto properties such as `noiseSuppression`, for example.
+If `device` is an `InputDeviceInfo` object, then `getCapabilities()` will return an object with members representing its capabilities. A video stream will not include auto properties such as `noiseSuppression`, for example.
 
 ```js
 // Get permission to access audio or video devices
