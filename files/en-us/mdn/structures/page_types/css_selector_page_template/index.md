@@ -19,7 +19,7 @@ browser-compat: css.selectors.NameOfTheSelector
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular selector.
 >
-> ```
+> ```md
 > ---
 > title: :NameOfTheSelector
 > slug: Web/CSS/:NameOfTheSelector

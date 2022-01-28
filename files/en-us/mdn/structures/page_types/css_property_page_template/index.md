@@ -19,7 +19,7 @@ browser-compat: css.properties.NameOfTheProperty
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular property.
 >
-> ```
+> ```md
 > ---
 > title: NameOfTheProperty
 > slug: Web/CSS/NameOfTheProperty

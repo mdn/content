@@ -10,7 +10,7 @@ tags:
 ---
 {{ APIRef("IndexedDB") }}
 
-> **Warning:** The synchronous version of the IndexedDB API was originally intended for use only with [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.
+> **Warning:** The synchronous version of the IndexedDB API was originally intended for use only with [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.
 
 The `IDBObjectStoreSync` interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) provides synchronous access to an [object store](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store) of a database.
 
@@ -32,7 +32,7 @@ The `IDBObjectStoreSync` interface of the [IndexedDB API](/en-US/docs/Web/API/In
       <td>
         <a href="/en-US/docs/Web/API/IDBIndexSync"><code>IDBIndexSync</code></a>
         <code
-          ><a href="#createindex">createIndex</a> (in DOMString name, in
+          ><a href="#createindex">createIndex</a> (in DOMString name, in
           DOMString storeName, in DOMString keypath, in optional boolean
           unique);</code
         >
@@ -96,7 +96,7 @@ The `IDBObjectStoreSync` interface of the [IndexedDB API](/en-US/docs/Web/API/In
       <td>
         <code
           >void <a href="#removeindex">removeIndex</a> (in DOMString
-          indexName) raises (<a href="/en-US/docs/Web/API/IDBDatabaseException"
+          indexName) raises (<a href="/en-US/docs/Web/API/IDBDatabaseException"
             >IDBDatabaseException</a
           >);</code
         >
@@ -157,7 +157,7 @@ The `IDBObjectStoreSync` interface of the [IndexedDB API](/en-US/docs/Web/API/In
   </tbody>
 </table>
 
-##  Constants
+## Constants
 
 ### Mode constants
 
@@ -173,10 +173,12 @@ The `IDBObjectStoreSync` interface of the [IndexedDB API](/en-US/docs/Web/API/In
 
 Stores the given value into this object store, optionally with the specified key. If a record already exists with the given key, an exception is raised.
 
-    any add(
-      in any value,
-      in optional any key
-    ) raises (IDBDatabaseException);
+```
+any add(
+  in any value,
+  in optional any key
+) raises (IDBDatabaseException);
+```
 
 ##### Parameters
 
@@ -203,11 +205,13 @@ This method can raise a IDBDatabaseException with the following codes:
 
 Creates and returns a new index with the given name in the connected database.
 
-     IDBIndexSync createIndex (
-        in DOMString name,
-        in DOMString keypath,
-        in optional boolean unique
-     );
+```
+IDBIndexSync createIndex (
+  in DOMString name,
+  in DOMString keypath,
+  in optional boolean unique
+);
+```
 
 ##### Parameters
 
@@ -227,9 +231,11 @@ Creates and returns a new index with the given name in the connected database.
 
 Retrieves and returns the value from this object store for the record that corresponds to the given key.
 
-    any get (
-      in any key
-    ) raises (IDBDatabaseException);
+```
+any get (
+  in any key
+) raises (IDBDatabaseException);
+```
 
 ##### Parameters
 
@@ -254,10 +260,12 @@ This method can raise a IDBDatabaseException with the following codes:
 
 Creates a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) over the records of this object store. The range of the new cursor matches the specified [key range](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_range); if the key range is not specified or is null, then the range includes all the records.
 
-    CursorSync openCursor (
-      in optional KeyRange range,
-      in optional unsigned short direction
-    ) raises (DatabaseException);
+```
+CursorSync openCursor (
+  in optional KeyRange range,
+  in optional unsigned short direction
+) raises (DatabaseException);
+```
 
 ##### Parameters
 
@@ -282,9 +290,11 @@ This method can raise a DatabaseException with the following code:
 
 Opens the index with the given name, using the mode of the current transaction.
 
-     IDBIndexSync openIndex (
-       in DOMString name
-     ) raises  (IDBDatabaseException);
+```
+IDBIndexSync openIndex (
+  in DOMString name
+) raises  (IDBDatabaseException);
+```
 
 ##### Parameters
 
@@ -307,10 +317,12 @@ This method can raise an IDBDatabaseException with the following code:
 
 Stores the given value in this object store and returns the key for the stored record. If a record already exists with the given key, it is overwritten.
 
-    any put (
-      in any value,
-      in optional any key
-    ) raises (IDBDatabaseException);
+```
+any put (
+  in any value,
+  in optional any key
+) raises (IDBDatabaseException);
+```
 
 ##### Parameters
 
@@ -339,9 +351,11 @@ This method can raise an IDBDatabaseException with the following codes:
 
 Removes from this object store any records that correspond to the given key.
 
-    void remove (
-      in any key
-    ) raises (IDBDatabaseException);
+```
+void remove (
+  in any key
+) raises (IDBDatabaseException);
+```
 
 ##### Parameters
 
@@ -363,9 +377,11 @@ This method can raise a IDBDatabaseException with the following code:
 
 Destroys an index with the given name.
 
-      void removeIndex (
-        in DOMString indexName
-      ) raises (IDBDatabaseException);
+```
+void removeIndex (
+  in DOMString indexName
+) raises (IDBDatabaseException);
+```
 
 ##### Parameters
 

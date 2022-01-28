@@ -56,40 +56,44 @@ While an individual vector or matrix doesn't occupy an inordinate amount of memo
 
 Consider the following
 
-    function drawScene(gl, view, programInfo, buffers, texture, deltaTime) {
-      ...
-      for (object in scene) {
-        let vertexList = ...
-        let normalMatrix = mat4.create();
-        let modelViewMatrix = mat4.create();
-        let objectMatrix = mat4.
+```js
+function drawScene(gl, view, programInfo, buffers, texture, deltaTime) {
+  ...
+  for (object in scene) {
+    let vertexList = ...
+    let normalMatrix = mat4.create();
+    let modelViewMatrix = mat4.create();
+    let objectMatrix = mat4.
 
-        // Apply rotation updates to the object if needed
+    // Apply rotation updates to the object if needed
 
-        mat4.rotate(
-      }
-    }
+    mat4.rotate(
+  }
+}
+```
 
 This renders a scene. But it's inefficient, because it allocates as local variables a number of things, including at least two matrices, an array of vertices, and more. That means that for every frame, the JavaScript runtime has to allocate memory for those and set them up—possibly triggering garbage collection—and then when each interaction of the loop is completed, the memory is released.
 
 A simple change can optimize this significantly:
 
-    const vertexList = ...
-    const normalMatrix = mat4.create();
-    const modelViewMatrix = mat4.create();
+```js
+const vertexList = ...
+const normalMatrix = mat4.create();
+const modelViewMatrix = mat4.create();
 
-    function drawScene(gl, view, programInfo, buffers, texture, deltaTime) {
-      ...
-      for (object in scene) {
-        ...
-      }
-    }
+function drawScene(gl, view, programInfo, buffers, texture, deltaTime) {
+  ...
+  for (object in scene) {
+    ...
+  }
+}
+```
 
 Now, instead of allocating variables every loop iteration, we're using global constants(or class member constants). This has multiple benefits:
 
 - The memory allocated for each value or structure will not need to be reallocated every frame. This reduces the potential for triggering garbage collection, and optimizes memory use.
 - You can't accidentally delete the objects that contain your vectors and matrices, since they're constants.
-- You can, however, still replace the *contents* of each of these objects, so they're reusable.
+- You can, however, still replace the *contents* of each of these objects, so they're reusable.
 
 You're now protected from several possible coding mistakes, and your entire animation will be smoother and more performant as well.
 

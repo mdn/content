@@ -45,7 +45,9 @@ This element implements the {{domxref("HTMLBaseFontElement")}} interface.
 
 ## Example
 
-    <basefont color="#FF0000" face="Helvetica" size="+2" />
+```html
+<basefont color="#FF0000" face="Helvetica" size="+2" />
+```
 
 ## Specifications
 

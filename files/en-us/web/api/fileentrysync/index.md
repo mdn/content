@@ -59,8 +59,10 @@ To write content to file, create a FileWriter object by calling [`createWriter()
 
 Creates a new `FileWriter` associated with the file that the `FileEntry` represents.
 
-    void createWriter (
-    ) raises (FileException);
+```
+void createWriter (
+) raises (FileException);
+```
 
 #### Parameter
 
@@ -83,8 +85,10 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 
 Returns a File that represents the current state of the file that this `FileEntry` represents.
 
-    void file (
-    ) raises (FileException);
+```
+void file (
+) raises (FileException);
+```
 
 ##### Parameter
 

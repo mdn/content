@@ -17,7 +17,7 @@ tags:
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular method.
 >
-> ```
+> ```md
 > ---
 > title: Term being defined
 > slug: Glossary/Term_being_defined
