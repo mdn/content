@@ -81,15 +81,15 @@ the value is coerced to a string before being appended to the blob.
 
 ```js
 void append(
-  in ArrayBuffer data
+  in ArrayBuffer data
 );
 
 void append(
-  in Blob data
+  in Blob data
 );
 
 void append(
-  in String data,
+  in String data,
   [optional] in String endings
 );
 ```
@@ -111,7 +111,7 @@ through calls to {{manch("append")}}.
 
 ```js
 Blob getBlob(
-  in DOMString contentType {{optional_inline}}
+  in DOMString contentType {{optional_inline}}
 );
 ```
 
@@ -125,7 +125,7 @@ Blob getBlob(
 
 A {{domxref("Blob")}} object containing all of the data passed to any calls to
 {{manch("append")}} made since the `BlobBuilder` was created. This also
-resets the `BlobBuilder` so that the next call to {{manch("append")}} is
+resets the `BlobBuilder` so that the next call to {{manch("append")}} is
 starting a new, empty blob.
 
 ### getFile() {{non-standard_inline}}

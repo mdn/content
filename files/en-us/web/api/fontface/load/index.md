@@ -28,7 +28,7 @@ None.
 
 ### Return value
 
-A {{jsxref('Promise')}} that resolves with a reference to the current `FontFace` object when the font loads or rejects with a `NetworkError` {{domxref("DOMException")}} if the
+A {{jsxref('Promise')}} that resolves with a reference to the current `FontFace` object when the font loads or rejects with a `NetworkError` {{domxref("DOMException")}} if the
 loading process fails.
 
 ### Exceptions

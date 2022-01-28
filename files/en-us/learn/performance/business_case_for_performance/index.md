@@ -7,8 +7,6 @@ tags:
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/Performance/Mobile", "Learn/Performance")}}
 
-
-
 We've discussed the importance of web performance. You've learned what you need to do to optimize for web performance. But how do you convince your clients and/or management to prioritize and invest in performance? In this section, we discuss creating a clear business case to convince decision-makers to make the investment.
 
 <table>

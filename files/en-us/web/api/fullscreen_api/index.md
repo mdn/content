@@ -74,7 +74,7 @@ _The Fullscreen API defines two events which can be used to detect when full-scr
 
 ### Obsolete properties
 
-- {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
+- {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
 
   - : A Boolean value which is `true` if the document has an element currently being displayed in full-screen mode; otherwise, this returns `false`.
 
