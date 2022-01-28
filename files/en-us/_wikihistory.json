@@ -75252,8 +75252,20 @@
       "jpmedley"
     ]
   },
+  "Web/API/Sensor/activate_event": {
+    "modified": "2020-10-15T22:09:00.223Z",
+    "contributors": [
+      "jpmedley"
+    ]
+  },
   "Web/API/Sensor/activated": {
     "modified": "2020-10-15T22:08:48.213Z",
+    "contributors": [
+      "jpmedley"
+    ]
+  },
+  "Web/API/Sensor/error_event": {
+    "modified": "2020-10-15T22:08:58.845Z",
     "contributors": [
       "jpmedley"
     ]
@@ -75264,19 +75276,7 @@
       "jpmedley"
     ]
   },
-  "Web/API/Sensor/onactivate": {
-    "modified": "2020-10-15T22:09:00.223Z",
-    "contributors": [
-      "jpmedley"
-    ]
-  },
-  "Web/API/Sensor/onerror": {
-    "modified": "2020-10-15T22:08:58.845Z",
-    "contributors": [
-      "jpmedley"
-    ]
-  },
-  "Web/API/Sensor/onreading": {
+  "Web/API/Sensor/reading_event": {
     "modified": "2020-10-15T22:09:00.407Z",
     "contributors": [
       "jpmedley"
