@@ -34,7 +34,7 @@ Below is a list of interfaces based on the OrientationSensor interface.
 ## Methods
 
 - {{domxref("OrientationSensor.populateMatrix()")}}
-  - : Populates the given object with the rotation matrix based on the latest sensor reading. The rotation maxtrix is shown below.
+  - : Populates the given object with the rotation matrix based on the latest sensor reading. The rotation matrix is shown below.
 
 ## Examples
 
@@ -60,7 +60,7 @@ sensor.start();
 
 ### Permissions Example
 
-Using orientation sensors requires requsting permissions for multiple device sensors. Because the {{domxref('Permissions')}} interface uses promises, a good way to request permissions is to use {{jsxref('Promise.all')}}.
+Using orientation sensors requires requesting permissions for multiple device sensors. Because the {{domxref('Permissions')}} interface uses promises, a good way to request permissions is to use {{jsxref('Promise.all')}}.
 
 ```js
 const sensor = new AbsoluteOrientationSensor();

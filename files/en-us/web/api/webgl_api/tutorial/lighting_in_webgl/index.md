@@ -23,7 +23,7 @@ As should be clear by now, WebGL doesn't have much built-in knowledge. It just r
 
 ## Simulating lighting and shading in 3D
 
-Although going into detail about the theory behind simulated lighting in 3D graphics is far beyond the scope of this article, it's helpful to know a bit about how it works. Instead of discussing it in depth here, take a look at the article on [Phong shading](https://en.wikipedia.org/wiki/Phong_shading) at Wikipedia, which provides a good overview of the most commonly used lighting model or if you'd like to see a WebGL based explanation [see this artcle](https://webglfundamentals.org/webgl/lessons/webgl-3d-lighting-point.html).
+Although going into detail about the theory behind simulated lighting in 3D graphics is far beyond the scope of this article, it's helpful to know a bit about how it works. Instead of discussing it in depth here, take a look at the article on [Phong shading](https://en.wikipedia.org/wiki/Phong_shading) at Wikipedia, which provides a good overview of the most commonly used lighting model or if you'd like to see a WebGL based explanation [see this article](https://webglfundamentals.org/webgl/lessons/webgl-3d-lighting-point.html).
 
 There are three basic types of lighting:
 

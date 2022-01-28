@@ -63,7 +63,7 @@ In the example below we have two boxes, both 200 pixels in size:
 
 So what can we do about the overflowing issue?
 
-As we learned in [our previous lesson](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS), a common technique is to make the {{cssxref("max-width")}} of an image 100%. This will enable the image to become smaller in size than the box but not larger. This technique will also work with other replaced elements such as [`<video>`](/en-US/docs/Web/HTML/Element/video)s, or [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe)s.
+As we learned in [our previous lesson](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS), a common technique is to make the {{cssxref("max-width")}} of an image 100%. This will enable the image to become smaller in size than the box but not larger. This technique will also work with other replaced elements such as [`<video>`](/en-US/docs/Web/HTML/Element/video)s, or [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe)s.
 
 **Try adding `max-width: 100%` to the `<img>` element in the example above. You will see that the smaller image remains unchanged, but the larger one becomes smaller to fit into the box.**
 
@@ -116,7 +116,7 @@ In the example below we have styled some text inputs using CSS — you can see t
 
 {{EmbedGHLiveSample("css-examples/learn/images/form.html", '100%', 1000)}}
 
-> **Warning:** You should take care when changing the styling of form elements to make sure it is still obvious to the user they are form elements. You could create a form input with no borders and background that is almost indistinguishable from the content around it, but this would make it very hard to recognise and fill in.
+> **Warning:** You should take care when changing the styling of form elements to make sure it is still obvious to the user they are form elements. You could create a form input with no borders and background that is almost indistinguishable from the content around it, but this would make it very hard to recognize and fill in.
 
 As explained in the lessons on [form styling](/en-US/docs/Learn/Forms/Styling_web_forms) in the HTML part of this course, many of the more complex input types are rendered by the operating system and are inaccessible to styling. You should therefore always assume that forms are going to look quite different for different visitors and test complex forms in a number of browsers.
 
@@ -191,7 +191,7 @@ For further information on styling forms, take a look at the two articles in the
 
 ## Test your skills!
 
-We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Images and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_tasks).
+We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Images and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_tasks).
 
 ## Summary
 

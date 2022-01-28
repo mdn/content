@@ -101,7 +101,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 - The {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} and {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} now return a {{jsxref("Promise")}} that returns an object conforming to the dictionary {{domxref("RTCSessionDescriptionInit")}} instead of returning an {{domxref("RTCSessionDescription")}} directly. Existing code will continue to work, but new code can be written more simply.
 - Similarly, the {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} now accept as input an object conforming to the dictionary {{domxref("RTCSessionDescriptionInit")}}. Existing code continues to work, but [can be simplified](/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription#about_the_session_description_parameter).
-- {{domxref("RTCPeerConnection.addIceCandidate()")}} now accepts as input an initialisation object. This is compatible with existing code but allows new code to be written slightly more simply when used in tandem with the changes listed above ({{bug(1263312)}}).
+- {{domxref("RTCPeerConnection.addIceCandidate()")}} now accepts as input an initialization object. This is compatible with existing code but allows new code to be written slightly more simply when used in tandem with the changes listed above ({{bug(1263312)}}).
 - {{Glossary("DTMF")}} support is now enabled by default using {{domxref("RTCDTMFSender")}}. See [Using DTMF with WebRTC](/en-US/docs/Web/API/WebRTC_API/Using_DTMF) for more information on how this works.
 
 ### HTTP/Networking

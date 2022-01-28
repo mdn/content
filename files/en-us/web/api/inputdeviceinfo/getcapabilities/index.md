@@ -29,7 +29,7 @@ A `MediaTrackCapabilities` object containing the following members:
 
 - `deviceId`
   - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) object containing the device ID.
-- `groudId`
+- `groupId`
   - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) object containing a group ID.
 - `autoGainControl`>
   - : A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainBoolean) object reporting if the source can do auto gain control.
@@ -59,7 +59,7 @@ A `MediaTrackCapabilities` object containing the following members:
 - `width`
   - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainULong) containing the video width or range of widths in pixels.
 - `resizeMode`
-  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) object containing the mode or an array of modes the UA can use to derive the resolution of the video track.
+  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) object containing the mode or an array of modes the UA can use to derive the resolution of the video track.
 
 > **Note:** If the user has not granted permission to access the input device an empty object will be returned.
 

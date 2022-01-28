@@ -42,7 +42,7 @@ The allowed values are those of an enum of type `RTCSdpType`:
 ## Example
 
 ```js
-// The remote description has been set previously on pc, a RTCPeerconnection
+// The remote description has been set previously on pc, a RTCPeerConnection
 
 alert(pc.remoteDescription.type);
 ```

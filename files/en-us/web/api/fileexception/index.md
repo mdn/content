@@ -29,7 +29,7 @@ try {
   //Error is thrown if "log.txt" already exists.
 var fileEntry = fs.root.getFile('log.txt', {create: true, exclusive:true}0;
 } catch (e) {
-  onErrror(e);
+  onError(e);
 }
 ```
 

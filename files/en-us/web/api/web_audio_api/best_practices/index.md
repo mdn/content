@@ -15,7 +15,7 @@ There's no strict right or wrong way when writing creative code. As long as you 
 
 There are four main ways to load sound with the Web Audio API and it can be a little confusing as to which one you should use.
 
-When working with files, you are looking at either the grabbing the file from an {{domxref("HTMLMediaElement")}} (i.e. an {{htmlelement("audio")}} or {{htmlelement("video")}} element), or you're looking to fetch the file and decode it into a buffer. Both are legitimate ways of working, however, it's more common to use the former when you are working with full-length tracks, and the latter when working with shorter, more sample-like tracks.
+When working with files, you are looking at either the grabbing the file from an {{domxref("HTMLMediaElement")}} (i.e. an {{htmlelement("audio")}} or {{htmlelement("video")}} element), or you're looking to fetch the file and decode it into a buffer. Both are legitimate ways of working, however, it's more common to use the former when you are working with full-length tracks, and the latter when working with shorter, more sample-like tracks.
 
 Media elements have streaming support out of the box. The audio will start playing when the browser determines it can load the rest of the file before playing finishes. You can see an example of how to use this with the Web Audio API in the [Using the Web Audio API tutorial](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
 
@@ -29,7 +29,7 @@ The last way is to generate your own sound, which can be done with either an {{d
 
 The Web Audio API specification is constantly evolving and like most things on the web, there are some issues with it working consistently across browsers. Here we'll look at options for getting around cross-browser problems.
 
-There's the [`standardised-audio-context`](https://github.com/chrisguttandin/standardized-audio-context) npm package, which creates API functionality consistently across browsers, filling holes as they are found. It's constantly in development and endeavours to keep up with the current specification.
+There's the [`standardized-audio-context`](https://github.com/chrisguttandin/standardized-audio-context) npm package, which creates API functionality consistently across browsers, filling holes as they are found. It's constantly in development and endeavors to keep up with the current specification.
 
 There is also the option of libraries, of which there are a few depending on your use case. For a good all-rounder, [howler.js](https://howlerjs.com/) is a good choice. It has cross-browser support and, provides a useful subset of functionality. Although it doesn't harness the full gamut of filters and other effects the Web Audio API comes with, you can do most of what you'd want to do.
 

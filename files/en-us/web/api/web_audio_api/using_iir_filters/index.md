@@ -106,7 +106,7 @@ The toggle that turns the IIR filter on and off is set up in the similar way. Fi
 <button class="button-filter" role="switch" data-filteron="false" aria-pressed="false" aria-describedby="label" disabled></button>
 ```
 
-The filter button's `click` handler then connects the `IIRFilter` up to the graph, between the source and the detination:
+The filter button's `click` handler then connects the `IIRFilter` up to the graph, between the source and the destination:
 
 ```js
 filterButton.addEventListener('click', function() {
@@ -157,7 +157,7 @@ const canvasContainer = document.querySelector('.filter-graph');
 const canvasEl = document.createElement('canvas');
 canvasContainer.appendChild(canvasEl);
 
-// set 2d context and set dimesions
+// set 2d context and set dimensions
 const canvasCtx = canvasEl.getContext('2d');
 const width = canvasContainer.offsetWidth;
 const height = canvasContainer.offsetHeight;

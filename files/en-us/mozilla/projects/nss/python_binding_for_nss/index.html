@@ -22,8 +22,8 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
 
 <ul>
  <li>Be a thin layer with almost a one-to-one mapping of NSS/NSPR calls to python methods and functions. Programmers already familiar with NSS/NSPR will be quite comfortable with python-nss.</li>
- <li>Be "Pythonic". The term Pythonic means to follow accepted Python paradigms and idoms in the Python language and libraries. Thus when deciding if the NSS/NSPR API should be rigidly followed or a more Pythonic API provided the Pythonic implementation wins because Python programmers do not want to write C programs in Python, rather they want their Python code to feel like Python code with the richness of full Python.</li>
- <li>Identifer names follow the preferred Python style instead of the style in the NSS/NSPR C header files.
+ <li>Be "Pythonic". The term Pythonic means to follow accepted Python paradigms and idioms in the Python language and libraries. Thus when deciding if the NSS/NSPR API should be rigidly followed or a more Pythonic API provided the Pythonic implementation wins because Python programmers do not want to write C programs in Python, rather they want their Python code to feel like Python code with the richness of full Python.</li>
+ <li>Identifier names follow the preferred Python style instead of the style in the NSS/NSPR C header files.
   <ul>
    <li>Classes are camel-case. Class names always begin with a upper case letter and are then followed by a mix of lower and upper case letters, a upper case letter is used to separate words. Acronyms always appear as a contiguous string of upper case letters.</li>
    <li>Method, function and property names are always lower case with words separated by underscores.</li>
@@ -550,7 +550,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
   <tr>
    <td style="vertical-align: top;">Change Log</td>
    <td style="vertical-align: top;">
-    <p>The primary enhancements in this version was fixing access to extensions in a CertificateRequest and giving access to CertificateRequest attributes.  There is a bug in NSS which hides the existence of extensions in a CSR if the extensions are not contained in the first CSR  attribute. This was fixable in python-nss without requiring a patch  to NSS. Formerly python-nss did not provide access to the attributes in a CSR only the extensions, with this release all components of a  CSR can be accessed. See test/test_cert_request.py for examples.</p>
+    <p>The primary enhancements in this version was fixing access to extensions in a CertificateRequest and giving access to CertificateRequest attributes. There is a bug in NSS which hides the existence of extensions in a CSR if the extensions are not contained in the first CSR attribute. This was fixable in python-nss without requiring a patch to NSS. Formerly python-nss did not provide access to the attributes in a CSR only the extensions, with this release all components of a CSR can be accessed. See test/test_cert_request.py for examples.</p>
 
     <ul>
      <li>Add ability to read PEM data from a string.</li>
@@ -1236,7 +1236,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
   </tr>
   <tr>
    <td style="vertical-align: top;">Source Download</td>
-   <td style="vertical-align: top;"> </td>
+   <td style="vertical-align: top;"> </td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Change Log</td>
@@ -1395,7 +1395,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
   </tr>
   <tr>
    <td style="vertical-align: top;">Source Download</td>
-   <td style="vertical-align: top;"> </td>
+   <td style="vertical-align: top;"> </td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Change Log</td>
@@ -1437,11 +1437,11 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
   </tr>
   <tr>
    <td style="vertical-align: top;">SCM Tag</td>
-   <td style="vertical-align: top;"> </td>
+   <td style="vertical-align: top;"> </td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Source Download</td>
-   <td style="vertical-align: top;"> </td>
+   <td style="vertical-align: top;"> </td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Change Log</td>
@@ -1517,11 +1517,11 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
   </tr>
   <tr>
    <td style="vertical-align: top;">SCM Tag</td>
-   <td style="vertical-align: top;"> </td>
+   <td style="vertical-align: top;"> </td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Source Download</td>
-   <td style="vertical-align: top;"> </td>
+   <td style="vertical-align: top;"> </td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Change Log</td>
@@ -1546,11 +1546,11 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
   </tr>
   <tr>
    <td style="vertical-align: top;">SCM Tag</td>
-   <td style="vertical-align: top;"> </td>
+   <td style="vertical-align: top;"> </td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Source Download</td>
-   <td style="vertical-align: top;"> </td>
+   <td style="vertical-align: top;"> </td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Change Log</td>
@@ -1576,11 +1576,11 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
   </tr>
   <tr>
    <td style="vertical-align: top;">SCM Tag</td>
-   <td style="vertical-align: top;"> </td>
+   <td style="vertical-align: top;"> </td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Source Download</td>
-   <td style="vertical-align: top;"> </td>
+   <td style="vertical-align: top;"> </td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Change Log</td>
@@ -1606,11 +1606,11 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
   </tr>
   <tr>
    <td style="vertical-align: top;">SCM Tag</td>
-   <td style="vertical-align: top;"> </td>
+   <td style="vertical-align: top;"> </td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Source Download</td>
-   <td style="vertical-align: top;"> </td>
+   <td style="vertical-align: top;"> </td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Change Log</td>
@@ -1635,11 +1635,11 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
   </tr>
   <tr>
    <td style="vertical-align: top;">SCM Tag</td>
-   <td style="vertical-align: top;"> </td>
+   <td style="vertical-align: top;"> </td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Source Download</td>
-   <td style="vertical-align: top;"> </td>
+   <td style="vertical-align: top;"> </td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Change Log</td>
@@ -1678,11 +1678,11 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
   </tr>
   <tr>
    <td style="vertical-align: top;">SCM Tag</td>
-   <td style="vertical-align: top;"> </td>
+   <td style="vertical-align: top;"> </td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Source Download</td>
-   <td style="vertical-align: top;"> </td>
+   <td style="vertical-align: top;"> </td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Change Log</td>

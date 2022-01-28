@@ -98,7 +98,7 @@ If a tree, grid, tab list, or list box supports selection of more than one node,
 </ul>
 ```
 
-This listbox supports multiple selection so we set the element with role `listbox` with `aria-multiselectable="true"`. All selected options have `aria-selected` set to `true`. All options that are not selected but are selectable have `aria-selected` set to false. Had we included options that were disabled or otherwise not selectable, we would have omitted the `aria-selected` attribute altogether. Including the attribute, even with no value or explcitly set to `false` indicates to assistive technology users that the item is selectable.
+This listbox supports multiple selection so we set the element with role `listbox` with `aria-multiselectable="true"`. All selected options have `aria-selected` set to `true`. All options that are not selected but are selectable have `aria-selected` set to false. Had we included options that were disabled or otherwise not selectable, we would have omitted the `aria-selected` attribute altogether. Including the attribute, even with no value or explicitly set to `false` indicates to assistive technology users that the item is selectable.
 
 The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so."  Instead of creating an unordered list requiring {{htmlattrxref("tabindex")}}, ARIA and JavaScript to turn text into selectable options, we could have used a native multiselect: the {{htmlelement('select')}} element has a Boolean {{htmlattrxref('multiple', 'select')}} attribute. If included, the user can select multiple options. If not, only a single option can be selected.
 
@@ -124,7 +124,7 @@ The first rule of ARIA use is "if you can use a native feature with the semantic
 
 This HTML `<select>` version is accessible and interactive, and needs no ARIA or JavaScript to function.
 
-If the above isn't styleable to your liking, you can also create a list of selectable options with HTML checkboxes, which is also semantic, focusable, and infinitely stylable with CSS:
+If the above isn't stylable to your liking, you can also create a list of selectable options with HTML checkboxes, which is also semantic, focusable, and infinitely stylable with CSS:
 
 ```html
 <fieldset>

@@ -66,7 +66,7 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/ambient-light-sensor','ambient-light-sensor')}}
   - : Controls whether the current document is allowed to gather information about the amount of light in the environment around the device through the {{DOMxRef("AmbientLightSensor")}} interface.
 - {{httpheader('Feature-Policy/autoplay','autoplay')}}
-  - : Controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface. When this policy is disabled and there were no user gestures, the {{jsxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a {{domxref("DOMException")}}. The autoplay attribute on {{HTMLELement("audio")}} and {{HTMLElement("video")}} elements will be ignored.
+  - : Controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface. When this policy is disabled and there were no user gestures, the {{jsxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a {{domxref("DOMException")}}. The autoplay attribute on {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.
 - {{httpheader('Feature-Policy/battery','battery')}}
   - : Controls whether the use of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is allowed. When this policy is disabled, the {{JSxRef("Promise")}} returned by {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} will reject with a {{Exception("NotAllowedError")}} {{DOMxRef("DOMException")}}.
 - {{httpheader('Feature-Policy/camera', 'camera')}}

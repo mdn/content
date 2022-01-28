@@ -29,11 +29,11 @@ This guide introduces the video codecs you're most likely to encounter or consid
 Due to the sheer size of uncompressed video data, it's necessary to compress it significantly in order to store it, let alone transmit it over a network. Imagine the amount of data needed to store uncompressed video:
 
 - A single frame of high definition (1920x1080) video in full color (4 bytes per pixel) is 8,294,400 bytes.
-- At a typical 30 frames per second, each second of HD video would occupy 248,832,000 bytes (\~249 MB).
-- A minute of HD video would need 14.93 GB of storage.
-- A fairly typical 30 minute video conference would need about 447.9 GB of storage, and a 2-hour movie would take _almost 1.79 **TB** (that is, 1790 GB)_.
+- At a typical 30 frames per second, each second of HD video would occupy 248,832,000 bytes (\~249 MB).
+- A minute of HD video would need 14.93 GB of storage.
+- A fairly typical 30 minute video conference would need about 447.9 GB of storage, and a 2-hour movie would take _almost 1.79 **TB** (that is, 1790 GB)_.
 
-Not only is the required storage space enormous, but the network bandwidth needed to transmit an uncompressed video like that would be enormous, at 249 MB/sec—not including audio and overhead. This is where video codecs come in. Just as audio codecs do for the sound data, video codecs compress the video data and encode it into a format that can later be decoded and played back or edited.
+Not only is the required storage space enormous, but the network bandwidth needed to transmit an uncompressed video like that would be enormous, at 249 MB/sec—not including audio and overhead. This is where video codecs come in. Just as audio codecs do for the sound data, video codecs compress the video data and encode it into a format that can later be decoded and played back or edited.
 
 Most video codecs are **lossy**, in that the decoded video does not precisely match the source. Some details may be lost; the amount of loss depends on the codec and how it's configured, but as a general rule, the more compression you achieve, the more loss of detail and fidelity will occur. Some lossless codecs do exist, but they are typically used for archival and storage for local playback rather than for use on a network.
 
@@ -2051,7 +2051,7 @@ This example creates a `MediaRecorder` configured to record [AV1](#av1) video us
 
 Breaking down the value of the `codecs` parameter into its dot-delineated properties, we see the following:
 
-| Value  | Desccription                                                                                                                                                                                                                                                                             |
+| Value  | Description                                                                                                                                                                                                                                                                             |
 | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `av01` | The four-character code (4CC) designation identifying the [AV1](#av1) codec.                                                                                                                                                                                                             |
 | `2`    | The profile. A value of 2 indicates the Professional profile. A value of 1 is the High profile, while a value of 0 would specify the Main profile.                                                                                                                                       |
