@@ -322,7 +322,9 @@
         "StaticRange",
         "Text",
         "TextDecoder",
+        "TextDecoderStream",
         "TextEncoder",
+        "TextEncoderStream",
         "TimeRanges",
         "TreeWalker",
         "USVString",
@@ -390,7 +392,7 @@
     },
     "Encoding API": {
       "overview": ["Encoding API"],
-      "interfaces": ["TextDecoder", "TextEncoder"],
+      "interfaces": ["TextDecoder", "TextEncoder", "TextDecoderStream", "TextEncoderStream"],
       "methods": [],
       "properties": [],
       "events": []
