@@ -208,7 +208,7 @@ Update the `TEMPLATES` section's `'DIRS'` line as shown:
 
 ### Login template
 
-> **Warning:** The authentication templates provided in this article are a very basic/slightly modified version of the Django demonstration login templates. You may need to customise them for your own use!
+> **Warning:** The authentication templates provided in this article are a very basic/slightly modified version of the Django demonstration login templates. You may need to customize them for your own use!
 
 Create a new HTML file called /**locallibrary/templates/registration/login.html** and give it the following contents:
 

@@ -434,7 +434,7 @@ If you need to, you can change the template used and the name of the context obj
 
 #### What happens if the record doesn't exist?
 
-If a requested record does not exist then the generic class-based detail view will raise an `Http404` exception for you automatically — in production, this will automatically display an appropriate "resource not found" page, which you can customise if desired.
+If a requested record does not exist then the generic class-based detail view will raise an `Http404` exception for you automatically — in production, this will automatically display an appropriate "resource not found" page, which you can customize if desired.
 
 Just to give you some idea of how this works, the code fragment below demonstrates how you would implement the class-based view as a function if you were **not** using the generic class-based detail view.
 

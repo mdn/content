@@ -67,7 +67,7 @@ admin.site.register(BookInstance)
 
 > **Note:** If you accepted the challenge to create a model to represent the natural language of a book ([see the models tutorial article](/en-US/docs/Learn/Server-side/Django/Models)), import and register it too!
 
-This is the simplest way of registering a model, or models, with the site. The admin site is highly customisable, and we'll talk more about the other ways of registering your models further down.
+This is the simplest way of registering a model, or models, with the site. The admin site is highly customizable, and we'll talk more about the other ways of registering your models further down.
 
 ## Creating a superuser
 
@@ -128,7 +128,7 @@ Django does a pretty good job of creating a basic admin site using the informati
 - Each model has a list of individual records, identified by the string created with the model's `__str__()` method, and linked to detail views/forms for editing. By default, this view has an action menu at the top that you can use to perform bulk delete operations on records.
 - The model detail record forms for editing and adding records contain all the fields in the model, laid out vertically in their declaration order.
 
-You can further customise the interface to make it even easier to use. Some of the things you can do are:
+You can further customize the interface to make it even easier to use. Some of the things you can do are:
 
 - List views:
 
@@ -143,7 +143,7 @@ You can further customise the interface to make it even easier to use. Some of 
 
 In this section we're going to look at a few changes that will improve the interface for our _LocalLibrary_, including adding more information to `Book` and `Author` model lists, and improving the layout of their edit views. We won't change the `Language` and `Genre` model presentation because they only have one field each, so there is no real benefit in doing so!
 
-You can find a complete reference of all the admin site customisation choices in [The Django Admin site](https://docs.djangoproject.com/en/3.1/ref/contrib/admin/) (Django Docs).
+You can find a complete reference of all the admin site customization choices in [The Django Admin site](https://docs.djangoproject.com/en/3.1/ref/contrib/admin/) (Django Docs).
 
 ### Register a ModelAdmin class
 

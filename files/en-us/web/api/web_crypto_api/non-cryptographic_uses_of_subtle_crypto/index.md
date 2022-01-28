@@ -203,7 +203,7 @@ Essentially it's the UTF8 string (null character written as `\0`):
 commit [size in bytes as decimal of this info]\0tree [tree hash]
 parent [parent commit hash]
 author [author info] [timestamp]
-committer [commiter info] [timestamp]
+committer [committer info] [timestamp]
 
 commit message
 ```

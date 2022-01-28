@@ -19,7 +19,7 @@ browser-compat: api.OverconstrainedError.constraint
 
 The **`constraint`** read-only property of the
 {{domxref("OverconstrainedError")}} interface returns the constraint that was supplied
-in the constructor, meaning the contraint that was not satisfied.
+in the constructor, meaning the constraint that was not satisfied.
 
 ## Syntax
 

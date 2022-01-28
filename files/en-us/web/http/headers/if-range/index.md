@@ -2,7 +2,7 @@
 title: If-Range
 slug: Web/HTTP/Headers/If-Range
 tags:
-  - Condtional Requests
+  - Conditional Requests
   - HTTP
   - HTTP Header
   - Range Requests

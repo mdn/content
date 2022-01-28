@@ -571,7 +571,7 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
     - Click the **Connect Your Application** option.
 
 10. This will open the _Connect_ screen.
-    ![Choose the Short SRV connection when setting up a connection on MongoDB Atalas.](mongodb_atlas_-_connectforshortsrv_2020-03.png)
+    ![Choose the Short SRV connection when setting up a connection on MongoDB Atlas.](mongodb_atlas_-_connectforshortsrv_2020-03.png)
 
     - Click the **Copy** button to copy the connection string.
     - Save this string somewhere safe.
