@@ -94,8 +94,8 @@ The returned value is, in certain known cases, expressly incorrect by deliberate
 intent. In particular, to avoid the so called CSS History Leak security issue, browsers
 may expressly "lie" about the used value for a link and always return values as if a
 user has never visited the linked site, and/or limit the styles that can be applied
-using the `:visited` pseudo-selector. See <http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/>
-and <http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/>
+using the `:visited` pseudo-selector. See <https://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/>
+and <https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/>
 for details of the examples of how this is implemented.
 
 ## Specifications
