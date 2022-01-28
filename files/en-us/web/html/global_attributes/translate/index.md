@@ -24,9 +24,11 @@ Although not all browsers recognize this attribute, it is respected by automatic
 
 In this example, the `translate` attribute is used to ask translation tools not to translate the company's brand name in the footer.
 
-    <footer>
-      <small>© 2020 <span translate="no">BrandName</span></small>
-    </footer>
+```html
+<footer>
+  <small>© 2020 <span translate="no">BrandName</span></small>
+</footer>
+```
 
 ## Specifications
 

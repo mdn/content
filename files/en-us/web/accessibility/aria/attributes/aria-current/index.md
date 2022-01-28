@@ -60,6 +60,7 @@ The breadcrumb for the "current page" should have `aria-current="page"` set on i
   </ol>
 </nav>
 ```
+
 If the element representing the current page in the breadcrumb was not a link, the `aria-current` is optional.
 
 ## Values

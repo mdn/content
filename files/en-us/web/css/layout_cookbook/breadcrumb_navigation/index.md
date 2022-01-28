@@ -27,11 +27,13 @@ The items typically display inline with a separator to indicate a hierarchy betw
 >
 > [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
 
-> **Note:** The example above uses two selectors to insert content before every `li` except the first one. This could also be achieved using one selector only:
+> **Note:** The example above uses two selectors to insert content before every `li` except the first one. This could also be achieved using one selector only:
 >
->     .breadcrumb li:not(:first-child)::before {
->       content: "→";
->     }
+> ```css
+> .breadcrumb li:not(:first-child)::before {
+>   content: "→";
+> }
+> ```
 >
 > This solution uses a more complex selector, but requires less rules. Feel free to choose the solution that you prefer.
 
@@ -47,7 +49,7 @@ I have used the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/ari
 
 The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
 
-#### Flexbox
+### Flexbox
 
 {{Compat("css.properties.flex")}}
 

@@ -53,9 +53,8 @@ abortBtn.addEventListener('click', function() {
 });
 
 function fetchVideo() {
-  ...
-  fetch(url, {signal}).then(function(response) {
-    ...
+  controller = new AbortController();  // Set new controller for this request.
+  fetch(url, { signal }).then(function(response) {
   }).catch(function(e) {
    reports.textContent = 'Download error: ' + e.message;
   })

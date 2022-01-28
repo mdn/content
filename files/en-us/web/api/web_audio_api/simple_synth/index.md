@@ -449,7 +449,7 @@ setup();
 6.  When each octave element has been built, it's appended to the keyboard.
 7.  Once the keyboard has been constructed, we scroll the note "B" in octave 5 into view; this has the effect of ensuring that middle-C is visible along with its surrounding keys.
 8.  Then a new custom waveform is built using {{domxref("BaseAudioContext.createPeriodicWave()")}}. This waveform will be used any time the user selects "Custom" from the waveform picker control.
-9.  Finally, the oscillator list is initialized to ensure that it's ready to receive information identifiying which oscillators are associated with which keys.
+9.  Finally, the oscillator list is initialized to ensure that it's ready to receive information identifying which oscillators are associated with which keys.
 
 #### Creating a key
 

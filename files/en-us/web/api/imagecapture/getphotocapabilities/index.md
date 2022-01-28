@@ -30,6 +30,7 @@ const capabilitiesPromise = imageCaptureObj.getPhotoCapabilities()
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with an object containing the following properties:
+
 - `redEyeReduction`
   - : Returns one of `"never"`, `"always"`, or `"controllable"`. The `"controllable"` value means the device's red-eye reduction is controllable by the user.
 - `imageHeight`

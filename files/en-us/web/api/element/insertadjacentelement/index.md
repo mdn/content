@@ -56,13 +56,15 @@ The element that was inserted, or `null`, if the insertion failed.
 
 ### Visualization of position names
 
-    <!-- beforebegin -->
-    <p>
-      <!-- afterbegin -->
-      foo
-      <!-- beforeend -->
-    </p>
-    <!-- afterend -->
+```html
+<!-- beforebegin -->
+<p>
+  <!-- afterbegin -->
+  foo
+  <!-- beforeend -->
+</p>
+<!-- afterend -->
+```
 
 > **Note:** The `beforebegin` and
 > `afterend` positions work only if the node is in a tree and has an element

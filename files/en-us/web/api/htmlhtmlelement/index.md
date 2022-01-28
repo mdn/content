@@ -15,7 +15,7 @@ The **`HTMLHtmlElement`** interface serves as the root node for a given HTML doc
 
 You can retrieve the `HTMLHtmlElement` object for a given document by reading the value of the {{domxref("document.documentElement")}} property.
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

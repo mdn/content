@@ -33,5 +33,3 @@ console.log(tracks.length);
 ## Browser compatibility
 
 {{Compat}}
-
-

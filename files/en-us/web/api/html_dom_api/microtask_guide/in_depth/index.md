@@ -109,7 +109,7 @@ The event loop, then, drives everything that happens in the browser as it pertai
 There are three types of event loop:
 
 - Window event loop
-  - : The window event loop is the one that drives all of the windows sharing a similar origin (though there are further limits to this as described elsewhere in this article XXXX ????).
+  - : The window event loop is the one that drives all of the windows sharing a similar origin (though there are further limits to this, as described below).
 - Worker event loop
   - : A worker event loop is one which drives a worker; this includes all forms of workers, including basic [web workers](/en-US/docs/Web/API/Web_Workers_API), [shared workers](/en-US/docs/Web/API/SharedWorker), and [service workers](/en-US/docs/Web/API/Service_Worker_API). Workers are kept in one or more agents that are separate from the "main" code; the browser may use a single event loop for all of the workers of a given type or may use multiple event loops to handle them.
 - Worklet event loop

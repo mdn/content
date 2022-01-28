@@ -11,13 +11,13 @@ tags:
 
 If you would like to use the WebSocket API, it is useful if you have a server. In this article I will show you how to write one in C#. You can do it in any server-side language, but to keep things simple and more understandable, I chose Microsoft's language.
 
-This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455) so it will only handle connections from Chrome version 16, Firefox 11, IE 10 and over.
+This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455) so it will only handle connections from Chrome version 16, Firefox 11, IE 10 and over.
 
 ## First steps
 
-WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx) class which does as the name suggests. It is in the *System.Net.Sockets* namespace.
+WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx) class which does as the name suggests. It is in the *System.Net.Sockets* namespace.
 
-> **Note:** It is a good idea to include the namespace with the `using` keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.
+> **Note:** It is a good idea to include the namespace with the `using` keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.
 
 ### TcpListener
 
@@ -29,7 +29,7 @@ TcpListener(System.Net.IPAddress localaddr, int port)
 
 `localaddr` specifies the IP of the listener, and `port` specifies the port.
 
-> **Note:** To create an `IPAddress` object from a `string`, use the `Parse` static method of `IPAddress`_._
+> **Note:** To create an `IPAddress` object from a `string`, use the `Parse` static method of `IPAddress`_._
 
 Methods:
 
@@ -146,21 +146,21 @@ You must:
 ```cpp
  if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
 {
-    const string eol = "\r\n"; // HTTP/1.1 defines the sequence CR LF as the end-of-line marker
+    const string eol = "\r\n"; // HTTP/1.1 defines the sequence CR LF as the end-of-line marker
 
-    Byte[] response = Encoding.UTF8.GetBytes("HTTP/1.1 101 Switching Protocols" + eol
-        + "Connection: Upgrade" + eol
-        + "Upgrade: websocket" + eol
-        + "Sec-WebSocket-Accept: " + Convert.ToBase64String(
-            System.Security.Cryptography.SHA1.Create().ComputeHash(
-                Encoding.UTF8.GetBytes(
-                    new System.Text.RegularExpressions.Regex("Sec-WebSocket-Key: (.*)").Match(data).Groups[1].Value.Trim() + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
-                )
-            )
-        ) + eol
-        + eol);
+    Byte[] response = Encoding.UTF8.GetBytes("HTTP/1.1 101 Switching Protocols" + eol
+        + "Connection: Upgrade" + eol
+        + "Upgrade: websocket" + eol
+        + "Sec-WebSocket-Accept: " + Convert.ToBase64String(
+            System.Security.Cryptography.SHA1.Create().ComputeHash(
+                Encoding.UTF8.GetBytes(
+                    new System.Text.RegularExpressions.Regex("Sec-WebSocket-Key: (.*)").Match(data).Groups[1].Value.Trim() + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
+                )
+            )
+        ) + eol
+        + eol);
 
-    stream.Write(response, 0, response.Length);
+    stream.Write(response, 0, response.Length);
 }
 ```
 
@@ -170,7 +170,9 @@ After a successful handshake, the client will send encoded messages to the serve
 
 If we send "MDN", we get these bytes:
 
-    129 131 61 84 35 6 112 16 109
+```
+129 131 61 84 35 6 112 16 109
+```
 
 Let's take a look at what these bytes mean.
 
@@ -190,7 +192,7 @@ The second byte, which currently has a value of 131, is another bitfield that br
 | ------------ | ------------------------ |
 | 1            | 0x83=0000011             |
 
-- MASK bit: Defines whether the "Payload data" is masked.  If set to 1, a masking key is present in Masking-Key, and this is used to unmask the "Payload data". All messages from the client to the server have this bit set.
+- MASK bit: Defines whether the "Payload data" is masked. If set to 1, a masking key is present in Masking-Key, and this is used to unmask the "Payload data". All messages from the client to the server have this bit set.
 - Payload Length: If this value is between 0 and 125, then it is the length of message. If it is 126, the following 2 bytes (16-bit unsigned integer) are the length. If it is 127, the following 8 bytes (64-bit unsigned integer) are the length.
 
 > **Note:** Because the first bit is always 1 for client-to-server messages, you can subtract 128 from this byte to get rid of the MASK bit.

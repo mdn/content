@@ -10,7 +10,7 @@ tags:
   - delete
 browser-compat: api.ServiceWorkerGlobalScope.oncontentdelete
 ---
-{{draft}}{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}
 
 The **`oncontentdelete`** property of the {{domxref("ServiceWorkerGlobalScope")}} interface is an event handler fired when an item is removed from the indexed content via the user agent.
 

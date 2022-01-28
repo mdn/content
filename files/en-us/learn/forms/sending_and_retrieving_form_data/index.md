@@ -123,8 +123,10 @@ Since the `GET` method has been used, you'll see the URL `www.foo.com/?say=Hi&to
 
 The HTTP request looks like this:
 
-    GET /?say=Hi&to=Mom HTTP/2.0
-    Host: foo.com
+```
+GET /?say=Hi&to=Mom HTTP/2.0
+Host: foo.com
+```
 
 > **Note:** You can find this example on GitHub — see [get-method.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/get-method.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
@@ -152,12 +154,14 @@ Let's look at an example — this is the same form we looked at in the `GET` sec
 
 When the form is submitted using the `POST` method, you get no data appended to the URL, and the HTTP request looks like so, with the data included in the request body instead:
 
-    POST / HTTP/2.0
-    Host: foo.com
-    Content-Type: application/x-www-form-urlencoded
-    Content-Length: 13
+```
+POST / HTTP/2.0
+Host: foo.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 13
 
-    say=Hi&to=Mom
+say=Hi&to=Mom
+```
 
 The `Content-Length` header indicates the size of the body, and the `Content-Type` header indicates the type of resource sent to the server. We'll discuss these headers later on.
 
@@ -235,7 +239,7 @@ The two templates referenced in the above code are as follows (these need to be 
 - [form.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html): The same form as we saw above in the {{anch("The POST method")}} section but with the `action` set to `\{{ url_for('hello') }}`. This is a [Jinja2](http://jinja.pocoo.org/docs/2.9/) template, which is basically HTML but can contain calls to the Python code that is running the web server contained in curly braces. `url_for('hello')` is basically saying "redirect to `/hello` when the form is submitted".
 - [greeting.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html): This template just contains a line that renders the two bits of data passed to it when it is rendered. This is done via the `hello()` function seen above, which runs when the `/hello` URL is navigated to.
 
-> **Note:** Again, this code won't work if you just try to load it into a browser directly. Python works a bit differently to PHP — to run this code locally you'll need to [install Python/PIP](/en-US/docs/Learn/Server-side/Django/development_environment#installing_python_3), then install Flask using `pip3 install flask`. At this point you should be able to run the example using `python3 python-example.py`, then navigating to `localhost:5000` in your browser.
+> **Note:** Again, this code won't work if you just try to load it into a browser directly. Python works a bit differently to PHP — to run this code locally you'll need to [install Python/PIP](/en-US/docs/Learn/Server-side/Django/development_environment#installing_python_3), then install Flask using `pip3 install flask`. At this point you should be able to run the example using `python3 python-example.py`, then navigating to `localhost:5042` in your browser.
 
 ### Other languages and frameworks
 

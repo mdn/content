@@ -32,5 +32,3 @@ console.log(ImageDecoder.tracks);
 ## Browser compatibility
 
 {{Compat}}
-
-

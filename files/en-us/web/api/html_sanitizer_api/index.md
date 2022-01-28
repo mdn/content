@@ -22,14 +22,14 @@ The configuration options parameter allows you to specify the allowed and dis-al
 The most common use-case - preventing XSS - is handled by the default configuration.
 Creating a {{domxref('Sanitizer.Sanitizer')}} with a custom configuration is necessary only to handle additional, application-specific use cases.
 
-The API has three main methods for sanitizing data.
-- {{domxref('Element.setHTML()')}} parses and sanitizes a string of HTML and immediately inserts it into the DOM as a child of the current element.
-  This is essentially "safe" version of {{domxref('Element.innerHTML')}}, and should be used instead of `innerHTML` when inserting untrusted data.
-- {{domxref('Sanitizer.sanitizeFor()')}} parses and sanitizes a string of HTML for later insertion into the DOM.
-  This might be used when the target element for the string is not always ready/available for update.
-- {{domxref('Sanitizer.sanitize()')}} sanitizes data that is in a {{domxref('Document')}} or {{domxref('DocumentFragment')}}.
-  It might be used, for example, to sanitize a {{domxref('Document')}} instance in a frame.
+The API has three main methods for sanitizing data:
 
+1. {{domxref('Element.setHTML()')}} parses and sanitizes a string of HTML and immediately inserts it into the DOM as a child of the current element.
+  This is essentially "safe" version of {{domxref('Element.innerHTML')}}, and should be used instead of `innerHTML` when inserting untrusted data.
+2. {{domxref('Sanitizer.sanitizeFor()')}} parses and sanitizes a string of HTML for later insertion into the DOM.
+  This might be used when the target element for the string is not always ready/available for update.
+3. {{domxref('Sanitizer.sanitize()')}} sanitizes data that is in a {{domxref('Document')}} or {{domxref('DocumentFragment')}}.
+  It might be used, for example, to sanitize a {{domxref('Document')}} instance in a frame.
 
 ### Parsing and sanitizing strings
 
@@ -57,14 +57,12 @@ The parser may also perform normalization operations on the input string.
 As a result, even if the HTML is valid and the sanitizer method does nothing, the sanitized output may not precisely match the unsanitized input.
 This applies to both methods.
 
-
 ## Interfaces
 
 - {{domxref('Sanitizer')}}
   - : Provides the functionality to define a sanitizer configuration, to sanitize untrusted strings of HTML for later insertion into the DOM, and to sanitize {{domxref('Document')}} and {{domxref('DocumentFragment')}} objects.
 - {{domxref('Element/setHTML','Element.setHTML()')}}
   - : Parses a string of HTML into a subtree of nodes, sanitizes it using a `Sanitizer` object, then sets it as a child of the current element.
-
 
 ## Examples
 
@@ -109,7 +107,7 @@ console.log(sanitizedDiv.innerHTML)
 // At some point later ...
 
 // Get the element to update. This must be a div to match our sanitizeFor() context.
-// Set its content to be the children of our sanitized element. 
+// Set its content to be the children of our sanitized element.
 document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 ```
 
@@ -117,10 +115,9 @@ document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 > but you must remember to use the correct context when the string is applied:
 >
 > ```js
-> const unsanitized_string = "abc <script>alert(1)</script> def"; 
+> const unsanitized_string = "abc <script>alert(1)</script> def";
 > let sanitizedString = new Sanitizer().sanitizeFor("div", unsanitized_string).innerHTML;
 > ```
-
 
 ### Sanitize a frame
 
@@ -137,7 +134,6 @@ const unsantitized_frame_tree = frame_element.contentWindow.document;
 const sanitized_frame_tree = sanitizer.sanitize(unsanititized_frame_tree);
 frame_element.replaceChildren(sanitized_frame_tree);
 ```
-
 
 ## Specifications
 

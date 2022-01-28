@@ -43,7 +43,7 @@ There are 3 main things to keep in mind:
 
 **For one**, `dns-prefetch` is only effective for DNS lookups on [cross-origin](/en-US/docs/Web/HTTP/CORS) domains, so avoid using it to point to your site or domain. This is because the IP behind your site’s domain will have already been resolved by the time the browser sees the hint.
 
-**Second**, it’s also possible to specify `dns-prefetch` (and other resources hints) as an [HTTP header](/en-US/docs/Web/HTTP/Headers) by using the [HTTP Link field](/en-US/docs/Web/HTTP/Headers/Link):
+**Second**, it’s also possible to specify `dns-prefetch` (and other resources hints) as an [HTTP header](/en-US/docs/Web/HTTP/Headers) by using the [HTTP Link field](/en-US/docs/Web/HTTP/Headers/Link):
 
 ```plain
 Link: <https://fonts.googleapis.com/>; rel=dns-prefetch
@@ -69,4 +69,4 @@ Some resources such as fonts are loaded in anonymous mode. In such cases you sho
 - [crossorigin](/en-US/docs/Web/HTML/Attributes/crossorigin)
 - [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [HTTP headers](/en-US/docs/Web/HTTP/Headers)
-- [HTTP header ](/en-US/docs/Web/HTTP/Headers/Link)[Link](/en-US/docs/Web/HTTP/Headers/Link "The HTTP Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML <link> element.")
+- [HTTP header Link](/en-US/docs/Web/HTTP/Headers/Link)

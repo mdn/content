@@ -153,4 +153,3 @@ none
     {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>
-

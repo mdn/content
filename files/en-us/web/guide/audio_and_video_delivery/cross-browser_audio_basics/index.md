@@ -335,7 +335,7 @@ myAudio.addEventListener("progress", function() {
 
 ### canplay
 
-`canplay` is a useful event to detect should you want to determine whether the media is ready to play. You could, for example, disable custom controls until this event occurs.
+`canplay` is a useful event to detect should you want to determine whether the media is ready to play. You could, for example, disable custom controls until this event occurs.
 
 ```js
 myAudio.addEventListener("canplay", function() {
@@ -382,9 +382,11 @@ We also have another set of events that are useful for reacting to the state of 
 
 The `timeupdate` event is triggered every time the `currentTime` property changes. In practice, this occurs every 250 milliseconds. This event can be used to trigger the displaying of playback progress.
 
-    myAudio.addEventListener("timeupdate", function() {
-      //update something related to playback progress
-    });
+```js
+myAudio.addEventListener("timeupdate", function() {
+  //update something related to playback progress
+});
+```
 
 ### playing
 

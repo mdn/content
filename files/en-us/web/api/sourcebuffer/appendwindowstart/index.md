@@ -14,7 +14,7 @@ tags:
   - appendWindowStart
 browser-compat: api.SourceBuffer.appendWindowStart
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`appendWindowStart`** property of the
 {{domxref("SourceBuffer")}} interface controls the timestamp for the start of the [append window](https://w3c.github.io/media-source/#append-window), a

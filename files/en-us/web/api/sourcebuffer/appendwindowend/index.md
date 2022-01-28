@@ -14,7 +14,7 @@ tags:
   - appendWindowEnd
 browser-compat: api.SourceBuffer.appendWindowEnd
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`appendWindowEnd`** property of the
 {{domxref("SourceBuffer")}} interface controls the timestamp for the end of the [append window](https://w3c.github.io/media-source/#append-window), a

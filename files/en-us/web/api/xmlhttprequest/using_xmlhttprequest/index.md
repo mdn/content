@@ -463,7 +463,8 @@ var AJAXSubmit = (function () {
     for (var nItem = 0; nItem < oTarget.elements.length; nItem++) {
       oField = oTarget.elements[nItem];
       if (!oField.hasAttribute("name")) { continue; }
-      sFieldType = oField.nodeName.toUpperCase() === "INPUT" ? oField.getAttribute("type").toUpperCase() : "TEXT";
+      sFieldType = oField.nodeName.toUpperCase() === "INPUT" && oField.hasAttribute("type") ?
+      oField.getAttribute("type").toUpperCase() : "TEXT";
       if (sFieldType === "FILE" && oField.files.length > 0) {
         if (this.technique === 3) {
           /* enctype is multipart/form-data */
@@ -652,7 +653,7 @@ AJAXSubmit(myForm);
 > fine in most browsers.
 
 > **Note:** The best way to send binary content is via
-> {{jsxref("ArrayBuffer", "ArrayBuffers")}} or {{domxref("Blob", "Blobs")}} in conjuncton
+> {{jsxref("ArrayBuffer", "ArrayBuffers")}} or {{domxref("Blob", "Blobs")}} in conjunction
 > with the {{domxref("XMLHttpRequest.send()", "send()")}} method and possibly the
 > {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} method of the
 > `FileReader` API. But, since the aim of this script is to work with a [stringifiable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
@@ -704,8 +705,8 @@ function AJAXSubmit (oFormElement) {
     for (var nItem = 0; nItem < oFormElement.elements.length; nItem++) {
       oField = oFormElement.elements[nItem];
       if (!oField.hasAttribute("name")) { continue; }
-      sFieldType = oField.nodeName.toUpperCase() === "INPUT" ?
-          oField.getAttribute("type").toUpperCase() : "TEXT";
+      sFieldType = oField.nodeName.toUpperCase() === "INPUT" && oField.hasAttribute("type") ?
+      oField.getAttribute("type").toUpperCase() : "TEXT";
       if (sFieldType === "FILE") {
         for (nFile = 0; nFile < oField.files.length;
             sSearch += "&" + escape(oField.name) + "=" + escape(oField.files[nFile++].name));

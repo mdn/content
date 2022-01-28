@@ -22,7 +22,9 @@ browser-compat: css.properties.-webkit-mask-box-image
 
 ## Syntax
 
-    -webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>]
+```
+-webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>]
+```
 
 Where:
 
@@ -52,7 +54,7 @@ Where:
 - round
   - : The mask image is stretched somewhat and repeated such that there is no partial mask image at the end of the border box.
 - space
-  - : The mask image is repeated as many times as possible without stretching. There is no partial mask image at the end of the border box.
+  - : The mask image is repeated as many times as possible without stretching. There is no partial mask image at the end of the border box.
 
 ## Formal definition
 

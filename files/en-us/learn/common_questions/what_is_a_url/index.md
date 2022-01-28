@@ -45,9 +45,11 @@ With {{Glossary("Hypertext")}} and {{Glossary("HTTP")}}, **_URL_** is one of the
 
 Here are some examples of URLs:
 
-    https://developer.mozilla.org
-    https://developer.mozilla.org/en-US/docs/Learn/
-    https://developer.mozilla.org/en-US/search?q=URL
+```
+https://developer.mozilla.org
+https://developer.mozilla.org/en-US/docs/Learn/
+https://developer.mozilla.org/en-US/search?q=URL
+```
 
 Any of those URLs can be typed into your browser's address bar to tell it to load the associated page (resource).
 
@@ -94,7 +96,7 @@ Next follows the _authority_, which is separated from the scheme by the characte
 
 ![Anchor](mdn-url-anchor@x2.png)
 
-`#SomewhereInTheDocument` is an anchor to another part of the resource itself. An anchor represents a sort of "bookmark" inside the resource, giving the browser the directions to show the content located at that "bookmarked" spot. On an HTML document, for example, the browser will scroll to the point where the anchor is defined; on a video or audio document, the browser will try to go to the time the anchor represents. It is worth noting that the part after the **#**, also known as the **\*fragment identifier**, is never sent to the server with the request.\*
+`#SomewhereInTheDocument` is an anchor to another part of the resource itself. An anchor represents a sort of "bookmark" inside the resource, giving the browser the directions to show the content located at that "bookmarked" spot. On an HTML document, for example, the browser will scroll to the point where the anchor is defined; on a video or audio document, the browser will try to go to the time the anchor represents. It is worth noting that the part after the **#**, also known as the **fragment identifier**, is never sent to the server with the request.
 
 ## How to use URLs
 

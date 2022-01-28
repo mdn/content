@@ -13,7 +13,7 @@ tags:
   - audiotracks
 browser-compat: api.SourceBuffer.audioTracks
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`audioTracks`** read-only property of the
 {{domxref("SourceBuffer")}} interface returns a list of the audio tracks currently

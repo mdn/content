@@ -45,4 +45,3 @@ const audioDecoder = new AudioDecoder({
 ## Browser compatibility
 
 {{Compat}}
-

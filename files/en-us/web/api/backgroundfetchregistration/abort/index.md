@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with `true` if the fetch is successfulled aborted.
+A {{jsxref("Promise")}} that resolves with `true` if the fetch is successfully aborted.
 
 ## Examples
 

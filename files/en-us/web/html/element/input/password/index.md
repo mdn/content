@@ -21,13 +21,17 @@ browser-compat: html.elements.input.input-password
 
 `<input>` elements of type **`password`** provide a way for the user to securely enter a password.
 
-The element is presented as a one-line plain text editor control in which the text is obscured so that it cannot be read, usually by replacing each character with a symbol such as the asterisk ("\*") or a dot ("•"). This character will vary depending on the {{Glossary("user agent")}} and {{Glossary("OS")}}.
+The element is presented as a one-line plain text editor control in which the text is obscured so that it cannot be read, usually by replacing each character with a symbol such as the asterisk ("\*") or a dot ("•").
+This character will vary depending on the {{Glossary("user agent")}} and operating system.
 
 {{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}
 
-Specifics of how the entry process works may vary from browser to browser; mobile devices, for example, often display the typed character for a moment before obscuring it, to allow the user to be sure they pressed the key they meant to press; this is helpful given the small size of keys and the ease with which the wrong one can be pressed, especially on virtual keyboards.
+The precise behaviour of the entry process may vary from browser to browser.
+Some browsers display the typed character for a moment before obscuring it, while others allow the user to toggle the display of plain-text on and off.
+Both approaches help a user check that they entered the intended password, which can be particularly difficult on mobile devices.
 
-> **Note:** Any forms involving sensitive information like passwords (e.g. login forms) should be served over HTTPS; Many browsers now implement mechanisms to warn against insecure login forms; see [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords).
+> **Note:** Any forms involving sensitive information like passwords (such as login forms) should be served over HTTPS.
+> Many browsers now implement mechanisms to warn against insecure login forms; see [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords).
 
 <table class="properties">
   <tbody>
@@ -121,7 +125,7 @@ If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossa
 
 ### readonly
 
-A Boolean attribute which, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed from JavaScript code that directly sets the value of the {{domxref("HTMLInputElement.value")}} property.
+A Boolean attribute which, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed from JavaScript code that directly sets the value of the {{domxref("HTMLInputElement","HTMLInputElement.value")}} property.
 
 > **Note:** Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
 

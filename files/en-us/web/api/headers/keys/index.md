@@ -44,8 +44,10 @@ for(var key of myHeaders.keys()) {
 
 The result is:
 
-    content-type
-    vary
+```
+content-type
+vary
+```
 
 ## Browser compatibility
 

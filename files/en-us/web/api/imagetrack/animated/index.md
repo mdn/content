@@ -33,5 +33,3 @@ console.log(track.animated);
 ## Browser compatibility
 
 {{Compat}}
-
-

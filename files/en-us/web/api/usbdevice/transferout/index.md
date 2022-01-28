@@ -16,7 +16,7 @@ browser-compat: api.USBDevice.transferOut
 
 The **`transferOut()`** method of the {{domxref("USBDevice")}}
 interface returns a {{jsxref("promise")}} that resolves with a
-{{domxref("USBTransferOutResult")}} when bulk or interrupt data is sent to the USB
+{{domxref("USBOutTransferResult")}} when bulk or interrupt data is sent to the USB
 device.
 
 ## Syntax
@@ -34,7 +34,7 @@ var promise = USBDevice.transferOut(endpointNumber, data)
 
 ### Return value
 
-A {{jsxref("promise")}} that resolves with a {{domxref("USBTransferOutResult")}}.
+A {{jsxref("promise")}} that resolves with a {{domxref("USBOutTransferResult")}}.
 
 ## Specifications
 

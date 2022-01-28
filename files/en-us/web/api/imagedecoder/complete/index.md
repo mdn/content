@@ -32,5 +32,3 @@ console.log(ImageDecoder.complete);
 ## Browser compatibility
 
 {{Compat}}
-
-

@@ -16,7 +16,7 @@ browser-compat: api.USBDevice.releaseInterface
 
 The **`releaseInterface()`** method of the
 {{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves when a
-cliamed interface is released from exclusive access.
+claimed interface is released from exclusive access.
 
 ## Syntax
 

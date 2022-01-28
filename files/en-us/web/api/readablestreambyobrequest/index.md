@@ -11,7 +11,7 @@ tags:
   - Steams
 browser-compat: api.ReadableStreamBYOBRequest
 ---
-{{APIRef("Streams")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("Streams")}}{{SeeCompatTable}}
 
 The **`ReadableStreamBYOBRequest`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a pull request into a {{domxref("ReadableByteStreamController")}} view.
 

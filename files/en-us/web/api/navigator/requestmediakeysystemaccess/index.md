@@ -26,7 +26,7 @@ API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), which brings support f
 
 This method may have user-visible effects such as asking for permission to access one
 or more system resources. Consider that when deciding when to call
-` requestMediaKeySystemAccess``() `; you don't want those requests
+`requestMediaKeySystemAccess()`; you don't want those requests
 to happen at inconvenient times. As a general rule, this function should be called only
 when it's about time to create and use a {{domxref("MediaKeys")}} object by calling the
 returned {{domxref("MediaKeySystemAccess")}} object's

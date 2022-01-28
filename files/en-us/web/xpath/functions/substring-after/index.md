@@ -11,7 +11,9 @@ The `substring-after` function returns a string that is the rest of a given stri
 
 ### Syntax
 
-    substring-after(haystack ,needle )
+```
+substring-after( haystack, needle )
+```
 
 ### Arguments
 

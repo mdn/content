@@ -181,7 +181,7 @@ Making an element _draggable_ requires adding the {{htmlattrxref("draggable")}} 
 
 For more information, see:
 
-- [Draggable attribute reference](/en-US/docs/Web/HTML/Global_attributes/draggable "draggable global attribute")
+- [Draggable attribute reference](/en-US/docs/Web/HTML/Global_attributes/draggable)
 - [Drag operations guide](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute)
 
 ### Define the drag's data

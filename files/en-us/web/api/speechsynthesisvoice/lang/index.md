@@ -3,7 +3,6 @@ title: SpeechSynthesisVoice.lang
 slug: Web/API/SpeechSynthesisVoice/lang
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechSynthesisVoice
@@ -13,19 +12,11 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesisVoice.lang
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
-The **`lang`** read-only property of the
-{{domxref("SpeechSynthesisVoice")}} interface returns a BCP 47 language tag indicating
-the language of the voice.
+The **`lang`** read-only property of the {{domxref("SpeechSynthesisVoice")}} interface returns a BCP 47 language tag indicating the language of the voice.
 
-## Syntax
-
-```js
-var myLang = speechSynthesisVoiceInstance.lang;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMString")}} representing the language of the device.
 

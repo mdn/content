@@ -42,4 +42,3 @@ VideoDecoder.reset();
 ## Browser compatibility
 
 {{Compat}}
-

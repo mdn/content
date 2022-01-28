@@ -44,7 +44,7 @@ The markup for the custom controls now looks as follows:
 
 ### Related CSS alteration
 
-The previous article set the `display` property of the video controls to `block` in order to display them. This has now been changed to use a [`data-state` attribute](http://toddmotto.com/stop-toggling-classes-with-js-use-behavior-driven-dom-manipulation-with-data-states/), which this code already uses to handle its [fullscreen implementation](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player#fullscreen).
+The previous article set the `display` property of the video controls to `block` in order to display them. This has now been changed to use a [`data-state` attribute](https://ultimatecourses.com/blog/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states), which this code already uses to handle its [fullscreen implementation](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player#fullscreen).
 
 This "data-state" idea is also used for setting the current state of buttons within the video control set, which allows specific state styling.
 
@@ -173,17 +173,19 @@ When the `data-state` of the button is changed, the appropriate image will also 
 
 The {{htmlelement("progress") }} element has the following basic style set up:
 
-    .controls progress {
-       display:block;
-       width:100%;
-       height:81%;
-       margin-top:0.125rem;
-       border:none;
-       color:#0095dd;
-       -moz-border-radius:2px;
-       -webkit-border-radius:2px;
-       border-radius:2px;
-    }
+```css
+.controls progress {
+    display:block;
+    width:100%;
+    height:81%;
+    margin-top:0.125rem;
+    border:none;
+    color:#0095dd;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+}
+```
 
 Like the {{htmlelement("button") }} elements, {{htmlelement("progress") }} also has a default border, which is removed here. It is also given a slight rounded corner for aesthetic reasons. The `color` property is also defined here as Internet Explorer uses this defined color for styling the progress bar's background color as it increases.
 

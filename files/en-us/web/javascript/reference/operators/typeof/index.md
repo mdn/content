@@ -178,7 +178,7 @@ However, with the addition of block-scoped {{JSxRef("Statements/let", "let")}} a
 `const` variables (or using `typeof` on a `class`) in a
 block before they are declared will throw a {{JSxRef("ReferenceError")}}. Block scoped
 variables are in a "[temporal
-dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#The_temporal_dead_zone_and_typeof)" from the start of the block until the initialization is processed,
+dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)" from the start of the block until the initialization is processed,
 during which, it will throw an error if accessed.
 
 ```js
@@ -195,7 +195,7 @@ class newClass{};
 
 ### Exceptions
 
-All current browsers expose a non-standard host object [`document.all`](/en-US/docs/Web/API/Document/all "The Document interface's read-only all property returns an HTMLAllCollection rooted at the document node. In other words, it returns the entire contents of the page.")
+All current browsers expose a non-standard host object [`document.all`](/en-US/docs/Web/API/Document/all)
 with type `undefined`.
 
 ```js

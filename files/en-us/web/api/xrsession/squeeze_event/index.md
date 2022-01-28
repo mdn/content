@@ -35,13 +35,16 @@ For details on how the {{domxref("XRSession.squeezestart_event", "squeezestart")
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('squeeze', (event) => { });
+addEventListener('squeeze', event => { })
 
-onsqueeze = (event) => { });
+onsqueeze = event => { }
 ```
+
 ## Event type
 
 An {{domxref("XRInputSourceEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("XRInputSourceEvent")}}
 
 ## Event properties
 

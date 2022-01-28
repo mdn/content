@@ -10,7 +10,7 @@ tags:
   - content indexing
 browser-compat: api.ContentIndexEvent
 ---
-{{draft}}{{DefaultAPISidebar("Content Index API")}}
+{{DefaultAPISidebar("Content Index API")}}
 
 The **`ContentIndexEvent`** interface of the {{domxref('Content Index API')}} defines the object used to represent the {{Event('contentdelete')}} event.
 
@@ -36,7 +36,7 @@ _While `ContentIndexEvent` offers no methods of its own, it inherits any specifi
 
 ## Examples
 
-This example shows the {{domxref('ServiceWorker','sevice worker')}} script listening for the {{domxref('ContentIndexEvent', 'contentdelete')}} event and logs the removed content index id.
+This example shows the {{domxref('ServiceWorker','service worker')}} script listening for the {{domxref('ContentIndexEvent', 'contentdelete')}} event and logs the removed content index id.
 
 ```js
 self.addEventListener('contentdelete', (event) => {

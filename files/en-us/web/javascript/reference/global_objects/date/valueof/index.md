@@ -24,7 +24,7 @@ valueOf()
 
 ### Return value
 
-The number of milliseconds between 1 January 1970 00:00:00 UTC and the given date.
+The number of milliseconds between 1 January 1970 00:00:00 UTC and the given date, or {{jsxref("NaN")}} in case of an invalid date.
 
 ## Description
 

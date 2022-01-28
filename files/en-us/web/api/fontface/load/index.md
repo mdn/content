@@ -66,7 +66,6 @@ font_file.load().then( () => {
 
 {{EmbedLiveSample('Examples')}}:
 
-
 ## Specifications
 
 {{Specifications}}

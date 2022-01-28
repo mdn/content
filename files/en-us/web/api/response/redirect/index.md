@@ -45,7 +45,7 @@ A {{domxref("Response")}} object.
 ## Example
 
 ```js
-responseObj.redirect('https://www.example.com', 302);
+Response.redirect('https://www.example.com', 302);
 ```
 
 ## Specifications

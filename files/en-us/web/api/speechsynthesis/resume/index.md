@@ -3,7 +3,6 @@ title: SpeechSynthesis.resume()
 slug: Web/API/SpeechSynthesis/resume
 tags:
   - API
-  - Experimental
   - Method
   - Reference
   - SpeechSynthesis
@@ -13,7 +12,7 @@ tags:
   - synthesis
 browser-compat: api.SpeechSynthesis.resume
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`resume()`** method of the {{domxref("SpeechSynthesis")}}
 interface puts the `SpeechSynthesis` object into a non-paused state:
@@ -22,7 +21,7 @@ resumes it if it was already paused.
 ## Syntax
 
 ```js
-speechSynthesisInstance.resume();
+resume()
 ```
 
 ### Returns
@@ -35,17 +34,18 @@ None.
 
 ## Examples
 
-    var synth = window.speechSynthesis;
+```js
+let synth = window.speechSynthesis;
 
-    var utterance1 = new SpeechSynthesisUtterance('How about we say this now? This is quite a long sentence to say.');
-    var utterance2 = new SpeechSynthesisUtterance('We should say another sentence too, just to be on the safe side.');
+let utterance1 = new SpeechSynthesisUtterance('How about we say this now? This is quite a long sentence to say.');
+let utterance2 = new SpeechSynthesisUtterance('We should say another sentence too, just to be on the safe side.');
 
-    synth.speak(utterance1);
-    synth.speak(utterance2);
+synth.speak(utterance1);
+synth.speak(utterance2);
 
-    synth.pause(); // pauses utterances being spoken
-
-    synth.resume() // resumes speaking
+synth.pause(); // pauses utterances being spoken
+synth.resume() // resumes speaking
+```
 
 ## Specifications
 

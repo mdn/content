@@ -399,6 +399,26 @@ function FileUpload(img, file) {
   };
   reader.readAsBinaryString(file);
 }
+
+function createThrobber(img) {
+  const throbberWidth = 64;
+  const throbberHeight = 6;
+  const throbber = document.createElement('canvas');
+  throbber.classList.add('upload-progress');
+  throbber.setAttribute('width', throbberWidth);
+  throbber.setAttribute('height', throbberHeight);
+  img.parentNode.appendChild(throbber);
+  throbber.ctx = throbber.getContext('2d');
+  throbber.ctx.fillStyle = 'orange';
+  throbber.update = function(percent) {
+    throbber.ctx.fillRect(0, 0, throbberWidth * percent / 100, throbberHeight);
+    if (percent === 100) {
+      throbber.ctx.fillStyle = 'green';
+    }
+  }
+  throbber.update(0);
+  return throbber;
+}
 ```
 
 The `FileUpload()` function shown above creates a throbber, which is used to display progress information, and then creates an {{DOMxRef("XMLHttpRequest")}} to handle uploading the data.

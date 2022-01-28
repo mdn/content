@@ -71,7 +71,7 @@ An entry in `GroupData.json` has the following structure:
     > **Note:** The properties of the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the tag `Property` is in the YAML header on that page.
 * `"events"`
   * : This lists events of other interfaces that are part of the API. The values are the _title of the pages_ (that must reside under `Web/Events`)
-    > **Note:** The events targetting the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the tag `Event` (singular!) is in the YAML header on that page.
+    > **Note:** The events targeting the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the tag `Event` (singular!) is in the YAML header on that page.
 
 There are two other keys, `"dictionaries"` and `"callbacks"`, operating on the same principle. As we no longer document these entities in their own pages, their use is deprecated, and no new entry should be added to them (and we remove them little by little).
 

@@ -12,7 +12,7 @@ tags:
   - responseText
 browser-compat: api.XMLHttpRequest.responseText
 ---
-{{draft}}{{APIRef('XMLHttpRequest')}}
+{{APIRef('XMLHttpRequest')}}
 
 The read-only {{domxref("XMLHttpRequest")}} property
 **`responseText`** returns the text received from a server

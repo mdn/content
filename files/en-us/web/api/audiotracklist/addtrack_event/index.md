@@ -5,6 +5,7 @@ tags:
   - Event
 browser-compat: api.AudioTrackList.addtrack_event
 ---
+
 {{APIRef}}
 
 The `addtrack` event is fired when a track is added to an [`AudioTrackList`](/en-US/docs/Web/API/AudioTrackList).
@@ -41,9 +42,9 @@ The `addtrack` event is fired when a track is added to an [`AudioTrackList`](/en
 Using `addEventListener()`:
 
 ```js
-const videoElement = document.querySelector('video');
+const videoElement = document.querySelector("video");
 
-videoElement.audioTracks.addEventListener('addtrack', (event) => {
+videoElement.audioTracks.addEventListener("addtrack", (event) => {
   console.log(`Audio track: ${event.track.label} added`);
 });
 ```
@@ -51,7 +52,7 @@ videoElement.audioTracks.addEventListener('addtrack', (event) => {
 Using the `onaddtrack` event handler property:
 
 ```js
-const videoElement = document.querySelector('video');
+const videoElement = document.querySelector("video");
 
 videoElement.audioTracks.onaddtrack = (event) => {
   console.log(`Audio track: ${event.track.label} added`);
@@ -72,4 +73,4 @@ videoElement.audioTracks.onaddtrack = (event) => {
 - This event on [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList) targets: [`addtrack`](/en-US/docs/Web/API/VideoTrackList/addtrack_event)
 - This event on [`MediaStream`](/en-US/docs/Web/API/MediaStream) targets: [`addtrack`](/en-US/docs/Web/API/MediaStream/addtrack_event)
 - [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)

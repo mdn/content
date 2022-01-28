@@ -15,7 +15,7 @@ HTML {{HTMLElement("script")}} elements expose the **`HTMLScriptElement`** inter
 
 JavaScript files should be served with the `application/javascript` [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), but browsers are lenient and block them only if the script is served with an image type (`image/*`), video type (`video/*`), audio type (`audio/*`), or `text/csv`. If the script is blocked, its element receives an {{event("error")}} event; otherwise, it receives a {{event("load")}} event.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -55,7 +55,6 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : Is a boolean value that if true, stops the script's execution in browsers that support [ES2015 modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) — used to run fallback scripts in older browsers that do _not_ support JavaScript modules.
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
   - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerPolicy", "script")}} HTML attribute indicating which referrer to use when fetching the script, and fetches done by that script.
-
 
 ## Static methods
 
@@ -117,6 +116,7 @@ affixScriptToHead("myScript2.js", function () { alert("The script \"myScript2.js
 {{domxref("HTMLScriptElement.supports()")}} provides a unified mechanism for checking whether a browser supports particular types of scripts.
 
 The example below shows how to check for module support, using the existance of the `noModule` attribute as a fallback.
+
 ```js
 function checkModuleSupport() {
   if ('supports' in HTMLScriptElement) {

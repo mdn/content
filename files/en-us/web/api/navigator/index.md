@@ -75,6 +75,8 @@ _Doesn't inherit any properties._
   - : Returns the vendor name of the current browser (e.g., "Netscape6").
 - {{domxref("Navigator.webdriver")}} {{readonlyInline}} {{experimental_inline}}
   - : Indicates whether the user agent is controlled by automation.
+- {{domxref("Navigator.windowControlsOverlay")}} {{readonlyInline}}
+  - : Returns the {{domxref("WindowControlsOverlay")}} interface which exposes information about the geometry of the title bar in desktop Progressive Web Apps, and an event to know whenever it changes.
 - {{domxref("Navigator.xr")}} {{readonlyInline}} {{experimental_inline}}
   - : Returns {{domxref("XRSystem")}} object, which represents the entry point into the [WebXR API](/en-US/docs/Web/API/WebXR_Device_API).
 

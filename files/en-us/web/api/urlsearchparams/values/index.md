@@ -47,8 +47,10 @@ for(var value of searchParams.values()) {
 
 The result is:
 
-    value1
-    value2
+```
+value1
+value2
+```
 
 ## Specifications
 

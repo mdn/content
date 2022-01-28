@@ -184,21 +184,19 @@ Each iteration populates the `book` template variable with information for the c
 ```
 
 You might also use the `{% empty %}` template tag to define what happens if the book list is empty (although our template chooses to use a conditional instead):
+
 ```html
 <ul>
   {% for book in book_list %}
     <li> <!-- code here get information from each book item --> </li>
   {% empty %}
     <p>There are no books in the library.</p>
-  {% endfor %}
+  {% endfor %}
 </ul>
 ```
 
-
 While not used here, within the loop Django will also create other variables that you can use to track the iteration.
 For example, you can test the `forloop.last` variable to perform conditional processing the last time that the loop is run.
-
-
 
 #### Accessing variables
 
@@ -436,7 +434,7 @@ If you need to, you can change the template used and the name of the context obj
 
 #### What happens if the record doesn't exist?
 
-If a requested record does not exist then the generic class-based detail view will raise an `Http404` exception for you automatically — in production, this will automatically display an appropriate "resource not found" page, which you can customise if desired.
+If a requested record does not exist then the generic class-based detail view will raise an `Http404` exception for you automatically — in production, this will automatically display an appropriate "resource not found" page, which you can customize if desired.
 
 Just to give you some idea of how this works, the code fragment below demonstrates how you would implement the class-based view as a function if you were **not** using the generic class-based detail view.
 
@@ -528,7 +526,7 @@ The first interesting thing we haven't seen before is the function `book.bookins
 {% endfor %}
 ```
 
-This method is needed because you declare a `ForeignKey` (one-to many) field in only the "one" side of the relationship (the `BookInstance`). Since you don't do anything to declare the relationship in the other ("many") models, it (the `Book`) doesn't have any field to get the set of associated records. To overcome this problem, Django constructs an appropriately named "reverse lookup" function that you can use. The name of the function is constructed by lower-casing the model name where the `ForeignKey` was declared, followed by `_set` (i.e. so the function created in `Book` is `bookinstance_set()`).
+This method is needed because you declare a `ForeignKey` (one-to many) field only in the "many" side of the relationship (the `BookInstance`). Since you don't do anything to declare the relationship in the other ("one") model, it (the `Book`) doesn't have any field to get the set of associated records. To overcome this problem, Django constructs an appropriately named "reverse lookup" function that you can use. The name of the function is constructed by lower-casing the model name where the `ForeignKey` was declared, followed by `_set` (i.e. so the function created in `Book` is `bookinstance_set()`).
 
 > **Note:** Here we use `all()` to get all records (the default). While you can use the `filter()` method to get a subset of records in code, you can't do this directly in templates because you can't specify arguments to functions.
 >

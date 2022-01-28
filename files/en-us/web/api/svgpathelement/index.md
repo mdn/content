@@ -13,7 +13,7 @@ browser-compat: api.SVGPathElement
 
 The **`SVGPathElement`** interface corresponds to the {{SVGElement("path")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 > **Note:** In SVG 2 the `getPathSegAtLength()` and `createSVGPathSeg*` methods were removed and the `pathLength` property and the `getTotalLength()` and `getPointAtLength()` methods were moved to {{domxref("SVGGeometryElement")}}.
 

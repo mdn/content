@@ -276,10 +276,10 @@ div {
 
 ```css
 .colorhint-gradient {
-  background: linear-gradient(to top, black, 20%, cyan);
+  background: linear-gradient(to top, lime, 20%, cyan);
 }
 .regular-progression {
-  background: linear-gradient(to top, black, cyan);
+  background: linear-gradient(to top, lime, cyan);
 }
 ```
 

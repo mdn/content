@@ -45,6 +45,7 @@ The client is expected to select the most secure of the challenges it understand
 
 At least one challenge must be specified.
 Multiple challenges may be specified, comma-separated, in a single header, or in individual headers:
+
 ```http
 // Challenges specified in single header
 WWW-Authenticate: challenge1, ..., challengeN
@@ -78,7 +79,6 @@ WWW-Authenticate: Basic realm=<realm>
 WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 ```
 
-
 ## Directives
 
 - `<auth-scheme>`
@@ -95,7 +95,6 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 
 Other than `<auth-scheme>` and the key `realm`, authorization parameters are specific to each [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
 Generally you will need to check the relevant specifications for these (keys for a small subset of schemes are listed below).
-
 
 ### Basic
 
@@ -140,7 +139,6 @@ Generally you will need to check the relevant specifications for these (keys for
 - **`userhash`** {{optional_inline}}
   - : A server may specify `"true"` to indicate that it supports username hashing (default is `"false"`)
 
-
 ## Examples
 
 ### Basic authentication
@@ -151,7 +149,7 @@ A server that only supports basic authentication might have a `WWW-Authenticate`
 WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
 ```
 
-A user-agent recieving this header would first prompt the user for their username and password, and then re-request the resource: this time including the (encoded) credentials in the {{HTTPHeader("Authorization")}} header.
+A user-agent receiving this header would first prompt the user for their username and password, and then re-request the resource: this time including the (encoded) credentials in the {{HTTPHeader("Authorization")}} header.
 The {{HTTPHeader("Authorization")}} header might look like this:
 
 ```https
@@ -161,7 +159,6 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 For `"Basic"` authentication the credentials are constructed by first combining the username and the password with a colon (`aladdin:opensesame`), and then by encoding the resulting string in [`base64`](/en-US/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 
 > **Note:** See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or Nginx servers to password protect your site with HTTP basic authentication.
-
 
 ### Digest authentication with SHA-256 and MD5
 
@@ -220,8 +217,6 @@ Authorization: Digest username="Mufasa",
         6794697cf8db5856cb6c1",
     opaque="FQhe/qaU925kfnzjCev0ciny7QMkPqMAFRtzCUYo5tdS"
 ```
-
-
 
 ## Specifications
 

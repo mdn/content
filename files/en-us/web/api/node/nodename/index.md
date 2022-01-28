@@ -47,6 +47,7 @@ Text <span>Text</span>
 Text<br/>
 <svg height="20" width="20">
   <circle cx="10" cy="10" r="5" stroke="black" stroke-width="1" fill="red" />
+</svg>
 <hr>
 <output id="result">Not calculated yet.</output>
 ```
@@ -54,7 +55,7 @@ Text<br/>
 and the following script:
 
 ```js
-const node = document.getElementsByTagName("body")[0].firstChild;
+let node = document.getElementsByTagName("body")[0].firstChild;
 let result = "Node names are:<br/>";
 while (node) {
   result += node.nodeName + "<br/>";

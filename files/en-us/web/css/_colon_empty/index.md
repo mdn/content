@@ -15,7 +15,7 @@ browser-compat: css.selectors.empty
 
 The **`:empty`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any element that has no children. Children can be either element nodes or text (including whitespace). Comments, processing instructions, and CSS {{cssxref("content")}} do not affect whether an element is considered empty.
 
-> **Note:** In {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} the `:empty` pseudo-class was changed to act like {{CSSxRef(":-moz-only-whitespace")}}, but no browser currently supports this yet.
+> **Note:** In {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} the `:empty` pseudo-class was changed to act like {{CSSxRef(":-moz-only-whitespace")}}, but no browser currently supports this yet.
 
 ```css
 /* Selects any <div> that contains no content */
@@ -36,10 +36,10 @@ div:empty {
 <div class="box"><!-- I will be lime. --></div>
 <div class="box">I will be pink.</div>
 <div class="box">
-	<!-- I will be pink in older browsers because of the whitespace around this comment. -->
+  <!-- I will be pink in older browsers because of the whitespace around this comment. -->
 </div>
 <div class="box">
-	<p><!-- I will be pink in all browsers because of the non-collapsible whitespace and elements around this comment. --></p>
+  <p><!-- I will be pink in all browsers because of the non-collapsible whitespace and elements around this comment. --></p>
 </div>
 ```
 
@@ -70,9 +70,9 @@ body {
 
 ## Accessibility concerns
 
-Assistive technology such as screen readers cannot parse interactive content that is empty. All interactive content must have an accessible name, which is created by providing a text value for the interactive control's parent element ([anchors](/en-US/docs/Web/HTML/Element/a), [buttons](/en-US/docs/Web/HTML/Element/button), etc.). Accessible names expose the interactive control to the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis), an API that communicates information useful for assistive technologies.
+Assistive technology such as screen readers cannot parse interactive content that is empty. All interactive content must have an accessible name, which is created by providing a text value for the interactive control's parent element ([anchors](/en-US/docs/Web/HTML/Element/a), [buttons](/en-US/docs/Web/HTML/Element/button), etc.). Accessible names expose the interactive control to the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis), an API that communicates information useful for assistive technologies.
 
-The text that provides the interactive control's accessible name can be hidden using [a combination of properties](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) that remove it visually from the screen but keep it parsable by assistive technology. This is commonly used for buttons that rely solely on an icon to convey purpose.
+The text that provides the interactive control's accessible name can be hidden using [a combination of properties](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) that remove it visually from the screen but keep it parsable by assistive technology. This is commonly used for buttons that rely solely on an icon to convey purpose.
 
 - [What is an accessible name? | The Paciello Group](https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/)
 - [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
@@ -89,5 +89,5 @@ The text that provides the interactive control's accessible name can be hidden 
 
 ## See also
 
-- {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}} – The {{glossary("prefix", "prefixed")}} implementation of the changes in {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}}
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}} – The {{glossary("prefix", "prefixed")}} implementation of the changes in {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}}
+- {{CSSxRef(":blank")}} {{Experimental_Inline}}

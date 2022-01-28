@@ -16,7 +16,7 @@ browser-compat: api.DeviceOrientationEvent.absolute
 Indicates whether or not the device is providing orientation data absolutely (that is,
 in reference to the Earth's coordinate frame) or using some arbitrary frame determined
 by the device. See [Orientation and motion data
-explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained "Orientation and motion data explained") for details.
+explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained) for details.
 
 ## Syntax
 
@@ -41,8 +41,8 @@ coordinate frame.
 ## See also
 
 - {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/en-US/docs/Web/API/Detecting_device_orientation "Detecting device orientation")
+- [Detecting device orientation](/en-US/docs/Web/API/Detecting_device_orientation)
 - [Orientation and motion data
-  explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained "Orientation and motion data explained")
+  explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained)
 - {{ domxref("window.ondeviceorientation") }}
 - {{ event("deviceorientation") }}

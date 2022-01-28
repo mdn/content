@@ -19,7 +19,7 @@ The read-only **`dtmf`** property on the
 **{{domxref("RTCRtpSender")}}** interface returns a
 {{domxref("RTCDTMFSender")}} object which can be used to send {{Glossary("DTMF")}} tones
 over the {{domxref("RTCPeerConnection")}} . See [Using DTMF](/en-US/docs/Web/API/WebRTC_API/Using_DTMF) for details on how to
-make use of th`e` returned `RTCDTMFSender` object.
+make use of the returned `RTCDTMFSender` object.
 
 ## Syntax
 

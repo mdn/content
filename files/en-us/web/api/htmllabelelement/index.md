@@ -13,7 +13,7 @@ browser-compat: api.HTMLLabelElement
 
 The **`HTMLLabelElement`** interface gives access to properties specific to {{HTMLElement("label")}} elements. It inherits methods and properties from the base {{domxref("HTMLElement")}} interface.
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

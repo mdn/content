@@ -91,7 +91,7 @@ After this, the registration steps are:
 - {{domxref("Credential")}} {{experimental_inline}}
   - : Provides information about an entity as a prerequisite to a trust decision.
 - {{domxref("CredentialsContainer")}}
-  - : Exposes methods to request credentials and notify the user agent when events such as successful sign in or sign out happen. This interface is accessible from {{domxref('Navigator.credentials')}}. The Web Authentication specification adds a `publicKey` member to the {{domxref('CredentialsContainer.create','create()')}} and {{domxref('CredentialsContainer.get','get()')}} methods to either create a new public key pair or get an authentication for a key pair, repsectively.
+  - : Exposes methods to request credentials and notify the user agent when events such as successful sign in or sign out happen. This interface is accessible from {{domxref('Navigator.credentials')}}. The Web Authentication specification adds a `publicKey` member to the {{domxref('CredentialsContainer.create','create()')}} and {{domxref('CredentialsContainer.get','get()')}} methods to either create a new public key pair or get an authentication for a key pair, respectively.
 - {{domxref("PublicKeyCredential")}}
   - : Provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password.
 - {{domxref("AuthenticatorResponse")}}

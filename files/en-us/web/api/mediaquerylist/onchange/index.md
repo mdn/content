@@ -16,7 +16,7 @@ browser-compat: api.MediaQueryList.onchange
 The **`onchange`** property of the
 {{DOMxRef("MediaQueryList")}} interface is an event handler property representing a
 function that is invoked when the {{domxref("MediaQueryList/change_event", "change")}}
-event fires, i.e when the status of media query support changes. The event object is a
+event fires — that is, when the status of media query support changes. The event object is a
 {{DOMxRef("MediaQueryListEvent")}} instance, which is recognized as a
 `MediaListQuery` instance in older browsers, for backwards compatibility
 purposes.

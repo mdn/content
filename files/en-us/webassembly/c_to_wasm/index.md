@@ -97,7 +97,7 @@ Sometimes you will want to use a custom HTML template. Let's look at how we can 
 
 4.  Now let's run this example. The above command will have generated `hello2.html`, which will have much the same content as the template with some glue code added into load the generated wasm, run it, etc. Open it in your browser and you'll see much the same output as the last example.
 
-> **Note:** You could specify outputting just the JavaScript "glue" file\* rather than the full HTML by specifying a .js file instead of an HTML file in the `-o` flag, e.g. `emcc -o hello2.js hello2.c -O3 -s WASM=1`. You could then build your custom HTML completely from scratch, although this is an advanced approach; it is usually easier to use the provided HTML template.
+> **Note:** You could specify outputting just the JavaScript "glue" file\* rather than the full HTML by specifying a .js file instead of an HTML file in the `-o` flag, e.g. `emcc -o hello2.js hello2.c -O3 -s WASM=1`. You could then build your custom HTML completely from scratch, although this is an advanced approach; it is usually easier to use the provided HTML template.
 >
 > - Emscripten requires a large variety of JavaScript "glue" code to handle memory allocation, memory leaks, and a host of other problems
 
@@ -132,11 +132,11 @@ If you have a function defined in your C code that you want to call as needed fr
 
     > **Note:** We are including the `#ifdef` blocks so that if you are trying to include this in C++ code, the example will still work. Due to C versus C++ name mangling rules, this would otherwise break, but here we are setting it so that it treats it as an external C function if you are using C++.
 
-2.  Now add `html_template/shell_minimal.html` into this new directory too, just for convenience (you'd obviously put this in a central place in your real dev environment).
+2.  Now add `html_template/shell_minimal.html` into this new directory too, just for convenience (you'd obviously put this in a central place in your real dev environment).
 3.  Now let's run the compilation step again. From inside your latest directory (and while inside your Emscripten compiler environment terminal window), compile your C code with the following command. (Note that we need to compile with `NO_EXIT_RUNTIME`, which is necessary as otherwise when `main()` exits the runtime would be shut down — necessary for proper C emulation, e.g., atexits are called — and it wouldn't be valid to call compiled code.)
 
     ```bash
-    emcc -o hello3.html hello3.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1  -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall']"
+    emcc -o hello3.html hello3.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1 -s "EXTRA_EXPORTED_RUNTIME_METHODS=['ccall']"
     ```
 
 4.  If you load the example in your browser again, you'll see the same thing as before!
@@ -154,10 +154,10 @@ If you have a function defined in your C code that you want to call as needed fr
         .addEventListener('click', function() {
             alert('check console');
             var result = Module.ccall(
-                'myFunction',	// name of C function
-                null,	// return type
-                null,	// argument types
-                null	// arguments
+                'myFunction',  // name of C function
+                null,  // return type
+                null,  // argument types
+                null  // arguments
             );
         });
     ```
@@ -166,7 +166,7 @@ This illustrates how `ccall()` is used to call the exported function.
 
 ## See also
 
-- [emscripten.org](https://emscripten.org/) — learn more about Emscripten and its large variety of options.
+- [emscripten.org](https://emscripten.org/) — learn more about Emscripten and its large variety of options.
 - [Calling compiled C functions from JavaScript using ccall/cwrap](https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap)
 - [Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)
 - [WebAssembly on Mozilla Research](https://research.mozilla.org/webassembly/)

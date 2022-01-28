@@ -18,7 +18,7 @@ browser-compat: api.HTMLImageElement
 
 The **`HTMLImageElement`** interface represents an HTML {{HTMLElement("img")}} element, providing the properties and methods used to manipulate image elements.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Constructor
 

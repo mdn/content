@@ -30,7 +30,7 @@ Depending on the connection mechanism provided by the presentation device, any c
 - {{domxref("PresentationAvailability")}}
   - : A [PresentationAvailability](/en-US/docs/Web/API/PresentationAvailability) object is associated with available presentation displays and represents the _presentation display availability_ for a presentation request.
 - {{domxref("PresentationConnectionAvailableEvent")}}
-  - : The `PresentationConnectionAvailableEvent` is fired on a [`PresentationRequest`](/en-US/docs/Web/API/PresentationRequest "The PresentationRequest interface of the Presentation API provides methods for starting a new presentation or joining an active one.") when a connection associated with the object is created.
+  - : The `PresentationConnectionAvailableEvent` is fired on a [`PresentationRequest`](/en-US/docs/Web/API/PresentationRequest) when a connection associated with the object is created.
 - {{domxref("PresentationConnection")}}
   - : Each presentation connection is represented by a [PresentationConnection](/en-US/docs/Web/API/PresentationConnection) object.
 - {{domxref("PresentationConnectionCloseEvent")}}

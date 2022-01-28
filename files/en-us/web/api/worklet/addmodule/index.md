@@ -38,7 +38,7 @@ addPromise = worklet.addModule(moduleURL, options);
   - : An object with any of the following options:
 
     - `credentials`: A {{domxref("RequestCredentials")}} value that
-      indicates whether to send credentials (e.g. cookies and HTTP authentification)
+      indicates whether to send credentials (e.g. cookies and HTTP authentication)
       when loading the module. Can be one of `"omit"`,
       `"same-origin"`, or `"include"`. Defaults to
       `"same-origin"`. See also {{domxref("Request.credentials")}}.

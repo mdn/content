@@ -13,7 +13,7 @@ tags:
   - delete
 browser-compat: api.ContentIndex.delete
 ---
-{{draft}}{{DefaultAPISidebar("Content Index API")}}
+{{DefaultAPISidebar("Content Index API")}}
 
 The **`delete()`** method of the
 {{domxref("ContentIndex")}} interface unregisters an item from the currently indexed

@@ -50,15 +50,15 @@ const defaultComputedStyles = myElement.computedStyleMap();
 
 // iterate thru the map of all the properties and values, adding a <dt> and <dd> for each
 for (const [prop, val] of defaultComputedStyles) {
-	// properties
-	const cssProperty = document.createElement('dt');
-	cssProperty.appendChild(document.createTextNode(prop));
-	stylesList.appendChild(cssProperty);
+  // properties
+  const cssProperty = document.createElement('dt');
+  cssProperty.appendChild(document.createTextNode(prop));
+  stylesList.appendChild(cssProperty);
 
-	// values
-	const cssValue = document.createElement('dd');
-	cssValue.appendChild(document.createTextNode(val));
-	stylesList.appendChild(cssValue);
+  // values
+  const cssValue = document.createElement('dd');
+  cssValue.appendChild(document.createTextNode(val));
+  stylesList.appendChild(cssValue);
 }
 ```
 
@@ -111,14 +111,14 @@ const ofInterest = ['font-weight', 'border-left-color', 'color', '--color'];
 
 // iterate through our properties of interest
 for ( let i = 0; i < ofInterest.length; i++ ) {
-  	// properties
+  // properties
   const cssProperty = document.createElement('dt');
   cssProperty.appendChild(document.createTextNode(ofInterest[i]));
   stylesList.appendChild(cssProperty);
-  	// values
+  // values
   const cssValue = document.createElement('dd');
   cssValue.appendChild(document.createTextNode( allComputedStyles.get(ofInterest[i])));
-	stylesList.appendChild(cssValue);
+  stylesList.appendChild(cssValue);
 }
 ```
 
@@ -255,16 +255,16 @@ Let's examine a CSS example with several custom properties, transforms, `calc()`
 }
 
 button {
-	--mainColor: hsl(198, 100%, 66%);
-	display: inline-block;
-	padding: var(--unit) calc(var(--unit)*2);
-	width: calc(30% + 20px);
-	background: no-repeat 5% center url(magicwand.png) var(--mainColor);
-	border: 4px solid var(--mainColor);
-	border-radius: 2px;
-	font-size: calc(var(--unit)*2); color: var(--white);
-	cursor: pointer;
-	transform: scale(0.95);
+  --mainColor: hsl(198, 100%, 66%);
+  display: inline-block;
+  padding: var(--unit) calc(var(--unit)*2);
+  width: calc(30% + 20px);
+  background: no-repeat 5% center url(magicwand.png) var(--mainColor);
+  border: 4px solid var(--mainColor);
+  border-radius: 2px;
+  font-size: calc(var(--unit)*2); color: var(--white);
+  cursor: pointer;
+  transform: scale(0.95);
 }
 ```
 

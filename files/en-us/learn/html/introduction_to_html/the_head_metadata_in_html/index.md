@@ -63,7 +63,7 @@ The HTML head is the contents of the {{htmlelement("head")}} element — unlike 
 </head>
 ```
 
-In larger pages however, the head can get quite full. Try going to some of your favorite websites and use the [developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) to check out their head contents. Our aim here is not to show you how to use everything that can possibly be put in the head, but rather to teach you how to use the major elements that you'll want to include in the head, and give you some familiarity. Let's get started.
+In larger pages however, the head can get quite full. Try going to some of your favorite websites and use the [developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) to check out their head contents. Our aim here is not to show you how to use everything that can possibly be put in the head, but rather to teach you how to use the major elements that you'll want to include in the head, and give you some familiarity. Let's get started.
 
 ## Adding a title
 
@@ -77,23 +77,23 @@ We've already seen the {{htmlelement("title")}} element in action — this can b
 1.  To start off this active learning, we'd like you to go to our GitHub repo and download a copy of our [title-example.html page](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html). To do this, either
 
     1.  Copy and paste the code out of the page and into a new text file in your code editor, then save it in a sensible place.
-    2.  Press the "Raw" button on the GitHub page, which causes the raw code to appear (possibly in a new browser tab). Next, choose your browser's *File > Save Page As...* menu and choose a sensible place to save the file.
+    2.  Press the "Raw" button on the GitHub page, which causes the raw code to appear (possibly in a new browser tab). Next, choose your browser's *File > Save Page As...* menu and choose a sensible place to save the file.
 
 2.  Now open the file in your browser. You should see something like this:
 
-    ![A simple web page with the title set to <title> element, and the <h1> set to <h1> element.](title-example.png)It should now be completely obvious where the `<h1>` content appears, and where the `<title>` content appears!
+    ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](title-example.png)It should now be completely obvious where the `<h1>` content appears, and where the `<title>` content appears!
 
 3.  You should also try opening the code up in your code editor, editing the contents of these elements, then refreshing the page in your browser. Have some fun with it.
 
 The `<title>` element contents are also used in other ways. For example, if you try bookmarking the page (_Bookmarks > Bookmark This Page_ or the star icon in the URL bar in Firefox), you will see the `<title>` contents filled in as the suggested bookmark name.
 
-![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the <title> element ](bookmark-example.png)
+![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the \<title> element ](bookmark-example.png)
 
 The `<title>` contents are also used in search results, as you'll see below.
 
 ## Metadata: the \<meta> element
 
-Metadata is data that describes data, and HTML has an "official" way of adding metadata to a document — the {{htmlelement("meta")}} element. Of course, the other stuff we are talking about in this article could also be thought of as metadata too. There are a lot of different types of `<meta>` elements that can be included in your page's \<head>, but we won't try to explain them all at this stage, as it would just get too confusing. Instead, we'll explain a few things that you might commonly see, just to give you an idea.
+Metadata is data that describes data, and HTML has an "official" way of adding metadata to a document — the {{htmlelement("meta")}} element. Of course, the other stuff we are talking about in this article could also be thought of as metadata too. There are a lot of different types of `<meta>` elements that can be included in your page's \<head>, but we won't try to explain them all at this stage, as it would just get too confusing. Instead, we'll explain a few things that you might commonly see, just to give you an idea.
 
 ### Specifying your document's character encoding
 
@@ -109,7 +109,7 @@ This element specifies the document's character encoding — the character set t
 
 ![a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly](bad-encoding.png)
 
-> **Note:** Some browsers (like Chrome) automatically fix incorrect encodings, so depending on what browser you use, you may not see this problem. You should still set an encoding of `utf-8` on your page anyway to avoid any potential problems in other browsers.
+> **Note:** Some browsers (like Chrome) automatically fix incorrect encodings, so depending on what browser you use, you may not see this problem. You should still set an encoding of `utf-8` on your page anyway to avoid any potential problems in other browsers.
 
 ### Active learning: Experiment with character encoding
 
@@ -250,7 +250,7 @@ Just about all websites you'll use in the modern day will employ {{glossary("CSS
 2.  Open the HTML file in both your browser, and your text editor.
 3.  By following the information given above, add {{htmlelement("link")}} and {{htmlelement("script")}} elements to your HTML, so that your CSS and JavaScript are applied to your HTML.
 
-If done correctly, when you save your HTML and refresh your browser you should be able to see that things have changed:
+If done correctly, when you save your HTML and refresh your browser you should be able to see that things have changed:
 
 ![Example showing a page with CSS and JavaScript applied to it. The CSS has made the page go green, whereas the JavaScript has added a dynamic list to the page.](js-and-css.png)
 
@@ -279,7 +279,7 @@ These codes are defined by the [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639
 
 ## Summary
 
-That marks the end of our quickfire tour of the HTML head — there's a lot more you can do in here, but an exhaustive tour would be boring and confusing at this stage, and we just wanted to give you an idea of the most common things you'll find in there for now! In the next article we'll be looking at HTML text fundamentals.
+That marks the end of our quickfire tour of the HTML head — there's a lot more you can do in here, but an exhaustive tour would be boring and confusing at this stage, and we just wanted to give you an idea of the most common things you'll find in there for now! In the next article we'll be looking at HTML text fundamentals.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
 

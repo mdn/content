@@ -12,7 +12,7 @@ tags:
   - variable
 browser-compat: api.CSSVariableReferenceValue.variable
 ---
-{{draft}}{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The **`variable`** property of the
 {{domxref("CSSVariableReferenceValue")}} interface returns the [custom property name](/en-US/docs/Web/CSS/--*) of the

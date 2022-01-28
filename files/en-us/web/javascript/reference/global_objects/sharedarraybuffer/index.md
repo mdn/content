@@ -19,7 +19,7 @@ The **`SharedArrayBuffer`** object is used to represent a generic, fixed-length 
 
 To share memory using {{jsxref("SharedArrayBuffer")}} objects from one agent in the cluster to another (an agent is either the web page’s main program or one of its web workers), [`postMessage`](/en-US/docs/Web/API/Worker/postMessage) and [structured cloning](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) is used.
 
-The structured clone algorithm accepts `SharedArrayBuffers` and `TypedArrays` mapped onto `SharedArrayBuffers`. In both cases, the `SharedArrayBuffer` object is transmitted to the receiver resulting in a new, private SharedArrayBuffer object in the receiving agent (just as for {{jsxref("ArrayBuffer")}}). However, the shared data block referenced by the two `SharedArrayBuffer` objects is the same data block, and a side effect to the block in one agent will eventually become visible in the other agent.
+The structured clone algorithm accepts `SharedArrayBuffer` objects and typed arrays mapped onto `SharedArrayBuffer` objects. In both cases, the `SharedArrayBuffer` object is transmitted to the receiver resulting in a new, private `SharedArrayBuffer` object in the receiving agent (just as for {{jsxref("ArrayBuffer")}}). However, the shared data block referenced by the two `SharedArrayBuffer` objects is the same data block, and a side effect to the block in one agent will eventually become visible in the other agent.
 
 ```js
 var sab = new SharedArrayBuffer(1024);
@@ -30,11 +30,11 @@ worker.postMessage(sab);
 
 Shared memory can be created and updated simultaneously in workers or the main thread. Depending on the system (the CPU, the OS, the Browser) it can take a while until the change is propagated to all contexts. To synchronize, {{jsxref("Atomics", "atomic", "", 1)}} operations are needed.
 
-### APIs which use SharedArrayBuffer objects
+### APIs which use SharedArrayBuffer objects
 
-- [`WebGLRenderingContext.bufferData()`](/en-US/docs/Web/API/WebGLRenderingContext/bufferData "The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.")
-- [`WebGLRenderingContext.bufferSubData()`](/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData "The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store.")
-- [`WebGL2RenderingContext.getBufferSubData()`](/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData "The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer.")
+- [`WebGLRenderingContext.bufferData()`](/en-US/docs/Web/API/WebGLRenderingContext/bufferData)
+- [`WebGLRenderingContext.bufferSubData()`](/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData)
+- [`WebGL2RenderingContext.getBufferSubData()`](/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData)
 
 ### Security requirements
 
@@ -56,9 +56,9 @@ To check if cross origin isolation has been successful, you can test against the
 
 ```js
 if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  // Post SharedArrayBuffer
 } else {
-  // Do something else
+  // Do something else
 }
 ```
 
@@ -134,6 +134,6 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 - {{jsxref("ArrayBuffer")}}
 - [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
-- [parlib-simple ](https://github.com/lars-t-hansen/parlib-simple)– a simple library providing synchronization and work distribution abstractions.
+- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – a simple library providing synchronization and work distribution abstractions.
 - [Shared Memory – a brief tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
 - [A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

@@ -32,7 +32,6 @@ AudioEncoder.configure(config)
     - `bitrate`{{Optional_Inline}}
       - : An integer representing the bitrate.
 
-
 ### Return Value
 
 None.
@@ -74,4 +73,3 @@ encoder.configure(config);
 ## Browser compatibility
 
 {{Compat}}
-

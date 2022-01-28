@@ -30,10 +30,12 @@ channel.postMessage(message);
 ### Parameters
 
 - `message`
-  - : Data to be sent to the other window. The data is serialized using
-    {{domxref("Web_Workers_API/Structured_clone_algorithm", "the structured clone
-    algorithm")}}. This means you can pass a broad variety of data objects safely to the
-    destination window without having to serialize them yourself.
+  - : Data to be sent to the other window. The data is serialized using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+    This means you can pass a broad variety of data objects safely to the destination window without having to serialize them yourself.
+
+### Return value
+
+None.
 
 ## Specifications
 

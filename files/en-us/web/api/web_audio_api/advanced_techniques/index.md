@@ -20,8 +20,6 @@ We're going to be looking at a very simple step sequencer:
 
 ![A sound sequencer application featuring play and BPM master controls, and 4 different voices with controls for each.](sequencer.png)
 
-
-
 In practice this is easier to do with a library — the Web Audio API was built to be built upon. If you are about to embark on building something more complex, [tone.js](https://tonejs.github.io/) would be a good place to start. However, we want to demonstrate how to build such a demo from first principles, as a learning exercise.
 
 > **Note:** You can find the source code on GitHub as [step-sequencer](https://github.com/mdn/webaudio-examples/tree/master/step-sequencer); see the [step-sequencer running live](https://mdn.github.io/webaudio-examples/step-sequencer/) also.

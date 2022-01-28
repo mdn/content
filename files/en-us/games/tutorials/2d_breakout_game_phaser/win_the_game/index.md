@@ -42,7 +42,7 @@ function ballHitBrick(ball, brick) {
 }
 ```
 
-We loop through the bricks in the group using `bricks.children`, checking for the aliveness of each with each brick's `.alive() `method. If there are no more bricks left alive, then we show a winning message, restarting the game once the alert is dismissed.
+We loop through the bricks in the group using `bricks.children`, checking for the aliveness of each with each brick's `.alive()` method. If there are no more bricks left alive, then we show a winning message, restarting the game once the alert is dismissed.
 
 ## Compare your code
 

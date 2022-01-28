@@ -10,7 +10,7 @@ tags:
   - write
 browser-compat: api.FileSystemWritableFileStream.seek
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`seek()`** method of the
 {{domxref("FileSystemWritableFileStream")}} interface updates the current file cursor

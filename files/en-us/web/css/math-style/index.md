@@ -21,7 +21,7 @@ math-style: normal;
 math-style: compact;
 
 /* Global values */
-math-sytle: inherit;
+math-style: inherit;
 math-style: initial;
 math-style: revert;
 math-style: unset;
@@ -46,9 +46,11 @@ math-style: unset;
 
 ### CSS
 
-    math {
-      math-style: compact;
-    }
+```css
+math {
+  math-style: compact;
+}
+```
 
 ## Specifications
 

@@ -60,4 +60,4 @@ rates of the device around each of its axes:
 - [Detecting device
   orientation](/en-US/docs/Web/API/Detecting_device_orientation)
 - [Orientation and motion data
-  explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained "Orientation and motion data explained")
+  explained](/en-US/docs/Web/Guide/Events/Orientation_and_motion_data_explained)

@@ -157,7 +157,7 @@ The `browser_action` key is an object that may have any of the following propert
         <p>
           Firefox remembers the <code>default_area</code> setting for an
           extension, even if that extension is uninstalled and subsequently
-          reinstalled. To force the browser to acknowlege a new value for
+          reinstalled. To force the browser to acknowledge a new value for
           <code>default_area</code>, the id of the extension must be changed.
         </p>
         <p>

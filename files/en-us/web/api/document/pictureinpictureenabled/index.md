@@ -36,7 +36,7 @@ let isPictureInPictureAvailable = document.pictureInPictureEnabled;
 
 A boolean value, which is `true` if a video can enter
 picture-in-picture and be displayed in a floating window by calling
-{{domxref("HTMLVideoElement.requestFullscreen()")}}. If picture-in-picture mode isn't
+{{domxref("HTMLVideoElement.requestPictureInPicture()")}}. If picture-in-picture mode isn't
 available, this value is `false`.
 
 ## Examples

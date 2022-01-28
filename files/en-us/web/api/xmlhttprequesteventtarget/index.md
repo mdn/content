@@ -44,4 +44,4 @@ browser-compat: api.XMLHttpRequestEventTarget
 ## See also
 
 - {{ domxref("XMLHttpRequest") }}
-- [Using XMLHttpRequest](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using XMLHttpRequest](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)

@@ -89,7 +89,7 @@ The following attributes are deprecated and should not be used. They are documen
 
     > **Note:** To achieve the same effect as the `left`, `center`, `right` or `justify` values, do not try to set the {{cssxref("text-align")}} property on a selector giving a `<col>` element. Because {{HTMLElement("td")}} elements are not descendant of the `<col>` element, they won't inherit it.
     >
-    > If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector. Set `a` to zero and `b `to the position of the column in the table, e.g. `td:nth-child(2) { text-align: right; }` to right-align the second column.
+    > If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector. Set `a` to zero and `b` to the position of the column in the table, e.g. `td:nth-child(2) { text-align: right; }` to right-align the second column.
     >
     > If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 

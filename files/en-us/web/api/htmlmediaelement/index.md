@@ -19,7 +19,7 @@ The **`HTMLMediaElement`** interface adds to {{domxref("HTMLElement")}} the prop
 
 The {{domxref("HTMLVideoElement")}} and {{domxref("HTMLAudioElement")}} elements both inherit this interface.
 
-{{InheritanceDiagram(600, 180)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -90,9 +90,9 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.srcObject")}}
   - : Is a {{domxref('MediaStream')}} representing the media to play or that has played in the current `HTMLMediaElement`, or `null` if not assigned.
 - {{domxref("HTMLMediaElement.textTracks")}} {{readonlyinline}}
-  - : Returns the list of {{domxref("TextTrack")}} objects contained in the element.
+  - : Returns a {{domxref('TextTrackList')}} object containing the list of {{domxref("TextTrack")}} objects contained in the element.
 - {{domxref("HTMLMediaElement.videoTracks")}} {{readonlyinline}}
-  - : Returns the list of {{domxref("VideoTrack")}} objects contained in the element.
+  - : Returns a {{domxref('VideoTrackList')}} object containing the list of {{domxref("VideoTrack")}} objects contained in the element.
 - {{domxref("HTMLMediaElement.volume")}}
   - : Is a `double` indicating the audio volume, from 0.0 (silent) to 1.0 (loudest).
 
@@ -119,7 +119,7 @@ These properties are obsolete and should not be used, even if a browser still su
 _This interface also inherits methods from its ancestors {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}._
 
 - {{domxref("HTMLMediaElement.addTextTrack()")}}
-  - : Adds a text track (such as a track for subtitles) to a media element.
+  - : Adds a new {{domxref("TextTrack")}} object (such as a track for subtitles) to a media element. This is a programmatic interface only and does not affect the DOM.
 - {{domxref("HTMLMediaElement.captureStream()")}} {{experimental_inline}}
   - : Returns {{domxref("MediaStream")}}, captures a stream of the media content.
 - {{domxref("HTMLMediaElement.canPlayType()")}}
@@ -161,7 +161,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_ , defined in the 
 - {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
   - : Fired when the user agent can play the media, and estimates that enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
 - {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}}
-  - : Fired when the duration attribute has been updated.
+  - : Fired when the duration property has been updated.
 - {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
   - : Fired when the media has become empty; for example, when the media has already been loaded (or partially loaded), and the {{domxref("HTMLMediaElement.load()")}} method is called to reload it.
 - {{domxref("HTMLMediaElement.ended_event", 'ended')}}
@@ -184,6 +184,8 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_ , defined in the 
   - : Fired periodically as the browser loads a resource.
 - {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
   - : Fired when the playback rate has changed.
+- {{domxref("HTMLMediaElement.resize_event", 'resize ')}}
+  - : Fired when one or both of the `videoWidth` and `videoHeight` properties have just been updated.
 - {{domxref("HTMLMediaElement.seeked_event", 'seeked ')}}
   - : Fired when a seek operation completes
 - {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
@@ -193,7 +195,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_ , defined in the 
 - {{domxref("HTMLMediaElement.suspend_event", 'suspend')}}
   - : Fired when the media data loading has been suspended.
 - {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}}
-  - : Fired when the time indicated by the {{domxref("HTMLMediaElement.currentTime", "currentTime")}} attribute has been updated.
+  - : Fired when the time indicated by the {{domxref("HTMLMediaElement.currentTime", "currentTime")}} property has been updated.
 - {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}}
   - : Fired when the volume has changed.
 - {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}

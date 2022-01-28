@@ -12,7 +12,7 @@ tags:
   - to()
 browser-compat: api.CSSNumericValue.to
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`to()`** method of the
 {{domxref("CSSNumericValue")}} interface converts a numeric value from one unit to

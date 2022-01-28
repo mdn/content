@@ -13,7 +13,7 @@ browser-compat: api.SVGFESpotLightElement
 
 The **`SVGFESpotLightElement`** interface corresponds to the {{SVGElement("feSpotLight")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

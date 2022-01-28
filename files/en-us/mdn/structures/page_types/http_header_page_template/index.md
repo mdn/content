@@ -19,7 +19,7 @@ browser-compat: path.to.feature.NameOfTheHeader
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular header.
 >
-> ```
+> ```md
 > ---
 > title: NameOfTheHeader
 > slug: Web/HTTP/Headers/NameOfTheHeader
@@ -35,6 +35,7 @@ browser-compat: path.to.feature.NameOfTheHeader
 > browser-compat: path.to.feature.NameOfTheHeader
 > ---
 > ```
+>
 > - **title**
 >   - : Title heading displayed at top of page. Format as _NameOfTheHeader_. For example, the [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) header has a _title_ of `Cache-Control`.
 > - **slug**
@@ -59,6 +60,7 @@ browser-compat: path.to.feature.NameOfTheHeader
 >
 > A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
 > You should update or delete them according to the advice below:
+>
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the header is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)).
 >   If the header you are documenting is not experimental, you can remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
@@ -68,7 +70,6 @@ browser-compat: path.to.feature.NameOfTheHeader
 >   Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
 > _Remember to remove this whole explanatory note before publishing_
-
 
 {{SeeCompatTable}}{{deprecated_header}}{{httpsidebar}}
 
@@ -83,7 +84,7 @@ This should ideally be 1 or 2 short sentences.
         Include header category (or categories), e.g.
         {{Glossary("Request header")}},
         {{Glossary("Response header")}},
-        {{Glossary("Client hints","Client hint")}}
+        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>

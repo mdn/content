@@ -13,7 +13,7 @@ browser-compat: api.HTMLOptionElement
 
 The **`HTMLOptionElement`** interface represents {{HTMLElement("option")}} elements and inherits all properties and methods of the {{domxref("HTMLElement")}} interface.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Constructor
 
@@ -44,7 +44,6 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 ## Methods
 
 _Doesn't implement any specific method, but inherits methods from its parent, {{domxref("HTMLElement")}}._
-
 
 ## Specifications
 

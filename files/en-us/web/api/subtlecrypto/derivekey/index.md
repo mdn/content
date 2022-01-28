@@ -17,7 +17,7 @@ The **`deriveKey()`** method of the {{domxref("SubtleCrypto")}}
 interface can be used to derive a secret key from a master key.
 
 It takes as arguments some initial key material, the derivation algorithm to use, and
-the desired properties for the key to derive. It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.")
+the desired properties for the key to derive. It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 which will be fulfilled with a {{domxref("CryptoKey")}} object representing the new key.
 
 It's worth noting that the three key derivation algorithms you can use have quite

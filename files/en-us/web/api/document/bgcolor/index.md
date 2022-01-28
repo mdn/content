@@ -31,7 +31,9 @@ document.bgColor =color
 
 ## Example
 
-    document.bgColor = "darkblue";
+```js
+document.bgColor = "darkblue";
+```
 
 ## Notes
 

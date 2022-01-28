@@ -15,7 +15,7 @@ browser-compat: api.URLSearchParams
 
 The **`URLSearchParams`** interface defines utility methods to work with the query string of a URL.
 
-An object implementing `URLSearchParams` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, for example the following two lines are equivalent:
+An object implementing `URLSearchParams` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure to iterate over key/value pairs in the same order as they appear in the query string, for example the following two lines are equivalent:
 
 ```js
 for (const [key, value] of mySearchParams) {}
@@ -36,7 +36,7 @@ for (const [key, value] of mySearchParams.entries()) {}
 - {{domxref("URLSearchParams.delete()")}}
   - : Deletes the given search parameter, and its associated value, from the list of all search parameters.
 - {{domxref("URLSearchParams.entries()")}}
-  - : Returns an {{jsxref("Iteration_protocols","iterator")}} allowing iteration through all key/value pairs contained in this object.
+  - : Returns an {{jsxref("Iteration_protocols","iterator")}} allowing iteration through all key/value pairs contained in this object in the same order as they appear in the query string.
 - {{domxref("URLSearchParams.forEach()")}}
   - : Allows iteration through all values contained in this object via a callback function.
 - {{domxref("URLSearchParams.get()")}}

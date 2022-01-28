@@ -23,18 +23,18 @@ array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray
 
 ```js
 // Arrow function
-TypedArray.from(arrayLike, (element) => { ... } )
-TypedArray.from(arrayLike, (element, index) => { ... } )
+TypedArray.from(arrayLike, (element) => { /* ... */ } )
+TypedArray.from(arrayLike, (element, index) => { /* ... */ } )
 
 // Mapping function
 TypedArray.from(arrayLike, mapFn)
 TypedArray.from(arrayLike, mapFn, thisArg)
 
 // Inline mapping function
-TypedArray.from(arrayLike, function mapFn(element) { ... })
-TypedArray.from(arrayLike, function mapFn(element, index) { ... })
-TypedArray.from(arrayLike, function mapFn(element) { ... }, thisArg)
-TypedArray.from(arrayLike, function mapFn(element, index) { ... }, thisArg)
+TypedArray.from(arrayLike, function mapFn(element) { /* ... */ })
+TypedArray.from(arrayLike, function mapFn(element, index) { /* ... */ })
+TypedArray.from(arrayLike, function mapFn(element) { /* ... */ }, thisArg)
+TypedArray.from(arrayLike, function mapFn(element, index) { /* ... */ }, thisArg)
 ```
 
 Where `TypedArray` is one of:

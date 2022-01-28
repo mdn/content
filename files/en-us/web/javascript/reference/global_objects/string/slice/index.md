@@ -52,7 +52,7 @@ slice(beginIndex, endIndex)
     `slice()` also extracts to the end of the string.
     (E.g. `"test".slice(2, 10)` returns `"st"`)
 
-    If `endIndex` is negative, `slice()` is treated as
+    If `endIndex` is negative, `slice()` treats it as
     `str.length + endIndex`. (E.g, if
     `endIndex` is `-2`, it is treated as
     `str.length - 2` and `"test".slice(1, -2)` returns `"e"`) .

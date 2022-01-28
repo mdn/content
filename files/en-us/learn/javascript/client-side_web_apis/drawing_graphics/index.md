@@ -569,7 +569,7 @@ Now let's create our own simple animation — we'll get a character from a certa
     };
     ```
 
-6.  the rest of the code in this section goes inside `draw()`. First, add the following line, which clears the canvas to prepare for drawing each frame. Notice that we have to specify the top-left corner of the rectangle as `-(width/2), -(height/2)` because we specified the origin position as `width/2, height/2` earlier on.
+6.  The rest of the code in this section goes inside `draw()`. First, add the following line, which clears the canvas to prepare for drawing each frame. Notice that we have to specify the top-left corner of the rectangle as `-(width/2), -(height/2)` because we specified the origin position as `width/2, height/2` earlier on.
 
     ```js
     ctx.fillRect(-(width/2), -(height/2), width, height);

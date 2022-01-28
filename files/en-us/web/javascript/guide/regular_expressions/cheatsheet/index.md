@@ -12,6 +12,7 @@ tags:
 This page provides an overall cheat sheet of all the capabilities of `RegExp` syntax by aggregating the content of the articles in the `RegExp` guide. If you need more information on a specific topic, please follow the link on the corresponding heading to access the full article or head to [the guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
 
 ## Character classes
+
 [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) distinguish kinds of characters such as, for example, distinguishing between letters and digits.
 
 <table class="standard-table">
@@ -250,6 +251,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` s
 </table>
 
 ## Assertions
+
 [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions) include boundaries, which indicate the beginnings and endings of lines and words, and other patterns indicating in some way that a match is possible (including look-ahead, look-behind, and conditional expressions).
 
 ### Boundary-type assertions
@@ -417,6 +419,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` s
 </table>
 
 ## Groups and ranges
+
 [Groups and ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) indicate groups and ranges of expression characters.
 
 <table class="standard-table">
@@ -453,17 +456,18 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` s
         </p>
         <p>
           For example, <code>[abcd]</code> is the same as <code>[a-d]</code>.
-          They match the "b" in "brisket", and the "c" in "chop".
+          They match the "b" in "brisket", and the "a" or the "c" in "arch",
+          but not the "-" (hyphen) in "non-profit".
         </p>
         <p>
           For example, <code>[abcd-]</code> and <code>[-abcd]</code> match the
-          "b" in "brisket", the "c" in "chop", and the "-" (hyphen) in
-          "non-profit".
+          "b" in "brisket", the "a" or the "c" in "arch", and the "-" (hyphen)
+          in "non-profit".
         </p>
         <p>
           For example, <code>[\w-]</code> is the same as
-          <code>[A-Za-z0-9_-]</code>. They both match the "b" in "brisket", the
-          "c" in "chop", and the "n" in "non-profit".
+          <code>[A-Za-z0-9_-]</code>. They both match any of the characters in
+          "no_reply@example-server.com" except for the "@" and the ".".
         </p>
       </td>
     </tr>
@@ -601,6 +605,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` s
 </table>
 
 ## Quantifiers
+
 [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers) indicate numbers of characters or expressions to match.
 
 > **Note:** In the following, *item* refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [groups and ranges](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
@@ -730,6 +735,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` s
 </table>
 
 ## Unicode property escapes
+
 [Unicode property escapes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes) allow for matching characters based on their Unicode properties.
 
 ```js
@@ -746,7 +752,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` s
 ```
 
 - UnicodeBinaryPropertyName
-  - : The name of a [binary property](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties). E.g.: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property), [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacritic`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`White_space`](https://unicode.org/reports/tr44/#White_Space), etc. See [Unicode Data PropList.txt ](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt)for more info.
+  - : The name of a [binary property](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties). E.g.: [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property), [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacritic`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`White_space`](https://unicode.org/reports/tr44/#White_Space), etc. See [Unicode Data PropList.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt) for more info.
 - UnicodePropertyName
 
   - : The name of a [non-binary](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties) property:

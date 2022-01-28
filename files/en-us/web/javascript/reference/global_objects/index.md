@@ -35,7 +35,6 @@ These global properties return a simple value. They have no properties or method
 These global functions—functions which are called globally, rather than on an object—directly return their results to the caller.
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
-- {{Non-Standard_Inline}} {{JSxRef("Global_Objects/uneval", "uneval()")}}
 - {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
 - {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
 - {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
@@ -48,6 +47,7 @@ These global functions—functions which are called globally, rather than on an 
 
   - {{Deprecated_Inline}} {{JSxRef("Global_Objects/escape", "escape()")}}
   - {{Deprecated_Inline}} {{JSxRef("Global_Objects/unescape", "unescape()")}}
+  - {{Deprecated_Inline}} {{JSxRef("Global_Objects/uneval", "uneval()")}}
 
 ### Fundamental objects
 
@@ -65,7 +65,7 @@ Error objects are a special type of fundamental object. They include the basic 
 - {{JSxRef("Error")}}
 - {{JSxRef("AggregateError")}}
 - {{JSxRef("EvalError")}}
-- {{JSxRef("InternalError")}}
+- {{Non-Standard_Inline}} {{JSxRef("InternalError")}}
 - {{JSxRef("RangeError")}}
 - {{JSxRef("ReferenceError")}}
 - {{JSxRef("SyntaxError")}}

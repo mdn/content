@@ -29,7 +29,7 @@ This is used to represent messages in:
 The action triggered by this event is defined in a function set as the event handler for the relevant {{event("message")}} event (e.g. using an `onmessage` handler as listed above).
 
 {{AvailableInWorkers}}
-{{InheritanceDiagram(600, 80)}}
+{{InheritanceDiagram}}
 
 ## Constructor
 

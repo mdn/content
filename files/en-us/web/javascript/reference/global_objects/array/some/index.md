@@ -23,19 +23,19 @@ function. It returns true if, in the array, it finds an element for which the pr
 
 ```js
 // Arrow function
-some((element) => { ... } )
-some((element, index) => { ... } )
-some((element, index, array) => { ... } )
+some((element) => { /* ... */ } )
+some((element, index) => { /* ... */ } )
+some((element, index, array) => { /* ... */ } )
 
 // Callback function
 some(callbackFn)
 some(callbackFn, thisArg)
 
 // Inline callback function
-some(function(element) { ... })
-some(function(element, index) { ... })
-some(function(element, index, array){ ... })
-some(function(element, index, array) { ... }, thisArg)
+some(function(element) { /* ... */ })
+some(function(element, index) { /* ... */ })
+some(function(element, index, array){ /* ... */ })
+some(function(element, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters
@@ -92,47 +92,6 @@ visits that element's index. Elements that are deleted are not visited.
 
 > **Note:** Calling this method on an empty array returns
 > `false` for any condition!
-
-## Polyfill
-
-`some()` was added to the ECMA-262 standard in the 5th edition,
-and it may not be present in all implementations of the standard. You can work around
-this by inserting the following code at the beginning of your scripts, allowing use of
-`some()` in implementations which do not natively support it.
-
-This algorithm is exactly the one specified in ECMA-262, 5th edition,
-assuming {{jsxref("Object")}} and {{jsxref("TypeError")}} have their original values and
-that `fun.call` evaluates to the original value of
-{{jsxref("Function.prototype.call()")}}.
-
-```js
-// Production steps of ECMA-262, Edition 5, 15.4.4.17
-// Reference: https://es5.github.io/#x15.4.4.17
-if (!Array.prototype.some) {
-  Array.prototype.some = function(fun, thisArg) {
-    'use strict';
-
-    if (this == null) {
-      throw new TypeError('Array.prototype.some called on null or undefined');
-    }
-
-    if (typeof fun !== 'function') {
-      throw new TypeError();
-    }
-
-    var t = Object(this);
-    var len = t.length >>> 0;
-
-    for (var i = 0; i < len; i++) {
-      if (i in t && fun.call(thisArg, t[i], i, t)) {
-        return true;
-      }
-    }
-
-    return false;
-  };
-}
-```
 
 ## Examples
 

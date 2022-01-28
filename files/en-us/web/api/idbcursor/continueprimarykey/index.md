@@ -14,7 +14,7 @@ browser-compat: api.IDBCursor.continuePrimaryKey
 {{APIRef("IndexedDB")}}
 
 The **`continuePrimaryKey()`** method of the
-{{domxref("IDBCursor")}} interface advances the cursor to the to the item whose key
+{{domxref("IDBCursor")}} interface advances the cursor to the item whose key
 matches the key parameter as well as whose primary key matches the primary key
 parameter.
 

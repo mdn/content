@@ -111,10 +111,6 @@ If at all possible, you should use the appropriate semantic HTML elements to mar
 | {{SpecName("ARIA","#figure","figure")}} | {{Spec2('ARIA')}} |
 | {{SpecName("ARIA Authoring Practices 1.2","#describing_with_captions","Describing with captions")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-
-
-
-
 ## See also
 
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)

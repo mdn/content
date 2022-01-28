@@ -10,7 +10,7 @@ tags:
   - screen
 browser-compat: api.WakeLockSentinel.type
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
 The read-only **`type`** property of the
 {{domxref("WakeLockSentinel")}} interface returns a {{jsxref("String")}}

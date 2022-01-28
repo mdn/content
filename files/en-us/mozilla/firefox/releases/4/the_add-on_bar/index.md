@@ -70,8 +70,10 @@ if (firstrun) {
 
 Adding support for the add-on bar while staying compatible with Firefox 3.6 and older will require using two overlays. The [chrome.manifest](/en-US/docs/Chrome_Registration) file can specify which file is used by which Firefox version by using [manifest flags](/en-US/docs/Chrome_Registration#Manifest_flags):
 
-    overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/overlayold.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<4.0
-    overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/overlay.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0
+```
+overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/overlayold.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<4.0
+overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/overlay.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0
+```
 
 Note: the appversion has to be at least 2 digits long or it won't work with versions of Gecko before 1.8.0.13 and 1.8.1.5.
 

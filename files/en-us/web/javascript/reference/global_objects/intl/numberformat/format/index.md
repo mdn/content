@@ -18,8 +18,7 @@ The **`Intl.NumberFormat.prototype.format()`** method formats a
 number according to the locale and formatting options of this
 {{jsxref("Intl.NumberFormat")}} object.
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html",
-	"taller")}}
+{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html", "taller")}}
 
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
@@ -50,7 +49,7 @@ here for Russia:
 var options = { style: 'currency', currency: 'RUB' };
 var numberFormat = new Intl.NumberFormat('ru-RU', options);
 console.log(numberFormat.format(654321.987));
-// → "654 321,99 руб."
+// → "654 321,99 руб."
 ```
 
 ### Using format with map

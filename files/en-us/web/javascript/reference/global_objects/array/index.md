@@ -121,9 +121,12 @@ console.log(removedItems)
 **Copy an Array**
 
 ```js
-let shallowCopy = fruits.slice() // this is how to make a copy
+let shallowCopySpread = [...fruits]
 // ["Strawberry", "Mango"]
 ```
+
+This is a shallow copy made using the [spread sequence](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) operator:
+Other ways to copy an array are discussed below in [Copying an array](#copying_an_array).
 
 ### Accessing array elements
 
@@ -159,7 +162,7 @@ renderer.3d.setTexture(model, 'character.png')     // a syntax error
 renderer['3d'].setTexture(model, 'character.png')  // works properly
 ```
 
-In the `3d` example, `'3d'` *had* to be quoted (because it begins with a digit). But it's also possible to quote the array indexes as well (e.g., `years['2']` instead of `years[2]`), although it's not necessary.
+In the `3d` example, `'3d'` *had* to be quoted (because it begins with a digit). But it's also possible to quote the array indexes as well (e.g., `years['2']` instead of `years[2]`), although it's not necessary.
 
 The `2` in `years[2]` is coerced into a string by the JavaScript engine through an implicit `toString` conversion. As a result, `'2'` and `'02'` would refer to two different slots on the `years` object, and the following example could be `true`:
 
@@ -267,6 +270,53 @@ The properties and elements returned from this match are as follows:
     </tr>
   </tbody>
 </table>
+
+### Copying an array
+
+Initializing a new variable with an array does not create a copy.
+Instead the new variable contains a _reference_ to the original array.
+If you change a value in the original array, it will be reflected in the new array.
+
+```js
+let array1 = [1,2,3]
+let array1Reference = array1;
+array1[1] = 9;
+console.log(array1Reference);
+// Array [1,9,3]  - changes to array1 do affect array1Reference - it is not a copy
+```
+
+In order to create a copy of an array, you must effectively create a new variable for the array and new variables for each of the primitive array elements (initializing a variable with a primitive value creates a copy, not a reference).
+JavaScript provides the following methods to do this for you.
+
+Shallow copy using [spread sequence](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax):
+
+```js
+let shallowCopySpread = [...fruits]
+// ["Strawberry", "Mango"]
+```
+
+Shallow copy using {{jsxref("Array.slice()")}}:
+
+```js
+let shallowCopySlice = fruits.slice()
+// ["Strawberry", "Mango"]
+```
+
+Shallow copy using {{jsxref("Array.from()")}}:
+
+```js
+let shallowCopyFrom = Array.from(fruits)
+// ["Strawberry", "Mango"]
+```
+
+These all create a _shallow copy_; top-level elements containing primitive values are copied, but if the array contains nested objects or arrays, those will reference elements in the original array.
+
+If you need a _deep copy_ of all elements — that is, in which even nested arrays don’t just reference elements in the original array but instead are also copied — one approach is to use {{jsxref("JSON.stringify()")}} to convert the array to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into an array.
+
+```js
+let deepCopy = JSON.parse(JSON.stringify(fruits));
+// ["Strawberry", "Mango"]
+```
 
 ## Constructor
 
@@ -441,16 +491,16 @@ Results in
 
 ```plain
 // The first column is the index
-0	1	0
-1	2	2
-2	4	8
-3	8	18
-4	16	32
-5	32	50
-6	64	72
-7	128	98
-8	256	128
-9	512	162
+0  1    0
+1  2    2
+2  4    8
+3  8    18
+4  16   32
+5  32   50
+6  64   72
+7  128  98
+8  256  128
+9  512  162
 ```
 
 ## Specifications

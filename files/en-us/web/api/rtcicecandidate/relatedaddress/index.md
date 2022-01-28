@@ -54,7 +54,9 @@ addresses. `relatedAddress` can also be used by Quality-of-Service (QoS) mechani
 
 Here's an [SDP](/en-US/docs/Web/API/WebRTC_API/Protocols#sdp) attribute line (a-line) describing an ICE candidate discovered by the STUN server:
 
-    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 6502 typ srflx raddr 192.168.2.77 rport 32768 generation 0
+```
+a=candidate:4234997325 1 udp 2043278322 192.168.0.56 6502 typ srflx raddr 192.168.2.77 rport 32768 generation 0
+```
 
 The remote address, `relatedAddress`, is the dotted quad (for IPv4) or
 colon-delineated 64-bit address (for IPv6) immediately following the text `"raddr"`, or `"192.168.2.77"`.

@@ -113,7 +113,7 @@ Our above example has a single field called `my_field_name`, of type `models.Cha
 - `max_length=20` — States that the maximum length of a value in this field is 20 characters.
 - `help_text='Enter field documentation'` — provides a text label to display to help users know what value to provide when this value is to be entered by a user via an HTML form.
 
-The field name is used to refer to it in queries and templates. Fields also have a label specified as an argument (`verbose_name`), the default value of which is `None`, meaning replacing any underscores in the field name with a space (for example `my_field_name` would have a default label of _my field name_). Note that when the label is used as a form label through Django frame, the first letter of the label is capitalised (for example `my_field_name` would be _My field name_).
+The field name is used to refer to it in queries and templates. Fields also have a label specified as an argument (`verbose_name`), the default value of which is `None`, meaning replacing any underscores in the field name with a space (for example `my_field_name` would have a default label of _my field name_). Note that when the label is used as a form label through Django frame, the first letter of the label is capitalized (for example `my_field_name` would be _My field name_).
 
 The order that fields are declared will affect their default order if a model is rendered in a form (e.g. in the Admin site), though this may be overridden.
 

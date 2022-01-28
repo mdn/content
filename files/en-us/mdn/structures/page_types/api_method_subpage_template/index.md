@@ -20,7 +20,7 @@ browser-compat: path.to.feature.NameOfTheMethod
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular method.
 >
-> ```
+> ```md
 > ---
 > title: NameOfTheParentInterface.NameOfTheMethod()
 > slug: Web/API/NameOfTheParentInterface/NameOfTheMethod
@@ -35,6 +35,7 @@ browser-compat: path.to.feature.NameOfTheMethod
 > browser-compat: path.to.feature.NameOfTheMethod
 > ---
 > ```
+>
 > - **title**
 >   - : Title heading displayed at top of page.
 >       Format as _NameOfTheParentInterface_**.**_NameOfTheMethod_**()**.
@@ -44,7 +45,7 @@ browser-compat: path.to.feature.NameOfTheMethod
 >       This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheMethod`.
 >       Note that the name of the method in the slug omits the parenthesis (it ends in `NameOfTheMethod` not `NameOfTheMethod()`).
 > - **tags**
->   - : Always include the following tags: **API**, **Reference**, **Method**,  the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**), the name of the method (e.g. **count()**).
+>   - : Always include the following tags: **API**, **Reference**, **Method**,  the _name of the API_ (e.g. **WebVR**), the name of the _parent interface_ (e.g. **IDBIndex**), the name of the method (e.g. **count()**).
 >
 >       Include the following tags as appropriate:
 >       - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.
@@ -64,6 +65,7 @@ browser-compat: path.to.feature.NameOfTheMethod
 >
 > A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
 > You should update or delete them according to the advice below:
+>
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)).
 >   If the technology you are documenting is not experimental, you should remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.

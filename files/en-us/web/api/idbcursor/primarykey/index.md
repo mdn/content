@@ -14,8 +14,8 @@ browser-compat: api.IDBCursor.primaryKey
 ---
 {{APIRef("IDBCursor")}}
 
-The **`primaryKey`** read-only property of the
-{{domxref("IDBCursor")}} interface returns the cursor's current effective key. If the
+The **`primaryKey`** read-only property of the
+{{domxref("IDBCursor")}} interface returns the cursor's current effective key. If the
 cursor is currently being iterated or has iterated outside its range, this is set to
 undefined. The cursor's primary key can be any data type.
 
@@ -24,12 +24,12 @@ undefined. The cursor's primary key can be any data type.
 ## Syntax
 
 ```js
-var value = cursor.primaryKey;
+var value = cursor.primaryKey;
 ```
 
 ### Value
 
-A value of any data type.
+A value of any data type.
 
 ## Example
 
@@ -38,12 +38,14 @@ cursor to iterate through all the records in the object store. Within each itera
 log the primary key of the cursor to the console, something like this (its the album
 title in each case, which is our primarykey):
 
-    Hemispheres
+```
+Hemispheres
+```
 
 The cursor does not require us to select the data based
 on a key; we can just grab all of it. Also note that in each iteration of the loop,
-you can grab data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor
-example](https://github.com/mdn/indexeddb-examples/tree/master/idbcursor) (>[view example live](https://mdn.github.io/indexeddb-examples/idbcursor/).)
+you can grab data from the current record under the cursor object using `cursor.value.foo`. For a complete working example, see our [IDBCursor
+example](https://github.com/mdn/indexeddb-examples/tree/master/idbcursor) (>[view example live](https://mdn.github.io/indexeddb-examples/idbcursor/).)
 
 ```js
 function displayData() {

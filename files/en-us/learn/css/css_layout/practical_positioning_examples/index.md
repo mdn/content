@@ -206,29 +206,31 @@ The second rule we'll add here makes it so that a panel with a `class` of `activ
 
 The final step to getting this feature working is to add some JavaScript. Put the following block of code, exactly as written in between your opening and closing {{htmlelement("script")}} tags (you'll find these below the HTML content):
 
-    var tabs = document.querySelectorAll('.info-box li a');
-    var panels = document.querySelectorAll('.info-box article');
+```js
+var tabs = document.querySelectorAll('.info-box li a');
+var panels = document.querySelectorAll('.info-box article');
 
+for(i = 0; i < tabs.length; i++) {
+  var tab = tabs[i];
+  setTabHandler(tab, i);
+}
+
+function setTabHandler(tab, tabPos) {
+  tab.onclick = function() {
     for(i = 0; i < tabs.length; i++) {
-      var tab = tabs[i];
-      setTabHandler(tab, i);
+      tabs[i].className = '';
     }
 
-    function setTabHandler(tab, tabPos) {
-      tab.onclick = function() {
-        for(i = 0; i < tabs.length; i++) {
-          tabs[i].className = '';
-        }
+    tab.className = 'active';
 
-        tab.className = 'active';
-
-        for(i = 0; i < panels.length; i++) {
-          panels[i].className = '';
-        }
-
-        panels[tabPos].className = 'active-panel';
-      }
+    for(i = 0; i < panels.length; i++) {
+      panels[i].className = '';
     }
+
+    panels[tabPos].className = 'active-panel';
+  }
+}
+```
 
 This code does the following:
 
@@ -410,7 +412,7 @@ So there you have it — a rather clever JavaScript-free way to create a togglin
 
 ## Summary
 
-So that rounds off our look at positioning — by now, you should have an idea of how the basic mechanics work, as well as understanding how to start applying these to build some interesting UI features. Don't worry if you didn't get this all immediately — positioning is a fairly advanced topic, and you can always work through the articles again to aid your understanding. The next subject we'll turn to is Flexbox.
+So that rounds off our look at positioning — by now, you should have an idea of how the basic mechanics work, as well as understanding how to start applying these to build some interesting UI features. Don't worry if you didn't get this all immediately — positioning is a fairly advanced topic, and you can always work through the articles again to aid your understanding.
 
 ## In this module
 

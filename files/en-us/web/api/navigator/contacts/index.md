@@ -11,7 +11,7 @@ tags:
   - contact picker
 browser-compat: api.Navigator.contacts
 ---
-{{draft}}{{DefaultAPISidebar("Contact Picker API")}}
+{{DefaultAPISidebar("Contact Picker API")}}
 
 The **`contacts`** read-only property of the
 {{domxref("Navigator")}} interface returns a {{domxref('ContactsManager')}} interface

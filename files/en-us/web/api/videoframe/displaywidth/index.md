@@ -32,5 +32,3 @@ console.log(VideoFrame.displayWidth);
 ## Browser compatibility
 
 {{Compat}}
-
-

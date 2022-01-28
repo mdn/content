@@ -22,31 +22,31 @@ collection.remove(index);
 
 ### Parameters
 
-- `index` is a long for the index of the {{ domxref("HTMLOptionElement") }}
+- `index` is a zero-based long for the index of the {{ domxref("HTMLOptionElement") }}
   to remove from the collection. If the index is not found the method has no effect.
 
 ## Example
 
-```js
-var sel = document.getElementById("existingList");
-sel.remove(1);
-
-/*
-  Takes the existing following select object:
-
-  <select id="existingList" name="existingList">
+```html
+<select id="existingList" name="existingList">
     <option value="1">Option: Value 1</option>
     <option value="2">Option: Value 2</option>
     <option value="3">Option: Value 3</option>
-  </select>
+</select>
+```
 
-  And changes it to:
+```js
+let sel = document.getElementById("existingList");
+sel.remove(1);
+```
 
-  <select id="existingList" name="existingList">
+HTML is now:
+
+```html
+<select id="existingList" name="existingList">
     <option value="1">Option: Value 1</option>
     <option value="3">Option: Value 3</option>
-  </select>
-*/
+</select>
 ```
 
 ## Specifications

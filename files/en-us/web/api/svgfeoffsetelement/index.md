@@ -13,7 +13,7 @@ browser-compat: api.SVGFEOffsetElement
 
 The **`SVGFEOffsetElement`** interface corresponds to the {{SVGElement("feOffset")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

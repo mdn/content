@@ -53,25 +53,27 @@ When the IFrame has loaded, we register an {{domxref("MessagePort.onmessage","on
 
 When a message is received back from the IFrame, the `onMessage` function outputs the message to a paragraph.
 
-    var channel = new MessageChannel();
-    var output = document.querySelector('.output');
-    var iframe = document.querySelector('iframe');
+```js
+var channel = new MessageChannel();
+var output = document.querySelector('.output');
+var iframe = document.querySelector('iframe');
 
-    // Wait for the iframe to load
-    iframe.addEventListener("load", onLoad);
+// Wait for the iframe to load
+iframe.addEventListener("load", onLoad);
 
-    function onLoad() {
-      // Listen for messages on port1
-      channel.port1.onmessage = onMessage;
+function onLoad() {
+  // Listen for messages on port1
+  channel.port1.onmessage = onMessage;
 
-      // Transfer port2 to the iframe
-      iframe.contentWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
-    }
+  // Transfer port2 to the iframe
+  iframe.contentWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+}
 
-    // Handle messages received on port1
-    function onMessage(e) {
-      output.innerHTML = e.data;
-    }
+// Handle messages received on port1
+function onMessage(e) {
+  output.innerHTML = e.data;
+}
+```
 
 For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on Github ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 

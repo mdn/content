@@ -70,27 +70,27 @@ It is also important to test your authored ARIA with actual assistive technology
 - [Improving form accessibility](/en-US/docs/Web/Accessibility/ARIA/forms)
   - : ARIA is not just for dynamic content! Learn how to improve accessibility of HTML forms using additional ARIA attributes.
 
-## ARIA for Scripted Widgets
+## ARIA for scripted widgets
 
 - [Writing keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
   - : Built-in elements like {{HTMLElement("input")}}, {{HTMLElement("button")}} etc have built-in keyboard accessibility. If you 'fake' these with {{HTMLElement("div")}}s and ARIA, you must ensure your widgets are keyboard accessible.
 - [Live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
   - : Live regions provide suggestions to screen readers about how to handle changes to the contents of a page.
-- [Using ARIA Live Regions to announce content changes](https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)
+- [Using ARIA live regions to announce content changes](https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)
   - : A quick summary of live regions, by the makers of JAWS screen reader software. Live regions are also supported by NVDA with Firefox, and VoiceOver with Safari.
 
 ## References
 
-- [ARIA Roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
+- [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
   - : Reference pages covering all the WAI-ARIA roles discussed on MDN.
-- [ARIA States and Properties](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+- [ARIA states and properties](/en-US/docs/Web/Accessibility/ARIA/Attributes)
   - : Reference pages covering all the WAI-ARIA states and properties discussed on MDN.
 
-## Standardization Efforts
+## Standardization efforts
 
-- [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria-1.1/)
+- [WAI-ARIA specification](https://www.w3.org/TR/wai-aria-1.1/)
   - : The W3C specification itself.
-- [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/)
+- [WAI-ARIA authoring practices](https://www.w3.org/TR/wai-aria-practices-1.1/)
   - : The official best practices documents how best to ARIA-ify common widgets and interactions. An excellent resource.
 
 ## Videos
@@ -99,7 +99,7 @@ Following talks are a great way to understand ARIA:
 
 [ARIA, Accessibility APIs and coding like you give a damn! – Léonie Watson](https://www.youtube.com/watch?v=qdB8SRhqvFc)
 
-## Filing Bugs
+## Filing bugs
 
 [File ARIA bugs on browsers, screen readers, and JavaScript libraries.](/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs)
 

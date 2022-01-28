@@ -358,7 +358,7 @@ This renders as follows:
 
 {{EmbedLiveSample("Full_example", "100%", 420)}}
 
-See [Validation-related attributes](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation#validation-related_attributes) for a complete list of attributes that can be used to constrain input values and the input types that support them.
+See [Validation-related attributes](/en-US/docs/Web/Guide/HTML/Constraint_validation#validation-related_attributes) for a complete list of attributes that can be used to constrain input values and the input types that support them.
 
 > **Note:** You can find this example live on GitHub as [full-example.html](https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html) (see also the [source code](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/full-example.html).)
 
@@ -430,6 +430,7 @@ const email = document.getElementById("mail");
 email.addEventListener("input", function (event) {
   if (email.validity.typeMismatch) {
     email.setCustomValidity("I am expecting an e-mail address!");
+    email.reportValidity();
   } else {
     email.setCustomValidity("");
   }
@@ -438,7 +439,7 @@ email.addEventListener("input", function (event) {
 
 Here we store a reference to the email input, then add an event listener to it that runs the contained code each time the value inside the input is changed.
 
-Inside the contained code, we check whether the email input's `validity.typeMismatch` property returns `true`, meaning that the contained value doesn't match the pattern for a well-formed email address. If so, we call the {{domxref("HTMLInputElement.setCustomValidity()","setCustomValidity()")}} method with a custom message. This renders the input invalid, so that when you try to submit the form, submission fails and the custom error message is displayed.
+Inside the contained code, we check whether the email input's `validity.typeMismatch` property returns `true`, meaning that the contained value doesn't match the pattern for a well-formed email address. If so, we call the {{domxref("HTMLInputElement.setCustomValidity()","setCustomValidity()")}} method with a custom message which is displayed by calling {{domxref("HTMLInputElement#methods","reportValidity()")}}. This renders the input invalid, so that when you try to submit the form, submission fails and the custom error message is displayed.
 
 If the `validity.typeMismatch` property returns `false`, we call the `setCustomValidity()` method an empty string. This renders the input valid, so the form will submit.
 
@@ -601,7 +602,7 @@ Here is the live result:
 
 The constraint validation API gives you a powerful tool to handle form validation, letting you have enormous control over the user interface above and beyond what you can do with HTML and CSS alone.
 
-> **Note:** For further information, see our [Constraint validation guide](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation), and the [Constraint Validation API](/en-US/docs/Web/API/Constraint_validation) reference.
+> **Note:** For further information, see our [Constraint validation guide](/en-US/docs/Web/Guide/HTML/Constraint_validation), and the [Constraint Validation API](/en-US/docs/Web/API/Constraint_validation) reference.
 
 ### Validating forms without a built-in API
 

@@ -3,7 +3,6 @@ title: SpeechRecognition.onresult
 slug: Web/API/SpeechRecognition/onresult
 tags:
   - API
-  - Experimental
   - Property
   - Reference
   - SpeechRecognition
@@ -13,13 +12,12 @@ tags:
   - speech
 browser-compat: api.SpeechRecognition.onresult
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
 The **`onresult`** property of the
 {{domxref("SpeechRecognition")}} interface represents an event handler that will run
 when the speech recognition service returns a result — a word or phrase has been
-positively recognized and this has been communicated back to the app (when the [`result`
-event](/en-US/docs/Web/API/SpeechRecognition/result_event) fires.)
+positively recognized and this has been communicated back to the app (when the [`result` event](/en-US/docs/Web/API/SpeechRecognition/result_event) fires.)
 
 ## Syntax
 

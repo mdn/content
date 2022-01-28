@@ -1,7 +1,7 @@
 ---
 title: 'aria-haspopup'
 slug: Web/Accessibility/ARIA/Attributes/aria-haspopup
-tags: 
+tags:
   - Accessibility
   - ARIA
   - ARIA attribute
@@ -34,19 +34,19 @@ When creating a [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/Menubar_rol
 
 - `false` (default)
   - : The element does not have a popup.
-- `true`		
+- `true`
   - : The popup is a menu.
-- `menu`		
+- `menu`
   - : The popup is a menu.
-- `listbox`		
+- `listbox`
   - : The popup is a listbox.
-- `tree`		
+- `tree`
   - : The popup is a tree.
-- `grid`		
+- `grid`
   - : The popup is a grid.
-- `dialog`		
+- `dialog`
   - : The popup is a dialog.
-  
+
 ## ARIAMixin API
 
 - {{domxref("Element.ariaHasPopup")}}
@@ -80,7 +80,7 @@ Inherited into roles:
 ## Specifications
 
 | Specification | Status |
-| ------------- | ------  |
+| ------------- | ------ |
 | {{SpecName("ARIA","#aria-haspopup","ARIA: aria-haspopup Attribute")}}  | {{Spec2('ARIA')}} |
 
 ## See Also

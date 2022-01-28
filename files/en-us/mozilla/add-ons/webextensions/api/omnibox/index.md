@@ -12,11 +12,11 @@ browser-compat: webextensions.api.omnibox
 ---
 {{AddonSidebar}}
 
-Enables extensions to implement customised behavior when the user types into the browser's address bar.
+Enables extensions to implement customized behavior when the user types into the browser's address bar.
 
 When the user focuses the browser's address bar and starts typing, the browser displays a drop-down list containing suggested pages, based on what they typed. This gives the user a quick way to access, for example, pages from their history or bookmarks.
 
-The omnibox API provides the extension a way to customise the suggestions displayed in the drop-down, when the user enters a keyword defined by the extension. It works as follows:
+The omnibox API provides the extension a way to customize the suggestions displayed in the drop-down, when the user enters a keyword defined by the extension. It works as follows:
 
 1.  First, the extension must include an "[omnibox](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)" key in its [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, which defines a keyword.
 2.  When the user focuses the address bar and types the keyword, followed by a space, the extension will get an {{WebExtAPIRef("omnibox.onInputStarted")}} event.

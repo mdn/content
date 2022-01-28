@@ -252,7 +252,9 @@ console.log ('All done! ' + image.src + 'displayed.');
 
 You should now get an error in your console instead of the third message:
 
-    TypeError: image is undefined; can't access its "src" property
+```
+TypeError: image is undefined; can't access its "src" property
+```
 
 This is because at the time the browser tries to run the third `console.log()` statement, the `fetch()` block has not finished running so the `image` variable has not been given a value.
 

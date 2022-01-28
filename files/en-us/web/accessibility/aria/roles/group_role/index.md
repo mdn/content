@@ -25,7 +25,6 @@ Authors MAY nest group elements. If a section is significant enough to warrant i
 | {{SpecName("ARIA","#group","ARIA: group role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_group_role","group role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-
 ## See Also
 
 - The {{HTMLElement('fieldset')}} Element

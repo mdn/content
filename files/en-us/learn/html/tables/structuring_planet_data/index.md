@@ -1,5 +1,5 @@
 ---
-title: 'Assessment: Structuring planet data'
+title: Structuring planet data
 slug: Learn/HTML/Tables/Structuring_planet_data
 tags:
   - Assessment

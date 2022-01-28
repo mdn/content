@@ -12,7 +12,7 @@ A browser action is a button you can add to the browser toolbar. Users can click
 
 There are two ways to specify a browser action: with a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), or without a popup.
 
-If you don't specify a popup, then when the user clicks the button an event is dispatched to the extension, which you can listen for using [`browserAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked "Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."):
+If you don't specify a popup, then when the user clicks the button an event is dispatched to the extension, which you can listen for using [`browserAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked):
 
 ```js
 browser.browserAction.onClicked.addListener(handleClick);

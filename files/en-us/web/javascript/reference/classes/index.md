@@ -48,7 +48,6 @@ class Rectangle {}
 
 This occurs because while the class is {{Glossary("Hoisting", "hoisted")}} its values are not initialized.
 
-
 ### Class expressions
 
 A **class expression** is another way to define a class.
@@ -97,13 +96,11 @@ A {{jsxref("SyntaxError")}} will be thrown if the class contains more than one o
 
 A constructor can use the `super` keyword to call the constructor of the super class.
 
-
 ### Static initialization blocks
 
 [Class `static` initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks) allow flexible initialization of [class `static` properties](#static_methods_and_properties) including the evaluation of statements during initialization, and granting access to private scope.
 
 Multiple static blocks can be declared, and these can be interleaved with the declaration of static properties and methods (all static items are evaluated in declaration order).
-
 
 ### Prototype methods
 

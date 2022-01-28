@@ -29,7 +29,7 @@ hsl(235 100% 50% / .5); /* #0015ff with 50% opacity, using CSS Colors 4 space-se
 
 ### Values
 
-- Functional notation: `hsl[a](H, S, L[, A])`
+- Functional notation: `hsl(H, S, L[, A])`
 
   - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in {{SpecName("CSS4 Colors","#the-hsl-notation")}}. When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in {{SpecName("CSS3 Colors", "#hsl-color")}}. By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
 
@@ -37,7 +37,7 @@ hsl(235 100% 50% / .5); /* #0015ff with 50% opacity, using CSS Colors 4 space-se
 
     `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 
-- Functional notation: `hsl[a](H S L[ / A])`
+- Functional notation: `hsl(H S L[ / A])`
   - : CSS Colors Level 4 adds support for space-separated values in the functional notation.
 
 ## Browser compatibility

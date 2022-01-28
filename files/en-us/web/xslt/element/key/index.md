@@ -13,8 +13,10 @@ The `<xsl:key>` element declares a named key which can be used elsewhere in the 
 
 ### Syntax
 
-    <xsl:key name=NAME match=EXPRESSION
-    	use=EXPRESSION />
+```xml
+<xsl:key name=NAME match=EXPRESSION
+  use=EXPRESSION />
+```
 
 ### Required Attributes
 

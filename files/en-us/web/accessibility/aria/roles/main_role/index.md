@@ -30,9 +30,6 @@ There should only be one `main` landmark role per document.
 
 The {{HTMLElement('main')}} element has a role of `main`. Developers should use semantic HTML -- in this case  {{HTMLElement('main')}} -- over using ARIA.
 
-
-
-
 ### Associated ARIA roles, states, and properties
 
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
@@ -42,7 +39,6 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should us
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or `aria-labeledby`
 
   - : Providing an accessible name can with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible header is present, otherwise with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute), can be helpful for orienting assistive technology users, especially in single-page applications where main content changes happen without generating a page load event.
-
 
 ## Example
 
@@ -121,15 +117,12 @@ Which is the equivalent of:
 
 - [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
 
-
 ## Specifications
 
 | Specification                                                                                                    | Status                                           |
 | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#main","ARIA Navigation Role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_main","Navigation Landmark Role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
-
 
 ## See also
 
@@ -138,8 +131,6 @@ Which is the equivalent of:
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [The main element | HTML5 Doctor](https://html5doctor.com/the-main-element/)
-
-
 
 <section id="Quick_links">
 

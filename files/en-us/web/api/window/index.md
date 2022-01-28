@@ -74,7 +74,7 @@ Note that properties which are objects (e.g.,. for overriding the prototype of b
 - {{domxref("Window.DOMPointReadOnly")}} {{readOnlyInline}} {{experimental_inline}}
   - : Returns a reference to a {{domxref("DOMPointReadOnly")}} object, which represents a 2D or 3D point in a coordinate system.
 - {{domxref("Window.DOMQuad")}} {{readOnlyInline}} {{experimental_inline}}
-  - : Returns a reference to a {{domxref("DOMQuad")}} object, which provides represents a quadrilaterial object, that is one having four corners and four sides.
+  - : Returns a reference to a {{domxref("DOMQuad")}} object, which provides represents a quadrilateral object, that is one having four corners and four sides.
 - {{domxref("Window.DOMRect")}} {{readOnlyInline}} {{experimental_inline}}
   - : Returns a reference to a {{domxref("DOMRect")}} object, which represents a rectangle.
 - {{domxref("Window.DOMRectReadOnly")}} {{readOnlyInline}} {{experimental_inline}}
@@ -302,7 +302,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
 
-
 ### Deprecated methods
 
 - {{domxref("Window.back()")}} {{Non-standard_inline}} {{deprecated_inline}}
@@ -336,7 +335,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when the orientation is changed (For mobile devices)
 - {{domxref("Window.ondeviceorientationabsolute")}} {{non-standard_inline}}
   - : An event handler property for any device orientation changes.
-- `Window.ondeviceproximity` {{deprecated_inline}}
+- {{domxref("Window.ondeviceproximity")}} {{deprecated_inline}}
   - : An event handler property for device proximity event (see {{domxref("DeviceProximityEvent")}})
 - {{domxref("Window.ongamepadconnected")}}
   - : Represents an event handler that will run when a gamepad is connected (when the {{event('gamepadconnected')}} event fires).
@@ -344,7 +343,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).
 - {{domxref("WindowEventHandlers.onrejectionhandled")}}
   - : An event handler for handled {{jsxref("Promise")}} rejection events.
-- `Window.onuserproximity` {{deprecated_inline}}
+- {{domxref("Window.onuserproximity")}} {{deprecated_inline}}
   - : An event handler property for user proximity events (see {{domxref("UserProximityEvent")}}).
 - {{domxref("Window.onvrdisplayconnect")}} {{deprecated_inline}}
   - : Represents an event handler that will run when a compatible VR device has been connected to the computer (when the {{event("vrdisplayconnected")}} event fires).
@@ -406,7 +405,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onmousedown")}}
   - : Called when ANY mouse button is pressed.
 - {{domxref("GlobalEventHandlers.onmousemove")}}
-  - : Called continously when the mouse is moved inside the window.
+  - : Called continuously when the mouse is moved inside the window.
 - {{domxref("GlobalEventHandlers.onmouseout")}}
   - : Called when the pointer leaves the window.
 - {{domxref("GlobalEventHandlers.onmouseover")}}

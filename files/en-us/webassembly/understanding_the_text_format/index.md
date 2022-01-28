@@ -406,7 +406,7 @@ In JavaScript, the equivalent calls to create such a table instance would look s
 ```js
 function() {
   // table section
-  var tbl = new WebAssembly.Table({initial:2, element:"funcref"});
+  var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
 
   // function sections:
   var f1 = ... /* some imported WebAssembly function */
@@ -542,7 +542,7 @@ After converting to assembly, we then use `shared0.wasm` and `shared1.wasm` in J
 var importObj = {
   js: {
     memory : new WebAssembly.Memory({ initial: 1 }),
-    table : new WebAssembly.Table({ initial: 1, element: "funcref" })
+    table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })
   }
 };
 

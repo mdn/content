@@ -23,7 +23,7 @@ The aim of this skill test is to assess whether you've understood our [JavaScrip
 In this task you are provided with an object literal, and your tasks are to
 
 - Store the value of the `name` property inside the `catName` variable, using bracket notation.
-- Run the `greeting()` method using dot notation (it will log the greeting to the browser DevTools' console).
+- Run the `greeting()` method using dot notation (it will log the greeting to the browser's console).
 - Update the `color` property value to `black`.
 
 Try updating the live code below to recreate the finished example:
@@ -32,7 +32,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/main/javascript/oojs/tasks/object-basics/object-basics1-download.html) to work in your own editor or in an online editor.
 
 ## Object basics 2
 
@@ -59,17 +59,15 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics2-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/main/javascript/oojs/tasks/object-basics/object-basics2-download.html) to work in your own editor or in an online editor.
 
 ## Object basics 3
 
-Finally for our object basics assessment, we want you to return to the `cat` object literal from Task #1. We want you to rewrite the `greeting()` method so that it logs `"Hello, said Bertie the Cymric."` to the browser DevTools' console, but in a way that will work across _any_ cat object of the same structure, regardless of its name or breed.
+In this task, we want you to return to the `cat` object literal from Task 1. We want you to rewrite the `greeting()` method so that it logs `"Hello, said Bertie the Cymric."` to the browser's console, but in a way that will work across _any_ cat object of the same structure, regardless of its name or breed.
 
 When you are done, write your own object called `cat2`, which has the same structure, exactly the same `greeting()` method, but a different `name`, `breed`, and `color`.
 
 Call both `greeting()` methods to check that they log appropriate greetings to the console.
-
-The code is not very [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (each bit of code should only be defined once) — you've got the same method defined twice, for example. Describe how you'd make it more DRY? If you are not sure, then don't worry — this is what we'll be looking at in future articles in the series!
 
 Try updating the live code below to recreate the finished example:
 
@@ -77,7 +75,21 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics3-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/main/javascript/oojs/tasks/object-basics/object-basics3-download.html) to work in your own editor or in an online editor.
+
+## Object basics 4
+
+In the code you wrote for Task 3, the `greeting()` method is defined twice, once for each cat. This isn't ideal (specifically, it violates a principle in programming sometimes called [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) or "Don't Repeat Yourself").
+
+In this task we want you to improve the code so `greeting()` is only defined once, and every `cat` instance gets its own `greeting()` method. Hint: you should use a JavaScript constructor to create `cat` instances.
+
+Try updating the live code below to recreate the finished example:
+
+{{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics4.html", '100%', 400)}}
+
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/main/javascript/oojs/tasks/object-basics/object-basics4-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

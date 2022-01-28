@@ -34,11 +34,13 @@ None
 
 ## Example
 
-    function goForward() {
-      if (canGoForward) {
-        window.forward();
-      }
-    }
+```js
+function goForward() {
+  if (canGoForward) {
+    window.forward();
+  }
+}
+```
 
 ## Specifications
 

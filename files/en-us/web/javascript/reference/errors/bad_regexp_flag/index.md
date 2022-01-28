@@ -40,7 +40,6 @@ The valid (allowed) flags are listed in [Regular expressions > Advanced searchin
 | `y`  | Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp.sticky", "sticky")}} |
 | `d`  | Indices. Generate indices for substring matches. See {{jsxref("RegExp.hasIndices", "hasIndices")}}                                      |
 
-
 ## Examples
 
 In a regular expression literal, which consists of a pattern enclosed between slashes, the flags are defined after the second slash.
@@ -73,7 +72,6 @@ Below is an example showing the use of some invalid flags `b`, `a` and `r`:
 // SyntaxError: invalid regular expression flag "b"
 ```
 
-
 The code below is incorrect, because `W`, `e` and `b` are not valid flags.
 
 ```js example-bad
@@ -83,6 +81,7 @@ let obj = {
 
 // SyntaxError: invalid regular expression flag "W"
 ```
+
 An expression containing two slashes is interpreted as a regular expression literal.
 Most likely the intent was to create a string literal, using single or double quotes as shown below:
 
@@ -91,7 +90,6 @@ let obj = {
   url: '/docs/Web'
 };
 ```
-
 
 ## See also
 

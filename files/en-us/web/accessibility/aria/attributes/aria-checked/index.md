@@ -22,6 +22,7 @@ The `mixed` value is not supported on [`radio`](/en-US/docs/Web/Accessibility/AR
 <span role="checkbox" id="checkBoxInput" aria-checked="false" tabindex="0" aria-labelledby="chk15-label"></span> 
 <label id="chk15-label">Subscribe to the newsletter</label>
 ```
+
 > **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="checkbox"` as this element has built in semantics and does not require ARIA attributes.
 
 The `tabindex` attribute is required to enable focus. JavaScript is required to toggle the `aria-checked` state. And, if this checkbox is part of a submittable form, more JavaScript is required to set a name and a value.
@@ -59,7 +60,10 @@ Used in roles:
 
 ## ARIAMixin API
 
-The {{domxref("ariaChecked")}} property of the {{domxref("ARIAMixin")}} interface,  reflects the value of the `aria-checked` attribute, which indicates the current "checked" state of checkboxes, radio buttons, and other widgets that have a checked state.
+- {{domxref("Element.ariaChecked")}}
+  - : The  [`ariaChecked`](/en-US/docs/Web/API/Element/ariaChecked) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-checked` attribute.
+- {{domxref("ElementInternals.ariaChecked")}}
+  - : The  [`ariaChecked`](/en-US/docs/Web/API/ElementInternals/ariaChecked) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-checked` attribute.
 
 ```js
 myHTMLElement.ariaChecked = true;
@@ -77,7 +81,7 @@ myHTMLElement.ariaChecked = true;
 - [`<input type="checkbox">`](en-US/docs/Web/HTML/Element/Input/checkbox)
 - [`<input type="radio">`](en-US/docs/Web/HTML/Element/Input/radio)
 - [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
-- [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected).
+- [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
 - [Two state checkbox example](https://www.w3.org/TR/wai-aria-practices-1.2/examples/checkbox/checkbox-1/checkbox-1.html) - w3.org
 - [Tri-state checkbox example](https://www.w3.org/TR/wai-aria-practices-1.2/examples/checkbox/checkbox-2/checkbox-2.html) - w3.org
   
@@ -88,4 +92,3 @@ myHTMLElement.ariaChecked = true;
     {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
 
 </section>
-

@@ -353,17 +353,19 @@ The `<audio>` element doesn't directly support WebVTT. You will have to find a l
 
 In addition to spoken dialog, subtitles and transcripts should also identify music and sound effects that communicate important information. This includes emotion and tone. For example, in the WebVTT below, note the use of square brackets to provide tone and emotional insight to the viewer; this can help establish the mood otherwise provided using music, nonverbal sounds and crucial sound effects, and so forth.
 
-    1
-    00:00:00 --> 00:00:45
-    [Energetic techno music]
+```
+1
+00:00:00 --> 00:00:45
+[Energetic techno music]
 
-    2
-    00:00:46 --> 00:00:51
-    Welcome to the Time Keeper's podcast! In this episode we're discussing which Swisswatch is a wrist switchwatch?
+2
+00:00:46 --> 00:00:51
+Welcome to the Time Keeper's podcast! In this episode we're discussing which Swisswatch is a wrist switchwatch?
 
-    16
-    00:00:52 --> 00:01:02
-    [Laughing] Sorry! I mean, which wristwatch is a Swiss wristwatch?
+16
+00:00:52 --> 00:01:02
+[Laughing] Sorry! I mean, which wristwatch is a Swiss wristwatch?
+```
 
 Also it's a good practice to provide some content (such as the direct download link) as a fallback for viewers who use a browser in which the `<audio>` element is not supported:
 

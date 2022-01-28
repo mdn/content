@@ -12,7 +12,7 @@ tags:
   - Reference
 browser-compat: api.CSSRotate
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSRotate`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the rotate value of the individual {{CSSXRef('transform')}} property in CSS. It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.
 

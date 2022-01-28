@@ -105,7 +105,7 @@ var nodeIterator = document.createNodeIterator(
 // Show the content of every non-empty text node that is a child of root
 var node;
 
-while ((node = iterator.nextNode())) {
+while ((node = nodeIterator.nextNode())) {
   alert(node.data);
 }
 ```

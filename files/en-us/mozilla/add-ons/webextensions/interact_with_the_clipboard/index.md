@@ -102,7 +102,7 @@ browser.alarms.create({
 });
 
 browser.alarms.onAlarm.addListener(copy);
-````
+```
 
 Depending on the browser, this may not work. On Firefox, it will not work, and you'll see a message like this in your console:
 

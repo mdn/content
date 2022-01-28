@@ -27,8 +27,7 @@ embedArrayObj = document.plugins
 
 ### Value
 
-An {{domxref("HTMLCollection")}}, or `null` if there are no embeds in the
-document.
+An {{domxref("HTMLCollection")}}.
 
 ## Specifications
 

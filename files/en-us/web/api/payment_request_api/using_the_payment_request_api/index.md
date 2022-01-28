@@ -24,7 +24,7 @@ A payment request always starts with the creation of a new {{domxref("PaymentReq
 
 - `methodData` — an object containing information concerning the payment provider, such as what payment methods are supported, etc.
 - `details` — an object containing information concerning the specific payment, such as the total payment amount, tax, shipping cost, etc.
-- `options` (optional) — an object containing addtional options related to the payment.
+- `options` (optional) — an object containing additional options related to the payment.
 
 So for example, you could create a new `PaymentRequest` instance like so:
 

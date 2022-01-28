@@ -52,11 +52,8 @@ Except when using the `not` or `only` logical operators, the media type is optio
   - : Intended for paged material and documents viewed on a screen in print preview mode. (Please see [paged media](/en-US/docs/Web/CSS/Paged_Media) for information about formatting issues that are specific to these formats.)
 - `screen`
   - : Intended primarily for screens.
-- `speech`
-  - : Intended for speech synthesizers.
 
 > **Note:** CSS2.1 and [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) defined several additional media types (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`), but they were deprecated in [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) and shouldn't be used.
-> The `aural` type has been replaced by `speech`, which is similar.
 
 ### Media features
 
@@ -135,7 +132,6 @@ Media feature expressions test for their presence or value, and are entirely opt
 - {{cssxref("@media/width", "width")}}
   - : Width of the viewport including width of scrollbar.
 
-
 ### Logical operators
 
 The _logical operators_ `not`, `and`, and `only` can be used to compose a complex media query.
@@ -160,7 +156,6 @@ You can also combine multiple media queries into a single rule by separating the
     Each query in a comma-separated list is treated separately from the others
      Thus, if any of the queries in a list is `true`, the entire media statement returns `true`.
      In other words, lists behave like a logical `or` operator.
-
 
 ## Accessibility concerns
 
