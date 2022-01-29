@@ -11,7 +11,7 @@ tags:
   - periodic sync
 browser-compat: api.PeriodicSyncEvent.PeriodicSyncEvent
 ---
-{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
+{{DefaultAPISidebar("Periodic Background Sync")}}
 
 The **`PeriodicSyncEvent()`** constructor
 creates a new {{domxref("PeriodicSyncEvent")}} object. This constructor is not typically

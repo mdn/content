@@ -24,7 +24,7 @@ Building games with HTML5 gives you extra advantages, such as:
 
 ### Multiplatform bliss
 
-The technology itself is multiplatform, so you can write the code once and target multiple devices. This can range from low-end smartphones or tablets, through laptops and desktop computers, to smart TVs, watches or even a fridge if it can handle a modern enough browser.
+The technology itself is multiplatform, so you can write the code once and target multiple devices. This can range from low-end smartphones or tablets, through laptops and desktop computers, to smart TVs, watches or even a fridge if it can handle a modern enough browser.
 
 You don't need to have separate teams to work on the same title targeting different platforms with only one code base to worry about. You can spend more time and money on [Promotion](/en-US/docs/Games/Publishing_games/Game_promotion) and [Monetization](/en-US/docs/Games/Publishing_games/Game_monetization).
 
@@ -42,7 +42,7 @@ The vast majority of the traffic we are interested in — people playing HTML5 g
 
 Trying to compete with desktop games directly is very difficult. You can put your HTML5 games into the same arena (see {{anch("Native desktop")}}, later on) and you should because it's good to diversify the platforms you support, but you have to remember that developers creating desktop games have years of experience, great tools and stable distribution channels. Many HTML5 games will target different market segments than native desktop games, e.g. simple time killer games to be played while on the move rather than huge immersive experiences. Such games are often designed to be played with two, or even one finger, so you can hold the device, play the game and be able to use the second hand for whatever you currently need.
 
-Saying this, desktop platforms can be used for distribution quite easily with the availability of wrappers that can help you prepare native builds of your game see {{anch("Packaging games")}}. It's also nice to provide desktop controls for your games even if you're mostly targeting mobile. Players are enjoying your games on any platform available, and desktop is one of them. Plus, it is usually easier to build and test the game first on desktop, and then move on to debugging mobile.
+Saying this, desktop platforms can be used for distribution quite easily with the availability of wrappers that can help you prepare native builds of your game see {{anch("Packaging games")}}. It's also nice to provide desktop controls for your games even if you're mostly targeting mobile. Players are enjoying your games on any platform available, and desktop is one of them. Plus, it is usually easier to build and test the game first on desktop, and then move on to debugging mobile.
 
 ## Publishing the game
 
@@ -64,9 +64,9 @@ If you're working on a side project just for fun, then leaving the source open w
 
 ### Publishers and portals
 
-As the name may suggest, publishers can handle the publishing of your game for you. Whether you should go that way or not depends on what your plan is for having your game distributed: Do you want to send it wherever possible, or do you want to restrict its presence to those who've bought an [exclusive license](/en-US/docs/Games/Publishing_games/Game_monetization)? It's up to you. Consider various options, experiment and conclude. Publishers will be explained in more detail in the [monetization](/en-US/docs/Games/Publishing_games/Game_monetization) article.
+As the name may suggest, publishers can handle the publishing of your game for you. Whether you should go that way or not depends on what your plan is for having your game distributed: Do you want to send it wherever possible, or do you want to restrict its presence to those who've bought an [exclusive license](/en-US/docs/Games/Publishing_games/Game_monetization)? It's up to you. Consider various options, experiment and conclude. Publishers will be explained in more detail in the [monetization](/en-US/docs/Games/Publishing_games/Game_monetization) article.
 
-There are also independent portals collecting interesting games like [HTML5Games.com](https://html5games.com/), [GameArter.com](https://www.gamearter.com/), [MarketJS.com](https://www.marketjs.com/), [GameFlare](https://distribution.gameflare.com/), [GameDistribution.com](https://gamedistribution.com/), [Poki](https://developers.poki.com/), or [CrazyGames](https://developer.crazygames.com) where you can send your game in and it will get some natural promotion because of the big traffic those sites attract. Some of these take your files and host them on their server, whereas others only link to your website or embed your game on their site. Such exposure may just provide [promotion](/en-US/docs/Games/Publishing_games/Game_promotion) for your game, or if you have adverts shown beside your game (or other money making options) it may also provide monetization.
+There are also independent portals collecting interesting games like [HTML5Games.com](https://html5games.com/), [GameArter.com](https://www.gamearter.com/), [MarketJS.com](https://www.marketjs.com/), [GameFlare](https://distribution.gameflare.com/), [GameDistribution.com](https://gamedistribution.com/), [Poki](https://developers.poki.com/), or [CrazyGames](https://developer.crazygames.com) where you can send your game in and it will get some natural promotion because of the big traffic those sites attract. Some of these take your files and host them on their server, whereas others only link to your website or embed your game on their site. Such exposure may just provide [promotion](/en-US/docs/Games/Publishing_games/Game_promotion) for your game, or if you have adverts shown beside your game (or other money making options) it may also provide monetization.
 
 ### Web and native stores
 
@@ -118,7 +118,7 @@ Other alternative tools are:
 
 - [Intel XDK](https://software.intel.com/en-us/intel-xdk) — an exciting alternative, similar to CocoonIO.
 - [Electron](https://electron.atom.io/) — known as Atom Shell — is an open-sourced and cross-platform tool from GitHub.
-- [Manifold.js](http://manifoldjs.com/) — this tool from the Microsoft team can create native distributions of HTML5 games from iOS, Android, and Windows.
+- [Manifold.js](https://manifoldjs.com/) — this tool from the Microsoft team can create native distributions of HTML5 games from iOS, Android, and Windows.
 
 ## Summary
 

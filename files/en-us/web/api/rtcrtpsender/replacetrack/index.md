@@ -95,29 +95,31 @@ negotiaton:
 
 ### Switching video cameras
 
-    // example to change video camera, suppose selected value saved into window.selectedCamera
+```js
+// example to change video camera, suppose selected value saved into window.selectedCamera
 
-    navigator.mediaDevices
-      .getUserMedia({
-        video: {
-          deviceId: {
-            exact: window.selectedCamera
-          }
-        }
-      })
-      .then(function(stream) {
-        let videoTrack = stream.getVideoTracks()[0];
-        PCs.forEach(function(pc) {
-          var sender = pc.getSenders().find(function(s) {
-            return s.track.kind == videoTrack.kind;
-          });
-          console.log('found sender:', sender);
-          sender.replaceTrack(videoTrack);
-        });
-      })
-      .catch(function(err) {
-        console.error('Error happens:', err);
+navigator.mediaDevices
+  .getUserMedia({
+    video: {
+      deviceId: {
+        exact: window.selectedCamera
+      }
+    }
+  })
+  .then(function(stream) {
+    let videoTrack = stream.getVideoTracks()[0];
+    PCs.forEach(function(pc) {
+      var sender = pc.getSenders().find(function(s) {
+        return s.track.kind == videoTrack.kind;
       });
+      console.log('found sender:', sender);
+      sender.replaceTrack(videoTrack);
+    });
+  })
+  .catch(function(err) {
+    console.error('Error happens:', err);
+  });
+```
 
 ## Specifications
 

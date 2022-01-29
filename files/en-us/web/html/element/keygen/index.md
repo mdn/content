@@ -79,7 +79,7 @@ The **`<keygen>`** [HTML](/en-US/docs/Web/HTML) element exists to facilitate gen
 
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - {{HTMLAttrDef("autofocus")}}
   - : This Boolean attribute lets you specify that the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form element in a document can have the `autofocus` attribute, which is a Boolean.
@@ -113,23 +113,27 @@ The `<keygen>` element is only valid within an HTML form. It will cause some sor
 
 When the submit button is pressed, a key pair of the selected size is generated. The private key is encrypted and stored in the local key database.
 
-    PublicKeyAndChallenge ::= SEQUENCE {
-        spki SubjectPublicKeyInfo,
-        challenge IA5STRING
-    }
-    SignedPublicKeyAndChallenge ::= SEQUENCE {
-        publicKeyAndChallenge PublicKeyAndChallenge,
-        signatureAlgorithm AlgorithmIdentifier,
-        signature BIT STRING
-    }
+```
+PublicKeyAndChallenge ::= SEQUENCE {
+    spki SubjectPublicKeyInfo,
+    challenge IA5STRING
+}
+SignedPublicKeyAndChallenge ::= SEQUENCE {
+    publicKeyAndChallenge PublicKeyAndChallenge,
+    signatureAlgorithm AlgorithmIdentifier,
+    signature BIT STRING
+}
+```
 
 The public key and challenge string are DER encoded as `PublicKeyAndChallenge`, and then digitally signed with the private key to produce a `SignedPublicKeyAndChallenge`. The `SignedPublicKeyAndChallenge` is {{Glossary("Base64")}} encoded, and the ASCII data is finally submitted to the server as the value of a form name/value pair, where the name is _name_ as specified by the `name` attribute of the `keygen` element. If no challenge string is provided, then it will be encoded as an `IA5STRING` of length zero.
 
 Here is an example form submission as it would be delivered to a CGI program by the HTTP server:
 
-       commonname=John+Doe&email=doe@foo.com&org=Foobar+Computing+Corp.&
-       orgunit=Bureau+of+Bureaucracy&locality=Anytown&state=California&country=US&
-       key=MIHFMHEwXDANBgkqhkiG9w0BAQEFAANLADBIAkEAnX0TILJrOMUue%2BPtwBRE6XfV%0AWtKQbsshxk5ZhcUwcwyvcnIq9b82QhJdoACdD34rqfCAIND46fXKQUnb0mvKzQID%0AAQABFhFNb3ppbGxhSXNNeUZyaWVuZDANBgkqhkiG9w0BAQQFAANBAAKv2Eex2n%2FS%0Ar%2F7iJNroWlSzSMtTiQTEB%2BADWHGj9u1xrUrOilq%2Fo2cuQxIfZcNZkYAkWP4DubqW%0Ai0%2F%2FrgBvmco%3D
+```
+commonname=John+Doe&email=doe@foo.com&org=Foobar+Computing+Corp.&
+orgunit=Bureau+of+Bureaucracy&locality=Anytown&state=California&country=US&
+key=MIHFMHEwXDANBgkqhkiG9w0BAQEFAANLADBIAkEAnX0TILJrOMUue%2BPtwBRE6XfV%0AWtKQbsshxk5ZhcUwcwyvcnIq9b82QhJdoACdD34rqfCAIND46fXKQUnb0mvKzQID%0AAQABFhFNb3ppbGxhSXNNeUZyaWVuZDANBgkqhkiG9w0BAQQFAANBAAKv2Eex2n%2FS%0Ar%2F7iJNroWlSzSMtTiQTEB%2BADWHGj9u1xrUrOilq%2Fo2cuQxIfZcNZkYAkWP4DubqW%0Ai0%2F%2FrgBvmco%3D
+```
 
 ## Specifications
 

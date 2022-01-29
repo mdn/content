@@ -20,7 +20,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the constructor.
 >
-> ```
+> ```md
 > ---
 > title: NameOfTheConstructor()
 > slug: Web/API/NameOfTheParentInterface/NameOfTheParentInterface

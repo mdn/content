@@ -146,7 +146,7 @@ The view structure and behavior is almost the same as for the **book_form.pug** 
 
 ## What does it look like?
 
-Run the application and open your browser to <http://localhost:3000/>. Then select the _Create new book instance (copy)_ link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid `BookInstance`, it should be saved and you'll be taken to the detail page.
+Run the application and open your browser to `http://localhost:3000/`. Then select the _Create new book instance (copy)_ link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid `BookInstance`, it should be saved and you'll be taken to the detail page.
 
 ![](locallibary_express_bookinstance_create_empty.png)
 

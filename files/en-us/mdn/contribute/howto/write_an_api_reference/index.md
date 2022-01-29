@@ -63,7 +63,7 @@ Before you start you should write down a list of all the pages you should create
 2. Interface pages
 3. Constructor pages
 4. Method pages
-5. Property pages (including event handlers properties)
+5. Property pages
 6. Event pages
 7. Concept/guide pages
 8. Examples
@@ -131,12 +131,6 @@ Examples:
 
 <!---->
 
-- Title: _AudioContext.onstatechange_
-- Slug: _onstatechange_
-- URL: [https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/onstatechange](/en-US/docs/Web/API/BaseAudioContext/onstatechange)
-
-> **Note:** Event handler properties are treated in the same way as regular properties; they are generally listed in a separate section on the interface page though.
-
 #### Method pages
 
 Each interface has zero or more methods, documented on subpages of the interface's page. each page describes the purpose of the method and shows what its syntax looks like, usage examples, browser compatibility information, etc. Its slug is the name of the method, and the title is interface name, dot, method name, then parentheses.
@@ -155,13 +149,15 @@ Examples:
 
 #### Event pages
 
-Each event handler property you create will have a corresponding event page, describing the event that causes the handler to fire, documented on a subpage of [https://developer.mozilla.org/en-US/docs/Web/Events](/en-US/docs/Web/Events). Each page describes the purpose of the event and shows what its syntax looks like, usage examples, browser compatibility information, etc. Its slug and title is the name of the event.
+Document events as sub pages of their target interfaces and use the slug _eventname_\_event with the title set to `Interface: eventName event`.
+
+Don't create pages for `on` event handler properties. Mention both ways to access the event on the `eventName_event` page.
 
 Example:
 
-- Title: _statechange_
-- Slug: _statechange_
-- URL: [https://developer.mozilla.org/en-US/docs/Web/Events/statechange](/en-US/docs/Web/API/RTCIceTransport/statechange_event)
+- Title: XRSession: end event
+- Slug: end_event
+- URL: [https://developer.mozilla.org/en-US/docs/Web/XRSession/end_event](/en-US/docs/Web/API/XRSession/end_event)
 
 #### Concept/guide pages
 
@@ -254,8 +250,6 @@ Now you should be ready to start writing your interface pages. Each interface re
    _This interface also inherits properties from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
    _This interface doesn't implement any specific methods, but inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
    _This interface also inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
-
-   > **Note:** If the interface features event handlers, put these inside the "Properties" section (they are a type of property) under a subheading of "Event handlers".
 
    > **Note:** Properties that are read-only should have the \\{{readonlyInline}} macro, which creates a nifty little "Read only" badge, included on the same line as their \\{{domxref}} links (after the use of the \\{{experimentalInline}}, \\{{non-standard_Inline}} and \\{{deprecatedInline}} macros, if some of these are needed.
 

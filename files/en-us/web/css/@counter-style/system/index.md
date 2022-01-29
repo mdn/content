@@ -84,17 +84,19 @@ This may take one of three forms:
 
 If your browser supports it, this example will render a list like this:
 
-    ◉ One
-    ◉ Two
-    ◉ Three
+```
+◉ One
+◉ Two
+◉ Three
+```
 
 #### CSS
 
 ```html hidden
 <ul>
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
 </ul>
 ```
 
@@ -118,11 +120,13 @@ ul {
 
 If your browser supports it, this example will render a list like this:
 
-    ➀ One
-    ➁ Two
-    ➂ Three
-    4 Four
-    5 Five
+```
+➀ One
+➁ Two
+➂ Three
+4 Four
+5 Five
+```
 
 #### CSS
 
@@ -156,14 +160,16 @@ ul {
 
 If your browser supports it, this example will render a list like this:
 
-      a. One
-      b. Two
-      c. Three
-     aa. Four
-     bb. Five
-     cc. Six
-    aaa. Seven
-    bbb. Eight
+```
+  a. One
+  b. Two
+  c. Three
+ aa. Four
+ bb. Five
+ cc. Six
+aaa. Seven
+bbb. Eight
+```
 
 #### CSS
 
@@ -200,14 +206,16 @@ ul {
 
 If your browser supports it, this example will render a list like this:
 
-     a. One
-     b. Two
-     c. Three
-    aa. Four
-    ab. Five
-    ac. Six
-    ba. Seven
-    bb. Seven
+```
+ a. One
+ b. Two
+ c. Three
+aa. Four
+ab. Five
+ac. Six
+ba. Seven
+bb. Seven
+```
 
 #### CSS
 
@@ -244,14 +252,16 @@ ul {
 
 If your browser supports it, this example will render a list like this:
 
-     b. One
-     c. Two
-    ba. Three
-    bb. Four
-    bc. Five
-    ca. Six
-    cb. Seven
-    cc. Eight
+```
+ b. One
+ c. Two
+ba. Three
+bb. Four
+bc. Five
+ca. Six
+cb. Seven
+cc. Eight
+```
 
 The first symbol provided in the `symbols` descriptor is interpreted as `0` here.
 
@@ -325,7 +335,7 @@ ul {
 
 ### Additive counter
 
-This example renders a list using Roman numerals. Notice that a `range` is specified. This is because the representation will produce correct Roman numerals only until the counter value of `3999`. Once outside of the range, the rest of the counter representations will be based on the `decimal` style, which is the fall back. If you need to represent counter values as Roman numerals, you could use either one of  the predefined counter styles, `upper-roman` or `lower-roman`, rather than recreating the rule yourself.
+This example renders a list using Roman numerals. Notice that a `range` is specified. This is because the representation will produce correct Roman numerals only until the counter value of `3999`. Once outside of the range, the rest of the counter representations will be based on the `decimal` style, which is the fall back. If you need to represent counter values as Roman numerals, you could use either one of the predefined counter styles, `upper-roman` or `lower-roman`, rather than recreating the rule yourself.
 
 #### HTML
 

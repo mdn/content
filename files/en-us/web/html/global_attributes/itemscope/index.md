@@ -19,7 +19,7 @@ A related attribute, {{htmlattrxref("itemtype")}}, is used to specify the valid 
 
 Every HTML element may have an `itemscope` attribute specified. An `itemscope` element that does not have an associated `itemtype` must have an associated `itemref`.
 
-> **Note:** Find more about `itemtype` attributes at <http://schema.org/Thing>
+> **Note:** Find more about `itemtype` attributes at <https://schema.org/Thing>
 
 ### Simple example
 

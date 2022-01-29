@@ -194,7 +194,7 @@ The last part of the page is the error code. This prints a list of errors, if th
 
 ## What does it look like?
 
-Run the application, open your browser to <http://localhost:3000/>, then select the _Create new genre_ link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the genre detail page.
+Run the application, open your browser to `http://localhost:3000/`, then select the _Create new genre_ link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the genre detail page.
 
 ![Genre Create Page - Express Local Library site](locallibary_express_genre_create_empty.png)
 

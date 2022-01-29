@@ -95,8 +95,10 @@ var dirEntry = fs.root.getDirectory('superseekrit', {create: true});
 
 Creates a new `DirectoryReaderSync` to read entries from this directory.
 
-    DirectoryReaderSync createReader (
-    ) raises (FileException);
+```
+DirectoryReaderSync createReader (
+) raises (FileException);
+```
 
 ##### Returns
 
@@ -120,9 +122,11 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 
 Depending on how you've set the `options` parameter, the method either creates a file or looks up an existing file.
 
-    void getFile (
-      in DOMString path, in optional Flags options
-    ) raises (FileException);
+```
+void getFile (
+  in DOMString path, in optional Flags options
+) raises (FileException);
+```
 
 ##### Parameter
 
@@ -197,9 +201,11 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 
 Creates or looks up a directory. The method is similar to `getFile()` with DirectoryEntrySync being passed.
 
-    void getDirectory (
-      in DOMString path, in optional Flags options
-    ) raises (FileException);
+```
+void getDirectory (
+  in DOMString path, in optional Flags options
+) raises (FileException);
+```
 
 ##### Parameter
 
@@ -278,8 +284,10 @@ Deletes a directory and all of its contents. You cannot delete the root director
 
 If you delete a directory that contains a file that cannot be removed or if an error occurs while the deletion is in progress, some of the contents might not be deleted. Catch these cases with error callbacks and retry the deletion.
 
-    void removeRecursively (
-    )  raises (FileException);
+```
+void removeRecursively (
+)  raises (FileException);
+```
 
 ##### Parameter
 

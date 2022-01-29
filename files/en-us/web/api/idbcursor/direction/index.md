@@ -80,7 +80,9 @@ In this simple fragment we create a transaction, retrieve an object store, then 
 cursor to iterate through all the records in the object store. Within each iteration we
 log the direction of the cursor, something like this:
 
-      prev
+```
+prev
+```
 
 > **Note:** we can't change the direction of travel of the cursor using
 > the `direction` property, as it is read-only. We specify the direction of

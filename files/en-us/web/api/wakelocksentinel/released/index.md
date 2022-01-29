@@ -8,7 +8,7 @@ tags:
   - WakeLockSentinel
 browser-compat: api.WakeLockSentinel.released
 ---
-{{draft}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+{{DefaultAPISidebar("Screen Wake Lock API")}}
 
 The read-only **`released`** property of the
 {{domxref("WakeLockSentinel")}} interface returns a boolean that indicates whether

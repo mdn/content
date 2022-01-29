@@ -24,7 +24,9 @@ SVG makes use of a number of data types. This article lists these types along wi
 
         When angles are used in an SVG attribute, \<angle> is instead defined as follows:
 
-            angle ::= number ("deg" | "grad" | "rad")?
+        ```
+        angle ::= number ("deg" | "grad" | "rad")?
+        ```
 
         The unit identifiers in such \<angle> values must be in lower case.
 
@@ -134,7 +136,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## Integer
 
 *   \<integer>
-    *   : An \<integer> is specified as an optional sign character (`+` or `-`) followed by one or more digits `0` to `9`:
+    *   : An \<integer> is specified as an optional sign character (`+` or `-`) followed by one or more digits `0` to `9`:
 
         ```
         integer ::= [+-]? [0-9]+
@@ -151,7 +153,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 *   \<IRI>
     *   : An **I**nternationalized **R**esource **I**dentifier.
 
-        On the Internet, resources are identified using *IRI*s (Internationalized Resource Identifiers). For example, an SVG file called `someDrawing.svg` located at <http://example.com> might have the following *IRI*:
+        On the Internet, resources are identified using *IRI*s (Internationalized Resource Identifiers). For example, an SVG file called `someDrawing.svg` located at `http://example.com` might have the following *IRI*:
 
         ```
         http://example.com/someDrawing.svg
@@ -167,13 +169,13 @@ SVG makes use of a number of data types. This article lists these types along wi
 
         SVG makes extensive use of *IRI* references, both absolute and relative, to other objects. For example, to fill a rectangle with a linear gradient, you first define a {{SVGElement("linearGradient")}} element and give it an ID, as in:
 
-        ```
+        ```html
         <linearGradient xml:id="MyGradient">...</linearGradient>
         ```
 
         You then reference the linear gradient as the value of the {{SVGAttr("fill")}} attribute for the rectangle, as in the following example:
 
-        ```
+        ```html
         <rect fill="url(#MyGradient)"/>
         ```
 

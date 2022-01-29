@@ -83,8 +83,7 @@ await myPeerConnection.setRemoteDescription(description);
 createMyStream();
 ```
 
-Since it's unnecessary, the {{domxref("RTCSessionDescription.RTCSessionDescription",
-	"RTCSessionDescription()")}} constructor is deprecated.
+Since it's unnecessary, the {{domxref("RTCSessionDescription.RTCSessionDescription", "RTCSessionDescription()")}} constructor is deprecated.
 
 ### Return value
 
@@ -97,9 +96,7 @@ connection). The promise fulfillment handler receives no input parameters.
 > **Note:** The process of changing descriptions actually involves
 > intermediary steps handled by the WebRTC layer to ensure that an active connection
 > can be changed without losing the connection if the change does not succeed. See
-> {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and
-
-    	current descriptions")}} for more details on this process.
+> {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}} for more details on this process.
 
 ### Exceptions
 
@@ -136,7 +133,7 @@ by `setRemoteDescription()`:
 When you call `setRemoteDescription()`, the ICE agent checks to make sure
 the {{domxref("RTCPeerConnection")}} is in either the `stable` or
 `have-remote-offer` {{domxref("RTCPeerConnection.signalingState",
-	"signalingState")}}. These states indicate that either an existing connection is being
+  "signalingState")}}. These states indicate that either an existing connection is being
 renegotiated or that an offer previously specified by an earlier call to
 `setRemoteDescription()` is to be replaced with the new offer. In either of
 those two cases, we're at the beginning of the negotiation process, and the offer is

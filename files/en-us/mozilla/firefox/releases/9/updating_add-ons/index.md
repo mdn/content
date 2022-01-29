@@ -26,7 +26,9 @@ If your add-on uses {{ ifmethod("nsIChromeFrameMessageManager", "loadFrameScript
 
 Starting in Firefox 9, you should call the new {{ ifmethod("nsIChromeFrameMessageManager", "removeDelayedFrameScript") }} method to stop loading your script in newly-created frames. You do this like this, for example:
 
-    browser.messageManager.removeDelayedFrameScript("chrome://myextension/content/somescript.js");
+```js
+browser.messageManager.removeDelayedFrameScript("chrome://myextension/content/somescript.js");
+```
 
 ## Interface changes
 

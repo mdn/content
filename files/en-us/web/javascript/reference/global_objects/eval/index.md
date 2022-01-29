@@ -120,7 +120,7 @@ using a dangerous `eval()` to using `Function()`, see below.
 Bad code with `eval()`:
 
 ```js
-function looseJsonParse(obj){
+function looseJsonParse(obj) {
     return eval("(" + obj + ")");
 }
 console.log(looseJsonParse(
@@ -131,7 +131,7 @@ console.log(looseJsonParse(
 Better code without `eval()`:
 
 ```js
-function looseJsonParse(obj){
+function looseJsonParse(obj) {
     return Function('"use strict";return (' + obj + ')')();
 }
 console.log(looseJsonParse(
@@ -139,20 +139,20 @@ console.log(looseJsonParse(
 ))
 ```
 
-Comparing the two code snippets above, the two code snippets might seem to work the
-same way, but think again: the `eval()` one is a great deal slower. Notice
-`c: new Date()` in the evaluated object. In the function without the
+The two code snippets above may seem to work the same way, but they do not;
+the `eval()` one is a great deal slower. Notice
+`c: new Date()` in the evaluated string. In the function without the
 `eval()`, the object is being evaluated in the global scope, so it is safe
 for the browser to assume that `Date` refers to `window.Date()`
-instead of a local variable called `Date`. But, in the code using
-`eval()`, the browser cannot assume this since what if your code looked like
-the following:
+instead of a local variable called `Date`. However, in the code using
+`eval()`, the browser cannot assume this. For example, in the following code,
+`Date` in the evaluated string doesn't refer to `window.Date()`.
 
 ```js
-function Date(n){
+function Date(n) {
     return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
 }
-function looseJsonParse(obj){
+function looseJsonParse(obj) {
     return eval("(" + obj + ")");
 }
 console.log(looseJsonParse(
@@ -164,16 +164,16 @@ Thus, in the `eval()` version of the code, the browser is forced to make the
 expensive lookup call to check to see if there are any local variables called
 `Date()`. This is incredibly inefficient compared to `Function()`.
 
-In a related circumstance, what if you actually wanted your `Date()`
-function to be able to be called from the code inside `Function()`. Should
-you just take the easy way out and fall back to `eval()`? No! Never. Instead
+In a related circumstance, if you actually want your `Date()`
+function to be called from the code inside `Function()`, should
+you just take the easy way out and use `eval()`? No! Never. Instead,
 try the approach below.
 
 ```js
-function Date(n){
+function Date(n) {
     return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][n%7 || 0];
 }
-function runCodeWithDateFunction(obj){
+function runCodeWithDateFunction(obj) {
     return Function('"use strict";return (' + obj + ')')()(
         Date
     );
@@ -184,7 +184,7 @@ console.log(runCodeWithDateFunction(
 ```
 
 The code above may seem inefficiently slow because of the triple nested function, but
-let's analyze the benefits of the above efficient method:
+let's analyze the benefits of the efficient method above:
 
 - It allows the code in the string passed to `runCodeWithDateFunction()` to
   be minified.

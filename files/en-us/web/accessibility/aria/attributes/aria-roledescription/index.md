@@ -28,7 +28,7 @@ When there are no semantic or ARIA widget roles that correspond to the interacti
 
 ATs may customize and localize the names of ARIA roles. If you are using `aria-roledescription` to change how the role name is presented to the user, remember to handle localization. The value should be translated when a page is localized.
 
-Changing how the role is presented to the user has no impact on the functionality of the element. For example, if an element has a role of [`region`](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role) or [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)  when AT provides functions for navigating to the next region or button, if you set the `aria-roledescription` to `continent` and `escape` respectively, the AT will still allow those functions to navigate to regions and buttons. 
+Changing how the role is presented to the user has no impact on the functionality of the element. For example, if an element has a role of [`region`](/en-US/docs/Web/Accessibility/ARIA/Roles/region_role) or [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)  when AT provides functions for navigating to the next region or button, if you set the `aria-roledescription` to `continent` and `escape` respectively, the AT will still allow those functions to navigate to regions and buttons.
 
 Again, avoid using `aria-roledescription`. In this example, `escape` has no relevant meaning to the user, but `button` with "escape" as a label does.  
 
@@ -47,14 +47,14 @@ The following example shows the use of `aria-roledescription` to indicate that a
 </div>
 ```
 
-In the previous examples, a screen reader user may hear "Quarterly Report, slide" rather than the less precise "Quarterly Report, article". 
+In the previous examples, a screen reader user may hear "Quarterly Report, slide" rather than the less precise "Quarterly Report, article".
 
 ## Values
 
 - `<string>`
   - : A non-empty string, an unconstrained value type,containing more than just white space.
 
-## ARIAMixin API 
+## ARIAMixin API
 
 - {{domxref("Element.ariaRoleDescription")}}
   - : The  [`ariaRoleDescription`](/en-US/docs/Web/API/Element/ariaRoleDescription) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-roledescription` attribute.
@@ -63,11 +63,11 @@ In the previous examples, a screen reader user may hear "Quarterly Report, slide
 
 ## Associated roles
 
-Supported by all roles and by all base markup elements except for `role="generic"`. 
+Supported by all roles and by all base markup elements except for `role="generic"`.
 
 ## Specifications
 
-| Specification | Status | 
+| Specification | Status |
 | ------------- | ------  |
 | {{SpecName("ARIA","#aria-roledescription","ARIA: aria-roledescription Attribute")}}  | {{Spec2('ARIA')}} |
 

@@ -35,15 +35,17 @@ None.
 
 ## Examples
 
-    var synth = window.speechSynthesis;
+```js
+var synth = window.speechSynthesis;
 
-    var utterance1 = new SpeechSynthesisUtterance('How about we say this now? This is quite a long sentence to say.');
-    var utterance2 = new SpeechSynthesisUtterance('We should say another sentence too, just to be on the safe side.');
+var utterance1 = new SpeechSynthesisUtterance('How about we say this now? This is quite a long sentence to say.');
+var utterance2 = new SpeechSynthesisUtterance('We should say another sentence too, just to be on the safe side.');
 
-    synth.speak(utterance1);
-    synth.speak(utterance2);
+synth.speak(utterance1);
+synth.speak(utterance2);
 
-    synth.cancel(); // utterance1 stops being spoken immediately, and both are removed from the queue
+synth.cancel(); // utterance1 stops being spoken immediately, and both are removed from the queue
+```
 
 ## Specifications
 

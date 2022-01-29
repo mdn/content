@@ -9,7 +9,7 @@ tags:
   - barcode detection
   - shape detection
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}}
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}}
 
 The Barcode Detection API detects linear and two-dimensional barcodes in images.
 

@@ -405,7 +405,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onmousedown")}}
   - : Called when ANY mouse button is pressed.
 - {{domxref("GlobalEventHandlers.onmousemove")}}
-  - : Called continously when the mouse is moved inside the window.
+  - : Called continuously when the mouse is moved inside the window.
 - {{domxref("GlobalEventHandlers.onmouseout")}}
   - : Called when the pointer leaves the window.
 - {{domxref("GlobalEventHandlers.onmouseover")}}

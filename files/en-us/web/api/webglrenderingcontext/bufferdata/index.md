@@ -37,8 +37,7 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
     - `gl.ARRAY_BUFFER`: Buffer containing vertex attributes, such as
       vertex coordinates, texture coordinate data, or vertex color data.
     - `gl.ELEMENT_ARRAY_BUFFER`: Buffer used for element indices.
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "",
-				1)}}, the following values are available additionally:
+    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
 
       - `gl.COPY_READ_BUFFER`: Buffer for copying from one
         buffer object to another.
@@ -76,7 +75,7 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
       once by the application, and used at most a few times as the source for
       WebGL drawing and image specification commands.
     - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "",
-				1)}}, the following values are available additionally:
+        1)}}, the following values are available additionally:
 
       - `gl.STATIC_READ`: The contents are intended to be
         specified once by reading data from WebGL, and queried many times

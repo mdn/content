@@ -12,7 +12,7 @@ tags:
   - equals()
 browser-compat: api.CSSNumericValue.equals
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`equals()`** method of the
 {{domxref("CSSNumericValue")}} interface returns a boolean indicating whether the passed

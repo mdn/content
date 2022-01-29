@@ -65,7 +65,7 @@ The {{ SVGElement("animateTransform") }} element let you animate **transform** a
        from="0 60 60"
        to="360 100 60"
        repeatCount="indefinite"
-			/>
+    />
   </rect>
 </svg>
 ```
@@ -76,7 +76,7 @@ The {{ SVGElement("animateTransform") }} element let you animate **transform** a
 
 The {{ SVGElement("animateMotion") }} element lets you animate an element position and rotation according to a path. The path is defined the same way as in {{ SVGElement("path") }}. You can set the attribute to define whether the object rotates following the tangent of the path.
 
-### Example 1: Linear motion
+### Example 1: Linear motion
 
 In this example, a blue circle bounces between the left and right edges of a black box, over and over again, indefinitely. The animation here is handled by the {{ SVGElement("animateMotion") }} element. In this case, we're establishing a path consisting of a **MoveTo** command to establish the starting point for the animation, then the **Horizontal-line** command to move the circle 300 pixels to the right, followed by the **Z command**, which closes the path, establishing a loop back to the beginning. By setting the value of the **repeatCount** attribute to `indefinite`, we indicate that the animation should loop forever, as long as the SVG image exists.
 
@@ -117,5 +117,5 @@ Same example as before with a curved path and following the direction of the pat
 ## See also
 
 *   [SVG](/en-US/docs/Web/SVG)
-*   [SVG Animation Specification](https://www.w3.org/TR/SVG/animate.html)
-*   [SMIL Specification](https://www.w3.org/TR/REC-smil)
+*   [SVG Animation Specification](https://www.w3.org/TR/SVG/animate.html)
+*   [SMIL Specification](https://www.w3.org/TR/REC-smil)

@@ -26,8 +26,8 @@ Let's consider this {{HTMLElement("video")}} element:
 
 ```html
 <video controls id="myvideo">
-  <source src="somevideo.webm"></source>
-  <source src="somevideo.mp4"></source>
+  <source src="somevideo.webm"></source>
+  <source src="somevideo.mp4"></source>
 </video>
 ```
 
@@ -48,8 +48,8 @@ It's worth noting a key difference here between the Gecko and WebKit implementat
 
 ```css
 #myvideo:-webkit-full-screen {
-  width: 100%;
-  height: 100%;
+  width: 100%;
+  height: 100%;
 }
 ```
 
@@ -57,7 +57,7 @@ On the other hand, if you're trying to emulate WebKit's behavior on Gecko, you n
 
 ### Notification
 
-When fullscreen mode is successfully engaged, the document which contains the element receives a {{Event("fullscreenchange")}} event. When fullscreen mode is exited, the document again receives a  {{Event("fullscreenchange")}} event. Note that the {{Event("fullscreenchange")}} event doesn't provide any information itself as to whether the document is entering or exiting fullscreen mode, but if the document has a non null {{DOMxRef("document.fullscreenElement", "fullscreenElement")}}, you know you're in fullscreen mode.
+When fullscreen mode is successfully engaged, the document which contains the element receives a {{Event("fullscreenchange")}} event. When fullscreen mode is exited, the document again receives a  {{Event("fullscreenchange")}} event. Note that the {{Event("fullscreenchange")}} event doesn't provide any information itself as to whether the document is entering or exiting fullscreen mode, but if the document has a non null {{DOMxRef("document.fullscreenElement", "fullscreenElement")}}, you know you're in fullscreen mode.
 
 ### When a fullscreen request fails
 
@@ -96,9 +96,9 @@ When the page is loaded, this code is run to set up an event listener to watch f
 
 ```js
 document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
-    toggleFullScreen();
-  }
+  if (e.keyCode == 13) {
+    toggleFullScreen();
+  }
 }, false);
 ```
 
@@ -108,13 +108,13 @@ This code is called when the user hits the <kbd>Enter</kbd> key, as seen above.
 
 ```js
 function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
-  }
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
 }
 ```
 
@@ -130,15 +130,15 @@ For the moment not all browsers are implementing the unprefixed version of the A
   <thead>
     <tr>
       <th scope="row">Standard</th>
-      <th scope="col">WebKit (Safari) / Blink (Chrome &#x26; Opera) / Edge</th>
+      <th scope="col">WebKit (Safari) / Blink (Chrome &#x26; Opera) / Edge</th>
       <th scope="col">Gecko (Firefox)</th>
-      <th scope="col">Internet Explorer</th>
+      <th scope="col">Internet Explorer</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">
-        {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
+        {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
       </th>
       <td><code>webkitIsFullScreen</code></td>
       <td><code>mozFullScreen</code></td>

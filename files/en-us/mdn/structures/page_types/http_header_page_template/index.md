@@ -19,7 +19,7 @@ browser-compat: path.to.feature.NameOfTheHeader
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular header.
 >
-> ```
+> ```md
 > ---
 > title: NameOfTheHeader
 > slug: Web/HTTP/Headers/NameOfTheHeader

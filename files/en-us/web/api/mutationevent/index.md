@@ -59,9 +59,11 @@ The following is a list of all mutation events, as defined in [DOM Level 3 Event
 
 You can register a listener for mutation events using {{DOMxRef("EventTarget.addEventListener()")}} as follows:
 
-    element.addEventListener("DOMNodeInserted", function (event) {
-      // ...
-    }, false);
+```js
+element.addEventListener("DOMNodeInserted", function (event) {
+  // ...
+}, false);
+```
 
 The event object is passed to the listener in a `MutationEvent` (see [its definition in the specification](https://www.w3.org/TR/DOM-Level-3-Events/#events-MutationEvent)) for most events, and {{DOMxRef("MutationNameEvent")}} for `DOMAttributeNameChanged` and `DOMElementNameChanged`.
 

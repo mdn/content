@@ -162,7 +162,7 @@ renderer.3d.setTexture(model, 'character.png')     // a syntax error
 renderer['3d'].setTexture(model, 'character.png')  // works properly
 ```
 
-In the `3d` example, `'3d'` *had* to be quoted (because it begins with a digit). But it's also possible to quote the array indexes as well (e.g., `years['2']` instead of `years[2]`), although it's not necessary.
+In the `3d` example, `'3d'` *had* to be quoted (because it begins with a digit). But it's also possible to quote the array indexes as well (e.g., `years['2']` instead of `years[2]`), although it's not necessary.
 
 The `2` in `years[2]` is coerced into a string by the JavaScript engine through an implicit `toString` conversion. As a result, `'2'` and `'02'` would refer to two different slots on the `years` object, and the following example could be `true`:
 
@@ -311,7 +311,7 @@ let shallowCopyFrom = Array.from(fruits)
 
 These all create a _shallow copy_; top-level elements containing primitive values are copied, but if the array contains nested objects or arrays, those will reference elements in the original array.
 
-If you need a _deep copy_ of all elements — that is, in which even nested arrays don’t just reference elements in the original array but instead are also copied — one approach is to use {{jsxref("JSON.stringify()")}} to convert the array to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into an array.
+If you need a _deep copy_ of all elements — that is, in which even nested arrays don’t just reference elements in the original array but instead are also copied — one approach is to use {{jsxref("JSON.stringify()")}} to convert the array to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into an array.
 
 ```js
 let deepCopy = JSON.parse(JSON.stringify(fruits));
@@ -491,16 +491,16 @@ Results in
 
 ```plain
 // The first column is the index
-0	1	0
-1	2	2
-2	4	8
-3	8	18
-4	16	32
-5	32	50
-6	64	72
-7	128	98
-8	256	128
-9	512	162
+0  1    0
+1  2    2
+2  4    8
+3  8    18
+4  16   32
+5  32   50
+6  64   72
+7  128  98
+8  256  128
+9  512  162
 ```
 
 ## Specifications

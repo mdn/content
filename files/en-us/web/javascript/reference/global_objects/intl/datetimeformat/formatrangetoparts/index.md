@@ -18,8 +18,7 @@ The **`Intl.DateTimeFormat.prototype.formatRangeToParts()`**
 method returns an array of locale-specific tokens representing each part of the formatted date
 range produced by {{jsxref("Intl.DateTimeFormat")}} formatters.
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrangetoparts.html",
-	"taller")}}
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrangetoparts.html", "taller")}}
 
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 

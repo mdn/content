@@ -35,8 +35,7 @@ new Intl.Collator(locales, options)
 
   - : Optional. A string with a BCP 47 language tag, or an array of such strings. For
     the general form and interpretation of the `locales` argument, see
-    the {{jsxref("Global_Objects/Intl", "Intl page",
-			"#Locale_identification_and_negotiation", 1)}}.
+    the {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}.
 
     The following Unicode extension keys are allowed:
 

@@ -41,12 +41,12 @@ replace(substr, replacerFunction)
     `newSubstr` or the value returned by the specified
     `replacerFunction`.
 - `substr`
-  - : A {{jsxref("String")}} that is to be replaced by `newSubstr`.
+  - : A string that is to be replaced by `newSubstr`.
     It is treated as a literal string and is _not_ interpreted as a regular
     expression. Only the first occurrence will be replaced.
 - `newSubstr` (replacement)
 
-  - : The {{jsxref("String")}} that replaces the substring specified by the specified
+  - : The string that replaces the substring specified by the specified
     `regexp` or `substr` parameter. A number
     of special replacement patterns are supported; see the "[Specifying a string as a parameter](#specifying_a_string_as_a_parameter)"
     section below.

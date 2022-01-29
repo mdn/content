@@ -8,7 +8,7 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-  - Exerimental
+  -  Experimental
 browser-compat: http.headers.Sec-CH-UA-Model
 ---
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}

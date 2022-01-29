@@ -90,7 +90,7 @@ The returned _measure_ will have the following property values:
 
 - `TypeError` {{domxref("DOMException")}}
   - : This can be thrown in any case where the start, end or duration might be ambiguous:
-    
+
     - Both `endMark` and `MeasureOptions` are specified.
     - `MeasureOptions` is specified without either `start` and `end` members.
     - `MeasureOptions` is specified with all of `start`, `end`, and `duration` members (which might then be inconsistent).

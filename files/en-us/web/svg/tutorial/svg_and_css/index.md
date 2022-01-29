@@ -285,7 +285,7 @@ svg {
 }
 
 .segment-edge:hover {
-	stroke: var(--segment-edge-stroke-hover);
+  stroke: var(--segment-edge-stroke-hover);
 }
 
 /* outer petals */

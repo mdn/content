@@ -32,11 +32,11 @@ throwIfAborted()
 
 The examples below come from the specification.
 
-### Aborting a polling operation 
+### Aborting a polling operation
 
 This example demonstrates how you can use `throwIfAborted()` to abort a polling operation.
 
-Consider an aysnchronous `waitForCondition()` function that is called with another asynchronous function "`func`", a target value "`targetValue`, and an `AbortSignal`.
+Consider an asynchronous `waitForCondition()` function that is called with another asynchronous function "`func`", a target value "`targetValue`, and an `AbortSignal`.
 The method compares the result of `func` with `targetValue` in a loop, returning when they match.
 
 ```js
@@ -104,7 +104,7 @@ controller.abort();
 ```
 
 APIs that do not return promises might react in a similar manner.
-In some cases it may make sense to absorb the signal. 
+In some cases it may make sense to absorb the signal.
 
 ## Specifications
 

@@ -8,13 +8,13 @@ tags:
   - XPath
   - XSLT
 ---
-This article provides some XPath code snippets — simple examples of how to a few simple **utility functions** based on standard interfaces from the [DOM Level 3 XPath specification](https://www.w3.org/TR/DOM-Level-3-XPath/) that expose XPath functionality to JavaScript code. The snippets are functions you can use in the real world in your own code.
+This article provides some XPath code snippets — simple examples of how to a few simple **utility functions** based on standard interfaces from the [DOM Level 3 XPath specification](https://www.w3.org/TR/DOM-Level-3-XPath/) that expose XPath functionality to JavaScript code. The snippets are functions you can use in the real world in your own code.
 
 ### Node-specific _evaluator_ function
 
-The following custom utility function can be used to evaluate XPath expressions on given XML nodes. The first argument is a DOM node or Document object, while the second is a string defining an XPath expression.
+The following custom utility function can be used to evaluate XPath expressions on given XML nodes. The first argument is a DOM node or Document object, while the second is a string defining an XPath expression.
 
-##### Example: Defining a custom node-specific `evaluateXPath()` utility function
+##### Example: Defining a custom node-specific `evaluateXPath()` utility function
 
 ```js
 // Evaluate an XPath expression aExpression against a given DOM node
@@ -23,8 +23,8 @@ The following custom utility function can be used to evaluate XPath expressions
 // initial work.
 function evaluateXPath(aNode, aExpr) {
   var xpe = new XPathEvaluator();
-  var nsResolver = xpe.createNSResolver(aNode.ownerDocument == null ?
-    aNode.documentElement : aNode.ownerDocument.documentElement);
+  var nsResolver = xpe.createNSResolver(aNode.ownerDocument == null ?
+    aNode.documentElement : aNode.ownerDocument.documentElement);
   var result = xpe.evaluate(aExpr, aNode, nsResolver, 0, null);
   var found = [];
   var res;
@@ -34,7 +34,7 @@ function evaluateXPath(aNode, aExpr) {
 }
 ```
 
-This function uses the **`new XPathEvaluator()`** constructor, which is supported in Firefox, Chrome, Opera and Safari, but not in Edge or Internet Explorer. Scripts in a Web document which might be accessed by Edge or Internet Explorer users should replace the call to **`new XPathEvaluator()`** with the following fragment:
+This function uses the **`new XPathEvaluator()`** constructor, which is supported in Firefox, Chrome, Opera and Safari, but not in Edge or Internet Explorer. Scripts in a Web document which might be accessed by Edge or Internet Explorer users should replace the call to **`new XPathEvaluator()`** with the following fragment:
 
 ```js
   // XPathEvaluator is implemented on objects that implement Document
@@ -55,7 +55,7 @@ If you are using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) to read a 
 
 Assume we have the following XML document (see also [How to Create a DOM tree](/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree) and [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)):
 
-##### Example: An XML document to use with the custom `evaluateXPath()` utility function
+##### Example: An XML document to use with the custom `evaluateXPath()` utility function
 
 ```xml
 <?xml version="1.0"?>
@@ -75,7 +75,7 @@ Assume we have the following XML document (see also [How to Create a DOM tree](/
 
 You can now "query" the document with XPath expressions. Although walking the DOM tree can achieve similar results, using XPath expressions is much quicker and more powerful. If you can rely on `id` attributes, `document.getElementById()` is still powerful, but it's not nearly as powerful as XPath. Here are some examples.
 
-##### Example: JavaScript code with the custom `evaluateXPath()` utility function
+##### Example: JavaScript code with the custom `evaluateXPath()` utility function
 
 ```js
 // display the last names of all people in the doc
@@ -98,7 +98,7 @@ alert(results.length);
 
 The following is a simple utility function to get (ordered) XPath results into an array, regardless of whether there is a special need for namespace resolvers, etc. It avoids the more complex syntax of [`document.evaluate()`](/en-US/docs/Web/API/Document/evaluate) for cases when it is not required as well as the need to use the special iterators on [`XPathResult`](/en-US/docs/Web/API/XPathResult) (by returning an array instead).
 
-##### Example: Defining a simple `docEvaluateArray()` utility function
+##### Example: Defining a simple `docEvaluateArray()` utility function
 
 ```js
 // Example usage:
@@ -123,30 +123,30 @@ function docEvaluateArray (expr, doc, context, resolver) {
 
 The following function allows one to pass an element and an XML document to find a unique string XPath expression leading back to that element.
 
-##### Example: Defining a `getXPathForElement()` utility function
+##### Example: Defining a `getXPathForElement()` utility function
 
 ```js
 function getXPathForElement(el, xml) {
-	var xpath = '';
-	var pos, tempitem2;
+  var xpath = '';
+  var pos, tempitem2;
 
-	while(el !== xml.documentElement) {
-		pos = 0;
-		tempitem2 = el;
-		while(tempitem2) {
-			if (tempitem2.nodeType === 1 && tempitem2.nodeName === el.nodeName) { // If it is ELEMENT_NODE of the same name
-				pos += 1;
-			}
-			tempitem2 = tempitem2.previousSibling;
-		}
+  while(el !== xml.documentElement) {
+    pos = 0;
+    tempitem2 = el;
+    while(tempitem2) {
+      if (tempitem2.nodeType === 1 && tempitem2.nodeName === el.nodeName) { // If it is ELEMENT_NODE of the same name
+        pos += 1;
+      }
+      tempitem2 = tempitem2.previousSibling;
+    }
 
-		xpath = "*[name()='"+el.nodeName+"' and namespace-uri()='"+(el.namespaceURI===null?'':el.namespaceURI)+"']["+pos+']'+'/'+xpath;
+    xpath = "*[name()='"+el.nodeName+"' and namespace-uri()='"+(el.namespaceURI===null?'':el.namespaceURI)+"']["+pos+']'+'/'+xpath;
 
-		el = el.parentNode;
-	}
-	xpath = '/*'+"[name()='"+xml.documentElement.nodeName+"' and namespace-uri()='"+(el.namespaceURI===null?'':el.namespaceURI)+"']"+'/'+xpath;
-	xpath = xpath.replace(/\/$/, '');
-	return xpath;
+    el = el.parentNode;
+  }
+  xpath = '/*'+"[name()='"+xml.documentElement.nodeName+"' and namespace-uri()='"+(el.namespaceURI===null?'':el.namespaceURI)+"']"+'/'+xpath;
+  xpath = xpath.replace(/\/$/, '');
+  return xpath;
 }
 ```
 

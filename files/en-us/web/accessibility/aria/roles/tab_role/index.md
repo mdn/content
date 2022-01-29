@@ -28,7 +28,7 @@ When elements with the `tab` role are selected or active they should have their 
   - : boolean
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
   - : `id` of element with `tabpanel` role
-- {{htmlattrxref("id")}} 
+- {{htmlattrxref("id")}}
   - : content
 
 ### Keyboard interaction

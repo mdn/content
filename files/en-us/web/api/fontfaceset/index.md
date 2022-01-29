@@ -12,7 +12,7 @@ browser-compat: api.FontFaceSet
 ---
 {{APIRef("CSS Font Loading API")}}
 
-The **`FontFaceSet`** interface of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) manages the loading of font-faces and querying of their download status. It is available as {{domxref("Document.fonts")}}.
+The **`FontFaceSet`** interface of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) manages the loading of font-faces and querying of their download status. It is available as {{domxref("Document.fonts")}}.
 
 ## Properties
 
@@ -30,7 +30,7 @@ The **`FontFaceSet`** interface of the [CSS Font Loading API](/en-US/docs/Web/AP
 - {{domxref("FontFaceSet.onloadingdone")}}
   - : An {{domxref("EventListener")}} called whenever an event of type `loadingdone` is fired, indicating that a font face set has finished loading.
 - {{domxref("FontFaceSet.onloadingerror")}}
-  - : An {{domxref("EventListener")}} called whenever an event of type `loadingerror` is fired, indicating that an error occurred whilst loading a font-face set.
+  - : An {{domxref("EventListener")}} called whenever an event of type `loadingerror` is fired, indicating that an error occurred whilst loading a font-face set.
 
 ## Methods
 

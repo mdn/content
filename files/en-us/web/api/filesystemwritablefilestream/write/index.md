@@ -11,7 +11,7 @@ tags:
   - write
 browser-compat: api.FileSystemWritableFileStream.write
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`write()`** method of the
 {{domxref("FileSystemWritableFileStream")}} interface writes content into the file the

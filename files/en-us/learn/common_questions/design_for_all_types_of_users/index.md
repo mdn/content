@@ -50,7 +50,7 @@ To keep your text readable, use a text color that contrasts well with the backgr
 
 The {{Glossary("W3C")}} defines a good color mix with an algorithm that calculates luminosity ratio between foreground and background. The calculation may seem pretty complicated, but we can rely on tools to do the job for us.
 
-Let's download and install the Paciello Group's [Color Contrast Analyser](http://www.paciellogroup.com/resources/contrastanalyser/).
+Let's download and install the Paciello Group's [Color Contrast Analyser](https://www.tpgi.com/color-contrast-checker/).
 
 > **Note:** Alternatively you can find a number of contrast checkers online, such as WebAIM's [Color Contrast Checker](https://webaim.org/resources/contrastchecker/). We suggest a local checker because it comes packaged with an on-screen color picker to find out a color value.
 

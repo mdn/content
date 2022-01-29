@@ -8,9 +8,9 @@ tags:
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
-HTML Drag and Drop interfaces enable web applications to drag and drop files on a web page. This document describes how an application can accept one or more files that are dragged from the underlying platform's _file manager_ and dropped on a web page.
+HTML Drag and Drop interfaces enable web applications to drag and drop files on a web page. This document describes how an application can accept one or more files that are dragged from the underlying platform's _file manager_ and dropped on a web page.
 
-The main steps to drag and drop are to define a _drop zone_ (i.e. a target element for the file drop) and to define event handlers for the {{event("drop")}} and {{event("dragover")}} events. These steps are described below, including example code snippets. The full source code is available in [MDN's drag-and-drop repository](https://github.com/mdn/dom-examples/tree/master/drag-and-drop) (pull requests and/or issues are welcome).
+The main steps to drag and drop are to define a _drop zone_ (i.e. a target element for the file drop) and to define event handlers for the {{event("drop")}} and {{event("dragover")}} events. These steps are described below, including example code snippets. The full source code is available in [MDN's drag-and-drop repository](https://github.com/mdn/dom-examples/tree/master/drag-and-drop) (pull requests and/or issues are welcome).
 
 Note that {{domxref("HTML_Drag_and_Drop_API","HTML drag and drop")}} defines two different APIs to support dragging and dropping files. One API is the {{domxref("DataTransfer")}} interface and the second API is the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces. This example illustrates the use of both APIs (and does not use any Gecko specific interfaces).
 
@@ -48,7 +48,7 @@ Lastly, an application may want to style the drop target element to visually ind
 
 The {{event("drop")}} event is fired when the user drops the file(s). In the following drop handler, if the browser supports {{domxref("DataTransferItemList")}} interface, the {{domxref("DataTransferItem.getAsFile","getAsFile()")}} method is used to access each file; otherwise the {{domxref("DataTransfer")}} interface's {{domxref("DataTransfer.files","files")}} property is used to access each file.
 
-This example shows how to write the name of each dragged file to the console. In a _real_ application, an application may want to process a file using  the {{domxref("File","File API")}}.
+This example shows how to write the name of each dragged file to the console. In a _real_ application, an application may want to process a file using  the {{domxref("File","File API")}}.
 
 Note that in this example, any drag item that is not a file is ignored.
 
@@ -69,7 +69,7 @@ function dropHandler(ev) {
       }
     }
   } else {
-    // Use DataTransfer interface to access the file(s)
+    // Use DataTransfer interface to access the file(s)
     for (var i = 0; i < ev.dataTransfer.files.length; i++) {
       console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
     }

@@ -161,7 +161,7 @@ The control should now appear as a link, as shown below on the _Author detail_ p
 
 ## What does it look like?
 
-Run the application and open your browser to <http://localhost:3000/>.
+Run the application and open your browser to `http://localhost:3000/`.
 Then select the _All authors_ link, and then select a particular author. Finally select the _Delete author_ link.
 
 If the author has no books, you'll be presented with a page like this.

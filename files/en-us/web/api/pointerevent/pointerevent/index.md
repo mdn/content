@@ -51,8 +51,7 @@ and untrusted {{domxref("PointerEvent")}} object instance.
 
     > **Note:** The `PointerEventInit` dictionary also
     > accepts fields from the {{domxref("MouseEvent.MouseEvent","MouseEvent")}},
-    > {{domxref("UIEvent.UIEvent", "UIEventInit")}} and {{domxref("Event.Event",
-				"EventInit")}} dictionaries.
+    > {{domxref("UIEvent.UIEvent", "UIEventInit")}} and {{domxref("Event.Event", "EventInit")}} dictionaries.
 
 ## Example
 

@@ -9,7 +9,7 @@ tags:
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
 
-The Cookie Store API provides an asychronous API for managing cookies, while also exposing cookies to {{domxref("Service Worker API", "service workers")}}.
+The Cookie Store API provides an asynchronous API for managing cookies, while also exposing cookies to {{domxref("Service Worker API", "service workers")}}.
 
 ## Concepts and Usage
 

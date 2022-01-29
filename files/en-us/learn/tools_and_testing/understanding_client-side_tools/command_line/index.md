@@ -55,7 +55,7 @@ The terminal originates from around the 1950s-60s and its original form really d
 
 Since then, the terminal has remained a constant feature of all operating systems — from desktop machines, to servers tucked away in the cloud, to microcomputers like the Raspberry PI Zero, and even to mobile phones. It provides direct access to the computer’s underlying file system and low-level features, and is therefore incredibly useful for performing complex tasks rapidly, if you know what you are doing.
 
-It is also useful for automation — for example to write a command to update the titles of hundreds of files instantly, say from “ch01-xxxx.png”  to “ch02-xxxx.png”. If you updated the file names using your finder or explorer GUI app, it would take you a long time.
+It is also useful for automation — for example to write a command to update the titles of hundreds of files instantly, say from “ch01-xxxx.png” to “ch02-xxxx.png”. If you updated the file names using your finder or explorer GUI app, it would take you a long time.
 
 Anyway, the terminal is not going away anytime soon.
 
@@ -103,7 +103,7 @@ In terms of what option to choose on Windows, we’d strongly recommend trying t
 
 #### Side note: what's the difference between a command line and a terminal?
 
-Generally you'll find these two terms used interchangeably. Technically, a terminal is software that starts and connects to a shell. A shell is your session and session environment (where things like the prompt and shortcuts might be customised). The command line is the literal line where you enter commands and the cursor blinks.
+Generally you'll find these two terms used interchangeably. Technically, a terminal is software that starts and connects to a shell. A shell is your session and session environment (where things like the prompt and shortcuts might be customized). The command line is the literal line where you enter commands and the cursor blinks.
 
 ### Do you _have_ to use the terminal?
 
@@ -135,7 +135,7 @@ Let's move forward and look at using a few of these tools on the command line. B
 
 When you visit the command line you will inevitably need to navigate to a particular directory to "do something". All the operating systems (assuming a default setup) will launch their terminal program in your "home" directory, and from there you’re likely to want to move to a different place.
 
-The `cd` command lets you Change Directory. Technically, cd isn’t a program but a built-in. This means your operating system provides it out of the box, and also that you can’t accidentally delete it — thank goodness!  You don’t need to worry too much about whether a command is a built-in or not, but bear in mind that built-ins appear on all unix-based systems.
+The `cd` command lets you Change Directory. Technically, cd isn’t a program but a built-in. This means your operating system provides it out of the box, and also that you can’t accidentally delete it — thank goodness! You don’t need to worry too much about whether a command is a built-in or not, but bear in mind that built-ins appear on all unix-based systems.
 
 To change directory, you type `cd` into your terminal, followed by the directory you want to move to. Assuming the directory is inside your home directory, you can use `cd Desktop` (see the screenshots below).
 
@@ -173,7 +173,7 @@ cd Desktop/project/src
 
 Note that including a leading slash on your path makes the path absolute, for example `/Users/your-user-name/Desktop`. Omitting the leading slash like we’ve done above makes the path relative to the your present working directory. This is exactly the same as you would see with URLs in your web browser. A leading slash means "at the root of the web site", whereas omitting the slash means "the URL is relative to my current page".
 
-> **Note:** On windows you use backslashes instead of forward slashes, e.g. `cd Desktop\project\src` — this may seem really odd, but if you are interested in why, [watch this YouTube clip](https://www.youtube.com/watch?v=5T3IJfBfBmI) featuring an explanation by one of Microsoft’s Principal engineers.
+> **Note:** On windows you use backslashes instead of forward slashes, e.g. `cd Desktop\project\src` — this may seem really odd, but if you are interested in why, [watch this YouTube clip](https://www.youtube.com/watch?v=5T3IJfBfBmI) featuring an explanation by one of Microsoft’s Principal engineers.
 
 ### Listing directory contents
 
@@ -199,7 +199,7 @@ ls -l
 
 In the case of `ls`, the `-l` (_dash ell_) option gives you a listing with one file or directory on each line, and a lot more information shown. Directories can be identified by looking for a letter "d" on the very left-hand side of the lines. Those are the ones we can `cd` into.
 
-Below is a screenshot with a “vanilla” macOS terminal at the top, and a customised terminal with some extra icons and colors to keep it looking lively — both showing the results of running `ls -l`:
+Below is a screenshot with a “vanilla” macOS terminal at the top, and a customized terminal with some extra icons and colors to keep it looking lively — both showing the results of running `ls -l`:
 
 ![A vanilla mac terminal and a more colorful custom mac terminal, showing a file listing - the result of running the ls -l command](mac-terminals-ls.png)
 
@@ -312,7 +312,7 @@ Your final output should look something like this:
 https://developer.mozilla.org/en-US/docs/Web/API/fetch
 ```
 
-By combining these commands we've customised the output to show the full URLs that the Mozilla server is redirecting through when we request the `/docs/Web/API/WindowOrWorkerGlobalScope/fetch` URL.
+By combining these commands we've customized the output to show the full URLs that the Mozilla server is redirecting through when we request the `/docs/Web/API/WindowOrWorkerGlobalScope/fetch` URL.
 Getting to know your system will prove useful in years to come — learn how these single serving tools work and how they can become part of your arsenal to solve niche problems.
 
 ## Adding powerups

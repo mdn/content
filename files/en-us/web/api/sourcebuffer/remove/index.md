@@ -14,7 +14,7 @@ tags:
   - remove
 browser-compat: api.SourceBuffer.remove
 ---
-{{draft}}{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 The **`remove()`** method of the {{domxref("SourceBuffer")}}
 interface removes media segments within a specific time range from the

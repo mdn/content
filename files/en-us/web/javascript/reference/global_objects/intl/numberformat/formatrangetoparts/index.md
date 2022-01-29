@@ -143,5 +143,4 @@ formatter.formatRangeToParts(startRange, endRange)
 
 - {{jsxref("Intl.NumberFormat")}}
 - {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format")}}
-- Formatting dates: {{jsxref("Intl/DateTimeFormat/formatRangeToParts",
-		"Intl.DateTimeFormat.prototype.formatRangeToParts()")}}
+- Formatting dates: {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}

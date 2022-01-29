@@ -96,13 +96,17 @@ If you use this call, you will get a mono buffer with just one channel), that wh
 
 The Web Audio API uses a planar buffer format. The left and right channels are stored like this:
 
-    LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR (for a buffer of 16 frames)
+```
+LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR (for a buffer of 16 frames)
+```
 
 This is very common in audio processing: it makes it easy to process each channel independently.
 
 The alternative is to use an interleaved buffer format:
 
-    LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR (for a buffer of 16 frames)
+```
+LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR (for a buffer of 16 frames)
+```
 
 This format is very common for storing and playing back audio without much processing, for example a decoded MP3 stream.
 

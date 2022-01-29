@@ -225,14 +225,14 @@ The following uses an XML document located at `chrome://yourextension/content/pe
 <?xml version="1.0"?>
 <people xmlns:xul = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
   <person>
-	<name first="george" last="bush" />
-	<address street="1600 pennsylvania avenue" city="washington" country="usa"/>
-	<phoneNumber>202-456-1111</phoneNumber>
+    <name first="george" last="bush" />
+    <address street="1600 pennsylvania avenue" city="washington" country="usa"/>
+    <phoneNumber>202-456-1111</phoneNumber>
   </person>
   <person>
-	<name first="tony" last="blair" />
-	<address street="10 downing street" city="london" country="uk"/>
-	<phoneNumber>020 7925 0918</phoneNumber>
+    <name first="tony" last="blair" />
+    <address street="10 downing street" city="london" country="uk"/>
+    <phoneNumber>020 7925 0918</phoneNumber>
   </person>
 </people>
 ```

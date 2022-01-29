@@ -46,7 +46,9 @@ A {{domxref("DOMString")}} that indicates what network protocol the candidate us
 
 Here's an example candidate a-line from an ICE transaction:
 
-    a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
+a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```
 
 The third field, `"udp"`, is the protocol type, indicating that the
 candidate would use the UDP transport protocol.

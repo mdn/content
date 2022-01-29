@@ -41,8 +41,10 @@ The possible values are:
 
 ## Example
 
-    var pc = new RTCPeerConnection();
-    var state = pc.iceGatheringState;
+```js
+var pc = new RTCPeerConnection();
+var state = pc.iceGatheringState;
+```
 
 ## Specifications
 

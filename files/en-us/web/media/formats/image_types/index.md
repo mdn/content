@@ -66,7 +66,7 @@ The image file formats that are most commonly used on the web are listed below.
       <td>
         <p>
           Good choice for both images and animated images due to high performance and royalty free image format.
-          It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency etc.
+          It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency etc.
           Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e. using the
           <code><a href="/en-US/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> element).<br />
           <strong>Supported:</strong> Chrome, Opera, Firefox (still images only: animated images not implemented).
@@ -79,9 +79,9 @@ The image file formats that are most commonly used on the web are listed below.
       <td><code>image/gif</code></td>
       <td><code>.gif</code></td>
       <td>
-        Good choice for simple images and animations. Prefer PNG for
-        lossless <em>and</em> indexed still images, and consider WebP, AVIF or APNG for animation sequences.<br />
-        <strong>Supported:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
+        Good choice for simple images and animations. Prefer PNG for
+        lossless <em>and</em> indexed still images, and consider WebP, AVIF or APNG for animation sequences.<br />
+        <strong>Supported:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
       </td>
     </tr>
     <tr>
@@ -98,7 +98,7 @@ The image file formats that are most commonly used on the web are listed below.
         <p>
           Good choice for lossy compression of still images (currently the most
           popular). Prefer PNG when more precise reproduction of the image is
-          required, or WebP/AVIF if both better reproduction and highercompression are required.<br />
+          required, or WebP/AVIF if both better reproduction and highercompression are required.<br />
           <strong>Support:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
         </p>
       </td>
@@ -110,8 +110,8 @@ The image file formats that are most commonly used on the web are listed below.
       <td><code>.png</code></td>
       <td>
         <p>
-          PNG is preferred over JPEG for more precise reproduction of source
-          images, or when transparency is needed. WebP/AVIF provide even better compression and reproduction, but browser support is more limited.<br />
+          PNG is preferred over JPEG for more precise reproduction of source
+          images, or when transparency is needed. WebP/AVIF provide even better compression and reproduction, but browser support is more limited.<br />
           <strong >Support:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
         </p>
       </td>
@@ -133,7 +133,7 @@ The image file formats that are most commonly used on the web are listed below.
       <td><code>.webp</code></td>
       <td>
         Excellent choice for both images and animated images.
-        WebP offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency etc.
+        WebP offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency etc.
         AVIF offers slightly better compression, but is not quite as well-supported in browsers and does not support progressive rendering.<br />
         <strong>Support:</strong> Chrome, Edge, Firefox, Opera, Safari
       </td>
@@ -141,9 +141,9 @@ The image file formats that are most commonly used on the web are listed below.
   </tbody>
 </table>
 
-> **Note:** The older formats like PNG, JPEG, GIF have poor performance compared to newer formats like WebP and AVIF, but enjoy broader "historical" browser support. The newer image formats are seeing increasing popularity as browsers without support become increasingly irrelevant (i.e. have virtually zero market share).
+> **Note:** The older formats like PNG, JPEG, GIF have poor performance compared to newer formats like WebP and AVIF, but enjoy broader "historical" browser support. The newer image formats are seeing increasing popularity as browsers without support become increasingly irrelevant (i.e. have virtually zero market share).
 
-The following list includes image formats that appear on the web, but which should be avoided for web content (generally this is because either they do not have wide browser support, or because there are better alternatives).
+The following list includes image formats that appear on the web, but which should be avoided for web content (generally this is because either they do not have wide browser support, or because there are better alternatives).
 
 <table class="standard-table">
   <thead>
@@ -297,11 +297,11 @@ They're also commonly used for the animated portions of web browsers' user inter
   </tbody>
 </table>
 
-### AVIF image
+### AVIF image
 
-AV1 Image File Format (AVIF) is a powerful, open source, royalty-free file format that encodes *AV1 bitstreams in the High Efficiency Image File Format (HEIF) container.*
+AV1 Image File Format (AVIF) is a powerful, open source, royalty-free file format that encodes *AV1 bitstreams in the High Efficiency Image File Format (HEIF) container.*
 
-> **Note:** AVIF has potential to become the "next big thing" for sharing images in web content.
+> **Note:** AVIF has potential to become the "next big thing" for sharing images in web content.
 > It offers state-of-the-art features and performance, without the encumbrance of complicated licensing and patent royalties that have hampered comparable alternatives.
 
 AV1 is a coding format that was originally designed for video transmission over the Internet.
@@ -310,20 +310,20 @@ However it also has disadvantages for some cases, as video and image encoding ha
 
 The format offers:
 
-- Excellent lossy compression compared to JPG and PNG for visually similar compression levels (e.g. lossy AVIF images are around 50% smaller than JPEG images).
-- Generally AVIF has better compression than WebP — median 50% vs 30% compression for the same JPG set (source: [AVIF WebP Comparision](https://www.ctrl.blog/entry/webp-avif-comparison.html) (CTRL Blog)).
+- Excellent lossy compression compared to JPG and PNG for visually similar compression levels (e.g. lossy AVIF images are around 50% smaller than JPEG images).
+- Generally AVIF has better compression than WebP — median 50% vs 30% compression for the same JPG set (source: [AVIF WebP Comparison](https://www.ctrl.blog/entry/webp-avif-comparison.html) (CTRL Blog)).
 - Lossless compression.
-- Animation/multi-image storage (similar to animated GIFs, but with much better compression)
+- Animation/multi-image storage (similar to animated GIFs, but with much better compression)
 - Alpha channel support (i.e. for transparency).
-- _High Dynamic Range_ (HDR): support for storing images that can represent bigger contrasts between the lightest and darkest parts of the image.
+- _High Dynamic Range_ (HDR): support for storing images that can represent bigger contrasts between the lightest and darkest parts of the image.
 - Wide Color Gamut: Support for images that can contain a larger range of colors.
 
 AVIF does not support progressive rendering, so files must be fully downloaded before they can be displayed.
-This often has little impact on real-world user experience because AVIF files are much smaller than the equivalent JPEG or PNG files, and hence can be downloaded and displayed much faster.
-For larger file size the impact can become significant, and you should consider using a format that supports progressive rendering.
+This often has little impact on real-world user experience because AVIF files are much smaller than the equivalent JPEG or PNG files, and hence can be downloaded and displayed much faster.
+For larger file size the impact can become significant, and you should consider using a format that supports progressive rendering.
 
 AVIF is supported on desktop in Chrome, Opera and Firefox (Firefox supports still images but not animations).
-As support is not yet comprehensive (and has little historical depth) you should provide a fallback in {{anch("WebP")}}, {{anch("JPEG")}} or {{anch("PNG")}} format using [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture) (or some other approach).
+As support is not yet comprehensive (and has little historical depth) you should provide a fallback in {{anch("WebP")}}, {{anch("JPEG")}} or {{anch("PNG")}} format using [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture) (or some other approach).
 
 <table class="standard-table">
   <tbody>
@@ -357,8 +357,8 @@ As support is not yet comprehensive (and has little historical depth) you should
             Animated images are not supported.
           </li>
           <li>
-            Firefox 77 to 92 require the preference
-            <code>image.avif.enable</code> set <code>true</code>. Earlier versions provide only basic support.
+            Firefox 77 to 92 require the preference
+            <code>image.avif.enable</code> set <code>true</code>. Earlier versions provide only basic support.
           </li>
         </ul>
       </td>
@@ -371,8 +371,8 @@ As support is not yet comprehensive (and has little historical depth) you should
       <th scope="row">Supported color modes</th>
       <td>
         <p>
-          Color mode support information is provided in the
-          <a href="https://aomediacodec.github.io/av1-spec/av1-spec.pdf">AV1 Bitstream &#x26; Decoding Process Specification</a>, section 6.4.2 : Color config semantics.
+          Color mode support information is provided in the
+          <a href="https://aomediacodec.github.io/av1-spec/av1-spec.pdf">AV1 Bitstream &#x26; Decoding Process Specification</a>, section 6.4.2 : Color config semantics.
         </p>
         <p>A non-exhaustive summary is:</p>
         <ul>
@@ -406,7 +406,7 @@ As support is not yet comprehensive (and has little historical depth) you should
 The **BMP** (**Bitmap image**) file type is most prevalent on Windows computers, and is generally used only for special cases in web apps and content.
 
 > **Warning:** You should typically avoid using BMP files for web site content.
-> The most common form of BMP file represents the data as an uncompressed raster image, resulting in large file sizes compared to png or jpg image types.
+> The most common form of BMP file represents the data as an uncompressed raster image, resulting in large file sizes compared to png or jpg image types.
 > More efficient BMP formats exist but are not widely used, and rarely supported in web browsers.
 
 BMP theoretically supports a variety of internal data representations.

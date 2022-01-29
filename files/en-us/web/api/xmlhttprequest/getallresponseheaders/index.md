@@ -47,17 +47,19 @@ network error happened, an empty string is returned.
 
 An example of what a raw header string looks like:
 
-    date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
-    content-encoding: gzip\r\n
-    x-content-type-options: nosniff\r\n
-    server: meinheld/0.6.1\r\n
-    x-frame-options: DENY\r\n
-    content-type: text/html; charset=utf-8\r\n
-    connection: keep-alive\r\n
-    strict-transport-security: max-age=63072000\r\n
-    vary: Cookie, Accept-Encoding\r\n
-    content-length: 6502\r\n
-    x-xss-protection: 1; mode=block\r\n
+```
+date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
+content-encoding: gzip\r\n
+x-content-type-options: nosniff\r\n
+server: meinheld/0.6.1\r\n
+x-frame-options: DENY\r\n
+content-type: text/html; charset=utf-8\r\n
+connection: keep-alive\r\n
+strict-transport-security: max-age=63072000\r\n
+vary: Cookie, Accept-Encoding\r\n
+content-length: 6502\r\n
+x-xss-protection: 1; mode=block\r\n
+```
 
 Each line is terminated by both carriage return and line feed characters
 (`\r\n`). These are essentially delimiters separating each of the headers.

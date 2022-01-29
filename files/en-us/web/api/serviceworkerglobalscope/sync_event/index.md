@@ -9,7 +9,7 @@ tags:
   - events
 browser-compat: api.ServiceWorkerGlobalScope.sync_event
 ---
-{{draft}}{{DefaultAPISidebar("Background Sync")}}
+{{DefaultAPISidebar("Background Sync")}}
 
 The **`sync`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when the page (or worker) that registered the event with the {{domxref('SyncManager')}} is running and as soon as network connectivity is available.
 

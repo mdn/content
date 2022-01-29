@@ -292,7 +292,7 @@ All media types based upon the {{interwiki("wikipedia", "ISO Base Media File For
 | `audio/3gp2`      | 3GP2 audio ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                                |
 | `video/3gp2`      | 3GP2 video ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                                |
 | `audio/mp4`       | MP4 audio ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                                     |
-| `video/mp4`       | MP4 audio ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                                     |
+| `video/mp4`       | MP4 video ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                                     |
 | `application/mp4` | Non-audiovisual media encapsulated in MPEG-4                                                                                                         |
 
 Each codec described by the `codecs` parameter can be specified either as the container's name (`3gp`, `mp4`, `quicktime`, etc.) or as the container name plus additional parameters to specify the codec and its configuration. Each entry in the codec list may contain some number of components, separated by periods (`.`).

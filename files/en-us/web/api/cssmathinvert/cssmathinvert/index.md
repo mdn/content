@@ -11,7 +11,7 @@ tags:
   - Houdini
 browser-compat: api.CSSMathInvert.CSSMathInvert
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSMathInvert()`** constructor creates a
 new {{domxref("CSSMathInvert")}} object which represents a CSS

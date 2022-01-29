@@ -20,44 +20,44 @@ When writing drag and drop code, sometimes you'll find that text on the page get
 
 The methods `addEventListener()` and `removeEventListener()` are very useful when writing interactive SVG. You can pass an object that implements the `handleEvent` interface as the second parameter to these methods.
 
-    function myRect(x,y,w,h,message){
-    this.message=message
+```js
+function myRect(x, y, w, h, message) {
+  this.message=message
 
-<!---->
+  this.rect=document.createElementNS("http://www.w3.org/2000/svg","rect")
+  this.rect.setAttributeNS(null,"x",x)
+  this.rect.setAttributeNS(null,"y",y)
+  this.rect.setAttributeNS(null,"width",w)
+  this.rect.setAttributeNS(null,"height",h)
+  document.documentElement.appendChild(this.rect)
 
-     this.rect=document.createElementNS("http://www.w3.org/2000/svg","rect")
-     this.rect.setAttributeNS(null,"x",x)
-     this.rect.setAttributeNS(null,"y",y)
-     this.rect.setAttributeNS(null,"width",w)
-     this.rect.setAttributeNS(null,"height",h)
-     document.documentElement.appendChild(this.rect)
+  this.rect.addEventListener("click",this,false)
 
-<!---->
-
-     this.rect.addEventListener("click",this,false)
-
-<!---->
-
-     this.handleEvent= function(evt){
-       switch (evt.type){
-        case "click":
-         alert(this.message)
-         break;
-        }
-       }
-      }
+  this.handleEvent= function(evt){
+    switch (evt.type){
+    case "click":
+      alert(this.message)
+      break;
+    }
+  }
+}
+```
 
 ### Inter-document scripting: referencing embedded SVG
 
 When using SVG within HTML, Adobe's SVG Viewer 3.0 automatically includes a window property called `svgDocument` that points to the SVG document. This is not the case for Mozilla's native SVG implementation; therefore, using `window.svgDocument` does not work in Mozilla. Instead, you can use
 
-    var svgDoc=document.embeds["name_of_svg"].getSVGDocument();
+```js
+var svgDoc=document.embeds["name_of_svg"].getSVGDocument();
+```
 
 to get a reference to an embedded SVG document instead.
 
 The best way to get access to the {{domxref("Document")}} representing an SVG document is to look at {{domxref("HTMLIFrameElement.contentDocument")}} (if the document is presented in an {{HTMLElement("iframe")}}) or {{domxref("HTMLObjectElement.contentDocument")}} (if the document is presented in an {{HTMLElement("object")}} element), like this:
 
-    var svgDoc = document.getElementById("iframe_element").contentDocument;
+```js
+var svgDoc = document.getElementById("iframe_element").contentDocument;
+```
 
 In addition, the {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, and {{HTMLElement("object")}} elements offer a method, `getSVGDocument()`, which returns the {{domxref("XMLDocument")}} representing the element's embedded SVG or `null` if the element doesn't represent an SVG document.
 
