@@ -44,7 +44,7 @@ For `slider`, unless using the  [`<input type="range">`](/en-US/docs/Web/HTML/El
 
 The optional [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) is included when the `aria-valuenow` numeric value doesn't reflect the intended value of the slider.  As the minimum, maximum and current values are all numeric, when the values those numbers represent are not numeric, the `aria-valuetext` should be included with a string value defining the numeric value.  For example, if using a slider for t-shirt sizes, the `aria-valuetext` should shift from xx-small thru to XX-large as the `aria-valuenow` increases. 
 
-The `aria-valuetext` value must be updated as the `value` or `aria-valuenow` is updated. While there is no equivalent HTML attribute for `<input type="range">, you can include [`aria-valuetext`] on any `<input>` type. ARIA attributes are supported on semantic HTML elements. 
+The `aria-valuetext` value must be updated as the `value` or `aria-valuenow` is updated. While there is no equivalent HTML attribute for `<input type="range">, you can include `aria-valuetext` on any {{htmlelement('input')}} type. ARIA attributes are supported on semantic HTML elements. 
 
 When `aria-valuetext` is an important feature for a slider, consider using {{HTMLElement('select')}} with {{HTMLElement('option')}}s instead. While not visually a range, every option's value is more accessible to all users, not just users of assistive technology. 
 
@@ -70,7 +70,7 @@ In many two-thumb sliders, the thumbs are not allowed to pass one another, such 
 
 It is not a requirement that the thumbs in multi-thumb sliders be dependent on the other thumb values, but intuitive user experience is a requirement, so it is recommended to avoid this anti-pattern.
 
-### Associated WAI-ARIA roles, states, and properties
+## Associated WAI-ARIA roles, states, and properties
 
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) (required)
   - : Set to a decimal value between `aria-valuemin` and `aria-valuemax` indicating the current value of the slider.
@@ -82,6 +82,8 @@ It is not a requirement that the thumbs in multi-thumb sliders be dependent on t
   - : Set to a decimal value representing the maximum value, and greater than `aria-valuemin`. If not present, the default value is 100.
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
   - : Defines the string value or identifies the element (or elements) that label the slider element providing an accessible name. An accessible name is required.
+- [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) 
+  - : Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous. With slider, the implicit value is `horizontal`, but can be set to `vertical`. As it has an implicit value, the slider orientation is never ambiguous.
 
 
 ## Examples
@@ -107,7 +109,7 @@ In the example below, we create a vertical thermometer with which the user can s
 </div>
 ````
 
-The position of the thumb is the maximum value minus the  current value times the height of one unit, minus half the height of the thumb to center it. The rest of the styles are static.
+The position of the thumb is the maximum value minus the current value times the height of one degree, minus half the height of the thumb to center it. The rest of the styles are static.
 
 ```css
 [id="temperatureSlider"] {
@@ -127,9 +129,9 @@ The position of the thumb is the maximum value minus the  current value times th
 }
 ```
 
+For this example to work, we have to write a script to handle all keyboard and pointer events, including event listeners for `pointermove`, `pointerup`, `focus`, `blur`, and `keydown`, and provide styles for the default state and when the thumb receive and slider receive focus. The position of the thumb, the `aria-valuenow` and`aria-valuetext` values, and the inner text of the element with the {{HTMLattrxref('id')}} "temperatureValue" need to be updated everytime <kbd>ArrowLeft</kbd>, <kbd>ArrowDown</kbd>, <kbd>ArrowRight</kbd>, <kbd>ArrowUp</kbd>, <kbd>Home</kbd>, <kbd>End</kbd>, and, optionally, <kbd>PageDown</kbd> and <kbd>PageUp</kbd> keys are released and when the user drags the thumb or otherwise clicks on the temperature slider. 
 
-
-Using semantic HTML, this could be written as:
+Using semantic HTML, this could have been written as:
 
 ```html
 <label for="temperature">
@@ -138,8 +140,13 @@ Using semantic HTML, this could be written as:
 <output id="temperatureValue">20°C</output>
 <input type="range" id="temperatureSlider"
   min="15" max="25" step="0.1"
-  value="20" aria-valuetext="20 degrees celcius" />
+  value="20" aria-valuetext="20 degrees celcius"
+  style="transform: rotate(-90deg);" />
 ```
+
+By using {{HTMLElement('input')}} we get an already styled range input widget with keyboard focus, focus styling, keyboard interactions, and `value` updated on user interaction for free. We still need to use JavaScript to change the `aria-valuetext` and the value of the {{HTMLElement('output')}}.
+
+There are a few ways to make a range input vertical. In this example, we used [CSS transforms](/en-US/docs/Web/CSS/transform).
 
 ## Keyboard interactions
 
@@ -172,13 +179,19 @@ It is recommended to use a native {{HTMLElement("input")}} of type `range`, [`<i
 
 ## See Also
 
+- [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range),
 - HTML {{HTMLElement('progress')}} element
+- HTML {{HTMLElement('meter')}} element
 - Other range widgets include:
   - [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role)
   - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
   - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (if focusable)
   - [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
   - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
+- Working examples:
+  - [Horizontal Multi-Thumb Slider](https://www.w3.org/TR/2019/WD-wai-aria-practices-1.2-20191218/examples/slider/multithumb-slider.html)
+  - [Horizontal Slider](https://www.w3.org/TR/2019/WD-wai-aria-practices-1.2-20191218/examples/slider/slider-1.html)
+  - [Slider with `aria-orientation` and `aria-valuetext`](https://www.w3.org/TR/2019/WD-wai-aria-practices-1.2-20191218/examples/slider/slider-2.html)
 
 <section id="Quick_links">
 
