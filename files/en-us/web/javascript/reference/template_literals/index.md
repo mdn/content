@@ -34,7 +34,7 @@ Template literals are sometimes informally called *template strings*, but they a
 
 `string text ${expression} string text`
 
-// re-usable template
+// Re-usable template:
 const templateFn = expression => `string text ${expression} string text`;
 
 // Tagged, this calls the function "example" with the template as the
