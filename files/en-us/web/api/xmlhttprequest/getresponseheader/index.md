@@ -53,7 +53,7 @@ response.
 
 ## Example
 
-In this example, a request is created and sent, and a {{Event("readystatechange")}}
+In this example, a request is created and sent, and a {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}}
 handler is established to look for the {{DOMxRef("XMLHttpRequest.readyState",
   "readyState")}} to indicate that the headers have been received; when that is the case,
 the value of the {{httpheader("Content-Type")}} header is fetched. If the
