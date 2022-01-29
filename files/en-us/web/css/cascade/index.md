@@ -49,18 +49,20 @@ The user (or reader) of the web site can choose to override styles in many brows
 The cascading algorithm determines how to find the value to apply for each property for each document element.
 
 1.  It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate `media` at-rule.
-2.  Then it sorts these rules according to their importance, that is, whether or not they are followed by `!important`, and by their origin. The cascade is in ascending order, which means that `!important` values from a user-defined style sheet have precedence over normal values originated from a user-agent style sheet:
+2.  Then it sorts these rules according to their importance, that is, whether or not they are followed by `!important`, and by their origin. The precedence of the various origins is, in descending order, which means that `!important` values from a user-agent style sheet have precedence over normal values originated from an author style sheet.
+
+    Declarations from origins earlier in this table win over declarations from later origins:
 
     |     | Origin      | Importance   |
     | --- | ----------- | ------------ |
-    | 1   | user agent  | normal       |
-    | 2   | user        | normal       |
-    | 3   | author      | normal       |
-    | 4   | animations  |              |
-    | 5   | author      | `!important` |
-    | 6   | user        | `!important` |
-    | 7   | user agent  | `!important` |
-    | 8   | transitions |              |
+    | 1   | transitions |              |
+    | 2   | user-agent  | `!important` |
+    | 3   | user        | `!important` |
+    | 4   | author      | `!important` |
+    | 5   | animations  |              |
+    | 6   | author      | normal       |
+    | 7   | user        | normal       |
+    | 8   | user agent  | normal       |
 
 3.  In case of equality, the [specificity](/en-US/docs/Web/CSS/Specificity) of a value is considered to choose one or the other.
 
