@@ -65,7 +65,7 @@ sensor.start();
 
 ### Permissions Example
 
-Using orientation sensors requires requsting permissions for multiple device sensors. Becuase the {{domxref('Permissions')}} interface uses promises, a good way to request permissions is to use {{jsxref('Promise.all')}}.
+Using orientation sensors requires requesting permissions for multiple device sensors. Because the {{domxref('Permissions')}} interface uses promises, a good way to request permissions is to use {{jsxref('Promise.all')}}.
 
 ```js
 const sensor = new RelativeOrientationSensor();
