@@ -40,14 +40,14 @@ The following events can be triggered on an upload object and used to monitor th
   </thead>
   <tbody>
     <tr>
-      <td>{{event("loadstart")}}</td>
+      <td>{{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}</td>
       <td>
         {{domxref("XMLHttpRequest.onloadstart", "onloadstart")}}
       </td>
       <td>The upload has begun.</td>
     </tr>
     <tr>
-      <td>{{event("progress")}}</td>
+      <td>{{domxref("XMLHttpRequest/progress_event", "progress")}}</td>
       <td>
         {{domxref("XMLHttpRequest.onprogress", "onprogress")}}
       </td>
@@ -56,22 +56,22 @@ The following events can be triggered on an upload object and used to monitor th
       </td>
     </tr>
     <tr>
-      <td>{{event("abort")}}</td>
+      <td>{{domxref("XMLHttpRequest/abort_event", "abort")}}</td>
       <td>{{domxref("XMLHttpRequest.onabort", "onabort")}}</td>
       <td>The upload operation was aborted.</td>
     </tr>
     <tr>
-      <td>{{event("error")}}</td>
+      <td>{{domxref("XMLHttpRequest/error_event", "error")}}</td>
       <td>{{domxref("XMLHttpRequest.onerror", "onerror")}}</td>
       <td>The upload failed due to an error.</td>
     </tr>
     <tr>
-      <td>{{event("load")}}</td>
+      <td>{{domxref("XMLHttpRequest/load_event", "load")}}</td>
       <td>{{domxref("XMLHttpRequest.onload", "onload")}}</td>
       <td>The upload completed successfully.</td>
     </tr>
     <tr>
-      <td>{{event("timeout")}}</td>
+      <td>{{domxref("XMLHttpRequest/timeout_event", "timeout")}}</td>
       <td>
         {{domxref("XMLHttpRequest.ontimeout", "ontimeout")}}
       </td>
@@ -82,7 +82,7 @@ The following events can be triggered on an upload object and used to monitor th
       </td>
     </tr>
     <tr>
-      <td>{{event("loadend")}}</td>
+      <td>{{domxref("XMLHttpRequest/loadend_event", "loadend")}}</td>
       <td>
         {{domxref("XMLHttpRequest.onloadend", "onloadend")}}
       </td>
