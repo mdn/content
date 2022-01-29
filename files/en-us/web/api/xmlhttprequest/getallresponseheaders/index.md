@@ -69,7 +69,7 @@ Each line is terminated by both carriage return and line feed characters
 
 ## Example
 
-This example examines the headers in the request's {{event("readystatechange")}} event
+This example examines the headers in the request's {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}} event
 handler, {{domxref("XMLHttpRequest.onreadystatechange")}}. The code shows how to obtain
 the raw header string, as well as how to convert it into an array of individual headers
 and then how to take that array and create a mapping of header names to their values.
