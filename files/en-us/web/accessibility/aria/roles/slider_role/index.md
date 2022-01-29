@@ -18,31 +18,37 @@ The `slider` role defines an input where the user selects a value from within a 
 
 The `slider` role is for range input widgets where the user selects a value from within given minimum and maximum values. 
 
+### The `slider` role compared other range options
+
 ARIA provides developers with six different range [widget roles](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles), inlcuding progressbars, meters, and sliders. 
 
-The [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role), similar to HTML's {{HTMLElement('progress')}} element, is a read-only range indicating the portion of completion of a task, progressing in a single direction, such as a loading progress bar that eventually reaches 100% when fully loaded.   
+The [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role), similar to HTML's {{HTMLElement('progress')}} element, is a read-only range indicating the portion of completion of a task, progressing in a single direction, such as a file upload's loading progress bar that eventually reaches 100% when fully loaded.   
 
 The [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role) role, similar to HTML's {{HTMLElement('meter')}} element, is a read-only guage indicating the amount of something within a known range, such as a computer's battery indicator or a car's gas guage. 
 
 The `slider` role is most similar to HTML's `input` of type `range`, [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range).  Sliders allow users to select a value between between set minimum and maximum values. The user selects a value by moving a slider thumb along a horizontal or vertical slider to select a value. 
 
+### Relevant attributes and what they mean
+
 The [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) sets the minimum value. If omitted or not a number, it defaults to `0` (zero).
 
 The [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) defines the maximum value. If it is missing or not a number, it defaults to 100.
 
-The [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) is a required attribute. The `aria-valuenow` value must be between the minimum and maximum values, inclusive. Unless using the  [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range), the value must be updated programmatically when the user updates the value.
+The required [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) attribute value must be between the minimum and maximum values, inclusive. Unless using the  [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range), the value must be updated programmatically when the user updates the value.
 
-If the `aria-valuenow` doesn't make sense, use the `aria-valuetext` to make the value more readable. For example, if using a slider for t-shirt sizes, as the minimum, maximum and current values are all numeric, the `aria-valuetext` should be updated as the value is updated with strings, such as small, medium, and large, etc.
-
-Unlike the read-only `meter` and `progressbar` roles, a `slider` is an input, accepting user interaction. Focus and keyboard support must be implemented.  
-
-The slider represents the range of possible values. The position of the slider thumb along the slider represents the current value. User actions that must be supported include changing the value by dragging the thumb or clicking the slider for pointing devices and using directional keys such as arrow keys for the keyboard users.
+The optional [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) is included when the `aria-valuenow` numeric value doesn't reflect the intended value of the slider.  As the minimum, maximum and current values are all numeric, the `aria-valuetext` should be included, and updated as the value is updated, with a string value defining the numeric value. For example, if using a slider for t-shirt sizes, the `aria-valuetext` should shift from xx-small thru to XX-large as the `aria-valuenow` increases.
 
 When not using the HTML {{HTMLElement('input')}} element to create your slider, include {{htmlattrxref('tabindex')}} to make the slider focusable.
 
 Sliders have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `horizontal`.
 
 An accessible name is **required**. If the `slider` role is applied to an HTML {{HTMLElement('input')}} element, the accessible name can come from the associated {{HTMLElement('label')}}. Otherwise use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present or  [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) if a visible label is not present. 
+
+### User interactions
+
+Unlike the read-only `meter` and `progressbar` roles, a `slider` is an input, accepting user interaction.  In addition to including the {{htmlattrxref('tabindex')}} attribute to enable slider focus, keyboard and pointer device support must be implemented.  
+
+The slider represents the range of possible values. The position of the slider thumb along the slider represents the current value. User actions that must be supported include changing the value by dragging the thumb or clicking the slider for pointing devices and using directional keys such as arrow keys for the keyboard users.
 
 ### Associated WAI-ARIA roles, states, and properties
 
