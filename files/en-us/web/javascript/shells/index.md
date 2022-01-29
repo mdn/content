@@ -1,5 +1,5 @@
 ---
-title: JavaScript shells
+title: JavaScript shells Koomi
 slug: Web/JavaScript/Shells
 tags:
   - Extensions
