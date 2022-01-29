@@ -42,12 +42,12 @@ var myHeader = XMLHttpRequest.getResponseHeader(headerName);
 ### Parameters
 
 - _headerName_
-  - : A {{jsxref("String")}} indicating the name of the header you want to return the
+  - : A string indicating the name of the header you want to return the
     text value of.
 
 ### Return value
 
-A {{jsxref("String")}} representing the header's text value, or `null`
+A string representing the header's text value, or `null`
 if either the response has not yet been received or the header doesn't exist in the
 response.
 
