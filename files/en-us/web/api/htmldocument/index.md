@@ -13,7 +13,7 @@ browser-compat: api.HTMLDocument
 ---
 {{APIRef("HTML DOM")}}
 
-The **`HTMLDocument`** interface, which may be accessed through the `Window.HTMLDocument` property, extends the `Window.HTMLDocument` property to include methods and properties that are specific to {{Glossary("HTML")}} documents.
+The **`HTMLDocument`** interface, which may be accessed through the `window.HTMLDocument` property, extends the `window.HTMLDocument` property to include methods and properties that are specific to {{Glossary("HTML")}} documents.
 
 {{InheritanceDiagram}}
 
