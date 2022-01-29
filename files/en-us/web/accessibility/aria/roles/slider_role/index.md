@@ -16,26 +16,29 @@ The `slider` role defines an input where the user selects a value from within a 
 
 ## Description
 
-The `slider` role is for when an input widget where the user selects a value from within a given range. 
+The `slider` role is for range input widgets where the user selects a value from within given minimum and maximum values. 
 
-ARIA provides developers with six different range widget roles. 
+ARIA provides developers with six different range widget roles, inlcuding progressbars, meters, and sliders. 
 
 The [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role), similar to HTML's {{HTMLElement('progress')}} element, is a read-only range indicating the portion of completion of a task, progressing in a single direction, such as a loading progress bar that eventually reaches 100% when fully loaded.   
 
 The [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role) role, similar to HTML's {{HTMLElement('meter')}} element, is a read-only guage indicating the amount of something within a known range, such as a computer's battery indicator or a car's gas guage. 
 
-The `slider` role is most similar to HTML's `input` of type `range`, [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range). The slider allows users to select a value between between a minimum and maximum value. The user selects a value by moving a slider thumb to along a horizontal or vertical slider to select a value. 
+The `slider` role is most similar to HTML's `input` of type `range`, [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range).  Sliders allow users to select a value between between set minimum and maximum values. The user selects a value by moving a slider thumb along a horizontal or vertical slider to select a value. 
+
+The [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) sets the minimum value. If omitted or not a number, it defaults to `0` (zero).
+
+The [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) defines the maximum value. If it is missing or not a number, it defaults to 100.
+
+The [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) is a required attribute. The `aria-valuenow` value must be between the minimum and maximum values, inclusive. Unless using the  [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range), the value must be updated programmatically when the user updates the value.
 
 Unlike the read-only `meter` and `progressbar` roles, a `slider` is an input, accepting user interaction. This means focus and keyboard interaction must be implemented.  
 
-The slider represents the range of possible values. The position of the slider thumb along the slider represents the current value. It is typically possible to add to or subtract from the current value by using directional keys such as arrow keys.
+The slider represents the range of possible values. The position of the slider thumb along the slider represents the current value. Typical supported interactions include dragging the thumb or clicking along the slider to select a value for mouse users, or adding and subtract from the current value by using directional keys such as arrow keys for the keyboard user.
 
-Authors MAY set the aria-valuemin and aria-valuemax attributes. Otherwise, their implicit values follow the same rules as <input[type="range"]> in [HTML]:
 
-- If [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) is missing or not a number, it defaults to `0` (zero).
-- If [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) is missing or not a number, it defaults to 100.
-- The [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) is required. Make sure the `aria-valuenow` value is between the minimum and maximum values, inclusive.
-- Sliders have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `horizontal`.
+Sliders have an implicit [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) value of `horizontal`.
+
 
 
 ----
