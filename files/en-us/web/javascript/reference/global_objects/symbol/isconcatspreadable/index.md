@@ -42,7 +42,7 @@ console.log(alphaNumeric)  // Result: ['a', 'b', 'c', 1, 2, 3]
 When setting `Symbol.isConcatSpreadable` to `false`, you can disable the default behavior:
 
 ```js
-let alpha = ['a', 'b', 'c'],
+let alpha = ['a', 'b', 'c']
 let numeric = [1, 2, 3]
 
 numeric[Symbol.isConcatSpreadable] = false
