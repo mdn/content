@@ -69,7 +69,7 @@ Each [drag event type](/en-US/docs/Web/API/DragEvent#event_types) has an associa
       <td>
         …a dragged item enters a valid drop target. (See
         <a
-          href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets"
+          href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#specifying_drop_targets"
           title="Specifying Drop Targets"
           >Specifying Drop Targets</a
         >.)
