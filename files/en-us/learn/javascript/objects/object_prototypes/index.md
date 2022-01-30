@@ -107,10 +107,9 @@ The prototype of an object is not always `Object.prototype`. Try this:
 const myDate = new Date();
 let object = myDate;
 
-do {  
+do {
   object = Object.getPrototypeOf(object);
   console.log(object);
-
 } while (object);
 
 // Date.prototype
