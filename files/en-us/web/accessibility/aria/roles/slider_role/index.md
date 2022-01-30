@@ -70,7 +70,7 @@ In many two-thumb sliders, the thumbs are not allowed to pass one another, such 
 
 It is not a requirement that the thumbs in multi-thumb sliders be dependent on the other thumb values, but intuitive user experience is a requirement, so it is recommended to avoid this anti-pattern.
 
-## Associated WAI-ARIA roles, states, and properties
+## Associated roles, states, and properties
 
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) (required)
   - : Set to a decimal value between `aria-valuemin` and `aria-valuemax` indicating the current value of the slider.
@@ -161,7 +161,7 @@ There are a few ways to make a range input vertical. In this example, we used [C
 
 For the optional <kbd>Page Up</kbd> and <kbd>Page Down</kbd>, the change in slider value should be by an amount larger than the step changes made by up and down arrows.
 
-## Best Practices
+## Best practices
 
 If the slider is describing the loading progress of a particular region of a page, include the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute to reference the slider status, and set the [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy) attribute to `true` on the region until it is finished loading. 
 
@@ -177,7 +177,7 @@ It is recommended to use a native {{HTMLElement("input")}} of type `range`, [`<i
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#slider","ARIA: slider role")}}                                             | {{Spec2('ARIA')}}                         |
 
-## See Also
+## See also
 
 - [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range),
 - HTML {{HTMLElement('progress')}} element
