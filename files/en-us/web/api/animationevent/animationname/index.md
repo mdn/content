@@ -5,13 +5,12 @@ tags:
   - API
   - AnimationEvent
   - CSSOM
-  - Experimental
   - Property
   - Reference
   - Web Animations
 browser-compat: api.AnimationEvent.animationName
 ---
-{{SeeCompatTable}}{{ apiref("Web Animations API") }}
+{{APIRef("Web Animations API")}}
 
 The **`AnimationEvent.animationName`** read-only property is a
 {{domxref("DOMString")}} containing the value of the {{cssxref("animation-name")}} CSS

@@ -6,12 +6,11 @@ tags:
   - AnimationEvent
   - CSSOM
   - Constructor
-  - Experimental
   - Reference
   - Web Animations
 browser-compat: api.AnimationEvent.AnimationEvent
 ---
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
+{{APIRef("Web Animations API")}}
 
 The **`AnimationEvent()`** constructor returns a newly created
 {{domxref("AnimationEvent")}}, representing an event in relation with an animation.
