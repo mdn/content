@@ -35,7 +35,7 @@ on the {{domxref("EventTarget")}} on which it's called. If the function or objec
 > problematic. (See [Memory issues](#memory_issues), below.)
 
 If an event listener is added to an {{domxref("EventTarget")}} from inside another listener —
-that is during the processing of the event —
+that is, during the processing of the event —
 that event will not trigger the new listener.
 However, the new listener may be triggered during a later stage of event flow,
 such as during the bubbling phase.
