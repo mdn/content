@@ -814,7 +814,7 @@ performance during scroll handling.
 
 To prevent this problem, some browsers (specifically, Chrome and Firefox) have changed
 the default value of the `passive` option to `true` for the
-{{event("touchstart")}} and {{event("touchmove")}} events on the document-level nodes
+{{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events on the document-level nodes
 {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. This
 prevents the event listener from [canceling the event](/en-US/docs/Web/API/Event/preventDefault), so it can't block page rendering while
 the user is scrolling.
@@ -851,9 +851,8 @@ On older browsers that don't support the `options` parameter to
 `addEventListener()`, attempting to use it prevents the use of the
 `useCapture` argument without proper use of [feature detection](#safely_detecting_option_support).
 
-You don't need to worry about the value of `passive` for the basic
-{{event("scroll")}} event. Since it can't be canceled, event listeners can't block page
-rendering anyway.
+You don't need to worry about the value of `passive` for the basic {{domxref("Element/scroll_event", "scroll")}} event.
+Since it can't be canceled, event listeners can't block page rendering anyway.
 
 ## Specifications
 
