@@ -24,7 +24,7 @@ console.log(ingredients_list[1].list);
 
 As can be seen from the code above, because a deep copy shares no references with its source object, any changes made to the deep copy do not affect the source object.
 
-However, while it’s easy to see that an object such as the one in the example above is serializable, many JavaScript objects are not serializable at all — and so, calling `JSON.stringify()` to serialize them will fail. So there’s no way to make deep copies of such objects.
+However, many JavaScript objects are not serializable at all and calling `JSON.stringify()` to serialize them will fail. So there’s no way to make deep copies of such objects.
 
 For objects that _are_ serializable, you can alternatively use the [`structuredClone()`](/en-US/docs/Web/API/structuredClone) method to create deep copies. But note that `structuredClone()` isn’t a feature of the JavaScript language itself — instead it’s a feature of browsers and any other JavaScript runtimes that implement a global object like [`window`](/en-US/docs/Web/API/Window). And calling `structuredClone()` to clone a non-serializable object will fail in the same way that calling `JSON.stringify()` to serialize it will fail.
 
