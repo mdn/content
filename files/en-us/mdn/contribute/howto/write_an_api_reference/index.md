@@ -46,7 +46,7 @@ Before starting to document an API, you should have available:
 
 ### Take some time to play with the API
 
-You will return to building demos many times through the course of documenting an API, but it is useful to start by spending time familiarizing yourself with how the API works — learn what the main interfaces/properties/methods are, what the primary use cases are, and how to write simple functionality with it.
+You will return to build demos many times through the course of documenting an API, but it is useful to start by spending time familiarizing yourself with how the API works — learn what the main interfaces/properties/methods are, what the primary use cases are, and how to write simple functionality with it.
 
 When an API has changed, you need to be careful that existing demos you refer to or learn from are not out of date. Check the main constructs that are used in the demo to see if they match up to the latest spec. They may also not work in up-to-date browsers, but this is not a very reliable test, as often the old features continue to be supported for backwards compatibility.
 
@@ -302,7 +302,7 @@ Property pages must have the following sections:
 5. **Syntax**: The syntax section should show how to get the property, and how to set it, if it's not read only. Use the `syntaxbox` class for it and italics for part to be replaced by the actual variable name. For example:
 
     ```js
-    var myType = oscillator.type;
+    let myType = oscillator.type;
     oscillator.type = aType;
     ```
 
