@@ -47,13 +47,11 @@ li li {
 
 ```html
 <ul>
-  <li>
-    <div>Item 1</div>
-    <ul>
-      <li>Subitem A</li>
-      <li>Subitem B</li>
-    </ul>
-  </li>
+  <div>Item 1</div>
+  <ul>
+    <li>Subitem A</li>
+    <li>Subitem B</li>
+  </ul>
   <li>
     <div>Item 2</div>
     <ul>
