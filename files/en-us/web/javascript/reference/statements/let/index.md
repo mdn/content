@@ -205,7 +205,7 @@ declaration, the variable is initialized with a value of
 {{jsxref("ReferenceError")}}.
 
 > **Note:** This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables,
-> which will return a value of `undefined` even if they are accessed before they
+> which will return a value of `undefined` if they are accessed before they
 > are declared.
 
 The variable is said to be in a "temporal dead zone" (TDZ) from the start of the block
