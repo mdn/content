@@ -71,7 +71,7 @@ We'd like you to style the provided {{htmlelement("p")}}, giving it the followin
 
 ## Hints and tips
 
--  Use the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to catch unintended mistakes in your CSS — mistakes you might have otherwise missed — so that you can fix them.
+-  Use the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to catch and fix mistakes in your CSS.
 
 ## Example
 
