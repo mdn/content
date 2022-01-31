@@ -206,7 +206,7 @@ declaration, the variable is initialized with a value of
 
 > **Note:** This differs from {{jsxref("Statements/var", "var", "var_hoisting")}} variables,
 > which will return a value of `undefined` even if they are accessed before they
-> are declared. That means you can read/write `var` even before they are declared but not `let`.
+> are declared.
 
 The variable is said to be in a "temporal dead zone" (TDZ) from the start of the block
 until the declaration has completed.
