@@ -142,7 +142,7 @@ It is also possible to provide a name inside the definition in order to create a
 **named** function expression:
 
 ```js
-var myFunction = function namedFunction(){
+var myFunction = function namedFunction() {
     statements
 }
 ```
