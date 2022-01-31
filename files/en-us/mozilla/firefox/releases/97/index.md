@@ -23,6 +23,9 @@ This article provides information about the changes in Firefox 97 that will affe
 
 - The CSS units `cap` and `ic` are now supported for use with {{cssxref("&lt;length&gt;")}} and {{cssxref("&lt;length-percentage&gt;")}} data types.
   For more information see {{bug(1702924)}} and {{bug(1531223)}}.
+- The CSS property `color-adjust` has been renamed to {{cssxref("print-color-adjust")}} to match the relevant specification.
+  The `color-adjust` shorthand name is deprecated.
+  See {{bug(747595)}} for details.
 
 #### Removals
 
