@@ -640,5 +640,5 @@ yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
 
 ## Learn more
 
-You can learn more about contributing to MDN
-on [the MDN Web Docs for Contributors site](https://mdn-contributor-docs.mozilla.org/).
+You can learn more about contributing to MDN on
+[the MDN Web Docs for Contributors site](https://mdn-contributor-docs.mozilla.org/).
