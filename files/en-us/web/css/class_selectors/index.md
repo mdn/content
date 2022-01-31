@@ -55,10 +55,6 @@ Note that this is equivalent to the following {{Cssxref("Attribute_selectors", "
   color: #007bff;
 }
 
-.blue.red {
-  color: #f33;
-}
-
 .yellow-bg {
   background: #ffa;
 }
