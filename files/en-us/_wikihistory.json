@@ -94794,20 +94794,6 @@
       "kscarfone"
     ]
   },
-  "Web/CSS/-webkit-print-color-adjust": {
-    "modified": "2020-10-15T21:21:06.210Z",
-    "contributors": [
-      "ddbeck",
-      "Sheppy",
-      "teoli",
-      "fscholz",
-      "mfluehr",
-      "scholachoi",
-      "Sebastianz",
-      "DBaron",
-      "Marcoos"
-    ]
-  },
   "Web/CSS/-webkit-tap-highlight-color": {
     "modified": "2020-10-15T21:40:57.574Z",
     "contributors": [

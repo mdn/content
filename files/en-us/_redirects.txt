@@ -367,7 +367,6 @@
 /en-US/docs/CSS/-webkit-opacity	/en-US/docs/Web/CSS/opacity
 /en-US/docs/CSS/-webkit-perspective	/en-US/docs/Web/CSS/perspective
 /en-US/docs/CSS/-webkit-perspective-origin	/en-US/docs/Web/CSS/perspective-origin
-/en-US/docs/CSS/-webkit-print-color-adjust	/en-US/docs/Web/CSS/-webkit-print-color-adjust
 /en-US/docs/CSS/-webkit-text-size-adjust	/en-US/docs/Web/CSS/text-size-adjust
 /en-US/docs/CSS/-webkit-transform	/en-US/docs/Web/CSS/transform
 /en-US/docs/CSS/-webkit-transform-origin	/en-US/docs/Web/CSS/transform-origin
@@ -10011,6 +10010,7 @@
 /en-US/docs/Web/CSS/-webkit-order	/en-US/docs/Web/CSS/order
 /en-US/docs/Web/CSS/-webkit-perspective	/en-US/docs/Web/CSS/perspective
 /en-US/docs/Web/CSS/-webkit-perspective-origin	/en-US/docs/Web/CSS/perspective-origin
+/en-US/docs/Web/CSS/-webkit-print-color-adjust	/en-US/docs/Web/CSS/print-color-adjust
 /en-US/docs/Web/CSS/-webkit-radial-gradient	/en-US/docs/Web/CSS/gradient/radial-gradient()
 /en-US/docs/Web/CSS/-webkit-repeating-linear-gradient	/en-US/docs/Web/CSS/gradient/repeating-linear-gradient()
 /en-US/docs/Web/CSS/-webkit-repeating-radial-gradient	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient()
