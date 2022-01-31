@@ -36,15 +36,15 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
  <li>NSS/NSPR objects which are collections support the Python iteration protocol. In other words they can be iterated over, indexed by position, or used as slices.</li>
  <li>NSS/NSPR objects whose collection elements can be referenced by name support associative indexing.</li>
  <li>NSS/NSPR objects which have "get" and "set" API function calls are exposed as Python properties.</li>
- <li>All NSS/NSPR Python objects can print their current value by evaluting the Python object in a string context or by using the Python str() function.</li>
+ <li>All NSS/NSPR Python objects can print their current value by evaluating the Python object in a string context or by using the Python str() function.</li>
  <li>Support threading. The Python Global Interpreter Lock (GIL) is released prior to calling NSS/NSPR C functions and reacquired after the NSS/NSPR C function returns. This allows other Python threads to execute during the time a NSS/NSPR function is progress in another thread. Also, any "global" values which are set in python-nss are actually thread-local. Examples of this are the various callbacks which can be set and their parameters. Thus each thread gets it own set of callbacks.</li>
  <li>Many methods/functions provide sane default (keyword) parameters freeing the Python programmer from having to specify all parameters yet allowing them to be overridden when necessary.</li>
  <li>Error codes are <em>never</em> returned from methods/functions. python-nss follows the existing Python exception mechanism. Any error reported by NSS/NSPR is converted into a Python exception and raised. The exact error code, error description, and often contextual error information will be present in the exception object.</li>
  <li>Enumerated constants used in the NSS/NSPR API's are available in the Python module under the <em>exact</em> same name as they appear in the C header files of NSS/NSPR.</li>
  <li>Convenience functions are provided to translate between the numeric value of an enumerated constant and it's string representation and visa versa.</li>
  <li>python-nss internally supports UTF-8. Strings may be Python str objects or Python unicode objects. If a Python unicode object is passed to a NSS/NSPR function it will be encoded as UTF-8 first before being passed to NSS/NSPR.</li>
- <li>python-nss tries to be flexible when generating a print representation of complex objects. For simplicity you can receive a block of formatted text but if you need more control, such as when building GUI elments you can access a list of "lines", each line is paired with an indentation level value. The (indent, text) pairs allow you to insert the item into a GUI tree structure or simply change the indentation formatting.</li>
- <li>Deprecated elements of the python-nss API are marked with Python deprecation warnings as well as being documented in the nss module documentation. As of Python 2.7 deprecation warnings are no longer reported by default. It is suggested Python developers using python-nss periodically run their code with deprecation warnings enabled. Depercated elements will persist for a least two releases before being removed from the API entirely.</li>
+ <li>python-nss tries to be flexible when generating a print representation of complex objects. For simplicity you can receive a block of formatted text but if you need more control, such as when building GUI elements you can access a list of "lines", each line is paired with an indentation level value. The (indent, text) pairs allow you to insert the item into a GUI tree structure or simply change the indentation formatting.</li>
+ <li>Deprecated elements of the python-nss API are marked with Python deprecation warnings as well as being documented in the nss module documentation. As of Python 2.7 deprecation warnings are no longer reported by default. It is suggested Python developers using python-nss periodically run their code with deprecation warnings enabled. Deprecated elements will persist for a least two releases before being removed from the API entirely.</li>
 </ul>
 
 <h2 id="Project_History">Project History</h2>
@@ -63,7 +63,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
  <li>Bohuslav Kabrda slavek@redhat.com</li>
 </ul>
 
-<p>The python-nss binding is still young despite having been utilized in several major software projects. Thus it's major version number is still at zero. This is primarily so the developers can make changes to the API as experiece grows with it. For example it is already known there are some naming inconsistencies. Elments of the API are probably not ideally partitioned into proper namespaces via Python modules. Some functionality and interface have already been deprecated due to lessons learned. Thus at some point in the future when it is felt the API has solidified and been further proven in the field a 1.0 release will be made. At that point in time existing users of the python-nss API will need to some elements of their code. A migration script will be provided to assist them.</p>
+<p>The python-nss binding is still young despite having been utilized in several major software projects. Thus it's major version number is still at zero. This is primarily so the developers can make changes to the API as experience grows with it. For example it is already known there are some naming inconsistencies. Elements of the API are probably not ideally partitioned into proper namespaces via Python modules. Some functionality and interface have already been deprecated due to lessons learned. Thus at some point in the future when it is felt the API has solidified and been further proven in the field a 1.0 release will be made. At that point in time existing users of the python-nss API will need to some elements of their code. A migration script will be provided to assist them.</p>
 
 <h2 id="Licensing_Information">Licensing Information</h2>
 
@@ -655,9 +655,9 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
   <tr>
    <td style="vertical-align: top;">Change Log</td>
    <td style="vertical-align: top;">
-    <p>The primary enhancements in this version is support of certifcate validation, OCSP support, and support for the certificate "Authority Information Access" extension.</p>
+    <p>The primary enhancements in this version is support of certificate validation, OCSP support, and support for the certificate "Authority Information Access" extension.</p>
 
-    <p>Enhanced certifcate validation including CA certs can be done via Certificate.verify() or Certificate.is_ca_cert(). When cert validation fails you can now obtain diagnostic information as to why the cert failed to validate. This is encapsulated in the CertVerifyLog class which is a iterable collection of CertVerifyLogNode objects. Most people will probablby just print the string representation of the returned CertVerifyLog object. Cert validation logging is handled by the Certificate.verify() method. Support has also been added for the various key usage and cert type entities which feature prominently during cert validation.</p>
+    <p>Enhanced certificate validation including CA certs can be done via Certificate.verify() or Certificate.is_ca_cert(). When cert validation fails you can now obtain diagnostic information as to why the cert failed to validate. This is encapsulated in the CertVerifyLog class which is a iterable collection of CertVerifyLogNode objects. Most people will probably just print the string representation of the returned CertVerifyLog object. Cert validation logging is handled by the Certificate.verify() method. Support has also been added for the various key usage and cert type entities which feature prominently during cert validation.</p>
 
     <ul>
      <li>
@@ -1123,7 +1123,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
      <li>Add PR_AI_* constants.</li>
      <li>NetworkAddress constructor and NetworkAddress.set_from_string() added optional family parameter. This is necessary for utilizing PR_GetAddrInfoByName().</li>
      <li>NetworkAddress initialized via a string parameter are now initialized via PR_GetAddrInfoByName using family.</li>
-     <li>Add NetworkAddress.address property to return the address sans the port as a string. NetworkAddress.str() includes the port. For IPv6 the a hex string must be enclosed in brackets if a port is appended to it, the bracketed hex address with appended with a port is unappropriate in some circumstances, hence the new address property to permit either the address string with a port or without a port.</li>
+     <li>Add NetworkAddress.address property to return the address sans the port as a string. NetworkAddress.str() includes the port. For IPv6 the a hex string must be enclosed in brackets if a port is appended to it, the bracketed hex address with appended with a port is inappropriate in some circumstances, hence the new address property to permit either the address string with a port or without a port.</li>
      <li>Fix the implementation of the NetworkAddress.family property, it was returning bogus data due to wrong native data size.</li>
      <li>HostEntry objects now support iteration and indexing of their NetworkAddress members.</li>
      <li>Add io.addr_family_name() function to return string representation of PR_AF_* constants.</li>
@@ -1136,14 +1136,14 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
     <ul>
      <li>NetworkAddress initialized via a string parameter is now deprecated. AddrInfo should be used instead.</li>
      <li>NetworkAddress.set_from_string is now deprecated. AddrInfo should be used instead.</li>
-     <li>NetworkAddress.hostentry is deprecated. It was a bad idea, NetworkAddress objects can support both IPv4 and IPv6, but a HostEntry object can only support IPv4. Plus the implementation depdended on being able to perform a reverse DNS lookup which is not always possible.</li>
+     <li>NetworkAddress.hostentry is deprecated. It was a bad idea, NetworkAddress objects can support both IPv4 and IPv6, but a HostEntry object can only support IPv4. Plus the implementation depended on being able to perform a reverse DNS lookup which is not always possible.</li>
      <li>HostEntry.get_network_addresses() and HostEntry.get_network_address() are now deprecated. In addition their port parameter is now no longer respected. HostEntry objects now support iteration and indexing of their NetworkAddress and that should be used to access their NetworkAddress objects instead.</li>
     </ul>
 
     <h5 id="Internal_Changes">Internal Changes</h5>
 
     <ul>
-     <li>Utilize PR_NetAddrFamily() access macro instead of explict access.</li>
+     <li>Utilize PR_NetAddrFamily() access macro instead of explicit access.</li>
      <li>Add PRNetAddr_port() utility to hide host vs. network byte order requirements when accessing the port inside a PRNetAddr and simplify accessing the IPv4 vs. IPv6 port variants.</li>
      <li>Replace the use of PR_InitializeNetAddr() with PR_SetNetAddr(), the later properly handles IPv6, the former did not.</li>
      <li>Rename NetworkAddress.addr to NetworkAddress.pr_netaddr for naming consistency.</li>
@@ -1244,7 +1244,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
     <h5 id="General_Modifications">General Modifications:</h5>
 
     <ul>
-     <li>Correct definciencies in auth_certificate_callback found in several of the example files and documentation. If you've copied that code you should merge those changes in.</li>
+     <li>Correct deficiencies in auth_certificate_callback found in several of the example files and documentation. If you've copied that code you should merge those changes in.</li>
      <li>Unicode objects now accepted as well as str objects for interfaces expecting a string.</li>
      <li>Sockets were enhanced thusly:
       <ul>
@@ -1313,7 +1313,7 @@ slug: Mozilla/Projects/NSS/Python_binding_for_NSS
     </ul>
 
     <h5 id="The_following_class_methods_and_properties_were_added">The following class methods and properties were added:</h5>
-    Note: it's a method if the name is suffixed with (), a propety otherwise
+    Note: it's a method if the name is suffixed with (), a property otherwise
 
     <ul>
      <li>Socket.next()</li>

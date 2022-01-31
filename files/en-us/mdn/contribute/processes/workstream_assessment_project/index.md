@@ -25,7 +25,7 @@ The process looks like this:
 1.  Opportunities are initially submitted as issues to the [mdn content](https://github.com/mdn/content) or [openwebdocs project](https://github.com/openwebdocs/project) repos. These issues are given a preliminary quick assessment by a core team member to assess suitability.
 2.  If an idea is deemed suitable, the issue submitter is asked to fill in a full RFC document to be assessed. This is currently done by updating the existing issue's description to use the format seen at [OWD project: Making MDN syntax boxes beginner friendly](https://github.com/openwebdocs/project/issues/26).
 
-    - Note that in the "Priority assessment" table, each opportunity needs to be assessed against our [prioritisation criteria](https://github.com/openwebdocs/project/blob/main/steering-committee/prioritization-criteria.md).
+    - Note that in the "Priority assessment" table, each opportunity needs to be assessed against our [prioritization criteria](https://github.com/openwebdocs/project/blob/main/steering-committee/prioritization-criteria.md).
     - For each criterion, give the project a description as well as a rough score of none/small/medium/large.
 
 3.  Each month, we hold the opportunity assessment meeting to assess new opportunities, and record the results in the [content opportunities spreadsheet](https://docs.google.com/spreadsheets/d/13YYX5rRu4ATbo1Yl7rXHF9rbgXGBSLisguzo-cB8Fno/edit#gid=0). To be discussed in a meeting, each assessment needs an RFC submitted, to act as the basis for our discussion.

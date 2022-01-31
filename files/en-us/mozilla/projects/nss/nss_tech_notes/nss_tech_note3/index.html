@@ -74,7 +74,7 @@ There are 9 Cert types:
 
 For the cert being checked, the requirements are:
 
-Cert Usage		Requried Key Usage		Required Cert Type
+Cert Usage		Required Key Usage		Required Cert Type
 -------------------- 	--------------------		-----------------------
 SSLClient:		DIGITAL_SIGNATURE;		SSL_CLIENT;
 
@@ -103,7 +103,7 @@ VerifyCA		CERT_SIGN			SSL_CA OR
 
 For CA certs in the cert chain, the requirements are:
 
-Cert Usage		Requried Key Usage	Required Cert Type
+Cert Usage		Required Key Usage	Required Cert Type
 -------------------- 	--------------------	-----------------------
 SSLServerWithStepUp:	GOVT_APPROVED AND
 			CERT_SIGN;		SSL_CA;
@@ -194,7 +194,7 @@ A cert with the extended key usage extension and the Netscape cert type
 extension that has the cert type SSL_CLIENT and also has an email address
 in the subject is also given the cert type EMAIL.  This allows all SSL
 client authentication certs with email addresses to also be used as email
-certs (provded they have adequate key usage).
+certs (provided they have adequate key usage).
 
 A cert with the extended key usage extension  and the Netscape cert type
 extension that as cert type SSL_CA is also always given cert type EMAIL_CA.
