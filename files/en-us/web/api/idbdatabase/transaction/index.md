@@ -129,7 +129,7 @@ var db;
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
   // This is used a lot below

@@ -327,7 +327,7 @@ function draw() {
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
 
-    // Quadratric curves example
+    // Quadratic curves example
     ctx.beginPath();
     ctx.moveTo(75, 25);
     ctx.quadraticCurveTo(25, 25, 25, 62.5);

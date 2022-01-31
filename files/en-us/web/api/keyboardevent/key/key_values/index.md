@@ -411,7 +411,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
   </tbody>
 </table>
 
-\[1] Older browsers may return `"Spacebar"` instead of `" "` for the <kbd>Space Bar</kbd> key. Firefox did so until version 37, as did Internet Explorer 9, 10, and 11.
+\[1] Older browsers may return `"Spacebar"` instead of `" "` for the <kbd>Space Bar</kbd> key. Firefox did so until version 37, as did Internet Explorer 9, 10, and 11.
 
 ## Navigation keys
 
@@ -531,7 +531,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
   </tbody>
 </table>
 
-\[1] Internet Explorer, Edge (16 and earlier), and Firefox (36 and earlier) use `"Left"`, `"Right"`, `"Up"`, and `"Down"` instead of `"ArrowLeft"`, `"ArrowRight"`, `"ArrowUp"`, and `"ArrowDown"`.
+\[1] Internet Explorer, Edge (16 and earlier), and Firefox (36 and earlier) use `"Left"`, `"Right"`, `"Up"`, and `"Down"` instead of `"ArrowLeft"`, `"ArrowRight"`, `"ArrowUp"`, and `"ArrowDown"`.
 
 ## Editing keys
 
@@ -1632,11 +1632,11 @@ These keys are only available on Japanese keyboards.
 
 ### Dead keycodes for Linux
 
-Linux generates accented characters using special **dead keys**. _Dead keys_ are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the  {{domxref("KeyboardEvent")}}'s associated {{event("compositionupdate")}} event's  {{domxref("CompositionEvent.data", "data")}} property.
+Linux generates accented characters using special **dead keys**. _Dead keys_ are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the  {{domxref("KeyboardEvent")}}'s associated {{event("compositionupdate")}} event's {{domxref("CompositionEvent.data", "data")}} property.
 
 You can find a table of the dead keys and the characters they can be used with to generate accented or otherwise special characters on Linux using GTK.
 
-The value of {{domxref("CompositionEvent.data", "data")}} will be one of the following:
+The value of {{domxref("CompositionEvent.data", "data")}} will be one of the following:
 
 <table class="no-markdown">
   <thead>
@@ -1691,7 +1691,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fo
     </tr>
     <tr>
       <td><code>GDK_KEY_dead_perispomeni</code> (0xFE53)</td>
-      <td> ͂</td>
+      <td> ͂</td>
       <td></td>
     </tr>
     <tr>
@@ -1791,7 +1791,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fo
         >
         (0x0100125D)
       </td>
-      <td> ͅ</td>
+      <td> ͅ</td>
       <td>Iota subscript.</td>
     </tr>
     <tr>
@@ -1831,7 +1831,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fo
         >
         (0x01001261)
       </td>
-      <td>  ̡</td>
+      <td>  ̡</td>
       <td></td>
     </tr>
     <tr>
@@ -1841,22 +1841,22 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fo
         >
         (0x01001262)
       </td>
-      <td> ̛</td>
+      <td> ̛</td>
       <td></td>
     </tr>
     <tr>
       <td><code>GDK_KEY_dead_stroke</code> (0xFE63)</td>
-      <td> ̶̶</td>
+      <td> ̶̶</td>
       <td></td>
     </tr>
     <tr>
       <td><code>GDK_KEY_dead_abovecomma</code> (0xFE64)</td>
-      <td> ̓̓</td>
+      <td> ̓̓</td>
       <td></td>
     </tr>
     <tr>
       <td><code>GDK_KEY_dead_psili</code> (0xFE64)</td>
-      <td> ᾿</td>
+      <td> ᾿</td>
       <td></td>
     </tr>
     <tr>
@@ -1871,7 +1871,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fo
     </tr>
     <tr>
       <td><code>GDK_KEY_dead_doublegrave</code> (0xFE66)</td>
-      <td> ̏</td>
+      <td> ̏</td>
       <td></td>
     </tr>
     <tr>
@@ -1881,7 +1881,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fo
     </tr>
     <tr>
       <td><code>GDK_KEY_dead_belowmacron</code> (0xFE68)</td>
-      <td> ̱</td>
+      <td> ̱</td>
       <td></td>
     </tr>
     <tr>
@@ -1901,7 +1901,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fo
     </tr>
     <tr>
       <td><code>GDK_KEY_dead_belowdiaeresis</code> (0xFE6C)</td>
-      <td> ̤</td>
+      <td> ̤</td>
       <td></td>
     </tr>
     <tr>
@@ -2571,7 +2571,7 @@ The multimedia keys are extra buttons or keys for controlling media devices, fou
   </tbody>
 </table>
 
-\[1] Internet Explorer, Edge, and Firefox (36 and earlier) use `"MediaNextTrack"` and `"MediaPreviousTrack"` instead of `"MediaTrackNext"` and `"MediaTrackPrevious"`.
+\[1] Internet Explorer, Edge, and Firefox (36 and earlier) use `"MediaNextTrack"` and `"MediaPreviousTrack"` instead of `"MediaTrackNext"` and `"MediaTrackPrevious"`.
 
 \[2] Prior to Firefox 37, Firefox generated the key code `"FastFwd"` on some platforms and `"Unidentified"` on others instead of `"MediaFastForward"`.
 
@@ -2785,7 +2785,7 @@ These media keys are used specifically for controlling audio.
   </tbody>
 </table>
 
-\[1] Internet Explorer, Edge, and Firefox (48 and earlier) use `"VolumeUp"`, `"VolumeDown"`, and `"VolumeMute"` instead of `"AudioVolumeUp"`, `"AudioVolumeDown"`, and `"AudioVolumeMute"`. In Firefox 49 they were updated to match the latest specification. The old names are still used on [Boot to Gecko](/en-US/docs/Mozilla/B2G_OS).
+\[1] Internet Explorer, Edge, and Firefox (48 and earlier) use `"VolumeUp"`, `"VolumeDown"`, and `"VolumeMute"` instead of `"AudioVolumeUp"`, `"AudioVolumeDown"`, and `"AudioVolumeMute"`. In Firefox 49 they were updated to match the latest specification. The old names are still used on [Boot to Gecko](/en-US/docs/Mozilla/B2G_OS).
 
 ## TV control keys
 
@@ -2841,7 +2841,7 @@ These key values represent buttons or keys present on television devices, or com
     <tr>
       <td><code>"TVAudioDescriptionMixDown"</code></td>
       <td>
-        Decreases trhe audio description's mixing volume; reduces the volume of
+        Decreases the audio description's mixing volume; reduces the volume of
         the audio descriptions relative to the program sound.
       </td>
       <td></td>
@@ -3606,7 +3606,7 @@ The values below are derived in part form a number of consumer electronics techn
     </tr>
     <tr>
       <td><code>"PinPToggle"</code></td>
-      <td>Toggles display of th epicture-in-picture view on and off.</td>
+      <td>Toggles display of the picture-in-picture view on and off.</td>
       <td><code>VK_PINP_TOGGLE</code></td>
       <td></td>
       <td></td>
@@ -4390,7 +4390,7 @@ Some keyboards offer special keys for launching or switching to certain common a
   </tbody>
 </table>
 
-\[1] Internet Explorer, Edge, and Firefox (36 and earlier) use `"SelectMedia"` instead of `"LaunchMediaPlayer"`. Firefox 37 through Firefox 48 use `"MediaSelect"`. Firefox 49 has been updated to match the latest specification, and to return `"LaunchMediaPlayer"`.
+\[1] Internet Explorer, Edge, and Firefox (36 and earlier) use `"SelectMedia"` instead of `"LaunchMediaPlayer"`. Firefox 37 through Firefox 48 use `"MediaSelect"`. Firefox 49 has been updated to match the latest specification, and to return `"LaunchMediaPlayer"`.
 
 \[2] Google Chrome 57 and earlier returned `"LaunchMyComputer"` instead of `"LaunchApplication1"`. See [Chrome Bug 612743](https://bugs.chromium.org/p/chromium/issues/detail?id=612743) for more information.
 
@@ -4582,7 +4582,7 @@ These keys are found on the keyboard's numeric keypad. However, not all are pres
       </td>
       <td><code>VK_DECIMAL</code> (0x6E)</td>
       <td><code>kVK_ANSI_KeypadDecimal</code> (0x41)</td>
-      <td><code>GDK_KEY_KP_Decimal</code> (0xFFAE)<br /> </td>
+      <td><code>GDK_KEY_KP_Decimal</code> (0xFFAE)<br /> </td>
       <td><code>KEYCODE_NUMPAD_DOT</code> (158)</td>
     </tr>
     <tr>
@@ -4657,13 +4657,13 @@ These keys are found on the keyboard's numeric keypad. However, not all are pres
       <td>
         <p>The numeric keypad's places separator character.</p>
         <p>
-          (In the United States this is a comma, but elsewhere it is frequently
+          (In the United States this is a comma, but elsewhere it is frequently
           a period.)
         </p>
       </td>
       <td><code>VK_SEPARATOR</code> (0x6C)</td>
       <td><code>kVK_JIS_KeypadComma</code> (0x5F)</td>
-      <td><code>GDK_KEY_KP_Separator</code> (0xFFAC)<br /> </td>
+      <td><code>GDK_KEY_KP_Separator</code> (0xFFAC)<br /> </td>
       <td><code>KEYCODE_NUMPAD_COMMA</code> (159)</td>
     </tr>
     <tr>

@@ -14,8 +14,8 @@ browser-compat: api.IDBDatabase.name
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`name`** read-only property of the
-`IDBDatabase` interface is a {{ domxref("DOMString")}} that contains the
+The **`name`** read-only property of the
+`IDBDatabase` interface is a {{ domxref("DOMString")}} that contains the
 name of the connected database.
 
 {{AvailableInWorkers}}
@@ -36,7 +36,7 @@ This example shows a database connection being opened, the resulting
 {{domxref("IDBDatabase")}} object being stored in a db variable, and the name property
 then being logged. For a full example, see our
 [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages)
- app ([view example live](https://chrisdavidmills.github.io/to-do-notifications/)).
+ app ([view example live](https://chrisdavidmills.github.io/to-do-notifications/)).
 
 ```js
 // Let us open our database
@@ -49,7 +49,7 @@ DBOpenRequest.onerror = function(event) {
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot below
   db = DBOpenRequest.result;

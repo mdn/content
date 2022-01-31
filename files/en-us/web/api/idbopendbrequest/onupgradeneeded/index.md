@@ -57,32 +57,32 @@ request.onupgradeneeded = function(event) {
   };
 
   if (event.oldVersion < 1) {
-    // Version 1 is the first version of the database.
-    var store = db.createObjectStore("books", {keyPath: "isbn"});
-    var titleIndex = store.createIndex("by_title", "title", {unique: true});
-    var authorIndex = store.createIndex("by_author", "author");
-  }
-  if (event.oldVersion < 2) {
-    // Version 2 introduces a new index of books by year.
-    var bookStore = request.transaction.objectStore("books");
-    var yearIndex = bookStore.createIndex("by_year", "year");
-  }
-  if (event.oldVersion < 3) {
-    // Version 3 introduces a new object store for magazines with two indexes.
-    var magazines = db.createObjectStore("magazines");
-    var publisherIndex = magazines.createIndex("by_publisher", "publisher");
-    var frequencyIndex = magazines.createIndex("by_frequency", "frequency");
-  }
+    // Version 1 is the first version of the database.
+    var store = db.createObjectStore("books", {keyPath: "isbn"});
+    var titleIndex = store.createIndex("by_title", "title", {unique: true});
+    var authorIndex = store.createIndex("by_author", "author");
+  }
+  if (event.oldVersion < 2) {
+    // Version 2 introduces a new index of books by year.
+    var bookStore = request.transaction.objectStore("books");
+    var yearIndex = bookStore.createIndex("by_year", "year");
+  }
+  if (event.oldVersion < 3) {
+    // Version 3 introduces a new object store for magazines with two indexes.
+    var magazines = db.createObjectStore("magazines");
+    var publisherIndex = magazines.createIndex("by_publisher", "publisher");
+    var frequencyIndex = magazines.createIndex("by_frequency", "frequency");
+  }
 };
 
 request.onerror = function(event) {
-  note.innerHTML += '<li>Error loading database.</li>';
+  note.innerHTML += '<li>Error loading database.</li>';
 };
 
 request.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
-  db = request.result;
-  populateAndDisplayData();
+  note.innerHTML += '<li>Database initialized.</li>';
+  db = request.result;
+  populateAndDisplayData();
 };
 ```
 

@@ -15,7 +15,7 @@ browser-compat: api.IDBTransaction.onabort
 {{ APIRef("IndexedDB") }}
 
 The **`onabort`** event handler of the
-`IDBTransaction` interface handles the abort event, fired, when the current
+`IDBTransaction` interface handles the abort event, fired, when the current
 transaction is aborted via the {{domxref("IDBTransaction.abort")}} method.
 
 {{AvailableInWorkers}}
@@ -31,15 +31,15 @@ transaction.onabort = function(event) { /* ... */ };
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store. Note also the functions attached to transaction event
 handlers to report on the outcome of the transaction opening in the event of success or
-failure. Note the `transaction.onabort = function(event) { };` block,
-reporting when the transaction has been aborted. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+failure. Note the `transaction.onabort = function(event) { };` block,
+reporting when the transaction has been aborted. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
 // Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -71,11 +71,11 @@ function addData() {
   // add our newItem object to the object store
   var objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
-    // report the success of the request (this does not mean the item
-    // has been stored successfully in the DB - for that you need transaction.onsuccess)
-    note.innerHTML += '<li>Request successful.</li>';
-  };
+  objectStoreRequest.onsuccess = function(event) {
+    // report the success of the request (this does not mean the item
+    // has been stored successfully in the DB - for that you need transaction.onsuccess)
+    note.innerHTML += '<li>Request successful.</li>';
+  };
 
   transaction.onabort = function() {
     // Report when the transaction was successfully aborted
