@@ -671,7 +671,7 @@ function displayMatrix(mat, rowLength, target) {
     for (let y=0; y<numRows; y++) {
       outHTML += "<mtr>\n";
       for (let x=0; x<rowLength; x++) {
-        outHTML += `<mtd><mn>${mat[(x*rowLength) + y].toFixed(2)}</mn></mtd>\n`;
+        outHTML += `<mtd><mrow><mn>${mat[(x*rowLength) + y].toFixed(2)}</mn></mrow></mtd>\n`;
       }
       outHTML += "</mtr>\n";
     }

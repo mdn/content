@@ -14,7 +14,7 @@ This page outlines the derivation of the Quadratic Formula.
 
 We take a quadratic equation in its general form, and solve for x:
 
-<math><mtable columnalign="left"><mtr><mtd><mrow><mrow><mrow><mrow><mi>a</mi>
+<math><mtable columnalign="left"><mtr><mtd><mrow><mrow><mrow><mrow><mrow><mi>a</mi>
 <mo>⁢</mo>
 <msup><mi>x</mi>
 <mn>2</mn>
@@ -24,7 +24,7 @@ We take a quadratic equation in its general form, and solve for x:
 </mrow><mo>+ </mo><mi>c</mi>
 </mrow><mo>=</mo>
 <mn>0</mn>
-</mrow></mtd></mtr><mtr><mtd><mrow><mrow><mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace><mi>a</mi>
+</mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mrow><mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace><mi>a</mi>
 <mo>⁢</mo>
 <msup><mi>x</mi>
 <mn>2</mn>
@@ -34,7 +34,7 @@ We take a quadratic equation in its general form, and solve for x:
 <mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace></mrow><mo>=</mo>
 <mo>-</mo>
 <mi>c</mi>
-<mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace></mtd></mtr><mtr><mtd><mrow><mrow><mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace><msup><mi>x</mi>
+<mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mrow><mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace><msup><mi>x</mi>
 <mn>2</mn>
 </msup></mrow><mo>+ </mo><mfrac><mrow><mi>b</mi>
 </mrow><mi>a</mi>
@@ -45,7 +45,7 @@ We take a quadratic equation in its general form, and solve for x:
 <mi>c</mi>
 </mrow><mi>a</mi>
 </mfrac><mspace depth="1ex" height="0.5ex" width="2ex"></mspace><mrow><mtext mathcolor="red" mathsize="10pt">Divide out leading coefficient.</mtext>
-</mrow></mtd></mtr><mtr><mtd><mrow><mrow><mrow><mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace><msup><mi>x</mi>
+</mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mrow><mrow><mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace><msup><mi>x</mi>
 <mn>2</mn>
 </msup></mrow><mo>+ </mo><mfrac><mrow><mi>b</mi>
 </mrow><mi>a</mi>
@@ -73,7 +73,7 @@ We take a quadratic equation in its general form, and solve for x:
 <msup><mi>a</mi>
 <mn>2</mn>
 </msup></mrow></mfrac><mspace depth="1ex" height="0.5ex" width="2ex"></mspace><mrow><mtext mathcolor="red" mathsize="10pt">Complete the square.</mtext>
-</mrow></mtd></mtr><mtr><mtd><mrow><mrow><mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace><mo>(</mo>
+</mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mrow><mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace><mo>(</mo>
 <mi>x</mi>
 <mo>+ </mo><mfrac><mrow><mi>b</mi>
 </mrow><mrow><mn>2</mn>
@@ -95,7 +95,7 @@ We take a quadratic equation in its general form, and solve for x:
 <msup><mi>a</mi>
 <mn>2</mn>
 </msup></mrow></mfrac></mrow><mspace depth="1ex" height="0.5ex" width="2ex"></mspace><mrow><mtext mathcolor="red" mathsize="10pt">Discriminant revealed.</mtext>
-</mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace><msup><mrow><mo>(</mo>
+</mrow></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mrow><mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace><msup><mrow><mo>(</mo>
 <mi>x</mi>
 <mo>+ </mo><mfrac><mrow><mi>b</mi>
 </mrow><mrow><mn>2</mn>
@@ -111,7 +111,7 @@ We take a quadratic equation in its general form, and solve for x:
 </mrow><mrow><mn>4</mn>
 <msup><mi>a</mi>
 <mn>2</mn>
-</msup></mrow></mfrac></mrow><mspace depth="1ex" height="0.5ex" width="2ex"></mspace><mrow><mtext mathcolor="red" mathsize="10pt"></mtext></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace><mrow><mi>x</mi>
+</msup></mrow></mfrac></mrow><mspace depth="1ex" height="0.5ex" width="2ex"></mspace><mrow><mtext mathcolor="red" mathsize="10pt"></mtext></mrow></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mrow><mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace><mrow><mi>x</mi>
 <mo>+ </mo><mfrac><mrow><mi>b</mi>
 </mrow><mrow><mn>2</mn>
 <mi>a</mi>
@@ -124,7 +124,7 @@ We take a quadratic equation in its general form, and solve for x:
 </mrow><mrow><mn>4</mn>
 <msup><mi>a</mi>
 <mn>2</mn>
-</msup></mrow></mfrac></msqrt></mrow><mspace depth="1ex" height="0.5ex" width="2ex"></mspace><mrow><mtext mathcolor="red" mathsize="10pt"></mtext></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace><mrow><mi>x</mi>
+</msup></mrow></mfrac></msqrt></mrow><mspace depth="1ex" height="0.5ex" width="2ex"></mspace><mrow><mtext mathcolor="red" mathsize="10pt"></mtext></mrow></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mrow><mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace><mrow><mi>x</mi>
 </mrow><mo>=</mo>
 <mfrac><mrow><mo>-</mo>
 <mi>b</mi>
@@ -143,7 +143,7 @@ We take a quadratic equation in its general form, and solve for x:
 <msup><mi>a</mi>
 <mn>2</mn>
 </msup></mrow></mfrac></msqrt></mrow><mspace depth="1ex" height="0.5ex" width="2ex"></mspace><mrow><mtext mathcolor="red" mathsize="10pt">There's the vertex formula.</mtext>
-</mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace><mrow><mi>x</mi>
+</mrow></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mrow><mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace><mrow><mi>x</mi>
 </mrow><mo>=</mo>
 <mfrac><mrow><mo>-</mo>
 <mi>b</mi>
@@ -157,4 +157,4 @@ We take a quadratic equation in its general form, and solve for x:
 <mi>a</mi>
 <mi>c</mi>
 </msqrt></mrow><mrow><mn>2</mn>
-<mi>a</mi></mrow></mfrac></mrow><mspace depth="1ex" height="0.5ex" width="2ex"></mspace><mrow><mtext mathcolor="red" mathsize="10pt"></mtext></mrow></mrow></mtd></mtr></mtable></math>
+<mi>a</mi></mrow></mfrac></mrow><mspace depth="1ex" height="0.5ex" width="2ex"></mspace><mrow><mtext mathcolor="red" mathsize="10pt"></mtext></mrow></mrow></mrow></mtd></mtr></mtable></math>

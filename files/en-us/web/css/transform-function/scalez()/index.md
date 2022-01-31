@@ -60,14 +60,14 @@ scaleZ(s)
           ><mrow><mo>(</mo
             ><mtable
               ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mn>1</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>1</mn> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mi>s</mi></mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mi>s</mi></mrow></mtd></mtr
               ></mtable
             ><mo>)</mo></mrow
           ></math
@@ -78,17 +78,17 @@ scaleZ(s)
           ><mrow><mo>(</mo
             ><mtable
               ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mn>1</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>1</mn> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mi>s</mi> </mtd><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mi>s</mi> </mrow></mtd><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>1</mn></mrow></mtd></mtr
               ></mtable
             ><mo>)</mo></mrow
           ></math

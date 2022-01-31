@@ -63,7 +63,7 @@ rotate(a)
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo>
-                </mtd></mtr
+                </mrow></mtd></mtr
               ><mtr
                 ><mtd
                   ><mo>sin</mo>
@@ -97,7 +97,7 @@ rotate(a)
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
                 ><mtd
                   ><mo>sin</mo>
@@ -109,10 +109,10 @@ rotate(a)
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>1</mn></mrow></mtd></mtr
               ></mtable
             ><mo>)</mo></mrow
           ></math
@@ -134,7 +134,7 @@ rotate(a)
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
                 ><mtd
                   ><mo>sin</mo>
@@ -146,10 +146,10 @@ rotate(a)
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>1</mn></mrow></mtd></mtr
               ></mtable
             ><mo>)</mo></mrow
           ></math
@@ -171,7 +171,7 @@ rotate(a)
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
                 ><mtd
                   ><mo>sin</mo>
@@ -183,13 +183,13 @@ rotate(a)
                   <mo>(</mo>
                   <mi>a</mi>
                   <mo>)</mo> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>1</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>1</mn></mrow></mtd></mtr
               ></mtable
             ><mo>)</mo></mrow
           ></math

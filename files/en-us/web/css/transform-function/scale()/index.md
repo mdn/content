@@ -63,9 +63,9 @@ scale(sx, sy)
           ><mrow><mo>(</mo
             ><mtable
               ><mtr
-                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mi>sx</mi> </mrow></mtd><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi></mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mi>sy</mi></mrow></mtd></mtr
               ></mtable
             ><mo>)</mo></mrow
           ></math
@@ -76,14 +76,14 @@ scale(sx, sy)
           ><mrow><mo>(</mo
             ><mtable
               ><mtr
-                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mi>sx</mi> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mi>sy</mi> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>1</mn></mrow></mtd></mtr
               ></mtable
             ><mo>)</mo></mrow
           ></math
@@ -94,14 +94,14 @@ scale(sx, sy)
           ><mrow><mo>(</mo
             ><mtable
               ><mtr
-                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mi>sx</mi> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mi>sy</mi> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>1</mn></mrow></mtd></mtr
               ></mtable
             ><mo>)</mo></mrow
           ></math
@@ -112,17 +112,17 @@ scale(sx, sy)
           ><mrow><mo>(</mo
             ><mtable
               ><mtr
-                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mi>sx</mi> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mi>sy</mi> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>1</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>1</mn></mrow></mtd></mtr
               ></mtable
             ><mo>)</mo></mrow
           ></math

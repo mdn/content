@@ -63,17 +63,17 @@ translate3d(tx, ty, tz)
           ><mrow><mo>(</mo
             ><mtable
               ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mi>tx</mi> </mtd></mtr
+                ><mtd><mrow><mn>1</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mi>tx</mi> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mi>ty</mi> </mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>1</mn> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mi>ty</mi> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mi>tz</mi> </mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>1</mn> </mrow></mtd><mtd><mrow><mi>tz</mi> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>1</mn></mrow></mtd></mtr
               ></mtable
             ><mo>)</mo></mrow
           ></math

@@ -51,23 +51,23 @@ a2, ..., a13, a14, a15], the
 matrix looks like this:
 
 <math display="block"><semantics><mrow><mo>[</mo>
-<mtable rowspacing="0.5ex"><mtr><mtd><mi>a0</mi>
-</mtd><mtd><mi>a4</mi>
-</mtd><mtd><mi>a8</mi>
-</mtd><mtd><mi>a12</mi>
-</mtd></mtr><mtr><mtd><mi>a1</mi>
-</mtd><mtd><mi>a5</mi>
-</mtd><mtd><mi>a9</mi>
-</mtd><mtd><mi>a13</mi>
-</mtd></mtr><mtr><mtd><mi>a2</mi>
-</mtd><mtd><mi>a6</mi>
-</mtd><mtd><mi>a10</mi>
-</mtd><mtd><mi>a14</mi>
-</mtd></mtr><mtr><mtd><mi>a3</mi>
-</mtd><mtd><mi>a7</mi>
-</mtd><mtd><mi>a11</mi>
-</mtd><mtd><mi>a15</mi>
-</mtd></mtr></mtable><mo>]</mo>
+<mtable rowspacing="0.5ex"><mtr><mtd><mrow><mi>a0</mi>
+</mrow></mtd><mtd><mrow><mi>a4</mi>
+</mrow></mtd><mtd><mrow><mi>a8</mi>
+</mrow></mtd><mtd><mrow><mi>a12</mi>
+</mrow></mtd></mtr><mtr><mtd><mrow><mi>a1</mi>
+</mrow></mtd><mtd><mrow><mi>a5</mi>
+</mrow></mtd><mtd><mrow><mi>a9</mi>
+</mrow></mtd><mtd><mrow><mi>a13</mi>
+</mrow></mtd></mtr><mtr><mtd><mrow><mi>a2</mi>
+</mrow></mtd><mtd><mrow><mi>a6</mi>
+</mrow></mtd><mtd><mrow><mi>a10</mi>
+</mrow></mtd><mtd><mrow><mi>a14</mi>
+</mrow></mtd></mtr><mtr><mtd><mrow><mi>a3</mi>
+</mrow></mtd><mtd><mrow><mi>a7</mi>
+</mrow></mtd><mtd><mrow><mi>a11</mi>
+</mrow></mtd><mtd><mrow><mi>a15</mi>
+</mrow></mtd></mtr></mtable><mo>]</mo>
 </mrow><annotation encoding="TeX">\begin{bmatrix} a[0] &#x26; a[4] &#x26; a[8] &#x26; a[12]\\
 a[1] &#x26; a[5] &#x26; a[9]
 &#x26; a[13]\\ a[2] &#x26; a[6] &#x26; a[10] &#x26; a[14]\\ a[3] &#x26; a[7] &#x26;
@@ -83,23 +83,23 @@ transform. It begins by allocating a new matrix and writing a 4x4 identity matri
 it:
 
 <math display="block"><semantics><mrow><mo>[</mo>
-<mtable rowspacing="0.5ex"><mtr><mtd><mn>1</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><mn>0</mn>
-</mtd></mtr><mtr><mtd><mn>0</mn>
-</mtd><mtd><mn>1</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><mn>0</mn>
-</mtd></mtr><mtr><mtd><mn>0</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><mn>1</mn>
-</mtd><mtd><mn>0</mn>
-</mtd></mtr><mtr><mtd><mn>0</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><mn>1</mn>
-</mtd></mtr></mtable><mo>]</mo>
+<mtable rowspacing="0.5ex"><mtr><mtd><mrow><mn>1</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd></mtr><mtr><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>1</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd></mtr><mtr><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>1</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd></mtr><mtr><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>1</mn>
+</mrow></mtd></mtr></mtable><mo>]</mo>
 </mrow><annotation encoding="TeX">\begin{bmatrix} 1 &#x26; 0 &#x26; 0 &#x26; 0\\ 0 &#x26; 1
 &#x26; 0 &#x26; 0\\ 0 &#x26; 0 &#x26;
 1 &#x26; 0\\ 0 &#x26; 0 &#x26; 0 &#x26; 1 \end{bmatrix}</annotation></semantics></math>
@@ -119,26 +119,26 @@ are the values of the
 `position`.
 
 <math display="block"><semantics><mrow><mo>[</mo>
-<mtable rowspacing="0.5ex"><mtr><mtd><mn>1</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><msub><mi>p</mi>
+<mtable rowspacing="0.5ex"><mtr><mtd><mrow><mn>1</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><msub><mi>p</mi>
 <mi>x</mi>
-</msub></mtd></mtr><mtr><mtd><mn>0</mn>
-</mtd><mtd><mn>1</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><msub><mi>p</mi>
+</msub></mrow></mtd></mtr><mtr><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>1</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><msub><mi>p</mi>
 <mi>y</mi>
-</msub></mtd></mtr><mtr><mtd><mn>0</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><mn>1</mn>
-</mtd><mtd><msub><mi>p</mi>
+</msub></mrow></mtd></mtr><mtr><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>1</mn>
+</mrow></mtd><mtd><mrow><msub><mi>p</mi>
 <mi>z</mi>
-</msub></mtd></mtr><mtr><mtd><mn>0</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><mn>1</mn>
-</mtd></mtr></mtable><mo>]</mo>
+</msub></mrow></mtd></mtr><mtr><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>1</mn>
+</mrow></mtd></mtr></mtable><mo>]</mo>
 </mrow><annotation encoding="TeX">\begin{bmatrix} 1 &#x26; 0 &#x26; 0 &#x26; x\\ 0 &#x26; 1
 &#x26; 0 &#x26; y\\ 0 &#x26; 0 &#x26;
 1 &#x26; z\\ 0 &#x26; 0 &#x26; 0 &#x26; 1 \end{bmatrix}</annotation></semantics></math>
@@ -148,7 +148,7 @@ unit quaternion specified by
 `orientation`:
 
 <math display="block"><semantics><mrow><mo>[</mo>
-<mtable rowspacing="0.5ex"><mtr><mtd><mn>1</mn>
+<mtable rowspacing="0.5ex"><mtr><mtd><mrow><mn>1</mn>
 <mo>-</mo>
 <mn>2</mn>
 <mo stretchy="false">(</mo>
@@ -160,7 +160,7 @@ unit quaternion specified by
 <mi>z</mi>
 <mn>2</mn>
 </msubsup><mo stretchy="false">)</mo>
-</mtd><mtd><mn>2</mn>
+</mrow></mtd><mtd><mrow><mn>2</mn>
 <mo stretchy="false">(</mo>
 <msub><mi>q</mi>
 <mi>x</mi>
@@ -172,7 +172,7 @@ unit quaternion specified by
 </msub><msub><mi>q</mi>
 <mi>w</mi>
 </msub><mo stretchy="false">)</mo>
-</mtd><mtd><mn>2</mn>
+</mrow></mtd><mtd><mrow><mn>2</mn>
 <mo stretchy="false">(</mo>
 <msub><mi>q</mi>
 <mi>x</mi>
@@ -184,8 +184,8 @@ unit quaternion specified by
 </msub><msub><mi>q</mi>
 <mi>w</mi>
 </msub><mo stretchy="false">)</mo>
-</mtd><mtd><mn>0</mn>
-</mtd></mtr><mtr><mtd><mn>2</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd></mtr><mtr><mtd><mrow><mn>2</mn>
 <mo stretchy="false">(</mo>
 <msub><mi>q</mi>
 <mi>x</mi>
@@ -197,7 +197,7 @@ unit quaternion specified by
 </msub><msub><mi>q</mi>
 <mi>w</mi>
 </msub><mo stretchy="false">)</mo>
-</mtd><mtd><mn>1</mn>
+</mrow></mtd><mtd><mrow><mn>1</mn>
 <mo>-</mo>
 <mn>2</mn>
 <mo stretchy="false">(</mo>
@@ -209,7 +209,7 @@ unit quaternion specified by
 <mi>z</mi>
 <mn>2</mn>
 </msubsup><mo stretchy="false">)</mo>
-</mtd><mtd><mn>2</mn>
+</mrow></mtd><mtd><mrow><mn>2</mn>
 <mo stretchy="false">(</mo>
 <msub><mi>q</mi>
 <mi>y</mi>
@@ -221,8 +221,8 @@ unit quaternion specified by
 </msub><msub><mi>q</mi>
 <mi>w</mi>
 </msub><mo stretchy="false">)</mo>
-</mtd><mtd><mn>0</mn>
-</mtd></mtr><mtr><mtd><mn>2</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd></mtr><mtr><mtd><mrow><mn>2</mn>
 <mo stretchy="false">(</mo>
 <msub><mi>q</mi>
 <mi>x</mi>
@@ -234,7 +234,7 @@ unit quaternion specified by
 </msub><msub><mi>q</mi>
 <mi>w</mi>
 </msub><mo stretchy="false">)</mo>
-</mtd><mtd><mn>2</mn>
+</mrow></mtd><mtd><mrow><mn>2</mn>
 <mo stretchy="false">(</mo>
 <msub><mi>q</mi>
 <mi>y</mi>
@@ -246,7 +246,7 @@ unit quaternion specified by
 </msub><msub><mi>q</mi>
 <mi>w</mi>
 </msub><mo stretchy="false">)</mo>
-</mtd><mtd><mn>1</mn>
+</mrow></mtd><mtd><mrow><mn>1</mn>
 <mo>-</mo>
 <mn>2</mn>
 <mo stretchy="false">(</mo>
@@ -258,12 +258,12 @@ unit quaternion specified by
 <mi>y</mi>
 <mn>2</mn>
 </msubsup><mo stretchy="false">)</mo>
-</mtd><mtd><mn>0</mn>
-</mtd></mtr><mtr><mtd><mn>0</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><mn>1</mn>
-</mtd></mtr></mtable><mo>]</mo>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd></mtr><mtr><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>1</mn>
+</mrow></mtd></mtr></mtable><mo>]</mo>
 </mrow><annotation encoding="TeX">\begin{bmatrix} 1 - 2(q_y^2 + q_z^2) &#x26; 2(q_xq_y -
 q_zq_w) &#x26; 2(q_xq_z + q_yq_w)
 &#x26; p_x\\ 2(q_xq_y + q_zq_w) &#x26; 1 - 2(q_x^2 + q_z^2) &#x26; 2(q_yq_z - q_xq_w)
@@ -278,7 +278,7 @@ matrix as returned by
 `matrix`:
 
 <math display="block"><semantics><mrow><mo>[</mo>
-<mtable rowspacing="0.5ex"><mtr><mtd><mn>1</mn>
+<mtable rowspacing="0.5ex"><mtr><mtd><mrow><mn>1</mn>
 <mo>-</mo>
 <mn>2</mn>
 <mo stretchy="false">(</mo>
@@ -290,7 +290,7 @@ matrix as returned by
 <mi>z</mi>
 <mn>2</mn>
 </msubsup><mo stretchy="false">)</mo>
-</mtd><mtd><mn>2</mn>
+</mrow></mtd><mtd><mrow><mn>2</mn>
 <mo stretchy="false">(</mo>
 <msub><mi>q</mi>
 <mi>x</mi>
@@ -302,7 +302,7 @@ matrix as returned by
 </msub><msub><mi>q</mi>
 <mi>w</mi>
 </msub><mo stretchy="false">)</mo>
-</mtd><mtd><mn>2</mn>
+</mrow></mtd><mtd><mrow><mn>2</mn>
 <mo stretchy="false">(</mo>
 <msub><mi>q</mi>
 <mi>x</mi>
@@ -314,9 +314,9 @@ matrix as returned by
 </msub><msub><mi>q</mi>
 <mi>w</mi>
 </msub><mo stretchy="false">)</mo>
-</mtd><mtd><msub><mi>p</mi>
+</mrow></mtd><mtd><mrow><msub><mi>p</mi>
 <mi>x</mi>
-</msub></mtd></mtr><mtr><mtd><mn>2</mn>
+</msub></mrow></mtd></mtr><mtr><mtd><mrow><mn>2</mn>
 <mo stretchy="false">(</mo>
 <msub><mi>q</mi>
 <mi>x</mi>
@@ -328,7 +328,7 @@ matrix as returned by
 </msub><msub><mi>q</mi>
 <mi>w</mi>
 </msub><mo stretchy="false">)</mo>
-</mtd><mtd><mn>1</mn>
+</mrow></mtd><mtd><mrow><mn>1</mn>
 <mo>-</mo>
 <mn>2</mn>
 <mo stretchy="false">(</mo>
@@ -340,7 +340,7 @@ matrix as returned by
 <mi>z</mi>
 <mn>2</mn>
 </msubsup><mo stretchy="false">)</mo>
-</mtd><mtd><mn>2</mn>
+</mrow></mtd><mtd><mrow><mn>2</mn>
 <mo stretchy="false">(</mo>
 <msub><mi>q</mi>
 <mi>y</mi>
@@ -352,9 +352,9 @@ matrix as returned by
 </msub><msub><mi>q</mi>
 <mi>w</mi>
 </msub><mo stretchy="false">)</mo>
-</mtd><mtd><msub><mi>p</mi>
+</mrow></mtd><mtd><mrow><msub><mi>p</mi>
 <mi>y</mi>
-</msub></mtd></mtr><mtr><mtd><mn>2</mn>
+</msub></mrow></mtd></mtr><mtr><mtd><mrow><mn>2</mn>
 <mo stretchy="false">(</mo>
 <msub><mi>q</mi>
 <mi>x</mi>
@@ -366,7 +366,7 @@ matrix as returned by
 </msub><msub><mi>q</mi>
 <mi>w</mi>
 </msub><mo stretchy="false">)</mo>
-</mtd><mtd><mn>2</mn>
+</mrow></mtd><mtd><mrow><mn>2</mn>
 <mo stretchy="false">(</mo>
 <msub><mi>q</mi>
 <mi>y</mi>
@@ -378,7 +378,7 @@ matrix as returned by
 </msub><msub><mi>q</mi>
 <mi>w</mi>
 </msub><mo stretchy="false">)</mo>
-</mtd><mtd><mn>1</mn>
+</mrow></mtd><mtd><mrow><mn>1</mn>
 <mo>-</mo>
 <mn>2</mn>
 <mo stretchy="false">(</mo>
@@ -390,13 +390,13 @@ matrix as returned by
 <mi>y</mi>
 <mn>2</mn>
 </msubsup><mo stretchy="false">)</mo>
-</mtd><mtd><msub><mi>p</mi>
+</mrow></mtd><mtd><mrow><msub><mi>p</mi>
 <mi>z</mi>
-</msub></mtd></mtr><mtr><mtd><mn>0</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><mn>1</mn>
-</mtd></mtr></mtable><mo>]</mo>
+</msub></mrow></mtd></mtr><mtr><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>0</mn>
+</mrow></mtd><mtd><mrow><mn>1</mn>
+</mrow></mtd></mtr></mtable><mo>]</mo>
 </mrow><annotation encoding="TeX">\begin{bmatrix} 1 - 2(q_y^2 + q_z^2) &#x26; 2(q_xq_y -
 q_zq_w) &#x26; 2(q_xq_z + q_yq_w)
 &#x26; p_x\\ 2(q_xq_y + q_zq_w) &#x26; 1 - 2(q_x^2 + q_z^2) &#x26; 2(q_yq_z - q_xq_w)

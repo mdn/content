@@ -129,7 +129,7 @@ rotate3d(x, y, z, a)
                   <mi>a</mi>
                   <mo>)</mo>
                   <mo>)</mo>
-                </mtd></mtr
+                </mrow></mtd></mtr
               ><mtr
                 ><mtd
                   ><mo>-</mo>
@@ -186,7 +186,7 @@ rotate3d(x, y, z, a)
                   <mi>a</mi>
                   <mo>)</mo>
                   <mo>)</mo>
-                </mtd></mtr
+                </mrow></mtd></mtr
               ><mtr
                 ><mtd
                   ><mi>y</mi>
@@ -237,10 +237,10 @@ rotate3d(x, y, z, a)
                   <mo>-</mo>
                   <mn>1</mn>
                   <mo>)</mo> </mtd
-                ><mtd><mi>t</mi></mtd> </mtr
+                ><mtd><mrow><mi>t</mi></mrow></mtd> </mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>1</mn></mrow></mtd></mtr
               ></mtable
             ><mo>)</mo></mrow
           ></math

@@ -49,9 +49,9 @@ matrix(a, b, c, d, tx, ty)
           ><mrow><mo>(</mo
             ><mtable
               ><mtr
-                ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd></mtr
+                ><mtd><mrow><mi>a</mi> </mrow></mtd><mtd><mrow><mi>c</mi> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mi>b</mi> </mtd><mtd><mi>d</mi></mtd></mtr
+                ><mtd><mrow><mi>b</mi> </mrow></mtd><mtd><mrow><mi>d</mi></mrow></mtd></mtr
               ></mtable
             ><mo>)</mo></mrow
           ></math
@@ -62,14 +62,14 @@ matrix(a, b, c, d, tx, ty)
           ><mrow><mo>(</mo
             ><mtable
               ><mtr
-                ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd
-                ><mtd><mi>tx</mi> </mtd></mtr
+                ><mtd><mrow><mi>a</mi> </mrow></mtd><mtd><mrow><mi>c</mi> </mtd
+                ><mtd><mrow><mi>tx</mi> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mi>b</mi> </mtd><mtd><mi>d</mi> </mtd
-                ><mtd><mi>ty</mi> </mtd></mtr
+                ><mtd><mrow><mi>b</mi> </mrow></mtd><mtd><mrow><mi>d</mi> </mtd
+                ><mtd><mrow><mi>ty</mi> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>1</mn></mrow></mtd></mtr
               ></mtable
             ><mo>)</mo></mrow
           ></math
@@ -80,14 +80,14 @@ matrix(a, b, c, d, tx, ty)
           ><mrow><mo>(</mo
             ><mtable
               ><mtr
-                ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd
-                ><mtd><mi>tx</mi> </mtd></mtr
+                ><mtd><mrow><mi>a</mi> </mrow></mtd><mtd><mrow><mi>c</mi> </mtd
+                ><mtd><mrow><mi>tx</mi> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mi>b</mi> </mtd><mtd><mi>d</mi> </mtd
-                ><mtd><mi>ty</mi> </mtd></mtr
+                ><mtd><mrow><mi>b</mi> </mrow></mtd><mtd><mrow><mi>d</mi> </mtd
+                ><mtd><mrow><mi>ty</mi> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>1</mn></mrow></mtd></mtr
               ></mtable
             ><mo>)</mo></mrow
           ></math
@@ -98,17 +98,17 @@ matrix(a, b, c, d, tx, ty)
           ><mrow><mo>(</mo
             ><mtable
               ><mtr
-                ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mi>tx</mi> </mtd></mtr
+                ><mtd><mrow><mi>a</mi> </mrow></mtd><mtd><mrow><mi>c</mi> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mi>tx</mi> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mi>b</mi> </mtd><mtd><mi>d</mi> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mi>ty</mi> </mtd></mtr
+                ><mtd><mrow><mi>b</mi> </mrow></mtd><mtd><mrow><mi>d</mi> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mi>ty</mi> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>1</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>0</mn> </mtd
+                ><mtd><mrow><mn>0</mn> </mrow></mtd><mtd><mrow><mn>1</mn></mrow></mtd></mtr
               ></mtable
             ><mo>)</mo></mrow
           ></math

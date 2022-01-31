@@ -58,17 +58,17 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
           ><mrow><mo>(</mo
             ><mtable
               ><mtr
-                ><mtd><mi>a1</mi> </mtd><mtd><mi>a2</mi> </mtd
-                ><mtd><mi>a3</mi> </mtd><mtd><mi>a4</mi> </mtd></mtr
+                ><mtd><mrow><mi>a1</mi> </mrow></mtd><mtd><mrow><mi>a2</mi> </mtd
+                ><mtd><mrow><mi>a3</mi> </mrow></mtd><mtd><mrow><mi>a4</mi> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mi>b1</mi> </mtd><mtd><mi>b2</mi> </mtd
-                ><mtd><mi>b3</mi> </mtd><mtd><mi>b4</mi> </mtd></mtr
+                ><mtd><mrow><mi>b1</mi> </mrow></mtd><mtd><mrow><mi>b2</mi> </mtd
+                ><mtd><mrow><mi>b3</mi> </mrow></mtd><mtd><mrow><mi>b4</mi> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mi>c1</mi> </mtd><mtd><mi>c2</mi> </mtd
-                ><mtd><mi>c3</mi> </mtd><mtd><mi>c4</mi> </mtd></mtr
+                ><mtd><mrow><mi>c1</mi> </mrow></mtd><mtd><mrow><mi>c2</mi> </mtd
+                ><mtd><mrow><mi>c3</mi> </mrow></mtd><mtd><mrow><mi>c4</mi> </mrow></mtd></mtr
               ><mtr
-                ><mtd><mi>d1</mi> </mtd><mtd><mi>d2</mi> </mtd
-                ><mtd><mi>d3</mi> </mtd><mtd><mi>d4</mi></mtd></mtr
+                ><mtd><mrow><mi>d1</mi> </mrow></mtd><mtd><mrow><mi>d2</mi> </mtd
+                ><mtd><mrow><mi>d3</mi> </mrow></mtd><mtd><mrow><mi>d4</mi></mrow></mtd></mtr
               ></mtable
             ><mo>)</mo></mrow
           ></math
