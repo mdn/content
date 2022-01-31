@@ -325,9 +325,7 @@ For these reasons, most modern asynchronous APIs don't use callbacks. Instead, t
 
 ## In this module
 
-- [General asynchronous programming concepts](/en-US/docs/Learn/JavaScript/Asynchronous/Concepts)
 - **Introducing asynchronous JavaScript**
-- [Cooperative asynchronous JavaScript: Timeouts and intervals](/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
-- [Graceful asynchronous programming with Promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Making asynchronous programming easier with async and await](/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)
-- [Choosing the right approach](/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)
+- [How to use Promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Implementing a Promise-based API](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_Promise-based_API)
+- [Introducing Workers](/en-US/docs/Learn/JavaScript/Asynchronous/Workers)

@@ -37,14 +37,12 @@ Asynchronous JavaScript is a fairly advanced topic, and you are advised to work 
 
 ## Guides
 
-- [General asynchronous programming concepts](/en-US/docs/Learn/JavaScript/Asynchronous/Concepts)
-  - : In this article we'll run through a number of important concepts relating to asynchronous programming, and how this looks in web browsers and JavaScript. You should understand these concepts before working through the other articles in the module.
 - [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
   - : In this article we'll see what **synchronous** and **asynchronous** programming are, why we often need to use asynchronous techniques, how asynchronous functions have historically been implemented in JavaScript, and what their problems are.
 - [How to use Promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
   - : Here we'll introduce promises and show how to use promise-based APIs. We'll also introduce the `async` and `await` keywords.
 - [Implementing a Promise-based API](/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_Promise-based_API)
-  - :
+  - : In this article we'll see how to implement your own promise-based API.
 - [Introducing Workers](/en-US/docs/Learn/JavaScript/Asynchronous/Workers)
   - :
 
