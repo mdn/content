@@ -115,7 +115,9 @@ Other technologies, such as {{Glossary("CSS")}} or {{Glossary("JavaScript")}}, u
 
 ## Absolute URLs vs relative URLs
 
-What we saw above is called an _absolute URL,_ but there is also something called a _relative URL_. Let's examine what that distinction means in more detail.
+What we saw above is called an _absolute URL_, but there is also something called a _relative URL_. The [URL standard](https://url.spec.whatwg.org/#absolute-url-string) defines both — though it uses the terms [_absolute URL string_](https://url.spec.whatwg.org/#absolute-url-string) and [_relative URL string_](https://url.spec.whatwg.org/#relative-url-string), to distinguish them from [URL objects](https://url.spec.whatwg.org/#url) (which are in-memory representations of URLs).
+
+Let's examine what the distinction between _absolute_ and _relative_ means in the context of URLs.
 
 The required parts of a URL depend to a great extent on the context in which the URL is used. In your browser's address bar, a URL doesn't have any context, so you must provide a full (or _absolute_) URL, like the ones we saw above. You don't need to include the protocol (the browser uses HTTP by default) or the port (which is only required when the targeted Web server is using some unusual port), but all the other parts of the URL are necessary.
 
