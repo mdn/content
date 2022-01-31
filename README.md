@@ -737,6 +737,6 @@ Source code repo for examples referenced in the
 provides more information about JSON data used to define inheritance diagrams
 (`{{InheritanceDiagram}}` macro), specification tables, etc.
 
-## Frequently asked questions (FAQ)
+## Learn more
 
-
+You can learn more about contributing to MDN on [the MDN Web Docs for Contributors site](https://mdn-contributor-docs.mozilla.org/).
