@@ -66,6 +66,6 @@ Not part of any standard, though there is a [proposal in the CSSWG wiki](https:/
 
 ## See also
 
+- {{cssxref("print-color-adjust")}}
 - WebKit [bug 64583](https://bugs.webkit.org/show_bug.cgi?id=64583): "WIP: Add CSS property to control printing of backgrounds for individual elements"
 - CSSWG wiki: [print-backgrounds](https://wiki.csswg.org/ideas/print-backgrounds) - a proposal to standardize this property
-- CSS Color Module Level 4:  the [`color-adjust`](https://drafts.csswg.org/css-color-4/#color-adjust) property - a newer proposal to standardize this property

@@ -57,8 +57,8 @@ There are a number of reasons a browser might wish to deviate from the specified
 - When printing a page, the browser might want to replace light-colored text on a dark background with dark text on a white background.
 
 Any options the user agent offers the user to allow them to control the use of color and images will take priority over the value of `print-color-adjust`.
-In other words, there isn't any guarantee that `color-adjust` will do anything.
-Not only can the user override the behavior, but each user agent is allowed to decide for itself how to handle `color-adjust` in any given situation.
+In other words, there isn't any guarantee that `print-color-adjust` will do anything.
+Not only can the user override the behavior, but each user agent is allowed to decide for itself how to handle `print-color-adjust` in any given situation.
 
 ## Formal definition
 

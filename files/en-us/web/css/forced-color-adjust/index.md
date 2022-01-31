@@ -115,4 +115,4 @@ The following screenshot shows the image above in Windows High Contrast Mode:
 
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
 - [Styling for Windows high contrast with standards for forced colors.](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
-- {{cssxref("color-adjust")}}
+- {{cssxref("print-color-adjust")}}
