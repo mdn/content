@@ -1,6 +1,6 @@
 ---
 title: color-adjust
-slug: Web/CSS/color-adjust
+slug: Web/CSS/print-color-adjust
 tags:
   - Adjusting Colors
   - CSS
