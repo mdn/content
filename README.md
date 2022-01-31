@@ -8,9 +8,9 @@ The following is a set of guidelines for contributing to the
 hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
 
 > **Note:** Just want to find a task and jump in?
-> See [Getting started on MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started)
-> for an overview of how to join, and [Contributing to MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute)
-> for a filtered list of tasks.
+  See [Getting started on MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started)
+  for an overview of how to join, and [Contributing to MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute)
+  for a filtered list of tasks.
 
 ## Code of Conduct
 
@@ -62,13 +62,15 @@ There are several ways forward from this point. It's up to you.
 Here are some options:
 
 1. Go to <https://github.com/mdn/content> and just use the
-   [GitHub UI](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/managing-files-on-github).
-   This is the easiest approach if you just want to make a simple change to
-   a single file, like fixing a typo.
+[GitHub UI](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/managing-files-on-github).
+This is the easiest approach if you just want to make a simple change to
+a single file, like fixing a typo.
 1. Install and use the [GitHub Desktop](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-desktop)
 1. Install and use the [GitHub CLI](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-cli)
 1. [Install `git`](https://git-scm.com/downloads) and use it from the
-   command line. You might find these resources helpful: - [Using Git](https://docs.github.com/en/free-pro-team@latest/github/using-git) - [`git` cheatsheet](https://training.github.com/)
+command line. You might find these resources helpful:
+    - [Using Git](https://docs.github.com/en/free-pro-team@latest/github/using-git)
+    - [`git` cheatsheet](https://training.github.com/)
 
 If you choose an option other than the GitHub UI, you want to install
 [Node.js (version >=12.11)](https://nodejs.org) and [`yarn`](https://classic.yarnpkg.com/en/docs/install).
@@ -78,48 +80,48 @@ If you choose an option other than the GitHub UI, you want to install
 These are some important things to keep in mind about the MDN content.
 
 - **A document's main content is written in an `index.html` or an `index.md`
-  file** -- We're currently in the process of converting our content from HTML
-  into Markdown. Pages that are in HTML have their content in a file called
-  "index.html". Pages that are in Markdown have their content in a file called
-  "index.md".
-- **Documents are folders** -- Documents are always
-  represented by a folder (e.g., [`files/en-us/web/javascript`](files/en-us/web/javascript)),
-  and that folder will contain the content of that specific document as an
-  `index.html` or `index.md` file (e.g., [`files/en-us/web/javascript/index.md`](files/en-us/web/javascript/index.md)).
+file** -- We're currently in the process of converting our content from HTML
+into Markdown. Pages that are in HTML have their content in a file called
+"index.html". Pages that are in Markdown  have their content in a file called
+"index.md".
+- **Documents are folders** --  Documents are always
+represented by a folder (e.g., [`files/en-us/web/javascript`](files/en-us/web/javascript)),
+and that folder will contain the content of that specific document as an
+`index.html` or `index.md` file (e.g., [`files/en-us/web/javascript/index.md`](files/en-us/web/javascript/index.md)).
 - **Documents are hierarchical** - A document folder may contain other folders,
-  where those folders would represent child documents (e.g., [`files/en-us/web/javascript/closures/index.md`](files/en-us/web/javascript/closures/index.md)).
+where those folders would represent child documents (e.g., [`files/en-us/web/javascript/closures/index.md`](files/en-us/web/javascript/closures/index.md)).
 - **Document folders may contain image files** -- A document folder may also
-  contain image files, which are referenced within that document's
-  `index.html` or `index.md` file.
+contain image files, which are referenced within that document's
+`index.html` or `index.md` file.
 - **All redirects are specified in a single file** -- All of the redirects
-  are specified within [`files/en-us/_redirects.txt`](files/en-us/_redirects.txt),
-  one redirect per line. Each line specifies a `from` and `to` URI
-  separated by whitespace. When you move a document, you'll need to add a
-  redirect to this file specifying that its old URI now redirects to its new URI.
-  Both of these tasks are done using the `yarn content move` tool — see
-  [Moving one or more documents](#moving-one-or-more-documents).
+are specified within [`files/en-us/_redirects.txt`](files/en-us/_redirects.txt),
+one redirect per line. Each line specifies a `from` and `to` URI
+separated by whitespace. When you move a document, you'll need to add a
+redirect to this file specifying that its old URI now redirects to its new URI.
+Both of these tasks are done using the `yarn content move` tool — see
+[Moving one or more documents](#moving-one-or-more-documents).
 - **Don't edit the `_redirects.txt` file manually!**
-  If both an `index.html` or `index.md` file and a redirect exist for a document, the
-  document takes precedence and the redirect is ignored.
+If both an `index.html` or `index.md` file and a redirect exist for a document, the
+document takes precedence and the redirect is ignored.
 - **A document's `index.html` or `index.md` starts with "front-matter"** -- Each
-  document's `index.html` or `index.md` file must begin with some [YAML](https://en.wikipedia.org/wiki/YAML)
-  called front-matter that defines some important information about the
-  document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
-  (if any). Here's an example that shows the front-matter from the
-  [JavaScript landing page](files/en-us/web/javascript/index.md):
+document's `index.html` or `index.md` file must begin with some [YAML](https://en.wikipedia.org/wiki/YAML)
+called front-matter that defines some important information about the
+document: `title`, `slug`, and [`tags`](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag)
+(if any). Here's an example that shows the front-matter from the
+[JavaScript landing page](files/en-us/web/javascript/index.md):
 
-      ```yaml
-      ---
-      title: JavaScript
-      slug: Web/JavaScript
-      tags:
-        - JavaScript
-        - Landing
-        - Landing page
-        - Learn
-        - 'l10n:priority'
-      ---
-      ```
+    ```yaml
+    ---
+    title: JavaScript
+    slug: Web/JavaScript
+    tags:
+      - JavaScript
+      - Landing
+      - Landing page
+      - Learn
+      - 'l10n:priority'
+    ---
+    ```
 
 ### Simple changes
 
@@ -131,7 +133,7 @@ navigate to the source file `files/en-us/web/javascript/index.md`,
 and then click on the edit (pencil) button.
 
 > **Tip:** Click the **Source on GitHub** link in the footer of any MDN page
-> to jump to its source file on GitHub.
+  to jump to its source file on GitHub.
 
 From there the GitHub UI will take your hand and
 [walk you through the rest](https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/editing-files-in-your-repository),
@@ -143,7 +145,7 @@ Your pull request represents the work you want to be reviewed,
 hopefully approved, and then merged into the `main` branch of this repository.
 
 > **Note:** See the [pull request etiquette section](#pull-request-etiquette)
-> for more details on creating and handling pull requests successfully.
+  for more details on creating and handling pull requests successfully.
 
 If you're not certain of the changes that you want to make, get in touch
 with us first!
@@ -151,7 +153,7 @@ You can [chat with us](https://chat.mozilla.org/#/room/#mdn:mozilla.org) or
 [file an issue](https://github.com/mdn/content/issues).
 
 You may be asked to further edit files in your pull request.
-To open a file for editing, select the _Files changed_ tab on the PR,
+To open a file for editing, select the *Files changed* tab on the PR,
 scroll down to the section for the file you want to edit, and then select
 the "three dots" icon (at the top right of the section).
 Choose **Edit file** from the popup menu to start editing the file.
@@ -166,140 +168,143 @@ Instead, you're going to have to use `git` or one of the other
 `git`-based approaches like the
 [GitHub Desktop](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-desktop).
 
-1.  You'll want to create a
-    [fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
-    of this repository, so you can freely experiment with branches and
-    changes in your own copy before submitting your changes as a
-    [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
-    Let's assume your GitHub username is `octocat`. Your fork would be a copy
-    of this repository but in your own account, so
-    `https://github.com/octocat/content`.
+1. You'll want to create a
+[fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+of this repository, so you can freely experiment with branches and
+changes in your own copy before submitting your changes as a
+[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
+Let's assume your GitHub username is `octocat`. Your fork would be a copy
+of this repository but in your own account, so
+`https://github.com/octocat/content`.
 
-1.  Once you've created your fork on GitHub, you'll want to clone it locally.
-    For example, assuming again that your GitHub username is `octocat`, you
-    would do something like the following:
-
-        ```sh
-        cd ~/repos
-        git clone git@github.com:octocat/content.git mdn/content
-        ```
-
-1.  You'll also want to create a
-    [`remote`](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes)
-    to the main repository
-    ([https://github.com/mdn/content](https://github.com/mdn/content)),
-    which you'll use to keep your
-    local clone as well as your fork (`https://github.com/octocat/content`)
-    up-to-date. For these examples, we'll name
-    it `mdn`, but you can name it anything you'd like.
-
-        ```sh
-        cd ~/repos/mdn/content
-        git remote add mdn git@github.com:mdn/content.git
-        git remote -v
-        ```
-
-1.  When you run the `git remote -v` command above, you'll see that you have
-    two remotes: `mdn` and `origin`. The `origin` remote is the default name
-    that `git` has assigned to your fork (`https://github.com/octocat/content`).
-
-1.  Once you've created your local clone, there's no need to do that
-    again next time you want to make a contribution. However, each time before
-    you start a new chunk of work make sure you update your local clone.
-    The following checks-out your local clone's `main` branch, fetches the
-    latest content from the `main` branch of the `mdn` repository and merges
-    it into your local `main` branch, and finally checks out a new branch
-    called `my-work` (you can call it anything you'd like) for you to work within.
-    When you're ready, you'll push your `my-work` branch to your fork
-    and use it to make a pull request.
-
-        ```sh
-        cd ~/repos/mdn/content
-        git checkout main
-        git pull mdn main
-        git checkout -b my-work
-        ```
-
-1.  Next, you'll want to start the local preview service, so you can see
-    the changes you'll make as they would look in production. Once started,
-    this local preview service is available at `http://localhost:5042/`
-    within your browser.
-
-        ```sh
-        # Switch to a separate terminal.
-        cd ~/repos/mdn/content
-        yarn
-        yarn start
-        ```
-
-1.  When browsing a page locally, you can press the **Open in your editor**
-    button to edit the associated `index.html` or `index.md` file.
-
-    To specify VS Code as your preferred editor, create a file named `.env` in
-    the root of your local `content` directory that contains the following line:
+1. Once you've created your fork on GitHub, you'll want to clone it locally.
+For example, assuming again that your GitHub username is `octocat`, you
+would do something like the following:
 
     ```sh
-    EDITOR=code
+    cd ~/repos
+    git clone git@github.com:octocat/content.git mdn/content
     ```
 
-    You can create the file from a terminal using `bash` or PowerShell with the
-    command `echo 'EDITOR=code' >> .env`.
+1. You'll also want to create a
+[`remote`](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes)
+to the main repository
+([https://github.com/mdn/content](https://github.com/mdn/content)),
+which you'll use to keep your
+local clone as well as your fork (`https://github.com/octocat/content`)
+up-to-date. For these examples, we'll name
+it `mdn`, but you can name it anything you'd like.
 
-    `EDITOR` is an environment variable. You can set it to any editor you like
-    using the normal mechanism for your operating system/shell (i.e. you don't
-    have to use the `.env` file or VS Code).
+    ```sh
+    cd ~/repos/mdn/content
+    git remote add mdn git@github.com:mdn/content.git
+    git remote -v
+    ```
 
-1.  Make your desired changes to one or more `index.html` or `index.md` files
-    using your preferred code editor. **When thinking about your desired changes,
-    it's important to keep the following in mind:** - **Make sure you've read the
+1. When you run the `git remote -v` command above, you'll see that you have
+two remotes: `mdn` and `origin`. The `origin` remote is the default name
+that `git` has assigned to your fork (`https://github.com/octocat/content`).
+
+1. Once you've created your local clone, there's no need to do that
+again next time you want to make a contribution. However, each time before
+you start a new chunk of work make sure you update your local clone.
+The following checks-out your local clone's `main` branch, fetches the
+latest content from the `main` branch of the `mdn` repository and merges
+it into your local `main` branch, and finally checks out a new branch
+called `my-work` (you can call it anything you'd like) for you to work within.
+When you're ready, you'll push your `my-work` branch to your fork
+and use it to make a pull request.
+
+    ```sh
+    cd ~/repos/mdn/content
+    git checkout main
+    git pull mdn main
+    git checkout -b my-work
+    ```
+
+1. Next, you'll want to start the local preview service, so you can see
+the changes you'll make as they would look in production. Once started,
+this local preview service is available at `http://localhost:5042/`
+within your browser.
+
+    ```sh
+    # Switch to a separate terminal.
+    cd ~/repos/mdn/content
+    yarn
+    yarn start
+    ```
+
+1. When browsing a page locally, you can press the **Open in your editor**
+   button to edit the associated `index.html` or `index.md` file.
+
+   To specify VS Code as your preferred editor, create a file named `.env` in
+   the root of your local `content` directory that contains the following line:
+
+   ```sh
+   EDITOR=code
+   ```
+
+   You can create the file from a terminal using `bash` or PowerShell with the
+   command `echo 'EDITOR=code' >> .env`.
+
+   `EDITOR` is an environment variable. You can set it to any editor you like
+   using the normal mechanism for your operating system/shell (i.e. you don't
+   have to use the `.env` file or VS Code).
+
+1. Make your desired changes to one or more `index.html` or `index.md` files
+using your preferred code editor. **When thinking about your desired changes,
+it's important to keep the following in mind:**
+    - **Make sure you've read the
     [MDN guidelines](https://developer.mozilla.org/en-US/docs/MDN/Guidelines),
     including the
-    [Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).** - **If you're editing a Markdown file, see the
-    [guide to writing Markdown for MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN).** - **Large chunks of work can be difficult to review, so try to group your
+    [Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide).**
+    - **If you're editing a Markdown file, see the
+    [guide to writing Markdown for MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN).**
+    - **Large chunks of work can be difficult to review, so try to group your
     changes into the smallest logical chunks that make sense, and create a
     separate pull request for each logical chunk.**
 
-1.  Once you've made and saved your changes, open a browser, and navigate
-    to the page(s) you've changed. For example, if you changed
-    `files/en-us/web/javascript/index.md`, open
-    `http://localhost:5042/en-us/docs/web/javascript` in your browser.
+1. Once you've made and saved your changes, open a browser, and navigate
+to the page(s) you've changed. For example, if you changed
+`files/en-us/web/javascript/index.md`, open
+`http://localhost:5042/en-us/docs/web/javascript` in your browser.
 
-1.  You might have noticed that at the top of each page that you preview,
-    for example the `http://localhost:5042/en-us/docs/web/javascript` page,
-    there is a `Show flaws` button. Click on that button to see if your
-    changes have introduced flaws on the page. You can also fix flaws on a
-    particular page by running the command:
+1. You might have noticed that at the top of each page that you preview,
+for example the `http://localhost:5042/en-us/docs/web/javascript` page,
+there is a `Show flaws` button. Click on that button to see if your
+changes have introduced flaws on the page. You can also fix flaws on a
+particular page by running the command:
 
-        ```sh
-        yarn content flaws <slug>
-        ```
+    ```sh
+    yarn content flaws <slug>
+    ```
 
-1.  Once you're happy with your changes, add and commit them to your branch,
-    and then push the branch to your fork. Remember, the default name that
-    `git` assigned to the remote that represents your fork is `origin`.
+1. Once you're happy with your changes, add and commit them to your branch,
+and then push the branch to your fork. Remember, the default name that
+`git` assigned to the remote that represents your fork is `origin`.
 
-        ```sh
-        cd ~/repos/mdn/content
-        git add .
-        git commit
-        git push -u origin my-work
-        ```
+    ```sh
+    cd ~/repos/mdn/content
+    git add .
+    git commit
+    git push -u origin my-work
+    ```
 
-1.  You're now ready to create a
-    [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. You're now ready to create a
+[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-1.  Once you've created your pull request, sit back, relax, and wait for
-    a review.
-    **You do not need to request a review. One or more reviewers will be selected for**
-    **you automatically.**
-    Your pull request will have to be reviewed and eventually approved before
-    it's merged into the `main` branch, and then later (within 48 hours)
-    published on [MDN Web Docs](https://developer.mozilla.org). Along the way,
-    you may be asked, not only
-    to answer questions about your work, but to make changes as well. Don't
-    worry, that's a common and natural part of the process.
-    **See the [pull request etiquette section](#pull-request-etiquette) for more details**
-    **on creating and handling pull requests successfully.**
+1. Once you've created your pull request, sit back, relax, and wait for
+a review.
+**You do not need to request a review. One or more reviewers will be selected for**
+**you automatically.**
+Your pull request will have to be reviewed and eventually approved before
+it's merged into the `main` branch, and then later (within 48 hours)
+published on [MDN Web Docs](https://developer.mozilla.org). Along the way,
+you may be asked, not only
+to answer questions about your work, but to make changes as well. Don't
+worry, that's a common and natural part of the process.
+**See the [pull request etiquette section](#pull-request-etiquette) for more details**
+**on creating and handling pull requests successfully.**
 
 ### Pull request etiquette
 
@@ -307,51 +312,50 @@ Here are some important rules of etiquette to remember when working
 with pull requests.
 
 1. When you submit a pull request, a number of tests are automatically run
-   as GitHub Actions (see [.github/workflows](.github/workflows)). If
-   one or more of these tests fail, it is your responsibility to try and
-   resolve the underlying issue(s). If you don't know how to resolve the
-   underlying issue(s), you can ask for help. Your pull request will not be
-   approved and merged if these tests are failing.
+as GitHub Actions (see [.github/workflows](.github/workflows)). If
+one or more of these tests fail, it is your responsibility to try and
+resolve the underlying issue(s). If you don't know how to resolve the
+underlying issue(s), you can ask for help. Your pull request will not be
+approved and merged if these tests are failing.
 
 1. If your pull request has merge conflicts with the `main` branch (GitHub
-   checks for this automatically and notifies you), you are responsible for
-   resolving them. You can do this by merging the `main` branch into your
-   branch (`git pull mdn main`), and then pushing the updated branch to
-   your fork (`git push`).
+checks for this automatically and notifies you), you are responsible for
+resolving them. You can do this by merging the `main` branch into your
+branch (`git pull mdn main`), and then pushing the updated branch to
+your fork (`git push`).
 
 1. An alternative strategy is `git rebase` of `main` on your branch.
-   This will rewrite the git history and might confuse reviewers as notifications
-   from GitHub lead to nowhere. Your changes are replayed on top of the current
-   main branch at that point in time.
+This will rewrite the git history and might confuse reviewers as notifications
+from GitHub lead to nowhere. Your changes are replayed on top of the current
+main branch at that point in time.
 
 1. Each pull request should contain a single logical change, or related set
-   of changes that make sense to submit together. If a pull request becomes
-   too large or contains too many unrelated changes, it becomes too difficult
-   to review, and may begin to look suspicious (it is easier to hide malicious
-   changes in a large pull request). In such cases, the reviewer has the right
-   to close your pull request, and ask that you submit a separate pull request
-   for each logical set of changes that belong together.
+of changes that make sense to submit together. If a pull request becomes
+too large or contains too many unrelated changes, it becomes too difficult
+to review, and may begin to look suspicious (it is easier to hide malicious
+changes in a large pull request). In such cases, the reviewer has the right
+to close your pull request, and ask that you submit a separate pull request
+for each logical set of changes that belong together.
 
 1. If your pull request contains any kind of significant complexity
-   (it contains technical changes, and isn't just a typo fix, grammatical
-   improvement, or formatting/structural change), please describe why you're
-   making the change and anything else we need to know about it.
-
+(it contains technical changes, and isn't just a typo fix, grammatical
+improvement, or formatting/structural change), please describe why you're
+making the change and anything else we need to know about it.
    - If the pull request is simple (it is really clear what has been
-     changed and why, and the change is obviously a good thing), you can do
-     this in your pull request's description.
+   changed and why, and the change is obviously a good thing), you can do
+   this in your pull request's description.
    - If the pull request is complex (the changes and the reasoning behind
-     them need a bit more explanation), then the requestor should file an
-     issue describing the intended change first, and seek discussion/approval
-     as needed. When the time is right to submit the PR, they should
-     reference the issue (or an existing issue that describes the motivation
-     for the change) in the PR. You can reference an existing issue
-     using `#` followed by the issue's ID, for example `#1234`.
+   them need a bit more explanation), then the requestor should file an
+   issue describing the intended change first, and seek discussion/approval
+   as needed. When the time is right to submit the PR, they should
+   reference the issue (or an existing issue that describes the motivation
+   for the change) in the PR. You can reference an existing issue
+   using `#` followed by the issue's ID, for example `#1234`.
    - Pull requests should not contain large amounts of grammar updates.
-     Seemingly insignificant changes can change the meaning of technical
-     content, so these need a careful review. Keep in mind that MDN contains
-     technical documentation; you should not report merely basic improvements
-     in the grammar but only cases where the grammar is incorrect.
+   Seemingly insignificant changes can change the meaning of technical
+   content, so these need a careful review. Keep in mind that MDN contains
+   technical documentation; you should not report merely basic improvements
+   in the grammar but only cases where the grammar is incorrect.
 
 1. Do not re-open a pull request that a reviewer has closed.
 
@@ -384,29 +388,29 @@ As we outlined above, the step-by-step process in general would be:
 
 1. Start a fresh, up-to-date branch to work within:
 
-   ```sh
-   cd ~/repos/mdn/content
-   git checkout main
-   git pull mdn main
-   # Run "yarn" again just to ensure you've
-   # installed the latest Yari dependency.
-   yarn
-   git checkout -b my-add
-   ```
+    ```sh
+    cd ~/repos/mdn/content
+    git checkout main
+    git pull mdn main
+    # Run "yarn" again just to ensure you've
+    # installed the latest Yari dependency.
+    yarn
+    git checkout -b my-add
+    ```
 
 1. Create one or more new document folders, each with their own `index.html`
-   or `index.md` file.
+or `index.md` file.
 
 1. Add and commit your new files, as well as push your new branch to your fork:
 
-   ```sh
-   git add files/en-us/folder/you/created
-   git commit
-   git push -u origin my-add
-   ```
+    ```sh
+    git add files/en-us/folder/you/created
+    git commit
+    git push -u origin my-add
+    ```
 
 1. And finally create your
-   [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+[pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 ### Moving one or more documents
 
@@ -426,7 +430,7 @@ it represents a document tree), the `yarn content move` command will move
 the entire tree. For example, let's say you want to move the entire
 `/en-US/Learn/Accessibility` tree to `/en-US/Learn/A11y`:
 
-1.  First, as we've outlined above, you'll start a fresh branch to work within:
+1. First, as we've outlined above, you'll start a fresh branch to work within:
 
     ```sh
     cd ~/repos/mdn/content
@@ -438,22 +442,22 @@ the entire tree. For example, let's say you want to move the entire
     git checkout -b my-move
     ```
 
-1.  Perform the move (which will delete and modify existing files, as well
-    as create new files):
+1. Perform the move (which will delete and modify existing files, as well
+as create new files):
 
-        ```sh
-        yarn content move Learn/Accessibility Learn/A11y
-        ```
+    ```sh
+    yarn content move Learn/Accessibility Learn/A11y
+    ```
 
-1.  Add and commit all of the deleted, created, and modified files, as well as
-    push your branch to your fork:
+1. Add and commit all of the deleted, created, and modified files, as well as
+push your branch to your fork:
 
-        ```sh
-        git commit -a
-        git push -u origin my-move
-        ```
+    ```sh
+    git commit -a
+    git push -u origin my-move
+    ```
 
-1.  Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 **Important: `yarn content move` automatically adds the necessary redirect
 information to the `_redirects.txt` file so that the old location will redirect
@@ -485,7 +489,7 @@ necessary changes such as updating the `_wikihistory.json` file.**
 For example, let's say you want to delete the
 entire `/en-US/Learn/Accessibility` tree:
 
-1.  First, as we've outlined above, you'll start a fresh branch to work in:
+1. First, as we've outlined above, you'll start a fresh branch to work in:
 
     ```sh
     cd ~/repos/mdn/content
@@ -497,25 +501,25 @@ entire `/en-US/Learn/Accessibility` tree:
     git checkout -b my-delete
     ```
 
-1.  Perform the delete:
+1. Perform the delete:
 
     ```sh
     yarn content delete Learn/Accessibility --recursive
     ```
 
-1.  [Add a redirect](#redirecting-a-document) (if needed).
-1.  Add and commit all of the deleted files, as well as
-    push your branch to your fork:
+1. [Add a redirect](#redirecting-a-document) (if needed).
+1. Add and commit all of the deleted files, as well as
+push your branch to your fork:
 
-        ```sh
-        git commit -a
-        git push -u origin my-delete
-        ```
+    ```sh
+    git commit -a
+    git push -u origin my-delete
+    ```
 
-1.  Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. Now you're ready to create your [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 > **Note:** If the slug of the page you wish to delete contain special
-> characters, include it in quotes:
+  characters, include it in quotes:
 
 ```sh
 yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
@@ -529,7 +533,7 @@ above you don't need to create a redirect. However, you may need to when
 
 The best way to do this is to use the `yarn content add-redirect` command:
 
-1.  Start a fresh branch to work in:
+1. Start a fresh branch to work in:
 
     ```sh
     cd ~/repos/mdn/content
@@ -541,7 +545,7 @@ The best way to do this is to use the `yarn content add-redirect` command:
     git checkout -b my-delete
     ```
 
-1.  Perform the redirect:
+1. Perform the redirect:
 
     ```sh
     yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
@@ -549,13 +553,13 @@ The best way to do this is to use the `yarn content add-redirect` command:
 
     Note that the target page can be an external URL or another page.
 
-1.  Commit all of the changed files, as well as
-    pushing your branch to your fork:
+1. Commit all of the changed files, as well as
+pushing your branch to your fork:
 
-        ```sh
-        git commit -a
-        git push -u origin my-delete
-        ```
+    ```sh
+    git commit -a
+    git push -u origin my-delete
+    ```
 
 ### Adding images
 
@@ -565,56 +569,56 @@ from within the document's `index.html` or `index.md` file, using an `<img>`
 or [the equivalent Markdown syntax](https://github.github.com/gfm/#images).
 It's as easy as that. Let's walk through an example:
 
-1.  You should be getting used to this by now, as we've done it several
-    times above. Make sure you start with a fresh working branch updated with
-    the latest content from the `main` branch of the `mdn` remote.
+1. You should be getting used to this by now, as we've done it several
+times above. Make sure you start with a fresh working branch updated with
+the latest content from the `main` branch of the `mdn` remote.
 
-        ```sh
-        cd ~/repos/mdn/content
-        git checkout main
-        git pull mdn main
-        # Run "yarn" again just to ensure you've
-        # installed the latest Yari dependency.
-        yarn
-        git checkout -b my-images
-        ```
+    ```sh
+    cd ~/repos/mdn/content
+    git checkout main
+    git pull mdn main
+    # Run "yarn" again just to ensure you've
+    # installed the latest Yari dependency.
+    yarn
+    git checkout -b my-images
+    ```
 
-1.  Add your image to the document folder. For this example, let's assume
-    we're adding a new image to the `files/en-us/web/css` document.
+1. Add your image to the document folder. For this example, let's assume
+we're adding a new image to the `files/en-us/web/css` document.
 
-        ```sh
-        cd ~/repos/mdn/content
-        cp /some/path/my-cool-image.png files/en-us/web/css/
-        ```
+    ```sh
+    cd ~/repos/mdn/content
+    cp /some/path/my-cool-image.png files/en-us/web/css/
+    ```
 
-1.  Run the `filecheck` command on each image you add. It'll complain if
-    something's wrong (see also the [Compressing images](#compressing-images)
-    section below).
-    We'll automatically run this as one of the tests we run when your new pull
-    request is created, but why wait to fix any possible issues later?
+1. Run the `filecheck` command on each image you add. It'll complain if
+something's wrong (see also the [Compressing images](#compressing-images)
+section below).
+We'll automatically run this as one of the tests we run when your new pull
+request is created, but why wait to fix any possible issues later?
 
-        ```sh
-        yarn filecheck files/en-us/web/css/my-cool-image.png
-        ```
+    ```sh
+    yarn filecheck files/en-us/web/css/my-cool-image.png
+    ```
 
-1.  Use your image within the document. For example, add the following `<img>` element
-    somewhere inside `files/en-us/web/css/index.html`:
+1. Use your image within the document. For example, add the following `<img>` element
+somewhere inside `files/en-us/web/css/index.html`:
 
-        ```html
-        <img src="my-cool-image.png" alt="My cool image">
-        ```
+    ```html
+    <img src="my-cool-image.png" alt="My cool image">
+    ```
 
-1.  Add and commit all of the deleted, created, and modified files, as well as
-    push your branch to your fork:
+1. Add and commit all of the deleted, created, and modified files, as well as
+push your branch to your fork:
 
-        ```sh
-        git add files/en-us/web/css/my-cool-image.png files/en-us/web/css/index.html
-        git commit
-        git push -u origin my-images
-        ```
+    ```sh
+    git add files/en-us/web/css/my-cool-image.png files/en-us/web/css/index.html
+    git commit
+    git push -u origin my-images
+    ```
 
-1.  Now you're ready to create your
-    [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+1. Now you're ready to create your
+   [pull request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 #### Compressing images
 
