@@ -139,7 +139,7 @@ If the main axis is in the block direction because `flex-direction` is set to `
 
 ### Alignment and Writing Modes
 
-Remember that with all of these alignment methods, the values of `flex-start` and `flex-end` are writing mode-aware. If the value of `justify-content` is `start` and the writing mode is left-to-right as in English, the items will line up starting at the left side of the container.
+Remember that with all of these alignment methods, the values of `flex-start` and `flex-end` are writing mode-aware. If the value of `justify-content` is `flex-start` and the writing mode is left-to-right as in English, the items will line up starting at the left side of the container.
 
 ![Three items lined up on the left](basics5.png)
 
