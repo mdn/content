@@ -69,6 +69,10 @@ We'd like you to style the provided {{htmlelement("p")}}, giving it the followin
 - A linear semi-transparent black gradient that goes toward the bottom right corner. Make it completely transparent at the start, gradiating to around 0.2 opacity by 30% along, and remaining at the same color until the end.
 - Multiple box shadows. Give it one standard box shadow to make the box look slightly raised off the page. The other two should be inset box shadows — a semi-transparent white shadow near the top left and a semi-transparent black shadow near the bottom right — to add to the nice raised 3D look of the box.
 
+## Hints and tips
+
+-  Use the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to catch and fix mistakes in your CSS.
+
 ## Example
 
 The following screenshot shows an example of what the finished design could look like:
@@ -82,9 +86,24 @@ If you would like your work assessed, or are stuck and want to ask for help:
 1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
 
-    - A descriptive title such as "Assessment wanted for Cool-looking box".
+    - A descriptive title such as "Assessment wanted for A cool-looking box".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
     - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
     - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenu("Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}
+
+## In this module
+
+- [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+- [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+- [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [CSS values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+- [Organizing your CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing)
