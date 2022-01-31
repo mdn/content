@@ -19,7 +19,7 @@ A Human Interface Device (HID) is a type of device that takes input from or prov
 <!---->
 
 - {{domxref("HIDDevice")}}
-  - : Represents an HID device. It's possible for a single physical device to be represented by multiple `HIDDevice` obects.
+  - : Represents an HID device. It's possible for a single physical device to be represented by multiple `HIDDevice` objects.
 
 <!---->
 

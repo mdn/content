@@ -481,7 +481,7 @@ The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. 
     </tr>
     <tr>
       <td><code>22</code></td>
-      <td>ER BSAC (Error Reslient Bit-Sliced Arithmetic Coding)</td>
+      <td>ER BSAC (Error Resilient Bit-Sliced Arithmetic Coding)</td>
       <td>Mobile Internetworking</td>
     </tr>
     <tr>

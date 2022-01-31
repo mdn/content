@@ -153,7 +153,7 @@ to tell WebGL to use the default value, while calling
   "gl.enableVertexAttribArray()")}} will read the values from the array buffer as
 specified with `gl.vertexAttribPointer()`.
 
-Similarily, if our vertex shader expects e.g. a 4-component attribute with
+Similarly, if our vertex shader expects e.g. a 4-component attribute with
 `vec4` but in our `gl.vertexAttribPointer()` call we set the
 `size` to `2`, then WebGL will set the first two components based
 on the array buffer, while the third and fourth components are taken from the default

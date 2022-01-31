@@ -27,7 +27,7 @@ To show simple usage of Web speech recognition, we've written a demo called [Spe
 
 ![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that color. In this case it has turned the background red.](speech-color-changer.png)
 
-To run the demo, you can clone (or [directly download](https://github.com/mdn/web-speech-api/archive/master.zip)) the Github repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the [live demo URL](https://mdn.github.io/web-speech-api/speech-color-changer/) in a supporting mobile browser like Chrome.
+To run the demo, you can clone (or [directly download](https://github.com/mdn/web-speech-api/archive/master.zip)) the Github repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the [live demo URL](https://mdn.github.io/web-speech-api/speech-color-changer/) in a supporting mobile browser like Chrome.
 
 ### Browser support
 
@@ -79,7 +79,7 @@ The grammar format used is [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/)
 
 #### Plugging the grammar into our speech recognition
 
-The next thing to do is define a speech recogntion instance to control the recognition for our application. This is done using the {{domxref("SpeechRecognition.SpeechRecognition()","SpeechRecognition()")}} constructor. We also create a new speech grammar list to contain our grammar, using the {{domxref("SpeechGrammarList.SpeechGrammarList()","SpeechGrammarList()")}} constructor.
+The next thing to do is define a speech recognition instance to control the recognition for our application. This is done using the {{domxref("SpeechRecognition.SpeechRecognition()","SpeechRecognition()")}} constructor. We also create a new speech grammar list to contain our grammar, using the {{domxref("SpeechGrammarList.SpeechGrammarList()","SpeechGrammarList()")}} constructor.
 
 ```js
 var recognition = new SpeechRecognition();
@@ -135,10 +135,10 @@ Once the speech recognition is started, there are many event handlers that can b
 
 ```js
 recognition.onresult = function(event) {
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
-  bg.style.backgroundColor = color;
-  console.log('Confidence: ' + event.results[0][0].confidence);
+  var color = event.results[0][0].transcript;
+  diagnostic.textContent = 'Result received: ' + color + '.';
+  bg.style.backgroundColor = color;
+  console.log('Confidence: ' + event.results[0][0].confidence);
 }
 ```
 
@@ -182,13 +182,13 @@ To show simple usage of Web speech synthesis, we've provided a demo called [Spea
 
 ![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesised, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](speak-easy-synthesis.png)
 
-To run the demo, you can clone (or [directly download](https://github.com/mdn/web-speech-api/archive/master.zip)) the Github repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the [live demo URL](https://mdn.github.io/web-speech-api/speak-easy-synthesis/) in a supporting mobile browser like Chrome, or Firefox OS.
+To run the demo, you can clone (or [directly download](https://github.com/mdn/web-speech-api/archive/master.zip)) the Github repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the [live demo URL](https://mdn.github.io/web-speech-api/speak-easy-synthesis/) in a supporting mobile browser like Chrome, or Firefox OS.
 
 ### Browser support
 
 Support for Web Speech API speech synthesis is still getting there across mainstream browsers, and is currently limited to the following:
 
-- Firefox desktop and mobile support it in Gecko 42+ (Windows)/44+, without prefixes, and it can be turned on by flipping the `media.webspeech.synth.enabled` flag to `true` in `about:config`.
+- Firefox desktop and mobile support it in Gecko 42+ (Windows)/44+, without prefixes, and it can be turned on by flipping the `media.webspeech.synth.enabled` flag to `true` in `about:config`.
 - Firefox OS 2.5+ supports it, by default, and without the need for any permissions.
 - Chrome for Desktop and Android have supported it since around version 33, without prefixes.
 

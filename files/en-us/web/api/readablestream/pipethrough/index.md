@@ -32,7 +32,7 @@ pipeThrough(transformStream, options);
 - transformStream
   - : A {{domxref("TransformStream")}} (or an object with the structure
     `{writable, readable}`) consisting of a readable stream and a writable
-    stream working together to transform some data from one form to another. Data writen
+    stream working together to transform some data from one form to another. Data written
     to the `writable` stream can be read in some transformed state by the
     `readable` stream. For example, a {{domxref("TextDecoder")}}, has bytes
     written to it and strings read from it, while a video decoder has encoded bytes

@@ -25,7 +25,7 @@ This is actually a really easy way to do something that sounds like it might be 
 
 The diagram below shows how this works; an input value, `N`, is set as the value of the {{domxref("ConstantSourceNode.offset")}} property. The `ConstantSourceNode` can have as many outputs as necessary; in this case, we've connected it to three nodes: two {{domxref("GainNode")}}s and a {{domxref("StereoPannerNode")}}. So `N` becomes the value of the specified parameter ({{domxref("GainNode.gain", "gain")}} for the {{domxref("GainNode")}}s and pan for the {{domxref("StereoPannerNode")}}.
 
-![Dagram in SVG showing how ConstantSourceNode can be used to split an input parameter to share it with multiple nodes.](customsourcenode-as-splitter.svg)
+![Diagram in SVG showing how ConstantSourceNode can be used to split an input parameter to share it with multiple nodes.](customsourcenode-as-splitter.svg)
 
 As a result, every time you change `N` (the value of the input {{domxref("AudioParam")}}, the values of the two `GainNode`s' `gain` properties and the value of the `StereoPannerNode`'s `pan` properties are all set to `N` as well.
 

@@ -6,7 +6,7 @@ tags:
   - Configuration
   - Dictionary
   - Media
-  - Negoatiation
+  - Negotiation
   - Options
   - RTCRtpParameters
   - RTP

@@ -43,7 +43,7 @@ If you want to play with the IIR filter node and need some values to help along 
 
 With that all in mind, let's take a look at the code to create an IIR filter with the Web Audio API.
 
-## Setting our IIRFilter co-efficients
+## Setting our IIRFilter coefficients
 
 When creating an IIR filter, we pass in the `feedforward` and `feedback` coefficients as options (coefficients is how we describe the values). Both of these parameters are arrays, neither of which can be larger than 20 items.
 

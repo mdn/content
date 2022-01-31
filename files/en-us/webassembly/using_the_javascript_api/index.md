@@ -60,7 +60,7 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 
 The net result of this is that we call our exported WebAssembly function `exported_func`, which in turn calls our imported JavaScript function `imported_func`, which logs the value provided inside the WebAssembly instance (42) to the console. If you save your example code now and load it a browser that supports WebAssembly, you’ll see this in action!
 
-> **Note:** This is a convoluted, longwinded example that achieves very little, but it does serve to illustrate what is possible — using WebAssembly code alongside JavaScript in your web applications. As we’ve said elsewhere, WebAssembly doesn’t aim to replace JavaScript; the two instead can work together, drawing on each other’s strengths.
+> **Note:** This is a convoluted, long-winded example that achieves very little, but it does serve to illustrate what is possible — using WebAssembly code alongside JavaScript in your web applications. As we’ve said elsewhere, WebAssembly doesn’t aim to replace JavaScript; the two instead can work together, drawing on each other’s strengths.
 
 ### Loading our wasm module without streaming
 
@@ -86,15 +86,15 @@ In Firefox 54+, the Developer Tool Debugger Panel has functionality to expose th
 
 ![](wasm-debug.png)
 
-In addition to viewing WebAssembly as text, developers are able to debug (place breakpoints, inspect the callstack, single-step, etc.) WebAssembly using the text format. See [WebAssembly debugging with Firefox DevTools](https://www.youtube.com/watch?v=R1WtBkMeGds) for a video preview.
+In addition to viewing WebAssembly as text, developers are able to debug (place breakpoints, inspect the callstack, single-step, etc.) WebAssembly using the text format. See [WebAssembly debugging with Firefox DevTools](https://www.youtube.com/watch?v=R1WtBkMeGds) for a video preview.
 
 ## Memory
 
-In the low-level memory model of WebAssembly, memory is represented as a contiguous range of untyped bytes called [Linear Memory](https://webassembly.org/docs/semantics/#linear-memory) that are read and written by [load and store instructions](https://webassembly.org/docs/semantics/#linear-memory-accesses) inside the module.  In this memory model, any load or store can access any byte in the entire linear memory, which is necessary to faithfully represent C/C++ concepts like pointers.
+In the low-level memory model of WebAssembly, memory is represented as a contiguous range of untyped bytes called [Linear Memory](https://webassembly.org/docs/semantics/#linear-memory) that are read and written by [load and store instructions](https://webassembly.org/docs/semantics/#linear-memory-accesses) inside the module. In this memory model, any load or store can access any byte in the entire linear memory, which is necessary to faithfully represent C/C++ concepts like pointers.
 
-Unlike a native C/C++ program, however, where the available memory range spans the entire process, the memory accessible by a particular WebAssembly Instance is confined to one specific — potentially very small — range contained by a WebAssembly Memory object.  This allows a single web app to use multiple independent libraries — each of which are using WebAssembly internally — to have separate memories that are fully isolated from each other. In addition, newer implementations can also create [shared memories](/en-US/docs/WebAssembly/Understanding_the_text_format#shared_memories), which can be transferred between Window and Worker contexts using [`postMessage()`](/en-US/docs/Web/API/Window/postMessage), and used in multiple places.
+Unlike a native C/C++ program, however, where the available memory range spans the entire process, the memory accessible by a particular WebAssembly Instance is confined to one specific — potentially very small — range contained by a WebAssembly Memory object. This allows a single web app to use multiple independent libraries — each of which are using WebAssembly internally — to have separate memories that are fully isolated from each other. In addition, newer implementations can also create [shared memories](/en-US/docs/WebAssembly/Understanding_the_text_format#shared_memories), which can be transferred between Window and Worker contexts using [`postMessage()`](/en-US/docs/Web/API/Window/postMessage), and used in multiple places.
 
-In JavaScript, a Memory instance can be thought of as a resizable [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) (or [`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer), in the case of shared memories) and, just as with `ArrayBuffers`, a single web app can create many independent Memory objects.  You can create one using the {{jsxref("WebAssembly.Memory()")}} constructor, which takes as arguments an initial size and (optionally) a maximum size and a `shared` property that states whether it is a shared memory or not.
+In JavaScript, a Memory instance can be thought of as a resizable [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) (or [`SharedArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer), in the case of shared memories) and, just as with `ArrayBuffers`, a single web app can create many independent Memory objects. You can create one using the {{jsxref("WebAssembly.Memory()")}} constructor, which takes as arguments an initial size and (optionally) a maximum size and a `shared` property that states whether it is a shared memory or not.
 
 Let’s start exploring this by looking at a quick example.
 
@@ -148,7 +148,7 @@ Let’s make the above assertions clearer by looking at a more involved memory e
     ```js
     WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
     .then(results => {
-      // add code here
+      // add code here
     });
     ```
 
@@ -176,19 +176,19 @@ Memory imports work just like function imports, only Memory objects are passed a
 
 ## Tables
 
-A WebAssembly Table is a resizable typed array of [references](<https://en.wikipedia.org/wiki/Reference_(computer_science)>) that can be accessed by both JavaScript and WebAssembly code.  While Memory provides a resizable typed array of raw bytes, it is unsafe for references to be stored in a Memory since a reference is an engine-trusted value whose bytes must not be read or written directly by content for safety, portability, and stability reasons.
+A WebAssembly Table is a resizable typed array of [references](<https://en.wikipedia.org/wiki/Reference_(computer_science)>) that can be accessed by both JavaScript and WebAssembly code. While Memory provides a resizable typed array of raw bytes, it is unsafe for references to be stored in a Memory since a reference is an engine-trusted value whose bytes must not be read or written directly by content for safety, portability, and stability reasons.
 
-Tables have an element type, which limits the types of reference that can be stored in the table.  In the current iteration of WebAssembly, there is only one type of reference needed by WebAssembly code — functions — and thus only one valid element type.  In future iterations, more element types will be added.
+Tables have an element type, which limits the types of reference that can be stored in the table. In the current iteration of WebAssembly, there is only one type of reference needed by WebAssembly code — functions — and thus only one valid element type. In future iterations, more element types will be added.
 
-Function references are necessary to compile languages like C/C++ that have function pointers.  In a native implementation of C/C++, a function pointer is represented by the raw address of the function’s code in the process’s virtual address space and so, for the safety reasons mentioned above, cannot be stored directly in linear memory.  Instead, function references are stored in a table and their indexes, which are integers and can be stored in linear memory, are passed around instead.
+Function references are necessary to compile languages like C/C++ that have function pointers. In a native implementation of C/C++, a function pointer is represented by the raw address of the function’s code in the process’s virtual address space and so, for the safety reasons mentioned above, cannot be stored directly in linear memory. Instead, function references are stored in a table and their indexes, which are integers and can be stored in linear memory, are passed around instead.
 
-When the time comes to call a function pointer, the WebAssembly caller supplies the index, which can then be safety bounds checked against the table before indexing and calling the indexed function reference.  Thus, tables are currently a rather low-level primitive used to compile low-level programming language features safely and portably.
+When the time comes to call a function pointer, the WebAssembly caller supplies the index, which can then be safety bounds checked against the table before indexing and calling the indexed function reference. Thus, tables are currently a rather low-level primitive used to compile low-level programming language features safely and portably.
 
-Tables can be mutated via [`Table.prototype.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set), which updates one of the values in a table, and [`Table.prototype.grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), which increases the number of values that can be stored in a table.  This allows the indirectly-callable set of functions to change over time, which is necessary for [dynamic linking techniques](https://webassembly.org/docs/dynamic-linking/).  The mutations are immediately accessible via [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) in JavaScript, and to wasm modules.
+Tables can be mutated via [`Table.prototype.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set), which updates one of the values in a table, and [`Table.prototype.grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), which increases the number of values that can be stored in a table. This allows the indirectly-callable set of functions to change over time, which is necessary for [dynamic linking techniques](https://webassembly.org/docs/dynamic-linking/). The mutations are immediately accessible via [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) in JavaScript, and to wasm modules.
 
 ### A table example
 
-Let’s look at a simple table example — a WebAssembly module that creates and exports a table with two elements: element 0 returns 13 and element 1 returns 42. You can find this at [table.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm).
+Let’s look at a simple table example — a WebAssembly module that creates and exports a table with two elements: element 0 returns 13 and element 1 returns 42. You can find this at [table.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm).
 
 1.  Make a local copy of `table.wasm` in a new directory.
 
@@ -200,7 +200,7 @@ Let’s look at a simple table example — a WebAssembly module that creates a
     ```js
     WebAssembly.instantiateStreaming(fetch('table.wasm'))
     .then(function(results) {
-      // add code here
+      // add code here
     });
     ```
 
@@ -208,8 +208,8 @@ Let’s look at a simple table example — a WebAssembly module that creates a
 
     ```js
     var tbl = results.instance.exports.tbl;
-    console.log(tbl.get(0)());  // 13
-    console.log(tbl.get(1)());  // 42
+    console.log(tbl.get(0)());  // 13
+    console.log(tbl.get(1)());  // 42
     ```
 
 This code accesses each function reference stored in the table in turn, and instantiates them to print the values they hold to the console — note how each function reference is retrieved with a [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) call, then we add an extra set of parentheses on the end to actually invoke the function.
@@ -220,7 +220,7 @@ This code accesses each function reference stored in the table in turn, and inst
 
 WebAssembly has the ability to create global variable instances, accessible from both JavaScript and importable/exportable across one or more {{jsxref("WebAssembly.Module")}} instances. This is very useful, as it allows dynamic linking of multiple modules.
 
-To create a WebAssembly global instance from inside your JavaScript, you use the {{jsxref("WebAssembly.Global()")}} constructor, which looks like this:
+To create a WebAssembly global instance from inside your JavaScript, you use the {{jsxref("WebAssembly.Global()")}} constructor, which looks like this:
 
 ```js
 const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
