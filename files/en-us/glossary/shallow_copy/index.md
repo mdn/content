@@ -12,7 +12,6 @@ tags:
 Because a shallow copy shares references with its source object, the following hold true:
 
 - When you change a property of an existing property value in a shallow copy, the property also changes in the source object.
-
 - When you assign a completely new value to a property in a shallow copy, the value of the property in the source object does not change.
 
 Those same statements hold true for the behavior of the shallow copy when changes are made in the other direction: that is, when you make any changes to the source object of a shallow copy.
