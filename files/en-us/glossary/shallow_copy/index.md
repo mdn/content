@@ -7,15 +7,15 @@ tags:
 ---
 {{MDNSidebar}}
 
-A **shallow copy** of an object is a copy whose members share the same references as those of the object from which the copy was made — in contrast with a [deep copy](/en-US/docs/Glossary/Deep_copy). All standard built-in object-copy operations in JavaScript create shallow copies rather than deep copies.
+  A **shallow copy** of an object is a copy whose properties share the same references as those of the source object from which the copy was made — in contrast with a [deep copy](/en-US/docs/Glossary/Deep_copy). In JavaScript, all standard built-in object-copy operations ([`Object.assign()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign), [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Array.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), and [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)) create shallow copies rather than deep copies.
 
-Because a shallow copy shares references with the object from which it was copied, the following hold true:
+Because a shallow copy shares references with its source object, the following hold true:
 
-- When you change a property of an existing member value in a shallow copy, the property also changes in the object from which the shallow copy was made.
+- When you change a property of an existing property value in a shallow copy, the property also changes in the source object.
 
-- When you assign a completely new value to a member in a shallow copy, the value of the member in the object from which the shallow copy was made does not change.
+- When you assign a completely new value to a property in a shallow copy, the value of the property in the source object does not change.
 
-Those same statements hold true for the behavior of the shallow copy when changes are made in the other direction: that is, when you make any changes to the object from which the shallow copy was made.
+Those same statements hold true for the behavior of the shallow copy when changes are made in the other direction: that is, when you make any changes to the source object of a shallow copy.
 
 ## Example
 
@@ -36,9 +36,9 @@ console.log(ingredients_list[1].list);
 console.log(JSON.stringify(ingredients_list));
 // ["noodles",{"list":["rice flour","water"]}]
 
-// Assign a completely new value to the first member of ingredients_list_copy.
+// Assign a completely new value to the first item in ingredients_list_copy.
 ingredients_list_copy[0] = "rice noodles"
-// The value of the first member of ingredients_list has *not* changed.
+// The value of the first item in ingredients_list has *not* changed.
 console.log(ingredients_list[0])
 // noodles
 console.log(JSON.stringify(ingredients_list_copy));
