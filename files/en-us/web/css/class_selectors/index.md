@@ -83,7 +83,7 @@ If the property is declared in several classes of element, then using value of t
 
 ### Result
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('Examples', '600', '260')}}
 
 ## Specifications
 
