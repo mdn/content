@@ -32,7 +32,7 @@ tags:
 
 <h6 id="What_permanent_PKCS_.2311_objects_are_used_by_NSS_or_read_from_the_token.3F_Example:_RSA_private_key.2C_CA_certificate.2C_user.27s_own_certificate.2C_user.27s_name.">What permanent PKCS #11 objects are used by NSS or read from the token? Example: RSA private key, CA certificate, user's own certificate, user's name.</h6>
 
-<p>Private keys (RSA and DSA) and the corresponding certificates are read from the token. Other certificates on the token are also loaded (to allow building certificate chains), but it's not necessary to include the full chain, as long as the full chain is available in the regular certificate database. For the sake of completeness, it's also a good idea to expose public key objects. NSS falls back to looking for the existance of public keys to determine if the token may have the corresponding private key while the token is not logged in.</p>
+<p>Private keys (RSA and DSA) and the corresponding certificates are read from the token. Other certificates on the token are also loaded (to allow building certificate chains), but it's not necessary to include the full chain, as long as the full chain is available in the regular certificate database. For the sake of completeness, it's also a good idea to expose public key objects. NSS falls back to looking for the existence of public keys to determine if the token may have the corresponding private key while the token is not logged in.</p>
 
 <h6 id="How_are_permanent_PKCS_.2311_objects_found_by_NSS.3F_That_is.2C_which_PKCS_.2311_attributes_are_used_in_the_object_searches.3F_Labels.3F_Key_IDs.3F_Key_types.3F">How are permanent PKCS #11 objects found by NSS? That is, which PKCS #11 attributes are used in the object searches? Labels? Key IDs? Key types?</h6>
 
@@ -48,7 +48,7 @@ tags:
    <li>S/MIME-capable certificates are also looked up by issuer/serial number.</li>
    <li>Certificates may be looked up by their DER value.</li>
    <li>Certificates may also be looked up by subject. More than one certificate can match, but each certificate with the same subject should be part of the same personality.</li>
-   <li>NSS may enumerate all the permanment certificates in a token (CKA_TOKEN set to true).</li>
+   <li>NSS may enumerate all the permanent certificates in a token (CKA_TOKEN set to true).</li>
    <li>Private keys must have the same CKA_ID value as their corresponding certificate, and this value must be unique on the token.</li>
    <li>Orphaned keys have a CKA_ID generated from some part of the public key. This value is set when the key is generated, so that NSS will be able to find the key when the certificate for that key is loaded. This case is interesting only for read/write tokens.</li>
   </ul>
@@ -93,7 +93,7 @@ tags:
 
 <h6 id="Is_the_PKCS_.2311_module_supplied_with_NSS_accessible_through_a_shared_library.3F">Is the PKCS #11 module supplied with NSS accessible through a shared library?</h6>
 
-<p>Yes, the token is call softokn3 (softokn3.dll on windows, libsoftokn3.so on most unix platforms). The NSS softokn3 is not a complete PKCS #11 module, it was implemented only to support NSS, though other products have managed to get it to work in their environment. There are a number of bugs against softoken's non-compliance, but these bugs have lower priority than fixing NSS's non-complient uses of PKCS #11 or adding new features to NSS.</p>
+<p>Yes, the token is call softokn3 (softokn3.dll on windows, libsoftokn3.so on most unix platforms). The NSS softokn3 is not a complete PKCS #11 module, it was implemented only to support NSS, though other products have managed to get it to work in their environment. There are a number of bugs against softoken's non-compliance, but these bugs have lower priority than fixing NSS's non-compliant uses of PKCS #11 or adding new features to NSS.</p>
 
 <h6 id="If_multiple_PKCS_.2311_modules_are_loaded.2C_how_does_NSS_determine_which_ones_to_use_for_the_mechanisms_required_by_SSL.3F">If multiple PKCS #11 modules are loaded, how does NSS determine which ones to use for the mechanisms required by SSL?</h6>
 

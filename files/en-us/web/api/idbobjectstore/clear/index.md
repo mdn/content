@@ -15,14 +15,14 @@ browser-compat: api.IDBObjectStore.clear
 {{ APIRef("IndexedDB") }}
 
 The **`clear()`** method of the {{domxref("IDBObjectStore")}}
-interface creates and immediately returns an {{domxref("IDBRequest")}} object, and
-clears this object store in a separate thread. This is for deleting all the current
+interface creates and immediately returns an {{domxref("IDBRequest")}} object, and
+clears this object store in a separate thread. This is for deleting all the current
 data out of an object store.
 
 Clearing an object store consists of removing all records from the object store and
 removing all records in indexes that reference the object store. To remove only some of
-the records in a store, use {{domxref("IDBObjectStore.delete")}} passing a key
-or {{domxref("IDBKeyRange")}}.
+the records in a store, use {{domxref("IDBObjectStore.delete")}} passing a key
+or {{domxref("IDBKeyRange")}}.
 
 {{AvailableInWorkers}}
 
@@ -34,7 +34,7 @@ var request = objectStore.clear();
 
 ### Returns
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
+An {{domxref("IDBRequest")}} object on which subsequent events related to this
 operation are fired.
 
 ### Exceptions
@@ -52,7 +52,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
     <tr>
       <td><code>ReadOnlyError</code></td>
       <td>
-        The transaction associated with this operation is in read-only <a
+        The transaction associated with this operation is in read-only <a
           href="/en-US/docs/Web/API/IDBTransaction#mode_constants"
           >mode</a
         >.
@@ -72,7 +72,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 
 In the following code snippet, we open a read/write transaction on our database and
 clear all the current data out of the object store using `clear()`. For a
-full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
+full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app
 ([view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
@@ -80,10 +80,10 @@ full working example, see our [To-do Notifications](https://github.com/mdn/to-d
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
-  // This is used a lot below
+  // This is used a lot below
   db = DBOpenRequest.result;
 
   // Clear all the data form the object store
@@ -96,7 +96,7 @@ function clearData() {
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction completed.</li>';
+    note.innerHTML += '<li>Transaction completed.</li>';
   };
 
   transaction.onerror = function(event) {
@@ -109,10 +109,10 @@ function clearData() {
   // Make a request to clear all the data out of the object store
   var objectStoreRequest = objectStore.clear();
 
-  objectStoreRequest.onsuccess = function(event) {
-    // report the success of our request
-    note.innerHTML += '<li>Request successful.</li>';
-  };
+  objectStoreRequest.onsuccess = function(event) {
+    // report the success of our request
+    note.innerHTML += '<li>Request successful.</li>';
+  };
 };
 ```
 

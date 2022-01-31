@@ -38,7 +38,7 @@ Earth described by the `Coordinates` object, in decimal degrees. The value is
 defined by the World Geodetic System 1984 specification (WGS 84).
 
 > **Note:** The zero meridian (also known as the prime meridian or the
-> reference meridian) is not precisely the same as the Greenwhich meridian that most
+> reference meridian) is not precisely the same as the Greenwich meridian that most
 > people think of. It is, instead, the {{interwiki("wikipedia", "IERS Reference
     Meridian")}}, which is located 5.3 {{interwiki("wikipedia", "arcseconds")}} (102
 > meters / 335 feet) east of the {{interwiki("wikipedia", "Greenwich meridian")}}. This
@@ -72,7 +72,7 @@ button.addEventListener("click", function() {
 ```
 
 After setting up variables to more conveniently reference the button element and the
-two elements into which the latitude and logitude will be drawn, the event listener is
+two elements into which the latitude and longitude will be drawn, the event listener is
 established by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}}
 on the {{HTMLElement("button")}} element. When the user clicks the button, we'll fetch
 and display the location information.

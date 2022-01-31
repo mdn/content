@@ -7,7 +7,7 @@ tags:
   - Media
   - Media Capture and Streams API
   - Media Streams API
-  - MediaTrackSettngs
+  - MediaTrackSettings
   - Property
   - Web
   - autoGainControl

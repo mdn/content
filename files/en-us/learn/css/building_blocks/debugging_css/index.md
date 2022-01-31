@@ -90,7 +90,7 @@ In addition to turning properties on and off, you can edit their values. Perhaps
 
 ## Adding a new property
 
-You can add properties using the DevTools. Perhaps you have realised that you don't want your box to inherit the `<body>` element's font size, and want to set its own specific size? You can try this out in DevTools before adding it to your CSS file.
+You can add properties using the DevTools. Perhaps you have realized that you don't want your box to inherit the `<body>` element's font size, and want to set its own specific size? You can try this out in DevTools before adding it to your CSS file.
 
 **You can click the closing curly brace in the rule to start entering a new declaration into it, at which point you can start typing the new property and DevTools will show you an autocomplete list of matching properties. After selecting `font-size`, enter the value you want to try. You can also click the + button to add an additional rule with the same selector, and add your new rules there.**
 
@@ -135,7 +135,7 @@ Above that in the stylesheet however is a rule with a `.special` selector:
 }
 ```
 
-As you will recall from the lesson on [cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) where we discussed specificity, class selectors are more specific than element selectors, and so this is the value that applies. DevTools can help you find such issues, especially if the information is buried somewhere in a huge stylesheet.
+As you will recall from the lesson on [cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) where we discussed specificity, class selectors are more specific than element selectors, and so this is the value that applies. DevTools can help you find such issues, especially if the information is buried somewhere in a huge stylesheet.
 
 **Inspect the `<em>` with the class of `.special` and DevTools will show you that orange is the color that applies, and also that the `color` property applied to the `<em>` is crossed out. You can now see that the class selector is overriding the element selector.**
 

@@ -43,7 +43,7 @@ browser-compat: path.to.feature.NameOfTheEvent_event
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
 >       This will be formatted like `Web/API/NameOfTheParentInterface/NameOfTheEventHandler_event`.
 > - **tags**
->   - : Always include the following tags: **API**, **Reference**, **Evemt**,  the _name of the event_, the name of the _parent interface_ (e.g. **Window**).
+>   - : Always include the following tags: **API**, **Reference**, **Event**,  the _name of the event_, the name of the _parent interface_ (e.g. **Window**).
 >
 >       Include the following tags as appropriate:
 >       - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.

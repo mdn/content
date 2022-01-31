@@ -128,3 +128,4 @@ font-size-adjust: 0.5;
 - {{cssxref("font-size")}}
 - {{cssxref("font-weight")}}
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- {{cssxref("@font-face/size-adjust", "size-adjust")}} descriptor

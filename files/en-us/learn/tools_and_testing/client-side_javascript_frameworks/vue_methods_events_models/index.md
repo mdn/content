@@ -328,7 +328,7 @@ Now that we have the data from `ToDoForm` available in `App.vue`, we need to add
     ```
 
 2.  Try testing your form again, and you should see new to-do items get appended to the end of the list.
-3.  Let's make a further improvement before we move on. If you submit the form while the input is empy, todo items with no text still get added to the list. To fix that, we can prevent the todo-added event from firing when name is empty. Since name is already being trimmed by the `.trim` directive, we only need to test for the empty string.
+3.  Let's make a further improvement before we move on. If you submit the form while the input is empty, todo items with no text still get added to the list. To fix that, we can prevent the todo-added event from firing when name is empty. Since name is already being trimmed by the `.trim` directive, we only need to test for the empty string.
 
     Go back to your `ToDoForm` component, and update the `onSubmit()` method like so. If the label value is empty, let's not emit the `todo-added` event.
 

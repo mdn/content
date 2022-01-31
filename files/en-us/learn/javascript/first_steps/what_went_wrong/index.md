@@ -87,7 +87,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 2.  Now if you try to enter a guess and press the Submit guess button, you'll see ... another error! ![](variable-is-null.png)
 3.  This time the error being reported is "TypeError: lowOrHi is null", on line 78.
 
-    > **Note:** [`Null`](/en-US/docs/Glossary/Null) is a special value that means "nothing", or "no value". So `lowOrHi` has been declared and initialised, but not with any meaningful value — it has no type or value.
+    > **Note:** [`Null`](/en-US/docs/Glossary/Null) is a special value that means "nothing", or "no value". So `lowOrHi` has been declared and initialized, but not with any meaningful value — it has no type or value.
 
     > **Note:** This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the `checkGuess() { ... }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the `checkGuess()` function was run by line 86.
 

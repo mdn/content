@@ -87,7 +87,7 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
     > **Note:** For more information/options see [HTTP Authentication > Authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes)
 - **realm=**\<realm> {{optional_inline}}
   - : A string describing a protected area.
-    A realm allows a server to partition up the areas it protects (if supported by a scheme that allows such partitioning), and informs users about which paricular username/password are required.
+    A realm allows a server to partition up the areas it protects (if supported by a scheme that allows such partitioning), and informs users about which particular username/password are required.
     If no realm is specified, clients often display a formatted hostname instead.
 - `<token68>` {{optional_inline}}
   - : A token that may be useful for some schemes. The token allows the 66 unreserved URI characters plus a few others.
@@ -130,7 +130,7 @@ Generally you will need to check the relevant specifications for these (keys for
       Valid non-session values are: `"MD5"` (default if not specified), `"SHA-256"`, `"SHA-512"`.
       Valid session values are: `"MD5-sess"`, `"SHA-256-sess"`, `"SHA-512-sess"`.
 - **`qop`**
-  - : Quoted string indicating the quality of protection supported by the server. This must be supplied, and unrecognised options must be ignored.
+  - : Quoted string indicating the quality of protection supported by the server. This must be supplied, and unrecognized options must be ignored.
       - `"auth"`: Authentication
       - `"auth-int"`: Authentication with integrity protection
 - **`charset="UTF-8"`** {{optional_inline}}

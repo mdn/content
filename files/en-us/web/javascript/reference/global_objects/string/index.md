@@ -313,7 +313,7 @@ Both of the above methods result in identical strings.
 - {{jsxref("String.prototype.substring()",
     "String.prototype.substring(<var>indexStart</var> [, <var>indexEnd</var>])")}}
   - : Returns a new string containing characters of the calling string from (or between)
-    the specified index (or indeces).
+    the specified index (or indices).
 - {{jsxref("String.prototype.toLocaleLowerCase()",
     "String.prototype.toLocaleLowerCase( [<var>locale</var>, ...<var>locales</var>])")}}
 

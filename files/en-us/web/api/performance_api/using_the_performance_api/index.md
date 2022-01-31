@@ -14,7 +14,7 @@ Web performance interfaces are defined in a [suite of standards](https://www.w3.
 
 ## High precision timing
 
-_High precision timing_ is achieved by using the {{domxref("DOMHighResTimeStamp")}} type for time values. The unit is milliseconds and should be accurate to 5 µs (microseconds). However, if the browser is unable to provide a time value accurate to 5 microseconds (because of hardware or software constraints, for example), the browser can represent the value as a time in milliseconds accurate to a millisecond.
+_High precision timing_ is achieved by using the {{domxref("DOMHighResTimeStamp")}} type for time values. The unit is milliseconds and should be accurate to 5 µs (microseconds). However, if the browser is unable to provide a time value accurate to 5 microseconds (because of hardware or software constraints, for example), the browser can represent the value as a time in milliseconds accurate to a millisecond.
 
 The following code example shows the use of {{domxref("DOMHighResTimeStamp")}} and the {{domxref("Performance.now","Performance.now()")}} method. The {{domxref("Performance.now","now()")}} method returns a _timestamp_ (of type {{domxref("DOMHighResTimeStamp")}}) that is a discrete point in time. By calling this method before and after a task, the time it takes to do the task can be measured.
 
@@ -55,10 +55,10 @@ function print_json() {
     var perf = JSON.parse(s);
 
     var timing = perf.timing;
-    o.innerHTML += "<p>peformance.timing = " + JSON.stringify(timing) + "</p>";
+    o.innerHTML += "<p>performance.timing = " + JSON.stringify(timing) + "</p>";
 
     var navigation = perf.navigation;
-    o.innerHTML += "<p>peformance.navigation = " + JSON.stringify(navigation) + "</p>";
+    o.innerHTML += "<p>performance.navigation = " + JSON.stringify(navigation) + "</p>";
   }
 }
 ```

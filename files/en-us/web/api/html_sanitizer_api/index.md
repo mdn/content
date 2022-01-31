@@ -5,7 +5,7 @@ tags:
   - HTML Sanitizer API
   - Landing
   - Web API
-  - santitize
+  - sanitize
 ---
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
@@ -128,10 +128,10 @@ const sanitizer = new Sanitizer();  // Default sanitizer;
 
 // Get the frame and its Document object
 const frame_element = document.getElementById("userFrame")
-const unsantitized_frame_tree = frame_element.contentWindow.document;
+const unsanitized_frame_tree = frame_element.contentWindow.document;
 
 // Sanitize the document tree and update the frame.
-const sanitized_frame_tree = sanitizer.sanitize(unsanititized_frame_tree);
+const sanitized_frame_tree = sanitizer.sanitize(unsanitized_frame_tree);
 frame_element.replaceChildren(sanitized_frame_tree);
 ```
 

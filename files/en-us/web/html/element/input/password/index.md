@@ -26,7 +26,7 @@ This character will vary depending on the {{Glossary("user agent")}} and operati
 
 {{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}
 
-The precise behaviour of the entry process may vary from browser to browser.
+The precise behavior of the entry process may vary from browser to browser.
 Some browsers display the typed character for a moment before obscuring it, while others allow the user to toggle the display of plain-text on and off.
 Both approaches help a user check that they entered the intended password, which can be particularly difficult on mobile devices.
 

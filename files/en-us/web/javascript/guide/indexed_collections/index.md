@@ -290,7 +290,7 @@ myArray.unshift('4', '5')
 // myArray becomes ["4", "5", "1", "2", "3"]
 ```
 
-{{jsxref("Array.slice", "slice(start_index, upto_index)")}} extracts a section of an array and returns a new array.
+{{jsxref("Array.slice", "slice(start_index, up_to_index)")}} extracts a section of an array and returns a new array.
 
 ```js
 let myArray = new Array('a', 'b', 'c', 'd', 'e')

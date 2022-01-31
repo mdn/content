@@ -14,7 +14,7 @@ The `definition` ARIA role indicates the element is a definition of a term or co
 
 ## Description
 
-The `definition` ARIA role can be included an element that is a definition of a term or concept, similar to the native {{HTMLElement('dfn')}} element. To associate the defintion with the `term` being defined, and to provide an accessible name, reference the term being defined with `role="term"`, using [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby).
+The `definition` ARIA role can be included an element that is a definition of a term or concept, similar to the native {{HTMLElement('dfn')}} element. To associate the definition with the `term` being defined, and to provide an accessible name, reference the term being defined with `role="term"`, using [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby).
 
 ```html
 <p><span role="term">Mansplaining</span>, <span role="definition">a portmanteau of "man" and "explain", is the patronizing act of explaining without being asked to do so, to someone already learned on the topic, often after someone has already explained it</span>. </p>

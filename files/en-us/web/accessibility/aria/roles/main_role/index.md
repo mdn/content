@@ -28,7 +28,7 @@ By classifying and labeling sections of a page, structural information conveyed 
 
 There should only be one `main` landmark role per document.
 
-The {{HTMLElement('main')}} element has a role of `main`. Developers should use semantic HTML -- in this case  {{HTMLElement('main')}} -- over using ARIA.
+The {{HTMLElement('main')}} element has a role of `main`. Developers should use semantic HTML -- in this case  {{HTMLElement('main')}} -- over using ARIA.
 
 ### Associated ARIA roles, states, and properties
 
@@ -36,7 +36,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should us
 
   - : The `aria-owns` attribute establishes relationships in the accessibility layer that aren't present in the DOM. Documents and applications can be nested in the DOM, which may lead to having more than one main element as DOM descendants. If this is the case, include `aria-owns` to identify the relationship of the main to its document or application ancestor.
 
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or `aria-labeledby`
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or `aria-labelledby`
 
   - : Providing an accessible name can with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible header is present, otherwise with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute), can be helpful for orienting assistive technology users, especially in single-page applications where main content changes happen without generating a page load event.
 
@@ -49,7 +49,7 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should us
   <div role="main">
     <h1>The The First Indochina War</h1>
     <!-- article content -->
-  </div>
+  </div>
 
  <!-- sidebar and footer -->
 </body>
@@ -75,7 +75,7 @@ If a document contains two `main` roles, say updating page content when triggere
 </main>
 ```
 
-It is also helpful to include an accessible name to help orient assistive technology users, especially in single-page applications where main content changes happen without generating a page load event. This can be added with `aria-labeledby` if there is an appropriate name in the content, or `aria-label` if not.
+It is also helpful to include an accessible name to help orient assistive technology users, especially in single-page applications where main content changes happen without generating a page load event. This can be added with `aria-labelledby` if there is an appropriate name in the content, or `aria-label` if not.
 
 ## Best practices
 

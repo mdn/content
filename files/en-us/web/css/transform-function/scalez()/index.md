@@ -57,7 +57,7 @@ scaleZ(s)
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
@@ -69,13 +69,13 @@ scaleZ(s)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mi>s</mi></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
@@ -90,7 +90,7 @@ scaleZ(s)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>

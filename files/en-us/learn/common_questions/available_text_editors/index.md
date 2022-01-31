@@ -55,7 +55,7 @@ Here are some popular editors:
   <thead>
     <tr>
       <th scope="col">Editor</th>
-      <th scope="col">Licence</th>
+      <th scope="col">License</th>
       <th scope="col">Price</th>
       <th scope="col">OS</th>
       <th scope="col">Support</th>
@@ -379,7 +379,7 @@ Here are some popular editors:
       </td>
       <td>
         <a href="https://github.com/microsoft/vscode">Open Source</a> under MIT
-        licence/ Specific licence for product
+        license/ Specific license for product
       </td>
       <td>Free</td>
       <td>Windows, Mac, Linux</td>

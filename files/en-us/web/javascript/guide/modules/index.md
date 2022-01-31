@@ -313,7 +313,7 @@ And it would work just the same. What style you use is up to you, however it arg
 
 ## Creating a module object
 
-The above method works OK, but it's a little messy and longwinded. An even better solution is to import each module's features inside a module object. The following syntax form does that:
+The above method works OK, but it's a little messy and long-winded. An even better solution is to import each module's features inside a module object. The following syntax form does that:
 
 ```js
 import * as Module from './modules/module.js';

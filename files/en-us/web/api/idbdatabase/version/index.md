@@ -15,7 +15,7 @@ browser-compat: api.IDBDatabase.version
 {{ APIRef("IndexedDB") }}
 
 The **`version`** property of the {{domxref("IDBDatabase")}}
-interface is a [64-bit
+interface is a [64-bit
 integer](/en-US/docs/NSPR_API_Reference/Long_Long_%2864-bit%29_Integers) that contains the version of the connected database. When a database is
 first created, this attribute is an empty string.
 
@@ -44,7 +44,7 @@ DBOpenRequest.onerror = function(event) {
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot below
   db = DBOpenRequest.result;

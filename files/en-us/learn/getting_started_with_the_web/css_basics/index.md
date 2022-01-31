@@ -196,6 +196,8 @@ Something you'll notice about writing CSS: a lot of it is about boxes. This incl
 
 ![a big stack of boxes or crates sat on top of one another](boxes.jpg)
 
+Photo from [https://www.geograph.org.uk/photo/3418115](https://www.geograph.org.uk/photo/3418115) Copyright © [Jim Barton](https://www.geograph.org.uk/profile/26362) [cc-by-sa/2.0](https://creativecommons.org/licenses/by-sa/2.0/)
+
 CSS layout is mostly based on the _box model._ Each box taking up space on your page has properties like:
 
 - `padding`, the space around the content. In the example below, it is the space around the paragraph text.

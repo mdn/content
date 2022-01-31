@@ -196,7 +196,7 @@ That's all the overview you need in order to get started (see [How Heroku works]
 
 ### Creating an application repository in Github
 
-Heroku is closely integrated with the **git** source code version control system, using it to upload/synchronise any changes you make to the live system. It does this by adding a new heroku "remote" repository named _heroku_ pointing to a repository for your source on the Heroku cloud. During development you use git to store changes on your own repository. When you want to deploy your site, you sync your changes to the Heroku repository.
+Heroku is closely integrated with the **git** source code version control system, using it to upload/synchronize any changes you make to the live system. It does this by adding a new heroku "remote" repository named _heroku_ pointing to a repository for your source on the Heroku cloud. During development you use git to store changes on your own repository. When you want to deploy your site, you sync your changes to the Heroku repository.
 
 > **Note:** If you're used to following good software development practices you are probably already using git or some other SCM system. If you already have a git repository, then you can skip this step.
 
@@ -274,7 +274,7 @@ The final steps are to copy your application into this local project directory a
     git commit -m "First version of application moved into github"
     ```
 
-6.  At this point, the remote repository has not been changed. Synchronise (`push`) your local repository to the remote Github repository using the following command:
+6.  At this point, the remote repository has not been changed. Synchronize (`push`) your local repository to the remote Github repository using the following command:
 
     ```bash
     git push origin main

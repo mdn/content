@@ -306,7 +306,7 @@ this.color("blue");
 - [Accessibility resources at MDN](/en-US/docs/Web/Accessibility)
 - {{Interwiki("wikipedia", "Web accessibility")}} on Wikipedia
 
-The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localised note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
+The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localized note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
 
 {{AvailableInWorkers}}
 

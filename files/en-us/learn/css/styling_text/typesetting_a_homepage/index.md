@@ -93,7 +93,7 @@ The following screenshot shows an example of what the finished design could look
 
 ## Assessment or further help
 
-If you would like your work assessed or are stuck and want to ask for help:
+If you would like your work assessed, or are stuck and want to ask for help:
 
 1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:

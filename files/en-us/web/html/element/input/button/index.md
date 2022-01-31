@@ -94,17 +94,17 @@ const paragraph = document.querySelector('p');
 button.addEventListener('click', updateButton);
 
 function updateButton() {
-  if (button.value === 'Start machine') {
-    button.value = 'Stop machine';
-    paragraph.textContent = 'The machine has started!';
-  } else {
-    button.value = 'Start machine';
-    paragraph.textContent = 'The machine is stopped.';
-  }
+  if (button.value === 'Start machine') {
+    button.value = 'Stop machine';
+    paragraph.textContent = 'The machine has started!';
+  } else {
+    button.value = 'Start machine';
+    paragraph.textContent = 'The machine is stopped.';
+  }
 }
 ```
 
-The script gets a reference to the {{domxref("HTMLInputElement")}} object representing the `<input>` in the DOM, saving this refence in the variable `button`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} is then used to establish a function that will be run when {{event("click")}} events occur on the button.
+The script gets a reference to the {{domxref("HTMLInputElement")}} object representing the `<input>` in the DOM, saving this reference in the variable `button`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} is then used to establish a function that will be run when {{event("click")}} events occur on the button.
 
 {{EmbedLiveSample("A_simple_button", 650, 100)}}
 
@@ -128,19 +128,19 @@ const paragraph = document.querySelector('p');
 button.addEventListener('click', updateButton);
 
 function updateButton() {
-  if (button.value === 'Start machine') {
-    button.value = 'Stop machine';
-    paragraph.textContent = 'The machine has started!';
-  } else {
-    button.value = 'Start machine';
-    paragraph.textContent = 'The machine is stopped.';
-  }
+  if (button.value === 'Start machine') {
+    button.value = 'Stop machine';
+    paragraph.textContent = 'The machine has started!';
+  } else {
+    button.value = 'Start machine';
+    paragraph.textContent = 'The machine is stopped.';
+  }
 }
 ```
 
 {{EmbedLiveSample("Adding_keyboard_shortcuts_to_buttons", 650, 100)}}
 
-> **Note:** The problem with the above example of course is that the user will not know what the access key is! In a real site, you'd have to provide this information in a way that doesn't intefere with the site design (for example by providing an easily accessible link that points to information on what the site accesskeys are).
+> **Note:** The problem with the above example of course is that the user will not know what the access key is! In a real site, you'd have to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site accesskeys are).
 
 ### Disabling and enabling a button
 
@@ -164,12 +164,12 @@ const button = document.querySelector('input');
 button.addEventListener('click', disableButton);
 
 function disableButton() {
-  button.disabled = true;
-  button.value = 'Disabled';
-  window.setTimeout(function() {
-    button.disabled = false;
-    button.value = 'Enabled';
-  }, 2000);
+  button.disabled = true;
+  button.value = 'Disabled';
+  window.setTimeout(function() {
+    button.disabled = false;
+    button.value = 'Enabled';
+  }, 2000);
 }
 ```
 
@@ -230,13 +230,13 @@ The below example shows a very simple drawing app created using a {{htmlelement(
 
 ```css hidden
 body {
-  background: #ccc;
+  background: #ccc;
   margin: 0;
   overflow: hidden;
 }
 
 .toolbar {
-  background: #ccc;
+  background: #ccc;
   width: 150px;
   height: 75px;
   padding: 5px;

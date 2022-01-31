@@ -51,9 +51,9 @@ It contains some basic information like the document {{htmlelement("title")}}, a
 
 Before reading on, copy this code to a new text file and save it in your working directory as `index.html`.
 
-## Initialising the Babylon.js engine
+## Initializing the Babylon.js engine
 
-We have to create a Babylon.js engine instance first (passing it the `<canvas>` element to render on) before we start developing our game. Add the following code to the bottom of your second `<script>` element:
+We have to create a Babylon.js engine instance first (passing it the `<canvas>` element to render on) before we start developing our game. Add the following code to the bottom of your second `<script>` element:
 
 ```js
 var engine = new BABYLON.Engine(canvas);
@@ -63,18 +63,18 @@ The `BABYLON` global object contains all the Babylon.js functions available in t
 
 ## Creating a scene
 
-A scene is the place where all the game content is displayed. While creating new objects in the demo, we will be adding them all to the scene to make them visible on the screen. Let's create a scene by adding the following lines just below our previous code:
+A scene is the place where all the game content is displayed. While creating new objects in the demo, we will be adding them all to the scene to make them visible on the screen. Let's create a scene by adding the following lines just below our previous code:
 
 ```js
 var scene = new BABYLON.Scene(engine);
 scene.clearColor = new BABYLON.Color3(0.8, 0.8, 0.8);
 ```
 
-Thus, the scene is created and the second line sets the background color to light gray.
+Thus, the scene is created and the second line sets the background color to light gray.
 
 ## Creating a rendering loop
 
-To make the scene actually visible we have to render it. Add these lines at the end of the `<script>` element, just before the closing `</script>`.
+To make the scene actually visible we have to render it. Add these lines at the end of the `<script>` element, just before the closing `</script>`.
 
 ```js
 var renderLoop = function () {
@@ -93,7 +93,7 @@ Now the setup code is in place we need to think about implementing the standard 
 var camera = new BABYLON.FreeCamera("camera", new BABYLON.Vector3(0, 0, -10), scene);
 ```
 
-There are many [cameras](https://doc.babylonjs.com/tutorials/Cameras) available in Babylon.js; `FreeCamera` is the most basic and universal one. To initialize it you need to pass it three parameters: any name you want to use for it, the coordinates where you want it to be positioned in the 3D space, and the scene you want to add it to.
+There are many [cameras](https://doc.babylonjs.com/tutorials/Cameras) available in Babylon.js; `FreeCamera` is the most basic and universal one. To initialize it you need to pass it three parameters: any name you want to use for it, the coordinates where you want it to be positioned in the 3D space, and the scene you want to add it to.
 
 > **Note:** You probably noticed the `BABYLON.Vector3()` method in use here — this defines a 3D position on the scene. Babylon.js is bundled with a complete math library for handling vectors, colors, matrices etc.
 

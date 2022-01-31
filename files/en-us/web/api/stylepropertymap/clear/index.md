@@ -19,7 +19,7 @@ interface removes all declarations in the `StylePropertyMap`.
 ## Syntax
 
 ```js
-StylePropertMap.clear()
+StylePropertyMap.clear()
 ```
 
 ### Parameters

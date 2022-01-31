@@ -140,7 +140,7 @@ The script-supporting elements are:
 
 If an element has a transparent content model, then its contents must be structured such that they would be valid HTML 5, even if the transparent element were removed and replaced by the child elements.
 
-For example, the {{HTMLElement("del")}} and {{HTMLELement("ins")}} elements are transparent:
+For example, the {{HTMLElement("del")}} and {{HTMLElement("ins")}} elements are transparent:
 
 ```html
 <p>We hold these truths to be <del><em>sacred &amp; undeniable</em></del> <ins>self-evident</ins>.</p>

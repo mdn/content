@@ -124,7 +124,7 @@ Let's think about how the float works. The element with the float set on it (the
 
 Floating the content to the right has exactly the same effect, but in reverse: the floated element will stick to the right, and the content will wrap around it to the left. Try changing the float value to `right` and replace {{cssxref("margin-right")}} with {{cssxref("margin-left")}} in the last ruleset to see what the result is.
 
-### Visualising the float
+### Visualizing the float
 
 While we can add a margin to the float to push the text away, we can't add a margin to the text to move it away from the float. This is because a floated element is taken out of normal flow and the boxes of the following items actually run behind the float. You can see this by making some changes to your example.
 
@@ -177,7 +177,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Visualising_the_float', '100%', 500) }}
+{{ EmbedLiveSample('Visualizing_the_float', '100%', 500) }}
 
 The [line boxes](/en-US/docs/Web/CSS/Visual_formatting_model#line_boxes) of our following element have been shortened so the text runs around the float, but due to the float being removed from normal flow the box around the paragraph still remains full width.
 
@@ -243,7 +243,7 @@ You should see that the second paragraph now clears the floated element and no l
 - `right`: Clear items floated to the right.
 - `both`: Clear any floated items, left or right.
 
-## Clearing boxes wrapped around a float
+## Clearing boxes wrapped around a float
 
 You now know how to clear something following a floated element, but let's see what happens if you have a tall float and a short paragraph, with a box wrapped around _both_ elements.
 
@@ -312,7 +312,7 @@ body {
 
 {{ EmbedLiveSample('The_problem', '100%', 600) }}
 
-Once again, this is because the float has been taken out of normal flow. Clearing the following element won't work as it did before. This is a problem if you want the box to wrap jointly around the floated item as well as the text of the first paragraph that wraps around the float, while also having the following content cleared of the box. There are three potential ways to deal with this, two of which work in all browsers — yet are slightly hacky — and a third, newer way that deals with this situation properly.
+Once again, this is because the float has been taken out of normal flow. Clearing the following element won't work as it did before. This is a problem if you want the box to wrap jointly around the floated item as well as the text of the first paragraph that wraps around the float, while also having the following content cleared of the box. There are three potential ways to deal with this, two of which work in all browsers — yet are slightly hacky — and a third, newer way that deals with this situation properly.
 
 ### The clearfix hack
 

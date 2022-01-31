@@ -63,7 +63,7 @@ feature detection, and calls an appropriate callback depending on the resolution
 `Promise`.
 
 ```js
-async function initPaymentRquest() {
+async function initPaymentRequest() {
   const details = {
     total: {
       label: "Total",

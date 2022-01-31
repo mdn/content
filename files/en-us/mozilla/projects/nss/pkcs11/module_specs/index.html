@@ -21,11 +21,11 @@ tags:
 <p>All applications/libraries must be able recognize the following name values:</p>
 
 <dl>
- <dt>library </dt>
+ <dt>library</dt>
  <dd>This specifies the path to the pkcs #11 library.</dd>
- <dt>name </dt>
+ <dt>name</dt>
  <dd>This specifies the name of the pkcs #11 library.</dd>
- <dt>parameter </dt>
+ <dt>parameter</dt>
  <dd>This specifies a pkcs #11 library parameter with the application must pass to the pkcs #11 library at <code>C_Initialize()</code> time (see below).</dd>
 </dl>
 
@@ -43,7 +43,7 @@ tags:
 
 <h4 id="Parameter_Passing">Parameter Passing</h4>
 
-<p>If the parameter is specified, the application/library will strip the value out, processing any outter quotes and escapes appropriately, and pass the parameter to the pkcs #11 library when it calls <code>C_Initialize()</code>.</p>
+<p>If the parameter is specified, the application/library will strip the value out, processing any outer quotes and escapes appropriately, and pass the parameter to the pkcs #11 library when it calls <code>C_Initialize()</code>.</p>
 
 <p>A new <code>CK_C_INITIALIZE_ARGS</code> structure is defined as</p>
 
@@ -174,33 +174,33 @@ library=core32.dll name="Litronic Netsign"
 <p>Valid values are:</p>
 
 <dl>
- <dt>configDir </dt>
- <dd>Configuration Directory where NSS can store persistant state information (typically databases).</dd>
- <dt>secmod </dt>
+ <dt>configDir</dt>
+ <dd>Configuration Directory where NSS can store persistent state information (typically databases).</dd>
+ <dt>secmod</dt>
  <dd>Name of the secmod database (default = secmod.db).</dd>
- <dt>certPrefix </dt>
+ <dt>certPrefix</dt>
  <dd>Prefix for the cert database.</dd>
- <dt>keyPrefix </dt>
+ <dt>keyPrefix</dt>
  <dd>Prefix for the key database.</dd>
- <dt>minPWLen </dt>
+ <dt>minPWLen</dt>
  <dd>Minimum password length in bytes.</dd>
- <dt>manufacturerID </dt>
+ <dt>manufacturerID</dt>
  <dd>Override the default <code>manufactureID</code> value for the module returned in the <code>CK_INFO</code>, <code>CK_SLOT_INFO</code>, and <code>CK_TOKEN_INFO</code> structures with an internationalize string (UTF8). This value will be truncated at 32 bytes (no NULL, partial UTF8 characters dropped).</dd>
- <dt>libraryDescription </dt>
+ <dt>libraryDescription</dt>
  <dd>Override the default <code>libraryDescription</code> value for the module returned in the <code>CK_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 32 bytes (no <code>NULL</code>, partial UTF8 characters dropped).</dd>
- <dt>cryptoTokenDescription </dt>
+ <dt>cryptoTokenDescription</dt>
  <dd>Override the default label value for the internal crypto token returned in the <code>CK_TOKEN_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 32 bytes (no NULL, partial UTF8 characters dropped).</dd>
- <dt>dbTokenDescription </dt>
+ <dt>dbTokenDescription</dt>
  <dd>Override the default label value for the internal DB token returned in the <code>CK_TOKEN_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 32 bytes (no NULL, partial UTF8 characters dropped).</dd>
- <dt>FIPSTokenDescription </dt>
+ <dt>FIPSTokenDescription</dt>
  <dd>Override the default label value for the internal FIPS token returned in the <code>CK_TOKEN_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 32 bytes (no NULL, partial UTF8 characters dropped).</dd>
- <dt>cryptoSlotDescription </dt>
+ <dt>cryptoSlotDescription</dt>
  <dd>Override the default <code>slotDescription</code> value for the internal crypto token returned in the <code>CK_SLOT_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 64 bytes (no NULL, partial UTF8 characters dropped).</dd>
- <dt>dbSlotDescription </dt>
+ <dt>dbSlotDescription</dt>
  <dd>Override the default <code>slotDescription</code> value for the internal DB token returned in the <code>CK_SLOT_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 64 bytes (no NULL, partial UTF8 characters dropped).</dd>
- <dt>FIPSSlotDescription </dt>
+ <dt>FIPSSlotDescription</dt>
  <dd>Override the default <code>slotDescription</code> value for the internal FIPS token returned in the <code>CK_SLOT_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 64 bytes (no NULL, partial UTF8 characters dropped).</dd>
- <dt>flags </dt>
+ <dt>flags</dt>
  <dd>comma separated list of flag values, parsed case-insensitive.</dd>
 </dl>
 
@@ -209,21 +209,21 @@ library=core32.dll name="Litronic Netsign"
 <p>Valid flags are:</p>
 
 <dl>
- <dt>noModDB </dt>
+ <dt>noModDB</dt>
  <dd>Don't open <code>secmod.db</code> and try to supply the strings. The MOD DB function is not through standard PKCS #11 interfaces.</dd>
- <dt>readOnly </dt>
+ <dt>readOnly</dt>
  <dd>Databases should be opened read only.</dd>
- <dt>noCertDB </dt>
+ <dt>noCertDB</dt>
  <dd>Don't try to open a certificate database.</dd>
- <dt>noKeyDB </dt>
+ <dt>noKeyDB</dt>
  <dd>Don't try to open a key database.</dd>
- <dt>forceOpen </dt>
+ <dt>forceOpen</dt>
  <dd>Don't fail to initialize the token if the databases could not be opened.</dd>
- <dt>passwordRequired </dt>
+ <dt>passwordRequired</dt>
  <dd>Zero length passwords are not acceptable (valid only if there is a keyDB).</dd>
- <dt>optimizeSpace </dt>
+ <dt>optimizeSpace</dt>
  <dd>allocate smaller hash tables and lock tables. When this flag is not specified, Softoken will allocate large tables to prevent lock contention.</dd>
- <dt>tokens </dt>
+ <dt>tokens</dt>
  <dd>configure 'tokens' by hand. The tokens parameter specifies a space separated list of slotIDS, each of which specify their own set of parameters affecting that token. Typically 'tokens' would not be specified unless additional databases are to be opened as additional tokens. If tokens is specified, then all tokens (including the default tokens) need to be specified. If tokens is not specified, then softoken would default to the following specs:</dd>
 </dl>
 
@@ -242,33 +242,33 @@ library=core32.dll name="Litronic Netsign"
 <p>Parameters:</p>
 
 <dl>
- <dt>configDir </dt>
+ <dt>configDir</dt>
  <dd>The location of the databases for this token. If <code>configDir</code> is not specified, the default <code>configDir</code> specified earlier will be used.</dd>
- <dt>certPrefix </dt>
+ <dt>certPrefix</dt>
  <dd>Cert prefix for this token.</dd>
- <dt>keyPrefix </dt>
+ <dt>keyPrefix</dt>
  <dd>Prefix for the key database for this token.</dd>
- <dt>tokenDescription </dt>
+ <dt>tokenDescription</dt>
  <dd>The label value for this token returned in the <code>CK_TOKEN_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 32 bytes (no NULL, partial UTF8 characters dropped).</dd>
- <dt>slotDescription </dt>
+ <dt>slotDescription</dt>
  <dd>The <code>slotDescription</code> value for this token returned in the <code>CK_SLOT_INFO</code> structure with an internationalize string (UTF8). This value will be truncated at 64 bytes (no NULL, partial UTF8 characters dropped).</dd>
- <dt>minPWLen </dt>
+ <dt>minPWLen</dt>
  <dd>minimum password length for this token.</dd>
- <dt>flags </dt>
+ <dt>flags</dt>
  <dd>comma separated list of flag values, parsed case-insensitive.<br>
  Valid flags are:
  <dl>
-  <dt>readOnly </dt>
+  <dt>readOnly</dt>
   <dd>Databases should be opened read only.</dd>
-  <dt>noCertDB </dt>
+  <dt>noCertDB</dt>
   <dd>Don't try to open a certificate database.</dd>
-  <dt>noKeyDB </dt>
+  <dt>noKeyDB</dt>
   <dd>Don't try to open a key database.</dd>
-  <dt>forceOpen </dt>
+  <dt>forceOpen</dt>
   <dd>Don't fail to initialize the token if the databases could not be opened.</dd>
-  <dt>passwordRequired </dt>
+  <dt>passwordRequired</dt>
   <dd>Zero length passwords are not acceptable (valid only if there is a <code>keyDB</code>).</dd>
-  <dt>optimizeSpace </dt>
+  <dt>optimizeSpace</dt>
   <dd>allocate smaller hash tables and lock tables. When this flag is not specified, Softoken will allocate large tables to prevent lock contention.</dd>
  </dl>
  </dd>

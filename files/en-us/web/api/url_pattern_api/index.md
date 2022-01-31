@@ -90,11 +90,11 @@ console.log(pattern.test('https://example.com/books/abc')); // false
 console.log(pattern.test('https://example.com/books/')); // false
 ```
 
-### Unamed and named groups
+### Unnamed and named groups
 
 Groups can either be named or unnamed. Named groups are specified by prefixing
 the group name with a colon (`:`). Regexp groups that are not prefixed by a
-colon and a name are unnamed. Unamed groups are numerically indexed in the match
+colon and a name are unnamed. Unnamed groups are numerically indexed in the match
 result based on their order in the pattern.
 
 ```js
@@ -212,7 +212,7 @@ console.log(pattern.test('https://example.com/books/')); // true
 
 The wildcard token (`*`) is a shorthand for an unnamed capturing group that
 matches all characters zero or more times. You can place this anywhere in the
-pattern. The wilcard is greedy, meaning that it will match the longest possible
+pattern. The wildcard is greedy, meaning that it will match the longest possible
 string.
 
 ```js
