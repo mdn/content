@@ -51,6 +51,14 @@ Note that this is equivalent to the following {{Cssxref("Attribute_selectors", "
   color: #f33;
 }
 
+.blue {
+  color: #007bff;
+}
+
+.blue.red {
+  color: #f33;
+}
+
 .yellow-bg {
   background: #ffa;
 }
@@ -68,6 +76,13 @@ Note that this is equivalent to the following {{Cssxref("Attribute_selectors", "
 <p class="red yellow-bg">This paragraph has red text and a yellow background.</p>
 <p class="red fancy">This paragraph has red text and "fancy" styling.</p>
 <p>This is just a regular paragraph.</p>
+```
+
+If the property is declared in several classes of element, then using value of the last declared class in CSS. The order of the class names in the "class" attribute is not important in this case.
+
+```html
+<p class="blue red">This paragraph has blue text.</p>
+<p class="red blue">This paragraph has blue text.</p>
 ```
 
 ### Result
