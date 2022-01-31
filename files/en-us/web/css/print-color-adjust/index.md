@@ -1,5 +1,5 @@
 ---
-title: color-adjust
+title: print-color-adjust
 slug: Web/CSS/print-color-adjust
 tags:
   - Adjusting Colors
@@ -9,40 +9,44 @@ tags:
   - HTML Colors
   - HTML Styles
   - Layout
-  - Non-standard
   - Reference
   - Styling HTML
   - Styling text
-  - Web
-  - color-adjust
+  - print-color-adjust
   - recipe:css-property
-browser-compat: css.properties.color-adjust
+browser-compat: css.properties.print-color-adjust
 ---
 {{CSSRef}}
 
-The **`color-adjust`** CSS property sets what, if anything, the {{Glossary("user agent")}} may do to optimize the appearance of the element on the output device. By default, the browser is allowed to make any adjustments to the element's appearance it determines to be necessary and prudent given the type and capabilities of the output device.
+The **`print-color-adjust`** CSS property sets what, if anything, the {{Glossary("user agent")}} may do to optimize the appearance of the element on the output device.
+By default, the browser is allowed to make any adjustments to the element's appearance it determines to be necessary and prudent given the type and capabilities of the output device.
 
 ## Syntax
 
 ```css
-color-adjust: economy;
-color-adjust: exact;
+print-color-adjust: economy;
+print-color-adjust: exact;
 
 /* Global values */
-color-adjust: inherit;
-color-adjust: initial;
-color-adjust: revert;
-color-adjust: unset;
+print-color-adjust: inherit;
+print-color-adjust: initial;
+print-color-adjust: revert;
+print-color-adjust: unset;
 ```
 
-The `color-adjust` property's value must be one of the following keywords.
+The `print-color-adjust` property's value must be one of the following keywords.
 
 ### Values
 
 - `economy`
-  - : The user agent is allowed to make adjustments to the element as it deems appropriate and prudent in order to optimize the output for the device it's being rendered for. For example, when printing, a browser might opt to leave out all background images and to adjust text colors to be sure the contrast is optimized for reading on white paper. This is the default.
+  - : The user agent is allowed to make adjustments to the element as it deems appropriate and prudent in order to optimize the output for the device it's being rendered for.
+    For example, when printing, a browser might opt to leave out all background images and to adjust text colors to be sure the contrast is optimized for reading on white paper.
+    This is the default.
 - **`exact`**
-  - : The element's content has been specifically and carefully crafted to use colors, images, and styles in a thoughtful and/or important way, such that being altered by the browser might actually make things worse rather than better. The appearance of the content should not be changed except by the user's request. For example, a page might include a list of information with rows whose background colors alternate between white and a light grey. Removing the background color would decrease the legibility of the content.
+  - : The element's content has been specifically and carefully crafted to use colors, images, and styles in a thoughtful and/or important way, such that being altered by the browser might actually make things worse rather than better.
+    The appearance of the content should not be changed except by the user's request.
+    For example, a page might include a list of information with rows whose background colors alternate between white and a light grey.
+    Removing the background color would decrease the legibility of the content.
 
 ## Usage notes
 
@@ -52,7 +56,9 @@ There are a number of reasons a browser might wish to deviate from the specified
 - If the output device is a printer, and to save ink, dark or extremely dense background images might be removed.
 - When printing a page, the browser might want to replace light-colored text on a dark background with dark text on a white background.
 
-Any options the user agent offers the user to allow them to control the use of color and images will take priority over the value of `color-adjust`. In other words, there isn't any guarantee that `color-adjust` will do anything. Not only can the user override the behavior, but each user agent is allowed to decide for itself how to handle `color-adjust` in any given situation.
+Any options the user agent offers the user to allow them to control the use of color and images will take priority over the value of `print-color-adjust`.
+In other words, there isn't any guarantee that `color-adjust` will do anything.
+Not only can the user override the behavior, but each user agent is allowed to decide for itself how to handle `color-adjust` in any given situation.
 
 ## Formal definition
 
@@ -66,7 +72,8 @@ Any options the user agent offers the user to allow them to control the use of c
 
 ### Preserving low contrast
 
-In this example, a box is shown which uses a {{cssxref("background-image")}} and a translucent {{cssxref("gradient/linear-gradient()", "linear-gradient()")}} function atop a black background color to have a dark blue gradient behind medium red text. For whatever reason, this is the desired appearance in any rendering environment, including on paper, so we also use `color-adjust: exact` to tell the browser not to make color or style adjustments to the box when rendering it.
+In this example, a box is shown which uses a {{cssxref("background-image")}} and a translucent {{cssxref("gradient/linear-gradient()", "linear-gradient()")}} function atop a black background color to have a dark blue gradient behind medium red text.
+For whatever reason, this is the desired appearance in any rendering environment, including on paper, so we also use `print-color-adjust: exact` to tell the browser not to make color or style adjustments to the box when rendering it.
 
 #### CSS
 
@@ -82,7 +89,7 @@ In this example, a box is shown which uses a {{cssxref("background-image")}} and
   display: flex;
   align-items: center;
   justify-content: center;
-  color-adjust: exact;
+  print-color-adjust: exact;
 }
 ```
 
