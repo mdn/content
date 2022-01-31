@@ -244,13 +244,10 @@ function loop() {
    for (const ball of balls) {
      ball.draw();
      ball.update();
-     ball.collisionDetect();
    }
 
    requestAnimationFrame(loop);
 }
-
-loop();
 ```
 
 All programs that animate things generally involve an animation loop, which serves to update the information in the program and then render the resulting view on each frame of the animation; this is the basis for most games and other such programs. Our `loop()` function does the following:
