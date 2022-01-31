@@ -89,7 +89,7 @@ fetchPromise
   });
 ```
 
-Instead of calling the second `then()` inside the first `then()`, we can *return* the promise returned by `json()`, and call the second `then()` on that return value. This is called **promise chaining** and means we can avoid ever-increasing levels of indentation when we need to make consecutive asynchronous function calls.
+Instead of calling the second `then()` inside the handler for the first `then()`, we can *return* the promise returned by `json()`, and call the second `then()` on that return value. This is called **promise chaining** and means we can avoid ever-increasing levels of indentation when we need to make consecutive asynchronous function calls.
 
 Before we move on to the next step, there's one more piece to add. We need to check that the server accepted and was able to handle the request, before we try to read it. We'll do this by checking the status code in the response and throwing an error if it wasn't "OK":
 
@@ -166,8 +166,8 @@ Sometimes you need all the promises to be fulfilled, but they don't depend on ea
 
 The promise returned by `Promise.all()` is:
 
-* fulfilled when and if *all* the promises in the array are fulfilled. In this case `then()` is called with an array of all the responses, in the same order that the promises were passed into `all()`
-* rejected when and if *any* of the promises in the array are rejected. In this case `catch()` is called with the error thrown by the promise that rejected.
+* fulfilled when and if *all* the promises in the array are fulfilled. In this case the `then()` handler is called with an array of all the responses, in the same order that the promises were passed into `all()`
+* rejected when and if *any* of the promises in the array are rejected. In this case the `catch()` handler is called with the error thrown by the promise that rejected.
 
 For example:
 
@@ -189,7 +189,7 @@ Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
 
 Here we're making three `fetch()` requests to three different URLs. If they all succeed, we will log the response status of each one. If any of them fail, we're logging the failure.
 
-With the URLs we've provided, the first and the third should work, and the third should give a 404 "Not Found" response. So the output should be:
+With the URLs we've provided, all the requests should be fulfilled, although for the second, the server will return 404 "Not Found". So the output should be:
 
 ```
 https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json: OK
@@ -237,7 +237,7 @@ Promise.any([fetchPromise1, fetchPromise2, fetchPromise3])
   });
 ```
 
-Note that in this case we can't say for sure which fetch request will complete first.
+Note that in this case we can't predict which fetch request will complete first.
 
 These are just two of the extra `Promise` functions for combining multiple promises. To learn about the rest, see the {{jsxref("Promise")}} reference documentation.
 
