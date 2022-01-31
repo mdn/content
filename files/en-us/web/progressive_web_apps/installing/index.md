@@ -76,7 +76,7 @@ On Apple's iOS (including iPhoneOS and iPadOS), the Safari browser built into th
 
 ![Screenshot showing the location of the Share button in Safari on iOS 13](safari-ios-a2hs-icon.png)
 
-This calls up the sharing panel. Among the options should be the "Add to Home Screen" option, unless it's been specifically removed from the list by the user editing the optons displayed:
+This calls up the sharing panel. Among the options should be the "Add to Home Screen" option, unless it's been specifically removed from the list by the user editing the options displayed:
 
 ![Screenshot of Safari iOS's sharing panel, showing the "Add to Home Screen" option](safari-ios-share-menu.png)
 

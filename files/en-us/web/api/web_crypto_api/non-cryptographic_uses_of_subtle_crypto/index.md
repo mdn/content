@@ -29,7 +29,7 @@ This technique is often used by sites that let you download executables, to ensu
 
 1. Note down the file's name and the SHA256 checksum provided by the website.
 2. Download the executable.
-3. Run `sha256sum /path/to/the/file` in the terminal to generate your own code. If you are using a Mac you may have to [install it seperately](https://unix.stackexchange.com/questions/426837/no-sha256sum-in-macos).
+3. Run `sha256sum /path/to/the/file` in the terminal to generate your own code. If you are using a Mac you may have to [install it separately](https://unix.stackexchange.com/questions/426837/no-sha256sum-in-macos).
 4. Compare the two strings - they should match unless the file has been compromised.
 
 ![Examples of SHA256 from the download for the software "Blender". These look like 32 hexadecimal numbers followed by a file name like "blender.zip"](blender-sha256-example.png)

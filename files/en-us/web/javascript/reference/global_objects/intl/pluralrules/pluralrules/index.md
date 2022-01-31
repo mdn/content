@@ -43,9 +43,9 @@ new Intl.PluralRules(locales, options)
 
       - : The type to use. Possible values are:
 
-        - "`cardinal`" for cardinal numbers (refering to the
+        - "`cardinal`" for cardinal numbers (referring to the
           quantity of things). This is the default value.
-        - "`ordinal`" for ordinal number (refering to the
+        - "`ordinal`" for ordinal number (referring to the
           ordering or ranking of things, e.g. "1st", "2nd", "3rd" in
           English).
 

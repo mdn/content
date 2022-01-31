@@ -17,8 +17,8 @@ The **`Intl.supportedValuesOf()`** method returns an array containing the suppor
 
 Duplicates are omitted and the array is sorted in ascending alphabetic order (or more precisely, using {{jsxref("Array/sort", "Array.prototype.sort()")}} with an `undefined` compare function)
 
-The method can be used to feature-test whether values are supported in a particular implementation and download a polyfill only if neccesary.
-It can also be used to build UIs that allow users to select their preferred localised values, for example when the UI is created from WebGL or server-side.
+The method can be used to feature-test whether values are supported in a particular implementation and download a polyfill only if necessary.
+It can also be used to build UIs that allow users to select their preferred localized values, for example when the UI is created from WebGL or server-side.
 
 {{EmbedInteractiveExample("pages/js/intl-supportedvaluesof.html")}}
 

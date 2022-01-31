@@ -33,7 +33,7 @@ sel.removeRange(range)
 ## Examples
 
 ```js
-/* Programmaticaly, more than one range can be selected.
+/* Programmatically, more than one range can be selected.
  * This will remove all ranges except the first. */
 s = window.getSelection();
 if(s.rangeCount > 1) {

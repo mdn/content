@@ -32,7 +32,7 @@ _`SpeechSynthesisUtterance` also inherits properties from its parent interface, 
 - {{domxref("SpeechSynthesisUtterance.rate")}}
   - : Gets and sets the speed at which the utterance will be spoken at.
 - {{domxref("SpeechSynthesisUtterance.text")}}
-  - : Gets and sets the text that will be synthesised when the utterance is spoken.
+  - : Gets and sets the text that will be synthesized when the utterance is spoken.
 - {{domxref("SpeechSynthesisUtterance.voice")}}
   - : Gets and sets the voice that will be used to speak the utterance.
 - {{domxref("SpeechSynthesisUtterance.volume")}}
@@ -66,10 +66,10 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 ## Examples
 
-In our basic [Speech synthesiser demo](https://mdn.github.io/web-speech-api/speak-easy-synthesis/) ([source](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis)), we first grab a reference to the SpeechSynthesis controller using `window.speechSynthesis`.
+In our basic [Speech synthesizer demo](https://mdn.github.io/web-speech-api/speak-easy-synthesis/) ([source](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis)), we first grab a reference to the SpeechSynthesis controller using `window.speechSynthesis`.
 After defining some necessary variables, we retrieve a list of the voices available using {{domxref("SpeechSynthesis.getVoices()")}} and populate a select menu with them so the user can choose what voice they want.
 
-Inside the `inputForm.onsubmit` handler, we stop the form submitting with {{domxref("Event.preventDefault","preventDefault()")}}, use the {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "constructor")}} to create a new utterance instance containing the text from the text {{htmlelement("input")}}, set the utterance's {{domxref("SpeechSynthesisUtterance.voice","voice")}} to the voice selected in the {{htmlelement("select")}} element, and start the utterance speaking via the {{domxref("SpeechSynthesis.speak()")}} method.
+Inside the `inputForm.onsubmit` handler, we stop the form submitting with {{domxref("Event.preventDefault","preventDefault()")}}, use the {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "constructor")}} to create a new utterance instance containing the text from the text {{htmlelement("input")}}, set the utterance's {{domxref("SpeechSynthesisUtterance.voice","voice")}} to the voice selected in the {{htmlelement("select")}} element, and start the utterance speaking via the {{domxref("SpeechSynthesis.speak()")}} method.
 
 ```js
 var synth = window.speechSynthesis;
