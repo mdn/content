@@ -8585,6 +8585,10 @@
 /en-US/docs/Web/API/Sensor/onactivate	/en-US/docs/Web/API/Sensor/activate_event
 /en-US/docs/Web/API/Sensor/onerror	/en-US/docs/Web/API/Sensor/error_event
 /en-US/docs/Web/API/Sensor/onreading	/en-US/docs/Web/API/Sensor/reading_event
+/en-US/docs/Web/API/Serial/onconnect	/en-US/docs/Web/API/SerialPort/connect_event
+/en-US/docs/Web/API/Serial/ondisconnect	/en-US/docs/Web/API/SerialPort/disconnect_event
+/en-US/docs/Web/API/SerialPort/onconnect	/en-US/docs/Web/API/SerialPort/connect_event
+/en-US/docs/Web/API/SerialPort/ondisconnect	/en-US/docs/Web/API/SerialPort/disconnect_event
 /en-US/docs/Web/API/ServiceWorker.onstatechange	/en-US/docs/Web/API/ServiceWorker/onstatechange
 /en-US/docs/Web/API/ServiceWorker.scriptURL	/en-US/docs/Web/API/ServiceWorker/scriptURL
 /en-US/docs/Web/API/ServiceWorker.state	/en-US/docs/Web/API/ServiceWorker/state
