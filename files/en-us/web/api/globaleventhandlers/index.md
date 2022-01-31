@@ -199,7 +199,7 @@ These event handlers are defined on the {{domxref("GlobalEventHandlers")}} mixin
 - {{domxref("GlobalEventHandlers.ontransitionend")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{event("transitionend")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has finished playing.
 - {{domxref("GlobalEventHandlers.ontransitionrun")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{event("transitionrun")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) is running, though not nessarilty started.
+  - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{event("transitionrun")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) is running, though not necessarily started.
 - {{domxref("GlobalEventHandlers.ontransitionstart")}}
   - : An [event handler](/en-US/docs/Web/Events/Event_handlers) called when a {{event("transitionstart")}} event is sent, indicating that a [CSS transition](/en-US/docs/Web/CSS/CSS_Transitions) has started transitioning.
 - {{domxref("GlobalEventHandlers.onwaiting")}}

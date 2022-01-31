@@ -13,7 +13,7 @@ tags:
   - Read-only
   - Reference
   - Telephone Number
-  - Téléphone
+  - Telephone
   - Validation
   - payment
 browser-compat: api.AddressErrors.phone

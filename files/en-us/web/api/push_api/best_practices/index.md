@@ -43,7 +43,7 @@ As with everything, with great power comes great responsibility. Every push noti
 
 There are some basic questions you can answer to determine if a push notification is needed:
 
-- Is there someone waiting in real-time for a response? In our above example, the program manager is awaiting your response and so a push notification is appropriate.
+- Is there someone waiting in real-time for a response? In our above example, the program manager is awaiting your response and so a push notification is appropriate.
 - Is up-to-the minute updating necessary? I use a service that aggregates different social media news sources. When a story I’m interested in is trending, I’d like to get a notification!
 - Is there breaking news that is timely? This is where it gets a little tricky. Sometimes news sites request push notifications so they can essentially say "Look at me! Look at me!" It all comes down to what the user wants, and you can use behavior to determine intent. For example, if the user views more than one article, or lingers on your page for several minutes, they may be interested in receiving updates.
 
@@ -57,7 +57,7 @@ Some studies have shown that as many as 60% of push notifications are blocked. A
 
 ## Browser mitigations
 
-Because of abuses of push notifications in the past, web browser developers have begun to implement strategies to help mitigate this problem. For example, Safari 12.1 now requires—and other browsers either already do, or are planning to do so—that the user interact with the page in some way before the page can request permission to perform push notifications. This at least prevents the user from getting spontaneously asked this question on web pages thaty've only glanced at once may rarely if ever look at again.
+Because of abuses of push notifications in the past, web browser developers have begun to implement strategies to help mitigate this problem. For example, Safari 12.1 now requires—and other browsers either already do, or are planning to do so—that the user interact with the page in some way before the page can request permission to perform push notifications. This at least prevents the user from getting spontaneously asked this question on web pages that they've only glanced at once may rarely if ever look at again.
 
 In the case of Firefox, see {{bug(1524619)}}, in which we find that Firefox 68 implements this, disabled by default, behind the preference `dom.webnotifications.requireuserinteraction`.
 
