@@ -109,21 +109,42 @@ Math.fround = Math.fround || (function (array) {
 Supporting older browsers is slower, but also possible:
 
 ```js
-if (!Math.fround) Math.fround = function(arg) {
-  arg = Number(arg);
-  // Return early for ±0 and NaN.
-  if (!arg) return arg;
-  var sign = arg < 0 ? -1 : 1;
-  if (sign < 0) arg = -arg;
-  // Compute the exponent (8 bits, signed).
-  var exp = Math.floor(Math.log(arg) / Math.LN2);
-  var powexp = Math.pow(2, Math.max(-126, Math.min(exp, 127)));
-  // Handle subnormals: leading digit is zero if exponent bits are all zero.
-  var leading = exp < -127 ? 0 : 1;
-  // Compute 23 bits of mantissa, inverted to round toward zero.
-  var mantissa = Math.round((leading - arg / powexp) * 0x800000);
-  if (mantissa <= -0x800000) return sign * Infinity;
-  return sign * powexp * (leading - mantissa / 0x800000);
+if (!Math.fround) Math.fround = function(v) {
+  v = Number(v);
+  if (!v)
+    return v;
+  var isNegative = v < 0;
+  var av = isNegative ? -v : v;
+  var absResult;
+  if (av >= 3.4028235677973366e38) { // also handles the case av === Infinity
+    absResult = Infinity;
+  } else if (av >= 1.1754943508222875e-38) { // threshold for normal representations
+    var e = Math.floor(Math.log(av) / 0.6931471805599453); // Math.LN2
+    var twoPowE = Math.pow(2, e);
+    var significand = av / twoPowE;
+    /* Because of loss of precision in its computation (Math.log is not
+     * guaranteed to return the best approximation), e might be 1 up or down,
+     * which causes twoPowE and significand to be a factor 2 up or down.
+     * We now adjust that so that significand is really in the range [1.0, 2.0).
+     */
+    if (significand < 1) {
+      twoPowE = twoPowE / 2;
+      significand = significand * 2;
+    } else if (significand >= 2) {
+      twoPowE = twoPowE * 2;
+      significand = significand / 2;
+    };
+    // Round the significand to 23 bits of fractional part, and multiply back by twoPowE
+    // Break ties to even
+    // The constant is (min positive double value) / (1.0 / 2**23)
+    absResult = ((significand * 4.144523e-317) / 4.144523e-317) * twoPowE;
+  } else {
+    // Round the value to a multiple of the smallest Float ULP
+    // Break ties to even
+    // The constant is (min positive double value) / (min positive float value)
+    absResult = (av * 3.5257702653609953e-279) / 3.5257702653609953e-279;
+  };
+  return isNegative ? -absResult : absResult;
 };
 ```
 
