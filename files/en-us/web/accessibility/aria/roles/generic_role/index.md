@@ -16,7 +16,7 @@ The `generic` role creates a nameless container element which has no semantic me
 
 ## Description
 
-While ARIA is primarily used to express semantics, there are some elements that shouldn't expose a semantic name to assistive technologies. The `generic` role indicates an element's role is equivilent to that of the non-semantic {{HTMLElement('div')}} and {{HTMLElement('span')}} elements.
+While ARIA is primarily used to express semantics, there are some elements that shouldn't expose a semantic name to assistive technologies. The `generic` role indicates an element's role is equivalent to that of the non-semantic {{HTMLElement('div')}} and {{HTMLElement('span')}} elements.
 
 The `generic` role is intended for use as the implicit role of generic elements in host languages for use by user agents only; not for use by developers. Instead, to remove implicit accessibility semantics, use [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) or `none`, the {{HTMLElement('div')}} and {{HTMLElement('span')}} elements that have no semantic meaning, or semantic container roles such as [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) to semantically group descendants in a named container.
 

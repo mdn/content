@@ -35,7 +35,7 @@ padding-bottom: 10%;
 /* Global values */
 padding-bottom: inherit;
 padding-bottom: initial;
-padding-botom: revert;
+padding-bottom: revert;
 padding-bottom: unset;
 ```
 

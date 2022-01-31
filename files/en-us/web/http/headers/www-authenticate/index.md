@@ -130,7 +130,7 @@ Generally you will need to check the relevant specifications for these (keys for
       Valid non-session values are: `"MD5"` (default if not specified), `"SHA-256"`, `"SHA-512"`.
       Valid session values are: `"MD5-sess"`, `"SHA-256-sess"`, `"SHA-512-sess"`.
 - **`qop`**
-  - : Quoted string indicating the quality of protection supported by the server. This must be supplied, and unrecognised options must be ignored.
+  - : Quoted string indicating the quality of protection supported by the server. This must be supplied, and unrecognized options must be ignored.
       - `"auth"`: Authentication
       - `"auth-int"`: Authentication with integrity protection
 - **`charset="UTF-8"`** {{optional_inline}}

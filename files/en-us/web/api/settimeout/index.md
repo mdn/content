@@ -102,7 +102,7 @@ Code executed by `setTimeout()` is called from an execution context separate
 from the function from which `setTimeout` was called. The usual rules for
 setting the `this` keyword for the called function apply, and if you have not
 set `this` in the call or with `bind`, it will default to
-the `window` (or `global`) object. It will not be the same as the
+the `window` (or `global`) object. It will not be the same as the
 `this` value for the function that called `setTimeout`.
 
 See the following example:
@@ -274,7 +274,7 @@ The specifics of this are browser-dependent:
 
 #### Throttling of tracking scripts
 
-Firefox enforces additional throttling for scripts that it recognises as tracking scripts.
+Firefox enforces additional throttling for scripts that it recognizes as tracking scripts.
 When running in the foreground, the throttling minimum delay is still 4ms. In background tabs, however,
 the throttling minimum delay is 10,000 ms, or 10 seconds, which comes into effect 30 seconds after a
 document has first loaded.
@@ -311,7 +311,7 @@ the resulting execution order may not be as expected.
 #### Deferral of timeouts during pageload
 
 Firefox will defer firing `setTimeout()` timers
-while the current tab is loading. Firing is deferred until the main thread is deemed
+while the current tab is loading. Firing is deferred until the main thread is deemed
 idle (similar to [window.requestIdleCallback()](/en-US/docs/Web/API/Window/requestIdleCallback)),
 or until the load event is fired.
 

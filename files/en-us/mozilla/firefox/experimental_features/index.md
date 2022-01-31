@@ -863,7 +863,7 @@ This allows Firefox users to display images that render on some other browsers, 
 
 Permitted values are:
 
-- `0`: Accept images with specification violations in both recommendations ("should" language) and requirements ("shall" language), provided they can be safely or unambigiously intepretted.
+- `0`: Accept images with specification violations in both recommendations ("should" language) and requirements ("shall" language), provided they can be safely or unambiguously interpreted.
 - `1` (default): Reject violations of requirements, but allow violations of recommendations.
 - `2`: Strict. Reject any violations in requirements or recommendations.
 

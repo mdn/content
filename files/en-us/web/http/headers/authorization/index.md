@@ -39,7 +39,7 @@ The user-agent should select the most secure authentication scheme that it suppo
 ## Syntax
 
 ```http
-Authorization: <auth-scheme> <authorisation-parameters>
+Authorization: <auth-scheme> <authorization-parameters>
 ```
 
 Basic authentication
@@ -114,7 +114,7 @@ Generally you will need to check the relevant specifications for these (keys for
       See the specification for additional information.
 - **`nc`**
   - : Nonce count. The hexadecimal count of requests in which the client has sent the current `cnonce` value (including the current request).
-      The server can use duplicate `nc` values to recognise replay requests.
+      The server can use duplicate `nc` values to recognize replay requests.
 - **`userhash`** {{optional_inline}}
   - : `"true` if the username has been hashed. `"false"` by default.
 

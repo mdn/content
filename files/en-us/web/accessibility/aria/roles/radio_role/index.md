@@ -17,7 +17,7 @@ The `radio` role is one of a group of checkable buttons, in a `radiogroup`, wher
 A radio element is a checkable input in a group of role elements, of which only one of which can be checked at a time. The radio elements must be grouped together in a ['radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) to indicate which ones affect the same value.  
 
 ```html
-<div  role="radiogroup" aria-labeledby="legend25" id="radiogroup25">
+<div  role="radiogroup" aria-labelledby="legend25" id="radiogroup25">
   <p id="legend25">Ipsum and lorem?</p>
   <ul>
     <li>
@@ -64,7 +64,7 @@ The native HTML radio ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/inp
 
 If a radio button is checked, the radio element has `aria-checked` set to `true`. If it is not checked, it has `aria-checked` set to `false`.
 
-Each radio button element has role `radio`. The radio role should always be nested with other radios in a `radiogroup`. If it is not possible to nest the radio button within a radio group, use the `id` of the nongrouped radio in a space separated list of values as the value of the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute on the `radiogroup` element to indicate the relationship of the `radiogroup` to its radio members.
+Each radio button element has role `radio`. The radio role should always be nested with other radios in a `radiogroup`. If it is not possible to nest the radio button within a radio group, use the `id` of the non-grouped radio in a space separated list of values as the value of the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute on the `radiogroup` element to indicate the relationship of the `radiogroup` to its radio members.
 
 Each radio element is labelled by its content, has a visible label referenced by `aria-labelledby`, or has a label specified with `aria-label`. The containing radiogroup element should either have a visible label referenced by `aria-labelledby` or a label specified with `aria-label`. If elements providing additional information about either the radio group or each radio button are present, those elements should be referenced by the radiogroup element or radio elements with the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) property.
 
@@ -96,7 +96,7 @@ If any of the radio roles in a group has `aria-required="true"` set, it is as if
 
 | - <kbd>Space</kbd>
     - : Checks the radio if not already checked. Unchecks all the others in the radiogroup. |
-  
+
   - <kbd>Right Arrow</kbd> and <kbd>Down Arrow</kbd>
     - : Move focus to the next radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the last button, focus moves to the first button.
 
@@ -123,15 +123,15 @@ The following example creates an otherwise non-semantic radio element using CSS 
 ### HTML
 
 ```html
-<div  role="radiogroup" aria-labeledby="legend" id="radiogroup">
+<div  role="radiogroup" aria-labelledby="legend" id="radiogroup">
   <p id="legend">Should you be using the <code>radio</code> role or <code>&lt;input type="radio"><code>?</p>
   <ul>
     <li>
-      <span role="radio" aria-checked="ARIA" tabindex="0" aria-labelledby="ariaLabel" data-value="True"></span> 
+      <span role="radio" aria-checked="ARIA" tabindex="0" aria-labelledby="ariaLabel" data-value="True"></span>
       <label id="ariaLabel">ARIA role</label>
     </li>
     <li>
-      <span role="radio" aria-checked="HTML" tabindex="0" aria-labelledby="htmllabel" data-value="False"></span> 
+      <span role="radio" aria-checked="HTML" tabindex="0" aria-labelledby="htmllabel" data-value="False"></span>
       <label id="htmllabel">HTML <code>&lt;input type="radio"><code></label>
     </li>
   </ul>
@@ -176,7 +176,7 @@ for (let i = 0, groups = radioGroups.length; i < groups; i++) {
     radios[j].addEventListener('click', function() {
       handleClick();
     );
-  } 
+  }
 }
 
 // handle mouse and touch events
@@ -236,14 +236,14 @@ No JavaScript (or even CSS) would be needed had we used semantic HTML element wi
 
 ```html
 <fieldset>
-  <legend">Should you be using the <code>radio</code> role or <code>&lt;input type="radio"><code>?</legend>
+  <legend>Should you be using the <code>radio</code> role or <code>&lt;input type="radio"><code>?</legend>
   <ul>
     <li>
-      <input type="radio" name="bestPractices" id="ariaLabel" value="True"/> 
+      <input type="radio" name="bestPractices" id="ariaLabel" value="True"/>
       <label for="ariaLabel">ARIA role</label>
     </li>
     <li>
-      <input type="radio" name="bestPractices" id="htmllabel" value="False"></span> 
+      <input type="radio" name="bestPractices" id="htmllabel" value="False"></span>
       <label for="htmllabel">HTML <code>&lt;input type="radio"><code></label>
     </li>
   </ul>

@@ -84,7 +84,7 @@ It's time to study the permissive nature of HTML code.
           then its effect can spread to areas you didn't intend
 
       <li>Badly nested elements: Nesting elements properly is also very important
-          for code behaving correctly. <strong>strong <em>strong emphasised?</strong>
+          for code behaving correctly. <strong>strong <em>strong emphasized?</strong>
           what is this?</em>
 
       <li>Unclosed attributes: Another common source of HTML problems. Let's
@@ -96,8 +96,8 @@ It's time to study the permissive nature of HTML code.
 4.  Let's review the problems:
 
     - The {{htmlelement("p","paragraph")}} and {{htmlelement("li","list item")}} elements have no closing tags. Looking at the image above, this doesn't seem to have affected the markup rendering too badly, as it is easy to infer where one element should end and another should begin.
-    - The first {{htmlelement("strong")}} element has no closing tag. This is a bit more problematic, as it isn't easy to tell where the element is supposed to end. In fact, the whole of the rest of the text has been strongly emphasised.
-    - This section is badly nested: `<strong>strong <em>strong emphasised?</strong> what is this?</em>`. It is not easy to tell how this has been interpreted because of the previous problem.
+    - The first {{htmlelement("strong")}} element has no closing tag. This is a bit more problematic, as it isn't easy to tell where the element is supposed to end. In fact, the whole of the rest of the text has been strongly emphasized.
+    - This section is badly nested: `<strong>strong <em>strong emphasized?</strong> what is this?</em>`. It is not easy to tell how this has been interpreted because of the previous problem.
     - The {{htmlattrxref("href","a")}} attribute value is missing a closing double quote. This seems to have caused the biggest problem — the link has not rendered at all.
 
 5.  Now let's look at the markup the browser has rendered, as opposed to the markup in the source code. To do this, we can use the browser developer tools. If you are not familiar with how to use your browser's developer tools, take a few minutes to review [Discover browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
@@ -110,7 +110,7 @@ It's time to study the permissive nature of HTML code.
 
       ```html
       <strong>strong
-        <em>strong emphasised?</em>
+        <em>strong emphasized?</em>
       </strong>
       <em> what is this?</em>
       ```

@@ -77,7 +77,7 @@ This is a really good thing because:
 - Page updates are a lot quicker and you don't have to wait for the page to refresh, meaning that the site feels faster and more responsive.
 - Less data is downloaded on each update, meaning less wasted bandwidth. This may not be such a big issue on a desktop on a broadband connection, but it's a major issue on mobile devices and in developing countries that don't have ubiquitous fast Internet service.
 
-To speed things up even further, some sites also store assets and data on the user's computer when they are first requested, meaning that on subsequent visits they use the local versions instead of downloading fresh copies everytime the page is first loaded. The content is only reloaded from the server when it has been updated.
+To speed things up even further, some sites also store assets and data on the user's computer when they are first requested, meaning that on subsequent visits they use the local versions instead of downloading fresh copies every time the page is first loaded. The content is only reloaded from the server when it has been updated.
 
 ![A basic web app data flow architecture](web-app-architecture@2x.png)
 
@@ -128,7 +128,7 @@ This series of files will act as our fake database; in a real application, we'd 
     let request = new XMLHttpRequest();
     ```
 
-6.  Next, you need to use the {{domxref("XMLHttpRequest.open","open()")}} method to specify what [HTTP request method](/en-US/docs/Web/HTTP/Methods) to use to request the resource from the network, and what its URL is. We'll just use the [`GET`](/en-US/docs/Web/HTTP/Methods/GET) method here and set the URL as our `url` variable. Add this below your previous line:
+6.  Next, you need to use the {{domxref("XMLHttpRequest.open","open()")}} method to specify what [HTTP request method](/en-US/docs/Web/HTTP/Methods) to use to request the resource from the network, and what its URL is. We'll just use the [`GET`](/en-US/docs/Web/HTTP/Methods/GET) method here and set the URL as our `url` variable. Add this below your previous line:
 
     ```js
     request.open('GET', url);
@@ -150,7 +150,7 @@ This series of files will act as our fake database; in a real application, we'd 
     };
     ```
 
-9.  The above is all set up for the XHR request — it won't actually run until we tell it to, which is done using the {{domxref("XMLHttpRequest.send","send()")}} method. Add the following below your previous addition to complete the function. This line should rest just above the closing curly brace of your `updateDisplay()` function.
+9.  The above is all set up for the XHR request — it won't actually run until we tell it to, which is done using the {{domxref("XMLHttpRequest.send","send()")}} method. Add the following below your previous addition to complete the function. This line should rest just above the closing curly brace of your `updateDisplay()` function.
 
     ```js
     request.send();
@@ -264,7 +264,7 @@ function(response) {
 }
 ```
 
-The response object has a method {{domxref("Response.text","text()")}} that takes the raw data contained in the response body and turns it into plain text — the format we want it in. It also returns a promise (which resolves to the resulting text string), so here we use another {{jsxref("Promise.then",".then()")}}, inside of which we define another function that dictates what we want to do with that text string. We are just setting the [`textContent`](/en-US/docs/Web/API/Node/textContent) property of our poem's {{htmlelement("pre")}} element to equal the text string, so this works out pretty simple.
+The response object has a method {{domxref("Response.text","text()")}} that takes the raw data contained in the response body and turns it into plain text — the format we want it in. It also returns a promise (which resolves to the resulting text string), so here we use another {{jsxref("Promise.then",".then()")}}, inside of which we define another function that dictates what we want to do with that text string. We are just setting the [`textContent`](/en-US/docs/Web/API/Node/textContent) property of our poem's {{htmlelement("pre")}} element to equal the text string, so this works out pretty simple.
 
 It is also worth noting that you can directly chain multiple promise blocks (`.then()` blocks, but there are other types too) onto the end of one another, passing the result of each block to the next block as you travel down the chain. This makes promises very powerful.
 
@@ -304,12 +304,12 @@ The first block that uses Fetch can be found at the start of the JavaScript:
 
 ```js
 fetch('products.json').then(function(response) {
-  return response.json();
+  return response.json();
 }).then(function(json) {
-  let products = json;
-  initialize(products);
+  let products = json;
+  initialize(products);
 }).catch(function(err) {
-  console.log('Fetch problem: ' + err.message);
+  console.log('Fetch problem: ' + err.message);
 });
 ```
 
@@ -319,7 +319,7 @@ Inside this function we run {{domxref("Response.json","json()")}} on the respons
 
 Next, we chain another `.then()` onto the end of our first one, the success function that contains the `json` returned from the `response.json()` promise. We set this to be the value of the `products` variable, then run `initialize(products)`, which starts the process of displaying all the products in the user interface.
 
-To handle errors, we chain a `.catch()` block onto the end of the chain. This runs if the promise fails for some reason. Inside it, we include a function that is passed as a parameter, an `error` object. This `error` object can be used to report the nature of the error that has occurred, in this case we do it with a simple `console.log()`.
+To handle errors, we chain a `.catch()` block onto the end of the chain. This runs if the promise fails for some reason. Inside it, we include a function that is passed as a parameter, an `error` object. This `error` object can be used to report the nature of the error that has occurred, in this case we do it with a simple `console.log()`.
 
 However, a complete website would handle this error more gracefully by displaying a message on the user's screen and perhaps offering options to remedy the situation, but we don't need anything more than a simple `console.log()`.
 
@@ -334,13 +334,13 @@ The second Fetch block can be found inside the `fetchBlob()` function:
 
 ```js
 fetch(url).then(function(response) {
-    return response.blob();
+    return response.blob();
 }).then(function(blob) {
-  // Convert the blob to an object URL — this is basically a temporary internal URL
-  // that points to an object stored inside the browser
-  let objectURL = URL.createObjectURL(blob);
-  // invoke showProduct
-  showProduct(objectURL, product);
+  // Convert the blob to an object URL — this is basically a temporary internal URL
+  // that points to an object stored inside the browser
+  let objectURL = URL.createObjectURL(blob);
+  // invoke showProduct
+  showProduct(objectURL, product);
 });
 ```
 

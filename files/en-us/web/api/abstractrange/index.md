@@ -165,7 +165,7 @@ let fragment = range.cloneContents();
 document.body.appendChild(fragment);
 ```
 
-First we get references to the paragraph node itelf as well as to the _second_ child node within the paragraph. The first child is the {{HTMLElement("strong")}} element. The second child is the text node " is a paragraph.".
+First we get references to the paragraph node itself as well as to the _second_ child node within the paragraph. The first child is the {{HTMLElement("strong")}} element. The second child is the text node " is a paragraph.".
 
 With the text node reference in hand, we create a new `Range` object by calling {{domxref("Document.createRange", "createRange()")}} on the `Document` itself. We set the starting position of the range to the sixth character of the text node's string, and the end position to the length of the text node's string minus one. This sets the range to encompass the word "paragraph".
 

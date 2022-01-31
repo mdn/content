@@ -341,7 +341,7 @@ Two common uses for the primary squeeze action are to grasp and/or pick up objec
 
 #### Example
 
-This sample code shows a set of squeeze event handlers that implement these events to manage picking up and holding objects from the scene. The code presumes the existence of an `avatar` object representing the character, as used in several other eamples on this page, as well as the `pickUpObject()` and `dropObject()` functions, which handle transferring an object from the world to a particular hand and releasing an object from the hand and placing it back into the world.
+This sample code shows a set of squeeze event handlers that implement these events to manage picking up and holding objects from the scene. The code presumes the existence of an `avatar` object representing the character, as used in several other examples on this page, as well as the `pickUpObject()` and `dropObject()` functions, which handle transferring an object from the world to a particular hand and releasing an object from the hand and placing it back into the world.
 
 ##### Picking up an object: handling squeezestart events
 

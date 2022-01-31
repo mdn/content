@@ -33,7 +33,7 @@ Typically, drop effect functions can only be provided once an object has been gr
 
 ## Values
 
-The value is a space separated list of possible actions. The followig are the valid tokens:
+The value is a space separated list of possible actions. The following are the valid tokens:
 
 - `copy`
   - : A duplicate of the source object will be dropped into the target.
