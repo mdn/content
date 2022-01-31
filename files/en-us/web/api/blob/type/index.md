@@ -63,7 +63,7 @@ input.addEventListener('change', (event) => {
   const files = event.target.files;
 
   if (files.length === 0) {
-    output.innerText = 'Choose files...';
+    output.innerText = 'Choose image files...';
     return;
   }
 
