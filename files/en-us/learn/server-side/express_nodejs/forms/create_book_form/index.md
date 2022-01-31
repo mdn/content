@@ -10,7 +10,7 @@ tags:
 ---
 This subarticle shows how to define a page/form to create `Book` objects. This is a little more complicated than the equivalent `Author` or `Genre` pages because we need to get and display available `Author` and `Genre` records in our `Book` form.
 
-## Import validation and sanitisation methods
+## Import validation and sanitization methods
 
 Open **/controllers/bookController.js**, and add the following line at the top of the file:
 
@@ -62,7 +62,7 @@ exports.book_create_post = [
         next();
     },
 
-    // Validate and sanitise fields.
+    // Validate and sanitize fields.
     body('title', 'Title must not be empty.').trim().isLength({ min: 1 }).escape(),
     body('author', 'Author must not be empty.').trim().isLength({ min: 1 }).escape(),
     body('summary', 'Summary must not be empty.').trim().isLength({ min: 1 }).escape(),
@@ -137,7 +137,7 @@ The main difference with respect to the other form handling code is how we sanit
 },
 ```
 
-We then use a wildcard (`*`) in the sanitiser to individually validate each of the genre array entries. The code below shows how - this translates to "sanitise every item below key `genre`".
+We then use a wildcard (`*`) in the sanitizer to individually validate each of the genre array entries. The code below shows how - this translates to "sanitize every item below key `genre`".
 
 ```js
 body('genre.*').escape(),

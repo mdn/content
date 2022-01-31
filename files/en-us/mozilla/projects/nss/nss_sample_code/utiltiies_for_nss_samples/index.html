@@ -4,14 +4,14 @@ slug: Mozilla/Projects/NSS/NSS_Sample_Code/Utiltiies_for_nss_samples
 ---
 <h2 id="NSS_Sample_Code_0_Utilities.">NSS Sample Code 0: Utilities.</h2>
 
-<p class="summary">These utility functions are adapted from those found in the sectool library used by the NSS security tools and other NSS test applications. </p>
+<p class="summary">These utility functions are adapted from those found in the sectool library used by the NSS security tools and other NSS test applications.</p>
 
 <p>It shows the following:</p>
 
 <ul>
  <li>Read DER from a file.</li>
  <li>Compile file size.</li>
- <li>Get seed From a noise gile.</li>
+ <li>Get seed From a noise file.</li>
  <li>Generate random numbers.</li>
  <li>Get a module password.</li>
  <li>Extract the password from a text file.</li>
@@ -107,11 +107,11 @@ GetPassword(FILE   *input,
  *
  * Storing passwords is often used with server environments
  * where prompting the user for a password or requiring it
- * to be entered in the commnd line is not a feasible option.
+ * to be entered in the command line is not a feasible option.
  *
  * This function supports password extraction from files with
- * multipe passwords, one for each token. In the single password
- * case a line would just have the passord whereas in the multi-
+ * multiple passwords, one for each token. In the single password
+ * case a line would just have the password whereas in the multi-
  * password variant they could be of the form
  *
  * token_1_name:its_password
@@ -424,11 +424,11 @@ char* GetPassword(FILE *input, FILE *output, char *prompt,
  *
  * Storing passwords is often used with server environments
  * where prompting the user for a password or requiring it
- * to be entered in the commnd line is not a feasible option.
+ * to be entered in the command line is not a feasible option.
  *
  * This function supports password extraction from files with
- * multipe passwords, one for each token. In the single password
- * case a line would just have the passord whereas in the multi-
+ * multiple passwords, one for each token. In the single password
+ * case a line would just have the password whereas in the multi-
  * password variant they could be of the form
  *
  * token_1_name:its_password
