@@ -1,8 +1,7 @@
 ---
-title: "Code examples"
+title: "Adding code examples"
+linkTitle: "Code examples"
 weight: 4
-description: >
-  Adding code examples
 ---
 
 There are a lot of code examples on MDN, and you'll probably want to add

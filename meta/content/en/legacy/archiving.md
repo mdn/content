@@ -1,8 +1,7 @@
 ---
-title: "Archiving"
+title: "Archiving and unarchiving pages"
+linkTitle: "Archiving"
 weight: 4
-description: >
-  Archiving and unarchiving pages
 ---
 
 Pages with the banner "This is an archived page. It's not actively maintained."

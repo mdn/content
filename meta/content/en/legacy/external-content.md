@@ -1,8 +1,7 @@
 ---
-title: "External content"
+title: "Making a change that depends on external content"
+linkTitle: "External content"
 weight: 4
-description: >
-  Making a change that depends on external content
 ---
 
 Some MDN content is created from external data files or repositories using KS macros.

@@ -1,8 +1,7 @@
 ---
-title: "Reuse policy"
+title: "Can I copy content from other sources to put on MDN?"
+linkTitle: "Reuse policy"
 weight: 4
-description: >
-  Can I copy content from other sources to put on MDN?
 ---
 
 In general, we do not approve of copying content from other sources and putting

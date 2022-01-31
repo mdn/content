@@ -1,8 +1,7 @@
 ---
-title: "Deployment timeline"
+title: "When will my change show up on the production MDN site?"
+linkTitle: "Deployment timeline"
 weight: 4
-description: >
-  When will my change show up on the production MDN site?
 ---
 
 After your pull request is merged, it may take up to 48 hours before the
