@@ -102,10 +102,10 @@ function openRequestedPopup() {
 ### Position
 
 - `left` or `screenX`
-  - : Species the distance in pixels from the left side of the work area as defined by the user's operating system where the new window will be generated.
+  - : Specifies the distance in pixels from the left side of the work area as defined by the user's operating system where the new window will be generated.
 
 - `top` or `screenY`
-  - : Specifies the distance, in pixels, the new window will be generated from the left side of the work area of the user's operating system.
+  - : Specifies the distance in pixels from the top side of the work area as defined by the user's operating system where the new window will be generated.
 
 > **Note:** If a popup is requested and no position features are specified, then the left and top coordinates of the new window will be offset 22 pixels from the original window. If the original window is maximized, the window will also be maximized.
 
