@@ -13,7 +13,7 @@ browser-compat: api.Sensor.activate_event
 ---
 {{APIRef("Sensor API")}}
 
-The **`activate`** event is fired when a sensor becomes activated. Its internal state transitions from "activating" to "activated".
+The **`activate`** event is fired when a sensor becomes activated. It means that it will start obtaining readings.
 
 The {{domxref('Sensor')}} interface is a base class, `onactivate` and the `activate` event may only be used
 on one of the [derived classes](/en-US/docs/Web/API/Sensor#interfaces_based_on_sensor).

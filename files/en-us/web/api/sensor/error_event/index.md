@@ -18,6 +18,7 @@ The **`error`** event is fired when an exception occurs on a sensor.
 The {{domxref('Sensor')}} interface is a base class, `onerror` and the `error` event may only be used
 on one of the [derived classes](/en-US/docs/Web/API/Sensor#interfaces_based_on_sensor).
 
+After this event has occurred, the {{domxref('Sensor')}} object becomes idle. If the sensor was reading values, it will stop until it restarts.
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
