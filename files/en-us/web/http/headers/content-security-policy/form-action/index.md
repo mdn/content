@@ -39,14 +39,16 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form-action`** direc
 
 One or more sources can be set for the `form-action` policy:
 
-```
+```http
 Content-Security-Policy: form-action <source>;
 Content-Security-Policy: form-action <source> <source>;
 ```
 
 ### Sources
 
-{{page("Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
+`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+
+Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
 
 ## Examples
 
