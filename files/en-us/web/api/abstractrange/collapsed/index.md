@@ -18,7 +18,7 @@ A boolean value which is `true` if the range is _collapsed_. A collapsed range i
 ## Example
 
 ```js
-let isCollapsed = range.collapsed
+let isCollapsed = range.collapsed;
 ```
 
 ## Specifications
