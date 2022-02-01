@@ -80,7 +80,7 @@ function openRequestedPopup() {
 
 ## Window features
 
-`windowFeatures` is an optional comma-separated list of window features such as size, position, and UI features. Most modern browsers will ignore changes to UI features for a better user experience.
+`windowFeatures` is an optional comma-separated list of window features such as size and position.
 
 ### Popup feature
 
@@ -108,30 +108,6 @@ function openRequestedPopup() {
   - : Specifies the distance in pixels from the top side of the work area as defined by the user's operating system where the new window will be generated.
 
 > **Note:** If a popup is requested and no position features are specified, then the left and top coordinates of the new window will be offset 22 pixels from the original window. If the original window is maximized, the window will also be maximized.
-
-### UI features
-
-> **Warning:** These features are kept only for backward compatibility.
-> In modern browsers (Firefox 76 or newer, Chrome, Safari, Edge), the
-> following features are just a condition for whether `popup` is true or false.
-
-- `menubar`
-  - : Controls if the new window has a menubar.
-
-- `toolbar`
-  - : Controls if the new window has toolbar buttons (e.g., Back, Forward and Reload).
-
-- `location`
-  - : Controls if the new window has a location (address) bar.
-
-- `status`
-  - : Controls if the new window has a status bar.
-
-- `resizable`
-  - : Controls if the new window will be resizable.
-
-- `scrollbars`
-  - : Controls if the new window will have scrollbars.
 
 ### Window functionality
 
