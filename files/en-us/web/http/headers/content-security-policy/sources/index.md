@@ -1,5 +1,5 @@
 ---
-title: 'CSP Source Values'
+title: 'CSP source values'
 slug: Web/HTTP/Headers/Content-Security-Policy/Sources
 tags:
   - CSP
