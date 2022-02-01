@@ -336,7 +336,7 @@ In HTML, link types indicate the relationship between two documents, in which on
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Link_types/manifest">manifest</a></code
+          ><a href="/en-US/docs/Web/HTML/Link_types/me">me</a></code
         >
       </td>
       <td>
