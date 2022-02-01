@@ -17,9 +17,9 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
 
 ```css
 @scroll-timeline moveTimeline {
-  source:  auto;
+  source: auto;
   orientation: vertical;
-  scroll-offsets:  0px, 500px;
+  scroll-offsets: 0px, 500px;
 }
 ```
 
