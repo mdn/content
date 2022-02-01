@@ -250,10 +250,10 @@ However, it evaluates from left to right:
          its result is the new value of `x`, which is `3`.
          That `3` result becomes the next element
          in the inner array literal (after the `2` from the `f()`).
-    2. The inner array literal `[ f(), x = g() ]`
+    3. The inner array literal `[ f(), x = g() ]`
        has now finished evaluating;
        its result is an array with two values: `[ 2, 3 ]`.
-    3. That `[ 2, 3 ]` array is now assigned to `y`.
+    4. That `[ 2, 3 ]` array is now assigned to `y`.
 2. The assignment expression `y = [ f(), x = g() ]` has
    now finished evaluating;
    its result is the new value of `y` – which happens to be `[ 2, 3 ]`.
@@ -277,9 +277,9 @@ For more information about objects, read [Working with Objects][object].)
     2. The `x[f()]` property access on this assignment
        has now finished evaluating;
        its result is a variable property reference: `x[2]`.
-    2. Then the function call `g()` prints "G!" to the console and
+    3. Then the function call `g()` prints "G!" to the console and
        then evaluates to the number `3`.
-    3. That `3` is now assigned to `x[2]`.
+    4. That `3` is now assigned to `x[2]`.
        (This step will succeed only if `x` is assigned to an [object][].)
 2. The assignment expression `x[f()] = g()` has
    now finished evaluating;

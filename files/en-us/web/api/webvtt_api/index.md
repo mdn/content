@@ -744,9 +744,9 @@ There are few steps that can be followed to write a simple webVTT file. Before s
 1.  Open a notepad.
 2.  The first line of WebVTT is standardized similar to the way some other languages require you to put headers as the file starts to indicate the file type. On the very first line you have to write:
 
-```plain
-WEBVTT
-```
+    ```plain
+    WEBVTT
+    ```
 
 3. Leave the second line blank, and on the third line the time for first cue is to be specified. For example, for a first cue starting at time 1 second and ending at 5 seconds, it is written as:
 
