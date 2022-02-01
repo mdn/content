@@ -40,7 +40,6 @@ When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the
 
 ```js
 var controller = new AbortController();
-var signal = controller.signal;
 
 var downloadBtn = document.querySelector('.download');
 var abortBtn = document.querySelector('.abort');
@@ -54,6 +53,7 @@ abortBtn.addEventListener('click', function() {
 
 function fetchVideo() {
   controller = new AbortController();  // Set new controller for this request.
+  var signal = controller.signal;
   fetch(url, { signal }).then(function(response) {
   }).catch(function(e) {
    reports.textContent = 'Download error: ' + e.message;
