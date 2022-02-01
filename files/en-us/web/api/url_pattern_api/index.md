@@ -47,7 +47,7 @@ The syntax for patterns is based on the
 [path-to-regexp](https://github.com/pillarjs/path-to-regexp) JavaScript library.
 This syntax is similar to the one used in
 [Ruby on Rails](https://rubyonrails.org), or JavaScript frameworks like
-[Express](https://expressjs.com/) or [Next.js](https://next.js).
+[Express](https://expressjs.com/) or [Next.js](https://nextjs.org/).
 
 ### Fixed text and capture groups
 
