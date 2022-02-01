@@ -18,7 +18,7 @@ An integer value indicating the number of characters into the {{domxref("Node")}
 ## Example
 
 ```js
-let startOffset = range.startOffset
+let startOffset = range.startOffset;
 ```
 
 ## Specifications
