@@ -11,7 +11,7 @@ A **deep copy** of an object is a copy whose properties do not share the same re
 
 In JavaScript, standard built-in object-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Object.assign()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)) do not create deep copies (instead, they create shallow copies).
 
-To make a deep copy of a JavaScript object, you may be able to use {{jsxref("JSON.stringify()")}} to [serialize](/en-US/docs/Glossary/Serialization) the object to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string to a JavaScript object:
+One way to make a deep copy of a JavaScript object, if it can be [serialized](/en-US/docs/Glossary/Serialization), is to use {{jsxref("JSON.stringify()")}} to convert the object to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into (a completely new) JavaScript object:
 
 ```js
 let ingredients_list = ["noodles",{"list":["eggs","flour","water"]}];
