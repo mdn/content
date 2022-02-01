@@ -28,10 +28,14 @@ The radiogroup must have an accessible name either by a visible label referenced
 
 - [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
   - : 
-- aria-errormessage
-aria-invalid
-aria-readonly
-aria-required
+- [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
+  - : 
+- [`aria-invalid`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
+  - : 
+- [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
+  - : 
+- [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required)
+  - : 
 
 ### Keyboard interactions
 
@@ -74,10 +78,6 @@ Use the  `[aria-checked="true"]` attribute selector to style the checked state o
 
 ## Accessibility Concerns
 
-
-
-
-
 ## Best Practices
 
 ### Prefer HTML
@@ -88,6 +88,5 @@ Use the  `[aria-checked="true"]` attribute selector to style the checked state o
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#radiogroup","ARIA: radiogroup role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices","#aria_lh_radiogroup","radiogroup role")}} | {{Spec2('ARIA Authoring Practices')}} |
-
 
 ## See Also
