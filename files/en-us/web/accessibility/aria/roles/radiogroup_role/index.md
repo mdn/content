@@ -36,7 +36,7 @@ aria-required
 ### Keyboard interactions
 
 | Key(s) | Action |
-| ====   | ====== |
+| --------------------------   | --------------------------|
 | <kbd>Tab</kbd> and <kbd>Shift + Tab</kbd> |  Move focus into and out of the radiogroup. When focus moves into a radio group, if a radio button is checked, focus is set on the checked button. If none of the radio buttons are checked, focus is set on the first radio button in the group. |
 |<kbd>Space</kbd>  | Checks the focused radio button if it is not already checked. |
 |<kbd>Right Arrow</kbd> and <kbd>Down Arrow</kbd> | Move focus to the next radio button in the group, uncheck the previously focused button, and check the newly focused button. If focus is on the last button, focus moves to the first button. |
