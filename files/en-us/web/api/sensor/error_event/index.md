@@ -19,6 +19,7 @@ The {{domxref('Sensor')}} interface is a base class, `onerror` and the `error` e
 on one of the [derived classes](/en-US/docs/Web/API/Sensor#interfaces_based_on_sensor).
 
 After this event has occurred, the {{domxref('Sensor')}} object becomes idle. If the sensor was reading values, it will stop until it restarts.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
