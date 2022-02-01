@@ -51,13 +51,13 @@ You can also [see the example live here](https://mdn.github.io/learning-area/htm
 
 The following steps describe what you need to do to complete the table example. All the data you'll need is contained in the `planets-data.txt` file. If you have trouble visualizing the data, look at the live example above, or try drawing a diagram.
 
-1.  Open your copy of `blank-template.html`, and start the table off by giving it an outer container, a table header, and a table body. You don't need a table footer for this example.
-2.  Add the provided caption to your table.
-3.  Add a row to the table header containing all the column headers.
-4.  Create all the content rows inside the table body, remembering to make all the row headings into headings semantically.
-5.  Ensure all the content is placed into the right cells — in the raw data, each row of planet data is shown next to its associated planet.
-6.  Add attributes to make the row and column headers unambiguously associated with the rows, columns, or rowgroups that they act as headings for.
-7.  Add a black [border](/en-US/docs/Web/CSS/border) just around the column that contains all the planet name row headers.
+1. Open your copy of `blank-template.html`, and start the table off by giving it an outer container, a table header, and a table body. You don't need a table footer for this example.
+2. Add the provided caption to your table.
+3. Add a row to the table header containing all the column headers.
+4. Create all the content rows inside the table body, remembering to make all the row headings into headings semantically.
+5. Ensure all the content is placed into the right cells — in the raw data, each row of planet data is shown next to its associated planet.
+6. Add attributes to make the row and column headers unambiguously associated with the rows, columns, or rowgroups that they act as headings for.
+7. Add a black [border](/en-US/docs/Web/CSS/border) just around the column that contains all the planet name row headers.
 
 ## Hints and tips
 
@@ -69,8 +69,8 @@ The following steps describe what you need to do to complete the table example. 
 
 If you would like your work assessed, or are stuck and want to ask for help:
 
-1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
 
     - A descriptive title such as "Assessment wanted for Structuring planet data".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.

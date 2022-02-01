@@ -90,9 +90,9 @@ Bear in mind that some built-in browser functions are not part of the core JavaS
 
 ## Functions versus methods
 
-Programmers call **functions** that are part of objects **methods**. You don't need to learn about the inner workings of structured JavaScript objects yet — you can wait until our later module that will teach you all about the inner workings of objects, and how to create your own. For now, we just wanted to clear up any possible confusion of method versus function — you are likely to meet both terms as you look at the available related resources across the Web.
+Programmers call **functions** that are part of objects **methods**. You don't need to learn about the inner workings of structured JavaScript objects yet — you can wait until our later module that will teach you all about the inner workings of objects, and how to create your own. For now, we just wanted to clear up any possible confusion of method versus function — you are likely to meet both terms as you look at the available related resources across the Web.
 
-The built-in code we've made use of so far come in both forms: **functions** and **methods.** You can check the full list of the built-in functions, as well as the built-in objects and their corresponding methods [here](/en-US/docs/Web/JavaScript/Reference/Global_Objects).
+The built-in code we've made use of so far come in both forms: **functions** and **methods.** You can check the full list of the built-in functions, as well as the built-in objects and their corresponding methods [here](/en-US/docs/Web/JavaScript/Reference/Global_Objects).
 
 You've also seen a lot of **custom functions** in the course so far — functions defined in your code, not inside the browser. Anytime you saw a custom name with parentheses straight after it, you were using a custom function. In our [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) example (see also the full [source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)) from our [loops article](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code), we included a custom `draw()` function that looked like this:
 
@@ -108,7 +108,7 @@ function draw() {
 }
 ```
 
-This function draws 100 random circles inside a {{htmlelement("canvas")}} element. Every time we want to do that, we can just invoke the function with this:
+This function draws 100 random circles inside a {{htmlelement("canvas")}} element. Every time we want to do that, we can just invoke the function with this:
 
 ```js
 draw();
@@ -315,7 +315,7 @@ The result - try typing into the text box and see the output:
 
 ## Function scope and conflicts
 
-Let's talk a bit about {{glossary("scope")}} — a very important concept when dealing with functions. When you create a function, the variables and other things defined inside the function are inside their own separate **scope**, meaning that they are locked away in their own separate compartments, unreachable from code outside the functions.
+Let's talk a bit about {{glossary("scope")}} — a very important concept when dealing with functions. When you create a function, the variables and other things defined inside the function are inside their own separate **scope**, meaning that they are locked away in their own separate compartments, unreachable from code outside the functions.
 
 The top level outside all your functions is called the **global scope**. Values defined in the global scope are accessible from everywhere in the code.
 
@@ -348,7 +348,7 @@ function greeting() {
 }
 ```
 
-Both functions you want to call are called `greeting()`, but you can only ever access the `first.js` file's `greeting()` function (the second one is ignored). In addition, an error results when attempting (in the `second.js` file) to assign a new value to the `name` variable — because it was already declared with `const`, and so can’t be reassigned.
+Both functions you want to call are called `greeting()`, but you can only ever access the `first.js` file's `greeting()` function (the second one is ignored). In addition, an error results when attempting (in the `second.js` file) to assign a new value to the `name` variable — because it was already declared with `const`, and so can’t be reassigned.
 
 > **Note:** You can see this example [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (see also the [source code](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
 
@@ -364,9 +364,9 @@ The zoo keeper is like the global scope — they have the keys to access every e
 
 Let's look at a real example to demonstrate scoping.
 
-1.  First, make a local copy of our [function-scope.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html) example. This contains two functions called `a()` and `b()`, and three variables — `x`, `y`, and `z` — two of which are defined inside the functions, and one in the global scope. It also contains a third function called `output()`, which takes a single parameter and outputs it in a paragraph on the page.
-2.  Open the example up in a browser and in your text editor.
-3.  Open the JavaScript console in your browser developer tools. In the JavaScript console, enter the following command:
+1. First, make a local copy of our [function-scope.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html) example. This contains two functions called `a()` and `b()`, and three variables — `x`, `y`, and `z` — two of which are defined inside the functions, and one in the global scope. It also contains a third function called `output()`, which takes a single parameter and outputs it in a paragraph on the page.
+2. Open the example up in a browser and in your text editor.
+3. Open the JavaScript console in your browser developer tools. In the JavaScript console, enter the following command:
 
     ```js
     output(x);
@@ -374,7 +374,7 @@ Let's look at a real example to demonstrate scoping.
 
     You should see the value of variable `x` printed to the browser viewport.
 
-4.  Now try entering the following in your console
+4. Now try entering the following in your console
 
     ```js
     output(y);
@@ -383,7 +383,7 @@ Let's look at a real example to demonstrate scoping.
 
     Both of these should throw an error into the console along the lines of "[ReferenceError: y is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined)". Why is that? Because of function scope — `y` and `z` are locked inside the `a()` and `b()` functions, so `output()` can't access them when called from the global scope.
 
-5.  However, what about when it's called from inside another function? Try editing `a()` and `b()` so they look like this:
+5. However, what about when it's called from inside another function? Try editing `a()` and `b()` so they look like this:
 
     ```js
     function a() {
@@ -406,7 +406,7 @@ Let's look at a real example to demonstrate scoping.
 
     You should see the `y` and `z` values printed in the browser viewport. This works fine, as the `output()` function is being called inside the other functions — in the same scope as the variables it is printing are defined in, in each case. `output()` itself is available from anywhere, as it is defined in the global scope.
 
-6.  Now try updating your code like this:
+6. Now try updating your code like this:
 
     ```js
     function a() {
@@ -420,7 +420,7 @@ Let's look at a real example to demonstrate scoping.
     }
     ```
 
-7.  Save and reload again, and try this again in your JavaScript console:
+7. Save and reload again, and try this again in your JavaScript console:
 
     ```js
     a();
@@ -429,7 +429,7 @@ Let's look at a real example to demonstrate scoping.
 
     Both the `a()` and `b()` call should print the value of x to the browser viewport. These work fine because even though the `output()` calls are not in the same scope as `x` is defined in, `x` is a global variable so is available inside all code, everywhere.
 
-8.  Finally, try updating your code like this:
+8. Finally, try updating your code like this:
 
     ```js
     function a() {
@@ -443,7 +443,7 @@ Let's look at a real example to demonstrate scoping.
     }
     ```
 
-9.  Save and reload again, and try this again in your JavaScript console:
+9. Save and reload again, and try this again in your JavaScript console:
 
     ```js
     a();
@@ -458,7 +458,7 @@ Let's look at a real example to demonstrate scoping.
 
 ### Functions inside functions
 
-Keep in mind that you can call a function from anywhere, even inside another function.  This is often used as a way to keep code tidy — if you have a big complex function, it is easier to understand if you break it down into several sub-functions:
+Keep in mind that you can call a function from anywhere, even inside another function. This is often used as a way to keep code tidy — if you have a big complex function, it is easier to understand if you break it down into several sub-functions:
 
 ```js
 function myBigFunction() {

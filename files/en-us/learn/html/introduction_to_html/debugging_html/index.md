@@ -70,9 +70,9 @@ HTML itself doesn't suffer from syntax errors because browsers parse it permissi
 
 It's time to study the permissive nature of HTML code.
 
-1.  First, download our [debug-example demo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) and save it locally. This demo is deliberately written with some built-in errors for us to explore (the HTML markup is said to be **badly-formed**, as opposed to **well-formed**).
-2.  Next, open it in a browser. You will see something like this:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
-3.  This immediately doesn't look great; let's look at the source code to see if we can work out why (only the body contents are shown):
+1. First, download our [debug-example demo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) and save it locally. This demo is deliberately written with some built-in errors for us to explore (the HTML markup is said to be **badly-formed**, as opposed to **well-formed**).
+2. Next, open it in a browser. You will see something like this:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
+3. This immediately doesn't look great; let's look at the source code to see if we can work out why (only the body contents are shown):
 
     ```html
     <h1>HTML debugging examples</h1>
@@ -93,16 +93,16 @@ It's time to study the permissive nature of HTML code.
     </ul>
     ```
 
-4.  Let's review the problems:
+4. Let's review the problems:
 
     - The {{htmlelement("p","paragraph")}} and {{htmlelement("li","list item")}} elements have no closing tags. Looking at the image above, this doesn't seem to have affected the markup rendering too badly, as it is easy to infer where one element should end and another should begin.
     - The first {{htmlelement("strong")}} element has no closing tag. This is a bit more problematic, as it isn't easy to tell where the element is supposed to end. In fact, the whole of the rest of the text has been strongly emphasized.
     - This section is badly nested: `<strong>strong <em>strong emphasized?</strong> what is this?</em>`. It is not easy to tell how this has been interpreted because of the previous problem.
     - The {{htmlattrxref("href","a")}} attribute value is missing a closing double quote. This seems to have caused the biggest problem — the link has not rendered at all.
 
-5.  Now let's look at the markup the browser has rendered, as opposed to the markup in the source code. To do this, we can use the browser developer tools. If you are not familiar with how to use your browser's developer tools, take a few minutes to review [Discover browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
-6.  In the DOM inspector, you can see what the rendered markup looks like: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
-7.  Using the DOM inspector, let's explore our code in detail to see how the browser has tried to fix our HTML errors (we did the review in Firefox; other modern browsers _should_ give the same result):
+5. Now let's look at the markup the browser has rendered, as opposed to the markup in the source code. To do this, we can use the browser developer tools. If you are not familiar with how to use your browser's developer tools, take a few minutes to review [Discover browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
+6. In the DOM inspector, you can see what the rendered markup looks like: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
+7. Using the DOM inspector, let's explore our code in detail to see how the browser has tried to fix our HTML errors (we did the review in Firefox; other modern browsers _should_ give the same result):
 
     - The paragraphs and list items have been given closing tags.
     - It isn't clear where the first `<strong>` element should be closed, so the browser has wrapped each separate block of text with its own strong tag, right down to the bottom of the document!
@@ -138,10 +138,10 @@ To specify the HTML to validate, you can provide a web address, upload an HTML f
 
 Let's try this with our [sample document](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html).
 
-1.  First, load the [Markup Validation Service](https://validator.w3.org/) in one browser tab, if it isn't already open.
-2.  Switch to the [Validate by Direct Input](https://validator.w3.org/#validate_by_input) tab.
-3.  Copy all of the sample document's code (not just the body) and paste it into the large text area shown in the Markup Validation Service.
-4.  Press the _Check_ button.
+1. First, load the [Markup Validation Service](https://validator.w3.org/) in one browser tab, if it isn't already open.
+2. Switch to the [Validate by Direct Input](https://validator.w3.org/#validate_by_input) tab.
+3. Copy all of the sample document's code (not just the body) and paste it into the large text area shown in the Markup Validation Service.
+4. Press the _Check_ button.
 
 This should give you a list of errors and other information.
 

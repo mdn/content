@@ -174,7 +174,7 @@ We need an extra class to handle when the list of options is hidden. This is nec
 }
 ```
 
-> **Note:** We could also have used `transform: scale(1, 0)` to give the optionlist no height and full width.
+> **Note:** We could also have used `transform: scale(1, 0)` to give the option list no height and full width.
 
 ### Beautification
 
@@ -431,10 +431,10 @@ window.addEventListener("load", function () {
 
 In the code we are about to build, we will use the standard JavaScript and DOM APIs to do all the work we need. The features we plan to use are the following:
 
-1.  {{domxref("element.classList","classList")}}
-2.  {{domxref("EventTarget.addEventListener","addEventListener()")}}
-3.  [`forEach`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-4.  {{domxref("element.querySelector","querySelector()")}} and {{domxref("element.querySelectorAll","querySelectorAll()")}}
+1. {{domxref("element.classList","classList")}}
+2. {{domxref("EventTarget.addEventListener","addEventListener()")}}
+3. [`forEach`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+4. {{domxref("element.querySelector","querySelector()")}} and {{domxref("element.querySelectorAll","querySelectorAll()")}}
 
 Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array). This is important because `Array` objects support the [`forEach`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an `Array` and because `forEach` is so convenient to use, we can easily add the support of `forEach` to {{domxref("NodeList")}} in order to make our life easier, like so:
 
