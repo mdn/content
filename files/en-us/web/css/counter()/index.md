@@ -11,7 +11,8 @@ browser-compat: css.types.counter
 ---
 {{CSSRef}}
 
-The **`counter()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a string representing the current value of the named counter, if there is one. It is generally used with [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), but can be used, theoretically, anywhere a [`<string>`](/en-US/docs/Web/CSS/string) value is supported.
+The **`counter()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a string representing the current value of the named counter, if there is one.
+It is generally used in the {{CSSxRef("content")}} property of [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), but can theoretically be used anywhere a [`<string>`](/en-US/docs/Web/CSS/string) value is supported.
 
 ```css
 /* Simple usage */
@@ -21,11 +22,9 @@ counter(countername);
 counter(countername, upper-roman)
 ```
 
-A [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) has no visible effect by itself. The `counter()` function (and {{cssxref("counters()")}} function) is what makes it useful by returning developer defined strings (or images).
+A [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) has no visible effect by itself.
+The `counter()` function (and {{cssxref("counters()")}} function) is what makes it useful by returning developer defined strings (or images).
 
-> **Note:** The `counter()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental, and support for the type-or-unit parameter is sparse.
->
-> Check the [Browser compatibility table](#browser_compatibility) carefully before using this in production.
 
 ## Syntax
 
