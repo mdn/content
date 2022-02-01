@@ -47,7 +47,7 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
 
 ## Description
 
-To use the scroll-timeline, create a `@scroll-timeline` rule which is used by the {{cssxref("animation-timeline")}} property to match an animations timeline to it's timeline declaration.
+To use the scroll-timeline, create a `@scroll-timeline` rule, which is used by the {{cssxref("animation-timeline")}} property to match an animations timeline to it's timeline declaration.
 
 Each `@scroll-timeline` rule includes properties to determine the source, orientation and scroll-offsets of the scroll timeline. 
 
