@@ -15,7 +15,7 @@ tags:
 HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) header directives that specify a `<source>` from which resources may be loaded can use any one of the values listed below.
 Relevant directives include the {{Glossary("fetch directive", "fetch directives")}}, along with others [listed below](#relevant_directives).
 
-### Sources
+## Sources
 
 - `<host-source>`
 
