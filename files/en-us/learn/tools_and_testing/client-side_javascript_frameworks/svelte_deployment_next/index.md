@@ -174,9 +174,9 @@ One of the easiest ways to deploy a Svelte application is using [Vercel](https:/
 
 To deploy our app, follow these steps.
 
-1.  [register for an account with Vercel](https://vercel.com/signup).
-2.  Navigate to the root of your app and run `npx vercel`; the first time you do it, you'll be prompted to enter your email address, and follow the steps in the email sent to that address, for security purposes.
-3.  Run `npx vercel` again, and you'll be prompted to answer a few questions, like this:
+1. [register for an account with Vercel](https://vercel.com/signup).
+2. Navigate to the root of your app and run `npx vercel`; the first time you do it, you'll be prompted to enter your email address, and follow the steps in the email sent to that address, for security purposes.
+3. Run `npx vercel` again, and you'll be prompted to answer a few questions, like this:
 
     ```bash
     > npx vercel
@@ -198,8 +198,8 @@ To deploy our app, follow these steps.
        To change the domain or build command, go to https://zeit.co/opensas/mdn-svelte-tutorial/settings
     ```
 
-4.  Accept all the defaults, and you'll be fine.
-5.  Once it has finished deploying, go to the "Production" URL in your browser, and you'll see the app deployed!
+4. Accept all the defaults, and you'll be fine.
+5. Once it has finished deploying, go to the "Production" URL in your browser, and you'll see the app deployed!
 
 You can also [import a Svelte git project](https://vercel.com/import/svelte) into Vercel from [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [BitBucket](https://bitbucket.org/product).
 
@@ -211,14 +211,14 @@ For hosting static files there are several online services that allow you to aut
 
 To demonstrate this, we will deploy our todos app to [GitLab Pages](https://about.gitlab.com/stages-devops-lifecycle/pages/).
 
-1.  First you'll have to [register at GitLab](https://gitlab.com/users/sign_up) and then [create a new project](https://gitlab.com/projects/new). Give you new project a short, easy name like "mdn-svelte-todo". You will have a remote url that points to your new GitLab git repository, like `git@gitlab.com:[your-user]/[your-project].git`.
-2.  Before you start to upload content to your git repository, it is a good practice to add a `.gitignore` file to tell git which files to exclude from source control. In our case we will tell git to exclude files in the `node_modules` directory by creating a `.gitignore` file in the root folder of your local project, with the following content:
+1. First you'll have to [register at GitLab](https://gitlab.com/users/sign_up) and then [create a new project](https://gitlab.com/projects/new). Give you new project a short, easy name like "mdn-svelte-todo". You will have a remote url that points to your new GitLab git repository, like `git@gitlab.com:[your-user]/[your-project].git`.
+2. Before you start to upload content to your git repository, it is a good practice to add a `.gitignore` file to tell git which files to exclude from source control. In our case we will tell git to exclude files in the `node_modules` directory by creating a `.gitignore` file in the root folder of your local project, with the following content:
 
     ```bash
     node_modules/
     ```
 
-3.  Now let's go back to GitLab. After creating a new repo GitLab will greet you with a message explaining different options to upload your existing files. Follow the steps listed under the _Push an existing folder_ heading:
+3. Now let's go back to GitLab. After creating a new repo GitLab will greet you with a message explaining different options to upload your existing files. Follow the steps listed under the _Push an existing folder_ heading:
 
     ```bash
     cd your_root_directory # Go into your project's root directory
@@ -237,7 +237,7 @@ GitLab uses a built-in tool called GitLab CI/CD to build your site and publish i
 
 Let's have a go at doing this now.
 
-1.  Create a `.gitlab-ci.yml` file inside your project's root and give it the following content:
+1. Create a `.gitlab-ci.yml` file inside your project's root and give it the following content:
 
     ```
     image: node:latest
@@ -255,7 +255,7 @@ Let's have a go at doing this now.
 
     Here we are telling GitLab to use an image with the latest version of node to build our app. Next we are declaring a `pages` job, to enable GitLab Pages. Whenever there's a push to our repo, GitLab will run `npm install` and `npm run build` to build our application. We are also telling GitLab to deploy the contents of the `public` folder. On the last line, we are configuring GitLab to redeploy our app only when there's a push to our master branch.
 
-2.  Since our app will be published at a subdirectory (like `https://your-user.gitlab.io/mdn-svelte-todo`), we'll have to make the references to the JavaScript and CSS files in our `public/index.html` file relative. To do this, we just remove the leading slashes (`/`) from the `/global.css`, `/build/bundle.css`, and `/build/bundle.js` URLs, like this:
+2. Since our app will be published at a subdirectory (like `https://your-user.gitlab.io/mdn-svelte-todo`), we'll have to make the references to the JavaScript and CSS files in our `public/index.html` file relative. To do this, we just remove the leading slashes (`/`) from the `/global.css`, `/build/bundle.css`, and `/build/bundle.js` URLs, like this:
 
     ```html
     <title>Svelte To-Do list</title>
@@ -269,7 +269,7 @@ Let's have a go at doing this now.
 
     Do this now.
 
-3.  Now we just have to commit and push our changes to GitLab. Do this by running the following commands:
+3. Now we just have to commit and push our changes to GitLab. Do this by running the following commands:
 
     ```bash
     > git add public/index.html

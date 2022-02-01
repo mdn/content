@@ -86,7 +86,7 @@ Unfortunately, [TypeScript support is not yet available in the REPL](https://git
 
 Best of all, JavaScript code is valid TypeScript code; TypeScript is a superset of JavaScript. You can rename most of your `.js` files to `.ts` files and they will just work.
 
-Our TypeScript code will be able to run everywhere JavaScript can run. How is that possible? TypeScript "transpiles" our code to vainilla JavaScript. That means that it parses TypeScript code and produces the equivalent vanilla JavaScript code for browsers to run.
+Our TypeScript code will be able to run everywhere JavaScript can run. How is that possible? TypeScript "transpiles" our code to vanilla JavaScript. That means that it parses TypeScript code and produces the equivalent vanilla JavaScript code for browsers to run.
 
 > **Note:** If you are curious about how TypeScript transpiles our code to JavaScript you can have a look at the [TypeScript Playground](https://www.typescriptlang.org/play/?target=1&e=4#example/hello-world).
 
@@ -224,9 +224,9 @@ TypeScript supports structural typing. Structural typing is a way of relating ty
 
 We'll define a `TodoType` type to see how TypeScript enforces that anything passed to a component expecting a `TodoType` will be structurally compatible with it.
 
-1.  Inside the `src` folder create a `types` folder.
-2.  Add a `todo.type.ts` file inside it.
-3.  Give `todo.type.ts` the following content:
+1. Inside the `src` folder create a `types` folder.
+2. Add a `todo.type.ts` file inside it.
+3. Give `todo.type.ts` the following content:
 
     ```js
     export type TodoType = {
@@ -238,8 +238,8 @@ We'll define a `TodoType` type to see how TypeScript enforces that anything pass
 
     > **Note:** The Svelte template uses [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess) 4.0.0 to support TypeScript. From that version onward you have to use `export`/`import` type syntax to import types and interfaces. Check [this section of the troubleshooting guide](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#how-do-i-import-interfaces-into-my-svelte-components-i-get-errors-after-transpilation) for more information.
 
-4.  Now we'll use `TodoType` from our `Todo.svelte` component. First add the `lang="ts"` to our `<script>` tag.
-5.  Let's `import` the type and use it to declare the `todo` property. Replace the `export let todo` line with the following:
+4. Now we'll use `TodoType` from our `Todo.svelte` component. First add the `lang="ts"` to our `<script>` tag.
+5. Let's `import` the type and use it to declare the `todo` property. Replace the `export let todo` line with the following:
 
     ```js
     import type { TodoType } from "../types/todo.type";
@@ -249,7 +249,7 @@ We'll define a `TodoType` type to see how TypeScript enforces that anything pass
 
     > **Note:** Another reminder — When importing a `.ts` file you have to omit the extension. Check the [`import` section](https://www.typescriptlang.org/docs/handbook/modules.html#import) of the TypeScript manual for more information.
 
-6.  Now from `Todos.svelte`, we will instantiate a Todo component with a literal object as its parameter before the call to the `MoreActions` component, like this:
+6. Now from `Todos.svelte`, we will instantiate a Todo component with a literal object as its parameter before the call to the `MoreActions` component, like this:
 
     ```html
     <hr />
@@ -260,7 +260,7 @@ We'll define a `TodoType` type to see how TypeScript enforces that anything pass
     <MoreActions {todos}
     ```
 
-7.  Add the `lang='ts'` to the `<script>` tag of the `Todos.svelte` component, so that it knows to use the type checking we have specified.
+7. Add the `lang='ts'` to the `<script>` tag of the `Todos.svelte` component, so that it knows to use the type checking we have specified.
 
     We will get the following error:
 
@@ -270,8 +270,8 @@ By now you should get an idea about the kind of assistance we can get from TypeS
 
 Now we will undo these changes in order to start porting our application to TypeScript, so we won't be bothered with all the check warnings.
 
-1.  Remove the flawed todo and the `lang='ts'` attribute from the `Todos.svelte` file.
-2.  Also remove the import of `TodoType` and the `lang='ts'` from `Todo.svelte`.
+1. Remove the flawed todo and the `lang='ts'` attribute from the `Todos.svelte` file.
+2. Also remove the import of `TodoType` and the `lang='ts'` from `Todo.svelte`.
 
 We'll take care of them properly, later on.
 
@@ -304,7 +304,7 @@ Note that if you are using a supporting code editor like VS Code, a simple way t
 
 Let's start with our `Alert.svelte` component.
 
-1.  Add `lang="ts"` into your `Alert.svelte` component's `<script>` tag. You'll see some warnings in the output of the `check` script:
+1. Add `lang="ts"` into your `Alert.svelte` component's `<script>` tag. You'll see some warnings in the output of the `check` script:
 
     ```bash
     $ npm run check -- --watch
@@ -331,7 +331,7 @@ Let's start with our `Alert.svelte` component.
     (message, ms) => {
     ```
 
-2.  You can fix these by specifying the corresponding types, like so:
+2. You can fix these by specifying the corresponding types, like so:
 
     ```js
     export let ms = 3000
@@ -350,7 +350,7 @@ Let's start with our `Alert.svelte` component.
 
 Now we'll do the same for the `MoreActions.svelte` component.
 
-1.  Add the `lang='ts'` attribute, like before. TypeScript will warn us about the `todos` prop and the `t` variable in the call to `todos.filter(t =>...)`.
+1. Add the `lang='ts'` attribute, like before. TypeScript will warn us about the `todos` prop and the `t` variable in the call to `todos.filter(t =>...)`.
 
     ```bash
     Warn: Variable 'todos' implicitly has an 'any' type, but a better type may be inferred from usage. (ts)
@@ -360,7 +360,7 @@ Now we'll do the same for the `MoreActions.svelte` component.
       $: completedTodos = todos.filter(t => t.completed).length
     ```
 
-2.  We will use the `TodoType` we already defined to tell TypeScript that `todos` is a `TodoType` array — replace your `export let todos` line with the following:
+2. We will use the `TodoType` we already defined to tell TypeScript that `todos` is a `TodoType` array — replace your `export let todos` line with the following:
 
     ```js
     import type { TodoType } from "../types/todo.type";
@@ -387,9 +387,9 @@ You can't specify the type in the reactive assignment itself. The following stat
 
 Now we'll take care of the `FilterButton` component.
 
-1.  Add the `lang='ts'` attribute to the `<script>` tag, as usual. You'll notice there are no warnings — TypeScript infers the type of the filter variable from the default value. But we know that there are only three valid values for the filter: all, active, and completed. So we can let TypeScript know about them by creating an enum Filter.
-2.  Create a `filter.enum.ts` file in the `types` folder.
-3.  Give it the following contents:
+1. Add the `lang='ts'` attribute to the `<script>` tag, as usual. You'll notice there are no warnings — TypeScript infers the type of the filter variable from the default value. But we know that there are only three valid values for the filter: all, active, and completed. So we can let TypeScript know about them by creating an enum Filter.
+2. Create a `filter.enum.ts` file in the `types` folder.
+3. Give it the following contents:
 
     ```js
     export enum Filter {
@@ -399,7 +399,7 @@ Now we'll take care of the `FilterButton` component.
     }
     ```
 
-4.  Now we will use this from the `FilterButton` component. Replace the content of the `FilterButton.svelte` file with the following:
+4. Now we will use this from the `FilterButton` component. Replace the content of the `FilterButton.svelte` file with the following:
 
     ```html
     <!-- components/FilterButton.svelte -->
@@ -434,14 +434,14 @@ Here we are just importing the `Filter` enum, and using it instead of the string
 
 We will also use the `Filter` enum in the `Todos.svelte` component.
 
-1.  First add the `lang='ts'` attribute to it, as before.
-2.  Next, import the `Filter` enum — add the following `import` statement below your existing ones:
+1. First add the `lang='ts'` attribute to it, as before.
+2. Next, import the `Filter` enum — add the following `import` statement below your existing ones:
 
     ```js
     import { Filter } from "../types/filter.enum";
     ```
 
-3.  Now we will use it whenever we reference the current filter. Replace your two filter-related blocks with the following:
+3. Now we will use it whenever we reference the current filter. Replace your two filter-related blocks with the following:
 
     ```js
     let filter: Filter = Filter.ALL;
@@ -459,7 +459,7 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
     }
     ```
 
-4.  `check` will still give us some warnings from `Todos.svelte`. Let's fix them.
+4. `check` will still give us some warnings from `Todos.svelte`. Let's fix them.
 
     Start by importing the `TodoType` and telling TypeScript that our `todos` variable is an array of `TodoType`. Replace `export let todos = []` with the following two lines:
 
@@ -469,7 +469,7 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
     export let todos: TodoType[] = [];
     ```
 
-5.  Next we'll specify all the missing types. The variable `todosStatus`, which we used to programmatically access the methods exposed by the `TodosStatus` component, is of type `TodosStatus`. And each `todo` will be of type `TodoType`.
+5. Next we'll specify all the missing types. The variable `todosStatus`, which we used to programmatically access the methods exposed by the `TodosStatus` component, is of type `TodosStatus`. And each `todo` will be of type `TodoType`.
 
     Update your `<script>` section to look like this:
 
@@ -551,8 +551,8 @@ This is because the `todos` prop in the `TodosStatus` component has no default v
 
 Let's fix it.
 
-1.  Open the file `TodosStatus.svelte` and add the `lang='ts'` attribute.
-2.  Then import the `TodoType` and declare the `todos` prop as an array of `TodoType`. Replace the first line of the `<script>` section with the following:
+1. Open the file `TodosStatus.svelte` and add the `lang='ts'` attribute.
+2. Then import the `TodoType` and declare the `todos` prop as an array of `TodoType`. Replace the first line of the `<script>` section with the following:
 
     ```js
     import type { TodoType } from "../types/todo.type";
@@ -560,13 +560,13 @@ Let's fix it.
     export let todos: TodoType[];
     ```
 
-3.  We will also specify the `headingEl`, which we used to bind to the heading tag, as an `HTMLElement`. Update the `let headingEl` line with the following:
+3. We will also specify the `headingEl`, which we used to bind to the heading tag, as an `HTMLElement`. Update the `let headingEl` line with the following:
 
     ```js
     let headingEl: HTMLElement;
     ```
 
-4.  Finally, you'll notice the following error reported, related to where we set the `tabindex` attribute. That's because TypeScript is type-checking the `<h2>` element and expects `tabindex` to be of type `number`.
+4. Finally, you'll notice the following error reported, related to where we set the `tabindex` attribute. That's because TypeScript is type-checking the `<h2>` element and expects `tabindex` to be of type `number`.
 
     ![tabindex hint inside vs code, tabindex expects a type of number, not string](10-vscode-tabindex-hint.png)
 
@@ -584,14 +584,14 @@ Let's fix it.
 
 Next we will take care of `NewTodo.svelte`.
 
-1.  As usual, add the `lang='ts'` attribute.
-2.  The warning will indicate that we have to specify a type for the `nameEl` variable. Set its type to `HTMLElement` like this:
+1. As usual, add the `lang='ts'` attribute.
+2. The warning will indicate that we have to specify a type for the `nameEl` variable. Set its type to `HTMLElement` like this:
 
     ```js
     let nameEl: HTMLElement; // reference to the name input DOM node
     ```
 
-3.  Last for this file, we need to specify the correct type for our `autofocus` variable; update its definition like this:
+3. Last for this file, we need to specify the correct type for our `autofocus` variable; update its definition like this:
 
     ```js
     export let autofocus: boolean = false;
@@ -601,8 +601,8 @@ Next we will take care of `NewTodo.svelte`.
 
 Now the only warnings that `npm run check` emits are triggered by calling the `Todo.svelte` component; let's fix them.
 
-1.  Open the `Todo.svelte` file, and add the `lang='ts'` attribute.
-2.  Let's import the `TodoType`, and set the type of the `todo` prop. Replace the `export let todo` line with the following:
+1. Open the `Todo.svelte` file, and add the `lang='ts'` attribute.
+2. Let's import the `TodoType`, and set the type of the `todo` prop. Replace the `export let todo` line with the following:
 
     ```js
     import type { TodoType } from "../types/todo.type";
@@ -610,7 +610,7 @@ Now the only warnings that `npm run check` emits are triggered by calling the `T
     export let todo: TodoType;
     ```
 
-3.  The first warning we get is TypeScript telling us to define the type of the `update()` function's `updatedTodo` variable. This can be a little tricky because `updatedTodo` contains only the attributes of the todo that have been updated. That means it's not a complete todo — it only has a subset of a todo's properties.
+3. The first warning we get is TypeScript telling us to define the type of the `update()` function's `updatedTodo` variable. This can be a little tricky because `updatedTodo` contains only the attributes of the todo that have been updated. That means it's not a complete todo — it only has a subset of a todo's properties.
 
     For these kinds of cases, TypeScript provides several [utility types](https://www.typescriptlang.org/docs/handbook/utility-types.html) to make it easier to apply these common transformations. What we need right now is the [`Partial<T>`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialt) utility, which allows us to represent all subsets of a given type. The partial utility returns a new type based on the type `T`, where every property of `T` is optional.
 
@@ -625,7 +625,7 @@ Now the only warnings that `npm run check` emits are triggered by calling the `T
 
     With this we are telling TypeScript that the `updatedTodo` variable will hold a subset of the `TodoType` properties.
 
-4.  Now svelte-check tells us that we have to define the type of our action function parameters:
+4. Now svelte-check tells us that we have to define the type of our action function parameters:
 
     ```bash
     ./07-next-steps/src/components/Todo.svelte:45:24
@@ -643,7 +643,7 @@ Now the only warnings that `npm run check` emits are triggered by calling the `T
 
 Next we'll take care of the `actions.js` file.
 
-1.  Rename it to `actions.ts` and add the type of the node parameter. It should end up looking like this:
+1. Rename it to `actions.ts` and add the type of the node parameter. It should end up looking like this:
 
     ```js
     // actions.ts
@@ -659,7 +659,7 @@ Next we'll take care of the `actions.js` file.
     }
     ```
 
-2.  Now update `Todo.svelte` and `NewTodo.svelte` where we import the actions file. Remember that imports in TypeScript don't include the file extension. In each case it should end up like this:
+2. Now update `Todo.svelte` and `NewTodo.svelte` where we import the actions file. Remember that imports in TypeScript don't include the file extension. In each case it should end up like this:
 
     ```js
     import { selectOnFocus } from "../actions";
@@ -673,8 +673,8 @@ Tip: the script `npm run check`, which uses the [`svelte-check`](https://github.
 
 We'll start with `stores.js`.
 
-1.  Rename the file to `stores.ts`.
-2.  Set the type of our `initialTodos` array to `TodoType[]`. This is how the contents will end up:
+1. Rename the file to `stores.ts`.
+2. Set the type of our `initialTodos` array to `TodoType[]`. This is how the contents will end up:
 
     ```js
     // stores.ts
@@ -692,7 +692,7 @@ We'll start with `stores.js`.
     export const todos = localStore("mdn-svelte-todo", initialTodos);
     ```
 
-3.  Remember to update the `import` statements in `App.svelte`, `Alert.svelte`, and `Todos.svelte`. Just remove the `.js` extension, like this:
+3. Remember to update the `import` statements in `App.svelte`, `Alert.svelte`, and `Todos.svelte`. Just remove the `.js` extension, like this:
 
     ```js
     import { todos } from "../stores";
@@ -706,8 +706,8 @@ Update the `import` statement in `stores.ts`, like so:
 import { localStore } from "./localStore";
 ```
 
-1.  Start by renaming the file to `localStore.ts`.
-2.  TypeScript is telling us to specify the type of the `key`, `initial`, and `value` variables. The first one is easy — the key of our local web storage should be a string.
+1. Start by renaming the file to `localStore.ts`.
+2. TypeScript is telling us to specify the type of the `key`, `initial`, and `value` variables. The first one is easy — the key of our local web storage should be a string.
 
     But `initial` and `value` should be any object that could be converted to a valid JSON string with the [`JSON.stringify`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) method. So it is in fact any JavaScript object with a couple limitations, for example `undefined`, functions, and symbols are not valid JSON values.
 
@@ -715,7 +715,7 @@ import { localStore } from "./localStore";
 
     Create the file `json.type.ts` in the `types` folder.
 
-3.  Give it the following content:
+3. Give it the following content:
 
     ```js
     export type JsonValue =
@@ -729,7 +729,7 @@ import { localStore } from "./localStore";
 
     The `|` operator lets us declare variables that could store values of two or more types. A `JsonValue` could be a string, a number, a boolean, and so on. In this case we are also making use of recursive types, to specify that a `JsonValue` can have an array of `JsonValue`, and also an object with properties of type `JsonValue`.
 
-4.  We will import our `JsonValue` type and use it accordingly. Update your `localStore.ts` file like this:
+4. We will import our `JsonValue` type and use it accordingly. Update your `localStore.ts` file like this:
 
     ```js
     // localStore.ts

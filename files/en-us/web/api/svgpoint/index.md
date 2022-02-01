@@ -11,7 +11,7 @@ browser-compat: api.SVGPoint
 ---
 {{APIRef("SVG")}}{{Deprecated_header}}
 
-> **Warning:** `SVGPoint` is deprecated. 
+> **Warning:** `SVGPoint` is deprecated.
 > Use {{domxref("DOMPoint")}} or {{domxref("DOMPointReadOnly")}} instead.
 
 An `SVGPoint` represents a 2D or 3D point in the SVG coordinate system.

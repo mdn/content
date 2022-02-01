@@ -210,5 +210,5 @@ The only error we validate against server-side is that the genre field must not 
 
 ## Next steps
 
-1.  Return to [Express Tutorial Part 6: Working with forms.](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
-2.  Proceed to the next sub article of part 6: [Create Author form](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form).
+1. Return to [Express Tutorial Part 6: Working with forms.](/en-US/docs/Learn/Server-side/Express_Nodejs/forms)
+2. Proceed to the next sub article of part 6: [Create Author form](/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form).

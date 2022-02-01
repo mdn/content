@@ -105,9 +105,7 @@ Directives for which the above sources apply include:
 - {{Glossary("Document directive", "Document directives")}}:
   - {{CSP("base-uri")}}
 
-- {{Glossary("Navigation directive", "Navigation directives")}}: 
+- {{Glossary("Navigation directive", "Navigation directives")}}:
 
   - {{CSP("navigate-to")}}
   - {{CSP("form-action")}}
-
- 

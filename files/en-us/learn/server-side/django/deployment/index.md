@@ -202,23 +202,23 @@ Heroku is closely integrated with the **git** source code version control system
 
 There are a lot of ways to work with git, but one of the easiest is to first set up an account on [Github](https://github.com/), create the repository there, and then sync to it locally:
 
-1.  Visit <https://github.com/> and create an account.
-2.  Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
-3.  Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
+1. Visit <https://github.com/> and create an account.
+2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
+3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
 
     - Enter a new repository name (e.g. _django_local_library_), and description (e.g. "Local Library website written in Django".
     - Choose **Python** in the _Add .gitignore_ selection list.
     - Choose your preferred license in the _Add license_ selection list.
     - Check **Initialize this repository with a README**.
 
-4.  Press **Create repository**.
-5.  Click the green "**Clone or download**" button on your new repo page.
-6.  Copy the URL value from the text field inside the dialog box that appears (it should be something like: **https\://github.com/_\<your_git_user_id>_/django_local_library.git**).
+4. Press **Create repository**.
+5. Click the green "**Clone or download**" button on your new repo page.
+6. Copy the URL value from the text field inside the dialog box that appears (it should be something like: **https\://github.com/_\<your_git_user_id>_/django_local_library.git**).
 
 Now that the repository ("repo") is created we are going to want to clone it on our local computer:
 
-1.  Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
-2.  Open a command prompt/terminal and clone your repository using the URL you copied above:
+1. Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
+2. Open a command prompt/terminal and clone your repository using the URL you copied above:
 
     ```bash
     git clone https://github.com/<your_git_user_id>/django_local_library.git
@@ -226,7 +226,7 @@ Now that the repository ("repo") is created we are going to want to clone it on 
 
     This will create the repository in a new folder in the current working directory.
 
-3.  Navigate into the new repo.
+3. Navigate into the new repo.
 
     ```bash
     cd django_local_library
@@ -234,8 +234,8 @@ Now that the repository ("repo") is created we are going to want to clone it on 
 
 The final steps are to copy your application into this local project directory and then add (or "push", in git lingo) the local repository to your remote Github repository:
 
-1.  Copy your Django application into this folder (all the files at the same level as **manage.py** and below, **not** their containing locallibrary folder).
-2.  Open the **.gitignore** file, copy the following lines into the bottom of it, and then save (this file is used to identify files that should not be uploaded to git by default).
+1. Copy your Django application into this folder (all the files at the same level as **manage.py** and below, **not** their containing locallibrary folder).
+2. Open the **.gitignore** file, copy the following lines into the bottom of it, and then save (this file is used to identify files that should not be uploaded to git by default).
 
     ```plain
     # Text backup files
@@ -245,13 +245,13 @@ The final steps are to copy your application into this local project directory a
     *.sqlite3
     ```
 
-3.  Open a command prompt/terminal and use the `add` command to add all files to git. This adds the files which aren't ignored by the **.gitignore** file to the "staging area".
+3. Open a command prompt/terminal and use the `add` command to add all files to git. This adds the files which aren't ignored by the **.gitignore** file to the "staging area".
 
     ```bash
     git add -A
     ```
 
-4.  Use the `status` command to check that all files you are about to `commit` are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
+4. Use the `status` command to check that all files you are about to `commit` are correct (you want to include source files, not binaries, temporary files etc.). It should look a bit like the listing below.
 
     ```plain
     > git status
@@ -268,13 +268,13 @@ The final steps are to copy your application into this local project directory a
             new file:   templates/registration/password_reset_form.html
     ```
 
-5.  When you're satisfied, `commit` the files to your local repository. This is essentially equivalent to signing off on the changes and making them an official part of the local repository.
+5. When you're satisfied, `commit` the files to your local repository. This is essentially equivalent to signing off on the changes and making them an official part of the local repository.
 
     ```bash
     git commit -m "First version of application moved into github"
     ```
 
-6.  At this point, the remote repository has not been changed. Synchronize (`push`) your local repository to the remote Github repository using the following command:
+6. At this point, the remote repository has not been changed. Synchronize (`push`) your local repository to the remote Github repository using the following command:
 
     ```bash
     git push origin main
