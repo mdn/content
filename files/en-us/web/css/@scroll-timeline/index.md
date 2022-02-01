@@ -26,24 +26,50 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
 ### Values
 
 - {{cssxref("custom-ident")}}
-  - : A name identifying the scroll timeline. This must match the identifier production in CSS syntax.
+
+  - : A name identifying the scroll timeline. This name is used when specifying the scroll timeline with the [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) property.
+
 - `source`
+
   - : The scrollable element which scrolling position drives the progress of the timeline. Can be:
-    - `auto` the `Document` associated with the current global [Window object](/en-US/docs/Web/API/Window).
-    - `selector(“id-selector”)` the scroll container identified by an element's id.
-    - `none` no scroll container specified.
+
+    - `auto`
+      - : The `Document` associated with the current global [Window object](/en-US/docs/Web/API/Window).
+
+    - `selector("id-selector")`
+      - : the scroll container identified by an element's id.
+
+    - `none`
+      - : no scroll container specified.
+
 - `orientation`
+
   - : The scroll timeline’s orientation:
-	  - `auto` defaults to `vertical`
-	  - `block` uses the scroll position along the block axis, conforming to writing mode and directionality.
-	  - `inline` uses the scroll position along the inline axis, conforming to writing mode and directionality.
-	  - `horizontal` uses the horizontal scroll position, regardless of writing mode or directionality.
-	  - `vertical` uses the vertical scroll position, regardless of writing mode or directionality.
+
+	  - `auto`
+      - : Defaults to `vertical`
+
+	  - `block`
+      - : Uses the scroll position along the block axis, conforming to writing mode and directionality.
+
+	  - `inline`
+      - : Uses the scroll position along the inline axis, conforming to writing mode and directionality.
+
+	  - `horizontal`
+      - : Uses the horizontal scroll position, regardless of writing mode or directionality.
+
+	  - `vertical`
+      - : Uses the vertical scroll position, regardless of writing mode or directionality.
+
 - `scroll-offsets` 
   - : Determines the scroll timeline's scroll offsets
-    - `none` no scroll offsets specified.
-    - `<length-pecentage>` A comma separated list of [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) values.
-    - `<element-offset>` An elements position determines the scroll offset.
+
+    - `none`
+      - : No scroll offsets specified.
+    - `<length-pecentage>`
+      - : A comma separated list of [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) values.
+    - `<element-offset>`
+      - : An elements position determines the scroll offset.
 
 ## Description
 
@@ -53,9 +79,13 @@ Each `@scroll-timeline` rule includes properties to determine the source, orient
 
 ### Scroll offsets
 
-The `scroll-offset` property determines ... This can be set to `none` which means no `scroll-offset` is specified. Or it can be determined by a comma separated list of `<length-percentage>` values. Each value is mapped against the {{cssxref('animation-duration')}}. For instance, if an `animation-duration` is set to `2s` and the scroll offset to `0px, 30px, 100px`, then at 1s the scroll offset would be 30px. Typically you'd use two values here for a smooth scroll animation, such as `0px, 100px`.
+The `scroll-offset` property determines where, within the scrolling, the animation should occur. This can be set in one of three ways:
 
-The third way of determining a scroll offset is to use an element offset. This means you specify elements within the page, the locations of which determine the scroll timeline and which edge of these elements to use. Specifying elements is done using the `selector()` function, which receives an element's id. Edge is determined by keywords `start` or `end`. An optional threshold value between `0-1` can be used to represent the percentage of the element expected to be visible in the `source`.
+1. By using the CSS keyword `none`, which means no `scroll-offset` is specified.
+
+2. It can be determined by a comma separated list of [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) values. Each value is mapped against the {{cssxref('animation-duration')}}. For instance, if an `animation-duration` is set to `2s` and the scroll offset to `0px, 30px, 100px`, then at 1s the scroll offset would be 30px. Typically you'd use two values here for a smooth scroll animation, such as `0px, 100px`.
+
+3. The third way of determining a scroll offset is to use an element offset. This means you specify elements within the page, the locations of which determine the scroll timeline and which edge of these elements to use. Specifying elements is done using the `selector()` function, which receives an element's id. Edge is determined by keywords `start` or `end`. An optional threshold value between `0-1` can be used to represent the percentage of the element expected to be visible in the `source`.
 
 ```css
 @scroll-timeline element-move {
@@ -76,7 +106,7 @@ The third way of determining a scroll offset is to use an element offset. This m
 
 ### Simple example
 
-In the following example we create an element (`#container`) with a fixed height to allow scroll. This is our `source` element.
+This example shows a square, which rotates as its container is scrolled vertically. We create an element (`#container`) with a fixed height to allow scroll. This is our `source` element.
 
 Inside this container we create another element (`#square`), which is styled appropriately to look like a square. This element has a rotation animation applied, using the {{cssxref('@keyframes')}} rule and `animation-name` property.
 
