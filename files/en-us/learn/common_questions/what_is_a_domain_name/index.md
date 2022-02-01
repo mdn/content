@@ -163,4 +163,4 @@ Okay, we talked a lot about processes and architecture. Time to move on.
 - If you want to get hands-on, it's a good time to start digging into design and explore [the anatomy of a web page](/en-US/docs/Learn/Common_questions/Common_web_layouts).
 - It's also worth noting that some aspects of building a website cost money. Please refer to [how much it costs to build a web site](/en-US/docs/Learn/Common_questions/How_much_does_it_cost).
 - Or read more about [Domain Names](https://en.wikipedia.org/wiki/Domain_name) on Wikipedia.
-- You can also find [here](https://howdns.works/) a fun and colorful explanation of how DNS woks.
+- You can also find [here](https://howdns.works/) a fun and colorful explanation of how DNS works.
