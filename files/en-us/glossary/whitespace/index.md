@@ -30,4 +30,4 @@ The [ECMAScript Language Specification](https://tc39.es/ecma262/#sec-white-space
 
 - [Glossary](/en-US/docs/Glossary)
 
-  1.  {{Glossary("Character")}}
+  1. {{Glossary("Character")}}

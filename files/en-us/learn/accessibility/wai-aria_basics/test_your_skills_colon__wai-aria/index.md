@@ -33,8 +33,8 @@ Try updating the live code below to recreate the finished example:
 
 In our second WAI-ARIA task, we present a simple search form, and we want you to add in a couple of WAI-ARIA features to improve its accessibility:
 
-1.  How can you allow the search form to be called out as a separate landmark on the page by screenreaders, to make it easily findable?
-2.  How can you give the search input a suitable label, without explicitly adding a visible text label to the DOM?
+1. How can you allow the search form to be called out as a separate landmark on the page by screenreaders, to make it easily findable?
+2. How can you give the search input a suitable label, without explicitly adding a visible text label to the DOM?
 
 Try updating the live code below to recreate the finished example:
 
@@ -60,8 +60,8 @@ You can practice these examples in the Interactive Editors above.
 
 If you would like your work assessed, or are stuck and want to ask for help:
 
-1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
 
     - A descriptive title such as "Assessment wanted for WAI-ARIA 1 skill test".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
