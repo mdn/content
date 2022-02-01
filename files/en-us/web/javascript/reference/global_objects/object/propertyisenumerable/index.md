@@ -109,7 +109,7 @@ o.propertyIsEnumerable('property');            // returns true
 
 // These return false as they are on the prototype which
 // propertyIsEnumerable does not consider (even though the last two
-// are iteratable with for-in)
+// are iterable with for-in)
 o.propertyIsEnumerable('prototype');   // returns false (as of JS 1.8.1/FF3.6)
 o.propertyIsEnumerable('constructor'); // returns false
 o.propertyIsEnumerable('firstMethod'); // returns false

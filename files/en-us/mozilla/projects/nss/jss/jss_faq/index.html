@@ -241,7 +241,7 @@ tags:
   <li>
     In version previous to JSS 3.1, JSS removes the default SUN provider on startup. Upgrade to the latest JSS, or, in
     the <code>CryptoManager.InitializationValues</code> object you pass to <code>CryptoManager.initialize()</code>, set
-    <code>removeSunProivider=true</code>.</li>
+    <code>removeSunProvider=true</code>.</li>
 </ul>
 <p><a id="Sign_Date"></a><b>Is it possible to sign data in Java with JSS? What I am trying to do is write a Java
     applet that will access the Netscape certificate store, retrieve a X509 certificate and then sign some data.</b></p>
@@ -272,7 +272,7 @@ Certificate cert = (Certificate) ASN1Util.decode(
       href="ftp://ftp.mozilla.org/pub/mozilla.org/security/jss/releases/JSS_4_3_RTM/doc/JSS_4_3_RTM-doc.zip">Cryptomanager.importCertPackage()</a>
   </li>
 </ul>
-<p><a id="pkc11"></a><b>Is it possible to use JSS to acces cipher functionality from pkcs11 modules?</b></p>
+<p><a id="pkc11"></a><b>Is it possible to use JSS to access cipher functionality from pkcs11 modules?</b></p>
 <ul>
   <li>
     Yes. Before JSS 3.2 you would use CryptoManager to obtain the CryptoToken you want to use, then call
@@ -286,7 +286,7 @@ Certificate cert = (Certificate) ASN1Util.decode(
     Key Storage Token". You can look it up by name using CryptoManager.getTokenByName(), but a better way is to call
     CryptoManager.getInternalKeyStorageToken(), which works no matter what the token is named. In general, a key is a
     handle to an underlying object on a PKCS #11 token, not merely a Java object residing in memory. Symmetric Key
-    usage:  basically encrypt/decrypt is for data and wrap/unwrap is for keys.</li>
+    usage: basically encrypt/decrypt is for data and wrap/unwrap is for keys.</li>
 </ul>
 <p><a id="JSSJSSE"></a>J<b>SS 3.2 has JCA support. When will JSS have JSSE support?</b></p>
 <ul>

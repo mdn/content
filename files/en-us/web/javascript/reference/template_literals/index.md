@@ -34,6 +34,9 @@ Template literals are sometimes informally called *template strings*, but they a
 
 `string text ${expression} string text`
 
+// Re-usable template:
+const templateFn = expression => `string text ${expression} string text`;
+
 // Tagged, this calls the function "example" with the template as the
 // first argument and substitution values as subsequent arguments:
 example`string text ${expression} string text`

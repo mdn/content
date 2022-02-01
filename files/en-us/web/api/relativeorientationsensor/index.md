@@ -47,7 +47,7 @@ _No specific events; inherits events from its ancestor, {{domxref('Sensor')}}._
 
 The following example, which is loosely based on [Intel's Orientation Phone demo](https://intel.github.io/generic-sensor-demos/orientation-phone/), instantiates an `RelativeOrientationSensor` with a frequency of 60 times a second.
 
-> **Note:** The Intel demo this is based on uses the `AbsoluteOreintationSensor`. On each reading it uses {{domxref('OrientationSensor.quaternion')}} to rotate a visual model of a phone.
+> **Note:** The Intel demo this is based on uses the `AbsoluteOrientationSensor`. On each reading it uses {{domxref('OrientationSensor.quaternion')}} to rotate a visual model of a phone.
 
 ```js
 const options = { frequency: 60, referenceFrame: 'device' };
@@ -67,7 +67,7 @@ sensor.start();
 
 ### Permissions Example
 
-Using orientation sensors requires requsting permissions for multiple device sensors. Becuase the {{domxref('Permissions')}} interface uses promises, a good way to request permissions is to use {{jsxref('Promise.all')}}.
+Using orientation sensors requires requesting permissions for multiple device sensors. Because the {{domxref('Permissions')}} interface uses promises, a good way to request permissions is to use {{jsxref('Promise.all')}}.
 
 ```js
 const sensor = new RelativeOrientationSensor();

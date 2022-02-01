@@ -35,7 +35,7 @@ To start the assessment, make local copies of [blank-template.html](https://gith
 
 If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
-> **Note:** Alternatively, you could use a site like [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/) to do your assessment. You could paste the HTML, CSS and JavaScript into one of these online editors. If the online editor you are using doesn't have separate JavaScript/CSS panels, feel free to put them inline `<script>`/`<style>` elements inside the HTML page.
+> **Note:** Alternatively, you could use a site like [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/) to do your assessment. You could paste the HTML, CSS and JavaScript into one of these online editors. If the online editor you are using doesn't have separate JavaScript/CSS panels, feel free to put them inline `<script>`/`<style>` elements inside the HTML page.
 
 ## Project brief
 
@@ -49,13 +49,13 @@ You can also [see the example live here](https://mdn.github.io/learning-area/htm
 
 ## Steps to complete
 
-The following steps describe what you need to do to complete the table example. All the data you'll need is contained in the `planets-data.txt` file. If you have trouble visualising the data, look at the live example above, or try drawing a diagram.
+The following steps describe what you need to do to complete the table example. All the data you'll need is contained in the `planets-data.txt` file. If you have trouble visualizing the data, look at the live example above, or try drawing a diagram.
 
 1.  Open your copy of `blank-template.html`, and start the table off by giving it an outer container, a table header, and a table body. You don't need a table footer for this example.
 2.  Add the provided caption to your table.
 3.  Add a row to the table header containing all the column headers.
 4.  Create all the content rows inside the table body, remembering to make all the row headings into headings semantically.
-5.  Ensure all the content is placed into the right cells — in the raw data, each row of planet data is shown next to its associated planet.
+5.  Ensure all the content is placed into the right cells — in the raw data, each row of planet data is shown next to its associated planet.
 6.  Add attributes to make the row and column headers unambiguously associated with the rows, columns, or rowgroups that they act as headings for.
 7.  Add a black [border](/en-US/docs/Web/CSS/border) just around the column that contains all the planet name row headers.
 

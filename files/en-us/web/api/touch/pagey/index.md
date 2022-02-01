@@ -22,7 +22,7 @@ touchItem.pageY;
 
 ### Return value
 
-A `long` value that representes the Y coordinate of the touch point relative
+A `long` value that represents the Y coordinate of the touch point relative
 to the viewport, including any scroll offset.
 
 ## Example

@@ -249,7 +249,7 @@ null
 
 ### Boolean literal
 
-See also {{jsxref("Boolean")}} for more information.
+See also [boolean type](/en-US/docs/Web/JavaScript/Data_structures#boolean_type) for more information.
 
 ```js
 true
@@ -258,7 +258,7 @@ false
 
 ### Numeric literals
 
-The {{jsxref("Number")}} and {{jsxref("BigInt")}} types use numeric literals.
+The [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type) and [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type) types use numeric literals.
 
 #### Decimal
 
@@ -311,7 +311,7 @@ var m = 0o644; // 420
 
 #### Hexadecimal
 
-Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X)`. If the digits after 0x are outside the range (0123456789ABCDEF), the following {{jsxref("SyntaxError")}} is thrown: "Identifier starts immediately after numeric literal".
+Hexadecimal number syntax uses a leading zero followed by a lowercase or uppercase Latin letter "X" (`0x` or `0X`). If the digits after 0x are outside the range (0123456789ABCDEF), the following {{jsxref("SyntaxError")}} is thrown: "Identifier starts immediately after numeric literal".
 
 ```js
 0xFFFFFFFFFFFFFFFFF // 295147905179352830000
@@ -321,12 +321,12 @@ Hexadecimal number syntax uses a leading zero followed by a lowercase or upperca
 
 #### BigInt literal
 
-The {{jsxref("BigInt")}} type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending `n` to the end of an integer.
+The [BigInt](/en-US/docs/Web/JavaScript/Data_structures#bigint_type) type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. BigInt literals are created by appending `n` to the end of an integer.
 
 ```js
 123456789123456789n     // 123456789123456789
 0o777777777777n         // 68719476735
-0x123456789ABCDEFn      // 81985529216486895‬
+0x123456789ABCDEFn      // 81985529216486895
 0b11101001010101010101n // 955733
 ```
 
@@ -405,7 +405,7 @@ See also {{jsxref("Array")}} for more information.
 
 ### String literals
 
-A string literal is zero or more Unicode code points enclosed in single or double quotes. Unicode code points may also be represented by an escape sequence. All code points may appear literally in a string literal except for these closing quote code points:
+A [string](/en-US/docs/Web/JavaScript/Data_structures#string_type) literal is zero or more Unicode code points enclosed in single or double quotes. Unicode code points may also be represented by an escape sequence. All code points may appear literally in a string literal except for these closing quote code points:
 
 - U+005C \ (backslash),
 - U+000D \<CR>,
@@ -547,7 +547,7 @@ a + b;
 - [Lexical grammar in the ECMAScript specification](https://tc39.es/ecma262/#sec-ecmascript-language-lexical-grammar)
 - [Jeff Walden: Binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
 - [Mathias Bynens: JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes)
-- {{jsxref("Boolean")}}
-- {{jsxref("Number")}}
+- [Boolean](/en-US/docs/Web/JavaScript/Data_structures#boolean_type)
+- [Number](/en-US/docs/Web/JavaScript/Data_structures#number_type)
+- [string](/en-US/docs/Web/JavaScript/Data_structures#string_type)
 - {{jsxref("RegExp")}}
-- {{jsxref("String")}}

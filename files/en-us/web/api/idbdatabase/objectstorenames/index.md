@@ -14,8 +14,8 @@ browser-compat: api.IDBDatabase.objectStoreNames
 ---
 {{ APIRef("IndexedDB") }}
 
-The **`objectStoreNames`** read-only property of the
-{{domxref("IDBDatabase")}} interface is a {{ domxref("DOMStringList") }} containing a
+The **`objectStoreNames`** read-only property of the
+{{domxref("IDBDatabase")}} interface is a {{ domxref("DOMStringList") }} containing a
 list of the names of the [object
 stores](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store) currently in the connected database.
 
@@ -30,7 +30,7 @@ var list[] = IDBDatabase.objectStoreNames;
 ### Value
 
 A {{ domxref("DOMStringList") }} containing a list of
-the names of the [object stores](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store)currently
+the names of the [object stores](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store)currently
 in the connected database.
 
 ## Example
@@ -45,7 +45,7 @@ DBOpenRequest.onerror = function(event) {
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable. This is used a lot below
   db = DBOpenRequest.result;

@@ -32,18 +32,18 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} **`base-uri`** directive rest
 
 ## Syntax
 
-One or more*sources* can be allowed for the base-uri policy:
+One or more *sources* can be allowed for the base-uri policy:
 
-```
+```http
 Content-Security-Policy: base-uri <source>;
 Content-Security-Policy: base-uri <source> <source>;
 ```
 
 ### Sources
 
-While this directive uses the same arguments as other CSP directives, some of them don’t make sense for \`\<base>\`, such as the keywords `'unsafe-inline'` and `'strict-dynamic'`
+This directive uses most of the same source values for arguments as other CSP directives: [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
 
-{{page("Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
+Note however that some of the values don't make sense for `base-uri`, such as the keywords `'unsafe-inline'` and `'strict-dynamic'`.
 
 ## Examples
 

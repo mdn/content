@@ -97,7 +97,7 @@ You already created your first user when we looked at the [Django admin site](/e
 
 Below we'll first create a group and then a user. Even though we don't have any permissions to add for our library members yet, if we need to later, it will be much easier to add them once to the group than individually to each member.
 
-Start the development server and navigate to the admin site in your local web browser (<http://127.0.0.1:8000/admin/>). Login to the site using the credentials for your superuser account. The top level of the Admin site displays all of your models, sorted by "Django application". From the **Authentication and Authorization** section, you can click the **Users** or **Groups** links to see their existing records.
+Start the development server and navigate to the admin site in your local web browser (`http://127.0.0.1:8000/admin/`). Login to the site using the credentials for your superuser account. The top level of the Admin site displays all of your models, sorted by "Django application". From the **Authentication and Authorization** section, you can click the **Users** or **Groups** links to see their existing records.
 
 ![Admin site - add groups or users](admin_authentication_add.png)
 
@@ -147,7 +147,7 @@ urlpatterns += [
 ]
 ```
 
-Navigate to the <http://127.0.0.1:8000/accounts/> URL (note the trailing forward slash!) and Django will show an error that it could not find this URL, and listing all the URLs it tried. From this you can see the URLs that will work, for example:
+Navigate to the `http://127.0.0.1:8000/accounts/` URL (note the trailing forward slash!) and Django will show an error that it could not find this URL, and listing all the URLs it tried. From this you can see the URLs that will work, for example:
 
 > **Note:** Using the above method adds the following URLs with names in square brackets, which can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.
 >
@@ -162,7 +162,7 @@ Navigate to the <http://127.0.0.1:8000/accounts/> URL (note the trailing forward
 > accounts/ reset/done/ [name='password_reset_complete']
 > ```
 
-Now try to navigate to the login URL (<http://127.0.0.1:8000/accounts/login/>). This will fail again, but with an error that tells you that we're missing the required template (**registration/login.html**) on the template search path.
+Now try to navigate to the login URL (`http://127.0.0.1:8000/accounts/login/`). This will fail again, but with an error that tells you that we're missing the required template (**registration/login.html**) on the template search path.
 You'll see the following lines listed in the yellow section at the top:
 
 ```python
@@ -254,11 +254,11 @@ Create a new HTML file called /**locallibrary/templates/registration/login.html*
 
 This template shares some similarities with the ones we've seen before — it extends our base template and overrides the `content` block. The rest of the code is fairly standard form handling code, which we will discuss in a later tutorial. All you need to know for now is that this will display a form in which you can enter your username and password, and that if you enter invalid values you will be prompted to enter correct values when the page refreshes.
 
-Navigate back to the login page (<http://127.0.0.1:8000/accounts/login/>) once you've saved your template, and you should see something like this:
+Navigate back to the login page (`http://127.0.0.1:8000/accounts/login/`) once you've saved your template, and you should see something like this:
 
 ![Library login page v1](library_login.png)
 
-If you log in using valid credentials, you'll be redirected to another page (by default this will be <http://127.0.0.1:8000/accounts/profile/>). The problem is that, by default, Django expects that upon logging in you will want to be taken to a profile page, which may or may not be the case. As you haven't defined this page yet, you'll get another error!
+If you log in using valid credentials, you'll be redirected to another page (by default this will be `http://127.0.0.1:8000/accounts/profile/`). The problem is that, by default, Django expects that upon logging in you will want to be taken to a profile page, which may or may not be the case. As you haven't defined this page yet, you'll get another error!
 
 Open the project settings (**/locallibrary/locallibrary/settings.py**) and add the text below to the bottom. Now when you log in you should be redirected to the site homepage by default.
 
@@ -269,7 +269,7 @@ LOGIN_REDIRECT_URL = '/'
 
 ### Logout template
 
-If you navigate to the logout URL (<http://127.0.0.1:8000/accounts/logout/>) then you'll see some odd behavior — your user will be logged out sure enough, but you'll be taken to the **Admin** logout page. That's not what you want, if only because the login link on that page takes you to the Admin login screen (and that is only available to users who have the `is_staff` permission).
+If you navigate to the logout URL (`http://127.0.0.1:8000/accounts/logout/`) then you'll see some odd behavior — your user will be logged out sure enough, but you'll be taken to the **Admin** logout page. That's not what you want, if only because the login link on that page takes you to the Admin login screen (and that is only available to users who have the `is_staff` permission).
 
 Create and open **/locallibrary/templates/registration/logged_out.html**. Copy in the text below:
 
@@ -387,8 +387,8 @@ Now that you've added the URL configuration and created all these templates, the
 
 You can test the new authentication pages by attempting to log in to and then log out of your superuser account using these URLs:
 
-- <http://127.0.0.1:8000/accounts/login/>
-- <http://127.0.0.1:8000/accounts/logout/>
+- `http://127.0.0.1:8000/accounts/login/`
+- `http://127.0.0.1:8000/accounts/logout/`
 
 You'll be able to test the password reset functionality from the link in the login page. **Be aware that Django will only send reset emails to addresses (users) that are already stored in its database!**
 
@@ -600,7 +600,7 @@ Now, all we need to do for this page is add a template. First, create the templa
 
 This template is very similar to those we've created previously for the `Book` and `Author` objects. The only thing "new" here is that we check the method we added in the model `(bookinst.is_overdue`) and use it to change the color of overdue items.
 
-When the development server is running, you should now be able to view the list for a logged in user in your browser at <http://127.0.0.1:8000/catalog/mybooks/>. Try this out with your user logged in and logged out (in the second case, you should be redirected to the login page).
+When the development server is running, you should now be able to view the list for a logged in user in your browser at `http://127.0.0.1:8000/catalog/mybooks/`. Try this out with your user logged in and logged out (in the second case, you should be redirected to the login page).
 
 ### Add the list to the sidebar
 

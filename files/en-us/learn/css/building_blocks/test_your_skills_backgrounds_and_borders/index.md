@@ -19,9 +19,9 @@ The aim of this skill test is to get you working with CSS backgrounds and border
 
 In this task we want you to add a background, border, and some simple styling to a page header:
 
-1.  Give the box a 5px black solid border, with rounded corners of 10px.
-2.  Add a background image (use the URL `balloons.jpg`) and size it so that it covers the box.
-3.  Give the `<h2>` a semi-transparent black background color, and make the text white.
+1. Give the box a 5px black solid border, with rounded corners of 10px.
+2. Add a background image (use the URL `balloons.jpg`) and size it so that it covers the box.
+3. Give the `<h2>` a semi-transparent black background color, and make the text white.
 
 The finished example should look like the image below.
 
@@ -61,8 +61,8 @@ You can practice these examples in the Interactive Editors above.
 
 If you would like your work assessed, or are stuck and want to ask for help:
 
-1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2.  Write a post asking for assessment and/or help at the [MDN Discourse forum](https://discourse.mozilla.org/c/mdn). Add the "learning" tag to your post so we are able to more easily find it. Your post should include:
+1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum](https://discourse.mozilla.org/c/mdn). Add the "learning" tag to your post so we are able to more easily find it. Your post should include:
 
     - A descriptive title such as "Assessment wanted for Flexbox layout 1 skill test".
     - Details of what you would like us to do — for example what you have already tried, if you are stuck and need help,.

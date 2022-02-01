@@ -437,7 +437,7 @@ Depth and stencil attachments and formats are actually inseparable on many devic
 
 ## texImage/texSubImage uploads (esp. videos) can cause pipeline flushes
 
-Most texture uploads from DOM elements will incur a processing pass that will temporarily switch GL Progams internally, causing a pipeline flush. (Pipelines are formalized explicitly in Vulkan\[[1](https://www.khronos.org/registry/vulkan/specs/1.2/html/chap9.html#VkGraphicsPipelineCreateInfo)] et al, but are implicit behind-the-scenes in OpenGL and WebGL. Pipelines are more or less the tuple of shader program, depth/stencil/multisample/blend/rasterization state)
+Most texture uploads from DOM elements will incur a processing pass that will temporarily switch GL Programs internally, causing a pipeline flush. (Pipelines are formalized explicitly in Vulkan\[[1](https://www.khronos.org/registry/vulkan/specs/1.2/html/chap9.html#VkGraphicsPipelineCreateInfo)] et al, but are implicit behind-the-scenes in OpenGL and WebGL. Pipelines are more or less the tuple of shader program, depth/stencil/multisample/blend/rasterization state)
 
 In WebGL:
 

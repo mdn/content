@@ -35,9 +35,8 @@ specifies valid sources for inline styles applied to individual DOM elements.
       <th scope="row">{{CSP("default-src")}} fallback</th>
       <td>
         <p>
-          Yes. If this directive is absent, the user agent will look for
-          the {{CSP("style-src")}} directive, and if both of them are
-          absent, fallback to <code>default-src</code> directive.
+          Yes. If this directive is absent, the user agent will look for the {{CSP("style-src")}} directive, and if both of them are
+          absent, fallback to <code>default-src</code> directive.
         </p>
       </td>
     </tr>
@@ -48,24 +47,23 @@ specifies valid sources for inline styles applied to individual DOM elements.
 
 One or more sources can be allowed for the `style-src-attr` policy:
 
-```
+```http
 Content-Security-Policy: style-src-attr <source>;
 Content-Security-Policy: style-src-attr <source> <source>;
 ```
 
-`style-src-attr` can be used in conjunction with {{CSP("style-src")}}:
+`style-src-attr` can be used in conjunction with {{CSP("style-src")}}:
 
-```
+```http
 Content-Security-Policy: style-src <source>;
 Content-Security-Policy: style-src-attr <source>;
 ```
 
 ### Sources
 
-{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
+`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
 
-- 'report-sample'
-  - : Requires a sample of the violating code to be included in the violation report.
+Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
 
 ## Examples
 

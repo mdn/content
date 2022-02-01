@@ -14,7 +14,7 @@ The Notifications API allows web pages to control the display of system notifica
 
 ## Concepts and usage
 
-On supported platforms, showing a system notification generally involves two things. First, the user needs to grant the current origin permission to display system notifications, which is generally done when the app or site initialises, using the {{domxref("Notification.requestPermission()")}} method. This should be done in response to a user gesture, such as clicking a button, for example:
+On supported platforms, showing a system notification generally involves two things. First, the user needs to grant the current origin permission to display system notifications, which is generally done when the app or site initializes, using the {{domxref("Notification.requestPermission()")}} method. This should be done in response to a user gesture, such as clicking a button, for example:
 
 ```js
 btn.addEventListener('click', function() {

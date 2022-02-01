@@ -142,7 +142,7 @@ It is also possible to provide a name inside the definition in order to create a
 **named** function expression:
 
 ```js
-var myFunction = function namedFunction(){
+var myFunction = function namedFunction() {
     statements
 }
 ```
@@ -435,7 +435,7 @@ the global scope (which all functions inherit).
 /*
  * Declare and initialize a variable 'p' (global)
  * and a function 'myFunc' (to change the scope) inside which
- * declare a varible with same name 'p' (current) and
+ * declare a variable with same name 'p' (current) and
  * define three functions using three different ways:-
  *     1. function declaration
  *     2. function expression

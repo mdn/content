@@ -41,7 +41,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
     The `defer` attribute may be specified with the `async` attribute, so legacy browsers that only support `defer` (and not `async`) fall back to the `defer` behavior instead of the default blocking behavior.
 
-    > **Note:** The exact processing details for these attributes are complex, involving many different aspects of HTML, and therefore are scattered throughout the specification. [These algorithms](https://www.w3.org/html/wg/drafts/html/master/scripting-1.html#prepare-a-script) describe the core ideas, but they rely on the parsing rules for {{HTMLElement("script")}} [start](https://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptTag) and [end](https://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptEndTag) tags in HTML, [in foreign content](https://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptForeignEndTag), and [in XML](https://www.w3.org/html/wg/drafts/html/master/the-xhtml-syntax.html#scriptTagXML); the rules for the [`document.write()`](/en-US/docs/Web/API/Document/write) method; the handling of [scripting](https://www.w3.org/html/wg/drafts/html/master/webappapis.html#scripting); and so on.
+    > **Note:** The exact processing details for these attributes are complex, involving many different aspects of HTML, and therefore are scattered throughout the specification. [These algorithms](https://www.w3.org/html/wg/drafts/html/master/scripting-1.html#prepare-a-script) describe the core ideas, but they rely on the parsing rules for {{HTMLElement("script")}} [start](https://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptTag) and [end](https://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptEndTag) tags in HTML, [in foreign content](https://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptForeignEndTag), and [in XML](https://www.w3.org/html/wg/drafts/html/master/the-xhtml-syntax.html#scriptTagXML); the rules for the [`document.write()`](/en-US/docs/Web/API/Document/write) method; the handling of [scripting](https://www.w3.org/html/wg/drafts/html/master/webappapis.html#scripting); and so on.
 
 - {{domxref("HTMLScriptElement.crossOrigin")}} {{experimental_inline}}
   - : Is a {{domxref("DOMString")}} reflecting the [CORS setting](/en-US/docs/Web/HTML/Attributes/crossorigin) for the script element. For scripts from other [origins](/en-US/docs/Glossary/Origin), this controls if error information will be exposed.
@@ -76,14 +76,14 @@ For more details, see the [`defer`](#defer_property) and [`async`](#async_proper
 
 ```js
 function loadError(oError) {
-  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
+  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
 }
 
 function prefixScript(url, onloadFunction) {
-  var newScript = document.createElement("script");
-  newScript.onerror = loadError;
-  if (onloadFunction) { newScript.onload = onloadFunction; }
-  document.currentScript.parentNode.insertBefore(newScript, document.currentScript);
+  var newScript = document.createElement("script");
+  newScript.onerror = loadError;
+  if (onloadFunction) { newScript.onload = onloadFunction; }
+  document.currentScript.parentNode.insertBefore(newScript, document.currentScript);
   newScript.src = url;
 }
 ```
@@ -92,14 +92,14 @@ This next function, instead of prepending the new scripts immediately before the
 
 ```js
 function loadError(oError) {
-  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
+  throw new URIError("The script " + oError.target.src + " didn't load correctly.");
 }
 
 function affixScriptToHead(url, onloadFunction) {
-  var newScript = document.createElement("script");
-  newScript.onerror = loadError;
-  if (onloadFunction) { newScript.onload = onloadFunction; }
-  document.head.appendChild(newScript);
+  var newScript = document.createElement("script");
+  newScript.onerror = loadError;
+  if (onloadFunction) { newScript.onload = onloadFunction; }
+  document.head.appendChild(newScript);
   newScript.src = url;
 }
 ```
@@ -115,7 +115,7 @@ affixScriptToHead("myScript2.js", function () { alert("The script \"myScript2.js
 
 {{domxref("HTMLScriptElement.supports()")}} provides a unified mechanism for checking whether a browser supports particular types of scripts.
 
-The example below shows how to check for module support, using the existance of the `noModule` attribute as a fallback.
+The example below shows how to check for module support, using the existence of the `noModule` attribute as a fallback.
 
 ```js
 function checkModuleSupport() {

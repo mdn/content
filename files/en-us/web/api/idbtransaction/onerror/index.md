@@ -34,9 +34,9 @@ transaction.onerror = function(event) { /* ... */ };
 In the following code snippet, we open a read/write transaction on our database and add
 some data to an object store. Note also the functions attached to transaction event
 handlers to report on the outcome of the transaction opening in the event of success or
-failure. Note the `transaction.onerror = function(event) { };` block, making
-use of `transaction.error` to help in reporting what went wrong when the
-transaction was unsuccessful. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app (
+failure. Note the `transaction.onerror = function(event) { };` block, making
+use of `transaction.error` to help in reporting what went wrong when the
+transaction was unsuccessful. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app (
 [view example live](https://mdn.github.io/to-do-notifications/).)
 
 ```js
@@ -44,10 +44,10 @@ transaction was unsuccessful. For a full working example, see our [To-do Notifi
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
   // store the result of opening the database in the db variable.
-  // This is used a lot below
+  // This is used a lot below
   db = DBOpenRequest.result;
 
   // Run the addData() function to add the data to the database
@@ -76,11 +76,11 @@ function addData() {
   // add our newItem object to the object store
   var objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
-    // report the success of the request (this does not mean the item
-    // has been stored successfully in the DB - for that you need transaction.onsuccess)
-    note.innerHTML += '<li>Request successful.</li>';
-  };
+  objectStoreRequest.onsuccess = function(event) {
+    // report the success of the request (this does not mean the item
+    // has been stored successfully in the DB - for that you need transaction.onsuccess)
+    note.innerHTML += '<li>Request successful.</li>';
+  };
 };
 ```
 

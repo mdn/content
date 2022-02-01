@@ -18,9 +18,9 @@ GitHub is a very important and useful community to get involved in, and Git/GitH
 
 ### Basic Github setup
 
-1.  First of all, [install Git](https://git-scm.com/downloads) on your machine. This is the underlying version control system software that GitHub works on top of.
-2.  Next, [sign up for a GitHub account](https://github.com/join). It's simple and easy.
-3.  Once you've signed up, log in to [github.com](https://github.com) with your username and password.
+1. First of all, [install Git](https://git-scm.com/downloads) on your machine. This is the underlying version control system software that GitHub works on top of.
+2. Next, [sign up for a GitHub account](https://github.com/join). It's simple and easy.
+3. Once you've signed up, log in to [github.com](https://github.com) with your username and password.
 
 ### Preparing your code for upload
 
@@ -28,13 +28,13 @@ You can store any code you like in a Github repository, but to use the GitHub Pa
 
 The other thing you need to do before moving on is to initialise your code directory as a Git repository. To do this:
 
-1.  Point the command line to your `test-site` directory (or whatever you called the directory containing your website). For this, use the `cd` command (i.e. "*c*hange *d*irectory"). Here's what you'd type if you've put your website in a directory called `test-site` on your desktop:
+1. Point the command line to your `test-site` directory (or whatever you called the directory containing your website). For this, use the `cd` command (i.e. "*c*hange *d*irectory"). Here's what you'd type if you've put your website in a directory called `test-site` on your desktop:
 
     ```bash
     cd Desktop/test-site
     ```
 
-2.  When the command line is pointing inside your website directory, type the following command, which tells the `git` tool to turn the directory into a git repository:
+2. When the command line is pointing inside your website directory, type the following command, which tells the `git` tool to turn the directory into a git repository:
 
     ```bash
     git init
@@ -50,7 +50,7 @@ The best way to upload your code to Github is via the command line — this is a
 
 Every operating system comes with a command line tool:
 
-- **Windows**: **Command Prompt** can be accessed by pressing the Windows key, typing _Command Prompt_, and choosing it from the list that appears. Note that Windows has its own command conventions differing from Linux and OS X, so the commands below may vary on your machine.
+- **Windows**: **Command Prompt** can be accessed by pressing the Windows key, typing _Command Prompt_, and choosing it from the list that appears. Note that Windows has its own command conventions differing from Linux and OS X, so the commands below may vary on your machine.
 - **OS X**: **Terminal** can be found in _Applications > Utilities_.
 - **Linux**: Usually you can pull up a terminal with _Ctrl + Alt + T_. If that doesn't work, look for **Terminal** in an app bar or menu.
 
@@ -58,37 +58,37 @@ This may seem a bit scary at first, but don't worry — you'll soon get the hang
 
 ### Creating a repo for your code
 
-1.  Next, you need to create a new repo for your files to go in. Click Plus (+) in the top right of the GitHub homepage, then choose _New Repository_.
-2.  On this page, in the _Repository name_ box, enter a name for your code repository, for example _my-repository_.
-3.  Also fill in a description to say what your repository is going to contain. Your screen should look like this:
+1. Next, you need to create a new repo for your files to go in. Click Plus (+) in the top right of the GitHub homepage, then choose _New Repository_.
+2. On this page, in the _Repository name_ box, enter a name for your code repository, for example _my-repository_.
+3. Also fill in a description to say what your repository is going to contain. Your screen should look like this:
     ![](create-new-repo.png)
-4.  Click _Create repository_; this should bring you to the following page:
+4. Click _Create repository_; this should bring you to the following page:
     ![](github-repo.png)
 
 ### Uploading your files to GitHub
 
-1.  On the current page, you are interested in the section _…or push an existing repository from the command line_. You should see two lines of code listed in this section. Copy the whole of the first line, paste it into the command line, and press Enter. The command should look something like this:
+1. On the current page, you are interested in the section _…or push an existing repository from the command line_. You should see two lines of code listed in this section. Copy the whole of the first line, paste it into the command line, and press Enter. The command should look something like this:
 
     ```bash
     git remote add origin https://github.com/chrisdavidmills/my-repository.git
     ```
 
-2.  Next, type the following two commands, pressing Enter after each one. These prepare the code for uploading to GitHub, and ask Git to manage these files.
+2. Next, type the following two commands, pressing Enter after each one. These prepare the code for uploading to GitHub, and ask Git to manage these files.
 
     ```bash
     git add --all
     git commit -m 'adding my files to my repository'
     ```
 
-3.  Finally, push the code up to GitHub by going to the GitHub web page you're on and entering into the terminal the second of the two commands we saw the _…or push an existing repository from the command line_ section:
+3. Finally, push the code up to GitHub by going to the GitHub web page you're on and entering into the terminal the second of the two commands we saw the _…or push an existing repository from the command line_ section:
 
     ```bash
     git push -u origin main
     ```
 
-4.  Now you need to turn GitHub pages on for your repository. To do this, from the homepage of your repository choose _Settings_, then select _Pages_ from the sidebar on the left. Underneath *Source*, choose the "main" branch. The page should refresh.
-5.  Go to the GitHub Pages section again, and you should see a line of the form "Your site is ready to be published at https\://xxxxxx."
-6.  If you click on this URL, you should go to a live version of your example, provided the home page is called `index.html` — it goes to this entry point by default. If your site's entry point is called something else, for example `myPage.html`, you'll need to go to `https://xxxxxx/myPage.html`.
+4. Now you need to turn GitHub pages on for your repository. To do this, from the homepage of your repository choose _Settings_, then select _Pages_ from the sidebar on the left. Underneath *Source*, choose the "main" branch. The page should refresh.
+5. Go to the GitHub Pages section again, and you should see a line of the form "Your site is ready to be published at https\://xxxxxx."
+6. If you click on this URL, you should go to a live version of your example, provided the home page is called `index.html` — it goes to this entry point by default. If your site's entry point is called something else, for example `myPage.html`, you'll need to go to `https://xxxxxx/myPage.html`.
 
 ### Further GitHub knowledge
 

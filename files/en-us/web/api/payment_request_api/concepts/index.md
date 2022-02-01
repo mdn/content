@@ -20,7 +20,7 @@ The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) makes it easy
 
 ## Terminology
 
-Before getting into the details of how the API operates, there are tems you'll need to know.
+Before getting into the details of how the API operates, there are items you'll need to know.
 
 - payee (or merchant)
   - : The merchant—either a person or an organization—whose web site or app wishes to receive money through the Payment Request API.

@@ -94,7 +94,7 @@ So when we call `myObject.hasOwnProperty('city')`, the browser:
 What is the prototype for `myObject`? To find out, we can use the function `Object.getPrototypeOf()`:
 
 ```js
-console.log(Object.getPrototypeOf(myObject)); // Object {...}
+Object.getPrototypeOf(myObject); // Object {...}
 ```
 
 This is an object called `Object.prototype`, and it is the most basic prototype, that all objects have by default. The prototype of `Object.prototype` is `null`, so it's at the end of the prototype chain:
@@ -107,10 +107,9 @@ The prototype of an object is not always `Object.prototype`. Try this:
 const myDate = new Date();
 let object = myDate;
 
-do {  
+do {
   object = Object.getPrototypeOf(object);
   console.log(object);
-
 } while (object);
 
 // Date.prototype

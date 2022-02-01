@@ -153,7 +153,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 *   \<IRI>
     *   : An **I**nternationalized **R**esource **I**dentifier.
 
-        On the Internet, resources are identified using *IRI*s (Internationalized Resource Identifiers). For example, an SVG file called `someDrawing.svg` located at <http://example.com> might have the following *IRI*:
+        On the Internet, resources are identified using *IRI*s (Internationalized Resource Identifiers). For example, an SVG file called `someDrawing.svg` located at `http://example.com` might have the following *IRI*:
 
         ```
         http://example.com/someDrawing.svg

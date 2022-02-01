@@ -24,11 +24,9 @@ but the target may be any object that supports events (such as {{domxref("XMLHtt
 
 The method `addEventListener()` works by adding a function, or an object that implements
 {{domxref("EventListener")}}, to the list of event listeners for the specified event type
-on the {{domxref("EventTarget")}} on which it's called. If the function or object, is already in the list of event listeners for this target, they are not added a second time.
+on the {{domxref("EventTarget")}} on which it's called. If the function or object is already in the list of event listeners for this target, the function or object is not added a second time.
 
-They do not need to be removed manually with {{domxref("EventTarget.removeEventListener", "removeEventListener()")}}.
-
-> **Note:** Two identical anonymous functions are considered as different for `addEventListener` and the second one will _also_ be added to the list of event listener for that target.
+> **Note:** If a particular anonymous function is in the list of event listeners registered for a certain target, and then later in the code, an identical anonymous function is given in an `addEventListener` call, the second function will _also_ be added to the list of event listeners for that target.
 >
 > Indeed, anonymous functions are not identical even if defined using
 > the _same_ unchanging source-code called repeatedly, **even if in a loop**.
@@ -36,8 +34,8 @@ They do not need to be removed manually with {{domxref("EventTarget.removeEventL
 > Repeatedly defining the same unnamed function in such cases can be
 > problematic. (See [Memory issues](#memory_issues), below.)
 
-If an event listener is added to an {{domxref("EventTarget")}} from inside another listener,
-that is during the processing of the event,
+If an event listener is added to an {{domxref("EventTarget")}} from inside another listener —
+that is, during the processing of the event —
 that event will not trigger the new listener.
 However, the new listener may be triggered during a later stage of event flow,
 such as during the bubbling phase.
@@ -816,7 +814,7 @@ performance during scroll handling.
 
 To prevent this problem, some browsers (specifically, Chrome and Firefox) have changed
 the default value of the `passive` option to `true` for the
-{{event("touchstart")}} and {{event("touchmove")}} events on the document-level nodes
+{{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events on the document-level nodes
 {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. This
 prevents the event listener from [canceling the event](/en-US/docs/Web/API/Event/preventDefault), so it can't block page rendering while
 the user is scrolling.
@@ -853,9 +851,8 @@ On older browsers that don't support the `options` parameter to
 `addEventListener()`, attempting to use it prevents the use of the
 `useCapture` argument without proper use of [feature detection](#safely_detecting_option_support).
 
-You don't need to worry about the value of `passive` for the basic
-{{event("scroll")}} event. Since it can't be canceled, event listeners can't block page
-rendering anyway.
+You don't need to worry about the value of `passive` for the basic {{domxref("Element/scroll_event", "scroll")}} event.
+Since it can't be canceled, event listeners can't block page rendering anyway.
 
 ## Specifications
 

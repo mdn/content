@@ -63,7 +63,7 @@ concept, in outline form, is:
         acceptable, call the response's {{domxref("PaymentResponse.complete",
         "complete()")}} method with a value of `"fail"` to indicate failure.
     2.  If the response's data is valid and acceptable, call
-        `complete("success")` to finalize the payment and proces it.
+        `complete("success")` to finalize the payment and process it.
 
 4.  If `show()` is rejected, the payment request failed, usually because
     either there's already one being processed, because the {{Glossary("user agent")}}
@@ -109,7 +109,7 @@ async function recursiveValidate(request, response) {
     return;
   }
   if (errors.shippingAddress) {
-    // "shippingaddresschange" fired at request object
+    // "shippingaddresschange" fired at request object
     const promise = fixField(request, "shippingaddresschange", shippingValidator);
     promisesToFixThings.push(promise);
   }

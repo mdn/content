@@ -124,7 +124,7 @@ Network client hints allow a server to choose what information is sent based on 
 - {{HTTPHeader("ECT")}}
   - : The {{Glossary("effective connection type")}} ("network profile") that best matches the connection's latency and bandwidth. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
 - {{HTTPHeader("RTT")}}
-  - : Application layer round trip time (RTT) in miliseconds, which includes the server processing time. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
+  - : Application layer round trip time (RTT) in milliseconds, which includes the server processing time. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
 - {{HTTPHeader("Save-Data")}} {{experimental_inline}}
   - : A boolean that indicates the user agent's preference for reduced data usage.
 
@@ -380,7 +380,7 @@ _Learn more about CORS [here](CORS)._
 - {{HTTPHeader("Large-Allocation")}}
   - : Tells the browser that the page being loaded is going to want to perform a large allocation.
 - {{HTTPHeader("Link")}}
-  - : The [`Link`](https://datatracker.ietf.org/doc/html/rfc5988#section-5) entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
+  - : The [`Link`](https://datatracker.ietf.org/doc/html/rfc5988#section-5) entity-header field provides a means for serializing one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
 - {{HTTPHeader("Push-Policy")}} {{experimental_inline}}
   - : A [`Push-Policy`](https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.2) defines the server behavior regarding push when processing a request.
 - {{HTTPHeader("Retry-After")}}

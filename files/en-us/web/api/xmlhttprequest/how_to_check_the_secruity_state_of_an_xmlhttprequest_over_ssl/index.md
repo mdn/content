@@ -182,7 +182,7 @@ function dumpSecurityInfo(xhr, error) {
 
       dump("\tCommon name (CN) = " + cert.commonName + "\n");
       dump("\tIssuer = " + cert.issuerOrganization + "\n");
-      dump("\tOrganisation = " + cert.organization + "\n");
+      dump("\tOrganization = " + cert.organization + "\n");
       dump("\tSHA1 fingerprint = " + cert.sha1Fingerprint + "\n");
 
       var validity = cert.validity.QueryInterface(Ci.nsIX509CertValidity);
@@ -226,7 +226,7 @@ Connection status:
 Security Info:
         Security state: secure
         Common name (CN) = addons.mozilla.org
-        Organisation = Mozilla Corporation
+        Organization = Mozilla Corporation
         Issuer = VeriSign, Inc.
         SHA1 fingerprint = F4:99:64:18:6B:7D:C8:FA:C0:0C:2E:A9:61:77:28:67:13:C4:97:7B
         Valid from 7/14/2011 0:00:00 AM
@@ -247,7 +247,7 @@ Connection status:
 Security Info:
         Security state: insecure
         Common name (CN) = www.appliancetherapy.com
-        Organisation = Appliance Therapy Group (SELANE PRODUCTS, INC)
+        Organization = Appliance Therapy Group (SELANE PRODUCTS, INC)
         Issuer = VeriSign, Inc.
         SHA1 fingerprint = F1:8C:38:96:0A:30:63:16:47:FA:6E:CD:7D:58:CC:AB:82:FB:A9:D0
         Valid from 9/1/2010 0:00:00 AM

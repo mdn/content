@@ -198,7 +198,7 @@ The {{domxref("Performance.clearMeasures","performance.clearMeasures()")}} metho
 ```js
 function clear_measures(obj) {
   if (performance.clearMeasures === undefined) {
-    log("Clear Mearsures: performance.clearMeasures Not supported", 1);
+    log("Clear Measures: performance.clearMeasures Not supported", 1);
     return;
   }
   log("Clear measures", 1);

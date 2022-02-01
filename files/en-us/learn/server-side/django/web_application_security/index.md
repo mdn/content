@@ -62,7 +62,7 @@ Django's template system protects you against the majority of XSS attacks by [es
 
 1.  Start the website using the development server (`python3 manage.py runserver`).
 2.  Open the site in your local browser and login to your superuser account.
-3.  Navigate to the author-creation page (which should be at URL: [`http://127.0.0.1:8000/catalog/author/create/`](http://127.0.0.1:8000/catalog/author/create/)).
+3.  Navigate to the author-creation page (which should be at URL: `http://127.0.0.1:8000/catalog/author/create/`).
 4.  Enter names and date details for a new user, and then append the following text to the Last Name field:
     `<script>alert('Test alert');</script>`.
     ![Author Form XSS test](author_create_form_alert_xss.png)

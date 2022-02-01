@@ -66,13 +66,13 @@ The next two lessons explain different approaches to control sizing in ways that
 
 ## The overflow property
 
-The  {{cssxref("overflow")}} property is how you take control of an element's overflow. It is the way you instruct the browser how it should behave. The default value of overflow is `visible`. With this default, we can see content when it overflows.
+The {{cssxref("overflow")}} property is how you take control of an element's overflow. It is the way you instruct the browser how it should behave. The default value of overflow is `visible`. With this default, we can see content when it overflows.
 
 To crop content when it overflows, you can set `overflow: hidden`. This does exactly what it says: it hides overflow. Beware that this can make some content invisible. You should only do this if hiding content won't cause problems.
 
 {{EmbedGHLiveSample("css-examples/learn/overflow/hidden.html", '100%', 600)}}
 
-Instead, perhaps you would like to add scrollbars when content overflows? Using `overflow: scroll`, browsers with visible scrollbars will always display them—even if there is not enough content to overflow. This offers the advantage of keeping the layout consistent, instead of scrollbars appearing or disappearing, depending upon the amount of content in the container.
+Instead, perhaps you would like to add scrollbars when content overflows? Using `overflow: scroll`, browsers with visible scrollbars will always display them—even if there is not enough content to overflow. This offers the advantage of keeping the layout consistent, instead of scrollbars appearing or disappearing, depending upon the amount of content in the container.
 
 **Remove some content from the box below. Notice how the scrollbars remain, even if there is no need for scrolling.**
 
@@ -102,7 +102,7 @@ When you use a value of overflow such as `scroll` or `auto`, you create a **Bloc
 
 ## Unwanted overflow in web design
 
-Modern layout methods (described in  [CSS layout](/en-US/docs/Learn/CSS/CSS_layout)) manage overflow. They largely work without assumptions or dependencies for how much content there will be on a web page.
+Modern layout methods (described in [CSS layout](/en-US/docs/Learn/CSS/CSS_layout)) manage overflow. They largely work without assumptions or dependencies for how much content there will be on a web page.
 
 This has not always been the norm. In the past, some sites were built with fixed-height containers to align bottoms of boxes. These boxes may otherwise have no relationship to each other. This was fragile. In a legacy application, you may encounter a box where content is overlaying other content on the page. Now you can recognize that this happens with overflow. Ideally, you will refactor the layout to not rely on fixed-height containers.
 
@@ -120,21 +120,21 @@ This lesson introduced the concept of overflow. You should understand that defau
 
 ## In this module
 
-1.  [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)

@@ -59,7 +59,7 @@ Each of those parts provides specific information about the whole domain name.
 
     - Local TLDs such as `.us`, `.fr`, or `.se` can require the service to be provided in a given language or hosted in a certain country — they are supposed to indicate a resource in a particular language or country.
     - TLDs containing `.gov` are only allowed to be used by government departments.
-    - The `.edu` TLD is only for use by educational and academic institutions.
+    - The `.edu` TLD is only for use by educational and academic institutions.
 
     TLDs can contain special as well as latin characters. A TLD's maximum length is 63 characters, although most are around 2–3.
 
@@ -67,11 +67,11 @@ Each of those parts provides specific information about the whole domain name.
 
 - Label (or component)
 
-  - : The labels are what follow the TLD. A label is a case-insensitive character sequence anywhere from one to sixty-three characters in length, containing only the letters A through Z, digits 0 through 9, and the - character (which may not be the first or last character in the label). `a`, `97`, and `hello-strange-person-16-how-are-you` are all examples of valid labels.
+  - : The labels are what follow the TLD. A label is a case-insensitive character sequence anywhere from one to sixty-three characters in length, containing only the letters A through Z, digits 0 through 9, and the - character (which may not be the first or last character in the label). `a`, `97`, and `hello-strange-person-16-how-are-you` are all examples of valid labels.
 
     The label located right before the TLD is also called a _Secondary Level Domain_ (SLD).
 
-    A domain name can have many labels (or components). It is not mandatory nor necessary to have 3 labels to form a domain name. For instance, www\.inf.ed.ac.uk is a valid domain name. For any domain you control (e.g. [mozilla.org](https://mozilla.org)), you can create "subdomains" with different content located at each, like [developer.mozilla.org](https://developer.mozilla.org), [iot.mozilla.org](https://iot.mozilla.org/), or [wiki.developer.mozilla.org](https://wiki.developer.mozilla.org).
+    A domain name can have many labels (or components). It is not mandatory nor necessary to have 3 labels to form a domain name. For instance, www\.inf.ed.ac.uk is a valid domain name. For any domain you control (e.g. [mozilla.org](https://mozilla.org)), you can create "subdomains" with different content located at each, like [developer.mozilla.org](https://developer.mozilla.org), [iot.mozilla.org](https://iot.mozilla.org/), or [wiki.developer.mozilla.org](https://wiki.developer.mozilla.org).
 
 ### Buying a domain name
 
@@ -90,7 +90,7 @@ Companies called registrars use domain name registries to keep track of technica
 To find out whether a given domain name is available,
 
 - Go to a domain name registrar's website. Most of them provide a “whois” service that tells you whether a domain name is available.
-- Alternatively, if you use a system with a built-in shell, type a `whois` command into it, as shown here for `mozilla.org`:
+- Alternatively, if you use a system with a built-in shell, type a `whois` command into it, as shown here for `mozilla.org`:
 
   ```
   $ whois mozilla.org
@@ -132,10 +132,10 @@ As you can see, the domain does not exist in the `whois` database (at the time o
 
 The process is quite straightforward:
 
-1.  Go to a registrar's website.
-2.  Usually there is a prominent “Get a domain name” call to action. Click on it.
-3.  Fill out the form with all required details. Make sure especially that you have not misspelled your desired domain name. Once it's paid for, it's too late!
-4.  The registrar will let you know when the domain name is properly registered. Within a few hours, all DNS servers will have received your DNS information.
+1. Go to a registrar's website.
+2. Usually there is a prominent “Get a domain name” call to action. Click on it.
+3. Fill out the form with all required details. Make sure especially that you have not misspelled your desired domain name. Once it's paid for, it's too late!
+4. The registrar will let you know when the domain name is properly registered. Within a few hours, all DNS servers will have received your DNS information.
 
 > **Note:** In this process the registrar asks you for your real-world address. Make sure you fill it properly, since in some countries registrars may be forced to close the domain if they cannot provide a valid address.
 
@@ -149,10 +149,10 @@ Whenever your registrar creates or updates any information for a given domain, t
 
 As we already saw, when you want to display a webpage in your browser it's easier to type a domain name than an IP address. Let's take a look at the process:
 
-1.  Type `mozilla.org` in your browser's location bar.
-2.  Your browser asks your computer if it already recognizes the IP address identified by this domain name (using a local DNS cache). If it does, the name is translated to the IP address and the browser negotiates contents with the web server. End of story.
-3.  If your computer does not know which IP is behind the `mozilla.org` name, it goes on to ask a DNS server, whose job is precisely to tell your computer which IP address matches each registered domain name.
-4.  Now that the computer knows the requested IP address, your browser can negotiate contents with the web server.
+1. Type `mozilla.org` in your browser's location bar.
+2. Your browser asks your computer if it already recognizes the IP address identified by this domain name (using a local DNS cache). If it does, the name is translated to the IP address and the browser negotiates contents with the web server. End of story.
+3. If your computer does not know which IP is behind the `mozilla.org` name, it goes on to ask a DNS server, whose job is precisely to tell your computer which IP address matches each registered domain name.
+4. Now that the computer knows the requested IP address, your browser can negotiate contents with the web server.
 
 ![Explanation of the steps needed to obtain the result to a DNS request](2014-10-dns-request2.png)
 
@@ -162,5 +162,5 @@ Okay, we talked a lot about processes and architecture. Time to move on.
 
 - If you want to get hands-on, it's a good time to start digging into design and explore [the anatomy of a web page](/en-US/docs/Learn/Common_questions/Common_web_layouts).
 - It's also worth noting that some aspects of building a website cost money. Please refer to [how much it costs to build a web site](/en-US/docs/Learn/Common_questions/How_much_does_it_cost).
-- Or read more about [Domain Names](https://en.wikipedia.org/wiki/Domain_name) on Wikipedia.
-- You can also find [here](https://howdns.works/) a fun and colorful explanation of how DNS woks.
+- Or read more about [Domain Names](https://en.wikipedia.org/wiki/Domain_name) on Wikipedia.
+- You can also find [here](https://howdns.works/) a fun and colorful explanation of how DNS woks.

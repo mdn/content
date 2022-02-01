@@ -15,9 +15,7 @@ browser-compat: http.headers.csp.Content-Security-Policy.img-src
 ---
 {{HTTPSidebar}}
 
-The HTTP {{HTTPHeader("Content-Security-Policy")}}
-**`img-src`** directive specifies valid sources of images and
-favicons.
+The HTTP {{HTTPHeader("Content-Security-Policy")}} **`img-src`** directive specifies valid sources of images and favicons.
 
 <table class="properties">
   <tbody>
@@ -43,14 +41,16 @@ favicons.
 
 One or more sources can be allowed for the `img-src` policy:
 
-```
+```http
 Content-Security-Policy: img-src <source>;
 Content-Security-Policy: img-src <source> <source>;
 ```
 
 ### Sources
 
-{{page("Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
+`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+
+Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
 
 ## Examples
 
@@ -58,7 +58,7 @@ Content-Security-Policy: img-src <source> <source>;
 
 Given this CSP header:
 
-```
+```http
 Content-Security-Policy: img-src https://example.com/
 ```
 

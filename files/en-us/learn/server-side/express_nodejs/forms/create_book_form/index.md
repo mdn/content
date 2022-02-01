@@ -10,9 +10,9 @@ tags:
 ---
 This subarticle shows how to define a page/form to create `Book` objects. This is a little more complicated than the equivalent `Author` or `Genre` pages because we need to get and display available `Author` and `Genre` records in our `Book` form.
 
-## Import validation and sanitisation methods
+## Import validation and sanitization methods
 
-Open **/controllers/bookController.js**, and add the following line at the top of the file:
+Open **/controllers/bookController.js**, and add the following line at the top of the file:
 
 ```js
 const { body,validationResult } = require('express-validator');
@@ -46,7 +46,7 @@ This uses the async module (described in [Express Tutorial Part 5: Displaying li
 
 ## Controller—post route
 
-Find the exported `book_create_post()` controller method and replace it with the following code.
+Find the exported `book_create_post()` controller method and replace it with the following code.
 
 ```js
 // Handle book create on POST.
@@ -62,7 +62,7 @@ exports.book_create_post = [
         next();
     },
 
-    // Validate and sanitise fields.
+    // Validate and sanitize fields.
     body('title', 'Title must not be empty.').trim().isLength({ min: 1 }).escape(),
     body('author', 'Author must not be empty.').trim().isLength({ min: 1 }).escape(),
     body('summary', 'Summary must not be empty.').trim().isLength({ min: 1 }).escape(),
@@ -120,9 +120,9 @@ exports.book_create_post = [
 ];
 ```
 
-The structure and behavior of this code is almost exactly the same as for creating a `Genre` or `Author` object. First we validate and sanitize the data. If the data is invalid then we re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid, we then save the new `Book` record and redirect the user to the book detail page.
+The structure and behavior of this code is almost exactly the same as for creating a `Genre` or `Author` object. First we validate and sanitize the data. If the data is invalid then we re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid, we then save the new `Book` record and redirect the user to the book detail page.
 
-The main difference with respect to the other form handling code is how we sanitize the genre information. The form returns an array of `Genre` items (while for other fields it returns a string). In order to validate the information we first convert the request to an array (required for the next step).
+The main difference with respect to the other form handling code is how we sanitize the genre information. The form returns an array of `Genre` items (while for other fields it returns a string). In order to validate the information we first convert the request to an array (required for the next step).
 
 ```js
 // Convert the genre to an array.
@@ -137,7 +137,7 @@ The main difference with respect to the other form handling code is how we sani
 },
 ```
 
-We then use a wildcard (`*`) in the sanitiser to individually validate each of the genre array entries. The code below shows how - this translates to "sanitise every item below key `genre`".
+We then use a wildcard (`*`) in the sanitizer to individually validate each of the genre array entries. The code below shows how - this translates to "sanitize every item below key `genre`".
 
 ```js
 body('genre.*').escape(),
@@ -157,7 +157,7 @@ for (let i = 0; i < results.genres.length; i++) {
 
 ## View
 
-Create **/views/book_form.pug** and copy in the text below.
+Create **/views/book_form.pug** and copy in the text below.
 
 ```plain
 extends layout
@@ -206,11 +206,11 @@ The main differences are in how we implement the selection-type fields: `Author`
 - The set of genres are displayed as checkboxes, using the `checked` value we set in the controller to determine whether or not the box should be selected.
 - The set of authors are displayed as a single-selection alphabetically ordered drop-down list. If the user has previously selected a book author (i.e. when fixing invalid field values after initial form submission, or when updating book details) the author will be re-selected when the form is displayed. Here we determine what author to select by comparing the id of the current author option with the value previously entered by the user (passed in via the `book` variable). This is highlighted above!
 
-  > **Note:** If there is an error in the submitted form, then, when the form is to be re-rendered, the new book author's id and the existing books's authors ids are of type `Schema.Types.ObjectId`. So to compare them we must convert them to strings first.
+  > **Note:** If there is an error in the submitted form, then, when the form is to be re-rendered, the new book author's id and the existing books's authors ids are of type `Schema.Types.ObjectId`. So to compare them we must convert them to strings first.
 
 ## What does it look like?
 
-Run the application, open your browser to <http://localhost:3000/>, then select the _Create new book_ link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid book, it should be saved and you'll be taken to the book detail page.
+Run the application, open your browser to `http://localhost:3000/`, then select the _Create new book_ link. If everything is set up correctly, your site should look something like the following screenshot. After you submit a valid book, it should be saved and you'll be taken to the book detail page.
 
 ![](locallibary_express_book_create_empty.png)
 

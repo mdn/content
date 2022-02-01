@@ -8,7 +8,7 @@ tags:
   - ARIA Tabpanel
   - ARIA widget
   - Reference
-  - Needscontent
+  - NeedsContent
 ---
 {{draft}}
 
@@ -20,7 +20,7 @@ TBD
 
 ## Description
 
-An element with the `tabpanel` role
+An element with the `tabpanel` role
 
 ### Associated Roles and Attributes
 

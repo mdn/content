@@ -161,7 +161,7 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("-webkit-user-modify", "-webkit-user-modify")}}
 
 \* A few are on the standards, unprefixed track
-\*\* New syntax has been standardized. Property links to the new synax. Old prefixed syntax is still supported in some browsers.
+\*\* New syntax has been standardized. Property links to the new syntax. Old prefixed syntax is still supported in some browsers.
 
 ## WebKit-prefixed properties on the standards track
 
