@@ -367,7 +367,6 @@
 /en-US/docs/CSS/-webkit-opacity	/en-US/docs/Web/CSS/opacity
 /en-US/docs/CSS/-webkit-perspective	/en-US/docs/Web/CSS/perspective
 /en-US/docs/CSS/-webkit-perspective-origin	/en-US/docs/Web/CSS/perspective-origin
-/en-US/docs/CSS/-webkit-print-color-adjust	/en-US/docs/Web/CSS/-webkit-print-color-adjust
 /en-US/docs/CSS/-webkit-text-size-adjust	/en-US/docs/Web/CSS/text-size-adjust
 /en-US/docs/CSS/-webkit-transform	/en-US/docs/Web/CSS/transform
 /en-US/docs/CSS/-webkit-transform-origin	/en-US/docs/Web/CSS/transform-origin
@@ -10011,6 +10010,7 @@
 /en-US/docs/Web/CSS/-webkit-order	/en-US/docs/Web/CSS/order
 /en-US/docs/Web/CSS/-webkit-perspective	/en-US/docs/Web/CSS/perspective
 /en-US/docs/Web/CSS/-webkit-perspective-origin	/en-US/docs/Web/CSS/perspective-origin
+/en-US/docs/Web/CSS/-webkit-print-color-adjust	/en-US/docs/Web/CSS/print-color-adjust
 /en-US/docs/Web/CSS/-webkit-radial-gradient	/en-US/docs/Web/CSS/gradient/radial-gradient()
 /en-US/docs/Web/CSS/-webkit-repeating-linear-gradient	/en-US/docs/Web/CSS/gradient/repeating-linear-gradient()
 /en-US/docs/Web/CSS/-webkit-repeating-radial-gradient	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient()
@@ -10175,6 +10175,7 @@
 /en-US/docs/Web/CSS/box_model	/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/calc	/en-US/docs/Web/CSS/calc()
 /en-US/docs/Web/CSS/clamp	/en-US/docs/Web/CSS/clamp()
+/en-US/docs/Web/CSS/color-adjust	/en-US/docs/Web/CSS/print-color-adjust
 /en-US/docs/Web/CSS/color-interpolation	/en-US/docs/Web/SVG/Attribute/color-interpolation
 /en-US/docs/Web/CSS/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
 /en-US/docs/Web/CSS/conic-gradient	/en-US/docs/Web/CSS/gradient/conic-gradient()

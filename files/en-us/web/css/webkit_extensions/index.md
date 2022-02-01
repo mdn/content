@@ -132,7 +132,7 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("padding-inline-start","-webkit-padding-start")}}\*\*
 - {{CSSxRef("-webkit-perspective-origin-x", "-webkit-perspective-origin-x")}}
 - {{CSSxRef("-webkit-perspective-origin-y", "-webkit-perspective-origin-y")}}
-- {{CSSxRef("-webkit-print-color-adjust", "-webkit-print-color-adjust")}}
+- {{CSSxRef("print-color-adjust", "-webkit-print-color-adjust")}}
 
 ### R-S
 
