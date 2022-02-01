@@ -238,9 +238,9 @@ Here we have:
 
    1. An **initializer** — this is usually a variable set to a number, which is incremented to count the number of times the loop has run.
       It is also sometimes referred to as a **counter variable**.
-   3. A **condition** — this defines when the loop should stop looping.
+   2. A **condition** — this defines when the loop should stop looping.
       This is generally an expression featuring a comparison operator, a test to see if the exit condition has been met.
-   5. A **final-expression** — this is always evaluated (or run) each time the loop has gone through a full iteration.
+   3. A **final-expression** — this is always evaluated (or run) each time the loop has gone through a full iteration.
       It usually serves to increment (or in some cases decrement) the counter variable, to bring it closer to the point where the condition is no longer `true`.
 
 3. Some curly braces that contain a block of code — this code will be run each time the loop iterates.
@@ -332,7 +332,7 @@ Sometimes you still need to use a `for` loop to iterate through an array.
 For example, in the code below we want to log a message listing our cats:
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmin'];
+const cats = ['Pete', 'Biggles', 'Jasmine'];
 
 let myFavoriteCats = 'My cats are called ';
 
@@ -340,25 +340,25 @@ for (const cat of cats) {
   myFavoriteCats = `${myFavoriteCats}${cat}, `
 }
 
-console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmin, "
+console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
 ```
 
 The final output sentence isn't very well-formed:
 
 ```
-My cats are called Pete, Biggles, Jasmin,
+My cats are called Pete, Biggles, Jasmine,
 ```
 
 We'd prefer it to handle the last cat differently, like this:
 
 ```
-My cats are called Pete, Biggles, and Jasmin.
+My cats are called Pete, Biggles, and Jasmine.
 ```
 
 But to do this we need to know when we are on the final loop iteration, and to do that we can use a `for` loop and examine the value of `i`:
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmin'];
+const cats = ['Pete', 'Biggles', 'Jasmine'];
 
 let myFavoriteCats = 'My cats are called ';
 
@@ -370,7 +370,7 @@ for (let i = 0; i < cats.length; i++) {
   }
 }
 
-console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmin."
+console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
 ## Exiting loops with break
@@ -423,13 +423,13 @@ btn.addEventListener('click', () => {
 2. Next, we attach an event listener to the button (`btn`) so that when it is pressed some code is run to perform the search and return the results.
 3. We store the value entered into the text input in a variable called `searchName`, before then emptying the text input and focusing it again, ready for the next search.
    Note that we also run the [`toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) method on the string, so that searches will be case-insensitive.
-5. Now on to the interesting part, the `for...of` loop:
+4. Now on to the interesting part, the `for...of` loop:
 
    1. Inside the loop, we first split the current contact at the colon character, and store the resulting two values in an array called `splitContact`.
    2. We then use a conditional statement to test whether `splitContact[0]` (the contact's name, again lower-cased with [`toLowerCase()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)) is equal to the inputted `searchName`.
       If it is, we enter a string into the paragraph to report what the contact's number is, and use `break` to end the loop.
 
-4. After the loop, we check whether we set a contact, and if not we set the paragraph text to "Contact not found.".
+5. After the loop, we check whether we set a contact, and if not we set the paragraph text to "Contact not found.".
 
 > **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
 
@@ -506,7 +506,7 @@ The final-expression is then run after the code inside the loop has run (an iter
 Let's have a look again at our cats list example, but rewritten to use a while loop:
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmin'];
+const cats = ['Pete', 'Biggles', 'Jasmine'];
 
 let myFavoriteCats = 'My cats are called ';
 
@@ -522,7 +522,7 @@ while (i < cats.length) {
   i++;
 }
 
-console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmin."
+console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
 > **Note:** This still works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html)).
@@ -545,7 +545,7 @@ The main difference between a `do...while` loop and a `while` loop is that _the 
 Let's rewrite our cat listing example again to use a `do...while` loop:
 
 ```js
-const cats = ['Pete', 'Biggles', 'Jasmin'];
+const cats = ['Pete', 'Biggles', 'Jasmine'];
 
 let myFavoriteCats = 'My cats are called ';
 
@@ -561,7 +561,7 @@ do {
   i++;
 } while (i < cats.length);
 
-console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmin."
+console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
 > **Note:** Again, this works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html)).
