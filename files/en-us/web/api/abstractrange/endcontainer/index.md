@@ -18,7 +18,7 @@ The {{domxref("Node")}} which contains the last character of the range.
 ## Example
 
 ```js
-let endNode = range.endContainer
+let endNode = range.endContainer;
 ```
 
 ## Specifications
