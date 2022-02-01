@@ -17,7 +17,7 @@ The **`AbstractRange`** abstract interface is the base class upon which all {{Gl
 ## Properties
 
 - {{domxref("AbstractRange.collapsed", "collapsed")}} {{ReadOnlyInline}}
-  - : A Boolean value which is `true` if the range is _collapsed_. A collapsed range is a rangte whose start position and end position are the same, resulting in a zero-character-long range.
+  - : A Boolean value which is `true` if the range is _collapsed_. A collapsed range is a range whose start position and end position are the same, resulting in a zero-character-long range.
 - {{domxref("AbstractRange.endContainer", "endContainer")}} {{ReadOnlyInline}}
   - : The {{domxref("Node")}} object in which the end of the range, as specified by the `endOffset` property, is located.
 - {{domxref("AbstractRange.endOffset", "endOffset")}} {{ReadOnlyInline}}
