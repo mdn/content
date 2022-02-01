@@ -12,26 +12,26 @@ The `radiogroup` role is a group of radio buttons.
 
 ## Description
 
-Radio groups are collections of radio buttons describing a set of related options. A `radiogroup` is a type of [`select`](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role) list that can only have a single entry, or [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role), checked at any one time. 
+Radio groups are collections of radio buttons; they describe a set of related options. A `radiogroup` is a type of [`select`](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role) list that can only have a single entry, or [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role), checked at any one time. 
 
-It is recommended to create radio groups by using same-named HTML radio buttons, but if you must use ARIA roles and attributes instead of semantic HTML form controls, custom buttons can and should act like native HTML radio buttons. 
+When using HTML's native radio button, [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio),  the radio group is defined by giving each of radio buttons in the group the same [`name`](/en-US/docs/Web/HTML/Element/input#attr-name). Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.
 
-When using HTML's native radio button, [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio),  the radio group is defined by giving each of radio buttons in the group the same `name`. Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.
+It is recommended to create radio groups by using same-named HTML radio buttons, but, if you must use ARIA roles and attributes instead of semantic HTML form controls, custom buttons can and should act like native HTML radio buttons. 
 
-Similarly, when using non-semantic elements as radio buttons, you must ensure your users can only select one radio button from the group at a time. When one item in the group is checked, having their [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute set to `true`, the previously checked item becomes unchecked, with its `aria-checked` attribute becoming `false`. The `aria-checked` attribute is set on the associated `radio` roles, not on the `radiogroup` itself.
+When using non-semantic elements as radio buttons, you must ensure your users can only select one radio button from the group at a time. When one item in the group is checked, having their [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute set to `true`, the previously checked item becomes unchecked, with its `aria-checked` attribute becoming `false`. The `aria-checked` attribute is set on the associated `radio` roles, not on the `radiogroup` itself.
 
-Some radiogroup implementations initialize the set with all buttons in the unchecked state. Once a radio in a radiogroup is checked, it is generally not possible to return to an all-unchecked state.
+Some radio group implementations initialize the set with all buttons in the unchecked state. Once a `radio` in a `radiogroup` is checked, it is generally not possible to return to an all-unchecked state.
 
-The radiogroup must have an accessible name either by a visible label referenced by [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or has a label specified with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label). If elements provide additional information about the radio group, those elements are referenced by the `radiogroup` with the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) property.
+The `radiogroup` must have an accessible name either by a visible label referenced by [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or has a label specified with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label). If elements provide additional information about the radio group, those elements are referenced by the `radiogroup` with the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) property.
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
+- [`radio`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role) role
   - : One of a group of checkable buttons, in a `radiogroup`, where no more than one of the buttons can be checked at a time.
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) / [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
   - : The radiogroup must have an accessible name either by a visible label referenced by `aria-labelledby` or has a label specified with `aria-label`.
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 
-  - : Reference to element providing additional information about the radio group
+  - : Reference to elements providing additional information about the radio group
 - [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required)
   - : Indicates that one `radio` within the group must have `aria-checked="true"` set before the form may be submitted.
 - [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
@@ -39,20 +39,32 @@ The radiogroup must have an accessible name either by a visible label referenced
 
 ### Keyboard interactions
 
-For radio buttons in a radio group that is NOT in a toolbar, the following keyboard interactions must be supported:
+For radio buttons in a radio group that is NOT in a [`toolbar`](en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role), the following keyboard interactions must be supported:
 
-| Key(s) | Action |
-| --------------------------   | --------------------------|
-| <kbd>Tab</kbd> and <kbd>Shift + Tab</kbd> |  Move focus into and out of the radiogroup. When focus moves into a radio group, if a radio button is checked, focus is set on the checked button. If none of the radio buttons are checked, focus is set on the first radio button in the group. |
-|<kbd>Space</kbd>  | Checks the focused radio button if it is not already checked. |
-|<kbd>Right Arrow</kbd> and <kbd>Down Arrow</kbd> | Move focus to the next radio button in the group, uncheck the previously focused button, and check the newly focused button. If focus is on the last button, focus moves to the first button. |
-|<kbd>Left Arrow</kbd> and <kbd>Up Arrow</kbd> | move focus to the previous radio button in the group, uncheck the previously focused button, and check the newly focused button. If focus is on the first button, focus moves to the last button.|
+- <kbd>Tab</kbd> and <kbd>Shift + Tab</kbd> 
+  - : Move focus into and out of the radiog roup. When focus moves into a radio group, if a radio button is checked, focus is set on the checked button. If none of the radio buttons are checked, focus is set on the first radio button in the group. 
+- <kbd>Space</kbd>  
+  - : Checks the focused radio button if it is not already checked. 
+- <kbd>Right Arrow</kbd> and <kbd>Down Arrow</kbd>
+  - : Moves focus to the next radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the last button, focus moves to the first button. 
+- <kbd>Left Arrow</kbd> and <kbd>Up Arrow</kbd> 
+  - : Moves focus to the previous radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the first button, focus moves to the last button.
 
-Arrow keys are used to navigate among elements of a toolbar. When a radio group is nested inside a toolbar, users need to be able to navigate among all toolbar elements, including the radio buttons, without changing which radio button is checked. So, when navigating through a radio group in a toolbar with arrow keys, the button that is checked does not change. Rather, when inside a toolbar, the <kbd>Space</kbd> and <kbd>Enter</kbd> keys check the focused radio button if it is not already checked, and <kbd>Tab</kbd> moves focus into and out of the tool bar.
+Arrow keys are used to navigate among elements of a toolbar. When a radio group is nested inside a toolbar, users need to be able to navigate among all toolbar elements, including the radio buttons, without changing which radio button is checked. So, when navigating through a radio group in a toolbar with arrow keys, the button that is checked does not change. Rather, when inside a toolbar, the <kbd>Space</kbd> and <kbd>Enter</kbd> keys check the focused radio button if it is not already checked, with <kbd>Tab</kbd> moving focus into and out of the toolbar.
 
-### Required JavaScript and CSS features
+### Required JavaScript features
 
-Use the  `[aria-checked="true"]` attribute selector to style the checked state of checked radio buttons.  Use CSS `:hover` and `:focus` pseudo-classes for styling visual keyboard focus and hover.The focus and hover effect should encompass both the radio button and label to make it easier to perceive which option is being chosen and to indicate that clicking either the label or button will activate the radio button. Make sure to also change the cursor to a pointer when hovering over the radio button to help people identify the labels and radios as interactive elements.
+User interactions for radio groups must replicate the user interaction of a user entering into a group of same-named HTML radio buttons. Keyboard events for tabs, space, and arrow keys must be captured. Click events on both the radio elements and their associated labels must also be captured. Additionally, focus must be managed. 
+
+While generally moving off an a focused element brings you to the next focusable element in the DOM order, using the arrow keys to navigate thru a group of radio button keeps you in the group, moving focus to the first radio button when the <kbd>Right Arrow</kbd> or <kbd>Down Arrow</kbd> is released when focus was on the last radio in the group, and moving to the last radio if the <kbd>Left Arrow</kbd> or <kbd>Up Arrow</kbd> is released if focus was on the first radio. Managing roving [`tabindex`](/Web/HTML/Global_attributes/tabindex) is one method to manage arrow key events.
+
+### Required CSS features
+
+Use the  `[aria-checked="true"]` [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to style the checked state of checked radio buttons.  
+
+Use CSS {{CSSXRef(':hover')}} and {{CSSXRef(':focus')}} pseudo-classes for styling visual keyboard focus and hover. The focus and hover effect should encompass both the radio button and label to make it easier to perceive which option is being chosen and to indicate that clicking either the label or button will activate the radio button. 
+
+Make sure to also change the {{CSSXRef('cursor')}} to a pointer when hovering over the radio button to help people identify the labels and radios as interactive elements.
 
 ## Examples
 
