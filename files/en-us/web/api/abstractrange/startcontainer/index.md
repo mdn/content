@@ -18,7 +18,7 @@ The {{domxref("Node")}} inside which the start position of the range is found.
 ## Example
 
 ```js
-let startNode = range.startContainer
+let startNode = range.startContainer;
 ```
 ## Specifications
 
