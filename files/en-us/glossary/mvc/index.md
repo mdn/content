@@ -12,9 +12,9 @@ tags:
 
 The three parts of the MVC software-design pattern can be described as follows:
 
-1.  Model: Manages data and business logic.
-2.  View: Handles layout and display.
-3.  Controller: Routes commands to the model and view parts.
+1. Model: Manages data and business logic.
+2. View: Handles layout and display.
+3. Controller: Routes commands to the model and view parts.
 
 ## Model View Controller example
 

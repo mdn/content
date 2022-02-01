@@ -43,7 +43,7 @@ To get this assessment started, you should:
 - Go and grab the [HTML file for the exercise](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/index.html), and the [associated image file](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/chris.jpg), and save them in a new directory on your local computer. If you want to use your own image file and fill your own name in, you are welcome to — just make sure the image is square.
 - Grab the [CSS resources text file](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/style-resources.txt) — this contains a set of raw selectors and rulesets that you'll need to study and combine to answer part of this assessment.
 
-Alternatively, you could use a site like [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/) to do your assessment. You could paste the HTML and fill in the CSS into one of these online editors, and use [this URL](https://mdn.github.io/learning-area/css/introduction-to-css/fundamental-css-comprehension/chris.jpg) to point the `<img>` element to the image file. If the online editor you are using doesn't have a separate CSS panel, feel free to put it in a `<style>` element in the head of the document.
+Alternatively, you could use a site like [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/) to do your assessment. You could paste the HTML and fill in the CSS into one of these online editors, and use [this URL](https://mdn.github.io/learning-area/css/introduction-to-css/fundamental-css-comprehension/chris.jpg) to point the `<img>` element to the image file. If the online editor you are using doesn't have a separate CSS panel, feel free to put it in a `<style>` element in the head of the document.
 
 > **Note:** If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
@@ -101,8 +101,8 @@ The following screenshot shows an example of what the finished design should loo
 
 If you would like your work assessed, or are stuck and want to ask for help:
 
-1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
 
     - A descriptive title such as "Assessment wanted for Fundamental CSS comprehension".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.

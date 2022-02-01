@@ -35,12 +35,12 @@ Try updating the live code below to recreate the finished example:
 
 ## CSS accessibility 2
 
-In this next task you are presented with a simple bit of content — just headings and paragraphs. There are  accessibility issues with the colors and sizing of the text; we'd like you to:
+In this next task you are presented with a simple bit of content — just headings and paragraphs. There are accessibility issues with the colors and sizing of the text; we'd like you to:
 
-1.  Explain what the problems are, and what the guidelines are that state the acceptable values for color and sizing.
-2.  Select new values for the color and font-size that fix the problem.
-3.  Update the CSS with these new values to fix the problem.
-4.  Test the code to make sure the problem is now fixed. Explain what tools or methods you used to select the new values and test the code.
+1. Explain what the problems are, and what the guidelines are that state the acceptable values for color and sizing.
+2. Select new values for the color and font-size that fix the problem.
+3. Update the CSS with these new values to fix the problem.
+4. Test the code to make sure the problem is now fixed. Explain what tools or methods you used to select the new values and test the code.
 
 Try updating the live code below to recreate the finished example:
 
@@ -66,8 +66,8 @@ You can practice these examples in the Interactive Editors above.
 
 If you would like your work assessed, or are stuck and want to ask for help:
 
-1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
 
     - A descriptive title such as "Assessment wanted for CSS accessibility 1 skill test".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
