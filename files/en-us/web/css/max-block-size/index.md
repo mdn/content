@@ -57,15 +57,15 @@ max-block-size: unset;
 The `max-block-size` property's value can be any value that's legal for the {{cssxref("max-width")}} and {{cssxref("max-height")}} properties:
 
 - {{cssxref("&lt;length&gt;")}}
-  - : Defines the `max-width` as an absolute value.
+  - : Defines the `max-block-size` as an absolute value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Defines the `max-width` as a percentage of the containing block's width.
+  - : Defines the `max-block-size` as a percentage of the containing block's size in block axis.
 - `none`
   - : No limit on the size of the box.
 - `max-content`
-  - : The intrinsic preferred `max-width`.
+  - : The intrinsic preferred `max-block-size`.
 - `min-content`
-  - : The intrinsic minimum `max-width`.
+  - : The intrinsic minimum `max-block-size`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 
