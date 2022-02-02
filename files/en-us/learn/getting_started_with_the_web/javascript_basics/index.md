@@ -77,19 +77,17 @@ To give you a better understanding of how JavaScript works, let's explain some o
 
 ### Variables
 
-{{Glossary("Variable", "Variables")}} are containers that store values. You start by declaring a variable with the [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) (less recommended, dive deeper for the explanation) or the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) keyword, followed by the name you give to the variable:
+{{Glossary("Variable", "Variables")}} are containers that store values. You start by declaring a variable with the [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) keyword, followed by the name you give to the variable:
 
 ```js
 let myVariable;
 ```
 
-> **Note:** A semicolon at the end of a line indicates where a statement ends. It is only required when you need to separate statements on a single line. However, some people believe it's good practice to have semicolons at the end of each statement. There are other rules for when you should and shouldn't use semicolons. For more details, see [Your Guide to Semicolons in JavaScript](https://news.codecademy.com/your-guide-to-semicolons-in-javascript/).
+A semicolon at the end of a line indicates where a statement ends. It is only required when you need to separate statements on a single line. However, some people believe it's good practice to have semicolons at the end of each statement. There are other rules for when you should and shouldn't use semicolons. For more details, see [Your Guide to Semicolons in JavaScript](https://news.codecademy.com/your-guide-to-semicolons-in-javascript/).
 
-> **Note:** You can name a variable nearly anything, but there are some restrictions. (See [this section about naming rules](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variables).) If you are unsure, you can [check your variable name](https://mothereff.in/js-variables) to see if it's valid.
+You can name a variable nearly anything, but there are some restrictions. (See [this section about naming rules](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variables).) If you are unsure, you can [check your variable name](https://mothereff.in/js-variables) to see if it's valid.
 
-> **Note:** JavaScript is case sensitive. This means `myVariable` is not the same as `myvariable`. If you have problems in your code, check the case!
-
-> **Note:** For more details about the difference between `var` and `let`, see [The difference between var and let](/en-US/docs/Learn/JavaScript/First_steps/Variables#the_difference_between_var_and_let).
+JavaScript is case sensitive. This means `myVariable` is not the same as `myvariable`. If you have problems in your code, check the case!
 
 After declaring a variable, you can give it a value:
 
@@ -293,15 +291,15 @@ The expression inside the `if( ... )` is the test. This uses the identity operat
 
 ### Functions
 
-{{Glossary("Function", "Functions")}} are a way of packaging functionality that you wish to reuse. It's possible to define a body of code as a function that executes when you call the function name in your code. This is a good alternative to repeatedly writing the same code. You have already seen some uses of functions previously. For example:
+{{Glossary("Function", "Functions")}} are a way of packaging functionality that you wish to reuse. It's possible to define a body of code as a function that executes when you call the function name in your code. This is a good alternative to repeatedly writing the same code. You have already seen some uses of functions. For example:
 
-1. ```js
-    let myVariable = document.querySelector('h1');
-    ```
+```js
+let myVariable = document.querySelector('h1');
+```
 
-2. ```js
-    alert('hello!');
-    ```
+```js
+alert('hello!');
+```
 
 These functions, `document.querySelector` and `alert`, are built into the browser.
 
@@ -333,27 +331,39 @@ multiply(0.5, 3);
 Real interactivity on a website requires event handlers. These are code structures that listen for activity in the browser, and run code in response. The most obvious example is handling the [click event](/en-US/docs/Web/API/Element/click_event), which is fired by the browser when you click on something with your mouse. To demonstrate this, enter the following into your console, then click on the current webpage:
 
 ```js
-document.querySelector('html').onclick = function() {
-    alert('Ouch! Stop poking me!');
-}
+document.querySelector('html').addEventListener('click', function() {
+  alert('Ouch! Stop poking me!');
+});
 ```
 
-There are many ways to attach an event handler to an element. Here we select the {{htmlelement("html")}} element, setting its [`onclick`](/en-US/docs/Web/API/GlobalEventHandlers/onclick) handler property equal to an anonymous (i.e. nameless) function, which contains the code we want the click event to run.
+There are many ways to attach an event handler to an element. Here we select the {{htmlelement("html")}} element. We then call its [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) function, passing in the name of the event to listen to (`'click'`) and a function to run when the event happens.
 
 Note that
 
 ```js
-document.querySelector('html').onclick = function() {};
+document.querySelector('html').addEventListener('click', function() {
+  alert('Ouch! Stop poking me!');
+});
 ```
 
 is equivalent to
 
 ```js
 let myHTML = document.querySelector('html');
-myHTML.onclick = function() {};
+myHTML.addEventListener('click', function() {
+  alert('Ouch! Stop poking me!');
+});
 ```
 
 It's just shorter.
+
+The functions we just passed to `addEventListener()` here are called *anonymous functions*, because they don't have a name. There's an alternative way of writing anonymous functions, which we call an *arrow function*. An arrow function uses `() =>` instead of `function ()`:
+
+```js
+document.querySelector('html').addEventListener('click', () => {
+  alert('Ouch! Stop poking me!');
+});
+```
 
 ## Supercharging our example website
 
@@ -491,6 +501,6 @@ We have just scratched the surface of JavaScript. If you enjoyed playing, and wi
 - [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
 - [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
 - [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+- **JavaScript basics**
 - [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
 - [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
