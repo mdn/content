@@ -19,6 +19,8 @@ The **`OrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/S
 
 If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
+{{InheritanceDiagram}}
+
 ## Interfaces based on OrientationSensor
 
 Below is a list of interfaces based on the OrientationSensor interface.
