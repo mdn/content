@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Date.UTC
 ---
 {{JSRef}}
 
-The **`Date.UTC()`** method accepts parameters similar to the
+The **`Date.UTC()`** method accepts parameters similar to the
 {{jsxref("Date")}} constructor, but treats them as UTC. It returns the number of
 milliseconds since January 1, 1970, 00:00:00 UTC.
 
@@ -69,8 +69,8 @@ converted to the year `1995`.
 The `UTC()` method differs from the {{jsxref("Date")}} constructor in two
 ways:
 
-1.  `Date.UTC()` uses universal time instead of the local time.
-2.  `Date.UTC()` returns a time value as a number instead of creating a
+1. `Date.UTC()` uses universal time instead of the local time.
+2. `Date.UTC()` returns a time value as a number instead of creating a
     {{jsxref("Date")}} object.
 
 If a parameter is outside of the expected range, the `UTC()` method updates
@@ -106,7 +106,7 @@ let utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
 
 When providing less than two arguments to `Date.UTC()`, ECMAScript 2017
 requires that {{jsxref("NaN")}} is returned. Engines that weren't supporting this
-behavior have been updated (see [bug 1050755](https://bugzilla.mozilla.org/show_bug.cgi?id=1050755), [ecma-262 #642](https://github.com/tc39/ecma262/pull/642)).
+behavior have been updated (see [bug 1050755](https://bugzilla.mozilla.org/show_bug.cgi?id=1050755), [ecma-262 #642](https://github.com/tc39/ecma262/pull/642)).
 
 ```js
 Date.UTC();

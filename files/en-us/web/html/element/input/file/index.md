@@ -82,9 +82,9 @@ A file input's {{htmlattrxref("value", "input")}} attribute contains a {{domxref
 
 > **Note:**
 >
-> 1.  If multiple files are selected, the string represents the first selected file. JavaScript can access the other files [through the input's `files` property](/en-US/docs/Web/API/File/Using_files_from_web_applications#getting_information_about_selected_files).
-> 2.  If no file is yet selected, the string is `""` (empty).
-> 3.  The string [is prefixed with `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly), to prevent malicious software from guessing the user's file structure.
+> 1. If multiple files are selected, the string represents the first selected file. JavaScript can access the other files [through the input's `files` property](/en-US/docs/Web/API/File/Using_files_from_web_applications#getting_information_about_selected_files).
+> 2. If no file is yet selected, the string is `""` (empty).
+> 3. The string [is prefixed with `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly), to prevent malicious software from guessing the user's file structure.
 
 ## Additional attributes
 
@@ -236,14 +236,14 @@ Because of this, you should make sure that the `accept` attribute is backed up b
 
 ### Notes
 
-1.  You cannot set the value of a file picker from a script — doing something like the following has no effect:
+1. You cannot set the value of a file picker from a script — doing something like the following has no effect:
 
     ```js
     const input = document.querySelector("input[type=file]");
     input.value = "foo";
     ```
 
-2.  When a file is chosen using an `<input type="file">`, the real path to the source file is not shown in the input's `value` attribute for obvious security reasons. Instead, the filename is shown, with `C:\fakepath\` appended to the beginning of it. There are some historical reasons for this quirk, but it is supported across all modern browsers, and in fact is [defined in the spec](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
+2. When a file is chosen using an `<input type="file">`, the real path to the source file is not shown in the input's `value` attribute for obvious security reasons. Instead, the filename is shown, with `C:\fakepath\` appended to the beginning of it. There are some historical reasons for this quirk, but it is supported across all modern browsers, and in fact is [defined in the spec](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
 
 ## Examples
 

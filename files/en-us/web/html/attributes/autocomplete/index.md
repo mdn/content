@@ -33,9 +33,9 @@ For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute
 
 > **Note:** In order to provide autocompletion, user-agents might require `<input>`/`<select>`/`<textarea>` elements to:
 >
-> 1.  Have a `name` and/or `id` attribute
-> 2.  Be descendants of a `<form>` element
-> 3.  The form to have a {{HTMLElement("input/submit", "submit")}} button
+> 1. Have a `name` and/or `id` attribute
+> 2. Be descendants of a `<form>` element
+> 3. The form to have a {{HTMLElement("input/submit", "submit")}} button
 
 ## Values
 

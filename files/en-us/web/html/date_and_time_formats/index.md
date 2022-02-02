@@ -369,10 +369,10 @@ A time zone offset string specifies the offset in either a positive or a negativ
 
 The time zone string is appended immediately following the time in the date and time string. You can specify "`Z`" as the time zone offset string to indicate that the time is specified in UTC. Otherwise, the time zone string is constructed as follows:
 
-1.  A character indicating the sign of the offset: the plus character ("`+`", or U+002B) for time zones to the east of the prime meridian or the minus character ("`-`", or U+002D) for time zones to the west of the prime meridian.
-2.  A two-digit number of hours that the time zone is offset from the prime meridian. This value must be between `00` and `23`.
-3.  An optional colon ("`:`") character.
-4.  A two-digit number of minutes past the hour; this value must be between `00` and `59`.
+1. A character indicating the sign of the offset: the plus character ("`+`", or U+002B) for time zones to the east of the prime meridian or the minus character ("`-`", or U+002D) for time zones to the west of the prime meridian.
+2. A two-digit number of hours that the time zone is offset from the prime meridian. This value must be between `00` and `23`.
+3. An optional colon ("`:`") character.
+4. A two-digit number of minutes past the hour; this value must be between `00` and `59`.
 
 While this format allows for time zones between -23:59 and +23:59, the current range of time zone offsets is -12:00 to +14:00, and no time zones are currently offset from the hour by anything other than `00`, `30`, or `45` minutes. This may change at more or less anytime, since countries are free to tamper with their time zones at any time and in any way they wish to do so.
 

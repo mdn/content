@@ -60,13 +60,13 @@ new Promise(executor)
 
     And so, given all the above, here’s a summary of the typical flow:
 
-    1.  The operation within `executor` is asynchronous and provides a callback.
-    2.  The callback is defined within the `executor` code.
-    3.  The callback terminates by invoking `resolutionFunc`.
-    4.  The invocation of `resolutionFunc` includes a `value` parameter.
-    5.  The `value` is passed back to the tethered `Promise` object.
-    6.  The `Promise` object (asynchronously) invokes any associated `.then(handleResolved)`.
-    7.  The `value` received by `.then(handleResolved)` is passed to the invocation of `handleResolved` as an input parameter (see [Chained Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises)).
+    1. The operation within `executor` is asynchronous and provides a callback.
+    2. The callback is defined within the `executor` code.
+    3. The callback terminates by invoking `resolutionFunc`.
+    4. The invocation of `resolutionFunc` includes a `value` parameter.
+    5. The `value` is passed back to the tethered `Promise` object.
+    6. The `Promise` object (asynchronously) invokes any associated `.then(handleResolved)`.
+    7. The `value` received by `.then(handleResolved)` is passed to the invocation of `handleResolved` as an input parameter (see [Chained Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#chained_promises)).
 
 ### Return value
 

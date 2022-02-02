@@ -65,9 +65,9 @@ that have been deleted or are uninitialized. (For sparse arrays, [see example be
 
 `callbackFn` is invoked with three arguments:
 
-1.  the value of the element
-2.  the index of the element
-3.  the Array object being traversed
+1. the value of the element
+2. the index of the element
+3. the Array object being traversed
 
 If a `thisArg` parameter is provided to `forEach()`,
 it will be used as callback's `this` value. The
@@ -145,13 +145,13 @@ effects at the end of a chain.
 ## Polyfill
 
 `forEach()` was added to the ECMA-262 standard in the 5th
-edition, and it may not be present in all implementations of the standard. You can work
+edition, and it may not be present in all implementations of the standard. You can work
 around this by inserting the following code at the beginning of your scripts, allowing
-use of `forEach()` in implementations which do not natively support it.
+use of `forEach()` in implementations which do not natively support it.
 
 This algorithm is exactly the one specified in ECMA-262, 5th edition,
 assuming {{jsxref("Object")}} and {{jsxref("TypeError")}} have their original values and
-that `fun.call` evaluates to the original value of
+that `fun.call` evaluates to the original value of
 {{jsxref("Function.prototype.call()")}}.
 
 ```js
