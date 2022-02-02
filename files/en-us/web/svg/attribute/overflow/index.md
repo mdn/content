@@ -19,7 +19,7 @@ This attribute has the same parameter values and meaning as the {{cssxref("overf
 
 > **Note:** Although the initial value for overflow is `auto`, it is overwritten in the User Agent style sheet for the {{SVGElement("svg")}} element when it is not the root element of a stand-alone document, the {{SVGElement("pattern")}} element, and the {{SVGElement("marker")}} element to be hidden by default.
 
-> **Note:** As a presentation attribute, `overflow` can be used as a CSS property. See the {{cssxref("opacity", "CSS opacity")}} property for more information.
+> **Note:** As a presentation attribute, `overflow` can be used as a CSS property. See the CSS {{cssxref("overflow")}} property for more information.
 
 You can use this attribute with the following SVG elements:
 
