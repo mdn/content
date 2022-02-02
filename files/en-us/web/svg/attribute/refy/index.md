@@ -11,8 +11,8 @@ The **`refY`** attribute defines the y coordinate of an element’s reference po
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("marker")}}
-*   {{SVGElement("symbol")}}
+* {{SVGElement("marker")}}
+* {{SVGElement("symbol")}}
 
 ## marker
 
@@ -39,18 +39,18 @@ For {{SVGElement("marker")}}, `refY` defines the y coordinate of the marker’s 
   </tbody>
 </table>
 
-*   `<length-percentage>`
-    *   : Lengths are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
+* `<length-percentage>`
+    * : Lengths are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 
         Percentage values are interpreted as being a percentage of the {{SVGAttr("viewBox")}} height.
-*   `<number>`
-    *   : Numbers are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
-*   `top`
-    *   : The reference point of the marker is placed at the top edge of the shape.
-*   `center`
-    *   : The reference point of the marker is placed at the vertical center of the shape.
-*   `bottom`
-    *   : The reference point of the marker is placed at the bottom edge of the shape.
+* `<number>`
+    * : Numbers are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
+* `top`
+    * : The reference point of the marker is placed at the top edge of the shape.
+* `center`
+    * : The reference point of the marker is placed at the vertical center of the shape.
+* `bottom`
+    * : The reference point of the marker is placed at the bottom edge of the shape.
 
 ## symbol
 
@@ -80,18 +80,18 @@ Unlike other positioning attributes, `refY` is interpreted as being in the coord
   </tbody>
 </table>
 
-*   `<length-percentage>`
-    *   : Lengths are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
+* `<length-percentage>`
+    * : Lengths are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 
         Percentage values are interpreted as being a percentage of the {{SVGAttr("viewBox")}} height.
-*   `<number>`
-    *   : Numbers are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
-*   `top`
-    *   : The reference point of the marker is placed at the top edge of the shape.
-*   `center`
-    *   : The reference point of the marker is placed at the vertical center of the shape.
-*   `bottom`
-    *   : The reference point of the marker is placed at the bottom edge of the shape.
+* `<number>`
+    * : Numbers are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
+* `top`
+    * : The reference point of the marker is placed at the top edge of the shape.
+* `center`
+    * : The reference point of the marker is placed at the vertical center of the shape.
+* `bottom`
+    * : The reference point of the marker is placed at the bottom edge of the shape.
 
 ## Specifications
 
@@ -133,4 +133,4 @@ Unlike other positioning attributes, `refY` is interpreted as being in the coord
 
 ## See also
 
-*   {{SVGAttr("refX")}}
+* {{SVGAttr("refX")}}
