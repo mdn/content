@@ -39,7 +39,7 @@ We first create a controller using the {{domxref("AbortController.AbortControlle
 When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{signal}` below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.
 
 ```js
-var controller = new AbortController();
+var controller;
 
 var downloadBtn = document.querySelector('.download');
 var abortBtn = document.querySelector('.abort');
@@ -55,8 +55,9 @@ function fetchVideo() {
   controller = new AbortController();  // Set new controller for this request.
   var signal = controller.signal;
   fetch(url, { signal }).then(function(response) {
+    // Use response here
   }).catch(function(e) {
-   reports.textContent = 'Download error: ' + e.message;
+    reports.textContent = 'Download error: ' + e.message;
   })
 }
 ```
