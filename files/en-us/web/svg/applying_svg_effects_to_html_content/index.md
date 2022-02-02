@@ -116,7 +116,7 @@ You can make changes to the SVG in real time and see them immediately affect the
 ```js
 function toggleRadius() {
   var circle = document.getElementById("circle");
-  circle.r.baseVal.value = 0.40 - circle.r.baseVal.value;
+  circle.r.baseVal.value = 0.40 - circle.r.baseVal.value;
 }
 ```
 
@@ -168,20 +168,20 @@ And some more filters:
 ```html
 <svg height="0">
   <filter id="f3">
-    <feConvolveMatrix filterRes="100 100" style="color-interpolation-filters:sRGB"
-      order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"/>
-  </filter>
+    <feConvolveMatrix filterRes="100 100" style="color-interpolation-filters:sRGB"
+      order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"/>
+  </filter>
   <filter id="f4">
-    <feSpecularLighting surfaceScale="5" specularConstant="1"
-                        specularExponent="10" lighting-color="white">
-      <fePointLight x="-5000" y="-10000" z="20000"/>
-    </feSpecularLighting>
+    <feSpecularLighting surfaceScale="5" specularConstant="1"
+                        specularExponent="10" lighting-color="white">
+      <fePointLight x="-5000" y="-10000" z="20000"/>
+    </feSpecularLighting>
   </filter>
   <filter id="f5">
-    <feColorMatrix values="1 0 0 0 0
-                           0 1 0 0 0
-                           0 0 1 0 0
-                           0 1 0 0 0" style="color-interpolation-filters:sRGB"/>
+    <feColorMatrix values="1 0 0 0 0
+                           0 1 0 0 0
+                           0 0 1 0 0
+                           0 1 0 0 0" style="color-interpolation-filters:sRGB"/>
   </filter>
 </svg>
 ```
@@ -232,7 +232,7 @@ By creating the text using SVG elements combined with HTML you can make a variet
 
 ```html
 <svg height="60" width="200">
-  <text x="0" y="15" fill="blue" transform="rotate(30 20,50)">Example text</text>
+  <text x="0" y="15" fill="blue" transform="rotate(30 20,50)">Example text</text>
 </svg>
 ```
 
@@ -250,5 +250,5 @@ The SVG is then imported from a file named `resources.svg`, using the clip path 
 
 ## See also
 
-*   [SVG](/en-US/docs/SVG)
-*   [SVG Effects for HTML Content](http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content\_04.html) (blog post)
+* [SVG](/en-US/docs/SVG)
+* [SVG Effects for HTML Content](http://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content\_04.html) (blog post)

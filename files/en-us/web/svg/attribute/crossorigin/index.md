@@ -87,4 +87,4 @@ https://github.com/mdn/browser-compat-data/blob/178137547bc29a79b712cec221af0993
 
 ## See also
 
-*   [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
+* [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
