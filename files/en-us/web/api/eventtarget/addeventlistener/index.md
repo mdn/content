@@ -66,20 +66,19 @@ addEventListener(type, listener, useCapture);
     - `capture`
       - : A boolean value indicating that events of this type will be dispatched
         to the registered `listener` before being dispatched to any
-        `EventTarget` beneath it in the DOM tree.
+        `EventTarget` beneath it in the DOM tree. If not specified, defaults to `false`.
     - `once`
       - : A boolean value indicating that the `listener`
         should be invoked at most once after being added. If `true`, the
-        `listener` would be automatically removed when invoked.
+        `listener` would be automatically removed when invoked. If not specified, defaults to `false`.
     - `passive`
       - : A boolean value that, if `true`, indicates that the function
         specified by `listener` will never call
         {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener
         does call `preventDefault()`, the user agent will do nothing other than
-        generate a console warning.
-        See [Improving scrolling performance with passive listeners](#improving_scrolling_performance_with_passive_listeners) to learn more.
+        generate a console warning. If not specified, defaults to `false` – except that in browsers other than Safari and Internet Explorer, defaults to `true` for the {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events on the document-level nodes {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. See [Improving scrolling performance with passive listeners](#improving_scrolling_performance_with_passive_listeners) to learn more.
     - `signal`
-      - : An {{domxref("AbortSignal")}}. The listener will be removed when the given `AbortSignal` object's {{domxref("AbortController/abort()", "abort()")}} method is called.
+      - : An {{domxref("AbortSignal")}}. The listener will be removed when the given `AbortSignal` object's {{domxref("AbortController/abort()", "abort()")}} method is called. If not specified, no `AbortSignal` is associated with the listener.
 
 - `useCapture` {{optional_inline}}
 
@@ -812,7 +811,7 @@ handling certain touch events (among others) to block the browser's main thread 
 is attempting to handle scrolling, resulting in possibly enormous reduction in
 performance during scroll handling.
 
-To prevent this problem, some browsers (specifically, Chrome and Firefox) have changed
+To prevent this problem, browsers other than Safari and Internet Explorer have changed
 the default value of the `passive` option to `true` for the
 {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events on the document-level nodes
 {{domxref("Window")}}, {{domxref("Document")}}, and {{domxref("Document.body")}}. This
