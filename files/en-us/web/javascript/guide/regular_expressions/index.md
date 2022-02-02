@@ -379,17 +379,22 @@ If the `m` flag is used, `^` and `$` match at the start or end of any line withi
 
 #### Using the global search flag with exec()
 
-The behavior associated with the `g` flag is different when the `.exec()` method is used.
-The roles of "class" and "argument" get reversed: In the case of `.match()`, the string class (or data type) owns the method and the regular expression is just an argument, while in the case of `.exec()`, it is the regular expression that owns the method, with the string being the argument.
-Contrast this _`str.match(re)`_ versus _`re.exec(str)`_.
-The `g` flag is used with the **`.exec()`** method to get iterative progression.
+{{jsxref("RegExp.prototype.exec()")}} method with the `g` flag returns each match and its position iteratively.
 
 ```js
-var xArray; while(xArray = re.exec(str)) console.log(xArray);
-// produces:
-// ["fee ", index: 0, input: "fee fi fo fum"]
-// ["fi ", index: 4, input: "fee fi fo fum"]
-// ["fo ", index: 7, input: "fee fi fo fum"]
+const str = 'fee fi fo fum';
+const re = /\w+\s/g;
+
+console.log(re.exec(str)); // ["fee ", index: 0, input: "fee fi fo fum"]
+console.log(re.exec(str)); // ["fi ", index: 4, input: "fee fi fo fum"]
+console.log(re.exec(str)); // ["fo ", index: 7, input: "fee fi fo fum"]
+console.log(re.exec(str)); // null
+```
+
+In contrast, {{jsxref("String.prototype.match()")}} method returns all matches at once, but without their position.
+
+```js
+console.log(str.match(re)); // ["fee ", "fi ", "fo "]
 ```
 
 ## Examples
