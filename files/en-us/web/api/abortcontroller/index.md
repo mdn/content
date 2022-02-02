@@ -47,7 +47,7 @@ var abortBtn = document.querySelector('.abort');
 downloadBtn.addEventListener('click', fetchVideo);
 
 abortBtn.addEventListener('click', function() {
-  controller?.abort();
+  if (controller) { controller.abort(); }
   console.log('Download aborted');
 });
 
