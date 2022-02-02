@@ -1,5 +1,5 @@
 ---
-title: Using Fetch API
+title: Using the Fetch API
 slug: Web/API/Fetch_API/Using_Fetch
 tags:
   - API
