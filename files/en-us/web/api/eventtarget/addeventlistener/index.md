@@ -177,7 +177,7 @@ means that if the browser checks the value of the `passive` property on the
 set to `true`; otherwise, it will remain `false`. We then call
 `addEventListener()` to set up a fake event handler, specifying those
 options, so that the options will be checked if the browser recognizes an object as the
-third parameter. Then, we call `removeEventListener()` to clean up after
+third parameter. Then, we call [`removeEventListener()`](/en-US/docs/Web/API/EventTarget/removeEventListener) to clean up after
 ourselves. (Note that `handleEvent()` is ignored on event listeners that
 aren't called.)
 
