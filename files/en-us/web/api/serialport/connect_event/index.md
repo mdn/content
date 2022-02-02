@@ -28,13 +28,35 @@ onconnect = event => { };
 
 A generic {{domxref("Event")}}. 
 
-Bubbles to {{domxref("Serial")}} (`event.port` is available representing the {{domxref("SerialPort")}}).
+## Bubbling
+
+This event bubbles to {{domxref("Serial")}}. The `event.target` property refers to the {{domxref('SerialPort')}} object that bubbles up.
+
+For more information, see [Event bubbling and capture](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture).
 
 ## Examples
 
+### Notify when a specific port connects
+
+The {{domxref("Serial.requestPort()")}} method returns a {{jsxref("Promise")}} that resolves with a {{domxref("SerialPort")}} chosen by the user.
+
+```js
+// Prompt user to choose a serial port
+const port = await navigator.serial.requestPort();
+
+port.addEventListener('connect', event => {
+  // notify that the chosen port is connected
+});
+```
+
+### Listening for any newly-connected ports
+
+The `connect` event bubbles up to the {{domxref("Serial")}} object where you can listen for any newly-connected ports.
+
 ```js
 navigator.serial.addEventListener('connect', event => {
-  // add `event.port` to the UI
+  // notify that a new port is available
+  // use `event.target` to refer to the newly-added port
 });
 ```
 

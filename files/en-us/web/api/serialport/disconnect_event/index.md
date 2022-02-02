@@ -28,13 +28,32 @@ ondisconnect = event => { };
 
 A generic {{domxref("Event")}}. 
 
-Bubbles to {{domxref("Serial")}} (`event.port` is available representing the {{domxref("SerialPort")}}).
+## Bubbling
+
+This event bubbles to {{domxref("Serial")}}. The `event.target` property refers to the {{domxref('SerialPort')}} object that bubbles up.
+
+For more information, see [Event bubbling and capture](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture).
 
 ## Examples
 
+### Notify when a specific port disconnects
+
+Here the event listener is installed on a specific {{domxref("SerialPort")}} object.
+
+```js
+port.addEventListener('disconnect', event => {
+  // notify that the port has become unavailable
+});
+```
+
+### Listening for any ports that become unavailable
+
+The `disconnect` event bubbles up to the {{domxref("Serial")}} object where you can listen for any ports that become unavailable.
+
 ```js
 navigator.serial.addEventListener('disconnect', event => {
-  // remove `event.port` from the UI
+  // notify that a port has become unavailable
+  // use `event.target` to refer to the unavailable port
 });
 ```
 
