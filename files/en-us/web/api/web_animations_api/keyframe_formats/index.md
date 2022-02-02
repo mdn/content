@@ -20,7 +20,7 @@ tags:
 
 There are two different ways to format keyframes:
 
-1.  An `array` of objects (keyframes) consisting of properties and values to iterate over. This is the canonical format returned by the {{domxref("KeyframeEffect.getKeyframes()", "getKeyframes()")}} method.
+1. An `array` of objects (keyframes) consisting of properties and values to iterate over. This is the canonical format returned by the {{domxref("KeyframeEffect.getKeyframes()", "getKeyframes()")}} method.
 
     ```js
     element.animate([
@@ -59,7 +59,7 @@ There are two different ways to format keyframes:
 
     In this example, the specified easing only applies from the keyframe where it is specified until the next keyframe. Any `easing` value specified on the `options` argument, however, applies across a single iteration of the animation — for the entire duration.
 
-2.  An `object` containing key-value pairs consisting of the property to animate and an `array` of values to iterate over.
+2. An `object` containing key-value pairs consisting of the property to animate and an `array` of values to iterate over.
 
     ```js
     element.animate({
@@ -119,7 +119,7 @@ The following special attributes may also be specified:
 - easing
   - : The [timing function](/en-US/docs/Web/CSS/easing-function) used from this keyframe until the next keyframe in the series.
 - composite
-  - : The {{domxref("KeyframeEffect.composite")}} operation used to combine the values specified in this keyframe with the underlying value. This will be `auto` if the composite operation specified on the effect is being used.
+  - : The {{domxref("KeyframeEffect.composite")}} operation used to combine the values specified in this keyframe with the underlying value. This will be `auto` if the composite operation specified on the effect is being used.
 
 ## Specifications
 

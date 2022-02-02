@@ -101,11 +101,11 @@ Inherited into roles:
 
 ## See Also
 
--  [`aria-rowindextext`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowindextext)
--  [`aria-rowcount`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowcount)
--  [`aria-rowspan`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowspan)
--  [`aria-colindex`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-colindex)
--  The [`rowspan`](/en-US/docs/Web/HTML/Element/td#attr-rowspan) attribute on {{HTMLElement('td')}}
+- [`aria-rowindextext`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowindextext)
+- [`aria-rowcount`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowcount)
+- [`aria-rowspan`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowspan)
+- [`aria-colindex`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-colindex)
+- The [`rowspan`](/en-US/docs/Web/HTML/Element/td#attr-rowspan) attribute on {{HTMLElement('td')}}
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>

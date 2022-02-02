@@ -227,9 +227,9 @@ The {{domxref("DataTransfer.dropEffect","dropEffect")}} property is used to cont
 
 Three effects may be defined:
 
-1.  **`copy`** indicates that the dragged data will be copied from its present location to the drop location.
-2.  **`move`** indicates that the dragged data will be moved from its present location to the drop location.
-3.  **`link`** indicates that some form of relationship or connection will be created between the source and drop locations.
+1. **`copy`** indicates that the dragged data will be copied from its present location to the drop location.
+2. **`move`** indicates that the dragged data will be moved from its present location to the drop location.
+3. **`link`** indicates that some form of relationship or connection will be created between the source and drop locations.
 
 During the drag operation, drag effects may be modified to indicate that certain effects are allowed at certain locations.
 

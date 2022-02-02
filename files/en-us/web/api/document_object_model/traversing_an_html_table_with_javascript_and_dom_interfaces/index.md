@@ -68,39 +68,39 @@ function generate_table() {
 
 Note the order in which we created the elements and the text node:
 
-1.  First we created the `<table>` element.
-2.  Next, we created the `<tbody>` element, which is a child of the `<table>` element.
-3.  Next, we used a loop to create the `<tr>` elements, which are children of the `<tbody>` element.
-4.  For each `<tr>` element, we used a loop to create the `<td>` elements, which are children of `<tr>` elements.
-5.  For each `<td>` element, we then created the text node with the table cell's text.
+1. First we created the `<table>` element.
+2. Next, we created the `<tbody>` element, which is a child of the `<table>` element.
+3. Next, we used a loop to create the `<tr>` elements, which are children of the `<tbody>` element.
+4. For each `<tr>` element, we used a loop to create the `<td>` elements, which are children of `<tr>` elements.
+5. For each `<td>` element, we then created the text node with the table cell's text.
 
 Once we have created the `<table>`, `<tbody>`, `<tr>`, and `<td>` elements, and then the text node, we then append each object to its parent in the opposite order:
 
-1.  First, we attach each text node to its parent `<td>` element using
+1. First, we attach each text node to its parent `<td>` element using
 
     ```js
     cell.appendChild(cellText);
     ```
 
-2.  Next, we attach each `<td>` element to its parent `<tr>` element using
+2. Next, we attach each `<td>` element to its parent `<tr>` element using
 
     ```js
     row.appendChild(cell);
     ```
 
-3.  Next, we attach each `<tr>` element to the parent `<tbody>` element using
+3. Next, we attach each `<tr>` element to the parent `<tbody>` element using
 
     ```js
     tblBody.appendChild(row);
     ```
 
-4.  Next, we attach the `<tbody>` element to its parent `<table>` element using
+4. Next, we attach the `<tbody>` element to its parent `<table>` element using
 
     ```js
     tbl.appendChild(tblBody);
     ```
 
-5.  Next, we attach the `<table>` element to its parent `<body>` element using
+5. Next, we attach the `<table>` element to its parent `<body>` element using
 
     ```js
     body.appendChild(tbl);
@@ -162,7 +162,7 @@ function set_background() {
 
 In this example, we set the `myP` variable to the DOM object for the second `p` element inside the body:
 
-1.  First, we get a list of all the body elements via
+1. First, we get a list of all the body elements via
 
     ```js
     myBody = document.getElementsByTagName("body")[0]
@@ -170,13 +170,13 @@ In this example, we set the `myP` variable to the DOM object for the second `p` 
 
     Since there is only one `body` element in any valid HTML document, this list will have only one item, which we retrieve by selecting the first element in that list using `[0]`.
 
-2.  Next, we get all the `p` elements that are descendants of the `body`:
+2. Next, we get all the `p` elements that are descendants of the `body`:
 
     ```js
     myBodyElements = myBody.getElementsByTagName("p");
     ```
 
-3.  Finally, we get the second item from the list of `p` elements via
+3. Finally, we get the second item from the list of `p` elements via
 
     ```js
     myP = myBodyElements[1];

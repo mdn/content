@@ -1,7 +1,7 @@
 ---
 title: How to check the security state of an XMLHTTPRequest over SSL
 slug: >-
-  Web/API/XMLHttpRequest/How_to_check_the_secruity_state_of_an_XMLHTTPRequest_over_SSL
+  Web/API/XMLHttpRequest/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL
 ---
 Here is a an example Javascript function that prints the security details of an [XMLHTTPRequest](/en-US/docs/XMLHttpRequest) sent over SSL. The function is passed the channel property of an XMLHTTPRequest to extract the following information:
 
@@ -10,9 +10,9 @@ Here is a an example Javascript function that prints the security details of an 
 
 Notes:
 
-1.  This code requires elevated privileges to run; you can only call it from a browser extension or from a XULRunner application.
-2.  The channel property becomes available only after the request is sent and the connection was established, that is, on readyState `LOADED`, `INTERACTIVE` or `COMPLETED`.
-3.  By setting the mozBackgroundRequest property of the request object and modifying the example appropriately, you can create your own alert dialog to handle SSL exceptions in your Firefox extension or XULRunner application.
+1. This code requires elevated privileges to run; you can only call it from a browser extension or from a XULRunner application.
+2. The channel property becomes available only after the request is sent and the connection was established, that is, on readyState `LOADED`, `INTERACTIVE` or `COMPLETED`.
+3. By setting the mozBackgroundRequest property of the request object and modifying the example appropriately, you can create your own alert dialog to handle SSL exceptions in your Firefox extension or XULRunner application.
 
 ```js
 // Adapted from the patch for mozTCPSocket error reporting (bug 861196).

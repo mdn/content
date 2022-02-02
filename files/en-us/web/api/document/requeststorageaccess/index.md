@@ -21,16 +21,16 @@ access to first-party storage was granted, and rejects if access was denied.
 
 Storage access is granted based on a series of checks described here:
 
-1.  If the browser is not processing a user gesture, reject.
-2.  If the document already has been granted access, resolve.
-3.  If the document has a null origin, reject.
-4.  If the document's frame is the main frame, resolve.
-5.  If the sub frame's origin is equal to the main frame's, resolve.
-6.  If the sub frame is not sandboxed, skip to step 7.
-7.  If the sub frame doesn't have the token
+1. If the browser is not processing a user gesture, reject.
+2. If the document already has been granted access, resolve.
+3. If the document has a null origin, reject.
+4. If the document's frame is the main frame, resolve.
+5. If the sub frame's origin is equal to the main frame's, resolve.
+6. If the sub frame is not sandboxed, skip to step 7.
+7. If the sub frame doesn't have the token
     `allow-storage-access-by-user-activation`, reject.
-8.  If the sub frame's parent frame is not the top frame, reject.
-9.  Check any additional rules that the browser has. Examples: allow lists, block lists,
+8. If the sub frame's parent frame is not the top frame, reject.
+9. Check any additional rules that the browser has. Examples: allow lists, block lists,
     on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting
     the user for explicit permission. Reject if some rule is not fulfilled.
 10. Grant the document access to cookies and other site storage and store that fact for
@@ -144,7 +144,7 @@ being processed, whether the promise was fulfilled or rejected:
 ```js
 document.requestStorageAccess().then(
   () => { console.log('access granted') },
-  () => { console.log('access denied') }
+  () => { console.log('access denied') }
 );
 ```
 
@@ -152,7 +152,7 @@ document.requestStorageAccess().then(
 
 The API is currently only at the proposal stage — the standardization process has yet
 to begin. You can currently find specification details of the API at Apple's [Introducing
-Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) blog post, and the [Storage Access API proposal in the
+Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) blog post, and the [Storage Access API proposal in the
 Privacy CG](https://github.com/privacycg/storage-access).
 
 ## Browser compatibility

@@ -22,11 +22,11 @@ The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) involves handling audio o
 
 Audio nodes are linked via their inputs and outputs, forming a chain that starts with one or more sources, goes through one or more nodes, then ends up at a destination. Although, you don't have to provide a destination if you, say, just want to visualize some audio data. A simple, typical workflow for web audio would look something like this:
 
-1.  Create the audio context.
-2.  Inside the context, create sources — such as {{HTMLElement("audio")}}, oscillator, or stream.
-3.  Create effects nodes, such as reverb, biquad filter, panner, or compressor.
-4.  Choose the final destination for the audio, such as the user's computer speakers.
-5.  Establish connections from the audio sources through zero or more effects, eventually ending at the chosen destination.
+1. Create the audio context.
+2. Inside the context, create sources — such as {{HTMLElement("audio")}}, oscillator, or stream.
+3. Create effects nodes, such as reverb, biquad filter, panner, or compressor.
+4. Choose the final destination for the audio, such as the user's computer speakers.
+5. Establish connections from the audio sources through zero or more effects, eventually ending at the chosen destination.
 
 > **Note:** The number of audio channels available on a signal is frequently presented in a numeric format, such as 2.0 or 5.1. This is called {{interwiki("wikipedia", "Surround_sound#Channel_notation", "channel notation")}}. The first number is the number of full frequency range audio channels that the signal includes. The number after the period indicates the number of those channels which are reserved for low-frequency effect (LFE) outputs; these are often referred to as **subwoofers**.
 

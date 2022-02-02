@@ -18,9 +18,9 @@ The `aria-hidden` attribute can be used to hide non-interactive content from the
 
 Adding `aria-hidden="true"` to an element removes that element and all of its children from the accessibility tree. This can improve the experience for assistive technology users by hiding:
 
--  Purely decorative content, such as icons or images
--  Duplicated content, such as repeated text
--  Offscreen or collapsed content, such as menus
+- Purely decorative content, such as icons or images
+- Duplicated content, such as repeated text
+- Offscreen or collapsed content, such as menus
 
 The presence of the `aria-hidden` attribute hides content from assistive technology but doesn't visually hide anything.  
 
