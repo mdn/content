@@ -71,10 +71,10 @@ pause
 
 To use that code:
 
-1.  Save that code in a file named `sri-hash.bat` in the Windows SendTo folder in your environment (for example, `C:\Users\USER\AppData\Roaming\Microsoft\Windows\SendTo`).
-2.  Right-click a file in the File Explorer, select **Send to...**, and then select `sri-hash`. You will see the integrity value in a command box.
-3.  Select the integrity value and right-click to copy it to the Clipboard.
-4.  Press any key to dismiss the command box.
+1. Save that code in a file named `sri-hash.bat` in the Windows SendTo folder in your environment (for example, `C:\Users\USER\AppData\Roaming\Microsoft\Windows\SendTo`).
+2. Right-click a file in the File Explorer, select **Send to...**, and then select `sri-hash`. You will see the integrity value in a command box.
+3. Select the integrity value and right-click to copy it to the Clipboard.
+4. Press any key to dismiss the command box.
 
 ### Cross-Origin Resource Sharing and Subresource Integrity
 
@@ -104,11 +104,11 @@ You can use the following {{HTMLElement("script")}} element to tell a browser th
 
 Browsers handle SRI by doing the following:
 
-1.  When a browser encounters a {{HTMLElement("script")}} or {{HTMLElement("link")}} element with an `integrity` attribute, before executing the script or before applying any stylesheet specified by the {{HTMLElement("link")}} element, the browser must first compare the script or stylesheet to the expected hash given in the `integrity` value.
+1. When a browser encounters a {{HTMLElement("script")}} or {{HTMLElement("link")}} element with an `integrity` attribute, before executing the script or before applying any stylesheet specified by the {{HTMLElement("link")}} element, the browser must first compare the script or stylesheet to the expected hash given in the `integrity` value.
 
     For subresource-integrity verification of a resource served from an origin other than the document in which it’s embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
 
-2.  If the script or stylesheet doesn’t match its associated `integrity` value, the browser must refuse to execute the script or apply the stylesheet, and must instead return a network error indicating that fetching of that script or stylesheet failed.
+2. If the script or stylesheet doesn’t match its associated `integrity` value, the browser must refuse to execute the script or apply the stylesheet, and must instead return a network error indicating that fetching of that script or stylesheet failed.
 
 ## Specifications
 

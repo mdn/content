@@ -17,10 +17,10 @@ Whether we are dealing with pre-recorded audio files or live streams, the mechan
 
 To deliver video and audio, the general workflow is usually something like this:
 
-1.  Check what format the browser supports via feature detection (usually a choice of two, as stated above).
-2.  If the browser doesn't support playback of any of the provided formats natively, either present a still image or use a fallback technology to present the video.
-3.  Identify how you want to play/instantiate the media (e.g. a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
-4.  Deliver the media file to the player.
+1. Check what format the browser supports via feature detection (usually a choice of two, as stated above).
+2. If the browser doesn't support playback of any of the provided formats natively, either present a still image or use a fallback technology to present the video.
+3. Identify how you want to play/instantiate the media (e.g. a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
+4. Deliver the media file to the player.
 
 ### HTML Audio
 
@@ -113,31 +113,31 @@ We set the source of the video depending on the type of video file the browser s
 ## Web Audio API
 
 ```js
-  let context;
-  let request;
-  let source;
+let context;
+let request;
+let source;
 
-  try {
-    context = new AudioContext();
-    request = new XMLHttpRequest();
-    request.open("GET","http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",true);
-    request.responseType = "arraybuffer";
+try {
+  context = new AudioContext();
+  request = new XMLHttpRequest();
+  request.open("GET","http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",true);
+  request.responseType = "arraybuffer";
 
-    request.onload = function() {
-      context.decodeAudioData(request.response, function(buffer) {
-        source = context.createBufferSource();
-        source.buffer = buffer;
-        source.connect(context.destination);
-        // auto play
-        source.start(0); // start was previously noteOn
-      });
-    };
+  request.onload = function() {
+    context.decodeAudioData(request.response, function(buffer) {
+      source = context.createBufferSource();
+      source.buffer = buffer;
+      source.connect(context.destination);
+      // auto play
+      source.start(0); // start was previously noteOn
+    });
+  };
 
-    request.send();
+  request.send();
 
-  } catch(e) {
-    alert('web audio api not supported');
-  }
+} catch(e) {
+  alert('web audio api not supported');
+}
 ```
 
 In this example we retrieve an MP3 file via XHR, load it into a source and play it ([Try it for yourself](https://jsbin.com/facutone/1/edit?js)). Find more about Web Audio API basics in [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
@@ -241,8 +241,8 @@ You may detect click, touch and/or keyboard events to trigger actions such as pl
 A quick example — first set up your audio and custom controls in HTML:
 
 ```html
-  <audio id="my-audio" src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
-  <button id="my-control">play</button>
+<audio id="my-audio" src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
+<button id="my-control">play</button>
 ```
 
 add a bit of JavaScript to detect events to play and pause the audio:

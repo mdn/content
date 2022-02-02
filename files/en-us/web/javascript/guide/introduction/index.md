@@ -32,7 +32,7 @@ If you are new to JavaScript, start with the articles in the [learning area](/en
 
 ## What is JavaScript?
 
-JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive (e.g., having complex animations, clickable buttons, popup menus, etc.).  There are also more advanced server side versions of JavaScript such as Node.js, which allow you to add more functionality to a website than downloading files (such as realtime collaboration between multiple computers). Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.
+JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive (e.g., having complex animations, clickable buttons, popup menus, etc.). There are also more advanced server side versions of JavaScript such as Node.js, which allow you to add more functionality to a website than downloading files (such as realtime collaboration between multiple computers). Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.
 
 JavaScript contains a standard library of objects, such as `Array`, `Date`, and `Math`, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:
 
@@ -49,7 +49,7 @@ In contrast to Java's compile-time system of classes built by declarations, Java
 
 JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.
 
-Java is a class-based programming language designed for fast execution and type safety. Type safety means, for instance, that you can't cast a Java integer into an object reference or access private memory by corrupting Java bytecodes. Java's class-based model means that programs consist exclusively of classes and their methods. Java's class inheritance and strong typing generally require tightly coupled object hierarchies. These requirements make Java programming more complex than JavaScript programming.
+Java is a class-based programming language designed for fast execution and type safety. Type safety means, for instance, that you can't cast a Java integer into an object reference or access private memory by corrupting the Java bytecode. Java's class-based model means that programs consist exclusively of classes and their methods. Java's class inheritance and strong typing generally require tightly coupled object hierarchies. These requirements make Java programming more complex than JavaScript programming.
 
 In contrast, JavaScript descends in spirit from a line of smaller, dynamically typed languages such as HyperTalk and dBASE. These scripting languages offer programming tools to a much wider audience because of their easier syntax, specialized built-in functionality, and minimal requirements for object creation.
 
@@ -109,14 +109,14 @@ To get started with writing JavaScript, open the Web Console in multi-line mode,
 
 ```js
 (function(){
-  "use strict";
-  /* Start of your code */
-  function greetMe(yourName) {
+  "use strict";
+  /* Start of your code */
+  function greetMe(yourName) {
     alert('Hello ' + yourName);
   }
 
   greetMe('World');
-  /* End of your code */
+  /* End of your code */
 })();
 ```
 
@@ -124,9 +124,9 @@ Press <kbd>Cmd</kbd>+<kbd>Enter</kbd> or <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (or cl
 
 In the following pages, this guide introduces you to the JavaScript syntax and language features, so that you will be able to write more complex applications.
 
-But for now, remember to always include the `(function(){"use strict";` before your code, and add `})();` to the end of your code. The [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) and [IIFE](/en-US/docs/Glossary/IIFE) articles explain what those do, but for now they can be thought of as doing the following:
+But for now, remember to always include the `(function(){"use strict";` before your code, and add `})();` to the end of your code. The [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) and [IIFE](/en-US/docs/Glossary/IIFE) articles explain what those do, but for now they can be thought of as doing the following:
 
-1.  Prevent semantics in JavaScript that trip up beginners.
-2.  Prevent code snippets executed in the console from interacting with one-another (e.g., having something created in one console execution being used for a different console execution).
+1. Prevent semantics in JavaScript that trip up beginners.
+2. Prevent code snippets executed in the console from interacting with one-another (e.g., having something created in one console execution being used for a different console execution).
 
 {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}

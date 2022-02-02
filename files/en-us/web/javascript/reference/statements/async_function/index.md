@@ -128,17 +128,17 @@ step through the function. The return value forms the final link in the chain.
 In the following example, we successively await two promises. Progress moves through
 function `foo` in three stages.
 
-1.  The first line of the body of function `foo` is executed synchronously,
+1. The first line of the body of function `foo` is executed synchronously,
     with the await expression configured with the pending promise. Progress through
     `foo` is then suspended and control is yielded back to the function that
     called `foo`.
-2.  Some time later, when the first promise has either been fulfilled or rejected,
+2. Some time later, when the first promise has either been fulfilled or rejected,
     control moves back into `foo`. The result of the first promise fulfillment
     (if it was not rejected) is returned from the await expression. Here `1` is
     assigned to `result1`. Progress continues, and the second await expression
     is evaluated. Again, progress through `foo` is suspended and control is
     yielded.
-3.  Some time later, when the second promise has either been fulfilled or rejected,
+3. Some time later, when the second promise has either been fulfilled or rejected,
     control re-enters `foo`. The result of the second promise resolution is
     returned from the second await expression. Here `2` is assigned to
     `result2`. Control moves to the return expression (if any). The default
