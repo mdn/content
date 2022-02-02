@@ -1,5 +1,5 @@
 ---
-title: '@scroll-timeline'
+title: "@scroll-timeline"
 slug: Web/CSS/@scroll-timeline
 tags:
   - Animations
@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: css.at-rules.scroll-timeline
 ---
+
 {{CSSRef}}
 
 The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an [`AnimationTimeline`](/en-US/docs/Web/API/AnimationTimeline) whose time values are determined by scrolling progress within a scroll container and not by minutes or seconds. Once specified, a scroll timeline is associated with a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) by using the `animation-timeline` property.
@@ -34,9 +35,11 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
   - : The scrollable element which scrolling position drives the progress of the timeline. Can be:
 
     - `auto`
+
       - : The `Document` associated with the current global [Window object](/en-US/docs/Web/API/Window).
 
     - `selector("id-selector")`
+
       - : the scroll container identified by an element's id.
 
     - `none`
@@ -46,22 +49,27 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
 
   - : The scroll timeline’s orientation:
 
-	  - `auto`
+    - `auto`
+
       - : Defaults to `vertical`
 
-	  - `block`
+    - `block`
+
       - : Uses the scroll position along the block axis, conforming to writing mode and directionality.
 
-	  - `inline`
+    - `inline`
+
       - : Uses the scroll position along the inline axis, conforming to writing mode and directionality.
 
-	  - `horizontal`
+    - `horizontal`
+
       - : Uses the horizontal scroll position, regardless of writing mode or directionality.
 
-	  - `vertical`
+    - `vertical`
       - : Uses the vertical scroll position, regardless of writing mode or directionality.
 
-- `scroll-offsets` 
+- `scroll-offsets`
+
   - : Determines the scroll timeline's scroll offsets
 
     - `none`
@@ -75,7 +83,7 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
 
 To use the scroll-timeline, create a `@scroll-timeline` rule, which is used by the {{cssxref("animation-timeline")}} property to match an animations timeline to it's timeline declaration.
 
-Each `@scroll-timeline` rule includes properties to determine the source, orientation and scroll-offsets of the scroll timeline. 
+Each `@scroll-timeline` rule includes properties to determine the source, orientation and scroll-offsets of the scroll timeline.
 
 ### Scroll offsets
 
@@ -91,10 +99,7 @@ The `scroll-offset` property determines where, within the scrolling, the animati
 @scroll-timeline element-move {
   source: auto;
   orientation: vertical;
-  scroll-offsets:
-    selector(#myElement) start 0,
-    selector(#myElement) end 0
-  ;
+  scroll-offsets: selector(#myElement) start 0, selector(#myElement) end 0;
 }
 ```
 
@@ -129,7 +134,8 @@ We create a `@scroll-timeline` called `squareTimeline`, setting the `source` as 
 
 #square {
   background-color: deeppink;
-  width: 100px; height: 100px;
+  width: 100px;
+  height: 100px;
   margin-top: 100px;
   animation-name: rotateAnimation;
   animation-duration: 3s;
@@ -138,9 +144,9 @@ We create a `@scroll-timeline` called `squareTimeline`, setting the `source` as 
 }
 
 @scroll-timeline squareTimeline {
-  source: selector('#container');
+  source: selector("#container");
   orientation: "vertical";
-  scroll-offsets:  0px, 300px;
+  scroll-offsets: 0px, 300px;
 }
 
 @keyframes rotateAnimation {
