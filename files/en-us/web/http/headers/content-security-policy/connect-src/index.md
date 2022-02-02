@@ -26,7 +26,7 @@ loaded using script interfaces. The APIs that are restricted are:
 - {{domxref("Navigator.sendBeacon()")}}.
 
 > **Note:** `connect-src 'self'` does not resolve to websocket
-> schemas in all browsers, more info in this [issue](https://github.com/w3c/webappsec-csp/issues/7).
+> schemes in all browsers, more info in this [issue](https://github.com/w3c/webappsec-csp/issues/7).
 
 <table class="properties">
   <tbody>
