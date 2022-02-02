@@ -70,7 +70,7 @@ Prevent unneeded layout changes as the content growing or shrinking causes the s
 }
 ```
 
-![A containing div element with a paragraph of text inside and a space to the right where the scrollbar is](stableNoScroll.png)
+![A containing div element with a paragraph of text inside and a space to the right where the scrollbar is](stable-no-scroll.png)
 
 ### Example 2
 
@@ -82,7 +82,7 @@ Add symmetric spacing to both sides of the box so the content is centered:
 }
 ```
 
-![A containing div element with a paragraph of text inside, a space to the right where the scrollbar is and a matching empty space to the left](stableBothEdges.png)
+![A containing div element with a paragraph of text inside, a space to the right where the scrollbar is and a matching empty space to the left](stable-both-edges.png)
 
 ### Example 3
 
@@ -100,13 +100,13 @@ This example shows two divs side by side. The one on the left has no scroll, but
 }
 ```
 
-![](sideByside.png)
+![Two adjacent divs containing text, both with space for a scrollbar](side-by-side.png)
 
 ### Overlay scrollbars
 
 For reference this image shows the same div as above, but with the user system settings set to overlay scrollbars. Note here the scrollbar will only show when the user is scrolling and on top of the content, so no space is reserved for it and the `scrollbar-gutter` property has no effect.
 
-![](forRefNoScroll.png)
+![One div with text, no visible scrollbar](for-ref-no-scroll.png)
 
 ## Specifications
 
