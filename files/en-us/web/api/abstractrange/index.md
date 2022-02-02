@@ -124,7 +124,7 @@ Here an interesting problem arises—we are capturing content from multiple node
 
 As it turns out, the DOM specification fortunately addresses this exact issue. For example, in this case, we're calling {{domxref("Range.cloneContents", "cloneContents()")}} on the range to create a new {{domxref("DocumentFragment")}} object providing a DOM subtree which replicates the contents of the specified range. To do this, `cloneContents()` constructs all the nodes needed to preserve the structure of the indicated range, but no more than necessary.
 
-In this example, the start of the specified range is found within the text node below the section's heading, which means that the new `DocumentFragment` will need to contain an {{HTMLElement("Heading_Elements", ("h2")}} and, below it, a text node.
+In this example, the start of the specified range is found within the text node below the section's heading, which means that the new `DocumentFragment` will need to contain an {{HTMLElement("Heading_Elements", "h2")}} and, below it, a text node.
 
 The range's end is located below the {{HTMLElement("p")}} element, so that will be needed within the new fragment. So will the text node containing the word "A", since that's included in the range. Finally, an `<em>` and a text node below it will be added below the `<p>` as well.
 
