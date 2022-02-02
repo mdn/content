@@ -35,9 +35,9 @@ At this point, we've looked at CSS fundamentals, how to style text, and how to s
 
 Before starting this module, you should already:
 
-1.  Have basic familiarity with HTML, as discussed in the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module.
-2.  Be comfortable with CSS fundamentals, as discussed in [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps).
-3.  Understand how to [style boxes](/en-US/docs/Learn/CSS/Building_blocks).
+1. Have basic familiarity with HTML, as discussed in the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module.
+2. Be comfortable with CSS fundamentals, as discussed in [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps).
+3. Understand how to [style boxes](/en-US/docs/Learn/CSS/Building_blocks).
 
 > **Note:** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 

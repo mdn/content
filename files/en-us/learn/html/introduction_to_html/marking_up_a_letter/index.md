@@ -53,7 +53,7 @@ We all learn to write a letter sooner or later; it is also a useful example to t
 
 ## Starting point
 
-To begin, get the [raw text you need to mark up](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt), and the [CSS to style the HTML](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt). Create a new `.html` file using your text editor or use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to complete the tasks.
+To begin, get the [raw text you need to mark up](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt), and the [CSS to style the HTML](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt). Create a new `.html` file using your text editor or use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to complete the tasks.
 
 > **Note:** If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
 
@@ -64,7 +64,7 @@ For this project, your task is to mark up a letter that needs to be hosted on a 
 ### Block/structural semantics
 
 - Use appropriate document structure including doctype, and {{htmlelement("html")}}, {{htmlelement("head")}} and {{htmlelement("body")}} elements.
-- In general, the letter should be marked up as an organization of headings and  paragraphs, with the following exception. There is one top level heading (the "Re:" line) and three second level headings.
+- In general, the letter should be marked up as an organization of headings and paragraphs, with the following exception. There is one top level heading (the "Re:" line) and three second level headings.
 - Use an appropriate list type to mark up the semester start dates, study subjects, and exotic dances.
 - Put the two addresses inside {{htmlelement("address")}} elements. Each line of the address should sit on a new line, but not be in a new paragraph.
 
@@ -74,7 +74,7 @@ For this project, your task is to mark up a letter that needs to be hosted on a 
 - The four dates in the document should have appropriate elements containing machine-readable dates.
 - The first address and first date in the letter should have a class attribute value of _sender-column_. The CSS you'll add later will cause these to be right aligned, as it should be in the case in a classic letter layout.
 - Mark up the following five acronyms/abbreviations in the main text of the letter — "PhD," "HTML," "CSS," "BC," and "Esq." — to provide expansions of each one.
-- The six sub/superscripts should be marked up appropriately — in the chemical formulae,  and the numbers 103 and 104 (they should be 10 to the power of 3 and 4, respectively).
+- The six sub/superscripts should be marked up appropriately — in the chemical formulae, and the numbers 103 and 104 (they should be 10 to the power of 3 and 4, respectively).
 - Try to mark up at least two appropriate words in the text with strong importance/emphasis.
 - There are two places where the letter should have a hyperlink. Add appropriate links with titles. For the location that the links point to, you may use http\://example.com as the URL.
 - Mark up the university motto quote and citation with appropriate elements.
@@ -88,7 +88,7 @@ For this project, your task is to mark up a letter that needs to be hosted on a 
 ## Hints and tips
 
 - Use the [W3C HTML validator](https://validator.w3.org/) to validate your HTML. Award yourself bonus points if it validates.
-- You don't need to know any CSS to do this assignment.  You just need to put the provided CSS inside an HTML element.
+- You don't need to know any CSS to do this assignment. You just need to put the provided CSS inside an HTML element.
 
 ## Example
 
@@ -100,8 +100,8 @@ The following screenshot shows an example of what the letter might look like aft
 
 If you would like your work assessed, or are stuck and want to ask for help:
 
-1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
 
     - A descriptive title such as "Assessment wanted for Marking up a letter".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.

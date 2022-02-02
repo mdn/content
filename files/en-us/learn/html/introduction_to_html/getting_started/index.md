@@ -281,9 +281,9 @@ Another example of an element is {{htmlelement("a")}}. This stands for _anchor_.
 
 Edit the line below in the _Input_ area to turn it into a link to your favorite website.
 
-1.  Add the `<a>` element.
-2.  Add the `href` attribute and the `title` attribute.
-3.  Specify the `target` attribute to open the link in the new tab.
+1. Add the `<a>` element.
+2. Add the `href` attribute and the `title` attribute.
+3. Specify the `target` attribute to open the link in the new tab.
 
 You'll be able to see your changes update live in the _Output_ area. You should see a link—that when hovered over—displays the value of the `title` attribute, and when clicked, navigates to the web address in the `href` attribute. Remember that you need to include a space between the element name, and between each attribute.
 
@@ -507,7 +507,7 @@ Individual HTML elements aren't very useful on their own. Next, let's examine ho
 
 Here we have:
 
-1.  `<!DOCTYPE html>`: The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML. Doctypes used to look something like this:
+1. `<!DOCTYPE html>`: The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML. Doctypes used to look something like this:
 
     ```html
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -516,20 +516,20 @@ Here we have:
 
     More recently, the doctype is a historical artifact that needs to be included for everything else to work right. `<!DOCTYPE html>` is the shortest string of characters that counts as a valid doctype. That is all you need to know!
 
-2.  `<html></html>`: The {{htmlelement("html")}} element. This element wraps all the content on the page. It is sometimes known as the root element.
-3.  `<head></head>`: The {{htmlelement("head")}} element. This element acts as a container for everything you want to include on the HTML page, **that isn't the content** the page will show to viewers. This includes keywords and a page description that would appear in search results, CSS to style content, character set declarations, and more. You'll learn more about this in the next article of the series.
-4.  `<meta charset="utf-8">`: This element specifies the character set for your document to UTF-8, which includes most characters from the vast majority of human written languages. With this setting, the page can now handle any textual content it might contain. There is no reason not to set this, and it can help avoid some problems later.
-5.  `<title></title>`: The {{htmlelement("title")}} element. This sets the title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.
-6.  `<body></body>`: The {{htmlelement("body")}} element. This contains _all_ the content that displays on the page, including text, images, videos, games, playable audio tracks, or whatever else.
+2. `<html></html>`: The {{htmlelement("html")}} element. This element wraps all the content on the page. It is sometimes known as the root element.
+3. `<head></head>`: The {{htmlelement("head")}} element. This element acts as a container for everything you want to include on the HTML page, **that isn't the content** the page will show to viewers. This includes keywords and a page description that would appear in search results, CSS to style content, character set declarations, and more. You'll learn more about this in the next article of the series.
+4. `<meta charset="utf-8">`: This element specifies the character set for your document to UTF-8, which includes most characters from the vast majority of human written languages. With this setting, the page can now handle any textual content it might contain. There is no reason not to set this, and it can help avoid some problems later.
+5. `<title></title>`: The {{htmlelement("title")}} element. This sets the title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.
+6. `<body></body>`: The {{htmlelement("body")}} element. This contains _all_ the content that displays on the page, including text, images, videos, games, playable audio tracks, or whatever else.
 
 ### Active learning: Adding some features to an HTML document
 
 If you want to experiment with writing some HTML on your local computer, you can:
 
-1.  Copy the HTML page example listed above.
-2.  Create a new file in your text editor.
-3.  Paste the code into the new text file.
-4.  Save the file as `index.html`.
+1. Copy the HTML page example listed above.
+2. Create a new file in your text editor.
+3. Paste the code into the new text file.
+4. Save the file as `index.html`.
 
 > **Note:** You can also find this basic HTML template on the [MDN Learning Area Github repo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html).
 
@@ -625,7 +625,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var htmlSolution = '<h1>Some music</h1><p>I really enjoy <strong>playing the drums</strong>. One of my favorite drummers is Neal Peart, who\ plays in the band <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">Rush</a>.\ My favourite Rush album is currently <a href="http://www.deezer.com/album/942295">Moving Pictures</a>.</p>\ <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg">';
+var htmlSolution = '<h1>Some music</h1><p>I really enjoy <strong>playing the drums</strong>. One of my favorite drummers is Neal Peart, who\ plays in the band <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">Rush</a>.\ My favorite Rush album is currently <a href="http://www.deezer.com/album/942295">Moving Pictures</a>.</p>\ <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg">';
 var solutionEntry = htmlSolution;
 
 textarea.addEventListener('input', updateCode);

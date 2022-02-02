@@ -69,8 +69,8 @@ This is achieved by using APIs like {{domxref("XMLHttpRequest")}} or — more re
 
 The Ajax model involves using a web API as a proxy to more intelligently request data rather than just having the browser reload the entire page. Let's think about the significance of this:
 
-1.  Go to one of your favorite information-rich sites, like Amazon, YouTube, CNN, etc., and load it.
-2.  Now search for something, like a new product. The main content will change, but most of the surrounding information, like the header, footer, navigation menu, etc., will stay the same.
+1. Go to one of your favorite information-rich sites, like Amazon, YouTube, CNN, etc., and load it.
+2. Now search for something, like a new product. The main content will change, but most of the surrounding information, like the header, footer, navigation menu, etc., will stay the same.
 
 This is a really good thing because:
 
@@ -91,8 +91,8 @@ This series of files will act as our fake database; in a real application, we'd 
 
 `XMLHttpRequest` (which is frequently abbreviated to XHR) is a fairly old technology now — it was invented by Microsoft in the late '90s, and has been standardized across browsers for quite a long time.
 
-1.  To begin this example, make a local copy of [ajax-start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html) and the four text files — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt), and [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt) — in a new directory on your computer. In this example, we will load a different verse of the poem (which you may well recognize) via XHR when it's selected in the drop-down menu.
-2.  Just inside the {{htmlelement("script")}} element, add the following code. This stores a reference to the {{htmlelement("select")}} and {{htmlelement("pre")}} elements in constants and defines an {{domxref("GlobalEventHandlers.onchange","onchange")}} event handler function so that when the select's value is changed, its value is passed to an invoked function `updateDisplay()` as a parameter.
+1. To begin this example, make a local copy of [ajax-start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html) and the four text files — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt), and [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt) — in a new directory on your computer. In this example, we will load a different verse of the poem (which you may well recognize) via XHR when it's selected in the drop-down menu.
+2. Just inside the {{htmlelement("script")}} element, add the following code. This stores a reference to the {{htmlelement("select")}} and {{htmlelement("pre")}} elements in constants and defines an {{domxref("GlobalEventHandlers.onchange","onchange")}} event handler function so that when the select's value is changed, its value is passed to an invoked function `updateDisplay()` as a parameter.
 
     ```js
     const verseChoose = document.querySelector('select');
@@ -104,7 +104,7 @@ This series of files will act as our fake database; in a real application, we'd 
     };
     ```
 
-3.  Let's define our `updateDisplay()` function. First of all, put the following beneath your previous code block — this is the empty shell of the function. Note: Steps 4 - 9 will all be performed _within_ this function.
+3. Let's define our `updateDisplay()` function. First of all, put the following beneath your previous code block — this is the empty shell of the function. Note: Steps 4 - 9 will all be performed _within_ this function.
 
     ```js
     function updateDisplay(verse) {
@@ -112,7 +112,7 @@ This series of files will act as our fake database; in a real application, we'd 
     }
     ```
 
-4.  We'll start our function by constructing a relative URL pointing to the text file we want to load, as we'll need it later. The value of the {{htmlelement("select")}} element at any time is the same as the text inside the selected {{htmlelement("option")}} (unless you specify a different value in a value attribute) — so for example "Verse 1". The corresponding verse text file is "verse1.txt", and is in the same directory as the HTML file, therefore just the file name will do.
+4. We'll start our function by constructing a relative URL pointing to the text file we want to load, as we'll need it later. The value of the {{htmlelement("select")}} element at any time is the same as the text inside the selected {{htmlelement("option")}} (unless you specify a different value in a value attribute) — so for example "Verse 1". The corresponding verse text file is "verse1.txt", and is in the same directory as the HTML file, therefore just the file name will do.
 
     However, web servers tend to be case sensitive, and the file name doesn't have a space in it. To convert "Verse 1" to "verse1.txt" we need to convert the V to lower case, remove the space, and add .txt on the end. This can be done with {{jsxref("String.replace", "replace()")}}, {{jsxref("String.toLowerCase", "toLowerCase()")}}, and simple [string concatenation](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenating_strings). Add the following lines inside your `updateDisplay()` function:
 
@@ -122,25 +122,25 @@ This series of files will act as our fake database; in a real application, we'd 
     let url = verse + '.txt';
     ```
 
-5.  To begin creating an XHR request, you need to create a new request object using the {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}} constructor. You can call this object anything you like, but we'll call it `request` to keep things simple. Add the following below your previous lines inside your `updateDisplay()` function:
+5. To begin creating an XHR request, you need to create a new request object using the {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}} constructor. You can call this object anything you like, but we'll call it `request` to keep things simple. Add the following below your previous lines inside your `updateDisplay()` function:
 
     ```js
     let request = new XMLHttpRequest();
     ```
 
-6.  Next, you need to use the {{domxref("XMLHttpRequest.open","open()")}} method to specify what [HTTP request method](/en-US/docs/Web/HTTP/Methods) to use to request the resource from the network, and what its URL is. We'll just use the [`GET`](/en-US/docs/Web/HTTP/Methods/GET) method here and set the URL as our `url` variable. Add this below your previous line:
+6. Next, you need to use the {{domxref("XMLHttpRequest.open","open()")}} method to specify what [HTTP request method](/en-US/docs/Web/HTTP/Methods) to use to request the resource from the network, and what its URL is. We'll just use the [`GET`](/en-US/docs/Web/HTTP/Methods/GET) method here and set the URL as our `url` variable. Add this below your previous line:
 
     ```js
     request.open('GET', url);
     ```
 
-7.  Next, we'll set the type of response we are expecting — which is defined by the request's {{domxref("XMLHttpRequest.responseType", "responseType")}} property — as `text`. This isn't strictly necessary here — XHR returns text by default — but it is a good idea to get into the habit of setting this in case you want to fetch other types of data in the future. Add this next:
+7. Next, we'll set the type of response we are expecting — which is defined by the request's {{domxref("XMLHttpRequest.responseType", "responseType")}} property — as `text`. This isn't strictly necessary here — XHR returns text by default — but it is a good idea to get into the habit of setting this in case you want to fetch other types of data in the future. Add this next:
 
     ```js
     request.responseType = 'text';
     ```
 
-8.  Fetching a resource from the network is an {{glossary("asynchronous")}} operation, meaning that you have to wait for that operation to complete (e.g., the resource is returned from the network) before you can do anything with that response, otherwise, an error will be thrown. XHR allows you to handle this using its {{domxref("XMLHttpRequest.onload", "onload")}} event handler — this is run when the {{event("load")}} event fires (when the response has returned). When this has occurred, the response data will be available in the `response` property of the XHR request object.
+8. Fetching a resource from the network is an {{glossary("asynchronous")}} operation, meaning that you have to wait for that operation to complete (e.g., the resource is returned from the network) before you can do anything with that response, otherwise, an error will be thrown. XHR allows you to handle this using its {{domxref("XMLHttpRequest.onload", "onload")}} event handler — this is run when the {{event("load")}} event fires (when the response has returned). When this has occurred, the response data will be available in the `response` property of the XHR request object.
 
     Add the following below your last addition. You'll see that inside the `onload` event handler we are setting the [`textContent`](/en-US/docs/Web/API/Node/textContent) of the `poemDisplay` (the {{htmlelement("pre")}} element) to the value of the {{domxref("XMLHttpRequest.response", "request.response")}} property.
 
@@ -150,7 +150,7 @@ This series of files will act as our fake database; in a real application, we'd 
     };
     ```
 
-9.  The above is all set up for the XHR request — it won't actually run until we tell it to, which is done using the {{domxref("XMLHttpRequest.send","send()")}} method. Add the following below your previous addition to complete the function. This line should rest just above the closing curly brace of your `updateDisplay()` function.
+9. The above is all set up for the XHR request — it won't actually run until we tell it to, which is done using the {{domxref("XMLHttpRequest.send","send()")}} method. Add the following below your previous addition to complete the function. This line should rest just above the closing curly brace of your `updateDisplay()` function.
 
     ```js
     request.send();
@@ -175,8 +175,8 @@ The Fetch API is basically a modern replacement for XHR; it was introduced in br
 
 Let's convert the last example to use Fetch instead.
 
-1.  Make a copy of your previous finished example directory. (If you didn't work through the previous exercise, create a new directory and inside it make copies of [xhr-basic.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/xhr-basic.html) and the four text files — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt), and [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt).)
-2.  Inside the `updateDisplay()` function, find the XHR code:
+1. Make a copy of your previous finished example directory. (If you didn't work through the previous exercise, create a new directory and inside it make copies of [xhr-basic.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/xhr-basic.html) and the four text files — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt), and [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt).)
+2. Inside the `updateDisplay()` function, find the XHR code:
 
     ```js
     let request = new XMLHttpRequest();
@@ -190,7 +190,7 @@ Let's convert the last example to use Fetch instead.
     request.send();
     ```
 
-3.  Replace all the XHR code with this:
+3. Replace all the XHR code with this:
 
     ```js
     fetch(url).then(function(response) {
@@ -200,7 +200,7 @@ Let's convert the last example to use Fetch instead.
     });
     ```
 
-4.  Load the example in your browser (running it through a web server) and it should work just the same as the XHR version, provided you are running a modern browser.
+4. Load the example in your browser (running it through a web server) and it should work just the same as the XHR version, provided you are running a modern browser.
 
 #### So what is going on in the Fetch code?
 
@@ -325,10 +325,10 @@ However, a complete website would handle this error more gracefully by displayin
 
 You can test the fail case yourself:
 
-1.  Make a local copy of the example files (download and unpack [the can-store ZIP file](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-store.zip?raw=true)).
-2.  Run the code through a web server (as described above, in {{anch("Serving your example from a server")}}).
-3.  Modify the path to the file being fetched, to something like 'produc.json' (make sure it is misspelled).
-4.  Now load the index file in your browser (via `localhost:8000`) and look in your browser developer console. You'll see a message similar to "Network request for produc.json failed with response 404: File not found".
+1. Make a local copy of the example files (download and unpack [the can-store ZIP file](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-store.zip?raw=true)).
+2. Run the code through a web server (as described above, in {{anch("Serving your example from a server")}}).
+3. Modify the path to the file being fetched, to something like 'produc.json' (make sure it is misspelled).
+4. Now load the index file in your browser (via `localhost:8000`) and look in your browser developer console. You'll see a message similar to "Network request for produc.json failed with response 404: File not found".
 
 The second Fetch block can be found inside the `fetchBlob()` function:
 

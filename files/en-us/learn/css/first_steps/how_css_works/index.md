@@ -45,12 +45,12 @@ We have learned the basics of CSS, what it is for and how to write simple styles
 
 When a browser displays a document, it must combine the document's content with its style information. It processes the document in a number of stages, which we've listed below. Bear in mind that this is a very simplified version of what happens when a browser loads a webpage, and that different browsers will handle the process in different ways. But this is roughly what happens.
 
-1.  The browser loads the HTML (e.g. receives it from the network).
-2.  It converts the {{Glossary("HTML")}} into a {{Glossary("DOM")}} (_Document Object Model_). The DOM represents the document in the computer's memory. The DOM is explained in a bit more detail in the next section.
-3.  The browser then fetches most of the resources that are linked to by the HTML document, such as embedded images and videos ... and linked CSS! JavaScript is handled a bit later on in the process, and we won't talk about it here to keep things simpler.
-4.  The browser parses the fetched CSS, and sorts the different rules by their selector types into different "buckets", e.g. element, class, ID, and so on. Based on the selectors it finds, it works out which rules should be applied to which nodes in the DOM, and attaches style to them as required (this intermediate step is called a render tree).
-5.  The render tree is laid out in the structure it should appear in after the rules have been applied to it.
-6.  The visual display of the page is shown on the screen (this stage is called painting).
+1. The browser loads the HTML (e.g. receives it from the network).
+2. It converts the {{Glossary("HTML")}} into a {{Glossary("DOM")}} (_Document Object Model_). The DOM represents the document in the computer's memory. The DOM is explained in a bit more detail in the next section.
+3. The browser then fetches most of the resources that are linked to by the HTML document, such as embedded images and videos ... and linked CSS! JavaScript is handled a bit later on in the process, and we won't talk about it here to keep things simpler.
+4. The browser parses the fetched CSS, and sorts the different rules by their selector types into different "buckets", e.g. element, class, ID, and so on. Based on the selectors it finds, it works out which rules should be applied to which nodes in the DOM, and attaches style to them as required (this intermediate step is called a render tree).
+5. The render tree is laid out in the structure it should appear in after the rules have been applied to it.
+6. The visual display of the page is shown on the screen (this stage is called painting).
 
 The following diagram also offers a simple view of the process.
 
@@ -77,7 +77,7 @@ Take the following HTML code:
 </p>
 ```
 
-In the DOM, the node corresponding to our `<p>` element is a parent. Its children are a text node and the three nodes corresponding to our `<span>` elements. The `SPAN` nodes are also parents, with text nodes as their children:
+In the DOM, the node corresponding to our `<p>` element is a parent. Its children are a text node and the three nodes corresponding to our `<span>` elements. The `SPAN` nodes are also parents, with text nodes as their children:
 
 ```
 P
@@ -138,7 +138,7 @@ If a browser is parsing your rules, and encounters a property or value that it d
 
 Similarly, if a browser encounters a selector that it doesn't understand, it will just ignore the whole rule and move on to the next one.
 
-In the example below I have used the British English spelling for color, which makes that property invalid as it is not recognized. So my paragraph has not been colored blue. All of the other CSS have been applied however; only the invalid line is ignored.
+In the example below I have used the British English spelling for color, which makes that property invalid as it is not recognized. So my paragraph has not been colored blue. All of the other CSS have been applied however; only the invalid line is ignored.
 
 ```html
 <p> I want this text to be large, bold and blue.</p>
@@ -175,8 +175,8 @@ You've nearly finished this module; we only have one more thing to do. In the ne
 
 ## In this module
 
-1.  [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-3.  [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  How CSS works
-5.  [Using your new knowledge](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
+3. [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. How CSS works
+5. [Using your new knowledge](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

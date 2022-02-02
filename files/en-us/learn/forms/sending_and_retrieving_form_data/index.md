@@ -171,11 +171,11 @@ The `Content-Length` header indicates the size of the body, and the `Content-Typ
 
 HTTP requests are never displayed to the user (if you want to see them, you need to use tools such as the [Firefox Network Monitor](/en-US/docs/Tools/Network_Monitor) or the [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). As an example, your form data will be shown as follows in the Chrome Network tab. After submitting the form:
 
-1.  Open the developer tools.
-2.  Select "Network"
-3.  Select "All"
-4.  Select "foo.com" in the "Name" tab
-5.  Select "Headers"
+1. Open the developer tools.
+2. Select "Network"
+3. Select "All"
+4. Select "foo.com" in the "Name" tab
+5. Select "Headers"
 
 You can then get the form data, as shown in the image below.
 
@@ -183,8 +183,8 @@ You can then get the form data, as shown in the image below.
 
 The only thing displayed to the user is the URL called. As we mentioned above, with a `GET` request the user will see the data in their URL bar, but with a `POST` request they won't. This can be very important for two reasons:
 
-1.  If you need to send a password (or any other sensitive piece of data), never use the `GET` method or you risk displaying it in the URL bar, which would be very insecure.
-2.  If you need to send a large amount of data, the `POST` method is preferred because some browsers limit the sizes of URLs. In addition, many servers limit the length of URLs they accept.
+1. If you need to send a password (or any other sensitive piece of data), never use the `GET` method or you risk displaying it in the URL bar, which would be very insecure.
+2. If you need to send a large amount of data, the `POST` method is preferred because some browsers limit the sizes of URLs. In addition, many servers limit the length of URLs they accept.
 
 ## On the server side: retrieving the data
 
@@ -307,7 +307,7 @@ You should be able to avoid many/most problems if you follow these three rules, 
 
 As we'd alluded to above, sending form data is easy, but securing an application can be tricky. Just remember that a front-end developer is not the one who should define the security model of the data. It's possible to perform [client-side form validation](/en-US/docs/Learn/Forms/Form_validation), but the server can't trust this validation because it has no way to truly know what has really happened on the client-side.
 
-If you've worked your way through these tutorials in order, you now know how to markup and style a form, do client-side validation, and have some idea about submitting a form.
+If you've worked your way through these tutorials in order, you now know how to markup and style a form, do client-side validation, and have some idea about submitting a form.
 
 ## See also
 
