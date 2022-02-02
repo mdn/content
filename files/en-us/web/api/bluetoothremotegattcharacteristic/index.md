@@ -28,9 +28,8 @@ The `BluetoothRemoteGattCharacteristic` interface of the [Web Bluetooth API](/e
 
 ### Events
 
-- {{domxref("BluetoothRemoteGATTCharacteristic.oncharacteristicvaluechanged")}}
-  - : An event handler that runs when an event of type `characteristicvaluechanged`
-    has fired.
+-`oncharacteristicvaluechanged`
+  - : Event handler for the `characteristicvaluechanged` event.
 
 ## Methods
 
