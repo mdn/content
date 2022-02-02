@@ -254,10 +254,10 @@ function startOscillators() {
 
 Each of the three oscillators is set up the same way:
 
-1.  Create the {{domxref("OscillatorNode")}} by calling {{domxref("BaseAudioContext.createOscillator")}}.
-2.  Set the oscillator's type to `"sine"` to use a sine wave as the audio waveform.
-3.  Set the oscillator's frequency to the desired value; in this case, `oscNode1` is set to a middle C, while `oscNode2` and `oscNode3` round out the chord by playing the E and G notes.
-4.  Connect the new oscillator to the corresponding gain node.
+1. Create the {{domxref("OscillatorNode")}} by calling {{domxref("BaseAudioContext.createOscillator")}}.
+2. Set the oscillator's type to `"sine"` to use a sine wave as the audio waveform.
+3. Set the oscillator's frequency to the desired value; in this case, `oscNode1` is set to a middle C, while `oscNode2` and `oscNode3` round out the chord by playing the E and G notes.
+4. Connect the new oscillator to the corresponding gain node.
 
 Once all three oscillators have been created, they're started by calling each one's {{domxref("AudioScheduledSourceNode.start", "ConstantSourceNode.start()")}} method in turn, and `playing` is set to `true` to track that the tones are playing.
 

@@ -47,25 +47,25 @@ attributes_.](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
   - : A custom data attribute name is transformed to a key for the {{
       domxref("DOMStringMap") }} entry by the following:
 
-    1.  Lowercase all ASCII capital letters (`A` to
+    1. Lowercase all ASCII capital letters (`A` to
         `Z`);
-    2.  Remove the prefix `data-` (including the dash);
-    3.  For any dash (`U+002D`) followed by an ASCII lowercase letter
+    2. Remove the prefix `data-` (including the dash);
+    3. For any dash (`U+002D`) followed by an ASCII lowercase letter
         `a` to `z`, remove the dash and uppercase the letter;
-    4.  Other characters (including other dashes) are left unchanged.
+    4. Other characters (including other dashes) are left unchanged.
 
 - `camelCase` to `dash-style` conversion
 
   - : The opposite transformation, which maps a key to an attribute name, uses the
     following:
 
-    1.  **Restriction:** Before transformation, a dash _must not_ be
+    1. **Restriction:** Before transformation, a dash _must not_ be
         immediately followed by an ASCII lowercase letter `a` to
         `z`;
-    2.  Add the `data-` prefix;
-    3.  Add a dash before any ASCII uppercase letter `A` to `Z`,
+    2. Add the `data-` prefix;
+    3. Add a dash before any ASCII uppercase letter `A` to `Z`,
         then lowercase the letter;
-    4.  Other characters are left unchanged.
+    4. Other characters are left unchanged.
 
 For example, a `data-abc-def` attribute corresponds to
 `dataset.abcDef`.

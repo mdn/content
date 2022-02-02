@@ -103,10 +103,10 @@ Creating the response is easier than understanding why you must do it in this wa
 
 You must,
 
-1.  Obtain the value of _Sec-WebSocket-Key_ request header without any leading and trailing whitespace
-2.  Link it with "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
-3.  Compute SHA-1 and Base64 code of it
-4.  Write it back as value of _Sec-WebSocket-Accept_ response header as part of a HTTP response.
+1. Obtain the value of _Sec-WebSocket-Key_ request header without any leading and trailing whitespace
+2. Link it with "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"
+3. Compute SHA-1 and Base64 code of it
+4. Write it back as value of _Sec-WebSocket-Accept_ response header as part of a HTTP response.
 
 ```java
 if (get.find()) {

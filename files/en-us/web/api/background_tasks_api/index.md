@@ -312,10 +312,10 @@ function runTaskQueue(deadline) {
 
 For each task in the queue that we have time to execute, we do the following:
 
-1.  We [remove the task object from the queue](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift).
-2.  We increment `currentTaskNumber` to track how many tasks we've executed.
-3.  We call the task's handler, `task.handler`, passing into it the task's data object (`task.data`).
-4.  We call a function, `scheduleStatusRefresh()`, to handle scheduling a screen update to reflect changes to our progress.
+1. We [remove the task object from the queue](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift).
+2. We increment `currentTaskNumber` to track how many tasks we've executed.
+3. We call the task's handler, `task.handler`, passing into it the task's data object (`task.data`).
+4. We call a function, `scheduleStatusRefresh()`, to handle scheduling a screen update to reflect changes to our progress.
 
 When time runs out, if there are still tasks left in the list, we call {{domxref("Window.requestIdleCallback", "requestIdleCallback()")}} again so that we can continue to process the tasks the next time there's idle time available. If the queue is empty, we set taskHandle to 0 to indicate that we don't have a callback scheduled. That way, we'll know to request a callback next time `enqueueTask()` is called.
 
@@ -375,8 +375,8 @@ First, `scrolledToEnd` is set to `true` if the text in the log is scrolled to th
 
 Next, we update the progress and status information if any tasks have been enqueued.
 
-1.  If the current maximum value of the progress bar is different from the current total number of enqueued tasks (`totalTaskCount`), then we update the contents of the displayed total number of tasks (`totalTaskCountElem`) and the maximum value of the progress bar, so that it scales properly.
-2.  We do the same thing with the number of tasks processed so far; if `progressBarElem.value` is different from the task number currently being processed (`currentTaskNumber`), then we update the displayed value of the currently-being-processed task and the current value of the progress bar.
+1. If the current maximum value of the progress bar is different from the current total number of enqueued tasks (`totalTaskCount`), then we update the contents of the displayed total number of tasks (`totalTaskCountElem`) and the maximum value of the progress bar, so that it scales properly.
+2. We do the same thing with the number of tasks processed so far; if `progressBarElem.value` is different from the task number currently being processed (`currentTaskNumber`), then we update the displayed value of the currently-being-processed task and the current value of the progress bar.
 
 Then, if there's text waiting to be added to the log (that is, if `logFragment` isn't `null`), we append it to the log element using {{domxref("Node.appendChild", "Element.appendChild()")}} and set `logFragment` to `null` so we don't add it again.
 

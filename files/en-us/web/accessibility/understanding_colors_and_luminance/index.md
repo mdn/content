@@ -327,13 +327,13 @@ The Epilepsy Foundation of America researched photic-related seizures thoroughly
 
 **Single, double, or triple flashes in one second are acceptable, but a sequence of flashes is not recommended when both of the following occur:**
 
-1.  More than three flashes within any one second period.
-2.  From the minimal expected viewing distance, the total area of concurrent flashes subtends a visual angle of 5° or more (200px to 300px square on a desktop monitor to as little as 50px square for a closely held mobile device).
+1. More than three flashes within any one second period.
+2. From the minimal expected viewing distance, the total area of concurrent flashes subtends a visual angle of 5° or more (200px to 300px square on a desktop monitor to as little as 50px square for a closely held mobile device).
 
 **When the light–dark stripes of any pattern are larger than a visual angle of 5° and the luminance of the lightest stripe is more than 50 cd/m², the pattern should display no more than:**
 
-1.  Five light–dark pairs of stripes, if the stripes change direction, oscillate, flash, or reverse in contrast.
-2.  Eight light–dark pairs of stripes, if the pattern is unchanging or continuously and smoothly drifting in one direction.
+1. Five light–dark pairs of stripes, if the stripes change direction, oscillate, flash, or reverse in contrast.
+2. Eight light–dark pairs of stripes, if the pattern is unchanging or continuously and smoothly drifting in one direction.
 
 The consensus recommendations are in this brief paper, [Photic- and Pattern-induced Seizures: Expert Consensus of the Epilepsy Foundation of America](https://www.epilepsy.com/sites/core/files/atoms/files/Epilepsia%20vol%2046%20issue%209%20Photosensitivity.pdf). Some additional insights are available in this UK paper covering [guidelines for preventing seizures.](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.106.9473&rep=rep1&type=pdf).
 
@@ -353,7 +353,7 @@ The IEC standard for calculating relative luminance (Y) from an sRGB color is as
 
 Convert 8 bit sRGB values to float (0.0 to 1.0) by dividing by 255.0:
 
-**R´<sub>float</sub> = R´<sub>8bit</sub> / 255.0       G´<sub>float</sub> = G´<sub>8bit</sub> / 255.0       B´<sub>float</sub> = B´<sub>8bit</sub> / 255.0**
+**R´<sub>float</sub> = R´<sub>8bit</sub> / 255.0 G´<sub>float</sub> = G´<sub>8bit</sub> / 255.0 B´<sub>float</sub> = B´<sub>8bit</sub> / 255.0**
 
 If your sRGB values are 16 bit then convert to decimal by dividing by 65535.
 
@@ -361,7 +361,7 @@ If your sRGB values are 16 bit then convert to decimal by dividing by 65535.
 
 Linearize the data to remove the encoded transfer curve.
 
-**R<sub>lin</sub> = sRGBtoLin(R´<sub>float</sub>)    G<sub>lin</sub> = sRGBtoLin(G´<sub>float</sub>)    B<sub>lin</sub> = sRGBtoLin(B´<sub>float</sub>)**
+**R<sub>lin</sub> = sRGBtoLin(R´<sub>float</sub>) G<sub>lin</sub> = sRGBtoLin(G´<sub>float</sub>) B<sub>lin</sub> = sRGBtoLin(B´<sub>float</sub>)**
 
 Using the function shown below:
 

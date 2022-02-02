@@ -30,10 +30,10 @@ myVRLayerInit.rightBounds = [0.5, 0.0, 0.5, 1.0];
 
 An array of four floating point values, which can take values from 0.0–1.0:
 
-1.  The left offset of the bounds.
-2.  The top offset of the bounds.
-3.  The width of the bounds.
-4.  The height of the bounds.
+1. The left offset of the bounds.
+2. The top offset of the bounds.
+3. The width of the bounds.
+4. The height of the bounds.
 
 If `leftBounds` is not specified in the dictionary, the default value used is `[0.5, 0.0, 0.5, 1.0]`.
 

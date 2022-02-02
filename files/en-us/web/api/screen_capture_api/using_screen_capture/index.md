@@ -279,10 +279,10 @@ Click the Start Capture button to begin.</p>
 
 The key parts of the HTML are:
 
-1.  A {{HTMLElement("button")}} labeled "Start Capture" which, when clicked, calls the `startCapture()` function to request access to, and begin capturing, screen contents.
-2.  A second button, "Stop Capture", which upon being clicked calls `stopCapture()` to terminate capture of screen contents.
-3.  A {{HTMLElement("video")}} into which the captured screen contents are streamed.
-4.  A {{HTMLElement("pre")}} block into which logged text is placed by the intercepted {{domxref("console")}} method.
+1. A {{HTMLElement("button")}} labeled "Start Capture" which, when clicked, calls the `startCapture()` function to request access to, and begin capturing, screen contents.
+2. A second button, "Stop Capture", which upon being clicked calls `stopCapture()` to terminate capture of screen contents.
+3. A {{HTMLElement("video")}} into which the captured screen contents are streamed.
+4. A {{HTMLElement("pre")}} block into which logged text is placed by the intercepted {{domxref("console")}} method.
 
 #### CSS
 
