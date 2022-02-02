@@ -15,7 +15,7 @@ For example, if in a shallow copy named `copy` of an array object, the value of 
 
 However, if instead you do `copy[0] = {"list":["oil","flour"]}`, then the corresponding element in the source object **will not change** — because in that case, you’re not just selectively changing a property of an existing array element that the shallow copy shares with the source object; instead you’re actually assigning a completely new value to that `copy[0]` array element, just in the shallow copy.
 
-In JavaScript, all standard built-in object-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat), [`Array.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from), and [`Object.assign()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)) create shallow copies.
+In JavaScript, all standard built-in object-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat), [`Array.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Object.assign()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign), and [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)) create shallow copies rather than deep copies.
 
 ## Example
 
