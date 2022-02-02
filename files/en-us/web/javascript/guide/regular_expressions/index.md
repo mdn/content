@@ -23,8 +23,8 @@ You construct a regular expression in one of two ways:
 - Using a regular expression literal, which consists of a pattern enclosed between slashes, as follows:
 
   ```js
-    let re = /ab+c/;
-    ```
+  const re = /ab+c/;
+  ```
 
   Regular expression literals provide compilation of the regular expression when the script is loaded.
   If the regular expression remains constant, using this can improve performance.
@@ -32,8 +32,8 @@ You construct a regular expression in one of two ways:
 - Or calling the constructor function of the {{jsxref("RegExp")}} object, as follows:
 
   ```js
-    let re = new RegExp('ab+c');
-    ```
+  const re = new RegExp('ab+c');
+  ```
 
   Using the constructor function provides runtime compilation of the regular expression.
   Use the constructor function when you know the regular expression pattern will be changing, or you don't know the pattern and are getting it from another source, such as user input.
@@ -218,17 +218,17 @@ If the match fails, the `exec()` method returns `null` (which coerces to `false`
 In the following example, the script uses the `exec()` method to find a match in a string.
 
 ```js
-var myRe = /d(b+)d/g;
-var myArray = myRe.exec('cdbbdbsbz');
+const myRe = /d(b+)d/g;
+const myArray = myRe.exec('cdbbdbsbz');
 ```
 
 If you do not need to access the properties of the regular expression, an alternative way of creating `myArray` is with this script:
 
 ```js
-var myArray = /d(b+)d/g.exec('cdbbdbsbz');
-    // similar to "cdbbdbsbz".match(/d(b+)d/g); however,
-    // "cdbbdbsbz".match(/d(b+)d/g) outputs Array [ "dbbd" ], while
-    // /d(b+)d/g.exec('cdbbdbsbz') outputs Array [ 'dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ].
+const myArray = /d(b+)d/g.exec('cdbbdbsbz');
+// similar to 'cdbbdbsbz'.match(/d(b+)d/g); however,
+// 'cdbbdbsbz'.match(/d(b+)d/g) outputs [ "dbbd" ]
+// while /d(b+)d/g.exec('cdbbdbsbz') outputs [ 'dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ]
 ```
 
 (See [Using the global search flag with `exec()`](#using_the_global_search_flag_with_exec) for further info about the different behaviors.)
@@ -236,8 +236,8 @@ var myArray = /d(b+)d/g.exec('cdbbdbsbz');
 If you want to construct the regular expression from a string, yet another alternative is this script:
 
 ```js
-var myRe = new RegExp('d(b+)d', 'g');
-var myArray = myRe.exec('cdbbdbsbz');
+const myRe = new RegExp('d(b+)d', 'g');
+const myArray = myRe.exec('cdbbdbsbz');
 ```
 
 With these scripts, the match succeeds and returns the array and updates the properties shown in the following table.
@@ -301,9 +301,9 @@ For this reason, if you use this form without assigning it to a variable, you ca
 For example, assume you have this script:
 
 ```js
-var myRe = /d(b+)d/g;
-var myArray = myRe.exec('cdbbdbsbz');
-console.log('The value of lastIndex is ' + myRe.lastIndex);
+const myRe = /d(b+)d/g;
+const myArray = myRe.exec('cdbbdbsbz');
+console.log(`The value of lastIndex is ${myRe.lastIndex}`);
 
 // "The value of lastIndex is 5"
 ```
@@ -311,8 +311,8 @@ console.log('The value of lastIndex is ' + myRe.lastIndex);
 However, if you have this script:
 
 ```js
-var myArray = /d(b+)d/g.exec('cdbbdbsbz');
-console.log('The value of lastIndex is ' + /d(b+)d/g.lastIndex);
+const myArray = /d(b+)d/g.exec('cdbbdbsbz');
+console.log(`The value of lastIndex is ${/d(b+)d/g.lastIndex}`);
 
 // "The value of lastIndex is 0"
 ```
@@ -338,13 +338,13 @@ These flags can be used separately or together in any order, and are included as
 To include a flag with the regular expression, use this syntax:
 
 ```js
-var re = /pattern/flags;
+const re = /pattern/flags;
 ```
 
 or
 
 ```js
-var re = new RegExp('pattern', 'flags');
+const re = new RegExp('pattern', 'flags');
 ```
 
 Note that the flags are an integral part of a regular expression. They cannot be added or removed later.
@@ -352,9 +352,9 @@ Note that the flags are an integral part of a regular expression. They cannot be
 For example, `re = /\w+\s/g` creates a regular expression that looks for one or more characters followed by a space, and it looks for this combination throughout the string.
 
 ```js
-var re = /\w+\s/g;
-var str = 'fee fi fo fum';
-var myArray = str.match(re);
+const re = /\w+\s/g;
+const str = 'fee fi fo fum';
+const myArray = str.match(re);
 console.log(myArray);
 
 // ["fee ", "fi ", "fo "]
@@ -363,13 +363,13 @@ console.log(myArray);
 You could replace the line:
 
 ```js
-var re = /\w+\s/g;
+const re = /\w+\s/g;
 ```
 
 with:
 
 ```js
-var re = new RegExp('\\w+\\s', 'g');
+const re = new RegExp('\\w+\\s', 'g');
 ```
 
 and get the same result.
@@ -431,26 +431,36 @@ The `click` event activated when the user presses <kbd>Enter</kbd> sets the valu
   <br>
   The expected format is like ###-###-####.
 </p>
-<form action="#" onSubmit="return false">
+<form id="form">
   <input id="phone">
-    <button onClick="testInfo(document.querySelector('#phone'));">Check</button>
+  <button type="submit">Check</button>
 </form>
-<p id="out"></p>
+<p id="output"></p>
 ```
 
 #### JavaScript
 
 ```js
-var re = /^(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}$/;
+const form = document.querySelector('#form');
+const input = document.querySelector('#phone');
+const output = document.querySelector('#output');
+
+const re = /^(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}$/;
+
 function testInfo(phoneInput) {
-  var OK = re.exec(phoneInput.value);
-  var out = document.querySelector('#out');
-  if (!OK) {
-    out.textContent = `${phoneInput.value} isn't a phone number with area code!`;
+  const ok = re.exec(phoneInput.value);
+
+  if (!ok) {
+    output.textContent = `${phoneInput.value} isn't a phone number with area code!`;
   } else {
-    out.textContent = `Thanks, your phone number is ${OK[0]}`;
+    output.textContent = `Thanks, your phone number is ${ok[0]}`;
   }
-} 
+}
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  testInfo(input);
+});
 ```
 
 #### Result
