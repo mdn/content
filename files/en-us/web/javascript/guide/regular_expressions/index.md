@@ -200,16 +200,16 @@ Once remembered, the substring can be recalled for other use. See [Groups and ra
 
 Regular expressions are used with the {{jsxref("RegExp")}} methods {{jsxref("RegExp/test", "test()")}} and {{jsxref("RegExp/exec", "exec()")}} and with the {{jsxref("String")}} methods {{jsxref("String/match", "match()")}}, {{jsxref("String/replace", "replace()")}}, {{jsxref("String/search", "search()")}}, and {{jsxref("String/split", "split()")}}.
 
-| Method                                                           | Description                                                                                                      |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("RegExp.exec", "exec()")}}                 | Executes a search for a match in a string. It returns an array of information or `null` on a mismatch.           |
-| {{jsxref("RegExp.test", "test()")}}                 | Tests for a match in a string. It returns `true` or `false`.                                                     |
-| {{jsxref("String.match", "match()")}}                 | Returns an array containing all of the matches, including capturing groups, or `null` if no match is found.      |
-| {{jsxref("String.matchAll", "matchAll()")}}         | Returns an iterator containing all of the matches, including capturing groups.                                   |
-| {{jsxref("String.search", "search()")}}             | Tests for a match in a string. It returns the index of the match, or `-1` if the search fails.                   |
-| {{jsxref("String.replace", "replace()")}}         | Executes a search for a match in a string, and replaces the matched substring with a replacement substring.      |
+| Method                                          | Description                                                                                                      |
+| ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("RegExp.exec", "exec()")}}             | Executes a search for a match in a string. It returns an array of information or `null` on a mismatch.           |
+| {{jsxref("RegExp.test", "test()")}}             | Tests for a match in a string. It returns `true` or `false`.                                                     |
+| {{jsxref("String.match", "match()")}}           | Returns an array containing all of the matches, including capturing groups, or `null` if no match is found.      |
+| {{jsxref("String.matchAll", "matchAll()")}}     | Returns an iterator containing all of the matches, including capturing groups.                                   |
+| {{jsxref("String.search", "search()")}}         | Tests for a match in a string. It returns the index of the match, or `-1` if the search fails.                   |
+| {{jsxref("String.replace", "replace()")}}       | Executes a search for a match in a string, and replaces the matched substring with a replacement substring.      |
 | {{jsxref("String.replaceAll", "replaceAll()")}} | Executes a search for all matches in a string, and replaces the matched substrings with a replacement substring. |
-| {{jsxref("String.split", "split()")}}                 | Uses a regular expression or a fixed string to break a string into an array of substrings.                       |
+| {{jsxref("String.split", "split()")}}           | Uses a regular expression or a fixed string to break a string into an array of substrings.                       |
 
 When you want to know whether a pattern is found in a string, use the `test()` or `search()` methods; for more information (but slower execution) use the `exec()` or `match()` methods.
 If you use `exec()` or `match()` and if the match succeeds, these methods return an array and update properties of the associated regular expression object and also of the predefined regular expression object, `RegExp`.
@@ -325,15 +325,15 @@ If you need to access the properties of a regular expression created with an obj
 Regular expressions have optional flags that allow for functionality like global searching and case-insensitive searching.
 These flags can be used separately or together in any order, and are included as part of the regular expression.
 
-| Flag | Description                                                                                                                                         | Corresponding property                                                                                 |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `d`  | Generate indices for substring matches.                                                                                                             | [`RegExp.prototype.hasIndices`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices) |
-| `g`  | Global search.                                                                                                                                      | [`RegExp.prototype.global`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global)         |
-| `i`  | Case-insensitive search.                                                                                                                            | [`RegExp.prototype.ignoreCase`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) |
-| `m`  | Multi-line search.                                                                                                                                  | [`RegExp.prototype.multiline`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline)   |
-| `s`  | Allows `.` to match newline characters.                                                                                                             | [`RegExp.prototype.dotAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll)         |
-| `u`  | "unicode"; treat a pattern as a sequence of unicode code points.                                                                                    | [`RegExp.prototype.unicode`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode)       |
-| `y`  | Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp.sticky", "sticky")}}. | [`RegExp.prototype.sticky`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)         |
+| Flag | Description                                                                                                                              | Corresponding property                    |
+| ---- | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| `d`  | Generate indices for substring matches.                                                                                                  | {{jsxref("RegExp.prototype.hasIndices")}} |
+| `g`  | Global search.                                                                                                                           | {{jsxref("RegExp.prototype.global")}}     |
+| `i`  | Case-insensitive search.                                                                                                                 | {{jsxref("RegExp.prototype.ignoreCase")}} |
+| `m`  | Multi-line search.                                                                                                                       | {{jsxref("RegExp.prototype.multiline")}}  |
+| `s`  | Allows `.` to match newline characters.                                                                                                  | {{jsxref("RegExp.prototype.dotAll")}}     |
+| `u`  | "unicode"; treat a pattern as a sequence of unicode code points.                                                                         | {{jsxref("RegExp.prototype.unicode")}}    |
+| `y`  | Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp.sticky", "sticky")}}. | {{jsxref("RegExp.prototype.sticky")}}     |
 
 To include a flag with the regular expression, use this syntax:
 
