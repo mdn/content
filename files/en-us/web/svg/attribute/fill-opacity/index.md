@@ -14,17 +14,17 @@ The **`fill-opacity`** attribute is a presentation attribute defining the opacit
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('altGlyph')}}
-*   {{SVGElement('circle')}}
-*   {{SVGElement('ellipse')}}
-*   {{SVGElement('path')}}
-*   {{SVGElement('polygon')}}
-*   {{SVGElement('polyline')}}
-*   {{SVGElement('rect')}}
-*   {{SVGElement('text')}}
-*   {{SVGElement('textPath')}}
-*   {{SVGElement('tref')}}
-*   {{SVGElement('tspan')}}
+* {{SVGElement('altGlyph')}}
+* {{SVGElement('circle')}}
+* {{SVGElement('ellipse')}}
+* {{SVGElement('path')}}
+* {{SVGElement('polygon')}}
+* {{SVGElement('polyline')}}
+* {{SVGElement('rect')}}
+* {{SVGElement('text')}}
+* {{SVGElement('textPath')}}
+* {{SVGElement('tref')}}
+* {{SVGElement('tspan')}}
 
 ## Example
 
