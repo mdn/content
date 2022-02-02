@@ -421,8 +421,6 @@ The regular expression looks for:
 6. followed by four digits `\d{4}`
 7. followed by the end of the line of data: `$`
 
-The `click` event activated when the user presses <kbd>Enter</kbd> sets the value of `phoneInput.value`.
-
 #### HTML
 
 ```html
