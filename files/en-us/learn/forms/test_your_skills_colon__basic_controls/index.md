@@ -21,9 +21,9 @@ This aim of this skill test is to assess whether you've understood our [Basic na
 
 This task starts you off nice and gently by asking you to create two `<input>` elements, for a user's ID and password, along with a submit button.
 
-1.  Create appropriate inputs for user ID and password.
-2.  You should also associate them with their text labels semantically.
-3.  Create a submit button inside the remaining list item, with button text of "Log in".
+1. Create appropriate inputs for user ID and password.
+2. You should also associate them with their text labels semantically.
+3. Create a submit button inside the remaining list item, with button text of "Log in".
 
 Try updating the live code below to recreate the finished example:
 
@@ -37,10 +37,10 @@ Try updating the live code below to recreate the finished example:
 
 The next task requires you to create working sets of checkboxes and radio buttons, from the provided text labels.
 
-1.  Turn the first `<fieldset>`'s contents into a set of radio buttons — you should only be able to select one pony character at once.
-2.  Make it so that the first radio button is selected upon page load.
-3.  Turn the second `<fieldset>`'s content into a set of checkboxes.
-4.  Add a couple more hotdog choices of your own.
+1. Turn the first `<fieldset>`'s contents into a set of radio buttons — you should only be able to select one pony character at once.
+2. Make it so that the first radio button is selected upon page load.
+3. Turn the second `<fieldset>`'s content into a set of checkboxes.
+4. Add a couple more hotdog choices of your own.
 
 Try updating the live code below to recreate the finished example:
 
@@ -54,9 +54,9 @@ Try updating the live code below to recreate the finished example:
 
 The final task in this set requires you to create a file picker.
 
-1.  Create a basic file picker.
-2.  Allow the user to pick multiple files at once.
-3.  Allow the file picker to accept JPG and PNG images only.
+1. Create a basic file picker.
+2. Allow the user to pick multiple files at once.
+3. Allow the file picker to accept JPG and PNG images only.
 
 Try updating the live code below to recreate the finished example:
 
@@ -72,8 +72,8 @@ You can practice these examples in the Interactive Editors above.
 
 If you would like your work assessed, or are stuck and want to ask for help:
 
-1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
 
     - A descriptive title such as "Assessment wanted for Basic controls 1 skill test".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.

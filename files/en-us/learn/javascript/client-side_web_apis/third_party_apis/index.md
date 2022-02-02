@@ -111,9 +111,9 @@ Requiring a key enables the API provider to hold users of the API accountable fo
 
 Let's add some more functionality to the Mapquest example to show how to use some other features of the API.
 
-1.  To start this section, make yourself a copy of the [mapquest starter file](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/mapquest/starter-file.html), in a new directory. If you've already [cloned the examples repository](/en-US/docs/Learn#getting_our_code_examples), you'll already have a copy of this file, which you can find in the _javascript/apis/third-party-apis/mapquest_ directory.
-2.  Next, you need to go to the [Mapquest developer site](https://developer.mapquest.com/), create an account, and then create a developer key to use with your example. (At the time of writing, it was called a "consumer key" on the site, and the key creation process also asked for an optional "callback URL". You don't need to fill in a URL here: just leave it blank.)
-3.  Open up your starting file, and replace the API key placeholder with your key.
+1. To start this section, make yourself a copy of the [mapquest starter file](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/mapquest/starter-file.html), in a new directory. If you've already [cloned the examples repository](/en-US/docs/Learn#getting_our_code_examples), you'll already have a copy of this file, which you can find in the _javascript/apis/third-party-apis/mapquest_ directory.
+2. Next, you need to go to the [Mapquest developer site](https://developer.mapquest.com/), create an account, and then create a developer key to use with your example. (At the time of writing, it was called a "consumer key" on the site, and the key creation process also asked for an optional "callback URL". You don't need to fill in a URL here: just leave it blank.)
+3. Open up your starting file, and replace the API key placeholder with your key.
 
 ### Changing the type of map
 
@@ -178,7 +178,7 @@ Google Maps is arguably the most popular maps API, so why didn't we use it for o
 - It is much easier to get started with. For Google APIs in general, you need to create a Google account and log into the [Google Cloud Platform Console](https://console.cloud.google.com) to create API keys, etc., and the process is fairly complex. For the [Google Maps API](https://cloud.google.com/maps-platform/) in particular, you need to provide a credit card for billing purposes (although basic usage is free), which we didn't think was acceptable for a basic tutorial.
 - We wanted to show that there are other alternatives available.
 
-## A RESTful API — NYTimes
+## A RESTful API — NYTimes
 
 Now let's look at another API example — the [New York Times API](https://developer.nytimes.com). This API allows you to retrieve New York Times news story information and display it on your site. This type of API is known as a **RESTful API** — instead of getting data using the features of a JavaScript library like we did with Mapquest, we get data by making HTTP requests to specific URLs, with data like search terms and other properties encoded in the URL (often as URL parameters). This is a common pattern you'll encounter with APIs.
 
@@ -194,9 +194,9 @@ When you want to use a third party API, it is essential to find out where the do
 
 Most APIs require you to use some kind of developer key, for reasons of security and accountability. To sign up for an NYTimes API key, following the instructions at <https://developer.nytimes.com/get-started>.
 
-1.  Let's request a key for the Article Search API — create a new app, selecting this as the API you want to use (fill in a name and description, toggle the switch under the "Article Search API" to the on position, and then click "Create").
-2.  Get the API key from the resulting page.
-3.  Now, to start the example off, make copies of [nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) and [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) in a new directory on your computer. If you've already [cloned the examples repository](/en-US/docs/Learn#getting_our_code_examples), you'll already have a copy of these files, which you can find in the _javascript/apis/third-party-apis/nytimes_ directory. Initially the `<script>` element contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.
+1. Let's request a key for the Article Search API — create a new app, selecting this as the API you want to use (fill in a name and description, toggle the switch under the "Article Search API" to the on position, and then click "Create").
+2. Get the API key from the resulting page.
+3. Now, to start the example off, make copies of [nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) and [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) in a new directory on your computer. If you've already [cloned the examples repository](/en-US/docs/Learn#getting_our_code_examples), you'll already have a copy of these files, which you can find in the _javascript/apis/third-party-apis/nytimes_ directory. Initially the `<script>` element contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.
 
 The app will end up allowing you to type in a search term and optional start and end dates, which it will then use to query the Article Search API and display the search results.
 
@@ -206,7 +206,7 @@ The app will end up allowing you to type in a search term and optional start and
 
 First, you'll need to make a connection between the API and your app. In the case of this API, you need to include the API key as a [get](/en-US/docs/Web/HTTP/Methods/GET) parameter every time you request data from the service at the correct URL.
 
-1.  Find the following line:
+1. Find the following line:
 
     ```js
     let key = ' ... ';
@@ -214,13 +214,13 @@ First, you'll need to make a connection between the API and your app. In the cas
 
     Replace the existing API key with the actual API key you got in the previous section.
 
-2.  Add the following line to your JavaScript, below the "`// Event listeners to control the functionality`" comment. This runs a function called `submitSearch()` when the form is submitted (the button is pressed).
+2. Add the following line to your JavaScript, below the "`// Event listeners to control the functionality`" comment. This runs a function called `submitSearch()` when the form is submitted (the button is pressed).
 
     ```js
     searchForm.addEventListener('submit', submitSearch);
     ```
 
-3.  Now add the `submitSearch()` and `fetchResults()` function definitions, below the previous line:
+3. Now add the `submitSearch()` and `fetchResults()` function definitions, below the previous line:
 
     ```js
     function submitSearch(e) {
@@ -365,14 +365,14 @@ To make the pagination buttons work, we will increment (or decrement) the value 
 
 This allows us to write a simplistic pagination function easily.
 
-1.  Below the existing [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) call, add these two new ones, which cause the `nextPage()` and `previousPage()` functions to be invoked when the relevant buttons are clicked:
+1. Below the existing [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) call, add these two new ones, which cause the `nextPage()` and `previousPage()` functions to be invoked when the relevant buttons are clicked:
 
     ```js
     nextBtn.addEventListener('click', nextPage);
     previousBtn.addEventListener('click', previousPage);
     ```
 
-2.  Below your previous addition, let's define the two functions — add this code now:
+2. Below your previous addition, let's define the two functions — add this code now:
 
     ```js
     function nextPage(e) {
@@ -394,7 +394,7 @@ This allows us to write a simplistic pagination function easily.
 
     The second function works nearly exactly the same way in reverse, but we also have to take the extra step of checking that `pageNumber` is not already zero before decrementing it — if the fetch request runs with a minus `page` URL parameter, it could cause errors. If the `pageNumber` is already 0, we [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) out of the function, to avoid wasting processing power (If we are already at the first page, we don't need to load the same results again).
 
-> **Note:** You can find our [finished nytimes API example code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/index.html) (also [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)).
+> **Note:** You can find our [finished NYTimes API example code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/index.html) (also [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)).
 
 ## YouTube example
 

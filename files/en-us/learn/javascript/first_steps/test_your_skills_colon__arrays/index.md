@@ -36,9 +36,9 @@ Try updating the live code below to recreate the finished example:
 
 Now let's move on to another task. Here you are provided with a string to work with. We'd like you to:
 
-1.  Convert the string into an array, removing the `+` characters in the process. Save the result in a variable called `myArray`.
-2.  Store the length of the array in a variable called `arrayLength`.
-3.  Store the last item in the array in a variable called `lastItem`.
+1. Convert the string into an array, removing the `+` characters in the process. Save the result in a variable called `myArray`.
+2. Store the length of the array in a variable called `arrayLength`.
+3. Store the last item in the array in a variable called `lastItem`.
 
 Try updating the live code below to recreate the finished example:
 
@@ -52,10 +52,10 @@ Try updating the live code below to recreate the finished example:
 
 For this array task, we provide you with a starting array, and you will work in somewhat the opposite direction. You need to:
 
-1.  Remove the last item in the array.
-2.  Add two new names to the end of the array.
-3.  Go over each item in the array and add its index number after the name inside parentheses, for example `Ryu (0)`. Note that we don't teach how to do this in the Arrays article, so you'll have to do some research.
-4.  Finally, join the array items together in a single string called `myString`, with a separator of "` - `".
+1. Remove the last item in the array.
+2. Add two new names to the end of the array.
+3. Go over each item in the array and add its index number after the name inside parentheses, for example `Ryu (0)`. Note that we don't teach how to do this in the Arrays article, so you'll have to do some research.
+4. Finally, join the array items together in a single string called `myString`, with a separator of "` - `".
 
 Try updating the live code below to recreate the finished example:
 
@@ -86,8 +86,8 @@ You can practice these examples in the Interactive Editors above.
 
 If you would like your work assessed, or are stuck and want to ask for help:
 
-1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
+2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
 
     - A descriptive title such as "Assessment wanted for Variables 1 skill test".
     - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
