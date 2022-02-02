@@ -41,13 +41,7 @@ If you get stuck, then ask us for help — see the {{anch("Assessment or further
 
 You are working at a school; currently your students are studying the planets of our solar system, and you want to provide them with an easy-to-follow set of data to look up facts and figures about the planets. An HTML data table would be ideal — you need to take the raw data you have available and turn it into a table, following the steps below.
 
-The finished table should look like this:
-
-![](assessment-table.png)
-
-You can also [see the example live here](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) (no looking at the source code — don't cheat!)
-
-## Steps to complete
+### Steps to complete
 
 The following steps describe what you need to do to complete the table example. All the data you'll need is contained in the `planets-data.txt` file. If you have trouble visualizing the data, look at the live example above, or try drawing a diagram.
 
@@ -64,6 +58,14 @@ The following steps describe what you need to do to complete the table example. 
 - The first cell of the header row needs to be blank, and span two columns.
 - The group row headings (e.g. _Jovian planets_) that sit to the left of the planet name row headings (e.g. _Saturn_) are a little tricky to sort out — you need to make sure each one spans the correct number of rows and columns.
 - One way of associating headers with their rows/columns is a lot easier than the other way.
+
+## Example
+
+The finished table should look like this:
+
+![](assessment-table.png)
+
+You can also [see the example live here](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) (no looking at the source code — don't cheat!)
 
 ## Assessment or further help
 
