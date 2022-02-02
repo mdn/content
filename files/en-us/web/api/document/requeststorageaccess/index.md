@@ -21,15 +21,15 @@ access to first-party storage was granted, and rejects if access was denied.
 
 Storage access is granted based on a series of checks described here:
 
-1.  If the document already has been granted access, resolve.
-2.  If the document has a null origin, reject.
-3.  If the document's frame is the main frame, resolve.
-4.  If the sub frame's origin is equal to the main frame's, resolve.
-5.  If the sub frame is not sandboxed, skip to step 7.
-6.  If the sub frame doesn't have the token
+1.  If the browser is not processing a user gesture, reject.
+2.  If the document already has been granted access, resolve.
+3.  If the document has a null origin, reject.
+4.  If the document's frame is the main frame, resolve.
+5.  If the sub frame's origin is equal to the main frame's, resolve.
+6.  If the sub frame is not sandboxed, skip to step 7.
+7.  If the sub frame doesn't have the token
     `allow-storage-access-by-user-activation`, reject.
-7.  If the sub frame's parent frame is not the top frame, reject.
-8.  If the browser is not processing a user gesture, reject.
+8.  If the sub frame's parent frame is not the top frame, reject.
 9.  Check any additional rules that the browser has. Examples: allow lists, block lists,
     on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting
     the user for explicit permission. Reject if some rule is not fulfilled.
