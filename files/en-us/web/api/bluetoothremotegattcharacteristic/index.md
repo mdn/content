@@ -26,6 +26,12 @@ The `BluetoothRemoteGattCharacteristic` interface of the [Web Bluetooth API](/e
 - {{DOMxRef("BluetoothRemoteGATTCharacteristic.value")}}{{ReadOnlyInline}}
   - : The currently cached characteristic value. This value gets updated when the value of the characteristic is read or updated via a notification or indication.
 
+### Events
+
+- {{domxref("BluetoothRemoteGATTCharacteristic.oncharacteristicvaluechanged")}}
+  - : An event handler that runs when an event of type `characteristicvaluechanged`
+    has fired.
+
 ## Methods
 
 - {{DOMxRef("BluetoothRemoteGATTCharacteristic.getDescriptor()")}}
