@@ -10,9 +10,9 @@ browser-compat: api.SerialPort
 ---
 {{securecontext_header}}{{APIRef("Serial API")}}
 
-{{InheritanceDiagram}}
-
 The `SerialPort` interface of the {{domxref("Web_Serial_API", "Web Serial API")}} provides access to a serial port on the host device.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
