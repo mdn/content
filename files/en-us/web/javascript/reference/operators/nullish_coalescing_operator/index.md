@@ -16,7 +16,7 @@ operator that returns its right-hand side operand when its left-hand side operan
 {{jsxref("null")}} or {{jsxref("undefined")}}, and otherwise returns its left-hand side
 operand.
 
-This can be contrasted with the [logical OR
+This can be seen as a special case of the [logical OR
 (`||`) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR), which returns the right-hand side operand if the left
 operand is _any_ {{Glossary("falsy")}} value, not only `null` or `undefined`. In other words,
 if you use `||` to provide some default value to another variable
