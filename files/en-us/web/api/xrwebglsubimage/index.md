@@ -15,6 +15,8 @@ browser-compat: api.XRWebGLSubImage
 
 The **`XRWebGLSubImage`** interface is used during rendering of WebGL layers.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _Inherits properties from its parent, {{domxref("XRSubImage")}}._

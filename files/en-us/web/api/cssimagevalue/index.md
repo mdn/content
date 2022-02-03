@@ -17,6 +17,8 @@ The **`CSSImageValue`** interface of the [CSS Typed Object Model API](/en-US/doc
 
 The CSSImageValue object represents an [`<image>`](/en-US/docs/Web/CSS/image) that involves an URL, such as [`url()`](</en-US/docs/Web/CSS/url()>) or [`image()`](</en-US/docs/Web/CSS/image()>), but not [`linear-gradient()`](</en-US/docs/Web/CSS/linear-gradient()>) or [`element()`](</en-US/docs/Web/CSS/element()>).
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 None.

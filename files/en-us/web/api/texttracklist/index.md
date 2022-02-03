@@ -26,6 +26,8 @@ For a given {{domxref('HTMLMediaElement')}} object _media_, the individual track
 
 - the `media.textTracks`.[`getTrackById()`](/en-US/docs/Web/API/TextTrackList/getTrackById) method
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _This interface also inherits properties from its parent interface, {{domxref("EventTarget")}}._

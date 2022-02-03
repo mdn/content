@@ -17,6 +17,8 @@ The **`RTCPeerConnectionIceEvent`** interface represents events that occur in re
 
 Only one event is of this type: {{event("icecandidate")}}.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements these properties_.

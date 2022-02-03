@@ -17,6 +17,8 @@ The **`CSSMathSum`** interface of the {{domxref('CSS_Object_Model#css_typed_obje
 
 A CSSMathSum is the object type returned when the  [`StylePropertyMapReadOnly.get()`](/en-US/docs/Web/API/StylePropertyMapReadOnly/get) method is used on a CSS property whose value is created with a [`calc()`](</en-US/docs/Web/CSS/calc()>) function.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("CSSMathSum.CSSMathSum()")}}

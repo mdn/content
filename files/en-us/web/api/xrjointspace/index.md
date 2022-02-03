@@ -15,6 +15,8 @@ browser-compat: api.XRJointSpace
 
 The **`XRJointSpace`** interface is an {{domxref("XRSpace")}} and represents the position and orientation of an {{domxref("XRHand")}} joint.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref("XRJointSpace.jointName")}} {{readonlyInline}}

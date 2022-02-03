@@ -29,6 +29,8 @@ Several layer types inherit from `XRCompositionLayer`:
 
 `XRCompositionLayer` itself inherits from the general {{domxref("XRLayer")}} class (which inherits from {{domxref("EventTarget")}}).
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref("XRCompositionLayer.blendTextureSourceAlpha")}}

@@ -16,6 +16,8 @@ The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) `AudioProcessingEvent` re
 
 > **Note:** As of the August 29 2014 Web Audio API spec publication, this feature has been marked as deprecated, and is soon to be replaced by [AudioWorklet](https://webaudio.github.io/web-audio-api/#audioworklet).
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _The list below includes the properties inherited from its parent, {{domxref("Event")}}_.

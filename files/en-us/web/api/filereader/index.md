@@ -19,6 +19,8 @@ File objects may be obtained from a {{domxref("FileList")}} object returned as a
 
 {{AvailableInWorkers}}
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("FileReader.FileReader", "FileReader()")}}

@@ -18,6 +18,8 @@ browser-compat: api.SubmitEvent
 
 The **`SubmitEvent`** interface defines the object used to represent an {{Glossary("HTML")}} form's {{domxref("HTMLFormElement.submit_event", "submit")}} event. This event is fired at the {{HTMLElement("form")}} when the form's submit action is invoked.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("SubmitEvent.SubmitEvent", "SubmitEvent()")}}

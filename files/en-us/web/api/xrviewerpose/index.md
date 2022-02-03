@@ -25,6 +25,8 @@ The WebXR Device API interface **`XRViewerPose`** represents the pose (the posit
 
 This view can represent anything from the point-of-view of a user's XR headset to the viewpoint represented by a player's movement of an avatar using mouse and keyboard, presented on the screen, to a virtual camera capturing the scene for a spectator.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _In addition to the properties inherited from {{domxref("XRPose")}}, `XRViewerPose` includes the following:_

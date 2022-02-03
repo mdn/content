@@ -14,6 +14,8 @@ The **`CookieStore`** interface of the {{domxref('Cookie Store API')}} provides 
 
 The `CookieStore` is accessed via attributes in the global scope in a {{domxref("Window")}} or {{domxref("ServiceWorkerGlobalScope")}} context. Therefore there is no constructor.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 ### Event handlers

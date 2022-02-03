@@ -12,6 +12,8 @@ browser-compat: api.HID
 
 The **`HID`** interface provides methods for connecting to _HID devices_, listing attached HID devices and event handlers for connected HID devices.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _This interface also inherits properties of its parent, {{domxref("EventTarget")}}._

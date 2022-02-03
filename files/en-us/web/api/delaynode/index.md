@@ -20,6 +20,8 @@ A `DelayNode` always has exactly one input and one output, both with the same am
 
 When creating a graph that has a cycle, it is mandatory to have at least one `DelayNode` in the cycle, or the nodes taking part in the cycle will be muted.
 
+{{InheritanceDiagram}}
+
 <table class="properties">
   <tbody>
     <tr>

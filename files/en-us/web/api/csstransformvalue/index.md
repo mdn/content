@@ -16,6 +16,8 @@ browser-compat: api.CSSTransformValue
 
 The **`CSSTransformValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents `transform-list` values as used by the CSS {{CSSxref('transform')}} property.
 
+{{InheritanceDiagram}}
+
 ## Interfaces based on CSSTransformValue
 
 Below is a list of interfaces based on the `CSSTransformValue` interface.
