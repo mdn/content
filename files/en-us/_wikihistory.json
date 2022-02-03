@@ -81676,25 +81676,6 @@
       "sideshowbarker"
     ]
   },
-  "Web/API/VideoTrackList/onaddtrack": {
-    "modified": "2020-10-15T22:09:24.187Z",
-    "contributors": [
-      "sideshowbarker"
-    ]
-  },
-  "Web/API/VideoTrackList/onchange": {
-    "modified": "2020-10-15T22:09:25.636Z",
-    "contributors": [
-      "wbamberg",
-      "sideshowbarker"
-    ]
-  },
-  "Web/API/VideoTrackList/onremovetrack": {
-    "modified": "2020-10-15T22:09:25.775Z",
-    "contributors": [
-      "sideshowbarker"
-    ]
-  },
   "Web/API/VideoTrackList/removetrack_event": {
     "modified": "2020-10-15T22:07:23.969Z",
     "contributors": [
