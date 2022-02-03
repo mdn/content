@@ -787,12 +787,6 @@ window.addEventListener("load", drawOutput);
 
 {{ EmbedLiveSample('Active_learning_Playing_with_styling_text', 700, 800) }}
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information going forward? You can find an assessment to verify that you've retained this information at the end of the module — see [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage).
-
-This assessment tests all the knowledge discussed in this module, so you might want to read the other articles before moving on to it.
-
 ## Summary
 
 We hoped you enjoyed playing with text in this article! The next article will provide you with all you need to know about styling HTML lists.
@@ -801,7 +795,7 @@ We hoped you enjoyed playing with text in this article! The next article will pr
 
 ## In this module
 
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- **Fundamental text and font styling**
 - [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
 - [Styling links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
 - [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
