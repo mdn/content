@@ -32,7 +32,7 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
 
 - `source`
 
-  - : The scrollable element which scrolling position drives the progress of the timeline. Can be:
+  - : The scrollable element whose scrolling position drives the progress of the timeline. Can be:
 
     - `auto`
 
@@ -40,10 +40,10 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
 
     - `selector("id-selector")`
 
-      - : the scroll container identified by an element's id.
+      - : The scroll container identified by an element's id.
 
     - `none`
-      - : no scroll container specified.
+      - : No scroll container specified.
 
 - `orientation`
 
@@ -70,18 +70,18 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
 
 - `scroll-offsets`
 
-  - : Determines the scroll timeline's scroll offsets
+  - : Determines the scroll timeline's scroll offsets:
 
     - `none`
       - : No scroll offsets specified.
     - `<length-pecentage>`
       - : A comma separated list of [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) values.
     - `<element-offset>`
-      - : An elements position determines the scroll offset.
+      - : An element’s position determines the scroll offset.
 
 ## Description
 
-To use the scroll-timeline, create a `@scroll-timeline` rule, which is used by the {{cssxref("animation-timeline")}} property to match an animations timeline to it's timeline declaration.
+To use the scroll timeline, create a `@scroll-timeline` rule, which is used by the {{cssxref("animation-timeline")}} property to match an animation’s timeline to its timeline declaration.
 
 Each `@scroll-timeline` rule includes properties to determine the source, orientation and scroll-offsets of the scroll timeline.
 
@@ -91,9 +91,9 @@ The `scroll-offset` property determines where, within the scrolling, the animati
 
 1. By using the CSS keyword `none`, which means no `scroll-offset` is specified.
 
-2. It can be determined by a comma separated list of [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) values. Each value is mapped against the {{cssxref('animation-duration')}}. For instance, if an `animation-duration` is set to `2s` and the scroll offset to `0px, 30px, 100px`, then at 1s the scroll offset would be 30px. Typically you'd use two values here for a smooth scroll animation, such as `0px, 100px`.
+2. It can be determined by a comma-separated list of [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) values. Each value is mapped against the {{cssxref('animation-duration')}}. For instance, if an `animation-duration` is set to `2s` and the scroll offset to `0px, 30px, 100px`, then at 1s the scroll offset would be 30px. Typically, for a smooth scroll animation, you'd use two values here, such as `0px, 100px`.
 
-3. The third way of determining a scroll offset is to use an element offset. This means you specify elements within the page, the locations of which determine the scroll timeline and which edge of these elements to use. Specifying elements is done using the `selector()` function, which receives an element's id. Edge is determined by keywords `start` or `end`. An optional threshold value between `0-1` can be used to represent the percentage of the element expected to be visible in the `source`.
+3. The third way of determining a scroll offset is to use an element offset. This means you specify elements within the page, the locations of which determine the scroll timeline and which edge of these elements to use. Specifying elements is done using the `selector()` function, which receives an element's id. Edge is determined by keywords `start` or `end`. An optional threshold value between `0–1` can be used to represent the percentage of the element expected to be visible in the `source`.
 
 ```css
 @scroll-timeline element-move {
@@ -113,9 +113,9 @@ The `scroll-offset` property determines where, within the scrolling, the animati
 
 This example shows a square, which rotates as its container is scrolled vertically. We create an element (`#container`) with a fixed height to allow scroll. This is our `source` element.
 
-Inside this container we create another element (`#square`), which is styled appropriately to look like a square. This element has a rotation animation applied, using the {{cssxref('@keyframes')}} rule and `animation-name` property.
+Inside this container, we create another element (`#square`), which is styled appropriately to look like a square. This element has a rotation animation applied, using the {{cssxref('@keyframes')}} rule and `animation-name` property.
 
-We create a `@scroll-timeline` called `squareTimeline`, setting the `source` as the container, the `orientation` as `vertical` and the `scroll-offset` to start at `0px` and end at `300px` (the height of our container). Then we apply this to the square using the `scroll-timeline` property.
+We create an `@scroll-timeline` called `squareTimeline`, setting the `source` as the container, the `orientation` as `vertical` and the `scroll-offset` to start at `0px` and end at `300px` (the height of our container). Then we apply this to the square using the `scroll-timeline` property.
 
 #### HTML
 
@@ -174,4 +174,4 @@ We create a `@scroll-timeline` called `squareTimeline`, setting the `source` as 
 ## See also
 
 - [CSS animations](/en-US/docs/Web/CSS/CSS_Animations)
-- [Practical use cases for scroll linked animations in CSS with scroll timelines](https://css-tricks.com/practical-use-cases-for-scroll-linked-animations-in-css-with-scroll-timelines/)
+- [Practical use cases for scroll-linked animations in CSS with scroll timelines](https://css-tricks.com/practical-use-cases-for-scroll-linked-animations-in-css-with-scroll-timelines/)
