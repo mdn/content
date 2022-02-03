@@ -105,7 +105,6 @@ A scroll timeline named `squareTimeline` is declared and applied to the `#square
 
 {{EmbedLiveSample("Simple example")}}
 
-
 ## Specifications
 
 {{Specifications}}

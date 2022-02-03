@@ -13,7 +13,7 @@ browser-compat: api.Sensor.error_event
 ---
 {{APIRef("Sensor API")}}
 
-The **`error`** event is fired when an exception occurs on a sensor. 
+The **`error`** event is fired when an exception occurs on a sensor.
 
 The {{domxref('Sensor')}} interface is a base class, `onerror` and the `error` event may only be used
 on one of the [derived classes](/en-US/docs/Web/API/Sensor#interfaces_based_on_sensor).

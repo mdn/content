@@ -25,7 +25,6 @@ counter(countername, upper-roman)
 A [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters) has no visible effect by itself.
 The `counter()` function (and {{cssxref("counters()")}} function) is what makes it useful by returning developer defined strings (or images).
 
-
 ## Syntax
 
 ### Values
