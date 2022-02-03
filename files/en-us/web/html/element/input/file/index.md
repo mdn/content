@@ -339,7 +339,7 @@ input.style.opacity = 0;
 
 > **Note:** {{cssxref("opacity")}} is used to hide the file input instead of {{cssxref("visibility", "visibility: hidden")}} or {{cssxref("display", "display: none")}}, because assistive technology interprets the latter two styles to mean the file input isn't interactive.
 
-Next, we add an [event listener](/en-US/docs/Web/API/EventTarget/addEventListener) to the input to listen for changes to its selected value changes (in this case, when files are selected). The event listener invokes our custom `updateImageDisplay()` function.
+Next, we add an [event listener](/en-US/docs/Web/API/EventTarget/addEventListener) to the input to listen for changes to its selected value (in this case, when files are selected). The event listener invokes our custom `updateImageDisplay()` function.
 
 ```js
 input.addEventListener('change', updateImageDisplay);
