@@ -104,7 +104,9 @@ window.addEventListener("resize", resizeListener);
 
 ### Result
 
-Open the {{LiveSampleLink('Demo', 'Demo Link')}} in a new browser window and resize it to see the result.
+{{EmbedLiveSample('Demo')}}
+
+You can also {{LiveSampleLink('Demo', 'view the results of the demo code in a separate page')}}.
 
 ## Specifications
 
