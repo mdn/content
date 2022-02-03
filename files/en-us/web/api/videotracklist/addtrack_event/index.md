@@ -33,7 +33,7 @@ An {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
 - {{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}
-  - : The newly-added {{domxref("VideoTrack")}} the event is in reference to or `null`.
+  - : The newly-added {{domxref("VideoTrack")}} the event is in reference to.
 
 ## Examples
 
