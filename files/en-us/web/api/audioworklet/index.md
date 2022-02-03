@@ -25,6 +25,8 @@ The worklet's code is run in the {{domxref("AudioWorkletGlobalScope")}} global e
 
 Access the audio context's instance of `AudioWorklet` through the {{domxref("BaseAudioContext.audioWorklet")}} property.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _The `AudioWorklet` interface does not define any properties of its own, but does inherit properties of {{domxref("Worklet")}}._

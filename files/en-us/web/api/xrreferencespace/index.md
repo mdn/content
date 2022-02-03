@@ -28,6 +28,8 @@ The WebXR Device API's **`XRReferenceSpace`** interface describes the coordina
 
 All reference spaces—with the sole exception being bounded reference spaces—are described using the `XRReferenceSpace` type. Bounded spaces are implemented as {{domxref("XRBoundedReferenceSpace")}} objects. These are special spaces which let you establish a perimeter within which it's "safe" for the viewer to move. For XR systems that allow the user to physically move around, such as those that track movement with a real-world camera, this boundary establishes the edges of the area the user is able to move around in, whether due to physical obstacles or due to limitations of the XR hardware. See the article [Using bounded reference spaces to protect the viewer](/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces) for more on using boundaries to keep the user from colliding with obstacles both physical and virtual.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _`XRReferenceSpace`inherits the properties of {{domxref("EventTarget")}} but defines no additional properties._

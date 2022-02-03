@@ -19,6 +19,8 @@ browser-compat: api.BlobEvent
 
 The **`BlobEvent`** interface represents events associated with a {{domxref("Blob")}}. These blobs are typically, but not necessarily,  associated with media content.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("BlobEvent.BlobEvent", "BlobEvent()")}}

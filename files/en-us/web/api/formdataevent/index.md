@@ -16,6 +16,8 @@ The **`FormDataEvent`** interface represents a [`formdata` event](/en-US/docs/We
 
 This allows a {{domxref("FormData")}} object to be quickly obtained in response to a `formdata` event firing, rather than needing to put it together yourself when you wish to submit form data via a method like {{domxref("XMLHttpRequest")}} (see [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)).
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("FormDataEvent.FormDataEvent","FormDataEvent()")}}

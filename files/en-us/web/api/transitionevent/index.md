@@ -14,6 +14,8 @@ browser-compat: api.TransitionEvent
 
 The **`TransitionEvent`** interface represents events providing information related to [transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}}

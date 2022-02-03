@@ -15,6 +15,8 @@ The **`OffscreenCanvas`** interface provides a canvas that can be rendered off s
 
 {{AvailableInWorkers}}
 
+{{InheritanceDiagram}}
+
 ## Constructors
 
 - {{domxref("OffscreenCanvas.OffscreenCanvas", "OffscreenCanvas()")}}

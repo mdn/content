@@ -11,6 +11,8 @@ browser-compat: api.VTTCue
 
 The `VTTCue` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes and controls the text track associated with a particular {{HTMLElement("track")}} element.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("VTTCue.VTTCue()")}}

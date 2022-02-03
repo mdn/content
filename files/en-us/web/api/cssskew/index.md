@@ -17,6 +17,8 @@ browser-compat: api.CSSSkew
 
 The **`CSSSkew`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} is part of the {{domxref('CSSTransformValue')}} interface. It represents the [`skew()`](</en-US/docs/Web/CSS/transform-function/skew()>) value of the individual {{CSSXRef('transform')}} property in CSS.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("CSSSkew.CSSSkew()")}}

@@ -14,6 +14,8 @@ browser-compat: api.MediaQueryListEvent
 
 The `MediaQueryListEvent` object stores information on the changes that have happened to a {{DOMxRef("MediaQueryList")}} object — instances are available as the event object on a function referenced by a {{DOMxRef("MediaQueryList.onchange")}} property or {{DOMxRef("MediaQueryList.addListener()")}} call.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{DOMxRef("MediaQueryListEvent.MediaQueryListEvent()", "MediaQueryListEvent()")}}

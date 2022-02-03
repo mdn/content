@@ -19,6 +19,8 @@ The WebXR Device API's **`XRSession`** interface represents an ongoing XR sessio
 
 With `XRSession` methods, you can poll the viewer's position and orientation (the {{domxref("XRViewerPose")}}), gather information about the user's environment, and present imagery to the user. `XRSession` supports both inline and immersive virtual and augmented reality modes.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _In addition to the properties listed below, `XRSession` inherits properties from its parent interface, {{domxref("EventTarget")}}._

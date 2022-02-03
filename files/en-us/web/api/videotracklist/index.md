@@ -20,6 +20,8 @@ The **`VideoTrackList`** interface is used to represent a list of the video trac
 
 Retrieve an instance of this object with {{domxref('HTMLMediaElement.videoTracks')}}. The individual tracks can be accessed using array syntax or functions such as {{jsxref("Array.forEach", "forEach()")}} for example.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _This interface also inherits properties from its parent interface, {{domxref("EventTarget")}}._

@@ -16,6 +16,8 @@ browser-compat: api.SpeechRecognitionEvent
 
 The **`SpeechRecognitionEvent`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents the event object for the {{event("result")}} and {{event("nomatch")}} events, and contains all the data associated with an interim or final speech recognition result.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _`SpeechRecognitionEvent` also inherits properties from its parent interface, {{domxref("Event")}}._

@@ -17,6 +17,8 @@ browser-compat: api.DocumentTimeline
 
 The **`DocumentTimeline`** interface of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) represents animation timelines, including the default document timeline (accessed via {{domxref("Document.timeline")}}).
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("DocumentTimeline.DocumentTimeline", "DocumentTimeline()")}}

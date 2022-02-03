@@ -15,6 +15,8 @@ Detection API','','true')}} provides methods and events for detecting user activ
 
 This interface requires a secure context.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("IdleDetector.IdleDetector()")}}

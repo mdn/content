@@ -15,6 +15,8 @@ browser-compat: api.WindowControlsOverlay
 The **`WindowControlsOverlay`** interface of the [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API) exposes information about the geometry
 of the title bar area in desktop Progressive Web Apps, and an event to know whenever it changes. This interface is accessible from {{domxref('Navigator.windowControlsOverlay')}}.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref("WindowControlsOverlay.visible")}} {{readonlyInline}}

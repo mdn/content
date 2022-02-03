@@ -13,6 +13,8 @@ browser-compat: api.WebGLSync
 
 The **`WebGLSync`** interface is part of the [WebGL 2](/en-US/docs/Web/API/WebGL_API) API and is used to synchronize activities between the GPU and the application.
 
+{{InheritanceDiagram}}
+
 When working with `WebGLSync` objects, the following methods of the {{domxref("WebGL2RenderingContext")}} are useful:
 
 - {{domxref("WebGL2RenderingContext.fenceSync()")}}

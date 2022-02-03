@@ -12,6 +12,8 @@ browser-compat: api.SVGAElement
 
 The **`SVGAElement`** interface provides access to the properties of an {{SVGElement("a")}} element, as well as methods to manipulate them.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGGraphicsElement")}}, and implements properties from {{domxref("HTMLHyperlinkElementUtils")}}._
