@@ -15,7 +15,7 @@ This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455
 
 ## First steps
 
-WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx) class which does as the name suggests. It is in the *System.Net.Sockets* namespace.
+WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://msdn.microsoft.com/library/system.net.sockets.tcplistener.aspx) class which does as the name suggests. It is in the *System.Net.Sockets* namespace.
 
 > **Note:** It is a good idea to include the namespace with the `using` keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.
 
@@ -23,7 +23,7 @@ WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.w
 
 Constructor:
 
-```cpp
+```cs
 TcpListener(System.Net.IPAddress localaddr, int port)
 ```
 
@@ -39,7 +39,7 @@ Methods:
 
 Here's a barebones server implementation:
 
-```cpp
+```cs
 using System.Net.Sockets;
 using System.Net;
 using System;
@@ -74,13 +74,13 @@ Properties:
 
 Methods:
 
-- ```cpp
+- ```cs
   Write(Byte[] buffer, int offset, int size)
   ```
 
   Writes bytes from buffer, offset and size determine length of message.
 
-- ```cpp
+- ```cs
   Read(Byte[] buffer, int offset, int size)
   ```
 
@@ -88,7 +88,7 @@ Methods:
 
 Let us extend our example.
 
-```cpp
+```cs
 TcpClient client = server.AcceptTcpClient();
 
 Console.WriteLine("A client connected.");
@@ -111,7 +111,7 @@ When a client connects to a server, it sends a GET request to upgrade the connec
 
 This sample code can detect a GET from the client. Note that this will block until the first 3 bytes of a message are available. Alternative solutions should be investigated for production environments.
 
-```cpp
+```cs
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -143,7 +143,7 @@ You must:
 3. Compute SHA-1 and Base64 hash of the new value
 4. Write the hash back as the value of "Sec-WebSocket-Accept" response header in an HTTP response
 
-```cpp
+```cs
  if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
 {
     const string eol = "\r\n"; // HTTP/1.1 defines the sequence CR LF as the end-of-line marker
@@ -209,7 +209,7 @@ where _D_ is the decoded message array, _E_ is the encoded message array, _M_ is
 
 Example in C#:
 
-```cpp
+```cs
 Byte[] decoded = new Byte[3];
 Byte[] encoded = new Byte[3] {112, 16, 109};
 Byte[] mask = new Byte[4] {61, 84, 35, 6};
@@ -223,7 +223,7 @@ for (int i = 0; i < encoded.Length; i++) {
 
 ### wsserver.cs
 
-```cpp
+```cs
 //
 // csc wsserver.cs
 // wsserver.exe

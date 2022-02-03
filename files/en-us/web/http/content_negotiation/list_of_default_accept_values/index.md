@@ -32,7 +32,7 @@ These are the values sent when the context doesn't give better information. Note
 
 \[2] This is an improvement over earlier `Accept` headers as it no longer ranks `image/png` above `text/html`.
 
-\[3] See [IE and the Accept Header (IEInternals' MSDN blog)](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header).
+\[3] See [IE and the Accept Header (IEInternals' MSDN blog)](https://docs.microsoft.com/archive/blogs/ieinternals/ie-and-the-accept-header).
 
 ## Values for an image
 
@@ -48,7 +48,7 @@ When requesting an image, like through an HTML {{HTMLElement("img")}} element, u
 | Safari (before Mac OS Big Sur)                                                                                                 | `image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5`            |
 | Chrome                                                                                                                         | `image/avif,image/webp,image/apng,image/*,*/*;q=0.8`                       |
 | Internet Explorer 9                                                                                                            | `image/png,image/svg+xml,image/*;q=0.8, */*;q=0.5`                         |
-| Internet Explorer 8 or earlier _[source](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header)_ | `*/*`                                                                      |
+| Internet Explorer 8 or earlier _[source](https://docs.microsoft.com/archive/blogs/ieinternals/ie-and-the-accept-header)_ | `*/*`                                                                      |
 
 \[1] This value can be modified using the `image.http.accept` parameter (_[source](https://searchfox.org/mozilla-central/search?q=image.http.accept)_).
 
@@ -89,7 +89,7 @@ When a script is requested, like via the {{HTMLElement("script")}} HTML element,
 
 \[1] See [bug 170789](https://bugzilla.mozilla.org/show_bug.cgi?id=170789).
 
-\[2] See [IE and the Accept Header (IEInternals' MSDN blog)](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header).
+\[2] See [IE and the Accept Header (IEInternals' MSDN blog)](https://docs.microsoft.com/archive/blogs/ieinternals/ie-and-the-accept-header).
 
 ## Values for a CSS stylesheet
 
@@ -106,4 +106,4 @@ When a CSS stylesheet is requested, via the `<link rel="stylesheet">` HTML eleme
 
 \[1] See [bug 170789](https://bugzilla.mozilla.org/show_bug.cgi?id=170789).
 
-\[2] See [IE and the Accept Header (IEInternals' MSDN blog)](https://docs.microsoft.com/en-us/archive/blogs/ieinternals/ie-and-the-accept-header).
+\[2] See [IE and the Accept Header (IEInternals' MSDN blog)](https://docs.microsoft.com/archive/blogs/ieinternals/ie-and-the-accept-header).

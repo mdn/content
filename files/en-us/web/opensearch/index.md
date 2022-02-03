@@ -143,7 +143,7 @@ In addition, the search plugin service provides a logging mechanism that may be 
 
 - [OpenSearch Documentation](https://github.com/dewitt/opensearch)
 - [Safari 8.0 Release Notes: Quick Website Search](https://developer.apple.com/library/archive/releasenotes/General/WhatsNewInSafari/Articles/Safari_8_0.html)
-- [Microsoft Edge Dev Guide: Search provider discovery](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/browser-features/search-provider-discovery)
+- [Microsoft Edge Dev Guide: Search provider discovery](https://docs.microsoft.com/microsoft-edge/dev-guide/browser-features/search-provider-discovery)
 - [The Chromium Projects: Tab to Search](https://www.chromium.org/tab-to-search)
 - imdb.com has a [working `osd.xml`](https://m.media-amazon.com/images/G/01/imdb/images/imdbsearch-3349468880._CB470047351_.xml)
 - [Ready2Search](https://ready.to/search/en) - create OpenSearch plugins. [Customized Search through Ready2Search](https://ready.to/search/make/en_make_plugin.htm)

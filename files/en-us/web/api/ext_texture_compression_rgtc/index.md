@@ -23,13 +23,13 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 The compressed texture formats are exposed by 4 constants and can be used in two functions: {{domxref("WebGLRenderingContext.compressedTexImage2D", "compressedTexImage2D()")}} and {{domxref("WebGLRenderingContext.compressedTexSubImage2D", "compressedTexSubImage2D()")}}.
 
 - `ext.COMPRESSED_RED_RGTC1_EXT`
-  - : Each 4x4 block of texels consists of 64 bits of unsigned red image data. See also [BC4 unsigned](https://docs.microsoft.com/en-us/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#bc4).
+  - : Each 4x4 block of texels consists of 64 bits of unsigned red image data. See also [BC4 unsigned](https://docs.microsoft.com/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#bc4).
 - `ext.COMPRESSED_SIGNED_RED_RGTC1_EXT`
-  - : Each 4x4 block of texels consists of 64 bits of signed red image data. See also [BC4 signed](https://docs.microsoft.com/en-us/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#bc4).
+  - : Each 4x4 block of texels consists of 64 bits of signed red image data. See also [BC4 signed](https://docs.microsoft.com/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#bc4).
 - `ext.COMPRESSED_RED_GREEN_RGTC2_EXT`
-  - : Each 4x4 block of texels consists of  64 bits of compressed unsigned red image data followed by 64 bits of compressed unsigned green image data. See also [BC5 unsigned](https://docs.microsoft.com/en-us/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#bc5).
+  - : Each 4x4 block of texels consists of 64 bits of compressed unsigned red image data followed by 64 bits of compressed unsigned green image data. See also [BC5 unsigned](https://docs.microsoft.com/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#bc5).
 - `ext.COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT`
-  - : Each 4x4 block of texels consists of 64 bits of compressed signed red image data followed by 64 bits of compressed signed green image data. See also [BC5 signed](https://docs.microsoft.com/en-us/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#bc5).
+  - : Each 4x4 block of texels consists of 64 bits of compressed signed red image data followed by 64 bits of compressed signed green image data. See also [BC5 signed](https://docs.microsoft.com/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression#bc5).
 
 ## Examples
 
