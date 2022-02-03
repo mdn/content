@@ -18,6 +18,8 @@ The **`PeriodicSyncEvent`** interface of the {{domxref('Web Periodic Background 
 
 An instance of this event is passed to the {{domxref('ServiceWorkerGlobalScope.onperiodicsync')}} handler. This happens periodically, at an interval greater than or equal to that set in the {{domxref('PeriodicSyncManager.register()')}} method. Other implementation-specific factors such as the user's engagement with the site decide the actual interval.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("PeriodicSyncEvent.PeriodicSyncEvent()")}}
@@ -31,8 +33,6 @@ An instance of this event is passed to the {{domxref('ServiceWorkerGlobalScope.o
 ## Methods
 
 Inherits methods from its parent {{domxref('ExtendableEvent')}}.
-
-{{InheritanceDiagram}}
 
 ## Examples
 
