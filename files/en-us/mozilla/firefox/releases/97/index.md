@@ -76,8 +76,7 @@ This article provides information about the changes in Firefox 97 that will affe
 ### WebDriver conformance (Marionette)
 
 - `Marionette:Quit` accepts a new boolean parameter, `safeMode`, to restart Firefox in safe mode ({{bug(1144075)}}).
-
-#### Removals
+- Improved stability for `WebDriver:NewSession` and `WebDriver:NewWindow` when waiting for the current or initial document to be loaded ({{bug(1739369)}}, {{bug(1747359)}}).
 
 ## Changes for add-on developers
 
