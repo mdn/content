@@ -55,7 +55,7 @@ Here are some popular editors:
   <thead>
     <tr>
       <th scope="col">Editor</th>
-      <th scope="col">Licence</th>
+      <th scope="col">License</th>
       <th scope="col">Price</th>
       <th scope="col">OS</th>
       <th scope="col">Support</th>
@@ -379,7 +379,7 @@ Here are some popular editors:
       </td>
       <td>
         <a href="https://github.com/microsoft/vscode">Open Source</a> under MIT
-        licence/ Specific licence for product
+        license/ Specific license for product
       </td>
       <td>Free</td>
       <td>Windows, Mac, Linux</td>
@@ -463,8 +463,8 @@ If you like _lots_ of features and your editor is slowing down because of all yo
 
 It's always good to know if you can get help or not when using software. For text editors, check for two different kinds of support:
 
-1.  User-oriented content (FAQ, manual, online help)
-2.  Discussion with developers and other users (forum, email, IRC)
+1. User-oriented content (FAQ, manual, online help)
+2. Discussion with developers and other users (forum, email, IRC)
 
 Use the written documentation when you're learning how to use the editor. Get in touch with other users if you're troubleshooting while installing or using the editor.
 

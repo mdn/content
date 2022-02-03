@@ -27,4 +27,4 @@ if (window.XMLHttpRequest) {
 
 ### See also
 
-- [Using XMLHttpRequest](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
+- [Using XMLHttpRequest](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)

@@ -33,7 +33,7 @@ In this example the `aria-valuetext` attribute on the element with an ID of `sli
 ```html
 <div role="slider" aria-valuenow="1"
   aria-valuemin="1" aria-valuemax="7"
-	aria-valuetext="Sunday">
+  aria-valuetext="Sunday">
 ```
 
 ```js

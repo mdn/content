@@ -173,17 +173,19 @@ When the `data-state` of the button is changed, the appropriate image will also 
 
 The {{htmlelement("progress") }} element has the following basic style set up:
 
-    .controls progress {
-       display:block;
-       width:100%;
-       height:81%;
-       margin-top:0.125rem;
-       border:none;
-       color:#0095dd;
-       -moz-border-radius:2px;
-       -webkit-border-radius:2px;
-       border-radius:2px;
-    }
+```css
+.controls progress {
+    display:block;
+    width:100%;
+    height:81%;
+    margin-top:0.125rem;
+    border:none;
+    color:#0095dd;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+}
+```
 
 Like the {{htmlelement("button") }} elements, {{htmlelement("progress") }} also has a default border, which is removed here. It is also given a slight rounded corner for aesthetic reasons. The `color` property is also defined here as Internet Explorer uses this defined color for styling the progress bar's background color as it increases.
 

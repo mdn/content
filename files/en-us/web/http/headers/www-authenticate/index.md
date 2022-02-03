@@ -45,6 +45,7 @@ The client is expected to select the most secure of the challenges it understand
 
 At least one challenge must be specified.
 Multiple challenges may be specified, comma-separated, in a single header, or in individual headers:
+
 ```http
 // Challenges specified in single header
 WWW-Authenticate: challenge1, ..., challengeN
@@ -78,7 +79,6 @@ WWW-Authenticate: Basic realm=<realm>
 WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 ```
 
-
 ## Directives
 
 - `<auth-scheme>`
@@ -87,7 +87,7 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
     > **Note:** For more information/options see [HTTP Authentication > Authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes)
 - **realm=**\<realm> {{optional_inline}}
   - : A string describing a protected area.
-    A realm allows a server to partition up the areas it protects (if supported by a scheme that allows such partitioning), and informs users about which paricular username/password are required.
+    A realm allows a server to partition up the areas it protects (if supported by a scheme that allows such partitioning), and informs users about which particular username/password are required.
     If no realm is specified, clients often display a formatted hostname instead.
 - `<token68>` {{optional_inline}}
   - : A token that may be useful for some schemes. The token allows the 66 unreserved URI characters plus a few others.
@@ -95,7 +95,6 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 
 Other than `<auth-scheme>` and the key `realm`, authorization parameters are specific to each [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
 Generally you will need to check the relevant specifications for these (keys for a small subset of schemes are listed below).
-
 
 ### Basic
 
@@ -131,7 +130,7 @@ Generally you will need to check the relevant specifications for these (keys for
       Valid non-session values are: `"MD5"` (default if not specified), `"SHA-256"`, `"SHA-512"`.
       Valid session values are: `"MD5-sess"`, `"SHA-256-sess"`, `"SHA-512-sess"`.
 - **`qop`**
-  - : Quoted string indicating the quality of protection supported by the server. This must be supplied, and unrecognised options must be ignored.
+  - : Quoted string indicating the quality of protection supported by the server. This must be supplied, and unrecognized options must be ignored.
       - `"auth"`: Authentication
       - `"auth-int"`: Authentication with integrity protection
 - **`charset="UTF-8"`** {{optional_inline}}
@@ -139,7 +138,6 @@ Generally you will need to check the relevant specifications for these (keys for
       The only allowed value is the case-insensitive string "UTF-8".
 - **`userhash`** {{optional_inline}}
   - : A server may specify `"true"` to indicate that it supports username hashing (default is `"false"`)
-
 
 ## Examples
 
@@ -151,7 +149,7 @@ A server that only supports basic authentication might have a `WWW-Authenticate`
 WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
 ```
 
-A user-agent recieving this header would first prompt the user for their username and password, and then re-request the resource: this time including the (encoded) credentials in the {{HTTPHeader("Authorization")}} header.
+A user-agent receiving this header would first prompt the user for their username and password, and then re-request the resource: this time including the (encoded) credentials in the {{HTTPHeader("Authorization")}} header.
 The {{HTTPHeader("Authorization")}} header might look like this:
 
 ```https
@@ -161,7 +159,6 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 For `"Basic"` authentication the credentials are constructed by first combining the username and the password with a colon (`aladdin:opensesame`), and then by encoding the resulting string in [`base64`](/en-US/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 
 > **Note:** See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or Nginx servers to password protect your site with HTTP basic authentication.
-
 
 ### Digest authentication with SHA-256 and MD5
 
@@ -220,8 +217,6 @@ Authorization: Digest username="Mufasa",
         6794697cf8db5856cb6c1",
     opaque="FQhe/qaU925kfnzjCev0ciny7QMkPqMAFRtzCUYo5tdS"
 ```
-
-
 
 ## Specifications
 

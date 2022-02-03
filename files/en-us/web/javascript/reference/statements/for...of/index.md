@@ -143,7 +143,7 @@ examine all of the parameters passed into a JavaScript function:
 
 ### Iterating over a DOM collection
 
-Iterating over DOM collections like [`NodeList`](/en-US/docs/Web/API/NodeList "NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll()."):
+Iterating over DOM collections like [`NodeList`](/en-US/docs/Web/API/NodeList):
 the following example adds a `read` class to paragraphs that are direct
 descendants of an article:
 

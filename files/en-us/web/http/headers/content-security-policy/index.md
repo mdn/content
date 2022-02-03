@@ -46,12 +46,11 @@ where `<policy-directive>` consists of:
 
 ### Fetch directives
 
-Fetch directives control the locations from which certain resource types may be loaded.
+{{Glossary("Fetch directive","Fetch directives")}} control the locations from which certain resource types may be loaded.
 
 - {{CSP("child-src")}}
 
-  - : Defines the valid sources for [web
-    workers](/en-US/docs/Web/API/Web_Workers_API) and nested browsing contexts loaded using elements such as
+  - : Defines the valid sources for [web workers](/en-US/docs/Web/API/Web_Workers_API) and nested browsing contexts loaded using elements such as
     {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 
     > **Warning:** Instead of **`child-src`**,
@@ -193,6 +192,9 @@ Reporting directives control the reporting process of CSP violations. See also t
 
 ## Values
 
+An overview of the allowed values are listed below.
+For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources) and the documentation for individual directives.
+
 ### Keyword values
 
 - `none`
@@ -200,9 +202,9 @@ Reporting directives control the reporting process of CSP violations. See also t
 - `self`
   - : Only allow resources from the current origin.
 - `strict-dynamic` {{experimental_inline}}
-  - : TBD
+  - : The trust granted to a script in the page due to an accompanying nonce or hash is extended to the scripts it loads.
 - `report-sample` {{experimental_inline}}
-  - : TBD
+  - : Require a sample of the violating code to be included in the violation report.
 
 ### Unsafe keyword values
 
@@ -211,7 +213,7 @@ Reporting directives control the reporting process of CSP violations. See also t
 - `unsafe-eval`
   - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setImmediate", "setImmediate")}}{{non-standard_inline}}, and `window.execScript` {{non-standard_inline}}.
 - `unsafe-hashes` {{experimental_inline}}
-  - : TBD
+  - : Allows enabling specific inline event handlers.
 - `unsafe-allow-redirects` {{experimental_inline}}
   - : TBD
 

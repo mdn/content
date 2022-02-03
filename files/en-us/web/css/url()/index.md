@@ -15,7 +15,7 @@ browser-compat: css.types.url
 
 The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is used to include a file. The parameter is an absolute URL, a relative URL, or a data URI. The **`url()`** function can be passed as a parameter of another CSS functions, like the {{cssxref('attr()')}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The `url()` functional notation is the value for the `<url>` data type.
 
-> **Note:** There is a difference between a {{Glossary("URI")}} and a {{Glossary("URL")}}. A URI identifies a resource. A URL is a type of URI, and describes the _location_ of a resource. A URI can be either a URL or a name ({{Glossary("URN")}}) of a resource.
+> **Note:** There is a difference between a {{Glossary("URI")}} and a {{Glossary("URL")}}. A URI identifies a resource. A URL is a type of URI, and describes the _location_ of a resource. A URI can be either a URL or a name ({{Glossary("URN")}}) of a resource.
 >
 > In CSS Level 1, the `url()` functional notation described only true URLs. In CSS Level 2, the definition of `url()` was extended to describe any URI, whether a URL or a URN. Confusingly, this meant that `url()` could be used to create a `<uri>` CSS data type. This change was not only awkward but, debatably, unnecessary, since URNs are almost never used in actual CSS. To alleviate the confusion, CSS Level 3 returned to the narrower, initial definition. Now, `url()` denotes only true `<url>`s.
 
@@ -165,8 +165,8 @@ li::after {
 
 When a URL is used as a path for a filter, the URL must be one of the following:
 
-1.  The path to an SVG file with the ID of the filter appended.
-2.  the ID of the filter, if the SVG already exists on the page.
+1. The path to an SVG file with the ID of the filter appended.
+2. the ID of the filter, if the SVG already exists on the page.
 
 ```css
 .blur {

@@ -29,8 +29,8 @@ When adding `'use strict';`, the following cases will throw a {{jsxref("SyntaxEr
 - Using one of the newly [reserved keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords) (in prevision for ECMAScript 2015): `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, and `yield`
 - Obvious errors
 
-  - Declaring twice the same name for a property name in an object literal `{a: 1, b: 3, a: 7}` This is no longer the case in ECMAScript 2015 ([bug 1041128](https://bugzilla.mozilla.org/show_bug.cgi?id=1041128)).
-  - Declaring two function parameters with the same name `function f(a, b, b) {}`
+  - Declaring twice the same name for a property name in an object literal `{a: 1, b: 3, a: 7}` This is no longer the case in ECMAScript 2015 ([bug 1041128](https://bugzilla.mozilla.org/show_bug.cgi?id=1041128)).
+  - Declaring two function parameters with the same name `function f(a, b, b) {}`
 
 These errors are good, because they reveal plain errors or bad practices. They occur before the code is running.
 
@@ -121,14 +121,14 @@ In strict mode code, `eval` doesn't create a new variable in the scope from whic
 
 A potential "downside" of moving strict code to strict mode is that the semantics may be different in legacy browsers which do not implement strict mode. In some rare occasions (like bad concatenation or minification), your code also may not run in the mode you wrote and tested it in. Here are the rules to make your code strictness-neutral:
 
-1.  Write your code as strict and make sure no strict-only errors (from the above "New runtime errors" section) are thrown.
-2.  Stay away from semantic differences
+1. Write your code as strict and make sure no strict-only errors (from the above "New runtime errors" section) are thrown.
+2. Stay away from semantic differences
 
-    1.  `eval`: use it only if you know what you're doing
-    2.  `arguments`: always access function arguments via their name or perform a copy of the arguments object using:
+    1. `eval`: use it only if you know what you're doing
+    2. `arguments`: always access function arguments via their name or perform a copy of the arguments object using:
         `var args = Array.prototype.slice.call(arguments)`
         as the first line of your function
-    3.  `this`: only use `this` when it refers to an object you created.
+    3. `this`: only use `this` when it refers to an object you created.
 
 ## See also
 

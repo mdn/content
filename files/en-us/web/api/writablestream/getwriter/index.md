@@ -11,7 +11,7 @@ tags:
   - getWriter
 browser-compat: api.WritableStream.getWriter
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`getWriter()`** method of the
 {{domxref("WritableStream")}} interface returns a new instance of

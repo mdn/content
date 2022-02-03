@@ -11,7 +11,7 @@ tags:
   - console
   - log
 ---
-{{HTTPSidebar}}{{draft}}
+{{HTTPSidebar}}
 
 This page will be a parent for reference articles about CSP errors and warnings, and will provide an overview of them, and generic troubleshooting advice, if possible.
 

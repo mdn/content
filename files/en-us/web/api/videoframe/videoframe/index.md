@@ -98,4 +98,3 @@ let frame = new VideoFrame(data, init);
 ## Browser compatibility
 
 {{Compat}}
-

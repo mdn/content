@@ -40,7 +40,7 @@ _This interface inherits methods from {{domxref('Worklet')}}._
 - {{domxref('PaintWorklet.registerPaint()')}}
   - : Registers a class programmatically generate an image where a CSS property expects a file.
 - {{domxref('Worklet.addModule', 'CSS.PaintWorklet.addModule()')}}
-  - : The [`addModule()`](/en-US/docs/Web/API/Worklet/addModule) method, inhertied from the _{{domxref('Worklet')}}_ interface loads the module in the given JavaScript file and adds it to the current PaintWorklet.
+  - : The [`addModule()`](/en-US/docs/Web/API/Worklet/addModule) method, inherited from the _{{domxref('Worklet')}}_ interface loads the module in the given JavaScript file and adds it to the current PaintWorklet.
 
 ## Examples
 

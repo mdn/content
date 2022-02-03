@@ -41,7 +41,7 @@ An integer value indicating how many FIR packets have been received by the sende
 during the current connection. This value is available only on receivers for video
 tracks.
 
-The receiver sends a FIR packet to the sender any time it falls bahind or loses packets
+The receiver sends a FIR packet to the sender any time it falls behind or loses packets
 and cannot decode the incoming stream any longer because of the lost data. This tells
 the sender to send a full frame instead of a delta frame, so that the receiver can catch
 up.

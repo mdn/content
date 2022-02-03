@@ -327,6 +327,7 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
     ```
 
 4.  Inside the original {{htmlelement("script")}}, add the following code:
+
 5.  ```js
     var myImage = document.querySelector('.my-image');
 

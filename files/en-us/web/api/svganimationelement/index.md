@@ -13,7 +13,7 @@ browser-compat: api.SVGAnimationElement
 
 The **`SVGAnimationElement`** interface is the base interface for all of the animation element interfaces: {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}} and {{domxref("SVGAnimateTransformElement")}}.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

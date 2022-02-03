@@ -127,7 +127,7 @@ These functions can be used in building the PAC file:
 
 - There was one associative array (object) already defined, because at the time JavaScript code was unable to define it by itself:
 
-  - `ProxyConfig.bindings` {{deprecated_inline}}
+  - `ProxyConfig.bindings` {{deprecated_inline}}
 
 > **Note:** pactester (part of the [pacparser](https://github.com/pacparser/pacparser) package) was used to test the following syntax examples.
 >
@@ -665,7 +665,7 @@ This example is more sophisticated. There are four (4) proxy servers; one of the
 | #3    | all other domains |
 | #4    | hot stand-by      |
 
-All local accesses are desired to be direct. All proxy servers run on the port 8080 (they don't need to, you can just change your port but remember to modify your configuations on both side). Note how strings can be concatenated with the **`+`** operator in JavaScript.
+All local accesses are desired to be direct. All proxy servers run on the port 8080 (they don't need to, you can just change your port but remember to modify your configurations on both side). Note how strings can be concatenated with the **`+`** operator in JavaScript.
 
 ```js
 function FindProxyForURL(url, host) {

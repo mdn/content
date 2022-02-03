@@ -5,11 +5,9 @@ browser-compat: api.MediaKeySession.onkeystatuseschange
 ---
 {{APIRef("Encrypted Media Extensions")}}
 
-The **`onkeystatuseschange`** property of the {{domxref("MediaKeySession")}} is an event handler, fired whenever a {{Event("keystatuschange")}} event ocurrs, denoting there has been a change in the keys or their statuses within a session.
+The **`onkeystatuseschange`** property of the {{domxref("MediaKeySession")}} is an event handler, fired whenever a {{Event("keystatuschange")}} event occurs, denoting there has been a change in the keys or their statuses within a session.
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
-
-{{InheritanceDiagram(700, 60, 20)}}
 
 ## Syntax
 

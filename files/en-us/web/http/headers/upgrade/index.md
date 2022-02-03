@@ -50,17 +50,17 @@ The server can choose to ignore the request, for any reason, in which case it sh
 
 If the server decides to upgrade the connection, it must:
 
-1. Send back a {{HTTPStatus(101, "101 Switching Protocols")}} response status with an `Upgrade` header that specifies the protocol(s) being switched to. For example:
+1. Send back a {{HTTPStatus(101, "101 Switching Protocols")}} response status with an `Upgrade` header that specifies the protocol(s) being switched to. For example:
 
-```
-HTTP/1.1 101 Switching Protocols
-Upgrade: foo/2
-Connection: Upgrade
-```
+    ```
+    HTTP/1.1 101 Switching Protocols
+    Upgrade: foo/2
+    Connection: Upgrade
+    ```
 
-2. Send a response to the original request *using the new protocol* (the server may only switch to a protocol with which it can complete the original request).
+2. Send a response to the original request *using the new protocol* (the server may only switch to a protocol with which it can complete the original request).
 
-A server may also send the header as part of a {{HTTPStatus("426")}} `Upgrade Required` response, to indicate that the server won't perform the request using the current protocol, but might do so if the protocol is changed. The client can then request a protocol change using the process above.
+A server may also send the header as part of a {{HTTPStatus("426")}} `Upgrade Required` response, to indicate that the server won't perform the request using the current protocol, but might do so if the protocol is changed. The client can then request a protocol change using the process above.
 
 More detail and examples are provided in the topic [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism).
 
@@ -73,8 +73,8 @@ Upgrade: protocol_name[/protocol_version]
 
 Notes:
 
-- The {{HTTPHeader("Connection")}} header with type `upgrade` must _always_ be sent with the `Upgrade` header (as shown above).
-- Protocols are listed, comma-separated, in order of descending preference. Protocol version is optional. For example:
+- The {{HTTPHeader("Connection")}} header with type `upgrade` must _always_ be sent with the `Upgrade` header (as shown above).
+- Protocols are listed, comma-separated, in order of descending preference. Protocol version is optional. For example:
 
 ```
 Connection: upgrade
@@ -83,7 +83,7 @@ Upgrade: a_protocol/1, example ,another_protocol/2.2
 
 ## Directives
 
-- any comma-separated list protocol names (each with optional protocol version)
+- any comma-separated list protocol names (each with optional protocol version)
   - : One or more protocol names with optional version ("/" separated). The protocols are listed in order of descending preference.
 
 ## Examples

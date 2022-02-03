@@ -58,7 +58,7 @@ A **document** is usually a text file structured using a markup language — {{G
 
 **Presenting** a document to a user means converting it into a form usable by your audience. {{Glossary("browser","Browsers")}}, like {{Glossary("Mozilla Firefox","Firefox")}}, {{Glossary("Google Chrome","Chrome")}}, or {{Glossary("Microsoft Edge","Edge")}} , are designed to present documents visually, for example, on a computer screen, projector or printer.
 
-> **Note:** A browser is sometimes called a {{Glossary("User agent","user agent")}}, which basically means a computer program that represents a person inside a computer system. Browsers are the main type of user agent we think of when talking about CSS, however, it is not the only one. There are other user agents available — such as those which convert HTML and CSS documents into PDFs to be printed.
+> **Note:** A browser is sometimes called a {{Glossary("User agent","user agent")}}, which basically means a computer program that represents a person inside a computer system. Browsers are the main type of user agent we think of when talking about CSS, however, it is not the only one. There are other user agents available — such as those which convert HTML and CSS documents into PDFs to be printed.
 
 CSS can be used for very basic document text styling — for example changing the [color](/en-US/docs/Web/CSS/color_value) and [size](/en-US/docs/Web/CSS/font-size) of headings and links. It can be used to create layout — for example [turning a single column of text into a layout](/en-US/docs/Web/CSS/Layout_cookbook/Column_layouts) with a main content area and a sidebar for related information. It can even be used for effects such as [animation](/en-US/docs/Web/CSS/CSS_Animations). Have a look at the links in this paragraph for specific examples.
 
@@ -102,7 +102,7 @@ You will find that you quickly learn some values, whereas others you will need t
 
 As there are so many things that you could style using CSS, the language is broken down into _modules_. You'll see reference to these modules as you explore MDN and many of the documentation pages are organized around a particular module. For example, you could take a look at the MDN reference to the [Backgrounds and Borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders) module to find out what its purpose is, and what different properties and other features it contains. You will also find links to the _CSS Specification_ that defines the technology (see below).
 
-At this stage you don't need to worry too much about how CSS is structured, however it can make it easier to find information if, for example, you are aware that a certain property is likely to be found among other similar things and are therefore probably in the same specification.
+At this stage you don't need to worry too much about how CSS is structured, however it can make it easier to find information if, for example, you are aware that a certain property is likely to be found among other similar things and are therefore probably in the same specification.
 
 For a specific example, let's go back to the Backgrounds and Borders module — you might think that it makes logical sense for the [`background-color`](/en-US/docs/Web/CSS/background-color) and [`border-color`](/en-US/docs/Web/CSS/border-color) properties to be defined in this module. And you'd be right.
 
@@ -134,8 +134,8 @@ Now that you have some understanding of what CSS is, let's move on to [Getting s
 
 ## In this module
 
-1.  [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-3.  [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Using your new knowledge](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
+3. [How CSS is structured](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Using your new knowledge](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

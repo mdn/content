@@ -11,7 +11,7 @@ tags:
   - periodic sync
 browser-compat: api.PeriodicSyncEvent.tag
 ---
-{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
+{{DefaultAPISidebar("Periodic Background Sync")}}
 
 The **`tag`** read-only property of the
 {{domxref("PeriodicSyncEvent")}} interface returns the developer-defined identifier for

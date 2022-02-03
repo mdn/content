@@ -12,11 +12,11 @@ browser-compat: api.BiquadFilterNode.gain
 ---
 {{ APIRef("Web Audio API") }}
 
-The `gain` property of the {{ domxref("BiquadFilterNode") }} interface Is a [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing the [gain](https://en.wikipedia.org/wiki/Gain) used in the current filtering algorithm.
+The `gain` property of the {{ domxref("BiquadFilterNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} — a double representing the [gain](https://en.wikipedia.org/wiki/Gain) used in the current filtering algorithm.
 
-When it takes a positive value it is a real gain, when negative it is an attenuation.
+When its value is positive, it represents a real gain; when negative, it represents an attenuation.
 
-It is expressed in dB, has a default value of `0` and can take a value in a nominal range of `-40` to `40`.
+It is expressed in dB, has a default value of `0`, and can take a value in a nominal range of `-40` to `40`.
 
 ## Syntax
 

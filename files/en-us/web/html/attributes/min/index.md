@@ -79,7 +79,7 @@ Valid for the numeric input types, including the {{HTMLElement("input/date", "da
   </tbody>
 </table>
 
-> **Note:** When the data entered by the user doesn't adhere to the min value set, the value is considered invalid in contraint validation and will match the {{cssxref(':invalid')}} and {{cssxref(':out-of-range')}} pseudo-classes.
+> **Note:** When the data entered by the user doesn't adhere to the min value set, the value is considered invalid in constraint validation and will match the {{cssxref(':invalid')}} and {{cssxref(':out-of-range')}} pseudo-classes.
 
 See [Client-side validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) and {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} for more information.
 

@@ -12,9 +12,11 @@ The `<xsl:element>` element creates an element in the output document.
 
 ### Syntax
 
-    <xsl:element name=NAME namespace=URI use-attribute-sets=LIST-OF-NAMES >
-    	TEMPLATE
-    </xsl:element>
+```xml
+<xsl:element name=NAME namespace=URI use-attribute-sets=LIST-OF-NAMES >
+  TEMPLATE
+</xsl:element>
+```
 
 ### Required Attributes
 

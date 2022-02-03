@@ -78,6 +78,7 @@ console.log(arEG.calendars); // logs ["gregory", "coptic", "islamic", "islamic-c
 let jaJP = new Intl.Locale("ja-JP");
 console.log(jaJP.calendars); // logs ["gregory", "japanese"]
 ```
+
 ## Specifications
 
 {{Specifications}}

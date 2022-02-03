@@ -27,7 +27,7 @@ color-mix(in srgb, #34c9eb 20%, white);
 
   - : `<colorspace>` is one of `srgb`, `hsl`, `hwb`, `xyz`, `lab`, `lch`. If no colorspace is specified the default is `lch`.
 
-    `[ <color>` is any valid {{cssxref("color_value","color")}}.
+    `<color>` is any valid {{cssxref("color_value","color")}}.
 
     `<percentage>` is the percentage of that color to mix.
 

@@ -20,8 +20,8 @@ This interface will not grant you access to the users filesystem. Instead you wi
 
 There are two ways to get access to a `FileSystem` object:
 
-1.  You can directly ask for one representing a sandboxed file system created just for your web app directly by calling `window.requestFileSystem()`.  If that call is successful, it executes a callback handler, which receives as a parameter a `FileSystem` object describing the file system.
-2.  You can get it from a file system entry object, through its {{domxref("FileSystemEntry.filesystem", "filesystem")}} property.
+1. You can directly ask for one representing a sandboxed file system created just for your web app directly by calling `window.requestFileSystem()`. If that call is successful, it executes a callback handler, which receives as a parameter a `FileSystem` object describing the file system.
+2. You can get it from a file system entry object, through its {{domxref("FileSystemEntry.filesystem", "filesystem")}} property.
 
 ## Properties
 

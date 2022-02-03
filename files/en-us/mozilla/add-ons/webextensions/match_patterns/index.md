@@ -18,7 +18,9 @@ APIs that use match patterns usually accept a list of match patterns, and will p
 
 All match patterns are specified as strings. Apart from the special [`<all_urls>`](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#%3call_urls%3e) pattern, match patterns consist of three parts: _scheme_, _host_, and _path_. The scheme and host are separated by `://`.
 
-    <scheme>://<host><path>
+```
+<scheme>://<host><path>
+```
 
 ### scheme
 

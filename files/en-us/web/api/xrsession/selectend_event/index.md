@@ -31,13 +31,16 @@ The WebXR event **`selectend`** is sent to an {{domxref("XRSession")}} when one 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('selectend', (event) => { });
+addEventListener('selectend', event => { })
 
-onselectend = (event) => { });
+onselectend = event => { }
 ```
+
 ## Event type
 
 An {{domxref("XRInputSourceEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("XRInputSourceEvent")}}
 
 ## Event properties
 

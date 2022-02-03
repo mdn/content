@@ -32,13 +32,12 @@ maximize()
 
 A {{jsxref("Intl/Locale", "Locale")}} instance whose `baseName` property returns
 the result of the [Add
-Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) algorithm executed against _{{jsxref("Intl/Locale/baseName",
-		"locale.baseName")}}_.
+Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) algorithm executed against _{{jsxref("Intl/Locale/baseName", "locale.baseName")}}_.
 
 ## Description
 
 Sometimes, it is convenient to be able to identify the most likely locale language
-identifier subtags based on an incomplete langauage ID. The Add Likely Subtags
+identifier subtags based on an incomplete language ID. The Add Likely Subtags
 algorithm gives us this functionality. For instance, given the language ID "en", the
 algorithm would return "en-Latn-US", since English can only be written in the Latin
 script, and is most likely to be used in the United States, as it is the largest
@@ -49,7 +48,7 @@ Other subtags after the "-u" in the locale identifier are called extension subta
 are not affected by the `maximize()` method. Examples of these subtags
 include {{jsxref("Intl/Locale/hourCycle", "Locale.hourCycle")}},
 {{jsxref("Intl/Locale/calendar", "Locale.calendar")}}, and {{jsxref("Intl/Locale/numeric",
-	"Locale.numeric")}}.
+  "Locale.numeric")}}.
 
 ## Examples
 

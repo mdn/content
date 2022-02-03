@@ -36,7 +36,7 @@ In following simple code snippet, we assume the user initiates one or more touch
 var src = document.getElementById("source");
 
 src.addEventListener('touchstart', function(e) {
-  // Iterate through the touch points that were activiated
+  // Iterate through the touch points that were activated
   // for this element.
   for (var i=0; i < e.targetTouches.length; i++) {
     console.log("touchpoint[" + i + "].target = " + e.targetTouches[i].target);

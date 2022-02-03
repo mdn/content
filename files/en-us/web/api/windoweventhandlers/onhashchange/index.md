@@ -126,7 +126,7 @@ if (!window.HashChangeEvent)(function(){
 
 - [`hashchange`](/en-US/docs/Web/API/Window/hashchange_event)
   event
-- [Manipulating the browser history](/en-US/docs/Web/API/History_API "DOM/Manipulating the browser history")
+- [Manipulating the browser history](/en-US/docs/Web/API/History_API)
 - [`history.pushState()` and
   `history.replaceState()`](/en-US/docs/Web/API/Window/history) methods
 - {{domxref("WindowEventHandlers.onpopstate")}}

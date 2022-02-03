@@ -28,7 +28,6 @@ This means that static blocks can also be used to share information between clas
 static { /* ... */ }
 ```
 
-
 ## Description
 
 A {{jsxref("Statements/class", "class")}} can have any number of `static {}` initialization blocks in its class body.
@@ -61,7 +60,6 @@ The scope of the static block is nested _within_ the lexical scope of the class 
 
 A static initialization block may not have decorators (the class itself may).
 
-
 ## Examples
 
 ### Multiple blocks
@@ -90,7 +88,6 @@ class MyClass {
 ```
 
 Note that any static initialization of a super class is performed first, before that of its sub classes.
-
 
 ### Using `this` and `super.property`
 
@@ -125,7 +122,6 @@ class B extends A {
 
 This example below shows how access can be granted to the private object of a class from an object outside the class (example from the [v8.dev blog](https://v8.dev/features/class-static-initializer-blocks#access-to-private-fields)):
 
-
 ```js
 let getDPrivateField;
 
@@ -148,7 +144,6 @@ getDPrivateField(new D('private'));
 Prior to ES13 more complex static initialization might be achieved by using a static method that is called after the other properties to perform static initialization, or having a method that is external to the class that performs initialization tasks.
 
 In both cases the approach is less elegant, and does not grant access to private methods in the class.
-
 
 ## Specifications
 

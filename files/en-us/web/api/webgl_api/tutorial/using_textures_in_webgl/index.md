@@ -204,7 +204,7 @@ The fragment shader likewise needs to be updated:
   `;
 ```
 
-Instead of assigning a color value to the fragment's color, the fragment's color is computed by fetching the **texel** (that is, the pixel within the texture) based on the value of `vTextureCoord` which like the colors is interpolated bewteen vertices.
+Instead of assigning a color value to the fragment's color, the fragment's color is computed by fetching the **texel** (that is, the pixel within the texture) based on the value of `vTextureCoord` which like the colors is interpolated between vertices.
 
 ### Attribute and Uniform Locations
 

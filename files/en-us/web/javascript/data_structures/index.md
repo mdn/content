@@ -121,7 +121,7 @@ It can be tempting to use strings to represent complex data. Doing this comes wi
 
 - It is easy to build complex strings with concatenation.
 - Strings are easy to debug (what you see printed is always what is in the string).
-- Strings are the common denominator of a lot of APIs ([input fields](/en-US/docs/Web/API/HTMLInputElement), [local storage](/en-US/docs/Web/API/Web_Storage_API) values, [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest "Use XMLHttpRequest (XHR) objects to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.") responses when using `responseText`, etc.) and it can be tempting to only work with strings.
+- Strings are the common denominator of a lot of APIs ([input fields](/en-US/docs/Web/API/HTMLInputElement), [local storage](/en-US/docs/Web/API/Web_Storage_API) values, [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) responses when using `responseText`, etc.) and it can be tempting to only work with strings.
 
 With conventions, it is possible to represent any data structure in a string. This does not make it a good idea. For instance, with a separator, one could emulate a list (while a JavaScript array would be more suitable). Unfortunately, when the separator is used in one of the "list" elements, then, the list is broken. An escape character can be chosen, etc. All of this requires conventions and creates an unnecessary maintenance burden.
 

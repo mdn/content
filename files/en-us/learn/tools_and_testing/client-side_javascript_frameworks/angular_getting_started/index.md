@@ -103,7 +103,7 @@ To install Angular on your local system, you need the following:
 
   Angular requires a [current, active LTS, or maintenance LTS](https://nodejs.org/about/releases) version of Node.js. For information about specific version requirements, see the `engines` key in the [package.json](https://unpkg.com/@angular/cli/package.json) file.
 
-  For more information on installing Node.js, see [nodejs.org](https://nodejs.org "Nodejs.org").
+  For more information on installing Node.js, see [nodejs.org](https://nodejs.org).
   If you are unsure what version of Node.js runs on your system, run `node -v` in a terminal window.
 
 - **npm package manager**
@@ -149,7 +149,7 @@ ng serve
 
 When the CLI prompts you about analytics, answer `no`.
 
-In the browser, navigate to <http://localhost:4200/> to see your new starter application.
+In the browser, navigate to `http://localhost:4200/` to see your new starter application.
 If you change any of the source files, the application automatically reloads.
 
 While `ng serve` is running, you might want to open a second terminal tab or window in order to run commands.

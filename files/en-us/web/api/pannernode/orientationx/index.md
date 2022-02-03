@@ -50,26 +50,26 @@ direction in which the audio source is facing, in 3D Cartesian coordinate space.
 
 ## Example
 
-In this example, we'll demonstrate how changing the orientation parameters of a {{
-  domxref("PannerNode") }} in combination with {{domxref("PannerNode.coneInnerAngle",
+In this example, we'll demonstrate how changing the orientation parameters of a {{
+  domxref("PannerNode") }} in combination with {{domxref("PannerNode.coneInnerAngle",
   "coneInnerAngle")}} and {{domxref("PannerNode.coneOuterAngle",
-  "coneOuterAngle")}} affects volume. To help us visualise how the orientation vector
+  "coneOuterAngle")}} affects volume. To help us visualize how the orientation vector
 affects, we can use the [Right-hand rule](https://en.wikipedia.org/wiki/Right-hand_rule):
 
-![This chart visualises how the PannerNode orientation vectors affect the direction of the sound cone.](pannernode-orientation.png)
+![This chart visualizes how the PannerNode orientation vectors affect the direction of the sound cone.](pannernode-orientation.png)
 
 First, let's start by writing a utility function to figure out our _orientation vector._
 The X and Z components are always at a 90° to each other, so we can
-use the sine and cosine functions, which are offset by the same amount in radians.
-However, normally this would mean the {{ domxref("PannerNode") }} points to
-the **left** of the listener at 0° rotation – since `x = cos(0) = 1` and `z = sin(0) = 0`.
-It's more useful to offset the angle by -90°, which means the {{domxref("PannerNode")}} will point **directly at the listener** at 0° rotation.
+use the sine and cosine functions, which are offset by the same amount in radians.
+However, normally this would mean the {{ domxref("PannerNode") }} points to
+the **left** of the listener at 0° rotation – since `x = cos(0) = 1` and `z = sin(0) = 0`.
+It's more useful to offset the angle by -90°, which means the {{domxref("PannerNode")}} will point **directly at the listener** at 0° rotation.
 
 ```js
 // this utility converts amount of rotation around the Y axis
 // (i.e. rotation in the 'horizontal plane') to an orientation vector
 const yRotationToVector = degrees => {
-  // convert degrees to radians and offset the angle so 0 points towards the listener
+  // convert degrees to radians and offset the angle so 0 points towards the listener
   const radians = (degrees - 90) * (Math.PI / 180);
   // using cosine and sine here ensures the output values are always normalized
   // i.e. they range between -1 and 1
@@ -94,7 +94,7 @@ const panner = new PannerNode(context);
 panner.panningModel = 'HRTF';
 ```
 
-Next, we set up the *cone* of our spatialised sound, determining the area in
+Next, we set up the *cone* of our spatialized sound, determining the area in
 which it can be heard:
 
 ```js
@@ -158,5 +158,5 @@ osc.start(0);
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Web
-  Audio spatialisation basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+  Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - {{domxref("PannerNode")}}

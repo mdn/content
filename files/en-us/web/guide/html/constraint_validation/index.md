@@ -292,7 +292,7 @@ Basically, the idea is to trigger JavaScript on some form field event (like **on
 
 ### Constraint combining several fields: Postal code validation
 
-The postal code format varies from one country to another. Not only do most countries allow an optional prefix with the country code (like `D-` in Germany, `F- `in France or Switzerland), but some countries have postal codes with only a fixed number of digits; others, like the UK, have more complex structures, allowing letters at some specific positions.
+The postal code format varies from one country to another. Not only do most countries allow an optional prefix with the country code (like `D-` in Germany, `F-` in France or Switzerland), but some countries have postal codes with only a fixed number of digits; others, like the UK, have more complex structures, allowing letters at some specific positions.
 
 > **Note:** This is not a comprehensive postal code validation library, but rather a demonstration of the key concepts.
 
@@ -327,7 +327,7 @@ function checkZIP() {
     fr : [ '^(F-)?\\d{5}$' , "France ZIPs must have exactly 5 digits: e.g. F-75012 or 75012" ],
     de : [ '^(D-)?\\d{5}$' , "Germany ZIPs must have exactly 5 digits: e.g. D-12345 or 12345" ],
     nl : [ '^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$',
-                    "Nederland ZIPs must have exactly 4 digits, followed by 2 letters except SA, SD and SS" ]
+                    "Netherland ZIPs must have exactly 4 digits, followed by 2 letters except SA, SD and SS" ]
   };
 
   // Read the country id

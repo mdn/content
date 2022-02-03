@@ -78,15 +78,19 @@ So far we've been running our app in development mode with `npm run dev`. As we 
 
 Your generated `bundle.js` and `bundle.css` files will be something like this (file size on the left):
 
-      504 Jul 13 02:43 bundle.css
-    95981 Jul 13 02:43 bundle.js
+```
+  504 Jul 13 02:43 bundle.css
+95981 Jul 13 02:43 bundle.js
+```
 
 To compile our application for production we have to run `npm run build` instead. In this case, Svelte won't launch a web server or keep watching for changes. It will however minify and compress our JavaScript files using [terser](https://terser.org/).
 
 So, after running `npm run build`, our generated `bundle.js` and `bundle.css` files will be more like this:
 
-      504 Jul 13 02:43 bundle.css
-    21782 Jul 13 02:43 bundle.js
+```
+  504 Jul 13 02:43 bundle.css
+21782 Jul 13 02:43 bundle.js
+```
 
 Try running `npm run build` in your app's root directory now. You might get a warning, but you can ignore this for now.
 
@@ -235,17 +239,19 @@ Let's have a go at doing this now.
 
 1.  Create a `.gitlab-ci.yml` file inside your project's root and give it the following content:
 
-        image: node:latest
-        pages:
-          stage: deploy
-          script:
-            - npm install
-            - npm run build
-          artifacts:
-            paths:
-              - public
-          only:
-            - master
+    ```
+    image: node:latest
+    pages:
+      stage: deploy
+      script:
+        - npm install
+        - npm run build
+      artifacts:
+        paths:
+          - public
+      only:
+        - master
+    ```
 
     Here we are telling GitLab to use an image with the latest version of node to build our app. Next we are declaring a `pages` job, to enable GitLab Pages. Whenever there's a push to our repo, GitLab will run `npm install` and `npm run build` to build our application. We are also telling GitLab to deploy the contents of the `public` folder. On the last line, we are configuring GitLab to redeploy our app only when there's a push to our master branch.
 

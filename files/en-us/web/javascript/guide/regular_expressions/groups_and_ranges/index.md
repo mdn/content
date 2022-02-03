@@ -5,6 +5,7 @@ tags:
   - Guide
   - JavaScript
   - Reference
+  - Polyfill
   - Regular Expressions
   - groups
   - ranges
@@ -240,6 +241,7 @@ do {
 
 ## See also
 
+- A polyfill of [`RegExp` named capture groups](https://github.com/zloirock/core-js#ecmascript-string-and-regexp) is available in [`core-js`](https://github.com/zloirock/core-js)
 - [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
   - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)

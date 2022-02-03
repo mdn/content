@@ -59,7 +59,7 @@ This guideline focuses on making text content as understandable as possible.
       <td>
         <p>
           In cases where the content of a page includes words or phrases that
-          are in a different language to the primary language, use the
+          are in a different language to the primary language, use the
           {{htmlattrxref("lang")}} attribute on an element wrapped
           around the term in question (e.g. a {{htmlelement("span")}}
           if no semantic element is available) to set an appropriate language
@@ -488,7 +488,7 @@ This guideline centers around helping users enter correct information when requi
 
 - [WCAG](en-US/docs/Web/Accessibility/Understanding_WCAG)
 
-  1.  [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
-  2.  [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  3.  Understandable
-  4.  [Robust](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  1. [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
+  2. [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)
+  3. Understandable
+  4. [Robust](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust)

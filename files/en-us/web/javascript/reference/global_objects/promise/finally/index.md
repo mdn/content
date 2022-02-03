@@ -14,9 +14,9 @@ browser-compat: javascript.builtins.Promise.finally
 {{JSRef}}
 
 The **`finally()`** method returns a {{jsxref("Promise")}}.
-When the promise is settled, i.e either fulfilled or rejected, the specified callback
+When the promise is finally either fulfilled or rejected, the specified callback
 function is executed. This provides a way for code to be run whether the promise was
-fulfilled successfully or rejected once the `Promise` has been dealt with.
+fulfilled successfully, or instead rejected.
 
 This helps to avoid duplicating code in both the promise's {{jsxref("Promise.then",
   "then()")}} and {{jsxref("Promise.catch", "catch()")}} handlers.

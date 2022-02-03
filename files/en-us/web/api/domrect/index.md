@@ -13,7 +13,7 @@ tags:
   - Reference
 browser-compat: api.DOMRect
 ---
-{{draft}}{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}
 
 A **`DOMRect`** describes the size and position of a rectangle.
 
@@ -55,7 +55,7 @@ _`DOMRect` inherits methods from its parent, {{domxref("DOMRectReadOnly")}}._
 
 ## Static methods
 
-- {{domxref("DOMRectReadOnly.fromRect()")}}
+- {{domxref("DOMRect.fromRect()")}}
   - : Creates a new `DOMRect` object with a given location and dimensions.
 
 ## Specifications

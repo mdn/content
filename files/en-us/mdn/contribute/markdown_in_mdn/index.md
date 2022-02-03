@@ -67,6 +67,7 @@ const greeting = "I'm a good example";
 const greeting = "I'm a bad example";
 ```
 ````
+
 These will be rendered as:
 
 ```js example-good
@@ -152,7 +153,7 @@ This HTML will be rendered as a highlighted box, like:
 ```plain
 > **Callout:** **This is how you write a callout**.
 >
-> It can have multiple paragaphs.
+> It can have multiple paragraphs.
 ```
 
 This will produce the following HTML:
@@ -236,14 +237,14 @@ To create definition lists in MDN authors write a modified form of a GFM unorder
 
 - The GFM `<ul>` contains any number of top-level GFM `<li>` elements.
 - Each of these top-level GFM `<li>` elements must contain, as its final element, one GFM `<ul>` element.
-- This final nested `<ul>` must contain a single GFM `<li>` element, whose text content must start with `: ` (a colon followed by a space). This element may contain block elements, including paragraphs, code blocks, embedded lists, and notes.
+- This final nested `<ul>` must contain a single GFM `<li>` element, whose text content must start with ": " (a colon followed by a space). This element may contain block elements, including paragraphs, code blocks, embedded lists, and notes.
 
 Each of these top-level GFM `<li>` elements will be transformed into a
 `<dt>`/`<dd>` pair, as follows:
 
 - The top-level GFM `<li>` element will be parsed as a GFM `<li>` element
   and its internal contents will comprise the contents of the `<dt>`, except for the final nested `<ul>`, which will not be included in the `<dt>`.
-- The `<li>` element in the final nested `<ul>` will be parsed as a GFM `<li>` element and its internal contents will comprise the contents of the `<dd>`, except for the leading `: `, which will be discarded.
+- The `<li>` element in the final nested `<ul>` will be parsed as a GFM `<li>` element and its internal contents will comprise the contents of the `<dd>`, except for the leading ": ", which will be discarded.
 
 For example, this is a `<dl>`:
 
@@ -469,7 +470,7 @@ This issue was resolved in <https://github.com/mdn/content/issues/4578>.
 
 The _page summary_ is the first "content" paragraph in a page—the first text that appears after the page front matter and any [sidebar or page banner macros](#kumascript).
 
-This summary is used for search engine optimisation (SEO) and also automatically included alongside page listings by some macros.
+This summary is used for search engine optimization (SEO) and also automatically included alongside page listings by some macros.
 The first paragraph should therefore be both succinct and informative.
 
 ### Discussion reference

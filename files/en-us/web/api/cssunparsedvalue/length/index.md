@@ -14,7 +14,7 @@ tags:
   - length
 browser-compat: api.CSSUnparsedValue.length
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`length`** read-only property of the
 {{domxref("CSSUnparsedValue")}} interface returns the number of items in the object.

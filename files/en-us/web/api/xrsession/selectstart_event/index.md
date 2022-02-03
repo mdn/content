@@ -31,14 +31,16 @@ The [WebXR](/en-US/docs/Web/API/WebXR_Device_API) **`selectstart`** event is sen
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('selectstart', (event) => { });
+addEventListener('selectstart', event => { })
 
-onselectstart = (event) => { });
+onselectstart = event => { }
 ```
 
 ## Event type
 
 An {{domxref("XRInputSourceEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("XRInputSourceEvent")}}
 
 ## Event properties
 
@@ -128,4 +130,3 @@ xrSession.onselectend = onSelectionEvent;
 ## See also
 
 - {{domxref("XRSession.select_event", "select")}} and {{domxref("XRSession.selectend_event", "selectend")}}
-

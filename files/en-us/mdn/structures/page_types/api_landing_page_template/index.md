@@ -17,7 +17,7 @@ tags:
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular interface.
 >
-> ```
+> ```md
 > ---
 > title: NameOfTheAPI API
 > slug: Web/API/NameOfTheAPI_API
@@ -31,6 +31,7 @@ tags:
 >   - Non-standard
 > ---
 > ```
+>
 > - **title**
 >   - : Title heading displayed at top of page.
 >       This is the name of the API followed by the text "API": _NameOfTheAPI_ **API**.
@@ -54,6 +55,7 @@ tags:
 >
 > A number of macro calls appear at the top of the content section (immediately below the page frontmatter).
 > You should update or delete them according to the advice below:
+>
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)).
 >   If the technology you are documenting is not experimental, you should remove this.
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
@@ -156,7 +158,6 @@ And/or include a list of links to useful code samples that live elsewhere:
 ## Browser compatibility
 
 {{Compat("path.to.feature.Interface_1")}}
-
 
 {{Compat("path.to.feature.Interface_2")}}
 

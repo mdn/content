@@ -13,7 +13,7 @@ tags:
   - values
 browser-compat: api.CSSMathSum.values
 ---
-{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathSum.values`** read-only property
 of the {{domxref("CSSMathSum")}} interface returns a {{domxref('CSSNumericArray')}}

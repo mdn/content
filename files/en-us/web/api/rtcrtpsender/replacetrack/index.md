@@ -76,8 +76,8 @@ rejection handler:
 ### Things that trigger negotiation
 
 Not all track replacements require renegotiation. In fact, even changes that seem huge
-can be done without requiring negotation. Here are the changes that can trigger
-negotiaton:
+can be done without requiring negotiation. Here are the changes that can trigger
+negotiation:
 
 - The new track has a resolution which is outside the bounds of the current track;
   that is, the new track is either wider or taller than the current one.
@@ -95,29 +95,31 @@ negotiaton:
 
 ### Switching video cameras
 
-    // example to change video camera, suppose selected value saved into window.selectedCamera
+```js
+// example to change video camera, suppose selected value saved into window.selectedCamera
 
-    navigator.mediaDevices
-      .getUserMedia({
-        video: {
-          deviceId: {
-            exact: window.selectedCamera
-          }
-        }
-      })
-      .then(function(stream) {
-        let videoTrack = stream.getVideoTracks()[0];
-        PCs.forEach(function(pc) {
-          var sender = pc.getSenders().find(function(s) {
-            return s.track.kind == videoTrack.kind;
-          });
-          console.log('found sender:', sender);
-          sender.replaceTrack(videoTrack);
-        });
-      })
-      .catch(function(err) {
-        console.error('Error happens:', err);
+navigator.mediaDevices
+  .getUserMedia({
+    video: {
+      deviceId: {
+        exact: window.selectedCamera
+      }
+    }
+  })
+  .then(function(stream) {
+    let videoTrack = stream.getVideoTracks()[0];
+    PCs.forEach(function(pc) {
+      var sender = pc.getSenders().find(function(s) {
+        return s.track.kind == videoTrack.kind;
       });
+      console.log('found sender:', sender);
+      sender.replaceTrack(videoTrack);
+    });
+  })
+  .catch(function(err) {
+    console.error('Error happens:', err);
+  });
+```
 
 ## Specifications
 

@@ -29,6 +29,7 @@ It is also relatively "privacy-preserving", in that it is up to the client to de
 There is a small set of [low entropy client hint headers](#low_entropy_hints) that may be sent by a client event if not requested.
 
 > **Note:** Client hints can also be specified in HTML using the {{HTMLElement("meta")}} element with the [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv) attribute.
+>
 > ```html
 > <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA">
 > ```
@@ -53,7 +54,7 @@ The user agent appends the requested client hint headers, or at least the subset
 
 In other words, the request for a specific set of hints does not expire until the browser is shut down.
 
-A server can replace the set of client hints it is interested in recieving by resending the `Accept-CH` response header with a new list.
+A server can replace the set of client hints it is interested in receiving by resending the `Accept-CH` response header with a new list.
 For example, to stop requesting any hints it would send `Accept-CH` with an empty list.
 
 ## Low entropy hints
@@ -67,7 +68,6 @@ These hints include: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Sec-CH-UA")}}, {
 The high entropy hints are those that have the potential to give away more information that can be used for user fingerprinting, and therefore are gated in such a way that the user agent can make a decision as to whether to provide them.
 The decision might be based on user preferences, a permission request, or the permission policy.
 All client hints that are not low entropy hints are considered high entropy hints.
-
 
 ## Hint types
 

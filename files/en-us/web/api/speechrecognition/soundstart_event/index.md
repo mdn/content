@@ -9,7 +9,7 @@ browser-compat: api.SpeechRecognition.soundstart_event
 ---
 {{APIRef("Web Speech API")}}
 
-The **`soundstart`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when any sound — recognisable speech or not — has been detected.
+The **`soundstart`** event of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) is fired when any sound — recognizable speech or not — has been detected.
 
 <table class="properties">
   <tbody>

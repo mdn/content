@@ -42,18 +42,18 @@ var myHeader = XMLHttpRequest.getResponseHeader(headerName);
 ### Parameters
 
 - _headerName_
-  - : A {{jsxref("String")}} indicating the name of the header you want to return the
+  - : A string indicating the name of the header you want to return the
     text value of.
 
 ### Return value
 
-A {{jsxref("String")}} representing the header's text value, or `null`
+A string representing the header's text value, or `null`
 if either the response has not yet been received or the header doesn't exist in the
 response.
 
 ## Example
 
-In this example, a request is created and sent, and a {{Event("readystatechange")}}
+In this example, a request is created and sent, and a {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}}
 handler is established to look for the {{DOMxRef("XMLHttpRequest.readyState",
   "readyState")}} to indicate that the headers have been received; when that is the case,
 the value of the {{httpheader("Content-Type")}} header is fetched. If the

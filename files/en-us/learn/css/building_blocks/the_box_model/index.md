@@ -53,7 +53,7 @@ If a box has an outer display type of `block`, it will behave in the following w
 
 - The box will break onto a new line.
 - The box will extend in the inline direction to fill the space available in its container. In most cases this means that the box will become as wide as its container, filling up 100% of the space available.
-- The {{cssxref("width")}} and {{cssxref("height")}} properties are respected.
+- The {{cssxref("width")}} and {{cssxref("height")}} properties are respected.
 - Padding, margin and border will cause other elements to be pushed away from the box
 
 Some HTML elements, such as `<h1>` and `<p>`, use `block` as their outer display type by default.
@@ -61,7 +61,7 @@ Some HTML elements, such as `<h1>` and `<p>`, use `block` as their outer display
 If a box has an outer display type of `inline`, then:
 
 - The box will not break onto a new line.
-- The {{cssxref("width")}} and {{cssxref("height")}} properties will not apply.
+- The {{cssxref("width")}} and {{cssxref("height")}} properties will not apply.
 - Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.
 - Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box.
 
@@ -230,7 +230,7 @@ For styling borders, there are a large number of properties — there are four b
 
 You can set the width, style, or color of all four borders at once using the {{cssxref("border")}} property.
 
-To set the properties of each side individually, you can use:
+To set the properties of each side individually, you can use:
 
 - {{cssxref("border-top")}}
 - {{cssxref("border-right")}}
@@ -283,7 +283,7 @@ We can control the padding on all sides of an element using the {{cssxref("paddi
 
 All of the above applies fully to block boxes. Some of the properties can apply to inline boxes too, such as those created by a `<span>` element.
 
-In the example below, we have a `<span>` inside a paragraph and have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width and height are ignored. The vertical margin, padding, and border are respected but they do not change the relationship of other content to our inline box and so the padding and border overlaps other words in the paragraph. Horizontal padding, margins, and borders are respected and will cause other content to move away from the box.
+In the example below, we have a `<span>` inside a paragraph and have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width and height are ignored. The vertical margin, padding, and border are respected but they do not change the relationship of other content to our inline box and so the padding and border overlaps other words in the paragraph. Horizontal padding, margins, and borders are respected and will cause other content to move away from the box.
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/inline-box-model.html", '100%', 600)}}
 
@@ -312,7 +312,7 @@ You see this fairly frequently in navigation bars. The navigation below is displ
 
 ## Test your skills!
 
-We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Box Model](/en-US/docs/Learn/CSS/Building_blocks/Box_Model_Tasks).
+We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: The Box Model](/en-US/docs/Learn/CSS/Building_blocks/Box_Model_Tasks).
 
 ## Summary
 
@@ -324,21 +324,21 @@ In the next lesson, we will take a look at how [backgrounds and borders](/en-US/
 
 ## In this module
 
-1.  [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  The box model \[this article]
-4.  [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. The box model \[this article]
+4. [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)

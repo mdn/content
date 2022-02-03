@@ -90,9 +90,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : A list of one or more strings separated by commas indicating a set of possible images represented by the source for the browser to use. Each string is composed of:
 
-    1.  One URL specifying an image.
-    2.  A width descriptor, which consists of a string containing a positive integer directly followed by `"w"`, such as `300w`. The default value, if missing, is the infinity.
-    3.  A pixel density descriptor, that is a positive floating number directly followed by `"x"`. The default value, if missing, is `1x`.
+    1. One URL specifying an image.
+    2. A width descriptor, which consists of a string containing a positive integer directly followed by `"w"`, such as `300w`. The default value, if missing, is the infinity.
+    3. A pixel density descriptor, that is a positive floating number directly followed by `"x"`. The default value, if missing, is `1x`.
 
     Each string in the list must have at least a width descriptor or a pixel density descriptor to be valid. Among the list, there must be only one string containing the same tuple of width descriptor and pixel density descriptor. The browser chooses the most adequate image to display at a given point of time.
 

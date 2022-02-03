@@ -12,21 +12,25 @@ The `clip-rule` attribute only applies to graphics elements that are contained w
 
 The following fragment of code will cause an evenodd clipping rule to be applied to the clipping path because `clip-rule` is specified on the {{ SVGElement("path") }} element that defines the clipping shape:
 
-    <g>
-        <clipPath id="MyClip">
-            <path d="..." clip-rule="evenodd" />
-        </clipPath>
-        <rect clip-path="url(#MyClip)" ... />
-    </g>
+```html
+<g>
+    <clipPath id="MyClip">
+        <path d="..." clip-rule="evenodd" />
+    </clipPath>
+    <rect clip-path="url(#MyClip)" ... />
+</g>
+```
 
 whereas the following fragment of code will not cause an evenodd clipping rule to be applied because the `clip-rule` is specified on the referencing element, not on the object defining the clipping shape:
 
-    <g>
-        <clipPath id="MyClip">
-            <path d="..." />
-        </clipPath>
-        <rect clip-path="url(#MyClip)" clip-rule="evenodd" ... />
-    </g>
+```html
+<g>
+    <clipPath id="MyClip">
+        <path d="..." />
+    </clipPath>
+    <rect clip-path="url(#MyClip)" clip-rule="evenodd" ... />
+</g>
+```
 
 As a presentation attribute, it also can be used as a property directly inside a CSS stylesheet
 
@@ -49,10 +53,10 @@ As a presentation attribute, it also can be used as a property directly inside a
   </tbody>
 </table>
 
-*   nonzero
-    *   : See description of {{ SVGAttr("fill-rule") }} property.
-*   evenodd
-    *   : See description of {{ SVGAttr("fill-rule") }} property.
+* nonzero
+    * : See description of {{ SVGAttr("fill-rule") }} property.
+* evenodd
+    * : See description of {{ SVGAttr("fill-rule") }} property.
 
 ## Example
 
@@ -83,7 +87,7 @@ As a presentation attribute, it also can be used as a property directly inside a
 
 The following elements can use the `clip-rule` attribute, but only if they are inside a {{ SVGElement("clipPath") }} element.
 
-*   [Graphical elements](/en-US/docs/SVG/Element#Graphical) »
+* [Graphical elements](/en-US/docs/SVG/Element#Graphical) »
 
 ## Browser compatibility
 
@@ -91,4 +95,4 @@ The following elements can use the `clip-rule` attribute, but only if they are i
 
 ## See also
 
-*   {{ SVGElement("clipPath") }}
+* {{ SVGElement("clipPath") }}

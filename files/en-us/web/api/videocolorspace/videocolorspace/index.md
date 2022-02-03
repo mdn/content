@@ -65,4 +65,3 @@ console.log(colorSpace);
 ## Browser compatibility
 
 {{Compat}}
-

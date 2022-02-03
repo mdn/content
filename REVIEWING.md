@@ -97,7 +97,7 @@ inappropriate, than it is to follow every guideline to the letter.
    the content has been approved for addition, and reviewer(s) have been
    assigned already. In such cases, the PR should be linked to an issue
    that explains all these details. If you are not sure, ask the submitter
-   if they need a review of the content, and where the rationale behnd the
+   if they need a review of the content, and where the rationale behind the
    change is explained. Ping our [@core-yari-content](https://github.com/orgs/mdn/teams/core-yari-content)
    team to ask for help if you are still not sure, or if you think the
    content is suspicious.
@@ -170,7 +170,7 @@ team, which currently consists of [@Rumyra](https://github.com/Rumyra/).
   * [@mirunacurtean](https://github.com/mirunacurtean)
 * [CSS reference content](https://github.com/mdn/content/tree/main/files/en-us/web/css)
   — the [@yari-content-css](https://github.com/orgs/mdn/teams/yari-content-css)
-  team, which conists of:
+  team, which consists of:
   * [@rachelandrew](https://github.com/rachelandrew)
   * [@ericwbailey](https://github.com/ericwbailey)
   * [@mirunacurtean](https://github.com/mirunacurtean)

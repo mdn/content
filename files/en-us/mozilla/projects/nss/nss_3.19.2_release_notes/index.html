@@ -26,11 +26,11 @@ slug: Mozilla/Projects/NSS/NSS_3.19.2_release_notes
 <h2 id="Notable_Changes_in_NSS_3.19.2">Notable Changes in NSS 3.19.2</h2>
 
 <ul>
- <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1172128">Bug 1172128</a> - In NSS 3.19.1, the minimum key sizes that the freebl cryptographic implementation (part of the softoken cryptographic module used by default by NSS) was willing to generate or use was increased - for RSA keys, to 512 bits, and for DH keys, 1023 bits. This was done as part of a security fix for <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1138554">Bug 1138554</a> / <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000">CVE-2015-4000</a>. Applications that requested or attempted to use keys smaller then the minimum size would fail. However, this change in behaviour unintentionally broke existing NSS applications that need to generate or use such keys, via APIs such as SECKEY_CreateRSAPrivateKey or SECKEY_CreateDHPrivateKey.<br>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1172128">Bug 1172128</a> - In NSS 3.19.1, the minimum key sizes that the freebl cryptographic implementation (part of the softoken cryptographic module used by default by NSS) was willing to generate or use was increased - for RSA keys, to 512 bits, and for DH keys, 1023 bits. This was done as part of a security fix for <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1138554">Bug 1138554</a> / <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000">CVE-2015-4000</a>. Applications that requested or attempted to use keys smaller then the minimum size would fail. However, this change in behavior unintentionally broke existing NSS applications that need to generate or use such keys, via APIs such as SECKEY_CreateRSAPrivateKey or SECKEY_CreateDHPrivateKey.<br>
   <br>
-  In NSS 3.19.2, this change in freebl behaviour has been reverted. The fix for <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1138554">Bug 1138554</a> has been moved to libssl, and will now only affect the minimum keystrengths used in SSL/TLS.<br>
+  In NSS 3.19.2, this change in freebl behavior has been reverted. The fix for <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1138554">Bug 1138554</a> has been moved to libssl, and will now only affect the minimum keystrengths used in SSL/TLS.<br>
   <br>
-  <strong>Note:</strong> Future versions of NSS <em>may</em> increase the minimum keysizes required by the freebl module. Consumers of NSS are <strong>strongly</strong> encouraged to migrate to stronger cryptographic strengths as soon as possible.</li>
+  <strong>Note:</strong> Future versions of NSS <em>may</em> increase the minimum keysizes required by the freebl module. Consumers of NSS are <strong>strongly</strong> encouraged to migrate to stronger cryptographic strengths as soon as possible.</li>
 </ul>
 
 <h2 id="Bugs_fixed_in_NSS_3.19.2">Bugs fixed in NSS 3.19.2</h2>

@@ -8,7 +8,7 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-  - Exerimental
+  -  Experimental
 browser-compat: http.headers.Sec-CH-UA-Full-Version-List
 ---
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
@@ -37,7 +37,7 @@ A brand is a commercial name for the user agent like: Chromium, Opera, Google Ch
 A user agent might have several associated brands.
 For example, Opera, Chrome, and Edge are all based on Chromium, and will provide both brands in the **`Sec-CH-UA-Full-Version-List`** header.
 
-The header therefore allows the server to customise its response based on both shared brands and on particular customisations in their specific respective builds.
+The header therefore allows the server to customize its response based on both shared brands and on particular customizations in their specific respective builds.
 
 The header may include "fake" brands in any position and with any name.
 This is a feature designed to prevent servers from rejecting unknown user agents outright, forcing user agents to lie about their brand identity.
@@ -59,7 +59,6 @@ Sec-CH-UA-Full-Version-List: "<brand>";v="<full version>", ...
   - : A brand associated with the user agent, like "Chromium", "Google Chrome", or an intentionally incorrect brand like `"Not A;Brand"`.
 - `<full version>`
   - : A full version number, such as 98.0.4750.0.
-
 
 ## Examples
 

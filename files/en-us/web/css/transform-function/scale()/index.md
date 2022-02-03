@@ -42,9 +42,9 @@ scale(sx, sy)
 ### Values
 
 - `sx`
-  - : A {{cssxref("&lt;number&gt;")}} representing the abscissa of the scaling vector.
+  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the abscissa of the scaling vector.
 - `sy`
-  - : A {{cssxref("&lt;number&gt;")}} representing the ordinate of the scaling vector. If not defined, its default value
+  - : A {{cssxref("&lt;number&gt;")}} or {{cssxref("&lt;percentage&gt;")}} representing the ordinate of the scaling vector. If not defined, its default value
     is `sx`, resulting in a uniform scaling that preserves the element's aspect ratio.
 
 <table class="standard-table">
@@ -60,20 +60,20 @@ scale(sx, sy)
     <tr>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd></mtr
               ><mtr
                 ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
@@ -85,13 +85,13 @@ scale(sx, sy)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
@@ -103,13 +103,13 @@ scale(sx, sy)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
@@ -124,7 +124,7 @@ scale(sx, sy)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>

@@ -25,7 +25,7 @@ Think about what your users want to do at your site if they are on a phone. A gr
 
 _“Give your users a smooth experience, even on a slow connection.”_
 
-Though things have been getting better in recent years, browsing the Internet over a wireless data connection can still be pretty painful. This makes it more essential than ever to practice [good performance practices](http://developer.yahoo.com/performance/rules.html "Best Practices for Speeding Up Your Web Site"), only sending the user the bits they will actually need.
+Though things have been getting better in recent years, browsing the Internet over a wireless data connection can still be pretty painful. This makes it more essential than ever to practice [good performance practices](http://developer.yahoo.com/performance/rules.html), only sending the user the bits they will actually need.
 
 ### Know your audience
 

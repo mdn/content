@@ -34,7 +34,6 @@ tags:
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#searchbox","ARIA: searchbox role")}}                                             | {{Spec2('ARIA')}}                         |
 
-
 ## See Also
 
 - [ARIA: `search` role](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)

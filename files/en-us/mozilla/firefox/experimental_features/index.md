@@ -63,7 +63,6 @@ The current implementation is a little inelegant but is basically functional. (S
   </tbody>
 </table>
 
-
 ### inert attribute
 
 The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{jsxref("Boolean")}}, when present, may make the browser "ignore" the element from assistive technologies, page search and text selection. For more details on the status of this feature see {{bug(1655722)}}.
@@ -106,7 +105,7 @@ The {{domxref("HTMLElement")}} property {{DOMxRef("HTMLElement.inert")}} is a {{
 
 ### Layout for input type="search"
 
-Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See {{bug(558594)}} for more details)
+Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See {{bug(558594)}} for more details)
 
 <table>
   <thead>
@@ -553,6 +552,48 @@ The [`@layer`](en-US/docs/Web/CSS/@layer) rule declares a cascade layer, which a
   </tbody>
 </table>
 
+### Property: hyphenate-character
+
+The {{cssxref("hyphenate-character")}} property can be used to set a string that is used instead of a hyphen character (`-`) at the end of a hyphenation line break.
+It can also be used to specify that the character is selected to be appropriate for the language conventions of the affected content.
+(See {{bug(1746187)}} for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>97</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>97</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.hyphenate-character.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### SVGPathSeg APIs
@@ -822,7 +863,7 @@ This allows Firefox users to display images that render on some other browsers, 
 
 Permitted values are:
 
-- `0`: Accept images with specification violations in both recommendations ("should" language) and requirements ("shall" language), provided they can be safely or unambigiously intepretted.
+- `0`: Accept images with specification violations in both recommendations ("should" language) and requirements ("shall" language), provided they can be safely or unambiguously interpreted.
 - `1` (default): Reject violations of requirements, but allow violations of recommendations.
 - `2`: Strict. Reject any violations in requirements or recommendations.
 
@@ -1106,7 +1147,7 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
 
 #### HTML Sanitizer API
 
-The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document’s DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}}) for more information. See {{bug('1673309')}} for more details.
+The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document’s DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}}) for more information. See {{bug('1673309')}} for more details.
 
 <table>
   <thead>
@@ -1267,6 +1308,7 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
 #### ElementInternals: Form associated custom element methods and properties
 
 New {{domxref("ElementInternals")}} properties and methods that allow a custom elements to interact with a form:
+
 - property: {{domxref("ElementInternals.form","form")}} gets the form associated with the element
 - property: {{domxref("ElementInternals.labels","labels")}} gets the list of labels associated with the element
 - property: {{domxref("ElementInternals.willValidate", "willValidate")}} checks if a custom form element will be validated.
@@ -1309,7 +1351,6 @@ See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}
     </tr>
   </tbody>
 </table>
-
 
 ### Payment Request API
 
@@ -1663,7 +1704,6 @@ This also changes the console warning; if the upgrade succeeds, the message indi
   </tbody>
 </table>
 
-
 ### Clear-Site-Data "cache" directive
 
 The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP response header `cache` directive clears the browser cache for the requesting website.
@@ -1838,7 +1878,7 @@ The Network Monitor displays information for [server-sent](/en-US/docs/Web/API/S
 
 ### CSS browser compatibility tooltips
 
-The CSS Rules View can display browser compatibility tooltips next to any CSS properties that have known issues. For more information see: [Examine and edit HTML > Browser Compat Warnings](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#browser_compat_warnings).
+The CSS Rules View can display browser compatibility tooltips next to any CSS properties that have known issues. For more information see: [Examine and edit HTML > Browser Compat Warnings](/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#browser_compat_warnings).
 
 <table>
   <thead>

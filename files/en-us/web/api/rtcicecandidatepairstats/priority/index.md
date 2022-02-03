@@ -34,11 +34,11 @@ pairPriority = rtcIceCandidatePairStats.priority;
 An integer value indicating the priority of this pair of candidates as compared to
 other pairs on the same peer connection. The higher this value, the better the WebRTC
 layer thinks this pair of candidates is compared to the others, and the more likely a
-pair is to be selelcted for use.
+pair is to be selected for use.
 
 > **Note:** This property was removed from the specification as its value
 > cannot be guaranteed to be accurately represented in a JavaScript number. You can
-> calculcate its value using the algorithm described in {{RFC(5245, "", "5.7.2")}} if
+> calculate its value using the algorithm described in {{RFC(5245, "", "5.7.2")}} if
 > you need this information and can accept the risk that the result may not be entirely
 > accurate.
 

@@ -18,7 +18,6 @@ This property takes into account any vertical scrolling of the page.
 
 A `double` floating point value.
 
-
 ## Examples
 
 ```js

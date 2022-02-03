@@ -566,8 +566,8 @@ It's useful to understand how the browser uses HTML and CSS to display a webpage
 
 ## In this module
 
-1.  [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
-3.  How CSS is structured
-4.  [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Using your new knowledge](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [What is CSS?](/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started)
+3. How CSS is structured
+4. [How CSS works](/en-US/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Using your new knowledge](/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

@@ -42,4 +42,3 @@ AudioDecoder.close();
 ## Browser compatibility
 
 {{Compat}}
-

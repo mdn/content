@@ -40,5 +40,3 @@ console.log(chunk.byteLength); //352800
 ## Browser compatibility
 
 {{Compat}}
-
-

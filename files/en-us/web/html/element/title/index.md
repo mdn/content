@@ -111,17 +111,21 @@ This example establishes a page whose title (as displayed at the top of the wind
 
 It is important to provide a `title` value that describes the page's purpose.
 
-A common navigation technique for users of assistive technology is to read the page title and infer the content the page contains. This is because navigating into a page to determine its content can be a time consuming and potentially confusing process.
+A common navigation technique for users of assistive technology is to read the page title and infer the content the page contains. This is because navigating into a page to determine its content can be a time consuming and potentially confusing process.
 
 ### Example
 
-    <title>Menu - Blue House Chinese Food - FoodYum: Online takeout today!</title>
+```html
+<title>Menu - Blue House Chinese Food - FoodYum: Online takeout today!</title>
+```
 
 To help the user, update the page `title` value to reflect significant page state changes (such as form validation problems).
 
 ### Example
 
-    <title>2 errors - Your order - Blue House Chinese Food - FoodYum: Online takeout today!</title>
+```html
+<title>2 errors - Your order - Blue House Chinese Food - FoodYum: Online takeout today!</title>
+```
 
 - [MDN Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)

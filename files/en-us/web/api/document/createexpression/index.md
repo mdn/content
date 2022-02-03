@@ -26,7 +26,7 @@ xpathExpr = document.createExpression(xpathText, namespaceURLMapper);
 ```js
 let xpathExpr = document.createExpression('//div');
 let xpathResult = xpathExpr.evaluate(document); // returns an XPathResult object
-let nodeContext = document.getElementsBytagName('nav')[0];
+let nodeContext = document.getElementsByTagName('nav')[0];
 // Re-using the XPathExpression "xpathExpr"
 let otherResult = xpathExpr.evaluate(nodeContext); // returns an XPathResult object
 ```

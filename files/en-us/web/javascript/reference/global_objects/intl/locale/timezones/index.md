@@ -25,7 +25,6 @@ represents an [IANA time zone](https://en.wikipedia.org/wiki/Daylight_saving_tim
 
 > **Note:** If the Unicode Language Identifier does not contain the the `-` for the Unicode region subtag sequence, the returned value is `undefined`
 
-
 ## Examples
 
 ### Obtaining supported time zones

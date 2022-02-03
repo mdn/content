@@ -11,7 +11,7 @@ tags:
   - Web Periodic Background Synchronization API
 browser-compat: api.PeriodicSyncManager.register
 ---
-{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
+{{DefaultAPISidebar("Periodic Background Sync")}}
 
 The **`register()`** method of the
 {{domxref("PeriodicSyncManager")}} interface registers a periodic sync request with the

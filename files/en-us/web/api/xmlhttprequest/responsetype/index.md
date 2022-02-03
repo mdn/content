@@ -35,7 +35,7 @@ XMLHttpRequest.responseType = type;
 
 ### Value
 
-A {{jsxref("String")}} which specifies what type of data the response contains.
+A string which specifies what type of data the response contains.
 It can take the following values:
 
 - `""`

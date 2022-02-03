@@ -48,9 +48,9 @@ We'll cover these terms and technologies in more detail as we explore further, b
 
 Let's look at a simple analogy — a public library. This is what you would generally do when visiting a library:
 
-1.  Find a search index and look for the title of the book you want.
-2.  Make a note of the catalog number of the book.
-3.  Go to the particular section containing the book, find the right catalog number, and get the book.
+1. Find a search index and look for the title of the book you want.
+2. Make a note of the catalog number of the book.
+3. Go to the particular section containing the book, find the right catalog number, and get the book.
 
 Let's compare the library with a web server:
 

@@ -74,7 +74,7 @@ Note that properties which are objects (e.g.,. for overriding the prototype of b
 - {{domxref("Window.DOMPointReadOnly")}} {{readOnlyInline}} {{experimental_inline}}
   - : Returns a reference to a {{domxref("DOMPointReadOnly")}} object, which represents a 2D or 3D point in a coordinate system.
 - {{domxref("Window.DOMQuad")}} {{readOnlyInline}} {{experimental_inline}}
-  - : Returns a reference to a {{domxref("DOMQuad")}} object, which provides represents a quadrilaterial object, that is one having four corners and four sides.
+  - : Returns a reference to a {{domxref("DOMQuad")}} object, which provides represents a quadrilateral object, that is one having four corners and four sides.
 - {{domxref("Window.DOMRect")}} {{readOnlyInline}} {{experimental_inline}}
   - : Returns a reference to a {{domxref("DOMRect")}} object, which represents a rectangle.
 - {{domxref("Window.DOMRectReadOnly")}} {{readOnlyInline}} {{experimental_inline}}
@@ -302,7 +302,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
 
-
 ### Deprecated methods
 
 - {{domxref("Window.back()")}} {{Non-standard_inline}} {{deprecated_inline}}
@@ -406,7 +405,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("GlobalEventHandlers.onmousedown")}}
   - : Called when ANY mouse button is pressed.
 - {{domxref("GlobalEventHandlers.onmousemove")}}
-  - : Called continously when the mouse is moved inside the window.
+  - : Called continuously when the mouse is moved inside the window.
 - {{domxref("GlobalEventHandlers.onmouseout")}}
   - : Called when the pointer leaves the window.
 - {{domxref("GlobalEventHandlers.onmouseover")}}

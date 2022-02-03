@@ -22,7 +22,7 @@ At a high level, microdata consists of a group of name-value pairs. The groups a
 
 Google and other major search engines support the [Schema.org](https://schema.org) vocabulary for structured data. This vocabulary defines a standard set of type names and property names, for example, [Schema.org Music Event](http://schema.org/MusicEvent) indicates a concert performance, with [startDate](http://schema.org/startDate) and [location](http://schema.org/location) properties to specify the concert's key details. In this case, [Schema.org Music Event](http://schema.org/MusicEvent) would be the URL used by itemtype and startDate and location would be itemprop's that [Schema.org Music Event](http://schema.org/MusicEvent) defines.
 
-> **Note:** More about itemtype attributes can be found at <http://schema.org/Thing>.
+> **Note:** More about itemtype attributes can be found at <https://schema.org/Thing>.
 
 Microdata vocabularies provide the semantics or meaning of an Item. Web developers can design a custom vocabulary or use vocabularies available on the web, such as the widely used [schema.org](http://schema.org) vocabulary. A collection of commonly used markup vocabularies are provided by Schema.org.
 
@@ -49,13 +49,13 @@ In some cases, search engines covering specific regions may provide locally-spec
 
 ## Global attributes
 
-[itemid ](/en-US/docs/Web/HTML/Global_attributes/itemid)– The unique, global identifier of an item.
+[itemid](/en-US/docs/Web/HTML/Global_attributes/itemid) – The unique, global identifier of an item.
 
-[itemprop ](/en-US/docs/Web/HTML/Global_attributes/itemprop)– Used to add properties to an item. Every HTML element may have an itemprop attribute specified, where an itemprop consists of a name and value pair.
+[itemprop](/en-US/docs/Web/HTML/Global_attributes/itemprop) – Used to add properties to an item. Every HTML element may have an itemprop attribute specified, where an itemprop consists of a name and value pair.
 
 [itemref](/en-US/docs/Web/HTML/Global_attributes/itemref) – Properties that are not descendants of an element with the `itemscope` attribute can be associated with the item using an **itemref**. Itemref provides a list of element ids (not `itemid`s) with additional properties elsewhere in the document.
 
-[itemscope](/en-US/docs/Web/HTML/Global_attributes/itemscope) – Itemscope (usually) works along with [itemtype ](/en-US/docs/Web/HTML/Global_attributes/itemtype)to specify that the HTML contained in a block is about a particular item. itemscope creates the Item and defines the scope of the itemtype associated with it. itemtype is a valid URL of a vocabulary (such as [schema.org](http://schema.org/)) that describes the item and its properties context.
+[itemscope](/en-US/docs/Web/HTML/Global_attributes/itemscope) – Itemscope (usually) works along with [itemtype](/en-US/docs/Web/HTML/Global_attributes/itemtype) to specify that the HTML contained in a block is about a particular item. itemscope creates the Item and defines the scope of the itemtype associated with it. itemtype is a valid URL of a vocabulary (such as [schema.org](http://schema.org/)) that describes the item and its properties context.
 
 [itemtype](/en-US/docs/Web/HTML/Global_attributes/itemtype) – Specifies the URL of the vocabulary that will be used to define itemprop's (item properties) in the data structure. [Itemscope](/en-US/docs/Web/HTML/Global_attributes/itemscope) is used to set the scope of where in the data structure the vocabulary set by itemtype will be active.
 

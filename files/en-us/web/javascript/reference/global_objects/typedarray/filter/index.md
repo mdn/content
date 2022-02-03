@@ -66,9 +66,9 @@ array.
 
 `callbackFn` is invoked with three arguments:
 
-1.  the value of the element
-2.  the index of the element
-3.  the typed array object being traversed
+1. the value of the element
+2. the index of the element
+3. the typed array object being traversed
 
 If a `thisArg` parameter is provided to `filter()`, it
 will be passed to `callbackFn` when invoked, for use as its

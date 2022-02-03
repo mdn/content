@@ -31,7 +31,7 @@ Only one radio button in a given group can be selected at the same time. Radio b
 
 They are called radio buttons because they look and operate in a similar manner to the push buttons on old-fashioned radios, such as the one shown below.
 
-![Shows what radio buttons looked like in the olden days.](old-radio.jpg "Photo of an old-time radio")
+![Shows what radio buttons looked like in the olden days.](old-radio.jpg)
 
 > **Note:** [Checkboxes](/en-US/docs/Web/HTML/Element/input/checkbox) are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
 

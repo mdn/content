@@ -28,13 +28,10 @@ Do not use.
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | {{SpecName("ARIA","#window","ARIA: window role")}}                                             | {{Spec2('ARIA')}}                         |
 
-
 ## See Also
 
 - [ARIA: `roletype` role](/en-US/docs/Web/Accessibility/ARIA/Roles/roletype_role)
 - [ARIA: `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
-
-
 
 <section id="Quick_links">
 

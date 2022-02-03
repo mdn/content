@@ -18,7 +18,7 @@ Use the `history` API to interact with the browser history.
 
 If you are looking for information about the browser session history, see the [History interface](/en-US/docs/Web/API/History).
 
-> **Note:** Downloads are treated as [`HistoryItem`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem "A HistoryItem object provides information about a page in the browser history.") objects. Therefore, events such as [`history.onVisited`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited "Fired each time the user visits a page. A history.HistoryItem object is passed to the listener. This event fires before the page has loaded.") fire for downloads.
+> **Note:** Downloads are treated as [`HistoryItem`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem) objects. Therefore, events such as [`history.onVisited`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited) fire for downloads.
 
 Browser history is a chronological record of pages the user has visited. The history API enables you to:
 
@@ -46,7 +46,7 @@ To use this API, an extension must request the "history" [permission](/en-US/doc
 ## Functions
 
 - {{WebExtAPIRef("history.search()")}}
-  - : Searches the browser history for [`history.HistoryItem`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem "A HistoryItem object provides information about one result from a history query.") objects matching the given criteria.
+  - : Searches the browser history for [`history.HistoryItem`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem) objects matching the given criteria.
 - {{WebExtAPIRef("history.getVisits()")}}
   - : Retrieves information about visits to a given page.
 - {{WebExtAPIRef("history.addUrl()")}}

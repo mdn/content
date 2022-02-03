@@ -35,8 +35,7 @@ An {{jsxref("Array")}} of components which contains the formatted parts from the
 
 ## Description
 
-Whereas {{jsxref("Intl/ListFormat/format",
-	"Intl.ListFormat.prototype.format()")}} returns a string being the formatted version
+Whereas {{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}} returns a string being the formatted version
 of the list (according to the given locale and style options),
 `formatToParts()` returns an array of the different components of the
 formatted string.
@@ -80,9 +79,6 @@ console.table(myListFormat.formatToParts(fruits));
 
 - {{jsxref("Intl.ListFormat")}}
 - {{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}
-- {{jsxref("Intl/RelativeTimeFormat/formatToParts",
-		"Intl.RelativeTimeFormat.prototype.formatToParts()")}}
-- {{jsxref("Intl/NumberFormat/formatToParts",
-		"Intl.NumberFormat.prototype.formatToParts()")}}
-- {{jsxref("Intl/DateTimeFormat/formatToParts",
-		"Intl.DateTimeFormat.prototype.formatToParts()")}}
+- {{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}
+- {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
+- {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}

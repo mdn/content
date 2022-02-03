@@ -19,14 +19,16 @@ The **`visibilitychange`** event is sent to an {{domxref("XRSession")}} to infor
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('visibilitychange', (event) => { });
+addEventListener('visibilitychange', event => { })
 
-onvisibilitychange = (event) => { });
+onvisibilitychange = event => { }
 ```
 
 ## Event type
 
 An {{domxref("XRSessionEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("XRSessionEvent")}}
 
 ## Event properties
 

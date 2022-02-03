@@ -17,7 +17,7 @@ The **`AudioBufferSourceNode`** interface is an {{domxref("AudioScheduledSourceN
 
 This interface is especially useful for playing back audio which has particularly stringent timing accuracy requirements, such as for sounds that must match a specific rhythm and can be kept in memory rather than being played from disk or the network. To play sounds which require accurate timing but must be streamed from the network or played from disk, use a {{domxref("AudioWorkletNode")}} to implement its playback.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 An `AudioBufferSourceNode` has no inputs and exactly one output, which has the same number of channels as the `AudioBuffer` indicated by its {{domxref("AudioBufferSourceNode.buffer", "buffer")}} property. If there's no buffer set—that is, if `buffer` is `null`—the output contains a single channel of silence (every sample is 0).
 

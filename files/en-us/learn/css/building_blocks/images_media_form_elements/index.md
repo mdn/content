@@ -63,7 +63,7 @@ In the example below we have two boxes, both 200 pixels in size:
 
 So what can we do about the overflowing issue?
 
-As we learned in [our previous lesson](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS), a common technique is to make the {{cssxref("max-width")}} of an image 100%. This will enable the image to become smaller in size than the box but not larger. This technique will also work with other replaced elements such as [`<video>`](/en-US/docs/Web/HTML/Element/video)s, or [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe)s.
+As we learned in [our previous lesson](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS), a common technique is to make the {{cssxref("max-width")}} of an image 100%. This will enable the image to become smaller in size than the box but not larger. This technique will also work with other replaced elements such as [`<video>`](/en-US/docs/Web/HTML/Element/video)s, or [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe)s.
 
 **Try adding `max-width: 100%` to the `<img>` element in the example above. You will see that the smaller image remains unchanged, but the larger one becomes smaller to fit into the box.**
 
@@ -116,7 +116,7 @@ In the example below we have styled some text inputs using CSS — you can see t
 
 {{EmbedGHLiveSample("css-examples/learn/images/form.html", '100%', 1000)}}
 
-> **Warning:** You should take care when changing the styling of form elements to make sure it is still obvious to the user they are form elements. You could create a form input with no borders and background that is almost indistinguishable from the content around it, but this would make it very hard to recognise and fill in.
+> **Warning:** You should take care when changing the styling of form elements to make sure it is still obvious to the user they are form elements. You could create a form input with no borders and background that is almost indistinguishable from the content around it, but this would make it very hard to recognize and fill in.
 
 As explained in the lessons on [form styling](/en-US/docs/Learn/Forms/Styling_web_forms) in the HTML part of this course, many of the more complex input types are rendered by the operating system and are inaccessible to styling. You should therefore always assume that forms are going to look quite different for different visitors and test complex forms in a number of browsers.
 
@@ -191,7 +191,7 @@ For further information on styling forms, take a look at the two articles in the
 
 ## Test your skills!
 
-We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Images and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_tasks).
+We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Images and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_tasks).
 
 ## Summary
 
@@ -201,21 +201,21 @@ This lesson has highlighted some of the differences you will encounter when work
 
 ## In this module
 
-1.  [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)

@@ -50,7 +50,6 @@ The modified array, filled with `value`.
 > To use `Array.prototype.fill()` when declaring an array, make sure to assign slots to the array.
 > [See example](#using_fill_to_populate_an_empty_array).
 
-
 ## Polyfill
 
 ```js

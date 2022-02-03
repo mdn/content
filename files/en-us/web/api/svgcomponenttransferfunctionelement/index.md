@@ -13,7 +13,7 @@ browser-compat: api.SVGComponentTransferFunctionElement
 
 The **`SVGComponentTransferFunctionElement`** interface defines a base interface used by the component transfer function interfaces.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Constants
 

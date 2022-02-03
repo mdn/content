@@ -48,8 +48,8 @@ The user (or reader) of the web site can choose to override styles in many brows
 
 The cascading algorithm determines how to find the value to apply for each property for each document element.
 
-1.  It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate `media` at-rule.
-2.  Then it sorts these rules according to their importance, that is, whether or not they are followed by `!important`, and by their origin. The cascade is in ascending order, which means that `!important` values from a user-defined style sheet have precedence over normal values originated from a user-agent style sheet:
+1. It first filters all the rules from the different sources to keep only the rules that apply to a given element. That means rules whose selector matches the given element and which are part of an appropriate `media` at-rule.
+2. Then it sorts these rules according to their importance, that is, whether or not they are followed by `!important`, and by their origin. The cascade is in ascending order, which means that `!important` values from a user-defined style sheet have precedence over normal values originated from a user-agent style sheet:
 
     |     | Origin      | Importance   |
     | --- | ----------- | ------------ |
@@ -62,7 +62,7 @@ The cascading algorithm determines how to find the value to apply for each prope
     | 7   | user agent  | `!important` |
     | 8   | transitions |              |
 
-3.  In case of equality, the [specificity](/en-US/docs/Web/CSS/Specificity) of a value is considered to choose one or the other.
+3. In case of equality, the [specificity](/en-US/docs/Web/CSS/Specificity) of a value is considered to choose one or the other.
 
 ## Resetting styles
 

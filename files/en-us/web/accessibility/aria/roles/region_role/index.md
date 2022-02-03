@@ -34,7 +34,6 @@ Using the {{HTMLElement('section')}} element will automatically communicate a se
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or  [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
   - : Use this attribute to label the region. Often, the value of the `aria-labelledby` attribute will be the id of the element used to title the section. If no visible appropriate header is present, `aria-label` should be used.
 
-
 ## Examples
 
 ```html
@@ -90,8 +89,6 @@ If there is a content area with `tabindex="0"`, add `role="region"` to convey to
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
 | {{SpecName("ARIA","#region","ARIA Region Role")}}                                             | {{Spec2('ARIA')}}                         |
 | {{SpecName("ARIA Authoring Practices 1.2","#aria_lh_region","Region landmark role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
-
-
 
 ## See also
 

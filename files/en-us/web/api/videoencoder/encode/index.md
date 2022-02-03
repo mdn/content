@@ -55,4 +55,3 @@ encoder.encode(frame, { keyFrame: true });
 ## Browser compatibility
 
 {{Compat}}
-

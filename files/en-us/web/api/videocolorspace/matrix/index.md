@@ -42,5 +42,3 @@ console.log(colorSpace.matrix);
 ## Browser compatibility
 
 {{Compat}}
-
-

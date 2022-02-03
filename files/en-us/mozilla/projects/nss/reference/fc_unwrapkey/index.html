@@ -31,7 +31,7 @@ tags:
 </dd><dt><code>phKey</code></dt><dd> {{ mediawiki.external('out') }} pointer to the location to receive the handle of the unwrapped key.
 </dd></dl>
 <h3 id="Description"> Description </h3>
-<p><code>FC_UnwrapKey</code> unwraps (decrypts) a key and creates a new key opbject. If <code>pWrappedKey</code> is NULL the length of the wrapped key is returned in <code>pusWrappedKeyLen</code> and FC_UnwrapKey may be called again with <code>pWrappedKey</code> set to retrieve the wrapped key.
+<p><code>FC_UnwrapKey</code> unwraps (decrypts) a key and creates a new key object. If <code>pWrappedKey</code> is NULL the length of the wrapped key is returned in <code>pusWrappedKeyLen</code> and FC_UnwrapKey may be called again with <code>pWrappedKey</code> set to retrieve the wrapped key.
 </p><p>A user must log into the token (to assume the NSS User role) before calling <code>FC_UnwrapKey</code>.
 </p>
 <h3 id="Return_value"> Return value </h3>

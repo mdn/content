@@ -86,7 +86,6 @@ The best way to use this role is to **not use it at all**, and instead use the n
 
 Instead of using the ARIA `heading` role, use the semantic HTML element:
 
-
 | HTML Element          | `heading` role                   |
 | --------------------- | ------------------------ |
 | {{HTMLElement('h1')}} | `<div role="heading" aria-level="1">` |
@@ -95,8 +94,6 @@ Instead of using the ARIA `heading` role, use the semantic HTML element:
 | {{HTMLElement('h4')}} | `<div role="heading" aria-level="4">` |
 | {{HTMLElement('h5')}} | `<div role="heading" aria-level="5">` |
 | {{HTMLElement('h6')}} | `<div role="heading" aria-level="6">` |
-
-
 
 ### Added benefits
 
@@ -109,12 +106,9 @@ None.
 | {{SpecName("ARIA","#heading","heading")}} | {{Spec2('ARIA')}} |
 | {{SpecName("ARIA Authoring Practices 1.2","#heading","heading role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
 
-
 ## Precedence order
 
 The heading role overrides the native semantic meaning of the element it is being used for. The `aria-level` attribute, in addition, determines what level of heading is being exposed.
-
-
 
 ## See also
 

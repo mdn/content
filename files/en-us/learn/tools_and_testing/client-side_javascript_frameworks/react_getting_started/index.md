@@ -164,28 +164,30 @@ When the process is complete, `cd` into the `moz-todo-react` directory and run t
 
 create-react-app gives us everything we need to develop a React application. Its initial file structure looks like this:
 
-    moz-todo-react
-    ├── README.md
-    ├── node_modules
-    ├── package.json
-    ├── package-lock.json
-    ├── .gitignore
-    ├── public
-    │   ├── favicon.ico
-    │   ├── index.html
-    │   ├── logo192.png
-    │   ├── logo512.png
-    │   ├── manifest.json
-    │   └── robots.txt
-    └── src
-        ├── App.css
-        ├── App.js
-        ├── App.test.js
-        ├── index.css
-        ├── index.js
-        ├── logo.svg
-        ├── reportWebVitals.js
-        └── setupTests.js
+```
+moz-todo-react
+├── README.md
+├── node_modules
+├── package.json
+├── package-lock.json
+├── .gitignore
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    ├── reportWebVitals.js
+    └── setupTests.js
+```
 
 The **`src`** directory is where we'll spend most of our time, as it's where the source code for our application lives.
 

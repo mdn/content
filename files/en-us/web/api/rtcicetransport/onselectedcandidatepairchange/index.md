@@ -31,7 +31,7 @@ RTCIceTransport.onselectedcandidatepairchange = candidatePairHandler;
 
 ### Value
 
-This propoerty should be set to reference an event handler function to be called by the
+This property should be set to reference an event handler function to be called by the
 ICE agent when it discovers a new candidate pair that the {{domxref("RTCIceTransport")}}
 will be using for communication with the remote peer. This event will occur at least
 once, and may occur more than once if the ICE agent continues to identify candidate

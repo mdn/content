@@ -172,7 +172,7 @@ The syntax of the fallback, like that of custom properties, allows commas. But, 
 
 ### Using env() to ensure content is not obscured by window control buttons in desktop PWAs
 
-In the following example `env()` is used to ensure that content displayed in a PWA that uses the Window Controls Overlay feature is not obscured by the operating system's window control buttons. The `titlebar-area-*` values define a rectangle where the title bar would normally have been displayed. On devices that do not support the Window Controls Overlay feature, such as mobile devices, the fallback values are used.
+In the following example `env()` ensures that content displayed in a desktop Progressive Web App that uses the [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API) is not obscured by the operating system's window control buttons. The `titlebar-area-*` values define a rectangle where the title bar would normally have been displayed. On devices that do not support the Window Controls Overlay feature, such as mobile devices, the fallback values are used.
 
 Here is what a PWA installed on a desktop device normally looks like:
 

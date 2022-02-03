@@ -16,7 +16,7 @@ according to its content. In order for it to work, the DOM content should be loa
 this function is called—for example, once the {{event("DOMContentLoaded")}} event has
 been thrown.
 
-Since Firefox 20, the mimimal size of the window is clamped to prevent the window from
+Since Firefox 20, the minimal size of the window is clamped to prevent the window from
 being too small for the user to interact with.
 
 ## Syntax

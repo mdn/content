@@ -14,10 +14,12 @@ The `<xsl:for-each>` element selects a set of nodes and processes each of them i
 
 ### Syntax
 
-    <xsl:for-each select=EXPRESSION>
-    	<xsl:sort> [optional]
-    	TEMPLATE
-    </xsl:for-each>
+```xml
+<xsl:for-each select=EXPRESSION>
+  <xsl:sort> [optional]
+  TEMPLATE
+</xsl:for-each>
+```
 
 ### Required Attributes
 

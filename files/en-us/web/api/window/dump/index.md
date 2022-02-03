@@ -65,7 +65,9 @@ application from a terminal.
 To redirect the console output to a file, run firefox _without_ the -console
 option and use the syntax to redirect stderr and stdout to a file, i.e.:
 
-    firefox > console.txt 2>&1
+```bash
+firefox > console.txt 2>&1
+```
 
 > **Note:** If you would like the console messages to appear in the console you used to launch
 > the application, you can use the [Gecko Console Redirector](https://github.com/matthewkastor/Redirector).

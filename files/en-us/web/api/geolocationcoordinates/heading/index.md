@@ -15,7 +15,7 @@ browser-compat: api.GeolocationCoordinates.heading
 The **`GeolocationCoordinates.heading`** read-only property is
 a `double` representing the direction in which the device is traveling. This
 value, specified in degrees, indicates how far off from heading due north the device is.
-`Zero` degrees represents true north, and the direction is determined
+`Zero` degrees represents true north, and the direction is determined
 clockwise (which means that east is `90` degrees and west is `270`
 degrees). If {{domxref("GeolocationCoordinates.speed")}} is `0`,
 `heading` is

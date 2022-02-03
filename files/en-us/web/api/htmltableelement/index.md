@@ -12,7 +12,7 @@ browser-compat: api.HTMLTableElement
 
 The **`HTMLTableElement`** interface provides special properties and methods (beyond the regular {{DOMxRef("HTMLElement")}} object interface it also has available to it by inheritance) for manipulating the layout and presentation of tables in an HTML document.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -40,7 +40,7 @@ _Inherits properties from its parent, {{DOMxRef("HTMLElement")}}._
 - {{DOMxRef("HTMLTableElement.border")}} {{deprecated_inline}}
   - : Is a {{DOMxRef("DOMString")}} containing the width in pixels of the border of the table. It reflects the obsolete {{HTMLAttrxRef("border", "table")}} attribute.
 - {{DOMxRef("HTMLTableElement.cellPadding")}} {{deprecated_inline}}
-  - : Is a {{DOMxRef("DOMString")}} containing the width in pixels of the horizontal and vertical sapce between cell content and cell borders. It reflects the obsolete {{HTMLAttrxRef("cellpadding", "table")}} attribute.
+  - : Is a {{DOMxRef("DOMString")}} containing the width in pixels of the horizontal and vertical space between cell content and cell borders. It reflects the obsolete {{HTMLAttrxRef("cellpadding", "table")}} attribute.
 - {{DOMxRef("HTMLTableElement.cellSpacing")}} {{deprecated_inline}}
   - : Is a {{DOMxRef("DOMString")}} containing the width in pixels of the horizontal and vertical separation between cells. It reflects the obsolete {{HTMLAttrxRef("cellspacing", "table")}} attribute.
 - {{DOMxRef("HTMLTableElement.frame")}} {{deprecated_inline}}

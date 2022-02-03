@@ -47,7 +47,9 @@ new RTCIceCandidate(candidateInfo)
         The syntax of the candidate string is described in {{RFC(5245, "", 15.1)}}.
         For an a-line (attribute line) that looks like this:
 
-            a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+        ```
+        a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+        ```
 
         the corresponding `candidate` string's value will be
         `"candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host"`.
@@ -107,7 +109,7 @@ If `candidateInfo` is provided, the new `RTCIceCandidate` is initialized as foll
 - The following fields are initialized to `null` if they are not included in the {{domxref("RTCIceCandidate.candidate")}} property:
   {{domxref("RTCIceCandidate.foundation", "foundation")}},
   {{domxref("RTCIceCandidate.component", "component")}},
-  {{domxref("RTCIceCandidate.priority", "priority")}} , {{domxref("RTCIceCandidate/address","addresss")}}, {{domxref("RTCIceCandidate.protocol", "protocol")}},
+  {{domxref("RTCIceCandidate.priority", "priority")}} , {{domxref("RTCIceCandidate/address","address")}}, {{domxref("RTCIceCandidate.protocol", "protocol")}},
   {{domxref("RTCIceCandidate.port", "port")}}, {{domxref("RTCIceCandidate.type", "type")}}, {{domxref("RTCIceCandidate.tcpType", "tcpType")}},
   {{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}}, and {{domxref("RTCIceCandidate.relatedPort", "relatedPort")}}.
 

@@ -39,19 +39,21 @@ The **`:current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 
 ### WebVTT
 
-    WEBVTT FILE
+```
+WEBVTT FILE
 
-    1
-    00:00:03.500 --> 00:00:05.000
-    This is the first caption
+1
+00:00:03.500 --> 00:00:05.000
+This is the first caption
 
-    2
-    00:00:06.000 --> 00:00:09.000
-    This is the second caption
+2
+00:00:06.000 --> 00:00:09.000
+This is the second caption
 
-    3
-    00:00:11.000 --> 00:00:19.000
-    This is the third caption
+3
+00:00:11.000 --> 00:00:19.000
+This is the third caption
+```
 
 ## Specifications
 

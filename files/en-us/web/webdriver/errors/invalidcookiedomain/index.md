@@ -36,26 +36,32 @@ except exceptions.InvalidCookieDomainException as e:
 
 Output:
 
-    InvalidCookieDomainException: https://example.org/
+```
+InvalidCookieDomainException: https://example.org/
+```
 
 ### Cookie-averse documents
 
 This error may also occur when you visit a cookie-averse document, such as a file on your local disk:
 
-    from selenium import webdriver
-    from selenium.common import exceptions
+```python
+from selenium import webdriver
+from selenium.common import exceptions
 
-    session = webdriver.Firefox()
-    session.get("file:///home/jdoe/document.html")
-    try:
-        foo_cookie = {"name": "foo", "value": "bar"}
-        session.add_cookie(foo_cookie)
-    except exceptions.InvalidCookieDomainException as e:
-        print(e.message)
+session = webdriver.Firefox()
+session.get("file:///home/jdoe/document.html")
+try:
+    foo_cookie = {"name": "foo", "value": "bar"}
+    session.add_cookie(foo_cookie)
+except exceptions.InvalidCookieDomainException as e:
+    print(e.message)
+```
 
 Output:
 
-    InvalidCookieDomainException: Document is cookie-averse
+```
+InvalidCookieDomainException: Document is cookie-averse
+```
 
 ## See also
 

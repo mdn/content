@@ -22,4 +22,3 @@ This page lists the obsolete `windowFeatures` parameter of [window.open](/en-US/
     `outerHeight` value includes any and all present toolbars, the window horizontal
     scrollbar (if present), and top and bottom window-resizing borders. The minimal required
     value is 100.
-

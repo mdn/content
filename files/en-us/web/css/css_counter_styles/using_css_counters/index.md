@@ -20,6 +20,13 @@ You can define your own named counters, and you can also manipulate the `list-it
 
 ## Using counters
 
+To use a counter it must first be initialized to a value with the {{cssxref("counter-reset")}} property.
+The counter's value can then be increased or decreased using {{cssxref("counter-increment")}} property.
+The current value of a counter is displayed using the {{cssxref("counter()")}} or {{cssxref("counters()")}} function, typically within a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) {{CSSxRef("content")}} property.
+
+Note that counters can only be set, reset, or incremented in elements that generate boxes.
+For example, if an element is set to `display: none` then any counter operation on that element will be ignored.
+
 ### Manipulating a counter's value
 
 To use a CSS counter, it must first be initialized to a value with the {{cssxref("counter-reset")}} property.
@@ -46,6 +53,7 @@ h3::before {
   counter-increment: section; /* Increment the value of section counter by 1 */
 }
 ```
+
 You can specify the value to increment or decrement the counter after the counter name, using a positive or negative number.
 
 The counter's name must not be `none`, `inherit`, or `initial`; otherwise the declaration is ignored.
@@ -54,7 +62,7 @@ The counter's name must not be `none`, `inherit`, or `initial`; otherwise the de
 
 The value of a counter can be displayed using either the {{cssxref("counter()", "counter()")}} or {{cssxref("counters()", "counters()")}} function in a {{cssxref("content")}} property.
 
-For example, the following declaration uses `counter()` to prefix each `h3` heading with the text `Section <number>: `, where `<number>` is the value of the count in decimal (the default display style):
+For example, the following declaration uses `counter()` to prefix each `h3` heading with the text `Section <number>:`, where `<number>` is the value of the count in decimal (the default display style):
 
 ```css
 h3::before {
@@ -102,7 +110,6 @@ You can use any of the {{cssxref("list-style-type")}} values or your own [custom
 
 Examples showing the use of `counter()` and `counter()` are given below in the [basic example](#basic_example) and [Example of a nested counter](#example_of_a_nested_counter), respectively.
 
-
 ### Reversed counters
 
 A reversed counter is one that is intended to count down (decrement) rather than up (increment).
@@ -133,7 +140,6 @@ Unlike author-created counters, `list-item` _automatically_ increments or decrem
 
 The `list-item` counter can be used to manipulate the default behavior of ordered lists using CSS.
 For example, you can change the default initial value, or use {{cssxref("counter-increment")}} to change the way in which the list items increment or decrement.
-
 
 ## Examples
 
@@ -168,7 +174,6 @@ h3::before {
 
 {{EmbedLiveSample("Basic_example", "100%", 150)}}
 
-
 ### Basic example: reversed counter
 
 This example is the same as the one above but uses a reversed counter.
@@ -202,7 +207,6 @@ h3::before {
 #### Result
 
 {{EmbedLiveSample("Reversing a counter", "100%", 150)}}
-
 
 ### A more sophisticated example
 

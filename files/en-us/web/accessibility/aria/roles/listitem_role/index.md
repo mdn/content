@@ -72,8 +72,6 @@ or use an ordered list if the order of the list items matters:
 | -------------------------------------------------------- | ------------------------ |
 | {{SpecName("ARIA","#listitem","listitem")}} | {{Spec2('ARIA')}} |
 
-
-
 ## See also
 
 - [HTML `<li>` element](/en-US/docs/Web/HTML/Element/li)

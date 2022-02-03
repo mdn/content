@@ -17,7 +17,7 @@ tags:
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
 
-In this module, we recommend using Flexbox and Grid as the main layout methods for your designs. However, there will be visitors to your site who use older browsers, or browsers which do not support the methods you have used. This will always be the case on the web — as new features are developed, different browsers will prioritise different things. This article explains how to use modern web techniques without locking out users of older technology.
+In this module, we recommend using Flexbox and Grid as the main layout methods for your designs. However, there will be visitors to your site who use older browsers, or browsers which do not support the methods you have used. This will always be the case on the web — as new features are developed, different browsers will prioritize different things. This article explains how to use modern web techniques without locking out users of older technology.
 
 <table>
   <tbody>
@@ -72,7 +72,7 @@ CSS specifications contain information that explains what the browser does when 
 
 ### Falling back from grid to float
 
-In the example below, we have floated three `<div>`s so they display in a row. Any browser that does not support [CSS Grid Layout](/en-US/docs/Learn/CSS/CSS_layout/Grids) will see the row of boxes as a floated layout. A floated item that becomes a grid item loses the float behavior, which means that by turning the wrapper into a Grid Container, the floated items become Grid Items. If the browser supports Grid Layout it will display the grid view, if not it ignores the `display: grid` and related properties and the floated layout is used.
+In the example below, we have floated three `<div>`s so they display in a row. Any browser that does not support [CSS Grid Layout](/en-US/docs/Learn/CSS/CSS_layout/Grids) will see the row of boxes as a floated layout. A floated item that becomes a grid item loses the float behavior, which means that by turning the wrapper into a Grid Container, the floated items become Grid Items. If the browser supports Grid Layout it will display the grid view, if not it ignores the `display: grid` and related properties and the floated layout is used.
 
 ```css
 * {box-sizing: border-box;}
@@ -160,7 +160,7 @@ To deal with this issue we need to have a way to detect if Grid is supported and
 
 Feature queries allow you to test whether a browser supports any particular CSS feature. This means that you can write some CSS for browsers that don’t support a certain feature, then check to see if the browser has support and if so throw in your fancy layout.
 
-If we add a feature query to the above example, we can use it to set the widths of our items back to `auto`  if we know that we have grid support.
+If we add a feature query to the above example, we can use it to set the widths of our items back to `auto` if we know that we have grid support.
 
 ```css
 * {box-sizing: border-box;}
@@ -204,11 +204,11 @@ The specification for feature queries also contains the ability to test if a bro
 
 ## Older versions of Flexbox
 
-In older versions of browsers, you can find previous iterations of the Flexbox specification. At the time of writing, this is mostly an issue with Internet Explorer 10, which uses the `-ms-`  prefix for Flexbox. This also means that there are some outdated articles and tutorials in existence; [this useful guide](https://css-tricks.com/old-flexbox-and-new-flexbox/) helps you check what you are looking at and can also help if you need flex support in very old browsers.
+In older versions of browsers, you can find previous iterations of the Flexbox specification. At the time of writing, this is mostly an issue with Internet Explorer 10, which uses the `-ms-` prefix for Flexbox. This also means that there are some outdated articles and tutorials in existence; [this useful guide](https://css-tricks.com/old-flexbox-and-new-flexbox/) helps you check what you are looking at and can also help if you need flex support in very old browsers.
 
 ## The IE10 and 11 prefixed version of Grid
 
-The CSS Grid specification was initially prototyped In Internet Explorer 10; this means that while IE10 and IE11 do not have _modern_ grid support, they do have a version of Grid layout that is very usable, although different to the modern specification documented on this site. The IE10 and 11 implementations is  `-ms-` prefixed, which means you can use it for these browsers and it will be ignored by non-Microsoft browsers. Edge does still understand the old syntax, however, so take care that everything is safely overwritten in your modern grid CSS.
+The CSS Grid specification was initially prototyped In Internet Explorer 10; this means that while IE10 and IE11 do not have _modern_ grid support, they do have a version of Grid layout that is very usable, although different to the modern specification documented on this site. The IE10 and 11 implementations is `-ms-` prefixed, which means you can use it for these browsers and it will be ignored by non-Microsoft browsers. Edge does still understand the old syntax, however, so take care that everything is safely overwritten in your modern grid CSS.
 
 The guide to [Progressive Enhancement in Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement) can help you understand the IE version of the grid, and we have included some additional useful links at the end of this lesson. However, unless you have a very high number of visitors in older IE versions, you may find it better to focus on creating a fallback that works for all non-supporting browsers.
 

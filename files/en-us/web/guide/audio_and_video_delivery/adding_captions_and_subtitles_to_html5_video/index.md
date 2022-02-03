@@ -269,9 +269,11 @@ For example, to change the text color of the text track cues you can write:
 
 If the WebVTT file uses [voice spans](https://dev.w3.org/html5/webvtt/#dfn-webvtt-cue-voice-span), which allow cues to be defined as having a particular "voice":
 
-    0
-    00:00:00.000 --> 00:00:12.000
-    <v Test>[Test]</v>
+```
+0
+00:00:00.000 --> 00:00:12.000
+<v Test>[Test]</v>
+```
 
 Then this specific 'voice' will be stylable like so:
 

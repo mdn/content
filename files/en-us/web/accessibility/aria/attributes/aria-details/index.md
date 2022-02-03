@@ -33,7 +33,7 @@ Unlike `aria-describedby`, elements referenced by `aria-details` are not used in
 
 ## Example
 
-When it comes to definiton and term roles, the `aria-details` would be included on the [`term`](/en-US/docs/Web/Accessibility/ARIA/roles/term_role) element with the `id` of the element with a [`definition`](/en-US/docs/Web/Accessibility/ARIA/roles/definition_role) role.
+When it comes to definition and term roles, the `aria-details` would be included on the [`term`](/en-US/docs/Web/Accessibility/ARIA/roles/term_role) element with the `id` of the element with a [`definition`](/en-US/docs/Web/Accessibility/ARIA/roles/definition_role) role.
 
 ```html
 <p>The <strong>cubic-bezier()<strong> functional notation defines a cubic 
@@ -43,7 +43,7 @@ When it comes to definiton and term roles, the `aria-details` would be included 
 </p>
 
 <p role="definition" id="bezier">A <strong>Bézier curve</strong>,
- (Prounounced \ ˈbe-zē-ˌā \)
+ (Pronounced \ ˈbe-zē-ˌā \)
  <i aria-description="English pronunciation">BEH-zee-ay</i>) is a mathematically 
  described curve used in computer graphics and animation. The curve is defined 
  by a set of control points with a minimum of two. Web related graphics 

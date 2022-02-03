@@ -33,7 +33,7 @@ An IIR filter is a **infinite impulse response filter**. It's one of two primary
 
 A biquad filter is actually a _specific type_ of infinite impulse response filter. It's a commonly-used type and we already have it as a node in the Web Audio API. If you choose this node the hard work is done for you. For instance, if you want to filter lower frequencies from your sound, you can set the [type](/en-US/docs/Web/API/BiquadFilterNode/type) to `highpass` and then set which frequency to filter from (or cut off). [There's more information on how biquad filters work here](http://www.earlevel.com/main/2003/02/28/biquads/).
 
-When you are using an {{domxref("IIRFilterNode")}} instead of a {{domxref("BiquadFilterNode")}} you are creating the filter yourself, rather than just choosing a pre-programmed type. So you can create a highpass filter, or a lowpass filter, or a more bespoke one. And this is where the IIR filter node is useful — you can create your own if none of the alaready available settings is right for what you want. As well as this, if your audio graph needed a highpass and a bandpass filter within it, you could just use one IIR filter node in place of the two biquad filter nodes you would otherwise need for this.
+When you are using an {{domxref("IIRFilterNode")}} instead of a {{domxref("BiquadFilterNode")}} you are creating the filter yourself, rather than just choosing a pre-programmed type. So you can create a highpass filter, or a lowpass filter, or a more bespoke one. And this is where the IIR filter node is useful — you can create your own if none of the already available settings is right for what you want. As well as this, if your audio graph needed a highpass and a bandpass filter within it, you could just use one IIR filter node in place of the two biquad filter nodes you would otherwise need for this.
 
 With the IIRFIlter node it's up to you to set what `feedforward` and `feedback` values the filter needs — this determines the characteristics of the filter. The downside is that this involves some complex maths.
 
@@ -43,7 +43,7 @@ If you want to play with the IIR filter node and need some values to help along 
 
 With that all in mind, let's take a look at the code to create an IIR filter with the Web Audio API.
 
-## Setting our IIRFilter co-efficients
+## Setting our IIRFilter coefficients
 
 When creating an IIR filter, we pass in the `feedforward` and `feedback` coefficients as options (coefficients is how we describe the values). Both of these parameters are arrays, neither of which can be larger than 20 items.
 
@@ -102,9 +102,11 @@ playButton.addEventListener('click', function() {
 
 The toggle that turns the IIR filter on and off is set up in the similar way. First, the HTML:
 
-    <button class="button-filter" role="switch" data-filteron="false" aria-pressed="false" aria-describedby="label" disabled></button>
+```html
+<button class="button-filter" role="switch" data-filteron="false" aria-pressed="false" aria-describedby="label" disabled></button>
+```
 
-The filter button's `click` handler then connects the `IIRFilter` up to the graph, between the source and the detination:
+The filter button's `click` handler then connects the `IIRFilter` up to the graph, between the source and the destination:
 
 ```js
 filterButton.addEventListener('click', function() {
@@ -155,7 +157,7 @@ const canvasContainer = document.querySelector('.filter-graph');
 const canvasEl = document.createElement('canvas');
 canvasContainer.appendChild(canvasEl);
 
-// set 2d context and set dimesions
+// set 2d context and set dimensions
 const canvasCtx = canvasEl.getContext('2d');
 const width = canvasContainer.offsetWidth;
 const height = canvasContainer.offsetHeight;

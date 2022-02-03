@@ -17,10 +17,10 @@ Given the flexibility of SVG images, there's a lot to keep in mind when using th
 
 The algorithm can for the most part be summarized by these four rules. There are some edge cases that aren't covered by these rules, but this covers the majority of cases.
 
-1.  If {{ cssxref("background-size") }} specifies a fixed dimension (that is, percentages and relative units are fixed by their context), that dimension wins.
-2.  If the image has an intrinsic ratio (that is, its width:height ratio is constant, such as 16:9, 4:3, 2.39:1, 1:1, and so forth), the rendered size preserves that ratio.
-3.  If the image specifies a size, and the size isn't modified by constrain or cover, that specified size wins.
-4.  If none of the above cases are met, the image is rendered at the same size as the background area.
+1. If {{ cssxref("background-size") }} specifies a fixed dimension (that is, percentages and relative units are fixed by their context), that dimension wins.
+2. If the image has an intrinsic ratio (that is, its width:height ratio is constant, such as 16:9, 4:3, 2.39:1, 1:1, and so forth), the rendered size preserves that ratio.
+3. If the image specifies a size, and the size isn't modified by constrain or cover, that specified size wins.
+4. If none of the above cases are met, the image is rendered at the same size as the background area.
 
 It's worth noting that the sizing algorithm only cares about the image's dimensions and proportions, or lack thereof. An SVG image with fixed dimensions will be treated just like a raster image of the same size.
 
@@ -330,7 +330,7 @@ background-size: 150px auto;
 
 ![1auto-100px-height-3x4-ratio.png](1auto-100px-height-3x4-ratio.png)
 
-In this case, we use the width of the image specified in the CSS set at 150px, so rule 1 is applied. The intrinsic 3:4 aspect ratio then determines the height for the `auto` case.
+In this case, we use the width of the image specified in the CSS set at 150px, so rule 1 is applied. The intrinsic 3:4 aspect ratio then determines the height for the `auto` case.
 
 #### Source: No specified dimensions with intrinsic ratio
 

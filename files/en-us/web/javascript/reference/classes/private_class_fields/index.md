@@ -6,6 +6,7 @@ tags:
   - Private
   - JavaScript
   - Language feature
+browser-compat: javascript.classes.private_class_fields
 ---
 {{JsSidebar("Classes")}}
 
@@ -39,7 +40,11 @@ class ClassWithPrivateStaticMethod {
 
 ## Examples
 
-### Private instance fields
+### Private fields
+
+Private fields include private instance fields and private static fields.
+
+#### Private instance fields
 
 Private instance fields are declared with **# names** (pronounced
 "_hash names_"), which are identifiers prefixed with `#`. The
@@ -94,7 +99,7 @@ new SubClass();
 // SubClass {#privateField: 42, #subPrivateField: 23}
 ```
 
-### Private static fields
+#### Private static fields
 
 Private static fields are added to the class constructor at class evaluation time.
 The limitation of static variables being called by only static methods still holds.
@@ -252,11 +257,11 @@ console.log(Derived.publicStaticMethod2());
 
 ## Specifications
 
-{{Specifications("javascript.classes")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## See also
 

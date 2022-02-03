@@ -81,7 +81,7 @@ tags:
 - The method {{domxref("DOMTokenList.supports()")}} has been added ({{bug(1257849)}}).
 - The {{domxref("DOMTokenList.replace()")}} method has been added ({{bug(1224186)}}).
 - Leading `'?'` characters are now ignored in the parameter of the {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor ({{bug(1268361)}}).
-- The value returned by {{domxref("URL.origin")}}, {{domxref("HTMLAnchorElement/origin", "HTMLAnchorElement.orgin")}}, and {{domxref("HTMLAnchorElement/origin", "HTMLAreaElement.origin")}} for URL using the `blob:` scheme is no longer incorrectly `null` but is instead the origin of the URL formed by removing the leading `blob:` ({{bug(1270451)}}).
+- The value returned by {{domxref("URL.origin")}}, {{domxref("HTMLAnchorElement/origin", "HTMLAnchorElement.origin")}}, and {{domxref("HTMLAnchorElement/origin", "HTMLAreaElement.origin")}} for URL using the `blob:` scheme is no longer incorrectly `null` but is instead the origin of the URL formed by removing the leading `blob:` ({{bug(1270451)}}).
 - In prerendering mode, the {{domxref('Document.visibilityState')}} property now returns `'prerender'` ({{bug(1069772)}}).
 - The {{domxref("isSecureContext")}} property has been implemented ({{bug(1162772)}}).
 - The DOM4 {{domxref("ChildNode.before()")}}, {{domxref("ChildNode.after()")}}, {{domxref("ChildNode.replaceWith()")}}, {{domxref("Element.append")}} and {{domxref("Element.prepend")}} methods have been implemented ({{bug(911477)}}).
@@ -96,13 +96,13 @@ tags:
 - Key values and the corresponding key codes `"Hyper"` and `"Super"` have been added to represent these legacy modifier keys ({{bug(1232919)}}).
 - Two key values for multimedia numeric keypad keys have been added: `"Key11"` and `"Key12"` ({{bug(1232919)}}).
 - The following new key values have been added for audio control keys: `"AudioBassBoostToggle"`, `"AudioTrebleDown"`, and `"AudioTrebleUp"` ({{bug(123919)}}).
-- Key values have been added for these microphone control keys: ` "``MicrophoneToggle" `, ` "``MicrophoneVolumeDown" `, ` "``MicrophoneVolumeUp" `, and ` "``MicrophoneVolumeMute" ` ({{bug(123919)}}).
-- New key values have been added to support speech recognition devices: "`SpeechCorrectionList"` and ` "``SpeechInputToggle" ` ({{bug(1232919)}}).
-- New key values have been added to support special buttons on phones: ` "``AppSwitch" `, ` "``Call" `, ` "``CameraFocus" `, ` "``EndCall" `, ` "``GoBack" `, ` "``GoHome" `, ` "``HeadsetHook" `, ` "``LastNumberRedial" `, ` "``Notification" `, ` "``MannerMode" `, and ` "``VoiceDial" ` ({{bug(1232919)}}).
-- These new application key values have been added: ` "``LaunchContacts" ` and ` "``LaunchPhone" ` ({{bug(1232919)}}).
-- New key values have been added to support television devices: ` "``TV3DMode" `, ` "``TVAntennaCable" `, ` "``TVAudioDescription" `, ` "``TVAudioDescriptionMixDown" `, ` "``TVAudioDescriptionMixUp" `, ` "``TVContentsMenu" `, ` "``TVDataService" `, ` "``TVInput" `, ` "``TVInputComponent1" `, ` "``TVInputComponent2" `, ` "``TVInputComposite1" `, ` "``TVInputComposite2" `, ` "``TVInputHDMI1" `, ` "``TVInputHDMI2" `, ` "``TVInputHDMI3" `, ` "``TVInputHDMI4" `, ` "``TVInputVGA1" `, ` "``TVMediaContext" `, ` "``TVNetwork" `, ` "``TVNumberEntry" `, ` "``TVRadioService" `, ` "``TVSatellite" `, ` "``TVSatelliteBS" `, ` "``TVSatelliteCS" `, ` "``TVSatelliteToggle" `, ` "``TVTerrestrialAnalog" `, ` "``TVTerrestrialDigital" `, ` "``TVTimer" `, and ` "``DVR" ` ({{bug(1232919)}}).
-- The key value ` "``MediaSelect" ` has been replaced with the standard ` "``LaunchMediaPlayer" ` key value ({{bug(1272592)}}).
-- Additional media player key values have been added as well. These are ` "``MediaAudioTrack" `, ` "``MediaSkipBackward" `, ` "``MediaSkipForward" `, ` "``MediaStepBackward" `, ` "``MediaStepForward" `, ` "``MediaTopMenu" `, ` "``NavigateIn" `, ` "``NavigateNext" `, ` "``NavigateOut" `, and ` "``NavigatePrevious" ` ({{bug(1232919)}}).
+- Key values have been added for these microphone control keys: `MicrophoneToggle`, `MicrophoneVolumeDown`, `MicrophoneVolumeUp`, and `MicrophoneVolumeMute` ({{bug(123919)}}).
+- New key values have been added to support speech recognition devices: `SpeechCorrectionList` and `SpeechInputToggle` ({{bug(1232919)}}).
+- New key values have been added to support special buttons on phones: `AppSwitch`, `Call`, `CameraFocus`, `EndCall`, `GoBack`, `GoHome`, `HeadsetHook`, `LastNumberRedial`, `Notification`, `MannerMode`, and `VoiceDial` ({{bug(1232919)}}).
+- These new application key values have been added: `LaunchContacts` and `LaunchPhone` ({{bug(1232919)}}).
+- New key values have been added to support television devices: `TV3DMode`, `TVAntennaCable`, `TVAudioDescription`, `TVAudioDescriptionMixDown`, `TVAudioDescriptionMixUp`, `TVContentsMenu`, `TVDataService`, `TVInput`, `TVInputComponent1`, `TVInputComponent2`, `TVInputComposite1`, `TVInputComposite2`, `TVInputHDMI1`, `TVInputHDMI2`, `TVInputHDMI3`, `TVInputHDMI4`, `TVInputVGA1`, `TVMediaContext`, `TVNetwork`, `TVNumberEntry`, `TVRadioService`, `TVSatellite`, `TVSatelliteBS`, `TVSatelliteCS`, `TVSatelliteToggle`, `TVTerrestrialAnalog`, `TVTerrestrialDigital`, `TVTimer`, and `DVR` ({{bug(1232919)}}).
+- The key value `MediaSelect` has been replaced with the standard `LaunchMediaPlayer` key value ({{bug(1272592)}}).
+- Additional media player key values have been added as well. These are `MediaAudioTrack`, `MediaSkipBackward`, `MediaSkipForward`, `MediaStepBackward`, `MediaStepForward`, `MediaTopMenu`, `NavigateIn`, `NavigateNext`, `NavigateOut`, and `NavigatePrevious` ({{bug(1232919)}}).
 
 #### Canvas
 

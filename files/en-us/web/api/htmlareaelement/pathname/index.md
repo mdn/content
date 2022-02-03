@@ -12,7 +12,7 @@ browser-compat: api.HTMLAreaElement.pathname
 
 The **`HTMLAreaElement.pathname`** property is a
 {{domxref("USVString")}} containing an initial `'/'` followed by the path of
-the URL not including the query string or fragment (or the empty string if there is no
+the URL not including the query string or fragment (or the empty string if there is no
 path).
 
 ## Syntax

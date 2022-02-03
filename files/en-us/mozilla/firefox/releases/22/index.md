@@ -18,7 +18,7 @@ tags:
 
 ### JavaScript
 
-- [Asm.js ](http://asmjs.org/spec/latest/)optimizations are enabled, making it possible to compile C/C++ applications to a subset of JavaScript for better performance.
+- [Asm.js](http://asmjs.org/spec/latest/) optimizations are enabled, making it possible to compile C/C++ applications to a subset of JavaScript for better performance.
 - ES2015 [Arrow Function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) syntax has been implemented ({{bug(846406)}}).
 - The new [Object.is](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is) function has been added ({{bug(839979)}}).
 - [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) in generator expressions is now inherited from enclosing lexical scope ({{bug(848051)}}).
@@ -55,7 +55,7 @@ tags:
 
 - The `properties` parameter has been removed from the {{ifmethod('nsITreeView','getCellProperties')}}, {{ifmethod('nsITreeView','getColumnProperties')}} and {{ifmethod('nsITreeView','getRowProperties')}} methods of {{interface('nsITreeView')}}. These methods should now return a string of space-separated property names. ({{bug('407956')}})
 - The {{ifmethod('inIDOMUtils', 'getCSSPropertyNames')}} method has been implemented and will return all supported [CSS property](/en-US/docs/Web/CSS/Reference) names.
-- See [here ](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/)for more changes.
+- See [here](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/) for more changes.
 
 ### Firefox Developer Tools
 

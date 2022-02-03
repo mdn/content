@@ -94,6 +94,7 @@ The following terms are used in this document; many but not all are from the spe
   - : The time since a response was generated. It is a criterion for whether a response is fresh or stale.
 
 ## Directives
+
 This section lists directives that affect caching — both response directives and request directives.
 
 ### Response Directives
@@ -122,7 +123,6 @@ The `s-maxage` response directive also indicates how long the response is fresh 
 ```
 Cache-Control: s-maxage=604800
 ```
-
 
 #### `no-cache`
 
@@ -359,7 +359,7 @@ In theory, if directives are conflicted, the most restrictive directive should b
 # conflicted
 Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
 
-# equivalant to
+# equivalent to
 Cache-Control: no-store
 ```
 

@@ -11,7 +11,9 @@ The `string-length` function returns a number equal to the number of characters 
 
 ### Syntax
 
-    string-length( [string] )
+```
+string-length( [string] )
+```
 
 ### Arguments
 

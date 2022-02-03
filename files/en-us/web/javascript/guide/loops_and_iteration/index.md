@@ -61,23 +61,23 @@ for ([initialExpression]; [conditionExpression]; [incrementExpression])
 
 When a `for` loop executes, the following occurs:
 
-1.  The initializing expression `initialExpression`, if any, is executed.
+1. The initializing expression `initialExpression`, if any, is executed.
     This expression usually initializes one or more loop counters, but the syntax allows
     an expression of any degree of complexity. This expression can also declare variables.
-2.  The `conditionExpression` expression is evaluated. If the value of
+2. The `conditionExpression` expression is evaluated. If the value of
     `conditionExpression` is true, the loop statements execute. If the value of
     `condition` is false, the `for` loop terminates. (If the
     `condition` expression is omitted entirely, the condition is assumed to be
     true.)
-3.  The `statement` executes. To execute multiple statements, use a block
+3. The `statement` executes. To execute multiple statements, use a block
     statement (`{ ... }`) to group those statements.
-4.  If present, the update expression `incrementExpression` is executed.
-5.  Control returns to Step 2.
+4. If present, the update expression `incrementExpression` is executed.
+5. Control returns to Step 2.
 
 ### Example
 
 In the example below, the function contains a `for` statement that counts
-the number of selected options in a scrolling list (a [`<select>`](/en-US/docs/Web/HTML/Element/select "The HTML <select> element represents a control that provides a menu of options")
+the number of selected options in a scrolling list (a [`<select>`](/en-US/docs/Web/HTML/Element/select)
 element that allows multiple selections). The `for` statement declares the
 variable `i` and initializes it to `0`. It checks that
 `i` is less than the number of options in the `<select>`
@@ -164,7 +164,7 @@ while (condition)
   statement
 ```
 
-If the *`condition `*becomes `false`,
+If the *`condition`* becomes `false`,
 `statement` within the loop stops executing and control passes to the
 statement following the loop.
 
@@ -266,9 +266,9 @@ break;
 break [label];
 ```
 
-1.  The first form of the syntax terminates the innermost enclosing loop or
+1. The first form of the syntax terminates the innermost enclosing loop or
     `switch.`
-2.  The second form of the syntax terminates the specified enclosing labeled statement.
+2. The second form of the syntax terminates the specified enclosing labeled statement.
 
 ### Example 1
 

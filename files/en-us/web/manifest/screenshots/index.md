@@ -47,8 +47,8 @@ The `screenshots` member defines an array of screenshots intended to showcase th
 
 The `label` member is a string that serves as an accessible name for the screenshots. It can also serve as alternative text for the screenshots.
 
-The `platform` member is also a string that can define the distribution platform for which the specific screenshots should apply to. If not 
-defined, user agents can use the screenshot's aspect ratio for displaying. 
+The `platform` member is also a string that can define the distribution platform for which the specific screenshots should apply to. If not
+defined, user agents can use the screenshot's aspect ratio for displaying.
 
 The `platform` member can be set to one of the following _general purpose_ values :
 

@@ -8,7 +8,7 @@ tags:
   - HTTP Header
   - Reference
   - Request header
-  - Exerimental
+  -  Experimental
 browser-compat: http.headers.Sec-CH-UA-Model
 ---
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
@@ -31,7 +31,6 @@ The **`Sec-CH-UA-Model`** [user agent client hint](/en-US/docs/Web/HTTP/Client_h
   </tbody>
 </table>
 
-
 ## Syntax
 
 ```http
@@ -42,7 +41,6 @@ Sec-CH-UA-Model: <device-version>
 
 - `<device-version>`
   - : A string containing the device version. For example "Pixel 3".
-
 
 ## Examples
 

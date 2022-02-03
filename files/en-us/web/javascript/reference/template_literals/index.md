@@ -23,7 +23,6 @@ Template literals are literals delimited with backticks (<code>`</code>), allowi
 
 Template literals are sometimes informally called *template strings*, but they aren't string literals and can't be used everywhere a string literal can be used. Also, a tagged template literal may not result in a string; it's up to the tag function what it creates (if anything).
 
-
 ## Syntax
 
 ```js
@@ -34,6 +33,9 @@ Template literals are sometimes informally called *template strings*, but they a
  string text line 2`
 
 `string text ${expression} string text`
+
+// Re-usable template:
+const templateFn = expression => `string text ${expression} string text`;
 
 // Tagged, this calls the function "example" with the template as the
 // first argument and substitution values as subsequent arguments:

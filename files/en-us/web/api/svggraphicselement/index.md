@@ -13,7 +13,7 @@ browser-compat: api.SVGGraphicsElement
 
 The **`SVGGraphicsElement`** interface represents SVG elements whose primary purpose is to directly render graphics into a group.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

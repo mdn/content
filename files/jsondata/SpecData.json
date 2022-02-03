@@ -1674,6 +1674,11 @@
     "url": "https://wicg.github.io/web-otp/",
     "status": "Draft"
   },
+  "WindowControlsOverlay": {
+    "name": "WindowControlsOverlay",
+    "url": "https://wicg.github.io/window-controls-overlay/",
+    "status": "Draft"
+  },
   "EXT_blend_minmax": {
     "name": "EXT_blend_minmax",
     "url": "https://www.khronos.org/registry/webgl/extensions/EXT_blend_minmax/",

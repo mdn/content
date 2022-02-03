@@ -10,7 +10,7 @@ tags:
   - guard
   - request
 ---
-{{DefaultAPISidebar("Fetch API")}}{{draft}}
+{{DefaultAPISidebar("Fetch API")}}
 
 The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides an interface for fetching resources (including across the network). It will seem familiar to anyone who has used {{domxref("XMLHttpRequest")}}, but it provides a more powerful and flexible feature set. This article explains some of the basic concepts of the Fetch API.
 

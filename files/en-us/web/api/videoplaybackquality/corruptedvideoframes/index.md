@@ -46,7 +46,7 @@ incremented.
 ## Example
 
 This example determines the percentage of frames which have been corrupted, and if the
-value is greater than 5%, calls a funciton called `downgradeVideo()` that
+value is greater than 5%, calls a function called `downgradeVideo()` that
 would be implemented to switch to a different video that might tax the network less.
 
 ```js

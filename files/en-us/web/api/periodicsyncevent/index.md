@@ -12,7 +12,7 @@ tags:
   - Workers
 browser-compat: api.PeriodicSyncEvent
 ---
-{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
+{{DefaultAPISidebar("Periodic Background Sync")}}
 
 The **`PeriodicSyncEvent`** interface of the {{domxref('Web Periodic Background Synchronization API')}} provides a way to run tasks in the service worker with network connectivity.
 
@@ -32,7 +32,7 @@ An instance of this event is passed to the {{domxref('ServiceWorkerGlobalScope.o
 
 Inherits methods from its parent {{domxref('ExtendableEvent')}}.
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{InheritanceDiagram}}
 
 ## Examples
 

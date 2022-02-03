@@ -11,7 +11,7 @@ tags:
 ---
 {{APIRef("IndexedDB")}} {{ draft() }}
 
-> **Warning:** The synchronous version of the IndexedDB API was originally intended for use only with [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.
+> **Warning:** The synchronous version of the IndexedDB API was originally intended for use only with [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), and was eventually removed from the spec because its need was questionable. It may however be reintroduced in the future if there is enough demand from web developers.
 
 The `IDBIndexSync` interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) provides synchronous access to an [index](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#index) in a database.
 
@@ -150,10 +150,12 @@ The `IDBIndexSync` interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedD
 
 Stores the given value into this index, optionally with the specified key. If a record already exists with the given key, an exception is raised.
 
-    any add(
-      in any value,
-      in optional any key
-    ) raises (IDBDatabaseException);
+```
+any add(
+  in any value,
+  in optional any key
+) raises (IDBDatabaseException);
+```
 
 ##### Parameters
 
@@ -176,9 +178,11 @@ This method can raise a IDBDatabaseException with the following code:
 
 Retrieves the value from this index for the record that corresponds to the given key.
 
-    any get (
-      in any key
-    ) raises (IDBDatabaseException);
+```
+any get (
+  in any key
+) raises (IDBDatabaseException);
+```
 
 ##### Parameters
 
@@ -201,9 +205,11 @@ This method can raise an IDBDatabaseException with the following code:
 
 Retrieves and returns the value from this index's referenced object store that corresponds to the given key.
 
-    any getObject (
-      in any key
-    ) raises (IDBDatabaseException);
+```
+any getObject (
+  in any key
+) raises (IDBDatabaseException);
+```
 
 ##### Parameters
 
@@ -226,10 +232,12 @@ This method can raise a IDBDatabaseException with the following code:
 
 Creates a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) over the records of this index. The range of the new cursor matches the specified [key range](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#key_range); if the key range is not specified or is null, then the range includes all the records.
 
-    void openCursor (
-      in optional IDBKeyRange range,
-      in optional unsigned short direction
-    ) raises (IDBDatabaseException);
+```
+void openCursor (
+  in optional IDBKeyRange range,
+  in optional unsigned short direction
+) raises (IDBDatabaseException);
+```
 
 ##### Parameters
 
@@ -253,10 +261,12 @@ This method can raise an IDBDatabaseException with the following code:
 
 Creates a cursor over the records of this index's referenced object store, as arranged by this index. The range of the new cursor matches the specified key range; if the key range is not specified or is null, then the range includes all the records.
 
-    void openObjectCursor (
-      in optional IDBKeyRange range,
-      in optional unsigned short direction
-    ) raises (IDBDatabaseException);
+```
+void openObjectCursor (
+  in optional IDBKeyRange range,
+  in optional unsigned short direction
+) raises (IDBDatabaseException);
+```
 
 ##### Parameters
 
@@ -280,9 +290,11 @@ This method can raise an IDBDatabaseException with the following code:
 
 Stores the given value in this index and returns the key for the stored record. If a record already exists with the given key, the record is overwritten.
 
-    any put (
-      in any value,
-      in optional any key) raises (IDBDatabaseException);
+```
+any put (
+  in any value,
+  in optional any key) raises (IDBDatabaseException);
+```
 
 ##### Parameters
 
@@ -300,9 +312,11 @@ Stores the given value in this index and returns the key for the stored record. 
 
 Removes from this index any records that correspond to the given key.
 
-    void remove (
-      in any key
-    ) raises (IDBDatabaseException);
+```
+void remove (
+  in any key
+) raises (IDBDatabaseException);
+```
 
 ##### Parameters
 

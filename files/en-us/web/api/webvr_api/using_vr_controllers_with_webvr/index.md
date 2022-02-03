@@ -59,7 +59,7 @@ if(navigator.getVRDisplays && navigator.getGamepads) {
 }
 ```
 
-Here we first use a tracking variable, `initialRun`, to note that this is the first time we have loaded the page. You'll find out more about this later on. Next, we detect to see if the WebVR and Gamepad APIs are supported by cheking for the existence of the {{domxref("Navigator.getVRDisplays()")}} and {{domxref("Navigator.getGamepads()")}} methods. If so, we run our `reportDisplays()` custom function to start the process off. This function looks like so:
+Here we first use a tracking variable, `initialRun`, to note that this is the first time we have loaded the page. You'll find out more about this later on. Next, we detect to see if the WebVR and Gamepad APIs are supported by checking for the existence of the {{domxref("Navigator.getVRDisplays()")}} and {{domxref("Navigator.getGamepads()")}} methods. If so, we run our `reportDisplays()` custom function to start the process off. This function looks like so:
 
 ```js
 function reportDisplays() {
@@ -116,7 +116,7 @@ function reportGamepads() {
 
 This works in a similar manner to `reportDisplays()` — we get an array of {{domxref("Gamepad")}} objects using the non-promise-based `getGamepads()` method, then cycle through each one and print out information on each:
 
-- The {{domxref("Gamepad.displayId")}} property is the same as the `displayId` of the headet the controller is associated with, and therefore useful for tying controller and headset information together.
+- The {{domxref("Gamepad.displayId")}} property is the same as the `displayId` of the headset the controller is associated with, and therefore useful for tying controller and headset information together.
 - The {{domxref("Gamepad.index")}} property is unique numerical index that identifies each connected controller.
 - {{domxref("Gamepad.hand")}} returns which hand the controller is expected to be held in.
 - {{domxref("Gamepad.hapticActuators")}} returns an array of the haptic actuators available in the controller. Here we are returning its length so we can see how many each has available.

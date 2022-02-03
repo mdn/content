@@ -37,7 +37,7 @@ var gettingSelected = browser.tabs.getSelected(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a [`tabs.Tab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab "The type tabs.Tab contains information about a tab. This provides access to information about what content is in the tab, how large the content is, what special states or restrictions are in effect, and so forth.") object containing information about the selected tab. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a [`tabs.Tab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) object containing information about the selected tab. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
 
 ## Browser compatibility
 

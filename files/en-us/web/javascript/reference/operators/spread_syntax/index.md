@@ -66,7 +66,7 @@ For function calls:
 myFunction(...iterableObj); // pass all elements of iterableObj as arguments to function myFunction
 ```
 
-For array literals or strings:
+For array literals:
 
 ```js
 [...iterableObj, '4', 'five', 6]; // combine two arrays by inserting all elements from iterableObj

@@ -13,7 +13,6 @@ browser-compat: api.AudioData.numberOfChannels
 
 The **`numberOfChannels`** read-only property of the {{domxref("AudioData")}} interface returns the number of channels in the `AudioData` object.
 
-
 ### Value
 
 An integer.
@@ -33,5 +32,3 @@ console.log(AudioData.numberOfChannels);
 ## Browser compatibility
 
 {{Compat}}
-
-

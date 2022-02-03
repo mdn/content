@@ -82,7 +82,7 @@ It is best not to invent new user interactions. For any interaction you do add, 
 - [UXDesign.com](http://uxdesign.com/)
 - [The UX Design section of SmashingMagazine](https://uxdesign.smashingmagazine.com/)
 
-> **Note:** Also, in most systems there is a way to open the {{HTMLElement("select")}} element with the keyboard to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with <kbd>Alt</kbd> + <kbd>Down</kbd>  on Windows. We didn't implement this in our example, but it would be easy to do so, as the mechanism has already been implemented for the `click` event.
+> **Note:** Also, in most systems there is a way to open the {{HTMLElement("select")}} element with the keyboard to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with <kbd>Alt</kbd> + <kbd>Down</kbd> on Windows. We didn't implement this in our example, but it would be easy to do so, as the mechanism has already been implemented for the `click` event.
 
 ## Defining the HTML structure and (some) semantics
 
@@ -174,7 +174,7 @@ We need an extra class to handle when the list of options is hidden. This is nec
 }
 ```
 
-> **Note:** We could also have used `transform: scale(1, 0)` to give the optionlist no height and full width.
+> **Note:** We could also have used `transform: scale(1, 0)` to give the option list no height and full width.
 
 ### Beautification
 
@@ -431,10 +431,10 @@ window.addEventListener("load", function () {
 
 In the code we are about to build, we will use the standard JavaScript and DOM APIs to do all the work we need. The features we plan to use are the following:
 
-1.  {{domxref("element.classList","classList")}}
-2.  {{domxref("EventTarget.addEventListener","addEventListener()")}}
-3.  [`forEach`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-4.  {{domxref("element.querySelector","querySelector()")}} and {{domxref("element.querySelectorAll","querySelectorAll()")}}
+1. {{domxref("element.classList","classList")}}
+2. {{domxref("EventTarget.addEventListener","addEventListener()")}}
+3. [`forEach`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+4. {{domxref("element.querySelector","querySelector()")}} and {{domxref("element.querySelectorAll","querySelectorAll()")}}
 
 Beyond the availability of those specific features, there is still one issue remaining before starting. The object returned by the {{domxref("element.querySelectorAll","querySelectorAll()")}} function is a {{domxref("NodeList")}} rather than an [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array). This is important because `Array` objects support the [`forEach`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) function, but {{domxref("NodeList")}} doesn't. Because {{domxref("NodeList")}} really looks like an `Array` and because `forEach` is so convenient to use, we can easily add the support of `forEach` to {{domxref("NodeList")}} in order to make our life easier, like so:
 
@@ -444,7 +444,7 @@ NodeList.prototype.forEach = function (callback) {
 }
 ```
 
-If you need to support legacy browsers, ensure the browsers support these features. If not, you can iterate through the list or you may need to use a library or polyfill.
+If you need to support legacy browsers, ensure the browsers support these features. If not, you can iterate through the list or you may need to use a library or polyfill.
 
 ### Building event callbacks
 
@@ -682,7 +682,7 @@ window.addEventListener('load', function () {
 });
 ```
 
-In the code above, it's worth noting the use of the [`tabIndex`](/en-US/docs/Web/API/HTMLElement/tabIndex) property. Using this property is necessary to ensure that the native control will never gain focus, and to make sure that our custom control gains focus when the user uses their keyboard or mouse.
+In the code above, it's worth noting the use of the [`tabIndex`](/en-US/docs/Web/API/HTMLElement/tabIndex) property. Using this property is necessary to ensure that the native control will never gain focus, and to make sure that our custom control gains focus when the user uses their keyboard or mouse.
 
 With that, we're done! Here's the result:
 
@@ -753,7 +753,7 @@ function updateValue(select, index) {
 
 It might have seemed simpler to let a screen reader focus on the off-screen select and ignore our stylized one, but this is not an accessible solution. Screen readers are not limited to blind people; people with low vision and even perfect vision use them as well. For this reason, you can not have the screen reader focus on an off-screen element.
 
-Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](http://www.nvda-project.org/) or [VoiceOver](https://www.apple.com/accessibility/voiceover/)):
+Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](https://www.nvaccess.org/) or [VoiceOver](https://www.apple.com/accessibility/voiceover/)):
 
 | Live example                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -771,67 +771,67 @@ We could therefore reinvent this using radio buttons instead; let's look at this
 We can start with a completely semantic, accessible, unordered list of {{htmlelement('input/radio','radio')}} buttons with an associated {{htmlelement('label')}}, labeling the entire group with a semantically appropriate {{htmlelement('fieldset')}} and {{htmlelement('legend')}} pair.
 
 ```html
- <fieldset>
-  <legend>Pick a fruit</legend>
-    <ul class="styledSelect">
-      <li><input type="radio" name="fruit" value="Cherry" id="fruitCherry" checked><label for="fruitCherry">Cherry</label></li>
-      <li><input type="radio" name="fruit" value="Lemon" id="fruitLemon"><label for="fruitLemon">Lemon</label></li>
-      <li><input type="radio" name="fruit" value="Banana" id="fruitBanana"><label for="fruitBanana"">Banana</label></li>
-      <li><input type="radio" name="fruit" value="Strawberry" id="fruitStrawberry"><label for="fruitStrawberry">Strawberry</label></li>
-      <li><input type="radio" name="fruit" value="Apple" id="fruitApple"><label for="fruitApple">Apple</label></li>
-    </ul>
-  </fieldset>
+<fieldset>
+  <legend>Pick a fruit</legend>
+  <ul class="styledSelect">
+    <li><input type="radio" name="fruit" value="Cherry" id="fruitCherry" checked><label for="fruitCherry">Cherry</label></li>
+    <li><input type="radio" name="fruit" value="Lemon" id="fruitLemon"><label for="fruitLemon">Lemon</label></li>
+    <li><input type="radio" name="fruit" value="Banana" id="fruitBanana"><label for="fruitBanana"">Banana</label></li>
+    <li><input type="radio" name="fruit" value="Strawberry" id="fruitStrawberry"><label for="fruitStrawberry">Strawberry</label></li>
+    <li><input type="radio" name="fruit" value="Apple" id="fruitApple"><label for="fruitApple">Apple</label></li>
+  </ul>
+</fieldset>
 ```
 
-We'll  do a little styling of the radio button list (not the legend/fieldset) to make it look somewhat like the earlier example, just to show that it can be done:
+We'll  do a little styling of the radio button list (not the legend/fieldset) to make it look somewhat like the earlier example, just to show that it can be done:
 
 ```css
 .styledSelect {
-  display: inline-block;
-  padding: 0;
+  display: inline-block;
+  padding: 0;
 }
 .styledSelect li {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
 }
 .styledSelect [type=radio] {
-  position: absolute;
-  left: -100vw;
-  top: -100vh;
+  position: absolute;
+  left: -100vw;
+  top: -100vh;
 }
 .styledSelect label {
-  margin: 0;
-  line-height: 2;
-  padding: 0 0 0 4px;
+  margin: 0;
+  line-height: 2;
+  padding: 0 0 0 4px;
 }
 .styledSelect:not(:focus-within) input:not(:checked) + label {
-  height: 0;
-  outline: none;
-  overflow: hidden;
+  height: 0;
+  outline: none;
+  overflow: hidden;
 }
 .styledSelect:not(:focus-within) input:checked + label {
-  border: .2em solid #000;
-  border-radius: .4em;
-  box-shadow: 0 .1em .2em rgba(0,0,0,.45);
+  border: .2em solid #000;
+  border-radius: .4em;
+  box-shadow: 0 .1em .2em rgba(0,0,0,.45);
 }
 .styledSelect:not(:focus-within) input:checked + label::after {
-  content : "▼";
-  background: black;
-  float: right;
-  color: white;
-  padding: 0 4px;
-  margin: 0 -4px 0 4px;
+  content : "▼";
+  background: black;
+  float: right;
+  color: white;
+  padding: 0 4px;
+  margin: 0 -4px 0 4px;
 }
 .styledSelect:focus-within {
-  border: .2em solid #000;
-  border-radius: .4em;
-  box-shadow: 0 .1em .2em rgba(0,0,0,.45);
+  border: .2em solid #000;
+  border-radius: .4em;
+  box-shadow: 0 .1em .2em rgba(0,0,0,.45);
 }
 .styledSelect:focus-within input:checked + label {
-  background-color: #333;
-  color: #fff;
-  width: 100%;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
 }
 ```
 
@@ -847,7 +847,7 @@ We'll leave adding this missing functionality as a reader exercise.
 
 ## Conclusion
 
-We have seen all the basics of building a custom form control, but as you can see it's not trivial to do. Before creating your own customized control, consider whether HTML provides alternative elements that can be used to adequately support your requirements. If you do need to create a custom control, it is often easier to rely on third-party libraries instead of building your own. But, if you do create your own, modify existing elements, or use a framework to implement a pre-baked control, remember that creating a usable and accessible form control is more complicated than it looks.
+We have seen all the basics of building a custom form control, but as you can see it's not trivial to do. Before creating your own customized control, consider whether HTML provides alternative elements that can be used to adequately support your requirements. If you do need to create a custom control, it is often easier to rely on third-party libraries instead of building your own. But, if you do create your own, modify existing elements, or use a framework to implement a pre-baked control, remember that creating a usable and accessible form control is more complicated than it looks.
 
 Here are a few libraries you should consider before coding your own:
 

@@ -37,7 +37,7 @@ The obsolete **`addstream`** event is sent to an {{domxref("RTCPeerConnection")}
     </tr>
     <tr>
       <th scope="row">Event handler property</th>
-      <td>{{DOMxRef("RTCPeerconnection.onaddstream")}}</td>
+      <td>{{DOMxRef("RTCPeerConnection.onaddstream")}}</td>
     </tr>
   </tbody>
 </table>

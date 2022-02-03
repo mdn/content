@@ -16,7 +16,7 @@ The **`SVGGeometryElement.isPointInStroke()`** method
 determines whether a given point is within the stroke shape of an element. Normal hit
 testing rules apply; the value of the {{cssxref("pointer-events")}} property on the
 element determines whether a point is considered to be within the stroke. The
-`point` argument is interpreted as a point in the local coordiante system of
+`point` argument is interpreted as a point in the local coordinate system of
 the element.
 
 ## Syntax

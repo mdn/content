@@ -17,7 +17,7 @@ browser-compat: api.HTMLInputElement
 
 The **`HTMLInputElement`** interface provides special properties and methods for manipulating the options, layout, and presentation of {{HtmlElement("input")}} elements.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 
@@ -354,7 +354,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
         <code>submit</code>, <code>reset</code>, <code>image</code>). Possible
         values are:<br /><code>on</code>: the browser can autocomplete the value
         using previously stored value<br /><code>off</code>: the user must
-        explicity enter a value
+        explicitly enter a value
       </td>
     </tr>
     <tr>
@@ -651,6 +651,12 @@ The **`HTMLInputElement`** interface provides special properties and methods for
         Sets a custom validity message for the element. If this message is not
         the empty string, then the element is suffering from a custom validity
         error, and does not validate.
+      </td>
+    </tr>
+    <tr>
+      <td>{{domxref("HTMLInputElement.showPicker()", "showPicker()")}}</td>
+      <td>
+        Shows a browser picker for date, time, color, and files.
       </td>
     </tr>
     <tr>

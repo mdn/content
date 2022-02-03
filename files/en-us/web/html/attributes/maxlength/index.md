@@ -12,7 +12,7 @@ tags:
   - textarea
 ---
 
-{{HTMLSidebar}}{{draft}}
+{{HTMLSidebar}}
 
 The **`maxlength`** attribute defines the maximum number of characters (as UTF-16 code units) the user can enter into an {{htmlelement('input')}} or {{htmlelement('textarea')}}. This must be an integer value 0 or higher.
 

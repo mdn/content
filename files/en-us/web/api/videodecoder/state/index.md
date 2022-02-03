@@ -39,5 +39,3 @@ console.log(VideoDecoder.state);
 ## Browser compatibility
 
 {{Compat}}
-
-

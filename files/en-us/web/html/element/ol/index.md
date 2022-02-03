@@ -141,7 +141,7 @@ The above HTML will output:
 ```html
 <ol type="i">
   <li>Introduction</li>
-  <li>List of Greivances</li>
+  <li>List of Grievances</li>
   <li>Conclusion</li>
 </ol>
 ```

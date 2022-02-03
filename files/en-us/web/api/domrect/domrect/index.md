@@ -54,3 +54,4 @@ myDOMRect = new DOMRect(0,0,100,100);
 
 - {{domxref("DOMPoint")}}
 - {{domxref("DOMRect")}}
+- {{domxref("DOMRect.fromRect")}}

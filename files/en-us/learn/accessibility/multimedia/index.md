@@ -213,25 +213,25 @@ Note that we also check to see if the `currentTime` is more than the total media
 Last of all, add the following to the end of the code, to control the time elapsed display:
 
 ```js
-player.ontimeupdate = function() {
-  let minutes = Math.floor(player.currentTime / 60);
-  let seconds = Math.floor(player.currentTime - minutes * 60);
+player.ontimeupdate = function () {
+  const minutes = Math.floor(player.currentTime / 60);
+  const seconds = Math.floor(player.currentTime - minutes * 60);
   let minuteValue;
   let secondValue;
 
-  if (minutes<10) {
+  if (minutes < 10) {
     minuteValue = "0" + minutes;
   } else {
     minuteValue = minutes;
   }
 
-  if (seconds<10) {
+  if (seconds < 10) {
     secondValue = "0" + seconds;
   } else {
     secondValue = seconds;
   }
 
-  mediaTime = minuteValue + ":" + secondValue;
+  const mediaTime = minuteValue + ":" + secondValue;
   timeLabel.textContent = mediaTime;
 };
 ```
@@ -305,17 +305,19 @@ Text tracks for displaying with HTML5 video need to be written in WebVTT, a text
 
 A typical WebVTT file will look something like this:
 
-    WEBVTT
+```
+WEBVTT
 
-    1
-    00:00:22.230 --> 00:00:24.606
-    This is the first subtitle.
+1
+00:00:22.230 --> 00:00:24.606
+This is the first subtitle.
 
-    2
-    00:00:30.739 --> 00:00:34.074
-    This is the second.
+2
+00:00:30.739 --> 00:00:34.074
+This is the second.
 
-      ...
+...
+```
 
 To get this displayed along with the HTML media playback, you need to:
 

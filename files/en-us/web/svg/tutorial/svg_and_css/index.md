@@ -285,7 +285,7 @@ svg {
 }
 
 .segment-edge:hover {
-	stroke: var(--segment-edge-stroke-hover);
+  stroke: var(--segment-edge-stroke-hover);
 }
 
 /* outer petals */
@@ -374,8 +374,8 @@ Open the document in your SVG-enabled browser. Move your mouse pointer over the 
 
 Notes about this demonstration:
 
-*   The SVG document links the stylesheet in the usual way.
-*   SVG has its own CSS properties and values. Some of them are similar to CSS properties for HTML.
+* The SVG document links the stylesheet in the usual way.
+* SVG has its own CSS properties and values. Some of them are similar to CSS properties for HTML.
 
 ### Challenge
 

@@ -18,7 +18,7 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 
 ### Brazilian Portuguese (pt-BR)
 
-- Discussions: [Telegram (MDN localization in Brazillian Portuguese)](https://t.me/mdn_l10n_pt_br)
+- Discussions: [Telegram (MDN localization in Brazilian Portuguese)](https://t.me/mdn_l10n_pt_br)
 - Current contributors: [Luisa Migueres](https://github.com/lumigueres), [Julio Sampaio](https://github.com/juliosampaio), [Josiel Rocha](https://github.com/josielrocha), [Clóvis Lima Júnior](https://github.com/clovislima)
 
 ### Chinese (zh-CN, zh-TW)
@@ -45,6 +45,11 @@ We have frozen all localized content (meaning that we won't accept any edits to 
 
 - Discussions: [Matrix (#mdn-l10n-ru channel)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
 - Current contributors: [armanpwnz](https://github.com/armanpwnz), [captainspring](https://github.com/captainspring), [mpstv](https://github.com/mpstv), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
+
+### Spanish (es)
+
+- Discussions: [Matrix (#mdn-l10n-es channel)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org)
+- Current maintainers: [@JuanVqz](https://github.com/JuanVqz), [@dacalderonp](https://github.com/dacalderonp), [@sergiogval](https://github.com/sergiogval), [@lasr21](https://github.com/lasr21), [@tuxxy](https://github.com/tuxxy)
 
 > **Note:** If you want to discuss unfreezing a currently frozen locale, the [guidelines on what is required can be found here](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale).
 

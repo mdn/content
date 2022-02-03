@@ -196,7 +196,6 @@ The callback would be invoked four times, with the arguments and return values i
 
 The value returned by `reduce()` would be that of the last callback invocation (`85`).
 
-
 ### How reduce() works with an initial value
 
 Here we reduce the same array using the same algorithm, but with an *initialValue* of `10` passed the second argument to `reduce()`:
@@ -519,9 +518,9 @@ const triple = x => 3 * x
 const quadruple = x => 4 * x
 
 // Function composition enabling pipe functionality
-const pipe = (...functions) => input => functions.reduce(
+const pipe = (...functions) => initialValue => functions.reduce(
     (acc, fn) => fn(acc),
-    input
+    initialValue
 )
 
 // Composed functions for multiplication of specific values

@@ -21,10 +21,9 @@ controller.abort();
 return controller.signal;
 ```
 
-This could, for example, be passed to a fetch method in order to run its abort logic (i.e. it may be that code is organised such that the abort logic should be run even if the intended fetch operation has not been started).
+This could, for example, be passed to a fetch method in order to run its abort logic (i.e. it may be that code is organized such that the abort logic should be run even if the intended fetch operation has not been started).
 
 > **Note:** The method is similar in purpose to {{JSxRef("Promise.reject")}}.
-
 
 ## Syntax
 
@@ -37,7 +36,7 @@ abort(reason)
 
 - `reason`
   - : The reason why the operation was aborted, which can be any JavaScript value.
-    If not specified, the reason is set to "AbortError" {{domxref("DOMException")}}. 
+    If not specified, the reason is set to "AbortError" {{domxref("DOMException")}}.
 
 ### Return value
 

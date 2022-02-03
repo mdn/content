@@ -367,7 +367,6 @@
 /en-US/docs/CSS/-webkit-opacity	/en-US/docs/Web/CSS/opacity
 /en-US/docs/CSS/-webkit-perspective	/en-US/docs/Web/CSS/perspective
 /en-US/docs/CSS/-webkit-perspective-origin	/en-US/docs/Web/CSS/perspective-origin
-/en-US/docs/CSS/-webkit-print-color-adjust	/en-US/docs/Web/CSS/-webkit-print-color-adjust
 /en-US/docs/CSS/-webkit-text-size-adjust	/en-US/docs/Web/CSS/text-size-adjust
 /en-US/docs/CSS/-webkit-transform	/en-US/docs/Web/CSS/transform
 /en-US/docs/CSS/-webkit-transform-origin	/en-US/docs/Web/CSS/transform-origin
@@ -523,7 +522,7 @@
 /en-US/docs/CSS/ID_selectors	/en-US/docs/Web/CSS/ID_selectors
 /en-US/docs/CSS/Interactive	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS/Layout_mode	/en-US/docs/Web/CSS/Layout_mode
-/en-US/docs/CSS/List_of_Proprietary_CSS_Features	/en-US/docs/Web/CSS/List_of_Proprietary_CSS_Features
+/en-US/docs/CSS/List_of_Proprietary_CSS_Features	/en-US/docs/Web/CSS/Reference
 /en-US/docs/CSS/Media/Bitmap	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS/Media/TV	/en-US/docs/Web/CSS/@media
 /en-US/docs/CSS/Media/Tactile	/en-US/docs/Web/CSS/@media
@@ -1114,7 +1113,7 @@
 /en-US/docs/CSS_Reference	/en-US/docs/Web/CSS/Reference
 /en-US/docs/CSS_Reference/Draft_Implementations_of_CSS_Features	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/CSS_Reference/Draft_Implementations_of_CSS_Features_in_Mozilla	/en-US/docs/Web/CSS/Mozilla_Extensions
-/en-US/docs/CSS_Reference/List_of_Proprietary_CSS_Features	/en-US/docs/Web/CSS/List_of_Proprietary_CSS_Features
+/en-US/docs/CSS_Reference/List_of_Proprietary_CSS_Features	/en-US/docs/Web/CSS/Reference
 /en-US/docs/CSS_Reference/Mozilla_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/CSS_Reference:Mozilla_Extensions	/en-US/docs/Web/CSS/Mozilla_Extensions
 /en-US/docs/CSS_Support_Charts	/en-US/docs/Web/CSS
@@ -4010,7 +4009,7 @@
 /en-US/docs/HTTP_Transaction_Model	/en-US/docs/Web/HTTP
 /en-US/docs/HTTP_access_control	/en-US/docs/Web/HTTP/CORS
 /en-US/docs/How_to_Turn_Off_Form_Autocompletion	/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion
-/en-US/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_secruity_state_of_an_XMLHTTPRequest_over_SSL
+/en-US/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL
 /en-US/docs/How_to_create_a_DOM_tree	/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree
 /en-US/docs/How_to_start_contributions_to_Mozilla	/en-US/docs/MDN/Contribute/Getting_started
 /en-US/docs/ICC_color_correction_in_Firefox	/en-US/docs/Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
@@ -5337,11 +5336,13 @@
 /en-US/docs/Learn/JavaScript/Introduction_to_JavaScript_1/What_went_wrong	/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong
 /en-US/docs/Learn/JavaScript/JavaScript_building_blocks	/en-US/docs/Learn/JavaScript/Building_blocks
 /en-US/docs/Learn/JavaScript/Object-oriented	/en-US/docs/Learn/JavaScript/Objects
-/en-US/docs/Learn/JavaScript/Object-oriented/Advanced	/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
+/en-US/docs/Learn/JavaScript/Object-oriented/Advanced	/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /en-US/docs/Learn/JavaScript/Object-oriented/Introduction	/en-US/docs/Learn/JavaScript/Objects/Basics
 /en-US/docs/Learn/JavaScript/Object-oriented/Introduction_to_objects	/en-US/docs/Learn/JavaScript/Objects/Basics
-/en-US/docs/Learn/JavaScript/Objects/Advanced	/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
+/en-US/docs/Learn/JavaScript/Objects/Advanced	/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+/en-US/docs/Learn/JavaScript/Objects/Inheritance	/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /en-US/docs/Learn/JavaScript/Objects/Introduction	/en-US/docs/Learn/JavaScript/Objects/Basics
+/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS	/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /en-US/docs/Learn/JavaScript/Objects/Object_building_practise	/en-US/docs/Learn/JavaScript/Objects/Object_building_practice
 /en-US/docs/Learn/Open_a_file_in_a_browser	/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files
 /en-US/docs/Learn/Other_learning_material	/en-US/docs/Learn
@@ -5466,7 +5467,6 @@
 /en-US/docs/MDN/Contribute/Structures/Page_layouts	/en-US/docs/MDN/Structures/Page_types
 /en-US/docs/MDN/Contribute/Structures/Page_types	/en-US/docs/MDN/Structures/Page_types
 /en-US/docs/MDN/Contribute/Structures/Page_types/API_constructor_subpage_template	/en-US/docs/MDN/Structures/Page_types/API_constructor_subpage_template
-/en-US/docs/MDN/Contribute/Structures/Page_types/API_event_handler_subpage_template	/en-US/docs/MDN/Structures/Page_types/API_event_handler_subpage_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/API_event_subpage_template	/en-US/docs/MDN/Structures/Page_types/API_event_subpage_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/API_landing_page_template	/en-US/docs/MDN/Structures/Page_types/API_landing_page_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/API_method_subpage_template	/en-US/docs/MDN/Structures/Page_types/API_method_subpage_template
@@ -5578,6 +5578,8 @@
 /en-US/docs/Mobile/Mobile_Web_Development	/en-US/docs/Web/Guide/Mobile
 /en-US/docs/MouseEvent.initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
 /en-US/docs/Mozilla's_Quirks_Mode	/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
+/en-US/docs/Mozilla/Add-ons/Themes	https://extensionworkshop.com/documentation/themes/
+/en-US/docs/Mozilla/Add-ons/Themes/Theme_concepts	https://extensionworkshop.com/documentation/themes/
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/clearAll()	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/clearAll
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/update	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme/update
 /en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/browserSettings.closeTabsByDoubleClick	/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/closeTabsByDoubleClick
@@ -5702,6 +5704,7 @@
 /en-US/docs/Mozilla/Firefox/Releases/developers	/en-US/docs/Mozilla/Firefox/Releases/63
 /en-US/docs/Mozilla/MathML_Project/Fonts	/en-US/docs/Web/MathML/Fonts
 /en-US/docs/Mozilla/Performance/Scroll-linked_effects	https://firefox-source-docs.mozilla.org/performance/scroll-linked_effects.html
+/en-US/docs/Mozilla/Projects/NSS/NSS_Sample_Code/NSS_Sample_Code_Utililies_1	/en-US/docs/Mozilla/Projects/NSS/NSS_Sample_Code/NSS_Sample_Code_Utilities_1
 /en-US/docs/Mozilla/QA/Bug_writing_guidelines	https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html
 /en-US/docs/Mozilla/QA/Writing_xpcshell-based_unit_tests	https://firefox-source-docs.mozilla.org/testing/xpcshell/index.html
 /en-US/docs/Mozilla/Tech/Xray_vision	https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html
@@ -8579,6 +8582,9 @@
 /en-US/docs/Web/API/Selection/empty	/en-US/docs/Web/API/Selection/removeAllRanges
 /en-US/docs/Web/API/Selection/setPosition	/en-US/docs/Web/API/Selection/collapse
 /en-US/docs/Web/API/Selection_API	/en-US/docs/Web/API/Selection
+/en-US/docs/Web/API/Sensor/onactivate	/en-US/docs/Web/API/Sensor/activate_event
+/en-US/docs/Web/API/Sensor/onerror	/en-US/docs/Web/API/Sensor/error_event
+/en-US/docs/Web/API/Sensor/onreading	/en-US/docs/Web/API/Sensor/reading_event
 /en-US/docs/Web/API/ServiceWorker.onstatechange	/en-US/docs/Web/API/ServiceWorker/onstatechange
 /en-US/docs/Web/API/ServiceWorker.scriptURL	/en-US/docs/Web/API/ServiceWorker/scriptURL
 /en-US/docs/Web/API/ServiceWorker.state	/en-US/docs/Web/API/ServiceWorker/state
@@ -8709,6 +8715,7 @@
 /en-US/docs/Web/API/TouchEvent/TouchEvent()	/en-US/docs/Web/API/TouchEvent/TouchEvent
 /en-US/docs/Web/API/TouchList.item	/en-US/docs/Web/API/TouchList/item
 /en-US/docs/Web/API/TouchList.length	/en-US/docs/Web/API/TouchList/length
+/en-US/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/en-US/docs/Web/API/Pointer_events
 /en-US/docs/Web/API/Transaction	/en-US/docs/Web/API/IDBTransaction
 /en-US/docs/Web/API/TransactionSync	/en-US/docs/Web/API/IDBTransactionSync
 /en-US/docs/Web/API/TransitionEvent.TransitionEvent	/en-US/docs/Web/API/TransitionEvent/TransitionEvent
@@ -9093,6 +9100,7 @@
 /en-US/docs/Web/API/XMLDocument.load	/en-US/docs/Web/API/XMLDocument/load
 /en-US/docs/Web/API/XMLHttpRequest/FormData	/en-US/docs/Web/API/FormData
 /en-US/docs/Web/API/XMLHttpRequest/FormData/Using_FormData_Objects	/en-US/docs/Web/API/FormData/Using_FormData_Objects
+/en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_secruity_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL
 /en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest.response	/en-US/docs/Web/API/XMLHttpRequest/response
 /en-US/docs/Web/API/XMLHttpRequest/responseresponseText	/en-US/docs/Web/API/XMLHttpRequest/responseText
 /en-US/docs/Web/API/XMLHttpRequestResponseType	/en-US/docs/Web/API/XMLHttpRequest/responseType
@@ -10006,6 +10014,7 @@
 /en-US/docs/Web/CSS/-webkit-order	/en-US/docs/Web/CSS/order
 /en-US/docs/Web/CSS/-webkit-perspective	/en-US/docs/Web/CSS/perspective
 /en-US/docs/Web/CSS/-webkit-perspective-origin	/en-US/docs/Web/CSS/perspective-origin
+/en-US/docs/Web/CSS/-webkit-print-color-adjust	/en-US/docs/Web/CSS/print-color-adjust
 /en-US/docs/Web/CSS/-webkit-radial-gradient	/en-US/docs/Web/CSS/gradient/radial-gradient()
 /en-US/docs/Web/CSS/-webkit-repeating-linear-gradient	/en-US/docs/Web/CSS/gradient/repeating-linear-gradient()
 /en-US/docs/Web/CSS/-webkit-repeating-radial-gradient	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient()
@@ -10134,6 +10143,7 @@
 /en-US/docs/Web/CSS/Grouping_selectors	/en-US/docs/Web/CSS/Selector_list
 /en-US/docs/Web/CSS/Interactive	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/Layout_cookbook/Recipe:_Media_Objects	/en-US/docs/Web/CSS/Layout_cookbook/Media_objects
+/en-US/docs/Web/CSS/List_of_Proprietary_CSS_Features	/en-US/docs/Web/CSS/Reference
 /en-US/docs/Web/CSS/Microsoft_CSS_extensions	/en-US/docs/Web/CSS/Microsoft_extensions
 /en-US/docs/Web/CSS/Motion_Path	/en-US/docs/Web/CSS/CSS_Motion_Path
 /en-US/docs/Web/CSS/Other_Resources	/en-US/docs/Web/CSS
@@ -10169,6 +10179,7 @@
 /en-US/docs/Web/CSS/box_model	/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/calc	/en-US/docs/Web/CSS/calc()
 /en-US/docs/Web/CSS/clamp	/en-US/docs/Web/CSS/clamp()
+/en-US/docs/Web/CSS/color-adjust	/en-US/docs/Web/CSS/print-color-adjust
 /en-US/docs/Web/CSS/color-interpolation	/en-US/docs/Web/SVG/Attribute/color-interpolation
 /en-US/docs/Web/CSS/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
 /en-US/docs/Web/CSS/conic-gradient	/en-US/docs/Web/CSS/gradient/conic-gradient()

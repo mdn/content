@@ -32,7 +32,7 @@ font-synthesis: unset;
 ### Values
 
 - `none`
-  - : Indicates that bold, italic, nor small-caps typeface may be synthesized.
+  - : Indicates that no bold, italic, nor small-caps typeface may be synthesized.
 - `weight`
   - : Indicates that a bold typeface may be synthesized if needed.
 - `style`

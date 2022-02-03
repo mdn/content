@@ -115,6 +115,8 @@ You can see the effect of `animation-fill-mode` in the following example. It dem
 }
 ```
 
+### Result
+
 {{EmbedLiveSample('Examples',700,300)}}
 
 See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for more examples.
@@ -129,5 +131,5 @@ See [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) fo
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

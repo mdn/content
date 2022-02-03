@@ -28,7 +28,7 @@ When `aria-flowto` has a single {{htmlattrdef('id')}} reference, it allows assis
    - : Suggested next element in the reading order.
   
  - `id` list
-   - : Space seperated list of ID values referencing the suggested elements the user may want to go to next in the alternate reading order of content.
+   - : Space separated list of ID values referencing the suggested elements the user may want to go to next in the alternate reading order of content.
 
 ## Associated roles
 

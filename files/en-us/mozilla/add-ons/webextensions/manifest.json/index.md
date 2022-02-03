@@ -125,7 +125,7 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
 
 ## Browser compatibility
 
-For a full overview of all manifest keys and their sub-keys, see the[ full `manifest.json` browser compatibility table](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json).
+For a full overview of all manifest keys and their sub-keys, see the [full manifest.json browser compatibility table](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json).
 
 {{Compat}}
 

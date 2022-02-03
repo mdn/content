@@ -60,7 +60,7 @@ elem.addEventListener('click', function (e) {
 }, false);
 
 elem.dispatchEvent(event);
-````
+```
 
 ## Specifications
 

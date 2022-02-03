@@ -13,8 +13,8 @@ The **`gradientUnits`** attribute defines the coordinate system used for attribu
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("linearGradient")}}
-*   {{SVGElement("radialGradient")}}
+* {{SVGElement("linearGradient")}}
+* {{SVGElement("radialGradient")}}
 
 ## linearGradient
 
@@ -37,11 +37,11 @@ For {{SVGElement("linearGradient")}}, `gradientUnits` defines the coordinate sys
   </tbody>
 </table>
 
-*   `userSpaceOnUse`
-    *   : This value indicates that the attributes represent values in the coordinate system that results from taking the current user coordinate system in place at the time when the gradient element is referenced (i.e., the user coordinate system for the element referencing the gradient element via a {{SVGAttr("fill")}} or {{SVGAttr("stroke")}} property) and then applying the transform specified by attribute {{SVGAttr("gradientTransform")}}.
+* `userSpaceOnUse`
+    * : This value indicates that the attributes represent values in the coordinate system that results from taking the current user coordinate system in place at the time when the gradient element is referenced (i.e., the user coordinate system for the element referencing the gradient element via a {{SVGAttr("fill")}} or {{SVGAttr("stroke")}} property) and then applying the transform specified by attribute {{SVGAttr("gradientTransform")}}.
         Percentages represent values relative to the current SVG viewport.
-*   `objectBoundingBox`
-    *   : This value indicates that the user coordinate system for the attributes is established using the bounding box of the element to which the gradient is applied and then applying the transform specified by attribute `gradientTransform`.
+* `objectBoundingBox`
+    * : This value indicates that the user coordinate system for the attributes is established using the bounding box of the element to which the gradient is applied and then applying the transform specified by attribute `gradientTransform`.
 
         Percentages represent values relative to the bounding box for the object.
 
@@ -68,10 +68,10 @@ For {{SVGElement("radialGradient")}}, `gradientUnits` defines the coordinate sys
   </tbody>
 </table>
 
-*   `userSpaceOnUse`
-    *   : {{SVGAttr("cx")}}, {{SVGAttr("cy")}}, {{SVGAttr("r")}}, {{SVGAttr("fx")}}, {{SVGAttr("fy")}}, and {{SVGAttr("fr")}} represent values in the coordinate system that results from taking the current user coordinate system in place at the time when the gradient element is referenced (i.e., the user coordinate system for the element referencing the gradient element via a {{SVGAttr("fill")}} or {{SVGAttr("stroke")}} property) and then applying the transform specified by attribute {{SVGAttr("gradientTransform")}}.
-*   `objectBoundingBox`
-    *   : for {{SVGElement("radialGradient")}}: the user coordinate system for attributes {{SVGAttr("cx")}}, {{SVGAttr("cy")}}, {{SVGAttr("r")}}, {{SVGAttr("fx")}}, {{SVGAttr("fy")}}, and {{SVGAttr("fr")}} is established using the bounding box of the element to which the gradient is applied (see Object bounding box units) and then applying the transform specified by attribute `gradientTransform`.
+* `userSpaceOnUse`
+    * : {{SVGAttr("cx")}}, {{SVGAttr("cy")}}, {{SVGAttr("r")}}, {{SVGAttr("fx")}}, {{SVGAttr("fy")}}, and {{SVGAttr("fr")}} represent values in the coordinate system that results from taking the current user coordinate system in place at the time when the gradient element is referenced (i.e., the user coordinate system for the element referencing the gradient element via a {{SVGAttr("fill")}} or {{SVGAttr("stroke")}} property) and then applying the transform specified by attribute {{SVGAttr("gradientTransform")}}.
+* `objectBoundingBox`
+    * : for {{SVGElement("radialGradient")}}: the user coordinate system for attributes {{SVGAttr("cx")}}, {{SVGAttr("cy")}}, {{SVGAttr("r")}}, {{SVGAttr("fx")}}, {{SVGAttr("fy")}}, and {{SVGAttr("fr")}} is established using the bounding box of the element to which the gradient is applied (see Object bounding box units) and then applying the transform specified by attribute `gradientTransform`.
         With this value and `gradientTransform` being the identity matrix, the rings of the radial gradient are circular with respect to the object bounding box space (i.e., the abstract coordinate system where (0,0) is at the top/left of the object bounding box and (1,1) is at the bottom/right of the object bounding box). When the object's bounding box is not square, the rings that are conceptually circular within object bounding box space will render as elliptical due to application of the non-uniform scaling transformation from bounding box space to user space.
 
 ## Specifications

@@ -55,7 +55,6 @@ new Intl.PluralRules('ar-EG').select(18);
 // → 'many'
 ```
 
-
 ### Using locales
 
 ## Polyfill

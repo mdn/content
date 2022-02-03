@@ -170,7 +170,7 @@ btn.addEventListener('click', changeBackground);
 
 There are many different events that can be fired by a button element. Let's experiment.
 
-First, make a local copy of [random-color-addeventlistener.html](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html), and open it in your browser.
+First, make a local copy of [random-color-addeventlistener.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-addeventlistener.html), and open it in your browser.
 It's just a copy of the simple random color example we've played with already. Now try changing `click` to the following different values in turn, and observing the results in the example:
 
 - [`focus`](/en-US/docs/Web/API/Element/focus_event) and [`blur`](/en-US/docs/Web/API/Element/blur_event) — The color changes when the button is focused and unfocused; try pressing the tab to focus on the button and press the tab again to focus away from the button.
@@ -443,7 +443,6 @@ The output is as follows:
 {{ EmbedLiveSample('Preventing_default_behavior', '100%', 180, "", "") }}
 
 > **Note:** for the full source code, see [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) here.)
-
 
 ## Event bubbling and capture
 

@@ -10,7 +10,7 @@ tags:
   - step
 ---
 
-{{HTMLSidebar}}{{draft}}
+{{HTMLSidebar}}
 
 The **`step`** attribute is a number that specifies the granularity that the value must adhere to or the keyword `any`. It is valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types.
 
@@ -56,7 +56,7 @@ The default stepping value for `number` inputs is 1, allowing only integers to b
       <td>
         {{HTMLElement("input/datetime-local", "datetime-local")}}
       </td>
-      <td>1 (day)</td>
+      <td>1 (second)</td>
       <td>
         <code
           >&#x3C;input type="datetime-local" min="2019-12-25T19:30"
@@ -79,7 +79,7 @@ The default stepping value for `number` inputs is 1, allowing only integers to b
   </tbody>
 </table>
 
-If `any` is not explicity set, valid values for the `number`, date/time input types, and `range` input types are equal to the basis for stepping - the [`min`](/en-US/docs/Web/HTML/Attributes/min) value and increments of the step value, up to the [`max`](/en-US/docs/Web/HTML/Attributes/max) value, if specified. For example, if we have `<input type="number" min="10" step="2">` any even integer, 10 or great, is valid. If omitted, `<input type="number">`, any integer is valid, but floats, like 4.2, are not valid, as `step` defaults to 1. For 4.2 to be valid, `step` would have had to be set to `any`, 0.1, 0.2, or any the min value would have had to be a number ending in .2, such as `<input type="number" min="-5.2">`
+If `any` is not explicitly set, valid values for the `number`, date/time input types, and `range` input types are equal to the basis for stepping - the [`min`](/en-US/docs/Web/HTML/Attributes/min) value and increments of the step value, up to the [`max`](/en-US/docs/Web/HTML/Attributes/max) value, if specified. For example, if we have `<input type="number" min="10" step="2">` any even integer, 10 or greater, is valid. If omitted, `<input type="number">`, any integer is valid, but floats, like 4.2, are not valid, as `step` defaults to 1. For 4.2 to be valid, `step` would have had to be set to `any`, 0.1, 0.2, or any the min value would have had to be a number ending in .2, such as `<input type="number" min="-5.2">`
 
 ### min impact on step
 
