@@ -59,7 +59,7 @@ The HTML code example below uses the `group` role with a `tree` view:
 </div>
 ```
 
-The following example uses the `group` role with drop-down [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) containing [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)s:
+The following example uses the `group` role with a drop-down [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role) containing [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)s:
 ```html
 <div role="menu">
   <ul role="group">
@@ -77,7 +77,7 @@ The following example uses the `group` role with drop-down [`menu`](/en-US/docs/
   </ul>
 </div>
 ```
-This menu could be constructed using {{HTMLElement('select')}} and {{HTMLElement('option')}}. In this case, the `group` role would be most similar to {{HTMLElement('optgroup')}}.
+This menu could be constructed using {{HTMLElement('select')}} and {{HTMLElement('option')}} elements. In this case, the `group` role would be most similar to the {{HTMLElement('optgroup')}} element.
 
 ## Specifications
 
