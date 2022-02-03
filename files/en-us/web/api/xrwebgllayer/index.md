@@ -22,6 +22,8 @@ The **`XRWebGLLayer`** interface of the WebXR Device API provides a linkage betw
 
 Although `XRWebGLLayer` is currently the only type of framebuffer layer supported by [WebGL](/en-US/docs/Web/API/WebGL_API), it's entirely possible that future updates to the WebXR specification may allow for other layer types and corresponding image sources.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("XRWebGLLayer.XRWebGLLayer", "new XRWebGLLayer()")}}

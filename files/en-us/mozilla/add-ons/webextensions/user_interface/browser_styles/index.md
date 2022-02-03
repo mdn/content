@@ -13,8 +13,8 @@ tags:
 
 Certain user interface components - browser and page action [popups](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), and [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) - are specified by your extension in essentially the same way:
 
-1.  create an HTML file defining the structure of the UI element
-2.  add a manifest.json key ([`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action), or [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)) pointing to that HTML file.
+1. create an HTML file defining the structure of the UI element
+2. add a manifest.json key ([`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action), or [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)) pointing to that HTML file.
 
 One of the challenges with this approach is styling the element in such a way that it fits in with the browser's own style. To help with this, the manifest.json keys include an extra optional property: `browser_style`. If this is included and set to `true`, then your document will get one or more extra stylesheets that will help make it look consistent with the browser's UI and with other extensions that use the `browser_style` property.
 
@@ -22,11 +22,11 @@ When considering using `browser_style: true`, you need to test your extension wi
 
 > **Warning:** When `browser_style: true` is included in your web extension's manifest, text selection in your extension's UI is disabled except in input controls. If this will cause a problem, include browser_style:false instead.
 
-> **Note:** **Google Chrome** and **Opera** use `chrome_style` instead of `browser_style`, so if you wish to support them, you need to add both keys.
+> **Note:** **Google Chrome** and **Opera** use `chrome_style` instead of `browser_style`, so if you wish to support them, you need to add both keys.
 
 In Firefox, the stylesheet can be seen at `chrome://browser/content/extension.css`. The extra stylesheet at `chrome://browser/content/extension-mac.css` is also included on OS X.
 
-Most styles are automatically applied, but some elements require you to add the non-standard `browser-style` class to get their styling, as detailed in the table below:
+Most styles are automatically applied, but some elements require you to add the non-standard `browser-style` class to get their styling, as detailed in the table below:
 
 <table class="fullwidth-table standard-table">
   <thead>
@@ -115,7 +115,7 @@ Most styles are automatically applied, but some elements require you to add the 
 
 > **Note:** This feature is non-standard and only works in Firefox.
 
-The `chrome://browser/content/extension.css` stylesheet also contains the styles for the Firefox Panel Components.
+The `chrome://browser/content/extension.css` stylesheet also contains the styles for the Firefox Panel Components.
 
 The [legacy Firefox Style Guide](https://firefoxux.github.io/StyleGuide/#/navigation) documents proper usage.
 

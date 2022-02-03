@@ -26,6 +26,8 @@ To present layers to the XR device, add them to the `layers` render state using 
 
 `XRProjectionLayer` objects don’t have an associated {{domxref("XRSpace")}}, because they render to the full frame.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._

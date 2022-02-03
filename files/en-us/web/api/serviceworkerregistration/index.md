@@ -20,6 +20,8 @@ The lifetime of a service worker registration is beyond that of the `ServiceWork
 
 > **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _Also implements properties from its parent interface,_ {{domxref("EventTarget")}}.

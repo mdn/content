@@ -5,6 +5,7 @@ tags:
   - Guide
   - JavaScript
   - Reference
+  - Polyfill
   - Regular Expressions
   - groups
   - ranges
@@ -206,10 +207,10 @@ Groups and ranges indicate groups and ranges of expression characters.
 
 ```js
 var aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
-var regexpVowels = /[aeiouy]/g;
+var regexpVowels = /[AEIOUYaeiouy]/g;
 
 console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
-// Number of vowels: 25
+// Number of vowels: 26
 ```
 
 ### Using groups
@@ -240,6 +241,7 @@ do {
 
 ## See also
 
+- A polyfill of [`RegExp` named capture groups](https://github.com/zloirock/core-js#ecmascript-string-and-regexp) is available in [`core-js`](https://github.com/zloirock/core-js)
 - [Regular expressions guide](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 
   - [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)

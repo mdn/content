@@ -15,6 +15,8 @@ browser-compat: api.Animation
 
 The **`Animation`** interface of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) represents a single animation player and provides playback controls and a timeline for an animation node or source.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("Animation.Animation()", "Animation()")}}

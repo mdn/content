@@ -29,10 +29,10 @@ You can also jump straight to the [Demo](#demo) if you like.
 The first panel on the left contains two components: a {{HTMLElement("video")}} element, which will receive the stream from WebRTC, and a {{HTMLElement("button")}} the user clicks to capture a video frame.
 
 ```html
-  <div class="camera">
-    <video id="video">Video stream not available.</video>
-    <button id="startbutton">Take photo</button>
-  </div>
+<div class="camera">
+  <video id="video">Video stream not available.</video>
+  <button id="startbutton">Take photo</button>
+</div>
 ```
 
 This is straightforward, and we'll see how it ties together when we get into the JavaScript code.
@@ -42,11 +42,11 @@ Next, we have a {{HTMLElement("canvas")}} element into which the captured frames
 We also have an {{HTMLElement("img")}} element into which we will draw the image — this is the final display shown to the user.
 
 ```html
-  <canvas id="canvas">
-    <div class="output">
-      <img id="photo" alt="The screen capture will appear in this box.">
-    </div>
-  </canvas>
+<canvas id="canvas">
+  <div class="output">
+    <img id="photo" alt="The screen capture will appear in this box.">
+  </div>
+</canvas>
 ```
 
 That's all of the relevant HTML. The rest is just some page layout fluff and a bit of text offering a link back to this page.
@@ -191,7 +191,7 @@ Clearing the photo box involves creating an image, then converting it into a for
   }
 ```
 
-We start by getting a reference to the hidden {{HTMLElement("canvas")}} element that we use for offscreen rendering.  Next we set the `fillStyle` to `#AAA` (a fairly light grey), and fill the entire canvas with that color by calling {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}.
+We start by getting a reference to the hidden {{HTMLElement("canvas")}} element that we use for offscreen rendering. Next we set the `fillStyle` to `#AAA` (a fairly light grey), and fill the entire canvas with that color by calling {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}.
 
 Last in this function, we convert the canvas into a PNG image and call `{{domxref("Element.setAttribute", "photo.setAttribute()")}}` to make our captured still box display the image.
 
@@ -408,19 +408,20 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 })();
 
 ```
+
 ### Result
 
 {{EmbedLiveSample('Demo', 700, 500)}}
 
 ## Fun with filters
 
-Since we're capturing images from the user's webcam by grabbing frames from a {{HTMLElement("video")}} element, we can very easily apply filters and fun effects to the video. As it turns out, any CSS filters you apply to the element using the {{cssxref("filter")}} property affect the captured photo. These filters can range from the simple (making the image black and white)  to the extreme (gaussian blurs and hue rotation).
+Since we're capturing images from the user's webcam by grabbing frames from a {{HTMLElement("video")}} element, we can very easily apply filters and fun effects to the video. As it turns out, any CSS filters you apply to the element using the {{cssxref("filter")}} property affect the captured photo. These filters can range from the simple (making the image black and white) to the extreme (gaussian blurs and hue rotation).
 
 You can play with this effect using, for example, the Firefox developer tools' [style editor](/en-US/docs/Tools/Style_Editor); see [Edit CSS filters](/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters) for details on how to do so.
 
 ## Using specific devices
 
-You can, if needed, restrict the set of permitted video sources to a specific device or set of devices. To do so, call {{domxref("MediaDevices.enumerateDevices")}}. When the promise is fulfilled with an array of {{domxref("MediaDeviceInfo")}}  objects describing the available devices, find the ones that you want to allow and specify the corresponding {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} or `deviceId`s in the {{domxref("MediaTrackConstraints")}} object passed into {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.
+You can, if needed, restrict the set of permitted video sources to a specific device or set of devices. To do so, call {{domxref("MediaDevices.enumerateDevices")}}. When the promise is fulfilled with an array of {{domxref("MediaDeviceInfo")}} objects describing the available devices, find the ones that you want to allow and specify the corresponding {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} or `deviceId`s in the {{domxref("MediaTrackConstraints")}} object passed into {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.
 
 ## See also
 
@@ -428,4 +429,3 @@ You can, if needed, restrict the set of permitted video sources to a specific de
 - {{domxref("MediaDevices.getUserMedia")}}
 - {{SectionOnPage("/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images", "Using frames from a video")}}
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}
-

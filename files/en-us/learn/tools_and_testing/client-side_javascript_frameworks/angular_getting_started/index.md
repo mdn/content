@@ -160,12 +160,12 @@ If at any point you would like to stop serving your application, press `Ctrl+c` 
 The application source files that this tutorial focuses on are in `src/app`.
 Key files that the CLI generates automatically include the following:
 
-1.  `app.module.ts`: Specifies the files that the application uses.
+1. `app.module.ts`: Specifies the files that the application uses.
     This file acts as a central hub for the other files in your application.
-2.  `app.component.ts`: Also known as the class, contains the logic for the application's main page.
-3.  `app.component.html`: Contains the HTML for `AppComponent`. The contents of this file are also known as the template.
+2. `app.component.ts`: Also known as the class, contains the logic for the application's main page.
+3. `app.component.html`: Contains the HTML for `AppComponent`. The contents of this file are also known as the template.
     The template determines the view or what you see in the browser.
-4.  `app.component.css`: Contains the styles for `AppComponent`. You use this file when you want to define styles that only apply to a specific component, as opposed to your application overall.
+4. `app.component.css`: Contains the styles for `AppComponent`. You use this file when you want to define styles that only apply to a specific component, as opposed to your application overall.
 
 A component in Angular is made up of three main parts—the template, styles, and the class.
 For example, `app.component.ts`, `app.component.html`, and `app.component.css` together constitute the `AppComponent`.

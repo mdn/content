@@ -19,6 +19,8 @@ The AnimationPlaybackEvent interface of the [Web Animations API](/en-US/docs/Web
 
 As animations play, they report changes to their {{domxref("Animation.playState", "playState")}} through animation events.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("AnimationPlaybackEvent.AnimationPlaybackEvent()")}}

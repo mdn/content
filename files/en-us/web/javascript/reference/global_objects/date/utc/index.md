@@ -29,7 +29,11 @@ Date.UTC(year, month, day, hour, minute, second, millisecond)
 ```
 
 - `year`
-  - : A full year.
+  - : Integer value representing the year.
+
+    Values from `0` to `99` map to the years
+    `1900` to `1999`. All other values are the actual year.
+    See the [example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#interpretation_of_two-digit_years).
 - `month` {{optional_inline}}
   - : An integer between `0` (January) and `11` (December)
     representing the month. Since ECMAScript 2017 it defaults to `0` if

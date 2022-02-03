@@ -84,9 +84,9 @@ Currently most *dates* displayed on the site use the default JavaScript format (
 
 To complete this challenge, you must:
 
-1.  Replace the variable `due_back` with `due_back_formatted` in the _BookInstance detail_ page.
-2.  Update the `Author` model to add a lifespan virtual property. The lifespan should look like: _date_of_birth - date_of_death_, where both values have the same date format as `BookInstance.due_back_formatted`.
-3.  Use `Author.lifespan` in all views where you currently explicitly use `date_of_birth` and `date_of_death`.
+1. Replace the variable `due_back` with `due_back_formatted` in the _BookInstance detail_ page.
+2. Update the `Author` model to add a lifespan virtual property. The lifespan should look like: _date_of_birth - date_of_death_, where both values have the same date format as `BookInstance.due_back_formatted`.
+3. Use `Author.lifespan` in all views where you currently explicitly use `date_of_birth` and `date_of_death`.
 
 ## Next steps
 

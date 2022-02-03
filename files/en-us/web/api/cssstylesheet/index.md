@@ -18,6 +18,8 @@ browser-compat: api.CSSStyleSheet
 
 The **`CSSStyleSheet`** interface represents a single [CSS](/en-US/docs/Web/CSS) stylesheet, and lets you inspect and modify the list of rules contained in the stylesheet. It inherits properties and methods from its parent, {{domxref("StyleSheet")}}.
 
+{{InheritanceDiagram}}
+
 A stylesheet consists of a collection of {{domxref("CSSRule")}} objects representing each of the rules in the stylesheet. The rules are contained in a {{domxref("CSSRuleList")}}, which can be obtained from the stylesheet's {{domxref("CSSStyleSheet.cssRules", "cssRules")}} property.
 
 For example, one rule might be a {{domxref("CSSStyleRule")}} object containing a style such as:

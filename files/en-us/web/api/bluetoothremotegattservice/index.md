@@ -22,6 +22,8 @@ The `BluetoothRemoteGATTService` interface of the [Web Bluetooth API](/en-US/doc
 service provided by a GATT server, including a device, a list of referenced services,
 and a list of the characteristics of this service.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref("BluetoothRemoteGATTService.device")}}{{readonlyinline}}

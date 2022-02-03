@@ -483,7 +483,6 @@ tag `string text ${expression} string text`
 
 Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements) must be terminated with semicolons and are therefore affected by automatic semicolon insertion (ASI):
 
-- Empty statement
 - `let`, `const`, variable statement
 - `import`, `export`, module declaration
 - Expression statement

@@ -229,8 +229,8 @@ These tables are generated from compatibility data stored as [JSON files in GitH
 
 **On Windows:** Chrome passes two arguments:
 
-1.  The origin of the extension
-2.  A handle to the Chrome native window that started the app
+1. The origin of the extension
+2. A handle to the Chrome native window that started the app
 
 ### allowed_extensions
 

@@ -64,9 +64,9 @@ Depending on the arguments it is given, this API is sometimes ambiguous. The fol
 
   - the arguments are interpreted as `(message, options)`, and the message is sent internally, if the second argument is any of the following:
 
-    1.  a valid `options` object (meaning, it is an object which contains only the properties of `options` that the browser supports)
-    2.  null
-    3.  undefined
+    1. a valid `options` object (meaning, it is an object which contains only the properties of `options` that the browser supports)
+    2. null
+    3. undefined
 
   - otherwise, the arguments are interpreted as `(extensionId, message)`. The message will be sent to the extension identified by `extensionId`.
 

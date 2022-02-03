@@ -19,6 +19,8 @@ The **`IDBVersionChangeEvent`** interface of the [IndexedDB API](/en-US/docs/Web
 
 {{AvailableInWorkers}}
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("IDBVersionChangeEvent.IDBVersionChangeEvent", "IDBVersionChangeEvent()")}}

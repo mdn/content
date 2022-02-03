@@ -15,6 +15,8 @@ browser-compat: api.FileSystemDirectoryHandle
 
 The **`FileSystemDirectoryHandle`** interface of the {{domxref('File System Access API')}} provides a handle to a file system directory. The interface is accessed via the {{domxref('window.showDirectoryPicker()')}} method.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _Inherits properties from its parent, {{DOMxRef("FileSystemHandle")}}._

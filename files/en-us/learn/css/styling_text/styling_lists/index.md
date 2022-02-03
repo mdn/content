@@ -385,12 +385,6 @@ CSS counters provide advanced tools for customizing list counting and styling, b
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information going forward? You can find an assessment to verify that you've retained this information at the end of the module — see [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage).
-
-This assessment tests all the knowledge discussed in this module, so you might want to read the other articles before moving on to it.
-
 ## Summary
 
 Lists are relatively easy to get the hang of styling once you know a few associated basic principles and specific properties. In the next article we'll move on to link styling techniques.
@@ -400,7 +394,7 @@ Lists are relatively easy to get the hang of styling once you know a few associa
 ## In this module
 
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Styling lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
+- **Styling lists**
 - [Styling links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
 - [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
 - [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

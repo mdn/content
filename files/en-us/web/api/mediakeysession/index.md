@@ -17,6 +17,8 @@ browser-compat: api.MediaKeySession
 
 The **`MediaKeySession`** interface of the [EncryptedMediaExtensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) represents a context for message exchange with a content decryption module (CDM).
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref("MediaKeySession.closed")}} {{readonlyInline}}

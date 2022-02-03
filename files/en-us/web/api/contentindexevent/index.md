@@ -18,6 +18,8 @@ This event is sent to the {{domxref('ServiceWorkerGlobalScope','global scope')}}
 
 The {{Event('contentdelete')}} event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the {{domxref('ContentIndex.delete')}} method is called.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("ContentIndexEvent.ContentIndexEvent", "ContentIndexEvent()")}}

@@ -15,6 +15,8 @@ browser-compat: api.TextTrack
 
 The `TextTrack` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes and controls the text track associated with a particular {{HTMLElement("track")}} element.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _This interface also inherits properties from {{domxref("EventTarget")}}._

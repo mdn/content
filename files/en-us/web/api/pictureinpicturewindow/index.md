@@ -18,6 +18,8 @@ The **`PictureInPictureWindow`** interface represents an object able to programm
 
 An object with this interface is obtained using the {{domxref("HTMLVideoElement.requestPictureInPicture()")}} promise return value.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _The `PictureInPictureWindow` interface doesn't inherit any properties._

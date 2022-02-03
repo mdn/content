@@ -17,6 +17,8 @@ browser-compat: api.PushEvent
 
 The **`PushEvent`** interface of the [Push API](/en-US/docs/Web/API/Push_API) represents a push message that has been received. This event is sent to the [global scope](/en-US/docs/Web/API/ServiceWorkerGlobalScope) of a {{domxref("ServiceWorker")}}. It contains the information sent from an application server to a {{domxref("PushSubscription")}}.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("PushEvent.PushEvent()")}}

@@ -11,6 +11,8 @@ The audio itself might be input from a microphone or other audio sampling device
 
 A `MediaStreamTrackAudioSourceNode` has no inputs and exactly one output, and is created using the {{domxref("AudioContext.createMediaStreamTrackSource()")}} method. This interface is similar to {{domxref("MediaStreamAudioSourceNode")}}, except it lets you specifically state the track to use, rather than assuming the first audio track on a stream.
 
+{{InheritanceDiagram}}
+
 <table class="properties">
   <tbody>
     <tr>

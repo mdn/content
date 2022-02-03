@@ -50,8 +50,8 @@ You can use this attribute with any SVG element.
   </tbody>
 </table>
 
-*   \<id>
-    *   : Specifies the element's ID. The ID must be unique within the node tree, must not be an empty string, and must not contain any whitespace characters.
+* \<id>
+    * : Specifies the element's ID. The ID must be unique within the node tree, must not be an empty string, and must not contain any whitespace characters.
 
         > **Note:** You should avoid the use of `id` values that would be parsed as an SVG view specification (e.g., `MyDrawing.svg#svgView(viewBox(0,200,1000,1000))`) or a basic media fragment when used as a URL target fragment.
 
@@ -91,5 +91,5 @@ You can use this attribute with any SVG element.
 
 ## See also
 
-*   [HTML `id`](/en-US/docs/Web/HTML/Global_attributes/id)
-*   {{SVGAttr("class")}}
+* [HTML `id`](/en-US/docs/Web/HTML/Global_attributes/id)
+* {{SVGAttr("class")}}

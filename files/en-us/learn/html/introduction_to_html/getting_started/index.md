@@ -743,7 +743,7 @@ You made it to the end of the article! We hope you enjoyed your tour of the basi
 
 At this point, you should understand what HTML looks like, and how it works at a basic level. You should also be able to write a few elements and attributes. The subsequent articles of this module go further on some of the topics introduced here, as well as presenting other concepts of the language.
 
-> **Note:** As you start to learn more about HTML, consider learning the basics of Cascading Style Sheets, or [CSS](/en-US/docs/Learn/CSS). CSS is the language used to style web pages. (for example, changing fonts or colors, or altering the page layout) HTML and CSS work well together, as you will soon discover.
+> **Note:** As you start to learn more about HTML, consider learning the basics of Cascading Style Sheets, or [CSS](/en-US/docs/Learn/CSS). CSS is the language used to style web pages: for example, changing fonts or colors, or altering the page layout. HTML and CSS work well together, as you will soon discover.
 
 ## See also
 

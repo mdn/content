@@ -20,6 +20,8 @@ The **`AudioTrackList`** interface is used to represent a list of the audio trac
 
 Retrieve an instance of this object with {{domxref('HTMLMediaElement.audioTracks')}}. The individual tracks can be accessed using array syntax.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _This interface also inherits properties from its parent interface, {{domxref("EventTarget")}}._

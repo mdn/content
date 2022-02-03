@@ -13,8 +13,8 @@ The **`format`** attribute indicates the format of the given font.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("glyphRef")}}
+* {{SVGElement("altGlyph")}}
+* {{SVGElement("glyphRef")}}
 
 ## Context notes
 
@@ -35,8 +35,8 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-*   `<string>`
-    *   : This value specifies the format of the given font.
+* `<string>`
+    * : This value specifies the format of the given font.
 
         Here is a list of font formats and their strings that can be used as values for this attribute:
 
@@ -115,4 +115,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   [List of font formats defined in CSS 2 (outdated specification)](https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#referencing)
+* [List of font formats defined in CSS 2 (outdated specification)](https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#referencing)

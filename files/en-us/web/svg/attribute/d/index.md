@@ -148,20 +148,20 @@ Path commands are instructions that define a path to be drawn. Each command is c
 
 SVG defines 6 types of path commands, for a total of 20 commands:
 
-*   MoveTo: `M`, `m`
-*   LineTo: `L`, `l`, `H`, `h`, `V`, `v`
-*   Cubic Bézier Curve: `C`, `c`, `S`, `s`
-*   Quadratic Bézier Curve: `Q`, `q`, `T`, `t`
-*   Elliptical Arc Curve: `A`, `a`
-*   ClosePath: `Z`, `z`
+* MoveTo: `M`, `m`
+* LineTo: `L`, `l`, `H`, `h`, `V`, `v`
+* Cubic Bézier Curve: `C`, `c`, `S`, `s`
+* Quadratic Bézier Curve: `Q`, `q`, `T`, `t`
+* Elliptical Arc Curve: `A`, `a`
+* ClosePath: `Z`, `z`
 
 > **Note:** Commands are *case-sensitive*. An upper-case command specifies absolute coordinates, while a lower-case command specifies coordinates relative to the current position.
 
 It is always possible to specify a negative value as an argument to a command:
 
-*   negative angles will be anti-clockwise;
-*   *absolute* negative *x* and *y* values are interpreted as negative coordinates;
-*   *relative* negative *x* values move to the left, and relative negative *y* values move upwards.
+* negative angles will be anti-clockwise;
+* *absolute* negative *x* and *y* values are interpreted as negative coordinates;
+* *relative* negative *x* values move to the left, and relative negative *y* values move upwards.
 
 ### MoveTo path commands
 
@@ -235,18 +235,18 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path fill="none" stroke="red"
+  <path fill="none" stroke="red"
     d="M 10,10 h 10
-       m  0,10 h 10
-       m  0,10 h 10
-       M 40,20 h 10
-       m  0,10 h 10
-       m  0,10 h 10
-       m  0,10 h 10
-       M 50,50 h 10
-       m-20,10 h 10
-       m-20,10 h 10
-       m-20,10 h 10" />
+       m  0,10 h 10
+       m  0,10 h 10
+       M 40,20 h 10
+       m  0,10 h 10
+       m  0,10 h 10
+       m  0,10 h 10
+       M 50,50 h 10
+       m-20,10 h 10
+       m-20,10 h 10
+       m-20,10 h 10" />
 </svg>
 ```
 
@@ -412,18 +412,18 @@ html,body,svg { height:100% }
 ```html
 <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
   <!-- LineTo commands with absolute coordinates -->
-  <path fill="none" stroke="red"
-        d="M 10,10
-           L 90,90
-           V 10
-           H 50" />
+  <path fill="none" stroke="red"
+        d="M 10,10
+           L 90,90
+           V 10
+           H 50" />
 
   <!-- LineTo commands with relative coordinates -->
   <path fill="none" stroke="red"
-        d="M 110,10
-           l 80,80
-           v -80
-           h -40" />
+        d="M 110,10
+           l 80,80
+           v -80
+           h -40" />
 </svg>
 ```
 
@@ -433,15 +433,15 @@ html,body,svg { height:100% }
 
 *Cubic [Bézier curves](/en-US/docs/Glossary/Bézier_curve)* are smooth curve definitions using four points:
 
-*   starting point (current point)
-    *   : (*P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*})
-*   end point
-    *   : (*P<sub>n</sub>* = {*x<sub>n</sub>*, *y<sub>n</sub>*})
-*   start control point
-    *   : (*P<sub>cs</sub>* = {*x<sub>cs</sub>*, *y<sub>cs</sub>*})
+* starting point (current point)
+    * : (*P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*})
+* end point
+    * : (*P<sub>n</sub>* = {*x<sub>n</sub>*, *y<sub>n</sub>*})
+* start control point
+    * : (*P<sub>cs</sub>* = {*x<sub>cs</sub>*, *y<sub>cs</sub>*})
         (controls curvature near the start of the curve)
-*   end control point
-    *   : (*P<sub>ce</sub>* = {*x<sub>ce</sub>*, *y<sub>ce</sub>*})
+* end control point
+    * : (*P<sub>ce</sub>* = {*x<sub>ce</sub>*, *y<sub>ce</sub>*})
         (controls curvature near the end of the curve)
 
 After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for the next command (*P<sub>o</sub>′*).
@@ -471,7 +471,7 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
           >,<code><var>y</var></code
           >. The <em>start control point</em> is specified by
           <code><var>x1</var></code
-          >,<code><var>y1</var></code> and the <em>end control point</em> is
+          >,<code><var>y1</var></code> and the <em>end control point</em> is
           specified by <code><var>x2</var></code
           >,<code><var>y2</var></code
           >. Any subsequent triplet(s) of coordinate pairs are interpreted as
@@ -577,7 +577,7 @@ After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for
         Draw a smooth cubic Bézier curve from the <em>current point</em> to the
         <em>end point</em>, which is the <em>current point</em> shifted by
         <code><var>dx</var></code> along the x-axis and
-        <code><var>dy</var></code> along the y-axis. The
+        <code><var>dy</var></code> along the y-axis. The
         <em>end control point</em> is the <em>current point</em> (starting point
         of the curve) shifted by <code><var>dx2</var></code> along the x-axis
         and <code><var>dy2</var></code> along the y-axis. The
@@ -646,12 +646,12 @@ html,body,svg { height:100% }
 
 *Quadratic [Bézier curves](/en-US/docs/Glossary/Bézier_curve)* are smooth curve definitions using three points:
 
-*   starting point (current point)
-    *   : *P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*}
-*   end point
-    *   : *P<sub>n</sub>* = {*x<sub>n</sub>*, *y<sub>n</sub>*}
-*   control point
-    *   : *P<sub>c</sub>* = {*x<sub>c</sub>*, *y<sub>c</sub>*}
+* starting point (current point)
+    * : *P<sub>o</sub>* = {*x<sub>o</sub>*, *y<sub>o</sub>*}
+* end point
+    * : *P<sub>n</sub>* = {*x<sub>n</sub>*, *y<sub>n</sub>*}
+* control point
+    * : *P<sub>c</sub>* = {*x<sub>c</sub>*, *y<sub>c</sub>*}
         (controls curvature)
 
 After drawing, the *end point* (*P<sub>n</sub>*) becomes the *current point* for the next command (*P<sub>o</sub>′*).
@@ -993,7 +993,7 @@ html,body,svg { height:100% }
 
 ### ClosePath
 
-*ClosePath* instructions draw a straight line from the *current position* to the first point in the path.
+*ClosePath* instructions draw a straight line from the *current position* to the first point in the path.
 
 <table class="no-markdown">
   <tbody>

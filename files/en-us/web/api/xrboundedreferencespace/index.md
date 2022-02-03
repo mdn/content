@@ -23,6 +23,8 @@ The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRBoundedRefe
 
 This is typically used when the XR system is capable of tracking the user's physical movement within a limited distance of their starting position. The specified bounds may, in fact, describe the shape and size of the room the user is located in, in order to let the WebXR site or application prevent the user from colliding with the walls or other obstacles in the real world.  At a minimum, the boundaries indicate the area in which the XR device is capable of tracking the user's movement. See the article [Using bounded reference spaces](/en-US/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces) for details on how bounded spaces work and why they're useful.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _In addition to the properties of {{domxref("XRReferenceSpace")}}, `XRBoundedReferenceSpace` includes the following:_
