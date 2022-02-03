@@ -1,7 +1,7 @@
 ---
 title: Web technology for developers
 slug: Web
-tags:
+tags: KAMPANAT
   - Landing
   - Web
 ---
