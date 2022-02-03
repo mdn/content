@@ -64,6 +64,32 @@ var intFramesetWidth = parent.innerWidth;
 var intOuterFramesetWidth = top.innerWidth;
 ```
 
+## Demo
+
+### HTML
+```html
+<p>Resize the browser window to fire the <code>resize</code> event.</p>
+<p>Window height: <span id="height"></span></p>
+<p>Window width: <span id="width"></span></p>
+```
+
+### JavaScript
+```js
+const heightOutput = document.querySelector("#height");
+const widthOutput = document.querySelector("#width");
+
+function resizeListener() {
+  heightOutput.textContent = window.innerHeight;
+  widthOutput.textContent = window.innerWidth;
+}
+
+window.addEventListener("resize", resizeListener);
+```
+
+### Result
+
+Open the {{LiveSampleLink('Demo', 'Demo Link')}} in a new browser window and resize it to see the result.
+
 ## Specifications
 
 {{Specifications}}
