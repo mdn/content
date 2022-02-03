@@ -226,7 +226,7 @@ In the second example `^` is used both for matching at the beginning of input 
 ```js
 let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
-// Selecting fruits that does not start by 'A' by a /^[^A]/ regex.
+// Selecting fruits that do not start by 'A' with a /^[^A]/ regex.
 // In this example, two meanings of '^' control symbol are represented:
 // 1) Matching beginning of the input
 // 2) A negated or complemented character class: [^A]
