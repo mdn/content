@@ -12,10 +12,10 @@ tags:
 
 Firefox 4 introduced support for animating [SVG](/en-US/docs/Web/SVG) using [Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil) (SMIL). SMIL allows you to:
 
-*   animate the numeric attributes of an element (x, y, ...)
-*   animate transform attributes (translation or rotation)
-*   animate color attributes
-*   follow a motion path
+* animate the numeric attributes of an element (x, y, ...)
+* animate transform attributes (translation or rotation)
+* animate color attributes
+* follow a motion path
 
 This is done adding an SVG element like {{ SVGElement("animate") }} inside the SVG element to animate. Below are examples for the four different ways.
 
@@ -23,14 +23,14 @@ This is done adding an SVG element like {{ SVGElement("animate") }} inside the S
 
 The following example animates the **cx** attribute of a circle. To do so, we add an {{ SVGElement("animate") }} element inside the {{ SVGElement("circle") }} element. The important attributes for {{ SVGElement("animate") }} are:
 
-*   **attributeName**
-    *   : The name of the attribute to animate.
-*   from
-    *   : The initial value of the attribute.
-*   to
-    *   : The final value.
-*   dur
-    *   : The duration of the animation (for example, write '5s' for 5 seconds).
+* **attributeName**
+    * : The name of the attribute to animate.
+* from
+    * : The initial value of the attribute.
+* to
+    * : The final value.
+* dur
+    * : The duration of the animation (for example, write '5s' for 5 seconds).
 
 If you want to animate more attributes inside the same element, just add more {{ SVGElement("animate") }} elements.
 
@@ -116,6 +116,6 @@ Same example as before with a curved path and following the direction of the pat
 
 ## See also
 
-*   [SVG](/en-US/docs/Web/SVG)
-*   [SVG Animation Specification](https://www.w3.org/TR/SVG/animate.html)
-*   [SMIL Specification](https://www.w3.org/TR/REC-smil)
+* [SVG](/en-US/docs/Web/SVG)
+* [SVG Animation Specification](https://www.w3.org/TR/SVG/animate.html)
+* [SMIL Specification](https://www.w3.org/TR/REC-smil)
