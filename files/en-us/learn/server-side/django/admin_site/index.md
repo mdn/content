@@ -329,8 +329,8 @@ In this case all we've done is declare our tabular inline class, which just adds
 
 We've learned a lot in this section, so now it is time for you to try a few things.
 
-1.  For the `BookInstance` list view, add code to display the book, status, due back date, and id (rather than the default `__str__()` text).
-2.  Add an inline listing of `Book` items to the `Author` detail view using the same approach as we did for `Book`/`BookInstance`.
+1. For the `BookInstance` list view, add code to display the book, status, due back date, and id (rather than the default `__str__()` text).
+2. Add an inline listing of `Book` items to the `Author` detail view using the same approach as we did for `Book`/`BookInstance`.
 
 ## Summary
 

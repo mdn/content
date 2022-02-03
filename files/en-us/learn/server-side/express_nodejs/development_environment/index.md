@@ -77,12 +77,12 @@ In order to use _Express_ you will first have to install _Nodejs_ and the [Node 
 
 Installing _Node_ and _NPM_ on Windows and macOS is straightforward because you can just use the provided installer:
 
-1.  Download the required installer:
+1. Download the required installer:
 
-    1.  Go to <https://nodejs.org/en/>
-    2.  Select the button to download the LTS build that is "Recommended for most users".
+    1. Go to <https://nodejs.org/en/>
+    2. Select the button to download the LTS build that is "Recommended for most users".
 
-2.  Install Node by double-clicking on the downloaded file and following the installation prompts.
+2. Install Node by double-clicking on the downloaded file and following the installation prompts.
 
 ### Ubuntu 20.04
 
@@ -113,7 +113,7 @@ The _Nodejs_ package manager _NPM_ should also have been installed, and can be t
 
 As a slightly more exciting test let's create a very basic "pure node" server that prints out "Hello World" in the browser when you visit the correct URL in your browser:
 
-1.  Copy the following text into a file named **hellonode.js**. This uses pure _Node_ features (nothing from Express) and some ES6 syntax:
+1. Copy the following text into a file named **hellonode.js**. This uses pure _Node_ features (nothing from Express) and some ES6 syntax:
 
     ```js
     //Load HTTP module
@@ -140,14 +140,14 @@ As a slightly more exciting test let's create a very basic "pure node" server th
 
     > **Note:** Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!
 
-2.  Start the server by navigating into the same directory as your `hellonode.js` file in your command prompt, and calling `node` along with the script name, like so:
+2. Start the server by navigating into the same directory as your `hellonode.js` file in your command prompt, and calling `node` along with the script name, like so:
 
     ```bash
     >node hellonode.js
     Server running at http://127.0.0.1:3000/
     ```
 
-3.  Navigate to the URL `http://127.0.0.1:3000`. If everything is working, the browser should display the string "Hello World".
+3. Navigate to the URL `http://127.0.0.1:3000`. If everything is working, the browser should display the string "Hello World".
 
 ## Using NPM
 
@@ -163,14 +163,14 @@ The following steps show how you can use NPM to download a package, save it into
 
 > **Note:** Here we show the instructions to fetch and install the _Express_ package. Later on we'll show how this package, and others, are already specified for us using the *Express Application Generator*. This section is provided because it is useful to understand how NPM works and what is being created by the application generator.
 
-1.  First create a directory for your new application and navigate into it:
+1. First create a directory for your new application and navigate into it:
 
     ```bash
     mkdir myapp
     cd myapp
     ```
 
-2.  Use the npm `init` command to create a **package.json** file for your application. This command prompts you for a number of things, including the name and version of your application and the name of the initial entry point file (by default this is **index.js**). For now, just accept the defaults:
+2. Use the npm `init` command to create a **package.json** file for your application. This command prompts you for a number of things, including the name and version of your application and the name of the initial entry point file (by default this is **index.js**). For now, just accept the defaults:
 
     ```bash
     npm init
@@ -192,9 +192,9 @@ The following steps show how you can use NPM to download a package, save it into
     }
     ```
 
-3.  Now install Express in the `myapp` directory and save it in the dependencies list of your **package.json** file
+3. Now install Express in the `myapp` directory and save it in the dependencies list of your **package.json** file
 
-4.  ```bash
+4. ```bash
     npm install express
     ```
 
@@ -217,7 +217,7 @@ The following steps show how you can use NPM to download a package, save it into
     }
     ```
 
-5.  To use the Express library you call the `require()` function in your index.js file to include it in your application.
+5. To use the Express library you call the `require()` function in your index.js file to include it in your application.
     Create this file now, in the root of the "myapp" application directory, and give it the following contents:
 
     ```js
@@ -240,14 +240,14 @@ The following steps show how you can use NPM to download a package, save it into
 
     > **Note:** The backticks in the `` `Example app listening on port ${port}!` `` let us interpolate the value of `$port` into the string.
 
-6.  You can start the server by calling node with the script in your command prompt:
+6. You can start the server by calling node with the script in your command prompt:
 
     ```bash
     >node index.js
     Example app listening on port 3000
     ```
 
-7.  Navigate to the URL `http://127.0.0.1:3000/`.
+7. Navigate to the URL `http://127.0.0.1:3000/`.
     If everything is working, the browser should display the string "Hello World!".
 
 ### Development dependencies

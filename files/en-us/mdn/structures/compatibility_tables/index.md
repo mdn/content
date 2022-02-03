@@ -45,25 +45,25 @@ git remote -v
 
 Now, whenever you want to update your fork, you can do so by:
 
-1.  Making sure you are in the main branch:
+1. Making sure you are in the main branch:
 
     ```bash
     git checkout main
     ```
 
-2.  fetching the up-to-date repo contents using the following:
+2. fetching the up-to-date repo contents using the following:
 
     ```bash
     git fetch upstream
     ```
 
-3.  rebasing the contents of your main branch with the official repo's contents:
+3. rebasing the contents of your main branch with the official repo's contents:
 
     ```bash
     git rebase upstream/main
     ```
 
-4.  pushing these updates back to your remote fork using this:
+4. pushing these updates back to your remote fork using this:
 
     ```bash
     git push
@@ -73,9 +73,9 @@ Now, whenever you want to update your fork, you can do so by:
 
 Next, go to your remote fork (it will be at `https://github.com/your-username/browser-compat-data`) and create a new branch to store your changes for this data addition. This can be done by:
 
-1.  Clicking on the "Branch: Main" button.
-2.  Entering a new branch name into the "Find or create a branch..." text field.
-3.  Pressing the resulting "Create branch _name-of-branch_ from Main" button.
+1. Clicking on the "Branch: Main" button.
+2. Entering a new branch name into the "Find or create a branch..." text field.
+3. Pressing the resulting "Create branch _name-of-branch_ from Main" button.
 
 For example, if you were wanting to add data for the WebVR API, you'd create a branch called something like "webvr".
 

@@ -104,8 +104,8 @@ Our `Alert` component will displayed by the `App` component, but any component c
 
 Let's start by creating a writable store. Any component will be able to write to this store, and the `Alert` component will subscribe to it and display a message whenever the store is modified.
 
-1.  Create a new file — `stores.js` — inside your `src` directory.
-2.  Give it the following content:
+1. Create a new file — `stores.js` — inside your `src` directory.
+2. Give it the following content:
 
     ```js
     import { writable } from 'svelte/store'
@@ -121,8 +121,8 @@ In the above code we import the `writable()` function from `svelte/store` and us
 
 Let's now create our `Alert` component and see how we can read values from the store.
 
-1.  Create another new file named `src/components/Alert.svelte`.
-2.  Give it the following content:
+1. Create another new file named `src/components/Alert.svelte`.
+2. Give it the following content:
 
     ```html
     <script>
@@ -190,20 +190,20 @@ This setup allows us to work with stores in a reactive way. When the value of th
 
 Let's now use our component.
 
-1.  In `App.svelte` we'll import the component; add the following import statement below the existing one:
+1. In `App.svelte` we'll import the component; add the following import statement below the existing one:
 
     ```js
     import Alert from './components/Alert.svelte'
     ```
 
-2.  Then call the `Alert` component just above the `Todos` call, like this:
+2. Then call the `Alert` component just above the `Todos` call, like this:
 
     ```html
     <Alert />
     <Todos {todos} />
     ```
 
-3.  Load your test app now, and you should now see the `Alert` message on screen. You may click on it to dismiss it.
+3. Load your test app now, and you should now see the `Alert` message on screen. You may click on it to dismiss it.
 
     ![A simple notification in the top right hand corner of an app saying welcome to todo list app](01-alert-message.png)
 
@@ -238,7 +238,7 @@ That's too much boilerplate for Svelte! Being a compiler, Svelte has more resour
 
 And `$myStore` will be fully reactive. This also applies to your own custom stores. If you implement the `subscribe()` and `set()` methods, like we'll do later, the reactive `$store` syntax will also apply to your stores.
 
-1.  Let's apply this to our `Alert` component. Update the `<script>` and markup sections of `Alert.svelte` as follows:
+1. Let's apply this to our `Alert` component. Update the `<script>` and markup sections of `Alert.svelte` as follows:
 
     ```html
     <script>
@@ -252,7 +252,7 @@ And `$myStore` will be fully reactive. This also applies to your own custom stor
     {/if}
     ```
 
-2.  Check your app again and you'll see that this works just like before. That's much better!
+2. Check your app again and you'll see that this works just like before. That's much better!
 
 Behind the scenes Svelte has generated the code to declare the local variable `$alert`, subscribe to the `alert` store, update `$alert` whenever the store's content is modified, and unsubscribe when the component is unmounted. It will also generate the `alert.set(...)` statements whenever we assign a value to `$alert`.
 
@@ -264,13 +264,13 @@ This is a perfect example of how Svelte puts the compiler in charge of better de
 
 Writing to our store is just a matter of importing it and executing `$store = 'new value'`. Let's use it in our `Todos` component.
 
-1.  Add the following `import` statement below the existing ones:
+1. Add the following `import` statement below the existing ones:
 
     ```js
     import { alert } from '../stores.js'
     ```
 
-2.  Update your `addTodo()` function like so:
+2. Update your `addTodo()` function like so:
 
     ```js
     function addTodo(name) {
@@ -279,7 +279,7 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
     }
     ```
 
-3.  Update `removeTodo()` like so:
+3. Update `removeTodo()` like so:
 
     ```js
     function removeTodo(todo) {
@@ -289,7 +289,7 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
     }
     ```
 
-4.  Update the `updateTodo()` function to this:
+4. Update the `updateTodo()` function to this:
 
     ```js
     function updateTodo(todo) {
@@ -300,7 +300,7 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
     }
     ```
 
-5.  Add the following reactive block beneath the block that starts with `let filter = 'all'`:
+5. Add the following reactive block beneath the block that starts with `let filter = 'all'`:
 
     ```js
     $: {
@@ -310,7 +310,7 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
     }
     ```
 
-6.  And finally for now, update the `const checkAllTodos` and `const removeCompletedTodos` blocks as follows:
+6. And finally for now, update the `const checkAllTodos` and `const removeCompletedTodos` blocks as follows:
 
     ```js
     const checkAllTodos = (completed) => {
@@ -323,7 +323,7 @@ Writing to our store is just a matter of importing it and executing `$store = 'n
     }
     ```
 
-7.  So basically, we've imported the store and updated it on every event, which causes a new alert to show each time. Have a look at your app again, and try adding/deleting/updating a few todos!
+7. So basically, we've imported the store and updated it on every event, which causes a new alert to show each time. Have a look at your app again, and try adding/deleting/updating a few todos!
 
 As soon as we execute `$alert = ...`, Svelte will run `alert.set(...)`. Our `Alert` component — like every subscriber to the alert store — will be notified when it receives a new value, and thanks to Svelte reactivity its markup will be updated.
 
@@ -337,7 +337,7 @@ It's a bit annoying having to click on the alert to get rid of it. It would be b
 
 Lets see how to do that. We'll specify a prop with the milliseconds to wait before clearing the notification, and we'll define a timeout to remove the alert. We'll also take care of clearing the timeout when the `Alert` component is unmounted to prevent memory leaks.
 
-1.  Update the `<script>` section of your `Alert.svelte` component like so:
+1. Update the `<script>` section of your `Alert.svelte` component like so:
 
     ```js
     <script>
@@ -364,7 +364,7 @@ Lets see how to do that. We'll specify a prop with the milliseconds to wait befo
     </script>
     ```
 
-2.  And update the `Alert.svelte` markup section like so:
+2. And update the `Alert.svelte` markup section like so:
 
     ```html
     {#if visible}
@@ -407,13 +407,13 @@ Our little app lets us manage our todos quite easily, but is rather useless if w
 
 First we need some way for our `Todos` component to give back the updated todos to its parent. We could emit an updated event with the list of todos, but it's easier just to bind the `todos` variable. Let's open `App.svelte` and try it.
 
-1.  First of all, add the following line below your `todos` array:
+1. First of all, add the following line below your `todos` array:
 
     ```js
     $: console.log('todos', todos)
     ```
 
-2.  Next, update your `Todos` component call as follows:
+2. Next, update your `Todos` component call as follows:
 
     ```html
     <Todos bind:todos />
@@ -421,7 +421,7 @@ First we need some way for our `Todos` component to give back the updated todos 
 
     > **Note:** `<Todos bind:todos />` is just a shortcut for `<Todos bind:todos={todos} />`.
 
-3.  Go back to your app, try adding some todos, then go to your developer tools web console. You'll see that every modification we make to our todos is reflected in the `todos` array defined in `App.svelte` thanks to the `bind` directive.
+3. Go back to your app, try adding some todos, then go to your developer tools web console. You'll see that every modification we make to our todos is reflected in the `todos` array defined in `App.svelte` thanks to the `bind` directive.
 
 Now we have to find a way to persist these todos. We could implement some code in our `App.svelte` component to read and save our todos to [web storage](/en-US/docs/Web/API/Web_Storage_API) or to a web service.
 But wouldn't it be better if we could develop some generic store that allows us to persist its content? This would allow us to use it just like any other store, and abstract away the persistence mechanism. We could create a store that syncs its content to web storage, and later develop another one that syncs against a web service. Switching between them would be trivial and we wouldn't have to touch `App.svelte` at all.
@@ -430,13 +430,13 @@ But wouldn't it be better if we could develop some generic store that allows us 
 
 So let's start by using a regular writable store to save our todos.
 
-1.  Open the file `stores.js` and add the following store below the existing one:
+1. Open the file `stores.js` and add the following store below the existing one:
 
     ```js
     export const todos = writable([])
     ```
 
-2.  That was easy. Now we need to import the store and use it in `App.svelte`. Just remember that to access the todos now we have to use the `$todos` reactive `$store` syntax.
+2. That was easy. Now we need to import the store and use it in `App.svelte`. Just remember that to access the todos now we have to use the `$todos` reactive `$store` syntax.
 
     Update your `App.svelte` file like this:
 
@@ -459,15 +459,15 @@ So let's start by using a regular writable store to save our todos.
     <Todos bind:todos={$todos} />
     ```
 
-3.  Try it out; everything should work. Next we'll see how to define our own custom stores.
+3. Try it out; everything should work. Next we'll see how to define our own custom stores.
 
 ### How to implement a store contract: The theory
 
 You can create your own stores without relying on `svelte/store` by implementing the store contract. Its features must work like so:
 
-1.  A store must contain a `subscribe()` method, which must accept as its argument a subscription function. All of a store's active subscription functions must be called whenever the store's value changes.
-2.  The `subscribe()` method must return an `unsubscribe()` function, which when called must stop its subscription.
-3.  A store may optionally contain a `set()` method, which must accept as its argument a new value for the store, and which synchronously calls all of the store's active subscription functions. A store with a `set()` method is called a writable store.
+1. A store must contain a `subscribe()` method, which must accept as its argument a subscription function. All of a store's active subscription functions must be called whenever the store's value changes.
+2. The `subscribe()` method must return an `unsubscribe()` function, which when called must stop its subscription.
+3. A store may optionally contain a `set()` method, which must accept as its argument a new value for the store, and which synchronously calls all of the store's active subscription functions. A store with a `set()` method is called a writable store.
 
 First of all, let's add the following `console.log()` statements to our `App.svelte` component to see the `todos` store and its content in action. Add these lines below the `todos` array:
 
@@ -544,8 +544,8 @@ So, to implement a custom store that saves its content to web storage, we will n
 
 Moreover, because web storage only supports saving string values, we will have to convert from object to string when saving, and vice versa when we are loading the value from local storage.
 
-1.  Create a new file called `localStore.js`, in your `src` directory.
-2.  Give it the following content:
+1. Create a new file called `localStore.js`, in your `src` directory.
+2. Give it the following content:
 
     ```js
     import { writable } from 'svelte/store';
@@ -582,7 +582,7 @@ Moreover, because web storage only supports saving string values, we will have t
 
     Notice that we only had to redefine the `set()` method, adding the operation to save the value to web storage. The rest of the code is mostly initializing and converting stuff.
 
-3.  Now we will use our local store from `stores.js` to create our locally persisted todos store.
+3. Now we will use our local store from `stores.js` to create our locally persisted todos store.
 
     Update `stores.js` like so:
 
@@ -602,7 +602,7 @@ Moreover, because web storage only supports saving string values, we will have t
 
     Using `localStore('mdn-svelte-todo', initialTodos)`, we are configuring the store to save the data in web storage under the key `mdn-svelte-todo`. We also set a couple of todos as initial values.
 
-4.  Now let's get rid of the hardcoded todos in `App.svelte`. Update its contents like this — we are basically just deleting the `$todos` array and the `console.log()` statements:
+4. Now let's get rid of the hardcoded todos in `App.svelte`. Update its contents like this — we are basically just deleting the `$todos` array and the `console.log()` statements:
 
     ```html
     <script>
@@ -618,8 +618,8 @@ Moreover, because web storage only supports saving string values, we will have t
 
     > **Note:** This is the only change we have to make in order to use our custom store. `App.svelte` is completely transparent in terms of what kind of store we are using.
 
-5.  Go ahead and try your app again. Create a few todos and then close the browser. You may even stop the Svelte server and restart it. Upon revisiting the URL, your todos will still be there.
-6.  You can also inspect it in the DevTools console. In the web console, enter the command `localStorage.getItem('mdn-svelte-todo')`. Make some changes to your app, like pressing the _Uncheck All_ button, and check the web storage content once more. You will get something like this:
+5. Go ahead and try your app again. Create a few todos and then close the browser. You may even stop the Svelte server and restart it. Upon revisiting the URL, your todos will still be there.
+6. You can also inspect it in the DevTools console. In the web console, enter the command `localStorage.getItem('mdn-svelte-todo')`. Make some changes to your app, like pressing the _Uncheck All_ button, and check the web storage content once more. You will get something like this:
 
     ![todo app with web console view alongside it, showing that when a todo is changed in the app, the corresponding entry is changed in web storage](03-persisting-todos-to-local-storage.png)
 
@@ -633,13 +633,13 @@ A transition is applied with the [transition:fn](https://svelte.dev/docs#transit
 
 Let's give our `Alert` component a fly `transition`. We'll open the `Alert.svelte` file and import the `fly` function from the `svelte/transition` module.
 
-1.  Put the following `import` statement below the existing ones:
+1. Put the following `import` statement below the existing ones:
 
     ```js
     import { fly } from 'svelte/transition'
     ```
 
-2.  To use it, update your opening `<div>` tag like so:
+2. To use it, update your opening `<div>` tag like so:
 
     ```html
     <div role="alert" on:click={() => visible = false}
@@ -657,7 +657,7 @@ Let's give our `Alert` component a fly `transition`. We'll open the `Alert.svelt
 
     > **Note:** The double curly braces are not special Svelte syntax. It's just a literal JavaScript object being passed as a parameter to the fly transition.
 
-3.  Try your app out again — you'll see that the notifications now look a bit more appealing.
+3. Try your app out again — you'll see that the notifications now look a bit more appealing.
 
 > **Note:** Being a compiler allows Svelte to optimize the size of our bundle by excluding features that are not used. In this case, if we compile our app for production with `npm run build`, our `public/build/bundle.js` file will weight a little less than 22KB. If we remove the `transitions:fly` directive Svelte is smart enough to realize the fly function is not being used and the `bundle.js` file size will drop down to just 18KB.
 

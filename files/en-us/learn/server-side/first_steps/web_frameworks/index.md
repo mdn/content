@@ -201,13 +201,13 @@ If you're an absolute beginner at programming then you'll probably choose your f
 
 > **Note:** Let's go to the main websites for [Django](https://www.djangoproject.com/) (Python) and [Express](https://expressjs.com/) (Node/JavaScript) and check out their documentation and community.
 >
-> 1.  Navigate to the main sites (linked above)
+> 1. Navigate to the main sites (linked above)
 >
 >     - Click on the Documentation menu links (named things like "Documentation, Guide, API Reference, Getting Started", etc.).
 >     - Can you see topics showing how to set up URL routing, templates, and databases/models?
 >     - Are the documents clear?
 >
-> 2.  Navigate to mailing lists for each site (accessible from Community links).
+> 2. Navigate to mailing lists for each site (accessible from Community links).
 >
 >     - How many questions have been posted in the last few days
 >     - How many have responses?

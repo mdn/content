@@ -87,11 +87,11 @@ Let's now look at the structure of one of these files ([\_locales/en/messages.js
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
-      }
-    }
+      "url" : {
+        "content" : "$1",
+        "example" : "https://developer.mozilla.org"
+      }
+    }
   }
 }
 ```
@@ -119,11 +119,11 @@ Here, we are retrieving message strings dependant on the browser's locale, rathe
 
 To call a message string like this, you need to specify it like this:
 
-1.  Two underscores, followed by
-2.  The string "MSG", followed by
-3.  One underscore, followed by
-4.  The name of the message you want to call as defined in `messages.json`, followed by
-5.  Two underscores
+1. Two underscores, followed by
+2. The string "MSG", followed by
+3. One underscore, followed by
+4. The name of the message you want to call as defined in `messages.json`, followed by
+5. Two underscores
 
 ```
 __MSG_ + messageName + __
@@ -166,7 +166,7 @@ var title = browser.i18n.getMessage("notificationTitle");
 var content = browser.i18n.getMessage("notificationContent", message.url);
 ```
 
-The first one just retrieves the `notificationTitle message` field from the available `messages.json` file most appropriate for the browser's current locale. The second one is similar, but it is being passed a URL as a second parameter. What gives? This is how you specify the content to replace the `$URL$` placeholder we see in the `notificationContent message` field:
+The first one just retrieves the `notificationTitle message` field from the available `messages.json` file most appropriate for the browser's current locale. The second one is similar, but it is being passed a URL as a second parameter. What gives? This is how you specify the content to replace the `$URL$` placeholder we see in the `notificationContent message` field:
 
 ```json
 "notificationContent": {
@@ -183,7 +183,7 @@ The first one just retrieves the `notificationTitle message` field from the avai
 
 The `"placeholders"` member defines all the placeholders, and where they are retrieved from. The `"url"` placeholder specifies that its content is taken from $1, which is the first value given inside the second parameter of `getMessage()`. Since the placeholder is called `"url"`, we use `$URL$` to call it inside the actual message string (so for `"name"` you'd use `$NAME$`, etc.) If you have multiple placeholders, you can provide them inside an array that is given to {{WebExtAPIRef("i18n.getMessage()")}} as the second parameter — `[a, b, c]`will be available as`$1`, `$2`, and `$3`, and so on, inside `messages.json`.
 
-Let's run through an example: the original `notificationContent` message string in the `en/messages.json` file is
+Let's run through an example: the original `notificationContent` message string in the `en/messages.json` file is
 
 ```
 You clicked $URL$.
@@ -232,10 +232,10 @@ In addition, you can use such substitutions to specify parts of the string that 
 
 Locales can be specified using only a language code, like `fr` or `en`, or they may be further qualified with a region code, like `en_US` or `en_GB`, which describes a regional variant of the same basic language. When you ask the i18n system for a string, it will select a string using the following algorithm:
 
-1.  if there is a `messages.json` file for the exact current locale, and it contains the string, return it.
-2.  Otherwise, if the current locale is qualified with a region (e.g. `en_US`) and there is a `messages.json` file for the regionless version of that locale (e.g. `en`), and that file contains the string, return it.
-3.  Otherwise, if there is a `messages.json` file for the `default_locale` defined in the `manifest.json`, and it contains the string, return it.
-4.  Otherwise return an empty string.
+1. if there is a `messages.json` file for the exact current locale, and it contains the string, return it.
+2. Otherwise, if the current locale is qualified with a region (e.g. `en_US`) and there is a `messages.json` file for the regionless version of that locale (e.g. `en`), and that file contains the string, return it.
+3. Otherwise, if there is a `messages.json` file for the `default_locale` defined in the `manifest.json`, and it contains the string, return it.
+4. Otherwise return an empty string.
 
 Take the following example:
 
@@ -247,24 +247,24 @@ Take the following example:
 
       - messages.json
 
-        - `{ "colorLocalised": { "message": "colour", "description": "Color." }, ... }`
+        - `{ "colorLocalized": { "message": "colour", "description": "Color." }, ... }`
 
       en
 
       - messages.json
 
-        - `{ "colorLocalised": { "message": "color", "description": "Color." }, ... }`
+        - `{ "colorLocalized": { "message": "color", "description": "Color." }, ... }`
 
     - fr
 
       - messages.json
 
-        - `{ "colorLocalised": { "message": "couleur", "description": "Color." }, ...}`
+        - `{ "colorLocalized": { "message": "couleur", "description": "Color." }, ...}`
 
 Suppose the `default_locale` is set to `fr`, and the browser's current locale is `en_GB`:
 
-- If the extension calls `getMessage("colorLocalised")`, it will return "colour".
-- If "colorLocalised" were not present in `en_GB`, then `getMessage("colorLocalised")`, would return "color", not "couleur".
+- If the extension calls `getMessage("colorLocalized")`, it will return "colour".
+- If "colorLocalized" were not present in `en_GB`, then `getMessage("colorLocalized")`, would return "color", not "couleur".
 
 ## Predefined messages
 

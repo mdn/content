@@ -103,23 +103,23 @@ Start the development server and navigate to the admin site in your local web br
 
 First lets create a new group for our library members.
 
-1.  Click the **Add** button (next to Group) to create a new _Group_; enter the **Name** "Library Members" for the group.
+1. Click the **Add** button (next to Group) to create a new _Group_; enter the **Name** "Library Members" for the group.
     ![Admin site - add group](admin_authentication_add_group.png)
-2.  We don't need any permissions for the group, so just press **SAVE** (you will be taken to a list of groups).
+2. We don't need any permissions for the group, so just press **SAVE** (you will be taken to a list of groups).
 
 Now let's create a user:
 
-1.  Navigate back to the home page of the admin site
-2.  Click the **Add** button next to _Users_ to open the _Add user_ dialog box.![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
-3.  Enter an appropriate **Username** and **Password**/**Password confirmation** for your test user
-4.  Press **SAVE** to create the user.
+1. Navigate back to the home page of the admin site
+2. Click the **Add** button next to _Users_ to open the _Add user_ dialog box.![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
+3. Enter an appropriate **Username** and **Password**/**Password confirmation** for your test user
+4. Press **SAVE** to create the user.
 
     The admin site will create the new user and immediately take you to a _Change user_ screen where you can change your **username** and add information for the User model's optional fields. These fields include the first name, last name, email address, and the user's status and permissions (only the **Active** flag should be set). Further down you can specify the user's groups and permissions, and see important dates related to the user (e.g. their join date and last login date).
     ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
 
-5.  In the _Groups_ section, select **Library Member** group from the list of _Available groups_, and then press the **right-arrow** between the boxes to move it into the _Chosen groups_ box.
+5. In the _Groups_ section, select **Library Member** group from the list of _Available groups_, and then press the **right-arrow** between the boxes to move it into the _Chosen groups_ box.
     ![Admin site - add user to group](admin_authentication_user_add_group.png)
-6.  We don't need to do anything else here, so just select **SAVE** again, to go to the list of users.
+6. We don't need to do anything else here, so just select **SAVE** again, to go to the list of users.
 
 That's it! Now you have a "normal library member" account that you will be able to use for testing (once we've implemented the pages to enable them to log in).
 

@@ -143,7 +143,7 @@ Or use the following technique to make your overlay work on both Firefox 2 and F
 
 ### Changed boxes
 
-Extensions that attempt to overlay onto the "appcontent" box try to float chrome over document content will no longer display that material. You should update your extension to use the new [`<xul:panel>`](/en-US/docs/Mozilla/Tech/XUL/panel) XUL element. If you wish to keep the panel from automatically disappearing after a delay, you can set the `noautohide` attribute to `true`.
+Extensions that attempt to overlay onto the "appcontent" box try to float chrome over document content will no longer display that material. You should update your extension to use the new [`<xul:panel>`](/en-US/docs/Mozilla/Tech/XUL/panel) XUL element. If you wish to keep the panel from automatically disappearing after a delay, you can set the `noautohide` attribute to `true`.
 
 ## Other changes
 
@@ -155,8 +155,8 @@ _Add simple changes you had to make while updating your extension to work with F
 - Changes to [nsISupports proxies](/en-US/docs/nsISupports_proxies) and possibly to threading-related interfaces need to be documented.
 - If you use XML processing instructions, such as `<?xml-stylesheet ?>` in your XUL files, be aware of the changes made in {{ Bug(319654) }}:
 
-  1.  XML PIs are now added to a XUL document's DOM. This means {{ Domxref("document.firstChild") }} is no longer guaranteed to be the root element. If you need to get the root document in your script, use {{ Domxref("document.documentElement") }} instead.
-  2.  `<?xml-stylesheet ?>` and `<?xul-overlay ?>` processing instructions now have no effect outside the document prolog.
+  1. XML PIs are now added to a XUL document's DOM. This means {{ Domxref("document.firstChild") }} is no longer guaranteed to be the root element. If you need to get the root document in your script, use {{ Domxref("document.documentElement") }} instead.
+  2. `<?xml-stylesheet ?>` and `<?xul-overlay ?>` processing instructions now have no effect outside the document prolog.
 
 - `window.addEventListener("load", myFunc, true)` is not fired when loading web content (browser page loads). This is due to {{ Bug(296639) }} which changes the way inner and outer windows communicate. The simple fix here is to use `gBrowser.addEventListener("load", myFunc, true)` as described [here](/en-US/docs/Code_snippets/Tabbed_browser#Detecting_page_load) and works in Firefox 2 as well.
 - `content.window.getSelection()` gives an object (which can be converted to a string by `toString()`), unlike the now deprecated `content.document.getSelection()` which returns a string
