@@ -54,7 +54,7 @@ _The following events may be fired on a {{HTMLElement("track")}} element, in add
 
 - {{domxref("HTMLTrackElement.cuechange_event", "cuechange")}}
   - : Sent when the underlying {{domxref("TextTrack")}} has changed the currently-presented cues. This event is always sent to the `TextTrack` but is _also_ sent to the `HTMLTrackElement` if one is associated with the track.
-    You may also use the {{domxref("GlobalEventHandlers.oncuechange", "oncuechange")}} event handler to establish a handler for this event.
+    You may also use the `oncuechange` event handler to establish a handler for this event.
 
 ## Usage notes
 
