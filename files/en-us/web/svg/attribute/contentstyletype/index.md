@@ -71,6 +71,6 @@ The use of `contentStyleType` is therefore deprecated.
 
 ## See also
 
-* [MIME Part Two: Media Types \[RFC2046\]](https://www.ietf.org/rfc/rfc2046.txt)
-* {{SVGElement("style")}} element
-* {{SVGAttr("style")}} attribute
+- [MIME Part Two: Media Types \[RFC2046\]](https://www.ietf.org/rfc/rfc2046.txt)
+- {{SVGElement("style")}} element
+- {{SVGAttr("style")}} attribute

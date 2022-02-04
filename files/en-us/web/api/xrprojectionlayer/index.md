@@ -37,9 +37,9 @@ _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 - {{domxref("XRCompositionLayer.chromaticAberrationCorrection")}}
   - : A boolean enabling optical chromatic aberration correction for the layer if the device supports it, {{jsxref("null")}} otherwise.
 - {{domxref("XRProjectionLayer.fixedFoveation")}}
-   - : A number indicating the amount of foveation used by the XR compositor for the layer. Fixed Foveated Rendering (FFR) renders the edges of the eye textures at a lower resolution than the center and reduces the GPU load.
+  - : A number indicating the amount of foveation used by the XR compositor for the layer. Fixed Foveated Rendering (FFR) renders the edges of the eye textures at a lower resolution than the center and reduces the GPU load.
 - {{domxref("XRProjectionLayer.ignoreDepthValues")}} {{ReadOnlyInline}}
-   - : A boolean indicating that the XR compositor is not making use of depth buffer values when rendering the layer.
+  - : A boolean indicating that the XR compositor is not making use of depth buffer values when rendering the layer.
 - {{domxref("XRCompositionLayer.layout")}} {{ReadOnlyInline}}
   - : The layout type of the layer.
 - {{domxref("XRCompositionLayer.mipLevels")}} {{ReadOnlyInline}}

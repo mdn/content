@@ -55,7 +55,6 @@ _This interface also inherits methods from {{domxref("EventTarget")}}._
   - : Fired when cues are entered and exited. A given text cue appears when the cue is entered and disappears when the cue is exited.
     Also available via the `oncuechange` property.
 
-
 ## Example
 
 The following example adds a new `TextTrack` to a video, then sets it to display using {{domxref("TextTrack.mode")}}.

@@ -91,17 +91,17 @@ If any of the radio roles in a group has `aria-required="true"` set, it is as if
 
 ## Keyboard interactions
 
-  - <kbd>Tab</kbd> + <kbd>Shift</kbd>
-    - : Move focus into and out of the radio group. When focus moves into a radio group. If a radio button is checked, focus is set on the checked button. If none of the radio buttons are checked, focus is set on the first radio button in the group.
+- <kbd>Tab</kbd> + <kbd>Shift</kbd>
+  - : Move focus into and out of the radio group. When focus moves into a radio group. If a radio button is checked, focus is set on the checked button. If none of the radio buttons are checked, focus is set on the first radio button in the group.
 
-| - <kbd>Space</kbd>
-    - : Checks the radio if not already checked. Unchecks all the others in the radiogroup. |
+- <kbd>Space</kbd>
+  - : Checks the radio if not already checked. Unchecks all the others in the radiogroup. |
 
-  - <kbd>Right Arrow</kbd> and <kbd>Down Arrow</kbd>
-    - : Move focus to the next radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the last button, focus moves to the first button.
+- <kbd>Right Arrow</kbd> and <kbd>Down Arrow</kbd>
+  - : Move focus to the next radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the last button, focus moves to the first button.
 
-  - <kbd>Left Arrow</kbd> and <kbd>Up Arrow</kbd>
-    - : Move focus to the previous radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the first button, focus moves to the last button.
+- <kbd>Left Arrow</kbd> and <kbd>Up Arrow</kbd>
+  - : Move focus to the previous radio button in the group, unchecking the previously focused button, and checking the newly focused button. If focus is on the first button, focus moves to the last button.
 
 ### Radios in a toolbar
 

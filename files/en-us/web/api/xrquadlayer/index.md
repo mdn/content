@@ -35,13 +35,13 @@ To present layers to the XR device, add them to the `layers` render state using 
 _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 
 - {{domxref("XRQuadLayer.height")}}
-   - : Represents the height of the layer in meters.
+  - : Represents the height of the layer in meters.
 - {{domxref("XRQuadLayer.space")}}
-   - : An {{domxref("XRSpace")}} representing the layer's spatial relationship with the user’s physical environment.
+  - : An {{domxref("XRSpace")}} representing the layer's spatial relationship with the user’s physical environment.
 - {{domxref("XRQuadLayer.transform")}}
-   - : An {{domxref("XRRigidTransform")}} representing the offset and orientation relative to `space`.
+  - : An {{domxref("XRRigidTransform")}} representing the offset and orientation relative to `space`.
 - {{domxref("XRQuadLayer.width")}}
-   - : Represents the width of the layer in meters.
+  - : Represents the width of the layer in meters.
 
 ## Methods
 

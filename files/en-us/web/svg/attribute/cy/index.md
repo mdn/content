@@ -11,9 +11,9 @@ The **`cy`** attribute define the y-axis coordinate of a center point.
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("circle")}}
-* {{SVGElement("ellipse")}}
-* {{SVGElement("radialGradient")}}
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("radialGradient")}}
 
 ## Example
 

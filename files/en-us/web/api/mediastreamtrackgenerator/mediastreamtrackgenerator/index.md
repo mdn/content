@@ -22,10 +22,10 @@ new MediaStreamTrackGenerator(options);
 
 - `options`
   - : An object containing the property `kind`, which is a {{domxref("DOMString", "string")}} with one of the following values:
-      - `"audio"`
-        - : Specifies that the stream accepts {{domxref("AudioTrack")}} objects.
-      - `"video"`
-        - : Specifies that the stream accepts {{domxref("VideoTrack")}} objects.
+    - `"audio"`
+      - : Specifies that the stream accepts {{domxref("AudioTrack")}} objects.
+    - `"video"`
+      - : Specifies that the stream accepts {{domxref("VideoTrack")}} objects.
 
 ## Exceptions
 

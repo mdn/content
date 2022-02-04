@@ -57,11 +57,11 @@ html, body, svg {
 </table>
 
 - `CSS`
-    - : This value specifies that the value of {{SVGAttr("attributeName")}} is the name of a CSS property defined as animatable.
+  - : This value specifies that the value of {{SVGAttr("attributeName")}} is the name of a CSS property defined as animatable.
 - `XML`
-    - : This value specifies that the value of {{SVGAttr("attributeName")}} is the name of an XML attribute defined as animatable in the default XML namespace for the target element.
+  - : This value specifies that the value of {{SVGAttr("attributeName")}} is the name of an XML attribute defined as animatable in the default XML namespace for the target element.
 - `auto`
-    - : This value specifies that the implementation should match the {{SVGAttr("attributeName")}} to an attribute for the target element. User agents first search through the list of CSS properties for a matching property name, and if none is found, search the default XML namespace for the element.
+  - : This value specifies that the implementation should match the {{SVGAttr("attributeName")}} to an attribute for the target element. User agents first search through the list of CSS properties for a matching property name, and if none is found, search the default XML namespace for the element.
 
 ## Specifications
 

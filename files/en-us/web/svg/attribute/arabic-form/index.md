@@ -38,13 +38,13 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `initial`
-    - : This value indicates that the glyph represents the initial form.
+  - : This value indicates that the glyph represents the initial form.
 - `medial`
-    - : This value indicates that the glyph represents the medial form.
+  - : This value indicates that the glyph represents the medial form.
 - `terminal`
-    - : This value indicates that the glyph represents the terminal form.
+  - : This value indicates that the glyph represents the terminal form.
 - `isolated`
-    - : This value indicates that the glyph represents the isolated form.
+  - : This value indicates that the glyph represents the isolated form.
 
 ## Specifications
 

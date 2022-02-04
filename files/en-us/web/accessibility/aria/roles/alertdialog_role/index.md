@@ -31,8 +31,8 @@ The `alertdialog` role is not to be used as a replacement for other dialogs, inc
 
 Adding `role="alertdialog"` alone is not sufficient to make an alert dialog accessible. The following also need to be done:
 
-  - The alert dialog must be properly labeled
-  - Keyboard focus must be managed correctly
+- The alert dialog must be properly labeled
+- Keyboard focus must be managed correctly
 
 The `alertdialog` must have an accessible name, defined with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label). The alert dialog text must have an accessible description using [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby).
 

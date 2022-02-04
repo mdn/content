@@ -29,10 +29,10 @@ getSubImage(layer, frame, eye)
   - : The {{domxref("XRFrame")}} frame to use for rendering.
 - `eye` {{optional_inline}}
   - : An optional {{domxref("XRView.eye")}} indicating which view's eye to use for rendering. Possible values:
-     - `left`: The {{domxref("XRView")}} represents the point-of-view of the viewer's left eye.
-     - `right`: The view represents the viewer's right eye.
-     - `none`: The view describes a monoscopic view, or the view otherwise doesn't represent a particular eye's point-of-view.
-     Defaults to `none`.
+    - `left`: The {{domxref("XRView")}} represents the point-of-view of the viewer's left eye.
+    - `right`: The view represents the viewer's right eye.
+    - `none`: The view describes a monoscopic view, or the view otherwise doesn't represent a particular eye's point-of-view.
+    Defaults to `none`.
 
 ### Return value
 
@@ -42,10 +42,10 @@ A {{domxref("XRWebGLSubImage")}} object.
 
 A {{jsxref("TypeError")}} is thrown,
 
-  - if `layer` is not in the [session's `layer` array](/en-US/docs/Web/API/XRSession/updateRenderState#setting_the_layers_array).
-  - if `layer` is a {{domxref("XRProjectionLayer")}}.
-  - if the layer's [`layout`](/en-US/docs/Web/API/XRCompositionLayer/layout) property is `default`.
-  - if the layer's [`layout`](/en-US/docs/Web/API/XRCompositionLayer/layout) property is `stereo` and `eye`is `none`.
+- if `layer` is not in the [session's `layer` array](/en-US/docs/Web/API/XRSession/updateRenderState#setting_the_layers_array).
+- if `layer` is a {{domxref("XRProjectionLayer")}}.
+- if the layer's [`layout`](/en-US/docs/Web/API/XRCompositionLayer/layout) property is `default`.
+- if the layer's [`layout`](/en-US/docs/Web/API/XRCompositionLayer/layout) property is `stereo` and `eye`is `none`.
 
 ## Examples
 
