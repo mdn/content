@@ -10,7 +10,7 @@ browser-compat: api.SerialPort.disconnect_event
 ---
 {{securecontext_header}}{{APIRef("Serial API")}}
 
-The **`disconnect`** event of the {{domxref("SerialPort")}} interface is fired when the port has disconnected from the device. This event is only fired for ports associated with removable devices such as those connected via USB. 
+The **`disconnect`** event of the {{domxref("SerialPort")}} interface is fired when the port has disconnected from the device. This event is only fired for ports associated with removable devices such as those connected via USB.
 
 This event bubbles to the instance of {{domxref("Serial")}} that returned this interface.
 
@@ -26,7 +26,7 @@ ondisconnect = event => { };
 
 ## Event type
 
-A generic {{domxref("Event")}}. 
+A generic {{domxref("Event")}}.
 
 ## Bubbling
 
@@ -65,6 +65,6 @@ navigator.serial.addEventListener('disconnect', event => {
 
 {{Compat}}
 
-## See also 
+## See also
 
 - {{domxref("SerialPort.connect_event", "connect")}} event

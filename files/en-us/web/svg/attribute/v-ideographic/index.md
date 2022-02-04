@@ -41,7 +41,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 * `<number>`
-    * : This value indicates the alignment coordinate for the glyphs.
+  * : This value indicates the alignment coordinate for the glyphs.
 
 ## Specifications
 

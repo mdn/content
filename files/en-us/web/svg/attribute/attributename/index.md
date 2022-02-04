@@ -12,10 +12,10 @@ The **`attributeName`** attribute indicates the name of the CSS property or attr
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("animate")}}
-* {{SVGElement("animateColor")}}
-* {{SVGElement("animateTransform")}}
-* {{SVGElement("set")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("set")}}
 
 ## Example
 
@@ -55,8 +55,8 @@ html, body, svg {
   </tbody>
 </table>
 
-* `<name>`
-    * : This value indicates the name of the CSS property or attribute of the target element to be animated.
+- `<name>`
+    - : This value indicates the name of the CSS property or attribute of the target element to be animated.
 
 ## Specifications
 
@@ -88,4 +88,4 @@ html, body, svg {
 
 ## See also
 
-* [SMIL Animation specification](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute)
+- [SMIL Animation specification](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute)

@@ -67,6 +67,7 @@ var intOuterFramesetWidth = top.innerWidth;
 ## Demo
 
 ### HTML
+
 ```html
 <p>Resize the browser window to fire the <code>resize</code> event.</p>
 <p>Window height: <span id="height"></span></p>
@@ -74,6 +75,7 @@ var intOuterFramesetWidth = top.innerWidth;
 ```
 
 ### JavaScript
+
 ```js
 const heightOutput = document.querySelector("#height");
 const widthOutput = document.querySelector("#width");

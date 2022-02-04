@@ -45,22 +45,22 @@ new Intl.Collator(locales, options)
 
     - `co`
       - : Variant collations for certain locales. Possible values include:
-          - `big5han`
-          - `compat`
-          - `dict`
-          - `direct`
-          - `ducet`
-          - `eor`
-          - `gb2312`
-          - `phonebk`(only supported in German)
-          - `phonetic`
-          - `pinyin`
-          - `reformed`
-          - `searchjl`
-          - `stroke`
-          - `trad`
-          - `unihan`
-          - `zhuyin`
+        - `big5han`
+        - `compat`
+        - `dict`
+        - `direct`
+        - `ducet`
+        - `eor`
+        - `gb2312`
+        - `phonebk`(only supported in German)
+        - `phonetic`
+        - `pinyin`
+        - `reformed`
+        - `searchjl`
+        - `stroke`
+        - `trad`
+        - `unihan`
+        - `zhuyin`
         > **Note:**  This option can be also be set through the `options` property "`collation`".
     - `kn`
       - : Whether numeric collation should be used, such that "1" < "2" <
@@ -136,22 +136,22 @@ new Intl.Collator(locales, options)
 
     - `collation`
       - : Variant collations for certain locales. Possible values include:
-          - `big5han`
-          - `compat`
-          - `dict`
-          - `direct`
-          - `ducet`
-          - `eor`
-          - `gb2312`
-          - `phonebk`(only supported in German)
-          - `phonetic`
-          - `pinyin`
-          - `reformed`
-          - `searchjl`
-          - `stroke`
-          - `trad`
-          - `unihan`
-          - `zhuyin`
+        - `big5han`
+        - `compat`
+        - `dict`
+        - `direct`
+        - `ducet`
+        - `eor`
+        - `gb2312`
+        - `phonebk`(only supported in German)
+        - `phonetic`
+        - `pinyin`
+        - `reformed`
+        - `searchjl`
+        - `stroke`
+        - `trad`
+        - `unihan`
+        - `zhuyin`
         > **Note:** This option can also be set through the `co` Unicode
         > extension key; if both are provided, this `options`
         > property takes precedence.

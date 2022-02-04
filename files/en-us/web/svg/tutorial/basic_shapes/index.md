@@ -49,17 +49,17 @@ The {{SVGElement("rect")}} element draws a rectangle on the screen. There are 6 
 ```
 
 * `x`
-    * : The x position of the top left corner of the rectangle.
+  * : The x position of the top left corner of the rectangle.
 * `y`
-    * : The y position of the top left corner of the rectangle.
+  * : The y position of the top left corner of the rectangle.
 * `width`
-    * : The width of the rectangle
+  * : The width of the rectangle
 * `height`
-    * : The height of the rectangle
+  * : The height of the rectangle
 * `rx`
-    * : The x radius of the corners of the rectangle
+  * : The x radius of the corners of the rectangle
 * `ry`
-    * : The y radius of the corners of the rectangle
+  * : The y radius of the corners of the rectangle
 
 ## Circle
 
@@ -70,11 +70,11 @@ The {{SVGElement("circle")}} element draws a circle on the screen. It takes 3 ba
 ```
 
 * `r`
-    * : The radius of the circle.
+  * : The radius of the circle.
 * `cx`
-    * : The x position of the center of the circle.
+  * : The x position of the center of the circle.
 * `cy`
-    * : The y position of the center of the circle.
+  * : The y position of the center of the circle.
 
 ## Ellipse
 
@@ -85,13 +85,13 @@ An {{SVGElement("ellipse")}} is a more general form of the {{SVGElement("circle"
 ```
 
 * `rx`
-    * : The x radius of the ellipse.
+  * : The x radius of the ellipse.
 * `ry`
-    * : The y radius of the ellipse.
+  * : The y radius of the ellipse.
 * `cx`
-    * : The x position of the center of the ellipse.
+  * : The x position of the center of the ellipse.
 * `cy`
-    * : The y position of the center of the ellipse.
+  * : The y position of the center of the ellipse.
 
 ## Line
 
@@ -102,13 +102,13 @@ The {{SVGElement("line")}} element takes the positions of two points as paramete
 ```
 
 * `x1`
-    * : The x position of point 1.
+  * : The x position of point 1.
 * `y1`
-    * : The y position of point 1.
+  * : The y position of point 1.
 * `x2`
-    * : The x position of point 2.
+  * : The x position of point 2.
 * `y2`
-    * : The y position of point 2.
+  * : The y position of point 2.
 
 ## Polyline
 
@@ -119,7 +119,7 @@ A {{SVGElement("polyline")}} is a group of connected straight lines. Since the l
 ```
 
 * `points`
-    * : A list of points. Each number must be separated by a space, comma, EOL, or a line feed character. Each point must contain two numbers: an x coordinate and a y coordinate. So, the list `(0,0)`, `(1,1)`, and `(2,2)` would be written as `0, 0 1, 1 2, 2`.
+  * : A list of points. Each number must be separated by a space, comma, EOL, or a line feed character. Each point must contain two numbers: an x coordinate and a y coordinate. So, the list `(0,0)`, `(1,1)`, and `(2,2)` would be written as `0, 0 1, 1 2, 2`.
 
 ## Polygon
 
@@ -132,7 +132,7 @@ A {{SVGElement("polygon")}} is similar to a {{SVGElement("polyline")}}, in that 
 ```
 
 * `points`
-    * : A list of points, each number separated by a space, comma, EOL, or a line feed character. Each point must contain two numbers: an x coordinate and a y coordinate. So, the list `(0,0)`, `(1,1)`, and `(2,2)` would be written as `0, 0 1, 1 2, 2`. The drawing then closes the path, so a final straight line would be drawn from `(2,2)` to `(0,0)`.
+  * : A list of points, each number separated by a space, comma, EOL, or a line feed character. Each point must contain two numbers: an x coordinate and a y coordinate. So, the list `(0,0)`, `(1,1)`, and `(2,2)` would be written as `0, 0 1, 1 2, 2`. The drawing then closes the path, so a final straight line would be drawn from `(2,2)` to `(0,0)`.
 
 ## Path
 
@@ -145,6 +145,6 @@ For this reason, [the next section](/en-US/docs/Web/SVG/Tutorial/Paths) in this 
 ```
 
 * `d`
-    * : A list of points and other information about how to draw the path. See the [Paths](/en-US/docs/Web/SVG/Tutorial/Paths) section for more information.
+  * : A list of points and other information about how to draw the path. See the [Paths](/en-US/docs/Web/SVG/Tutorial/Paths) section for more information.
 
 {{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}

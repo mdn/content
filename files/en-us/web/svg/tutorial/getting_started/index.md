@@ -47,24 +47,24 @@ The rendering process involves the following:
 * The first important thing to notice is the order of rendering elements. The globally valid rule for SVG files is, that *later* elements are rendered *atop previous* elements. The further down an element is the more it will be visible.
 * SVG files on the web can be displayed directly in the browser or embedded in HTML files via several methods:
 
-    * If the HTML is XHTML and is delivered as type `application/xhtml+xml`, the SVG can be directly embedded in the XML source.
-    * If the HTML is HTML5, and the browser is a conforming HTML5 browser, the SVG can also be directly embedded. However, there may be syntax changes necessary to conform to the HTML5 specification.
-    * The SVG file can be referenced with an `object` element:
+  * If the HTML is XHTML and is delivered as type `application/xhtml+xml`, the SVG can be directly embedded in the XML source.
+  * If the HTML is HTML5, and the browser is a conforming HTML5 browser, the SVG can also be directly embedded. However, there may be syntax changes necessary to conform to the HTML5 specification.
+  * The SVG file can be referenced with an `object` element:
 
-        ```html
-        <object data="image.svg" type="image/svg+xml" />
-        ```
+    ```html
+    <object data="image.svg" type="image/svg+xml" />
+    ```
 
-    * Likewise an `iframe` element can be used:
+  * Likewise an `iframe` element can be used:
 
-        ```html
-        <iframe src="image.svg"></iframe>
-        ```
+    ```html
+    <iframe src="image.svg"></iframe>
+    ```
 
-    * An `img` element can theoretically be used too. However, this technique doesn't work in Firefox before 4.0.
-    * Finally, SVG can be created dynamically with JavaScript and injected into the HTML DOM. With this method, replacement technologies can be implemented for browsers which normally can't process SVG.
+  * An `img` element can theoretically be used too. However, this technique doesn't work in Firefox before 4.0.
+  * Finally, SVG can be created dynamically with JavaScript and injected into the HTML DOM. With this method, replacement technologies can be implemented for browsers which normally can't process SVG.
 
-    See [this dedicated article](/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction) which deals with the topic in-depth.
+  See [this dedicated article](/en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction) which deals with the topic in-depth.
 * How SVG handles sizes and units will be explained [on the next page](/en-US/docs/Web/SVG/Tutorial/Positions).
 
 ### SVG file types

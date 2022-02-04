@@ -47,7 +47,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 * `[ <character> | <urange> ]#`
-    * : This value indicates a comma-separated sequence of Unicode characters and/or ranges of Unicode characters, which identify a set of possible second glyphs in a kerning pair.
+  * : This value indicates a comma-separated sequence of Unicode characters and/or ranges of Unicode characters, which identify a set of possible second glyphs in a kerning pair.
 
 ## Specifications
 

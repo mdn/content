@@ -106,8 +106,8 @@ We also define a function that returns a random number.
 
 The third part of the code is where we define and register the event handler. The `<button>` element has an event called `'click'` that fires when the user clicks the button. Objects that can fire events have an {{domxref("EventTarget/addEventListener", "addEventListener()")}} method, that takes at least two arguments: the name of the event and a function to handle the event. So we call the button's `addEventListener()` method, passing in:
 
-* the string `'click'`, to indicate that we want to listen to the click event
-* a function to call when the event happens. In our case the function generates a random RGB color and sets the page [`<body>`](/en-US/docs/Web/HTML/Element/body) [`background-color`](/en-US/docs/Web/CSS/background-color) equal to that color.
+- the string `'click'`, to indicate that we want to listen to the click event
+- a function to call when the event happens. In our case the function generates a random RGB color and sets the page [`<body>`](/en-US/docs/Web/HTML/Element/body) [`background-color`](/en-US/docs/Web/CSS/background-color) equal to that color.
 
 The example output is as follows. Try clicking the button:
 
@@ -522,9 +522,9 @@ You clicked on a BODY element
 
 In this case:
 
-* the click on the button fires first
-* followed by the click on its parent (the `<div>` element)
-* followed by the `<div>` element's parent (the `<body>` element).
+- the click on the button fires first
+- followed by the click on its parent (the `<div>` element)
+- followed by the `<div>` element's parent (the `<body>` element).
 
 We describe this by saying that the event **bubbles up** from the innermost element that was clicked.
 

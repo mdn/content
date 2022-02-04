@@ -1748,7 +1748,6 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
   </tbody>
 </table>
 
-
 ### HTTP Set-Cookie: `SameSite=Lax` by default
 
 HTTP cookies (set using [Set-Cookie](/en-US/docs/Web/HTTP/Headers/Set-Cookie) are assumed to implicitly set `SameSite=Lax` if the [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) directive is not specified. Previously the default was `SameSite=None`.
@@ -1833,7 +1832,6 @@ HTTP cookies (set using [Set-Cookie](/en-US/docs/Web/HTTP/Headers/Set-Cookie)) t
   </tbody>
 </table>
 
-
 ### HTTP Set-Cookie: SameSite is schemeful
 
 HTTP cookies sent from the same domain but using different schemes (for example http or https) are now considered to be from different sites with respect to the cookie [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) directive.
@@ -1875,7 +1873,6 @@ HTTP cookies sent from the same domain but using different schemes (for example 
     </tr>
   </tbody>
 </table>
-
 
 ## Developer tools
 
