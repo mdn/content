@@ -41,7 +41,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 * `<string>`
-    * : This value specifies one or more Unicode characters corresponding to a glyph.
+  * : This value specifies one or more Unicode characters corresponding to a glyph.
 
 ## Specifications
 

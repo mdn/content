@@ -57,8 +57,9 @@ place-items: unset;
 ### Values
 
 One of the following forms:
-* A single {{cssxref("align-items")}} value, which is used to set alignment in both block and inline directions.
-* An {{cssxref("align-items")}} value, which sets alignment in the block direction, followed by a {{cssxref("justify-items")}} value, which sets alignment in the inline direction.
+
+- A single {{cssxref("align-items")}} value, which is used to set alignment in both block and inline directions.
+- An {{cssxref("align-items")}} value, which sets alignment in the block direction, followed by a {{cssxref("justify-items")}} value, which sets alignment in the inline direction.
 
 ## Formal definition
 

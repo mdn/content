@@ -24,13 +24,13 @@ This is done adding an SVG element like {{ SVGElement("animate") }} inside the S
 The following example animates the **cx** attribute of a circle. To do so, we add an {{ SVGElement("animate") }} element inside the {{ SVGElement("circle") }} element. The important attributes for {{ SVGElement("animate") }} are:
 
 * **attributeName**
-    * : The name of the attribute to animate.
+  * : The name of the attribute to animate.
 * from
-    * : The initial value of the attribute.
+  * : The initial value of the attribute.
 * to
-    * : The final value.
+  * : The final value.
 * dur
-    * : The duration of the animation (for example, write '5s' for 5 seconds).
+  * : The duration of the animation (for example, write '5s' for 5 seconds).
 
 If you want to animate more attributes inside the same element, just add more {{ SVGElement("animate") }} elements.
 

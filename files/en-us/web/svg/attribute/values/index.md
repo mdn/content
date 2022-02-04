@@ -47,7 +47,7 @@ For {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("ani
 </table>
 
 * `<list-of-values>`
-    * : The value holds a semicolon-separated list of one or more values. The type of the values is defined by the {{SVGAttr("href")}} and {{SVGAttr("attributeName")}} attributes.
+  * : The value holds a semicolon-separated list of one or more values. The type of the values is defined by the {{SVGAttr("href")}} and {{SVGAttr("attributeName")}} attributes.
 
 ## feColorMatrix
 
@@ -84,12 +84,12 @@ For the {{SVGElement("feColorMatrix")}} element, `values` is a list of numbers i
 </table>
 
 * `<list-of-numbers>`
-    * : The value is a list of numbers, which is interpreted differently depending on the value of the `type` attribute:
+  * : The value is a list of numbers, which is interpreted differently depending on the value of the `type` attribute:
 
-        * For `type="matrix"`, `values` is a list of 20 matrix values (a00 a01 a02 a03 a04 a10 a11 ... a34), separated by whitespace and/or a comma.
-        * For `type="saturate"`, `values` is a single real number value (0 to 1).
-        * For `type="hueRotate"`, `values` is a single one real number value (degrees).
-        * For `type="luminanceToAlpha"`, `values` is not applicable.
+    * For `type="matrix"`, `values` is a list of 20 matrix values (a00 a01 a02 a03 a04 a10 a11 ... a34), separated by whitespace and/or a comma.
+    * For `type="saturate"`, `values` is a single real number value (0 to 1).
+    * For `type="hueRotate"`, `values` is a single one real number value (degrees).
+    * For `type="luminanceToAlpha"`, `values` is not applicable.
 
 ## Specifications
 
