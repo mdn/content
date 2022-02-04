@@ -38,12 +38,6 @@ _This interface also inherits properties from {{domxref("EventTarget")}}._
 - {{domxref("TextTrack.mode")}}
   - : A {{domxref("DOMString")}} specifying the track's current mode, which must be one of the permitted values. Changing this property's value changes the track's current mode to match. The default is `disabled`, unless the {{HTMLElement("track")}} element's {{htmlattrxref("default", "track")}} Boolean attribute is specified, in which case the default mode is `started`.
 
-## Events
-
-- [`cuechange`](/en-US/docs/Web/API/TextTrack/cuechange_event)
-  - : Fired when cues are entered and exited. A given text cue appears when the cue is entered and disappears when the cue is exited.
-    Also available via the [`oncuechange`](/en-US/docs/Web/API/GlobalEventHandlers/oncuechange) property.
-
 ## Methods
 
 _This interface also inherits methods from {{domxref("EventTarget")}}._
@@ -54,6 +48,13 @@ _This interface also inherits methods from {{domxref("EventTarget")}}._
   - : Adds a cue (specified as a {{domxref("TextTrackCue")}} object) to the track's list of cues.
 - {{domxref("TextTrack.removeCue()")}}
   - : Removes a cue (specified as a {{domxref("TextTrackCue")}} object) from the track's list of cues.
+
+## Events
+
+- [`cuechange`](/en-US/docs/Web/API/TextTrack/cuechange_event)
+  - : Fired when cues are entered and exited. A given text cue appears when the cue is entered and disappears when the cue is exited.
+    Also available via the `oncuechange` property.
+
 
 ## Example
 
