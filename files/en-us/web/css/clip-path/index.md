@@ -5,7 +5,6 @@ tags:
   - CSS
   - CSS Masking
   - CSS Property
-  - Experimental
   - Reference
   - Web
   - recipe:css-property
@@ -71,7 +70,7 @@ The `clip-path` property is specified as one or a combination of the values list
     - {{cssxref("basic-shape/polygon()","polygon()")}}
       - : Defines a polygon using an SVG fill-rule and a set of vertices.
     - {{cssxref("path()","path()")}}
-      - : Defines a shape using an SVG fill-rule and an SVG path definition.
+      - : Defines a shape using an optional SVG fill-rule and an SVG path definition.
 
 - `<geometry-box>`
 
