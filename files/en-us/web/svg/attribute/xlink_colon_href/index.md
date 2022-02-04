@@ -14,27 +14,27 @@ The **`xlink:href`** attribute defines a reference to a resource as a reference 
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("a")}}
-* {{SVGElement("altGlyph")}}
-* {{SVGElement("animate")}}
-* {{SVGElement("animateColor")}}
-* {{SVGElement("animateMotion")}}
-* {{SVGElement("animateTransform")}}
-* {{SVGElement("cursor")}}
-* {{SVGElement("feImage")}}
-* {{SVGElement("filter")}}
-* {{SVGElement("font-face-uri")}}
-* {{SVGElement("glyphRef")}}
-* {{SVGElement("image")}}
-* {{SVGElement("linearGradient")}}
-* {{SVGElement("mpath")}}
-* {{SVGElement("pattern")}}
-* {{SVGElement("radialGradient")}}
-* {{SVGElement("script")}}
-* {{SVGElement("set")}}
-* {{SVGElement("textPath")}}
-* {{SVGElement("tref")}}
-* {{SVGElement("use")}}
+- {{SVGElement("a")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("cursor")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("filter")}}
+- {{SVGElement("font-face-uri")}}
+- {{SVGElement("glyphRef")}}
+- {{SVGElement("image")}}
+- {{SVGElement("linearGradient")}}
+- {{SVGElement("mpath")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("radialGradient")}}
+- {{SVGElement("script")}}
+- {{SVGElement("set")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("use")}}
 
 ## Example
 
@@ -671,4 +671,4 @@ For {{SVGElement("tref")}}, `xlink:href` defines a reference to an element whose
 
 ## See also
 
-* {{SVGAttr("href")}}
+- {{SVGAttr("href")}}

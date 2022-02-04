@@ -41,17 +41,17 @@ If a single {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} v
 
 If two or more values are defined and either no value is a keyword, or the only used keyword is `center`, then the first value represents the horizontal offset and the second represents the vertical offset.
 
-* One-value syntax:
+- One-value syntax:
 
-    * The value must be a [`<length>`](/en-US/docs/Web/CSS/length), or one of the keywords `left`, `center`, `right`, `top`, and `bottom`.
-* Two-value syntax:
+  - The value must be a [`<length>`](/en-US/docs/Web/CSS/length), or one of the keywords `left`, `center`, `right`, `top`, and `bottom`.
+- Two-value syntax:
 
-    * One value must be a [`<length>`](/en-US/docs/Web/CSS/length), a [`<percentage>`](/en-US/docs/Web/CSS/percentage), or one of the keywords `left`, `center`, and `right`.
-    * The other value must be a [`<length>`](/en-US/docs/Web/CSS/length), a [`<percentage>`](/en-US/docs/Web/CSS/percentage), or one of the keywords `top`, `center`, and `bottom`.
-* Three-value syntax:
+  - One value must be a [`<length>`](/en-US/docs/Web/CSS/length), a [`<percentage>`](/en-US/docs/Web/CSS/percentage), or one of the keywords `left`, `center`, and `right`.
+  - The other value must be a [`<length>`](/en-US/docs/Web/CSS/length), a [`<percentage>`](/en-US/docs/Web/CSS/percentage), or one of the keywords `top`, `center`, and `bottom`.
+- Three-value syntax:
 
-    * The first two values are the same as for the two-value syntax.
-    * The third value must be a [`<length>`](/en-US/docs/Web/CSS/length). It always represents the Z offset.
+  - The first two values are the same as for the two-value syntax.
+  - The third value must be a [`<length>`](/en-US/docs/Web/CSS/length). It always represents the Z offset.
 
 ## Example
 
