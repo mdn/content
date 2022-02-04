@@ -90173,16 +90173,6 @@
       "Hsivonen"
     ]
   },
-  "Web/API/XMLHttpRequest/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL": {
-    "modified": "2019-03-23T23:58:55.741Z",
-    "contributors": [
-      "maulikkothari92",
-      "Jeremie",
-      "teoli",
-      "briansmith2",
-      "vladimir.dzhuvinov"
-    ]
-  },
   "Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data": {
     "modified": "2019-10-01T12:14:45.461Z",
     "contributors": [
