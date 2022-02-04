@@ -61,11 +61,11 @@ A _property descriptor_ is a record with some of the following attributes:
 
 ## Examples
 
-### Creating a shallow clone
+### Creating a shallow copy
 
 Whereas the {{jsxref("Object.assign()")}} method will only copy enumerable and own
 properties from a source object to a target object, you are able to use this method and
-{{jsxref("Object.create()")}} for a shallow copy between two unknown objects:
+{{jsxref("Object.create()")}} for a [shallow copy](/en-US/docs/Glossary/Shallow_copy) between two unknown objects:
 
 ```js
 Object.create(

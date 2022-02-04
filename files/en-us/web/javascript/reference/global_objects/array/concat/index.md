@@ -32,7 +32,7 @@ concat(value0, value1, ... , valueN)
 - `valueN` {{optional_inline}}
   - : Arrays and/or values to concatenate into a new array. If all
     `valueN` parameters are omitted, `concat` returns a
-    shallow copy of the existing array on which it is called. See the description below
+    [shallow copy](/en-us/docs/Glossary/Shallow_copy) of the existing array on which it is called. See the description below
     for more details.
 
 ### Return value
@@ -47,7 +47,7 @@ that argument (if the argument is an array) or the argument itself (if the argum
 not an array). It does not recurse into nested array arguments.
 
 The `concat` method does not alter `this` or any of the arrays
-provided as arguments but instead returns a shallow copy that contains copies of the
+provided as arguments but instead returns a [shallow copy](/en-us/docs/Glossary/Shallow_copy) that contains copies of the
 same elements combined from the original arrays. Elements of the original arrays are
 copied into the new array as follows:
 
