@@ -88,7 +88,7 @@ When you try to access a property of an object: if the property can't be found i
 So when we call `myObject.hasOwnProperty('city')`, the browser:
 
 - looks for `hasOwnProperty` in `myObject`
-- can't find it there, so looks in the prototype object for `hasOwnProperty`
+- can't find it there, so looks in the prototype object of `myObject` for the function `hasOwnProperty`
 - finds it there, and calls it.
 
 What is the prototype for `myObject`? To find out, we can use the function `Object.getPrototypeOf()`:
