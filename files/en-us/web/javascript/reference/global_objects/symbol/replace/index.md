@@ -45,7 +45,7 @@ console.log('football'.replace(new CustomReplacer('foo')));
 
 ## See also
 
-- A polyfill of `Symbol.replace` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
+- [Polyfill of `Symbol.replace` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.search")}}
 - {{jsxref("Symbol.split")}}

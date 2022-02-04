@@ -13,10 +13,10 @@ The **`attributeType`** attribute specifies the namespace in which the target at
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("animateTransform")}}
-*   {{SVGElement("set")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateColor")}}
+- {{SVGElement("animateTransform")}}
+- {{SVGElement("set")}}
 
 ## Example
 
@@ -30,7 +30,7 @@ html, body, svg {
 <svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
   <rect x="50" y="50" width="100" height="100">
     <animate attributeType="XML" attributeName="y" from="0" to="50"
-        dur="5s" repeatCount="indefinite"/>
+        dur="5s" repeatCount="indefinite"/>
   </rect>
 </svg>
 ```
@@ -56,12 +56,12 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `CSS`
-    *   : This value specifies that the value of {{SVGAttr("attributeName")}} is the name of a CSS property defined as animatable.
-*   `XML`
-    *   : This value specifies that the value of {{SVGAttr("attributeName")}} is the name of an XML attribute defined as animatable in the default XML namespace for the target element.
-*   `auto`
-    *   : This value specifies that the implementation should match the {{SVGAttr("attributeName")}} to an attribute for the target element. User agents first search through the list of CSS properties for a matching property name, and if none is found, search the default XML namespace for the element.
+- `CSS`
+  - : This value specifies that the value of {{SVGAttr("attributeName")}} is the name of a CSS property defined as animatable.
+- `XML`
+  - : This value specifies that the value of {{SVGAttr("attributeName")}} is the name of an XML attribute defined as animatable in the default XML namespace for the target element.
+- `auto`
+  - : This value specifies that the implementation should match the {{SVGAttr("attributeName")}} to an attribute for the target element. User agents first search through the list of CSS properties for a matching property name, and if none is found, search the default XML namespace for the element.
 
 ## Specifications
 
@@ -86,4 +86,4 @@ html, body, svg {
 
 ## See also
 
-*   [SMIL Animation specification](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute)
+- [SMIL Animation specification](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute)

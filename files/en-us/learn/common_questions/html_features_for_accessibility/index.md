@@ -8,7 +8,7 @@ tags:
   - Learn
   - NeedsContent
 ---
-{{draft}}
+
 
 The following content describes specific features of HTML that can be used to make a web page more accessible to people with different disabilities.
 

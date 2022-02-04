@@ -12,10 +12,10 @@ The **`intercept`** attribute defines the intercept of the linear function of co
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feFuncA")}}
-*   {{SVGElement("feFuncB")}}
-*   {{SVGElement("feFuncG")}}
-*   {{SVGElement("feFuncR")}}
+- {{SVGElement("feFuncA")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
+- {{SVGElement("feFuncR")}}
 
 ## Example
 

@@ -71,7 +71,7 @@ Object.getOwnPropertyDescriptor(obj, "foo").get;
 
 ## See also
 
-- A polyfill of `Object.prototype.__lookupGetter__` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.prototype.__lookupGetter__` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.prototype.__lookupSetter__()")}}
 - {{jsxref("Functions/get", "get")}} operator
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} and

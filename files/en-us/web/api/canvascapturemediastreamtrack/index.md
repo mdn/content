@@ -18,6 +18,8 @@ The **`CanvasCaptureMediaStreamTrack`** interface represents the video track con
 
 Part of the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API).
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _This interface inherits the properties of its parent, {{domxref("MediaStreamTrack")}}._

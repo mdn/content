@@ -518,9 +518,9 @@ const triple = x => 3 * x
 const quadruple = x => 4 * x
 
 // Function composition enabling pipe functionality
-const pipe = (...functions) => input => functions.reduce(
+const pipe = (...functions) => initialValue => functions.reduce(
     (acc, fn) => fn(acc),
-    input
+    initialValue
 )
 
 // Composed functions for multiplication of specific values
@@ -563,5 +563,5 @@ if (!Array.prototype.mapUsingReduce) {
 
 ## See also
 
-- A polyfill of `Array.prototype.reduce` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.reduceRight()")}}

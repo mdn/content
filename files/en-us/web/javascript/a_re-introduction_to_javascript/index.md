@@ -58,7 +58,7 @@ And there are some built-in {{jsxref("Error")}} types as well. Things are a lot 
 
 ECMAScript has two built-in numeric types: **Number** and **BigInt**.
 
-The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) (numbers between -(2^53 − 1) and 2^53 − 1). And where this article and other MDN articles refer to “integers”, what’s usually meant is a _representation_ of an integer using a Number value. But because such Number values aren’t real integers, you have to be a little careful. For example:
+The Number type is a [double-precision 64-bit binary format IEEE 754 value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) (numbers between -(2^53 − 1) and 2^53 − 1). And where this article and other MDN articles refer to “integers”, what’s usually meant is a _representation_ of an integer using a Number value. But because such Number values aren’t real integers, you have to be a little careful. For example:
 
 ```js
 console.log(3 / 2);             // 1.5, not 1
@@ -188,12 +188,12 @@ There's our first brush with JavaScript objects! Did we mention that you can use
 
 ## Other types
 
-JavaScript distinguishes between {{jsxref("null")}}, which is a value that indicates a deliberate non-value (and is only accessible through the `null` keyword), and {{jsxref("undefined")}}, which is a value of type `undefined` that indicates an uninitialized variable — that is, a value hasn't even been assigned yet. We'll talk about variables later, but in JavaScript it is possible to declare a variable without assigning a value to it. If you do this, the variable's type is `undefined`. `undefined` is actually a constant.
+JavaScript distinguishes between {{jsxref("null")}}, which is a value that indicates a deliberate non-value (and is only accessible through the `null` keyword), and {{jsxref("undefined")}}, which is a value of type `undefined` that indicates an uninitialized variable — that is, a value hasn't even been assigned yet. We'll talk about variables later, but in JavaScript it is possible to declare a variable without assigning a value to it. If you do this, the variable's type is `undefined`. `undefined` is actually a constant.
 
 JavaScript has a boolean type, with possible values `true` and `false` (both of which are keywords.) Any value can be converted to a boolean according to the following rules:
 
-1.  `false`, `0`, empty strings (`""`), `NaN`, `null`, and `undefined` all become `false`.
-2.  All other values become `true`.
+1. `false`, `0`, empty strings (`""`), `NaN`, `null`, and `undefined` all become `false`.
+2. All other values become `true`.
 
 You can perform this conversion explicitly using the `Boolean()` function:
 
@@ -243,7 +243,7 @@ var a;
 var name = 'Simon';
 ```
 
-An example of scope with a variable declared with **`var`:**
+An example of scope with a variable declared with **`var`:**
 
 ```js
 // myVarVariable *is* visible out here
@@ -424,7 +424,7 @@ JavaScript objects can be thought of as simple collections of name-value pairs. 
 - HashMaps in Java.
 - Associative arrays in PHP.
 
-The fact that this data structure is so widely used is a testament to its versatility. Since everything (bar core types) in JavaScript is an object, any JavaScript program naturally involves a great deal of hash table lookups. It's a good thing they're so fast!
+The fact that this data structure is so widely used is a testament to its versatility. Since everything (bar core types) in JavaScript is an object, any JavaScript program naturally involves a great deal of hash table lookups. It's a good thing they're so fast!
 
 The "name" part is a JavaScript string, while the value can be any JavaScript value — including more objects. This allows you to build data structures of arbitrary complexity.
 
@@ -538,7 +538,7 @@ a.length; // 101
 
 Remember — the length of the array is one more than the highest index.
 
-If you query a non-existent array index, you'll get a value of `undefined` in return:
+If you query a non-existent array index, you'll get a value of `undefined` in return:
 
 ```js
 typeof a[90]; // undefined
@@ -560,7 +560,7 @@ for (const currentValue of a) {
 }
 ```
 
-You could also iterate over an array using a [`for`...`in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop, however this does not iterate over the array elements, but the array indices. Furthermore, if someone added new properties to `Array.prototype`, they would also be iterated over by such a loop. Therefore this loop type is not recommended for arrays.
+You could also iterate over an array using a [`for`...`in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop, however this does not iterate over the array elements, but the array indices. Furthermore, if someone added new properties to `Array.prototype`, they would also be iterated over by such a loop. Therefore this loop type is not recommended for arrays.
 
 Another way of iterating over an array that was added with ECMAScript 5 is [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach):
 
@@ -664,7 +664,7 @@ avg(2, 3, 4, 5); // 3.5
 
 In the above code, the variable **args** holds all the values that were passed into the function.
 
-It is important to note that wherever the rest parameter operator is placed in a function declaration it will store all arguments _after_ its declaration, but not before. i.e. _function avg(**firstValue,** ...args)_ will store the first value passed into the function in the **firstValue** variable and the remaining arguments in **args**. That's another useful language feature but it does lead us to a new problem. The `avg()` function takes a comma-separated list of arguments — but what if you want to find the average of an array? You could just rewrite the function as follows:
+It is important to note that wherever the rest parameter operator is placed in a function declaration it will store all arguments _after_ its declaration, but not before. i.e. _function avg(**firstValue,** ...args)_ will store the first value passed into the function in the **firstValue** variable and the remaining arguments in **args**. That's another useful language feature but it does lead us to a new problem. The `avg()` function takes a comma-separated list of arguments — but what if you want to find the average of an array? You could just rewrite the function as follows:
 
 ```js
 function avgArray(arr) {
@@ -965,7 +965,7 @@ function parentFunc() {
 
   function nestedFunc() {
     var b = 4; // parentFunc can't use this
-    return a + b;
+    return a + b;
   }
   return nestedFunc(); // 5
 }
@@ -993,7 +993,7 @@ add20(7); // ?
 
 The name of the `makeAdder()` function should give it away: it creates new 'adder' functions, each of which, when called with one argument, adds it to the argument that it was created with.
 
-What's happening here is pretty much the same as was happening with the inner functions earlier on: a function defined inside another function has access to the outer function's variables. The only difference here is that the outer function has returned, and hence common sense would seem to dictate that its local variables no longer exist. But they _do_ still exist — otherwise, the adder functions would be unable to work. What's more, there are two different "copies" of `makeAdder()`'s local variables — one in which `a` is 5 and the other one where `a` is 20. So the result of that function calls is as follows:
+What's happening here is pretty much the same as was happening with the inner functions earlier on: a function defined inside another function has access to the outer function's variables. The only difference here is that the outer function has returned, and hence common sense would seem to dictate that its local variables no longer exist. But they _do_ still exist — otherwise, the adder functions would be unable to work. What's more, there are two different "copies" of `makeAdder()`'s local variables — one in which `a` is 5 and the other one where `a` is 20. So the result of that function calls is as follows:
 
 ```js
 add5(6); // returns 11

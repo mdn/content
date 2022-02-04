@@ -51,10 +51,10 @@ We take a quadratic equation in its general form, and solve for x:
 </mrow><mi>a</mi>
 </mfrac><mo>⁤</mo>
 <mi>x</mi>
-<mo>+ </mo><msup><mfenced><mfrac><mrow><mi>b</mi>
+<mo>+ </mo><msup><mrow><mo>(</mo><mfrac><mrow><mi>b</mi>
 </mrow><mrow><mn>2</mn>
 <mi>a</mi>
-</mrow></mfrac></mfenced><mn>2</mn>
+</mrow></mfrac><mo>)</mo></mrow><mn>2</mn>
 </msup></mrow><mo>=</mo>
 <mfrac><mrow><mo>-</mo>
 <mi>c</mi>

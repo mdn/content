@@ -64,9 +64,9 @@ A new array with the elements that pass the test. If no elements pass the test, 
 
 `callbackFn` is invoked with three arguments:
 
-1.  the value of the element
-2.  the index of the element
-3.  the Array object being traversed
+1. the value of the element
+2. the index of the element
+3. the Array object being traversed
 
 If a `thisArg` parameter is provided to `filter`, it will be used as the callback's `this` value. Otherwise, the value `undefined` will be used as its `this` value. The `this` value ultimately observable by `callbackFn` is determined according to [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
@@ -233,7 +233,7 @@ console.log(deleteWords)
 
 ## See also
 
-- A polyfill of `Array.prototype.filter` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.some()")}}

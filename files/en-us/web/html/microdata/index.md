@@ -22,7 +22,7 @@ At a high level, microdata consists of a group of name-value pairs. The groups a
 
 Google and other major search engines support the [Schema.org](https://schema.org) vocabulary for structured data. This vocabulary defines a standard set of type names and property names, for example, [Schema.org Music Event](http://schema.org/MusicEvent) indicates a concert performance, with [startDate](http://schema.org/startDate) and [location](http://schema.org/location) properties to specify the concert's key details. In this case, [Schema.org Music Event](http://schema.org/MusicEvent) would be the URL used by itemtype and startDate and location would be itemprop's that [Schema.org Music Event](http://schema.org/MusicEvent) defines.
 
-> **Note:** More about itemtype attributes can be found at <http://schema.org/Thing>.
+> **Note:** More about itemtype attributes can be found at <https://schema.org/Thing>.
 
 Microdata vocabularies provide the semantics or meaning of an Item. Web developers can design a custom vocabulary or use vocabularies available on the web, such as the widely used [schema.org](http://schema.org) vocabulary. A collection of commonly used markup vocabularies are provided by Schema.org.
 

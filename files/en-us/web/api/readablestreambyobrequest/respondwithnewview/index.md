@@ -11,7 +11,7 @@ tags:
   - respondWithNewView
 browser-compat: api.ReadableStreamBYOBRequest.respondWithNewView
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`respondWithNewView()`** method of the
 {{domxref("ReadableStreamBYOBRequest")}} interface xxx

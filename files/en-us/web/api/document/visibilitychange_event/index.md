@@ -88,4 +88,4 @@ document.addEventListener('visibilitychange', function logData() {
 - [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)
 - {{domxref("Document.visibilityState")}}
 - [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) explains in detail why you should use `visibilitychange`, not `beforeunload`/`unload`.
-- [Page Lifecycle API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state) gives best-practices guidance on handling page lifecyle behavior in your web applications.
+- [Page Lifecycle API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state) gives best-practices guidance on handling page lifecycle behavior in your web applications.

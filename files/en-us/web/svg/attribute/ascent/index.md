@@ -16,7 +16,7 @@ If the attribute is not specified, the effect is as if the attribute were set to
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("font-face")}}
+- {{SVGElement("font-face")}}
 
 ## font-face
 

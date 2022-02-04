@@ -293,8 +293,8 @@ function createPerson(name) {
 
 This function creates and returns a new object each time we call it. The object will have two members:
 
-* a property `name`
-* a method `introduceSelf()`.
+- a property `name`
+- a method `introduceSelf()`.
 
 Note that `createPerson()` takes a parameter `name` to set the value of the `name` property, but the value of the `introduceSelf()` method will be the same for all objects created using this function. This is a very common pattern for creating objects. You can see here how being able to use `this` in the definition of `introduceSelf()` enables us to use the same code for every object we create.
 
@@ -312,10 +312,10 @@ frankie.introduceSelf();
 
 This works fine but is a bit long-winded: we have to create an empty object, initialize it, and return it. A better way is to use a **constructor**. A constructor is just a function called using the {{jsxref("operators/new", "new")}} keyword. When you call a constructor, it will:
 
-* create a new object
-* bind `this` to the new object, so you can refer to `this` in your constructor code
-* run the code in the constructor
-* return the new object.
+- create a new object
+- bind `this` to the new object, so you can refer to `this` in your constructor code
+- run the code in the constructor
+- return the new object.
 
 Constructors, by convention, start with a capital letter and are named for the type of object they create. So we could rewrite our example like this:
 

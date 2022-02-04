@@ -62,7 +62,7 @@ Consider the following 32-bit word:
 var a = 32776;   // 00000000000000001000000000001000 (16 leading zeros)
 Math.clz32(a);   // 16
 
-var b = ~32776;  // 11111111111111110111111111110111 (32776 inversed, 0 leading zeros)
+var b = ~32776;  // 11111111111111110111111111110111 (32776 inverted, 0 leading zeros)
 Math.clz32(b);   // 0 (this is equal to how many leading one's there are in a)
 ```
 
@@ -185,6 +185,6 @@ if (!Math.clz32) Math.clz32 = (function(log, LN2){
 
 ## See also
 
-- A polyfill of `Math.clz32` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.clz32` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math")}}
 - {{jsxref("Math.imul")}}

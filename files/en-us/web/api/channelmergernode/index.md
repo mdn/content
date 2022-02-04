@@ -19,6 +19,8 @@ If `ChannelMergerNode` has one single output, but as many inputs as there are ch
 
 Using a `ChannelMergerNode`, it is possible to create outputs with more channels than the rendering hardware is able to process. In that case, when the signal is sent to the {{domxref("BaseAudioContext/listener", "AudioContext.listener")}} object, supernumerary channels will be ignored.
 
+{{InheritanceDiagram}}
+
 <table class="properties">
   <tbody>
     <tr>

@@ -16,6 +16,8 @@ The **`FederatedCredential`** interface of the [Credential Management API](/en-U
 
 In browsers that support it, an instance of this interface may be passed in the `credential` member of the `init` object for global {{domxref('fetch()')}}.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}}

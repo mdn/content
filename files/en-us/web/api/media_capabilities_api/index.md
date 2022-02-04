@@ -46,18 +46,18 @@ if ('mediaCapabilities' in navigator) {
 
 There are a myriad of video and audio codecs. Different browsers support different media types and new media types are always being developed. With the Media Capabilities API, developers can ensure each user is getting the best bitrate and storage savings for their browser, device, and OS capabilities.
 
-Whether a device uses hardware or software decoding impacts how smooth and power efficient the video decoding is and how efficient the playback will be. The Media Capabilities API enables determining which codecs are supported and how performant a media file will be both in terms of smoothness and power efficiency.
+Whether a device uses hardware or software decoding impacts how smooth and power efficient the video decoding is and how efficient the playback will be. The Media Capabilities API enables determining which codecs are supported and how performant a media file will be both in terms of smoothness and power efficiency.
 
-The Media Capabilities API provide more powerful features than say {{DOMxRef("MediaRecorder.isTypeSupported()")}} or {{DOMxRef("HTMLMediaElement.canPlayType()")}}, which only address general browser support, not performance. The API also provides abilities to access display property information such as  supported color gamut, dynamic range abilities, and real-time feedback about the playback.
+The Media Capabilities API provide more powerful features than say {{DOMxRef("MediaRecorder.isTypeSupported()")}} or {{DOMxRef("HTMLMediaElement.canPlayType()")}}, which only address general browser support, not performance. The API also provides abilities to access display property information such as supported color gamut, dynamic range abilities, and real-time feedback about the playback.
 
 To test support, smoothness and power efficiency of a video or audio file, you define the [media configuration](/en-US/docs/Web/API/MediaConfiguration) you want to test, and then pass the audio or video configuration as the parameter of the {{DOMxRef("MediaCapabilities")}} interface's `encodingInfo()` and `decodingInfo()` methods.
 
-Media capabilities information enables websites to enable adaptative streaming to alter the quality of content based on actual user-perceived quality, and react to a pick of CPU/GPU usage in real time.
+Media capabilities information enables websites to enable adaptive streaming to alter the quality of content based on actual user-perceived quality, and react to a pick of CPU/GPU usage in real time.
 
 ## Media Capabilities Interfaces
 
 - {{DOMxRef("MediaCapabilities")}}
-  - : Provides information about the decoding abilities of the device, system and browser based on codecs, profile, resolution, and bitrates. The  information can be used to serve optimal media streams to the user and determine if playback should be smooth and power efficient .
+  - : Provides information about the decoding abilities of the device, system and browser based on codecs, profile, resolution, and bitrates. The  information can be used to serve optimal media streams to the user and determine if playback should be smooth and power efficient .
 - ScreenColorGamut
   - : Will describe the color gamut, or the range of color, the screen can display (not currently supported anywhere).
 - ScreenLuminance

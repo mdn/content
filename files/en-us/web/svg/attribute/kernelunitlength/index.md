@@ -14,9 +14,9 @@ The **`kernelUnitLength`** attribute has two meanings based on the context it's 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feConvolveMatrix")}}
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feSpecularLighting")}}
 
 ## feConvolveMatrix
 
@@ -47,8 +47,8 @@ If a negative or zero value is specified the default value will be used instead.
   </tbody>
 </table>
 
-*   `<number-optional-number>`
-    *   : The first number is the x value. The second number is the y value. If the x value is not specified, it defaults to the same value as x.
+- `<number-optional-number>`
+  - : The first number is the x value. The second number is the y value. If the x value is not specified, it defaults to the same value as x.
 
 ## feDiffuseLighting
 

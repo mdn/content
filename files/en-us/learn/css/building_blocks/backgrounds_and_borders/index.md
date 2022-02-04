@@ -94,7 +94,7 @@ The _balloons.jpg_ image used in the initial background images example, is a lar
 
 You can also use keywords:
 
-- `cover` — the browser will make the image just large enough so that it completely covers the box area while still retaining its aspect ratio. In this case, part of the image is likely to end up outside the box.
+- `cover` — the browser will make the image just large enough so that it completely covers the box area while still retaining its aspect ratio. In this case, part of the image is likely to end up outside the box.
 - `contain` — the browser will make the image the right size to fit inside the box. In this case, you may end up with gaps on either side or on the top and bottom of the image, if the aspect ratio of the image is different from that of the box.
 
 In the example below I have used the _balloons.jpg_ image along with length units to size it inside the box. You can see this has distorted the image.
@@ -296,7 +296,7 @@ We have set all four corners in the example below and then changed the values fo
 
 ## Test your skills!
 
-We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Backgrounds and Borders](/en-US/docs/Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders).
+We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Backgrounds and Borders](/en-US/docs/Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders).
 
 ## Summary
 
@@ -308,21 +308,21 @@ In the next lesson, we will find out how the Writing Mode of your document inter
 
 ## In this module
 
-1.  [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  **Backgrounds and borders**
-5.  [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+4. **Backgrounds and borders**
+5. [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)

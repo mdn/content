@@ -81,7 +81,7 @@ This example prints incoming MIDI messages on a single port to the console.
 
 ```js
 function onMIDIMessage( event ) {
-  var str = "MIDI message received at timestamp " + event.timestamp + "[" + event.data.length + " bytes]: ";
+  var str = "MIDI message received at timestamp " + event.timeStamp + "[" + event.data.length + " bytes]: ";
   for (var i=0; i<event.data.length; i++) {
     str += "0x" + event.data[i].toString(16) + " ";
   }

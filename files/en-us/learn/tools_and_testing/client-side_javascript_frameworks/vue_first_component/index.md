@@ -70,9 +70,9 @@ Now it's time to dive deeper into Vue, and create our own custom component — w
 
 Let's create our first component, which will display a single todo item. We'll use this to build our list of todos.
 
-1.  In your `moz-todo-vue/src/components` directory, create a new file named `ToDoItem.vue`. Open the file in your code editor.
-2.  Create the component's template section by adding `<template></template>` to the top of the file.
-3.  Create a `<script></script>` section below your template section. Inside the `<script>` tags, add a default exported object `export default {}`, which is your component object.
+1. In your `moz-todo-vue/src/components` directory, create a new file named `ToDoItem.vue`. Open the file in your code editor.
+2. Create the component's template section by adding `<template></template>` to the top of the file.
+3. Create a `<script></script>` section below your template section. Inside the `<script>` tags, add a default exported object `export default {}`, which is your component object.
 
 Your file should now look like this:
 
@@ -85,8 +85,8 @@ Your file should now look like this:
 
 We can now begin to add actual content to our `ToDoItem`. Vue templates are currently only allowed a single root element — one element needs to wrap everything inside the template section (this will change when Vue 3 comes out). We'll use a [`<div>`](/en-US/docs/Web/HTML/Element/div) for that root element.
 
-1.  Add an empty `<div>` inside your component template now.
-2.  Inside that `<div>`, let's add a checkbox and a corresponding label. Add an `id` to the checkbox, and a `for` attribute mapping the checkbox to the label, as shown below.
+1. Add an empty `<div>` inside your component template now.
+2. Inside that `<div>`, let's add a checkbox and a corresponding label. Add an `id` to the checkbox, and a `for` attribute mapping the checkbox to the label, as shown below.
 
     ```html
     <template>
@@ -101,14 +101,14 @@ We can now begin to add actual content to our `ToDoItem`. Vue templates are curr
 
 This is all fine, but we haven’t added the component to our app yet, so there’s no way to test it and see if everything is working. Let’s add it now.
 
-1.  Open up `App.vue` again.
-2.  At the top of your `<script>` tag, add the following to import your `ToDoItem` component:
+1. Open up `App.vue` again.
+2. At the top of your `<script>` tag, add the following to import your `ToDoItem` component:
 
     ```js
     import ToDoItem from './components/ToDoItem.vue';
     ```
 
-3.  Inside your component object, add the `components` property, and inside it add your `ToDoItem` component to register it.
+3. Inside your component object, add the `components` property, and inside it add your `ToDoItem` component to register it.
 
 Your `<script>` contents should now look like this:
 
@@ -127,8 +127,8 @@ This is the same way that the `HelloWorld` component was registered by the Vue C
 
 To actually render the `ToDoItem` component in the app, you need to go up into your `<template>` element and call it as a `<to-do-item></to-do-item>` element. Note that the component file name and its representation in JavaScript is always in PascalCase (e.g. `ToDoList`), and the equivalent custom element is always in kebab-case (e.g. `<to-do-list>`).
 
-1.  Underneath the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements), create an unordered list ([`<ul>`](/en-US/docs/Web/HTML/Element/ul)) containing a single list item ([`<li>`](/en-US/docs/Web/HTML/Element/li)).
-2.  Inside the list item add `<to-do-item></to-do-item>`.
+1. Underneath the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements), create an unordered list ([`<ul>`](/en-US/docs/Web/HTML/Element/ul)) containing a single list item ([`<li>`](/en-US/docs/Web/HTML/Element/li)).
+2. Inside the list item add `<to-do-item></to-do-item>`.
 
 Your `App.vue` `<template>` contents should now look something like this:
 
@@ -164,18 +164,18 @@ In Vue, there are two ways to register props:
 
 For this component, we’ll use the object registration method.
 
-1.  Go back to your `ToDoItem.vue` file.
-2.  Add a `props` property inside the export `default {}` object, which contains an empty object.
-3.  Inside this object, add two properties with the keys `label` and `done`.
-4.  The `label` key's value should be an object with 2 properties (or **props**, as they are called in the context of being available to the components).
+1. Go back to your `ToDoItem.vue` file.
+2. Add a `props` property inside the export `default {}` object, which contains an empty object.
+3. Inside this object, add two properties with the keys `label` and `done`.
+4. The `label` key's value should be an object with 2 properties (or **props**, as they are called in the context of being available to the components).
 
-    1.  The first is a `required` property, which will have a value of `true`. This will tell Vue that we expect every instance of this component to have a label field. Vue will warn us if a `ToDoItem` component does not have a label field.
-    2.  The second property we'll add is a `type` property. Set the value for this property as the JavaScript `String` type (note the capital "S"). This tells Vue that we expect the value of this property to be a string.
+    1. The first is a `required` property, which will have a value of `true`. This will tell Vue that we expect every instance of this component to have a label field. Vue will warn us if a `ToDoItem` component does not have a label field.
+    2. The second property we'll add is a `type` property. Set the value for this property as the JavaScript `String` type (note the capital "S"). This tells Vue that we expect the value of this property to be a string.
 
-5.  Now on to the `done` prop.
+5. Now on to the `done` prop.
 
-    1.  First add a `default` field, with a value of `false`. This means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will have a value of false (bear in mind that this is not required — we only need `default` on non-required props).
-    2.  Next add a `type` field with a value of `Boolean`. This tells Vue we expect the value prop to be a JavaScript boolean type.
+    1. First add a `default` field, with a value of `false`. This means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will have a value of false (bear in mind that this is not required — we only need `default` on non-required props).
+    2. Next add a `type` field with a value of `Boolean`. This tells Vue we expect the value prop to be a JavaScript boolean type.
 
 Your component object should now look like this:
 

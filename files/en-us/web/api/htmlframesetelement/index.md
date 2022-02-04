@@ -14,6 +14,8 @@ browser-compat: api.HTMLFrameSetElement
 
 The **`HTMLFrameSetElement`** interface provides special properties (beyond those of the regular {{domxref("HTMLElement")}} interface they also inherit) for manipulating {{HTMLELEment("frameset")}} elements.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}} and from {{domxref("WindowEventHandlers")}}._

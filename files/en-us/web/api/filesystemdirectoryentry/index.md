@@ -17,6 +17,8 @@ browser-compat: api.FileSystemDirectoryEntry
 
 The **`FileSystemDirectoryEntry`** interface of the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) represents a directory in a file system. It provides methods which make it possible to access and manipulate the files in a directory, as well as to access the entries within the directory.
 
+{{InheritanceDiagram}}
+
 ## Basic concepts
 
 You can create a new directory by calling {{domxref("FileSystemDirectoryEntry.getDirectory", "getDirectory()")}}. If you want to create subdirectories, create each child directory in sequence. If you try creating a directory using a full path that includes parent directories that do not exist yet, an error is returned. So create the hierarchy by recursively adding a new path after creating the parent directory.

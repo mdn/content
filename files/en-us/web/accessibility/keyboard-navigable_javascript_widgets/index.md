@@ -16,7 +16,7 @@ By default, when people use the tab key to browse a webpage, only interactive el
 
 The order in which elements gain focus when using a keyboard, is the source order by default. In exceptional circumstances, authors may want to redefine the order. To do this, authors can set `tabindex` to any positive number.
 
-> **Warning:** avoid using positive values for `tabindex`.  Elements with a positive `tabindex` are put before the default interactive elements on the page, which means page authors will have to set (and maintain) `tabindex` values for all focusable elements on the page whenever they use one or more positive values for `tabindex`.
+> **Warning:** avoid using positive values for `tabindex`. Elements with a positive `tabindex` are put before the default interactive elements on the page, which means page authors will have to set (and maintain) `tabindex` values for all focusable elements on the page whenever they use one or more positive values for `tabindex`.
 
 The following table describes `tabindex` behavior in modern browsers:
 
@@ -102,8 +102,8 @@ When a custom control becomes disabled, remove it from the tab order by setting 
 
 When a user tabs away from a widget and returns, focus should return to the specific element that had focus, for example, the tree item or grid cell. There are two techniques for accomplishing this:
 
-1.  Roving `tabindex`: programmatically moving focus
-2.  `aria-activedescendant`: managing a 'virtual' focus
+1. Roving `tabindex`: programmatically moving focus
+2. `aria-activedescendant`: managing a 'virtual' focus
 
 #### Technique 1: Roving tabindex
 
@@ -111,9 +111,9 @@ Setting the `tabindex` of the focused element to "0" ensures that if the user ta
 
 Bind a key down handler to each element in the group, and when an arrow key is used to move to another element:
 
-1.  programmatically apply focus to the new element,
-2.  update the `tabindex` of the focused element to "0", and
-3.  update the `tabindex` of the previously focused element to "-1".
+1. programmatically apply focus to the new element,
+2. update the `tabindex` of the focused element to "0", and
+3. update the `tabindex` of the previously focused element to "-1".
 
 Here's an example of a [WAI-ARIA tree view](https://files.paciellogroup.com/training/WWW2012/samples/Samples/aria/tree/index.html) using this technique.
 
@@ -127,7 +127,7 @@ Do not use `createEvent()`, `initEvent()` and `dispatchEvent()` to send focus to
 
 Don't assume that all focus changes will come via key and mouse events: assistive technologies such as screen readers can set the focus to any focusable element. Track focus using `onfocus` and `onblur` instead.
 
-`onfocus` and `onblur` can now be used with every element. There is no standard DOM interface to get the current document focus. If you want to track the focus status, you can use the [document.activeElement](/en-US/docs/Web/API/Document/activeElement) to get the active element. You can also use [document.hasFocus](/en-US/docs/Web/API/Document/hasFocus) to make sure if the current document focus.
+`onfocus` and `onblur` can now be used with every element. There is no standard DOM interface to get the current document focus. If you want to track the focus status, you can use the [document.activeElement](/en-US/docs/Web/API/Document/activeElement) to get the active element. You can also use [document.hasFocus](/en-US/docs/Web/API/Document/hasFocus) to make sure if the current document focus.
 
 ### Technique 2: `aria-activedescendant`
 

@@ -9,7 +9,7 @@ tags:
   - Method
 browser-compat: api.FileSystemHandle.queryPermission
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`queryPermission()`** method of the
 {{domxref("FileSystemHandle")}} interface queries the current permission state of the

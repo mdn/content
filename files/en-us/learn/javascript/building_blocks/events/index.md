@@ -106,8 +106,8 @@ We also define a function that returns a random number.
 
 The third part of the code is where we define and register the event handler. The `<button>` element has an event called `'click'` that fires when the user clicks the button. Objects that can fire events have an {{domxref("EventTarget/addEventListener", "addEventListener()")}} method, that takes at least two arguments: the name of the event and a function to handle the event. So we call the button's `addEventListener()` method, passing in:
 
-* the string `'click'`, to indicate that we want to listen to the click event
-* a function to call when the event happens. In our case the function generates a random RGB color and sets the page [`<body>`](/en-US/docs/Web/HTML/Element/body) [`background-color`](/en-US/docs/Web/CSS/background-color) equal to that color.
+- the string `'click'`, to indicate that we want to listen to the click event
+- a function to call when the event happens. In our case the function generates a random RGB color and sets the page [`<body>`](/en-US/docs/Web/HTML/Element/body) [`background-color`](/en-US/docs/Web/CSS/background-color) equal to that color.
 
 The example output is as follows. Try clicking the button:
 
@@ -170,7 +170,7 @@ btn.addEventListener('click', changeBackground);
 
 There are many different events that can be fired by a button element. Let's experiment.
 
-First, make a local copy of [random-color-addeventlistener.html](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html), and open it in your browser.
+First, make a local copy of [random-color-addeventlistener.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-addeventlistener.html), and open it in your browser.
 It's just a copy of the simple random color example we've played with already. Now try changing `click` to the following different values in turn, and observing the results in the example:
 
 - [`focus`](/en-US/docs/Web/API/Element/focus_event) and [`blur`](/en-US/docs/Web/API/Element/blur_event) — The color changes when the button is focused and unfocused; try pressing the tab to focus on the button and press the tab again to focus away from the button.
@@ -522,9 +522,9 @@ You clicked on a BODY element
 
 In this case:
 
-* the click on the button fires first
-* followed by the click on its parent (the `<div>` element)
-* followed by the `<div>` element's parent (the `<body>` element).
+- the click on the button fires first
+- followed by the click on its parent (the `<div>` element)
+- followed by the `<div>` element's parent (the `<body>` element).
 
 We describe this by saying that the event **bubbles up** from the innermost element that was clicked.
 

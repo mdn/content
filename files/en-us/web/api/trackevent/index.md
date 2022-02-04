@@ -24,6 +24,8 @@ Events based on `TrackEvent` are always sent to one of the media track list type
 - Events involving audio tracks are always sent to the {{domxref("AudioTrackList")}} specified in {{domxref("HTMLMediaElement.audioTracks")}}
 - Events affecting text tracks are sent to the {{domxref("TextTrackList")}} object indicated by {{domxref("HTMLMediaElement.textTracks")}}.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("TrackEvent.TrackEvent", "TrackEvent()")}}

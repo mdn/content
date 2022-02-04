@@ -12,7 +12,7 @@ tags:
   - configurationName
 browser-compat: api.USBConfiguration.configurationName
 ---
-{{draft}}{{securecontext_header}}{{APIRef("")}}
+{{securecontext_header}}{{APIRef("")}}
 
 The **`configurationName`** read-only property
 of the {{domxref("USBConfiguration")}} interface returns the name provided by the device

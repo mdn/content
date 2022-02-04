@@ -19,7 +19,7 @@ browser-compat: path.to.feature.NameOfTheElement
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular element.
 >
-> ```
+> ```md
 > ---
 > title: <NameOfTheElement>
 > slug: Web/SVG/Element/NameOfTheElement
@@ -37,24 +37,24 @@ browser-compat: path.to.feature.NameOfTheElement
 >
 > - **title**
 >   - : Title heading displayed at top of page.
->       Format as **<**_NameOfTheElement_**>**.
->       For example, the "[g](/en-US/docs/Web/SVG/Element/g)" element has a _title_ of `<g>`.
+>     Format as **<**_NameOfTheElement_**>**.
+>     For example, the "[g](/en-US/docs/Web/SVG/Element/g)" element has a _title_ of `<g>`.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
->       This will be formatted like `Web/SVG/Element/NameOfTheElement`.
+>     This will be formatted like `Web/SVG/Element/NameOfTheElement`.
 > - **tags**
 >   - : Always include the following tags: **SVG**, **Reference**, **Element**,  the _NameOfTheElement_ (e.g. **g**).
 >
->       Include the following tags as appropriate:
->       - Relevant category: **SVG Container**, **SVG Animation**, **SVG Light Source**, **SVG Text Content**, **SVG Font**.
->       - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)), **Non-standard** (if it isn't on a standards track).
->       - Any other tags that represent possible search terms for the element.
+>     Include the following tags as appropriate:
+>     - Relevant category: **SVG Container**, **SVG Animation**, **SVG Light Source**, **SVG Text Content**, **SVG Font**.
+>     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)), **Non-standard** (if it isn't on a standards track).
+>     - Any other tags that represent possible search terms for the element.
 > - **browser-compat**
 >   - : Replace the placeholder value `svg.elements.NameOfTheElement` with the query string for the element in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
->       The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
+>     The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
 >
->       Note that you may first need to create/update an entry for the element in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
->       See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
+>     Note that you may first need to create/update an entry for the element in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
+>     See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
 >
 > ---
 >

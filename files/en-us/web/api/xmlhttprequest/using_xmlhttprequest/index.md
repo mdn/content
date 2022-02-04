@@ -77,13 +77,13 @@ If you use `XMLHttpRequest` to get the content of a remote XML document, the
 containing a parsed XML document. This could prove difficult to manipulate and analyze.
 There are four primary ways of analyzing this XML document:
 
-1.  Using [XPath](/en-US/docs/Web/XPath) to address (or point to) parts of
+1. Using [XPath](/en-US/docs/Web/XPath) to address (or point to) parts of
     it.
-2.  Manually [Parsing and
+2. Manually [Parsing and
     serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML) to strings or objects.
-3.  Using {{domxref("XMLSerializer")}} to serialize **DOM trees to strings or to
+3. Using {{domxref("XMLSerializer")}} to serialize **DOM trees to strings or to
     files**.
-4.  {{jsxref("RegExp")}} can be used if you always know the content of the XML document
+4. {{jsxref("RegExp")}} can be used if you always know the content of the XML document
     beforehand. You might want to remove line breaks, if you use `RegExp` to
     scan with regard to line breaks. However, this method is a "last resort" since if the
     XML code changes slightly, the method will likely fail.
@@ -100,12 +100,12 @@ If you use `XMLHttpRequest` to get the content of a remote HTML webpage, the
 containing the raw HTML. This could prove difficult to manipulate and analyze. There are
 three primary ways to analyze and parse this raw HTML string:
 
-1.  Use the `XMLHttpRequest.responseXML` property as covered in the article
+1. Use the `XMLHttpRequest.responseXML` property as covered in the article
     [HTML in
     XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
-2.  Inject the content into the body of a [document fragment](/en-US/docs/Web/API/DocumentFragment) via
+2. Inject the content into the body of a [document fragment](/en-US/docs/Web/API/DocumentFragment) via
     `fragment.body.innerHTML` and traverse the DOM of the fragment.
-3.  {{jsxref("RegExp")}} can be used if you always know the content of the HTML
+3. {{jsxref("RegExp")}} can be used if you always know the content of the HTML
     `responseText` beforehand. You might want to remove line breaks, if you use
     RegExp to scan with regard to linebreaks. However, this method is a "last resort"
     since if the HTML code changes slightly, the method will likely fail.
@@ -653,7 +653,7 @@ AJAXSubmit(myForm);
 > fine in most browsers.
 
 > **Note:** The best way to send binary content is via
-> {{jsxref("ArrayBuffer", "ArrayBuffers")}} or {{domxref("Blob", "Blobs")}} in conjuncton
+> {{jsxref("ArrayBuffer", "ArrayBuffers")}} or {{domxref("Blob", "Blobs")}} in conjunction
 > with the {{domxref("XMLHttpRequest.send()", "send()")}} method and possibly the
 > {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} method of the
 > `FileReader` API. But, since the aim of this script is to work with a [stringifiable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
@@ -831,11 +831,11 @@ Let's create two functions:
 ```js
 function getHeaderTime () {
   var nLastVisit = parseFloat(window.localStorage.getItem('lm_' + this.filepath));
-  var nLastModif = Date.parse(this.getResponseHeader("Last-Modified"));
+  var nLastModified = Date.parse(this.getResponseHeader("Last-Modified"));
 
-  if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
+  if (isNaN(nLastVisit) || nLastModified > nLastVisit) {
     window.localStorage.setItem('lm_' + this.filepath, Date.now());
-    isFinite(nLastVisit) && this.callback(nLastModif, nLastVisit);
+    isFinite(nLastVisit) && this.callback(nLastModified, nLastVisit);
   }
 }
 
@@ -854,8 +854,8 @@ And to test:
 ```js
 /* Let's test the file "yourpage.html"... */
 
-ifHasChanged("yourpage.html", function (nModif, nVisit) {
-  console.log("The page '" + this.filepath + "' has been changed on " + (new Date(nModif)).toLocaleString() + "!");
+ifHasChanged("yourpage.html", function (nModified, nVisit) {
+  console.log("The page '" + this.filepath + "' has been changed on " + (new Date(nModified)).toLocaleString() + "!");
 });
 ```
 
@@ -928,16 +928,14 @@ Setting `overrideMimeType` does not work from a {{domxref("Worker")}}. See
 
 ## See also
 
-1.  [MDN AJAX introduction](/en-US/docs/Web/Guide/AJAX/Getting_Started)
-2.  [HTML in
+1. [MDN AJAX introduction](/en-US/docs/Web/Guide/AJAX/Getting_Started)
+1. [HTML in
     XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-3.  [HTTP access control](/en-US/docs/Web/HTTP/CORS)
-4.  [How
-    to check the security state of an XMLHTTPRequest over SSL](/en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_secruity_state_of_an_XMLHTTPRequest_over_SSL)
-5.  [XMLHttpRequest -
+1. [HTTP access control](/en-US/docs/Web/HTTP/CORS)
+1. [XMLHttpRequest -
     REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
-6.  [Microsoft documentation](https://msdn.microsoft.com/library/ms535874)
-7.  ["Using the XMLHttpRequest
+1. [Microsoft documentation](https://msdn.microsoft.com/library/ms535874)
+1. ["Using the XMLHttpRequest
     Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
-8.  [The `XMLHttpRequest` object:
+1. [The `XMLHttpRequest` object:
     WHATWG specification](https://xhr.spec.whatwg.org/)

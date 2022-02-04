@@ -88,11 +88,11 @@ The key to fast startup is to keep two things in mind: UPP is all that matters, 
 
 For example, to paint an application's first frame that comprises visually some HTML and CSS to style that HTML:
 
-1.  The HTML must be parsed
-2.  The DOM for that HTML must be constructed
-3.  Resources like images in that part of the DOM have to be loaded and decoded
-4.  The CSS styles must be applied to that DOM
-5.  The styled document has to be reflowed
+1. The HTML must be parsed
+2. The DOM for that HTML must be constructed
+3. Resources like images in that part of the DOM have to be loaded and decoded
+4. The CSS styles must be applied to that DOM
+5. The styled document has to be reflowed
 
 Nowhere in that list is "load the JS file needed for an uncommon menu"; "fetch and decode the image for the High Scores list", etc. Those work items are not on the critical path to painting the first frame.
 

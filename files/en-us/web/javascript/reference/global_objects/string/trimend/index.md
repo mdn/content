@@ -68,6 +68,6 @@ console.log(str);        // '   foo'
 
 ## See also
 
-- A polyfill of `String.prototype.trimEnd` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.trimEnd` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.trim()")}}
 - {{jsxref("String.prototype.trimStart()")}}

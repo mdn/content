@@ -86,7 +86,7 @@ event.initKeyEvent (type, bubbles, cancelable, viewArg,
     which was depressed, otherwise `0`. See {{ domxref("KeyboardEvent.keyCode")
     }} for the list of key codes.
 - _`charCodeArg`_
-  - : Is a `unsigned long` representingthe Unicode character associated with
+  - : Is a `unsigned long` representing the Unicode character associated with
     the depressed key otherwise `0`.
 
 ## Example

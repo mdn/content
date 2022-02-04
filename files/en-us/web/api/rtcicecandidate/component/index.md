@@ -55,7 +55,7 @@ This is an ICE candidate a-line, whose {{domxref("RTCIceCandidate.foundation",
 component ID. A value of `"1"` indicates RTP, which is recorded in the
 `component` property as `"rtp"`. If this value were instead
 `"2"`, the a-line would be describing an RTCP candidate, and
-`compoment` would be `"rtcp"`.
+`component` would be `"rtcp"`.
 
 ## Example
 

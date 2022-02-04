@@ -15,6 +15,8 @@ browser-compat: api.PresentationConnectionList
 
 `PresentationConnectionList` is the collection of incoming presentation connections.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref('PresentationConnectionList.connections')}} {{readonlyinline}}

@@ -24,7 +24,7 @@ element.
 ## Syntax
 
 ```js
-var svgAnimatedPreerveAspectRatio = svgImageElement.preserveAspectRatio;
+var svgAnimatedPreserveAspectRatio = svgImageElement.preserveAspectRatio;
 ```
 
 ### Value

@@ -12,7 +12,7 @@ tags:
   - sub()
 browser-compat: api.CSSNumericValue.sub
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`sub()`** method of the
 {{domxref("CSSNumericValue")}} interface subtracts a supplied number from the

@@ -171,11 +171,11 @@ The `Content-Length` header indicates the size of the body, and the `Content-Typ
 
 HTTP requests are never displayed to the user (if you want to see them, you need to use tools such as the [Firefox Network Monitor](/en-US/docs/Tools/Network_Monitor) or the [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). As an example, your form data will be shown as follows in the Chrome Network tab. After submitting the form:
 
-1.  Open the developer tools.
-2.  Select "Network"
-3.  Select "All"
-4.  Select "foo.com" in the "Name" tab
-5.  Select "Headers"
+1. Open the developer tools.
+2. Select "Network"
+3. Select "All"
+4. Select "foo.com" in the "Name" tab
+5. Select "Headers"
 
 You can then get the form data, as shown in the image below.
 
@@ -183,8 +183,8 @@ You can then get the form data, as shown in the image below.
 
 The only thing displayed to the user is the URL called. As we mentioned above, with a `GET` request the user will see the data in their URL bar, but with a `POST` request they won't. This can be very important for two reasons:
 
-1.  If you need to send a password (or any other sensitive piece of data), never use the `GET` method or you risk displaying it in the URL bar, which would be very insecure.
-2.  If you need to send a large amount of data, the `POST` method is preferred because some browsers limit the sizes of URLs. In addition, many servers limit the length of URLs they accept.
+1. If you need to send a password (or any other sensitive piece of data), never use the `GET` method or you risk displaying it in the URL bar, which would be very insecure.
+2. If you need to send a large amount of data, the `POST` method is preferred because some browsers limit the sizes of URLs. In addition, many servers limit the length of URLs they accept.
 
 ## On the server side: retrieving the data
 
@@ -215,7 +215,7 @@ This example displays a page with the data we sent. You can see this in action i
 
 ### Example: Python
 
-This example shows how you would use Python to do the same thing — display the submitted data on a web page. This uses the [Flask framework](http://flask.pocoo.org/) for rendering the templates, handling the form data submission, etc. (see [python-example.py](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/python-example.py)).
+This example shows how you would use Python to do the same thing — display the submitted data on a web page. This uses the [Flask framework](https://flask.pocoo.org/) for rendering the templates, handling the form data submission, etc. (see [python-example.py](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/python-example.py)).
 
 ```python
 from flask import Flask, render_template, request
@@ -236,7 +236,7 @@ if __name__ == "__main__":
 
 The two templates referenced in the above code are as follows (these need to be in a subdirectory called `templates` in the same directory as the `python-example.py` file, if you try to run the example yourself):
 
-- [form.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html): The same form as we saw above in the {{anch("The POST method")}} section but with the `action` set to `\{{ url_for('hello') }}`. This is a [Jinja2](http://jinja.pocoo.org/docs/2.9/) template, which is basically HTML but can contain calls to the Python code that is running the web server contained in curly braces. `url_for('hello')` is basically saying "redirect to `/hello` when the form is submitted".
+- [form.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html): The same form as we saw above in the {{anch("The POST method")}} section but with the `action` set to `\{{ url_for('hello') }}`. This is a [Jinja2](https://jinja.pocoo.org/docs/2.9/) template, which is basically HTML but can contain calls to the Python code that is running the web server contained in curly braces. `url_for('hello')` is basically saying "redirect to `/hello` when the form is submitted".
 - [greeting.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html): This template just contains a line that renders the two bits of data passed to it when it is rendered. This is done via the `hello()` function seen above, which runs when the `/hello` URL is navigated to.
 
 > **Note:** Again, this code won't work if you just try to load it into a browser directly. Python works a bit differently to PHP — to run this code locally you'll need to [install Python/PIP](/en-US/docs/Learn/Server-side/Django/development_environment#installing_python_3), then install Flask using `pip3 install flask`. At this point you should be able to run the example using `python3 python-example.py`, then navigating to `localhost:5042` in your browser.
@@ -245,7 +245,7 @@ The two templates referenced in the above code are as follows (these need to be 
 
 There are many other server-side technologies you can use for form handling, including Perl, Java, .Net, Ruby, etc. Just pick the one you like best. That said, it's worth noting that it's very uncommon to use these technologies directly because this can be tricky. It's more common to use one of the many high quality frameworks that make handling forms easier, such as:
 
-- [Django](/en-US/docs/Learn/Server-side/Django) for Python (a bit more heavyweight than [Flask](http://flask.pocoo.org/), but with more tools and options).
+- [Django](/en-US/docs/Learn/Server-side/Django) for Python (a bit more heavyweight than [Flask](https://flask.pocoo.org/), but with more tools and options).
 - [Express](/en-US/docs/Learn/Server-side/Express_Nodejs) for Node.js.
 - [Laravel](https://laravel.com/) for PHP.
 - [Ruby On Rails](https://rubyonrails.org/) for Ruby.
@@ -307,7 +307,7 @@ You should be able to avoid many/most problems if you follow these three rules, 
 
 As we'd alluded to above, sending form data is easy, but securing an application can be tricky. Just remember that a front-end developer is not the one who should define the security model of the data. It's possible to perform [client-side form validation](/en-US/docs/Learn/Forms/Form_validation), but the server can't trust this validation because it has no way to truly know what has really happened on the client-side.
 
-If you've worked your way through these tutorials in order, you now know how to markup and style a form, do client-side validation, and have some idea about submitting a form.
+If you've worked your way through these tutorials in order, you now know how to markup and style a form, do client-side validation, and have some idea about submitting a form.
 
 ## See also
 

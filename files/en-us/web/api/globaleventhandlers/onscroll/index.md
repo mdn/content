@@ -41,7 +41,7 @@ target.onscroll = functionRef
 
 Only one `onscroll` handler can be assigned to an object at a time.
 
-For greater flexibility, you can pass a {{event("scroll")}} event to the
+For greater flexibility, you can pass a {{event("scroll")}} event to the
 {{domxref("EventTarget.addEventListener()")}} method instead.
 
 ## Example

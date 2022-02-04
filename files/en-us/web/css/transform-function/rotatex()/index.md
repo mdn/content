@@ -56,7 +56,7 @@ rotateX(a)
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
@@ -89,13 +89,13 @@ rotateX(a)
                   <mo>)</mo></mtd
                 ></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
@@ -131,7 +131,7 @@ rotateX(a)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>

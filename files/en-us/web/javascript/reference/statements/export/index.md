@@ -27,8 +27,8 @@ declare them as such or not. The export statement cannot be used in embedded scr
 
 There are two types of exports:
 
-1.  Named Exports (Zero or more exports per module)
-2.  Default Exports (One per module)
+1. Named Exports (Zero or more exports per module)
+2. Default Exports (One per module)
 
 ```js
 // Exporting individual features

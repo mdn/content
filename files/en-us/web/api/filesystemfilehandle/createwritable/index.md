@@ -11,7 +11,7 @@ tags:
   - working with files
 browser-compat: api.FileSystemFileHandle.createWritable
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
 
 The **`createWritable()`** method of the
 {{domxref("FileSystemFileHandle")}} interface creates

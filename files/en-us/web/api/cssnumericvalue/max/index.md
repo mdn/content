@@ -12,7 +12,7 @@ tags:
   - max()
 browser-compat: api.CSSNumericValue.max
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`max()`** method of the
 {{domxref("CSSNumericValue")}} interface returns the highest value from among the values

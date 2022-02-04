@@ -41,7 +41,7 @@ The WebRTC API's **`RTCIceCandidateStats`** dictionary provides statistics relat
 - {{domxref("RTCIceCandidateStats.relayProtocol", "relayProtocol")}} {{optional_inline}}
   - : A string identifying the protocol used by the endpoint for communicating with the {{Glossary("TURN")}} server; valid values are `tcp`, `udp`, and `tls`. Only present for local candidates.
 - {{domxref("RTCIceCandidateStats.transportId", "transportId")}} {{optional_inline}}
-  - : A string uniquely identifying the transport object that was inspected in order to obtain the {{domxref("RTCTransportStats")}} associated with the candidate correspondin to these statistics.
+  - : A string uniquely identifying the transport object that was inspected in order to obtain the {{domxref("RTCTransportStats")}} associated with the candidate corresponding to these statistics.
 - {{domxref("RTCIceCandidateStats.url", "url")}} {{optional_inline}}
   - : For local candidates, the `url` property is the {{Glossary("URL")}} of the {{Glossary("ICE")}} server from which the candidate was received. This URL matches the one included in the {{domxref("RTCPeerConnectionIceEvent")}} object representing the {{event("icecandidate")}} event that delivered the candidate to the local peer.
 

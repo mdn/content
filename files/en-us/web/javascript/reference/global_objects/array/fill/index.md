@@ -156,6 +156,6 @@ let tempGirls = Array(5).fill("girl",0);
 
 ## See also
 
-- A polyfill of `Array.prototype.fill` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.fill` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array")}}
 - {{jsxref("TypedArray.prototype.fill()")}}

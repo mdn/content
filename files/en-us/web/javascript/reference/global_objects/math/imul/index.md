@@ -88,11 +88,11 @@ JavaScript, instead using floating points for all numbers.
 if (!Math.imul) Math.imul = function(opA, opB) {
   opB |= 0; // ensure that opB is an integer. opA will automatically be coerced.
   // floating points give us 53 bits of precision to work with plus 1 sign bit
-  // automatically handled for our convienence:
+  // automatically handled for our convenience:
   // 1. 0x003fffff /*opA & 0x000fffff*/ * 0x7fffffff /*opB*/ = 0x1fffff7fc00001
   //    0x1fffff7fc00001 < Number.MAX_SAFE_INTEGER /*0x1fffffffffffff*/
   var result = (opA & 0x003fffff) * opB;
-  // 2. We can remove an integer coersion from the statement above because:
+  // 2. We can remove an integer coercion from the statement above because:
   //    0x1fffff7fc00001 + 0xffc00000 = 0x1fffffff800001
   //    0x1fffffff800001 < Number.MAX_SAFE_INTEGER /*0x1fffffffffffff*/
   if (opA & 0xffc00000 /*!== 0*/) result += (opA & 0xffc00000) * opB |0;
@@ -110,5 +110,5 @@ if (!Math.imul) Math.imul = function(opA, opB) {
 
 ## See also
 
-- A polyfill of `Math.imul` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.imul` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - [Emscripten](https://en.wikipedia.org/wiki/Emscripten)

@@ -33,7 +33,7 @@ details = paymentMethodChangeEvent.methodName;
 An object containing any data needed to describe the changes made to the payment
 method. The contents vary depending on the actual payment method chosen, so you will
 need to refer to the {{domxref("PaymentMethodChangeEvent.methodName", "methodName")}}
-property first, then inerpret the `methodDetails` after that.
+property first, then interpret the `methodDetails` after that.
 
 The default value is `null`, indicating that no additional details are
 available.

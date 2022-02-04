@@ -22,6 +22,8 @@ To use this sensor, the user must grant permission to the `'accelerometer'` devi
 
 If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("LinearAccelerationSensor.LinearAccelerationSensor", "LinearAccelerationSensor()")}}
@@ -29,11 +31,19 @@ If a feature policy blocks use of a feature it is because your code is inconsist
 
 ## Properties
 
-_Inherits properties from its ancestor, {{domxref('Accelerometer')}}._
+_Inherits properties from its ancestors, {{domxref('Accelerometer')}}, {{domxref("Sensor")}}, and {{domxref("EventTarget")}}._
+
+## Methods
+
+_`LinearAccelerationSensor` doesn't have own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
+
+## Events
+
+_`LinearAccelerationSensor` doesn't have own events. However, it inherits events from its parent interface, {{domxref('Sensor')}}._
 
 ## Example
 
-Linear acceleration is typically read in the {{domxref('Sensor.onreading')}} event callback. In the example below this occurs sixty times a second.
+Linear acceleration is typically read in the {{domxref('Sensor.reading_event', 'reading')}} event callback. In the example below this occurs sixty times a second.
 
 ```js
 let laSensor = new LinearAccelerationSensor({frequency: 60});

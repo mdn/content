@@ -46,4 +46,4 @@ url.toJSON(); // should return the URL as a string
 
 ## See also
 
-- A polyfill of `URL.prototype.toJSON` is available in [`core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [Polyfill of `URL.prototype.toJSON` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)

@@ -690,8 +690,8 @@ A few additional non-standard attributes are listed following the descriptions o
 
     There are two special cases:
 
-    1.  `_charset_` : If used as the name of an `<input>` element of type {{HTMLElement("input/hidden", "hidden")}}, the input's `value` is automatically set by the {{Glossary("user agent")}} to the character encoding being used to submit the form.
-    2.  `isindex`: For historical reasons, the name [`isindex`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name) is not allowed.
+    1. `_charset_` : If used as the name of an `<input>` element of type {{HTMLElement("input/hidden", "hidden")}}, the input's `value` is automatically set by the {{Glossary("user agent")}} to the character encoding being used to submit the form.
+    2. `isindex`: For historical reasons, the name [`isindex`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name) is not allowed.
 
     The [`name`](#htmlattrdefname) attribute creates a unique behavior for radio buttons.
 
@@ -761,7 +761,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
     For example, if you have `<input type="number" min="10" step="2">`, then any even integer, `10` or greater, is valid. If omitted, `<input type="number">`, any integer is valid, but floats (like `4.2`) are not valid, because `step` defaults to `1`. For `4.2` to be valid, `step` would have had to be set to `any`, 0.1, 0.2, or any the `min` value would have had to be a number ending in `.2`, such as `<input type="number" min="-5.2">`
 
-    > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in contraint validation and will match the `:invalid` pseudoclass.
+    > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the `:invalid` pseudoclass.
 
     See {{anch("Client-side validation")}} for more information.
 
@@ -889,9 +889,9 @@ The following non-standard attributes are also available on some browsers. As a 
 The following methods are provided by the {{domxref("HTMLInputElement")}} interface which represents `<input>` elements in the DOM. Also available are those methods specified by the parent interfaces, {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")}}, and {{domxref("EventTarget")}}.
 
 - {{domxref("HTMLInputElement.checkValidity", "checkValidity()")}}
-  - : Immediately runs the validity check on the element, triggering the document to fire the {{domxref("HTMLInputElement.invalid_event", "invalid")}} event at the element if the value isn't valid.
+  - : Returns `true` if the element's value passes validity checks; otherwise, returns `false` and fires an {{domxref("HTMLInputElement.invalid_event", "invalid")}} event at the element.
 - {{domxref("HTMLFormElement.reportValidity", "reportValidity()")}}
-  - : Returns `true` if the element's value passes validity checks; otherwise, returns `false`.
+  - : Returns `true` if the element's value passes validity checks; otherwise, returns `false`, fires an {{domxref("HTMLInputElement.invalid_event", "invalid")}} event at the element, and (if the event isn't canceled) reports the problem to the user.
 - {{domxref("HTMLInputElement.select", "select()")}}
   - : Selects the entire content of the `<input>` element, if the element's content is selectable. For elements with no selectable text content (such as a visual color picker or calendar date input), this method does nothing.
 - {{domxref("HTMLInputElement.setCustomValidity", "setCustomValidity()")}}

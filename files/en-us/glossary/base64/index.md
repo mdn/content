@@ -58,7 +58,7 @@ utf8_to_b64('✓ à la mode'); // "4pyTIMOgIGxhIG1vZGU="
 b64_to_utf8('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
 ```
 
-This solution has been proposed by [Johan Sundström](http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html).
+This solution has been proposed by [Johan Sundström](https://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html).
 
 Another possible solution without utilizing the now deprecated 'unescape' and 'escape' functions.
 

@@ -70,5 +70,5 @@ console.log('Click to return to ' + hotText.link(url));
 
 ## See also
 
-- A polyfill of `String.prototype.link` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.link` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.anchor()")}}

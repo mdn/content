@@ -390,7 +390,7 @@
     },
     "Encoding API": {
       "overview": ["Encoding API"],
-      "interfaces": ["TextDecoder", "TextEncoder"],
+      "interfaces": ["TextDecoder", "TextEncoder", "TextDecoderStream", "TextEncoderStream"],
       "methods": [],
       "properties": [],
       "events": []

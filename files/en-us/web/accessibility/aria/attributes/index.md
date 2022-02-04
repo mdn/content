@@ -1,9 +1,9 @@
 ---
-title: ARIA States and Properties
+title: ARIA states and properties
 slug: Web/Accessibility/ARIA/Attributes
 tags:
   - ARIA
-  - ARIA States and Properties
+  - ARIA states and properties
   - ARIA attributes
   - Accessibility
   - Reference
@@ -20,7 +20,7 @@ ARIA attributes enable modifying an element's states and properties as defined i
 
 There are 4 categories of ARIA states and properties:
 
-1. ### Widget Attributes
+1. ### Widget attributes
 
    - [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete)
    - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
@@ -47,19 +47,19 @@ There are 4 categories of ARIA states and properties:
    - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
    - [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
 
-2. ### Live Region Attributes
+2. ### Live region attributes
 
    - [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
    - [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)
    - [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
    - [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
 
-3. ### Drag-and-Drop Attributes
+3. ### Drag-and-Drop attributes
 
    - [`aria-dropeffect`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
    - [`aria-grabbed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed)
 
-4. ### Relationship Attributes
+4. ### Relationship attributes
 
     - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
     - [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
@@ -118,7 +118,7 @@ The following are the reference pages covering the WAI-ARIA states and propertie
 
 ## See also
 
-* [Using ARIA: Roles, States, and Properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+- [Using ARIA: roles, states, and properties](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
 
 <section id="Quick_links">
 

@@ -15,6 +15,8 @@ The `MediaStreamAudioDestinationNode` interface represents an audio destination 
 
 It is an {{domxref("AudioNode")}} that acts as an audio destination, created using the {{domxref("AudioContext.createMediaStreamDestination()")}} method.
 
+{{InheritanceDiagram}}
+
 <table class="properties">
   <tbody>
     <tr>

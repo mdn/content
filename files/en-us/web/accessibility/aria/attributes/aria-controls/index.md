@@ -19,9 +19,9 @@ A [combobox](/en-US/docs/Web/Accessibility/ARIA/Roles/Combobox_role) element has
 
 Other examples of controls include:
 
- - An accordion header button toggling the visibility of the accordion panel's content: the accordion header button would have `aria-controls` set to the ID of the element containing the accordion panel content.
- - A link with an icon that shows and hides a menu: the link would have `aria-controls` set to the ID of the element containing the menu.
- - A group of tabs that each display a different tabpanels: each element with [`role="tab"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role) has the property `aria-controls` referring to its associated [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_role).
+- An accordion header button toggling the visibility of the accordion panel's content: the accordion header button would have `aria-controls` set to the ID of the element containing the accordion panel content.
+- A link with an icon that shows and hides a menu: the link would have `aria-controls` set to the ID of the element containing the menu.
+- A group of tabs that each display a different tabpanels: each element with [`role="tab"`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_role) has the property `aria-controls` referring to its associated [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/Tabpanel_role).
 
 ## Example
 
@@ -59,8 +59,8 @@ In this tabs example, each tab controls one tabpanel:
 
 ## Values
 
- - `id` list
-   - : Space separated list of one or more ID values referencing the elements being controlled by the current element
+- `id` list
+  - : Space separated list of one or more ID values referencing the elements being controlled by the current element
 
 ## ARIAMixin API
 
@@ -79,4 +79,4 @@ Used in **ALL** roles.
 
 ## See Also
 
- - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
+- [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)

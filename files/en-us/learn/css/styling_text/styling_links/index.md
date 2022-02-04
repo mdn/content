@@ -454,12 +454,6 @@ Let's explain what's going on here, focusing on the most interesting parts:
 
 > **Note:** You may have noticed that the list items in the HTML are all put on the same line as each other. This is done because spaces/line breaks in between inline block elements create spaces on the page, just like the spaces in between words; however, such spaces would break our horizontal navigation menu layout. So we've removed them. You can find more information about this problem (and solutions) at [Fighting the space between inline block elements](https://css-tricks.com/fighting-the-space-between-inline-block-elements/).
 
-## Test your skills!
-
-You've reached the end of this article, and already did some skill testing in our Active Learning sections, but can you remember the most important information going forward? You can find an assessment to verify that you've retained this information at the end of the module — see [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage).
-
-This assessment tests all the knowledge discussed in this module, so you might want to read the next article before moving on to it.
-
 ## Summary
 
 We hope this article has provided you with all you'll need to know about links — for now! The final article in our Styling text module details how to use custom fonts on your websites (or web fonts, as they are better known).

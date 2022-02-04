@@ -15,6 +15,8 @@ browser-compat: api.PublicKeyCredential
 
 The **`PublicKeyCredential`** interface provides information about a public key / private key pair, which is a credential for logging in to a service using an un-phishable and data-breach resistant asymmetric key pair instead of a password. It inherits from {{domxref("Credential")}}, and was created by the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) extension to the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API). Other interfaces that inherit from {{domxref("Credential")}} are {{domxref("PasswordCredential")}} and {{domxref("FederatedCredential")}}.
 
+{{InheritanceDiagram}}
+
 > **Note:** This API is restricted to top-level contexts. Use from within an {{HTMLElement("iframe")}} element will not have any effect.
 
 ## Properties

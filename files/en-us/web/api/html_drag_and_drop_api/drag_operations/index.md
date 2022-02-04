@@ -22,9 +22,9 @@ In HTML, apart from the default behavior for images, links, and selections, no o
 
 To make other HTML elements draggable, three things must be done:
 
-1.  Set the {{htmlattrxref("draggable")}} attribute to `"true"` on the element that you wish to make draggable.
-2.  Add a listener for the `{{event("dragstart")}}` event.
-3.  [Set the drag data](/en-US/docs/Web/API/DataTransfer/setData) in the above listener.
+1. Set the {{htmlattrxref("draggable")}} attribute to `"true"` on the element that you wish to make draggable.
+2. Add a listener for the `{{event("dragstart")}}` event.
+3. [Set the drag data](/en-US/docs/Web/API/DataTransfer/setData) in the above listener.
 
 Here is an example which allows a section of content to be dragged.
 
@@ -165,7 +165,7 @@ You can combine the values in various ways:
 - `all`
   - : `copy`, `move`, or `link`
 - uninitialized
-  - : The default value is `all`.
+  - : The default value is `all`.
 
 Note that these values must be used exactly as listed above. For example, setting the {{domxref("DataTransfer.effectAllowed","effectAllowed")}} property to `copyMove` allows a copy or move operation but prevents the user from performing a link operation. If you don't change the {{domxref("DataTransfer.effectAllowed","effectAllowed")}} property, then any operation is allowed, just like with the '`all`' value. So you don't need to adjust this property unless you want to exclude specific types.
 
@@ -183,13 +183,13 @@ In this example, copy is the effect that is performed.
 
 You can use the value `none` to indicate that no drop is allowed at this location, although it is preferred not to cancel the event in this case.
 
-Within the `{{event("drop")}}` and `{{event("dragend")}}` events, you can check the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which effect was ultimately chosen.  If the chosen effect were "`move`", then the original data should be removed from the source of the drag within the `{{event("dragend")}}` event.
+Within the `{{event("drop")}}` and `{{event("dragend")}}` events, you can check the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which effect was ultimately chosen.  If the chosen effect were "`move`", then the original data should be removed from the source of the drag within the `{{event("dragend")}}` event.
 
 ## Specifying Drop Targets
 
 A listener for the `{{event("dragenter")}}` and `{{event("dragover")}}` events are used to indicate valid drop targets, that is, places where dragged items may be dropped. Most areas of a web page or application are not valid places to drop data. Thus, the default handling of these events is not to allow a drop.
 
-If you want to allow a drop, you must prevent the default handling by cancelling both the `dragenter` and `dragover` events. You can do this either by returning `false` from attribute-defined event listeners, or by calling the event's {{domxref("Event.preventDefault","preventDefault()")}} method. The latter may be more feasible in a function defined in a separate script.
+If you want to allow a drop, you must prevent the default handling by cancelling both the `dragenter` and `dragover` events. You can do this either by returning `false` from attribute-defined event listeners, or by calling the event's {{domxref("Event.preventDefault","preventDefault()")}} method. The latter may be more feasible in a function defined in a separate script.
 
 ```html
 <div ondragover="return false">
@@ -207,7 +207,7 @@ function doDragOver(event) {
   const isLink = event.dataTransfer.types.includes("text/uri-list");
   if (isLink) {
     event.preventDefault();
-  }
+  }
 }
 ```
 
@@ -279,7 +279,7 @@ function doDrop(event) {
 }
 ```
 
-This example inserts a link from the dragged data. As the name implies, the [`text/uri-list`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link) type actually may contain a list of URLs, each on a separate line. The above code uses [`split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) to break the string into lines, then iterates over the list of lines, and inserts each as a link into the document. (Note also that links starting with a number sign (`#`) are skipped, as these are comments.)
+This example inserts a link from the dragged data. As the name implies, the [`text/uri-list`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link) type actually may contain a list of URLs, each on a separate line. The above code uses [`split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) to break the string into lines, then iterates over the list of lines, and inserts each as a link into the document. (Note also that links starting with a number sign (`#`) are skipped, as these are comments.)
 
 For simple cases, you can use the special type `URL` just to retrieve the first valid URL in the list. For example:
 

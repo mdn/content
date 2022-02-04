@@ -17,6 +17,8 @@ A `PannerNode` always has exactly one input and one output: the input can be _mo
 
 ![The PannerNode brings a spatial position and velocity and a directionality for a given signal.](webaudiopannernode.png)
 
+{{InheritanceDiagram}}
+
 <table class="properties">
   <tbody>
     <tr>

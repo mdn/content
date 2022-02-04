@@ -51,9 +51,9 @@ These functions are:
 - [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame)
   - : The modern version of `setInterval()`. Executes a specified block of code before the browser next repaints the display, allowing an animation to be run at a suitable framerate regardless of the environment it is being run in.
 
-The asynchronous code set up by these functions runs on the main thread (after their specified timer has elapsed).
+The asynchronous code set up by these functions runs on the main thread (after their specified timer has elapsed).
 
-It's important to know that you can (and often will) run other code before a `setTimeout()` call executes, or between iterations of `setInterval()`. Depending on how processor-intensive these operations are, they can delay your async code even further, as any async code will execute only _after_ the main thread is available. (In other words, when the stack is empty.)  You will learn more on this matter as you progress through this article.
+It's important to know that you can (and often will) run other code before a `setTimeout()` call executes, or between iterations of `setInterval()`. Depending on how processor-intensive these operations are, they can delay your async code even further, as any async code will execute only _after_ the main thread is available. (In other words, when the stack is empty.) You will learn more on this matter as you progress through this article.
 
 In any case, these functions are used for running constant animations and other background processing on a web site or application. In the following sections we will show you how they can be used.
 
@@ -62,12 +62,12 @@ In any case, these functions are used for running constant animations and other 
 As we said before, [`setTimeout()`](/en-US/docs/Web/API/setTimeout) executes a particular block of code once after a specified time has elapsed. It takes the following parameters:
 
 - A function to run, or a reference to a function defined elsewhere.
-- A number representing the time interval in milliseconds (1000 milliseconds equals 1 second) to wait before executing the code. If you specify a value of `0` (or omit the value), the function will run as soon as possible. (See the note below on why it runs "as soon as possible" and not "immediately".) More on why you might want to do this later.
+- A number representing the time interval in milliseconds (1000 milliseconds equals 1 second) to wait before executing the code. If you specify a value of `0` (or omit the value), the function will run as soon as possible. (See the note below on why it runs "as soon as possible" and not "immediately".) More on why you might want to do this later.
 - Zero or more values that represent any parameters you want to pass to the function when it is run.
 
-> **Note:** The specified amount of time (or the delay) is **not** the _guaranteed time_ to execution, but rather the _minimum time_ to execution. The callbacks you pass to these functions cannot run until the stack on the main thread is empty.
+> **Note:** The specified amount of time (or the delay) is **not** the _guaranteed time_ to execution, but rather the _minimum time_ to execution. The callbacks you pass to these functions cannot run until the stack on the main thread is empty.
 >
-> As a consequence, code like `setTimeout(fn, 0)` will execute as soon as the stack is empty, **not** immediately. If you execute code like `setTimeout(fn, 0)` but then immediately after run a loop that counts from 1 to 10 billion, your callback will be executed after a few seconds.
+> As a consequence, code like `setTimeout(fn, 0)` will execute as soon as the stack is empty, **not** immediately. If you execute code like `setTimeout(fn, 0)` but then immediately after run a loop that counts from 1 to 10 billion, your callback will be executed after a few seconds.
 
 In the following example, the browser will wait two seconds before executing the anonymous function, then will display the alert message ([see it running live](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-settimeout.html), and [see the source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-settimeout.html)):
 
@@ -109,7 +109,7 @@ function sayHi(who) {
 }
 ```
 
-Now, you can pass the name of the person into the `setTimeout()` call as a third parameter:
+Now, you can pass the name of the person into the `setTimeout()` call as a third parameter:
 
 ```js
 let myGreeting = setTimeout(sayHi, 2000, 'Mr. Universe');
@@ -117,7 +117,7 @@ let myGreeting = setTimeout(sayHi, 2000, 'Mr. Universe');
 
 ### Clearing timeouts
 
-Finally, if a timeout has been created, you can cancel it before the specified time has elapsed by calling [`clearTimeout()`](/en-US/docs/Web/API/clearTimeout), passing it the identifier of the `setTimeout()` call as a parameter. So to cancel our above timeout, you'd do this:
+Finally, if a timeout has been created, you can cancel it before the specified time has elapsed by calling [`clearTimeout()`](/en-US/docs/Web/API/clearTimeout), passing it the identifier of the `setTimeout()` call as a parameter. So to cancel our above timeout, you'd do this:
 
 ```js
 clearTimeout(myGreeting);
@@ -131,7 +131,7 @@ clearTimeout(myGreeting);
 
 This is where [`setInterval()`](/en-US/docs/Web/API/setInterval) comes in. This works in a very similar way to `setTimeout()`, except that the function you pass as the first parameter is executed repeatedly at no less than the number of milliseconds given by the second parameter apart, rather than once. You can also pass any parameters required by the function being executed as subsequent parameters of the `setInterval()` call.
 
-Let's look at an example. The following function creates a new [`Date()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, extracts a time string out of it using [`toLocaleTimeString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString), and then displays it in the UI. It then runs the function once per second using `setInterval()`, creating the effect of a digital clock that updates once per second ([see this live](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html), and also [see the source](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html)):
+Let's look at an example. The following function creates a new [`Date()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, extracts a time string out of it using [`toLocaleTimeString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString), and then displays it in the UI. It then runs the function once per second using `setInterval()`, creating the effect of a digital clock that updates once per second ([see this live](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html), and also [see the source](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html)):
 
 ```js
 function displayTime() {
@@ -268,7 +268,7 @@ function draw() {
 draw();
 ```
 
-The idea is to define a function in which your animation is updated (e.g. your sprites are moved, score is updated, data is refreshed, or whatever). Then, you call it to start the process off. At the end of the function block you call `requestAnimationFrame()` with the function reference passed as the parameter, and this instructs the browser to call the function again on the next display repaint. This is then run continuously, as the code is calling `requestAnimationFrame()` recursively.
+The idea is to define a function in which your animation is updated (e.g. your sprites are moved, score is updated, data is refreshed, or whatever). Then, you call it to start the process off. At the end of the function block you call `requestAnimationFrame()` with the function reference passed as the parameter, and this instructs the browser to call the function again on the next display repaint. This is then run continuously, as the code is calling `requestAnimationFrame()` recursively.
 
 > **Note:** If you want to perform some kind of simple constant DOM animation, [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations) are probably faster. They are calculated directly by the browser's internal code, rather than JavaScript.
 >
@@ -282,7 +282,7 @@ Since most screens have a refresh rate of 60Hz, the fastest frame rate you can a
 
 If you have a monitor with a 60Hz refresh rate and you want to achieve 60 FPS you have about 16.7 milliseconds (`1000 / 60`) to execute your animation code to render each frame. This is a reminder that you'll need to be mindful of the amount of code that you try to run during each pass through the animation loop.
 
-`requestAnimationFrame()` always tries to get as close to this magic 60 FPS value as possible. Sometimes, it isn't possible — if you have a really complex animation and you are running it on a slow computer, your frame rate will be less. In all cases, `requestAnimationFrame()` will always do the best it can with what it has available.
+`requestAnimationFrame()` always tries to get as close to this magic 60 FPS value as possible. Sometimes, it isn't possible — if you have a really complex animation and you are running it on a slow computer, your frame rate will be less. In all cases, `requestAnimationFrame()` will always do the best it can with what it has available.
 
 ### How does requestAnimationFrame() differ from setInterval() and setTimeout()?
 
@@ -337,19 +337,19 @@ draw();
 
 ### Browser support
 
-`requestAnimationFrame()` is supported in more recent browsers than `setInterval()`/`setTimeout()`.  Interestingly, it is available in Internet Explorer 10 and above.
+`requestAnimationFrame()` is supported in more recent browsers than `setInterval()`/`setTimeout()`. Interestingly, it is available in Internet Explorer 10 and above.
 
 So, unless you need to support older versions of IE, there is little reason to not use `requestAnimationFrame()`.
 
 ### A simple example
 
-Enough with the theory! Let's build your own personal `requestAnimationFrame()` example. You're going to create a simple "spinner animation"—the kind you might see displayed in an app when it is busy connecting to the server, etc.
+Enough with the theory! Let's build your own personal `requestAnimationFrame()` example. You're going to create a simple "spinner animation"—the kind you might see displayed in an app when it is busy connecting to the server, etc.
 
 > **Note:** In a real world example, you should probably use CSS animations to run this kind of simple animation. However, this kind of example is very useful to demonstrate `requestAnimationFrame()` usage, and you'd be more likely to use this kind of technique when doing something more complex such as updating the display of a game on each frame.
 
-1.  Grab a basic HTML template ([such as this one](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)).
-2.  Put an empty {{htmlelement("div")}} element inside the {{htmlelement("body")}}, then add a ↻ character inside it. This circular arrow character will act as our spinner for this example.
-3.  Apply the following CSS to the HTML template (in whatever way you prefer). This sets a red background on the page, sets the `<body>` height to `100%` of the {{htmlelement("html")}} height, and centers the `<div>` inside the `<body>`, horizontally and vertically.
+1. Grab a basic HTML template ([such as this one](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)).
+2. Put an empty {{htmlelement("div")}} element inside the {{htmlelement("body")}}, then add a ↻ character inside it. This circular arrow character will act as our spinner for this example.
+3. Apply the following CSS to the HTML template (in whatever way you prefer). This sets a red background on the page, sets the `<body>` height to `100%` of the {{htmlelement("html")}} height, and centers the `<div>` inside the `<body>`, horizontally and vertically.
 
     ```css
     html {
@@ -372,8 +372,8 @@ Enough with the theory! Let's build your own personal `requestAnimationFrame()`
     }
     ```
 
-4.  Insert a {{htmlelement("script")}} element just above the closing `</body>` tag.
-5.  Insert the following JavaScript inside your `<script>` element. Here, you're storing a reference to the `<div>` inside a constant, setting a `rotateCount` variable to `0`, setting an uninitialized variable that will later be used to contain a reference to the `requestAnimationFrame()` call, and setting a `startTime` variable to `null`, which will later be used to store the start time of the `requestAnimationFrame()`.
+4. Insert a {{htmlelement("script")}} element just above the closing `</body>` tag.
+5. Insert the following JavaScript inside your `<script>` element. Here, you're storing a reference to the `<div>` inside a constant, setting a `rotateCount` variable to `0`, setting an uninitialized variable that will later be used to contain a reference to the `requestAnimationFrame()` call, and setting a `startTime` variable to `null`, which will later be used to store the start time of the `requestAnimationFrame()`.
 
     ```js
     const spinner = document.querySelector('div');
@@ -382,7 +382,7 @@ Enough with the theory! Let's build your own personal `requestAnimationFrame()`
     let rAF;
     ```
 
-6.  Below the previous code, insert a `draw()` function that will be used to contain our animation code, which includes the `timestamp` parameter:
+6. Below the previous code, insert a `draw()` function that will be used to contain our animation code, which includes the `timestamp` parameter:
 
     ```js
     function draw(timestamp) {
@@ -390,7 +390,7 @@ Enough with the theory! Let's build your own personal `requestAnimationFrame()`
     }
     ```
 
-7.  Inside `draw()`, add the following lines. They will define the start time if it is not defined already (this will only happen on the first loop iteration), and set the `rotateCount` to a value to rotate the spinner by (the current timestamp, take the starting timestamp, divided by three so it doesn't go too fast):
+7. Inside `draw()`, add the following lines. They will define the start time if it is not defined already (this will only happen on the first loop iteration), and set the `rotateCount` to a value to rotate the spinner by (the current timestamp, take the starting timestamp, divided by three so it doesn't go too fast):
 
     ```js
       if (!startTime) {
@@ -400,13 +400,13 @@ Enough with the theory! Let's build your own personal `requestAnimationFrame()`
       rotateCount = (timestamp - startTime) / 3;
     ```
 
-8.  Below the previous line inside `draw()`, add the following block — this ensures that the value of `rotateCount` is between `0` and `359`, by setting the value to its modulo of `360` (i.e. the remainder left over when the value is divided by `360`) — so the circle animation can continue uninterrupted, at a sensible, low value. Note that this isn't strictly necessary, but it is easier to work with values of `0`–`359` degrees than values like `"128000 degrees"`.
+8. Below the previous line inside `draw()`, add the following block — this ensures that the value of `rotateCount` is between `0` and `359`, by setting the value to its modulo of `360` (i.e. the remainder left over when the value is divided by `360`) — so the circle animation can continue uninterrupted, at a sensible, low value. Note that this isn't strictly necessary, but it is easier to work with values of `0`–`359` degrees than values like `"128000 degrees"`.
 
     ```js
       rotateCount %= 360;
     ```
 
-9.  Next, below the previous block add the following line to actually rotate the spinner:
+9. Next, below the previous block add the following line to actually rotate the spinner:
 
     ```js
     spinner.style.transform = `rotate(${rotateCount}deg)`;
@@ -418,7 +418,7 @@ Enough with the theory! Let's build your own personal `requestAnimationFrame()`
     rAF = requestAnimationFrame(draw);
     ```
 
-11. Below the `draw()` function definition, add a call to the `draw()` function to start the animation.
+11. Below the `draw()` function definition, add a call to the `draw()` function to start the animation.
 
     ```js
     draw();
@@ -428,7 +428,7 @@ Enough with the theory! Let's build your own personal `requestAnimationFrame()`
 
 ### Clearing a requestAnimationFrame() call
 
-Clearing a `requestAnimationFrame()` call can be done by calling the corresponding `cancelAnimationFrame()` method. (Note that the function name starts with "cancel", not "clear" as with the "set..." methods.)
+Clearing a `requestAnimationFrame()` call can be done by calling the corresponding `cancelAnimationFrame()` method. (Note that the function name starts with "cancel", not "clear" as with the "set..." methods.)
 
 Just pass it the value returned by the `requestAnimationFrame()` call to cancel, which you stored in the variable `rAF`:
 
@@ -455,7 +455,7 @@ This was a problem, for example, in the Monkey Island-inspired walking animation
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation.html", '100%', 260)}}
 
-In this example, you have to animate both the position of the character on the screen, and the sprite being shown. There are only 6 frames in the sprite's animation. If you showed a different sprite frame for every frame displayed on the screen by `requestAnimationFrame()`, Guybrush would move his limbs too fast and the animation would look ridiculous. This example therefore throttles the rate at which the sprite cycles its frames using the following code:
+In this example, you have to animate both the position of the character on the screen, and the sprite being shown. There are only 6 frames in the sprite's animation. If you showed a different sprite frame for every frame displayed on the screen by `requestAnimationFrame()`, Guybrush would move his limbs too fast and the animation would look ridiculous. This example therefore throttles the rate at which the sprite cycles its frames using the following code:
 
 ```js
 if (posX % 13 === 0) {
@@ -467,7 +467,7 @@ if (posX % 13 === 0) {
 }
 ```
 
-So the code only cycles the sprite once every 13 animation frames.
+So the code only cycles the sprite once every 13 animation frames.
 
 ...Actually, it's about every 6.5 frames, as we update `posX` (character's position on the screen) by two each frame:
 
@@ -495,8 +495,8 @@ When the _Start_ button is pressed, a spinner like the one we saw earlier is dis
 
 Let's work through this:
 
-1.  First of all, download the [starter file for the app](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/reaction-game-starter.html). This contains the finished HTML structure and CSS styling, giving us a game board that shows the two players' information (as seen above), but with the spinner and results paragraph displayed on top of one another. You just have to write the JavaScript code.
-2.  Inside the empty {{htmlelement("script")}} element on your page, start by adding the following lines of code that define some constants and variables you'll need in the rest of the code:
+1. First of all, download the [starter file for the app](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/reaction-game-starter.html). This contains the finished HTML structure and CSS styling, giving us a game board that shows the two players' information (as seen above), but with the spinner and results paragraph displayed on top of one another. You just have to write the JavaScript code.
+2. Inside the empty {{htmlelement("script")}} element on your page, start by adding the following lines of code that define some constants and variables you'll need in the rest of the code:
 
     ```js
     const spinner = document.querySelector('.spinner p');
@@ -510,15 +510,15 @@ Let's work through this:
 
     In order, these are:
 
-    1.  A reference to the spinner, so you can animate it.
-    2.  A reference to the {{htmlelement("div")}} element that contains the spinner, used for showing and hiding it.
-    3.  A rotate count. This determines how much you want to show the spinner rotated on each frame of the animation.
-    4.  A null start time. This will be populated with a start time when the spinner starts spinning.
-    5.  An uninitialized variable to later store the {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} call that animates the spinner.
-    6.  A reference to the Start button.
-    7.  A reference to the results paragraph.
+    1. A reference to the spinner, so you can animate it.
+    2. A reference to the {{htmlelement("div")}} element that contains the spinner, used for showing and hiding it.
+    3. A rotate count. This determines how much you want to show the spinner rotated on each frame of the animation.
+    4. A null start time. This will be populated with a start time when the spinner starts spinning.
+    5. An uninitialized variable to later store the {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} call that animates the spinner.
+    6. A reference to the Start button.
+    7. A reference to the results paragraph.
 
-3.  Next, below the previous lines of code, add the following function. It takes two numbers and returns a random number between the two. You'll need this to generate a random timeout interval later on.
+3. Next, below the previous lines of code, add the following function. It takes two numbers and returns a random number between the two. You'll need this to generate a random timeout interval later on.
 
     ```js
     function random(min,max) {
@@ -527,7 +527,7 @@ Let's work through this:
     }
     ```
 
-4.  Next add  the `draw()` function, which animates the spinner. This is very similar to the version from the simple spinner example, earlier:
+4. Next add the `draw()` function, which animates the spinner. This is very similar to the version from the simple spinner example, earlier:
 
     ```js
     function draw(timestamp) {
@@ -544,14 +544,14 @@ Let's work through this:
     }
     ```
 
-5.  Now it is time to set up the initial state of the app when the page first loads. Add the following two lines, which hide the results paragraph and spinner container using `display: none;`.
+5. Now it is time to set up the initial state of the app when the page first loads. Add the following two lines, which hide the results paragraph and spinner container using `display: none;`.
 
     ```js
     result.style.display = 'none';
     spinnerContainer.style.display = 'none';
     ```
 
-6.  Next, define a `reset()` function, which sets the app back to the original state required to start the game again after it has been played. Add the following at the bottom of your code:
+6. Next, define a `reset()` function, which sets the app back to the original state required to start the game again after it has been played. Add the following at the bottom of your code:
 
     ```js
     function reset() {
@@ -561,7 +561,7 @@ Let's work through this:
     }
     ```
 
-7.  Okay, enough preparation!  It's time to make the game playable! Add the following block to your code. The `start()` function calls `draw()` to start the spinner spinning and display it in the UI, hides the _Start_ button so you can't mess up the game by starting it multiple times concurrently, and runs a `setTimeout()` call that runs a `setEndgame()` function after a random interval between 5 and 10 seconds has passed. The following block also adds an event listener to your button to run the `start()` function when it is clicked.
+7. Okay, enough preparation! It's time to make the game playable! Add the following block to your code. The `start()` function calls `draw()` to start the spinner spinning and display it in the UI, hides the _Start_ button so you can't mess up the game by starting it multiple times concurrently, and runs a `setTimeout()` call that runs a `setEndgame()` function after a random interval between 5 and 10 seconds has passed. The following block also adds an event listener to your button to run the `start()` function when it is clicked.
 
     ```js
     btn.addEventListener('click', start);
@@ -580,7 +580,7 @@ Let's work through this:
 
     The net result of the previous code is that when the _Start_ button is pressed, the spinner is shown and the players are made to wait a random amount of time before they are asked to press their button. This last part is handled by the `setEndgame()` function, which you'll define next.
 
-8.  Add the following function to your code next:
+8. Add the following function to your code next:
 
     ```js
     function setEndgame() {
@@ -613,19 +613,19 @@ Let's work through this:
 
     Stepping through this:
 
-    1.  First, cancel the spinner animation with {{domxref("window.cancelAnimationFrame", "cancelAnimationFrame()")}} (it is always good to clean up unneeded processes), and hide the spinner container.
-    2.  Next, display the results paragraph and set its text content to "PLAYERS GO!!" to signal to the players that they can now press their button to win.
-    3.  Attach a [`keydown`](/en-US/docs/Web/API/Document/keydown_event) event listener to the document. When any button is pressed down, the `keyHandler()` function is run.
-    4.  Inside `keyHandler()`, the code includes the event object as a parameter (represented by `e`) — its {{domxref("KeyboardEvent.key", "key")}} property contains the key that was just pressed, and you can use this to respond to specific key presses with specific actions.
-    5.  Set the variable `isOver` to false, so we can track whether the correct keys were pressed for player 1 or 2 to win. We don't want the game ending when a wrong key was pressed.
-    6.  Log `e.key` to the console, which is a useful way of finding out the `key` value of different keys you are pressing.
-    7.  When `e.key` is "a", display a message to say that Player 1 won, and when `e.key` is "l", display a message to say Player 2 won. (**Note:** This will only work with lowercase a and l — if an uppercase A or L is submitted (the key plus
+    1. First, cancel the spinner animation with {{domxref("window.cancelAnimationFrame", "cancelAnimationFrame()")}} (it is always good to clean up unneeded processes), and hide the spinner container.
+    2. Next, display the results paragraph and set its text content to "PLAYERS GO!!" to signal to the players that they can now press their button to win.
+    3. Attach a [`keydown`](/en-US/docs/Web/API/Document/keydown_event) event listener to the document. When any button is pressed down, the `keyHandler()` function is run.
+    4. Inside `keyHandler()`, the code includes the event object as a parameter (represented by `e`) — its {{domxref("KeyboardEvent.key", "key")}} property contains the key that was just pressed, and you can use this to respond to specific key presses with specific actions.
+    5. Set the variable `isOver` to false, so we can track whether the correct keys were pressed for player 1 or 2 to win. We don't want the game ending when a wrong key was pressed.
+    6. Log `e.key` to the console, which is a useful way of finding out the `key` value of different keys you are pressing.
+    7. When `e.key` is "a", display a message to say that Player 1 won, and when `e.key` is "l", display a message to say Player 2 won. (**Note:** This will only work with lowercase a and l — if an uppercase A or L is submitted (the key plus
 
         <kbd>Shift</kbd>
 
         ), it is counted as a different key!) If one of these keys was pressed, set `isOver` to `true`.
 
-    8.  Only if `isOver` is `true`, remove the `keydown` event listener using {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} so that once the winning press has happened, no more keyboard input is possible to mess up the final game result. You also use `setTimeout()` to call `reset()` after 5 seconds — as explained earlier, this function resets the game back to its original state so that a new game can be started.
+    8. Only if `isOver` is `true`, remove the `keydown` event listener using {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} so that once the winning press has happened, no more keyboard input is possible to mess up the final game result. You also use `setTimeout()` to call `reset()` after 5 seconds — as explained earlier, this function resets the game back to its original state so that a new game can be started.
 
 That's it—you're all done!
 
@@ -633,7 +633,7 @@ That's it—you're all done!
 
 ## Conclusion
 
-So that's it — all the essentials of async loops and intervals covered in one article. You'll find these methods useful in a lot of situations, but take care not to overuse them! Because they still run on the main thread, heavy and intensive callbacks (especially those that manipulate the DOM) can really slow down a page if you're not careful.
+So that's it — all the essentials of async loops and intervals covered in one article. You'll find these methods useful in a lot of situations, but take care not to overuse them! Because they still run on the main thread, heavy and intensive callbacks (especially those that manipulate the DOM) can really slow down a page if you're not careful.
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
 

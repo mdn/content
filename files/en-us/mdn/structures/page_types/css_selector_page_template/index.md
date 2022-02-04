@@ -19,7 +19,7 @@ browser-compat: css.selectors.NameOfTheSelector
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular selector.
 >
-> ```
+> ```md
 > ---
 > title: :NameOfTheSelector
 > slug: Web/CSS/:NameOfTheSelector
@@ -36,23 +36,23 @@ browser-compat: css.selectors.NameOfTheSelector
 >
 > - **title**
 >   - : Title heading displayed at top of page. Format as _:NameOfTheSelector_.
->       For example, the [`:hover`](/en-US/docs/Web/CSS/:hover) selector has a title of _:hover_.
+>     For example, the [`:hover`](/en-US/docs/Web/CSS/:hover) selector has a title of _:hover_.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`). This will be formatted like `Web/CSS/:NameOfTheSelector`.
->       For example, the the [`:hover`](/en-US/docs/Web/CSS/:hover) selector slug is `Web/CSS/:hover`.
+>     For example, the the [`:hover`](/en-US/docs/Web/CSS/:hover) selector slug is `Web/CSS/:hover`.
 > - **tags**
 >   - : Always include the following tags: **CSS**, **Reference**, _NameOfTheSelector_ (e.g. **:hover**).
 >
->       Include the following tags as appropriate:
->       - Type of selector: **Layout**, **Basic Selectors**, **Combinators**, **Pseudo-classes**, **Pseudo-elements**
->       - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)).
->       - Any other tags that represent terms people might search for related to the technology.
+>     Include the following tags as appropriate:
+>     - Type of selector: **Layout**, **Basic Selectors**, **Combinators**, **Pseudo-classes**, **Pseudo-elements**
+>     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)).
+>     - Any other tags that represent terms people might search for related to the technology.
 > - **browser-compat**
 >   - : Replace the placeholder value <code>css.selectors.NameOfTheSelector</code> with the query string for the selector in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
->       The toolchain automatically uses the key to populate the compatibility and specifications sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros in those sections, respectively).
+>     The toolchain automatically uses the key to populate the compatibility and specifications sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros in those sections, respectively).
 >
->       Note that you may first need to create/update an entry for the selector and its specification in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>.
->       See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
+>     Note that you may first need to create/update an entry for the selector and its specification in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>.
+>     See our [guide on how to do this](/en-US/docs/MDN/Structures/Compatibility_tables).
 >
 > ---
 >

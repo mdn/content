@@ -99,6 +99,6 @@ the first element of the array. This is different from the
 
 ## See also
 
-- A polyfill of `Array.prototype.lastIndexOf` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.lastIndexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.indexOf()")}}
 - {{jsxref("TypedArray.prototype.lastIndexOf()")}}

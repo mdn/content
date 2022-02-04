@@ -14,6 +14,8 @@ The **`BackgroundFetchEvent`** interface of the {{domxref('Background Fetch API'
 
 It is the event type passed to `onbackgroundfetchabort` and `onbackgroundfetchclick`.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("BackgroundFetchEvent.BackgroundFetchEvent()", "BackgroundFetchEvent()")}}

@@ -58,7 +58,7 @@ The keys in the `icons` object specify the icon size in px, values specify the r
 
 You can use SVG and the browser will scale your icon appropriately. There are currently two caveats though:
 
-1.  You need to specify a viewBox in the image. E.g.:
+1. You need to specify a viewBox in the image. E.g.:
 
     ```html
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
@@ -66,7 +66,7 @@ You can use SVG and the browser will scale your icon appropriately. There are cu
     </svg>
     ```
 
-2.  Even though you can use one file, you still need to specify various size of the icon in your manifest. E.g.:
+2. Even though you can use one file, you still need to specify various size of the icon in your manifest. E.g.:
 
     ```json
     "icons": {

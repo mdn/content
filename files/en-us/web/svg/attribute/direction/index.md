@@ -18,11 +18,11 @@ In many cases, the bidirectional Unicode algorithm produces the desired result a
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("altGlyph")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("text")}}
-*   {{SVGElement("tref")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("text")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -103,4 +103,4 @@ html, body, svg {
 
 ## See also
 
-*   {{cssxref("direction", "CSS direction")}}
+- {{cssxref("direction", "CSS direction")}}

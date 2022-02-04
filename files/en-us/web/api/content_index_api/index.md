@@ -10,7 +10,7 @@ tags:
   - PWA
   - content indexing
 ---
-{{draft}}{{DefaultAPISidebar("Content Index API")}}
+{{DefaultAPISidebar("Content Index API")}}
 
 The Content Index API allows developers to register their offline enabled content with the browser.
 

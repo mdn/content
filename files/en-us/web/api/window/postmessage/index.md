@@ -144,9 +144,9 @@ property available to window and worker contexts:
 
 ```js
 if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  // Post SharedArrayBuffer
 } else {
-  // Do something else
+  // Do something else
 }
 ```
 
@@ -158,7 +158,7 @@ example).
 
 ```js
 /*
- * In window A's scripts, with A being on <http://example.com:8080>:
+ * In window A's scripts, with A being on http://example.com:8080:
  */
 
 var popup = window.open(/* popup details */);
@@ -186,7 +186,7 @@ window.addEventListener("message", (event) => {
 
 ```js
 /*
- * In the popup's scripts, running on <http://example.com>:
+ * In the popup's scripts, running on http://example.com:
  */
 
 // Called sometime after postMessage is called

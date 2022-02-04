@@ -8,7 +8,7 @@ tags:
   - Glossary
   - JavaScript
 ---
-An **IIFE** (Immediately Invoked Function Expression) is a {{glossary("JavaScript")}} {{glossary("function")}} that runs as soon as it is defined.
+An **IIFE** (Immediately Invoked Function Expression) is a {{glossary("JavaScript")}} {{glossary("function")}} that runs as soon as it is defined.
 The name IIFE is promoted by Ben Alman in [his blog](https://web.archive.org/web/20171201033208/http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife).
 
 ```js
@@ -19,8 +19,8 @@ The name IIFE is promoted by Ben Alman in [his blog](https://web.archive.org/web
 
 It is a design pattern which is also known as a {{glossary("Self-Executing Anonymous Function")}} and contains two major parts:
 
-1.  The first is the anonymous function with lexical scope enclosed within the {{jsxref("Operators/Grouping", "Grouping Operator")}} `()`. This prevents accessing variables within the IIFE idiom as well as polluting the global scope.
-2.  The second part creates the immediately invoked function expression `()` through which the JavaScript engine will directly interpret the function.
+1. The first is the anonymous function with lexical scope enclosed within the {{jsxref("Operators/Grouping", "Grouping Operator")}} `()`. This prevents accessing variables within the IIFE idiom as well as polluting the global scope.
+2. The second part creates the immediately invoked function expression `()` through which the JavaScript engine will directly interpret the function.
 
 ## Use cases
 
@@ -129,7 +129,7 @@ When clicked, these buttons alert 0 and 1.
 
 ## See also
 
-- [Quick example](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) (at the end of the "Functions" section, right before "Custom objects")
+- [Quick example](/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) (at the end of the "Functions" section, right before "Custom objects")
 - {{interwiki("wikipedia", "Immediately-invoked function expression", "IIFE")}} (Wikipedia)
 - [Glossary](/en-US/docs/Glossary)
 

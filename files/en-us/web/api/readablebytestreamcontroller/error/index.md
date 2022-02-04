@@ -11,7 +11,7 @@ tags:
   - Streams
 browser-compat: api.ReadableByteStreamController.error
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+{{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`error()`** method of the
 {{domxref("ReadableByteStreamController")}} interface causes any future interactions

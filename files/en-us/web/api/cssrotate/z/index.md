@@ -13,7 +13,7 @@ tags:
   - Property
 browser-compat: api.CSSRotate.z
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`z`** property of the
 {{domxref("CSSRotate")}} interface representing the z-component of the translating

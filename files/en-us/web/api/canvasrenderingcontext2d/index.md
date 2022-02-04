@@ -198,7 +198,7 @@ Objects in the `CanvasRenderingContext2D` rendering context have a current trans
 - {{domxref("CanvasRenderingContext2D.scale()")}}
   - : Adds a scaling transformation to the canvas units by x horizontally and by y vertically.
 - {{domxref("CanvasRenderingContext2D.translate()")}}
-  - : Adds a translation transformation by moving the canvas and its origin x horzontally and y vertically on the grid.
+  - : Adds a translation transformation by moving the canvas and its origin x horizontally and y vertically on the grid.
 - {{domxref("CanvasRenderingContext2D.transform()")}}
   - : Multiplies the current transformation matrix with the matrix described by its arguments.
 - {{domxref("CanvasRenderingContext2D.setTransform()")}}
@@ -310,7 +310,7 @@ Most of these APIs are [deprecated and were removed shortly after Chrome 36](htt
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransform`
   - : Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransformInverse`
-  - : Sets or gets the current inversed transformation matrix.
+  - : Sets or gets the current inverted transformation matrix.
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozImageSmoothingEnabled`
   - : See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextStyle`

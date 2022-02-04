@@ -12,6 +12,8 @@ browser-compat: api.ImageTrack
 
 The **`ImageTrack`** interface of the {{domxref('WebCodecs API','','','true')}} represents an individual image track.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref("ImageTrack.animated")}}{{ReadOnlyInline}}

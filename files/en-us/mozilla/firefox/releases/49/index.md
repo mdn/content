@@ -81,7 +81,7 @@ tags:
 - The method {{domxref("DOMTokenList.supports()")}} has been added ({{bug(1257849)}}).
 - The {{domxref("DOMTokenList.replace()")}} method has been added ({{bug(1224186)}}).
 - Leading `'?'` characters are now ignored in the parameter of the {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor ({{bug(1268361)}}).
-- The value returned by {{domxref("URL.origin")}}, {{domxref("HTMLAnchorElement/origin", "HTMLAnchorElement.orgin")}}, and {{domxref("HTMLAnchorElement/origin", "HTMLAreaElement.origin")}} for URL using the `blob:` scheme is no longer incorrectly `null` but is instead the origin of the URL formed by removing the leading `blob:` ({{bug(1270451)}}).
+- The value returned by {{domxref("URL.origin")}}, {{domxref("HTMLAnchorElement/origin", "HTMLAnchorElement.origin")}}, and {{domxref("HTMLAnchorElement/origin", "HTMLAreaElement.origin")}} for URL using the `blob:` scheme is no longer incorrectly `null` but is instead the origin of the URL formed by removing the leading `blob:` ({{bug(1270451)}}).
 - In prerendering mode, the {{domxref('Document.visibilityState')}} property now returns `'prerender'` ({{bug(1069772)}}).
 - The {{domxref("isSecureContext")}} property has been implemented ({{bug(1162772)}}).
 - The DOM4 {{domxref("ChildNode.before()")}}, {{domxref("ChildNode.after()")}}, {{domxref("ChildNode.replaceWith()")}}, {{domxref("Element.append")}} and {{domxref("Element.prepend")}} methods have been implemented ({{bug(911477)}}).

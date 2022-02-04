@@ -17,7 +17,7 @@ tags:
 > The frontmatter at the top of the page is used to define "page metadata".
 > The values should be updated appropriately for the particular interface.
 >
-> ```
+> ```md
 > ---
 > title: NameOfTheAPI API
 > slug: Web/API/NameOfTheAPI_API
@@ -34,20 +34,20 @@ tags:
 >
 > - **title**
 >   - : Title heading displayed at top of page.
->       This is the name of the API followed by the text "API": _NameOfTheAPI_ **API**.
->       For example, [WebXR Device](/en-US/docs/Web/API/WebXR_Device_API) has a title of _WebXR Device API_, [Fetch](/en-US/docs/Web/API/Fetch_API) has a title of _Fetch API_.
+>     This is the name of the API followed by the text "API": _NameOfTheAPI_ **API**.
+>     For example, [WebXR Device](/en-US/docs/Web/API/WebXR_Device_API) has a title of _WebXR Device API_, [Fetch](/en-US/docs/Web/API/Fetch_API) has a title of _Fetch API_.
 > - **slug**
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
->       This will be formatted like `Web/API/NameOfTheAPI_API`.
->       For example, the [WebXR Device API](/en-US/docs/Web/API/WebVR_API)'s slug is `Web/API/WebXR_Device_API`.
+>     This will be formatted like `Web/API/NameOfTheAPI_API`.
+>     For example, the [WebXR Device API](/en-US/docs/Web/API/WebVR_API)'s slug is `Web/API/WebXR_Device_API`.
 > - **tags**
 >   - : Always include the following tags: **API**, **Reference**, **Landing**,  the _name of the API_ (e.g. **WebXR Device API**).
 >
->       Include the following tags as appropriate:
->       - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.
->       - Special requirements: **Secure context** (if it is available in a secure context only)
->       - Any other tags that represent terms people might search for related to the technology.
->         For example on WebVR interface pages we include **VR** and **Virtual reality**.
+>     Include the following tags as appropriate:
+>     - Technology status: **Experimental** (if the technology is [experimental](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental)), **Deprecated** (if it is [deprecated](/en-US/docs/MDN/Guidelines/Conventions_definitions#deprecated_and_obsolete)), **Non-standard** if it isn't on a standards track.
+>     - Special requirements: **Secure context** (if it is available in a secure context only)
+>     - Any other tags that represent terms people might search for related to the technology.
+>       For example on WebVR interface pages we include **VR** and **Virtual reality**.
 >
 > ---
 >

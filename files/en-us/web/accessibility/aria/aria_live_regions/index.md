@@ -6,10 +6,10 @@ tags:
   - Accessibility
   - ariaLive
 ---
-Using JavaScript, it is possible to dynamically change parts of a page without requiring the entire page to reload — for instance, to update a list of search results on the fly, or to display a discreet alert or notification which does not require user interaction. While these changes are usually visually apparent to users who can see the page, they may not be obvious to users of assistive technologies. ARIA live regions fill this gap and provide a way to programmatically expose dynamic content changes in a way that can be announced by assistive technologies.
+Using JavaScript, it is possible to dynamically change parts of a page without requiring the entire page to reload — for instance, to update a list of search results on the fly, or to display a discreet alert or notification which does not require user interaction. While these changes are usually visually apparent to users who can see the page, they may not be obvious to users of assistive technologies. ARIA live regions fill this gap and provide a way to programmatically expose dynamic content changes in a way that can be announced by assistive technologies.
 
-> **Note:** Assistive technologies will announce _dynamic_ changes in the content of a live region.
-> Including an `aria-live` attribute or a specialized live region `role` (such as [`role="alert"`](/en-US/Docs/Web/Accessibility/ARIA/Roles/Alert_role)) on the element you want to announce changes to works as long as you add the attribute before the changes occur — either in the original markup, or dynamically using JavaScript.
+> **Note:** Assistive technologies will announce _dynamic_ changes in the content of a live region.
+> Including an `aria-live` attribute or a specialized live region `role` (such as [`role="alert"`](/en-US/Docs/Web/Accessibility/ARIA/Roles/Alert_role)) on the element you want to announce changes to works as long as you add the attribute before the changes occur — either in the original markup, or dynamically using JavaScript.
 
 ## Live regions
 
@@ -25,25 +25,25 @@ As `aria-live="off"` is the assumed default for elements, it should not be neces
 
 ### Basic example: Dropdown box updates useful onscreen information
 
-A website specializing in providing information about planets provides a dropdown box. When a planet is selected from the dropdown, a region on the page is updated with information about the selected planet.
+A website specializing in providing information about planets provides a dropdown box. When a planet is selected from the dropdown, a region on the page is updated with information about the selected planet.
 
 ```html
 <fieldset>
-  <legend>Planet information</legend>
-  <label for="planetsSelect">Planet:</label>
-  <select id="planetsSelect" aria-controls="planetInfo">
-    <option value="">Select a planet…</option>
-    <option value="mercury">Mercury</option>
-    <option value="venus">Venus</option>
-    <option value="earth">Earth</option>
-    <option value="mars">Mars</option>
-  </select>
+  <legend>Planet information</legend>
+  <label for="planetsSelect">Planet:</label>
+  <select id="planetsSelect" aria-controls="planetInfo">
+    <option value="">Select a planet…</option>
+    <option value="mercury">Mercury</option>
+    <option value="venus">Venus</option>
+    <option value="earth">Earth</option>
+    <option value="mars">Mars</option>
+  </select>
   <button id="renderPlanetInfoButton">Go</button>
 </fieldset>
 
 <div role="region" id="planetInfo" aria-live="polite">
-  <h2 id="planetTitle">No planet selected</h2>
-  <p id="planetDescription">Select a planet to view its description</p>
+  <h2 id="planetTitle">No planet selected</h2>
+  <p id="planetDescription">Select a planet to view its description</p>
 </div>
 
 <p><small>Information courtesy <a href="https://en.wikipedia.org/wiki/Solar_System#Inner_Solar_System">Wikipedia</a></small></p>
@@ -51,53 +51,53 @@ A website specializing in providing information about planets provides a dropdow
 
 ```js
 const PLANETS_INFO = {
-  mercury: {
-    title: 'Mercury',
-    description: 'Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.'
-  },
+  mercury: {
+    title: 'Mercury',
+    description: 'Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.'
+  },
 
-  venus: {
-    title: "Venus",
-    description: 'Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.'
-  },
+  venus: {
+    title: "Venus",
+    description: 'Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.'
+  },
 
-  earth: {
-    title: "Earth",
-    description: 'Earth is the third planet from the Sun and the only object in the Universe known to harbor life.'
-  },
+  earth: {
+    title: "Earth",
+    description: 'Earth is the third planet from the Sun and the only object in the Universe known to harbor life.'
+  },
 
-  mars: {
-    title: "Mars",
-    description: 'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the "Red Planet".'
-  }
+  mars: {
+    title: "Mars",
+    description: 'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the "Red Planet".'
+  }
 };
 
 function renderPlanetInfo(planet) {
-  const planetTitle = document.querySelector('#planetTitle');
-  const planetDescription = document.querySelector('#planetDescription');
+  const planetTitle = document.querySelector('#planetTitle');
+  const planetDescription = document.querySelector('#planetDescription');
 
-  if (planet in PLANETS_INFO) {
-    planetTitle.textContent = PLANETS_INFO[planet].title;
-    planetDescription.textContent = PLANETS_INFO[planet].description;
-  } else {
-    planetTitle.textContent = 'No planet selected';
-    planetDescription.textContent = 'Select a planet to view its description';
-  }
+  if (planet in PLANETS_INFO) {
+    planetTitle.textContent = PLANETS_INFO[planet].title;
+    planetDescription.textContent = PLANETS_INFO[planet].description;
+  } else {
+    planetTitle.textContent = 'No planet selected';
+    planetDescription.textContent = 'Select a planet to view its description';
+  }
 }
 
 const renderPlanetInfoButton = document.querySelector('#renderPlanetInfoButton');
 
 renderPlanetInfoButton.addEventListener('click', event => {
-  const planetsSelect = document.querySelector('#planetsSelect');
-  const selectedPlanet = planetsSelect.options[planetsSelect.selectedIndex].value;
+  const planetsSelect = document.querySelector('#planetsSelect');
+  const selectedPlanet = planetsSelect.options[planetsSelect.selectedIndex].value;
 
-  renderPlanetInfo(selectedPlanet);
+  renderPlanetInfo(selectedPlanet);
 });
 ```
 
 {{EmbedLiveSample('Basic_example_Dropdown_box_updates_useful_onscreen_information', '', 350)}}
 
-As the user selects a new planet, the information in the live region will be announced. Because the live region has `aria-live="polite"`, the screen reader will wait until the user pauses before announcing the update. Thus, moving down in the list and selecting another planet will not announce updates in the live region. Updates in the live region will only be announced for the planet finally chosen.
+As the user selects a new planet, the information in the live region will be announced. Because the live region has `aria-live="polite"`, the screen reader will wait until the user pauses before announcing the update. Thus, moving down in the list and selecting another planet will not announce updates in the live region. Updates in the live region will only be announced for the planet finally chosen.
 
 Here is a screenshot of VoiceOver on Mac announcing the update (via subtitles) to the live region:
 
@@ -151,16 +151,16 @@ Elements with the following [`role="..."`](/en-US/Docs/Web/Accessibility/ARIA/Ro
 
 ## Additional live region attributes
 
-(TBD: more granular information on the support of the individual attributes with combinations of OS/Browser/AT).
+(TBD: more granular information on the support of the individual attributes with combinations of OS/Browser/AT).
 
-General support for Live Regions was added to JAWS on version 10.0. In Windows Eyes supports Live Regions since version 8.0 "for use outside of Browse Mode for Microsoft Internet Explorer and Mozilla Firefox". NVDA added some basic support for Live Regions for Mozilla Firefox back in 2008 and was improved in 2010 and 2014. In 2015, basic support was also added for Internet Explorer (MSHTML).
+General support for Live Regions was added to JAWS on version 10.0. In Windows Eyes supports Live Regions since version 8.0 "for use outside of Browse Mode for Microsoft Internet Explorer and Mozilla Firefox". NVDA added some basic support for Live Regions for Mozilla Firefox back in 2008 and was improved in 2010 and 2014. In 2015, basic support was also added for Internet Explorer (MSHTML).
 
 The Paciello Group has some [information about the state of the support of Live Regions](https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/) (2014). Paul J. Adam has researched [the support of `aria-atomic` and `aria-relevant`](https://pauljadam.com/demos/aria-atomic-relevant.html) in particular.
 
-1.  **`aria-atomic`**: The `aria-atomic=BOOLEAN` is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: `false` or `true`. The default setting is `false`.
-2.  [**`aria-relevant`**](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)
+1. **`aria-atomic`**: The `aria-atomic=BOOLEAN` is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: `false` or `true`. The default setting is `false`.
+2. [**`aria-relevant`**](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)
 
-    : The `aria-relevant=[LIST_OF_CHANGES]` is used to set what types of changes are relevant to a live region. The possible settings are one or more of: `additions`, `removals`, `text`, `all`. The default setting is: `additions text`.
+    : The `aria-relevant=[LIST_OF_CHANGES]` is used to set what types of changes are relevant to a live region. The possible settings are one or more of: `additions`, `removals`, `text`, `all`. The default setting is: `additions text`.
 
 ### Basic examples: `aria-atomic`
 
@@ -224,7 +224,7 @@ function change(event) {
       yearOut.innerHTML = event.target.value;
       break;
     default:
-      return;
+      return;
   }
 };
 ```
@@ -246,7 +246,7 @@ As an example, consider a chat site that wants to display a list of users curren
 Breakdown of ARIA live properties:
 
 - `aria-live="polite"` indicates that the screen reader should wait until the user is idle before presenting updates to the user. This is the most commonly used value, as interrupting the user with "assertive" might interrupt their flow.
-- `aria-atomic` is not set (`false` by default) so that only the added or removed users should be spoken and not the entire roster each time.
+- `aria-atomic` is not set (`false` by default) so that only the added or removed users should be spoken and not the entire roster each time.
 - `aria-relevant="additions removals"` ensures that both users added or removed to the roster will be spoken.
 
 ## See also

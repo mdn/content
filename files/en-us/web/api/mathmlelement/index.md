@@ -13,6 +13,8 @@ browser-compat: api.MathMLElement
 
 The **`MathMLElement`** interface represents any [MathML](/en-US/docs/Web/MathML) element.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _Also inherits properties from: {{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("Element")}}, {{DOMxRef("GlobalEventHandlers")}}_

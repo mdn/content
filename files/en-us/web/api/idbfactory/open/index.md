@@ -23,7 +23,7 @@ performs the open operation asynchronously. If the operation is successful, a
 method, with its `result` attribute set to the new
 {{domxref("IDBDatabase")}} object for the connection.
 
-May trigger `upgradeneeded`, `blocked` or
+May trigger `upgradeneeded`, `blocked` or
 `versionchange` events.
 
 {{AvailableInWorkers}}
@@ -41,21 +41,21 @@ var IDBOpenDBRequest = indexedDB.open(name, version);
 
 - name
   - : The name of the database.
-- version {{optional_inline}}
+- version {{optional_inline}}
   - : Optional. The version to open the database with. If the version is not provided and
     the database exists, then a connection to the database will be opened without changing
-    its version. If the version is not provided and the database does not exist, then it
+    its version. If the version is not provided and the database does not exist, then it
     will be created with version `1`.
 
 #### Experimental Gecko options object
 
 - options (version and storage) {{optional_inline}} {{deprecated_inline}}
 
-  - : In Gecko, since [version 26](/en-US/docs/Mozilla/Firefox/Releases/26), you can include
-    a non-standard `options` object as a parameter of {{
-    domxref("IDBFactory.open") }} that contains the `version` number of the
+  - : In Gecko, since [version 26](/en-US/docs/Mozilla/Firefox/Releases/26), you can include
+    a non-standard `options` object as a parameter of {{
+    domxref("IDBFactory.open") }} that contains the `version` number of the
     database, plus a storage value that specifies whether you want to
-    use `persistent` or `temporary` storage.
+    use `persistent` or `temporary` storage.
 
     > **Warning:** The `storage` attribute is
     > deprecated and will soon be removed from Gecko. You should use
@@ -110,16 +110,16 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 // these two event handlers act on the database being opened
 // successfully, or not
 DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>Error loading database.</li>';
+  note.innerHTML += '<li>Error loading database.</li>';
 };
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>Database initialized.</li>';
 
-  // store the result of opening the database in the db
-  // variable. This is used a lot later on, for opening
-  // transactions and suchlike.
-  db = DBOpenRequest.result;
+  // store the result of opening the database in the db
+  // variable. This is used a lot later on, for opening
+  // transactions and suchlike.
+  db = DBOpenRequest.result;
 };
 ```
 

@@ -70,7 +70,7 @@ rotate3d(x, y, z, a)
           href="/en-US/docs/Web/CSS/transform-function/rotate3d()/transform-functions-rotate3d_cart.png"
           ><img src="transform-functions-rotate3d_cart.png" /></a
         ><math>
-          <mfenced
+          <mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd
@@ -242,7 +242,7 @@ rotate3d(x, y, z, a)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>

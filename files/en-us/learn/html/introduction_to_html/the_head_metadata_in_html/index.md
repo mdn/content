@@ -74,16 +74,16 @@ We've already seen the {{htmlelement("title")}} element in action — this can b
 
 ### Active learning: Inspecting a simple example
 
-1.  To start off this active learning, we'd like you to go to our GitHub repo and download a copy of our [title-example.html page](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html). To do this, either
+1. To start off this active learning, we'd like you to go to our GitHub repo and download a copy of our [title-example.html page](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html). To do this, either
 
-    1.  Copy and paste the code out of the page and into a new text file in your code editor, then save it in a sensible place.
-    2.  Press the "Raw" button on the GitHub page, which causes the raw code to appear (possibly in a new browser tab). Next, choose your browser's *File > Save Page As...* menu and choose a sensible place to save the file.
+    1. Copy and paste the code out of the page and into a new text file in your code editor, then save it in a sensible place.
+    2. Press the "Raw" button on the GitHub page, which causes the raw code to appear (possibly in a new browser tab). Next, choose your browser's *File > Save Page As...* menu and choose a sensible place to save the file.
 
-2.  Now open the file in your browser. You should see something like this:
+2. Now open the file in your browser. You should see something like this:
 
     ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](title-example.png)It should now be completely obvious where the `<h1>` content appears, and where the `<title>` content appears!
 
-3.  You should also try opening the code up in your code editor, editing the contents of these elements, then refreshing the page in your browser. Have some fun with it.
+3. You should also try opening the code up in your code editor, editing the contents of these elements, then refreshing the page in your browser. Have some fun with it.
 
 The `<title>` element contents are also used in other ways. For example, if you try bookmarking the page (_Bookmarks > Bookmark This Page_ or the star icon in the URL bar in Firefox), you will see the `<title>` contents filled in as the suggested bookmark name.
 
@@ -143,9 +143,9 @@ Specifying a description that includes keywords relating to the content of your 
 
 The description is also used on search engine result pages. Let's go through an exercise to explore this
 
-1.  Go to the [front page of The Mozilla Developer Network](/en-US/).
-2.  View the page's source (right-click on the page, choose _View Page Source_ from the context menu.)
-3.  Find the description meta tag. It will look something like this (although it may change over time):
+1. Go to the [front page of The Mozilla Developer Network](/en-US/).
+2. View the page's source (right-click on the page, choose _View Page Source_ from the context menu.)
+3. Find the description meta tag. It will look something like this (although it may change over time):
 
     ```html
     <meta name="description" content="The MDN Web Docs site
@@ -154,7 +154,7 @@ The description is also used on search engine result pages. Let's go through an 
       progressive web apps.">
     ```
 
-4.  Now search for "MDN Web Docs" in your favorite search engine (We used Google.) You'll notice the description `<meta>` and `<title>` element content used in the search result — definitely worth having!
+4. Now search for "MDN Web Docs" in your favorite search engine (We used Google.) You'll notice the description `<meta>` and `<title>` element content used in the search result — definitely worth having!
 
     ![A Yahoo search result for "Mozilla Developer Network"](mdn-search-result.png)
 
@@ -194,8 +194,8 @@ The humble favicon has been around for many years. It is the first icon of this 
 
 A favicon can be added to your page by:
 
-1.  Saving it in the same directory as the site's index page, saved in `.ico` format (most browsers will support favicons in more common formats like `.gif` or `.png`, but using the ICO format will ensure it works as far back as Internet Explorer 6.)
-2.  Adding the following line into your HTML's {{HTMLElement("head")}} block to reference it:
+1. Saving it in the same directory as the site's index page, saved in `.ico` format (most browsers will support favicons in more common formats like `.gif` or `.png`, but using the ICO format will ensure it works as far back as Internet Explorer 6.)
+2. Adding the following line into your HTML's {{HTMLElement("head")}} block to reference it:
 
     ```html
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -246,9 +246,9 @@ Just about all websites you'll use in the modern day will employ {{glossary("CSS
 
 ### Active learning: applying CSS and JavaScript to a page
 
-1.  To start this active learning, grab a copy of our [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) and [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css) files, and save them on your local computer in the same directory. Make sure they are saved with the correct names and file extensions.
-2.  Open the HTML file in both your browser, and your text editor.
-3.  By following the information given above, add {{htmlelement("link")}} and {{htmlelement("script")}} elements to your HTML, so that your CSS and JavaScript are applied to your HTML.
+1. To start this active learning, grab a copy of our [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) and [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css) files, and save them on your local computer in the same directory. Make sure they are saved with the correct names and file extensions.
+2. Open the HTML file in both your browser, and your text editor.
+3. By following the information given above, add {{htmlelement("link")}} and {{htmlelement("script")}} elements to your HTML, so that your CSS and JavaScript are applied to your HTML.
 
 If done correctly, when you save your HTML and refresh your browser you should be able to see that things have changed:
 

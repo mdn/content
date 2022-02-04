@@ -17,7 +17,7 @@ When debugging or, possibly, when trying to decide upon the best approach to sol
 
 ## Introduction
 
-JavaScript is an inherently single-threaded language. It was designed in an era in which this was a positive choice; there were few multi-processor computers available to the general public, and the expected amount of code that would be handled by JavaScript was relatively low at that time.
+JavaScript is an inherently single-threaded language. It was designed in an era in which this was a positive choice; there were few multi-processor computers available to the general public, and the expected amount of code that would be handled by JavaScript was relatively low at that time.
 
 As time passed, of course, we know that computers have evolved into powerful multi-core systems, and JavaScript has become one of the most prolifically-used languages in the computing world. A vast number of the most popular applications are based at least in part on JavaScript code. To support this, it was necessary to find ways to allow for projects to escape the limitations of a single-threaded language.
 

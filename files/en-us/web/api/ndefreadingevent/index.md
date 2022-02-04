@@ -11,6 +11,8 @@ browser-compat: api.NDEFReadingEvent
 
 The **`NDEFReadingEvent`** interface of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) represents events dispatched on new NFC readings obtained by {{DOMxRef("NDEFReader")}}.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{DOMxRef("NDEFReadingEvent.NDEFReadingEvent", "NDEFReadingEvent.NDEFReadingEvent()")}}

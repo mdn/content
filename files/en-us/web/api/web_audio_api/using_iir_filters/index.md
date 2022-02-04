@@ -43,7 +43,7 @@ If you want to play with the IIR filter node and need some values to help along 
 
 With that all in mind, let's take a look at the code to create an IIR filter with the Web Audio API.
 
-## Setting our IIRFilter co-efficients
+## Setting our IIRFilter coefficients
 
 When creating an IIR filter, we pass in the `feedforward` and `feedback` coefficients as options (coefficients is how we describe the values). Both of these parameters are arrays, neither of which can be larger than 20 items.
 
@@ -106,7 +106,7 @@ The toggle that turns the IIR filter on and off is set up in the similar way. Fi
 <button class="button-filter" role="switch" data-filteron="false" aria-pressed="false" aria-describedby="label" disabled></button>
 ```
 
-The filter button's `click` handler then connects the `IIRFilter` up to the graph, between the source and the detination:
+The filter button's `click` handler then connects the `IIRFilter` up to the graph, between the source and the destination:
 
 ```js
 filterButton.addEventListener('click', function() {
@@ -157,7 +157,7 @@ const canvasContainer = document.querySelector('.filter-graph');
 const canvasEl = document.createElement('canvas');
 canvasContainer.appendChild(canvasEl);
 
-// set 2d context and set dimesions
+// set 2d context and set dimensions
 const canvasCtx = canvasEl.getContext('2d');
 const width = canvasContainer.offsetWidth;
 const height = canvasContainer.offsetHeight;

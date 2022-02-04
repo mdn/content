@@ -102,23 +102,23 @@ Using this UI our user will be able to:
 
 Let's create a `Todos.svelte` component — this will contain our list of todos.
 
-1.  Create a new folder — `src/components`.
+1. Create a new folder — `src/components`.
 
     > **Note:** you can put your components anywhere inside the `src` folder, but the `components` folder is a recognized convention to follow, allowing you to find your components easily.
 
-2.  Create a file named `src/components/Todos.svelte` with the following content:
+2. Create a file named `src/components/Todos.svelte` with the following content:
 
     ```html
     <h1>Svelte To-Do list</h1>
     ```
 
-3.  Change the `title` element in `public/index.html` to contain the text _Svelte To-do list_:
+3. Change the `title` element in `public/index.html` to contain the text _Svelte To-do list_:
 
     ```html
     <title>Svelte To-Do list</title>
     ```
 
-4.  Open `src/App.svelte` and replace its contents with the following:
+4. Open `src/App.svelte` and replace its contents with the following:
 
     ```html
     <script>
@@ -128,7 +128,7 @@ Let's create a `Todos.svelte` component — this will contain our list of todos.
     <Todos />
     ```
 
-5.  In development mode, Svelte will issue a warning in the browser console when specifying a prop that doesn't exist in the component; in this case we have a `name` prop being specified when we instantiate the `App` component inside `src/main.js`, which isn't used inside `App`. The console should currently give you a message along the lines of "\<App> was created with unknown prop 'name'". To get rid of this, remove the `name` prop from `src/main.js`; it should now look like so:
+5. In development mode, Svelte will issue a warning in the browser console when specifying a prop that doesn't exist in the component; in this case we have a `name` prop being specified when we instantiate the `App` component inside `src/main.js`, which isn't used inside `App`. The console should currently give you a message along the lines of "\<App> was created with unknown prop 'name'". To get rid of this, remove the `name` prop from `src/main.js`; it should now look like so:
 
     ```js
     import App from './App.svelte'
@@ -275,7 +275,7 @@ Check the rendered out again, and you'll see something like this:
 
 ![A todo list app, but unstyled, with a title of `what needs to be done`, inputs, checkboxes, etc.](03-unstyled-todo-app.png)
 
-The HTML markup above is not very nicely styled and it's also functionally useless. Nevertheless, let's have a look at the markup and see how it relates to our desired features:
+The HTML markup above is not very nicely styled and it's also functionally useless. Nevertheless, let's have a look at the markup and see how it relates to our desired features:
 
 - A label and a text box for entering new tasks.
 - Three buttons to filter by task status.
@@ -309,7 +309,7 @@ Further down, you can find the following `<ul>` element:
 <ul role="list" className="todo-list stack-large" aria-labelledby="list-heading">
 ```
 
-The `role` attribute helps assistive technology explain what kind of semantic value an element has — or what its purpose is. A `<ul>` is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the `<ul>`  element. If you want to learn more about why this is necessary, you can check out Scott O'Hara’s article, “Fixing Lists”.
+The `role` attribute helps assistive technology explain what kind of semantic value an element has — or what its purpose is. A `<ul>` is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the `<ul>` element. If you want to learn more about why this is necessary, you can check out Scott O'Hara’s article, “Fixing Lists”.
 
 The `aria-labelledby` attribute tells assistive technologies that we're treating our `<h2>` with an `id` of `list-heading` as the label that describes the purpose of the list beneath it. Making this association gives the list a more informative context, which could help screen reader users better understand the purpose of it.
 

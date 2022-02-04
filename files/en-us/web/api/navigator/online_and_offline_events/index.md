@@ -10,18 +10,18 @@ tags:
   - Offline web applications
   - Web Development
 ---
-Some browsers implement [Online/Offline events](https://www.whatwg.org/specs/web-apps/current-work/#offline) from the [WHATWG Web Applications 1.0 specification](https://www.whatwg.org/specs/web-apps/current-work/).
+Some browsers implement [Online/Offline events](https://www.whatwg.org/specs/web-apps/current-work/#offline) from the [WHATWG Web Applications 1.0 specification](https://www.whatwg.org/specs/web-apps/current-work/).
 
 ## Overview
 
 In order to build a good offline-capable web application, you need to know when your application is actually offline. You also need to know when your application has returned to an 'online' status again. Effectively, the requirements break down as such:
 
-1.  You need to know when the user comes back online, so that you can re-synchronize with the server.
-2.  You need to know when the user is offline, so that you can queue your server requests for a later time.
+1. You need to know when the user comes back online, so that you can re-synchronize with the server.
+2. You need to know when the user is offline, so that you can queue your server requests for a later time.
 
 It is this process that online/offline events help to simplify.
 
-Unfortunately, these events aren't fully reliable. If you need greater reliability, or if the API isn't implemented in the browser, you can use other signals to detect if you are offline including using service workers and [responses from XMLHttpRequest](http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request).
+Unfortunately, these events aren't fully reliable. If you need greater reliability, or if the API isn't implemented in the browser, you can use other signals to detect if you are offline including using service workers and [responses from XMLHttpRequest](http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request).
 
 ## API
 
@@ -33,7 +33,7 @@ This property is updated whenever the user switches into "Offline Mode" (File �
 
 > The `navigator.onLine` attribute must return false if the user agent will not contact the network when the user follows links or when a script requests a remote page (or knows that such an attempt would fail)...
 
-Firefox 2 updates this property when switching to/from the browser's Offline mode.  [Firefox 41](/en-US/Firefox/Releases/41#Miscellaneous) updates this property also when the OS reports a change in network connectivity on Windows, Linux, and OS X.
+Firefox 2 updates this property when switching to/from the browser's Offline mode. [Firefox 41](/en-US/Firefox/Releases/41#Miscellaneous) updates this property also when the OS reports a change in network connectivity on Windows, Linux, and OS X.
 
 This property existed in older versions of Firefox and Internet Explorer (the specification based itself off of these prior implementations), so you can begin using it immediately. Network status autodetection was implemented in Firefox 2.
 
@@ -41,7 +41,7 @@ This property existed in older versions of Firefox and Internet Explorer (the sp
 
 [Firefox 3](/en-US/docs/Firefox_3_for_developers) introduces two new events: "[`online`](/en-US/docs/Web/API/document.ononline)" and "[`offline`](/en-US/docs/Web/API/document.onoffline)". These two events are fired on the `<body>` of each page when the browser switches between online and offline mode. Additionally, the events bubble up from `document.body`, to `document`, ending at `window`. Both events are non-cancellable (you can't prevent the user from coming online, or going offline).
 
-[Firefox 41](/en-US/Firefox/Releases/41#Miscellaneous) fires these events when the OS reports a change in network connectivity on Windows, Linux, and OS X.
+[Firefox 41](/en-US/Firefox/Releases/41#Miscellaneous) fires these events when the OS reports a change in network connectivity on Windows, Linux, and OS X.
 
 You can register listeners for these events in a few familiar ways:
 
@@ -113,7 +113,7 @@ Here's the live result
 
 ## Notes
 
-If the API isn't implemented in the browser, you can use other signals to detect if you are offline including using service workers and [responses from XMLHttpRequest](http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request).
+If the API isn't implemented in the browser, you can use other signals to detect if you are offline including using service workers and [responses from XMLHttpRequest](http://www.html5rocks.com/en/mobile/workingoffthegrid.html#toc-xml-http-request).
 
 ## References
 

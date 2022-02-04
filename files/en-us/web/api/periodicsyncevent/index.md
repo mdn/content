@@ -12,11 +12,13 @@ tags:
   - Workers
 browser-compat: api.PeriodicSyncEvent
 ---
-{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
+{{DefaultAPISidebar("Periodic Background Sync")}}
 
 The **`PeriodicSyncEvent`** interface of the {{domxref('Web Periodic Background Synchronization API')}} provides a way to run tasks in the service worker with network connectivity.
 
 An instance of this event is passed to the {{domxref('ServiceWorkerGlobalScope.onperiodicsync')}} handler. This happens periodically, at an interval greater than or equal to that set in the {{domxref('PeriodicSyncManager.register()')}} method. Other implementation-specific factors such as the user's engagement with the site decide the actual interval.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
@@ -31,8 +33,6 @@ An instance of this event is passed to the {{domxref('ServiceWorkerGlobalScope.o
 ## Methods
 
 Inherits methods from its parent {{domxref('ExtendableEvent')}}.
-
-{{InheritanceDiagram}}
 
 ## Examples
 

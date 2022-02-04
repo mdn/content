@@ -22,6 +22,8 @@ The target is the `RTCPeerConnection` object to which the track is being added.
 
 This event is sent by the WebRTC layer to the web site or application, so you will not typically need to instantiate an `RTCTrackEvent` yourself.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("RTCTrackEvent.RTCTrackEvent", "RTCTrackEvent()")}}

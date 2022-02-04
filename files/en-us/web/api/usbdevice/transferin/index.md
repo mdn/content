@@ -16,7 +16,7 @@ browser-compat: api.USBDevice.transferIn
 
 The **`transferIn()`** method of the {{domxref("USBDevice")}}
 interface returns a {{jsxref("promise")}} that resolves with a
-{{domxref("USBTransferInResult")}} when bulk or interrupt data is received from the USB
+{{domxref("USBInTransferResult")}} when bulk or interrupt data is received from the USB
 device.
 
 ## Syntax
@@ -35,7 +35,7 @@ var promise = USBDevice.transferIn(endpointNumber, length)
 
 ### Return value
 
-A {{jsxref("promise")}} that resolves with a {{domxref("USBTransferInResult")}}.
+A {{jsxref("promise")}} that resolves with a {{domxref("USBInTransferResult")}}.
 
 ## Specifications
 

@@ -130,4 +130,4 @@ xhrButtonAbort.addEventListener('click', () => {
 ## See also
 
 - Related events: {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
-- [Monitoring progress](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
+- [Monitoring progress](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)

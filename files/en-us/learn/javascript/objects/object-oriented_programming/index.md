@@ -60,8 +60,8 @@ class Professor
 
 This defines a `Professor` class with:
 
-* two data properties: `name` and `teaches`
-* two methods: `grade()` to grade a paper, and `introduceSelf()` to introduce themselves.
+- two data properties: `name` and `teaches`
+- two methods: `grade()` to grade a paper, and `introduceSelf()` to introduce themselves.
 
 On its own, a class doesn't do anything. It's a kind of template for creating concrete objects of that type. Each concrete professor we create is called an **instance** of the `Professor` class. The process of creating an instance is performed by a special function called a **constructor**. We pass the constructor values for any internal state that we want to initialize in the new instance.
 
@@ -83,7 +83,7 @@ This constructor takes two parameters so we can initialize the `name` and `teach
 
 Now we have a constructor we can create some professors. Programming languages often use the keyword `new` to signal that a constructor is being called.
 
-```
+```js
 walsh = new Professor('Walsh', 'Psychology')
 lillian = new Professor('Lillian', 'Poetry')
 
@@ -148,7 +148,7 @@ In this case we would say that `Person` is the **superclass** or **parent class*
 
 You might notice that `introduceSelf()` is defined in all three classes. The reason is that while all people want to introduce themselves, the way they do it is different:
 
-```
+```js
 walsh = new Professor('Walsh', 'Psychology')
 walsh.introduceSelf()  // 'My name is Professor Walsh, and I will be your Psychology professor'
 
@@ -158,7 +158,7 @@ summers.introduceSelf() // 'My name is Summers, and I'm in the first year'
 
 We might have a default implementation of `introduceSelf()` for people who aren't students _or_ professors:
 
-```
+```js
 pratt = new Person('Pratt')
 pratt.introduceSelf() // 'My name is Pratt'
 ```
@@ -173,7 +173,7 @@ This is a useful feature because it enables the programmer to change the interna
 
 For example, suppose students are allowed to study archery if they are in the second year or above. We could implement this just by exposing the student's `year` property, and other code could examine that to decide whether the student can take the course:
 
-```
+```js
 if (student.year > 1) {
     // allow the student into the class
 }
@@ -192,7 +192,7 @@ class Student : extends Person
        canStudyArchery() { return this.year < 1 }
 ```
 
-```
+```js
 if (student.canStudyArchery()) {
     // allow the student into the class
 }
@@ -224,9 +224,9 @@ In this article we've described some of the basic features of class-based, somet
 
 In the previous two articles we looked at a couple of core JavaScript features: [constructors](/en-US/docs/Learn/JavaScript/Objects/Basics) and [prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes). These features certainly have some relation to some of the OOP concepts described above.
 
-* **constructors** in JavaScript provide us with something like a class definition, enabling us to define the "shape" of an object, including any methods it contains, in a single place. But prototypes can be used here, too. For example, if a method is defined on a constructor's `prototype` property, then all objects created using that constructor get that method via their prototype, and we don't need to define it in the constructor.
+- **constructors** in JavaScript provide us with something like a class definition, enabling us to define the "shape" of an object, including any methods it contains, in a single place. But prototypes can be used here, too. For example, if a method is defined on a constructor's `prototype` property, then all objects created using that constructor get that method via their prototype, and we don't need to define it in the constructor.
 
-* **the prototype chain** seems like a natural way to implement inheritance. For example, if we can have a `Student` object whose prototype is `Person`, then it can inherit `name` and override `introduceSelf()`.
+- **the prototype chain** seems like a natural way to implement inheritance. For example, if we can have a `Student` object whose prototype is `Person`, then it can inherit `name` and override `introduceSelf()`.
 
 But it's worth understanding the differences between these features and the "classical" OOP concepts described above. We'll highlight a couple of them here.
 

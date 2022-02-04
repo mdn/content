@@ -17,9 +17,9 @@ browser-compat: api.CacheStorage.match
 
 The **`match()`** method of the
 {{domxref("CacheStorage")}} interface checks if a given {{domxref("Request")}} or url
-string is a key for a stored {{domxref("Response")}}. This method returns a
-{{jsxref("Promise")}} for a {{domxref("Response")}}, or a {{jsxref("Promise")}} which
-resolves to `undefined` if no match is found.
+string is a key for a stored {{domxref("Response")}}. This method returns a
+{{jsxref("Promise")}} for a {{domxref("Response")}}, or a {{jsxref("Promise")}} which
+resolves to `undefined` if no match is found.
 
 You can access `CacheStorage` through the global
 {{domxref("caches")}} property.
@@ -43,16 +43,16 @@ caches.match(request, options).then(function(response) {
 ### Parameters
 
 - request
-  - : The {{domxref("Request")}} you want to match.  This can be a  {{domxref("Request")}}
+  - : The {{domxref("Request")}} you want to match. This can be a {{domxref("Request")}}
     object or a URL string.
 - options {{optional_inline}}
 
-  - : An object whose properties control how matching is done in the `match`
+  - : An object whose properties control how matching is done in the `match`
     operation. The available options are:
 
     - `ignoreSearch`: A boolean value that specifies whether the
-      matching process should ignore the query string in the url.  For example, if set
-      to `true`, the `?value=bar` part of
+      matching process should ignore the query string in the url. For example, if set
+      to `true`, the `?value=bar` part of
       `http://foo.com/?value=bar` would be ignored when performing a match.
       It defaults to `false`.
     - `ignoreMethod`: A boolean value that, when set to
@@ -62,7 +62,7 @@ caches.match(request, options).then(function(response) {
     - `ignoreVary`: A boolean value that, when set to
       `true,` tells the matching operation not to perform `VARY`
       header matching. In other words, if the URL matches you will get a match
-      regardless of whether the {{domxref("Response")}} object has a `VARY`
+      regardless of whether the {{domxref("Response")}} object has a `VARY`
       header or not. It defaults to `false`.
     - `cacheName`: A {{domxref("DOMString")}} that represents a specific
       cache to search within.
@@ -70,8 +70,8 @@ caches.match(request, options).then(function(response) {
 ### Return value
 
 a {{jsxref("Promise")}} that resolves to the matching {{domxref("Response")}}. If
-no matching response to the specified request is found, the promise resolves
-with `undefined`.
+no matching response to the specified request is found, the promise resolves
+with `undefined`.
 
 ## Examples
 
@@ -80,13 +80,13 @@ example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://md
 Here we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom response
 like so:
 
-1.  Check whether a match for the request is found in the {{domxref("CacheStorage")}}
+1. Check whether a match for the request is found in the {{domxref("CacheStorage")}}
     using {{domxref("CacheStorage.match","CacheStorage.match()")}}. If so, serve that.
-2.  If not, open the `v1` cache using `open()`, put the default
+2. If not, open the `v1` cache using `open()`, put the default
     network request in the cache using {{domxref("Cache.put","Cache.put()")}} and return a
     clone of the default network request using `return response.clone()`. The
-    last is necessary because `put()` consumes the response body.
-3.  If this fails (e.g., because the network is down), return a fallback response.
+    last is necessary because `put()` consumes the response body.
+3. If this fails (e.g., because the network is down), return a fallback response.
 
 ```js
 self.addEventListener('fetch', function(event) {

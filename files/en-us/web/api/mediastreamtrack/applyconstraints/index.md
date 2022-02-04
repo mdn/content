@@ -18,7 +18,7 @@ The
 of the {{domxref("MediaStreamTrack")}} interface applies a set of constraints to the
 track; these constraints let the Web site or app establish ideal values and acceptable
 ranges of values for the constrainable properties of the track, such as frame rate,
-dimensions, echo cancelation, and so forth.
+dimensions, echo cancellation, and so forth.
 
 Constraints can be used to ensure that the media meets certain guidelines you prefer.
 For example, you may prefer high-density video but require that the frame rate be a
@@ -59,29 +59,29 @@ The following shows how to specify a basic and advanced set of constraints. It
 specifies that the page or web app needs a width between 640 and 1280 and a height
 between 480 and 720, with the later number in each pair being preferred. The advanced
 property further specifies that an image size of 1920 by 1280 is the preferred or an
-aspect ratio of 1.333 if that is not available. Note that these constraints also
-illustrate what the spec refers to as a *backoff strategy*.
+aspect ratio of 1.333 if that is not available. Note that these constraints also
+illustrate what the spec refers to as a *backoff strategy*.
 
 ```js
 const constraints = {
   width: {min: 640, ideal: 1280},
   height: {min: 480, ideal: 720},
   advanced: [
-    {width: 1920, height: 1280},
-    {aspectRatio: 1.333}
-  ]
+    {width: 1920, height: 1280},
+    {aspectRatio: 1.333}
+  ]
 };
 
 navigator.mediaDevices.getUserMedia({ video: true })
 .then(mediaStream => {
-  const track = mediaStream.getVideoTracks()[0];
-  track.applyConstraints(constraints)
-  .then(() => {
-    // Do something with the track such as using the Image Capture API.
-  })
-  .catch(e => {
-    // The constraints could not be satisfied by the available devices.
-  });
+  const track = mediaStream.getVideoTracks()[0];
+  track.applyConstraints(constraints)
+  .then(() => {
+    // Do something with the track such as using the Image Capture API.
+  })
+  .catch(e => {
+    // The constraints could not be satisfied by the available devices.
+  });
 });
 ```
 

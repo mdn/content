@@ -18,6 +18,8 @@ An intervention report is generated when usage of a feature in a web document ha
 
 A deprecation report is generated when a deprecated feature (for example a deprecated API method) is used on a document being observed by a {{domxref("ReportingObserver")}}. In addition to the support of this API, receiving useful intervention warnings relies on browser vendors adding these warnings for the relevant features.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 An instance of `InterventionReportBody` is returned as the value of {{domxref("Report.body")}} when {{domxref("Report.Type")}} is `intervention`. The interface has no constructor.

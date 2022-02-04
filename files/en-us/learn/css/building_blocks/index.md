@@ -26,10 +26,10 @@ The aim here is to provide you with a toolkit for writing competent CSS and help
 
 Before starting this module, you should have:
 
-1.  Basic familiarity with using computers, and using the Web passively (i.e. just looking at it, consuming the content.)
-2.  A basic work environment set up as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and an understanding of how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
-3.  Basic familiarity with HTML, as discussed in the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module.
-4.  An understanding of the basics of CSS, as discussed in the [CSS first steps](/en-US/docs/Learn/CSS/First_steps) module.
+1. Basic familiarity with using computers, and using the Web passively (i.e. just looking at it, consuming the content.)
+2. A basic work environment set up as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and an understanding of how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
+3. Basic familiarity with HTML, as discussed in the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module.
+4. An understanding of the basics of CSS, as discussed in the [CSS first steps](/en-US/docs/Learn/CSS/First_steps) module.
 
 > **Note:** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
@@ -41,7 +41,7 @@ This module contains the following articles, which cover the most essential part
   - : The aim of this lesson is to develop your understanding of some of the most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts are resolved.
 - [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
-  - : There are a wide variety of CSS selectors available, allowing for fine-grained precision when selecting elements to style. In this article and its sub-articles, we'll run through the different types in great detail, seeing how they work. The sub-articles are as follows:
+  - : There are a wide variety of CSS selectors available, allowing for fine-grained precision when selecting elements to style. In this article and its sub-articles, we'll run through the different types in great detail, seeing how they work. The sub-articles are as follows:
 
     - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
@@ -59,7 +59,7 @@ This module contains the following articles, which cover the most essential part
 - [CSS values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
   - : Every property used in CSS has a value or set of values that are allowed for that property. In this lesson, we will take a look at some of the most common values and units in use.
 - [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-  - : In the various lessons so far you have come across a number of ways to size items on a web page using CSS. Understanding how big the different features in your design will be is important, and in this lesson, we will summarize the various ways elements get a size via CSS and define a few terms around sizing that will help you in the future.
+  - : In the various lessons so far you have come across a number of ways to size items on a web page using CSS. Understanding how big the different features in your design will be is important, and in this lesson, we will summarize the various ways elements get a size via CSS and define a few terms around sizing that will help you in the future.
 - [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
   - : In this lesson we will take a look at how certain special elements are treated in CSS. Images, other media, and form elements behave a little differently in terms of your ability to style them with CSS than regular boxes. Understanding what is and isn't possible can save some frustration, and this lesson will highlight some of the main things that you need to know.
 - [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)

@@ -12,11 +12,11 @@ A template is a text file defining the _structure_ or layout of an output file, 
 
 ## Express template choices
 
-Express can be used with many different [template rendering engines](https://expressjs.com/en/guide/using-template-engines.html). In this tutorial we use [Pug](https://pugjs.org/api/getting-started.html) (formerly known as _Jade_) for our templates. This is the most popular Node template language, and describes itself as a "clean, whitespace-sensitive syntax for writing HTML, heavily influenced by [Haml](https://haml.info/)".
+Express can be used with many different [template rendering engines](https://expressjs.com/en/guide/using-template-engines.html). In this tutorial we use [Pug](https://pugjs.org/api/getting-started.html) (formerly known as _Jade_) for our templates. This is the most popular Node template language, and describes itself as a "clean, whitespace-sensitive syntax for writing HTML, heavily influenced by [Haml](https://haml.info/)".
 
 Different template languages use different approaches for defining layout and marking placeholders for data—some use HTML to define the layout while others use different markup formats that can be transpiled to HTML. Pug is of the second type; it uses a _representation_ of HTML where the first word in any line usually represents an HTML element, and indentation on subsequent lines is used to represent nesting. The result is a page definition that translates directly to HTML, but is more concise and arguably easier to read.
 
-> **Note:** The downside of using _Pug_ is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). Once you have your templates in place, however, they are very easy to read and maintain.
+> **Note:** The downside of using _Pug_ is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). Once you have your templates in place, however, they are very easy to read and maintain.
 
 ## Template configuration
 
@@ -55,7 +55,7 @@ html(lang="en")
     h1= title
 
     p This is a line with #[em some emphasis] and #[strong strong text] markup.
-    p This line has un-escaped data: !{'<em> is emphasised</em>'} and escaped data: #{'<em> is not emphasised</em>'}.
+    p This line has un-escaped data: !{'<em> is emphasized</em>'} and escaped data: #{'<em> is not emphasized</em>'}.
       | This line follows on.
     p= 'Evaluated and <em>escaped expression</em>:' + title
 
@@ -83,14 +83,14 @@ html(lang="en")
         li= val
 ```
 
-Element attributes are defined in parentheses after their associated element. Inside the parentheses, the attributes are defined in comma- or whitespace- separated lists of the pairs of attribute names and attribute values, for example:
+Element attributes are defined in parentheses after their associated element. Inside the parentheses, the attributes are defined in comma- or whitespace- separated lists of the pairs of attribute names and attribute values, for example:
 
 - `script(type='text/javascript')`, `link(rel='stylesheet', href='/stylesheets/style.css')`
 - `meta(name='viewport' content='width=device-width initial-scale=1')`
 
-The values of all attributes are _escaped_ (e.g. characters like "`>`" are converted to their HTML code equivalents like "`&gt;"`) to prevent JavaScript injection or cross-site scripting attacks.
+The values of all attributes are _escaped_ (e.g. characters like "`>`" are converted to their HTML code equivalents like "`&gt;"`) to prevent JavaScript injection or cross-site scripting attacks.
 
-If a tag is followed by the equals sign, the following text is treated as a JavaScript _expression_. So for example, in the first line below, the content of the `h1` tag will be _variable_ `title` (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatenated with the `title` variable. In both cases the default behavior is to _escape_ the line.
+If a tag is followed by the equals sign, the following text is treated as a JavaScript _expression_. So for example, in the first line below, the content of the `h1` tag will be _variable_ `title` (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatenated with the `title` variable. In both cases the default behavior is to _escape_ the line.
 
 ```plain
 h1= title
@@ -101,10 +101,10 @@ If there is no equals symbol after the tag then the content is treated as plain 
 
 ```plain
 p This is a line with #[em some emphasis] and #[strong strong text] markup.
-p This line has an un-escaped string: !{'<em> is emphasised</em>'}, an escaped string: #{'<em> is not emphasised</em>'}, and escaped variables: #{title}.
+p This line has an un-escaped string: !{'<em> is emphasized</em>'}, an escaped string: #{'<em> is not emphasized</em>'}, and escaped variables: #{title}.
 ```
 
-> **Note:** You will almost always want to escape data from users (via the **`#{}`** syntax). Data that can be trusted (e.g. generated counts of records, etc.) may be displayed without escaping the values.
+> **Note:** You will almost always want to escape data from users (via the **`#{}`** syntax). Data that can be trusted (e.g. generated counts of records, etc.) may be displayed without escaping the values.
 
 You can use the pipe ('**|**') character at the beginning of a line to indicate "[plain text](https://pugjs.org/language/plain-text.html)". For example, the additional text shown below will be displayed on the same line as the preceding anchor, but will not be linked.
 
@@ -162,5 +162,5 @@ block content
 
 ## Next steps
 
-- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
 - Proceed to the next subarticle of part 5: [The LocalLibrary base template](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template).

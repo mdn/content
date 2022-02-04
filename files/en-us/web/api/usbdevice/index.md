@@ -58,9 +58,9 @@ The **`USBDevice`** interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API
 - {{domxref("USBDevice.clearHalt()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when a halt condition is cleared.
 - {{domxref("USBDevice.controlTransferIn()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBTransferInResult")}} when a command or status operation has been transmitted to the USB device.
+  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBInTransferResult")}} when a command or status operation has been transmitted to the USB device.
 - {{domxref("USBDevice.controlTransferOut()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBTransferOutResult")}} when a command or status operation has been transmitted from the USB device.
+  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBOutTransferResult")}} when a command or status operation has been transmitted from the USB device.
 - {{domxref("USBDevice.close()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when all open interfaces are released and the device session has ended.
 - {{domxref("USBDevice.isochronousTransferIn()")}}
@@ -78,9 +78,9 @@ The **`USBDevice`** interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API
 - {{domxref("USBDevice.selectConfiguration()")}}
   - : Returns a {{jsxref("Promise")}} that resolves when the specified configuration is selected.
 - {{domxref("USBDevice.transferIn()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBTransferInResult")}} when bulk or interrupt data is received from the USB device.
+  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBInTransferResult")}} when bulk or interrupt data is received from the USB device.
 - {{domxref("USBDevice.transferOut()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBTransferOutResult")}} when bulk or interrupt data is sent to the USB device.
+  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBOutTransferResult")}} when bulk or interrupt data is sent to the USB device.
 
 ## Specifications
 

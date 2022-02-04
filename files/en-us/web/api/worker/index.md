@@ -22,6 +22,8 @@ Workers may themselves spawn new workers, as long as those workers are hosted at
 
 [Not all interfaces and functions are available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) to scripts inside a `Worker`. Workers may use {{domxref("XMLHttpRequest")}} for network communication, but its `responseXML` and `channel` attributes are always `null`. ([`fetch`](/en-US/docs/Web/API/Fetch_API) is also available, with no such restrictions.)
 
+{{InheritanceDiagram}}
+
 ## Constructors
 
 - {{domxref("Worker.Worker", "Worker()")}}

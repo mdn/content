@@ -38,7 +38,7 @@ The level 3 [draft specification](https://drafts.csswg.org/css-contain-3/) adds 
 In addition the draft specification proposes some new properties:
 
 - `container-type`
-  - : Defines an element as a **query container**. Descendents can query aspects of its sizing, layout, style and state.
+  - : Defines an element as a **query container**. Descendants can query aspects of its sizing, layout, style and state.
 - `container-name`
   - : Specifies a list of **query container names** for `@container` rules to use to filter which query containers are targeted.
 - `container`:

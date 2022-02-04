@@ -13,7 +13,7 @@ tags:
   - Houdini
 browser-compat: api.CSSSkew.CSSSkew
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
+{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 The **`CSSSkew()`** constructor creates a new
 {{domxref("CSSSkew")}} object which represents the

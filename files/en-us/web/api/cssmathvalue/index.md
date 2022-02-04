@@ -11,9 +11,11 @@ tags:
   - Reference
 browser-compat: api.CSSMathValue
 ---
-{{draft}}{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} a base class for classes representing complex numeric values.
+
+{{InheritanceDiagram}}
 
 ## Interfaces based on CSSMathValue
 

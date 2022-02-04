@@ -14,7 +14,7 @@ The **`bias`** attribute shifts the range of the filter. After applying the {{SV
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feConvolveMatrix")}}
 
 ## Usage notes
 

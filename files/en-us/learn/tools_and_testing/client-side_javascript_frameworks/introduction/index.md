@@ -49,15 +49,15 @@ There are many frameworks out there, but currently the "big four" are considered
 
 ### Ember
 
-[Ember](https://emberjs.com/) was initially released in December 2011 as a continuation of work that started in the [SproutCore](https://en.wikipedia.org/wiki/SproutCore) project. It is an older framework that has less users than more modern alternatives  such as React and Vue, but it still enjoys a fair amount of popularity due to its stability, community support, and some clever coding principles.
+[Ember](https://emberjs.com/) was initially released in December 2011 as a continuation of work that started in the [SproutCore](https://en.wikipedia.org/wiki/SproutCore) project. It is an older framework that has less users than more modern alternatives such as React and Vue, but it still enjoys a fair amount of popularity due to its stability, community support, and some clever coding principles.
 
 [Start learning Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
 
 ### Angular
 
-[Angular](https://angular.io) is an open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. It is a complete rewrite from the same team that built [AngularJS](https://angularjs.org/). Angular was officially released on the 14th of September 2016.
+[Angular](https://angular.io) is an open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. It is a complete rewrite from the same team that built [AngularJS](https://angularjs.org/). Angular was officially released on the 14th of September 2016.
 
-Angular is a component-based framework which uses declarative HTML templates. At build time, transparently to developers, the framework's compiler translates the templates to optimized JavaScript instructions. Angular uses [TypeScript](https://www.typescriptlang.org/), a superset of JavaScript that we’ll look at in a little more detail in the next chapter.
+Angular is a component-based framework which uses declarative HTML templates. At build time, transparently to developers, the framework's compiler translates the templates to optimized JavaScript instructions. Angular uses [TypeScript](https://www.typescriptlang.org/), a superset of JavaScript that we’ll look at in a little more detail in the next chapter.
 
 [Start learning Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
 
@@ -174,7 +174,7 @@ Read more about the JavaScript used in this section:
 
 Every JavaScript framework offers a way to write user interfaces more _declaratively_. That is, they allow you to write code that describes how your UI should look, and the framework makes it happen in the DOM behind the scenes.
 
-The vanilla JavaScript approach to building out new DOM elements in repetition was difficult to understand at a glance.  By contrast, the following block of code illustrates the way you might use Vue to describe our list of tasks:
+The vanilla JavaScript approach to building out new DOM elements in repetition was difficult to understand at a glance. By contrast, the following block of code illustrates the way you might use Vue to describe our list of tasks:
 
 ```html
 <ul>
@@ -253,9 +253,9 @@ The upshot is that you should consider accessibility from the very start of _eve
 
 Each of the frameworks discussed in this module take different approaches to web application development. Each is regularly improving or changing, and each has its pros and cons. Choosing the right framework is a team- and project-dependent process, and you should do your own research to uncover what suits your needs. That said, we've identified a few questions you can ask in order to research your options more effectively:
 
-1.  What browsers does the framework support?
-2.  What domain-specific languages does the framework utilize?
-3.  Does the framework have a strong community and good docs (and other support) available?
+1. What browsers does the framework support?
+2. What domain-specific languages does the framework utilize?
+3. Does the framework have a strong community and good docs (and other support) available?
 
 The table in this section provides a glanceable summary of the current _browser support_ offered by each framework, as well as the **domain-specific languages** with which it can be used.
 

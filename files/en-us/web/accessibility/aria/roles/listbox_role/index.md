@@ -30,36 +30,35 @@ When the listbox role is added to an element, or such an element becomes visible
 
 - [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role) role
   - : One or more nested options are required. All selected options have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) set to `true`. All options that are not selected have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) set to `false`. If an option is not selectable, omit the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected).
-  
 - [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) role
   - : A section containing `listitem` elements
 
 #### States and Properties
 
 - [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
-    - : Holds the `id` string of the currently active element within the listbox. If that's an option element, then that would be the `id` of the most recently interacted with option, regardless of whether that option has an [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) value of `true` or not. Takes the value of only one `id`, even in a multiselectable listbox. If the `id` does not refer to a DOM descendant of the listbox, then that `id` must be included among the IDs in the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute.
+  - : Holds the `id` string of the currently active element within the listbox. If that's an option element, then that would be the `id` of the most recently interacted with option, regardless of whether that option has an [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) value of `true` or not. Takes the value of only one `id`, even in a multiselectable listbox. If the `id` does not refer to a DOM descendant of the listbox, then that `id` must be included among the IDs in the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute.
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
-    - : This is a space-separated list of element IDs which are not DOM child elements of the listbox. IDs listed here cannot also be listed in [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attributes of any other elements.
+  - : This is a space-separated list of element IDs which are not DOM child elements of the listbox. IDs listed here cannot also be listed in [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attributes of any other elements.
 
 - [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
-    - : Include and set to `true` if the user can select more than one option. If set to `true`, _every_ selectable option should have an [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute included and set to `true` or `false`. Options which are _not_ selectable _should not_ have the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute. If `false` or omitted, only the currently selected option, if any option is selected, needs the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute, and it must be set to `true`.
+  - : Include and set to `true` if the user can select more than one option. If set to `true`, _every_ selectable option should have an [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute included and set to `true` or `false`. Options which are _not_ selectable _should not_ have the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute. If `false` or omitted, only the currently selected option, if any option is selected, needs the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute, and it must be set to `true`.
 
 - [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required)
-    - : A Boolean attribute which indicates that an option with a non-empty string value must be selected.
+  - : A Boolean attribute which indicates that an option with a non-empty string value must be selected.
 
 - [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
-    - : The user cannot change which options are selected or unselected, but the listbox is otherwise operable.
+  - : The user cannot change which options are selected or unselected, but the listbox is otherwise operable.
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-    - : A human-readable string value which identifies the listbox. If there's a visible label, then [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) should be used instead to refer to that label.
+  - : A human-readable string value which identifies the listbox. If there's a visible label, then [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) should be used instead to refer to that label.
 
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-    - : Identifies the visible element or elements in a space-separated list of element IDs which identify the listbox. If there's no visible label, then [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) should be used instead to include a label. (Note: "labelled", with two L's, is the correct spelling based on the accessibility API conventions.)
+  - : Identifies the visible element or elements in a space-separated list of element IDs which identify the listbox. If there's no visible label, then [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) should be used instead to include a label. (Note: "labelled", with two L's, is the correct spelling based on the accessibility API conventions.)
 
 - [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
-    - : A human-readable string value which more clearly identifies the role of the listbox. Screen readers will often read this value to the user after reading the label (if there is one), in place of saying "listbox".
+  - : A human-readable string value which more clearly identifies the role of the listbox. Screen readers will often read this value to the user after reading the label (if there is one), in place of saying "listbox".
 
-For further details and a full list of ARIA states and properties see the  `listbox`(/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)  role.
+For further details and a full list of ARIA states and properties see the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role) role.
 
 ### Keyboard interactions
 
@@ -140,18 +139,18 @@ For further details and a full list of ARIA states and properties see the  `list
 
 When the user selects an option, the following must occur:
 
-1.  Deselect the previously selected option, setting the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) to `false`, or removing the attribute altogether, changing the appearance of the newly unselected option to appear not selected.
-2.  Select the newly selected option, setting `aria-selected="true"` on the option and changing the appearance of the newly selected option to appear selected.
-3.  Update the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) value on the listbox to the id of the newly selected option
-4.  Visually handle the blur, focus, and selected states of the option
+1. Deselect the previously selected option, setting the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) to `false`, or removing the attribute altogether, changing the appearance of the newly unselected option to appear not selected.
+2. Select the newly selected option, setting `aria-selected="true"` on the option and changing the appearance of the newly selected option to appear selected.
+3. Update the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) value on the listbox to the id of the newly selected option
+4. Visually handle the blur, focus, and selected states of the option
 
 #### Toggling the state of an option in a multi select listbox
 
 When the user clicks on an option, hits <kbd>Space</kbd> when focused on an option, or otherwise toggles the state of an option, the following must occur:
 
-1.  Toggle the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) state of the currently focused option, changing the state of the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) to true if it was false or false if it was true.
-1.  Change the appearance of the option to reflect its selected state
-1.  Update the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) value on the listbox to the ID of the option the user just interacted with, even if they toggled the option to be unselected.
+1. Toggle the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) state of the currently focused option, changing the state of the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) to true if it was false or false if it was true.
+1. Change the appearance of the option to reflect its selected state
+1. Update the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) value on the listbox to the ID of the option the user just interacted with, even if they toggled the option to be unselected.
 
 > **Note: ** The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. The {{HTMLElement('select')}} element with descendant {{HTMLElement('option')}} elements handles all the needed interactions natively.
 

@@ -40,7 +40,7 @@ MDN's content is entirely available under various open source licenses. This sec
 
 When reusing MDN content, you need to ensure two things:
 
-1.  Attribution is given to the original content.
+1. Attribution is given to the original content.
 
     Please attribute "Mozilla Contributors" and include a hyperlink (online) or URL (in print) to the specific wiki page for the content being sourced. For example, to provide attribution for this article, you can write:
 
@@ -48,7 +48,7 @@ When reusing MDN content, you need to ensure two things:
 
     Note that in the example, "Mozilla Contributors" links to the history of the cited page. See [Best practices for attribution](https://wiki.creativecommons.org/Marking/Users) for further explanation.
 
-2.  Your reuse is published under the same license as the original content—CC-BY-SA v2.5 or any later version.
+2. Your reuse is published under the same license as the original content—CC-BY-SA v2.5 or any later version.
 
 #### Code samples and snippets
 

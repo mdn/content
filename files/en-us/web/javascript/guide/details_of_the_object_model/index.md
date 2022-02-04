@@ -18,7 +18,7 @@ This chapter assumes that you are already somewhat familiar with JavaScript and 
 
 Class-based object-oriented languages, such as Java and C++, are founded on the concept of two distinct entities: classes and instances.
 
-- A _class_ defines all of the properties that characterize a certain set of objects (considering methods and fields in Java, or members in C++, to be properties). A class is abstract rather than any particular member in a set of objects it describes. For example, the `Employee` class could represent the set of all employees.
+- A _class_ defines all of the properties that characterize a certain set of objects (considering methods and fields in Java, or members in C++, to be properties). A class is abstract rather than any particular member in a set of objects it describes. For example, the `Employee` class could represent the set of all employees.
 - An _instance_, on the other hand, is the instantiation of a class; that is. For example, `Victoria` could be an instance of the `Employee` class, representing a particular individual as an employee. An instance has exactly the same properties of its parent class (no more, no less).
 
 A prototype-based language, such as JavaScript, does not make this distinction: it has objects. A prototype-based language has the notion of a _prototypical object_, an object used as a template from which to get the initial properties for a new object. Any object can specify its own properties, either when you create it or at run time. In addition, any object can be associated as the _prototype_ for another object, allowing the second object to share the first object's properties.
@@ -133,7 +133,7 @@ In a real application, you would probably define constructors that allow you to 
 
 The following Java and JavaScript `Employee` definitions are similar. The only difference is that you need to specify the type for each property in Java but not in JavaScript (this is due to Java being a [strongly typed language](https://en.wikipedia.org/wiki/Strong_and_weak_typing) while JavaScript is a weakly typed language).
 
-#### JavaScript (using this may cause an error for the following examples)
+#### JavaScript (using this may cause an error for the following examples)
 
 ```js
 class Employee {
@@ -162,7 +162,7 @@ public class Employee {
 }
 ```
 
-The `Manager` and `WorkerBee` definitions show the difference in how to specify the next object higher in the inheritance chain. In JavaScript, you add a prototypical instance as the value of the `prototype` property of the constructor function, then override the `prototype.constructor` to the constructor function. You can do so at any time after you define the constructor. In Java, you specify the superclass within the class definition. You cannot change the superclass outside the class definition.
+The `Manager` and `WorkerBee` definitions show the difference in how to specify the next object higher in the inheritance chain. In JavaScript, you add a prototypical instance as the value of the `prototype` property of the constructor function, then override the `prototype.constructor` to the constructor function. You can do so at any time after you define the constructor. In Java, you specify the superclass within the class definition. You cannot change the superclass outside the class definition.
 
 #### JavaScript
 
@@ -287,7 +287,7 @@ Suppose you create the `mark` object as a `WorkerBee` with the following stateme
 var mark = new WorkerBee;
 ```
 
-When JavaScript sees the `new` operator, it creates a new generic object and implicitly sets the value of the internal property \[\[Prototype]] to the value of `WorkerBee.prototype` and passes this new object as the value of the _`this`_ keyword to the `WorkerBee` constructor function. The internal \[\[Prototype]] property determines the prototype chain used to return property values. Once these properties are set, JavaScript returns the new object and the assignment statement sets the variable `mark` to that object.
+When JavaScript sees the `new` operator, it creates a new generic object and implicitly sets the value of the internal property \[\[Prototype]] to the value of `WorkerBee.prototype` and passes this new object as the value of the _`this`_ keyword to the `WorkerBee` constructor function. The internal \[\[Prototype]] property determines the prototype chain used to return property values. Once these properties are set, JavaScript returns the new object and the assignment statement sets the variable `mark` to that object.
 
 This process does not explicitly put values in the `mark` object (_local_ values) for the properties that `mark` inherits from the prototype chain. When you ask for the value of a property, JavaScript first checks to see if the value exists in that object. If it does, that value is returned. If the value is not there locally, JavaScript checks the prototype chain (using the internal \[\[Prototype]] property). If an object in the prototype chain has a value for the property, that value is returned. If no such property is found, JavaScript says the object does not have the property. In this way, the `mark` object has the following properties and values:
 
@@ -449,13 +449,13 @@ var jane = new Engineer('Doe, Jane', ['navigator', 'javascript'], 'belau');
 
 JavaScript follows these steps:
 
-1.  The `new` operator creates a generic object and sets its `__proto__` property to `Engineer.prototype`.
-2.  The `new` operator passes the new object to the `Engineer` constructor as the value of the `this` keyword.
-3.  The constructor creates a new property called `base` for that object and assigns the value of the `WorkerBee` constructor to the `base` property. This makes the `WorkerBee` constructor a method of the `Engineer` object. The name of the `base` property is not special. You can use any legal property name; `base` is evocative of its purpose.
-4.  The constructor calls the `base` method, passing as its arguments two of the arguments passed to the constructor (`"Doe, Jane"` and `["navigator", "javascript"]`) and also the string `"engineering"`. Explicitly using `"engineering"` in the constructor indicates that all `Engineer` objects have the same value for the inherited `dept` property, and this value overrides the value inherited from `Employee`.
-5.  Because `base` is a method of `Engineer`, within the call to `base`, JavaScript binds the `this` keyword to the object created in Step 1. Thus, the `WorkerBee` function in turn passes the `"Doe, Jane"` and `"engineering"` arguments to the `Employee` constructor function. Upon return from the `Employee` constructor function, the `WorkerBee` function uses the remaining argument to set the `projects` property.
-6.  Upon return from the `base` method, the `Engineer` constructor initializes the object's `machine` property to `"belau"`.
-7.  Upon return from the constructor, JavaScript assigns the new object to the `jane` variable.
+1. The `new` operator creates a generic object and sets its `__proto__` property to `Engineer.prototype`.
+2. The `new` operator passes the new object to the `Engineer` constructor as the value of the `this` keyword.
+3. The constructor creates a new property called `base` for that object and assigns the value of the `WorkerBee` constructor to the `base` property. This makes the `WorkerBee` constructor a method of the `Engineer` object. The name of the `base` property is not special. You can use any legal property name; `base` is evocative of its purpose.
+4. The constructor calls the `base` method, passing as its arguments two of the arguments passed to the constructor (`"Doe, Jane"` and `["navigator", "javascript"]`) and also the string `"engineering"`. Explicitly using `"engineering"` in the constructor indicates that all `Engineer` objects have the same value for the inherited `dept` property, and this value overrides the value inherited from `Employee`.
+5. Because `base` is a method of `Engineer`, within the call to `base`, JavaScript binds the `this` keyword to the object created in Step 1. Thus, the `WorkerBee` function in turn passes the `"Doe, Jane"` and `"engineering"` arguments to the `Employee` constructor function. Upon return from the `Employee` constructor function, the `WorkerBee` function uses the remaining argument to set the `projects` property.
+6. Upon return from the `base` method, the `Engineer` constructor initializes the object's `machine` property to `"belau"`.
+7. Upon return from the constructor, JavaScript assigns the new object to the `jane` variable.
 
 You might think that, having called the `WorkerBee` constructor from inside the `Engineer` constructor, you have set up inheritance appropriately for `Engineer` objects. This is not the case. Calling the `WorkerBee` constructor ensures that an `Engineer` object starts out with the properties specified in all constructor functions that are called. However, if you later add properties to the `Employee` or `WorkerBee` prototypes, those properties are not inherited by the `Engineer` object. For example, assume you have the following statements:
 
@@ -511,10 +511,10 @@ The preceding sections described how JavaScript constructors and prototypes prov
 
 When you access an object property, JavaScript performs these steps, as described earlier in this chapter:
 
-1.  Check to see if the value exists locally. If it does, return that value.
-2.  If there is not a local value, check the prototype chain (using the `__proto__` property).
-3.  If an object in the prototype chain has a value for the specified property, return that value.
-4.  If no such property is found, the object does not have the property.
+1. Check to see if the value exists locally. If it does, return that value.
+2. If there is not a local value, check the prototype chain (using the `__proto__` property).
+3. If an object in the prototype chain has a value for the specified property, return that value.
+4. If no such property is found, the object does not have the property.
 
 The outcome of these steps depends on how you define things along the way. The original example had these definitions:
 
@@ -622,7 +622,7 @@ function instanceOf(object, constructor) {
 }
 ```
 
-> **Note:** The implementation above checks the type of the object against "xml" in order to work around a quirk of how XML objects are represented in recent versions of JavaScript. See [bug 634150](https://bugzilla.mozilla.org/show_bug.cgi?id=634150) if you want the nitty-gritty details.
+> **Note:** The implementation above checks the type of the object against "xml" in order to work around a quirk of how XML objects are represented in recent versions of JavaScript. See [bug 634150](https://bugzilla.mozilla.org/show_bug.cgi?id=634150) if you want the nitty-gritty details.
 
 Using the instanceOf function defined above, these expressions are true:
 

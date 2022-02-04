@@ -16,6 +16,8 @@ The **`SharedWorker`** interface represents a specific kind of worker that can b
 
 > **Note:** If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host and port).
 
+{{InheritanceDiagram}}
+
 ## Constructors
 
 - {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}

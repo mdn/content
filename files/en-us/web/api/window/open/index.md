@@ -91,6 +91,12 @@ function openRequestedPopup() {
 
 > **Note:** Specifying any features in the _windowFeatures_ parameter, other than `noopener` or `noreferer`, also has the effect of requesting a popup.
 
+To enable the feature, specify `popup` either with no value at all, or else set it to `yes` or `1`.
+
+Example: `popup=yes`, `popup=1`, and `popup` all have identical results.
+
+### Position and size features
+
 ### Size
 
 - `width` or `innerWidth`

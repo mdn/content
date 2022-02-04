@@ -20,9 +20,9 @@ A lock is an abstract concept representing some potentially shared resource, ide
 
 The API is used as follows:
 
-1.  The lock is requested.
-2.  Work is done while holding the lock in an asynchronous task.
-3.  The lock is automatically released when the task completes.
+1. The lock is requested.
+2. Work is done while holding the lock in an asynchronous task.
+3. The lock is automatically released when the task completes.
 
 ```js
 navigator.locks.request('my_resource', async lock => {
@@ -89,7 +89,7 @@ const p = new Promise((res, rej) => { resolve = res; reject = rej; });
 
 // Request the lock:
 navigator.locks.request('my_resource', lock => {
-  // Lock is acquired.
+  // Lock is acquired.
 
   return p;
   // Now lock will be held until either resolve() or reject() is called.
@@ -98,7 +98,7 @@ navigator.locks.request('my_resource', lock => {
 
 ### Deadlocks
 
-A deadlock occurs when a process can no longer make progress because each part is waiting on a request that cannot be satisfied. This can occur with this API in complex use-cases, for example, if multiple locks are requested out-of-order. If tab 1 holds lock A and tab 2 holds lock B, then tab 1 attempts to also acquire lock B and tab 2 attempts to also acquire lock A, neither request can be granted. Web applications can avoid this through several strategies, such as ensuring lock requests are not nested, or are always well ordered, or have timeouts. Note that such deadlocks only affect the locks themselves and code depending on them; the browser, other tabs, and other script in the page is not affected.
+A deadlock occurs when a process can no longer make progress because each part is waiting on a request that cannot be satisfied. This can occur with this API in complex use-cases, for example, if multiple locks are requested out-of-order. If tab 1 holds lock A and tab 2 holds lock B, then tab 1 attempts to also acquire lock B and tab 2 attempts to also acquire lock A, neither request can be granted. Web applications can avoid this through several strategies, such as ensuring lock requests are not nested, or are always well ordered, or have timeouts. Note that such deadlocks only affect the locks themselves and code depending on them; the browser, other tabs, and other script in the page is not affected.
 
 ## Interfaces
 

@@ -22,7 +22,7 @@ _The `GeolocationCoordinates` interface doesn't inherit any properties._
 - {{domxref("GeolocationCoordinates.longitude")}} {{readonlyInline}} {{securecontext_inline}}
   - : Returns a `double` representing the position's longitude in decimal degrees.
 - {{domxref("GeolocationCoordinates.altitude")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Returns a `double` representing the position's altitude in meters, relative to sea level. This value can be `null` if the implementation cannot provide the data.
+  - : Returns a `double` representing the position's altitude in meters, relative to sea level. This value can be `null` if the implementation cannot provide the data.
 - {{domxref("GeolocationCoordinates.accuracy")}} {{readonlyInline}} {{securecontext_inline}}
   - : Returns a `double` representing the accuracy of the `latitude` and `longitude` properties, expressed in meters.
 - {{domxref("GeolocationCoordinates.altitudeAccuracy")}} {{readonlyInline}} {{securecontext_inline}}

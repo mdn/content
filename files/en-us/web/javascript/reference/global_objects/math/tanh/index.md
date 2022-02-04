@@ -103,7 +103,7 @@ Math.tanh(1);        // 0.7615941559557649
 
 ## See also
 
-- A polyfill of `Math.tanh` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.tanh` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}

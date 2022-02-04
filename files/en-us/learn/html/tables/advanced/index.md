@@ -66,9 +66,9 @@ A caption is placed directly beneath the `<table>` tag.
 
 Let's try this out, revisiting an example we first met in the previous article.
 
-1.  Open up your language teacher's school timetable from the end of [HTML Table Basics](/en-US/docs/Learn/HTML/Tables/Basics#active_learning_colgroup_and_col), or make a local copy of our [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) file.
-2.  Add a suitable caption for the table.
-3.  Save your code and open it in a browser to see what it looks like.
+1. Open up your language teacher's school timetable from the end of [HTML Table Basics](/en-US/docs/Learn/HTML/Tables/Basics#active_learning_colgroup_and_col), or make a local copy of our [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) file.
+2. Add a suitable caption for the table.
+3. Save your code and open it in a browser to see what it looks like.
 
 > **Note:** You can find our version on GitHub — see [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
 
@@ -80,7 +80,7 @@ These elements don't make the table any more accessible to screenreader users, a
 
 To use them:
 
-- The `<thead>` element must wrap the part of the table that is the header — this is usually the first row containing the column headings, but this is not necessarily always the case. If you are using {{htmlelement("col")}}/{{htmlelement("colgroup")}} element, the table header should come just below those.
+- The `<thead>` element must wrap the part of the table that is the header — this is usually the first row containing the column headings, but this is not necessarily always the case. If you are using {{htmlelement("col")}}/{{htmlelement("colgroup")}} element, the table header should come just below those.
 - The `<tfoot>` element needs to wrap the part of the table that is the footer — this might be a final row with items in the previous rows summed, for example. You can include the table footer right at the bottom of the table as you'd expect, or just below the table header (the browser will still render it at the bottom of the table).
 - The `<tbody>` element needs to wrap the other parts of the table content that aren't in the table header or footer. It will appear below the table header or sometimes footer, depending on how you decided to structure it.
 
@@ -90,12 +90,12 @@ To use them:
 
 Let's put these new elements into action.
 
-1.  First of all, make a local copy of [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) in a new folder.
-2.  Try opening it in a browser — You'll see that it looks OK, but it could stand to be improved. The "SUM" row that contains a summation of the spent amounts seems to be in the wrong place, and there are some details missing from the code.
-3.  Put the obvious headers row inside a `<thead>` element, the "SUM" row inside a `<tfoot>` element, and the rest of the content inside a `<tbody>` element.
-4.  Save and refresh, and you'll see that adding the `<tfoot>` element has caused the "SUM" row to go down to the bottom of the table.
-5.  Next, add a {{htmlattrxref("colspan","td")}} attribute to make the "SUM" cell span across the first four columns, so the actual number appears at the bottom of the "Cost" column.
-6.  Let's add some simple extra styling to the table, to give you an idea of how useful these elements are for applying CSS. Inside the head of your HTML document, you'll see an empty {{htmlelement("style")}} element. Inside this element, add the following lines of CSS code:
+1. First of all, make a local copy of [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) in a new folder.
+2. Try opening it in a browser — You'll see that it looks OK, but it could stand to be improved. The "SUM" row that contains a summation of the spent amounts seems to be in the wrong place, and there are some details missing from the code.
+3. Put the obvious headers row inside a `<thead>` element, the "SUM" row inside a `<tfoot>` element, and the rest of the content inside a `<tbody>` element.
+4. Save and refresh, and you'll see that adding the `<tfoot>` element has caused the "SUM" row to go down to the bottom of the table.
+5. Next, add a {{htmlattrxref("colspan","td")}} attribute to make the "SUM" cell span across the first four columns, so the actual number appears at the bottom of the "Cost" column.
+6. Let's add some simple extra styling to the table, to give you an idea of how useful these elements are for applying CSS. Inside the head of your HTML document, you'll see an empty {{htmlelement("style")}} element. Inside this element, add the following lines of CSS code:
 
     ```css
     tbody {
@@ -108,7 +108,7 @@ Let's put these new elements into action.
     }
     ```
 
-7.  Save and refresh, and have a look at the result. If the `<tbody>` and `<tfoot>` elements weren't in place, you'd have to write much more complicated selectors/rules to apply the same styling.
+7. Save and refresh, and have a look at the result. If the `<tbody>` and `<tfoot>` elements weren't in place, you'd have to write much more complicated selectors/rules to apply the same styling.
 
 > **Note:** We don't expect you to fully understand the CSS right now. You'll learn more about this when you go through our CSS modules ([Introduction to CSS](/en-US/docs/Learn/CSS/First_steps) is a good place to start; we also have an article specifically on [styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)).
 
@@ -391,8 +391,8 @@ Screenreaders will recognize markup structured like this, and allow their users 
 
 An alternative to using the `scope` attribute is to use {{htmlattrxref("id")}} and {{htmlattrxref("headers", "td")}} attributes to create associations between headers and cells. The way they are used is as follows:
 
-1.  You add a unique `id` to each `<th>` element.
-2.  You add a `headers` attribute to each `<td>` element. Each `headers` attribute has to contain a list of the `id`s of all the `<th>` elements that act as a header for that cell, separated by spaces.
+1. You add a unique `id` to each `<th>` element.
+2. You add a `headers` attribute to each `<td>` element. Each `headers` attribute has to contain a list of the `id`s of all the `<th>` elements that act as a header for that cell, separated by spaces.
 
 This gives your HTML table an explicit definition of the position of each cell in the table, defined by the header(s) for each column and row it is part of, kind of like a spreadsheet. For it to work well, the table really needs both column and row headers.
 
@@ -422,13 +422,13 @@ Returning to our spending costs example, the previous two snippets could be rewr
 </tbody>
 ```
 
-> **Note:** This method creates very precise associations between headers and data cells but it uses **a lot** more markup and does not leave any room for errors.  The `scope` approach is usually enough for most tables.
+> **Note:** This method creates very precise associations between headers and data cells but it uses **a lot** more markup and does not leave any room for errors. The `scope` approach is usually enough for most tables.
 
 ### Active learning: playing with scope and headers
 
-1.  For this final exercise, we'd like you to first make local copies of [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css), in a new directory.
-2.  Now try adding in the appropriate `scope` attributes to make this table more appropriate.
-3.  Finally, try making another copy of the starter files, and this time make the table more accessible using `id` and `headers` attributes.
+1. For this final exercise, we'd like you to first make local copies of [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css), in a new directory.
+2. Now try adding in the appropriate `scope` attributes to make this table more appropriate.
+3. Finally, try making another copy of the starter files, and this time make the table more accessible using `id` and `headers` attributes.
 
 > **Note:** You can check your work against our finished examples — see [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([also see this live](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) and [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([see this live too](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 

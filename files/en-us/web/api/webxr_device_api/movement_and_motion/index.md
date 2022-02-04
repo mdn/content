@@ -188,7 +188,7 @@ function setupXRButton() {
 }
 ```
 
-The label of the button gets adjusted in the code that handles actuallys starting and stopping the WebXR session; we'll see that below.
+The label of the button gets adjusted in the code that actually handles starting and stopping the WebXR session; we'll see that below.
 
 The WebXR session is toggled on and off by the handler for {{domxref("Element.click_event", "click")}} events on the button, whose label is appropriately set to either "Enter WebXR" or "Exit WebXR". This is done by the `onXRButtonClick()` event handler.
 
@@ -696,7 +696,7 @@ The rest of the code is identical to that found in the earlier examples:
 - `initBuffers()`
   - : Initializes the buffers that contain data to be passed into WebGL. These buffers include the array of vertex positions, the array of vertex normals, the texture coordinates for each surface of the cube, and the array of vertex indices (specifying which entry in the vertex list represents each corner of the cube). An object containing references to eard
 - `loadTexture()`
-  - : Loads the image at a given URL and creates a WebGL texture from it. If the image's dimensions aren't both powers of two (see the `isPowerOf2()` function), mipmapping is disabled and wrapping is clamped to the edges. This is because optimized rendering of mipmapped textures only works for textures whose dimensions are powers of two in WebGL 1. WebGL 2 supports arbitratily-sized textures for mipmapping.
+  - : Loads the image at a given URL and creates a WebGL texture from it. If the image's dimensions aren't both powers of two (see the `isPowerOf2()` function), mipmapping is disabled and wrapping is clamped to the edges. This is because optimized rendering of mipmapped textures only works for textures whose dimensions are powers of two in WebGL 1. WebGL 2 supports arbitrarily-sized textures for mipmapping.
 - `isPowerOf2()`
   - : Returns `true` if the specified value is a power of two; otherwise returns `false`.
 

@@ -48,7 +48,7 @@ This may take one of three forms:
   - : Cycles through the provided list of symbols. On each successive pass through the cycle, the symbols used for the counter representation are doubled, tripled, and so on. For example, if the original symbols provided were "◽" and "◾", on each successive pass, they will become "◽◽" and "◾◾", "◽◽◽" and "◾◾◾" and so on. At least one symbol must be specified in the `symbols` descriptor or the counter style is not valid. This counter system works for positive counter values only.
 - `alphabetic`
 
-  - : Interprets the specified symbols as digits, to an alphabetic numbering system. If the characters `"a"` to `"z"` are specified as symbols in a counter style, with the `alphabetic` system, then the first 26 counter representations will be `"a"`, `"b"` upto `"z"`. Until this point, the behavior is the same as that of the `symbolic` system, described above. However, after `"z"`, it will continue as `"aa"`, `"ab"`, `"ac"`…
+  - : Interprets the specified symbols as digits, to an alphabetic numbering system. If the characters `"a"` to `"z"` are specified as symbols in a counter style, with the `alphabetic` system, then the first 26 counter representations will be `"a"`, `"b"` up to `"z"`. Until this point, the behavior is the same as that of the `symbolic` system, described above. However, after `"z"`, it will continue as `"aa"`, `"ab"`, `"ac"`…
 
     The `symbols` descriptor must contain at least two symbols or the counter style is not valid. The first counter symbol provided in the `symbols` descriptor is interpreted as `1`, the next as `2`, and so on. This system is also defined strictly over positive counter values.
 

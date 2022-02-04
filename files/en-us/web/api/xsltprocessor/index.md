@@ -52,7 +52,7 @@ new XSLTProcessor()
     | `text`        | {{domxref("XMLDocument")}} with a single root element `<transformiix:result>` with the text as a child |
 
 - [Throws] void {{domxref("XSLTProcessor.setParameter")}}({{jsxref("String")}} namespaceURI, {{jsxref("String")}} localName, any value)
-  - : Sets a parameter in the XSLT stylesheet that was imported. (Sets the value of an
+  - : Sets a parameter in the XSLT stylesheet that was imported. (Sets the value of an
     `<xsl:param>`.) A null value for `namespaceURI` is treated
     the same as an empty string.
 - [Throws] any {{domxref("XSLTProcessor.getParameter")}}({{jsxref("String")}} namespaceURI, {{jsxref("String")}} localName)
@@ -90,11 +90,11 @@ and not exposed to Web content:
 
 ## Examples
 
-1.  [Basic
+1. [Basic
     example](/en-US/docs/XSLT/XSLT_JS_Interface_in_Gecko/Basic_Example)
-2.  [Advanced
+2. [Advanced
     example](/en-US/docs/XSLT/XSLT_JS_Interface_in_Gecko/Advanced_Example)
-3.  [Additional
+3. [Additional
     example](/en-US/docs/XSLT/XSLT_JS_Interface_in_Gecko/JavaScript_XSLT_Bindings)
 
 ## Specifications

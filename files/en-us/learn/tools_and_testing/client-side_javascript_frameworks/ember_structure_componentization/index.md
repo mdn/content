@@ -195,8 +195,8 @@ So to represent our app, we want to create 4 components:
 
 To create a component, we use the `ember generate component` command, followed by the name of the component. Let’s create the header component first. To do so:
 
-1.  Stop the server running by going to the terminal and pressing <kbd>Ctrl</kbd> + <kbd>C</kbd>.
-2.  Enter the following command into your terminal:
+1. Stop the server running by going to the terminal and pressing <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+2. Enter the following command into your terminal:
 
     ```bash
     ember generate component header
@@ -233,7 +233,7 @@ You’ll now see the following inside your `todomvc/app/components` directory:
 
 Now that we have all of our component structure files, we can cut and paste the HTML for each component out of the `application.hbs` file and into each of those components, and then re-write the `application.hbs` to reflect our new abstractions.
 
-1.  The `header.hbs` file should be updated to contain the following:
+1. The `header.hbs` file should be updated to contain the following:
 
     ```html
     <input
@@ -244,7 +244,7 @@ Now that we have all of our component structure files, we can cut and paste the 
     >
     ```
 
-2.  `todo-list.hbs` should be updated to contain this chunk of code:
+2. `todo-list.hbs` should be updated to contain this chunk of code:
 
     ```html
     <section class="main">
@@ -260,7 +260,7 @@ Now that we have all of our component structure files, we can cut and paste the 
 
     > **Note:** The only non-HTML in this new `todo-list.hbs` is the `<Todo />` component invocation. In Ember, a component invocation is similar to declaring an HTML element, but the first letter starts with a capital letter, and the names are written in upper camel case, as you'll see with `<TodoList />` later on. The contents of the `todo.hbs` file below will replace `<Todo />` in the rendered page as our application loads.
 
-3.  Add the following into the `todo.hbs` file:
+3. Add the following into the `todo.hbs` file:
 
     ```html
     <li>
@@ -282,7 +282,7 @@ Now that we have all of our component structure files, we can cut and paste the 
     </li>
     ```
 
-4.  `footer.hbs` should be updated to contain the following:
+4. `footer.hbs` should be updated to contain the following:
 
     ```html
     <footer class="footer">
@@ -304,7 +304,7 @@ Now that we have all of our component structure files, we can cut and paste the 
     </footer>
     ```
 
-5.  Finally, the contents of `application.hbs` should be updated so that they call the appropriate components, like so:
+5. Finally, the contents of `application.hbs` should be updated so that they call the appropriate components, like so:
 
     ```html
     <section class="todoapp">
@@ -317,7 +317,7 @@ Now that we have all of our component structure files, we can cut and paste the 
     </section>
     ```
 
-6.  With these changes made, run `npm start` in your terminal again, then head over to `http://localhost:4200` to ensure that the todo app still looks as it did before the refactor.
+6. With these changes made, run `npm start` in your terminal again, then head over to `http://localhost:4200` to ensure that the todo app still looks as it did before the refactor.
 
 ![todo app rendered in the browser with new todo input field and existing todos showing, both saying buy movie tickets](todos-components-render.png)
 

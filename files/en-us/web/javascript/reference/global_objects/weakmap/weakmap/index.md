@@ -70,7 +70,7 @@ wm1.has(o1); // false
 
 ## See also
 
-- A polyfill of `WeakMap` is available in [`core-js`](https://github.com/zloirock/core-js#weakmap)
+- [Polyfill of `WeakMap` in `core-js`](https://github.com/zloirock/core-js#weakmap)
 - [`WeakMap`
   in the JavaScript guide](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#WeakMap_object)
 - [Hiding Implementation Details with

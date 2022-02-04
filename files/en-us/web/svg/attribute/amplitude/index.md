@@ -12,10 +12,10 @@ The **`amplitude`** attribute controls the amplitude of the gamma function of a 
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feFuncA")}}
-*   {{SVGElement("feFuncB")}}
-*   {{SVGElement("feFuncG")}}
-*   {{SVGElement("feFuncR")}}
+- {{SVGElement("feFuncA")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
+- {{SVGElement("feFuncR")}}
 
 ## Usage notes
 
@@ -66,4 +66,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-*   {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComponentTransfer")}}

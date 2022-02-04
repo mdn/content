@@ -65,13 +65,13 @@ new FontFace(family, source, descriptors);
 
 ```js
 async function loadFonts() {
-    const font = new FontFace('myfont', 'url(myfont.woff)');
-    // wait for font to be loaded
-    await font.load();
+    const font = new FontFace('myfont', 'url(myfont.woff)');
+    // wait for font to be loaded
+    await font.load();
     // add font to document
-    document.fonts.add(font);
+    document.fonts.add(font);
     // enable font with CSS class
-    document.body.classList.add('fonts-loaded');
+    document.body.classList.add('fonts-loaded');
 }
 ```
 

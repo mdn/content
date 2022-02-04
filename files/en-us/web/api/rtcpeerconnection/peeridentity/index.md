@@ -35,7 +35,7 @@ identity** and cannot change for the duration of the connection.
 A JavaScript {{jsxref("Promise")}} which resolves to an
 {{domxref("RTCIdentityAssertion")}} that describes the remote peer's identity.
 
-If an error occcurs while attempting to validate an incoming identity assertion (that
+If an error occurs while attempting to validate an incoming identity assertion (that
 is, the information describing a peer's identity), the promise is rejected. If there
 isn't already a target peer identity, `peerIdentity` is set to a newly
 created promise and the process begins again, until the process succeeds or no further

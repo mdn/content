@@ -13,7 +13,7 @@ A **Texel** is a single-pixel within a texture map, which is an image that gets 
 
 The process of mapping the appropriate Texel’s to their corresponding points on a polygon is called **texture mapping**, which is a stage of the process of rendering a 3D image for display. Texture mapping is typically done prior to lighting the scene; however, in WebGL, lighting is performed as part of the texture mapping process.
 
-Textures are characterised by collections of Texel’s, as how images are characterised by collections of pixels. When texture mapping occurs the renderer maps Texel’s to the appropriate pixels.
+Textures are characterized by collections of Texel’s, as how images are characterized by collections of pixels. When texture mapping occurs the renderer maps Texel’s to the appropriate pixels.
 
 ## See also
 

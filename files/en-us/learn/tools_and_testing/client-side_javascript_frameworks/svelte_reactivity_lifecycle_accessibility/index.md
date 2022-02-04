@@ -98,8 +98,8 @@ To code along with us using the REPL, start at
 
 Now we'll tackle the _Check All_ and _Remove Completed_ buttons. Let's create a component that will be in charge of displaying the buttons and emitting the corresponding events.
 
-1.  Create a new file — `components/MoreActions.svelte`.
-2.  When the first button is clicked, we'll emit a `checkAll` event to signal that all the todos should be checked/unchecked. When the second button is clicked, we'll emit a `removeCompleted` event to signal that all of the completed todos should be removed. Put the following content into your `MoreActions.svelte` file:
+1. Create a new file — `components/MoreActions.svelte`.
+2. When the first button is clicked, we'll emit a `checkAll` event to signal that all the todos should be checked/unchecked. When the second button is clicked, we'll emit a `removeCompleted` event to signal that all of the completed todos should be removed. Put the following content into your `MoreActions.svelte` file:
 
     ```html
     <script>
@@ -125,7 +125,7 @@ Now we'll tackle the _Check All_ and _Remove Completed_ buttons. Let's create a 
 
     We've also included a `completed` variable to toggle between checking and unchecking all tasks.
 
-3.  Back over in `Todos.svelte`, we are going to import our `MoreActions` component and create two functions to handle the events emitted by the `MoreActions` component.
+3. Back over in `Todos.svelte`, we are going to import our `MoreActions` component and create two functions to handle the events emitted by the `MoreActions` component.
 
     Add the following import statement below the existing ones:
 
@@ -133,7 +133,7 @@ Now we'll tackle the _Check All_ and _Remove Completed_ buttons. Let's create a 
     import MoreActions from './MoreActions.svelte'
     ```
 
-4.  Then add the described functions at the end of the `<script>` section:
+4. Then add the described functions at the end of the `<script>` section:
 
     ```js
     const checkAllTodos = (completed) => todos.forEach(t => t.completed = completed)
@@ -141,7 +141,7 @@ Now we'll tackle the _Check All_ and _Remove Completed_ buttons. Let's create a 
     const removeCompletedTodos = () => todos = todos.filter(t => !t.completed)
     ```
 
-5.  Now go to the bottom of the `Todos.svelte` markup section and replace the `btn-group` `<div>` that we copied into `MoreActions.svelte` with a call to the `MoreActions` component, like so:
+5. Now go to the bottom of the `Todos.svelte` markup section and replace the `btn-group` `<div>` that we copied into `MoreActions.svelte` with a call to the `MoreActions` component, like so:
 
     ```html
     <!-- MoreActions -->
@@ -151,7 +151,7 @@ Now we'll tackle the _Check All_ and _Remove Completed_ buttons. Let's create a 
     />
     ```
 
-6.  OK, let's go back into the app and try it out! You'll find that the _Remove Completed_ button works fine, but the _Check All_/_Uncheck All_ button just silently fails.
+6. OK, let's go back into the app and try it out! You'll find that the _Remove Completed_ button works fine, but the _Check All_/_Uncheck All_ button just silently fails.
 
 To find out what is happening here, we'll have to dig a little deeper into Svelte reactivity.
 
@@ -159,7 +159,7 @@ To find out what is happening here, we'll have to dig a little deeper into Svelt
 
 To see what's happening we can log the `todos` array from the `checkAllTodos()` function to the console.
 
-1.  Update your existing `checkAllTodos()` function to the following:
+1. Update your existing `checkAllTodos()` function to the following:
 
     ```js
     const checkAllTodos = (completed) => {
@@ -168,7 +168,7 @@ To see what's happening we can log the `todos` array from the `checkAllTodos()` 
     }
     ```
 
-2.  Go back to your browser, open your DevTools console, and click _Check All_/_Uncheck All_ a few times.
+2. Go back to your browser, open your DevTools console, and click _Check All_/_Uncheck All_ a few times.
 
 You'll notice that the array is successfully updated every time you press the button (the `todo` objects' `completed` properties are toggled between `true` and `false`), but Svelte is not aware of that. This also means that in this case, a reactive statement like `$: console.log('todos', todos)` won't be very useful.
 
@@ -222,7 +222,7 @@ const checkAllTodos = (completed) => {
 }
 ```
 
-Assignments to properties of arrays and objects — e.g. `obj.foo += 1` or `array[i] = x` — work the same way as assignments to the values themselves. When Svelte analyzes this code, it can detect that the `todos` array is being modified.
+Assignments to properties of arrays and objects — e.g. `obj.foo += 1` or `array[i] = x` — work the same way as assignments to the values themselves. When Svelte analyzes this code, it can detect that the `todos` array is being modified.
 
 Another solution is to assign a new array to `todos` containing a copy of all the todos with the `completed` property updated accordingly, like this:
 
@@ -246,7 +246,7 @@ All of these solutions involve an assignment in which the updated variable is on
 
 We will add one usability detail to our component. We'll disable the buttons when there are no tasks to be processed. To create this we'll receive the `todos` array as a prop, and set the `disabled` property of each button accordingly.
 
-1.  Update your `MoreActions.svelte` component like this:
+1. Update your `MoreActions.svelte` component like this:
 
     ```html
     <script>
@@ -277,7 +277,7 @@ We will add one usability detail to our component. We'll disable the buttons whe
 
     We've also declared a reactive `completedTodos` variable to enable or disable the _Remove Completed_ button.
 
-2.  Don't forget to pass the prop into `MoreActions` from inside `Todos.svelte`, where the component is called:
+2. Don't forget to pass the prop into `MoreActions` from inside `Todos.svelte`, where the component is called:
 
     ```js
     <MoreActions {todos}
@@ -314,8 +314,8 @@ The problem is that all these DOM nodes are dynamically created by Svelte at run
 
 Let's begin by extracting our new todo form out to its own component. With what we know so far we can create a new component file and adjust the code to emit an `addTodo` event, passing the name of the new todo in with the additional details.
 
-1.  Create a new file — `components/NewTodo.svelte`.
-2.  Put the following contents inside it:
+1. Create a new file — `components/NewTodo.svelte`.
+2. Put the following contents inside it:
 
     ```js
     <script>
@@ -344,7 +344,7 @@ Let's begin by extracting our new todo form out to its own component. With what 
 
     Here we are binding the `<input>` to the `name` variable with `bind:value={name}` and disabling the _Add_ button when it is empty (i.e. no text content) using `disabled={!name}`. We are also taking care of the <kbd>Escape</kbd> key with `on:keydown={e => e.key === 'Escape' && onCancel()}`. Whenever the <kbd>Escape</kbd> key is pressed we run `onCancel()`, which just clears up the `name` variable.
 
-3.  Now we have to `import` and use it from inside the `Todos` component, and update the `addTodo()` function to receive the name of the new todo.
+3. Now we have to `import` and use it from inside the `Todos` component, and update the `addTodo()` function to receive the name of the new todo.
 
     Add the following `import` statement below the others inside `Todos.svelte`:
 
@@ -352,7 +352,7 @@ Let's begin by extracting our new todo form out to its own component. With what 
     import NewTodo from './NewTodo.svelte'
     ```
 
-4.  And update the `addTodo()` function like so:
+4. And update the `addTodo()` function like so:
 
     ```js
     function addTodo(name) {
@@ -364,7 +364,7 @@ Let's begin by extracting our new todo form out to its own component. With what 
 
     > **Note:** the `{ name }` syntax is just a shorthand for `{ name: name }`. This one comes from JavaScript itself and has nothing to do with Svelte, besides providing some inspiration for Svelte's own shorthands.
 
-5.  Finally for this section, replace the NewTodo form markup with a call to `NewTodo` component, like so:
+5. Finally for this section, replace the NewTodo form markup with a call to `NewTodo` component, like so:
 
     ```html
     <!-- NewTodo -->
@@ -415,7 +415,7 @@ Try the app out — type a new todo name in to the `<input>` field, press <kbd>t
 
 The next feature will add to our `NewTodo` component will be an `autofocus` prop, which will allow us to specify that we want the `<input>` field to be focused on page load.
 
-1.  Our first attempt is as follows — let's try adding the `autofocus` prop and just call `nameEl.focus()` from the `<script>` block. Update the first part of the `NewTodo.svelte` `<script>` section (the first four lines) to look like this:
+1. Our first attempt is as follows — let's try adding the `autofocus` prop and just call `nameEl.focus()` from the `<script>` block. Update the first part of the `NewTodo.svelte` `<script>` section (the first four lines) to look like this:
 
     ```js
     <script>
@@ -430,14 +430,14 @@ The next feature will add to our `NewTodo` component will be an `autofocus` prop
       if (autofocus) nameEl.focus()
     ```
 
-2.  Now go back to the `Todos` component, and pass the `autofocus` prop into the `<NewTodo>` component call, like so:
+2. Now go back to the `Todos` component, and pass the `autofocus` prop into the `<NewTodo>` component call, like so:
 
     ```html
     <!-- NewTodo -->
     <NewTodo autofocus on:addTodo={e => addTodo(e.detail)} />
     ```
 
-3.  If you try your app out now, you'll see that the page is now blank, and in your DevTools web console you'll see an error along the lines of: `TypeError: nameEl is undefined`.
+3. If you try your app out now, you'll see that the page is now blank, and in your DevTools web console you'll see an error along the lines of: `TypeError: nameEl is undefined`.
 
 To understand what's happening here, let's talk some more about that [component lifecycle](https://svelte.dev/tutorial/onmount) we mentioned earlier.
 
@@ -449,13 +449,13 @@ So, how can you know when the component has already been created and mounted on 
 
 The one you'll use most frequently is `onMount()`, which lets us run a callback as soon as the component has been mounted on the DOM. Let's give it a try and see what happens to the `nameEl` variable.
 
-1.  To start with, add the following line at the beginning of the `NewTodo.svelte` `<script>` section:
+1. To start with, add the following line at the beginning of the `NewTodo.svelte` `<script>` section:
 
     ```js
      import { onMount } from 'svelte'
     ```
 
-2.  And these lines at the end of it:
+2. And these lines at the end of it:
 
     ```js
     console.log('initializing:', nameEl)
@@ -464,8 +464,8 @@ The one you'll use most frequently is `onMount()`, which lets us run a callback 
     })
     ```
 
-3.  Now remove the `if (autofocus) nameEl.focus()` line to avoid throwing the error we were seeing before.
-4.  The app will now work again, and you'll see the following in your console:
+3. Now remove the `if (autofocus) nameEl.focus()` line to avoid throwing the error we were seeing before.
+4. The app will now work again, and you'll see the following in your console:
 
     ```
     initializing: undefined
@@ -474,13 +474,13 @@ The one you'll use most frequently is `onMount()`, which lets us run a callback 
 
     As you can see, while the component is initializing `nameEl` is undefined, which makes sense because the node input doesn't even exist yet. After the component has been mounted, Svelte assigned a reference to the `<input>` DOM node to the `nameEl` variable, thanks to the `bind:this={nameEl} directive`.
 
-5.  To get the autofocus functionality working, replace the previous `console.log()`/`onMount()` block you added with this:
+5. To get the autofocus functionality working, replace the previous `console.log()`/`onMount()` block you added with this:
 
     ```js
     onMount(() => autofocus && nameEl.focus())    // if autofocus is true, we run nameEl.focus()
     ```
 
-6.  Go to your app again, and you'll now see the `<input>` field is focused on page load.
+6. Go to your app again, and you'll now see the `<input>` field is focused on page load.
 
 > **Note:** You can have a look at the other [lifecycle functions in the Svelte docs](https://svelte.dev/docs#svelte), and you can see them in action in the [interactive tutorial](https://svelte.dev/tutorial/onmount).
 
@@ -488,13 +488,13 @@ The one you'll use most frequently is `onMount()`, which lets us run a callback 
 
 Now we will take care of the `Todo` component's focus management details. First of all, we want a `Todo` component's edit `<input>` to receive focus when we enter editing mode by pressing its _Edit_ button. In the same fashion as we saw earlier, we'll create a `nameEl` variable inside `Todo.svelte` and call `nameEl.focus()` after setting the `editing` variable to `true`.
 
-1.  Open the file `components/Todo.svelte` and add a `nameEl` variable declaration, just below your editing and name declarations:
+1. Open the file `components/Todo.svelte` and add a `nameEl` variable declaration, just below your editing and name declarations:
 
     ```js
     let nameEl                              // reference to the name input DOM node
     ```
 
-2.  Now update your `onEdit()` function like so:
+2. Now update your `onEdit()` function like so:
 
     ```js
     function onEdit() {
@@ -503,13 +503,13 @@ Now we will take care of the `Todo` component's focus management details. First 
     }
     ```
 
-3.  And finally, bind `nameEl` to the `<input>` field, by updating it like so:
+3. And finally, bind `nameEl` to the `<input>` field, by updating it like so:
 
     ```html
     <input bind:value={name} bind:this={nameEl} type="text" id="todo-{todo.id}" autoComplete="off" class="todo-text" />
     ```
 
-4.  However, when you try the updated app you'll get an error along the lines of "TypeError: nameEl is undefined" in the console when you press a todo's _Edit_ button.
+4. However, when you try the updated app you'll get an error along the lines of "TypeError: nameEl is undefined" in the console when you press a todo's _Edit_ button.
 
 So, what is happening here? When you update a component's state in Svelte, it doesn't update the DOM immediately. Instead, it waits until the next microtask to see if there are any other changes that need to be applied, including in other components. Doing so avoids unnecessary work and allows the browser to batch things more effectively.
 
@@ -528,13 +528,13 @@ function onEdit() {
 
 The above solution works, but it is rather inelegant. Svelte provides a better way to handle these cases. The [`tick()` function](https://svelte.dev/tutorial/tick) returns a promise that resolves as soon as any pending state changes have been applied to the DOM (or immediately, if there are no pending state changes). Let's try it now.
 
-1.  First of all, import `tick` at the top of the `<script>` section alongside your existing import:
+1. First of all, import `tick` at the top of the `<script>` section alongside your existing import:
 
     ```js
     import { tick } from 'svelte'
     ```
 
-2.  Next, call `tick()` with [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) from an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function); update `onEdit()` like so:
+2. Next, call `tick()` with [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) from an [async function](/en-US/docs/Web/JavaScript/Reference/Statements/async_function); update `onEdit()` like so:
 
     ```js
     async function onEdit() {
@@ -544,7 +544,7 @@ The above solution works, but it is rather inelegant. Svelte provides a better w
     }
     ```
 
-3.  If you try it now you'll see that everything works as expected.
+3. If you try it now you'll see that everything works as expected.
 
 > **Note:** To see another example using `tick()`, visit the [Svelte tutorial](https://svelte.dev/tutorial/tick).
 
@@ -568,7 +568,7 @@ That's where Svelte actions come into play. Basically they let us run a function
 
 In our immediate use case, we will define a function called `selectOnFocus()` that will receive a node as parameter. The function will add an event listener to that node, so that whenever it gets focused it will select the text. Then it will return an object with a `destroy` property. The `destroy` property is what Svelte will execute after removing the node from the DOM. Here we will remove the listener to make sure we don't leave any memory leak behind.
 
-1.  Let's create the function `selectOnFocus()`. Add the following to the bottom of the `Todo.svelte` `<script>` section:
+1. Let's create the function `selectOnFocus()`. Add the following to the bottom of the `Todo.svelte` `<script>` section:
 
     ```js
     function selectOnFocus(node) {
@@ -582,7 +582,7 @@ In our immediate use case, we will define a function called `selectOnFocus()` th
     }
     ```
 
-2.  Now we need to tell the `<input>` to use that function with the [`use:action`](https://svelte.dev/docs#use_action) directive:
+2. Now we need to tell the `<input>` to use that function with the [`use:action`](https://svelte.dev/docs#use_action) directive:
 
     ```html
     <input use:selectOnFocus />
@@ -598,14 +598,14 @@ In our immediate use case, we will define a function called `selectOnFocus()` th
     />
     ```
 
-3.  Let's try it out. Go to your app, press a todo's _Edit_ button, then <kbd>Tab</kbd> to take focus away from the `<input>`. Now click on the `<input>` — you'll see that the entire input text is selected.
+3. Let's try it out. Go to your app, press a todo's _Edit_ button, then <kbd>Tab</kbd> to take focus away from the `<input>`. Now click on the `<input>` — you'll see that the entire input text is selected.
 
 ### Making the action reusable
 
 Now let's make this function truly reusable across components. `selectOnFocus()` is just a function without any dependency on the `Todo.svelte` component, so we can just extract it to a file and use it from there.
 
-1.  Create a new file, `actions.js`, inside the `src` folder.
-2.  Give it the following content:
+1. Create a new file, `actions.js`, inside the `src` folder.
+2. Give it the following content:
 
     ```js
     export function selectOnFocus(node) {
@@ -619,25 +619,25 @@ Now let's make this function truly reusable across components. `selectOnFocus()`
     }
     ```
 
-3.  Now import it from inside `Todo.svelte`; add the following import statement just below the others:
+3. Now import it from inside `Todo.svelte`; add the following import statement just below the others:
 
     ```js
     import { selectOnFocus } from '../actions.js'
     ```
 
-4.  And remove the `selectOnFocus()` definition from `Todo.svelte` — we no longer need it there.
+4. And remove the `selectOnFocus()` definition from `Todo.svelte` — we no longer need it there.
 
 ### Reusing our action
 
 To demonstrate our action's reusability, let's make use of it in `NewTodo.svelte`.
 
-1.  Import `selectOnFocus()` from `actions.js` in this file too, as before:
+1. Import `selectOnFocus()` from `actions.js` in this file too, as before:
 
     ```js
     import { selectOnFocus } from '../actions.js'
     ```
 
-2.  Add the `use:selectOnFocus` directive to the `<input>`, like this:
+2. Add the `use:selectOnFocus` directive to the `<input>`, like this:
 
     ```html
     <input bind:value={name} bind:this={nameEl} use:selectOnFocus
@@ -653,19 +653,19 @@ Also, we didn't have to struggle with `onMount()`, `onDestroy()` or `tick()` —
 
 In the previous section, while working with the `Todo` components, we had to deal with `bind:this`, `tick()`, and `async` functions just to give focus to our `<input>` as soon as it was added to the DOM.
 
-1.  This is how we can implement it with actions instead:
+1. This is how we can implement it with actions instead:
 
     ```js
     const focusOnInit = (node) => node && typeof node.focus === 'function' && node.focus()
     ```
 
-2.  And then in our markup we just need to add another `use:` directive:
+2. And then in our markup we just need to add another `use:` directive:
 
     ```html
     <input bind:value={name} use:selectOnFocus use:focusOnInit ...
     ```
 
-3.  Our `onEdit()` function can now be much simpler:
+3. Our `onEdit()` function can now be much simpler:
 
     ```js
     function onEdit() {
@@ -679,14 +679,14 @@ We could try just reusing our `focusOnInit` action again, adding `use:focusOnIni
 
 That's not what we want — we want the _Edit_ button to receive focus only when the user has pressed _Save_ or _Cancel_.
 
-1.  So, go back to your `Todo.svelte` file.
-2.  First of all we'll create a flag named `editButtonPressed` and initialize it to `false`. Add this just below your other variable definitions:
+1. So, go back to your `Todo.svelte` file.
+2. First of all we'll create a flag named `editButtonPressed` and initialize it to `false`. Add this just below your other variable definitions:
 
     ```js
     let editButtonPressed = false           // track if edit button has been pressed, to give focus to it after cancel or save
     ```
 
-3.  Next, we'll modify the _Edit_ button's functionality to save this flag, and create the action for it. Update the `onEdit()` function like so:
+3. Next, we'll modify the _Edit_ button's functionality to save this flag, and create the action for it. Update the `onEdit()` function like so:
 
     ```js
     function onEdit() {
@@ -695,13 +695,13 @@ That's not what we want — we want the _Edit_ button to receive focus only when
     }
     ```
 
-4.  Below it, add the following definition for `focusEditButton()`:
+4. Below it, add the following definition for `focusEditButton()`:
 
     ```js
     const focusEditButton = (node) => editButtonPressed && node.focus()
     ```
 
-5.  Finally, we `use` the `focusEditButton` action on the _Edit_ button, like so:
+5. Finally, we `use` the `focusEditButton` action on the _Edit_ button, like so:
 
     ```html
     <button type="button" class="btn" on:click={onEdit} use:focusEditButton>
@@ -709,7 +709,7 @@ That's not what we want — we want the _Edit_ button to receive focus only when
     </button>
     ```
 
-6.  Go back and try your app again. At this point, every time the _Edit_ button is added to the DOM, the `focusEditButton` action is executed, but it will only give focus to the button if the `editButtonPressed` flag is `true`.
+6. Go back and try your app again. At this point, every time the _Edit_ button is added to the DOM, the `focusEditButton` action is executed, but it will only give focus to the button if the `editButtonPressed` flag is `true`.
 
 > **Note:** We have barely scratched the surface of actions here. Actions can also have reactive parameters, and Svelte lets us detect when any of those parameters change. So we can add functionality that integrates nicely with the Svelte reactive system. Have a look at the relevant Svelte School article for a more [detailed introduction to actions](https://svelte.school/tutorials/introduction-to-actions). Actions are also very useful for seamlessly [integrating with third party libraries](https://svelte.school/tutorials/external-libraries-in-svelte-and-sapper-using-actions).
 
@@ -723,8 +723,8 @@ Why the status heading? In this case, the element that had the focus has been de
 
 First we'll extract the status heading to its own component.
 
-1.  Create a new file — `components/TodosStatus.svelte`.
-2.  Add the following contents to it:
+1. Create a new file — `components/TodosStatus.svelte`.
+2. Add the following contents to it:
 
     ```html
     <script>
@@ -737,25 +737,25 @@ First we'll extract the status heading to its own component.
     <h2 id="list-heading">{completedTodos} out of {totalTodos} items completed</h2>
     ```
 
-3.  Import the file at the beginning of `Todos.svelte`, adding the following `import` statement below the others:
+3. Import the file at the beginning of `Todos.svelte`, adding the following `import` statement below the others:
 
     ```js
     import TodosStatus from './TodosStatus.svelte'
     ```
 
-4.  Replace the `<h2>` status heading inside `Todos.svelte` with a call to the `TodosStatus` component, passing `todos` to it as a prop, like so:
+4. Replace the `<h2>` status heading inside `Todos.svelte` with a call to the `TodosStatus` component, passing `todos` to it as a prop, like so:
 
     ```html
     <TodosStatus {todos} />
     ```
 
-5.  You can also do a bit of clean-up, removing the `totalTodos` and `completedTodos` variables from `Todos.svelte`. Just remove the `$: totalTodos = ...` and the `$: completedTodos = ...` lines, and also remove the reference to `totalTodos` when we calculate `newTodoId` and use `todos.length`, instead. To do this, replace the block that begins with `let newTodoId` with this:
+5. You can also do a bit of clean-up, removing the `totalTodos` and `completedTodos` variables from `Todos.svelte`. Just remove the `$: totalTodos = ...` and the `$: completedTodos = ...` lines, and also remove the reference to `totalTodos` when we calculate `newTodoId` and use `todos.length`, instead. To do this, replace the block that begins with `let newTodoId` with this:
 
     ```js
     $: newTodoId = todos.length ? Math.max(...todos.map(t => t.id)) + 1 : 1
     ```
 
-6.  Everything works as expected — we just extracted the last piece of markup to its own component.
+6. Everything works as expected — we just extracted the last piece of markup to its own component.
 
 Now we need to find a way to give focus to the `<h2>` status label after a todo has been removed.
 
@@ -784,7 +784,7 @@ We've already seen that Svelte uses `export let var = ...` to [declare props](ht
 
 With this in mind, let's go back to our use case. We'll create a function called `focus()` that gives focus to the `<h2>` heading. For that we'll need a `headingEl` variable to hold the reference to the DOM node and we'll have to bind it to the `<h2>` element using `bind:this={headingEl}`. Our focus method will just run `headingEl.focus()`.
 
-1.  Update the contents of `TodosStatus.svelte` like so:
+1. Update the contents of `TodosStatus.svelte` like so:
 
     ```js
     <script>
@@ -809,20 +809,20 @@ With this in mind, let's go back to our use case. We'll create a function called
 
     How can we access those exported values from the parent? Just as you can bind to DOM elements with the `bind:this={dom_node}` directive, you can also bind to component instances themselves with `bind:this={component}`. So, when you use `bind:this` on an HTML element, you get a reference to the DOM node, and when you do it on a Svelte component, you get a reference to the instance of that component.
 
-2.  So to bind to the instance of `TodosStatus` we'll first create a `todosStatus` variable in `Todos.svelte`. Add the following line below your `import` statements:
+2. So to bind to the instance of `TodosStatus` we'll first create a `todosStatus` variable in `Todos.svelte`. Add the following line below your `import` statements:
 
     ```js
     let todosStatus                   // reference to TodosStatus instance
     ```
 
-3.  Next, add a `bind:this={todosStatus}` directive to the call, as follows:
+3. Next, add a `bind:this={todosStatus}` directive to the call, as follows:
 
     ```html
     <!-- TodosStatus -->
     <TodosStatus bind:this={todosStatus} {todos} />
     ```
 
-4.  Now we can call the `exported focus()` method from our `removeTodo()` function:
+4. Now we can call the `exported focus()` method from our `removeTodo()` function:
 
     ```js
     function removeTodo(todo) {
@@ -831,7 +831,7 @@ With this in mind, let's go back to our use case. We'll create a function called
     }
     ```
 
-5.  Go back to your app — now if you delete any todo, the status heading will be focussed — this is useful to highlight the change in numbers of todos, both to sighted users and screenreader users.
+5. Go back to your app — now if you delete any todo, the status heading will be focussed — this is useful to highlight the change in numbers of todos, both to sighted users and screenreader users.
 
 > **Note:** You might be wondering why we need to declare a new variable for component binding — why can't we just call `TodosStatus.focus()`? You might have multiple `TodosStatus` instances active, so you need a way to reference each particular instance. That's why you have to specify a variable to bind each specific instance to.
 

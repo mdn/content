@@ -12,7 +12,7 @@ tags:
   - content indexing
 browser-compat: api.ContentIndex.add
 ---
-{{draft}}{{DefaultAPISidebar("Content Index API")}}
+{{DefaultAPISidebar("Content Index API")}}
 
 The **`add()`** method of the
 {{domxref("ContentIndex")}} interface registers an item with the {{domxref('Content

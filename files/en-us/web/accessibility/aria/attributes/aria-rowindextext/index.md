@@ -53,11 +53,11 @@ Inherited into roles:
 
 ## See Also
 
--  [`aria-rowindex`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowindex)
--  [`aria-rowcount`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowcount)
--  [`aria-rowspan`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowspan)
--  [`aria-colindextext`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-colindextext)
--  [`aria-colindex`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-colindex)
+- [`aria-rowindex`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowindex)
+- [`aria-rowcount`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowcount)
+- [`aria-rowspan`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-rowspan)
+- [`aria-colindextext`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-colindextext)
+- [`aria-colindex`](/en-US/docs/Web/Accessibility/aria/Attributes/aria-colindex)
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>

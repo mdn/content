@@ -39,7 +39,7 @@ console.log(proxy1.message1); // hello
 console.log(proxy1.message2); // everyone
 ```
 
-To customise the proxy, we define functions on the handler object:
+To customize the proxy, we define functions on the handler object:
 
 ```js
 const target = {

@@ -19,7 +19,7 @@ tags:
   - Uninstalling
   - Web
 ---
-{{draft}}
+
 
 Web application installation is a feature available in modern browsers that allows users to choose to easily and conveniently “install” a web application on their device so they can access it in the same way they would any other installed app. Depending on the device and features of the operating system and browser, this can result in what is essentially a fully featured application (for example, using [WebAPK](https://developers.google.com/web/fundamentals/integration/webapks) on Android) or as a shortcut added to their device’s screen. This guide explains how installation is performed, what it means, and what you need to do as a developer to let your users take advantage of it.
 
@@ -76,7 +76,7 @@ On Apple's iOS (including iPhoneOS and iPadOS), the Safari browser built into th
 
 ![Screenshot showing the location of the Share button in Safari on iOS 13](safari-ios-a2hs-icon.png)
 
-This calls up the sharing panel. Among the options should be the "Add to Home Screen" option, unless it's been specifically removed from the list by the user editing the optons displayed:
+This calls up the sharing panel. Among the options should be the "Add to Home Screen" option, unless it's been specifically removed from the list by the user editing the options displayed:
 
 ![Screenshot of Safari iOS's sharing panel, showing the "Add to Home Screen" option](safari-ios-share-menu.png)
 

@@ -15,6 +15,8 @@ browser-compat: api.XRJointPose
 
 The **`XRJointPose`** interface is an {{domxref("XRPose")}} with additional information about the size of the skeleton joint it represents.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - {{domxref("XRJointPose.radius")}} {{readonlyInline}}

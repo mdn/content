@@ -41,26 +41,26 @@ If a single {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} v
 
 If two or more values are defined and either no value is a keyword, or the only used keyword is `center`, then the first value represents the horizontal offset and the second represents the vertical offset.
 
-*   One-value syntax:
+* One-value syntax:
 
-    *   The value must be a [`<length>`](/en-US/docs/Web/CSS/length), or one of the keywords `left`, `center`, `right`, `top`, and `bottom`.
-*   Two-value syntax:
+    * The value must be a [`<length>`](/en-US/docs/Web/CSS/length), or one of the keywords `left`, `center`, `right`, `top`, and `bottom`.
+* Two-value syntax:
 
-    *   One value must be a [`<length>`](/en-US/docs/Web/CSS/length), a [`<percentage>`](/en-US/docs/Web/CSS/percentage), or one of the keywords `left`, `center`, and `right`.
-    *   The other value must be a [`<length>`](/en-US/docs/Web/CSS/length), a [`<percentage>`](/en-US/docs/Web/CSS/percentage), or one of the keywords `top`, `center`, and `bottom`.
-*   Three-value syntax:
+    * One value must be a [`<length>`](/en-US/docs/Web/CSS/length), a [`<percentage>`](/en-US/docs/Web/CSS/percentage), or one of the keywords `left`, `center`, and `right`.
+    * The other value must be a [`<length>`](/en-US/docs/Web/CSS/length), a [`<percentage>`](/en-US/docs/Web/CSS/percentage), or one of the keywords `top`, `center`, and `bottom`.
+* Three-value syntax:
 
-    *   The first two values are the same as for the two-value syntax.
-    *   The third value must be a [`<length>`](/en-US/docs/Web/CSS/length). It always represents the Z offset.
+    * The first two values are the same as for the two-value syntax.
+    * The third value must be a [`<length>`](/en-US/docs/Web/CSS/length). It always represents the Z offset.
 
 ## Example
 
 This example shows the code for one PNG image and three SVG images:
 
-1.  A PNG reference image.
-2.  An SVG reference image that uses no transformation.
-3.  An SVG image that uses `transform-origin` to do a transformation, with the expected result being an image identical to the reference image.
-4.  An SVG image that does not use `transform-origin` but does the same transformation using just [`transform`](/en-US/docs/Web/SVG/Attribute/transform), with the expected result being an image identical to the reference image.
+1. A PNG reference image.
+2. An SVG reference image that uses no transformation.
+3. An SVG image that uses `transform-origin` to do a transformation, with the expected result being an image identical to the reference image.
+4. An SVG image that does not use `transform-origin` but does the same transformation using just [`transform`](/en-US/docs/Web/SVG/Attribute/transform), with the expected result being an image identical to the reference image.
 
 The fourth image image shows how to do the transformation in browsers that don't support `transform-origin` — because the code for the fourth image does the same transformation as the third image's `transform-origin`-based code, but by only using `transform`, without `transform-origin`.
 

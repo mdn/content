@@ -116,6 +116,6 @@ new Uint8Array([12, 54, 18, 130, 44]).every(elem => elem >= 10); // true
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.every` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.every` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.some()")}}
 - {{jsxref("Array.prototype.every()")}}
