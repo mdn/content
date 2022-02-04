@@ -1748,6 +1748,135 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
   </tbody>
 </table>
 
+
+### HTTP Set-Cookie: `SameSite=Lax` by default
+
+HTTP cookies (set using [Set-Cookie](/en-US/docs/Web/HTTP/Headers/Set-Cookie) are assumed to implicitly set `SameSite=Lax` if the [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) directive is not specified. Previously the default was `SameSite=None`.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+        <code>network.cookie.sameSite.laxByDefault</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### HTTP Set-Cookie: `SameSite=None` require a secure context
+
+HTTP cookies (set using [Set-Cookie](/en-US/docs/Web/HTTP/Headers/Set-Cookie)) that specify the directive [`SameSite=None`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) require a secure context.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+        <code>network.cookie.sameSite.noneRequiresSecure</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+### HTTP Set-Cookie: SameSite is schemeful
+
+HTTP cookies sent from the same domain but using different schemes (for example http or https) are now considered to be from different sites with respect to the cookie [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) directive.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>69</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+        <code>network.cookie.sameSite.schemeful</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
 ## Developer tools
 
 Mozilla's developer tools are constantly evolving. We experiment with new ideas, add new features, and test them on the Nightly and Developer Edition channels before letting them go through to beta and release. The features below are the current crop of experimental developer tool features.
