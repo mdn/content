@@ -166,7 +166,7 @@ if (Object.hasOwn(foo, 'prop')) {
 
 ## See also
 
-- A polyfill of `Object.hasOwn` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.hasOwn` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.hasOwnProperty()")}}
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}

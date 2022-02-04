@@ -96,7 +96,7 @@ console.log(result); // 3
 
 ## See also
 
-- A polyfill of `RegExp.prototype[@@search]` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `RegExp.prototype[@@search]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.search()")}}
 - {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
 - {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}

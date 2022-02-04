@@ -116,6 +116,6 @@ Math.cbrt(2);  // 1.2599210498948732
 
 ## See also
 
-- A polyfill of `Math.cbrt` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.cbrt` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.pow()")}}
 - {{jsxref("Math.sqrt()")}}

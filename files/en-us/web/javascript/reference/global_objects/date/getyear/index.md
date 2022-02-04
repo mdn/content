@@ -106,7 +106,7 @@ var year = Xmas.getYear(); // returns 95
 
 ## See also
 
-- A polyfill of `Date.prototype.getYear` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-date)
+- [Polyfill of `Date.prototype.getYear` in `core-js`](https://github.com/zloirock/core-js#ecmascript-date)
 - {{jsxref("Date.prototype.getFullYear()")}}
 - {{jsxref("Date.prototype.getUTCFullYear()")}}
 - {{jsxref("Date.prototype.setYear()")}}

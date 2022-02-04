@@ -66,7 +66,7 @@ console.log(str2.replace(regex2,'')); // Output: bar
 
 ## See also
 
-- A polyfill of `dotAll` `RegExp` flag is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `dotAll` `RegExp` flag in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{JSxRef("RegExp.lastIndex")}}
 - {{JSxRef("RegExp.prototype.global")}}
 - {{JSxRef("RegExp.prototype.hasIndices")}}

@@ -96,7 +96,7 @@ console.log(o.anotherValue); // 5
 
 ## See also
 
-- A polyfill of `Object.prototype.__defineSetter__` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
+- [Polyfill of `Object.prototype.__defineSetter__` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.prototype.__defineGetter__()")}}
 - {{jsxref("Functions/set", "set")}} operator
 - {{jsxref("Object.defineProperty()")}}

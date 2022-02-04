@@ -93,6 +93,6 @@ Object.isExtensible(1)
 
 ## See also
 
-- A polyfill of `Reflect.isExtensible` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
+- [Polyfill of `Reflect.isExtensible` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.isExtensible()")}}

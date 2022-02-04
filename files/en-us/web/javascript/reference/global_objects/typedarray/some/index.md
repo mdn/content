@@ -133,6 +133,6 @@ new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.some` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.some` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.every()")}}
 - {{jsxref("Array.prototype.some()")}}

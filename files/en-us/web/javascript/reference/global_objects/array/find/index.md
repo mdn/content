@@ -208,7 +208,7 @@ array.find(function(value, index) {
 
 ## See also
 
-- A polyfill of `Array.prototype.find` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.find` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.findIndex()")}} – find and return an index
 - {{jsxref("Array.prototype.includes()")}} – test whether a value exists in the array
 - {{jsxref("Array.prototype.filter()")}} – remove all non-matching elements
