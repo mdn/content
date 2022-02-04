@@ -81,15 +81,13 @@ If aria-owns is set on the menu container to include elements that are not DOM c
 - Any character key	
   - : Moves focus to next item in the menubar having a name that starts with the typed character. If none of the items have a name starting with the typed character, focus does not move.
 
-### Required JavaScript features
-
 ## Examples
 
 The following snippet of code is a popup menu that is displaye when the menu button is activated:
 
 ```html
 <div>
-  <button type="button" aria-haspopup="true" aria-controls="colormenu" class="menu-button" tabindex="0" aria-label="Color: purple">
+  <button type="button" aria-haspopup="menu" aria-controls="colormenu" tabindex="0" aria-label="Text Color: purple">
     Purple
     <span></span>
   </button>
@@ -101,11 +99,26 @@ The following snippet of code is a popup menu that is displaye when the menu but
 </div>
 ```
 
-## Accessibility Concerns
+The button that opens the menu has [`aria-haspopup="menu"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) set, explicitly indicating that the popup it controls is a `menu`.
 
-## Best Practices
+For a menu to open, the user generally interacts with a menu button as the opener. The menu button must be focusable and respond to both click and keyboard events. When focused, selecting <kbd>Enter</kbd>, <kbd>Space</kbd>, <kbd>Down Arrow</kbd>, or the <kbd>Up Arrow</kbd> should open the menu and place focus on a menu item.  
 
-### Prefer HTML
+The opening and closing of the menu toggles the [`aria-expanded="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute on the button. It is added when the menu is open. Removed or set to `false` when the menu is closed. It indicates that the menu is displayed and that activating the menu button closes the menu. Keyboard users should not be able to focus on the the menu button when the menu is open.
+
+The `menu` role was set on the {{HTMLElement('ul')}}, identifying the `<ul>` element as a menu. 
+
+The showing and hiding of the menu can be done with CSS. For example, in this code example with can use the attribute and adjacent sibling selectors to toggle the visibility of the menu:
+
+```css
+[role="menu"] { 
+  display: none;
+}
+[aria-expanded="true"] + [role="menu"] {
+  display: block;
+}
+```
+
+The `aria-label="Color: purple"` is set on the `menu` element. It defines the accessible name for the menu as "Color: purple"; identifying the purpose of the menu (selecting a color) and the current value (purple). When a selection to a new color is made, the value of the `aria-label` property should be updated as well.
 
 ## Specifications
 
@@ -116,11 +129,13 @@ The following snippet of code is a popup menu that is displaye when the menu but
 
 ## See Also
 
+
 - [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
 - [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
 - [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
 - [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
 - [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
+- [`aria-haspopup](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
 
 <section id="Quick_links">
 
