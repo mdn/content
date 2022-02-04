@@ -14,8 +14,6 @@ tags:
 
 There are a number of web technologies that store data of one kind or another on the client-side (i.e., on your local disk). The process by which the browser works out how much space to allocate to web data storage and what to delete when that limit is reached is not simple, and differs between browsers. This article describes how browsers determine what local content to purge and when in order to free up needed local storage space.
 
-> **Note:** The information below should be fairly accurate for most modern browsers, but browser specifics are called out where known. Opera and Chrome should behave the same in all cases. [Opera Mini](http://www.opera.com/mobile/mini) (still presto-based, server-side rendering) doesn't store any data on the client.
-
 ## What technologies use browser data storage?
 
 In Firefox, the following technologies make use of browser data storage to store data when required. We term them "quota clients" in this context:
@@ -31,7 +29,7 @@ In Firefox, the following technologies make use of browser data storage to store
 
 The "last access time" of origins is updated when any of these are activated/deactivated — origin eviction will delete data for all these quota clients.
 
-In Chrome/Opera, the Quota Management API handles quota management for [AppCache](/en-US/docs/Web/HTML/Using_the_application_cache), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), WebSQL, and [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API).
+In Chrome/Opera, the Quota Management API handles quota management for [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), WebSQL, and [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API).
 
 ## Different types of data storage
 
@@ -40,7 +38,7 @@ Even in the same browser, using the same storage method, there are different cla
 Storage comes in two types:
 
 - Persistent: This is data that is intended to be kept around for a long time. This will only be evicted if the user chooses to (for example, in Firefox you can choose to delete all stored data or only stored data from selected origins by going to _Preferences_ and using the options under _Privacy & Security > Cookies & Site Data_).
-- Temporary: This is data that doesn't need to persist for a very long time. This will be evicted under a least recently used ({{anch("LRU policy")}}) when {{anch("Storage limits")}} are reached.
+- Temporary: This is data that doesn't need to persist for a very long time. This will be evicted under a least-recently-used ({{anch("LRU policy")}}) when {{anch("Storage limits")}} are reached.
 
 In Firefox, when persistent storage is used, the user is given a UI popup to alert them that this data will persist, and asks if they are happy with that. Temporary data storage does not elicit any user prompts.
 
@@ -97,5 +95,5 @@ We track the "last access time" for each origin using temporary storage. Once th
 
 ## See also
 
-- [Working with quota on mobile browsers](http://www.html5rocks.com/en/tutorials/offline/quota-research/), by [Eiji Kitamura.](http://blog.agektmr.com) A detailed analysis of client-side storage on mobile browsers.
+- [Working with quota on mobile browsers](https://www.html5rocks.com/en/tutorials/offline/quota-research/), by [Eiji Kitamura.](https://blog.agektmr.com) A detailed analysis of client-side storage on mobile browsers.
 - [Storage for the web](https://web.dev/storage-for-the-web/) (https://web.dev/)
