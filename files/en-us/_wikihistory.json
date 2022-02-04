@@ -78966,24 +78966,6 @@
       "estelle"
     ]
   },
-  "Web/API/TextTrackList/onaddtrack": {
-    "modified": "2020-10-15T22:19:30.748Z",
-    "contributors": [
-      "estelle"
-    ]
-  },
-  "Web/API/TextTrackList/onchange": {
-    "modified": "2020-10-15T22:19:30.654Z",
-    "contributors": [
-      "estelle"
-    ]
-  },
-  "Web/API/TextTrackList/onremovetrack": {
-    "modified": "2020-10-15T22:19:30.843Z",
-    "contributors": [
-      "estelle"
-    ]
-  },
   "Web/API/TextTrackList/removeTrack_event": {
     "modified": "2020-12-10T09:43:31.584Z",
     "contributors": [
