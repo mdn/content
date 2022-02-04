@@ -11,8 +11,8 @@ The **`r`** attribute defines the radius of a circle.
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("circle")}}
-* {{SVGElement("radialGradient")}}
+- {{SVGElement("circle")}}
+- {{SVGElement("radialGradient")}}
 
 ## Example
 

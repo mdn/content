@@ -11,8 +11,8 @@ The **`ry`** attribute defines a radius on the y-axis.
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("ellipse")}}
-* {{SVGElement("rect")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("rect")}}
 
 ## Example
 
@@ -76,9 +76,9 @@ For {{SVGElement('rect')}}, `ry` defines the y-axis radius of the ellipse used t
 
 The way the value of the `ry` attribute is interpreted depend on both the {{SVGAttr("rx")}} attribute and the width of the rectangle:
 
-* If a properly specified value is provided for `ry` but not for {{SVGAttr("rx")}} (or the opposite), then the browser will consider the missing value equal to the defined one.
-* If neither `ry` nor {{SVGAttr("rx")}} has a properly specified value, then the browser will draw a rectangle with square corners.
-* If `ry` is greater than half of the width of the rectangle, then the browser will consider the value for `ry` as half of the width of the rectangle.
+- If a properly specified value is provided for `ry` but not for {{SVGAttr("rx")}} (or the opposite), then the browser will consider the missing value equal to the defined one.
+- If neither `ry` nor {{SVGAttr("rx")}} has a properly specified value, then the browser will draw a rectangle with square corners.
+- If `ry` is greater than half of the width of the rectangle, then the browser will consider the value for `ry` as half of the width of the rectangle.
 
 <table class="properties">
   <tbody>

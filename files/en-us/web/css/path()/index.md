@@ -15,11 +15,13 @@ The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_F
 ## Syntax
 
 When used in {{cssxref("offset-path")}} or {{SVGAttr("d")}}:
+
 ```css
 path(<string>)
 ```
 
 When used in {{cssxref("clip-path")}}:
+
 ```css
 path([<'fill-rule'>,]?<string>)
 ```
@@ -51,7 +53,7 @@ The `path()` function is used to create a path for the item to travel round. Cha
 
 ### Modify the value of the SVG path d attribute
 
-The `path()` can be used to modify the value of the SVG [`d` attribute](/en-US/docs/Web/SVG/Attribute/d), which can also be seet to `none` in your CSS.
+The `path()` can be used to modify the value of the SVG [`d` attribute](/en-US/docs/Web/SVG/Attribute/d), which can also be set to `none` in your CSS.
 
 The "V" symbol will flip vertically when you hover over it, if `d` is supported as a CSS property.
 

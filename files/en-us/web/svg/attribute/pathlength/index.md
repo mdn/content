@@ -13,13 +13,13 @@ This can affect the actual rendered lengths of paths; including text paths, anim
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement('circle')}}
-* {{SVGElement('ellipse')}}
-* {{SVGElement('line')}}
-* {{SVGElement('path')}}
-* {{SVGElement('polygon')}}
-* {{SVGElement('polyline')}}
-* {{SVGElement('rect')}}
+- {{SVGElement('circle')}}
+- {{SVGElement('ellipse')}}
+- {{SVGElement('line')}}
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
 
 ## Example
 

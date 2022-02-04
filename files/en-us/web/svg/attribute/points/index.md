@@ -11,8 +11,8 @@ The **`points`** attribute defines a list of points. Each point is defined by a 
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("polyline")}}
-* {{SVGElement("polygon")}}
+- {{SVGElement("polyline")}}
+- {{SVGElement("polygon")}}
 
 ## Example
 
