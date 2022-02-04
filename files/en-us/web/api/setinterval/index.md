@@ -378,7 +378,7 @@ interval has completed before recursing.
 
 ## See also
 
-- A polyfill of `setInterval` which allows passing arguments to the callback is available in [`core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- [Polyfill of `setInterval` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
 - {{domxref("setTimeout")}}
 - {{domxref("clearTimeout")}}
 - {{domxref("clearInterval")}}

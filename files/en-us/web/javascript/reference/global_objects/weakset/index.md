@@ -109,7 +109,7 @@ Note that `foo !== bar`. While they are similar objects, _they are not **the sam
 
 ## See also
 
-- A polyfill of `WeakSet` is available in [`core-js`](https://github.com/zloirock/core-js#weakset)
+- [Polyfill of `WeakSet` in `core-js`](https://github.com/zloirock/core-js#weakset)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}

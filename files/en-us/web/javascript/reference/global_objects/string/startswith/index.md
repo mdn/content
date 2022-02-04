@@ -88,7 +88,7 @@ Mathias Bynens](https://github.com/mathiasbynens/String.prototype.startsWith).
 
 ## See also
 
-- A polyfill of `String.prototype.startsWith` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.startsWith` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.endsWith()")}}
 - {{jsxref("String.prototype.includes()")}}
 - {{jsxref("String.prototype.indexOf()")}}

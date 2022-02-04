@@ -123,6 +123,6 @@ console.log(uint8.find(isPrime)); // 5
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.find` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.find` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray.prototype.findIndex()")}}
 - {{jsxref("TypedArray.prototype.every()")}}

@@ -396,7 +396,7 @@ flatten(nested) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 ## See also
 
-- A polyfill of `Array.prototype.forEach` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.forEach` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.map()")}}

@@ -68,7 +68,7 @@ theBigDay.setYear(2000);
 
 ## See also
 
-- A polyfill of `Date.prototype.setYear` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-date)
+- [Polyfill of `Date.prototype.setYear` in `core-js`](https://github.com/zloirock/core-js#ecmascript-date)
 - {{jsxref("Date.prototype.getFullYear()")}}
 - {{jsxref("Date.prototype.getUTCFullYear()")}}
 - {{jsxref("Date.prototype.setFullYear()")}}
