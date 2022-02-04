@@ -1305,53 +1305,6 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
   </tbody>
 </table>
 
-#### ElementInternals: Form associated custom element methods and properties
-
-New {{domxref("ElementInternals")}} properties and methods that allow a custom elements to interact with a form:
-
-- property: {{domxref("ElementInternals.form","form")}} gets the form associated with the element
-- property: {{domxref("ElementInternals.labels","labels")}} gets the list of labels associated with the element
-- property: {{domxref("ElementInternals.willValidate", "willValidate")}} checks if a custom form element will be validated.
-- method: {{domxref("ElementInternals.setFormValue()","setFormValue()")}} set the sanitized value and user-entered data, if needed.
-
-See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}, {{bug(1556449)}}.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>95</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>95</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>95</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>95</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.webcomponents.formAssociatedCustomElement.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### Payment Request API
 
 #### Primary payment handling
