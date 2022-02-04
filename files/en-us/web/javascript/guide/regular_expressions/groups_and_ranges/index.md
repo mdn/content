@@ -207,10 +207,10 @@ Groups and ranges indicate groups and ranges of expression characters.
 
 ```js
 var aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
-var regexpVowels = /[aeiouy]/g;
+var regexpVowels = /[AEIOUYaeiouy]/g;
 
 console.log("Number of vowels:", aliceExcerpt.match(regexpVowels).length);
-// Number of vowels: 25
+// Number of vowels: 26
 ```
 
 ### Using groups

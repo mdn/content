@@ -11,13 +11,13 @@ The **`dx`** attribute indicates a shift along the x-axis on the position of an 
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement('altGlyph')}}
-* {{SVGElement('feDropShadow')}}
-* {{SVGElement('feOffset')}}
-* {{SVGElement('glyphRef')}}
-* {{SVGElement('text')}}
-* {{SVGElement('tref')}}
-* {{SVGElement('tspan')}}
+- {{SVGElement('altGlyph')}}
+- {{SVGElement('feDropShadow')}}
+- {{SVGElement('feOffset')}}
+- {{SVGElement('glyphRef')}}
+- {{SVGElement('text')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## Example
 

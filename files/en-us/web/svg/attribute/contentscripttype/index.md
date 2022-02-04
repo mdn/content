@@ -62,5 +62,5 @@ This attribute sets the default scripting language used to process the value str
 
 ## See also
 
-* [MIME Part Two: Media Types \[RFC2046\]](https://www.ietf.org/rfc/rfc2046.txt)
-* {{SVGElement("script")}}
+- [MIME Part Two: Media Types \[RFC2046\]](https://www.ietf.org/rfc/rfc2046.txt)
+- {{SVGElement("script")}}

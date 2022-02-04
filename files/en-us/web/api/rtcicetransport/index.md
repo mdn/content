@@ -19,6 +19,8 @@ browser-compat: api.RTCIceTransport
 The **`RTCIceTransport`** interface provides access to information about the {{Glossary("ICE")}} transport layer over which the data is being sent and received.
 This is particularly useful if you need to access state information about the connection.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _The `RTCIceTransport` interface inherits properties from its parent, {{domxref("EventTarget")}}. It also offers the following properties:_

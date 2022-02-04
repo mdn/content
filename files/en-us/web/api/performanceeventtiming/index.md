@@ -50,6 +50,8 @@ The `PerformanceEventTiming` interface of the Event Timing API provides timing i
 - {{event("touchend")}}
 - {{event("touchcancel")}}
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 - **`{{domxref("PerformanceEventTiming.processingStart")}}`**

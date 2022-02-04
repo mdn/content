@@ -360,8 +360,8 @@ Try entering the four lines above into your console one by one, and see what the
 
 As well as variables, you can declare constants. These are like variables, except that:
 
-* you must initialize them when you declare them
-* you can't assign them a new value after you've initialized them.
+- you must initialize them when you declare them
+- you can't assign them a new value after you've initialized them.
 
 For example, using `let` you can declare a variable without initializing it:
 

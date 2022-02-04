@@ -22,7 +22,6 @@ Site storage—the data stored for a Web site which is managed by the Storage St
 - [Service Worker registrations](/en-US/docs/Web/API/Service_Worker_API)
 - [Web Storage API data](/en-US/docs/Web/API/Web_Storage_API) managed using {{domxref("window.localStorage")}}
 - History state information saved using {{domxref("History.pushState()")}}
-- [Application caches](/en-US/docs/Web/HTML/Using_the_application_cache) (highly deprecated!)
 - [Notification data](/en-US/docs/Web/API/Notifications_API)
 - Other kinds of site-accessible, site-specific data that may be maintained
 

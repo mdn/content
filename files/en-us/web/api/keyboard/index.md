@@ -18,6 +18,8 @@ The **`Keyboard`** interface of the [Keyboard API](/en-US/docs/Web/API/Keyboard_
 
 A list of valid code values is found in the [UI Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 None.

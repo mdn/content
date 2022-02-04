@@ -110,5 +110,5 @@ if (!Math.imul) Math.imul = function(opA, opB) {
 
 ## See also
 
-- A polyfill of `Math.imul` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-math)
+- [Polyfill of `Math.imul` in `core-js`](https://github.com/zloirock/core-js#ecmascript-math)
 - [Emscripten](https://en.wikipedia.org/wiki/Emscripten)

@@ -130,7 +130,7 @@ Promise.any([coffee, tea]).then(value => {
 
 ## See also
 
-- A polyfill of `Promise.any` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Polyfill of `Promise.any` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
 - {{JSxRef("Promise")}}
 - {{JSxRef("Promise.allSettled()")}}
 - {{JSxRef("Promise.all()")}}

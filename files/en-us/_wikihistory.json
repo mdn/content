@@ -47086,18 +47086,6 @@
       "Ryatt"
     ]
   },
-  "Web/API/GlobalEventHandlers/oncuechange": {
-    "modified": "2020-10-15T21:43:45.704Z",
-    "contributors": [
-      "Sheppy",
-      "mfluehr",
-      "fscholz",
-      "sideshowbarker",
-      "wbamberg",
-      "Guillaume-Heras",
-      "rolfedh"
-    ]
-  },
   "Web/API/GlobalEventHandlers/ondblclick": {
     "modified": "2020-10-15T21:03:47.416Z",
     "contributors": [
@@ -78966,24 +78954,6 @@
       "estelle"
     ]
   },
-  "Web/API/TextTrackList/onaddtrack": {
-    "modified": "2020-10-15T22:19:30.748Z",
-    "contributors": [
-      "estelle"
-    ]
-  },
-  "Web/API/TextTrackList/onchange": {
-    "modified": "2020-10-15T22:19:30.654Z",
-    "contributors": [
-      "estelle"
-    ]
-  },
-  "Web/API/TextTrackList/onremovetrack": {
-    "modified": "2020-10-15T22:19:30.843Z",
-    "contributors": [
-      "estelle"
-    ]
-  },
   "Web/API/TextTrackList/removeTrack_event": {
     "modified": "2020-12-10T09:43:31.584Z",
     "contributors": [
@@ -90201,16 +90171,6 @@
       "paul.irish",
       "Nickolay",
       "Hsivonen"
-    ]
-  },
-  "Web/API/XMLHttpRequest/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL": {
-    "modified": "2019-03-23T23:58:55.741Z",
-    "contributors": [
-      "maulikkothari92",
-      "Jeremie",
-      "teoli",
-      "briansmith2",
-      "vladimir.dzhuvinov"
     ]
   },
   "Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data": {

@@ -19,6 +19,8 @@ A `ServiceWorker` object is available in the {{domxref("ServiceWorkerRegistratio
 
 The `ServiceWorker` interface is dispatched a set of lifecycle events — `install` and `activate` — and functional events including `fetch`. A `ServiceWorker` object has an associated {{domxref("ServiceWorker.state")}}, related to its lifecycle.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _The `ServiceWorker` interface inherits properties from its parent, {{domxref("EventTarget")}}._

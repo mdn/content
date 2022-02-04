@@ -4009,7 +4009,7 @@
 /en-US/docs/HTTP_Transaction_Model	/en-US/docs/Web/HTTP
 /en-US/docs/HTTP_access_control	/en-US/docs/Web/HTTP/CORS
 /en-US/docs/How_to_Turn_Off_Form_Autocompletion	/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion
-/en-US/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL
+/en-US/docs/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest
 /en-US/docs/How_to_create_a_DOM_tree	/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree
 /en-US/docs/How_to_start_contributions_to_Mozilla	/en-US/docs/MDN/Contribute/Getting_started
 /en-US/docs/ICC_color_correction_in_Firefox	/en-US/docs/Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox
@@ -7516,7 +7516,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncancel	/en-US/docs/Web/API/GlobalEventHandlers/oncancel
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncanplay	/en-US/docs/Web/API/GlobalEventHandlers/oncanplay
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncanplaythrough	/en-US/docs/Web/API/GlobalEventHandlers/oncanplaythrough
-/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncuechange	/en-US/docs/Web/API/GlobalEventHandlers/oncuechange
+/en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.oncuechange	/en-US/docs/Web/API/TextTrack/cuechange_event
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.ondurationchange	/en-US/docs/Web/API/GlobalEventHandlers/ondurationchange
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onemptied	/en-US/docs/Web/API/GlobalEventHandlers/onemptied
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onended	/en-US/docs/Web/API/GlobalEventHandlers/onended
@@ -7531,6 +7531,7 @@
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay	/en-US/docs/Web/API/GlobalEventHandlers/onplay
 /en-US/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.ontouchend	/en-US/docs/Web/API/GlobalEventHandlers/ontouchend
 /en-US/docs/Web/API/GlobalEventHandlers/dragexit_event	/en-US/docs/Web/API/Document/dragleave_event
+/en-US/docs/Web/API/GlobalEventHandlers/oncuechange	/en-US/docs/Web/API/TextTrack/cuechange_event
 /en-US/docs/Web/API/GlobalEventHandlers/ondragexit	/en-US/docs/Web/API/GlobalEventHandlers/ondragleave
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenchange	/en-US/docs/Web/API/Document/onfullscreenchange
 /en-US/docs/Web/API/GlobalEventHandlers/onmozfullscreenerror	/en-US/docs/Web/API/Document/onfullscreenerror
@@ -8585,6 +8586,10 @@
 /en-US/docs/Web/API/Sensor/onactivate	/en-US/docs/Web/API/Sensor/activate_event
 /en-US/docs/Web/API/Sensor/onerror	/en-US/docs/Web/API/Sensor/error_event
 /en-US/docs/Web/API/Sensor/onreading	/en-US/docs/Web/API/Sensor/reading_event
+/en-US/docs/Web/API/Serial/onconnect	/en-US/docs/Web/API/SerialPort/connect_event
+/en-US/docs/Web/API/Serial/ondisconnect	/en-US/docs/Web/API/SerialPort/disconnect_event
+/en-US/docs/Web/API/SerialPort/onconnect	/en-US/docs/Web/API/SerialPort/connect_event
+/en-US/docs/Web/API/SerialPort/ondisconnect	/en-US/docs/Web/API/SerialPort/disconnect_event
 /en-US/docs/Web/API/ServiceWorker.onstatechange	/en-US/docs/Web/API/ServiceWorker/onstatechange
 /en-US/docs/Web/API/ServiceWorker.scriptURL	/en-US/docs/Web/API/ServiceWorker/scriptURL
 /en-US/docs/Web/API/ServiceWorker.state	/en-US/docs/Web/API/ServiceWorker/state
@@ -8682,7 +8687,12 @@
 /en-US/docs/Web/API/TextEncoder.encode	/en-US/docs/Web/API/TextEncoder/encode
 /en-US/docs/Web/API/TextEncoder.encoding	/en-US/docs/Web/API/TextEncoder/encoding
 /en-US/docs/Web/API/TextMetrics.width	/en-US/docs/Web/API/TextMetrics/width
-/en-US/docs/Web/API/TextTrackList/removeTrack	/en-US/docs/Web/API/TextTrackList/removeTrack_event
+/en-US/docs/Web/API/TextTrackCue/onenter	/en-US/docs/Web/API/TextTrackCue/enter_event
+/en-US/docs/Web/API/TextTrackCue/onexit	/en-US/docs/Web/API/TextTrackCue/exit_event
+/en-US/docs/Web/API/TextTrackList/onaddtrack	/en-US/docs/Web/API/TextTrackList/addtrack_event
+/en-US/docs/Web/API/TextTrackList/onchange	/en-US/docs/Web/API/TextTrackList/change_event
+/en-US/docs/Web/API/TextTrackList/onremovetrack	/en-US/docs/Web/API/TextTrackList/removetrack_event
+/en-US/docs/Web/API/TextTrackList/removeTrack	/en-US/docs/Web/API/TextTrackList/removetrack_event
 /en-US/docs/Web/API/TimeRanges.end	/en-US/docs/Web/API/TimeRanges/end
 /en-US/docs/Web/API/TimeRanges.length	/en-US/docs/Web/API/TimeRanges/length
 /en-US/docs/Web/API/TimeRanges.start	/en-US/docs/Web/API/TimeRanges/start
@@ -8817,10 +8827,10 @@
 /en-US/docs/Web/API/VideoPlaybackQuality.totalFrameDelay	/en-US/docs/Web/API/VideoPlaybackQuality/totalFrameDelay
 /en-US/docs/Web/API/VideoPlaybackQuality.totalVideoFrames	/en-US/docs/Web/API/VideoPlaybackQuality/totalVideoFrames
 /en-US/docs/Web/API/VideoTrackList/TextTrackList.length	/en-US/docs/Web/API/TextTrackList/length
-/en-US/docs/Web/API/VideoTrackList/TextTrackList.onaddtrack	/en-US/docs/Web/API/TextTrackList/onaddtrack
-/en-US/docs/Web/API/VideoTrackList/TextTrackList.onchange	/en-US/docs/Web/API/TextTrackList/onchange
-/en-US/docs/Web/API/VideoTrackList/TextTrackList.onremovetrack	/en-US/docs/Web/API/TextTrackList/onremovetrack
-/en-US/docs/Web/API/VideoTrackList/TextTrackList.removeTrack	/en-US/docs/Web/API/TextTrackList/removeTrack_event
+/en-US/docs/Web/API/VideoTrackList/TextTrackList.onaddtrack	/en-US/docs/Web/API/TextTrackList/addtrack_event
+/en-US/docs/Web/API/VideoTrackList/TextTrackList.onchange	/en-US/docs/Web/API/TextTrackList/change_event
+/en-US/docs/Web/API/VideoTrackList/TextTrackList.onremovetrack	/en-US/docs/Web/API/TextTrackList/removetrack_event
+/en-US/docs/Web/API/VideoTrackList/TextTrackList.removeTrack	/en-US/docs/Web/API/TextTrackList/removetrack_event
 /en-US/docs/Web/API/VideoTrackList/TextTrackList:_addtrack_event	/en-US/docs/Web/API/TextTrackList/addtrack_event
 /en-US/docs/Web/API/VideoTrackList/TextTrackList:_change_event	/en-US/docs/Web/API/TextTrackList/change_event
 /en-US/docs/Web/API/VideoTrackList/getTrackById()	/en-US/docs/Web/API/TextTrackList/getTrackById
@@ -9103,7 +9113,8 @@
 /en-US/docs/Web/API/XMLDocument.load	/en-US/docs/Web/API/XMLDocument/load
 /en-US/docs/Web/API/XMLHttpRequest/FormData	/en-US/docs/Web/API/FormData
 /en-US/docs/Web/API/XMLHttpRequest/FormData/Using_FormData_Objects	/en-US/docs/Web/API/FormData/Using_FormData_Objects
-/en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_secruity_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL
+/en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_secruity_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest
+/en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL	/en-US/docs/Web/API/XMLHttpRequest
 /en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest.response	/en-US/docs/Web/API/XMLHttpRequest/response
 /en-US/docs/Web/API/XMLHttpRequest/responseresponseText	/en-US/docs/Web/API/XMLHttpRequest/responseText
 /en-US/docs/Web/API/XMLHttpRequestResponseType	/en-US/docs/Web/API/XMLHttpRequest/responseType

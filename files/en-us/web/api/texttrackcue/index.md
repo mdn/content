@@ -22,6 +22,8 @@ browser-compat: api.TextTrackCue
 
 **`TextTrackCue`** is an abstract class which is used as the basis for the various derived cue types, such as {{domxref("VTTCue")}}; you will instead work with those derived types. These cues represent strings of text presented for some duration of time during the performance of a {{domxref("TextTrack")}}. The cue includes the start time (the time at which the text will be displayed) and the end time (the time at which it will be removed from the display), as well as other information.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _This interface also inherits properties from {{domxref("EventTarget")}}._
@@ -37,12 +39,12 @@ _This interface also inherits properties from {{domxref("EventTarget")}}._
 - {{domxref("TextTrackCue.pauseOnExit")}}
   - : A `boolean` for whether the video will pause when this cue stops being displayed.
 
-## Event handlers
+## Events
 
-- {{domxref("TextTrackCue.onenter")}}
-  - : The event handler fired when a cue becomes active.
-- {{domxref("TextTrackCue.onexit")}}
-  - : The event handler fired when the cue has stopped being active.
+- {{domxref("TextTrackCue.enter_event", "enter")}}
+  - : Fired when a cue becomes active.
+- {{domxref("TextTrackCue.exit_event", "exit")}}
+  - : Fired when the cue has stopped being active.
 
 ## Specifications
 

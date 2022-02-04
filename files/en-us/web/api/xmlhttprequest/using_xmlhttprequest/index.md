@@ -929,15 +929,13 @@ Setting `overrideMimeType` does not work from a {{domxref("Worker")}}. See
 ## See also
 
 1. [MDN AJAX introduction](/en-US/docs/Web/Guide/AJAX/Getting_Started)
-2. [HTML in
+1. [HTML in
     XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-3. [HTTP access control](/en-US/docs/Web/HTTP/CORS)
-4. [How
-    to check the security state of an XMLHTTPRequest over SSL](/en-US/docs/Web/API/XMLHttpRequest/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL)
-5. [XMLHttpRequest -
+1. [HTTP access control](/en-US/docs/Web/HTTP/CORS)
+1. [XMLHttpRequest -
     REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
-6. [Microsoft documentation](https://msdn.microsoft.com/library/ms535874)
-7. ["Using the XMLHttpRequest
+1. [Microsoft documentation](https://msdn.microsoft.com/library/ms535874)
+1. ["Using the XMLHttpRequest
     Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
-8. [The `XMLHttpRequest` object:
+1. [The `XMLHttpRequest` object:
     WHATWG specification](https://xhr.spec.whatwg.org/)

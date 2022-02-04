@@ -16,6 +16,8 @@ The **`WakeLockSentinel`** interface of the {{domxref('Screen Wake Lock API')}} 
 
 An acquired `WakeLockSentinel` can be released manually via the {{domxref('WakeLockSentinel.release','release()')}} method, or automatically via the platform wake lock. This can happen if the document becomes inactive or looses visibility, if the device is low on power or the user turns on a power save mode. Releasing all `WakeLockSentinel` instances of a given wake lock type will cause the underlying platform wake lock to be released.
 
+{{InheritanceDiagram}}
+
 ## Properties
 
 _This interface provides the following properties._

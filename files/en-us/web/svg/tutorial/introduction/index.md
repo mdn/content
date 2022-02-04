@@ -32,8 +32,8 @@ SVG is supported in all modern browsers and even a couple versions back in some 
 
 Before starting you should have a basic understanding of XML or another markup language such as HTML. If you are not too familiar with XML, here are some guidelines to keep in mind:
 
-* SVG elements and attributes should all be entered in the case shown here since XML is case-sensitive (unlike HTML).
-* Attribute values in SVG must be placed inside quotes, even if they are numbers.
+- SVG elements and attributes should all be entered in the case shown here since XML is case-sensitive (unlike HTML).
+- Attribute values in SVG must be placed inside quotes, even if they are numbers.
 
 SVG is a huge specification. This tutorial attempts to cover the basics. Once you are familiar you should be able to use the [Element Reference](/en-US/docs/Web/SVG/Element) and the [Interface Reference](/en-US/docs/Web/API/Document_Object_Model#svg_interfaces) to find out anything else you need to know.
 

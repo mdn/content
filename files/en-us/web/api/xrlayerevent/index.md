@@ -16,6 +16,8 @@ browser-compat: api.XRLayerEvent
 
 The **`XRLayerEvent`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) is the event type for events related to a change of state of an {{domxref("XRLayer")}} object. These events occur, for example, when the layer needs to be redrawn.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("XRLayerEvent.XRLayerEvent", "XRLayerEvent()")}}

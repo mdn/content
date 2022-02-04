@@ -43,7 +43,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 * `<number>`
-    * : This value indicates the number of coordinate units on the em square.
+  * : This value indicates the number of coordinate units on the em square.
 
 ## Specifications
 

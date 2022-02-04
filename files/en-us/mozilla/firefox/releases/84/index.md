@@ -54,7 +54,7 @@ _No changes._
 
 #### Removals
 
-- The [application cache](/en-US/docs/Web/HTML/Using_the_application_cache) has been removed — developers should use the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) instead ({{bug(1619673)}}).
+- The application cache has been removed — developers should use the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) instead ({{bug(1619673)}}).
 
 ### WebAssembly
 

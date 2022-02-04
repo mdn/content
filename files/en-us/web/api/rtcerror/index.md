@@ -20,6 +20,8 @@ browser-compat: api.RTCError
 
 The **`RTCError`** interface describes an error which has occurred while handling [WebRTC](/en-US/docs/Web/API/WebRTC_API) operations. It's based upon the standard {{domxref("DOMException")}} interface that describes general DOM errors.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("RTCError.RTCError", "RTCError()")}}

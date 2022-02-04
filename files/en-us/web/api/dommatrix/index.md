@@ -20,6 +20,8 @@ The **`DOMMatrix`** interface represents 4×4 matrices, suitable for 2D and 3D o
 
 This interface should be available inside [web workers](/en-US/docs/Web/API/Web_Workers_API), though some implementations don't allow it yet.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
 - {{domxref("DOMMatrix.DOMMatrix","DOMMatrix()")}}

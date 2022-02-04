@@ -87,9 +87,9 @@ When you try to access a property of an object: if the property can't be found i
 
 So when we call `myObject.hasOwnProperty('city')`, the browser:
 
-* looks for `hasOwnProperty` in `myObject`
-* can't find it there, so looks in the prototype object for `myObject`
-* finds it there, and calls it.
+- looks for `hasOwnProperty` in `myObject`
+- can't find it there, so looks in the prototype object for `myObject`
+- finds it there, and calls it.
 
 What is the prototype for `myObject`? To find out, we can use the function `Object.getPrototypeOf()`:
 
@@ -190,8 +190,8 @@ Person.prototype.constructor = Person;
 
 Here we create:
 
-* an object `personPrototype`, which has a `greet()` method
-* a `Person()` constructor function which initializes the name of the person to create.
+- an object `personPrototype`, which has a `greet()` method
+- a `Person()` constructor function which initializes the name of the person to create.
 
 We then set the `Person` function's `prototype` property to point to `personPrototype`.
 
@@ -211,8 +211,8 @@ This also explains why we said earlier that the prototype of `myDate` is called 
 
 The objects we create using the `Person` constructor above have two properties:
 
-* a `name` property, which is set in the constructor, so it appears directly on `Person` objects
-* a `greet()` method, which is set in the prototype.
+- a `name` property, which is set in the constructor, so it appears directly on `Person` objects
+- a `greet()` method, which is set in the prototype.
 
 It's common to see this pattern, in which methods are defined on the prototype, but data properties are defined in the constructor. That's because methods are usually the same for every object we create, while we often want each object to have its own value for its data properties (just as here where every person has a different name).
 

@@ -296,7 +296,7 @@ let filteredNumbers = numbers.map(function(num, index) {
 
 ## See also
 
-- A polyfill of `Array.prototype.map` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.map` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Map")}} object
 - {{jsxref("Array.from()")}}

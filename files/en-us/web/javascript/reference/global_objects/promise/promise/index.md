@@ -125,5 +125,5 @@ function myAsyncFunction(url) {
 
 ## See also
 
-- A polyfill of `Promise` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
+- [Polyfill of `Promise` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
 - [Using Promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)

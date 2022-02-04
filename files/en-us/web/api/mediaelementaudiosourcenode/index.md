@@ -17,6 +17,8 @@ The `MediaElementAudioSourceNode` interface represents an audio source consistin
 
 A `MediaElementSourceNode` has no inputs and exactly one output, and is created using the {{domxref("AudioContext.createMediaElementSource()")}} method. The amount of channels in the output equals the number of channels of the audio referenced by the {{domxref("HTMLMediaElement")}} used in the creation of the node, or is 1 if the {{domxref("HTMLMediaElement")}} has no audio.
 
+{{InheritanceDiagram}}
+
 <table class="properties">
   <tbody>
     <tr>

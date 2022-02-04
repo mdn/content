@@ -43,7 +43,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 * `<urange>#`
-    * : This value is a comma-separated list of ISO 10646 characters possibly covered by the glyphs in the font.
+  * : This value is a comma-separated list of ISO 10646 characters possibly covered by the glyphs in the font.
 
 ## Specifications
 

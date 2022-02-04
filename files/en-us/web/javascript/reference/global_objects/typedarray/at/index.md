@@ -85,7 +85,7 @@ console.log(atWay); // Logs: 11
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.at` is available in [`core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
+- [Polyfill of `TypedArray.prototype.at` in `core-js`](https://github.com/zloirock/core-js#relative-indexing-method)
 - [A polyfill for the at() method](https://github.com/tc39/proposal-relative-indexing-method#polyfill).
 - {{jsxref("TypedArray.prototype.find()")}} – return a value based on a given test.
 - {{jsxref("TypedArray.prototype.includes()")}} – test whether a value exists in the array.
