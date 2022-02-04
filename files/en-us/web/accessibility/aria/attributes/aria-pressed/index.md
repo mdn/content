@@ -54,7 +54,7 @@ The first rule of ARIA use is "if you can use a native feature with the semantic
 
 Used in roles:
 
- - [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
+- [`button`](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role)
 
 ## Specifications
 

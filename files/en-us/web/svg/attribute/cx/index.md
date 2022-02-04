@@ -11,9 +11,9 @@ The **`cx`** attribute define the x-axis coordinate of a center point.
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("circle")}}
-* {{SVGElement("ellipse")}}
-* {{SVGElement("radialGradient")}}
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("radialGradient")}}
 
 ## Example
 
@@ -188,5 +188,5 @@ html,body,svg { height:100% }
 
 ## See also
 
-* [cy](/en-US/docs/Web/SVG/Attribute/cy)
-* [r](/en-US/docs/Web/SVG/Attribute/r)
+- [cy](/en-US/docs/Web/SVG/Attribute/cy)
+- [r](/en-US/docs/Web/SVG/Attribute/r)

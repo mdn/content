@@ -56,7 +56,7 @@ html, body, svg {
 </table>
 
 - `<name>`
-    - : This value indicates the name of the CSS property or attribute of the target element to be animated.
+  - : This value indicates the name of the CSS property or attribute of the target element to be animated.
 
 ## Specifications
 

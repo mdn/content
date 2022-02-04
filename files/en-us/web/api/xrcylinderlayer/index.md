@@ -35,15 +35,15 @@ To present layers to the XR device, add them to the `layers` render state using 
 _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 
 - {{domxref("XRCylinderLayer.aspectRatio")}}
-   - : A number indicating the ratio of the visible cylinder section. It is the ratio of the width of the visible section of the cylinder divided by its height. The width is calculated by multiplying the `radius` with the `centralAngle`.
+  - : A number indicating the ratio of the visible cylinder section. It is the ratio of the width of the visible section of the cylinder divided by its height. The width is calculated by multiplying the `radius` with the `centralAngle`.
 - {{domxref("XRCylinderLayer.centralAngle")}}
-   - : A number indicating the angle in radians of the visible section of the cylinder.
+  - : A number indicating the angle in radians of the visible section of the cylinder.
 - {{domxref("XRCylinderLayer.radius")}}
-   - : A number indicating the radius of the cylinder.
+  - : A number indicating the radius of the cylinder.
 - {{domxref("XRCylinderLayer.space")}}
-   - : An {{domxref("XRSpace")}} representing the layer's spatial relationship with the user’s physical environment.
+  - : An {{domxref("XRSpace")}} representing the layer's spatial relationship with the user’s physical environment.
 - {{domxref("XRCylinderLayer.transform")}}
-   - : An {{domxref("XRRigidTransform")}} representing the offset and orientation relative to `space`.
+  - : An {{domxref("XRRigidTransform")}} representing the offset and orientation relative to `space`.
 
 ## Methods
 

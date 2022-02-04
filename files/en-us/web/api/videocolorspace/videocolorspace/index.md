@@ -27,20 +27,20 @@ All values default to `null` when they are not present.
   - : A dictionary object containing the following:
     - `primaries`{{Optional_Inline}}
       - : One of the following strings:
-          - `"bt709"`
-          - `"bt470bg"`
-          - `"smpte170m"`
+        - `"bt709"`
+        - `"bt470bg"`
+        - `"smpte170m"`
     - `transfer`{{Optional_Inline}}
       - : One of the following strings:
-          - `"bt709"`
-          - `"smpte170m"`
-          - `"iec61966-2-1"`
+        - `"bt709"`
+        - `"smpte170m"`
+        - `"iec61966-2-1"`
     - `matrix`{{Optional_Inline}}
       - : One of the following strings:
-          - `"rgb"`
-          - `"bt709"`
-          - `"bt470bg"`
-          - `"smpte170m"`
+        - `"rgb"`
+        - `"bt709"`
+        - `"bt470bg"`
+        - `"smpte170m"`
     - `fullRange`{{Optional_Inline}}
       - : A {{jsxref("Boolean")}}, `true` if full-range color values are used in the video.
 

@@ -53,10 +53,10 @@ As a presentation attribute, it also can be used as a property directly inside a
   </tbody>
 </table>
 
-* nonzero
-    * : See description of {{ SVGAttr("fill-rule") }} property.
-* evenodd
-    * : See description of {{ SVGAttr("fill-rule") }} property.
+- nonzero
+  - : See description of {{ SVGAttr("fill-rule") }} property.
+- evenodd
+  - : See description of {{ SVGAttr("fill-rule") }} property.
 
 ## Example
 
@@ -87,7 +87,7 @@ As a presentation attribute, it also can be used as a property directly inside a
 
 The following elements can use the `clip-rule` attribute, but only if they are inside a {{ SVGElement("clipPath") }} element.
 
-* [Graphical elements](/en-US/docs/SVG/Element#Graphical) »
+- [Graphical elements](/en-US/docs/SVG/Element#Graphical) »
 
 ## Browser compatibility
 
@@ -95,4 +95,4 @@ The following elements can use the `clip-rule` attribute, but only if they are i
 
 ## See also
 
-* {{ SVGElement("clipPath") }}
+- {{ SVGElement("clipPath") }}
