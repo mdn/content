@@ -17,20 +17,20 @@ If the value for {{SVGAttr("result")}} appears multiple times within a given {{S
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("feBlend")}}
-* {{SVGElement("feColorMatrix")}}
-* {{SVGElement("feComponentTransfer")}}
-* {{SVGElement("feComposite")}}
-* {{SVGElement("feConvolveMatrix")}}
-* {{SVGElement("feDiffuseLighting")}}
-* {{SVGElement("feDisplacementMap")}}
-* {{SVGElement("feDropShadow")}}
-* {{SVGElement("feGaussianBlur")}}
-* {{SVGElement("feMergeNode")}}
-* {{SVGElement("feMorphology")}}
-* {{SVGElement("feOffset")}}
-* {{SVGElement("feSpecularLighting")}}
-* {{SVGElement("feTile")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feDropShadow")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feMergeNode")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feTile")}}
 
 ## Usage notes
 
@@ -59,20 +59,20 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-* `SourceGraphic`
-    * : This keyword represents the graphics elements that were the original input into the {{SVGElement("filter")}} element.
-* `SourceAlpha`
-    * : This keyword represents the graphics elements that were the original input into the `<filter>` element. `SourceAlpha` has all of the same rules as `SourceGraphic` except that only the alpha channel is used.
-* `BackgroundImage`
-    * : This keyword represents an image snapshot of the SVG document under the filter region at the time that the `<filter>` element was invoked.
-* `BackgroundAlpha`
-    * : Same as `BackgroundImage` except only the alpha channel is used.
-* `FillPaint`
-    * : This keyword represents the value of the {{SVGAttr("fill")}} property on the target element for the filter effect. In many cases, the `FillPaint` is opaque everywhere, but that might not be the case if a shape is painted with a gradient or pattern which itself includes transparent or semi-transparent parts.
-* `StrokePaint`
-    * : This keyword represents the value of the {{SVGAttr("stroke")}} property on the target element for the filter effect. In many cases, the `StrokePaint` is opaque everywhere, but that might not be the case if a shape is painted with a gradient or pattern which itself includes transparent or semi-transparent parts.
-* `<filter-primitive-reference>`
-    * : This value is an assigned name for the filter primitive in the form of a {{cssxref("custom-ident")}}. If supplied, then graphics that result from processing this filter primitive can be referenced by an in attribute on a subsequent filter primitive within the same filter element. If no value is provided, the output will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its in attribute.
+- `SourceGraphic`
+  - : This keyword represents the graphics elements that were the original input into the {{SVGElement("filter")}} element.
+- `SourceAlpha`
+  - : This keyword represents the graphics elements that were the original input into the `<filter>` element. `SourceAlpha` has all of the same rules as `SourceGraphic` except that only the alpha channel is used.
+- `BackgroundImage`
+  - : This keyword represents an image snapshot of the SVG document under the filter region at the time that the `<filter>` element was invoked.
+- `BackgroundAlpha`
+  - : Same as `BackgroundImage` except only the alpha channel is used.
+- `FillPaint`
+  - : This keyword represents the value of the {{SVGAttr("fill")}} property on the target element for the filter effect. In many cases, the `FillPaint` is opaque everywhere, but that might not be the case if a shape is painted with a gradient or pattern which itself includes transparent or semi-transparent parts.
+- `StrokePaint`
+  - : This keyword represents the value of the {{SVGAttr("stroke")}} property on the target element for the filter effect. In many cases, the `StrokePaint` is opaque everywhere, but that might not be the case if a shape is painted with a gradient or pattern which itself includes transparent or semi-transparent parts.
+- `<filter-primitive-reference>`
+  - : This value is an assigned name for the filter primitive in the form of a {{cssxref("custom-ident")}}. If supplied, then graphics that result from processing this filter primitive can be referenced by an in attribute on a subsequent filter primitive within the same filter element. If no value is provided, the output will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its in attribute.
 
 ## Workaround for BackgroundImage
 

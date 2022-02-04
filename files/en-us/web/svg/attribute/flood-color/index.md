@@ -15,8 +15,8 @@ The **`flood-color`** attribute indicates what color to use to flood the current
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("feFlood")}}
-* {{SVGElement("feDropShadow")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feDropShadow")}}
 
 ## Example
 
@@ -98,4 +98,4 @@ html, body, svg {
 
 ## See also
 
-* {{SVGAttr("flood-opacity")}}
+- {{SVGAttr("flood-opacity")}}

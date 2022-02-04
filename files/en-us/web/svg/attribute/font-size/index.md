@@ -14,11 +14,11 @@ The **`font-size`** attribute refers to the size of the font from {{Glossary("ba
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("altGlyph")}}
-* {{SVGElement("text")}}
-* {{SVGElement("textPath")}}
-* {{SVGElement("tref")}}
-* {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -95,4 +95,4 @@ For a description of the values, please refer to the [CSS `font-size`](/en-US/do
 
 ## See also
 
-* {{cssxref("font-size", "CSS font-size")}}
+- {{cssxref("font-size", "CSS font-size")}}

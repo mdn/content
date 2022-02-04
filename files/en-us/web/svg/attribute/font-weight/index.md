@@ -14,11 +14,11 @@ The **`font-weight`** attribute refers to the boldness or lightness of the glyph
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("altGlyph")}}
-* {{SVGElement("text")}}
-* {{SVGElement("textPath")}}
-* {{SVGElement("tref")}}
-* {{SVGElement("tspan")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## Example
 
@@ -105,4 +105,4 @@ For a description of the values, please refer to the [CSS `font-weight`](/en-US/
 
 ## See also
 
-* {{cssxref("font-weight", "CSS font-weight")}}
+- {{cssxref("font-weight", "CSS font-weight")}}
