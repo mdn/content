@@ -12,7 +12,7 @@ The **`maskUnits`** attribute indicates which coordinate system to use for the g
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement('mask')}}
+- {{SVGElement('mask')}}
 
 ## Example
 
@@ -73,10 +73,10 @@ For {{SVGElement('mask')}}, `maskUnits` defines the coordinate system in use for
   </tbody>
 </table>
 
-* `userSpaceOnUse`
-    * : This value indicates that all coordinates for the geometry attributes refer to the user coordinate system as defined when the mask was created.
-* `objectBoundingBox`
-    * : This value indicates that all coordinates for the geometry attributes represent fractions or percentages of the bounding box of the element to which the mask is applied. A bounding box could be considered the same as if the content of the {{ SVGElement("mask") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewbox") }}.
+- `userSpaceOnUse`
+  - : This value indicates that all coordinates for the geometry attributes refer to the user coordinate system as defined when the mask was created.
+- `objectBoundingBox`
+  - : This value indicates that all coordinates for the geometry attributes represent fractions or percentages of the bounding box of the element to which the mask is applied. A bounding box could be considered the same as if the content of the {{ SVGElement("mask") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewbox") }}.
 
 ## Specifications
 
