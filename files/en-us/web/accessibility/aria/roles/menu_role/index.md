@@ -85,6 +85,22 @@ If aria-owns is set on the menu container to include elements that are not DOM c
 
 ## Examples
 
+The following snippet of code is a popup menu that is displaye when the menu button is activated:
+
+```html
+<div>
+  <button type="button" aria-haspopup="true" aria-controls="colormenu" class="menu-button" tabindex="0" aria-label="Color: purple">
+    Purple
+    <span></span>
+  </button>
+  <ul role="menu" id="colormenu" aria-label="Color Options" tabindex="-1">
+    <li role="menuitemradio" aria-checked="true" style="color: purple" tabindex="-1">Purple</li>
+    <li role="menuitemradio" aria-checked="false" style="color: magenta" tabindex="-1">Magenta</li>
+    <li role="menuitemradio" aria-checked="false" style="color: black;" tabindex="-1">Black</li>
+  </ul>
+</div>
+```
+
 ## Accessibility Concerns
 
 ## Best Practices
