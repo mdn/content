@@ -25,7 +25,7 @@ Make a new SVG document as a plain text file, `doc8.svg`. Copy and paste the con
 <svg width="600px" height="600px" viewBox="-300 -300 600 600"
     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" 
+  <link  rel="stylesheet" 
     href="style8.css" type="text/css"/>
 
   <title>SVG demonstration</title>
@@ -379,7 +379,7 @@ Notes about this demonstration:
 
 * The SVG document links the stylesheet using the following HTML `<link>` tag:
   ```html
-  <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet"
+  <link rel="stylesheet"
     href="style8.css" type="text/css"/>  
   ```
   It can also be linked with the `@import` rule inside a `<style>` tag:
