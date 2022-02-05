@@ -130,9 +130,6 @@ object[foo] = 'value'
 console.log(object[bar])
 ```
 
-In the [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey) JavaScript
-engine, this string would be "`[object Object]`".
-
 ### Method binding
 
 A method is not bound to the object that it is a method of. Specifically,

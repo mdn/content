@@ -60,7 +60,7 @@ slug: Tools/Performance/Allocations
 
 <p>With a garbage-collected language, like JavaScript, the runtime periodically needs to walk the heap looking for objects that are no longer <a href="/en-US/docs/Tools/Memory/Dominators#reachability">reachable</a>, and then freeing the memory they occupy. While GC events like this are executing, the JavaScript engine must be paused, so your program is suspended and will be completely unresponsive.</p>
 
-<p>To reduce the impact on responsiveness, <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> (the JavaScript engine in Firefox) can perform GC in small increments, letting the program run in between. Sometimes, though, it needs to perform a full non-incremental collection, and the program has to wait for it to finish.</p>
+<p>To reduce the impact on responsiveness, <a href="https://firefox-source-docs.mozilla.org/js/">SpiderMonkey</a> (the JavaScript engine in Firefox) can perform GC in small increments, letting the program run in between. Sometimes, though, it needs to perform a full non-incremental collection, and the program has to wait for it to finish.</p>
 
 <p>GC events are shown as red markers in the <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> view, and are a big red flag for responsiveness,  sometimes running for hundreds of milliseconds:</p>
 

@@ -69,7 +69,7 @@ While MDN Web Docs contains a large quantity of Mozilla product documentation, t
 - [The Mozilla platform](/en-US/docs/Mozilla)
 
   - [Gecko](/en-US/docs/Mozilla/Gecko)
-  - [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey)
+  - [SpiderMonkey](https://firefox-source-docs.mozilla.org/js/)
   - etc.
 
 ### What else?
