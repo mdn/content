@@ -15,8 +15,8 @@ browser-compat: api.WritableStreamDefaultWriter.closed
 
 The **`closed`** read-only property of the
 {{domxref("WritableStreamDefaultWriter")}} interface returns a promise that fulfills if
-the stream becomes closed or the writer's lock is released, or rejects if the stream
-errors.
+the stream becomes closed, or rejects if the stream errors or the writer's lock is
+released.
 
 ## Syntax
 
