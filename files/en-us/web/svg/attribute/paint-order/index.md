@@ -14,16 +14,16 @@ The **`paint-order`** attribute specifies the order that the fill, stroke, and m
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("circle")}}
-* {{SVGElement("ellipse")}}
-* {{SVGElement("line")}}
-* {{SVGElement("path")}}
-* {{SVGElement("polygon")}}
-* {{SVGElement("polyline")}}
-* {{SVGElement("rect")}}
-* {{SVGElement("text")}}
-* {{SVGElement("textPath")}}
-* {{SVGElement("tspan")}}
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("line")}}
+- {{SVGElement("path")}}
+- {{SVGElement("polygon")}}
+- {{SVGElement("polyline")}}
+- {{SVGElement("rect")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tspan")}}
 
 ## Usage notes
 
@@ -47,10 +47,10 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-* normal
-    * : This value indicates that the fill will be painted first, then the stroke, and finally the markers.
-* \[ fill || stroke || markers ]
-    * : The order of these three keywords indicates the order in which the painting happens, from left to right. If any of the three painting components is omitted, they will be painted in their default order after the specified components. For example, using `stroke` is equivalent to `stroke fill markers`.
+- normal
+  - : This value indicates that the fill will be painted first, then the stroke, and finally the markers.
+- \[ fill || stroke || markers ]
+  - : The order of these three keywords indicates the order in which the painting happens, from left to right. If any of the three painting components is omitted, they will be painted in their default order after the specified components. For example, using `stroke` is equivalent to `stroke fill markers`.
 
 ## Example
 
