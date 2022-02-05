@@ -72,10 +72,8 @@ toValueOf
 Try accessing one of them:
 
 ```js
-myObject.hasOwnProperty('city'); // true
+myObject.toString();
 ```
-
-It works (even if it's not obvious yet what `hasOwnProperty()` does).
 
 What are these extra properties, and where do they come from?
 
