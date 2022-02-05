@@ -18,25 +18,25 @@ Depending on the value of attribute {{SVGAttr("pointer-events")}}, graphics elem
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("a")}}
-* {{SVGElement("altGlyph")}}
-* {{SVGElement("audio")}}
-* {{SVGElement("canvas")}}
-* {{SVGElement("circle")}}
-* {{SVGElement("ellipse")}}
-* {{SVGElement("foreignObject")}}
-* {{SVGElement("iframe")}}
-* {{SVGElement("image")}}
-* {{SVGElement("line")}}
-* {{SVGElement("path")}}
-* {{SVGElement("polygon")}}
-* {{SVGElement("polyline")}}
-* {{SVGElement("rect")}}
-* {{SVGElement("text")}}
-* {{SVGElement("textPath")}}
-* {{SVGElement("tref")}}
-* {{SVGElement("tspan")}}
-* {{SVGElement("video")}}
+- {{SVGElement("a")}}
+- {{SVGElement("altGlyph")}}
+- {{SVGElement("audio")}}
+- {{SVGElement("canvas")}}
+- {{SVGElement("circle")}}
+- {{SVGElement("ellipse")}}
+- {{SVGElement("foreignObject")}}
+- {{SVGElement("iframe")}}
+- {{SVGElement("image")}}
+- {{SVGElement("line")}}
+- {{SVGElement("path")}}
+- {{SVGElement("polygon")}}
+- {{SVGElement("polyline")}}
+- {{SVGElement("rect")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
+- {{SVGElement("video")}}
 
 ## Example
 
@@ -80,12 +80,12 @@ html, body, svg {
   </tbody>
 </table>
 
-* `visible`
-    * : This value indicates that the element will be painted.
-* `hidden`
-    * : This value indicates that the element will not be painted. Though it is still part of the rendering tree, i.e. it may receive pointer events depending on the {{SVGAttr("pointer-events")}} attribute, may receive focus depending on the {{SVGAttr("tabindex")}} attribute, contributes to bounding box calculations and clipping paths, and does affect text layout.
-* `collapse`
-    * : This value is equal to `hidden`.
+- `visible`
+  - : This value indicates that the element will be painted.
+- `hidden`
+  - : This value indicates that the element will not be painted. Though it is still part of the rendering tree, i.e. it may receive pointer events depending on the {{SVGAttr("pointer-events")}} attribute, may receive focus depending on the {{SVGAttr("tabindex")}} attribute, contributes to bounding box calculations and clipping paths, and does affect text layout.
+- `collapse`
+  - : This value is equal to `hidden`.
 
 ## Example
 
@@ -175,5 +175,5 @@ document.querySelector("button").addEventListener("click", function (evt) {
 
 ## See also
 
-* {{SVGAttr("display")}} attribute
-* {{cssxref("visibility", "CSS visibility")}}
+- {{SVGAttr("display")}} attribute
+- {{cssxref("visibility", "CSS visibility")}}

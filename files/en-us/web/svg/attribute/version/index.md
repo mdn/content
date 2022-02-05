@@ -15,7 +15,7 @@ While it is specified to accept any number, the only two valid choices are curre
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("svg")}}
+- {{SVGElement("svg")}}
 
 ```html
 <svg version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">

@@ -13,11 +13,11 @@ The value of the `viewBox` attribute is a list of four numbers: `min-x`, `min-y`
 
 You can use this attribute with the following SVG elements:
 
-* {{SVGElement("marker")}}
-* {{SVGElement("pattern")}}
-* {{SVGElement("svg")}}
-* {{SVGElement("symbol")}}
-* {{SVGElement("view")}}
+- {{SVGElement("marker")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("svg")}}
+- {{SVGElement("symbol")}}
+- {{SVGElement("view")}}
 
 ## Example
 
