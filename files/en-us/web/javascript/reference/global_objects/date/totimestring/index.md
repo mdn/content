@@ -31,9 +31,7 @@ English.
 
 {{jsxref("Date")}} instances refer to a specific point in time. Calling
 {{jsxref("Date.prototype.toString()", "toString()")}} will return the date formatted in
-a human readable form in English. In [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey), this consists of
-the date portion (day, month, and year) followed by the time portion (hours, minutes,
-seconds, and time zone). Sometimes it is desirable to obtain a string of the time
+a human readable form in English. Sometimes it is desirable to obtain a string of the time
 portion; such a thing can be accomplished with the `toTimeString()` method.
 
 The `toTimeString()` method is especially useful because compliant engines

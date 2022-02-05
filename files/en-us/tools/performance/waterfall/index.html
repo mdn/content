@@ -336,7 +336,7 @@ slug: Tools/Performance/Waterfall
 
 <h3 id="Garbage_collection">Garbage collection</h3>
 
-<p>Red markers in the Waterfall represent garbage collection (GC) events, in which <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a> (the JavaScript engine in Firefox) walks the heap looking for memory that's no longer reachable and subsequently releasing it. GC is relevant to performance because while it's running the JavaScript engine must be paused, so your program is suspended and will be completely unresponsive.</p>
+<p>Red markers in the Waterfall represent garbage collection (GC) events, in which <a href="https://firefox-source-docs.mozilla.org/js/">SpiderMonkey</a> (the JavaScript engine in Firefox) walks the heap looking for memory that's no longer reachable and subsequently releasing it. GC is relevant to performance because while it's running the JavaScript engine must be paused, so your program is suspended and will be completely unresponsive.</p>
 
 <p>To help reduce the length of pauses, SpiderMonkey implements <em>incremental GC</em>: this means that it can perform garbage collection in fairly small increments, letting the program run in between. Sometimes, though, it needs to perform a full non-incremental collection, and the program has to wait for it to finish.</p>
 

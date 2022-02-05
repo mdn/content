@@ -21,7 +21,7 @@ The **`ReferenceError`** object represents an error when a variable that doesn't
 ## Instance properties
 
 - {{jsxref("Error.prototype.message", "ReferenceError.prototype.message")}}
-  - : Error message. Although ECMA-262 specifies that {{jsxref("ReferenceError")}} should provide its own `message` property, in [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey), it inherits {{jsxref("Error.prototype.message")}}.
+  - : Error message.
 - {{jsxref("Error.prototype.name", "ReferenceError.prototype.name")}}
   - : Error name. Inherited from {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "ReferenceError.prototype.fileName")}}
