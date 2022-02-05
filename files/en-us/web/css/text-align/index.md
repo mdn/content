@@ -139,7 +139,7 @@ The inconsistent spacing between words created by justified text can be problema
 
 {{EmbedLiveSample("Centered_text","100%","100%")}}
 
-### Justify
+### Example using "justify"
 
 #### HTML
 
@@ -163,7 +163,7 @@ The inconsistent spacing between words created by justified text can be problema
 
 #### Result
 
-{{EmbedLiveSample("Justify","100%","100%")}}
+{{EmbedLiveSample('Example using "justify"',"100%","100%")}}
 
 ## Specifications
 
