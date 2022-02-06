@@ -11,7 +11,7 @@ tags:
 ---
 {{MDNSidebar}}
 
-MDN is a complex project with lots of moving parts. Contributing to the site is easy to begin with, if you have a bit of GitHub knowledge and are starting out on some simple typo fixes or code snippet improvements. However, when you start making more significant contributions such as adding entire new pages, you'll notice that there are quite a few bits of the content that aren't stored in the page sources and instead come from somewhere else.
+MDN is a complex project with lots of moving parts. Contributing to the site is easy to begin with if you have a bit of GitHub knowledge and are starting out on some simple typo fixes or code snippet improvements. However, when you start making more significant contributions such as adding entirely new pages, you'll notice that there are quite a few bits of the content that aren't stored in the page sources and instead come from somewhere else.
 
 This article acts as a quick guide to finding the different repos you need to edit to update the different parts of MDN content.
 
