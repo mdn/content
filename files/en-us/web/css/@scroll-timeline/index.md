@@ -74,7 +74,7 @@ The **`@scroll-timeline`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines an
 
     - `none`
       - : No scroll offsets specified.
-    - `<length-pecentage>`
+    - `<length-percentage>`
       - : A comma separated list of [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) values.
     - `<element-offset>`
       - : An element’s position determines the scroll offset.

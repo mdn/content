@@ -377,18 +377,22 @@ Open the `doc8.svg` document in your SVG-enabled browser. Move your mouse pointe
 
 Notes about this demonstration:
 
-* The SVG document links the stylesheet using the following HTML `<link>` tag:
+- The SVG document links the stylesheet using the following HTML `<link>` tag:
+
   ```html
   <link rel="stylesheet"
-    href="style8.css" type="text/css"/>  
+    href="style8.css" type="text/css"/>
   ```
+
   It can also be linked with the `@import` rule inside a `<style>` tag:
+
   ```html
   <style>
     @import url(style8.css);
   </style>
   ```
-* SVG has its own CSS properties and values. Some of them are similar to CSS properties for HTML.
+
+- SVG has its own CSS properties and values. Some of them are similar to CSS properties for HTML.
 
 ### Challenge
 

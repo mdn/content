@@ -51,11 +51,11 @@ new Intl.DateTimeFormat(locales, options)
         "`telu`", "`thai`", "`tibt`".
     - `ca`
       - : Calendar. Possible values include: "`buddhist`",
-        "`chinese`", "`coptic`", "`dangi`", 
-        "`ethioaa`", "`ethiopic`", "`gregory`", 
-        "`hebrew`", "`indian`", "`islamic`", 
-        "`islamic-umalqura`", "`islamic-tbla`", "`islamic-civil`", 
-        "`islamic-rgsa`", "`iso8601`", "`japanese`", 
+        "`chinese`", "`coptic`", "`dangi`",
+        "`ethioaa`", "`ethiopic`", "`gregory`",
+        "`hebrew`", "`indian`", "`islamic`",
+        "`islamic-umalqura`", "`islamic-tbla`", "`islamic-civil`",
+        "`islamic-rgsa`", "`iso8601`", "`japanese`",
         "`persian`", "`roc`", "`islamicc`".
 
         > **Warning:** The `islamicc` calendar key has been deprecated. Please use `islamic-civil`.
@@ -98,11 +98,11 @@ new Intl.DateTimeFormat(locales, options)
 
     - `calendar`
       - : Calendar. Possible values include: "`buddhist`",
-        "`chinese`", "`coptic`", "`dangi`", 
-        "`ethioaa`", "`ethiopic`", "`gregory`", 
-        "`hebrew`", "`indian`", "`islamic`", 
-        "`islamic-umalqura`", "`islamic-tbla`", "`islamic-civil`", 
-        "`islamic-rgsa`", "`iso8601`", "`japanese`", 
+        "`chinese`", "`coptic`", "`dangi`",
+        "`ethioaa`", "`ethiopic`", "`gregory`",
+        "`hebrew`", "`indian`", "`islamic`",
+        "`islamic-umalqura`", "`islamic-tbla`", "`islamic-civil`",
+        "`islamic-rgsa`", "`iso8601`", "`japanese`",
         "`persian`", "`roc`", "`islamicc`".
 
         > **Warning:** The `islamicc` calendar key has been deprecated. Please use `islamic-civil`.
