@@ -494,7 +494,7 @@ If you do want to provide extra contextual information, you should put it in the
 Let's have another quick look at the fourth method:
 
 ```html
-<img src="dinosaur.png" aria-labelledby="dino-label">
+<img src="dinosaur.png" aria-labelledby="dino-label" alt="The Mozilla red dinosaur">
 
 <p id="dino-label">The Mozilla red Tyrannosaurus ... </p>
 ```
