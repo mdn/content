@@ -239,7 +239,7 @@ If you change the value of the `label` prop passed into the `<to-do-item></to-do
 
 To achieve this, we want to bind the component's `done` prop to the `checked` attribute on the [`<input>`](/en-US/docs/Web/HTML/Element/input) element, so that it can serve as a record of whether the checkbox is checked or not. However, it's important that props serve as one-way data binding — a component should never alter the value of its own props. There are a lot of reasons for this. In part, components editing props can make debugging a challenge. If a value is passed to multiple children, it could be hard to track where the changes to that value were coming from. In addition, changing props can cause components to re-render. So mutating props in a component would trigger the component to rerender, which may in-turn trigger the mutation again.
 
-To work around this, we can manage the `done` state using Vue’s `data` property. The `data` property is where you can manage local state in a component, it lives inside the component object alongside the `props` property and has the following structure:
+To work around this, we can manage the `done` state using Vue’s `data` property. The `data` property is where you can manage local state in a component. It lives inside the component object alongside the `props` property and has the following structure:
 
 ```js
 data() {
