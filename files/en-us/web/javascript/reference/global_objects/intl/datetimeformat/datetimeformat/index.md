@@ -51,10 +51,15 @@ new Intl.DateTimeFormat(locales, options)
         "`telu`", "`thai`", "`tibt`".
     - `ca`
       - : Calendar. Possible values include: "`buddhist`",
-        "`chinese`", "`coptic`", "`ethiopia`",
-        "`ethiopic`", "`gregory`", "`hebrew`",
-        "`indian`", "`islamic`", "`iso8601`",
-        "`japanese`", "`persian`", "`roc`".
+        "`chinese`", "`coptic`", "`dangi`", 
+        "`ethioaa`", "`ethiopic`", "`gregory`", 
+        "`hebrew`", "`indian`", "`islamic`", 
+        "`islamic-umalqura`", "`islamic-tbla`", "`islamic-civil`", 
+        "`islamic-rgsa`", "`iso8601`", "`japanese`", 
+        "`persian`", "`roc`", "`islamicc`".
+
+        > **Warning:** The `islamicc` calendar key has been deprecated. Please use `islamic-civil`.
+
     - `hc`
       - : Hour cycle. Possible values include: "`h11`",
         "`h12`", "`h23`", "`h24`".
@@ -93,10 +98,15 @@ new Intl.DateTimeFormat(locales, options)
 
     - `calendar`
       - : Calendar. Possible values include: "`buddhist`",
-        "`chinese`", " `coptic`", "`ethiopia`",
-        "`ethiopic`", "`gregory`", " `hebrew`",
-        "`indian`", "`islamic`", "`iso8601`", "
-        `japanese`", "`persian`", "`roc`".
+        "`chinese`", "`coptic`", "`dangi`", 
+        "`ethioaa`", "`ethiopic`", "`gregory`", 
+        "`hebrew`", "`indian`", "`islamic`", 
+        "`islamic-umalqura`", "`islamic-tbla`", "`islamic-civil`", 
+        "`islamic-rgsa`", "`iso8601`", "`japanese`", 
+        "`persian`", "`roc`", "`islamicc`".
+
+        > **Warning:** The `islamicc` calendar key has been deprecated. Please use `islamic-civil`.
+
     - `dayPeriod`
 
       - : The formatting style used for day periods like "in the morning", "am", "noon", "n" etc. Possible values include:
