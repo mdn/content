@@ -1,6 +1,6 @@
 ---
 title: Less or equal
-slug: WebAssembly/Reference/Numeric/Comparison/Less_or_equal
+slug: WebAssembly/Reference/Numeric/Less_or_equal
 tags:
   - WebAssembly
   - wasm

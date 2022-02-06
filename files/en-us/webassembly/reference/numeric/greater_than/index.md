@@ -1,6 +1,6 @@
 ---
 title: Greater than
-slug: WebAssembly/Reference/Numeric/Comparison/Greater_than
+slug: WebAssembly/Reference/Numeric/Greater_than
 tags:
   - WebAssembly
   - wasm

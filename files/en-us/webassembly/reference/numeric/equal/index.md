@@ -1,6 +1,6 @@
 ---
 title: Equal
-slug: WebAssembly/Reference/Numeric/Comparison/Equal
+slug: WebAssembly/Reference/Numeric/Equal
 tags:
   - WebAssembly
   - wasm

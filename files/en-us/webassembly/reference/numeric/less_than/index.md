@@ -1,6 +1,6 @@
 ---
 title: Less than
-slug: WebAssembly/Reference/Numeric/Comparison/Less_than
+slug: WebAssembly/Reference/Numeric/Less_than
 tags:
   - WebAssembly
   - wasm

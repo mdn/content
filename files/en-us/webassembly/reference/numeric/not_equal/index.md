@@ -1,6 +1,6 @@
 ---
 title: Not equal
-slug: WebAssembly/Reference/Numeric/Comparison/Not_equal
+slug: WebAssembly/Reference/Numeric/Not_equal
 tags:
   - WebAssembly
   - wasm
