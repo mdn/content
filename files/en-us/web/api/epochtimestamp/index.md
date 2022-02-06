@@ -13,10 +13,8 @@ The **`EpochTimeStamp`** type represents a timestamp value in milliseconds (excl
 
 This was previously known as {{domxref("DOMTimeStamp")}}.
 
-
 ## Specifications
 
 | Specification                                                                        | Status                   | Comment               |
 | ------------------------------------------------------------------------------------ | ------------------------ | --------------------- |
 | {{SpecName("Highres Time Level 3", "#the-epochtimestamp-typedef", "EpochTimeStamp")}} | {{Spec2("Highres Time Level 3")}} | Initial specification |
-
