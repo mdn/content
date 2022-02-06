@@ -147,26 +147,15 @@ if (condition) {
 }
 ```
 
-It's unwise to use simple assignments in a conditional expression, because the
-assignment can be confused with equality when glancing over the code.
-
-For example, do _not_ write code like this:
+In general it’s good practice to not have an `if...else` with an assignment like "`x = y`" as a condition:
 
 ```js example-bad
-// Prone to being misread as "x == y"
 if (x = y) {
   /* statements here */
 }
 ```
 
-If you need to use an assignment in a conditional expression, a common practice is to
-put additional parentheses around the assignment, like this:
-
-```js example-good
-if ((x = y)) {
-  /* statements here */
-}
-```
+However, in the rare case you find yourself wanting to do something like that, the [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) documentation has a [Using an assignment as a condition](/en-US/docs/Web/JavaScript/Reference/Statements/while#using_an_assignment_as_a_condition) section with guidance on a general best-practice syntax you should know about and follow.
 
 #### Falsy values
 

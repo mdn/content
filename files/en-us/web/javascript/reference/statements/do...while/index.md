@@ -59,6 +59,10 @@ while (i > 0 && i < 5);
 console.log(result);
 ```
 
+### Using an assignment as a condition
+
+In some cases, it can make sense to use an assignment as a condition — but when you do, there’s a right way to do it, and a wrong way; the [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) documentation has a [Using an assignment as a condition](/en-US/docs/Web/JavaScript/Reference/Statements/while#using_an_assignment_as_a_condition) section with an example showing a general best-practice syntax you should know about and follow.
+
 ## Specifications
 
 {{Specifications}}
