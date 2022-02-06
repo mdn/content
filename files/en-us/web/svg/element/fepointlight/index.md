@@ -21,13 +21,13 @@ The **`<fePointLight>`** filter primitive defines a light source which allows to
 
 ### Global attributes
 
-* [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
 
 ### Specific attributes
 
-* {{SVGAttr("x")}}
-* {{SVGAttr("y")}}
-* {{SVGAttr("z")}}
+- {{SVGAttr("x")}}
+- {{SVGAttr("y")}}
+- {{SVGAttr("z")}}
 
 ## DOM Interface
 
@@ -70,11 +70,11 @@ This element implements the {{domxref("SVGFEPointLightElement")}} interface.
 
 ## See also
 
-* {{SVGElement("filter")}}
-* {{SVGElement("animate")}}
-* {{SVGElement("set")}}
-* {{SVGElement("feDiffuseLighting")}}
-* {{SVGElement("feSpecularLighting")}}
-* {{SVGElement("feDistantLight")}}
-* {{SVGElement("feSpotLight")}}
-* [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
+- {{SVGElement("filter")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("set")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feDistantLight")}}
+- {{SVGElement("feSpotLight")}}
+- [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

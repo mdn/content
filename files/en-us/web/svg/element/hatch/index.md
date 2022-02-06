@@ -25,21 +25,21 @@ Hatches defined by the `<hatch>` element can then referenced by the {{SVGAttr("f
 
 ### Global attributes
 
-* [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-* [Global event attributes](/en-US/docs/Web/SVG/Attribute#global_event_attributes)
-* [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-* [Style attributes](/en-US/docs/Web/SVG/Attribute#style_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Global event attributes](/en-US/docs/Web/SVG/Attribute#global_event_attributes)
+- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+- [Style attributes](/en-US/docs/Web/SVG/Attribute#style_attributes)
 
 ### Specific attributes
 
-* {{SVGAttr("x")}}
-* {{SVGAttr("y")}}
-* {{SVGAttr("pitch")}}
-* {{SVGAttr("rotate")}}
-* {{SVGAttr("hatchUnits")}}
-* {{SVGAttr("hatchContentUnits")}}
-* {{SVGAttr("transform")}}
-* {{SVGAttr("href")}}
+- {{SVGAttr("x")}}
+- {{SVGAttr("y")}}
+- {{SVGAttr("pitch")}}
+- {{SVGAttr("rotate")}}
+- {{SVGAttr("hatchUnits")}}
+- {{SVGAttr("hatchContentUnits")}}
+- {{SVGAttr("transform")}}
+- {{SVGAttr("href")}}
 
 ## DOM Interface
 
@@ -73,4 +73,4 @@ This element implements the {{domxref("SVGHatchElement")}} interface.
 
 ## See also
 
-* {{SVGElement("hatchpath")}}
+- {{SVGElement("hatchpath")}}
