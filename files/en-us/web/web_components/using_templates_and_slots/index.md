@@ -50,8 +50,8 @@ customElements.define('my-paragraph',
       let template = document.getElementById('my-paragraph');
       let templateContent = template.content;
 
-      const shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(templateContent.cloneNode(true));
+      const shadowRoot = this.attachShadow({mode: 'open'});
+      shadowRoot.appendChild(templateContent.cloneNode(true));
     }
   }
 );
@@ -199,8 +199,8 @@ customElements.define('element-details',
       const template = document
         .getElementById('element-details-template')
         .content;
-      const shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(template.cloneNode(true));
+      const shadowRoot = this.attachShadow({mode: 'open'});
+      shadowRoot.appendChild(template.cloneNode(true));
     }
   }
 );
